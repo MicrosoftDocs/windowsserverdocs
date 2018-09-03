@@ -13,10 +13,10 @@ description: Windows Server documentation helps IT professionals evaluate, plan,
     <h1>Windows Server documentation</h1>
      <h3>Windows Server is the platform for building an infrastructure of connected applications, networks, and web services, from the workgroup to the data center</h3>
      <p> </p>
-    <ul class=”cardsFTitle panelContent singlePanelContent" style="display:flex!important;">
+    <ul class="pivots">
         <li>
             <a href="#main"></a>
-            <ul id="main" class="cardsL cols cols3">
+            <ul id="main">
                 <li>
                     <a href="#mainPanel"></a>
                     <ul id="mainPanel" class="cardsF">
