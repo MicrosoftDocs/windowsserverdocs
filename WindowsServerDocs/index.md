@@ -45,6 +45,25 @@ description: Windows Server documentation helps IT professionals evaluate, plan,
 
                         </li>
 <li>
+                            <a href="/get-started-19/">
+                            <div class="cardSize">
+                                <div class="cardPadding">
+                                    <div class="card">
+                                        <div class="cardImageOuter">
+                                            <div class="cardImage">
+                                                <img src="media/i-get-started.svg" alt="" />
+                                            </div>
+                                        </div>
+                                        <div class="cardText">
+                                            <h2>Get Started with<br>Windows Server 2019</h2>
+                                            <p>Start here for Windows Server 2019</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            </a>
+                        </li>
+<li>
                             <a href="http://pocvirtuosity.azurewebsites.net">
                             <div class="cardSize">
                                 <div class="cardPadding">
@@ -64,26 +83,6 @@ description: Windows Server documentation helps IT professionals evaluate, plan,
                             </a>
                         </li>
 <li>
-                            <a href="/get-started-19/">
-                            <div class="cardSize">
-                                <div class="cardPadding">
-                                    <div class="card">
-                                        <div class="cardImageOuter">
-                                            <div class="cardImage">
-                                                <img src="media/i-get-started.svg" alt="" />
-                                            </div>
-                                        </div>
-                                        <div class="cardText">
-                                            <h2>Get Started with<br>Windows Server 2019</h2>
-                                            <p>Start here for Windows Server 2019</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            </a>
-                        </li>
-
- <li>
                             <a href="get-started/Server-Basics.md">
                             <div class="cardSize">
                                 <div class="cardPadding">
