@@ -18,7 +18,7 @@ description: Windows Server documentation helps IT professionals evaluate, plan,
             <ul id="main" class="cardsL cols cols3">
                 <li>
                     <a href="#mainPanel"></a>
-                      <ul class=”cardsFTitle panelContent singlePanelContent" style="display:flex!important;">
+                      <ul class="cardsF panelContent singlePanelContent" style="display:flex!important;">
                         <li>
                             <a href="get-started-19/whats-new-19.md">
                             <div class="cardSize">
@@ -158,10 +158,7 @@ description: Windows Server documentation helps IT professionals evaluate, plan,
                         </li>
                     </ul>
                 </li>
-            </ul>
-        </li>
-    </ul>
-                  
+            </ul>  
        <hr />
  
  <h1>Guidance for Windows Server 2016 and Windows Server 2019</h1>
