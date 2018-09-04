@@ -11,13 +11,10 @@ description: Windows Server documentation helps IT professionals evaluate, plan,
 <div id="main" class="v2">
 <div class="container">
 <h1>Guidance for Windows Server 2016 and Windows Server 2019</h1>
-    <h3>Windows Server documentation helps IT professionals evaluate, plan, deploy, secure, and manage Windows Server</h3>
-        <li>
+    <h3>Windows Server documentation helps IT professionals evaluate, plan, deploy, secure, and manage Windows Server</h3> 
             <a href="#main"></a>
-                <li>
                    <li class="fullSpan">
                     <ul class="cardsF panelContent singlePanelContent" style="display:flex!important;">
-                        <li>
                             <a href="identity/Identity-and-Access.md">
                             <div class="cardSize">
                                 <div class="cardPadding">
