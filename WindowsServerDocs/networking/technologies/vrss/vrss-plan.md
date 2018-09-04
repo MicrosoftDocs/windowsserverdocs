@@ -12,7 +12,7 @@ author: shortpatti
 
 # Plan the Use of vRSS
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 In Windows Server 2016, vRSS is enabled by default, however you must prepare your environment to allow vRSS to function correctly in a virtual machine \(VM\) or on a host virtual adapter \(vNIC\).
 
