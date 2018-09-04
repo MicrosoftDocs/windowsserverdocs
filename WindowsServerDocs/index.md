@@ -14,8 +14,6 @@ description: Windows Server documentation helps IT professionals evaluate, plan,
     <h3>Windows Server documentation helps IT professionals evaluate, plan, deploy, secure, and manage Windows Server</h3>
         <ul id="main" class="cardsF cols cols3">
             <a href="#main"></a>
-                <li>
-                   <li class="fullSpan">
                     <ul class="cardsF panelContent singlePanelContent" style="display:flex!important;">
                         <li>
                             <a href="identity/Identity-and-Access.md">
