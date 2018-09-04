@@ -626,11 +626,8 @@ description: Windows Server documentation helps IT professionals evaluate, plan,
                 </li>
             </ul>
         </li>
-    </ul>
-                  
+    </ul>         
        <hr />
-
-  
                         </li>
                     </ul>
                 </li>
