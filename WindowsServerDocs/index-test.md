@@ -10,16 +10,16 @@ description: Windows Server documentation helps IT professionals evaluate, plan,
 
 <div id="main" class="v2">
 <div class="container">
-    <h1>Windows Server documentation</h1>
+<h1>Windows Server documentation</h1>
      <h3>Windows Server is the platform for building an infrastructure of connected applications, networks, and web services, from the workgroup to the data center</h3>
      <p> </p>
-    <ul class="pivots">
-        <li>
-            <a href="#main"></a>
-            <ul id="main">
+     <a href="#main"></a>
                 <li>
+                   <li class="fullSpan">
+                    <ul class="cardsF panelContent singlePanelContent" style="display:flex!important;">
+                        <li>
                     <a href="#mainPanel"></a>
-                    <ul id="mainPanel" class="cardsF">
+                    <ul id="mainPanel" class="cardsF cols cols3">
                         <li>
                             <a href="get-started-19/whats-new-19.md">
                             <div class="cardSize">
@@ -162,17 +162,54 @@ description: Windows Server documentation helps IT professionals evaluate, plan,
             </ul>
         </li>
     </ul>
+</li>
                   
        <hr />
- 
- <h1>Guidance for Windows Server 2016 and Windows Server 2019</h1>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h1>Guidance for Windows Server 2016 and Windows Server 2019</h1>
     <h3>Windows Server documentation helps IT professionals evaluate, plan, deploy, secure, and manage Windows Server</h3>
-    <ul class="pivots">
-        <li>
             <a href="#main"></a>
-            <ul id="main">
                 <li>
-                    <ul id="mainPanel" class="cardsF">
+                   <li class="fullSpan">
+                    <ul class="cardsF panelContent singlePanelContent" style="display:flex!important;">
                         <li>
                             <a href="identity/Identity-and-Access.md">
                             <div class="cardSize">
@@ -626,65 +663,7 @@ description: Windows Server documentation helps IT professionals evaluate, plan,
                             </div>
                             </a>
                         </li>
-                    </ul>
                 </li>
-            </ul>
-        </li>
-    </ul>
-                  
-       <hr />
-
-  <h1>Windows Server previous versions</h1>
-    <h3>Technical content for IT professionals administering older versions of Windows Server<h3>
-    <p> </p>
-    <ul class="pivots">
-        <li>
-            <a href="#main"></a>
-            <ul id="main">
-                <li>
-                    
-                    <ul id="mainPanel" class="cardsF">
-                        <li>
-                            <a href="https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh801901(v=ws.11)">
-                            <div class="cardSize">
-                                <div class="cardPadding">
-                                    <div class="card">
-                                        <div class="cardImageOuter">
-                                            <div class="cardImage">
-                                                <img src="media/windows-server-2012R2.svg" alt="" />
-                                            </div>
-                                        </div>
-                                        <div class="cardText">
-                                            <h3>Windows Server 2012 and<br> Windows Server 2012 R2</h3>
-                                            <p></p>
-                                        </div>
-                                    </div>
-                                </div>
-                              </div>
-                            </a>
-                        </li>
- <li>
-                            <a href="https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd349801(v=ws.10)">
-                            <div class="cardSize">
-                                <div class="cardPadding">
-                                    <div class="card">
-                                        <div class="cardImageOuter">
-                                            <div class="cardImage">
-                                                <img src="media/windows-server-2008R2.svg" alt="" />
-                                            </div>
-                                        </div>
-                                        <div class="cardText">
-                                            <h3>Windows Server 2008 and<br> Windows Server 2008 R2</h3>
-                                            <p></p>
-                                            </div>
-                                    </div>
-                                </div>
-                              </div>
-                            </a>
-                        </li>
-                    </ul>
-                </li>
-            </ul>
-        </li>
-    </ul>
+  </li>
+</div>
 </div>
