@@ -15,7 +15,6 @@ description: Windows Server documentation helps IT professionals evaluate, plan,
     
         <li>
             <a href="#main"></a>
-            <ul id="main"class="cardsF cols cols3">
                 <li>
                    <li class="fullSpan">
                     <ul class="cardsF panelContent singlePanelContent" style="display:flex!important;">
