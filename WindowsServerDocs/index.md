@@ -37,14 +37,14 @@ description: Windows Server documentation helps IT professionals evaluate, plan,
                             </div>
                             </li>
                             </a>
-                        </li>
                         <li class="fullSpan">
                             
                         <HR WIDTH="60%">
 
                         </li>
-<li>
-                            <a href="/get-started-19/">
+<li>  
+                        <li class="fullSpan">
+                          <a href="/get-started-19/">
                             <div class="cardSize">
                                 <div class="cardPadding">
                                     <div class="card">
