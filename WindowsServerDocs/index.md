@@ -40,7 +40,6 @@ description: Windows Server documentation helps IT professionals evaluate, plan,
                             </a>
                         </li>
                         <li class="fullSpan">
-                            
                         <HR WIDTH="60%">
 
                         </li>
