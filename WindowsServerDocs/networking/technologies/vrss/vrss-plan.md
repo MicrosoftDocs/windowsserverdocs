@@ -5,9 +5,10 @@ ms.prod: windows-server-threshold
 ms.technology: networking
 ms.topic: article
 ms.assetid: 695e6192-5e84-4ab4-b33e-8ebf6b8f5cbb
-manager: brianlic
+manager: elizapo
 ms.author: pashort
 author: shortpatti
+ms.date: 09/04/2018
 ---
 
 # Plan the Use of vRSS
@@ -44,19 +45,4 @@ Following is additional information you need to complete these preparation steps
 
 The host vNIC always has access to all of the physical processors; to configure the host vNIC to use a specific number of processors, use the settings **-BaseProcessorNumber** and **-MaxProcessors** when you run the **Set-NetAdapterRss** Windows PowerShell command.
 
-## Resolving possible issues
-
-If you have completed all of the preparation steps and you still do not see vRSS load balancing traffic to the VM LPs, there are two possible issues.
-
-1. Before you performed preparation steps, vRSS was disabled - and now must be enabled. You can run **Set-VMNetworkAdapter** to enable vRSS for the VM.
-
-```
-Set-VMNetworkAdapter <VMname> -VrssEnabled $TRUE
-Set-VMNetworkAdapter -ManagementOS -VrssEnabled $TRUE
-```
-
-2. RSS was disabled in the VM or on the host vNIC. While RSS is enabled by default in Windows Server 2016, it might have been disabled by someone else. In the VM \(for vRSS in a VM\) or on the host \(for host vNIC vRSS\), run **Get-NetAdapterRss** and observe whether the **Enabled** field has the value **True**. If the configured value is **False**, you can change it to **True** by running the following Windows PowerShell command in the VM. 
-
-```
-Enable-NetAdapterRss *
-```
+---
