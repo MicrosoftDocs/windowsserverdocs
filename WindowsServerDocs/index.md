@@ -13,12 +13,12 @@ description: Windows Server documentation helps IT professionals evaluate, plan,
     <h1>Windows Server documentation</h1>
      <h3>Windows Server is the platform for building an infrastructure of connected applications, networks, and web services, from the workgroup to the data center</h3>
      <p> </p>
-               <a href="#main"></a>
+     <ul class=”pivots”>                
+       <a href="#main"></a>
             <ul id="main" class="cardsF cols cols3">
-                <li>
+                <li class=”fullSpan”>
                     <a href="#mainPanel"></a>
-                      <li class=”fullSpan”>                      
-                        <ul class="cardsF panelContent singlePanelContent" style="display:flex!important;">
+                      <ul class="cardsF panelContent singlePanelContent" style="display:flex!important;">
                         <li>
                             <a href="get-started-19/whats-new-19.md">
                             <div class="cardSize">
@@ -155,7 +155,8 @@ description: Windows Server documentation helps IT professionals evaluate, plan,
                                 </div>
                             </div>
                             </a>
-                        </li>
+</ul>
+</li>
                     </ul>
                 </li>
             </ul>  
