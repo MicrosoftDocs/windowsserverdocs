@@ -162,10 +162,10 @@ description: Windows Server documentation helps IT professionals evaluate, plan,
  
  <h1>Guidance for Windows Server 2016 and Windows Server 2019</h1>
     <h3>Windows Server documentation helps IT professionals evaluate, plan, deploy, secure, and manage Windows Server</h3>
-    <ul class="pivots">
+    
         <li>
             <a href="#main"></a>
-            <ul id="main">
+            <ul id="main"class="cardsL cols cols3">
                 <li>
                     <ul id="mainPanel" class="cardsF">
                         <li>
