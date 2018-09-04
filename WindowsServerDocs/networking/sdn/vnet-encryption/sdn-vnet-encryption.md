@@ -7,12 +7,12 @@ ms.technology: networking-hv-switch
 ms.topic: get-started-article
 ms.assetid: 7da0f509-7b02-4a0f-90fb-d97c83a2bc4e
 ms.author: pashort
-author: s
+author: shortpatti
 ms.date: 08/08/2018
 ---
 # Virtual Network Encryption
 
->Applies To: Windows Server
+>Applies to: Windows Server
 
 Virtual network encryption allows encryption of virtual network traffic between virtual machines that communicate with each other within subnets marked as ‘Encryption Enabled.’ It also utilizes Datagram Transport Layer Security (DTLS) on the virtual subnet to encrypt packets. DTLS protects against eavesdropping, tampering, and forgery by anyone with access to the physical network.
 

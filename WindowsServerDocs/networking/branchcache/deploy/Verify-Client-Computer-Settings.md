@@ -11,7 +11,7 @@ author: shortpatti
 ---
 # Verify Client Computer Settings
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 You can use this procedure to verify that the client computer is correctly configured for BranchCache.  
   

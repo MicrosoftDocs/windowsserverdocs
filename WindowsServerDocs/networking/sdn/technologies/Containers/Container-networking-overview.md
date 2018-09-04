@@ -16,7 +16,7 @@ ms.date: 09/03/2018
 ---
 # Container Networking Overview
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 In this topic, we give you an overview of the networking stack for Windows Containers and includes links to additional guidance about creating, configuring, and managing container networks.
 
