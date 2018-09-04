@@ -12,8 +12,7 @@ description: Windows Server documentation helps IT professionals evaluate, plan,
 <div class="container">
     <h1>Windows Server documentation</h1>
      <h3>Windows Server is the platform for building an infrastructure of connected applications, networks, and web services, from the workgroup to the data center</h3>
-     <p> </p>
-     <ul class=”pivots”>                
+     <p> </p>            
        <a href="#main"></a>
             <ul id="main" class="cardsF cols cols3">
                 <li class=”fullSpan”>
@@ -155,8 +154,6 @@ description: Windows Server documentation helps IT professionals evaluate, plan,
                                 </div>
                             </div>
                             </a>
-</ul>
-</li>
                     </ul>
                 </li>
             </ul>  
