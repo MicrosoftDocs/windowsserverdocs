@@ -155,9 +155,12 @@ description: Windows Server documentation helps IT professionals evaluate, plan,
                                 </div>
                             </div>
                             </a>
+                        </li>
                     </ul>
                 </li>
-            </ul>  
+            </ul>
+        </li>
+    </ul
        <hr />
  
  <h1>Guidance for Windows Server 2016 and Windows Server 2019</h1>
