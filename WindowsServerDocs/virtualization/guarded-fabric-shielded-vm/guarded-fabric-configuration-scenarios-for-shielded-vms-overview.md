@@ -7,16 +7,13 @@ ms.assetid: 5d1a06c9-24e1-4e14-9c9a-efb2adbfeddd
 manager: dongill
 author: rpsqrd
 ms.technology: security-guarded-fabric
-ms.date: 10/16/2017
+ms.date: 08/29/2018
 ---
 
 # Deploy shielded VMs
 
->[!div class="step-by-step"]
-[« Confirm attestation](guarded-fabric-confirm-hosts-can-attest-successfully.md)
-[Create a shielded VM template »](guarded-fabric-create-a-shielded-vm-template.md)
 
->Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server 2019, Windows Server (Semi-Annual Channel), Windows Server 2016
 
 The following topics describe how a tenant can work with shielded VMs.
 
@@ -35,6 +32,11 @@ The following topics describe how a tenant can work with shielded VMs.
     - Using **Windows Azure Pack**: [Deploy a shielded VM by using Windows Azure Pack](guarded-fabric-shielded-vm-windows-azure-pack.md)
 
     - Using **Virtual Machine Manager**: [Deploy a shielded VM by using Virtual Machine Manager](guarded-fabric-tenant-deploys-shielded-vm-using-vmm.md)
+
+## Next step
+
+>[!div class="nextstepaction"]
+[Create a shielded VM template](guarded-fabric-create-a-shielded-vm-template.md)
 
 ## See also
 

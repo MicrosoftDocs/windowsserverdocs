@@ -12,7 +12,19 @@ ms.date: 08/09/2018
 ---
 # Software Defined Networking (SDN)
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
+
+
+You can use SDN to do the following.
+
+- Dynamically create, secure, and connect your network to meet the evolving needs of your apps
+- Speed up the deployment of your workloads
+- Contain security vulnerabilities from spreading across your network
+
+SDN allows you to accomplish all of this while also reducing your overall infrastructure costs.
+
+
+
 
 Software Defined Networking (SDN) provides a method to centrally configure and manage physical and virtual network devices such as routers, switches, and gateways in your datacenter. You can use your existing SDN-compatible devices to achieve deeper integration between the virtual network and the physical network.
 
@@ -32,6 +44,9 @@ Software defined networking gives you the ability to.
 - Implement network policies consistently at scale, even as you deploy new workloads or move workloads across virtual or physical networks. 
 
  
+
+
+
 
 ## Contact the Datacenter and Cloud Networking product team
 

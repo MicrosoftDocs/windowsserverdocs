@@ -11,7 +11,7 @@ author: shortpatti
 ---
 # Configure BranchCache Client Computers
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 You can use the following topics to configure domain member and non-domain member client computers as BranchCache distributed cache or hosted cache mode clients.  
   
