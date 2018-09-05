@@ -302,7 +302,12 @@ Registry path: HKLM SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\
 To enable the SSL 2.0 protocol, create an **Enabled** entry in the appropriate subkey. 
 This entry does not exist in the registry by default. 
 After you have created the entry, change the DWORD value to 1. 
+
 To disable the protocol, change the DWORD value to 0.  
+
+To disable SSL 2.0 by default, create a **DisabledByDefault** entry. 
+If an SSPI app requests to use SSL 2.0, it will be negotiated. 
+
 
 SSL 2.0 subkey table
 
@@ -310,7 +315,6 @@ SSL 2.0 subkey table
 |--------|-------------|
 | Client | Controls the use of SSL 2.0 on the SSL client. |
 | Server | Controls the use of SSL 2.0 on the SSL server. |
-| DisabledByDefault | Flag to disable SSL 2.0 by default. If an SSPI app requests to use SSL 2.0, it will be negotiated. |
 
 ## SSL 3.0
 
@@ -324,7 +328,11 @@ Registry path: HKLM SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\
 To enable the SSL 3.0 protocol, create an Enabled entry in the appropriate subkey. 
 This entry does not exist in the registry by default. 
 After you have created the entry, change the DWORD value to 1. 
+
 To disable the protocol, change the DWORD value to 0.
+
+To disable SSL 3.0 by default, create a **DisabledByDefault** entry. 
+If an SSPI app requests to use SSL 3.0, it will be negotiated. 
 
 SSL 3.0 subkey table
 
@@ -332,7 +340,7 @@ SSL 3.0 subkey table
 |--------|-------------|
 | Client | Controls the use of SSL 3.0 on the SSL client. |
 | Server | Controls the use of SSL 3.0 on the SSL server. |
-| DisabledByDefault | Flag to disable SSL 3.0 by default. If an SSPI app requests to use SSL 3.0, it will be negotiated.|
+
 
 ## TLS 1.0
 
@@ -345,7 +353,11 @@ Registry path: HKLM SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\
 To disable the TLS 1.0 protocol, create an **Enabled** entry in the appropriate subkey. 
 This entry does not exist in the registry by default. 
 After you have created the entry, change the DWORD value to 0. 
+
 To enable the protocol, change the DWORD value to 1.
+
+To disable TLS 1.0 by default, create a **DisabledByDefault** entry. 
+If an SSPI app requests to use TLS 1.0, it will be negotiated. 
 
 TLS 1.0 subkey table
 
@@ -353,7 +365,10 @@ TLS 1.0 subkey table
 |--------|-------------|
 | Client | Controls the use of TLS 1.0 on the TLS client. |
 | Server | Controls the use of TLS 1.0 on the TLS server. |
-| DisabledByDefault | Flag to disable TLS 1.0 by default. If an SSPI app requests to use TLS 1.0, it will be negotiated.|
+
+The following example shows TLS 1.0 disabled in the registry:
+
+![TLS 1.0 disabled](images/tls-registry-setting.png)
 
 ## TLS 1.1
 
@@ -370,7 +385,11 @@ Registry path: HKLM SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\
 To disable the TLS 1.1 protocol, create an **Enabled** entry in the appropriate subkey. 
 This entry does not exist in the registry by default. 
 After you have created the entry, change the DWORD value to 0. 
+
 To enable the protocol, change the DWORD value to 1.
+
+To disable TLS 1.1 by default, create a **DisabledByDefault** entry. 
+If an SSPI app requests to use TLS 1.1, it will be negotiated. 
 
 TLS 1.1 subkey table
 
@@ -378,7 +397,7 @@ TLS 1.1 subkey table
 |--------|-------------|
 | Client | Controls the use of TLS 1.1 on the TLS client. |
 | Server | Controls the use of TLS 1.1 on the TLS server. |
-| DisabledByDefault | Flag to disable TLS 1.1 by default. If an SSPI app requests to use TLS 1.1, it will be negotiated. |
+
 
 ## TLS 1.2
 
@@ -395,7 +414,11 @@ Registry path: HKLM SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\
 To disable the TLS 1.2 protocol, create an **Enabled** entry in the appropriate subkey. 
 This entry does not exist in the registry by default. 
 After you have created the entry, change the DWORD value to 0. 
+
 To enable the protocol, change the DWORD value to 1.
+
+To disable TLS 1.2 by default, create a **DisabledByDefault** entry. 
+If an SSPI app requests to use TLS 1.2, it will be negotiated. 
 
 TLS 1.2 subkey table
 
@@ -403,7 +426,6 @@ TLS 1.2 subkey table
 |--------|-------------|
 | Client | Controls the use of TLS 1.2 on the TLS client. |
 | Server | Controls the use of TLS 1.2 on the TLS server. |
-| DisabledByDefault | Flag to disable TLS 1.2 by default. If an SSPI app requests to use TLS 1.2, it will be negotiated.|
 
 ## DTLS 1.0
 
@@ -416,7 +438,11 @@ Registry path: HKLM SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\
 To disable the DTLS 1.0 protocol, create an **Enabled** entry in the appropriate subkey. 
 This entry does not exist in the registry by default. 
 After you have created the entry, change the DWORD value to 0. 
+
 To enable the protocol, change the DWORD value to 1.
+
+To disable DTLS 1.0 by default, create a **DisabledByDefault** entry. 
+If an SSPI app requests to use DTLS 1.0, it will be negotiated. 
 
 DTLS 1.0 subkey table
 
@@ -424,7 +450,7 @@ DTLS 1.0 subkey table
 |--------|-------------|
 | Client | Controls the use of DTLS 1.0 on the DTLS client. |
 | Server | Controls the use of DTLS 1.0 on the DTLS server. |
-| DisabledByDefault | Flag to disable DTLS 1.0 by default. If an SSPI app requests to use DTLS 1.0, it will be negotiated.|
+
 
 ## DTLS 1.2
 
@@ -437,7 +463,11 @@ Registry path: HKLM SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\
 To disable the DTLS 1.2 protocol, create an **Enabled** entry in the appropriate subkey. 
 This entry does not exist in the registry by default. 
 After you have created the entry, change the DWORD value to 0. 
+
 To enable the protocol, change the DWORD value to 1.
+
+To disable DTLS 1.2 by default, create a **DisabledByDefault** entry. 
+If an SSPI app requests to use DTLS 1.2, it will be negotiated. 
 
 DTLS 1.2 subkey table
 
@@ -445,5 +475,5 @@ DTLS 1.2 subkey table
 |--------|-------------|
 | Client | Controls the use of DTLS 1.2 on the DTLS client. |
 | Server | Controls the use of DTLS 1.2 on the DTLS server. |
-| DisabledByDefault | Flag to disable DTLS 1.2 by default. If an SSPI app requests to use DTLS 1.2, it will be negotiated.|
+
 
