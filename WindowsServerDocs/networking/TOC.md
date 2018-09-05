@@ -111,6 +111,7 @@
 #### [Manage vRSS](technologies/vrss/vrss-manage.md)
 #### [vRSS Frequently Asked Questions](technologies/vrss/vrss-faq.md)
 #### [Windows PowerShell Commands for RSS and vRSS](technologies/vrss/vrss-wps.md)
+#### [Resolve vRSS issues](technologies/vrss/vrss-resolve-issues.md)
 
 
 ## [Hyper-V Virtual Switch](technologies/vswitch-stub.md)

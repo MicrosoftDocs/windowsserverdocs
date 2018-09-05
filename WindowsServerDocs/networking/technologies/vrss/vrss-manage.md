@@ -1,18 +1,20 @@
 ---
 title: Manage vRSS
-description: You can use this topic to change or remove vRSS settings in Windows Server 2016.
+description: In this topic, you use the Windows PowerShell commands to manage vRSS in virtual machines (VMs) and on Hyper-V hosts.
 ms.prod: windows-server-threshold
 ms.technology: networking
 ms.topic: article
 ms.assetid: 0fe5bfc3-591f-4a19-b98a-0668d4c9f93a
-manager: brianlic
+ms.localizationpriority: medium
+manager: elizapo
+ms.date: 09/05/2018
 ms.author: pashort
 author: shortpatti
 ---
 
 # Manage vRSS
 
-You can use the following Windows PowerShell commands to manage vRSS in virtual machines \(VMs\) and on Hyper\-V hosts.
+In this topic, you use the Windows PowerShell commands to manage vRSS in virtual machines \(VMs\) and on Hyper\-V hosts.
 
 >[!NOTE]
 >For more information about the commands mentioned in this topic, see [Windows PowerShell Commands for RSS and vRSS](vrss-wps.md).
@@ -20,9 +22,12 @@ You can use the following Windows PowerShell commands to manage vRSS in virtual 
 ## VMQ on Hyper-V Hosts
 
 On the Hyper-V host, you must use the keywords that control the VMQ processors.
+
 You can view the current settings inside the host by using the following Windows PowerShell command.
 
-    Get-NetAdapterVmq
+   ```PowerShell
+   Get-NetAdapterVmq
+   ```
 
 To configure the VMQ settings, you can use the following Windows PowerShell command.
 

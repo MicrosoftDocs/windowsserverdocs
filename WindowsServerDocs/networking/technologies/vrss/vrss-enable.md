@@ -6,6 +6,7 @@ ms.technology: networking
 ms.topic: article
 ms.assetid: cb48315c-0204-4927-aa24-64f6789c2e20
 manager: elizapo
+ms.localizationpriority: medium
 ms.date: 09/05/2018
 ms.author: pashort
 author: shortpatti

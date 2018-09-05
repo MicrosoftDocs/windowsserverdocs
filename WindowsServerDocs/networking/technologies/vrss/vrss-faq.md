@@ -1,10 +1,11 @@
 ---
 title: vRSS Frequently Asked Questions
-description: You can use this topic for commonly asked questions and answers about vRSS in Windows Server 2016.
+description: In this topic, you find some commonly asked questions and answers about using vRSS.
 ms.prod: windows-server-threshold
 ms.technology: networking
 ms.topic: article
 ms.assetid: 61ae242e-82a8-430d-b07d-52b86c01e686
+ms.localizationpriority: medium
 manager: elizapo
 ms.date: 09/05/2018
 ms.author: pashort

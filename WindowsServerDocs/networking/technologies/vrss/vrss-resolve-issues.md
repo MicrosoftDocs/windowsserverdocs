@@ -5,6 +5,7 @@ ms.prod: windows-server-threshold
 ms.technology: networking
 ms.topic: article
 ms.assetid: 
+ms.localizationpriority: medium
 manager: elizapo
 ms.author: pashort
 author: shortpatti
