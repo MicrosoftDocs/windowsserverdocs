@@ -1,6 +1,6 @@
 ---
-title: AD FS Password Spray Attack protection
-description:  This document describes how to protect AD FS users from password spray attacks
+title: AD FS Password Attack protection
+description:  This document describes how to protect AD FS users from password attacks
 author: billmath
 manager: mtillman
 ms.reviewer: andandyMSFT
@@ -13,15 +13,15 @@ ms.author: billmath
 
 
 
-# AD FS Password Spray Attack protection
+# AD FS Password Attack protection
 
-## What is a password spray attack?
+## What is a password attack?
 
 A requirement for federated single sign-on is the availability of endpoints to authenticate over the internet. The availability of authentication endpoints on the internet enables users to access the applications even when they are not on a corporate network. 
 
 However, this also means that some bad actors can take advantage of the federated endpoints available on the internet and use these endpoints to try and determine passwords or to create denial of service attacks. One such attack that is becoming more common called a **password attack**. 
-T
-here are 2 types of common password attacks. Password spray attack & brute force password attack. 
+
+There are 2 types of common password attacks. Password spray attack & brute force password attack. 
 
 ### Password Spray Attack
 In a password spray attack, these bad actors will try the most common passwords across many different accounts and services to gain access to any password protected assets they can find. Usually these span many different organizations and identity providers. For example, an attacker will use a commonly available toolkit to enumerate all of the users in several organizations and then try “P@$$w0rd” and “Password1” against all of those accounts. To give you the idea, an attack might look like:
@@ -98,7 +98,7 @@ But by taking a few steps to configure the AD FS and network correctly, AD FS en
 
     a.	If you have Azure AD premium, use [Azure AD Conditional Access policies](https://docs.microsoft.com/azure/active-directory/conditional-access/overview) to control this.  This is better than implementing the rules at AD FS.  This is because modern client apps are enforced on a more frequent basis.  This occurs, at Azure AD, when requesting a new access token (typically every hour) using a refresh token.  
 
-    b.	If you don’t have Azure AD premium or have additional apps on AD FS that you allow internet based access, implement MFA (Can be Azure MFA as well on AD FS 2016) and do a [global MFA policy](../../ad-fs/operations/configure-authentication-policies.md#to-configure-multi-factor-authentication-globally for all extranet access.
+    b.	If you don’t have Azure AD premium or have additional apps on AD FS that you allow internet based access, implement MFA (Can be Azure MFA as well on AD FS 2016) and do a [global MFA policy](../../ad-fs/operations/configure-authentication-policies.md#to-configure-multi-factor-authentication-globally) for all extranet access.
  
 ## Level 3: Move to password less for extranet access
 
