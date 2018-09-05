@@ -17,7 +17,7 @@ If you have completed all of the preparation steps and you still do not see vRSS
 
 1. Before you performed preparation steps, vRSS was disabled - and now must be enabled. You can run **Set-VMNetworkAdapter** to enable vRSS for the VM.
 
-   ```
+   ```PowerShell
    Set-VMNetworkAdapter <VMname> -VrssEnabled $TRUE
    Set-VMNetworkAdapter -ManagementOS -VrssEnabled $TRUE
    ```
@@ -30,7 +30,7 @@ If you have completed all of the preparation steps and you still do not see vRSS
 
    Run the following PowerShell cmdlet in the VM\(for vRSS in a VM\) or on the host \(for host vNIC vRSS\).
 
-   ```
+   ```PowerShell
    Get-NetAdapterRss
    ```
 
@@ -38,7 +38,7 @@ If you have completed all of the preparation steps and you still do not see vRSS
 
    To change the value from False to True, run the following PowerShell cmdlet.
 
-   ```
+   ```PowerShell
    Enable-NetAdapterRss *
    ```
 
@@ -51,13 +51,13 @@ If you have completed all of the preparation steps and you still do not see vRSS
 
    **View the current settings:** 
 
-   ```
+   ```PowerShell
    Get-NetAdapterAdvancedProperty -Name NICName -DisplayName 'Virtual Switch RSS'
    ```
 
    **Enable the feature:** 
 
-   ```
+   ```PowerShell
    Set-NetAdapterAdvancedProperty -Name NICName -DisplayName 'Virtual Switch RSS' -DisplayValue Enabled”
    ```
  
