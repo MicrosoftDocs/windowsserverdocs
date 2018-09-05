@@ -70,7 +70,9 @@ This section covers prerequisites HGS and SQL Server machines.
 
   - **Host key mode** uses an asymmetric key pair (much like SSH keys) to identify and authorize hosts that wish to run SQL Server. This mode is easier to set up and does not have any specific hardware requirements but will not verify the software or firmware running on the SQL server machines.   
 
-Microsoft recommends you use TPM mode for production environments. 
+>[!NOTE]
+>Microsoft recommends you use TPM mode for production environments. 
+
 To check if your TPM is compatible, run the following commands on the machine where you intend to run SQL Server using Always Encrypted with secure enclaves. 
 “2.0” must appear in the list of supported SpecVersions for you to use TPM attestation:
 
@@ -102,12 +104,6 @@ It is recommended that you set up one node completely before adding other nodes.
    Initialize-HgsAttestation -HgsServiceName 'hgs' -TrustHostKey 
    ```
 
-5. Run the following command to join the existing HGS cluster:
-
-   ```powershell
-   Initialize-HgsServer -HgsServerIPAddress <IP address of first HGS Server>
-   ```
-
 ## Set up additional HGS nodes for production deployments
 
 Complete the following steps to add nodes to the cluster. 
@@ -122,7 +118,7 @@ Complete the following steps to add nodes to the cluster.
    $HgsDomainName = 'bastion.local' 
    $HgsDomainCredential = Get-Credential 
  
-   Initialize-HgsServer -HgsDomainName $HgsDomainName -HgsDomainCredential $HgsDomainCredential -Restart 
+   Install-HgsServer -HgsDomainName $HgsDomainName -HgsDomainCredential $HgsDomainCredential -Restart 
    ```
 
 4. [!INCLUDE [Initialize HGS](../../includes/guarded-fabric-initialize-hgs-on-the-node.md)] 
