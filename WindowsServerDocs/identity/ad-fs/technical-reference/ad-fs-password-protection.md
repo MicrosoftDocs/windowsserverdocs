@@ -19,7 +19,7 @@ ms.author: billmath
 
 A requirement for federated single sign-on is the availability of endpoints to authenticate over the internet. The availability of authentication endpoints on the internet enables users to access the applications even when they are not on a corporate network. 
 
-However, this also means that some bad actors can take advantage of the federated endpoints available on the internet and use these endpoints to try and determine passwords or to create denial of service attacks. One such attack that is becoming more common called a **password attack**. 
+However, this also means that some bad actors can take advantage of the federated endpoints available on the internet and use these endpoints to try and determine passwords or to create denial of service attacks. One such attack that is becoming more common is called a **password attack**. 
 
 There are 2 types of common password attacks. Password spray attack & brute force password attack. 
 
