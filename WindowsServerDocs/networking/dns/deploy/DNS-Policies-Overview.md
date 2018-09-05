@@ -190,4 +190,6 @@ For information on how to use DNS policy for specific scenarios, see the followi
 - [Use DNS Policy for Application Load Balancing](app-lb.md)
 - [Use DNS Policy for Application Load Balancing With Geo-Location Awareness](app-lb-geo.md)
 
+## Using DNS Policy on Read-Only Domain Controllers
 
+DNS Policy is compatible with Read-Only Domain Controllers. Do note that a restart of the DNS Server service is required for new DNS Policies to be loaded on Read-Only Domain Controllers. This is not necessary on writable domain controllers.
