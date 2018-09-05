@@ -4,7 +4,7 @@ description:  This document describes how to protect AD FS users from password a
 author: billmath
 manager: mtillman
 ms.reviewer: andandyMSFT
-ms.date: 08/09/2018
+ms.date: 09/05/2018
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
