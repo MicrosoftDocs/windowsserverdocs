@@ -23,47 +23,48 @@ In this topic, you use the Windows PowerShell commands to manage vRSS in virtual
 
 On the Hyper-V host, you must use the keywords that control the VMQ processors.
 
-You can view the current settings inside the host by using the following Windows PowerShell command.
+   **View the current settings:** 
 
    ```PowerShell
    Get-NetAdapterVmq
    ```
 
-To configure the VMQ settings, you can use the following Windows PowerShell command.
+   **Configure the VMQ settings:** 
 
-    Set-NetAdapterVmq
+   ```PowerShell
+   Set-NetAdapterVmq
+   ```
+
 
 ## vRSS on Hyper-V switch ports
 
 On the Hyper-V host, you must also enable vRSS on the Hyper\-V Virtual Switch port.
 
-You can view the current settings by using one of the following Windows PowerShell commands.
+**View the current settings:**
 
-    Get-VMNetworkAdapter <vm-name> | fl
+```PowerShell
+Get-VMNetworkAdapter <vm-name> | fl
 
-    Get-VMNetworkAdapter -ManagementOS | fl
-
-
-After you run one of these commands, you can observe two fields:
-
+Get-VMNetworkAdapter -ManagementOS | fl
+   ```
     
-    VrssEnabledRequested   : True
-    VrssEnabled: True
+   Both of the following settings should be **True**. 
+
+    - VrssEnabledRequested: True
+    - VrssEnabled: True
     
+   >[!IMPORTANT]
+   >Under some resource limitation conditions, a Hyper\-V Virtual Switch port might be unable to have this feature enabled. This is a temporary condition, and the feature may become available at a subsequent time.
+   >
+   >If **VrssEnabled** is **True**, then the feature is enabled for this Hyper\-V Virtual Switch port—that is, for this VM or vNIC.
 
-Generally, if **VrssEnabledRequested** is **True**, then **VrssEnabled** will also be **True**.  
+   **Configure the switch port vRSS settings:**
 
-Under some resource limitation conditions, a Hyper\-V Virtual Switch port might be unable to have this feature enabled. This is a temporary condition, and the feature may become available at a subsequent time.
-
-If **VrssEnabled** is **True**, then the feature is enabled for this Hyper\-V Virtual Switch port \(i.e., for this VM or vNIC\).
-
-To configure the switch port vRSS settings, you can use one of the following Windows PowerShell command to set the **VrssEnabledRequested** field to **True**:
-
+   ```PowerShell
+   Set-VMNetworkAdapter <vm-name> -VrssEnabled $TRUE
     
-    Set-VMNetworkAdapter <vm-name> -VrssEnabled $TRUE
-    
-    Set-VMNetworkAdapter -ManagementOS -VrssEnabled $TRUE
-    
+   Set-VMNetworkAdapter -ManagementOS -VrssEnabled $TRUE
+   ```
 
 ## vRSS in VMs and host vNICs
 
