@@ -145,7 +145,9 @@ Shortly after Storage Spaces Direct is enabled, an approximately 10 GB volume na
 
 ![Volume for performance history storage](media/performance-history/perf-history-volume.png)
 
-The volume is backed by Storage Spaces and uses either two-way or three-way mirror resiliency, depending on the number of nodes in the cluster. It is repaired after drive or server failures just like any other volume in Storage Spaces Direct. It uses ReFS but is not Cluster Shared Volume (CSV), so it only appears on the Cluster Group owner node. Besides being automatically created, there is nothing special about this volume: you can see it, browse it, resize it, or delete it (not recommended). If something goes wrong, see [Troubleshooting](#troubleshooting). 
+The volume is backed by Storage Spaces and uses either simple, two-way mirror, or three-way mirror resiliency, depending on the number of nodes in the cluster. It is repaired after drive or server failures just like any other volume in Storage Spaces Direct.
+
+The volume uses ReFS but is not Cluster Shared Volume (CSV), so it only appears on the Cluster Group owner node. Besides being automatically created, there is nothing special about this volume: you can see it, browse it, resize it, or delete it (not recommended). If something goes wrong, see [Troubleshooting](#troubleshooting). 
 
 ### Object discovery and data collection
 
@@ -196,13 +198,18 @@ Stop-ClusterPerformanceHistory -DeleteHistory
 
 ## Troubleshooting
 
+### The cmdlet doesn't work
+
+An error message like "*The term 'Get-ClusterPerf' is not recognized as the name of a cmdlet*" means the feature is not available or installed. Verify that you have Windows Server Insider Preview build 17692 or later, that you've installed Failover Clustering, and that you're running Storage Spaces Direct.
+
+   > [!NOTE]
+   > This feature is not available on Windows Server 2016 or earlier.
+
 ### No data available 
 
-Charts in Windows Admin Center for Hyper-Converged Infrastructure are powered by performance history.
+If a chart shows "*No data available*" as pictured, here's how to troubleshoot:
 
 ![No data available](media/performance-history/no-data-available.png)
-
-If a chart shows "*No data available*" as pictured, here's how to troubleshoot:
 
 1. If the object was newly added or created, wait for it to be discovered (up to 15 minutes).
 
@@ -213,13 +220,6 @@ If a chart shows "*No data available*" as pictured, here's how to troubleshoot:
 4. If the problem persists, open PowerShell as Administrator and run the `Get-ClusterPerf` cmdlet. The cmdlet includes troubleshooting logic to identify common problems, such as if the ClusterPerformanceHistory volume is missing, and provides remediation instructions.
 
 5. If the command in the previous step returns nothing, you can try restarting the Health Service (which collects performance history) by running `Stop-ClusterResource Health ; Start-ClusterResource Health` in PowerShell.
-
-### The cmdlet doesn't work
-
-An error message like "*The term 'Get-ClusterPerf' is not recognized as the name of a cmdlet*" means the feature is not available or installed. Verify that you have Windows Server Insider Preview build 17692 or later, that you've installed Failover Clustering, and that you're running Storage Spaces Direct.
-
-   > [!NOTE]
-   > This feature is not available on Windows Server 2016 or earlier.
 
 ## See also
 
