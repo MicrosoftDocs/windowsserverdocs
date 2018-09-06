@@ -5,6 +5,7 @@ ms.prod: windows-server-threshold
 ms.technology: networking
 ms.topic: article
 ms.assetid: 9be477b3-f81d-4e84-a6b0-ac4c1ea97715
+ms.date: 09/05/2018
 ms.localizationpriority: medium
 manager: elizapo
 ms.author: pashort
@@ -15,25 +16,17 @@ author: shortpatti
 
 >Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
 
-You can use Virtual Receive Side Scaling \(vRSS) to configure a virtual network adapter to load balance incoming network traffic across multiple logical processor cores in a VM or multiple physical cores for a host virtual Network Interface Card \(vNIC\).
+
+Use Virtual Receive Side Scaling \(vRSS) to configure a virtual network adapter to load balance incoming network traffic across multiple logical processor cores in a VM or multiple physical cores for a host virtual Network Interface Card \(vNIC\).
 
 This configuration allows the load from a virtual network adapter to be distributed across multiple virtual processors in a virtual machine \(VM\), allowing the VM to process more network traffic more rapidly than it can with a single logical processor.
-
->[!NOTE]
->In addition to this topic, the following vRSS documentation is available.
->
-> - [Plan the Use of vRSS](vrss-plan.md)
-> - [Enable vRSS on a Virtual Network Adapter](vrss-enable.md)
-> - [Manage vRSS](vrss-manage.md)
-> - [vRSS Frequently Asked Questions](vrss-faq.md)
-> - [Windows PowerShell Commands for RSS and vRSS](vrss-wps.md)
-
 
 You can use vRSS in VMs on Hyper\-V hosts that have multiple processors, a single multiple core processor, or more than one multiple core processors installed and configured for VM use.
 
 vRSS is compatible with all other Hyper\-V networking technologies. vRSS is dependent on Virtual Machine Queue \(VMQ\) in the Hyper\-V host and RSS in the VM or on the host vNIC.
 
 vRSS is enabled by default, however you can disable vRSS in a VM by using Windows PowerShell commands. For more information, see the topics [Manage vRSS](vrss-manage.md) and [Windows PowerShell Commands for RSS and vRSS](vrss-wps.md).
+
 
 ## Operating System Compatibility
 
@@ -85,12 +78,12 @@ Sandra has just installed Windows Server 2016 so that she can use vRSS to get pa
 
 Because vRSS is enabled by default in Windows Server 2016, Sandra doesn’t have to make any configuration changes to get great performance.
 
-## Other topics in this guide
+## Related topics
 
-The following topics are also available.
+- [Plan the Use of vRSS](vrss-plan.md)
+- [Enable vRSS on a Virtual Network Adapter](vrss-enable.md)
+- [Manage vRSS](vrss-manage.md)
+- [vRSS Frequently Asked Questions](vrss-faq.md)
+- [Windows PowerShell Commands for RSS and vRSS](vrss-wps.md)
 
- - [Plan the Use of vRSS](vrss-plan.md)
- - [Enable vRSS on a Virtual Network Adapter](vrss-enable.md)
- - [Manage vRSS](vrss-manage.md)
- - [vRSS Frequently Asked Questions](vrss-faq.md)
- - [Windows PowerShell Commands for RSS and vRSS](vrss-wps.md)
+---

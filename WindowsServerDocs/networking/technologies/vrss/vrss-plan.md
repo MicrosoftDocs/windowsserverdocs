@@ -21,7 +21,7 @@ In Windows Server 2016, vRSS is enabled by default, however you must prepare you
 >[!NOTE]
 >In Windows Server 2012 R2, vRSS was disabled by default.
 
-This planning and preparation includes the following steps.
+This planning and preparation includes:
 
 - Ensure that the physical network adapter is compatible with Virtual Machine Queue \(VMQ\) and has a link speed of 10 Gbps or more.
 - Ensure that VMQ is enabled on the physical NIC and on the Hyper\-V Virtual Switch port
