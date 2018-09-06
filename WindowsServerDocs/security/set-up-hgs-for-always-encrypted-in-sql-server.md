@@ -11,7 +11,7 @@ ms.date: 09/04/2018
 
 # Setting up the Host Guardian Service for Always Encrypted with secure enclaves in SQL Server 
 
->Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, SQL Server 2019
+>Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, SQL Server 2019 CTP 2.0
  
 [Always Encrypted with secure enclaves](https://docs.microsoft.com/sql/relational-databases/security/encryption/always-encrypted-enclaves) in SQL Server 2019 CTP 2.0 is a feature designed to enable confidential computations on sensitive data stored in a database. 
 The Host Guardian Service (HGS) plays an important role in keeping your data safe when a secure enclave, configured for Always Encrypted, is a virtualization-based security (VBS) memory enclave. 
