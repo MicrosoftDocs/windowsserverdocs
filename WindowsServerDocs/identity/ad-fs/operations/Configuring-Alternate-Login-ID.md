@@ -137,7 +137,7 @@ The office applications rely on information pushed by the directory administrato
 
 ## New authentication flow after additional configuration
 
-![Authentication flow](media/Configure-Alternate-Login-ID/alt1.png)
+![Authentication flow](media/Configure-Alternate-Login-ID/alt1a.png)
 
 1. a: User is provisioned in Azure AD using alternate-id
    </br>b: Directory administrator pushes required regkey settings to impacted client machines
