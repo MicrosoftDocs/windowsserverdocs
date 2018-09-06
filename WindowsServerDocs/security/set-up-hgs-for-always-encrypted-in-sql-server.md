@@ -132,6 +132,8 @@ Complete the following steps to add nodes to the cluster.
 
 [!INCLUDE [Configure HTTPS](../../includes/configure-hgs-for-https.md)] 
 
+For SQL Server with secure enclaves, the SSL certificate needs to be trusted on both host machines that run SQL server and machines that run database client applications need to contact HGS. 
+
 ## Collect attestation info from the host machines
 
 Once HGS is set up, it needs to be configured with attestation information from your host machines so that it knows which machines should be authorized to perform confidential computations using Always Encrypted and VBS secure enclaves. These steps vary based on which attestation mode you use. 
