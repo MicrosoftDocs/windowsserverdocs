@@ -1,7 +1,7 @@
 ---
 ms.assetid: 
 title: Insider Preview - High-Performance Networking features in Windows Server 2019
-description: New High-Performance Networking features in Windows Server 2019
+description: Learn about the new High-Performance Networking features in Windows Server 2019.
 author: shortpatti
 ms.author: pashort
 ms.date: 09/05/2018
