@@ -1,16 +1,18 @@
 ---
-title: Remote Direct Memory Access (RDMA)
+title: Network Offload and Optimization Technologies
 description: 
 manager: elizapo
 ms.prod: windows-server-threshold
 ms.technology: networking
 ms.topic: article
-ms.author: pashort 
+ms.assetid: 
+ms.author: dacuo 
 author: shortpatti
-ms.date: 4/26/2018 
+ms.date: 09/06/2018 
 ---
 
 # Network Offload and Optimization Technologies
+>Applies to: Windows Server 2016 version 1709 or later, and Windows 10 version 1703 or later
 
 There are many networking features in each release of Windows Server. Each of
 these features is intended to address the needs of customer workloads. In this
