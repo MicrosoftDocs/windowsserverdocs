@@ -8,11 +8,12 @@ ms.topic: article
 ms.assetid: 9be83ed2-9e62-49e8-88e7-f52d3449aac5
 ms.author: pashort
 author: JMesser81
+ms.date: 08/14/2018
 
 ---
 # Troubleshoot the Windows Server Software Defined Networking Stack
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 This guide examines the common Software Defined Networking (SDN) errors and failure scenarios and outlines a troubleshooting workflow that leverages the available diagnostic tools.  
 
@@ -118,7 +119,7 @@ The table below shows the list of error codes, messages, and follow-up actions t
 
   
 | **Code**| **Message**| **Action**|  
-|:--------:|:-----------:|----------:|  
+|--------|-----------|----------|  
 | Unknown| Unknown error| |  
 | HostUnreachable                       | The host machine is not reachable | Check the Management network connectivity between Network Controller and Host |  
 | PAIpAddressExhausted                  | The PA Ip addresses exhausted | Increase the HNV Provider logical subnet's IP Pool Size |  
@@ -201,7 +202,7 @@ In a production deployment is with a multi-node Network Controller, you can also
 ```none  
 Get-NetworkControllerReplica
 
-# Sample Output for the API service module
+# Sample Output for the API service module 
 Replicas for service: ApiService
 
 ReplicaRole   : Primary

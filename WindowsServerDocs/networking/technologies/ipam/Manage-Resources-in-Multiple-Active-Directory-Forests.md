@@ -16,7 +16,7 @@ author: shortpatti
 ---
 # Manage Resources in Multiple Active Directory Forests
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 You can use this topic to learn how to use IPAM to manage domain controllers, DHCP servers, and DNS servers in multiple Active Directory forests.  
   

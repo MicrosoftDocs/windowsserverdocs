@@ -12,4 +12,4 @@ ms.date: 05/03/2018
 ---
 
 # Network Offload and Optimization Technologies
->Applies To: Windows Server 2016 version 1709 or later, and Windows 10 version 1703 or later
+>Applies to: Windows Server 2016 version 1709 or later, and Windows 10 version 1703 or later
