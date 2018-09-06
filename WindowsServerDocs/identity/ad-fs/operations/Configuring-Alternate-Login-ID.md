@@ -99,10 +99,10 @@ or more information see, [Hybrid Modern Authentication Overview](https://support
 The following are pre-requisites for achieving seamless SSO with alternate ID.
 
 - Exchange Online should have Modern Authentication turned ON.
-- Skype for Business Online should have Modern Authentication turned ON.
-- Exchange on-premises should have Modern Authentication turned ON.
+- Skype for Business (SFB) Online should have Modern Authentication turned ON.
+- Exchange on-premises should have Modern Authentication turned ON.  Exchange 2013 CU19 or Exchange 2016 CU18 and up is required on all Exchange servers. No Exchange 2010 in the environment.
 - Skype for Business on-premises should have Modern Authentication turned ON.
-- You must use Exchange and Skype clients that have Modern Authentication enabled.
+- You must use Exchange and Skype clients that have Modern Authentication enabled. All servers must be running SFB Server 2015 CU5.
 - Skype for Business Clients that are Modern Authentication capable
    - iOS, Android, Windows Phone
    - SFB 2016 (MA is ON by default, but make sure it has not been disabled.)
