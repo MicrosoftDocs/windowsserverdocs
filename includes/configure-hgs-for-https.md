@@ -3,19 +3,18 @@ All sensitive material being transmitted to and from HGS are always encrypted us
 
 First, obtain an SSL certificate for HGS from your certificate authority. Each host machine will need to trust the SSL certificate, so it is recommended that you issue the SSL certificate from your company's public key infrastructure or a third party CA. Any SSL certificate supported by IIS is supported by HGS, however **the subject name on the certificate must match the fully qualified HGS service name** (cluster distributed network name). For instance, if the HGS domain is "secure.bastion.local" and your HGS service name is "hgs", your SSL certificate should be issued for "hgs.secure.bastion.local". You can add additional DNS names to the certificate's subject alternative name field if necessary.
 
-Once you have the SSL certificate, you can either provide the certificate to the Initialize-HgsServer cmdlet if you haven't already run it, or use Set-HgsServer if you've already initialized HGS.
+Once you have the SSL certificate, you can either provide the certificate when you run [Set-HgsServer](https://technet.microsoft.com/itpro/powershell/windows/host-guardian-service/server/set-hgsserver).
 
-Append the following SSL-related parameters to the Initialize-HgsServer command.
 
 ```powershell
 $sslPassword = Read-Host -AsSecureString -Prompt "SSL Certificate Password"
-Initialize-HgsServer <OtherParametersHere> -Http -Https -HttpsCertificatePath 'C:\temp\HgsSSLCertificate.pfx' -HttpsCertificatePassword $sslPassword
+Set-HgsServer -Http -Https -HttpsCertificatePath 'C:\temp\HgsSSLCertificate.pfx' -HttpsCertificatePassword $sslPassword
 ```
 
-If your certificate is installed in the local certificate store and cannot be exported to a PFX file with the private key intact, you can provide the SSL certificate by its thumbprint instead:
+Or, if you have already installed the certificate into the local certificate store and want to reference it by thumbprint:
 
 ```powershell
-Initialize-HgsServer <OtherParametersHere> -Http -Https -HttpsCertificateThumbprint 'A1B2C3D4E5F6...'
+Set-HgsServer -Http -Https -HttpsCertificateThumbprint 'A1B2C3D4E5F6...'
 ```
 
 > [!IMPORTANT]
