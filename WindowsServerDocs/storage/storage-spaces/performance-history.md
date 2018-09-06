@@ -5,24 +5,28 @@ ms.manager: eldenc
 ms.technology: storage-spaces
 ms.topic: article
 author: cosmosdarwin
-ms.date: 08/03/2018
+ms.date: 09/07/2018
 Keywords: Storage Spaces Direct
 ms.localizationpriority: medium
 ---
 # Performance history for Storage Spaces Direct
 
-> Applies To: Windows Server Insider Preview build 17692 and later
+> Applies To: Windows Server 2019
 
 Performance history is a new feature that gives [Storage Spaces Direct](storage-spaces-direct-overview.md) administrators easy access to historical compute, memory, network, and storage measurements across host servers, drives, volumes, virtual machines, and more. Performance history is collected automatically and stored on the cluster for up to one year.
 
    > [!IMPORTANT]
-   > This feature is new in Windows Server Insider Preview. It is not available in Windows Server 2016.
+   > This feature is new in Windows Server 2019. It is not available in Windows Server 2016.
 
 ## Get started
 
-Performance history is collected by default. You do not need to install, configure, or start anything. An Internet connection is not required, System Center is not required, and an external database is not required.
+Performance history is collected by default with Storage Spaces Direct in Windows Server 2019. You do not need to install, configure, or start anything. An Internet connection is not required, System Center is not required, and an external database is not required.
 
-To see your cluster's performance history graphically, use [Windows Admin Center](../../manage/windows-admin-center/overview.md), the next-generation in-box management tool for Windows Server. To query and process it programmatically, use the new `Get-ClusterPerformanceHistory` cmdlet – see [Usage in PowerShell](#usage-in-powershell) below.
+To see your cluster's performance history graphically, use [Windows Admin Center](../../manage/windows-admin-center/understand/windows-admin-center.md):
+
+![Performance history in Windows Admin Center](media/performance-history/perf-history-in-wac.png)
+
+To query and process it programmatically, use the new `Get-ClusterPerf` cmdlet. See [Usage in PowerShell](#usage-in-powershell).
 
 ## What's collected
 
@@ -111,7 +115,7 @@ You can specify the series you want with these parameters:
 | Parameter                 | Example                       | List                                                                                 |
 |---------------------------|-------------------------------|--------------------------------------------------------------------------------------|
 | `-PhysicalDiskSeriesName` | `"PhysicalDisk.Iops.Read"`    | [What's collected for drives](performance-history-for-drives.md)                     |
-| `-NetAdapterSeriesName`   | `"NetAdapter.Bytes.Outbound"` | [What's collected for network adapters](performance-history-for-network-adapters.md) |
+| `-NetAdapterSeriesName`   | `"NetAdapter.Bandwidth.Outbound"` | [What's collected for network adapters](performance-history-for-network-adapters.md) |
 | `-ClusterNodeSeriesName`  | `"ClusterNode.Cpu.Usage"`     | [What's collected for servers](performance-history-for-servers.md)                   |
 | `-VHDSeriesName`          | `"Vhd.Size.Current"`          | [What's collected for virtual hard disks](performance-history-for-vhds.md)           |
 | `-VMSeriesName`           | `"Vm.Memory.Assigned"`        | [What's collected for virtual machines](performance-history-for-vms.md)              |
@@ -134,8 +138,6 @@ You can specify the timeframe of history you want with the `-TimeFrame` paramete
 If you don't specify, the `MostRecent` measurement is returned.
 
 ## How it works
-
-![How it works](media/performance-history/how-it-works.png)
 
 1. When Storage Spaces Direct is enabled, the [Health Service](../../failover-clustering/health-service-overview.md) creates an approximately 10 GB three-way mirror volume named ClusterPerformanceHistory and provisions an instance of the Extensible Storage Engine (also known as Microsoft JET) there. This lightweight database stores the performance history.
 
