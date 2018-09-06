@@ -128,9 +128,9 @@ sections:
       
       title: Plan an SDN infrastructure
 
-    - href: \windows-server\networking\sdn\plan\Plan-a-Software-Defined-Network-Infrastructure
+    - href: \windows-server\networking\sdn\deploy\Deploy-a-Software-Defined-Network-Infrastructure
 
-      html: <p> </p>
+      html: <p>Deploy all the technologies you need for a fully functional infrastructure. </p>
 
       image:
 
