@@ -13,10 +13,11 @@ ms.date: 09/04/2018
  
 [Always Encrypted with secure enclaves](https://docs.microsoft.com/sql/relational-databases/security/encryption/always-encrypted-enclaves) in SQL Server vNext is a feature designed to enable confidential computations on sensitive data stored in a database. 
 The Host Guardian Service plays an important role in keeping your data safe when a secure enclave, configured for Always Encrypted, is a virtualization-based security (VBS) memory enclave. 
-The security of a VBS memory enclave depends on the security of Windows Hypervisor and, more broadly, the security of the hosting machine. 
+The security of a VBS memory enclave depends on the security of the Windows Hypervisor and, more broadly, the security of the machine hosting SQL Server. 
 
 Therefore, before a database client application permits the VBS memory enclave used for Always Encrypted to perform computations on sensitive data, the application must attest with a trusted Host Guardian Service. 
 Attestation proves the machine hosting SQL Server, which contains the enclave, is in the correct state and can be trusted. 
+For the rest of this topic, we'll refer to the machine hosting SQL Server as simply the host machine.
 
 There are two, mutually-exclusive ways for the application to attest: 
 
@@ -68,7 +69,7 @@ This section covers prerequisites HGS and SQL Server machines.
     - Secure Boot enabled with the Microsoft Secure Boot policy (do not enable the 3rd party Secure Boot CA policy or any custom policies)
     - IOMMU (Intel VT-d or AMD IOV) to prevent direct memory access attacks 
 
-  - **Host key mode** uses an asymmetric key pair (much like SSH keys) to identify and authorize hosts that wish to run SQL Server. This mode is easier to set up and does not have any specific hardware requirements but will not verify the software or firmware running on the SQL server machines.   
+  - **Host key mode** uses an asymmetric key pair (much like SSH keys) to identify and authorize host machines that wish to run SQL Server. This mode is easier to set up and does not have any specific hardware requirements but will not verify the software or firmware running on the SQL server machines.   
 
 >[!NOTE]
 >Microsoft recommends you use TPM mode for production environments. 
@@ -189,11 +190,11 @@ If you are using TPM mode, run the following commands on each SQL Server machine
    Add-HgsAttestationCiPolicy -Name AllowMicrosoft-Audit -Path C:\temp\AllowMicrosoft-Audit.bin 
    ```
 9. Your first server is now ready to attest! 
-   On the SQL Server machine, run the following command to tell it where to attest (change the DNS name to that of your HGS cluster, typically you will use the HGS Service Name combined with the HGS domain name). 
+   On the host machine, run the following command to tell it where to attest (change the DNS name to that of your HGS cluster, typically you will use the HGS Service Name combined with the HGS domain name). 
    If you receive a HostUnreachable error, ensure you can resolve and ping the DNS names of your HGS servers. 
 
    ```powershell
-   Set-HgsClientConfiguration -AttestationServerUrl http://hgs.bastion.local/Attestation -KeyProtectionServerUrl http://localhost/ 
+   Set-HgsClientConfiguration -AttestationServerUrl http://hgs.bastion.local/Attestation -KeyProtectionServerUrl http://hgs.bastion.local/KeyProtection/ 
    ```
 
 10. The result of the above command should show that AttestationStatus = Passed. If it does not, see [Attestation Failures](https://docs.microsoft.com/windows-server/virtualization/guarded-fabric-shielded-vm/guarded-fabric-troubleshoot-hosts#attestation-failures) for guidance on how to resolve the error.   
@@ -233,16 +234,16 @@ If you chose to set up HGS in host key attestation mode, you’ll need to genera
    ``` 
 
 6. Your first server is now ready to attest! 
-   On the SQL Server machine, run the following command to tell it where to attest (change the DNS name to that of your HGS cluster, typically you will use the HGS Service Name combined with the HGS domain name). 
+   On the host machine, run the following command to tell it where to attest (change the DNS name to that of your HGS cluster, typically you will use the HGS Service Name combined with the HGS domain name). 
    If you receive a HostUnreachable error, ensure you can resolve and ping the DNS names of your HGS servers.    
 
    ```powershell
-   Set-HgsClientConfiguration -AttestationServerUrl http://hgs.bastion.local/Attestation -KeyProtectionServerUrl http://localhost/ 
+   Set-HgsClientConfiguration -AttestationServerUrl http://hgs.bastion.local/Attestation -KeyProtectionServerUrl http://hgs.bastion.local/KeyProtection/  
    ```
 
 7. The result of the above command should show that AttestationStatus = Passed. 
    If you get a HostUnreachable error, that means your SQL Server cannot communicate with HGS. 
-   Ensure that DNS resolution is set up between the machine hosting SQL Server and the HGS servers and that you can ping the servers. 
+   Ensure that DNS resolution is set up between the host machine and the HGS servers and that you can ping the servers. 
    An UnauthorizedHost error indicates that the public key was not registered with the HGS server – repeat steps 4 and 5 to resolve the error. 
    If all else fails, run Clear-HgsClientHostKey and repeat steps 3-6.   
 
