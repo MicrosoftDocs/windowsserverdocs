@@ -11,7 +11,7 @@ ms.date: 09/04/2018
 
 # Setting up the Host Guardian Service for Always Encrypted in SQL Server 
  
-Always Encrypted with secure enclaves in SQL Server vNext is a feature designed to enable confidential computations on sensitive data stored in a database. 
+[Always Encrypted with secure enclaves](https://docs.microsoft.com/sql/relational-databases/security/encryption/always-encrypted-enclaves) in SQL Server vNext is a feature designed to enable confidential computations on sensitive data stored in a database. 
 The Host Guardian Service plays an important role in keeping your data safe when a secure enclave, configured for Always Encrypted, is a virtualization-based security (VBS) memory enclave. 
 The security of a VBS memory enclave depends on the security of Windows Hypervisor and, more broadly, the security of the hosting machine. 
 
