@@ -9,13 +9,15 @@ ms.technology: security-guarded-fabric
 ms.date: 09/04/2018
 ---
 
-# Setting up the Host Guardian Service for Always Encrypted in SQL Server 
+# Setting up the Host Guardian Service for Always Encrypted with secure enclaves in SQL Server 
+
+>Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, SQL Server 2019
  
-[Always Encrypted with secure enclaves](https://docs.microsoft.com/sql/relational-databases/security/encryption/always-encrypted-enclaves) in SQL Server vNext is a feature designed to enable confidential computations on sensitive data stored in a database. 
-The Host Guardian Service plays an important role in keeping your data safe when a secure enclave, configured for Always Encrypted, is a virtualization-based security (VBS) memory enclave. 
+[Always Encrypted with secure enclaves](https://docs.microsoft.com/sql/relational-databases/security/encryption/always-encrypted-enclaves) in SQL Server 2019 CTP 2.0 is a feature designed to enable confidential computations on sensitive data stored in a database. 
+The Host Guardian Service (HGS) plays an important role in keeping your data safe when a secure enclave, configured for Always Encrypted, is a virtualization-based security (VBS) memory enclave. 
 The security of a VBS memory enclave depends on the security of the Windows Hypervisor and, more broadly, the security of the machine hosting SQL Server. 
 
-Therefore, before a database client application permits the VBS memory enclave used for Always Encrypted to perform computations on sensitive data, the application must attest with a trusted Host Guardian Service. 
+Therefore, before a database client application permits the VBS memory enclave used for Always Encrypted to perform computations on sensitive data, the application must attest with a trusted HGS. 
 Attestation proves the machine hosting SQL Server, which contains the enclave, is in the correct state and can be trusted. 
 For the rest of this topic, we'll refer to the machine hosting SQL Server as simply the host machine.
 
@@ -27,15 +29,15 @@ There are two, mutually-exclusive ways for the application to attest:
 For more information about the Host Guardian Service and what it can measure, see [Guarded fabric and shielded VMs overview](https://docs.microsoft.com/windows-server/virtualization/guarded-fabric-shielded-vm/guarded-fabric-and-shielded-vms). 
 Note that although the documents talk about shielded VMs, the same protections, architecture and best practices apply to SQL Server Always Encrypted using VBS enclaves. 
 
-This article will help you set up the Host Guardian Service in a recommended configuration. 
+This article will help you set up HGS in a recommended configuration. 
 
 ## Prerequisites 
 
-This section covers prerequisites HGS and SQL Server machines. 
+This section covers prerequisites HGS and host machines. 
 
 ### HGS servers
 
-- 1-3 servers to run the Host Guardian Service. 
+- 1-3 servers to run HGS. 
   These servers should be carefully protected since they control which machines can run your SQL Server instances using Always Encrypted with secure enclaves. 
   It is recommended that different admins manage the HGS cluster and that you run the HGS on physical hardware isolated from the rest of your infrastructure, or in separate virtualization fabrics or Azure subscriptions.
 
@@ -55,7 +57,7 @@ This section covers prerequisites HGS and SQL Server machines.
   - The machines running SQL Server
   - The machines running database client applications (such as web servers) that issue database queries and use Always Encrypted with secure enclaves. 
 
-### SQL Server machines
+### SQL Server host machines
 
 - Your SQL Server instance should run on a machine that meets the following requirements:
 
@@ -64,17 +66,17 @@ This section covers prerequisites HGS and SQL Server machines.
   - General requirements listed in [Hardware and Software Requirements for Installing SQL Server](https://docs.microsoft.com/sql/sql-server/install/hardware-and-software-requirements-for-installing-sql-server?view=sql-server-2017).   
 
 - Requirements specific to the chosen attestation mode:
-  - **TPM mode** is the strongest attestation mode and will use a Trusted Platform Module (TPM) to cryptographically validate that your SQL Server machines are known to your datacenter (using a unique ID from each TPM), running trusted hardware and firmware configurations (using a TPM baseline), and running trustworthy kernel and user mode code (using Windows Defender Application Control). The following hardware is required to use TPM mode: 
+  - **TPM mode** is the strongest attestation mode and will use a Trusted Platform Module (TPM) to cryptographically validate that your host machines are known to your datacenter (using a unique ID from each TPM), running trusted hardware and firmware configurations (using a TPM baseline), and running trustworthy kernel and user mode code (using Windows Defender Application Control). The following hardware is required to use TPM mode: 
     - TPM 2.0 module installed and enabled 
     - Secure Boot enabled with the Microsoft Secure Boot policy (do not enable the 3rd party Secure Boot CA policy or any custom policies)
     - IOMMU (Intel VT-d or AMD IOV) to prevent direct memory access attacks 
 
-  - **Host key mode** uses an asymmetric key pair (much like SSH keys) to identify and authorize host machines that wish to run SQL Server. This mode is easier to set up and does not have any specific hardware requirements but will not verify the software or firmware running on the SQL server machines.   
+  - **Host key mode** uses an asymmetric key pair (much like SSH keys) to identify and authorize host machines that wish to run SQL Server. This mode is easier to set up and does not have any specific hardware requirements but will not verify the software or firmware running on the host machines.   
 
 >[!NOTE]
 >Microsoft recommends you use TPM mode for production environments. 
 
-To check if your TPM is compatible, run the following commands on the machine where you intend to run SQL Server using Always Encrypted with secure enclaves. 
+To check if your TPM is compatible, run the following commands on the host machine where you intend to run SQL Server using Always Encrypted with secure enclaves. 
 “2.0” must appear in the list of supported SpecVersions for you to use TPM attestation:
 
 ```powershell
@@ -91,6 +93,8 @@ It is recommended that you set up one node completely before adding other nodes.
 2. [!INCLUDE [Install HGS by default](../../includes/install-hgs-default.md)] 
 
 3. [!INCLUDE [Determine a DNN](../../includes/guarded-fabric-initialize-hgs-default-step-one.md)]
+
+   For SQL Server with secure enclaves, both host machines that run SQL server and machines that run database client applications need to contact HGS, though only the host machines require attestation.
 
 4. After the machine reboots again, log in as a Domain Admin and configure the attestation service. 
    You will need to choose TPM or host key attestation and run the corresponding command. 
@@ -128,15 +132,15 @@ Complete the following steps to add nodes to the cluster.
 
 [!INCLUDE [Configure HTTPS](../../includes/configure-hgs-for-https.md)] 
 
-## Collect attestation info from the SQL Server machine
+## Collect attestation info from the host machines
 
-Once HGS is set up, it needs to be configured with attestation information from your SQL Server machines so that it knows which machines should be authorized to perform confidential computations using Always Encrypted and VBS secure enclaves. These steps vary based on which attestation mode you use. 
+Once HGS is set up, it needs to be configured with attestation information from your host machines so that it knows which machines should be authorized to perform confidential computations using Always Encrypted and VBS secure enclaves. These steps vary based on which attestation mode you use. 
 
 ### Collect TPM attestation artifacts 
 
-If you are using TPM mode, run the following commands on each SQL Server machine to install support for attestation and collect the information you’ll need to register it with the Host Guardian Service. 
+If you are using TPM mode, run the following commands on each host machine to install support for attestation and collect the information you’ll need to register with the Host Guardian Service. 
 
-1. To get the HGS client installed on your SQL server, install the Guarded Host feature, which will also install Hyper-V. 
+1. To install the HGS client on your host machine, install the Guarded Host feature, which will also install Hyper-V. 
    While you will not be running VMs on this machine, the hypervisor is required to enable the Virtualization-Based Security features that isolate VBS enclaves.
 
    ```powershell
@@ -144,19 +148,10 @@ If you are using TPM mode, run the following commands on each SQL Server machine
    ```
 
 2. Restart your computer when prompted to complete installation of Hyper-V. 
-3. Collect the TPM identifier and baseline:
-
-   ```powershell
-   mkdir C:\artifacts 
-   (Get-PlatformIdentifier -Name $env:computername).Save("C:\artifacts\TpmID-$env:computername.xml") 
-   Get-HgsAttestationBaselinePolicy -SkipValidation -Path "C:\artifacts\TpmBaseline-$env:computername.tcglog" 
-   ```
-
-4. Compose a code integrity policy to restrict which software can run on the system. 
+3. Compose a code integrity policy to restrict which software can run on the system. 
    Any Windows Defender Application Control policy is sufficient. 
    If you are only running Microsoft software on the server, the following commands will quickly create a policy for you. 
-   The policy will be in audit mode, meaning it will log an event about unauthorized code, but will not keep it from running. 
-   After testing the scenario for a few days to make sure all your software passes the policy, you can change the policy to an enforced mode. 
+   The policy will be in audit mode, meaning it will log an event about unauthorized code, but will not keep it from running.  
 
    ```powershell
    Copy-Item C:\Windows\Schemas\CodeIntegrity\ExamplePolicies\AllowMicrosoft.xml C:\artifacts\AllowMicrosoft-Audit.xml 
@@ -170,13 +165,21 @@ If you are using TPM mode, run the following commands on each SQL Server machine
    If you need to allow non-Microsoft software or customize the default policy, se the [Windows Defender Application Control deployment guide](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control-deployment-guide).   
 
 
-5. Verify that Virtualization Based Security is running on your computer with the following command. 
+4. Verify that Virtualization Based Security is running on your computer with the following command. 
    You will know that VBS is running if the DeviceGuardSecurityServicesRunning field has “HypervisorEnforcedCodeIntegrity” listed in it. 
    If it is not running, download the [Device Guard Readiness Tool](https://www.microsoft.com/download/details.aspx?id=53337) and run “DG_Readiness.ps1 -Enable -HVCI” to enable it.  
    
    ```powershell
    Get-ComputerInfo -Property DeviceGuard* 
    ```
+5. Collect the TPM identifier and baseline:
+
+   ```powershell
+   mkdir C:\artifacts 
+   (Get-PlatformIdentifier -Name $env:computername).Save("C:\artifacts\TpmID-$env:computername.xml") 
+   Get-HgsAttestationBaselinePolicy -Path "C:\artifacts\TpmBaseline-$env:computername.tcglog" 
+   ```
+   
 6. Copy the xml, tcglog, and bin files from C:\artifacts to your HGS server.
 7. If this is the first TPM host you’re adding to the HGS server, you will need to install the Trusted TPM Root Certificates on each HGS server. 
    Follow the [guidance on the HGS documentation](https://docs.microsoft.com/windows-server/virtualization/guarded-fabric-shielded-vm/guarded-fabric-install-trusted-tpm-root-certificates) to complete this step.
@@ -198,7 +201,7 @@ If you are using TPM mode, run the following commands on each SQL Server machine
    ```
 
 10. The result of the above command should show that AttestationStatus = Passed. If it does not, see [Attestation Failures](https://docs.microsoft.com/windows-server/virtualization/guarded-fabric-shielded-vm/guarded-fabric-troubleshoot-hosts#attestation-failures) for guidance on how to resolve the error.   
-11. Repeat steps 1-10 for each server that will run SQL Server using Always Encrypted with secure enclaves (VBS enclaves). 
+11. Repeat steps 1-10 for each host machine. 
     If you are using identical hardware, you will not need to capture a new baseline or CI policy for every machine. 
     The baseline from your first server will cover all identically configured machines, and the CI policy can be re-used across multiple machines so long as Microsoft software is the only software on the machine.
 
@@ -208,9 +211,9 @@ If you are using TPM mode, run the following commands on each SQL Server machine
 >Host key attestation is only recommended for use in test environments or if your hardware does not support TPM attestation. 
 >TPM attestation provides the strongest assurances that VBS enclaves processing your sensitive data on SQL Server are running trusted code and the machines are configured with the recommended security settings. 
 
-If you chose to set up HGS in host key attestation mode, you’ll need to generate and collect keys from each machine running SQL Server using Always Encrypted and VBS enclaves and register them with the Host Guardian Service. 
+If you chose to set up HGS in host key attestation mode, you’ll need to generate and collect keys from each host machine and register them with the Host Guardian Service. 
 
-1. To get the HGS client installed on your SQL server, install the Guarded Host feature, which will also install Hyper-V. 
+1. To get the HGS client installed on your host machine, install the Guarded Host feature, which will also install Hyper-V. 
    While you will not be running VMs on this machine, the hypervisor is required to enable the virtualization-based security features that isolate the VBS enclaves that run Always Encrypted queries. 
 
    ```powershell
@@ -242,7 +245,7 @@ If you chose to set up HGS in host key attestation mode, you’ll need to genera
    ```
 
 7. The result of the above command should show that AttestationStatus = Passed. 
-   If you get a HostUnreachable error, that means your SQL Server cannot communicate with HGS. 
+   If you get a HostUnreachable error, that means your host machine cannot communicate with HGS. 
    Ensure that DNS resolution is set up between the host machine and the HGS servers and that you can ping the servers. 
    An UnauthorizedHost error indicates that the public key was not registered with the HGS server – repeat steps 4 and 5 to resolve the error. 
    If all else fails, run Clear-HgsClientHostKey and repeat steps 3-6.   
