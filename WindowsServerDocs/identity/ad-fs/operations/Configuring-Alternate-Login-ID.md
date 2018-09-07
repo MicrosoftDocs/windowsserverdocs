@@ -85,7 +85,7 @@ Set-AdfsClaimsProviderTrust -TargetIdentifier "AD AUTHORITY" -AlternateLoginID m
 Set-AdfsClaimsProviderTrust -TargetIdentifier "AD AUTHORITY" -AlternateLoginID $NULL -LookupForests $NULL
 ```
 
-## Hybrid Modern Authentication - seamless SSO with Alternate-ID
+## Hybrid Modern Authentication - SSO with Alternate-ID
 
 ### Exchange and Skype for Business
 If you are using alternate login id with Exchange and Skype for Business, the user experience will vary depending on whether or not you are using HMA.
@@ -96,7 +96,7 @@ If you are using alternate login id with Exchange and Skype for Business, the us
 or more information see, [Hybrid Modern Authentication Overview](https://support.office.com/en-us/article/Hybrid-Modern-Authentication-overview-and-prerequisites-for-using-it-with-on-premises-Skype-for-Business-and-Exchange-servers-ef753b32-7251-4c9e-b442-1a5aec14e58d)
 
 ### Pre-requisites for Exchange and Skype for Business
-The following are pre-requisites for achieving seamless SSO with alternate ID.
+The following are pre-requisites for achieving SSO with alternate ID.
 
 - Exchange Online should have Modern Authentication turned ON.
 - Skype for Business (SFB) Online should have Modern Authentication turned ON.
@@ -117,7 +117,7 @@ The following are pre-requisites for achieving seamless SSO with alternate ID.
 
 #### Supported Office version
 
-Configuring your directory for seamless SSO with alternate-id
+Configuring your directory for SSO with alternate-id
 Using alternate-id can cause extra prompts for authentication if these additional configurations are not completed. Refer to the article for possible impact on user experience with alternate-id.
 
 With the following additional configuration, the user experience is improved significantly, and you can achieve near zero prompts for authentication for alternate-id users in your organization.
@@ -186,7 +186,8 @@ The office applications rely on information pushed by the directory administrato
 
 -   When alternate login ID feature is enabled, AD FS will try to authenticate the end user with alternate login ID first and then fall back to use UPN if it cannot find an account that can be identified by the alternate login ID. You should make sure there are no clashes between the alternate login ID and the UPN if you want to still support the UPN login. For example, setting one's mail attribute with the other's UPN will block the other user from signing in with his UPN.
 
--   If one of the forests that is configured by the administrator is down, AD FS will continue to look up user account with alternate login ID in other forests that are configured. If AD FS server finds a unique user objects across the forests that it has searched, a user will log in successfully.
+-   If one of the forests that is configured by the administrator is down, AD FS will continue to look up user account with alternate login ID in other forests that are configured. If AD FS server finds a unique user objects across the forests that it has 
+-   searched, a user will log in successfully.
 
 -   You may additionally want to customize the AD FS sign-in page to give end users some hint about the alternate login ID. You can do it by either adding the customized sign-in page description (for more information, see [Customizing the AD FS Sign-in Pages](https://technet.microsoft.com/library/dn280950.aspx) or customizing "Sign in with organizational account" string above username field (for more information, see [Advanced Customization of AD FS Sign-in Pages](https://technet.microsoft.com/library/dn636121.aspx).
 
