@@ -22,7 +22,7 @@ Azure Update Management is a solution in Azure Automation that allows you to man
 
 With Windows Admin Center, you can easily set up and use Azure Update Management to keep your managed servers up to date. If you don’t already have a Log Analytics workspace in your Azure subscription, Windows Admin Center will automatically configure your server and create the necessary Azure resources in the subscription and location you specify. If you have an existing Log Analytics workspace, Windows Admin Center can automatically configure your sever to consume updates from Azure Update Management.  
 
-To get started, go to the Updates tool in a server connection and select “Learn more”, and provide your preferences for the related Azure resources. 
+To get started, go to the Updates tool in a server connection and select “Set up now”, and provide your preferences for the related Azure resources. 
 
 Once you've configured your server to be managed by Azure Update Management, you can access Azure Update Management by using the hyperlink provided in the Updates tool. You can also stop the server's updates from being managed by Azure Update Management using the button available.
 

@@ -31,3 +31,8 @@ You can use Windows Admin Center to manage your Azure VMs as well as on-premises
 [Azure Site Recovery](https://docs.microsoft.com/azure/site-recovery/site-recovery-overview) is an Azure service that replicates workloads running on VMs so that your business-critical infrastructure is protected in case of a disaster. Windows Admin Center streamlines setup and the process of replicating your virtual machines on your Hyper-V servers or clusters, making it easy to bolster the resiliency of your environment with Azure Site Recovery’s disaster recovery service.
 
 [Learn how to protect your virtual machines with Azure Site Recovery with Windows Admin Center.](../use/azure-services.md)
+
+## Centrally manage operating system updates for all your Windows Servers with Azure Update Management
+[Azure Update Management](https://docs.microsoft.com/azure/automation/automation-update-management) is a solution in Azure Automation that allows you to manage updates and patches for multiple machines from a single place, rather than on a per-server basis. With Azure Update Management, you can quickly assess the status of available updates, schedule installation of required updates, and review deployment results to verify updates that apply successfully. This is possible whether your machines are Azure VMs, hosted by other cloud providers, or on premise. 
+
+[Learn how to configure servers for Azure Update Management with Windows Admin Center.](../use/azure-update-management.md)
