@@ -29,7 +29,7 @@ ms.localizationpriority: medium
                                             </div>
                                         </div>
                                         <div class="cardText">
-                                            <h3>What's new?</h3>
+                                            <h2>What's new?</h2>
                                             <p>Find out what's new in Windows Server Storage</p>
                                         </div>
                                     </div>
@@ -234,7 +234,7 @@ ms.localizationpriority: medium
                         </div>
                     </div>
                     <div class="cardText">
-                        <h2>Removed features</h2>
+                        <h3>Removed features</h3>
                         <p>Description here.</p>                    </div>
                 </div>
             </div>
