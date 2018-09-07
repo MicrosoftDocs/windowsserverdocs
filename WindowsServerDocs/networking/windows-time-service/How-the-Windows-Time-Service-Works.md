@@ -13,7 +13,7 @@ ms.technology: networking
 
 # How the Windows Time Service Works
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows 10 or later
+>Applies to: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows 10 or later
 
 **In this section**  
   

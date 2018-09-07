@@ -2,7 +2,7 @@
 title: Windows Server
 description: Get started with Windows Server
 ms.prod: windows-server-threshold
-ms.date: 05/07/2018
+ms.date: 07/12/2018
 ms.technology: server-general
 ms.topic: article
 author: jaimeo
@@ -12,10 +12,14 @@ ms.localizationpriority: high
 ---
 # Windows Server technical content library
 
+
 This library provides info for IT pros to evaluate, plan, deploy, secure, and manage Windows Server.
 
->[!TIP]
-> Looking for information about older versions of Windows Server? Check out our other [Windows Server libraries](/previous-versions/windows/) on docs.microsoft.com. You can also [search this site](https://docs.microsoft.com/search/index?search=Windows+Server&dataSource=previousVersions) for specific information.
+[![WS08 end of support banner](get-started/media/WS08-EoS-banner.jpg)](get-started/modernize-windows-server-2008.md)
+
+>[!IMPORTANT]
+> Extended support for Windows Server 2008 R2 and Windows Server 2008 ends in January 2020. [Learn about your upgrade options](get-started/modernize-windows-server-2008.md), including a new Azure solution.
+
 
 <!-- *commenting out video until 1803 video available*
 **What's new in Windows Server? Check out our latest mechanics video:**
@@ -79,6 +83,10 @@ Windows Server, version 1803 is the next release in the new Semi-Annual Channel.
 
 Check out [What's New in Windows Server version 1803](get-started/whats-new-in-windows-server-1803.md) for more information about the new features and functionality added in Windows Server, version 1803.
 
+## Other versions of Windows Server
+
+Looking for information about older versions of Windows Server? Check out our other [Windows Server libraries](/previous-versions/windows/) on docs.microsoft.com. You can also [search this site](https://docs.microsoft.com/search/index?search=Windows+Server&dataSource=previousVersions) for specific information.
+
 ## Windows Server editions
 
 Windows Server, version 1803, is available in Standard and Datacenter editions, while Windows Server 2016 is available in Standard, Datacenter, and Essentials editions. Windows Server Datacenter includes unlimited virtualization rights plus new features to build a software-defined datacenter. Windows Server Standard offers enterprise-class features with limited virtualization rights. Windows Server 2016 Essentials is an ideal cloud-connected first server. It has its own [extensive documentation](https://go.microsoft.com/fwlink/?LinkID=827171)—the content here focuses on Standard and Datacenter editions. The following table briefly summarizes the key differences between Standard and Datacenter editions:
@@ -105,7 +113,7 @@ Both Standard and Datacenter editions offer two installation options:
 If you are installing Windows Server, version 1803, Server Core is your only installation option, while Windows Server 2016 offers both the Server Core and Server with Desktop Experience installation options.
 
 >[!Note]
-> Unlike some previous releases of Windows Server, you cannot convert between Server Core and Server with Desktop Experience after installation. For example, if you install Server Core and later decide to user Server with Desktop Experience, you should do a fresh installation (and vice versa).
+> Unlike some previous releases of Windows Server, you cannot convert between Server Core and Server with Desktop Experience after installation. For example, if you install Server Core and later decide to use Server with Desktop Experience, you should do a fresh installation (and vice versa).
 
 
 Now that you know which edition and installation option is right for you, click below to get started with Windows Server.

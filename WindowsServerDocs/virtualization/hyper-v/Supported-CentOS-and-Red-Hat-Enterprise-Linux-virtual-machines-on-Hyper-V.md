@@ -46,51 +46,51 @@ In this section:
 
 This series only has 64-bit kernels.
 
-|**Feature**|**Windows Server version**|**7.0-7.4**|**7.0-7.2**|**7.4**|**7.3**|**7.2**|**7.1**|**7.0**|
-|-|-|-|-|-|-|-|-|-|
-|**Availability**||[LIS 4.2](https://www.microsoft.com/download/details.aspx?id=55106)|[LIS 4.1](https://www.microsoft.com/download/details.aspx?id=51612)|Built in|Built in|Built in|Built in|Built in|
-|**[Core](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_core)**|2016, 2012 R2, 2012, 2008 R2|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|
-|Windows Server 2016 Accurate Time|2016|&#10004;|||||||
-|**[Networking](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_Networking)**|||||
-|Jumbo frames|2016, 2012 R2, 2012, 2008 R2|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|
-|VLAN tagging and trunking|2016, 2012 R2, 2012, 2008 R2|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|
-|Live Migration|2016, 2012 R2, 2012, 2008 R2|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|
-|Static IP Injection|2016, 2012 R2, 2012|&#10004; Note 2|&#10004; Note 2|&#10004; Note 2|&#10004; Note 2|&#10004; Note 2|&#10004; Note 2|&#10004; Note 2|
-|vRSS|2016, 2012 R2|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;||
-|TCP Segmentation and Checksum Offloads|2016, 2012 R2, 2012, 2008 R2|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;||
-|SR-IOV|2016|&#10004;||&#10004;|&#10004;|||
+|**Feature**|**Windows Server version**|**7.5**|**7.0-7.4**|**7.0-7.2**|**7.5**|**7.4**|**7.3**|**7.2**|**7.1**|**7.0**|
+|-|-|-|-|-|-|-|-|-|-|-|
+|**Availability**||[LIS 4.2](https://www.microsoft.com/download/details.aspx?id=55106)|||Built in|Built in|Built in|Built in|Built in|Built in||
+|**[Core](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_core)**|2016, 2012 R2, 2012, 2008 R2|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|
+|Windows Server 2016 Accurate Time|2016|&#10004;|&#10004;|||||||
+|**[Networking](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_Networking)**|||||||
+|Jumbo frames|2016, 2012 R2, 2012, 2008 R2|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|
+|VLAN tagging and trunking|2016, 2012 R2, 2012, 2008 R2|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|
+|Live Migration|2016, 2012 R2, 2012, 2008 R2|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|
+|Static IP Injection|2016, 2012 R2, 2012|&#10004; Note 2|&#10004; Note 2|&#10004; Note 2|&#10004; Note 2|&#10004; Note 2|&#10004; Note 2|&#10004; Note 2|&#10004; Note 2|&#10004; Note 2|
+|vRSS|2016, 2012 R2|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;||
+|TCP Segmentation and Checksum Offloads|2016, 2012 R2, 2012, 2008 R2|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;||
+|SR-IOV|2016|&#10004;|&#10004;||&#10004;|&#10004;|&#10004;|||
 |**[Storage](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_Storage)**||||
 |VHDX resize|2016, 2012 R2|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|
-|Virtual Fibre Channel|2016, 2012 R2|&#10004; Note 3|&#10004; Note 3|&#10004; Note 3|&#10004; Note 3|&#10004; Note 3|&#10004; Note 3|&#10004; Note 3|
-|Live virtual machine backup|2016, 2012 R2|&#10004; Note 5|&#10004; Note 5|&#10004; Note 4, 5|&#10004; Note 4, 5|&#10004; Note 4, 5|&#10004; Note 4, 5|&#10004; Note 4, 5|
-|TRIM support|2016, 2012 R2|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|||
-|SCSI WWN|2016, 2012 R2|&#10004;|&#10004;|||||
+|Virtual Fibre Channel|2016, 2012 R2|&#10004; Note 3|&#10004; Note 3|&#10004; Note 3|&#10004; Note 3|&#10004; Note 3|&#10004; Note 3|&#10004; Note 3|&#10004; Note 3|&#10004; Note 3|
+|Live virtual machine backup|2016, 2012 R2|&#10004; Note 5|&#10004; Note 5|&#10004; Note 5|&#10004; Note 4,5|&#10004; Note 4, 5|&#10004; Note 4, 5|&#10004; Note 4, 5|&#10004; Note 4, 5|&#10004; Note 4, 5|
+|TRIM support|2016, 2012 R2|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|||
+|SCSI WWN|2016, 2012 R2|&#10004;|&#10004;|&#10004;|&#10004;|||||
 |**[Memory](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_Memory)**||||
-|PAE Kernel Support|2016, 2012 R2, 2012, 2008 R2|N/A|N/A|N/A|N/A|N/A|N/A|N/A|
-|Configuration of MMIO gap|2016, 2012 R2|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|
-|Dynamic Memory - Hot-Add|2016, 2012 R2, 2012|&#10004; Note 8, 9, 10|&#10004; Note 8, 9, 10|&#10004; Note 9, 10|&#10004; Note 9, 10|&#10004; Note 9, 10|&#10004; Note 9, 10|&#10004; Note 8, 9, 10|
-|Dynamic Memory - Ballooning|2016, 2012 R2, 2012|&#10004; Note 8, 9, 10|&#10004; Note 8, 9, 10|&#10004; Note 9, 10|&#10004; Note 9, 10|&#10004; Note 9, 10|&#10004; Note 9, 10|&#10004; Note 8, 9, 10|
-|Runtime Memory Resize|2016|&#10004;|&#10004;||||||
+|PAE Kernel Support|2016, 2012 R2, 2012, 2008 R2|N/A|N/A|N/A|N/A|N/A|N/A|N/A|N/A|N/A|
+|Configuration of MMIO gap|2016, 2012 R2|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|
+|Dynamic Memory - Hot-Add|2016, 2012 R2, 2012|&#10004; Note 8, 9, 10|&#10004; Note 8, 9, 10|&#10004; Note 8, 9, 10|&#10004; Note 9, 10|&#10004; Note 9, 10|&#10004; Note 9, 10|&#10004; Note 9, 10|&#10004; Note 9, 10|&#10004; Note 8, 9, 10|
+|Dynamic Memory - Ballooning|2016, 2012 R2, 2012|&#10004; Note 8, 9, 10|&#10004; Note 8, 9, 10|&#10004; Note 8, 9, 10|&#10004; Note 9, 10|&#10004; Note 9, 10|&#10004; Note 9, 10|&#10004; Note 9, 10|&#10004; Note 9, 10|&#10004; Note 8, 9, 10|
+|Runtime Memory Resize|2016|&#10004;|&#10004;|&#10004;|||||||
 |**[Video](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_Video)**||||
-|Hyper-V-specific video device|2016, 2012 R2, 2012, 2008 R2|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|
+|Hyper-V-specific video device|2016, 2012 R2, 2012, 2008 R2|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|
 |**[Miscellaneous](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_Misc)**||||
-|Key-Value Pair|2016, 2012 R2, 2012, 2008 R2|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|
-|Non-Maskable Interrupt|2016, 2012 R2|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|
-|File copy from host to guest|2016, 2012 R2|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;||
-|lsvmbus command|2016, 2012 R2, 2012, 2008 R2|&#10004;|&#10004;||||||
-|Hyper-V Sockets|2016|&#10004;|&#10004;||||||
-|PCI Passthrough/DDA|2016|&#10004;||&#10004;|&#10004;||||
+|Key-Value Pair|2016, 2012 R2, 2012, 2008 R2|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|
+|Non-Maskable Interrupt|2016, 2012 R2|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|
+|File copy from host to guest|2016, 2012 R2|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;||
+|lsvmbus command|2016, 2012 R2, 2012, 2008 R2|&#10004;|&#10004;|&#10004;|||||||
+|Hyper-V Sockets|2016|&#10004;|&#10004;|&#10004;|||||||
+|PCI Passthrough/DDA|2016|&#10004;|&#10004;||&#10004;|&#10004;|&#10004;||||
 |**[Generation 2 virtual machines](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_gen2)**|||||
-|Boot using UEFI|2016, 2012 R2|&#10004; Note 14|&#10004; Note 14|&#10004; Note 14|&#10004; Note 14|&#10004; Note 14|&#10004; Note 14|&#10004; Note 14|
-|Secure boot|2016|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|
+|Boot using UEFI|2016, 2012 R2|&#10004; Note 14|&#10004; Note 14|&#10004; Note 14|&#10004; Note 14|&#10004; Note 14|&#10004; Note 14|&#10004; Note 14|&#10004; Note 14|&#10004; Note 14|
+|Secure boot|2016|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|
 
 ## <a name="BKMK_6x"></a>RHEL/CentOS 6.x Series
 
 The 32-bit kernel for this series is PAE enabled. There is no built-in LIS support for RHEL/CentOS 6.0-6.3.
 
-|**Feature**|**Windows Server version**|**6.0-6.8**|**6.0-6.8**|**6.9, 6.8**|**6.6, 6.7**|**6.5**|**6.4**|
+|**Feature**|**Windows Server version**|**6.0-6.10**|**6.0-6.10**|**6.10, 6.9, 6.8**|**6.6, 6.7**|**6.5**|**6.4**|
 |-|-|-|-|-|-|-|-|
-|**Availability**||[LIS 4.2](https://www.microsoft.com/download/details.aspx?id=55106)|[LIS 4.1](https://www.microsoft.com/download/details.aspx?id=51612)|Built in|Built in|Built in|Built in|
+|**Availability**||[LIS 4.2](https://www.microsoft.com/download/details.aspx?id=55106)||Built in|Built in|Built in|Built in|
 |**[Core](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_core)**|2016, 2012 R2, 2012, 2008 R2|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|
 |Windows Server 2016 Accurate Time|2016||||||
 |**[Networking](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_Networking)**|

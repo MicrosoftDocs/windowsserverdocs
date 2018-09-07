@@ -7,7 +7,7 @@ ms.reviewer: na
 ms.service: 
 ms.suite: na
 ms.technology: identity-adds
-ms.author: billmath
+ms.author: joflore
 ms.date: 05/31/2017
 ms.tgt_pltfrm: na
 author: Femila
@@ -44,7 +44,7 @@ You can use the following procedure to verify basic DNS functionality.
 1. On the domain controller that you want to test or on a domain member computer that has Active Directory Domain Services (AD DS) Tools installed, open a command prompt as an administrator. To open a command prompt as an administrator, click **Start**. 
 2. In Start Search, type Command Prompt. 
 3. At the top of the Start menu, right-click Command Prompt, and then click Run as administrator. If the User Account Control dialog box appears, confirm that the action it displays is what you want, and then click Continue.
-4. At the command prompt, type the following command, and then press ENTER: `dcdiag /test:dns /v /s: &lt;DCName&gt; /DnsBasic f:/dcdiagreport.txt`
+4. At the command prompt, type the following command, and then press ENTER: `dcdiag /test:dns /v /s:<DCName> /DnsBasic /f:dcdiagreport.txt`
 </br></br>Substitute the actual distinguished name, NetBIOS name, or DNS name of the domain controller for &lt;DCName&gt;. As an alternative, you can test all the domain controllers in the forest by typing /e: instead of /s:. 
 The /f switch specifies a file name, which in the previous command is dcdiagreport.txt. If you want to place the file in a location other than the current working directory, you can specify a file path, such as /f:c:reportsdcdiagreport.txt.
 
@@ -97,8 +97,7 @@ If the basic DNS test shows that resource records do not exist in DNS, use the d
 
 1. Open a command prompt as an administrator. To open a command prompt as an administrator, click Start. In Start Search, type Command Prompt. At the top of the Start menu, right-click Command Prompt, and then click Run as administrator. If the User Account Control dialog box appears, confirm that the action it displays is what you want, and then click Continue.
 2. At the command prompt, type the following command, and then press ENTER: 
-
-    dcdiag /test:dns /v /s:&lt;DCName&gt; /DnsDynamicUpdate
+    `dcdiag /test:dns /v /s:<DCName> /DnsDynamicUpdate`
 </br></br>Substitute the distinguished name, NetBIOS name, or DNS name of the domain controller for &lt;DCName&gt;. As an alternative, you can test all the domain controllers in the forest by typing /e: instead of /s:. If you do not have IPv6 enabled on the domain controller, you should expect the host (AAAA) resource record portion of the test to fail, which is a normal condition when IPv6 is not enabled.
 
 If secure dynamic updates are not configured, you can use the following procedure to configure them.
@@ -122,6 +121,6 @@ If DNS resource records do not appear in DNS for the source domain controller, y
 1. Open a command prompt as an administrator. To open a command prompt as an administrator, click Start. 
 2. In Start Search, type Command Prompt. 
 3. At the top of the Start, right-click Command Prompt, and then click Run as administrator. If the User Account Control dialog box appears, confirm that the action it displays is what you want, and then click Continue.
-4. To initiate registration of domain controller locator resource records manually on the source domain controller, at the command prompt, type the following command, and then press ENTER: `net stop net logon &amp; net start net logon`
-5. To initiate registration of the host (A) resource record manually, at the command prompt, type the following command, and then press ENTER: `ipconfig /flushdns &amp; ipconfig /registerdns`
-6. At the command prompt, type the following command, and then press ENTER: dcdiag /test:dns /v /s:&lt;DCName&gt; </br>,</br>Substitute the distinguished name, NetBIOS name, or DNS name of the domain controller for &lt;DCName&gt;. Review the output of the test to ensure that the DNS tests passed. If you do not have IPv6 enabled on the domain controller, you should expect the host (AAAA) resource record portion of the test to fail, which is a normal condition when IPv6 is not enabled.
+4. To initiate registration of domain controller locator resource records manually on the source domain controller, at the command prompt, type the following command, and then press ENTER: `net stop netlogon && net start netlogon`
+5. To initiate registration of the host (A) resource record manually, at the command prompt, type the following command, and then press ENTER: `ipconfig /flushdns && ipconfig /registerdns`
+6. At the command prompt, type the following command, and then press ENTER: `dcdiag /test:dns /v /s:<DCName>` </br></br>Substitute the distinguished name, NetBIOS name, or DNS name of the domain controller for &lt;DCName&gt;. Review the output of the test to ensure that the DNS tests passed. If you do not have IPv6 enabled on the domain controller, you should expect the host (AAAA) resource record portion of the test to fail, which is a normal condition when IPv6 is not enabled.

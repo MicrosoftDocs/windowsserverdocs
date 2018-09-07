@@ -11,7 +11,7 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 08/28/2017
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ---
 # Windows Server Software-Defined Datacenter
 
@@ -285,7 +285,7 @@ Virtual Machine Manager is part of the System Center suite, used to configure, m
 
 Windows Admin Center is a locally deployed, browser-based, management tool set that enables on-premises administration of Windows Servers with no Azure or cloud dependency. Windows Admin Center gives IT Admins full control over all aspects of their Server infrastructure, and is particularly useful for management on private networks that are not connected to the Internet.
 
-![](media/sddc/spacer1.png)![](media/sddc/honolulu.png)
+![](media/sddc/spacer1.png)![](media/sddc/architecture.png)
 
 Publishing the web server to DNS and setting up the corporate firewall can allow you to access Windows Admin Center from the public internet, enabling you to connect to, and manage, your servers from anywhere with Microsoft Edge or Google Chrome.
 

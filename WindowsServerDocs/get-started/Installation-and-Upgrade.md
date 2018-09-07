@@ -5,7 +5,7 @@ ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
-ms.date: 04/03/2017
+ms.date: 07/12/2018
 ms.technology: server-general
 ms.tgt_pltfrm: na
 ms.topic: article
@@ -17,7 +17,10 @@ ms.localizationpriority: medium
 ---
 # Windows Server Installation and Upgrade
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2, Windows Server 2008
+
+> [!IMPORTANT]
+> Extended support for Windows Server 2008 R2 and Windows Server 2008 ends in January 2020. [Learn about your upgrade options](#upgrading-from-windows-server-2008-r2-or-windows-server-2008).
 
 Is it time to move to a newer version of Windows Server? Depending on what you are running now, you have lots of options to get there.
 
@@ -113,7 +116,7 @@ Quick reference table of supported upgrade paths from older Windows Server retai
 |If you are running:|You can upgrade to these editions:|
 |--------------------------|--------------------------|
 |Windows Server 2008 Standard with SP2 or Windows Server 2008 Enterprise with SP2|Windows Server 2012 Standard, Windows Server 2012 Datacenter|
-|Windows Server 2008 Datacenter with SP2||Windows Server 2012 Datacenter|
+|Windows Server 2008 Datacenter with SP2|Windows Server 2012 Datacenter|
 |Windows Web Server 2008|Windows Server 2012 Standard|
 |Windows Server 2008 R2 Standard with SP1 or Windows Server 2008 R2 Enterprise with SP1|Windows Server 2012 Standard, Windows Server 2012 Datacenter|
 |Windows Server 2008 R2 Datacenter with SP1|Windows Server 2012 Datacenter|
@@ -126,35 +129,19 @@ You can convert Windows Server 2012 Essentials (retail) to Windows Server 2012 S
 
 You can convert the evaluation version of Windows Server 2012 Standard to either Windows Server 2012 Standard (retail) or Datacenter (retail).
 
-## Upgrading to Windows Server 2008 R2
-For details, including important caveats and limitations, see [Windows Server 2008 R2 Upgrade Paths](https://technet.microsoft.com/en-us/library/dd979563(v=ws.10).aspx).
+## Upgrading from Windows Server 2008 R2 or Windows Server 2008
 
-Quick reference table of supported upgrade paths from older Windows Server retail editions to Windows Server 2008 R2 retail editions:
+As described in [Upgrade Windows Server 2008 and Windows Server 2008 R2](modernize-windows-server-2008.md), the extended support for Windows Server 2008 R2/Windows Server 2008 ends in January of 2020. To ensure no gap in support, you need to upgrade to a supported version of Windows Server, or rehost in Azure by moving to [specialized Windows Server 2008 R2 VMs](uploading-specialized-WS08-image-to-azure.md). Check out the  [Migration Guide for Windows Server](https://go.microsoft.com/fwlink/?linkid=872689) for information and considerations for planning your migration/upgrade.
 
+For on-premises servers, there is no direct upgrade path from Windows Server 2008 R2 to Windows Server 2016 or later. Instead, upgrade first to Windows Server 2012 R2, and then [upgrade to Windows Server 2016](#Upgrading-to-Windows-Server-2016).
 
-|From Windows Server 2003 (SP2, R2)|Upgrade to Windows Server 2008 R2|
-|----------------------------------|---------------------------------|
-|Datacenter|Datacenter|
-|Enterprise|Enterprise, Datacenter|
-|Standard|Standard, Enterprise|
- 
+As you are planning your upgrade, be aware of the following guidelines for the middle step of upgrading to Windows Server 2012 R2.
 
+  - You can't do an in-place upgrade from a 32-bit to 64-bit architectures or from one build type to another (fre to chk, for example).
 
-|From Windows Server 2008 (RTM-SP1, SP2)|Upgrade to Windows Server 2008 R2|
-|--------------------------------------|--------------------------------|
-|Datacenter|Datacenter|
-|Enterprise|Enterprise, Datacenter|
-|Foundation (SP2 only)|Standard|
-|Standard|Standard, Enterprise|
-|Web|Standard, Web|
+  - In-place upgrades are only supported in the same language. You can't upgrade from one language to another.
 
- 
+  - You can't migrate from a Windows Server 2008 server core installation to Windows Server 2012 R2 with the Server GUI (called "Server with Full Desktop" in Windows Server). You can switch your upgraded server core installation to Server with Full Desktop, but only on Windows Server 2012 R2. Windows Server 2016 and later *do not* support switching from server core to Full Desktop, so make that switch before you upgrade to Windows Server 2016.
+  
+For more information, check out [Evaluation Versions and Upgrade Options for Windows Server 2012](https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/jj574204\(v=ws.11\)), which includes role-specific upgrade details.
 
-
-|From Windows Server 2008 (RC, IDS, RTM)|Upgrade to Windows Server 2008 R2|
-|------------------------------------|------------------------------------|
-|Datacenter|Datacenter|
-|Enterprise|Enterprise or Datacenter|
-|Foundation|Standard or Foundation|
-|Standard|Standard or Enterprise|
-|Web|Standard or Web|

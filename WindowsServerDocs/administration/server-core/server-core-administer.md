@@ -110,7 +110,7 @@ Use the following reference information to perform administrative tasks from the
 |Remove a computer from a domain|**netdom remove \<computername\>**| 
 |Add a user to the local Administrators group|**net localgroup Administrators /add \<domain\\username\>** |
 |Remove a user from the local Administrators group|**net localgroup Administrators /delete \<domain\\username\>** |
-|Add a user to the local computer|**net user \<domain\username\> /add** * |
+|Add a user to the local computer|**net user \<domain\username\> * /add** |
 |Add a group to the local computer|**net localgroup \<group name\> /add**|
 |Change the name of a domain-joined computer|**netdom renamecomputer %computername% /NewName:\<new computer name\> /userd:\<domain\\username\> /passwordd:** * |
 |Confirm the new computer name|**set**| 

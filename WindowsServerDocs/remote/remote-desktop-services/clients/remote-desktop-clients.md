@@ -9,11 +9,11 @@ ms.technology: remote-desktop-services
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: b7d8158c-aee1-4c60-8a46-40ce5595b8e8 
-author: lizap
-manager: dongill
-ms.author: elizapo
+author: HeidiLohr
+manager: elizapo
+ms.author: helohr
 ms.date: 05/07/2018
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ---
 # Remote Desktop clients
 

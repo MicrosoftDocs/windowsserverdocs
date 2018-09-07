@@ -11,7 +11,7 @@ ms.topic: article
 author: lizap
 manager: dongill
 ms.author: elizapo
-ms.date: 05/07/2018
+ms.date: 08/06/2018
 ms.localizationpriority: medium
 ---
 # What's new for the Remote Desktop client on macOS?
@@ -19,6 +19,40 @@ ms.localizationpriority: medium
 We regularly update the [Remote Desktop client for macOS](remote-desktop-mac.md), adding new features and fixing issues. Check out the latest updates below.
 
 If you encounter any issues, you can always contact us via Help > Report an Issue.
+
+## Updates for version 10.2.1
+*Published date: 08/06/2018*
+
+- Enabled connectivity to Azure Active Directory (AAD) joined PCs. To connect to an AAD joined PC, your username must be in one of the following formats: “AzureAD\user” or “AzureAD\user@domain”.
+- Addressed some bugs affecting the usage of smart cards in a remote session.
+
+## Updates for version 10.2.0
+*Published date: 07/24/2018*
+
+- Incorporated updates for GDPR compliance.
+- MicrosoftAccount\username@domain is now accepted as a valid username.
+- Clipboard sharing has been rewritten to be faster and support more formats.
+- Copy and pasting text, images or files between sessions now bypasses the local machine’s clipboard.
+- You can now connect via an RD Gateway server with an untrusted certificate (if you accept the warning prompts).
+- Metal hardware acceleration is now used (where supported) to speed up rendering and optimize battery usage.
+- When using Metal hardware acceleration we try to work some magic to make the session graphics appear sharper.
+- Got rid of some instances where windows would hang around after being closed.
+- Fixed bugs that were preventing the launch of RemoteApp programs in some scenarios.
+- Fixed an RD Gateway channel synchronization error that was resulting in 0x204 errors.
+- The mouse cursor shape now updates correctly when moving out of a session or RemoteApp window.
+- Fixed a folder redirection bug that was causing data loss when copy and pasting folders.
+- Fixed a folder redirection issue that caused incorrect reporting of folder sizes.
+- Fixed a regression that was preventing logging into an AAD-joined machine using a local account.
+- Fixed bugs that were causing the session window contents to be clipped.
+- Added support for RD endpoint certificates that contain elliptic-curve asymmetric keys.
+- Fixed a bug that was preventing the download of managed resources in some scenarios.
+- Addressed a clipping issue with the pinned connection center.
+- Fixed the checkboxes in the Display property sheet to work better together.
+- Aspect ratio locking is now disabled when dynamic display change is in effect.
+- Addressed compatibility issues with F5 infrastructure.
+- Updated handling of blank passwords to ensure the correct messages are shown at connect-time.
+- Fixed mouse scrolling compatibility issues with MapInfra Pro.
+- Fixed some alignment issues in the Connection Center when running on Mojave.
 
 ## Updates for version 10.1.8
 *Published date: 05/04/2018*

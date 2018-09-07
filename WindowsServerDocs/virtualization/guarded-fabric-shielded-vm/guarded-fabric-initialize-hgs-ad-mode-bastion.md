@@ -6,16 +6,16 @@ ms.topic: article
 manager: dongill
 author: rpsqrd
 ms.technology: security-guarded-fabric
-ms.date: 08/28/2017
+ms.date: 08/29/2018
 ---
 
 # Initialize the HGS cluster using AD mode in an existing bastion forest
 
 >Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
 
->[!div class="step-by-step"]
-[« Install HGS in a new forest](guarded-fabric-install-hgs-in-a-bastion-forest.md)
-[Configure fabric DNS »](guarded-fabric-configuring-fabric-dns-ad.md)
+
+>[!IMPORTANT]
+>Admin-trusted attestation (AD mode) is deprecated beginning with Windows Server 2019. For environments where TPM attestation is not possible, configure [host key attestation](guarded-fabric-initialize-hgs-key-mode-bastion.md). Host key attestation provides similar assurance to AD mode and is simpler to set up. 
 
 Active Directory Domain Services will be installed on the machine, but should remain unconfigured.
 
@@ -39,4 +39,9 @@ Initialize-HgsServer -UseExistingDomain -ServiceAccount 'HGSgMSA' -JeaReviewersG
 ```
 
 If you are using certificates installed on the local machine (such as HSM-backed certificates and non-exportable certificates), use the `-SigningCertificateThumbprint` and `-EncryptionCertificateThumbprint` parameters instead.
+
+## Next step
+
+>[!div class="nextstepaction"]
+[Configure fabric DNS](guarded-fabric-configuring-fabric-dns-ad.md)
 

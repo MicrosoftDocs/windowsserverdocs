@@ -15,7 +15,7 @@
 ###### [Configure WEB1 to Distribute Certificate Revocation lists (CRLs)](core-network-guide/cncg/server-certs/Configure-WEB1-to-Distribute-Certificate-Revocation-lists.md)
 ###### [Prepare the CAPolicy.inf File](core-network-guide/cncg/server-certs/Prepare-the-CAPolicy-inf-File.md)
 ###### [Install the Certification Authority](core-network-guide/cncg/server-certs/Install-the-Certification-Authority.md)
-###### [Configure the cdP and AIA Extensions on CA1](core-network-guide/cncg/server-certs/Configure-the-cdP-and-AIA-Extensions-on-CA1.md)
+###### [Configure the CDP and AIA Extensions on CA1](core-network-guide/cncg/server-certs/Configure-the-cdP-and-AIA-Extensions-on-CA1.md)
 ###### [Copy the CA Certificate and CRL to the Virtual directory](core-network-guide/cncg/server-certs/copy-the-CA-Certificate-and-CRL-to-the-Virtual-directory.md)
 ###### [Configure the Server Certificate Template](core-network-guide/cncg/server-certs/Configure-the-Server-Certificate-Template.md)
 ###### [Configure Server Certificate Autoenrollment](core-network-guide/cncg/server-certs/Configure-Server-Certificate-Autoenrollment.md)
@@ -180,6 +180,8 @@
 ## [Network Shell (Netsh)](technologies/netsh/netsh.md)
 ### [Netsh Command Syntax, Contexts, and Formatting](technologies/netsh/netsh-contexts.md)
 ### [Network Shell (Netsh) Example Batch File](technologies/netsh/netsh-wins.md)
+### [Netsh http commands](technologies/netsh/netsh-http.md)
+### [Netsh interface portproxy commands](technologies/netsh/netsh-interface-portproxy.md)
 
 ## [Network Subsystem Performance Tuning](technologies/network-subsystem/net-sub-performance-top.md)
 ### [Choosing a Network Adapter](technologies/network-subsystem/net-sub-choose-nic.md)
@@ -206,11 +208,10 @@
 #### [QoS Policy Events and Errors](technologies/qos/qos-policy-errors.md)
 ### [QoS Policy Frequently Asked Questions](technologies/qos/qos-policy-faq.md)
 
-## [Software Defined Networking (SDN)](sdn/software-defined-networking.md)
-### [What's New in SDN for Windows Server](sdn/sdn-whats-new.md)
-#### [Virtual Network Encryption](sdn/vnet-encryption/sdn-vnet-encryption.md)
-#### [Configure Encryption for a Virtual Subnet](sdn/vnet-encryption/sdn-config-vnet-encryption.md)
-### [Introduction to SDN in Windows Server Datacenter](sdn/sdn-intro.md)
+## [Software Defined Networking (SDN)](sdn/index.yml)
+
+### [SDN deployment for in Windows Server](sdn/software-defined-networking.md)
+
 ### [SDN Technologies](sdn/technologies/Software-Defined-Networking-Technologies.md)
 #### [Hyper-V Network Virtualization](sdn/technologies/hyper-v-network-virtualization/Hyper-V-Network-Virtualization.md)
 ##### [Hyper-V Network Virtualization Overview in Windows Server Technical Preview](sdn/technologies/hyper-v-network-virtualization/hyperv-network-virtualization-overview-windows-server.md)
@@ -230,14 +231,16 @@
 ##### [Software Load Balancing (SLB) for SDN](sdn/technologies/network-function-virtualization/software-load-balancing-for-sdn.md)
 #### [Switch Embedded Teaming for SDN](sdn/technologies/Set-for-Sdn.md)
 #### [Container Networking](sdn/technologies/Containers/Container-networking-overview.md)
-### [Plan SDN](sdn/plan/Plan-Software-Defined-Networking.md)
-#### [Plan a Software Defined Network Infrastructure](sdn/plan/Plan-a-Software-Defined-Network-Infrastructure.md)
+
+### [Plan a Software Defined Network Infrastructure](sdn/plan/Plan-a-Software-Defined-Network-Infrastructure.md)
 #### [Installation and Preparation Requirements for Deploying Network Controller](sdn/plan/Installation-and-Preparation-Requirements-for-Deploying-Network-Controller.md)
+
 ### [Deploy SDN](sdn/deploy/Deploy-Software-Defined-Networking.md)
 #### [Deploy a Software Defined Network Infrastructure](sdn/deploy/Deploy-a-Software-Defined-Network-Infrastructure.md)
 ##### [Deploy a Software Defined Network infrastructure using scripts](sdn/deploy/Deploy-a-Software-Defined-Network-infrastructure-using-scripts.md)
 #### [Deploy Software Defined Network Technologies using Windows PowerShell](sdn/deploy/Deploy-Software-Defined-Network-Technologies-using-Windows-powershell.md)
 ##### [Deploy Network Controller using Windows PowerShell](sdn/deploy/Deploy-Network-Controller-using-Windows-powershell.md)
+
 ### [Manage SDN](sdn/manage/manage-sdn.md)
 #### [Manage Tenant Virtual Networks](sdn/manage/Manage-Tenant-Virtual-Networks.md)
 ##### [Understanding Usage of Virtual Networks and VLANs](sdn/manage/Understanding-Usage-of-Virtual-Networks-and-VLANs.md)
@@ -245,6 +248,8 @@
 ##### [Create, Delete, or Update Tenant Virtual Networks](sdn/manage/create,-delete,-or-Update-Tenant-Virtual-Networks.md)
 ##### [Add a Virtual Gateway to a Tenant Virtual Network](sdn/manage/add-a-Virtual-Gateway-to-a-Tenant-Virtual-Network.md)
 ##### [Connect Container Endpoints to a Tenant Virtual Network](sdn/manage/Connect-container-endpoints-to-a-Tenant-Virtual-Network.md)
+##### [Configure Encryption for a Virtual Subnet](sdn/vnet-encryption/sdn-config-vnet-encryption.md)
+
 #### [Manage Tenant Workloads](sdn/manage/Manage-Tenant-Workloads.md)
 ##### [Create a VM and Connect to a Tenant Virtual Network or VLAN](sdn/manage/create-a-Tenant-VM.md)
 ##### [Configure Quality of Service (QoS) for a Tenant VM Network Adapter](sdn/manage/Configure-QoS-for-Tenant-VM-Network-Adapter.md)
@@ -253,19 +258,33 @@
 ##### [Use Network Virtual Appliances on a Virtual Network](sdn/manage/Use-Network-Virtual-Appliances-on-a-VN.md)
 ##### [Guest Clustering in a Virtual Network](sdn/manage/guest-clustering.md)
 #### [Update, Backup, and Restore Software Defined Networking Infrastructure](sdn/manage/Update-Backup-Restore.md)
+
 ### [Security for SDN](sdn/security/sdn-security-top.md)
-#### [Network Controller Security](sdn/security/nc-security.md)
+#### [Secure the Network Controller](sdn/security/nc-security.md)
 #### [Manage Certificates for Software Defined Networking](sdn/security/sdn-manage-certs.md)
+#### [Kerberos with Service Principal Name (SPN)](sdn/security/kerberos-with-spn.md)
+#### [SDN firewall auditing](sdn/security/sdn-firewall-auditing.md)
+
+### [Virtual network peering](sdn/vnet-peering/sdn-vnet-peering.md)
+#### [Configure virtual network peering](sdn/vnet-peering/sdn-configure-vnet-peering.md)
+
+### [Egress metering in virtual network](sdn/sdn-egress.md)
+### [Windows Server 2019 Gateway Performance](sdn/gateway-performance.md)
+### [Gateway bandwidth allocation](sdn/gateway-allocation.md)
+
 ### [Troubleshoot SDN](sdn/troubleshoot/Troubleshoot-Software-Defined-Networking.md)
 #### [Troubleshoot the Windows Server Software Defined Networking Stack](sdn/troubleshoot/troubleshoot-windows-server-software-defined-networking-stack.md)
+
 ### [System Center Technologies for SDN](sdn/Sc-Tech-for-Sdn.md)
 ### [Microsoft Azure and SDN](sdn/Azure_and_Sdn.md)
 ### [Contact the Datacenter and Cloud Networking Team](sdn/contact-sdn-team.md)
+
 ## [Virtual Private Networking (VPN)](technologies/vpn-stub.md)
 
 ## [Windows Internet Name Service (WINS)](technologies/wins/wins-top.md)
 
 ## [Windows Time Service](windows-time-service/windows-time-service-top.md)
+### [Insider preview](windows-time-service/insider-preview.md)
 ### [Accurate Time for Windows Server 2016](windows-time-service/accurate-time.md)
 ### [Support boundary to configure the Windows Time service for high-accuracy environments](windows-time-service/support-boundary.md)
 ### [Configuring Systems for High Accuracy](windows-time-service/configuring-systems-for-high-accuracy.md)

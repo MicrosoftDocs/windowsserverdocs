@@ -1,8 +1,33 @@
 {
   "redirections": [
     {
+      "source_path": "WindowsServerDocs/networking/sdn/sdn-intro.md",
+      "redirect_url": "/windows-server/networking/sdn/software-defined-networking",
+      "redirect_document_id": true
+    },  
+    {
+      "source_path": "WindowsServerDocs/networking/sdn/deploy/Deploy-Software-Defined-Networking.md",
+      "redirect_url": "/windows-server/networking/sdn/deploy/Deploy-a-Software-Defined-Network-Infrastructure",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/sdn/plan/Plan-Software-Defined-Networking.md",
+      "redirect_url": "/windows-server/networking/sdn/plan/Plan-a-Software-Defined-Network-Infrastructure",
+      "redirect_document_id": true
+    },
+    {
       "source_path": "WindowsServerDocs/remote/remote-access/vpn/always-on-vpn/deploy/always-on-vpn-deploy-overview.md",
       "redirect_url": "/windows-server/remote/remote-access/vpn/always-on-vpn/always-on-vpn-technology-overview",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/manage/system-insights/managing-system-insights.md",
+      "redirect_url": "/windows-server/manage/system-insights/managing-capabilities",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/manage/system-insights/system-insights-overview.md",
+      "redirect_url": "/windows-server/manage/system-insights/overview",
       "redirect_document_id": true
     },
     {
@@ -13,6 +38,11 @@
     {  
       "source_path": "WindowsServerDocs/windows-insider/Whats-new-wip-at-work.md",
       "redirect_url": "https://docs.microsoft.com/windows-insider/at-work/whats-new-wip-at-work",
+      "redirect_document_id": true
+    },
+    {  
+      "source_path": "WindowsServerDocs/identity/ad-ds/plan/security-best-practices/Understanding-Active-Directory-Domain-Services--AD-DS--Functional-Levels.md.md",
+      "redirect_url": "/windows-server/identity/ad-ds/active-directory-functional-levels",
       "redirect_document_id": true
     },
     {
@@ -1357,8 +1387,18 @@
       "redirect_document_id": true
     },
     {
-      "source_path": "WindowsServerDocs/compute/remote-desktop-services/rds-office-vdi-rdsh.md",
-      "redirect_url": "/windows-server/remote/remote-desktop-services/rds-office-vdi-rdsh",
+      "source_path": "WindowsServerDocs/remote/remote-desktop-services/rds-office-vdi-rdsh.md",
+      "redirect_url": "/deployoffice/rds-office-vdi-rdsh",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-desktop-services/rds-outlook-data-fslogix.md",
+      "redirect_url": "/deployoffice/rds-outlook-search",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-desktop-services/rds-onedrive-for-business.md",
+      "redirect_url": "/deployoffice/rds-onedrive-business-vdi",
       "redirect_document_id": true
     },
     {

@@ -63,9 +63,9 @@ A number of freely available tools, some of which are installed by default in Wi
 
 All domain controllers should be locked down upon initial build. This can be achieved using the Security Configuration Wizard that ships natively in Windows Server to configure service, registry, system, and WFAS settings on a "base build" domain controller. Settings can be saved and exported to a GPO that can be linked to the Domain Controllers OU in each domain in the forest to enforce consistent configuration of domain controllers. If your domain contains multiple versions of Windows operating systems, you can configure Windows Management Instrumentation (WMI) filters to apply GPOs only to the domain controllers running the corresponding version of the operating system.  
   
-### Microsoft Security Compliance Manager
+### Microsoft Security Compliance Toolkit
 
-[Microsoft Security Compliance Manager](https://technet.microsoft.com/library/cc677002.aspx) domain controller settings can be combined with Security Configuration Wizard settings to produce comprehensive configuration baselines for domain controllers that are deployed and enforced by GPOs deployed at the Domain Controllers OU in Active Directory.  
+[Microsoft Security Compliance Toolkit](https://www.microsoft.com/download/details.aspx?id=55319) domain controller settings can be combined with Security Configuration Wizard settings to produce comprehensive configuration baselines for domain controllers that are deployed and enforced by GPOs deployed at the Domain Controllers OU in Active Directory.  
   
 ### RDP Restrictions
 

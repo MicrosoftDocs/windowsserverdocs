@@ -11,7 +11,7 @@ ms.workload: identity
 ms.tgt_pltfrm: na
 ms.devlang: na
 ms.topic: article
-ms.date: 05/25/2018
+ms.date: 07/13/2018
 ms.author: pashort
 author: shortpatti
 manager: elizapo
@@ -25,7 +25,7 @@ ms.reviewer: deverette
 &#171;  [**Previous:** Step 7.4. Deploy conditional access root certificates to on-premises AD](vpn-deploy-cond-access-root-cert-to-on-premise-ad.md)<br>
 &#187; [ **Next:** Learn how conditional access for VPN works](https://docs.microsoft.com/windows/access-protection/vpn/vpn-conditional-access)
 
-In this step, you can create OMA-DM based VPNv2 profiles using Intune to deploy a VPN Device Configuration policy. If you want to use SCCM or PowerShell Dcript to create VPNv2 profiles, see [VPNv2 CSP settings](https://docs.microsoft.com/en-us/windows/client-management/mdm/vpnv2-csp) for more details. 
+In this step, you can create OMA-DM based VPNv2 profiles using Intune to deploy a VPN Device Configuration policy. If you want to use SCCM or PowerShell script to create VPNv2 profiles, see [VPNv2 CSP settings](https://docs.microsoft.com/en-us/windows/client-management/mdm/vpnv2-csp) for more details. 
 
 ## Managed Deployment using Intune
 
@@ -37,7 +37,7 @@ Windows 10 client computer has already been configured with a VPN connection usi
 
 **Procedure:**
 
-1. In the Azure portal, click **Intune** > **Device Configuration** > **Profiles** and select the VPN profile you created earlier under [Configure Windows 10 Client Always On VPN Connections](always-on-vpn/deploy/vpn-deploy-client-vpn-connections.md#create-the-vpn-profile).
+1. In the Azure portal, click **Intune** > **Device Configuration** > **Profiles** and select the VPN profile you created earlier in [Configure the VPN client by using Intune](always-on-vpn/deploy/vpn-deploy-client-vpn-connections.md#configure-the-vpn-client-by-using-intune).
     
 2. In the policy editor, select **Properties** > **Settings** > **Base VPN**. Extend the existing **EAP Xml** to include a filter that gives the VPN client the logic it needs to retrieve the AAD Conditional Access certificate from the user's certificate store instead of leaving it to chance allowing it to use the first certificate discovered.
 

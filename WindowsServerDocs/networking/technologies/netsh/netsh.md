@@ -5,14 +5,15 @@ ms.prod: windows-server-threshold
 ms.technology: networking
 ms.topic: article
 ms.assetid: aedef092-8445-4e53-b9d4-525ecd98b02d
-manager: brianlic
+manager: elizapo
 ms.author: pashort
 author: shortpatti
+ms.date: 08/06/2018
 ---
 
 # Network Shell \(Netsh\)
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 Network shell (netsh) is a command-line utility that allows you to configure and display the status of various network communications server roles and components after they are installed on computers running Windows Server 2016.
 

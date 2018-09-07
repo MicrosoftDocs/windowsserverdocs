@@ -419,7 +419,12 @@ Function Get-VirtualDiskFootprintByStorageFaultDomain {
 
     $ActualWindowWidth = (Get-Host).UI.RawUI.WindowSize.Width
 
-    If ($ActualWindowWidth -Lt $RequiredWindowWidth) {
+    If (!($ActualWindowWidth)) {
+        # Cannot get window width, probably ISE, Format-List
+        Write-Warning "Could not determine window width. For the best experience, use a Powershell window instead of ISE"
+        $Output | Format-Table
+    }
+    ElseIf ($ActualWindowWidth -Lt $RequiredWindowWidth) {
         # Narrower window, Format-List
         Write-Warning "For the best experience, try making your PowerShell window at least $RequiredWindowWidth characters wide. Current width is $ActualWindowWidth characters."
         $Output | Format-List

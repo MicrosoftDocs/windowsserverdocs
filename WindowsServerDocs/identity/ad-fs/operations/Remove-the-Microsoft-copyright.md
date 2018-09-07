@@ -21,33 +21,39 @@ By default, the AD FS pages contain the Microsoft copyright. To remove this copy
   
 ## To remove the Microsoft copyright  
   
-1.  Create a custom theme that is based on the default.  
-  
+1. Create a custom theme that is based on the default.
 
-    `New-AdfsWebTheme –Name custom –SourceName default ` 
- 
-  
-2.  Export the theme by specifying the output folder.  
+   ```powershell
+   New-AdfsWebTheme –Name custom –SourceName default
+   ```
 
-	`Export-AdfsWebTheme -Name custom -DirectoryPath C:\customWebTheme ` 
+2. Export the theme by specifying the output folder.  
 
-  
-3.  Locate the Style.css file that is located in the output folder. By using the previous example, the path would be C:\\CustomWebTheme\\Css\\Style.css.  
-  
-4.  Open the Style.css file with an editor, such as Notepad.  
-  
-5.  Locate the `#copyright` portion, and then change it to the following:  
-  `#copyright {color:#696969; display:none;} ` 
- 
-6.  Create a custom theme that is based on the new Style.css file.  
-  
-    `Set-AdfsWebTheme -TargetName custom -StyleSheet @{locale="";path="C:\customWebTheme\css\style.css"}  `
+   ```powershell
+   Export-AdfsWebTheme -Name custom -DirectoryPath C:\CustomWebTheme
+   ```
 
-7.  Activate the new theme.  
+3. Locate the `Style.css` file that is located in the output folder. By using the previous example, the path would be `C:\CustomWebTheme\Css\Style.css.`
   
+4. Open the `Style.css` file with an editor, such as Notepad.  
+  
+5. Locate the `#copyright` portion, and then change it to the following:  
 
-    `Set-AdfsWebConfig -ActiveThemeName custom ` 
+   ```css
+   #copyright {color:#696969; display:none;}
+   ```
 
+6. Create a custom theme that is based on the new `Style.css` file.  
+
+   ```powershell
+   Set-AdfsWebTheme -TargetName custom -StyleSheet @{locale="";path="C:\customWebTheme\css\style.css"}
+   ```
+
+7. Activate the new theme.  
+
+   ```powershell
+   Set-AdfsWebConfig -ActiveThemeName custom
+   ```
 
 Now, you should no longer see the copyright at the bottom of the sign-in page.
 
