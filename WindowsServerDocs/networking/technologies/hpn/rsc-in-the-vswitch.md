@@ -5,7 +5,7 @@ manager: elizapo
 ms.prod: windows-server-threshold
 ms.technology: networking
 ms.topic: article
-ms.assetid: 0cafb1cc-5798-42f5-89b6-3ffe7ac024ba
+ms.assetid: 
 ms.author: dacuo 
 author: shortpatti
 ms.date: 09/07/2018 
