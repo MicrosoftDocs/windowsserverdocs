@@ -52,7 +52,7 @@ ms.localizationpriority: medium
                     </div>
                     <div class="cardText">
                         <h2>Install | Upgrade | Migrate</h2>
-                        <p>Privileged Access Management (PAM) for Active Directory Domain Services (AD DS) is a solution that is based on Microsoft Identity Manager (MIM) and Windows Server 2012 R2 and Windows Server 2016.</p>
+                        <p>Description here.</p>
                     </div>
                 </div>
             </div>
@@ -90,7 +90,7 @@ ms.localizationpriority: medium
                     </div>
                     <div class="cardText">
                         <h2>Sytem requirements</h2>
-                        <p>The minimum hardware requirements to install and run Windows Server 2019.<p>
+                        <p>The minimum hardware requirements to install and run Windows Server 2019.</p>
                     </div>
                 </div>
             </div>
@@ -109,7 +109,7 @@ ms.localizationpriority: medium
                     </div>
                     <div class="cardText">
                         <h2>Activation</h2>
-                        <p>Basic information on activation of Windows Server 2019 itself and other operating systems by using Windows Server 2019.<p>
+                        <p>Basic information on activation of Windows Server 2019 itself and other operating systems by using Windows Server 2019.</p>
                     </div>
                 </div>
             </div>
@@ -128,7 +128,7 @@ ms.localizationpriority: medium
                     </div>
                     <div class="cardText">
                         <h2>Core | Full install comparison</h2>
-                        <p>Description here<p
+                        <p>Description here.</p>
                     </div>
                 </div>
             </div>
@@ -146,7 +146,7 @@ ms.localizationpriority: medium
                     </div>
                     <div class="cardText">
                         <h2>Features On Demand</h2>
-                        <p>Description here<p
+                        <p>Description here.</p>
                     </div>
                 </div>
             </div>
@@ -164,7 +164,7 @@ ms.localizationpriority: medium
                     </div>
                     <div class="cardText">
                         <h2>Servicing channels</h2>
-                        <p>Description here<p
+                        <p>Description here.</p>
                     </div>
                 </div>
             </div>
@@ -199,7 +199,7 @@ ms.localizationpriority: medium
                     </div>
                     <div class="cardText">
                         <h2>System limits | maximums</h2>
-                        <p>Description here</p>
+                        <p>Description here.</p>
                     </div>
                 </div>
             </div>
@@ -217,7 +217,7 @@ ms.localizationpriority: medium
                     </div>
                     <div class="cardText">
                         <h2>Standard | Datacenter editions comparison</h2>
-                        <p>Description here</p>
+                        <p>Description here.</p>
                     </div>
                 </div>
             </div>
@@ -235,7 +235,7 @@ ms.localizationpriority: medium
                     </div>
                     <div class="cardText">
                         <h2>Servicing Channels</h2>
-                        <p>Description here</p>
+                        <p>Description here.</p>
                     </div>
                 </div>
             </div>
@@ -253,7 +253,7 @@ ms.localizationpriority: medium
                     </div>
                     <div class="cardText">
                         <h2>Removed features</h2>
-                        <p>Description here</p>                    </div>
+                        <p>Description here.</p>                    </div>
                 </div>
             </div>
         </div>
