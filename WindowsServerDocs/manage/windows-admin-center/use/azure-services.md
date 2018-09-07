@@ -19,4 +19,4 @@ Windows Admin Center streamlines the process of setting up various Azure service
 
 [Protect your Hyper-V Virtual Machines from Windows Admin Center with Azure Site Recovery](azure-site-recovery.md)
 
-[Manage operating system updates for all your Windows servers, both on-premises or in the cloud.](azure-update-management.md)
+[Manage operating system updates for all your Windows servers, both on-premises or in the cloud with Azure Update Management.](azure-update-management.md)
