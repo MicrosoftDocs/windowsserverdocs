@@ -70,9 +70,9 @@ To determine whether the installed NIC supports a feature you may need to look a
 
 In Windows PowerShell, run the `Get‑NetAdapterAdvancedProperties` cmdlet against two different make/model of NICs.
 
-![](../../media/network-offload-and-optimization/893736bc63d29567bddec0468673cf44.png)
+![Get-NetAdapterAdvancedProperty m1](../../media/network-offload-and-optimization/Get-NetAdapterAdvancedProperty-m1.png)
 
-![](../../media/network-offload-and-optimization/713d7eab6438252b4fb043579e7884e0.png)
+![Get-NetAdapterAdvancedProperty c1](../../media/network-offload-and-optimization/Get-NetAdapterAdvancedProperty-c1.png)
 
 There are similarities and differences in these two NIC Advanced Properties Lists.
 
@@ -82,12 +82,12 @@ There are similarities and differences in these two NIC Advanced Properties List
 
 2.  Right-click the NIC.
 
-    ![](../../media/network-offload-and-optimization/c9fbd67a3f777d3ab40713bdcef167f2.png)
+    ![Network connections dialog](../../media/network-offload-and-optimization/network-connections-dialog.png)
 
 3.  In the properties dialog, click **Configure**.
 
-    ![](../../media/network-offload-and-optimization/f4e818f91c5ece76b0445f56f642ba7d.png)
+    ![C1 Properties](../../media/network-offload-and-optimization/c1-properties.png)
 
 4.  Click the **Advanced** tab to view the advanced properties. The items in this list correlates to the items in the `Get-NetAdapterAdvancedProperties` output.
 
-    ![](../../media/network-offload-and-optimization/2427f1f4147c6e272782463b41b4d518.png)
+    ![Chelsio Network Adapter Properties](../../media/network-offload-and-optimization/chelsio-network-adapter-properties.png)
