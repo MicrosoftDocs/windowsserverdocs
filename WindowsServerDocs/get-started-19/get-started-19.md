@@ -188,7 +188,7 @@ ms.localizationpriority: medium
         </div>
       </a>
     </li><li>
-      <a href="limits-maximums-19.md">
+      <a href="maximums-limits-19.md">
         <div class="cardSize">
             <div class="cardPadding">
                 <div class="card">
@@ -224,25 +224,7 @@ ms.localizationpriority: medium
         </div>
       </a>
     </li><li>
-      <a href="servicing channels.md">
-        <div class="cardSize">
-            <div class="cardPadding">
-                <div class="card">
-                    <div class="cardImageOuter">
-                        <div class="cardImage">
-                             <img src="../media/i-get-started.svg" alt="" />
-                        </div>
-                    </div>
-                    <div class="cardText">
-                        <h2>Servicing Channels</h2>
-                        <p>Description here.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-      </a>
-    </li><li>
-      <a href="removed-features.md">
+      <a href="removed-features-19.md">
         <div class="cardSize">
             <div class="cardPadding">
                 <div class="card">
