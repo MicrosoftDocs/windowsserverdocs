@@ -32,7 +32,7 @@ An organization may have to use alternate ID in the following scenarios:
 In the above-mentioned scenarios, alternate ID with AD FS enables users to sign-in to Azure AD without modifying your on-premises UPNs. 
 
 ## End-User Experience with Alternate Login ID
-The end-user experience will vary depending on the authetication method used with alternate login id.  Currently there three different ways in which using alternate login id can be achieved.  They are:
+The end-user experience will vary depending on the authentication method used with alternate login id.  Currently there three different ways in which using alternate login id can be achieved.  They are:
 
 - **Regular Authentication (Legacy)**- uses the basic authentication protocol.
 - **Modern Authentication** - brings Active Directory Authentication Library (ADAL)-based sign-in to applications. This enables sign-in features such as Multi-Factor Authentication (MFA), SAML-based third-party Identity Providers with Office client applications, smart card and certificate-based authentication.
@@ -132,7 +132,7 @@ The office applications rely on information pushed by the directory administrato
 |-----|-----|-----|-----|
 |Reg add HKCU\Software\Microsoft\AuthN /v DomainHint /t REG_SZ /d contoso.com /f|Required|Required|The value of this regkey is a verified custom domain name in the tenant of the organization. For example, Contoso corp can provide a value of Contoso.com in this regkey if Contoso.com is one of the verified custom domain names in the tenant Contoso.onmicrosoft.com. For more information see KB1234567|
 |Reg add HKCU\Software\Microsoft\Office\16.0\Common\Identity /v EnableAlternateIdSupport /t REG_DWORD /d 1 /f|Required for Outlook 2016 ProPlus|Required for Outlook 2016 ProPlus|The value of this regkey can be 1 / 0 to indicate to Outlook application whether it should engage the improved alternate-id authentication logic. For more information see KB1234568|
-|Reg add HKCU\SOFTWARE\Microsoft\Office\16.0\Common\Identity /v DisableADALatopWAMOverride /t REG_DWORD /d 1 /f|Not applicable|Required only for Window 10 RS2 and RS3.  Version 1703 (OS build 15063) is RS2, Version 1709 (OS build 16299) is RS3.|&lt;This ensures that Office does not use WAM as alt-id is not supported by WAM on Windows RS2 and RS3&gt;. For more information see KB12345679|
+|Reg add HKCU\SOFTWARE\Microsoft\Office\16.0\Common\Identity /v DisableADALatopWAMOverride /t REG_DWORD /d 1 /f|Not applicable|Required only for Window 10 RS2 and RS3.  Version 1703 (OS build 15063) is RS2, Version 1709 (OS build 16299) is RS3.|This ensures that Office does not use WAM as alt-id is not supported by WAM on Windows RS2 and RS3. For more information see KB12345679|
 |Reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Internet Settings\ZoneMap\Domains\contoso.com\sts" /v * /t REG_DWORD /d 1 /f|Required|Required|This regkey can be used to set the STS as a trusted Zone in the internet settings. Standard ADFS deployment recommends adding the ADFS namespace to the Local Intranet Zone for Internet Explorer|
 
 ## New authentication flow after additional configuration
