@@ -30,7 +30,7 @@ ms.localizationpriority: medium
                                         </div>
                                         <div class="cardText">
                                             <h2>What's new?</h2>
-                                            <p>Find out what's new in Windows Server Storage</p>
+                                            <p>Find out what's new in Windows Server 2019</p>
                                         </div>
                                     </div>
                                 </div>
