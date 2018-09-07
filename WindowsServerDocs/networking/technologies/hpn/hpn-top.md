@@ -98,7 +98,7 @@ The following SH features and technologies are available in Windows Server 2016 
 
 ## Hardware Only (HO) features and technologies
 
-The following HO features and technologies are available in Windows Server 2016 and are documented in the [Network Offload and Optimization Technologies](../network-offload-and-optimization-technologies.md) guide.
+The following HO features and technologies are available in Windows Server 2016 and are documented in the [Network Offload and Optimization Technologies](../network-offload-optimization-technologies.md) guide.
 
 - **Address Checksum Offload**. Address checksum offloads are a NIC feature that offloads the calculation of address checksums (IP, TCP, UDP) to the NIC hardware for both send and receive.
 

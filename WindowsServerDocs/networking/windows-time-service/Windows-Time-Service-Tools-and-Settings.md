@@ -14,20 +14,9 @@ ms.technology: networking
 # Windows Time Service Tools and Settings
 >Applies to: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows 10 or later
 
-**In this section**  
-  
--   [Windows Time Service Tools](#w2k3tr_times_tools_dyax)  
-  
--   [Windows Time Service Registry Entries](#w2k3tr_times_tools_uhlp)  
-  
--   [Windows Time Service Group Policy Settings](#w2k3tr_times_tools_vwtt)  
-  
--   [Network Ports Used by the Windows Time Service](#w2k3tr_times_tools_suxb)  
-  
--   [Related Information](#w2k3tr_times_tools_qoep)  
-  
-> [!NOTE]  
-> This topic contains information only about tools and settings for Windows Time service (W32Time). If you only want to synchronize time for a domain-joined client computer, see [Configure a client computer for automatic domain time synchronization](https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/cc816884%28v%3dws.10%29). For additional topics about how to configure Windows Time service, see [Where to Find Windows Time Service Configuration Information](https://docs.microsoft.com/en-us/windows-server/networking/windows-time-service/windows-time-service-top).  
+In this topic, you learn about tools and settings for Windows Time service (W32Time). 
+
+If you only want to synchronize time for a domain-joined client computer, see [Configure a client computer for automatic domain time synchronization](https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/cc816884%28v%3dws.10%29). For additional topics about how to configure Windows Time service, see [Where to Find Windows Time Service Configuration Information](https://docs.microsoft.com/en-us/windows-server/networking/windows-time-service/windows-time-service-top).  
   
 > [!CAUTION]  
 > You should not use the Net time command to configure or set time when the Windows Time service is running.  
@@ -339,13 +328,13 @@ The following table lists the available settings for the **Configure Windows NTP
 |SpecialPollInterval|3600|  
 |EventLogFlags|0|  
   
-## <a name="w2k3tr_times_tools_suxb"></a>Network Ports Used by the Windows Time Service  
+## Network Ports Used by the Windows Time Service  
 Windows Time follows the NTP specification, which requires the use of UDP port 123 for all time synchronization communication. This port is reserved by Windows Time and remains reserved at all times. Whenever the computer synchronizes its clock or provides time to another computer, that communication is performed on UDP port 123.  
   
 > [!NOTE]  
 > If you have a computer with multiple network adapters (also called a multihomed computer), you cannot selectively enable the Windows Time service based on the network adapter.  
   
-## <a name="w2k3tr_times_tools_qoep"></a>Related Information  
+## Related Information  
 The following resources contain additional information that is relevant to this section.  
   
 -   RFC *1305* in the IETF RFC Database  
