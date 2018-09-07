@@ -39,7 +39,7 @@ ms.localizationpriority: medium
                         </li>
 </ul>
 <hr />
-<ul class="cardsI panelContent">
+<ul class="cardsF panelContent">
 <li>
         <a href="install-upgrade-migrate-19.md">
           <div class="cardSize">
