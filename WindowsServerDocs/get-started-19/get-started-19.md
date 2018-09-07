@@ -58,7 +58,7 @@ ms.localizationpriority: medium
             </div>
         </div>
        </a>
-    </li>
+    </li><hr />
 <li>
         <a href="rel-notes-19.md">
           <div class="cardSize">
@@ -77,7 +77,7 @@ ms.localizationpriority: medium
             </div>
         </div>
        </a>
-     </li>
+     </li><hr />
 <li>
       <a href="sys-reqs-19.md">
         <div class="cardSize">
@@ -89,14 +89,14 @@ ms.localizationpriority: medium
                         </div>
                     </div>
                     <div class="cardText">
-                        <h3>Sytem requirements</h3>
+                        <h3>System requirements</h3>
                         <p>The minimum hardware requirements to install and run Windows Server 2019.</p>
                     </div>
                 </div>
             </div>
         </div>
        </a>
-    </li>
+    </li><hr />
 <li>
       <a href="activation-19.md">
         <div class="cardSize">
@@ -115,7 +115,7 @@ ms.localizationpriority: medium
             </div>
         </div>
       </a>
-    </li>
+    </li><hr />
 <li>
       <a href="core-full-comparison-19.md">
         <div class="cardSize">
@@ -134,7 +134,8 @@ ms.localizationpriority: medium
             </div>
         </div>
       </a>
-    </li><li>
+    </li><hr />
+<li>
       <a href="install-fod-19.md">
         <div class="cardSize">
             <div class="cardPadding">
@@ -152,7 +153,8 @@ ms.localizationpriority: medium
             </div>
         </div>
       </a>
-    </li><li>
+    </li><hr />
+<li>
       <a href="servicing-channels-19.md">
         <div class="cardSize">
             <div class="cardPadding">
@@ -170,7 +172,8 @@ ms.localizationpriority: medium
             </div>
         </div>
       </a>
-    </li><li>
+    </li><hr />
+<li>
       <a href="app-compat-19.md">
         <div class="cardSize">
             <div class="cardPadding">
@@ -187,7 +190,8 @@ ms.localizationpriority: medium
             </div>
         </div>
       </a>
-    </li><li>
+    </li><hr />
+<li>
       <a href="maximums-limits-19.md">
         <div class="cardSize">
             <div class="cardPadding">
@@ -205,7 +209,8 @@ ms.localizationpriority: medium
             </div>
         </div>
       </a>
-    </li><li>
+    </li><hr />
+<li>
       <a href="editions-comparison-19.md">
         <div class="cardSize">
             <div class="cardPadding">
@@ -223,7 +228,8 @@ ms.localizationpriority: medium
             </div>
         </div>
       </a>
-    </li><li>
+    </li><hr />
+<li>
       <a href="removed-features-19.md">
         <div class="cardSize">
             <div class="cardPadding">
@@ -242,5 +248,3 @@ ms.localizationpriority: medium
       </a>
     </li>
 </ul>
-
----
