@@ -47,7 +47,7 @@ ms.localizationpriority: medium
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                             <img src="media/i-get-started.svg" alt="" />
+                             <img src="../media/i-get-started.svg" alt="" />
                         </div>
                     </div>
                     <div class="cardText">
@@ -66,7 +66,7 @@ ms.localizationpriority: medium
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                             <img src="media/i-get-started.svg" alt="" />
+                             <img src="../media/i-get-started.svg" alt="" />
                         </div>
                     </div>
                     <div class="cardText">
@@ -85,7 +85,7 @@ ms.localizationpriority: medium
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                             <img src="media/i-get-started.svg" alt="" />
+                             <img src="../media/i-get-started.svg" alt="" />
                         </div>
                     </div>
                     <div class="cardText">
@@ -104,7 +104,7 @@ ms.localizationpriority: medium
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                             <img src="media/i-get-started.svg" alt="" />
+                             <img src="../media/i-get-started.svg" alt="" />
                         </div>
                     </div>
                     <div class="cardText">
@@ -123,7 +123,7 @@ ms.localizationpriority: medium
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                             <img src="media/i-get-started.svg" alt="" />
+                             <img src="../media/i-get-started.svg" alt="" />
                         </div>
                     </div>
                     <div class="cardText">
@@ -141,7 +141,7 @@ ms.localizationpriority: medium
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                             <img src="media/i-get-started.svg" alt="" />
+                             <img src="../media/i-get-started.svg" alt="" />
                         </div>
                     </div>
                     <div class="cardText">
@@ -159,7 +159,7 @@ ms.localizationpriority: medium
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <img src="../media/i-access.svg" alt="" />
+                            <<img src="../media/i-get-started.svg" alt="" />
                         </div>
                     </div>
                     <div class="cardText">
@@ -177,7 +177,7 @@ ms.localizationpriority: medium
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                             <img src="media/i-get-started.svg" alt="" />
+                             <img src="../media/i-get-started.svg" alt="" />
                         </div>
                     </div>
                     <div class="cardText">
@@ -194,7 +194,7 @@ ms.localizationpriority: medium
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                             <img src="media/i-get-started.svg" alt="" />
+                             <img src="../media/i-get-started.svg" alt="" />
                         </div>
                     </div>
                     <div class="cardText">
@@ -212,7 +212,7 @@ ms.localizationpriority: medium
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                             <img src="media/i-get-started.svg" alt="" />
+                             <img src="../media/i-get-started.svg" alt="" />
                         </div>
                     </div>
                     <div class="cardText">
@@ -230,7 +230,7 @@ ms.localizationpriority: medium
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                             <img src="media/i-get-started.svg" alt="" />
+                             <img src="../media/i-get-started.svg" alt="" />
                         </div>
                     </div>
                     <div class="cardText">
@@ -248,7 +248,7 @@ ms.localizationpriority: medium
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                             <img src="media/i-get-started.svg" alt="" />
+                             <img src="../media/i-get-started.svg" alt="" />
                         </div>
                     </div>
                     <div class="cardText">
