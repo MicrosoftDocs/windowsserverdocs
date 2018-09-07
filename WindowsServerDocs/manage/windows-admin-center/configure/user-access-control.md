@@ -72,7 +72,7 @@ Users and administrators can view their currently logged-in account and as well 
 
 ### Configuring Azure Active Directory authentication for Windows Admin Center
 
-[To set up Azure AD authentication, you must first register your gateway with Azure](azure-integration.md#register-your-gateway-with-azure) (you only need to do this once for your Windows Admin Center gateway). This step creates an Azure AD application from which you can manage gateway user and gateway administrator access.
+[To set up Azure AD authentication, you must first register your gateway with Azure](azure-integration.md) (you only need to do this once for your Windows Admin Center gateway). This step creates an Azure AD application from which you can manage gateway user and gateway administrator access.
 
 If you want to give specific Azure AD users or groups gateway user or gateway administrator access to the Windows Admin Center service, you must do the following:
 

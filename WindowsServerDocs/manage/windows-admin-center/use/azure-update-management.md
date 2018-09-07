@@ -26,5 +26,5 @@ To get started, go to the Updates tool in a server connection and select “Set 
 
 Once you've configured your server to be managed by Azure Update Management, you can access Azure Update Management by using the hyperlink provided in the Updates tool. You can also stop the server's updates from being managed by Azure Update Management using the button available.
 
-Note that you must [register your Windows Admin Center gateway with Azure](..\configure\azure-integration.md#register-your-gateway-with-azure) before setting up Azure Update Management.
+Note that you must [register your Windows Admin Center gateway with Azure](..\configure\azure-integration.md) before setting up Azure Update Management.
 
