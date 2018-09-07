@@ -90,8 +90,9 @@
 ### [Deploy DHCP Using Windows PowerShell](technologies/dhcp/dhcp-deploy-wps.md)
 
 ## [High-Performance Networking (HPN)](technologies/hpn/hpn-top.md)
-## [Insider Preview - High-Performance Networking features in Windows Server 2019](technologies/hpn/hpn-insider-preview.md)
+### [Insider Preview - High-Performance Networking features in Windows Server 2019](technologies/hpn/hpn-insider-preview.md)
 ### [Network Offload and Optimization Technologies](technologies/network-offload-and-optimization-technologies.md)
+### [Receive Segment Coalescing (RSC) in the vSwitch](technologies/hpn/rsc-in-the-vswitch.md)
 
 
 
