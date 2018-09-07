@@ -29,7 +29,7 @@ ms.localizationpriority: medium
                                             </div>
                                         </div>
                                         <div class="cardText">
-                                            <h2>What's new?</h2>
+                                            <h3>What's new?</h3>
                                             <p>Find out what's new in Windows Server Storage</p>
                                         </div>
                                     </div>
@@ -51,7 +51,7 @@ ms.localizationpriority: medium
                         </div>
                     </div>
                     <div class="cardText">
-                        <h2>Install | Upgrade | Migrate</h2>
+                        <h3>Install | Upgrade | Migrate</h3>
                         <p>Description here.</p>
                     </div>
                 </div>
@@ -70,7 +70,7 @@ ms.localizationpriority: medium
                         </div>
                     </div>
                     <div class="cardText">
-                        <h2>Release notes</h2>
+                        <h3>Release notes</h3>
                         <p>Issues that could cause serious problems if you don't avoid or work around them.</p>
                     </div>
                 </div>
@@ -89,7 +89,7 @@ ms.localizationpriority: medium
                         </div>
                     </div>
                     <div class="cardText">
-                        <h2>Sytem requirements</h2>
+                        <h3>Sytem requirements</h3>
                         <p>The minimum hardware requirements to install and run Windows Server 2019.</p>
                     </div>
                 </div>
@@ -108,7 +108,7 @@ ms.localizationpriority: medium
                         </div>
                     </div>
                     <div class="cardText">
-                        <h2>Activation</h2>
+                        <h3>Activation</h3>
                         <p>Basic information on activation of Windows Server 2019 itself and other operating systems by using Windows Server 2019.</p>
                     </div>
                 </div>
@@ -127,7 +127,7 @@ ms.localizationpriority: medium
                         </div>
                     </div>
                     <div class="cardText">
-                        <h2>Core | Full install comparison</h2>
+                        <h3>Core | Full install comparison</h3>
                         <p>Description here.</p>
                     </div>
                 </div>
@@ -145,7 +145,7 @@ ms.localizationpriority: medium
                         </div>
                     </div>
                     <div class="cardText">
-                        <h2>Features On Demand</h2>
+                        <h3>Features On Demand</h3>
                         <p>Description here.</p>
                     </div>
                 </div>
@@ -163,7 +163,7 @@ ms.localizationpriority: medium
                         </div>
                     </div>
                     <div class="cardText">
-                        <h2>Servicing channels</h2>
+                        <h3>Servicing channels</h3>
                         <p>Description here.</p>
                     </div>
                 </div>
@@ -181,7 +181,7 @@ ms.localizationpriority: medium
                         </div>
                     </div>
                     <div class="cardText">
-                        <h2>Application Compatibility</h2>
+                        <h3>Application Compatibility</h3>
                         <p>Does SQL work on Windows Server 2019? What steps are needed to get Exchange running? This topic explains what you'll need to do.</p>                    </div>
                 </div>
             </div>
@@ -198,7 +198,7 @@ ms.localizationpriority: medium
                         </div>
                     </div>
                     <div class="cardText">
-                        <h2>System limits | maximums</h2>
+                        <h3>System limits | maximums</h3>
                         <p>Description here.</p>
                     </div>
                 </div>
@@ -216,7 +216,7 @@ ms.localizationpriority: medium
                         </div>
                     </div>
                     <div class="cardText">
-                        <h2>Standard | Datacenter editions comparison</h2>
+                        <h3>Standard | Datacenter editions comparison</h3>
                         <p>Description here.</p>
                     </div>
                 </div>
