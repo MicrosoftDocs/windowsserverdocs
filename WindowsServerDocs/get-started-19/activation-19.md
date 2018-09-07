@@ -1,6 +1,6 @@
 ---
-title: Microsoft Server Activation
-description: "How to activate Windows Server 2019."
+title: Windows Server 2019 install | upgrade | migrate
+description: "How to clean install, in-place upgrade or migrate to, Windows Server 2019"
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
