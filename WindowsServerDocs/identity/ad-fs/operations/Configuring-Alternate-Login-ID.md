@@ -85,7 +85,10 @@ Set-AdfsClaimsProviderTrust -TargetIdentifier "AD AUTHORITY" -AlternateLoginID m
 Set-AdfsClaimsProviderTrust -TargetIdentifier "AD AUTHORITY" -AlternateLoginID $NULL -LookupForests $NULL
 ```
 
-## Hybrid Modern Authentication - SSO with Alternate-ID
+## Hybrid Modern Authentication with Alternate-ID
+
+>[!IMPORTANT]
+>The following has only been tested against AD FS and not 3rd party identity providers.
 
 ### Exchange and Skype for Business
 If you are using alternate login id with Exchange and Skype for Business, the user experience will vary depending on whether or not you are using HMA.
