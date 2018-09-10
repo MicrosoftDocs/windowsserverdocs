@@ -321,7 +321,7 @@ Following are example results of this command.
 
 You can use the following command to reserve a percentage of the bandwidth for SMB Direct.  
 
-In this example, a 30% bandwidth reservation is used. You should select a value that represents what you expect your storage traffic will require. The value of the **-bandwidthpercentage** parameter must be a multiple of 10%.
+In this example, a 30% bandwidth reservation is used. You should select a value that represents what you expect your storage traffic will require. 
 
     New-NetQosTrafficClass "SMB" -Priority 3 -BandwidthPercentage 30 -Algorithm ETS
 
