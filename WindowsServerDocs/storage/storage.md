@@ -7,7 +7,7 @@ ms.topic: article
 author: JasonGerend
 manager: elizapo
 ms.author: jgerend
-ms.date: 04/26/2018
+ms.date: 09/10/2018
 ms.localizationpriority: high
 ---
 # Storage in Windows Server
@@ -47,7 +47,7 @@ For an overview of storage technologies included in Windows Server, see the foll
 
 * [File Server Resource Manager](fsrm/fsrm-overview.md) - File Server Resource Manager enables you to manage and classify data stored on file servers.
 
-* [iSCSI Target Server](https://technet.microsoft.com/library/hh848272(v=ws.11).aspx) - iSCSI Target Server provides block storage to other servers and applications on the network by using the Internet SCSI (iSCSI) standard.
+* [iSCSI Target Server](iscsi/iscsi-target-server.md) - iSCSI Target Server provides block storage to other servers and applications on the network by using the Internet SCSI (iSCSI) standard.
 
 * [iSCSI Target Boot](iscsi/iscsi-boot-overview.md) - iSCSI Target Server in Windows Server can boot hundreds of computers from a single operating system image that is stored in a centralized location. This improves efficiency, manageability, availability, and security.
 
