@@ -175,7 +175,7 @@ This topic provides the supported and tested Microsoft iSCSI Target Server limit
 </tr>
 <tr class="odd">
 <td><p>Network port speed</p></td>
-<td><p>1Gbps, 10 Gbps, 40Gbps, 56 Gbps (Windows Server 2012 R2 only)</p></td>
+<td><p>1Gbps, 10 Gbps, 40Gbps, 56 Gbps (Windows Server 2012 R2 and newer only)</p></td>
 <td><p>No</p></td>
 <td></td>
 </tr>
@@ -251,7 +251,7 @@ This topic provides the supported and tested Microsoft iSCSI Target Server limit
 </tr>
 <tr class="even">
 <td><p>Virtual hard disk format</p></td>
-<td><p>.vhdx (Windows Server 2012 R2 only)</p>
+<td><p>.vhdx (Windows Server 2012 R2 and newer only)</p>
 <p>.vhd</p></td>
 <td></td>
 <td></td>
@@ -347,7 +347,7 @@ This topic provides the supported and tested Microsoft iSCSI Target Server limit
 </tr>
 <tr class="odd">
 <td><p>Logical Unit shrink</p></td>
-<td><p>Yes (Windows Server 2012 R2 only)</p></td>
+<td><p>Yes (Windows Server 2012 R2 and newer only)</p></td>
 <td><p>N/A</p></td>
 <td><p>Use <a href="https://docs.microsoft.com/powershell/module/iscsitarget/resize-iscsivirtualdisk">Resize-iSCSIVirtualDisk</a> to shrink a LUN.</p></td>
 </tr>
@@ -428,7 +428,7 @@ This topic provides the supported and tested Microsoft iSCSI Target Server limit
 
 If you want to create volume shadow copies (VSS open-file snapshots) of data on iSCSI virtual disks from an application server, or you want to manage iSCSI virtual disks with an older app (such as the Diskraid command) that requires a Virtual Disk Service (VDS) hardware provider, install the iSCSI Target Storage Provider on the server from which you want to take a snapshot or use a VDS management app.
 
-The iSCSI Target Storage Provider is a role service in Windows Server 2012 R2 and Windows Server 2012; you can also download and install [iSCSI Target Storage Providers (VDS/VSS) for down-level application servers](http://www.microsoft.com/download/details.aspx?id=34759) on the following operating systems as long as the iSCSI Target Server is running on Windows Server 2012:
+The iSCSI Target Storage Provider is a role service in Windows Server 2016, Windows Server 2012 R2, and Windows Server 2012; you can also download and install [iSCSI Target Storage Providers (VDS/VSS) for down-level application servers](http://www.microsoft.com/download/details.aspx?id=34759) on the following operating systems as long as the iSCSI Target Server is running on Windows Server 2012:
 
   - Windows Storage Server 2008 R2
 
