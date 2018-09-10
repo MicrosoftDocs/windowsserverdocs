@@ -88,6 +88,6 @@ There are similarities and differences in these two NIC Advanced Properties List
 
     ![C1 Properties](../../media/network-offload-and-optimization/c1-properties.png)
 
-4.  Click the **Advanced** tab to view the advanced properties. The items in this list correlates to the items in the `Get-NetAdapterAdvancedProperties` output.
+4.  Click the **Advanced** tab to view the advanced properties.<p>The items in this list correlates to the items in the `Get-NetAdapterAdvancedProperties` output.
 
     ![Chelsio Network Adapter Properties](../../media/network-offload-and-optimization/chelsio-network-adapter-properties.png)
