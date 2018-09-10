@@ -7,7 +7,7 @@ ms.topic: article
 author: JasonGerend
 manager: brianlic
 ms.author: jgerend
-ms.date: 06/29/2018
+ms.date: 09/10/2018
 description: New and updated topics in the on-premises storage documentation for Windows Server for IT Pros.
 ---
 # Change history for storage topics in Windows Server
@@ -17,6 +17,13 @@ description: New and updated topics in the on-premises storage documentation for
 This topic lists new and updated topics in the [Storage](storage.md) documentation for Windows Server.
 
 > If you're looking for update history for Windows Server, see [Windows 10 and Windows Server 2016 update history](https://support.microsoft.com/help/4000825/windows-10-and-windows-server-2016-update-history).
+
+## September 2018
+
+|New or changed topic|Description|
+|---|---|
+| [iSCSI Target Server](iscsi/iscsi-target-server.md) | Migrated from the [Previous Versions](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012) library.|
+| [iSCSI Target Server scalability limits](iscsi/iscsi-target-server-limits.md) |Migrated from the [Previous Versions](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012) library.|
 
 ## June 2018
 

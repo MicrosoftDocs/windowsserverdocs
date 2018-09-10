@@ -6,7 +6,7 @@ ms.topic: article
 author: JasonGerend 
 ms.author: jgerend 
 ms.technology: storage 
-ms.date: 04/05/2018
+ms.date: 09/10/2018
 ms.localizationpriority: medium
 ---
 # Disable Offline Files on individual redirected folders
@@ -23,7 +23,7 @@ This topic describes how to disable Offline Files caching on individual folders 
 To disable Offline Files caching of specific redirected folders, your environment must meet the following prerequisites.
 
 - An Active Directory Domain Services (AD DS) domain, with client computers joined to the domain. There are no forest or domain functional-level requirements or schema requirements.
-- Client computers running Windows 8.1, Windows 8, Windows Server 2012 R2, or Windows Server 2012.
+- Client computers running Windows 10, Windows 8.1, Windows 8, Windows Server 2016, Windows Server 2012 R2, or Windows Server 2012.
 - A computer with Group Policy Management installed.
 
 ## Disabling Offline Files on individual redirected folders
