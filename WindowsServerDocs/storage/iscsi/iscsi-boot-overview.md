@@ -4,9 +4,9 @@ title: iSCSI target boot overview
 ms.prod: windows-server-threshold
 ms.technology: storage-iscsi
 ms.topic: article
-author: MicGray-MS
-manager: dongill
-ms.author: micgray
+author: JasonGerend
+manager: elizapo
+ms.author: jgerend
 ms.date: 10/11/2016
 ---
 # iSCSI target boot overview
