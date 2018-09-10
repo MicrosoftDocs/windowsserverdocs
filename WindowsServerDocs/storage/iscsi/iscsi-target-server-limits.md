@@ -7,7 +7,7 @@ ms.topic: article
 author: JasonGerend
 manager: elizapo
 ms.author: jgerend
-ms.date: 09/06/2018
+ms.date: 09/10/2018
 ---
 
 # iSCSI Target Server Scalability Limits
@@ -16,7 +16,7 @@ Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 This topic provides the supported and tested Microsoft iSCSI Target Server limits on Windows Server. The following tables display the tested support limits and, where applicable, whether the limits are enforced.
 
-##General limits
+## General limits
 
 <table>
 <colgroup>
@@ -428,7 +428,7 @@ This topic provides the supported and tested Microsoft iSCSI Target Server limit
 
 If you want to create volume shadow copies (VSS open-file snapshots) of data on iSCSI virtual disks from an application server, or you want to manage iSCSI virtual disks with an older app (such as the Diskraid command) that requires a Virtual Disk Service (VDS) hardware provider, install the iSCSI Target Storage Provider on the server from which you want to take a snapshot or use a VDS management app.
 
-The iSCSI Target Storage Provider is a role service in Windows Server 2012 R2 and Windows Server 2012; you can also download and install [iSCSI Target Storage Providers (VDS/VSS) for down-level application servers](http://www.microsoft.com/en-us/download/details.aspx?id=34759) on the following operating systems as long as the iSCSI Target Server is running on Windows Server 2012:
+The iSCSI Target Storage Provider is a role service in Windows Server 2012 R2 and Windows Server 2012; you can also download and install [iSCSI Target Storage Providers (VDS/VSS) for down-level application servers](http://www.microsoft.com/download/details.aspx?id=34759) on the following operating systems as long as the iSCSI Target Server is running on Windows Server 2012:
 
   - Windows Storage Server 2008 R2
 

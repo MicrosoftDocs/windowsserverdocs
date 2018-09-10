@@ -7,7 +7,7 @@ ms.topic: article
 author: JasonGerend
 manager: elizapo
 ms.author: jgerend
-ms.date: 09/06/2018
+ms.date: 09/10/2018
 ---
 
 # iSCSI Target Server overview

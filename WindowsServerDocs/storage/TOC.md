@@ -77,6 +77,10 @@
 ### [Enable always offline mode](folder-redirection/enable-always-offline.md)
 ### [Enable optimized folder moving](folder-redirection/enable-optimized-moving.md)
 ### [Troubleshoot user profiles](folder-redirection/troubleshoot-user-profiles-events.md)
+## iSCSI
+### [iSCSI Target Server](iscsi/iscsi-target-server.md)
+### [iSCSI Target Server scalability limits](iscsi/iscsi-target-server-limits.md)
+### [iSCSI boot](iscsi/iscsi-boot-overview.md)
 ## [ReFS](refs/refs-overview.md)
 ### [Mirror-accelerated parity](refs/mirror-accelerated-parity.md)
 ### [Block cloning](refs/block-cloning.md)
@@ -142,6 +146,5 @@
 #### [Step 5, Set up clients](work-folders/deploy-work-folders-adfs-step5.md)
 ## [Storage QoS](storage-qos/storage-qos-overview.md)
 ## [Storage-class memory health management](storage-spaces/Storage-class-memory-health.md)
-## [iSCSI boot](iscsi/iscsi-boot-overview.md)
 ## [Change history for Storage topics](storage-change-history.md)
 
