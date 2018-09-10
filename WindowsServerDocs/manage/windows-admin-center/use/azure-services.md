@@ -15,8 +15,8 @@ ms.prod: windows-server-threshold
 
 [Learn more about Azure integration with Windows Admin Center.](../plan/azure-integration-options.md)
 
-Windows Admin Center streamlines the process of setting up various Azure services, making it easier to leverage the power of Azure from your own environment. To automate setup, you must first [register your Windows Admin Center gateway to Azure](../configure/azure-integration.md#register-your-gateway-with-azure).
+Windows Admin Center streamlines the process of setting up various Azure services, making it easier to leverage the power of Azure from your own environment. To automate setup, you must first [register your Windows Admin Center gateway to Azure](../configure/azure-integration.md).
 
 [Protect your Hyper-V Virtual Machines from Windows Admin Center with Azure Site Recovery](azure-site-recovery.md)
 
-[Manage operating system updates for all your Windows servers, both on-premises or in the cloud.](azure-update-management.md)
+[Manage operating system updates for all your Windows servers, both on-premises or in the cloud, with Azure Update Management.](azure-update-management.md)
