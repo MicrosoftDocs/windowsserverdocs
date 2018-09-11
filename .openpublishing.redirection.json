@@ -7787,18 +7787,18 @@
       "redirect_document_id": true
     },
     {
-      "source_path": "WindowsServerDocs/security/guarded-fabric-shielded-vm/guarded-fabric-configuring-fabric-dns.md",
-      "redirect_url": "/windows-server/virtualization/guarded-fabric-shielded-vm/guarded-fabric-configuring-fabric-dns",
+      "source_path": "WindowsServerDocs/virtualization/guarded-fabric-shielded-vm/guarded-fabric-configuring-fabric-dns.md",
+      "redirect_url": "/windows-server/security/guarded-fabric-shielded-vm/guarded-fabric-configuring-fabric-dns",
       "redirect_document_id": true
     },
     {
-      "source_path": "WindowsServerDocs/security/guarded-fabric-shielded-vm/guarded-fabric-configuring-fabric-dns-ad.md",
-      "redirect_url": "/windows-server/virtualization/guarded-fabric-shielded-vm/guarded-fabric-configuring-fabric-dns-ad",
+      "source_path": "WindowsServerDocs/virtualization/guarded-fabric-shielded-vm/guarded-fabric-configuring-fabric-dns-ad.md",
+      "redirect_url": "/windows-server/security/guarded-fabric-shielded-vm/guarded-fabric-configuring-fabric-dns-ad",
       "redirect_document_id": true
     },
     {
-      "source_path": "WindowsServerDocs/security/guarded-fabric-shielded-vm/guarded-fabric-configuring-fabric-dns-tpm.md",
-      "redirect_url": "/windows-server/virtualization/guarded-fabric-shielded-vm/guarded-fabric-configuring-fabric-dns-tpm",
+      "source_path": "WindowsServerDocs/virtualization/guarded-fabric-shielded-vm/guarded-fabric-configuring-fabric-dns-tpm.md",
+      "redirect_url": "/windows-server/security/guarded-fabric-shielded-vm/guarded-fabric-configuring-fabric-dns-tpm",
       "redirect_document_id": true
     },
     {
@@ -7807,13 +7807,13 @@
       "redirect_document_id": true
     },
     {
-      "source_path": "WindowsServerDocs/security/guarded-fabric-shielded-vm/guarded-fabric-create-a-shielded-vm-template.md",
-      "redirect_url": "/windows-server/virtualization/guarded-fabric-shielded-vm/guarded-fabric-create-a-shielded-vm-template",
+      "source_path": "WindowsServerDocs/virtualization/guarded-fabric-shielded-vm/guarded-fabric-create-a-shielded-vm-template.md",
+      "redirect_url": "/windows-server/security/guarded-fabric-shielded-vm/guarded-fabric-create-a-shielded-vm-template",
       "redirect_document_id": true
     },
     {
-      "source_path": "WindowsServerDocs/security/guarded-fabric-shielded-vm/guarded-fabric-create-a-linux-shielded-vm-template.md",
-      "redirect_url": "/windows-server/virtualization/guarded-fabric-shielded-vm/guarded-fabric-create-a-linux-shielded-vm-template",
+      "source_path": "WindowsServerDocs/virtualization/guarded-fabric-shielded-vm/guarded-fabric-create-a-linux-shielded-vm-template.md",
+      "redirect_url": "/windows-server/security/guarded-fabric-shielded-vm/guarded-fabric-create-a-linux-shielded-vm-template",
       "redirect_document_id": true
     },
     {
