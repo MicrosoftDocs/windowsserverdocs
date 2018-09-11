@@ -10,7 +10,7 @@ ms.author: pashort
 author: shortpatti
 ms.date: 08/09/2018
 ---
-# Software Defined Networking (SDN)
+# SDN for Windows Server
 
 >Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
 
