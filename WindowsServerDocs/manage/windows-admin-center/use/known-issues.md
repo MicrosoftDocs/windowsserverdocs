@@ -34,7 +34,7 @@ If you encounter an issue not described on this page, please [let us know](http:
 
 - If you have Windows Admin Center installed as a gateway, and you are managing localhost from a local browser, some tools may not be fully functional, or may throw a **WMI access denied** error. In this case, you'll need to manage the server from a remote machine. [13759990]
 
-- If you previously had the Project Honolulu technical preview installed as a gateway, you may get a blank entry in the server list. To correct this, perform the following steps:
+- If you previously had the Windows Admin Center technical preview installed as a gateway, you may get a blank entry in the server list. To correct this, perform the following steps:
 
   1. Uninstall Windows Admin Center
   2. Delete the **Server Management Experience** folder under **C:\Windows\ServiceProfiles\NetworkService\AppData\Roaming\Microsoft**
