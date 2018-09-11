@@ -346,7 +346,7 @@ Following are example results of this command.
 
 ## Known issue: Mellanox adapter debugger conflict 
 
-By default, when a Mellanox adapter is used, the attached debugger blocks NetQos. Therefore, if you are using an adapter from Mellanox and intend to attach a debugger, you can use the following command resolve this issue. This step is not required if you do not intend to attached a debugger or if you're not using a Mellanox adapter.
+By default, when using a Mellanox adapter, the attached debugger blocks NetQos. Therefore, if you are using an adapter from Mellanox and intend to attach a debugger, you can use the following command resolve this issue. This step is not required if you do not intend to attach a debugger or if you're not using a Mellanox adapter.
 
     
     Set-ItemProperty HKLM:"\SYSTEM\CurrentControlSet\Services\NDIS\Parameters" AllowFlowControlUnderDebugger -type DWORD -Value 1 –Force
