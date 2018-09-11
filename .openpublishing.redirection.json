@@ -25,7 +25,7 @@
       "redirect_document_id": true
     },
     {
-      "source_path": "WindowsServerDocs/networking/technologies/high-performance-networking.md",
+      "source_path": "WindowsServerDocs/networking/technologies/hpn/high-performance-networking.md",
       "redirect_url": "/windows-server/networking/technologies/hpn/hpn-top",
       "redirect_document_id": true
     },
