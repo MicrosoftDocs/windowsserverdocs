@@ -113,7 +113,7 @@ To use the converged NIC capability:
 
 2.  Ensure to enable RDMA on the NIC, or in the case of a SET team, the NICs are bound to the Hyper-V switch. 
 
-3.  Ensure to enable RDMA on the vNICs designated for RDMA in the host. See RDMA…
+3.  Ensure to enable RDMA on the vNICs designated for RDMA in the host. 
 
 For more details about RDMA and SET, see [Remote Direct Memory Access (RDMA) and Switch Embedded Teaming (SET)](https://docs.microsoft.com/en-us/windows-server/virtualization/hyper-v-virtual-switch/rdma-and-switch-embedded-teaming).
 
