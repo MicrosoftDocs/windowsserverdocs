@@ -103,7 +103,7 @@ These features have both software and hardware components. The software is intim
 
 Converged NIC is a technology that allows virtual NICs in the Hyper-V host to expose RDMA services to host processes. Windows Server 2016 no longer requires separate NICs for RDMA. The Converged NIC feature allows the Virtual NICs in the Host partition (vNICs) to expose RDMA to the host partition and share the bandwidth of the NICs between the RDMA traffic and the VM and other TCP/UDP traffic in a fair and manageable manner.
 
-![Converged NIC with SDN](networking/media/Converged-NIC/conv-nic-sdn.png)
+![Converged NIC with SDN](../../media/Converged-NIC/conv-nic-sdn.png)
 
 You can manage converged NIC operation through VMM or Windows PowerShell. The PowerShell cmdlets are the same cmdlets used for RDMA (see below).
 
