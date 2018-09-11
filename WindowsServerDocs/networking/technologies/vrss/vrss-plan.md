@@ -16,18 +16,15 @@ ms.date: 09/04/2018
 
 >Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
 
-In Windows Server 2016, vRSS is enabled by default, however you must prepare your environment to allow vRSS to function correctly in a virtual machine \(VM\) or on a host virtual adapter \(vNIC\).
+In Windows Server 2016, vRSS is enabled by default, however you must prepare your environment to allow vRSS to function correctly in a virtual machine \(VM\) or on a host virtual adapter \(vNIC\). In Windows Server 2012 R2, vRSS was disabled by default.
 
->[!NOTE]
->In Windows Server 2012 R2, vRSS was disabled by default.
+When you plan and prepare the use of vRSS, ensure that:
 
-This planning and preparation includes:
-
-- Ensure that the physical network adapter is compatible with Virtual Machine Queue \(VMQ\) and has a link speed of 10 Gbps or more.
-- Ensure that VMQ is enabled on the physical NIC and on the Hyper\-V Virtual Switch port
-- Ensure that there is no Single Root Input\-Output Virtualization \(SR\-IOV\) configured for the VM.
-- Ensure that NIC Teaming is configured correctly.
-- Ensure that the VM has multiple logical processors \(LPs\).
+- The physical network adapter is compatible with Virtual Machine Queue \(VMQ\) and has a link speed of 10 Gbps or more.
+- VMQ is enabled on the physical NIC and on the Hyper\-V Virtual Switch port
+- There is no Single Root Input\-Output Virtualization \(SR\-IOV\) configured for the VM.
+- NIC Teaming is configured correctly.
+- The VM has multiple logical processors \(LPs\).
 
 >[!NOTE]
 >vRSS is also enabled by default for any host vNICs that have RSS enabled.

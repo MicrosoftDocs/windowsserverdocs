@@ -321,7 +321,7 @@ Following are example results of this command.
 
 You can use the following command to reserve a percentage of the bandwidth for SMB Direct.  
 
-In this example, a 30% bandwidth reservation is used. You should select a value that represents what you expect your storage traffic will require. The value of the **-bandwidthpercentage** parameter must be a multiple of 10%.
+In this example, a 30% bandwidth reservation is used. You should select a value that represents what you expect your storage traffic will require. 
 
     New-NetQosTrafficClass "SMB" -Priority 3 -BandwidthPercentage 30 -Algorithm ETS
 
@@ -344,9 +344,9 @@ Following are example results of this command.
 |[Default]|ETS|70 |0-2,4-7| Global|&nbsp;|&nbsp;| 
 |SMB      |ETS|30 |3 |Global|&nbsp;|&nbsp;| 
 
-## Remove Debugger Conflict \(Mellanox adapter only\)
+## Known issue: Mellanox adapter debugger conflict 
 
-If you are using an adapter from Mellanox you need to perform this step to configure the debugger. By default, when a Mellanox adapter is used, the attached debugger blocks NetQos. You can use the following command to override the debugger.
+By default, when a Mellanox adapter is used, the attached debugger blocks NetQos. Therefore, if you are using an adapter from Mellanox and intend to attach a debugger, you can use the following command resolve this issue. This step is not required if you do not intend to attached a debugger or if you're not using a Mellanox adapter.
 
     
     Set-ItemProperty HKLM:"\SYSTEM\CurrentControlSet\Services\NDIS\Parameters" AllowFlowControlUnderDebugger -type DWORD -Value 1 –Force
