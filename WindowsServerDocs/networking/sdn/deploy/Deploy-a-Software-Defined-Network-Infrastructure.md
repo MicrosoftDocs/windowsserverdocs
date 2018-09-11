@@ -52,7 +52,7 @@ These deployments include all the technologies you need for a fully functional i
 ## Related topics
 - [Software Defined Networking (SDN)](../Software-Defined-Networking--SDN-.md)  
 - [SDN Technologies](../technologies/Software-Defined-Networking-Technologies.md)  
-- [Plan SDN](../plan/Plan-Software-Defined-Networking.md)  
+- [Plan SDN](../plan/plan-a-software-defined-network-infrastructure.md)  
 - [Manage SDN](../manage/manage-sdn.md)
 - [Security for SDN](../security/sdn-security-top.md)
 - [Troubleshoot SDN](../troubleshoot/Troubleshoot-Software-Defined-Networking.md)
