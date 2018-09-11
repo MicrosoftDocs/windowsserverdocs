@@ -14,22 +14,7 @@ ms.date: 08/09/2018
 
 >Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
 
-
-You can use SDN to do the following.
-
-- Dynamically create, secure, and connect your network to meet the evolving needs of your apps
-- Speed up the deployment of your workloads
-- Contain security vulnerabilities from spreading across your network
-
-SDN allows you to accomplish all of this while also reducing your overall infrastructure costs.
-
-
-
-
-Software Defined Networking (SDN) provides a method to centrally configure and manage physical and virtual network devices such as routers, switches, and gateways in your datacenter. You can use your existing SDN-compatible devices to achieve deeper integration between the virtual network and the physical network.
-
-
-Virtual network elements such as Hyper-V Virtual Switch, Hyper-V Network Virtualization, and RAS Gateway are designed to be integral elements of your SDN infrastructure. 
+Software Defined Networking (SDN) provides a method to centrally configure and manage physical and virtual network devices such as routers, switches, and gateways in your datacenter. You can use your existing SDN-compatible devices to achieve deeper integration between the virtual network and the physical network. Virtual network elements such as Hyper-V Virtual Switch, Hyper-V Network Virtualization, and RAS Gateway are designed to be integral elements of your SDN infrastructure. 
 
 >[!Note]
 >Hyper-V hosts and virtual machines (VMs) running SDN infrastructure servers, such as Network Controller and Software Load Balancing nodes, must have Windows Server 2016 Datacenter edition installed. 
@@ -38,13 +23,15 @@ Virtual network elements such as Hyper-V Virtual Switch, Hyper-V Network Virtual
 
 SDN is possible because network planes are no longer bound to the network devices themselves. However, other entities, such as datacenter management software like System Center 2016 use network planes. SDN allows you to manage your datacenter network dynamically, providing an automated, centralized way to meet the requirements of your applications and workloads. 
 
-Software defined networking gives you the ability to. 
-- Abstract your applications and workloads from the underlying physical network, which is accomplished by virtualizing the network. Just as with server virtualization using Hyper-V, the abstractions are consistent and work with your applications and workloads in a non-disruptive manner. For example, software defined networking provides virtual abstractions for your physical network elements, such as IP addresses, switches, and load balancers. 
-- Define and control policies that govern both physical and virtual networks, including traffic flow between these two network types centrally. 
-- Implement network policies consistently at scale, even as you deploy new workloads or move workloads across virtual or physical networks. 
+You can use SDN to:
 
- 
+- Dynamically create, secure, and connect your network to meet the evolving needs of your apps
+- Speed up the deployment of your workloads in a non-disruptive manner
+- Contain security vulnerabilities from spreading across your network
+- Define and control policies that govern both physical and virtual networks 
+- Implement network policies consistently at scale
 
+SDN allows you to accomplish all of this while also reducing your overall infrastructure costs.
 
 
 
