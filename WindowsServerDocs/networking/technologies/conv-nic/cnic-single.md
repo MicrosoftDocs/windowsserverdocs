@@ -43,8 +43,8 @@ Following are example results of this command.
 
 |Name|InterfaceDescription|ifIndex|Status|MacAddress|LinkSpeed|
 |-----|--------------------|-------|-----|----------|---------|
-|
 |M1|Mellanox ConnectX-3 Pro ...| 4| Up|7C-FE-90-93-8F-A1|40 Gbps|
+---
 
 You can use one of the following commands to obtain additional adapter properties, including the IP address.
 
@@ -108,13 +108,13 @@ Following are example results of this command.
 
 |Parameter|Value|
 |---------|-----|
-|
 |ComputerName|192.168.1.5|
 |RemoteAddress|192.168.1.5|
 |InterfaceAlias|M1|
 |SourceAddress|192.168.1.3|
 |PingSucceeded|True|
 |PingReplyDetails \(RTT\)|0 ms|
+---
 
 In some cases, you might need to disable Windows Firewall with Advanced Security to successfully perform this test. If you disable the firewall, keep security in mind and ensure that your configuration meets your organization's security requirements.
 
@@ -130,13 +130,13 @@ Following are example results of this command.
 
 |Parameter|Value|
 |---------|-----|
-|
 |ComputerName|192.168.1.5|
 |RemoteAddress|192.168.1.5|
 |InterfaceAlias|Test-40G-1|
 |SourceAddress|192.168.1.3|
 |PingSucceeded|False|
 |PingReplyDetails \(RTT\)|0 ms|
+---
 
 ## Configure VLANs \(Optional\)
 
@@ -171,8 +171,8 @@ Following are example results of this command.
 
 |Name |DisplayName| DisplayValue| RegistryKeyword |RegistryValue|
 |----|-----------|------------|---------------|-------------|
-|
 |M1|VLAN ID|101|VlanID|{101}|
+---
 
 
 Ensure that the VLAN ID takes effect independent of the network adapter implementation by using the following command to restart the network adapter.
@@ -187,8 +187,8 @@ Following are example results of this command.
 
 |Name|InterfaceDescription|ifIndex| Status|MacAddress|LinkSpeed|
 |----|--------------------|-------|------|----------| ---------|
-|
 |M1|Mellanox ConnectX-3 Pro Ethernet Ada...|4|Up|7C-FE-90-93-8F-A1|40 Gbps|
+---
 
 Ensure that you perform this step on both the local and destination servers. If the destination server is not configured with the same VLAN ID as the local server, the two cannot communicate.
 
@@ -240,14 +240,14 @@ Following are example results of this command.
 
 |Parameter|Value|
 |---------|-----|
-|
 |Name |SMB|
 |Owner|Group Policy \(Machine\)|
 |NetworkProfile|All|
 |Precedence|127|
 |JobObject|&nbsp;| 
-|NetDirectPort|445
-|PriorityValue|3
+|NetDirectPort|445 |
+|PriorityValue|3 |
+---
 
 ### For RoCE Deployments Turn on Priority Flow Control for SMB traffic 
 
@@ -260,7 +260,6 @@ Following are example results of the **Get-NetQosFlowControl** command.
 
 |Priority|Enabled|PolicySet|IfIndex|IfAlias|
 |---------|-----|--------- |-------| -------|
-|
 |0 |False |Global|&nbsp;|&nbsp;|
 |1 |False |Global|&nbsp;|&nbsp;|
 |2 |False |Global|&nbsp;|&nbsp;|
@@ -269,6 +268,7 @@ Following are example results of the **Get-NetQosFlowControl** command.
 |5 |False |Global|&nbsp;|&nbsp;|
 |6 |False |Global|&nbsp;|&nbsp;|
 |7 |False |Global|&nbsp;|&nbsp;|
+---
 
 ### Enable QoS for the local and destination network adapters
 With this step you can enable DCB on specific network adapters.
@@ -295,33 +295,33 @@ Following are example results of this command.
 
 |Parameter|Hardware|Current|
 |---------|--------|-------|
-|
 |MacSecBypass|NotSupported|NotSupported|
 |DcbxSupport|None|None|
 |NumTCs(Max/ETS/PFC)|8/8/8|8/8/8|
+---
  
 **OperationalTrafficClasses**: 
 
 |TC|TSA|Bandwidth|Priorities|
 |----|-----|--------|-------|
-|
 |0| ETS|70%|0-2,4-7|
-|1|ETS|30%|3
+|1|ETS|30%|3 |
+---
 
 **OperationalFlowControl**: Priority 3 Enabled
 **OperationalClassifications**:
 
 |Protocol|Port/Type|Priority|
 |--------|---------|--------|
-|
 |Default|&nbsp;|0|
 |NetDirect| 445|3|
+---
 
 ### Reserve a percentage of the Bandwidth for SMB Direct \(RDMA\)
 
 You can use the following command to reserve a percentage of the bandwidth for SMB Direct.  
 
-In this example, a 30% bandwidth reservation is used. You should select a value that represents what you expect your storage traffic will require. The value of the **-bandwidthpercentage** parameter must be a multiple of 10%.
+In this example, a 30% bandwidth reservation is used. You should select a value that represents what you expect your storage traffic will require. 
 
     New-NetQosTrafficClass "SMB" -Priority 3 -BandwidthPercentage 30 -Algorithm ETS
 
@@ -329,8 +329,8 @@ Following are example results of this command.
 
 |Name|Algorithm |Bandwidth(%)| Priority |PolicySet |IfIndex |IfAlias |
 |----|---------| ------------ |--------| ---------|------- |------- |
-|
-|SMB | ETS     | 30 |3 |Global |&nbsp;|&nbsp;|                                      
+|SMB | ETS     | 30 |3 |Global |&nbsp;|&nbsp;|
+---                                      
  
 You can use the following command to view bandwidth reservation information.
 
@@ -340,13 +340,13 @@ Following are example results of this command.
  
 |Name|Algorithm |Bandwidth(%)| Priority |PolicySet |IfIndex |IfAlias |
 |----|---------| ------------ |--------| ---------|------- |------- |
-|
 |[Default]|ETS|70 |0-2,4-7| Global|&nbsp;|&nbsp;| 
 |SMB      |ETS|30 |3 |Global|&nbsp;|&nbsp;| 
+---
 
-## Remove Debugger Conflict \(Mellanox adapter only\)
+## Known issue: Mellanox adapter debugger conflict 
 
-If you are using an adapter from Mellanox you need to perform this step to configure the debugger. By default, when a Mellanox adapter is used, the attached debugger blocks NetQos. You can use the following command to override the debugger.
+By default, when using a Mellanox adapter, the attached debugger blocks NetQos. Therefore, if you are using an adapter from Mellanox and intend to attach a debugger, you can use the following command resolve this issue. This step is not required if you do not intend to attach a debugger or if you're not using a Mellanox adapter.
 
     
     Set-ItemProperty HKLM:"\SYSTEM\CurrentControlSet\Services\NDIS\Parameters" AllowFlowControlUnderDebugger -type DWORD -Value 1 –Force
@@ -368,8 +368,8 @@ Following are example results of this command.
 
 |Name |InterfaceDescription |Enabled|
 |----|--------------------|-------|
-|
 |M1| Mellanox ConnectX-3 Pro Ethernet Adapter |True|
+---
 
 ### Download DiskSpd.exe and a PowerShell Script
 
@@ -391,8 +391,8 @@ Following are example results of this command.
 
 |InterfaceAlias |InterfaceIndex |IPv4Address|
 |-------------- |-------------- |-----------|
-|
 |M2 |14 |{192.168.1.5}|
+---
 
 ### Run the PowerShell script
 
@@ -464,6 +464,7 @@ Following are example results of this command.
 |Name |SwitchType |NetAdapterInterfaceDescription|
 |---- |---------- |------------------------------|
 |VMSTEST |External |Mellanox ConnectX-3 Pro Ethernet Adapter|
+---
 
 You can use the following command to view the properties of the network adapter.
 
@@ -473,8 +474,8 @@ Following are example results of this command.
 
 |Name |InterfaceDescription | ifIndex |Status |MacAddress |LinkSpeed|
 |---- |-------------------- |-------| ------|----------|---------|
-|
 |vEthernet \(VMSTEST\) |Hyper-V Virtual Ethernet Adapter #2|27 |Up |E4-1D-2D-07-40-71 |40 Gbps|
+---
 
 
 You can manage a Host vNIC in two ways. One method is the **NetAdapter** view, which operates based upon the "vEthernet \(VMSTEST\)" name.
@@ -491,9 +492,9 @@ Following are example results of this command.
 
 |Name |IsManagementOs |VMName |SwitchName |MacAddress |Status |IPAddresses|
 |----|-------------- |------ |----------|----------|------ |-----------|
-|
 |CORP-External-Switch |True |CORP-External-Switch| 001B785768AA |{Ok} |&nbsp;|
 |VMSTEST |True |VMSTEST | E41D2D074071| {Ok} | &nbsp;| 
+---
 
 ### Test the connection
 
@@ -516,8 +517,8 @@ You can use the following example commands to assign and view network adapter VL
 
 |VMName |VMNetworkAdapterName |Mode |VlanList|
 |------ |-------------------- |---- |--------|
-|
-|&nbsp;|VMSTEST |Access |101     
+|&nbsp;|VMSTEST |Access |101   |
+---  
  
 ### Test the connection
 
@@ -558,8 +559,8 @@ You can use the following example command to view network adapter RDMA informati
     
 |Name |InterfaceDescription |Enabled |
 |---- |-------------------- |-------|
-|
 |vEthernet \(VMSTEST\)| Hyper-V Virtual Ethernet Adapter #2|False|
+---
 
 ### Enable RDMA on the Host vNIC
 
@@ -569,8 +570,8 @@ You can use the following example commands to view network adapter properties, e
     
 |Name |InterfaceDescription |ifIndex |Status |MacAddress |LinkSpeed|
 |----|--------------------|-------|------|----------|---------|
-|
 |vEthernet (VMSTEST)|Hyper-V Virtual Ethernet Adapter #2|27|Up|E4-1D-2D-07-40-71|40 Gbps|
+---
 
     Enable-NetAdapterRdma -Name "vEthernet (VMSTEST)"
     Get-NetAdapterRdma -Name "vEthernet (VMSTEST)"
@@ -579,8 +580,8 @@ In the following results, when the parameter **Enabled** has the value **True**,
 
 |Name |InterfaceDescription |Enabled |
 |---- |-------------------- |-------|
-|
 |vEthernet \(VMSTEST\)| Hyper-V Virtual Ethernet Adapter #2|True|
+---
 
 
     
@@ -589,8 +590,8 @@ In the following results, when the parameter **Enabled** has the value **True**,
 
 |Name |InterfaceDescription |ifIndex |Status |MacAddress |LinkSpeed|
 |----|--------------------|-------|------|----------|---------|
-|
 |vEthernet (VMSTEST)|Hyper-V Virtual Ethernet Adapter #2|27|Up|E4-1D-2D-07-40-71|40 Gbps|
+---
 
 ### Perform RDMA traffic test by using the script
 
