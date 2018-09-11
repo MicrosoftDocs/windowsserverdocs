@@ -24,11 +24,6 @@
       "redirect_url": "/windows-server/networking/technologies/hpn/hpn-top",
       "redirect_document_id": true
     },
-    {
-      "source_path": "WindowsServerDocs/networking/technologies/hpn/high-performance-networking.md",
-      "redirect_url": "/windows-server/networking/technologies/hpn/hpn-top",
-      "redirect_document_id": true
-    },
     {  
       "source_path": "WindowsServerDocs/windows-insider/Whats-new-wip-at-work.md",
       "redirect_url": "https://docs.microsoft.com/windows-insider/at-work/whats-new-wip-at-work",
