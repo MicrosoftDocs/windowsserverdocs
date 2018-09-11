@@ -37,7 +37,8 @@ Hyper-V Virtual Switch extended ACLs enable you to configure the Hyper-V Virtual
 
 You can manage Hyper-V switch extended ACLs through the [Add-VMNetworkAdapterExtendedAcl](https://docs.microsoft.com/en-us/powershell/module/hyper-v/add-vmnetworkadapterextendedacl?view=win10-ps) and [Remove-VMNetworkAdapterExtendedAcl](https://docs.microsoft.com/en-us/powershell/module/hyper-v/remove-vmnetworkadapteracl?view=win10-ps) PowerShell cmdlets.
 
->[!TIP] This feature applies to the HNVv1 stack. For ACLs in the SDN stack, refer to Software Defined Networking SDN) ACLs below.
+>[!TIP] 
+>This feature applies to the HNVv1 stack. For ACLs in the SDN stack, refer to Software Defined Networking SDN) ACLs below.
 
 For more information about Extended Port Access Control Lists in this library, see [Create Security Policies with Extended Port Access Control Lists](https://docs.microsoft.com/windows-server/virtualization/hyper-v-virtual-switch/Create-Security-Policies-with-Extended-Port-Access-Control-Lists).
 
