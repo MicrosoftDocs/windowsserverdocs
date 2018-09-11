@@ -90,11 +90,18 @@
 ### [Deploy DHCP Using Windows PowerShell](technologies/dhcp/dhcp-deploy-wps.md)
 
 ## [High-Performance Networking (HPN)](technologies/hpn/hpn-top.md)
+### [Insider Preview - High-Performance Networking features in Windows Server 2019](technologies/hpn/hpn-insider-preview.md)
+### [Network Offload and Optimization Technologies](technologies/hpn/network-offload-optimization-technologies.md)
+### [Receive Segment Coalescing (RSC) in the vSwitch](technologies/hpn/rsc-in-the-vswitch.md)
+
+
+
 ### [Converged NIC Configuration Guide](technologies/conv-nic/cnic-top.md)
 #### [Converged NIC Configuration with a Single Network Adapter](technologies/conv-nic/cnic-single.md)
 #### [Converged NIC Teamed NIC Configuration](technologies/conv-nic/cnic-datacenter.md)
 #### [Physical Switch Configuration for Converged NIC](technologies/conv-nic/cnic-app-switch-config.md)
 #### [Troubleshooting Converged NIC Configurations](technologies/conv-nic/cnic-app-troubleshoot.md)
+
 ### [Data Center Bridging (DCB)](technologies/dcb/dcb-top.md)
 #### [Install Data Center Bridging (DCB) in Windows Server or Windows Client](technologies/dcb/dcb-install.md)
 #### [Manage Data Center Bridging (DCB)](technologies/dcb/dcb-manage.md)
@@ -105,6 +112,7 @@
 #### [Manage vRSS](technologies/vrss/vrss-manage.md)
 #### [vRSS Frequently Asked Questions](technologies/vrss/vrss-faq.md)
 #### [Windows PowerShell Commands for RSS and vRSS](technologies/vrss/vrss-wps.md)
+#### [Resolve vRSS issues](technologies/vrss/vrss-resolve-issues.md)
 
 
 ## [Hyper-V Virtual Switch](technologies/vswitch-stub.md)
@@ -198,8 +206,8 @@
 #### [Create a New NIC Team in a VM](technologies/nic-teaming/create-a-New-NIC-Team-in-a-VM.md)
 #### [Create a New NIC Team](technologies/nic-teaming/create-a-New-NIC-Team.md)
 ### [Troubleshooting NIC Teaming](technologies/nic-teaming/Troubleshooting-NIC-Teaming.md)
-## [Quality of Service (QoS) Policy](technologies/qos/qos-policy-top.md)
 
+## [Quality of Service (QoS) Policy](technologies/qos/qos-policy-top.md)
 ### [Getting Started with QoS Policy](technologies/qos/qos-policy-get-started.md)
 #### [How QoS Policy Works](technologies/qos/qos-policy-works.md)
 #### [QoS Policy Architecture](technologies/qos/qos-policy-architecture.md)

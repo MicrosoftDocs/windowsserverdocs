@@ -23,6 +23,7 @@
 ### [User access control and permissions](configure/user-access-control.md)
 ### [Using extensions](configure/using-extensions.md)
 ### [Configure Azure integration](configure/azure-integration.md)
+### [Manage Azure VMs with Widnows Admin Center](configure/manage-azure-vms.md)
 
 ## Use
 ### [Launch Windows Admin Center](use/launch.md)
