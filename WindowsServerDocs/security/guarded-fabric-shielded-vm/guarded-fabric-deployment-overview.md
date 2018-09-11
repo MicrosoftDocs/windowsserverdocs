@@ -137,7 +137,7 @@ The disk signature is computed over the OS partition of the virtual disk.
 If anything changes on the OS partition, the signature will also change.
 This allows users to strongly identify which disks they trust by specifying the appropriate signature.
 
-Review the [template disk requirements](guarded-fabric-create-a-shielded-vm-template.md#prepare-an-operating-system-vhdx) before you get started. 
+Review the [template disk requirements](guarded-fabric-create-a-shielded-vm-template.md) before you get started. 
 
 ## Step 5: Create a shielding data file 
 
@@ -169,4 +169,4 @@ In Windows Azure Pack, the experience is even easier than creating a regular VM 
 ## Next step
 
 >[!div class="nextstepaction"]
-[HGS Prerequisites »](guarded-fabric-prepare-for-hgs.md)
+[HGS Prerequisites](guarded-fabric-prepare-for-hgs.md)
