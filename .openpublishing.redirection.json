@@ -7802,11 +7802,6 @@
       "redirect_document_id": true
     },
     {
-      "source_path": "WindowsServerDocs/security/guarded-fabric-shielded-vm/guarded-fabric-confirm-hosts-can-attest-successfully.md",
-      "redirect_url": "/windows-server/virtualization/guarded-fabric-shielded-vm/guarded-fabric-confirm-hosts-can-attest-successfully",
-      "redirect_document_id": true
-    },
-    {
       "source_path": "WindowsServerDocs/virtualization/guarded-fabric-shielded-vm/guarded-fabric-create-a-shielded-vm-template.md",
       "redirect_url": "/windows-server/security/guarded-fabric-shielded-vm/guarded-fabric-create-a-shielded-vm-template",
       "redirect_document_id": true
