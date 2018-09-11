@@ -39,6 +39,6 @@ By default, RSC in the vSwitch is enabled on external virtual switches.
 
 For more information, see:
 
--   Our [announcement blog](https://blogs.technet.microsoft.com/networking/2018/08/22/netperf4vw/)
+-  [Announcement blog](https://blogs.technet.microsoft.com/networking/2018/08/22/netperf4vw/)
 
--   Validation Guide for the [IT Pro](https://aka.ms/RSC-Validation)
+-  [Validation Guide for the IT Pro](https://aka.ms/RSC-Validation)
