@@ -13,7 +13,7 @@ ms.technology: networking
 # Insider Preview - High-Performance Networking features in Windows Server 2019
 
 
-## Dynamic VRSS and VMMQ
+## Dynamic vRSS and VMMQ
 
 >Applies to: Windows Server 2019
 
@@ -23,9 +23,9 @@ Windows Server 2019 improves these optimizations by dynamically spreading and tu
 
 For more information, see:
 
--   Our [announcement blog](https://blogs.technet.microsoft.com/networking/2018/08/22/netperf4vw/)
+-   [Announcement blog](https://blogs.technet.microsoft.com/networking/2018/08/22/netperf4vw/)
 
--   Validation Guide for the [IT Pro](https://aka.ms/DVMMQ-Validation)
+-   [Validation Guide for the IT Pro](https://aka.ms/DVMMQ-Validation)
 
 ## Receive Segment Coalescing (RSC) in the vSwitch
 

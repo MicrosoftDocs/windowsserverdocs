@@ -54,7 +54,7 @@ To put this in more mathematical terms:
 
 For example, if you allocate 2 Gbps of IPsec throughput to a customer:
 
-Remaining available capacity on the gateway = Total capacity of the gateway – Used capacity, where used capacity = IPsec throughput ratio*IPsec throughput allocated
+Remaining available capacity on the gateway = Total capacity of the gateway – IPsec throughput ratio*IPsec throughput allocated (used capacity)
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;25–5*2 = 15 Gbps
 
