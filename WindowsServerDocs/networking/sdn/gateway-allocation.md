@@ -29,7 +29,7 @@ In Windows Server 2019, for a tunnel type, the maximum throughput is fixed:
 
 -   L3 = 5 Gbps
 
-So, even if your gateway host/VM supports NICs with much higher throughput, the maximum available tunnel throughput is fixed. Another issue this takes care of arbitrarily over-provisioning gateways, which happens when providing a very high
+So, even if your gateway host/VM supports NICs with much higher throughput, the maximum available tunnel throughput is fixed. Another issue this takes care of is arbitrarily over-provisioning gateways, which happens when providing a very high
 number for the gateway capacity.
 
 ## Gateway capacity calculation
@@ -69,7 +69,7 @@ capacity of gateway/GRE throughput ratio
 
 15*3/5 = 9 Gbps
 
-The throughput ratio varies depending on the total capacity of the gateway. One thing to note is that you should set the total capacity to the TCP bandwidth available to the gateway VM. For example, if you have multiple VMs hosted on the
+The throughput ratio varies depending on the total capacity of the gateway. One thing to note is that you should set the total capacity to the TCP bandwidth available to the gateway VM. If you have multiple VMs hosted on the
 gateway, you must adjust the total capacity of the gateway accordingly.
 
 Also, if the gateway capacity is less than the total available tunnel capacity, the total available tunnel capacity is set to the gateway capacity. For example, if you set the gateway capacity to 4 Gbps, the total available capacity for
