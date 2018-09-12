@@ -1,5 +1,12 @@
 {
   "redirections": [
+
+    {
+      "source_path": "WindowsServerDocs/networking/technologies/hpn/network-offload-optimization-technologies.md",
+      "redirect_url": "/windows-server/networking/technologies/hpn/hpn-top",
+      "redirect_document_id": true
+    },
+
     {
       "source_path": "WindowsServerDocs/networking/sdn/deploy/Deploy-Software-Defined-Networking.md",
       "redirect_url": "/windows-server/networking/sdn/deploy/plan-a-software-defined-network-infrastructure",
