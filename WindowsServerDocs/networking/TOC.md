@@ -91,7 +91,7 @@
 
 ## [High-Performance Networking (HPN)](technologies/hpn/hpn-top.md)
 
-### [Insider Preview - High-Performance Networking features in Windows Server 2019](technologies/hpn/hpn-insider-preview.md)
+### [Insider Preview - HPN features in Windows Server 2019](technologies/hpn/hpn-insider-preview.md)
 ### [Receive Segment Coalescing (RSC) in the vSwitch](technologies/hpn/rsc-in-the-vswitch.md)
 
 ### [Converged NIC Configuration Guide](technologies/conv-nic/cnic-top.md)
@@ -290,7 +290,7 @@
 ## [Windows Internet Name Service (WINS)](technologies/wins/wins-top.md)
 
 ## [Windows Time Service](windows-time-service/windows-time-service-top.md)
-### [Insider preview](windows-time-service/insider-preview.md)
+### [Insider preview - Windows Time Server in Windows Server 2019](windows-time-service/insider-preview.md)
 ### [Accurate Time for Windows Server 2016](windows-time-service/accurate-time.md)
 ### [Support boundary to configure the Windows Time service for high-accuracy environments](windows-time-service/support-boundary.md)
 ### [Configuring Systems for High Accuracy](windows-time-service/configuring-systems-for-high-accuracy.md)
