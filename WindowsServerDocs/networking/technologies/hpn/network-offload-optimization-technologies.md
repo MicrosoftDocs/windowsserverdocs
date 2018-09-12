@@ -20,11 +20,11 @@ There are many networking features in each release of Windows Server. Each of th
 
 There are 3 categories of networking features that users of Windows Server should be aware of:
 
-1.  Software only (SO) features: These features are implemented as part of the OS and are independent of the underlying NIC(s). Sometimes these features will require some tuning of the NIC for optimal operation. Examples of these include Hyper-v features such as vmQoS, ACLs, and non-Hyper-V features like NIC Teaming.
+1.  [Software only (SO) features](hpn-top.md#software-only-so-features-and-technologies): These features are implemented as part of the OS and are independent of the underlying NIC(s). Sometimes these features will require some tuning of the NIC for optimal operation. Examples of these include Hyper-v features such as vmQoS, ACLs, and non-Hyper-V features like NIC Teaming.
 
-2.  Software-Hardware (SH) integrated features: These features have both software and hardware components. The software is intimately tied to hardware capabilities that are required for the feature to work. Examples of these include VMMQ, VMQ, Send-side IPv4 Checksum Offload, and RSS.
+2.  [Software-Hardware (SH) integrated features](hpn-top.md#software-and-hardware-sh-integrated-features-and-technologies): These features have both software and hardware components. The software is intimately tied to hardware capabilities that are required for the feature to work. Examples of these include VMMQ, VMQ, Send-side IPv4 Checksum Offload, and RSS.
 
-3.  Hardware only (HO) features: These hardware accelerations improve networking performance in conjunction with the software but are not intimately part of any software feature. Examples of these include Interrupt Moderation, Flow Control, and Receive-side IPv4 Checksum Offload.
+3.  [Hardware only (HO) features](hpn-top.md#hardware-only-ho-features-and-technologies): These hardware accelerations improve networking performance in conjunction with the software but are not intimately part of any software feature. Examples of these include Interrupt Moderation, Flow Control, and Receive-side IPv4 Checksum Offload.
 
 SO features are generally available in all hardware architectures and without regard to NIC Speed or capabilities. If the feature exists in Windows it exists no matter what NICs are installed.
 
