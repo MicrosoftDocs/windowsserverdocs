@@ -34,7 +34,7 @@ Access and Identity technologies enable secure Active Directory environments on-
                                         </div>
                                         <div class="cardText">
                                             <h2>What's new?</h2>
-                                            <p>Find out what's new in Windows Server Storage</p>
+                                            <p>Find out what's new in Windows Server Identity | Access</p>
                                         </div>
                                     </div>
                                 </div>

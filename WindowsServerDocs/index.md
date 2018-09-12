@@ -593,7 +593,7 @@ description: Windows Server documentation helps IT professionals evaluate, plan,
         <td style="vertical-align: top;">
             <h4><u>Highest Rated</u></h4>
             <ol>
-            <li>1. <a href="https://docs.microsoft.com/en-us/windows-server/virtualization/hyper-v/get-started/create-a-virtual-machine-in-hyper-v">Create a virtual machine in Hyper-V/a></li>
+            <li>1. <a href="https://docs.microsoft.com/en-us/windows-server/virtualization/hyper-v/get-started/create-a-virtual-machine-in-hyper-v">Create a virtual machine in Hyper-V</a></li>
               
        <hr width="80%">
 
