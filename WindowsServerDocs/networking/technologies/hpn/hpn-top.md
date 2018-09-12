@@ -14,12 +14,7 @@ ms.date: 09/12/2018
 
 # High-performance networking
 
-In this topic, we give you a brief overview of the high-performance networking technologies available in Windows Server 2016.
-These technologies include Software Only (SO) features and technologies, Software and Hardware (SH) integrated features and technologies, and Hardware Only (HO) features and technologies.
-
-There are many networking features in each release of Windows Server. Each of these features is intended to address the needs of customer workloads. 
-
-In this document we’ll examine the different network offload and optimization features and discuss how they help make networking more efficient. We’ll wrap up by looking at the different networking stacks and feature sets for different applications of Windows Server 2016.
+In this topic, we give you an overview of the different network offload and optimization features available in Windows Server 2016 and discuss how they help make networking more efficient. These technologies include Software Only (SO) features and technologies, Software and Hardware (SH) integrated features and technologies, and Hardware Only (HO) features and technologies.
 
 ## Network offload and optimization technologies
 
@@ -294,7 +289,7 @@ Many NICs support more than just on/off for Interrupt Moderation. Most NICs supp
 
 There is a balance to be struck between reducing interrupts and excessively delaying packet delivery. Generally, packet processing is more efficient with Interrupt Moderation enabled. High performance or low latency applications may need to evaluate the impact of disabling or reducing Interrupt Moderation.
 
-### Jumbo Frames
+### Jumbo frames
 
 Jumbo frames is a NIC and network feature that allows an application to send frames that are much larger than the default 1500 bytes. Typically the limit on jumbo frames is about 9000 bytes but may be smaller.
 
