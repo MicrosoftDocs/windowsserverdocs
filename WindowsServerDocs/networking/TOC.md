@@ -92,10 +92,7 @@
 ## [High-Performance Networking (HPN)](technologies/hpn/hpn-top.md)
 
 ### [Insider Preview - High-Performance Networking features in Windows Server 2019](technologies/hpn/hpn-insider-preview.md)
-### [Network Offload and Optimization Technologies](technologies/hpn/network-offload-optimization-technologies.md)
 ### [Receive Segment Coalescing (RSC) in the vSwitch](technologies/hpn/rsc-in-the-vswitch.md)
-
-
 
 ### [Converged NIC Configuration Guide](technologies/conv-nic/cnic-top.md)
 #### [Converged NIC Configuration with a Single Network Adapter](technologies/conv-nic/cnic-single.md)
