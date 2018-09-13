@@ -61,7 +61,7 @@ This section covers prerequisites HGS and host machines.
 
 - Your SQL Server instance should run on a machine that meets the following requirements:
 
-  - Windows 
+  - Windows: 
     - Windows 10 Enterprise, version 1809  
     - Windows Server 2019 Datacenter (Semi-Annual Channel), version 1809
     - Windows Server 2019 Datacenter
@@ -135,7 +135,7 @@ Complete the following steps to add nodes to the cluster.
 
 [!INCLUDE [Configure HTTPS](../../includes/configure-hgs-for-https.md)] 
 
-For SQL Server with secure enclaves, the SSL certificate needs to be trusted on both host machines that run SQL server and machines that run database client applications need to contact HGS. 
+For Always Encrypyted with secure enclaves, the SSL certificate needs to be trusted on both host machines that run SQL server and machines that run database client applications need to contact HGS. 
 
 ## Collect attestation info from the host machines
 
