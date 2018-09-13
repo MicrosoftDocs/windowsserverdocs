@@ -201,8 +201,6 @@
 ### [NIC Teaming and Virtual Local Area Networks (VLANs)](technologies/nic-teaming/nict-and-vlans.md)
 ### [NIC Teaming MAC address Use and Management](technologies/nic-teaming/NIC-Teaming-MAC-address-Use-and-Management.md)
 ### [Create a New NIC Team on a Host computer or VM](technologies/nic-teaming/create-a-New-NIC-Team-on-a-Host-computer-or-VM.md)
-#### [Create a New NIC Team in a VM](technologies/nic-teaming/create-a-New-NIC-Team-in-a-VM.md)
-#### [Create a New NIC Team](technologies/nic-teaming/create-a-New-NIC-Team.md)
 ### [Troubleshooting NIC Teaming](technologies/nic-teaming/Troubleshooting-NIC-Teaming.md)
 
 ## [Quality of Service (QoS) Policy](technologies/qos/qos-policy-top.md)

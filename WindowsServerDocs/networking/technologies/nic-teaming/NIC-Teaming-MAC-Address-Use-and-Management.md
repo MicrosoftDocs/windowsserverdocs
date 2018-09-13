@@ -14,7 +14,7 @@ ms.assetid: 26d105e0-afc3-44b5-bb5e-0c884a4c5d62
 ms.author: pashort
 author: shortpatti
 ---
-# NIC Teaming MAC Address Use and Management
+# NIC Teaming MAC address use and management
 
 >Applies to: Windows Server 2016
 
