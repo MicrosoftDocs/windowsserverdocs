@@ -18,7 +18,7 @@ ms.technology: identity-adfs
 - [Auditing Enhancements to AD FS in Windows Server](../ad-fs/technical-reference/auditing-enhancements-to-ad-fs-in-windows-server.md)
 -   [Understanding Key AD FS Concepts](../ad-fs/technical-reference/Understanding-Key-AD-FS-Concepts.md)
 -   [Device Registration Technical Reference](../ad-fs/technical-reference/Device-Registration-Technical-Reference.md)
--   [AD FS Password Spray Attack Protection](../ad-fs/technical-reference/ad-fs-password-spray-protection.md)
+-   [AD FS Password Attack Protection](../ad-fs/technical-reference/ad-fs-password-protection.md)
 
 > [!TIP]
 > You can find additional AD FS 2.0 design content at the [AD FS 2.0 Content Map](https://social.technet.microsoft.com/wiki/contents/articles/2735.ad-fs-2-0-content-map.aspx) page on the Microsoft TechNet Wiki. This page is managed by members of the AD FS 2.0 Community and is monitored on a regular basis by the AD FS Product Team.

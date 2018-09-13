@@ -16,7 +16,7 @@ author: shortpatti
 ---
 # Manage IPAM
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 This guide provides administration and troubleshooting information for the IP Address Management (IPAM) feature in  Windows Server 2016.  
   

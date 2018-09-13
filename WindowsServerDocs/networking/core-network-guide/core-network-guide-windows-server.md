@@ -12,7 +12,7 @@ author: shortpatti
 ---
 # Core Network Guide for Windows Server
 
->Applies To: Windows Server, Windows Server 2016
+>Applies to: Windows Server, Windows Server 2016
 
 This topic provides an overview of the Core Network Guide for Windows Server&reg; 2016, and contains the following sections.  
   

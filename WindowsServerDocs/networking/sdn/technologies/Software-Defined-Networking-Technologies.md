@@ -13,9 +13,10 @@ ms.datae: 08/09/2018
 ---
 # SDN Technologies
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 The topics in this section provide overview and technical information about the Software Defined Networking technologies that are included in Windows Server 2016.  
+
 
 
 ## [Network Controller](network-controller/Network-Controller.md)
@@ -49,7 +50,7 @@ The Hyper-V Virtual Switch is a software-based layer-2 Ethernet network switch t
   
 In Hyper-V Virtual Switch in  Windows Server 2016, you can also deploy Switch Embedded Teaming (SET) and Remote Direct Memory Access (RDMA). For more information, see the section [Remote Direct Memory Access (RDMA) and Switch Embedded Teaming (SET)](#bkmk_rdma) in this topic.  
 
-## [Internal DNS Service /(iDNS/) for SDN](Idns-for-Sdn.md)
+## [Internal DNS Service (iDNS) for SDN](Idns-for-Sdn.md)
 
 Hosted virtual machines (VMs) and applications require DNS to communicate within their networks and with external resources on the Internet. With iDNS, you can provide tenants with DNS name resolution services for isolated, local namespace and Internet resources. 
   
@@ -63,7 +64,7 @@ The following Network Function Virtualization technologies are available.
   
 -   **Datacenter Firewall**. Provide granular access control lists (ACLs), enabling you to apply firewall policies at the VM interface level or the subnet level. For more details, see [Datacenter Firewall Overview](network-function-virtualization/Datacenter-Firewall-Overview.md).
   
--   **RAS Gateway**. Route network traffic between the physical network and VM network resources, regardless of the location. You can route the network traffic at the same physical location or many different locations. For more details, see [RAS Gateway for SDN](network-function-virtualization/RAS-Gateway-for-SDN.md).
+-   **RAS Gateway for SDN**. Route network traffic between the physical network and VM network resources, regardless of the location. You can route the network traffic at the same physical location or many different locations. For more details, see [RAS Gateway for SDN](network-function-virtualization/RAS-Gateway-for-SDN.md).
 
   
 ## [Remote Direct Memory Access (RDMA) and Switch Embedded Teaming (SET)](https://docs.microsoft.com/windows-server/virtualization/hyper-v-virtual-switch/rdma-and-switch-embedded-teaming)  
@@ -82,7 +83,7 @@ In addition,  you can use Windows PowerShell commands to enable Data Center Brid
   
 Border Gateway Protocol (BGP) is a dynamic routing protocol that automatically learns routes between sites that use site-to-site VPN connections. Therefore, BGP reduces manual configuration of routers.   When you configure RAS Gateway, BGP lets you manage the routing of network traffic between your tenants’ VM networks and remote sites.  
   
-## [Software Load Balancing /(SLB/) for SDN](network-function-virtualization/software-load-balancing-for-sdn.md)
+## [Software Load Balancing (SLB) for SDN](network-function-virtualization/software-load-balancing-for-sdn.md)
 Cloud Service Providers (CSPs) and Enterprises that deploy SDN can use Software Load Balancing (SLB) to evenly distribute tenant and tenant customer network traffic among virtual network resources. The Windows Server SLB enables multiple servers to host the same workload, providing high availability and scalability. 
 
 ## [Windows Server Containers](Containers/Container-networking-overview.md)

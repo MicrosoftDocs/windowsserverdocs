@@ -1,7 +1,7 @@
 ---
 title: NIC Teaming
 description: This topic provides an overview of Network Interface Card (NIC) Teaming in Windows Server 2016.
-manager: brianlic
+manager: elizapo
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -13,10 +13,11 @@ ms.topic: article
 ms.assetid: abded6f3-5708-4e35-9a9e-890e81924fec
 ms.author: pashort
 author: shortpatti
+ms.date: 09/10/2018
 ---
 # NIC Teaming
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 This topic provides an overview of Network Interface Card (NIC) Teaming in Windows Server 2016.
 

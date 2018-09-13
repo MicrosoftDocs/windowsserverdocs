@@ -6,7 +6,7 @@ ms.topic: article
 author: JasonGerend 
 ms.author: jgerend 
 ms.technology: storage 
-ms.date: 04/05/2018
+ms.date: 09/10/2018
 ms.localizationpriority: medium
 ---
 # Enable optimized moves of redirected folders
@@ -22,7 +22,7 @@ Previously, administrators could change the target path of the redirected folder
 Optimized move has the following requirements:
 
 - Folder Redirection must be setup. For more information see [Deploy Folder Redirection with Offline Files](deploy-folder-redirection.md).
-- Client computers must run Windows 8.1, Windows 8, Windows Server 2012 R2, or Windows Server 2012.
+- Client computers must run Windows 10, Windows 8.1, Windows 8, Windows Server 2016, Windows Server 2012 R2, or Windows Server 2012.
 
 ## Step 1: Enable optimized move in Group Policy
 

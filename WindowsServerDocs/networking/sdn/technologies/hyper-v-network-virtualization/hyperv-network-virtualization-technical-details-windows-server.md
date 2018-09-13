@@ -17,7 +17,7 @@ author: shortpatti
 ---
 # Hyper-V Network Virtualization Technical Details in Windows Server 2016
 
->Applies To:  Windows Server 2016
+>Applies to:  Windows Server 2016
 
 Server virtualization enables multiple server instances to run concurrently on a single physical host; yet server instances are isolated from each other. Each virtual machine essentially operates as if it is the only server running on the physical computer.  
   

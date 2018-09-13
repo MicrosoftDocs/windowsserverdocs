@@ -60,6 +60,7 @@ Welcome to Windows Admin Center!
             <li><a href="configure/user-access-control.md">User access control and permissions</a>
             <li><a href="configure/using-extensions.md">Extensions</a>
             <li><a href="configure/azure-integration.md">Integrate with Azure</a>
+            <li><a href="configure/manage-azure-vms.md">Manage Azure VMs with Windows Admin Center</a>
             </ul>
         </td>
     </tr>

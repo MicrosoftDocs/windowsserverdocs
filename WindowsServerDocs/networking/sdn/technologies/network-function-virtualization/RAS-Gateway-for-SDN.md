@@ -15,7 +15,7 @@ author: shortpatti
 ---
 # RAS Gateway for SDN
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016## RAS Gateway for SDN  
+>Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016## RAS Gateway for SDN  
 
 
 RAS Gateway is a software-based, multitenant, Border Gateway Protocol (BGP) capable router designed for Cloud Service Providers (CSPs) and Enterprises that host multiple tenant virtual networks using Hyper-V Network Virtualization. RAS Gateways routes network traffic between the physical network and VM network resources, regardless of the location. You can route the network traffic at the same physical location or many different locations.   
