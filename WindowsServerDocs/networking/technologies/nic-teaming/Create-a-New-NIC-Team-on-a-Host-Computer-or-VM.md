@@ -176,10 +176,10 @@ You must have membership in **Administrators**, or equivalent.
     - **Standby adapter**. The options for Standby Adapter are **None (all adapters Active)** or your selection of a specific network adapter in the NIC Team that acts as a Standby adapter.
 
    
-   >[!TIP]  
-   >If you are configuring a NIC Team in a virtual machine (VM), you must select a **Teaming mode** of _Switch Independent_ and a **Load balancing mode** of _Address Hash_.  
+    >[!TIP]  
+    >If you are configuring a NIC Team in a virtual machine (VM), you must select a **Teaming mode** of _Switch Independent_ and a **Load balancing mode** of _Address Hash_.  
   
-   ![Additional NIC Team properties](../../media/Create-a-New-NIC-Team/nict_06_properties.jpg)  
+    ![Additional NIC Team properties](../../media/Create-a-New-NIC-Team/nict_06_properties.jpg)  
   
 7.  If you want to configure the primary team interface name or assign a VLAN number to the NIC Team, click the link to the right of **Primary team interface**.<p>The **New team interface** dialog box opens.<p>![New team interface](../../media/Create-a-New-NIC-Team/nict_newteaminterface.jpg)  
   
