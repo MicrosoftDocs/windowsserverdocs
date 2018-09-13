@@ -151,7 +151,7 @@ You must have membership in **Administrators**, or equivalent.
   
 5.  In **Team name**, type a name for the new NIC Team, and then click **Additional properties**.  
   
-6. In **Additional properties**, select values for:
+6.  In **Additional properties**, select values for:
 
     - **Teaming mode**. The options for Teaming mode are **Switch Independent** and **Switch Dependent**. The Switch Dependent mode includes **Static Teaming** and **Link Aggregation Control Protocol (LACP)**. 
       
