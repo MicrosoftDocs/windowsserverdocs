@@ -135,7 +135,7 @@ Complete the following steps to add nodes to the cluster.
 
 [!INCLUDE [Configure HTTPS](../../includes/configure-hgs-for-https.md)] 
 
-For Always Encrypyted with secure enclaves, the SSL certificate needs to be trusted on both host machines that run SQL Server and machines that run database client applications need to contact HGS. 
+For Always Encrypted with secure enclaves, the SSL certificate needs to be trusted on both host machines that run SQL Server and machines that run database client applications need to contact HGS. 
 
 ## Collect attestation info from the host machines
 
