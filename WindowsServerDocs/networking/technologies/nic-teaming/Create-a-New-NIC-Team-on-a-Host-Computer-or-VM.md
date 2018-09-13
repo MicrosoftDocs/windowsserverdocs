@@ -182,11 +182,9 @@ You must have membership in **Administrators**, or equivalent.
   
 8.  Depending on your requirements, do one of the following:  
   
-    -   To provide a tNIC interface name, type an interface name.  
+    -   Provide a tNIC interface name.  
   
-    -   To configure VLAN membership, click **Specific VLAN** and type the VLAN information. For example, if you want to add this NIC Team to the accounting VLAN number 44, Type Accounting 44 - VLAN.   
-  
-    ![Type the VLAN number that you want to use](../../media/Create-a-New-NIC-Team/nict_012_vlan.jpg)  
+    -   Configure VLAN membership: click **Specific VLAN** and type the VLAN information. For example, if you want to add this NIC Team to the accounting VLAN number 44, Type Accounting 44 - VLAN.   
   
 9. Click **OK**.  
 
