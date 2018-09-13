@@ -83,7 +83,11 @@ You must have membership in **Administrators**, or equivalent.
 11. Click **Advanced Features** to enable NIC Teaming by using the graphical user interface. 
 
     >[!TIP]
-    >You can also enable NIC Teaming with a Windows PowerShell command: `Set-VMNetworkAdapter -VMName <VMname> -AllowTeaming On`.
+    >You can also enable NIC Teaming with a Windows PowerShell command: 
+    >
+    >```PowerShell
+    >Set-VMNetworkAdapter -VMName <VMname> -AllowTeaming On
+    >```
    
     a. Select **Dynamic** for MAC address. 
     b. Click to select **Protected network**.
