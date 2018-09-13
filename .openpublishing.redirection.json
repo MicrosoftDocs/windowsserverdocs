@@ -1,7 +1,20 @@
 {
   "redirections": [
 
-    
+    {
+      "source_path": "WindowsServerDocs/networking/technologies/nic-teaming/nict-vms.md",
+      "redirect_url": "/windows-server/networking/technologies/nic-teaming/NIC-Teaming",
+      "redirect_document_id": true
+    },
+	
+	
+    {
+      "source_path": "WindowsServerDocs/networking/technologies/nic-teaming/nict-and-vlans.md",
+      "redirect_url": "/windows-server/networking/technologies/nic-teaming/NIC-Teaming",
+      "redirect_document_id": true
+    },
+	
+
     {
       "source_path": "WindowsServerDocs/networking/technologies/nic-teaming/create-a-new-nic-team.md",
       "redirect_url": "/windows-server/networking/technologies/nic-teaming/Create-a-New-NIC-Team-on-a-Host-Computer-or-VM",
@@ -11,7 +24,7 @@
 	
 	
     {
-      "source_path": "WindowsServerDocs/networking/technologies/nic-teaming/Create-a-New-NIC-Team.md",
+      "source_path": "WindowsServerDocs/networking/technologies/nic-teaming/Create-a-New-NIC-Team-in-a-VM.md",
       "redirect_url": "/windows-server/networking/technologies/nic-teaming/Create-a-New-NIC-Team-on-a-Host-Computer-or-VM",
       "redirect_document_id": true
     },

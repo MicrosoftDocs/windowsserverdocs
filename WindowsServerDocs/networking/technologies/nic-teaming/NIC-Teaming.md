@@ -96,16 +96,75 @@ NIC Teaming is fully compatible with Hyper-V Network Virtualization (HNV).  The 
   
 ## NIC Teaming and Live Migration  
 NIC Teaming in VMs does not affect Live Migration. The same rules exist for Live Migration whether or not NIC Teaming is configured in the VM.  
+
+
+## NIC Teaming and Virtual Local Area Networks (VLANs)
+
+>Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
+
+In this topic, we provide you information about using NIC Teaming with virtual local area networks (VLANs) on both host computers and VMs.  
   
-## See Also  
-[NIC Teaming in Virtual Machines &#40;VMs&#41;](../../technologies/nic-teaming/../../technologies/nic-teaming/NIC-Teaming-in-Virtual-Machines--VMs-.md)  
+### Team interfaces and VLANs  
+When you use NIC Teaming, creating multiple team interfaces allows a host to connect to different VLANs at the same time. 
+Configure your environment using the following guidelines:
+  
+- Before you enable NIC Teaming, configure the physical switch ports connected to the teaming host to use trunk (promiscuous) mode. The physical switch should pass all traffic to the host for filtering without modifying the traffic.  
+
+- Do not configure VLAN filters on the NICs by using the NIC advanced properties settings. Let the NIC Teaming software or the Hyper-V Virtual Switch (if present) perform VLAN filtering.  
+  
+### Use VLANs with NIC Teaming in a VM  
+When a team connects to a Hyper-V Virtual Switch, all VLAN segregation must be done in the Hyper-V Virtual Switch rather than in NIC Teaming.  
+
+Plan to use VLANs in a VM configured with a NIC Team using the following guidelines:
+  
+-	The preferred method of supporting multiple VLANs in a VM is to configure the VM with multiple ports on the Hyper-V Virtual Switch and associate each port with a VLAN. Never team these ports in the VM because doing so causes network communication problems.  
+
+-	If the VM has multiple SR-IOV Virtual Functions (VFs), ensure that they are on the same VLAN before teaming them in the VM. It's easily possible to configure the different VFs to be on different VLANs and doing so causes network communication problems.  
+ 
+  
+## Managing network interfaces and VLANs  
+If you must have more than one VLAN exposed into a guest operating system, consider renaming the Ethernet interfaces to clarify which VLAN is assigned to the interface. For example, if the **Ethernet** interface is associated with VLAN 12 and the **Ethernet 2** interface is associated with VLAN 48, rename the interface Ethernet to **EthernetVLAN12** and the other to **EthernetVLAN48**. You can rename interfaces by using the Windows PowerShell command **Rename-NetAdapter** or by performing the following procedure.  
+  
+**Rename a network adapter**  
+  
+1.  In Server Manager, in the **Properties** pane for the server whose network adapters you want to rename, click the link to the right of the network adapter name. For example, if the network adapter is named **Ethernet**, click either the IP address or other blue text to the right of the name Ethernet. The **Network Connections** folder opens.  
+  
+2.  Right-click the network adapter that you want to rename, and select  **Rename**.  
+  
+3.  Type the new name for the network adapter and press ENTER.  
+
+
+## NIC Teaming in Virtual Machines (VMs)
+
+This topic provides information about using NIC Teaming within Hyper-V VMs,  
+  
+### NIC Teaming configuration requirements  
+If you want to use NIC Teaming in a VM, you must connect the virtual network adapters in the VM to external Hyper-V Virtual Switches only; virtual network adapters that are connected to internal or private Hyper-V Virtual Switches are not able to connect to the switch when they are in a team, and networking fails for the VM.  
+  
+The  Windows Server 2016 NIC Teaming solution supports teams with two members in VMs. Larger teams can be created but such teams are not supported.  Every team member must be connected to a different external Hyper-V Virtual Switch, and the VM's networking interfaces must be configured to allow teaming. For more information, see [Create a New NIC Team in a VM](../../technologies/nic-teaming/../../technologies/nic-teaming/Create-a-New-NIC-Team-in-a-VM.md).  
+  
+NIC Teams within a VM must have their Teaming mode configured as Switch Independent.  In addition, Load Balancing mode for the NIC Team in a VM must be configured with the Address Hash distribution mode.  
+  
+Configuring NIC Teaming in a VM with two virtual network adapters that are connected to different external Hyper-V Virtual Switches allows the VM to sustain network connectivity even in the circumstance when one of the physical network adapters connected to one virtual switch fails or gets disconnected.  
+  
+### NIC Teaming with SR-IOV-Capable Network Adapters  
+This failover protection is particularly important when working with Single Root I/O Virtualization (SR-IOV), because SR-IOV traffic doesn't go through the Hyper-V Virtual Switch and cannot be protected by a NIC team in or under the Hyper-V host. With the VM NIC Teaming option, you can configure two external Hyper-V Virtual Switches, each connected to its own SR-IOV-capable NIC.  
+  
+![NIC Teaming with SR-IOV-Capable Network Adapters](../../media/NIC-Teaming-in-Virtual-Machines--VMs-/nict_in_vm.jpg)  
+  
+Each VM can have a virtual function (VF) from one or both SR-IOV NICs and, in the event of a NIC disconnect, failover from the primary VF to the back-up adapter (VF). Alternately, the VM may have a VF from one NIC and a non-VF vmNIC connected to another virtual switch. If the NIC associated with the VF gets disconnected, the traffic can failover to the other switch without loss of connectivity.  
+  
+Because failover between NICs in a VM might result in traffic being sent with the MAC address of the other vmNIC, each Hyper-V Virtual Switch port associated with a VM that is using NIC Teaming must be set to allow teaming. To discover how to enable NIC Teaming in the VM, see [Create a New NIC Team in a VM](../../technologies/nic-teaming/../../technologies/nic-teaming/Create-a-New-NIC-Team-in-a-VM.md). 
+
+
+## Related topics
   
 
  
-[NIC Teaming in Virtual Machines &#40;VMs&#41;](nict-vms.md)
-[NIC Teaming and Virtual Local Area Networks &#40;VLANs&#41;](nict-and-vlans.md)
+
 [NIC Teaming MAC Address Use and Management](NIC-Teaming-MAC-Address-Use-and-Management.md)
 [Troubleshooting NIC Teaming](Troubleshooting-NIC-Teaming.md) 
 [Create a New NIC Team on a Host Computer or VM](Create-a-New-NIC-Team-on-a-Host-Computer-or-VM.md)
 [NIC Teaming (NetLBFO) Cmdlets in Windows PowerShell](https://technet.microsoft.com/library/jj130849.aspx)
+
 TechNet Gallery Download: [Windows Server 2016 NIC and Switch Embedded Teaming User Guide](https://gallery.technet.microsoft.com/Windows-Server-2016-839cb607?redir=0)
