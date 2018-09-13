@@ -32,11 +32,7 @@ This topic covers how to prepare Hyper-V hosts to become guarded hosts using hos
     Set-HgsClientHostKey
     ```
 
-    or
-
-    ```powershell
-    Set-HgsClientHostKey -Thumbprint <your certificate thumbprint>
-    ```
+    [!INCLUDE [Specify an existing host key certificate](../../includes/specify-an-existing-host-key-certificate.md)]
 
 
 4.	Get the public half of the key to provide to the HGS server. You can use the following cmdlet or, if you have the certificate stored elsewhere, provide a .cer containing the public half of the key. Note that we are only storing and validating the public key on HGS; we do not keep any certificate information nor do we validate the certificate chain or expiration date.
