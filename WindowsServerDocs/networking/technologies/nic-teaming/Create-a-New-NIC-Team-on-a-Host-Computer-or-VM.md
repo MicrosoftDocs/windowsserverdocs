@@ -34,7 +34,7 @@ The physical switch, Hyper-V Virtual Switch, local area network (LAN), and NIC T
   
 -   The VM must connect to both external virtual switches you create.  
   
--   NIC Teaming, in Windows Server 2016, supports teams with two members in VMs. You can create larger teams, but there is no support for larger teams.
+-   NIC Teaming, in Windows Server 2016, supports teams with two members in VMs. You can create larger teams, but there is no support.
   
 -   If you are configuring a NIC Team in a VM, you must select a **Teaming mode** of _Switch Independent_ and a **Load balancing mode** of _Address Hash_. 
 

@@ -21,52 +21,56 @@ ms.date: 09/10/2018
 
 In this topic, we give you an overview of Network Interface Card (NIC) Teaming in Windows Server 2016. NIC Teaming allows you to group between one and 32 physical Ethernet network adapters into one or more software-based virtual network adapters. These virtual network adapters provide fast performance and fault tolerance in the event of a network adapter failure.  
   
-NIC Team member network adapters must all be installed in the same physical host computer to be placed in a team.  
+>[!IMPORTANT]
+>You must install NIC Team member network adapters in the same physical host computer. 
+
+> [!TIP]  
+> A NIC team that contains only one network adapter cannot provide load balancing and failover. However, with one network adapter, you can use NIC Teaming for separation of network traffic when you are also using virtual Local Area Networks (VLANs).  
   
-> [!NOTE]  
-> A NIC team that contains only one network adapter cannot provide load balancing and failover; however with one network adapter, you can use NIC Teaming for separation of network traffic when you are also using virtual Local Area Networks (VLANs).  
-  
-When you configure network adapters into a NIC team, they are connected into the NIC teaming solution common core, which then presents one or more virtual adapters (also called team NICs [tNICs] or team interfaces) to the operating system. Windows Server 2016 supports up to 32 team interfaces per team. There are a variety of algorithms that distribute outbound traffic (load) between the NICs.  
-  
-The following illustration depicts a NIC Team with multiple tNICs.  
+When you configure network adapters into a NIC team, they connect into the NIC teaming solution common core, which then presents one or more virtual adapters (also called team NICs [tNICs] or team interfaces) to the operating system. 
+
+Since Windows Server 2016 supports up to 32 team interfaces per team, there are a variety of algorithms that distribute outbound traffic (load) between the NICs.  The following illustration depicts a NIC Team with multiple tNICs.  
   
 ![NIC Team with multiple tNICs](../../media/NIC-Teaming/nict_overview.jpg)  
   
-In addition, you can connect your teamed NICs to the same switch or to different switches. If you connect NICs to different switches, both switches must be on the same subnet.  
+Also, you can connect your teamed NICs to the same switch or different switches. If you connect NICs to different switches, both switches must be on the same subnet.  
   
-## NIC Teaming Availability  
-NIC Teaming is available in all versions of Windows Server 2016. In addition, you can use Windows PowerShell commands, Remote Desktop, and Remote Server Administration Tools to manage NIC Teaming from computers that are running a client operating system upon which the tools are supported.  
+## Availability  
+NIC Teaming is available in all versions of Windows Server 2016. You can use a variety of tools to manage NIC Teaming from computers running a client operating system, such as:
+•	Windows PowerShell cmdlets
+•	Remote Desktop
+•	Remote Server Administration Tools  
   
-## Supported and Unsupported NICs for NIC Teaming  
+## Supported and Unsupported NICs   
 You can use any Ethernet NIC that has passed the Windows Hardware Qualification and Logo test (WHQL tests) in a NIC Team in Windows Server 2016.  
   
-The following NICs cannot be placed in a NIC team.  
+You can not place the following NICs in a NIC team:
   
 -   Hyper-V virtual network adapters that are Hyper-V Virtual Switch ports exposed as NICs in the host partition.  
   
     > [!IMPORTANT]  
-    > Hyper-V virtual NICs that are exposed in the host partition (vNICs) must not be placed in a team. Teaming of vNICs inside of the host partition is not supported in any configuration or combination. Attempts to team vNICs might cause a complete loss of communication if network failures occur.  
+    > Do not place Hyper-V virtual NICs exposed in the host partition (vNICs) in a team. Teaming of vNICs inside of the host partition is not supported in any configuration. Attempts to team vNICs might cause a complete loss of communication if network failures occur.  
   
--   The kernel debug network adapter (KDNIC).  
+-   Kernel debug network adapter (KDNIC).  
   
--   NICs that are being used for network boot.  
+-   NICs used for network boot.  
   
 -   NICs that use technologies other than Ethernet, such as WWAN, WLAN/Wi-Fi, Bluetooth, and Infiniband, including Internet Protocol over Infiniband (IPoIB) NICs.  
   
-## NIC Teaming Compatibility  
+## Compatibility  
 NIC teaming is compatible with all networking technologies in Windows Server 2016 with the following exceptions.  
   
 -   **Single-root I/O virtualization (SR-IOV)**. For SR-IOV, data is delivered directly to the NIC without passing it through the networking stack (in the host operating system, in the case of virtualization). Therefore, it is not possible for the NIC team to inspect or redirect the data to another path in the team.  
   
--   **Native host Quality of Service (QoS)**. When QoS policies are set on a native or host system and those policies invoke minimum bandwidth limitations, the overall throughput for a NIC team will be less than it would be without the bandwidth policies in place.  
+-   **Native host Quality of Service (QoS)**. When you set QoS policies on a native or host system, and those policies invoke minimum bandwidth limitations, the overall throughput for a NIC team is less than it would be without the bandwidth policies in place.  
   
 -   **TCP Chimney**. TCP Chimney is not supported with NIC teaming because TCP Chimney offloads the entire networking stack directly to the NIC.  
   
--   **802.1X Authentication**. 802.1X Authentication should not be used with NIC Teaming. Some switches do not permit the configuration of both 802.1X Authentication and NIC Teaming on the same port.  
+-   **802.1X Authentication**. You should not use 802.1X Authentication with NIC Teaming because some switches do not permit the configuration of both 802.1X Authentication and NIC Teaming on the same port.  
   
-To learn about using NIC Teaming within virtual machines (VMs) that are running on a Hyper-V host, see [NIC Teaming in Virtual Machines &#40;VMs&#41;](../../technologies/nic-teaming/../../technologies/nic-teaming/NIC-Teaming-in-Virtual-Machines--VMs-.md).  
+To learn about using NIC Teaming within virtual machines (VMs) that run on a Hyper-V host, see 
   
-## NIC Teaming and Virtual Machine Queues (VMQs)  
+## Virtual Machine Queues (VMQs)  
 
 VMQs is a NIC feature that allocates a queue for each VM.  Anytime you have Hyper-V enabled; you must also enable VMQ. In Windows Server 2016, VMQs use NIC Switch vPorts with a single queue assigned to the vPort to provide the same functionality. 
 
@@ -80,31 +84,25 @@ Here's why:
   
 -   When the team is in any switch dependent mode (static teaming or LACP teaming), the switch that the team is connected to controls the inbound traffic distribution. The host's NIC Teaming software can't predict which team member gets the inbound traffic for a VM and it may be that the switch distributes the traffic for a VM across all team members. As a result of the NIC Teaming software, working with the Hyper-V switch, programs a queue for the VM on every team member, not just one team member.  
   
--   When the team is in switch-independent mode and uses an address hash load distribution algorithm, the inbound traffic always comes in on one NIC (the primary team member) - all of it on just one team member. Since other team members aren't dealing with inbound traffic, they get programmed with the same queues as the primary member so that if the primary member fails any other team member can be used to pick up the inbound traffic, and the queues are already in place.  
+-   When the team is in switch-independent mode and uses address hash load balancing, the inbound traffic always comes in on one NIC (the primary team member) - all of it on just one team member. Since other team members aren't dealing with inbound traffic, they get programmed with the same queues as the primary member so that if the primary member fails, any other team member can be used to pick up the inbound traffic, and the queues are already in place.  
+
+- Most NICs have queues used for either Receive Side Scaling (RSS) or VMQ, but not at the same time. Some VMQ settings appear to be settings for RSS queues but are settings on the generic queues that both RSS and VMQ use depending on which feature is presently in use. Each NIC has, in its advanced properties, values for *RssBaseProcNumber and \*MaxRssProcessors. Following are a few VMQ settings that provide better system performance.  
   
-Most NICs have queues that can be used for either Receive Side Scaling (RSS) or VMQ, but not both at the same time. Some VMQ settings appear to be settings for RSS queues but are settings on the generic queues that both RSS and VMQ use depending on which feature is presently in use. Each NIC has, in its advanced properties, values for *RssBaseProcNumber and \*MaxRssProcessors. Following are a few VMQ settings that provide better system performance.  
+-   Ideally, each NIC should have the *RssBaseProcNumber set to an even number greater than or equal to two (2). The first physical processor, Core 0 (logical processors 0 and 1), typically does most of the system processing so the network processing should steer away from this physical processor. Some machine architectures don't have two logical processors per physical processor, so for such machines, the base processor should be greater than or equal to 1. If in doubt assume your host is using a 2 logical processor per physical processor architecture.  
   
--   Ideally, each NIC should have the *RssBaseProcNumber set to an even number greater than or equal to two (2). This is because the first physical processor, Core 0 (logical processors 0 and 1), typically does most of the system processing so the network processing should be steered away from this physical processor. (Some machine architectures don't have two logical processors per physical processor so for such machines the base processor should be greater than or equal to 1. If in doubt assume your host is using a 2 logical processor per physical processor architecture.)  
-  
--   If the team is in Sum-of-Queues mode the team members' processors should be, to the extent practical, non-overlapping. For example, in a 4-core host (8 logical processors) with a team of 2 10Gbps NICs, you could set the first one to use the base processor of 2 and to use 4 cores; the second would be set to use base processor 6 and use 2 cores.  
+-   If the team is in Sum-of-Queues mode the team members' processors should be non-overlapping. For example, in a 4-core host (8 logical processors) with a team of 2 10Gbps NICs, you could set the first one to use the base processor of 2 and to use 4 cores; the second would be set to use base processor 6 and use 2 cores.  
   
 -   If the team is in Min-Queues mode the processor sets used by the team members must be identical.  
 
   
-## NIC Teaming and Hyper-V Network Virtualization (HNV)  
-NIC Teaming is fully compatible with Hyper-V Network Virtualization (HNV).  The HNV management system provides information to the NIC Teaming driver that allows NIC Teaming to distribute the load in a way that is optimized for the HNV traffic.  
+## Hyper-V Network Virtualization (HNV)  
+NIC Teaming is fully compatible with Hyper-V Network Virtualization (HNV).  The HNV management system provides information to the NIC Teaming driver that allows NIC Teaming to distribute the load in a way that optimizes HNV traffic.  
   
-## NIC Teaming and Live Migration  
-NIC Teaming in VMs does not affect Live Migration. The same rules exist for Live Migration whether or not NIC Teaming is configured in the VM.  
+## Live Migration  
+NIC Teaming in VMs does not affect Live Migration. The same rules exist for Live Migration whether or not configuring NIC Teaming in the VM.  
 
 
-## NIC Teaming and Virtual Local Area Networks (VLANs)
-
->Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
-
-In this topic, we provide you information about using NIC Teaming with virtual local area networks (VLANs) on both host computers and VMs.  
-  
-### Team interfaces and VLANs  
+## Virtual Local Area Networks (VLANs)
 When you use NIC Teaming, creating multiple team interfaces allows a host to connect to different VLANs at the same time. 
 Configure your environment using the following guidelines:
   
@@ -122,39 +120,36 @@ Plan to use VLANs in a VM configured with a NIC Team using the following guideli
 -	If the VM has multiple SR-IOV Virtual Functions (VFs), ensure that they are on the same VLAN before teaming them in the VM. It's easily possible to configure the different VFs to be on different VLANs and doing so causes network communication problems.  
  
   
-## Managing network interfaces and VLANs  
-If you must have more than one VLAN exposed into a guest operating system, consider renaming the Ethernet interfaces to clarify which VLAN is assigned to the interface. For example, if the **Ethernet** interface is associated with VLAN 12 and the **Ethernet 2** interface is associated with VLAN 48, rename the interface Ethernet to **EthernetVLAN12** and the other to **EthernetVLAN48**. You can rename interfaces by using the Windows PowerShell command **Rename-NetAdapter** or by performing the following procedure.  
+### Manage network interfaces and VLANs 
+If you must have more than one VLAN exposed into a guest operating system, consider renaming the Ethernet interfaces to clarify VLAN assigned to the interface. For example, if you associate **Ethernet** interface with VLAN 12 and the **Ethernet 2** interface with VLAN 48, rename the interface Ethernet to **EthernetVLAN12** and the other to **EthernetVLAN48**. 
+
+Rename interfaces by using the Windows PowerShell command **Rename-NetAdapter** or by performing the following procedure:
   
-**Rename a network adapter**  
-  
-1.  In Server Manager, in the **Properties** pane for the server whose network adapters you want to rename, click the link to the right of the network adapter name. For example, if the network adapter is named **Ethernet**, click either the IP address or other blue text to the right of the name Ethernet. The **Network Connections** folder opens.  
+1.  In Server Manager, in **Properties** for the network adapter you want to rename, click the link to the right of the network adapter name. 
   
 2.  Right-click the network adapter that you want to rename, and select  **Rename**.  
   
 3.  Type the new name for the network adapter and press ENTER.  
 
 
-## NIC Teaming in Virtual Machines (VMs)
+## Virtual Machines (VMs)
 
-This topic provides information about using NIC Teaming within Hyper-V VMs,  
+If you want to use NIC Teaming in a VM, you must connect the virtual network adapters in the VM to external Hyper-V Virtual Switches only. Doing this allows the VM to sustain network connectivity even in the circumstance when one of the physical network adapters connected to one virtual switch fails or gets disconnected. Virtual network adapters connected to internal or private Hyper-V Virtual Switches are not able to connect to the switch when they are in a team, and networking fails for the VM.  
   
-### NIC Teaming configuration requirements  
-If you want to use NIC Teaming in a VM, you must connect the virtual network adapters in the VM to external Hyper-V Virtual Switches only; virtual network adapters that are connected to internal or private Hyper-V Virtual Switches are not able to connect to the switch when they are in a team, and networking fails for the VM.  
+NIC Teaming in Windows Server 2016 supports teams with two members in VMs. You can create larger teams, but there is no support for larger teams. Every team member must connect to a different external Hyper-V Virtual Switch, and the VM's networking interfaces must be configured to allow teaming.
+
   
-The  Windows Server 2016 NIC Teaming solution supports teams with two members in VMs. Larger teams can be created but such teams are not supported.  Every team member must be connected to a different external Hyper-V Virtual Switch, and the VM's networking interfaces must be configured to allow teaming. For more information, see [Create a New NIC Team in a VM](../../technologies/nic-teaming/../../technologies/nic-teaming/Create-a-New-NIC-Team-in-a-VM.md).  
+If you are configuring a NIC Team in a VM, you must select a **Teaming mode** of _Switch Independent_ and a **Load balancing mode** of _Address Hash_.   
   
-NIC Teams within a VM must have their Teaming mode configured as Switch Independent.  In addition, Load Balancing mode for the NIC Team in a VM must be configured with the Address Hash distribution mode.  
   
-Configuring NIC Teaming in a VM with two virtual network adapters that are connected to different external Hyper-V Virtual Switches allows the VM to sustain network connectivity even in the circumstance when one of the physical network adapters connected to one virtual switch fails or gets disconnected.  
-  
-### NIC Teaming with SR-IOV-Capable Network Adapters  
-This failover protection is particularly important when working with Single Root I/O Virtualization (SR-IOV), because SR-IOV traffic doesn't go through the Hyper-V Virtual Switch and cannot be protected by a NIC team in or under the Hyper-V host. With the VM NIC Teaming option, you can configure two external Hyper-V Virtual Switches, each connected to its own SR-IOV-capable NIC.  
+## SR-IOV-Capable Network Adapters  
+A NIC team in or under the Hyper-V host cannot protect SR-IOV traffic because it doesn’t go through the Hyper-V Switch.  With the VM NIC Teaming option, you can configure two external Hyper-V Virtual Switches, each connected to its own SR-IOV-capable NIC.  
   
 ![NIC Teaming with SR-IOV-Capable Network Adapters](../../media/NIC-Teaming-in-Virtual-Machines--VMs-/nict_in_vm.jpg)  
   
-Each VM can have a virtual function (VF) from one or both SR-IOV NICs and, in the event of a NIC disconnect, failover from the primary VF to the back-up adapter (VF). Alternately, the VM may have a VF from one NIC and a non-VF vmNIC connected to another virtual switch. If the NIC associated with the VF gets disconnected, the traffic can failover to the other switch without loss of connectivity.  
+Each VM can have a virtual function (VF) from one or both SR-IOV NICs and, in the event of a NIC disconnect, failover from the primary VF to the backup adapter (VF). Alternately, the VM may have a VF from one NIC and a non-VF vmNIC connected to another virtual switch. If the NIC associated with the VF gets disconnected, the traffic can failover to the other switch without loss of connectivity.  
   
-Because failover between NICs in a VM might result in traffic being sent with the MAC address of the other vmNIC, each Hyper-V Virtual Switch port associated with a VM that is using NIC Teaming must be set to allow teaming. To discover how to enable NIC Teaming in the VM, see [Create a New NIC Team in a VM](../../technologies/nic-teaming/../../technologies/nic-teaming/Create-a-New-NIC-Team-in-a-VM.md). 
+Because failover between NICs in a VM might result in traffic sent with the MAC address of the other vmNIC, each Hyper-V Virtual Switch port associated with a VM using NIC Teaming must be set to allow teaming. 
 
 
 ## Related topics
