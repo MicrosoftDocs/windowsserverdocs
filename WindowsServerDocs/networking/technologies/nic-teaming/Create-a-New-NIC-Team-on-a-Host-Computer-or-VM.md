@@ -90,8 +90,11 @@ You must have membership in **Administrators**, or equivalent.
     >```
    
     a. Select **Dynamic** for MAC address. 
-    b. Click to select **Protected network**.
+
+    b. Click to select **Protected network**. 
+
     c. Click to select **Enable this network adapter to be part of a team in the guest operating system**. 
+
     d. Click **OK**.  
   
     ![Add a network adapter to a team](../../media/Create-a-New-NIC-Team-in-a-VM/nict_hvs_05.jpg)  
