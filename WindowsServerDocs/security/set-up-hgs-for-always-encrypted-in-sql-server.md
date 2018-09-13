@@ -11,9 +11,9 @@ ms.date: 09/04/2018
 
 # Setting up the Host Guardian Service for Always Encrypted with secure enclaves in SQL Server 
 
->Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, SQL Server 2019 CTP 2.0
+>Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, SQL Server 2019 preview
  
-[Always Encrypted with secure enclaves](https://docs.microsoft.com/sql/relational-databases/security/encryption/always-encrypted-enclaves) in SQL Server 2019 CTP 2.0 is a feature designed to enable confidential computations on sensitive data stored in a database. 
+[Always Encrypted with secure enclaves](https://docs.microsoft.com/sql/relational-databases/security/encryption/always-encrypted-enclaves) in SQL Server 2019 preview is a feature designed to enable confidential computations on sensitive data stored in a database. 
 The Host Guardian Service (HGS) plays an important role in keeping your data safe when a secure enclave, configured for Always Encrypted, is a virtualization-based security (VBS) memory enclave. 
 The security of a VBS memory enclave depends on the security of the Windows Hypervisor and, more broadly, the security of the machine hosting SQL Server. 
 
@@ -61,7 +61,10 @@ This section covers prerequisites HGS and host machines.
 
 - Your SQL Server instance should run on a machine that meets the following requirements:
 
-  - Windows Server 2019 or Windows 10 Enterprise edition
+  - Windows 
+    - Windows 10 Enterprise, version 1809  
+    - Windows Server 2019 Datacenter (Semi-Annual Channel), version 1809
+    - Windows Server 2019 Datacenter
   - Physical machine (not a virtual machine)
   - General requirements listed in [Hardware and Software Requirements for Installing SQL Server](https://docs.microsoft.com/sql/sql-server/install/hardware-and-software-requirements-for-installing-sql-server?view=sql-server-2017).   
 
@@ -94,7 +97,7 @@ It is recommended that you set up one node completely before adding other nodes.
 
 3. [!INCLUDE [Determine a DNN](../../includes/guarded-fabric-initialize-hgs-default-step-one.md)]
 
-   For SQL Server with secure enclaves, both host machines that run SQL server and machines that run database client applications need to contact HGS, though only the host machines require attestation.
+   For Always Encrypted with secure enclaves, the host machines that run SQL Server and machines that run database client applications both need to contact HGS, though only the host machines require attestation.
 
 4. After the machine reboots again, log in as a Domain Admin and configure the attestation service. 
    You will need to choose TPM or host key attestation and run the corresponding command. 
@@ -230,6 +233,7 @@ If you chose to set up HGS in host key attestation mode, you’ll need to genera
    mkdir C:\artifacts 
    Get-HgsClientHostKey -Path C:\artifacts\$env:computername.cer 
    ```
+   [!INCLUDE [Initialize HGS](../../includes/guarded-fabric-initialize-hgs-on-the-node.md)]
 
    [!INCLUDE [Specify an existing host key certificate](../../includes/specify-an-existing-host-key-certificate.md)] 
 
