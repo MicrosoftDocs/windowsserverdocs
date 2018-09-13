@@ -4,14 +4,14 @@
     {
       "source_path": "WindowsServerDocs/networking/technologies/nic-teaming/nict-vms.md",
       "redirect_url": "/windows-server/networking/technologies/nic-teaming/NIC-Teaming",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
 	
 	
     {
       "source_path": "WindowsServerDocs/networking/technologies/nic-teaming/nict-and-vlans.md",
       "redirect_url": "/windows-server/networking/technologies/nic-teaming/NIC-Teaming",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
 	
 
