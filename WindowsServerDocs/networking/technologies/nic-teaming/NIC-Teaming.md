@@ -158,13 +158,12 @@ Because failover between NICs in a VM might result in traffic being sent with th
 
 
 ## Related topics
+
+- [NIC Teaming MAC address use and management](NIC-Teaming-MAC-Address-Use-and-Management.md): When you configure a NIC Team with switch independent mode and either address hash or dynamic load distribution, the team uses the media access control (MAC) address of the primary NIC Team member on outbound traffic. The primary NIC Team member is a network adapter selected by the operating system from the initial set of team members.
+
+- [NIC Teaming settings](nic-teaming-settings.md): In this topic, we give you an overview of the NIC Team properties such as teaming and load balancing modes. We also give you details about the Standby adapter setting and the Primary team interface property. If you have at least two network adapters in a NIC Team, you do not need to designate a Standby adapter for fault tolerance.
   
+- [Create a new NIC Team on a host computer or VM](Create-a-New-NIC-Team-on-a-Host-Computer-or-VM.md): In this topic, you create a new NIC Team on a host computer or in a Hyper-V virtual machine (VM) running Windows Server 2016.
 
+- [Troubleshooting NIC Teaming](Troubleshooting-NIC-Teaming.md): In this topic, we discuss ways to troubleshoot NIC Teaming, such as hardware, physical switch securities, and disabling or enabling network adapters using Windows PowerShell. 
  
-
-[NIC Teaming MAC Address Use and Management](NIC-Teaming-MAC-Address-Use-and-Management.md)
-[Troubleshooting NIC Teaming](Troubleshooting-NIC-Teaming.md) 
-[Create a New NIC Team on a Host Computer or VM](Create-a-New-NIC-Team-on-a-Host-Computer-or-VM.md)
-[NIC Teaming (NetLBFO) Cmdlets in Windows PowerShell](https://technet.microsoft.com/library/jj130849.aspx)
-
-TechNet Gallery Download: [Windows Server 2016 NIC and Switch Embedded Teaming User Guide](https://gallery.technet.microsoft.com/Windows-Server-2016-839cb607?redir=0)

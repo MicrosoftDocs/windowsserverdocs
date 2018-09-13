@@ -1,7 +1,7 @@
 ---
-title: Create a New NIC Team on a Host Computer or VM
+title: Create a new NIC Team on a host computer or VM
 description: In this topic, you create a new NIC Team on a host computer or in a Hyper-V virtual machine (VM) running Windows Server 2016.  
-manager: brianlic
+manager: elizapo
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -13,8 +13,9 @@ ms.topic: article
 ms.assetid: a4caaa86-5799-4580-8775-03ee213784a3
 ms.author: pashort
 author: shortpatti
+ms.date: 09/13/2018
 ---
-# Create a New NIC Team on a Host Computer or VM
+# Create a new NIC Team on a host computer or VM
 
 >Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
 
@@ -25,7 +26,7 @@ Before you can create a new NIC Team, you must deploy a Hyper-V host with two ne
 
 The physical switch, Hyper-V Virtual Switch, local area network (LAN), and NIC Teaming requirements for creating a NIC Team in a VM are:  
   
--   The computer that is running Hyper-V must have two or more network adapters.  
+-   The computer running Hyper-V must have two or more network adapters.  
   
 -   If connecting the network adapters to multiple physical switches, the physical switches must be on the same Layer 2 subnet.  
   
@@ -194,6 +195,6 @@ _**Congratulations!**_  You've created a new NIC Team on a host computer or VM.
 
 - [NIC Teaming settings](nic-teaming-settings.md): In this topic, we give you an overview of the NIC Team properties such as teaming and load balancing modes. We also give you details about the Standby adapter setting and the Primary team interface property. If you have at least two network adapters in a NIC Team, you do not need to designate a Standby adapter for fault tolerance.
 
-- [NIC Teaming and Virtual Local Area Networks (VLANs)](nict-and-vlans.md): In this topic, we provide you information about using NIC Teaming with virtual local area networks (VLANs) on both host computers and VMs.
+- [Troubleshooting NIC Teaming](Troubleshooting-NIC-Teaming.md): In this topic, we discuss ways to troubleshoot NIC Teaming, such as hardware, physical switch securities, and disabling or enabling network adapters using Windows PowerShell. 
 
 ---
