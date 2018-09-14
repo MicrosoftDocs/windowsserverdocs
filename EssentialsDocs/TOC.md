@@ -1,6 +1,6 @@
 # [Get started with Windows Server Essentials](get-started/get-started.md)
-## [What's New in Windows Server Essentials 2016](get-started/what-s-new.md)
 ## [What's New in Windows Server Essentials 2019](get-started/what-s-new-19.md)
+## [What's New in Windows Server Essentials 2016](get-started/what-s-new.md)
 ### [Azure Site Recovery Services integration](get-started/azure-site-recovery-services-integration.md)
 ### [Azure virtual network integration](get-started/azure-virtual-network-integration.md)
 ### [Support for larger deployments](get-started/support-for-larger-deployments.md)
