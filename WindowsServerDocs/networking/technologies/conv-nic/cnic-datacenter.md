@@ -1,20 +1,22 @@
 ---
-title: Converged NIC Teamed NIC Configuration
+title: Converged NIC in a Teamed NIC configuration
 description: This topic provides instructions on how to configure Converged NIC in a datacenter configuration in Windows Server 2016.
 ms.prod: windows-server-threshold
 ms.technology: networking
 ms.topic: article
 ms.assetid: f01546f8-c495-4055-8492-8806eee99862
-manager: brianlic
+manager: dougkim
 ms.author: pashort
 author: shortpatti
+ms.date: 09/14/2018
 ---
 
-# Converged NIC Teamed NIC Configuration
+# Converged NIC in a Teamed NIC configuration
 
 >Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
 
-The following sections provide instructions for deploying Converged NIC in a Teamed NIC configuration with Switch Embedded Teaming \(SET\). The example configuration in this guide depicts two Hyper-V hosts, Hyper-V Host 1, and Hyper-V Host 2.
+In this topic, we provide you with instructions to deploy Converged NIC in a Teamed NIC configuration with Switch Embedded Teaming \(SET\). 
+The example configuration in this guide depicts two Hyper-V hosts, Hyper-V Host 1, and Hyper-V Host 2.
 
 ## Test Connectivity Between Source and Destination
 

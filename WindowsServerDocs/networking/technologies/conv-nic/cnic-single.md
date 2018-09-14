@@ -17,14 +17,13 @@ ms.date: 09/14/2018
 
 In this topic, we provide you with the instructions to configure Converged NIC with a single NIC in your Hyper-V host.
 
-The example configuration depicts two Hyper-V hosts, **Hyper-V Host A**, and **Hyper-V Host B**.
-
+The example configuration in this topic describes two Hyper-V hosts, **Hyper-V Host A**, and **Hyper-V Host B**.
 
 ## Step 1. Test the connectivity between source and destination
 
 Ensure that the physical NIC can connect to the destination host. This test demonstrates connectivity by using Layer 3 \(L3\) - or the IP layer - as well as Layer 2 \(L2\).
 
-The following illustration, both servers have a single physical NIC (pNIC) installed, and the NICs are connected to a top of rack \(ToR\) physical switch. In addition, the servers are located on the same subnet, which is 192.168.1.x/24.
+The following image shows that both servers have a single physical NIC (pNIC) installed, and the NICs are connected to a top of rack \(ToR\) physical switch. In addition, the servers are located on the same subnet, which is 192.168.1.x/24.
 
 ![Hyper-V hosts](../../media/Converged-NIC/1-single-test-conn.jpg)
 
@@ -42,7 +41,7 @@ The following illustration, both servers have a single physical NIC (pNIC) insta
    |M1|Mellanox ConnectX-3 Pro ...| 4| Up|7C-FE-90-93-8F-A1|40 Gbps|
    ---
 
-2. View additional adapter properties:
+2. View additional adapter properties, including the IP address.
 
    ```PowerShell
    Get-NetAdapter M1 | fl *
@@ -96,14 +95,15 @@ The following illustration, both servers have a single physical NIC (pNIC) insta
 
 ## Step 2. Ensure that source and destination can communicate
 
-In the following example, we use the **Test-NetConnection** Windows PowerShell command, but if you prefer you can use the **ping** command. 
+In some cases, you might need to disable Windows Firewall with Advanced Security to successfully perform this test. If you disable the firewall, keep security in mind and ensure that your configuration meets your organization's security requirements.
+
+In the following example, we use the **Test-NetConnection** Windows PowerShell command, but if you can use the **ping** command if you prefer. 
 
 >[!TIP]
 >If you're certain that your hosts can communicate with each other, you can skip this step.
 
 1. Verify bi-directional communication.
 
-   In some cases, you might need to disable Windows Firewall with Advanced Security to successfully perform this test. If you disable the firewall, keep security in mind and ensure that your configuration meets your organization's security requirements.
 
    ```PowerShell
    Test-NetConnection 192.168.1.5
@@ -120,7 +120,7 @@ In the following example, we use the **Test-NetConnection** Windows PowerShell c
    |PingSucceeded|True|
    |PingReplyDetails \(RTT\)|0 ms|
    ---
-
+   
 2. Disable all firewall profiles.
 
    ```PowerShell
@@ -204,7 +204,7 @@ The following illustration depicts two Hyper-V hosts, each with one physical net
    ---
 
    >[!IMPORTANT]
-   >After executing this command, it might take several seconds for the device to restart and become available on the network.
+   >It might take several seconds for the device to restart and become available on the network. 
 
 4. Verify the connectivity.<p>Once the network adapters have restarted, we recommend that you verify the connectivity by applying the VLAN tag to both adapters. If connectivity fails, inspect the switch VLAN configuration or destination participation in the same VLAN. 
 
@@ -212,7 +212,7 @@ The following illustration depicts two Hyper-V hosts, each with one physical net
    Test-NetConnection 192.168.1.5
    ```
     
-## Step 4. Configure Data Center Bridging \(DCB\)
+## Step 4. Configure Quality of Service \(QoS\)
 
 >[!NOTE]
 >You must perform all of the following DCB and QoS configuration steps on all servers that are intended to communicate with each other.
@@ -344,7 +344,7 @@ The following illustration depicts two Hyper-V hosts, each with one physical net
    |SMB      |ETS|30 |3 |Global|&nbsp;|&nbsp;| 
    ---
 
-## (Optional) Step 5. Resolve the Mellanox adapter debugger conflict 
+## Step 5. (Optional) Resolve the Mellanox adapter debugger conflict 
 
 By default, when using a Mellanox adapter, the attached debugger blocks NetQos, which is a known issue. Therefore, if you are using an adapter from Mellanox and intend to attach a debugger, use the following command resolve this issue. This step is not required if you do not intend to attach a debugger or if you're not using a Mellanox adapter.
 
