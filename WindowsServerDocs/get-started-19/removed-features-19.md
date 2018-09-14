@@ -26,7 +26,7 @@ The following features and functionalities have been removed from this release o
 > [!NOTE]  
 > If you are moving to Windows Server 2019 from a server release prior to Windows Server 2012 R2 or Windows Server 2012, you should also review:
 
-- [Features Removed or Deprecated in Windows Server 2016](../get-started/Deprecated-Features.md)
+> - [Features Removed or Deprecated in Windows Server 2016](../get-started/Deprecated-Features.md)
 - [Features Removed or Deprecated in Windows Server 2012 R2](https://technet.microsoft.com/library/dn303411.aspx)
 - [Features Removed or Deprecated in Windows Server 2012](https://technet.microsoft.com/library/hh831568.aspx)
 
