@@ -8,7 +8,7 @@ ms.assetid: eed5c184-fa55-43a8-a879-b1610ebc70ca
 manager: elizapo
 ms.author: pashort
 author: shortpatti
-ms.date: 09/13/2018
+ms.date: 09/14/2018
 ---
 
 # Converged NIC configuration with a single network adapter
@@ -50,7 +50,7 @@ The following illustration, both servers have a single physical NIC (pNIC) insta
 
    _**Results:**_
 
-   ```   
+   ```PowerShell   
     MacAddress   : 7C-FE-90-93-8F-A1
     Status   : Up
     LinkSpeed: 40 Gbps
@@ -284,11 +284,12 @@ The following illustration depicts two Hyper-V hosts, each with one physical net
    Get-NetAdapterQos -Name "M1"
    ```
 
-   Results:
+   _**Results:**_
 
    **Name**: M1  
    **Enabled**: True  
-   **Capabilities**:   
+
+   _**Capabilities:**_   
 
    |Parameter|Hardware|Current|
    |---------|--------|-------|
@@ -297,7 +298,7 @@ The following illustration depicts two Hyper-V hosts, each with one physical net
    |NumTCs(Max/ETS/PFC)|8/8/8|8/8/8|
    ---
  
-   **OperationalTrafficClasses**: 
+   _**OperationalTrafficClasses:**_ 
 
    |TC|TSA|Bandwidth|Priorities|
    |----|-----|--------|-------|
@@ -305,8 +306,10 @@ The following illustration depicts two Hyper-V hosts, each with one physical net
    |1|ETS|30%|3 |
    ---
 
-   **OperationalFlowControl**: Priority 3 Enabled  
-   **OperationalClassifications**:  
+   _**OperationalFlowControl:**_ 
+   Priority 3 Enabled  
+
+   _**OperationalClassifications:**_  
 
    |Protocol|Port/Type|Priority|
    |--------|---------|--------|
@@ -329,7 +332,7 @@ The following illustration depicts two Hyper-V hosts, each with one physical net
    |SMB | ETS     | 30 |3 |Global |&nbsp;|&nbsp;|
    ---                                      
 
-   **View the bandwidth reservation settings:**  
+6. View the bandwidth reservation settings.  
 
    ```PowerShell
    Get-NetQosTrafficClass
@@ -364,37 +367,35 @@ The following image depicts the current state of the Hyper-V hosts.
    ```PowerShell
    Get-NetAdapterRdma
    ```
-   Results:
+   _**Results:**_
 
    |Name |InterfaceDescription |Enabled|
    |----|--------------------|-------|
    |M1| Mellanox ConnectX-3 Pro Ethernet Adapter |True|
    ---
 
-2. Download the DiskSpd.exe utility and extract the utility into C:\TEST\ 
-[Diskspd Utility: A Robust Storage Testing Tool (superseding SQLIO)](https://gallery.technet.microsoft.com/DiskSpd-a-robust-storage-6cd2f223)
+2. Download the [DiskSpd.exe utility](https://aka.ms/diskspd) and extract it into C:\TEST\.
 
-3. Download the Test-RDMA powershell script to C:\TEST\ 
-[https://github.com/Microsoft/SDN/blob/master/Diagnostics/Test-Rdma.ps1](https://github.com/Microsoft/SDN/blob/master/Diagnostics/Test-Rdma.ps1)
-
-4. Determine the ifIndex value of your target adapter.<p>You can use this value in subsequent steps when you run the script you've downloaded.
+3. Determine the ifIndex value of your target adapter.<p>You can use this value in subsequent steps when you run the script you've downloaded.
 
    ```PowerShell
    Get-NetIPConfiguration -InterfaceAlias "M*" | ft InterfaceAlias,InterfaceIndex,IPv4Address
    ```
 
-   Results: 
+   _**Results:**_ 
 
    |InterfaceAlias |InterfaceIndex |IPv4Address|
    |-------------- |-------------- |-----------|
    |M2 |14 |{192.168.1.5}|
    ---
 
+4. Download the [Test-RDMA powershell script](https://github.com/Microsoft/SDN/blob/master/Diagnostics/Test-Rdma.ps1) to a test folder on your local drive, for example, C:\TEST\.
+
 5. Run the PowerShell script.<p>When you run the Test-Rdma.ps1 Windows PowerShell script, you can pass the ifIndex value to the script, along with the IP address of the remote adapter on the same VLAN.
 
    Run the script with an ifIndex of 14 on the network adapter 192.168.1.5.
    
-   ```
+   ```PowerShell
     C:\TEST\Test-RDMA.PS1 -IfIndex 14 -IsRoCE $true -RemoteIpAddress 192.168.1.5 -PathToDiskspd C:\TEST\Diskspd-v2.0.17\amd64fre\
     
     VERBOSE: Diskspd.exe found at C:\TEST\Diskspd-v2.0.17\amd64fre\\diskspd.exe
@@ -449,7 +450,7 @@ The following image depicts Hyper-V Host 1 with a vSwitch.
    ```PowerShell
    New-VMSwitch -Name VMSTEST -NetAdapterName "M1" -AllowManagementOS $true
    ```
-   Results:
+   _**Results:**_
 
    |Name |SwitchType |NetAdapterInterfaceDescription|
    |---- |---------- |------------------------------|
@@ -462,7 +463,7 @@ The following image depicts Hyper-V Host 1 with a vSwitch.
    Get-NetAdapter | ft -AutoSize
    ```
 
-   Results:
+   _**Results:**_
 
    |Name |InterfaceDescription | ifIndex |Status |MacAddress |LinkSpeed|
    |---- |-------------------- |-------| ------|----------|---------|
@@ -478,7 +479,7 @@ The following image depicts Hyper-V Host 1 with a vSwitch.
    Get-VMNetworkAdapter –ManagementOS | ft -AutoSize
    ```
 
-   Results:
+   _**Results:**_
 
    |Name |IsManagementOs |VMName |SwitchName |MacAddress |Status |IPAddresses|
    |----|-------------- |------ |----------|----------|------ |-----------|
@@ -492,21 +493,25 @@ The following image depicts Hyper-V Host 1 with a vSwitch.
    Test-NetConnection 192.168.1.5
    ```
 
-   Results: 
+   _**Results:**_ 
 
+   ```
     ComputerName   : 192.168.1.5
     RemoteAddress  : 192.168.1.5
     InterfaceAlias : vEthernet (CORP-External-Switch)
     SourceAddress  : 192.168.1.3
     PingSucceeded  : True
     PingReplyDetails (RTT) : 0 ms
-    
+   ```
+
 5. Assign and view network adapter VLAN settings.
     
    ```PowerShell
    Set-VMNetworkAdapterVlan -VMNetworkAdapterName "VMSTEST" -VlanId "101" -Access -ManagementOS
    Get-VMNetworkAdapterVlan -ManagementOS -VMNetworkAdapterName "VMSTEST"
    ```    
+
+   _**Results:**_
 
    |VMName |VMNetworkAdapterName |Mode |VlanList|
    |------ |-------------------- |---- |--------|
@@ -519,15 +524,16 @@ The following image depicts Hyper-V Host 1 with a vSwitch.
    Test-NetConnection 192.168.1.5
    ```
 
-   Results:
+   _**Results:**_
      
+   ```
     ComputerName   : 192.168.1.5
     RemoteAddress  : 192.168.1.5
     InterfaceAlias : vEthernet (VMSTEST)
     SourceAddress  : 192.168.1.3
     PingSucceeded  : True
     PingReplyDetails (RTT) : 0 ms
-    
+   ```
 
 ## Step 9. Test Hyper-V Virtual Switch RDMA (Mode 2)
 
@@ -543,18 +549,20 @@ The following image depicts the current state of your Hyper-V hosts, including t
    Get-VMNetworkAdapter -ManagementOS -Name "VMSTEST" | fl Name,IeeePriorityTag
    ```  
    
-   Results:
+   _**Results:**_
 
-    Name: VMSTEST
+   ```
+    Name: VMSTEST 
     IeeePriorityTag : On
-    
+   ```
+
 2. View the network adapter RDMA information. 
 
    ```PowerShell
    Get-NetAdapterRdma
    ```   
 
-   Results:
+   _**Results:**_
 
    >[!NOTE]
    >If the parameter **Enabled** has the value **False**, it means that RDMA is not enabled.
@@ -571,7 +579,7 @@ The following image depicts the current state of your Hyper-V hosts, including t
    Get-NetAdapter
    ```
 
-   Results:   
+   _**Results:**_   
  
    |Name |InterfaceDescription |ifIndex |Status |MacAddress |LinkSpeed|
    |----|--------------------|-------|------|----------|---------|
@@ -586,7 +594,7 @@ The following image depicts the current state of your Hyper-V hosts, including t
    Get-NetAdapterRdma -Name "vEthernet (VMSTEST)"
    ```
 
-   Results:
+   _**Results:**_
 
    >[!NOTE]
    >If the parameter **Enabled** has the value **True**, it means that RDMA is enabled.
@@ -630,10 +638,7 @@ The following image depicts the current state of your Hyper-V hosts, including t
 
 The final line in this output, "RDMA traffic test SUCCESSFUL: RDMA traffic was sent to 192.168.1.5," demonstrates that you have successfully configured Converged NIC on your adapter.
 
-## All topics in this guide
-
-This guide contains the following topics.
-
+## Related topics
 - [Converged NIC Configuration with a Single Network Adapter](cnic-single.md)
 - [Converged NIC Teamed NIC Configuration](cnic-datacenter.md)
 - [Physical Switch Configuration for Converged NIC](cnic-app-switch-config.md)
