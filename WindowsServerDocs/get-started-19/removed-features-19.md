@@ -1,5 +1,5 @@
 ---
-title: Features Removed or Deprecated in Windows Server 2019
+title: Features removed or deprecated in Windows Server 2019
 description: "Features and functionalities removed or planned for removal in Windows Server 2019."
 ms.custom: na
 ms.prod: windows-server-threshold
@@ -14,7 +14,7 @@ ms.author: coreyp
 manager: jasgro
 ms.localizationpriority: medium
 ---
-# Features Removed or Deprecated in  Windows Server 2019
+# Features removed or deprecated in  Windows Server 2019
 
 >Applies To: Windows Server 2019
 

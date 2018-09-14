@@ -17,7 +17,7 @@ manager: jasgro
 
 >Applies To: Windows Server 2016 Essentials; Windows Server 2019 Essentials
 
-**Windows Server Essentials** edition is a cloud-connected first server designed for small businesses with up to 25 users and 50 devices. However, if you are considering installing any version of Windows Server Essentials, we would encourage you to consider **Microsoft 365**. For more information about moving beyond Windows Server Essentials to Microsoft 365, see [What's New in Windows Server 2019 Essentials](what-s-new-19.md)
+**Windows Server Essentials** edition is a cloud-connected first server designed for small businesses with up to 25 users and 50 devices. However, if you are considering installing any version of Windows Server Essentials, we would encourage you to consider **Microsoft 365**. For more information about moving beyond Windows Server Essentials to Microsoft 365, see [What's New in Windows Server 2019 Essentials](what-s-new-19.md).
   
 ## In this library  
  For information about installing, configuring, managing, using, and troubleshooting Windows Server Essentials, see the following documentation:  
