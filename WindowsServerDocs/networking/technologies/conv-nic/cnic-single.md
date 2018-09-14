@@ -1,57 +1,54 @@
 ---
-title: Converged NIC Configuration with a Single Network Adapter
-description: This topic provides instructions on how to deploy Converged NIC with a single network adapter in Windows Server 2016.
+title: Converged NIC configuration with a single network adapter
+description: In this topic, we provide you with the instructions to configure Converged NIC with a single NIC in your Hyper-V host.
 ms.prod: windows-server-threshold
 ms.technology: networking
 ms.topic: article
 ms.assetid: eed5c184-fa55-43a8-a879-b1610ebc70ca
-manager: brianlic
+manager: elizapo
 ms.author: pashort
 author: shortpatti
+ms.date: 09/13/2018
 ---
 
-# Converged NIC Configuration with a Single Network Adapter
+# Converged NIC configuration with a single network adapter
 
 >Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
 
-The following sections provide instructions for configuring Converged NIC with a single NIC in your Hyper-V host.
+In this topic, we provide you with the instructions to configure Converged NIC with a single NIC in your Hyper-V host.
 
 The example configuration in this guide depicts two Hyper-V hosts, **Hyper-V Host A**, and **Hyper-V Host B**.
 
-## Test Connectivity Between Source and Destination
+## Test connectivity between source and destination
 
-This section provides the steps required to test connectivity between source and destination Hyper-V Hosts.
-
-The following illustration depicts two Hyper-V Hosts, **Hyper-V Host A** and **Hyper-V Host B**. 
-
-Both servers have a single physical NIC (pNIC) installed, and the NICs are connected to a top of rack \(ToR\) physical switch. In addition, the servers are located on the same subnet, which is 192.168.1.x/24.
+The following illustration depicts two Hyper-V Hosts, **Hyper-V Host A** and **Hyper-V Host B**. Both servers have a single physical NIC (pNIC) installed, and the NICs are connected to a top of rack \(ToR\) physical switch. In addition, the servers are located on the same subnet, which is 192.168.1.x/24.
 
 ![Hyper-V hosts](../../media/Converged-NIC/1-single-test-conn.jpg)
 
 
-### Test NIC Connectivity to the Hyper\-V Virtual Switch
+### Test NIC connectivity to the Hyper\-V Virtual Switch
 
-By using this step, you can ensure that the physical NIC, for which you will later create a Hyper\-V Virtual Switch, can connect to the destination host. 
+Ensure that the physical NIC can connect to the destination host. This test demonstrates connectivity by using Layer 3 \(L3\) - or the IP layer - as well as Layer 2 \(L2\).
 
-This test demonstrates connectivity by using Layer 3 \(L3\) - or the IP layer - as well as Layer 2 \(L2\).
+**View the network adapter properties:**  
 
-You can use the following Windows PowerShell command to obtain the properties of the network adapter.
-
-    Get-NetAdapter
+```PowerShell
+Get-NetAdapter
+```
      
-Following are example results of this command.
 
 |Name|InterfaceDescription|ifIndex|Status|MacAddress|LinkSpeed|
 |-----|--------------------|-------|-----|----------|---------|
 |M1|Mellanox ConnectX-3 Pro ...| 4| Up|7C-FE-90-93-8F-A1|40 Gbps|
 ---
 
-You can use one of the following commands to obtain additional adapter properties, including the IP address.
+**View additional adapter properties:**
 
-    Get-NetAdapter M1 | fl *
+```PowerShell
+Get-NetAdapter M1 | fl *
+```
 
-Following are edited example results of this command.
-    
+      
     MacAddress   : 7C-FE-90-93-8F-A1
     Status   : Up
     LinkSpeed: 40 Gbps
@@ -95,16 +92,16 @@ Following are edited example results of this command.
     CreationClassName: MSFT_NetAdapter
     
 
-### Ensure that Source and Destination Can Communicate
+### Ensure that source and destination can communicate
 
-You can use this step to verify bi-directional communication \(ping from source to destination and vice-versa on both systems\).  In the following example, the **Test-NetConnection** Windows PowerShell command is used, but if you prefer you can use the **ping** command. 
+In the following example, the **Test-NetConnection** Windows PowerShell command is used, but if you prefer you can use the **ping** command. 
 
->[!NOTE]
+>[!TIP]
 >If you're certain that your hosts can communicate with each other, you can skip this step.
 
+**Verify bi-directional communication:**
     Test-NetConnection 192.168.1.5
 
-Following are example results of this command.
 
 |Parameter|Value|
 |---------|-----|
@@ -118,15 +115,18 @@ Following are example results of this command.
 
 In some cases, you might need to disable Windows Firewall with Advanced Security to successfully perform this test. If you disable the firewall, keep security in mind and ensure that your configuration meets your organization's security requirements.
 
-The following example command allows you to disable all firewall profiles.
+**Disable all firewall profiles.:**  
 
-    Set-NetFirewallProfile -All -Enabled False
+```PowerShell
+Set-NetFirewallProfile -All -Enabled False
+```
     
-After you disable the firewall, you can use the following command to test the connection.
+**After you disable the firewall, test the connection:
 
-    Test-NetConnection 192.168.1.5
+```PowerShell
+Test-NetConnection 192.168.1.5
+```
 
-Following are example results of this command.
 
 |Parameter|Value|
 |---------|-----|
@@ -157,40 +157,42 @@ The following illustration depicts two Hyper-V hosts, each with one physical net
 
 You can use this step to configure the VLAN IDs for NICs installed in your Hyper-V hosts.
 
-#### Configure NIC M1
+1. Configure the VLAN ID for NICs installed in your Hyper-V hosts.
 
-With the following commands, configure the VLAN ID for the first NIC, M1, then view the resulting configuration.
-
->[!IMPORTANT]
->Do not run this command if you are connected to the host remotely over this interface, because doing so will result in loss of access to the host.
+   >[!IMPORTANT]
+   >Do not run this command if you are connected to the host remotely over this interface, because this results in loss of access to the host.
     
-    Set-NetAdapterAdvancedProperty -Name M1 -RegistryKeyword VlanID -RegistryValue "101"
-    Get-NetAdapterAdvancedProperty -Name M1 | Where-Object {$_.RegistryKeyword -eq "VlanID"} 
-    
-Following are example results of this command.
+   ```PowerShell
+   Set-NetAdapterAdvancedProperty -Name M1 -RegistryKeyword VlanID -RegistryValue "101"
+   Get-NetAdapterAdvancedProperty -Name M1 | Where-Object {$_.RegistryKeyword -eq "VlanID"} 
+   ```
 
-|Name |DisplayName| DisplayValue| RegistryKeyword |RegistryValue|
-|----|-----------|------------|---------------|-------------|
-|M1|VLAN ID|101|VlanID|{101}|
----
+   Results:
 
+   |Name |DisplayName| DisplayValue| RegistryKeyword |RegistryValue|
+   |----|-----------|------------|---------------|-------------|
+   |M1|VLAN ID|101|VlanID|{101}|
+   ---
 
-Ensure that the VLAN ID takes effect independent of the network adapter implementation by using the following command to restart the network adapter.
+2. Ensure the VLAN ID takes effect.
 
-    Restart-NetAdapter -Name "M1"
+   ```PowerShell
+   Restart-NetAdapter -Name "M1"
+   ```
 
-You can use the following command to ensure that the network adapter status is **Up** before proceeding.
+3. Ensure the Status is **Up**.
 
-    Get-NetAdapter -Name "M1"
+   ```PowerShell
+   Get-NetAdapter -Name "M1"
+   ```
+   Results:
 
-Following are example results of this command.
+   |Name|InterfaceDescription|ifIndex| Status|MacAddress|LinkSpeed|
+   |----|--------------------|-------|------|----------| ---------|
+   |M1|Mellanox ConnectX-3 Pro Ethernet Ada...|4|Up|7C-FE-90-93-8F-A1|40 Gbps|
+   ---
 
-|Name|InterfaceDescription|ifIndex| Status|MacAddress|LinkSpeed|
-|----|--------------------|-------|------|----------| ---------|
-|M1|Mellanox ConnectX-3 Pro Ethernet Ada...|4|Up|7C-FE-90-93-8F-A1|40 Gbps|
----
-
-Ensure that you perform this step on both the local and destination servers. If the destination server is not configured with the same VLAN ID as the local server, the two cannot communicate.
+4. Ensure that you perform this step on both the local and destination servers. If the destination server is not configured with the same VLAN ID as the local server, the two cannot communicate.
 
 ### Verify Connectivity
 
