@@ -1,20 +1,22 @@
 ---
-title: Physical Switch Configuration for Converged NIC
-description: This topic is part of the Converged NIC Configuration Guide for Windows Server 2016.
+title: Physical switch configuration for Converged NIC
+description: In this topic, we provide you with guidelines for configuring your physical switches. 
 ms.prod: windows-server-threshold
 ms.technology: networking
 ms.topic: article
 ms.assetid: 6d53c797-fb67-4b9e-9066-1c9a8b76d2aa
-manager: brianlic
+manager: elizapo
 ms.author: pashort
 author: shortpatti
+ms.date: 09/14/2018
 ---
 
-# Physical Switch Configuration for Converged NIC
+# Physical switch configuration for Converged NIC
 
 >Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
 
-You can use the following sections as guidelines for configuring your physical switches.
+In this topic, we provide you with guidelines for configuring your physical switches. 
+
 
 These are only commands and their uses; you must determine the ports to which the NICs are connected in your environment. 
 

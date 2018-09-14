@@ -35,7 +35,7 @@ The following illustration, both servers have a single physical NIC (pNIC) insta
    Get-NetAdapter
    ```
    
-   Results:  
+   _**Results:**_  
 
    |Name|InterfaceDescription|ifIndex|Status|MacAddress|LinkSpeed|
    |-----|--------------------|-------|-----|----------|---------|
@@ -48,8 +48,9 @@ The following illustration, both servers have a single physical NIC (pNIC) insta
    Get-NetAdapter M1 | fl *
    ```
 
-   Results:
-      
+   _**Results:**_
+
+   ```   
     MacAddress   : 7C-FE-90-93-8F-A1
     Status   : Up
     LinkSpeed: 40 Gbps
@@ -91,7 +92,7 @@ The following illustration, both servers have a single physical NIC (pNIC) insta
     AdditionalAvailability   :
     Availability :
     CreationClassName: MSFT_NetAdapter
-    
+   ``` 
 
 ## Step 2. Ensure that source and destination can communicate
 
@@ -108,7 +109,7 @@ In the following example, we use the **Test-NetConnection** Windows PowerShell c
    Test-NetConnection 192.168.1.5
    ```
    
-   Results:
+   _**Results:**_
 
    |Parameter|Value|
    |---------|-----|
@@ -132,7 +133,7 @@ In the following example, we use the **Test-NetConnection** Windows PowerShell c
    Test-NetConnection 192.168.1.5
    ```
 
-   Results:
+   _**Results:**_
 
    |Parameter|Value|
    |---------|-----|
@@ -176,7 +177,7 @@ The following illustration depicts two Hyper-V hosts, each with one physical net
    Get-NetAdapterAdvancedProperty -Name M1 | Where-Object {$_.RegistryKeyword -eq "VlanID"} 
    ```
 
-   Results:
+   _**Results:**_
 
    |Name |DisplayName| DisplayValue| RegistryKeyword |RegistryValue|
    |----|-----------|------------|---------------|-------------|
@@ -194,7 +195,8 @@ The following illustration depicts two Hyper-V hosts, each with one physical net
    ```PowerShell
    Get-NetAdapter -Name "M1"
    ```
-   Results:
+   
+   _**Results:**_
 
    |Name|InterfaceDescription|ifIndex| Status|MacAddress|LinkSpeed|
    |----|--------------------|-------|------|----------| ---------|
@@ -218,8 +220,8 @@ The following illustration depicts two Hyper-V hosts, each with one physical net
 1. Install Data Center Bridging \(DCB\) on each of your Hyper-V hosts.
 
    >[!IMPORTANT]
-   >- Installing and configuring DCB is **optional** for network configurations that use iWarp for RDMA services.
-   >- Installing and configuring DCB is **required** for network configurations that use RoCE \(any version\) for RDMA services.
+   >- **Optional** for network configurations that use iWarp for RDMA services.
+   >- **Required** for network configurations that use RoCE \(any version\) for RDMA services.
 
    ```PowerShell
    Install-WindowsFeature Data-Center-Bridging
@@ -228,15 +230,16 @@ The following illustration depicts two Hyper-V hosts, each with one physical net
 2. Set the QoS policies for SMB-Direct:
 
    >[!IMPORTANT]
-   >- This step is optional for network configurations that use iWarp.
-   >- This step is required for network configurations that use RoCE.
-   >- In the example command below, the value “3” is arbitrary. You can use any value between 1 and 7 as long as you consistently use the same value throughout the configuration of QoS policies.
+   >- Optional for network configurations that use iWarp.
+   >- Required for network configurations that use RoCE.
+   
+   In the example command below, the value “3” is arbitrary. You can use any value between 1 and 7 as long as you consistently use the same value throughout the configuration of QoS policies.
 
    ```PowerShell
    New-NetQosPolicy "SMB" -NetDirectPortMatchCondition 445 -PriorityValue8021Action 3
    ```
 
-   Results:
+   _**Results:**_
 
    |Parameter|Value|
    |---------|-----|
@@ -256,7 +259,7 @@ The following illustration depicts two Hyper-V hosts, each with one physical net
    Get-NetQosFlowControl
    ```
 
-   Results:
+   _**Results:**_
 
    |Priority|Enabled|PolicySet|IfIndex|IfAlias|
    |---------|-----|--------- |-------| -------|
@@ -273,8 +276,8 @@ The following illustration depicts two Hyper-V hosts, each with one physical net
 4. Enable QoS for the local and destination network adapters.
 
    >[!IMPORTANT]
-   >-	This step is not needed for network configurations that use iWarp.
-   >-	This step is required for network configurations that use RoCE.
+   >- **Not needed** for network configurations that use iWarp.
+   >- **Required** for network configurations that use RoCE.
 
    ```PowerShell
    Enable-NetAdapterQos -InterfaceAlias "M1"
@@ -283,8 +286,8 @@ The following illustration depicts two Hyper-V hosts, each with one physical net
 
    Results:
 
-   **Name**: M1
-   **Enabled**: True
+   **Name**: M1  
+   **Enabled**: True  
    **Capabilities**:   
 
    |Parameter|Hardware|Current|
@@ -302,8 +305,8 @@ The following illustration depicts two Hyper-V hosts, each with one physical net
    |1|ETS|30%|3 |
    ---
 
-   **OperationalFlowControl**: Priority 3 Enabled
-   **OperationalClassifications**:
+   **OperationalFlowControl**: Priority 3 Enabled  
+   **OperationalClassifications**:  
 
    |Protocol|Port/Type|Priority|
    |--------|---------|--------|
@@ -319,21 +322,20 @@ The following illustration depicts two Hyper-V hosts, each with one physical net
    New-NetQosTrafficClass "SMB" -Priority 3 -BandwidthPercentage 30 -Algorithm ETS
    ```
 
-   Results:
+   _**Results:**_
 
    |Name|Algorithm |Bandwidth(%)| Priority |PolicySet |IfIndex |IfAlias |
    |----|---------| ------------ |--------| ---------|------- |------- |
    |SMB | ETS     | 30 |3 |Global |&nbsp;|&nbsp;|
    ---                                      
 
- 
-   **View the bandwidth reservation settings:**
+   **View the bandwidth reservation settings:**  
 
    ```PowerShell
    Get-NetQosTrafficClass
    ```
 
-   Results:
+   _**Results:**_
  
    |Name|Algorithm |Bandwidth(%)| Priority |PolicySet |IfIndex |IfAlias |
    |----|---------| ------------ |--------| ---------|------- |------- |
@@ -369,15 +371,13 @@ The following image depicts the current state of the Hyper-V hosts.
    |M1| Mellanox ConnectX-3 Pro Ethernet Adapter |True|
    ---
 
-2. Download DiskSpd.exe and a PowerShell script.
-
-   - Download the DiskSpd.exe utility and extract the utility into C:\TEST\ 
+2. Download the DiskSpd.exe utility and extract the utility into C:\TEST\ 
 [Diskspd Utility: A Robust Storage Testing Tool (superseding SQLIO)](https://gallery.technet.microsoft.com/DiskSpd-a-robust-storage-6cd2f223)
 
-   - Download the Test-RDMA powershell script to C:\TEST\ 
+3. Download the Test-RDMA powershell script to C:\TEST\ 
 [https://github.com/Microsoft/SDN/blob/master/Diagnostics/Test-Rdma.ps1](https://github.com/Microsoft/SDN/blob/master/Diagnostics/Test-Rdma.ps1)
 
-3. Determine the ifIndex value of your target adapter.<p>You can use this value in subsequent steps when you run the script you've downloaded.
+4. Determine the ifIndex value of your target adapter.<p>You can use this value in subsequent steps when you run the script you've downloaded.
 
    ```PowerShell
    Get-NetIPConfiguration -InterfaceAlias "M*" | ft InterfaceAlias,InterfaceIndex,IPv4Address
@@ -390,7 +390,7 @@ The following image depicts the current state of the Hyper-V hosts.
    |M2 |14 |{192.168.1.5}|
    ---
 
-4. Run the PowerShell script.<p>When you run the Test-Rdma.ps1 Windows PowerShell script, you can pass the ifIndex value to the script, along with the IP address of the remote adapter on the same VLAN.
+5. Run the PowerShell script.<p>When you run the Test-Rdma.ps1 Windows PowerShell script, you can pass the ifIndex value to the script, along with the IP address of the remote adapter on the same VLAN.
 
    Run the script with an ifIndex of 14 on the network adapter 192.168.1.5.
    
