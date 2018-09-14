@@ -9,8 +9,8 @@ ms.technology: server-general
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 5d10c5f9-ebac-49a0-b808-c0b1702e7340
-author: elizapo
-ms.author: coreyp-at-msft
+author: coreyp-at-msft
+ms.author: coreyp
 manager: jasgro
 ms.localizationpriority: medium
 ---
