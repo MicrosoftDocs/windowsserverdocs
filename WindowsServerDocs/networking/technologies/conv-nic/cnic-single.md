@@ -219,9 +219,8 @@ The following illustration depicts two Hyper-V hosts, each with one physical net
 
 1. Install Data Center Bridging \(DCB\) on each of your Hyper-V hosts.
 
-   >[!IMPORTANT]
-   >- **Optional** for network configurations that use iWarp for RDMA services.
-   >- **Required** for network configurations that use RoCE \(any version\) for RDMA services.
+   - **Optional** for network configurations that use iWarp for RDMA services.
+   - **Required** for network configurations that use RoCE \(any version\) for RDMA services.
 
    ```PowerShell
    Install-WindowsFeature Data-Center-Bridging
@@ -229,9 +228,8 @@ The following illustration depicts two Hyper-V hosts, each with one physical net
 
 2. Set the QoS policies for SMB-Direct:
 
-   >[!IMPORTANT]
-   >- Optional for network configurations that use iWarp.
-   >- Required for network configurations that use RoCE.
+   - **Optional** for network configurations that use iWarp.
+   - **Required** for network configurations that use RoCE.
    
    In the example command below, the value “3” is arbitrary. You can use any value between 1 and 7 as long as you consistently use the same value throughout the configuration of QoS policies.
 
@@ -275,9 +273,8 @@ The following illustration depicts two Hyper-V hosts, each with one physical net
 
 4. Enable QoS for the local and destination network adapters.
 
-   >[!IMPORTANT]
-   >- **Not needed** for network configurations that use iWarp.
-   >- **Required** for network configurations that use RoCE.
+   - **Not needed** for network configurations that use iWarp.
+   - **Required** for network configurations that use RoCE.
 
    ```PowerShell
    Enable-NetAdapterQos -InterfaceAlias "M1"
@@ -306,7 +303,8 @@ The following illustration depicts two Hyper-V hosts, each with one physical net
    |1|ETS|30%|3 |
    ---
 
-   _**OperationalFlowControl:**_ 
+   _**OperationalFlowControl:**_  
+   
    Priority 3 Enabled  
 
    _**OperationalClassifications:**_  
@@ -376,7 +374,7 @@ The following image depicts the current state of the Hyper-V hosts.
 
 2. Download the [DiskSpd.exe utility](https://aka.ms/diskspd) and extract it into C:\TEST\.
 
-3. Determine the ifIndex value of your target adapter.<p>You can use this value in subsequent steps when you run the script you've downloaded.
+3. Determine the **ifIndex** value of your target adapter.<p>You use this value in subsequent steps when you run the script you've downloaded.
 
    ```PowerShell
    Get-NetIPConfiguration -InterfaceAlias "M*" | ft InterfaceAlias,InterfaceIndex,IPv4Address
@@ -391,9 +389,7 @@ The following image depicts the current state of the Hyper-V hosts.
 
 4. Download the [Test-RDMA powershell script](https://github.com/Microsoft/SDN/blob/master/Diagnostics/Test-Rdma.ps1) to a test folder on your local drive, for example, C:\TEST\.
 
-5. Run the PowerShell script.<p>When you run the Test-Rdma.ps1 Windows PowerShell script, you can pass the ifIndex value to the script, along with the IP address of the remote adapter on the same VLAN.
-
-   Run the script with an ifIndex of 14 on the network adapter 192.168.1.5.
+5. Run the **Test-Rdma.ps1** PowerShell script to pass the ifIndex value to the script, along with the IP address of the remote adapter on the same VLAN.<p>In this example, the script passes the **ifIndex** value of 14 on the remote network adapter IP address 192.168.1.5.
    
    ```PowerShell
     C:\TEST\Test-RDMA.PS1 -IfIndex 14 -IsRoCE $true -RemoteIpAddress 192.168.1.5 -PathToDiskspd C:\TEST\Diskspd-v2.0.17\amd64fre\
@@ -422,16 +418,15 @@ The following image depicts the current state of the Hyper-V hosts.
 
 ## Step 7. Remove the Access VLAN setting
 
-In preparation for creating the Hyper-V switch you must remove the VLAN settings you installed above.  
+In preparation for creating the Hyper-V switch, you must remove the VLAN settings you installed above.  
 
-
-1. Remove the ACCESS VLAN setting from the physical NIC.<p>This prevents the NIC from auto-tagging the egress traffic with the incorrect VLAN ID.  Removing these settings also prevents it from filtering ingress traffic that doesn't match the ACCESS VLAN ID.
+1. Remove the ACCESS VLAN setting from the physical NIC to prevent the NIC from auto-tagging the egress traffic with the incorrect VLAN ID.<p>Removing this setting also prevents it from filtering ingress traffic that doesn't match the ACCESS VLAN ID.
     
    ```PowerShell
    Set-NetAdapterAdvancedProperty -Name M1 -RegistryKeyword VlanID -RegistryValue "0"
    ```    
 
-2. Confirm the VlanID setting and view the results, which show that the VLAN ID value is zero.
+2. Confirm that the **VlanID setting** shows the VLAN ID value as zero.
 
    ```PowerShell    
    Get-NetAdapterAdvancedProperty -name m1 | Where-Object {$_.RegistryKeyword -eq 'VlanID'} 
@@ -470,10 +465,11 @@ The following image depicts Hyper-V Host 1 with a vSwitch.
    |vEthernet \(VMSTEST\) |Hyper-V Virtual Ethernet Adapter #2|27 |Up |E4-1D-2D-07-40-71 |40 Gbps|
    ---
 
-3. Manage the host vNIC.<p>You can manage a host vNIC in two ways. 
+3. Manage the host vNIC in one of two ways. 
 
-   - **NetAdapter** view, which operates based upon the "vEthernet \(VMSTEST\)" name.
-   - **VMNetworkAdapter** view, which drops the "vEthernet" prefix and simply uses the vmswitch name. This view displays some network adapter properties that don't display with the **NetAdapter** view. (Recommended)
+   - **NetAdapter** view operates based upon the "vEthernet \(VMSTEST\)" name. Not all network adapter properties display in this view.
+   - **VMNetworkAdapter** view drops the "vEthernet" prefix and simply uses the vmswitch name. (Recommended) 
+
 
    ```PowerShell
    Get-VMNetworkAdapter –ManagementOS | ft -AutoSize
@@ -504,7 +500,7 @@ The following image depicts Hyper-V Host 1 with a vSwitch.
     PingReplyDetails (RTT) : 0 ms
    ```
 
-5. Assign and view network adapter VLAN settings.
+5. Assign and view the network adapter VLAN settings.
     
    ```PowerShell
    Set-VMNetworkAdapterVlan -VMNetworkAdapterName "VMSTEST" -VlanId "101" -Access -ManagementOS
@@ -551,10 +547,9 @@ The following image depicts the current state of your Hyper-V hosts, including t
    
    _**Results:**_
 
-   ```
     Name: VMSTEST 
     IeeePriorityTag : On
-   ```
+
 
 2. View the network adapter RDMA information. 
 
@@ -564,14 +559,14 @@ The following image depicts the current state of your Hyper-V hosts, including t
 
    _**Results:**_
 
-   >[!NOTE]
-   >If the parameter **Enabled** has the value **False**, it means that RDMA is not enabled.
-    
-
    |Name |InterfaceDescription |Enabled |
    |---- |-------------------- |-------|
    |vEthernet \(VMSTEST\)| Hyper-V Virtual Ethernet Adapter #2|False|
    ---
+
+   >[!NOTE]
+   >If the parameter **Enabled** has the value **False**, it means that RDMA is not enabled.
+    
 
 3. View the network adapter information.
 
@@ -596,15 +591,15 @@ The following image depicts the current state of your Hyper-V hosts, including t
 
    _**Results:**_
 
-   >[!NOTE]
-   >If the parameter **Enabled** has the value **True**, it means that RDMA is enabled.
-
    |Name |InterfaceDescription |Enabled |
    |---- |-------------------- |-------|
    |vEthernet \(VMSTEST\)| Hyper-V Virtual Ethernet Adapter #2|True|
    ---
 
-4. Perform RDMA traffic test.
+   >[!NOTE]
+   >If the parameter **Enabled** has the value **True**, it means that RDMA is enabled.
+
+5. Perform RDMA traffic test.
 
    ```PowerShell    
     C:\TEST\Test-RDMA.PS1 -IfIndex 27 -IsRoCE $true -RemoteIpAddress 192.168.1.5 -PathToDiskspd C:\TEST\Diskspd-v2.0.17\amd64fre\
@@ -636,10 +631,9 @@ The following image depicts the current state of your Hyper-V hosts, including t
     VERBOSE: RDMA traffic test SUCCESSFUL: RDMA traffic was sent to 192.168.1.5
    ```
 
-The final line in this output, "RDMA traffic test SUCCESSFUL: RDMA traffic was sent to 192.168.1.5," demonstrates that you have successfully configured Converged NIC on your adapter.
+The final line in this output, "RDMA traffic test SUCCESSFUL: RDMA traffic was sent to 192.168.1.5," shows that you have successfully configured Converged NIC on your adapter.
 
 ## Related topics
-- [Converged NIC Configuration with a Single Network Adapter](cnic-single.md)
 - [Converged NIC Teamed NIC Configuration](cnic-datacenter.md)
 - [Physical Switch Configuration for Converged NIC](cnic-app-switch-config.md)
 - [Troubleshooting Converged NIC Configurations](cnic-app-troubleshoot.md)
