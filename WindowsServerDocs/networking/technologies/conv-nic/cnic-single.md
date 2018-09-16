@@ -17,16 +17,14 @@ ms.date: 09/14/2018
 
 In this topic, we provide you with the instructions to configure Converged NIC with a single NIC in your Hyper-V host.
 
-The example configuration in this topic describes two Hyper-V hosts, **Hyper-V Host A**, and **Hyper-V Host B**.
+The example configuration in this topic describes two Hyper-V hosts, **Hyper-V Host A**, and **Hyper-V Host B**. Both hosts have a single physical NIC (pNIC) installed, and the NICs are connected to a top of rack \(ToR\) physical switch. In addition, the hosts are located on the same subnet, which is 192.168.1.x/24.
+
+![Hyper-V hosts](../../media/Converged-NIC/1-single-test-conn.jpg)
+
 
 ## Step 1. Test the connectivity between source and destination
 
 Ensure that the physical NIC can connect to the destination host. This test demonstrates connectivity by using Layer 3 \(L3\) - or the IP layer - as well as Layer 2 \(L2\).
-
-The following image shows that both servers have a single physical NIC (pNIC) installed, and the NICs are connected to a top of rack \(ToR\) physical switch. In addition, the servers are located on the same subnet, which is 192.168.1.x/24.
-
-![Hyper-V hosts](../../media/Converged-NIC/1-single-test-conn.jpg)
-
 
 1. View the network adapter properties.
 

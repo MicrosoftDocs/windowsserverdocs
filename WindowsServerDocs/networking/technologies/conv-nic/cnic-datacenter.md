@@ -1,5 +1,5 @@
 ---
-title: Converged NIC in a Teamed NIC configuration
+title: Converged NIC in a Teamed NIC configuration (datacenter)
 description: This topic provides instructions on how to configure Converged NIC in a datacenter configuration in Windows Server 2016.
 ms.prod: windows-server-threshold
 ms.technology: networking
@@ -11,30 +11,21 @@ author: shortpatti
 ms.date: 09/14/2018
 ---
 
-# Converged NIC in a Teamed NIC configuration
+# Converged NIC in a Teamed NIC configuration (datacenter)
 
 >Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 In this topic, we provide you with instructions to deploy Converged NIC in a Teamed NIC configuration with Switch Embedded Teaming \(SET\). 
-The example configuration in this guide depicts two Hyper-V hosts, Hyper-V Host 1, and Hyper-V Host 2.
 
-## Test Connectivity Between Source and Destination
-
-This section provides the steps required to test connectivity between source and destination Hyper-V hosts.
-
-The following illustration depicts two Hyper-V hosts, **Hyper-V Host 1** and **Hyper-V Host 2**. 
-
-Both Hyper-V hosts have two network adapters. On each host, one adapter is connected to the 192.168.1.x/24 subnet, and one adapter is connected to the 192.168.2.x/24 subnet.
+The example configuration in this topic describes two Hyper-V hosts, **Hyper-V Host 1** and **Hyper-V Host 2**. Both hosts have two network adapters. On each host, one adapter is connected to the 192.168.1.x/24 subnet, and one adapter is connected to the 192.168.2.x/24 subnet.
 
 ![Hyper-V hosts](../../media/Converged-NIC/1-datacenter-test-conn.jpg)
 
-### Test NIC Connectivity to the Hyper-V Virtual Switch
+## Step 1. Test the connectivity between source and destination
 
-By using this step, you can ensure that the physical NIC, for which you will later create a Hyper-V Virtual Switch, can connect to the destination host. 
+Ensure that the physical NIC can connect to the destination host.  This test demonstrates connectivity by using Layer 3 \(L3\) - or the IP layer - as well as the Layer 2 \(L2\) virtual local area networks \(VLAN\).
 
-This test demonstrates connectivity by using Layer 3 \(L3\) - or the IP layer - as well as the Layer 2 \(L2\) virtual local area networks \(VLAN\).
-
-You can use the following Windows PowerShell command to obtain the properties of the network adapter.
+1. view the network adapter properties.
 
     Get-NetAdapter -Name "Test-40G-1" | ft -AutoSize
      
