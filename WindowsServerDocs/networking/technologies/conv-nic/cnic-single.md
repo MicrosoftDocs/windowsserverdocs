@@ -93,9 +93,7 @@ Ensure that the physical NIC can connect to the destination host. This test demo
 
 ## Step 2. Ensure that source and destination can communicate
 
-In some cases, you might need to disable Windows Firewall with Advanced Security to successfully perform this test. If you disable the firewall, keep security in mind and ensure that your configuration meets your organization's security requirements.
-
-In the following example, we use the **Test-NetConnection** Windows PowerShell command, but if you can use the **ping** command if you prefer. 
+In this step, we use the **Test-NetConnection** Windows PowerShell command, but if you can use the **ping** command if you prefer. 
 
 >[!TIP]
 >If you're certain that your hosts can communicate with each other, you can skip this step.
@@ -119,13 +117,15 @@ In the following example, we use the **Test-NetConnection** Windows PowerShell c
    |PingReplyDetails \(RTT\)|0 ms|
    ---
    
+   In some cases, you might need to disable Windows Firewall with Advanced Security to successfully perform this test. If you disable the firewall, keep security in mind and ensure that your configuration meets your organization's security requirements.
+
 2. Disable all firewall profiles.
 
    ```PowerShell
    Set-NetFirewallProfile -All -Enabled False
    ```
     
-3. After you disable the firewall, test the connection.
+3. After disabling the firewall profiles, test the connection again. 
 
    ```PowerShell
    Test-NetConnection 192.168.1.5
@@ -156,7 +156,7 @@ Because a switch can host multiple VLANs, it is necessary for the Top of Rack \(
 >[!NOTE]
 >Consult your ToR switch documentation for instructions on how to configure Trunk mode on the switch.
 
-The following illustration depicts two Hyper-V hosts, each with one physical network adapter, and each configured to communicate on VLAN 101.
+The following image shows two Hyper-V hosts, each with one physical network adapter, and each configured to communicate on VLAN 101.
 
 ![Configure virtual local area networks](../../media/Converged-NIC/2-single-configure-vlans.jpg)
 
@@ -182,7 +182,7 @@ The following illustration depicts two Hyper-V hosts, each with one physical net
    |M1|VLAN ID|101|VlanID|{101}|
    ---
 
-2. Ensure the VLAN ID takes effect.
+2. Restart the network adapter to apply the VLAN ID.
 
    ```PowerShell
    Restart-NetAdapter -Name "M1"
@@ -204,7 +204,7 @@ The following illustration depicts two Hyper-V hosts, each with one physical net
    >[!IMPORTANT]
    >It might take several seconds for the device to restart and become available on the network. 
 
-4. Verify the connectivity.<p>Once the network adapters have restarted, we recommend that you verify the connectivity by applying the VLAN tag to both adapters. If connectivity fails, inspect the switch VLAN configuration or destination participation in the same VLAN. 
+4. Verify the connectivity.<p>If connectivity fails, inspect the switch VLAN configuration or destination participation in the same VLAN. 
 
    ```PowerShell
    Test-NetConnection 192.168.1.5
@@ -213,7 +213,7 @@ The following illustration depicts two Hyper-V hosts, each with one physical net
 ## Step 4. Configure Quality of Service \(QoS\)
 
 >[!NOTE]
->You must perform all of the following DCB and QoS configuration steps on all servers that are intended to communicate with each other.
+>You must perform all of the following DCB and QoS configuration steps on all hosts that are intended to communicate with each other.
 
 1. Install Data Center Bridging \(DCB\) on each of your Hyper-V hosts.
 
@@ -248,7 +248,7 @@ The following illustration depicts two Hyper-V hosts, each with one physical net
    |PriorityValue|3 |
  ---
 
-3. For RoCE deployments, turn on **Priority Flow Control** for SMB traffic, which is required for RoCE but is unnecessary when you are using iWarp.
+3. For RoCE deployments, turn on **Priority Flow Control** for SMB traffic, which is not required for iWarp.
 
    ```PowerShell
    Enable-NetQosFlowControl -priority 3
@@ -313,7 +313,7 @@ The following illustration depicts two Hyper-V hosts, each with one physical net
    |NetDirect| 445|3|
    ---
 
-5. Reserve a percentage of the Bandwidth for SMB Direct \(RDMA\).
+5. Reserve a percentage of the bandwidth for SMB Direct \(RDMA\).
 
     In this example, a 30% bandwidth reservation is used. You should select a value that represents what you expect your storage traffic requires. 
 
@@ -354,7 +354,7 @@ By default, when using a Mellanox adapter, the attached debugger blocks NetQos, 
 
 You want to ensure that the fabric is configured correctly prior to creating a vSwitch and transitioning to RDMA (Converged NIC). 
 
-The following image depicts the current state of the Hyper-V hosts.
+The following image shows the current state of the Hyper-V hosts.
 
 ![Test RDMA](../../media/Converged-NIC/4-single-test-rdma.jpg)
 
@@ -370,9 +370,7 @@ The following image depicts the current state of the Hyper-V hosts.
    |M1| Mellanox ConnectX-3 Pro Ethernet Adapter |True|
    ---
 
-2. Download the [DiskSpd.exe utility](https://aka.ms/diskspd) and extract it into C:\TEST\.
-
-3. Determine the **ifIndex** value of your target adapter.<p>You use this value in subsequent steps when you run the script you've downloaded.
+2. Determine the **ifIndex** value of your target adapter.<p>You use this value in subsequent steps when you run the script you download.
 
    ```PowerShell
    Get-NetIPConfiguration -InterfaceAlias "M*" | ft InterfaceAlias,InterfaceIndex,IPv4Address
@@ -384,6 +382,8 @@ The following image depicts the current state of the Hyper-V hosts.
    |-------------- |-------------- |-----------|
    |M2 |14 |{192.168.1.5}|
    ---
+
+3. Download the [DiskSpd.exe utility](https://aka.ms/diskspd) and extract it into C:\TEST\.
 
 4. Download the [Test-RDMA powershell script](https://github.com/Microsoft/SDN/blob/master/Diagnostics/Test-Rdma.ps1) to a test folder on your local drive, for example, C:\TEST\.
 
@@ -431,7 +431,7 @@ In preparation for creating the Hyper-V switch, you must remove the VLAN setting
    ```  
 
 
-## Step 8. Create a Hyper-V Virtual Switch on your Hyper-V hosts
+## Step 8. Create a Hyper-V vSwitch on your Hyper-V hosts
 
 The following image depicts Hyper-V Host 1 with a vSwitch.
 
