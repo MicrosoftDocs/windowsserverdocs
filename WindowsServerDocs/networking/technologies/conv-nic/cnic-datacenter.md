@@ -1105,18 +1105,13 @@ The TEST-40G-1 and TEST-40G-2 physical adapters still have an ACCESS VLAN of 101
     vEthernet (MGT)   Hyper-V Virtual Ethernet Adapter #2  False
    ```
 
-### Validate RDMA functionality from the remote system
+11. Validate RDMA functionality from the remote system to the local system, which has a vSwitch, testing both adapters that are members of the vSwitch SET team.<p>Because both Host vNICs \(SMB1 and SMB2\) are assigned to VLAN 102, you can select the VLAN 102 adapter on the remote system. <p>In this example, the NIC Test-40G-2 does RDMA to SMB1 (192.168.2.111) and SMB2 (192.168.2.222).
 
-You can use this section to validate RDMA functionality from the remote system to the local system, which has a vSwitch, thereby testing both adapters that are members of the vSwitch SET team.
+   >[!TIP]
+   >You might need to disable the Firewall on this system.  Consult your fabric policy for details.
 
-Because both Host vNICs \(SMB1 and SMB2\) are assigned to VLAN 102, you can select the VLAN 102 adapter on the remote system.  
-
-In this process, the NIC Test-40G-2 does RDMA to SMB1 (192.168.2.111) and SMB2 (192.168.2.222).
-
-Optional: You might need to disable the Firewall on this system.  Consult your fabric policy for details.
-
-    
-    Set-NetFirewallProfile -All -Enabled False
+   
+       Set-NetFirewallProfile -All -Enabled False
     
     Get-NetAdapterAdvancedProperty -Name "Test-40G-2"
     
@@ -1177,11 +1172,7 @@ Optional: You might need to disable the Firewall on this system.  Consult your f
     VERBOSE: Enabling RDMA on adapters that are not part of this test. RDMA was disabled on them prior to sending RDMA traffic.
     VERBOSE: RDMA traffic test SUCCESSFUL: RDMA traffic was sent to 192.168.2.222
     
-### Test for RDMA traffic from the local to the remote computer
-
-In this section you can verify that RDMA traffic is sent from the local computer to the remote computer.
-
-You can use the following example commands to test and view the traffic flow.
+12. Test for RDMA traffic from the local to the remote computer.
 
     
     Get-NetAdapter | ft –AutoSize
@@ -1239,13 +1230,10 @@ You can use the following example commands to test and view the traffic flow.
     VERBOSE: Enabling RDMA on adapters that are not part of this test. RDMA was disabled on them prior to sending RDMA traffic.
     VERBOSE: RDMA traffic test SUCCESSFUL: RDMA traffic was sent to 192.168.2.5
     
-The final line in this output, "RDMA traffic test SUCCESSFUL: RDMA traffic was sent to 192.168.2.5," demonstrates that you have successfully configured Converged NIC on your adapter.
+The final line in this output, "RDMA traffic test SUCCESSFUL: RDMA traffic was sent to 192.168.2.5," shows that you have successfully configured Converged NIC on your adapter.
 
-## All topics in this guide
-
-This guide contains the following topics.
+## Related topics 
 
 - [Converged NIC Configuration with a Single Network Adapter](cnic-single.md)
-- [Converged NIC Teamed NIC Configuration](cnic-datacenter.md)
 - [Physical Switch Configuration for Converged NIC](cnic-app-switch-config.md)
 - [Troubleshooting Converged NIC Configurations](cnic-app-troubleshoot.md)
