@@ -365,7 +365,7 @@ The following image shows two Hyper-V hosts with two network adapters each that 
    ```PowerShell
    Enable-NetQosFlowControl -priority 3
    Get-NetQosFlowControl
-   ---
+   ```
    
    Results:
    
@@ -551,13 +551,11 @@ By default, the attached debugger blocks NetQos.
 ```PowerShell
 Set-ItemProperty HKLM:"\SYSTEM\CurrentControlSet\Services\NDIS\Parameters" AllowFlowControlUnderDebugger -type DWORD -Value 1 –Force
 Get-ItemProperty HKLM:"\SYSTEM\CurrentControlSet\Services\NDIS\Parameters" | ft AllowFlowControlUnderDebugger
+
+AllowFlowControlUnderDebugger
+-----------------------------
+1
 ```
-
-Results:
-
-    AllowFlowControlUnderDebugger
-    -----------------------------
-    1
 
 ## Step 6. Verify the RDMA configuration \(Mode 1\) 
 
@@ -675,16 +673,14 @@ The following image shows Hyper-V Host 1 with a vSwitch.
 
    ```PowerShell
    Get-VMSwitchTeam -Name "VMSTEST" | fl
+
+   Name: VMSTEST  
+   Id: ad9bb542-dda2-4450-a00e-f96d44bdfbec  
+   NetAdapterInterfaceDescription: {Mellanox ConnectX-3 Pro Ethernet Adapter, Mellanox ConnectX-3 Pro Ethernet Adapter #2}  
+   TeamingMode: SwitchIndependent  
+   LoadBalancingAlgorithm: Dynamic   
    ```
    
-   Results:
-
-   **Name**: VMSTEST  
-   **Id**: ad9bb542-dda2-4450-a00e-f96d44bdfbec  
-   **NetAdapterInterfaceDescription**: {Mellanox ConnectX-3 Pro Ethernet Adapter, Mellanox ConnectX-3 Pro Ethernet Adapter #2}  
-   **TeamingMode**: SwitchIndependent  
-   **LoadBalancingAlgorithm**: Dynamic   
-
 3. Display two views of the host vNIC
 
    ```PowerShell
@@ -778,35 +774,35 @@ You must remove the ACCESS VLAN setting to prevent both auto-tagging the egress 
    ```
 
    
-   >If your results are not similar to the example results and ping fails with the message "WARNING: Ping to 192.168.1.5 failed -- Status: DestinationHostUnreachable," confirm that the “vEthernet (VMSTEST)” has the proper IP address.
-   >
-   >```PowerShell
-   >Get-NetIPAddress -InterfaceAlias "vEthernet (VMSTEST)"
-   >```
-   >
-   >If the IP address is not set, correct the issue.
-   >
-   >```PowerShell
-   >New-NetIPAddress -InterfaceAlias "vEthernet (VMSTEST)" -IPAddress 192.168.1.3 -PrefixLength 24
-   >```
-   > 
-   >Results: 
-   > 
-   >```
-   >IPAddress : 192.168.1.3
-   >InterfaceIndex: 37
-   >InterfaceAlias: vEthernet (VMSTEST)
-   >AddressFamily : IPv4
-   >Type  : Unicast
-   >PrefixLength  : 24
-   >PrefixOrigin  : Manual
-   >SuffixOrigin  : Manual
-   >AddressState  : Tentative
-   >ValidLifetime : Infinite ([TimeSpan]::MaxValue)
-   >PreferredLifetime : Infinite ([TimeSpan]::MaxValue)
-   >SkipAsSource  : False
-   >PolicyStore   : ActiveStore
-   ```
+    >If your results are not similar to the example results and ping fails with the message "WARNING: Ping to 192.168.1.5 failed -- Status: DestinationHostUnreachable," confirm that the “vEthernet (VMSTEST)” has the proper IP address.
+    >
+    >```PowerShell
+    >Get-NetIPAddress -InterfaceAlias "vEthernet (VMSTEST)"
+    >```
+    >
+    >If the IP address is not set, correct the issue.
+    >
+    >```PowerShell
+    >New-NetIPAddress -InterfaceAlias "vEthernet (VMSTEST)" -IPAddress 192.168.1.3 -PrefixLength 24
+    >```
+    > 
+    >Results: 
+    > 
+    >```
+    >IPAddress : 192.168.1.3
+    >InterfaceIndex: 37
+    >InterfaceAlias: vEthernet (VMSTEST)
+    >AddressFamily : IPv4
+    >Type  : Unicast
+    >PrefixLength  : 24
+    >PrefixOrigin  : Manual
+    >SuffixOrigin  : Manual
+    >AddressState  : Tentative
+    >ValidLifetime : Infinite ([TimeSpan]::MaxValue)
+    >PreferredLifetime : Infinite ([TimeSpan]::MaxValue)
+    >SkipAsSource  : False
+    >PolicyStore   : ActiveStore
+    >```
     
 4. Rename the Management NIC.
 
