@@ -1,6 +1,6 @@
 ---
 title: Converged NIC in a Teamed NIC configuration (datacenter)
-description: This topic provides instructions on how to configure Converged NIC in a datacenter configuration in Windows Server 2016.
+description: In this topic, we provide you with instructions to deploy Converged NIC in a Teamed NIC configuration with Switch Embedded Teaming (SET).
 ms.prod: windows-server-threshold
 ms.technology: networking
 ms.topic: article
