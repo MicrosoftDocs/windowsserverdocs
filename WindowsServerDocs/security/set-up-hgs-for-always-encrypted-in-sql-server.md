@@ -23,7 +23,7 @@ For the rest of this topic, we'll refer to the machine hosting SQL Server as sim
 
 There are two, mutually exclusive ways for the application to attest: 
 
-- Host key attestation authorizes a host by proving it possesses a known and trusted private key. Host key attestation and either a physical or a virtual host machine is recommended for pre-production environments.
+- Host key attestation authorizes a host by proving it possesses a known and trusted private key. Host key attestation and either a physical or a virtual host machine running SQL Server is recommended for pre-production environments.
 - TPM attestation validates hardware measurements to make sure a host runs only the correct binaries and security policies. TPM attestation and a physical host machine (not a virtual machine) running SQL Server is recommended for production environments.
 
 For more information about the Host Guardian Service and what it can measure, see [Guarded fabric and shielded VMs overview](https://docs.microsoft.com/windows-server/virtualization/guarded-fabric-shielded-vm/guarded-fabric-and-shielded-vms). 
