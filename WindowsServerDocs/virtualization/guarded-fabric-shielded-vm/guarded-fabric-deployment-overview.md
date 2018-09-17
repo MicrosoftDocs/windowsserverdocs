@@ -8,7 +8,7 @@ manager: dongill
 author: justinha
 ms.author: justinha
 ms.technology: security-guarded-fabric
-ms.date: 08/29/2018
+ms.date: 09/17/2018
 ---
 
 # Quick start for guarded fabric deployment
@@ -55,10 +55,10 @@ In practice, one decision must be made up front: the [mode of attestation](guard
 There are two means—two mutually exclusive modes—by which HGS can measure that a Hyper-V host is healthy. 
 When you initialize HGS, you need to choose the mode:  
 
-- Admin-based attestation, or AD mode, is less secure but easier to adopt  
+- Host key attestation, or key mode, is less secure but easier to adopt  
 - TPM-based attestation, or TPM mode, is more secure but requires more configuration and specific hardware
 
-If necessary, you can deploy in AD mode using existing Hyper-V hosts that have been upgraded to Windows Server 2016 Datacenter edition, and then convert to the more secure TPM mode when supporting server hardware (including TPM 2.0) is available. 
+If necessary, you can deploy in key mode using existing Hyper-V hosts that have been upgraded to Windows Server 2016 Datacenter edition, and then convert to the more secure TPM mode when supporting server hardware (including TPM 2.0) is available. 
 
 Now that you know what the pieces are, let’s walk through an example of the deployment model.
 
@@ -76,7 +76,7 @@ The Hyper-V hosts need to run Windows Server 2016 Datacenter edition. If you are
 
 ## Step 2: Deploy the Host Guardian Service (HGS)
 
-Then install the HGS server role and deploy it as a three-node cluster, like the Relecloud.com example in the following picture. 
+Then install the HGS server role and deploy it as a three-node cluster, like the relecloud.com example in the following picture. 
 This requires three PowerShell cmdlets:
 
 - To add the HGS role, use `Install-WindowsFeature` 
@@ -137,7 +137,7 @@ The disk signature is computed over the OS partition of the virtual disk.
 If anything changes on the OS partition, the signature will also change.
 This allows users to strongly identify which disks they trust by specifying the appropriate signature.
 
-Review the [template disk requirements](guarded-fabric-create-a-shielded-vm-template.md#prepare-an-operating-system-vhdx) before you get started. 
+Review the [template disk requirements](guarded-fabric-create-a-shielded-vm-template.md) before you get started. 
 
 ## Step 5: Create a shielding data file 
 
@@ -169,4 +169,4 @@ In Windows Azure Pack, the experience is even easier than creating a regular VM 
 ## Next step
 
 >[!div class="nextstepaction"]
-[HGS Prerequisites »](guarded-fabric-prepare-for-hgs.md)
+[HGS Prerequisites](guarded-fabric-prepare-for-hgs.md)
