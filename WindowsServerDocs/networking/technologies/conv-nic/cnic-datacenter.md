@@ -1067,7 +1067,8 @@ The TEST-40G-1 and TEST-40G-2 physical adapters still have an ACCESS VLAN of 101
     ```PowerShell 
     Test-NetConnection 192.168.2.111
     ```
-	
+
+	<br>
 	
     _**Results:**_ 
 
@@ -1080,12 +1081,12 @@ The TEST-40G-1 and TEST-40G-2 physical adapters still have an ACCESS VLAN of 101
     PingSucceeded  : True
     PingReplyDetails (RTT) : 0 ms
     ```
-    <br>
 
     ```PowerShell   
     Test-NetConnection 192.168.2.222
     ```
-	
+	    <br>
+
     _**Results:**_ 
 
     ```
@@ -1097,13 +1098,14 @@ The TEST-40G-1 and TEST-40G-2 physical adapters still have an ACCESS VLAN of 101
     PingReplyDetails (RTT) : 0 ms 
     ```
    
-    <br>
+
    
     ```PowerShell
     Set-VMNetworkAdapter -ManagementOS -Name "SMB1" -IeeePriorityTag on
     Set-VMNetworkAdapter -ManagementOS -Name "SMB2" -IeeePriorityTag on
     Get-VMNetworkAdapter -ManagementOS -Name "SMB*" | fl Name,SwitchName,IeeePriorityTag,Status
     ```
+    <br>
 	
     _**Results:**_   
 	
@@ -1119,12 +1121,13 @@ The TEST-40G-1 and TEST-40G-2 physical adapters still have an ACCESS VLAN of 101
     Status  : {Ok}
     ```
 
-	<br>
+
 	
     ```PowerShell
     Get-NetAdapterRdma -Name "vEthernet*" | sort Name | ft -AutoSize
     ```
-
+	<br>
+	
     _**Results:**_ 
 
     ```
@@ -1135,13 +1138,14 @@ The TEST-40G-1 and TEST-40G-2 physical adapters still have an ACCESS VLAN of 101
     vEthernet (MGT)   Hyper-V Virtual Ethernet Adapter #2  False   
     ```
 	
-    <br>
    
     ```PowerShell
     Enable-NetAdapterRdma -Name "vEthernet (SMB1)"
     Enable-NetAdapterRdma -Name "vEthernet (SMB2)"
     Get-NetAdapterRdma -Name "vEthernet*" | sort Name | fl *
     ```
+
+	<br>
 	
     _**Results:**_ 
 
