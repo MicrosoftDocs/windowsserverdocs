@@ -771,14 +771,14 @@ You must remove the ACCESS VLAN setting to prevent both auto-tagging the egress 
    
    _**Results:**_  
    
-   ```
+
    ComputerName   : 192.168.1.5
    RemoteAddress  : 192.168.1.5
    InterfaceAlias : vEthernet (VMSTEST)
    SourceAddress  : 192.168.1.3
    PingSucceeded  : True
    PingReplyDetails (RTT) : 0 ms
-   ```  
+
    
    
    
