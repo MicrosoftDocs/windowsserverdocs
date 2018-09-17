@@ -20,10 +20,10 @@ This topic discusses how to migrate files and configuration from one server to a
 1. Check the [Storage Migration Service requirements](overview.md#requirements) and install [Windows Admin Center](../../manage/windows-admin-center/understand/windows-admin-center.md) on your PC or a management server if you haven't already.
 2. In Windows Admin Center, navigate to the orchestrator server (or the destination server if that's what you're using to manage the migration) > **Server Manager** > **Storage Migration Service**.
 1. Select **Install** to install Storage Migration Service and its required components.
-1. To optionally double the transfer performance on any destination servers that are running Windows Server 2019, install the Storage Migration Service proxy. <br>To do so, navigate to the destination server > **Server Manager** > **Roles and features**, select **Storage Migration Service Proxy**, and then select **Install**.
+1. Install the Storage Migration Service proxy on any destination servers running Windows Server 2019. This doubles the transfer speed and opens all the necessary firewall ports for you. <br>To do so, navigate to the destination server > **Server Manager** > **Roles and features**, select **Storage Migration Service Proxy**, and then select **Install**.
 1. 
 1. 
-1. **Either install the proxy, or open the firewall ports**
+1. **If you're using destination servers running Windows Server 2016 or Windows Server 2012 R2, open the following firewall ports on them:**
 
 ## Step 1: Inventory the source servers to figure out what to migrate
 
