@@ -15,15 +15,17 @@ Storage Migration Service is a technology included with Windows Server that enab
 
 This topic discusses how to migrate files and configuration from one server to another by using Storage Migration Service and Windows Admin Center.
 
-## Install Storage Migration Service
+## Install Storage Migration Service and open firewall ports
 
 1. Check the [Storage Migration Service requirements](overview.md#requirements) and install [Windows Admin Center](../../manage/windows-admin-center/understand/windows-admin-center.md) on your PC or a management server if you haven't already.
 2. In Windows Admin Center, navigate to the orchestrator server (or the destination server if that's what you're using to manage the migration) > **Server Manager** > **Storage Migration Service**.
 1. Select **Install** to install Storage Migration Service and its required components.
-1. Install the Storage Migration Service proxy on any destination servers running Windows Server 2019. This doubles the transfer speed and opens all the necessary firewall ports for you. <br>To do so, navigate to the destination server > **Server Manager** > **Roles and features**, select **Storage Migration Service Proxy**, and then select **Install**.
-1. 
-1. 
-1. **If you're using destination servers running Windows Server 2016 or Windows Server 2012 R2, open the following firewall ports on them:**
+1. Install the Storage Migration Service proxy on any source or destination servers running Windows Server 2019. This doubles the transfer speed and opens all the necessary firewall ports for you. <br>To do so, navigate to the destination server > **Server Manager** > **Roles and features**, select **Storage Migration Service Proxy**, and then select **Install**.
+1. If you're using source or destination servers running Windows Server 2016 or earlier, in Windows Admin Center, navigate to each server > **Firewall** > **Incoming rules** and then check that the following rules are enabled (there's a good chance they already are):
+    - File and Printer Sharing (SMB-In)
+    - Netlogon Service (NP-In)
+    - Windows Management Instrumentation (DCOM-In)
+    - Windows Management Instrumentation (WMI-In)
 
 ## Step 1: Inventory the source servers to figure out what to migrate
 
