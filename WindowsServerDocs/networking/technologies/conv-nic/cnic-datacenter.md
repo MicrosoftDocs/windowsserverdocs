@@ -665,7 +665,7 @@ The following image shows Hyper-V Host 1 with a vSwitch.
    New-VMSwitch –Name "VMSTEST" –NetAdapterName "TEST-40G-1","TEST-40G-2" -EnableEmbeddedTeaming $true -AllowManagementOS $true
    ```
    
-   Result:
+   _**Result:**_
 
    |Name |SwitchType |NetAdapterInterfaceDescription|
    |---- |---------- |------------------------------|
@@ -715,19 +715,15 @@ The following image shows Hyper-V Host 1 with a vSwitch.
 
    ```PowerShell
    Test-NetConnection 192.168.1.5 
-   ```
-   
-   _**Results:**_
 
-   ```
-    WARNING: Ping to 192.168.1.5 failed -- Status: DestinationHostUnreachable
+   WARNING: Ping to 192.168.1.5 failed -- Status: DestinationHostUnreachable
     
-    ComputerName   : 192.168.1.5
-    RemoteAddress  : 192.168.1.5
-    InterfaceAlias : vEthernet (CORP-External-Switch)
-    SourceAddress  : 10.199.48.170
-    PingSucceeded  : False
-    PingReplyDetails (RTT) : 0 ms
+   ComputerName   : 192.168.1.5
+   RemoteAddress  : 192.168.1.5
+   InterfaceAlias : vEthernet (CORP-External-Switch)
+   SourceAddress  : 10.199.48.170
+   PingSucceeded  : False
+   PingReplyDetails (RTT) : 0 ms
    ```
    
 ## Step 8. Remove the Access VLAN setting
@@ -758,14 +754,14 @@ You must remove the ACCESS VLAN setting to prevent both auto-tagging the egress 
 3. Test the network connection.
 
    ```PowerShell
-    Test-NetConnection 192.168.1.5
+   Test-NetConnection 192.168.1.5
 
-    ComputerName   : 192.168.1.5
-    RemoteAddress  : 192.168.1.5
-    InterfaceAlias : vEthernet (VMSTEST)
-    SourceAddress  : 192.168.1.3
-    PingSucceeded  : True
-    PingReplyDetails (RTT) : 0 ms
+   ComputerName   : 192.168.1.5
+   RemoteAddress  : 192.168.1.5
+   InterfaceAlias : vEthernet (VMSTEST)
+   SourceAddress  : 192.168.1.3
+   PingSucceeded  : True
+   PingReplyDetails (RTT) : 0 ms
    ```
 
    
@@ -873,66 +869,54 @@ The TEST-40G-1 and TEST-40G-2 physical adapters still have an ACCESS VLAN of 101
 1. Remove the ACCESS VLAN setting from the physical NIC to prevent it from both auto-tagging the egress traffic with the incorrect VLAN ID and to prevent it from filtering ingress traffic that doesn’t match the ACCESS VLAN ID.
 
    ```PowerShell    
-    New-NetIPAddress -InterfaceAlias "vEthernet (SMB1)" -IPAddress 192.168.2.111 -PrefixLength 24
-   ```
-   
-   _**Results:**_ 
-   
-   ```
-    IPAddress : 192.168.2.111
-    InterfaceIndex: 40
-    InterfaceAlias: vEthernet (SMB1)
-    AddressFamily : IPv4
-    Type  : Unicast
-    PrefixLength  : 24
-    PrefixOrigin  : Manual
-    SuffixOrigin  : Manual
-    AddressState  : Invalid
-    ValidLifetime : Infinite ([TimeSpan]::MaxValue)
-    PreferredLifetime : Infinite ([TimeSpan]::MaxValue)
-    SkipAsSource  : False
-    PolicyStore   : PersistentStore
+   New-NetIPAddress -InterfaceAlias "vEthernet (SMB1)" -IPAddress 192.168.2.111 -PrefixLength 24
+ 
+   IPAddress : 192.168.2.111
+   InterfaceIndex: 40
+   InterfaceAlias: vEthernet (SMB1)
+   AddressFamily : IPv4
+   Type  : Unicast
+   PrefixLength  : 24
+   PrefixOrigin  : Manual
+   SuffixOrigin  : Manual
+   AddressState  : Invalid
+   ValidLifetime : Infinite ([TimeSpan]::MaxValue)
+   PreferredLifetime : Infinite ([TimeSpan]::MaxValue)
+   SkipAsSource  : False
+   PolicyStore   : PersistentStore
    ```
 
 2. Test the remote VLAN 102 adapter.
     
    ```PowerShell
-    Test-NetConnection 192.168.2.5 
-   ```
-   
-   _**Results:**_ 
-    
-   ```
-    ComputerName   : 192.168.2.5
-    RemoteAddress  : 192.168.2.5
-    InterfaceAlias : vEthernet (SMB1)
-    SourceAddress  : 192.168.2.111
-    PingSucceeded  : True
-    PingReplyDetails (RTT) : 0 ms
+   Test-NetConnection 192.168.2.5 
+
+   ComputerName   : 192.168.2.5
+   RemoteAddress  : 192.168.2.5
+   InterfaceAlias : vEthernet (SMB1)
+   SourceAddress  : 192.168.2.111
+   PingSucceeded  : True
+   PingReplyDetails (RTT) : 0 ms
    ```
     
 3. Add a new IP address for interface vEthernet \(SMB2\).
 
    ```PowerShell
-    New-NetIPAddress -InterfaceAlias "vEthernet (SMB2)" -IPAddress 192.168.2.222 -PrefixLength 24 
-   ```
-   
-   _**Results:**_ 
-   
-   ```
-    IPAddress : 192.168.2.222
-    InterfaceIndex: 44
-    InterfaceAlias: vEthernet (SMB2)
-    AddressFamily : IPv4
-    Type  : Unicast
-    PrefixLength  : 24
-    PrefixOrigin  : Manual
-    SuffixOrigin  : Manual
-    AddressState  : Invalid
-    ValidLifetime : Infinite ([TimeSpan]::MaxValue)
-    PreferredLifetime : Infinite ([TimeSpan]::MaxValue)
-    SkipAsSource  : False
-    PolicyStore   : PersistentStore
+   New-NetIPAddress -InterfaceAlias "vEthernet (SMB2)" -IPAddress 192.168.2.222 -PrefixLength 24 
+
+   IPAddress : 192.168.2.222
+   InterfaceIndex: 44
+   InterfaceAlias: vEthernet (SMB2)
+   AddressFamily : IPv4
+   Type  : Unicast
+   PrefixLength  : 24
+   PrefixOrigin  : Manual
+   SuffixOrigin  : Manual
+   AddressState  : Invalid
+   ValidLifetime : Infinite ([TimeSpan]::MaxValue)
+   PreferredLifetime : Infinite ([TimeSpan]::MaxValue)
+   SkipAsSource  : False
+   PolicyStore   : PersistentStore
    ```
    
 4. Test the connection again.    
@@ -941,18 +925,18 @@ The TEST-40G-1 and TEST-40G-2 physical adapters still have an ACCESS VLAN of 101
 5. Place the RDMA Host vNICs on the pre-existing VLAN 102.
 
    ```PowerShell
-    Set-VMNetworkAdapterVlan -VMNetworkAdapterName "SMB1" -VlanId "102" -Access -ManagementOS
-    Set-VMNetworkAdapterVlan -VMNetworkAdapterName "SMB2" -VlanId "102" -Access -ManagementOS
+   Set-VMNetworkAdapterVlan -VMNetworkAdapterName "SMB1" -VlanId "102" -Access -ManagementOS
+   Set-VMNetworkAdapterVlan -VMNetworkAdapterName "SMB2" -VlanId "102" -Access -ManagementOS
     
-    Get-VMNetworkAdapterVlan -ManagementOS
+   Get-VMNetworkAdapterVlan -ManagementOS
   
-    VMName VMNetworkAdapterName Mode VlanList
-    ------ -------------------- ---- --------
-       SMB1 Access   102 
-       Mgt  Access   101 
-       SMB2 Access   102 
-       CORP-External-Switch Untagged
-   ```
+   VMName VMNetworkAdapterName Mode VlanList
+   ------ -------------------- ---- --------
+      SMB1 Access   102 
+      Mgt  Access   101 
+      SMB2 Access   102 
+      CORP-External-Switch Untagged
+  ```
    
 6. Inspect the mapping of SMB1 and SMB2 to the underlying physical NICs under the vSwitch SET Team.<p>The association of Host vNIC to Physical NICs is random and subject to rebalancing during creation and destruction. In this circumstance, you can use an indirect mechanism to check the current association. The MAC addresses of SMB1 and SMB2 are associated with the NIC Team member TEST-40G-2. This is not ideal because Test-40G-1 does not have an associated SMB Host vNIC, and will not allow for utilization of RDMA traffic over the link until an SMB Host vNIC is mapped to it.
 
@@ -968,22 +952,22 @@ The TEST-40G-1 and TEST-40G-2 physical adapters still have an ACCESS VLAN of 101
     TEST-40G-2 2   00-15-5D-30-AA-01 1020:17
    ```
    
-   ```PowerShhell
-    Get-VMNetworkAdapter -ManagementOS
+   ```PowerShell
+   Get-VMNetworkAdapter -ManagementOS
   
-    Name IsManagementOs VMName SwitchName   MacAddress   Status IPAddresses
-    ---- -------------- ------ ----------   ----------   ------ -----------
-    CORP-External-Switch True  CORP-External-Switch 001B785768AA {Ok}  
-    Mgt  True  VMSTEST  E41D2D074071 {Ok}  
-    SMB1 True  VMSTEST  00155D30AA00 {Ok}  
-    SMB2 True  VMSTEST  00155D30AA01 {Ok}  
+   Name IsManagementOs VMName SwitchName   MacAddress   Status IPAddresses
+   ---- -------------- ------ ----------   ----------   ------ -----------
+   CORP-External-Switch True  CORP-External-Switch 001B785768AA {Ok}  
+   Mgt  True  VMSTEST  E41D2D074071 {Ok}  
+   SMB1 True  VMSTEST  00155D30AA00 {Ok}  
+   SMB2 True  VMSTEST  00155D30AA01 {Ok}  
    ```
 
 7. View the network adapter team mapping.<p>The results should not return information because you have not yet performed mapping.
     
    ```PowerShell
-    Get-VMNetworkAdapterTeamMapping -ManagementOS -SwitchName VMSTEST -VMNetworkAdapterName SMB1
-    Get-VMNetworkAdapterTeamMapping -ManagementOS -SwitchName VMSTEST -VMNetworkAdapterName SMB2
+   Get-VMNetworkAdapterTeamMapping -ManagementOS -SwitchName VMSTEST -VMNetworkAdapterName SMB1
+   Get-VMNetworkAdapterTeamMapping -ManagementOS -SwitchName VMSTEST -VMNetworkAdapterName SMB2
    ```
    
    
