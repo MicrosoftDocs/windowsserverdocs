@@ -535,24 +535,22 @@ The following image shows two Hyper-V hosts with two network adapters each that 
     |IP2 |ETS |10 |2 |Global|&nbsp;|&nbsp;|
     ---
    
-## Step 5. (Optional) Override the debugger
+11. (Optional) Override the debugger.<p>By default, the attached debugger blocks NetQos. 
 
-By default, the attached debugger blocks NetQos. 
+    ```PowerShell
+    Set-ItemProperty HKLM:"\SYSTEM\CurrentControlSet\Services\NDIS\Parameters" AllowFlowControlUnderDebugger -type DWORD -Value 1 –Force
+    Get-ItemProperty HKLM:"\SYSTEM\CurrentControlSet\Services\NDIS\Parameters" | ft AllowFlowControlUnderDebugger
+    ```
 
-```PowerShell
-Set-ItemProperty HKLM:"\SYSTEM\CurrentControlSet\Services\NDIS\Parameters" AllowFlowControlUnderDebugger -type DWORD -Value 1 –Force
-Get-ItemProperty HKLM:"\SYSTEM\CurrentControlSet\Services\NDIS\Parameters" | ft AllowFlowControlUnderDebugger
-```
+    _**Results:**_  
 
-_**Results:**_  
+    ```
+    AllowFlowControlUnderDebugger
+    -----------------------------
+    1
+    ```
 
-```
-AllowFlowControlUnderDebugger
------------------------------
-1
-```
-
-## Step 6. Verify the RDMA configuration \(Mode 1\) 
+## Step 5. Verify the RDMA configuration \(Mode 1\) 
 
 You want to ensure that the fabric is configured correctly prior to creating a vSwitch and transitioning to RDMA \(Mode 2\).
 
@@ -652,7 +650,7 @@ The following image shows the current state of the Hyper-V hosts.
    VERBOSE: RDMA traffic test SUCCESSFUL: RDMA traffic was sent to 192.168.2.5
    ``` 
 
-## Step 7. Create a Hyper-V vSwitch on your Hyper-V hosts
+## Step 6. Create a Hyper-V vSwitch on your Hyper-V hosts
 
 
 The following image shows Hyper-V Host 1 with a vSwitch.
@@ -734,7 +732,7 @@ The following image shows Hyper-V Host 1 with a vSwitch.
    PingReplyDetails (RTT) : 0 ms
    ```
    
-## Step 8. Remove the Access VLAN setting
+## Step 7. Remove the Access VLAN setting
 
 In this step, you remove the ACCESS VLAN setting from the physical NIC and to set the VLANID using the vSwitch.
 
@@ -836,7 +834,7 @@ You must remove the ACCESS VLAN setting to prevent both auto-tagging the egress 
    |vEthernet (MGT) |Hyper-V Virtual Ethernet Adapter #2 |28 |Up | E4-1D-2D-07-40-71 |80 Gbps|
    ---
    
-## Step 9. Test Hyper-V vSwitch RDMA
+## Step 8. Test Hyper-V vSwitch RDMA
 
 The following image shows the current state of your Hyper-V hosts, including the vSwitch on Hyper-V Host 1.
 
@@ -877,7 +875,7 @@ The following image shows the current state of your Hyper-V hosts, including the
    |SMB2 |True |VMSTEST |00155D30AA01 |{Ok} |&nbsp;|
    ---
    
-## Step 10. Assign an IP address to the SMB Host vNICs vEthernet \(SMB1\) and vEthernet \(SMB2\)
+## Step 9. Assign an IP address to the SMB Host vNICs vEthernet \(SMB1\) and vEthernet \(SMB2\)
 
 The TEST-40G-1 and TEST-40G-2 physical adapters still have an ACCESS VLAN of 101 and 102 configured. Because of this, the adapters tag the traffic - and ping succeeds. Previously, you configured both pNIC VLAN IDs to zero, then set the VMSTEST vSwitch to VLAN 101. After that, you were still able to ping the remote VLAN 101 adapter by using the MGT vNIC, but there are currently no VLAN 102 members.
 
@@ -1148,7 +1146,7 @@ The TEST-40G-1 and TEST-40G-2 physical adapters still have an ACCESS VLAN of 101
     vEthernet (MGT)   Hyper-V Virtual Ethernet Adapter #2  False
     ```
 
-## Step 11. Validate the RDMA functionality.
+## Step 10. Validate the RDMA functionality.
 
 You want to validate the RDMA functionality from the remote system to the local system, which has a vSwitch, to to both members of the vSwitch SET team.<p>Because both Host vNICs \(SMB1 and SMB2\) are assigned to VLAN 102, you can select the VLAN 102 adapter on the remote system. <p>In this example, the NIC Test-40G-2 does RDMA to SMB1 (192.168.2.111) and SMB2 (192.168.2.222).
 
