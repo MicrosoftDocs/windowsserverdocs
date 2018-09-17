@@ -87,7 +87,7 @@ The destination server must run one of the following operating systems:
 - Windows Server 2012 R2
 
 > [!TIP]
-> Destination servers running Windows Server 2019 have double the transfer performance of earlier versions of Windows Server. This performance boost is due to the inclusion of a built-in Storage Migration Service proxy service.
+> Destination servers running Windows Server 2019 have double the transfer performance of earlier versions of Windows Server. This performance boost is due to the inclusion of a built-in Storage Migration Service proxy service, which also opens the necessary firewall ports for you, saving you some work.
 
 ## What’s new?
 
