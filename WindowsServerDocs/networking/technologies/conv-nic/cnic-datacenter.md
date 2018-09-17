@@ -8,7 +8,7 @@ ms.assetid: f01546f8-c495-4055-8492-8806eee99862
 manager: dougkim
 ms.author: pashort
 author: shortpatti
-ms.date: 09/14/2018
+ms.date: 09/17/2018
 ---
 
 # Converged NIC in a Teamed NIC configuration (datacenter)
@@ -42,7 +42,6 @@ Ensure that the physical NIC can connect to the destination host.  This test dem
 
    ```PowerShell
    Get-NetIPAddress -InterfaceAlias "Test-40G-1"
-
    Get-NetIPAddress -InterfaceAlias "TEST-40G-1" | Where-Object {$_.AddressFamily -eq "IPv4"} | fl InterfaceAlias,IPAddress
    ```
    
@@ -68,15 +67,14 @@ Ensure that the physical NIC can connect to the destination host.  This test dem
 
    |Name |InterfaceDescription |ifIndex |Status |MacAddress |LinkSpeed|
    |----|--------------------|-------|------|----------|---------|
-   |TEST-40G-2 |Mellanox ConnectX-3 Pro Ethernet A...\#2 |13 |Up |E4-1D-2D-07-40-70 |40 Gbps|
+   |TEST-40G-2 |Mellanox ConnectX-3 Pro Ethernet A...#2 |13 |Up |E4-1D-2D-07-40-70 |40 Gbps|
    ---
    
 4. View additional properties for the second adapter, including the IP address.
 
    ```PowerShell
    Get-NetIPAddress -InterfaceAlias "Test-40G-2"
-
-   Get-NetIPAddress -InterfaceAlias "Test-40G-2" | Where-Object {$\_.AddressFamily -eq "IPv4"} | fl InterfaceAlias,IPAddress
+   Get-NetIPAddress -InterfaceAlias "Test-40G-2" | Where-Object {$_.AddressFamily -eq "IPv4"} | fl InterfaceAlias,IPAddress
    ```
    
    _**Results:**_
@@ -526,6 +524,7 @@ The following image shows two Hyper-V hosts with two network adapters each that 
     ```PowerShell
     Get-NetQosTrafficClass | ft -AutoSize
     ```
+	
     _**Results:**_
 
     |Name|Algorithm |Bandwidth(%)| Priority |PolicySet |IfIndex |IfAlias |
@@ -543,7 +542,11 @@ By default, the attached debugger blocks NetQos.
 ```PowerShell
 Set-ItemProperty HKLM:"\SYSTEM\CurrentControlSet\Services\NDIS\Parameters" AllowFlowControlUnderDebugger -type DWORD -Value 1 –Force
 Get-ItemProperty HKLM:"\SYSTEM\CurrentControlSet\Services\NDIS\Parameters" | ft AllowFlowControlUnderDebugger
+```
 
+_**Results:**_  
+
+```
 AllowFlowControlUnderDebugger
 -----------------------------
 1
@@ -588,30 +591,34 @@ The following image shows the current state of the Hyper-V hosts.
    
 3. Download the [DiskSpd.exe utility](https://aka.ms/diskspd) and extract it into C:\TEST\.
 
-4. Download the [Test-RDMA powershell script](https://github.com/Microsoft/SDN/blob/master/Diagnostics/Test-Rdma.ps1) to a test folder on your local drive, for example, C:\TEST\.
+4. Download the [Test-RDMA PowerShell script](https://github.com/Microsoft/SDN/blob/master/Diagnostics/Test-Rdma.ps1) to a test folder on your local drive, for example, C:\TEST\.
 
 5. Run the **Test-Rdma.ps1** PowerShell script to pass the ifIndex value to the script, along with the IP address of the first remote adapter on the same VLAN.<p>In this example, the script passes the **ifIndex** value of 14 on the remote network adapter IP address 192.168.1.5.
    
    ```PowerShell
-    C:\TEST\Test-RDMA.PS1 -IfIndex 14 -IsRoCE $true -RemoteIpAddress 192.168.1.5 -PathToDiskspd C:\TEST\Diskspd-v2.0.17\amd64fre\
-    
-    VERBOSE: Diskspd.exe found at C:\TEST\Diskspd-v2.0.17\amd64fre\\diskspd.exe
-    VERBOSE: The adapter M2 is a physical adapter
-    VERBOSE: Underlying adapter is RoCE. Checking if QoS/DCB/PFC is configured on each physical adapter(s)
-    VERBOSE: QoS/DCB/PFC configuration is correct.
-    VERBOSE: RDMA configuration is correct.
-    VERBOSE: Checking if remote IP address, 192.168.1.5, is reachable.
-    VERBOSE: Remote IP 192.168.1.5 is reachable.
-    VERBOSE: Disabling RDMA on adapters that are not part of this test. RDMA will be enabled on them later.
-    VERBOSE: Testing RDMA traffic now for. Traffic will be sent in a parallel job. Job details:
-    VERBOSE: 0 RDMA bytes written per second
-    VERBOSE: 0 RDMA bytes sent per second
-    VERBOSE: 662979201 RDMA bytes written per second
-    VERBOSE: 37561021 RDMA bytes sent per second
-    VERBOSE: 1023098948 RDMA bytes written per second
-    VERBOSE: 8901349 RDMA bytes sent per second
-    VERBOSE: Enabling RDMA on adapters that are not part of this test. RDMA was disabled on them prior to sending RDMA traffic.
-    VERBOSE: RDMA traffic test SUCCESSFUL: RDMA traffic was sent to 192.168.1.5
+   C:\TEST\Test-RDMA.PS1 -IfIndex 14 -IsRoCE $true -RemoteIpAddress 192.168.1.5 -PathToDiskspd C:\TEST\Diskspd-v2.0.17\amd64fre\
+   ```
+
+   _**Results:**_ 
+   
+   ```   
+   VERBOSE: Diskspd.exe found at C:\TEST\Diskspd-v2.0.17\amd64fre\diskspd.exe
+   VERBOSE: The adapter M2 is a physical adapter
+   VERBOSE: Underlying adapter is RoCE. Checking if QoS/DCB/PFC is configured on each physical adapter(s)
+   VERBOSE: QoS/DCB/PFC configuration is correct.
+   VERBOSE: RDMA configuration is correct.
+   VERBOSE: Checking if remote IP address, 192.168.1.5, is reachable.
+   VERBOSE: Remote IP 192.168.1.5 is reachable.
+   VERBOSE: Disabling RDMA on adapters that are not part of this test. RDMA will be enabled on them later.
+   VERBOSE: Testing RDMA traffic now for. Traffic will be sent in a parallel job. Job details:
+   VERBOSE: 0 RDMA bytes written per second
+   VERBOSE: 0 RDMA bytes sent per second
+   VERBOSE: 662979201 RDMA bytes written per second
+   VERBOSE: 37561021 RDMA bytes sent per second
+   VERBOSE: 1023098948 RDMA bytes written per second
+   VERBOSE: 8901349 RDMA bytes sent per second
+   VERBOSE: Enabling RDMA on adapters that are not part of this test. RDMA was disabled on them prior to sending RDMA traffic.
+   VERBOSE: RDMA traffic test SUCCESSFUL: RDMA traffic was sent to 192.168.1.5
    ```
 
    >[!NOTE]
@@ -620,25 +627,29 @@ The following image shows the current state of the Hyper-V hosts.
 6. Run the **Test-Rdma.ps1** PowerShell script to pass the ifIndex value to the script, along with the IP address of the second remote adapter on the same VLAN.<p>In this example, the script passes the **ifIndex** value of 13 on the remote network adapter IP address 192.168.2.5.
 
    ```PowerShell
-    C:\TEST\Test-RDMA.PS1 -IfIndex 13 -IsRoCE $true -RemoteIpAddress 192.168.2.5 -PathToDiskspd C:\TEST\Diskspd-v2.0.17\amd64fre\
-	
-    VERBOSE: Diskspd.exe found at C:\TEST\Diskspd-v2.0.17\amd64fre\\diskspd.exe
-    VERBOSE: The adapter TEST-40G-2 is a physical adapter
-    VERBOSE: Underlying adapter is RoCE. Checking if QoS/DCB/PFC is configured on each physical adapter(s)
-    VERBOSE: QoS/DCB/PFC configuration is correct.
-    VERBOSE: RDMA configuration is correct.
-    VERBOSE: Checking if remote IP address, 192.168.2.5, is reachable.
-    VERBOSE: Remote IP 192.168.2.5 is reachable.
-    VERBOSE: Disabling RDMA on adapters that are not part of this test. RDMA will be enabled on them later.
-    VERBOSE: Testing RDMA traffic now for. Traffic will be sent in a parallel job. Job details:
-    VERBOSE: 0 RDMA bytes written per second
-    VERBOSE: 0 RDMA bytes sent per second
-    VERBOSE: 541185606 RDMA bytes written per second
-    VERBOSE: 34821478 RDMA bytes sent per second
-    VERBOSE: 954717307 RDMA bytes written per second
-    VERBOSE: 35040816 RDMA bytes sent per second
-    VERBOSE: Enabling RDMA on adapters that are not part of this test. RDMA was disabled on them prior to sending RDMA traffic.
-    VERBOSE: RDMA traffic test SUCCESSFUL: RDMA traffic was sent to 192.168.2.5
+   C:\TEST\Test-RDMA.PS1 -IfIndex 13 -IsRoCE $true -RemoteIpAddress 192.168.2.5 -PathToDiskspd C:\TEST\Diskspd-v2.0.17\amd64fre\
+   ```
+
+   _**Results:**_ 
+   
+   ```   
+   VERBOSE: Diskspd.exe found at C:\TEST\Diskspd-v2.0.17\amd64fre\diskspd.exe
+   VERBOSE: The adapter TEST-40G-2 is a physical adapter
+   VERBOSE: Underlying adapter is RoCE. Checking if QoS/DCB/PFC is configured on each physical adapter(s)
+   VERBOSE: QoS/DCB/PFC configuration is correct.
+   VERBOSE: RDMA configuration is correct.
+   VERBOSE: Checking if remote IP address, 192.168.2.5, is reachable.
+   VERBOSE: Remote IP 192.168.2.5 is reachable.
+   VERBOSE: Disabling RDMA on adapters that are not part of this test. RDMA will be enabled on them later.
+   VERBOSE: Testing RDMA traffic now for. Traffic will be sent in a parallel job. Job details:
+   VERBOSE: 0 RDMA bytes written per second
+   VERBOSE: 0 RDMA bytes sent per second
+   VERBOSE: 541185606 RDMA bytes written per second
+   VERBOSE: 34821478 RDMA bytes sent per second
+   VERBOSE: 954717307 RDMA bytes written per second
+   VERBOSE: 35040816 RDMA bytes sent per second
+   VERBOSE: Enabling RDMA on adapters that are not part of this test. RDMA was disabled on them prior to sending RDMA traffic.
+   VERBOSE: RDMA traffic test SUCCESSFUL: RDMA traffic was sent to 192.168.2.5
    ``` 
 
 ## Step 7. Create a Hyper-V vSwitch on your Hyper-V hosts
@@ -665,7 +676,11 @@ The following image shows Hyper-V Host 1 with a vSwitch.
 
    ```PowerShell
    Get-VMSwitchTeam -Name "VMSTEST" | fl
-
+   ```
+   
+   _**Results:**_  
+   
+   ```
    Name: VMSTEST  
    Id: ad9bb542-dda2-4450-a00e-f96d44bdfbec  
    NetAdapterInterfaceDescription: {Mellanox ConnectX-3 Pro Ethernet Adapter, Mellanox ConnectX-3 Pro Ethernet Adapter #2}  
@@ -704,7 +719,11 @@ The following image shows Hyper-V Host 1 with a vSwitch.
 
    ```PowerShell
    Test-NetConnection 192.168.1.5 
-
+   ```
+   
+   _**Results:**_  
+   
+   ```
    WARNING: Ping to 192.168.1.5 failed -- Status: DestinationHostUnreachable
     
    ComputerName   : 192.168.1.5
@@ -733,7 +752,11 @@ You must remove the ACCESS VLAN setting to prevent both auto-tagging the egress 
    ```PowerShell
    Set-VMNetworkAdapterVlan -VMNetworkAdapterName "VMSTEST" -VlanId "101" -Access -ManagementOS
    Get-VMNetworkAdapterVlan -ManagementOS -VMNetworkAdapterName "VMSTEST"
-
+   ```
+   
+   _**Results:**_  
+   
+   ```
    VMName VMNetworkAdapterName Mode   VlanList
    ------ -------------------- ----   --------
           VMSTEST              Access 101     
@@ -744,7 +767,11 @@ You must remove the ACCESS VLAN setting to prevent both auto-tagging the egress 
 
    ```PowerShell
    Test-NetConnection 192.168.1.5
-
+   ```
+   
+   _**Results:**_   
+   
+   ```
    ComputerName   : 192.168.1.5
    RemoteAddress  : 192.168.1.5
    InterfaceAlias : vEthernet (VMSTEST)
@@ -819,7 +846,12 @@ The following image shows the current state of your Hyper-V hosts, including the
    ```PowerShell    
    Set-VMNetworkAdapter -ManagementOS -Name "MGT" -IeeePriorityTag on
    Get-VMNetworkAdapter -ManagementOS -Name "MGT" | fl Name,IeeePriorityTag
-
+   ```
+   
+   _**Results:**_  
+   
+   
+   ```
    Name : MGT  
    IeeePriorityTag :  On  
    ``` 
@@ -856,7 +888,11 @@ The TEST-40G-1 and TEST-40G-2 physical adapters still have an ACCESS VLAN of 101
 
    ```PowerShell    
    New-NetIPAddress -InterfaceAlias "vEthernet (SMB1)" -IPAddress 192.168.2.111 -PrefixLength 24
- 
+   ```
+
+   _**Results:**_  
+
+   ```   
    IPAddress : 192.168.2.111
    InterfaceIndex: 40
    InterfaceAlias: vEthernet (SMB1)
@@ -876,7 +912,11 @@ The TEST-40G-1 and TEST-40G-2 physical adapters still have an ACCESS VLAN of 101
     
    ```PowerShell
    Test-NetConnection 192.168.2.5 
-
+   ```
+   
+   _**Results:**_  
+   
+   ```
    ComputerName   : 192.168.2.5
    RemoteAddress  : 192.168.2.5
    InterfaceAlias : vEthernet (SMB1)
@@ -889,7 +929,11 @@ The TEST-40G-1 and TEST-40G-2 physical adapters still have an ACCESS VLAN of 101
 
    ```PowerShell
    New-NetIPAddress -InterfaceAlias "vEthernet (SMB2)" -IPAddress 192.168.2.222 -PrefixLength 24 
-
+   ```
+   
+   _**Results:**_ 
+   
+   ```
    IPAddress : 192.168.2.222
    InterfaceIndex: 44
    InterfaceAlias: vEthernet (SMB2)
@@ -915,14 +959,18 @@ The TEST-40G-1 and TEST-40G-2 physical adapters still have an ACCESS VLAN of 101
    Set-VMNetworkAdapterVlan -VMNetworkAdapterName "SMB2" -VlanId "102" -Access -ManagementOS
     
    Get-VMNetworkAdapterVlan -ManagementOS
-  
+   ```
+
+   _**Results:**_ 
+
+   ```   
    VMName VMNetworkAdapterName Mode VlanList
    ------ -------------------- ---- --------
       SMB1 Access   102 
       Mgt  Access   101 
       SMB2 Access   102 
       CORP-External-Switch Untagged
-  ```
+   ```
    
 6. Inspect the mapping of SMB1 and SMB2 to the underlying physical NICs under the vSwitch SET Team.<p>The association of Host vNIC to Physical NICs is random and subject to rebalancing during creation and destruction. In this circumstance, you can use an indirect mechanism to check the current association. The MAC addresses of SMB1 and SMB2 are associated with the NIC Team member TEST-40G-2. This is not ideal because Test-40G-1 does not have an associated SMB Host vNIC, and will not allow for utilization of RDMA traffic over the link until an SMB Host vNIC is mapped to it.
 
@@ -930,7 +978,11 @@ The TEST-40G-1 and TEST-40G-2 physical adapters still have an ACCESS VLAN of 101
    Get-NetAdapterVPort (Preferred)
     
    Get-NetAdapterVmqQueue
+   ```
    
+   _**Results:**_ 
+   
+   ```
    Name   QueueID MacAddressVlanID Processor VmFriendlyName
    ----   ------- ---------------- --------- --------------
    TEST-40G-1 1   E4-1D-2D-07-40-71 1010:17
@@ -940,7 +992,11 @@ The TEST-40G-1 and TEST-40G-2 physical adapters still have an ACCESS VLAN of 101
    
    ```PowerShell
    Get-VMNetworkAdapter -ManagementOS
-  
+   ```
+   
+   _**Results:**_ 
+   
+   ```
    Name IsManagementOs VMName SwitchName   MacAddress   Status IPAddresses
    ---- -------------- ------ ----------   ----------   ------ -----------
    CORP-External-Switch True  CORP-External-Switch 001B785768AA {Ok}  
@@ -967,7 +1023,11 @@ The TEST-40G-1 and TEST-40G-2 physical adapters still have an ACCESS VLAN of 101
    Set-VMNetworkAdapterTeamMapping -ManagementOS -SwitchName VMSTEST -VMNetworkAdapterName "SMB2" -PhysicalNetAdapterName "Test-40G-2"
     
    Get-VMNetworkAdapterTeamMapping -ManagementOS -SwitchName VMSTEST
-    
+   ```
+
+   _**Results:**_ 
+   
+   ```   
    NetAdapterName : Test-40G-1
    NetAdapterDeviceId : {BAA9A00F-A844-4740-AA93-6BD838F8CFBA}
    ParentAdapter  : VMInternalNetworkAdapter, Name = 'SMB1'
@@ -989,7 +1049,11 @@ The TEST-40G-1 and TEST-40G-2 physical adapters still have an ACCESS VLAN of 101
 
    ```PowerShell    
    Get-NetAdapterVmqQueue
-    
+   ```
+
+   _**Results:**_ 
+   
+   ```   
    Name   QueueID MacAddressVlanID Processor VmFriendlyName
    ----   ------- ---------------- --------- --------------
    TEST-40G-1 1   E4-1D-2D-07-40-71 1010:17
@@ -1003,7 +1067,11 @@ The TEST-40G-1 and TEST-40G-2 physical adapters still have an ACCESS VLAN of 101
 
     ```PowerShell 
     Test-NetConnection 192.168.2.111
-    
+    ```
+	
+	_**Results:**_ 
+	
+	```
     ComputerName   : 192.168.2.111
     RemoteAddress  : 192.168.2.111
     InterfaceAlias : Test-40G-2
@@ -1014,7 +1082,11 @@ The TEST-40G-1 and TEST-40G-2 physical adapters still have an ACCESS VLAN of 101
 
     ```PowerShell   
     Test-NetConnection 192.168.2.222
-    
+    ```
+	
+	_**Results:**_ 
+	
+	```
     ComputerName   : 192.168.2.222
     RemoteAddress  : 192.168.2.222
     InterfaceAlias : Test-40G-2
@@ -1027,7 +1099,11 @@ The TEST-40G-1 and TEST-40G-2 physical adapters still have an ACCESS VLAN of 101
     Set-VMNetworkAdapter -ManagementOS -Name "SMB1" -IeeePriorityTag on
     Set-VMNetworkAdapter -ManagementOS -Name "SMB2" -IeeePriorityTag on
     Get-VMNetworkAdapter -ManagementOS -Name "SMB*" | fl Name,SwitchName,IeeePriorityTag,Status
-    
+    ```
+	
+	_**Results:**_ 
+	
+	```
     Name: SMB1
     SwitchName  : VMSTEST
     IeeePriorityTag : On
@@ -1041,7 +1117,11 @@ The TEST-40G-1 and TEST-40G-2 physical adapters still have an ACCESS VLAN of 101
 
     ```PowerShell
     Get-NetAdapterRdma -Name "vEthernet*" | sort Name | ft -AutoSize
-    
+    ```
+	
+	_**Results:**_ 
+	
+	```
     Name  InterfaceDescription Enabled
     ----  -------------------- -------
     vEthernet (SMB2)  Hyper-V Virtual Ethernet Adapter #4  False  
@@ -1053,7 +1133,11 @@ The TEST-40G-1 and TEST-40G-2 physical adapters still have an ACCESS VLAN of 101
     Enable-NetAdapterRdma -Name "vEthernet (SMB1)"
     Enable-NetAdapterRdma -Name "vEthernet (SMB2)"
     Get-NetAdapterRdma -Name "vEthernet*" | sort Name | fl *
-    
+    ```
+	
+	_**Results:**_ 
+	
+	```
     Name  InterfaceDescription Enabled
     ----  -------------------- -------
     vEthernet (SMB2)  Hyper-V Virtual Ethernet Adapter #4  True   
@@ -1070,7 +1154,11 @@ The TEST-40G-1 and TEST-40G-2 physical adapters still have an ACCESS VLAN of 101
     Set-NetFirewallProfile -All -Enabled False
     
     Get-NetAdapterAdvancedProperty -Name "Test-40G-2"
-    
+    ```
+	
+	_**Results:**_ 
+	
+	```
     Name  DisplayNameDisplayValue   RegistryKeyword RegistryValue  
     ----  -----------------------   --------------- -------------  
     .
@@ -1080,7 +1168,11 @@ The TEST-40G-1 and TEST-40G-2 physical adapters still have an ACCESS VLAN of 101
 	
 	```PowerShell
     Get-NetAdapter
-    
+    ```
+	
+	_**Results:**_ 
+	
+	```
     Name  InterfaceDescriptionifIndex Status   MacAddress LinkSpeed
     ----  --------------------------- ------   ---------- ---------
     Test-40G-2Mellanox ConnectX-3 Pro Ethernet A...#3   3 Up   E4-1D-2D-07-43-D140 Gbps
@@ -1088,15 +1180,24 @@ The TEST-40G-1 and TEST-40G-2 physical adapters still have an ACCESS VLAN of 101
     
 	```PowerShell
     Get-NetAdapterRdma
-    
+    ```
+	
+	_**Results:**_  
+	
+	```
     Name  InterfaceDescription Enabled
     ----  -------------------- -------
     Test-40G-2Mellanox ConnectX-3 Pro Ethernet Adap... True   
     ```
 	
-	```    
+	```PowerShell 
     C:\TEST\Test-RDMA.PS1 -IfIndex 3 -IsRoCE $true -RemoteIpAddress 192.168.2.111 -PathToDiskspd C:\TEST\Diskspd-v2.0.17\amd64fre\
-    VERBOSE: Diskspd.exe found at C:\TEST\Diskspd-v2.0.17\amd64fre\\diskspd.exe
+	```
+	
+	_**Results:**_ 
+	
+	```
+    VERBOSE: Diskspd.exe found at C:\TEST\Diskspd-v2.0.17\amd64fre\diskspd.exe
     VERBOSE: The adapter Test-40G-2 is a physical adapter
     VERBOSE: Underlying adapter is RoCE. Checking if QoS/DCB/PFC is configured on each physical adapter(s)
     VERBOSE: QoS/DCB/PFC configuration is correct.
@@ -1113,9 +1214,14 @@ The TEST-40G-1 and TEST-40G-2 physical adapters still have an ACCESS VLAN of 101
     VERBOSE: RDMA traffic test SUCCESSFUL: RDMA traffic was sent to 192.168.2.111
     ```
     
-	```
+	```PowerShell
     C:\TEST\Test-RDMA.PS1 -IfIndex 3 -IsRoCE $true -RemoteIpAddress 192.168.2.222 -PathToDiskspd C:\TEST\Diskspd-v2.0.17\amd64fre\
-    VERBOSE: Diskspd.exe found at C:\TEST\Diskspd-v2.0.17\amd64fre\\diskspd.exe
+	```
+	
+	_**Results:**_ 
+	
+	```
+    VERBOSE: Diskspd.exe found at C:\TEST\Diskspd-v2.0.17\amd64fre\diskspd.exe
     VERBOSE: The adapter Test-40G-2 is a physical adapter
     VERBOSE: Underlying adapter is RoCE. Checking if QoS/DCB/PFC is configured on each physical adapter(s)
     VERBOSE: QoS/DCB/PFC configuration is correct.
@@ -1138,7 +1244,11 @@ The TEST-40G-1 and TEST-40G-2 physical adapters still have an ACCESS VLAN of 101
 
     ```PowerShell
     Get-NetAdapter | ft –AutoSize
-    
+    ```
+	
+	_**Results:**_ 
+	
+	```
     Name  InterfaceDescriptionifIndex Status   MacAddress LinkSpeed
     ----  --------------------------- ------   ---------- ---------
     vEthernet (SMB2)  Hyper-V Virtual Ethernet Adapter #4  45 Up   00-15-5D-30-AA-0380 Gbps
@@ -1147,7 +1257,12 @@ The TEST-40G-1 and TEST-40G-2 physical adapters still have an ACCESS VLAN of 101
     
 	```
     C:\TEST\Test-RDMA.PS1 -IfIndex 41 -IsRoCE $true -RemoteIpAddress 192.168.2.5 -PathToDiskspd C:\TEST\Diskspd-v2.0.17\amd64fre\
-    VERBOSE: Diskspd.exe found at C:\TEST\Diskspd-v2.0.17\amd64fre\\diskspd.exe
+	```
+	
+	_**Results:**_ 
+	
+	```
+    VERBOSE: Diskspd.exe found at C:\TEST\Diskspd-v2.0.17\amd64fre\diskspd.exe
     VERBOSE: The adapter vEthernet (SMB1) is a virtual adapter
     VERBOSE: Retrieving vSwitch bound to the virtual adapter
     VERBOSE: Found vSwitch: VMSTEST
@@ -1171,9 +1286,14 @@ The TEST-40G-1 and TEST-40G-2 physical adapters still have an ACCESS VLAN of 101
     VERBOSE: RDMA traffic test SUCCESSFUL: RDMA traffic was sent to 192.168.2.5
     ```
     
-	```
+	```PowerShell
     C:\TEST\Test-RDMA.PS1 -IfIndex 45 -IsRoCE $true -RemoteIpAddress 192.168.2.5 -PathToDiskspd C:\TEST\Diskspd-v2.0.17\amd64fre\
-    VERBOSE: Diskspd.exe found at C:\TEST\Diskspd-v2.0.17\amd64fre\\diskspd.exe
+	```
+	
+	_**Results:**_ 
+	
+	```
+    VERBOSE: Diskspd.exe found at C:\TEST\Diskspd-v2.0.17\amd64fre\diskspd.exe
     VERBOSE: The adapter vEthernet (SMB2) is a virtual adapter
     VERBOSE: Retrieving vSwitch bound to the virtual adapter
     VERBOSE: Found vSwitch: VMSTEST
