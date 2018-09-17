@@ -748,11 +748,7 @@ You must remove the ACCESS VLAN setting to prevent both auto-tagging the egress 
    ```PowerShell
    Set-VMNetworkAdapterVlan -VMNetworkAdapterName "VMSTEST" -VlanId "101" -Access -ManagementOS
    Get-VMNetworkAdapterVlan -ManagementOS -VMNetworkAdapterName "VMSTEST"
-   ```
-   
-   _**Results:**_
-   
-   ```
+
    VMName VMNetworkAdapterName Mode   VlanList
    ------ -------------------- ----   --------
           VMSTEST              Access 101     
@@ -763,11 +759,7 @@ You must remove the ACCESS VLAN setting to prevent both auto-tagging the egress 
 
    ```PowerShell
     Test-NetConnection 192.168.1.5
-   ```
-   
-   _**Results:**_ 
-   
-   ```
+
     ComputerName   : 192.168.1.5
     RemoteAddress  : 192.168.1.5
     InterfaceAlias : vEthernet (VMSTEST)
@@ -777,35 +769,31 @@ You must remove the ACCESS VLAN setting to prevent both auto-tagging the egress 
    ```
 
    
-    >If your results are not similar to the example results and ping fails with the message "WARNING: Ping to 192.168.1.5 failed -- Status: DestinationHostUnreachable," confirm that the “vEthernet (VMSTEST)” has the proper IP address.
-    >
-    >```PowerShell
-    >Get-NetIPAddress -InterfaceAlias "vEthernet (VMSTEST)"
-    >```
-    >
-    >If the IP address is not set, correct the issue.
-    >
-    >```PowerShell
-    >New-NetIPAddress -InterfaceAlias "vEthernet (VMSTEST)" -IPAddress 192.168.1.3 -PrefixLength 24
-    >```
-    > 
-    >_**Results:**_ 
-    > 
-    >```
-    >IPAddress : 192.168.1.3
-    >InterfaceIndex: 37
-    >InterfaceAlias: vEthernet (VMSTEST)
-    >AddressFamily : IPv4
-    >Type  : Unicast
-    >PrefixLength  : 24
-    >PrefixOrigin  : Manual
-    >SuffixOrigin  : Manual
-    >AddressState  : Tentative
-    >ValidLifetime : Infinite ([TimeSpan]::MaxValue)
-    >PreferredLifetime : Infinite ([TimeSpan]::MaxValue)
-    >SkipAsSource  : False
-    >PolicyStore   : ActiveStore
-    >```
+   >If your results are not similar to the example results and ping fails with the message "WARNING: Ping to 192.168.1.5 failed -- Status: DestinationHostUnreachable," confirm that the “vEthernet (VMSTEST)” has the proper IP address.
+   >
+   >```PowerShell
+   >Get-NetIPAddress -InterfaceAlias "vEthernet (VMSTEST)"
+   >```
+   >
+   >If the IP address is not set, correct the issue.
+   >
+   >```PowerShell
+   >New-NetIPAddress -InterfaceAlias "vEthernet (VMSTEST)" -IPAddress 192.168.1.3 -PrefixLength 24
+   >
+   >IPAddress : 192.168.1.3
+   >InterfaceIndex: 37
+   >InterfaceAlias: vEthernet (VMSTEST)
+   >AddressFamily : IPv4
+   >Type  : Unicast
+   >PrefixLength  : 24
+   >PrefixOrigin  : Manual
+   >SuffixOrigin  : Manual
+   >AddressState  : Tentative
+   >ValidLifetime : Infinite ([TimeSpan]::MaxValue)
+   >PreferredLifetime : Infinite ([TimeSpan]::MaxValue)
+   >SkipAsSource  : False
+   >PolicyStore   : ActiveStore
+   >```
     
 4. Rename the Management NIC.
 
