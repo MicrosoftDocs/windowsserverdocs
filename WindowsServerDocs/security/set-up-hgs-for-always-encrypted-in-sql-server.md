@@ -21,10 +21,10 @@ Therefore, before a database client application permits the VBS memory enclave u
 Attestation proves the machine hosting SQL Server, which contains the enclave, is in the correct state and can be trusted. 
 For the rest of this topic, we'll refer to the machine hosting SQL Server as simply the host machine.
 
-There are two, mutually-exclusive ways for the application to attest: 
+There are two, mutually exclusive ways for the application to attest: 
 
-- Host key attestation authorizes a host by proving it possesses a known and trusted private key
-- TPM attestation validates hardware measurements to ensure the correct binaries and security policies are in use on the machine
+- Host key attestation authorizes a host by proving it possesses a known and trusted private key. Host key attestation and either a physical or a virtual host machine is recommended for pre-production environments.
+- TPM attestation validates hardware measurements to make sure a host runs only the correct binaries and security policies. TPM attestation and a physical host machine (not a virtual machine) running SQL Server is recommended for production environments.
 
 For more information about the Host Guardian Service and what it can measure, see [Guarded fabric and shielded VMs overview](https://docs.microsoft.com/windows-server/virtualization/guarded-fabric-shielded-vm/guarded-fabric-and-shielded-vms). 
 Note that although the documents talk about shielded VMs, the same protections, architecture and best practices apply to SQL Server Always Encrypted using VBS enclaves. 
@@ -39,7 +39,7 @@ This section covers prerequisites HGS and host machines.
 
 - 1-3 servers to run HGS. 
   These servers should be carefully protected since they control which machines can run your SQL Server instances using Always Encrypted with secure enclaves. 
-  It is recommended that different admins manage the HGS cluster and that you run the HGS on physical hardware isolated from the rest of your infrastructure, or in separate virtualization fabrics or Azure subscriptions.
+  It is recommended that different administrators manage the HGS cluster and that you run the HGS on physical hardware isolated from the rest of your infrastructure, or in separate virtualization fabrics or Azure subscriptions.
 
   - Windows Server 2019 Standard or Datacenter edition
   - 2 CPUs
@@ -50,7 +50,7 @@ This section covers prerequisites HGS and host machines.
   >Only 1 HGS server is required for a test or pre-production environment.
 
 - Choose a name for the new Active Directory forest created by the Host Guardian Service. 
-  HGS should not be joined to your existing corporate domain and should have separate admins managing it.   
+  HGS should not be joined to your existing corporate domain and should have separate administrators managing it.   
 
 - Firewall and routing rules to allow inbound HTTP (TCP 80) or HTTPS (TCP 443) traffic on the Host Guardian Service nodes from: 
 
@@ -74,10 +74,7 @@ This section covers prerequisites HGS and host machines.
     - Secure Boot enabled with the Microsoft Secure Boot policy (do not enable the 3rd party Secure Boot CA policy or any custom policies)
     - IOMMU (Intel VT-d or AMD IOV) to prevent direct memory access attacks 
 
-  - **Host key mode** uses an asymmetric key pair (much like SSH keys) to identify and authorize host machines that wish to run SQL Server. This mode is easier to set up and does not have any specific hardware requirements but will not verify the software or firmware running on the host machines.   
-
->[!NOTE]
->Microsoft recommends you use TPM mode for production environments. 
+  - **Host key mode** uses an asymmetric key pair (much like SSH keys) to identify and authorize host machines that wish to run SQL Server. This mode is easier to set up and does not have any specific hardware requirements but will not verify the software or firmware running on the host machines.  
 
 To check if your TPM is compatible, run the following commands on the host machine where you intend to run SQL Server using Always Encrypted with secure enclaves. 
 “2.0” must appear in the list of supported SpecVersions for you to use TPM attestation:
@@ -213,7 +210,7 @@ If you are using TPM mode, run the following commands on each host machine to in
 ### Collecting Host Keys 
 
 >[!NOTE] 
->Host key attestation is only recommended for use in test environments or if your hardware does not support TPM attestation. 
+>Host key attestation is only recommended for use in test environments. 
 >TPM attestation provides the strongest assurances that VBS enclaves processing your sensitive data on SQL Server are running trusted code and the machines are configured with the recommended security settings. 
 
 If you chose to set up HGS in host key attestation mode, you’ll need to generate and collect keys from each host machine and register them with the Host Guardian Service. 
