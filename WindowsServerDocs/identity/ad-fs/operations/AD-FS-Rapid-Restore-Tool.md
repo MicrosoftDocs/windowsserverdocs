@@ -5,7 +5,7 @@ description:
 author: billmath
 ms.author: billmath
 manager: femila
-ms.date: 07/11/2018
+ms.date: 09/18/2018
 ms.topic: article
 ms.prod: windows-server-threshold
 
@@ -58,7 +58,7 @@ import-module 'C:\Program Files (x86)\ADFS Rapid Recreation Tool\ADFSRapidRecrea
 To create a backup, use the Backup-ADFS cmdlet. This cmdlet backs up the AD FS configuration, database, SSL certificates, etc. 
 
 The user has to be at least a local admin to run this cmdlet. 
-To backup the Active Directory DKM container (required in the default AD FS configuration), the user either has to be domain admin, needs to pass in the AD FS service account credentials, or has access to the DKM container.  If you are using a gMSA account, the user must be domain admin or have permissions to the container; you cannot provide the gMSA credentials.
+To backup the Active Directory DKM container (required in the default AD FS configuration), the user either has to be domain admin, needs to pass in the AD FS service account credentials, or has access to the DKM container.  If you are using a gMSA account, the user must be domain admin or have permissions to the container; you cannot provide the gMSA credentials. 
 
 The backup will be named according to the pattern "adfsBackup_ID_Date-Time". It will contain the version number, date and time that the backup was done.
 The cmdlet takes the following parameters:
