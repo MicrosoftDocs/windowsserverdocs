@@ -1062,85 +1062,85 @@ The TEST-40G-1 and TEST-40G-2 physical adapters still have an ACCESS VLAN of 101
 10. Test the connection from the remote system because both Host vNICs reside on the same subnet and have the same VLAN ID \(102\).
 
 
-   ```PowerShell 
-   Test-NetConnection 192.168.2.111
-   ```
+    ```PowerShell 
+    Test-NetConnection 192.168.2.111
+    ```
 	
-   _**Results:**_ 
+    _**Results:**_ 
 	
-   ```
-   ComputerName   : 192.168.2.111
-   RemoteAddress  : 192.168.2.111
-   InterfaceAlias : Test-40G-2
-   SourceAddress  : 192.168.2.5
-   PingSucceeded  : True
-   PingReplyDetails (RTT) : 0 ms
-   ```
+    ```
+    ComputerName   : 192.168.2.111
+    RemoteAddress  : 192.168.2.111
+    InterfaceAlias : Test-40G-2
+    SourceAddress  : 192.168.2.5
+    PingSucceeded  : True
+    PingReplyDetails (RTT) : 0 ms
+    ```
 
-   ```PowerShell   
-   Test-NetConnection 192.168.2.222
-   ```
+    ```PowerShell   
+    Test-NetConnection 192.168.2.222
+    ```
 	
-   _**Results:**_ 
+    _**Results:**_ 
 	
-   ```
-   ComputerName   : 192.168.2.222
-   RemoteAddress  : 192.168.2.222
-   InterfaceAlias : Test-40G-2
-   SourceAddress  : 192.168.2.5
-   PingSucceeded  : True
-   PingReplyDetails (RTT) : 0 ms 
-   ```
+    ```
+    ComputerName   : 192.168.2.222
+    RemoteAddress  : 192.168.2.222
+    InterfaceAlias : Test-40G-2
+    SourceAddress  : 192.168.2.5
+    PingSucceeded  : True
+    PingReplyDetails (RTT) : 0 ms 
+    ```
    
-   ```PowerShell
-   Set-VMNetworkAdapter -ManagementOS -Name "SMB1" -IeeePriorityTag on
-   Set-VMNetworkAdapter -ManagementOS -Name "SMB2" -IeeePriorityTag on
-   Get-VMNetworkAdapter -ManagementOS -Name "SMB*" | fl Name,SwitchName,IeeePriorityTag,Status
-   ```
+    ```PowerShell
+    Set-VMNetworkAdapter -ManagementOS -Name "SMB1" -IeeePriorityTag on
+    Set-VMNetworkAdapter -ManagementOS -Name "SMB2" -IeeePriorityTag on
+    Get-VMNetworkAdapter -ManagementOS -Name "SMB*" | fl Name,SwitchName,IeeePriorityTag,Status
+    ```
 	
-   _**Results:**_ 
-	
-   ```
-   Name: SMB1
-   SwitchName  : VMSTEST
-   IeeePriorityTag : On
-   Status  : {Ok}
+    _**Results:**_   
+ 	
+    ```
+    Name: SMB1
+    SwitchName  : VMSTEST
+    IeeePriorityTag : On
+    Status  : {Ok}
     
-   Name: SMB2
-   SwitchName  : VMSTEST
-   IeeePriorityTag : On
-   Status  : {Ok}
-   ```
+    Name: SMB2
+    SwitchName  : VMSTEST
+    IeeePriorityTag : On
+    Status  : {Ok}
+    ```
 
-   ```PowerShell
-   Get-NetAdapterRdma -Name "vEthernet*" | sort Name | ft -AutoSize
-   ```
+    ```PowerShell
+    Get-NetAdapterRdma -Name "vEthernet*" | sort Name | ft -AutoSize
+    ```
 	
-   _**Results:**_ 
+    _**Results:**_ 
 	
-   ```
-   Name  InterfaceDescription Enabled
-   ----  -------------------- -------
-   vEthernet (SMB2)  Hyper-V Virtual Ethernet Adapter #4  False  
-   vEthernet (SMB1)  Hyper-V Virtual Ethernet Adapter #3  False  
-   vEthernet (MGT)   Hyper-V Virtual Ethernet Adapter #2  False   
-   ```
+    ```
+    Name  InterfaceDescription Enabled
+    ----  -------------------- -------
+    vEthernet (SMB2)  Hyper-V Virtual Ethernet Adapter #4  False  
+    vEthernet (SMB1)  Hyper-V Virtual Ethernet Adapter #3  False  
+    vEthernet (MGT)   Hyper-V Virtual Ethernet Adapter #2  False   
+    ```
     
-   ```PowerShell
-   Enable-NetAdapterRdma -Name "vEthernet (SMB1)"
-   Enable-NetAdapterRdma -Name "vEthernet (SMB2)"
-   Get-NetAdapterRdma -Name "vEthernet*" | sort Name | fl *
-   ```
+    ```PowerShell
+    Enable-NetAdapterRdma -Name "vEthernet (SMB1)"
+    Enable-NetAdapterRdma -Name "vEthernet (SMB2)"
+    Get-NetAdapterRdma -Name "vEthernet*" | sort Name | fl *
+    ```
 	
-   _**Results:**_ 
+    _**Results:**_ 
 	
-   ```
-   Name  InterfaceDescription Enabled
-   ----  -------------------- -------
-   vEthernet (SMB2)  Hyper-V Virtual Ethernet Adapter #4  True   
-   vEthernet (SMB1)  Hyper-V Virtual Ethernet Adapter #3  True  
-   vEthernet (MGT)   Hyper-V Virtual Ethernet Adapter #2  False
-   ```
+    ```
+    Name  InterfaceDescription Enabled
+    ----  -------------------- -------
+    vEthernet (SMB2)  Hyper-V Virtual Ethernet Adapter #4  True   
+    vEthernet (SMB1)  Hyper-V Virtual Ethernet Adapter #3  True  
+    vEthernet (MGT)   Hyper-V Virtual Ethernet Adapter #2  False
+    ```
 
 11. Validate RDMA functionality from the remote system to the local system, which has a vSwitch, testing both adapters that are members of the vSwitch SET team.<p>Because both Host vNICs \(SMB1 and SMB2\) are assigned to VLAN 102, you can select the VLAN 102 adapter on the remote system. <p>In this example, the NIC Test-40G-2 does RDMA to SMB1 (192.168.2.111) and SMB2 (192.168.2.222).
 
