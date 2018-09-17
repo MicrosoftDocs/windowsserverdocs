@@ -1092,7 +1092,8 @@ The TEST-40G-1 and TEST-40G-2 physical adapters still have an ACCESS VLAN of 101
     PingSucceeded  : True
     PingReplyDetails (RTT) : 0 ms 
     ```
-   
+11. Set the name, switch name, and priority tags.   
+
     ```PowerShell
     Set-VMNetworkAdapter -ManagementOS -Name "SMB1" -IeeePriorityTag on
     Set-VMNetworkAdapter -ManagementOS -Name "SMB2" -IeeePriorityTag on
@@ -1113,6 +1114,8 @@ The TEST-40G-1 and TEST-40G-2 physical adapters still have an ACCESS VLAN of 101
     Status  : {Ok}
     ```
 
+12. View the vEthernet network adapter properties.
+	
     ```PowerShell
     Get-NetAdapterRdma -Name "vEthernet*" | sort Name | ft -AutoSize
     ```
@@ -1126,7 +1129,9 @@ The TEST-40G-1 and TEST-40G-2 physical adapters still have an ACCESS VLAN of 101
     vEthernet (SMB1)  Hyper-V Virtual Ethernet Adapter #3  False  
     vEthernet (MGT)   Hyper-V Virtual Ethernet Adapter #2  False   
     ```
-   
+
+13. Enable the vEthernet network adapters.	
+	
     ```PowerShell
     Enable-NetAdapterRdma -Name "vEthernet (SMB1)"
     Enable-NetAdapterRdma -Name "vEthernet (SMB2)"
@@ -1143,102 +1148,112 @@ The TEST-40G-1 and TEST-40G-2 physical adapters still have an ACCESS VLAN of 101
     vEthernet (MGT)   Hyper-V Virtual Ethernet Adapter #2  False
     ```
 
-11. Validate RDMA functionality from the remote system to the local system, which has a vSwitch, testing both adapters that are members of the vSwitch SET team.<p>Because both Host vNICs \(SMB1 and SMB2\) are assigned to VLAN 102, you can select the VLAN 102 adapter on the remote system. <p>In this example, the NIC Test-40G-2 does RDMA to SMB1 (192.168.2.111) and SMB2 (192.168.2.222).
+## Step 11. Validate the RDMA functionality.
 
-    >[!TIP]
-    >You might need to disable the Firewall on this system.  Consult your fabric policy for details.
+You want to validate the RDMA functionality from the remote system to the local system, which has a vSwitch, to to both members of the vSwitch SET team.<p>Because both Host vNICs \(SMB1 and SMB2\) are assigned to VLAN 102, you can select the VLAN 102 adapter on the remote system. <p>In this example, the NIC Test-40G-2 does RDMA to SMB1 (192.168.2.111) and SMB2 (192.168.2.222).
 
-    ```PowerShell
-    Set-NetFirewallProfile -All -Enabled False
-    
-    Get-NetAdapterAdvancedProperty -Name "Test-40G-2"
-    ```
+>[!TIP]
+>You might need to disable the Firewall on this system.  Consult your fabric policy for details.
+>
+>```PowerShell
+>Set-NetFirewallProfile -All -Enabled False
+>    
+>Get-NetAdapterAdvancedProperty -Name "Test-40G-2"
+>```
+>
+>_**Results:**_ 
+>	
+>```
+>Name  DisplayNameDisplayValue   RegistryKeyword RegistryValue  
+>----  -----------------------   --------------- -------------  
+> .
+> .
+>Test-40G-2VLAN ID102VlanID  {102} 
+>```
 	
-	_**Results:**_ 
+1. View the network adapter properties.
+
+   ```PowerShell
+   Get-NetAdapter
+   ```
 	
-	```
-    Name  DisplayNameDisplayValue   RegistryKeyword RegistryValue  
-    ----  -----------------------   --------------- -------------  
-    .
-    .
-    Test-40G-2VLAN ID102VlanID  {102} 
-    ```
+   _**Results:**_ 
 	
-	```PowerShell
-    Get-NetAdapter
-    ```
+   ```
+   Name  InterfaceDescriptionifIndex Status   MacAddress LinkSpeed
+   ----  --------------------------- ------   ---------- ---------
+   Test-40G-2Mellanox ConnectX-3 Pro Ethernet A...#3   3 Up   E4-1D-2D-07-43-D140 Gbps
+   ```
+   
+2. View the network adapter RDMA information.
+
+   ```PowerShell
+   Get-NetAdapterRdma
+   ```
 	
-	_**Results:**_ 
+   _**Results:**_  
 	
-	```
-    Name  InterfaceDescriptionifIndex Status   MacAddress LinkSpeed
-    ----  --------------------------- ------   ---------- ---------
-    Test-40G-2Mellanox ConnectX-3 Pro Ethernet A...#3   3 Up   E4-1D-2D-07-43-D140 Gbps
-    ```
-    
-	```PowerShell
-    Get-NetAdapterRdma
-    ```
+   ```
+   Name  InterfaceDescription Enabled
+   ----  -------------------- -------
+   Test-40G-2Mellanox ConnectX-3 Pro Ethernet Adap... True   
+   ```
+
+3. Perform the RDMA traffic test on the first physical adapter.
+
+   ```PowerShell 
+   C:\TEST\Test-RDMA.PS1 -IfIndex 3 -IsRoCE $true -RemoteIpAddress 192.168.2.111 -PathToDiskspd C:\TEST\Diskspd-v2.0.17\amd64fre\
+   ```
 	
-	_**Results:**_  
+   _**Results:**_ 
 	
-	```
-    Name  InterfaceDescription Enabled
-    ----  -------------------- -------
-    Test-40G-2Mellanox ConnectX-3 Pro Ethernet Adap... True   
-    ```
+   ```
+   VERBOSE: Diskspd.exe found at C:\TEST\Diskspd-v2.0.17\amd64fre\diskspd.exe
+   VERBOSE: The adapter Test-40G-2 is a physical adapter
+   VERBOSE: Underlying adapter is RoCE. Checking if QoS/DCB/PFC is configured on each physical adapter(s)
+   VERBOSE: QoS/DCB/PFC configuration is correct.
+   VERBOSE: RDMA configuration is correct.
+   VERBOSE: Checking if remote IP address, 192.168.2.111, is reachable.
+   VERBOSE: Remote IP 192.168.2.111 is reachable.
+   VERBOSE: Disabling RDMA on adapters that are not part of this test. RDMA will be enabled on them later.
+   VERBOSE: Testing RDMA traffic now for. Traffic will be sent in a parallel job. Job details:
+   VERBOSE: 34251744 RDMA bytes sent per second
+   VERBOSE: 967346308 RDMA bytes written per second
+   VERBOSE: 35698177 RDMA bytes sent per second
+   VERBOSE: 976601842 RDMA bytes written per second
+   VERBOSE: Enabling RDMA on adapters that are not part of this test. RDMA was disabled on them prior to sending RDMA traffic.
+   VERBOSE: RDMA traffic test SUCCESSFUL: RDMA traffic was sent to 192.168.2.111
+   ```
+
+4. Perform the RDMA traffic test on the second physical adapter.
+
+   ```PowerShell
+   C:\TEST\Test-RDMA.PS1 -IfIndex 3 -IsRoCE $true -RemoteIpAddress 192.168.2.222 -PathToDiskspd C:\TEST\Diskspd-v2.0.17\amd64fre\
+   ```
 	
-	```PowerShell 
-    C:\TEST\Test-RDMA.PS1 -IfIndex 3 -IsRoCE $true -RemoteIpAddress 192.168.2.111 -PathToDiskspd C:\TEST\Diskspd-v2.0.17\amd64fre\
-	```
+   _**Results:**_ 
 	
-	_**Results:**_ 
+   ```
+   VERBOSE: Diskspd.exe found at C:\TEST\Diskspd-v2.0.17\amd64fre\diskspd.exe
+   VERBOSE: The adapter Test-40G-2 is a physical adapter
+   VERBOSE: Underlying adapter is RoCE. Checking if QoS/DCB/PFC is configured on each physical adapter(s)
+   VERBOSE: QoS/DCB/PFC configuration is correct.
+   VERBOSE: RDMA configuration is correct.
+   VERBOSE: Checking if remote IP address, 192.168.2.222, is reachable.
+   VERBOSE: Remote IP 192.168.2.222 is reachable.
+   VERBOSE: Disabling RDMA on adapters that are not part of this test. RDMA will be enabled on them later.
+   VERBOSE: Testing RDMA traffic now for. Traffic will be sent in a parallel job. Job details:
+   VERBOSE: 0 RDMA bytes written per second
+   VERBOSE: 0 RDMA bytes sent per second
+   VERBOSE: 485137693 RDMA bytes written per second
+   VERBOSE: 35200268 RDMA bytes sent per second
+   VERBOSE: 939044611 RDMA bytes written per second
+   VERBOSE: 34880901 RDMA bytes sent per second
+   VERBOSE: Enabling RDMA on adapters that are not part of this test. RDMA was disabled on them prior to sending RDMA traffic.
+   VERBOSE: RDMA traffic test SUCCESSFUL: RDMA traffic was sent to 192.168.2.222
+   ```
 	
-	```
-    VERBOSE: Diskspd.exe found at C:\TEST\Diskspd-v2.0.17\amd64fre\diskspd.exe
-    VERBOSE: The adapter Test-40G-2 is a physical adapter
-    VERBOSE: Underlying adapter is RoCE. Checking if QoS/DCB/PFC is configured on each physical adapter(s)
-    VERBOSE: QoS/DCB/PFC configuration is correct.
-    VERBOSE: RDMA configuration is correct.
-    VERBOSE: Checking if remote IP address, 192.168.2.111, is reachable.
-    VERBOSE: Remote IP 192.168.2.111 is reachable.
-    VERBOSE: Disabling RDMA on adapters that are not part of this test. RDMA will be enabled on them later.
-    VERBOSE: Testing RDMA traffic now for. Traffic will be sent in a parallel job. Job details:
-    VERBOSE: 34251744 RDMA bytes sent per second
-    VERBOSE: 967346308 RDMA bytes written per second
-    VERBOSE: 35698177 RDMA bytes sent per second
-    VERBOSE: 976601842 RDMA bytes written per second
-    VERBOSE: Enabling RDMA on adapters that are not part of this test. RDMA was disabled on them prior to sending RDMA traffic.
-    VERBOSE: RDMA traffic test SUCCESSFUL: RDMA traffic was sent to 192.168.2.111
-    ```
-    
-	```PowerShell
-    C:\TEST\Test-RDMA.PS1 -IfIndex 3 -IsRoCE $true -RemoteIpAddress 192.168.2.222 -PathToDiskspd C:\TEST\Diskspd-v2.0.17\amd64fre\
-	```
-	
-	_**Results:**_ 
-	
-	```
-    VERBOSE: Diskspd.exe found at C:\TEST\Diskspd-v2.0.17\amd64fre\diskspd.exe
-    VERBOSE: The adapter Test-40G-2 is a physical adapter
-    VERBOSE: Underlying adapter is RoCE. Checking if QoS/DCB/PFC is configured on each physical adapter(s)
-    VERBOSE: QoS/DCB/PFC configuration is correct.
-    VERBOSE: RDMA configuration is correct.
-    VERBOSE: Checking if remote IP address, 192.168.2.222, is reachable.
-    VERBOSE: Remote IP 192.168.2.222 is reachable.
-    VERBOSE: Disabling RDMA on adapters that are not part of this test. RDMA will be enabled on them later.
-    VERBOSE: Testing RDMA traffic now for. Traffic will be sent in a parallel job. Job details:
-    VERBOSE: 0 RDMA bytes written per second
-    VERBOSE: 0 RDMA bytes sent per second
-    VERBOSE: 485137693 RDMA bytes written per second
-    VERBOSE: 35200268 RDMA bytes sent per second
-    VERBOSE: 939044611 RDMA bytes written per second
-    VERBOSE: 34880901 RDMA bytes sent per second
-    VERBOSE: Enabling RDMA on adapters that are not part of this test. RDMA was disabled on them prior to sending RDMA traffic.
-    VERBOSE: RDMA traffic test SUCCESSFUL: RDMA traffic was sent to 192.168.2.222
-    ```
-	
-12. Test for RDMA traffic from the local to the remote computer.
+5. Test for RDMA traffic from the local to the remote computer.
 
     ```PowerShell
     Get-NetAdapter | ft –AutoSize
@@ -1252,66 +1267,70 @@ The TEST-40G-1 and TEST-40G-2 physical adapters still have an ACCESS VLAN of 101
     vEthernet (SMB2)  Hyper-V Virtual Ethernet Adapter #4  45 Up   00-15-5D-30-AA-0380 Gbps
     vEthernet (SMB1)  Hyper-V Virtual Ethernet Adapter #3  41 Up   00-15-5D-30-AA-0280 Gbps
     ```
-    
-	```
-    C:\TEST\Test-RDMA.PS1 -IfIndex 41 -IsRoCE $true -RemoteIpAddress 192.168.2.5 -PathToDiskspd C:\TEST\Diskspd-v2.0.17\amd64fre\
-	```
+
+6. Perform the RDMA traffic test on the first virtual adapter.    
 	
-	_**Results:**_ 
+   ```
+   C:\TEST\Test-RDMA.PS1 -IfIndex 41 -IsRoCE $true -RemoteIpAddress 192.168.2.5 -PathToDiskspd C:\TEST\Diskspd-v2.0.17\amd64fre\
+   ```
 	
-	```
-    VERBOSE: Diskspd.exe found at C:\TEST\Diskspd-v2.0.17\amd64fre\diskspd.exe
-    VERBOSE: The adapter vEthernet (SMB1) is a virtual adapter
-    VERBOSE: Retrieving vSwitch bound to the virtual adapter
-    VERBOSE: Found vSwitch: VMSTEST
-    VERBOSE: Found the following physical adapter(s) bound to vSwitch: TEST-40G-1, TEST-40G-2
-    VERBOSE: Underlying adapter is RoCE. Checking if QoS/DCB/PFC is configured on each physical adapter(s)
-    VERBOSE: QoS/DCB/PFC configuration is correct.
-    VERBOSE: RDMA configuration is correct.
-    VERBOSE: Checking if remote IP address, 192.168.2.5, is reachable.
-    VERBOSE: Remote IP 192.168.2.5 is reachable.
-    VERBOSE: Disabling RDMA on adapters that are not part of this test. RDMA will be enabled on them later.
-    VERBOSE: Testing RDMA traffic now for. Traffic will be sent in a parallel job. Job details:
-    VERBOSE: 0 RDMA bytes written per second
-    VERBOSE: 0 RDMA bytes sent per second
-    VERBOSE: 0 RDMA bytes written per second
-    VERBOSE: 15250197 RDMA bytes sent per second
-    VERBOSE: 896320913 RDMA bytes written per second
-    VERBOSE: 33947559 RDMA bytes sent per second
-    VERBOSE: 912160540 RDMA bytes written per second
-    VERBOSE: 34091930 RDMA bytes sent per second
-    VERBOSE: Enabling RDMA on adapters that are not part of this test. RDMA was disabled on them prior to sending RDMA traffic.
-    VERBOSE: RDMA traffic test SUCCESSFUL: RDMA traffic was sent to 192.168.2.5
-    ```
-    
-	```PowerShell
-    C:\TEST\Test-RDMA.PS1 -IfIndex 45 -IsRoCE $true -RemoteIpAddress 192.168.2.5 -PathToDiskspd C:\TEST\Diskspd-v2.0.17\amd64fre\
-	```
+   _**Results:**_ 
 	
-	_**Results:**_ 
+   ```
+   VERBOSE: Diskspd.exe found at C:\TEST\Diskspd-v2.0.17\amd64fre\diskspd.exe
+   VERBOSE: The adapter vEthernet (SMB1) is a virtual adapter
+   VERBOSE: Retrieving vSwitch bound to the virtual adapter
+   VERBOSE: Found vSwitch: VMSTEST
+   VERBOSE: Found the following physical adapter(s) bound to vSwitch: TEST-40G-1, TEST-40G-2
+   VERBOSE: Underlying adapter is RoCE. Checking if QoS/DCB/PFC is configured on each physical adapter(s)
+   VERBOSE: QoS/DCB/PFC configuration is correct.
+   VERBOSE: RDMA configuration is correct.
+   VERBOSE: Checking if remote IP address, 192.168.2.5, is reachable.
+   VERBOSE: Remote IP 192.168.2.5 is reachable.
+   VERBOSE: Disabling RDMA on adapters that are not part of this test. RDMA will be enabled on them later.
+   VERBOSE: Testing RDMA traffic now for. Traffic will be sent in a parallel job. Job details:
+   VERBOSE: 0 RDMA bytes written per second
+   VERBOSE: 0 RDMA bytes sent per second
+   VERBOSE: 0 RDMA bytes written per second
+   VERBOSE: 15250197 RDMA bytes sent per second
+   VERBOSE: 896320913 RDMA bytes written per second
+   VERBOSE: 33947559 RDMA bytes sent per second
+   VERBOSE: 912160540 RDMA bytes written per second
+   VERBOSE: 34091930 RDMA bytes sent per second
+   VERBOSE: Enabling RDMA on adapters that are not part of this test. RDMA was disabled on them prior to sending RDMA traffic.
+   VERBOSE: RDMA traffic test SUCCESSFUL: RDMA traffic was sent to 192.168.2.5
+   ```
+
+7. Perform the RDMA traffic test on the second virtual adapter.
+
+   ```PowerShell
+   C:\TEST\Test-RDMA.PS1 -IfIndex 45 -IsRoCE $true -RemoteIpAddress 192.168.2.5 -PathToDiskspd C:\TEST\Diskspd-v2.0.17\amd64fre\
+   ```
 	
-	```
-    VERBOSE: Diskspd.exe found at C:\TEST\Diskspd-v2.0.17\amd64fre\diskspd.exe
-    VERBOSE: The adapter vEthernet (SMB2) is a virtual adapter
-    VERBOSE: Retrieving vSwitch bound to the virtual adapter
-    VERBOSE: Found vSwitch: VMSTEST
-    VERBOSE: Found the following physical adapter(s) bound to vSwitch: TEST-40G-1, TEST-40G-2
-    VERBOSE: Underlying adapter is RoCE. Checking if QoS/DCB/PFC is configured on each physical adapter(s)
-    VERBOSE: QoS/DCB/PFC configuration is correct.
-    VERBOSE: RDMA configuration is correct.
-    VERBOSE: Checking if remote IP address, 192.168.2.5, is reachable.
-    VERBOSE: Remote IP 192.168.2.5 is reachable.
-    VERBOSE: Disabling RDMA on adapters that are not part of this test. RDMA will be enabled on them later.
-    VERBOSE: Testing RDMA traffic now for. Traffic will be sent in a parallel job. Job details:
-    VERBOSE: 0 RDMA bytes written per second
-    VERBOSE: 0 RDMA bytes sent per second
-    VERBOSE: 385169487 RDMA bytes written per second
-    VERBOSE: 33902277 RDMA bytes sent per second
-    VERBOSE: 907354685 RDMA bytes written per second
-    VERBOSE: 33923662 RDMA bytes sent per second
-    VERBOSE: Enabling RDMA on adapters that are not part of this test. RDMA was disabled on them prior to sending RDMA traffic.
-    VERBOSE: RDMA traffic test SUCCESSFUL: RDMA traffic was sent to 192.168.2.5
-    ```
+   _**Results:**_ 
+	
+   ```
+   VERBOSE: Diskspd.exe found at C:\TEST\Diskspd-v2.0.17\amd64fre\diskspd.exe
+   VERBOSE: The adapter vEthernet (SMB2) is a virtual adapter
+   VERBOSE: Retrieving vSwitch bound to the virtual adapter
+   VERBOSE: Found vSwitch: VMSTEST
+   VERBOSE: Found the following physical adapter(s) bound to vSwitch: TEST-40G-1, TEST-40G-2
+   VERBOSE: Underlying adapter is RoCE. Checking if QoS/DCB/PFC is configured on each physical adapter(s)
+   VERBOSE: QoS/DCB/PFC configuration is correct.
+   VERBOSE: RDMA configuration is correct.
+   VERBOSE: Checking if remote IP address, 192.168.2.5, is reachable.
+   VERBOSE: Remote IP 192.168.2.5 is reachable.
+   VERBOSE: Disabling RDMA on adapters that are not part of this test. RDMA will be enabled on them later.
+   VERBOSE: Testing RDMA traffic now for. Traffic will be sent in a parallel job. Job details:
+   VERBOSE: 0 RDMA bytes written per second
+   VERBOSE: 0 RDMA bytes sent per second
+   VERBOSE: 385169487 RDMA bytes written per second
+   VERBOSE: 33902277 RDMA bytes sent per second
+   VERBOSE: 907354685 RDMA bytes written per second
+   VERBOSE: 33923662 RDMA bytes sent per second
+   VERBOSE: Enabling RDMA on adapters that are not part of this test. RDMA was disabled on them prior to sending RDMA traffic.
+   VERBOSE: RDMA traffic test SUCCESSFUL: RDMA traffic was sent to 192.168.2.5
+   ```
 	
 The final line in this output, "RDMA traffic test SUCCESSFUL: RDMA traffic was sent to 192.168.2.5," shows that you have successfully configured Converged NIC on your adapter.
 
