@@ -439,7 +439,7 @@ The following image shows two Hyper-V hosts with two network adapters each that 
    Get-NetAdapterQos -Name "Test-40G-2"
    ```
    
-  _**Results:**_ 
+   _**Results:**_ 
 
    **Name**: TEST-40G-2 
 
@@ -475,6 +475,7 @@ The following image shows two Hyper-V hosts with two network adapters each that 
    |NetDirect| 445|3|
    ---
 
+   
 7. Reserve half the bandwidth to SMB Direct \(RDMA\)
 
    ```PowerShell
