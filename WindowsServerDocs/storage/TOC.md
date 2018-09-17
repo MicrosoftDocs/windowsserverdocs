@@ -85,7 +85,7 @@
 ### [Mirror-accelerated parity](refs/mirror-accelerated-parity.md)
 ### [Block cloning](refs/block-cloning.md)
 ### [Integrity streams](refs/integrity-streams.md)
-## [Storage Migration Service]
+## Storage Migration Service
 ### [Overview](storage-migration-service/overview.md)
 ### [Migrate a server](storage-migration-service/migrate-data.md)
 ## [Storage Replica](storage-replica/storage-replica-overview.md)
