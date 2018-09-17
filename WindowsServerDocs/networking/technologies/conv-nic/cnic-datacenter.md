@@ -437,6 +437,7 @@ The following image shows two Hyper-V hosts with two network adapters each that 
    Name: TEST-40G-2 
    Enabled: True 
    ```
+
    _**Capabilities**:_ 
 
    |Parameter|Hardware|Current|
@@ -446,7 +447,6 @@ The following image shows two Hyper-V hosts with two network adapters each that 
    |NumTCs(Max/ETS/PFC)|8/8/8|8/8/8|
    ---
 
- 
    _**OperationalTrafficClasses**:_  
 
    |TC|TSA|Bandwidth|Priorities|
