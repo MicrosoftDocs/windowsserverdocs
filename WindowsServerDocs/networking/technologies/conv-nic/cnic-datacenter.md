@@ -454,12 +454,11 @@ The following image shows two Hyper-V hosts with two network adapters each that 
    |0| Strict|&nbsp;|0-7|
    ---
    
-   
-   _**OperationalFlowControl**:_  
+    _**OperationalFlowControl**:_  
 
-   Priority 3 Enabled  
+    Priority 3 Enabled  
    
-   _**OperationalClassifications**:_   
+   _**OperationalClassifications**:_  
 
    |Protocol|Port/Type|Priority|
    |--------|---------|--------|
@@ -478,7 +477,7 @@ The following image shows two Hyper-V hosts with two network adapters each that 
    
    |Name|Algorithm |Bandwidth(%)| Priority |PolicySet |IfIndex |IfAlias |
    |----|---------| ------------ |--------| ---------|------- |------- |
-   |SMB | ETS     | 50 |3 |Global |&nbsp;|&nbsp;|                                      
+   |SMB | ETS     | 50 |3 |Global |&nbsp;|&nbsp;|   
    ---
 
 8. View the bandwidth reservation settings:   
@@ -525,19 +524,18 @@ The following image shows two Hyper-V hosts with two network adapters each that 
    
 10. View the QoS traffic classes.
 
-   ```PowerShell
-   Get-NetQosTrafficClass | ft -AutoSize
-   ```
-   
-   _**Results:**_
+    ```PowerShell
+    Get-NetQosTrafficClass | ft -AutoSize
+    ```
+    _**Results:**_
 
-   |Name|Algorithm |Bandwidth(%)| Priority |PolicySet |IfIndex |IfAlias |
-   |----|---------| ------------ |--------| ---------|------- |------- |
-   |[Default] |ETS |30 |0,4-7 |Global|&nbsp;|&nbsp;|
-   |SMB |ETS |50 |3 |Global|&nbsp;|&nbsp;|
-   |IP1 |ETS |10 |1 |Global|&nbsp;|&nbsp;|
-   |IP2 |ETS |10 |2 |Global|&nbsp;|&nbsp;|
-   ---
+    |Name|Algorithm |Bandwidth(%)| Priority |PolicySet |IfIndex |IfAlias |
+    |----|---------| ------------ |--------| ---------|------- |------- |
+    |[Default] |ETS |30 |0,4-7 |Global|&nbsp;|&nbsp;|
+    |SMB |ETS |50 |3 |Global|&nbsp;|&nbsp;|
+    |IP1 |ETS |10 |1 |Global|&nbsp;|&nbsp;|
+    |IP2 |ETS |10 |2 |Global|&nbsp;|&nbsp;|
+    ---
    
 ## Step 5. (Optional) Override the debugger
 
