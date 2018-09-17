@@ -771,42 +771,41 @@ You must remove the ACCESS VLAN setting to prevent both auto-tagging the egress 
    
    _**Results:**_   
    
-   
-   ```   
-   ComputerName   : 192.168.1.5
-   RemoteAddress  : 192.168.1.5
-   InterfaceAlias : vEthernet (VMSTEST)
-   SourceAddress  : 192.168.1.3
-   PingSucceeded  : True
-   PingReplyDetails (RTT) : 0 ms
-   ```
+ 
+    ComputerName   : 192.168.1.5
+    RemoteAddress  : 192.168.1.5
+    InterfaceAlias : vEthernet (VMSTEST)
+    SourceAddress  : 192.168.1.3
+    PingSucceeded  : True
+    PingReplyDetails (RTT) : 0 ms
+
 
    
-    >**IMPORTANT** If your results are not similar to the example results and ping fails with the message "WARNING: Ping to 192.168.1.5 failed -- Status: DestinationHostUnreachable," confirm that the “vEthernet (VMSTEST)” has the proper IP address.
-    >
-    >```PowerShell
-    >Get-NetIPAddress -InterfaceAlias "vEthernet (VMSTEST)"
-    >```
-    >
-    >If the IP address is not set, correct the issue.
-    >
-    >```PowerShell
-    >New-NetIPAddress -InterfaceAlias "vEthernet (VMSTEST)" -IPAddress 192.168.1.3 -PrefixLength 24
-    >
-    >IPAddress : 192.168.1.3
-    >InterfaceIndex: 37
-    >InterfaceAlias: vEthernet (VMSTEST)
-    >AddressFamily : IPv4
-    >Type  : Unicast
-    >PrefixLength  : 24
-    >PrefixOrigin  : Manual
-    >SuffixOrigin  : Manual
-    >AddressState  : Tentative
-    >ValidLifetime : Infinite ([TimeSpan]::MaxValue)
-    >PreferredLifetime : Infinite ([TimeSpan]::MaxValue)
-    >SkipAsSource  : False
-    >PolicyStore   : ActiveStore
-    >```  
+   >**IMPORTANT** If your results are not similar to the example results and ping fails with the message "WARNING: Ping to 192.168.1.5 failed -- Status: DestinationHostUnreachable," confirm that the “vEthernet (VMSTEST)” has the proper IP address.
+   >
+   >```PowerShell
+   >Get-NetIPAddress -InterfaceAlias "vEthernet (VMSTEST)"
+   >```
+   >
+   >If the IP address is not set, correct the issue.
+   >
+   >```PowerShell
+   >New-NetIPAddress -InterfaceAlias "vEthernet (VMSTEST)" -IPAddress 192.168.1.3 -PrefixLength 24
+   >
+   >IPAddress : 192.168.1.3
+   >InterfaceIndex: 37
+   >InterfaceAlias: vEthernet (VMSTEST)
+   >AddressFamily : IPv4
+   >Type  : Unicast
+   >PrefixLength  : 24
+   >PrefixOrigin  : Manual
+   >SuffixOrigin  : Manual
+   >AddressState  : Tentative
+   >ValidLifetime : Infinite ([TimeSpan]::MaxValue)
+   >PreferredLifetime : Infinite ([TimeSpan]::MaxValue)
+   >SkipAsSource  : False
+   >PolicyStore   : ActiveStore
+   >```  
    
 
 4. Rename the Management NIC.
@@ -1068,35 +1067,33 @@ The TEST-40G-1 and TEST-40G-2 physical adapters still have an ACCESS VLAN of 101
     Test-NetConnection 192.168.2.111
     ```
 
-	<br>
 	
     _**Results:**_ 
 
-   
-    ```
+
     ComputerName   : 192.168.2.111
     RemoteAddress  : 192.168.2.111
     InterfaceAlias : Test-40G-2
     SourceAddress  : 192.168.2.5
     PingSucceeded  : True
     PingReplyDetails (RTT) : 0 ms
-    ```
+
 
     ```PowerShell   
     Test-NetConnection 192.168.2.222
     ```
-	    <br>
+
 
     _**Results:**_ 
 
-    ```
+
     ComputerName   : 192.168.2.222
     RemoteAddress  : 192.168.2.222
     InterfaceAlias : Test-40G-2
     SourceAddress  : 192.168.2.5
     PingSucceeded  : True
     PingReplyDetails (RTT) : 0 ms 
-    ```
+
    
 
    
@@ -1105,11 +1102,10 @@ The TEST-40G-1 and TEST-40G-2 physical adapters still have an ACCESS VLAN of 101
     Set-VMNetworkAdapter -ManagementOS -Name "SMB2" -IeeePriorityTag on
     Get-VMNetworkAdapter -ManagementOS -Name "SMB*" | fl Name,SwitchName,IeeePriorityTag,Status
     ```
-    <br>
-	
+
     _**Results:**_   
 	
-    ```
+
     Name: SMB1
     SwitchName  : VMSTEST
     IeeePriorityTag : On 
@@ -1119,24 +1115,24 @@ The TEST-40G-1 and TEST-40G-2 physical adapters still have an ACCESS VLAN of 101
     SwitchName  : VMSTEST
     IeeePriorityTag : On
     Status  : {Ok}
-    ```
+
 
 
 	
     ```PowerShell
     Get-NetAdapterRdma -Name "vEthernet*" | sort Name | ft -AutoSize
     ```
-	<br>
+
 	
     _**Results:**_ 
 
-    ```
+
     Name  InterfaceDescription Enabled
     ----  -------------------- -------
     vEthernet (SMB2)  Hyper-V Virtual Ethernet Adapter #4  False  
     vEthernet (SMB1)  Hyper-V Virtual Ethernet Adapter #3  False  
     vEthernet (MGT)   Hyper-V Virtual Ethernet Adapter #2  False   
-    ```
+
 	
    
     ```PowerShell
@@ -1145,17 +1141,17 @@ The TEST-40G-1 and TEST-40G-2 physical adapters still have an ACCESS VLAN of 101
     Get-NetAdapterRdma -Name "vEthernet*" | sort Name | fl *
     ```
 
-	<br>
+
 	
     _**Results:**_ 
 
-    ```
+
     Name  InterfaceDescription Enabled
     ----  -------------------- -------
     vEthernet (SMB2)  Hyper-V Virtual Ethernet Adapter #4  True   
     vEthernet (SMB1)  Hyper-V Virtual Ethernet Adapter #3  True  
     vEthernet (MGT)   Hyper-V Virtual Ethernet Adapter #2  False
-    ```
+
 
 11. Validate RDMA functionality from the remote system to the local system, which has a vSwitch, testing both adapters that are members of the vSwitch SET team.<p>Because both Host vNICs \(SMB1 and SMB2\) are assigned to VLAN 102, you can select the VLAN 102 adapter on the remote system. <p>In this example, the NIC Test-40G-2 does RDMA to SMB1 (192.168.2.111) and SMB2 (192.168.2.222).
 
