@@ -31,7 +31,7 @@ Ensure that the physical NIC can connect to the destination host.  This test dem
    Get-NetAdapter -Name "Test-40G-1" | ft -AutoSize
    ```
   
-   Results:
+   _**Results:**_
 
    |Name|InterfaceDescription|ifIndex|Status|MacAddress|LinkSpeed|
    |-----|--------------------|-------|-----|----------|---------|
@@ -46,7 +46,7 @@ Ensure that the physical NIC can connect to the destination host.  This test dem
    Get-NetIPAddress -InterfaceAlias "TEST-40G-1" | Where-Object {$_.AddressFamily -eq "IPv4"} | fl InterfaceAlias,IPAddress
    ```
    
-   Results:
+   _**Results:**_
 
    |Parameter|Value|
    |---------|-----|
@@ -64,7 +64,7 @@ Ensure that the physical NIC can connect to the destination host.  This test dem
    Get-NetAdapter -Name "Test-40G-2" | ft -AutoSize
    ```
    
-   Results:
+   _**Results:**_
 
    |Name |InterfaceDescription |ifIndex |Status |MacAddress |LinkSpeed|
    |----|--------------------|-------|------|----------|---------|
@@ -79,7 +79,7 @@ Ensure that the physical NIC can connect to the destination host.  This test dem
    Get-NetIPAddress -InterfaceAlias "Test-40G-2" | Where-Object {$\_.AddressFamily -eq "IPv4"} | fl InterfaceAlias,IPAddress
    ```
    
-   Results:
+   _**Results:**_
 
    |Parameter|Value|
    |---------|-----|
@@ -104,7 +104,7 @@ In this step, we use the **Test-NetConnection** Windows PowerShell command, but 
    Test-NetConnection 192.168.1.5
    ```
    
-   Results:
+   _**Results:**_
 
    |Parameter|Value|
    |---------|-----|
@@ -130,7 +130,7 @@ In this step, we use the **Test-NetConnection** Windows PowerShell command, but 
    Test-NetConnection 192.168.1.5
    ```
    
-   Results:
+   _**Results:**_
 
    |Parameter|Value|
    |---------|-----|
@@ -149,7 +149,7 @@ In this step, we use the **Test-NetConnection** Windows PowerShell command, but 
    Test-NetConnection 192.168.2.5
    ```
    
-   Results:
+   _**Results:**_
 
    |Parameter|Value|
    |---------|-----|
@@ -187,7 +187,7 @@ The following image shows two Hyper-V hosts with two network adapters each that 
    Get-NetAdapterAdvancedProperty -Name "Test-40G-1" | Where-Object {$_.RegistryKeyword -eq "VlanID"} | ft -AutoSize
    ```
 
-   Results:   
+   _**Results:**_   
 
    |Name |DisplayName| DisplayValue| RegistryKeyword |RegistryValue|
    |----|-----------|------------|---------------|-------------|
@@ -206,7 +206,7 @@ The following image shows two Hyper-V hosts with two network adapters each that 
    Get-NetAdapter -Name "Test-40G-1" | ft -AutoSize
    ```
    
-   Results:
+   _**Results:**_
 
    |Name|InterfaceDescription|ifIndex| Status|MacAddress|LinkSpeed|
    |----|--------------------|-------|------|----------| ---------|
@@ -220,7 +220,7 @@ The following image shows two Hyper-V hosts with two network adapters each that 
    Get-NetAdapterAdvancedProperty -Name "Test-40G-2" | Where-Object {$_.RegistryKeyword -eq "VlanID"} | ft -AutoSize
    ``` 
 
-   Results:
+   _**Results:**_
 
    |Name |DisplayName| DisplayValue| RegistryKeyword |RegistryValue|
    |----|-----------|------------|---------------|-------------|
@@ -239,7 +239,7 @@ The following image shows two Hyper-V hosts with two network adapters each that 
    Get-NetAdapter -Name "Test-40G-1" | ft -AutoSize
    ```
    
-   Results:
+   _**Results:**_
 
    |Name|InterfaceDescription|ifIndex| Status|MacAddress|LinkSpeed|
    |----|--------------------|-------|------|----------| ---------|
@@ -255,7 +255,7 @@ The following image shows two Hyper-V hosts with two network adapters each that 
    Test-NetConnection 192.168.1.5
    ```
 
-   Results:   
+   _**Results:**_   
 
    |Parameter|Value|
    |---------|-----|
@@ -273,7 +273,7 @@ The following image shows two Hyper-V hosts with two network adapters each that 
    Test-NetConnection 192.168.2.5
    ```
 
-   Results:    
+   _**Results:**_    
 
    |Parameter|Value|
    |---------|-----|
@@ -310,7 +310,7 @@ The following image shows two Hyper-V hosts with two network adapters each that 
    Install-WindowsFeature Data-Center-Bridging
    ```
 
-   Results:
+   _**Results:**_
 
    |Success |Restart Needed |Exit Code|Feature Result|
    |------- |-------------- |--------- |-------------- |
@@ -328,7 +328,7 @@ The following image shows two Hyper-V hosts with two network adapters each that 
    New-NetQosPolicy "SMB" -NetDirectPortMatchCondition 445 -PriorityValue8021Action 3
    ```
    
-   Results:
+   _**Results:**_
 
    |Parameter|Value|
    |---------|-----|
@@ -347,7 +347,7 @@ The following image shows two Hyper-V hosts with two network adapters each that 
    New-NetQosPolicy "DEFAULT" -Default -PriorityValue8021Action 0
    ```
 
-   Results:   
+   _**Results:**_   
 
    |Parameter|Value|
    |---------|-----|
@@ -367,7 +367,7 @@ The following image shows two Hyper-V hosts with two network adapters each that 
    Get-NetQosFlowControl
    ```
    
-   Results:
+   _**Results:**_
    
    |Priority|Enabled|PolicySet|IfIndex|IfAlias|
    |---------|-----|--------- |-------| -------|
@@ -381,7 +381,7 @@ The following image shows two Hyper-V hosts with two network adapters each that 
    |7 |False |Global|&nbsp;|&nbsp;|
    ---
    
-   >[IMPORTANT]  
+   >**IMPORTANT**
    >If your results do not match these results because items other than 3 have an Enabled value of True, you must disable **FlowControl** for these classes.
    >
    >```PowerShell
@@ -398,9 +398,10 @@ The following image shows two Hyper-V hosts with two network adapters each that 
    Get-NetAdapterQos -Name "Test-40G-1"
    ```
    
-   Results:
+   _**Results:**_
 
    **Name**: TEST-40G-1 
+
    **Enabled**: True
    
    _**Capabilities**:_   
@@ -438,9 +439,10 @@ The following image shows two Hyper-V hosts with two network adapters each that 
    Get-NetAdapterQos -Name "Test-40G-2"
    ```
    
-   Results: 
+  _**Results:**_ 
 
    **Name**: TEST-40G-2 
+
    **Enabled**: True 
    
    _**Capabilities**:_ 
@@ -479,7 +481,7 @@ The following image shows two Hyper-V hosts with two network adapters each that 
    New-NetQosTrafficClass "SMB" -priority 3 -bandwidthpercentage 50 -algorithm ETS
    ```
    
-   Results:
+   _**Results:**_
    
    |Name|Algorithm |Bandwidth(%)| Priority |PolicySet |IfIndex |IfAlias |
    |----|---------| ------------ |--------| ---------|------- |------- |
@@ -492,7 +494,7 @@ The following image shows two Hyper-V hosts with two network adapters each that 
    Get-NetQosTrafficClass | ft -AutoSize
    ```
    
-   Results:
+   _**Results:**_
 
 
    |Name|Algorithm |Bandwidth(%)| Priority |PolicySet |IfIndex |IfAlias |
@@ -510,7 +512,7 @@ The following image shows two Hyper-V hosts with two network adapters each that 
    New-NetQosTrafficClass "IP1" -Priority 1 -bandwidthpercentage 10 -algorithm ETS
    ```
    
-   Results:
+   _**Results:**_
    
    |Name|Algorithm |Bandwidth(%)| Priority |PolicySet |IfIndex |IfAlias |
    |----|---------| ------------ |--------| ---------|------- |------- |
@@ -521,7 +523,7 @@ The following image shows two Hyper-V hosts with two network adapters each that 
    New-NetQosTrafficClass "IP2" -Priority 2 -bandwidthpercentage 10 -algorithm ETS
    ```
    
-   Results:
+   _**Results:**_
 
    |Name|Algorithm |Bandwidth(%)| Priority |PolicySet |IfIndex |IfAlias |
    |----|---------| ------------ |--------| ---------|------- |------- |
@@ -534,7 +536,7 @@ The following image shows two Hyper-V hosts with two network adapters each that 
    Get-NetQosTrafficClass | ft -AutoSize
    ```
    
-   Results:
+   _**Results:**_
 
    |Name|Algorithm |Bandwidth(%)| Priority |PolicySet |IfIndex |IfAlias |
    |----|---------| ------------ |--------| ---------|------- |------- |
@@ -572,7 +574,7 @@ The following image shows the current state of the Hyper-V hosts.
    Get-NetAdapterRdma | ft -AutoSize
    ```
    
-   Results:
+   _**Results:**_
 
    |Name |InterfaceDescription |Enabled|
    |----|--------------------|-------|
@@ -586,7 +588,7 @@ The following image shows the current state of the Hyper-V hosts.
    Get-NetIPConfiguration -InterfaceAlias "TEST*" | ft InterfaceAlias,InterfaceIndex,IPv4Address
    ```
    
-   Results:
+   _**Results:**_
 
    |InterfaceAlias |InterfaceIndex |IPv4Address|
    |-------------- |-------------- |-----------|
@@ -687,7 +689,7 @@ The following image shows Hyper-V Host 1 with a vSwitch.
     Get-NetAdapter
    ```
    
-   Results:
+   _**Results:**_
 
    |Name |InterfaceDescription |ifIndex |Status |MacAddress |LinkSpeed|
    |---- |--------------------|-------|------|----------|---------|
@@ -700,7 +702,7 @@ The following image shows Hyper-V Host 1 with a vSwitch.
    Get-VMNetworkAdapter -ManagementOS
    ```
    
-   Results:
+   _**Results:**_
 
    |Name |IsManagementOs |VMName |SwitchName |MacAddress |Status |IPAddresses|
    |----|--------------|------|----------|----------|------|-----------|
@@ -714,7 +716,7 @@ The following image shows Hyper-V Host 1 with a vSwitch.
    Test-NetConnection 192.168.1.5 
    ```
    
-   Results:
+   _**Results:**_
 
    ```
     WARNING: Ping to 192.168.1.5 failed -- Status: DestinationHostUnreachable
@@ -747,7 +749,7 @@ You must remove the ACCESS VLAN setting to prevent both auto-tagging the egress 
    Get-VMNetworkAdapterVlan -ManagementOS -VMNetworkAdapterName "VMSTEST"
    ```
    
-   Results:
+   _**Results:**_
    
    ```
    VMName VMNetworkAdapterName Mode   VlanList
@@ -762,7 +764,7 @@ You must remove the ACCESS VLAN setting to prevent both auto-tagging the egress 
     Test-NetConnection 192.168.1.5
    ```
    
-   Results: 
+   _**Results:**_ 
    
    ```
     ComputerName   : 192.168.1.5
@@ -786,7 +788,7 @@ You must remove the ACCESS VLAN setting to prevent both auto-tagging the egress 
     >New-NetIPAddress -InterfaceAlias "vEthernet (VMSTEST)" -IPAddress 192.168.1.3 -PrefixLength 24
     >```
     > 
-    >Results: 
+    >_**Results:**_ 
     > 
     >```
     >IPAddress : 192.168.1.3
@@ -811,7 +813,7 @@ You must remove the ACCESS VLAN setting to prevent both auto-tagging the egress 
    Get-VMNetworkAdapter -ManagementOS
    ```
    
-   Results: 
+   _**Results:**_ 
    
    |Name |IsManagementOs |VMName |SwitchName |MacAddress |Status |IPAddresses
    |----|--------------|------|----------|----------|------|-----------|
@@ -825,7 +827,7 @@ You must remove the ACCESS VLAN setting to prevent both auto-tagging the egress 
    Get-NetAdapter
    ```
    
-   Results:
+   _**Results:**_
 
    |Name |InterfaceDescription |ifIndex |Status |MacAddress |LinkSpeed|
    |----|--------------------|------|----------|---------|------|
@@ -845,7 +847,7 @@ The following image shows the current state of your Hyper-V hosts, including the
    Get-VMNetworkAdapter -ManagementOS -Name "MGT" | fl Name,IeeePriorityTag
    ```
    
-   Results: 
+   _**Results:**_ 
 
    **Name:** MGT  
    **IeeePriorityTag:** On  
@@ -863,7 +865,7 @@ The following image shows the current state of your Hyper-V hosts, including the
    Get-VMNetworkAdapter -ManagementOS
    ```
    
-   Results: 
+   _**Results:**_ 
 
    |Name |IsManagementOs |VMName |SwitchName |MacAddress |Status |IPAddresses|
    |----|--------------|------|----------|----------|------|-----------|
@@ -885,7 +887,7 @@ The TEST-40G-1 and TEST-40G-2 physical adapters still have an ACCESS VLAN of 101
     New-NetIPAddress -InterfaceAlias "vEthernet (SMB1)" -IPAddress 192.168.2.111 -PrefixLength 24
    ```
    
-   Results: 
+   _**Results:**_ 
    
    ```
     IPAddress : 192.168.2.111
@@ -909,7 +911,7 @@ The TEST-40G-1 and TEST-40G-2 physical adapters still have an ACCESS VLAN of 101
     Test-NetConnection 192.168.2.5 
    ```
    
-   Results: 
+   _**Results:**_ 
     
    ```
     ComputerName   : 192.168.2.5
@@ -926,7 +928,7 @@ The TEST-40G-1 and TEST-40G-2 physical adapters still have an ACCESS VLAN of 101
     New-NetIPAddress -InterfaceAlias "vEthernet (SMB2)" -IPAddress 192.168.2.222 -PrefixLength 24 
    ```
    
-   Results: 
+   _**Results:**_ 
    
    ```
     IPAddress : 192.168.2.222
