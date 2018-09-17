@@ -46,6 +46,8 @@ To use Storage Migration Service, you need the following:
 - An optional **orchestrator server** to manage the migration.<br>If one of the other servers is running Windows Server 2019, you can use that as the orchestrator, though if you're doing a lot of migrations, you might want a separate orchestrator server.
 - A **PC or server running [Windows Admin Center](../../manage/windows-admin-center/understand/windows-admin-center.md)** to run the Storage Migration Service user interface, unless you prefer using PowerShell to manage the migration.
 
+### Alternate phrasing - I think delete this
+
 To use Storage Migration Service, you'll need at least two servers:
 
 - A source server (migrate files and data from this server)
