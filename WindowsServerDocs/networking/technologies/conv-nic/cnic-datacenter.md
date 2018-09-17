@@ -849,12 +849,10 @@ The following image shows the current state of your Hyper-V hosts, including the
    ```
    
    _**Results:**_  
-   
-   
-    ```
-    Name : MGT  
-    IeeePriorityTag :  On  
-    ``` 
+      
+   Name : MGT  
+   IeeePriorityTag :  On  
+    
 2. Create two host vNICs for RDMA and connect them to the vSwitch VMSTEST.
 
    ```PowerShell    
