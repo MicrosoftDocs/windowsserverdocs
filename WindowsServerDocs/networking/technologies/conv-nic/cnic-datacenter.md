@@ -398,7 +398,7 @@ The following image shows two Hyper-V hosts with two network adapters each that 
    Get-NetAdapterQos -Name "Test-40G-1"
    ```
    
-   _**Results:**_
+   _**Results:**_   
 
    **Name**: TEST-40G-1 
 
@@ -413,18 +413,18 @@ The following image shows two Hyper-V hosts with two network adapters each that 
    |NumTCs(Max/ETS/PFC)|8/8/8|8/8/8|
    ---
  
-    _**OperationalTrafficClasses**:_
+   _**OperationalTrafficClasses**:_    
 
    |TC|TSA|Bandwidth|Priorities|
    |----|-----|--------|-------|
    |0| Strict|&nbsp;|0-7|
    ---
 
-   _**OperationalFlowControl**:_
+   _**OperationalFlowControl**:_  
 
    Priority 3 Enabled  
 
-   _**OperationalClassifications**:_
+   _**OperationalClassifications**:_  
 
    |Protocol|Port/Type|Priority|
    |--------|---------|--------|
@@ -455,7 +455,7 @@ The following image shows two Hyper-V hosts with two network adapters each that 
    ---
 
  
-   _**OperationalTrafficClasses**:_ 
+   _**OperationalTrafficClasses**:_  
 
    |TC|TSA|Bandwidth|Priorities|
    |----|-----|--------|-------|
@@ -467,7 +467,7 @@ The following image shows two Hyper-V hosts with two network adapters each that 
 
    Priority 3 Enabled  
    
-   _**OperationalClassifications**:_  
+   _**OperationalClassifications**:_   
 
    |Protocol|Port/Type|Priority|
    |--------|---------|--------|
@@ -482,7 +482,7 @@ The following image shows two Hyper-V hosts with two network adapters each that 
    New-NetQosTrafficClass "SMB" -priority 3 -bandwidthpercentage 50 -algorithm ETS
    ```
    
-   _**Results:**_
+   _**Results:**_  
    
    |Name|Algorithm |Bandwidth(%)| Priority |PolicySet |IfIndex |IfAlias |
    |----|---------| ------------ |--------| ---------|------- |------- |
