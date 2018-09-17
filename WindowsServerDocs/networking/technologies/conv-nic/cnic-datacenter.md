@@ -1113,13 +1113,10 @@ The TEST-40G-1 and TEST-40G-2 physical adapters still have an ACCESS VLAN of 101
     Status  : {Ok}
     ```
 
-
-	
     ```PowerShell
     Get-NetAdapterRdma -Name "vEthernet*" | sort Name | ft -AutoSize
     ```
 
-	
     _**Results:**_   
 
     ```
@@ -1129,7 +1126,6 @@ The TEST-40G-1 and TEST-40G-2 physical adapters still have an ACCESS VLAN of 101
     vEthernet (SMB1)  Hyper-V Virtual Ethernet Adapter #3  False  
     vEthernet (MGT)   Hyper-V Virtual Ethernet Adapter #2  False   
     ```
-	
    
     ```PowerShell
     Enable-NetAdapterRdma -Name "vEthernet (SMB1)"
