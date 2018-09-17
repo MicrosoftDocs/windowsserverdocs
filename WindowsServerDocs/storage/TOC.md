@@ -86,8 +86,8 @@
 ### [Block cloning](refs/block-cloning.md)
 ### [Integrity streams](refs/integrity-streams.md)
 ## [Storage Migration Service]
-### [Overview](overview.md)
-### [Migrate a server](migrate-data.md)
+### [Overview](storage-migration-service/overview.md)
+### [Migrate a server](storage-migration-service/migrate-data.md)
 ## [Storage Replica](storage-replica/storage-replica-overview.md)
 ### [Stretch Cluster Replication using Shared Storage](storage-replica/stretch-cluster-replication-using-shared-storage.md)
 ### [Server to server storage replication](storage-replica/server-to-server-storage-replication.md)
