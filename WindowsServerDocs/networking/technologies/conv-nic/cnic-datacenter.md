@@ -486,8 +486,7 @@ The following image shows two Hyper-V hosts with two network adapters each that 
    Get-NetQosTrafficClass | ft -AutoSize
    ```
    
-   _**Results:**_
-
+   _**Results:**_  
 
    |Name|Algorithm |Bandwidth(%)| Priority |PolicySet |IfIndex |IfAlias |
    |----|---------| ------------ |--------| ---------|------- |------- |
