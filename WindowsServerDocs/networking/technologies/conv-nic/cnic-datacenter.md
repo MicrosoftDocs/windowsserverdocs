@@ -396,14 +396,10 @@ The following image shows two Hyper-V hosts with two network adapters each that 
    ```PowerShell
    Enable-NetAdapterQos -InterfaceAlias "Test-40G-1"
    Get-NetAdapterQos -Name "Test-40G-1"
+
+   Name: TEST-40G-1 
+   Enabled: True
    ```
-   
-   _**Results:**_   
-
-   **Name**: TEST-40G-1 
-
-   **Enabled**: True
-   
    _**Capabilities**:_   
 
    |Parameter|Hardware|Current|
@@ -437,14 +433,10 @@ The following image shows two Hyper-V hosts with two network adapters each that 
    ```PowerShell
    Enable-NetAdapterQos -InterfaceAlias "Test-40G-2"
    Get-NetAdapterQos -Name "Test-40G-2"
+
+   Name: TEST-40G-2 
+   Enabled: True 
    ```
-   
-   _**Results:**_ 
-
-   **Name**: TEST-40G-2 
-
-   **Enabled**: True 
-   
    _**Capabilities**:_ 
 
    |Parameter|Hardware|Current|
@@ -830,13 +822,10 @@ The following image shows the current state of your Hyper-V hosts, including the
    ```PowerShell    
    Set-VMNetworkAdapter -ManagementOS -Name "MGT" -IeeePriorityTag on
    Get-VMNetworkAdapter -ManagementOS -Name "MGT" | fl Name,IeeePriorityTag
-   ```
-   
-   _**Results:**_ 
 
-   **Name:** MGT  
-   **IeeePriorityTag:** On  
-    
+   Name : MGT  
+   IeeePriorityTag :  On  
+   ``` 
 2. Create two host vNICs for RDMA and connect them to the vSwitch VMSTEST.
 
    ```PowerShell    
@@ -941,15 +930,15 @@ The TEST-40G-1 and TEST-40G-2 physical adapters still have an ACCESS VLAN of 101
 6. Inspect the mapping of SMB1 and SMB2 to the underlying physical NICs under the vSwitch SET Team.<p>The association of Host vNIC to Physical NICs is random and subject to rebalancing during creation and destruction. In this circumstance, you can use an indirect mechanism to check the current association. The MAC addresses of SMB1 and SMB2 are associated with the NIC Team member TEST-40G-2. This is not ideal because Test-40G-1 does not have an associated SMB Host vNIC, and will not allow for utilization of RDMA traffic over the link until an SMB Host vNIC is mapped to it.
 
    ```PowerShell    
-    Get-NetAdapterVPort (Preferred)
+   Get-NetAdapterVPort (Preferred)
     
-    Get-NetAdapterVmqQueue
+   Get-NetAdapterVmqQueue
    
-    Name   QueueID MacAddressVlanID Processor VmFriendlyName
-    ----   ------- ---------------- --------- --------------
-    TEST-40G-1 1   E4-1D-2D-07-40-71 1010:17
-    TEST-40G-2 1   00-15-5D-30-AA-00 1020:17
-    TEST-40G-2 2   00-15-5D-30-AA-01 1020:17
+   Name   QueueID MacAddressVlanID Processor VmFriendlyName
+   ----   ------- ---------------- --------- --------------
+   TEST-40G-1 1   E4-1D-2D-07-40-71 1010:17
+   TEST-40G-2 1   00-15-5D-30-AA-00 1020:17
+   TEST-40G-2 2   00-15-5D-30-AA-01 1020:17
    ```
    
    ```PowerShell
@@ -977,38 +966,38 @@ The TEST-40G-1 and TEST-40G-2 physical adapters still have an ACCESS VLAN of 101
    >Ensure that you complete this step before proceeding, or your implementation fails.
     
    ```PowerShell
-    Set-VMNetworkAdapterTeamMapping -ManagementOS -SwitchName VMSTEST -VMNetworkAdapterName "SMB1" -PhysicalNetAdapterName "Test-40G-1"
-    Set-VMNetworkAdapterTeamMapping -ManagementOS -SwitchName VMSTEST -VMNetworkAdapterName "SMB2" -PhysicalNetAdapterName "Test-40G-2"
+   Set-VMNetworkAdapterTeamMapping -ManagementOS -SwitchName VMSTEST -VMNetworkAdapterName "SMB1" -PhysicalNetAdapterName "Test-40G-1"
+   Set-VMNetworkAdapterTeamMapping -ManagementOS -SwitchName VMSTEST -VMNetworkAdapterName "SMB2" -PhysicalNetAdapterName "Test-40G-2"
     
-    Get-VMNetworkAdapterTeamMapping -ManagementOS -SwitchName VMSTEST
+   Get-VMNetworkAdapterTeamMapping -ManagementOS -SwitchName VMSTEST
     
-    NetAdapterName : Test-40G-1
-    NetAdapterDeviceId : {BAA9A00F-A844-4740-AA93-6BD838F8CFBA}
-    ParentAdapter  : VMInternalNetworkAdapter, Name = 'SMB1'
-    IsTemplate : False
-    CimSession : CimSession: .
-    ComputerName   : 27-3145G0803
-    IsDeleted  : False
+   NetAdapterName : Test-40G-1
+   NetAdapterDeviceId : {BAA9A00F-A844-4740-AA93-6BD838F8CFBA}
+   ParentAdapter  : VMInternalNetworkAdapter, Name = 'SMB1'
+   IsTemplate : False
+   CimSession : CimSession: .
+   ComputerName   : 27-3145G0803
+   IsDeleted  : False
     
-    NetAdapterName : Test-40G-2
-    NetAdapterDeviceId : {B7AB5BB3-8ACB-444B-8B7E-BC882935EBC8}
-    ParentAdapter  : VMInternalNetworkAdapter, Name = 'SMB2'
-    IsTemplate : False
-    CimSession : CimSession: .
-    ComputerName   : 27-3145G0803
-    IsDeleted  : False
+   NetAdapterName : Test-40G-2
+   NetAdapterDeviceId : {B7AB5BB3-8ACB-444B-8B7E-BC882935EBC8}
+   ParentAdapter  : VMInternalNetworkAdapter, Name = 'SMB2'
+   IsTemplate : False
+   CimSession : CimSession: .
+   ComputerName   : 27-3145G0803
+   IsDeleted  : False
    ```
    
 9. Confirm the MAC associations created previously.
 
    ```PowerShell    
-    Get-NetAdapterVmqQueue
+   Get-NetAdapterVmqQueue
     
-    Name   QueueID MacAddressVlanID Processor VmFriendlyName
-    ----   ------- ---------------- --------- --------------
-    TEST-40G-1 1   E4-1D-2D-07-40-71 1010:17
-    TEST-40G-1 2   00-15-5D-30-AA-00 1020:17
-    TEST-40G-2 1   00-15-5D-30-AA-01 1020:17
+   Name   QueueID MacAddressVlanID Processor VmFriendlyName
+   ----   ------- ---------------- --------- --------------
+   TEST-40G-1 1   E4-1D-2D-07-40-71 1010:17
+   TEST-40G-1 2   00-15-5D-30-AA-00 1020:17
+   TEST-40G-2 1   00-15-5D-30-AA-01 1020:17
    ```
 
 
@@ -1016,60 +1005,59 @@ The TEST-40G-1 and TEST-40G-2 physical adapters still have an ACCESS VLAN of 101
 
 
    ```PowerShell 
-    Test-NetConnection 192.168.2.111
+   Test-NetConnection 192.168.2.111
     
-    ComputerName   : 192.168.2.111
-    RemoteAddress  : 192.168.2.111
-    InterfaceAlias : Test-40G-2
-    SourceAddress  : 192.168.2.5
-    PingSucceeded  : True
-    PingReplyDetails (RTT) : 0 ms
+   ComputerName   : 192.168.2.111
+   RemoteAddress  : 192.168.2.111
+   InterfaceAlias : Test-40G-2
+   SourceAddress  : 192.168.2.5
+   PingSucceeded  : True
+   PingReplyDetails (RTT) : 0 ms
    ```
 
    ```PowerShell   
-    Test-NetConnection 192.168.2.222
+   Test-NetConnection 192.168.2.222
     
-    ComputerName   : 192.168.2.222
-    RemoteAddress  : 192.168.2.222
-    InterfaceAlias : Test-40G-2
-    SourceAddress  : 192.168.2.5
-    PingSucceeded  : True
-    PingReplyDetails (RTT) : 0 ms 
+   ComputerName   : 192.168.2.222
+   RemoteAddress  : 192.168.2.222
+   InterfaceAlias : Test-40G-2
+   SourceAddress  : 192.168.2.5
+   PingSucceeded  : True
+   PingReplyDetails (RTT) : 0 ms 
    ```
    
    ```PowerShell
-    Set-VMNetworkAdapter -ManagementOS -Name "SMB1" -IeeePriorityTag on
-    Set-VMNetworkAdapter -ManagementOS -Name "SMB2" -IeeePriorityTag on
-    Get-VMNetworkAdapter -ManagementOS -Name "SMB*" | fl Name,SwitchName,IeeePriorityTag,Status
+   Set-VMNetworkAdapter -ManagementOS -Name "SMB1" -IeeePriorityTag on
+   Set-VMNetworkAdapter -ManagementOS -Name "SMB2" -IeeePriorityTag on
+   Get-VMNetworkAdapter -ManagementOS -Name "SMB*" | fl Name,SwitchName,IeeePriorityTag,Status
     
-    Name: SMB1
-    SwitchName  : VMSTEST
-    IeeePriorityTag : On
-    Status  : {Ok}
+   Name: SMB1
+   SwitchName  : VMSTEST
+   IeeePriorityTag : On
+   Status  : {Ok}
     
-    Name: SMB2
-    SwitchName  : VMSTEST
-    IeeePriorityTag : On
-    Status  : {Ok}
+   Name: SMB2
+   SwitchName  : VMSTEST
+   IeeePriorityTag : On
+   Status  : {Ok}
    ```
 
    ```PowerShell
-    Get-NetAdapterRdma -Name "vEthernet*" | sort Name | ft -AutoSize
+   Get-NetAdapterRdma -Name "vEthernet*" | sort Name | ft -AutoSize
     
-    Name  InterfaceDescription Enabled
-    ----  -------------------- -------
-    vEthernet (SMB2)  Hyper-V Virtual Ethernet Adapter #4  False  
-    vEthernet (SMB1)  Hyper-V Virtual Ethernet Adapter #3  False  
-    vEthernet (MGT)   Hyper-V Virtual Ethernet Adapter #2  False   
+   Name  InterfaceDescription Enabled
+   ----  -------------------- -------
+   vEthernet (SMB2)  Hyper-V Virtual Ethernet Adapter #4  False  
+   vEthernet (SMB1)  Hyper-V Virtual Ethernet Adapter #3  False  
+   vEthernet (MGT)   Hyper-V Virtual Ethernet Adapter #2  False   
    ```
     
    ```PowerShell
-    Enable-NetAdapterRdma -Name "vEthernet (SMB1)"
-    Enable-NetAdapterRdma -Name "vEthernet (SMB2)"
-    Get-NetAdapterRdma -Name "vEthernet*" | sort Name | fl *
+   Enable-NetAdapterRdma -Name "vEthernet (SMB1)"
+   Enable-NetAdapterRdma -Name "vEthernet (SMB2)"
+   Get-NetAdapterRdma -Name "vEthernet*" | sort Name | fl *
     
-    
-    Name  InterfaceDescription Enabled
+   Name  InterfaceDescription Enabled
     ----  -------------------- -------
     vEthernet (SMB2)  Hyper-V Virtual Ethernet Adapter #4  True   
     vEthernet (SMB1)  Hyper-V Virtual Ethernet Adapter #3  True  
