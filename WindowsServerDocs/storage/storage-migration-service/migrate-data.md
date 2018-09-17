@@ -38,8 +38,6 @@ This is when you specify what servers you want to migrate from and scan them to 
 
 ## Step 2: Transfer files from the sources to the destination servers
 
-
-
  1. On the **Enter credentials** page, type admin credentials that work on the destination servers you want to migrate to, and then select **Next**.
  1. On the **Add a destination device and mappings** page, the first source device is listed. Type the name of the server you want to migrate this server to and then select **Scan device**.
  1. Map the source volumes to destination volumes, clear the **Include** checkbox for any shares you don't want to transfer, and then select **Next**.
@@ -50,6 +48,9 @@ This is when you specify what servers you want to migrate from and scan them to 
 
 ## Step 3: Cutover from the source to the destination server
 
+
+ 1. On the **Enter credentials** page, select **Next** to use the credentials you typed previously.
+ 1. 
 
 ## See also
 
