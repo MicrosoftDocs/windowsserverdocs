@@ -62,7 +62,6 @@ ms.prod: windows-server-threshold
 ### If you've installed Windows Admin Center as a **Gateway on Windows Server**
 * [Check the Windows version](#winvercompat) of the client and server.
 * Make sure you are using either Microsoft Edge or Google Chrome as your web browser.
-* Is the server disconnected from the internet? If yes, this is a [known issue](known-issues.md#signature-verification-failed) that will be fixed in the next update. For now, connecting the server to the internet will resolve this problem. 
 
 * On the server, open Task Manager > Services and make sure **ServerManagementGateway / Windows Admin Center** is running.
 ![](../media/Service-TaskMan.PNG)
