@@ -42,7 +42,7 @@ reg add "HKLM\System\CurrentControlSet\Control\Terminal Server" /v "EnableLagCou
 ```
 
 >[!NOTE]
-> If you're using version 1809 or later, you won't need to enable the registry key.
+> If you're using Windows 10 version 1809 or later, you won't need to enable the registry key.
 
 Next, restart the server. Then, open the Performance Monitor, and select the plus sign (+), as shown in the following screen shot. 
 
@@ -109,7 +109,7 @@ To fix this, you can set the following registry key to match the interval (in mi
 ```
 
 >[!NOTE]
->If you're using version 1809 or later, you don't need to set LagCounterInterval to fix the performance counter.
+>If you're using Windows 10 version 1809 or later, you don't need to set LagCounterInterval to fix the performance counter.
 
 We’ve also added a couple of keys you might find helpful under the same registry key:
 
