@@ -40,6 +40,10 @@ To use these new performance counters, you must first enable a registry key by r
 ```
 reg add "HKLM\System\CurrentControlSet\Control\Terminal Server" /v "EnableLagCounter" /t REG_DWORD /d 0x1 /f
 ```
+
+>[!NOTE]
+> If you're using version 1809, you won't need to enable the registry key.
+
 Next, restart the server. Then, open the Performance Monitor, and select the plus sign (+), as shown in the following screen shot. 
 
 ![Remote Desktop - A screenshot showing how to add the User input Delay performance counter](.\media\rds-add-user-input-counter-screen.png)
@@ -103,6 +107,9 @@ To fix this, you can set the following registry key to match the interval (in mi
 
 "LagCounterInterval"=dword:00005000
 ```
+
+>[!NOTE]
+>If you're using version 1809, this configuration won't work because you can't set registry keys.
 
 We’ve also added a couple of keys you might find helpful under the same registry key:
 
