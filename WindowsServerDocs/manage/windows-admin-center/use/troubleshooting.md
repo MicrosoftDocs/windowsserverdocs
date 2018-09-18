@@ -5,7 +5,7 @@ ms.technology: manage
 ms.topic: article
 author: jwwool
 ms.author: jeffrew
-ms.date: 06/18/2018
+ms.date: 09/19/2018
 ms.localizationpriority: medium
 ms.prod: windows-server-threshold
 ---
@@ -62,7 +62,6 @@ ms.prod: windows-server-threshold
 ### If you've installed Windows Admin Center as a **Gateway on Windows Server**
 * [Check the Windows version](#winvercompat) of the client and server.
 * Make sure you are using either Microsoft Edge or Google Chrome as your web browser.
-* Is the server disconnected from the internet? If yes, this is a [known issue](known-issues.md#signature-verification-failed) that will be fixed in the next update. For now, connecting the server to the internet will resolve this problem. 
 
 * On the server, open Task Manager > Services and make sure **ServerManagementGateway / Windows Admin Center** is running.
 ![](../media/Service-TaskMan.PNG)
@@ -92,7 +91,7 @@ Test-NetConnection -Port <port> -ComputerName <gateway> -InformationLevel Detail
 
 * If you are using Windows 10 version 1703 or below, Windows Admin Center is not supported on your version of Microsoft Edge. Either upgrade to a recent version of Windows 10 or use Chrome.
 
-* If you are using an insider preview version of Windows 10 or Server with a build version greater than 17134.xxxx, Windows Admin Center has a [known incompatibility.](known-issues.md#previous-insider-preview-builds-of-windows-10--window-server-2019-rs5)
+* If you are using an insider preview version of Windows 10 or Server with a build version between 17134 and 17637, Windows Admin Center has a [known incompatibility.](known-issues.md#previous-insider-preview-builds-of-windows-10--window-server-2019-rs5)
 
 [[back to top]](#toc)
 
@@ -171,6 +170,27 @@ intend to manage:
 
 [[back to top]](#toc)
 
+<a id="azissue"></a>
+
+## Having an issue with an Azure-related feature?
+
+>Applies to: Windows Admin Center Preview
+
+Please send us an email at wacAzureFeedback@microsoft.com with the following information:
+* General issue information from the [questions listed above](#still-not-working-or-is-your-issue-not-captured-here?). 
+* Describe your issue and the steps you took to reproduce the issue. 
+* Did you previously register your gateway to Azure using the New-AadApp.ps1 downloadable script and then upgrade to version 1807? Or did you register your gateway to Azure using the UI from gateway Settings > Azure?
+* Is your Azure account associated with multiple directories/tenants?
+    * If yes: When registering the Azure AD application to Windows Admin Center, was the directory you used your default directory in Azure? 
+* Does your Azure account have access to multiple subscriptions?
+* Does the subscription you were using have billing attached?
+* Were you logged in to multiple Azure accounts when you encountered the issue?
+* Does your Azure account require multi-factor authentication?
+* Is the machine you are trying to manage an Azure VM?
+* Is Windows Admin Center installed on an Azure VM?
+
+[[back to top]](#toc)
+
 <a id="filebug"></a>
 
 ## Still not working, or is your issue not captured here? [troubleshooting common questions]
@@ -194,23 +214,5 @@ Please include any errors or warning you find in the event log, as well as the f
 * Windows [version](#winvercompat) of the machine that you are **trying to manage**:
 * What browser are you using?
     * If you are using Google Chrome, what is the version? (Help > About Google Chrome)
-
-## Having an issue with an Azure-related feature?
-
->Applies to: Windows Admin Center Preview
-
-Please send us an email at wacAzureFeedback@microsoft.com with the following information:
-* General issue information from the [questions listed above](#still-not-working-or-is-your-issue-not-captured-here?). 
-* Describe your issue and the steps you took to reproduce the issue. 
-* Did you previously register your gateway to Azure using the New-AadApp.ps1 downloadable script and then upgrade to version 1807? Or did you register your gateway to Azure using the UI from gateway Settings > Azure?
-* Is your Azure account associated with multiple directories/tenants?
-    * If yes: When registering the Azure AD application to Windows Admin Center, was the directory you used your default directory in Azure? 
-* Does your Azure account have access to multiple subscriptions?
-* Does the subscription you were using have billing attached?
-* Were you logged in to multiple Azure accounts when you encountered the issue?
-* Does your Azure account require multi-factor authentication?
-* Is the machine you are trying to manage an Azure VM?
-* Is Windows Admin Center installed on an Azure VM?
-
 
 [[back to top]](#toc)

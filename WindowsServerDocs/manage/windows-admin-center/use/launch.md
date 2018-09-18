@@ -5,7 +5,7 @@ ms.technology: manage
 ms.topic: article
 author: nwashburn-ms
 ms.author: niwashbu
-ms.date: 06/18/2018
+ms.date: 09/19/2018
 ms.localizationpriority: medium
 ms.prod: windows-server-threshold
 ---
@@ -17,6 +17,9 @@ ms.prod: windows-server-threshold
 > [!Tip]
 > New to Windows Admin Center?
 > [Learn more about Windows Admin Center](../understand/windows-admin-center.md) or [Download now](https://aka.ms/windowsadmincenter).
+
+> [!IMPORTANT]
+> You must be a member of the local administrator's group to use Windows Admin Center on Windows 10
 
 ## Selecting a client certificate
 

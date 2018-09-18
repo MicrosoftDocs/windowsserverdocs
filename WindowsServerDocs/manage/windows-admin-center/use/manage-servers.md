@@ -5,7 +5,7 @@ ms.technology: manage
 ms.topic: article
 author: nwashburn-ms
 ms.author: niwashbu
-ms.date: 09/20/2018
+ms.date: 09/19/2018
 ms.localizationpriority: medium
 ms.prod: windows-server-threshold
 ---
@@ -199,6 +199,7 @@ The following features are supported in Files:
 - Rename a file or folder
 - Extract a zip file
 - View file or folder properties
+- Manage File Server Resource Manager [quotas](https://docs.microsoft.com/en-us/windows-server/storage/fsrm/quota-management)
 - Add, edit, or remove file shares
 - Modify user and group permissions on file shares
 
@@ -505,21 +506,21 @@ The following features have been proposed for Storage:
 **Storage Migration Service** allows you to migrate servers and file shares to Azure or Windows Server 2019—without requiring apps or users to change anything.
 [Get an overview of Storage Migration Service](https://go.microsoft.com/fwlink/?linkid=2016155)
 
->[!NOTE] Storage Migration Service requires Windows Server 2019, build 17709 or newer.
+>[!NOTE]
+>Storage Migration Service requires Windows Server 2019, build 17709 or newer.
 
 ## Storage Replica
 
 Use **Storage Replica** to manage server-to-server storage replication.
 [Learn more about Storage Replica](https://docs.microsoft.com/en-us/windows-server/storage/storage-replica/storage-replica-ui)
 
-
 ## System Insights
 
 **System Insights** introduces predictive analytics natively in Windows Server to help give you increased insight into the functioning of your server.
 [Get an overview of System Insights](http://aka.ms/systeminsights)
 
-
->[!NOTE] System Insights requires Windows Server 2019, build 17692 or newer.
+>[!NOTE]
+>System Insights requires Windows Server 2019, build 17692 or newer.
 
 ## Updates
 
