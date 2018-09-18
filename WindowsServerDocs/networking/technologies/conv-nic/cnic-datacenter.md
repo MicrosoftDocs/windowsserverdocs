@@ -769,12 +769,14 @@ You must remove the ACCESS VLAN setting to prevent both auto-tagging the egress 
    
    _**Results:**_   
    
-    ComputerName   : 192.168.1.5
-    RemoteAddress  : 192.168.1.5
-    InterfaceAlias : vEthernet (VMSTEST)
-    SourceAddress  : 192.168.1.3
-    PingSucceeded  : True
-    PingReplyDetails (RTT) : 0 ms
+   ```
+   ComputerName   : 192.168.1.5
+   RemoteAddress  : 192.168.1.5
+   InterfaceAlias : vEthernet (VMSTEST)
+   SourceAddress  : 192.168.1.3
+   PingSucceeded  : True
+   PingReplyDetails (RTT) : 0 ms
+   ```
 
    >**IMPORTANT** If your results are not similar to the example results and ping fails with the message "WARNING: Ping to 192.168.1.5 failed -- Status: DestinationHostUnreachable," confirm that the “vEthernet (VMSTEST)” has the proper IP address.
    >
