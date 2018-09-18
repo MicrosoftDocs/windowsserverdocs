@@ -5,17 +5,14 @@ ms.technology: manage
 ms.topic: article
 author: nwashburn-ms
 ms.author: niwashbu
-ms.date: 08/07/2018
+ms.date: 09/18/2018
 ms.localizationpriority: medium
 ms.prod: windows-server-threshold
 ---
 
 # Develop a gateway plugin
 
->Applies To: Windows Admin Center Preview
-
-> [!NOTE]
-> While the Windows Admin Center SDK is in public preview, parts of this document only apply to [Windows Admin Center Preview](https://aka.ms/WACDownloadPage) and the corresponding [insider release](target-sdk-version.md) of Windows Admin Center SDK.
+>Applies To: Windows Admin Center, Windows Admin Center Preview
 
 A Windows Admin Center gateway plugin enables API communication from the UI of your tool or solution to a target node.  Windows Admin Center hosts a gateway service that relays commands and scripts from gateway plugins to be executed on target nodes. The gateway service can be extended to include custom gateway plugins that support protocols other than the default ones.
 
