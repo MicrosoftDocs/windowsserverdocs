@@ -109,7 +109,7 @@ Learn about our latest released features:
 
 - Version [1807](https://aka.ms/WACPreview1807-InsiderBlog) - added a streamlined Azure connect experience, improvements to VM inventory page, file sharing functionality, Azure update management integration, and more. 
 - Version [1806](https://aka.ms/WACPreview1806-InsiderBlog) - added support for viewing our scripts, WS 2008 R2 connections, SDN, scheduled tasks, and many other improvements.
-- Version 1804.25 - Maintenance update to support users installing Windows Admin Center in [completely offline environments](./use/known-issues.md#signature-verification-failed).
+- Version 1804.25 - Maintenance update to support users installing Windows Admin Center in completely offline environments.
 - Version [1804](https://cloudblogs.microsoft.com/windowsserver/2018/04/12/announcing-windows-admin-center-our-reimagined-management-experience/) - Project Honolulu becomes Windows Admin Center and adds security features and role-based access control. Our first GA release.
 - Version [1803](https://blogs.windows.com/windowsexperience/2018/03/13/announcing-project-honolulu-technical-preview-1803-and-rsat-insider-preview-for-windows-10) added support for Azure AD access control, detailed logging, resizable content, and a bunch of tool improvements.
 - Version [1802](https://blogs.windows.com/windowsexperience/2018/02/13/announcing-windows-server-insider-preview-build-17093-project-honolulu-technical-preview-1802) added support for accessibility, localization, high-availability deployments, tagging, Hyper-V host settings, and gateway authentication.
