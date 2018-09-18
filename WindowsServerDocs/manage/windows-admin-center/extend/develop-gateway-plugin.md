@@ -35,7 +35,7 @@ If you haven't already, [prepare your environment](prepare-development-environme
 To create a custom gateway plugin, create a new C# class that implements the ```IPlugIn``` interface from the ```Microsoft.ManagementExperience.FeatureInterfaces``` namespace.  
 
 > [!NOTE]
-> The ```IFeature``` interface was available in earlier versions of the SDK and served a similar purpose.  IFeature is now flagged as obsolete, and all future development should use IPlugIn (or the HttpPlugIn abstract class).
+> The ```IFeature``` interface, available in earlier versions of the SDK, is now flagged as obsolete.  All gateway plugin development should use IPlugIn (or optionally the HttpPlugIn abstract class).
 
 ### Download sample from GitHub
 
@@ -49,7 +49,7 @@ Add new content to your cloned copy of the [sample C# plugin project](https://gi
 
 Test your custom gateway plugin DLL by loading it into Windows Admin Center gateway process.
 
-Windows Admin Center looks for all plugins in a ```plugins``` folder in the Application Data folder of the current machine (using the CommonApplicationData value of the Environment.SpecialFolder enumeration). On Windows 10 this location is ```C:\ProgramData\Server Management Experience```.
+Windows Admin Center looks for all plugins in a ```plugins``` folder in the Application Data folder of the current machine (using the CommonApplicationData value of the Environment.SpecialFolder enumeration). On Windows 10 this location is ```C:\ProgramData\Server Management Experience```.  If the ```plugins``` folder doesn't exist yet, you can create the folder yourself.
 
 > [!NOTE]
 > You can override the plugin location in a debug build by updating the "StaticsFolder" configuration value. If you're debugging locally, this setting is in the App.Config of the Desktop solution. 
@@ -64,7 +64,7 @@ After the Windows Admin process restarts, you will be able to exercise the APIs 
 
 ### Optional: Attach to plugin for debugging
 
-In Visual Studio 2017, from the Debug menu, select "Attach to Process". In the next window, scroll through the Available Processes list and select SMEDesktop.exe, then click "Attach". Once the debugger starts, you can place a breakpoint in your feature code and then exercise through the above URL format. For our sample project (feature name: "Sample Uno") the URL is: "http://localhost:6516/api/nodes/fake-server.my.domain.com/features/Sample Uno"
+In Visual Studio 2017, from the Debug menu, select "Attach to Process". In the next window, scroll through the Available Processes list and select SMEDesktop.exe, then click "Attach". Once the debugger starts, you can place a breakpoint in your feature code and then exercise through the above URL format. For our sample project (feature name: "Sample Uno") the URL is: "http://localhost:6516/api/nodes/fake-server.my.domain.com/features/Sample%20Uno"
 
 ## Create a tool extension with the Windows Admin Center CLI ##
 
