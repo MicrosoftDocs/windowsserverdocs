@@ -778,7 +778,6 @@ You must remove the ACCESS VLAN setting to prevent both auto-tagging the egress 
     PingReplyDetails (RTT) : 0 ms
 
 
-   
    >**IMPORTANT** If your results are not similar to the example results and ping fails with the message "WARNING: Ping to 192.168.1.5 failed -- Status: DestinationHostUnreachable," confirm that the “vEthernet (VMSTEST)” has the proper IP address.
    >
    >```PowerShell
@@ -986,7 +985,9 @@ The TEST-40G-1 and TEST-40G-2 physical adapters still have an ACCESS VLAN of 101
    TEST-40G-2 1   00-15-5D-30-AA-00 1020:17
    TEST-40G-2 2   00-15-5D-30-AA-01 1020:17
    ```
-   
+
+7. View the VM network adapter properties.
+
    ```PowerShell
    Get-VMNetworkAdapter -ManagementOS
    ```
@@ -1002,7 +1003,7 @@ The TEST-40G-1 and TEST-40G-2 physical adapters still have an ACCESS VLAN of 101
    SMB2 True  VMSTEST  00155D30AA01 {Ok}  
    ```
 
-7. View the network adapter team mapping.<p>The results should not return information because you have not yet performed mapping.
+8. View the network adapter team mapping.<p>The results should not return information because you have not yet performed mapping.
     
    ```PowerShell
    Get-VMNetworkAdapterTeamMapping -ManagementOS -SwitchName VMSTEST -VMNetworkAdapterName SMB1
@@ -1010,7 +1011,7 @@ The TEST-40G-1 and TEST-40G-2 physical adapters still have an ACCESS VLAN of 101
    ```
    
    
-8. Map SMB1 and SMB2 to separate physical NIC team members, and to view the results of your actions.
+9. Map SMB1 and SMB2 to separate physical NIC team members, and to view the results of your actions.
 
    >[!IMPORTANT]
    >Ensure that you complete this step before proceeding, or your implementation fails.
@@ -1042,24 +1043,24 @@ The TEST-40G-1 and TEST-40G-2 physical adapters still have an ACCESS VLAN of 101
    IsDeleted  : False
    ```
    
-9. Confirm the MAC associations created previously.
+10. Confirm the MAC associations created previously.
 
-   ```PowerShell    
-   Get-NetAdapterVmqQueue
-   ```
+    ```PowerShell    
+    Get-NetAdapterVmqQueue
+    ```
 
-   _**Results:**_ 
+    _**Results:**_ 
    
-   ```   
-   Name   QueueID MacAddressVlanID Processor VmFriendlyName
-   ----   ------- ---------------- --------- --------------
-   TEST-40G-1 1   E4-1D-2D-07-40-71 1010:17
-   TEST-40G-1 2   00-15-5D-30-AA-00 1020:17
-   TEST-40G-2 1   00-15-5D-30-AA-01 1020:17
-   ```
+    ```   
+    Name   QueueID MacAddressVlanID Processor VmFriendlyName
+    ----   ------- ---------------- --------- --------------
+    TEST-40G-1 1   E4-1D-2D-07-40-71 1010:17
+    TEST-40G-1 2   00-15-5D-30-AA-00 1020:17
+    TEST-40G-2 1   00-15-5D-30-AA-01 1020:17
+    ```
 
 
-10. Test the connection from the remote system because both Host vNICs reside on the same subnet and have the same VLAN ID \(102\).
+11. Test the connection from the remote system because both Host vNICs reside on the same subnet and have the same VLAN ID \(102\).
 
     ```PowerShell 
     Test-NetConnection 192.168.2.111
@@ -1090,7 +1091,7 @@ The TEST-40G-1 and TEST-40G-2 physical adapters still have an ACCESS VLAN of 101
     PingSucceeded  : True
     PingReplyDetails (RTT) : 0 ms 
     ```
-11. Set the name, switch name, and priority tags.   
+12. Set the name, switch name, and priority tags.   
 
     ```PowerShell
     Set-VMNetworkAdapter -ManagementOS -Name "SMB1" -IeeePriorityTag on
@@ -1112,7 +1113,7 @@ The TEST-40G-1 and TEST-40G-2 physical adapters still have an ACCESS VLAN of 101
     Status  : {Ok}
     ```
 
-12. View the vEthernet network adapter properties.
+13. View the vEthernet network adapter properties.
 	
     ```PowerShell
     Get-NetAdapterRdma -Name "vEthernet*" | sort Name | ft -AutoSize
@@ -1128,7 +1129,7 @@ The TEST-40G-1 and TEST-40G-2 physical adapters still have an ACCESS VLAN of 101
     vEthernet (MGT)   Hyper-V Virtual Ethernet Adapter #2  False   
     ```
 
-13. Enable the vEthernet network adapters.	
+14. Enable the vEthernet network adapters.	
 	
     ```PowerShell
     Enable-NetAdapterRdma -Name "vEthernet (SMB1)"
