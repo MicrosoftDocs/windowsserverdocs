@@ -109,7 +109,7 @@ To fix this, you can set the following registry key to match the interval (in mi
 ```
 
 >[!NOTE]
->If you're using version 1809 or later, this configuration won't work because you can't set registry keys.
+>If you're using version 1809 or later, you don't need to set LagCounterInterval to fix the performance counter.
 
 We’ve also added a couple of keys you might find helpful under the same registry key:
 
