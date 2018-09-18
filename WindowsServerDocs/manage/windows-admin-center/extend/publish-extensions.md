@@ -5,16 +5,13 @@ ms.technology: manage
 ms.topic: article
 author: daniellee-msft
 ms.author: jol
-ms.date: 08/08/2018
+ms.date: 09/18/2018
 ms.localizationpriority: medium
 ms.prod: windows-server-threshold
 ---
 # Publishing Extensions
 
 >Applies To: Windows Admin Center, Windows Admin Center Preview
-
-> [!NOTE]
-> While the Windows Admin Center SDK is in public preview, parts of this document only apply to [Windows Admin Center Preview](https://aka.ms/WACDownloadPage) and the corresponding [insider release](target-sdk-version.md) of Windows Admin Center SDK.
 
 Once you've developed your extension, you will want to publish it and make it available to others to test or use. Depending on your audience and purpose of publishing, there are a few options which we'll introduce below along with the steps and requirements for publishing.
 
@@ -73,6 +70,9 @@ To create the NuGet package, you need to first create a .nuspec file. A .nuspec 
 
 Here's an example .nuspec file and the list of required or recommended properties. For the full schema, see the [.nuspec reference] (https://docs.microsoft.com/en-us/nuget/reference/nuspec). Save the .nuspec file to your project's root folder with a file name of your choice.
 
+> [!IMPORTANT]
+> The ```<id>``` value in the .nuspec file needs to match the ```"name"``` value in your project's ```manifest.json``` file, or else your published extension won't load successfully in Windows Admin Center.
+
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
@@ -105,7 +105,7 @@ Here's an example .nuspec file and the list of required or recommended propertie
 | Property Name | Required / Recommended | Description |
 | ---- | ---- | ---- |
 | packageType | Required | Use "WindowsAdminCenterExtension" which is the NuGet package type defined for Windows Admin Center extensions. |
-| id | Required | Unique Package identifier within the feed. See [Choosing a unique package identifier](https://docs.microsoft.com/en-us/nuget/create-packages/creating-a-package#choosing-a-unique-package-identifier-and-setting-the-version-number) for guidance. |
+| id | Required | Unique Package identifier within the feed. This value needs to match the "name" value in your project's manifest.json file.  See [Choosing a unique package identifier](https://docs.microsoft.com/en-us/nuget/create-packages/creating-a-package#choosing-a-unique-package-identifier-and-setting-the-version-number) for guidance. |
 | title | Required for publishing to the Windows Admin Center feed | Friendly name for the package that is displayed in Windows Admin Center Extension Manager. |
 | version | Required | Extension version. Using [Semantic Versioning (SemVer convention)](http://semver.org/spec/v1.0.0.html) is recommended but not required. |
 | authors | Required | If publishing on behalf of your company, use your company name. |
