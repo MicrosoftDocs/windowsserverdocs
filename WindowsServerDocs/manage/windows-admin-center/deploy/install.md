@@ -25,12 +25,15 @@ You can install Windows Admin Center on the following Windows operating systems:
 | **Version** | **Installation Mode** |
 |-------------|-----------------------|
 |Windows 10 (1709) | Desktop mode |
-|Windows Server, version 1709 | Gateway mode |
+|Windows Server, version 1709 or greater | Gateway mode |
 |Windows Server 2016 | Gateway mode |
-<!-- I removed all references to 1803 due to the date slip and an associated freeze of anything mentioning them. Will add back prior to RS4 GA -->
+
 **Desktop Mode:** Connect to the Windows Admin Center gateway from the same computer on which it's installed (for example, `https://localhost:6516`)
 
 **Gateway Mode:** Connect to the Windows Admin Center gateway from a client browser on a different machine (for example, `https://servername`)
+
+> [!WARNING]
+> Installing Windows Admin Center on a Domain controller is not supported.
 
 > [!IMPORTANT]
 > You can't use Internet Explorer to manage Windows Admin Center - instead you need to use a [supported browser](../understand/faq.md#which-web-browsers-are-supported-by-windows-admin-center

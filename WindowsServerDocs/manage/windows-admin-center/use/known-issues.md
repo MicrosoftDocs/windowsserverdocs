@@ -5,7 +5,7 @@ ms.technology: manage
 ms.topic: article
 author: jwwool
 ms.author: jeffrew
-ms.date: 06/18/2018
+ms.date: 09/19/2018
 ms.localizationpriority: medium
 ms.prod: windows-server-threshold
 ---
@@ -18,23 +18,19 @@ If you encounter an issue not described on this page, please [let us know](http:
 
 ## Previous Insider preview builds of Windows 10 & Window Server 2019 (RS5)
 
-- There was a bug in approximate build numbers 17134-17673 which caused the installation of Windows Admin Center to fail. 
-
-## Signature verification failed
-
-- If you install Windows Admin Center on a machine that has never been online, the application may crash with **Signature verification failed** errors in the event log. Connecting the machine to the internet will resolve the error. After the error is resolved, the connection may be removed and Windows Admin Center will launch successfully offline. [Fixed in Windows Admin Center version [1804.25](https://aka.ms/windowsadmincenter)]
+- There was a bug in approximate build numbers 17134-17673 which caused Windows Admin Center to fail. 
 
 ## Installer
 
 - When installing Windows Admin Center using your own certificate, be mindful that if you copy the thumbprint from the certificate manager MMC tool, [it will contain an invalid character at the beginning.](https://support.microsoft.com/help/2023835/certificate-thumbprint-displayed-in-mmc-certificate-snap-in-has-extra) As a workaround, type the first character of the thumbprint, and copy/paste the rest.
 
-- Using port 80 is not supported. [16861485]
+- Using port below 1024 is not supported. In service mode, you may optionally configure port 80 to redirect to your specified port.
 
 ## General
 
-- If you have Windows Admin Center installed as a gateway, and you are managing localhost from a local browser, some tools may not be fully functional, or may throw a **WMI access denied** error. In this case, you'll need to manage the server from a remote machine. [13759990]
-
-- If you previously had the Windows Admin Center technical preview installed as a gateway, you may get a blank entry in the server list. To correct this, perform the following steps:
+- If you have Windows Admin Center installed as a gateway and your connection list appears to be corrupted, perform the following steps:
+>[!WARNING]
+>This will delete the connection list and settings for all Windows Admin Center users on the gateway.
 
   1. Uninstall Windows Admin Center
   2. Delete the **Server Management Experience** folder under **C:\Windows\ServiceProfiles\NetworkService\AppData\Roaming\Microsoft**
@@ -42,13 +38,13 @@ If you encounter an issue not described on this page, please [let us know](http:
 
 - If you leave the tool open and idle for a long period of time, you may get several **Error: The runspace state is not valid for this operation** errors. If this occurs, refresh your browser. If you encounter this, [send us feedback.](http://aka.ms/WACfeedback)
 
-- You may get a **Site cannot be reached** error the first time you load the site when it's installed on a server. [13819870]
-
 - You may encounter a **500 Error** when refreshing pages with very long URLs. [12443710]
 
 - In some tools, your browser's spell checker may mark certain field values as misspelled. [12425477]
 
 - In some tools, command buttons may not reflect state changes immediately after being clicked, and the tool UI may not automatically reflect changes to certain properties. You can click **Refresh** to retrieve the latest state from the target server. [11445790]
+
+- Tag filtering on connection list - if you select connections using the multiselect checkboxes, then filter your connection list by tags, the original selection persists so any action you select will apply to all the previously selected machines. [18099259] 
 
 - There may be minor variance between version numbers of OS's running in Windows Admin Center modules, and what is listed within the 3rd Party Software Notice.
 
@@ -60,11 +56,17 @@ If you encounter an issue not described on this page, please [let us know](http:
 
 - When using Azure Active Directory as your identity provider and Windows Admin Center is configured with a self-signed or otherwise untrusted certificate, you cannot complete the AAD authentication in Microsoft Edge.  [15968377]
 
+- If you have Windows Admin Center deployed as a service and you are using Microsoft Edge as your browser, connecting your gateway to Azure may fail after spawning a new browser window. You may be able to work around this issue by adding login.microsoftonline.com and the URL of your gateway as trusted sites. See [here](https://github.com/AzureAD/azure-activedirectory-library-for-js/wiki/Known-issues-on-Edge) for more information. [17990376]
+
 ### Google Chrome
 
 -	Chrome has a [bug](https://bugs.chromium.org/p/chromium/issues/detail?id=423609) regarding the websockets protocol and NTLM authentication. This effects the following tools: Events, PowerShell, Remote Desktop.
 
--	Chrome may pop-up multiple credential prompts, especially during the add connection experience in a **workgroup** (non-domain) environment. 
+-	Chrome may pop-up multiple credential prompts, especially during the add connection experience in a **workgroup** (non-domain) environment.
+
+- If you have Windows Admin Center deployed as a service, popups from the gateway URL need to be enabled for any Azure integration functionality to work. These services include Azure Network Adapter, Azure Update Management and Azure Site Recovery.
+
+- Chrome Version 69, released September 4th 2018 - If you have Windows Admin Center deployed as a service, and you are using a DNS alias to access the site, the websocket functionality will fail. This impacts the following tools: Events, PowerShell, Remote Desktop. This does not occur in the previous version of Chrome (version 68.)
 
 ### Mozilla Firefox
 Windows Admin Center is not tested with Mozilla Firefox, but most functionality should work. 
@@ -101,13 +103,11 @@ If it is not installed, you can [download and install WMF 5.1](https://www.micro
 
 ### Devices
 
-* When navigating through the table with your keyboard, the selection will jump to the top of the table group. [16646059]
+* When navigating through the table with your keyboard, the selection may jump to the top of the table group. [16646059]
 
 ### Events
 
 * Events is effected by [websocket compatibility when using a proxy service.](#websockets)
-
-* If you have the AD FS role installed, you will see a blank line under the *Applications and Services* heading. Opening this blank line will reveal "D FS" which is the actual event log.   [16861986]
 
 - You may get an error that references “packet size” when exporting large log files. [16630279]
 
@@ -116,10 +116,6 @@ If it is not installed, you can [download and install WMF 5.1](https://www.micro
 ### Files
 
 * Uploading or downloading large files not yet supported. (\~100mb limit) [12524234]
-
-### Network Settings
-
-* When you set a network adapter to DHCP, or update to a new IP address, it can take some time for the change to take effect, even if a success notification was shown. If this happens, waiting should fix the problem. There is no harm in sending the request again if there is no change after a long period of time. [13383236]
 
 ### PowerShell
 
@@ -149,6 +145,8 @@ If it is not installed, you can [download and install WMF 5.1](https://www.micro
   * Windows Key 
   * PrtScn 
 
+* **Remote App –** After enabling the Remote App tool from Remote Desktop settings, the tool may not appear in the tool list when managing a Server with Desktop Experience. [18906904]
+
 ### Roles and Features
 
 * When selecting roles or features with unavailable sources for install, they are skipped. [12946914]
@@ -157,11 +155,9 @@ If it is not installed, you can [download and install WMF 5.1](https://www.micro
 
 * If you do choose to automatically reboot, the reboot will occur before the status gets updated to 100%. [13098852]
 
-### Services
-
-* When working with a service with space in the name, you will get an error [16863359]
-
 ### Storage
+
+* Fetching Quota information may fail without an error notification (there will still be an error in the browser’s console) [18962274]
 
 * Down-level: DVD/CD/Floppy drives do not appear as volumes on down-level.
 
@@ -171,9 +167,11 @@ If it is not installed, you can [download and install WMF 5.1](https://www.micro
 
 ### Updates
 
-* After installing updates, install status may be cached and require browser refresh.
+* After installing updates, install status may be cached and require a browser refresh.
 
 ### Virtual Machines
+
+* Azure Site Recovery – If ASR is setup on the host outside of WAC, you will be unable to protect a VM from within WAC [18972276]
 
 * Advanced features available in Hyper-V Manager such as Virtual SAN Manager, Move VM, Export VM, VM Replication are currently not supported.
 
