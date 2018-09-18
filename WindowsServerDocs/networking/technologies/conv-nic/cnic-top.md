@@ -1,5 +1,5 @@
 ---
-title: Converged Network Interface Card (NIC) Configuration Guide
+title: Converged Network Interface Card (NIC) configuration guidance
 description: Converged network interface card (NIC) allows you to expose RDMA through a host-partition virtual NIC (vNIC) so that the host partition services can access Remote Direct Memory Access (RDMA) on the same NICs that the Hyper-V guests are using for TCP/IP traffic.
 ms.prod: windows-server-threshold
 ms.technology: networking
@@ -11,7 +11,7 @@ author: shortpatti
 ms.date: 09/13/2018
 ---
 
-# Converged Network Interface Card \(NIC\) Configuration Guide
+# Converged Network Interface Card \(NIC\) configuration guidance
 
 >Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
 
@@ -58,3 +58,5 @@ To perform the steps in this guide for datacenter Converged NIC configuration, y
 - [Converged NIC Teamed NIC Configuration](cnic-datacenter.md)
 - [Physical Switch Configuration for Converged NIC](cnic-app-switch-config.md)
 - [Troubleshooting Converged NIC Configurations](cnic-app-troubleshoot.md)
+
+---

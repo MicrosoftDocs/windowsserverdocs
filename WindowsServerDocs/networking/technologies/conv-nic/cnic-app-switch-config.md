@@ -47,6 +47,8 @@ These are only commands and their uses; you must determine the ports to which th
 4.	For more information on configuring Arista Switch, search online for: Arista EOS Manual
 5.	Use this command to verify PFC settings: show priority-flow-control counters detail
 
+--- 
+
 ## Dell switch \(S4810, FTOS 9.9 \(0.0\)\)
 
     
@@ -65,6 +67,7 @@ These are only commands and their uses; you must determine the ports to which th
     dcb-map dcb-smb
     exit
     
+--- 
 
 ## Cisco switch \(Nexus 3132, version 6.0\(2\)U6\(1\)\)
 
@@ -109,12 +112,12 @@ These are only commands and their uses; you must determine the ports to which th
     no shutdown
     priority-flow-control mode on
     
+--- 
 
-## All topics in this guide
-
-This guide contains the following topics.
+## Related topics
 
 - [Converged NIC Configuration with a Single Network Adapter](cnic-single.md)
 - [Converged NIC Teamed NIC Configuration](cnic-datacenter.md)
-- [Physical Switch Configuration for Converged NIC](cnic-app-switch-config.md)
 - [Troubleshooting Converged NIC Configurations](cnic-app-troubleshoot.md)
+
+--- 
