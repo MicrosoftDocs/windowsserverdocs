@@ -100,7 +100,6 @@ In this step, we use the **Test-NetConnection** Windows PowerShell command, but 
 
 1. Verify bi-directional communication.
 
-
    ```PowerShell
    Test-NetConnection 192.168.1.5
    ```
