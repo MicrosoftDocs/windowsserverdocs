@@ -1,16 +1,16 @@
 ---
 ms.assetid: 
-title: Insider Preview - High-Performance Networking features in Windows Server 2019
+title: Insider Preview - HPN features in Windows Server 2019
 description: Learn about the new High-Performance Networking features in Windows Server 2019.
 author: shortpatti
 ms.author: pashort
-ms.date: 09/05/2018
+ms.date: 09/12/2018
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: networking
 ---
 
-# Insider Preview - High-Performance Networking features in Windows Server 2019
+# Insider Preview - HPN features in Windows Server 2019
 
 
 ## Dynamic VRSS and VMMQ
@@ -23,9 +23,9 @@ Windows Server 2019 improves these optimizations by dynamically spreading and tu
 
 For more information, see:
 
--   Our [announcement blog](https://blogs.technet.microsoft.com/networking/2018/08/22/netperf4vw/)
+-   [Announcement blog](https://blogs.technet.microsoft.com/networking/2018/08/22/netperf4vw/)
 
--   Validation Guide for the [IT Pro](https://aka.ms/DVMMQ-Validation)
+-   [Validation Guide for the IT Pro](https://aka.ms/DVMMQ-Validation)
 
 ## Receive Segment Coalescing (RSC) in the vSwitch
 
