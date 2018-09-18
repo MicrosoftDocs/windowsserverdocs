@@ -467,7 +467,6 @@ The following image depicts Hyper-V Host 1 with a vSwitch.
    - **NetAdapter** view operates based upon the "vEthernet \(VMSTEST\)" name. Not all network adapter properties display in this view.
    - **VMNetworkAdapter** view drops the "vEthernet" prefix and simply uses the vmswitch name. (Recommended) 
 
-
    ```PowerShell
    Get-VMNetworkAdapter –ManagementOS | ft -AutoSize
    ```
