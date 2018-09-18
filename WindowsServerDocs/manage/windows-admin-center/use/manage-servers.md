@@ -505,7 +505,7 @@ The following features have been proposed for Storage:
 **Storage Migration Service** allows you to migrate servers and file shares to Azure or Windows Server 2019—without requiring apps or users to change anything.
 [Get an overview of Storage Migration Service](https://go.microsoft.com/fwlink/?linkid=2016155)
 
->!NOTE Storage Migration Service requires Windows Server 2019, build 17709 or newer.
+>[!NOTE] Storage Migration Service requires Windows Server 2019, build 17709 or newer.
 
 ## Storage Replica
 
@@ -519,7 +519,7 @@ Use **Storage Replica** to manage server-to-server storage replication.
 [Get an overview of System Insights](http://aka.ms/systeminsights)
 
 
->!NOTE System Insights requires Windows Server 2019, build 17692 or newer.
+>[!NOTE] System Insights requires Windows Server 2019, build 17692 or newer.
 
 ## Updates
 
