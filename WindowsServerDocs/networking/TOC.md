@@ -4,8 +4,8 @@
 ## [What's new in networking](What-s-New-in-Networking.md)
 
 ## [Core network guidance for Windows Server](core-network-guide/core-network-guide-windows-server.md)
-### [Core network guidance](core-network-guide/Core-Network-Guide.md)
-### [Core network companion guides](core-network-guide/cncg/Core-Network-companion-Guides.md)
+### [Core network components](core-network-guide/Core-Network-Guide.md)
+### [Core network companion guidance](core-network-guide/cncg/Core-Network-companion-Guides.md)
 #### [Deploy server certificates for 802.1X wired and wireless deployments](core-network-guide/cncg/server-certs/Deploy-Server-Certificates-for-802.1X-Wired-and-Wireless-Deployments.md)
 ##### [Server certificate deployment overview](core-network-guide/cncg/server-certs/Server-Certificate-Deployment-Overview.md)
 ##### [Server certificate deployment planning](core-network-guide/cncg/server-certs/Server-Certificate-Deployment-Planning.md)
