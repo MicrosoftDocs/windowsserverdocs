@@ -22,6 +22,8 @@ Windows Admin Center is a lightweight, browser-based GUI platform and toolset fo
 
 ## What is Windows Admin Center Preview, which version is right for me?
 
+>!IMPORTANT The Windows Admin Center Insider Preview will return in early 2019.
+
 There are two versions of Windows Admin Center available for download:
 
 **Windows Admin Center Preview**
@@ -47,7 +49,7 @@ Windows Admin Center has no additional cost beyond Windows. You can use Windows 
 
 ## What versions of Windows Server can I manage with Windows Admin Center?
 
-Windows Admin Center will be optimized for Windows Server 2019 and enable key themes in the upcoming Windows Server 2019 release: hybrid cloud scenarios and hyper-converged infrastructure management in particular. Although Windows Admin Center will work best with Windows Server 2019, it supports managing a variety of versions that customers already use: Windows Server 2012 and newer. There is also limited functionality support for managing Windows Server 2008 R2 in Windows Admin Center Preview.
+Windows Admin Center will be optimized for Windows Server 2019 and enable key themes in the upcoming Windows Server 2019 release: hybrid cloud scenarios and hyper-converged infrastructure management in particular. Although Windows Admin Center will work best with Windows Server 2019, it supports managing a variety of versions that customers already use: Windows Server 2012 and newer are fully supported. There is also limited functionality for managing Windows Server 2008 R2.
 
 ## Is Windows Admin Center a complete replacement for all traditional in-box and RSAT tools?
 
@@ -63,6 +65,7 @@ No. Although Windows Admin Center can manage many common scenarios, it doesn't c
 * Network Settings
 * Viewing/Ending Processes and Creating Process Dumps
 * Registry Editing
+* Managing Scheduled tasks
 * Managing Windows Services
 * Enabling/Disabling Roles and Features
 * Managing Hyper-V VMs and Virtual Switches
@@ -94,7 +97,7 @@ Windows Admin Center Preview now supports limited functionality to manage Window
 
 ## Are there any plans for Windows Admin Center to manage Linux connections?
 
-We are investigating due to customer demand, but there is currently no locked plan to deliver, and support may consist only of a PowerShell Core console connection over SSH.
+We are investigating due to customer demand, but there is currently no locked plan to deliver, and support may consist only of a console connection over SSH.
 
 ## Which web browsers are supported by Windows Admin Center?
 
@@ -114,7 +117,7 @@ Windows Admin Center can be installed on Windows 10 Fall Anniversary Update (170
 
 ## What about extensibility and 3rd-party support?
 
-The Windows Admin Center SDK is available in public preview. As a platform, growing our ecosystem and enabling partner extensibility has been a key priority since the beginning. We’ve been working with early-adopter partners to refine the extension development experience of our SDK. If you’re going to the Microsoft Build conference in May, be sure to stop by our booth.  [Read more about the Windows Admin Center SDK](..\extend\extensibility-overview.md).
+Windows Admin Center has a SDK available so that anyone can write their own extension. As a platform, growing our ecosystem and enabling partner extensibility has been a key priority since the beginning. [Read more about the Windows Admin Center SDK](..\extend\extensibility-overview.md).
 
 ## Can I manage Hyper-Converged Infrastructure with Windows Admin Center?
 
@@ -132,16 +135,20 @@ Windows Admin Center and SCVMM are complementary; Windows Admin Center is intend
 
 Our [launch page](https://aka.ms/WindowsAdminCenter) is the best starting point and has links to our newly categorized documentation content, download location, how to provide feedback, reference information, and other resources.
 
-## What is the version history of Project Honolulu leading up to Windows Admin Center GA?
+## What is the version history, is there a high-level changelog?
 
 Leading up to the Microsoft Ignite conference in September 2017, we announced Project Honolulu Technical Preview, and explained our rationale and our vision.
 
-* Version [1804](https://aka.ms/WindowsAdminCenter) is released as Windows Admin Center and adds security features, role-based access control, and is our first GA release.
+* Version [1809](https://aka.ms/WindowsAdminCenter) Our most recent GA release, 1809 brings features that were previously in preview to the GA channel. [View the full Windows Admin Center 1809 announcement.](https://aka.ms/WindowsAdminCenterBlog)
+* Version [1808](https://aka.ms/WACPreview1808-InsiderBlog) added Installed Apps tool, lots of under the hood improvments, and major updates to the preview SDK.
+* Version [1807](https://aka.ms/WACPreview1807-InsiderBlog) added file share management, Azure Update, tag filtering, and streamlined the Azure registration (no manual PowerShell script requirement.)
+* Version [1806](https://aka.ms/WACPreview1806-InsiderBlog) added Showscript, SDN management, 2008 R2 connections, and Scheduled tasks 
+* Version [1804](https://cloudblogs.microsoft.com/windowsserver/2018/04/12/announcing-windows-admin-center-our-reimagined-management-experience/) was released as **Windows Admin Center** and adds security features, role-based access control, and was our first GA release.
 * Version [1803](https://blogs.windows.com/windowsexperience/2018/03/13/announcing-project-honolulu-technical-preview-1803-and-rsat-insider-preview-for-windows-10) added support for AAD access control, detailed logging, resizable content, and a bunch of tool improvements.
 * Version [1802](https://blogs.windows.com/windowsexperience/2018/02/13/announcing-windows-server-insider-preview-build-17093-project-honolulu-technical-preview-1802) added support for accessibility, localization, high-availability deployments, tagging, Hyper-V host settings, and gateway authentication.
 * Version [1712](https://blogs.windows.com/windowsexperience/2017/12/19/announcing-project-honolulu-technical-preview-1712-build-05002) added more virtual machine features and performance improvements throughout the tools.
 * Version [1711](https://cloudblogs.microsoft.com/windowsserver/2017/12/01/1711-update-to-project-honolulu-technical-preview-is-now-available/) added highly anticipated tools (Remote Desktop, and PowerShell) along with other improvements.
-* Version [1709](https://cloudblogs.microsoft.com/windowsserver/2017/09/22/project-honolulu-technical-preview-is-now-available-for-download/) launched as our first public preview release.
+* Version [1709](https://cloudblogs.microsoft.com/windowsserver/2017/09/22/project-honolulu-technical-preview-is-now-available-for-download/) launched **Project Honolulu** as our first public preview release.
 
 ## I'm having an issue with Windows Admin Center, where can I get help?
 
