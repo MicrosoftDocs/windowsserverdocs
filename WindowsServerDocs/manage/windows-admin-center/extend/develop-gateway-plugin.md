@@ -39,11 +39,11 @@ To create a custom gateway plugin, create a new C# class that implements the ```
 
 ### Download sample from GitHub
 
-To get started quickly with a custom gateway plugin, you can clone or download a copy of our [sample C# plugin project](https://github.com/Microsoft/windows-admin-center-sdk/tree/master/Microsoft.ManagementExperience.Samples) from our Windows Admin Center SDK [GitHub site](https://aka.ms/wacsdk).
+To get started quickly with a custom gateway plugin, you can clone or download a copy of our [sample C# plugin project](https://github.com/Microsoft/windows-admin-center-sdk/tree/master/GatewayPluginExample/Plugin) from our Windows Admin Center SDK [GitHub site](https://aka.ms/wacsdk).
 
 ### Add content
 
-Add new content to your cloned copy of the [sample C# plugin project](https://github.com/Microsoft/windows-admin-center-sdk/tree/master/Microsoft.ManagementExperience.Samples) project (or your own project) to contain your custom APIs, then build your custom gateway plugin DLL file to be used in the next steps.
+Add new content to your cloned copy of the [sample C# plugin project](https://github.com/Microsoft/windows-admin-center-sdk/tree/master/GatewayPluginExample/Plugin) project (or your own project) to contain your custom APIs, then build your custom gateway plugin DLL file to be used in the next steps.
 
 ### Deploy plugin for testing
 

@@ -63,3 +63,8 @@ Now that your environment is prepared, you are ready to start creating content.
 - Create a [solution](develop-solution.md) extension
 - Create a [gateway plugin](develop-gateway-plugin.md)
 - Learn more with our [guides](guides.md)
+
+## SDK design toolkit
+
+Check out our Windows Admin Center [SDK design toolkit](https://github.com/Microsoft/windows-admin-center-sdk/blob/master/WindowsAdminCenterDesignToolkit.zip)! This toolkit is designed to help you rapidly mock up extensions in PowerPoint using Windows Admin Center styles, controls, and page templates. See what your extension can look like in Windows Admin Center before you start coding!
+
