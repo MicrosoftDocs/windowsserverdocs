@@ -25,17 +25,20 @@ Use Storage Migration Service because you've got a server--or a lot of servers--
 - Optionally take over the identity of the source servers (also known as cutting over) so that users and apps don't have to change anything to access existing data
 - Manage one or multiple migrations from the Windows Admin Center user interface
 
-![Migrate files & configuration from source servers to destination servers, Azure VMs, or Azure File Sync.](media\overview\storage-migration-service-diagram.png)
+![Diagram showing Storage Migration Service migrating files & configuration from source servers to destination servers, Azure VMs, or Azure File Sync.](media\overview\storage-migration-service-diagram.png)
+
+**Figure 1: Storage Migration Service sources and destinations**
 
 ## How the migration process works
 
 Migration is a three-step process:
 
-1. **Inventory servers** to gather info about their files and configuration.
+1. **Inventory servers** to gather info about their files and configuration (shown in Figure 2).
 2. **Transfer data** from the source devices to the destination servers.
 3. **Cut over to the new servers** (optional)<br>The destination servers assume the source servers' former identities so that apps and users don't have to change anything. <br>The source servers enter a maintenance state where they're unavailable to users and apps, and can be decommissioned at your convenience.
 
-**[Screenshot showing Inventory phase]**
+  ![Screenshot showing a server ready to be scanned](media/migrate/inventory.png)
+  **Figure 2: Storage Migration Service inventorying servers**
 
 ## Requirements
 
