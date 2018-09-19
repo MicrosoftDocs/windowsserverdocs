@@ -61,7 +61,7 @@ Now that you've created an extension with the Windows Admin Center CLI, you are 
 - Add an [empty module](guides\add-module.md)
 - Add an [iFrame](guides\add-iframe.md)
  
-Even more examples can be found our [GitHub SDK site](https://github.com/Microsoft/windows-admin-center-sdk/):
+Even more examples can be found our [GitHub SDK site](https://aka.ms/wacsdk):
 -  [Developer Tools](https://github.com/Microsoft/windows-admin-center-sdk/tree/master/windows-admin-center-developer-tools) is a fully functioning extension that can be side-loaded into Windows Admin Center, and contains a rich collection of sample functionality and tool examples that you can browse and use in your own extension.
 
 ## Build and side load your extension
