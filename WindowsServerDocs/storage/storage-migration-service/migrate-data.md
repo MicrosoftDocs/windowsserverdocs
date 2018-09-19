@@ -40,7 +40,7 @@ In this step you specify what servers you want to migrate and scan them to colle
 1. Select **Start scan**.<br>The page updates to shows when the scan is complete.
     ![Screenshot showing a server ready to be scanned](media/migrate/inventory.png)
      **Figure 2: Inventorying servers**
-1. Select each server to review the shares, configuration, network adapters, and volumes that were inventoried. 
+1. Select each server to review the shares, configuration, network adapters, and volumes that were inventoried. <br><br>In this release, if you chose to include administrative shares, you'll get a "This operation isn't supported by the selected proxy" error for shares located in the Windows system folder. We don't support transferring those shares, so you'll have to skip them during the transfer phase.
 1. Select **Next** to move on to transferring data.
 
 ## Step 2: Transfer data from your old servers to the destination servers
