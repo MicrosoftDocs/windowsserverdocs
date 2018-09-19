@@ -79,9 +79,7 @@ In this step you cut over from the source servers to the destination servers, mo
 
  1. Select **Next** on the **Adjust cutover settings** page.
  1. Select **Validate** on the **Validate source and destination device** page, and then select **Next**.
- 1. When you're ready to perform the cutover, select **Start cutover**. <br>Users and apps might experience an interruption while the address and names are moved and the servers restarted several times each, but will otherwise be unaffected by the migration.
-
-How long cutover takes depends on how quickly the servers restart, Active Directory and DNS replication times.
+ 1. When you're ready to perform the cutover, select **Start cutover**. <br>Users and apps might experience an interruption while the address and names are moved and the servers restarted several times each, but will otherwise be unaffected by the migration. How long cutover takes depends on how quickly the servers restart, Active Directory and DNS replication times.
 
 ## See also
 
