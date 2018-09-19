@@ -12,13 +12,13 @@ ms.technology: storage
 
 # Storage Migration Service overview
 
-Storage Migration Service makes it easier to migrate servers to a newer version of Windows Server. It provides a graphical tool that inventories data on servers and then transfers the data and configuration to newer servers--all without apps or users having to change anything.
+Storage Migration Service makes it easier to migrate servers to a newer version of Windows Server. It provides a graphical tool that inventories data on servers and then transfers the data and configuration to newer servers—all without apps or users having to change anything.
 
 This topic discusses why you'd want to use Storage Migration Service, how the migration process works, and what the requirements are for source and destination servers.
 
 ## Why use Storage Migration Service
 
-Use Storage Migration Service because you've got a server--or a lot of servers--that you want to migrate to newer hardware (or virtual machines). Storage Migration Service is designed to help by doing the following:
+Use Storage Migration Service because you've got a server (or a lot of servers) that you want to migrate to newer hardware or virtual machines. Storage Migration Service is designed to help by doing the following:
 
 - Inventory multiple servers and their data
 - Rapidly transfer files, file shares, and security configuration from the source servers
@@ -86,3 +86,4 @@ The destination server must run one of the following operating systems:
 ## See also
 
 [Migrate a file server by using Storage Migration Service](migrate-data.md)
+[Storage Migration Services frequently asked questions (FAQ)](faq.md)

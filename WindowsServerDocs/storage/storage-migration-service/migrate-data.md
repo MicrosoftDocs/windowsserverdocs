@@ -84,4 +84,5 @@ In this step you cut over from the source servers to the destination servers, mo
 ## See also
 
 - [Storage Migration Service overview](overview.md)
+- [Storage Migration Services frequently asked questions (FAQ)](faq.md)
 - [Planning for an Azure File Sync deployment](https://docs.microsoft.com/azure/storage/files/storage-sync-files-planning)
