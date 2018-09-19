@@ -26,14 +26,15 @@ There are two versions of Windows Admin Center<!-- available for download-->:
 
 ### Windows Admin Center
 
-- For IT admins who are not able to update frequently or who want more validation time for the releases they use in production, this version is for you. Our current GA release is Windows Admin Center 1804.25. Later this year, several months’ worth of preview releases will culminate in another GA release once new functionality receives broader validation coverage.
+- For IT admins who are not able to update frequently or who want more validation time for the releases they use in production, this version is for you. Our current GA release is Windows Admin Center 1809.
 - To get the latest GA release, [download here](https://aka.ms/WACDownload).
 
 ### Windows Admin Center Preview
 
->[!IMPORTANT]
+>[!NOTE]
 >The Windows Admin Center Insider Preview will return in the coming months.
--  For IT admins who want the latest and greatest features on a regular cadence, this version is for you. Our intent is to provide subsequent update releases every month or so. The core platform continues to be production-ready and the license provides production use rights. However, note that you will see the introduction of new tools and capabilities which are clearly marked as PREVIEW and are suitable for evaluation and testing.
+
+- For IT admins who want the latest and greatest features on a regular cadence, this version is for you. Our intent is to provide subsequent update releases every month or so. The core platform continues to be production-ready and the license provides production use rights. However, note that you will see the introduction of new tools and capabilities which are clearly marked as PREVIEW and are suitable for evaluation and testing.
 - To get the latest Preview release, registered Insiders may download Windows Admin Center Preview directly from the [Windows Server Insider Preview download page](https://www.microsoft.com/en-us/software-download/windowsinsiderpreviewserver), under the Additional Downloads dropdown. If you have not yet registered as an Insider, see [Getting Started with Windows Server](https://insider.windows.com/en-us/for-business-getting-started-server/) on the Windows Insiders for Business portal. 
 
 ## Why was "Windows Admin Center" chosen as the final name for "Project Honolulu"?
@@ -54,7 +55,7 @@ Windows Admin Center will be optimized for Windows Server 2019 and enable key th
 
 ## Is Windows Admin Center a complete replacement for all traditional in-box and RSAT tools?
 
-No. Although Windows Admin Center can manage many common scenarios, it doesn't completely replace all traditional Microsoft Management Console (MMC) tools. For a detailed look at what tools are included with Windows Admin Center, read more about managing servers in our documentation. Windows Admin Center has the following key capabilities in its Server Manager solution:
+No. Although Windows Admin Center can manage many common scenarios, it doesn't completely replace all traditional Microsoft Management Console (MMC) tools. For a detailed look at what tools are included with Windows Admin Center, read more about [managing servers](..\use\manage-servers.md) in our documentation. Windows Admin Center has the following key capabilities in its Server Manager solution:
 
 * Displaying resources and resource utilization
 * Certificate Management
@@ -91,11 +92,11 @@ Yes. Windows Admin Center can be used to manage Microsoft Hyper-V Server 2016 an
 
 ## Can I deploy Windows Admin Center on a Windows 10 computer?
 
-Yes, Windows Admin Center can be installed on Windows 10 (version 1709 or later), running in desktop mode.  Windows Admin Center can also be installed on a server running Windows Server 2016 in gateway mode, and then accessed via a web browser from a Windows 10 computer.  [Learn more about installation options](..\plan\installation-options.md).
+Yes, Windows Admin Center can be installed on Windows 10 (version 1709 or later), running in desktop mode.  Windows Admin Center can also be installed on a server with Windows Server 2016 or greater in gateway mode, and then accessed via a web browser from a Windows 10 computer. [Learn more about installation options](..\plan\installation-options.md).
 
 ## Are there any plans for Windows Admin Center to manage Windows Server 2008 R2 or earlier?
 
-Windows Admin Center Preview now supports limited functionality to manage Windows Server 2008 R2. Windows Admin Center relies on PowerShell capabilities and platform technologies that don’t exist in Windows Server 2008 R2 and earlier, making full support infeasible.  Windows Server 2008/2008 R2 are approaching end of support in January 2020 so Microsoft recommends customers move to Azure or upgrade to Windows Server 2016.
+Windows Admin Center Preview now supports limited functionality to manage Windows Server 2008 R2. Windows Admin Center relies on PowerShell capabilities and platform technologies that don’t exist in Windows Server 2008 R2 and earlier, making full support infeasible. Windows Server 2008/2008 R2 are approaching end of support in January 2020 so Microsoft recommends customers move to Azure or upgrade to Windows Server 2016.
 
 ## Are there any plans for Windows Admin Center to manage Linux connections?
 

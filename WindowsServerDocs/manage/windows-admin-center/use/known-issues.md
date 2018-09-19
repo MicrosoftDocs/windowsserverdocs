@@ -48,6 +48,11 @@ If you encounter an issue not described on this page, please [let us know](http:
 
 - There may be minor variance between version numbers of OS's running in Windows Admin Center modules, and what is listed within the 3rd Party Software Notice.
 
+### Extension Manager
+
+- When you update Windows Admin Center, you must reinstall your extensions.
+- If you add an extension feed that is inaccessible, there is no warning. [14412861]
+
 ## Browser Specific Issues
 
 ### Microsoft Edge 
@@ -57,6 +62,8 @@ If you encounter an issue not described on this page, please [let us know](http:
 - When using Azure Active Directory as your identity provider and Windows Admin Center is configured with a self-signed or otherwise untrusted certificate, you cannot complete the AAD authentication in Microsoft Edge.  [15968377]
 
 - If you have Windows Admin Center deployed as a service and you are using Microsoft Edge as your browser, connecting your gateway to Azure may fail after spawning a new browser window. You may be able to work around this issue by adding login.microsoftonline.com and the URL of your gateway as trusted sites. See [here](https://github.com/AzureAD/azure-activedirectory-library-for-js/wiki/Known-issues-on-Edge) for more information. [17990376]
+
+- If you have Windows Admin Center installed in desktop mode, the browser tab in Microsoft Edge won't display the favicon. [17665801]
 
 ### Google Chrome
 
@@ -145,7 +152,7 @@ If it is not installed, you can [download and install WMF 5.1](https://www.micro
   * Windows Key 
   * PrtScn 
 
-* **Remote App –** After enabling the Remote App tool from Remote Desktop settings, the tool may not appear in the tool list when managing a Server with Desktop Experience. [18906904]
+* Remote App – After enabling the Remote App tool from Remote Desktop settings, the tool may not appear in the tool list when managing a Server with Desktop Experience. [18906904]
 
 ### Roles and Features
 

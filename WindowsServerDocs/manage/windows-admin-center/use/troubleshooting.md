@@ -26,13 +26,17 @@ ms.prod: windows-server-threshold
     * [I have Windows Admin Center installed as an Gateway on Windows Server](#whitescreenws)
     * [I have Windows Admin Center installed as an Gateway on an Azure VM](#whitescreenzvm)
 
-* [Windows Admin Center home page loads, but I'm stuck on the Add Connection pane](#winvercompat)
+* [Windows Admin Center home page loads, but I'm stuck on the Add Connection pane, or I can't connect to any machine.](#winvercompat)
 
 * [I get the message: "Error while loading the module. Rpc: Expired retries 'Ping'."](#winvercompat)
+
+* [I get the message: "Cant connect securely to this page. This might be because the site uses outdated or unsafe TLS security settings."](#tls)
 
 * [I can connect to some servers, but not others](#connectionissues)
 
 * [I'm using Windows Admin Center in a **workgroup**](#workgroup)
+
+* [I previously had Windows Admin Center installed, and now nothing else can use the same TCP/IP port](#urlacl)
 
 * [My issue is not listed here, or the steps on this page did not resolve my issue.](#filebug)
 
@@ -93,6 +97,30 @@ Test-NetConnection -Port <port> -ComputerName <gateway> -InformationLevel Detail
 
 * If you are using an insider preview version of Windows 10 or Server with a build version between 17134 and 17637, Windows Admin Center has a [known incompatibility.](known-issues.md#previous-insider-preview-builds-of-windows-10--window-server-2019-rs5)
 
+## Make sure the Windows Remote Management (WinRM) service is running on both the gateway machine and managed node
+
+* Open the run dialog with WindowsKey + R
+* Type ```services.msc``` and press enter
+* In the window that opens, look for Windows Remote Management (WinRM), make sure it is running and set to automatically start
+
+## Did you upgrade your server from 2016 to 2019?
+
+* This may have cleared your trusted hosts settings. [Follow these instructions to update your trusted hosts settings.](#configure-trustedHosts) 
+
+[[back to top]](#toc)
+
+<a id="tls"></a>
+
+## I get the message: "Cant connect securely to this page. This might be because the site uses outdated or unsafe TLS security settings.
+
+<!--REF: https://docs.microsoft.com/en-us/iis/get-started/whats-new-in-iis-10/http2-on-iis#when-is-http2-not-supported -->
+Your machine is restricted to HTTP/2 connections. Windows Admin Center uses integrated Windows authentication, which is not supported in HTTP/2. Add the following two registry values under the ```HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Http\Parameters``` key to remove the HTTP/2 restriction:
+
+```
+EnableHttp2Cleartext=dword:00000000
+EnableHttp2Tls=dword:00000000
+```
+
 [[back to top]](#toc)
 
 <a id="connectionissues"></a> 
@@ -134,10 +162,6 @@ To connect to a workgroup machine that is not on the same subnet as the gateway,
 
 When installing Windows Admin Center, you are given the option to let Windows Admin Center manage the gateway's TrustedHosts setting. This is required in a workgroup environment, or when using local administrator credentials in a domain. If you choose to forego this setting, you must configure TrustedHosts manually.
 
-
-> [!NOTE] 
-> If you are installing on Windows 10 in a domain and using domain credentials to connect to the managed node, you do not need to modify TrustedHosts.
-
 **To modify TrustedHosts using PowerShell commands:**
 
 1. Open an Administrator PowerShell session.
@@ -156,7 +180,7 @@ intend to manage:
         Set-Item WSMan:localhost\Client\TrustedHosts -Value '192.168.1.1,server01.contoso.com,server02'
 
     > [!TIP] 
-    >For an easy way to set all TrustedHosts at once, you can use a wildcard. Note though that including all hosts is less secure than setting them specifically.
+    >For an easy way to set all TrustedHosts at once, you can use a wildcard.
 
     >     Set-Item WSMan:\localhost\Client\TrustedHosts -Value '*'
 
@@ -170,14 +194,25 @@ intend to manage:
 
 [[back to top]](#toc)
 
+<a id="urlacl"></a>
+
+## I previously had Windows Admin Center installed, and now nothing else can use the same TCP/IP port
+
+Manually run these two commands in an elevated command prompt:
+
+```
+netsh http delete sslcert ipport=0.0.0.0:443
+netsh http delete urlacl url=https://+:443/
+```
+
+[[back to top]](#toc)
+
 <a id="azissue"></a>
 
 ## Having an issue with an Azure-related feature?
 
->Applies to: Windows Admin Center Preview
-
 Please send us an email at wacAzureFeedback@microsoft.com with the following information:
-* General issue information from the [questions listed above](#still-not-working-or-is-your-issue-not-captured-here?). 
+* General issue information from the [questions listed below](#filebug). 
 * Describe your issue and the steps you took to reproduce the issue. 
 * Did you previously register your gateway to Azure using the New-AadApp.ps1 downloadable script and then upgrade to version 1807? Or did you register your gateway to Azure using the UI from gateway Settings > Azure?
 * Is your Azure account associated with multiple directories/tenants?

@@ -107,6 +107,8 @@ You can get Windows Admin Center up and running in your environment in minutes:
 
 Learn about our latest released features:
 
+- Version [1809](https://aka.ms/WindowsAdminCenterBlog) is our most recent GA release which brings features that were previously in preview to the GA channel.
+- Version [1808](https://aka.ms/WACPreview1808-InsiderBlog) added Installed Apps tool, lots of under the hood improvements, and major updates to the preview SDK.
 - Version [1807](https://aka.ms/WACPreview1807-InsiderBlog) - added a streamlined Azure connect experience, improvements to VM inventory page, file sharing functionality, Azure update management integration, and more. 
 - Version [1806](https://aka.ms/WACPreview1806-InsiderBlog) - added support for viewing our scripts, WS 2008 R2 connections, SDN, scheduled tasks, and many other improvements.
 - Version 1804.25 - Maintenance update to support users installing Windows Admin Center in completely offline environments.
