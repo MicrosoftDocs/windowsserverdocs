@@ -1,6 +1,3 @@
-By default, when you initialize the HGS server it will configure the IIS web sites for HTTP-only communications.
-All sensitive material being transmitted to and from HGS are always encrypted using message-level encryption, however if you desire a higher level of security you can also enable HTTPS by configuring HGS with an SSL certificate.
-
 First, obtain an SSL certificate for HGS from your certificate authority. Each host machine will need to trust the SSL certificate, so it is recommended that you issue the SSL certificate from your company's public key infrastructure or a third party CA. Any SSL certificate supported by IIS is supported by HGS, however **the subject name on the certificate must match the fully qualified HGS service name** (cluster distributed network name). For instance, if the HGS domain is "secure.bastion.local" and your HGS service name is "hgs", your SSL certificate should be issued for "hgs.secure.bastion.local". You can add additional DNS names to the certificate's subject alternative name field if necessary.
 
 Once you have the SSL certificate, you can either provide the certificate when you run [Set-HgsServer](https://technet.microsoft.com/itpro/powershell/windows/host-guardian-service/server/set-hgsserver):

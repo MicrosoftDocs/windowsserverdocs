@@ -128,11 +128,17 @@ Complete the following steps to add nodes to the cluster.
 
 4. [!INCLUDE [Initialize HGS](../../includes/guarded-fabric-initialize-hgs-on-the-node.md)] 
 
-## Configure HGS for HTTPS (optional)
+## Configure HGS for HTTPS 
+
+By default, when you initialize the HGS server it will configure the IIS web sites for HTTP-only communications.
+
+>[!NOTE]
+>Configuring HTTPS using a well known and trusted HGS server certificate is required to prevent man-in-the-middle attacks and is therefore advised for production deployments.
 
 [!INCLUDE [Configure HTTPS](../../includes/configure-hgs-for-https.md)] 
 
-For Always Encrypted with secure enclaves, the SSL certificate needs to be trusted on both host machines that run SQL Server and machines that run database client applications need to contact HGS. 
+>[!NOTE]
+>For Always Encrypted with secure enclaves, the SSL certificate needs to be trusted on both host machines that run SQL Server and machines that run database client applications need to contact HGS. 
 
 ## Collect attestation info from the host machines
 
