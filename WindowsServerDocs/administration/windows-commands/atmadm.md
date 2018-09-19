@@ -95,6 +95,7 @@ atmadm [/c][/a][/s]
     Signaling and ILMI Packets Received        = 34989
     ```
     The following table contains descriptions of each element in the **atmadm /s** sample output.
+    
     |call Manager Statistic|Description|
     |-------------|--------|
     |Current active calls|calls currently active on the atM adapter installed on this computer.|
