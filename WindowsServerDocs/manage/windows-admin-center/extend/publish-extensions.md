@@ -130,7 +130,7 @@ We also highly recommend that you sign the extension NuGet package to ensure the
 
 ### 5. Test your extension NuGet package
 
-Your extension package is now ready for testing! Upload the .nupkg file to a NuGet feed or copy it to a file share. To view and download packages from a different feed or file share, you'll need to [change your feed configuration](../configure/using-extensions.md#installing-extensions-from-a-different-feed---windows-admin-center-preview) to point to your NuGet feed or file share. When testing, make sure the properties are displayed correctly in Extension Manager and you can successfully install and uninstall your extension.
+Your extension package is now ready for testing! Upload the .nupkg file to a NuGet feed or copy it to a file share. To view and download packages from a different feed or file share, you'll need to [change your feed configuration](../configure/using-extensions.md#installing-extensions-from-a-different-feed) to point to your NuGet feed or file share. When testing, make sure the properties are displayed correctly in Extension Manager and you can successfully install and uninstall your extension.
 
 ## Publishing your extension to the Windows Admin Center feed
 

@@ -18,16 +18,18 @@ ms.prod: windows-server-threshold
 
 You can install Windows Admin Center on the following Windows operating systems:
 
-| **Version** | **Installation Type** |
+| **Version** | **Installation Mode** |
 |-------------|-----------------------|
-|Windows 10 Fall Creators Update (1709) or newer | Desktop mode |
-|Windows Server 2019 (Insider Preview) | Gateway mode |
-|Windows Server Semi-Annual Channel | Gateway mode |
-|Windows Server 2016 | Gateway mode |
+|Windows 10 (1709 or newer) | Desktop mode |
+|Windows Server, version 1709 or newer | Gateway mode |
+|Windows Server 2016 or 2019 | Gateway mode |
 
 **Desktop installation:** Connect to the Windows Admin Center gateway from the same computer on which it's installed (i.e. `https://localhost:[port]`)
 
 **Gateway service:** Connect to the Windows Admin Center gateway from a client browser on a different machine (i.e. `https://servername`) 
+
+> [!WARNING]
+> Installing Windows Admin Center on a Domain controller is not supported.
 
 > [!IMPORTANT]
 > You can't use Internet Explorer to manage Windows Admin Center - instead you need to use a [supported browser](../understand/faq.md#which-web-browsers-are-supported-by-windows-admin-center

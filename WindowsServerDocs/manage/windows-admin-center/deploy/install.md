@@ -24,9 +24,9 @@ You can install Windows Admin Center on the following Windows operating systems:
 
 | **Version** | **Installation Mode** |
 |-------------|-----------------------|
-|Windows 10 (1709) | Desktop mode |
-|Windows Server, version 1709 or greater | Gateway mode |
-|Windows Server 2016 | Gateway mode |
+|Windows 10 (1709 or newer) | Desktop mode |
+|Windows Server, version 1709 or newer | Gateway mode |
+|Windows Server 2016 or 2019 | Gateway mode |
 
 **Desktop Mode:** Connect to the Windows Admin Center gateway from the same computer on which it's installed (for example, `https://localhost:6516`)
 
@@ -56,8 +56,6 @@ On Windows Server, Windows Admin Center is installed as a network service. You m
 
 > [!NOTE]
 > Modifying TrustedHosts is required in a workgroup environment, or when using local administrator credentials in a domain. If you choose to forego this setting, you must [configure TrustedHosts manually](../use/troubleshooting.md#configure-trustedhosts)
-
-If you install on Windows Server 2016 with Desktop Experience, you can create a desktop shortcut for all users in **C:\Users\Public\Desktop**.
 
 Once the install is complete, start Windows Admin Center with the desktop shortcut, or open a browser and navigate to **https://'name of server':'port specified in setup'**.
 
