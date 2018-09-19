@@ -43,10 +43,10 @@ The following table outlines the differences between the two types of CALs:
 | Per Device                                                     | Per User                                                                         |
 |----------------------------------------------------------------|----------------------------------------------------------------------------------|
 | CALs are physically assigned to each device.                   | CALs are assigned to a user in Active Directory.                                 |
-| CALs are tracked and enforced by the license server.           | CALs are tracked but not enforced by the license server.                         |
+| CALs are tracked by the license server.                        | CALs are tracked by the license server.                                          |
 | CALs can be tracked regardless of Active Directory membership. | CALs cannot be tracked within a workgroup.                                       |
 | You can revoke up to 20% of CALs.                              | You cannot revoke any CALs.                                                      |
-| Temporary CALs are valid for 52-89 days.                          | Temporary CALs are not available.                                                |
+| Temporary CALs are valid for 52–89 days.                       | Temporary CALs are not available.                                                |
 | CALs cannot be overallocated.                                  | CALs can be overallocated (in breach of the Remote Desktop licensing agreement). |
 
 When you use the Per Device model, a temporary license is issued the first time a device connects to the RD Session Host. The second time that device connects, as long as the license server is activated and there are available CALs, the license server issues a permanent RDS Per Device CAL.
