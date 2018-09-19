@@ -4,7 +4,7 @@ description: Is your app running slow on RDS? Learn about performance counters y
 ms.prod: windows-server-threshold
 ms.technology: remote-desktop-services
 ms.author: elizapo
-ms.date: 03/29/2018
+ms.date: 09/19/2018
 ms.tgt_pltfrm: na
 ms.topic: article
 author: lizap
@@ -33,8 +33,8 @@ For example, in the following table, the user input delay would be reported as 1
 |------|---|---|---|
 |Delay |16 ms| 20 ms| 1,000 ms|
 
-
 ## Enable and use the new performance counters
+
 To use these new performance counters, you must first enable a registry key by running this command:
 
 ```
@@ -44,7 +44,7 @@ reg add "HKLM\System\CurrentControlSet\Control\Terminal Server" /v "EnableLagCou
 >[!NOTE]
 > If you're using Windows 10, version 1809 or later or Windows Server 2019 or later, you won't need to enable the registry key.
 
-Next, restart the server. Then, open the Performance Monitor, and select the plus sign (+), as shown in the following screen shot. 
+Next, restart the server. Then, open the Performance Monitor, and select the plus sign (+), as shown in the following screen shot.
 
 ![Remote Desktop - A screenshot showing how to add the User input Delay performance counter](.\media\rds-add-user-input-counter-screen.png)
 
@@ -133,4 +133,4 @@ Registered Insiders can navigate directly to the [Windows Server Insider Preview
 
 You can submit feedback for this feature through the Feedback Hub. Select **Apps > All other apps** and include "RDS performance counters—performance monitor" in your post's title.
 
-For general feature ideas, visit the [RDS UserVoice page](https://aka.ms/uservoice-rds). 
+For general feature ideas, visit the [RDS UserVoice page](https://aka.ms/uservoice-rds).
