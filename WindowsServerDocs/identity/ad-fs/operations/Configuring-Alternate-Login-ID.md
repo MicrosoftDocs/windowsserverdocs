@@ -5,7 +5,7 @@ description:
 author: billmath
 ms.author: billmath
 manager: mtillman
-ms.date: 09/05/2018
+ms.date: 09/19/2018
 ms.topic: article
 ms.prod: windows-server-threshold
 
@@ -131,12 +131,12 @@ Office version 1712 (build no 8827.2148) and above have updated the authenticati
 ##### Step 2. Configure registry for impacted users using group policy
 The office applications rely on information pushed by the directory administrator to identify the alternate-id environment. The following registry keys need to be configured to help office applications authenticate the user with alternate-id without showing any extra prompts
 
-|Regkey|Windows 7/8|Windows 10|Description|
-|-----|-----|-----|-----|
-|Reg add HKCU\Software\Microsoft\AuthN /v DomainHint /t REG_SZ /d contoso.com /f|Required|Required|The value of this regkey is a verified custom domain name in the tenant of the organization. For example, Contoso corp can provide a value of Contoso.com in this regkey if Contoso.com is one of the verified custom domain names in the tenant Contoso.onmicrosoft.com. For more information see KB1234567|
-|Reg add HKCU\Software\Microsoft\Office\16.0\Common\Identity /v EnableAlternateIdSupport /t REG_DWORD /d 1 /f|Required for Outlook 2016 ProPlus|Required for Outlook 2016 ProPlus|The value of this regkey can be 1 / 0 to indicate to Outlook application whether it should engage the improved alternate-id authentication logic. For more information see KB1234568|
-|Reg add HKCU\SOFTWARE\Microsoft\Office\16.0\Common\Identity /v DisableADALatopWAMOverride /t REG_DWORD /d 1 /f|Not applicable|Required only for Window 10 RS2 and RS3.  Version 1703 (OS build 15063) is RS2, Version 1709 (OS build 16299) is RS3.|This ensures that Office does not use WAM as alt-id is not supported by WAM on Windows RS2 and RS3. For more information see KB12345679|
-|Reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Internet Settings\ZoneMap\Domains\contoso.com\sts" /v * /t REG_DWORD /d 1 /f|Required|Required|This regkey can be used to set the STS as a trusted Zone in the internet settings. Standard ADFS deployment recommends adding the ADFS namespace to the Local Intranet Zone for Internet Explorer|
+|Regkey to add|Regkey data name, type, and value|Windows 7/8|Windows 10|Description|
+|-----|-----|-----|-----|-----|
+|HKEY_CURRENT_USER\Software\Microsoft\Auth|DomainHint</br>REG_SZ</br>contoso.com|Required|Required|The value of this regkey is a verified custom domain name in the tenant of the organization. For example, Contoso corp can provide a value of Contoso.com in this regkey if Contoso.com is one of the verified custom domain names in the tenant Contoso.onmicrosoft.com.|
+HKEY_CURRENT_USER\Software\Microsoft\Office\16.0\Common\Identity|EnableAlternateIdSupport</br>REG_DWORD</br>1|Required for Outlook 2016 ProPlus|Required for Outlook 2016 ProPlus|The value of this regkey can be 1 / 0 to indicate to Outlook application whether it should engage the improved alternate-id authentication logic.|
+HKEY_CURRENT_USER\SOFTWARE\Microsoft\Office\16.0\Common\Identity|DisableADALatopWAMOverride</br>REG_DWORD</br>1|Not applicable|Required only for Window 10 RS2 and RS3.  Version 1703 (OS build 15063) is RS2, Version 1709 (OS build 16299) is RS3.|This ensures that Office does not use WAM as alt-id is not supported by WAM on Windows RS2 and RS3.|
+HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Internet Settings\ZoneMap\Domains\contoso.com\sts|&#42;</br>REG_DWORD</br>1|Required|Required|This regkey can be used to set the STS as a trusted Zone in the internet settings. Standard ADFS deployment recommends adding the ADFS namespace to the Local Intranet Zone for Internet Explorer|
 
 ## New authentication flow after additional configuration
 
