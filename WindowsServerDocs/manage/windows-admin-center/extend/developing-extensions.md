@@ -5,7 +5,7 @@ ms.technology: manage
 ms.topic: article
 author: nwashburn-ms
 ms.author: niwashbu
-ms.date: 06/18/2018
+ms.date: 09/19/2018
 ms.localizationpriority: medium
 ms.prod: windows-server-threshold
 ---
@@ -26,10 +26,3 @@ Windows Admin Center supports three types of extensions - tool extensions, solut
 - Create a [solution](develop-solution.md) extension
 - Create a [gateway plugin](develop-gateway-plugin.md)
 - Learn more with our [guides](guides.md)
-
-## Code examples
-
-Check out our code examples on GitHub:
-
-- [Windows Admin Center SDK](https://github.com/Microsoft/windows-admin-center-sdk)
-- [Windows Admin Center Extension Template](https://github.com/Microsoft/windows-admin-center-extension-template)
