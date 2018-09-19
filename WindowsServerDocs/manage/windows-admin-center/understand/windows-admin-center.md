@@ -18,12 +18,12 @@ Windows Admin Center is a locally deployed, browser-based app for managing serve
 ## Download now
 
 **Windows Admin Center** (version 1809)
-
-Broadly validated & generally available. [Get it here](http://aka.ms/WACDownload)
+<!--Broadly validated & generally available.-->
+[Get it here](http://aka.ms/WACDownload)
 
 ********************
 
-Quick links: [Documentation](../overview.md) | [Give feedback](https://aka.ms/WACFeedback) | [Latest features](../overview.md#latest-features) | [For developers](../extend/extensibility-overview.md)
+Quick links: [Documentation](../overview.md) | [Latest features](../overview.md#latest-features) | [For developers](../extend/extensibility-overview.md) | [Give feedback](https://aka.ms/WACFeedback)
 
 ********************
 
