@@ -37,8 +37,8 @@ Migration is a three-step process:
 2. **Transfer data** from the source devices to the destination servers.
 3. **Cut over to the new servers** (optional)<br>The destination servers assume the source servers' former identities so that apps and users don't have to change anything. <br>The source servers enter a maintenance state where they're unavailable to users and apps, and can be decommissioned at your convenience.
 
-  ![Screenshot showing a server ready to be scanned](media/migrate/inventory.png)
-  **Figure 2: Storage Migration Service inventorying servers**
+![Screenshot showing a server ready to be scanned](media/migrate/inventory.png)
+**Figure 2: Storage Migration Service inventorying servers**
 
 ## Requirements
 

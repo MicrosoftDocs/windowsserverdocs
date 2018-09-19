@@ -20,10 +20,8 @@ Before you get started, install Storage Migration Service and make sure that the
 1. Check the [Storage Migration Service requirements](overview.md#requirements) and install [Windows Admin Center](../../manage/windows-admin-center/understand/windows-admin-center.md) on your PC or a management server if you haven't already.
 2. In Windows Admin Center, connect to the orchestrator server (or the destination server if that's what you're using to manage the migration).
 1. Go to **Server Manager** > **Storage Migration Service**, and then select **Install** to install Storage Migration Service and its required components, as shown in Figure 1.
-
     ![Screenshot of the Storage Migration Service page showing the Install button](media/migrate/install.png)
-     **Figure 1: Installing Storage Migration Service** 
-
+     **Figure 1: Installing Storage Migration Service**
 1. Install the Storage Migration Service proxy on any source or destination servers running Windows Server 2019. This doubles the transfer speed and opens any necessary firewall ports for you. <br>To do so, connect to the destination server and then go to **Server Manager** > **Roles and features**, select **Storage Migration Service Proxy**, and then select **Install**.
 1. If you're using source or destination servers running Windows Server 2016 or earlier, in Windows Admin Center, connect to each server, go to **Server Manager** > **Firewall** > **Incoming rules**, and then check that the following rules are enabled (there's a good chance they already are):
     - File and Printer Sharing (SMB-In)
@@ -42,7 +40,6 @@ In this step you specify what servers you want to migrate and scan them to colle
 1. Select **Start scan**.<br>The page updates to shows when the scan is complete.
     ![Screenshot showing a server ready to be scanned](media/migrate/inventory.png)
      **Figure 2: Inventorying servers**
-
 1. Select each server to review the shares, configuration, network adapters, and volumes that were inventoried. 
 1. Select **Next** to move on to transferring data.
 
@@ -53,10 +50,8 @@ In this step you transfer data after specifying where on the destination servers
  1. On the **Enter credentials** page, type admin credentials that work on the destination servers you want to migrate to, and then select **Next**.
  1. On the **Add a destination device and mappings** page, the first source device is listed. Type the name of the server you want to migrate this server to and then select **Scan device**.
  1. Map the source volumes to destination volumes, clear the **Include** checkbox for any shares you don't want to transfer, and then select **Next**.
-
     ![Screenshot showing a source server and its volumes and shares and where they'll be transferred to on the destination](media/migrate/transfer.png)
      **Figure 2: A source server and where its storage will be transferred to**
-
  1. Add a destination device and mappings for any more source servers, and then select **Next**.
  1. Optionally adjust the transfer settings, and then select **Next**.
  1. Select **Validate** and then select **Next**.
