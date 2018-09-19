@@ -49,15 +49,15 @@ After you have completed the installation of Windows Admin Center, you can add s
 
  1. Click **+ Add** under **All Connections**.
 
-    ![](../media/launch-use-1.png)
+    ![](../media/launch/addserver0.png)
 
  2. Choose to add a Server, Failover Cluster or Hyper-Converged Cluster connection:
     
-    ![](../media/launch-use-2.png)
+    ![](../media/launch/addserver1.png)
 
  3. Type the name of the server or cluster to manage and click **Submit**. The server or cluster will be added to your connection list on the overview page.
 
-    ![](../media/launch-use-3.png)
+    ![](../media/launch/addserver2.png)
 
    **-- OR --**  
 
@@ -65,7 +65,7 @@ After you have completed the installation of Windows Admin Center, you can add s
 
  1. On the **Add Server Connection** page, choose the **Import Servers** tab.
 
-    ![](../media/launch-use-4.png)
+    ![](../media/launch/import-servers.png)
 
  2. Click **Browse** and select a text file that contains a comma, or new line separated, list of FQDNs for the servers you want to add.
 
@@ -124,30 +124,7 @@ The **Edit Connection Tags** pane allows you to modify, add, or remove tags from
 
 ![](../media/launch/tags-6.png)
 
-### Edit tags - Windows Admin Center
-
-* Select a server in the Server Connections list
-* Under **Server Connections**, click **Edit Tags**
-
-![](../media/launch/tags-5.png)
-
-The **Edit Connection Tags** dialog allows you to add or remove tags from your server connection.
-
-To add a new tag to a server connection:
-
-* Start entering a tag by clicking **Add Tags** under **Tags to Add**
-* Add entries for one or more tags you would like to add
-* Click **Save**
-
-To remove an existing tag from a server connection:
-
-* Start entering a tag by clicking **Add Tags** under **Tags to Remove**
-* Add entries for one or more tags you would like to remove
-* Click **Save**
-
-![](../media/launch/tags-4.png) 
-
-### Filter connections by tag - Windows Admin Center Preview
+### Filter connections by tag
 
 Once tags have been added to one or more server connections, you can view the tags on the connection list, and filter the connection list by tags.
 
