@@ -26,8 +26,10 @@ There are two versions of Windows Admin Center<!-- available for download-->:
 
 ### Windows Admin Center
 
-- For IT admins who are not able to update frequently or who want more validation time for the releases they use in production, this version is for you. Our current GA release is Windows Admin Center 1809.
+- For IT admins who are not able to update frequently or who want more validation time for the releases they use in production, this version is for you. Our current generally available (GA) release is Windows Admin Center 1809.
 - To get the latest GA release, [download here](https://aka.ms/WACDownload).
+
+-Windows Admin Center GA releases are supported continuously, based on Microsoft’s Modern Lifecycle Policy. This means that only the latest released version of Windows Admin Center GA is serviced and supported, and users must “stay current” by upgrading to the latest Windows Admin Center GA release within 30 days of availability to remain supported. This policy applies to both the Windows Admin Center platform itself, as well as any Microsoft extensions which are GA and published in the Windows Admin Center extension feed. Note that some extensions may be updated more frequently than others, between Windows Admin Center GA releases.
 
 ### Windows Admin Center Preview
 

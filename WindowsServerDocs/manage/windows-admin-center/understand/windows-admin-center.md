@@ -21,9 +21,6 @@ Windows Admin Center is a locally deployed, browser-based app for managing serve
 
 Broadly validated & generally available. [Get it here](http://aka.ms/WACDownload)
 
->[!NOTE]
->The Windows Admin Center Insider Preview will return in the coming months.
-
 ********************
 
 Quick links: [Documentation](../overview.md) | [Give feedback](https://aka.ms/WACFeedback) | [Latest features](../overview.md#latest-features) | [For developers](../extend/extensibility-overview.md)
