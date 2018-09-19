@@ -40,7 +40,7 @@ In this step you specify what servers you want to migrate and scan them to colle
 1. Select **Start scan**.<br>The page updates to shows when the scan is complete.
     ![Screenshot showing a server ready to be scanned](media/migrate/inventory.png)
      **Figure 2: Inventorying servers**
-1. Select each server to review the shares, configuration, network adapters, and volumes that were inventoried. <br><br>In this release, if you chose to include administrative shares, you'll get a "This operation isn't supported by the selected proxy" error for shares located in the Windows system folder. We don't support transferring those shares, so you'll have to skip them during the transfer phase.
+1. Select each server to review the shares, configuration, network adapters, and volumes that were inventoried. <br><br>In this release, if you chose to include administrative shares, you'll get an error for shares located in the Windows system folder. We don't support transferring those shares, so you'll have to skip them during the transfer phase.
 1. Select **Next** to move on to transferring data.
 
 ## Step 2: Transfer data from your old servers to the destination servers
@@ -49,7 +49,7 @@ In this step you transfer data after specifying where on the destination servers
 
  1. On the **Enter credentials** page, type admin credentials that work on the destination servers you want to migrate to, and then select **Next**.
  1. On the **Add a destination device and mappings** page, the first source device is listed. Type the name of the server you want to migrate this server to and then select **Scan device**.
- 1. Map the source volumes to destination volumes, clear the **Include** checkbox for any shares you don't want to transfer, and then select **Next**.
+ 1. Map the source volumes to destination volumes, clear the **Include** checkbox for any shares you don't want to transfer (including any administrative shares located in the Windows system folder), and then select **Next**.
     ![Screenshot showing a source server and its volumes and shares and where they'll be transferred to on the destination](media/migrate/transfer.png)
      **Figure 2: A source server and where its storage will be transferred to**
  1. Add a destination device and mappings for any more source servers, and then select **Next**.
