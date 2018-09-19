@@ -29,6 +29,7 @@ If you encounter an issue not described on this page, please [let us know](http:
 ## General
 
 - If you have Windows Admin Center installed as a gateway and your connection list appears to be corrupted, perform the following steps:
+
 >[!WARNING]
 >This will delete the connection list and settings for all Windows Admin Center users on the gateway.
 
@@ -53,6 +54,10 @@ If you encounter an issue not described on this page, please [let us know](http:
 - When you update Windows Admin Center, you must reinstall your extensions.
 - If you add an extension feed that is inaccessible, there is no warning. [14412861]
 
+### Azure
+
+If you configured your gateway for Azure connectivity when you set up Azure Site Recovery and you used the New-AsrAadApp.ps1 available in our documentation prior to the version 1804.25 release, you need to delete your existing Azure AD application. In the Azure portal go to **Azure Active Directory** > **Application registration** > **All applications** and search for "ASR" (the old Azure AD app is named "ASR-Honolulu-*gateway*"). Follow the instructions above to create the replacement application with the correct permissions.
+
 ## Browser Specific Issues
 
 ### Microsoft Edge 
@@ -76,25 +81,30 @@ If you encounter an issue not described on this page, please [let us know](http:
 - Chrome Version 69, released September 4th 2018 - If you have Windows Admin Center deployed as a service, and you are using a DNS alias to access the site, the websocket functionality will fail. This impacts the following tools: Events, PowerShell, Remote Desktop. This does not occur in the previous version of Chrome (version 68.)
 
 ### Mozilla Firefox
+
 Windows Admin Center is not tested with Mozilla Firefox, but most functionality should work. 
 
 - Windows 10 Installation: Mozilla Firefox has it’s own certificate store, so you must import the ```Windows Admin Center Client``` certificate into Firefox to use Windows Admin Center on Windows 10.
 
-## <a id="websockets"></a>WebSocket compatibility when using a proxy service
+<a id="websockets"></a>
+
+## WebSocket compatibility when using a proxy service
 
 Remote Desktop, PowerShell, and Events modules in Windows Admin Center utilize the WebSocket protocol, which is often not supported when using a proxy service. Websocket support in Azure AD Application Proxy compatibility is in [preview](https://blogs.technet.microsoft.com/applicationproxyblog/2018/03/28/limited-websocket-support-now-in-public-preview/) and looking for feedback on compatibility.
 
-## Support for Windows Server versions before 2016 (2012 & 2012 R2)
+## Support for Windows Server versions before 2016 (2012 R2, 2012, 2008 R2)
 
 > [!NOTE]
-> Windows Admin Center requires PowerShell features that are not included in Windows Server 2012 and 2012 R2. If you will manage Windows Server 2012 or 2012 R2 with Windows Admin Center, you will need to install WMF version 5.1 or higher on those servers. 
+> Windows Admin Center requires PowerShell features that are not included in Windows Server 2012 R2, 2012, or 2008 R2. If you will manage Windows Server these with Windows Admin Center, you will need to install WMF version 5.1 or higher on those servers.
 
 Type `$PSVersiontable` in PowerShell to verify that WMF is installed,
 and that the version is 5.1 or higher. 
 
 If it is not installed, you can [download and install WMF 5.1](https://www.microsoft.com/en-us/download/details.aspx?id=54616).
 
-## <a id="rbacknownissues"></a>Role Based Access Control (RBAC)
+<a id="rbacknownissues"></a>
+
+## Role Based Access Control (RBAC)
 
 - RBAC deployment will not succeed on machines that are configured to use Windows Defender Application Control (WDAC, formerly known as Code Integrity.) [16568455]
 

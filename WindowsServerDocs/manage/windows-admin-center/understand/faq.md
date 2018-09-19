@@ -20,29 +20,6 @@ Here are answers to the most commonly asked questions about Windows Admin Center
 
 Windows Admin Center is a lightweight, browser-based GUI platform and toolset for IT Admins to manage Windows Server and Windows 10. It's the evolution of familiar in-box administrative tools, such as Server Manager and Microsoft Management Console (MMC) into a modernized, simplified, integrated, and secure experience.
 
-## What is Windows Admin Center Preview, which version is right for me?
-
-There are two versions of Windows Admin Center<!-- available for download-->:
-
-### Windows Admin Center
-
-- For IT admins who are not able to update frequently or who want more validation time for the releases they use in production, this version is for you. Our current generally available (GA) release is Windows Admin Center 1809.
-- To get the latest GA release, [download here](https://aka.ms/WACDownload).
-
--Windows Admin Center GA releases are supported continuously, based on Microsoft’s Modern Lifecycle Policy. This means that only the latest released version of Windows Admin Center GA is serviced and supported, and users must “stay current” by upgrading to the latest Windows Admin Center GA release within 30 days of availability to remain supported. This policy applies to both the Windows Admin Center platform itself, as well as any Microsoft extensions which are GA and published in the Windows Admin Center extension feed. Note that some extensions may be updated more frequently than others, between Windows Admin Center GA releases.
-
-### Windows Admin Center Preview
-
->[!NOTE]
->The Windows Admin Center Insider Preview will return in the coming months.
-
-- For IT admins who want the latest and greatest features on a regular cadence, this version is for you. Our intent is to provide subsequent update releases every month or so. The core platform continues to be production-ready and the license provides production use rights. However, note that you will see the introduction of new tools and capabilities which are clearly marked as PREVIEW and are suitable for evaluation and testing.
-- To get the latest Preview release, registered Insiders may download Windows Admin Center Preview directly from the [Windows Server Insider Preview download page](https://www.microsoft.com/en-us/software-download/windowsinsiderpreviewserver), under the Additional Downloads dropdown. If you have not yet registered as an Insider, see [Getting Started with Windows Server](https://insider.windows.com/en-us/for-business-getting-started-server/) on the Windows Insiders for Business portal. 
-
-## Why was "Windows Admin Center" chosen as the final name for "Project Honolulu"?
-
-Windows Admin Center is the official product name for "Project Honolulu" and reinforces our vision of an integrated experience for IT admins across a breadth of core administrative and management scenarios. It also highlights our customer-focus on IT admin user needs as central to how we invest and what we deliver.
-
 ## Can I use Windows Admin Center in production environments?
 
 Yes. Windows Admin Center is generally available and ready for broad usage and production deployments. As a platform that will continue to grow and mature, exiting preview means that the current platform capabilities and core tools meet Microsoft’s standard release criteria and our quality bar for usability, reliability, performance, accessibility, security, and adoption.
@@ -96,9 +73,13 @@ Yes. Windows Admin Center can be used to manage Microsoft Hyper-V Server 2016 an
 
 Yes, Windows Admin Center can be installed on Windows 10 (version 1709 or later), running in desktop mode.  Windows Admin Center can also be installed on a server with Windows Server 2016 or greater in gateway mode, and then accessed via a web browser from a Windows 10 computer. [Learn more about installation options](..\plan\installation-options.md).
 
+## I've heard that Windows Admin Center uses PowerShell under the hood, can I see the actual scripts that it uses?
+
+Yes! the [Showscript feature](..\use\launch.md#view-powershell-scripts-used-in-windows-admin-center) was added in Windows Admin Center Preview 1806, and is now included in the GA channel.
+
 ## Are there any plans for Windows Admin Center to manage Windows Server 2008 R2 or earlier?
 
-Windows Admin Center Preview now supports limited functionality to manage Windows Server 2008 R2. Windows Admin Center relies on PowerShell capabilities and platform technologies that don’t exist in Windows Server 2008 R2 and earlier, making full support infeasible. Windows Server 2008/2008 R2 are approaching end of support in January 2020 so Microsoft recommends customers move to Azure or upgrade to Windows Server 2016.
+Windows Admin Center now supports **limited** functionality to manage Windows Server 2008 R2. Windows Admin Center relies on PowerShell capabilities and platform technologies that don’t exist in Windows Server 2008 R2 and earlier, making full support infeasible. Windows Server 2008/2008 R2 are approaching end of support in January 2020 so Microsoft recommends customers [move to Azure or upgrade to the latest version of Windows Server](https://www.microsoft.com/en-us/cloud-platform/windows-server-2008).
 
 ## Are there any plans for Windows Admin Center to manage Linux connections?
 
@@ -106,7 +87,7 @@ We are investigating due to customer demand, but there is currently no locked pl
 
 ## Which web browsers are supported by Windows Admin Center?
 
-The latest versions of Microsoft Edge (Windows 10, version 1709 or later) and Google Chrome browsers are tested and supported on Windows 10. Other modern web browsers or other platforms are not currently part of our test matrix and are therefore not officially supported.
+The latest versions of Microsoft Edge (Windows 10, version 1709 or later) and Google Chrome browsers are tested and supported on Windows 10. [View browser specific known issues](..\use\known-issues.md#browser-specific-issues). Other modern web browsers or other platforms are not currently part of our test matrix and are therefore not officially supported.
 
 ## How does Windows Admin Center handle security?
 
@@ -136,22 +117,37 @@ No.  Windows Admin Center is complementary to System Center, but System Center i
 
 Windows Admin Center and SCVMM are complementary; Windows Admin Center is intended to replace the traditional Microsoft Management Console (MMC) snap ins and the server admin experience.  Windows Admin Center is not intended to replace the monitoring aspects of SCVMM.
 
+## What is Windows Admin Center Preview, which version is right for me?
+
+There are two versions of Windows Admin Center<!-- available for download-->:
+
+### Windows Admin Center
+
+- For IT admins who are not able to update frequently or who want more validation time for the releases they use in production, this version is for you. Our current generally available (GA) release is Windows Admin Center 1809.
+- To get the latest GA release, [download here](https://aka.ms/WACDownload).
+
+- Windows Admin Center GA releases are supported continuously, based on Microsoft’s [Modern Lifecycle Policy](https://na01.safelinks.protection.outlook.com/?url=https%3A%2F%2Fsupport.microsoft.com%2Fen-us%2Fhelp%2F30881%2Fmodern-lifecycle-policy&data=02%7C01%7C%7C5a213cf1adca4176786108d61779470b%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C636722206982112012&sdata=2oQt%2B%2BwG7gn5Gm5iMFNzKirYWyKGxrww0B7b8Tok85Q%3D&reserved=0). This means that only the latest released version of Windows Admin Center GA is serviced and supported, and users must “stay current” by upgrading to the latest Windows Admin Center GA release within 30 days of availability to remain supported. This policy applies to both the Windows Admin Center platform itself, as well as any Microsoft extensions which are GA and published in the Windows Admin Center extension feed. Note that some extensions may be updated more frequently than others, between Windows Admin Center GA releases.
+
+### Windows Admin Center Preview
+
+>[!NOTE]
+>The current GA version (Windows Admin Center 1809) contains all previous preview functionality.
+>The Insider Preview will return in the coming months.
+
+- For IT admins who want the latest and greatest features on a regular cadence, this version is for you. Our intent is to provide subsequent update releases every month or so. The core platform continues to be production-ready and the license provides production use rights. However, note that you will see the introduction of new tools and capabilities which are clearly marked as PREVIEW and are suitable for evaluation and testing.
+- To get the latest Preview release, registered Insiders may download Windows Admin Center Preview directly from the [Windows Server Insider Preview download page](https://www.microsoft.com/en-us/software-download/windowsinsiderpreviewserver), under the Additional Downloads dropdown. If you have not yet registered as an Insider, see [Getting Started with Windows Server](https://insider.windows.com/en-us/for-business-getting-started-server/) on the Windows Insiders for Business portal. 
+
+## Why was "Windows Admin Center" chosen as the final name for "Project Honolulu"?
+
+Windows Admin Center is the official product name for "Project Honolulu" and reinforces our vision of an integrated experience for IT admins across a breadth of core administrative and management scenarios. It also highlights our customer-focus on IT admin user needs as central to how we invest and what we deliver.
+
 ## Where can I learn more about Windows Admin Center, or get more details on the topics above?
 
 Our [launch page](https://aka.ms/WindowsAdminCenter) is the best starting point and has links to our newly categorized documentation content, download location, how to provide feedback, reference information, and other resources.
 
-## What is the version history, is there a high-level changelog?
+## What is the version history of Windows Admin Center?
 
-* Version [1809](https://aka.ms/WindowsAdminCenter) is our most recent GA release which brings features that were previously in preview to the GA channel, [view the full Windows Admin Center 1809 announcement.](https://aka.ms/WindowsAdminCenterBlog)
-* Version [1808](https://aka.ms/WACPreview1808-InsiderBlog) added Installed Apps tool, lots of under the hood improvements, and major updates to the preview SDK.
-* Version [1807](https://aka.ms/WACPreview1807-InsiderBlog) added file share management, Azure Update, tag filtering, and streamlined the Azure registration (no manual PowerShell script requirement.)
-* Version [1806](https://aka.ms/WACPreview1806-InsiderBlog) added Show PowerShell script, SDN management, 2008 R2 connections, and scheduled tasks 
-* Version [1804](https://cloudblogs.microsoft.com/windowsserver/2018/04/12/announcing-windows-admin-center-our-reimagined-management-experience/) was released as **Windows Admin Center** and adds security features, role-based access control, and was our first GA release.
-* Version [1803](https://blogs.windows.com/windowsexperience/2018/03/13/announcing-project-honolulu-technical-preview-1803-and-rsat-insider-preview-for-windows-10) added support for AAD access control, detailed logging, resizable content, and a bunch of tool improvements.
-* Version [1802](https://blogs.windows.com/windowsexperience/2018/02/13/announcing-windows-server-insider-preview-build-17093-project-honolulu-technical-preview-1802) added support for accessibility, localization, high-availability deployments, tagging, Hyper-V host settings, and gateway authentication.
-* Version [1712](https://blogs.windows.com/windowsexperience/2017/12/19/announcing-project-honolulu-technical-preview-1712-build-05002) added more virtual machine features and performance improvements throughout the tools.
-* Version [1711](https://cloudblogs.microsoft.com/windowsserver/2017/12/01/1711-update-to-project-honolulu-technical-preview-is-now-available/) added highly anticipated tools (Remote Desktop, and PowerShell) along with other improvements.
-* Version [1709](https://cloudblogs.microsoft.com/windowsserver/2017/09/22/project-honolulu-technical-preview-is-now-available-for-download/) launched **Project Honolulu** as our first public preview release.
+[View the version history here.](..\overview.md#latest-features)
 
 ## I'm having an issue with Windows Admin Center, where can I get help?
 

@@ -18,10 +18,12 @@ ms.prod: windows-server-threshold
 > New to Windows Admin Center?
 > [Learn more about Windows Admin Center](../understand/windows-admin-center.md) or [Download now](https://aka.ms/windowsadmincenter).
 
+## Windows Admin Center installed on Windows 10
+
 > [!IMPORTANT]
 > You must be a member of the local administrator's group to use Windows Admin Center on Windows 10
 
-## Selecting a client certificate
+### Selecting a client certificate
 
 The first time you open Windows Admin Center on Windows 10, make sure to select the *Windows Admin Center Client* certificate (otherwise you'll get an HTTP 403 error saying "can't get to this page").
 
@@ -103,7 +105,7 @@ If your environment uses [LAPS](https://technet.microsoft.com/en-us/mt227395.asp
 
 You can use tags to identify and filter related servers in your connection list.  This allows you to see a subset of your servers in the connection list.  This is especially useful if you have many connections.
 
-### Edit tags - Windows Admin Center Preview
+### Edit tags
 
 * Select a server or multiple servers in the All Connections list
 * Under **All Connections**, click **Edit Tags**
@@ -155,16 +157,7 @@ Once tags have been added to one or more server connections, you can view the ta
 ![](../media/launch/tags-8.png)
 
 
-### Filter connections by tag - Windows Admin Center
-
-Once tags have been added to one or more server connections, you can view the tags on the connection list, and filter the connection list by tags.
-
-* To filter by a tag, enter the tag in the filter text box.  Entries appearing in the Server Connection list will be filtered to include that tag.
-
-![](../media/launch/tags-2.png)
-
 ## View PowerShell scripts used in Windows Admin Center
->Applies to: Windows Admin Center
 
 Once you've connected to a server, cluster, or PC, you can look at the PowerShell scripts that power the UI actions available in Windows Admin Center. From within a tool, click the PowerShell icon in the top application bar. Select a command of interest from the dropdown to navigate to the corresponding PowerShell script.
 

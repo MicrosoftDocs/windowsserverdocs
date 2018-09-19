@@ -21,15 +21,16 @@ You can install Windows Admin Center on the following Windows operating systems:
 | **Version** | **Installation Mode** |
 |-------------|-----------------------|
 |Windows 10 (1709 or newer) | Desktop mode |
-|Windows Server, version 1709 or newer | Gateway mode |
-|Windows Server 2016 or 2019 | Gateway mode |
+|Windows Server Semi-Annual Channel | Gateway mode |
+|Windows Server 2016 | Gateway mode |
+|Windows Server 2019 | Gateway mode |
 
-**Desktop installation:** Connect to the Windows Admin Center gateway from the same computer on which it's installed (i.e. `https://localhost:[port]`)
+**Desktop installation:** Connect to the Windows Admin Center gateway from the same computer on which it's installed (i.e. `https://localhost:6516`)
 
-**Gateway service:** Connect to the Windows Admin Center gateway from a client browser on a different machine (i.e. `https://servername`) 
+**Gateway service:** Connect to the Windows Admin Center gateway from a client browser on a different machine (i.e. `https://servername.contoso.com`) 
 
 > [!WARNING]
-> Installing Windows Admin Center on a Domain controller is not supported.
+> Installing Windows Admin Center on a Domain controller is not supported. [Read more about Domain controller security best practices](https://docs.microsoft.com/en-us/windows-server/identity/ad-ds/plan/security-best-practices/securing-domain-controllers-against-attack). 
 
 > [!IMPORTANT]
 > You can't use Internet Explorer to manage Windows Admin Center - instead you need to use a [supported browser](../understand/faq.md#which-web-browsers-are-supported-by-windows-admin-center
@@ -42,17 +43,15 @@ You can use Windows Admin Center to manage the following Windows operating syste
 | **Version** | **Managed node** via Server Manager | **Managed cluster** via Failover Cluster Mgr | **Managed HCI cluster** via HCI Cluster Mgr (preview)|
 |-------------------------|---------------|-----|------------------------|
 | Windows 10 Fall Creators Update (1709) or newer | Yes (via Computer Management) | N/A | N/A |
-| Windows Server 2019 (Insider Preview) | Yes | Yes | Yes |
+| Windows Server 2019 | Yes | Yes | Yes |
 | Windows Server Semi-Annual Channel | Yes | Yes | No |
 | Windows Server 2016 | Yes | Yes | Yes, with [latest cumulative update](../use/manage-hyper-converged.md#prepare-your-windows-server-2016-cluster-for-windows-admin-center) |
 | Windows Server 2012 R2 | Yes | Yes | N/A |
 | Windows Server 2012 | Yes | Yes | N/A |
-| Windows Server 2008 R2* | Yes, limited functionality | N/A | N/A |
-
-*Windows Server 2008 R2 management is only supported in Windows Admin Center Preview
+| Windows Server 2008 R2 | Yes, limited functionality | N/A | N/A |
 
 > [!NOTE]
-> Windows Admin Center requires PowerShell features that are not included in Windows Server 2008 R2, 2012, and 2012 R2. If you will manage Windows Server 2008 R2, 2012, or 2012 R2 with Windows Admin Center, you will need to install Windows Management Framework (WMF) version 5.1 or higher on those servers.
+> Windows Admin Center requires PowerShell features that are not included in Windows Server 2008 R2, 2012, and 2012 R2. If you will manage these with Windows Admin Center, you will need to install Windows Management Framework (WMF) version 5.1 or higher on those servers.
 
 >Type `$PSVersiontable` in PowerShell to verify that WMF is installed,
 and that the version is 5.1 or higher. 
@@ -64,16 +63,16 @@ and that the version is 5.1 or higher.
 <table>
     <tr>
         <td style="vertical-align: top; align: center">
-            <img src="../media/deployment-options-1.png" height="250" alt="Diagram of Windows 10 desktop installation"> 
+            <img src="../media/deployment-options-W10.png" height="250" alt="Diagram of Windows 10 desktop installation"> 
         </td>
         <td style="vertical-align: top; align: center">
-            <img src="../media/deployment-options-3.png" height="250" alt="Diagram of managed server installation"> 
+            <img src="../media/deployment-options-gateway.png" height="250" alt="Diagram of designated gateway server installation"> 
         </td>
         <td style="vertical-align: top; align: center">
-            <img src="../media/deployment-options-2.png" height="250" alt="Diagram of designated gateway server installation"> 
+            <img src="../media/deployment-options-node.png" height="250" alt="Diagram of managed server installation"> 
         </td>
         <td style="vertical-align: top; align: center">
-            <img src="../media/deployment-options-4.png" height="250" alt="Diagram of high availability deployment"> 
+            <img src="../media/deployment-options-HA.png" height="250" alt="Diagram of high availability deployment"> 
         </td>
     </tr>
     <tr>
@@ -81,10 +80,10 @@ and that the version is 5.1 or higher.
 Install on a local Windows 10 client that has connectivity to the managed servers.  Great for quick start, testing, ad-hoc or small scale scenarios.
         </td>
         <td style="vertical-align: top;">
-Install directly on a managed server for the purpose of managing itself or a cluster in which it's a member node.
+Install on a designated gateway server and access from any client browser with connectivity to the gateway server.
         </td>
         <td style="vertical-align: top;">
-Install on a designated gateway server and access from any client browser with connectivity to the gateway server.
+Install directly on a managed server for the purpose of managing itself or a cluster in which it's a member node.
         </td>
         <td style="vertical-align: top;">
 Deploy in a failover cluster to enable high availability of the gateway service. Great for production environments to ensure resiliency of your management service.

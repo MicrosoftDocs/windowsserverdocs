@@ -106,6 +106,19 @@ The following features have been proposed for Server Manager Overview:
 **Backup** allows you to protect your Windows server from corruptions, attacks or disasters by backing up your server directly to Microsoft Azure.
 [Learn more about Azure Backup.](https://aka.ms/windows-admin-center-backup)
 
+[Provide feedback for backup in Windows Admin Center](https://aka.ms/backup-wac-feedback)
+
+### Features
+
+The following features are supported in Backup:
+
+- View an overview of your Azure backup status
+- Configure backup items and schedule
+- Start or stop a backup job
+- View backup job history and status
+- View recovery points and recover data
+- Delete backup data
+
 ## Certificates
 
 **Certificates** allows you to manage certificate stores on a computer or server.
@@ -534,6 +547,7 @@ The following features are supported in Updates:
 - View a list of update history
 - Install Updates
 - Check online for updates from Microsoft Update
+- Manage [Azure Update Management](https://docs.microsoft.com/en-us/azure/automation/automation-update-management) integration
 
 ### Proposed Features
 
