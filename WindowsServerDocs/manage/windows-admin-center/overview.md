@@ -5,7 +5,7 @@ ms.technology: manage
 ms.topic: article
 author: nwashburn-ms
 ms.author: niwashbu
-ms.date: 06/18/2018
+ms.date: 09/20/2018
 ms.localizationpriority: high
 ms.prod: windows-server-threshold
 ---
@@ -105,7 +105,9 @@ You can get Windows Admin Center up and running in your environment in minutes:
 
 ## Windows Admin Center at a glance
 
-[![Windows Admin Center Infographic](media/WAC1809Poster_thumb.PNG)](media/WindowsAdminCenter1809Poster.pdf)
+![Windows Admin Center Infographic](media/WAC1809Poster_thumb.PNG)
+
+[Download the PDF](https://github.com/MicrosoftDocs/windowsserverdocs/blob/master/WindowsServerDocs/manage/windows-admin-center/media/WindowsAdminCenter1809Poster.pdf)
 
 ## Latest features
 
