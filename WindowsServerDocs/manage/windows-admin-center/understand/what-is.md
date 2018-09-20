@@ -18,7 +18,7 @@ Windows Admin Center is a new, locally-deployed, browser-based management tool s
 
 Windows Admin Center is the modern evolution of "in-box" management tools, like Server Manager and MMC. It complements System Center - it's not a replacement.
 
-![](../media/wac-deploy-graphic.png)
+![](../media/wac-complements.png)
 
 ## How does Windows Admin Center work?
 
@@ -26,7 +26,7 @@ Windows Admin Center runs in a web browser and manages Windows Server 2016, Wind
 
 The Windows Admin Center gateway, when published to DNS and given access through corresponding corporate firewalls, lets you securely connect to, and manage, your servers from anywhere with Microsoft Edge or Google Chrome.
 
-![](../media/spacer1.png)![](../media/architecture.png)
+![](../media/architecture.png)
 
 ## Learn how Windows Admin Center improves your management environment
 
