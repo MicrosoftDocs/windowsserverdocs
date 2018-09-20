@@ -5,7 +5,7 @@ description:
 author: billmath
 ms.author: billmath
 manager: femila
-ms.date: 09/18/2018
+ms.date: 09/19/2018
 ms.topic: article
 ms.prod: windows-server-threshold
 
@@ -86,7 +86,7 @@ For the file system to be used, a storage path must be given. In that directory,
 
 - **StoragePath &lt;string&gt;** - The location the backups will be stored in
 
-- **ServiceAccountCredential &lt;pscredential&gt;** - specifies the service account being used for the AD FS Service running currently. This parameter is only needed if the user would like to backup the DKM and is not domain admin or does not have access to the container's contents.
+- **ServiceAccountCredential &lt;pscredential&gt;** - specifies the service account being used for the AD FS Service running currently. This parameter is only needed if the user would like to backup the DKM and is not domain admin or does not have access to the container's contents. 
 
 - **BackupComment &lt;string[]&gt;** - An informational string about the backup that will be displayed during the restore, similar to the concept of Hyper-V checkpoint naming. The default is an empty string
 
@@ -218,11 +218,23 @@ Every time a backup or restore is performed a log file is created. These can be 
 
 ## Version Release History
 
+<<<<<<< HEAD
 ### Version: 1.0.75.0
 Release: August 2018
 
 **Fixed issues:**
 * Update Backup-ADFS when using the -BackupDKM switch.  The tool will determine if the current context has access to the DKM container.  If so, it will not require either Domain Admin privileges or service account credentials.  This allows automated backups to happen without explicitly providing credentials or running as a Domain Administrator account.
+=======
+
+ 
+### Version: 1.0.75.0 
+
+Release: August 2018 
+
+**Fixed issues:** 
+
+* Update Backup-ADFS when using the -BackupDKM switch.  The tool will determine if the current context has access to the DKM container.  If so, it will not require either Domain Admin privileges or service account credentials.  This allows automated backups to happen without explicitly providing credentials or running as a Domain Administrator account. 
+>>>>>>> d2862b5eb71254698ab5f7653484cd8aff0482cf
 
 ### Version: 1.0.73.0
 Release: August 2018

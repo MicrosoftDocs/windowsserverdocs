@@ -5,19 +5,16 @@ ms.technology: manage
 ms.topic: article
 author: haley-rowland
 ms.author: harowl
-ms.date: 06/18/2018
+ms.date: 09/19/2018
 ms.localizationpriority: medium
 ms.prod: windows-server-threshold
 ---
 
 # Settings
 
-> Applies To: Windows Admin Center Preview
+> Applies To: Windows Admin Center
 
 Windows Admin Center settings consist of user-level and gateway-level settings. A change to a user-level setting only affects the current user’s profile, while a change to a gateway-level setting affects all users on that Windows Admin Center gateway.
-
-> [!IMPORTANT]
-> The features described in this article are only available in Windows Admin Center Preview. [How do I get this version?](http://aka.ms/windowsadmincenter)
 
 ## User settings
 
@@ -25,10 +22,13 @@ User-level settings consist of the following sections:
 
 - Account
 - Language/Region
+- Suggestions
 
 In the **Account** tab, users can review the credentials they have used to authenticate to Windows Admin Center. If Azure AD is configured to be the identity provider, the user can log out of their Azure AD account from this tab.
 
 In the **Language/Region** tab, users can change the language and region formats displayed by Windows Admin Center.
+
+In the **Suggestions** tab, users can toggle suggestions about Azure services and new features.
 
 ## Gateway settings
 

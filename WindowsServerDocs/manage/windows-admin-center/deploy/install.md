@@ -18,23 +18,9 @@ ms.prod: windows-server-threshold
 > New to Windows Admin Center?
 > [Learn more about Windows Admin Center](../understand/windows-admin-center.md) or [Download now](https://aka.ms/windowsadmincenter).
 
-## Supported operating systems ##
+## Determine your installation type
 
-You can install Windows Admin Center on the following Windows operating systems:
-
-| **Version** | **Installation Mode** |
-|-------------|-----------------------|
-|Windows 10 (1709) | Desktop mode |
-|Windows Server, version 1709 | Gateway mode |
-|Windows Server 2016 | Gateway mode |
-<!-- I removed all references to 1803 due to the date slip and an associated freeze of anything mentioning them. Will add back prior to RS4 GA -->
-**Desktop Mode:** Connect to the Windows Admin Center gateway from the same computer on which it's installed (for example, `https://localhost:6516`)
-
-**Gateway Mode:** Connect to the Windows Admin Center gateway from a client browser on a different machine (for example, `https://servername`)
-
-> [!IMPORTANT]
-> You can't use Internet Explorer to manage Windows Admin Center - instead you need to use a [supported browser](../understand/faq.md#which-web-browsers-are-supported-by-windows-admin-center
-).  If you are installing Windows Admin Center on Windows Server, we recommend managing by connecting remotely with Windows 10 and Edge.  Alternatively, you can manage locally on Windows Server if you have installed a supported browser.
+Review the [installation options](..\plan\installation-options.md) which includes the [supported operating systems](..\plan\installation-options.md#supported-operating-systems-installation). 
 
 ## Install on Windows 10
 
@@ -54,9 +40,7 @@ On Windows Server, Windows Admin Center is installed as a network service. You m
 > [!NOTE]
 > Modifying TrustedHosts is required in a workgroup environment, or when using local administrator credentials in a domain. If you choose to forego this setting, you must [configure TrustedHosts manually](../use/troubleshooting.md#configure-trustedhosts)
 
-If you install on Windows Server 2016 with Desktop Experience, you can create a desktop shortcut for all users in **C:\Users\Public\Desktop**.
-
-Once the install is complete, start Windows Admin Center with the desktop shortcut, or open a browser and navigate to **https://'name of server':'port specified in setup'**.
+Once the install is complete, start Windows Admin Center with the desktop shortcut, or open a browser and navigate to **https://'FQDN of server':'port specified in setup'**.
 
 > [!WARNING]
 > Automatically generated certificates expire 60 days after installation.
