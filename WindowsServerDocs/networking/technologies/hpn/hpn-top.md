@@ -14,16 +14,7 @@ ms.date: 09/20/2018
 
 # High-performance networking (HPN)
 
-High-performance networks (HPNs) play a role in real-time data processing requirements. For example, activities such as datacenter replication, datacenter disaster recovery, and high-performance distributed computing require high volume data transfer and low network latency. 
-
-Distributed computing in a high-performance network 
-
-allows apps to make use of computing and data resources located at different locations, bringing more computing power.
-
-HPNs with dynamic circuit connection capabilities make high-performance network resources more accessible and manageable. 
-
-A major limitation on distributed computing has been the low bandwidth and high latency associated with conventional wide-area networks.
-
+High-performance networks (HPNs) play a role in real-time data processing requirements. For example, activities such as datacenter replication, datacenter disaster recovery, and high-performance distributed computing require high volume data transfer and low network latency. HPNs with dynamic connection capabilities make high-performance network resources more accessible and manageable. 
 
 
 The high-performance networking topics include:
