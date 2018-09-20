@@ -34,15 +34,14 @@ For more information about Extended Port Access Control Lists in this library, s
 
 ## NIC Teaming
 
-NIC Teaming, also called NIC bonding, is the aggregation of multiple NIC ports into an entity the host perceives as a single NIC port. NIC Teaming protects against the failure of a single NIC port (or the cable connected to it). It also aggregates network traffic for faster throughput.
+NIC Teaming, also called NIC bonding, is the aggregation of multiple NIC ports into an entity the host perceives as a single NIC port. NIC Teaming protects against the failure of a single NIC port (or the cable connected to it). It also aggregates network traffic for faster throughput. For more details, see [NIC Teaming](https://docs.microsoft.com/windows-server/networking/technologies/nic-teaming/nic-teaming).
 
 With Windows Server 2016 you have two ways to do teaming:
 
 1.  Windows Server 2012 teaming solution
 
-2.  Windows Server 2016 [Switch Embedded Teaming (SET)](#switch-embedded-teaming-set)
+2.  Windows Server 2016 Switch Embedded Teaming (SET)
 
-For information about NIC Teaming in this library, see [NIC Teaming](https://docs.microsoft.com/windows-server/networking/technologies/nic-teaming/nic-teaming).
 
 ## RSC in the vSwitch
 
