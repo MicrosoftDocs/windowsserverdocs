@@ -12,7 +12,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 2a44dc9f-c221-4bf7-89c3-fb4c86a90f8c
 author: jaimeo
-manager: elizapo
+manager: dougkim
 ---
 # Recommended settings for VDI desktops
 

@@ -6,7 +6,7 @@ ms.technology: manage-rsat
 ms.topic: get-started-article
 author: coreyp-at-msft
 ms.author: coreyp
-manager: elizapo
+manager: dougkim
 ms.date: 03/16/2018
 ms.localizationpriority: high
 ---

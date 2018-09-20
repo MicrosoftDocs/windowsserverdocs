@@ -1,7 +1,7 @@
 ---
 title: Windows Server 2019 Gateway Performance
 description: 
-manager: elizapo
+manager: dougkim
 ms.prod: windows-server-threshold
 ms.technology: networking-hv-switch
 ms.topic: get-started-article

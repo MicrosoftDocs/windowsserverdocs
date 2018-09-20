@@ -1,7 +1,7 @@
 ---
 title: Understand the usage of virtual networks and VLANs
 description: In this topic, you learn about Hyper-V network virtualization virtual networks and how they differ from virtual local area networks (VLANs). With Hyper-V network virtualization, you create overlay virtual networks, also called virtual networks.
-manager: elizapo
+manager: dougkim
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na

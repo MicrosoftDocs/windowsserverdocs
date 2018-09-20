@@ -10,7 +10,7 @@ ms.topic: get-started article
 ms.assetid: 90e3464c-49d8-4861-96db-ee6f8a09g7dr
 author: coreyp-at-msft
 ms.author: coreyp
-manager: elizapo
+manager: dougkim
 ms.date: 07/25/2018
 ---
 >Applies to: Windows Server 2012, Windows Server 2012 R2, Windows Server 2016

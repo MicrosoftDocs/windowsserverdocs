@@ -5,7 +5,7 @@ ms.prod: windows-server-threshold
 ms.technology: storage
 ms.topic: article
 author: JasonGerend
-manager: elizapo
+manager: dougkim
 ms.author: jgerend
 ms.date: 09/10/2018
 ms.localizationpriority: high

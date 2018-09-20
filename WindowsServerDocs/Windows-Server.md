@@ -7,7 +7,7 @@ ms.technology: server-general
 ms.topic: article
 author: jaimeo
 ms.author: jaimeo
-manager: elizapo
+manager: dougkim
 ms.localizationpriority: high
 ---
 # Windows Server technical content library

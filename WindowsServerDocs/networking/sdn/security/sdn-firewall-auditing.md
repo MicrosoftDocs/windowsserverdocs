@@ -1,7 +1,7 @@
 ---
 title: SDN firewall auditing
 description: 
-manager: elizapo
+manager: dougkim
 ms.prod: windows-server-threshold
 ms.technology: networking-sdn
 ms.topic: article

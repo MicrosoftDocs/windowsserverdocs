@@ -8,7 +8,7 @@ ms.date: 03/29/2018
 ms.tgt_pltfrm: na
 ms.topic: article
 author: lizap
-manager: elizapo
+manager: dougkim
 ms.localizationpriority: medium
 ---
 # Use performance counters to diagnose app performance problems on Remote Desktop Session Hosts

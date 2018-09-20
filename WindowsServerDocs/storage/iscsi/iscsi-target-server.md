@@ -5,7 +5,7 @@ ms.prod: windows-server-threshold
 ms.technology: storage-iscsi
 ms.topic: article
 author: JasonGerend
-manager: elizapo
+manager: dougkim
 ms.author: jgerend
 ms.date: 09/10/2018
 ---
