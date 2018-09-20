@@ -26,6 +26,19 @@ If you encounter an issue not described on this page, please [let us know](http:
 
 - Using port below 1024 is not supported. In service mode, you may optionally configure port 80 to redirect to your specified port.
 
+### Upgrade
+
+- When upgrading Windows Admin Center in service mode from a pervious version, you may encounter an issue where the inbound firewall rule for the port that Windows Admin Center is configured to listen on  is deleted.
+  - To recreate the rule, perform the following command from an elevated console, replacing \<port> with the port configured for Windows Admin Center (default 443.)
+
+```powershell
+Set-NetFirewallRule -Name "SmeInboundOpenException" -Description "Windows Admin Center inbound port exception" -LocalPort "<port>" -RemoteAddress Any
+```
+ 
+>[!NOTE]
+> You may see this more often when upgrading a Highly Available (HA) deployment of Windows Admin Center. In this case, you will need to recreate the rule on all machines in the cluster.
+
+
 ## General
 
 - If you have Windows Admin Center installed as a gateway and your connection list appears to be corrupted, perform the following steps:
@@ -185,6 +198,13 @@ If it is not installed, you can [download and install WMF 5.1](https://www.micro
 ### Updates
 
 * After installing updates, install status may be cached and require a browser refresh.
+
+* You may encounter the error: "Keyset does not exist" when attempting to set up Azure Update management. In this case, please try the following remediation steps on the managed node -
+    1. Stop ‘Cryptographic Services’ service.
+    2. Change folder options to show hidden files (if required).
+    3. Got to “%allusersprofile%\Microsoft\Crypto\RSA\S-1-5-18” folder and delete all its contents.
+    4. Restart ‘Cryptographic Services’ service.
+    5. Repeat setting up Update Management with Windows Admin Center 
 
 ### Virtual Machines
 
