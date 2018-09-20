@@ -28,15 +28,15 @@ If you encounter an issue not described on this page, please [let us know](http:
 
 ### Upgrade
 
-- When upgrading Windows Admin Center in service mode from a pervious version, you may encounter an issue where the inbound firewall rule for the port that Windows Admin Center is configured to listen on  is deleted.
-  - To recreate the rule, perform the following command from an elevated console, replacing \<port> with the port configured for Windows Admin Center (default 443.)
+- When upgrading Windows Admin Center in service mode from a previous version, if you use msiexec in quiet mode, you may encounter an issue where the inbound firewall rule for Windows Admin Center port is deleted.
+  - To recreate the rule, perform the following command from an elevated PowerShell console, replacing \<port> with the port configured for Windows Admin Center (default 443.)
 
 ```powershell
-Set-NetFirewallRule -Name "SmeInboundOpenException" -Description "Windows Admin Center inbound port exception" -LocalPort "<port>" -RemoteAddress Any
+New-NetFirewallRule -Name "SmeInboundException" -Description "Windows Admin Center inbound port exception" -LocalPort <port> -RemoteAddress Any -Protocol TCP -DisplayName "SmeInboundException"
 ```
  
->[!NOTE]
-> You may see this more often when upgrading a Highly Available (HA) deployment of Windows Admin Center. In this case, you will need to recreate the rule on all machines in the cluster.
+>[!IMPORTANT]
+> You may see this when upgrading a Highly Available (HA) deployment of Windows Admin Center, since Update-WindowsAdminCenterHA.ps1 leverages msiexec in quiet mode. In this case, you will need to recreate the rule on all machines in the cluster.
 
 
 ## General
@@ -220,7 +220,7 @@ If it is not installed, you can [download and install WMF 5.1](https://www.micro
 
 The Computer Management solution contains a subset of the tools from the Server Manager solution, so the same known issues apply, as well as the following Computer Management solution specific issues:
 
-- If you use a Microsoft Account ([MSA](https://account.microsoft.com/account/)) to log on to you Windows 10 machine, you must specify “manage-as” credentials” to manage your local machine [16568455]
+- If you use a Microsoft Account ([MSA](https://account.microsoft.com/account/)) to log on to you Windows 10 machine, you must specify "manage-as" credentials to manage your local machine [16568455]
 
 * When you try to manage the localhost, you will be prompted to elevate the gateway process. If you click **no** in the User Account Control popup that follows, Windows Admin Center won't be able to display it again. In this case, exit the gateway process by right-clicking the Windows Admin Center icon in the system tray and choosing exit, then relaunch Windows Admin Center from the Start Menu.
 
