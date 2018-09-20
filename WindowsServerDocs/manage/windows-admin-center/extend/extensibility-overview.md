@@ -5,7 +5,7 @@ ms.technology: extend
 ms.topic: article
 author: daniellee-msft
 ms.author: jol
-ms.date: 06/18/2018
+ms.date: 09/17/2018
 ms.localizationpriority: medium
 ms.prod: windows-server-threshold
 ---
@@ -26,9 +26,14 @@ Here’s the value you can bring to your product and customers by developing ext
 - **Develop using the latest web technologies:** Quickly build stunning user experiences using modern web technologies including HTML5, CSS, Angular, TypeScript and jQuery, and rich, powerful UI controls included in the Windows Admin Center SDK.
 - **Extend product outreach:** Become a part of the new Windows Admin Center ecosystem with outreach to our quickly growing customer base and leverage the Windows Server 2019 launch momentum later this year.
 
-## Start developing with the Windows Admin Center SDK (Preview)
+## Start developing with the Windows Admin Center SDK
 
-The [Windows Admin Center SDK (Preview)](https://aka.ms/wacsdk) is available on GitHub, including an extension template for building your first “Hello World” extension, sample code for different types of extensions, examples for dozens of UI controls and UI styles to start building extensions today!
+Getting started with Windows Admin Center development is easy!  Sample code can be found for [tool](develop-tool.md), [solution](develop-solution.md), and [gateway plugin](develop-gateway-plugin.md) extension types in our SDK documentation. There you will leverage the Windows Admin Center CLI to build a new extension project, then follow the individual guides to customize your project to meet your needs.
+
+We've made a Windows Admin Center [SDK design toolkit](https://github.com/Microsoft/windows-admin-center-sdk/blob/master/WindowsAdminCenterDesignToolkit.zip) available to help you rapidly mock up extensions in PowerPoint using Windows Admin Center styles, controls, and page templates. See what your extension can look like in Windows Admin Center before you start coding!
+
+We also have sample code hosted on GitHub: [Developer Tools](https://aka.ms/wacsdk) is a sample solution extension containing a rich collection of controls that you can browse and use in your own extension. Developer Tools is a fully functioning extension that can be side-loaded into Windows Admin Center in Developer Mode.
+
 See the topics below to learn more about the SDK and get started:
 
 - [Understand how extensions work](understand-extensions.md)
