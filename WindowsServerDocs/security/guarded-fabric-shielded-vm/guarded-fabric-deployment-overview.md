@@ -8,7 +8,7 @@ manager: dongill
 author: justinha
 ms.author: justinha
 ms.technology: security-guarded-fabric
-ms.date: 08/29/2018
+ms.date: 09/17/2018
 ---
 
 # Quick start for guarded fabric deployment
