@@ -10,7 +10,7 @@ ms.author: pashort
 author: shortpatti
 ---
 
-# Core Network Companion Guides
+# Core network companion guidance
 
 >Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
 

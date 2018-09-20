@@ -5,17 +5,14 @@ ms.technology: manage
 ms.topic: article
 author: nwashburn-ms
 ms.author: niwashbu
-ms.date: 08/07/2018
+ms.date: 09/18/2018
 ms.localizationpriority: medium
 ms.prod: windows-server-threshold
 ---
 
 # Develop a gateway plugin
 
->Applies To: Windows Admin Center Preview
-
-> [!NOTE]
-> While the Windows Admin Center SDK is in public preview, parts of this document only apply to [Windows Admin Center Preview](https://aka.ms/WACDownloadPage) and the corresponding [insider release](target-sdk-version.md) of Windows Admin Center SDK.
+>Applies To: Windows Admin Center, Windows Admin Center Preview
 
 A Windows Admin Center gateway plugin enables API communication from the UI of your tool or solution to a target node.  Windows Admin Center hosts a gateway service that relays commands and scripts from gateway plugins to be executed on target nodes. The gateway service can be extended to include custom gateway plugins that support protocols other than the default ones.
 
@@ -38,21 +35,21 @@ If you haven't already, [prepare your environment](prepare-development-environme
 To create a custom gateway plugin, create a new C# class that implements the ```IPlugIn``` interface from the ```Microsoft.ManagementExperience.FeatureInterfaces``` namespace.  
 
 > [!NOTE]
-> The ```IFeature``` interface was available in earlier versions of the SDK and served a similar purpose.  IFeature is now flagged as obsolete, and all future development should use IPlugIn (or the HttpPlugIn abstract class).
+> The ```IFeature``` interface, available in earlier versions of the SDK, is now flagged as obsolete.  All gateway plugin development should use IPlugIn (or optionally the HttpPlugIn abstract class).
 
 ### Download sample from GitHub
 
-To get started quickly with a custom gateway plugin, you can clone or download a copy of our [sample C# plugin project](https://github.com/Microsoft/windows-admin-center-sdk/tree/master/Microsoft.ManagementExperience.Samples) from our Windows Admin Center SDK [GitHub site](https://github.com/Microsoft/windows-admin-center-sdk).
+To get started quickly with a custom gateway plugin, you can clone or download a copy of our [sample C# plugin project](https://github.com/Microsoft/windows-admin-center-sdk/tree/master/GatewayPluginExample/Plugin) from our Windows Admin Center SDK [GitHub site](https://aka.ms/wacsdk).
 
 ### Add content
 
-Add new content to your cloned copy of the [sample C# plugin project](https://github.com/Microsoft/windows-admin-center-sdk/tree/master/Microsoft.ManagementExperience.Samples) project (or your own project) to contain your custom APIs, then build your custom gateway plugin DLL file to be used in the next steps.
+Add new content to your cloned copy of the [sample C# plugin project](https://github.com/Microsoft/windows-admin-center-sdk/tree/master/GatewayPluginExample/Plugin) project (or your own project) to contain your custom APIs, then build your custom gateway plugin DLL file to be used in the next steps.
 
 ### Deploy plugin for testing
 
 Test your custom gateway plugin DLL by loading it into Windows Admin Center gateway process.
 
-Windows Admin Center looks for all plugins in a ```plugins``` folder in the Application Data folder of the current machine (using the CommonApplicationData value of the Environment.SpecialFolder enumeration). On Windows 10 this location is ```C:\ProgramData\Server Management Experience```.
+Windows Admin Center looks for all plugins in a ```plugins``` folder in the Application Data folder of the current machine (using the CommonApplicationData value of the Environment.SpecialFolder enumeration). On Windows 10 this location is ```C:\ProgramData\Server Management Experience```.  If the ```plugins``` folder doesn't exist yet, you can create the folder yourself.
 
 > [!NOTE]
 > You can override the plugin location in a debug build by updating the "StaticsFolder" configuration value. If you're debugging locally, this setting is in the App.Config of the Desktop solution. 
@@ -67,7 +64,7 @@ After the Windows Admin process restarts, you will be able to exercise the APIs 
 
 ### Optional: Attach to plugin for debugging
 
-In Visual Studio 2017, from the Debug menu, select "Attach to Process". In the next window, scroll through the Available Processes list and select SMEDesktop.exe, then click "Attach". Once the debugger starts, you can place a breakpoint in your feature code and then exercise through the above URL format. For our sample project (feature name: "Sample Uno") the URL is: "http://localhost:6516/api/nodes/fake-server.my.domain.com/features/Sample Uno"
+In Visual Studio 2017, from the Debug menu, select "Attach to Process". In the next window, scroll through the Available Processes list and select SMEDesktop.exe, then click "Attach". Once the debugger starts, you can place a breakpoint in your feature code and then exercise through the above URL format. For our sample project (feature name: "Sample Uno") the URL is: "http://localhost:6516/api/nodes/fake-server.my.domain.com/features/Sample%20Uno"
 
 ## Create a tool extension with the Windows Admin Center CLI ##
 

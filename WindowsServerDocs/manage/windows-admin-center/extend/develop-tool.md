@@ -5,17 +5,14 @@ ms.technology: manage
 ms.topic: article
 author: nwashburn-ms
 ms.author: niwashbu
-ms.date: 08/07/2018
+ms.date: 09/18/2018
 ms.localizationpriority: medium
 ms.prod: windows-server-threshold
 ---
 
 # Develop a tool extension
 
->Applies To: Windows Admin Center Preview
-
-> [!NOTE]
-> While the Windows Admin Center SDK is in public preview, parts of this document only apply to [Windows Admin Center Preview](https://aka.ms/WACDownloadPage) and the corresponding [insider release](target-sdk-version.md) of Windows Admin Center SDK.
+>Applies To: Windows Admin Center, Windows Admin Center Preview
 
 A tool extension is the primary way that users interact with Windows Admin Center to manage a connection, such as a server or cluster. When you click on a connection in the Windows Admin Center home screen and connect, you will then be presented with a list of tools in the left navigation pane. When you click on a tool, the tool extension is loaded and displayed in the right pane.
 
@@ -64,7 +61,7 @@ Now that you've created an extension with the Windows Admin Center CLI, you are 
 - Add an [empty module](guides\add-module.md)
 - Add an [iFrame](guides\add-iframe.md)
  
-Even more examples can be found our [GitHub SDK site](https://github.com/Microsoft/windows-admin-center-sdk/):
+Even more examples can be found our [GitHub SDK site](https://aka.ms/wacsdk):
 -  [Developer Tools](https://github.com/Microsoft/windows-admin-center-sdk/tree/master/windows-admin-center-developer-tools) is a fully functioning extension that can be side-loaded into Windows Admin Center, and contains a rich collection of sample functionality and tool examples that you can browse and use in your own extension.
 
 ## Build and side load your extension
