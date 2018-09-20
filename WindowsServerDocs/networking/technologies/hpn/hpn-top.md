@@ -1,6 +1,6 @@
 ---
-title: High-performance networking
-description: This topic provides an overview of the Offload and Optimization Technologies in Windows Server 2016, and includes links to additional guidance about these technologies.
+title: High-performance networking (HPN)
+description: 
 ms.prod: windows-server-threshold
 ms.technology: networking
 ms.topic: article
@@ -8,14 +8,38 @@ ms.assetid: 0cafb1cc-5798-42f5-89b6-3ffe7ac024ba
 manager: dougkim
 ms.author: pashort 
 author: shortpatti
-ms.date: 09/12/2018 
+ms.date: 09/20/2018 
 ---
 
 
-# High-performance networking
+# High-performance networking (HPN)
 
-In this topic, we give you an overview of the different network offload and optimization features available in Windows Server 2016 and discuss how they help make networking more efficient. These technologies include Software Only (SO) features and technologies, Software and Hardware (SH) integrated features and technologies, and Hardware Only (HO) features and technologies.
+High-performance networks (HPNs) play a role in real-time data processing requirements. For example, activities such as datacenter replication, datacenter disaster recovery, and high-performance distributed computing require high volume data transfer and low network latency. 
+
+Distributed computing in a high-performance network 
+
+allows apps to make use of computing and data resources located at different locations, bringing more computing power.
+
+HPNs with dynamic circuit connection capabilities make high-performance network resources more accessible and manageable. 
+
+A major limitation on distributed computing has been the low bandwidth and high latency associated with conventional wide-area networks.
 
 
+
+The high-performance networking topics include:
+
+- [Insider preview](hpn-insider-preview.md)
+
+- [Network offload and optimization technologies](network-offload-and-optimization.md)
+
+  - [Software only (SO) features and technologies](hpn-software-only-features.md)
+
+  - [Software and hardware (SH) integrated features and technologies](hpn-software-hardware-features.md)
+
+  - [Hardware Only (HO) features and technologies](hpn-hardware-only-features.md)
+
+  - [NIC advanced properties](hpn-nic-advanced-properties.md)
+
+- [RSC in the vSwitch](rsc-in-the-vswitch.md)
 
 ---
