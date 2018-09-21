@@ -21,7 +21,7 @@ ms.technology: identity-adfs
 ### Azure AD style resource specification in scope parameter 
 Previously, AD FS required the desired resource and scope to be in a separate parameter in any authentication request. For example, a typical oauth request would look like below: 
 
-``https://fs.contoso.com/adfs/oauth2/authorize?response_type=code&client_id=claimsxrayclient&resource=urn:microsoft:adfs:claimsxray&scope=oauth&redirect_uri=https://adfshelp.microsoft.com/ClaimsXray/TokenResponse&prompt=login``
+**https://fs.contoso.com/adfs/oauth2/authorize?response_type=code&client_id=claimsxrayclient&resource=urn:microsoft:adfs:claimsxray&scope=oauth&redirect_uri=https://adfshelp.microsoft.com/ClaimsXray/TokenResponse&prompt=login**
  
 With AD FS on Server 2019, you can now pass the resource value embedded in the scope parameter. This is consistent with how one can do authentication against Azure AD also. 
 
