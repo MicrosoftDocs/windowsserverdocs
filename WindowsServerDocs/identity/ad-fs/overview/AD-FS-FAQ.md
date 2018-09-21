@@ -106,6 +106,13 @@ Claim issued in Access token:
 
 	"array_in_json":{"Items":[{"Name":"Apple","Price":12.3},{"Name":"Grape","Price":3.21}],"Date":"21/11/2010"}
 
+### Can I pass resource value as part of the scope value like how requests are done against Azure AD? 
+With AD FS on Server 2019, you can now pass the resource value embedded in the scope parameter. The scope parameter can now be organized as a space separated list where each entry is structure as resource/scope. For example  
+**< create a valid sample request>**
+
+### Does AD FS support PKCE extension?
+AD FS in Server 2019 supports Proof Key for Code Exchange (PKCE) for OAuth Authorization Code Grant flow 
+
 ## Operations
 
 ### How do I replace the SSL certificate for AD FS? 
