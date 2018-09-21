@@ -52,7 +52,7 @@ To use Storage Migration Service, you need the following:
 ### Security requirements
 
 - You must provide a migration account that is an administrator on the source computers.
-- You must provide a migration account that is an administrator on selected destination computers.
+- You must provide a migration account that is an administrator on the destination computers.
 - The orchestrator computer must have the File and Printer Sharing (SMB-In) firewall rule enabled *inbound*.
 - The source and destination computers must have the following firewall rules enabled *inbound* (though you might already have them enabled):
   - File and Printer Sharing (SMB-In)
