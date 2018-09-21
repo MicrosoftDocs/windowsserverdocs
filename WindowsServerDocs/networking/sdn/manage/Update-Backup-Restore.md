@@ -1,5 +1,5 @@
 ---
-title: Update, backup, and restore SDN infrastructure
+title: Upgrade, backup, and restore SDN infrastructure
 description: In this topic, you learn how to update, backup and restore an SDN infrastructure. 
 manager: elizapo
 ms.prod: windows-server-threshold
@@ -11,13 +11,17 @@ author: shortpatti
 ms.date: 08/27/2018
 ---
 
-# Update, backup, and restore SDN infrastructure
+# Upgrade, backup, and restore SDN infrastructure
 
 >Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 In this topic, you learn how to update, backup and restore an SDN infrastructure. 
 
-## Update the SDN infrastructure
+## Upgrade the SDN infrastructure
+SDN infrastructure can be upgraded from Windows Server 2016 to Windows Server 2019. For upgrade ordering, follow the same sequence of steps as mentioned in the section “Update the SDN infrastructure”. Before upgrade, it is recommended to take a backup of the Network Controller database.
+
+For Network Controller machines, use the Get-NetworkControllerNode cmdlet to check the status of the node after the upgrade has been completed. Ensure that the node comes back to “Up” status before upgrading the other nodes. Once you have upgraded all of the Network Controller nodes, the Network Controller updates the microservices running within the Network Controller cluster within an hour. You can trigger an immediate update using the update-networkcontroller cmdlet. 
+
 Install the same Windows updates on all of the operating system components of the Software Defined Networking (SDN) system, which includes:
 
 - SDN enabled Hyper-V hosts
@@ -117,7 +121,7 @@ NetworkControllerClusterVersion NetworkControllerVersion
 Regular backups of the Network Controller database ensures business continuity in the event of a disaster or data loss.  Backing up the Network Controller VMs is not sufficient because it does not ensure that the session continues across the multiple Network Controller nodes.
 
 **Requirements:**
-*An SMB share and credentials with Read/Write permissions to the share and file system.
+* An SMB share and credentials with Read/Write permissions to the share and file system.
 * You can optionally use a Group Managed Service Account (GMSA) if the Network Controller was installed using a GMSA as well.
 
 **Procedure:**
@@ -138,6 +142,7 @@ Regular backups of the Network Controller database ensures business continuity i
 
 
 ### Example: Backing up the Network Controller database
+
 ```Powershell
 $URI = "https://NC.contoso.com"
 $Credential = Get-Credential
