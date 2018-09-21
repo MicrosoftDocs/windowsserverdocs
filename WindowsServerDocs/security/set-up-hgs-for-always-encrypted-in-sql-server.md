@@ -169,6 +169,7 @@ If you are using TPM mode, run the following commands on each host machine to in
    The policy will be in audit mode, meaning it will log an event about unauthorized code, but will not keep it from running.  
 
    ```powershell
+   mkdir C:\artifacts
    Copy-Item C:\Windows\Schemas\CodeIntegrity\ExamplePolicies\AllowMicrosoft.xml C:\artifacts\AllowMicrosoft-Audit.xml 
    Set-RuleOption -FilePath C:\artifacts\AllowMicrosoft-Audit.xml -Option 3 
    ConvertFrom-CIPolicy -XmlFilePath C:\artifacts\AllowMicrosoft-Audit.xml -BinaryFilePath C:\artifacts\AllowMicrosoft-Audit.bin 
@@ -189,10 +190,9 @@ If you are using TPM mode, run the following commands on each host machine to in
    ```
 5. Collect the TPM identifier and baseline:
 
-   ```powershell
-   mkdir C:\artifacts 
+   ```powershell 
    (Get-PlatformIdentifier -Name $env:computername).Save("C:\artifacts\TpmID-$env:computername.xml") 
-   Get-HgsAttestationBaselinePolicy -Path "C:\artifacts\TpmBaseline-$env:computername.tcglog" 
+   Get-HgsAttestationBaselinePolicy -SkipValidation -Path "C:\artifacts\TpmBaseline-$env:computername.tcglog" 
    ```
    
 6. Copy the xml, tcglog, and bin files from C:\artifacts to your HGS server.
