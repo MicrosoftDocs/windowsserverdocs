@@ -98,6 +98,7 @@ It is recommended that you set up one node completely before adding other nodes.
 
 4. After the machine reboots again, log in as a Domain Admin and configure the attestation service. 
    You will need to choose TPM or host key attestation and run the corresponding command. 
+   For the HgsServiceName, specify the DNN you chose.
 
    For TPM mode:
    ```powershell
@@ -107,6 +108,12 @@ It is recommended that you set up one node completely before adding other nodes.
    For host key mode:
    ```powershell
    Initialize-HgsAttestation -HgsServiceName 'hgs' -TrustHostKey 
+   ```
+
+5. Ensure the host machines that run SQL Server will be able to resolve the DNS names of your new HGS domain members by setting up a forwarder from your corporate DNS servers to the new HGS domain controller. If you’re using Windows Server DNS to provide name resolution services for your organization, you can set up a conditional forwarder. To set up this zone, run the following commands in an elevated PowerShell console on a DNS server in your organization. Substitute the names and addresses in the Windows PowerShell syntax below as needed for your environment. After you add more HGS nodes, run this command again to add them as master servers.
+
+   ```powershell
+   Add-DnsServerConditionalForwarderZone -Name <HGS domain name> -ReplicationScope "Forest" -MasterServers <IP addresses of HGS servers>
    ```
 
 ## Set up additional HGS nodes for production deployments
@@ -205,7 +212,7 @@ If you are using TPM mode, run the following commands on each host machine to in
    If you receive a HostUnreachable error, ensure you can resolve and ping the DNS names of your HGS servers. 
 
    ```powershell
-   Set-HgsClientConfiguration -AttestationServerUrl http://hgs.bastion.local/Attestation -KeyProtectionServerUrl http://hgs.bastion.local/KeyProtection/ 
+   Set-HgsClientConfiguration -AttestationServerUrl https://hgs.bastion.local/Attestation -KeyProtectionServerUrl https://hgs.bastion.local/KeyProtection/ 
    ```
 
 10. The result of the above command should show that AttestationStatus = Passed. If it does not, see [Attestation Failures](https://docs.microsoft.com/windows-server/virtualization/guarded-fabric-shielded-vm/guarded-fabric-troubleshoot-hosts#attestation-failures) for guidance on how to resolve the error.   
