@@ -13,7 +13,7 @@ ms.technology: storage
 
 This topic contains answers to frequently asked questions (FAQs) about using [Storage Migration Service](overview.md) to migrate servers.
 
-## What files and folders are excluded from transfers?
+## <a name="excluded-files"></a> What files and folders are excluded from transfers?
 
 Storage Migration Service won't transfer files or folders that we know could interfere with Windows operation. Specifically, here's what we won't transfer or move into the PreExistingData folder on the destination:
 
