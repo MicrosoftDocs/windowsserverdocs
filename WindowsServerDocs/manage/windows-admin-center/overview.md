@@ -107,7 +107,7 @@ You can get Windows Admin Center up and running in your environment in minutes:
 
 ![Windows Admin Center Infographic](media/WAC1809Poster_thumb.PNG)
 
-[Download the PDF](https://github.com/MicrosoftDocs/windowsserverdocs/blob/master/WindowsServerDocs/manage/windows-admin-center/media/WindowsAdminCenter1809Poster.pdf)
+[Download the PDF](https://github.com/MicrosoftDocs/windowsserverdocs/raw/master/WindowsServerDocs/manage/windows-admin-center/media/WindowsAdminCenter1809Poster.pdf)
 
 ## Latest features
 
