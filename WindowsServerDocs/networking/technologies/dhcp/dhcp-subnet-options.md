@@ -1,7 +1,7 @@
 ---
 title: DHCP Subnet Selection Options
 description: This topic provides information about DHCP subnet selection options for Dynamic Host Configuration Protocol (DHCP) in Windows Server 2016. 
-manager: elizapo
+manager: dougkim
 ms.prod: windows-server-threshold
 ms.technology: networking-dhcp
 ms.topic: get-started-article
