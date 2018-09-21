@@ -22,7 +22,7 @@ Before you get started, install Storage Migration Service and make sure that the
 1. Go to **Server Manager** (in Windows Admin Center) > **Storage Migration Service** and select **Install** to install Storage Migration Service and its required components (shown in Figure 1).
     ![Screenshot of the Storage Migration Service page showing the Install button](media/migrate/install.png)
      **Figure 1: Installing Storage Migration Service**
-1. Install the Storage Migration Service proxy on any source or destination servers running Windows Server 2019. This doubles the transfer speed and opens any necessary firewall ports for you. <br>To do so, connect to the destination server in Windows Admin Center and then go to **Server Manager** (in Windows Admin Center) > **Roles and features**, select **Storage Migration Service Proxy**, and then select **Install**.
+1. Install the Storage Migration Service proxy on any source or destination servers running Windows Server 2019. This opens any necessary firewall ports for and doubles the transfer speed when installed on destination servers. <br>To do so, connect to the destination server in Windows Admin Center and then go to **Server Manager** (in Windows Admin Center) > **Roles and features**, select **Storage Migration Service Proxy**, and then select **Install**.
 1. If you're using source or destination servers running Windows Server 2016 or earlier, in Windows Admin Center, connect to each server, go to **Server Manager** (in Windows Admin Center) > **Firewall** > **Incoming rules**, and then check that the following rules are enabled (there's a good chance they already are):
     - File and Printer Sharing (SMB-In)
     - Netlogon Service (NP-In)
@@ -32,7 +32,7 @@ Before you get started, install Storage Migration Service and make sure that the
 
 ## Step 1: Create a job and inventory your servers to figure out what to migrate
 
-In this step you specify what servers you want to migrate and scan them to collect info on their files and configurations.
+In this step, you specify what servers to migrate and then scan them to collect info on their files and configurations.
 
 1. Select **New job**, name the job, and then select **OK**.
 1. On the **Enter credentials** page, type admin credentials that work on the servers you want to migrate from, and then select **Next**.
