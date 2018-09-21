@@ -230,7 +230,7 @@
 ## [Active Directory Federation Services](active-directory-Federation-Services.md)
 
 ### [AD FS Overview](ad-fs/AD-FS-Overview.md)
-#### [What's new in Active Directory Federation Services for Windows Server 2016](ad-fs/overview/whats-new-active-directory-federation-services-windows-server.md)
+#### [What's new in Active Directory Federation Services](ad-fs/overview/whats-new-active-directory-federation-services-windows-server.md)
 #### [AD FS Scenarios for Developers](ad-fs/overview/AD-FS-Scenarios-for-Developers.md)
 #### [AD FS 2016 Requirements](ad-fs/overview/AD-FS-Requirements.md)
 
