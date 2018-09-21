@@ -18,12 +18,11 @@ This topic discusses how to migrate a server, including its files and configurat
 Before you get started, install Storage Migration Service and make sure that the necessary firewall ports are open.
 
 1. Check the [Storage Migration Service requirements](overview.md#requirements) and install [Windows Admin Center](../../manage/windows-admin-center/understand/windows-admin-center.md) on your PC or a management server if you haven't already.
-2. In Windows Admin Center, connect to the orchestrator server (or the destination server if that's what you're using to manage the migration).
-1. Go to **Server Manager** > **Storage Migration Service**, and then select **Install** to install Storage Migration Service and its required components, as shown in Figure 1.
+2. In Windows Admin Center, connect to the orchestrator server (or the destination server if that's what you're using to manage a small number of migrations). Then go to **Server Manager** (in Windows Admin Center) > **Storage Migration Service** and select **Install** to install Storage Migration Service and its required components (shown in Figure 1).
     ![Screenshot of the Storage Migration Service page showing the Install button](media/migrate/install.png)
      **Figure 1: Installing Storage Migration Service**
-1. Install the Storage Migration Service proxy on any source or destination servers running Windows Server 2019. This doubles the transfer speed and opens any necessary firewall ports for you. <br>To do so, connect to the destination server and then go to **Server Manager** > **Roles and features**, select **Storage Migration Service Proxy**, and then select **Install**.
-1. If you're using source or destination servers running Windows Server 2016 or earlier, in Windows Admin Center, connect to each server, go to **Server Manager** > **Firewall** > **Incoming rules**, and then check that the following rules are enabled (there's a good chance they already are):
+1. Install the Storage Migration Service proxy on any source or destination servers running Windows Server 2019. This doubles the transfer speed and opens any necessary firewall ports for you. <br>To do so, connect to the destination server in Windows Admin Center and then go to **Server Manager** (in Windows Admin Center) > **Roles and features**, select **Storage Migration Service Proxy**, and then select **Install**.
+1. If you're using source or destination servers running Windows Server 2016 or earlier, in Windows Admin Center, connect to each server, go to **Server Manager** (in Windows Admin Center) > **Firewall** > **Incoming rules**, and then check that the following rules are enabled (there's a good chance they already are):
     - File and Printer Sharing (SMB-In)
     - Netlogon Service (NP-In)
     - Windows Management Instrumentation (DCOM-In)
@@ -40,7 +39,7 @@ In this step you specify what servers you want to migrate and scan them to colle
 1. Select **Start scan**.<br>The page updates to shows when the scan is complete.
     ![Screenshot showing a server ready to be scanned](media/migrate/inventory.png)
      **Figure 2: Inventorying servers**
-1. Select each server to review the shares, configuration, network adapters, and volumes that were inventoried. <br><br>In this release, if you chose to include administrative shares, you'll get an error for shares located in the Windows system folder. We don't support transferring those shares, so you'll have to skip them during the transfer phase.
+1. Select each server to review the shares, configuration, network adapters, and volumes that were inventoried. <br><br>Storage Migration Service won't transfer files or folders that we know could interfere with Windows operation, so in this release you'll see warnings for any shares located in the Windows system folder. You'll have to skip these shares during the transfer phase. For more info, see [What files and folders are excluded from transfers](faq.md#What-files-and-folders-are-excluded-from-transfers).
 1. Select **Next** to move on to transferring data.
 
 ## Step 2: Transfer data from your old servers to the destination servers
