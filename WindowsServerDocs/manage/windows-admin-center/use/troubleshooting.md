@@ -59,6 +59,10 @@ ms.prod: windows-server-threshold
 
   * Try opening your browser in a private session - if that works, you'll need to clear your cache.
 
+* Did you recently upgrade Windows 10 to a new build or version?
+
+  * This may have cleared your trusted hosts settings. [Follow these instructions to update your trusted hosts settings.](#configure-trustedhosts) 
+
 [[back to top]](#toc)
 
 <a id="whitescreenws"></a>
@@ -105,7 +109,7 @@ Test-NetConnection -Port <port> -ComputerName <gateway> -InformationLevel Detail
 
 ## Did you upgrade your server from 2016 to 2019?
 
-* This may have cleared your trusted hosts settings. [Follow these instructions to update your trusted hosts settings.](#configure-trustedHosts) 
+* This may have cleared your trusted hosts settings. [Follow these instructions to update your trusted hosts settings.](#configure-trustedhosts) 
 
 [[back to top]](#toc)
 
