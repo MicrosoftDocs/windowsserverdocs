@@ -5,15 +5,54 @@ description:
 author: billmath
 ms.author: billmath
 manager: femila
-ms.date: 09/08/2017
+ms.date: 09/20/2018
 ms.topic: article
 ms.prod: windows-server-threshold
 
 ms.technology: identity-adfs
 ---
-# What's new in Active Directory Federation Services for Windows Server 2016
+# What's new in Active Directory Federation Services
 
->Applies To: Windows Server 2016
+
+>Applies To: Windows Server 2019, Windows Server 2016
+
+## What's new in Active Directory Federation Services for Windows Server 2019
+
+### Azure AD style resource specification in scope parameter 
+Previously, AD FS required the desired resource and scope to be in a separate parameter in any authentication request. For example, a typical oauth request would look like below: 
+
+``https://fs.contoso.com/adfs/oauth2/authorize?response_type=code&client_id=claimsxrayclient&resource=urn:microsoft:adfs:claimsxray&scope=oauth&redirect_uri=https://adfshelp.microsoft.com/ClaimsXray/TokenResponse&prompt=login``
+ 
+With AD FS on Server 2019, you can now pass the resource value embedded in the scope parameter. This is consistent with how one can do authentication against Azure AD also. 
+
+The scope parameter can now be organized as a space separated list where each entry is structure as resource/scope. For example  
+
+**< create a valid sample request>**
+> [!NOTE]
+> Only one resource can be specified in the authentication request. If more than one resource is included in the request, AD FS will return an error and authentication will not succeed. 
+
+### Proof Key for Code Exchange (PKCE) support for oAuth 
+OAuth public clients using the Authorization Code Grant are susceptible to the authorization code interception attack.  The attack is well described in RFC 7636. To mitigate this attack, AD FS in Server 2019 supports Proof Key for Code Exchange (PKCE) for OAuth Authorization Code Grant flow. 
+ 
+To leverage the PKCE support, This specification adds additional parameters to the OAuth 2.0 Authorization and Access Token Requests.
+
+![Proofkey](media/whats-new-in-active-directory-federation-services-for-windows-server-2016/adfs2019.png)
+
+A. The client creates and records a secret named the "code_verifier" and derives a transformed version "t(code_verifier)" (referred to as the "code_challenge"), which is sent in the OAuth 2.0       Authorization Request along with the transformation method "t_m". 
+
+B. The Authorization Endpoint responds as usual but records "t(code_verifier)" and the transformation method. 
+
+C. The client then sends the authorization code in the Access Token Request as usual but includes the "code_verifier" secret generated at (A). 
+
+D. The AD FS transforms "code_verifier" and compares it to "t(code_verifier)" from (B).  Access is denied if they are not equal. 
+
+#### FAQ 
+**Q.** Can I pass resource value as part of the scope value like how requests are done against Azure AD? 
+</br>**A.** With AD FS on Server 2019, you can now pass the resource value embedded in the scope parameter. The scope parameter can now be organized as a space separated list where each entry is structure as resource/scope. For example  
+**< create a valid sample request>**
+
+**Q.** Does AD FS support PKCE extension?
+</br>**A.** AD FS in Server 2019 supports Proof Key for Code Exchange (PKCE) for OAuth Authorization Code Grant flow 
 
 ## What's new in Active Directory Federation Services for Windows Server 2016   
 If you are looking for information on earlier versions of AD FS, see the following articles:  
