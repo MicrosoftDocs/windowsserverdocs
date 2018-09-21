@@ -5,20 +5,20 @@ ms.technology: manage
 ms.topic: article
 author: nwashburn-ms
 ms.author: niwashbu
-ms.date: 08/07/2018
+ms.date: 09/18/2018
 ms.localizationpriority: medium
 ms.prod: windows-server-threshold
 ---
 
 # Add a module to a tool extension
 
->Applies To: Windows Admin Center Preview
+>Applies To: Windows Admin Center, Windows Admin Center Preview
 
 In this article, we will add an empty module to a tool extension we have created with the Windows Admin Center CLI.
 
 ## Prepare your environment
 
-If you haven't already, follow the directions in [develop a tool extension](..\develop-tool.md) to prepare your environment and create a new, empty tool extension.
+If you haven't already, follow the directions in develop a [tool](..\develop-tool.md) (or [solution](..\develop-solution.md)) extension to prepare your environment and create a new, empty tool extension.
 
 ## Use the Angular CLI to create a module (and component)
 
@@ -52,7 +52,7 @@ ng generate component ManageFooWorksPortal
 
 If you are new to Angular, it is highly recommended you learn about Angular Routing and Navigation. The sections below define necessary routing elements that enable Windows Admin Center to navigate to your extension and between views in your extension in response to user activity. To learn more, go here: https://angular.io/guide/router
 
-Use the same module name that you used in the step [Update placeholder values](#update-placeholder-values).
+Use the same module name that you used in the step above.
 
 ### Add content to new routing file
 

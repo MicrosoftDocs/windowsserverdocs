@@ -73,7 +73,11 @@ Perform the following steps on a computer running Windows Server 2016 (does not 
 
 8. Review your selections on the Review Settings page of the wizard. When you click **Generate**, the wizard will enable BitLocker on the template disk, compute the hash of the disk, and create the Volume Signature Catalog, which is stored in the VHDX metadata.
 
-    Wait until the prep process has finished before attempting to mount or move the template disk. This process may take a while to complete, depending on the size of your disk. 
+    Wait until the prep process has finished before attempting to mount or move the template disk. This process may take a while to complete, depending on the size of your disk.
+
+    > [!IMPORTANT]
+    > Template disks can only be used with the secure shielded VM provisioning process.
+    > Attempting to boot a regular (unshielded) VM using a template disk will likely result in a stop error (blue screen) and is unsupported.
 
 9. On the **Summary** page, information about the disk template, the certificate used to sign the VSC, and the certificate issuer is shown. Click **Close** to exit the wizard.
 

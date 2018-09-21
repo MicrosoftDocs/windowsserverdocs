@@ -5,14 +5,14 @@ ms.technology: manage
 ms.topic: article
 author: nwashburn-ms
 ms.author: niwashbu
-ms.date: 08/07/2018
+ms.date: 09/18/2018
 ms.localizationpriority: medium
 ms.prod: windows-server-threshold
 ---
 
 # Use a custom gateway plugin in your tool extension
 
->Applies To: Windows Admin Center Preview
+>Applies To: Windows Admin Center, Windows Admin Center Preview
 
 In this article, we will use a custom gateway plugin in a new, empty tool extension we have created with the Windows Admin Center CLI.
 
@@ -22,7 +22,7 @@ If you haven't already, follow the directions in [develop a tool extension](..\d
 
 ## Add a module to your project ##
 
-Add a new [empty module](add-module.md) to your project, which we will use in the next step.  
+If you haven't already, add a new [empty module](add-module.md) to your project, which we will use in the next step.  
 
 ## Add integration to custom gateway plugin ##
 
@@ -73,7 +73,7 @@ import { PluginService } from './plugin.service';
 Add the following providers (after declarations):
 
 ``` ts
-  declarations: [DefaultComponent],
+  ,
   providers: [
     HttpService,
     PluginService,

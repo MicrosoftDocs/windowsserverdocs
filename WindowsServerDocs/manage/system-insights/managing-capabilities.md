@@ -72,6 +72,21 @@ The System Insights extension automatically shows the prediction history and par
 
 ![Single capability page showing a forecasting graph and the prediction history](media/cpu-forecasting.png)
 
+### Using the event log to retrieve capability results
+System Insights logs an event each time a capability finishes a prediction. These events are visible in the **Microsoft-Windows-System-Insights/Admin** channel, and System Insights publishes a different event ID for each status:   
+
+| Prediction status | Event ID |
+| --------------- | --------------- |
+| Ok | 151 |
+| Warning | 148 |
+| Critical | 150 |
+| Error | 149 |
+| None | 132 |
+
+>[!TIP]
+>Use [Azure Log Analytics](https://docs.microsoft.com/azure/log-analytics/) or [System Center Operations Manager](https://docs.microsoft.com/system-center/scom/welcome?view=sc-om-1807) to aggregate these events to see prediction results across a group of machines.
+
+
 ## Setting a capability schedule
 In addition to on-demand predictions, you can configure periodic predictions for each capability so that the specified capability is automatically invoked on a predefined schedule. Use the **Get-InsightsCapabilitySchedule** cmdlet to see capability schedules: 
 
