@@ -15,7 +15,7 @@ ms.date: 08/08/2018
 
 >Applies to: Windows Server
 
-In this procedure, you use Windows PowerShell to find the HNV provider logical network to create two virtual networks, each with one subnet. You also configure the peering between the two virtual networks.
+In this procedure, you use Windows PowerShell to create two virtual networks, each with one subnet. Then, you configure peering between the two virtual networks to enable connectivity between them.
 
 - [Step 1. Create the first virtual network](#step-1-create-the-first-virtual-network)
 
@@ -26,7 +26,7 @@ In this procedure, you use Windows PowerShell to find the HNV provider logical n
 - [Step 4. Configure peering from the second virtual network to the first virtual network](#step-4-configure-peering-from-the-second-virtual-network-to-the-first-virtual-network)
 
 
->[!NOTE]
+>[!IMPORTANT]
 >Remember to update the properties for your environment.
 
 ## Step 1. Create the first virtual network
@@ -66,14 +66,6 @@ New-NetworkControllerVirtualNetwork -ResourceId "Contoso_VNet1" -ConnectionUri $
 In this step, you create a second virtual network with one subnet. The following example script creates Woodgrove’s virtual network with one subnet.
 
 ``` PowerShell
-#Find the HNV Provider Logical Network  
-
-$logicalnetworks = Get-NetworkControllerLogicalNetwork -ConnectionUri $uri  
-foreach ($ln in $logicalnetworks) {  
-   if ($ln.Properties.NetworkVirtualizationEnabled -eq "True") {  
-      $HNVProviderLogicalNetwork = $ln  
-   }  
-}   
 
 #Create the Virtual Subnet  
 

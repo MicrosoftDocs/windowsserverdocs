@@ -13,7 +13,7 @@ ms.technology: networking
 # Insider Preview - HPN features in Windows Server 2019
 
 
-## Dynamic VRSS and VMMQ
+## Dynamic vRSS and VMMQ
 
 >Applies to: Windows Server 2019
 
