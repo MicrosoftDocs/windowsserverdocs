@@ -44,8 +44,8 @@ Migration is a three-step process:
 
 To use Storage Migration Service, you need the following:
 
-- A **source server** (migrate files and data from this server)
-- A **destination server** running Windows Server 2019 (migrate to this server)—Windows Server 2016 and Windows Server 2012 R2 work too, but are about half as fast
+- A **source server** to migrate files and data from
+- A **destination server** running Windows Server 2019 to migrate to—Windows Server 2016 and Windows Server 2012 R2 work as well but are around 50% slower
 - An **orchestrator server** running Windows Server 2019 to manage the migration  <br>If you're migrating only a few servers and one of the servers is running Windows Server 2019, you can use that as the orchestrator. If you're migrating more servers, we recommend using a separate orchestrator server.
 - A **PC or server running [Windows Admin Center](../../manage/windows-admin-center/understand/windows-admin-center.md)** to run the Storage Migration Service user interface, unless you prefer using PowerShell to manage the migration
 
