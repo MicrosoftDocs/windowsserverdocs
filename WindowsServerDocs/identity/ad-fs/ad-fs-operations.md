@@ -20,6 +20,7 @@ This document contains a list of all of the documentation operations for AD FS f
 
 
 - [Access Control Policies in AD FS](../ad-fs/operations/Access-Control-Policies-in-AD-FS.md)
+- [Additional Authentication methods in AD FS 2019](../ad-fs/operations/Additional-Authentication-Methods-AD-FS.md)
 - [AD FS Prompt login parameter support](../ad-fs/operations/AD-FS-Prompt-Login.md)
 - [AD FS 2016 Single Sign On Settings](../ad-fs/operations/AD-FS-2016-Single-Sign-On-Settings.md)
 - [AD FS Paginated sign-in](../ad-fs/operations/AD-FS-paginated-sign-in.md)
