@@ -72,10 +72,9 @@ In this step you cut over from the source servers to the destination servers, mo
  1. On the **Cut over to the new servers** > **Enter credentials** page, select **Next** to use the credentials you typed previously.
  1. On the **Configure cutover** page, specify which network adapters to take over each source device's settings. This moves the IP address from the source to the destination as part of the cutover.
  1. Specify what IP address to use for the source server after cutover moves its existing address to the destination. You can use DHCP or a static address.
+    ![Screenshot showing a source server and its IP addresses and computer names and what they'll be replaced with after the cutover](media/migrate/cutover.png)
+    **Figure 3: A source server and how its network configuration will move to the destination**
  1. Specify how to rename the source server after the destination server takes over its existing name. You can use a randomly generated name or type one yourself. Then select **Next**.
-
-    [**Screenshot showing a source server and its IP addresses and computer names and what they'll be replaced with after the cut over**]
-
  1. Select **Next** on the **Adjust cutover settings** page.
  1. Select **Validate** on the **Validate source and destination device** page, and then select **Next**.
  1. When you're ready to perform the cutover, select **Start cutover**. <br>Users and apps might experience an interruption while the address and names are moved and the servers restarted several times each, but will otherwise be unaffected by the migration. How long cutover takes depends on how quickly the servers restart, Active Directory and DNS replication times.
