@@ -44,18 +44,18 @@ In this step you specify what servers you want to migrate and scan them to colle
 
 ## Step 2: Transfer data from your old servers to the destination servers
 
-In this step you transfer data after specifying where on the destination servers to put the data.
+In this step you transfer data after specifying where to put it on the destination servers.
 
- 1. On the **Enter credentials** page, type admin credentials that work on the destination servers you want to migrate to, and then select **Next**.
- 1. On the **Add a destination device and mappings** page, the first source device is listed. Type the name of the server you want to migrate this server to and then select **Scan device**.
+ 1. On the **Transfer data** > **Enter credentials** page, type admin credentials that work on the destination servers you want to migrate to, and then select **Next**.
+ 1. On the **Add a destination device and mappings** page, the first source server is listed. Type the name of the server to which you want to migrate and then select **Scan device**.
  1. Map the source volumes to destination volumes, clear the **Include** checkbox for any shares you don't want to transfer (including any administrative shares located in the Windows system folder), and then select **Next**.
     ![Screenshot showing a source server and its volumes and shares and where they'll be transferred to on the destination](media/migrate/transfer.png)
      **Figure 2: A source server and where its storage will be transferred to**
- 1. Add a destination device and mappings for any more source servers, and then select **Next**.
+ 1. Add a destination server and mappings for any more source servers, and then select **Next**.
  1. Optionally adjust the transfer settings, and then select **Next**.
  1. Select **Validate** and then select **Next**.
  1. Select **Start transfer** to start transferring data.
- 1. After the transfer completes, check out the destination server to make sure everything transferred properly. Select **Error log only** if you want to download a log of any errors that occurred.
+ 1. After the transfer completes, check out the destination server to make sure everything transferred properly. Select **Error log only** if you want to download a log of any files that didn't transfer.
 
 At this point, you have two options:
 
@@ -66,18 +66,18 @@ If your goal is to sync the files with Azure, you could set up the destination s
 
 ## Step 3: Optionally cut over to the new servers
 
-In this step you cut over from the source servers to the destination servers, moving the IP addresses and computer names to the destination servers. After this step is finished, apps and users use the old servers' names and addresses to access the new servers.
+In this step you cut over from the source servers to the destination servers, moving the IP addresses and computer names to the destination servers. After this step is finished, apps and users access the new servers via the names and addresses of the servers you migrated from.
 
  1. If you've navigated away from the migration job, in Windows Admin Center, go to **Server Manager** > **Storage Migration Service** and then select the job that you want to complete. 
  1. On the **Cut over to the new servers** > **Enter credentials** page, select **Next** to use the credentials you typed previously.
  1. On the **Configure cutover** page, specify which network adapters to take over each source device's settings. This moves the IP address from the source to the destination as part of the cutover.
- 1. Specify what IP address to use for the source server after cutover moves its existing address to the destination. You can use DHCP or a static address.
+ 1. Specify what IP address to use for the source server after cutover moves its address to the destination. You can use DHCP or a static address.
     ![Screenshot showing a source server and its IP addresses and computer names and what they'll be replaced with after the cutover](media/migrate/cutover.png)
     **Figure 3: A source server and how its network configuration will move to the destination**
- 1. Specify how to rename the source server after the destination server takes over its existing name. You can use a randomly generated name or type one yourself. Then select **Next**.
+ 1. Specify how to rename the source server after the destination server takes over its name. You can use a randomly generated name or type one yourself. Then select **Next**.
  1. Select **Next** on the **Adjust cutover settings** page.
  1. Select **Validate** on the **Validate source and destination device** page, and then select **Next**.
- 1. When you're ready to perform the cutover, select **Start cutover**. <br>Users and apps might experience an interruption while the address and names are moved and the servers restarted several times each, but will otherwise be unaffected by the migration. How long cutover takes depends on how quickly the servers restart, Active Directory and DNS replication times.
+ 1. When you're ready to perform the cutover, select **Start cutover**. <br>Users and apps might experience an interruption while the address and names are moved and the servers restarted several times each, but will otherwise be unaffected by the migration. How long cutover takes depends on how quickly the servers restart, as well as Active Directory and DNS replication times.
 
 ## See also
 
