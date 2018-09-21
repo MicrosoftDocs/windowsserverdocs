@@ -12,7 +12,7 @@ ms.topic: article
 ms.assetid: 0f78ef4c-dd12-4b1b-8c6e-251dd803c5d1
 author: jaimeo
 ms.author: jaimeo
-manager: elizapo
+manager: dougkim
 ms.localizationpriority: medium
 ---
 # Migrating Roles and Features in Windows Server

@@ -1,7 +1,7 @@
 ---
 title: Virtual Network Encryption
 description: Virtual network encryption allows encryption of virtual network traffic between virtual machines that communicate with each other within subnets marked as ‘Encryption Enabled.’ 
-manager: elizapo
+manager: dougkim
 ms.prod: windows-server-threshold
 ms.technology: networking-hv-switch
 ms.topic: get-started-article

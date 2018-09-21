@@ -5,7 +5,7 @@ ms.prod: windows-server-threshold
 ms.technology: storage-work-folders
 ms.topic: article
 author: JasonGerend
-manager: elizapo
+manager: dougkim
 ms.author: jgerend
 ms.date: 6/11/2017
 description: An overview of Work Folders - a server role in Windows Server that provides a consistent way for users to access work files from PCs and devices.

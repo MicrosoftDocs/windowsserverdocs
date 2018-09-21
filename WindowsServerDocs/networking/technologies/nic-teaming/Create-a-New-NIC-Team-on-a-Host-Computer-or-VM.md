@@ -1,7 +1,7 @@
 ---
 title: Create a new NIC Team on a host computer or VM
 description: In this topic, you create a new NIC Team on a host computer or in a Hyper-V virtual machine (VM) running Windows Server 2016.  
-manager: elizapo
+manager: dougkim
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na

@@ -1,7 +1,7 @@
 ---
 title: Virtual network peering
 description:  
-manager: elizapo
+manager: dougkim
 ms.prod: windows-server-threshold
 ms.technology: networking-hv-switch
 ms.topic: get-started-article
@@ -57,7 +57,7 @@ After you peer virtual networks, resources in either virtual network can directl
 
 -   Traffic between virtual machines in peered virtual networks is routed directly through the backbone infrastructure, not through a gateway or over the public Internet.
 
--   Virtual machines in a virtual network can access the internal load-balancer in the peered virtual network in the same region.
+-   Virtual machines in a virtual network can access the internal load-balancer in the peered virtual network.
 
 You can apply access control lists (ACLs) in either virtual network to block access to other virtual networks or subnets if desired. If you open full connectivity between peered virtual networks (which is the default option), you
 can apply ACLs to specific subnets or virtual machines to block or deny specific access. To learn more about ACLs, see [Use Access Control Lists (ACLs) to Manage Datacenter Network Traffic Flow](https://docs.microsoft.com/en-us/windows-server/networking/sdn/manage/use-acls-for-traffic-flow).

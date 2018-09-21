@@ -4,7 +4,7 @@ title: Windows Time for Traceability
 description: Regulations in many sectors require systems to be traceable to UTC.  This means that a system's offset can be attested with respect to UTC. 
 author: shortpatti
 ms.author: dacuo
-manager: elizapo
+manager: dougkim
 ms.date: 05/08/2018
 ms.topic: article
 ms.prod: windows-server-threshold

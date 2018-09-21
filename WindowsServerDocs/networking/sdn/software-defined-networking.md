@@ -1,7 +1,7 @@
 ---
 title: Software Defined Networking (SDN)
 description: Software Defined Networking (SDN) provides a method to centrally configure and manage physical and virtual network devices such as routers, switches, and gateways in your datacenter. Use this topic to learn about the Software Defined Networking (SDN) technologies that are provided in Windows Server, System Center, and Microsoft Azure.
-manager: elizapo
+manager: dougkim
 ms.prod: windows-server-threshold
 ms.technology: networking-sdn
 ms.topic: article
@@ -10,9 +10,10 @@ ms.author: pashort
 author: shortpatti
 ms.date: 08/09/2018
 ---
-# SDN for Windows Server
+# SDN in Windows Server overview
 
 >Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
+
 
 Software Defined Networking (SDN) provides a method to centrally configure and manage physical and virtual network devices such as routers, switches, and gateways in your datacenter. You can use your existing SDN-compatible devices to achieve deeper integration between the virtual network and the physical network. Virtual network elements such as Hyper-V Virtual Switch, Hyper-V Network Virtualization, and RAS Gateway are designed to be integral elements of your SDN infrastructure. 
 
