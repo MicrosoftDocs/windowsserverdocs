@@ -185,7 +185,7 @@ New features provided by the IIS 10.0 web server in Windows Server 2016 include:
 
 - Support for HTTP/2 protocol in the Networking stack and integrated with IIS 10.0, allowing IIS 10.0 websites to automatically serve HTTP/2 requests for supported configurations. This allows numerous enhancements over HTTP/1.1 such as more efficient reuse of connections and decreased latency, improving load times for web pages. 
 - Ability to run and manage IIS 10.0 in Nano Server. See [IIS on Nano Server](iis-on-nano-server.md).
-- Support for Wildcard Host Headers, enabling administratorss to set up a web server for a domain and then have the web server serve requests for any subdomain.
+- Support for Wildcard Host Headers, enabling administrators to set up a web server for a domain and then have the web server serve requests for any subdomain.
 - A new PowerShell module (IISAdministration) for managing IIS. 
 
 For more details see [IIS](https://iis.net/learn).
