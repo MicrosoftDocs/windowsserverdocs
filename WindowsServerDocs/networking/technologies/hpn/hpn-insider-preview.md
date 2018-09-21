@@ -1,7 +1,8 @@
 ---
 ms.assetid: 
-title: Insider Preview - HPN features in Windows Server 2019
+title: Insider Preview for HPN features in Windows Server 2019
 description: Learn about the new High-Performance Networking features in Windows Server 2019.
+manager: dougkim
 author: shortpatti
 ms.author: pashort
 ms.date: 09/12/2018
@@ -10,7 +11,7 @@ ms.prod: windows-server-threshold
 ms.technology: networking
 ---
 
-# Insider Preview - HPN features in Windows Server 2019
+# Insider Preview
 
 
 ## Dynamic vRSS and VMMQ
@@ -29,7 +30,7 @@ For more information, see:
 
 ## Receive Segment Coalescing (RSC) in the vSwitch
 
->Applies to: Windows Server 2019 and Windows 10, version 1810
+>Applies to: Windows Server 2019 and Windows 10, version 1809
 
 Receive Segment Coalescing (RSC) in the vSwitch is an enhancement that coalesces multiple TCP segments into a larger segment before data traversing the vSwitch. The large segment improves networking performance for virtual workloads.
 

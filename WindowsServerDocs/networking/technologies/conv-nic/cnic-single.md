@@ -5,7 +5,7 @@ ms.prod: windows-server-threshold
 ms.technology: networking
 ms.topic: article
 ms.assetid: eed5c184-fa55-43a8-a879-b1610ebc70ca
-manager: elizapo
+manager: dougkim
 ms.author: pashort
 author: shortpatti
 ms.date: 09/14/2018

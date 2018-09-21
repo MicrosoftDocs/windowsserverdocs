@@ -3,7 +3,7 @@ title: Install Nano Server
 description: "Clean installation, upgrade, migration, and evaluation of Nano Server"
 ms.prod: windows-server-threshold
 ms.service: na
-manager: elizapo
+manager: dougkim
 ms.technology: server-nano
 ms.date: 09/06/2017
 ms.tgt_pltfrm: na
