@@ -7,7 +7,7 @@ ms.topic: article
 author: JasonGerend
 manager: elizapo
 ms.author: jgerend
-ms.date: 09/21/2018
+ms.date: 09/24/2018
 ms.localizationpriority: high
 ---
 # Storage in Windows Server
