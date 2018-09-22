@@ -26,7 +26,7 @@ Here's a description of the elements that make up a DFS namespace:
 
 This topic discusses how to install DFS, what’s new, and where to find evaluation and deployment information.
 
-You can administer namespaces by using DFS Management, the [DFS Namespace (DFSN) Cmdlets in Windows PowerShell](https://technet.microsoft.com/library/jj884270.aspx), the **DfsUtil** command, or scripts that call WMI.
+You can administer namespaces by using DFS Management, the [DFS Namespace (DFSN) Cmdlets in Windows PowerShell](https://docs.microsoft.com/en-us/powershell/module/dfsn/?view=win10-ps), the **DfsUtil** command, or scripts that call WMI.
 
 ## Server requirements and limits
 
@@ -91,13 +91,13 @@ Install-WindowsFeature <name>
 For example, to install the Distributed File System Tools portion of the Remote Server Administration Tools feature, type:
 
 ```PowerShell
-Install-WindowsFeature RSAT-DFS-Mgmt-Con
+Install-WindowsFeature "RSAT-DFS-Mgmt-Con"
 ```
 
 To install the DFS Namespaces, and the Distributed File System Tools portions of the Remote Server Administration Tools feature, type:
 
 ```PowerShell
-Install-WindowsFeature FS-DFS-Namespace, RSAT-DFS-Mgmt-Con
+Install-WindowsFeature "FS-DFS-Namespace", "RSAT-DFS-Mgmt-Con"
 ```
 
 ## Interoperability with Azure virtual machines
