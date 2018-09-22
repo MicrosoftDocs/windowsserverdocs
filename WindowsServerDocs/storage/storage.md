@@ -35,7 +35,7 @@ For an overview of storage technologies included in Windows Server, see the foll
 
 ## General-purpose file servers
 
-* [Storage Migration Service overview](storage-migration-service/overview.md) - Storage Migration Service makes it easier to migrate servers to a newer version of Windows Server. It provides a graphical tool that inventories data on servers and then transfers the data and configuration to newer servers—all without apps or users having to change anything.
+* [Storage Migration Service](storage-migration-service/overview.md) - Storage Migration Service makes it easier to migrate servers to a newer version of Windows Server. It provides a graphical tool that inventories data on servers and then transfers the data and configuration to newer servers—all without apps or users having to change anything.
 
 * [Work Folders](work-folders/work-folders-overview.md) - With Work Folders users can store and access work files on personal computers and devices, often referred to as bring-your-own device (BYOD), in addition to corporate PCs. Users gain a convenient location to store work files, and they can access them from anywhere. Organizations maintain control over corporate data by storing the files on centrally managed file servers, and optionally specifying user device policies such as encryption and lock-screen passwords.
 
