@@ -23,7 +23,7 @@ This topic lists new and updated topics in the [Storage](storage.md) documentati
 |New or changed topic|Description|
 |---|---|
 |[Storage Migration Service overview](storage-migration-service/overview.md)| New topic |
-|[Use Storage Migration Service to migrate a server](storage-migration-service/migrate.md)| New topic |
+|[Use Storage Migration Service to migrate a server](storage-migration-service/migrate-data.md)| New topic |
 |[Storage Migration Service frequently asked questions (FAQ)](storage-migration-service/faq.md)| New topic |
 | [iSCSI Target Server](iscsi/iscsi-target-server.md) | Migrated from the [Previous Versions](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012) library.|
 | [iSCSI Target Server scalability limits](iscsi/iscsi-target-server-limits.md) |Migrated from the [Previous Versions](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012) library.|
