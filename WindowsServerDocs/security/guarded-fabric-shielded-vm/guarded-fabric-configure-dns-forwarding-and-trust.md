@@ -26,9 +26,9 @@ Use the following steps to set up DNS forwarding and establish a one-way trust w
 
 2.  To create a one-way forest trust, run the following command in an elevated Command Prompt:
 
-    Replace `relecloud.com` with the name of the HGS domain and `fabrikam.com` with the name of the fabric domain. Provide the password for an admin of the fabric domain.
+    Replace `bastion.local` with the name of the HGS domain and `fabrikam.com` with the name of the fabric domain. Provide the password for an admin of the fabric domain.
 
-        netdom trust relecloud.com /domain:fabrikam.com /userD:fabrikam.com\Administrator /passwordD:<password> /add
+        netdom trust bastion.local /domain:fabrikam.com /userD:fabrikam.com\Administrator /passwordD:<password> /add
 
 ## Next step 
 
