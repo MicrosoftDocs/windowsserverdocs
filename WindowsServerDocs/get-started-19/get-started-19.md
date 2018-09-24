@@ -192,7 +192,7 @@ ms.localizationpriority: medium
       </a>
     </li><hr />
 <li>
-      <a href="maximums-limits-19.md">
+      <a href="limits-maximums-19.md">
         <div class="cardSize">
             <div class="cardPadding">
                 <div class="card">
