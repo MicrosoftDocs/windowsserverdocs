@@ -6,18 +6,18 @@ ms.manager: dongill
 ms.technology: storage-spaces
 ms.topic: article
 author: cosmosdarwin
-ms.date: 7/27/2018
+ms.date: 9/25/2018
 ms.assetid: 8bd0d09a-0421-40a4-b752-40ecb5350ffd
 description: An overview of Storage Spaces Direct, a feature of Windows Server that enables you to cluster servers with internal storage into a software-defined storage solution.
 ms.localizationpriority: medium
 ---
 # Storage Spaces Direct overview
 
->Applies to: Windows Server 2016
+>Applies to: Windows Server 2019, Windows Server 2016
 
 Storage Spaces Direct uses industry-standard servers with local-attached drives to create highly available, highly scalable software-defined storage at a fraction of the cost of traditional SAN or NAS arrays. Its converged or hyper-converged architecture radically simplifies procurement and deployment, while features such as caching, storage tiers, and erasure coding, together with the latest hardware innovations such as RDMA networking and NVMe drives, deliver unrivaled efficiency and performance.
 
-Storage Spaces Direct is included in Windows Server 2016 Datacenter and [Windows Server Insider Preview Builds](https://insider.windows.com/en-us/for-business-getting-started-server/). 
+Storage Spaces Direct is included in Windows Server 2019 Datacenter, Windows Server 2016 Datacenter, and [Windows Server Insider Preview Builds](https://insider.windows.com/for-business-getting-started-server/). 
 
 For other applications of Storage Spaces, such as Shared SAS clusters and stand-alone servers, see [Storage Spaces overview](overview.md). If you're looking for info about using Storage Spaces on a Windows 10 PC, see [Storage Spaces in Windows 10](https://support.microsoft.com/help/12438/windows-10-storage-spaces).
 
@@ -31,6 +31,7 @@ For other applications of Storage Spaces, such as Shared SAS clusters and stand-
 			  <li><a href="storage-spaces-fault-tolerance.md">Fault tolerance and storage efficiency</a></li>
               <li><a href="drive-symmetry-considerations.md">Drive symmetry considerations</a></li>
               <li><a href="understand-quorum.md">Understanding cluster and pool quorum</a></li>
+              <li><a href="cluster-sets.md">Cluster sets</a></li>
 		  	</ul>
         </td>
         <td style="padding: 5px; border: 0;">
@@ -63,6 +64,8 @@ For other applications of Storage Spaces, such as Shared SAS clusters and stand-
 			  <li><a href="remove-servers.md">Remove servers</a></li>
 			  <li><a href="resize-volumes.md">Extend volumes</a></li>
 			  <li><a href="../update-firmware.md">Update drive firmware</a></li>
+              <li><a href="performance-history.md">Performance history</a></li>
+              <li><a href="delimit-volume-allocation.md">Delimit the allocation of volumes</a></li>
 		    </ul>
         </td>
     </tr>
@@ -73,14 +76,7 @@ For other applications of Storage Spaces, such as Shared SAS clusters and stand-
               <li><a href="storage-spaces-states.md">Troubleshoot health and operational states</a></li>
               <li><a href="data-collection.md">Collect diagnostic data with Storage Spaces Direct</a></li>
             </ul>
-         <td style="padding: 5px; border: 0;">
-            <strong>Insider Preview content</a></strong>
-            <ul>
-                <li><a href="cluster-sets.md">Cluster sets</a></li>
-                <li><a href="performance-history.md">Performance history</a></li>
-                <li><a href="delimit-volume-allocation.md">Delimit the allocation of volumes</a></li>
-            </ul>
-    </tr>
+
 </table>
 
 ## Videos
@@ -241,6 +237,7 @@ Try Storage Spaces Direct [in Microsoft Azure](https://blogs.technet.microsoft.c
 
 -   [Fault tolerance and storage efficiency](storage-spaces-fault-tolerance.md)
 -   [Storage Replica](../storage-replica/storage-replica-overview.md)
+-   [Storage at Microsoft blog](https://blogs.technet.microsoft.com/filecab/)
 -   [Storage Spaces Direct throughput with iWARP](https://blogs.technet.microsoft.com/filecab/2017/03/13/storage-spaces-direct-throughput-with-iwarp) (TechNet blog)
 -   [What's New in Failover Clustering in Windows Server](../../failover-clustering/whats-new-in-failover-clustering.md)  
 -   [Storage Quality of Service](../storage-qos/storage-qos-overview.md)

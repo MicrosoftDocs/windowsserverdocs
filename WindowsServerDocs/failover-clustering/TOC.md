@@ -7,6 +7,7 @@
 ### [Simplified SMB Multichannel and multi-NIC cluster networks](smb-multichannel.md)
 ### [VM load balancing](vm-load-balancing-overview.md)
 ### [VM load balancing deep-dive](vm-load-balancing-deep-dive.md)
+### [Cluster sets](../storage/storage-spaces/cluster-sets.md)
 ## Plan
 ### [Hardware requirements](clustering-requirements.md)
 ### [Use Cluster Shared Volumes (CSVs)](failover-cluster-csvs.md)
@@ -28,6 +29,4 @@
 #### [Settings](health-service-settings.md)
 ### [Configure and manage quorum](manage-cluster-quorum.md)
 ### [Troubleshooting using Windows Error Reporting](troubleshooting-using-WER-reports.md)
-## Insider Preview
-### [Cluster sets](../storage/storage-spaces/cluster-sets.md)
 ## [Change history for Failover Clustering topics](clustering-change-history.md)

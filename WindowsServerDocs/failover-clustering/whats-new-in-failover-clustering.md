@@ -7,15 +7,27 @@ ms.topic: get-started-article
 manager: dongill
 author: JasonGerend
 ms.author: jgerend
-ms.date: 10/11/2016
+ms.date: 09/25/2018
 ---
-# What's new in Failover Clustering in Windows Server 2016
-> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
+# What's new in Failover Clustering
 
-This topic explains the new and changed functionality in Failover Clustering in Windows Server 2016.  
+> Applies to: Windows Server 2019, Windows Server 2016, Windows Server (Semi-Annual Channel)
 
-## <a name="BKMK_RollingUpgrade"></a>Cluster Operating System Rolling Upgrade  
-A new feature in Failover Clustering, Cluster Operating System Rolling Upgrade, enables an administrator to upgrade the operating system of the cluster nodes from  Windows Server 2012 R2  to Windows Server 2016 without stopping the Hyper-V or the Scale-Out File Server workloads. Using this feature, the downtime penalties against Service Level Agreements (SLA) can be avoided.  
+This topic explains the new and changed functionality in Failover Clustering Windows Server 2019, Windows Server 2016, and Windows Server Semi-Annual Channel releases.
+
+## What's new in Windows Server 2019
+
+### Cluster sets
+
+Cluster sets increase the maximum number of servers that can be in a cluster in a single software-defined datacenter cloud by orders of magnitude.
+ 
+For more info, see [Cluster sets](storage-spaces/cluster-sets.md).
+
+## What's new in Windows Server 2016
+
+### <a name="BKMK_RollingUpgrade"></a>Cluster Operating System Rolling Upgrade
+
+Cluster Operating System Rolling Upgrade enables an administrator to upgrade the operating system of the cluster nodes from Windows Server 2012 R2 to a newer version without stopping the Hyper-V or the Scale-Out File Server workloads. Using this feature, the downtime penalties against Service Level Agreements (SLA) can be avoided.  
 
 **What value does this change add?**  
 
@@ -41,7 +53,7 @@ The cluster operating systems for the upgrade in phases are as follows for each 
 
 For more information, see [Cluster Operating System Rolling Upgrade](cluster-operating-system-rolling-upgrade.md).  
 
-## <a name="BKMK_SR"></a>Storage Replica  
+### <a name="BKMK_SR"></a>Storage Replica  
 Storage Replica is a new feature that enables storage-agnostic, block-level, synchronous replication between servers or clusters for disaster recovery, as well as stretching of a failover cluster between sites. Synchronous replication enables mirroring of data in physical sites with crash-consistent volumes to ensure zero data loss at the file-system level. Asynchronous replication allows site extension beyond metropolitan ranges with the possibility of data loss.  
 
 **What value does this change add?**  
@@ -73,7 +85,7 @@ Storage Replica enables you to do the following:
 For more information, see the [Storage Replica in Windows Server 2016](../storage/storage-replica/storage-replica-overview.md).  
 
 
-## <a name="BKMK_CloudWitness"></a>Cloud Witness  
+### <a name="BKMK_CloudWitness"></a>Cloud Witness  
 Cloud Witness is a new type of Failover Cluster quorum witness in Windows Server 2016 that leverages Microsoft Azure as the arbitration point. The Cloud Witness, like any other quorum witness, gets a vote and can participate in the  quorum calculations. You can configure cloud witness as a quorum witness using the Configure a Cluster Quorum Wizard.  
 
 **What value does this change add?**  
@@ -94,7 +106,7 @@ For more information, see [Deploy a Cloud Witness For a Failover Cluster](deploy
 
 This capability is new in Windows Server 2016.  
 
-## <a name="BKMK_VMs"></a>Virtual Machine Resiliency  
+### <a name="BKMK_VMs"></a>Virtual Machine Resiliency  
 **Compute Resiliency** Windows Server 2016 includes increased virtual machines compute resiliency to help reduce intra-cluster communication issues in your compute cluster as follows: 
 
 -   **Resiliency options  available for virtual machines:**  You can now configure virtual machine resiliency options that define behavior of the virtual machines during transient failures:  
@@ -113,17 +125,17 @@ When a virtual machine disconnects from its underlying storage, it pauses and wa
 
 In Windows Server 2016, virtual machine storage resiliency is aware and optimized for guest clusters too.  
 
-## <a name="BKMK_Diagnostics"></a>Diagnostic Improvements in Failover Clustering  
+### <a name="BKMK_Diagnostics"></a>Diagnostic Improvements in Failover Clustering  
 To help diagnose issues with failover clusters, Windows Server 2016 includes the following:  
 
 -   Several enhancements to cluster log files (such as Time Zone Information and DiagnosticVerbose log) that makes is easier to troubleshoot failover clustering issues. For more information, see  [Windows Server 2016 Failover Cluster Troubleshooting Enhancements - Cluster Log](http://blogs.msdn.com/b/clustering/archive/2015/05/15/10614930.aspx).  
 
 -   A new  a dump type of **Active memory dump**, which filters out most memory pages allocated to virtual machines, and therefore makes the memory.dmp much smaller and easier to save or copy.  For more information, see [Windows Server 2016 Failover Cluster Troubleshooting Enhancements - Active Dump](http://blogs.msdn.com/b/clustering/archive/2015/05/18/10615526.aspx).  
 
-## <a name="BKMK_SiteAware"></a>Site-aware Failover Clusters  
+### <a name="BKMK_SiteAware"></a>Site-aware Failover Clusters  
 Windows Server 2016 includes site- aware failover clusters that enable group nodes in stretched clusters based on their physical location (site). Cluster site-awareness enhances key operations during the cluster lifecycle such as failover behavior, placement policies, heartbeat between the nodes, and quorum behavior. For more information, see [Site-aware Failover Clusters in Windows Server 2016](http://blogs.msdn.com/b/clustering/archive/2015/08/19/10636304.aspx).  
 
-## <a name="BKMK_multidomainclusters"></a>Workgroup and Multi-domain clusters  
+### <a name="BKMK_multidomainclusters"></a>Workgroup and Multi-domain clusters  
 In  Windows Server 2012 R2  and previous versions, a cluster can only be created between member nodes joined to the same domain.   Windows Server 2016 breaks down these barriers and introduces the ability to create a Failover Cluster without Active Directory dependencies. You can now create failover clusters in the following configurations:  
 
 -   **Single-domain Clusters.** Clusters with all nodes joined to the same domain.  
@@ -133,13 +145,13 @@ In  Windows Server 2012 R2  and previous versions, a cluster can only be created
 -   **Workgroup Clusters.** Clusters with nodes which are member servers / workgroup (not domain joined).  
 
 For more information, see [Workgroup and Multi-domain clusters in Windows Server 2016](http://blogs.msdn.com/b/clustering/archive/2015/08/17/10635825.aspx)  
-## <a name="BKMK_VMLoadBalancing"></a>Virtual Machine Load Balancing  
+### <a name="BKMK_VMLoadBalancing"></a>Virtual Machine Load Balancing  
 Virtual machine Load Balancing is a new feature in Failover Clustering that facilitates the seamless load balancing of virtual machines across the nodes in a cluster. Over-committed nodes are identified based on virtual machine Memory and CPU utilization on the node. Virtual machines are then moved (live migrated) from an over-committed node to nodes with available bandwidth (if applicable). The aggressiveness of the balancing can be tuned to ensure optimal cluster performance and utilization.  Load Balancing is enabled by default in Windows Sever 2016 Technical Preview. However, Load Balancing is disabled when SCVMM Dynamic Optimization is enabled.  
 
-## <a name="BKMK_VMStartOrder"></a>Virtual Machine Start Order  
+### <a name="BKMK_VMStartOrder"></a>Virtual Machine Start Order  
 Virtual machine Start Order is a new feature in Failover Clustering that introduces start order orchestration for Virtual machines (and all groups) in a cluster. Virtual machines can now be grouped into tiers, and start order dependencies can be created between different tiers. This ensures that the most important virtual machines (such as Domain Controllers or Utility virtual machines) are started first. Virtual machines are not started until the virtual machines that they have a dependency on are also started.  
 
-## <a name="BKMK_SMBMultiChannel"></a> Simplified SMB Multichannel and Multi-NIC Cluster Networks  
+### <a name="BKMK_SMBMultiChannel"></a> Simplified SMB Multichannel and Multi-NIC Cluster Networks  
 Failover Cluster networks are no longer limited to a single NIC per subnet / network. With Simplified SMB Multichannel and Multi-NIC Cluster Networks, network configuration is automatic and every NIC on the subnet can be used for cluster and workload traffic. This enhancement allows customers to maximize network throughput for Hyper-V, SQL Server Failover Cluster Instance, and other SMB workloads.  
 
 For more information, see [Simplified SMB Multichannel and Multi-NIC Cluster Networks](smb-multichannel.md).

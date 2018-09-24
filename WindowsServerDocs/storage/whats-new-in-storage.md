@@ -7,13 +7,65 @@ ms.manager: dongill
 ms.technology: storage
 ms.topic: article
 author: jasongerend
-ms.date: 11/6/2017
+ms.date: 09/25/2018
 ---
 # What's new in Storage in Windows Server
 
->Applies to: Windows Server (Semi-Annual Channel); Windows Server 2016
+>Applies to: Windows Server 2019, Windows Server 2016, Windows Server (Semi-Annual Channel)
 
-This topic explains the new and changed functionality in storage in Windows Server, version 1709 and Windows Server 2016.
+This topic explains the new and changed functionality in storage in Windows Server 2019, Windows Server 2016, and Windows Server Semi-Annual Channel releases.
+
+## What's new in storage in Windows Server 2019 and Windows Server, version 1809
+
+This release of Windows Server builds on the new functionality included in Windows Server, version 1803 and Windows Server, version 1709 by adding the following changes and technologies.
+
+### Manage storage with Windows Admin Center
+
+[Windows Admin Center](../manage/windows-admin-center/overview.md) is a locally deployed, browser-based app for managing servers, clusters, hyper-converged infrastructure including Storage Spaces Direct, and Windows 10 PCs. It comes at no additional cost beyond Windows and is ready to use in production.
+
+To be fair, Windows Admin Center is a separate download that runs on Windows Server 2019 and other versions of Windows, but it's new and we didn't want you to miss it...
+
+### Storage Migration Service
+
+Storage Migration Service makes it easier to migrate servers to a newer version of Windows Server. It provides a graphical tool that inventories data on servers and then transfers the data and configuration to newer servers—all without apps or users having to change anything. For more info, see [Storage Migration Service](storage-migration-service/overview.md).
+
+### Storage Spaces Direct (Windows Server 2019 only)
+
+There are a number of improvements to Storage Spaces Direct in Windows Server 2019 (Storage Spaces Direct isn't included in Windows Server, Semi-Annual Channel):
+
+- **Larger maximum scale** - scale up to 4 PB per pool and 64 TB per volume. For more info, see the [Storage at Microsoft blog](https://blogs.technet.microsoft.com/filecab/2018/06/27/windows-server-summit-recap/).
+- **Two-server clusters using a USB flash drive as a witness** - use a low-cost USB flash drive plugged into your router to act as a tie-breaker in two-server clusters. For more info, see the [Storage at Microsoft blog](https://blogs.technet.microsoft.com/filecab/2018/06/27/windows-server-summit-recap/).
+- **Faster mirror-accelerated parity** - more than twice as fast as in Windows Server 2016, making it viable for more workloads. For more info, see the [Storage at Microsoft blog](https://blogs.technet.microsoft.com/filecab/2018/06/27/windows-server-summit-recap/).
+- [Cluster sets](storage-spaces/cluster-sets.md) - increase the maximum number of servers that can be in a cluster in a single software-defined datacenter cloud by orders of magnitude.
+- [Performance history](storage-spaces/performance-history.md) - provides admins access to historical compute, memory, network, and storage measurements across host servers, drives, volumes, virtual machines, and more.
+- [Delimit the allocation of volumes](storage-spaces/delimit-volume-allocation.md) - enables admins to manually delimit the allocation of volumes in Storage Spaces Direct. Doing so can significantly increase fault tolerance under certain conditions, but imposes some added management considerations and complexity
+
+### Storage Replica in Windows Server 2019
+
+Storage Replica was first released as a technology for Windows Server 2016 Datacenter Edition. Storage Replica enables synchronous and asynchronous block replication of volumes between servers or clusters for disaster recovery. Storage Replica also enables you to create stretch failover clusters that span two sites, with all nodes staying in sync.
+
+#### Storage Replica in Windows Server 2019, Standard Edition
+
+Beginning with Windows Server 2019, responding to customer requests, we've added Storage Replica to Windows Server 2019, Standard Edition, not just on Datacenter Edition.
+Storage Replica running Windows Server 2019, Standard Edition, has the following limitations:
+
+- Storage Replica replicates a single volume instead of an unlimited number of volumes.
+- Volumes can have one partnership instead of an unlimited number of partners.
+- Volumes can have a size of up to 2 TB instead of an unlimited size.
+
+#### Storage Replica log performance improvements
+
+We also made improvements to how the Storage Replica log tracks replication, improving replication throughput and latency, especially on all-flash storage as well as Storage Spaces Direct clusters that replicate between each other.
+
+To gain the increased performance, all members of the replication group must run Windows Server 2019.
+
+For more information about Storage Replica, see [Storage Replica](storage-replica/storage-replica-overview.md).
+
+## What's new in storage in Windows Server, version 1803
+
+### File Server Resource Manager
+
+Windows Server, version 1803 includes the ability to prevent the File Server Resource Manager service from creating a change journal (also known as a USN journal) on all volumes when the service starts. This can conserve space on each volume, but will disable real-time file classification. For more information, see [File Server Resource Manager overview](fsrm/fsrm-overview.md).
 
 ## What's new in storage in Windows Server, version 1709
 

@@ -7,16 +7,22 @@ ms.topic: article
 author: JasonGerend
 manager: dougkim
 ms.author: jgerend
-ms.date: 05/02/2018
+ms.date: 09/25/2018
 description: New and updated topics in the Failover Clustering documentation for Windows Server 2016
 ---
-# Change history for Failover Clustering topics in Windows Server 2016
+# Change history for Failover Clustering topics
 
->Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server 2019, Windows Server 2016, Windows Server (Semi-Annual Channel)
 
-This topic lists new and updated topics in the [Failover Clustering](failover-clustering-overview.md) documentation for Windows Server 2016.
+This topic lists new and updated topics in the [Failover Clustering](failover-clustering-overview.md) documentation for Windows Server.
 
 > If you're looking for update history for Windows Server 2016, see [Windows 10 and Windows Server 2016 update history](https://support.microsoft.com/help/4000825/windows-10-and-windows-server-2016-update-history).
+
+## September 2018
+
+|New or changed topic|Description|
+|---|---|
+|[What's new in clustering](whats-new-in-clustering.md)| Updates for Windows Server 2019|
 
 ## June 2018
 
