@@ -11,6 +11,7 @@
 ## Plan
 ### [Hardware requirements](clustering-requirements.md)
 ### [Use Cluster Shared Volumes (CSVs)](failover-cluster-csvs.md)
+### [Using guest VM clusters](../storage/storage-spaces/storage-spaces-direct-in-vm.md)
 ## Deploy
 ### [Create a failover cluster](create-failover-cluster.md)
 ### [Prestage a cluster in AD DS](prestage-cluster-adds.md)
