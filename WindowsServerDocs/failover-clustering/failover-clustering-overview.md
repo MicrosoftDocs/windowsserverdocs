@@ -36,7 +36,7 @@ For details on what's new, see [What's new in Failover Clustering](whats-new-in-
 * [Fault domain awareness](fault-domains.md)
 * [Simplified SMB Multichannel and multi-NIC cluster networks](smb-multichannel.md)
 * [VM load balancing](vm-load-balancing-overview.md)
-* [Cluster sets](../storage-spaces/cluster-sets.md)
+* [Cluster sets](../storage/storage-spaces/cluster-sets.md)
 
 ## Planning
 
