@@ -20,7 +20,7 @@ This topic explains the new and changed functionality in Failover Clustering Win
 ### Cluster sets
 
 Cluster sets increase the maximum number of servers that can be in a cluster in a single software-defined datacenter cloud by orders of magnitude.
- 
+
 For more info, see [Cluster sets](../storage/storage-spaces/cluster-sets.md).
 
 ## What's new in Windows Server 2016
