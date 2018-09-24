@@ -221,7 +221,7 @@ ms.localizationpriority: medium
                         </div>
                     </div>
                     <div class="cardText">
-                        <h3>Standard | Datacenter editions comparison</h3>
+                        <h3>Standard | Datacenter Editions comparison</h3>
                         <p>Description here.</p>
                     </div>
                 </div>
