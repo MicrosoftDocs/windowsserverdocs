@@ -56,14 +56,11 @@ Operating system components that are available as part of the Server Core App Co
 
         -   To run Failover Cluster Manager, enter **cluadmin** at the command prompt.
 
-**To add the Server Core App Compatibility feature on demand (FOD) to a running instance of Server Core**
+### To add the Server Core App Compatibility feature on demand (FOD) to a running instance of Server Core
 
->! [NOTE] Do not attempt to add the Server Core App Compatibility FOD to a Windows Server installation of Windows Server with Desktop Experience.
-
-> This procedure uses Deployment Image Servicing and Management
-(DISM.exe), a command-line tool. For more information about DISM commands, see
-[DISM Capabilities Package Servicing Command-Line
-Options](https://docs.microsoft.com/en-us/windows-hardware/manufacture/desktop/dism-capabilities-package-servicing-command-line-options).
+ >[!NOTE]  
+    > Do not attempt to add the Server Core App Compatibility FOD to a Windows Server installation of Windows Server with Desktop Experience.
+     > This procedure uses Deployment Image Servicing and Management (DISM.exe), a command-line tool. For more information about DISM commands, see [DISM Capabilities Package Servicing Command-Line Options](https://docs.microsoft.com/en-us/windows-hardware/manufacture/desktop/dism-capabilities-package-servicing-command-line-options).
 
 1. Download the Server FOD optional packages ISO, and copy the ISO to a shared folder on your local network.
 
@@ -89,10 +86,10 @@ Options](https://docs.microsoft.com/en-us/windows-hardware/manufacture/desktop/d
 
 9.  After the progress bar completes, restart the operating system at the prompt.
 
-**To optionally add Internet Explorer 11 to Server Core** (after adding the
-Server Core App Compatibility FOD)
+### To optionally add Internet Explorer 11 to Server Core** (after adding the Server Core App Compatibility FOD)
 
->! [NOTE] The Server Core App Compatibility FOD is required for the addition of Internet Explorer 11, but Internet Explorer 11 is not required to add the Server Core App Compatibility FOD.
+ >[!NOTE]  
+    > The Server Core App Compatibility FOD is required for the addition of Internet Explorer 11, but Internet Explorer 11 is not required to add the Server Core App Compatibility FOD.
 
 1.  Sign in as Administrator on the Server Core computer that has the App Compatibility FOD already added and the Server FOD optional package ISO copied locally.
 
