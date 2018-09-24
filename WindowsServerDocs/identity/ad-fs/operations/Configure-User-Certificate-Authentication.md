@@ -8,7 +8,6 @@ manager: samueld
 ms.date: 01/18/2018
 ms.topic: article
 ms.prod: windows-server-threshold
-ms.service: active-directory
 ms.technology: identity-adfs
 ---
 # Configuring AD FS for user certificate authentication
