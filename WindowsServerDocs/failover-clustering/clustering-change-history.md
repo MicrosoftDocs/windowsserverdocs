@@ -22,7 +22,7 @@ This topic lists new and updated topics in the [Failover Clustering](failover-cl
 
 |New or changed topic|Description|
 |---|---|
-|[What's new in clustering](whats-new-in-clustering.md)| Updates for Windows Server 2019|
+|[What's new in clustering](whats-new-in-failover-clustering.md)| Updates for Windows Server 2019|
 
 ## June 2018
 
