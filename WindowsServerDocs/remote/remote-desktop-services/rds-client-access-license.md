@@ -59,11 +59,11 @@ You can use the Remote Desktop Licensing Manager to track and generate reports o
 
 ## Note about CAL versions
 
-The CAL used by users or devices must correspond to the version of Windows Server that the user or device is connecting to. You can't use older CALs to access newer Windows Server versions, but you can use newer CALs to access older Windows Server versions.
+The CAL used by users or devices must correspond to the version of Windows Server that the user or device is connecting to. You can't use older CALs to access newer Windows Server versions, but you can use newer CALs to access earlier versions of Windows Server.
 
 The following table shows the CALs that are compatible on RD Session Hosts and RD Virtualization Hosts.
 
-|      |2008 R2 and older CAL|2012 CAL|2016 CAL|
+|      |2008 R2 and earlier CAL|2012 CAL|2016 CAL|
 |--------------|--------|------|------|
 | **2008, 2008 R2 license server**|Yes    | No   | No   |
 | **2012 license server** |Yes    | Yes  | No   |
