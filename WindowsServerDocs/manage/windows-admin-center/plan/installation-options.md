@@ -5,7 +5,7 @@ ms.technology: manage
 ms.topic: article
 author: nwashburn-ms
 ms.author: niwashbu
-ms.date: 06/18/2018
+ms.date: 09/23/2018
 ms.localizationpriority: medium
 ms.prod: windows-server-threshold
 ---
@@ -60,38 +60,13 @@ and that the version is 5.1 or higher.
 
 ## Deployment options
 
-<table>
-    <tr>
-        <td style="vertical-align: top; align: center">
-            <img src="../media/deployment-options-W10.png" height="250" alt="Diagram of Windows 10 desktop installation"> 
-        </td>
-        <td style="vertical-align: top; align: center">
-            <img src="../media/deployment-options-gateway.png" height="250" alt="Diagram of designated gateway server installation"> 
-        </td>
-        <td style="vertical-align: top; align: center">
-            <img src="../media/deployment-options-node.png" height="250" alt="Diagram of managed server installation"> 
-        </td>
-        <td style="vertical-align: top; align: center">
-            <img src="../media/deployment-options-HA.png" height="250" alt="Diagram of high availability deployment"> 
-        </td>
-    </tr>
-    <tr>
-        <td style="vertical-align: top;">
-Install on a local Windows 10 client that has connectivity to the managed servers.  Great for quick start, testing, ad-hoc or small scale scenarios.
-        </td>
-        <td style="vertical-align: top;">
-Install on a designated gateway server and access from any client browser with connectivity to the gateway server.
-        </td>
-        <td style="vertical-align: top;">
-Install directly on a managed server for the purpose of managing itself or a cluster in which it's a member node.
-        </td>
-        <td style="vertical-align: top;">
-Deploy in a failover cluster to enable high availability of the gateway service. Great for production environments to ensure resiliency of your management service.
-        </td>
-    </tr>
-</table>
+| ![](../media/deployment-options/W10.png) | ![](../media/deployment-options/gateway.png) | ![](../media/deployment-options/node.png) | ![](../media/deployment-options/HA.png) |
+|----|----|----|----|
+| Install on a local Windows 10 client that has connectivity to the managed servers.  Great for quick start, testing, ad-hoc or small scale scenarios.|Install on a designated gateway server and access from any client browser with connectivity to the gateway server. | Install directly on a managed server for the purpose of managing itself or a cluster in which it's a member node. | Deploy in a failover cluster to enable high availability of the gateway service. Great for production environments to ensure resiliency of your management service. |
+
 
 ## High availability
+
 You can enable high availability of the gateway service by deploying Windows Admin Center in a active-passive model on a failover cluster. If one of the nodes in the cluster fails, Windows Admin Center gracefully fails over to another node, letting you continue managing the servers in your environment seamlessly.
 
 [Learn how to deploy Windows Admin Center with high availability.](../deploy/high-availability.md)
