@@ -6,7 +6,7 @@ ms.technology: networking
 ms.topic: article
 ms.assetid: 695e6192-5e84-4ab4-b33e-8ebf6b8f5cbb
 ms.localizationpriority: medium
-manager: elizapo
+manager: dougkim
 ms.author: pashort
 author: shortpatti
 ms.date: 09/04/2018

@@ -5,7 +5,7 @@ ms.technology: manage
 ms.topic: article
 author: nwashburn-ms
 ms.author: niwashbu
-ms.date: 08/07/2018
+ms.date: 09/18/2018
 ms.localizationpriority: medium
 ms.prod: windows-server-threshold
 ---
@@ -13,9 +13,6 @@ ms.prod: windows-server-threshold
 # Develop a solution extension
 
 >Applies To: Windows Admin Center, Windows Admin Center Preview
-
-> [!NOTE]
-> While the Windows Admin Center SDK is in public preview, parts of this document only apply to [Windows Admin Center Preview](https://aka.ms/WACDownloadPage) and the corresponding [insider release](target-sdk-version.md) of Windows Admin Center SDK.
 
 Solutions primarily define a unique type of object you wish to manage through Windows Admin Center.  These solutions/connection types are included with Windows Admin Center by default:
 
@@ -74,7 +71,7 @@ Now that you've created an extension with the Windows Admin Center CLI, you are 
 - Create a [custom connection provider](guides\create-connection-provider.md)
 - Modify [root navigation behavior](guides\modify-root-navigation.md)
  
-Even more examples can be found our [GitHub SDK site](https://github.com/Microsoft/windows-admin-center-sdk/):
+Even more examples can be found our [GitHub SDK site](https://aka.ms/wacsdk):
 -  [Developer Tools](https://github.com/Microsoft/windows-admin-center-sdk/tree/master/windows-admin-center-developer-tools) is a fully functioning extension that can be side-loaded into Windows Admin Center, and contains a rich collection of sample functionality and tool examples that you can browse and use in your own extension.
 
 ## Build and side load your extension

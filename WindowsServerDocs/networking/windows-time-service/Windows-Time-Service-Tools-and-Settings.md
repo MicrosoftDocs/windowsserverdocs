@@ -4,7 +4,7 @@ title: Windows Time Service Tools and Settings
 description:
 author: shortpatti
 ms.author: pashort
-manager: elizapo
+manager: dougkim
 ms.date: 07/19/2018
 ms.topic: article
 ms.prod: windows-server-threshold

@@ -1,7 +1,7 @@
 ---
 title: What's New in SDN for Windows Server
 description: This topic provides information on new Software Defined Networking features for Windows Server 1709
-manager: elizapo
+manager: dougkim
 ms.prod: windows-server-threshold
 ms.technology: networking-hv-switch
 ms.topic: get-started-article

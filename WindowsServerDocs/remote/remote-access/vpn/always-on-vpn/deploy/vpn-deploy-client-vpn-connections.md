@@ -6,7 +6,7 @@ ms.technology: networking-ras
 ms.topic: article
 ms.date: 05/29/2018
 ms.assetid: d165822d-b65c-40a2-b440-af495ad22f42
-manager: elizapo
+manager: dougkim
 ms.author: pashort
 author: shortpatti
 ms.reviewer: deverette

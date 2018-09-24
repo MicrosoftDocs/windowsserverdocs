@@ -50,6 +50,8 @@ Perform the following steps if you receive unexpected results when you run the *
 5. Make sure vSwitch is created over the right physical adapter by checking its RDMA capabilities.
 6. Check EventViewer System log and filter by source “Hyper-V-VmSwitch”.
 
+--- 
+
 ## Get SmbClientNetworkInterface
 
 As an additional step to verify your RDMA configuration, run the following Windows PowerShell command on the Hyper-V server.
@@ -72,6 +74,8 @@ The host vNIC should appear as RDMA capable from SMB’s perspective as well.
 4. Make sure the Hyper-V Virtual Switch is created over the right physical adapter by checking its RDMA capabilities.
 5. Check EventViewer logs for “SMB Client” in **Application And Services | Microsoft | Windows**.
 
+--- 
+
 ## Get-NetAdapterQos
 
 You can view the network adapter quality of service \(QoS\) configuration by running the following Windows PowerShell command.
@@ -91,6 +95,7 @@ If your results are unexpected, perform the following steps.
 1. Ensure that the physical network adapter supports Data Center Bridging \(DCB\) and QoS
 2. Ensure that the network adapter drivers are up to date.
 
+--- 
 
 ## Get-SmbMultiChannelConnection
 
@@ -112,6 +117,8 @@ If your results are unexpected, perform the following steps.
 1. Make sure ping works both ways.
 2. Make sure the firewall is not blocking SMB connection initiation. Specifically, enable the firewall rule for SMB Direct port 5445 for iWARP and 445 for ROCE.
 
+--- 
+
 ## Get-SmbClientNetworkInterface
 
 You can use the following command to verify that the virtual NIC you enabled for RDMA is reported as RDMA\-capable by SMB.
@@ -132,6 +139,8 @@ If your results are unexpected, perform the following steps.
 1. Make sure ping works both ways.
 2. Make sure firewall is not blocking SMB connection initiation.
 
+--- 
+
 ## vstat \(Mellanox specific\)
 
 If you are using Mellanox network adapters, you can use the **vstat** command to verify the RDMA over Converged Ethernet \(RoCE\) version on Hyper-V nodes.
@@ -149,6 +158,7 @@ If your results are unexpected, perform the following steps.
 1. Set correct RoCE version using Set-MlnxDriverCoreSetting
 2. Install the latest firmware from Mellanox website.
 
+--- 
 
 ## Perfmon Counters
 
@@ -156,11 +166,12 @@ You can review counters in Performance Monitor to verify the RDMA activity of yo
 
 ![Performance monitor result examples](../../media/Converged-NIC/CNIC-Troubleshooting/cnic-tshoot-08.jpg)
 
-## All topics in this guide
+--- 
 
-This guide contains the following topics.
+## Related topics
 
 - [Converged NIC Configuration with a Single Network Adapter](cnic-single.md)
 - [Converged NIC Teamed NIC Configuration](cnic-datacenter.md)
 - [Physical Switch Configuration for Converged NIC](cnic-app-switch-config.md)
-- [Troubleshooting Converged NIC Configurations](cnic-app-troubleshoot.md)
+
+---

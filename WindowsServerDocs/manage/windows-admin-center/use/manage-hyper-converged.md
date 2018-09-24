@@ -27,7 +27,7 @@ Hyper-Converged Infrastructure consolidates software-defined compute, storage, a
 
 [Windows Admin Center](../understand/windows-admin-center.md) is the next-generation management tool for Windows Server, the successor to traditional "in-box" tools like Server Manager. It's free and can be installed and used without an Internet connection. You can use Windows Admin Center to manage and monitor Hyper-Converged Infrastructure running Windows Server 2016 or an Insider Preview build of Windows Server 2019.
 
-![Hyper-converged cluster dashboard](../media/manage-hyper-converged/hci-dashboard-v1804.png)
+![Hyper-converged cluster dashboard](../media/manage-hyper-converged/hci-dashboard-v1809.png)
 
 ## Key features
 
