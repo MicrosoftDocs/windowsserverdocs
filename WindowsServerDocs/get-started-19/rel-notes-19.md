@@ -1,5 +1,5 @@
 ---
-title: Release Notes - Important issues in Windows Server 2019
+title: Release Notes: Important issues in Windows Server 2019
 description: "Summarizes critical issues requiring workarounds to avoid crashes, hanging, installation failure and data loss."
 ms.custom: na
 ms.prod: windows-server-threshold
@@ -22,23 +22,7 @@ These release notes summarize the most critical issues in the Windows Server&reg
 
 This document is continuously updated. As critical issues requiring a workaround are discovered, they are added, as are new workarounds and fixes as they become available.  
   
-## Access
-
-## Cluster
-
-## Manage
-
-## Network
-
-## Remote
-
-## Secure
-
-## Store
-
-## Troubleshoot
-
-## Virtualize
+## Release Notes
 
 ### Copyright  
 This document is provided "as-is". Information and views expressed in this document, including URL and other Internet Web site references, may change without notice.  

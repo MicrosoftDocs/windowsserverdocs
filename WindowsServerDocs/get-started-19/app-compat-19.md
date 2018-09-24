@@ -1,6 +1,6 @@
 ---
 title: Microsoft Server Application Compatibility
-description: "Compatibility chart for Server 2019 and Microsoft server applications."
+description: "Compatibility table for Server 2019 and Microsoft server applications."
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,7 +14,7 @@ ms.author: coreyp-at-msft
 manager: jasgroce
 ms.localizationpriority: medium
 ---
-# Windows Server 2016 and Microsoft Server Application Compatibility
+# Windows Server 2019 and Microsoft Server Application Compatibility
 
 >Applies To: Windows Server 2019
 

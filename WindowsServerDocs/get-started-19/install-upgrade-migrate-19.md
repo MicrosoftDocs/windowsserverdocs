@@ -1,5 +1,5 @@
 ---
-title: Windows Server 2019 install | upgrade | migrate
+title: Install | Upgrade | Migrate Windows Server 2019 
 description: "How to clean install, in-place upgrade or migrate to, Windows Server 2019."
 ms.custom: na
 ms.prod: windows-server-threshold
@@ -14,7 +14,7 @@ ms.author: coreyp
 manager: jasgroce
 ms.localizationpriority: medium
 ---
-# Windows Server Installation and Upgrade
+# Windows Server Install | Upgrade | Migrate
 
 >Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2, Windows Server 2008
 
