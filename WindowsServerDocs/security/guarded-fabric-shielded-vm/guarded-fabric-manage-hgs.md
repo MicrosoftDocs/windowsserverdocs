@@ -494,7 +494,7 @@ On the newly-added Hyper-V host, run `Set-HgsClientConfiguration` and supply the
 These URLs can be obtained by running `Get-HgsServer` on any HGS node.
 
 ```powershell
-Set-HgsClientConfiguration -KeyProtectionServerUrl 'http://hgs.relecloud.com/KeyProtection' -AttestationServerUrl 'http://hgs.relecloud.com/Attestation'
+Set-HgsClientConfiguration -KeyProtectionServerUrl 'http://hgs.bastion.local/KeyProtection' -AttestationServerUrl 'http://hgs.bastion.local/Attestation'
 ```
 
 If the resulting status does not indicate "IsHostGuarded : True" you will need to troubleshoot the configuration.
@@ -544,7 +544,7 @@ $targets = @()
 $hostNames | ForEach-Object { $targets += New-HgsTraceTarget -Credential $credential -Role GuardedHost -HostName $_ }
 
 $hgsCredential = Get-Credential -Message 'Enter an admin credential for HGS'
-$targets += New-HgsTraceTarget -Credential $hgsCredential -Role HostGuardianService -HostName 'HGS01.relecloud.com'
+$targets += New-HgsTraceTarget -Credential $hgsCredential -Role HostGuardianService -HostName 'HGS01.bastion.local'
 
 # Initiate the synthetic attestation attempt
 Get-HgsTrace -RunDiagnostics -Target $targets -Diagnostic GuardedFabricTpmMode 

@@ -72,7 +72,7 @@ Let's imagine this scenario—you have an existing Hyper-V fabric, like Contoso.
 
 The Hyper-V hosts need to run Windows Server 2016 Datacenter edition. If you are upgrading hosts, you can [upgrade](https://technet.microsoft.com/windowsserver/dn527667.aspx) from Standard edition to Datacenter edition.
 
-![Upgrade Hyper-V hosts](../media/Guarded-Fabric-Shielded-VM/guarded-fabric-deployment-step-one-upgrade-hyper-v.png)
+![Upgrade Hyper-V hosts](../../security/media/Guarded-Fabric-Shielded-VM/guarded-fabric-deployment-step-one-upgrade-hyper-v.png)
 
 ## Step 2: Deploy the Host Guardian Service (HGS)
 

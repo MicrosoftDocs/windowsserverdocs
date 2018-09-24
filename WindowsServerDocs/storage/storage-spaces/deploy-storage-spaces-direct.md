@@ -292,11 +292,11 @@ The next step in setting up the cluster services for your file server is creatin
 2.  On the **Select Role** page, click **File Server**.
 3.  On the **File Server Type** page, click **Scale-Out File Server for application data**.
 4.  On the **Client Access Point** page, type a name for the Scale-Out File Server.
-5.  Verify that the role was successfully set up by going to **Roles** and confirming that the **Status** column shows **Running** next to the clustered file server role you created, as shown in Figure 2.
+5.  Verify that the role was successfully set up by going to **Roles** and confirming that the **Status** column shows **Running** next to the clustered file server role you created, as shown in Figure 1.
 
-    ![Failover Cluster Manager showing the Scale&#45;Out File Server](media\Hyper-converged-solution-using-Storage-Spaces-Direct-in-Windows-Server-2016\SOFS_in_FCM.png "Failover Cluster Manager showing the Scale-Out File Server")
+    ![Screenshot of Failover Cluster Manager showing the Scale-Out File Server](media\Hyper-converged-solution-using-Storage-Spaces-Direct-in-Windows-Server-2016\SOFS_in_FCM.png "Failover Cluster Manager showing the Scale-Out File Server")
 
-     **Figure 2** Failover Cluster Manager showing the Scale-Out File Server with the Running status
+     **Figure 1** Failover Cluster Manager showing the Scale-Out File Server with the Running status
 
 > [!NOTE]
 >  After creating the clustered role, there might be some network propagation delays that could prevent you from creating file shares on it for a few minutes, or potentially longer.  

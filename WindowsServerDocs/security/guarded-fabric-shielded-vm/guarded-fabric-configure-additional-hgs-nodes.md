@@ -100,6 +100,8 @@ Make sure that each additional node:
 
 [!INCLUDE [Initialize the HGS server](../../../includes/guarded-fabric-initialize-hgs-on-the-node.md)] 
 
+It will take up to 10 minutes for the encryption and signing certificates from the first HGS server to replicate to this node.
+
 ### Install the private keys for the certificates
 
 [!INCLUDE [Install private keys](../../../includes/guarded-fabric-install-private-keys.md)]
