@@ -6,7 +6,6 @@ ms.prod: windows-server-threshold
 ms.technology: networking-ras
 documentationcenter: ''
 ms.assetid: 
-ms.service: active-directory
 ms.workload: identity
 ms.tgt_pltfrm: na
 ms.devlang: na
