@@ -29,7 +29,7 @@ ms.localizationpriority: medium
                                             </div>
                                         </div>
                                         <div class="cardText">
-                                            <h2>What's new?</h2>
+                                            <h3>What's new?</h3>
                                             <p>Find out what's new in Windows Server 2019</p>
                                         </div>
                                     </div>
@@ -128,7 +128,7 @@ ms.localizationpriority: medium
                     </div>
                     <div class="cardText">
                         <h3>Core | Full install comparison</h3>
-                        <p>Description here.</p>
+                        <p>Find out what makes Windows Server 2019 Core and Full installation options different</p>
                     </div>
                 </div>
             </div>
@@ -146,8 +146,8 @@ ms.localizationpriority: medium
                         </div>
                     </div>
                     <div class="cardText">
-                        <h3>Features On Demand</h3>
-                        <p>Description here.</p>
+                        <h3>Install Windows Server Features On Demand</h3>
+                        <p>Features on Demand (FODs) are Windows Server feature packages that can be added at any time. </p>
                     </div>
                 </div>
             </div>
@@ -166,7 +166,7 @@ ms.localizationpriority: medium
                     </div>
                     <div class="cardText">
                         <h3>Servicing channels</h3>
-                        <p>Description here.</p>
+                        <p>Better plan your deployment and patching schedules by understanding our the difference between our Long Term Servicing Channel (LTSB) and Semi-Annual Channel releases.</p>
                     </div>
                 </div>
             </div>
@@ -203,7 +203,7 @@ ms.localizationpriority: medium
                     </div>
                     <div class="cardText">
                         <h3>System limits | maximums</h3>
-                        <p>Description here.</p>
+                        <p>Plan your datacenter capacity by first knowing what Windows Server 2019 requires to to run at top efficiency.</p>
                     </div>
                 </div>
             </div>
@@ -222,7 +222,7 @@ ms.localizationpriority: medium
                     </div>
                     <div class="cardText">
                         <h3>Standard | Datacenter Editions comparison</h3>
-                        <p>Description here.</p>
+                        <p>Windows Server Standard and Datacenter Editions have different capabilities. Find out which one you need.</p>
                     </div>
                 </div>
             </div>
@@ -241,7 +241,7 @@ ms.localizationpriority: medium
                     </div>
                     <div class="cardText">
                         <h3>Removed features</h3>
-                        <p>Description here.</p>                    </div>
+                        <p>Part of improving Server versions is removing outdated technologies to make way for new ones. Find out what's been removed in WIndows Server 2019 from previous versions.</p>                    </div>
                 </div>
             </div>
         </div>
