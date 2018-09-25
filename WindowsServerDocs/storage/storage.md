@@ -1,5 +1,5 @@
 ---
-title: Store
+title: Storage
 description: 
 author: JasonGerend
 manager: elizapo
@@ -25,7 +25,7 @@ Storage in Windows Server provides new and improved features for software-define
 <hr />
 <ul class="cardsF panelContent">
 <li>
- <a href="get-started-19/whats-new-19.md">
+ <a href="(../whats-new-in-storage.md)">
                             <div class="cardSize">
                                 <div class="cardPadding">
                                     <div class="card">
