@@ -25,7 +25,7 @@ Storage in Windows Server provides new and improved features for software-define
 <hr />
 <ul class="cardsF panelContent">
 <li>
- <a href="(../whats-new-in-storage.md)">
+ <a href="(../storage/whats-new-in-storage.md)">
                             <div class="cardSize">
                                 <div class="cardPadding">
                                     <div class="card">
