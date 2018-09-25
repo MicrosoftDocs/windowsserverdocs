@@ -58,7 +58,7 @@ Storage in Windows Server provides new and improved features for software-define
                     <div class="cardText">
                         <h2>Software-defined storage for virtualized workloads</h2>
 <HR />
-                        <p><h3><a href="storage-spaces/storage-spaces-direct-overview.md">Storage Spaces Direct</a></h3> Directly attached local storage, including SATA and NVME devices, to optimize disk usage after adding new physical disks, and for faster virtual disk repair times. Also see [Storage Spaces]<a href="storage-spaces/overview.md">Storage Spaces</a> for info on shared SAS and stand-alone Storage Spaces.</p>
+                        <p><h3><a href="storage-spaces/storage-spaces-direct-overview.md">Storage Spaces Direct</a></h3> Directly attached local storage, including SATA and NVME devices, to optimize disk usage after adding new physical disks, and for faster virtual disk repair times. Also see <a href="storage-spaces/overview.md">Storage Spaces</a> for info on shared SAS and stand-alone Storage Spaces.</p>
 <HR />
                         <p><h3><a href="storage-replica/storage-replica-overview.md">Storage Replica</a></h3> Storage-agnostic, block-level, synchronous replication between clusters or servers for disaster preparedness and recovery, as well as stretching of a failover cluster across sites for high availability. Synchronous replication enables mirroring of data in physical sites with crash-consistent volumes, ensuring zero data loss at the file system level.</p>
 <HR />
