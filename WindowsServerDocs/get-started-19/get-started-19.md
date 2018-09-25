@@ -52,7 +52,7 @@ ms.localizationpriority: medium
                     </div>
                     <div class="cardText">
                         <h3>Install | Upgrade | Migrate</h3>
-                        <p>Description here.</p>
+                        <p>You can move to Windows Server 2019 a number of ways. Whether you are newly installing, upgrading in-place, or migrating applications and Server Roles, discover the best approach here.</p>
                     </div>
                 </div>
             </div>
