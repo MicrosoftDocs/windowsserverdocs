@@ -13,7 +13,7 @@ ms.topic: landing-page
 ms.author: jgerend
 ms.localizationpriority: medium
 ---
-# Store
+# Storage
 
 >Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
 
