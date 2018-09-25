@@ -36,15 +36,15 @@ These are the top Microsoft Support solutions for the most common issues experie
                     <div class="cardText">
                         <h2>Solutions for installing or upgrading Windows Server</h2>
 <HR />              
-                    <a href="\windows\deployment\upgrade\resolve-windows-10-upgrade-errors">Resolve Windows 10 upgrade errors : Technical information for IT Pros</a>
-                    <a href="https://support.microsoft.com/en-US/help/4035631">Servicing stack update for Windows 10 Version 1607 and Windows Server 2016: August 8, 2017)</a>
-                    <a href="https://support.microsoft.com/en-US/help/4033524">Compatibility update for upgrading to Windows 10 Version 1607 and Windows Server 2016: August 3, 2017)</a>
-                    <a href="https://support.microsoft.com/en-US/help/4014997">An in-place system upgrade is not supported on Windows-based Azure VMs)</a>
-                    <a href="..\get-started\supported-upgrade-paths.md">Upgrade and conversion options for Windows Server 2016)</a>
-                    <a href="..\get-started\server-role-upgradeability-table.md">Server role upgrade and migration matrix for Windows Server 2016)</a>
-                    <a href="..\get-started\installation-and-upgrade.md">Windows Server Installation and Upgrade)</a>
-                    <a href="..\get-started\windows-server-2016-ga-release-notes.md">Release Notes: Important Issues in Windows Server 2016)</a>
-                    <a href="..\get-started\recommendations-moving-to-server2016.md">Recommendations for moving to Windows Server 2016)</a>
+                        - <a href="\windows\deployment\upgrade\resolve-windows-10-upgrade-errors">Resolve Windows 10 upgrade errors : Technical information for IT Pros</a>
+                        - <a href="https://support.microsoft.com/en-US/help/4035631">Servicing stack update for Windows 10 Version 1607 and Windows Server 2016: August 8, 2017)</a>
+                        - <a href="https://support.microsoft.com/en-US/help/4033524">Compatibility update for upgrading to Windows 10 Version 1607 and Windows Server 2016: August 3, 2017)</a>
+                        - <a href="https://support.microsoft.com/en-US/help/4014997">An in-place system upgrade is not supported on Windows-based Azure VMs)</a>
+                        - <a href="..\get-started\supported-upgrade-paths.md">Upgrade and conversion options for Windows Server 2016)</a>
+                        - <a href="..\get-started\server-role-upgradeability-table.md">Server role upgrade and migration matrix for Windows Server 2016)</a>
+                        - <a href="..\get-started\installation-and-upgrade.md">Windows Server Installation and Upgrade)</a>
+                        - <a href="..\get-started\windows-server-2016-ga-release-notes.md">Release Notes: Important Issues in Windows Server 2016)</a>
+                        - <a href="..\get-started\recommendations-moving-to-server2016.md">Recommendations for moving to Windows Server 2016)</a>
                 </div>
             </div>
         </div>
@@ -61,13 +61,13 @@ These are the top Microsoft Support solutions for the most common issues experie
                     <div class="cardText">
                         <h2>Solutions for Volume Activation</h2>
 <HR />
-                     <a href="../get-started/server-2016-activation.md">Windows Server 2016 Activation</a>
-                     <a href="https://technet.microsoft.com/library/jj134256(ws.11).aspx:>Review and Select Activation Methods</a>
-                     <a href="https://technet.microsoft.com/library/dn502528.aspx">Activation Error Codes for Volume Activation</a>
-                     <a href="https://technet.microsoft.com/library/ee939272.aspx">How to troubleshoot the Key Management Service (KMS)</a>
-                     <a href="https://technet.microsoft.com/library/ff793439.aspx">Volume Activation Troubleshooting</a>
-                     <a href="https://technet.microsoft.com/library/ff793399.aspx">Activation Error Codes</a>
-                     <a href="https://support.microsoft.com/help/2796988/windows-8-or-windows-server-2012-installation-may-fail-with-error-mess">Windows installation may fail with error "The product key entered does not match any of the Windows images available for installation. Enter a different product key"</a>
+                        - <a href="../get-started/server-2016-activation.md">Windows Server 2016 Activation</a>
+                        - <a href="https://technet.microsoft.com/library/jj134256(ws.11).aspx">Review and Select Activation Methods</a>
+                        - <a href="https://technet.microsoft.com/library/dn502528.aspx">Activation Error Codes for Volume Activation</a>
+                        - <a href="https://technet.microsoft.com/library/ee939272.aspx">How to troubleshoot the Key Management Service (KMS)</a>
+                        - <a href="https://technet.microsoft.com/library/ff793439.aspx">Volume Activation Troubleshooting</a>
+                        - <a href="https://technet.microsoft.com/library/ff793399.aspx">Activation Error Codes</a>
+                        - <a href="https://support.microsoft.com/help/2796988/windows-8-or-windows-server-2012-installation-may-fail-with-error-mess">Windows installation may fail with error "The product key entered does not match any of the Windows images available for installation. Enter a different product key"</a>
             </div>
             </div>
         </div>
@@ -84,14 +84,13 @@ These are the top Microsoft Support solutions for the most common issues experie
                     <div class="cardText">
                         <h2>Solutions related to DCPromo and installing domain controllers</h2>
 <HR />
-
-                     <a href="https://technet.microsoft.com/library/dd772723(v=ws.10).aspx">Active Directory and Active Directory Domain Services Port Requirements</a>
-                     <a href="http://blogs.msmvps.com/acefekay/2011/11/01/active-directory-firewall-ports-let-s-try-to-make-this-simple/">Active Directory Firewall Ports – Let’s Try To Make This Simple</a>
-                     <a href="https://technet.microsoft.com/library/ff728623(v=exchg.150).aspx">Exchange Server support for Windows Server 2016</a>
-                     <a href="https://support.microsoft.com/kb/255504">Using Ntdsutil.exe to transfer or seize FSMO roles to a domain controller</a>
-                     <a href="../identity/ad-ds/deploy/troubleshooting-domain-controller-deployment.md">Troubleshooting Domain Controller Deployment</a>
-                     <a href="https://msdn.microsoft.com/library/bb727058.aspx">Troubleshooting Active Directory Installation Wizard Problems</a>
-                     <a href="https://technet.microsoft.com/library/cc754463(v=ws.10).aspx">Known Issues for Installing and Removing AD DS</a>
+                        - <a href="https://technet.microsoft.com/library/dd772723(v=ws.10).aspx">Active Directory and Active Directory Domain Services Port Requirements</a>
+                        - <a href="http://blogs.msmvps.com/acefekay/2011/11/01/active-directory-firewall-ports-let-s-try-to-make-this-simple/">Active Directory Firewall Ports – Let’s Try To Make This Simple</a>
+                        - <a href="https://technet.microsoft.com/library/ff728623(v=exchg.150).aspx">Exchange Server support for Windows Server 2016</a>
+                        - <a href="https://support.microsoft.com/kb/255504">Using Ntdsutil.exe to transfer or seize FSMO roles to a domain controller</a>
+                        - <a href="../identity/ad-ds/deploy/troubleshooting-domain-controller-deployment.md">Troubleshooting Domain Controller Deployment</a>
+                        - <a href="https://msdn.microsoft.com/library/bb727058.aspx">Troubleshooting Active Directory Installation Wizard Problems</a>
+                        - <a href="https://technet.microsoft.com/library/cc754463(v=ws.10).aspx">Known Issues for Installing and Removing AD DS</a>
             </div>
         </div>
     </li>
@@ -108,15 +107,15 @@ These are the top Microsoft Support solutions for the most common issues experie
                     </div>
                     <div class="cardText">
                         <h2>Solutions for Active Directory Federation Services (AD FS)</h2>
-                     <a href="/azure/active-directory/active-directory-conditional-access-automatic-device-registration-setup">How to configure automatic registration of Windows domain-joined devices with Azure Active Directory</a>
-                     <a href="/azure/active-directory/device-management-hybrid-azuread-joined-devices-setup#step-2-setup-issuance-of-claims">Setup issuance of claims</a>
-                     <a href="../identity/ad-fs/operations/configure-ad-fs-to-authenticate-users-stored-in-ldap-directories.md">Configure AD FS to authenticate users stored in LDAP directories</a>
-                     <a href="../identity/ad-fs/operations/ad-fs-support-for-alternate-hostname-binding-for-certificate-authentication.md">AD FS support for alternate hostname binding for certificate authentication</a>
-                     <a href="https://blogs.technet.microsoft.com/tspring/2017/01/20/federated-to-microsoft-cloud-and-account-lockouts/">Protect against password attacks</a>
-                     <a href="../identity/ad-fs/deployment/upgrading-to-ad-fs-in-windows-server-2016.md">Upgrading to AD FS in Windows Server 2016 using a WID database</a>
-                     <a href="../identity/ad-fs/operations/configure-device-based-conditional-access-on-premises.md">Windows 10 Sign on – enabling device authentication with AD FS</a>
-                     <a href="../identity/ad-fs/operations/manage-ssl-certificates-ad-fs-wap-2016.md">Managing SSL Certificates in AD FS and WAP in Windows Server 2016</a>
-                     <a href="../identity/ad-fs/operations/access-control-policies-in-ad-fs.md">Access Control Policies in Windows Server 2016 AD FS</a>
+                        - <a href="/azure/active-directory/active-directory-conditional-access-automatic-device-registration-setup">How to configure automatic registration of Windows domain-joined devices with Azure Active Directory</a>
+                        - <a href="/azure/active-directory/device-management-hybrid-azuread-joined-devices-setup#step-2-setup-issuance-of-claims">Setup issuance of claims</a>
+                        - <a href="../identity/ad-fs/operations/configure-ad-fs-to-authenticate-users-stored-in-ldap-directories.md">Configure AD FS to authenticate users stored in LDAP directories</a>
+                        - <a href="../identity/ad-fs/operations/ad-fs-support-for-alternate-hostname-binding-for-certificate-authentication.md">AD FS support for alternate hostname binding for certificate authentication</a>
+                        - <a href="https://blogs.technet.microsoft.com/tspring/2017/01/20/federated-to-microsoft-cloud-and-account-lockouts/">Protect against password attacks</a>
+                        - <a href="../identity/ad-fs/deployment/upgrading-to-ad-fs-in-windows-server-2016.md">Upgrading to AD FS in Windows Server 2016 using a WID database</a>
+                        - <a href="../identity/ad-fs/operations/configure-device-based-conditional-access-on-premises.md">Windows 10 Sign on – enabling device authentication with AD FS</a>
+                        - <a href="../identity/ad-fs/operations/manage-ssl-certificates-ad-fs-wap-2016.md">Managing SSL Certificates in AD FS and WAP in Windows Server 2016</a>
+                        - <a href="../identity/ad-fs/operations/access-control-policies-in-ad-fs.md">Access Control Policies in Windows Server 2016 AD FS</a>
             </div>
         </div>
     </li>
@@ -132,14 +131,14 @@ These are the top Microsoft Support solutions for the most common issues experie
                     <div class="cardText">
                         <h2>Solutions related to Active Directory replication</h2>
 
-                      <a href="../identity/ad-ds/manage/troubleshoot/troubleshooting-active-directory-replication-problems.md">Troubleshooting Active Directory Replication Problems</a>
-                      <a href="https://www.microsoft.com/en-in/download/details.aspx?id=30005">e2e: How to troubleshoot common Active Directory replication errors</a>
-                      <a href="https://support.microsoft.com/kb/3108513">Download Active Directory Replication Status Tool from the Microsoft Download Center</a>
-                      <a href="https://support.microsoft.com/kb/2028495">Troubleshooting AD Replication error 8606: Insufficient attributes were given to create an object</a>
-                      <a href="https://support.microsoft.com/kb/837932">Event ID 2108 and Event ID 1084 occur during inbound replication of Active Directory in Windows 2000 Server and in Windows Server 2003</a>
-                      <a href="https://support.microsoft.com/kb/2645996">Troubleshooting AD Replication error 8451: The replication operation encountered a database error</a>
-                      <a href="https://support.microsoft.com/kb/2025726">Troubleshooting AD Replication error 1127: While accessing the hard disk, a disk operation failed even after retries</a>
-                      <a href="https://technet.microsoft.com/en-us/library/cc816907.aspx">Clean Up Server Metadata</a>
+                         - <a href="../identity/ad-ds/manage/troubleshoot/troubleshooting-active-directory-replication-problems.md">Troubleshooting Active Directory Replication Problems</a>
+                         - <a href="https://www.microsoft.com/en-in/download/details.aspx?id=30005">e2e: How to troubleshoot common Active Directory replication errors</a>
+                         - <a href="https://support.microsoft.com/kb/3108513">Download Active Directory Replication Status Tool from the Microsoft Download Center</a>
+                         - <a href="https://support.microsoft.com/kb/2028495">Troubleshooting AD Replication error 8606: Insufficient attributes were given to create an object</a>
+                         - <a href="https://support.microsoft.com/kb/837932">Event ID 2108 and Event ID 1084 occur during inbound replication of Active Directory in Windows 2000 Server and in Windows Server 2003</a>
+                         - <a href="https://support.microsoft.com/kb/2645996">Troubleshooting AD Replication error 8451: The replication operation encountered a database error</a>
+                         - <a href="https://support.microsoft.com/kb/2025726">Troubleshooting AD Replication error 1127: While accessing the hard disk, a disk operation failed even after retries</a>
+                         - <a href="https://technet.microsoft.com/en-us/library/cc816907.aspx">Clean Up Server Metadata</a>
                 </div>
             </div>
         </div>
