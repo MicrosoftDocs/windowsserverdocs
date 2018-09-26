@@ -31,7 +31,7 @@ These are the top Microsoft Support solutions for the most common issues experie
                         </div>
                     </div>
                     <div class="cardText">
-                        <h2>Solutions for installing or upgrading Windows Server</h2>
+                        <h4>Solutions for installing or upgrading Windows Server</h4>
 
                         <a href="\windows\deployment\upgrade\resolve-windows-10-upgrade-errors">Resolve Windows 10 upgrade errors : Technical information for IT Pros</a>
 <hr> 
@@ -65,7 +65,7 @@ These are the top Microsoft Support solutions for the most common issues experie
                         </div>
                     </div>
                     <div class="cardText">
-                        <h2>Solutions for Volume Activation</h2>
+                        <h3>Solutions for Volume Activation</h3>
 
                         <a href="../get-started/server-2016-activation.md">Windows Server 2016 Activation</a>
 <hr>
@@ -95,7 +95,7 @@ These are the top Microsoft Support solutions for the most common issues experie
                         </div>
                     </div>
                     <div class="cardText">
-                        <h2>Solutions related to DCPromo and installing domain controllers</h2>
+                        <h3>Solutions related to DCPromo and installing domain controllers</h3>
 
                         <a href="https://technet.microsoft.com/library/dd772723(v=ws.10).aspx">Active Directory and Active Directory Domain Services Port Requirements</a>
 <hr>
@@ -125,7 +125,7 @@ These are the top Microsoft Support solutions for the most common issues experie
                         </div>
                     </div>
                     <div class="cardText">
-                        <h2>Solutions for Active Directory Federation Services (AD FS)</h2>
+                        <h3>Solutions for Active Directory Federation Services (AD FS)</h3>
 
                         <a href="/azure/active-directory/active-directory-conditional-access-automatic-device-registration-setup">How to configure automatic registration of Windows domain-joined devices with Azure Active Directory</a>
 <hr>
@@ -158,7 +158,7 @@ These are the top Microsoft Support solutions for the most common issues experie
                         </div>
                     </div>
                     <div class="cardText">
-                        <h2>Solutions related to Active Directory replication</h2>
+                        <h3>Solutions related to Active Directory replication</h3>
 
                          <a href="../identity/ad-ds/manage/troubleshoot/troubleshooting-active-directory-replication-problems.md">Troubleshooting Active Directory Replication Problems</a>
 <hr>
