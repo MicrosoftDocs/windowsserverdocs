@@ -11,7 +11,6 @@ ms.topic: landing-page
 author: kaushika-msft
 ms.author: elizapo
 ---
-
 # Top support solutions for Windows Server 2016
 
 Microsoft regularly releases both updates and solutions for Windows Server. To ensure your servers can receive future updates, including security updates, it's important to keep your servers updated. Check out [Windows 10 and Windows Server 2016 update history](https://support.microsoft.com/en-us/help/4000825/windows-10-windows-server-2016-update-history) for a complete list of released updates.
@@ -51,6 +50,7 @@ These are the top Microsoft Support solutions for the most common issues experie
                         - <a href="..\get-started\windows-server-2016-ga-release-notes.md">Release Notes: Important Issues in Windows Server 2016)</a>
 
                         - <a href="..\get-started\recommendations-moving-to-server2016.md">Recommendations for moving to Windows Server 2016)</a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -79,6 +79,7 @@ These are the top Microsoft Support solutions for the most common issues experie
                         - <a href="https://technet.microsoft.com/library/ff793399.aspx">Activation Error Codes</a>
 
                         - <a href="https://support.microsoft.com/help/2796988/windows-8-or-windows-server-2012-installation-may-fail-with-error-mess">Windows installation may fail with error "The product key entered does not match any of the Windows images available for installation. Enter a different product key"</a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -108,6 +109,7 @@ These are the top Microsoft Support solutions for the most common issues experie
                         - <a href="https://msdn.microsoft.com/library/bb727058.aspx">Troubleshooting Active Directory Installation Wizard Problems</a>
 
                         - <a href="https://technet.microsoft.com/library/cc754463(v=ws.10).aspx">Known Issues for Installing and Removing AD DS</a>
+                      </div>
                  </div>
             </div>
         </div>
@@ -139,6 +141,7 @@ These are the top Microsoft Support solutions for the most common issues experie
                         - <a href="../identity/ad-fs/operations/manage-ssl-certificates-ad-fs-wap-2016.md">Managing SSL Certificates in AD FS and WAP in Windows Server 2016</a>
 
                         - <a href="../identity/ad-fs/operations/access-control-policies-in-ad-fs.md">Access Control Policies in Windows Server 2016 AD FS</a>
+                      </div>
                  </div>
             </div>
         </div>
@@ -170,6 +173,7 @@ These are the top Microsoft Support solutions for the most common issues experie
                          - <a href="https://support.microsoft.com/kb/2025726">Troubleshooting AD Replication error 1127: While accessing the hard disk, a disk operation failed even after retries</a>
 
                          - <a href="https://technet.microsoft.com/en-us/library/cc816907.aspx">Clean Up Server Metadata</a>
+                    </div>
                 </div>
             </div>
         </div>
