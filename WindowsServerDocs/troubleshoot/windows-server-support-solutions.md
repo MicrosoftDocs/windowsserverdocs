@@ -32,23 +32,23 @@ These are the top Microsoft Support solutions for the most common issues experie
                     </div>
                     <div class="cardText">
                         <h2>Solutions for installing or upgrading Windows Server</h2>
-<HR />              
+<HR>              
                         <p><a href="\windows\deployment\upgrade\resolve-windows-10-upgrade-errors">Resolve Windows 10 upgrade errors : Technical information for IT Pros</a>
-<HR />   
+<HR>   
                         <a href="https://support.microsoft.com/en-US/help/4035631">Servicing stack update for Windows 10 Version 1607 and Windows Server 2016: August 8, 2017)</a>
-<HR />   
+<HR>   
                         <a href="https://support.microsoft.com/en-US/help/4033524">Compatibility update for upgrading to Windows 10 Version 1607 and Windows Server 2016: August 3, 2017)</a>
-<HR />   
+<HR>   
                         <a href="https://support.microsoft.com/en-US/help/4014997">An in-place system upgrade is not supported on Windows-based Azure VMs)</a>
-<HR />   
+<HR>   
                         <a href="..\get-started\supported-upgrade-paths.md">Upgrade and conversion options for Windows Server 2016)</a>
-<HR />   
+<HR>   
                         <a href="..\get-started\server-role-upgradeability-table.md">Server role upgrade and migration matrix for Windows Server 2016)</a>
-<HR />   
+<HR>   
                         <a href="..\get-started\installation-and-upgrade.md">Windows Server Installation and Upgrade)</a>
-<HR />   
+<HR>   
                         <a href="..\get-started\windows-server-2016-ga-release-notes.md">Release Notes: Important Issues in Windows Server 2016)</a>
-<HR />   
+<HR>   
                        <a href="..\get-started\recommendations-moving-to-server2016.md">Recommendations for moving to Windows Server 2016)</a>
                     </div>
                 </div>
@@ -66,18 +66,18 @@ These are the top Microsoft Support solutions for the most common issues experie
                     </div>
                     <div class="cardText">
                         <h2>Solutions for Volume Activation</h2>
-<HR />
+<br>
                         <a href="../get-started/server-2016-activation.md">Windows Server 2016 Activation</a>
-<HR />   
+<br>   
                         <a href="https://technet.microsoft.com/library/jj134256(ws.11).aspx">Review and Select Activation Methods</a>
-<HR />   
+<br>   
                         <a href="https://technet.microsoft.com/library/dn502528.aspx">Activation Error Codes for Volume Activation</a>
-<HR />   
+<br>   
                         <a href="https://technet.microsoft.com/library/ee939272.aspx">How to troubleshoot the Key Management Service (KMS)</a>
-<HR />   
+<br>   
                         <a href="https://technet.microsoft.com/library/ff793439.aspx">Volume Activation Troubleshooting</a>
                         <a href="https://technet.microsoft.com/library/ff793399.aspx">Activation Error Codes</a>
-<HR />   
+<br>   
                         <a href="https://support.microsoft.com/help/2796988/windows-8-or-windows-server-2012-installation-may-fail-with-error-mess">Windows installation may fail with error "The product key entered does not match any of the Windows images available for installation. Enter a different product key"</a>
                     </div>
                 </div>
