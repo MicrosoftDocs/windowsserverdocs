@@ -60,7 +60,7 @@ The DNS policy criteria field is composed of two elements:
 
 |Name|Description|Sample values|
 |--------|---------------|-----------------|
-|**Client Subnet**|Transport protocol used in the query. Possible entries are **UDP** and **TCP**|-   **EQ,Spain,France** - resolves to true if the subnet is identified as either Spain or France<br />-   **NE,Canada,Mexico** - resolves to true if the client subnet is any subnet other than Canada and Mexico|  
+|**Client Subnet**|Name of a predefined client subnet. Used to verify the subnet from which the query was sent.|-   **EQ,Spain,France** - resolves to true if the subnet is identified as either Spain or France<br />-   **NE,Canada,Mexico** - resolves to true if the client subnet is any subnet other than Canada and Mexico|  
 |**Transport Protocol**|Transport protocol used in the query. Possible entries are **UDP** and **TCP**|-   **EQ,TCP**<br />-   **EQ,UDP**|  
 |**Internet Protocol**|Network protocol used in the query. Possible entries are **IPv4** and **IPv6**|-   **EQ,IPv4**<br />-   **EQ,IPv6**|  
 |**Server Interface IP address**|IP address for the incoming DNS server network interface|-   **EQ,10.0.0.1**<br />-   **EQ,192.168.1.1**|  
@@ -190,4 +190,6 @@ For information on how to use DNS policy for specific scenarios, see the followi
 - [Use DNS Policy for Application Load Balancing](app-lb.md)
 - [Use DNS Policy for Application Load Balancing With Geo-Location Awareness](app-lb-geo.md)
 
+## Using DNS Policy on Read-Only Domain Controllers
 
+DNS Policy is compatible with Read-Only Domain Controllers. Do note that a restart of the DNS Server service is required for new DNS Policies to be loaded on Read-Only Domain Controllers. This is not necessary on writable domain controllers.
