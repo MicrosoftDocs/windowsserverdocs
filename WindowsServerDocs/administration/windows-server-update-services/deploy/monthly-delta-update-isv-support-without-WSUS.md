@@ -9,7 +9,7 @@ ms.tgt_pltfrm: na
 ms.topic: get-started article
 author: sakitong
 ms.author: coreyp
-manager: elizapo
+manager: dougkim
 ms.date: 10/16/2017
 ---
 #Monthly Delta update ISV support without WSUS

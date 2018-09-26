@@ -66,6 +66,8 @@ You can update your high availability installation when a newer version of Windo
     ```powershell
     C:\PS> .\Update-WindowsAdminCenterHA.ps1 -msiPath '.\ServerManagementGateway.msi'
     ```
+> [!IMPORTANT]
+> There is a known issue when upgrading Windows Admin Center via script or using the command line. You may need to recreate a firewall rule after updating. [Learn more](..\use\known-issues.md#upgrade).
 
 ## Uninstall the Windows Admin Center gateway from your failover cluster
 

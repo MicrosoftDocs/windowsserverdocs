@@ -32,12 +32,13 @@ This topic covers how to prepare Hyper-V hosts to become guarded hosts using hos
     Set-HgsClientHostKey
     ```
 
-    or
+    Alternatively, you can specify a thumbprint if you want to use your own certificate. 
+    This can be useful if you want to share a certificate across multiple machines, or use a certificate bound to a TPM or an HSM. Here’s an example of creating a TPM-bound certificate (which prevents it from having the private key stolen and used on another machine and requires only a TPM 1.2):
 
     ```powershell
-    Set-HgsClientHostKey -Thumbprint <your certificate thumbprint>
+    $tpmBoundCert = New-SelfSignedCertificate -Subject “Host Key Attestation ($env:computername)” -Provider “Microsoft Platform Crypto Provider”
+    Set-HgsClientHostKey -Thumbprint $tpmBoundCert.Thumbprint
     ```
-
 
 4.	Get the public half of the key to provide to the HGS server. You can use the following cmdlet or, if you have the certificate stored elsewhere, provide a .cer containing the public half of the key. Note that we are only storing and validating the public key on HGS; we do not keep any certificate information nor do we validate the certificate chain or expiration date.
 

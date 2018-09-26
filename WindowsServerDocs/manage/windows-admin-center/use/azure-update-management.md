@@ -11,11 +11,6 @@ ms.prod: windows-server-threshold
 ---
 # Use Windows Admin Center to manage operating system updates with Azure Update Management
 
->Applies To: Windows Admin Center Preview
-
-> [!Note]
-> This feature is only supported when Windows Admin Center Preview is installed on a Windows 10 computer.
-
 [Learn more about Azure integration with Windows Admin Center.](../plan/azure-integration-options.md)
 
 Azure Update Management is a solution in Azure Automation that allows you to manage updates and patches for multiple machines from a single place, rather than on a per-server basis. With Azure Update Management, you can quickly assess the status of available updates, schedule installation of required updates, and review deployment results to verify updates that apply successfully. This is possible whether your machines are Azure VMs, hosted by other cloud providers, or on premise. [Learn more about Azure Update Management.](https://docs.microsoft.com/azure/automation/automation-update-management)

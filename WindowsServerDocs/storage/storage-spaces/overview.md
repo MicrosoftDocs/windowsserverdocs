@@ -2,7 +2,7 @@
 title: Storage Spaces overview
 ms.prod: windows-server-threshold
 ms.author: jgerend
-ms.manager: elizapo
+ms.manager: dougkim
 ms.technology: storage-file-systems
 ms.topic: article
 author: jasongerend

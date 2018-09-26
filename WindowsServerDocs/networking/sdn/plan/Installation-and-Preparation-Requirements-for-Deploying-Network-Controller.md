@@ -1,7 +1,7 @@
 ---
 title: Requirements for Deploying Network Controller
 description: Prepare your datacenter for Network Controller deployment, which requires one or more computers or VMs and one computer or VM. Before you can deploy Network Controller, you must configure the security groups, log file locations (if needed), and dynamic DNS registration.
-manager: elizapo
+manager: dougkim
 ms.prod: windows-server-threshold
 ms.technology: networking-sdn
 ms.topic: get-started-article

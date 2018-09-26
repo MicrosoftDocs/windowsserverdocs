@@ -131,7 +131,7 @@ You or your hosting service provider can obtain the guardian metadata from HGS b
 
 -  Obtain the guardian metadata directly from HGS by running the following Windows PowerShell command, or browsing to the website and saving the XML file that is displayed:
 
-        Invoke-WebRequest 'http://hgs.relecloud.com/KeyProtection/service/metadata/2014-07/metadata.xml' -OutFile .\RelecloudGuardian.xml
+        Invoke-WebRequest 'http://hgs.bastion.local/KeyProtection/service/metadata/2014-07/metadata.xml' -OutFile .\RelecloudGuardian.xml
 
 -  Obtain the guardian metadata from VMM using the VMM PowerShell cmdlets:
 

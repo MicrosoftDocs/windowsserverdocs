@@ -26,6 +26,19 @@ If you encounter an issue not described on this page, please [let us know](http:
 
 - Using port below 1024 is not supported. In service mode, you may optionally configure port 80 to redirect to your specified port.
 
+### Upgrade
+
+- When upgrading Windows Admin Center in service mode from a previous version, if you use msiexec in quiet mode, you may encounter an issue where the inbound firewall rule for Windows Admin Center port is deleted.
+  - To recreate the rule, perform the following command from an elevated PowerShell console, replacing \<port> with the port configured for Windows Admin Center (default 443.)
+
+```powershell
+New-NetFirewallRule -Name "SmeInboundException" -Description "Windows Admin Center inbound port exception" -LocalPort <port> -RemoteAddress Any -Protocol TCP -DisplayName "SmeInboundException"
+```
+ 
+>[!IMPORTANT]
+> You may see this when upgrading a Highly Available (HA) deployment of Windows Admin Center, since Update-WindowsAdminCenterHA.ps1 leverages msiexec in quiet mode. In this case, you will need to recreate the rule on all machines in the cluster.
+
+
 ## General
 
 - If you have Windows Admin Center installed as a gateway and your connection list appears to be corrupted, perform the following steps:
@@ -37,7 +50,7 @@ If you encounter an issue not described on this page, please [let us know](http:
   2. Delete the **Server Management Experience** folder under **C:\Windows\ServiceProfiles\NetworkService\AppData\Roaming\Microsoft**
   3. Reinstall Windows Admin Center
 
-- If you leave the tool open and idle for a long period of time, you may get several **Error: The runspace state is not valid for this operation** errors. If this occurs, refresh your browser. If you encounter this, [send us feedback.](http://aka.ms/WACfeedback)
+- If you leave the tool open and idle for a long period of time, you may get several **Error: The runspace state is not valid for this operation** errors. If this occurs, refresh your browser. If you encounter this, [send us feedback](http://aka.ms/WACfeedback).
 
 - You may encounter a **500 Error** when refreshing pages with very long URLs. [12443710]
 
@@ -186,6 +199,13 @@ If it is not installed, you can [download and install WMF 5.1](https://www.micro
 
 * After installing updates, install status may be cached and require a browser refresh.
 
+* You may encounter the error: "Keyset does not exist" when attempting to set up Azure Update management. In this case, please try the following remediation steps on the managed node -
+    1. Stop ‘Cryptographic Services’ service.
+    2. Change folder options to show hidden files (if required).
+    3. Got to “%allusersprofile%\Microsoft\Crypto\RSA\S-1-5-18” folder and delete all its contents.
+    4. Restart ‘Cryptographic Services’ service.
+    5. Repeat setting up Update Management with Windows Admin Center 
+
 ### Virtual Machines
 
 * Azure Site Recovery – If ASR is setup on the host outside of WAC, you will be unable to protect a VM from within WAC [18972276]
@@ -200,7 +220,7 @@ If it is not installed, you can [download and install WMF 5.1](https://www.micro
 
 The Computer Management solution contains a subset of the tools from the Server Manager solution, so the same known issues apply, as well as the following Computer Management solution specific issues:
 
-- If you use a Microsoft Account ([MSA](https://account.microsoft.com/account/)) to log on to you Windows 10 machine, you must specify “manage-as” credentials” to manage your local machine [16568455]
+- If you use a Microsoft Account ([MSA](https://account.microsoft.com/account/)) to log on to you Windows 10 machine, you must specify "manage-as" credentials to manage your local machine [16568455]
 
 * When you try to manage the localhost, you will be prompted to elevate the gateway process. If you click **no** in the User Account Control popup that follows, Windows Admin Center won't be able to display it again. In this case, exit the gateway process by right-clicking the Windows Admin Center icon in the system tray and choosing exit, then relaunch Windows Admin Center from the Start Menu.
 

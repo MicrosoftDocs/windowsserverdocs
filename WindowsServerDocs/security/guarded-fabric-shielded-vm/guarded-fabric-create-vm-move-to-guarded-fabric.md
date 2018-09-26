@@ -45,9 +45,9 @@ To understand how this topic fits in the overall process of deploying shielded V
 
 3.  You will need to acquire the guardian metadata for the guarded fabric where your VM will run. This metadata is used to authorize that fabric to run your shielded VM. How you obtain this information will be different for each hosting service provider or enterprise. The hoster (or you, if you have access to the guarded fabric network) can acquire this information by running the following Windows PowerShell command:
 
-        Invoke-WebRequest 'http://hgs.relecloud.com/KeyProtection/service/metadata/2014-07/metadata.xml' -OutFile .\RelecloudGuardian.xml
+        Invoke-WebRequest 'http://hgs.bastion.local/KeyProtection/service/metadata/2014-07/metadata.xml' -OutFile .\RelecloudGuardian.xml
 
-    In the example above, "hgs" is the distributed network name of the HGS cluster and "relecloud.com" is the name of the HGS domain.
+    In the example above, "hgs" is the distributed network name of the HGS cluster and "bastion.local" is the name of the HGS domain.
 
 4.  To import the guardian key, which you will need in a later procedure, run the following command.
 

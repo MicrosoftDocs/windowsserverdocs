@@ -1,7 +1,7 @@
 ---
 title: Create a VM and connect to a tenant virtual network or VLAN
 description: In this topic, we show you how to create a tenant VM and connect it to either a virtual network that you created with Hyper-V Network Virtualization or to a virtual Local Area Network (VLAN).
-manager: elizapo
+manager: dougkim
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
