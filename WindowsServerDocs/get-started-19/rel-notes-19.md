@@ -24,6 +24,11 @@ This document is continuously updated. As critical issues requiring a workaround
   
 ## Release Notes
 
+**Installation option menu during server setup has truncated German text**
+When running setup from German server media, on the operating system selection window titled, “Select the operating system you want to install”, the description for Desktop Experience installation options will have missing and incorrect characters at the very end of the sentence. Here is the full German text with a line through the missing characters in the product.  This only impacts the German media released at Public Availability of Windows Server 2019, Windows Server, version 1809, Windows Server Essentials 2019, and Microsoft Hyper-V Server 2019.
+
+*Durch diese Option wird die vollständige grafische Umgebung von Windows installiert, wodurch zusätzlicher Speicherplatz verbraucht wird. Sie kann hilfreich sein, wenn Sie den Windows-Desktop verwenden möchten oder über eine App verfügen, die die grafische Um~~gebung benötigt~~.*
+
 ### Copyright  
 This document is provided "as-is". Information and views expressed in this document, including URL and other Internet Web site references, may change without notice.  
 
