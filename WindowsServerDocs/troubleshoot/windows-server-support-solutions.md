@@ -161,19 +161,19 @@ These are the top Microsoft Support solutions for the most common issues experie
                         <h2>Solutions related to Active Directory replication</h2>
 
                          <a href="../identity/ad-ds/manage/troubleshoot/troubleshooting-active-directory-replication-problems.md">Troubleshooting Active Directory Replication Problems</a>
-<br>
+<hr>
                          <a href="https://www.microsoft.com/en-in/download/details.aspx?id=30005">e2e: How to troubleshoot common Active Directory replication errors</a>
-<br>
+<hr>
                          <a href="https://support.microsoft.com/kb/3108513">Download Active Directory Replication Status Tool from the Microsoft Download Center</a>
-<br>
+<hr>
                          <a href="https://support.microsoft.com/kb/2028495">Troubleshooting AD Replication error 8606: Insufficient attributes were given to create an object</a></p>
-<br>
+<hr>
                          <a href="https://support.microsoft.com/kb/837932">Event ID 2108 and Event ID 1084 occur during inbound replication of Active Directory in Windows 2000 Server and in Windows Server 2003</a>
-<br>
+<hr>
                          <a href="https://support.microsoft.com/kb/2645996">Troubleshooting AD Replication error 8451: The replication operation encountered a database error</a>
-<br>
+<hr>
                          <a href="https://support.microsoft.com/kb/2025726">Troubleshooting AD Replication error 1127: While accessing the hard disk, a disk operation failed even after retries</a>
-<br>
+<hr>
                          <a href="https://technet.microsoft.com/en-us/library/cc816907.aspx">Clean Up Server Metadata</a>
                     </div>
                 </div>
