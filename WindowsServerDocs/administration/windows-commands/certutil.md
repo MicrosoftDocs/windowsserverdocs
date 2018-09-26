@@ -831,7 +831,7 @@ Return to [Menu](#BKMK_menu)
 
 ## <a name="BKMK_viewstore"></a>-viewstore
 
-CertUtil [Options] -viewdelstore [CertificateStoreName [CertId [OutputFile]]]
+CertUtil [Options] -viewstore [CertificateStoreName [CertId [OutputFile]]]
 
 Dump certificate store
 
