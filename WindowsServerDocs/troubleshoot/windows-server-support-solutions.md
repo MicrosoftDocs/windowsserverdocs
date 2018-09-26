@@ -31,7 +31,7 @@ These are the top Microsoft Support solutions for the most common issues experie
                         </div>
                     </div>
                     <div class="cardText">
-                        <h4>Solutions for installing or upgrading Windows Server</h4>
+                        <h3>Solutions for installing or upgrading Windows Server</h3>
 
                         <a href="\windows\deployment\upgrade\resolve-windows-10-upgrade-errors">Resolve Windows 10 upgrade errors : Technical information for IT Pros</a>
 <hr> 
