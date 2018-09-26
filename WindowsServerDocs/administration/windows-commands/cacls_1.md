@@ -26,21 +26,22 @@ cacls <filename> [/t] [/m] [/l] [/s[:sddl]] [/e] [/c] [/g user:<perm>] [/r user 
 ### Parameters  
 |Parameter|Description|  
 |-------|--------|  
-|<filename>|Required. Displays Acls of specified files.|  
+|\<filename\>|Required. Displays Acls of specified files.|  
 |/t|changes Acls of specified files in the current directory and all subdirectories.|  
 |/m|changes Acls of volumes mounted to a directory.|  
 |/l|Work on the Symbolic Link itself versus the target.|  
 |/s:sddl|replaces the Acls with those specified in the SDDL string (not valid with **/e**, **/g**, **/r**, **/p**, or **/d**).|  
 |/e|edit ACL instead of replacing it.|  
 |/c|Continue on access denied errors.|  
-|/g user:<perm>|Grant specified user access rights.<br /><br />Valid values for permission:<br /><br />-   n - none<br />-   r - read<br />-   w - write<br />-   c - change (write)<br />-   f - full control|  
+|/g user:\<perm\>|Grant specified user access rights.<br /><br />Valid values for permission:<br /><br />-   n - none<br />-   r - read<br />-   w - write<br />-   c - change (write)<br />-   f - full control|  
 |/r user [...]|Revoke specified user's access rights (only valid with **/e**).|  
-|[/p user:<perm> [...]|replace specified user's access rights.<br /><br />Valid values for permission:<br /><br />-   n - none<br />-   r - read<br />-   w - write<br />-   c - change (write)<br />-   f - full control|  
+|[/p user:\<perm\> [...]|replace specified user's access rights.<br /><br />Valid values for permission:<br /><br />-   n - none<br />-   r - read<br />-   w - write<br />-   c - change (write)<br />-   f - full control|  
 |[/d user [...]|Deny specified user access.|  
 |/?|Displays help at the command prompt.|  
 ## Remarks  
 -   This command has been deprecated. Please use [icacls](icacls.md) instead.  
 -   Use the following table to interpret the results:  
+
     |Output|Access control entry (ACE) applies to|  
     |-----|----------------------|  
     |OI|Object inherit. This folder and files.|  
@@ -51,8 +52,10 @@ cacls <filename> [/t] [/m] [/l] [/s[:sddl]] [/e] [/c] [/g user:<perm>] [/r user 
     |(OI)(CI)(IO)|Subfolders and files only.|  
     |(CI)(IO)|Subfolders only.|  
     |(OI)(IO)|Files only.|  
+
 -   You can use wildcards (**?** and **\***) to specify multiple files.  
 -   You can specify more than one user.  
-## additional references  
+
+#### additional references  
 -   [Command-Line Syntax Key](command-line-syntax-key.md)   
 -   [icacls](icacls.md)  
