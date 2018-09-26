@@ -18,6 +18,13 @@ This topic describes the new features in Windows Server, version 1809 (Semi-Annu
 
 This section contains new features that are common to both channels.
 
+### Congestion Control with LEDBAT
+
+Keeping a network secure is a never-ending job for IT Pros, requiring regular updates to systems to protect against the latest threat vectors. This is one of the most common tasks that an IT Pro must perform. Unfortunately, it can result in dissatisfaction for end-users as the network bandwidth used for the update can compete with interactive tasks that the end-user requires to be productive.
+With Windows Server 2019, we bring a latency optimized, network congestion control provider called LEDBAT which scavenges whatever network bandwidth is available on the network, and uses it.
+
+For a full write up detailing this improvement, please see our announcement [LEDBAT – Latency Optimized Background Transport](https://blogs.technet.microsoft.com/networking/2018/07/25/ledbat/)
+
 ### Windows Defender Advanced Threat Protection (ATP)
 
 We provide deep platform sensors and response actions, providing visibility to memory and kernel level attacker activities and abilities to take actions on compromised machines in response to incidents such as remote collection of additional forensic data, remediating malicious files, terminating malicious processes etc. 
@@ -196,32 +203,6 @@ And much more! For guidance that walks you through how to install Kubernetes ont
 
 The content in this section describes what's new and changed since the last release of Windows Server 2016, and applies to Windows Server 2019.
 
-### Extending your clusters with cluster sets
-
-“Cluster sets” is the new cloud scale-out technology that increases cluster node count in a single Software-Defined Data Center (SDDC)) cloud by orders of magnitude. A cluster set is a loosely-coupled grouping of multiple failover clusters: compute, storage and hyper-converged. Cluster sets technology enables virtual machine fluidity across member clusters within a cluster set and a unified storage namespace across the "set" in support of virtual machine fluidity.  While preserving existing failover cluster management experiences on member clusters, a cluster set instance additionally offers key use cases around lifecycle management of a cluster set at the aggregate.
-
-### Failover clustering: file share witness
-
-One of the witness options available for failover clustering, file share witness, has two new enhancements. 
-
-The first enhancement blocks the use of a Distributed File System (DFS) share as a location. Adding a File Share Witness (FSW) to a DFS share can cause stability issues for your cluster, and this configuration has never been supported. We added logic to detect if a share uses DFS, and if DFS is detected, Failover Cluster Manager blocks creation of the witness and displays an error message about not being supported.
-
-The second enhancement enables use of an FSW for several scenarios that were previously not supported: 
-*  Absent or extremely poor Internet access because of a remote location, preventing the use of a cloud witness. 
-*  Lack of shared drives for a disk witness. This could be a Storage Spaces Direct hyperconverged configuration, a SQL Server Always On Availability Groups (AG), or an *  Exchange Database Availability Group (DAG), none of which use shared disks. 
-*  Lack of a domain controller connection due to the cluster being behind a DMZ. 
-*  A workgroup or cross-domain cluster for which there is no Active Directory cluster name object (CNO). Find out more about these enhancements in the following post in Server & Management Blogs: [Failover Cluster File Share Witness and DFS](https://blogs.msdn.microsoft.com/clustering/2018/04/13/failover-cluster-file-share-witness-and-dfs/).
-
-### Failover clustering: moving clusters between domains 
-Moving a cluster from one domain to another has always been a daunting task because you must destroy the cluster to move it.  Depending on the roles in the cluster, that role must also be removed and recreated.  The following are two common scenarios:
-* Company A purchases Company B and must move all servers to Company A's domain 
-* A main office builds a cluster and ships it to another location 
-We have added two new PowerShell commandlets to quickly take you from one domain to another without the need to destroy it.  For more information about this new capability, see [How to Switch a Failover Cluster to a New Domain](https://blogs.msdn.microsoft.com/clustering/2018/01/09/how-to-switch-a-failover-cluster-to-a-new-domain/) in Server & Management blogs. 
-
-### Failover Cluster removing use of NTLM authentication
-
-Windows Server Failover Clusters no longer use NTLM authentication by exclusively using Kerberos and certificate based authentication.  There are no changes required by the user, or deployment tools, to take advantage of this security enhancement. It also allows failover clusters to be deployed in environments where NTLM has been disabled. 
-
 ### System insights
 System insights is a new feature available in Windows Server 2019 that brings local predictive analytics capabilities natively to Windows Server. These predictive capabilities—each backed by a machine-learning model—locally analyze Windows Server system data, such as performance counters and events, providing insight into the functioning of your deployments and helping you reduce the operational expenses associated with monitoring your Windows Server instances.
 
@@ -240,29 +221,6 @@ Any new capability can integrate with and extend the existing system insights in
 In previous releases, system insights forecasted future usage for both local volumes and local storage consumption. After listening to the feedback from our cluster customers, we've added new functionality in this release, which allows you to optionally enable forecasting on clustered volumes and clustered storage. 
 
 For more information about system insights, please visit [aka.ms/SystemInsights](https://aka.ms/SystemInsights).
-
-
-### Congestion Control with LEDBAT
-
-Keeping a network secure is a never-ending job for IT Pros, requiring regular updates to systems to protect against the latest threat vectors. This is one of the most common tasks that an IT Pro must perform. Unfortunately, it can result in dissatisfaction for end-users as the network bandwidth used for the update can compete with interactive tasks that the end-user requires to be productive.
-With Windows Server 2019, we bring a latency optimized, network congestion control provider called LEDBAT which scavenges whatever network bandwidth is available on the network, and uses it.
-
-For a full write up detailing this improvement, please see our announcement [LEDBAT – Latency Optimized Background Transport](https://blogs.technet.microsoft.com/networking/2018/07/25/ledbat/)
-
-
-### Storage Replica
-
-__Storage Replica (SR)__ was first released as a technology for Windows Server 2016 Datacenter Edition. SR enables synchronous and asynchronous block replication of volumes between servers or clusters for disaster recovery. SR also enables you to create stretch failover clusters that span two sites, with all nodes staying in sync. 
-Beginning with Windows Server 2019, responding to customer requests, we've added the following improvement to SR: 
- 
-Storage Replica Standard. SR is available on Windows Server 2019 Standard Edition, not just on Datacenter Edition. When installed on servers running Standard Edition, SR has the following limitations: 
- 
-*  SR replicates a single volume instead of an unlimited number of volumes.  
-*  Volumes can have one partnership instead of an unlimited number of partners.  
-*  Volumes can have a size of up to 2 TB instead of an unlimited size. 
- 
-We will continue to listen to your feedback and evaluate these settings through our telemetry during Insider previews of Windows Server 2019. These limitations may change several times during the preview phase and at RTM. 
-For more information about Storage Replica, visit [http://aka.ms/StorageReplica](http://aka.ms/StorageReplica).  
 
 
 ### Shielded virtual machines – Offline mode, VMConnect and Linux support
