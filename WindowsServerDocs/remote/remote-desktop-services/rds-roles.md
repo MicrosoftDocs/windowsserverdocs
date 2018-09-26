@@ -7,7 +7,7 @@ ms.author: helohr
 ms.date: 07/06/2018
 ms.topic: article
 author: heidilohr
-manager: elizapo
+manager: dougkim
 ---
 # Remote Desktop Services roles
 

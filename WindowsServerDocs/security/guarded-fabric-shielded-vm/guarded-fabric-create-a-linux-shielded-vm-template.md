@@ -65,7 +65,7 @@ These steps will walk you through the bare minimum requirements to get a Linux V
     You can do this by clicking "Connect to Server..." in the Actions pane or by right clicking on Hyper-V Manager and choosing "Connect to Server..."
     Provide the DNS name for your Hyper-V server and, if necessary, the credentials needed to connect to it.
 
-5.  Using Hyper-V Manager, [configure an external switch](../hyper-v/get-started/create-a-virtual-switch-for-hyper-v-virtual-machines.md) on your virtualization server so the Linux VM can access the Internet to obtain updates.
+5.  Using Hyper-V Manager, [configure an external switch](https://docs.microsoft.com/windows-server/virtualization/hyper-v/get-started/create-a-virtual-switch-for-hyper-v-virtual-machines) on your virtualization server so the Linux VM can access the Internet to obtain updates.
 
 6.  Next, create a new virtual machine to install the Linux OS onto.
     In the Actions pane, click **New** > **Virtual Machine** to bring up the wizard.

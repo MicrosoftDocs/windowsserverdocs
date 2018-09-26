@@ -11,7 +11,7 @@ ms.date: 07/06/2018
 ms.tgt_pltfrm: na
 ms.topic: article
 author: heidilohr
-manager: elizapo
+manager: dougkim
 ---
 # Desktop hosting service
 

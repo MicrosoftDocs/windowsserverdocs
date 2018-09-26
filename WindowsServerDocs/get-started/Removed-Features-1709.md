@@ -11,7 +11,7 @@ ms.topic: article
 ms.date: 06/05/2018
 author: jaimeo
 ms.author: jaimeo
-manager: elizapo
+manager: dougkim
 ms.localizationpriority: medium
 ---
 # Features removed or planned for replacement starting with Windows Server, version 1709

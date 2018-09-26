@@ -91,8 +91,13 @@
 ### [Deploy DHCP using Windows PowerShell](technologies/dhcp/dhcp-deploy-wps.md)
 
 ## [High-Performance Networking (HPN)](technologies/hpn/hpn-top.md)
+### [Network offload and optimization technologies](technologies/hpn/network-offload-and-optimization.md)
+#### [Software only (SO) features and technologies](technologies/hpn/hpn-software-only-features.md)
+#### [Software and hardware (SH) integrated features and technologies](technologies/hpn/hpn-software-hardware-features.md)
+#### [Hardware Only (HO) features and technologies](technologies/hpn/hpn-hardware-only-features.md)
+#### [NIC advanced properties](technologies/hpn/hpn-nic-advanced-properties.md)
 
-### [HPN features in Windows Server 2019](technologies/hpn/hpn-insider-preview.md)
+### [Insider preview](technologies/hpn/hpn-insider-preview.md)
 ### [Receive Segment Coalescing (RSC) in the vSwitch](technologies/hpn/rsc-in-the-vswitch.md)
 
 ### [Converged NIC configuration guidance](technologies/conv-nic/cnic-top.md)
@@ -213,7 +218,7 @@
 
 ## [Software Defined Networking (SDN)](sdn/index.yml)
 
-### [SDN for Windows Server](sdn/software-defined-networking.md)
+### [SDN in Windows Server overview](sdn/software-defined-networking.md)
 
 ### [SDN technologies](sdn/technologies/Software-Defined-Networking-Technologies.md)
 #### [Hyper-V network virtualization](sdn/technologies/hyper-v-network-virtualization/Hyper-V-Network-Virtualization.md)

@@ -32,6 +32,8 @@ ms.prod: windows-server-threshold
 
 * [I get the message: "Cant connect securely to this page. This might be because the site uses outdated or unsafe TLS security settings."](#tls)
 
+* [I'm having trouble with the Remote Desktop, Events, and PowerShell tools.](#websockets)
+
 * [I can connect to some servers, but not others](#connectionissues)
 
 * [I'm using Windows Admin Center in a **workgroup**](#workgroup)
@@ -58,6 +60,10 @@ ms.prod: windows-server-threshold
 * Did you select the correct certificate on [first launch?](launch.md)
 
   * Try opening your browser in a private session - if that works, you'll need to clear your cache.
+
+* Did you recently upgrade Windows 10 to a new build or version?
+
+  * This may have cleared your trusted hosts settings. [Follow these instructions to update your trusted hosts settings.](#configure-trustedhosts) 
 
 [[back to top]](#toc)
 
@@ -89,7 +95,7 @@ Test-NetConnection -Port <port> -ComputerName <gateway> -InformationLevel Detail
 
 <a id="winvercompat"></a>
 
-## Check the Windows version
+### Check the Windows version
 
 * Open the run dialog (Windows Key + R) and launch ```winver```.
 
@@ -97,15 +103,15 @@ Test-NetConnection -Port <port> -ComputerName <gateway> -InformationLevel Detail
 
 * If you are using an insider preview version of Windows 10 or Server with a build version between 17134 and 17637, Windows Admin Center has a [known incompatibility.](known-issues.md#previous-insider-preview-builds-of-windows-10--window-server-2019-rs5)
 
-## Make sure the Windows Remote Management (WinRM) service is running on both the gateway machine and managed node
+### Make sure the Windows Remote Management (WinRM) service is running on both the gateway machine and managed node
 
 * Open the run dialog with WindowsKey + R
 * Type ```services.msc``` and press enter
 * In the window that opens, look for Windows Remote Management (WinRM), make sure it is running and set to automatically start
 
-## Did you upgrade your server from 2016 to 2019?
+### Did you upgrade your server from 2016 to 2019?
 
-* This may have cleared your trusted hosts settings. [Follow these instructions to update your trusted hosts settings.](#configure-trustedHosts) 
+* This may have cleared your trusted hosts settings. [Follow these instructions to update your trusted hosts settings.](#configure-trustedhosts) 
 
 [[back to top]](#toc)
 
@@ -114,7 +120,7 @@ Test-NetConnection -Port <port> -ComputerName <gateway> -InformationLevel Detail
 ## I get the message: "Cant connect securely to this page. This might be because the site uses outdated or unsafe TLS security settings.
 
 <!--REF: https://docs.microsoft.com/en-us/iis/get-started/whats-new-in-iis-10/http2-on-iis#when-is-http2-not-supported -->
-Your machine is restricted to HTTP/2 connections. Windows Admin Center uses integrated Windows authentication, which is not supported in HTTP/2. Add the following two registry values under the ```HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Http\Parameters``` key to remove the HTTP/2 restriction:
+Your machine is restricted to HTTP/2 connections. Windows Admin Center uses integrated Windows authentication, which is not supported in HTTP/2. Add the following two registry values under the ```HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Http\Parameters``` key on **the machine running the browser** to remove the HTTP/2 restriction:
 
 ```
 EnableHttp2Cleartext=dword:00000000
@@ -122,6 +128,15 @@ EnableHttp2Tls=dword:00000000
 ```
 
 [[back to top]](#toc)
+
+<a id="websockets"></a> 
+
+## I'm having trouble with the Remote Desktop, Events, and PowerShell tools.
+
+These three tools require the websocket protocol, which is commonly blocked by proxy servers and firewalls. If you are using Google Chrome, there is a [known issue](known-issues.md#google-chrome) with websockets and NTLM authentication.
+
+[[back to top]](#toc)
+
 
 <a id="connectionissues"></a> 
 
@@ -132,7 +147,8 @@ EnableHttp2Tls=dword:00000000
 
 * **Using local administrator accounts:** If you are using a local user account that is not the built-in administrator account, you will need to enable the policy on the target machine by running the following command in PowerShell or at a Command Prompt as Administrator on the target machine:
 
-    REG ADD HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System /v LocalAccountTokenFilterPolicy /t REG_DWORD /d 1
+        REG ADD HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System /v LocalAccountTokenFilterPolicy /t REG_DWORD /d 1
+
 
 [[back to top]](#toc)
 

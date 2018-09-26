@@ -5,14 +5,14 @@ ms.prod: windows-server-threshold
 ms.technology: storage
 ms.topic: article
 author: JasonGerend
-manager: elizapo
+manager: dougkim
 ms.author: jgerend
-ms.date: 09/10/2018
+ms.date: 09/24/2018
 ms.localizationpriority: high
 ---
 # Storage in Windows Server
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server 2019, Windows Server 2016
 
 >[!TIP]
 > Looking for information about older versions of Windows Server? Check out our other [Windows Server libraries](/previous-versions/windows/) on docs.microsoft.com. You can also [search this site](https://docs.microsoft.com/search/index?search=Windows+Server&dataSource=previousVersions) for specific information.
@@ -34,6 +34,8 @@ For an overview of storage technologies included in Windows Server, see the foll
 * [Data Deduplication](data-deduplication/overview.md) - Data Deduplication is a feature of Windows Server 2016 that can help reduce the impact of redundant data on storage costs. When enabled, Data Deduplication optimizes free space on a volume by examining the data on the volume for duplication. Once identified, duplicated portions of the volume's dataset are stored once and are (optionally) compressed for additional savings. Data Deduplication optimizes redundancies without compromise data fidelity or integrity.
 
 ## General-purpose file servers
+
+* [Storage Migration Service](storage-migration-service/overview.md) - Storage Migration Service makes it easier to migrate servers to a newer version of Windows Server. It provides a graphical tool that inventories data on servers and then transfers the data and configuration to newer servers—all without apps or users having to change anything.
 
 * [Work Folders](work-folders/work-folders-overview.md) - With Work Folders users can store and access work files on personal computers and devices, often referred to as bring-your-own device (BYOD), in addition to corporate PCs. Users gain a convenient location to store work files, and they can access them from anywhere. Organizations maintain control over corporate data by storing the files on centrally managed file servers, and optionally specifying user device policies such as encryption and lock-screen passwords.
 
