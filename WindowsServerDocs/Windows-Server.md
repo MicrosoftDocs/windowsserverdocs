@@ -7,7 +7,7 @@ ms.technology: server-general
 ms.topic: article
 author: jaimeo
 ms.author: jaimeo
-manager: elizapo
+manager: dougkim
 ms.localizationpriority: high
 ---
 # Windows Server technical content library
@@ -113,7 +113,7 @@ Both Standard and Datacenter editions offer two installation options:
 If you are installing Windows Server, version 1803, Server Core is your only installation option, while Windows Server 2016 offers both the Server Core and Server with Desktop Experience installation options.
 
 >[!Note]
-> Unlike some previous releases of Windows Server, you cannot convert between Server Core and Server with Desktop Experience after installation. For example, if you install Server Core and later decide to user Server with Desktop Experience, you should do a fresh installation (and vice versa).
+> Unlike some previous releases of Windows Server, you cannot convert between Server Core and Server with Desktop Experience after installation. For example, if you install Server Core and later decide to use Server with Desktop Experience, you should do a fresh installation (and vice versa).
 
 
 Now that you know which edition and installation option is right for you, click below to get started with Windows Server.

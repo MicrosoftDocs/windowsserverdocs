@@ -4,7 +4,7 @@ title: Windows Time Service Technical Reference
 description:
 author: shortpatti
 ms.author: pashort
-manager: elizapo
+manager: dougkim
 ms.date: 05/08/2018
 ms.topic: article
 ms.prod: windows-server-threshold
@@ -13,7 +13,7 @@ ms.technology: networking
 
 # Windows Time Service
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows 10 or later
+>Applies to: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows 10 or later
 
 
 **In this guide**  

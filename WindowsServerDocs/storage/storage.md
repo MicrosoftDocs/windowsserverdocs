@@ -5,14 +5,14 @@ ms.prod: windows-server-threshold
 ms.technology: storage
 ms.topic: article
 author: JasonGerend
-manager: elizapo
+manager: dougkim
 ms.author: jgerend
-ms.date: 04/26/2018
+ms.date: 09/24/2018
 ms.localizationpriority: high
 ---
 # Storage in Windows Server
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server 2019, Windows Server 2016
 
 >[!TIP]
 > Looking for information about older versions of Windows Server? Check out our other [Windows Server libraries](/previous-versions/windows/) on docs.microsoft.com. You can also [search this site](https://docs.microsoft.com/search/index?search=Windows+Server&dataSource=previousVersions) for specific information.
@@ -35,6 +35,8 @@ For an overview of storage technologies included in Windows Server, see the foll
 
 ## General-purpose file servers
 
+* [Storage Migration Service](storage-migration-service/overview.md) - Storage Migration Service makes it easier to migrate servers to a newer version of Windows Server. It provides a graphical tool that inventories data on servers and then transfers the data and configuration to newer servers—all without apps or users having to change anything.
+
 * [Work Folders](work-folders/work-folders-overview.md) - With Work Folders users can store and access work files on personal computers and devices, often referred to as bring-your-own device (BYOD), in addition to corporate PCs. Users gain a convenient location to store work files, and they can access them from anywhere. Organizations maintain control over corporate data by storing the files on centrally managed file servers, and optionally specifying user device policies such as encryption and lock-screen passwords.
 
 * [Offline Files and Folder Redirection](folder-redirection/folder-redirection-rup-overview.md) - Folder Redirection and Offline Files are used together to redirect the path of local folders (such as the Documents folder) to a network location, while caching the contents locally for increased speed and availability.
@@ -47,7 +49,7 @@ For an overview of storage technologies included in Windows Server, see the foll
 
 * [File Server Resource Manager](fsrm/fsrm-overview.md) - File Server Resource Manager enables you to manage and classify data stored on file servers.
 
-* [iSCSI Target Server](https://technet.microsoft.com/library/hh848272(v=ws.11).aspx) - iSCSI Target Server provides block storage to other servers and applications on the network by using the Internet SCSI (iSCSI) standard.
+* [iSCSI Target Server](iscsi/iscsi-target-server.md) - iSCSI Target Server provides block storage to other servers and applications on the network by using the Internet SCSI (iSCSI) standard.
 
 * [iSCSI Target Boot](iscsi/iscsi-boot-overview.md) - iSCSI Target Server in Windows Server can boot hundreds of computers from a single operating system image that is stored in a centralized location. This improves efficiency, manageability, availability, and security.
 

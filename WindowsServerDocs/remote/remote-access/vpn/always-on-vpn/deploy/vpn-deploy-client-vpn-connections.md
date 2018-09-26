@@ -6,7 +6,7 @@ ms.technology: networking-ras
 ms.topic: article
 ms.date: 05/29/2018
 ms.assetid: d165822d-b65c-40a2-b440-af495ad22f42
-manager: elizapo
+manager: dougkim
 ms.author: pashort
 author: shortpatti
 ms.reviewer: deverette
@@ -436,6 +436,7 @@ However, this does not work in System Center Configuration Manager because you c
 
 The following example script includes all of the code examples from previous sections. Ensure that you change example values to values that are appropriate for your environment.
     
+   ```XML
     $TemplateName = 'Template'
     $ProfileName = 'Contoso AlwaysOn VPN'
     $Servers = 'vpn.contoso.com'
@@ -567,7 +568,7 @@ The following example script includes all of the code examples from previous sec
     
     $Message = "Successfully created VPN_Profile.xml and VPN_Profile.ps1 on the desktop."
     Write-Host "$Message"
-
+   ```
 
 ## Configure the VPN client by using Windows PowerShell
 

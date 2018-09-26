@@ -1,7 +1,7 @@
 ---
 title: Use Group Policy to Configure Domain Member Client Computers
 description: This topic is part of the BranchCache Deployment Guide for Windows Server 2016, which demonstrates how to deploy BranchCache in distributed and hosted cache modes to optimize WAN bandwidth usage in branch offices
-manager: elizapo
+manager: dougkim
 ms.prod: windows-server-threshold
 ms.technology: networking-bc
 ms.topic: get-started-article
@@ -12,7 +12,7 @@ ms.date: 06/02/2018
 ---
 # Use Group Policy to Configure Domain Member Client Computers
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 In this section, you create a Group Policy Object for all of the computers in your organization, configure domain member client computers with distributed cache mode or hosted cache mode, and configure Windows Firewall with Advanced Security to allow BranchCache traffic.  
   

@@ -5,8 +5,8 @@ ms.technology: manage
 ms.topic: article
 author: nwashburn-ms
 ms.author: niwashbu
-ms.date: 06/18/2018
-ms.localizationpriority: high
+ms.date: 09/19/2018
+ms.localizationpriority: medium
 ms.prod: windows-server-threshold
 ---
 
@@ -33,9 +33,6 @@ and that the version is 5.1 or higher.
 If it is not installed, you can [download and install WMF 5.1](https://docs.microsoft.com/en-us/powershell/wmf/5.1/install-configure).
 
 ## Prepare Windows Server 2008 R2
-
-> [!NOTE]
-> Management for Windows Server 2008 R2 is only supported on Windows Admin Center Preview
 
 ### Install WMF version 5.1 or higher
 

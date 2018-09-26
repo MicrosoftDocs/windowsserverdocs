@@ -7,7 +7,7 @@ ms.topic: article
 ms.localizationpriority: medium 
 ms.date: 06/07/2018
 ms.assetid: 8fe1c810-4599-4493-b4b8-73fa9aa18535
-manager: elizapo
+manager: dougkim
 ms.author: pashort
 author: shortpatti
 ---

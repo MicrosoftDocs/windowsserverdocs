@@ -5,7 +5,7 @@ ms.technology: manage
 ms.topic: article
 author: nwashburn-ms
 ms.author: niwashbu
-ms.date: 06/18/2018
+ms.date: 09/19/2018
 ms.localizationpriority: medium
 ms.prod: windows-server-threshold
 ---
@@ -44,11 +44,13 @@ The following tools are available for server connections:
 | Tool | Description |
 | ---- | ----------- |
 | [Overview](#overview) | View server details and control server state | 
+| [Backup](#backup) | View and configure Azure Backup |  
 | [Certificates](#certificates) | View and modify certificates | 
 | [Devices](#devices) | View and modify devices | 
 | [Events](#events) | View events | 
 | [Files](#files) | Browse files and folders | 
 | [Firewall](#firewall) | View and modify firewall rules | 
+| [Installed Apps](#installed-apps) | View and remove installed apps | 
 | [Local Users and Groups](#local-users-and-groups) | View and modify local users and groups | 
 | [Network](#network) | View and modify network devices | 
 | [PowerShell](#powershell) | Interact with server via PowerShell | 
@@ -59,7 +61,9 @@ The following tools are available for server connections:
 | [Scheduled Tasks](#scheduled-tasks) | View and modify scheduled tasks |
 | [Services](#services) | View and modify services | 
 | [Storage](#storage) | View and modify storage devices | 
-| [Storage Replica](https://docs.microsoft.com/en-us/windows-server/storage/storage-replica/storage-replica-ui) | Use Storage Replica to manage server-to-server storage replication | 
+| [Storage Migration Service](#storage-migration-service) | Migrate servers and file shares to Azure or Windows Server 2019 | 
+| [Storage Replica](#storage-replica) | Use Storage Replica to manage server-to-server storage replication | 
+| [System Insights](#system-insights) | System Insights gives you increased insight into the functioning of your server. | 
 | [Updates](#updates) | View installed and check for new updates | 
 | [Virtual Machines](manage-virtual-machines.md) | View and manage virtual machines | 
 | [Virtual Switches](#virtual-switches) | View and manage virtual switches | 
@@ -90,14 +94,30 @@ The following features have been proposed for Server Manager Overview:
 |[[Overview] [Export] Availability to Export into an Excel Report Performance Metrics such as CPU, RAM, Storage, VMs, etc](https://windowsserver.uservoice.com/forums/295071/suggestions/31632592)|
 |[[Overview] Historical performance data for dashboard statistics](https://windowsserver.uservoice.com/forums/295071/suggestions/31779562)|
 |[[Overview] Impact Alert for Shutdown/Restart](https://windowsserver.uservoice.com/forums/295071/suggestions/32024263)|
-|[[Overview] Show Computer/Server Build Number on Home Page](https://windowsserver.uservoice.com/forums/295071/suggestions/32697718)|
-|[[Overview] System uptime and logged in users](https://windowsserver.uservoice.com/forums/295071/suggestions/31801321)|
 |[[Overview] [Computer ID] Add 'OU Path' at 'Join to Domain' option](https://windowsserver.uservoice.com/forums/295071/suggestions/31824241)|
 |[[Overview] [Disk Metrics] Disk latency and queue](https://windowsserver.uservoice.com/forums/295071/suggestions/31691191)|
 |[[Overview] [Disk Metrics] Display Drive Letter Name in Graph](https://windowsserver.uservoice.com/forums/295071/suggestions/31641190)|
 |[[Overview] Adding IP address on the server overview page](https://windowsserver.uservoice.com/forums/295071/suggestions/33080716)|
 |[[Overview] [RD Settings] see and change the users that are allowed RDP access on the server](https://windowsserver.uservoice.com/forums/295071/suggestions/31598437)
 |[**See all or propose new feature**](https://windowsserver.uservoice.com/forums/295071/filters/top?category_id=319162&query=%5BOverview%5D)
+
+## Backup
+
+**Backup** allows you to protect your Windows server from corruptions, attacks or disasters by backing up your server directly to Microsoft Azure.
+[Learn more about Azure Backup.](https://aka.ms/windows-admin-center-backup)
+
+[Provide feedback for backup in Windows Admin Center](https://aka.ms/backup-wac-feedback)
+
+### Features
+
+The following features are supported in Backup:
+
+- View an overview of your Azure backup status
+- Configure backup items and schedule
+- Start or stop a backup job
+- View backup job history and status
+- View recovery points and recover data
+- Delete backup data
 
 ## Certificates
 
@@ -167,7 +187,6 @@ The following features have been proposed for Events:
 |Feature Request|
 |-------|
 |[[Events] Modify Subscriptions in Event Viewer](https://windowsserver.uservoice.com/forums/295071/suggestions/31852813)|
-|[[Events] Event details and keyboard navigation](https://windowsserver.uservoice.com/forums/295071/suggestions/32398108)|
 |[[Events] [Filter] [GUI] improvements](https://windowsserver.uservoice.com/forums/295071/suggestions/31701994)|
 |[[Events] [Filter] Include keyword field in filter panel](https://windowsserver.uservoice.com/forums/295071/suggestions/31481797)|
 |[[Events] Colour coding/Icons to more easily distinguish Errors from Warnings](https://windowsserver.uservoice.com/forums/295071/suggestions/31702081)|
@@ -193,6 +212,7 @@ The following features are supported in Files:
 - Rename a file or folder
 - Extract a zip file
 - View file or folder properties
+- Manage File Server Resource Manager [quotas](https://docs.microsoft.com/en-us/windows-server/storage/fsrm/quota-management)
 - Add, edit, or remove file shares
 - Modify user and group permissions on file shares
 
@@ -202,11 +222,9 @@ The following features have been proposed for Files:
 
 |Feature Request|
 |-------|
-|[[Files] Improvements on Files module](https://windowsserver.uservoice.com/forums/295071/suggestions/31598218)|
 |[[Files] Upload progress](https://windowsserver.uservoice.com/forums/295071/suggestions/32588972)|
 |[[Files] - Visual representation of Free Space](https://windowsserver.uservoice.com/forums/295071/suggestions/31933906)|
 |[[Files] Drive Free space and Total Directory size](https://windowsserver.uservoice.com/forums/295071/suggestions/31656802)|
-|[[Files] File Sharing option and management](https://windowsserver.uservoice.com/forums/295071/suggestions/31702198)|
 |[[Files] File Viewer / Editor](https://windowsserver.uservoice.com/forums/295071/suggestions/32520424)|
 |[[Files] Share Management - Show hidden shares](https://windowsserver.uservoice.com/forums/295071/suggestions/31667824)|
 |[[Files] Support UNC path](https://windowsserver.uservoice.com/forums/295071/suggestions/32868157)
@@ -244,6 +262,11 @@ The following features have been proposed for Firewall:
 |[[Firewall] Windows Firewall - Show content of firewall log](https://windowsserver.uservoice.com/forums/295071/suggestions/32200795)
 |[**See all or propose new feature**](https://windowsserver.uservoice.com/forums/295071/filters/top?category_id=319162&query=%5BFirewall%5D)
 
+## Installed Apps
+
+**Installed Apps** allows you to list and uninstall application that are installed.
+
+[**Propose new feature for Installed Apps**](https://windowsserver.uservoice.com/forums/295071/filters/top?category_id=319162&query=%5BInstalled%20Apps%5D)
 
 ## Local Users and Groups
 
@@ -280,6 +303,7 @@ The following features are supported in Network:
 - Browse and search existing network adapters
 - View details of a network adapter
 - Edit properties of a network adapter
+- Create an [Azure Network Adapter (Preview feature)](https://blogs.technet.microsoft.com/networking/2018/09/05/azurenetworkadapter/)
 
 ### Proposed Features
 
@@ -416,9 +440,6 @@ The following features have been proposed for Roles and Features:
 
 ## Scheduled Tasks
 
-> [!IMPORTANT]
-> This feature is only available in Windows Admin Center Preview. [How do I get this version?](http://aka.ms/windowsadmincenter)
-
 **Scheduled Tasks** allows you to manage scheduled tasks on a computer or server.
 
 ### Features
@@ -431,9 +452,7 @@ The following features are supported in Scheduled Tasks:
 - Start & Stop scheduled tasks
 - Create scheduled tasks
 
-> [!NOTE]
-This tool is still in preview. The supported task triggers are daily, once, at logon, and at startup.
-You are limited to creating and editing only 1 trigger per task.
+[**Propose new feature for Scheduled Tasks**](https://windowsserver.uservoice.com/forums/295071/filters/top?category_id=319162&query=%5BScheduled%20Tasks%5D)
 
 ## Services
 
@@ -496,6 +515,27 @@ The following features have been proposed for Storage:
 |[[Storage] Storage window doesn't refresh properly](https://windowsserver.uservoice.com/forums/295071/suggestions/32075065)
 |[**See all or propose new feature**](https://windowsserver.uservoice.com/forums/295071/filters/top?category_id=319162&query=%5BStorage%5D)
 
+## Storage Migration Service
+
+**Storage Migration Service** allows you to migrate servers and file shares to Azure or Windows Server 2019—without requiring apps or users to change anything.
+[Get an overview of Storage Migration Service](https://go.microsoft.com/fwlink/?linkid=2016155)
+
+>[!NOTE]
+>Storage Migration Service requires Windows Server 2019, build 17709 or newer.
+
+## Storage Replica
+
+Use **Storage Replica** to manage server-to-server storage replication.
+[Learn more about Storage Replica](https://docs.microsoft.com/en-us/windows-server/storage/storage-replica/storage-replica-ui)
+
+## System Insights
+
+**System Insights** introduces predictive analytics natively in Windows Server to help give you increased insight into the functioning of your server.
+[Get an overview of System Insights](http://aka.ms/systeminsights)
+
+>[!NOTE]
+>System Insights requires Windows Server 2019, build 17692 or newer.
+
 ## Updates
 
 **Updates** allows you to manage Microsoft and/or Windows Updates on a computer or server.
@@ -508,6 +548,7 @@ The following features are supported in Updates:
 - View a list of update history
 - Install Updates
 - Check online for updates from Microsoft Update
+- Manage [Azure Update Management](https://docs.microsoft.com/en-us/azure/automation/automation-update-management) integration
 
 ### Proposed Features
 

@@ -12,8 +12,8 @@ ms.topic: article
 ms.assetid: 2d22818c-fbb7-487a-bb82-81ef0a3f7ede
 author: jaimeo
 ms.author: jaimeo
-manager: elizapo
-ms.localizationpriority: high
+manager: dougkim
+ms.localizationpriority: medium
 ---
 # Install Server Core
 > Applies To: Windows Server (Semi-Annual Channel) and Windows Server 2016

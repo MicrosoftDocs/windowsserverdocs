@@ -12,7 +12,7 @@ author: shortpatti
 
 # Configure Connection Request Policies
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 You can use this topic to create and configure connection request policies that designate whether the local NPS processes connection requests or forwards them to remote RADIUS server for processing.
 

@@ -4,11 +4,10 @@ description: 'This page provies a brief overview of the Always On VPN technologi
 ms.prod: windows-server-threshold
 ms.technology: networking-ras
 ms.topic: article
-ms.date: 05/29/2018
+ms.date: 08/30/2018
 ms.author: pashort
 author: shortpatti
-manager: elizapo
-ms.reviewer: deverette
+manager: dougkim
 ---
 
 
@@ -41,7 +40,7 @@ The connection process depicted in this illustration is comprised of the followi
 For more information on each infrastructure component depicted in the illustration above, see the following sections.
 
 >[!NOTE]
->If you already have some of these technologies deployed on your network, you can use the instructions in this deployment guidance to perform additional configuration of the technologies for this deployment purpose.
+>If you already have some of these technologies deployed on your network, you can use the instructions in this deployment guidance to perform additional configuration of the technologies for this deployment purpose. F
 
 ## Domain Name System (DNS)
 
@@ -49,8 +48,11 @@ Both internal and external Domain Name System (DNS) zones are required, which as
 
 Learn more about [Domain Name System (DNS)](../../../../networking/dns/dns-top.md) or [Core Network Guide](../../../../networking/core-network-guide/core-network-guide.md).
 
+
+
+
 >[!NOTE] 
->Other DNS designs, such as split-brain DNS (using the same domain name internally and externally in separate DNS zones) or unrelated internal and external domains (e.g., contoso.local and contoso.com) are also possible, but the configuration for these environments is beyond the scope of this deployment.
+>Other DNS designs, such as split-brain DNS (using the same domain name internally and externally in separate DNS zones) or unrelated internal and external domains (e.g., contoso.local and contoso.com) are also possible. For more information about deploying split-brain DNS, see [Use DNS Policy for Split/-Brain DNS Deployment](../../../../networking/dns/deploy/split-brain-DNS-deployment.md).
 
 ## Firewalls
 

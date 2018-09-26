@@ -28,11 +28,11 @@ Windows Containers is a new technology that offers you another way to deploy fle
 
 The following sections contain brief technology overviews and links to Virtualization documentation.
 
-## [Guarded Fabric and Shielded VMs](guarded-fabric-shielded-vm/guarded-fabric-and-shielded-vms-top-node.md)
+## [Guarded Fabric and Shielded VMs](../security/guarded-fabric-shielded-vm/guarded-fabric-and-shielded-vms-top-node.md)
 
 As a cloud service provider or enterprise private cloud administrator, you can use a guarded fabric to provide a more secure environment for VMs. A guarded fabric consists of one Host Guardian Service \(HGS\) - typically, a cluster of three nodes - plus one or more guarded hosts, and a set of shielded VMs.
 
-For more information, see [Guarded Fabric and Shielded VMs](guarded-fabric-shielded-vm/guarded-fabric-and-shielded-vms-top-node.md).
+For more information, see [Guarded Fabric and Shielded VMs](../security/guarded-fabric-shielded-vm/guarded-fabric-and-shielded-vms-top-node.md).
 
 ## [Hyper-V](./hyper-v/Hyper-V-on-Windows-Server.md)
 

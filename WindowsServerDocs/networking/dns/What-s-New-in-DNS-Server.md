@@ -11,7 +11,7 @@ author: shortpatti
 ---
 # What's New in DNS Server in Windows Server
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 This topic describes the Domain Name System (DNS) server functionality that is new or changed in Windows Server 2016.  
   

@@ -1,19 +1,19 @@
-
 ---
-title: Manage Certificates for Software Defined Networking
+title: Manage certificates for Software Defined Networking
 description: You can use this topic to learn how to manage certificates for Network Controller Northbound and Southbound communications when you deploy Software Defined Networking (SDN) in Windows Server 2016 Datacenter.
-manager: brianlic
+manager: dougkim
 ms.prod: windows-server-threshold
 ms.technology: networking-sdn
 ms.topic: article
 ms.assetid: c4e2f6c7-0364-4bf8-bb66-9af59c0bbd74
 ms.author: pashort
 author: shortpatti
+ms.date: 08/22/2018
 ---
 
-# Manage Certificates for Software Defined Networking
+# Manage certificates for Software Defined Networking
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 You can use this topic to learn how to manage certificates for Network Controller Northbound and Southbound communications when you deploy Software Defined Networking \(SDN\) in Windows Server 2016 Datacenter and you are using System Center Virtual Machine Manager \(SCVMM\) as your SDN management client.
 

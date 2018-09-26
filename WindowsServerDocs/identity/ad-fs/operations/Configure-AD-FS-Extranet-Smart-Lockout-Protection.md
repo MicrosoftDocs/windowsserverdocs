@@ -29,7 +29,7 @@ Extranet soft lockout in AD FS 2012 R2 provided the following key advantages:
 
 Extranet Smart Lockout builds on the advantages of extranet soft lockout by adding the following:
 - Protects your users from experiencing **extranet account lockout** from malicious authentication requests.  Smart lockout will prevent potentially malicious requests from unfamiliar locations while allowing the real user to sign on from the extranet from familiar locations (locations from which the user has successfully logged in before).
-- Has a log only mode so that the system can learn good and potentially malicious signon activity without disabling any accounts
+- Has a log only mode so that the system can learn good and potentially malicious signon activity without locking out any accounts
 
 ## Pre-requisites for Extranet Smart Lockout in AD FS 2016
 The following pre-requisites are required for ESL with AD FS 2016.

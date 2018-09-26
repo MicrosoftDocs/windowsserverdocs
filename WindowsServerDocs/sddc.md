@@ -11,7 +11,7 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 08/28/2017
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ---
 # Windows Server Software-Defined Datacenter
 

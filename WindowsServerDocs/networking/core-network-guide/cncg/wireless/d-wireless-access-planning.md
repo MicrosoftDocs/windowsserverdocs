@@ -11,7 +11,7 @@ author: shortpatti
 ---
 # Wireless Access Deployment Planning
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 Before you deploy wireless access, you must plan the following items:
 

@@ -7,7 +7,7 @@ ms.manager: dongill
 author: JasonGerend
 ms.author: jgerend
 ms.technology: storage-failover-clustering
-ms.date: 07/27/2018
+ms.date: 08/06/2018
 description: Requirements for using Cluster-Aware Updating to install updates on clusters running Windows Server.
 ---
 # Cluster-Aware Updating requirements and best practices
@@ -20,7 +20,7 @@ This section describes the requirements and dependencies that are needed to use 
 > You may need to independently validate that your cluster environment is ready to apply updates if you use a plug\-in other than **Microsoft.WindowsUpdatePlugin**. If you are using a non\-Microsoft plug\-in, contact the publisher for more information. For more information about plug\-ins, see [How Plug\-ins Work](cluster-aware-updating-plug-ins.md).   
   
 ## <a name="BKMK_REQ_CLUS"></a>Install the Failover Clustering feature and the Failover Clustering Tools  
-CAU requires an installation of the Failover Clustering feature and the Failover Clustering Tools. The Failover Clustering Tools include the CAU tools \(clusterawareupdating.dll\), the Failover Clustering  cmdlets, and other components needed for CAU operations. For steps to install the Failover Clustering feature, see [Installing the Failover Clustering Feature and Tools](https://go.microsoft.com/fwlink/p/?LinkId=253342).  
+CAU requires an installation of the Failover Clustering feature and the Failover Clustering Tools. The Failover Clustering Tools include the CAU tools \(clusterawareupdating.dll\), the Failover Clustering  cmdlets, and other components needed for CAU operations. For steps to install the Failover Clustering feature, see [Installing the Failover Clustering Feature and Tools](create-failover-cluster.md#install-the-failover-clustering-feature).  
   
 The exact installation requirements for the Failover Clustering Tools depend on whether CAU coordinates updates as a clustered role on the failover cluster \(by using self\-updating mode\) or from a remote computer. The self\-updating mode of CAU additionally requires the installation of the CAU clustered role on the failover cluster by using the CAU tools.    
   
@@ -68,7 +68,7 @@ These requirements are in addition to the installation requirements for the [Ins
 |[Enable a firewall rule to allow automatic restarts](#BKMK_FW)|Disabled|Required on all cluster nodes if a firewall is in use|Required on all cluster nodes if a firewall is in use|  
 |[Enable Windows Management Instrumentation](#BKMK_WMI)|Enabled|Required on all cluster nodes|Required on all cluster nodes|  
 |[Enable Windows PowerShell 3.0 or 4.0 and Windows PowerShell remoting](#BKMK_PS)|Enabled|Required on all cluster nodes|Required on all cluster nodes to run the following:<br /><br />-   The [Save-CauDebugTrace](https://docs.microsoft.com/powershell/module/clusterawareupdating/Save-CauDebugTrace?view=win10-ps) cmdlet<br />-    PowerShell pre\-update and post\-update scripts during an Updating Run<br />-   Tests of cluster updating readiness using the Cluster-Aware Updating window or the [Test\-CauSetup](https://docs.microsoft.com/powershell/module/clusterawareupdating/Test-CauSetup?view=win10-ps) Windows PowerShell cmdlet|  
-|[Install .NET Framework 4.6 or 4.5](#BKMK_NET)|Enabled|Required on all cluster nodes|Required on all cluster nodes to run the following:<br /><br />-   The [Save-CauDebugTrace](https://technet.microsoft.com/itpro/powershell/windows/cluster-aware-updating/save-caudebugtrace) cmdlet<br />-   PowerShell pre\-update and post\-update scripts during an Updating Run<br />-   Tests of cluster updating readiness using the Cluster-Aware Updating window or the [Test\-CauSetup](https://docs.microsoft.com/powershell/module/clusterawareupdating/Test-CauSetup?view=win10-ps) Windows PowerShell cmdlet|  
+|[Install .NET Framework 4.6 or 4.5](#BKMK_NET)|Enabled|Required on all cluster nodes|Required on all cluster nodes to run the following:<br /><br />-   The [Save-CauDebugTrace](https://docs.microsoft.com/powershell/module/clusterawareupdating/Save-CauDebugTrace?view=win10-ps) cmdlet<br />-   PowerShell pre\-update and post\-update scripts during an Updating Run<br />-   Tests of cluster updating readiness using the Cluster-Aware Updating window or the [Test\-CauSetup](https://docs.microsoft.com/powershell/module/clusterawareupdating/Test-CauSetup?view=win10-ps) Windows PowerShell cmdlet|  
 
 ### <a name="BKMK_FW"></a>Enable a firewall rule to allow automatic restarts  
 To allow automatic restarts after updates are applied \(if the installation of an update requires a restart\), if Windows Firewall or a non\-Microsoft firewall is in use on the cluster nodes, a firewall rule must be enabled on each node that allows the following traffic:  
@@ -103,8 +103,7 @@ To manually enable remote management, do the following:
   
 1.  In the Services console, start the **Windows Remote Management** service and set the startup type to **Automatic**.  
   
-2.  Run the [Set-WSManQuickConfig](https://docs.microsoft.com/powershell/module/Microsoft.WsMan.Management/Set-WSManQuickConfig?view=powershell-6
-) cmdlet, or run the following command from an elevated command prompt:  
+2.  Run the [Set-WSManQuickConfig](https://docs.microsoft.com/powershell/module/Microsoft.WsMan.Management/Set-WSManQuickConfig?view=powershell-6) cmdlet, or run the following command from an elevated command prompt:  
   
     ```PowerShell  
     winrm quickconfig -q  
@@ -121,7 +120,7 @@ To enable PowerShell remoting, use one of the following methods:
   
 -   Configure a domain\-level Group Policy setting for Windows Remote Management \(WinRM\).  
   
-For more information about enabling PowerShell remoting, see [About Remote Requirements](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_remote_requirements?view=powershell-6&viewFallbackFrom=powershell-Microsoft.PowerShell.Core).  
+For more information about enabling PowerShell remoting, see [About Remote Requirements](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_remote_requirements?view=powershell-6).  
   
 ### <a name="BKMK_NET"></a>Install .NET Framework 4.6 or 4.5  
 To enable self\-updating mode and certain CAU features in remote\-updating mode,.NET Framework 4.6, or .NET Framework 4.5 (on Windows Server 2012 R2) must be installed on all cluster nodes. By default, NET Framework is installed.  

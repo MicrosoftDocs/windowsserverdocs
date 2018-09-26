@@ -2,9 +2,9 @@
 ms.assetid: a695aee3-971f-4e9c-94e8-092ebdefea84
 title: Event ID 1925 - Attempt to establish a replication link failed due to DNS lookup problem
 description:
-author: billmath
-ms.author: billmath
-manager: femila
+author: MicrosoftGuyJFlo
+ms.author: joflore
+manager: mtillman
 ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server-threshold

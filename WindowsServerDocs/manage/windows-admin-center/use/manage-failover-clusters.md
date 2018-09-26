@@ -22,7 +22,7 @@ ms.prod: windows-server-threshold
 
 While you can manage failover cluster nodes as individual servers by adding them as [Server connections](manage-servers.md) in Windows Admin Center, you can also add them as Failover clusters to view and manage cluster resources, storage, network, nodes, roles, virtual machines and virtual switches.
 
-![Failover cluster Overview screen](../media/manage-failover-clusters/failover-cluster-overview.png)
+![Failover cluster Overview screen](../media/manage-failover-clusters/fcm-overview.png)
 
 ## Adding a failover cluster to Windows Admin Center
 To add a cluster to Windows Admin Center:
@@ -49,16 +49,16 @@ The following tools are available for failover cluster connections:
 | Networks | View networks in the cluster |
 | Nodes | View and manage cluster nodes |
 | Roles | Manage cluster roles or create an empty role |
+| Updates | Manage Cluster-Aware Updates |
 | [Virtual Machines](manage-virtual-machines.md) | View and manage virtual machines |
 | Virtual Switches | View and manage virtual switches |
 
-## More Coming Soon
+## More Coming
 
 Failover cluster management in Windows Admin Center is actively under development and new features will be added in the near future. You can view the status and vote for features in UserVoice:
 
 |Feature Request|
 |-------|
-| [Support Cluster-Aware Updating (CAU)](https://windowsserver.uservoice.com/forums/295071-management-tools/suggestions/31481686--cluster-support-cluster-aware-updating) |
 | [Show more clustered disk info](https://windowsserver.uservoice.com/forums/295071-management-tools/suggestions/31740424--cluster-more-disk-info-in-failover-cluster-manag) |
 | [Support additional cluster actions](https://windowsserver.uservoice.com/forums/295071-management-tools/suggestions/33558076--fcm-full-csv-management-cycle-in-one-place) |
 | [Support converged clusters running Hyper-V and Scale-Out File Server on different clusters](https://windowsserver.uservoice.com/forums/295071-management-tools/suggestions/31729741--cluster-support-for-converged-architecture) |

@@ -69,10 +69,26 @@ Because each series record only one data point for each collection interval, eac
 | --------------- | --------------- |
 | Performance counters | Sum, average, max, min |
 | System events | Count |
-| Disk | Last (latest value in the collection interval) |
-| Volume | Last (latest value in the collection interval) |
-| CPU | Average |
-| Network | Average |
+| Disk well-known series | Last (latest value in the collection interval) |
+| Volume well-known series | Last (latest value in the collection interval) |
+| CPU well-known series | Average |
+| Network well-known series | Average |
+
+## Data footprint
+
+System Insights collects all data locally on your C drive (C:). In general, the System Insights data footprint is modest. It depends directly on the type and number of data sources each capability specifies, and the table below details the storage usage for each data type:
+
+| Data source | Maximum footprint |
+| --------------- | --------------- |
+| Performance counters | 240 KB |
+| System events | 200 KB |
+| Disk well-known series | 200 KB per disk |
+| Volume well-known series | 300 KB per volume |
+| CPU well-known series | 100 KB |
+| Network well-known series | 300 KB per network adapter |
+
+>[!NOTE]
+>**For the default forecasting capabilities, the maximum footprint should be less than 10 MB for most stand alone machines.** 
 
 ## See also
 To learn more about System Insights, use the following resources:

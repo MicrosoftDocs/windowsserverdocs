@@ -23,6 +23,7 @@
 ### [User access control and permissions](configure/user-access-control.md)
 ### [Using extensions](configure/using-extensions.md)
 ### [Configure Azure integration](configure/azure-integration.md)
+### [Manage Azure VMs with Windows Admin Center](configure/manage-azure-vms.md)
 
 ## Use
 ### [Launch Windows Admin Center](use/launch.md)
@@ -45,7 +46,13 @@
 #### [Develop a tool extension](extend/develop-tool.md)
 #### [Develop a solution extension](extend/develop-solution.md)
 #### [Develop a gateway plugin](extend/develop-gateway-plugin.md)
+#### [Target an SDK version](extend/target-sdk-version.md)
 ### [Guides](extend/guides.md)
+#### [Add a module to a tool extension](extend/guides/add-module.md)
+#### [Add an iFrame to a tool extension](extend/guides/add-iFrame.md)
+#### [Use a custom gateway plugin in your tool extension](extend/guides/use-custom-gateway-plugin.md)
+#### [Create a connection provider](extend/guides/create-connection-provider.md)
+#### [Modify root navigation behavior](extend/guides/modify-root-navigation.md)
 #### [Control your tool's visibility](extend/guides/dynamic-tool-display.md)
 #### [Strings and localization](extend/guides/strings-localization.md)
 #### [Using PowerShell in your extension](extend/guides/powershell.md)
