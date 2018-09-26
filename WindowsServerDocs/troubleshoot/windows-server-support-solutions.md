@@ -27,7 +27,7 @@ These are the top Microsoft Support solutions for the most common issues experie
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <img src="../media/i-store.svg" alt="" />
+                            <img src="../media/i-troubleshoot.svg" alt="" />
                         </div>
                     </div>
                     <div class="cardText">
@@ -61,7 +61,7 @@ These are the top Microsoft Support solutions for the most common issues experie
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <img src="../media/i-store.svg" alt="" />
+                            <img src="../media/i-troubleshoot.svg" alt="" />
                         </div>
                     </div>
                     <div class="cardText">
@@ -90,7 +90,7 @@ These are the top Microsoft Support solutions for the most common issues experie
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <img src="../media/i-store.svg" alt="" />
+                            <img src="../media/i-troubleshoot.svg" alt="" />
                         </div>
                     </div>
                     <div class="cardText">
@@ -120,7 +120,7 @@ These are the top Microsoft Support solutions for the most common issues experie
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <img src="../media/i-store.svg" alt="" />
+                            <img src="../media/i-troubleshoot.svg" alt="" />
                         </div>
                     </div>
                     <div class="cardText">
@@ -152,7 +152,7 @@ These are the top Microsoft Support solutions for the most common issues experie
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <img src="../media/i-store.svg" alt="" />
+                            <img src="../media/i-troubleshoot.svg" alt="" />
                         </div>
                     </div>
                     <div class="cardText">
