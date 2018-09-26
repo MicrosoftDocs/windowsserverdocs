@@ -29,7 +29,7 @@ When running setup from German server media, on the operating system selection w
 
 *Durch diese Option wird die vollständige grafische Umgebung von Windows installiert, wodurch zusätzlicher Speicherplatz verbraucht wird. Sie kann hilfreich sein, wenn Sie den Windows-Desktop verwenden möchten oder über eine App verfügen, die die grafische Um~~gebung benötigt~~.*
 
-**Missing language pack for Windows Server 2019 Desktop Experience**
+**Missing Windows display language for Windows Server 2019 Desktop Experience**
 Customers using the Desktop Experience on Windows Server 2019 are currently unable to install language packs using the Settings app’s Language page without first adding a new Windows display language. In order to add a new Windows display language, follow the procedure in [this]() KB article.
 
 ### Copyright  
