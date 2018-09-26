@@ -21,7 +21,6 @@ These are the top Microsoft Support solutions for the most common issues experie
 >[!TIP]
 > Looking for information about older versions of Windows Server? Check out our other [Windows Server libraries](/previous-versions/windows/) on docs.microsoft.com. You can also [search this site](https://docs.microsoft.com/search/index?search=Windows+Server&dataSource=previousVersions) for specific information.
 
-</ul>
 <hr />
 <ul class="cardsF panelContent">
 <li>
