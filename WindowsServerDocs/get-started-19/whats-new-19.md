@@ -20,7 +20,7 @@ This topic describes the new features in Windows Server 2019.
 As a locally deployed, browser-based management experience, an Internet connection and Azure aren’t required. Windows Admin Center gives you full control of all aspects of your deployment, 
 including private networks that aren’t Internet-connected.
 <br/><br/>
-Windows Admin Center is a free download, separate from the Windows Server 2019 download, for enhanced flexibility and remote management strategies.  See the Windows Admin Center OS support [matrix](https://docs.microsoft.com/en-us/windows-server/manage/windows-admin-center/plan/installation-options) for installation and management compatibility.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Windows Admin Center is a free download, separate from the Windows Server 2019 download, for enhanced flexibility and remote management strategies.  See the Windows Admin Center OS support [matrix](https://docs.microsoft.com/en-us/windows-server/manage/windows-admin-center/plan/installation-options) for installation and management compatibility.
 
 ## Desktop experience
 
