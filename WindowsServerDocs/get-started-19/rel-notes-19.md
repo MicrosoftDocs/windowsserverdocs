@@ -23,8 +23,7 @@ These release notes summarize the most critical issues in the Windows Server&reg
 This document is continuously updated. As critical issues requiring a workaround are discovered, they are added, as are new workarounds and fixes as they become available.  
   
 ## Release Notes
-
-**Installation option menu during server setup has truncated German text**
+The following known issues are present in Windows Server 2019. 
 <table border="1" rules="rows">
   <thead align="left" valign="middle">
     <tr>
