@@ -19,9 +19,31 @@ This topic explains the new and changed functionality in Failover Clustering Win
 
 ### Cluster sets
 
-Cluster sets increase the maximum number of servers that can be in a cluster in a single software-defined datacenter cloud by orders of magnitude.
+Cluster sets enable you to increase the number of servers in a single software-defined datacenter (SDDC) solution beyond the current limits of a cluster. This is accomplished by grouping multiple clusters into a cluster set--a loosely-coupled grouping of multiple failover clusters: compute, storage and hyper-converged.
+With cluster sets, you can move online virtual machines (live migrate) between clusters within the cluster set.
 
 For more info, see [Cluster sets](../storage/storage-spaces/cluster-sets.md).
+
+### file share witness
+
+One of the witness options available for failover clustering, file share witness, has two new enhancements. 
+The first enhancement blocks the use of a Distributed File System (DFS) share as a location. Adding a File Share Witness (FSW) to a DFS share can cause stability issues for your cluster, and this configuration has never been supported. We added logic to detect if a share uses DFS, and if DFS is detected, Failover Cluster Manager blocks creation of the witness and displays an error message about not being supported.
+The second enhancement enables use of an FSW for several scenarios that were previously not supported: 
+- Absent or extremely poor Internet access because of a remote location, preventing the use of a cloud witness. 
+- Lack of shared drives for a disk witness. This could be a Storage Spaces Direct hyperconverged configuration, a SQL Server Always On Availability Groups (AG), or an * Exchange Database Availability Group (DAG), none of which use shared disks. 
+- Lack of a domain controller connection due to the cluster being behind a DMZ. 
+- A workgroup or cross-domain cluster for which there is no Active Directory cluster name object (CNO). Find out more about these enhancements in the following post in Server & Management Blogs: Failover Cluster File Share Witness and DFS.
+
+### Failover clustering: moving clusters between domains
+
+Moving a cluster from one domain to another has always been a daunting task because you must destroy the cluster to move it. Depending on the roles in the cluster, that role must also be removed and recreated. The following are two common scenarios:
+- Company A purchases Company B and must move all servers to Company A's domain 
+- A main office builds a cluster and ships it to another location We have added two new PowerShell commandlets to quickly take you from one domain to another without the need to destroy it. For more information about this new capability, see How to Switch a Failover Cluster to a New Domain in Server & Management blogs. 
+
+### Failover Cluster removing use of NTLM authentication
+
+Windows Server Failover Clusters no longer use NTLM authentication by exclusively using Kerberos and certificate based authentication. There are no changes required by the user, or deployment tools, to take advantage of this security enhancement. It also allows failover clusters to be deployed in environments where NTLM has been disabled. 
+
 
 ## What's new in Windows Server 2016
 
