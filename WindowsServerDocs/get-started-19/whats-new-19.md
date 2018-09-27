@@ -19,7 +19,7 @@ This topic describes the new features in Windows Server 2019.
 [Windows Admin Center](https://docs.microsoft.com/en-us/windows-server/manage/windows-admin-center/overview) is an evolution of Windows Server in-box management tools; it’s a single pane of glass that consolidates all aspects of local and remote server management. 
 As a locally deployed, browser-based management experience, an Internet connection and Azure aren’t required. Windows Admin Center gives you full control of all aspects of your deployment, 
 including private networks that aren’t Internet-connected.
-<br/>
+<br/><br/>
 Windows Admin Center is a free download, separate from the Windows Server 2019 download, for enhanced flexibility and remote management strategies.  See the Windows Admin Center OS support [matrix](https://docs.microsoft.com/en-us/windows-server/manage/windows-admin-center/plan/installation-options) for installation and management compatibility.
 
 ## Desktop experience
@@ -66,16 +66,16 @@ This automates the configuration for the Azure Virtual Network gateway as well a
 
 For a complete list of what’s new in SDN see, [What’s New in SDN for Windows Server 2019](https://docs.microsoft.com/en-us/windows-server/networking/sdn/sdn-whats-new).
 <br/>
-[Encrypted Networks](https://docs.microsoft.com/en-us/windows-server/networking/sdn/sdn-whats-new) - Virtual network encryption allows encryption of virtual network traffic between virtual machines that communicate with each other within subnets marked as ‘Encryption Enabled.’ 
+* [Encrypted Networks](https://docs.microsoft.com/en-us/windows-server/networking/sdn/sdn-whats-new) - Virtual network encryption allows encryption of virtual network traffic between virtual machines that communicate with each other within subnets marked as ‘Encryption Enabled.’ 
 It also utilizes Datagram Transport Layer Security (DTLS) on the virtual subnet to encrypt packets. DTLS protects against eavesdropping, tampering, and forgery by anyone with access to the physical network.
 <br/>
-[Security with SDN](https://docs.microsoft.com/en-us/windows-server/networking/sdn/security/sdn-security-top) delivers many features to increase customer confidence in running workloads either on-premises or as a service provider in the cloud. 
+* [Security with SDN](https://docs.microsoft.com/en-us/windows-server/networking/sdn/security/sdn-security-top) delivers many features to increase customer confidence in running workloads either on-premises or as a service provider in the cloud. 
 These security enhancements are integrated into the comprehensive SDN platform that our customers have already been using since Windows Server 2016.
 <br/>
-[High performance SDN gateways](https://docs.microsoft.com/en-us/windows-server/networking/sdn/gateway-performance) in Windows Server 2019 greatly improves the performance for IPsec and GRE connections. 
+* [High performance SDN gateways](https://docs.microsoft.com/en-us/windows-server/networking/sdn/gateway-performance) in Windows Server 2019 greatly improves the performance for IPsec and GRE connections. 
 All this, with huge reductions in the CPU cycles/per byte, thereby providing ultra-high-performance throughput with much less CPU utilization.
 <br/>
-**New Deployment UI and Windows Admin Center extension for SDN** - Now, with Windows Server 2019, it’s easy to deploy and manage through a new deployment UI and Windows Admin Center extension 
+* **New Deployment UI and Windows Admin Center extension for SDN** - Now, with Windows Server 2019, it’s easy to deploy and manage through a new deployment UI and Windows Admin Center extension 
 that will enable anyone to harness the power of SDN. 
 
 ## Network performance improvements for virtual workloads
