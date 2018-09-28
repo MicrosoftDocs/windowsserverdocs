@@ -60,10 +60,13 @@ and that the version is 5.1 or higher.
 
 ## Deployment options
 
-| ![](../media/deployment-options/W10.png) | ![](../media/deployment-options/gateway.png) | ![](../media/deployment-options/node.png) | ![](../media/deployment-options/HA.png) |
-|----|----|----|----|
-| Install on a local Windows 10 client that has connectivity to the managed servers.  Great for quick start, testing, ad-hoc or small scale scenarios.|Install on a designated gateway server and access from any client browser with connectivity to the gateway server. | Install directly on a managed server for the purpose of managing itself or a cluster in which it's a member node. | Deploy in a failover cluster to enable high availability of the gateway service. Great for production environments to ensure resiliency of your management service. |
+| ![img](../media/deployment-options/W10.png) | ![img](../media/deployment-options/gateway.png) | ![img](../media/deployment-options/node.png) | ![img](../media/deployment-options/HA.png) |
+|---|---|---|---|
+| Local Client | Gateway Server | Managed Server | Failover Cluster |
 
+|   |   |   |   |
+| --- | --- | --- | --- |
+| Install on a local Windows 10 client that has connectivity to the managed servers.  Great for quick start, testing, ad-hoc or small scale scenarios. |Install on a designated gateway server and access from any client browser with connectivity to the gateway server.  Great for large-scale scenarios. | Install directly on a managed server for the purpose of managing itself or a cluster in which it's a member node.  Great for distributed scenarios. | Deploy in a failover cluster to enable high availability of the gateway service. Great for production environments to ensure resiliency of your management service. |
 
 ## High availability
 

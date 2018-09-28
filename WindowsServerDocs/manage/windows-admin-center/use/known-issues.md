@@ -26,6 +26,8 @@ If you encounter an issue not described on this page, please [let us know](http:
 
 - Using port below 1024 is not supported. In service mode, you may optionally configure port 80 to redirect to your specified port.
 
+- If the Windows Update service (wuauserv) is stopped and disabled, the installer will fail. [19100629]
+
 ### Upgrade
 
 - When upgrading Windows Admin Center in service mode from a previous version, if you use msiexec in quiet mode, you may encounter an issue where the inbound firewall rule for Windows Admin Center port is deleted.
@@ -220,7 +222,7 @@ If it is not installed, you can [download and install WMF 5.1](https://www.micro
 
 The Computer Management solution contains a subset of the tools from the Server Manager solution, so the same known issues apply, as well as the following Computer Management solution specific issues:
 
-- If you use a Microsoft Account ([MSA](https://account.microsoft.com/account/)) to log on to you Windows 10 machine, you must specify "manage-as" credentials to manage your local machine [16568455]
+- If you use a Microsoft Account ([MSA](https://account.microsoft.com/account/)) or if you use Azure Active Directory (AAD) to log on to you Windows 10 machine, you must specify "manage-as" credentials to manage your local machine [16568455]
 
 * When you try to manage the localhost, you will be prompted to elevate the gateway process. If you click **no** in the User Account Control popup that follows, Windows Admin Center won't be able to display it again. In this case, exit the gateway process by right-clicking the Windows Admin Center icon in the system tray and choosing exit, then relaunch Windows Admin Center from the Start Menu.
 
