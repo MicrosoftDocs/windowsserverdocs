@@ -10,7 +10,7 @@ ms.localizationpriority: high
 ms.date: 10/02/2018
 ---
 
-# What's New in Windows Server version 1803
+# What's New in Windows Server version 1809
 
 >Applies To: Windows Server (Semi-Annual Channel)
 
