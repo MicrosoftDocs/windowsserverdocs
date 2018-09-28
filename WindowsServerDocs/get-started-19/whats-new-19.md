@@ -40,7 +40,12 @@ including private networks that aren’t Internet-connected.
 Storage Migration Service (SMS) is a new role included in Windows Server Standard and Datacenter editions. SMS is a job-based orchestration and proxy that:
 Allows administrators to inventory existing servers for their data, security, and network settings.
 Migrates that data, security, and network settings to a new, modern target by using the SMB protocol.
-Takes over the identity of the old server completely, while decommissioning the original source, in such a way that users and applications are unaffected and unaware that migration has taken place. 
+Takes over the identity of the old server completely, while decommissioning the original source, in such a way that users and applications are unaffected and unaware that migration has taken place.
+
+### Server Core app compatibility feature on demand
+
+The [Server Core App Compatibility feature on demand (FOD)](https://docs.microsoft.com/en-us/windows-server/get-started-19/install-fod-19) significantly improves the app compatibility of the Windows Server Core installation option by including a subset of binaries and components from Windows Server with the Desktop Experience, without adding the Windows Server Desktop Experience graphical environment itself.  This is done to increase the functionality and compatibility of Server Core while keeping it as lean as possible.  
+This optional feature on demand is available on a separate ISO and can be added to Windows Server Core installations and images only, using DISM. 
 
 ### Azure Network Adapter
 
@@ -121,11 +126,6 @@ These features do not need to be configured, and they will automatically become 
 * Changed our default TCP congestion provider to Cubic to give you more throughput!
 
 ## Application Platform
-
-### Server Core app compatibility feature on demand
-
-The [Server Core App Compatibility feature on demand (FOD)](https://docs.microsoft.com/en-us/windows-server/get-started-19/install-fod-19) significantly improves the app compatibility of the Windows Server Core installation option by including a subset of binaries and components from Windows Server with the Desktop Experience, without adding the Windows Server Desktop Experience graphical environment itself.  This is done to increase the functionality and compatibility of Server Core while keeping it as lean as possible.  
-This optional feature on demand is available on a separate ISO and can be added to Windows Server Core installations and images only, using DISM. 
 
 ### Container Networking with Kubernetes
 
