@@ -16,7 +16,7 @@ ms.date: 10/02/2018
 
 ## Container networking with Kubernetes
 
-[Container networking with Kubernetes](https://review.docs.microsoft.com/en-us/windows-server/networking/sdn/technologies/containers/container-networking-overview?branch=sdn-2019) in Windows Server 2019 greatly improves usability of Kubernetes on Windows by enhancing platform networking resiliency and support of container networking plugins. 
+[Container networking with Kubernetes](https://docs.microsoft.com/en-us/windows-server/networking/sdn/technologies/containers/container-networking-overview) in Windows Server 2019 greatly improves usability of Kubernetes on Windows by enhancing platform networking resiliency and support of container networking plugins. 
 Additionally, customers deploying workloads on Kubernetes network security to protect both Linux and Windows services using embedded tooling.
 
 ## Group managed service accounts for containers
@@ -29,4 +29,16 @@ that use group managed service accounts (gMSA) to access network resources.
 Simple buses can be assigned to process-isolated Windows Server containers. 
 Applications running in containers that need to talk over SPI, I2C, GPIO, and UART/COM are now able to do so.
 
+## Additional features
+In addition to features that are new in Windows Server version 1809, the following new features and capabilities for Windows Server 2019 also apply to Windows Server version 1809:
+
+* [Windows Admin Center](https://docs.microsoft.com/en-us/windows-server/manage/windows-admin-center/overview)
+* [Server Core App Compatibility feature on demand (FOD) ](https://docs.microsoft.com/en-us/windows-server/get-started-19/install-fod-19)
+* System Insights 
+* Shielded Virtual Machines 
+* Storage Migration Service (SMS) 
+* Azure Network Adapter 
+* HTTP/2
+* [Low Extra Delay Background Transport (LEDBAT)](https://blogs.technet.microsoft.com/networking/2018/07/25/ledbat/)
+* [Windows Time Service](https://docs.microsoft.com/en-us/windows-server/networking/windows-time-service/insider-preview)
 
