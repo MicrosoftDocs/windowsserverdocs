@@ -14,12 +14,12 @@ ms.date: 10/02/2018
 
 This topic describes the new features in Windows Server 2019. 
 
-## Desktop experience
+### Desktop experience
 
 The <b>Desktop Experience</b> is back in Windows Server 2019!  It is not included in Windows Server, version 1709, Windows Server, version 1803, or Windows Server, version 1809.  
 As with Windows Server 2016, during setup of the operating system it is possible to choose between Server Core installations or Server with Desktop Experience installations.
 
-## System insights
+### System insights
 
 System Insights</b> is a new feature available in Windows Server 2019 that brings local predictive analytics capabilities natively to Windows Server. These predictive capabilities—each backed by a machine-learning model—locally analyze Windows Server system data, such as performance counters and events, 
 providing insight into the functioning of your deployments and helping you reduce the operational expenses associated with monitoring your Windows Server instances. 
@@ -71,7 +71,7 @@ Offline mode allows you to continue to start up your shielded VMs, even if HGS c
 These features do not need to be configured, and they will automatically become available when a shielded VM is placed on a Hyper-V host running build 17040 or later.
 * For customers who run mixed-OS environments, Windows Server 2019 now supports running Ubuntu, Red Hat Enterprise Linux, and SUSE Linux Enterprise Server inside shielded virtual machines.
 
-## Container Networking with Kubernetes
+### Container Networking with Kubernetes
 
 [Container Networking with Kubernetes](https://docs.microsoft.com/en-us/windows-server/networking/sdn/technologies/containers/container-networking-overview) in Windows Server 2019 greatly improves usability of Kubernetes on Windows by enhancing platform networking resiliency and support of container networking plugins. 
 Additionally, customers deploying workloads on Kubernetes network security to protect both Linux and Windows services using embedded tooling.
@@ -102,48 +102,25 @@ It also utilizes Datagram Transport Layer Security (DTLS) on the virtual subnet 
 
 * Receive Segment Coalescing in the vSwitch
 * Dynamic Virtual Machine Multi-Queue (d.VMMQ)
-
-
-
-
-
-
-
-
-
-
-
-
-
  
-
-
-
- 
-
-## Software Defined Network (SDN)
-
-
-<br/>
-
-<br/>
-* 
-<br/>
-* [High performance SDN gateways](https://docs.microsoft.com/en-us/windows-server/networking/sdn/gateway-performance) in Windows Server 2019 greatly improves the performance for IPsec and GRE connections. 
-All this, with huge reductions in the CPU cycles/per byte, thereby providing ultra-high-performance throughput with much less CPU utilization.
-<br/>
-* **New Deployment UI and Windows Admin Center extension for SDN** - Now, with Windows Server 2019, it’s easy to deploy and manage through a new deployment UI and Windows Admin Center extension 
-that will enable anyone to harness the power of SDN. 
-
-
-
-
-
-## Low Extra Delay Background Transport
+### Low Extra Delay Background Transport
 
 Low Extra Delay Background Transport (LEDBAT) is a latency optimized, network congestion control provider designed to automatically yield bandwidth to users and applications, while consuming the entire bandwidth available when the network is not in use.   
 This technology is intended for use in deploying large, critical updates across an IT environment without impacting customer facing services and associated bandwidth.
 
-## Windows Time Service
+### Windows Time Service
 
 The [Windows Time Service](https://docs.microsoft.com/en-us/windows-server/networking/windows-time-service/insider-preview) includes true UTC-compliant leap second support, a new time protocol called Precision Time Protocol, and end-to-end traceability.
+
+
+### High performance SDN gateways
+
+[High performance SDN gateways](https://docs.microsoft.com/en-us/windows-server/networking/sdn/gateway-performance) in Windows Server 2019 greatly improves the performance for IPsec and GRE connections. 
+All this, with huge reductions in the CPU cycles/per byte, thereby providing ultra-high-performance throughput with much less CPU utilization.
+<br/>
+
+### New Deployment UI and Windows Admin Center extension for SDN
+
+Now, with Windows Server 2019, it’s easy to deploy and manage through a new deployment UI and Windows Admin Center extension that will enable anyone to harness the power of SDN. 
+
+
