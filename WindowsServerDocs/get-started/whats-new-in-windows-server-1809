@@ -1,0 +1,32 @@
+---
+title: What's New in Windows Server, version 1809
+description: "new features in Windows Server, version 1809"
+ms.prod: windows-server-threshold
+ms.technology: server-general
+ms.topic: article
+author: dawnwood
+ms.author: dawn.wood
+ms.localizationpriority: high
+ms.date: 10/02/2018
+---
+
+# What's New in Windows Server version 1803
+
+>Applies To: Windows Server (Semi-Annual Channel)
+
+## Container networking with Kubernetes
+
+[Container networking with Kubernetes](https://review.docs.microsoft.com/en-us/windows-server/networking/sdn/technologies/containers/container-networking-overview?branch=sdn-2019) in Windows Server 2019 greatly improves usability of Kubernetes on Windows by enhancing platform networking resiliency and support of container networking plugins. 
+Additionally, customers deploying workloads on Kubernetes network security to protect both Linux and Windows services using embedded tooling.
+
+## Group managed service accounts for containers
+
+Windows Server, version 1809 has improvements in the scalability and reliability of containers 
+that use group managed service accounts (gMSA) to access network resources. 
+
+## Host device access for containers
+
+Simple buses can be assigned to process-isolated Windows Server containers. 
+Applications running in containers that need to talk over SPI, I2C, GPIO, and UART/COM are now able to do so.
+
+
