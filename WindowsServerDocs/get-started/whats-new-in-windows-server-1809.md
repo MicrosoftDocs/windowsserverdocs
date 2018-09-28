@@ -14,6 +14,8 @@ ms.date: 10/02/2018
 
 >Applies To: Windows Server (Semi-Annual Channel)
 
+This topic describes some of the new features in Windows Server 2019.
+
 ## Container networking with Kubernetes
 
 [Container networking with Kubernetes](https://docs.microsoft.com/en-us/windows-server/networking/sdn/technologies/containers/container-networking-overview) in Windows Server 2019 greatly improves usability of Kubernetes on Windows by enhancing platform networking resiliency and support of container networking plugins. 
