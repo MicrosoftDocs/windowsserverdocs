@@ -12,7 +12,7 @@ ms.date: 10/02/2018
 
 # What's new in Windows Server 2019
 
-This topic describes the new features in Windows Server 2019. 
+This topic describes some of the new features in Windows Server 2019. 
 
 ### Desktop experience
 
@@ -49,6 +49,57 @@ This automates the configuration for the Azure Virtual Network gateway as well a
 
 ## Security
 
+### Windows Defender Advanced Threat Protection (ATP)
+
+We provide deep platform sensors and response actions, providing visibility to
+memory and kernel level attacker activities and abilities to take actions on
+compromised machines in response to incidents such as remote collection of
+additional forensic data, remediating malicious files, terminating malicious
+processes etc.
+
+-   For more information about Windows Defender ATP, see [Overview of Windows
+    Defender ATP
+    capabilities](https://docs.microsoft.com/en-us/windows/security/threat-protection/windows-defender-atp/overview).
+
+-   For more information on onboarding servers, see [Onboard servers to Windows
+    Defender ATP
+    service](https://docs.microsoft.com/en-us/windows/security/threat-protection/windows-defender-atp/configure-server-endpoints-windows-defender-advanced-threat-protection).
+
+**Windows Defender ATP Exploit Guard** is a new set of host-intrusion prevention capabilities. The four components of Windows Defender Exploit Guard are designed to lock down the device against a wide variety of attack vectors and block behaviors commonly used in malware attacks, while enabling enterprises to balance their security risk and productivity requirements.
+
+-   [Attack Surface
+    Reduction(ASR)](https://docs.microsoft.com/en-us/windows/security/threat-protection/windows-defender-exploit-guard/attack-surface-reduction-exploit-guard?ocid=cx-blog-mmpc
+)
+    is set of controls that enterprises can enable to prevent malware from
+    getting on the machine by blocking suspicious malicious files (for example,
+    Office files), scripts, lateral movement, ransomware behavior, and
+    email-based threats.
+
+-   [Network
+    protection](https://docs.microsoft.com/en-us/windows/security/threat-protection/windows-defender-exploit-guard/network-protection-exploit-guard?ocid=cx-blog-mmpc)
+    protects the endpoint against web-based threats by blocking any outbound
+    process on the device to untrusted hosts/IP addresses through Windows
+    Defender SmartScreen.
+
+-   [Controlled folder
+    access](https://cloudblogs.microsoft.com/microsoftsecure/2017/10/23/stopping-ransomware-where-it-counts-protecting-your-data-with-controlled-folder-access/?ocid=cx-blog-mmpc?source=mmpc)
+    protects sensitive data from ransomware by blocking untrusted processes from
+    accessing your protected folders.
+
+-   [Exploit
+    protection](https://docs.microsoft.com/en-us/windows/security/threat-protection/windows-defender-exploit-guard/exploit-protection-exploit-guard) is a set of mitigations for vulnerability exploits (replacing EMET)that can
+    be easily configured to protect your system and applications.
+
+
+
+[Windows Defender Application
+Control](https://docs.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control)—also
+known as Code Integrity (CI) policy—was released in Windows Server 2016.
+Customer feedback has suggested that it is a great concept, but hard to deploy.
+To address this, we have built default CI policies, which will allow all Windows
+in-box files and Microsoft applications, such as SQL Server, and block known
+executables that can bypass CI. 
+
 ### Security with Software Defined Networking (SDN)
 
 [Security with SDN](https://docs.microsoft.com/en-us/windows-server/networking/sdn/security/sdn-security-top) delivers many features to increase customer confidence in running workloads either on-premises or as a service provider in the cloud. 
@@ -63,11 +114,6 @@ Offline mode allows you to continue to start up your shielded VMs, even if HGS c
 These features do not need to be configured, and they will automatically become available when a shielded VM is placed on a Hyper-V host running build 17040 or later.
 * For customers who run mixed-OS environments, Windows Server 2019 now supports running Ubuntu, Red Hat Enterprise Linux, and SUSE Linux Enterprise Server inside shielded virtual machines.
 
-### Container Networking with Kubernetes
-
-[Container Networking with Kubernetes](https://docs.microsoft.com/en-us/windows-server/networking/sdn/technologies/containers/container-networking-overview) in Windows Server 2019 greatly improves usability of Kubernetes on Windows by enhancing platform networking resiliency and support of container networking plugins. 
-Additionally, customers deploying workloads on Kubernetes network security to protect both Linux and Windows services using embedded tooling.
-
 ### HTTP/2 for a faster and safer Web
 
 * Improved coalescing of connections to deliver an uninterrupted and properly encrypted browsing experience.
@@ -80,6 +126,11 @@ Additionally, customers deploying workloads on Kubernetes network security to pr
 
 The [Server Core App Compatibility feature on demand (FOD)](https://docs.microsoft.com/en-us/windows-server/get-started-19/install-fod-19) significantly improves the app compatibility of the Windows Server Core installation option by including a subset of binaries and components from Windows Server with the Desktop Experience, without adding the Windows Server Desktop Experience graphical environment itself.  This is done to increase the functionality and compatibility of Server Core while keeping it as lean as possible.  
 This optional feature on demand is available on a separate ISO and can be added to Windows Server Core installations and images only, using DISM. 
+
+### Container Networking with Kubernetes
+
+[Container Networking with Kubernetes](https://docs.microsoft.com/en-us/windows-server/networking/sdn/technologies/containers/container-networking-overview) in Windows Server 2019 greatly improves usability of Kubernetes on Windows by enhancing platform networking resiliency and support of container networking plugins. 
+Additionally, customers deploying workloads on Kubernetes network security to protect both Linux and Windows services using embedded tooling.
 
 ## Hyper-converged infrastructure
 
