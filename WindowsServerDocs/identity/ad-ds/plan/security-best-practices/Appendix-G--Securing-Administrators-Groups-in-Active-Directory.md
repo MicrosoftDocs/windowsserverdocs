@@ -62,7 +62,7 @@ For the Administrators group in each domain in the forest:
 
 1.  In **Server Manager**, click **Tools**, and click **Group Policy Management**.  
 
-2.  In the console tree, expand <Forest>\Domains\\<Domain>, and then **Group Policy Objects** (where <Forest> is the name of the forest and <Domain> is the name of the domain where you want to set the Group Policy).  
+2.  In the console tree, expand &lt;Forest&gt;\Domains\\&lt;Domain&gt;, and then **Group Policy Objects** (where &lt;Forest&gt; is the name of the forest and &lt;Domain&gt; is the name of the domain where you want to set the Group Policy).  
 
 3.  In the console tree, right-click **Group Policy Objects**, and click **New**.  
 
@@ -118,7 +118,7 @@ For the Administrators group in each domain in the forest:
 
 11. In **Group Policy Management**, link the GPO to the member server and workstation OUs by doing the following:  
 
-    1.  Navigate to the <Forest>\Domains\\<Domain> (where <Forest> is the name of the forest and <Domain> is the name of the domain where you want to set the Group Policy).  
+    1.  Navigate to the &lt;Forest&gt;>\Domains\\&lt;Domain&gt; (where &lt;Forest&gt; is the name of the forest and &lt;Domain&gt; is the name of the domain where you want to set the Group Policy).  
 
     2.  Right-click the OU that the GPO will be applied to and click **Link an existing GPO**.  
 
