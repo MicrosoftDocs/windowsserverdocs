@@ -47,14 +47,6 @@ Takes over the identity of the old server completely, while decommissioning the 
 Azure Network Adapter – Now with Windows Server 2019, Windows Admin Center enables a one-click experience to configure a point-to-site VPN connection between an on-premises Windows Server and an Azure Virtual Network.
 This automates the configuration for the Azure Virtual Network gateway as well as the on-premises VPN client. 
 
-### Windows Admin Center
-
-[Windows Admin Center](https://docs.microsoft.com/en-us/windows-server/manage/windows-admin-center/overview) is an evolution of Windows Server in-box management tools; it’s a single pane of glass that consolidates all aspects of local and remote server management. 
-As a locally deployed, browser-based management experience, an Internet connection and Azure aren’t required. Windows Admin Center gives you full control of all aspects of your deployment, 
-including private networks that aren’t Internet-connected.
-<br/><br/>
-* Windows Admin Center is a free download, separate from the Windows Server 2019 download, for enhanced flexibility and remote management strategies.  See the Windows Admin Center OS support [matrix](https://docs.microsoft.com/en-us/windows-server/manage/windows-admin-center/plan/installation-options) for installation and management compatibility.
-
 ## Security
 
 ### Security with Software Defined Networking (SDN)
