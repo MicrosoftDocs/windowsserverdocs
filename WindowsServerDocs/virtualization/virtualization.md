@@ -17,6 +17,8 @@ ms.localizationpriority: high
 >[!TIP]
 > Looking for information about older versions of Windows Server? Check out our other [Windows Server libraries](/previous-versions/windows/) on docs.microsoft.com. You can also [search this site](https://docs.microsoft.com/search/index?search=Windows+Server&dataSource=previousVersions) for specific information.
 
+<hr />
+
 Virtualization in Windows Server 2016 is one of the foundational technologies required to create your software defined infrastructure. Along with networking and storage, virtualization features deliver the flexibility you need to power workloads for your customers.
 
 <hr />
@@ -39,6 +41,7 @@ Virtualization in Windows Server 2016 is one of the foundational technologies re
             </div>
         </div>
     </li>
+<hr />
 <li>
           <div class="cardSize">
             <div class="cardPadding">
@@ -57,6 +60,7 @@ Virtualization in Windows Server 2016 is one of the foundational technologies re
             </div>
         </div>
     </li>
+<hr />
 <li>
           <div class="cardSize">
             <div class="cardPadding">
@@ -76,6 +80,7 @@ Virtualization in Windows Server 2016 is one of the foundational technologies re
         </div>
     </li>
 <li>
+<hr />
           <div class="cardSize">
             <div class="cardPadding">
                 <div class="card">
@@ -93,6 +98,7 @@ Virtualization in Windows Server 2016 is one of the foundational technologies re
             </div>
         </div>
     </li>
+<hr />
 <li>
           <div class="cardSize">
             <div class="cardPadding">
