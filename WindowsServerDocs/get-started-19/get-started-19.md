@@ -52,7 +52,7 @@ ms.localizationpriority: medium
                     </div>
                     <div class="cardText">
                         <h3>Servicing channels</h3>
-                        <p>Better plan your deployment and patching schedules by understanding our the difference between our Long Term Servicing Channel (LTSB) and Semi-Annual Channel releases.</p>
+                        <p>Better plan your deployment and patching schedules by understanding the difference between our Long Term Servicing Channel (LTSB) and Semi-Annual Channel (SAC) releases.</p>
                     </div>
                 </div>
             </div>
@@ -204,7 +204,7 @@ ms.localizationpriority: medium
                     </div>
                     <div class="cardText">
                         <h3>Removed features</h3>
-                        <p>Part of improving Server versions is removing outdated technologies to make way for new ones. Find out what's been removed in WIndows Server 2019 from previous versions.</p>                    </div>
+                        <p>Part of improving Server versions is removing outdated technologies to make way for new ones. Find out what's been removed in Windows Server 2019 from previous versions.</p>                    </div>
                 </div>
             </div>
         </div>
