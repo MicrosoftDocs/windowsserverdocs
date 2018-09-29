@@ -94,7 +94,6 @@ Virtualization in Windows Server 2016 is one of the foundational technologies re
         </div>
     </li>
 <li>
-        <a href="hyper-v-virtual-switch/Hyper-V-Virtual-Switch.md">
           <div class="cardSize">
             <div class="cardPadding">
                 <div class="card">
@@ -104,7 +103,7 @@ Virtualization in Windows Server 2016 is one of the foundational technologies re
                         </div>
                     </div>
                     <div class="cardText">
-                        <h3>Hyper-V Virtual Switch</h3></a>
+                        <a href="hyper-v-virtual-switch/Hyper-V-Virtual-Switch.md"><h3>Hyper-V Virtual Switch</h3></a>
 <HR />
                         <p>The Hyper\-V Virtual Switch is a software\-based layer\-2 Ethernet network switch that is included in all versions of Hyper\-V.</p>
 <HR />
