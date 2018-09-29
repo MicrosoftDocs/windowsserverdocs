@@ -1,4 +1,4 @@
-# [Get started with Windows Server 2019](index.md) 
+# [Get started with Windows Server 2019](get-started-19.md) 
 ## [What's new in Windows Server 2019](whats-new-19.md)
 ## [Comparison of Servicing channels](servicing-channels-19.md)
 ## [Install | Upgrade | Migrate](install-upgrade-migrate-19.md)
