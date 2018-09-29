@@ -37,13 +37,13 @@ start ["<Title>"] [/d <Path>] [/i] [{/min | /max}] [{/separate | /shared}] [{/lo
 |"\<Title>"|Specifies the title to display in the Command Prompt window title bar.|
 |/d \<Path>|Specifies the startup directory.|
 |/i|Passes the Cmd.exe startup environment to the new Command Prompt window. If **/i** is not specified, the current environment is used.|
-|{/min | /max}|Specifies to minimize (**/min**) or maximize (**/max**) the new Command Prompt window.|
-|{/separate | /shared}|Starts 16-bit programs in a separate memory space (**/separate**) or shared memory space (**/shared**). These options are not supported on 64-bit platforms.|
-|{/low | /normal | /high | /realtime | /abovenormal | /belownormal}|Starts an application in the specified priority class. Valid priority class values are **/low**, **/normal**, **/high**, **/realtime**, **/abovenormal**, and **/belownormal**.|
+|/min \| /max|Specifies to minimize (**/min**) or maximize (**/max**) the new Command Prompt window.|
+|/separate \| /shared|Starts 16-bit programs in a separate memory space (**/separate**) or shared memory space (**/shared**). These options are not supported on 64-bit platforms.|
+|/low \| /normal \| /high \| /realtime \| /abovenormal \| /belownormal|Starts an application in the specified priority class. Valid priority class values are **/low**, **/normal**, **/high**, **/realtime**, **/abovenormal**, and **/belownormal**.|
 |/affinity \<HexAffinity>|Applies the specified processor affinity mask (expressed as a hexadecimal number) to the new application.|
 |/wait|Starts an application and waits for it to end.|
 |/b|Starts an application without opening a new Command Prompt window. CTRL+C handling is ignored unless the application enables CTRL+C processing. Use CTRL+BREAK to interrupt the application.|
-|/b {\<Command> | <Program>}|Specifies the command or program to start.|
+|/b \<Command> \| \<Program>|Specifies the command or program to start.|
 |\<Parameters>|Specifies parameters to pass to the command or program.|
 |/?|Displays help at the command prompt.|
 

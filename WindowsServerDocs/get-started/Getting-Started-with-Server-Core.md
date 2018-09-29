@@ -80,7 +80,7 @@ To install the Server Core installation option in Windows Server 2016, see [Wind
 
 Installation steps for Windows Server, version 1709, are the same as installing previous versions of Windows Server (from an .ISO image), with the following exceptions:
 - No supported upgrades from previous versions of Windows Server to Windows Server, version 1709. A fresh installation is always required.
-   This means that when you run setup.exe from the desktop of a Windows computer, the setup experience will not permit the upgrade option (it is grayed out).
+   This means that when you run setup.exe from the desktop of a Windows computer, the setup experience does not permit the upgrade option (it is grayed out).
 - There’s no evaluation version for Windows Server, version 1709.
 - There’s no OEM or retail version. Windows Server version 1709 can only be licensed through Software Assurance or loyalty programs.
 
