@@ -1,5 +1,5 @@
 ---
-title: Install Windows Server Features on Demand
+title: Server Core App Compatibility feature on demand
 description: "How to install Windows Server Features on Demand"
 ms.custom: na
 ms.prod: windows-server-threshold
@@ -15,7 +15,7 @@ manager: jasgroce
 ms.localizationpriority: medium
 ---
 
-# Install Windows Server Features On Demand
+# Server Core App Compatibility feature on demand
 
 > Applies to Windows Server 2019
 
@@ -52,7 +52,7 @@ Operating system components that are available as part of the Server Core App Co
 
     -   Requires addition of the Failover Clustering Windows Server feature first.
 
-        -   Use Powershell Cmdlet to add, **Install-WindowsFeature -NameFailover-Clustering -IncludeManagementTools**
+        -   Use Powershell Cmdlet to add, `Install-WindowsFeature -NameFailover-Clustering -IncludeManagementTools`
 
         -   To run Failover Cluster Manager, enter **cluadmin** at the command prompt.
 
@@ -78,13 +78,13 @@ Operating system components that are available as part of the Server Core App Co
 
 6. Mount the FoD ISO by using the following command:
 
-     **Mount-DiskImage -ImagePath***drive_letter***:\\***folder_where_ISO_is_saved*
+        Mount-DiskImage -ImagePath drive_letter:\\folder_where_ISO_is_saved
 
 7. Enter **exit** to exit PowerShell.
 
 8.  Enter the following command:
 
-     **DISM /Online /Add-Capability/CapabilityName:ServerCore.Appcompatibility\~\~\~\~0.0.1.0 /Source:***drive_letter_of_mounted_ISO***: /LimitAccess**
+        DISM /Online /Add-Capability/CapabilityName:ServerCore.AppCompatibility\~\~\~\~0.0.1.0 /Source:***drive_letter_of_mounted_ISO***: /LimitAccess
 
 9.  After the progress bar completes, restart the operating system at the prompt.
 
@@ -99,14 +99,13 @@ Operating system components that are available as part of the Server Core App Co
 
 3.  Mount the FoD ISO by using the following command:
 
-     **Mount-DiskImage -ImagePath** *drive_letter***:\\***folder_where_ISO_is_saved*
+         Mount-DiskImage -ImagePath drive_letter:\folder_where_ISO_is_saved
 
 4.  Type **exit** to exit PowerShell.
 
-5.  In a command window, change the default directory to drive letter of the mounted ISO.
 
-6.  Run the following command:
+5.  Run the following command:
 
-     **Dism /online /add-package**:**"Microsoft-Windows-InternetExplorer-Optional-Package\~31bf3856ad364e35\~amd64\~\~.cab"**
+        Dism /online /add-package**:**"Microsoft-Windows-InternetExplorer-Optional-Package\~31bf3856ad364e35\~amd64\~\~.cab"
 
-7.  Restart the computer.
+6.  Restart the computer.
