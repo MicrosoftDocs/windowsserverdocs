@@ -36,7 +36,6 @@ Virtualization in Windows Server 2016 is one of the foundational technologies re
                     </div>
                 </div>
             </div>
-        </div>
        </a>
     </li>
 <li>
@@ -55,7 +54,6 @@ Virtualization in Windows Server 2016 is one of the foundational technologies re
                     </div>
                 </div>
             </div>
-        </div>
        </a>
      </li>
 <li>
@@ -74,7 +72,6 @@ Virtualization in Windows Server 2016 is one of the foundational technologies re
                     </div>
                 </div>
             </div>
-        </div>
        </a>
      </li>
 <li>
@@ -99,7 +96,6 @@ Virtualization in Windows Server 2016 is one of the foundational technologies re
                     </div>
                 </div>
             </div>
-        </div>
        </a>
      </li>
 <li>
@@ -118,7 +114,6 @@ Virtualization in Windows Server 2016 is one of the foundational technologies re
                     </div>
                 </div>
             </div>
-        </div>
       </a>
     </li>
 </ul>
