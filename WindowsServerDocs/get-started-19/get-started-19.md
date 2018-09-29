@@ -203,7 +203,7 @@ ms.localizationpriority: medium
                         </div>
                     </div>
                     <div class="cardText">
-                        <h3>Features removed or planned for replacement starting Windows Server 2019</h3>
+                        <h3>Features removed or planned for replacement starting in Windows Server 2019</h3>
                         <p>Part of improving Server versions is removing outdated technologies to make way for new ones. Find out what's been removed in Windows Server 2019 from previous versions.</p>                    
                     </div>
                 </div>
