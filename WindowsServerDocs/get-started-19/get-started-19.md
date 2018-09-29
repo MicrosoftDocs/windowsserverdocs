@@ -127,7 +127,7 @@ ms.localizationpriority: medium
                     </div>
                     <div class="cardText">
                         <h3>Activation</h3>
-                        <p>Basic information on activation of Windows Server 2019 itself and other operating systems by using Windows Server 2019.</p>
+                        <p>Basic information on activation of Windows Server 2019 itself, and other operating systems, by using Windows Server 2019.</p>
                     </div>
                 </div>
             </div>
