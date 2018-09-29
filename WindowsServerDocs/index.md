@@ -74,8 +74,8 @@ description: Windows Server documentation helps IT professionals evaluate, plan,
                                             </div>
                                         </div>
                                         <div class="cardText">
-                                            <h2>Check out the Windows Server Upgrade Center for step-by-step guidance on upgrading Windows Server</h2>
-                                            <p>Upgrade to Windows Server 2019 locally, or migrate an older Server version to Azure</p>
+                                            <h2>Upgrade to Windows Server 2019</h2>
+                                            <p>Check out the Windows Server Upgrade Center for step-by-step guidance on upgrading Windows Server</p>
                                         </div>
                                     </div>
                                 </div>
