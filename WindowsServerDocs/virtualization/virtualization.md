@@ -8,8 +8,9 @@ ms.topic: article
 author: shortpatti
 ms.author: pashort
 ms.localizationpriority: high
-ms.date: 03/16/2018
+
 ---
+
 # Virtualization
 
 >[!TIP]
@@ -17,6 +18,7 @@ ms.date: 03/16/2018
 
 Virtualization in Windows Server 2016 is one of the foundational technologies required to create your software defined infrastructure. Along with networking and storage, virtualization features deliver the flexibility you need to power workloads for your customers.
 
+<hr />
 <ul class="cardsI panelContent">
 <li>
         <a href="../security/guarded-fabric-shielded-vm/guarded-fabric-and-shielded-vms-top-node.md">
@@ -121,7 +123,7 @@ Virtualization in Windows Server 2016 is one of the foundational technologies re
     </li>
 </ul>
 
-<hr />
+---
 
 ## Related
 

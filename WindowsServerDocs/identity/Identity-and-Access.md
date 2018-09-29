@@ -11,9 +11,8 @@ ms.topic: landing-page
 ms.author: billmath
 ms.localizationpriority: high
 ---
-# Identity | Access
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
+# Identity | Access
 
 >[!TIP]
 > Looking for information about older versions of Windows Server? Check out our other [Windows Server libraries](/previous-versions/windows/) on docs.microsoft.com. You can also [search this site](https://docs.microsoft.com/search/index?search=Windows+Server&dataSource=previousVersions) for specific information.
@@ -94,7 +93,7 @@ Access and Identity technologies enable secure Active Directory environments on-
                     </div>
                     <div class="cardText">
                         <h3>Active Directory Domain Services</h3>
-                        <p>Detailed documentation on all of the features available for AD DS in Windows Server 2016.<p>
+                        <p>Detailed documentation on all of the features available for AD DS in Windows Server 2016.</p>
                     </div>
                 </div>
             </div>
@@ -113,7 +112,7 @@ Access and Identity technologies enable secure Active Directory environments on-
                     </div>
                     <div class="cardText">
                         <h3>Active Directory Federation Services</h3>
-                        <p>Detailed documentation on all of the features available for AD FS in Windows Server 2016.<p>
+                        <p>Detailed documentation on all of the features available for AD FS in Windows Server 2016.</p>
                     </div>
                 </div>
             </div>
