@@ -1,10 +1,11 @@
 ---
 title: Virtualization
 description: Provides an overview of virtualization technologies, such as Containers, Hyper-V, and Hyper-V Virtual Switch; and links to additional content for Windows Server 2016 and later versions of the operating system.
+layout: LandingPage
 ms.prod: windows-server-threshold
 manager: brianlic
 ms.technology: compute
-ms.topic: article
+ms.topic: landing-page
 author: shortpatti
 ms.author: pashort
 ms.localizationpriority: high
@@ -21,7 +22,7 @@ Virtualization in Windows Server 2016 is one of the foundational technologies re
 <hr />
 <ul class="cardsI panelContent">
 <li>
-        <a href="../security/guarded-fabric-shielded-vm/guarded-fabric-and-shielded-vms-top-node.md">
+      <a href="../security/guarded-fabric-shielded-vm/guarded-fabric-and shielded-vms-top-node.md">
           <div class="cardSize">
             <div class="cardPadding">
                 <div class="card">
@@ -36,6 +37,7 @@ Virtualization in Windows Server 2016 is one of the foundational technologies re
                     </div>
                 </div>
             </div>
+        </div>
        </a>
     </li>
 <li>
@@ -54,8 +56,9 @@ Virtualization in Windows Server 2016 is one of the foundational technologies re
                     </div>
                 </div>
             </div>
+        </div>
        </a>
-     </li>
+    </li>
 <li>
         <a href="https://docs.microsoft.com/en-us/windows-server/virtualization/hyper-v/hyper-v-server-2016">
           <div class="cardSize">
@@ -72,8 +75,9 @@ Virtualization in Windows Server 2016 is one of the foundational technologies re
                     </div>
                 </div>
             </div>
+        </div>
        </a>
-     </li>
+    </li>
 <li>
         <a href="hyper-v-virtual-switch/Hyper-V-Virtual-Switch.md">
           <div class="cardSize">
@@ -96,8 +100,9 @@ Virtualization in Windows Server 2016 is one of the foundational technologies re
                     </div>
                 </div>
             </div>
+        </div>
        </a>
-     </li>
+    </li>
 <li>
        <a href="https://docs.microsoft.com/virtualization/windowscontainers">
           <div class="cardSize">
@@ -114,6 +119,7 @@ Virtualization in Windows Server 2016 is one of the foundational technologies re
                     </div>
                 </div>
             </div>
+        </div>
       </a>
     </li>
 </ul>
