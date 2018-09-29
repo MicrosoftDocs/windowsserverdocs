@@ -1,5 +1,5 @@
 ---
-title: Server Core App Compatibility feature on demand
+title: Server Core App Compatibility Feature on Demand (FOD)
 description: "How to install Windows Server Features on Demand"
 ms.custom: na
 ms.prod: windows-server-threshold
@@ -15,14 +15,17 @@ manager: jasgroce
 ms.localizationpriority: medium
 ---
 
-# Server Core App Compatibility feature on demand
+# Server Core App Compatibility Feature on Demand (FOD)
 
 > Applies to Windows Server 2019
+
+The **Server Core App Compatibility Feature on Demand** is the first feature package that can be added to Windows Server 2019 at any time.
 
 For more information on Features on Demand (FOD), see [Features On
 Demand](https://docs.microsoft.com/en-us/windows-hardware/manufacture/desktop/features-on-demand-v2--capabilities).
 
-## App Compatibility Feature on Demand
+
+## Why install the App Compatibility FOD? 
 
 App Compatibility, a Feature on Demand for Server Core, significantly improves the app compatibility of the Windows Server Core installation option by including a subset of binaries and packages from Windows Server with Desktop, without adding the Windows Server Desktop Experience graphical environment. This optional package is available on a separate ISO and can be added to Windows Server Core installations and images only.
 
@@ -56,10 +59,12 @@ Operating system components that are available as part of the Server Core App Co
 
         -   To run Failover Cluster Manager, enter **cluadmin** at the command prompt.
 
-### To add the Server Core App Compatibility feature on demand (FOD) to a running instance of Server Core
+## Installing the App Compatibility FOD
 
- >[!NOTE]  
-   > Do not attempt to add the Server Core App Compatibility FOD to a Windows Server installation of Windows Server with Desktop Experience.
+ >[!IMPORTANT] 
+   >The App Compatibility FOD can only be installed on Server Core. Do not attempt to add the Server Core App Compatibility FOD to a Windows Server installation of Windows Server with Desktop Experience.
+
+### To add the Server Core App Compatibility feature on demand (FOD) to a running instance of Server Core
 
  >[!NOTE] 
    > This procedure uses Deployment Image Servicing and Management (DISM.exe), a command-line tool. For more information about DISM commands, see [DISM Capabilities Package Servicing Command-Line Options](https://docs.microsoft.com/en-us/windows-hardware/manufacture/desktop/dism-capabilities-package-servicing-command-line-options).
@@ -88,7 +93,7 @@ Operating system components that are available as part of the Server Core App Co
 
 9.  After the progress bar completes, restart the operating system.
 
-### To optionally add Internet Explorer 11 to Server Core** (after adding the Server Core App Compatibility FOD)
+### To optionally add Internet Explorer 11 to Server Core (after adding the Server Core App Compatibility FOD)
 
  >[!NOTE]  
    > The Server Core App Compatibility FOD is required for the addition of Internet Explorer 11, but Internet Explorer 11 is not required to add the Server Core App Compatibility FOD.

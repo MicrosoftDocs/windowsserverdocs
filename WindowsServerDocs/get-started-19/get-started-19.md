@@ -146,7 +146,7 @@ ms.localizationpriority: medium
                         </div>
                     </div>
                     <div class="cardText">
-                        <h3>Install Windows Server Features On Demand</h3>
+                        <h3>Server Core App Compatibility Feature on Demand (FOD)</h3>
                         <p>Features on Demand (FODs) are Windows Server feature packages that can be added at any time. </p>
                     </div>
                 </div>
