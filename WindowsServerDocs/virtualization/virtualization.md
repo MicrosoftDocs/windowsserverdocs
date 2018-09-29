@@ -25,7 +25,7 @@ Virtualization in Windows Server 2016 is one of the foundational technologies re
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <img src="../media/i-access.svg" alt="" />
+                            <img src="../media/i-virtualize.svg" alt="" />
                         </div>
                     </div>
                     <div class="cardText">
@@ -44,7 +44,7 @@ Virtualization in Windows Server 2016 is one of the foundational technologies re
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <img src="../media/i-access.svg" alt="" />
+                            <img src="../media/i-virtualize.svg" alt="" />
                         </div>
                     </div>
                     <div class="cardText">
@@ -63,7 +63,7 @@ Virtualization in Windows Server 2016 is one of the foundational technologies re
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <img src="../media/i-access.svg" alt="" />
+                            <img src="../media/i-virtualize.svg" alt="" />
                         </div>
                     </div>
                     <div class="cardText">
@@ -82,7 +82,7 @@ Virtualization in Windows Server 2016 is one of the foundational technologies re
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <img src="../media/i-access.svg" alt="" />
+                            <img src="../media/i-virtualize.svg" alt="" />
                         </div>
                     </div>
                     <div class="cardText">
@@ -107,7 +107,7 @@ Virtualization in Windows Server 2016 is one of the foundational technologies re
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <img src="../media/i-access.svg" alt="" />
+                            <img src="../media/i-virtualize.svg" alt="" />
                         </div>
                     </div>
                     <div class="cardText">
@@ -117,9 +117,12 @@ Virtualization in Windows Server 2016 is one of the foundational technologies re
                 </div>
             </div>
         </div>
-       </a>
-     </li>
+      </a>
+    </li>
+</ul>
+
 <hr />
+
 ## Related
 
 - Hyper-V requires specific hardware to create the virtualization environment. For details, see [System requirements for Hyper-V on Windows Server 2016](./hyper-v/system-requirements-for-hyper-v-on-windows.md). 
