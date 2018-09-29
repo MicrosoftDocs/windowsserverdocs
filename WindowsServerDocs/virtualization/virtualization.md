@@ -90,7 +90,7 @@ Virtualization in Windows Server 2016 is one of the foundational technologies re
                     </div>
                     <div class="cardText">
                         <h3>Hyper-V Virtual Switch</h3>
-                        <p>The Hyper\-V Virtual Switch is a software\-based layer\-2 Ethernet network switch that is included in all versions of Hyper\-V.<br>Hyper\-V Virtual Switch is available in Hyper\-V Manager after you install the Hyper\-V server role.<br>Included in Hyper\-V Virtual Switch are programmatically managed and extensible capabilities that allow you to connect virtual machines to both virtual networks and the physical network.<br>In addition, Hyper-V Virtual Switch provides policy enforcement for security, isolation, and service levels.</p>
+                        <p>The Hyper\-V Virtual Switch is a software\-based layer\-2 Ethernet network switch that is included in all versions of Hyper\-V.<hr />Hyper\-V Virtual Switch is available in Hyper\-V Manager after you install the Hyper\-V server role.<hr />Included in Hyper\-V Virtual Switch are programmatically managed and extensible capabilities that allow you to connect virtual machines to both virtual networks and the physical network.<hr />In addition, Hyper-V Virtual Switch provides policy enforcement for security, isolation, and service levels.</p>
                     </div>
                 </div>
             </div>
