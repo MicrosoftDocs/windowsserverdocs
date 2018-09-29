@@ -25,9 +25,9 @@ Virtualization in Windows Server 2016 is one of the foundational technologies re
           <div class="cardSize">
             <div class="cardPadding">
                 <div class="card">
+                    <a href="../security/guarded-fabric-shielded-vm/guarded-fabric-and shielded-vms-top-node.md">
                     <div class="cardImageOuter">
-                        <div class="cardImage">
-                            <a href="../security/guarded-fabric-shielded-vm/guarded-fabric-and shielded-vms-top-node.md">  
+                        <div class="cardImage">  
                             <img src="../media/i-virtualize.svg" alt="" />
                         </div>
                     </div>
@@ -58,7 +58,6 @@ Virtualization in Windows Server 2016 is one of the foundational technologies re
         </div>
     </li>
 <li>
-        <a href="https://docs.microsoft.com/en-us/windows-server/virtualization/hyper-v/hyper-v-server-2016">
           <div class="cardSize">
             <div class="cardPadding">
                 <div class="card">
