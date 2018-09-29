@@ -78,15 +78,15 @@ Operating system components that are available as part of the Server Core App Co
 
 6. Mount the FoD ISO by using the following command:
 
-        Mount-DiskImage -ImagePath drive_letter:\\folder_where_ISO_is_saved
+        Mount-DiskImage -ImagePath drive_letter:\folder_where_ISO_is_saved\ISO_filename.iso
 
 7. Enter **exit** to exit PowerShell.
 
 8.  Enter the following command:
 
-        DISM /Online /Add-Capability/CapabilityName:ServerCore.AppCompatibility\~\~\~\~0.0.1.0 /Source:***drive_letter_of_mounted_ISO***: /LimitAccess
+        DISM /Online /Add-Capability/Capability Name:ServerCore.AppCompatibility\~\~\~\~0.0.1.0 /Source:drive_letter_of_mounted_ISO: /LimitAccess
 
-9.  After the progress bar completes, restart the operating system at the prompt.
+9.  After the progress bar completes, restart the operating system.
 
 ### To optionally add Internet Explorer 11 to Server Core** (after adding the Server Core App Compatibility FOD)
 
@@ -99,13 +99,13 @@ Operating system components that are available as part of the Server Core App Co
 
 3.  Mount the FoD ISO by using the following command:
 
-         Mount-DiskImage -ImagePath drive_letter:\folder_where_ISO_is_saved
+         Mount-DiskImage -ImagePath drive_letter:\folder_where_ISO_is_saved\ISO_filename.iso
 
 4.  Type **exit** to exit PowerShell.
 
 
 5.  Run the following command:
 
-        Dism /online /add-package**:**"Microsoft-Windows-InternetExplorer-Optional-Package\~31bf3856ad364e35\~amd64\~\~.cab"
+        Dism /online /add-package:"Microsoft-Windows-InternetExplorer-Optional-Package\~31bf3856ad364e35\~amd64\~\~.cab"
 
 6.  Restart the computer.
