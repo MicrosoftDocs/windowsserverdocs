@@ -12,10 +12,15 @@ ms.date: 03/16/2018
 ---
 # Virtualization
 
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016 
+
 >[!TIP]
 > Looking for information about older versions of Windows Server? Check out our other [Windows Server libraries](/previous-versions/windows/) on docs.microsoft.com. You can also [search this site](https://docs.microsoft.com/search/index?search=Windows+Server&dataSource=previousVersions) for specific information.
 
-Virtualization in Windows Server 2016 is one of the foundational technologies required to create your software defined infrastructure. Along with networking and storage, virtualization features deliver the flexibility you need to power workloads for your customers.
+<img src="../media/landing-icons/virtualization.png" style='float:left; padding:.5em;' alt="Icon showing a box with spokes"> Virtualization in Windows Server 2016 is one of the foundational technologies required to create your software defined infrastructure. Along with networking and storage, virtualization features deliver the flexibility you need to power workloads for your customers.
+
+Windows Server Virtualization technologies include updates to Hyper-V, Hyper-V Virtual Switch, and Guarded Fabric and Shielded Virtual Machines \(VMs\), that improve security, scalability, and reliability. Updates to failover clustering, networking, and storage make it even easier to deploy and manage these technologies when used with Hyper-V. 
+
 
 <ul class="cardsI panelContent">
 <li>
@@ -56,6 +61,7 @@ Virtualization in Windows Server 2016 is one of the foundational technologies re
         </div>
        </a>
      </li>
+
 <li>
         <a href="https://docs.microsoft.com/en-us/windows-server/virtualization/hyper-v/hyper-v-server-2016">
           <div class="cardSize">
@@ -75,6 +81,8 @@ Virtualization in Windows Server 2016 is one of the foundational technologies re
         </div>
        </a>
      </li>
+
+
 <li>
         <a href="hyper-v-virtual-switch/Hyper-V-Virtual-Switch.md">
           <div class="cardSize">
@@ -100,6 +108,8 @@ Virtualization in Windows Server 2016 is one of the foundational technologies re
         </div>
        </a>
      </li>
+
+
 <li>
        <a href="https://docs.microsoft.com/virtualization/windowscontainers">
           <div class="cardSize">
@@ -119,10 +129,13 @@ Virtualization in Windows Server 2016 is one of the foundational technologies re
         </div>
        </a>
      </li>
-<hr />
+
+
+
+
 ## Related
 
-- Hyper-V requires specific hardware to create the virtualization environment. For details, see [System requirements for Hyper-V on Windows Server 2016](./hyper-v/system-requirements-for-hyper-v-on-windows.md). 
+Hyper-V requires specific hardware to create the virtualization environment. For details, see [System requirements for Hyper-V on Windows Server 2016](./hyper-v/system-requirements-for-hyper-v-on-windows.md). 
 
-- For more information about Hyper-V on Windows 10, see [Hyper-V on Windows 10](https://docs.microsoft.com/virtualization/hyper-v-on-windows).
+For more information, see [Hyper-V on Windows 10](https://docs.microsoft.com/virtualization/hyper-v-on-windows).
 
