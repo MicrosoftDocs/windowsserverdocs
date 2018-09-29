@@ -19,7 +19,7 @@ ms.localizationpriority: medium
 >Applies To: Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2, Windows Server 2008
 
 > [!IMPORTANT]
-> Extended support for Windows Server 2008 R2 and Windows Server 2008 ends in January 2020. [Learn about your upgrade options](http//aka.ms/upgradecenter).
+> Extended support for Windows Server 2008 R2 and Windows Server 2008 ends in January 2020. [Learn about your upgrade options](http://aka.ms/upgradecenter).
 
 Is it time to move to a newer version of Windows Server? Depending on what you are running now, you have lots of options to get there.
 
@@ -29,7 +29,9 @@ If you want to move from an older version of Windows Server to Windows Server 20
 ## In-place Upgrade
 If you want to keep the same hardware and all the server roles you have set up without flattening the server, you'll want to do an  **In-place Upgrade**, by which you go from an older operating system to a newer one, keeping your settings, server roles, and data intact. For example, if your server is running Windows Server 2012 R2, you can upgrade it to Windows Server 2016 or Windows Server 2019. However, not every older operating system has a pathway to every newer one. 
 
-For complete information on Windows Server In-place Upgrade, visit the [Windows Server Upgrade Center](http//aka.ms/upgradecenter).
+For complete information on Windows Server In-place Upgrade, visit the
+
+<a href="http://aka.ms/upgradecenter"><img="media/upgrade-center.png" alt="Screenshot of Windows Upgrade Center" title="Windows Server Upgrade Center"><br/>Windows Server Upgrade Center</a>
 
 
 ## Cluster OS Rolling Upgrade
