@@ -60,7 +60,8 @@ Operating system components that are available as part of the Server Core App Co
 
  >[!NOTE]  
    > Do not attempt to add the Server Core App Compatibility FOD to a Windows Server installation of Windows Server with Desktop Experience.
-    
+
+ >[!NOTE] 
    > This procedure uses Deployment Image Servicing and Management (DISM.exe), a command-line tool. For more information about DISM commands, see [DISM Capabilities Package Servicing Command-Line Options](https://docs.microsoft.com/en-us/windows-hardware/manufacture/desktop/dism-capabilities-package-servicing-command-line-options).
 
 1. Download the Server FOD optional packages ISO, and copy the ISO to a shared folder on your local network.
