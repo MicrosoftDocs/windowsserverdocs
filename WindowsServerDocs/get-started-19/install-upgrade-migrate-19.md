@@ -31,8 +31,7 @@ If you want to keep the same hardware and all the server roles you have set up w
 
 For complete information on Windows Server In-place Upgrade, visit the
 
-<a href="http://aka.ms/upgradecenter"><img="media/upgrade-center.png" alt="Screenshot of Windows Upgrade Center" title="Windows Server Upgrade Center"><br/>Windows Server Upgrade Center</a>
-
+<a href="http://aka.ms/upgradecenter"><img src="media/upgrade-center.png" alt="Screenshot of Windows Upgrade Center" title="Windows Server Upgrade Center"><br/>Windows Server Upgrade Center</a>
 
 ## Cluster OS Rolling Upgrade
 Cluster OS Rolling Upgrade enables an administrator to upgrade the operating system of the cluster nodes from Windows Server 2012 R2 and Windows Server 2016 without stopping the Hyper-V or the Scale-Out File Server workloads. This feature allows you to avoid downtime which could impact Service Level Agreements. This new feature is discussed in more detail at [Cluster operating system rolling upgrade](https://technet.microsoft.com/en-us/windows-server-docs/failover-clustering/cluster-operating-system-rolling-upgrade).
