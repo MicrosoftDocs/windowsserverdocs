@@ -22,12 +22,12 @@ Virtualization in Windows Server 2016 is one of the foundational technologies re
 <hr />
 <ul class="cardsI panelContent">
 <li>
-      <a href="../security/guarded-fabric-shielded-vm/guarded-fabric-and shielded-vms-top-node.md">
           <div class="cardSize">
             <div class="cardPadding">
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
+                            <a href="../security/guarded-fabric-shielded-vm/guarded-fabric-and shielded-vms-top-node.md">  
                             <img src="../media/i-virtualize.svg" alt="" />
                         </div>
                     </div>
@@ -40,17 +40,17 @@ Virtualization in Windows Server 2016 is one of the foundational technologies re
         </div>
     </li>
 <li>
-        <a href="../hyper-v/Hyper-V-on-Windows-Server.md">
           <div class="cardSize">
             <div class="cardPadding">
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
+                            <a href="../hyper-v/Hyper-V-on-Windows-Server.md">
                             <img src="../media/i-virtualize.svg" alt="" />
                         </div>
                     </div>
                     <div class="cardText">
-                        <h3>Windows 10 for the enterprise: Ways to use devices for work</h3></a>
+                       <h3>Windows 10 for the enterprise: Ways to use devices for work</h3></a>
                         <p>The Hyper-V technology provides computing resources through hardware virtualization. Hyper-V creates a software version of a computer, called a virtual machine, which you use to run an operating system and applications. You can run multiple virtual machines at the same time, and can create and delete them as needed. </p>
                     </div>
                 </div>
@@ -64,7 +64,8 @@ Virtualization in Windows Server 2016 is one of the foundational technologies re
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <img src="../media/i-virtualize.svg" alt="" />
+                        <a href="https://docs.microsoft.com/en-us/windows-server/virtualization/hyper-v/hyper-v-server-2016">                          
+                        <img src="../media/i-virtualize.svg" alt="" />
                         </div>
                     </div>
                     <div class="cardText">
@@ -76,12 +77,12 @@ Virtualization in Windows Server 2016 is one of the foundational technologies re
         </div>
     </li>
 <li>
-       <a href="https://docs.microsoft.com/virtualization/windowscontainers">
           <div class="cardSize">
             <div class="cardPadding">
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
+                            <a href="https://docs.microsoft.com/virtualization/windowscontainers">
                             <img src="../media/i-virtualize.svg" alt="" />
                         </div>
                     </div>
@@ -99,11 +100,12 @@ Virtualization in Windows Server 2016 is one of the foundational technologies re
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
+                            <a href="hyper-v-virtual-switch/Hyper-V-Virtual-Switch.md">
                             <img src="../media/i-virtualize.svg" alt="" />
                         </div>
                     </div>
                     <div class="cardText">
-                        <a href="hyper-v-virtual-switch/Hyper-V-Virtual-Switch.md"><h3>Hyper-V Virtual Switch</h3></a>
+                        <h3>Hyper-V Virtual Switch</h3></a>
 <HR />
                         <p>The Hyper\-V Virtual Switch is a software\-based layer\-2 Ethernet network switch that is included in all versions of Hyper\-V.</p>
 <HR />
