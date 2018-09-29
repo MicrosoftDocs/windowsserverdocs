@@ -79,6 +79,25 @@ Virtualization in Windows Server 2016 is one of the foundational technologies re
        </a>
     </li>
 <li>
+       <a href="https://docs.microsoft.com/virtualization/windowscontainers">
+          <div class="cardSize">
+            <div class="cardPadding">
+                <div class="card">
+                    <div class="cardImageOuter">
+                        <div class="cardImage">
+                            <img src="../media/i-virtualize.svg" alt="" />
+                        </div>
+                    </div>
+                    <div class="cardText">
+                        <h3>Windows Containers</h3>
+                        <p>Windows Containers provide operating system\-level virtualization that allows multiple isolated applications to be run on a single system. Two different types of container runtimes are included with the feature, each with a different degree of application isolation.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </a>
+    </li>
+<li>
         <a href="hyper-v-virtual-switch/Hyper-V-Virtual-Switch.md">
           <div class="cardSize">
             <div class="cardPadding">
@@ -103,25 +122,6 @@ Virtualization in Windows Server 2016 is one of the foundational technologies re
             </div>
         </div>
        </a>
-    </li>
-<li>
-       <a href="https://docs.microsoft.com/virtualization/windowscontainers">
-          <div class="cardSize">
-            <div class="cardPadding">
-                <div class="card">
-                    <div class="cardImageOuter">
-                        <div class="cardImage">
-                            <img src="../media/i-virtualize.svg" alt="" />
-                        </div>
-                    </div>
-                    <div class="cardText">
-                        <h3>Windows Containers</h3>
-                        <p>Windows Containers provide operating system\-level virtualization that allows multiple isolated applications to be run on a single system. Two different types of container runtimes are included with the feature, each with a different degree of application isolation.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-      </a>
     </li>
 </ul>
 
