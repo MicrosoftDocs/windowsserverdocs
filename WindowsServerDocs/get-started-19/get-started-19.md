@@ -41,6 +41,24 @@ ms.localizationpriority: medium
 <hr />
 <ul class="cardsF panelContent">
 <li>
+      <a href="servicing-channels-19.md">
+        <div class="cardSize">
+            <div class="cardPadding">
+                <div class="card">
+                    <div class="cardImageOuter">
+                        <div class="cardImage">
+                            <img src="../media/i-get-started.svg" alt="" />
+                        </div>
+                    </div>
+                    <div class="cardText">
+                        <h3>Servicing channels</h3>
+                        <p>Better plan your deployment and patching schedules by understanding our the difference between our Long Term Servicing Channel (LTSB) and Semi-Annual Channel releases.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </a>
+    </li><hr /><li>
         <a href="install-upgrade-migrate-19.md">
           <div class="cardSize">
             <div class="cardPadding">
@@ -116,25 +134,7 @@ ms.localizationpriority: medium
         </div>
       </a>
     </li><hr />
-<li>
-      <a href="core-full-comparison-19.md">
-        <div class="cardSize">
-            <div class="cardPadding">
-                <div class="card">
-                    <div class="cardImageOuter">
-                        <div class="cardImage">
-                             <img src="../media/i-get-started.svg" alt="" />
-                        </div>
-                    </div>
-                    <div class="cardText">
-                        <h3>Core | Full install comparison</h3>
-                        <p>Find out what makes Windows Server 2019 Core and Full installation options different</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-      </a>
-    </li><hr />
+
 <li>
       <a href="install-fod-19.md">
         <div class="cardSize">
@@ -154,25 +154,7 @@ ms.localizationpriority: medium
         </div>
       </a>
     </li><hr />
-<li>
-      <a href="servicing-channels-19.md">
-        <div class="cardSize">
-            <div class="cardPadding">
-                <div class="card">
-                    <div class="cardImageOuter">
-                        <div class="cardImage">
-                            <img src="../media/i-get-started.svg" alt="" />
-                        </div>
-                    </div>
-                    <div class="cardText">
-                        <h3>Servicing channels</h3>
-                        <p>Better plan your deployment and patching schedules by understanding our the difference between our Long Term Servicing Channel (LTSB) and Semi-Annual Channel releases.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-      </a>
-    </li><hr />
+
 <li>
       <a href="app-compat-19.md">
         <div class="cardSize">
@@ -186,25 +168,6 @@ ms.localizationpriority: medium
                     <div class="cardText">
                         <h3>Application Compatibility</h3>
                         <p>Does SQL work on Windows Server 2019? What steps are needed to get Exchange running? This topic explains what you'll need to do.</p>                    </div>
-                </div>
-            </div>
-        </div>
-      </a>
-    </li><hr />
-<li>
-      <a href="limits-maximums-19.md">
-        <div class="cardSize">
-            <div class="cardPadding">
-                <div class="card">
-                    <div class="cardImageOuter">
-                        <div class="cardImage">
-                             <img src="../media/i-get-started.svg" alt="" />
-                        </div>
-                    </div>
-                    <div class="cardText">
-                        <h3>System limits | maximums</h3>
-                        <p>Plan your datacenter capacity by first knowing what Windows Server 2019 requires to to run at top efficiency.</p>
-                    </div>
                 </div>
             </div>
         </div>
