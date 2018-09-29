@@ -24,44 +24,47 @@ Virtualization in Windows Server 2016 is one of the foundational technologies re
 <hr />
 <ul class="cardsI panelContent">
 <li>
+          <a href="../security/guarded-fabric-shielded-vm/guarded-fabric-and shielded-vms-top-node.md">
           <div class="cardSize">
             <div class="cardPadding">
                 <div class="card">
-                    <a href="../security/guarded-fabric-shielded-vm/guarded-fabric-and shielded-vms-top-node.md">
                     <div class="cardImageOuter">
                         <div class="cardImage">  
                             <img src="../media/i-virtualize.svg" alt="" />
                         </div>
                     </div>
                     <div class="cardText">
-                        <h3>Guarded Fabric and Shielded VMs</h3></a>
+                        <h3>Guarded Fabric and Shielded VMs</h3>
                         <p>As a cloud service provider or enterprise private cloud administrator, you can use a guarded fabric to provide a more secure environment for VMs. A guarded fabric consists of one Host Guardian Service \(HGS\) - typically, a cluster of three nodes - plus one or more guarded hosts, and a set of shielded VMs.</p>
                     </div>
                 </div>
             </div>
         </div>
+        </a>
     </li>
 <hr />
 <li>
-          <div class="cardSize">
+      <a href="../hyper-v/Hyper-V-on-Windows-Server.md">          
+         <div class="cardSize">
             <div class="cardPadding">
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <a href="../hyper-v/Hyper-V-on-Windows-Server.md">
                             <img src="../media/i-virtualize.svg" alt="" />
                         </div>
                     </div>
                     <div class="cardText">
-                       <h3>Windows 10 for the enterprise: Ways to use devices for work</h3></a>
+                       <h3>Windows 10 for the enterprise: Ways to use devices for work</h3>
                         <p>The Hyper-V technology provides computing resources through hardware virtualization. Hyper-V creates a software version of a computer, called a virtual machine, which you use to run an operating system and applications. You can run multiple virtual machines at the same time, and can create and delete them as needed. </p>
                     </div>
                 </div>
             </div>
         </div>
+       </a>
     </li>
 <hr />
 <li>
+          <a href="https://docs.microsoft.com/en-us/windows-server/virtualization/hyper-v/hyper-v-server-2016"> 
           <div class="cardSize">
             <div class="cardPadding">
                 <div class="card">
@@ -72,16 +75,18 @@ Virtualization in Windows Server 2016 is one of the foundational technologies re
                         </div>
                     </div>
                     <div class="cardText">
-                        <h3>Microsoft Hyper-V Server</h3></a>
-                        <p>The Hyper-V technology provides computing resources through hardware virtualization. Hyper-V creates a software version of a computer, called a virtual machine, which you use to run an operating system and applications. You can run multiple virtual machines at the same time, and can create and delete them as needed. </p>
+                        <h3>Microsoft Hyper-V Server</h3>
+                        <p>The Hyper-V technology provides computing resources through hardware virtualization. Hyper-V creates a software version of a computer, called a virtual machine, which you use to run an operating system and applications. You can run multiple virtual machines at the same time, and can create and delete them as needed.</p>
                     </div>
                 </div>
             </div>
         </div>
+       </a>
     </li>
-<li>
 <hr />
-          <div class="cardSize">
+<li>
+         <a href="https://docs.microsoft.com/virtualization/windowscontainers">         
+         <div class="cardSize">
             <div class="cardPadding">
                 <div class="card">
                     <div class="cardImageOuter">
@@ -97,20 +102,21 @@ Virtualization in Windows Server 2016 is one of the foundational technologies re
                 </div>
             </div>
         </div>
+       </a>
     </li>
 <hr />
 <li>
+          <a href="hyper-v-virtual-switch/Hyper-V-Virtual-Switch.md">
           <div class="cardSize">
             <div class="cardPadding">
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <a href="hyper-v-virtual-switch/Hyper-V-Virtual-Switch.md">
                             <img src="../media/i-virtualize.svg" alt="" />
                         </div>
                     </div>
                     <div class="cardText">
-                        <h3>Hyper-V Virtual Switch</h3></a>
+                        <h3>Hyper-V Virtual Switch</h3>
 <HR />
                         <p>The Hyper\-V Virtual Switch is a software\-based layer\-2 Ethernet network switch that is included in all versions of Hyper\-V.</p>
 <HR />
@@ -123,6 +129,7 @@ Virtualization in Windows Server 2016 is one of the foundational technologies re
                 </div>
             </div>
         </div>
+       </a>
     </li>
 </ul>
 
