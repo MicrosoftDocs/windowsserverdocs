@@ -84,7 +84,7 @@ Operating system components that are available as part of the Server Core App Co
 
 8.  Run the following command:
 
-        DISM /Online /Add-Capability/Capability Name:ServerCore.AppCompatibility\~\~\~\~0.0.1.0 /Source:drive_letter_of_mounted_ISO: /LimitAccess
+        DISM /Online /Add-Capability /CapabilityName:”ServerCore.AppCompatibility~~~~0.0.1.0” /Source:drive_letter_of_mounted_ISO: /LimitAccess
 
 9.  After the progress bar completes, restart the operating system.
 
@@ -106,6 +106,6 @@ Operating system components that are available as part of the Server Core App Co
 
 5.  Run the following command:
 
-        Dism /online /add-package:Microsoft-Windows-InternetExplorer-Optional-Package\~31bf3856ad364e35\~amd64\~\~.cab
+        Dism /online /add-package:drive_letter_of_mounted_iso:"Microsoft-Windows-InternetExplorer-Optional-Package~31bf3856ad364e35~amd64~~.cab"
 
 6.  After the progress bar completes, restart the operating system.
