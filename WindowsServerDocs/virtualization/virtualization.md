@@ -41,8 +41,8 @@ Virtualization in Windows Server 2016 is one of the foundational technologies re
             </div>
         </div>
         </a>
+<HR />
     </li>
-<hr />
 <li>
       <a href="hyper-v/Hyper-V-on-Windows-Server.md">          
          <div class="cardSize">
@@ -61,8 +61,8 @@ Virtualization in Windows Server 2016 is one of the foundational technologies re
             </div>
         </div>
        </a>
+<HR />
     </li>
-<hr />
 <li>
           <a href="https://docs.microsoft.com/en-us/windows-server/virtualization/hyper-v/hyper-v-server-2016"> 
           <div class="cardSize">
@@ -81,8 +81,8 @@ Virtualization in Windows Server 2016 is one of the foundational technologies re
             </div>
         </div>
        </a>
+<HR />
     </li>
-<hr />
 <li>
          <a href="https://docs.microsoft.com/virtualization/windowscontainers">         
          <div class="cardSize">
@@ -101,8 +101,8 @@ Virtualization in Windows Server 2016 is one of the foundational technologies re
             </div>
         </div>
        </a>
+<HR />
     </li>
-<hr />
 <li>
           <a href="hyper-v-virtual-switch/Hyper-V-Virtual-Switch.md">
           <div class="cardSize">
