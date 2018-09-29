@@ -31,7 +31,7 @@ If you want to keep the same hardware and all the server roles you have set up w
 
 ![Windows Server In-place Upgrade paths diagram](media/upgrade-paths.png)
 
-For complete information on Windows Server In-place Upgrade, visit the
+For complete information on Windows Server In-place Upgrade, visit the [Windows Server Upgrade Center](http://aka.ms/upgradecenter).
 
 <a href="http://aka.ms/upgradecenter"><img src="media/upgrade-center.png" alt="Screenshot of Windows Upgrade Center" title="Windows Server Upgrade Center"><br/>Windows Server Upgrade Center</a>
 
