@@ -1,5 +1,5 @@
 ---
-title: Features removed or planned for removal in Windows Server 2019
+title: Features removed or planned for replacement starting in Windows Server 2019
 description: Learn about the Features and functionalities removed or planned for removal starting with Windows Server 2019.
 ms.custom: na
 ms.prod: windows-server-threshold
@@ -14,7 +14,7 @@ manager: jasgro
 ms.localizationpriority: medium
 ---
 
-# Features removed or planned for replacement starting Windows Server 2019
+# Features removed or planned for replacement starting in Windows Server 2019
 
 >Applies To: Windows Server 2019
 
