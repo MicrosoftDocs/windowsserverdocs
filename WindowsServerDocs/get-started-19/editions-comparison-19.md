@@ -1,5 +1,5 @@
 ---
-title: "Comparison of Standard and Datacenter editions" 
+title: "Comparison of Standard and Datacenter editions of Windows Server 2019" 
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na

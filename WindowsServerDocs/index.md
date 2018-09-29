@@ -64,7 +64,7 @@ description: Windows Server documentation helps IT professionals evaluate, plan,
                             </a>
                         </li>
 <li>
-                            <a href="http://pocvirtuosity.azurewebsites.net">
+                            <a href="http://aka.ms/upgradecenter">
                             <div class="cardSize">
                                 <div class="cardPadding">
                                     <div class="card">
@@ -74,7 +74,7 @@ description: Windows Server documentation helps IT professionals evaluate, plan,
                                             </div>
                                         </div>
                                         <div class="cardText">
-                                            <h2>Upgrade to Windows Server 2019 on-premises or in Azure</h2>
+                                            <h2>Check out the Windows Server Upgrade Center for step-by-step guidance on upgrading Windows Server</h2>
                                             <p>Upgrade to Windows Server 2019 locally, or migrate an older Server version to Azure</p>
                                         </div>
                                     </div>
