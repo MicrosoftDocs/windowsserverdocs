@@ -31,8 +31,8 @@ These are the top Microsoft Support solutions for the most common issues experie
                         </div>
                     </div>
                     <div class="cardText">
-                        <h3>Solutions for installing or upgrading Windows Server</h3>
-
+                        <h2>Solutions for installing or upgrading Windows Server</h2>
+<hr> 
                         <a href="\windows\deployment\upgrade\resolve-windows-10-upgrade-errors">Resolve Windows 10 upgrade errors : Technical information for IT Pros</a>
 <hr> 
                         <p><a href="https://support.microsoft.com/en-US/help/4035631">Servicing stack update for Windows 10 Version 1607 and Windows Server 2016: August 8, 2017)</a></p>
@@ -65,8 +65,8 @@ These are the top Microsoft Support solutions for the most common issues experie
                         </div>
                     </div>
                     <div class="cardText">
-                        <h3>Solutions for Volume Activation</h3>
-
+                        <h2>Solutions for Volume Activation</h2>
+<hr> 
                         <a href="../get-started/server-2016-activation.md">Windows Server 2016 Activation</a>
 <hr>
                         <p><a href="https://technet.microsoft.com/library/jj134256(ws.11).aspx">Review and Select Activation Methods</a></p>
@@ -95,8 +95,8 @@ These are the top Microsoft Support solutions for the most common issues experie
                         </div>
                     </div>
                     <div class="cardText">
-                        <h3>Solutions related to DCPromo and installing domain controllers</h3>
-
+                        <h2>Solutions related to DCPromo and installing domain controllers</h2>
+<hr> 
                         <a href="https://technet.microsoft.com/library/dd772723(v=ws.10).aspx">Active Directory and Active Directory Domain Services Port Requirements</a>
 <hr>
                         <p> <a href="http://blogs.msmvps.com/acefekay/2011/11/01/active-directory-firewall-ports-let-s-try-to-make-this-simple/">Active Directory Firewall Ports – Let’s Try To Make This Simple</a></p>
@@ -125,8 +125,8 @@ These are the top Microsoft Support solutions for the most common issues experie
                         </div>
                     </div>
                     <div class="cardText">
-                        <h3>Solutions for Active Directory Federation Services (AD FS)</h3>
-
+                        <h2>Solutions for Active Directory Federation Services (AD FS)</h2>
+<hr> 
                         <a href="/azure/active-directory/active-directory-conditional-access-automatic-device-registration-setup">How to configure automatic registration of Windows domain-joined devices with Azure Active Directory</a>
 <hr>
                         <p><a href="/azure/active-directory/device-management-hybrid-azuread-joined-devices-setup#step-2-setup-issuance-of-claims">Setup issuance of claims</a></p>
@@ -158,8 +158,8 @@ These are the top Microsoft Support solutions for the most common issues experie
                         </div>
                     </div>
                     <div class="cardText">
-                        <h3>Solutions related to Active Directory replication</h3>
-
+                        <h2>Solutions related to Active Directory replication</h2>
+<hr> 
                          <a href="../identity/ad-ds/manage/troubleshoot/troubleshooting-active-directory-replication-problems.md">Troubleshooting Active Directory Replication Problems</a>
 <hr>
                          <a href="https://www.microsoft.com/en-in/download/details.aspx?id=30005">e2e: How to troubleshoot common Active Directory replication errors</a>
