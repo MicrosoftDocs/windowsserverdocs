@@ -27,7 +27,7 @@ Windows Server security provides layers of protection built into the operating s
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <img src="../media/i-store.svg" alt="" />
+                            <img src="../media/i-secure.svg" alt="" />
                         </div>
                     </div>
                     <div class="cardText">
@@ -59,7 +59,7 @@ Windows Server security provides layers of protection built into the operating s
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <img src="../media/i-store.svg" alt="" />
+                            <img src="../media/i-secure.svg" alt="" />
                         </div>
                     </div>
                     <div class="cardText">
@@ -85,7 +85,7 @@ Windows Server security provides layers of protection built into the operating s
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <img src="../media/i-store.svg" alt="" />
+                            <img src="../media/i-secure.svg" alt="" />
                         </div>
                     </div>
                     <div class="cardText">
@@ -108,7 +108,7 @@ Windows Server security provides layers of protection built into the operating s
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <img src="../media/i-store.svg" alt="" />
+                            <img src="../media/i-secure.svg" alt="" />
                         </div>
                     </div>
                     <div class="cardText">
@@ -134,7 +134,7 @@ Windows Server security provides layers of protection built into the operating s
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <img src="../media/i-store.svg" alt="" />
+                            <img src="../media/i-secure.svg" alt="" />
                         </div>
                     </div>
                     <div class="cardText">
@@ -160,7 +160,7 @@ Windows Server security provides layers of protection built into the operating s
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <img src="../media/i-store.svg" alt="" />
+                            <img src="../media/i-secure.svg" alt="" />
                         </div>
                     </div>
                     <div class="cardText">
@@ -180,7 +180,7 @@ Windows Server security provides layers of protection built into the operating s
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <img src="../media/i-store.svg" alt="" />
+                            <img src="../media/i-secure.svg" alt="" />
                         </div>
                     </div>
                     <div class="cardText">
