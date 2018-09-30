@@ -163,6 +163,32 @@ Windows Server security provides layers of protection built into the operating s
                         </div>
                     </div>
                     <div class="cardText">
+                        <h2>Hardening the OS and applications</h2>
+<HR />
+                        <p><h3><a href="https://docs.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control">Windows Defender Application Control (WDAC) Deployment Guide</a></h3>WDAC is configurable code integrity (CI) policy that helps enterprises control what applications run in their environmemnt and carries no specific hardware or software requirements other than running Windows 10.</p>
+<HR />
+                        <p><h3><a href="https://www.youtube.com/watch?v=F-pTkesjkhI">Device Guard demo video</a></h3>Device Guard is a combination of WDAC and Hypervisor-protected code integrity (HVCI). This 7-minute video presents Device Guard and its usage on Windows Server.</p>
+<HR />
+                        <p><h3><a href="https://docs.microsoft.com/windows-server/security/tls/tls-registry-settings">Transport Layer Security Registry Settings</a></h3>Supported registry setting information for the Windows implementation of the Transport Layer Security (TLS) protocol and the Secure Sockets Layer (SSL) protocol.</p>
+<HR />
+                        <p><h3><a href="https://docs.microsoft.com/windows/desktop/SecBP/control-flow-guard">Control Flow Guard</a></h3>Control Flow Guard provides built-in protection against some classes of memory corruption attacks.</p>
+<HR />
+                        <p><h3><a href="https://technet.microsoft.com/en-us/windows-server-docs/security/windows-defender/windows-defender-overview-windows-server">Windows Defender</a></h3>Windows Defender provides active detection capabilities to block known malware. Windows Defender is turned on by default and is optimized to support the various server roles in Windows Server.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </li>
+<li>
+        <div class="cardSize">
+            <div class="cardPadding">
+                <div class="card">
+                    <div class="cardImageOuter">
+                        <div class="cardImage">
+                            <img src="../media/i-secure.svg" alt="" />
+                        </div>
+                    </div>
+                    <div class="cardText">
                         <h2>Privileged Access Management</h2>
 <HR />
                         <p><h3><a href="https://technet.microsoft.com/windows-server-docs/security/securing-privileged-access/securing-privileged-access">Securing Privileged Access</a></h3>A road-map for how you can secure your privileged access. This road-map is built based on the combined expertise of the server security team, Microsoft IT, Azure team and the Microsoft Consulting Services </p>
@@ -202,32 +228,7 @@ Windows Server security provides layers of protection built into the operating s
         </div>
     </li>
 
-<li>
-        <div class="cardSize">
-            <div class="cardPadding">
-                <div class="card">
-                    <div class="cardImageOuter">
-                        <div class="cardImage">
-                            <img src="../media/i-secure.svg" alt="" />
-                        </div>
-                    </div>
-                    <div class="cardText">
-                        <h2>Hardening the OS and applications</h2>
-<HR />
-                        <p><h3><a href="https://docs.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control">Windows Defender Application Control (WDAC) Deployment Guide</a></h3>WDAC is configurable code integrity (CI) policy that helps enterprises control what applications run in their environmemnt and carries no specific hardware or software requirements other than running Windows 10.</p>
-<HR />
-                        <p><h3><a href="https://www.youtube.com/watch?v=F-pTkesjkhI">Device Guard demo video</a></h3>Device Guard is a combination of WDAC and Hypervisor-protected code integrity (HVCI). This 7-minute video presents Device Guard and its usage on Windows Server.</p>
-<HR />
-                        <p><h3><a href="https://docs.microsoft.com/windows-server/security/tls/tls-registry-settings">Transport Layer Security Registry Settings</a></h3>Supported registry setting information for the Windows implementation of the Transport Layer Security (TLS) protocol and the Secure Sockets Layer (SSL) protocol.</p>
-<HR />
-                        <p><h3><a href="https://docs.microsoft.com/windows/desktop/SecBP/control-flow-guard">Control Flow Guard</a></h3>Control Flow Guard provides built-in protection against some classes of memory corruption attacks.</p>
-<HR />
-                        <p><h3><a href="https://technet.microsoft.com/en-us/windows-server-docs/security/windows-defender/windows-defender-overview-windows-server">Windows Defender</a></h3>Windows Defender provides active detection capabilities to block known malware. Windows Defender is turned on by default and is optimized to support the various server roles in Windows Server.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </li>
+
 <li>
         <div class="cardSize">
             <div class="cardPadding">
