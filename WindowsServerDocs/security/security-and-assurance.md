@@ -32,7 +32,7 @@ Windows Server security provides layers of protection built into the operating s
                     <div class="cardText">
                         <h2>Secure virtualization with Shielded VMs</h2>
 <HR />
-                        <p><h3><http://channel9.msdn.com/Shows/Mechanics/Introduction-to-Shielded-Virtual-Machines-in-Windows-Server-2016">Shielded VM in Channel 9</a></h3>A walkthrough of Shielded VM technology and benefits</p>
+                        <p><h3><a href="http://channel9.msdn.com/Shows/Mechanics/Introduction-to-Shielded-Virtual-Machines-in-Windows-Server-2016">Shielded VM in Channel 9</a></h3>A walkthrough of Shielded VM technology and benefits</p>
 <HR />
                         <p><h3><a href="https://www.youtube.com/watch?v=xip5Qtk-7d8">Shielded VM Demo</a></h3>This 4-minute video describes the value of shielded VMs and the differences between a shielded VM and a non-shielded VM.</p>
 <HR />
@@ -68,11 +68,11 @@ Windows Server security provides layers of protection built into the operating s
 <HR />
                         <p><h3><a href="https://technet.microsoft.com/library/mt150258.aspx">Just in Time Administration with Microsoft Identity Manager</a></h3> This article discusses features and capabilities included in Microsoft Identity Manager, including support for Just In Time (JIT) Privileged Access Management.</p>
 <HR />
-                        <p><h3><a href="http://channel9.msdn.com/events/ignite/2015/brk3873>Protecting Windows and Microsoft Azure Active Directory with Privileged Access Management</a></h3>This Ignite presentation covers Microsoft's strategy and investments in Windows Server, PowerShell, Active Directory, Identity Manager, and Azure Active Directory for addressing the risks of administrator access through stronger authentication, and managing access using Just in Time and Just Enough Administration (JEA).</p>
+                        <p><h3><a href="http://channel9.msdn.com/events/ignite/2015/brk3873">Protecting Windows and Microsoft Azure Active Directory with Privileged Access Management</a></h3>This Ignite presentation covers Microsoft's strategy and investments in Windows Server, PowerShell, Active Directory, Identity Manager, and Azure Active Directory for addressing the risks of administrator access through stronger authentication, and managing access using Just in Time and Just Enough Administration (JEA).</p>
 <HR />
                         <p><h3><a href="http://aka.ms/JEA">Just Enough Administration Article</a></h3>This document shares the vision and technical details of Just Enough Administration, a PowerShell toolkit designed to help organizations reduce risk by restricting operators to the only access required to perform specific tasks.</p>
 <HR />
-                        <p><h3><a href="https://www.youtube.com/watch?v=xnBrbkY9P20">Just Enough Administration demo video</a></h3Just Enough Administration demo walkthrough.</p>
+                        <p><h3><a href="https://www.youtube.com/watch?v=xnBrbkY9P20">Just Enough Administration demo video</a></h3>Just Enough Administration demo walkthrough.</p>
                     </div>
                 </div>
             </div>
@@ -90,11 +90,11 @@ Windows Server security provides layers of protection built into the operating s
                     <div class="cardText">
                         <h2>Credential Protection</h2>
 <HR />
-                        <p><h3><a href="https://docs.microsoft.com/windows/security/identity-protection/credential-guard/credential-guard">Credential Guard uses virtualization-based security to isolate secrets so that only privileged system software can access them. Unauthorized access to these secrets can lead to credential theft attacks, such as Pass-the-Hash or Pass-The-Ticket. Credential Guard prevents these attacks by protecting NTLM password hashes and Kerberos Ticket Granting Tickets.</p>
+                        <p><h3><a href="https://docs.microsoft.com/windows/security/identity-protection/credential-guard/credential-guard"></a></h3>Credential Guard uses virtualization-based security to isolate secrets so that only privileged system software can access them. Unauthorized access to these secrets can lead to credential theft attacks, such as Pass-the-Hash or Pass-The-Ticket.</a> Credential Guard prevents these attacks by protecting NTLM password hashes and Kerberos Ticket Granting Tickets.</p>
 <HR />
                         <p><h3><a href="https://docs.microsoft.com/windows/security/identity-protection/remote-credential-guard">Protect Remote Desktop credentials with Remote Credential Guard</a></h3> Remote Credential Guard helps you protect your credentials over a Remote Desktop connection by redirecting the Kerberos requests back to the device that's requesting the connection. It also provides single sign on experiences for Remote Desktop sessions. </p>
 <HR />
-                        <p><h3><a href="https://www.youtube.com/watch?v=eUpKOGSl7yk>Credential Guard demo video</a></h3>This 5-minute video demos Credential Guard and Remote Credential Guard.</p>
+                        <p><h3><a href="https://www.youtube.com/watch?v=eUpKOGSl7yk">Credential Guard demo video</a></h3>This 5-minute video demos Credential Guard and Remote Credential Guard.</p>
                     </div>
                 </div>
             </div>
@@ -117,11 +117,11 @@ Windows Server security provides layers of protection built into the operating s
 <HR />
                         <p><h3><a href="https://www.youtube.com/watch?v=F-pTkesjkhI">Device Guard demo video</a></h3>Device Guard is a combination of WDAC and Hypervisor-protected code integrity (HVCI). This 7-minute video presents Device Guard and its usage on Windows Server.</p>
 <HR />
-                        <p><h3><a href="https://docs.microsoft.com/windows-server/security/tls/tls-registry-settings>Transport Layer Security Registry Settings</a></h3>Supported registry setting information for the Windows implementation of the Transport Layer Security (TLS) protocol and the Secure Sockets Layer (SSL) protocol.</p>
+                        <p><h3><a href="https://docs.microsoft.com/windows-server/security/tls/tls-registry-settings">Transport Layer Security Registry Settings</a></h3>Supported registry setting information for the Windows implementation of the Transport Layer Security (TLS) protocol and the Secure Sockets Layer (SSL) protocol.</p>
 <HR />
                         <p><h3><a href="https://docs.microsoft.com/windows/desktop/SecBP/control-flow-guard">Control Flow Guard</a></h3>Control Flow Guard provides built-in protection against some classes of memory corruption attacks.</p>
 <HR />
-                        <p><h3><a href="https://technet.microsoft.com/en-us/windows-server-docs/security/windows-defender/windows-defender-overview-windows-server">Windows Defender provides active detection capabilities to block known malware. Windows Defender is turned on by default and is optimized to support the various server roles in Windows Server.</p>
+                        <p><h3><a href="https://technet.microsoft.com/en-us/windows-server-docs/security/windows-defender/windows-defender-overview-windows-server"></a></h3>Windows Defender provides active detection capabilities to block known malware. Windows Defender is turned on by default and is optimized to support the various server roles in Windows Server.</p>
                     </div>
                 </div>
             </div>
@@ -145,9 +145,9 @@ Windows Server security provides layers of protection built into the operating s
 <HR />
                         <p><h3><a href="https://www.youtube.com/watch?v=_SaDw1dRy2k>OMS and Windows Server</a></h3>This 3-minute video shows how OMS can help detect potential malicious behavior that is blocked by Windows Server. Suppo</p>
 <HR />
-                        <p><h3><a href="http://blogs.technet.com/b/ad/archive/2015/07/22/microsoft-advanced-threat-analytics-coming-next-month.aspx">This blog post discusses Microsoft Advanced Threat Analytics, an on-premises product that uses Active Directory network traffic and SIEM data to discover and alert on potential threats.</p>
+                        <p><h3><a href="http://blogs.technet.com/b/ad/archive/2015/07/22/microsoft-advanced-threat-analytics-coming-next-month.aspx"></a></h3>This blog post discusses Microsoft Advanced Threat Analytics, an on-premises product that uses Active Directory network traffic and SIEM data to discover and alert on potential threats.</p>
 <HR />
-                        <p><h3><a href="https://www.youtube.com/watch?v=0nA9FeTRZFw&list=PL8nfc9haGeb5IZGM8HvmRozetHRpBDKSw"></a>Microsoft Advanced Threat Analytics</h3>This 3-minute video presents an overview of how Microsoft is adding threat analytics capabilities in Windows Server. </p>
+                        <p><h3><a href="https://www.youtube.com/watch?v=0nA9FeTRZFw&list=PL8nfc9haGeb5IZGM8HvmRozetHRpBDKSw">Microsoft Advanced Threat Analytics</a></h3>This 3-minute video presents an overview of how Microsoft is adding threat analytics capabilities in Windows Server. </p>
                     </div>
                 </div>
             </div>
@@ -185,15 +185,15 @@ Windows Server security provides layers of protection built into the operating s
                     <div class="cardText">
                         <h2>Mapping security features to compliance regulations</h2>
 <HR />
-                        <p><a href="https://download.microsoft.com/download/6/D/0/6D06E149-B4C1-4EED-ACD5-DF6066E93CC0/Coalfire_Branded_Hyper_V_Shielded_VMs_Whitepaper_EN_US.pdf"Hyper-V Shielded VMs compliance mapping whitepaper</a></p>
+                        <p><a href="https://download.microsoft.com/download/6/D/0/6D06E149-B4C1-4EED-ACD5-DF6066E93CC0/Coalfire_Branded_Hyper_V_Shielded_VMs_Whitepaper_EN_US.pdf">Hyper-V Shielded VMs compliance mapping whitepaper</a></p>
 
-                        <p><a href="https://download.microsoft.com/download/2/7/A/27A2B5BB-6B52-4482-87C1-DA9D6B6D8C8D/Coalfire_Branded_Privileged_Identity_Manager_Whitepaper_EN_US.pdf"JEA and JIT compliance mapping whitepaper</a></p>
+                        <p><a href="https://download.microsoft.com/download/2/7/A/27A2B5BB-6B52-4482-87C1-DA9D6B6D8C8D/Coalfire_Branded_Privileged_Identity_Manager_Whitepaper_EN_US.pdf">JEA and JIT compliance mapping whitepaper</a></p>
 <HR />
-                        <p><a href="https://download.microsoft.com/download/6/9/D/69D9E610-D23C-4F7E-A8CC-D65B87CEB4F8/Coalfire_Branded_Device_Guard_Whitepaper_EN_US.pdf"Credential Guard compliance mapping whitepaper</a></p>
+                        <p><a href="https://download.microsoft.com/download/6/9/D/69D9E610-D23C-4F7E-A8CC-D65B87CEB4F8/Coalfire_Branded_Device_Guard_Whitepaper_EN_US.pdf">Credential Guard compliance mapping whitepaper</a></p>
 <HR />
-                        <p><a href="https://download.microsoft.com/download/8/1/2/812009C9-E4B8-4D4B-AADD-FDC373D0A076/Coalfire_Branded_Credential_Guard_Whitepaper_EN_US.pdf"Credential Guard compliance mapping whitepaper</a></p>
+                        <p><a href="https://download.microsoft.com/download/8/1/2/812009C9-E4B8-4D4B-AADD-FDC373D0A076/Coalfire_Branded_Credential_Guard_Whitepaper_EN_US.pdf">Credential Guard compliance mapping whitepaper</a></p>
 <HR />
-                        <p><a href="https://download.microsoft.com/download/C/7/7/C778B7BB-0783-42D7-93A9-B86DFB5A7BAD/Coalfire_Branded_Windows_Defender_Whitepaper_EN_US.pdf"Windows Defender compliance mapping whitepaper</a></p>
+                        <p><a href="https://download.microsoft.com/download/C/7/7/C778B7BB-0783-42D7-93A9-B86DFB5A7BAD/Coalfire_Branded_Windows_Defender_Whitepaper_EN_US.pdf>"Windows Defender compliance mapping whitepaper</a></p>
 <HR />
                     </div>
                 </div>
