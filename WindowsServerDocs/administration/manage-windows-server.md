@@ -34,7 +34,7 @@ In addition to the tools mentioned below, you can also use [Remote Desktop Servi
 
 <HR />
 
-<ul class="cardsF panelContent">
+<ul class="cardsI panelContent">
 <li>
         <div class="cardSize">
             <div class="cardPadding">
