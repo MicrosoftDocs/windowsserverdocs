@@ -2,6 +2,7 @@
 title: Security | Assurance
 description: "An overview of Security in Windows Server"
 ms.custom: na
+layout: LandingPage
 ms.prod: windows-server-threshold
 ms.technology: techgroup-security
 ms.tgt_pltfrm: na
