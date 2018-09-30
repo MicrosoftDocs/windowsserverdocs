@@ -91,8 +91,8 @@ Virtualization in Windows Server is one of the foundational technologies require
                         </div>
                     </div>
                     <div class="cardText">
-                        <h3>Windows Containers</h3></a>
-                        <p>Windows Containers provide operating system\-level virtualization that allows multiple isolated applications to be run on a single system. Two different types of container runtimes are included with the feature, each with a different degree of application isolation.</p>
+                        <h3>Windows Containers</h3>
+                        <p>Windows Containers provide operating system-level virtualization that allows multiple isolated applications to be run on a single system. Two different types of container runtimes are included with the feature, each with a different degree of application isolation.</p>
                      </div>
                   </div>
               </div>
@@ -112,11 +112,11 @@ Virtualization in Windows Server is one of the foundational technologies require
                     <div class="cardText">
                         <h3>Hyper-V Virtual Switch</h3>
 <HR />
-                        <p>The Hyper\-V Virtual Switch is a software\-based layer\-2 Ethernet network switch that is included in all versions of Hyper\-V.</p>
+                        <p>The Hyper-V Virtual Switch is a software-based layer-2 Ethernet network switch that is included in all versions of Hyper-V.</p>
 <HR />
-                        <p>Hyper\-V Virtual Switch is available in Hyper\-V Manager after you install the Hyper\-V server role.</p>
+                        <p>Hyper-V Virtual Switch is available in Hyper-V Manager after you install the Hyper-V server role.</p>
 <HR />
-                        <p>Included in Hyper\-V Virtual Switch are programmatically managed and extensible capabilities that allow you to connect virtual machines to both virtual networks and the physical network.</p>
+                        <p>Included in Hyper-V Virtual Switch are programmatically managed and extensible capabilities that allow you to connect virtual machines to both virtual networks and the physical network.</p>
 <HR />
                         <p>In addition, Hyper-V Virtual Switch provides policy enforcement for security, isolation, and service levels.</p>
                      </div>
