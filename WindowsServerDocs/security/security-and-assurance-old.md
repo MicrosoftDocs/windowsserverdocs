@@ -1,11 +1,12 @@
 ---
 title: Security and Assurance
-description: "An overview of Security in Windows Server"
+description: "An overview of Security in Windows Server 2016"
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.technology: techgroup-security
 ms.tgt_pltfrm: na
-ms.topic: landing-page
+ms.topic: article
+ms.date: 07/27/2018
 ms.assetid: b886b2fd-3567-4f0a-8aa3-4ba7923d2d21
 author: coreyp-at-msft
 ms.author: coreyp
@@ -13,48 +14,55 @@ ms.localizationpriority: high
 ---
 # Security and Assurance in Windows Server 
 
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
+
 >[!TIP]
 > Looking for information about older versions of Windows Server? Check out our other [Windows Server libraries](/previous-versions/windows/) on docs.microsoft.com. You can also [search this site](https://docs.microsoft.com/search/index?search=Windows+Server&dataSource=previousVersions) for specific information.
 
-Windows Server security provides layers of protection built into the operating system to safeguard against security breaches, help block malicious attacks, and enhance the security of your virtual machines, applications, and data.
+<img src="../media/landing-icons/security.png" style='float:left; padding:.5em;' alt="Icon representing a lock"> You can rely on new layers of protection built into the operating system to further safeguard against security breaches. Help block malicious attacks and enhance the security of your virtual machines, applications, and data.
 
-</ul>
-<hr />
-<ul class="cardsF panelContent">
-<li>
-        <div class="cardSize">
-            <div class="cardPadding">
-                <div class="card">
-                    <div class="cardImageOuter">
-                        <div class="cardImage">
-                            <img src="../media/i-store.svg" alt="" />
-                        </div>
-                    </div>
-                    <div class="cardText">
-                        <h2>Secure virtualization with Shielded VMs</h2>
-<HR />
-                        <p><h3><http://channel9.msdn.com/Shows/Mechanics/Introduction-to-Shielded-Virtual-Machines-in-Windows-Server-2016">Shielded VM in Channel 9</a></h3>A walkthrough of Shielded VM technology and benefits</p>
-<HR />
-                        <p><h3><a href="https://www.youtube.com/watch?v=xip5Qtk-7d8">Shielded VM Demo</a></h3>This 4-minute video describes the value of shielded VMs and the differences between a shielded VM and a non-shielded VM.</p>
-<HR />
-                        <p><h3><a href="http://microsoft-cloud.cloudguides.com/Guides/Shielded Virtual Machines in Windows Server.htm">Shielded Virtual Machines in Windows Server video walkthrough</a></h3>This video walkthrough shows how the Host Guardian Service enables shielded virtual machines so that sensitive data is protected from unauthorized access by Hyper-V host administrators.</p>
-<HR />
-                        <p><h3><a href="http://channel9.msdn.com/events/ignite/2015/brk3457">Harden the Fabric: Protecting Tenant Secrets in Hyper-V (Ignite Video)</a></h3>This Ignite presentation discusses enhancements in Hyper-V, Virtual Machine Manager, and a new Host Guardian Server role to enable shielded VMs. </p>
-<HR />
-                        <p><h3><a href="https://docs.microsoft.com/windows-server/virtualization/guarded-fabric-shielded-vm/guarded-fabric-deploying-hgs-overview">Guarded Fabric Deployment Guide</a></h3>This guide provides installation and validation information for Windows Server and System Center Virtual Machine Manager for Guarded Fabric Hosts and Shielded VMs.</p>
-<HR />
-                        <p><h3><a href="https://docs.microsoft.com/windows-server/virtualization/guarded-fabric-shielded-vm/guarded-fabric-manage-branch-office">This guide provides best practices for running shielded virtual machines in branch offices and other remote scenarios where Hyper-V hosts may have periods of time with limited connectivity to HGS.</p>
-<HR />
-                        <p><h3><a href="https://docs.microsoft.com/windows-server/virtualization/guarded-fabric-shielded-vm/guarded-fabric-troubleshoot-overview">Shielded VM and Guarded Fabric Troubleshooting Guide</a></h3>This guide provides information about how to resolve issues you may encounter in your Shielded VM environment.</p>
-<HR />
-                        <p><h3><a href="http://windowsitpro.com/hyper-v/super-secure-hyper-v-environments-shielded-vms-2016">Shielded VM Article</a></h3>This white paper provides an overview of how shielded VMs provide increased overall security to prevent tampering.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </li>                               
 
-                                                                                                                                                                    
+### [Windows Server Security Blog Post](https://blogs.technet.microsoft.com/windowsserver/2016/04/25/ten-reasons-youll-love-windows-server-2016-8-security/)
+This blog post from the Windows Server security team highlights many of the improvements in Windows Server that increase security for hosting and hybrid cloud environments.
+
+### [Datacenter and Private Cloud Security Blog](https://blogs.technet.microsoft.com/datacentersecurity/)
+This is the central blog site for technical content from the Microsoft Datacenter and Private Cloud Security team.                                    
+
+### [Addressing emerging threats and landscape shifts](https://www.youtube.com/watch?v=B5JMYxYWx1k&feature=youtu.be)
+In this 6-minute video, Anders Vinberg provides an overview of Microsoft's security and assurance strategy, and discusses industry trends and landscape shifts as they relate to security. He then focuses on Microsoft's key initiatives to protect workloads from the underlying fabric, and protect against direct attacks from privileged accounts. Finally, in case of breach, he explains how new detection and forensic capabilities can help better identify the threat.
+
+### [Protecting Your Datacenter and Cloud from Emerging Threats blog post](http://blogs.technet.com/b/windowsserver/archive/2015/11/18/protecting-your-datacenter-and-cloud-november-update.aspx)
+This blog post discusses how you can use Microsoft technologies to protect your datacenter and cloud investments from emerging threats.                   
+
+### [Security and Assurance Overview session at Ignite](http://channel9.msdn.com/events/ignite/2015/brk2482)
+This Ignite session addresses persistent threats, insider breaches, organized cybercrime, and securing the Microsoft Cloud Platform (on-premises and connected services with Azure). It includes scenarios for securing workloads, large enterprise tenants, and service providers.                                                                   
+
+## Secure virtualization with Shielded VMs
+
+### [Shielded VM in Channel 9](http://channel9.msdn.com/Shows/Mechanics/Introduction-to-Shielded-Virtual-Machines-in-Windows-Server-2016)
+A walkthrough of Shielded VM technology and benefits.                           
+
+### [Shielded VM Demo](https://www.youtube.com/watch?v=xip5Qtk-7d8)
+This 4-minute video describes the value of shielded VMs and the differences between a shielded VM and a non-shielded VM.                                   
+
+### [Shielded Virtual Machines in Windows Server video walkthrough](http://microsoft-cloud.cloudguides.com/Guides/Shielded Virtual Machines in Windows Server.htm)
+This video walkthrough shows how the Host Guardian Service enables shielded virtual machines so that sensitive data is protected from unauthorized access by Hyper-V host administrators.
+
+### [Harden the Fabric: Protecting Tenant Secrets in Hyper-V (Ignite Video)](http://channel9.msdn.com/events/ignite/2015/brk3457)
+
+This Ignite presentation discusses enhancements in Hyper-V, Virtual Machine Manager, and a new Host Guardian Server role to enable shielded VMs.                
+
+### [Guarded Fabric Deployment Guide](https://docs.microsoft.com/windows-server/virtualization/guarded-fabric-shielded-vm/guarded-fabric-deploying-hgs-overview)
+This guide provides installation and validation information for Windows Server and System Center Virtual Machine Manager for Guarded Fabric Hosts and Shielded VMs.
+
+### [Shielded VM and Guarded Fabric in Branch Offices](https://docs.microsoft.com/windows-server/virtualization/guarded-fabric-shielded-vm/guarded-fabric-manage-branch-office)
+This guide provides best practices for running shielded virtual machines in branch offices and other remote scenarios where Hyper-V hosts may have periods of time with limited connectivity to HGS.
+
+### [Shielded VM and Guarded Fabric Troubleshooting Guide](https://docs.microsoft.com/windows-server/virtualization/guarded-fabric-shielded-vm/guarded-fabric-troubleshoot-overview)
+This guide provides information about how to resolve issues you may encounter in your Shielded VM environment.
+
+### [Shielded VM Article](http://windowsitpro.com/hyper-v/super-secure-hyper-v-environments-shielded-vms-2016)
+This white paper provides an overview of how shielded VMs provide increased overall security to prevent tampering.                                         
 
 ## Privileged Access Management
 ### [Securing Privileged Access](https://technet.microsoft.com/windows-server-docs/security/securing-privileged-access/securing-privileged-access)
@@ -134,21 +142,3 @@ Compliance is an important aspect of security features. We leave the expert advi
 -   [Credential Guard compliance mapping whitepaper](https://download.microsoft.com/download/8/1/2/812009C9-E4B8-4D4B-AADD-FDC373D0A076/Coalfire_Branded_Credential_Guard_Whitepaper_EN_US.pdf)
 
 -   [Windows Defender compliance mapping whitepaper](https://download.microsoft.com/download/C/7/7/C778B7BB-0783-42D7-93A9-B86DFB5A7BAD/Coalfire_Branded_Windows_Defender_Whitepaper_EN_US.pdf)
-
-
-## Related
-
-### [Windows Server Security Blog Post](https://blogs.technet.microsoft.com/windowsserver/2016/04/25/ten-reasons-youll-love-windows-server-2016-8-security/)
-This blog post from the Windows Server security team highlights many of the improvements in Windows Server that increase security for hosting and hybrid cloud environments.
-
-### [Datacenter and Private Cloud Security Blog](https://blogs.technet.microsoft.com/datacentersecurity/)
-This is the central blog site for technical content from the Microsoft Datacenter and Private Cloud Security team. 
-
-### [Addressing emerging threats and landscape shifts](https://www.youtube.com/watch?v=B5JMYxYWx1k&feature=youtu.be)
-In this 6-minute video, Anders Vinberg provides an overview of Microsoft's security and assurance strategy, and discusses industry trends and landscape shifts as they relate to security. He then focuses on Microsoft's key initiatives to protect workloads from the underlying fabric, and protect against direct attacks from privileged accounts. Finally, in case of breach, he explains how new detection and forensic capabilities can help better identify the threat.
-
-### [Protecting Your Datacenter and Cloud from Emerging Threats blog post](http://blogs.technet.com/b/windowsserver/archive/2015/11/18/protecting-your-datacenter-and-cloud-november-update.aspx)
-This blog post discusses how you can use Microsoft technologies to protect your datacenter and cloud investments from emerging threats.                   
-
-### [Security and Assurance Overview session at Ignite](http://channel9.msdn.com/events/ignite/2015/brk2482)
-This Ignite session addresses persistent threats, insider breaches, organized cybercrime, and securing the Microsoft Cloud Platform (on-premises and connected services with Azure). It includes scenarios for securing workloads, large enterprise tenants, and service providers.
