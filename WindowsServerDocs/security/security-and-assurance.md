@@ -18,7 +18,6 @@ ms.localizationpriority: high
 
 Windows Server security provides layers of protection built into the operating system to safeguard against security breaches, help block malicious attacks, and enhance the security of your virtual machines, applications, and data.
 
-</ul>
 <hr />
 <ul class="cardsF panelContent">
 <li>
