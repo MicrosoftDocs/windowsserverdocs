@@ -42,7 +42,7 @@ Windows Server security provides layers of protection built into the operating s
 <HR />
                         <p><h3><a href="https://docs.microsoft.com/windows-server/virtualization/guarded-fabric-shielded-vm/guarded-fabric-deploying-hgs-overview">Guarded Fabric Deployment Guide</a></h3>This guide provides installation and validation information for Windows Server and System Center Virtual Machine Manager for Guarded Fabric Hosts and Shielded VMs.</p>
 <HR />
-                        <p><h3><a href="https://docs.microsoft.com/windows-server/virtualization/guarded-fabric-shielded-vm/guarded-fabric-manage-branch-office">This guide provides best practices for running shielded virtual machines in branch offices and other remote scenarios where Hyper-V hosts may have periods of time with limited connectivity to HGS.</p>
+                        <p><h3><a href="https://docs.microsoft.com/windows-server/virtualization/guarded-fabric-shielded-vm/guarded-fabric-manage-branch-office"></a></h3>This guide provides best practices for running shielded virtual machines in branch offices and other remote scenarios where Hyper-V hosts may have periods of time with limited connectivity to HGS.</p>
 <HR />
                         <p><h3><a href="https://docs.microsoft.com/windows-server/virtualization/guarded-fabric-shielded-vm/guarded-fabric-troubleshoot-overview">Shielded VM and Guarded Fabric Troubleshooting Guide</a></h3>This guide provides information about how to resolve issues you may encounter in your Shielded VM environment.</p>
 <HR />
@@ -143,7 +143,7 @@ Windows Server security provides layers of protection built into the operating s
 <HR />
                         <p><h3><a href="https://www.youtube.com/watch?v=_SaDw1dRy2k">Microsoft Operations Management Suite (OMS)</a></h3>The Microsoft Operations Management Suite (OMS) Security and Audit solution processes security logs and firewall events from on-premises and cloud environments to analyze and detect malicious behavior.</p>
 <HR />
-                        <p><h3><a href="https://www.youtube.com/watch?v=_SaDw1dRy2k>OMS and Windows Server</a></h3>This 3-minute video shows how OMS can help detect potential malicious behavior that is blocked by Windows Server. Suppo</p>
+                        <p><h3><a href="https://www.youtube.com/watch?v=_SaDw1dRy2k">OMS and Windows Server</a></h3>This 3-minute video shows how OMS can help detect potential malicious behavior that is blocked by Windows Server. Suppo</p>
 <HR />
                         <p><h3><a href="http://blogs.technet.com/b/ad/archive/2015/07/22/microsoft-advanced-threat-analytics-coming-next-month.aspx"></a></h3>This blog post discusses Microsoft Advanced Threat Analytics, an on-premises product that uses Active Directory network traffic and SIEM data to discover and alert on potential threats.</p>
 <HR />
@@ -167,7 +167,7 @@ Windows Server security provides layers of protection built into the operating s
 <HR />
                         <p><h3><a href="https://technet.microsoft.com/library/dn920240.aspx">Datacenter Firewall Overview</a></h3>This overview discusses Datacenter Firewall, a network layer, 5-tuple (protocol, source and destination port numbers, source and destination IP addresses), stateful, multitenant firewall.</p>
 <HR />
-                        <p><h3><a href="https://technet.microsoft.com/en-us/windows-server-docs/networking/dns/what-s-new-in-dns-server"What's New in DNS in Windows Server</a></h3>This overview topic provides brief descriptions of new capabilities in DNS, along with links for more information.  </p>
+                        <p><h3><a href="https://technet.microsoft.com/en-us/windows-server-docs/networking/dns/what-s-new-in-dns-server">What's New in DNS in Windows Server</a></h3>This overview topic provides brief descriptions of new capabilities in DNS, along with links for more information. </p>
                     </div>
                 </div>
             </div>
@@ -186,14 +186,14 @@ Windows Server security provides layers of protection built into the operating s
                         <h2>Mapping security features to compliance regulations</h2>
 <HR />
                         <p><a href="https://download.microsoft.com/download/6/D/0/6D06E149-B4C1-4EED-ACD5-DF6066E93CC0/Coalfire_Branded_Hyper_V_Shielded_VMs_Whitepaper_EN_US.pdf">Hyper-V Shielded VMs compliance mapping whitepaper</a></p>
-
+<HR />
                         <p><a href="https://download.microsoft.com/download/2/7/A/27A2B5BB-6B52-4482-87C1-DA9D6B6D8C8D/Coalfire_Branded_Privileged_Identity_Manager_Whitepaper_EN_US.pdf">JEA and JIT compliance mapping whitepaper</a></p>
 <HR />
                         <p><a href="https://download.microsoft.com/download/6/9/D/69D9E610-D23C-4F7E-A8CC-D65B87CEB4F8/Coalfire_Branded_Device_Guard_Whitepaper_EN_US.pdf">Credential Guard compliance mapping whitepaper</a></p>
 <HR />
                         <p><a href="https://download.microsoft.com/download/8/1/2/812009C9-E4B8-4D4B-AADD-FDC373D0A076/Coalfire_Branded_Credential_Guard_Whitepaper_EN_US.pdf">Credential Guard compliance mapping whitepaper</a></p>
 <HR />
-                        <p><a href="https://download.microsoft.com/download/C/7/7/C778B7BB-0783-42D7-93A9-B86DFB5A7BAD/Coalfire_Branded_Windows_Defender_Whitepaper_EN_US.pdf>"Windows Defender compliance mapping whitepaper</a></p>
+                        <p><a href="https://download.microsoft.com/download/C/7/7/C778B7BB-0783-42D7-93A9-B86DFB5A7BAD/Coalfire_Branded_Windows_Defender_Whitepaper_EN_US.pdf">Windows Defender compliance mapping whitepaper</a></p>
 <HR />
                     </div>
                 </div>
