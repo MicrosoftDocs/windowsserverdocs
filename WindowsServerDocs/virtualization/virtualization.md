@@ -17,11 +17,11 @@ ms.localizationpriority: high
 >[!TIP]
 > Looking for information about older versions of Windows Server? Check out our other [Windows Server libraries](/previous-versions/windows/) on docs.microsoft.com. You can also [search this site](https://docs.microsoft.com/search/index?search=Windows+Server&dataSource=previousVersions) for specific information.
 
-<hr />
+<HR />
 
-Virtualization in Windows Server 2016 is one of the foundational technologies required to create your software defined infrastructure. Along with networking and storage, virtualization features deliver the flexibility you need to power workloads for your customers.
+Virtualization in Windows Server is one of the foundational technologies required to create your software defined infrastructure. Along with networking and storage, virtualization features deliver the flexibility you need to power workloads for your customers.
 
-<hr />
+HR />
 <ul class="cardsI panelContent">
 <li>
           <a href="../security/guarded-fabric-shielded-vm/guarded-fabric-and-shielded-vms.md">
@@ -39,10 +39,9 @@ Virtualization in Windows Server 2016 is one of the foundational technologies re
                     </div>
                 </div>
             </div>
-        </div>
         </a>
-<HR />
     </li>
+<HR />
 <li>
       <a href="hyper-v/Hyper-V-on-Windows-Server.md">      
          <div class="cardSize">
@@ -59,10 +58,9 @@ Virtualization in Windows Server 2016 is one of the foundational technologies re
                     </div>
                 </div>
             </div>
-        </div>
        </a>
-<HR />
     </li>
+<HR />
 <li>
           <a href="https://docs.microsoft.com/en-us/windows-server/virtualization/hyper-v/hyper-v-server-2016">
           <div class="cardSize">
@@ -79,10 +77,9 @@ Virtualization in Windows Server 2016 is one of the foundational technologies re
                     </div>
                 </div>
             </div>
-        </div>
        </a>
-<HR />
     </li>
+<HR />
 <li>
          <a href="https://docs.microsoft.com/virtualization/windowscontainers">
          <div class="cardSize">
@@ -99,10 +96,9 @@ Virtualization in Windows Server 2016 is one of the foundational technologies re
                     </div>
                 </div>
             </div>
-        </div>
        </a>
-<HR />
     </li>
+<HR />
 <li>
           <a href="hyper-v-virtual-switch/Hyper-V-Virtual-Switch.md">
           <div class="cardSize">
@@ -126,7 +122,6 @@ Virtualization in Windows Server 2016 is one of the foundational technologies re
                     </div>
                 </div>
             </div>
-        </div>
        </a>
     </li>
 </ul>
