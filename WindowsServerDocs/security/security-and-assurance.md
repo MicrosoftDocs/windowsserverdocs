@@ -37,13 +37,13 @@ Windows Server security provides layers of protection built into the operating s
 <HR />
                         <p><h3><a href="https://www.youtube.com/watch?v=xip5Qtk-7d8">Shielded VM Demo</a></h3>This 4-minute video describes the value of shielded VMs and the differences between a shielded VM and a non-shielded VM.</p>
 <HR />
-                        <p><h3><a href="http://microsoft-cloud.cloudguides.com/Guides/Shielded Virtual Machines in Windows Server.htm">Shielded Virtual Machines in Windows Server video walkthrough</a></h3>This video walkthrough shows how the Host Guardian Service enables shielded virtual machines so that sensitive data is protected from unauthorized access by Hyper-V host administrators.</p>
+                        <p><h3><a href="http://microsoft-cloud.cloudguides.com/Guides/Shielded%Virtual%Machines%in%Windows%Server.htm">Shielded Virtual Machines in Windows Server video walkthrough</a></h3>This video walkthrough shows how the Host Guardian Service enables shielded virtual machines so that sensitive data is protected from unauthorized access by Hyper-V host administrators.</p>
 <HR />
                         <p><h3><a href="http://channel9.msdn.com/events/ignite/2015/brk3457">Harden the Fabric: Protecting Tenant Secrets in Hyper-V (Ignite Video)</a></h3>This Ignite presentation discusses enhancements in Hyper-V, Virtual Machine Manager, and a new Host Guardian Server role to enable shielded VMs. </p>
 <HR />
-                        <p><h3><a href="https://docs.microsoft.com/windows-server/virtualization/guarded-fabric-shielded-vm/guarded-fabric-deploying-hgs-overview">Guarded Fabric Deployment Guide</a></h3>This guide provides installation and validation information for Windows Server and System Center Virtual Machine Manager for Guarded Fabric Hosts and Shielded VMs.</p>
+                        <p><h3><a href="guarded-fabric-shielded-vm/guarded-fabric-deploying-hgs-overview.md">Guarded Fabric Deployment Guide</a></h3>This guide provides installation and validation information for Windows Server and System Center Virtual Machine Manager for Guarded Fabric Hosts and Shielded VMs.</p>
 <HR />
-                        <p><h3><a href="https://docs.microsoft.com/windows-server/virtualization/guarded-fabric-shielded-vm/guarded-fabric-manage-branch-office"></a></h3>This guide provides best practices for running shielded virtual machines in branch offices and other remote scenarios where Hyper-V hosts may have periods of time with limited connectivity to HGS.</p>
+                        <p><h3><a href="https://docs.microsoft.com/windows-server/virtualization/guarded-fabric-shielded-vm/guarded-fabric-manage-branch-office">Shielded VM and Guarded Fabric in Branch Offices</a></h3>This guide provides best practices for running shielded virtual machines in branch offices and other remote scenarios where Hyper-V hosts may have periods of time with limited connectivity to HGS.</p>
 <HR />
                         <p><h3><a href="https://docs.microsoft.com/windows-server/virtualization/guarded-fabric-shielded-vm/guarded-fabric-troubleshoot-overview">Shielded VM and Guarded Fabric Troubleshooting Guide</a></h3>This guide provides information about how to resolve issues you may encounter in your Shielded VM environment.</p>
 <HR />
@@ -91,7 +91,7 @@ Windows Server security provides layers of protection built into the operating s
                     <div class="cardText">
                         <h2>Credential Protection</h2>
 <HR />
-                        <p><h3><a href="https://docs.microsoft.com/windows/security/identity-protection/credential-guard/credential-guard"></a></h3>Credential Guard uses virtualization-based security to isolate secrets so that only privileged system software can access them. Unauthorized access to these secrets can lead to credential theft attacks, such as Pass-the-Hash or Pass-The-Ticket.</a> Credential Guard prevents these attacks by protecting NTLM password hashes and Kerberos Ticket Granting Tickets.</p>
+                        <p><h3><a href="https://docs.microsoft.com/windows/security/identity-protection/credential-guard/credential-guard">Protect derived domain credentials with Credential Guard</a></h3>Credential Guard uses virtualization-based security to isolate secrets so that only privileged system software can access them. Unauthorized access to these secrets can lead to credential theft attacks, such as Pass-the-Hash or Pass-The-Ticket.</a> Credential Guard prevents these attacks by protecting NTLM password hashes and Kerberos Ticket Granting Tickets.</p>
 <HR />
                         <p><h3><a href="https://docs.microsoft.com/windows/security/identity-protection/remote-credential-guard">Protect Remote Desktop credentials with Remote Credential Guard</a></h3> Remote Credential Guard helps you protect your credentials over a Remote Desktop connection by redirecting the Kerberos requests back to the device that's requesting the connection. It also provides single sign on experiences for Remote Desktop sessions. </p>
 <HR />
@@ -114,7 +114,7 @@ Windows Server security provides layers of protection built into the operating s
                     <div class="cardText">
                         <h2>Hardening the OS and applications</h2>
 <HR />
-                        <p><h3><a href="https://docs.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-contro">Windows Defender Application Control (WDAC) Deployment Guide</a></h3>WDAC is configurable code integrity (CI) policy that helps enterprises control what applications run in their environmemnt and carries no specific hardware or software requirements other than running Windows 10.</p>
+                        <p><h3><a href="https://docs.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control">Windows Defender Application Control (WDAC) Deployment Guide</a></h3>WDAC is configurable code integrity (CI) policy that helps enterprises control what applications run in their environmemnt and carries no specific hardware or software requirements other than running Windows 10.</p>
 <HR />
                         <p><h3><a href="https://www.youtube.com/watch?v=F-pTkesjkhI">Device Guard demo video</a></h3>Device Guard is a combination of WDAC and Hypervisor-protected code integrity (HVCI). This 7-minute video presents Device Guard and its usage on Windows Server.</p>
 <HR />
@@ -122,7 +122,7 @@ Windows Server security provides layers of protection built into the operating s
 <HR />
                         <p><h3><a href="https://docs.microsoft.com/windows/desktop/SecBP/control-flow-guard">Control Flow Guard</a></h3>Control Flow Guard provides built-in protection against some classes of memory corruption attacks.</p>
 <HR />
-                        <p><h3><a href="https://technet.microsoft.com/en-us/windows-server-docs/security/windows-defender/windows-defender-overview-windows-server"></a></h3>Windows Defender provides active detection capabilities to block known malware. Windows Defender is turned on by default and is optimized to support the various server roles in Windows Server.</p>
+                        <p><h3><a href="https://technet.microsoft.com/en-us/windows-server-docs/security/windows-defender/windows-defender-overview-windows-server">Windows Defender</a></h3>Windows Defender provides active detection capabilities to block known malware. Windows Defender is turned on by default and is optimized to support the various server roles in Windows Server.</p>
                     </div>
                 </div>
             </div>
@@ -146,9 +146,7 @@ Windows Server security provides layers of protection built into the operating s
 <HR />
                         <p><h3><a href="https://www.youtube.com/watch?v=_SaDw1dRy2k">OMS and Windows Server</a></h3>This 3-minute video shows how OMS can help detect potential malicious behavior that is blocked by Windows Server. Suppo</p>
 <HR />
-                        <p><h3><a href="http://blogs.technet.com/b/ad/archive/2015/07/22/microsoft-advanced-threat-analytics-coming-next-month.aspx"></a></h3>This blog post discusses Microsoft Advanced Threat Analytics, an on-premises product that uses Active Directory network traffic and SIEM data to discover and alert on potential threats.</p>
-<HR />
-                        <p><h3><a href="https://www.youtube.com/watch?v=0nA9FeTRZFw&list=PL8nfc9haGeb5IZGM8HvmRozetHRpBDKSw">Microsoft Advanced Threat Analytics</a></h3>This 3-minute video presents an overview of how Microsoft is adding threat analytics capabilities in Windows Server. </p>
+                        <p><h3><a href="http://blogs.technet.com/b/ad/archive/2015/07/22/microsoft-advanced-threat-analytics-coming-next-month.aspx">Microsoft Advanced Threat Analytics</a></h3>This blog post discusses Microsoft Advanced Threat Analytics, an on-premises product that uses Active Directory network traffic and SIEM data to discover and alert on potential threats.</p>
                     </div>
                 </div>
             </div>
