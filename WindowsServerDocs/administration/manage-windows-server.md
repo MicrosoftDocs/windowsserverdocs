@@ -113,7 +113,7 @@ In addition to the tools mentioned below, you can also use [Remote Desktop Servi
                     <div class="cardText">
                     <h2>Automate Windows Server management<h2>
 <HR />
-                        <p><h3><a href="/powershell/scripting/powershell-scripting?view=powershell-5.1">Windows PowerShell</a></h3>Windows PowerShell is a command-line shell and scripting language designed to let you rapidly automate administrative tasks. </p>
+                        <p><h3><a href="https://docs.microsoft.com/en-us/powershell/scripting/powershell-scripting?view=powershell-5.1>Windows PowerShell</a></h3>Windows PowerShell is a command-line shell and scripting language designed to let you rapidly automate administrative tasks. </p>
 <HR />
                         <p><h3><a href="windows-commands/windows-commands.md">Windows Commands</a></h3>The Windows command-line tools are used to perform administrative tasks in Windows. You can use the command reference to familiarize yourself with the command-line tools, to learn about the command shell, and to automate command-line tasks by using batch files or scripting tools.</p>
                     </div>
