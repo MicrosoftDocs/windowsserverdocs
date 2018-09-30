@@ -73,7 +73,7 @@ Windows Server security provides layers of protection built into the operating s
                                         </div>
                                         <div class="cardText">
                                             <h2>Addressing emerging threats and landscape shifts</h2>
-                                            <p>In this 6-minute video, Anders Vinberg provides an overview of Microsoft's security and assurance strategy, and discusses industry trends and landscape shifts as they relate to security. He then focuses on Microsoft's key initiatives to protect workloads from the underlying fabric, and protect against direct attacks from privileged accounts. Finally, in case of breach, he explains how new detection and forensic capabilities can help better identify the threat.</p>
+                                            <p>In this 6-minute video, Anders Vinberg provides an overview of Microsoft's security and assurance strategy, and discusses industry trends and landscape shifts as they relate to security.</p>
                                         </div>
                                     </div>
                                 </div>
