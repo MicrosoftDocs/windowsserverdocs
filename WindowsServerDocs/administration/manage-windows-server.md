@@ -2,8 +2,9 @@
 title: Manage Windows Server
 description: Learns about tools, recommendations and guidance on managing Windows Server
 ms.prod: windows-server-threshold
+layout: LandingPage
 ms.technology: manage
-ms.topic: article
+ms.topic: landing-page
 author: lizap
 ms.author: elizapo
 ms.date: 03/16/2018
@@ -44,7 +45,7 @@ In addition to the tools mentioned below, you can also use [Remote Desktop Servi
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <img src="../media/i-secure.svg" alt="" />
+                            <img src="../media/i-manage.svg" alt="" />
                         </div>
                     </div>
                     <div class="cardText">
@@ -78,7 +79,7 @@ Start with [Configure Windows diagnostic data in your organization](/windows/con
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <img src="../media/i-secure.svg" alt="" />
+                            <img src="../media/i-manage.svg" alt="" />
                         </div>
                     </div>
                     <div class="cardText">
@@ -136,7 +137,7 @@ HR />
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <img src="../media/i-secure.svg" alt="" />
+                            <img src="../media/i-manage.svg" alt="" />
                         </div>
                     </div>
                     <div class="cardText">
