@@ -88,7 +88,7 @@ In addition to the tools mentioned below, you can also use [Remote Desktop Servi
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <img src="../media/i-secure.svg" alt="" />
+                            <img src="../media/i-manage.svg" alt="" />
                         </div>
                     </div>
                     <div class="cardText">
