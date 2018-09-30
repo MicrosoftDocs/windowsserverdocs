@@ -29,7 +29,7 @@ Virtualization in Windows Server 2016 is one of the foundational technologies re
             <div class="cardPadding">
                 <div class="card">
                     <div class="cardImageOuter">
-                        <div class="cardImage">  
+                        <div class="cardImage">
                             <img src="../media/i-virtualize.svg" alt="" />
                         </div>
                     </div>
@@ -44,7 +44,7 @@ Virtualization in Windows Server 2016 is one of the foundational technologies re
 <HR />
     </li>
 <li>
-      <a href="hyper-v/Hyper-V-on-Windows-Server.md">          
+      <a href="hyper-v/Hyper-V-on-Windows-Server.md">      
          <div class="cardSize">
             <div class="cardPadding">
                 <div class="card">
@@ -64,12 +64,12 @@ Virtualization in Windows Server 2016 is one of the foundational technologies re
 <HR />
     </li>
 <li>
-          <a href="https://docs.microsoft.com/en-us/windows-server/virtualization/hyper-v/hyper-v-server-2016"> 
+          <a href="https://docs.microsoft.com/en-us/windows-server/virtualization/hyper-v/hyper-v-server-2016">
           <div class="cardSize">
             <div class="cardPadding">
                 <div class="card">
                     <div class="cardImageOuter">
-                        <div class="cardImage">                          
+                        <div class="cardImage">
                         <img src="../media/i-virtualize.svg" alt="" />
                         </div>
                     </div>
@@ -84,7 +84,7 @@ Virtualization in Windows Server 2016 is one of the foundational technologies re
 <HR />
     </li>
 <li>
-         <a href="https://docs.microsoft.com/virtualization/windowscontainers">         
+         <a href="https://docs.microsoft.com/virtualization/windowscontainers">
          <div class="cardSize">
             <div class="cardPadding">
                 <div class="card">
@@ -120,7 +120,7 @@ Virtualization in Windows Server 2016 is one of the foundational technologies re
 <HR />
                         <p>Hyper\-V Virtual Switch is available in Hyper\-V Manager after you install the Hyper\-V server role.</p>
 <HR />
-                        <p>Included in Hyper\-V Virtual Switch are programmatically managed and extensible capabilities that allow you to connect virtual machines to both virtual networks and the physical network.</p> 
+                        <p>Included in Hyper\-V Virtual Switch are programmatically managed and extensible capabilities that allow you to connect virtual machines to both virtual networks and the physical network.</p>
 <HR />
                         <p>In addition, Hyper-V Virtual Switch provides policy enforcement for security, isolation, and service levels.</p>
                     </div>
