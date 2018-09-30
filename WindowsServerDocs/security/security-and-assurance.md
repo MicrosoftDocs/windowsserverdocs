@@ -143,9 +143,9 @@ Windows Server security provides layers of protection built into the operating s
 <HR />
                         <p><h3><a href="guarded-fabric-shielded-vm/guarded-fabric-deploying-hgs-overview.md">Guarded Fabric Deployment Guide</a></h3>This guide provides installation and validation information for Windows Server and System Center Virtual Machine Manager for Guarded Fabric Hosts and Shielded VMs.</p>
 <HR />
-                        <p><h3><a href="https://docs.microsoft.com/windows-server/virtualization/guarded-fabric-shielded-vm/guarded-fabric-manage-branch-office">Shielded VM and Guarded Fabric in Branch Offices</a></h3>This guide provides best practices for running shielded virtual machines in branch offices and other remote scenarios where Hyper-V hosts may have periods of time with limited connectivity to HGS.</p>
+                        <p><h3><a href="guarded-fabric-shielded-vm/guarded-fabric-manage-branch-office.md">Shielded VM and Guarded Fabric in Branch Offices</a></h3>This guide provides best practices for running shielded virtual machines in branch offices and other remote scenarios where Hyper-V hosts may have periods of time with limited connectivity to HGS.</p>
 <HR />
-                        <p><h3><a href="https://docs.microsoft.com/windows-server/virtualization/guarded-fabric-shielded-vm/guarded-fabric-troubleshoot-overview">Shielded VM and Guarded Fabric Troubleshooting Guide</a></h3>This guide provides information about how to resolve issues you may encounter in your Shielded VM environment.</p>
+                        <p><h3><a href="guarded-fabric-shielded-vm/guarded-fabric-troubleshoot-overview.md">Shielded VM and Guarded Fabric Troubleshooting Guide</a></h3>This guide provides information about how to resolve issues you may encounter in your Shielded VM environment.</p>
 <HR />
                         <p><h3><a href="http://windowsitpro.com/hyper-v/super-secure-hyper-v-environments-shielded-vms-2016">Shielded VM Article</a></h3>This white paper provides an overview of how shielded VMs provide increased overall security to prevent tampering.</p>
                     </div>
