@@ -36,12 +36,12 @@ Virtualization in Windows Server is one of the foundational technologies require
                     <div class="cardText">
                         <h3>Guarded Fabric and Shielded VMs</h3>
                         <p>As a cloud service provider or enterprise private cloud administrator, you can use a guarded fabric to provide a more secure environment for VMs. A guarded fabric consists of one Host Guardian Service \(HGS\) - typically, a cluster of three nodes - plus one or more guarded hosts, and a set of shielded VMs.</p>
-                    </div>
-                </div>
-            </div>
-        </a>
+                     </div>
+                  </div>
+              </div>
+          </div>
+       </a>
     </li>
-<HR />
 <li>
       <a href="hyper-v/Hyper-V-on-Windows-Server.md">      
          <div class="cardSize">
@@ -55,12 +55,12 @@ Virtualization in Windows Server is one of the foundational technologies require
                     <div class="cardText">
                        <h3>Windows 10 for the enterprise: Ways to use devices for work</h3>
                         <p>The Hyper-V technology provides computing resources through hardware virtualization. Hyper-V creates a software version of a computer, called a virtual machine, which you use to run an operating system and applications. You can run multiple virtual machines at the same time, and can create and delete them as needed. </p>
-                    </div>
-                </div>
-            </div>
+                     </div>
+                  </div>
+              </div>
+          </div>
        </a>
     </li>
-<HR />
 <li>
           <a href="https://docs.microsoft.com/en-us/windows-server/virtualization/hyper-v/hyper-v-server-2016">
           <div class="cardSize">
@@ -74,12 +74,12 @@ Virtualization in Windows Server is one of the foundational technologies require
                     <div class="cardText">
                         <h3>Microsoft Hyper-V Server</h3>
                         <p>The Hyper-V technology provides computing resources through hardware virtualization. Hyper-V creates a software version of a computer, called a virtual machine, which you use to run an operating system and applications. You can run multiple virtual machines at the same time, and can create and delete them as needed.</p>
-                    </div>
-                </div>
-            </div>
+                     </div>
+                  </div>
+              </div>
+          </div>
        </a>
     </li>
-<HR />
 <li>
          <a href="https://docs.microsoft.com/virtualization/windowscontainers">
          <div class="cardSize">
@@ -93,12 +93,12 @@ Virtualization in Windows Server is one of the foundational technologies require
                     <div class="cardText">
                         <h3>Windows Containers</h3></a>
                         <p>Windows Containers provide operating system\-level virtualization that allows multiple isolated applications to be run on a single system. Two different types of container runtimes are included with the feature, each with a different degree of application isolation.</p>
-                    </div>
-                </div>
-            </div>
+                     </div>
+                  </div>
+              </div>
+          </div>
        </a>
     </li>
-<HR />
 <li>
           <a href="hyper-v-virtual-switch/Hyper-V-Virtual-Switch.md">
           <div class="cardSize">
@@ -119,9 +119,10 @@ Virtualization in Windows Server is one of the foundational technologies require
                         <p>Included in Hyper\-V Virtual Switch are programmatically managed and extensible capabilities that allow you to connect virtual machines to both virtual networks and the physical network.</p>
 <HR />
                         <p>In addition, Hyper-V Virtual Switch provides policy enforcement for security, isolation, and service levels.</p>
-                    </div>
-                </div>
-            </div>
+                     </div>
+                  </div>
+              </div>
+          </div>
        </a>
     </li>
 </ul>
