@@ -21,7 +21,7 @@ ms.localizationpriority: high
 
 Virtualization in Windows Server is one of the foundational technologies required to create your software defined infrastructure. Along with networking and storage, virtualization features deliver the flexibility you need to power workloads for your customers.
 
-HR />
+<HR />
 <ul class="cardsI panelContent">
 <li>
           <a href="../security/guarded-fabric-shielded-vm/guarded-fabric-and-shielded-vms.md">
