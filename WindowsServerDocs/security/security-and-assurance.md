@@ -17,9 +17,109 @@ ms.localizationpriority: high
 >[!TIP]
 > Looking for information about older versions of Windows Server? Check out our other [Windows Server libraries](/previous-versions/windows/) on docs.microsoft.com. You can also [search this site](https://docs.microsoft.com/search/index?search=Windows+Server&dataSource=previousVersions) for specific information.
 
+<hr />
 Windows Server security provides layers of protection built into the operating system to safeguard against security breaches, help block malicious attacks, and enhance the security of your virtual machines, applications, and data.
 
 <hr />
+
+
+<ul class="cardsF panelContent">
+<li>
+ <a href="https://blogs.technet.microsoft.com/windowsserver/2016/04/25/ten-reasons-youll-love-windows-server-2016-8-security/">
+                            <div class="cardSize">
+                                <div class="cardPadding">
+                                    <div class="card">
+                                        <div class="cardImageOuter">
+                                            <div class="cardImage">
+                                                <img src="../media/i-whats-new.svg" alt="" />
+                                            </div>
+                                        </div>
+                                        <div class="cardText">
+                                            <h2>Windows Server Security Blog Post</h2>
+                                            <p>This blog post from the Windows Server security team highlights many of the improvements in Windows Server that increase security for hosting and hybrid cloud environments.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                          </a>
+                        </li>
+<li>
+ <a href="https://blogs.technet.microsoft.com/datacentersecurity/">
+                            <div class="cardSize">
+                                <div class="cardPadding">
+                                    <div class="card">
+                                        <div class="cardImageOuter">
+                                            <div class="cardImage">
+                                                <img src="../media/i-whats-new.svg" alt="" />
+                                            </div>
+                                        </div>
+                                        <div class="cardText">
+                                            <h2>Datacenter and Private Cloud Security Blog</h2>
+                                            <p>Find out what's new in Windows Server Storage</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                          </a>
+                        </li><li>
+ <a href="https://www.youtube.com/watch?v=B5JMYxYWx1k&feature=youtu.be">
+                            <div class="cardSize">
+                                <div class="cardPadding">
+                                    <div class="card">
+                                        <div class="cardImageOuter">
+                                            <div class="cardImage">
+                                                <img src="../media/i-whats-new.svg" alt="" />
+                                            </div>
+                                        </div>
+                                        <div class="cardText">
+                                            <h2>Addressing emerging threats and landscape shifts</h2>
+                                            <p>In this 6-minute video, Anders Vinberg provides an overview of Microsoft's security and assurance strategy, and discusses industry trends and landscape shifts as they relate to security. He then focuses on Microsoft's key initiatives to protect workloads from the underlying fabric, and protect against direct attacks from privileged accounts. Finally, in case of breach, he explains how new detection and forensic capabilities can help better identify the threat.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                          </a>
+                        </li><li>
+ <a href="http://blogs.technet.com/b/windowsserver/archive/2015/11/18/protecting-your-datacenter-and-cloud-november-update.aspx">
+                            <div class="cardSize">
+                                <div class="cardPadding">
+                                    <div class="card">
+                                        <div class="cardImageOuter">
+                                            <div class="cardImage">
+                                                <img src="../media/i-whats-new.svg" alt="" />
+                                            </div>
+                                        </div>
+                                        <div class="cardText">
+                                            <h2>Protecting Your Datacenter and Cloud from Emerging Threats blog post</h2>
+                                            <p>This blog post discusses how you can use Microsoft technologies to protect your datacenter and cloud investments from emerging threats.  </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                          </a>
+                        </li><li>
+ <a href="http://channel9.msdn.com/events/ignite/2015/brk2482">
+                            <div class="cardSize">
+                                <div class="cardPadding">
+                                    <div class="card">
+                                        <div class="cardImageOuter">
+                                            <div class="cardImage">
+                                                <img src="../media/i-whats-new.svg" alt="" />
+                                            </div>
+                                        </div>
+                                        <div class="cardText">
+                                            <h2>Security and Assurance Overview session at Ignite</h2>
+                                            <p>This Ignite session addresses persistent threats, insider breaches, organized cybercrime, and securing the Microsoft Cloud Platform (on-premises and connected services with Azure). It includes scenarios for securing workloads, large enterprise tenants, and service providers.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                          </a>
+                        </li>
+</ul>
+
+<HR />
+
 <ul class="cardsF panelContent">
 <li>
         <div class="cardSize">
