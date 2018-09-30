@@ -15,12 +15,9 @@ ms.localizationpriority: high
 
 >[!TIP]
 > Looking for information about older versions of Windows Server? Check out our other [Windows Server libraries](/previous-versions/windows/) on docs.microsoft.com. You can also [search this site](https://docs.microsoft.com/search/index?search=Windows+Server&dataSource=previousVersions) for specific information.
-
  
 Once you have deployed Windows Server into your environment, including the specific roles for the features and functions you need, the next step is managing those servers. Windows Server includes a number of tools to help you understand your Windows Server environment, manage specific servers, fine-tune performance, and eventually automate many management tasks. 
 
-
-## Manage Windows Server systems and environments
 The tools you use to manage Windows Server instances depend, in large amount, on the types of systems you have deployed (Windows Server with Desktop Experience vs Server Core), physical versus virtual machines, and where your servers are located. Use the following information to perform basic management tasks on Windows Server.
 
 Use the following table to determine which tools to use when.
@@ -35,7 +32,6 @@ Use the following table to determine which tools to use when.
 
 In addition to the tools mentioned below, you can also use [Remote Desktop Services](../remote/remote-desktop-services/welcome-to-rds.md) to access on-premises, remote, and virtual servers. Then you can use Server Manager to perform management tasks.
 
-
 <HR />
 
 <ul class="cardsF panelContent">
@@ -49,6 +45,7 @@ In addition to the tools mentioned below, you can also use [Remote Desktop Servi
                         </div>
                     </div>
                     <div class="cardText">
+                    <h3>Manage Windows Server systems and environments<h3>                
 <HR />
                         <p><h3><a href="../manage/windows-admin-center/overview.md">Manage on-premises systems, remote systems, and systems without UI with Windows Admin Center</a></h3>A browser-based management app that enables on-premises administration of Windows Servers with no Azure or cloud dependency. Windows Admin Center (formerly called "Project Honolulu") gives you full control over all aspects of your server infrastructure and is particularly useful for management on private networks that are not connected to the Internet. You can install Windows Admin Center on Windows 10, on a gateway server, or directly on the Windows Server system that you want to manage.</p>
 <HR />
@@ -63,16 +60,6 @@ In addition to the tools mentioned below, you can also use [Remote Desktop Servi
         </div>
     </li>
 </ul>
-
-## Gather information about your environment
-Many of the decisions you make as an administrator depend on data about the systems and users in your environment. Use the following information and tools to gather that data.
-
-Start with [Configure Windows diagnostic data in your organization](/windows/configuration/configure-windows-diagnostic-data-in-your-organization) for information about the diagnostic data that can be gathered from Windows 10 and Windows Server.
-
-
-<HR />
-
-<ul class="cardsF panelContent">
 <li>
         <div class="cardSize">
             <div class="cardPadding">
@@ -83,6 +70,7 @@ Start with [Configure Windows diagnostic data in your organization](/windows/con
                         </div>
                     </div>
                     <div class="cardText">
+                    <h3>Gather information about your environment<h3>    
 <HR />
                         <p><h3><a href="get-started-with-setup-and-boot-event-collection.md">Setup and Boot Event Collection</a></h3>Setup and Boot Event Collection lets you designate a "collector" computer that can gather a variety of important events that occur on other computers when they boot or go through the setup process. You can then later analyze the collected events with Event Viewer, Message Analyzer, Wevtutil, or Windows PowerShell cmdlets. </p>
 <HR />
@@ -94,15 +82,6 @@ Start with [Configure Windows diagnostic data in your organization](/windows/con
             </div>
         </div>
     </li>
-</ul> 
-
-## Tune your Windows Server environment for performance
-Use the following information to help tune your environment for performance.
-
-
-HR />
-
-<ul class="cardsF panelContent">
 <li>
         <div class="cardSize">
             <div class="cardPadding">
@@ -113,6 +92,7 @@ HR />
                         </div>
                     </div>
                     <div class="cardText">
+                    <h3>une your Windows Server environment for performance<h3> 
 <HR />
                         <p><h3><a href="performance-tuning/index.md">Performance tuning guidelines</a></h3>Review a set of guidelines that you can use to tune the server settings in Windows Server 2016 and obtain incremental performance or energy efficiency gains, especially when the nature of the workload varies little over time.</p>
 <HR />
@@ -122,15 +102,6 @@ HR />
             </div>
         </div>
     </li>
-</ul> 
-
-## Automate Windows Server management
-
-Windows Server includes a set of commands and Windows PowerShell modules that you can use to automate management tasks.
-
-HR />
-
-<ul class="cardsF panelContent">
 <li>
         <div class="cardSize">
             <div class="cardPadding">
@@ -141,6 +112,8 @@ HR />
                         </div>
                     </div>
                     <div class="cardText">
+                    <h3>Automate Windows Server management<h3>
+
 <HR />
                         <p><h3><a href="/powershell/scripting/powershell-scripting?view=powershell-5.1">Windows PowerShell</a></h3>Windows PowerShell is a command-line shell and scripting language designed to let you rapidly automate administrative tasks. </p>
 <HR />
