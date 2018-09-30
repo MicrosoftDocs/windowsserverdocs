@@ -23,7 +23,7 @@ Windows Server security provides layers of protection built into the operating s
 <hr />
 
 
-<ul class="cardsF panelContent">
+<ul class="cardsI panelContent">
 <li>
  <a href="https://blogs.technet.microsoft.com/windowsserver/2016/04/25/ten-reasons-youll-love-windows-server-2016-8-security/">
                             <div class="cardSize">
