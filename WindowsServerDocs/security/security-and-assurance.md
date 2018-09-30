@@ -301,21 +301,3 @@ Windows Server security provides layers of protection built into the operating s
     </li>
 </ul>
                 
----
-
-## Related
-
-### [Windows Server Security Blog Post](https://blogs.technet.microsoft.com/windowsserver/2016/04/25/ten-reasons-youll-love-windows-server-2016-8-security/)
-This blog post from the Windows Server security team highlights many of the improvements in Windows Server that increase security for hosting and hybrid cloud environments.
-
-### [Datacenter and Private Cloud Security Blog](https://blogs.technet.microsoft.com/datacentersecurity/)
-This is the central blog site for technical content from the Microsoft Datacenter and Private Cloud Security team. 
-
-### [Addressing emerging threats and landscape shifts](https://www.youtube.com/watch?v=B5JMYxYWx1k&feature=youtu.be)
-In this 6-minute video, Anders Vinberg provides an overview of Microsoft's security and assurance strategy, and discusses industry trends and landscape shifts as they relate to security. He then focuses on Microsoft's key initiatives to protect workloads from the underlying fabric, and protect against direct attacks from privileged accounts. Finally, in case of breach, he explains how new detection and forensic capabilities can help better identify the threat.
-
-### [Protecting Your Datacenter and Cloud from Emerging Threats blog post](http://blogs.technet.com/b/windowsserver/archive/2015/11/18/protecting-your-datacenter-and-cloud-november-update.aspx)
-This blog post discusses how you can use Microsoft technologies to protect your datacenter and cloud investments from emerging threats.                   
-
-### [Security and Assurance Overview session at Ignite](http://channel9.msdn.com/events/ignite/2015/brk2482)
-This Ignite session addresses persistent threats, insider breaches, organized cybercrime, and securing the Microsoft Cloud Platform (on-premises and connected services with Azure). It includes scenarios for securing workloads, large enterprise tenants, and service providers.
