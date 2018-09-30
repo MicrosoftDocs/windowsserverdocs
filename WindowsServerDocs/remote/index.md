@@ -32,7 +32,7 @@ ms.localizationpriority: high
                                             </div>
                                         </div>
                                         <div class="cardText">
-                                            <h2>Remote Desktop Services</h2>
+                                            <h3>Remote Desktop Services</h3>
                                             <p>Remote Desktop Services enables users to access Windows-based programs that are installed on a Remote Desktop Session Host (RD Session Host) server, or to access the full Windows desktop. With Remote Desktop Services, users can access an RD Session Host server from within a corporate network or from the Internet.</p>
                                         </div>
                                     </div>
@@ -51,7 +51,7 @@ ms.localizationpriority: high
                                             </div>
                                         </div>
                                         <div class="cardText">
-                                            <h2>Remote Access</h2>
+                                            <h3>Remote Access</h3>
                                             <p>The Remote Access server role includes DirectAccess and virtual private network (VPN), local area network (LAN) Routing, and Web Application Proxy. RAS allows you to provide network connectivity to remote employees, site-to-site VPN to connect remote office locations over the Internet, and the RAS Gateway, which has multitenant and Border Gateway Protocol (BGP) capabilities for Enterprises and Cloud Service Providers (CSPs).</p>
                                         </div>
                                     </div>
@@ -69,7 +69,7 @@ ms.localizationpriority: high
                                             </div>
                                         </div>
                                         <div class="cardText">
-                                            <h2>Web Application Proxy</h2>
+                                            <h3>Web Application Proxy</h3>
                                             <p>Web Application Proxy provides reverse proxy functionality for web applications inside your corporate network to allow users on any device to access them from outside the corporate network safely and securely.</p>
                                         </div>
                                     </div>
@@ -87,7 +87,7 @@ ms.localizationpriority: high
                                             </div>
                                         </div>
                                         <div class="cardText">
-                                            <h2>Multipoint Services</h2>
+                                            <h3>Multipoint Services</h3>
                                             <p>This blog post discusses how you can use Microsoft technologies to protect your datacenter and cloud investments from emerging threats.  </p>
                                         </div>
                                     </div>
@@ -105,7 +105,7 @@ ms.localizationpriority: high
                                             </div>
                                         </div>
                                         <div class="cardText">
-                                            <h2>Remote Server Administration Tools</h2>
+                                            <h3>Remote Server Administration Tools</h3>
                                             <p>To ease remote server management, you can download and install Remote Server Administration Tools for Windows 10. Remote Server Administration Tools for Windows 10 includes Server Manager, Microsoft Management Console (mmc) snap-ins, consoles, Windows PowerShell cmdlets and providers, and some command-line tools for managing roles and features that run on Windows Server. </p>
                                         </div>
                                     </div>
