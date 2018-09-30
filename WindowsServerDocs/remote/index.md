@@ -1,5 +1,5 @@
 ---
-title: Remote Access
+title: Remote
 description: Guidance on leveraging remote access and server administration 
 ms.prod: windows-server-threshold
 layout: LandingPage
@@ -11,7 +11,7 @@ manager: dougkim
 ms.localizationpriority: high
 ---
 
-# Remote Access
+# Remote
 
 >[!TIP]
 > Looking for information about older versions of Windows Server? Check out our other [Windows Server libraries](/previous-versions/windows/) on docs.microsoft.com. You can also [search this site](https://docs.microsoft.com/search/index?search=Windows+Server&dataSource=previousVersions) for specific information.
@@ -20,7 +20,7 @@ ms.localizationpriority: high
 <hr />
 
 
-<ul class="cardsF panelContent">
+<ul class="cardsI panelContent">
 <li>
  <a href="remote-desktop-services/welcome-to-rds.md">
                             <div class="cardSize">

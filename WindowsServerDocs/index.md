@@ -381,7 +381,7 @@ description: Windows Server documentation helps IT professionals evaluate, plan,
                                             </div>
                                         </div>
                                         <div class="cardText">
-                                            <h2>Remote access</h2>
+                                            <h2>Remote</h2>
                                             <p>Access and control computers and devices remotely to extend enterprise availabilty anywhere, anytime with technologies including Remote Desktop Services, Remote Access and Remote Server Administration Tools.</p>
 <table>
      <tr>
