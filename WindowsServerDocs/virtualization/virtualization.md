@@ -34,7 +34,7 @@ Virtualization in Windows Server is one of the foundational technologies require
                         </div>
                     </div>
                     <div class="cardText">
-                        <h3>Guarded Fabric and Shielded VMs</h3>
+                        <h2>Guarded Fabric and Shielded VMs</h2>
                         <p>As a cloud service provider or enterprise private cloud administrator, you can use a guarded fabric to provide a more secure environment for VMs. A guarded fabric consists of one Host Guardian Service \(HGS\) - typically, a cluster of three nodes - plus one or more guarded hosts, and a set of shielded VMs.</p>
                      </div>
                   </div>
@@ -53,8 +53,8 @@ Virtualization in Windows Server is one of the foundational technologies require
                         </div>
                     </div>
                     <div class="cardText">
-                       <h3>Windows 10 for the enterprise: Ways to use devices for work</h3>
-                        <p>The Hyper-V technology provides computing resources through hardware virtualization. Hyper-V creates a software version of a computer, called a virtual machine, which you use to run an operating system and applications. You can run multiple virtual machines at the same time, and can create and delete them as needed. </p>
+                       <h2>Windows 10 for the enterprise: Ways to use devices for work</h2>
+                        <p>The Hyper-V technology provides computing resources through hardware virtualization. Hyper-V creates a software version of a computer, called a virtual machine, which you use to run an operating system and applications. You can run multiple virtual machines at the same time, and can create and delete them as needed.</p>
                      </div>
                   </div>
               </div>
@@ -72,7 +72,7 @@ Virtualization in Windows Server is one of the foundational technologies require
                         </div>
                     </div>
                     <div class="cardText">
-                        <h3>Microsoft Hyper-V Server</h3>
+                        <h2>Microsoft Hyper-V Server</h2>
                         <p>The Hyper-V technology provides computing resources through hardware virtualization. Hyper-V creates a software version of a computer, called a virtual machine, which you use to run an operating system and applications. You can run multiple virtual machines at the same time, and can create and delete them as needed.</p>
                      </div>
                   </div>
@@ -91,7 +91,7 @@ Virtualization in Windows Server is one of the foundational technologies require
                         </div>
                     </div>
                     <div class="cardText">
-                        <h3>Windows Containers</h3>
+                        <h2>Windows Containers</h2>
                         <p>Windows Containers provide operating system-level virtualization that allows multiple isolated applications to be run on a single system. Two different types of container runtimes are included with the feature, each with a different degree of application isolation.</p>
                      </div>
                   </div>
@@ -110,7 +110,7 @@ Virtualization in Windows Server is one of the foundational technologies require
                         </div>
                     </div>
                     <div class="cardText">
-                        <h3>Hyper-V Virtual Switch</h3>
+                        <h2>Hyper-V Virtual Switch</h2>
 <HR />
                         <p>The Hyper-V Virtual Switch is a software-based layer-2 Ethernet network switch that is included in all versions of Hyper-V.</p>
 <HR />
