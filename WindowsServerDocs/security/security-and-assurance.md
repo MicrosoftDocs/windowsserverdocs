@@ -1,5 +1,5 @@
 ---
-title: Security and Assurance
+title: Security | Assurance
 description: "An overview of Security in Windows Server"
 ms.custom: na
 ms.prod: windows-server-threshold
@@ -11,7 +11,7 @@ author: coreyp-at-msft
 ms.author: coreyp
 ms.localizationpriority: high
 ---
-# Security and Assurance in Windows Server 
+# Security | Assurance
 
 >[!TIP]
 > Looking for information about older versions of Windows Server? Check out our other [Windows Server libraries](/previous-versions/windows/) on docs.microsoft.com. You can also [search this site](https://docs.microsoft.com/search/index?search=Windows+Server&dataSource=previousVersions) for specific information.
