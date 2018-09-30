@@ -91,7 +91,7 @@ In addition to the tools mentioned below, you can also use [Remote Desktop Servi
                         </div>
                     </div>
                     <div class="cardText">
-                    <h3>une your Windows Server environment for performance<h3> 
+                    <h3>Tune your Windows Server environment for performance<h3> 
 <HR />
                         <p><h3><a href="performance-tuning/index.md">Performance tuning guidelines</a></h3>Review a set of guidelines that you can use to tune the server settings in Windows Server 2016 and obtain incremental performance or energy efficiency gains, especially when the nature of the workload varies little over time.</p>
 <HR />
