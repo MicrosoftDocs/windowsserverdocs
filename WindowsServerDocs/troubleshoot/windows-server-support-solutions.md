@@ -11,7 +11,7 @@ ms.topic: landing-page
 author: kaushika-msft
 ms.author: elizapo
 ---
-# Top support solutions for Windows Server 2016
+# Top support solutions for Windows Server
 
 Microsoft regularly releases both updates and solutions for Windows Server. To ensure your servers can receive future updates, including security updates, it's important to keep your servers updated. Check out [Windows 10 and Windows Server 2016 update history](https://support.microsoft.com/en-us/help/4000825/windows-10-windows-server-2016-update-history) for a complete list of released updates.
 
