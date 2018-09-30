@@ -59,7 +59,6 @@ In addition to the tools mentioned below, you can also use [Remote Desktop Servi
             </div>
         </div>
     </li>
-</ul>
 <li>
         <div class="cardSize">
             <div class="cardPadding">
@@ -123,12 +122,6 @@ In addition to the tools mentioned below, you can also use [Remote Desktop Servi
             </div>
         </div>
     </li>
-</ul>
-
-## Windows Server Insider Preview
-<HR />
-
-<ul class="cardsF panelContent">
 <li>
         <div class="cardSize">
             <div class="cardPadding">
@@ -139,6 +132,7 @@ In addition to the tools mentioned below, you can also use [Remote Desktop Servi
                         </div>
                     </div>
                     <div class="cardText">
+                    <h3>Automate Windows Server management<h3>
 
                         <p><h3><a href="..\manage\system-insights\overview.md">System Insights</h3></a>Native predictive analytics locally analyze Windows Server system data, such as performance counters and ETW events, helping IT administrators proactively detect and address problematic behavior in  deployments.</p>
                     </div>
