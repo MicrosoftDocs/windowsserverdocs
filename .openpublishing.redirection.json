@@ -7802,6 +7802,21 @@
       "redirect_document_id": true
     },
     {
+      "source_path": "WindowsServerDocs/virtualization/guarded-fabric-shielded-vm/guarded-fabric-and-shielded-vms.md",
+      "redirect_url": "/windows-server/security/guarded-fabric-shielded-vm/guarded-fabric-and-shielded-vms",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/virtualization/guarded-fabric-shielded-vm/guarded-fabric-and-shielded-vms-top-node.md",
+      "redirect_url": "/windows-server/security/guarded-fabric-shielded-vm/guarded-fabric-and-shielded-vms-top-node",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/virtualization/guarded-fabric-shielded-vm/guarded-fabric-deployment-overview.md",
+      "redirect_url": "/windows-server/security/guarded-fabric-shielded-vm/guarded-fabric-deployment-overview",
+      "redirect_document_id": true
+    },
+    {
       "source_path": "WindowsServerDocs/virtualization/guarded-fabric-shielded-vm/guarded-fabric-add-hgs-to-an-existing-domain.md",
       "redirect_url": "/windows-server/security/guarded-fabric-shielded-vm/guarded-fabric-add-hgs-to-an-existing-domain",
       "redirect_document_id": true
