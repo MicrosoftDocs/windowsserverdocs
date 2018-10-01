@@ -10,7 +10,6 @@ ms.author: jgerend
 ms.technology: storage-failover-clustering
 ms.localizationpriority: high
 ---
-
 # Failover Clustering
 
 >[!TIP]
@@ -48,6 +47,7 @@ Failover Clustering has many practical applications, including:
                         </li>
                      </ul>
 <HR />
+
 <ul class="cardsF panelContent">
 <li>
                          <div class="cardSize">
@@ -59,9 +59,7 @@ Failover Clustering has many practical applications, including:
                                             </div>
                                         </div>
                                         <div class="cardText">
-                                        <h3><a href="clustering-requirements.md">Failover Clustering Hardware Requirements and Storage Options</a><hr /></h3>
-
-                                        <h3><a href="failover-cluster-csvs.md">Use Cluster Shared Volumes (CSVs)</a><hr /></h3>                        
+                                        <h3><a href="clustering-requirements.md">Failover Clustering Hardware Requirements and Storage Options</a><hr /></h3>                       
                                         </div>
                                     </div>
                                 </div>
@@ -79,21 +77,7 @@ Failover Clustering has many practical applications, including:
                                             </div>
                                         </div>
                                         <div class="cardText">
-                                        <h3><a href="clustering-requirements.md">Failover Clustering Hardware Requirements and Storage Options</a><hr /></h3>
-
-                                        <h3><a href="failover-cluster-csvs.md">Use Cluster Shared Volumes (CSVs)</a><hr /></h3>
-
-<h3><a href="failover-cluster-csvs.md">Use Cluster Shared Volumes (CSVs)</a><hr /></h3>
-
-<h3><a href="failover-cluster-csvs.md">Use Cluster Shared Volumes (CSVs)</a><hr /></h3>
-
-<h3><a href="failover-cluster-csvs.md">Use Cluster Shared Volumes (CSVs)</a><hr /></h3>
-
-<h3><a href="failover-cluster-csvs.md">Use Cluster Shared Volumes (CSVs)</a><hr /></h3>
-
-<h3><a href="failover-cluster-csvs.md">Use Cluster Shared Volumes (CSVs)</a><hr /></h3>
-
-<h3><a href="failover-cluster-csvs.md">Use Cluster Shared Volumes (CSVs)</a><hr /></h3>                       
+                                        <h3><a href="clustering-requirements.md">Failover Clustering Hardware Requirements and Storage Options</a><hr /></h3>                      
                                         </div>
                                     </div>
                                 </div>
