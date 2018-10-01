@@ -22,7 +22,7 @@ Access and Identity technologies enable secure Active Directory environments on-
 <hr />
 <ul class="cardsF panelContent">
 <li>
- <a href="identity/ad-fs/overview/whats-new-active-directory-federation-services-windows-server">
+ <a href="ad-fs/overview/whats-new-active-directory-federation-services-windows-server.md">
                             <div class="cardSize">
                                 <div class="cardPadding">
                                     <div class="card">
