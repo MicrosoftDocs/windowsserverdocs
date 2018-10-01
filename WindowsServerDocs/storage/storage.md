@@ -54,7 +54,7 @@ Storage in Windows Server provides new and improved features for software-define
                         </div>
                     </div>
                     <div class="cardText">
-                        <h2>Software-defined storage for virtualized workloads</h2>
+                        <h3>Software-defined storage for virtualized workloads</h3>
 <HR />
                         <p><h3><a href="storage-spaces/storage-spaces-direct-overview.md">Storage Spaces Direct</a><HR /></h3> Directly attached local storage, including SATA and NVME devices, to optimize disk usage after adding new physical disks, and for faster virtual disk repair times. Also see <a href="storage-spaces/overview.md">Storage Spaces</a> for info on shared SAS and stand-alone Storage Spaces.</p>
 <HR />
@@ -78,7 +78,7 @@ Storage in Windows Server provides new and improved features for software-define
                         </div>
                     </div>
                     <div class="cardText">
-                        <h2>General-purpose file servers</h2>
+                        <h3>General-purpose file servers</h3>
 <HR />
                         <p><h3><a href="work-folders/work-folders-overview.md">Work Folders</a><HR /></h3> Store and access work files on personal computers and devices, often referred to as bring-your-own device (BYOD), in addition to corporate PCs. Users gain a convenient location to store work files, and they can access them from anywhere. Organizations maintain control over corporate data by storing the files on centrally managed file servers, and optionally specifying user device policies such as encryption and lock-screen passwords.</p>
 <HR />
@@ -110,7 +110,7 @@ Storage in Windows Server provides new and improved features for software-define
                         </div>
                     </div>
                     <div class="cardText">
-                        <h2>File systems, protocols, etc.</h2>
+                        <h3>File systems, protocols, etc.</h3>
 <HR />
                         <p><h3><HR /><a href="refs/refs-overview.md">ReFS</a></h3> A resilient file system that maximizes data availability, scales efficiently to very large data sets across diverse workloads, and provides data integrity by means of resiliency to corruption (regardless of software or hardware failures).<p>
 <HR />
