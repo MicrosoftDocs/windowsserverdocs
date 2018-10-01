@@ -25,6 +25,8 @@ When you manage networks as a software defined resource, you can describe an app
 
 This consistency means that your applications are now easier to scale, and you can seamlessly run applications - anywhere - with equal confidence about security, performance, quality of service, and availability.
 
+<HR />
+
 <ul class="cardsI panelContent">
 <li>
                          <div class="cardSize">
@@ -46,7 +48,9 @@ This consistency means that your applications are now easier to scale, and you c
                      </ul>
 <HR />
 
-## Software Defined Networking
+<h3>Software Defined Networking</h3>
+
+<HR />
 
 <ul class="cardsI panelContent">
 <li>
