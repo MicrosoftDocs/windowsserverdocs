@@ -7907,6 +7907,16 @@
       "redirect_document_id": true
     },
     {
+      "source_path": "WindowsServerDocs/virtualization/guarded-fabric-shielded-vm/guarded-fabric-planning-for-hosters.md",
+      "redirect_url": "/windows-server/security/guarded-fabric-shielded-vm/guarded-fabric-planning-for-hosters",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/virtualization/guarded-fabric-shielded-vm/guarded-fabric-plan-overview.md",
+      "redirect_url": "/windows-server/security/guarded-fabric-shielded-vm/guarded-fabric-plan-overview",
+      "redirect_document_id": true
+    },
+    {
       "source_path": "WindowsServerDocs/virtualization/guarded-fabric-shielded-vm/guarded-fabric-obtain-certs.md",
       "redirect_url": "/windows-server/security/guarded-fabric-shielded-vm/guarded-fabric-obtain-certs",
       "redirect_document_id": true
