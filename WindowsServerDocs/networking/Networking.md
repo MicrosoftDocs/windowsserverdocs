@@ -52,8 +52,6 @@ This consistency means that your applications are now easier to scale, and you c
 
 <h2>Software Defined Networking</h2>
 
-<HR />
-
 <ul class="cardsI panelContent">
 <li>
                          <div class="cardSize">
@@ -176,6 +174,8 @@ This consistency means that your applications are now easier to scale, and you c
         </div>
     </li>
 </ul>
+
+<HR />
 
 ## <a name="bkmk_networking"></a>Networking Technologies
 
