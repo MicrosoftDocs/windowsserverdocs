@@ -54,7 +54,7 @@ Access and Identity technologies enable secure Active Directory environments on-
                         </div>
                     </div>
                     <div class="cardText">
-                        <h3>Privileged Access Management for Active Directory Domain Services & AD DS</h3>
+                        <h3>Privileged Access Management for Active Directory Domain Services & AD DS</h3><hr />
                         <p>Privileged Access Management (PAM) for Active Directory Domain Services (AD DS) is a solution that is based on Microsoft Identity Manager (MIM) and Windows Server 2012 R2 and Windows Server 2016.</p>
                     </div>
                 </div>
@@ -73,7 +73,7 @@ Access and Identity technologies enable secure Active Directory environments on-
                         </div>
                     </div>
                     <div class="cardText">
-                        <h3>Windows 10 for the enterprise: Ways to use devices for work</h3>
+                        <h3>Windows 10 for the enterprise: Ways to use devices for work</h3><hr />
                         <p>Windows 10 provides you the ability to leverage Azure Active Directory. Windows 10 devices can be connected to Azure AD, and users can sign in to Windows with Azure AD accounts or add their Azure ID to gain access to business apps and resources.</p>
                     </div>
                 </div>
@@ -92,7 +92,7 @@ Access and Identity technologies enable secure Active Directory environments on-
                         </div>
                     </div>
                     <div class="cardText">
-                        <h3>Active Directory Domain Services</h3>
+                        <h3>Active Directory Domain Services</h3><hr />
                         <p>Detailed documentation on all of the features available for AD DS in Windows Server 2016.</p>
                     </div>
                 </div>
@@ -111,7 +111,7 @@ Access and Identity technologies enable secure Active Directory environments on-
                         </div>
                     </div>
                     <div class="cardText">
-                        <h3>Active Directory Federation Services</h3>
+                        <h3>Active Directory Federation Services</h3><hr />
                         <p>Detailed documentation on all of the features available for AD FS in Windows Server 2016.</p>
                     </div>
                 </div>
