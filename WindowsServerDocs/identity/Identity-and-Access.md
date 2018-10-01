@@ -17,6 +17,8 @@ ms.localizationpriority: high
 >[!TIP]
 > Looking for information about older versions of Windows Server? Check out our other [Windows Server libraries](/previous-versions/windows/) on docs.microsoft.com. You can also [search this site](https://docs.microsoft.com/search/index?search=Windows+Server&dataSource=previousVersions) for specific information.
 
+<hr />
+
 Access and Identity technologies enable secure Active Directory environments on-premises and in cloud-only and hybrid deployments where some applications and services are hosted in the cloud and others are hosted on premises.
 
 <hr />
