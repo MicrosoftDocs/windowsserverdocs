@@ -46,7 +46,6 @@ In addition to the tools mentioned below, you can also use [Remote Desktop Servi
                     </div>
                     <div class="cardText">
                     <h3>Manage Windows Server systems and environments<h3>
-<HR />
                         <p><h3><a href="../manage/windows-admin-center/overview.md">Manage on-premises systems, remote systems, and systems without UI with Windows Admin Center</a></h3>A browser-based management app that enables on-premises administration of Windows Servers with no Azure or cloud dependency. Windows Admin Center (formerly called "Project Honolulu") gives you full control over all aspects of your server infrastructure and is particularly useful for management on private networks that are not connected to the Internet. You can install Windows Admin Center on Windows 10, on a gateway server, or directly on the Windows Server system that you want to manage.</p>
 <HR />
                         <p><h3><a href="server-manager/server-manager.md">Manage on-premises systems with Server Manager</a></h3>A management console included in the full installation of Windows Server. (It is not available for installs that don't have UI - Server Core doesn't include Server Manager.) Use Server Manager to install and remove server roles, add and remove remote servers, start and stop services, and view data gathered about your environment.</p>
@@ -70,7 +69,6 @@ In addition to the tools mentioned below, you can also use [Remote Desktop Servi
                     </div>
                     <div class="cardText">
                     <h3>Gather information about your environment<h3>
-<HR />
                         <p><h3><a href="get-started-with-setup-and-boot-event-collection.md">Setup and Boot Event Collection</a></h3>Setup and Boot Event Collection lets you designate a "collector" computer that can gather a variety of important events that occur on other computers when they boot or go through the setup process. You can then later analyze the collected events with Event Viewer, Message Analyzer, Wevtutil, or Windows PowerShell cmdlets. </p>
 <HR />
                         <p><h3><a href="software-inventory-logging/get-started-with-software-inventory-logging.md">Software Inventory Logging (SIL)</a></h3>Software Inventory Logging in Windows Server is a feature with a simple set of PowerShell cmdlets that help server administrators retrieve a list of the Microsoft software that is installed on their servers. It also provides the capability to collect and forward this data periodically over the network to a target web server, using the HTTPS protocol, for aggregation. Managing the feature, primarily for hourly collection and forwarding, is also done with PowerShell commands.</p>
@@ -92,7 +90,6 @@ In addition to the tools mentioned below, you can also use [Remote Desktop Servi
                     </div>
                     <div class="cardText">
                     <h3>Tune your Windows Server environment for performance<h3>
-<HR />
                         <p><h3><a href="performance-tuning/index.md">Performance tuning guidelines</a></h3>Review a set of guidelines that you can use to tune the server settings in Windows Server and obtain incremental performance or energy efficiency gains, especially when the nature of the workload varies little over time.</p>
 <HR />
                         <p><h3><a href="server-performance-advisor/microsoft-server-performance-advisor.md">Microsoft Server Performance Advisor</a></h3>With Microsoft Server Performance Advisor (SPA), you can collect metrics to diagnose performance issues on Windows servers unobtrusively without adding software agents or reconfiguring production servers. SPA generates comprehensive performance reports and historical charts with recommendations.</p>
@@ -112,7 +109,6 @@ In addition to the tools mentioned below, you can also use [Remote Desktop Servi
                     </div>
                     <div class="cardText">
                     <h3>Automate Windows Server management<h3>
-<HR />
                         <p><h3><a href="https://docs.microsoft.com/en-us/powershell/scripting/powershell-scripting?view=powershell-5.1>Windows PowerShell</a></h3>Windows PowerShell is a command-line shell and scripting language designed to let you rapidly automate administrative tasks. </p>
 <HR />
                         <p><h3><a href="windows-commands/windows-commands.md">Windows Commands</a></h3>The Windows command-line tools are used to perform administrative tasks in Windows. You can use the command reference to familiarize yourself with the command-line tools, to learn about the command shell, and to automate command-line tasks by using batch files or scripting tools.</p>
@@ -131,8 +127,7 @@ In addition to the tools mentioned below, you can also use [Remote Desktop Servi
                         </div>
                     </div>
                     <div class="cardText">
-                    <h2>Automate Windows Server management<h2>
-<HR />
+                    <h3>Automate Windows Server management<h3>
                         <p><h3><a href="..\manage\system-insights\overview.md">System Insights</h3></a>Native predictive analytics locally analyze Windows Server system data, such as performance counters and ETW events, helping IT administrators proactively detect and address problematic behavior in  deployments.</p>
                     </div>
                 </div>
