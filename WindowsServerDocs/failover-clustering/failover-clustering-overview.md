@@ -1,8 +1,9 @@
 ---
 ms.assetid: c9844427-27cf-4d76-b5bb-e06368b092f7
 title: Failover Clustering  
-ms.prod: windows-server-threshold  
-ms.topic: article
+ms.prod: windows-server-threshold
+layout: LandingPage  
+ms.topic: landing-page
 ms.manager: dongill
 author: JasonGerend
 ms.author: jgerend  
@@ -10,14 +11,13 @@ ms.technology: storage-failover-clustering
 ms.date: 05/22/2018
 ms.localizationpriority: high
 ---
-# Failover Clustering in Windows Server
 
-> Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
+# Failover Clustering
 
 >[!TIP]
 > Looking for information about older versions of Windows Server? Check out our other [Windows Server libraries](/previous-versions/windows/) on docs.microsoft.com. You can also [search this site](https://docs.microsoft.com/search/index?search=Windows+Server&dataSource=previousVersions) for specific information.
 
-<img src="../media/landing-icons/cluster.png" style='float:left; padding:.5em;' alt="Icon indicating a group of computers"> Failover clustering - a Windows Server feature that enables you to group multiple servers together into a fault-tolerant cluster - provides new and improved features for software-defined datacenter customers and many other workloads running clusters on physical hardware or in virtual machines.
+<hr />
 
 A failover cluster is a group of independent computers that work together to increase the availability and scalability of clustered roles (formerly called clustered applications and services). The clustered servers (called nodes) are connected by physical cables and by software. If one or more of the cluster nodes fail, other nodes begin to provide service (a process known as failover). In addition, the clustered roles are proactively monitored to verify that they are working properly. If they are not working, they are restarted or moved to another node.
 
@@ -27,31 +27,83 @@ Failover Clustering has many practical applications, including:
 * Highly available or continuously available file share storage for applications such as Microsoft SQL Server and Hyper-V virtual machines
 * Highly available clustered roles that run on physical servers or on virtual machines that are installed on servers running Hyper-V
 
-## What's new
-Here are some of the new features in Windows Server 2016 - for more details, see [What's new in Failover Clustering](whats-new-in-failover-clustering.md):
+<hr />
 
-### [Cluster operating system rolling upgrades](Cluster-Operating-System-Rolling-Upgrade.md)
+<ul class="cardsF panelContent">
+<li>
+                         <div class="cardSize">
+                                <div class="cardPadding">
+                                    <div class="card">
+                                        <div class="cardImageOuter">
+                                            <div class="cardImage">
+                                                <img src="../media/i-whats-new.svg" alt="" />
+                                            </div>
+                                        </div>
+                                        <div class="cardText">
+                                        <h2><a href="failover-clusteringwhats-new-in-failover-clustering.md">What's new in Failover Clustering</a></h2>
+                                        </div>
+                                    </div>
+                                </div>
+                             </div>
+                          </a>
+                        </li>
+                     </ul>
+<HR />
+<li>
+                         <div class="cardSize">
+                                <div class="cardPadding">
+                                    <div class="card">
+                                        <div class="cardImageOuter">
+                                            <div class="cardImage">
+                                                <img src="../media/i-clustering.svg" alt="" />
+                                            </div>
+                                        </div>
+                                        <div class="cardText">
+                                        <h3><a href="clustering-requirements.md">Failover Clustering Hardware Requirements and Storage Options</a><hr /></h3>
 
-Enables an administrator to upgrade the operating system of the cluster nodes from without stopping the Hyper-V or the Scale-Out File Server workloads.
-### [Cloud Witness for a Failover Cluster](deploy-cloud-witness.md)
+                                        <h3><a href="failover-cluster-csvs.md">Use Cluster Shared Volumes (CSVs)</a><hr /></h3>                        
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                          </a>
+                        </li>
+<HR />
+<li>
+                         <div class="cardSize">
+                                <div class="cardPadding">
+                                    <div class="card">
+                                        <div class="cardImageOuter">
+                                            <div class="cardImage">
+                                                <img src="../media/i-clustering.svg" alt="" />
+                                            </div>
+                                        </div>
+                                        <div class="cardText">
+                                        <h3><a href="clustering-requirements.md">Failover Clustering Hardware Requirements and Storage Options</a><hr /></h3>
 
-A new type of quorum witness that leverages Microsoft Azure to help determine which cluster node should be considered authoritative if a node goes offline. 
+                                        <h3><a href="failover-cluster-csvs.md">Use Cluster Shared Volumes (CSVs)</a><hr /></h3>
 
-### [Health Service](health-service-overview.md)
+<h3><a href="failover-cluster-csvs.md">Use Cluster Shared Volumes (CSVs)</a><hr /></h3>
 
-Improves the day-to-day monitoring, operations, and maintenance experience of Storage Spaces Direct clusters.
+<h3><a href="failover-cluster-csvs.md">Use Cluster Shared Volumes (CSVs)</a><hr /></h3>
 
-### [Fault Domains](fault-domains.md)
+<h3><a href="failover-cluster-csvs.md">Use Cluster Shared Volumes (CSVs)</a><hr /></h3>
 
-Enables you to define what fault domain to use with a Storage Spaces Direct cluster. A fault domain is a set of hardware that share a single point of failure, such as a server node, server chassis, or rack.
+<h3><a href="failover-cluster-csvs.md">Use Cluster Shared Volumes (CSVs)</a><hr /></h3>
 
-### [VM load balancing](vm-load-balancing-overview.md)
+<h3><a href="failover-cluster-csvs.md">Use Cluster Shared Volumes (CSVs)</a><hr /></h3>
 
-Helps load be evenly distributed across nodes in a Failover Cluster by identifying busy nodes and live-migrating VMs on these nodes to less busy nodes.
+<h3><a href="failover-cluster-csvs.md">Use Cluster Shared Volumes (CSVs)</a><hr /></h3>                       
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                          </a>
+                        </li>
+</ul>
+<HR />
 
-### [Simplified SMB Multichannel and multi-NIC cluster networks](smb-multichannel.md)
 
-Enables easier configuration of multiple network adapters in a cluster.
 
 ## Planning
 
