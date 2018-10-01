@@ -19,6 +19,8 @@ ms.localizationpriority: high
 >[!TIP]
 > Looking for information about older versions of Windows Server? Check out our other [Windows Server libraries](/previous-versions/windows/) on docs.microsoft.com. You can also [search this site](https://docs.microsoft.com/search/index?search=Windows+Server&dataSource=previousVersions) for specific information.
 
+<HR />
+
 Networking is a foundational part of the Software Defined Datacenter \(SDDC\) platform, and Windows Server 2016 provides new and improved Software Defined Networking \(SDN\) technologies to help you move to a fully realized SDDC solution for your organization.
 
 When you manage networks as a software defined resource, you can describe an application’s infrastructure requirements one time, and then choose where the application runs - on premises or in the cloud. 
@@ -38,7 +40,7 @@ This consistency means that your applications are now easier to scale, and you c
                                             </div>
                                         </div>
                                         <div class="cardText">
-                                        <h3><a href="../networking/What-s-New-in-Networking.md">What's New in Networking</a></h3>   
+                                        <h2><a href="../networking/What-s-New-in-Networking.md">What's New in Networking</a></h2>
                                         </div>
                                     </div>
                                 </div>
@@ -48,7 +50,7 @@ This consistency means that your applications are now easier to scale, and you c
                      </ul>
 <HR />
 
-<h3>Software Defined Networking</h3>
+<h2>Software Defined Networking</h2>
 
 <HR />
 
