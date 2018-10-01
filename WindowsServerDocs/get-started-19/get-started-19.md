@@ -154,25 +154,6 @@ ms.localizationpriority: medium
         </div>
       </a>
     </li><hr />
-
-<li>
-      <a href="app-compat-19.md">
-        <div class="cardSize">
-            <div class="cardPadding">
-                <div class="card">
-                    <div class="cardImageOuter">
-                        <div class="cardImage">
-                             <img src="../media/i-get-started.svg" alt="" />
-                        </div>
-                    </div>
-                    <div class="cardText">
-                        <h3>Application Compatibility</h3>
-                        <p>Does SQL work on Windows Server 2019? What steps are needed to get Exchange running? This topic explains what you'll need to do.</p>                    </div>
-                </div>
-            </div>
-        </div>
-      </a>
-    </li><hr />
 <li>
       <a href="editions-comparison-19.md">
         <div class="cardSize">
