@@ -35,7 +35,7 @@ Windows Server security provides layers of protection built into the operating s
                                             </div>
                                         </div>
                                         <div class="cardText">
-                                            <h3>Windows Server Security Blog Post</h3>
+                                            <h3>Windows Server Security Blog Post</h3><hr />
                                             <p>This blog post from the Windows Server security team highlights many of the improvements in Windows Server that increase security for hosting and hybrid cloud environments.</p>
                                         </div>
                                     </div>
@@ -54,7 +54,7 @@ Windows Server security provides layers of protection built into the operating s
                                             </div>
                                         </div>
                                         <div class="cardText">
-                                            <h3>Datacenter and Private Cloud Security Blog</h3>
+                                            <h3>Datacenter and Private Cloud Security Blog</h3><hr />
                                             <p>This is the central blog site for technical content from the Microsoft Datacenter and Private Cloud Security team. </p>
                                         </div>
                                     </div>
@@ -72,7 +72,7 @@ Windows Server security provides layers of protection built into the operating s
                                             </div>
                                         </div>
                                         <div class="cardText">
-                                            <h3>Addressing emerging threats and landscape shifts</h3>
+                                            <h3>Addressing emerging threats and landscape shifts</h3><hr />
                                             <p>In this 6-minute video, Anders Vinberg provides an overview of Microsoft's security and assurance strategy, and discusses industry trends and landscape shifts as they relate to security.</p>
                                         </div>
                                     </div>
@@ -90,7 +90,7 @@ Windows Server security provides layers of protection built into the operating s
                                             </div>
                                         </div>
                                         <div class="cardText">
-                                            <h3>Protecting Your Datacenter and Cloud from Emerging Threats blog post</h3>
+                                            <h3>Protecting Your Datacenter and Cloud from Emerging Threats blog post</h3><hr />
                                             <p>This blog post discusses how you can use Microsoft technologies to protect your datacenter and cloud investments from emerging threats.</p>
                                         </div>
                                     </div>
@@ -108,7 +108,7 @@ Windows Server security provides layers of protection built into the operating s
                                             </div>
                                         </div>
                                         <div class="cardText">
-                                            <h3>Security and Assurance Overview session at Ignite</h3>
+                                            <h3>Security and Assurance Overview session at Ignite</h3><hr />
                                             <p>This Ignite session addresses persistent threats, insider breaches, organized cybercrime, and securing the Microsoft Cloud Platform (on-premises and connected services with Azure). It includes scenarios for securing workloads, large enterprise tenants, and service providers.</p>
                                         </div>
                                     </div>
