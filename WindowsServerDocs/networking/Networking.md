@@ -179,7 +179,7 @@ This consistency means that your applications are now easier to scale, and you c
 
 ## <a name="bkmk_networking"></a>Networking Technologies
 
-<ul class="cardsI panelContent">
+<ul class="cardsF panelContent">
 <li>
                          <div class="cardSize">
                                 <div class="cardPadding">
