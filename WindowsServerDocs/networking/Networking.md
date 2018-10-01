@@ -2,8 +2,9 @@
 title: Networking
 description: This topic provides an overview of the Software Defined Networking and Network Platform technologies that are available in Windows Server 2016.
 ms.prod: windows-server-threshold
+layout: LandingPage
 ms.technology: networking
-ms.topic: article
+ms.topic: landing-page
 ms.date: 05/08/2018
 ms.assetid: daaf6b61-5953-4c2d-b6b8-7c885b552646
 manager: dougkim
@@ -24,26 +25,16 @@ When you manage networks as a software defined resource, you can describe an app
 
 This consistency means that your applications are now easier to scale, and you can seamlessly run applications - anywhere - with equal confidence about security, performance, quality of service, and availability.
 
+## Software Defined Networking
+
 <ul class="cardsI panelContent">
 <li>
-<li>
-        <div class="cardSize">
-            <div class="cardPadding">
-                <div class="card">
-                    <div class="cardImageOuter">
-                        <div class="cardImage">
-                            <img src="../media/i-manage.svg" alt="" />
-                        </div>
-                    </div>
-                    <div class="cardText">
-                    <h3>Software Defined Networking technologies</h3>
-<HR />
                          <div class="cardSize">
                                 <div class="cardPadding">
                                     <div class="card">
                                         <div class="cardImageOuter">
                                             <div class="cardImage">
-                                                <img src="../media/i-secure.svg" alt="" />
+                                                <img src="../media/i-network.svg" alt="" />
                                             </div>
                                         </div>
                                         <div class="cardText">
