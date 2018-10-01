@@ -8,7 +8,6 @@ ms.manager: dongill
 author: JasonGerend
 ms.author: jgerend  
 ms.technology: storage-failover-clustering
-ms.date: 05/22/2018
 ms.localizationpriority: high
 ---
 
@@ -49,6 +48,7 @@ Failover Clustering has many practical applications, including:
                         </li>
                      </ul>
 <HR />
+<ul class="cardsF panelContent">
 <li>
                          <div class="cardSize">
                                 <div class="cardPadding">

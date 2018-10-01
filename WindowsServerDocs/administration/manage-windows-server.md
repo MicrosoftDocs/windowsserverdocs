@@ -7,7 +7,6 @@ ms.technology: manage
 ms.topic: landing-page
 author: lizap
 ms.author: elizapo
-ms.date: 03/16/2018
 ms.localizationpriority: high
 ---
 # Management
