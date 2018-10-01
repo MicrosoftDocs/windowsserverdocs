@@ -29,7 +29,7 @@ This consistency means that your applications are now easier to scale, and you c
 
 <HR />
 
-<ul class="cardsI panelContent">
+<ul class="cardsF panelContent">
 <li>
                          <div class="cardSize">
                                 <div class="cardPadding">
@@ -52,7 +52,7 @@ This consistency means that your applications are now easier to scale, and you c
 
 <h2>Software Defined Networking</h2>
 
-<ul class="cardsI panelContent">
+<ul class="cardsF panelContent">
 <li>
                          <div class="cardSize">
                                 <div class="cardPadding">
