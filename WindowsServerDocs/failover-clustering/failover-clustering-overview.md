@@ -55,7 +55,7 @@ Failover Clustering has many practical applications, including:
                                     <div class="card">
                                         <div class="cardImageOuter">
                                             <div class="cardImage">
-                                                <img src="../media/i-clustering.svg" alt="" />
+                                                <img src="../media/i-cluster.svg" alt="" />
                                             </div>
                                         </div>
                                         <div class="cardText">
@@ -73,7 +73,7 @@ Failover Clustering has many practical applications, including:
                                     <div class="card">
                                         <div class="cardImageOuter">
                                             <div class="cardImage">
-                                                <img src="../media/i-clustering.svg" alt="" />
+                                                <img src="../media/i-cluster.svg" alt="" />
                                             </div>
                                         </div>
                                         <div class="cardText">
