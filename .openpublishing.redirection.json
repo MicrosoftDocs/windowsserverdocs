@@ -7822,6 +7822,11 @@
       "redirect_document_id": true
     },
     {
+      "source_path": "WindowsServerDocs/virtualization/guarded-fabric-shielded-vm/guarded-fabric-add-host-information-for-tpm-trusted-attestation.md",
+      "redirect_url": "/windows-server/security/guarded-fabric-shielded-vm/guarded-fabric-add-host-information-for-tpm-trusted-attestation",
+      "redirect_document_id": true
+    },
+    {
       "source_path": "WindowsServerDocs/virtualization/guarded-fabric-shielded-vm/guarded-fabric-choose-where-to-install-hgs.md",
       "redirect_url": "/windows-server/security/guarded-fabric-shielded-vm/guarded-fabric-choose-where-to-install-hgs",
       "redirect_document_id": true
