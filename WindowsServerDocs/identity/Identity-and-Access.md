@@ -22,7 +22,7 @@ Access and Identity technologies enable secure Active Directory environments on-
 <hr />
 <ul class="cardsF panelContent">
 <li>
- <a href="get-started-19/whats-new-19.md">
+ <a href="identity/ad-fs/overview/whats-new-active-directory-federation-services-windows-server">
                             <div class="cardSize">
                                 <div class="cardPadding">
                                     <div class="card">
@@ -32,8 +32,8 @@ Access and Identity technologies enable secure Active Directory environments on-
                                             </div>
                                         </div>
                                         <div class="cardText">
-                                            <h3>What's new?</h3>
-                                            <p>Find out what's new in Windows Server Identity | Access</p>
+                                            <h2>What's new?</h2>
+                                            <p>Find out what's new in Active Directory Federation Services</p>
                                         </div>
                                     </div>
                                 </div>
