@@ -38,7 +38,7 @@ This consistency means that your applications are now easier to scale, and you c
                                             </div>
                                         </div>
                                         <div class="cardText">
-                                        <h2><a href="../networking/What-s-New-in-Networking.md">What's New in Networking</a></h2>
+                                        <h2><a href="../networking/What-s-New-in-Networking.md">What's new in Networking</a></h2>
                                         </div>
                                     </div>
                                 </div>

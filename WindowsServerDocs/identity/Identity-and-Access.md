@@ -55,7 +55,7 @@ Access and Identity technologies enable secure Active Directory environments on-
                     </div>
                     <div class="cardText">
                         <h3>Privileged Access Management for Active Directory Domain Services & AD DS</h3><hr />
-                        <p>Privileged Access Management (PAM) for Active Directory Domain Services (AD DS) is a solution that is based on Microsoft Identity Manager (MIM) and Windows Server 2012 R2 and Windows Server 2016.</p>
+                        <p>Privileged Access Management (PAM) for Active Directory Domain Services (AD DS) is a solution that is based on Microsoft Identity Manager (MIM) and Windows Server.</p>
                     </div>
                 </div>
             </div>
@@ -93,7 +93,7 @@ Access and Identity technologies enable secure Active Directory environments on-
                     </div>
                     <div class="cardText">
                         <h3>Active Directory Domain Services</h3><hr />
-                        <p>Detailed documentation on all of the features available for AD DS in Windows Server 2016.</p>
+                        <p>Detailed documentation on all of the features available for AD DS in Windows Server.</p>
                     </div>
                 </div>
             </div>
@@ -112,7 +112,7 @@ Access and Identity technologies enable secure Active Directory environments on-
                     </div>
                     <div class="cardText">
                         <h3>Active Directory Federation Services</h3><hr />
-                        <p>Detailed documentation on all of the features available for AD FS in Windows Server 2016.</p>
+                        <p>Detailed documentation on all of the features available for AD FS in Windows Server.</p>
                     </div>
                 </div>
             </div>
