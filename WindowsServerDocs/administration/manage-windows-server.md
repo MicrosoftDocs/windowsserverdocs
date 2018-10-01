@@ -1,5 +1,5 @@
 ---
-title: Manage Windows Server
+title: Management
 description: Learns about tools, recommendations and guidance on managing Windows Server
 ms.prod: windows-server-threshold
 layout: LandingPage
@@ -10,7 +10,7 @@ ms.author: elizapo
 ms.date: 03/16/2018
 ms.localizationpriority: high
 ---
-# Manage Windows Server
+# Management
 
 
 >[!TIP]
