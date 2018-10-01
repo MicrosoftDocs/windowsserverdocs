@@ -35,7 +35,7 @@ Windows Server security provides layers of protection built into the operating s
                                             </div>
                                         </div>
                                         <div class="cardText">
-                                            <h2>Windows Server Security Blog Post</h2>
+                                            <h3>Windows Server Security Blog Post</h3>
                                             <p>This blog post from the Windows Server security team highlights many of the improvements in Windows Server that increase security for hosting and hybrid cloud environments.</p>
                                         </div>
                                     </div>
@@ -54,7 +54,7 @@ Windows Server security provides layers of protection built into the operating s
                                             </div>
                                         </div>
                                         <div class="cardText">
-                                            <h2>Datacenter and Private Cloud Security Blog</h2>
+                                            <h3>Datacenter and Private Cloud Security Blog</h3>
                                             <p>This is the central blog site for technical content from the Microsoft Datacenter and Private Cloud Security team. </p>
                                         </div>
                                     </div>
@@ -72,7 +72,7 @@ Windows Server security provides layers of protection built into the operating s
                                             </div>
                                         </div>
                                         <div class="cardText">
-                                            <h2>Addressing emerging threats and landscape shifts</h2>
+                                            <h3>Addressing emerging threats and landscape shifts</h3>
                                             <p>In this 6-minute video, Anders Vinberg provides an overview of Microsoft's security and assurance strategy, and discusses industry trends and landscape shifts as they relate to security.</p>
                                         </div>
                                     </div>
@@ -90,8 +90,8 @@ Windows Server security provides layers of protection built into the operating s
                                             </div>
                                         </div>
                                         <div class="cardText">
-                                            <h2>Protecting Your Datacenter and Cloud from Emerging Threats blog post</h2>
-                                            <p>This blog post discusses how you can use Microsoft technologies to protect your datacenter and cloud investments from emerging threats.  </p>
+                                            <h3>Protecting Your Datacenter and Cloud from Emerging Threats blog post</h3>
+                                            <p>This blog post discusses how you can use Microsoft technologies to protect your datacenter and cloud investments from emerging threats.</p>
                                         </div>
                                     </div>
                                 </div>
@@ -108,7 +108,7 @@ Windows Server security provides layers of protection built into the operating s
                                             </div>
                                         </div>
                                         <div class="cardText">
-                                            <h2>Security and Assurance Overview session at Ignite</h2>
+                                            <h3>Security and Assurance Overview session at Ignite</h3>
                                             <p>This Ignite session addresses persistent threats, insider breaches, organized cybercrime, and securing the Microsoft Cloud Platform (on-premises and connected services with Azure). It includes scenarios for securing workloads, large enterprise tenants, and service providers.</p>
                                         </div>
                                     </div>
@@ -131,7 +131,7 @@ Windows Server security provides layers of protection built into the operating s
                         </div>
                     </div>
                     <div class="cardText">
-                        <h2>Secure virtualization with Shielded VMs</h2>
+                        <h3>Secure virtualization with Shielded VMs</h3>
 <HR />
                         <p><h3><a href="http://channel9.msdn.com/Shows/Mechanics/Introduction-to-Shielded-Virtual-Machines-in-Windows-Server-2016">Shielded VM in Channel 9</a></h3>A walkthrough of Shielded VM technology and benefits</p>
 <HR />
@@ -163,7 +163,7 @@ Windows Server security provides layers of protection built into the operating s
                         </div>
                     </div>
                     <div class="cardText">
-                        <h2>Hardening the OS and applications</h2>
+                        <h3>Hardening the OS and applications</h3>
 <HR />
                         <p><h3><a href="https://docs.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control">Windows Defender Application Control (WDAC) Deployment Guide</a></h3>WDAC is configurable code integrity (CI) policy that helps enterprises control what applications run in their environmemnt and carries no specific hardware or software requirements other than running Windows 10.</p>
 <HR />
@@ -189,7 +189,7 @@ Windows Server security provides layers of protection built into the operating s
                         </div>
                     </div>
                     <div class="cardText">
-                        <h2>Privileged Access Management</h2>
+                        <h3>Privileged Access Management</h3>
 <HR />
                         <p><h3><a href="https://technet.microsoft.com/windows-server-docs/security/securing-privileged-access/securing-privileged-access">Securing Privileged Access</a></h3>A road-map for how you can secure your privileged access. This road-map is built based on the combined expertise of the server security team, Microsoft IT, Azure team and the Microsoft Consulting Services </p>
 <HR />
@@ -215,7 +215,7 @@ Windows Server security provides layers of protection built into the operating s
                         </div>
                     </div>
                     <div class="cardText">
-                        <h2>Credential Protection</h2>
+                        <h3>Credential Protection</h3>
 <HR />
                         <p><h3><a href="https://docs.microsoft.com/windows/security/identity-protection/credential-guard/credential-guard">Protect derived domain credentials with Credential Guard</a></h3>Credential Guard uses virtualization-based security to isolate secrets so that only privileged system software can access them. Unauthorized access to these secrets can lead to credential theft attacks, such as Pass-the-Hash or Pass-The-Ticket.</a> Credential Guard prevents these attacks by protecting NTLM password hashes and Kerberos Ticket Granting Tickets.</p>
 <HR />
@@ -239,7 +239,7 @@ Windows Server security provides layers of protection built into the operating s
                         </div>
                     </div>
                     <div class="cardText">
-                        <h2>Detecting and Responding to Threats</h2>
+                        <h3>Detecting and Responding to Threats</h3>
 <HR />
                         <p><h3><a href="https://channel9.msdn.com/events/ignite/2015/brk3464">Security Threat Analysis Using Microsoft Operations Management Suite</a></h3>This Ignite presentation discusses how you can use Operational Insights to perform security threat analysis.</p>
 <HR />
@@ -263,7 +263,7 @@ Windows Server security provides layers of protection built into the operating s
                         </div>
                     </div>
                     <div class="cardText">
-                        <h2>Network Security</h2>
+                        <h3>Network Security</h3>
 <HR />
                         <p><h3><a href="https://technet.microsoft.com/library/dn920240.aspx">Datacenter Firewall Overview</a></h3>This overview discusses Datacenter Firewall, a network layer, 5-tuple (protocol, source and destination port numbers, source and destination IP addresses), stateful, multitenant firewall.</p>
 <HR />
@@ -283,7 +283,7 @@ Windows Server security provides layers of protection built into the operating s
                         </div>
                     </div>
                     <div class="cardText">
-                        <h2>Mapping security features to compliance regulations</h2>
+                        <h3>Mapping security features to compliance regulations</h3>
 <HR />
                         <p><a href="https://download.microsoft.com/download/6/D/0/6D06E149-B4C1-4EED-ACD5-DF6066E93CC0/Coalfire_Branded_Hyper_V_Shielded_VMs_Whitepaper_EN_US.pdf">Hyper-V Shielded VMs compliance mapping whitepaper</a></p>
 <HR />
