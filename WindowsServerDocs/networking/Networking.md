@@ -38,9 +38,9 @@ This consistency means that your applications are now easier to scale, and you c
                                             </div>
                                         </div>
                                         <div class="cardText">
-                                        <h3><a href="sdn/software-defined-networking.md">Software Defined Networking (SDN)</a></h3>You can use this topic to learn about the SDN technologies that are provided in Windows Server, System Center, and Microsoft Azure.</p>
+                                        <h3><a href="sdn/software-defined-networking.md">Software Defined Networking (SDN)</a><hr /></h3>You can use this topic to learn about the SDN technologies that are provided in Windows Server, System Center, and Microsoft Azure.</p>
                         
-                                        <p>Note: For Hyper-V hosts and virtual machines \(VMs\) that run SDN infrastructure servers, such as Network Controller and Software Load Balancing nodes, you must install Windows Server Datacenter edition. For Hyper-V hosts that contain only tenant workload VMs that are connected to SDN\-controlled networks, you can run Windows Server Standard edition.</p>                                        </div>
+                                        <p><b>Note:</b> For Hyper-V hosts and virtual machines \(VMs\) that run SDN infrastructure servers, such as Network Controller and Software Load Balancing nodes, you must install Windows Server Datacenter edition. For Hyper-V hosts that contain only tenant workload VMs that are connected to SDN\-controlled networks, you can run Windows Server Standard edition.</p>                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -57,7 +57,7 @@ This consistency means that your applications are now easier to scale, and you c
                                             </div>
                                         </div>
                                         <div class="cardText">
-                                        <h3><a href="sdn/deploy/Deploy-a-Software-Defined-Network-infrastructure-using-scripts.md">Deploy a Software Defined Network infrastructure using scripts</a></h3>This guide provides instructions on how to deploy Network Controller with virtual networks and gateways in a test lab environment.</p>                                        </div>
+                                        <h3><a href="sdn/deploy/Deploy-a-Software-Defined-Network-infrastructure-using-scripts.md">Deploy a Software Defined Network infrastructure using scripts</a><hr /></h3>This guide provides instructions on how to deploy Network Controller with virtual networks and gateways in a test lab environment.</p>                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -74,7 +74,7 @@ This consistency means that your applications are now easier to scale, and you c
                                             </div>
                                         </div>
                                         <div class="cardText">
-                                        <h3><a href="sdn/technologies/network-function-virtualization/software-load-balancing-for-sdn.md">Network Controller</a></h3>Network Controller provides a centralized, programmable point of automation to manage, configure, monitor, and troubleshoot virtual and physical network infrastructure in your datacenter.</p>                                        </div>
+                                        <h3><a href="sdn/technologies/network-function-virtualization/software-load-balancing-for-sdn.md">Network Controller</a><hr /></h3>Network Controller provides a centralized, programmable point of automation to manage, configure, monitor, and troubleshoot virtual and physical network infrastructure in your datacenter.</p>                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -91,7 +91,7 @@ This consistency means that your applications are now easier to scale, and you c
                                             </div>
                                         </div>
                                         <div class="cardText">
-                                        <h3><a href="sdn/technologies/network-controller/Network-Controller.md">Software Load Balancing &#40;SLB&#41; for SDN</a></h3>Cloud Service Providers \(CSPs\) and Enterprises that are deploying Software Defined Networking (SDN) in Windows Server 2016 can use Software Load Balancing \(SLB\) to evenly distribute tenant and tenant customer network traffic among virtual network resources. The Windows Server SLB enables multiple servers to host the same workload, providing high availability and scalability.</p>                                        </div>
+                                        <h3><a href="sdn/technologies/network-controller/Network-Controller.md">Software Load Balancing &#40;SLB&#41; for SDN</a><hr /></h3>Cloud Service Providers \(CSPs\) and Enterprises that are deploying Software Defined Networking (SDN) in Windows Server 2016 can use Software Load Balancing \(SLB\) to evenly distribute tenant and tenant customer network traffic among virtual network resources. The Windows Server SLB enables multiple servers to host the same workload, providing high availability and scalability.</p>                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -108,7 +108,7 @@ This consistency means that your applications are now easier to scale, and you c
                                             </div>
                                         </div>
                                         <div class="cardText">
-                                        <h3><a href="sdn/technologies/network-function-virtualization/RAS-Gateway-for-SDN.md">RAS Gateway for SDN</a></h3>RAS Gateway, which is a software-based, multitenant, Border Gateway Protocol \(BGP\) capable router in Windows Server 2016, is designed for Cloud Service Providers \(CSPs\) and Enterprises that host multiple tenant virtual networks using Hyper-V Network Virtualization.</p>                                        </div>
+                                        <h3><a href="sdn/technologies/network-function-virtualization/RAS-Gateway-for-SDN.md">RAS Gateway for SDN</a><hr /></h3>RAS Gateway, which is a software-based, multitenant, Border Gateway Protocol \(BGP\) capable router in Windows Server 2016, is designed for Cloud Service Providers \(CSPs\) and Enterprises that host multiple tenant virtual networks using Hyper-V Network Virtualization.</p>                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -125,7 +125,7 @@ This consistency means that your applications are now easier to scale, and you c
                                             </div>
                                         </div>
                                         <div class="cardText">
-                                        <h3><a href="sdn/technologies/network-function-virtualization/Network-Function-Virtualization.md">Network Function Virtualization</a></h3>In software defined datacenters, network functions that are being performed by hardware appliances \(such as load balancers, firewalls, routers, switches, and so on\) are increasingly being virtualized as virtual appliances. This "network function virtualization" is a natural progression of server virtualization and network virtualization.</p>                                        </div>
+                                        <h3><a href="sdn/technologies/network-function-virtualization/Network-Function-Virtualization.md">Network Function Virtualization</a><hr /></h3>In software defined datacenters, network functions that are being performed by hardware appliances \(such as load balancers, firewalls, routers, switches, and so on\) are increasingly being virtualized as virtual appliances. This "network function virtualization" is a natural progression of server virtualization and network virtualization.</p>                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -142,7 +142,7 @@ This consistency means that your applications are now easier to scale, and you c
                                             </div>
                                         </div>
                                         <div class="cardText">
-                                        <h3><a href="sdn/technologies/network-function-virtualization/Datacenter-Firewall-Overview.md">Datacenter Firewall Overview</a></h3>Datacenter Firewall is a network layer, 5-tuple (protocol, source and destination port numbers, source and destination IP addresses), stateful, multitenant firewall.</p>
+                                        <h3><a href="sdn/technologies/network-function-virtualization/Datacenter-Firewall-Overview.md">Datacenter Firewall Overview</a><hr /></h3>Datacenter Firewall is a network layer, 5-tuple (protocol, source and destination port numbers, source and destination IP addresses), stateful, multitenant firewall.</p>
                     </div>
                 </div>
             </div>
