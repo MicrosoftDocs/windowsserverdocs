@@ -52,7 +52,7 @@ This consistency means that your applications are now easier to scale, and you c
                                     <div class="card">
                                         <div class="cardImageOuter">
                                             <div class="cardImage">
-                                                <img src="../media/i-secure.svg" alt="" />
+                                                <img src="../media/i-network.svg" alt="" />
                                             </div>
                                         </div>
                                         <div class="cardText">
@@ -68,7 +68,7 @@ This consistency means that your applications are now easier to scale, and you c
                                     <div class="card">
                                         <div class="cardImageOuter">
                                             <div class="cardImage">
-                                                <img src="../media/i-secure.svg" alt="" />
+                                                <img src="../media/i-network.svg" alt="" />
                                             </div>
                                         </div>
                                         <div class="cardText">
@@ -84,7 +84,7 @@ This consistency means that your applications are now easier to scale, and you c
                                     <div class="card">
                                         <div class="cardImageOuter">
                                             <div class="cardImage">
-                                                <img src="../media/i-secure.svg" alt="" />
+                                                <img src="../media/i-network.svg" alt="" />
                                             </div>
                                         </div>
                                         <div class="cardText">
@@ -100,7 +100,7 @@ This consistency means that your applications are now easier to scale, and you c
                                     <div class="card">
                                         <div class="cardImageOuter">
                                             <div class="cardImage">
-                                                <img src="../media/i-secure.svg" alt="" />
+                                                <img src="../media/i-network.svg" alt="" />
                                             </div>
                                         </div>
                                         <div class="cardText">
@@ -116,7 +116,7 @@ This consistency means that your applications are now easier to scale, and you c
                                     <div class="card">
                                         <div class="cardImageOuter">
                                             <div class="cardImage">
-                                                <img src="../media/i-secure.svg" alt="" />
+                                                <img src="../media/i-network.svg" alt="" />
                                             </div>
                                         </div>
                                         <div class="cardText">
@@ -132,7 +132,7 @@ This consistency means that your applications are now easier to scale, and you c
                                     <div class="card">
                                         <div class="cardImageOuter">
                                             <div class="cardImage">
-                                                <img src="../media/i-secure.svg" alt="" />
+                                                <img src="../media/i-network.svg" alt="" />
                                             </div>
                                         </div>
                                         <div class="cardText">
