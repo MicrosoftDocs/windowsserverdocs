@@ -23,4 +23,4 @@ Although the Windows Server AD DS design and deployment strategies that are pres
   
 - For more information about deploying AD DS in a branch office environment, see the [Read-Only Domain Controller (RODC) Branch Office Planning Guide](https://go.microsoft.com/fwlink/?LinkId=100207).  
 - For more information about deploying AD DS in an Exchange environment, see the article [Exchange 2007 - Planning Active Directory](https://go.microsoft.com/fwlink/?LinkId=88904).  
-- For more information about deploying AD DS in a multiple forest environment, see the article [Multiple Forest Considerations in Windows 2000 and Windows Server 2003]([https://go.microsoft.com/fwlink/?LinkId=88905).  
+- For more information about deploying AD DS in a multiple forest environment, see the article [Multiple Forest Considerations in Windows 2000 and Windows Server 2003](https://go.microsoft.com/fwlink/?LinkId=88905).  
