@@ -47,6 +47,7 @@ This consistency means that your applications are now easier to scale, and you c
                           </a>
                         </li>
 <HR />
+<li>
                          <div class="cardSize">
                                 <div class="cardPadding">
                                     <div class="card">
@@ -63,6 +64,7 @@ This consistency means that your applications are now easier to scale, and you c
                           </a>
                         </li>
 <HR />
+<li>
                          <div class="cardSize">
                                 <div class="cardPadding">
                                     <div class="card">
@@ -79,6 +81,7 @@ This consistency means that your applications are now easier to scale, and you c
                           </a>
                         </li>
 <HR />
+<li>
                          <div class="cardSize">
                                 <div class="cardPadding">
                                     <div class="card">
@@ -95,6 +98,7 @@ This consistency means that your applications are now easier to scale, and you c
                           </a>
                         </li>
 <HR />
+<li>
                          <div class="cardSize">
                                 <div class="cardPadding">
                                     <div class="card">
@@ -111,6 +115,7 @@ This consistency means that your applications are now easier to scale, and you c
                           </a>
                         </li>
 <HR />
+<li>
                          <div class="cardSize">
                                 <div class="cardPadding">
                                     <div class="card">
@@ -127,6 +132,7 @@ This consistency means that your applications are now easier to scale, and you c
                           </a>
                         </li>
 <HR />
+<li>
                          <div class="cardSize">
                                 <div class="cardPadding">
                                     <div class="card">
