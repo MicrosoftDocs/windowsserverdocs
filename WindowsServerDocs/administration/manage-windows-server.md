@@ -15,7 +15,9 @@ ms.localizationpriority: high
 
 >[!TIP]
 > Looking for information about older versions of Windows Server? Check out our other [Windows Server libraries](/previous-versions/windows/) on docs.microsoft.com. You can also [search this site](https://docs.microsoft.com/search/index?search=Windows+Server&dataSource=previousVersions) for specific information.
- 
+
+<hr />
+
 Once you have deployed Windows Server into your environment, including the specific roles for the features and functions you need, the next step is managing those servers. Windows Server includes a number of tools to help you understand your Windows Server environment, manage specific servers, fine-tune performance, and eventually automate many management tasks. 
 
 The tools you use to manage Windows Server instances depend, in large amount, on the types of systems you have deployed (Windows Server with Desktop Experience vs Server Core), physical versus virtual machines, and where your servers are located. Use the following information to perform basic management tasks on Windows Server.
