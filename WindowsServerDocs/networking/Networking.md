@@ -99,7 +99,7 @@ This consistency means that your applications are now easier to scale, and you c
                                             </div>
                                         </div>
                                         <div class="cardText">
-                                        <h3><a href="sdn/technologies/network-function-virtualization/software-load-balancing-for-sdn.md">Network Controller</a><hr /></h3>Network Controller provides a centralized, programmable point of automation to manage, configure, monitor, and troubleshoot virtual and physical network infrastructure in your datacenter.</p>                                        </div>
+                                        <h3><a href="sdn/technologies/network-controller/Network-Controller.md">Network Controller</a><hr /></h3>Network Controller provides a centralized, programmable point of automation to manage, configure, monitor, and troubleshoot virtual and physical network infrastructure in your datacenter.</p>                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -116,7 +116,7 @@ This consistency means that your applications are now easier to scale, and you c
                                             </div>
                                         </div>
                                         <div class="cardText">
-                                        <h3><a href="sdn/technologies/network-controller/Network-Controller.md">Software Load Balancing &#40;SLB&#41; for SDN</a><hr /></h3>Cloud Service Providers \(CSPs\) and Enterprises that are deploying Software Defined Networking (SDN) in Windows Server 2016 can use Software Load Balancing \(SLB\) to evenly distribute tenant and tenant customer network traffic among virtual network resources. The Windows Server SLB enables multiple servers to host the same workload, providing high availability and scalability.</p>                                        </div>
+                                        <h3><a href="sdn/technologies/network-function-virtualization/software-load-balancing-for-sdn.md">Software Load Balancing &#40;SLB&#41; for SDN</a><hr /></h3>Cloud Service Providers \(CSPs\) and Enterprises that are deploying Software Defined Networking (SDN) in Windows Server 2016 can use Software Load Balancing \(SLB\) to evenly distribute tenant and tenant customer network traffic among virtual network resources. The Windows Server SLB enables multiple servers to host the same workload, providing high availability and scalability.</p>                                        </div>
                                     </div>
                                 </div>
                             </div>
