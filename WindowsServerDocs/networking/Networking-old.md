@@ -18,142 +18,56 @@ ms.localizationpriority: high
 >[!TIP]
 > Looking for information about older versions of Windows Server? Check out our other [Windows Server libraries](/previous-versions/windows/) on docs.microsoft.com. You can also [search this site](https://docs.microsoft.com/search/index?search=Windows+Server&dataSource=previousVersions) for specific information.
 
-Networking is a foundational part of the Software Defined Datacenter \(SDDC\) platform, and Windows Server 2016 provides new and improved Software Defined Networking \(SDN\) technologies to help you move to a fully realized SDDC solution for your organization.
+<img src="../media/landing-icons/network.png" style='float:left; padding:.5em;' alt="Icon depicting two networked computers"> Networking is a foundational part of the Software Defined Datacenter \(SDDC\) platform, and Windows Server 2016 provides new and improved Software Defined Networking \(SDN\) technologies to help you move to a fully realized SDDC solution for your organization.
 
 When you manage networks as a software defined resource, you can describe an application’s infrastructure requirements one time, and then choose where the application runs - on premises or in the cloud. 
 
 This consistency means that your applications are now easier to scale, and you can seamlessly run applications - anywhere - with equal confidence about security, performance, quality of service, and availability.
 
-<ul class="cardsI panelContent">
-<li>
-<li>
-        <div class="cardSize">
-            <div class="cardPadding">
-                <div class="card">
-                    <div class="cardImageOuter">
-                        <div class="cardImage">
-                            <img src="../media/i-manage.svg" alt="" />
-                        </div>
-                    </div>
-                    <div class="cardText">
-                    <h3>Software Defined Networking technologies</h3>
-<HR />
-                         <div class="cardSize">
-                                <div class="cardPadding">
-                                    <div class="card">
-                                        <div class="cardImageOuter">
-                                            <div class="cardImage">
-                                                <img src="../media/i-secure.svg" alt="" />
-                                            </div>
-                                        </div>
-                                        <div class="cardText">
-                                        <h3><a href="sdn/software-defined-networking.md">Software Defined Networking (SDN)</a></h3>You can use this topic to learn about the SDN technologies that are provided in Windows Server, System Center, and Microsoft Azure.</p>
-                        
-                                        <p>Note: For Hyper-V hosts and virtual machines \(VMs\) that run SDN infrastructure servers, such as Network Controller and Software Load Balancing nodes, you must install Windows Server Datacenter edition. For Hyper-V hosts that contain only tenant workload VMs that are connected to SDN\-controlled networks, you can run Windows Server Standard edition.</p>                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                          </a>
-                        </li>
-<HR />
-                         <div class="cardSize">
-                                <div class="cardPadding">
-                                    <div class="card">
-                                        <div class="cardImageOuter">
-                                            <div class="cardImage">
-                                                <img src="../media/i-secure.svg" alt="" />
-                                            </div>
-                                        </div>
-                                        <div class="cardText">
-                                        <h3><a href="sdn/deploy/Deploy-a-Software-Defined-Network-infrastructure-using-scripts.md">Deploy a Software Defined Network infrastructure using scripts</a></h3>This guide provides instructions on how to deploy Network Controller with virtual networks and gateways in a test lab environment.</p>                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                          </a>
-                        </li>
-<HR />
-                         <div class="cardSize">
-                                <div class="cardPadding">
-                                    <div class="card">
-                                        <div class="cardImageOuter">
-                                            <div class="cardImage">
-                                                <img src="../media/i-secure.svg" alt="" />
-                                            </div>
-                                        </div>
-                                        <div class="cardText">
-                                        <h3><a href="sdn/technologies/network-function-virtualization/software-load-balancing-for-sdn.md">Network Controller</a></h3>Network Controller provides a centralized, programmable point of automation to manage, configure, monitor, and troubleshoot virtual and physical network infrastructure in your datacenter.</p>                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                          </a>
-                        </li>
-<HR />
-                         <div class="cardSize">
-                                <div class="cardPadding">
-                                    <div class="card">
-                                        <div class="cardImageOuter">
-                                            <div class="cardImage">
-                                                <img src="../media/i-secure.svg" alt="" />
-                                            </div>
-                                        </div>
-                                        <div class="cardText">
-                                        <h3><a href="sdn/technologies/network-controller/Network-Controller.md">Software Load Balancing &#40;SLB&#41; for SDN</a></h3>Cloud Service Providers \(CSPs\) and Enterprises that are deploying Software Defined Networking (SDN) in Windows Server 2016 can use Software Load Balancing \(SLB\) to evenly distribute tenant and tenant customer network traffic among virtual network resources. The Windows Server SLB enables multiple servers to host the same workload, providing high availability and scalability.</p>                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                          </a>
-                        </li>
-<HR />
-                         <div class="cardSize">
-                                <div class="cardPadding">
-                                    <div class="card">
-                                        <div class="cardImageOuter">
-                                            <div class="cardImage">
-                                                <img src="../media/i-secure.svg" alt="" />
-                                            </div>
-                                        </div>
-                                        <div class="cardText">
-                                        <h3><a href="sdn/technologies/network-function-virtualization/RAS-Gateway-for-SDN.md">RAS Gateway for SDN</a></h3>RAS Gateway, which is a software-based, multitenant, Border Gateway Protocol \(BGP\) capable router in Windows Server 2016, is designed for Cloud Service Providers \(CSPs\) and Enterprises that host multiple tenant virtual networks using Hyper-V Network Virtualization.</p>                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                          </a>
-                        </li>
-<HR />
-                         <div class="cardSize">
-                                <div class="cardPadding">
-                                    <div class="card">
-                                        <div class="cardImageOuter">
-                                            <div class="cardImage">
-                                                <img src="../media/i-secure.svg" alt="" />
-                                            </div>
-                                        </div>
-                                        <div class="cardText">
-                                        <h3><a href="sdn/technologies/network-function-virtualization/Network-Function-Virtualization.md">Network Function Virtualization</a></h3>In software defined datacenters, network functions that are being performed by hardware appliances \(such as load balancers, firewalls, routers, switches, and so on\) are increasingly being virtualized as virtual appliances. This "network function virtualization" is a natural progression of server virtualization and network virtualization.</p>                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                          </a>
-                        </li>
-<HR />
-                         <div class="cardSize">
-                                <div class="cardPadding">
-                                    <div class="card">
-                                        <div class="cardImageOuter">
-                                            <div class="cardImage">
-                                                <img src="../media/i-secure.svg" alt="" />
-                                            </div>
-                                        </div>
-                                        <div class="cardText">
-                                        <h3><a href="sdn/technologies/network-function-virtualization/Datacenter-Firewall-Overview.md">Datacenter Firewall Overview</a></h3>Datacenter Firewall is a network layer, 5-tuple (protocol, source and destination port numbers, source and destination IP addresses), stateful, multitenant firewall.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </li>
-</ul>
+>[!Note]
+> To download Windows Server, see [Windows Server Evaluations](https://www.microsoft.com/evalcenter/evaluate-windows-server-technical-preview).
 
+Windows Server 2016 adds the following new networking technologies:
 
+- Software Defined Networking: Network Controller provides a centralized, programmable point of automation to manage, configure, monitor, and troubleshoot virtual and physical network infrastructure in your datacenter. Network Controller allows you to use Network Function Virtualization to easily deploy virtual machines \(VMs\) for Software Load Balancing \(SLB\) to optimize network traffic loads for your tenants, and RAS Gateways to provide tenants with the connectivity options they need between Internet, on-prem, and cloud resources. You can also use Network Controller to manage Datacenter Firewall on VMs and Hyper-V hosts.
+
+- Network Platform: Using new features for existing Network Platform technologies, you can use DNS Policy to customize your DNS server responses to queries, use a converged NIC that handles combined Remote Direct Memory Access \(RDMA\) and Ethernet traffic, use Switch Embedded Teaming \(SET\) to create Hyper-V Virtual Switches connected to RDMA NICs, and use IP Address Management \(IPAM\) to manage DNS zones and servers as well as DHCP and IP addresses.
+
+For more information, see [Windows Server Supported Networking Scenarios](windows-server-supported-networking-scenarios.md).
+
+The following sections provide information about SDN technologies and Network Platform technologies.
+
+## Software Defined Networking technologies
+
+### [Software Defined Networking &#40;SDN&#41;](sdn/software-defined-networking.md)
+
+You can use this topic to learn about the SDN technologies that are provided in Windows Server, System Center, and Microsoft Azure.
+
+>[!NOTE]
+>For Hyper-V hosts and virtual machines \(VMs\) that run SDN infrastructure servers, such as Network Controller and Software Load Balancing nodes, you must install Windows Server 2016 Datacenter edition. For Hyper-V hosts that contain only tenant workload VMs that are connected to SDN\-controlled networks, you can run Windows Server 2016 Standard edition.
+
+### [Deploy a Software Defined Network infrastructure using scripts](sdn/deploy/Deploy-a-Software-Defined-Network-infrastructure-using-scripts.md)
+This guide provides instructions on how to deploy Network Controller with virtual networks and gateways in a test lab environment.
+
+### [Network Controller](sdn/technologies/network-controller/Network-Controller.md)
+
+Network Controller provides a centralized, programmable point of automation to manage, configure, monitor, and troubleshoot virtual and physical network infrastructure in your datacenter.
+
+### [Software Load Balancing &#40;SLB&#41; for SDN](sdn/technologies/network-function-virtualization/software-load-balancing-for-sdn.md)
+
+Cloud Service Providers \(CSPs\) and Enterprises that are deploying Software Defined Networking (SDN) in Windows Server 2016 can use Software Load Balancing \(SLB\) to evenly distribute tenant and tenant customer network traffic among virtual network resources. The Windows Server SLB enables multiple servers to host the same workload, providing high availability and scalability.
+
+### [RAS Gateway for SDN](sdn/technologies/network-function-virtualization/RAS-Gateway-for-SDN.md)
+
+RAS Gateway, which is a software-based, multitenant, Border Gateway Protocol \(BGP\) capable router in Windows Server 2016, is designed for Cloud Service Providers \(CSPs\) and Enterprises that host multiple tenant virtual networks using Hyper-V Network Virtualization. 
+
+### [Network Function Virtualization](sdn/technologies/network-function-virtualization/Network-Function-Virtualization.md)
+
+In software defined datacenters, network functions that are being performed by hardware appliances \(such as load balancers, firewalls, routers, switches, and so on\) are increasingly being virtualized as virtual appliances. This "network function virtualization" is a natural progression of server virtualization and network virtualization.
+
+### [Datacenter Firewall Overview](sdn/technologies/network-function-virtualization/Datacenter-Firewall-Overview.md)
+
+Datacenter Firewall is a network layer, 5-tuple (protocol, source and destination port numbers, source and destination IP addresses), stateful, multitenant firewall.
 
 ## <a name="bkmk_networking"></a>Networking Technologies
 
