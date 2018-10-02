@@ -34,6 +34,7 @@ Applications running in containers that need to talk over SPI, I2C, GPIO, and UA
 ## Additional features
 In addition to features that are new in Windows Server version 1809, the following new features and capabilities for [Windows Server 2019](../get-started-19/get-started-19.md) also apply to Windows Server version 1809:
 
+
 * [Windows Admin Center](https://docs.microsoft.com/en-us/windows-server/manage/windows-admin-center/overview)
 * [Server Core App Compatibility feature on demand (FOD) ](https://docs.microsoft.com/en-us/windows-server/get-started-19/install-fod-19)
 * System Insights 
