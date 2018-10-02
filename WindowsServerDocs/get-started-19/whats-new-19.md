@@ -50,7 +50,8 @@ This optional feature on demand is available on a separate ISO and can be added 
 ### Azure Network Adapter
 
 Azure Network Adapter – Now with Windows Server 2019, Windows Admin Center enables a one-click experience to configure a point-to-site VPN connection between an on-premises Windows Server and an Azure Virtual Network.
-This automates the configuration for the Azure Virtual Network gateway as well as the on-premises VPN client. 
+This automates the configuration for the Azure Virtual Network gateway as well as the on-premises VPN client.
+
 
 ## Security
 
@@ -131,6 +132,13 @@ These features do not need to be configured, and they will automatically become 
 
 [Container Networking with Kubernetes](https://docs.microsoft.com/en-us/windows-server/networking/sdn/technologies/containers/container-networking-overview) in Windows Server 2019 greatly improves usability of Kubernetes on Windows by enhancing platform networking resiliency and support of container networking plugins. 
 Additionally, customers deploying workloads on Kubernetes network security to protect both Linux and Windows services using embedded tooling.
+
+### Container improvements
+
+- Containerizing Windows-based applications just got easier: The app compatibility for the existing *windowsservercore* image has been increased. For applications with additional API dependencies, there is now a third base image: *windows*.
+- At the same time, the base container image download size, size on disk and startup times have been improved.
+- It is now possible to run Windows and Linux-based containers on the same container host, using the same docker daemon.
+
 
 ## Hyper-converged infrastructure
 
@@ -238,4 +246,7 @@ All this, with huge reductions in the CPU cycles/per byte, thereby providing ult
 
 Now, with Windows Server 2019, it’s easy to deploy and manage through a new deployment UI and Windows Admin Center extension that will enable anyone to harness the power of SDN. 
 
+### Persistent Memory support for Hyper-V VMs
+
+To leverage the high throughput and low latency of persistent memory (a.k.a. storage class memory) in virtual machines as well, it can now be projected directly into VMs. This can help to drastically reduce database transaction latency or reduce recovery times for low latency in-memory databases on failure.
 
