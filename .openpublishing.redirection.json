@@ -7862,11 +7862,6 @@
       "redirect_document_id": true
     },
     {
-      "source_path": "WindowsServerDocs/security/guarded-fabric-shielded-vm/guarded-fabric-configure-hgs-with-authorized-hyper-v-hosts.md",
-      "redirect_url": "/windows-server/virtualization/guarded-fabric-shielded-vm/guarded-fabric-configure-hgs-with-authorized-hyper-v-hosts",
-      "redirect_document_id": true
-    },
-    {
       "source_path": "WindowsServerDocs/virtualization/guarded-fabric-shielded-vm/guarded-fabric-configuring-fabric-dns.md",
       "redirect_url": "/windows-server/security/guarded-fabric-shielded-vm/guarded-fabric-configuring-fabric-dns",
       "redirect_document_id": true
