@@ -143,6 +143,27 @@ Failover Clustering has many practical applications, including:
                                         <div class="cardText">
                                         <h3>Tools and settings</a></h3>
 <HR />
+                                        <p><a href="https://go.microsoft.com/fwlink/p/?LinkId=233200">Failover Clustering PowerShell Cmdlets</a></p> 
+<HR />
+                                        <p><a href="https://technet.microsoft.com/library/hh847221.aspx">Cluster Aware Updating PowerShell Cmdlets</a></p> 
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                          </a>
+                        </li>
+<li>
+                         <div class="cardSize">
+                                <div class="cardPadding">
+                                    <div class="card">
+                                        <div class="cardImageOuter">
+                                            <div class="cardImage">
+                                                <img src="../media/i-cluster.svg" alt="" />
+                                            </div>
+                                        </div>
+                                        <div class="cardText">
+                                        <h3>Community resources</a></h3>
+<HR />
                                         <p><a href="https://go.microsoft.com/fwlink/p/?LinkId=230641">High Availability (Clustering) Forum</a></p> 
 <HR />
                                         <p><a href="http://blogs.msdn.com/b/clustering/">Failover Clustering and Network Load Balancing Team Blog</a></p> 
@@ -153,4 +174,3 @@ Failover Clustering has many practical applications, including:
                           </a>
                         </li>
 </ul>
-
