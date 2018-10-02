@@ -536,7 +536,7 @@ description: Windows Server documentation helps IT professionals evaluate, plan,
                                         </div>
                                         <div class="cardText">
                                             <h2>Troubleshooting</h2>
-                                            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
+                                            <p>Learn to troubleshoot some of the most used Windows Server technologies and feature.</p>
 <table>
      <tr>
         <td style="vertical-align: top;">
@@ -587,7 +587,7 @@ description: Windows Server documentation helps IT professionals evaluate, plan,
                                         </div>
                                         <div class="cardText">
                                             <h2>Virtualization</h2>
-                                             <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
+                                             <p>Microsoft Hyper-V, the virtualization foundation for Windows Server, provides compute virtualization for modern apps and cloud infrastructure including containers, rolling cluster upgrades, Shielded VMs and other enhanced security features.</p>
 <table>
      <tr>
         <td style="vertical-align: top;">
