@@ -139,7 +139,7 @@ Additionally, customers deploying workloads on Kubernetes network security to pr
 
 - **Deduplication and compression**
 
-    Get up to 10X more storage for free with deduplication and compression for the ReFS filesystem. (It’s just one click to turn on with Windows Admin Center.) The variable-size chunk store with optional compression maximizes savings rates, while the multi-threaded post-processing architecture keeps performance impact minimal. Supports volumes up to 64 TB and files up to 1 TB each.
+    Get up to 10X more storage for free with deduplication and compression for the ReFS filesystem. (It’s [just one click](https://www.youtube.com/watch?v=PRibTacyKko&feature=youtu.be) to turn on with Windows Admin Center.) The variable-size chunk store with optional compression maximizes savings rates, while the multi-threaded post-processing architecture keeps performance impact minimal. Supports volumes up to 64 TB and files up to 1 TB each.
 
 - **Native support for persistent memory**
 
@@ -151,11 +151,11 @@ Additionally, customers deploying workloads on Kubernetes network security to pr
 
 - **Windows Admin Center**
 
-    Manage and monitor Storage Spaces Direct with the new purpose-built Dashboard and experience in Windows Admin Center. Create, open, expand, or delete volumes with just a few clicks. Monitor performance like IOPS and IO latency from the overall cluster down to the individual SSD or HDD. Available at no additional cost for Windows Server 2016 and Windows Server 2019.
+    Manage and monitor Storage Spaces Direct with the new [purpose-built Dashboard](https://docs.microsoft.com/en-us/windows-server/manage/windows-admin-center/use/manage-hyper-converged) and experience in Windows Admin Center. Create, open, expand, or delete volumes with just a few clicks. Monitor performance like IOPS and IO latency from the overall cluster down to the individual SSD or HDD. Available at no additional cost for Windows Server 2016 and Windows Server 2019.
 
 - **Performance history**
 
-    Get effortless visibility into resource utilization and performance with built-in history. Over 50 essential counters spanning compute, memory, network, and storage are automatically collected and stored on the cluster for up to one year. Best of all, there’s nothing to install, configure, or start – it just works. Visualize in Windows Admin Center or query and process in PowerShell.
+    Get effortless visibility into resource utilization and performance with [built-in history](https://docs.microsoft.com/en-us/windows-server/storage/storage-spaces/performance-history-for-vhds). Over 50 essential counters spanning compute, memory, network, and storage are automatically collected and stored on the cluster for up to one year. Best of all, there’s nothing to install, configure, or start – it just works. Visualize in Windows Admin Center or query and process in PowerShell.
 
 - **Scale up to 4 PB per cluster**
 
@@ -163,7 +163,7 @@ Additionally, customers deploying workloads on Kubernetes network security to pr
 
 - **Mirror-accelerated parity is 2X faster**
 
-    With mirror-accelerated parity you can create Storage Spaces Direct volumes that are part mirror and part parity, like mixing RAID-1 and RAID-5/6 to get the best of both. (It’s easier than you think in Windows Admin Center.) In Windows Server 2019, the performance of mirror-accelerated parity is more than doubled relative to Windows Server 2016 thanks to important architectural optimizations.
+    With mirror-accelerated parity you can create Storage Spaces Direct volumes that are part mirror and part parity, like mixing RAID-1 and RAID-5/6 to get the best of both. (It’s [easier than you think](https://www.youtube.com/watch?v=R72QHudqWpE) in Windows Admin Center.) In Windows Server 2019, the performance of mirror-accelerated parity is more than doubled relative to Windows Server 2016 thanks to important architectural optimizations.
 
 - **Drive latency outlier detection**
 
