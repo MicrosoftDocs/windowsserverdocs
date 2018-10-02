@@ -60,6 +60,7 @@ Failover Clustering has many practical applications, including:
                                         </div>
                                         <div class="cardText">
                                         <h3>Planning</h3>
+<HR />
 										<p><a href="clustering-requirements.md">Failover Clustering Hardware Requirements and Storage Options</a></p>
 <HR />
                                         <p><a href="failover-cluster-csvs.md">Use Cluster Shared Volumes (CSVs)</a></p>               
@@ -80,7 +81,7 @@ Failover Clustering has many practical applications, including:
                                             </div>
                                         </div>
                                         <div class="cardText">
-                                        <h3><a href="clustering-requirements.md">Failover Clustering Hardware Requirements and Storage Options</a><hr /></h3> 
+                                        <h3>Deployment</a></h3> 
 <HR />
                                         <p><a href="prestage-cluster-adds.md">Prestage Cluster Computer Objects in Active Directory Domain Services</a></p>
 <HR />
