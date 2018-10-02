@@ -42,12 +42,12 @@ In this model, Windows Server releases are identified by the year and month of r
 ## Should you keep servers on the LTSC or move them to the Semi-Annual Channel?
 These are the key differences to take into account:
 
-- Do you need to innovate rapidly? Do you need early access to the newest Windows Server features? Do you need to support fast-cadence hybrid applications, dev-ops, and Hyper-V fabrics? If so, you should consider **joining the Semi-Annual Channel** by installing [Windows Server, version 1803](get-started-with-1803.md). As described in this topic, you will receive new versions twice a year, with 18 months of mainstream production support per release. You get it through volume licensing, Azure, or Visual Studio Subscription Services. Currently, releases in the Semi-Annual Channel require volume licensing and Software Assurance if you intend to run the product in production.
-- Do you need stability and predictability? Do you need to run virtual machines and traditional workloads on physical servers? If so, you should consider **keeping those servers on the Long-Term Servicing Channel**. The current LTSC release is [Windows Server 2016](server-basics.md). As described in this topic, you'll have access to new versions every 2-3 years, with 5 years of mainstream support followed by 5 years of extended support per release. LTSC releases are available through all release mechanisms. Releases in the LTSC are available to anyone regardless of the licensing model they are using. 
+- Do you need to innovate rapidly? Do you need early access to the newest Windows Server features? Do you need to support fast-cadence hybrid applications, dev-ops, and Hyper-V fabrics? If so, you should consider **joining the Semi-Annual Channel** by installing **Windows Server, version 1809**. As described in this topic, you will receive new versions twice a year, with 18 months of mainstream production support per release. You get it through volume licensing, Azure, or Visual Studio Subscription Services. Currently, releases in the Semi-Annual Channel require volume licensing and Software Assurance if you intend to run the product in production.
+- Do you need stability and predictability? Do you need to run virtual machines and traditional workloads on physical servers? If so, you should consider **keeping those servers on the Long-Term Servicing Channel**. The current LTSC release is **Windows Server 2019**. As described in this topic, you'll have access to new versions every 2-3 years, with 5 years of mainstream support followed by 5 years of extended support per release. LTSC releases are available through all release mechanisms. Releases in the LTSC are available to anyone regardless of the licensing model they are using. 
 
-The following table summarizes the key differences between the channels, starting with Windows Server, version 1803:
+The following table summarizes the key differences between the channels:
 
-|  | Long-Term Servicing Channel (Windows Server 2016) |Semi-Annual Channel (Windows Server) |
+|  | Long-Term Servicing Channel (Windows Server 2019) |Semi-Annual Channel (Windows Server) |
 | ------------------- | ------------------------------------ | ------------------------------------------------- |
 |Recommended scenarios | General purpose file servers, Microsoft and non-Microsoft workloads, traditional apps, infrastructure roles, software-defined Datacenter, and hyper-converged infrastructure | Containerized applications, container hosts, and application scenarios benefiting from faster innovation |
 | New releases | Every 2–3 years |Every 6 months |
@@ -58,7 +58,7 @@ The following table summarizes the key differences between the channels, startin
 
 
 ## Device compatibility
-Unless otherwise communicated, the minimum hardware requirements to run the Semi-Annual Channel releases will be the same as the most recent Long-Term Servicing Channel release of Windows Server. For example, **the current Long-Term Servicing Channel release is Windows Server 2016**. Most hardware drivers will continue to function in these releases.
+Unless otherwise communicated, the minimum hardware requirements to run the Semi-Annual Channel releases will be the same as the most recent Long-Term Servicing Channel release of Windows Server. For example, **the current Long-Term Servicing Channel release is Windows Server 2019**. Most hardware drivers will continue to function in these releases.
 
 ## Servicing
 Both the Long-Term Servicing Channel and the Semi-Annual Channel releases will be supported with security updates and non-security updates. The difference is the length of time that the release is supported, as described above.
