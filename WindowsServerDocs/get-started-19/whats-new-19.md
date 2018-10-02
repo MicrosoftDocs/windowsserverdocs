@@ -134,6 +134,44 @@ Additionally, customers deploying workloads on Kubernetes network security to pr
 
 ## Hyper-converged infrastructure
 
+
+### Failover Clustering
+
+- **Cluster Sets**
+
+    Hyperscale a hyper-converged infrastructure by federating multiple Failover Clusters into a Cluster Set.  Virtual Machines achieve fluidity across loosely coupled grouping of clusters for balancing and maintenance.
+
+- **Azure Enlightened Clusters**
+
+    Failover Clusters automatically detect and optimize the configuration when running in Azure IaaS virtual machines.  Proactive failover and logging of Azure planned maintenance events to achieve the highest levels of availability.  Simplified deployment by removing the need to configure the load balancer with Dynamic Network Name for Cluster Name.
+
+- **Cross-domain Cluster Migration**
+
+    Failover Clusters can now dynamically move from one Active Directory domain to another.  Simplifying domain consolidation and allowing clusters to be pre-built and then shipped and domain joined onsite.
+
+- **Cluster Hardening**
+
+    Intra-cluster communication over Server Message Block (SMB) for Cluster Shared Volumes and Storage Spaces Direct now leverages certificates to provide the most secure platform.  This allows Failover Clusters to operate with no dependencies on NTLM and enable security baselines.
+
+- **USB Witness**
+
+    A simple USB drive in a switch or device can now be used as a witness in determining quorum for a cluster.  This extends the File Share Witness to support any SMB2 compliant device.
+
+- **Cluster Infrastructure**
+
+    The CSV Cache is now enabled by default to turbo boost virtual machine performance.  MSDTC now supports Cluster Shared Volumes, to allow deploying MSDTC workloads on Storage Spaces Direct such as with SQL Server.  Enhanced logic to detect partitioned nodes with self-healing to return nodes to cluster membership.  Enhanced cluster network route detection and self-healing.
+
+- **Cluster Aware Updating**
+
+    Cluster Aware Updating (CAU) is now integrated and aware of Storage Spaces Direct, validating and ensuring data resynchronization completes on each node.  Inspects updates to intelligently patch by only rebooting if necessary.  Enables orchestrating restarts of all nodes in the cluster for planned maintenance, even when not patching.
+
+
+
+
+
+
+
+
 ### Encrypted Networks
 
 [Encrypted Networks](https://docs.microsoft.com/en-us/windows-server/networking/sdn/sdn-whats-new) - Virtual network encryption allows encryption of virtual network traffic between virtual machines that communicate with each other within subnets marked as ‘Encryption Enabled.’ 
