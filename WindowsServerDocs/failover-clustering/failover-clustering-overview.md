@@ -38,7 +38,7 @@ Failover Clustering has many practical applications, including:
                                             </div>
                                         </div>
                                         <div class="cardText">
-                                        <h3><a href="failover-clustering/whats-new-in-failover-clustering.md">What's new in Failover Clustering</a></h3>
+                                        <h2><a href="failover-clustering/whats-new-in-failover-clustering.md">What's new in Failover Clustering</a></h2>
                                         </div>
                                     </div>
                                 </div>
@@ -48,7 +48,7 @@ Failover Clustering has many practical applications, including:
                      </ul>
 <HR />
 
-<ul class="cardsI panelContent">
+<ul class="cardsF panelContent">
 <li>
                          <div class="cardSize">
                                 <div class="cardPadding">
@@ -64,40 +64,6 @@ Failover Clustering has many practical applications, including:
 										<p><a href="clustering-requirements.md">Failover Clustering Hardware Requirements and Storage Options</a></p>
 <HR />
                                         <p><a href="failover-cluster-csvs.md">Use Cluster Shared Volumes (CSVs)</a></p>               
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                          </a>
-                        </li>
-<HR />
-<li>
-                         <div class="cardSize">
-                                <div class="cardPadding">
-                                    <div class="card">
-                                        <div class="cardImageOuter">
-                                            <div class="cardImage">
-                                                <img src="../media/i-cluster.svg" alt="" />
-                                            </div>
-                                        </div>
-                                        <div class="cardText">
-                                        <h3>Deployment</a></h3> 
-<HR />
-                                        <p><a href="prestage-cluster-adds.md">Prestage Cluster Computer Objects in Active Directory Domain Services</a></p>
-<HR />
-                                        <p><a href="create-failover-cluster.md">Creating a Failover Cluster</a></p> 
-<HR />
-                                        <p><a href="https://technet.microsoft.com/library/jj134187">Deploy Hyper-V over SMB</a></p> 
-<HR />
-                                        <p><a href="https://technet.microsoft.com/library/hh831359">Deploy a Scale-Out File Server</a></p> 
-<HR />
-                                        <p><a href="https://technet.microsoft.com/library/hh848268">iSCSI Target Block Storage, How To</a></p> 
-<HR />
-                                        <p><a href="https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn265970\(v%3dws.11\)">Deploy an Active Directory Detached Cluster</a></p>
- <HR />
-                                        <p><a href="https://technet.microsoft.com/library/dn440540.aspx">Using Guest Clustering for High Availability</a></p> 
-<HR />
-                                        <p><a href="https://technet.microsoft.com/library/dn265980.aspx">Deploy a Guest Cluster using a Shared Virtual Hard Disk</a></p> 
                                         </div>
                                     </div>
                                 </div>
@@ -167,6 +133,39 @@ Failover Clustering has many practical applications, including:
                                         <p><a href="https://go.microsoft.com/fwlink/p/?LinkId=230641">High Availability (Clustering) Forum</a></p> 
 <HR />
                                         <p><a href="http://blogs.msdn.com/b/clustering/">Failover Clustering and Network Load Balancing Team Blog</a></p> 
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                          </a>
+                        </li>
+<li>
+                         <div class="cardSize">
+                                <div class="cardPadding">
+                                    <div class="card">
+                                        <div class="cardImageOuter">
+                                            <div class="cardImage">
+                                                <img src="../media/i-cluster.svg" alt="" />
+                                            </div>
+                                        </div>
+                                        <div class="cardText">
+                                        <h3>Deployment</a></h3> 
+<HR />
+                                        <p><a href="prestage-cluster-adds.md">Prestage Cluster Computer Objects in Active Directory Domain Services</a></p>
+<HR />
+                                        <p><a href="create-failover-cluster.md">Creating a Failover Cluster</a></p> 
+<HR />
+                                        <p><a href="https://technet.microsoft.com/library/jj134187">Deploy Hyper-V over SMB</a></p> 
+<HR />
+                                        <p><a href="https://technet.microsoft.com/library/hh831359">Deploy a Scale-Out File Server</a></p> 
+<HR />
+                                        <p><a href="https://technet.microsoft.com/library/hh848268">iSCSI Target Block Storage, How To</a></p> 
+<HR />
+                                        <p><a href="https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn265970\(v%3dws.11\)">Deploy an Active Directory Detached Cluster</a></p>
+ <HR />
+                                        <p><a href="https://technet.microsoft.com/library/dn440540.aspx">Using Guest Clustering for High Availability</a></p> 
+<HR />
+                                        <p><a href="https://technet.microsoft.com/library/dn265980.aspx">Deploy a Guest Cluster using a Shared Virtual Hard Disk</a></p> 
                                         </div>
                                     </div>
                                 </div>
