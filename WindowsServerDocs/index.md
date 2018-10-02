@@ -185,7 +185,7 @@ description: Windows Server documentation helps IT professionals evaluate, plan,
                                         </div>
                                         <div class="cardText">
                                             <h2>Identity | Access</h2>
-                                            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
+                                            <p>Protect company assets from hackers and identity attacks by controlling your access security with  industry proven Active Directory.</p>
 <table>
      <tr>
         <td style="vertical-align: top;">
@@ -485,7 +485,7 @@ description: Windows Server documentation helps IT professionals evaluate, plan,
                                         </div>
                                         <div class="cardText">
                                             <h2>Storage</h2>
-                                            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
+                                            <p>Take advantage of Hyper-converged infrastructure to store more, more efficiently, with Windows Server software-defined storage for virtualized workloads. Windows Server Storage includes cutting edge technologies like Storage Spaces Direct in Windows Server 2019 that can achieve multi-petabyte scale.</p>
 <table>
      <tr>
         <td style="vertical-align: top;">
