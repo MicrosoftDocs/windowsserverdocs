@@ -1,142 +1,690 @@
 ---
-title: Windows Server
-description: Get started with Windows Server
-ms.prod: windows-server-threshold
-ms.date: 07/12/2018
-ms.technology: server-general
-ms.topic: article
-author: jaimeo
-ms.author: jaimeo
-manager: dougkim
-ms.localizationpriority: high
+layout: HubPage
+hide_bc: true
+author: coreyp
+ms.author: apexprodleads
+ms.topic: hub-page
+title: Widows Server documentation
+description: Windows Server documentation helps IT professionals evaluate, plan, deploy, secure, and manage Windows Server
 ---
-# Windows Server technical content library
 
+<div id="main" class="v2">
+<div class="container">
+    <h1>Windows Server documentation</h1>
+     <h3>Windows Server is the platform for building an infrastructure of connected applications, networks, and web services, from the workgroup to the data center</h3>
+     <p> </p>
+    <ul class="pivots">
+        <li>
+            <a href="#main"></a>
+            <ul id="main">
+                <li>
+                    <a href="#mainPanel"></a>
+                    <ul id="mainPanel" class="cardsF">
+                        <li>
+                            <a href="get-started-19/whats-new-19.md">
+                            <div class="cardSize">
+                                <div class="cardPadding">
+                                    <div class="card">
+                                        <div class="cardImageOuter">
+                                            <div class="cardImage">
+                                                <img src="media/i-whats-new.svg" alt="" />
+                                            </div>
+                                        </div>
+                                        <div class="cardText">
+                                            <h2>What's new?</h2>
+                                            <p>Find out what's new in Windows Server</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            </a>
+                        </li>
+                        <li class="fullSpan">
+                            
+                        <HR WIDTH="60%">
 
-This library provides info for IT pros to evaluate, plan, deploy, secure, and manage Windows Server.
+                        </li>
+<li>
+                            <a href="get-started-19/get-started-19.md">
+                            <div class="cardSize">
+                                <div class="cardPadding">
+                                    <div class="card">
+                                        <div class="cardImageOuter">
+                                            <div class="cardImage">
+                                                <img src="media/i-get-started.svg" alt="" />
+                                            </div>
+                                        </div>
+                                        <div class="cardText">
+                                            <h2>Get Started with<br>Windows Server 2019</h2>
+                                            <p>Start here for Windows Server 2019</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            </a>
+                        </li>
+<li>
+                            <a href="http://aka.ms/upgradecenter">
+                            <div class="cardSize">
+                                <div class="cardPadding">
+                                    <div class="card">
+                                        <div class="cardImageOuter">
+                                            <div class="cardImage">
+                                                <img src="media/i-upgrade.svg" alt="" />
+                                            </div>
+                                        </div>
+                                        <div class="cardText">
+                                            <h2>Upgrade to Windows Server 2019</h2>
+                                            <p>Check out the Windows Server Upgrade Center for step-by-step guidance on upgrading Windows Server</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            </a>
+                        </li>
+<li>
+                            <a href="get-started/Server-Basics.md">
+                            <div class="cardSize">
+                                <div class="cardPadding">
+                                    <div class="card">
+                                        <div class="cardImageOuter">
+                                            <div class="cardImage">
+                                                <img src="media/i-get-started.svg" alt="" />
+                                            </div>
+                                        </div>
+                                        <div class="cardText">
+                                            <h2>Get Started with<br>Windows Server 2016</h2>
+                                            <p>Start here for Windows Server 2016</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            </a>
+                        </li>
+                        <li class="fullSpan">
+                            
+                        <HR COLOR="purple" SIZE="6" WIDTH="60%">
 
-[![WS08 end of support banner](get-started/media/WS08-EoS-banner.jpg)](get-started/modernize-windows-server-2008.md)
+                        </li>
+ <li>
+                            <a href="https://docs.microsoft.com/en-us/windows-server/manage/windows-admin-center/overview">
+                            <div class="cardSize">
+                                <div class="cardPadding">
+                                    <div class="card">
+                                        <div class="cardImageOuter">
+                                            <div class="cardImage">
+                                                <img src="media/i-admin-center.svg" alt="" />
+                                            </div>
+                                        </div>
+                                        <div class="cardText">
+                                            <h2>Windows Admin Center</h2>
+                                            <p>Manage Windows Server 2012 and newer with Windows Admin Center</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            </a>
+                        </li>
+<li>
+                            <a href="https://docs.microsoft.com/en-us/windows-insider/at-work">
+                            <div class="cardSize">
+                                <div class="cardPadding">
+                                    <div class="card">
+                                        <div class="cardImageOuter">
+                                            <div class="cardImage">
+                                                <img src="media/i-insider.svg" alt="" />
+                                            </div>
+                                        </div>
+                                        <div class="cardText">
+                                            <h2>Windows Insider Program for Server</h2>
+                                            <p>Test the preview builds for Windows Server 2019</p>
+<li>
+                            <a href="https://docs.microsoft.com/en-us/windows-server/get-started/modernize-windows-server-2008">
+                            <div class="cardSize">
+                                <div class="cardPadding">
+                                    <div class="card">
+                                        <div class="cardImageOuter">
+                                            <div class="cardImage">
+                                                <img src="media/windows-server-2008R2.svg" alt="" />
+                                            </div>
+                                        </div>
+                                        <div class="cardText">
+                                            <h2>Windows Server 2008 and 2008R2 end of service</h2>
+                                            <p>Prepare for the end of extended support for Windows Server 2008 and Windows Server 2008 R2 on January 14, 2020</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+    </ul>
+                  
+       <hr />
+ 
+ <h1>Guidance for Windows Server 2016 and Windows Server 2019</h1>
+    <h3>Windows Server documentation helps IT professionals evaluate, plan, deploy, secure, and manage Windows Server</h3>
+    <ul class="pivots">
+        <li>
+            <a href="#main"></a>
+            <ul id="main">
+                <li>
+                    <ul id="mainPanel" class="cardsF">
+                        <li>
+                            <a href="identity/Identity-and-Access.md">
+                            <div class="cardSize">
+                                <div class="cardPadding">
+                                    <div class="card">
+                                        <div class="cardImageOuter">
+                                            <div class="cardImage">
+                                                <img src="media/i-access.svg" alt="" />
+                                            </div>
+                                        </div>
+                                        <div class="cardText">
+                                            <h2>Identity | Access</h2>
+                                            <p>Protect company assets from hackers and identity attacks by controlling your access security with  industry proven Active Directory.</p>
+<table>
+     <tr>
+        <td style="vertical-align: top;">
+            <h4><u>Highest Rated</u></h4>
+            <ol>
+            <li>1. <a href="https://docs.microsoft.com/en-us/windows-server/identity/software-restriction-policies/software-restriction-policies">Software Restriction Policies</a></li>              
+       <hr width="80%">
+            <li>2. <a href="https://docs.microsoft.com/en-us/windows-server/identity/solution-guides/deploy-a-central-access-policy--demonstration-steps-">Deploy a Central Access Policy (Demonstration Steps)</a></li>
+       <hr width="80%">
+            <li>3. <a href="https://docs.microsoft.com/windows-server/identity/solution-guides/scenario--file-access-auditing">Scenario: File Access Auditing</a></li>
+            </ol>
+        </td>
+        <td style="vertical-align: top;">
+            <h4><u>Most Viewed</u></h4>
+            <ol>
+            <li>1. <a href="https://docs.microsoft.com/windows-server/identity/securing-privileged-access/privileged-access-workstations">Privileged Access Workstations</a></li>
+       <hr width="80%">
+            <li>2. <a href="https://docs.microsoft.com/en-us/windows-server/identity/securing-privileged-access/securing-privileged-access-reference-material">Securing Privileged Access Reference Material</a></li>
+       <hr width="80%">
+            <li>3. <a href="https://docs.microsoft.com/en-us/windows-server/identity/solution-guides/dynamic-access-control--scenario-overview">Dynamic Access Control: Scenario Overview</a></li>
+            </ol>
+        </td>
+    </tr>
+</table></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                           </a>
+                        </li>
+ <li>
+                            <a href="failover-clustering/failover-clustering-overview.md">
+                            <div class="cardSize">
+                                <div class="cardPadding">
+                                    <div class="card">
+                                        <div class="cardImageOuter">
+                                            <div class="cardImage">
+                                                <img src="media/i-cluster.svg" alt="" />
+                                            </div>
+                                        </div>
+                                        <div class="cardText">
+                                            <h2>Failover Clustering</h2> 
+                                            <p>Combine individual servers into groups with Failover Clustering to increase fault-tolerance and availablity of systems that host business critical apps and services.</p>
+<table>
+     <tr>
+        <td style="vertical-align: top;">
+            <h4><u>Highest Rated</u></h4>
+            <ol>
+            <li>1. <a href="https://docs.microsoft.com/en-us/windows-server/networking/what-s-new-in-networking">Cluster-Aware Updating requirements and best practices</a></li>
+              
+       <hr width="80%">
 
->[!IMPORTANT]
-> Extended support for Windows Server 2008 R2 and Windows Server 2008 ends in January 2020. [Learn about your upgrade options](get-started/modernize-windows-server-2008.md), including a new Azure solution.
+            <li>2. <a href="https://docs.microsoft.com/en-us/windows-server/failover-clustering/vm-load-balancing-overview">Virtual Machine Load Balancing overview</a></li>
+                 
+       <hr width="80%">
 
+            <li>3. <a href="https://docs.microsoft.com/en-us/windows-server/failover-clustering/troubleshooting-using-wer-reports">Troubleshooting a Failover Cluster using Windows Error Reporting</a></li>
+            </ol>
+        </td>
+        <td style="vertical-align: top;">
+            <h4><u>Most Viewed</u></h4>
+            <ol>
+            <li>1. <a href="https://docs.microsoft.com/en-us/windows-server/failover-clustering/manage-cluster-quorum">Configure and manage quorum</a></li>
+                   
+       <hr width="80%">
 
-<!-- *commenting out video until 1803 video available*
-**What's new in Windows Server? Check out our latest mechanics video:**
-<br>
-<iframe src="https://www.youtube-nocookie.com/embed/yea9OXRZ8xg" width="640" height="360" allowfullscreen></iframe>
--->
+            <li>2. <a href="https://docs.microsoft.com/en-us/windows-server/failover-clustering/failover-cluster-csvs">Use Cluster Shared Volumes in a failover cluster</a></li>
+                 
+       <hr width="80%">
 
-<br>
-<table border="0" width="100%" align='center'>
-  <tr style="text-align:center;">
-    <td valign="bottom" style="width:20%; border:0;">
-      <a href="/windows-server/get-started/whats-new-in-windows-server-1803">
-        ![](media/landing-icons/new.png)</br>What's new?</a></td>
-    <td valign="bottom" style="width:20%; border:0;">
-      <a href="/windows-server/get-started/get-started-with-1803">
-        ![](media/landing-icons/getstarted.png)</br>Get started</a></td>
-    <td valign="bottom" style="width:20%; border:0;">
-      <a href="/windows-server/administration/manage-windows-server">
-        ![](media/landing-icons/manage.png)</br>Manage</a></td>
-    <td valign="bottom" style="width:20%; border:0;">
-      <a href="/windows-server/failover-clustering/failover-clustering-overview">
-        ![](media/landing-icons/cluster.png)</br>Failover clustering</a></td>
-    <td valign="bottom" style="width:20%; border:0;"><br/>
-      <a href="/windows-server/identity/identity-and-access">
-        ![Identity icon](media/landing-icons/identity.png)<br/>Identity and access</a></td>
-  </tr>
-  <tr style="text-align:center;">
-    <td valign="bottom" style="width:20%; border:0;"><br/>
-      <a href="/windows-server/networking/networking">
-        ![Network icon](media/landing-icons/network.png)
-        <br/>Networking</a></td>
-    <td valign="bottom" style="width:20%; border:0;"><br/>
-      <a href="/windows-server/remote/index">
-        ![Remote icon](media/landing-icons/remote.png)
-        <br/>Remote access</a></td>
-    <td valign="bottom" style="width:20%; border:0;"><br/>
-      <a href="/windows-server/security/security-and-assurance">
-        ![Security icon](media/landing-icons/security.png)
-      <br/>Security and assurance</a></td>
-    <td valign="bottom" style="width:20%; border:0;"><br>
-      <a href="/windows-server/storage/storage">
-l        ![Storage icon](media/landing-icons/storage.png)
-      <br/>Storage</a></td>
-   <td valign="bottom" style="width:20%; border:0;"><br/>
-      <a href="/windows-server/virtualization/virtualization">
-        ![Virtualization icon](media/landing-icons/virtualization.png)<br/>Virtualization</a></td>
-      </tr>
-</table>
+            <li>3. <a href="https://docs.microsoft.com/en-us/windows-server/failover-clustering/whats-new-in-failover-clustering">What's new in Failover Clustering</a></li>
+            </ol>
+        </td>
+    </tr>
+</table></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            </a>
+                        </li>
+ <li>
+                            <a href="administration/manage-windows-server.md">
+                            <div class="cardSize">
+                                <div class="cardPadding">
+                                    <div class="card">
+                                        <div class="cardImageOuter">
+                                            <div class="cardImage">
+                                                <img src="media/i-manage.svg" alt="" />
+                                            </div>
+                                        </div>
+                                        <div class="cardText">
+                                            <h2>Management</h2>
+                                            <p>Manage Windows Server systems and environments, collect information about hardware and software inventories, tune servers for better peformance and automate administration for greater efficiency.</p>
+<table>
+     <tr>
+        <td style="vertical-align: top;">
+            <h4><u>Highest Rated</u></h4>
+            <ol>
+            <li>1. <a href="https://docs.microsoft.com/en-us/windows-server/networking/technologies/nps/nps-radius-clients-configure">Configure RADIUS Clients</a></li>
+              
+       <hr width="80%">
 
-<br/>
+            <li>2. <a href="https://docs.microsoft.com/en-us/windows-server/networking/technologies/nps/nps-np-configure">Configure Network Policies</a></li>
+                 
+       <hr width="80%">
 
-> [!Note] 
-> To experience first-hand new features and functionality available in Windows Server, you can download an evaluation version by visiting [Windows Server Evaluations](https://www.microsoft.com/evalcenter/evaluate-windows-server-2016). 
+            <li>3. <a href="https://docs.microsoft.com/en-us/windows-server/networking/sdn/software-defined-networking">Software Defined Networking (SDN)</a></li>
+            </ol>
+        </td>
+        <td style="vertical-align: top;">
+            <h4><u>Most Viewed</u></h4>
+            <ol>
+            <li>1. <a href="https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/robocopy">robocopy</a></li>
+                   
+       <hr width="80%">
 
+            <li>2. <a href="https://docs.microsoft.com/en-us/windows-server/manage/windows-admin-center/understand/windows-admin-center">Hello, Windows Admin Center!</a></li>
+                 
+       <hr width="80%">
 
-## Windows Server, version 1803
+            <li>3. <a href="https://docs.microsoft.com/en-us/windows-server/administration/windows-server-update-services/get-started/windows-server-update-services-wsus">Windows Server Update Services (WSUS)</a></li>
+            </ol>
+        </td>
+    </tr>
+</table></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            </a>
+                        </li>
+<li>
+                            <a href="networking/networking.md">
+                            <div class="cardSize">
+                                <div class="cardPadding">
+                                    <div class="card">
+                                        <div class="cardImageOuter">
+                                            <div class="cardImage">
+                                                <img src="media/i-network.svg" alt="" />
+                                            </div>
+                                        </div>
+                                        <div class="cardText">
+                                            <h2>Networking</h2>
+                                            <p>Connect computers and systems for security, performance, quality of service, and availability with funtamental technologies like <a href="https://docs.microsoft.com/en-us/windows-server/networking/dns/dns-top">DNS</a>, <a href="https://docs.microsoft.com/en-us/windows-server/networking/technologies/dhcp/dhcp-top">DHCP</a>, or virtualize connectivity with <a href="https://docs.microsoft.com/en-us/windows-server/networking/sdn/software-defined-networking">Software Defined Networking</a>.</p>
+<table>
+     <tr>
+        <td style="vertical-align: top;">
+            <h4><u>Highest Rated</u></h4>
+            <ol>
+            <li>1. <a href="https://docs.microsoft.com/en-us/windows-server/networking/technologies/nps/nps-radius-clients-configure">Configure RADIUS Clients</a></li>
+              
+       <hr width="80%">
 
-Windows Server, version 1803 is the next release in the new Semi-Annual Channel. Semi-Annual Channel releases such as this one are ideal for customers who are moving at a “cloud cadence," such as those on rapid development cycles or hosters keeping up with the latest Hyper-V investments. 
+            <li>2. <a href="https://docs.microsoft.com/en-us/windows-server/networking/technologies/nps/nps-np-configure">Configure Network Policies</a></li>
+                 
+       <hr width="80%">
 
-**Windows Server, version 1803 runs in Server Core mode.** That means there is no local console or graphical user interface, so you manage it remotely. However, it offers great advantages such as smaller hardware requirements and much smaller attack surface. If you're new to working with Server Core, [Manage a Server Core server](administration/server-core/server-core-manage.md) will help you get used to this environment. [Manage Windows Server](administration/manage-windows-server.md) shows you the various options for managing servers remotely.
+            <li>3. <a href="https://docs.microsoft.com/windows-server/networking/sdn/software-defined-networking">Software Defined Networking (SDN)</a></li>
+            </ol>
+        </td>
+        <td style="vertical-align: top;">
+            <h4><u>Most Viewed</u></h4>
+            <ol>
+            <li>1. <a href="https://docs.microsoft.com/en-us/windows-server/networking/windows-time-service/windows-time-service-tools-and-settings">Windows Time Service Tools and Settings</a></li>
+                   
+       <hr width="80%">
 
-Check out [What's New in Windows Server version 1803](get-started/whats-new-in-windows-server-1803.md) for more information about the new features and functionality added in Windows Server, version 1803.
+            <li>2. <a href="https://docs.microsoft.com/en-us/windows-server/networking/technologies/netsh/netsh-contexts">Netsh Command Syntax, Contexts, and Formatting</a></li>
+                 
+       <hr width="80%">
 
-## Other versions of Windows Server
+            <li>3. <a href="https://docs.microsoft.com/en-us/windows-server/networking/technologies/nps/nps-top">Network Policy Server (NPS)</a></li>
+            </ol>
+        </td>
+    </tr>
+</table></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            </a>
+                        </li>
 
-Looking for information about older versions of Windows Server? Check out our other [Windows Server libraries](/previous-versions/windows/) on docs.microsoft.com. You can also [search this site](https://docs.microsoft.com/search/index?search=Windows+Server&dataSource=previousVersions) for specific information.
+ <li>
+                            <a href="remote/index.md">
+                            <div class="cardSize">
+                                <div class="cardPadding">
+                                    <div class="card">
+                                        <div class="cardImageOuter">
+                                            <div class="cardImage">
+                                                <img src="media/i-remote.svg" alt="" />
+                                            </div>
+                                        </div>
+                                        <div class="cardText">
+                                            <h2>Remote</h2>
+                                            <p>Access and control computers and devices remotely to extend enterprise availabilty anywhere, anytime with technologies including Remote Desktop Services, Remote Access and Remote Server Administration Tools.</p>
+<table>
+     <tr>
+        <td style="vertical-align: top;">
+            <h4><u>Highest Rated</u></h4>
+            <ol>
+            <li>1. <a href="https://docs.microsoft.com/en-us/windows-server/remote/remote-access/vpn/always-on-vpn/deploy/vpn-deploy-client-vpn-connections">Step 6. Configure Windows 10 client Always On VPN connections</a></li>
+              
+       <hr width="80%">
 
-## Windows Server editions
+            <li>2. <a href="https://docs.microsoft.com/en-us/windows-server/remote/remote-desktop-services/rds-in-azure">Seamlessly deploy RDS with ARM and Azure Marketplace</a></li>
+                 
+       <hr width="80%">
 
-Windows Server, version 1803, is available in Standard and Datacenter editions, while Windows Server 2016 is available in Standard, Datacenter, and Essentials editions. Windows Server Datacenter includes unlimited virtualization rights plus new features to build a software-defined datacenter. Windows Server Standard offers enterprise-class features with limited virtualization rights. Windows Server 2016 Essentials is an ideal cloud-connected first server. It has its own [extensive documentation](https://go.microsoft.com/fwlink/?LinkID=827171)—the content here focuses on Standard and Datacenter editions. The following table briefly summarizes the key differences between Standard and Datacenter editions:
+            <li>3. <a href="https://docs.microsoft.com/en-us/windows-server/remote/remote-access/vpn/always-on-vpn/deploy/vpn-deploy-server-infrastructure">Step 2. Configure the server infrastructure</a></li>
+            </ol>
+        </td>
+        <td style="vertical-align: top;">
+            <h4><u>Most Viewed</u></h4>
+            <ol>
+            <li>1. <a href="https://docs.microsoft.com/en-us/windows-server/remote/remote-desktop-services/clients/remote-desktop-clients">Remote Desktop clients</a></li>
+                   
+       <hr width="80%">
 
-|Feature|Datacenter|Standard|  
-|-------------------|----------|-----------------------|  
-|Core functionality of Windows Server| yes| yes|
-|OSEs / Hyper-V containers|unlimited|	2|
-|Windows Server containers|unlimited|	unlimited|
-|Host Guardian Service| yes| yes|
-|Storage features including Storage Replica| yes| no|
-|Shielded Virtual Machines| yes| no|
-|Software Defined Networking Infrastructure (Network Controller, Software Load Balancer, and Multi-tenant Gateway)| yes| no|
+            <li>2. <a href="https://docs.microsoft.com/en-us/windows-server/remote/remote-desktop-services/clients/remote-desktop-allow-access">Remote Desktop - Allow access to your PC</a></li>
+                 
+       <hr width="80%">
 
-For more information, see [Pricing and licensing for Windows Server 2016](https://www.microsoft.com/en-us/cloud-platform/windows-server-pricing) and [Compare features in Windows Server versions](https://www.microsoft.com/en-us/cloud-platform/windows-server-comparison).
+            <li>3. <a href="https://docs.microsoft.com/windows-server/remote/remote-desktop-services/clients/remote-desktop-mac">Remote Desktop clients</a></li>
+            </ol>
+        </td>
+    </tr>
+</table></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            </a>
+                        </li>
+ <li>
+                            <a href="security/security-and-assurance.md">
+                            <div class="cardSize">
+                                <div class="cardPadding">
+                                    <div class="card">
+                                        <div class="cardImageOuter">
+                                            <div class="cardImage">
+                                                <img src="media/i-secure.svg" alt="" />
+                                            </div>
+                                        </div>
+                                        <div class="cardText">
+                                            <h2>Security | Assurance</h2> 
+                                            <p>Protect datacenters running Windows Server as a VM in any cloud, and limit the ability of attackers to compromise credentials, launch malware, and remain undetected in your network with technologies including Shielded Virtual Machines, Device Guard, Credential Guard and Windows Defender.</p>
+<table>
+     <tr>
+        <td style="vertical-align: top;">
+            <h4><u>Highest Rated</u></h4>
+            <ol>
+            <li>1. <a href="https://docs.microsoft.com/en-us/windows-server/security/windows-authentication/windows-authentication-overview">Windows Authentication Overview</a></li>
+              
+       <hr width="80%">
 
-## Installation options
+            <li>2. <a href="https://docs.microsoft.com/en-us/windows-server/security/group-managed-service-accounts/getting-started-with-group-managed-service-accounts">Getting Started with Group Managed Service Accounts</a></li>
+                 
+       <hr width="80%">
 
-Both Standard and Datacenter editions offer two installation options:
+            <li>3. <a href="https://docs.microsoft.com/en-us/windows-server/security/kerberos/kerberos-constrained-delegation-overview">Kerberos Constrained Delegation Overview</a></li>
+            </ol>
+        </td>
+        <td style="vertical-align: top;">
+            <h4><u>Most Viewed</u></h4>
+            <ol>
+            <li>1. <a href="https://docs.microsoft.com/en-us/windows-server/security/tls/tls-registry-settings">Transport Layer Security (TLS) registry settings</a></li>
+                   
+       <hr width="80%">
 
-- **Server Core:** reduces the space required on disk, the potential attack surface, and especially the servicing requirements. This is the **recommended** option unless you have a particular need for additional user interface elements and graphical management tools.
-- **Server with Desktop Experience:** installs the standard user interface and all tools, including client experience features that required a separate installation in Windows Server 2012 R2. Server roles and features are installed with Server Manager or by other methods.
+            <li>2. <a href="https://docs.microsoft.com/en-us/windows-server/security/windows-services/security-guidelines-for-disabling-system-services-in-windows-server">Guidance on disabling system services on Windows Server 2016 with Desktop Experience
+</a></li>
+                 
+       <hr width="80%">
 
-If you are installing Windows Server, version 1803, Server Core is your only installation option, while Windows Server 2016 offers both the Server Core and Server with Desktop Experience installation options.
+            <li>3. <a href="https://docs.microsoft.com/en-us/windows-server/security/windows-authentication/credentials-processes-in-windows-authentication">Credentials Processes in Windows Authentication</a></li>
+            </ol>
+        </td>
+    </tr>
+</table></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            </a>
+                        </li>
+ <li>
+                            <a href="storage/storage.md">
+                            <div class="cardSize">
+                                <div class="cardPadding">
+                                    <div class="card">
+                                        <div class="cardImageOuter">
+                                            <div class="cardImage">
+                                                <img src="media/i-store.svg" alt="" />
+                                            </div>
+                                        </div>
+                                        <div class="cardText">
+                                            <h2>Storage</h2>
+                                            <p>Take advantage of Hyper-converged infrastructure to store more, more efficiently, with Windows Server software-defined storage for virtualized workloads. Windows Server Storage includes cutting edge technologies like Storage Spaces Direct in Windows Server 2019 that can achieve multi-petabyte scale.</p>
+<table>
+     <tr>
+        <td style="vertical-align: top;">
+            <h4><u>Highest Rated</u></h4>
+            <ol>
+            <li>1. <a href="https://docs.microsoft.com/en-us/windows-server/storage/storage-replica/storage-replica-overview">Storage Replica overview</a></li>
+              
+       <hr width="80%">
 
->[!Note]
-> Unlike some previous releases of Windows Server, you cannot convert between Server Core and Server with Desktop Experience after installation. For example, if you install Server Core and later decide to use Server with Desktop Experience, you should do a fresh installation (and vice versa).
+            <li>2. <a href="https://docs.microsoft.com/en-us/windows-server/storage/storage-spaces/understand-quorum">Understanding cluster and pool quorum</a></li>
+                 
+       <hr width="80%">
 
+            <li>3. <a href="https://docs.microsoft.com/en-us/windows-server/storage/data-deduplication/understand">Understanding Data Deduplication</a></li>
+            </ol>
+        </td>
+        <td style="vertical-align: top;">
+            <h4><u>Most Viewed</u></h4>
+            <ol>
+            <li>1. <a href="https://docs.microsoft.com/en-us/windows-server/storage/disk-management/initialize-new-disks">Initialize new disks</a></li>
+                   
+       <hr width="80%">
 
-Now that you know which edition and installation option is right for you, click below to get started with Windows Server.
-<br/>
-<br/>
+            <li>2. <a href="https://docs.microsoft.com/en-us/windows-server/storage/disk-management/change-an-mbr-disk-into-a-gpt-disk">Convert an MBR disk into a GPT disk</a></li>
+                 
+       <hr width="80%">
 
-<table border="0" width="100%" align='center'>
-    <td align='center' style="width:50%; border:0;"><a href="/windows-server/get-started/getting-started-with-server-core"> <img width="175" src="media/servercore.png" alt="" title="Server Core - Recommended" /><br/>Server Core - <br/>Recommended</a></td>
-   <td align='center' style="width:50%; border:0;"><a href="/windows-server/get-started/getting-started-with-server-with-desktop-experience"><img width="175" src="media/desktop.png" alt="" title="Desktop Experience - Full Experience" /><br/>Desktop Experience - <br/>Full interface</a></td>
-  </tr>
-</table>
+            <li>3. <a href="https://docs.microsoft.com/en-us/windows-server/storage/disk-management/extend-a-basic-volume">Extend a basic volume</a></li>
+            </ol>
+        </td>
+    </tr>
+</table></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="troubleshoot/windows-server-support-solutions.md">
+                            <div class="cardSize">
+                                <div class="cardPadding">
+                                    <div class="card">
+                                        <div class="cardImageOuter">
+                                            <div class="cardImage">
+                                                <img src="media/i-troubleshoot.svg" alt="" />
+                                            </div>
+                                        </div>
+                                        <div class="cardText">
+                                            <h2>Troubleshooting</h2>
+                                            <p>Learn to troubleshoot some of the most used Windows Server technologies and feature.</p>
+<table>
+     <tr>
+        <td style="vertical-align: top;">
+            <h4><u>Highest Rated</u></h4>
+            <ol>
+            <li>1. <a href="https://docs.microsoft.com/en-us/windows-server/failover-clustering/troubleshooting-using-wer-reports">Troubleshooting a Failover Cluster using Windows Error Reporting</a></li>
+              
+       <hr width="80%">
 
-## Windows Server Software-Defined Datacenter (SDDC)
+            <li>2. <a href="https://docs.microsoft.com/en-us/windows-server/networking/sdn/troubleshoot/troubleshoot-windows-server-software-defined-networking-stack">Troubleshoot the Windows Server Software Defined Networking Stack</a></li>
+                 
+       <hr width="80%">
 
-Virtualized Storage, Networking, Security and Management technologies are the building blocks of the Windows Server Software-Defined Datacenter (SDDC).
-<br/>
-<br/>
+            <li>3. <a href="https://docs.microsoft.com/en-us/windows/security/threat-protection/windows-defender-antivirus/troubleshoot-windows-defender-antivirus">Review event logs and error codes to troubleshoot issues with Windows Defender AV</a></li>
+            </ol>
+        </td>
+        <td style="vertical-align: top;">
+            <h4><u>Most Viewed</u></h4>
+            <ol>
+            <li>1. <a href="https://docs.microsoft.com/en-us/windows-server/storage/disk-management/troubleshooting-disk-management">Troubleshooting Disk Management</a></li>
+                   
+       <hr width="80%">
 
-<table border="0" width="100%" align='center'>
-  <tr style="text-align:center;">
-    <td align='center' style="width:10%; border:0;"></td>
-    <td align='center' style="width:50%; border:0;"><a href="/windows-server/sddc"><img width="400" src="media/sddc/WS16-heading.png" alt="" title="Windows Server Software-Defined Datacenter (SDDC)" /><br/>Windows Server Software-Defined Datacenter (SDDC)</a></td>
-    <td align='center' style="width:10%; border:0;"></td>
-  </tr>
-</table>
+            <li>2. <a href="https://docs.microsoft.com/en-us/windows-server/administration/windows-server-update-services/manage/wsus-messages-and-troubleshooting-tips">WSUS Messages and Troubleshooting Tips</a></li>
+                 
+       <hr width="80%">
 
+            <li>3. <a href="https://docs.microsoft.com/en-us/windows-server/manage/windows-admin-center/use/troubleshooting">Troubleshooting Windows Admin Center</a></li>
+            </ol>
+        </td>
+    </tr>
+</table></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="virtualization/virtualization.md">
+                            <div class="cardSize">
+                                <div class="cardPadding">
+                                    <div class="card">
+                                        <div class="cardImageOuter">
+                                            <div class="cardImage">
+                                                <img src="media/i-virtualize.svg" alt="" />
+                                            </div>
+                                        </div>
+                                        <div class="cardText">
+                                            <h2>Virtualization</h2>
+                                             <p>Microsoft Hyper-V, the virtualization foundation for Windows Server, provides compute virtualization for modern apps and cloud infrastructure including containers, rolling cluster upgrades, Shielded VMs and other enhanced security features.</p>
+<table>
+     <tr>
+        <td style="vertical-align: top;">
+            <h4><u>Highest Rated</u></h4>
+            <ol>
+            <li>1. <a href="https://docs.microsoft.com/en-us/windows-server/virtualization/hyper-v/get-started/create-a-virtual-machine-in-hyper-v">Create a virtual machine in Hyper-V</a></li>
+              
+       <hr width="80%">
+
+            <li>2. <a href="https://docs.microsoft.com/en-us/windows-server/virtualization/hyper-v/supported-debian-virtual-machines-on-hyper-v">Supported Debian virtual machines on Hyper-V</a></li>
+                 
+       <hr width="80%">
+
+            <li>3. <a href="https://docs.microsoft.com/en-us/windows-server/virtualization/guarded-fabric-shielded-vm/guarded-fabric-and-shielded-vms">Guarded fabric and shielded VMs overview</a></li>
+            </ol>
+        </td>
+        <td style="vertical-align: top;">
+            <h4><u>Most Viewed</u></h4>
+            <ol>
+            <li>1. <a href="https://docs.microsoft.com/en-us/windows-server/virtualization/hyper-v/manage/remotely-manage-hyper-v-hosts">Remotely manage Hyper-V hosts with Hyper-V Manager</a></li>
+                   
+       <hr width="80%">
+
+            <li>2. <a href="https://docs.microsoft.com/en-us/windows-server/virtualization/hyper-v/get-started/create-a-virtual-switch-for-hyper-v-virtual-machines">Create a virtual switch for Hyper-V virtual machines</a></li>
+                 
+       <hr width="80%">
+
+            <li>3. <a href="https://docs.microsoft.com/en-us/windows-server/virtualization/hyper-v/learn-more/hyper-v-virtual-machine-connect">Hyper-V Virtual Machine Connection</a></li>
+            </ol>
+        </td>
+    </tr>
+</table></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+    </ul>
+                  
+       <hr />
+
+  <h1>Windows Server previous versions</h1>
+    <h3>Technical content for IT professionals administering older versions of Windows Server<h3>
+    <p> </p>
+    <ul class="pivots">
+        <li>
+            <a href="#main"></a>
+            <ul id="main">
+                <li>
+                    
+                    <ul id="mainPanel" class="cardsF">
+                        <li>
+                            <a href="https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh801901(v=ws.11)">
+                            <div class="cardSize">
+                                <div class="cardPadding">
+                                    <div class="card">
+                                        <div class="cardImageOuter">
+                                            <div class="cardImage">
+                                                <img src="media/windows-server-2012R2.svg" alt="" />
+                                            </div>
+                                        </div>
+                                        <div class="cardText">
+                                            <h3>Windows Server 2012 and<br> Windows Server 2012 R2</h3>
+                                            <p></p>
+                                        </div>
+                                    </div>
+                                </div>
+                              </div>
+                            </a>
+                        </li>
+ <li>
+                            <a href="https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd349801(v=ws.10)">
+                            <div class="cardSize">
+                                <div class="cardPadding">
+                                    <div class="card">
+                                        <div class="cardImageOuter">
+                                            <div class="cardImage">
+                                                <img src="media/windows-server-2008R2.svg" alt="" />
+                                            </div>
+                                        </div>
+                                        <div class="cardText">
+                                            <h3>Windows Server 2008 and<br> Windows Server 2008 R2</h3>
+                                            <p></p>
+                                            </div>
+                                    </div>
+                                </div>
+                              </div>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+    </ul>
+</div>
