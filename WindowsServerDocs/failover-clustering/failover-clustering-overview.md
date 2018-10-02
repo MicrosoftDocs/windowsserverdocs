@@ -104,41 +104,53 @@ Failover Clustering has many practical applications, including:
                             </div>
                           </a>
                         </li>
-</ul>
+<li>
+                         <div class="cardSize">
+                                <div class="cardPadding">
+                                    <div class="card">
+                                        <div class="cardImageOuter">
+                                            <div class="cardImage">
+                                                <img src="../media/i-cluster.svg" alt="" />
+                                            </div>
+                                        </div>
+                                        <div class="cardText">
+                                        <h3>Configure and Manage the Quorum in a Failover Cluster</a></h3>
 <HR />
-
-
-
-## Planning
-
-* [Failover Clustering Hardware Requirements and Storage Options](clustering-requirements.md)
-* [Use Cluster Shared Volumes (CSVs)](failover-cluster-csvs.md)
-
-## Deployment
-
-* [Prestage Cluster Computer Objects in Active Directory Domain Services](prestage-cluster-adds.md)
-* [Creating a Failover Cluster](create-failover-cluster.md)
-* [Deploy Hyper-V over SMB](https://technet.microsoft.com/library/jj134187)
-* [Deploy a Scale-Out File Server](https://technet.microsoft.com/library/hh831359)
-* [iSCSI Target Block Storage, How To](https://technet.microsoft.com/library/hh848268)
-* [Deploy an Active Directory Detached Cluster](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn265970\(v%3dws.11\))
-* [Using Guest Clustering for High Availability](https://technet.microsoft.com/library/dn440540.aspx)
-* [Deploy a Guest Cluster using a Shared Virtual Hard Disk](https://technet.microsoft.com/library/dn265980.aspx)
-
-## Operations
-
-* [Configure and Manage the Quorum in a Failover Cluster](manage-cluster-quorum.md)
-* [Use Cluster Shared Volumes in a Failover Cluster](https://technet.microsoft.com/library/jj612868.aspx)
-* [Cluster-Aware Updating Overview](cluster-aware-updating.md)
-* [Windows IT Pro Support](https://www.microsoft.com/itpro/windows/support)
-
-## Tools and settings
-
-* [Failover Clustering PowerShell Cmdlets](https://go.microsoft.com/fwlink/p/?LinkId=233200)
-* [Cluster Aware Updating PowerShell Cmdlets](https://technet.microsoft.com/library/hh847221.aspx)
-
-## Community resources
-
-* [High Availability (Clustering) Forum](https://go.microsoft.com/fwlink/p/?LinkId=230641)
-* [Failover Clustering and Network Load Balancing Team Blog](http://blogs.msdn.com/b/clustering/)
+                                        <p><a href="https://technet.microsoft.com/library/hh831359">Configure and Manage the Quorum in a Failover Cluster</a></p> 
+<HR />
+                                        <p><a href="cluster-aware-updating.md">Use Cluster Shared Volumes in a Failover Cluster</a></p> 
+<HR />
+                                        <p><a href="https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn265970\(v%3dws.11\)">Deploy an Active Directory Detached Cluster</a></p>
+ <HR />
+                                        <p><a href="https://go.microsoft.com/fwlink/p/?LinkId=233200">Cluster-Aware Updating Overview</a></p> 
+<HR />
+                                        <p><a href="https://www.microsoft.com/itpro/windows/support">Windows IT Pro Support</a></p> 
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                          </a>
+                        </li>
+<li>
+                         <div class="cardSize">
+                                <div class="cardPadding">
+                                    <div class="card">
+                                        <div class="cardImageOuter">
+                                            <div class="cardImage">
+                                                <img src="../media/i-cluster.svg" alt="" />
+                                            </div>
+                                        </div>
+                                        <div class="cardText">
+                                        <h3>Tools and settings</a></h3>
+<HR />
+                                        <p><a href="https://go.microsoft.com/fwlink/p/?LinkId=230641">High Availability (Clustering) Forum</a></p> 
+<HR />
+                                        <p><a href="http://blogs.msdn.com/b/clustering/">Failover Clustering and Network Load Balancing Team Blog</a></p> 
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                          </a>
+                        </li>
+</ul>
 
