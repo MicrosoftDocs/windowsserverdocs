@@ -200,6 +200,3 @@ Windows PowerShell Direct is an alternative to the existing tools that Hyper-V a
 Those tools work well, but have trade-offs: VMConnect is reliable, but can be hard to automate. Remote PowerShell is powerful, but can be hard to set up and maintain. These trade-offs may become more important as your Hyper-V deployment grows. Windows PowerShell Direct addresses this by providing a powerful scripting and automation experience that's as simple as using VMConnect.   
   
 For requirements and instructions, see [Manage Windows virtual machines with PowerShell Direct](manage/Manage-Windows-virtual-machines-with-PowerShell-Direct.md).  
-  
-## See also  
-[What's new in Hyper-V on Windows 10](https://msdn.microsoft.com/virtualization/hyperv_on_windows/about/whats_new)  

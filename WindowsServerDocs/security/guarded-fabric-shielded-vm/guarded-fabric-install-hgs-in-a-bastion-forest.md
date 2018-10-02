@@ -20,6 +20,8 @@ In an existing bastion forest, HGS must be added to the root domain. Use Server 
 
 ## Add the HGS server role
 
+Run all commands in this topic in an elevated PowerShell session.
+
 [!INCLUDE [Install the HGS server role](../../../includes/guarded-fabric-install-hgs-server-role.md)] 
 
 If your datacenter has a secure bastion forest where you want to join HGS nodes, follow these steps.
