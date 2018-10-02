@@ -16,6 +16,8 @@ ms.localizationpriority: medium
 ---
 # Windows Server 2019 Activation
 
+>Applies To: Windows Server 2019, Windows Server 2016
+
 The following information outlines initial planning considerations that you need to review for Key Management Services (KMS) activation involving Windows Server 2019. For information about KMS activation involving operating systems older than those listed here, see [Step 1: Review and Select Activation Methods](https://technet.microsoft.com/library/jj134256(WS.11).aspx).
 
 KMS uses a client-server model to active clients. KMS clients connect to a KMS server, called the KMS host, for activation. The KMS host must reside on your local network.
