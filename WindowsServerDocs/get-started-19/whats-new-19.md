@@ -135,6 +135,41 @@ Additionally, customers deploying workloads on Kubernetes network security to pr
 ## Hyper-converged infrastructure
 
 
+### Storage Spaces Direct
+
+- **Deduplication and compression**
+
+    Get up to 10X more storage for free with deduplication and compression for the ReFS filesystem. (It’s just one click to turn on with Windows Admin Center.) The variable-size chunk store with optional compression maximizes savings rates, while the multi-threaded post-processing architecture keeps performance impact minimal. Supports volumes up to 64 TB and files up to 1 TB each.
+
+- **Native support for persistent memory**
+
+    Unlock unprecedented performance with native Storage Spaces Direct support for persistent memory modules, including Intel® Optane™ DC PM and NVDIMM-N. Use persistent memory as cache to accelerate the active working set, or as capacity to guarantee consistent low latency on the order of microseconds. Manage persistent memory just as you would any other drive in PowerShell or Windows Admin Center.
+
+- **Nested resiliency for two-node HCI at the edge**
+
+    Survive two hardware failures at once with an all-new software resiliency option inspired by RAID 5+1. With nested resiliency, a two-node Storage Spaces Direct cluster can provide continuously accessible storage for apps and virtual machines even if one server node goes down and a drive fails in the other server node.
+
+- **Windows Admin Center**
+
+    Manage and monitor Storage Spaces Direct with the new purpose-built Dashboard and experience in Windows Admin Center. Create, open, expand, or delete volumes with just a few clicks. Monitor performance like IOPS and IO latency from the overall cluster down to the individual SSD or HDD. Available at no additional cost for Windows Server 2016 and Windows Server 2019.
+
+- **Performance history**
+
+    Get effortless visibility into resource utilization and performance with built-in history. Over 50 essential counters spanning compute, memory, network, and storage are automatically collected and stored on the cluster for up to one year. Best of all, there’s nothing to install, configure, or start – it just works. Visualize in Windows Admin Center or query and process in PowerShell.
+
+- **Scale up to 4 PB per cluster**
+
+    Achieve multi-petabyte scale – great for media, backup, and archival use cases. In Windows Server 2019, Storage Spaces Direct supports up to 4 petabytes (PB) = 4,000 terabytes of raw capacity per storage pool. Related capacity guidelines are increased as well: for example, you can create twice as many volumes (64 instead of 32), each twice as large as before (64 TB instead of 32 TB). Stitch multiple clusters together into a cluster set for even greater scale within one storage namespace.
+
+- **Mirror-accelerated parity is 2X faster**
+
+    With mirror-accelerated parity you can create Storage Spaces Direct volumes that are part mirror and part parity, like mixing RAID-1 and RAID-5/6 to get the best of both. (It’s easier than you think in Windows Admin Center.) In Windows Server 2019, the performance of mirror-accelerated parity is more than doubled relative to Windows Server 2016 thanks to important architectural optimizations.
+
+- **Drive latency outlier detection**
+
+    Easily identify drives with abnormal latency with proactive monitoring and built-in outlier detection, inspired by Microsoft Azure’s long-standing and successful approach. Whether it’s average latency or something more subtle like 99th percentile latency that stands out, slow drives are automatically labeled in PowerShell and Windows Admin Center with ‘Abnormal Latency’ status.
+
+
 ### Failover Clustering
 
 - **Cluster Sets**
@@ -165,13 +200,6 @@ Additionally, customers deploying workloads on Kubernetes network security to pr
 
     Cluster Aware Updating (CAU) is now integrated and aware of Storage Spaces Direct, validating and ensuring data resynchronization completes on each node.  Inspects updates to intelligently patch by only rebooting if necessary.  Enables orchestrating restarts of all nodes in the cluster for planned maintenance, even when not patching.
 
-
-
-
-
-
-
-
 ### Encrypted Networks
 
 [Encrypted Networks](https://docs.microsoft.com/en-us/windows-server/networking/sdn/sdn-whats-new) - Virtual network encryption allows encryption of virtual network traffic between virtual machines that communicate with each other within subnets marked as ‘Encryption Enabled.’ 
@@ -184,6 +212,12 @@ It also utilizes Datagram Transport Layer Security (DTLS) on the virtual subnet 
 * Receive Segment Coalescing in the vSwitch
 * Dynamic Virtual Machine Multi-Queue (d.VMMQ)
  
+### Storage Replica expanded to include:
+
+- Test failover is a new feature that allows mounting of destination storage in order to validate replication or backup data. For more information, see [Frequently Asked Questions about Storage Replica](https://docs.microsoft.com/en-us/windows-server/storage/storage-replica/storage-replica-frequently-asked-questions).
+- Log Performance improvements v1.1
+- Storage Replica is available in Standard Edition and can create 1 Partnership with 1 Resource Group with single 2TB volumes. The feature can replicate between clusters, asynchronously and synchronously.
+
 ### Low Extra Delay Background Transport
 
 Low Extra Delay Background Transport (LEDBAT) is a latency optimized, network congestion control provider designed to automatically yield bandwidth to users and applications, while consuming the entire bandwidth available when the network is not in use.   
