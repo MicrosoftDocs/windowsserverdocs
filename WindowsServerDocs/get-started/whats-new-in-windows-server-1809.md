@@ -39,6 +39,7 @@ In addition to features that are new in Windows Server version 1809, the followi
 * System Insights 
 * Shielded Virtual Machines 
 * Storage Migration Service (SMS) 
+* Storage Replica
 * Azure Network Adapter 
 * HTTP/2
 * [Low Extra Delay Background Transport (LEDBAT)](https://blogs.technet.microsoft.com/networking/2018/07/25/ledbat/)
