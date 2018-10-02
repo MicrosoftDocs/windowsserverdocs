@@ -227,7 +227,7 @@ description: Windows Server documentation helps IT professionals evaluate, plan,
                                             </div>
                                         </div>
                                         <div class="cardText">
-                                            <h2>Failover clustering</h2> 
+                                            <h2>Failover Clustering</h2> 
                                             <p>Combine individual servers into groups with Failover Clustering to increase fault-tolerance and availablity of systems that host business critical apps and services.</p>
 <table>
      <tr>
