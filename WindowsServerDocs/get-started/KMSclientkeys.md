@@ -88,12 +88,9 @@ prompt on the client, type **slmgr /ipk \<setup key\>** and then press **Enter**
 | Windows Server 2016 Standard   | WC2BQ-8NRM3-FDDYY-2BFGV-KHKQY |
 | Windows Server 2016 Essentials | JCKRF-N37P4-C2D82-9YXRT-4M63B |
 
+## Windows 10, all supported Semi-Annual Channel versions
 
-## Windows 10 Semi-Annual Channel versions
-
-### Windows 10, all supported Semi-Annual Channel versions
-
-Check the [Microsoft Product Lifecycle](https://support.microsoft.com/lifecycle/selectindex) for information about the supported versions.
+See the [Windows lifecycle fact sheet](https://support.microsoft.com/en-us/help/13853/windows-lifecycle-fact-sheet) for information about supported versions and end of service dates.
 
 | Operating system edition          | KMS Client Setup Key          |
 |-----------------------------------|-------------------------------|
