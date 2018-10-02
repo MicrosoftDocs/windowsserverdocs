@@ -94,6 +94,10 @@ Finally, the next thing you want to do is deploy Network Controller cluster node
 
 3. Repeat for all computers and VMs in the Network Controller cluster.
 
+### Step 4. Configure Service Principal Name if using Kerberos based authentication
+
+If Network Controller is using Kerberos-based authentication for communication with management clients, you must configure a Service Principal Name (SPN) for Network Controller in Active Directory. The Network Controller automatically configures the SPN. All you need to do is to provide permissions for the Network Controller machines to register and modify the SPN. For more details, see [Configure Service Principal Names (SPN)](https://docs.microsoft.com/en-us/windows-server/networking/sdn/security/kerberos-with-spn#configure-service-principal-names-spn).
+
 ## Deployment options
 
 ### Network Controller deployment
