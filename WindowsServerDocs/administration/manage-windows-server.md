@@ -1,6 +1,6 @@
 ---
 title: Management
-description: Learns about tools, recommendations and guidance on managing Windows Server
+description: Learn about tools, recommendations and guidance on managing Windows Server
 ms.prod: windows-server-threshold
 layout: LandingPage
 ms.technology: manage
