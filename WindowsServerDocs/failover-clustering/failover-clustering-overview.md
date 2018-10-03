@@ -38,7 +38,7 @@ Failover Clustering has many practical applications, including:
                                             </div>
                                         </div>
                                         <div class="cardText">
-                                        <h2><a href="failover-clustering/whats-new-in-failover-clustering.md">What's new in Failover Clustering</a></h2>
+                                        <h2><a href="whats-new-in-failover-clustering.md">What's new in Failover Clustering</a></h2>
                                         </div>
                                     </div>
                                 </div>

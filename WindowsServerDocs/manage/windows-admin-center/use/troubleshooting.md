@@ -70,16 +70,23 @@ ms.prod: windows-server-threshold
 <a id="whitescreenws"></a>
 
 ### If you've installed Windows Admin Center as a **Gateway on Windows Server**
+
+* Did you upgrade from a previous version of Windows Admin Center? Check to make sure the firewall rule was not deleted due to [this known issue](known-issues.md#upgrade). Use the PowerShell command below to determine if the rule exists. If not, follow [these instructions](known-issues.md#upgrade) to recreate it.
+    ```powershell
+    Get-NetFirewallRule -DisplayName "SmeInboundOpenException"
+    ```
+
 * [Check the Windows version](#winvercompat) of the client and server.
+
 * Make sure you are using either Microsoft Edge or Google Chrome as your web browser.
 
 * On the server, open Task Manager > Services and make sure **ServerManagementGateway / Windows Admin Center** is running.
 ![](../media/Service-TaskMan.PNG)
 
 * Test the network connection to the Gateway (replace \<values> with the information from your deployment)
-```powershell
-Test-NetConnection -Port <port> -ComputerName <gateway> -InformationLevel Detailed
-```
+    ```powershell
+    Test-NetConnection -Port <port> -ComputerName <gateway> -InformationLevel Detailed
+    ```
 
 [[back to top]](#toc)
 

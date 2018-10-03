@@ -7,7 +7,6 @@
 ## [Windows Server 2019 activation](activation-19.md)
 ## [Server Core App Compatibility Feature on Demand (FOD)](install-fod-19.md)
 ## [Standard | Datacenter Editions comparison](editions-comparison-19.md)
-## [Features removed or planned for replacement starting in Windows Server 2019](removed-features-19.md)
 
 
 

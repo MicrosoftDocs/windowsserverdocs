@@ -43,5 +43,5 @@ In addition to features that are new in Windows Server version 1809, the followi
 * Azure Network Adapter 
 * HTTP/2
 * [Low Extra Delay Background Transport (LEDBAT)](https://blogs.technet.microsoft.com/networking/2018/07/25/ledbat/)
-* [Windows Time Service](https://docs.microsoft.com/en-us/windows-server/networking/windows-time-service/insider-preview)
+* [Windows Time Service](https://docs.microsoft.com/windows-server/networking/windows-time-service/insider-preview)
 

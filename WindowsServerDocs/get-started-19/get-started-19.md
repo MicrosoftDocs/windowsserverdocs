@@ -172,24 +172,5 @@ ms.localizationpriority: medium
             </div>
         </div>
       </a>
-    </li><hr />
-<li>
-      <a href="removed-features-19.md">
-        <div class="cardSize">
-            <div class="cardPadding">
-                <div class="card">
-                    <div class="cardImageOuter">
-                        <div class="cardImage">
-                             <img src="../media/i-get-started.svg" alt="" />
-                        </div>
-                    </div>
-                    <div class="cardText">
-                        <h3>Removed features</h3>
-                        <p>Part of improving Server versions is removing outdated technologies to make way for new ones. Find out what's been removed in Windows Server 2019 from previous versions.</p>                    
-                    </div>
-                </div>
-            </div>
-        </div>
-      </a>
     </li>
 </ul>

@@ -35,10 +35,10 @@ The following known issues are present in Windows Server 2019.
     <tr>
       <td>Installation option menu during server setup has truncated German text</td>
       <td>When running setup from German server media, on the operating system selection window titled, “Select the operating system you want to install”, the description for Desktop Experience installation 
-      options will have missing and incorrect characters at the very end of the sentence. Here is the full German text with a line through the missing characters in the product.  
+      options will have missing and incorrect characters at the very end of the sentence. Here is the full German text as it should appear.  
       <br/>
       <p><i>Durch diese Option wird die vollständige grafische Umgebung von Windows installiert, wodurch zusätzlicher Speicherplatz verbraucht wird. Sie kann hilfreich sein, wenn Sie den Windows-Desktop 
-      verwenden möchten oder über eine App verfügen, die die grafische Um<s>gebung benötigt</s>.</i> </p>
+      verwenden möchten oder über eine App verfügen, die die grafische Umgebung benötigt.</i> </p>
       <p>This only impacts the German 
       media released at Public Availability of Windows Server 2019, Windows Server, version 1809, and Microsoft Hyper-V Server 2019.</p></td>
     </tr>

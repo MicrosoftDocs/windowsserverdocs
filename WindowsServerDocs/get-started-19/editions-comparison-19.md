@@ -141,6 +141,7 @@ ms.localizationpriority: medium
 |Features available generally|Windows Server 2019 Standard|Windows Server 2019 Datacenter|  
 |-------------------|----------|---------------------------|  
 |Best Practices Analyzer|Yes|Yes|
+|Constrained Storage Replica|Yes, (1 Partnership and 1 Resource Group with Single 2TB volume)|Yes, unlimited|
 |Direct Access|Yes|Yes|
 |Dynamic Memory (in virtualization)|Yes|Yes|
 |Hot Add/Replace RAM|Yes|Yes|

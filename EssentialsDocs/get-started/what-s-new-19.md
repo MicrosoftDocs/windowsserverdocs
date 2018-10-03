@@ -19,7 +19,7 @@ manager: jasgroce
 
 ## Windows Server Essentials Experience Role has been deprecated
 
-The Windows Server Essentials Experience Role has been removed from all server SKUs, including Windows Server 2019 Essentials. This means that the [Administrative Dashboard](../manage/overview-of-the-dashboard-in-windows-server-essentials) that used to be the core feature for Essentials Experience Role is no longer accessible and all management and configuration must be completed manually. 
+The Windows Server Essentials Experience Role has been removed from all server SKUs, including Windows Server 2019 Essentials. This means that the [Administrative Dashboard](../manage/overview-of-the-dashboard-in-windows-server-essentials.md) that used to be the core feature for Essentials Experience Role is no longer accessible and all management and configuration must be completed manually. 
 
 With Server Essentials Experience Role deprecation, the following features are no longer available:
 
@@ -30,11 +30,11 @@ With Server Essentials Experience Role deprecation, the following features are n
 
 Over the years since Windows Server 2016 Essentials was released, we have been working hard on the next solution for large and small businesses alike: Microsoft 365. We highly recommend Microsoft 365 for small business customers as a replacement for all versions of Windows Server Essentials. Microsoft 365 is a modern solution for file sharing and collaboration, and includes Office 365, Windows 10, and Enterprise Mobility + Security. 
 
-Evolve your business even further with [Microsoft 365 Business](https://www.microsoft.com/en-us/microsoft-365/business), which includes even more Office features, like e-mail and calendaring, file storage in the cloud, data protection, and more. Microsoft 365 Business will help you small business achieve new levels of productivity.
+Evolve your business even further with [Microsoft 365 Business](https://www.microsoft.com/microsoft-365/business), which includes even more Office features, like e-mail and calendaring, file storage in the cloud, data protection, and more. Microsoft 365 Business will help your small business achieve new levels of productivity.
 
 ## AAD Connect can now be installed on Windows Server 2019 Essentials
 
-Windows Server 2019 Essentials includes new support for Azure Active Directory via [AAD Connect](https://docs.microsoft.com/en-us/azure/active-directory/connect/active-directory-aadconnect-prerequisites). 
+Windows Server 2019 Essentials includes new support for Azure Active Directory via [AAD Connect](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnect-prerequisites). 
 
 ## LTSC support for Windows Server 2016 Essentials
 

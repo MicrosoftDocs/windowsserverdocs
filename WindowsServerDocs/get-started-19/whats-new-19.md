@@ -12,17 +12,27 @@ ms.date: 10/02/2018
 
 # What's new in Windows Server 2019
 
-This topic describes some of the new features in Windows Server 2019. 
+This topic describes some of the new features in Windows Server 2019. Windows Server 2019 is built on the strong foundation of Windows Server 2016 and brings numerous innovations on four key themes: Hybrid, Security, Application Platform, and Hyper-Converged Infrastructure (HCI).
+
+## General
+
 
 ### Desktop experience
 
 The <b>Desktop Experience</b> is back in Windows Server 2019!  It is not included in Windows Server, version 1709, Windows Server, version 1803, or Windows Server, version 1809.  
 As with Windows Server 2016, during setup of the operating system it is possible to choose between Server Core installations or Server with Desktop Experience installations.
 
-### System insights
+### System Insights
 
-System Insights</b> is a new feature available in Windows Server 2019 that brings local predictive analytics capabilities natively to Windows Server. These predictive capabilities—each backed by a machine-learning model—locally analyze Windows Server system data, such as performance counters and events, 
-providing insight into the functioning of your deployments and helping you reduce the operational expenses associated with monitoring your Windows Server instances. 
+System Insights is a new feature available in Windows Server 2019 that brings local predictive analytics capabilities natively to Windows Server. These predictive capabilities, each backed by a machine-learning model, locally analyze Windows Server system data, such as performance counters and events, providing insight into the functioning of your servers and helping you reduce the operational expenses associated with reactively managing issues in your Windows Server deployments.
+
+### Storage Replica expanded to include:
+
+- Test failover is a new feature that allows mounting of destination storage in order to validate replication or backup data. For more information, see [Frequently Asked Questions about Storage Replica](https://docs.microsoft.com/en-us/windows-server/storage/storage-replica/storage-replica-frequently-asked-questions).
+
+- Log Performance improvements v1.1
+
+- Storage Replica is available in Standard Edition and can create 1 Partnership with 1 Resource Group with single 2TB volumes. The feature can replicate between clusters, asynchronously and synchronously.
 
 ## Hybrid Cloud
 
@@ -38,18 +48,22 @@ including private networks that aren’t Internet-connected.
 ### Storage Migration Service
 
 Storage Migration Service (SMS) is a new role included in Windows Server Standard and Datacenter editions. SMS is a job-based orchestration and proxy that:
-Allows administrators to inventory existing servers for their data, security, and network settings.
-Migrates that data, security, and network settings to a new, modern target by using the SMB protocol.
-Takes over the identity of the old server completely, while decommissioning the original source, in such a way that users and applications are unaffected and unaware that migration has taken place.
+
+- Allows you to inventory existing servers for their data, security, and network settings.
+
+- Migrates that data, security, and network settings to a new, modern target by using the SMB protocol.
+
+- Takes over the identity of the old server completely, while decommissioning the original source, in such a way that your applications are unaffected and unaware that migration has taken place.
 
 ### Server Core app compatibility feature on demand
 
 The [Server Core App Compatibility feature on demand (FOD)](https://docs.microsoft.com/en-us/windows-server/get-started-19/install-fod-19) significantly improves the app compatibility of the Windows Server Core installation option by including a subset of binaries and components from Windows Server with the Desktop Experience, without adding the Windows Server Desktop Experience graphical environment itself.  This is done to increase the functionality and compatibility of Server Core while keeping it as lean as possible.  
+
 This optional feature on demand is available on a separate ISO and can be added to Windows Server Core installations and images only, using DISM. 
 
 ### Azure Network Adapter
 
-Azure Network Adapter – Now with Windows Server 2019, Windows Admin Center enables a one-click experience to configure a point-to-site VPN connection between an on-premises Windows Server and an Azure Virtual Network.
+Now with Windows Server 2019, Windows Admin Center enables a one-click experience to configure a point-to-site VPN connection between an on-premises Windows Server and an Azure Virtual Network.
 This automates the configuration for the Azure Virtual Network gateway as well as the on-premises VPN client.
 
 
@@ -57,11 +71,7 @@ This automates the configuration for the Azure Virtual Network gateway as well a
 
 ### Windows Defender Advanced Threat Protection (ATP)
 
-We provide deep platform sensors and response actions, providing visibility to
-memory and kernel level attacker activities and abilities to take actions on
-compromised machines in response to incidents such as remote collection of
-additional forensic data, remediating malicious files, terminating malicious
-processes etc.
+ATP's deep platform sensors and response actions expose memory and kernel level attacks and respond by suppressing malicious files and terminating malicious processes.
 
 -   For more information about Windows Defender ATP, see [Overview of Windows
     Defender ATP
@@ -71,18 +81,15 @@ processes etc.
     Defender ATP
     service](https://docs.microsoft.com/en-us/windows/security/threat-protection/windows-defender-atp/configure-server-endpoints-windows-defender-advanced-threat-protection).
 
-**Windows Defender ATP Exploit Guard** is a new set of host-intrusion prevention capabilities. The four components of Windows Defender Exploit Guard are designed to lock down the device against a wide variety of attack vectors and block behaviors commonly used in malware attacks, while enabling enterprises to balance their security risk and productivity requirements.
+**Windows Defender ATP Exploit Guard** is a new set of host-intrusion prevention capabilities. The four components of Windows Defender Exploit Guard are designed to lock down the device against a wide variety of attack vectors and block behaviors commonly used in malware attacks, while enabling you to balance security risk and productivity requirements.
 
 -   [Attack Surface
-    Reduction(ASR)](https://docs.microsoft.com/en-us/windows/security/threat-protection/windows-defender-exploit-guard/attack-surface-reduction-exploit-guard?ocid=cx-blog-mmpc
-)
-    is set of controls that enterprises can enable to prevent malware from
+    Reduction(ASR)](https://docs.microsoft.com/en-us/windows/security/threat-protection/windows-defender-exploit-guard/attack-surface-reduction-exploit-guard?ocid=cx-blog-mmpc) is set of controls that enterprises can enable to prevent malware from
     getting on the machine by blocking suspicious malicious files (for example,
     Office files), scripts, lateral movement, ransomware behavior, and
     email-based threats.
 
--   [Network
-    protection](https://docs.microsoft.com/en-us/windows/security/threat-protection/windows-defender-exploit-guard/network-protection-exploit-guard?ocid=cx-blog-mmpc)
+-   [Network protection](https://docs.microsoft.com/en-us/windows/security/threat-protection/windows-defender-exploit-guard/network-protection-exploit-guard?ocid=cx-blog-mmpc)
     protects the endpoint against web-based threats by blocking any outbound
     process on the device to untrusted hosts/IP addresses through Windows
     Defender SmartScreen.
@@ -99,8 +106,8 @@ processes etc.
 
 
 [Windows Defender Application
-Control](https://docs.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control)—also
-known as Code Integrity (CI) policy—was released in Windows Server 2016.
+Control](https://docs.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control) (also
+known as Code Integrity (CI) policy) was released in Windows Server 2016.
 Customer feedback has suggested that it is a great concept, but hard to deploy.
 To address this, we have built default CI policies, which will allow all Windows
 in-box files and Microsoft applications, such as SQL Server, and block known
@@ -108,36 +115,63 @@ executables that can bypass CI. 
 
 ### Security with Software Defined Networking (SDN)
 
-[Security with SDN](https://docs.microsoft.com/en-us/windows-server/networking/sdn/security/sdn-security-top) delivers many features to increase customer confidence in running workloads either on-premises or as a service provider in the cloud. 
-These security enhancements are integrated into the comprehensive SDN platform that our customers have already been using since Windows Server 2016.
+[Security with SDN](https://docs.microsoft.com/en-us/windows-server/networking/sdn/security/sdn-security-top) delivers many features to increase customer confidence in running workloads, either on-premises, or as a service provider in the cloud. 
+
+These security enhancements are integrated into the comprehensive SDN platform introduced in Windows Server 2016.
+
 For a complete list of what’s new in SDN see, [What’s New in SDN for Windows Server 2019](https://docs.microsoft.com/en-us/windows-server/networking/sdn/sdn-whats-new).
 
 ### Shielded Virtual Machines improvements
 
-* You can now run shielded virtual machines on machines with intermittent connectivity to the Host Guardian Service by leveraging the new fallback HGS and offline mode features. Fallback HGS allows you to configure a second set of URLs for Hyper-V to try if it can't reach your primary HGS server. 
-Offline mode allows you to continue to start up your shielded VMs, even if HGS can't be reached, as long as the VM has started successfully once, and the host's security configuration has not changed.
-* We've also made it easier to troubleshoot your shielded virtual machines by enabling support for VMConnect Enhanced Session Mode and PowerShell Direct. These tools are particularly useful if you've lost network connectivity to your VM and need to update its configuration to restore access. 
-These features do not need to be configured, and they will automatically become available when a shielded VM is placed on a Hyper-V host running build 17040 or later.
-* For customers who run mixed-OS environments, Windows Server 2019 now supports running Ubuntu, Red Hat Enterprise Linux, and SUSE Linux Enterprise Server inside shielded virtual machines.
+- You can now run shielded virtual machines on machines with intermittent connectivity to the Host Guardian Service by leveraging the new fallback HGS and offline mode features. Fallback HGS allows you to configure a second set of URLs for Hyper-V to try if it can't reach your primary HGS server.
+
+    Offline mode allows you to continue to start up your shielded VMs, even if HGS can't be reached, as long as the VM has started successfully once, and the host's security configuration has not changed.
+
+- We've also made it easier to troubleshoot your shielded virtual machines by enabling support for VMConnect Enhanced Session Mode and PowerShell Direct. These tools are particularly useful if you've lost network connectivity to your VM and need to update its configuration to restore access. 
+
+    These features do not need to be configured, and they will automatically become available when a shielded VM is placed on a Hyper-V host running build 17040 or later.
+
+- If you run mixed-OS environments, Windows Server 2019 now supports running Ubuntu, Red Hat Enterprise Linux, and SUSE Linux Enterprise Server inside shielded virtual machines.
 
 ### HTTP/2 for a faster and safer Web
 
-* Improved coalescing of connections to deliver an uninterrupted and properly encrypted browsing experience.
-* Upgraded HTTP/2’s server-side cipher suite negotiation for automatic mitigation of connection failures and ease of deployment.
-* Changed our default TCP congestion provider to Cubic to give you more throughput!
+- Improved coalescing of connections to deliver an uninterrupted and properly encrypted browsing experience.
+
+- Upgraded HTTP/2’s server-side cipher suite negotiation for automatic mitigation of connection failures and ease of deployment.
+
+- Changed our default TCP congestion provider to Cubic to give you more throughput!
 
 ## Application Platform
 
-### Container Networking with Kubernetes
+### Linux containers on Windows
 
-[Container Networking with Kubernetes](https://docs.microsoft.com/en-us/windows-server/networking/sdn/technologies/containers/container-networking-overview) in Windows Server 2019 greatly improves usability of Kubernetes on Windows by enhancing platform networking resiliency and support of container networking plugins. 
-Additionally, customers deploying workloads on Kubernetes network security to protect both Linux and Windows services using embedded tooling.
+It is now possible to run Windows and Linux-based containers on the same container host, using the same docker daemon. This enables you to have a heterogenous container host environment while providing flexibility to application developers.
+
+### Building Support for Kubernetes
+
+Windows Server 2019 continues the improvements to compute, networking and storage from the semi-annual channel releases needed to support Kubernetes on Windows. More details will be available in upcoming Kubernetes releases.
+
+- [Container Networking](https://docs.microsoft.com/en-us/windows-server/networking/sdn/technologies/containers/container-networking-overview) in Windows Server 2019 greatly improves usability of Kubernetes on Windows by enhancing platform networking resiliency and support of container networking plugins.
+
+- Deployed workloads on Kubernetes will be able to use network security to protect both Linux and Windows services using embedded tooling.
 
 ### Container improvements
+    
+- **Improved integrated identity**
 
-- Containerizing Windows-based applications just got easier: The app compatibility for the existing *windowsservercore* image has been increased. For applications with additional API dependencies, there is now a third base image: *windows*.
-- At the same time, the base container image download size, size on disk and startup times have been improved.
-- It is now possible to run Windows and Linux-based containers on the same container host, using the same docker daemon.
+    We've made integrated Windows authentication in containers easier and more reliable, addressing several limitations from prior versions of Windows Server.
+
+- **Better application compatibility**
+
+    Containerizing Windows-based applications just got easier: The app compatibility for the existing *windowsservercore* image has been increased. For applications with additional API dependencies, there is now a third base image: *windows*.
+
+- **Reduced size and higher performance**
+
+    The base container image download sizes, size on disk and startup times have been improved. This speeds up container workflows
+
+- **Management experience using Windows Admin Center \(preview\)**
+
+    We've made it easier than ever to see which containers are running on your computer and manage individual containers with a new extension for Windows Admin Center. Look for the "Containers" extension in the [Windows Admin Center public feed](https://docs.microsoft.com/en-us/windows-server/manage/windows-admin-center/configure/using-extensions).
 
 
 ## Hyper-converged infrastructure
@@ -210,21 +244,16 @@ Additionally, customers deploying workloads on Kubernetes network security to pr
 
 ### Encrypted Networks
 
-[Encrypted Networks](https://docs.microsoft.com/en-us/windows-server/networking/sdn/sdn-whats-new) - Virtual network encryption allows encryption of virtual network traffic between virtual machines that communicate with each other within subnets marked as ‘Encryption Enabled.’ 
+[Encrypted Networks](https://docs.microsoft.com/en-us/windows-server/networking/sdn/sdn-whats-new) - Virtual network encryption allows encryption of virtual network traffic between virtual machines that communicate with each other within subnets marked as **Encryption Enabled**. 
 It also utilizes Datagram Transport Layer Security (DTLS) on the virtual subnet to encrypt packets. DTLS protects against eavesdropping, tampering, and forgery by anyone with access to the physical network.
 
 ### Network performance improvements for virtual workloads
 
-[Network performance improvements for virtual workloads](https://docs.microsoft.com/en-us/windows-server/networking/technologies/hpn/hpn-insider-preview) will maximize the network throughput to virtual machines without requiring you to constantly tune or over-provision your host. This lowers the Operations & Maintenance cost while increasing the available density of your hosts. These new features are:
+[Network performance improvements for virtual workloads](https://docs.microsoft.com/en-us/windows-server/networking/technologies/hpn/hpn-insider-preview) will maximize the network throughput to virtual machines without requiring you to constantly tune or over-provision your host. This lowers the operations and maintenance cost while increasing the available density of your hosts. These new features are:
 
 * Receive Segment Coalescing in the vSwitch
-* Dynamic Virtual Machine Multi-Queue (d.VMMQ)
- 
-### Storage Replica expanded to include:
 
-- Test failover is a new feature that allows mounting of destination storage in order to validate replication or backup data. For more information, see [Frequently Asked Questions about Storage Replica](https://docs.microsoft.com/en-us/windows-server/storage/storage-replica/storage-replica-frequently-asked-questions).
-- Log Performance improvements v1.1
-- Storage Replica is available in Standard Edition and can create 1 Partnership with 1 Resource Group with single 2TB volumes. The feature can replicate between clusters, asynchronously and synchronously.
+* Dynamic Virtual Machine Multi-Queue (d.VMMQ)
 
 ### Low Extra Delay Background Transport
 
@@ -238,8 +267,7 @@ The [Windows Time Service](https://docs.microsoft.com/en-us/windows-server/netwo
 
 ### High performance SDN gateways
 
-[High performance SDN gateways](https://docs.microsoft.com/en-us/windows-server/networking/sdn/gateway-performance) in Windows Server 2019 greatly improves the performance for IPsec and GRE connections. 
-All this, with huge reductions in the CPU cycles/per byte, thereby providing ultra-high-performance throughput with much less CPU utilization.
+[High performance SDN gateways](https://docs.microsoft.com/en-us/windows-server/networking/sdn/gateway-performance) in Windows Server 2019 greatly improves the performance for IPsec and GRE connections, providing ultra-high-performance throughput with much less CPU utilization.
 <br/>
 
 ### New Deployment UI and Windows Admin Center extension for SDN
@@ -248,5 +276,5 @@ Now, with Windows Server 2019, it’s easy to deploy and manage through a new de
 
 ### Persistent Memory support for Hyper-V VMs
 
-To leverage the high throughput and low latency of persistent memory (a.k.a. storage class memory) in virtual machines as well, it can now be projected directly into VMs. This can help to drastically reduce database transaction latency or reduce recovery times for low latency in-memory databases on failure.
+To leverage the high throughput and low latency of persistent memory (a.k.a. storage class memory) in virtual machines, it can now be projected directly into VMs. This can help to drastically reduce database transaction latency or reduce recovery times for low latency in-memory databases on failure.
 

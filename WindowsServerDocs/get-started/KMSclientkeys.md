@@ -11,7 +11,7 @@ ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ---
 
-# Appendix A: KMS Client Setup Keys
+# KMS Client Setup Keys
 
 >Applies To: Windows Server 2019, Windows Server Semi-Annual Channel, Windows Server 2016, Windows 10
 
