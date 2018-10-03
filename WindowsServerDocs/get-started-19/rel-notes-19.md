@@ -44,7 +44,7 @@ The following known issues are present in Windows Server 2019.
     </tr>
 <tr>
       <td>Unable to add Windows display language using Windows Server 2019 Desktop Experience </td>
-      <td>Customers using the Desktop Experience on Windows Server 2019 are currently unable to install language packs using the Settings app’s Language page. In order to add a new Windows display language, follow the procedure in <a href = 'https://support.microsoft.com/kb/4466511'>this</a> KB article.
+      <td>Customers using the Desktop Experience on Windows Server 2019 are currently unable to install language packs using the Settings app’s Language page. In order to add a new Windows display language, follow the procedure in <a href = 'https://support.microsoft.com/help/4466511/cannot-configure-language-pack-for-windows-server-2019'>this</a> KB article.
       </td>
     </tr>
 
