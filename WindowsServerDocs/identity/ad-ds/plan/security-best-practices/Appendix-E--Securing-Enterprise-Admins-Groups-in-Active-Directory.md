@@ -24,7 +24,7 @@ Enterprise Admins are, by default, members of the Administrators group in each d
 
 For the Enterprise Admins group in the forest:  
 
-1.  In GPOs linked to OUs containing member servers and workstations in each domain, the Enterprise Admins group should be added to the following user rights in **Computer Configuration\Policies\Windows Settings\Security Settings\Local Settings\User Rights Assignments**:  
+1.  In GPOs linked to OUs containing member servers and workstations in each domain, the Enterprise Admins group should be added to the following user rights in **Computer Configuration\Policies\Windows Settings\Security Settings\Local Policies\User Rights Assignments**:  
 
     -   Deny access to this computer from the network  
 
