@@ -60,7 +60,7 @@ After you peer virtual networks, resources in either virtual network can directl
 -   Virtual machines in a virtual network can access the internal load-balancer in the peered virtual network.
 
 You can apply access control lists (ACLs) in either virtual network to block access to other virtual networks or subnets if desired. If you open full connectivity between peered virtual networks (which is the default option), you
-can apply ACLs to specific subnets or virtual machines to block or deny specific access. To learn more about ACLs, see [Use Access Control Lists (ACLs) to Manage Datacenter Network Traffic Flow](https://docs.microsoft.com/en-us/windows-server/networking/sdn/manage/use-acls-for-traffic-flow).
+can apply ACLs to specific subnets or virtual machines to block or deny specific access. To learn more about ACLs, see [Use Access Control Lists (ACLs) to Manage Datacenter Network Traffic Flow](https://docs.microsoft.com/windows-server/networking/sdn/manage/use-acls-for-traffic-flow).
 
 ## Service chaining
 
@@ -69,7 +69,7 @@ You can configure user-defined routes that point to virtual machines in peered v
 You can deploy hub-and-spoke networks, where the hub virtual network can host infrastructure components such as a network virtual appliance. All the spoke virtual networks peer with the hub virtual network. Traffic can flow through
 network virtual appliances in the hub virtual network.
 
-Virtual network peering enables the next hop in a user-defined route to be the IP address of a virtual machine in the peered virtual network. To learn more about user-defined routes, see [Use Network Virtual Appliances on a Virtual Network](https://docs.microsoft.com/en-us/windows-server/networking/sdn/manage/use-network-virtual-appliances-on-a-vn).
+Virtual network peering enables the next hop in a user-defined route to be the IP address of a virtual machine in the peered virtual network. To learn more about user-defined routes, see [Use Network Virtual Appliances on a Virtual Network](https://docs.microsoft.com/windows-server/networking/sdn/manage/use-network-virtual-appliances-on-a-vn).
 
 ## Gateways and on-premises connectivity
 

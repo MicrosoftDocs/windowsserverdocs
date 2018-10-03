@@ -508,7 +508,7 @@ This consistency means that your applications are now easier to scale, and you c
                                             </div>
                                         </div>
                                         <div class="cardText">
-                                        <h3><a href="https://docs.microsoft.com/en-us/virtualization/windowscontainers/container-networking/architecture">Windows Container Networking</a><hr /></h3>
+                                        <h3><a href="https://docs.microsoft.com/virtualization/windowscontainers/container-networking/architecture">Windows Container Networking</a><hr /></h3>
                                         <p>
                                         Windows Container Networking allows you to create and manage networks for connecting container endpoints on both Windows 10 and Windows Server hosts by using standard industry tools and workflows. Windows container networks support multiple topologies, including private, flat-L2, and routed-L3.</p>
 

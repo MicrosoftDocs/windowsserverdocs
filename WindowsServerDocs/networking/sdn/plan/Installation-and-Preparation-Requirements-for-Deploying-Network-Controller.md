@@ -96,7 +96,7 @@ Finally, the next thing you want to do is deploy Network Controller cluster node
 
 ### Step 4. Configure Service Principal Name if using Kerberos based authentication
 
-If Network Controller is using Kerberos-based authentication for communication with management clients, you must configure a Service Principal Name (SPN) for Network Controller in Active Directory. The Network Controller automatically configures the SPN. All you need to do is to provide permissions for the Network Controller machines to register and modify the SPN. For more details, see [Configure Service Principal Names (SPN)](https://docs.microsoft.com/en-us/windows-server/networking/sdn/security/kerberos-with-spn#configure-service-principal-names-spn).
+If Network Controller is using Kerberos-based authentication for communication with management clients, you must configure a Service Principal Name (SPN) for Network Controller in Active Directory. The Network Controller automatically configures the SPN. All you need to do is to provide permissions for the Network Controller machines to register and modify the SPN. For more details, see [Configure Service Principal Names (SPN)](https://docs.microsoft.com/windows-server/networking/sdn/security/kerberos-with-spn#configure-service-principal-names-spn).
 
 ## Deployment options
 
@@ -120,7 +120,7 @@ There are three gateway virtual machines; two are active, and one is redundant.
   
   
   
-For TP5-based deployment automation, Active Directory must be available and reachable from these subnets. For more information about Active Directory, see [Active Directory Domain Services Overview](https://docs.microsoft.com/en-us/windows-server/identity/ad-ds/get-started/virtual-dc/active-directory-domain-services-overview).  
+For TP5-based deployment automation, Active Directory must be available and reachable from these subnets. For more information about Active Directory, see [Active Directory Domain Services Overview](https://docs.microsoft.com/windows-server/identity/ad-ds/get-started/virtual-dc/active-directory-domain-services-overview).  
   
 >[!IMPORTANT] 
 >If you deploy using VMM, ensure your infrastructure virtual machines (VMM Server, AD/DNS, SQL Server, etc.) are not hosted on any of the four hosts shown in the diagrams.  

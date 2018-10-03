@@ -18,7 +18,7 @@ ms.localizationpriority: high
 
  <ul class="cardse panelContent cols cols3">
     <li>
-        <a href="https://docs.microsoft.com/en-us/windows-insider/at-work-pro/wip-4-biz-feedback-hub">
+        <a href="https://docs.microsoft.com/windows-insider/at-work-pro/wip-4-biz-feedback-hub">
         <div class="cardSize">
             <div class="cardPadding">
                 <div class="card">

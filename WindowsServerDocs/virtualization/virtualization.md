@@ -44,7 +44,7 @@ Virtualization in Windows Server is one of the foundational technologies require
        </a>
     </li>
 <li>
-          <a href="https://docs.microsoft.com/en-us/windows-server/virtualization/hyper-v/hyper-v-server-2016">
+          <a href="https://docs.microsoft.com/windows-server/virtualization/hyper-v/hyper-v-server-2016">
           <div class="cardSize">
             <div class="cardPadding">
                 <div class="card">

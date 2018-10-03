@@ -90,7 +90,7 @@ Remote Credential Guard helps you protect your credentials over a Remote Desktop
 This 5-minute video demos Credential Guard and Remote Credential Guard.         
 
 ## Hardening the OS and applications
-### [Windows Defender Application Control (WDAC) Deployment Guide](https://docs.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control)
+### [Windows Defender Application Control (WDAC) Deployment Guide](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control)
 WDAC is configurable code integrity (CI) policy that helps enterprises control what applications run in their environmemnt and carries no specific hardware or software requirements other than running Windows 10.
 
 ### [Device Guard demo video](https://www.youtube.com/watch?v=F-pTkesjkhI)
