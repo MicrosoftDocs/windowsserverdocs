@@ -8441,10 +8441,15 @@
   "redirect_url": "/windows-server/manage/windows-admin-center/overview",
   "redirect_document_id": false
 },
-{
-  "source_path": "WindowsServerDocs/administration/kernel-soft-reboot.md",
-  "redirect_url": "/windows-server/windows-server",
-  "redirect_document_id": true
-}
+    {
+      "source_path": "WindowsServerDocs/administration/kernel-soft-reboot.md",
+      "redirect_url": "/windows-server/windows-server",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/windows-server.md",
+      "redirect_url": "/windows-server/index",
+      "redirect_document_id": true
+    }
   ]
 }
