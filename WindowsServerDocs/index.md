@@ -4,7 +4,7 @@ hide_bc: true
 author: coreyp
 ms.author: apexprodleads
 ms.topic: hub-page
-title: Widows Server documentation
+title: Windows Server documentation
 description: Windows Server documentation helps IT professionals evaluate, plan, deploy, secure, and manage Windows Server
 ---
 
