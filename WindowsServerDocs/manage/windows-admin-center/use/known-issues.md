@@ -34,7 +34,7 @@ If you encounter an issue not described on this page, please [let us know](http:
   - To recreate the rule, perform the following command from an elevated PowerShell console, replacing \<port> with the port configured for Windows Admin Center (default 443.)
 
 ```powershell
-New-NetFirewallRule -Name "SmeInboundException" -Description "Windows Admin Center inbound port exception" -LocalPort <port> -RemoteAddress Any -Protocol TCP -DisplayName "SmeInboundException"
+New-NetFirewallRule -DisplayName "SmeInboundOpenException" -Description "Windows Admin Center inbound port exception" -LocalPort <port> -RemoteAddress Any -Protocol TCP
 ```
  
 >[!IMPORTANT]
