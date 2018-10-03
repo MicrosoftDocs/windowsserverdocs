@@ -17,7 +17,7 @@ This topic explains the new and changed functionality in storage in Windows Serv
 
 ## What's new in storage in Windows Server 2019 and Windows Server, version 1809
 
-This release of Windows Server builds on the new functionality included in Windows Server, version 1803 and Windows Server, version 1709 by adding the following changes and technologies.
+This release of Windows Server builds on the new functionality included in Windows Server, version 1803 and Windows Server, version 1709 (so make sure to read those sections of this topic as well) by adding the following changes and technologies.
 
 ### Manage storage with Windows Admin Center
 
@@ -46,8 +46,7 @@ Storage Replica was first released as a technology for Windows Server 2016 Datac
 
 #### Storage Replica in Windows Server, Standard Edition
 
-Beginning with Windows Server 2019 and Windows Server, version 1809, responding to customer requests, we've added Storage Replica to Windows Server, Standard Edition, not just on Datacenter Edition.
-Storage Replica running Windows Server, Standard Edition, has the following limitations:
+You can now use Storage Replica with Windows Server, Standard Edition in addition to Datacenter Edition. Storage Replica running on Windows Server, Standard Edition, has the following limitations:
 
 - Storage Replica replicates a single volume instead of an unlimited number of volumes.
 - Volumes can have one partnership instead of an unlimited number of partners.
@@ -78,7 +77,7 @@ For more information, see [Windows Server Semi-annual Channel Overview](https://
 The disaster recovery protection added by Storage Replica in Windows Server 2016 is now expanded to include:
 
 - **Test failover**: the option to mount the destination storage is now possible through the test failover feature. You can mount a snapshot of the replicated storage on destination nodes temporarily for testing or backup purposes. For more information, see [Frequently Asked Questions about Storage Replica](https://aka.ms/srfaq).
-- **Project Honolulu support**: Support for graphical management of server to server replication is now available in Project Honolulu. This removes the requirement to use PowerShell to manage a common disaster protection workload.
+- **Windows Admin Center support**: Support for graphical management of server to server replication is now available in Windows Admin Center. This removes the requirement to use PowerShell to manage a common disaster protection workload.
 
 ### SMB
 
