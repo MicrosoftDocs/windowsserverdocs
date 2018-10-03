@@ -28,7 +28,8 @@ A KMS host running on Windows 10 or Windows 8.1 can only activate computers runn
 The following table summarizes KMS host and client requirements for networks that include Windows Server 2016, Windows Server 2019 and Windows 10 clients.
 
 >[!NOTE]
->**Note:**  Updates might be required on the KMS server to support activation of any of these newer clients. If you receive activation errors, check that you have the appropriate updates listed below this table.
+>- Updates might be required on the KMS server to support activation of any of these newer clients. If you receive activation errors, check that you have the appropriate updates listed below this table.
+>- If you are working with virtual machines, see [Automatic Virtual Machine Activation](vm-activation-19.md) for information and AVMA keys.
 
 |Product key group|KMS can be hosted on|Windows editions activated by this KMS host|  
 |-----------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------|  
