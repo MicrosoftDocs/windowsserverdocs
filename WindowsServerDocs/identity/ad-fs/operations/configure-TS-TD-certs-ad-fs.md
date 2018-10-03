@@ -113,4 +113,4 @@ If **AutoCertificateRollover** is set to **False**, AD FS will not automatically
 After allowing a sufficient period of time for all of your federation partners to consume the new secondary certificate, promote this secondary certificate to primary (in the MMC snap-in, click the secondary token signing certificate and in the Actions pane, click **Set As Primary**.)
 
 ## Updating Azure AD
-AD FS provides single sign-on access to Microsoft cloud services such as Office 365 by authenticating users via their existing AD DS credentials.  For additional information on using certificates see [Renew federation certificates for Office 365 and Azure AD](https://docs.microsoft.com/en-us/azure/active-directory/connect/active-directory-aadconnect-o365-certs).
+AD FS provides single sign-on access to Microsoft cloud services such as Office 365 by authenticating users via their existing AD DS credentials.  For additional information on using certificates see [Renew federation certificates for Office 365 and Azure AD](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnect-o365-certs).

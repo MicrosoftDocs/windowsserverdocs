@@ -21,7 +21,7 @@ ms.date: 6/27/2018
 This topic describes the known issues in System Insights that impact the latest Insider Preview build.
 
 >[!IMPORTANT]
->Before reporting any bugs, please ensure you're running the latest build. Visit [this page](https://www.microsoft.com/en-us/software-download/windowsinsiderpreviewserver) to get the latest Windows Server 2019 Preview build, and download the latest System Insights extension for Windows Admin Center [using the extension manager](https://docs.microsoft.com/en-us/windows-server/manage/windows-admin-center/configure/using-extensions).
+>Before reporting any bugs, please ensure you're running the latest build. Visit [this page](https://www.microsoft.com/en-us/software-download/windowsinsiderpreviewserver) to get the latest Windows Server 2019 Preview build, and download the latest System Insights extension for Windows Admin Center [using the extension manager](https://docs.microsoft.com/windows-server/manage/windows-admin-center/configure/using-extensions).
 
 ## Known issues
 

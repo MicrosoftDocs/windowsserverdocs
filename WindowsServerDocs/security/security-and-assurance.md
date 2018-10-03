@@ -165,7 +165,7 @@ Windows Server security provides layers of protection built into the operating s
                     <div class="cardText">
                         <h3>Hardening the OS and applications</h3>
 <HR />
-                        <p><h3><a href="https://docs.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control">Windows Defender Application Control (WDAC) Deployment Guide</a></h3>WDAC is configurable code integrity (CI) policy that helps enterprises control what applications run in their environmemnt and carries no specific hardware or software requirements other than running Windows 10.</p>
+                        <p><h3><a href="https://docs.microsoft.com/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control">Windows Defender Application Control (WDAC) Deployment Guide</a></h3>WDAC is configurable code integrity (CI) policy that helps enterprises control what applications run in their environmemnt and carries no specific hardware or software requirements other than running Windows 10.</p>
 <HR />
                         <p><h3><a href="https://www.youtube.com/watch?v=F-pTkesjkhI">Device Guard demo video</a></h3>Device Guard is a combination of WDAC and Hypervisor-protected code integrity (HVCI). This 7-minute video presents Device Guard and its usage on Windows Server.</p>
 <HR />

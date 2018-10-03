@@ -18,7 +18,7 @@ This topic describes some of the new features in Windows Server 2019.
 
 ## Container networking with Kubernetes
 
-[Container networking with Kubernetes](https://docs.microsoft.com/en-us/windows-server/networking/sdn/technologies/containers/container-networking-overview) in Windows Server 2019 greatly improves usability of Kubernetes on Windows by enhancing platform networking resiliency and support of container networking plugins. 
+[Container networking with Kubernetes](https://docs.microsoft.com/windows-server/networking/sdn/technologies/containers/container-networking-overview) in Windows Server 2019 greatly improves usability of Kubernetes on Windows by enhancing platform networking resiliency and support of container networking plugins. 
 Additionally, customers deploying workloads on Kubernetes network security to protect both Linux and Windows services using embedded tooling.
 
 ## Group managed service accounts for containers
@@ -34,8 +34,8 @@ Applications running in containers that need to talk over SPI, I2C, GPIO, and UA
 ## Additional features
 In addition to features that are new in Windows Server version 1809, the following new features and capabilities for [Windows Server 2019](../get-started-19/get-started-19.md) also apply to Windows Server version 1809:
 
-* [Windows Admin Center](https://docs.microsoft.com/en-us/windows-server/manage/windows-admin-center/overview)
-* [Server Core App Compatibility feature on demand (FOD) ](https://docs.microsoft.com/en-us/windows-server/get-started-19/install-fod-19)
+* [Windows Admin Center](https://docs.microsoft.com/windows-server/manage/windows-admin-center/overview)
+* [Server Core App Compatibility feature on demand (FOD) ](https://docs.microsoft.com/windows-server/get-started-19/install-fod-19)
 * System Insights 
 * Shielded Virtual Machines 
 * Storage Migration Service (SMS) 
@@ -43,5 +43,5 @@ In addition to features that are new in Windows Server version 1809, the followi
 * Azure Network Adapter 
 * HTTP/2
 * [Low Extra Delay Background Transport (LEDBAT)](https://blogs.technet.microsoft.com/networking/2018/07/25/ledbat/)
-* [Windows Time Service](https://docs.microsoft.com/en-us/windows-server/networking/windows-time-service/insider-preview)
+* [Windows Time Service](https://docs.microsoft.com/windows-server/networking/windows-time-service/insider-preview)
 

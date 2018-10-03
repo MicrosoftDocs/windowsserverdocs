@@ -28,7 +28,7 @@ System Insights is a new feature available in Windows Server 2019 that brings lo
 
 ### Storage Replica expanded to include:
 
-- Test failover is a new feature that allows mounting of destination storage in order to validate replication or backup data. For more information, see [Frequently Asked Questions about Storage Replica](https://docs.microsoft.com/en-us/windows-server/storage/storage-replica/storage-replica-frequently-asked-questions).
+- Test failover is a new feature that allows mounting of destination storage in order to validate replication or backup data. For more information, see [Frequently Asked Questions about Storage Replica](https://docs.microsoft.com/windows-server/storage/storage-replica/storage-replica-frequently-asked-questions).
 
 - Log Performance improvements v1.1
 
@@ -38,11 +38,11 @@ System Insights is a new feature available in Windows Server 2019 that brings lo
 
 ### Windows Admin Center
 
-[Windows Admin Center](https://docs.microsoft.com/en-us/windows-server/manage/windows-admin-center/overview) is an evolution of Windows Server in-box management tools; it’s a single pane of glass that consolidates all aspects of local and remote server management. 
+[Windows Admin Center](https://docs.microsoft.com/windows-server/manage/windows-admin-center/overview) is an evolution of Windows Server in-box management tools; it’s a single pane of glass that consolidates all aspects of local and remote server management. 
 As a locally deployed, browser-based management experience, an Internet connection and Azure aren’t required. Windows Admin Center gives you full control of all aspects of your deployment, 
 including private networks that aren’t Internet-connected.
 <br/><br/>
-* Windows Admin Center is a free download, separate from the Windows Server 2019 download, for enhanced flexibility and remote management strategies.  See the Windows Admin Center OS support [matrix](https://docs.microsoft.com/en-us/windows-server/manage/windows-admin-center/plan/installation-options) for installation and management compatibility.
+* Windows Admin Center is a free download, separate from the Windows Server 2019 download, for enhanced flexibility and remote management strategies.  See the Windows Admin Center OS support [matrix](https://docs.microsoft.com/windows-server/manage/windows-admin-center/plan/installation-options) for installation and management compatibility.
 
 
 ### Storage Migration Service
@@ -57,7 +57,7 @@ Storage Migration Service (SMS) is a new role included in Windows Server Standar
 
 ### Server Core app compatibility feature on demand
 
-The [Server Core App Compatibility feature on demand (FOD)](https://docs.microsoft.com/en-us/windows-server/get-started-19/install-fod-19) significantly improves the app compatibility of the Windows Server Core installation option by including a subset of binaries and components from Windows Server with the Desktop Experience, without adding the Windows Server Desktop Experience graphical environment itself.  This is done to increase the functionality and compatibility of Server Core while keeping it as lean as possible.  
+The [Server Core App Compatibility feature on demand (FOD)](https://docs.microsoft.com/windows-server/get-started-19/install-fod-19) significantly improves the app compatibility of the Windows Server Core installation option by including a subset of binaries and components from Windows Server with the Desktop Experience, without adding the Windows Server Desktop Experience graphical environment itself.  This is done to increase the functionality and compatibility of Server Core while keeping it as lean as possible.  
 
 This optional feature on demand is available on a separate ISO and can be added to Windows Server Core installations and images only, using DISM. 
 
@@ -75,21 +75,21 @@ ATP's deep platform sensors and response actions expose memory and kernel level 
 
 -   For more information about Windows Defender ATP, see [Overview of Windows
     Defender ATP
-    capabilities](https://docs.microsoft.com/en-us/windows/security/threat-protection/windows-defender-atp/overview).
+    capabilities](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-atp/overview).
 
 -   For more information on onboarding servers, see [Onboard servers to Windows
     Defender ATP
-    service](https://docs.microsoft.com/en-us/windows/security/threat-protection/windows-defender-atp/configure-server-endpoints-windows-defender-advanced-threat-protection).
+    service](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-atp/configure-server-endpoints-windows-defender-advanced-threat-protection).
 
 **Windows Defender ATP Exploit Guard** is a new set of host-intrusion prevention capabilities. The four components of Windows Defender Exploit Guard are designed to lock down the device against a wide variety of attack vectors and block behaviors commonly used in malware attacks, while enabling you to balance security risk and productivity requirements.
 
 -   [Attack Surface
-    Reduction(ASR)](https://docs.microsoft.com/en-us/windows/security/threat-protection/windows-defender-exploit-guard/attack-surface-reduction-exploit-guard?ocid=cx-blog-mmpc) is set of controls that enterprises can enable to prevent malware from
+    Reduction(ASR)](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-exploit-guard/attack-surface-reduction-exploit-guard?ocid=cx-blog-mmpc) is set of controls that enterprises can enable to prevent malware from
     getting on the machine by blocking suspicious malicious files (for example,
     Office files), scripts, lateral movement, ransomware behavior, and
     email-based threats.
 
--   [Network protection](https://docs.microsoft.com/en-us/windows/security/threat-protection/windows-defender-exploit-guard/network-protection-exploit-guard?ocid=cx-blog-mmpc)
+-   [Network protection](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-exploit-guard/network-protection-exploit-guard?ocid=cx-blog-mmpc)
     protects the endpoint against web-based threats by blocking any outbound
     process on the device to untrusted hosts/IP addresses through Windows
     Defender SmartScreen.
@@ -100,13 +100,13 @@ ATP's deep platform sensors and response actions expose memory and kernel level 
     accessing your protected folders.
 
 -   [Exploit
-    protection](https://docs.microsoft.com/en-us/windows/security/threat-protection/windows-defender-exploit-guard/exploit-protection-exploit-guard) is a set of mitigations for vulnerability exploits (replacing EMET)that can
+    protection](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-exploit-guard/exploit-protection-exploit-guard) is a set of mitigations for vulnerability exploits (replacing EMET)that can
     be easily configured to protect your system and applications.
 
 
 
 [Windows Defender Application
-Control](https://docs.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control) (also
+Control](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control) (also
 known as Code Integrity (CI) policy) was released in Windows Server 2016.
 Customer feedback has suggested that it is a great concept, but hard to deploy.
 To address this, we have built default CI policies, which will allow all Windows
@@ -115,11 +115,11 @@ executables that can bypass CI. 
 
 ### Security with Software Defined Networking (SDN)
 
-[Security with SDN](https://docs.microsoft.com/en-us/windows-server/networking/sdn/security/sdn-security-top) delivers many features to increase customer confidence in running workloads, either on-premises, or as a service provider in the cloud. 
+[Security with SDN](https://docs.microsoft.com/windows-server/networking/sdn/security/sdn-security-top) delivers many features to increase customer confidence in running workloads, either on-premises, or as a service provider in the cloud. 
 
 These security enhancements are integrated into the comprehensive SDN platform introduced in Windows Server 2016.
 
-For a complete list of what’s new in SDN see, [What’s New in SDN for Windows Server 2019](https://docs.microsoft.com/en-us/windows-server/networking/sdn/sdn-whats-new).
+For a complete list of what’s new in SDN see, [What’s New in SDN for Windows Server 2019](https://docs.microsoft.com/windows-server/networking/sdn/sdn-whats-new).
 
 ### Shielded Virtual Machines improvements
 
@@ -151,7 +151,7 @@ It is now possible to run Windows and Linux-based containers on the same contain
 
 Windows Server 2019 continues the improvements to compute, networking and storage from the semi-annual channel releases needed to support Kubernetes on Windows. More details will be available in upcoming Kubernetes releases.
 
-- [Container Networking](https://docs.microsoft.com/en-us/windows-server/networking/sdn/technologies/containers/container-networking-overview) in Windows Server 2019 greatly improves usability of Kubernetes on Windows by enhancing platform networking resiliency and support of container networking plugins.
+- [Container Networking](https://docs.microsoft.com/windows-server/networking/sdn/technologies/containers/container-networking-overview) in Windows Server 2019 greatly improves usability of Kubernetes on Windows by enhancing platform networking resiliency and support of container networking plugins.
 
 - Deployed workloads on Kubernetes will be able to use network security to protect both Linux and Windows services using embedded tooling.
 
@@ -171,7 +171,7 @@ Windows Server 2019 continues the improvements to compute, networking and storag
 
 - **Management experience using Windows Admin Center \(preview\)**
 
-    We've made it easier than ever to see which containers are running on your computer and manage individual containers with a new extension for Windows Admin Center. Look for the "Containers" extension in the [Windows Admin Center public feed](https://docs.microsoft.com/en-us/windows-server/manage/windows-admin-center/configure/using-extensions).
+    We've made it easier than ever to see which containers are running on your computer and manage individual containers with a new extension for Windows Admin Center. Look for the "Containers" extension in the [Windows Admin Center public feed](https://docs.microsoft.com/windows-server/manage/windows-admin-center/configure/using-extensions).
 
 
 ## Hyper-converged infrastructure
@@ -193,11 +193,11 @@ Windows Server 2019 continues the improvements to compute, networking and storag
 
 - **Windows Admin Center**
 
-    Manage and monitor Storage Spaces Direct with the new [purpose-built Dashboard](https://docs.microsoft.com/en-us/windows-server/manage/windows-admin-center/use/manage-hyper-converged) and experience in Windows Admin Center. Create, open, expand, or delete volumes with just a few clicks. Monitor performance like IOPS and IO latency from the overall cluster down to the individual SSD or HDD. Available at no additional cost for Windows Server 2016 and Windows Server 2019.
+    Manage and monitor Storage Spaces Direct with the new [purpose-built Dashboard](https://docs.microsoft.com/windows-server/manage/windows-admin-center/use/manage-hyper-converged) and experience in Windows Admin Center. Create, open, expand, or delete volumes with just a few clicks. Monitor performance like IOPS and IO latency from the overall cluster down to the individual SSD or HDD. Available at no additional cost for Windows Server 2016 and Windows Server 2019.
 
 - **Performance history**
 
-    Get effortless visibility into resource utilization and performance with [built-in history](https://docs.microsoft.com/en-us/windows-server/storage/storage-spaces/performance-history-for-vhds). Over 50 essential counters spanning compute, memory, network, and storage are automatically collected and stored on the cluster for up to one year. Best of all, there’s nothing to install, configure, or start – it just works. Visualize in Windows Admin Center or query and process in PowerShell.
+    Get effortless visibility into resource utilization and performance with [built-in history](https://docs.microsoft.com/windows-server/storage/storage-spaces/performance-history-for-vhds). Over 50 essential counters spanning compute, memory, network, and storage are automatically collected and stored on the cluster for up to one year. Best of all, there’s nothing to install, configure, or start – it just works. Visualize in Windows Admin Center or query and process in PowerShell.
 
 - **Scale up to 4 PB per cluster**
 
@@ -244,12 +244,12 @@ Windows Server 2019 continues the improvements to compute, networking and storag
 
 ### Encrypted Networks
 
-[Encrypted Networks](https://docs.microsoft.com/en-us/windows-server/networking/sdn/sdn-whats-new) - Virtual network encryption allows encryption of virtual network traffic between virtual machines that communicate with each other within subnets marked as **Encryption Enabled**. 
+[Encrypted Networks](https://docs.microsoft.com/windows-server/networking/sdn/sdn-whats-new) - Virtual network encryption allows encryption of virtual network traffic between virtual machines that communicate with each other within subnets marked as **Encryption Enabled**. 
 It also utilizes Datagram Transport Layer Security (DTLS) on the virtual subnet to encrypt packets. DTLS protects against eavesdropping, tampering, and forgery by anyone with access to the physical network.
 
 ### Network performance improvements for virtual workloads
 
-[Network performance improvements for virtual workloads](https://docs.microsoft.com/en-us/windows-server/networking/technologies/hpn/hpn-insider-preview) will maximize the network throughput to virtual machines without requiring you to constantly tune or over-provision your host. This lowers the operations and maintenance cost while increasing the available density of your hosts. These new features are:
+[Network performance improvements for virtual workloads](https://docs.microsoft.com/windows-server/networking/technologies/hpn/hpn-insider-preview) will maximize the network throughput to virtual machines without requiring you to constantly tune or over-provision your host. This lowers the operations and maintenance cost while increasing the available density of your hosts. These new features are:
 
 * Receive Segment Coalescing in the vSwitch
 
@@ -262,12 +262,12 @@ This technology is intended for use in deploying large, critical updates across 
 
 ### Windows Time Service
 
-The [Windows Time Service](https://docs.microsoft.com/en-us/windows-server/networking/windows-time-service/insider-preview) includes true UTC-compliant leap second support, a new time protocol called Precision Time Protocol, and end-to-end traceability.
+The [Windows Time Service](https://docs.microsoft.com/windows-server/networking/windows-time-service/insider-preview) includes true UTC-compliant leap second support, a new time protocol called Precision Time Protocol, and end-to-end traceability.
 
 
 ### High performance SDN gateways
 
-[High performance SDN gateways](https://docs.microsoft.com/en-us/windows-server/networking/sdn/gateway-performance) in Windows Server 2019 greatly improves the performance for IPsec and GRE connections, providing ultra-high-performance throughput with much less CPU utilization.
+[High performance SDN gateways](https://docs.microsoft.com/windows-server/networking/sdn/gateway-performance) in Windows Server 2019 greatly improves the performance for IPsec and GRE connections, providing ultra-high-performance throughput with much less CPU utilization.
 <br/>
 
 ### New Deployment UI and Windows Admin Center extension for SDN

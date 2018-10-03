@@ -22,7 +22,7 @@ ms.localizationpriority: medium
 The **Server Core App Compatibility Feature on Demand** is the first feature package that can be added to Windows Server 2019 at any time.
 
 For more information on Features on Demand (FOD), see [Features On
-Demand](https://docs.microsoft.com/en-us/windows-hardware/manufacture/desktop/features-on-demand-v2--capabilities).
+Demand](https://docs.microsoft.com/windows-hardware/manufacture/desktop/features-on-demand-v2--capabilities).
 
 
 ## Why install the App Compatibility FOD? 
@@ -67,7 +67,7 @@ Operating system components that are available as part of the Server Core App Co
 ### To add the Server Core App Compatibility feature on demand (FOD) to a running instance of Server Core
 
  >[!NOTE] 
-   > This procedure uses Deployment Image Servicing and Management (DISM.exe), a command-line tool. For more information about DISM commands, see [DISM Capabilities Package Servicing Command-Line Options](https://docs.microsoft.com/en-us/windows-hardware/manufacture/desktop/dism-capabilities-package-servicing-command-line-options).
+   > This procedure uses Deployment Image Servicing and Management (DISM.exe), a command-line tool. For more information about DISM commands, see [DISM Capabilities Package Servicing Command-Line Options](https://docs.microsoft.com/windows-hardware/manufacture/desktop/dism-capabilities-package-servicing-command-line-options).
 
 1. Download the Server FOD optional packages ISO, and copy the ISO to a shared folder on your local network.
 

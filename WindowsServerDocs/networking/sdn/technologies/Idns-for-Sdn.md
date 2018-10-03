@@ -65,7 +65,7 @@ When you deploy SDN in Windows Server 2016 by using scripts, iDNS is automatical
 
 For more information, see the following topics.
 
-- [Deploy a Software Defined Network infrastructure using scripts](https://docs.microsoft.com/en-us/windows-server/networking/sdn/deploy/deploy-a-software-defined-network-infrastructure-using-scripts)
+- [Deploy a Software Defined Network infrastructure using scripts](https://docs.microsoft.com/windows-server/networking/sdn/deploy/deploy-a-software-defined-network-infrastructure-using-scripts)
 
 
 ## Understanding iDNS Deployment Steps

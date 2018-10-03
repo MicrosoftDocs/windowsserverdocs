@@ -21,7 +21,7 @@ Use the following information to configure replication settings and create a rec
 
 ## What is Azure Site Recovery and how does it work with Windows Admin Center? 
 
-**Azure Site Recovery** is an Azure service that replicates workloads running on VMs so that your business-critical infrastructure is protected in case of a disaster.  [Learn more about Azure Site Recovery](https://docs.microsoft.com/en-us/azure/site-recovery/site-recovery-overview).
+**Azure Site Recovery** is an Azure service that replicates workloads running on VMs so that your business-critical infrastructure is protected in case of a disaster.  [Learn more about Azure Site Recovery](https://docs.microsoft.com/azure/site-recovery/site-recovery-overview).
 
 Azure Site Recovery consists of two components: **replication** and **failover**. The replication portion protects your VMs in case of disaster by replicating the target VM's VHD to an Azure storage account. You can then failover these VMs and run them in Azure in the event of a disaster. You can also perform a test failover without impacting your primary VMs to test the recovery process in Azure.
 
@@ -76,9 +76,9 @@ This could take up to 10 minutes. You can watch the progress by going to **Notif
 
  Although you don't need to complete this step when starting VM replication (the VM will already be protected with just replication), we recommend you configure failover settings when you set up Azure Site Recovery. If you want to prepare for failover to an Azure VM, complete the following steps:
 
-1. [Set up an Azure network](https://docs.microsoft.com/en-us/azure/site-recovery/hyper-v-site-walkthrough-prepare-azure) the failed-over VM will attach to this VNET. Note that the other steps listed in the linked page are completed automatically by Windows Admin Center;  you only need to set up the Azure network.
+1. [Set up an Azure network](https://docs.microsoft.com/azure/site-recovery/hyper-v-site-walkthrough-prepare-azure) the failed-over VM will attach to this VNET. Note that the other steps listed in the linked page are completed automatically by Windows Admin Center;  you only need to set up the Azure network.
 
-2. [Run a test failover](https://docs.microsoft.com/en-us/azure/site-recovery/hyper-v-site-walkthrough-test-failover).
+2. [Run a test failover](https://docs.microsoft.com/azure/site-recovery/hyper-v-site-walkthrough-test-failover).
 
 ## Step 4: Create Recovery Plans
 

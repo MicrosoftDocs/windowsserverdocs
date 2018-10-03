@@ -18,7 +18,7 @@ ms.localizationpriority: medium
 
 >Applies To: Windows Server Semi-Annual Channel
 
-These release notes summarize the most critical issues in the Windows Server operating system, including ways to avoid or work around known issues. To learn about new features in this release, see [What's New in Windows Server version 1803](whats-new-in-windows-server-1803.md). Check out [About Windows containers](https://docs.microsoft.com/en-us/virtualization/windowscontainers/about/) if you're interested in running a Windows Server, version 1803, container. 
+These release notes summarize the most critical issues in the Windows Server operating system, including ways to avoid or work around known issues. To learn about new features in this release, see [What's New in Windows Server version 1803](whats-new-in-windows-server-1803.md). Check out [About Windows containers](https://docs.microsoft.com/virtualization/windowscontainers/about/) if you're interested in running a Windows Server, version 1803, container. 
 
 Unless otherwise specified, each reported issue applies to all editions and installation options of Windows Server, version 1803.  
 

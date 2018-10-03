@@ -65,7 +65,7 @@ New-ADServiceAccount -Name 'HGSgMSA' -DnsHostName 'HGSgMSA.yourdomain.com' -Prin
 ```
 
 The gMSA will require the right to generate events in the security log on each HGS server.
-If you use Group Policy to configure User Rights Assignment, ensure that the gMSA account is granted the [generate audit events privilege](https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn221956%28v=ws.11%29) on your HGS servers.
+If you use Group Policy to configure User Rights Assignment, ensure that the gMSA account is granted the [generate audit events privilege](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn221956%28v=ws.11%29) on your HGS servers.
 
 > [!NOTE]
 > Group managed service accounts are available beginning with the Windows Server 2012 Active Directory schema.
@@ -137,7 +137,7 @@ Check your Group Policy objects for the following settings and follow the guidan
 
 **Policy Name:** Network Security: Configure encryption types allowed for Kerberos
 
-**Action**: If this policy is configured, you must update the gMSA account with [Set-ADServiceAccount](https://docs.microsoft.com/en-us/powershell/module/addsadministration/set-adserviceaccount?view=win10-ps) to use only the supported encryption types in this policy. For instance, if your policy only allows AES128\_HMAC\_SHA1 and AES256\_HMAC\_SHA1, you should run `Set-ADServiceAccount -Identity HGSgMSA -KerberosEncryptionType AES128,AES256`.
+**Action**: If this policy is configured, you must update the gMSA account with [Set-ADServiceAccount](https://docs.microsoft.com/powershell/module/addsadministration/set-adserviceaccount?view=win10-ps) to use only the supported encryption types in this policy. For instance, if your policy only allows AES128\_HMAC\_SHA1 and AES256\_HMAC\_SHA1, you should run `Set-ADServiceAccount -Identity HGSgMSA -KerberosEncryptionType AES128,AES256`.
 
 
 
