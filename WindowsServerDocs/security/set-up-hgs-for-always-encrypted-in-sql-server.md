@@ -98,7 +98,9 @@ Run all of the following commands in an elevated PowerShell session.
 
    For Always Encrypted with secure enclaves, the host machines that run SQL Server and machines that run database client applications both need to contact HGS, though only the host machines require attestation.
 
-4. After the machine reboots again, log in as a Domain Admin and configure the attestation service. 
+4. After the machine reboots, HGS will be installed and the server will also be a domain controller with Active Directory configured. 
+   During the Active Directory configuration, the local machine Administrator account is added to the Domain Admins group, and only members of this group can sign in to a domain controller.
+   Sign in using the domain Administrator account (for example, administrator@bastion.local or bastion.local\administrator) or create another Domain Admin account for sign in and then configure the attestation service.
    You will need to choose TPM or host key attestation and run the corresponding command. 
    For the HgsServiceName, specify the DNN you chose.
 
@@ -112,7 +114,7 @@ Run all of the following commands in an elevated PowerShell session.
    Initialize-HgsAttestation -HgsServiceName 'hgs' -TrustHostKey 
    ```
 
-5. Ensure the host machines that run SQL Server will be able to resolve the DNS names of your new HGS domain members by setting up a forwarder from your corporate DNS servers to the new HGS domain controller. If you’re using Windows Server DNS to provide name resolution services for your organization, you can set up a conditional forwarder. To set up this zone, run the following commands in an elevated PowerShell console on a DNS server in your organization. Substitute the names and addresses in the Windows PowerShell syntax below as needed for your environment. After you add more HGS nodes, run this command again to add them as master servers.
+5. Ensure the host machines that run SQL Server will be able to resolve the DNS names of your new HGS domain members by setting up a forwarder from your corporate DNS servers to the new HGS domain controller. If you’re using Windows Server DNS, you can set up a conditional forwarder by running the following commands in an elevated PowerShell console on a DNS server in your organization. Substitute the names and addresses in the Windows PowerShell syntax below as needed for your environment. After you add more HGS nodes, run this command again to add them as master servers.
 
    ```powershell
    Add-DnsServerConditionalForwarderZone -Name <HGS domain name> -ReplicationScope "Forest" -MasterServers <IP addresses of HGS servers>
