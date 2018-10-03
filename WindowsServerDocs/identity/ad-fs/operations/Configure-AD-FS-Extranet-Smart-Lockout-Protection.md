@@ -41,7 +41,7 @@ Extranet Smart Lockout in AD FS 2019 adds the following advantages compared to A
 - Enable audit mode for smart lockout while continuing to enforce previous soft lockout behavior
 
 ## Pre-requisites for Extranet Smart Lockout in AD FS 2016
-The following pre-requisites are required for ESL with AD FS 2016.
+The following pre-requisites are required for ESL with AD FS 2019.
 
 ### Install updates on all nodes in the farm
 First, ensure all Windows Server 2016 AD FS servers are up to date as of the June 2018 Windows Updates and that the AD FS 2016 farm is running at the 2016 farm behavior level.
