@@ -43,7 +43,7 @@ Windows Server Virtualization technologies include updates to Hyper-V, Hyper-V V
        </a>
     </li>
 <li>
-        <a href="../hyper-v/Hyper-V-on-Windows-Server.md">
+        <a href="/hyper-v/Hyper-V-on-Windows-Server.md">
           <div class="cardSize">
             <div class="cardPadding">
                 <div class="card">
