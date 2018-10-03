@@ -204,9 +204,9 @@
 
 ### [Virtual Private Networking (VPN)](remote-access/vpn/vpn-top.md)
 #### [VPN Device Tunnels in Windows 10](remote-access/vpn/vpn-device-tunnel-config.md)
-#### [Windows 10 VPN technical guide](https://docs.microsoft.com/en-us/windows/security/identity-protection/vpn/vpn-guide)
-#### [How to configure Diffie Hellman protocol over IKEv2 VPN connections](https://docs.microsoft.com/en-us/windows/security/identity-protection/vpn/how-to-configure-diffie-hellman-protocol-over-ikev2-vpn-connections)
-#### [How to use single sign on (SSO) over VPN and Wi-Fi connections](https://docs.microsoft.com/en-us/windows/security/identity-protection/vpn/how-to-use-single-sign-on-sso-over-vpn-and-wi-fi-connections)
+#### [Windows 10 VPN technical guide](https://docs.microsoft.com/windows/security/identity-protection/vpn/vpn-guide)
+#### [How to configure Diffie Hellman protocol over IKEv2 VPN connections](https://docs.microsoft.com/windows/security/identity-protection/vpn/how-to-configure-diffie-hellman-protocol-over-ikev2-vpn-connections)
+#### [How to use single sign on (SSO) over VPN and Wi-Fi connections](https://docs.microsoft.com/windows/security/identity-protection/vpn/how-to-use-single-sign-on-sso-over-vpn-and-wi-fi-connections)
 
 
 #### [DirectAccess](remote-access/directaccess/directAccess.md)

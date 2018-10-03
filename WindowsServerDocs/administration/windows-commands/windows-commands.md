@@ -16,7 +16,7 @@ ms.prod: windows-server-threshold
 ---
 # Windows Commands
 
-Use this PDF to find the documentation resources and other technical information that you need to learn about the command shell, and to automate command-line tasks by using scripts or scripting tools.
+Find the documentation resources and other technical information you need to learn about the command shell, and to automate command-line tasks by using scripts or scripting tools.
 
 To find information about a specific command, in the following A-Z menu, click the letter that the command starts with, and then click the command name.
 

@@ -8,7 +8,7 @@ ms.topic: get-started-article
 ms.assetid: 
 ms.author: pashort
 author: shortpatti
-ms.date: 08/23/2018
+ms.date: 10/02/2018
 ---
 
 # Egress metering in virtual network

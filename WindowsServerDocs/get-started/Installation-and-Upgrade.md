@@ -143,5 +143,5 @@ As you are planning your upgrade, be aware of the following guidelines for the m
 
   - You can't migrate from a Windows Server 2008 server core installation to Windows Server 2012 R2 with the Server GUI (called "Server with Full Desktop" in Windows Server). You can switch your upgraded server core installation to Server with Full Desktop, but only on Windows Server 2012 R2. Windows Server 2016 and later *do not* support switching from server core to Full Desktop, so make that switch before you upgrade to Windows Server 2016.
   
-For more information, check out [Evaluation Versions and Upgrade Options for Windows Server 2012](https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/jj574204\(v=ws.11\)), which includes role-specific upgrade details.
+For more information, check out [Evaluation Versions and Upgrade Options for Windows Server 2012](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/jj574204\(v=ws.11\)), which includes role-specific upgrade details.
 

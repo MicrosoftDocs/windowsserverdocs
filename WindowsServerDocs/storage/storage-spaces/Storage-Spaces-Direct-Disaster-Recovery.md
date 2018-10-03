@@ -48,7 +48,7 @@ Storage Replica can be used if you have virtual machines or an SOFS running on y
 
 ## Hyper-V Replica
 
-[Hyper-V Replica](https://docs.microsoft.com/en-us/windows-server/virtualization/hyper-v/manage/set-up-hyper-v-replica) provides virtual machine level replication for disaster recovery on hyper-converged infrastructures. What Hyper-V Replica can do is to take a virtual machine and replicate it to a secondary site or Azure (replica). Then from the secondary site, Hyper-V Replica can replicate the virtual machine to a third (extended replica).
+[Hyper-V Replica](https://docs.microsoft.com/windows-server/virtualization/hyper-v/manage/set-up-hyper-v-replica) provides virtual machine level replication for disaster recovery on hyper-converged infrastructures. What Hyper-V Replica can do is to take a virtual machine and replicate it to a secondary site or Azure (replica). Then from the secondary site, Hyper-V Replica can replicate the virtual machine to a third (extended replica).
 
 ![Hyper-V Replication diagram](media\storage-spaces-direct-disaster-recovery\Disaster-Recovery-Figure2.png)
 

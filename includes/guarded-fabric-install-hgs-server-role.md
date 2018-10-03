@@ -1,4 +1,4 @@
-Add the Host Guardian Service role by running the following command in an elevated PowerShell console:
+Add the Host Guardian Service role by running the following command:
 
 ```powershell
 Install-WindowsFeature -Name HostGuardianServiceRole -IncludeManagementTools -Restart
