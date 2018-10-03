@@ -6,7 +6,7 @@ ms.topic: article
 manager: dongill
 author: rpsqrd
 ms.technology: security-guarded-fabric
-ms.date: 09/24/2018
+ms.date: 10/03/2018
 ---
 
 # Setting up the Host Guardian Service for Always Encrypted with secure enclaves in SQL Server 
@@ -157,7 +157,7 @@ Once HGS is set up, it needs to be configured with attestation information from 
 
 ### Collect TPM attestation artifacts 
 
-If you are using TPM mode, run the following commands on each host machine to install support for attestation and collect the information you’ll need to register with the Host Guardian Service. 
+If you are using TPM mode, run the following commands in an elevated PowerShell session on each host machine to install support for attestation and collect the information you’ll need to register with the Host Guardian Service. 
 
 1. To install the HGS client on your host machine, install the Guarded Host feature, which will also install Hyper-V. 
    While you will not be running VMs on this machine, the hypervisor is required to enable the Virtualization-Based Security features that isolate VBS enclaves.
