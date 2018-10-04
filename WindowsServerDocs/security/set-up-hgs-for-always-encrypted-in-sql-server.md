@@ -120,7 +120,7 @@ Run all of the following commands in an elevated PowerShell session.
 
 ## Set up additional HGS nodes for production deployments
 
-Complete the following steps to add nodes to the cluster. 
+To add nodes to the cluster, run the following commands in an elevated PowerShell session. 
 
 1. [!INCLUDE [Install the HGS server role](../../includes/guarded-fabric-install-hgs-server-role.md)]
 
@@ -155,7 +155,7 @@ Once HGS is set up, it needs to be configured with attestation information from 
 
 ### Collect TPM attestation artifacts 
 
-If you are using TPM mode, run the following commands on each host machine to install support for attestation and collect the information you’ll need to register with the Host Guardian Service. 
+If you are using TPM mode, run the following commands in an elevated PowerShell session on each host machine to install support for attestation and collect the information you’ll need to register with the Host Guardian Service. 
 
 1. To install the HGS client on your host machine, install the Guarded Host feature, which will also install Hyper-V. 
    While you will not be running VMs on this machine, the hypervisor is required to enable the Virtualization-Based Security features that isolate VBS enclaves.
