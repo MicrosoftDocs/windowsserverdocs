@@ -1,7 +1,7 @@
 The Host Guardian Service should be installed in a separate Active Directory forest.
-Ensure that the HGS machine is **not** joined to a domain before you start.
+Ensure that the HGS machine is **not** joined to a domain before you start and sign in as the local machine Administrtor.
 
-In an elevated Windows PowerShell console, run the following commands to install the Host Guardian Service and configure its domain.
+Run the following commands to install the Host Guardian Service and configure its domain.
 The password you specify here will only apply to the Directory Services Repair Mode password for Active Directory; it will *not* change your admin account's login password.
 You may provide any domain name of your choosing for -HgsDomainName.
 

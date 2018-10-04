@@ -30,7 +30,7 @@ Windows Admin Center has no additional cost beyond Windows. You can use Windows 
 
 ## What versions of Windows Server can I manage with Windows Admin Center?
 
-Windows Admin Center will be optimized for Windows Server 2019 and enable key themes in the upcoming Windows Server 2019 release: hybrid cloud scenarios and hyper-converged infrastructure management in particular. Although Windows Admin Center will work best with Windows Server 2019, it supports managing a variety of versions that customers already use: Windows Server 2012 and newer are fully supported. There is also limited functionality for managing Windows Server 2008 R2.
+Windows Admin Center is optimized for Windows Server 2019 to enable key themes in the Windows Server 2019 release: hybrid cloud scenarios and hyper-converged infrastructure management in particular. Although Windows Admin Center will work best with Windows Server 2019, it supports managing a variety of versions that customers already use: Windows Server 2012 and newer are fully supported. There is also limited functionality for managing Windows Server 2008 R2.
 
 ## Is Windows Admin Center a complete replacement for all traditional in-box and RSAT tools?
 
@@ -87,7 +87,7 @@ We are investigating due to customer demand, but there is currently no locked pl
 
 ## Which web browsers are supported by Windows Admin Center?
 
-The latest versions of Microsoft Edge (Windows 10, version 1709 or later) and Google Chrome browsers are tested and supported on Windows 10. [View browser specific known issues](..\use\known-issues.md#browser-specific-issues). Other modern web browsers or other platforms are not currently part of our test matrix and are therefore not officially supported.
+The latest versions of Microsoft Edge (Windows 10, version 1709 or later) and Google Chrome browsers are tested and supported on Windows 10. [View browser specific known issues](..\use\known-issues.md#browser-specific-issues). Other modern web browsers or other platforms are not currently part of our test matrix and are therefore not *officially* supported.
 
 ## How does Windows Admin Center handle security?
 
@@ -107,15 +107,15 @@ Windows Admin Center has an SDK available so that anyone can write their own ext
 
 ## Can I manage Hyper-Converged Infrastructure with Windows Admin Center?
 
-Yes. Windows Admin Center supports the management of hyper-converged clusters running Windows Server 2016 or Windows Server 2019 Insider Preview builds. The hyper-converged cluster manager solution in Windows Admin Center is a production-ready preview and we will continue to enhance and complete key scenarios (in compute, storage, networking, and clustering) to align with the launch of Windows Server 2019 later this year.  For more information, [read more about managing hyper-converged infrastructure](..\use\manage-hyper-converged.md).
+Yes. Windows Admin Center supports the management of hyper-converged clusters running Windows Server 2016 or Windows Server 2019. The hyper-converged cluster manager solution in Windows Admin Center was previously in preview but is now **generally available**, with some new functionality in preview. For more information, [read more about managing hyper-converged infrastructure](..\use\manage-hyper-converged.md).
 
 ## Does Windows Admin Center require System Center?
 
-No.  Windows Admin Center is complementary to System Center, but System Center is not required.
+No. Windows Admin Center is complementary to System Center, but System Center is not required. [Read more about Windows Admin Center and System Center](related-management.md#system-center).
 
 ## Can Windows Admin Center replace System Center Virtual Machine Manager (SCVMM)?
 
-Windows Admin Center and SCVMM are complementary; Windows Admin Center is intended to replace the traditional Microsoft Management Console (MMC) snap ins and the server admin experience.  Windows Admin Center is not intended to replace the monitoring aspects of SCVMM.
+Windows Admin Center and SCVMM are complementary; Windows Admin Center is intended to replace the traditional Microsoft Management Console (MMC) snap ins and the server admin experience.  Windows Admin Center is not intended to replace the monitoring aspects of SCVMM. [Read more about Windows Admin Center and System Center](related-management.md#system-center).
 
 ## What is Windows Admin Center Preview, which version is right for me?
 
@@ -123,10 +123,10 @@ There are two versions of Windows Admin Center<!-- available for download-->:
 
 ### Windows Admin Center
 
-- For IT admins who are not able to update frequently or who want more validation time for the releases they use in production, this version is for you. Our current generally available (GA) release is Windows Admin Center 1809.
-- To get the latest GA release, [download here](https://aka.ms/WACDownload).
+* For IT admins who are not able to update frequently or who want more validation time for the releases they use in production, this version is for you. Our current generally available (GA) release is Windows Admin Center 1809.
+* To get the latest GA release, [download here](https://aka.ms/WACDownload).
 
-- Windows Admin Center GA releases are supported continuously, based on Microsoft’s [Modern Lifecycle Policy](https://na01.safelinks.protection.outlook.com/?url=https%3A%2F%2Fsupport.microsoft.com%2Fen-us%2Fhelp%2F30881%2Fmodern-lifecycle-policy&data=02%7C01%7C%7C5a213cf1adca4176786108d61779470b%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C636722206982112012&sdata=2oQt%2B%2BwG7gn5Gm5iMFNzKirYWyKGxrww0B7b8Tok85Q%3D&reserved=0). This means that only the latest released version of Windows Admin Center GA is serviced and supported, and users must “stay current” by upgrading to the latest Windows Admin Center GA release within 30 days of availability to remain supported. This policy applies to both the Windows Admin Center platform itself, as well as any Microsoft extensions which are GA and published in the Windows Admin Center extension feed. Note that some extensions may be updated more frequently than others, between Windows Admin Center GA releases.
+* Windows Admin Center GA releases are supported continuously, based on Microsoft’s [Modern Lifecycle Policy](https://na01.safelinks.protection.outlook.com/?url=https%3A%2F%2Fsupport.microsoft.com%2Fen-us%2Fhelp%2F30881%2Fmodern-lifecycle-policy&data=02%7C01%7C%7C5a213cf1adca4176786108d61779470b%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C636722206982112012&sdata=2oQt%2B%2BwG7gn5Gm5iMFNzKirYWyKGxrww0B7b8Tok85Q%3D&reserved=0). This means that only the latest released version of Windows Admin Center GA is serviced and supported, and users must “stay current” by upgrading to the latest Windows Admin Center GA release within 30 days of availability to remain supported. This policy applies to both the Windows Admin Center platform itself, as well as any Microsoft extensions which are GA and published in the Windows Admin Center extension feed. Note that some extensions may be updated more frequently than others, between Windows Admin Center GA releases.
 
 ### Windows Admin Center Preview
 
@@ -134,8 +134,8 @@ There are two versions of Windows Admin Center<!-- available for download-->:
 >The current GA version (Windows Admin Center 1809) contains all previous preview functionality.
 >The Insider Preview will return in the coming months.
 
-- For IT admins who want the latest and greatest features on a regular cadence, this version is for you. Our intent is to provide subsequent update releases every month or so. The core platform continues to be production-ready and the license provides production use rights. However, note that you will see the introduction of new tools and capabilities which are clearly marked as PREVIEW and are suitable for evaluation and testing.
-- To get the latest Preview release, registered Insiders may download Windows Admin Center Preview directly from the [Windows Server Insider Preview download page](https://www.microsoft.com/en-us/software-download/windowsinsiderpreviewserver), under the Additional Downloads dropdown. If you have not yet registered as an Insider, see [Getting Started with Windows Server](https://insider.windows.com/en-us/for-business-getting-started-server/) on the Windows Insiders for Business portal. 
+* For IT admins who want the latest and greatest features on a regular cadence, this version is for you. Our intent is to provide subsequent update releases every month or so. The core platform continues to be production-ready and the license provides production use rights. However, note that you will see the introduction of new tools and capabilities which are clearly marked as PREVIEW and are suitable for evaluation and testing.
+* To get the latest Preview release, registered Insiders may download Windows Admin Center Preview directly from the [Windows Server Insider Preview download page](https://www.microsoft.com/en-us/software-download/windowsinsiderpreviewserver), under the Additional Downloads dropdown. If you have not yet registered as an Insider, see [Getting Started with Windows Server](https://insider.windows.com/en-us/for-business-getting-started-server/) on the Windows Insiders for Business portal. 
 
 ## Why was "Windows Admin Center" chosen as the final name for "Project Honolulu"?
 

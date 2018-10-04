@@ -131,7 +131,7 @@ This workaround is of course not ideal and some customers may not be able to mak
 
     -   **For Storage Spaces Direct:**  
 
-        1.  Ensure that each cluster can see that site's storage enclosures only by deploying Storage Spaces Direct. (https://docs.microsoft.com/en-us/windows-server/storage/storage-spaces/hyper-converged-solution-using-storage-spaces-direct) 
+        1.  Ensure that each cluster can see that site's storage enclosures only by deploying Storage Spaces Direct. (https://docs.microsoft.com/windows-server/storage/storage-spaces/hyper-converged-solution-using-storage-spaces-direct) 
 
         2.  Ensure that the SR log volumes will always be on the fastest flash storage and the data volumes on slower high capacity storage.
 

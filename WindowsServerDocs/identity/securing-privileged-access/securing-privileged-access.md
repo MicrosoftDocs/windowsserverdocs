@@ -167,11 +167,11 @@ To provide the strongest protection for Active Directory administrators, set up 
 
 **4. Windows Defender Device Guard for DCs (Server 2016)**
 
-To limit the risk of unauthorized programs on your domain controllers from adversary attack operations and inadvertent administrative errors, configure Windows Defender Device Guard virtualization-based security for kernel (also known as Hypervisor Code Integrity, HVCI) and Windows Defender Application Control policies (also known as Configurable Code Integrity, Configurable CI) for applications to only allow authorized executables to run on the machine. For more information on Windows Defender Device Guard visit [this page](https://docs.microsoft.com/en-us/windows/security/threat-protection/device-guard/introduction-to-device-guard-virtualization-based-security-and-windows-defender-application-control).
+To limit the risk of unauthorized programs on your domain controllers from adversary attack operations and inadvertent administrative errors, configure Windows Defender Device Guard virtualization-based security for kernel (also known as Hypervisor Code Integrity, HVCI) and Windows Defender Application Control policies (also known as Configurable Code Integrity, Configurable CI) for applications to only allow authorized executables to run on the machine. For more information on Windows Defender Device Guard visit [this page](https://docs.microsoft.com/windows/security/threat-protection/device-guard/introduction-to-device-guard-virtualization-based-security-and-windows-defender-application-control).
 
 **5. Shielded VMs for virtual DCs (Server 2016 Hyper-V Fabric)**
 
-To protect virtualized domain controllers from attack vectors that exploit a virtual machine's inherent loss of physical security, use this new Server 2016 Hyper-V capability to help prevent the theft of Active Directory secrets from Virtual DCs. Using this solution, you can encrypt Generation 2 VMs to protect the VM data against inspection, theft, and tampering by storage and network administrators as well as harden the access to the VM against Hyper-V host administrators attacks. For more information on Shielded VMs visit [this page](https://docs.microsoft.com/en-us/windows-server/virtualization/guarded-fabric-shielded-vm/guarded-fabric-and-shielded-vms).
+To protect virtualized domain controllers from attack vectors that exploit a virtual machine's inherent loss of physical security, use this new Server 2016 Hyper-V capability to help prevent the theft of Active Directory secrets from Virtual DCs. Using this solution, you can encrypt Generation 2 VMs to protect the VM data against inspection, theft, and tampering by storage and network administrators as well as harden the access to the VM against Hyper-V host administrators attacks. For more information on Shielded VMs visit [this page](https://docs.microsoft.com/windows-server/virtualization/guarded-fabric-shielded-vm/guarded-fabric-and-shielded-vms).
 
 ## Am I done?
 Completing this roadmap will gain you strong privileged access protections for the attacks that are currently known and available to adversaries today. Unfortunately, security threats will constantly evolve and shift, so we recommend you view security as an ongoing process focused on raising the cost and reducing the success rate of adversaries targeting your environment.
@@ -207,4 +207,4 @@ For more information on engaging Microsoft services to assist with any of these 
 
 [Authentication Mechanism Assurance for AD DS in Windows Server 2008 R2 Step-by-Step Guide](https://technet.microsoft.com/library/dd378897(v=ws.10).aspx)
 
-[Trusted Platform Module](https://docs.microsoft.com/en-us/windows/device-security/tpm/trusted-platform-module-overview)
+[Trusted Platform Module](https://docs.microsoft.com/windows/device-security/tpm/trusted-platform-module-overview)

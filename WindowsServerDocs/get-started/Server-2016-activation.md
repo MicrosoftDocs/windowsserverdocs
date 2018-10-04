@@ -64,7 +64,4 @@ If your organization needs more than six KMS hosts, you should request additiona
 
 Computers that are running volume licensing editions of Windows 10, Windows Server 2016, Windows 8.1, Windows Server 2012 R2, Windows Server 2012, Windows 7, Windows Server 2008 R2 are, by default, KMS clients with no additional configuration needed.
 
-If you are converting a computer from a KMS host, MAK, or retail edition of Windows to a KMS client, install the applicable KMS Client Setup Key. For more information, see [Appendix A: KMS Client Setup Keys](https://technet.microsoft.com/library/jj612867(v=ws.11).aspx). 
- 
-
- 
+If you are converting a computer from a KMS host, MAK, or retail edition of Windows to a KMS client, install the applicable KMS Client Setup Key. For more information, see [KMS Client Setup Keys](KMSclientkeys.md). 

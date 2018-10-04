@@ -16,17 +16,17 @@ ms.technology: networking
 
 In this topic, you learn about tools and settings for Windows Time service (W32Time). 
 
-If you only want to synchronize time for a domain-joined client computer, see [Configure a client computer for automatic domain time synchronization](https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/cc816884%28v%3dws.10%29). For additional topics about how to configure Windows Time service, see [Where to Find Windows Time Service Configuration Information](https://docs.microsoft.com/en-us/windows-server/networking/windows-time-service/windows-time-service-top).  
+If you only want to synchronize time for a domain-joined client computer, see [Configure a client computer for automatic domain time synchronization](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/cc816884%28v%3dws.10%29). For additional topics about how to configure Windows Time service, see [Where to Find Windows Time Service Configuration Information](https://docs.microsoft.com/windows-server/networking/windows-time-service/windows-time-service-top).  
   
 >[!CAUTION]  
 >You should not use the Net time command to configure or set time when the Windows Time service is running.  
 >
 >Also, on older computers that run Windows XP or earlier, the command Net time /querysntp displays the name of a Network Time Protocol (NTP) server with which a computer is configured to synchronize, but that NTP server is used only when the computer's time client is configured as NTP or AllSync. That command has since been deprecated.  
   
-Most domain member computers have a time client type of NT5DS, which means that they synchronize time from the domain hierarchy. The only typical exception to this is the domain controller that functions as the primary domain controller (PDC) emulator operations master of the forest root domain, which is usually configured to synchronize time with an external time source. To view the time client configuration of a computer, run the W32tm /query /configuration command from an elevated Command Prompt in starting in Windows Server 2008, and Windows Vista, and read the **Type** line in the command output. For more information, see [How Windows Time Service Works](https://docs.microsoft.com/en-us/windows-server/networking/windows-time-service/How-the-Windows-Time-Service-Works). You can run the command **reg query HKLM\SYSTEM\CurrentControlSet\Services\W32Time\Parameters** and read the value of **NtpServer** in the command output.  
+Most domain member computers have a time client type of NT5DS, which means that they synchronize time from the domain hierarchy. The only typical exception to this is the domain controller that functions as the primary domain controller (PDC) emulator operations master of the forest root domain, which is usually configured to synchronize time with an external time source. To view the time client configuration of a computer, run the W32tm /query /configuration command from an elevated Command Prompt in starting in Windows Server 2008, and Windows Vista, and read the **Type** line in the command output. For more information, see [How Windows Time Service Works](https://docs.microsoft.com/windows-server/networking/windows-time-service/How-the-Windows-Time-Service-Works). You can run the command **reg query HKLM\SYSTEM\CurrentControlSet\Services\W32Time\Parameters** and read the value of **NtpServer** in the command output.  
   
 > [!IMPORTANT]  
-> Prior to Windows Server 2016, the W32Time service was not designed to meet time-sensitive application needs.  However, updates to Windows Server 2016 now allow you to implement a solution for 1ms accuracy in your domain.  See [Windows 2016 Accurate Time](accurate-time.md) and  [Support boundary to configure the Windows Time service for high-accuracy environments](https://docs.microsoft.com/en-us/windows-server/networking/windows-time-service/support-boundary) for more information.  
+> Prior to Windows Server 2016, the W32Time service was not designed to meet time-sensitive application needs.  However, updates to Windows Server 2016 now allow you to implement a solution for 1ms accuracy in your domain.  See [Windows 2016 Accurate Time](accurate-time.md) and  [Support boundary to configure the Windows Time service for high-accuracy environments](https://docs.microsoft.com/windows-server/networking/windows-time-service/support-boundary) for more information.  
   
 ## Windows Time Service Tools  
 The following tools are associated with the Windows Time service.  
@@ -107,7 +107,7 @@ Some of the parameters are stored in clock ticks in the registry and some are in
   
 -   1 sec = 1000 ms  
   
--   1 ms = 10,000 clock ticks on a Windows system, as described at [DateTime.Ticks Property](https://docs.microsoft.com/en-us/dotnet/api/system.datetime.ticks?redirectedfrom=MSDN&view=netframework-4.7.2#System_DateTime_Ticks).  
+-   1 ms = 10,000 clock ticks on a Windows system, as described at [DateTime.Ticks Property](https://docs.microsoft.com/dotnet/api/system.datetime.ticks?redirectedfrom=MSDN&view=netframework-4.7.2#System_DateTime_Ticks).  
   
 For example, 5 minutes would become 5*60\*1000\*10000 = 3000000000 clock ticks. 
 

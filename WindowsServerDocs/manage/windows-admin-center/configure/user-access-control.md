@@ -162,7 +162,7 @@ Once the configuration is applied, you can assign users to the roles:
 3.  In the *Details* pane at the bottom, click **Add User** and enter the name of a user or security group which should have read-only access to the server through Windows Admin Center. The users and groups can come from the local machine or your Active Directory domain.
 4.  Repeat steps 2-3 for the **Windows Admin Center Hyper-V Administrators** and **Windows Admin Center Administrators** groups.
 
-You can also fill these groups consistently across your domain by configuring a Group Policy Object with the [Restricted Groups Policy Setting](https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2003/cc756802%28v=ws.10%29).
+You can also fill these groups consistently across your domain by configuring a Group Policy Object with the [Restricted Groups Policy Setting](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc756802%28v=ws.10%29).
 
 ### Apply role-based access control to multiple machines
 

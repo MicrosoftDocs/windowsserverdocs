@@ -61,8 +61,8 @@ For more information, see the following articles:
 
 - [Sizes for Cloud Services](https://docs.microsoft.com/azure/cloud-services/cloud-services-sizes-specs)  
 - [Microsoft Azure virtual machine pricing details](https://azure.microsoft.com/pricing/details/virtual-machines/)  
-- [Hyper-V overview](https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831531(v=ws.11))  
-- [Azure Storage scalability and performance targets](https://docs.microsoft.com/en-us/azure/storage/common/storage-scalability-targets)  
+- [Hyper-V overview](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831531(v=ws.11))  
+- [Azure Storage scalability and performance targets](https://docs.microsoft.com/azure/storage/common/storage-scalability-targets)  
 
 ## Azure Active Directory Application Proxy
 

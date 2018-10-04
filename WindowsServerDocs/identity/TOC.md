@@ -230,7 +230,7 @@
 ## [Active Directory Federation Services](active-directory-Federation-Services.md)
 
 ### [AD FS Overview](ad-fs/AD-FS-Overview.md)
-#### [What's new in Active Directory Federation Services for Windows Server 2016](ad-fs/overview/whats-new-active-directory-federation-services-windows-server.md)
+#### [What's new in Active Directory Federation Services](ad-fs/overview/whats-new-active-directory-federation-services-windows-server.md)
 #### [AD FS Scenarios for Developers](ad-fs/overview/AD-FS-Scenarios-for-Developers.md)
 #### [AD FS 2016 Requirements](ad-fs/overview/AD-FS-Requirements.md)
 
@@ -405,7 +405,9 @@
 ##### [Access Control Policies in AD FS for Windows Server 2016](ad-fs/operations/Access-Control-Policies-in-AD-FS.md)
 ##### [Access Control Policies in AD FS for Windows Server 2012 R2](ad-fs/operations/Access-Control-Policies-W2K12.md)
 ##### [Access Control Policies in AD FS 2.0](ad-fs/operations/Access-Control-Policies-in-AD-FS-2.md)
+#### [Additional Authentication methods in AD FS 2019](ad-fs/operations/Additional-Authentication-Methods-AD-FS.md)
 #### [AD FS Prompt login parameter support](ad-fs/operations/AD-FS-Prompt-Login.md)
+#### [AD FS Paginated sign-in](ad-fs/operations/AD-FS-paginated-sign-in.md)
 #### [AD FS 2016 Single Sign On Settings](ad-fs/operations/AD-FS-Single-Sign-On-Settings.md)
 #### [AD FS Rapid Restore Tool](ad-fs/operations/AD-FS-Rapid-Restore-Tool.md)
 #### [AD FS support for alternate hostname binding for certificate authentication](ad-fs/operations/AD-FS-support-for-alternate-hostname-binding-for-certificate-authentication.md)

@@ -86,7 +86,7 @@ Built-in Administrator accounts should never be used as service accounts on memb
 
 ##### Configuring GPOs to Restrict Administrator Accounts on Domain-Joined Systems
 
-In one or more GPOs that you create and link to workstation and member server OUs in each domain, add the Administrator account to the following user rights in **Computer Configuration\Policies\Windows Settings\Security Settings\Local Settings\User Rights Assignments**:  
+In one or more GPOs that you create and link to workstation and member server OUs in each domain, add the Administrator account to the following user rights in **Computer Configuration\Policies\Windows Settings\Security Settings\Local Policies\User Rights Assignments**:  
 
 - Deny access to this computer from the network
 - Deny log on as a batch job
@@ -132,7 +132,7 @@ Although setting the **Smart card is required for interactive logon** flag reset
 
 Although disabling the Administrator account in a domain makes the account effectively unusable, you should implement additional restrictions on the account in case the account is inadvertently or maliciously enabled. Although these controls can ultimately be reversed by the Administrator account, the goal is to create controls that slow an attacker's progress and limit the damage the account can inflict.  
 
-In one or more GPOs that you create and link to workstation and member server OUs in each domain, add each domain's Administrator account to the following user rights in **Computer Configuration\Policies\Windows Settings\Security Settings\Local Settings\User Rights Assignments**:  
+In one or more GPOs that you create and link to workstation and member server OUs in each domain, add each domain's Administrator account to the following user rights in **Computer Configuration\Policies\Windows Settings\Security Settings\Local Policies\User Rights Assignments**:  
 
 - Deny access to this computer from the network  
 - Deny log on as a batch job  
@@ -146,7 +146,7 @@ In one or more GPOs that you create and link to workstation and member server OU
 
 ##### Configuring GPOs to Restrict Administrator Accounts on Domain Controllers
 
-In each domain in the forest, the Default Domain Controllers policy or a policy linked to the Domain Controllers OU should be modified to add each domain's Administrator account to the following user rights in **Computer Configuration\Policies\Windows Settings\Security Settings\Local Settings\User Rights Assignments**:  
+In each domain in the forest, the Default Domain Controllers policy or a policy linked to the Domain Controllers OU should be modified to add each domain's Administrator account to the following user rights in **Computer Configuration\Policies\Windows Settings\Security Settings\Local Policies\User Rights Assignments**:  
 
 - Deny access to this computer from the network  
 - Deny log on as a batch job  

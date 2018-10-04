@@ -51,7 +51,6 @@ The two standard architecture diagrams above are based on a traditional Active D
 
 The two standard architecture diagrams above use the RD Web/Gateway servers as the Internet-facing entry point into the RDS system. For some environments, administrators would prefer to remove their own servers from the perimeter and instead use technologies that also provide additional security through reverse proxy technologies. The [Azure AD Application Proxy](https://docs.microsoft.com/azure/active-directory/active-directory-application-proxy-get-started) PaaS role fits nicely with this scenario.
 
->[!NOTE]
-> Due to the limitations of the two technologies together, we are currently working with the Azure AD Application Proxy team to produce specific deployment guidance and scenarios.
+For supported configurations and how to create this setup, see how to [publish Remote Desktop with Azure AD Application Proxy](/azure/active-directory/application-proxy-publish-remote-desktop).
 
 ![RDS with Azure AD Application Proxy](./media/aadappproxy-rds.png)

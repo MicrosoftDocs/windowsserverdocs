@@ -8,7 +8,6 @@ manager: samueld
 ms.date: 01/18/2018
 ms.topic: article
 ms.prod: windows-server-threshold
-ms.service: active-directory
 ms.technology: identity-adfs
 ---
 # Configuring AD FS for user certificate authentication
@@ -22,7 +21,7 @@ AD FS can be configured for x509 user certificate authentication using one of th
 - Ensure that the root certificate of the chain of trust for your user certificates is in the NTAuth store in Active Directory
 - If using AD FS in alternate certificate authentication mode, ensure that your AD FS and WAP servers have SSL certificates that contain the AD FS hostname prefixed with "certauth", for example "certauth.fs.contoso.com", and that traffic to this hostname is allowed through the firewall
 - If using certificate authentication from the extranet, ensure that at least one AIA and at least one CDP or OCSP location from the list specified in your certificates are accessible from the internet.
-- If you are configuring AD FS for Azure AD certificate authentication, ensure that you have configured the [Azure AD settings](https://docs.microsoft.com/en-us/azure/active-directory/active-directory-certificate-based-authentication-get-started#step-2-configure-the-certificate-authorities) and the [AD FS claim rules required](https://docs.microsoft.com/en-us/azure/active-directory/active-directory-certificate-based-authentication-ios#requirements) for certificate Issuer and Serial Number
+- If you are configuring AD FS for Azure AD certificate authentication, ensure that you have configured the [Azure AD settings](https://docs.microsoft.com/azure/active-directory/active-directory-certificate-based-authentication-get-started#step-2-configure-the-certificate-authorities) and the [AD FS claim rules required](https://docs.microsoft.com/azure/active-directory/active-directory-certificate-based-authentication-ios#requirements) for certificate Issuer and Serial Number
 - Also for Azure AD certificate authentication, for Exchange ActiveSync clients, the client certificate must have the users routable email address in Exchange online in either the Principal Name or the RFC822 Name value of the Subject Alternative Name field. (Azure Active Directory maps the RFC822 value to the Proxy Address attribute in the directory.)
 
 ## Configure AD FS for user certificate authentication  

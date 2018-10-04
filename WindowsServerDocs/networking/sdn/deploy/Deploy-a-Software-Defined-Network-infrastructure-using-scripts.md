@@ -35,7 +35,7 @@ Start by configuring the Hyper-V host's (physical servers) Hyper-V virtual switc
 ### Install host networking  
 
 1. Install the latest network drivers available for your NIC hardware.  
-2. Install the Hyper-V role on all hosts (For more information, see [Get started with Hyper-V on Windows Server 2016](https://docs.microsoft.com/en-us/windows-server/virtualization/hyper-v/get-started/Get-started-with-Hyper-V-on-Windows).   
+2. Install the Hyper-V role on all hosts (For more information, see [Get started with Hyper-V on Windows Server 2016](https://docs.microsoft.com/windows-server/virtualization/hyper-v/get-started/Get-started-with-Hyper-V-on-Windows).   
   
    ```PowerShell
    Install-WindowsFeature -Name Hyper-V -ComputerName <computer_name> -IncludeManagementTools -Restart
