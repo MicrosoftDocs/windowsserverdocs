@@ -1,26 +1,26 @@
 ---
 title: Windows Admin Center UI text and design style guide
-description: Windows Admin Center UI text and design style guide SDK (Project Honolulu)
+description: Windows Admin Center UI text and design style guide SDK
 ms.technology: manage
 ms.topic: article
 author: jasongerend
 ms.author: jgerend
-ms.date: 06/18/2018
+ms.date: 10/3/2018
 ms.localizationpriority: medium
 ms.prod: windows-server-threshold
 ---
 
 # Windows Admin Center UI text and design style guide
 
->Applies To: Windows Admin Center, Windows Admin Center Preview
+>Applies To: Windows Admin Center
 
 This topic describes the general approach to writing user interface (UI) text for the Windows Admin Center, as well as some specific conventions and approaches we're taking.
 
-Windows Admin Center and any extensions should follow [Microsoft's voice principles](https://docs.microsoft.com/style-guide/brand-voice-above-all-simple-human) so that the experience is easy to use and friendly. This style guide builds on these voice principles as well as the [Microsoft Writing Style Guide](https://docs.microsoft.com/en-us/style-guide/welcome/), so make sure to check out both of those resources for info on such things as [accessibility](https://docs.microsoft.com/en-us/style-guide/accessibility/accessibility-guidelines-requirements), [acronyms](https://docs.microsoft.com/en-us/style-guide/acronyms), and [word choice](https://docs.microsoft.com/en-us/style-guide/word-choice/) such as [please](https://docs.microsoft.com/en-us/style-guide/a-z-word-list-term-collections/p/please), and [sorry](https://docs.microsoft.com/en-us/style-guide/a-z-word-list-term-collections/s/sorry).
+Windows Admin Center and any extensions should follow [Microsoft's voice principles](https://docs.microsoft.com/style-guide/brand-voice-above-all-simple-human) so that the experience is easy to use and friendly. This style guide builds on these voice principles as well as the [Microsoft Writing Style Guide](https://docs.microsoft.com/style-guide/welcome/), so make sure to check out both of those resources for info on such things as [accessibility](https://docs.microsoft.com/style-guide/accessibility/accessibility-guidelines-requirements), [acronyms](https://docs.microsoft.com/style-guide/acronyms), and [word choice](https://docs.microsoft.com/style-guide/word-choice/) such as [please](https://docs.microsoft.com/style-guide/a-z-word-list-term-collections/p/please), and [sorry](https://docs.microsoft.com/style-guide/a-z-word-list-term-collections/s/sorry).
 
 ## Capitalization
 
-We follow the Microsoft style for [Capitalization](https://docs.microsoft.com/en-us/style-guide/capitalization) - use sentence-style capitalization for pretty much everything.
+We follow the Microsoft style for [Capitalization](https://docs.microsoft.com/style-guide/capitalization) - use sentence-style capitalization for pretty much everything.
 
 However, Windows Admin Center is making a few exceptions:
 
@@ -33,7 +33,7 @@ However, Windows Admin Center is making a few exceptions:
 ## Punctuation
 
 - No ending punctuation (periods, question marks) for headings or incomplete sentences. An exception is in a confirmation dialog where the heading asks the question
-- Use Microsoft Style Guide's guidance on [periods](https://docs.microsoft.com/style-guide/punctuation/periods) and [question marks](https://docs.microsoft.com/en-us/style-guide/punctuation/question-marks).
+- Use Microsoft Style Guide's guidance on [periods](https://docs.microsoft.com/style-guide/punctuation/periods) and [question marks](https://docs.microsoft.com/style-guide/punctuation/question-marks).
 
 ## Buttons
 
