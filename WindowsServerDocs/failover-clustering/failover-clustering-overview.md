@@ -173,7 +173,7 @@ Failover Clustering has many practical applications, including:
                                         <div class="cardText">
                                         <h3>Tools and settings</a></h3>
 <HR />
-                                        <p><a href="https://go.microsoft.com/fwlink/p/?LinkId=233200">Failover Clustering PowerShell Cmdlets</a></p> 
+                                        <p><a href="https://docs.microsoft.com/powershell/module/failoverclusters/?view=win10-ps">Failover Clustering PowerShell Cmdlets</a></p> 
 <HR />
                                         <p><a href="https://docs.microsoft.com/powershell/module/clusterawareupdating/?view=win10-ps">Cluster Aware Updating PowerShell Cmdlets</a></p> 
                                         </div>
