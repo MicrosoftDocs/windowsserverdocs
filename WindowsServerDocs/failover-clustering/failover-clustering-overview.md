@@ -133,6 +133,8 @@ Failover Clustering has many practical applications, including:
                             </div>
                           </a>
                         </li>
+<p></p>
+<hr />
 <li>
                          <div class="cardSize">
                                 <div class="cardPadding">
