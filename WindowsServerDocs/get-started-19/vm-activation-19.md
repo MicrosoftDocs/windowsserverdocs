@@ -89,7 +89,14 @@ The following AVMA keys can be used for Windows Server, version 1809.
 |-|-|
 |Datacenter|	H3RNG-8C32Q-Q8FRX-6TDXV-WMBMW|
 |Standard|	TNK62-RXVTB-4P47B-2D623-4GF74|
- 
+
+The following AVMA keys can be used for Windows Server, version 1803 and 1709.
+
+|Edition|AVMA key|
+|-|-|
+|Datacenter|TMJ3Y-NTRTM-FJYXT-T22BY-CWG3J|
+|Standard|C3RCX-M6NRP-6CXC9-TW2F2-4RHYD|
+
 
 The following AVMA keys can be used for Windows Server 2016.
 
@@ -99,13 +106,6 @@ The following AVMA keys can be used for Windows Server 2016.
 |Standard|C3RCX-M6NRP-6CXC9-TW2F2-4RHYD|
 |Essentials|B4YNW-62DX9-W8V6M-82649-MHBKQ|
 
-
-The following AVMA keys can be used for Windows Server, version 1803 and 1709.
-
-|Edition|AVMA key|
-|-|-|
-|Datacenter|TMJ3Y-NTRTM-FJYXT-T22BY-CWG3J|
-|Standard|C3RCX-M6NRP-6CXC9-TW2F2-4RHYD|
 
 The following AVMA keys can be used for Windows Server 2012 R2.
 
