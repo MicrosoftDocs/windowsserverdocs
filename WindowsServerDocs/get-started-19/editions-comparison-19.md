@@ -68,7 +68,7 @@ ms.localizationpriority: medium
 |Remote Desktop Services| |Yes|Yes|
 |Volume Activation Services| |Yes|Yes|
 |Web Services (IIS)| |Yes|Yes|
-|Windows Deployment Services| |Yes, when installed as Server with Desktop Experience|Yes, when installed as Server with Desktop Experience|
+|Windows Deployment Services| |Yes|Yes|
 |Windows Server Essentials Experience| |Yes|Yes|
 |Windows Server Update Services| |Yes|Yes|
 
