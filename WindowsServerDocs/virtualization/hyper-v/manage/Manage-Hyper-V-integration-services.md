@@ -12,7 +12,7 @@ ms.service: na
 ms.assetid: 9cafd6cb-dbbe-4b91-b26c-dee1c18fd8c2
 ---
 
->Applies To: Windows Server 2016, Windows 10
+>Applies To: Windows 10, Windows Server 2016, Windows Server 2019
 
 # Manage Hyper-V Integration Services
 
