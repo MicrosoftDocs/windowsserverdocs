@@ -36,7 +36,7 @@ The following table outlines which of these new features are supported in a VDI 
 
 Remote Credential Guard is only supported for direct connections to the target machines and not for the ones via Remote Desktop Connection Broker and Remote Desktop Gateway.
 > [!NOTE]
-> Connection Broker which is directly connected(not under DNS round robin or HA) from the client might still work.
+> Remote Credential Guard might still work via Remote Desktop Connection Broker in a single-instance environment and the DNS name matches the computer name.
 
 ## Shielded VMs and Encryption Supported VMs: 
 
