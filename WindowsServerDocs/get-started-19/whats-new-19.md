@@ -7,7 +7,7 @@ ms.topic: article
 author: dawnwood
 ms.author: dawn.wood
 ms.localizationpriority: high
-ms.date: 10/02/2018
+ms.date: 10/05/2018
 ---
 
 # What's new in Windows Server 2019
@@ -26,14 +26,6 @@ As with Windows Server 2016, during setup of the operating system it is possible
 
 System Insights is a new feature available in Windows Server 2019 that brings local predictive analytics capabilities natively to Windows Server. These predictive capabilities, each backed by a machine-learning model, locally analyze Windows Server system data, such as performance counters and events, providing insight into the functioning of your servers and helping you reduce the operational expenses associated with reactively managing issues in your Windows Server deployments.
 
-### Storage Replica expanded to include:
-
-- Test failover is a new feature that allows mounting of destination storage in order to validate replication or backup data. For more information, see [Frequently Asked Questions about Storage Replica](https://docs.microsoft.com/windows-server/storage/storage-replica/storage-replica-frequently-asked-questions).
-
-- Log Performance improvements v1.1
-
-- Storage Replica is available in Standard Edition and can create 1 Partnership with 1 Resource Group with single 2TB volumes. The feature can replicate between clusters, asynchronously and synchronously.
-
 ## Hybrid Cloud
 
 ### Windows Admin Center
@@ -42,18 +34,7 @@ System Insights is a new feature available in Windows Server 2019 that brings lo
 As a locally deployed, browser-based management experience, an Internet connection and Azure aren’t required. Windows Admin Center gives you full control of all aspects of your deployment, 
 including private networks that aren’t Internet-connected.
 
-* Windows Admin Center is a free download, separate from the Windows Server 2019 download, for enhanced flexibility and remote management strategies.  See the Windows Admin Center OS support [matrix](https://docs.microsoft.com/windows-server/manage/windows-admin-center/plan/installation-options) for installation and management compatibility.
-
-
-### Storage Migration Service
-
-Storage Migration Service (SMS) is a new role included in Windows Server Standard and Datacenter editions. SMS is a job-based orchestration and proxy that:
-
-- Allows you to inventory existing servers for their data, security, and network settings.
-
-- Migrates that data, security, and network settings to a new, modern target by using the SMB protocol.
-
-- Takes over the identity of the old server completely, while decommissioning the original source, in such a way that your applications are unaffected and unaware that migration has taken place.
+Windows Admin Center is a download with no additional cost beyond your Windows licenses. See the Windows Admin Center operating system support [matrix](https://docs.microsoft.com/windows-server/manage/windows-admin-center/plan/installation-options) for installation and management compatibility.
 
 ### Server Core app compatibility feature on demand
 
@@ -180,8 +161,11 @@ Windows Server 2019 continues the improvements to compute, networking and storag
     We've made it easier than ever to see which containers are running on your computer and manage individual containers with a new extension for Windows Admin Center. Look for the "Containers" extension in the [Windows Admin Center public feed](https://docs.microsoft.com/windows-server/manage/windows-admin-center/configure/using-extensions).
 
 
-## Hyper-converged infrastructure
+## Storage
 
+### Storage Migration Service
+
+Storage Migration Service makes it easier to migrate servers to a newer version of Windows Server. It provides a graphical tool that inventories data on servers and then transfers the data and configuration to newer servers—all without apps or users having to change anything. For more info, see [Storage Migration Service](storage-migration-service/overview.md).
 
 ### Storage Spaces Direct
 
@@ -216,6 +200,14 @@ Windows Server 2019 continues the improvements to compute, networking and storag
 - **Drive latency outlier detection**
 
     Easily identify drives with abnormal latency with proactive monitoring and built-in outlier detection, inspired by Microsoft Azure’s long-standing and successful approach. Whether it’s average latency or something more subtle like 99th percentile latency that stands out, slow drives are automatically labeled in PowerShell and Windows Admin Center with ‘Abnormal Latency’ status.
+
+### Storage Replica
+
+- Test failover is a new feature that allows mounting of destination storage in order to validate replication or backup data. For more information, see [Frequently Asked Questions about Storage Replica](https://docs.microsoft.com/windows-server/storage/storage-replica/storage-replica-frequently-asked-questions).
+
+- Log Performance improvements v1.1
+
+- Storage Replica is available in Standard Edition and can create 1 Partnership with 1 Resource Group with single 2TB volumes. The feature can replicate between clusters, asynchronously and synchronously.
 
 
 ### Failover Clustering

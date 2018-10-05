@@ -7,7 +7,7 @@ ms.manager: dongill
 ms.technology: storage
 ms.topic: article
 author: jasongerend
-ms.date: 09/25/2018
+ms.date: 10/05/2018
 ---
 # What's new in Storage in Windows Server
 
@@ -17,7 +17,7 @@ This topic explains the new and changed functionality in storage in Windows Serv
 
 ## What's new in storage in Windows Server 2019 and Windows Server, version 1809
 
-This release of Windows Server builds on the new functionality included in Windows Server, version 1803 and Windows Server, version 1709 (so make sure to read those sections of this topic as well) by adding the following changes and technologies.
+This release of Windows Server adds the following changes and technologies.
 
 ### Manage storage with Windows Admin Center
 
@@ -33,12 +33,45 @@ Storage Migration Service makes it easier to migrate servers to a newer version 
 
 There are a number of improvements to Storage Spaces Direct in Windows Server 2019 (Storage Spaces Direct isn't included in Windows Server, Semi-Annual Channel):
 
-- **Larger maximum scale** - scale up to 4 PB per pool and 64 TB per volume. For more info, see the [Storage at Microsoft blog](https://blogs.technet.microsoft.com/filecab/2018/06/27/windows-server-summit-recap/).
-- **Two-server clusters using a USB flash drive as a witness** - use a low-cost USB flash drive plugged into your router to act as a witness in two-server clusters. If a server goes down and then back up, the USB drive cluster knows which server has the most up-to-date data. For more info, see the [Storage at Microsoft blog](https://blogs.technet.microsoft.com/filecab/2018/06/27/windows-server-summit-recap/).
-- **Faster mirror-accelerated parity** - more than twice as fast as in Windows Server 2016, making it viable for more workloads. For more info, see the [Storage at Microsoft blog](https://blogs.technet.microsoft.com/filecab/2018/06/27/windows-server-summit-recap/).
-- [Cluster sets](storage-spaces/cluster-sets.md) - increase the maximum number of servers that can be in a cluster in a single software-defined datacenter cloud by orders of magnitude.
-- [Performance history](storage-spaces/performance-history.md) - provides admins access to historical compute, memory, network, and storage measurements across host servers, drives, volumes, virtual machines, and more.
-- [Delimit the allocation of volumes](storage-spaces/delimit-volume-allocation.md) - enables admins to manually delimit the allocation of volumes in Storage Spaces Direct. Doing so can significantly increase fault tolerance under certain conditions, but imposes some added management considerations and complexity
+- **Deduplication and compression**
+
+    Get up to 10X more storage for free with deduplication and compression for the ReFS filesystem. (It’s [just one click](https://www.youtube.com/watch?v=PRibTacyKko&feature=youtu.be) to turn on with Windows Admin Center.) The variable-size chunk store with optional compression maximizes savings rates, while the multi-threaded post-processing architecture keeps performance impact minimal. Supports volumes up to 64 TB and files up to 1 TB each.
+
+- **Native support for persistent memory**
+
+    Unlock unprecedented performance with native Storage Spaces Direct support for persistent memory modules, including Intel® Optane™ DC PM and NVDIMM-N. Use persistent memory as cache to accelerate the active working set, or as capacity to guarantee consistent low latency on the order of microseconds. Manage persistent memory just as you would any other drive in PowerShell or Windows Admin Center.
+
+- **Nested resiliency for two-node hyper-converged infrastructure at the edge**
+
+    Survive two hardware failures at once with an all-new software resiliency option inspired by RAID 5+1. With nested resiliency, a two-node Storage Spaces Direct cluster can provide continuously accessible storage for apps and virtual machines even if one server node goes down and a drive fails in the other server node.
+
+- **Two-server clusters using a USB flash drive as a witness**
+
+    Use a low-cost USB flash drive plugged into your router to act as a witness in two-server clusters. If a server goes down and then back up, the USB drive cluster knows which server has the most up-to-date data. For more info, see the [Storage at Microsoft blog](https://blogs.technet.microsoft.com/filecab/2018/06/27/windows-server-summit-recap/).
+
+- **Windows Admin Center**
+
+    Manage and monitor Storage Spaces Direct with the new [purpose-built Dashboard](../manage/windows-admin-center/use/manage-hyper-converged.md) and experience in Windows Admin Center. Create, open, expand, or delete volumes with just a few clicks. Monitor performance like IOPS and IO latency from the overall cluster down to the individual SSD or HDD. Available at no additional cost for Windows Server 2016 and Windows Server 2019.
+
+- **Performance history**
+
+    Get effortless visibility into resource utilization and performance with [built-in history](storage-spaces/performance-history.md). Over 50 essential counters spanning compute, memory, network, and storage are automatically collected and stored on the cluster for up to one year. Best of all, there’s nothing to install, configure, or start – it just works. Visualize in Windows Admin Center or query and process in PowerShell.
+
+- **Scale up to 4 PB per cluster**
+
+    Achieve multi-petabyte scale – great for media, backup, and archival use cases. In Windows Server 2019, Storage Spaces Direct supports up to 4 petabytes (PB) = 4,000 terabytes of raw capacity per storage pool. Related capacity guidelines are increased as well: for example, you can create twice as many volumes (64 instead of 32), each twice as large as before (64 TB instead of 32 TB). Stitch multiple clusters together into a [cluster set](storage-spaces/cluster-sets.md) for even greater scale within one storage namespace. For more info, see the [Storage at Microsoft blog](https://blogs.technet.microsoft.com/filecab/2018/06/27/windows-server-summit-recap/).
+
+- **Mirror-accelerated parity is 2X faster**
+
+    With mirror-accelerated parity you can create Storage Spaces Direct volumes that are part mirror and part parity, like mixing RAID-1 and RAID-5/6 to get the best of both. (It’s [easier than you think](https://www.youtube.com/watch?v=R72QHudqWpE) in Windows Admin Center.) In Windows Server 2019, the performance of mirror-accelerated parity is more than doubled relative to Windows Server 2016 thanks to optimizations.
+
+- **Drive latency outlier detection**
+
+    Easily identify drives with abnormal latency with proactive monitoring and built-in outlier detection, inspired by Microsoft Azure’s long-standing and successful approach. Whether it’s average latency or something more subtle like 99th percentile latency that stands out, slow drives are automatically labeled in PowerShell and Windows Admin Center with ‘Abnormal Latency’ status.
+
+- **Manually delimit the allocation of volumes to increase fault tolerance**
+
+    This enables admins to manually delimit the allocation of volumes in Storage Spaces Direct. Doing so can significantly increase fault tolerance under certain conditions, but imposes some added management considerations and complexity. For more info, see [Delimit the allocation of volumes](storage-spaces/delimit-volume-allocation.md).
 
 ### Storage Replica
 
@@ -59,6 +92,29 @@ We also made improvements to how the Storage Replica log tracks replication, imp
 To gain the increased performance, all members of the replication group must run Windows Server 2019.
 
 For more information about Storage Replica, see [Storage Replica](storage-replica/storage-replica-overview.md).
+
+#### Test failover
+
+The option to mount the destination storage is now possible through the test failover feature. You can mount a snapshot of the replicated storage on destination nodes temporarily for testing or backup purposes. For more information, see [Frequently Asked Questions about Storage Replica](https://aka.ms/srfaq).
+
+#### Windows Admin Center support
+
+Support for graphical management of server to server replication is now available in Windows Admin Center. This removes the requirement to use PowerShell to manage a common disaster protection workload.
+
+### SMB
+
+- **SMB1 and guest authentication removal**: Windows Server no longer installs the SMB1 client and server by default. Additionally, the ability to authenticate as a guest in SMB2 and later is off by default. For more information, review [SMBv1 is not installed by default in Windows 10, version 1709 and Windows Server, version 1709](https://support.microsoft.com/help/4034314/smbv1-is-not-installed-by-default-in-windows-10-rs3-and-windows-server). 
+
+- **SMB2/SMB3 security and compatibility**: Additional options for security and application compatibility were added, including the ability to disable oplocks in SMB2+ for legacy applications, as well as require signing or encryption on per-connection basis from a client. For more information, review the SMBShare PowerShell module help.
+
+### Data Deduplication
+
+- **Data Deduplication now supports ReFS**: You no longer must choose between the advantages of a modern file system with ReFS and the Data Deduplication: now, you can enable Data Deduplication wherever you can enable ReFS. Increase storage efficiency by upwards of 95% with ReFS.
+- **DataPort API for optimized ingress/egress to deduplicated volumes**: Developers can now take advantage of the knowledge Data Deduplication has about how to store data efficiently to move data between volumes, servers, and clusters efficiently.
+
+### File Server Resource Manager
+
+Windows Server 2019 includes the ability to prevent the File Server Resource Manager service from creating a change journal (also known as a USN journal) on all volumes when the service starts. This can conserve space on each volume, but will disable real-time file classification. For more information, see [File Server Resource Manager overview](fsrm/fsrm-overview.md).
 
 ## What's new in storage in Windows Server, version 1803
 
