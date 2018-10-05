@@ -5,7 +5,7 @@ ms.technology: manage
 ms.topic: article
 author: jwwool
 ms.author: jeffrew
-ms.date: 09/19/2018
+ms.date: 10/04/2018
 ms.localizationpriority: medium
 ms.prod: windows-server-threshold
 ---
@@ -33,9 +33,9 @@ If you encounter an issue not described on this page, please [let us know](http:
 - When upgrading Windows Admin Center in service mode from a previous version, if you use msiexec in quiet mode, you may encounter an issue where the inbound firewall rule for Windows Admin Center port is deleted.
   - To recreate the rule, perform the following command from an elevated PowerShell console, replacing \<port> with the port configured for Windows Admin Center (default 443.)
 
-```powershell
-New-NetFirewallRule -DisplayName "SmeInboundOpenException" -Description "Windows Admin Center inbound port exception" -LocalPort <port> -RemoteAddress Any -Protocol TCP
-```
+    ```powershell
+    New-NetFirewallRule -DisplayName "SmeInboundOpenException" -Description "Windows Admin Center inbound port exception" -LocalPort <port> -RemoteAddress Any -Protocol TCP
+    ```
  
 >[!IMPORTANT]
 > You may see this when upgrading a Highly Available (HA) deployment of Windows Admin Center, since Update-WindowsAdminCenterHA.ps1 leverages msiexec in quiet mode. In this case, you will need to recreate the rule on all machines in the cluster.
