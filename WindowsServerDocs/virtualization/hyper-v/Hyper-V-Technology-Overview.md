@@ -14,7 +14,7 @@ ms.date: 11/29/2016
 ---
 # Hyper-V Technology Overview
 
->Applies To: Windows Server 2016, Microsoft Hyper-V Server 2016
+>Applies To: Windows Server 2016, Microsoft Hyper-V Server 2016, Windows Server 2019, Microsoft Hyper-V Server 2019
  
 Hyper-V is Microsoft's hardware virtualization product. It lets you create and run a software version of a computer, called a *virtual machine*. Each virtual machine acts like a complete computer, running an operating system and programs. When you need computing resources, virtual machines give you more flexibility, help save time and money, and are a more efficient way to use hardware than just running one operating system on physical hardware.  
   
@@ -58,7 +58,7 @@ Hyper-V offers many features. This is an overview, grouped by what the features 
 For a summary of the features introduced in this version, see [What's new in Hyper-V on Windows Server 2016](What-s-new-in-Hyper-V-on-Windows.md). Some features or parts have a limit to how many can be configured. For details, see [Plan for Hyper-V scalability in Windows Server 2016](plan/Plan-for-Hyper-V-scalability-in-Windows-Server-2016.md).  
   
 ## How to get Hyper-V  
-Hyper-V is available in Windows Server and Windows, as a server role available for x64 versions of Windows Server. For server instructions, see [Install the Hyper-V role on Windows Server](get-started/Install-the-Hyper-V-role-on-Windows-Server.md). On Windows, it's available as [feature](https://msdn.microsoft.com/virtualization/hyperv_on_windows/windows_welcome) in some 64-bit versions of Windows. It's also available as a downloadable, standalone server product, [Microsoft Hyper-V Server](https://technet.microsoft.com/library/hh923062.aspx).
+Hyper-V is available in Windows Server and Windows, as a server role available for x64 versions of Windows Server. For server instructions, see [Install the Hyper-V role on Windows Server](get-started/Install-the-Hyper-V-role-on-Windows-Server.md). On Windows, it's available as [feature](https://docs.microsoft.com/virtualization/hyper-v-on-windows/index) in some 64-bit versions of Windows. It's also available as a downloadable, standalone server product, [Microsoft Hyper-V Server](https://www.microsoft.com/en-us/evalcenter/evaluate-hyper-v-server-2019).
   
 ## Supported operating systems  
   
@@ -68,29 +68,31 @@ Many operating systems will run on virtual machines. In general, an operating sy
   
 -   [Supported Windows guest operating systems for Hyper-V on Windows Server](Supported-Windows-guest-operating-systems-for-Hyper-V-on-Windows.md)  
   
-## How Hyper-V works  
+## How Hyper-V works
+
 Hyper-V is a hypervisor-based virtualization technology. Hyper-V uses the Windows hypervisor, which requires a physical processor with specific features. For hardware details, see [System requirements for Hyper-V on Windows Server 2016](System-requirements-for-Hyper-V-on-Windows.md).  
   
 In most cases, the hypervisor manages the interactions between the hardware and the virtual machines. This hypervisor-controlled access to the hardware gives virtual machines the isolated environment in which they run. In some configurations, a virtual machine or the operating system running in the virtual machine has direct access to graphics, networking, or storage hardware.  
   
-## What does Hyper-V consist of?  
+## What does Hyper-V consist of?
+
 Hyper-V has required parts that work together so you can create and run virtual machines. Together, these parts are called the virtualization platform. They're installed as a set when you install the Hyper-V role. The required parts include Windows hypervisor, Hyper-V Virtual Machine Management Service, the virtualization WMI provider, the virtual machine bus (VMbus), virtualization service provider (VSP) and virtual infrastructure driver (VID).  
   
 Hyper-V also has tools for management and connectivity. You can install these on the same computer that Hyper-V role is installed on, and on computers without the Hyper-V role installed. These tools are:  
+
 - Hyper-V Manager  
-- [Hyper-V module for Windows PowerShell](https://technet.microsoft.com/library/hh848559.aspx)  
-- [Virtual Machine Connection](https://technet.microsoft.com/library/dn744329.aspx) \(sometimes called VMConnect\)
+- [Hyper-V module for Windows PowerShell](https://docs.microsoft.com/powershell/module/hyper-v/index)  
+- [Virtual Machine Connection](https://docs.microsoft.com/windows-server/virtualization/hyper-v/learn-more/hyper-v-virtual-machine-connect) \(sometimes called VMConnect\)
 - [Windows PowerShell Direct](manage/Manage-Windows-virtual-machines-with-PowerShell-Direct.md)  
   
 ## Related technologies  
+
 These are some technologies from Microsoft that are often used with Hyper-V:  
   
-* [Failover Clustering](../../failover-clustering/whats-new-in-failover-clustering.md)  
-* [Remote Desktop Services](../../remote/remote-desktop-services/Host-desktops-and-apps-in-Remote-Desktop-Services.md)  
-* [Virtual Machine Manager](https://technet.microsoft.com/system-center-docs/vmm/vmm)  
+- [Failover Clustering](../../failover-clustering/whats-new-in-failover-clustering.md)  
+- [Remote Desktop Services](../../remote/remote-desktop-services/Host-desktops-and-apps-in-Remote-Desktop-Services.md)  
+- [System Center Virtual Machine Manager](https://docs.microsoft.com/system-center/vmm/overview)  
   
 Various storage technologies: cluster shared volumes, SMB 3.0, storage spaces direct  
   
-Windows containers offer another approach to virtualization. See the [Windows Containers](https://msdn.microsoft.com/virtualization/windowscontainers/containers_welcome) library on MSDN.  
-  
-
+Windows containers offer another approach to virtualization. See the [Windows Containers](https://docs.microsoft.com/virtualization/windowscontainers/index) library on MSDN.  
