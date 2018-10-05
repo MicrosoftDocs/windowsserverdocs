@@ -35,6 +35,7 @@
 #### [Deploy graphics devices using DDA](hyper-v/deploy/deploying-graphics-devices-using-dda.md)
 #### [Deploy storage devices using DDA](hyper-v/deploy/deploying-storage-devices-using-dda.md)
 ### [Manage](hyper-v/manage/Manage-Hyper-V-on-Windows-Server.md)
+#### [Configuring Persistent Memory Devices for Hyper-V VMs](hyper-v/manage/persistent-memory-cmdlets.md)
 #### [Choose between standard or production checkpoints](hyper-v/manage/Choose-between-standard-or-production-checkpoints-in-Hyper-V.md)
 #### [Create a VHD set](hyper-v/manage/Create-VHDSet-file.md)
 #### [Enable or disable checkpoints](hyper-v/manage/Enable-or-disable-checkpoints-in-Hyper-V.md)

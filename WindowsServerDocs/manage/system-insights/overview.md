@@ -47,19 +47,13 @@ You can install System Insights directly through Server Manager by adding the **
 ```PowerShell
 Add-WindowsFeature System-Insights -IncludeManagementTools
 ```
-You can also use the System Insights extension within Windows Admin Center to add System Insights. After installing the System Insights extension, click to enable System Insights:
+You can also use the System Insights extension within Windows Admin Center to add System Insights:
 
 ![Day 0 experience for System Insights extension.](media/day-0-page.png)
 
-#### Install the Windows Admin Center extension
-
-Download the latest System Insights extension [using the Windows Admin Center extension manager](https://docs.microsoft.com/windows-server/manage/windows-admin-center/configure/using-extensions). 
-
-If you have a previous System Insights extension installed, make sure to uninstall it and install the latest extension.
-
 ## Provide feedback
 >[!IMPORTANT]
->Before reporting any bugs, please ensure you're running the latest build. Visit [this page](https://www.microsoft.com/en-us/software-download/windowsinsiderpreviewserver) to get the latest Windows Server 2019 Preview build, and download the latest System Insights extension for Windows Admin Center [using the extension manager](https://docs.microsoft.com/windows-server/manage/windows-admin-center/configure/using-extensions).
+>Before reporting any bugs, please ensure you're running the latest build. Visit [this page](https://www.microsoft.com/en-us/software-download/windowsinsiderpreviewserver) to get the latest Windows Server 2019 Preview build, and download the latest System Insights extension for Windows Admin Center [using the extension manager](https://docs.microsoft.com/en-us/windows-server/manage/windows-admin-center/configure/using-extensions).
 
 We'd love to hear your feedback to help us improve this feature. You can use the following channels to submit feedback:
 - **Feedback Hub**: Use the Feedback Hub tool in Windows 10 to file a bug or feedback. When doing so, please specify:

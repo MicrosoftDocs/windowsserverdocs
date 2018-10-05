@@ -14,7 +14,7 @@ ms.date: 06/27/2017
 
 # Live Migration Overview
 
-Live migration is a Hyper-V feature in Windows Server 2016.  It allows you to transparently move running Virtual Machines from one Hyper-V host to another without perceived downtime.  The primary benefit of live migration is flexibility; running Virtual Machines are not tied to a single host machine.  This allows actions like draining a specific host of Virtual Machines before decommissioning or upgrading it.  When paired with Windows Failover Clustering, live migration allows the creation of highly available and fault tolerant systems. 
+Live migration is a Hyper-V feature in Windows Server.  It allows you to transparently move running Virtual Machines from one Hyper-V host to another without perceived downtime.  The primary benefit of live migration is flexibility; running Virtual Machines are not tied to a single host machine.  This allows actions like draining a specific host of Virtual Machines before decommissioning or upgrading it.  When paired with Windows Failover Clustering, live migration allows the creation of highly available and fault tolerant systems. 
 
 ## Related Technologies and Documentation
 

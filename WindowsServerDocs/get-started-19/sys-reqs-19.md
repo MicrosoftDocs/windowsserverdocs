@@ -64,7 +64,7 @@ The following are the estimated **minimum** disk space requirements for the syst
 **Minimum**: 32 GB  
 
    > [!NOTE]  
-    > Be aware that 32 GB should be considered an *absolute minimum* value for successful installation. This minimum should allow you to install Windows Server 2016 in Server Core mode, with the Web Services (IIS) server role. A server in Server Core mode is about 4 GB smaller than the same server in Server with a GUI mode. 
+    > Be aware that 32 GB should be considered an *absolute minimum* value for successful installation. This minimum should allow you to install Windows Server 2019 in Server Core mode, with the Web Services (IIS) server role. A server in Server Core mode is about 4 GB smaller than the same server in Server with a GUI mode. 
     >   
     > The system partition will need extra space for any of the following circumstances:  
     >   
