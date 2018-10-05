@@ -69,9 +69,10 @@ Operating system components that are available as part of the Server Core App Co
  >[!NOTE] 
    > This procedure uses Deployment Image Servicing and Management (DISM.exe), a command-line tool. For more information about DISM commands, see [DISM Capabilities Package Servicing Command-Line Options](https://docs.microsoft.com/windows-hardware/manufacture/desktop/dism-capabilities-package-servicing-command-line-options).
 
-1. Download the Server FOD optional packages ISO, and copy the ISO to a shared folder on your local network.
+1. Download the Server FOD optional packages ISO, and copy the ISO to a shared folder on your local network:
 
- - Where to get the Server FOD ISO
+ - If you have a volume license you can download the Server FOD ISO image file from the same portal where the OS ISO image file is obtained: [Volume Licensing Service Center](https://www.microsoft.com/Licensing/servicecenter/default.aspx).
+ - The Server FOD ISO image file is available on the [Microsoft Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-windows-server-2019) or on the [Visual Studio portal](https://visualstudio.microsoft.com) for subscribers.
 
 2. Sign in as Administrator on the Server Core computer that is connected to your local network and that you want to add the FOD to.
 
@@ -114,3 +115,18 @@ Operating system components that are available as part of the Server Core App Co
         Dism /online /add-package:drive_letter_of_mounted_iso:"Microsoft-Windows-InternetExplorer-Optional-Package~31bf3856ad364e35~amd64~~.cab"
 
 6.  After the progress bar completes, restart the operating system.
+
+ 
+#### Release notes and suggestions for the optional Internet Explorer 11 package
+ 
+- After installation of the App Compatibility FOD and reboot of the server, the command console window frame color will change to a different shade of blue.
+
+- If you choose to also install the Internet Explorer 11 optional package, note that double clicking to open locally saved .htm files is not supported. However, you can **right-click** and choose **Open with IE**, or you can open it directly from Internet Explorer **File** -> **Open**. 
+
+- To further enhance the app compatibility of Server Core with the App Compatibility FOD, the IIS Management Console has been added to Server Core as an optional component.  However, it is absolutely necessary to first add the App Compatibility FOD to use the IIS Management Console. IIS Management Console relies on the Microsoft Management Console (mmc.exe), which is only available on Server Core with the addition of the App Compatibility FOD.  Use Powershell [**Install-WindowsFeature**](https://docs.microsoft.com/powershell/module/microsoft.windows.servermanager.migration/install-windowsfeature?view=win10-ps) to add IIS Management Console.
+
+- As a general point of guidance, when installing apps on Server Core (with or without these optional packages) it is sometimes necessary to use silent install options and instructions. 
+    
+ - As an example, SQL Server Management Studio for SQL Server 2016 and SQL Server 2017 can be installed on Server Core and is fully functional when the App Compatibility FOD is present.  See, [Install SQL Server from the Command Prompt](https://docs.microsoft.com/sql/database-engine/install-windows/install-sql-server-from-the-command-prompt?view=sql-server-2017).
+ - If SQL Server Management Studio is not desired, then it is unnecessary to install the Server Core App Compatibility FOD.  See, [Install SQL Server on Server Core](https://docs.microsoft.com/sql/database-engine/install-windows/install-sql-server-on-server-core?view=sql-server-2017).
+
