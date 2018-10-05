@@ -18,7 +18,7 @@ This topic discusses how to migrate a server, including its files and configurat
 Before you get started, install Storage Migration Service and make sure that the necessary firewall ports are open.
 
 1. Check the [Storage Migration Service requirements](overview.md#requirements) and install [Windows Admin Center](../../manage/windows-admin-center/understand/windows-admin-center.md) on your PC or a management server if you haven't already.
-2. In Windows Admin Center, connect to the orchestrator server running Windows Sever 2019. <br>This is the server that you'll install Storage Migration Service on and use to manage the migration. If you're migrating only a few servers, you can use one of the destination servers as long as it's running Windows Server 2019.
+2. In Windows Admin Center, connect to the orchestrator server running Windows Server 2019. <br>This is the server that you'll install Storage Migration Service on and use to manage the migration. If you're migrating only a few servers, you can use one of the destination servers as long as it's running Windows Server 2019.
 1. Go to **Server Manager** (in Windows Admin Center) > **Storage Migration Service** and select **Install** to install Storage Migration Service and its required components (shown in Figure 1).
     ![Screenshot of the Storage Migration Service page showing the Install button](media/migrate/install.png)
      **Figure 1: Installing Storage Migration Service**

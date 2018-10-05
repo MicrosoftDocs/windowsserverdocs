@@ -5,7 +5,7 @@ ms.technology: manage
 ms.topic: article
 author: jwwool
 ms.author: jeffrew
-ms.date: 09/19/2018
+ms.date: 10/04/2018
 ms.localizationpriority: medium
 ms.prod: windows-server-threshold
 ---
@@ -20,6 +20,8 @@ ms.prod: windows-server-threshold
 <a id="toc"></a>
 
 ## Quick links
+
+* [The installer fails with message: **_The Module 'Microsoft.PowerShell.LocalAccounts' could not be loaded._**](#psmodulepath)
 
 * I get a **This site/page can't be reached** error in my web browser (select your deployment type)
     * [I have Windows Admin Center installed as an App on Windows 10](#whitescreenw10)
@@ -41,6 +43,16 @@ ms.prod: windows-server-threshold
 * [I previously had Windows Admin Center installed, and now nothing else can use the same TCP/IP port](#urlacl)
 
 * [My issue is not listed here, or the steps on this page did not resolve my issue.](#filebug)
+
+<a id="psmodulepath"></a>
+
+## Installer fails with message: **_The Module 'Microsoft.PowerShell.LocalAccounts' could not be loaded._**
+
+This can happen if your default PowerShell module path has been modified or removed. To resolve the issue, make sure that ```%SystemRoot%\system32\WindowsPowerShell\v1.0\Modules``` is the **first** item in your PSModulePath environment variable. You can achieve this with the following line of PowerShell:
+
+```powershell
+[Environment]::SetEnvironmentVariable("PSModulePath","%SystemRoot%\system32\WindowsPowerShell\v1.0\Modules;" + ([Environment]::GetEnvironmentVariable("PSModulePath","User")),"User")
+```
 
 ## I get a **This site/page can't be reached** error in my web browser
 
@@ -166,7 +178,7 @@ These three tools require the websocket protocol, which is commonly blocked by p
 ### What account are you using?
 Make sure the credentials you are using are a member of the target server's local administrators group. In some cases, WinRM also requires membership in the Remote Management Users group. If you are using a local user account that is **not the built-in administrator account**, you will need to enable the policy on the target machine by running the following command in PowerShell or at a Command Prompt as Administrator on the target machine:
 
-```
+```cmd
 REG ADD HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System /v LocalAccountTokenFilterPolicy /t REG_DWORD /d 1
 ```
 ### Are you connecting to a workgroup machine on a different subnet?
@@ -175,11 +187,15 @@ To connect to a workgroup machine that is not on the same subnet as the gateway,
 
 - **Windows Server**
 
-        Set-NetFirewallRule -Name WINRM-HTTP-In-TCP-PUBLIC -RemoteAddress Any
+    ```powershell
+    Set-NetFirewallRule -Name WINRM-HTTP-In-TCP-PUBLIC -RemoteAddress Any
+    ```
 
 - **Windows 10**
 
-       Set-NetFirewallRule -Name WINRM-HTTP-In-TCP -RemoteAddress Any
+    ```powershell
+    Set-NetFirewallRule -Name WINRM-HTTP-In-TCP -RemoteAddress Any
+    ```
 
 ### Configure TrustedHosts
 
@@ -190,7 +206,9 @@ When installing Windows Admin Center, you are given the option to let Windows Ad
 1. Open an Administrator PowerShell session.
 2. View your current TrustedHosts setting:
 
-        Get-Item WSMan:\localhost\Client\TrustedHosts
+    ```powershell
+    Get-Item WSMan:\localhost\Client\TrustedHosts
+    ```
 
     > [!WARNING]
     > If the current setting of your TrustedHosts is not empty, the commands below will overwrite your setting. We recommend that you save the current setting to a text file with the following command so you can restore it if needed:
@@ -200,7 +218,9 @@ When installing Windows Admin Center, you are given the option to let Windows Ad
 3. Set TrustedHosts to the NetBIOS, IP, or FQDN of the machines you
 intend to manage:
 
-        Set-Item WSMan:localhost\Client\TrustedHosts -Value '192.168.1.1,server01.contoso.com,server02'
+    ```powershell
+    Set-Item WSMan:localhost\Client\TrustedHosts -Value '192.168.1.1,server01.contoso.com,server02'
+    ```
 
     > [!TIP] 
     >For an easy way to set all TrustedHosts at once, you can use a wildcard.
@@ -209,11 +229,15 @@ intend to manage:
 
 4. When you are done testing, you can issue the following command from an elevated PowerShell session to clear your TrustedHosts setting:
 
-        Clear-Item WSMan:localhost\Client\TrustedHosts
+    ```powershell
+    Clear-Item WSMan:localhost\Client\TrustedHosts
+    ```
 
 5. If you had previously exported your settings, open the file, copy the values, and use this command:
 
-        Set-Item WSMan:localhost\Client\TrustedHosts -Value '<paste values from text file>'## Credentials ##
+    ```powershell
+    Set-Item WSMan:localhost\Client\TrustedHosts -Value '<paste values from text file>'
+    ```
 
 [[back to top]](#toc)
 
@@ -223,7 +247,7 @@ intend to manage:
 
 Manually run these two commands in an elevated command prompt:
 
-```
+```cmd
 netsh http delete sslcert ipport=0.0.0.0:443
 netsh http delete urlacl url=https://+:443/
 ```

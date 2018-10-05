@@ -11,7 +11,7 @@ ms.topic: article
 ms.assetid: 7fd996f5-1ea9-4b16-9776-85fb39a3aa34
 ---
 
->Applies To: Windows Server 2016, Windows 10
+>Applies To: Windows 10, Windows Server 2016, Microsoft Hyper-V Server 2016, Windows Server 2019, Microsoft Hyper-V Server 2019
 
 # Export and Import virtual machines
 
@@ -39,7 +39,7 @@ Open a session as Administrator and run a command like the following, after repl
 Export-VM -Name \<vm name\> -Path \<path\>
 ```
 
-For details, see [Export-VM](https://technet.microsoft.com/library/hh848491.aspx).
+For details, see [Export-VM](https://docs.microsoft.com/powershell/module/hyper-v/export-vm).
 
 ## Import a Virtual Machine 
 
@@ -91,7 +91,7 @@ To complete a copy import and move the virtual machine files to the default Hype
 Import-VM -Path 'C:\<vm export path>\2B91FEB3-F1E0-4FFF-B8BE-29CED892A95A.vmcx' -Copy -GenerateNewId
 ```
 
-For details, see [Import-VM](https://technet.microsoft.com/library/hh848495.aspx).
+For details, see [Import-VM](https://docs.microsoft.com/powershell/module/hyper-v/import-vm).
 
 ### Import types
 
