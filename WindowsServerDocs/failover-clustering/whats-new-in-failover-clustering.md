@@ -24,7 +24,7 @@ With cluster sets, you can move online virtual machines (live migrate) between c
 
 For more info, see [Cluster sets](../storage/storage-spaces/cluster-sets.md).
 
-### file share witness
+### File share witness
 
 One of the witness options available for failover clustering, file share witness, has two new enhancements. 
 The first enhancement blocks the use of a Distributed File System (DFS) share as a location. Adding a File Share Witness (FSW) to a DFS share can cause stability issues for your cluster, and this configuration has never been supported. We added logic to detect if a share uses DFS, and if DFS is detected, Failover Cluster Manager blocks creation of the witness and displays an error message about not being supported.

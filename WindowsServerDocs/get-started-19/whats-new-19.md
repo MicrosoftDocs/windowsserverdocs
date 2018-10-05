@@ -128,44 +128,11 @@ For a complete list of what’s new in SDN see, [What’s New in SDN for Windows
 
 - Changed our default TCP congestion provider to Cubic to give you more throughput!
 
-## Application Platform
-
-### Linux containers on Windows
-
-It is now possible to run Windows and Linux-based containers on the same container host, using the same docker daemon. This enables you to have a heterogenous container host environment while providing flexibility to application developers.
-
-### Building Support for Kubernetes
-
-Windows Server 2019 continues the improvements to compute, networking and storage from the semi-annual channel releases needed to support Kubernetes on Windows. More details will be available in upcoming Kubernetes releases.
-
-- [Container Networking](https://docs.microsoft.com/windows-server/networking/sdn/technologies/containers/container-networking-overview) in Windows Server 2019 greatly improves usability of Kubernetes on Windows by enhancing platform networking resiliency and support of container networking plugins.
-
-- Deployed workloads on Kubernetes will be able to use network security to protect both Linux and Windows services using embedded tooling.
-
-### Container improvements
-    
-- **Improved integrated identity**
-
-    We've made integrated Windows authentication in containers easier and more reliable, addressing several limitations from prior versions of Windows Server.
-
-- **Better application compatibility**
-
-    Containerizing Windows-based applications just got easier: The app compatibility for the existing *windowsservercore* image has been increased. For applications with additional API dependencies, there is now a third base image: *windows*.
-
-- **Reduced size and higher performance**
-
-    The base container image download sizes, size on disk and startup times have been improved. This speeds up container workflows
-
-- **Management experience using Windows Admin Center \(preview\)**
-
-    We've made it easier than ever to see which containers are running on your computer and manage individual containers with a new extension for Windows Admin Center. Look for the "Containers" extension in the [Windows Admin Center public feed](https://docs.microsoft.com/windows-server/manage/windows-admin-center/configure/using-extensions).
-
-
 ## Storage
 
 ### Storage Migration Service
 
-Storage Migration Service makes it easier to migrate servers to a newer version of Windows Server. It provides a graphical tool that inventories data on servers and then transfers the data and configuration to newer servers—all without apps or users having to change anything. For more info, see [Storage Migration Service](storage-migration-service/overview.md).
+Storage Migration Service makes it easier to migrate servers to a newer version of Windows Server. It provides a graphical tool that inventories data on servers and then transfers the data and configuration to newer servers—all without apps or users having to change anything. For more info, see [Storage Migration Service](../storage/storage-migration-service/overview.md).
 
 ### Storage Spaces Direct
 
@@ -210,11 +177,15 @@ Storage Migration Service makes it easier to migrate servers to a newer version 
 - Storage Replica is available in Standard Edition and can create 1 Partnership with 1 Resource Group with single 2TB volumes. The feature can replicate between clusters, asynchronously and synchronously.
 
 
-### Failover Clustering
+## Failover Clustering
 
 - **Cluster Sets**
 
-    Hyperscale a hyper-converged infrastructure by federating multiple Failover Clusters into a Cluster Set.  Virtual Machines achieve fluidity across loosely coupled grouping of clusters for balancing and maintenance.
+    Cluster sets enable you to increase the number of servers in a single software-defined datacenter (SDDC) solution beyond the current limits of a cluster. This is accomplished by grouping multiple clusters into a cluster set--a loosely-coupled grouping of multiple failover clusters: compute, storage and hyper-converged.
+
+    With cluster sets, you can move online virtual machines (live migrate) between clusters within the cluster set.
+
+    For more info, see [Cluster sets](../storage/storage-spaces/cluster-sets.md).
 
 - **Azure Enlightened Clusters**
 
@@ -239,6 +210,38 @@ Storage Migration Service makes it easier to migrate servers to a newer version 
 - **Cluster Aware Updating**
 
     Cluster Aware Updating (CAU) is now integrated and aware of Storage Spaces Direct, validating and ensuring data resynchronization completes on each node.  Inspects updates to intelligently patch by only rebooting if necessary.  Enables orchestrating restarts of all nodes in the cluster for planned maintenance, even when not patching.
+
+## Application Platform
+
+### Linux containers on Windows
+
+It is now possible to run Windows and Linux-based containers on the same container host, using the same docker daemon. This enables you to have a heterogenous container host environment while providing flexibility to application developers.
+
+### Building Support for Kubernetes
+
+Windows Server 2019 continues the improvements to compute, networking and storage from the semi-annual channel releases needed to support Kubernetes on Windows. More details will be available in upcoming Kubernetes releases.
+
+- [Container Networking](https://docs.microsoft.com/windows-server/networking/sdn/technologies/containers/container-networking-overview) in Windows Server 2019 greatly improves usability of Kubernetes on Windows by enhancing platform networking resiliency and support of container networking plugins.
+
+- Deployed workloads on Kubernetes will be able to use network security to protect both Linux and Windows services using embedded tooling.
+
+### Container improvements
+    
+- **Improved integrated identity**
+
+    We've made integrated Windows authentication in containers easier and more reliable, addressing several limitations from prior versions of Windows Server.
+
+- **Better application compatibility**
+
+    Containerizing Windows-based applications just got easier: The app compatibility for the existing *windowsservercore* image has been increased. For applications with additional API dependencies, there is now a third base image: *windows*.
+
+- **Reduced size and higher performance**
+
+    The base container image download sizes, size on disk and startup times have been improved. This speeds up container workflows
+
+- **Management experience using Windows Admin Center \(preview\)**
+
+    We've made it easier than ever to see which containers are running on your computer and manage individual containers with a new extension for Windows Admin Center. Look for the "Containers" extension in the [Windows Admin Center public feed](https://docs.microsoft.com/windows-server/manage/windows-admin-center/configure/using-extensions).
 
 ### Encrypted Networks
 
