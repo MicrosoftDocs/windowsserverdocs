@@ -39,7 +39,7 @@ Domain and Standalone configurations work differently.
 
 - Domain members use a secure NTP protocol, which uses authentication to ensure the security and authenticity of the time reference.  Domain members synchronize with a master clock determined by the domain hierarchy and a scoring system.  In a domain, there is a hierarchical layer of time stratums, whereby each DC points to a parent DC with a more accurate time stratum.  The hierarchy resolves to the PDC or a DC in the root forest, or a DC with the GTIMESERV domain flag, which denotes a Good Time Server for the domain.  See the [Specify a Local Reliable Time Service Using GTIMESERV](#GTIMESERV) section below.
 
-- Standalone machines are configured to use time.windows.com by default.  This name is resolved by your ISP, which should point to a Microsoft owned resource.  Like all remotely located time references, network outages, may prevent synchronization.  Network traffic loads and asymmetrical network paths may reduce the accuracy of the time synchronization.  For 1 ms accuracy, you can’t depend on a remote time sources.
+- Standalone machines are configured to use time.windows.com by default.  This name is resolved by your DNS Server, which should point to a Microsoft owned resource.  Like all remotely located time references, network outages, may prevent synchronization.  Network traffic loads and asymmetrical network paths may reduce the accuracy of the time synchronization.  For 1 ms accuracy, you can’t depend on a remote time sources.
 
 Since Hyper-V guests will have at least two Windows Time providers to choose from, the host time and NTP, you might see different behaviors with either Domain or Standalone when running as a guest.
 
