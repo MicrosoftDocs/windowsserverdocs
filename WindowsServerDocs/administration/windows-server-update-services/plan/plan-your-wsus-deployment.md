@@ -166,9 +166,10 @@ You can create complex hierarchies of WSUS servers. Because you can synchronize 
 
 -   You can scale WSUS for a large organization that has more client computers than one WSUS server can effectively manage.
 
-> [!NOTES]
-> - We recommend that you do not create a WSUS server hierarchy that is more than three levels deep. Each level adds time to propagate updates throughout the connected servers. Although there is no theoretical limit to a hierarchy, only deployments that have a hierarchy of five levels deep have been tested by Microsoft.
-> - Downstream servers must be at the same version or an earlier version of WSUS as the upstream server synchronization source.
+> [!NOTE] 
+> We recommend that you do not create a WSUS server hierarchy that is more than three levels deep. Each level adds time to propagate updates throughout the connected servers. Although there is no theoretical limit to a hierarchy, only deployments that have a hierarchy of five levels deep have been tested by Microsoft.
+>
+> Also, downstream servers must be at the same version or an earlier version of WSUS as the upstream server synchronization source.
 
 You can connect WSUS servers in Autonomous mode (to achieve distributed administration) or in Replica mode (to achieve centralized administration). You do not have to deploy a server hierarchy that uses only one mode: you can deploy a WSUS solution that uses both autonomous and replica WSUS servers.
 
