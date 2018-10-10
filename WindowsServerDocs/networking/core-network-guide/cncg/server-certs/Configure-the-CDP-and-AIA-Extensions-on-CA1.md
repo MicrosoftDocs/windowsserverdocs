@@ -63,7 +63,7 @@ To perform this procedure, you must be a member of Domain Admins.
   
     3.  Select the entry `file://\\<ServerDNSName>\CertEnroll\<ServerDNSName><CaName><CertificateName>.crt`, and then click **Remove**. In **Confirm removal**, click **Yes**.  
   
-11. In **Specify locations from which users can obtain a certificate revocation list (CRL)**, click **Add**. The **Add Location** dialog box opens.  
+11. In **Specify locations from which users can obtain the certificate for this CA**, click **Add**. The **Add Location** dialog box opens.  
   
 12. In **Add Location**, in **Location**, type `http://pki.corp.contoso.com/pki/<ServerDNSName>_<CaName><CertificateName>.crt`, and then click **OK**. This returns you to the CA properties dialog box.  
   
