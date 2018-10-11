@@ -75,7 +75,7 @@ There are a number of improvements to Storage Spaces Direct in Windows Server 20
 
 ### Storage Replica
 
-There are a number of improvements to Storage Replica in this release:
+There are a number of improvements to [Storage Replica](storage-replica/storage-replica-overview.md) in this release:
 
 #### Storage Replica in Windows Server, Standard Edition
 
@@ -90,8 +90,6 @@ You can now use Storage Replica with Windows Server, Standard Edition in additio
 We also made improvements to how the Storage Replica log tracks replication, improving replication throughput and latency, especially on all-flash storage as well as Storage Spaces Direct clusters that replicate between each other.
 
 To gain the increased performance, all members of the replication group must run Windows Server 2019.
-
-For more information about Storage Replica, see [Storage Replica](storage-replica/storage-replica-overview.md).
 
 #### Test failover
 
