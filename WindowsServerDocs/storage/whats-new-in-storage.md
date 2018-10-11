@@ -7,7 +7,7 @@ ms.manager: dongill
 ms.technology: storage
 ms.topic: article
 author: jasongerend
-ms.date: 10/05/2018
+ms.date: 10/12/2018
 ---
 # What's new in Storage in Windows Server
 
@@ -21,21 +21,21 @@ This release of Windows Server adds the following changes and technologies.
 
 ### Manage storage with Windows Admin Center
 
-[Windows Admin Center](../manage/windows-admin-center/overview.md) is a locally deployed, browser-based app for managing servers, clusters, hyper-converged infrastructure including Storage Spaces Direct, and Windows 10 PCs. It comes at no additional cost beyond Windows and is ready to use in production.
+[Windows Admin Center](../manage/windows-admin-center/overview.md) is a new locally deployed, browser-based app for managing servers, clusters, hyper-converged infrastructure with Storage Spaces Direct, and Windows 10 PCs. It comes at no additional cost beyond Windows and is ready for production use.
 
 To be fair, Windows Admin Center is a separate download that runs on Windows Server 2019 and other versions of Windows, but it's new and we didn't want you to miss it...
 
 ### Storage Migration Service
 
-Storage Migration Service makes it easier to migrate servers to a newer version of Windows Server. It provides a graphical tool that inventories data on servers and then transfers the data and configuration to newer servers—all without apps or users having to change anything. For more info, see [Storage Migration Service](storage-migration-service/overview.md).
+Storage Migration Service is a new technology that makes it easier to migrate servers to a newer version of Windows Server. It provides a graphical tool that inventories data on servers, transfers the data and configuration to newer servers, and then optionally moves the identities of the old servers to the new servers so that apps and users don't have to change anything. For more info, see [Storage Migration Service](storage-migration-service/overview.md).
 
 ### Storage Spaces Direct (Windows Server 2019 only)
 
 There are a number of improvements to Storage Spaces Direct in Windows Server 2019 (Storage Spaces Direct isn't included in Windows Server, Semi-Annual Channel):
 
-- **Deduplication and compression**
+- **Deduplication and compression for ReFS**
 
-    Get up to 10X more storage for free with deduplication and compression for the ReFS filesystem. (It’s [just one click](https://www.youtube.com/watch?v=PRibTacyKko&feature=youtu.be) to turn on with Windows Admin Center.) The variable-size chunk store with optional compression maximizes savings rates, while the multi-threaded post-processing architecture keeps performance impact minimal. Supports volumes up to 64 TB and files up to 1 TB each.
+    Store up to 10X more data on the same volume with deduplication and compression for the ReFS filesystem. (It’s [just one click](https://www.youtube.com/watch?v=PRibTacyKko&feature=youtu.be) to turn on with Windows Admin Center.) The variable-size chunk store with optional compression maximizes savings rates, while the multi-threaded post-processing architecture keeps performance impact minimal. Supports volumes up to 64 TB and files up to 1 TB each.
 
 - **Native support for persistent memory**
 
@@ -75,7 +75,7 @@ There are a number of improvements to Storage Spaces Direct in Windows Server 20
 
 ### Storage Replica
 
-Storage Replica was first released as a technology for Windows Server 2016 Datacenter Edition. Storage Replica enables synchronous and asynchronous block replication of volumes between servers or clusters for disaster recovery. Storage Replica also enables you to create stretch failover clusters that span two sites, with all nodes staying in sync.
+There are a number of improvements to Storage Replica in this release:
 
 #### Storage Replica in Windows Server, Standard Edition
 

@@ -7,7 +7,7 @@ ms.topic: article
 author: JasonGerend
 manager: brianlic
 ms.author: jgerend
-ms.date: 09/21/2018
+ms.date: 10/12/2018
 description: New and updated topics in the on-premises storage documentation for Windows Server for IT Pros.
 ---
 # Change history for storage topics in Windows Server
@@ -22,10 +22,15 @@ This topic lists new and updated topics in the [Storage](storage.md) documentati
 
 |New or changed topic|Description|
 |---|---|
+|[What's new in Storage](whats-new-in-storage.md)|Updated to cover what's new in Windows Server 2019|
+
+## September 2018
+
+|New or changed topic|Description|
+|---|---|
 |[Storage Migration Service overview](storage-migration-service/overview.md)| New topic |
 |[Use Storage Migration Service to migrate a server](storage-migration-service/migrate-data.md)| New topic |
 |[Storage Migration Service frequently asked questions (FAQ)](storage-migration-service/faq.md)| New topic |
-|[What's new in Storage](whats-new-in-storage.md)|Updated to cover what's new in Windows Server 2019|
 | [iSCSI Target Server](iscsi/iscsi-target-server.md) | Migrated from the [Previous Versions](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012) library.|
 | [iSCSI Target Server scalability limits](iscsi/iscsi-target-server-limits.md) |Migrated from the [Previous Versions](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012) library.|
 

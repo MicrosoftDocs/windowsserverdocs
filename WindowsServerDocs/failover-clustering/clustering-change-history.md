@@ -7,7 +7,7 @@ ms.topic: article
 author: JasonGerend
 manager: dougkim
 ms.author: jgerend
-ms.date: 09/25/2018
+ms.date: 10/12/2018
 description: New and updated topics in the Failover Clustering documentation for Windows Server 2016
 ---
 # Change history for Failover Clustering topics
@@ -18,7 +18,7 @@ This topic lists new and updated topics in the [Failover Clustering](failover-cl
 
 > If you're looking for update history for Windows Server 2016, see [Windows 10 and Windows Server 2016 update history](https://support.microsoft.com/help/4000825/windows-10-and-windows-server-2016-update-history).
 
-## September 2018
+## October 2018
 
 |New or changed topic|Description|
 |---|---|
