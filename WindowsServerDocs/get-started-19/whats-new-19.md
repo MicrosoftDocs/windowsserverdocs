@@ -1,6 +1,6 @@
 ---
 title: What's new in Windows Server 2019
-description: "What's new in Windows Server 2019"
+description: An overview of new features in Windows Server 2019, including Desktop Experience, Storage Migration Service, System Insights, Azure Network Adapter, improvements to Storage Spaces Direct, and other changes.
 ms.prod: windows-server-threshold
 ms.technology: server-general
 ms.topic: article
@@ -45,7 +45,6 @@ This optional feature on demand is available on a separate ISO and can be added 
 
 Now with Windows Server 2019, Windows Admin Center enables a one-click experience to configure a point-to-site VPN connection between an on-premises Windows Server and an Azure Virtual Network.
 This automates the configuration for the Azure Virtual Network gateway as well as the on-premises VPN client.
-
 
 ## Security
 
@@ -152,10 +151,12 @@ Here's a list of what's new in Storage Spaces Direct. For details, see [What's n
 
 ### Storage Replica
 
-- Storage Replica is available in Standard Edition and can create 1 Partnership with 1 Resource Group with single 2TB volumes. The feature can replicate between clusters, asynchronously and synchronously.
-- Test failover is a new feature that allows mounting of destination storage in order to validate replication or backup data. For more information, see [Frequently Asked Questions about Storage Replica](https://docs.microsoft.com/windows-server/storage/storage-replica/storage-replica-frequently-asked-questions).
-- Log Performance improvements v1.1
+Here's what's new in Storage Replica. For details, see [What's new in Storage Replica](../storage/whats-new-in-storage.md#storage-replica).
 
+- Storage Replica is now available in Windows Server 2019 Standard Edition.
+- Test failover is a new feature that allows mounting of destination storage to validate replication or backup data. For more information, see [Frequently Asked Questions about Storage Replica](../storage/storage-replica/storage-replica-frequently-asked-questions.md).
+- Storage Replica log performance improvements
+- Windows Admin Center support
 
 ## Failover Clustering
 

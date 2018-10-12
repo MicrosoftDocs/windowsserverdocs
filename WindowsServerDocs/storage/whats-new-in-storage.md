@@ -73,7 +73,7 @@ There are a number of improvements to Storage Spaces Direct in Windows Server 20
 
     This enables admins to manually delimit the allocation of volumes in Storage Spaces Direct. Doing so can significantly increase fault tolerance under certain conditions, but imposes some added management considerations and complexity. For more info, see [Delimit the allocation of volumes](storage-spaces/delimit-volume-allocation.md).
 
-### Storage Replica
+### <a id="storage-replica"></a>Storage Replica
 
 There are a number of improvements to [Storage Replica](storage-replica/storage-replica-overview.md) in this release:
 
@@ -96,7 +96,7 @@ The option to mount the destination storage is now possible through the test fai
 
 #### Windows Admin Center support
 
-Support for graphical management of replication is now available in Windows Admin Center. This includes server-to-server replication, cluster-to-cluster, as well as stretch cluster replication.
+Support for graphical management of replication is now available in Windows Admin Center via the Server Manager tool. This includes server-to-server replication, cluster-to-cluster, as well as stretch cluster replication.
 
 ### SMB
 
