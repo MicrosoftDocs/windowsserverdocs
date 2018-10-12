@@ -98,7 +98,7 @@ Storage in Windows Server provides new and improved features for software-define
 <HR />
                         <p><h3><a href="fsrm/fsrm-overview.md">File Server Resource Manager</a></h3> Manage and classify data stored on file servers.<p>
 <HR />
-                        <p><h3><a href="iscsi/iscis-target-server-overview.md">iSCSI Target Server</a></h3> Provides block storage to other servers and applications on the network by using the Internet SCSI (iSCSI) standard.</p>
+                        <p><h3><a href="iscsi/iscsi-target-server-overview.md">iSCSI Target Server</a></h3> Provides block storage to other servers and applications on the network by using the Internet SCSI (iSCSI) standard.</p>
 <HR />
                        <p><h3><a href="iscsi/iscsi-boot-overview.md">iSCSI Target Server</a></h3> Can boot hundreds of computers from a single operating system image that is stored in a centralized location. This improves efficiency, manageability, availability, and security.</p>
                     </div>
