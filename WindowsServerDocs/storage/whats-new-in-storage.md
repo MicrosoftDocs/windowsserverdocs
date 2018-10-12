@@ -96,7 +96,7 @@ The option to mount the destination storage is now possible through the test fai
 
 #### Windows Admin Center support
 
-Support for graphical management replication is now available in Windows Admin Center. This includes server-to-server replication, cluster-to-cluster, as well as stretch cluster replication.
+Support for graphical management of replication is now available in Windows Admin Center. This includes server-to-server replication, cluster-to-cluster, as well as stretch cluster replication.
 
 ### SMB
 
