@@ -29,11 +29,11 @@ To be fair, Windows Admin Center is a separate download that runs on Windows Ser
 
 Storage Migration Service is a new technology that makes it easier to migrate servers to a newer version of Windows Server. It provides a graphical tool that inventories data on servers, transfers the data and configuration to newer servers, and then optionally moves the identities of the old servers to the new servers so that apps and users don't have to change anything. For more info, see [Storage Migration Service](storage-migration-service/overview.md).
 
-### Storage Spaces Direct (Windows Server 2019 only)
+### <a id="storage-spaces-direct"></a>Storage Spaces Direct (Windows Server 2019 only)
 
 There are a number of improvements to Storage Spaces Direct in Windows Server 2019 (Storage Spaces Direct isn't included in Windows Server, Semi-Annual Channel):
 
-- **Deduplication and compression for ReFS**
+- **Deduplication and compression for ReFS volumes**
 
     Store up to 10X more data on the same volume with deduplication and compression for the ReFS filesystem. (It’s [just one click](https://www.youtube.com/watch?v=PRibTacyKko&feature=youtu.be) to turn on with Windows Admin Center.) The variable-size chunk store with optional compression maximizes savings rates, while the multi-threaded post-processing architecture keeps performance impact minimal. Supports volumes up to 64 TB and files up to 1 TB each.
 

@@ -35,7 +35,7 @@ This topic explains the new and changed functionality in Failover Clustering for
 
     You can now use a simple USB drive attached to a network switch as a witness in determining quorum for a cluster. This extends the File Share Witness to support any SMB2-compliant device.
 
-- **Cluster infrastructure**
+- **Cluster infrastructure improvements**
 
     The CSV cache is now enabled by default to boost virtual machine performance. MSDTC now supports Cluster Shared Volumes, to allow deploying MSDTC workloads on Storage Spaces Direct such as with SQL Server. Enhanced logic to detect partitioned nodes with self-healing to return nodes to cluster membership. Enhanced cluster network route detection and self-healing.
 
