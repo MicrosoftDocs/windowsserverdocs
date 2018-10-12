@@ -82,7 +82,6 @@ There are a number of improvements to [Storage Replica](storage-replica/storage-
 You can now use Storage Replica with Windows Server, Standard Edition in addition to Datacenter Edition. Storage Replica running on Windows Server, Standard Edition, has the following limitations:
 
 - Storage Replica replicates a single volume instead of an unlimited number of volumes.
-- Volumes can have one partnership instead of an unlimited number of partners.
 - Volumes can have a size of up to 2 TB instead of an unlimited size.
 
 #### Storage Replica log performance improvements
@@ -97,7 +96,7 @@ The option to mount the destination storage is now possible through the test fai
 
 #### Windows Admin Center support
 
-Support for graphical management of server to server replication is now available in Windows Admin Center. This removes the requirement to use PowerShell to manage a common disaster protection workload.
+Support for graphical management replication is now available in Windows Admin Center. This includes server-to-server replication, cluster-to-cluster, as well as stretch cluster replication.
 
 ### SMB
 
