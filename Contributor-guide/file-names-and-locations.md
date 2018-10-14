@@ -16,10 +16,10 @@ Knowing and following the rules helps you get your pull request accepted faster.
 - Keep the file names to 3-5 words if possible - 10 words is really too long for readability and SEO.
 - Use lower case and only letters, numbers, and hyphens.
 - No spaces or punctuation characters. Use a hyphen to separate words and numbers in the file name.
-- Use the short form of action verbs, not the '-ing' form: ```deploy-nano-server``` not ```Deploying-Nano-Server```
+- Use the short form of action verbs, not the '-ing' form: `deploy-nano-server` not `Deploying-Nano-Server`
 - Leave out small words, such as a, and, the, in, or.
 - Spell words out; avoid unapproved or unnecessary acronyms in file names
-- File names should be unique - instead of ```overview.md``` use ```storage-spaces-overview.md```
+- File names should be unique - instead of `overview.md` use `storage-spaces-overview.md`
 
 Acronyms and initialisms in file names - specific guidelines:
 
@@ -32,7 +32,7 @@ Review the list of articles in the repository to get an idea of existing names. 
 
  **component-topic-title.md**
  
-For example, ```storage-spaces-direct-overview.md```
+For example, `storage-spaces-direct-overview.md`
 
 ## File name approval
 
@@ -54,7 +54,7 @@ Windows operating systems are case insensitive. If you need to change a file nam
 
   biztalk-administration-and-Development-Task-List-in-BizTalk-Services --> biztalk-services-administration-and-development-task-list
 
-Use the ```git mv``` command to rename a file:
+Use the `git mv` command to rename a file:
 ```
   git mv <WindowsServerDocs/tech-area/subarea/current-file-name.md> <WindowsServerDocs/tech-area/subarea/new-file-name.md>
 ```
