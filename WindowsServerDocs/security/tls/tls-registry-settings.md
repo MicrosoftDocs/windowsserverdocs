@@ -347,7 +347,7 @@ SSL 3.0 subkey table
 
 This subkey controls the use of TLS 1.0.
 
-For TLS 1.0 default settings, see see [Protocols in the TLS/SSL (Schannel SSP)](https://msdn.microsoft.com/library/windows/desktop/mt808159.aspx).
+For TLS 1.0 default settings, see [Protocols in the TLS/SSL (Schannel SSP)](https://msdn.microsoft.com/library/windows/desktop/mt808159.aspx).
 
 Registry path: HKLM SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols
 
