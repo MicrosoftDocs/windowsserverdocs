@@ -28,7 +28,7 @@ TPM mode uses a TPM identifier (also called a platform identifier or endorsement
 
     -  This is applicable to all Hyper-V hosts that share common hardware and software
 
-We recommend that you capture the baseline and CI policy from a "reference host" that is representative of each unique class of Hyper-V hardware configuration within your datacenter. Beginning with with Windows Server version 1709, sample CI policies are included at C:\Windows\schemas\CodeIntegrity\ExamplePolicies. 
+We recommend that you capture the baseline and CI policy from a "reference host" that is representative of each unique class of Hyper-V hardware configuration within your datacenter. Beginning with Windows Server version 1709, sample CI policies are included at C:\Windows\schemas\CodeIntegrity\ExamplePolicies. 
 
 ## Versioned attestation policies
 
