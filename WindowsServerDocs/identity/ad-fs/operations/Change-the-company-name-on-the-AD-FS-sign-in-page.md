@@ -15,7 +15,7 @@ ms.technology: identity-adfs
 
 >Applies To: Windows Server 2016, Windows Server 2012 R2
  
-To change the name of the company that is displayed on the sign\-in page, use the following Windows PowerShell PowerShell cmdlet and syntax. This value is set by default by using the value from the Federation Service display name that you entered during setup.  
+To change the name of the company that is displayed on the sign\-in page, use the following Windows PowerShell cmdlet and syntax. This value is set by default by using the value from the Federation Service display name that you entered during setup.  
 
 ![change name](media/AD-FS-user-sign-in-customization/ADFS_Blue_Custom1.png)
   
