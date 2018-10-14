@@ -5,7 +5,7 @@ For more information see the [Code of Conduct FAQ](https://opensource.microsoft.
 
 # WindowsServerDocs-pr
 
-This repo is accesible only to internal Microsoft employees, vendors, and contractors. It's actively managed and includes the source for three content sets published to the TechNet technical library:
+This repo is actively managed and includes the source for three content sets published to the TechNet technical library:
 
 -  [Windows Server 2016](https://technet.microsoft.com/windows-server-docs/get-started/windows-server-2016)
 -  [Essentials Server 2016]()
