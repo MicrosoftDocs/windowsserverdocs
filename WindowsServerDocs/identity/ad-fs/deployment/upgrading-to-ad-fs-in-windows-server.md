@@ -72,7 +72,7 @@ The remainder of the is document provides the steps for adding a Windows Server 
 
     ![upgrade](media/Upgrading-to-AD-FS-in-Windows-Server-2016/ADFS_Mixed_5.png)  
 
-6.  On each Web Application Proxy, re-configure teh WAP by executing the following PowerShell command in an elevated window:  
+6.  On each Web Application Proxy, re-configure the WAP by executing the following PowerShell command in an elevated window:  
 ```powershell
 $trustcred = Get-Credential -Message "Enter Domain Administrator credentials"
 Install-WebApplicationProxy -CertificateThumbprint {SSLCert} -fsname fsname -FederationServiceTrustCredential $trustcred  
