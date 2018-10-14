@@ -119,7 +119,7 @@ Make sure that you created the publisher settings on the initial SQL Server as d
 5.  On the **Subscribers** page, select **AdfsConfigurationV3** as the subscriber database and click **Next**.  
 ![Set up Geographic Redundancy](media\Set-up-Geographic-Redundancy-with-SQL-Server-Replication\sql28.png) </br> 
   
-6.  On the **Merge Agent Security** page, click **...** and enter the username and password of a domain account \(not a GMSA\) created for the SQL agent by using the ellipses box and and click **Next**.
+6.  On the **Merge Agent Security** page, click **...** and enter the username and password of a domain account \(not a GMSA\) created for the SQL agent by using the ellipses box and click **Next**.
 ![Set up Geographic Redundancy](media\Set-up-Geographic-Redundancy-with-SQL-Server-Replication\sql30.png) </br> 
   
 7.  On **Synchronization Schedule**, choose **Run Continuously** and click **Next**. 
