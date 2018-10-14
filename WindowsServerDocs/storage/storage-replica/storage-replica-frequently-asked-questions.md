@@ -184,7 +184,7 @@ Storage Replica relies on SMB and WSMAN for its replication and management. This
 Note: The Test-SRTopology cmdlet requires ICMPv4/ICMPv6, but not for replication or management.
 
 ## <a name="FAQ15.5"></a>What are the log volume best practices?
-The optimal size size of the log varies widely per environment and workload, and is determined by how much write IO your workload performs. 
+The optimal size of the log varies widely per environment and workload, and is determined by how much write IO your workload performs. 
 
 1.	A larger or smaller log doesn’t make you any faster or slower
 2.	A larger or smaller log doesn’t have any bearing on a 10GB data volume versus a 10TB data volume, for instance
