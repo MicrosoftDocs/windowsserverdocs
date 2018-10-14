@@ -303,7 +303,7 @@ New-ItemProperty "HKLM:\Software\Microsoft\Windows Server\Setup"Ã‚Â  -Name 
   
 -   **Performance** Initial client backup might be time consuming because of the amount of data to be uploaded.  
   
--   **Stability** Sometimes the Internet connection is not stable on the client side. Client backup is designed to resume automatically, and the the client backup database creates a checkpoint every time 40 GB of data is backed up. You can change this value to a smaller number if you expect the Internet connection to be unreliable.  
+-   **Stability** Sometimes the Internet connection is not stable on the client side. Client backup is designed to resume automatically, and the client backup database creates a checkpoint every time 40 GB of data is backed up. You can change this value to a smaller number if you expect the Internet connection to be unreliable.  
   
     -   To enable a checkpoint job: On the server, set registry key **HKLM\Software\Microsoft\Windows Server\Backup\GetCheckPointJobs** to 1.  
   
