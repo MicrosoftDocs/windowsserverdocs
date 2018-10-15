@@ -69,7 +69,6 @@
 ##### [Adding, removing, and updating capabilities](..\manage\system-insights\add-remove-update-capabilities.md)
 ##### [Choosing capability data sources](..\manage\system-insights\data-sources.md)
 #### [FAQ](..\manage\system-insights\faq.md)
-#### [Known issues](..\manage\system-insights\known-issues.md)
 
 
 <!--
