@@ -16,31 +16,30 @@ ms.date: 6/05/2018
 ---
 # Understanding capabilities
 
->Applies To: Windows Server Insider Preview build 17692 and later
+>Applies To: Windows Server 2019
 
 This topic defines the concept of capabilities in System Insights and introduces the default capabilities available in Windows Server 2019. 
 
 This topic also describes the data sources, prediction timelines, and prediction statuses used for the default capabilities. 
 
 ## Capability overview
-A System Insights capability is a machine learning or statistics model that analyzes system data to help give you increased insight into the functioning of your deployment. System Insights introduces an initial set of default capabilities, as well as allows you to add new capabilities dynamically, without needing to update the operating system. 
+A System Insights capability is a machine learning or statistics model that analyzes system data to help give you increased insight into the functioning of your deployment. System Insights introduces an initial set of default capabilities, and it allows you to add new capabilities dynamically, without needing to update the operating system. 
 
 >[!NOTE]
 >Detailed documentation explaining how to create, add, and update capabilities is available [here](adding-and-developing-capabilities.md), and [the managing capabilities document](managing-capabilities.md) provides more high-level information about this functionality.
 
-Additionally, each capability runs locally on each Windows Server instance, helping administrators proactively detect and address problematic issues in their deployments. 
-Capabilities run locally on each server instance, and they can be managed individually, allowing you to seamlessly leverage these capabilities to detect and address problematic issues in your deployments.
+Additionally, each capability runs locally on a Windows Server instance, and each capability can be managed individually.
 
 ### Capability outputs
-When a capability is invoked, it provides an output to help explain the result of its analysis or prediction. Each output must contain a **Status** and a **Status Description** to describe the prediction, and each result can optionally contain capability-specific data associated with the prediction. The **Status Description** helps explain the **Status** reported by the capability, and the capability reports either an **OK**, **Warning**, or **Critical** status. Additionally, a capability can use an **Error** or **None** status if no prediction was made. Together, here are the possible capability statuses and their basic meanings: 
+When a capability is invoked, it provides an output to help explain the result of its analysis or prediction. Each output must contain a **Status** and a **Status Description** to describe the prediction, and each result can optionally contain capability-specific data associated with the prediction. The **Status Description** helps provides a contextual explaination for the **Status**, and the capability reports either an **OK**, **Warning**, or **Critical** status. Additionally, a capability can use an **Error** or **None** status if no prediction was made. Together, here are the capability statuses and their basic meanings: 
 
 - **Ok** - Everything looks good.
 - **Warning** - No immediate attention required, but you should take a look. 
-- **Critical** - You should take a look very soon. 
+- **Critical** - You should take a look soon. 
 - **Error** - An unknown problem caused the capability to fail. 
 - **None** - No prediction was made. This could be due to a lack of data or any other capability-specific reason for not making a prediction. 
 
-Additionally, any capability-specific data contained in the result will be placed in a user-accessible JSON file, which [can be found using PowerShell](https://docs.microsoft.com/windows-server/manage/system-insights/managing-capabilities#retrieving-capability-results). 
+Additionally, any capability-specific data contained in the result will be placed in a user-accessible JSON file, and the file path [can be found using PowerShell](https://docs.microsoft.com/windows-server/manage/system-insights/managing-capabilities#retrieving-capability-results). 
 
 ## Default capabilities
 In Windows Server 2019, System Insights introduces four default capabilities focused on capacity forecasting:
@@ -48,9 +47,9 @@ In Windows Server 2019, System Insights introduces four default capabilities foc
 - **CPU capacity forecasting** - Forecasts CPU usage. 
 - **Networking capacity forecasting** - Forecasts network usage for each network adapter. 
 - **Total storage consumption forecasting** - Forecasts total storage consumption across all local drives. 
-- **Volume consumption forecasting** - Forecastings storage consumption for each volume.
+- **Volume consumption forecasting** - Forecasts storage consumption for each volume.
 
-Each capability analyzes past historical data to predict future usage, and **all of the forecasting capabilities are designed to forecast long-term trends rather than short-term behavior**, helping administrators correctly provision hardware and tune their workloads to avoid future resource contention. Because these capabilities focus on long-term usage, these capabilities analyze daily data rather than analyze smaller granularity data. 
+Each capability analyzes past historical data to predict future usage, and **all of the forecasting capabilities are designed to forecast long-term trends rather than short-term behavior**, helping administrators correctly provision hardware and tune their workloads to avoid future resource contention. Because these capabilities focus on long-term usage, these capabilities analyze daily data. 
 
 ### Forecasting model
 The default capabilities use a forecasting model to predict future usage, and for each prediction, the model is trained locally on your machine's data. This model is designed to help detect longer term trends, and retraining on each Windows Server instance enables the capability to adapt to the specific behavior and nuances of each machine's usage.
@@ -91,7 +90,7 @@ All System Insights capabilities must output a status associated with each predi
 - **None**: There isn’t enough data to make a prediction. This could be due to a lack of data or because no data has been reported recently.
 
 >[!NOTE]
->If a capability forecasts on multiple instances - such as multiple volumes or network adapters - the status reflects the most severe status across all instances. Individual statuses for each volume or network adapter are visible in Windows Admin Center or within the data contained in the output of each capability. For instructions on how to parse the JSON output of the default capabilities, visit [this blog](https://aka.ms/systeminsightsmitigationscripts). 
+>If a capability forecasts on multiple instances - such as multiple volumes or network adapters - the status reflects the most severe status across all instances. Individual statuses for each volume or network adapter are visible in Windows Admin Center or within the data contained in the output of each capability. For instructions on how to parse the JSON output of the default capabilities, visit [this blog](https://aka.ms/systeminsights-mitigationscripts). 
 
 
 ## See also
