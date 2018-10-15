@@ -33,7 +33,7 @@ Your system data is stored on your machine, and this data is analyzed by predict
 
 ## Get started
 
-<iframe src="https://www.youtube.com/watch?v=AJxQkx5WSaA" width="560" height="315" allowfullscreen></iframe>
+<iframe src="https://www.youtube-nocookie.com/embed/AJxQkx5WSaA" width="560" height="315" allowfullscreen></iframe>
 
 >[!TIP]
 >Watch these short videos to learn the information you need to get started and confidently manage System Insights: [Getting started with System Insights in 10 minutes](https://blogs.technet.microsoft.com/filecab/2018/07/24/getting-started-with-system-insights-in-10-minutes/)
@@ -48,7 +48,7 @@ System Insights is available on any Windows Server 2019 instance. It runs on bot
 #### Install the feature
 You can install System Insights using the extension within Windows Admin Center:
 
-![Day 0 experience for System Insights extension.](media/day-0-page.png)
+![Day 0 experience for System Insights extension.](media/day-0-2.png)
 
 You can also install System Insights directly through Server Manager by adding the **System-Insights** feature, or by using PowerShell:
 
