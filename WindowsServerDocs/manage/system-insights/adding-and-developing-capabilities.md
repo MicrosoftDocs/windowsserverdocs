@@ -17,7 +17,7 @@ ms.date: 7/31/2018
 
 # Adding and developing new capabilities
 
->Applies To: Windows Server Insider Preview build 17723 and later
+>Applies To: Windows Server 2019
 
 System Insights enables you to add new predictive capabilities to System Insights, without requiring any OS updates. This enables developers, including Microsoft and third parties, to create and deliver new capabilities mid-release to address the scenarios you care about. 
 

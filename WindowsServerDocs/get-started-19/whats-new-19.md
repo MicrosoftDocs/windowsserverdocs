@@ -4,8 +4,8 @@ description: An overview of new features in Windows Server 2019, including Deskt
 ms.prod: windows-server-threshold
 ms.technology: server-general
 ms.topic: article
-author: dawnwood
-ms.author: dawn.wood
+author: coreyp-at-msft
+ms.author: coreyp
 ms.localizationpriority: high
 ms.date: 10/12/2018
 ---
