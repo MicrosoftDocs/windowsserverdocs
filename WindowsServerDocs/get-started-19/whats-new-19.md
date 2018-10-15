@@ -4,10 +4,9 @@ description: "What's new in Windows Server 2019"
 ms.prod: windows-server-threshold
 ms.technology: server-general
 ms.topic: article
-author: dawnwood
-ms.author: dawn.wood
+author: coreyp-at-msft
+ms.author: coreyp
 ms.localizationpriority: high
-ms.date: 10/02/2018
 ---
 
 # What's new in Windows Server 2019
