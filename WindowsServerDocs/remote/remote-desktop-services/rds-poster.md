@@ -34,9 +34,3 @@ Check out the following topics to learn more about planning:
 ## Windows Virtual Desktop
 
 You may have heard us talk about a new “modern infrastructure” for Remote Desktop. Maybe you've heard us use the phrase “RDmi.” The phrase you need to know is “Windows Virtual Desktop," or "WVD" for short. Learn about this new virtualization offering in [Microsoft 365 adds modern desktop on Azure](https://azure.microsoft.com/en-us/blog/microsoft-365-adds-modern-desktop-on-azure/) and our [Ignite 2018 presentation on Windows Virtual Desktop](https://www.youtube.com/watch?v=_7G37PFYVe4). Windows Virtual Desktop is currently in private preview.
-
-The following poster shows how you can plan for and deploy Windows Virtual Desktop.
-
-![Windows Virtual Desktop architecture poster](media/rds-rdmi-poster.png)
-
-[Download the PDF](https://github.com/MicrosoftDocs/windowsserverdocs/blob/master/WindowsServerDocs/remote/remote-desktop-services/media/rdmi-poster.pdf)
