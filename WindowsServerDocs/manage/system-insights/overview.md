@@ -48,7 +48,7 @@ System Insights is available on any Windows Server 2019 instance. It runs on bot
 #### Install the feature
 You can install System Insights using the extension within Windows Admin Center:
 
-![Day 0 experience for System Insights extension.](media/day-0-page.png)
+![Day 0 experience for System Insights extension.](media/day-0-2.png)
 
 You can also install System Insights directly through Server Manager by adding the **System-Insights** feature, or by using PowerShell:
 
