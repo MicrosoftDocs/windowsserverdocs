@@ -6,12 +6,12 @@ ms.manager: brianlic
 ms.technology: storage
 ms.topic: article
 author: jasongerend
-ms.date: 07/10/2017
+ms.date: 10/15/2018
 description: This topic describes DFS Namespaces, which is a role service in Windows Server enabling you to group shared folders located on different servers into one or more logically structured namespaces.
 ---
 # DFS Namespaces overview
 
-> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2, Windows Server 2008
+> Applies to: Windows Server 2019, Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2, Windows Server 2008
 
 DFS Namespaces is a role service in Windows Server that enables you to group shared folders located on different servers into one or more logically structured namespaces. This makes it possible to give users a virtual view of shared folders, where a single path leads to files located on multiple servers, as shown in the following figure:
 
@@ -37,7 +37,7 @@ A namespace server is a domain controller or member server that hosts a namespac
 Servers that are running the following operating systems can host multiple domain-based namespaces in addition to a single stand-alone namespace. 
 
 - Windows Server (Semi-Annual Channel)
-- Windows Server 2016 
+- Windows Server 2016
 - Windows Server 2012 R2
 - Windows Server 2012
 - Windows Server 2008 R2 Datacenter/Enterprise
@@ -45,7 +45,6 @@ Servers that are running the following operating systems can host multiple domai
 Servers that are running the following operating systems can host a single stand-alone namespace:
 
 - Windows Server 2008 R2 Standard
-
 
 The following table describes additional factors to consider when choosing servers to host a namespace.
 
@@ -106,7 +105,7 @@ Using DFS Namespaces on a virtual machine in Microsoft Azure has been tested; ho
 
 - You can’t cluster stand-alone namespaces in Azure virtual machines.
 
-- You can host domain-based namespaces in Azure virtual machines, including environments with Azure Active Directory, though a single namespace can’t encompass both on-premises namespace servers and namespace servers hosted in Azure VMs, even when using Active Directory Federation Services.
+- You can host domain-based namespaces in Azure virtual machines, including environments with Azure Active Directory.
 
 To learn about how to get started with Azure virtual machines, see [Azure virtual machines documentation](https://docs.microsoft.com/azure/virtual-machines/).
 
