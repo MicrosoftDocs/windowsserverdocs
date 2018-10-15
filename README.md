@@ -8,8 +8,8 @@ For more information see the [Code of Conduct FAQ](https://opensource.microsoft.
 This repo is actively managed and includes the source for three content sets published to the TechNet technical library:
 
 -  [Windows Server 2016](https://technet.microsoft.com/windows-server-docs/get-started/windows-server-2016)
--  [Essentials Server 2016]()
--  [Microsoft Hyper-V Server 2016](https://technet.microsoft.com/hyper-v-server-docs/Hyper-V-Server-2016)
+-  [Essentials Server 2016](https://docs.microsoft.com/en-us/windows-server-essentials/get-started/what-s-new)
+-  [Microsoft Hyper-V Server 2016](https://docs.microsoft.com/en-us/windows-server/virtualization/hyper-v/hyper-v-server-2016)
 
 Writers and engineering partners share responsibility for technical accuracy, within specific technology areas. **The writer for an assigned area reviews and approves all pull requests to add, update, or delete articles or art.** For Windows Server content,these writers are: 
 
