@@ -176,7 +176,7 @@ Two new features are available in Windows Server, version 1709:
 
 -   The test failover feature. This allows mounting of destination storage in order to validate replication or backup data. For more info, see https://aka.ms/srfaq
 
--   The Windows Admin Center now supports [managing Storage Replica graphically](storage-replica-ui.md) for server-to-server configurations, with no need to use PowerShell for general deployment, management, failover, and removal operations operations.
+-   The Windows Admin Center now supports [managing Storage Replica graphically](storage-replica-ui.md) for server-to-server configurations, with no need to use PowerShell for general deployment, management, failover, and removal operations.
 
 Additionally, Windows Server, version 1709:
 
