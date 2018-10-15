@@ -16,29 +16,28 @@ ms.date: 5/23/2018
 ---
 # System Insights FAQ
 
->Applies To: Windows Server Insider Preview build 17692 and later
+>Applies To: Windows Server 2019
 
-## How does System Insights relate to Azure Operations Management Suite (OMS)
+## How does System Insights integrate with Azure Monitor or System Center Operations Manager?
 
-[Azure Operations Management Suite (OMS)](https://docs.microsoft.com/azure/operations-management-suite/) is a cloud-based IT management solution, providing operational information across your deployments to help you manage your on-premises and cloud infrastructure. System Insights, in contrast, is a Windows Server feature that introduces local predictive analytics capabilities. Together, these two technologies can help surface predictive analysis across a population of devices:
+[Azure Monitor](https://azure.microsoft.com/services/monitor/) and [System Center Operations Manager](https://docs.microsoft.com/system-center/scom/welcome?view=sc-om-1807) provide operational information across your deployments to help you manage your infrastructure. System Insights, in contrast, is a Windows Server feature that introduces local predictive analytics capabilities. Together, System Insights and Azure Monitor or SCOM can help surface the predictions across a population of devices:
 
-OMS can key off the events created by System Insights, as System Insights outputs the result of each prediction to the event log. OMS can surface these machine-specific predictions across a fleet of Windows Servers, enabling Azure OMS subscribers to have a unified, intuitive view of these predictions across a group of server instances.
-
+ Azure Monitor or SCOM can key off the events created by System Insights, as System Insights outputs the result of each prediction to the event log. They can surface these machine-specific predictions across a fleet of Windows Servers, enabling you to have a unified view of these predictions across a group of server instances. 
+ 
+ See the channel and event IDs for each prediction [here](https://docs.microsoft.com/en-us/windows-server/manage/system-insights/managing-capabilities#retrieving-capability-results).
 
 ## How does System Insights relate to Windows ML?
 
 [Windows ML](https://docs.microsoft.com/windows/uwp/machine-learning/) is a platform that enables developers to import and score pre-trained machine learning models on Windows devices. These models benefit from hardware acceleration, and they can be scored locally. 
 
-System Insights is a feature in Windows Server 2019 that offers local predictive capabilities together with a complete management experience, including PowerShell and Windows Admin Center integration. **The models behind these System Insights capabilities can leverage Windows ML** to benefit from hardware acceleration and the ability to import models in the [Open Neural Network Exchange (ONNX)](https://onnx.ai/) format. 
-
-In Windows Server 2019, the default capabilities don't currently use Windows ML because these capabilities require local training to adapt to the specific datasets of each node. 
-
+System Insights is a feature in Windows Server 2019 that offers local predictive capabilities together with a complete management experience, including PowerShell and Windows Admin Center integration. 
 
 ## Can I use System Insights for my cluster? 
 
-Yes. System Insights can independently run on each individual failover cluster node, and the capabilities forecast local storage, volume, CPU, and networking usage for each node in a cluster.  If desired, you can collect and surface these machine-scoped forecasts via simple PowerShell scripts for the entire cluster because you can use PowerShell to access the forecast results for each remote machine. 
+Yes. System Insights can independently run on each individual failover cluster node, and the default behavior of System Insights forecasts usage across local storage, volume, CPU, and networking. **You can also enable forecasting for clustered storage**, so the storage forecasting capabilities predict usage for clustered volumes and storage. 
 
-Note that by default, System Insights storage and volume capacity forecasting predictions are limited to non-clustered storage. This avoids having each cluster node redundantly forecast on clustered storage that is accessible from all nodes of the cluster. We, however, expect to add new functionality to System Insights in a future preview build that could optionally provide storage & volume capacity forecasting on clustered storage (e.g. CSV volumes), from each cluster node where this option is enabled.   
+You can manage these settings in Windows Admin Center or PowerShell, and more detailed information about this functionality is available [here](https://blogs.technet.microsoft.com/filecab/2018/10/03/using-system-insights-to-forecast-clustered-storage-usage/).
+ 
 
 ## How expensive is it to run the default capabilities?
 
