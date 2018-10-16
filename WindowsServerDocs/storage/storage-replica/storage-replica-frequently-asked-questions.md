@@ -101,7 +101,7 @@ To remove the test failover snapshot and discard its changes:
 You should only use the test failover feature for short-term temporary operations. It is not intended for long term usage. When in use, replication continues to the real destination volume. 
 
 ## <a name="FAQ7"></a> Can I configure Scale-out File Server (SOFS) in a stretch cluster?  
-While technically possible, this is not a recommended configuration in Windows Server 2016 due to the lack of site awareness in the compute nodes contacting the SOFS. If using campus-distance networking, where latencies are typically sub-millisecond, this configuration typically works works without issues.   
+While technically possible, this is not a recommended configuration in Windows Server 2016 due to the lack of site awareness in the compute nodes contacting the SOFS. If using campus-distance networking, where latencies are typically sub-millisecond, this configuration typically works without issues.   
 
 If configuring cluster-to-cluster replication, Storage Replica fully supports Scale-out File Servers, including the use of Storage Spaces Direct, when replicating between two clusters.  
 
@@ -184,7 +184,7 @@ Storage Replica relies on SMB and WSMAN for its replication and management. This
 Note: The Test-SRTopology cmdlet requires ICMPv4/ICMPv6, but not for replication or management.
 
 ## <a name="FAQ15.5"></a>What are the log volume best practices?
-The optimal size size of the log varies widely per environment and workload, and is determined by how much write IO your workload performs. 
+The optimal size of the log varies widely per environment and workload, and is determined by how much write IO your workload performs. 
 
 1.	A larger or smaller log doesn’t make you any faster or slower
 2.	A larger or smaller log doesn’t have any bearing on a 10GB data volume versus a 10TB data volume, for instance

@@ -36,7 +36,7 @@ The optimal number of team members is two as virtualized traffic will be spread 
 
 ### Encapsulation Offloads
 
-SDN relies on encapsulation of packets to to virtualize the network.  For optimal performance, it is important that the network adapter supports hardware offload for the encapsulation format that is used.  There is no significant performance benefit of one encapsulation format over another.  The default encapsulation format when the network controller is used is VXLAN.
+SDN relies on encapsulation of packets to virtualize the network.  For optimal performance, it is important that the network adapter supports hardware offload for the encapsulation format that is used.  There is no significant performance benefit of one encapsulation format over another.  The default encapsulation format when the network controller is used is VXLAN.
 
 You can determine which encapsulation format is being used through the network controller with the following PowerShell cmdlet:
 

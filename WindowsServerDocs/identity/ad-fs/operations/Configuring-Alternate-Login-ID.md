@@ -126,7 +126,7 @@ Using alternate-id can cause extra prompts for authentication if these additiona
 With the following additional configuration, the user experience is improved significantly, and you can achieve near zero prompts for authentication for alternate-id users in your organization.
 
 ##### Step 1. Update to required office version
-Office version 1712 (build no 8827.2148) and above have updated the authentication logic to handle the alternate-id scenario. In order to leverage the new logic, the client machines need to be updated to office version version 1712 (build no 8827.2148) and above.
+Office version 1712 (build no 8827.2148) and above have updated the authentication logic to handle the alternate-id scenario. In order to leverage the new logic, the client machines need to be updated to office version 1712 (build no 8827.2148) and above.
 
 ##### Step 2. Configure registry for impacted users using group policy
 The office applications rely on information pushed by the directory administrator to identify the alternate-id environment. The following registry keys need to be configured to help office applications authenticate the user with alternate-id without showing any extra prompts

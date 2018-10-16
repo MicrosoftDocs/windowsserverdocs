@@ -536,7 +536,7 @@ description: Windows Server documentation helps IT professionals evaluate, plan,
                                         </div>
                                         <div class="cardText">
                                             <h2>Troubleshooting</h2>
-                                            <p>Learn to troubleshoot some of the most used Windows Server technologies and feature.</p>
+                                            <p>Learn to troubleshoot some of the most used Windows Server technologies and features.</p>
 <table>
      <tr>
         <td style="vertical-align: top;">

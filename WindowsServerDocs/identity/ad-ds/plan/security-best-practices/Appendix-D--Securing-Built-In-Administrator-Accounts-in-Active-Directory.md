@@ -214,7 +214,7 @@ From any member server or workstation that is not affected by the GPO changes (s
 
     ![securing built-in admin accounts](media/Appendix-D--Securing-Built-In-Administrator-Accounts-in-Active-Directory/SAD_38.gif)  
 
-5.  In the **Command Prompt** window, type **net use \\\\<Server Name>\c$**, where <Server Name> is the name of the member server or workstation you are attempting to access over the network.  
+5.  In the **Command Prompt** window, type **net use \\\\\<Server Name\>\c$**, where \<Server Name\> is the name of the member server or workstation you are attempting to access over the network.  
 
 6.  The following screenshot shows the error message that should appear.  
 

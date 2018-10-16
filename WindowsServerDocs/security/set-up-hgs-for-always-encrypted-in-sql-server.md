@@ -122,7 +122,7 @@ Run all of the following commands in an elevated PowerShell session.
 
 ## Set up additional HGS nodes for production deployments
 
-Complete the following steps to add nodes to the cluster. 
+To add nodes to the cluster, run the following commands in an elevated PowerShell session. 
 
 1. [!INCLUDE [Install the HGS server role](../../includes/guarded-fabric-install-hgs-server-role.md)]
 

@@ -13,7 +13,7 @@ ms.localizationpriority:
 ---
 # Collect diagnostic data with Storage Spaces Direct
 
-> Applies to: Windows Server 2016
+> Applies to: Windows Server 2019, Windows Server 2016
 
 There are various diagnostic tools that can be used to collect the data needed to troubleshoot Storage Spaces Direct and Failover Cluster. In this article, we will focus on **Get-SDDCDiagnosticInfo** - a one touch tool that will gather all relevant information to help you diagnose your cluster.
 

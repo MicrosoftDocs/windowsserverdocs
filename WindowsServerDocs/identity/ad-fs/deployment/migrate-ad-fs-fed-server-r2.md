@@ -248,17 +248,17 @@ Any trailing spaces in the WSFedEndpoint property of a relying party trust may c
   
 6.  Configure service properties that map to the legacy web.config file parameters.  
   
-    -   If **useRelayStateForIdpInitiatedSignOn** was added to the **web.config** file in your AD FS 2.0 or AD FS in Windows Sever 2012 farm, then you must configure the following service properties in your AD FS in Windows Server 2012 R2 farm:  
+    -   If **useRelayStateForIdpInitiatedSignOn** was added to the **web.config** file in your AD FS 2.0 or AD FS in Windows Server 2012 farm, then you must configure the following service properties in your AD FS in Windows Server 2012 R2 farm:  
   
         -   AD FS in Windows Server 2012 R2 includes a **%systemroot%\ADFS\Microsoft.IdentityServer.Servicehost.exe.config** file. Create an element with the same syntax as the **web.config** file element: `<useRelayStateForIdpInitiatedSignOn enabled="true" />`. Include this element as part of **<microsoft.identityserver.web>** section of the **Microsoft.IdentityServer.Servicehost.exe.config** file.  
   
-    -   If **<persistIdentityProviderInformation enabled="true&#124;false" lifetimeInDays="90" enablewhrPersistence=”true&#124;false”  /\>** was added to the **web.config** file in your AD FS 2.0 or AD FS in Windows Sever 2012 farm, then you must configure the following service properties in your AD FS in Windows Server 2012 R2 farm:  
+    -   If **<persistIdentityProviderInformation enabled="true&#124;false" lifetimeInDays="90" enablewhrPersistence=”true&#124;false”  /\>** was added to the **web.config** file in your AD FS 2.0 or AD FS in Windows Server 2012 farm, then you must configure the following service properties in your AD FS in Windows Server 2012 R2 farm:  
   
         1.  In AD FS in Windows Server 2012 R2, run the following Windows PowerShell command: `Set-AdfsWebConfig –HRDCookieEnabled –HRDCookieLifetime`.  
   
-    -   If **<singleSignOn enabled="true&#124;false" /\>** was added to the **web.config** file in your AD FS 2.0 or AD FS in Windows Sever 2012 farm, you do not need to set any additional service properties in your AD FS in Windows Server 2012 R2 farm. Single sign-on is enabled by default in AD FS in Windows Server 2012 R2 farm.  
+    -   If **<singleSignOn enabled="true&#124;false" /\>** was added to the **web.config** file in your AD FS 2.0 or AD FS in Windows Server 2012 farm, you do not need to set any additional service properties in your AD FS in Windows Server 2012 R2 farm. Single sign-on is enabled by default in AD FS in Windows Server 2012 R2 farm.  
   
-    -   If localAuthenticationTypes settings were added to the **web.config** file in your AD FS 2.0 or AD FS in Windows Sever 2012 farm, then you must configure the following service properties in your AD FS in Windows Server 2012 R2 farm:  
+    -   If localAuthenticationTypes settings were added to the **web.config** file in your AD FS 2.0 or AD FS in Windows Server 2012 farm, then you must configure the following service properties in your AD FS in Windows Server 2012 R2 farm:  
   
         -   Integrated, Forms, TlsClient, Basic Transform list into equivalent AD FS in Windows Server 2012 R2 has global authentication policy settings to support both federation service and proxy authentication types. These settings can be configured in the AD FS in Management snap-in under the **Authentication Policies**.  
   
