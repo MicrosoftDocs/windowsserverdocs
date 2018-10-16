@@ -22,7 +22,7 @@ Open manifest.json file in {extension root}\src, and find the property "rootNavi
 
 ### Setting path as a rootNavigationBehavior
 
-Set the value of ```rootNavigationBehavior``` to ```path```, and then delete the ```requirements``` property, and leave the ```path``` property as an empty string. You have have completed the minimal required configuration to build a solution extension. Save the file, and gulp build -> gulp serve as you would a tool, and then side load the extension into your local Windows Admin Center extension.
+Set the value of ```rootNavigationBehavior``` to ```path```, and then delete the ```requirements``` property, and leave the ```path``` property as an empty string. You have completed the minimal required configuration to build a solution extension. Save the file, and gulp build -> gulp serve as you would a tool, and then side load the extension into your local Windows Admin Center extension.
 
 A valid manifest entryPoints array looks like this:
 ```

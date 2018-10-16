@@ -9,8 +9,8 @@ ms.technology: server-general
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 134aab85-664f-4d55-87ef-9e5fd098371f
-author: dawnwood
-ms.author: dawnwood
+author: coreyp-at-msft
+ms.author: coreyp
 manager: jasgroce
 ms.localizationpriority: medium
 ---

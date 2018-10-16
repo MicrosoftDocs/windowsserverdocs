@@ -293,9 +293,9 @@ The current activity output contains the following data:
 
 **LastFailedAuthUnknown**: this is the time of the last incorrect password login attempt from an IP address that was not on the list of “FamiliarIps” at the time of the attempt
 
-**FamiliarLockout**: this indicates if the user is currently in a state of lockout for correct password attempts from from IP addresses on the list of “FamiliarIps” 
+**FamiliarLockout**: this indicates if the user is currently in a state of lockout for correct password attempts from IP addresses on the list of “FamiliarIps” 
 
-**UnknownLockout**: this indicates if the user is currently in a state of lockout for correct password attempts from from IP addresses not on the list of “FamiliarIps”
+**UnknownLockout**: this indicates if the user is currently in a state of lockout for correct password attempts from IP addresses not on the list of “FamiliarIps”
 FamiliarIps: this is the current list of familiar IP addresses for the user
 
 ## Adjust threshold and window

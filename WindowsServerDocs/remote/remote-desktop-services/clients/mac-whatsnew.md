@@ -11,7 +11,7 @@ ms.topic: article
 author: lizap
 manager: dongill
 ms.author: elizapo
-ms.date: 08/06/2018
+ms.date: 10/09/2018
 ms.localizationpriority: medium
 ---
 # What's new for the Remote Desktop client on macOS?
@@ -19,6 +19,34 @@ ms.localizationpriority: medium
 We regularly update the [Remote Desktop client for macOS](remote-desktop-mac.md), adding new features and fixing issues. Check out the latest updates below.
 
 If you encounter any issues, you can always contact us via Help > Report an Issue.
+
+## Updates for version 10.2.2
+*Published date: 10/09/2018*
+
+- A brand new Connection Center that supports drag and drop, manual arrangement of desktops, resizable columns in list view mode, column-based sorting, and simpler group management.
+- The Connection Center now remembers the last active pivot (Desktops or Feeds) when closing the app.
+- The credential prompting UI and flows have been overhauled.
+- RD Gateway feedback is now part of the connecting status UI.
+- Settings import from the version 8 client has been improved.
+- RDP files pointing to RemoteApp endpoints can now be imported into the Connection Center.
+- Retina display optimizations for single monitor Remote Desktop scenarios.
+- Support for specifying the graphics interpolation level (which affects blurriness) when not using Retina optimizations.
+- 256-color support to enable connectivity to Windows 2000.
+- Fixed clipping of the right and bottom edges of the screen when connecting to Windows 7, Windows Server 2008 R2 and earlier.
+- Copying a local file into Outlook (running in a remote session) now adds the file as an attachment.
+- Fixed an issue that was slowing down pasteboard-based file transfers if the files originated from a network share.
+- Addressed a bug that was causing to Excel (running in a remote session) to hang when saving to a file on a redirected folder.
+- Fixed an issue that was causing no free space to be reported for redirected folders.
+- Fixed a bug that caused thumbnails to consume too much disk storage on macOS 10.14.
+- Added support for enforcing RD Gateway device redirection policies.
+- Fixed an issue that prevented session windows from closing when disconnecting from a connection using RD Gateway.
+- If Network Level Authentication (NLA) is not enforced by the server, you will now be routed to the login screen if your password has expired.
+- Fixed performance issues that surfaced when lots of data was being transferred over the network.
+- Smart card redirection fixes.
+- Support for all possible values of the "EnableCredSspSupport" and "Authentication Level" RDP file settings if the ClientSettings.EnforceCredSSPSupport user default key (in the com.microsoft.rdc.macos domain) is set to 0.
+- Support for the "Prompt for Credentials on Client" RDP file setting when NLA is not negotiated.
+- Support for smart card-based login via smart card redirection at the Winlogon prompt when NLA is not negotiated.
+- Fixed an issue that prevented downloading feed resources that have spaces in the URL.
 
 ## Updates for version 10.2.1
 *Published date: 08/06/2018*

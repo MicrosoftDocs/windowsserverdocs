@@ -36,7 +36,7 @@ When you increase the value of the large integer, you increase the value of the 
    ![ADSI Edit](media/AD-Forest-Recovery-Raise-RID-Pool/adsi1.png) 
 3. Browse to the following distinguished name path: **CN=RID Manager$,CN=System,DC=<domain name>**.
    ![ADSI Edit](media/AD-Forest-Recovery-Raise-RID-Pool/adsi2.png) 
-3. Right-click and and select the properties of CN=RID Manager$. 
+3. Right-click and select the properties of CN=RID Manager$. 
 4. Select the attribute **rIDAvailablePool**, click **Edit**, and then copy the large integer value to the clipboard.
    ![ADSI Edit](media/AD-Forest-Recovery-Raise-RID-Pool/adsi3.png)  
 5. Start calculator, and from the **View** menu, select **Scientific Mode**. 

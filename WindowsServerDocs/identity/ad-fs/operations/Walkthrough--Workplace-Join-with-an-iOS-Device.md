@@ -16,7 +16,11 @@ ms.technology: identity-adfs
 
 >Applies To: Windows Server 2012 R2
 
+> [!IMPORTANT]
+> This method is relevant for only fully on-prem customers. Hybrid or cloud-only customers must not use this method to register their iOS devices. And this method is not compatible when the on-prem customers decide to move to cloud. The device must be unregistered and registered with the cloud.
+
 This topic demonstrates Workplace Join on an iOS device. You must complete the steps in the [Set up the lab environment for AD FS in Windows Server 2012 R2](../../ad-fs/deployment/Set-up-the-lab-environment-for-AD-FS-in-Windows-Server-2012-R2.md) section before you can try out this walkthrough. You can use the device to access the same company web application that you accessed in [Walkthrough: Workplace Join with a Windows Device](Walkthrough--Workplace-Join-with-a-Windows-Device.md).
+
 
 ## Join an iOS device with Workplace Join
 
