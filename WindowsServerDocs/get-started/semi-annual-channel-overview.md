@@ -80,7 +80,7 @@ Testing the early builds of Windows Server helps both Microsoft and its customer
 
 Microsoft depends on receiving feedback throughout the development process so that adjustments may be made as quickly as possible. Early testing and feedback is essential to the rapid release model.
 
-For more information about how to get involved with the Windows Insider Program, see the [Windows Insider Program for Server docs](https://docs.microsoft.com/en-us/windows-insider/at-work/).
+For more information about how to get involved with the Windows Insider Program, see the [Windows Insider Program for Server docs](https://docs.microsoft.com/windows-insider/at-work/).
 # Related topics
 [Changes to Nano Server in Windows Server Semi-Annual Channel](nano-in-semi-annual-channel.md)
 

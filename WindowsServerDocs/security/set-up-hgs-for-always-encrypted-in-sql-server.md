@@ -6,7 +6,7 @@ ms.topic: article
 manager: dongill
 author: rpsqrd
 ms.technology: security-guarded-fabric
-ms.date: 09/24/2018
+ms.date: 10/03/2018
 ---
 
 # Setting up the Host Guardian Service for Always Encrypted with secure enclaves in SQL Server 
@@ -88,6 +88,8 @@ Get-CimInstance -ClassName Win32_Tpm -Namespace root/cimv2/Security/MicrosoftTpm
 The Host Guardian Service operates in a highly available configuration using a 3-node cluster. 
 It is recommended that you set up one node completely before adding other nodes. 
 
+Run all of the following commands in an elevated PowerShell session.
+
 1. [!INCLUDE [Install the HGS server role](../../includes/guarded-fabric-install-hgs-server-role.md)]
 
 2. [!INCLUDE [Install HGS by default](../../includes/install-hgs-default.md)] 
@@ -96,7 +98,9 @@ It is recommended that you set up one node completely before adding other nodes.
 
    For Always Encrypted with secure enclaves, the host machines that run SQL Server and machines that run database client applications both need to contact HGS, though only the host machines require attestation.
 
-4. After the machine reboots again, log in as a Domain Admin and configure the attestation service. 
+4. After the machine reboots, HGS will be installed and the server will also be a domain controller with Active Directory configured. 
+   During the Active Directory configuration, the local machine Administrator account is added to the Domain Admins group, and only members of this group can sign in to a domain controller.
+   Sign in using the domain Administrator account (for example, administrator@bastion.local or bastion.local\administrator) or create another Domain Admin account for sign in and then configure the attestation service.
    You will need to choose TPM or host key attestation and run the corresponding command. 
    For the HgsServiceName, specify the DNN you chose.
 
@@ -110,7 +114,7 @@ It is recommended that you set up one node completely before adding other nodes.
    Initialize-HgsAttestation -HgsServiceName 'hgs' -TrustHostKey 
    ```
 
-5. Ensure the host machines that run SQL Server will be able to resolve the DNS names of your new HGS domain members by setting up a forwarder from your corporate DNS servers to the new HGS domain controller. If you’re using Windows Server DNS to provide name resolution services for your organization, you can set up a conditional forwarder. To set up this zone, run the following commands in an elevated PowerShell console on a DNS server in your organization. Substitute the names and addresses in the Windows PowerShell syntax below as needed for your environment. After you add more HGS nodes, run this command again to add them as master servers.
+5. Ensure the host machines that run SQL Server will be able to resolve the DNS names of your new HGS domain members by setting up a forwarder from your corporate DNS servers to the new HGS domain controller. If you’re using Windows Server DNS, you can set up a conditional forwarder by running the following commands in an elevated PowerShell console on a DNS server in your organization. Substitute the names and addresses in the Windows PowerShell syntax below as needed for your environment. After you add more HGS nodes, run this command again to add them as master servers.
 
    ```powershell
    Add-DnsServerConditionalForwarderZone -Name <HGS domain name> -ReplicationScope "Forest" -MasterServers <IP addresses of HGS servers>
@@ -118,7 +122,7 @@ It is recommended that you set up one node completely before adding other nodes.
 
 ## Set up additional HGS nodes for production deployments
 
-Complete the following steps to add nodes to the cluster. 
+To add nodes to the cluster, run the following commands in an elevated PowerShell session. 
 
 1. [!INCLUDE [Install the HGS server role](../../includes/guarded-fabric-install-hgs-server-role.md)]
 
@@ -153,7 +157,7 @@ Once HGS is set up, it needs to be configured with attestation information from 
 
 ### Collect TPM attestation artifacts 
 
-If you are using TPM mode, run the following commands on each host machine to install support for attestation and collect the information you’ll need to register with the Host Guardian Service. 
+If you are using TPM mode, run the following commands in an elevated PowerShell session on each host machine to install support for attestation and collect the information you’ll need to register with the Host Guardian Service. 
 
 1. To install the HGS client on your host machine, install the Guarded Host feature, which will also install Hyper-V. 
    While you will not be running VMs on this machine, the hypervisor is required to enable the Virtualization-Based Security features that isolate VBS enclaves.

@@ -295,4 +295,4 @@ It’s all about your feedback! The most important benefit of frequent updates i
 - [Windows Admin Center](../understand/windows-admin-center.md)
 - [Storage Spaces Direct](https://docs.microsoft.com/windows-server/storage/storage-spaces/storage-spaces-direct-overview)
 - [Hyper-V](https://docs.microsoft.com/windows-server/virtualization/hyper-v/hyper-v-on-windows-server)
-- [Software Defined Networking](https://docs.microsoft.com/en-us/windows-server/networking/sdn/software-defined-networking)
+- [Software Defined Networking](https://docs.microsoft.com/windows-server/networking/sdn/software-defined-networking)

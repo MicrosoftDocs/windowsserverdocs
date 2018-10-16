@@ -21,7 +21,7 @@ ms.date: 08/24/2018
 
 In this topic, we show you how to connect container endpoints to an existing tenant virtual network created through SDN. You use the *l2bridge* (and optionally *l2tunnel*) network driver available with the Windows libnetwork plugin for Docker to create a container network on the tenant VM.
 
-In the [Container network drivers](https://docs.microsoft.com/en-us/virtualization/windowscontainers/container-networking/network-drivers-topologies) topic, we discussed the multiple network drivers are available through Docker on Windows. For SDN, use the *l2bridge* and *l2tunnel* drivers. For both drivers, each container endpoint is in the same virtual subnet as the container host (tenant) virtual machine. 
+In the [Container network drivers](https://docs.microsoft.com/virtualization/windowscontainers/container-networking/network-drivers-topologies) topic, we discussed the multiple network drivers are available through Docker on Windows. For SDN, use the *l2bridge* and *l2tunnel* drivers. For both drivers, each container endpoint is in the same virtual subnet as the container host (tenant) virtual machine. 
 
 The Host Networking Service (HNS), through the private cloud plugin, dynamically assigns the IP addresses for container endpoints. The container endpoints have unique IP addresses but share the same MAC address of the container host (tenant) virtual machine due to Layer-2 address translation. 
 
@@ -147,5 +147,5 @@ C:\> docker run -it --network=MyContainerOverlayNetwork <image> <cmd>
 >Static IP assignment is not supported with *l2bridge* or *l2tunnel* container networks when used with the Microsoft SDN Stack.
 
 ## More information
-For more details about deploying an SDN infrastructure, see [Deploy a Software Defined Network Infrastructure](https://docs.microsoft.com/en-us/windows-server/networking/sdn/deploy/deploy-a-software-defined-network-infrastructure).
+For more details about deploying an SDN infrastructure, see [Deploy a Software Defined Network Infrastructure](https://docs.microsoft.com/windows-server/networking/sdn/deploy/deploy-a-software-defined-network-infrastructure).
 

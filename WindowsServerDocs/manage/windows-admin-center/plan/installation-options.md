@@ -16,21 +16,21 @@ ms.prod: windows-server-threshold
 
 ## Supported operating systems: Installation
 
-You can install Windows Admin Center on the following Windows operating systems:
+You can **install** Windows Admin Center on the following Windows operating systems:
 
-| **Version** | **Installation Mode** |
+| **Version** | **Installation mode** |
 |-------------|-----------------------|
-|Windows 10 (1709 or newer) | Desktop mode |
+|Windows 10, version 1709 or newer | Desktop mode |
 |Windows Server Semi-Annual Channel | Gateway mode |
 |Windows Server 2016 | Gateway mode |
 |Windows Server 2019 | Gateway mode |
 
-**Desktop installation:** Connect to the Windows Admin Center gateway from the same computer on which it's installed (i.e. `https://localhost:6516`)
+**Desktop mode:** Connect to the Windows Admin Center gateway from the same computer on which it's installed (i.e. `https://localhost:6516`)
 
-**Gateway service:** Connect to the Windows Admin Center gateway from a client browser on a different machine (i.e. `https://servername.contoso.com`) 
+**Gateway mode:** Connect to the Windows Admin Center gateway from a client browser on a different machine (i.e. `https://servername.contoso.com`) 
 
 > [!WARNING]
-> Installing Windows Admin Center on a Domain controller is not supported. [Read more about Domain controller security best practices](https://docs.microsoft.com/en-us/windows-server/identity/ad-ds/plan/security-best-practices/securing-domain-controllers-against-attack). 
+> Installing Windows Admin Center on a Domain controller is not supported. [Read more about Domain controller security best practices](https://docs.microsoft.com/windows-server/identity/ad-ds/plan/security-best-practices/securing-domain-controllers-against-attack). 
 
 > [!IMPORTANT]
 > You can't use Internet Explorer to manage Windows Admin Center - instead you need to use a [supported browser](../understand/faq.md#which-web-browsers-are-supported-by-windows-admin-center
@@ -38,13 +38,13 @@ You can install Windows Admin Center on the following Windows operating systems:
 
 ## Supported operating systems: Management
 
-You can use Windows Admin Center to manage the following Windows operating systems:
+You can **manage** the following Windows operating systems using Windows Admin Center:
 
-| **Version** | **Managed node** via Server Manager | **Managed cluster** via Failover Cluster Mgr | **Managed HCI cluster** via HCI Cluster Mgr (preview)|
+| Version | Manage *node* via *Server Manager* | Manage *cluster* via *Failover Cluster Manager* | Manage *HCI* via *HCI Cluster Manager*|
 |-------------------------|---------------|-----|------------------------|
-| Windows 10 Fall Creators Update (1709) or newer | Yes (via Computer Management) | N/A | N/A |
+| Windows 10, version 1709 or newer | Yes (via Computer Management) | N/A | N/A |
+| Windows Server Semi-Annual Channel | Yes | Yes | N/A |
 | Windows Server 2019 | Yes | Yes | Yes |
-| Windows Server Semi-Annual Channel | Yes | Yes | No |
 | Windows Server 2016 | Yes | Yes | Yes, with [latest cumulative update](../use/manage-hyper-converged.md#prepare-your-windows-server-2016-cluster-for-windows-admin-center) |
 | Windows Server 2012 R2 | Yes | Yes | N/A |
 | Windows Server 2012 | Yes | Yes | N/A |
@@ -62,9 +62,9 @@ and that the version is 5.1 or higher.
 
 | ![img](../media/deployment-options/W10.png) | ![img](../media/deployment-options/gateway.png) | ![img](../media/deployment-options/node.png) | ![img](../media/deployment-options/HA.png) |
 |---|---|---|---|
-| Local Client | Gateway Server | Managed Server | Failover Cluster |
 
-|   |   |   |   |
+
+| Local Client | Gateway Server | Managed Server | Failover Cluster |
 | --- | --- | --- | --- |
 | Install on a local Windows 10 client that has connectivity to the managed servers.  Great for quick start, testing, ad-hoc or small scale scenarios. |Install on a designated gateway server and access from any client browser with connectivity to the gateway server.  Great for large-scale scenarios. | Install directly on a managed server for the purpose of managing itself or a cluster in which it's a member node.  Great for distributed scenarios. | Deploy in a failover cluster to enable high availability of the gateway service. Great for production environments to ensure resiliency of your management service. |
 

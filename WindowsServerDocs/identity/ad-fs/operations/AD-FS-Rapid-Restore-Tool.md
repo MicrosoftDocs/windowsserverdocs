@@ -218,23 +218,11 @@ Every time a backup or restore is performed a log file is created. These can be 
 
 ## Version Release History
 
-<<<<<<< HEAD
 ### Version: 1.0.75.0
 Release: August 2018
 
 **Fixed issues:**
 * Update Backup-ADFS when using the -BackupDKM switch.  The tool will determine if the current context has access to the DKM container.  If so, it will not require either Domain Admin privileges or service account credentials.  This allows automated backups to happen without explicitly providing credentials or running as a Domain Administrator account.
-=======
-
- 
-### Version: 1.0.75.0 
-
-Release: August 2018 
-
-**Fixed issues:** 
-
-* Update Backup-ADFS when using the -BackupDKM switch.  The tool will determine if the current context has access to the DKM container.  If so, it will not require either Domain Admin privileges or service account credentials.  This allows automated backups to happen without explicitly providing credentials or running as a Domain Administrator account. 
->>>>>>> d2862b5eb71254698ab5f7653484cd8aff0482cf
 
 ### Version: 1.0.73.0
 Release: August 2018

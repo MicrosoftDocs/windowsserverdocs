@@ -11,7 +11,7 @@ ms.author: jgerend
 ---
 # Checklist: Deploy DFS Namespaces
 
-> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2, Windows Server 2008
+> Applies to: Windows Server 2019, Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2, Windows Server 2008
 
 Distributed File System (DFS) Namespaces and DFS Replication can be used to publish documents, software, and line-of-business data to users throughout an organization. Although DFS Replication alone is sufficient to distribute data, you can use DFS Namespaces to configure the namespace so that a folder is hosted by multiple servers, each of which holds an updated copy of the folder. This increases data availability and distributes the client load across servers.
 

@@ -1,4 +1,4 @@
-# [Manage Windows Server](manage-windows-server.md)
+# [Management](manage-windows-server.md)
 ## [Use Windows Admin Center to manage your environment (New!)](../manage/windows-admin-center/overview.md)
 ## Manage Windows Server systems and environments
 ### [Manage Windows Server Hybrid Cloud Print](hybrid-cloud-print/hybrid-cloud-print-overview.md)
@@ -69,7 +69,6 @@
 ##### [Adding, removing, and updating capabilities](..\manage\system-insights\add-remove-update-capabilities.md)
 ##### [Choosing capability data sources](..\manage\system-insights\data-sources.md)
 #### [FAQ](..\manage\system-insights\faq.md)
-#### [Known issues](..\manage\system-insights\known-issues.md)
 
 
 <!--

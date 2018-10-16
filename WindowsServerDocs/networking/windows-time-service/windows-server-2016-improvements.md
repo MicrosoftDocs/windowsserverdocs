@@ -259,7 +259,7 @@ UpdateInterval|	100 – Once per second|
 EventLogFlags|	3 – All special time logging|
 
 > [!NOTE]
-> The NtpServer and EventLogFlags settings are located under System\Widows Time Service\Time Providers using the Configure Windows NTP Client settings.  The other 3 are located under System\Windows Time Service using the Global Configuration settings.
+> The NtpServer and EventLogFlags settings are located under System\Windows Time Service\Time Providers using the Configure Windows NTP Client settings.  The other 3 are located under System\Windows Time Service using the Global Configuration settings.
 
 **Remote Accuracy Sensitive Loads Remote** – For systems in branch domains for instance Retail and the Payment Credit Industry (PCI), Windows uses the current site information and DC Locator to find a local DC, unless there is a manual NTP time source configured.  This environment requires 1 second of accuracy, which uses faster convergence to the correct time.  This option allows the w32time service to move the clock backwards.  If this is acceptable and meets your requirements, you can create the following policy.   As with any environment, makes sure to test and baseline your network. 
 

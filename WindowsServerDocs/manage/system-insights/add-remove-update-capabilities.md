@@ -17,7 +17,7 @@ ms.date: 7/31/2018
 
 # Adding, removing, and updating capabilities
 
->Applies To: Windows Server Insider Preview build 17723 and later
+>Applies To: Windows Server 2019
 
 System Insights enables you to create new capabilities that leverage the existing data collection and management functionality. Once these capabilities are created, however, it's equally important that you also have the platform support to manage the addition, removal, and updates of these capabilities. 
 

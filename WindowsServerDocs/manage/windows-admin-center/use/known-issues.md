@@ -5,7 +5,7 @@ ms.technology: manage
 ms.topic: article
 author: jwwool
 ms.author: jeffrew
-ms.date: 09/19/2018
+ms.date: 10/04/2018
 ms.localizationpriority: medium
 ms.prod: windows-server-threshold
 ---
@@ -33,9 +33,9 @@ If you encounter an issue not described on this page, please [let us know](http:
 - When upgrading Windows Admin Center in service mode from a previous version, if you use msiexec in quiet mode, you may encounter an issue where the inbound firewall rule for Windows Admin Center port is deleted.
   - To recreate the rule, perform the following command from an elevated PowerShell console, replacing \<port> with the port configured for Windows Admin Center (default 443.)
 
-```powershell
-New-NetFirewallRule -Name "SmeInboundException" -Description "Windows Admin Center inbound port exception" -LocalPort <port> -RemoteAddress Any -Protocol TCP -DisplayName "SmeInboundException"
-```
+    ```powershell
+    New-NetFirewallRule -DisplayName "SmeInboundOpenException" -Description "Windows Admin Center inbound port exception" -LocalPort <port> -RemoteAddress Any -Protocol TCP
+    ```
  
 >[!IMPORTANT]
 > You may see this when upgrading a Highly Available (HA) deployment of Windows Admin Center, since Update-WindowsAdminCenterHA.ps1 leverages msiexec in quiet mode. In this case, you will need to recreate the rule on all machines in the cluster.
@@ -230,7 +230,7 @@ The Computer Management solution contains a subset of the tools from the Server 
   
   * To enable management of the Windows 10 Client, you must issue the command ```Enable-PSRemoting``` from an elevated PowerShell prompt.
 
-  * You may also need to update your firewall to allow connections from outside the local subnet with ```Set-NetFirewallRule -Name WINRM-HTTP-In-TCP -RemoteAddress Any```. For more restrictive networks scenarios, please refer to [this documentation](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/enable-psremoting?view=powershell-5.1).
+  * You may also need to update your firewall to allow connections from outside the local subnet with ```Set-NetFirewallRule -Name WINRM-HTTP-In-TCP -RemoteAddress Any```. For more restrictive networks scenarios, please refer to [this documentation](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/enable-psremoting?view=powershell-5.1).
 
 ## Failover Cluster Manager solution
 

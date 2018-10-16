@@ -6,7 +6,7 @@ ms.topic: article
 manager: dongill
 author: rpsqrd
 ms.technology: security-guarded-fabric
-ms.date: 08/29/2018
+ms.date: 10/3/2018
 ---
 
 # Troubleshoot Shielded VMs
@@ -26,14 +26,8 @@ For security-sensitive customers who worry if hosters have any access to the VM 
   Set-Service vmicvmsession -StartupType Disabled
   ```
 
-- Disable the **Microsoft Hyper-V Remote Desktop Control Channel** device in Device Manager
+- VMConnect Enhanced Session mode can only be disabled if your guest OS is at least Windows Server 2019 or Windows 10, version 1809. Add the following registry key in your VM to disable VMConnect Enhanced Session console connections:
 
-
-Depending on the the version of the guest operating system, VMConnect might not be allowed. Beginning with Windows Server 2019, if you want VMConnect to always be available on a VM guest, add this registry key:
-
-```
-reg add "HKLM\Software\Microsoft\Virtual Machine\Guest" /v DisableEnhancedSessionConsoleConnection /t REG_DWORD /d 1
-```
-
-
-
+  ```
+  reg add "HKLM\Software\Microsoft\Virtual Machine\Guest" /v DisableEnhancedSessionConsoleConnection /t REG_DWORD /d 1
+  ```

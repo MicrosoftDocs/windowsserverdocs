@@ -15,6 +15,8 @@ ms.date: 08/29/2018
 
 ## Add the HGS server role
 
+Run the following commands in an elevated PowerShell session to add the HGS server role and install HGS.
+
 [!INCLUDE [Install the HGS server role](../../../includes/guarded-fabric-install-hgs-server-role.md)] 
 
 ## Install HGS 

@@ -92,7 +92,7 @@ Windows Server Containers are a lightweight operating system virtualization meth
 
 
 ## System Center  
-Deploy and manage the SDN infrastructure with [Virtual Machine Management (VMM)](https://docs.microsoft.com/en-us/system-center/vmm/) and [Operations Manager](https://docs.microsoft.com/en-us/system-center/scom/). With VMM, you provision and manage the resources needed to create and deploy virtual machines and services to private clouds.  With Operations Manager, you monitor services, devices, and operations across your enterprise to identify problems for immediate action. 
+Deploy and manage the SDN infrastructure with [Virtual Machine Management (VMM)](https://docs.microsoft.com/system-center/vmm/) and [Operations Manager](https://docs.microsoft.com/system-center/scom/). With VMM, you provision and manage the resources needed to create and deploy virtual machines and services to private clouds.  With Operations Manager, you monitor services, devices, and operations across your enterprise to identify problems for immediate action. 
 
 
 ---

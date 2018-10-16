@@ -26,7 +26,7 @@ For detailed information about considerations in securing Built-in Administrator
 For the local Administrator account in each domain in your forest, you should configure the following settings:  
 
 -   Configure GPOs to restrict the domain's Administrator account's use on domain-joined systems  
-    -   In one or more GPOs that you create and link to workstation and member server OUs in each domain, add the Administrator account to the following user rights in **Computer Configuration\Policies\Windows Settings\Security Settings\Local Settings\User Rights Assignments**:  
+    -   In one or more GPOs that you create and link to workstation and member server OUs in each domain, add the Administrator account to the following user rights in **Computer Configuration\Policies\Windows Settings\Security Settings\Local Policies\User Rights Assignments**:  
 
         -   Deny access to this computer from the network  
 

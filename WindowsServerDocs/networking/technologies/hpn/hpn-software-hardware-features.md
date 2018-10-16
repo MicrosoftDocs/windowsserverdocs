@@ -34,7 +34,7 @@ To use the converged NIC capability:
 
 3.  Ensure to enable RDMA on the vNICs designated for RDMA in the host. 
 
-For more details about RDMA and SET, see [Remote Direct Memory Access (RDMA) and Switch Embedded Teaming (SET)](https://docs.microsoft.com/en-us/windows-server/virtualization/hyper-v-virtual-switch/rdma-and-switch-embedded-teaming).
+For more details about RDMA and SET, see [Remote Direct Memory Access (RDMA) and Switch Embedded Teaming (SET)](https://docs.microsoft.com/windows-server/virtualization/hyper-v-virtual-switch/rdma-and-switch-embedded-teaming).
 
 ## Data Center Bridging (DCB) 
 
@@ -42,7 +42,7 @@ DCB is a suite of Institute of Electrical and Electronics Engineers (IEEE) stand
 
 For DCB, Windows Server uses Priority-based Flow Control (PFC), standardized in IEEE 802.1Qbb. PFC creates a (nearly) lossless network fabric by preventing overflow within traffic classes. Windows Server also uses Enhanced Transmission Selection (ETS), standardized in IEEE 802.1Qaz. ETS enables the division of the bandwidth into reserved portions for up to eight classes of traffic. Each traffic class has its own transmit queue and, through the use of PFC, can start and stop transmission within a class.
 
-For more information, see [Data Center Bridging (DCB)](https://docs.microsoft.com/en-us/windows-server/networking/technologies/dcb/dcb-top).
+For more information, see [Data Center Bridging (DCB)](https://docs.microsoft.com/windows-server/networking/technologies/dcb/dcb-top).
 
 ## Hyper-V Network Virtualization
 
@@ -76,7 +76,7 @@ For more details about RDMA, see [Remote Direct Memory Access (RDMA) and Switch 
 
 RSS is a NIC feature that segregates different sets of streams and delivers them to different processors for processing. RSS parallelizes the networking processing, enabling a host to scale to very high data rates. 
 
-For more details, see [Receive Side Scaling (RSS)](https://docs.microsoft.com/en-us/windows-hardware/drivers/network/introduction-to-receive-side-scaling).
+For more details, see [Receive Side Scaling (RSS)](https://docs.microsoft.com/windows-hardware/drivers/network/introduction-to-receive-side-scaling).
 
 ## Single Root Input-Output Virtualization (SR-IOV) 
 
@@ -86,7 +86,7 @@ Traffic that uses SR-IOV bypasses the Hyper-V switch, which means that any polic
 
 In the future, two technologies would allow SR-IOV: Generic Flow Tables (GFT) and Hardware QoS Offload (bandwidth management in the NIC) – once the NICs in our ecosystem support them. The combination of these two technologies would make SR-IOV useful for all VMs, would allow policies, virtualization, and bandwidth management rules to be applied, and could result in great leaps forward in the general application of SR-IOV.
 
-For more details, see [Overview of Single Root I/O Virtualization (SR-IOV)](https://docs.microsoft.com/en-us/windows-hardware/drivers/network/overview-of-single-root-i-o-virtualization--sr-iov-).
+For more details, see [Overview of Single Root I/O Virtualization (SR-IOV)](https://docs.microsoft.com/windows-hardware/drivers/network/overview-of-single-root-i-o-virtualization--sr-iov-).
 
 ## TCP Chimney Offload
 
@@ -101,7 +101,7 @@ VLAN is an extension to the Ethernet frame header to enable partitioning of a LA
 
 ## Virtual Machine Queue (VMQ) 
 
-VMQs is a NIC feature that allocates a queue for each VM. Anytime you have Hyper-V enabled; you must also enable VMQ. In Windows Server 2016, VMQs use NIC Switch vPorts with a single queue assigned to the vPort to provide the same functionality. For more information, see [Virtual Receive Side Scaling (vRSS)](https://docs.microsoft.com/en-us/windows-server/networking/technologies/vrss/vrss-top) and [NIC Teaming](https://docs.microsoft.com/windows-server/networking/technologies/nic-teaming/nic-teaming).
+VMQs is a NIC feature that allocates a queue for each VM. Anytime you have Hyper-V enabled; you must also enable VMQ. In Windows Server 2016, VMQs use NIC Switch vPorts with a single queue assigned to the vPort to provide the same functionality. For more information, see [Virtual Receive Side Scaling (vRSS)](https://docs.microsoft.com/windows-server/networking/technologies/vrss/vrss-top) and [NIC Teaming](https://docs.microsoft.com/windows-server/networking/technologies/nic-teaming/nic-teaming).
 
 ## Virtual Machine Multi-Queue (VMMQ) 
 
