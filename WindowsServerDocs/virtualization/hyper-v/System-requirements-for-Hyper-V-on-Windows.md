@@ -1,6 +1,6 @@
 ---
 title: System requirements for Hyper-V on Windows Server 2016
-description: "Lists the hardware and firmware requirements for Hyper-V in Windows Server 2016"
+description: "Lists the hardware and firmware requirements for Hyper-V in Windows Server"
 ms.prod: windows-server-threshold
 ms.service: na
 manager: dongill
@@ -14,7 +14,7 @@ ms.date: 9/30/2016
 ---
 # System requirements for Hyper-V on Windows Server 2016
 
->Applies To: Windows Server 2016, Microsoft Hyper-V Server 2016
+>Applies To: Windows Server 2016, Microsoft Hyper-V Server 2016, Windows Server 2019, Microsoft Hyper-V Server 2019
 
 Hyper-V has specific hardware requirements, and some Hyper-V features have additional requirements. Use the details in this article to decide what requirements your system must meet so you can use Hyper-V the way you plan to. Then, review the [Windows Server catalog](https://www.windowsservercatalog.com/). Keep in mind that requirements for Hyper-V exceed the general minimum requirements for Windows Server 2016 because a virtualization environment requires more computing resources.  
 
@@ -65,7 +65,7 @@ Here are the requirements for discrete device assignment and shielded virtual ma
 **Devices** need GPU or non-volatile memory express (NVMe). For GPU, only certain devices support discrete device assignment. To verify, see the hardware documentation or contact your hardware manufacturer. For details about this feature, including how to use it and considerations, see the post "[Discrete Device Assignment -- Description and background](http://blogs.technet.com/b/virtualization/archive/2015/11/19/discrete-device-assignment.aspx)" in the Virtualization blog.  
   
 ### Shielded virtual machines  
-These virtual machines rely on virtualization-based security, which supports several new features in Windows Server 2016w.  
+These virtual machines rely on virtualization-based security and are available starting with Windows Server 2016.  
   
 **Host** requirements are:  
 -   UEFI 2.3.1c - supports secure, measured boot  
@@ -80,7 +80,7 @@ These virtual machines rely on virtualization-based security, which supports sev
   
 -   Generation 2  
   
--   Windows Server 2016, Windows Server 2012 R2, or Windows Server 2012 as the guest operating system  
+-   Windows Server 2012 or newer as the guest operating system  
   
 
 

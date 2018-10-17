@@ -296,7 +296,7 @@ If the claim has been provisioned, but is not available, it might only be config
   
 Let's say you wanted to restrict authentication based on the organizational unit (OU) of the computer, which was already configured, but only for **Computer** classes.  
   
-![Screenshot showing how to to restrict authentication based on the organizational unit (OU) of the computer](../media/how-to-configure-protected-accounts/ADDS_ProtectAcct_RestrictComputers.gif)  
+![Screenshot showing how to restrict authentication based on the organizational unit (OU) of the computer](../media/how-to-configure-protected-accounts/ADDS_ProtectAcct_RestrictComputers.gif)  
   
 For the claim to be available to restrict User sign-on to the device, select the **User** check box.  
   

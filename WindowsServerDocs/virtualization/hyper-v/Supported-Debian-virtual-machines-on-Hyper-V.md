@@ -74,7 +74,7 @@ The following feature distribution map indicates the features that are present i
 
 4. Starting with Debian 8.3 the manually-installed Debian package "hyperv-daemons" contains the key-value pair, fcopy, and VSS daemons. On Debian 7.x and 8.0-8.2 the hyperv-daemons package must come from [Debian backports](https://wiki.debian.org/Backports).
 
-5. Live virtual machine backup will not work with ext2 file systems. The default layout created by the Debian installer includes ext2 filesystems, you you must customize the layout to not create this filesystem type.
+5. Live virtual machine backup will not work with ext2 file systems. The default layout created by the Debian installer includes ext2 filesystems, you must customize the layout to not create this filesystem type.
 
 6. While Debian 7.x is out of support and uses an older kernel, the kernel included in [Debian backports](https://wiki.debian.org/Backports) for Debian 7.x has improved Hyper-V capabilities.
 
