@@ -1,6 +1,6 @@
 ---
 ms.assetid: 
-title: Support Boundary for High Accuracy Time
+title: Support boundary for high-accuracy time
 description: This article describes the support boundary for the Windows Time (W32Time) service in environments that require highly accurate and stable system time. 
 author: shortpatti
 ms.author: dacuo
@@ -11,7 +11,7 @@ ms.prod: windows-server-threshold
 ms.technology: networking
 ---
 
-# Support Boundary for High Accuracy Time
+# Support boundary for high-accuracy time
 
 >Applies to: Windows Server 2016, and Windows 10 version 1607 or later
 
