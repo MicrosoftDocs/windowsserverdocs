@@ -16,11 +16,11 @@ ms.prod: windows-server-threshold
 ---
 # Windows Commands
 
-All supported versions of Windows (server and client) ship with a large set of Win32 Console applications or commands. You can use either the Cnmd.Exe shell or PowerShell to invoke any of the commands. 
+All supported versions of Windows (server and client) ship with a large set of Win32 console applications or Commands. You can use either the Cmd.Exe shell or Windows PowerShell to invoke any of the Commands. 
 
-This set of documentation describes the Windows commands you can use to automate tasks by using scripts or scripting tools.
+This set of documentation describes the Windows Commands you can use to automate tasks by using scripts or scripting tools.
 
-To find information about a specific command, in the following A-Z menu, click the letter that the command starts with, and then click the command name.
+To find information about a specific Command, in the following A-Z menu, click the letter that the Command starts with, and then click the Command name.
 
 [A](#BKMK_a) |
 [B](#BKMK_b) | 
@@ -63,15 +63,15 @@ The information that is contained in this PDF applies to:
 
 ### <a name="BKMK_OVR"></a>Command shell overview
 Windows ships with two command shells: the Command shell and Windows PowerShell. Each shell is asoftware program that provides direct communication between the user and the operating system or application. 
-You can also download and install PowerShell Core, the open source version of Windows PowerSHell.
-The Command shell provides the environment in which you run character-based applications and utilities to automate IT operations.
-PowserShell provivides a sinilar but richer environment in which you can run Windows commands as well as PowerShell Cmdlets.
+You can also download and install PowerShell Core, the open source version of Windows PowerShell.
+The Command shell provides the environment in which you run commands and other character-based applications and utilities to automate IT operations.
+PowserShell provivides a sinilar but richer environment in which you can run Windows Commands as well as PowerShell Cmdlets.
 The PowerShell syntax is also considerably richer than that provided by the Command Shell.
 
-In earlier versions of Windows, you used the Command shell to create and edit scripts to automate routine tasks. For example, creating simple scripts in batch (.bat) files that automated the management of user accounts or nightly backups. You also used the command-line version of Windows Script Host to run more sophisticated scripts in the command shell. For more information, see [cscript](cscript.md) or [wscript](wscript.md). You can perform operations more efficiently by using scripts than you can by using the user interface. Scripts accept all commands that are available at the command line.
+In earlier versions of Windows, you used the Command shell to create and edit scripts to automate routine tasks. For example, creating simple scripts in batch (.bat) files that automated the management of user accounts or nightly backups. You also used the command-line version of Windows Script Host to run more sophisticated scripts in the Command shell. For more information, see [cscript](cscript.md) or [wscript](wscript.md). You can perform operations more efficiently by using scripts than you can by using the user interface. Scripts accept all Commands that are available at the command line.
 
 Today, IT pros use Windows PowerSHell as well as PoweShell Core.
-With Windows PowerSHell or PowerShell Core, you can do everything you can do with the Command shell, including running any of the Windows commands documented below. 
+With Windows PowerSHell or PowerShell Core, you can do everything you can do with the Command shell, including running any of the Windows Commands documented below. 
 
 > [!NOTE]
 > To enable or disable file and directory name completion in the Command shell on a computer or user logon session, run **regedit.exe** and set the following **reg_DWOrd value**:
@@ -84,7 +84,7 @@ With Windows PowerSHell or PowerShell Core, you can do everything you can do wit
 > Incorrectly editing the registry may severely damage your system. Before making changes to the registry, you should back up any valued data on the computer.
 
 ## <a name="BKMK_CmdRef"></a>Command-line reference A-Z
-To find information about a specific Windows command, in the following A-Z menu, click the letter that the command starts with, and then click the command name.
+To find information about a specific Windows Command, in the following A-Z menu, click the letter that the Command starts with, and then click the Command name.
 
 [A](#BKMK_a) |
 [B](#BKMK_b) | 
