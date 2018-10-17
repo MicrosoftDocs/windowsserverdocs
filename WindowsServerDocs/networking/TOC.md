@@ -294,7 +294,7 @@
 ## [Windows Time service](windows-time-service/windows-time-service-top.md)
 ### [Insider preview - Windows Time service in Windows Server 2019](windows-time-service/insider-preview.md)
 ### [Accurate time for Windows Server 2016](windows-time-service/accurate-time.md)
-### [Support boundary to configure the Windows Time service for high-accuracy environments](windows-time-service/support-boundary.md)
+### [Support Boundary for High Accuracy Time](windows-time-service/support-boundary.md)
 ### [Configuring systems for high accuracy](windows-time-service/configuring-systems-for-high-accuracy.md)
 ### [Windows Time for traceability](windows-time-service/windows-time-for-traceability.md)
 ### [Windows Time service technical reference](windows-time-service/windows-time-service-tech-ref.md)
