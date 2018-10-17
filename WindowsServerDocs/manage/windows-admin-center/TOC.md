@@ -47,6 +47,7 @@
 #### [Develop a solution extension](extend/develop-solution.md)
 #### [Develop a gateway plugin](extend/develop-gateway-plugin.md)
 #### [Target an SDK version](extend/target-sdk-version.md)
+#### [UI text and design style guide](extend/ui-text-style-guide.md)
 ### [Guides](extend/guides.md)
 #### [Add a module to a tool extension](extend/guides/add-module.md)
 #### [Add an iFrame to a tool extension](extend/guides/add-iFrame.md)
