@@ -53,6 +53,7 @@ cscript <Scriptname.extension> [/B] [/D] [/E:<Engine>] [{/H:cscript|/H:wscript}]
 -   if you double-click a script file with an extension that has no association, the **Open With** dialog box appears. select wscript or cscript, and then select **Always use this program to open this file type**. This registers wscript.exe or cscript as the default script host for files of this file type.
 -   You can set properties for individual scripts. See [additional References](#BKMK_references) for more information.
 -   Windows Script Host can use .wsf script files. Each .wsf file can use multiple scripting engines and perform multiple jobs.
-## <a name="BKMK_references"></a>additional References
+
+#### <a name="BKMK_references"></a>Additional references
 
 [Command-Line Syntax Key](command-line-syntax-key.md)
