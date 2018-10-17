@@ -235,7 +235,27 @@
       "source_path": "WindowsServerDocs/storage/whats-new-file-storage-services-windows-server.md",
       "redirect_url": "/windows-server/storage/whats-new-in-storage",
       "redirect_document_id": false
-    },	
+    },    
+    {
+      "source_path": "WindowsServerDocs/failover-clustering/failover-clustering.md",
+      "redirect_url": "/windows-server/failover-clustering/failover-clustering-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/failover-clustering/simplified-smb-multichannel-and-multi-nic-cluster-networks.md",
+      "redirect_url": "/windows-server/failover-clustering/smb-multichannel",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/failover-clustering/deploy-a-cloud-witness-for-a-failover-cluster.md",
+      "redirect_url": "/windows-server/failover-clustering/deploy-cloud-witness",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/failover-clustering/whats-new-failover-clustering-windows-server.md",
+      "redirect_url": "/windows-server/failover-clustering/whats-new-in-failover-clustering",
+      "redirect_document_id": false
+    },
     {
       "source_path": "WindowsServerDocs/storage/software-defined-storage/Health-Service-in-Windows-Server-2016.md",
       "redirect_url": "/windows-server/failover-clustering/health-service-overview",

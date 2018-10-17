@@ -55,6 +55,7 @@
 #### [Modify root navigation behavior](extend/guides/modify-root-navigation.md)
 #### [Control your tool's visibility](extend/guides/dynamic-tool-display.md)
 #### [Strings and localization](extend/guides/strings-localization.md)
+#### [UI text and design style guide](extend/guides/ui-text-style-guide.md)
 #### [Using PowerShell in your extension](extend/guides/powershell.md)
 #### [CSS icon guide](extend/guides/cssicons.md)
 ### [Publishing extensions](extend/publish-extensions.md)
