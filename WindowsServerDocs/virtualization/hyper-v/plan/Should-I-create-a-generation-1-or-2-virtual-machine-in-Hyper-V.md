@@ -19,16 +19,14 @@ ms.date: 12/05/2016
 Your choice to create a generation 1 or generation 2 virtual machine depends on which guest operating system you want to install and the boot method you want to use to deploy the virtual machine. We recommend that you create a generation 2 virtual machine to take advantage of features like Secure Boot unless one of the following statements is true:  
 
 - The VHD you want to boot from is not [UEFI-compatible](https://technet.microsoft.com/library/hh824898.aspx).  
-
 - Generation 2 doesn't support the operating system you want to run on the virtual machine.  
-
 - Generation 2 doesn't support the boot method you want to use.  
 
 For more information about what features are available with generation 2 virtual machines, see [Hyper-V feature compatibility by generation and guest](../Hyper-V-feature-compatibility-by-generation-and-guest.md).
 
 You can't change a virtual machine's generation after you've created it. So, we recommend that you review the considerations here, as well as choose the operating system, boot method, and features you want to use before you choose a generation.  
 
-## <a name="BKMK_OS"></a>Which guest operating systems are supported?  
+## <a name="BKMK_OS"></a>Which guest operating systems are supported?
 
 Generation 1 virtual machines support most guest operating systems. Generation 2 virtual machines support most 64-bit versions of Windows and more current versions of Linux and FreeBSD operating systems. Use the following sections to see which generation of virtual machine supports the guest operating system you want to install.  
 
@@ -46,7 +44,7 @@ Generation 1 virtual machines support most guest operating systems. Generation 2
 
 - [Ubuntu guest operating system support](Should-I-create-a-generation-1-or-2-virtual-machine-in-Hyper-V.md#BKMK_Ubuntu)  
 
-### <a name="BKMK_Windows"></a>Windows guest operating system support  
+### <a name="BKMK_Windows"></a>Windows guest operating system support
 
 The following table shows which 64-bit versions of Windows you can use as a guest operating system for generation 1 and generation 2 virtual machines.  
 
@@ -72,7 +70,6 @@ The following table shows which 32-bit versions of Windows you can use as a gues
 |Windows 8|&#10004;| &#10006;|  
 |Windows 7|&#10004;| &#10006;|  
 
-
 ### <a name="BKMK_CentOS"></a>CentOS and Red Hat Enterprise Linux guest operating system support
 
 The following table shows which versions of Red Hat Enterprise Linux \(RHEL\) and CentOS you can use as a guest operating system for generation 1 and generation 2 virtual machines.
@@ -80,7 +77,7 @@ The following table shows which versions of Red Hat Enterprise Linux \(RHEL\) an
 |Operating system versions|Generation 1|Generation 2|  
 |-----------------------------|----------------|----------------|  
 |RHEL/CentOS 7.x series|&#10004;|&#10004;|  
-|RHEL/CentOS 6.x series|&#10004;|&#10004;</br>**Note:** Only supported on Windows Server 2016 and above.|  
+|RHEL/CentOS 6.x series|&#10004;|&#10004;<br />**Note:** Only supported on Windows Server 2016 and above.|  
 |RHEL/CentOS 5.x series|&#10004;| &#10006;|  
 
 For more information, see [CentOS and Red Hat Enterprise Linux virtual machines on Hyper-V](../Supported-CentOS-and-Red-Hat-Enterprise-Linux-virtual-machines-on-Hyper-V.md).  
@@ -166,13 +163,11 @@ The following table shows which boot methods are supported by generation 1 and g
 
 Here are some of the advantages you get when you use a generation 2 virtual machine:  
 - **Secure Boot**
-- 
     This is a feature that verifies the boot loader is signed by a trusted authority in the UEFI database to help prevent unauthorized firmware, operating systems, or UEFI drivers from running at boot time. Secure Boot is enabled by default for generation 2 virtual machines. If you need to run a guest operating system that's not supported by Secure Boot, you can disable it after the virtual machine's created.  For more information, see [Secure Boot](https://technet.microsoft.com/library/dn486875.aspx).  
 
     To Secure Boot generation 2 Linux virtual machines, you need to choose the UEFI CA Secure Boot template when you create the virtual machine.  
 
 - **Larger boot volume**
-- 
     The maximum boot volume for generation 2 virtual machines is 64 TB. This is the maximum disk size supported by a .VHDX. For generation 1 virtual machines, the maximum boot volume is 2TB for a .VHDX and 2040GB for a .VHD. For more information, see [Hyper-V Virtual Hard Disk Format Overview](https://technet.microsoft.com/library/hh831446.aspx).  
 
  You may also see a slight improvement in virtual machine boot and installation times with generation 2 virtual machines.
@@ -228,7 +223,8 @@ By default, generation 2 virtual machines use IPv4. To use IPv6 instead, run the
 Set-VMFirmware -VMName TestVM -IPProtocolPreference IPv6  
 ```  
 
-## <a name="BKMK_Debug"></a>Add a COM port for kernel debugging  
+## <a name="BKMK_Debug"></a>Add a COM port for kernel debugging
+
 COM ports aren't available in generation 2 virtual machines until you add them. You can do this with Windows PowerShell or Windows Management Instrumentation (WMI). These steps show you how to do it with Windows PowerShell.
 
 To add a COM port:  
@@ -253,4 +249,3 @@ To add a COM port:
 - [Linux and FreeBSD Virtual Machines on Hyper-V](../Supported-Linux-and-FreeBSD-virtual-machines-for-Hyper-V-on-Windows.md)
 - [Use local resources on Hyper-V virtual machine with VMConnect](../learn-more/Use-local-resources-on-Hyper-V-virtual-machine-with-VMConnect.md)
 - [Plan for Hyper-V scalability in Windows Server 2016](Plan-for-Hyper-V-scalability-in-Windows-Server-2016.md)
-  
