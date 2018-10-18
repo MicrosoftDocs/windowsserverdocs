@@ -4,7 +4,7 @@ ms.technology: system-insights
 ms.topic: article
 author: gawatu
 ms.author: gawatu
-ms.date: 7/2/2018
+ms.date: 10/18/2018
 ---
 # MICROSOFT SOFTWARE LICENSE TERMS
 
