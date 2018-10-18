@@ -5,7 +5,7 @@ description:
 author: shortpatti
 ms.author: pashort
 manager: dougkim
-ms.date: 07/19/2018
+ms.date: 10/16/2018
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: networking
@@ -155,7 +155,7 @@ The following registry entries must be added in order to enable W32Time logging:
 |------------------------------------|---------------|----------------------------|
 |FileLogEntries|All|Entry controls the amount of entries created in the Windows Time log file. The default value is none, which does not log any Windows Time activity. Valid values are 0 to 300. This value does not affect the event log entries normally created by Windows Time|
 |FileLogName|All|Entry controls the location and file name of the Windows Time log. The default value is blank, and should not be changed unless **FileLogEntries** is changed. A valid value is a full path and file name that Windows Time will use to create the log file. This value does not affect the event log entries normally created by Windows Time.  |
-|FileLogSize|All|Entry controls the circular logging behavior of Windows Time log files. When **FileLogEntries** and **FileLogName** are defined, Entry defines the size, in bytes, to allow the log file to reach before overwriting the oldest log entries with new entries. Any positive number is valid, and 3000000 is recommended. This value does not affect the event log entries normally created by Windows Time.  |
+|FileLogSize|All|Entry controls the circular logging behavior of Windows Time log files. When **FileLogEntries** and **FileLogName** are defined, Entry defines the size, in bytes, to allow the log file to reach before overwriting the oldest log entries with new entries. Please use 1000000 or larger value for this setting. This value does not affect the event log entries normally created by Windows Time.  |
 
 ---
 

@@ -1149,7 +1149,7 @@ The TEST-40G-1 and TEST-40G-2 physical adapters still have an ACCESS VLAN of 101
 
 ## Step 10. Validate the RDMA functionality.
 
-You want to validate the RDMA functionality from the remote system to the local system, which has a vSwitch, to to both members of the vSwitch SET team.<p>Because both Host vNICs \(SMB1 and SMB2\) are assigned to VLAN 102, you can select the VLAN 102 adapter on the remote system. <p>In this example, the NIC Test-40G-2 does RDMA to SMB1 (192.168.2.111) and SMB2 (192.168.2.222).
+You want to validate the RDMA functionality from the remote system to the local system, which has a vSwitch, to both members of the vSwitch SET team.<p>Because both Host vNICs \(SMB1 and SMB2\) are assigned to VLAN 102, you can select the VLAN 102 adapter on the remote system. <p>In this example, the NIC Test-40G-2 does RDMA to SMB1 (192.168.2.111) and SMB2 (192.168.2.222).
 
 >[!TIP]
 >You might need to disable the Firewall on this system.  Consult your fabric policy for details.

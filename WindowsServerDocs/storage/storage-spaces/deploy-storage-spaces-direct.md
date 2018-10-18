@@ -143,7 +143,7 @@ Storage Spaces Direct requires high-bandwidth, low-latency networking between se
 
 Windows Server 2016 introduces switch-embedded teaming (SET) within the Hyper-V virtual switch. This allows the same physical NIC ports to be used for all network traffic while using RDMA, reducing the number of physical NIC ports required. Switch-embedded teaming is recommended for Storage Spaces Direct.
 
-For instructions to set up networking for Storage Spaces Direct, see see [Windows Server 2016 Converged NIC and Guest RDMA Deployment Guide](https://github.com/Microsoft/SDN/blob/master/Diagnostics/S2D%20WS2016_ConvergedNIC_Configuration.docx).
+For instructions to set up networking for Storage Spaces Direct, see [Windows Server 2016 Converged NIC and Guest RDMA Deployment Guide](https://github.com/Microsoft/SDN/blob/master/Diagnostics/S2D%20WS2016_ConvergedNIC_Configuration.docx).
 
 ## Step 3: Configure Storage Spaces Direct
 

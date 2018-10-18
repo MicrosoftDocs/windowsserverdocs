@@ -105,6 +105,6 @@ VMQs is a NIC feature that allocates a queue for each VM. Anytime you have Hyper
 
 ## Virtual Machine Multi-Queue (VMMQ) 
 
-VMMQ is a NIC feature that allows traffic for a VM to spread across multiple queues, each processed by a different physical processor. The traffic is then passed to multiple LPs in the VM as it would be in vRSS, which allows for delivering substantial networking bandwidth to to the VM.
+VMMQ is a NIC feature that allows traffic for a VM to spread across multiple queues, each processed by a different physical processor. The traffic is then passed to multiple LPs in the VM as it would be in vRSS, which allows for delivering substantial networking bandwidth to the VM.
 
 ---
