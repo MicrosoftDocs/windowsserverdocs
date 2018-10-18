@@ -13,7 +13,7 @@ ms.localizationpriority: medium
 ---
 # Deploy Storage Spaces Direct
 
-> Applies to: Windows Server 2016
+> Applies to: Windows Server 2019, Windows Server 2016
 
 This topic provides step-by-step instructions to deploy [Storage Spaces Direct](storage-spaces-direct-overview.md).
 

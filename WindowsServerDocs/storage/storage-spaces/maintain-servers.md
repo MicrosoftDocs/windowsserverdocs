@@ -14,7 +14,7 @@ ms.localizationpriority: medium
 
 # Taking a Storage Spaces Direct server offline for maintenance
 
-> Applies To: Windows Server 2016
+> Applies to: Windows Server 2019, Windows Server 2016
 
 This topic provides guidance on how to properly restart or shutdown servers with [Storage Spaces Direct](storage-spaces-direct-overview.md).
 

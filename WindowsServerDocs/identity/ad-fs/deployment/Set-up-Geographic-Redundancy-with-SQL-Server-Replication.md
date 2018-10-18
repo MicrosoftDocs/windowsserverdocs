@@ -36,7 +36,7 @@ Install and configure a SQL server farm. For more information, see [https://tech
 4.  Copy the scripts to your secondary server.  Open the CreateDB.sql script in **SQL Management Studio** and click **Execute**.
 ![Set up Geographic Redundancy](media\Set-up-Geographic-Redundancy-with-SQL-Server-Replication\sql4.png)
 
-5. Open the SetPermissions.sql script in in **SQL Management Studio** and click **Execute**.
+5. Open the SetPermissions.sql script in **SQL Management Studio** and click **Execute**.
 ![Set up Geographic Redundancy](media\Set-up-Geographic-Redundancy-with-SQL-Server-Replication\sql6.png) 
 
    
