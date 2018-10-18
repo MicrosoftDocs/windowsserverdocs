@@ -44,6 +44,13 @@
 #### [Migrating the WSUS database from Windows Internal Database (WID) to SQL](windows-server-update-services/manage/wid-to-sql-migration.md)
 
 ## Collect information about your environment and systems
+### [System Insights](..\manage\system-insights\overview.md)
+#### [Understanding capabilities](..\manage\system-insights\understanding-capabilities.md)
+#### [Managing capabilities](..\manage\system-insights\managing-capabilities.md)
+#### [Adding and developing capabilities](..\manage\system-insights\adding-and-developing-capabilities.md)
+##### [Adding, removing, and updating capabilities](..\manage\system-insights\add-remove-update-capabilities.md)
+##### [Choosing capability data sources](..\manage\system-insights\data-sources.md)
+#### [FAQ](..\manage\system-insights\faq.md)
 ### [Collect events with Setup and Boot Event Collection](Get-started-with-Setup-and-Boot-Event-Collection.md)
 ### [Collect information about software Software Inventory Logging (SIL)](software-inventory-logging/get-started-with-software-inventory-logging.md)
 #### [Manage Software Inventory Logging](software-inventory-logging/manage-software-inventory-logging.md)
@@ -60,15 +67,6 @@
 ## Automate Windows Server management
 ### [Windows PowerShell scripting](/powershell/scripting/powershell-scripting?view=powershell-5.1)
 ### [Windows Commands](windows-commands/windows-commands.md)
-
-## Insider Preview
-### [System Insights](..\manage\system-insights\overview.md)
-#### [Understanding capabilities](..\manage\system-insights\understanding-capabilities.md)
-#### [Managing capabilities](..\manage\system-insights\managing-capabilities.md)
-#### [Adding and developing capabilities](..\manage\system-insights\adding-and-developing-capabilities.md)
-##### [Adding, removing, and updating capabilities](..\manage\system-insights\add-remove-update-capabilities.md)
-##### [Choosing capability data sources](..\manage\system-insights\data-sources.md)
-#### [FAQ](..\manage\system-insights\faq.md)
 
 
 <!--
