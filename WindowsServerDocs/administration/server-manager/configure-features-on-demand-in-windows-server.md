@@ -98,7 +98,7 @@ You can use the Uninstall-WindowsFeature cmdlet both to uninstall roles, role se
     Uninstall-WindowsFeature -Name <feature_name> -computerName <computer_name> -remove
     ```
 
-    **Example:** remote Desktop Licensing is the last remaining role service of remote Desktop Services that is installed. The command uninstalls remote Desktop Licensing, and then deletes feature files for the entire remote Desktop Services role from the specified server, *contoso_1*.
+    **Example:** Remote Desktop Licensing is the last remaining role service of Remote Desktop Services that is installed. The command uninstalls Remote Desktop Licensing, and then deletes feature files for the entire Remote Desktop Services role from the specified server, *contoso_1*.
 
     ```
     Uninstall-WindowsFeature -Name rdS-Licensing -computerName contoso_1 -remove

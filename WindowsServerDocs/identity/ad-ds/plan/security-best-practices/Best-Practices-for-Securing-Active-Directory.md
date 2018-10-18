@@ -2,9 +2,9 @@
 ms.assetid: e2651dc8-4b31-4cd8-a400-3b8123890210
 title: Best Practices for Securing Active Directory
 description:
-author: billmath
-ms.author: billmath
-manager: femila
+author: MicrosoftGuyJFlo
+ms.author: joflore
+manager: mtillman
 ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server-threshold
@@ -17,10 +17,6 @@ ms.technology: identity-adds
 >Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 This document provides a practitioner's perspective and contains a set of practical techniques to help IT executives protect an enterprise Active Directory environment. Active Directory plays a critical role in the IT infrastructure, and ensures the harmony and security of different network resources in a global, interconnected environment. The methods discussed are based largely on the Microsoft Information Security and Risk Management (ISRM) organization's experience, which is accountable for protecting the assets of Microsoft IT and other Microsoft Business Divisions, in addition to advising a selected number of Microsoft Global 500 customers.  
-  
--   [Foreword](https://technet.microsoft.com/library/dn487451.aspx)  
-  
--   [Acknowledgements](https://technet.microsoft.com/library/dn487445.aspx)  
   
 -   [Executive Summary](../../../ad-ds/manage/component-updates/Executive-Summary.md)  
   

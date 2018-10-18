@@ -11,14 +11,28 @@ ms.topic: article
 author: lizap
 manager: dongill
 ms.author: elizapo
-ms.date: 05/17/2018
+ms.date: 07/16/2018
 ms.localizationpriority: medium
 ---
 # What's new for the Remote Desktop web client?
 
-[This information relates to pre-released product which may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here.]
-
 We regularly update the [Remote Desktop web client](remote-desktop-web-client.md), adding new features and fixing issues. Check out the latest updates below.
+
+## Updates for version 1.0.0
+*Published date: 07/16/2018*
+
+- Remote Desktop web client is now generally available.
+- Admins can globally turn off telemetry for the web client.
+- Various bug fixes.
+
+## Updates for version 0.9.0
+*Published date: 07/05/2018*
+
+- New sign in experience within the web client.
+- No longer prompted for credentials when launching a desktop or app connection (Single sign on).
+- Moved the web client to a new URL: **https://server_FQDN/RDWeb/webclient/index.html**
+- Added time zone redirection.
+- Various bug fixes.
 
 ## Updates for version 0.8.1
 *Published date: 05/17/2018*

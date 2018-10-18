@@ -2,9 +2,9 @@
 ms.assetid: 7a3114c8-bda8-49bb-83a8-4e04340ab221
 title: Introduction to Active Directory Domain Services (AD DS) Virtualization (Level 100)
 description:
-author: billmath
-ms.author: billmath
-manager: femila
+author: MicrosoftGuyJFlo
+ms.author: joflore
+manager: mtillman
 ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server-threshold

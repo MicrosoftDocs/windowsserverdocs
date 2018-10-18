@@ -1,7 +1,7 @@
 ---
-title: Create a New NIC Team on a Host Computer or VM
-description: This topic provides information about NIC Teaming configuration so that you understand the selections you must make when you are configuring a new NIC Team in Windows Server 2016.
-manager: brianlic
+title: Create a new NIC Team on a host computer or VM
+description: In this topic, you create a new NIC Team on a host computer or in a Hyper-V virtual machine (VM) running Windows Server 2016.  
+manager: dougkim
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -13,28 +13,113 @@ ms.topic: article
 ms.assetid: a4caaa86-5799-4580-8775-03ee213784a3
 ms.author: pashort
 author: shortpatti
+ms.date: 09/13/2018
 ---
-# Create a New NIC Team on a Host Computer or VM
+# Create a new NIC Team on a host computer or VM
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
 
-This topic provides information about NIC Teaming configuration so that you understand the selections you must make when you are configuring a new NIC Team. This topic contains the following sections.  
+In this topic, you create a new NIC Team on a host computer or in a Hyper-V virtual machine (VM) running Windows Server 2016.  
+
+## Network configuration requirements  
+Before you can create a new NIC Team, you must deploy a Hyper-V host with two network adapters that connect to different physical switches. You must also configure the network adapters with IP addresses that are from the same IP address range.  
+
+The physical switch, Hyper-V Virtual Switch, local area network (LAN), and NIC Teaming requirements for creating a NIC Team in a VM are:  
   
--   [Choosing a Teaming Mode](#bkmk_teaming)  
+-   The computer running Hyper-V must have two or more network adapters.  
   
--   [Choosing a Load Balancing Mode](#bkmk_lb)  
+-   If connecting the network adapters to multiple physical switches, the physical switches must be on the same Layer 2 subnet.  
   
--   [Choosing a Standby Adapter Setting](#bkmk_standby)  
+-   You must use Hyper-V Manager or Windows PowerShell to create two external Hyper-V Virtual Switches, each connected to a different physical network adapter.  
   
--   [Using the Primary Team Interface Property](#bkmk_primary)  
+-   The VM must connect to both external virtual switches you create.  
   
-> [!NOTE]  
-> If you already understand these configuration items, you can use the following procedures to configure NIC Teaming.  
->   
-> -   [Create a New NIC Team in a VM](../../technologies/nic-teaming/Create-a-New-NIC-Team-in-a-VM.md)  
-> -   [Create a New NIC Team](../../technologies/nic-teaming/Create-a-New-NIC-Team.md)  
+-   NIC Teaming, in Windows Server 2016, supports teams with two members in VMs. You can create larger teams, but there is no support.
   
-When you create a new NIC Team, you must configure the following NIC Team properties.  
+-   If you are configuring a NIC Team in a VM, you must select a **Teaming mode** of _Switch Independent_ and a **Load balancing mode** of _Address Hash_. 
+
+
+
+## Step 1. Configure the physical and virtual network  
+In this procedure, you create two external Hyper-V Virtual Switches, connect a VM to the switches, and then configure the VM connections to the switches.  
+ 
+
+### Prerequisites
+  
+You must have membership in **Administrators**, or equivalent.  
+  
+### Procedure
+  
+1.  On the Hyper-V host, open Hyper-V Manager, and under Actions, click **Virtual Switch Manager**.  
+  
+    ![Virtual Switch Manager](../../media/Create-a-New-NIC-Team-in-a-VM/nict_hv.jpg)  
+  
+2.  In Virtual Switch Manager, make sure **External** is selected, and then click **Create Virtual Switch**.  
+  
+    ![Create Virtual Switch](../../media/Create-a-New-NIC-Team-in-a-VM/nict_hv_02.jpg)  
+  
+3.  In Virtual Switch Properties, type a **Name** for the virtual switch, and add **Notes** as needed.  
+  
+4.  In **Connection type**, in **External network**, select the physical network adapter to which you want to attach the virtual switch.  
+  
+5.  Configure additional switch properties for your deployment, and then click **OK**.  
+  
+6.  Create a second external virtual switch by repeating the previous steps. Connect the second external switch to a different network adapter.  
+  
+7.  In Hyper-V Manager, under **Virtual Machines**, right-click the VM that you want to configure, and then click **Settings**.<p>The VM **Settings** dialog box opens.  
+
+8.  Ensure that the VM is not started. If it is started, perform a shutdown before configuring the VM.  
+  
+8.  In **Hardware**, click **Network Adapter**.  
+  
+    ![Network Adapter](../../media/Create-a-New-NIC-Team-in-a-VM/nict_hvs_01.jpg)  
+  
+9. In **Network Adapter** properties, select one of the virtual switches that you created in previous steps, and then click **Apply**.  
+  
+    ![Select a virtual switch](../../media/Create-a-New-NIC-Team-in-a-VM/nict_hvs_02.jpg)  
+  
+10. In **Hardware**, click to expand the plus sign (+) next to **Network Adapter**. 
+
+11. Click **Advanced Features** to enable NIC Teaming by using the graphical user interface. 
+
+    >[!TIP]
+    >You can also enable NIC Teaming with a Windows PowerShell command: 
+    >
+    >```PowerShell
+    >Set-VMNetworkAdapter -VMName <VMname> -AllowTeaming On
+    >```
+   
+    a. Select **Dynamic** for MAC address. 
+
+    b. Click to select **Protected network**. 
+
+    c. Click to select **Enable this network adapter to be part of a team in the guest operating system**. 
+
+    d. Click **OK**.  
+  
+    ![Add a network adapter to a team](../../media/Create-a-New-NIC-Team-in-a-VM/nict_hvs_05.jpg)  
+  
+13. To add a second network adapter, in Hyper-V Manager, in **Virtual Machines**, right-click the same VM, and then click **Settings**.<p>The VM **Settings** dialog box opens.  
+  
+14. In **Add Hardware**, click **Network Adapter**, and then click **Add**.  
+  
+    ![Add a network adapter](../../media/Create-a-New-NIC-Team-in-a-VM/nict_hvs_06.jpg)  
+  
+15. In **Network Adapter** properties, select the second virtual switch that you created in previous steps, and then click **Apply**.  
+  
+    ![Apply a virtual switch](../../media/Create-a-New-NIC-Team-in-a-VM/nict_hvs_07.jpg)  
+  
+16. In **Hardware**, click to expand the plus sign (+) next to **Network Adapter**. 
+
+17. Click **Advanced Features**, scroll down to **NIC Teaming**, and click to select **Enable this network adapter to be part of a team in the guest operating system**. 
+
+18. Click **OK**.  
+  
+_**Congratulations!**_  You have configured the physical and virtual network.  Now you can proceed to creating a new NIC Team.  
+
+## Step 2. Create a new NIC Team
+  
+When you create a new NIC Team, you must configure the NIC Team properties:  
   
 -   Team name  
   
@@ -48,102 +133,70 @@ When you create a new NIC Team, you must configure the following NIC Team proper
   
 You can also optionally configure the primary team interface and configure a virtual LAN (VLAN) number.  
   
-These NIC Team properties are displayed in the following illustration, which contains example values for some NIC Team properties.  
-  
-![NIC Team properties](../../media/Create-a-New-NIC-Team-on-a-Host-Computer-or-VM/nict_06_properties.jpg)  
-  
-## <a name="bkmk_teaming"></a>Choosing a Teaming Mode  
-The options for Teaming mode are **Switch Independent**, **Static Teaming**, and **Link Aggregation Control Protocol (LACP)**. Both Static Teaming and LACP are Switch Dependent modes. For best NIC Team performance with all three Teaming modes, it is recommended that you use a Load Balancing mode of Dynamic distribution.  
-  
-**Switch Independent**  
-  
-With Switch Independent mode, the switch or switches to which the NIC Team members are connected are unaware of the presence of the NIC team and do not determine how to distribute network traffic to NIC Team members - instead, the NIC Team distributes inbound network traffic across the NIC Team members.  
-  
-When you use Switch Independent mode with Dynamic distribution, the network traffic load is distributed based on the TCP Ports address hash as modified by the Dynamic load balancing algorithm. The Dynamic load balancing algorithm redistributes flows to optimize team member bandwidth utilization so that individual flow transmissions can move from one active team member to another. The algorithm takes into account the small possibility that redistributing traffic could cause out-of-order delivery of packets, so it takes steps to minimize that possibility.  
-  
-**Switch Dependent**  
-  
-With Switch Dependent modes, the switch to which the NIC Team members are connected determines how to distribute the inbound network traffic among the NIC Team members. The switch has complete independence to determine how to distribute the network traffic across the NIC Team members.  
-  
-> [!IMPORTANT]  
-> Switch dependent teaming requires that all team members are connected to the same physical switch or a multi-chassis switch that shares a switch ID among the multiple chassis.  
-  
-Static Teaming requires you to manually configure both the switch and the host to identify which links form the team. Because this is a statically configured solution, there is no additional protocol to assist the switch and the host to identify incorrectly plugged cables or other errors that could cause the team to fail to perform. This mode is typically supported by server-class switches.  
-  
-Unlike Static Teaming, LACP Teaming mode dynamically identifies links that are connected between the host and the switch. This dynamic connection enables the automatic creation of a team and, in theory but rarely in practice, the expansion and reduction of a team simply by the transmission or receipt of LACP packets from the peer entity. All server-class switches support LACP, and all require the network operator to administratively enable LACP on the switch port. When you configure a Teaming mode of LACP, NIC Teaming always operates in LACP's Active mode with a short timer.  No option is presently available to modify the timer or change the LACP mode.  
-  
-When you use Switch Dependent modes with Dynamic distribution, the network traffic load is distributed based on the TransportPorts address hash as modified by the Dynamic load balancing algorithm.  The Dynamic load balancing algorithm redistributes flows to optimize team member bandwidth utilization. Individual flow transmissions can move from one active team member to another as part of the dynamic distribution. The algorithm takes into account the small possibility that redistributing traffic could cause out-of-order delivery of packets, so it takes steps to minimize that possibility.  
-  
-As with all switch dependent configurations, the switch determines how to distribute the inbound traffic among the team members.  The switch is expected to do a reasonable job of distributing the traffic across the team members but it has complete independence to determine how it does so.  
-  
-## <a name="bkmk_lb"></a>Choosing a Load Balancing Mode  
-The options for Load Balancing distribution mode are **Address Hash**, **Hyper-V Port**, and **Dynamic**.  
-  
-**Address Hash**  
-  
-This Load Balancing mode creates a hash that is based on address components of the packet. It then assigns packets that have that hash value to one of the available adapters. Usually this mechanism alone is sufficient to create a reasonable balance across the available adapters.  
-  
-You can use Windows PowerShell to specify values for the following hashing function components.  
-  
--   Source and destination TCP ports and source and destination IP addresses. This is the default when you select **Address Hash** as the Load Balancing mode.  
-  
--   Source and destination IP addresses only.  
-  
--   Source and destination MAC addresses only.  
-  
-The TCP ports hash creates the most granular distribution of traffic streams, resulting in smaller streams that can be independently moved between NIC team members. However, you cannot use the TCP ports hash for traffic that is not TCP or UDP-based, or where the TCP and UDP ports are hidden from the stack, such as with IPsec-protected traffic. In these cases, the hash automatically uses the IP address hash or, if the traffic is not IP traffic, the MAC address hash is used.  
-  
-**Hyper-V Port**  
-  
-There is an advantage in using Hyper-V Port mode for NIC Teams that are configured on Hyper-V hosts. Because VMs have independent MAC addresses, the VM's MAC address - or the port the VM is connected to on the Hyper-V Virtual Switch - can be the basis upon which to divide network traffic between NIC Team members.  
-  
-> [!IMPORTANT]  
-> NIC Teams that you create within VMs cannot be configured with the Hyper-V Port load balancing mode. Use the Address Hash load balancing mode instead.  
-  
-Because the adjacent switch always sees a particular MAC address on one port, the switch distributes the ingress load (the traffic from the switch to the host) on multiple links based on the destination MAC (VM MAC) address. This is particularly useful when Virtual Machine Queues (VMQs) are used, because a queue can be placed on the specific NIC where the traffic is expected to arrive.  
-  
-However, if the host has only a few VMs, this mode might not be granular enough to achieve a well-balanced distribution. This mode will also always limit a single VM (i.e., the traffic from a single switch port) to the bandwidth that is available on a single interface. NIC Teaming uses the Hyper-V Virtual Switch Port as the identifier instead of using the source MAC address because, in some instances, a VM might be configured with more than one MAC address on a switch port.  
-  
-**Dynamic**  
-  
-This Load balancing mode utilizes the best aspects of each of the other two modes and combines them into a single mode:  
-  
--   Outbound loads are distributed based on a hash of the TCP Ports and IP addresses.  Dynamic mode also rebalances loads in real time so that a given outbound flow may move back and forth between team members.  
-  
--   Inbound loads are distributed in the same manner as the Hyper-V port mode.  
-  
-The outbound loads in this mode are dynamically balanced based on the concept of flowlets. Just as human speech has natural breaks at the ends of words and sentences, TCP flows (TCP communication streams) also have naturally occurring breaks. The portion of a TCP flow between two such breaks is referred to as a flowlet.  
-  
-When the dynamic mode algorithm detects that a flowlet boundary has been encountered - such as when a break of sufficient length has occurred in the TCP flow - the algorithm automatically rebalances the flow to another team member if appropriate.  In some circumstances the algorithm might also periodically rebalance flows that do not contain any flowlets. Because of this, the affinity between TCP flow and team member can change at any time as the dynamic balancing algorithm works to balance the workload of the team members.  
-  
-Whether the team is configured with Switch Independent or one of the Switch Dependent modes, it is recommended that you use Dynamic distribution mode for best performance.  
-  
-There is an exception to this rule when the NIC Team has just two team members, is configured in Switch Independent mode, and has Active/Standby mode enabled, with one NIC active and the other configured for Standby. With this NIC Team configuration, Address Hash distribution provides slightly better performance than Dynamic distribution.  
-  
-## <a name="bkmk_standby"></a>Choosing a Standby Adapter Setting  
-The options for Standby Adapter are None (all adapters Active) or your selection of a specific network adapter in the NIC Team that will act as a Standby adapter, while other unselected team members are Active. When you configure a NIC as a Standby adapter, no network traffic is sent to or processed by the adapter unless and until the moment when an Active NIC fails. After an Active NIC fails, the Standby NIC becomes active, and processes network traffic. If and when all team members are restored to service, the standby team member is returned to standby status.  
-  
-If you have a two-NIC team and you choose to configure one NIC as a Standby adapter, you lose the bandwidth aggregation advantages that exist with two active NICs.  
-  
-> [!IMPORTANT]  
-> You do not need to designate a Standby Adapter to achieve fault tolerance; fault tolerance is always present whenever there are at least two network adapters in a NIC Team.  
-  
-## <a name="bkmk_primary"></a>Using the Primary Team Interface Property  
-To access the Primary Team Interface dialog box, you must click the link that is highlighted in the illustration below.  
-  
-![Primary Team Interface Property](../../media/Create-a-New-NIC-Team-on-a-Host-Computer-or-VM/nict_10_primaryteaminterface.jpg)  
-  
-After you click the highlighted link, the following **New Team Interface** dialog box opens.  
-  
-![New Team Interface dialog box](../../media/Create-a-New-NIC-Team-on-a-Host-Computer-or-VM/nict_newteaminterface.jpg)  
-  
-If you are using VLANs, you can use this dialog box to specify a VLAN number.  
-  
-Whether or  not you are using VLANs, you can specify a tNIC name for the NIC Team.  
-  
-## See Also  
-[Create a New NIC Team in a VM](../../technologies/nic-teaming/Create-a-New-NIC-Team-in-a-VM.md)  
-[NIC Teaming](NIC-Teaming.md)  
-  
+For more details on these settings, see [NIC Teaming settings](nic-teaming-settings.md).
 
+### Prerequisites
 
+You must have membership in **Administrators**, or equivalent.  
+  
+### Procedure
+  
+1.  In Server Manager, click **Local Server**.  
+  
+2.  In the **Properties** pane, in the first column, locate **NIC Teaming**, and then click the **Disabled** link.<p>The **NIC Teaming** dialog box opens.<p>![NIC Teaming dialog box](../../media/Create-a-New-NIC-Team/nict_02_nicteaming.jpg)  
+  
+3.  In **Adapters and Interfaces**, select the one or more network adapters that you want to add to a NIC Team.  
+  
+4.  Click **TASKS**, and click **Add to New Team**.<p>The **New team** dialog box opens and displays network adapters and team members.  
+  
+5.  In **Team name**, type a name for the new NIC Team, and then click **Additional properties**.  
+  
+6.  In **Additional properties**, select values for:
+
+    - **Teaming mode**. The options for Teaming mode are **Switch Independent** and **Switch Dependent**. The Switch Dependent mode includes **Static Teaming** and **Link Aggregation Control Protocol (LACP)**. 
+      
+      - **Switch Independent.** [!INCLUDE [switch-independent-shortdesc-include](../../includes/switch-independent-shortdesc-include.md)]
+      
+      - **Switch Dependent.** [!INCLUDE [switch-dependent-shortdesc-include](../../includes/switch-dependent-shortdesc-include.md)] 
+      
+        | | |
+        |---|---|
+        |**Static Teaming** | Requires you to manually configure both the switch and the host to identify which links form the team. Because this is a statically configured solution, there is no additional protocol to assist the switch and the host to identify incorrectly plugged cables or other errors that could cause the team to fail to perform. This mode is typically supported by server-class switches. |
+        |**Link Aggregation Control Protocol (LACP)** |Unlike Static Teaming, LACP Teaming mode dynamically identifies links that are connected between the host and the switch. This dynamic connection enables the automatic creation of a team and, in theory but rarely in practice, the expansion and reduction of a team simply by the transmission or receipt of LACP packets from the peer entity. All server-class switches support LACP, and all require the network operator to administratively enable LACP on the switch port. When you configure a Teaming mode of LACP, NIC Teaming always operates in LACP's Active mode with a short timer.  No option is presently available to modify the timer or change the LACP mode. |
+        ---
+    
+    - **Load balancing mode**. The options for Load Balancing distribution mode are **Address Hash**, **Hyper-V Port**, and **Dynamic**.
+    
+       - **Address Hash.** [!INCLUDE [address-hash-shortdesc-include](../../includes/address-hash-shortdesc-include.md)]
+       
+       - **Hyper-V Port.** [!INCLUDE [hyper-v-port-shortdesc-include](../../includes/hyper-v-port-shortdesc-include.md)]
+       
+       - **Dynamic.** [!INCLUDE [dynamic-shortdesc-include](../../includes/dynamic-shortdesc-include.md)]
+    
+    - **Standby adapter**. The options for Standby Adapter are **None (all adapters Active)** or your selection of a specific network adapter in the NIC Team that acts as a Standby adapter.
+   
+   > [!TIP]  
+   > If you are configuring a NIC Team in a virtual machine (VM), you must select a **Teaming mode** of _Switch Independent_ and a **Load balancing mode** of _Address Hash_.  
+  
+7.  If you want to configure the primary team interface name or assign a VLAN number to the NIC Team, click the link to the right of **Primary team interface**.<p>The **New team interface** dialog box opens.<p>![New team interface](../../media/Create-a-New-NIC-Team/nict_newteaminterface.jpg)  
+  
+8.  Depending on your requirements, do one of the following:  
+  
+    -   Provide a tNIC interface name.  
+  
+    -   Configure VLAN membership: click **Specific VLAN** and type the VLAN information. For example, if you want to add this NIC Team to the accounting VLAN number 44, Type Accounting 44 - VLAN.   
+  
+9. Click **OK**.  
+
+_**Congratulations!**_  You've created a new NIC Team on a host computer or VM.
+
+## Related topics
+- [NIC Teaming](NIC-Teaming.md): In this topic, we give you an overview of Network Interface Card (NIC) Teaming in Windows Server 2016. NIC Teaming allows you to group between one and 32 physical Ethernet network adapters into one or more software-based virtual network adapters. These virtual network adapters provide fast performance and fault tolerance in the event of a network adapter failure.   
+
+- [NIC Teaming MAC address use and management](NIC-Teaming-MAC-Address-Use-and-Management.md): When you configure a NIC Team with switch independent mode and either address hash or dynamic load distribution, the team uses the media access control (MAC) address of the primary NIC Team member on outbound traffic. The primary NIC Team member is a network adapter selected by the operating system from the initial set of team members.
+
+- [NIC Teaming settings](nic-teaming-settings.md): In this topic, we give you an overview of the NIC Team properties such as teaming and load balancing modes. We also give you details about the Standby adapter setting and the Primary team interface property. If you have at least two network adapters in a NIC Team, you do not need to designate a Standby adapter for fault tolerance.
+
+- [Troubleshooting NIC Teaming](Troubleshooting-NIC-Teaming.md): In this topic, we discuss ways to troubleshoot NIC Teaming, such as hardware, physical switch securities, and disabling or enabling network adapters using Windows PowerShell. 
+
+---

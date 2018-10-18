@@ -164,4 +164,34 @@ Update classifications represent the type of update. For any given product or pr
 |Update rollups|A cumulative set of hotfixes, security updates, critical updates, and other updates that are packaged together for easy deployment. A rollup generally targets a specific area, such as security, or a specific component, such as Internet Information Services (IIS).|
 |Updates|Broadly released fixes for specific problems addressing non-critical, non-security related bugs.|
 
+## Icons used for updates in Windows Server Update Services
+ Updates in WSUS are represented by one of the following icons.  
+ To view these icons, you have to enable the Supersedence column in the Update Services console.
+ 
+### No Icon
+ The update has no supersedence relationship with any other update.
 
+ **Operational Concerns:**  
+
+ There are no operational concerns.  
+ 
+### Superseding Icon
+ ![icon](../../media/wsus/wsus-superseding.png) This update supersedes other updates.
+
+ **Operational Concerns:**  
+
+ There are no operational concerns.  
+
+### Superseded & Superseding Icon
+ ![icon](../../media/wsus/wsus-superseded.png) This update is superseded by another update, and supersedes other updates.
+
+ **Operational Concerns:**  
+
+ Replace these updates with the superseding updates when possible.
+ 
+### Superseded Icon
+ ![icon](../../media/wsus/wsus-superseded-leaf.png) This update is superseded by another update.
+
+ **Operational Concerns:**  
+
+ Replace these updates with the superseding updates when possible.

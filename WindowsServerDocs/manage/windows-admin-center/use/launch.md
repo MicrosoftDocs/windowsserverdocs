@@ -5,7 +5,7 @@ ms.technology: manage
 ms.topic: article
 author: nwashburn-ms
 ms.author: niwashbu
-ms.date: 06/18/2018
+ms.date: 09/19/2018
 ms.localizationpriority: medium
 ms.prod: windows-server-threshold
 ---
@@ -18,7 +18,12 @@ ms.prod: windows-server-threshold
 > New to Windows Admin Center?
 > [Learn more about Windows Admin Center](../understand/windows-admin-center.md) or [Download now](https://aka.ms/windowsadmincenter).
 
-## Selecting a client certificate
+## Windows Admin Center installed on Windows 10
+
+> [!IMPORTANT]
+> You must be a member of the local administrator's group to use Windows Admin Center on Windows 10
+
+### Selecting a client certificate
 
 The first time you open Windows Admin Center on Windows 10, make sure to select the *Windows Admin Center Client* certificate (otherwise you'll get an HTTP 403 error saying "can't get to this page").
 
@@ -44,15 +49,15 @@ After you have completed the installation of Windows Admin Center, you can add s
 
  1. Click **+ Add** under **All Connections**.
 
-    ![](../media/launch-use-1.png)
+    ![](../media/launch/addserver0.png)
 
  2. Choose to add a Server, Failover Cluster or Hyper-Converged Cluster connection:
     
-    ![](../media/launch-use-2.png)
+    ![](../media/launch/addserver1.png)
 
  3. Type the name of the server or cluster to manage and click **Submit**. The server or cluster will be added to your connection list on the overview page.
 
-    ![](../media/launch-use-3.png)
+    ![](../media/launch/addserver2.png)
 
    **-- OR --**  
 
@@ -60,7 +65,7 @@ After you have completed the installation of Windows Admin Center, you can add s
 
  1. On the **Add Server Connection** page, choose the **Import Servers** tab.
 
-    ![](../media/launch-use-4.png)
+    ![](../media/launch/import-servers.png)
 
  2. Click **Browse** and select a text file that contains a comma, or new line separated, list of FQDNs for the servers you want to add.
 
@@ -100,7 +105,7 @@ If your environment uses [LAPS](https://technet.microsoft.com/en-us/mt227395.asp
 
 You can use tags to identify and filter related servers in your connection list.  This allows you to see a subset of your servers in the connection list.  This is especially useful if you have many connections.
 
-## Edit tags
+### Edit tags
 
 * Select a server or multiple servers in the All Connections list
 * Under **All Connections**, click **Edit Tags**
@@ -117,17 +122,20 @@ The **Edit Connection Tags** pane allows you to modify, add, or remove tags from
 
 * If a tag is applied to a subset of the selected connections, the check box is shown in an intermediate state. You can click the box to check it and apply the tag to all selected connections, or click again to uncheck it and remove the tag from all selected connections.
 
-![](../media/launch/tags-4.png) 
-<!-- media will need updating -->
+![](../media/launch/tags-6.png)
 
-## Filter connections by tag
+### Filter connections by tag
 
 Once tags have been added to one or more server connections, you can view the tags on the connection list, and filter the connection list by tags.
 
-* To filter by a tag, enter the tag in the filter text box.  Entries appearing in the Server Connection list will be filtered to include that tag.
+* To filter by a tag, select the filter icon next to the search box.
+![](../media/launch/tags-7.png)
+* You can select "or", "and", or "not" to modify the filter behavior of the selected tags.
+![](../media/launch/tags-8.png)
 
-![](../media/launch/tags-2.png)
 
 ## View PowerShell scripts used in Windows Admin Center
 
 Once you've connected to a server, cluster, or PC, you can look at the PowerShell scripts that power the UI actions available in Windows Admin Center. From within a tool, click the PowerShell icon in the top application bar. Select a command of interest from the dropdown to navigate to the corresponding PowerShell script.
+
+![](../media/launch/showscript.png)

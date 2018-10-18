@@ -33,7 +33,7 @@ shrink querymax [noerr]
 |querymax|Returns the maximum amount of space in MB by which the volume can be reduced. This value may change if applications are currently accessing the volume.|
 |nowait|forces the command to return immediately while the shrink process is still in progress.|
 |noerr|for scripting only. When an error is encountered, DiskPart continues to process commands as if the error did not occur. Without this parameter, an error causes DiskPart to exit with an error code.|
-## remarks
+## Remarks
 -   You can reduce the size of a volume only if it is formatted using the NTFS file system or if it does not have a file system.
 -   This command works on basic volumes, and on simple or spanned dynamic volumes.
 -   if a desired amount is not specified, the volume will be reduced by the minimum amount (if specified).

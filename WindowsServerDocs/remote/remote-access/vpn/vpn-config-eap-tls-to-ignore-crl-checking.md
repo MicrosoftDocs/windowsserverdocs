@@ -6,15 +6,14 @@ ms.prod: windows-server-threshold
 ms.technology: networking-ras
 documentationcenter: ''
 ms.assetid: 
-ms.service: active-directory
 ms.workload: identity
 ms.tgt_pltfrm: na
 ms.devlang: na
 ms.topic: article
-ms.date: 05/25/2018
+ms.date: 07/13/2018
 ms.author: pashort
 author: shortpatti
-manager: elizapo
+manager: dougkim
 ms.reviewer: deverette
 ---
 
@@ -29,6 +28,9 @@ ms.reviewer: deverette
 >Failure to implement this registry change will cause IKEv2 connections using cloud certificates with PEAP to fail, but IKEv2 connections using Client Auth certificates issued from the on-premises CA would continue to work.
 
 In this step, you can add **IgnoreNoRevocationCheck** and set it to allow authentication of clients when the certificate does not include CRL distribution points. By default, IgnoreNoRevocationCheck is set to 0 (disabled).
+
+>[!NOTE]
+>If a Windows Routing and Remote Access Server (RRAS) uses NPS to proxy RADIUS calls to a second NPS, then you must set **IgnoreNoRevocationCheck=1** on both servers.
 
 An EAP-TLS client cannot connect unless the NPS server completes a revocation check of the certificate chain (including the root certificate). Cloud certificates issued to the user by Azure AD do not have a CRL because they are short-lived certificates with a lifetime of one hour. EAP on NPS needs to be configured to ignore the absence of a CRL. By default, IgnoreNoRevocationCheck is set to 0 (disabled). Add IgnoreNoRevocationCheck and set it to 1 to allow authentication of clients when the certificate does not include CRL distribution points. 
 

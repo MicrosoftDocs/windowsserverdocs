@@ -58,7 +58,7 @@ To create an AD FS self-signed certificate, follow these steps:
 3.  Set the execution policy to unrestricted:  
   
     ```powershell  
-    PS C:\temp\scripts> .\makecert.ps1 C:\temp\scripts> Set-ExecutionPolicy –ExecutionPolicy Unrestricted   
+    PS C:\temp\scripts> Set-ExecutionPolicy –ExecutionPolicy Unrestricted   
     ```  
   
 4.  Change to the directory where you copied the script.  

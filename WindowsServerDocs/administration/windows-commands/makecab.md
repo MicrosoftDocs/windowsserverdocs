@@ -34,7 +34,7 @@ makecab [/v[<n>]] [/d var=<value> ...] /f <directives_file> [...]
 |/l <dir>|Location to place destination (default is current directory).|
 |/v[<n>]|Set debugging verbosity level (0=none,...,3=full).|
 |/?|Displays help at the command prompt.|
-## remarks
+## Remarks
 -   Refer to [Microsoft Cabinet format](https://go.microsoft.com/fwlink/?LinkId=226852) on MSDN for information on directive_file.
 
 ## additional references

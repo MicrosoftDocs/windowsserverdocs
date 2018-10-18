@@ -6,12 +6,12 @@ ms.topic: article
 author: JasonGerend 
 ms.author: jgerend 
 ms.technology: storage-spaces
-ms.date: 05/18/2018
+ms.date: 07/09/2018
 ms.localizationpriority: medium
 ---
 # Deploy Storage Spaces on a stand-alone server
 
->Applies to: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies to: Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 This topic describes how to deploy Storage Spaces on a stand-alone server. For information about how to create a clustered storage space, see [Deploy a Storage Spaces cluster on Windows Server 2012 R2](<https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/mt270997(v%3dws.11)>).
 
@@ -45,7 +45,7 @@ To use Storage Spaces on a stand-alone Windows Server 2012−based server, make 
 |Disk bus types|- Serial Attached SCSI (SAS)<br>- Serial Advanced Technology Attachment (SATA)|You can also use USB drives. However, it's not optimal to use USB drives in a server environment.<br><br>Storage Spaces does not support iSCSI and Fibre Channel controllers.|
 |Disk configuration|- Physical disks must be at least 4 GB<br>- Disks must be blank and not formatted. Do not create volumes.||
 |HBA considerations|- Simple host bus adapters (HBAs) that do not support RAID functionality are recommended<br>- If RAID-capable, HBAs must be in non-RAID mode with all RAID functionality disabled<br>- Adapters must not abstract the physical disks, cache data, or obscure any attached devices. This includes enclosure services that are provided by attached just-a-bunch-of-disks (JBOD) devices. |Storage Spaces is compatible only with HBAs where you can completely disable all RAID functionality.|
-|JBOD enclosures|- JBOD enclosures are optional<br>- If you're using a JBOD enclosure, verify with your storage vendor that the enclosure supports Storage Spaces to ensure full functionality<br>- To determine whether the JBOD enclosure supports enclosure and slot identification, run the following Windows PowerShell cmdlet:<br><br>`Get-PhysicalDisk &#124; ? {$_.BusType –eq “SAS”} &#124; fc`<br><br>If the **EnclosureNumber** and **SlotNumber** fields contain values, then the enclosure supports these features.||
+|JBOD enclosures|- JBOD enclosures are optional<br>- Recommended to use Storage Spaces certified enclosures listed on the Windows Server Catalog<br>- If you're using a JBOD enclosure, verify with your storage vendor that the enclosure supports Storage Spaces to ensure full functionality<br>- To determine whether the JBOD enclosure supports enclosure and slot identification, run the following Windows PowerShell cmdlet:<br><br>`Get-PhysicalDisk \| ? {$_.BusType –eq "SAS"} \| fc`<br><br>If the **EnclosureNumber** and **SlotNumber** fields contain values, then the enclosure supports these features.||
 
 To plan for the number of physical disks and the desired resiliency type for a stand-alone server deployment, use the following guidelines.
 
@@ -259,7 +259,7 @@ Get-VirtualDisk –FriendlyName VirtualDisk1 | Get-Disk | Initialize-Disk –Pas
 
 ## Additional information
 
-- [Storage Spaces](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831739(v%3dws.11))
+- [Storage Spaces](overview.md)
 - [Storage Cmdlets in Windows PowerShell](https://docs.microsoft.com/powershell/module/storage/index?view=win10-ps)
 - [Deploy Clustered Storage Spaces](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj822937(v%3dws.11))
 - [Storage Spaces Frequently Asked Questions (FAQ)](https://social.technet.microsoft.com/wiki/contents/articles/11382.storage-spaces-frequently-asked-questions-faq.aspx)

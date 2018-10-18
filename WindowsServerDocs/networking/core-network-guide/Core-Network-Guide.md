@@ -1,5 +1,5 @@
 ---
-title: Core Network Guide
+title: Core network components
 description: This guide provides instructions on how to plan and deploy the core components required for a fully functioning network and a new Active Directory domain in a new forest with Windows Server 2016
 manager: brianlic
 ms.prod: windows-server-threshold
@@ -9,9 +9,9 @@ ms.assetid: b3cd60f7-d380-4712-9a78-0a8f551e1121
 ms.author: pashort
 author: shortpatti
 ---
-# Core Network Guide
+# Core network components
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 This guide provides instructions on how to plan and deploy the core components required for a fully functioning network and a new Active Directory domain in a new forest.
 
@@ -544,8 +544,8 @@ You can use the following commands to install and configure AD DS and DNS. You m
 
 >[!NOTE]
 >For more information about these Windows PowerShell commands, see the following reference topics.
->- [Install-WindowsFeature](https://technet.microsoft.com/itpro/powershell/windows/server-manager/install-windowsfeature)
->- [Install-ADDSForest](https://technet.microsoft.com/itpro/powershell/windows/adds/deployment/install-addsforest)
+>- [Install-WindowsFeature](https://docs.microsoft.com/en-us/powershell/module/servermanager/install-windowsfeature?view=win10-ps)
+>- [Install-ADDSForest](https://docs.microsoft.com/en-us/powershell/module/addsdeployment/install-addsforest?view=win10-ps)
 
 Membership in **Administrators** is the minimum required to perform this procedure.
 

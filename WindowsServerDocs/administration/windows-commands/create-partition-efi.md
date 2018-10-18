@@ -36,7 +36,7 @@ create partition efi [size=<n>] [offset=<n>] [noerr]
 |offset\=<n>|The offset in kilobytes \(KB\), at which the partition is created. If no offset is given, the partition is placed in the first disk extent that is large enough to hold it.|  
 |noerr|for scripting only. When an error is encountered, DiskPart continues to process commands as if the error did not occur. Without this parameter, an error causes DiskPart to exit with an error code.|  
   
-## remarks  
+## Remarks  
   
 -   After the partition has been created, the focus is given to the new partition.  
   

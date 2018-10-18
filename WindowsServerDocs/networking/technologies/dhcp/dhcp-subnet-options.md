@@ -1,18 +1,19 @@
 ---
 title: DHCP Subnet Selection Options
 description: This topic provides information about DHCP subnet selection options for Dynamic Host Configuration Protocol (DHCP) in Windows Server 2016. 
-manager: brianlic
+manager: dougkim
 ms.prod: windows-server-threshold
 ms.technology: networking-dhcp
 ms.topic: get-started-article
 ms.assetid: ca19e7d1-e445-48fc-8cf5-e4c45f561607
 ms.author: pashort
 author: shortpatti
+ms.date: 08/17/2018
 ---
 
 # DHCP Subnet Selection Options
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 You can use this topic for information about new DHCP subnet selection options.
 
@@ -33,6 +34,13 @@ Typically, DHCP relay agents rely on the Gateway IP Address \(GIADDR\) field to 
 In some cases, the IP address that the relay agent uses to communicate with the DHCP server might be different than the IP address range from which the DHCP client IP address needs to be allocated. 
 
 The Link Selection Sub option of option 82 is useful in this situation, allowing the relay agent to explicitly state the subnet from which it wants the IP address allocated in the form of DHCP v4 option 82 sub option 5.
+
+> [!NOTE]
+>
+> All relay agent IP addresses (GIADDR) must be part of an active DHCP scope IP address range. Any GIADDR outside of the DHCP scope IP address ranges is considered a rogue relay and Windows DHCP Server will not acknowledge DHCP client requests from those relay agents.
+>
+> A special scope can be created to "authorize" relay agents. Create a scope with the GIADDR (or multiple if the GIADDR's are sequential IP addresses), exclude the GIADDR address(es) from distribution, and then activate the scope. This will authorize the relay agents while preventing the GIADDR addresses from being assigned.
+
 
 ### Use case scenario
 

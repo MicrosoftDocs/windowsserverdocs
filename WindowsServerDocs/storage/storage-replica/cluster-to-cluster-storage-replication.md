@@ -109,7 +109,7 @@ This issue occurs due to architectural limitations within SR's log mechanism com
 
 When using S2D with HDDs, you cannot disable or avoid the cache. As a workaround, if using just SSD and NVME, you can configure just performance and capacity tiers. If using that configuration, and by placing the SR logs on the performance tier only with the data volumes they service being on the capacity tier only, you will avoid the high latency issue described above. The same could be done with a mix of faster and slower SSDs and no NVME.
 
-This workaround is of course not ideal and some customers may not be able to make use of it. The SR team is working on optimizations and and updated log mechanism for the future to reduce these artifical bottlenecks that occur. There is no ETA for this, but when available to TAP customers for testing, this FAQ will be updated. 
+This workaround is of course not ideal and some customers may not be able to make use of it. The SR team is working on optimizations and updated log mechanism for the future to reduce these artificial bottlenecks that occur. There is no ETA for this, but when available to TAP customers for testing, this FAQ will be updated. 
 
     -   **For JBOD enclosures:**  
 
@@ -131,7 +131,7 @@ This workaround is of course not ideal and some customers may not be able to mak
 
     -   **For Storage Spaces Direct:**  
 
-        1.  Ensure that each cluster can see that site's storage enclosures only by deploying Storage Spaces Direct. (https://docs.microsoft.com/en-us/windows-server/storage/storage-spaces/hyper-converged-solution-using-storage-spaces-direct) 
+        1.  Ensure that each cluster can see that site's storage enclosures only by deploying Storage Spaces Direct. (https://docs.microsoft.com/windows-server/storage/storage-spaces/hyper-converged-solution-using-storage-spaces-direct) 
 
         2.  Ensure that the SR log volumes will always be on the fastest flash storage and the data volumes on slower high capacity storage.
 
@@ -208,13 +208,13 @@ You will now create two normal failover clusters. After configuration, validatio
 ## Step 3: Set up Cluster to Cluster Replication using Windows PowerShell  
 Now you will set up cluster-to-cluster replication using Windows PowerShell. You can perform all of the steps below on the nodes directly or from a remote management computer that contains the Windows Server 2016 RSAT management tools  
 
-1.  Grant the first cluster full access to the other cluster by running the **Grant-ClusterAccess** cmdlet on any node in the first cluster, or remotely.  
+1.  Grant the first cluster full access to the other cluster by running the **Grant-SRAccess** cmdlet on any node in the first cluster, or remotely.  
 
     ```PowerShell
     Grant-SRAccess -ComputerName SR-SRV01 -Cluster SR-SRVCLUSB  
     ```  
 
-2.  Grant the second cluster full access to the other cluster by running the **Grant-ClusterAccess** cmdlet on any node in the second cluster, or remotely.  
+2.  Grant the second cluster full access to the other cluster by running the **Grant-SRAccess** cmdlet on any node in the second cluster, or remotely.  
 
     ```PowerShell
     Grant-SRAccess -ComputerName SR-SRV03 -Cluster SR-SRVCLUSA  

@@ -45,9 +45,9 @@ typeperf -qx [object] [options]
 ## Options
 
 |Option|Description|
-|------|-----------|
+|---------|-----------|
 |-?|Displays context-sensitive help.|
-|-f \<CSV|TSV|BIN|SQL>|Specifies the output file format. The default is CSV.|
+|-f \<CSV&verbar;TSV&verbar;BIN&verbar;SQL>|Specifies the output file format. The default is CSV.|
 |-cf \<filename>|Specifies a file containing a list of performance counters to monitor, with one counter per line.|
 |-si <[[hh:]mm:]ss>|Specifies the sample interval. The default is one second.|
 |-o \<filename>|Specifies the path for the output file, or the SQL database. The default is STDOUT (written to the command window).|

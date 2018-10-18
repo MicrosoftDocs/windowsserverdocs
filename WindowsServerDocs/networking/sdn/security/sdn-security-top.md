@@ -1,4 +1,3 @@
-
 ---
 title: Security for SDN
 description: You can use the topics in this section to learn about security in Software Defined Networking \(SDN\) in Windows Server 2016 Datacenter.
@@ -13,7 +12,7 @@ author: shortpatti
 
 # Security for SDN
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 You can use the topics in this section to learn about security in Software Defined Networking \(SDN\).
 

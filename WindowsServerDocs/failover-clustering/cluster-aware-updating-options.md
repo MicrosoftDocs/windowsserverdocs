@@ -1,12 +1,12 @@
 ---
 ms.assetid: 2f4b6641-0ec2-4b1c-85fb-a1f1d16685c8
-title: luster-Aware Updating advanced options and updating run profiles
+title: Cluster-Aware Updating advanced options and updating run profiles
 ms.topic: article
 ms.prod: windows-server-threshold
 manager: dongill
 ms.author: jgerend
 author: JasonGerend
-ms.date: 06/07/2017
+ms.date: 08/06/2018
 description: How to configure advanced options and updating run profiles for Cluster-Aware Updating (CAU)
 ---
 # Cluster-Aware Updating advanced options and updating run profiles
@@ -82,4 +82,4 @@ Invoke-CauRun –ClusterName CONTOSO-FC1 @MyRunProfile
 
 -   [Cluster-Aware Updating](cluster-aware-updating.md)
   
--   [Cluster-Aware Updating Cmdlets in Windows PowerShell](https://technet.microsoft.com/itpro/powershell/windows/cluster-aware-updating)
+-   [Cluster-Aware Updating Cmdlets in Windows PowerShell](https://docs.microsoft.com/powershell/module/clusterawareupdating/?view=win10-ps)

@@ -98,6 +98,10 @@ The following REG\_DWORD registry settings can affect the performance of SMB fil
     ```
 
     The defaults are 512 and 8192, respectively. These parameters allow the server to throttle client operation concurrency dynamically within the specified boundaries. Some clients might achieve increased throughput with higher concurrency limits, for example, copying files over high-bandwidth, high-latency links.
+    
+    >[!TIP]
+    > Prior to Windows 10 and Server 2016, the number of credits granted to the client varied dynamically between Smb2CreditsMin and Smb2CreditsMax based on an algorithm that attempted to determine the optimal number of credits to grant based on network latency and credit usage. In Windows 10 and Server 2016, the SMB server was changed to unconditionally grant credits upon request up to the configured maximum number of credits. As part of this change, the credit throttling mechanism, which reduces the size of each connection's credit window when the server is under memory pressure, was removed. The kernel's low memory event that triggered throttling is only signaled when the server is so low on memory (< a few MB) as to be useless. Since the server no longer shrinks credit windows the Smb2CreditsMin setting is no longer necessary and is now ignored.
+
 
     >[!TIP]
     > You can monitor SMB Client Shares\\Credit Stalls /Sec to see if there are any issues with credits.
@@ -129,7 +133,7 @@ The following REG\_DWORD registry settings can affect the performance of SMB fil
 -   **AsynchronousCredits**
 
     ``` 
-    HKLM\System\CurrentControlSet\Services\LanmanServer\Parameters\MaxThreadsPerQueue
+    HKLM\System\CurrentControlSet\Services\LanmanServer\Parameters\AsynchronousCredits
     ```
 
     The default is 512. This parameter limits the number of concurrent asynchronous SMB commands that are allowed on a single connection. Some cases (such as when there is a front-end server with a back-end IIS server) require a large amount of concurrency (for file change notification requests, in particular). The value of this entry can be increased to support these cases.

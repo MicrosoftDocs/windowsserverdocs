@@ -58,7 +58,7 @@ For information about other ways to start Windows PowerShell ISE, see [Starting 
 
 Windows PowerShell runs on the Server Core installation option of Windows Server operating systems. However, because Windows PowerShell ISE requires a graphic user interface, it does not run on Server Core installations.
 
-##
+## Additional references
 
 [about_PowerShell_Ise.exe](https://go.microsoft.com/fwlink/?LinkId=256512)
 [about_PowerShell.exe](https://go.microsoft.com/fwlink/?LinkID=113439)

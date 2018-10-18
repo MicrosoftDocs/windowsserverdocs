@@ -6,7 +6,7 @@ ms.topic: article
 author: JasonGerend 
 ms.author: jgerend 
 ms.technology: storage
-ms.date: 05/18/2018
+ms.date: 07/09/2018
 ms.localizationpriority: medium
 ---
 # Network File System overview
@@ -83,7 +83,7 @@ Deploying and managing NFS has improved in the following ways:
 
 ## Server Manager information
 
-In Server Manager, use the Add Roles and Features Wizard to add the Server for NFS role service (under the File and iSCSI Services role). For general information about installing features, see [Install or Uninstall Roles, Role Services, or Features](<https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831809(v=ws.11)>). Server for NFS tools include the Services for Network File System MMC snap-in to manage the Server for NFS and Client for NFS components. Using the snap-in, you can manage the Server for NFS components installed on the computer. Server for NFS also contains several Windows command-line administration tools:
+In Server Manager - or the newer [Windows Admin Center](../../manage/windows-admin-center/understand/windows-admin-center.md) - use the Add Roles and Features Wizard to add the Server for NFS role service (under the File and iSCSI Services role). For general information about installing features, see [Install or Uninstall Roles, Role Services, or Features](<https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831809(v=ws.11)>). Server for NFS tools include the Services for Network File System MMC snap-in to manage the Server for NFS and Client for NFS components. Using the snap-in, you can manage the Server for NFS components installed on the computer. Server for NFS also contains several Windows command-line administration tools:
 
 - **Mount** mounts a remote NFS share (also known as an export) locally and maps it to a local drive letter on the Windows client computer.
 - **Nfsadmin** manages configuration settings of the Server for NFS and Client for NFS components.
@@ -102,4 +102,4 @@ The following table provides additional resources for evaluating NFS.
 |---|---|
 |Deployment|[Deploy Network File System](deploy-nfs.md)|
 |Operations|[NFS cmdlets in Windows PowerShell](https://docs.microsoft.com/powershell/module/nfs/?view=win10-ps)|
-|Related technologies|[File and Storage Services overview](<https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831487(v%3dws.11)>)|
+|Related technologies|[Storage in Windows Server](../storage.md)|

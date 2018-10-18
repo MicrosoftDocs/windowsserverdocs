@@ -1,5 +1,5 @@
 ---
-title: Windows Server Supported Networking Scenarios
+title: Windows Server supported networking scenarios
 description: This topic provides information about new supported Networking scenarios in Windows Server 2016 and later
 manager: brianlic
 ms.prod: windows-server-threshold
@@ -10,9 +10,9 @@ ms.assetid: 6de4232d-b0b3-4e43-8735-ebae35ae4f9f
 ms.author: pashort
 author: shortpatti
 ---
-# Windows Server Supported Networking Scenarios
+# Windows Server supported networking scenarios
 
->Applies To: Windows Server \(Semi-Annual Channel\), Windows Server 2016
+>Applies to: Windows Server \(Semi-Annual Channel\), Windows Server 2016
 
 This topic provides information about supported and unsupported scenarios that you can or cannot perform with this release of Windows Server 2016.  
 >[!IMPORTANT]

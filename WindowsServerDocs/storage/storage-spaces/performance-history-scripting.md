@@ -12,7 +12,7 @@ ms.localizationpriority: medium
 
 # Scripting with PowerShell and Storage Spaces Direct performance history
 
-> Applies To: Windows Server Insider Preview build 17666 and later
+> Applies To: Windows Server Insider Preview build 17692 and later
 
 In Windows Server 2019, [Storage Spaces Direct](storage-spaces-direct-overview.md) records and stores extensive [performance history](performance-history.md) for virtual machines, servers, drives, volumes, network adapters, and more. Performance history is easy to query and process in PowerShell so you can quickly go from *raw data* to *actual answers* to questions like:
 
@@ -220,32 +220,32 @@ The results from every server come together as `$Output`, which we can `Sort-Obj
 Here's the script:
 
 ```
-Function Format-Iops {
-    Param (
-        $RawValue
-    )
-    $i = 0 ; $Labels = ("", "K", "M", "B", "T") # Thousands, millions, billions, trillions...
-    Do { $RawValue /= 1000 ; $i++ } While ( $RawValue -Gt 1000 )
-    # Return
-    [String][Math]::Round($RawValue) + " " + $Labels[$i]
-}
-
 $Output = Invoke-Command (Get-ClusterNode) {
+    Function Format-Iops {
+        Param (
+            $RawValue
+        )
+        $i = 0 ; $Labels = (" ", "K", "M", "B", "T") # Thousands, millions, billions, trillions...
+        Do { if($RawValue -Gt 1000){$RawValue /= 1000 ; $i++ } } While ( $RawValue -Gt 1000 )
+        # Return
+        [String][Math]::Round($RawValue) + " " + $Labels[$i]
+    }
+
     Get-VM | ForEach-Object {
         $IopsTotal = $_ | Get-ClusterPerf -VMSeriesName "VHD.Iops.Total"
         $IopsRead  = $_ | Get-ClusterPerf -VMSeriesName "VHD.Iops.Read"
         $IopsWrite = $_ | Get-ClusterPerf -VMSeriesName "VHD.Iops.Write"
         [PsCustomObject]@{
             "VM" = $_.Name
-            "IopsTotal" = Format-Iops $IopsTotal
-            "IopsRead"  = Format-Iops $IopsRead
-            "IopsWrite" = Format-Iops $IopsWrite
-            "RawIopsTotal" = $IopsTotal # For sorting...
+            "IopsTotal" = Format-Iops $IopsTotal.Value
+            "IopsRead"  = Format-Iops $IopsRead.Value
+            "IopsWrite" = Format-Iops $IopsWrite.Value
+            "RawIopsTotal" = $IopsTotal.Value # For sorting...
         }
     }
 }
 
-$Output | Sort-Object RawIopsTotal | Select-Object -First 10 | Format-Table PsComputerName, VM, IopsTotal, IopsRead, IopsWrite
+$Output | Sort-Object RawIopsTotal -Descending | Select-Object -First 10 | Format-Table PsComputerName, VM, IopsTotal, IopsRead, IopsWrite
 ```
 
 ## Sample 4: As they say, "25-gig is the new 10-gig"
@@ -454,31 +454,31 @@ We repeat our `Invoke-Command` trick, introduced above, to `Get-VM` on every ser
 Here's the script:
 
 ```
-Function Format-Bytes {
-    Param (
-        $RawValue
-    )
-    $i = 0 ; $Labels = ("B", "KB", "MB", "GB", "TB", "PB", "EB", "ZB", "YB")
-    Do { $RawValue /= 1024 ; $i++ } While ( $RawValue -Gt 1024 )
-    # Return
-    [String][Math]::Round($RawValue) + " " + $Labels[$i]
-}
-
 $Output = Invoke-Command (Get-ClusterNode) {
+    Function Format-Bytes {
+        Param (
+            $RawValue
+        )
+        $i = 0 ; $Labels = ("B", "KB", "MB", "GB", "TB", "PB", "EB", "ZB", "YB")
+        Do { if( $RawValue -Gt 1024 ){ $RawValue /= 1024 ; $i++ } } While ( $RawValue -Gt 1024 )
+        # Return
+        [String][Math]::Round($RawValue) + " " + $Labels[$i]
+    }
+    
     Get-VM | ForEach-Object {
         $Data = $_ | Get-ClusterPerf -VMSeriesName "VM.Memory.Assigned" -TimeFrame "LastMonth"
         If ($Data) {
             $AvgMemoryUsage = ($Data | Measure-Object -Property Value -Average).Average
             [PsCustomObject]@{
                 "VM" = $_.Name
-                "AvgMemoryUsage" = Format-Bytes $AvgMemoryUsage
-                "RawAvgMemoryUsage" = $AvgMemoryUsage # For sorting...
+                "AvgMemoryUsage" = Format-Bytes $AvgMemoryUsage.Value
+                "RawAvgMemoryUsage" = $AvgMemoryUsage.Value # For sorting...
             }
         }
     }
 }
 
-$Output | Sort-Object RawAvgMemoryUsage | Select-Object -First 10 | Format-Table PsComputerName, VM, AvgMemoryUsage
+$Output | Sort-Object RawAvgMemoryUsage -Descending | Select-Object -First 10 | Format-Table PsComputerName, VM, AvgMemoryUsage
 ```
 
 That's it! Hopefully these samples inspire you and help you get started. With Storage Spaces Direct performance history and the powerful, scripting-friendly `Get-ClusterPerf` cmdlet, you are empowered to ask – and answer! – complex questions as you manage and monitor your Windows Server 2019 infrastructure.

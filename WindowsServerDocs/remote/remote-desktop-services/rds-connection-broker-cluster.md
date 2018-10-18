@@ -27,7 +27,7 @@ Set up a database for the Connection Broker. You can use [Azure SQL Database](ht
 
 ## Step 1: Configure the database for the Connection Broker
 
-1. Find the connection string for the database you created - you need it both to identify the version of ODBC driver you need and later, when you're configuring the Connection Broker itself (step 3), so save the string somewhere you can reference it easily. Here's how you find the connection string for Azure SQL:  
+1. Find the connection string for the database you created - you need it both to identify the version of ODBC driver you need and later, when you're configuring the Connection Broker itself (step 3), so save the string someplace where you can reference it easily. Here's how you find the connection string for Azure SQL:  
     1. In the Azure portal, click **Browse > Resource groups** and click the resource group for the deployment.   
     2. Select the SQL database you just created (for example, CB-DB1).   
     3. Click **Settings > Properties > Show database connection strings**.   

@@ -5,7 +5,7 @@ ms.technology: manage
 ms.topic: article
 author: daniellee-msft
 ms.author: jol
-ms.date: 06/18/2018
+ms.date: 07/16/2018
 ms.localizationpriority: medium
 ms.prod: windows-server-threshold
 ---
@@ -27,7 +27,7 @@ Hyper-Converged Infrastructure consolidates software-defined compute, storage, a
 
 [Windows Admin Center](../understand/windows-admin-center.md) is the next-generation management tool for Windows Server, the successor to traditional "in-box" tools like Server Manager. It's free and can be installed and used without an Internet connection. You can use Windows Admin Center to manage and monitor Hyper-Converged Infrastructure running Windows Server 2016 or an Insider Preview build of Windows Server 2019.
 
-![Hyper-converged cluster dashboard](../media/manage-hyper-converged/hci-dashboard-v1804.png)
+![Hyper-converged cluster dashboard](../media/manage-hyper-converged/hci-dashboard-v1809.png)
 
 ## Key features
 
@@ -40,8 +40,10 @@ Highlights of Windows Admin Center for Hyper-Converged Infrastructure include:
 
 Windows Admin Center for Hyper-Converged Infrastructure is being actively developed by Microsoft. It receives frequent updates that improve existing features and add new features. Here’s what’s new in recent months:
 
-- Video: [What's new with HCI in Windows Admin Center v1804](https://www.youtube.com/watch?v=7kZxrYGTgTA) (April)
-- Video: [What's new with HCI in Windows Admin Center v1803](https://www.youtube.com/watch?v=CX4vKnisRj8) (March)
+- Video: [What's new with HCI in Windows Admin Center 1806](https://www.youtube.com/watch?v=w_4BFdbpmMc) (June)
+- *No video for May – after General Availability, we bought the team a pizza and told them to get some sleep*
+- Video: [What's new with HCI in Windows Admin Center 1804](https://www.youtube.com/watch?v=7kZxrYGTgTA) (April)
+- Video: [What's new with HCI in Windows Admin Center 1803](https://www.youtube.com/watch?v=CX4vKnisRj8) (March)
 
 ## Before you start
 
@@ -54,7 +56,7 @@ To manage your cluster as Hyper-Converged Infrastructure in Windows Admin Center
 
 Windows Admin Center for Hyper-Converged Infrastructure depends on management APIs added after Windows Server 2016 was released. Before you can manage your Windows Server 2016 cluster with Windows Admin Center, you’ll need to perform these two steps:
 
-1. Verify that every server in the cluster has installed the [2018-04 Cumulative Update for Windows Server 2016 (KB4093120)](https://support.microsoft.com/en-us/help/4093120) or later. To download and install this update, go to **Settings** > **Update & Security** > **Windows Update** and select **Check online for updates from Microsoft Update**.
+1. Verify that every server in the cluster has installed the [2018-05 Cumulative Update for Windows Server 2016 (KB4103723)](https://support.microsoft.com/help/4103723/windows-10-update-kb4103723) or later. To download and install this update, go to **Settings** > **Update & Security** > **Windows Update** and select **Check online for updates from Microsoft Update**.
 2. Run the following PowerShell cmdlet as Administrator on the cluster:
 
 ```powershell
@@ -153,7 +155,7 @@ In general, the term "hyper-converged" refers to running Hyper-V and Storage Spa
 
 ### Why do I need the latest cumulative update for Windows Server 2016?
 
-Windows Admin Center for Hyper-Converged Infrastructure depends on management APIs developed since Windows Server 2016 was released. These APIs are added in the [2018-04 Cumulative Update for Windows Server 2016 (KB4093120)](https://support.microsoft.com/en-us/help/4093120), available as of April 17th 2018.
+Windows Admin Center for Hyper-Converged Infrastructure depends on management APIs developed since Windows Server 2016 was released. These APIs are added in the [2018-05 Cumulative Update for Windows Server 2016 (KB4103723)](https://support.microsoft.com/help/4103723/windows-10-update-kb4103723), available as of May 8, 2018.
 
 ### How much does it cost to use Windows Admin Center?
 
@@ -293,4 +295,4 @@ It’s all about your feedback! The most important benefit of frequent updates i
 - [Windows Admin Center](../understand/windows-admin-center.md)
 - [Storage Spaces Direct](https://docs.microsoft.com/windows-server/storage/storage-spaces/storage-spaces-direct-overview)
 - [Hyper-V](https://docs.microsoft.com/windows-server/virtualization/hyper-v/hyper-v-on-windows-server)
-- [Software Defined Networking](https://docs.microsoft.com/en-us/windows-server/networking/sdn/software-defined-networking)
+- [Software Defined Networking](https://docs.microsoft.com/windows-server/networking/sdn/software-defined-networking)

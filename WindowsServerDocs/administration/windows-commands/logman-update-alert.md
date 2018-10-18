@@ -52,7 +52,7 @@ logman update alert <[-n] <name>> [options]
 |-[-]rdcs <name>|Specifies the Data Collector Set to start when an alert fires.|  
 |-[-]tn <task>|Specifies the task to run when an alert fires.|  
 |-[-]targ <argument>|Specifies the task arguments to be used with the task specified using -tn.|  
-## remarks  
+## Remarks  
 Where [-] is listed, an extra - negates the option.  
 ## <a name="BKMK_examples"></a>Examples  
 The following example updates the existing data collector new_alert, setting the threshold value for the counter % Processor time in the Processor(_Total) counter group to 40%.  

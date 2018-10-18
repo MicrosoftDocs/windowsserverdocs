@@ -13,7 +13,7 @@ ms.assetid: 2827f332-44d4-4785-8b13-98429087dcc7
 author: jaimeo
 ms.author: jaimeo
 manager: dongill
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ---
 # What's New in Windows Server 2016
 
@@ -71,7 +71,7 @@ Active Directory Certificate Services (AD CS) in Windows Server 2016 increases s
 Active Directory Domain Services includes improvements to help organizations secure Active Directory environments and provide better identity management experiences for both corporate and personal devices. For more information, see [What's new in Active Directory Domain Services (AD DS) in Windows Server 2016](../identity/whats-new-active-directory-domain-services.md).   
 
 ### Active Directory Federation Services  
-What's New in Active Directory Federation Services. Active Directory Federation Services (AD FS) in Windows Server 2016 includes new features that enable you to configure AD FS to authenticate users stored in Lightweight Directory Access Protocol (LDAP) directories. For more information, see [What's New in AD FS for Windows Server 2016](../identity/ad-fs/overview/whats-new-active-directory-federation-services-windows-server-2016.md).  
+What's New in Active Directory Federation Services. Active Directory Federation Services (AD FS) in Windows Server 2016 includes new features that enable you to configure AD FS to authenticate users stored in Lightweight Directory Access Protocol (LDAP) directories. For more information, see [What's New in AD FS for Windows Server 2016](../identity/ad-fs/overview/whats-new-active-directory-federation-services-windows-server.md).  
 
 ### Web Application Proxy  
 The latest version of Web Application Proxy focuses on new features that enable publishing and preauthentication for more applications and improved user experience. Check out the full list of new features that includes preauthentication for rich client apps such as Exchange ActiveSync and wildcard domains for easier publishing of SharePoint apps. For more information, see [Web Application Proxy in Windows Server 2016](../remote/remote-access/web-application-proxy/web-application-proxy-windows-server.md).  
@@ -79,7 +79,7 @@ The latest version of Web Application Proxy focuses on new features that enable 
 ##  [Administration](../administration/manage-windows-server.md)  
 The Management and Automation area focuses on tool and reference information for IT pros who want to run and manage Windows Server 2016, including Windows PowerShell.
 
-Windows PowerShell 5.1 includes significant new features, including support for developing with classes and new security features that extend its use, improve its usability, and allow you to control and manage Windows-based environments more easily and comprehensively. See [New Scenarios and Features in WMF 5.1](https://docs.microsoft.com/en-us/powershell/wmf/5.1/scenarios-features) for details.
+Windows PowerShell 5.1 includes significant new features, including support for developing with classes and new security features that extend its use, improve its usability, and allow you to control and manage Windows-based environments more easily and comprehensively. See [New Scenarios and Features in WMF 5.1](https://docs.microsoft.com/powershell/wmf/5.1/scenarios-features) for details.
 
 New additions for Windows Server 2016 include: the ability to run PowerShell.exe locally on Nano Server (no longer remote only), new Local Users & Groups cmdlets to replace the GUI, added PowerShell debugging support, and added support in Nano Server for security logging & transcription and JEA.
 
@@ -88,7 +88,7 @@ Here are some other new administration features:
 ### PowerShell Desired State Configuration (DSC) in Windows Management Framework (WMF) 5
 Windows Management Framework 5 includes updates to Windows PowerShell Desired State Configuration (DSC), Windows Remote Management (WinRM), and Windows Management Instrumentation (WMI).
 
-For more info about testing the DSC features of Windows Management Framework 5, see the series of blog posts discussed in [Validate features of PowerShell DSC](https://blogs.msdn.microsoft.com/powershell/2015/07/06/validate-features-of-powershell-dsc/). To download, see [Windows Management Framework 5.1](https://docs.microsoft.com/en-us/powershell/wmf/5.1/install-configure).
+For more info about testing the DSC features of Windows Management Framework 5, see the series of blog posts discussed in [Validate features of PowerShell DSC](https://blogs.msdn.microsoft.com/powershell/2015/07/06/validate-features-of-powershell-dsc/). To download, see [Windows Management Framework 5.1](https://docs.microsoft.com/powershell/wmf/5.1/install-configure).
 
 ### PackageManagement unified package management for software discovery, installation, and inventory
 Windows Server 2016 and Windows 10 includes a new PackageManagement feature (formerly called OneGet) that enables IT Professionals or DevOps to automate software discovery, installation, and inventory (SDII), locally or remotely, no matter what the installer technology is and where the software is located. 
@@ -121,10 +121,10 @@ Just Enough Administration in Windows Server 2016 is security technology that en
 Credential Guard uses virtualization-based security to isolate secrets so that only privileged system software can access them. See [Protect derived domain credentials with Credential Guard](https://technet.microsoft.com/itpro/windows/keep-secure/credential-guard).
 
 ###  Remote Credential Guard
-Credential Guard includes support for RDP sessions so that the user credentials remain on the client side and are not exposed on the server side. This also provides Single Sign On for Remote Desktop. See [Protect derived domain credentials with Windows Defender Credential Guard](https://docs.microsoft.com/en-us/windows/access-protection/credential-guard/credential-guard).   
+Credential Guard includes support for RDP sessions so that the user credentials remain on the client side and are not exposed on the server side. This also provides Single Sign On for Remote Desktop. See [Protect derived domain credentials with Windows Defender Credential Guard](https://docs.microsoft.com/windows/access-protection/credential-guard/credential-guard).   
 
 ### Device Guard (Code Integrity)
-Device Guard provides kernel mode code integrity (KMCI) and user mode code integrity (UMCI) by creating policies that specify what code can run on the server. See [Introduction to Windows Defender Device Guard: virtualization-based security and code integrity policies](https://docs.microsoft.com/en-us/windows/device-security/device-guard/introduction-to-device-guard-virtualization-based-security-and-code-integrity-policies).
+Device Guard provides kernel mode code integrity (KMCI) and user mode code integrity (UMCI) by creating policies that specify what code can run on the server. See [Introduction to Windows Defender Device Guard: virtualization-based security and code integrity policies](https://docs.microsoft.com/windows/device-security/device-guard/introduction-to-device-guard-virtualization-based-security-and-code-integrity-policies).
 
 
 ### Windows Defender  
@@ -185,7 +185,7 @@ New features provided by the IIS 10.0 web server in Windows Server 2016 include:
 
 - Support for HTTP/2 protocol in the Networking stack and integrated with IIS 10.0, allowing IIS 10.0 websites to automatically serve HTTP/2 requests for supported configurations. This allows numerous enhancements over HTTP/1.1 such as more efficient reuse of connections and decreased latency, improving load times for web pages. 
 - Ability to run and manage IIS 10.0 in Nano Server. See [IIS on Nano Server](iis-on-nano-server.md).
-- Support for Wildcard Host Headers, enabling administratorss to set up a web server for a domain and then have the web server serve requests for any subdomain.
+- Support for Wildcard Host Headers, enabling administrators to set up a web server for a domain and then have the web server serve requests for any subdomain.
 - A new PowerShell module (IISAdministration) for managing IIS. 
 
 For more details see [IIS](https://iis.net/learn).

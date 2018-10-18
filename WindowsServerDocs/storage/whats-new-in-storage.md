@@ -19,7 +19,7 @@ This topic explains the new and changed functionality in storage in Windows Serv
 
 Windows Server, version 1709 is the first Windows Server release in the Semi-Annual Channel. The Semi-Annual Channel is a Software Assurance benefit and is fully supported in production for 18 months, with a new version every six months.
 
-For more information, see [Windows Server Semi-annual Channel Overview](https://docs.microsoft.com/en-us/windows-server/get-started/semi-annual-channel-overview).
+For more information, see [Windows Server Semi-annual Channel Overview](https://docs.microsoft.com/windows-server/get-started/semi-annual-channel-overview).
 
 ### Storage Replica
 
@@ -119,10 +119,10 @@ If SMB signing and mutual authentication are unavailable, a Windows 10 or Window
 For more information on these security improvements - also referred to as UNC hardening, see Microsoft Knowledge Base article [3000483](https://support.microsoft.com/kb/3000483) and [MS15-011 & MS15-014: Hardening Group Policy](https://blogs.technet.microsoft.com/srd/2015/02/10/ms15-011-ms15-014-hardening-group-policy).  
 
 ### Work Folders
-Improved change notification when the Work Folders sever is running Windows Server 2016 and the Work Folders client is Windows 10.
+Improved change notification when the Work Folders server is running Windows Server 2016 and the Work Folders client is Windows 10.
 
 **What value does this change add?**<br>
-For Windows Server 2012 R2, when file changes are synced to the Work Folders server, clients are not notified of the change and wait up to 10 minutes to get the update.  When using Windows Sever 2016, the Work Folders server immediately notifies Windows 10 clients and the file changes are synced immediately.
+For Windows Server 2012 R2, when file changes are synced to the Work Folders server, clients are not notified of the change and wait up to 10 minutes to get the update.  When using Windows Server 2016, the Work Folders server immediately notifies Windows 10 clients and the file changes are synced immediately.
 
 **What works differently?**<br>
 This capability is new in Windows Server 2016. This requires a Windows Server 2016 Work Folders server and the client must be Windows 10.

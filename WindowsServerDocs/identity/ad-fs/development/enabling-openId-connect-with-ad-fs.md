@@ -21,8 +21,6 @@ Building on the initial Oauth support in AD FS in Windows Server 2012 R2, AD FS 
 ## Pre-requisites  
 The following are a list of pre-requisites that are required prior to completing this document. This document assumes that AD FS has been installed and an AD FS farm has been created.  
   
--   An Azure AD subscription (a free trial is fine)  
-  
 -   GitHub client tools  
   
 -   AD FS in Windows Server 2016 TP4 or later  

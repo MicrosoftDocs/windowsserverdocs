@@ -123,7 +123,7 @@ You can view Hyper-V event logs directly from the Virtual Machines tool.
 
 You can use Windows Admin Center to configure Azure Site Recovery and replicate your on-premises virtual machines to Azure. [Learn more](azure-services.md)
 
-## More Coming Soon
+## More Coming
 
 Virtual machine management in Windows Admin Center is actively under development and new features will be added in the near future. You can view the status and vote for features in UserVoice:
 
@@ -135,8 +135,7 @@ Virtual machine management in Windows Admin Center is actively under development
 |[Hyper-V Replica support](https://windowsserver.uservoice.com/forums/295071-management-tools/suggestions/32040253--virtual-machines-setup-and-manage-hyper-v-replic)|
 |[Delegate virtual machine ownership](https://windowsserver.uservoice.com/forums/295071-management-tools/suggestions/31663837--virtual-machines-owner-delegation)|
 |[Clone virtual machine](https://windowsserver.uservoice.com/forums/295071-management-tools/suggestions/31783288--virtual-machines-add-a-button-to-clone-a-vm)|
-|[Support operations on multiple virtual machines](https://windowsserver.uservoice.com/forums/295071-management-tools/suggestions/31637638--ux-virtual-machines-add-checkboxes-to-select-m)|
 |[Create a template from an existing virtual machine](https://windowsserver.uservoice.com/forums/295071-management-tools/suggestions/31494649--virtual-machines-create-a-template-from-an-exist)|
 |[View virtual machines across Hyper-V hosts](https://windowsserver.uservoice.com/forums/295071-management-tools/suggestions/31734559--virtual-machines-find-vms-on-host-screen)|
 |[Configure VLAN in New Virtual Machine pane](https://windowsserver.uservoice.com/forums/295071-management-tools/suggestions/31710979--virtual-machines-new-new-vm-pane-need-vlan-opt)|
-|[See all or propose new feature](https://windowsserver.uservoice.com/forums/295071/filters/top?category_id=319162&query=%5Bvirtual%20machines%5D)|
+|[**See all or propose new feature**](https://windowsserver.uservoice.com/forums/295071/filters/top?category_id=319162&query=%5Bvirtual%20machines%5D)|

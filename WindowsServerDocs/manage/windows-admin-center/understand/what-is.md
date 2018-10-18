@@ -6,7 +6,7 @@ ms.topic: article
 author: nwashburn-ms
 ms.author: niwashbu
 ms.date: 06/18/2018
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.prod: windows-server-threshold
 ---
 
@@ -16,9 +16,9 @@ ms.prod: windows-server-threshold
 
 Windows Admin Center is a new, locally-deployed, browser-based management tool set that lets you manage your Windows Servers with no Azure or cloud dependency. Windows Admin Center gives you full control over all aspects of your server infrastructure and is particularly useful for managing servers on private networks that are not connected to the Internet.
 
-Windows Admin Center is the modern evolution of "in-box" management tools, like Server Manager and MMC. It complements System Center and Operations Management Suite - it's not a replacement.
+Windows Admin Center is the modern evolution of "in-box" management tools, like Server Manager and MMC. It complements System Center - it's not a replacement.
 
-![](../media/wac-deploy-graphic.png)
+![](../media/wac-complements.png)
 
 ## How does Windows Admin Center work?
 
@@ -26,7 +26,7 @@ Windows Admin Center runs in a web browser and manages Windows Server 2016, Wind
 
 The Windows Admin Center gateway, when published to DNS and given access through corresponding corporate firewalls, lets you securely connect to, and manage, your servers from anywhere with Microsoft Edge or Google Chrome.
 
-![](../media/spacer1.png)![](../media/architecture.png)
+![](../media/architecture.png)
 
 ## Learn how Windows Admin Center improves your management environment
 
@@ -40,7 +40,7 @@ Windows Admin Center is the evolution of long-standing, well known management pl
 
 ### **Complements existing solutions** 
 
-Windows Admin Center works with solutions like System Center and Azure Operations Management Suite, adding to their capabilities to perform detailed, single-machine management tasks.
+Windows Admin Center works with solutions like System Center and Azure management and security, adding to their capabilities to perform detailed, single-machine management tasks.
 
 ### **Manage from anywhere**
 
@@ -52,7 +52,7 @@ Windows Admin Center has many enhancements that make your management platform [m
 
 ### **Azure integration**
 
-Windows Admin Center has many points of [integration with Azure services](../plan/azure-integration-options.md), including Azure Activity Directory, Azure Backup, Azure Site Recovery, and more.
+Windows Admin Center has many points of [integration with Azure services](../plan/azure-integration-options.md), including Azure Active Directory, Azure Backup, Azure Site Recovery, and more.
 
 ### **Manage hyper-converged clusters**
 

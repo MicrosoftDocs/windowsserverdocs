@@ -5,8 +5,8 @@ ms.prod: windows-server-threshold
 ms.technology: networking-ras
 ms.topic: article
 ms.assetid: 5ae1a40b-4f10-4ace-8aaf-13f7ab581f4f
-manager: elizapo
-ms.date: 05/29/2018
+manager: dougkim
+ms.date: 07/16/2018
 ms.author: pashort
 author: shortpatti
 ---
@@ -19,7 +19,9 @@ author: shortpatti
 &#187; [**Next:** Learn about the Always On VPN and DirectAccess feature comparison](../../vpn-map-da.md)
 
 
-Always On VPN provides a single, cohesive solution for remote access for all your connected devices, even personally owned devices. With Always On VPN, the connection type does not have to be exclusively user or device but can be a combination of both. For example, you could enable device authentication for remote device management, and then enable user authentication for connectivity to internal company sites and services.
+Always On VPN provides a single, cohesive solution for remote access and supports domain-joined, nondomain-joined (workgroup), or Azure AD–joined devices, even personally owned devices.  With Always On VPN, the connection type does not have to be exclusively user or device but can be a combination of both. For example, you could enable device authentication for remote device management, and then enable user authentication for connectivity to internal company sites and services.
+
+
 
 ## Prerequisites
 
@@ -34,7 +36,6 @@ You most likely have the technologies deployed that you can use to deploy Always
 - Membership in Administrators, or equivalent, is the minimum required.
 - Read the planning section of this guide to ensure that you are prepared for this deployment before you perform the deployment.
 - Review the design and deployment guides for each of the technologies used. These guides can help you determine whether the deployment scenarios provide the services and configuration that you need for your organization's network. For more information, see [Always On VPN Technology Overview](../always-on-vpn-technology-overview.md).
-- Remote client computers must be joined to the Active Directory domain and running the Windows 10 Anniversary Update (version 1607) or later operating system.
 - Management platform of your choice for deploying the Always On VPN configuration because the CSP is not vendor-specific.
 
 
@@ -69,7 +70,7 @@ This deployment does not provide instructions for:
 - Dynamic Host Configuration Protocol \(DHCP\). 
 - Network hardware, such as Ethernet cabling, firewalls, switches, and hubs.
 - Additional network resources, such as application and file servers, that remote users can access over an Always On VPN connection.
-- Internet connectivity or Conditional Access for Internet connectivity using Azure AD. For details, see [Conditional access in Azure Active Directory](https://docs.microsoft.com/en-us/azure/active-directory/active-directory-conditional-access-azure-portal).
+- Internet connectivity or Conditional Access for Internet connectivity using Azure AD. For details, see [Conditional access in Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-azure-portal).
 
 
 
@@ -82,7 +83,7 @@ This deployment does not provide instructions for:
 |Learn more about the Always On VPN technology     |[Always On VPN Technology Overview](../always-on-vpn-technology-overview.md): This page provides a brief overview of the Always On VPN technologies with links to detailed documents.         |
 |Learn more about the Always On VPN advanced features  |[Advanced VPN features](always-on-vpn-adv-options.md): This page provides guidance on how to enable VPN Traffic Filters, how to configure Automatic VPN connections using App-Triggers, and how to configure NPS to only allow VPN Connections from clients using certificates issued by Azure AD.         |
 |Migrate from DirectAccess to Always On VPN  |[DirectAccess to Always On VPN migration planning](../../../da-always-on-vpn-migration/da-always-on-migration-planning.md): If you are migrating from DirectAccess to Always On VPN, you must properly plan your migration phases before deploying Always On VPN.  Planning your migration phases helps identify any issues before they affect the entire organization. The primary goal of the migration is for users to maintain remote connectivity to the office throughout the process. If you perform tasks out of order, a race condition may occur, leaving remote users with no way to access company resources.         |
-|Start planning your Always On VPN deployment |[Plan the Always On VPN deployment](always-on-vpn-deploy-deployment.md): Learn about the workflow for deploying Always On VPN connections for remote domain-joined Windows 10 client computers.  |
+|Start planning your Always On VPN deployment |[Plan the Always On VPN deployment](always-on-vpn-deploy-deployment.md): Learn about the workflow for deploying Always On VPN connections for Windows 10 client computers.  |
 
 
 ---

@@ -31,7 +31,7 @@ A Hyper-V or Scale-Out File Server failover cluster can now easily be upgraded w
 
 The cluster operating systems for the upgrade in phases are as follows for each node in a cluster:  
 -   The node is paused and drained of all virtual machines that are running on it.  
--   The virtual machines (or other cluster workload) are migrated to another node in the cluster.The virtual machines are migrated to another node in the cluster.  
+-   The virtual machines (or other cluster workload) are migrated to another node in the cluster. The virtual machines are migrated to another node in the cluster.  
 -   The existing operating system is removed and a clean installation of the Windows Server 2016 operating system on the node is performed.  
 -   The node running the Windows Server 2016 operating system is added back to the cluster.  
 -   At this point, the cluster is said to be running in mixed mode, because the cluster nodes are running either  Windows Server 2012 R2 or Windows Server 2016.  
@@ -134,7 +134,7 @@ In  Windows Server 2012 R2  and previous versions, a cluster can only be created
 
 For more information, see [Workgroup and Multi-domain clusters in Windows Server 2016](http://blogs.msdn.com/b/clustering/archive/2015/08/17/10635825.aspx)  
 ## <a name="BKMK_VMLoadBalancing"></a>Virtual Machine Load Balancing  
-Virtual machine Load Balancing is a new feature in Failover Clustering that facilitates the seamless load balancing of virtual machines across the nodes in a cluster. Over-committed nodes are identified based on virtual machine Memory and CPU utilization on the node. Virtual machines are then moved (live migrated) from an over-committed node to nodes with available bandwidth (if applicable). The aggressiveness of the balancing can be tuned to ensure optimal cluster performance and utilization.  Load Balancing is enabled by default in Windows Sever 2016 Technical Preview. However, Load Balancing is disabled when SCVMM Dynamic Optimization is enabled.  
+Virtual machine Load Balancing is a new feature in Failover Clustering that facilitates the seamless load balancing of virtual machines across the nodes in a cluster. Over-committed nodes are identified based on virtual machine Memory and CPU utilization on the node. Virtual machines are then moved (live migrated) from an over-committed node to nodes with available bandwidth (if applicable). The aggressiveness of the balancing can be tuned to ensure optimal cluster performance and utilization.  Load Balancing is enabled by default in Windows Server 2016 Technical Preview. However, Load Balancing is disabled when SCVMM Dynamic Optimization is enabled.  
 
 ## <a name="BKMK_VMStartOrder"></a>Virtual Machine Start Order  
 Virtual machine Start Order is a new feature in Failover Clustering that introduces start order orchestration for Virtual machines (and all groups) in a cluster. Virtual machines can now be grouped into tiers, and start order dependencies can be created between different tiers. This ensures that the most important virtual machines (such as Domain Controllers or Utility virtual machines) are started first. Virtual machines are not started until the virtual machines that they have a dependency on are also started.  

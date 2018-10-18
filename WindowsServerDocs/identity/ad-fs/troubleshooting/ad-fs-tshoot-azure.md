@@ -131,7 +131,7 @@ AD FS uses the token-signing certificate to sign the token that's sent to the us
 
 However, if the token-signing certificate on the AD FS side is changed because of Auto Certificate Rollover or by some intervention, the details of the new certificate must be updated on the Azure AD side for the federated domain. When the Primary token-signing certificate on the AD FS is different from Azure ADs, the token that's issued by AD FS is not trusted by Azure AD. Therefore, the federated user is not allowed to log on.
 
-To fix this you can use the steps outline in [Renew federation certificates for Office 365 and Azure Active Directory](https://docs.microsoft.com/en-us/azure/active-directory/connect/active-directory-aadconnect-o365-certs).
+To fix this you can use the steps outline in [Renew federation certificates for Office 365 and Azure Active Directory](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnect-o365-certs).
 
 ## Other common things to check
 The following is a quick list of things to check if you are having issues with AD FS and Azure AD interaction.

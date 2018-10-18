@@ -38,7 +38,7 @@ The following sub-commands are available at all times:
 |class|Escapes from the default alias mode of WMIC to access classes in the WMI schema directly.|
 |path|Escapes from the default alias mode of WMIC to access instances in the WMI schema directly.|
 |context|Displays the current values of all global switches.|
-|[quit | exit]|Exits the WMIC command shell.|
+|[quit \| exit]|Exits the WMIC command shell.|
 
 ## Parameters
 
@@ -47,9 +47,6 @@ The following sub-commands are available at all times:
 |</parameter>|\<Concise description, starts with a verb.>|
 |</param2>|\<Another concise description, starts with a verb.>|
 
-## Remarks
-
-## Scripting
 
 ## <a name="BKMK_examples"></a>Examples
 

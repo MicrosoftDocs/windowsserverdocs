@@ -25,7 +25,7 @@ prompt
 ```  
 ### Parameters  
 none  
-## remarks  
+## Remarks  
 -   By default, **prompt** is on.  
 -   **ftp** prompts during multiple file transfers to allow you to selectively retrieve or store files.  **Mget** and **mput** transfer all files if **prompt** is off.  
 ## <a name="BKMK_Examples"></a>Examples  

@@ -11,7 +11,7 @@ author: shortpatti
 ---
 # What's New in DNS Server in Windows Server
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 This topic describes the Domain Name System (DNS) server functionality that is new or changed in Windows Server 2016.  
   
@@ -141,8 +141,8 @@ The following new Windows PowerShell cmdlets and parameters are introduced in Wi
 
 For more information, see the following Windows Server 2016 Windows PowerShell command reference topics.
 
-- [DnsServer Module](https://technet.microsoft.com/itpro/powershell/windows/dns-server/index)
-- [DnsClient Module](https://technet.microsoft.com/itpro/powershell/windows/dns-client/index)
+- [DnsServer Module](https://docs.microsoft.com/powershell/module/dnsserver/?view=win10-ps)
+- [DnsClient Module](https://docs.microsoft.com/powershell/module/dnsclient/?view=win10-ps)
 
 ## See also  
   

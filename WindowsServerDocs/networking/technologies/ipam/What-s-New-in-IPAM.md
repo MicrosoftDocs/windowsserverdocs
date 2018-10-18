@@ -16,7 +16,7 @@ author: shortpatti
 ---
 # What's New in IPAM
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 This topic describes the IP Address Management (IPAM) functionality that is new or changed in Windows Server 2016.  
   
@@ -84,7 +84,7 @@ Additionally, the following DNS functions have been added:
 ### <a name="DDI"></a>Integrated DNS, DHCP, and IP address (DDI) management  
 When you view an IP address in the IP Address Inventory, you have the option in the Details View to see all the DNS resource records associated with the IP address.  
   
-As part DNS resource record collection, IPAM collects the PTR records for the DNS reverse look-up zones. For all the reverse lookup zones which are mapped to any IP address range, IPAM creates the IP address records for all the PTR records belonging to that zone in the corresponding mapped IP address range. If the IP address already exists, the PTR record is simply associated with that IP address. The IP addresses are not automatically created if the reverse lookup zone is not mapped to any IP address range.  
+As part of DNS resource record collection, IPAM collects the PTR records for the DNS reverse look-up zones. For all the reverse lookup zones which are mapped to any IP address range, IPAM creates the IP address records for all the PTR records belonging to that zone in the corresponding mapped IP address range. If the IP address already exists, the PTR record is simply associated with that IP address. The IP addresses are not automatically created if the reverse lookup zone is not mapped to any IP address range.  
   
 When a PTR record is created in a reverse lookup zone through IPAM, the IP address inventory is updated in the same way as described above. During subsequent collection, since the IP address will already exist in the system, the PTR record will be simply mapped with that IP address.  
   

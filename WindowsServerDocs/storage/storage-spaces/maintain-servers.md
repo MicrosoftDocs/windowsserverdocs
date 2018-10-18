@@ -14,7 +14,7 @@ ms.localizationpriority: medium
 
 # Taking a Storage Spaces Direct server offline for maintenance
 
-> Applies To: Windows Server 2016
+> Applies to: Windows Server 2019, Windows Server 2016
 
 This topic provides guidance on how to properly restart or shutdown servers with [Storage Spaces Direct](storage-spaces-direct-overview.md).
 
@@ -116,7 +116,7 @@ To do this in Failover Cluster Manager, go to **Nodes**, right-click the node, a
 
 ## Waiting for storage to resync
 
-When the server resumes, any new writes that happened while it was paused (while its drives were not receiving storage IO) need to resync. This happens automatically. Using intelligent change tracking, it's not necessary for *all* data to be scanned or synchronized; only the changes. This process is throttled to mitigate impact to production workloads. Depending on how long the server was paused, and how much new data as written, it may take many minutes to complete.
+When the server resumes, any new writes that happened while it was unavailable need to resync. This happens automatically. Using intelligent change tracking, it's not necessary for *all* data to be scanned or synchronized; only the changes. This process is throttled to mitigate impact to production workloads. Depending on how long the server was paused, and how much new data as written, it may take many minutes to complete.
 
 You must wait for re-syncing to complete before taking any others servers in the cluster offline.
 

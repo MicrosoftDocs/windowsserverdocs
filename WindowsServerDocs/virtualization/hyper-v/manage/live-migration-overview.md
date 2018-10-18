@@ -14,13 +14,13 @@ ms.date: 06/27/2017
 
 # Live Migration Overview
 
-Live migration is a Hyper-V feature in Windows Server 2016.  It allows you to transparently move running Virtual Machines from one Hyper-V host to another without perceived downtime.  The primary benefit of live migration is flexibility; running Virtual Machines are not tied to a single host machine.  This allows actions like draining a specific host of Virtual Machines before decommissioning or upgrading it.  When paired with Windows Failover Clustering, live migration allows the creation of highly available and fault tolerant systems. 
+Live migration is a Hyper-V feature in Windows Server.  It allows you to transparently move running Virtual Machines from one Hyper-V host to another without perceived downtime.  The primary benefit of live migration is flexibility; running Virtual Machines are not tied to a single host machine.  This allows actions like draining a specific host of Virtual Machines before decommissioning or upgrading it.  When paired with Windows Failover Clustering, live migration allows the creation of highly available and fault tolerant systems. 
 
 ## Related Technologies and Documentation
 
 Live migration is often used in conjunction with a few related technologies like Failover Clustering and System Center Virtual Machine Manager.  If you’re using Live Migration via these technologies, here are pointers to their latest documentation:
 * [Failover Clustering](../../../failover-clustering/failover-clustering-overview.md) (Windows Server 2016) 
-* [System Center Virtual Machine Manager](https://docs.microsoft.com/en-us/system-center/vmm/) (System Center 2016) 
+* [System Center Virtual Machine Manager](https://docs.microsoft.com/system-center/vmm/) (System Center 2016) 
 
 If you’re using older versions of Windows Server, or need details on features introduced in older versions of Windows Server, here are pointers to historical documentation: 
 * [Live Migration](https://technet.microsoft.com/library/ee815293(v=ws.10).aspx) (Windows Server 2008 R2)  

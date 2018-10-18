@@ -1,7 +1,7 @@
 ---
-title: Guest Clustering in a Virtual Network
-description: This topic is part of the Software Defined Networking guide on how to Manage Tenant Workloads and Virtual Networks in Windows Server 2016.
-manager: brianlic
+title: Guest clustering in a virtual network
+description: Virtual machines connected to a virtual network are only permitted to use the IP addresses that Network Controller has assigned to communicate on the network.  Clustering technologies that require a floating IP address, such as Microsoft Failover Clustering, require some extra steps to function correctly.
+manager: dougkim
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -12,15 +12,17 @@ ms.topic: article
 ms.assetid: 8e9e5c81-aa61-479e-abaf-64c5e95f90dc
 ms.author: grcusanz
 author: shortpatti
+ms.date: 08/26/2018
 ---
 
-# Guest Clustering in a Virtual Network
+# Guest clustering in a virtual network
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
 
-Virtual machines that are connected to a virtual network are only permitted to use the IP addresses that Network Controller has assigned in order to communicate on the network.  This means clustering technologies that require a floating IP address, such as Microsoft Failover Clustering, require some extra steps in order to function correctly.
+Virtual machines connected to a virtual network are only permitted to use the IP addresses that Network Controller has assigned to communicate on the network.  Clustering technologies that require a floating IP address, such as Microsoft Failover Clustering, require some extra steps to function correctly.
 
-The method for making the floating IP reachable is to use a Software Load Balancer \(SLB\) virtual IP \(VIP\).  The software load balancer must be configured with a health probe on a port on that IP so that SLB will direct traffic to the machine that currently has that IP.
+The method for making the floating IP reachable is to use a Software Load Balancer \(SLB\) virtual IP \(VIP\).  The software load balancer must be configured with a health probe on a port on that IP so that SLB directs traffic to the machine that currently has that IP.
+
 
 ## Example: Load balancer configuration
 
@@ -28,145 +30,153 @@ This example assumes that you've already created the VMs which will become clust
 
 In this example you will create a virtual IP address (192.168.2.100) to represent the floating IP address of the cluster, and configure a health probe to monitor TCP port 59999 to determine which node is the active one.
 
-### Step 1: Select the VIP
-Prepare by assigning a VIP IP address.  This address can be any unused or reserved address in the same subnet as the cluster nodes.  The VIP must match the floating address of the cluster.
+1. Select the VIP.<p>Prepare by assigning a VIP IP address, which can be any unused or reserved address in the same subnet as the cluster nodes.  The VIP must match the floating address of the cluster.
 
-    $VIP = "192.168.2.100"
-    $subnet = "Subnet2"
-    $VirtualNetwork = "MyNetwork"
-    $ResourceId = "MyNetwork_InternalVIP"
+   ```PowerShell
+   $VIP = "192.168.2.100"
+   $subnet = "Subnet2"
+   $VirtualNetwork = "MyNetwork"
+   $ResourceId = "MyNetwork_InternalVIP"
+   ```
 
-### Step 2: Create the load balancer properties object
+2. Create the load balancer properties object.
 
-You can use the following example command to create the load balancer properties object.
+   ```PowerShell
+   $LoadBalancerProperties = new-object Microsoft.Windows.NetworkController.LoadBalancerProperties
+   ```
 
-    $LoadBalancerProperties = new-object Microsoft.Windows.NetworkController.LoadBalancerProperties
+3. Create a front\-end IP address.
 
-### Step 3: Create a front\-end IP address
+   ```PowerShell
+   $LoadBalancerProperties.frontendipconfigurations += $FrontEnd = new-object Microsoft.Windows.NetworkController.LoadBalancerFrontendIpConfiguration
+   $FrontEnd.properties = new-object Microsoft.Windows.NetworkController.LoadBalancerFrontendIpConfigurationProperties
+   $FrontEnd.resourceId = "Frontend1"
+   $FrontEnd.resourceRef = "/loadBalancers/$ResourceId/frontendIPConfigurations/$($FrontEnd.resourceId)"
+   $FrontEnd.properties.subnet = new-object Microsoft.Windows.NetworkController.Subnet
+   $FrontEnd.properties.subnet.ResourceRef = "/VirtualNetworks/MyNetwork/Subnets/Subnet2"
+   $FrontEnd.properties.privateIPAddress = $VIP
+   $FrontEnd.properties.privateIPAllocationMethod = "Static"
+   ```
 
-You can use the following example command to create a front\-end IP address.
+4. Create a back\-end pool to contain the cluster nodes.
 
-    $LoadBalancerProperties.frontendipconfigurations += $FrontEnd = new-object Microsoft.Windows.NetworkController.LoadBalancerFrontendIpConfiguration
-    $FrontEnd.properties = new-object Microsoft.Windows.NetworkController.LoadBalancerFrontendIpConfigurationProperties
-    $FrontEnd.resourceId = "Frontend1"
-    $FrontEnd.resourceRef = "/loadBalancers/$ResourceId/frontendIPConfigurations/$($FrontEnd.resourceId)"
-    $FrontEnd.properties.subnet = new-object Microsoft.Windows.NetworkController.Subnet
-    $FrontEnd.properties.subnet.ResourceRef = "/VirtualNetworks/MyNetwork/Subnets/Subnet2"
-    $FrontEnd.properties.privateIPAddress = $VIP
-    $FrontEnd.properties.privateIPAllocationMethod = "Static"
+   ```PowerShell
+   $BackEnd = new-object Microsoft.Windows.NetworkController.LoadBalancerBackendAddressPool
+   $BackEnd.properties = new-object Microsoft.Windows.NetworkController.LoadBalancerBackendAddressPoolProperties
+   $BackEnd.resourceId = "Backend1"
+   $BackEnd.resourceRef = "/loadBalancers/$ResourceId/backendAddressPools/$($BackEnd.resourceId)"
+   $LoadBalancerProperties.backendAddressPools += $BackEnd
+   ```
 
-### Step 4: Create a back\-end pool to contain the cluster nodes
+5. Add a probe to detect which cluster node the floating address is currently active on. 
 
-You can use the following example command to create a back\-end pool
+   >[!NOTE]
+   >The probe query against the VM's permanent address at the port defined below.  The port must only respond on the active node. 
 
-    $BackEnd = new-object Microsoft.Windows.NetworkController.LoadBalancerBackendAddressPool
-    $BackEnd.properties = new-object Microsoft.Windows.NetworkController.LoadBalancerBackendAddressPoolProperties
-    $BackEnd.resourceId = "Backend1"
-    $BackEnd.resourceRef = "/loadBalancers/$ResourceId/backendAddressPools/$($BackEnd.resourceId)"
-    $LoadBalancerProperties.backendAddressPools += $BackEnd
+   ```PowerShell
+   $LoadBalancerProperties.probes += $lbprobe = new-object Microsoft.Windows.NetworkController.LoadBalancerProbe
+   $lbprobe.properties = new-object Microsoft.Windows.NetworkController.LoadBalancerProbeProperties
 
-### Step 5: Add a probe
-The probe is necessary to detect which cluster node the floating address is currently active on.
+   $lbprobe.ResourceId = "Probe1"
+   $lbprobe.resourceRef = "/loadBalancers/$ResourceId/Probes/$($lbprobe.resourceId)"
+   $lbprobe.properties.protocol = "TCP"
+   $lbprobe.properties.port = "59999"
+   $lbprobe.properties.IntervalInSeconds = 5
+   $lbprobe.properties.NumberOfProbes = 11
+   ```
 
->[!NOTE]
->The probe query against the VM's permanent address at the port defined below.  The port must only respond on the active node. 
+6. Add the load balancing rules for TCP port 1433.<p>You can modify the protocol and port as needed.  You can also repeat this step multiple times for additional ports and protcols on this VIP.  It is important that EnableFloatingIP is set to $true because this tells the load balancer to send the packet to the node with the original VIP in place.
 
-    $LoadBalancerProperties.probes += $lbprobe = new-object Microsoft.Windows.NetworkController.LoadBalancerProbe
-    $lbprobe.properties = new-object Microsoft.Windows.NetworkController.LoadBalancerProbeProperties
+   ```PowerShell
+   $LoadBalancerProperties.loadbalancingRules += $lbrule = new-object Microsoft.Windows.NetworkController.LoadBalancingRule
+   $lbrule.properties = new-object Microsoft.Windows.NetworkController.LoadBalancingRuleProperties
+   $lbrule.ResourceId = "Rules1"
 
-    $lbprobe.ResourceId = "Probe1"
-    $lbprobe.resourceRef = "/loadBalancers/$ResourceId/Probes/$($lbprobe.resourceId)"
-    $lbprobe.properties.protocol = "TCP"
-    $lbprobe.properties.port = "59999"
-    $lbprobe.properties.IntervalInSeconds = 5
-    $lbprobe.properties.NumberOfProbes = 11
+   $lbrule.properties.frontendipconfigurations += $FrontEnd
+   $lbrule.properties.backendaddresspool = $BackEnd 
+   $lbrule.properties.protocol = "TCP"
+   $lbrule.properties.frontendPort = $lbrule.properties.backendPort = 1433 
+   $lbrule.properties.IdleTimeoutInMinutes = 4
+   $lbrule.properties.EnableFloatingIP = $true
+   $lbrule.properties.Probe = $lbprobe
+   ```
 
-### Step 5: Add the load balancing rules
-This step creates a load balancing rule for TCP port 1433.  You can modify the protocol and port as needed.  You can also repeat this step multiple times for additional ports and protcols on this VIP.  It is important that EnableFloatingIP is set to $true because this tells the load balancer to send the packet to the node with the original VIP in place.
+7. Create the load balancer in Network Controller.
 
-    $LoadBalancerProperties.loadbalancingRules += $lbrule = new-object Microsoft.Windows.NetworkController.LoadBalancingRule
-    $lbrule.properties = new-object Microsoft.Windows.NetworkController.LoadBalancingRuleProperties
-    $lbrule.ResourceId = "Rules1"
+   ```PowerShell
+   $lb = New-NetworkControllerLoadBalancer -ConnectionUri $URI -ResourceId $ResourceId -Properties $LoadBalancerProperties -Force
+   ```
 
-    $lbrule.properties.frontendipconfigurations += $FrontEnd
-    $lbrule.properties.backendaddresspool = $BackEnd 
-    $lbrule.properties.protocol = "TCP"
-    $lbrule.properties.frontendPort = $lbrule.properties.backendPort = 1433 
-    $lbrule.properties.IdleTimeoutInMinutes = 4
-    $lbrule.properties.EnableFloatingIP = $true
-    $lbrule.properties.Probe = $lbprobe
+8. Add the cluster nodes to the backend pool.<p>You can add as many nodes to the pool as you require for the cluster.
 
-### Step 5: Create the load balancer in Network Controller
+   ```PowerShell
+   # Cluster Node 1
 
-You can use the following example command to create the load balancer.
-
-    $lb = New-NetworkControllerLoadBalancer -ConnectionUri $URI -ResourceId $ResourceId -Properties $LoadBalancerProperties -Force
-
-### Step 6: Add the cluster nodes to the backend pool
-
-This example shows adding two pool members, but you can add as many nodes to the pool as you require for the cluster.
-
-    # Cluster Node 1
-
-    $nic = get-networkcontrollernetworkinterface  -connectionuri $uri -resourceid "ClusterNode1_Network-Adapter"
-    $nic.properties.IpConfigurations[0].properties.LoadBalancerBackendAddressPools += $lb.properties.backendaddresspools[0]
-    $nic = new-networkcontrollernetworkinterface  -connectionuri $uri -resourceid $nic.resourceid -properties $nic.properties -force
+   $nic = get-networkcontrollernetworkinterface  -connectionuri $uri -resourceid "ClusterNode1_Network-Adapter"
+   $nic.properties.IpConfigurations[0].properties.LoadBalancerBackendAddressPools += $lb.properties.backendaddresspools[0]
+   $nic = new-networkcontrollernetworkinterface  -connectionuri $uri -resourceid $nic.resourceid -properties $nic.properties -force
 
     # Cluster Node 2
 
-    $nic = get-networkcontrollernetworkinterface  -connectionuri $uri -resourceid "ClusterNode2_Network-Adapter"
-    $nic.properties.IpConfigurations[0].properties.LoadBalancerBackendAddressPools += $lb.properties.backendaddresspools[0]
-    $nic = new-networkcontrollernetworkinterface  -connectionuri $uri -resourceid $nic.resourceid -properties $nic.properties -force
+   $nic = get-networkcontrollernetworkinterface  -connectionuri $uri -resourceid "ClusterNode2_Network-Adapter"
+   $nic.properties.IpConfigurations[0].properties.LoadBalancerBackendAddressPools += $lb.properties.backendaddresspools[0]
+   $nic = new-networkcontrollernetworkinterface  -connectionuri $uri -resourceid $nic.resourceid -properties $nic.properties -force
+   ```
 
-Once you've created the load balancer and added the network interfaces to the backend pool, you are ready to configure the cluster.  If you are using a Microsoft Failover Cluster you can continue with the next example. 
+   Once you've created the load balancer and added the network interfaces to the backend pool, you are ready to configure the cluster.  
 
-## Example 2: Configuring a Microsoft Failover Cluster
+9. (Optional) If you are using a Microsoft Failover Cluster, continue with the next example. 
+
+## Example 2: Configuring a Microsoft failover cluster
 
 You can use the following steps to configure a failover cluster.
 
-### Step 1: Install failover clustering
+1. Install and configure properties for a failover cluster.
 
-You can use the following example commands to install and configure properties for a failover cluster.
+   ```PowerShell
+   add-windowsfeature failover-clustering -IncludeManagementTools
+   Import-module failoverclusters
 
-    add-windowsfeature failover-clustering -IncludeManagementTools
-    Import-module failoverclusters
-
-    $ClusterName = "MyCluster"
+   $ClusterName = "MyCluster"
    
-    $ClusterNetworkName = "Cluster Network 1"
-    $IPResourceName =  
-    $ILBIP = “192.168.2.100” 
+   $ClusterNetworkName = "Cluster Network 1"
+   $IPResourceName =  
+   $ILBIP = “192.168.2.100” 
 
-    $nodes = @("DB1", "DB2")
+   $nodes = @("DB1", "DB2")
+   ```
 
-### Step 2: Create the cluster on one node
+2. Create the cluster on one node.
 
-You can use the following example command to create the cluster on a node.
+   ```PowerShell
+   New-Cluster -Name $ClusterName -NoStorage -Node $nodes[0]
+   ```
 
-    New-Cluster -Name $ClusterName -NoStorage -Node $nodes[0]
+3. Stop the cluster resource.
 
-### Step 3: Stop the cluster resource
+   ```PowerShell
+   Stop-ClusterResource "Cluster Name" 
+   ```
 
-You can use the following example command to stop the cluster resource.
+4. Set the cluster IP and probe port.<p>The IP address must match the front-end ip address used in the previous example, and the probe port must match the probe port in the previous example.
 
-    Stop-ClusterResource "Cluster Name" 
+   ```PowerShell
+   Get-ClusterResource "Cluster IP Address" | Set-ClusterParameter -Multiple @{"Address"="$ILBIP";"ProbePort"="59999";"SubnetMask"="255.255.255.255";"Network"="$ClusterNetworkName";"EnableDhcp"=0}
+   ```
 
-### Step 4: Set the cluster IP and probe port
-The IP address must match the front-end ip address used in the previous example, and the probe port must match the probe port in the previous example.
+5. Start the cluster resources.
 
-    Get-ClusterResource "Cluster IP Address" | Set-ClusterParameter -Multiple @{"Address"="$ILBIP";"ProbePort"="59999";"SubnetMask"="255.255.255.255";"Network"="$ClusterNetworkName";"EnableDhcp"=0}
-
-### Step 5: Start the cluster resources
-
-You can use the following example command to start the cluster resources.
-
+   ```PowerShell
     Start-ClusterResource "Cluster IP Address"  -Wait 60 
     Start-ClusterResource "Cluster Name"  -Wait 60 
+   ```
 
-### Step 6: Add the remaining nodes
+6. Add the remaining nodes.
 
-You can use the following example command to add cluster nodes.
+   ```PowerShell
+   Add-ClusterNode $nodes[1]
+   ```
 
-    Add-ClusterNode $nodes[1]
+_**Your cluster is active.**_ Traffic going to the VIP on the specified port is directed at the active node.
 
-Upon completion of the last step, your cluster is active. Traffic going to the VIP on the specified port will be directed at the active node.
+---

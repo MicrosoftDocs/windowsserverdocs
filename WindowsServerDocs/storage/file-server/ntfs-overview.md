@@ -6,7 +6,7 @@ ms.topic: article
 author: JasonGerend 
 ms.author: jgerend 
 ms.technology: storage 
-ms.date: 05/18/2018
+ms.date: 09/06/2018
 ms.localizationpriority: medium
 ---
 # NTFS overview
@@ -15,7 +15,7 @@ ms.localizationpriority: medium
 
 NTFS—the primary file system for recent versions of Windows and Windows Server—provides a full set of features including security descriptors, encryption, disk quotas, and rich metadata, and can be used with Cluster Shared Volumes (CSV) to provide continuously available volumes that can be accessed simultaneously from multiple nodes of a failover cluster.
 
-To learn more about new and changed functionality in NTFS in Windows Server 2012 R2, see [What's New in NTFS](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn466520(v%3dws.11)). For additional feature information, see the [Additional information](#additional-information) section of this topic. To learn more about the newer Resilient File System (ReFS), see [Resilient File System (ReFS) overview](https://docs.microsoft.com/windows-server/storage/refs/refs-overview).
+To learn more about new and changed functionality in NTFS in Windows Server 2012 R2, see [What's New in NTFS](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn466520(v%3dws.11)). For additional feature information, see the [Additional information](#additional-information) section of this topic. To learn more about the newer Resilient File System (ReFS), see [Resilient File System (ReFS) overview](../refs/refs-overview.md).
 
 ## Practical applications
 
@@ -42,7 +42,7 @@ NTFS continuously monitors and corrects transient corruption issues in the backg
   |64 KB (maximum size)|256 TB|256 TB|
 
 >[!IMPORTANT]
->Services and apps might impose additional limits on file and volume sizes. If you’re using Volume Shadow Copy Service (VSS) for snapshots, the limit is 64 TB unless you’re using the VSS system provider (Volsnap) to create snapshots (instead of a hardware provider included with a SAN or RAID enclosure). In the latter case, the suggested limit for production deployments is 10 TB per volume. For more info, see Step 2 in the [Software-defined storage design considerations guide](<https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/mt243829(v%3dws.11)#step-2-review-the-design-and-adjust-as-necessary>) and [Usability limit for Volume Shadow Copy Service (VSS) in Windows (KB 2967756)](https://support.microsoft.com/help/2967756/usability-limit-for-volume-shadow-copy-service-vss-in-windows).
+>Services and apps might impose additional limits on file and volume sizes. For example, the volume size limit is 64 TB if you’re using the Previous Versions feature or a backup app that makes use of Volume Shadow Copy Service (VSS) snapshots (and you’re not using a SAN or RAID enclosure). However, you might need to use smaller volume sizes depending on your workload and the performance of your storage.
 
 ### Formatting requirements for large files
 
@@ -91,4 +91,4 @@ If the space on a volume is limited, NTFS provides the following ways to work wi
 |---|---|
 |Evaluation|- [What's New in NTFS](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn466520(v%3dws.11)) (Windows Server 2012 R2)<br>- [What's New in NTFS](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ff383236(v=ws.10)) (Windows Server 2008 R2, Windows 7)<br>- [NTFS Health and Chkdsk](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831536(v%3dws.11))<br>- [Self-Healing NTFS](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc771388(v=ws.10)) (introduced in Windows Server 2008)<br>- [Transactional NTFS](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/cc730726(v%3dws.10)) (introduced in Windows Server 2008)|
 |Community resources|- [Windows Storage Team Blog](https://blogs.msdn.microsoft.com/san/)|
-|Related technologies|- [File and Storage Services overview](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831487(v%3dws.11))<br>- [Use Cluster Shared Volumes in a Failover Cluster](../../failover-clustering/failover-cluster-csvs.md)<br>- The [Cluster Shared Volumes](<https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831630(v%3dws.11)#cluster-shared-volumes>) and [Storage Design](<https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831630(v%3dws.11)#storage-design>) sections of [Designing Your Cloud Infrastructure](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831630(v%3dws.11)) <br>- [Storage Spaces](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831739(v%3dws.11))<br>- [Resilient File System (ReFS) overview](https://docs.microsoft.com/windows-server/storage/refs/refs-overview)<br>- [DFS Namespaces and DFS Replication](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj127250(v%3dws.11))|
+|Related technologies|- [Storage in Windows Server](../storage.md)<br>- [Use Cluster Shared Volumes in a Failover Cluster](../../failover-clustering/failover-cluster-csvs.md)<br>- The [Cluster Shared Volumes](<https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831630(v%3dws.11)#cluster-shared-volumes>) and [Storage Design](<https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831630(v%3dws.11)#storage-design>) sections of [Designing Your Cloud Infrastructure](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831630(v%3dws.11)) <br>- [Storage Spaces](../storage-spaces/overview.md)<br>- [Resilient File System (ReFS) overview](../refs/refs-overview.md)

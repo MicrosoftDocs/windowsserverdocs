@@ -42,7 +42,7 @@ The following table describes the verbs that can be used with the certutil comma
 |-----|-----------|
 |[-dump](#BKMK_dump)|Dump configuration information or files|
 |[-asn](#BKMK_asn)|Parse ASN.1 file|
-|[-decodehex](#BKMK_decodehex)-decodehex|Decode hexadecimal-encoded file|
+|[-decodehex](#BKMK_decodehex)|Decode hexadecimal-encoded file|
 |[-decode](#BKMK_decode)|Decode a Base64-encoded file|
 |[-encode](#BKMK_encode)|Encode a file to Base64|
 |[-deny](#BKMK_deny)|Deny a pending certificate request|
@@ -831,7 +831,7 @@ Return to [Menu](#BKMK_menu)
 
 ## <a name="BKMK_viewstore"></a>-viewstore
 
-CertUtil [Options] -viewdelstore [CertificateStoreName [CertId [OutputFile]]]
+CertUtil [Options] -viewstore [CertificateStoreName [CertId [OutputFile]]]
 
 Dump certificate store
 

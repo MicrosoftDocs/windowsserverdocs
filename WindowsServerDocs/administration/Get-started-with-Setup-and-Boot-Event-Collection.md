@@ -5,7 +5,7 @@ ms.prod: windows-server-threshold
 ms.service: na
 manager: DonGill
 ms.technology: server-sbec
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.date: 10/16/2017
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
@@ -182,7 +182,7 @@ There is also a collector log, which records information about the collector its
   
 **Creating the collector configuration file**  
   
-When you enable the service, three XML configuration files are created and stored in **c:\ProgramData\Microsoft\ BootEventCollector\Config**:  
+When you enable the service, three XML configuration files are created and stored in **c:\ProgramData\Microsoft\BootEventCollector\Config**:  
   
 -   **Active.xml** This file contains the current active configuration of the collector service.  Right after installation, this file has the same contents as Empty.xml. When you set a new collector configuration you save it to this file.  
   
@@ -192,7 +192,7 @@ When you enable the service, three XML configuration files are created and store
   
 **Choosing a file size limit**  
   
-One of the decisions you have to make is to set a file size limit. The best file size limit depends on the expected volume of events and available disk space. Smaller files are more convenient from the standpoint of cleaning the old data. However, each file carries with it the overhead of a 64KB header and reading many files to get the combined history might be inconvenient.The absolute minimum file size limit is 256 KB. A reasonable practical file size limit should be over 1 MB, and 10 MB is probably a good typical value. A higher limit might be reasonable if you expect many events.  
+One of the decisions you have to make is to set a file size limit. The best file size limit depends on the expected volume of events and available disk space. Smaller files are more convenient from the standpoint of cleaning the old data. However, each file carries with it the overhead of a 64KB header and reading many files to get the combined history might be inconvenient. The absolute minimum file size limit is 256 KB. A reasonable practical file size limit should be over 1 MB, and 10 MB is probably a good typical value. A higher limit might be reasonable if you expect many events.  
   
 There are several details to keep in mind regarding the configuration file:  
   

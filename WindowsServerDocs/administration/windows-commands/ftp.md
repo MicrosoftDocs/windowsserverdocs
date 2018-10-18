@@ -40,7 +40,7 @@ ftp [-v] [-d] [-i] [-n] [-g] [-s:<FileName>] [-a] [-A] [-x:<SendBuffer>] [-r:<Re
 |-w:<WindowsSize>|Specifies the size of the transfer buffer. The default window size is 4096 bytes.|
 |-?|Displays help at the command prompt.|
 |<host>|Specifies the computer name, IP address, or IPv6 address of the ftp server to which to connect. The host name or address, if specified, must be the last parameter on the line.|
-## remarks
+## Remarks
 -   for more information about **ftp** commands on Windows Server 2003, see [ftp](https://technet.microsoft.com/library/cc756013(v=ws.10).aspx).
 -   **ftp** command-line parameters are case-sensitive.
 -   This command is available only if the **Internet Protocol (TCP/IP)** protocol is installed as a component in the properties of a network adapter in Network Connections.

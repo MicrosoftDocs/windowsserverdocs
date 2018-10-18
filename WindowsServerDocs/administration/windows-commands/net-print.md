@@ -35,7 +35,7 @@ Net print {\\<computerName>\<Sharename> |
 |<JobNumber>|Specifies the number of the print job you want to control. This number is assigned by the computer that hosts the print queue where the print job is sent. After a computer assigns a number to a print job, that number is not assigned to any other print jobs in any queue hosted by that computer. Required when using the \\\\<computerName> parameter.|
 |[/hold &#124; /release &#124; /delete]|Specifies the action to take with the print job.<br /><br />-   The **/hold** parameter delays the job, allowing other print jobs to bypass it until it is released.<br />-   The **/release** parameter releases a print job that has been delayed.<br />-   The **/delete** parameter removes a print job from a print queue.<br /><br />if you specify a job number, but do not specify any action, information about the print job is displayed.|
 |help|Displays help for the **Net print** command.|
-## remarks
+## Remarks
 -   **Net print** \\\\<computerName> displays information about print jobs in a shared printer queue. The following is an example of a report for all print jobs in a queue for a shared printer named LASER:
     ```
     printers at \\PRODUCTION

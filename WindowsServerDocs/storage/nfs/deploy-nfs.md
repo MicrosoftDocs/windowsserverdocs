@@ -6,7 +6,7 @@ ms.topic: article
 author: JasonGerend 
 ms.author: jgerend 
 ms.technology: storage
-ms.date: 05/18/2018
+ms.date: 07/09/2018
 ms.localizationpriority: medium
 ---
 # Deploy Network File System
@@ -124,3 +124,6 @@ The following Windows PowerShell cmdlet can also create an NFS file share (where
 ```PowerShell
 New-NfsShare -name nfs1 -Path C:\shares\nfsfolder
 ```
+
+### Known issue
+NFS version 4.1 allows the file names to be created or copied using illegal characters. If you attempt to open the files with vi editor, it shows as being corrupt. You cannot save the file from vi, rename, move it or change permissions. Avoid using illigal characters.

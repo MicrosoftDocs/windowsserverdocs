@@ -6,17 +6,16 @@ ms.topic: article
 author: JasonGerend 
 ms.author: jgerend 
 ms.technology: storage-failover-clustering 
-ms.date: 04/25/2018
+ms.date: 07/9/2018
 ms.localizationpriority: medium
 ---
 # Create a failover cluster
 
 >Applies to: Windows Server 2012 R2, Windows Server 2012, Windows Server 2016
 
-This topic shows how to create a failover cluster by using either the Failover Cluster Manager snap-in or Windows PowerShell. The topic covers a typical deployment, where computer objects for the cluster and its associated clustered roles are created in Active Directory Domain Services (AD DS).
+This topic shows how to create a failover cluster by using either the Failover Cluster Manager snap-in or Windows PowerShell. The topic covers a typical deployment, where computer objects for the cluster and its associated clustered roles are created in Active Directory Domain Services (AD DS). If you're deploying a Storage Spaces Direct cluster, instead see [Deploy Storage Spaces Direct](../storage/storage-spaces/deploy-storage-spaces-direct.md).
 
->[!NOTE]
->In Windows Server 2012 R2 you can also deploy an Active Directory-detached cluster. This deployment method enables you to create a failover cluster without permissions to create computer objects in AD DS or the need to request that computer objects are prestaged in AD DS. This option is only available through Windows PowerShell, and is only recommended for specific scenarios. For more information, see [Deploy an Active Directory-Detached Cluster](<https://docs.microsoft.com/previous-versions/windows/it-pro/dn265970(v%3dws.11)>).
+You can also deploy an Active Directory-detached cluster. This deployment method enables you to create a failover cluster without permissions to create computer objects in AD DS or the need to request that computer objects are prestaged in AD DS. This option is only available through Windows PowerShell, and is only recommended for specific scenarios. For more information, see [Deploy an Active Directory-Detached Cluster](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn265970(v=ws.11)).
 
 #### Checklist: Create a failover cluster
 
@@ -33,12 +32,8 @@ This topic shows how to create a failover cluster by using either the Failover C
 Before you begin, verify the following prerequisites:
 
 - Make sure that all servers that you want to add as cluster nodes are running the same version of Windows Server.
-
-    >[!NOTE]
-    >You can use the Failover Clustering feature on all editions of Windows Server 2012 R2 and Windows Server 2012. This includes Server Core installations.
-
-- Review the hardware requirements to make sure that your configuration is supported. For more information, see [Failover Clustering Hardware Requirements and Storage Options](<https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn265970(v=ws.11)>).
-- If you want to add clustered storage during cluster creation, make sure that all servers can access the storage. (You can also add clustered storage after you create the cluster.)
+- Review the hardware requirements to make sure that your configuration is supported. For more information, see [Failover Clustering Hardware Requirements and Storage Options](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj612869(v%3dws.11)). If you're creating a Storage Spaces Direct cluster, see [Storage Spaces Direct hardware requirements](../storage/storage-spaces/storage-spaces-direct-hardware-requirements.md).
+- To add clustered storage during cluster creation, make sure that all servers can access the storage. (You can also add clustered storage after you create the cluster.)
 - Make sure that all servers that you want to add as cluster nodes are joined to the same Active Directory domain.
 - (Optional) Create an organizational unit (OU) and move the computer accounts for the servers that you want to add as cluster nodes into the OU. As a best practice, we recommend that you place failover clusters in their own OU in AD DS. This can help you better control which Group Policy settings or security template settings affect the cluster nodes. By isolating clusters in their own OU, it also helps prevent against accidental deletion of cluster computer objects.
 
@@ -50,7 +45,7 @@ Additionally, verify the following account requirements:
     - If the user does not have the **Create Computer objects** permission, ask a domain administrator to prestage a cluster computer object for the cluster. For more information, see [Prestage Cluster Computer Objects in Active Directory Domain Services](prestage-cluster-adds.md).
 
 >[!NOTE]
->This requirement does not apply if you want to create an Active Directory-detached cluster in Windows Server 2012 R2. For more information, see [Deploy an Active Directory-Detached Cluster](<https://docs.microsoft.com/previous-versions/windows/it-pro/dn265970(v%3dws.11)>).
+>This requirement does not apply if you want to create an Active Directory-detached cluster in Windows Server 2012 R2. For more information, see [Deploy an Active Directory-Detached Cluster](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn265970(v=ws.11)).
 
 ## Install the Failover Clustering feature
 
@@ -67,9 +62,7 @@ You must install the Failover Clustering feature on every server that you want t
 7. On the **Select features** page, select the **Failover Clustering** check box.
 8. To install the failover cluster management tools, select **Add Features**, and then select **Next**.
 9. On the **Confirm installation selections** page, select **Install**.
-    
-    >[!NOTE]
-    >A server restart is not required for the Failover Clustering feature.
+<br>A server restart is not required for the Failover Clustering feature.
 
 10. When the installation is completed, select **Close**.
 11. Repeat this procedure on every server that you want to add as a failover cluster node.
@@ -102,7 +95,7 @@ Before you create the failover cluster, we strongly recommend that you validate 
         >[!NOTE]
         >If you receive a warning for the Validate Storage Spaces Persistent Reservation test, see the blog post [Windows Failover Cluster validation warning indicates your disks don't support the persistent reservations for Storage Spaces](https://blogs.msdn.microsoft.com/clustering/2013/05/24/validate-storage-spaces-persistent-reservation-test-results-with-warning/) for more information.
 
-For more information about hardware validation tests, see [Validate Hardware for a Failover Cluster](<https://docs.microsoft.com/previous-versions/windows/it-pro/jj134244(v%3dws.11)>).
+For more information about hardware validation tests, see [Validate Hardware for a Failover Cluster](<https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj134244(v%3dws.11)>).
 
 ## Create the failover cluster
 
@@ -228,7 +221,7 @@ Here's how to create a clustered role:
 The following Windows PowerShell cmdlets perform the same functions as the preceding procedures in this topic. Enter each cmdlet on a single line, even though they may appear word-wrapped across several lines because of formatting constraints.
 
 >[!NOTE]
->You must use Windows PowerShell to create an Active Directory-detached cluster in Windows Server 2012 R2. For information about the syntax, see [Deploy an Active Directory-Detached Cluster](<https://docs.microsoft.com/previous-versions/windows/it-pro/dn265970(v%3dws.11)>).
+>You must use Windows PowerShell to create an Active Directory-detached cluster in Windows Server 2012 R2. For information about the syntax, see [Deploy an Active Directory-Detached Cluster](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn265970(v=ws.11)).
 
 The following example installs the Failover Clustering feature.
 
@@ -270,8 +263,8 @@ For examples of how to add clustered roles, see topics such as [Add-ClusterFileS
   - [Failover Clustering](failover-clustering.md)
   - [Deploy a Hyper-V Cluster](<https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj863389(v%3dws.11)>)
   - [Scale-Out File Server for Application Data](<https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831349(v%3dws.11)>)
-  - [Deploy an Active Directory-Detached Cluster](<https://docs.microsoft.com/previous-versions/windows/it-pro/dn265970(v%3dws.11)>)
-  - [Using Guest Clustering for High Availability](<https://docs.microsoft.com/previous-versions/windows/it-pro/dn440540(v%3dws.11)>)
-  - [Cluster-Aware Updating](<https://docs.microsoft.com/previous-versions/windows/it-pro/hh831694(v%3dws.11)>)
+  - [Deploy an Active Directory-Detached Cluster](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn265970(v=ws.11))
+  - [Using Guest Clustering for High Availability](<https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn440540(v%3dws.11)>)
+  - [Cluster-Aware Updating](cluster-aware-updating.md)
   - [New-Cluster](https://docs.microsoft.com/powershell/module/failoverclusters/new-cluster?view=win10-ps)
   - [Test-Cluster](https://docs.microsoft.com/powershell/module/failoverclusters/test-cluster?view=win10-ps)

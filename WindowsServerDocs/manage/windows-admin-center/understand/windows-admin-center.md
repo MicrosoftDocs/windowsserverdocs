@@ -6,7 +6,7 @@ ms.topic: landing-page
 layout: LandingPage
 author: haley-rowland
 ms.author: harowl
-ms.date: 06/18/2018
+ms.date: 09/19/2018
 ms.localizationpriority: high
 ms.prod: windows-server-threshold
 ---
@@ -16,19 +16,14 @@ ms.prod: windows-server-threshold
 Windows Admin Center is a locally deployed, browser-based app for managing servers, clusters, hyper-converged infrastructure, and Windows 10 PCs. It comes at no additional cost beyond Windows and is ready to use in production.
 
 ## Download now
-**Windows Admin Center Preview** (version 1806)
 
-Includes the latest feature updates. [Get it from Windows Server Insider Preview](https://www.microsoft.com/en-us/software-download/windowsinsiderpreviewserver) > Additional Downloads
-
-**Windows Admin Center** (version 1804.25)
-
-Broadly validated & generally available. [Get it here](http://aka.ms/WACDownload)
-
-[Which version is right for me?](faq.md#what-is-windows-admin-center-preview-which-version-is-right-for-me)
+**Windows Admin Center** (version 1809)
+<!--Broadly validated & generally available.-->
+[Get it here](http://aka.ms/WACDownload)
 
 ********************
 
-Quick links: [Documentation](../overview.md) | [Give feedback](https://aka.ms/WACFeedback) | [Latest features](../overview.md#latest-features) | [For developers](../extend/extensibility-overview.md)
+Quick links: [Documentation](../overview.md) | [Latest features](../overview.md#latest-features) | [For developers](../extend/extensibility-overview.md) | [Give feedback](https://aka.ms/WACFeedback)
 
 ********************
 
@@ -64,7 +59,7 @@ Quick links: [Documentation](../overview.md) | [Give feedback](https://aka.ms/WA
 
 ## Related products
 
-Windows Admin Center is designed for managing a single server or cluster. It complements but does not replace existing Microsoft monitoring and management solutions, such as Remote Server Administration Tools (RSAT), System Center, Operations Management Suite, Intune, or Azure Stack. 
+Windows Admin Center is designed for managing a single server or cluster. It complements but does not replace existing Microsoft monitoring and management solutions, such as Remote Server Administration Tools (RSAT), System Center, Intune, or Azure Stack. 
 
 [Learn how Windows Admin Center complements other Microsoft management solutions.](related-management.md)
 

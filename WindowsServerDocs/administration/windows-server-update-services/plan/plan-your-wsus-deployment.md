@@ -107,6 +107,8 @@ WSUS requires one of the following databases:
 
 -   Windows Internal Database (WID)
 
+-   Microsoft SQL Server 2017
+
 -   Microsoft SQL Server 2016
 
 -   Microsoft SQL Server 2014
@@ -130,7 +132,7 @@ You can install the WSUS role on a computer that is separate from the database s
 
 1.  The database server cannot be configured as a domain controller.
 
-2.  The WSUS server cannot run remote Desktop Services.
+2.  The WSUS server cannot run Remote Desktop Services.
 
 3.  The database server must be in the same active directory domain as the WSUS server, or it must have a trust relationship with the active directory domain of the WSUS server.
 
@@ -164,8 +166,10 @@ You can create complex hierarchies of WSUS servers. Because you can synchronize 
 
 -   You can scale WSUS for a large organization that has more client computers than one WSUS server can effectively manage.
 
-> [!NOTE]
-> We recommend that you do not create a WSUS server hierarchy that is more than three levels deep. Each level adds time to propagate updates throughout the connected servers. Although there is no theoretical limit to a hierarchy, only deployments with a hierarchy of five levels deep have been tested by Microsoft Corporation.
+> [!NOTE] 
+> We recommend that you do not create a WSUS server hierarchy that is more than three levels deep. Each level adds time to propagate updates throughout the connected servers. Although there is no theoretical limit to a hierarchy, only deployments that have a hierarchy of five levels deep have been tested by Microsoft.
+>
+> Also, downstream servers must be at the same version or an earlier version of WSUS as the upstream server synchronization source.
 
 You can connect WSUS servers in Autonomous mode (to achieve distributed administration) or in Replica mode (to achieve centralized administration). You do not have to deploy a server hierarchy that uses only one mode: you can deploy a WSUS solution that uses both autonomous and replica WSUS servers.
 

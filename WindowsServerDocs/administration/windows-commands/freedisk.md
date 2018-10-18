@@ -32,7 +32,7 @@ freedisk [/s <computer> [/u [<Domain>\]<User> [/p [<Password>]]]] [/d <Drive>] [
 |/p [<Password>]|Specifies the password of the user account that is specified in **/u**.|
 |/d <Drive>|Specifies the drive for which you want to find out the availability of free space. You must specify <Drive>for a remote computer.|
 |<Value>|Checks for a specific amount of free disk space. You can specify <Value>in bytes, KB, MB, GB, TB, PB, EB, ZB or YB.|
-## remarks
+## Remarks
 -   Using the **/s**, **/u**, and **/p** command-line options are available only when you use **/s**. You must use **/p** with **/u**to provide the user s password.
 -   for unattended installations, you can use **freedisk** in installation batch files to check for the prerequisite amount free space before continuing with the installation.
 -   When you use **freedisk** in a batch file, it returns a **0** if there is enough space and a **1** if there is not enough space.

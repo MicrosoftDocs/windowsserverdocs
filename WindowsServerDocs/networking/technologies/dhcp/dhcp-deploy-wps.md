@@ -12,7 +12,7 @@ author: shortpatti
 
 # Deploy DHCP Using Windows PowerShell
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 This guide provides instructions on how to use Windows PowerShell to deploy an Internet Protocol (IP) version 4 Dynamic Host Configuration Protocol \(DHCP\)  server that automatically assigns IP addresses and DHCP options to IPv4 DHCP clients that are connected to one or more subnets on your network.
 
@@ -229,8 +229,8 @@ This deployment requires one physical server, one virtual switch, two virtual se
 On your physical server, in Hyper-V Manager, create the following items.
 
 1. One **Internal** virtual switch. Do not create an **External** virtual switch, because if your Hyper\-V host is on a subnet that includes a DHCP server, your test VMs will receive an IP address from your DHCP server. In addition, the test DHCP server that you deploy might assign IP addresses to other computers on the subnet where the Hyper\-V host is installed.
-1. One VM running Windows Server 2106 configured as a domain controller with Active Directory Domain Services that is connected to the Internal virtual switch you created. To match this guide, this server must have a statically configured IP address of 10.0.0.2. For information on deploying AD DS, see the section **Deploying DC1** in the Windows Server 2016 [Core Network Guide](https://technet.microsoft.com/windows-server-docs/networking/core-network-guide/core-network-guide#BKMK_deployADDNS01).
-1. One VM running Windows Server 2106 that you will configure as a DHCP server by using this guide and  that is connected to the Internal virtual switch you created. 
+1. One VM running Windows Server 2016 configured as a domain controller with Active Directory Domain Services that is connected to the Internal virtual switch you created. To match this guide, this server must have a statically configured IP address of 10.0.0.2. For information on deploying AD DS, see the section **Deploying DC1** in the Windows Server 2016 [Core Network Guide](https://technet.microsoft.com/windows-server-docs/networking/core-network-guide/core-network-guide#BKMK_deployADDNS01).
+1. One VM running Windows Server 2016 that you will configure as a DHCP server by using this guide and  that is connected to the Internal virtual switch you created. 
 1. One VM running a Windows client operating system  that is connected to the Internal virtual switch you created and that you will use to verify that your DHCP server is dynamically allocating IP addresses and DHCP options to DHCP clients.
 
 **Standalone DHCP server deployment**
@@ -240,7 +240,7 @@ This deployment requires one physical server, one virtual switch, one virtual se
 On your physical server, in Hyper-V Manager, create the following items.
 
 1. One **Internal** virtual switch. Do not create an **External** virtual switch, because if your Hyper\-V host is on a subnet that includes a DHCP server, your test VMs will receive an IP address from your DHCP server. In addition, the test DHCP server that you deploy might assign IP addresses to other computers on the subnet where the Hyper\-V host is installed.
-1. One VM running Windows Server 2106 that you will configure as a DHCP server by using this guide and  that is connected to the Internal virtual switch you created.
+1. One VM running Windows Server 2016 that you will configure as a DHCP server by using this guide and  that is connected to the Internal virtual switch you created.
 1. One VM running a Windows client operating system  that is connected to the Internal virtual switch you created and that you will use to verify that your DHCP server is dynamically allocating IP addresses and DHCP options to DHCP clients.
 
 ### Test Lab requirements with physical servers
@@ -252,8 +252,8 @@ To deploy DHCP in a test lab with physical servers, you need the following resou
 This deployment requires one hub or switch, two physical servers and one physical client:
 
 1. One Ethernet hub or switch to which you can connect the physical computers with Ethernet cables
-1. One physical computer running Windows Server 2106 configured as a domain controller with Active Directory Domain Services. To match this guide, this server must have a statically configured IP address of 10.0.0.2. For information on deploying AD DS, see the section **Deploying DC1** in the Windows Server 2016 [Core Network Guide](https://technet.microsoft.com/windows-server-docs/networking/core-network-guide/core-network-guide#BKMK_deployADDNS01).
-1. One physical computer running Windows Server 2106 that you will configure as a DHCP server by using this guide. 
+1. One physical computer running Windows Server 2016 configured as a domain controller with Active Directory Domain Services. To match this guide, this server must have a statically configured IP address of 10.0.0.2. For information on deploying AD DS, see the section **Deploying DC1** in the Windows Server 2016 [Core Network Guide](https://technet.microsoft.com/windows-server-docs/networking/core-network-guide/core-network-guide#BKMK_deployADDNS01).
+1. One physical computer running Windows Server 2016 that you will configure as a DHCP server by using this guide. 
 1. One physical computer running a Windows client operating system that you will use to verify that your DHCP server is dynamically allocating IP addresses and DHCP options to DHCP clients.
 
 >[!NOTE]
@@ -264,7 +264,7 @@ This deployment requires one hub or switch, two physical servers and one physica
 This deployment requires one hub or switch, one physical server, and one physical client:
 
 1. One Ethernet hub or switch to which you can connect the physical computers with Ethernet cables
-2. One physical computer running Windows Server 2106 that you will configure as a DHCP server by using this guide. 
+2. One physical computer running Windows Server 2016 that you will configure as a DHCP server by using this guide. 
 3. One physical computer running a Windows client operating system that you will use to verify that your DHCP server is dynamically allocating IP addresses and DHCP options to DHCP clients.
 
 

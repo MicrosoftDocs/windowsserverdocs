@@ -6,7 +6,7 @@ ms.topic: article
 author: JasonGerend 
 ms.author: jgerend 
 ms.technology: storage 
-ms.date: 04/05/2018
+ms.date: 09/10/2018
 ms.localizationpriority: medium
 ---
 # Disable Offline Files on individual redirected folders
@@ -16,14 +16,14 @@ ms.localizationpriority: medium
 This topic describes how to disable Offline Files caching on individual folders that are redirected to network shares by using Folder Redirection. This provides the ability to specify which folders to exclude from caching locally, reducing the Offline Files cache size and time required to synchronize Offline Files.
 
 >[!NOTE]
->This topic includes sample Windows PowerShell cmdlets that you can use to automate some of the procedures described. For more information, see [Windows PowerShell Basics](https://docs.microsoft.com/en-us/powershell/scripting/getting-started/fundamental/windows-powershell-basics?view=powershell-6).
+>This topic includes sample Windows PowerShell cmdlets that you can use to automate some of the procedures described. For more information, see [Windows PowerShell Basics](https://docs.microsoft.com/powershell/scripting/getting-started/fundamental/windows-powershell-basics?view=powershell-6).
 
 ## Prerequisites
 
 To disable Offline Files caching of specific redirected folders, your environment must meet the following prerequisites.
 
 - An Active Directory Domain Services (AD DS) domain, with client computers joined to the domain. There are no forest or domain functional-level requirements or schema requirements.
-- Client computers running Windows 8.1, Windows 8, Windows Server 2012 R2, or Windows Server 2012.
+- Client computers running Windows 10, Windows 8.1, Windows 8, Windows Server 2016, Windows Server 2012 R2, or Windows Server 2012.
 - A computer with Group Policy Management installed.
 
 ## Disabling Offline Files on individual redirected folders

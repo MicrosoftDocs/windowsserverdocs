@@ -16,11 +16,11 @@ ms.prod: windows-server-threshold
 ---
 # Windows Commands
 
-Use this PDF to find the documentation resources and other technical information that you need to learn about the command shell, and to automate command-line tasks by using scripts or scripting tools.
+Find the documentation resources and other technical information you need to learn about the command shell, and to automate command-line tasks by using scripts or scripting tools.
 
 To find information about a specific command, in the following A-Z menu, click the letter that the command starts with, and then click the command name.
 
-[A](#bkmk_a) |
+[A](#BKMK_a) |
 [B](#BKMK_b) | 
 [C](#BKMK_c) | 
 [D](#BKMK_d) | 
@@ -30,7 +30,7 @@ To find information about a specific command, in the following A-Z menu, click t
 [H](#BKMK_h) | 
 [I](#BKMK_i) |
 [J](#BKMK_j) | 
-[K](#bkmk_k) | 
+[K](#BKMK_k) | 
 [L](#BKMK_l) | 
 [M](#BKMK_m) | 
 [N](#BKMK_n) | 
@@ -40,12 +40,12 @@ To find information about a specific command, in the following A-Z menu, click t
 [R](#BKMK_r) | 
 [S](#BKMK_s) | 
 [T](#BKMK_t) | 
-[U](#bkmk_u) | 
-[V](#bkmk_v) | 
-[W](#bkmk_w) | 
-[X](#bkmk_x) | 
-[Y](#bkmk_y) | 
-[Z](#bkmk_z)
+[U](#BKMK_u) | 
+[V](#BKMK_v) | 
+[W](#BKMK_w) | 
+[X](#BKMK_x) | 
+[Y](#BKMK_y) | 
+[Z](#BKMK_z)
 
 ## <a name="BKMK_PREREQ"></a>Prerequisites
 The information that is contained in this PDF applies to:
@@ -95,7 +95,7 @@ You can change the properties for the Command prompt window.
 ## <a name="BKMK_CmdRef"></a>Command-line reference A-Z
 To find information about a specific command, in the following A-Z menu, click the letter that the command starts with, and then click the command name.
 
-[A](#bkmk_a) |
+[A](#BKMK_a) |
 [B](#BKMK_b) | 
 [C](#BKMK_c) | 
 [D](#BKMK_d) | 
@@ -105,7 +105,7 @@ To find information about a specific command, in the following A-Z menu, click t
 [H](#BKMK_h) | 
 [I](#BKMK_i) |
 [J](#BKMK_j) | 
-[K](#bkmk_k) | 
+[K](#BKMK_k) | 
 [L](#BKMK_l) | 
 [M](#BKMK_m) | 
 [N](#BKMK_n) | 
@@ -115,14 +115,14 @@ To find information about a specific command, in the following A-Z menu, click t
 [R](#BKMK_r) | 
 [S](#BKMK_s) | 
 [T](#BKMK_t) | 
-[U](#bkmk_u) | 
-[V](#bkmk_v) | 
-[W](#bkmk_w) | 
-[X](#bkmk_x) | 
-[Y](#bkmk_y) | 
-[Z](#bkmk_z)
+[U](#BKMK_u) | 
+[V](#BKMK_v) | 
+[W](#BKMK_w) | 
+[X](#BKMK_x) | 
+[Y](#BKMK_y) | 
+[Z](#BKMK_z)
 
-### <a name="bkmk_a"></a>A
+### <a name="BKMK_a"></a>A
 -   [append](append.md)
 -   [arp](arp.md)
 -   [assoc](assoc.md)
@@ -587,17 +587,17 @@ To find information about a specific command, in the following A-Z menu, click t
 -   [typeperf](typeperf.md)
 -   [tzutil](tzutil.md)
 
-### <a name="bkmk_u"></a>U
+### <a name="BKMK_u"></a>U
 -   [unlodctr](unlodctr_1.md)
 
-### <a name="bkmk_v"></a>V
+### <a name="BKMK_v"></a>V
 -   [ver](ver.md)
 -   [verifier](verifier.md)
 -   [verify](verify_1.md)
 -   [vol](vol.md)
 -   [vssadmin](vssadmin.md)- 
 
-### <a name="bkmk_w"></a>W
+### <a name="BKMK_w"></a>W
 -   [waitfor](waitfor.md)
 -   [wbadmin](wbadmin.md)
   -   [wbadmin enable backup](wbadmin-enable-backup.md)
@@ -628,5 +628,5 @@ To find information about a specific command, in the following A-Z menu, click t
 -   [wmic](wmic.md)
 -   [wscript](wscript.md)
 
-### <a name="bkmk_x"></a>X
+### <a name="BKMK_x"></a>X
 -   [xcopy](xcopy.md)

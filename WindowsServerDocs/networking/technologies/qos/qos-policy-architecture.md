@@ -12,7 +12,7 @@ author: shortpatti
 
 # QoS Policy Architecture
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 You can use this topic to learn about the architecture of QoS Policy.
 

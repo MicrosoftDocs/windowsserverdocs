@@ -28,7 +28,7 @@ set timeout=<Number>
 |-------|--------|
 |<Number>|Specifies the number of seconds to wait for a reply. The default number of seconds to wait is 5.|
 |{help &#124; ?}|Displays a short summary of **nslookup** subcommands.|
-## remarks
+## Remarks
 -   When a reply to a request is not received within the specified time period, the time-out is doubled and the request is sent again. You can use the **set retry** command to control the number of retries.
 ## <a name="BKMK_examples"></a>Examples
 The following example sets the timeout for getting a response to 2 seconds:

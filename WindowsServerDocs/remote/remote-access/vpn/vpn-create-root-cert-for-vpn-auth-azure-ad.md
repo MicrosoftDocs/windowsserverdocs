@@ -6,7 +6,6 @@ ms.prod: windows-server-threshold
 ms.technology: networking-ras
 documentationcenter: ''
 ms.assetid: 
-ms.service: active-directory
 ms.workload: identity
 ms.tgt_pltfrm: na
 ms.devlang: na
@@ -14,7 +13,7 @@ ms.topic: article
 ms.date: 05/25/2018
 ms.author: pashort
 author: shortpatti
-manager: elizapo
+manager: dougkim
 ms.reviewer: deverette
 ---
 

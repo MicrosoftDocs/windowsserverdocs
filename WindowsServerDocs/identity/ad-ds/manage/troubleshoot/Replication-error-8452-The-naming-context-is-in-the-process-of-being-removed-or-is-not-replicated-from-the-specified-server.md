@@ -2,9 +2,9 @@
 ms.assetid: 92a9eeb6-2ed8-424e-9e81-2c00cf300ded
 title: Replication error 8452 The naming context is in the process of being removed or is not replicated from the specified server
 description:
-author: billmath
-ms.author: billmath
-manager: femila
+author: MicrosoftGuyJFlo
+ms.author: joflore
+manager: mtillman
 ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server-threshold
@@ -179,7 +179,7 @@ Last success @ &lt;date&gt; &lt;time&gt;.
           <para>As in the REPADMIN /SYNCALL example, there are also two cases where we might observe error 8452:</para>
           <list class="bullet">
             <listItem>
-              <para>Case 1: Suppose we change the replication topology on DC2 to make it inbound replicate from DC4. The new replication topology is DC1 &lt;- DC2 &lt;- DC4. Until knowledge of this this topology change outbound replicates to DC1, the topology on DC1 is still the old topology of DC1 &lt;- DC2 &lt;- DC3. </para>
+              <para>Case 1: Suppose we change the replication topology on DC2 to make it inbound replicate from DC4. The new replication topology is DC1 &lt;- DC2 &lt;- DC4. Until knowledge of this topology change outbound replicates to DC1, the topology on DC1 is still the old topology of DC1 &lt;- DC2 &lt;- DC3. </para>
               <para>Starting the Active Directory Sites and Services UI focused on DC1s copy of Active Directory still shows that DC2 has an inbound connection object from source DC3. Right-clicking on DC3's inbound connection object from DC2 and choosing <ui>Replicate now</ui> will initiate a DC2 &lt;- DC3 replication on DC2. However, the KCC on DC2 already removed the replica link inbound replicating to DC2 from DC3 and created a replica link to DC2. Because the replication attempt DC2 &lt;-&gt; DC2 cannot be executed, the request fails error 8452.</para>
             </listItem>
             <listItem>

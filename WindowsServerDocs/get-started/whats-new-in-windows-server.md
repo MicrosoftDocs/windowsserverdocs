@@ -7,18 +7,19 @@ ms.technology: server-general
 ms.topic: article
 author: greg-lindsay
 ms.author: greg-lindsay
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ---
 # What's New in Windows Server
 
 >Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
 
-<img src="media/whats-new.png" style='float:left; padding:.5em;' alt="Icon showing a newspaper">This topic contains links to articles that describe what's new and changed for specific releases of Windows Server 2016 and Windows Server (Semi-Annual Channel).   
+You can find the new features for each of these Windows Server 2016 and Windows Server (Semi-Annual Channel) releases.  
    
 <br>
 <br>
 <br>
 <br>
+[What's New in Windows Server, version 1803](whats-new-in-windows-server-1803.md)
 <br>
 [What's New in Windows Server, version 1709](whats-new-in-windows-server-1709.md)<BR>
 [What's New in Windows Server 2016](whats-new-in-windows-server-2016.md)

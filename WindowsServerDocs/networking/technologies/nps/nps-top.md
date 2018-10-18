@@ -1,7 +1,7 @@
 ---
 title: Network Policy Server (NPS)
 description: This topic provides an overview of Network Policy Server in Windows Server 2016, and includes links to additional guidance about NPS.
-manager: elizapo
+manager: dougkim
 ms.prod: windows-server-threshold
 ms.technology: networking
 ms.topic: article
@@ -13,7 +13,7 @@ ms.date: 06/20/2018
 
 # Network Policy Server (NPS)
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 You can use this topic for an overview of Network Policy Server in Windows Server 2016.
 

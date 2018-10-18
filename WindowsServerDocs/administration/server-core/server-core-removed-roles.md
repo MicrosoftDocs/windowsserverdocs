@@ -35,7 +35,7 @@ Note that some Remote Desktop role services are included in Server Core (Connect
 - Web-Mgmt-Console
 - Web-Lgcy-Mgmt-Console
 - WDS-Deployment
-- WDS-Transport
+- WDS-Transport *(before Windows Server version 1803)*
 
 ## Features not in Server Core
 

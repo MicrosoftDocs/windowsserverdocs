@@ -28,7 +28,7 @@ get <remoteFile> [<LocalFile>]
 |-------|--------|  
 |<remoteFile>|Specifies the remote file to copy.|  
 |[<LocalFile>]|Specifies the name of the file to use on the local computer. If *LocalFile* is not specified, the file is given the *remoteFile* name.|  
-## remarks  
+## Remarks  
 The **get** command is identical to the **recv** command.  
 ## <a name="BKMK_Examples"></a>Examples  
 copy **test.txt** to the local computer using the current file transfer type.  

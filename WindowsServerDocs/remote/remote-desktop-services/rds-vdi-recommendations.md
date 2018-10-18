@@ -12,7 +12,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 2a44dc9f-c221-4bf7-89c3-fb4c86a90f8c
 author: jaimeo
-manager: elizapo
+manager: dougkim
 ---
 # Recommended settings for VDI desktops
 
@@ -543,12 +543,12 @@ This will prevent the apps from being reinstalled.
 You can remove the OneDrive icon and app, turn off system icons, and delete downloaded updates.
 
 ### Remove OneDrive icon and app
-1. Click **Start** and scroll to to the **OneDrive** icon.
+1. Click **Start** and scroll to the **OneDrive** icon.
 2. Right-click the **OneDrive** icon, point to **More**, and then click **Open file location**.
 3. Right-click the **OneDrive** icon in its file location, and click **Delete**.
 
 To remove the OneDrive app:
-1. Click **Start** and scroll to to the **OneDrive** icon.
+1. Click **Start** and scroll to the **OneDrive** icon.
 2. Right-click the **OneDrive** icon, and then click **Uninstall**. Programs and Features opens.
 3. In Programs and Features, right-click **Microsoft OneDrive** and click **Uninstall**.
 

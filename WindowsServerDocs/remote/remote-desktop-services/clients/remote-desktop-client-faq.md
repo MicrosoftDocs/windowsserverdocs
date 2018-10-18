@@ -12,7 +12,7 @@ ms.assetid: 785a18cf-a5d0-4bc2-95e4-9ef53ee8f65a
 author: lizap
 manager: dongill
 ms.author: elizapo
-ms.date: 05/22/2018
+ms.date: 07/16/2018
 ms.localizationpriority: medium
 ---
 # Frequently asked questions about the Remote Desktop clients
@@ -28,7 +28,7 @@ Now that you've set up the Remote Desktop client on your device (Android, Mac, i
 - [Mac hardware](#mac-client---hardware-questions)
 - [Specific error messages](#specific-errors)
 
-The majority of these questions apply to all of the clients, but there are a few specific to the Mac client.
+The majority of these questions apply to all of the clients, but there are a few client specific items.
 
 If you have additional questions that you'd like us to answer, leave them as feedback on this article.
 
@@ -125,15 +125,13 @@ If you are using L2TP or PPTP in your VPN, make sure to set **Send all traffic**
 
 ## Web client
 
-[This information relates to pre-released product which may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here.]
-
 ### Which browsers can I use?
 
 The web client supports Edge, Internet Explorer 11, Mozilla Firefox (v55.0 and later), Safari, and Google Chrome.
 
 ### What PCs can I use to access the web client?
 
-The web client supports Windows, MacOS, Linux, and ChromeOS. Mobile devices are not supported at this time.
+The web client supports Windows, macOS, Linux, and ChromeOS. Mobile devices are not supported at this time.
 
 ### Can I use the web client in a Remote Desktop deployment without a gateway?
 

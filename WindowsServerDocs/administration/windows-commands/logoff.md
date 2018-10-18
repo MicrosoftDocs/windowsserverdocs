@@ -18,11 +18,11 @@ ms.date: 10/16/2017
 
 >Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-Logs off a user from a session on a remote Desktop Session Host (rd Session Host) server and deletes the session from the server.
+Logs off a user from a session on a Remote Desktop Session Host (rd Session Host) server and deletes the session from the server.
 for examples of how to use this command, see [Examples](#BKMK_examples).
 
 > [!NOTE]
-> In Windows Server 2008 R2, Terminal Services was renamed remote Desktop Services. To find out what's new in the latest version, see [What s New in remote Desktop Services in Windows Server 2012](https://technet.microsoft.com/library/hh831527) in the Windows Server TechNet Library.
+> In Windows Server 2008 R2, Terminal Services was renamed Remote Desktop Services. To find out what's new in the latest version, see [What s New in Remote Desktop Services in Windows Server 2012](https://technet.microsoft.com/library/hh831527) in the Windows Server TechNet Library.
 
 ## Syntax
 ```
@@ -36,7 +36,7 @@ logoff [<SessionName> | <SessionID>] [/server:<ServerName>] [/v]
 |/server:<ServerName>|Specifies the rd Session Host server that contains the session whose user you want to log off. If unspecified, the server on which you are currently active is used.|
 |/v|Displays information about the actions being performed.|
 |/?|Displays help at the command prompt.|
-## remarks
+## Remarks
 -   You can always log off from the session to which you are currently logged on. You must, however, have Full Control permission to log off users from other sessions.
 -   Logging off a user from a session without warning can result in loss of data at the user's session. You should send a message to the user by using the **msg** command to warn the user before taking this action.
 -   if <*SessionID*> or <*SessionName*> is not specified, **logoff** logs off the user from the current session. If you specify <*SessionName*>, it must be an active one.
@@ -58,4 +58,4 @@ logoff [<SessionName> | <SessionID>] [/server:<ServerName>] [/v]
     
 #### additional references
 -   [Command-Line Syntax Key](command-line-syntax-key.md)
--   [remote Desktop Services &#40;Terminal Services&#41; Command Reference](remote-desktop-services-terminal-services-command-reference.md)
+-   [Remote Desktop Services &#40;Terminal Services&#41; Command Reference](remote-desktop-services-terminal-services-command-reference.md)

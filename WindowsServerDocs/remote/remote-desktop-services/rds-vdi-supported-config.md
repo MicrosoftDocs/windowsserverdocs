@@ -30,11 +30,13 @@ The following table outlines which of these new features are supported in a VDI 
 | [Credential Guard](https://technet.microsoft.com/itpro/windows/keep-secure/credential-guard)                    | Yes              | Yes                | Yes                                                    | Yes                                                    |
 | [Device Guard](https://technet.microsoft.com/itpro/windows/keep-secure/device-guard-deployment-guide)                        | Yes              | Yes                | Yes                                                    | Yes                                                    |
 | [Remote Credential Guard](https://technet.microsoft.com/itpro/windows/keep-secure/remote-credential-guard)             | No               | No                 | No                                                     | No                                                     |
-| [Shielded & Encryption Supported VMs](../../virtualization/guarded-fabric-shielded-vm/guarded-fabric-and-shielded-vms.md) | No               | No                 | Encryption supported VMs with additional configuration | Encryption supported VMs with additional configuration |
+| [Shielded & Encryption Supported VMs](../../security/guarded-fabric-shielded-vm/guarded-fabric-and-shielded-vms.md) | No               | No                 | Encryption supported VMs with additional configuration | Encryption supported VMs with additional configuration |
 
 ## Remote Credential Guard:
 
 Remote Credential Guard is only supported for direct connections to the target machines and not for the ones via Remote Desktop Connection Broker and Remote Desktop Gateway.
+> [!NOTE]
+> If you have a Connection Broker in a single-instance environment, and the DNS name matches the computer name, you may be able to use Remote Credential Guard, although this is not supported.
 
 ## Shielded VMs and Encryption Supported VMs: 
 

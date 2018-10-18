@@ -11,7 +11,7 @@ ms.technology: networking
 ---
 
 # Windows Time Service Technical Reference
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows 10 or later
+>Applies to: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows 10 or later
 
 The W32Time service provides network clock synchronization for computers without the need for extensive configuration. The W32Time service is essential to the successful operation of Kerberos V5 authentication and, therefore, to AD DS-based authentication. Any Kerberos-aware application, including most security services, relies on time synchronization between the computers that are participating in the authentication request. AD DS domain controllers must also have synchronized clocks to help to ensure accurate data replication.
 
@@ -32,26 +32,26 @@ This guide does **not** discuss configuring the Windows Time service. There are 
 <!-- should this be an if/then table -->
 -   To configure the Windows Time service for the forest root primary domain controller (PDC) emulator, see:  
   
-    -   [Configure the Windows Time service on the PDC emulator in the Forest Root Domain](https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731191%28v=ws.10%29) 
+    -   [Configure the Windows Time service on the PDC emulator in the Forest Root Domain](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731191%28v=ws.10%29) 
   
-    -   [Configuring a time source for the forest](https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/cc794823%28v%3dws.10%29) 
+    -   [Configuring a time source for the forest](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/cc794823%28v%3dws.10%29) 
   
     -   Microsoft Knowledge Base article 816042, [How to configure an authoritative time server in Windows Server](https://go.microsoft.com/fwlink/?LinkID=60402), which describes configuration settings for computers running Windows Server 2008 R2, Windows Server 2008, Windows Server 2003, and Windows Server 2003 R2.  
   
--   To configure the Windows Time service on any domain member client or server, or even domain controllers that are not configured as the forest root PDC emulator, see [Configure a client computer for automatic domain time synchronization](https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/cc816884%28v%3dws.10%29).  
+-   To configure the Windows Time service on any domain member client or server, or even domain controllers that are not configured as the forest root PDC emulator, see [Configure a client computer for automatic domain time synchronization](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/cc816884%28v%3dws.10%29).  
   
     > [!WARNING]  
     > Some applications may require their computers to have high-accuracy time services. If that is the case, you may choose to configure a manual time source, but be aware that the Windows Time service was not designed to function as a highly accurate time source. Ensure that you are aware of the support limitations for high-accuracy time environments as described in Microsoft Knowledge Base article 939322, [Support boundary to configure the Windows Time service for high-accuracy environments](support-boundary.md).  
   
--   To configure the Windows Time service on any Windows-based client or server computers that are configured as workgroup members instead of domain members see [Configure a manual time source for a selected client computer](https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/cc816656%28v%3dws.10%29).  
+-   To configure the Windows Time service on any Windows-based client or server computers that are configured as workgroup members instead of domain members see [Configure a manual time source for a selected client computer](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/cc816656%28v%3dws.10%29).  
   
 -   To configure the Windows Time service on a host computer that runs a virtual environment, see Microsoft Knowledge Base article 816042, [How to configure an authoritative time server in Windows Server](https://go.microsoft.com/fwlink/?LinkID=60402). If you are working with a non-Microsoft virtualization product, be sure to consult the documentation of the vendor for that product.  
   
 -   To configure the Windows Time service on a domain controller that is running in a virtual machine, it is recommended that you partially disable time synchronization between the host system and guest operating system acting as a domain controller. This enables your guest domain controller to synchronize time for the domain hierarchy, but protects it from having a time skew if it is restored from a Saved state. For more information, see Microsoft Knowledge Base article 976924, [You receive Windows Time Service event IDs 24, 29, and 38 on a virtualized domain controller that is running on a Windows Server 2008-based host server with Hyper-V](https://go.microsoft.com/fwlink/?LinkID=192236) and [Deployment Considerations for Virtualized Domain Controllers](https://go.microsoft.com/fwlink/?LinkID=192235).  
   
--   To configure the Windows Time service on a domain controller acting as the forest root PDC emulator that is also running in a virtual computer, follow the same instructions for a physical computer as described in [Configure the Windows Time service on the PDC emulator in the Forest Root Domain](https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731191%28v=ws.10%29).  
+-   To configure the Windows Time service on a domain controller acting as the forest root PDC emulator that is also running in a virtual computer, follow the same instructions for a physical computer as described in [Configure the Windows Time service on the PDC emulator in the Forest Root Domain](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731191%28v=ws.10%29).  
   
--   To configure the Windows Time service on a member server running as a virtual computer, use the domain time hierarchy as described in [Configure a client computer for automatic domain time synchronization](https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/cc816884%28v%3dws.10%29).
+-   To configure the Windows Time service on a member server running as a virtual computer, use the domain time hierarchy as described in [Configure a client computer for automatic domain time synchronization](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/cc816884%28v%3dws.10%29).
 
 
 > [!IMPORTANT]  

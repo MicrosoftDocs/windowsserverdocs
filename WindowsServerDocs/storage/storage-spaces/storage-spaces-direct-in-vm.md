@@ -12,7 +12,7 @@ ms.localizationpriority: medium
 ---
 # Using Storage Spaces Direct in guest virtual machine clusters
 
-> Applies To: Windows Server 2016
+> Applies to: Windows Server 2019, Windows Server 2016
 
 You can deploy Storage Spaces Direct on a cluster of physical servers, or on virtual machine guest clusters as discussed in this topic. This type of deployment delivers virtual shared storage across a set of VMs on top of a private or public cloud so that application high availability solutions can be used to increase the availability of applications.
 
