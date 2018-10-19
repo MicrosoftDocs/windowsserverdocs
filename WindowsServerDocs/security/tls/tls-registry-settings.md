@@ -11,7 +11,7 @@ ms.topic: article
 author: justinha
 ms.author: justinha
 manager: brianlic-msft
-ms.date: 09/18/2018
+ms.date: 10/19/2018
 ---
 
 # Transport Layer Security (TLS) registry settings
@@ -351,15 +351,9 @@ For TLS 1.0 default settings, see [Protocols in the TLS/SSL (Schannel SSP)](http
 
 Registry path: HKLM SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols
 
-To enable the TLS 1.0 protocol, create an **Enabled** entry in the appropriate subkey. 
+To enable the TLS 1.0 protocol, create an **Enabled** entry in either the Client or Server subkey as described in the following table. 
 This entry does not exist in the registry by default. 
 After you have created the entry, change the DWORD value to 1. 
-
-To disable TLS 1.0 for client or server, change the DWORD value to 0.
-If an SSPI app requests to use TLS 1.0, it will be denied. 
-
-To disable TLS 1.0 by default, create a **DisabledByDefault** entry and change the DWORD value to 1. 
-If an SSPI app explicitly requests to use TLS 1.0, it will be negotiated. 
 
 TLS 1.0 subkey table
 
@@ -367,6 +361,12 @@ TLS 1.0 subkey table
 |--------|-------------|
 | Client | Controls the use of TLS 1.0 on the TLS client. |
 | Server | Controls the use of TLS 1.0 on the TLS server. |
+
+To disable TLS 1.0 for client or server, change the DWORD value to 0.
+If an SSPI app requests to use TLS 1.0, it will be denied. 
+
+To disable TLS 1.0 by default, create a **DisabledByDefault** entry and change the DWORD value to 1. 
+If an SSPI app explicitly requests to use TLS 1.0, it will be negotiated. 
 
 The following example shows TLS 1.0 disabled in the registry:
 
