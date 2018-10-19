@@ -83,7 +83,7 @@ nbtstat [/a <remoteName>] [/A <IPaddress>] [/c] [/n] [/r] [/R] [/RR] [/s] [/S] [
 To display the NetBIOS name table of the remote computer with the NetBIOS computer name of CORP07, type:
 
 ```
-btstat /a CORP07
+nbtstat /a CORP07
 ```
 
 To display the NetBIOS name table of the remote computer assigned the IP address of 10.0.0.99, type:

@@ -628,7 +628,7 @@ The following sections provide information on advanced diagnostics, logging, and
 
 ### Network controller centralized logging 
  
-The Network Controller can automatically collect debugger logs and store them in a centralized location. Log collection can be enabled when when you deploy the Network Controller for the first time or any time later. The logs are collected from the Network Controller, and network elements managed by Network Controller: host machines, software load balancers (SLB) and gateway machines. 
+The Network Controller can automatically collect debugger logs and store them in a centralized location. Log collection can be enabled when you deploy the Network Controller for the first time or any time later. The logs are collected from the Network Controller, and network elements managed by Network Controller: host machines, software load balancers (SLB) and gateway machines. 
 
 These logs include debug logs for the Network Controller cluster, the Network Controller application, gateway logs, SLB, virtual networking and the distributed firewall. Whenever a new host/SLB/gateway is added to the Network Controller, logging is started on those machines. 
 Similarly, when a host/SLB/gateway is removed from the Network Controller, logging is stopped on those machines.

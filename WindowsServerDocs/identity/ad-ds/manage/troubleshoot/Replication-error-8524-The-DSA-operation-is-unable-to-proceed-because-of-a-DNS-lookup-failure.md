@@ -142,7 +142,7 @@ Microsoft CSS regularly finds stale metadata for nonexistent DCs, or from previo
 GUI Metadata Cleanup using Active Directory Sites and Services (DSSITE.MSC):
 1. Start the Windows 2008 or Windows Server 2008 R2 or W2K8 R2 Active Directory Sites and Services snap-in (DSSITE.MSC).<br><br>This can also be done by starting the Active Directory Sites and Services on a Windows Vista or Windows 7 computer that has been installed as part of the Remote Server Administration Tools (RSAT) package.
 2. Focus the DSSITE.MSC snap-in on the *destination* DCs copy of Active Directory.<br><br>After starting DSSITE.MSC, right click on the *Active Directory Sites and Services*. Select the destination DC that is logging the 8524 error / event from the list of DCs visible in the *Change Domain Controller* list.
-3. Delete the source DCs NTDS Settings object referenced in the 8524 errors and events. Active Directory Users and Computers (DSA.MSC) snap-in and delete either the source DCs NTDS Settings object.<br><br>A DCs NTDS Settings object appears below the Sites, Site Name, Servers container and %server name% container and above the inbound connection object displayed in in the right-hand pane of Active Directory Sites and Services. Right click on the stale NTDS Settings object you want to remove then click **Delete**.
+3. Delete the source DCs NTDS Settings object referenced in the 8524 errors and events. Active Directory Users and Computers (DSA.MSC) snap-in and delete either the source DCs NTDS Settings object.<br><br>A DCs NTDS Settings object appears below the Sites, Site Name, Servers container and %server name% container and above the inbound connection object displayed in the right-hand pane of Active Directory Sites and Services. Right click on the stale NTDS Settings object you want to remove then click **Delete**.
    
 Metadata cleanup can also be performed from the Windows Server 2008 or Windows Server 2008 R2 version of Active Directory Users and Computers snap-in as documented in [Clean Up Server Metadata](https://technet.microsoft.com/library/cc816907%28WS.10%29.aspx), or by using NTDSUTIL (documented in MSKB [216498](https://support.microsoft.com/default.aspx?scid=kb;EN-US;216498).
 
@@ -234,7 +234,7 @@ The error message text in DS RPC Client event 2087 documents a user action for r
 
 On the source DC, verify that DNS Client settings point *exclusively*  to operational DNS Severs that either host, forward or delegate the:
 * msdcs.<forest root domain> zone (i.e. All DCs in the contoso.com forest register CNAME records in the _msdcs.contoso.com zone), AND
-* DNS zone for the Active Directory domain (i.e. a computer in the contoso.com domain would register host records in in contoso.com zone), AND
+* DNS zone for the Active Directory domain (i.e. a computer in the contoso.com domain would register host records in the contoso.com zone), AND
 * Computers primary DNS suffix domain if different from the Active Directory domain name (see [Disjoint Namespace](https://technet.microsoft.com/library/cc731125.aspx)).
 
 Options to validate that a DNS Server hosts, forwards or delegates (i.e. "can resolve") such zones include:
@@ -360,7 +360,7 @@ To dynamically register host "A" records, type the following from the console of
 On the destination DC, verify that DNS Client settings point *exclusively* to operational DNS Severs that either host, forward or delegate the:
 
 * _msdcs.<forest root domain> zone (i.e. All DCs in the contoso.com forest register CNAME records in the _msdcs.contoso.com zone), AND
-* DNS zone for the Active Directory domain (i.e. a computer in the contoso.com domain would register host records in in contoso.com zone), AND
+* DNS zone for the Active Directory domain (i.e. a computer in the contoso.com domain would register host records in the contoso.com zone), AND
 * Computers primary DNS suffix domain if different from the Active Directory domain name (see [Disjoint Namespace](https://technet.microsoft.com/library/cc731125.aspx)
 
 Options to validate that a DNS Server hosts, forwards or delegates (i.e. "can resolve") such zones include:
