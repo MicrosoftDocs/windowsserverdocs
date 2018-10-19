@@ -7,7 +7,7 @@ ms.manager: dongill
 ms.technology: storage
 ms.topic: article
 author: jasongerend
-ms.date: 10/18/2018
+ms.date: 10/19/2018
 ---
 # What's new in Storage in Windows Server
 
@@ -73,7 +73,7 @@ There are a number of improvements to Storage Spaces Direct in Windows Server 20
 
     This enables admins to manually delimit the allocation of volumes in Storage Spaces Direct. Doing so can significantly increase fault tolerance under certain conditions, but imposes some added management considerations and complexity. For more info, see [Delimit the allocation of volumes](storage-spaces/delimit-volume-allocation.md).
 
-### <a id="storage-replica"></a>Storage Replica
+### <a name="storage-replica2019"></a>Storage Replica
 
 There are a number of improvements to [Storage Replica](storage-replica/storage-replica-overview.md) in this release:
 
@@ -92,11 +92,18 @@ To gain the increased performance, all members of the replication group must run
 
 #### Test failover
 
-The option to mount the destination storage is now possible through the test failover feature. You can mount a snapshot of the replicated storage on destination nodes temporarily for testing or backup purposes. For more information, see [Frequently Asked Questions about Storage Replica](https://aka.ms/srfaq).
+You can now temporarily mount a snapshot of the replicated storage on a destination server for testing or backup purposes. For more information, see [Frequently Asked Questions about Storage Replica](https://aka.ms/srfaq).
 
 #### Windows Admin Center support
 
 Support for graphical management of replication is now available in Windows Admin Center via the Server Manager tool. This includes server-to-server replication, cluster-to-cluster, as well as stretch cluster replication.
+
+#### Miscellaneous improvements
+
+Storage Replica also contains the following improvements:
+
+-   Alters asynchronous stretch cluster behaviors so that automatic failovers now occur
+-   Multiple bug fixes
 
 ### SMB
 
@@ -123,14 +130,19 @@ Windows Server, version 1803 includes the ability to prevent the File Server Res
 
 Windows Server, version 1709 is the first Windows Server release in the Semi-Annual Channel. The Semi-Annual Channel is a Software Assurance benefit and is fully supported in production for 18 months, with a new version every six months.
 
-For more information, see [Windows Server Semi-annual Channel Overview](https://docs.microsoft.com/windows-server/get-started/semi-annual-channel-overview).
+For more information, see [Windows Server Semi-annual Channel Overview](../get-started/semi-annual-channel-overview.md).
 
 ### Storage Replica
 
-The disaster recovery protection added by Storage Replica in Windows Server 2016 is now expanded to include:
+The disaster recovery protection added by Storage Replica is now expanded to include:
 
 - **Test failover**: the option to mount the destination storage is now possible through the test failover feature. You can mount a snapshot of the replicated storage on destination nodes temporarily for testing or backup purposes. For more information, see [Frequently Asked Questions about Storage Replica](https://aka.ms/srfaq).
-- **Windows Admin Center support**: Support for graphical management of server to server replication is now available in Windows Admin Center. This removes the requirement to use PowerShell to manage a common disaster protection workload.
+- **Windows Admin Center support**: Support for graphical management of replication is now available in Windows Admin Center via the Server Manager tool. This includes server-to-server replication, cluster-to-cluster, as well as stretch cluster replication.
+
+Storage Replica also contains the following improvements:
+
+-   Alters asynchronous stretch cluster behaviors so that automatic failovers now occur
+-   Multiple bug fixes
 
 ### SMB
 
@@ -157,7 +169,8 @@ For more information, see the [Storage Spaces Direct in Windows Server 2016](sto
 **What works differently?**  
 This capability is new in Windows Server 2016.  
 
-### <a name="storage-replica"></a>Storage Replica  
+### <a name="storage-replica"></a>Storage Replica
+
 Storage Replica enables storage-agnostic, block-level, synchronous replication between servers or clusters for disaster recovery, as well as stretching of a failover cluster between sites. Synchronous replication enables mirroring of data in physical sites with crash-consistent volumes to ensure zero data loss at the file-system level. Asynchronous replication allows site extension beyond metropolitan ranges with the possibility of data loss.  
 
 **What value does this change add?**  

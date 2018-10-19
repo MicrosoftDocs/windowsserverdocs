@@ -7,7 +7,7 @@ ms.topic: article
 author: coreyp-at-msft
 ms.author: coreyp
 ms.localizationpriority: high
-ms.date: 10/12/2018
+ms.date: 10/19/2018
 ---
 
 # What's new in Windows Server 2019
