@@ -114,14 +114,14 @@ See the [Windows lifecycle fact sheet](https://support.microsoft.com/en-us/help/
 |Operating system edition|KMS Client Setup Key|
 |-|-|
 |Windows 10 Enterprise LTSC 2019|M7XTQ-FN8P6-TTKYV-9D4CC-J462D|
-|Windows 10 Enterprise N LTSC 2019|2NFX-8DJQP-P6BBQ-THF9C-7CG2H|
+|Windows 10 Enterprise N LTSC 2019|92NFX-8DJQP-P6BBQ-THF9C-7CG2H|
 
 ### Windows 10 LTSB 2016
 
 |Operating system edition|KMS Client Setup Key|
 |-|-|
 |Windows 10 Enterprise LTSB 2016|DCPHK-NFMTC-H88MJ-PFHPY-QJ4BJ|
-|Windows 10 Enterprise N LTSB 2016|FFDN-GRT3P-VKWWX-X7T3R-8B639|
+|Windows 10 Enterprise N LTSB 2016|QFFDN-GRT3P-VKWWX-X7T3R-8B639|
 
 ### Windows 10 LTSB 2015 
 
