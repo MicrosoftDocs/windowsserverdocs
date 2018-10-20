@@ -18,10 +18,12 @@ ms.date: 10/16/2017
 # type
 
 
+In the Windows Command shell, **type** is a built in command which displays the contents of a text file. Use the **type** command to view a text file without modifying it.
 
-Displays the contents of a text file. Use the **type** command to view a text file without modifying it.
+In PowerShell, **type** is a built-in alias to the **Get-Content** cmdlet which also displays the contents of a file, but with a different syntax.
+See the [Get-Cmdlet documentation page](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.management/get-content) for documentation of the **Get-Content** cmdlet.
 
-For examples of how to use this command, see [Examples](#BKMK_examples).
+For examples of how to use this command within the Windows Command shell (Cmd.exe), see [Examples](#BKMK_examples).
 
 ## Syntax
 
