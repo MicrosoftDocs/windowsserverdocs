@@ -6,14 +6,14 @@ ms.author: nedpyle
 ms.technology: storage-replica
 ms.topic: get-started-article
 author: nedpyle
-ms.date: 05/2/2018
+ms.date: 10/22/2018
 ms.assetid: ceddb0fa-e800-42b6-b4c6-c06eb1d4bc55
 ---
 # Known issues with Storage Replica
 
->Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server 2019, Windows Server (Semi-Annual Channel), Windows Server 2016
 
-This topic discusses known issues with Storage Replica in Windows Server 2016 and Windows Server, version 1709.
+This topic discusses known issues with Storage Replica in Windows Server.
 
 ## After removing replication, disks are offline and you cannot configure replication again
 
@@ -409,11 +409,11 @@ When running Test-SRTopology between two clusters and their CSV paths, it fails 
 
 When specifying the source node CSV as the source volume, you must select the node that owns the CSV. You can either move the CSV to the specified node or change the node name you specified in `-SourceComputerName`. This error received an improved message in the Windows Server 2019 Insider Preview. 
 
-## Unable to access Data Drive in Storage Replica after unexpected reboot when Bitlocker enabled
+## Unable to access the data drive in Storage Replica after unexpected reboot when BitLocker is enabled
 
-If Bitlocker is enabled on both drives (Log Drive and Data Drive) and in both Storage replica drives, if the Primary Server reboots then you are unable to access the Primary Drive even after unlocking the Log Drive from Bitlocker.
+If BitLocker is enabled on both drives (Log Drive and Data Drive) and in both Storage replica drives, if the Primary Server reboots then you are unable to access the Primary Drive even after unlocking the Log Drive from BitLocker.
 
-This is an expected behavior. To recover the data or access the drive, you need to unlock the log drive first and then open Diskmgmt.msc to locate the data drive. Turn the data drive offline and online again. Locate the Bitlocker icon on the drive and unlock the drive.
+This is an expected behavior. To recover the data or access the drive, you need to unlock the log drive first and then open Diskmgmt.msc to locate the data drive. Turn the data drive offline and online again. Locate the BitLocker icon on the drive and unlock the drive.
 
 ## Issue unlocking the Data drive on secondary server after breaking the Storage Replica partnership
 
@@ -421,7 +421,7 @@ After Disabling the SR Partnership and removing the Storage Replica, it is expec
 
 You need to use Key or Password of Primary Server’s Data drive to unlock the Secondary Server’s data drive.
 
-## Test Failover does not mount when using asynchronous replication
+## Test Failover doessn't mount when using asynchronous replication
 
 When running Mount-SRDestination to bring a destination volume online as part of the Test Failover feature, it fails with error:
 
@@ -434,9 +434,10 @@ When running Mount-SRDestination to bring a destination volume online as part of
 
 If using a synchronous partnership type, test failover works normally.    
 
-This is caused by a known code defect in Windows Server, version 1709. It has been resolved in the next Semi-annual Channel Release of Windows Server and in Windows Server 2019 Insider Preview builds. Please contact Microsoft Support to request a backport to Windows Server, use Windows Server version 1709, or wait for the Windows Server 2019 release. 
+This is caused by a known code defect in Windows Server, version 1709. To resolve this issue, install the [October 18, 2018 update](https://support.microsoft.com/help/4462932/windows-10-update-kb4462932). This issue isn't present in Windows Server 2019 and Windows Server, version 1809 and newer.
 
-## See also  
+## See also
+
 - [Storage Replica](storage-replica-overview.md)  
 - [Stretch Cluster Replication Using Shared Storage](stretch-cluster-replication-using-shared-storage.md)  
 - [Server to Server Storage Replication](server-to-server-storage-replication.md)  
