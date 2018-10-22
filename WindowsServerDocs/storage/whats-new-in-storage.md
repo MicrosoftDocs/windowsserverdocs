@@ -7,7 +7,7 @@ ms.manager: dongill
 ms.technology: storage
 ms.topic: article
 author: jasongerend
-ms.date: 10/19/2018
+ms.date: 10/22/2019
 ---
 # What's new in Storage in Windows Server
 
