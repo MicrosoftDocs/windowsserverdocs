@@ -7,7 +7,7 @@ ms.topic: article
 author: JasonGerend
 manager: brianlic
 ms.author: jgerend
-ms.date: 10/18/2018
+ms.date: 10/22/2018
 description: New and updated topics in the on-premises storage documentation for Windows Server for IT Pros.
 ---
 # Change history for storage topics in Windows Server
@@ -23,6 +23,7 @@ This topic lists new and updated topics in the [Storage](storage.md) documentati
 |New or changed topic|Description|
 |---|---|
 |[What's new in Storage](whats-new-in-storage.md)|Updated to cover what's new in Windows Server 2019|
+|[Storage Replica known issues](storage-replica/storage-replica-known-issues.md)|Added info about a new update.|
 
 ## September 2018
 
