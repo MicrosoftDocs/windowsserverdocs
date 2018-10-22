@@ -1,5 +1,5 @@
 ---
-title: Always On VPN features and enhancements
+title: Always On VPN features 
 description: In previous versions of the Windows VPN architecture, platform limitations made it difficult to provide the critical functionality needed to replace DirectAccess (like automatic connections initiated before users sign in).
 ms.prod: windows-server-threshold
 ms.technology: networking
@@ -12,7 +12,7 @@ ms.author: pashort
 author: shortpatti
 ---
 
-# Always On VPN features and enhancements
+# Always On VPN features
 
 >Applies To: Windows Server \(Semi-Annual Channel\), Windows Server 2016, Windows 10
 

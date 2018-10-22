@@ -110,7 +110,7 @@
 
 ### [Always On VPN](remote-access/vpn/always-on-vpn/index.yml)
 #### [Always On VPN Deployment for Windows Server and Windows 10](remote-access/vpn/always-on-vpn/deploy/always-on-vpn-deploy.md)
-#### [Features Comparison Between Always On VPN and DirectAccess](remote-access/vpn/vpn-map-da.md)
+#### [Always On VPN features](remote-access/vpn/vpn-map-da.md)
 #### [Always On VPN enhancements](remote-access/vpn/always-on-vpn/always-on-vpn-enhancements.md)
 #### [Technology Overview of Always On VPN](remote-access/vpn/always-on-vpn/always-on-vpn-technology-overview.md)
 #### [Advanced Features of Always On VPN](remote-access/vpn/always-on-vpn/deploy/always-on-vpn-adv-options.md)
