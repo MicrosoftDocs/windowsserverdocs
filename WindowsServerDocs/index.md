@@ -485,7 +485,7 @@ description: Windows Server documentation helps IT professionals evaluate, plan,
                                         </div>
                                         <div class="cardText">
                                             <h2>Storage</h2>
-                                            <p>Take advantage of Hyper-converged infrastructure to store more, more efficiently, with Windows Server software-defined storage for virtualized workloads. Windows Server Storage includes cutting edge technologies like Storage Spaces Direct in Windows Server 2019 that can achieve multi-petabyte scale.</p>
+                                            <p>Take advantage of resilient, high-performance and cost-effective storage options that scale to multiple petabytes including hyper-converged infrastructure with software-defined storage, Storage Migration Service, and other technologies.</p>
 <table>
      <tr>
         <td style="vertical-align: top;">

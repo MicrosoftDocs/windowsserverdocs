@@ -171,18 +171,9 @@ This guide frequently uses the following terms:
 
 -   A replication group is the organization of volumes and their replication configuration within a partnership, on a per server basis. A group may contain one or more volumes.  
 
-### What's new for Storage Replica in Windows Server, version 1709
-Two new features are available in Windows Server, version 1709:
+### What's new for Storage Replica
 
--   The test failover feature. This allows mounting of destination storage in order to validate replication or backup data. For more info, see https://aka.ms/srfaq
-
--   The Windows Admin Center now supports [managing Storage Replica graphically](storage-replica-ui.md) for server-to-server configurations, with no need to use PowerShell for general deployment, management, failover, and removal operations.
-
-Additionally, Windows Server, version 1709:
-
--   Contains multiple bug fixes 
-
--   Alters asynchronous stretch cluster behaviors so that automatic failovers now occur
+For a list of new features in Storage Replica, see [What's new in storage](../whats-new-in-storage.md#storage-replica2019)
 
 ## See also
 - [Stretch Cluster Replication Using Shared Storage](stretch-cluster-replication-using-shared-storage.md)  

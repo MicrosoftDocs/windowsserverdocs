@@ -51,7 +51,7 @@ In this step you transfer data after specifying where to put it on the destinati
  1. On the **Add a destination device and mappings** page, the first source server is listed. Type the name of the server to which you want to migrate and then select **Scan device**.
  1. Map the source volumes to destination volumes, clear the **Include** checkbox for any shares you don't want to transfer (including any administrative shares located in the Windows system folder), and then select **Next**.
     ![Screenshot showing a source server and its volumes and shares and where they'll be transferred to on the destination](media/migrate/transfer.png)
-     **Figure 2: A source server and where its storage will be transferred to**
+     **Figure 3: A source server and where its storage will be transferred to**
  1. Add a destination server and mappings for any more source servers, and then select **Next**.
  1. Optionally adjust the transfer settings, and then select **Next**.
  1. Select **Validate** and then select **Next**.
@@ -74,7 +74,7 @@ In this step you cut over from the source servers to the destination servers, mo
  1. On the **Configure cutover** page, specify which network adapters to take over each source device's settings. This moves the IP address from the source to the destination as part of the cutover.
  1. Specify what IP address to use for the source server after cutover moves its address to the destination. You can use DHCP or a static address.
     ![Screenshot showing a source server and its IP addresses and computer names and what they'll be replaced with after the cutover](media/migrate/cutover.png)
-    **Figure 3: A source server and how its network configuration will move to the destination**
+    **Figure 4: A source server and how its network configuration will move to the destination**
  1. Specify how to rename the source server after the destination server takes over its name. You can use a randomly generated name or type one yourself. Then select **Next**.
  1. Select **Next** on the **Adjust cutover settings** page.
  1. Select **Validate** on the **Validate source and destination device** page, and then select **Next**.
