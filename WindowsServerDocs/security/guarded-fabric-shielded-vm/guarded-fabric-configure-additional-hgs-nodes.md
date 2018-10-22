@@ -130,13 +130,16 @@ It is unsupported to remove the HTTP binding in IIS, however you can use the Win
 
 ## Decommission an HGS node
 
-To remove an HGS node:
+To decommission an HGS node:
 
-1. [Clear the HGS configuration](guarded-fabric-manage-hgs.md#clearing-the-hgs-configuration)
+1. [Clear the HGS configuration](guarded-fabric-manage-hgs.md#clearing-the-hgs-configuration).
+
    This removes the node from the cluster and uninstalls the attestation and key protection services. 
    If it’s the last node in the cluster, -Force is needed to signify you do want to remove the last node and destroy the cluster in Active Directory. 
+   
    If HGS is deployed in a bastion forest (default), that’s the only step. 
    You can optionally unjoin the machine from the domain and remove the gMSA account from Active Directory.
+
 1. If HGS created its own domain, you should also [uninstall HGS](guarded-fabric-manage-hgs.md#clearing-the-hgs-configuration) to unjoin the domain and demote the domain controller.
 
 
