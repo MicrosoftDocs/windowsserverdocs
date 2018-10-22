@@ -68,7 +68,7 @@ NIC teaming is compatible with all networking technologies in Windows Server 201
   
 -   **802.1X Authentication**. You should not use 802.1X Authentication with NIC Teaming because some switches do not permit the configuration of both 802.1X Authentication and NIC Teaming on the same port.  
   
-To learn about using NIC Teaming within virtual machines (VMs) that run on a Hyper-V host, see 
+To learn about using NIC Teaming within virtual machines (VMs) that run on a Hyper-V host, see [Create a new NIC Team on a host computer or VM](Create-a-New-NIC-Team-on-a-Host-Computer-or-VM.md).
   
 ## Virtual Machine Queues (VMQs)  
 
