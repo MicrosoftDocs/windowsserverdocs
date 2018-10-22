@@ -15,6 +15,8 @@ ms.localizationpriority: medium
 ---
 # Storage
 
+>Applies to: Windows Server 2019, Windows Server 2016, Windows Server (Semi-Annual Channel)
+
 >[!TIP]
 > Looking for information about older versions of Windows Server? Check out our other [Windows Server libraries](/previous-versions/windows/) on docs.microsoft.com. You can also [search this site](https://docs.microsoft.com/search/index?search=Windows+Server&dataSource=previousVersions) for specific information.
 
@@ -82,6 +84,8 @@ Storage in Windows Server provides new and improved features for software-define
                     <div class="cardText">
                         <h3>General-purpose file servers</h3>
 <HR />
+                        <p><h3><a href="storage-migration-service/overview.md">Storage Migration Service</a></h3>Migrate servers to a newer version of Windows Server using a graphical tool that inventories data on servers, transfers the data and configuration to newer servers, and then optionally moves the identities of the old servers to the new servers so that apps and users don't have to change anything.</p>
+<HR />
                         <p><h3><a href="work-folders/work-folders-overview.md">Work Folders</a></h3> Store and access work files on personal computers and devices, often referred to as bring-your-own device (BYOD), in addition to corporate PCs. Users gain a convenient location to store work files, and they can access them from anywhere. Organizations maintain control over corporate data by storing the files on centrally managed file servers, and optionally specifying user device policies such as encryption and lock-screen passwords.</p>
 <HR />
                         <p><h3><a href="folder-redirection/folder-redirection-rup-overview.md">Offline Files and Folder Redirection</a></h3> Redirect the path of local folders (such as the Documents folder) to a network location, while caching the contents locally for increased speed and availability.</p>
@@ -94,7 +98,7 @@ Storage in Windows Server provides new and improved features for software-define
 <HR />
                         <p><h3><a href="fsrm/fsrm-overview.md">File Server Resource Manager</a></h3> Manage and classify data stored on file servers.<p>
 <HR />
-                        <p><h3><a href="https://technet.microsoft.com/library/hh848272(v=ws.11).aspx">iSCSI Target Server</a></h3> Provides block storage to other servers and applications on the network by using the Internet SCSI (iSCSI) standard.</p>
+                        <p><h3><a href="iscsi/iscsi-target-server.md">iSCSI Target Server</a></h3> Provides block storage to other servers and applications on the network by using the Internet SCSI (iSCSI) standard.</p>
 <HR />
                        <p><h3><a href="iscsi/iscsi-boot-overview.md">iSCSI Target Server</a></h3> Can boot hundreds of computers from a single operating system image that is stored in a centralized location. This improves efficiency, manageability, availability, and security.</p>
                     </div>
