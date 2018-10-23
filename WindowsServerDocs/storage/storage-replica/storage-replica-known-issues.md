@@ -421,7 +421,7 @@ After Disabling the SR Partnership and removing the Storage Replica, it is expec
 
 You need to use Key or Password of Primary Server’s Data drive to unlock the Secondary Server’s data drive.
 
-## Test Failover doessn't mount when using asynchronous replication
+## Test Failover doesn't mount when using asynchronous replication
 
 When running Mount-SRDestination to bring a destination volume online as part of the Test Failover feature, it fails with error:
 
