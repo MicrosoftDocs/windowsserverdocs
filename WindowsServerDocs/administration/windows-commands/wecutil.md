@@ -11,15 +11,16 @@ ms.topic: article
 ms.assetid: 0c82a6cb-d652-429c-9c3d-0f568c78d54b
 author: coreyp-at-msft
 ms.author: coreyp
-manager: dongill
-ms.date: 10/16/2017
+manager: dansimps
+
 ---
 
 # wecutil
 
 
 
-Enables you to create and manage subscriptions to events that are forwarded from remote computers. The remove computer must support thye WS-Management protocol. For examples of how to use this command, see [Examples](#BKMK_examples).
+Enables you to create and manage subscriptions to events that are forwarded from remote computers. The remote computer must support the WS-Management protocol. For examples of how to use this command, see [Examples](#BKMK_examples).
+
 
 ## Syntax
 
@@ -87,7 +88,7 @@ wecutil  [{es | enum-subscription}]
 ## Remarks
 
 > [!IMPORTANT]
-> If you receive the message, “The RPC server is unavailable�? when you try to run wecutil, you need to start the Windows Event Collector service (wecsvc). To start wecsvc, at an elevated command prompt type net start wecsvc.
+> If you receive the message, “The RPC server is unavailable? when you try to run wecutil, you need to start the Windows Event Collector service (wecsvc). To start wecsvc, at an elevated command prompt type net start wecsvc.
 
 -   The following example shows the contents of a configuration file:  
     ```
