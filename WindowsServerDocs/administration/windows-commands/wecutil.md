@@ -11,15 +11,16 @@ ms.topic: article
 ms.assetid: 0c82a6cb-d652-429c-9c3d-0f568c78d54b
 author: coreyp-at-msft
 ms.author: coreyp
-manager: dongill
-ms.date: 10/16/2017
+manager: dansimps
+
 ---
 
 # wecutil
 
 
 
-Enables you to create and manage subscriptions to events that are forwarded from remote computers, which support WS-Management protocol. For examples of how to use this command, see [Examples](#BKMK_examples).
+Enables you to create and manage subscriptions to events that are forwarded from remote computers. The remote computer must support the WS-Management protocol. For examples of how to use this command, see [Examples](#BKMK_examples).
+
 
 ## Syntax
 
@@ -65,7 +66,7 @@ wecutil  [{es | enum-subscription}]
 |/cm:\<Configmode>|Sets the configuration mode. \<Configmode> can be one of the following strings: Normal, Custom, MinLatency or MinBandwidth. The Normal, MinLatency, and MinBandwidth modes set delivery mode, delivery max items, heartbeat interval, and delivery max latency time. The **/dm**, **/dmi**, **/hi** or **/dmlt** options may only be specified if the configuration mode is set to Custom.|
 |/ex:\<Expires>|Sets the time when the subscription expires. \<Expires> should be defined in standard XML or ISO8601 date-time format: yyyy-MM-ddThh:mm:ss[.sss][Z], where T is the time separator and Z indicates UTC time.|
 |/q:\<Query>|Specifies the query string for the subscription. The format of \<Query> may be different for different URI values and applies to all sources in the subscription.|
-|/dia:\<Dialect>|Defines the dialect that the query string will use.|
+|/dia:\<Dialect>|Defines the dialect that the query string uses.|
 |/tn:\<Transportname>|Specifies the name of the transport that is used to connect to a remote event source.|
 |/tp:\<Transportport>|Sets the port number that is used by the transport when connecting to a remote event source.|
 |/dm:\<Deliverymode>|Specifies the delivery mode. \<Deliverymode> can be either pull or push. This option is only valid if the **/cm** option is set to Custom.|
@@ -74,7 +75,7 @@ wecutil  [{es | enum-subscription}]
 |/hi:\<Heartbeat>|Defines the heartbeat interval. \<Heartbeat> is the number of milliseconds. This option is only valid if **/cm** is set to Custom.|
 |/cf:\<Content>|Specifies the format of the events that are returned. \<Content> can be Events or RenderedText. When the value is RenderedText, the events are returned with the localized strings (such as event description) attached to the event. The default value is RenderedText.|
 |/l:\<Locale>|Specifies the locale for delivery of the localized strings in RenderedText format. \<Locale> is a language and country/region identifier, for example, "EN-us". This option is only valid if the **/cf** option is set to RenderedText.|
-|/ree:[\<Readexist>]|Identifies the events that will be delivered for the subscription. \<Readexist> can true or false. When the <Readexist> is true, all existing events are read from the subscription event sources. When the <Readexist> is false, only future (arriving) events are delivered. The default value is true for a **/ree** option without a value. If no **/ree** option is specified, the default value is false.|
+|/ree:[\<Readexist>]|Identifies the events that are delivered for the subscription. \<Readexist> can true or false. When the <Readexist> is true, all existing events are read from the subscription event sources. When the <Readexist> is false, only future (arriving) events are delivered. The default value is true for a **/ree** option without a value. If no **/ree** option is specified, the default value is false.|
 |/lf:\<Logfile>|Specifies the local event log that is used to store events received from the event sources.|
 |/pn:\<Publishername>|Specifies the publisher name. It must be a publisher that owns or imports the log specified by the **/lf** option.|
 |/essp:\<Enableport>|Specifies that the port number must be appended to the service principal name of the remote service. \<Enableport> can be true or false. The port number is appended when <Enableport> is true. When the port number is appended, some configuration may be required to prevent the access to event sources from being denied.|
@@ -82,12 +83,12 @@ wecutil  [{es | enum-subscription}]
 |/ct:\<Type>|Sets the credential type for the remote source access. \<Type> should be one of the following values: default, negotiate, digest, basic or localmachine. The default value is default.|
 |/cun:\<Comusername>|Sets the shared user credential to be used for event sources that do not have their own user credentials. If this option is specified with the **/c** option, UserName and UserPassword settings for individual event sources from the configuration file are ignored. If you want to use a different credential for a specific event source, you should override this value by specifying the **/un** and **/up** options for a specific event source on the command line of another **ss** command.|
 |/cup:\<Compassword>|Sets the user password for the shared user credential. When \<Compassword> is set to * (asterisk), the password is read from the console. This option is only valid when the **/cun** option is specified.|
-|/q:[\<Quiet>]|Specifies whether the configuration procedure will prompt for confirmation. \<Quiet> can be true or false. If <Quiet> is true, the configuration procedure will not prompt for confirmation. The default value of this option is false.|
+|/q:[\<Quiet>]|Specifies whether the configuration procedure prompts for confirmation. \<Quiet> can be true or false. If <Quiet> is true, the configuration procedure does not prompt for confirmation. The default value of this option is false.|
 
 ## Remarks
 
 > [!IMPORTANT]
-> If you receive the message, “The RPC server is unavailable�? when you try to run wecutil, you need to start the Windows Event Collector service (wecsvc). To start wecsvc, at an elevated command prompt type net start wecsvc.
+> If you receive the message, “The RPC server is unavailable? when you try to run wecutil, you need to start the Windows Event Collector service (wecsvc). To start wecsvc, at an elevated command prompt type net start wecsvc.
 
 -   The following example shows the contents of a configuration file:  
     ```
