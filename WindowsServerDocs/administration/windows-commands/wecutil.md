@@ -21,6 +21,7 @@ manager: dansimps
 
 Enables you to create and manage subscriptions to events that are forwarded from remote computers. The remote computer must support the WS-Management protocol. For examples of how to use this command, see [Examples](#BKMK_examples).
 
+
 ## Syntax
 
 ```
