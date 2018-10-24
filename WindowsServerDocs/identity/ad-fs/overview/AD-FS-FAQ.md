@@ -93,7 +93,7 @@ The value of “sub” claim is the hash of client ID + anchor claim value.
 The lifetime of refresh token will be the lifetime of the token that ADFS got from remote claims provider trust. The lifetime of the access token will be the token lifetime of the relying party for which access token is being issued.
 
 ### I need to return profile and email scopes as well in addition to the OpenId scope. Can I obtain additional information using scopes? How to do it in AD FS?
-You can use customized id_token to add relevant information in the id_token itself. For more, read here.
+You can use customized id_token to add relevant information in the id_token itself. For more information, read [here](../development/custom-id-tokens-in-ad-fs.md).
 
 ### How to issue json blobs inside JWT tokens?
 A special ValueType("http://www.w3.org/2001/XMLSchema#json" ) and escape character(\x22) for this was added in AD FS 2016. Please the sample below for the issuance rule and also the final output from the access token.
