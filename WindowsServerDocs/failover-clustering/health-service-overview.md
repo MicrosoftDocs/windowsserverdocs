@@ -115,7 +115,7 @@ If the `Cache` section is provided, only the drives listed (as `CacheDisk`) are 
       </AllowedFirmware>
       <TargetFirmware>
         <Version>2.1</Version>
-        <BinaryPath>\\path\to\image.bin</BinaryPath>
+        <BinaryPath>C:\ClusterStorage\path\to\image.bin</BinaryPath>
       </TargetFirmware>
     </Disk>
     <Disk>
