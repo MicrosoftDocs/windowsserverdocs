@@ -5,7 +5,7 @@ ms.manager: eldenc
 ms.technology: storage-spaces
 ms.topic: article
 author: cosmosdarwin
-ms.date: 02/09/2018
+ms.date: 10/08/2018
 Keywords: Storage Spaces Direct
 ms.localizationpriority: medium
 ---
@@ -32,7 +32,7 @@ For example, if one server has NVMe, they should *all* have NVMe.
 
 All servers should have the same number of drives of each type.
 
-For example, if one server has six HDD, they should *all* have six HDD.
+For example, if one server has six SSD, they should *all* have six SSD.
 
    > [!NOTE]
    > It is okay for the number of drives to differ temporarily during failures or while adding or removing drives.
@@ -154,6 +154,16 @@ Server 3 has more drives than the others.
 | 10 x HDD (capacity) | 10 x HDD (capacity) | 20 x HDD (capacity) |
 
 This isn't supported. The number of drives of each type should be the same in every server.
+
+### ![unsupported](media/drive-symmetry-considerations/unsupported.png) Not supported: only HDD drives
+
+All servers have only HDD drives connected.
+
+|Server 1|Server 2|Server 3|
+|-|-|-| 
+|18 x HDD (capacity) |18 x HDD (capacity)|18 x HDD (capacity)|
+
+This isn't supported. You need to add a minimum of two cache drives (NvME or SSD) attached to each of the servers.
 
 ## Summary
 
