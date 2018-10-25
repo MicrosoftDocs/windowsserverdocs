@@ -4,7 +4,7 @@ description: Frequently asked questions about Storage Migration Service, such as
 author: nedpyle
 ms.author: nedpyle
 manager: siroy
-ms.date: 09/24/2018
+ms.date: 10/25/2018
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: storage
