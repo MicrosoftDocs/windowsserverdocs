@@ -11,7 +11,7 @@ This repo is actively managed and includes the source for three content sets pub
 -  [Essentials Server 2016](https://docs.microsoft.com/en-us/windows-server-essentials/get-started/what-s-new)
 -  [Microsoft Hyper-V Server 2016](https://docs.microsoft.com/en-us/windows-server/virtualization/hyper-v/hyper-v-server-2016)
 
-Writers and engineering partners share responsibility for technical accuracy, within specific technology areas. **The writer for an assigned area reviews and approves all pull requests to add, update, or delete articles or art.** For Windows Server content,these writers are: 
+Writers and engineering partners share responsibility for technical accuracy, within specific technology areas. **The writer for an assigned area reviews and approves all pull requests to add, update, or delete articles or art.** For Windows Server content, these writers are: 
 
 Windows Server Area|Owner|Github Alias
 ---|---|---

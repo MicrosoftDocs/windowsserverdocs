@@ -6,7 +6,7 @@ ms.topic: article
 manager: dongill
 author: rpsqrd
 ms.technology: security-guarded-fabric
-ms.date: 10/03/2018
+ms.date: 10/19/2018
 ---
 
 # Setting up the Host Guardian Service for Always Encrypted with secure enclaves in SQL Server 
@@ -33,21 +33,25 @@ This article will help you set up HGS in a recommended configuration.
 
 ## Prerequisites 
 
-This section covers prerequisites HGS and host machines. 
+This section covers prerequisites for HGS and host machines. 
 
 ### HGS servers
 
 - 1-3 servers to run HGS. 
+
+  >[!NOTE]
+  >Only 1 HGS server is required for a test or pre-production environment.
+
   These servers should be carefully protected since they control which machines can run your SQL Server instances using Always Encrypted with secure enclaves. 
   It is recommended that different administrators manage the HGS cluster and that you run the HGS on physical hardware isolated from the rest of your infrastructure, or in separate virtualization fabrics or Azure subscriptions.
 
-  - Windows Server 2019 Standard or Datacenter edition
+  - Windows Server 2019 Standard or Datacenter edition.
   - 2 CPUs
   - 8GB RAM
   - 100GB storage
 
-  >[!NOTE]
-  >Only 1 HGS server is required for a test or pre-production environment.
+  You can use either the [Long-Term Servicing Channel (LTSC)](https://docs.microsoft.com/windows-server/get-started/semi-annual-channel-overview#long-term-servicing-channel-ltsc) or the [Semi-Annual Channel](https://docs.microsoft.com/windows-server/get-started/semi-annual-channel-overview#semi-annual-channel). 
+  To register and download the Windows Server Insider Preview, see [Getting started with the Windows Insider Program](https://insider.windows.com/for-business-getting-started-server/).
 
 - Choose a name for the new Active Directory forest created by the Host Guardian Service. 
   HGS should not be joined to your existing corporate domain and should have separate administrators managing it.   

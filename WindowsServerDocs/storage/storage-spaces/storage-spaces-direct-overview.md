@@ -6,7 +6,7 @@ ms.manager: dongill
 ms.technology: storage-spaces
 ms.topic: article
 author: cosmosdarwin
-ms.date: 7/27/2018
+ms.date: 10/23/2018
 ms.assetid: 8bd0d09a-0421-40a4-b752-40ecb5350ffd
 description: An overview of Storage Spaces Direct, a feature of Windows Server that enables you to cluster servers with internal storage into a software-defined storage solution.
 ms.localizationpriority: medium
@@ -17,7 +17,7 @@ ms.localizationpriority: medium
 
 Storage Spaces Direct uses industry-standard servers with local-attached drives to create highly available, highly scalable software-defined storage at a fraction of the cost of traditional SAN or NAS arrays. Its converged or hyper-converged architecture radically simplifies procurement and deployment, while features such as caching, storage tiers, and erasure coding, together with the latest hardware innovations such as RDMA networking and NVMe drives, deliver unrivaled efficiency and performance.
 
-Storage Spaces Direct is included in Windows Server 2016 Datacenter and [Windows Server Insider Preview Builds](https://insider.windows.com/en-us/for-business-getting-started-server/). 
+Storage Spaces Direct is included in Windows Server 2019 Datacenter, Windows Server 2016 Datacenter, and [Windows Server Insider Preview Builds](https://insider.windows.com/for-business-getting-started-server/). 
 
 For other applications of Storage Spaces, such as Shared SAS clusters and stand-alone servers, see [Storage Spaces overview](overview.md). If you're looking for info about using Storage Spaces on a Windows 10 PC, see [Storage Spaces in Windows 10](https://support.microsoft.com/help/12438/windows-10-storage-spaces).
 
@@ -31,6 +31,7 @@ For other applications of Storage Spaces, such as Shared SAS clusters and stand-
 			  <li><a href="storage-spaces-fault-tolerance.md">Fault tolerance and storage efficiency</a></li>
               <li><a href="drive-symmetry-considerations.md">Drive symmetry considerations</a></li>
               <li><a href="understand-quorum.md">Understanding cluster and pool quorum</a></li>
+              <li><a href="cluster-sets.md">Cluster sets</a></li>
 		  	</ul>
         </td>
         <td style="padding: 5px; border: 0;">
@@ -63,6 +64,8 @@ For other applications of Storage Spaces, such as Shared SAS clusters and stand-
 			  <li><a href="remove-servers.md">Remove servers</a></li>
 			  <li><a href="resize-volumes.md">Extend volumes</a></li>
 			  <li><a href="../update-firmware.md">Update drive firmware</a></li>
+              <li><a href="performance-history.md">Performance history</a></li>
+              <li><a href="delimit-volume-allocation.md">Delimit the allocation of volumes</a></li>
 		    </ul>
         </td>
     </tr>
@@ -73,14 +76,7 @@ For other applications of Storage Spaces, such as Shared SAS clusters and stand-
               <li><a href="storage-spaces-states.md">Troubleshoot health and operational states</a></li>
               <li><a href="data-collection.md">Collect diagnostic data with Storage Spaces Direct</a></li>
             </ul>
-         <td style="padding: 5px; border: 0;">
-            <strong>Insider Preview content</a></strong>
-            <ul>
-                <li><a href="cluster-sets.md">Cluster sets</a></li>
-                <li><a href="performance-history.md">Performance history</a></li>
-                <li><a href="delimit-volume-allocation.md">Delimit the allocation of volumes</a></li>
-            </ul>
-    </tr>
+
 </table>
 
 ## Videos
@@ -182,7 +178,7 @@ Here's an overview of the Storage Spaces Direct stack:
 
 **Software Storage Bus.** The Software Storage Bus is new in Storage Spaces Direct. It spans the cluster and establishes a software-defined storage fabric whereby all the servers can see all of each other's local drives. You can think of it as replacing costly and restrictive Fibre Channel or Shared SAS cabling.
 
-**Storage Bus Layer Cache.** The [Software Storage Bus](software-storage-bus-overview.md) dynamically binds the fastest drives present (e.g. SSD) to slower drives (e.g. HDDs) to provide server-side read/write caching that accelerates IO and boosts throughput.
+**Storage Bus Layer Cache.** The Software Storage Bus dynamically binds the fastest drives present (e.g. SSD) to slower drives (e.g. HDDs) to provide server-side read/write caching that accelerates IO and boosts throughput.
 
 **Storage Pool.** The collection of drives that form the basis of Storage Spaces is called the storage pool. It is automatically created, and all eligible drives are automatically discovered and added to it. We strongly recommend you use one pool per cluster, with the default settings. Read our [Deep Dive into the Storage Pool](https://blogs.technet.microsoft.com/filecab/2016/11/21/deep-dive-pool-in-spaces-direct/) to learn more.
 
@@ -198,29 +194,9 @@ Here's an overview of the Storage Spaces Direct stack:
 
 There are [over 10,000 clusters](https://blogs.technet.microsoft.com/filecab/2018/03/27/storage-spaces-direct-momentum/) worldwide running Storage Spaces Direct. Organizations of all sizes, from small businesses deploying just two nodes, to large enterprises and governments deploying hundreds of nodes, depend on Storage Spaces Direct for their critical applications and infrastructure.
 
-Click any logo to read the full customer story:
+Visit [Microsoft.com/HCI](https://www.microsoft.com/hci) to read their stories:
 
-<div style="background-color: rgba(0,0,0,0.1); padding: 10px;">
-    <a target="_blank" href="https://customers.microsoft.com/story/createadvertising"><img onload="this.style.cssText = 'box-shadow: none; margin: 2px 2px 2px 2px; width: 19.2%; max-width: 225px;'" onmouseover="this.style.cssText = 'box-shadow: 0px 2px 10px 2px rgba(0,0,0,0.2); margin: 0px 2px 4px 2px; width: 19.2%; max-width: 225px; transition: 0.2s;'" onmouseout="this.style.cssText = 'box-shadow: none; margin: 2px 2px 2px 2px; width: 19.2%; max-width: 225px; transition: 0.2s;'" title="Create Advertising (Microsoft Customer Story)" src="wall-of-logos/microsoft-create-advertising.png"></a>
-    <a target="_blank" href="https://lenovosuccess.com/casestudy/majmaah-university"><img onload="this.style.cssText = 'box-shadow: none; margin: 2px 2px 2px 2px; width: 19.2%; max-width: 225px;'" onmouseover="this.style.cssText = 'box-shadow: 0px 2px 10px 2px rgba(0,0,0,0.2); margin: 0px 2px 4px 2px; width: 19.2%; max-width: 225px; transition: 0.2s;'" onmouseout="this.style.cssText = 'box-shadow: none; margin: 2px 2px 2px 2px; width: 19.2%; max-width: 225px; transition: 0.2s;'" title="Majmaah University (Lenovo Customer Success Story)" src="wall-of-logos/lenovo-majmaah-university.png"></a>
-    <a target="_blank" href="https://lenovosuccess.com/casestudy/soerum-kommune"><img onload="this.style.cssText = 'box-shadow: none; margin: 2px 2px 2px 2px; width: 19.2%; max-width: 225px;'" onmouseover="this.style.cssText = 'box-shadow: 0px 2px 10px 2px rgba(0,0,0,0.2); margin: 0px 2px 4px 2px; width: 19.2%; max-width: 225px; transition: 0.2s;'" onmouseout="this.style.cssText = 'box-shadow: none; margin: 2px 2px 2px 2px; width: 19.2%; max-width: 225px; transition: 0.2s;'" title="Soerum Kommune (Lenovo Customer Success Story)" src="wall-of-logos/lenovo-soerum-kommune.png"></a>
-    <a target="_blank" href="https://www.fujitsu.com/global/about/resources/case-studies/cs-2017mar-make-it.html"><img onload="this.style.cssText = 'box-shadow: none; margin: 2px 2px 2px 2px; width: 19.2%; max-width: 225px;'" onmouseover="this.style.cssText = 'box-shadow: 0px 2px 10px 2px rgba(0,0,0,0.2); margin: 0px 2px 4px 2px; width: 19.2%; max-width: 225px; transition: 0.2s;'" onmouseout="this.style.cssText = 'box-shadow: none; margin: 2px 2px 2px 2px; width: 19.2%; max-width: 225px; transition: 0.2s;'" title="Make IT (Fujitsu Case Study)" src="wall-of-logos/fujitsu-make-it.png"></a>
-    <a target="_blank" href="https://www.dataonstorage.com/customer-stories/mead-hunt-replaces-aging-san-with-dataon-cib-9112-and-windows-server-2016-running-refs-and-hyper-v/"><img onload="this.style.cssText = 'box-shadow: none; margin: 2px 2px 2px 2px; width: 19.2%; max-width: 225px;'" onmouseover="this.style.cssText = 'box-shadow: 0px 2px 10px 2px rgba(0,0,0,0.2); margin: 0px 2px 4px 2px; width: 19.2%; max-width: 225px; transition: 0.2s;'" onmouseout="this.style.cssText = 'box-shadow: none; margin: 2px 2px 2px 2px; width: 19.2%; max-width: 225px; transition: 0.2s;'" title="Mead & Hunt (DataON Case Study)" src="wall-of-logos/dataon-mead-hunt.png"></a>
-    <a target="_blank" href="https://customers.microsoft.com/story/youth-villages"><img onload="this.style.cssText = 'box-shadow: none; margin: 2px 2px 2px 2px; width: 19.2%; max-width: 225px;'" onmouseover="this.style.cssText = 'box-shadow: 0px 2px 10px 2px rgba(0,0,0,0.2); margin: 0px 2px 4px 2px; width: 19.2%; max-width: 225px; transition: 0.2s;'" onmouseout="this.style.cssText = 'box-shadow: none; margin: 2px 2px 2px 2px; width: 19.2%; max-width: 225px; transition: 0.2s;'" title="Youth Villages (Microsoft Customer Story)" src="wall-of-logos/microsoft-youth-villages.png"></a>
-    <a target="_blank" href="https://www.dataonstorage.com/customer-stories/evga-chooses-microsoft-and-dataon-for-their-next-generation-hyper-converged-cluster-platform/"><img onload="this.style.cssText = 'box-shadow: none; margin: 2px 2px 2px 2px; width: 19.2%; max-width: 225px;'" onmouseover="this.style.cssText = 'box-shadow: 0px 2px 10px 2px rgba(0,0,0,0.2); margin: 0px 2px 4px 2px; width: 19.2%; max-width: 225px; transition: 0.2s;'" onmouseout="this.style.cssText = 'box-shadow: none; margin: 2px 2px 2px 2px; width: 19.2%; max-width: 225px; transition: 0.2s;'" title="EVGA (DataON Case Study)" src="wall-of-logos/dataon-evga.png"></a>
-    <a target="_blank" href="https://www.dataonstorage.com/customer-stories/king-county-wa-library-system-upgrades-to-a-storage-spaces-direct/"><img onload="this.style.cssText = 'box-shadow: none; margin: 2px 2px 2px 2px; width: 19.2%; max-width: 225px;'" onmouseover="this.style.cssText = 'box-shadow: 0px 2px 10px 2px rgba(0,0,0,0.2); margin: 0px 2px 4px 2px; width: 19.2%; max-width: 225px; transition: 0.2s;'" onmouseout="this.style.cssText = 'box-shadow: none; margin: 2px 2px 2px 2px; width: 19.2%; max-width: 225px; transition: 0.2s;'" title="King County Library System (DataON Case Study)" src="wall-of-logos/dataon-king-county-library-system.png"></a>
-    <a target="_blank" href="https://www.fujitsu.com/global/about/resources/case-studies/cs-2017sep-itarex.html"><img onload="this.style.cssText = 'box-shadow: none; margin: 2px 2px 2px 2px; width: 19.2%; max-width: 225px;'" onmouseover="this.style.cssText = 'box-shadow: 0px 2px 10px 2px rgba(0,0,0,0.2); margin: 0px 2px 4px 2px; width: 19.2%; max-width: 225px; transition: 0.2s;'" onmouseout="this.style.cssText = 'box-shadow: none; margin: 2px 2px 2px 2px; width: 19.2%; max-width: 225px; transition: 0.2s;'" title="iTAREX (Fujitsu Case Study)" src="wall-of-logos/fujitsu-itarex.png"></a>
-    <a target="_blank" href="https://www.dataonstorage.com/customer-stories/bennington-updates-their-storage-with-a-windows-server-2016-solution/"><img onload="this.style.cssText = 'box-shadow: none; margin: 2px 2px 2px 2px; width: 19.2%; max-width: 225px;'" onmouseover="this.style.cssText = 'box-shadow: 0px 2px 10px 2px rgba(0,0,0,0.2); margin: 0px 2px 4px 2px; width: 19.2%; max-width: 225px; transition: 0.2s;'" onmouseout="this.style.cssText = 'box-shadow: none; margin: 2px 2px 2px 2px; width: 19.2%; max-width: 225px; transition: 0.2s;'" title="Bennington (DataON Case Study)" src="wall-of-logos/dataon-bennington.png"></a>
-    <a target="_blank" href="https://www.dataonstorage.com/customer-stories/cherokee-county-school-district-replaces-their-iscsi-san-storage-with-a-storage-spaces-direct/"><img onload="this.style.cssText = 'box-shadow: none; margin: 2px 2px 2px 2px; width: 19.2%; max-width: 225px;'" onmouseover="this.style.cssText = 'box-shadow: 0px 2px 10px 2px rgba(0,0,0,0.2); margin: 0px 2px 4px 2px; width: 19.2%; max-width: 225px; transition: 0.2s;'" onmouseout="this.style.cssText = 'box-shadow: none; margin: 2px 2px 2px 2px; width: 19.2%; max-width: 225px; transition: 0.2s;'" title="Cherokee County School District (DataON Case Study)" src="wall-of-logos/dataon-cherokee-county-school-district.png"></a>
-    <a target="_blank" href="https://www.fujitsu.com/global/about/resources/case-studies/cs-2018jun-harreringenieure.html"><img onload="this.style.cssText = 'box-shadow: none; margin: 2px 2px 2px 2px; width: 19.2%; max-width: 225px;'" onmouseover="this.style.cssText = 'box-shadow: 0px 2px 10px 2px rgba(0,0,0,0.2); margin: 0px 2px 4px 2px; width: 19.2%; max-width: 225px; transition: 0.2s;'" onmouseout="this.style.cssText = 'box-shadow: none; margin: 2px 2px 2px 2px; width: 19.2%; max-width: 225px; transition: 0.2s;'" title="Harrer Ingenieure GmbH (Fujitsu Case Study)" src="wall-of-logos/fujitsu-harrer-ingenieure.png"></a>
-    <a target="_blank" href="https://lenovosuccess.com/casestudy/braathe-gruppen-as"><img onload="this.style.cssText = 'box-shadow: none; margin: 2px 2px 2px 2px; width: 19.2%; max-width: 225px;'" onmouseover="this.style.cssText = 'box-shadow: 0px 2px 10px 2px rgba(0,0,0,0.2); margin: 0px 2px 4px 2px; width: 19.2%; max-width: 225px; transition: 0.2s;'" onmouseout="this.style.cssText = 'box-shadow: none; margin: 2px 2px 2px 2px; width: 19.2%; max-width: 225px; transition: 0.2s;'" title="Braathe Gruppen Read (Lenovo Customer Success Story)" src="wall-of-logos/lenovo-braathe-gruppen.png"></a>
-    <a target="_blank" href="https://lenovosuccess.com/casestudy/cloud-factory"><img onload="this.style.cssText = 'box-shadow: none; margin: 2px 2px 2px 2px; width: 19.2%; max-width: 225px;'" onmouseover="this.style.cssText = 'box-shadow: 0px 2px 10px 2px rgba(0,0,0,0.2); margin: 0px 2px 4px 2px; width: 19.2%; max-width: 225px; transition: 0.2s;'" onmouseout="this.style.cssText = 'box-shadow: none; margin: 2px 2px 2px 2px; width: 19.2%; max-width: 225px; transition: 0.2s;'" title="SE Cloud Factory (Lenovo Customer Success Story)" src="wall-of-logos/lenovo-se-cloud-factory.png"></a>
-    <a target="_blank" href="https://lenovosuccess.com/casestudy/oblakoteka"><img onload="this.style.cssText = 'box-shadow: none; margin: 2px 2px 2px 2px; width: 19.2%; max-width: 225px;'" onmouseover="this.style.cssText = 'box-shadow: 0px 2px 10px 2px rgba(0,0,0,0.2); margin: 0px 2px 4px 2px; width: 19.2%; max-width: 225px; transition: 0.2s;'" onmouseout="this.style.cssText = 'box-shadow: none; margin: 2px 2px 2px 2px; width: 19.2%; max-width: 225px; transition: 0.2s;'" title="Oblakoteka Read (Lenovo Customer Success Story)" src="wall-of-logos/lenovo-oblakoteka.png"></a>
-    <a target="_blank" href="https://lenovosuccess.com/casestudy/acuutech"><img onload="this.style.cssText = 'box-shadow: none; margin: 2px 2px 2px 2px; width: 19.2%; max-width: 225px;'" onmouseover="this.style.cssText = 'box-shadow: 0px 2px 10px 2px rgba(0,0,0,0.2); margin: 0px 2px 4px 2px; width: 19.2%; max-width: 225px; transition: 0.2s;'" onmouseout="this.style.cssText = 'box-shadow: none; margin: 2px 2px 2px 2px; width: 19.2%; max-width: 225px; transition: 0.2s;'" title="Acuutech (Lenovo Customer Success Story)" src="wall-of-logos/lenovo-acuutech.png"></a>
-    <a target="_blank" href="https://www.dataonstorage.com/customer-stories/infront-upgrades-their-hyper-v-and-storage-environment-to-a-dataon-and-storage-spaces-direct-solution/"><img onload="this.style.cssText = 'box-shadow: none; margin: 2px 2px 2px 2px; width: 19.2%; max-width: 225px;'" onmouseover="this.style.cssText = 'box-shadow: 0px 2px 10px 2px rgba(0,0,0,0.2); margin: 0px 2px 4px 2px; width: 19.2%; max-width: 225px; transition: 0.2s;'" onmouseout="this.style.cssText = 'box-shadow: none; margin: 2px 2px 2px 2px; width: 19.2%; max-width: 225px; transition: 0.2s;'" title="Infront Finance (DataON Case Study)" src="wall-of-logos/dataon-infront.png"></a>
-    <a target="_blank" href="https://www.dataonstorage.com/customer-stories/tmi-systems-consolidates-networking-and-storage-into-a-cost-effective-high-performance-storage-spaces-direct/"><img onload="this.style.cssText = 'box-shadow: none; margin: 2px 2px 2px 2px; width: 19.2%; max-width: 225px;'" onmouseover="this.style.cssText = 'box-shadow: 0px 2px 10px 2px rgba(0,0,0,0.2); margin: 0px 2px 4px 2px; width: 19.2%; max-width: 225px; transition: 0.2s;'" onmouseout="this.style.cssText = 'box-shadow: none; margin: 2px 2px 2px 2px; width: 19.2%; max-width: 225px; transition: 0.2s;'" title="TMI (DataON Case Study)" src="wall-of-logos/dataon-tmi.png"></a>
-    <a target="_blank" href="https://www.dataonstorage.com/customer-stories/quest-chooses-dataon-microsoft-power-veeam-cloud-connect-backup-service/"><img onload="this.style.cssText = 'box-shadow: none; margin: 2px 2px 2px 2px; width: 19.2%; max-width: 225px;'" onmouseover="this.style.cssText = 'box-shadow: 0px 2px 10px 2px rgba(0,0,0,0.2); margin: 0px 2px 4px 2px; width: 19.2%; max-width: 225px; transition: 0.2s;'" onmouseout="this.style.cssText = 'box-shadow: none; margin: 2px 2px 2px 2px; width: 19.2%; max-width: 225px; transition: 0.2s;'" title="Quest Technology Management (DataON Case Study)" src="wall-of-logos/dataon-quest-technology-management.png"></a>
-</div>
+[![Grid of customer logos](media/storage-spaces-direct-in-windows-server-2016/customer-stories.png)](https://www.microsoft.com/hci)
 
 ## Management tools
 
@@ -241,6 +217,7 @@ Try Storage Spaces Direct [in Microsoft Azure](https://blogs.technet.microsoft.c
 
 -   [Fault tolerance and storage efficiency](storage-spaces-fault-tolerance.md)
 -   [Storage Replica](../storage-replica/storage-replica-overview.md)
+-   [Storage at Microsoft blog](https://blogs.technet.microsoft.com/filecab/)
 -   [Storage Spaces Direct throughput with iWARP](https://blogs.technet.microsoft.com/filecab/2017/03/13/storage-spaces-direct-throughput-with-iwarp) (TechNet blog)
 -   [What's New in Failover Clustering in Windows Server](../../failover-clustering/whats-new-in-failover-clustering.md)  
 -   [Storage Quality of Service](../storage-qos/storage-qos-overview.md)
