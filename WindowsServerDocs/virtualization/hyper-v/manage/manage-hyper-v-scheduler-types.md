@@ -115,13 +115,12 @@ To enable SMT in a guest virtual machine, open a PowerShell window with sufficie
 
 ``` powershell
 Set-VMProcessor -VMName <VMName> -HwThreadCountPerCore <n>
-
-    Where <n> is the number of SMT threads per core the guest VM will see.  
-
-    Note that <n> = 0 will set the HwThreadCountPerCore value to match the host's SMT thread count per core value.
 ```
 
->[NOTE!] 
+Where <n> is the number of SMT threads per core the guest VM will see.  
+Note that <n> = 0 will set the HwThreadCountPerCore value to match the host's SMT thread count per core value.
+
+>[!NOTE] 
 >Setting HwThreadCountPerCore = 0 is supported beginning with Windows Server 2019.
 
 Below is an example of System Information taken from the guest operating system running in a virtual machine with 2 virtual processors and SMT enabled. The guest operating system is detecting 2 logical processors belonging to the same core.
@@ -158,15 +157,12 @@ The hypervisor scheduler configuration is controlled via the hypervisorscheduler
 To select a scheduler type, open a command prompt with administrator privileges:
 
 ``` command
-
      bcdedit /set hypervisorschedulertype type
-
 ```
 
 Where `type` is one of:
 
 * Classic
-
 * Core
 
 The system must be rebooted for any changes to the hypervisor scheduler type to take effect.
@@ -197,7 +193,7 @@ Hypervisor launch event ID 2 denotes the hypervisor scheduler type, where:
 To query for hypervisor event ID 2 using PowerShell, enter the following commands from a PowerShell prompt.
 
 ``` powershell
-Get-WinEvent -FilterHashTable @{ProviderName="Microsoft-Windows-Hyper-V-Hypervisor"; ID=2} | select -Last 1
+Get-WinEvent -FilterHashTable @{ProviderName="Microsoft-Windows-Hyper-V-Hypervisor"; ID=2} -MaxEvents 1
 ```
 
 ![Screen shot showing PowerShell query and results for hypervisor launch event ID 2](media/Hyper-V-CoreScheduler-PowerShell.png)
