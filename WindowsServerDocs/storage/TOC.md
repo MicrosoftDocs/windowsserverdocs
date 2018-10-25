@@ -125,6 +125,13 @@
 #### [Remove servers](storage-spaces/remove-servers.md)
 #### [Update drive firmware](update-firmware.md)
 #### [Extend volumes](storage-spaces/resize-volumes.md)
+### Troubleshoot
+#### [Troubleshooting scenarios](storage-spaces/troubleshooting-storage-spaces.md)
+#### [Health and operational states](storage-spaces/storage-spaces-states.md)
+#### [Collect data](storage-spaces/data-collection.md)
+#### [Frequently asked questions](storage-spaces/storage-spaces-direct-faq.md)
+### Insider Preview
+#### [Cluster sets](storage-spaces/cluster-sets.md)
 #### [Performance history](storage-spaces/performance-history.md)
 ##### [Drives](storage-spaces/performance-history-for-drives.md)
 ##### [Network adapters](storage-spaces/performance-history-for-network-adapters.md)
