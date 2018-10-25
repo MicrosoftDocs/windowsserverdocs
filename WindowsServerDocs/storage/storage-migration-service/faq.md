@@ -28,15 +28,15 @@ Storage Migration Service does not allow migrating between Active Directory doma
 
 ## <a name="cluster-support"></a> Are clusters supported as sources or destinations?
 
-Storage Migration Service does not currently migrate between Clusters in the GA release of WIndows Server 2019. Cluster support will come in a future release of the Storage Migration Service.
+Storage Migration Service does not currently migrate between Clusters in Windows Server 2019. We plan to add cluster support in a future release of the Storage Migration Service.
 
 ## <a name="local-principals"></a> Do local groups and local users migrate?
 
-Storage Migration Service does not currently migrate local users or local groups in the GA release of WIndows Server 2019. Local user and local group migration support will come in a future release of the Storage Migration Service.
+Storage Migration Service does not currently migrate local users or local groups in Windows Server 2019. We plan to add local user and local group migration support in a future release of the Storage Migration Service.
 
 ## <a name="domain-controller"></a> Is domain controller migration supported?
 
-Storage Migration Service does not currently migrate domain controllers the GA release of WIndows Server 2019. As a workaround, as long as you have more than one domain controller in the Active Directory domain, demote the domain controller before migrating it, then promote the destination after cut over completes. Domain controller migration support will come in a future release of the Storage Migration Service.
+Storage Migration Service does not currently migrate domain controllers in Windows Server 2019. As a workaround, as long as you have more than one domain controller in the Active Directory domain, demote the domain controller before migrating it, then promote the destination after cut over completes. We plan to add domain controller migration support in a future release of the Storage Migration Service.
 
 ## <a name="share-attributes"></a> What attributes are migrated by the Storage Migration Service?
 
@@ -67,9 +67,9 @@ Storage Migration Service migrates all flags, settings, and security of SMB shar
 
 ## <a name="move-db"></a> Can I move the Storage Migration Service database?
 
-The Storage Migration Service uses an extensible storage engine (ESE) database that is installed by default in the hidden c:\programdata\microsoft\storagemigrationservice folder. This database will grow as jobs are added and transfers are completed, and can consume significant drive space after migrating millions of files if you do not delete jobs anf allow garbage collection to create whitespace. If the database needs to move, perform the following steps:
+The Storage Migration Service uses an extensible storage engine (ESE) database that is installed by default in the hidden c:\programdata\microsoft\storagemigrationservice folder. This database will grow as jobs are added and transfers are completed, and can consume significant drive space after migrating millions of files if you do not delete jobs. If the database needs to move, perform the following steps:
 
-1. Stop the `Storage Migration Service` service on the orchestrator computer.
+1. Stop the "Storage Migration Service" service on the orchestrator computer.
 2. Take ownership of the `%programdata%/Microsoft/StorageMigrationService` folder
 3. Add your user account to have full control over that share and all of its files and subfolders.
 4. Move the folder to another drive on the orchestrator computer.
@@ -89,17 +89,17 @@ The Storage Migration Service Proxy service copies 8 files simultaneously in a g
     HKEY_Local_Machine\Software\Microsoft\SMSProxy
     FileTransferThreadCount
 
- The valid range is 1 to 128 in the GA version of Windows Server 2019. 
+ The valid range is 1 to 128 in Windows Server 2019. 
 
- After changing you must restart the Storage Migration Service Proxy service on all computers partipating in a migration. This will change to a higher number in a future version of Storage Migration Service.
+ After changing you must restart the Storage Migration Service Proxy service on all computers partipating in a migration. We plan to raise this number in a future version of Storage Migration Service.
 
 ## <a name="non-windows"></a> Can I migrate from sources other than Windows Server?
 
-The Storage Migration Service version shipped in the GA version of Windows Server 2019 supports migrating from Windows Server 2003 and later operating systems. It cannot currently migrate from Linux, Samba, NetApp, EMC, or other SAN and NAS storage devices. This will change in a future version of Storage Migration Service, starting with Linux Samba support.
+The Storage Migration Service version shipped in the Windows Server 2019 supports migrating from Windows Server 2003 and later operating systems. It cannot currently migrate from Linux, Samba, NetApp, EMC, or other SAN and NAS storage devices. We plan to allow this in a future version of Storage Migration Service, starting with Linux Samba support.
 
 ## <a name="previous-versions"></a> Can I migrate previous file versions?
 
-The Storage Migration Service version shipped in the GA version of Windows Server 2019 does not support migrating Previous Versions (made with the volume shadow copy service) of files. Only the current version will migrate. 
+The Storage Migration Service version shipped in the Windows Server 2019 does not support migrating Previous Versions (made with the volume shadow copy service) of files. Only the current version will migrate. 
 
 ## <a name="give-feedback"></a> What are my options to give feedback, file bugs, or get support?
 
