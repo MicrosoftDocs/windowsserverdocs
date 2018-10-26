@@ -1,38 +1,47 @@
 ---
+ms.assetid: 777aab65-c9c7-4dc9-a807-9ab73fac87b8
 title: Configure AD FS Extranet Lockout Protection
 description:
 author: billmath
 ms.author: billmath
-manager: mtillman
-ms.date: 06/28/2018
+manager: mtilman
+ms.date: 10/03/2018
 ms.topic: article
 ms.prod: windows-server-threshold
+
 ms.technology: identity-adfs
 ---
 
 # AD FS Extranet Lockout and Extranet Smart Lockout
 
->Applies To: Windows Server 2016
+# Overview
 
-In AD FS on Windows Server 2012 R2, we introduced a security feature called **Extranet Soft Lockout**.  With this feature, AD FS stops authenticating users from the extranet for a period of time.  This prevents your user accounts from being locked out in Active Directory. In addition to protecting your users from an AD account lockout, AD FS extranet lockout also protects against brute force password guessing attacks.
+>Applies To: Windows Server 2019, Windows Server 2016, Windows Server 2012 R2
 
-In June 2018, AD FS on Windows Server 2016 introduced **Extranet Smart Lockout (ESL)**.  ESL enables AD FS to differentiate between sign-in attempts that look like they're from the valid user and sign-ins from what may be an attacker. As a result, AD FS can lock out attackers while letting valid users continue to use their accounts. This prevents denial-of-service on the user and protects against targeted attacks.  
-ESL is only available for AD FS in Windows Server 2016. 
+In AD FS on Windows Server 2012 R2, we introduced a security feature called [Extranet Soft Lockout](configure-ad-fs-extranet-soft-lockout-protection.md).  With this feature, AD FS stops authenticating users from the extranet for a period of time.  This prevents your user accounts from being locked out in Active Directory. In addition to protecting your users from an AD account lockout, AD FS extranet lockout also protects against brute force password guessing attacks.
+
+In June 2018, AD FS on Windows Server 2016 introduced **Extranet Smart Lockout (ESL)**.  ESL enables AD FS to differentiate between sign-in attempts that look like they're from the valid user and sign-ins from what may be an attacker. As a result, AD FS can lock out attackers while letting valid users continue to use their accounts. This prevents denial-of-service on the user and protects against targeted attacks such as "password-spray" attacks.  
+ESL is available for AD FS in Windows Server 2016 and is built into AD FS in Windows Server 2019.
 
 > [!NOTE]
-> This feature only works for the **extranet scenario** where authentication requests come through the Web Application Proxy and only applies to **username and password authentication**.
+> This feature only works for the **extranet scenario** in which authentication requests come through the Web Application Proxy and only applies to **username and password authentication**.
 
 ## Advantages of Extranet Smart Lockout in AD FS 2016
 Extranet soft lockout in AD FS 2012 R2 provided the following key advantages:
-- Protects your user accounts from **brute force attacks** in which an attacker tries to guess a user's password by continuously sending authentication requests.
+- Protects your user accounts from **brute force attacks** in which an attacker tries to guess a user's password by continuously sending authentication requests and from **password spray attacks** where attackers attempt to use common passwords with many different accounts
 - Protects your user accounts from **Active Directory account lockout** from malicious authentication requests with wrong passwords. In this case, although the user account will be locked out for extranet access, the user can still login to AD from the corporate network. This is known as a **soft lockout**.
 
 Extranet Smart Lockout builds on the advantages of extranet soft lockout by adding the following:
 - Protects your users from experiencing **extranet account lockout** from malicious authentication requests.  Smart lockout will prevent potentially malicious requests from unfamiliar locations while allowing the real user to sign on from the extranet from familiar locations (locations from which the user has successfully logged in before).
-- Has a log only mode so that the system can learn good and potentially malicious signon activity without locking out any accounts
+- Has a log only mode so that the system can learn good and potentially malicious signon activity without disabling any accounts
+
+## Additional advantages of Extranet Smart Lockout in AD FS 2019
+Extranet Smart Lockout in AD FS 2019 adds the following advantages compared to AD FS 2016:
+- Set independent lockout thresholds for familiar and unfamiliar locations so that users in known good locations can have more room for error than requests from suspect locations
+- Enable audit mode for smart lockout while continuing to enforce previous soft lockout behavior
 
 ## Pre-requisites for Extranet Smart Lockout in AD FS 2016
-The following pre-requisites are required for ESL with AD FS 2016.
+The following pre-requisites are required for ESL with AD FS 2019.
 
 ### Install updates on all nodes in the farm
 First, ensure all Windows Server 2016 AD FS servers are up to date as of the June 2018 Windows Updates and that the AD FS 2016 farm is running at the 2016 farm behavior level.
@@ -55,6 +64,11 @@ sp_addrolemember 'db_owner', 'db_genevaservice'
 ### Ensure AD FS Security Audit Logging is enabled
 This feature makes use of Security Audit logs, so auditing must be enabled in AD FS as well as the local policy on all AD FS servers.
 
+## Pre-requisites for Extranet Smart Lockout in AD FS 2019
+The following pre-requisites are required for ESL with AD FS 2016.
+
+### Ensure AD FS Security Audit Logging is enabled
+This feature makes use of Security Audit logs, so auditing must be enabled in AD FS as well as the local policy on all AD FS servers.
 
 ## Lockout Settings
 Extranet smart lockout consists of a set of new capabilities governed by new and existing AD FS properties.
@@ -71,17 +85,19 @@ A new AD FS property called ExtranetLockoutMode has been added to control smart 
 
     - **ADFSSmartLockoutEnforce** - This is Extranet Smart Lockout with full support for blocking unfamiliar requests when the thresholds are reached.
 
-### Lockout Threshold and Observation Window
-Smart lockout uses the same two AD FS properties for observation window and lockout threshold as soft lockout: ExtranetObservationWindow and ExtranetLockoutThreshold.
+In AD FS 2019, the values ADPasswordCounter and ADFSSmartLockoutLogOnly can be combined so that soft lockout continues to be enforced while you are preparing for smart lockout.
 
-> [!NOTE]
-> The lockout threshold applies to both familiar and unknown locations.
+### Lockout Threshold and Observation Window
+Smart lockout in AD FS 2019 uses the same two AD FS properties as soft lockout used previously: ExtranetObservationWindow and ExtranetLockoutThreshold.
 
 - **ExtranetLockoutThreshold &lt;Integer&gt;** this defines the maximum number of bad password attempts. Once the threshold is reached, in ADFSSmartLockoutEnforce mode AD FS will reject requests from the extranet until the  observation window has passed.  In ADFSSmartLockoutLogOnly mode, AD FS will write log entries only.  
 - **ExtranetObservationWindow &lt;TimeSpan&gt;** this determines for how long username and password requests from unfamiliar locations will be locked out. AD FS will start to perform username and password authentication again when the window is passed.
 
 > [!NOTE]
 > AD FS extranet lockout functions independently from the AD lockout policies. We recommend that you set the **ExtranetLockoutThreshold** parameter value to a value that is less than the AD account lockout threshold. Failing to do so would result in AD FS being unable to protect accounts from being locked out in Active Directory. 
+
+In AD FS 2019, we have introduced a new lockout threshold specific to known good locations: ExtranetLockoutThresholdFamiliarLocation.
+- **ExtranetLockoutThresholdFamiliarLocation &lt;Integer&gt;** this defines the maximum number of bad password attempts from familiar locations. In AD FS 2019, the original parameter ExtranetLockoutThreshold applies to unfamiliar locations (IP addresses not known to be good).
 
 ### Primary Domain Controller Requirement
 AD FS 2016 offers a parameter that allows fallback to another domain controller when the PDC is unavailable.
@@ -94,9 +110,9 @@ AD FS 2016 offers a parameter that allows fallback to another domain controller 
     Set-AdfsProperties -EnableExtranetLockout $true -ExtranetLockoutThreshold 15 -ExtranetObservationWindow (new-timespan -Minutes 30) -ExtranetLockoutRequirePDC $false
     ```
 
-## Configuring AD FS 2016 with Smart Lockout
+## Configuring AD FS with Smart Lockout in Log Only Mode
 
-### Set Lockout Mode to Log Only
+### AD FS 2016
 We recommend that you first set the lockout behavior to log only by running the following cmdlet:
 
  ```powershell
@@ -128,8 +144,17 @@ Example: Disable lockout
 ``` powershell
 PS C:\>Set-AdfsProperties -EnableExtranetLockout $false
 ```
+### AD FS 2019
+If you are not presently using AD FS Extranet Soft Lockout, we recommend that you follow the same guidance as for AD FS 2016 above.
+If you are using soft lockout, however, we recommend that you set the AD FS 2019 lockout behavior to log for smart lockout, but keep enforcing soft lockout, using the below powershell:
 
-### Observing Audit Events
+ ```powershell
+PS C:\>Set-AdfsProperties -ExtranetLockoutMode 3
+ ```
+
+Once you execute this cmdlet, you can then use Get-AdfsProperties to query the value of the ExtranetLockoutMode AD FS property.  You will see that its value has been updated to a bitwise combination of ADPasswordCounter and ADFSSmartLockoutLogOnly.
+
+## Observing Audit Events
 AD FS will write extranet lockout events to the security audit log:
 -	When a user is locked out (reaches the lockout threshold for unsuccessful login attempts)
 -	When AD FS receives a login attempt for a user who is already in lockout state
@@ -237,7 +262,7 @@ Event Xml:
 </Event>
 ```
 
-### Observing User Activity
+## Observing User Activity
 AD FS provides powershell cmdlets to view and manage user account activity data.  To read the current account activity for a user account.  Use the cmdlet below
 
 ``` powershell
@@ -268,12 +293,12 @@ The current activity output contains the following data:
 
 **LastFailedAuthUnknown**: this is the time of the last incorrect password login attempt from an IP address that was not on the list of “FamiliarIps” at the time of the attempt
 
-**FamiliarLockout**: this indicates if the user is currently in a state of lockout for correct password attempts from from IP addresses on the list of “FamiliarIps” 
+**FamiliarLockout**: this indicates if the user is currently in a state of lockout for correct password attempts from IP addresses on the list of “FamiliarIps” 
 
-**UnknownLockout**: this indicates if the user is currently in a state of lockout for correct password attempts from from IP addresses not on the list of “FamiliarIps”
+**UnknownLockout**: this indicates if the user is currently in a state of lockout for correct password attempts from IP addresses not on the list of “FamiliarIps”
 FamiliarIps: this is the current list of familiar IP addresses for the user
 
-#### Adjust threshold and window
+## Adjust threshold and window
 Once you have been running in log only mode for a sufficient amount of time for AD FS to learn login locations, you may wish to adjust the threshold or observation window from the default settings.  This is done using `Set-AdfsProperties` as in the examples below:
 
 The observation window is set using `ExtranetObservationWindow`:
@@ -286,15 +311,36 @@ PS C:\>Set-AdfsProperties -ExtranetObservationWindow ( new-timespan -minutes 30 
 
 Where the value is a TimeSpan
 
-The threshold is set using ExtranetLockoutThreshold:
+### Setting threshold value in AD FS 2016
+In AD FS 2016, the threshold is set using ExtranetLockoutThreshold:
 
 Example:
 
 ``` powershell
-PS C:\>Set-AdfsProperties -ExtranetLockoutThreshold 10
+PS C:\>Set-AdfsProperties -ExtranetLockoutThreshold 5
 ```
 
-### Enable enforce mode
+### Setting threshold values in AD FS 2019
+In AD FS 2019, there are distinct threshold values for known good and unfamiliar locations
+
+To set the threshold value for unfamiliar locations, use the same property used for AD FS 2016 above:
+
+Example:
+
+``` powershell
+PS C:\>Set-AdfsProperties -ExtranetLockoutThreshold 5
+```
+
+To set the threshold value for known good locations, use the new property ExtranetLockoutThresholdFamiliarLocation, as shown in the example below:
+
+Example:
+
+``` powershell
+PS C:\>Set-AdfsProperties -ExtranetLockoutThresholdFamiliarLocation 10
+```
+
+
+## Enable enforce mode
 Once you have been running in log only mode for sufficient time for AD FS to learn login locations and to observe any lockout activity, and once you are comfortable with the lockout threshold and observation window, smart lockout can be moved to “enforce” mode using the PSH cmdlet below:
 
 ``` powershell
@@ -325,7 +371,7 @@ Set-ADFSAccountActivity
 Update the account activity for a user account.  This can be used to add new familiar locations or erase state for any account
 
 ``` powershell
-Set-ADFSAccountActivity user@upnsuffix.com -AdditionalFamiliarIps “1.2.3.4”
+Set-ADFSAccountActivity user@upnsuffix.com -FamiliarLocation “1.2.3.4”
 ```
 `Reset-ADFSAccountLockout`
 
@@ -390,6 +436,46 @@ XML: <?xml version="1.0" encoding="utf-16"?>
 </AuditBase>
 
 ```
+
+## Banned IP addresses
+In addition to the extranet smart lockout capabilities, the AD FS June 2018 update enables you to configure a set of IP addresses globally in AD FS, so that requests coming from those IP addresses, or that have those IP addresses in the **x-forwarded-for** or **x-ms-forwarded-client-ip** headers, will be blocked by AD FS.
+
+##### Adding banned IPs
+To add banned IPs to the global list, use the below Powershell cmdlet:
+
+``` powershell
+PS C:\ >Set-AdfsProperties -AddBannedIps "1.2.3.4", "::3", "1.2.3.4/16"
+```
+
+Allowed formats
+
+1.	IPv4
+2.	IPv6
+3.	CIDR format with IPv4 or v6
+4.	IP range with IPv4 or v6 ( i.e. 1.2.3.4-1.2.3.6 )
+
+#### Removing banned IPs
+To remove banned IPs from the global list, use the below Powershell cmdlet:
+
+``` powershell
+PS C:\ >Set-AdfsProperties -RemoveBannedIps "1.2.3.4"
+```
+
+#### Read banned IPs
+To read the current set of banned IP addresses, use the below Powershell cmdlet:
+
+``` powershell
+PS C:\ >Get-AdfsProperties 
+```
+
+Example output:
+
+```
+BannedIpList                   : {1.2.3.4, ::3,1.2.3.4/16}
+```
+
+
+
 ## Additional references  
 [Best practices for securing Active Directory Federation Services](../../ad-fs/deployment/best-practices-securing-ad-fs.md)
 

@@ -47,17 +47,17 @@ The following authentication/policy capabilities are in AD FS 2019:
 The following sign-in SSO improvements have been made in AD FS 2019:
 
 - [Paginated UX with Centered Theme](../operations/AD-FS-paginated-sign-in.md) - ADFS now has moved to a paginated UX flow that allows ADFS to validate and provide a more smoother sign-in experience. ADFS now uses a centered UI (instead of the right side of the screen). You may require newer logo and background images to align with this experience. This also mirrors functionality offered in Azure AD.
-- **Bug fix: Persistent SSO state for Win10 devices when doing PRT auth (Accenture issue)**	This addresses an issue where MFA state was not persisted when using PRT authentication for Windows 10 devices. The result of the issue was that end users would get prompted for 2nd factor credential (MFA) frequently. The fix also makes the experience consistent when device auth is successfully performed via client TLS and via PRT mechanism. 
+- **Bug fix: Persistent SSO state for Win10 devices when doing PRT auth**	This addresses an issue where MFA state was not persisted when using PRT authentication for Windows 10 devices. The result of the issue was that end users would get prompted for 2nd factor credential (MFA) frequently. The fix also makes the experience consistent when device auth is successfully performed via client TLS and via PRT mechanism. 
 
 
 ### Suppport for building modern line-of-business apps
 The following support for building modern LOB apps has been added to AD FS 2019:
 
  - **Oauth Device flow/profile** - AD FS now supports the OAuth device flow profile to perform logins on devices that do not have a UI surface area to support rich login experiences. This allows the user to complete the login experience on a different device. This functionality is required for Azure CLI experience in Azure Stack and can be used in other cases. 
- - **Removal of 'Resource' parameter** - AD FS has now removed the requirement to specify a resource parameter which is in line current Oauth specifications. Clients can now provide the Relying Party trust identifier as the scope parameter in addition to permissions requested. 
+ - **Removal of 'Resource' parameter** - AD FS has now removed the requirement to specify a resource parameter which is in line with current Oauth specifications. Clients can now provide the Relying Party trust identifier as the scope parameter in addition to permissions requested. 
  - **CORS headers in AD FS responses** - Customers can now build Single Page Applications that allow client side JS libraries to validate the signature of the id_token by querying for the signing keys from the OIDC discovery document on AD FS. 
  - **PKCE support**	- AD FS adds PKCE support to provide a secure auth code flow within OAuth. This adds an additional layer of security to this flow to prevent hijacking the code and replaying it from a different client. 
- - **Bug fix: Send x5t and kid claim** - This is a minor bug fix. AD FS now additionally sends the 'kid' claim to denote the key id hint for verifying the signature. Previously AD FS only sent this as 'x5t' claim. The 'x
+ - **Bug fix: Send x5t and kid claim** - This is a minor bug fix. AD FS now additionally sends the 'kid' claim to denote the key id hint for verifying the signature. Previously AD FS only sent this as 'x5t' claim.
 
 ### Supportability improvements
 The following supportability improvements are not part of AD FS 2019:
@@ -79,8 +79,8 @@ The following SAML update is in AD FS 2019:
 
 ### Azure AD style resource specification in scope parameter 
 Previously, AD FS required the desired resource and scope to be in a separate parameter in any authentication request. For example, a typical oauth request would look like below: 
-
-**https:&#47;&#47;fs.contoso.com/adfs/oauth2/authorize?</br>response_type=codeclient_id=claimsxrayclientresource=urn:microsoft:</br>adfs:claimsxray&scope=oauth&redirect_uri=https:&#47;&#47;adfshelp.microsoft.com/</br>
+7
+**https:&#47;&#47;fs.contoso.com/adfs/oauth2/authorize?</br>response_type=code&client_id=claimsxrayclient&resource=urn:microsoft:</br>adfs:claimsxray&scope=oauth&redirect_uri=https:&#47;&#47;adfshelp.microsoft.com/</br>
 ClaimsXray/TokenResponse&prompt=login**
  
 With AD FS on Server 2019, you can now pass the resource value embedded in the scope parameter. This is consistent with how one can do authentication against Azure AD also. 

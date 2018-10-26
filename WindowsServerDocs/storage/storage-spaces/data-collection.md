@@ -8,12 +8,12 @@ ms.author: adagashe
 ms.technology: storage-spaces
 ms.topic: article
 author: adagashe
-ms.date: 04/18/2018
+ms.date: 10/24/2018
 ms.localizationpriority: 
 ---
 # Collect diagnostic data with Storage Spaces Direct
 
-> Applies to: Windows Server 2016
+> Applies to: Windows Server 2019, Windows Server 2016
 
 There are various diagnostic tools that can be used to collect the data needed to troubleshoot Storage Spaces Direct and Failover Cluster. In this article, we will focus on **Get-SDDCDiagnosticInfo** - a one touch tool that will gather all relevant information to help you diagnose your cluster.
 
@@ -183,6 +183,16 @@ If you want to keep both the **log-level** and the **keyword-mask** at their def
 
 These event channels will be enabled on every cluster node when the cluster service starts or whenever the **EnabledEventLogs** property is changed.
 -->
+
+## How to consume the XML files from Get-PCStroageDiagnosticinfo
+You can consume the data from the XML files provided in data collected by the **Get-PCStroageDiagnosticinfo** cmdlet. These files have information about the virtual disks, physical disks, basic cluster info and other PowerShell related outputs. 
+
+To see the results of these outputs, open a PowerShell window and run the following steps. 
+
+1. ipmo storage 
+2. $d = import-clixml <filename> 
+3. $d
+
 ## What to expect next?
 A lot of improvements and new cmdlets to analyze SDDC system health.
 Provide feedback on what you'd like to see by filing issues [here](https://github.com/PowerShell/PrivateCloud.DiagnosticInfo/issues). Also, feel free to contribute helpful changes to the script, by submitting a [pull request](https://github.com/PowerShell/PrivateCloud.DiagnosticInfo/pulls).

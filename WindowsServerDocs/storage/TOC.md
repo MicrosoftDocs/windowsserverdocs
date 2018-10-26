@@ -106,6 +106,7 @@
 #### [Fault tolerance and storage efficiency](storage-spaces/Storage-Spaces-Fault-Tolerance.md)
 #### [Drive symmetry considerations](storage-spaces/drive-symmetry-considerations.md)
 #### [Cluster and pool quorum](storage-spaces/understand-quorum.md)
+#### [Cluster sets](storage-spaces/cluster-sets.md)
 ### Plan
 #### [Hardware requirements](storage-spaces/storage-spaces-direct-hardware-requirements.md)
 #### [Using the CSV in-memory read cache](storage-spaces/csv-cache.md)
@@ -125,8 +126,10 @@
 #### [Update drive firmware](update-firmware.md)
 #### [Extend volumes](storage-spaces/resize-volumes.md)
 ### Troubleshoot
+#### [Troubleshooting scenarios](storage-spaces/troubleshooting-storage-spaces.md)
 #### [Health and operational states](storage-spaces/storage-spaces-states.md)
 #### [Collect data](storage-spaces/data-collection.md)
+#### [Frequently asked questions](storage-spaces/storage-spaces-direct-faq.md)
 ### Insider Preview
 #### [Cluster sets](storage-spaces/cluster-sets.md)
 #### [Performance history](storage-spaces/performance-history.md)
@@ -139,6 +142,9 @@
 ##### [Clusters](storage-spaces/performance-history-for-clusters.md)
 ##### [Scripting samples](storage-spaces/performance-history-scripting.md)
 #### [Delimit the allocation of volumes](storage-spaces/delimit-volume-allocation.md)
+### Troubleshoot
+#### [Health and operational states](storage-spaces/storage-spaces-states.md)
+#### [Collect data](storage-spaces/data-collection.md)
 ## [Work Folders](work-folders/work-folders-overview.md)
 ### [Designing a Work Folders Implementation](work-folders/plan-work-folders.md)
 ### [Deploying Work Folders](work-folders/deploy-work-folders.md)

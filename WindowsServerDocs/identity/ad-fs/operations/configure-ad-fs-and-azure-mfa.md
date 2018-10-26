@@ -71,7 +71,7 @@ The following pre-requisites are required when using Azure MFA for authenticatio
       - https://adnotifications.windowsazure.com
       - https://login.microsoftonline.com
 - Your on-premises environment is [federated with Azure AD.](https://azure.microsoft.com/documentation/articles/active-directory-aadconnect-get-started-custom/#configuring-federation-with-ad-fs)  
-- [Windows Azure Active Directory Module for Windows PowerShell](https://go.microsoft.com/fwlink/p/?linkid=236297).  
+- [Windows Azure Active Directory Module for Windows PowerShell](https://docs.microsoft.com/powershell/module/Azuread/?view=azureadps-2.0).  
 - Global administrator permissions on your instance of Azure AD to configure it using Azure AD PowerShell.  
 - Enterprise administrator credentials to configure the AD FS farm for Azure MFA.  
   
@@ -80,7 +80,7 @@ The following pre-requisites are required when using Azure MFA for authenticatio
 In order to complete configuration for Azure MFA for AD FS, you need to configure each AD FS server using the steps described. 
 
 >[!NOTE]
->Ensure that these steps are performed on **all** AD FS servers in the farm. If you have have multiple AD FS servers in your farm, you can perform the necessary configuration remotely using Azure AD Powershell.  
+>Ensure that these steps are performed on **all** AD FS servers in the farm. If you have multiple AD FS servers in your farm, you can perform the necessary configuration remotely using Azure AD Powershell.  
 
 ### Step 1: Generate a certificate for Azure MFA on each AD FS server using the `New-AdfsAzureMfaTenantCertificate` cmdlet
 

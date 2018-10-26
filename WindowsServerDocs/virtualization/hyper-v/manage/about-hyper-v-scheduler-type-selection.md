@@ -129,7 +129,7 @@ To read the SMT settings for a guest virtual machine, open a PowerShell window w
 (Get-VMProcessor -VMName <VMName>).HwThreadCountPerCore
 ```
 
-Note that guest VMs configured with HwThreadCountPerCore = 0 indicates that SMT will be enabled for the guest, and will expose the same number of SMT threads to the guest as there on on the underlying virtualization host, typically 2.
+Note that guest VMs configured with HwThreadCountPerCore = 0 indicates that SMT will be enabled for the guest, and will expose the same number of SMT threads to the guest as they are on the underlying virtualization host, typically 2.
 
 ### Guest VMs may observe changes to CPU topology across VM mobility scenarios
 

@@ -1,9 +1,8 @@
 ---
-title: "Get started with Windows Server 2016 Essentials"
+title: "Get started with Windows Server Essentials"
 description: "Describes how to use Windows Server Essentials"
 ms.custom: na
-ms.date: 10/28/2016
-ms.prod: windows-server-2016-essentials
+ms.prod: windows-server-2019-essentials
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
@@ -11,14 +10,14 @@ ms.topic: article
 ms.assetid: 2d0eb084-09dd-4d85-a41a-5d449cc3b504
 author: nnamuhcs
 ms.author: coreyp
-manager: dongill
+manager: jasgro
 ---
 
-# Get started with Windows Server 2016 Essentials 
+# Get started with Windows Server Essentials 
 
->Applies To: Windows Server 2016 Essentials
+>Applies To: Windows Server 2016 Essentials; Windows Server 2019 Essentials
 
-**Windows Server 2016 Essentials** edition is a cloud-connected first server, ideal for small businesses with up to 25 users and 50 devices. Essentials is a good option for customers currently using the Foundation edition, which is not available with Windows Server 2016. For more information, see [What's New in Windows Server Essentials](what-s-new.md) and [download the Windows Server Essentials evaluation](https://technet.microsoft.com/evalcenter/dn205288.aspx?wt.mc_id=TEC_144_1_7). 
+**Windows Server Essentials** edition is a cloud-connected first server designed for small businesses with up to 25 users and 50 devices. However, if you are considering installing any version of Windows Server Essentials, we would encourage you to consider **Microsoft 365**. For more information about moving beyond Windows Server Essentials to Microsoft 365, see [What's New in Windows Server 2019 Essentials](what-s-new-19.md).
   
 ## In this library  
  For information about installing, configuring, managing, using, and troubleshooting Windows Server Essentials, see the following documentation:  

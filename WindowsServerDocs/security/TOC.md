@@ -38,7 +38,7 @@
 ##### [Key mode](guarded-fabric-shielded-vm/guarded-fabric-create-host-key.md)
 ##### [AD mode](guarded-fabric-shielded-vm/guarded-fabric-admin-trusted-attestation-creating-a-security-group.md)
 ##### [Confirm attestation](guarded-fabric-shielded-vm/guarded-fabric-confirm-hosts-can-attest-successfully.md)
-##### [Using VMM](https://docs.microsoft.com/en-us/system-center/vmm/guarded-deploy-host?toc=/windows-server/virtualization/toc.json)
+##### [Using VMM](https://docs.microsoft.com/system-center/vmm/guarded-deploy-host?toc=/windows-server/virtualization/toc.json)
 #### [Deploy shielded VMs](guarded-fabric-shielded-vm/guarded-fabric-configuration-scenarios-for-shielded-vms-overview.md)
 ##### [Create a Windows template disk](guarded-fabric-shielded-vm/guarded-fabric-create-a-shielded-vm-template.md)
 ##### [Create a Linux template disk](guarded-fabric-shielded-vm/guarded-fabric-create-a-linux-shielded-vm-template.md)

@@ -11,7 +11,7 @@ ms.topic: article
 author: justinha
 ms.author: justinha
 manager: brianlic-msft
-ms.date: 09/18/2018
+ms.date: 10/19/2018
 ---
 
 # Transport Layer Security (TLS) registry settings
@@ -299,15 +299,9 @@ For a SSL 2.0 default settings, see [Protocols in the TLS/SSL (Schannel SSP)](ht
 
 Registry path: HKLM SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols
 
-To enable the SSL 2.0 protocol, create an **Enabled** entry in the appropriate subkey. 
+To enable the SSL 2.0 protocol, create an **Enabled** entry in either the Client or Server subkey, as described in the following table. 
 This entry does not exist in the registry by default. 
 After you have created the entry, change the DWORD value to 1. 
-
-To disable SSL 2.0 for client or server, change the DWORD value to 0. 
-If an SSPI app requests to use SSL 2.0, it will be denied. 
-
-To disable SSL 2.0 by default, create a **DisabledByDefault** entry and change the DWORD value to 1. 
-If an SSPI app explcitly requests to use SSL 2.0, it will be negotiated. 
 
 SSL 2.0 subkey table
 
@@ -315,6 +309,17 @@ SSL 2.0 subkey table
 |--------|-------------|
 | Client | Controls the use of SSL 2.0 on the SSL client. |
 | Server | Controls the use of SSL 2.0 on the SSL server. |
+
+To disable SSL 2.0 for client or server, change the DWORD value to 0. 
+If an SSPI app requests to use SSL 2.0, it will be denied. 
+
+To disable SSL 2.0 by default, create a **DisabledByDefault** entry and change the DWORD value to 1. 
+If an SSPI app explcitly requests to use SSL 2.0, it will be negotiated. 
+
+The following example shows SSL 2.0 disabled in the registry:
+
+![SSL 2.0 disabled](images/ssl-2-registry-setting.png)
+
 
 ## SSL 3.0
 
@@ -325,15 +330,9 @@ For SSL 3.0 default settings, see [Protocols in the TLS/SSL (Schannel SSP)](http
 
 Registry path: HKLM SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols
 
-To enable the SSL 3.0 protocol, create an **Enabled** entry in the appropriate subkey. 
+To enable the SSL 3.0 protocol, create an **Enabled** entry in either the Client or Server subkey, as described in the following table.  
 This entry does not exist in the registry by default. 
 After you have created the entry, change the DWORD value to 1. 
-
-To disable SSL 3.0 for client or server, change the DWORD value to 0.
-If an SSPI app requests to use SSL 3.0, it will be denied. 
-
-To disable SSL 3.0 by default, create a **DisabledByDefault** entry and change the DWORD value to 1. 
-If an SSPI app explicitly requests to use SSL 3.0, it will be negotiated. 
 
 SSL 3.0 subkey table
 
@@ -342,24 +341,27 @@ SSL 3.0 subkey table
 | Client | Controls the use of SSL 3.0 on the SSL client. |
 | Server | Controls the use of SSL 3.0 on the SSL server. |
 
+To disable SSL 3.0 for client or server, change the DWORD value to 0.
+If an SSPI app requests to use SSL 3.0, it will be denied. 
+
+To disable SSL 3.0 by default, create a **DisabledByDefault** entry and change the DWORD value to 1. 
+If an SSPI app explicitly requests to use SSL 3.0, it will be negotiated. 
+
+The following example shows SSL 3.0 disabled in the registry:
+
+![SSL 3.0 disabled](images/ssl-3-registry-setting.png)
 
 ## TLS 1.0
 
 This subkey controls the use of TLS 1.0.
 
-For TLS 1.0 default settings, see see [Protocols in the TLS/SSL (Schannel SSP)](https://msdn.microsoft.com/library/windows/desktop/mt808159.aspx).
+For TLS 1.0 default settings, see [Protocols in the TLS/SSL (Schannel SSP)](https://msdn.microsoft.com/library/windows/desktop/mt808159.aspx).
 
 Registry path: HKLM SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols
 
-To enable the TLS 1.0 protocol, create an **Enabled** entry in the appropriate subkey. 
+To enable the TLS 1.0 protocol, create an **Enabled** entry in either the Client or Server subkey as described in the following table. 
 This entry does not exist in the registry by default. 
 After you have created the entry, change the DWORD value to 1. 
-
-To disable TLS 1.0 for client or server, change the DWORD value to 0.
-If an SSPI app requests to use TLS 1.0, it will be denied. 
-
-To disable TLS 1.0 by default, create a **DisabledByDefault** entry and change the DWORD value to 1. 
-If an SSPI app explicitly requests to use TLS 1.0, it will be negotiated. 
 
 TLS 1.0 subkey table
 
@@ -367,6 +369,12 @@ TLS 1.0 subkey table
 |--------|-------------|
 | Client | Controls the use of TLS 1.0 on the TLS client. |
 | Server | Controls the use of TLS 1.0 on the TLS server. |
+
+To disable TLS 1.0 for client or server, change the DWORD value to 0.
+If an SSPI app requests to use TLS 1.0, it will be denied. 
+
+To disable TLS 1.0 by default, create a **DisabledByDefault** entry and change the DWORD value to 1. 
+If an SSPI app explicitly requests to use TLS 1.0, it will be negotiated. 
 
 The following example shows TLS 1.0 disabled in the registry:
 
@@ -384,15 +392,9 @@ For TLS 1.1 default settings, see [Protocols in the TLS/SSL (Schannel SSP)](http
 
 Registry path: HKLM SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols
 
-To enable the TLS 1.1 protocol, create an **Enabled** entry in the appropriate subkey. 
+To enable the TLS 1.1 protocol, create an **Enabled** entry in either the Client or Server subkey as described in the following table. 
 This entry does not exist in the registry by default. 
 After you have created the entry, change the DWORD value to 1. 
-
-To disable TLS 1.1 for client or server, change the DWORD value to 0.
-If an SSPI app requests to use TLS 1.1, it will be denied. 
-
-To disable TLS 1.1 by default, create a **DisabledByDefault** entry and change the DWORD value to 1. 
-If an SSPI app explicitly requests to use TLS 1.1, it will be negotiated. 
 
 TLS 1.1 subkey table
 
@@ -401,6 +403,15 @@ TLS 1.1 subkey table
 | Client | Controls the use of TLS 1.1 on the TLS client. |
 | Server | Controls the use of TLS 1.1 on the TLS server. |
 
+To disable TLS 1.1 for client or server, change the DWORD value to 0.
+If an SSPI app requests to use TLS 1.1, it will be denied. 
+
+To disable TLS 1.1 by default, create a **DisabledByDefault** entry and change the DWORD value to 1. 
+If an SSPI app explicitly requests to use TLS 1.1, it will be negotiated. 
+
+The following example shows TLS 1.1 disabled in the registry:
+
+![TLS 1.1 disabled](images/tls-11-registry-setting.png)
 
 ## TLS 1.2
 
@@ -414,15 +425,9 @@ For TLS 1.2 default settings, see [Protocols in the TLS/SSL (Schannel SSP)](http
 
 Registry path: HKLM SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols
 
-To enable the TLS 1.2 protocol, create an **Enabled** entry in the appropriate subkey. 
+To enable the TLS 1.2 protocol, create an **Enabled** entry in either the Client or Server subkey as described in the following table. 
 This entry does not exist in the registry by default. 
 After you have created the entry, change the DWORD value to 1. 
-
-To disable TLS 1.2 for client or server, change the DWORD value to 0.
-If an SSPI app requests to use TLS 1.2, it will be denied. 
-
-To disable TLS 1.2 by default, create a **DisabledByDefault** entry and change the DWORD value to 1. 
-If an SSPI app explicitly requests to use TLS 1.2, it will be negotiated. 
 
 TLS 1.2 subkey table
 
@@ -430,6 +435,16 @@ TLS 1.2 subkey table
 |--------|-------------|
 | Client | Controls the use of TLS 1.2 on the TLS client. |
 | Server | Controls the use of TLS 1.2 on the TLS server. |
+
+To disable TLS 1.2 for client or server, change the DWORD value to 0.
+If an SSPI app requests to use TLS 1.2, it will be denied. 
+
+To disable TLS 1.2 by default, create a **DisabledByDefault** entry and change the DWORD value to 1. 
+If an SSPI app explicitly requests to use TLS 1.2, it will be negotiated. 
+
+The following example shows TLS 1.2 disabled in the registry:
+
+![TLS 1.2 disabled](images/tls-12-registry-setting.png)
 
 ## DTLS 1.0
 
@@ -439,15 +454,9 @@ For DTLS 1.0 default settings, see [Protocols in the TLS/SSL (Schannel SSP)](htt
 
 Registry path: HKLM SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols
 
-To enable the DTLS 1.0 protocol, create an **Enabled** entry in the appropriate subkey. 
+To enable the DTLS 1.0 protocol, create an **Enabled** entry in either the Client or Server subkey as described in the following table. 
 This entry does not exist in the registry by default. 
 After you have created the entry, change the DWORD value to 1. 
-
-To disable DTLS 1.0 for client or server, change the DWORD value to 0.
-If an SSPI app requests to use DTLS 1.0, it will be denied. 
-
-To disable DTLS 1.0 by default, create a **DisabledByDefault** entry and change the DWORD value to 1. 
-If an SSPI app explicitly requests to use DTLS 1.0, it will be negotiated. 
 
 DTLS 1.0 subkey table
 
@@ -456,6 +465,15 @@ DTLS 1.0 subkey table
 | Client | Controls the use of DTLS 1.0 on the DTLS client. |
 | Server | Controls the use of DTLS 1.0 on the DTLS server. |
 
+To disable DTLS 1.0 for client or server, change the DWORD value to 0.
+If an SSPI app requests to use DTLS 1.0, it will be denied. 
+
+To disable DTLS 1.0 by default, create a **DisabledByDefault** entry and change the DWORD value to 1. 
+If an SSPI app explicitly requests to use DTLS 1.0, it will be negotiated. 
+
+The following example shows DTLS 1.0 disabled in the registry:
+
+![DTLS 1.0 disabled](images/dtls-10-registry-setting.png)
 
 ## DTLS 1.2
 
@@ -465,15 +483,9 @@ For DTLS 1.2 default settings, see [Protocols in the TLS/SSL (Schannel SSP)](htt
 
 Registry path: HKLM SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols
 
-To enable the DTLS 1.2 protocol, create an **Enabled** entry in the appropriate subkey. 
+To enable the DTLS 1.2 protocol, create an **Enabled** entry in either the Client or Server subkey as described in the following table. 
 This entry does not exist in the registry by default. 
 After you have created the entry, change the DWORD value to 1. 
-
-To disable DTLS 1.2 for client or server, change the DWORD value to 0.
-If an SSPI app requests to use DTLS 1.0, it will be denied. 
-
-To disable DTLS 1.2 by default, create a **DisabledByDefault** entry and change the DWORD value to 1. 
-If an SSPI app explicitly requests to use DTLS 1.2, it will be negotiated. 
 
 DTLS 1.2 subkey table
 
@@ -481,5 +493,16 @@ DTLS 1.2 subkey table
 |--------|-------------|
 | Client | Controls the use of DTLS 1.2 on the DTLS client. |
 | Server | Controls the use of DTLS 1.2 on the DTLS server. |
+
+
+To disable DTLS 1.2 for client or server, change the DWORD value to 0.
+If an SSPI app requests to use DTLS 1.0, it will be denied. 
+
+To disable DTLS 1.2 by default, create a **DisabledByDefault** entry and change the DWORD value to 1. 
+If an SSPI app explicitly requests to use DTLS 1.2, it will be negotiated. 
+
+The following example shows DTLS 1.1 disabled in the registry:
+
+![DTLS 1.1 disabled](images/dtls-11-registry-setting.png)
 
 

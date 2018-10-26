@@ -62,7 +62,7 @@ For the Administrators group in each domain in the forest:
 
 1.  In **Server Manager**, click **Tools**, and click **Group Policy Management**.  
 
-2.  In the console tree, expand <Forest>\Domains\\<Domain>, and then **Group Policy Objects** (where <Forest> is the name of the forest and <Domain> is the name of the domain where you want to set the Group Policy).  
+2.  In the console tree, expand &lt;Forest&gt;\Domains\\&lt;Domain&gt;, and then **Group Policy Objects** (where &lt;Forest&gt; is the name of the forest and &lt;Domain&gt; is the name of the domain where you want to set the Group Policy).  
 
 3.  In the console tree, right-click **Group Policy Objects**, and click **New**.  
 
@@ -118,7 +118,7 @@ For the Administrators group in each domain in the forest:
 
 11. In **Group Policy Management**, link the GPO to the member server and workstation OUs by doing the following:  
 
-    1.  Navigate to the <Forest>\Domains\\<Domain> (where <Forest> is the name of the forest and <Domain> is the name of the domain where you want to set the Group Policy).  
+    1.  Navigate to the &lt;Forest&gt;>\Domains\\&lt;Domain&gt; (where &lt;Forest&gt; is the name of the forest and &lt;Domain&gt; is the name of the domain where you want to set the Group Policy).  
 
     2.  Right-click the OU that the GPO will be applied to and click **Link an existing GPO**.  
 
@@ -227,7 +227,7 @@ From any member server or workstation that is not affected by the GPO changes (s
 
     ![secure admin groups](media/Appendix-G--Securing-Administrators-Groups-in-Active-Directory/SAD_97.gif)  
 
-5.  In the **Command Prompt** window, type **net use \\\\<Server Name>\c$**, where <Server Name> is the name of the member server or workstation you're attempting to access over the network.  
+5.  In the **Command Prompt** window, type **net use \\\\\<Server Name\>\c$**, where \<Server Name\> is the name of the member server or workstation you're attempting to access over the network.  
 
 6.  The following screen shot shows the error message that should appear.  
 

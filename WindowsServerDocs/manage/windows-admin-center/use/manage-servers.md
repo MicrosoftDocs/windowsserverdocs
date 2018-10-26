@@ -212,7 +212,7 @@ The following features are supported in Files:
 - Rename a file or folder
 - Extract a zip file
 - View file or folder properties
-- Manage File Server Resource Manager [quotas](https://docs.microsoft.com/en-us/windows-server/storage/fsrm/quota-management)
+- Manage File Server Resource Manager [quotas](https://docs.microsoft.com/windows-server/storage/fsrm/quota-management)
 - Add, edit, or remove file shares
 - Modify user and group permissions on file shares
 
@@ -526,7 +526,7 @@ The following features have been proposed for Storage:
 ## Storage Replica
 
 Use **Storage Replica** to manage server-to-server storage replication.
-[Learn more about Storage Replica](https://docs.microsoft.com/en-us/windows-server/storage/storage-replica/storage-replica-ui)
+[Learn more about Storage Replica](https://docs.microsoft.com/windows-server/storage/storage-replica/storage-replica-ui)
 
 ## System Insights
 
@@ -548,7 +548,7 @@ The following features are supported in Updates:
 - View a list of update history
 - Install Updates
 - Check online for updates from Microsoft Update
-- Manage [Azure Update Management](https://docs.microsoft.com/en-us/azure/automation/automation-update-management) integration
+- Manage [Azure Update Management](https://docs.microsoft.com/azure/automation/automation-update-management) integration
 
 ### Proposed Features
 

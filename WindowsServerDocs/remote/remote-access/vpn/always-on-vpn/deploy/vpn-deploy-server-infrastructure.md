@@ -107,7 +107,7 @@ Since the RRAS server is not domain joined, autoenrollment cannot be used to enr
    certreq -accept VPNGateway.cer
    ```
 
-11.	Run the Certificates MMC snap-in as described [here](https://docs.microsoft.com/en-us/dotnet/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in) selecting the **Computer account** option.
+11.	Run the Certificates MMC snap-in as described [here](https://docs.microsoft.com/dotnet/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in) selecting the **Computer account** option.
 
 12.	Ensure that a valid certificate exists for the RRAS server with the following properties:
 

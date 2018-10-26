@@ -14,7 +14,7 @@ ms.localizationpriority:
 ---
 # Understanding cluster and pool quorum
 
->Applies To: Windows Server 2016
+>Applies to: Windows Server 2019, Windows Server 2016
 
 [Windows Server Failover Clustering](../../failover-clustering\failover-clustering-overview.md) provides high availability for workloads. These resources are considered highly available if the nodes that host resources are up; however, the cluster generally requires more than half the nodes to be running, which is known as having *quorum*.
 
@@ -219,7 +219,7 @@ Each of the 24 drives has one vote and node two also has one vote (since it's th
 > ### Therefore, our guidance is:
 > 
 > - Ensure that each node in your cluster is symmetrical (each node has the same number of drives)
-> - Enable three-way mirror or dual parity so that you can tolerate a node failures and keep the virtual disks online. See our [volume guidance page](https://docs.microsoft.com/en-us/windows-server/storage/storage-spaces/plan-volumes) for more details.
+> - Enable three-way mirror or dual parity so that you can tolerate a node failures and keep the virtual disks online. See our [volume guidance page](https://docs.microsoft.com/windows-server/storage/storage-spaces/plan-volumes) for more details.
 > - If more than two nodes are down, or two nodes and a disk on another node are down, volumes may not have access to all three copies of their data, and therefore be taken offline and be unavailable. It’s recommended to bring the servers back or replace the disks quickly to ensure the most resiliency for all the data in the volume.
 
 ## More information

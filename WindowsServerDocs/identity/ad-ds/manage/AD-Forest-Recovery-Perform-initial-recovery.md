@@ -39,7 +39,7 @@ Then perform the following steps. Procedures for performing certain steps are in
    > Perform an authoritative (or primary) restore operation of SYSVOL only for the first DC to be restored in the forest root domain. Incorrectly performing primary restore operations of the SYSVOL on other DCs leads to replication conflicts of SYSVOL data. 
 
    - There are two options perform a nonauthoritative restore of AD DS and an authoritative restore of SYSVOL:  
-   - Perform a full server recovery and then then force an authoritative synchronization of SYSVOL. For detailed procedures, see [Performing a full server recovery](AD-Forest-Recovery-Perform-a-Full-Recovery.md) and [Perform an authoritative synchronization of DFSR-replicated SYSVOL](AD-Forest-Recovery-Authoritative-Recovery-SYSVOL.md). 
+   - Perform a full server recovery and then force an authoritative synchronization of SYSVOL. For detailed procedures, see [Performing a full server recovery](AD-Forest-Recovery-Perform-a-Full-Recovery.md) and [Perform an authoritative synchronization of DFSR-replicated SYSVOL](AD-Forest-Recovery-Authoritative-Recovery-SYSVOL.md). 
    - Perform a full server recovery followed by a system state restore. This option requires that you create both types of backups in advance: a full server backup and a system state backup. For detailed procedures, see [Performing a full server recovery](AD-Forest-Recovery-Perform-a-Full-Recovery.md) and [Performing a nonauthoritative restore of Active Directory Domain Services](AD-Forest-Recovery-Nonauthoritative-Restore.md). 
   
 3. After you restore and restart the writeable DC, verify that the failure did not affect the data on the DC. If the DC data is damaged, then repeat step 2 with a different backup. 
@@ -107,7 +107,7 @@ Then perform the following steps. Procedures for performing certain steps are in
   
      If you did restore a DC that was a global catalog—either inadvertently or because that was the solitary backup that you trusted—we recommend that you prevent the occurrence of lingering objects by disabling the global catalog soon after the restore operation is complete. Disabling the global catalog flag will result in the computer losing all its partial replicas (partitions) and relegating itself to regular DC status. 
   
-13. Configure Windows Time Service. In the forest root domain, configure the PDC emulator to synchronize time from an external time source. For more information, see [Configure the Windows Time service on the PDC emulator in the Forest Root Domain](https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731191%28v=ws.10%29). 
+13. Configure Windows Time Service. In the forest root domain, configure the PDC emulator to synchronize time from an external time source. For more information, see [Configure the Windows Time service on the PDC emulator in the Forest Root Domain](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731191%28v=ws.10%29). 
   
 ## Reconnect each restored writeable domain controller to a common network
 

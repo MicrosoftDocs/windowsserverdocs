@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 22.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="ICONS-64x" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 64 64" style="enable-background:new 0 0 64 64;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#FFFFFF;stroke:#868686;stroke-width:2;stroke-miterlimit:10;}
+	.st1{fill:#0C50C7;}
+	.st2{fill:#E5E5E5;stroke:#868686;stroke-width:2;stroke-miterlimit:10;}
+	.st3{fill:none;}
+</style>
+<title>i_extensions</title>
+<path class="st0" d="M16,48V16h12V4H4v56h28V48H16z"/>
+<rect x="20" y="20" class="st1" width="24" height="24"/>
+<polygon class="st0" points="49,31 49,24 53,24 53,11 40,11 40,15 33,15 33,4 60,4 60,31 "/>
+<path class="st2" d="M48,36v12H36v12h24V36H48z"/>
+<rect class="st3" width="64" height="64"/>
+</svg>

@@ -13,7 +13,7 @@ ms.localizationpriority: medium
 ---
 # Deploy Storage Spaces Direct
 
-> Applies to: Windows Server 2016
+> Applies to: Windows Server 2019, Windows Server 2016
 
 This topic provides step-by-step instructions to deploy [Storage Spaces Direct](storage-spaces-direct-overview.md).
 
@@ -143,7 +143,7 @@ Storage Spaces Direct requires high-bandwidth, low-latency networking between se
 
 Windows Server 2016 introduces switch-embedded teaming (SET) within the Hyper-V virtual switch. This allows the same physical NIC ports to be used for all network traffic while using RDMA, reducing the number of physical NIC ports required. Switch-embedded teaming is recommended for Storage Spaces Direct.
 
-For instructions to set up networking for Storage Spaces Direct, see see [Windows Server 2016 Converged NIC and Guest RDMA Deployment Guide](https://github.com/Microsoft/SDN/blob/master/Diagnostics/S2D%20WS2016_ConvergedNIC_Configuration.docx).
+For instructions to set up networking for Storage Spaces Direct, see [Windows Server 2016 Converged NIC and Guest RDMA Deployment Guide](https://github.com/Microsoft/SDN/blob/master/Diagnostics/S2D%20WS2016_ConvergedNIC_Configuration.docx).
 
 ## Step 3: Configure Storage Spaces Direct
 
@@ -219,9 +219,12 @@ After the cluster is created, it can take time for DNS entry for the cluster nam
 
 ### Step 3.4: Configure a cluster witness
 
-It is recommended that you configure a witness for the cluster, so that a three or more node system can withstand two nodes failing or being offline. A two-node deployment requires a cluster witness, otherwise either node going offline will cause the other to become unavailable as well. With these systems, you can use a file share as a witness, or use cloud witness. For more info, see [Deploy a Cloud Witness for a Failover Cluster](../../failover-clustering/deploy-cloud-witness.md).
+We recommend that you configure a witness for the cluster, so clusters with three or more servers can withstand two servers failing or being offline. A two-server deployment requires a cluster witness, otherwise either server going offline causes the other to become unavailable as well. With these systems, you can use a file share as a witness, or use cloud witness. 
 
-For more information about configuring a file share witness, see [*Configuring a File Share Witness on a Scale-Out File Server*](https://blogs.msdn.microsoft.com/clustering/2014/03/31/configuring-a-file-share-witness-on-a-scale-out-file-server/).
+For more info, see the following topics:
+
+- [Configure and manage quorum](../../failover-clustering/manage-cluster-quorum.md)
+- [Deploy a Cloud Witness for a Failover Cluster](../../failover-clustering/deploy-cloud-witness.md)
 
 ### Step 3.5: Enable Storage Spaces Direct
 
