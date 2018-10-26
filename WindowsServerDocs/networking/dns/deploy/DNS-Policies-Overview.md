@@ -64,7 +64,7 @@ The DNS policy criteria field is composed of two elements:
 |**Transport Protocol**|Transport protocol used in the query. Possible entries are **UDP** and **TCP**|-   **EQ,TCP**<br />-   **EQ,UDP**|  
 |**Internet Protocol**|Network protocol used in the query. Possible entries are **IPv4** and **IPv6**|-   **EQ,IPv4**<br />-   **EQ,IPv6**|  
 |**Server Interface IP address**|IP address for the incoming DNS server network interface|-   **EQ,10.0.0.1**<br />-   **EQ,192.168.1.1**|  
-|**FQDN**|FQDN of record in the query, with the possibility of using a wild card|-   **EQ,www.contoso.com** - resolves tot rue only the if the query is trying to resolve the *www.contoso.com* FQDN<br />-   **EQ,\*.contoso.com,\*.woodgrove.com** - resolves to true if the query is for any record ending in *contoso.com***OR***woodgrove.com*|  
+|**FQDN**|FQDN of record in the query, with the possibility of using a wild card|-   **EQ,www.contoso.com** - resolves to true only if the query is trying to resolve the *www.contoso.com* FQDN<br />-   **EQ,\*.contoso.com,\*.woodgrove.com** - resolves to true if the query is for any record ending in *contoso.com* **OR** *woodgrove.com*|  
 |**Query Type**|Type of record being queried (A, SVR, TXT)|-   **EQ,TXT,SRV** - resolves tot rue if the query is requesting a TXT **OR** SRV record<br />-   **EQ,MX** - resolves tot rue if the query is requesting an MX record|  
 |**Time of Day**|Time of day the query is received|-   **EQ,10:00-12:00,22:00-23:00** - resolves tot rue if the query is received between 10 AM and noon, **OR** between 10PM and 11PM|  
   
