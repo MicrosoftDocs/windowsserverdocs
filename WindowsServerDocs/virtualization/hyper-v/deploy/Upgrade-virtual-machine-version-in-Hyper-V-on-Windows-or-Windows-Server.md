@@ -137,3 +137,4 @@ The following table shows the minimum virtual machine configuration version requ
 |Hibernation support|9.0|
 
 For more information about these features, see [What's new in Hyper-V on Windows Server](../What-s-new-in-Hyper-V-on-Windows.md).
+

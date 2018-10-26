@@ -7,7 +7,7 @@ ms.manager: eldenc
 ms.technology: storage-spaces
 ms.topic: article
 author: cosmosdarwin
-ms.date: 04/24/2017
+ms.date: 10/08/2018
 ms.localizationpriority: medium
 ---
 # Choosing drives for Storage Spaces Direct
@@ -94,6 +94,9 @@ For workloads which require vast capacity and write infrequently, such as archiv
 ![Deployment options for maximizing capacity](media/choosing-drives-and-resiliency-types/maximizing-capacity.png)
 
 1. **SSD + HDD**. The SSDs will cache reads and writes, to absorb bursts and provide SSD-like write performance, with optimized de-staging later to the HDDs.
+
+>[!IMPORTANT]
+>Not all HDD configurations are supported. High endurance SSDs caching to low endurance SSDs is not advised.
 
 ## Sizing considerations
 
