@@ -142,9 +142,6 @@
 ##### [Clusters](storage-spaces/performance-history-for-clusters.md)
 ##### [Scripting samples](storage-spaces/performance-history-scripting.md)
 #### [Delimit the allocation of volumes](storage-spaces/delimit-volume-allocation.md)
-### Troubleshoot
-#### [Health and operational states](storage-spaces/storage-spaces-states.md)
-#### [Collect data](storage-spaces/data-collection.md)
 ## [Work Folders](work-folders/work-folders-overview.md)
 ### [Designing a Work Folders Implementation](work-folders/plan-work-folders.md)
 ### [Deploying Work Folders](work-folders/deploy-work-folders.md)
