@@ -190,12 +190,12 @@ You can create DNS server recursion policies to choose a recursion scope for a s
 
 If the DNS server is not authoritative for some queries, DNS server recursion policies allow you to control how to resolve the queries. 
 
-In this example, the internal recursion scope with recursion enabled is associated with the private network interface
+In this example, the internal recursion scope with recursion enabled is associated with the private network interface.
 
 You can use the following example command to configure DNS recursion policies.
 
     
-    Add-DnsServerQueryResolutionPolicy -Name "SplitBrainRecursionPolicy" -Action ALLOW -ApplyOnRecursion -RecursionScope "InternalClients" -ServerInterfaceIP  "EQ,10.0.0.39"
+    Add-DnsServerQueryResolutionPolicy -Name "SplitBrainRecursionPolicy" -Action ALLOW -ApplyOnRecursion -RecursionScope "InternalClients" -ServerInterfaceIP "EQ,10.0.0.39"
     
 
 For more information, see [Add-DnsServerQueryResolutionPolicy](https://docs.microsoft.com/en-us/powershell/module/dnsserver/add-dnsserverqueryresolutionpolicy?view=win10-ps).
