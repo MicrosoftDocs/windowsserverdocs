@@ -46,8 +46,9 @@ The following authentication/policy capabilities are in AD FS 2019:
 ### Sign-in SSO improvements
 The following sign-in SSO improvements have been made in AD FS 2019:
 
-- [Paginated UX with Centered Theme](../ad-fs/operations/AD-FS-paginated-sign-in.md) - ADFS now has moved to a paginated UX flow that allows ADFS to validate and provide a more smoother sign-in experience. ADFS now uses a centered UI (instead of the right side of the screen). You may require newer logo and background images to align with this experience. This also mirrors functionality offered in Azure AD.
+- [Paginated UX with Centered Theme](../operations/AD-FS-paginated-sign-in.md) - ADFS now has moved to a paginated UX flow that allows ADFS to validate and provide a more smoother sign-in experience. ADFS now uses a centered UI (instead of the right side of the screen). You may require newer logo and background images to align with this experience. This also mirrors functionality offered in Azure AD.
 - **Bug fix: Persistent SSO state for Win10 devices when doing PRT auth (Accenture issue)**	This addresses an issue where MFA state was not persisted when using PRT authentication for Windows 10 devices. The result of the issue was that end users would get prompted for 2nd factor credential (MFA) frequently. The fix also makes the experience consistent when device auth is successfully performed via client TLS and via PRT mechanism. 
+
 
 ### Suppport for building modern line-of-business apps
 The following support for building modern LOB apps has been added to AD FS 2019:
