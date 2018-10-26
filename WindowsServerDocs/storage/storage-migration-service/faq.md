@@ -95,11 +95,15 @@ The Storage Migration Service Proxy service copies 8 files simultaneously in a g
 
 ## <a name="non-windows"></a> Can I migrate from sources other than Windows Server?
 
-The Storage Migration Service version shipped in the Windows Server 2019 supports migrating from Windows Server 2003 and later operating systems. It cannot currently migrate from Linux, Samba, NetApp, EMC, or other SAN and NAS storage devices. We plan to allow this in a future version of Storage Migration Service, starting with Linux Samba support.
+The Storage Migration Service version shipped in Windows Server 2019 supports migrating from Windows Server 2003 and later operating systems. It cannot currently migrate from Linux, Samba, NetApp, EMC, or other SAN and NAS storage devices. We plan to allow this in a future version of Storage Migration Service, starting with Linux Samba support.
 
 ## <a name="previous-versions"></a> Can I migrate previous file versions?
 
-The Storage Migration Service version shipped in the Windows Server 2019 does not support migrating Previous Versions (made with the volume shadow copy service) of files. Only the current version will migrate. 
+The Storage Migration Service version shipped in Windows Server 2019 does not support migrating Previous Versions (made with the volume shadow copy service) of files. Only the current version will migrate. 
+
+## <a name="ntfs-refs"></a> Can I migrate from NTFS to REFS?
+
+The Storage Migration Service version shipped in Windows Server 2019 does not support migrating from the NTFS to REFS file systems. You can migrate from NTFS to NTFS and REFS to ReFS. This is by design, due to the many differences in functionality, metadata, and other aspects that ReFS does not duplicate from NTFS. ReFS is intended as an application workload file system, not a general file system. For more information, review [Resilient File System (ReFS) overview](https://docs.microsoft.com/en-us/windows-server/storage/refs/refs-overview)
 
 ## <a name="give-feedback"></a> What are my options to give feedback, file bugs, or get support?
 
