@@ -7,12 +7,11 @@ ms.topic: article
 author: coreyp-at-msft
 ms.author: coreyp
 ms.localizationpriority: high
-ms.date: 10/19/2018
 ---
 
 # What's new in Windows Server 2019
 
-This topic describes some of the new features in Windows Server 2019. Windows Server 2019 is built on the strong foundation of Windows Server 2016 and brings numerous innovations on four key themes: Hybrid, Security, Application Platform, and Hyper-Converged Infrastructure (HCI).
+This topic describes some of the new features in Windows Server 2019. Windows Server 2019 is built on the strong foundation of Windows Server 2016 and brings numerous innovations on four key themes: Hybrid, Security, Application Platform, and Hyper-Converged Infrastructure (HCI). To find out What's New in Windows Server, version 1809, see [What's New in Windows Server, version 1809](../get-started/whats-new-in-windows-server-1809.md).
 
 ## General
 
@@ -27,24 +26,11 @@ System Insights is a new feature available in Windows Server 2019 that brings lo
 
 ## Hybrid Cloud
 
-### Windows Admin Center
-
-[Windows Admin Center](https://docs.microsoft.com/windows-server/manage/windows-admin-center/overview) is an evolution of Windows Server in-box management tools; it’s a single pane of glass that consolidates all aspects of local and remote server management. 
-As a locally deployed, browser-based management experience, an Internet connection and Azure aren’t required. Windows Admin Center gives you full control of all aspects of your deployment, 
-including private networks that aren’t Internet-connected.
-
-Windows Admin Center is a download with no additional cost beyond your Windows licenses. See the Windows Admin Center operating system support [matrix](https://docs.microsoft.com/windows-server/manage/windows-admin-center/plan/installation-options) for installation and management compatibility.
-
 ### Server Core app compatibility feature on demand
 
 The [Server Core App Compatibility feature on demand (FOD)](https://docs.microsoft.com/windows-server/get-started-19/install-fod-19) significantly improves the app compatibility of the Windows Server Core installation option by including a subset of binaries and components from Windows Server with the Desktop Experience, without adding the Windows Server Desktop Experience graphical environment itself.  This is done to increase the functionality and compatibility of Server Core while keeping it as lean as possible.  
 
 This optional feature on demand is available on a separate ISO and can be added to Windows Server Core installations and images only, using DISM. 
-
-### Azure Network Adapter
-
-Now with Windows Server 2019, Windows Admin Center enables a one-click experience to configure a point-to-site VPN connection between an on-premises Windows Server and an Azure Virtual Network.
-This automates the configuration for the Azure Virtual Network gateway as well as the on-premises VPN client.
 
 ## Security
 

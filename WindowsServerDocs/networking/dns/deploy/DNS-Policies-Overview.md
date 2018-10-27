@@ -64,9 +64,9 @@ The DNS policy criteria field is composed of two elements:
 |**Transport Protocol**|Transport protocol used in the query. Possible entries are **UDP** and **TCP**|-   **EQ,TCP**<br />-   **EQ,UDP**|  
 |**Internet Protocol**|Network protocol used in the query. Possible entries are **IPv4** and **IPv6**|-   **EQ,IPv4**<br />-   **EQ,IPv6**|  
 |**Server Interface IP address**|IP address for the incoming DNS server network interface|-   **EQ,10.0.0.1**<br />-   **EQ,192.168.1.1**|  
-|**FQDN**|FQDN of record in the query, with the possibility of using a wild card|-   **EQ,www.contoso.com** - resolves to true only if the query is trying to resolve the *www.contoso.com* FQDN<br />-   **EQ,\*.contoso.com,\*.woodgrove.com** - resolves to true if the query is for any record ending in *contoso.com* **OR** *woodgrove.com*|  
-|**Query Type**|Type of record being queried (A, SVR, TXT)|-   **EQ,TXT,SRV** - resolves tot rue if the query is requesting a TXT **OR** SRV record<br />-   **EQ,MX** - resolves tot rue if the query is requesting an MX record|  
-|**Time of Day**|Time of day the query is received|-   **EQ,10:00-12:00,22:00-23:00** - resolves tot rue if the query is received between 10 AM and noon, **OR** between 10PM and 11PM|  
+|**FQDN**|FQDN of record in the query, with the possibility of using a wild card|-   **EQ,www.contoso.com** - resolves tot rue only the if the query is trying to resolve the *www.contoso.com* FQDN<br />-   **EQ,\*.contoso.com,\*.woodgrove.com** - resolves to true if the query is for any record ending in *contoso.com***OR***woodgrove.com*|  
+|**Query Type**|Type of record being queried (A, SVR, TXT)|-   **EQ,TXT,SRV** - resolves to true if the query is requesting a TXT **OR** SRV record<br />-   **EQ,MX** - resolves to true if the query is requesting an MX record|  
+|**Time of Day**|Time of day the query is received|-   **EQ,10:00-12:00,22:00-23:00** - resolves to true if the query is received between 10 AM and noon, **OR** between 10PM and 11PM|  
   
 Using the table above as a starting point, the table below could be used to define a criterion that is used to match queries for any type of records but SRV records in the contoso.com domain coming from a client in the 10.0.0.0/24 subnet via TCP between 8 and 10 PM through interface 10.0.0.3:  
   
@@ -107,7 +107,7 @@ Zone transfer policies control whether a zone transfer is allowed or not by your
 You can use the server level zone transfer policy below to deny a zone transfer for the contoso.com domain from a given subnet:  
   
 ```  
-Add-DnsServerZoneTransferPolicy -Name DenyTransferOfCOnsotostoFabrikam -Zone contoso.com -Action DENY -ClientSubnet "EQ,192.168.1.0/24"  
+Add-DnsServerZoneTransferPolicy -Name DenyTransferOfContosoToFabrikam -Zone contoso.com -Action DENY -ClientSubnet "EQ,192.168.1.0/24"  
 ```  
   
 You can create multiple zone transfer policies of the same level, as long as they have a different value for the processing order. When multiple policies are available, the DNS server processes incoming queries in the following manner:  

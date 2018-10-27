@@ -268,6 +268,8 @@
 #### [Set up Geographic Redundancy with SQL Server Replication](ad-fs/deployment/Set-up-Geographic-Redundancy-with-SQL-Server-Replication.md)
 #### [Set up the lab environment for AD FS in Windows Server 2012 R2](ad-fs/deployment/Set-up-the-lab-environment-for-AD-FS-in-Windows-Server-2012-R2.md)
 #### [Upgrading to AD FS in Windows Server 2016 using a WID database](ad-fs/deployment/Upgrading-to-AD-FS-in-Windows-Server.md)
+#### [Deploy AD FS in Azure](ad-fs/deployment/how-to-connect-fed-azure-adfs.md)
+#### [AD FS in Azure with Azure Traffic Manager](ad-fs/deployment/active-directory-adfs-in-azure-with-azure-traffic-manager.md)  
 #### [Upgrading to AD FS in Windows Server 2016 using a SQL database](ad-fs/deployment/Upgrading-to-AD-FS-in-Windows-Server-SQL.md)
 #### [Deploy Azure AD Connect Health to Monitor your on-premises identity infrastructure in the cloud](https://azure.microsoft.com/documentation/articles/active-directory-aadconnect-health)
 
