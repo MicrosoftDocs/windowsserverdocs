@@ -127,9 +127,6 @@
 ###### [Step 7.3. Configure the Conditional Access policy](remote-access/vpn/vpn-config-conditional-access-policy.md)
 ###### [Step 7.4. Deploy Conditional Access root certificates to on-premises AD](remote-access/vpn/vpn-deploy-cond-access-root-cert-to-on-premise-ad.md)
 ###### [Step 7.5. Create OMA-DM based VPNv2 Profiles to Windows 10 devices](remote-access/vpn/vpn-create-oma-dm-based-vpnv2-profiles.md)
-#### [Overview of the DirectAccess to Always On VPN migration](remote-access/da-always-on-vpn-migration/da-always-on-migration-overview.md)
-##### [Plan the DirectAccess to Always On VPN migration](remote-access/da-always-on-vpn-migration/da-always-on-migration-planning.md)
-##### [Migrate to Always On VPN and decommission DirectAccess](remote-access/da-always-on-vpn-migration/da-always-on-migration-deploy.md)
 #### [Troubleshoot Always On VPN](remote-access/vpn/always-on-vpn/deploy/always-on-vpn-deploy-troubleshooting.md)
 
 
