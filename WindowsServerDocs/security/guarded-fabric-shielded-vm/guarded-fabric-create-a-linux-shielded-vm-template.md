@@ -172,7 +172,7 @@ Key Usage | Digital Signature
 Details about this certificate will be shown to tenants when they create their shielding data files and are authorizing disks they trust.
 Therefore, it is important to obtain this certificate from a certificate authority mutually trusted by you and your tenants.
 In enterprise scenarios where you are both the hoster and tenant, you might consider issuing this certificate from your enterprise certificate authority.
-Protect this certificate carefully, as anyone in posession of this certificate can create new template disks that are trusted the same as your authentic disk.
+Protect this certificate carefully, as anyone in possession of this certificate can create new template disks that are trusted the same as your authentic disk.
 
 In a test lab environment, you can create a self-signed certificate with the following PowerShell command:
 
@@ -201,7 +201,7 @@ If you are using System Center Virtual Machine Manager to deploy your VM, you ca
 
 You may also want to extract the volume signature catalog from the VHDX.
 This file is used to provide information about the signing certificate, disk name, and version to VM owners who want to use your template.
-They need to import this file into the Shielding Data File Wizard to authorize you, the template author in posession of the signing certificate, to create this and future template disks for them.
+They need to import this file into the Shielding Data File Wizard to authorize you, the template author in possession of the signing certificate, to create this and future template disks for them.
 
 To extract the volume signature catalog, run the following command in PowerShell:
 
