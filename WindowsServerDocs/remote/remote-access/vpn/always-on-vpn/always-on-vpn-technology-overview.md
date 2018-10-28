@@ -4,7 +4,7 @@ description: 'This page provies a brief overview of the Always On VPN technologi
 ms.prod: windows-server-threshold
 ms.technology: networking-ras
 ms.topic: article
-ms.date: 08/30/2018
+ms.date: 10/28/2018
 ms.author: pashort
 author: shortpatti
 manager: dougkim
@@ -29,7 +29,7 @@ The connection process depicted in this illustration is comprised of the followi
 
 2. Using the IP address returned by DNS, the VPN client sends a connection request to the VPN gateway.
 
-3. The VPN gateway is also configured as a Remote Authentication Dial In User Service \(RADIUS\) Client; the VPN RADIUS Client sends the connection request to the organization/corporate NPS server for connection request processing.
+3. The VPN gateway is also configured as a Remote Authentication Dial-In User Service \(RADIUS\) Client; the VPN RADIUS Client sends the connection request to the organization/corporate NPS server for connection request processing.
 
 4. The NPS server processes the connection request, including performing authorization and authentication, and determines whether to allow or deny the connection request.
 
@@ -121,7 +121,7 @@ When you use digital server certificates for authentication between computers on
 
 2.  Integrity through digital signatures.
 
-3.  Authentication by associating certificate keys with computer, user, or device accounts on a computer network.
+3.  Authentication by associating certificate keys with a computer, user, or device accounts on a computer network.
 
 For more information, see [AD CS Step by Step Guide: Two Tier PKI Hierarchy Deployment](https://social.technet.microsoft.com/wiki/contents/articles/15037.ad-cs-step-by-step-guide-two-tier-pki-hierarchy-deployment.aspx).
 
@@ -197,7 +197,6 @@ Windows 10 offers many CSPs, but this deployment focuses on using the VPNv2 CSP 
 |If you want to...  |Then see...  |
 |---------|---------|
 |Learn about the Always On VPN advanced features  |[Advance VPN features](deploy/always-on-vpn-adv-options.md): This page provides guidance on how to enable VPN Traffic Filters, how to configure Automatic VPN connections using App-Triggers, and how to configure NPS to only allow VPN Connections from clients using certificates issued by Azure AD.         |
-|Migrate from DirectAccess to Always On VPN |[DirectAccess to Always On VPN migration overview](../../da-always-on-vpn-migration/da-always-on-migration-overview.md): In previous versions of the Windows VPN architecture, platform limitations made it difficult to provide the critical functionality needed to replace DirectAccess (like automatic connections initiated before users sign in). Always On VPN, however, has mitigated most of those limitations or expanded the VPN functionality beyond the capabilities of DirectAccess. |
 |Get started with your deployment |[Plan the Always On VPN deployment](deploy/always-on-vpn-deploy-deployment.md): Before you install the Remote Access server role on the computer you're planning on using as a VPN server. After proper planning, you can deploy Always On VPN, and optionally configure conditional access for VPN connectivity using Azure AD.  |
 
 
