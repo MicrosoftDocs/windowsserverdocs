@@ -56,7 +56,7 @@ Protocol |Ports |Description
 HTTPS|443(TCP/UDP)|Used for device authentication.
 TCP|49443 (TCP)|Used for certificate authentication.
 
-For additional information on required ports and protocols required for hybrid deployments see the document [here](https://azure.microsoft.com/en-us/documentation/articles/active-directory-aadconnect-ports/).
+For additional information on required ports and protocols required for hybrid deployments see the document [here](https://azure.microsoft.com/documentation/articles/active-directory-aadconnect-ports/).
 
 For detailed information about ports and protocols required for an Azure AD and Office 365 deployment, see the document [here](https://support.office.com/en-us/article/Office-365-URLs-and-IP-address-ranges-8548a211-3fe7-47cb-abb1-355ea5aa88a2?ui=en-US&rs=en-US&ad=US).
 
@@ -121,7 +121,7 @@ The most important security recommendation for your AD FS infrastructure is to e
 
 The recommended way for Azure AD customers to monitor and keep current their infrastructure is via Azure AD Connect Health for AD FS, a feature of Azure AD Premium.  Azure AD Connect Health includes monitors and alerts that trigger if an AD FS or WAP machine is missing one of the important updates specifically for AD FS and WAP.
 
-Information on installing Azure AD Connect Health for AD FS can be found [here](https://azure.microsoft.com/en-us/documentation/articles/active-directory-aadconnect-health-agent-install/).
+Information on installing Azure AD Connect Health for AD FS can be found [here](https://azure.microsoft.com/documentation/articles/active-directory-aadconnect-health-agent-install/).
 
 ## Additional security configurations
 The following additional capabilities can be configured optionally to provide additional protections to those offered in the default deployment.
