@@ -54,7 +54,7 @@ A current known bug causes the administrator password on the uploaded image to e
 ![Screenshot of administrator properties.](media/6_adminprops.png)
 
 ## Uploading the image VHD
-You can use the script below to upload the VHD. Before you do this, you’ll need the publish settings file for your Azure account. Get your [Azure file settings](https://azure.microsoft.com/en-us/downloads/).
+You can use the script below to upload the VHD. Before you do this, you’ll need the publish settings file for your Azure account. Get your [Azure file settings](https://azure.microsoft.com/downloads/).
 
 Here is the script:
 

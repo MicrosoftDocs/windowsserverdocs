@@ -26,7 +26,7 @@ There are a number of subscriptions, services, and computers you'll need to acqu
 
 -   Azure AD premium subscription
     
-    See [Get started with an Azure subscription](https://azure.microsoft.com/en-us/trial/get-started-active-directory/), for a trial subscription to Azure. 
+    See [Get started with an Azure subscription](https://azure.microsoft.com/trial/get-started-active-directory/), for a trial subscription to Azure. 
 
 -   MDM service, such as Intune
     
