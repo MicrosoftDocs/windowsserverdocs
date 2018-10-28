@@ -128,16 +128,6 @@ sections:
       
       title: Deployment workflow and scenarios
 
-    - href: \windows-server\remote\remote-access\da-always-on-vpn-migration\da-always-on-migration-overview
-    
-      html: <p>Start planning the migration from DirectAccess to Always On VPN.</p>
-
-      image:
-
-        src: https://docs.microsoft.com/media/common/i_upgrade.svg
-      
-      title: Migrate from DirectAccess
-
     - href: \windows-server\remote\remote-access\vpn\always-on-vpn\deploy\always-on-vpn-deploy-planning
     
       html: <p>Start planning and preparing your Always On VPN deployment.</p>
