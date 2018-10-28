@@ -26,7 +26,7 @@ This topic explains the new and changed functionality in Failover Clustering for
 
 - **Azure-aware clusters**
 
-    Failover clusters now automatically detect when they're running in Azure IaaS virtual machines and and optimize the configuration to provide proactive failover and logging of Azure planned maintenance events to achieve the highest levels of availability. Deployment is also simplified by removing the need to configure the load balancer with Dynamic Network Name for cluster name.
+    Failover clusters now automatically detect when they're running in Azure IaaS virtual machines and optimize the configuration to provide proactive failover and logging of Azure planned maintenance events to achieve the highest levels of availability. Deployment is also simplified by removing the need to configure the load balancer with Dynamic Network Name for cluster name.
 
 - **Cross-domain cluster migration**
 
