@@ -325,7 +325,7 @@ For example, the command to remove the CLUSTER1 cluster from cluster sets would 
 **Answer:** PowerShell or WMI in this release.
 
 **Question:** How will the cross-cluster live migration work with processors of different generations?  <br>
-**Answer:** Cluster sets does not work around processor differences and supercede what Hyper-V currently supports.  Therefore, processor compatibility mode must be used with quick migrations.  The recommendation for Cluster sets is to use the same processor hardware within each individual Cluster as well as the entire Cluster Set for live migrations between clusters to occur.
+**Answer:** Cluster sets does not work around processor differences and supersede what Hyper-V currently supports.  Therefore, processor compatibility mode must be used with quick migrations.  The recommendation for Cluster sets is to use the same processor hardware within each individual Cluster as well as the entire Cluster Set for live migrations between clusters to occur.
 
 **Question:** Can my cluster set virtual machines automatically failover on a cluster failure?  <br>
 **Answer:** In this release, cluster set virtual machines can only be manually live-migrated across clusters; but cannot automatically failover. 
