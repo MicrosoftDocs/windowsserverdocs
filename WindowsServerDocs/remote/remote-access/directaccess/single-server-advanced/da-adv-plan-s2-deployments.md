@@ -98,7 +98,7 @@ Consider the following decisions when you are planning to deploy your DirectAcce
   
     Decide how DirectAccess clients will authenticate to the DirectAccess server:  
   
-    -   **User authentication**. You can enable users to authenticate with Active Directory credentials or with two-factor authentication. For more information about authenticating with two-factor authentication, see [Deploy Remote Access with OTP authentication](https://technet.microsoft.com/en-us/library/hh831379.aspx).  
+    -   **User authentication**. You can enable users to authenticate with Active Directory credentials or with two-factor authentication. For more information about authenticating with two-factor authentication, see [Deploy Remote Access with OTP authentication](https://technet.microsoft.com/library/hh831379.aspx).  
   
     -   **Computer authentication**. You can configure computer authentication to use certificates or to use the DirectAccess server as a Kerberos proxy on behalf of the client. For more information, see [1.3 Plan certificate requirements](da-adv-plan-s1-infrastructure.md#bkmk_12CAsandCerts).  
   

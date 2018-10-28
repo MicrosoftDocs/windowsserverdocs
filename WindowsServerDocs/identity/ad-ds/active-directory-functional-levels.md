@@ -86,7 +86,7 @@ Supported Domain Controller Operating System:
 ### Windows Server 2012 domain functional level features
 
 * All default Active Directory features, all features from the Windows Server 2008R2 domain functional level, plus the following features:
-   * The KDC support for claims, compound authentication, and Kerberos armoring KDC administrative template policy has two settings (Always provide claims and Fail unarmored authentication requests) that require Windows Server 2012 domain functional level. For more information, see [What's New in Kerberos Authentication](https://technet.microsoft.com/en-us/library/hh831747.aspx)
+   * The KDC support for claims, compound authentication, and Kerberos armoring KDC administrative template policy has two settings (Always provide claims and Fail unarmored authentication requests) that require Windows Server 2012 domain functional level. For more information, see [What's New in Kerberos Authentication](https://technet.microsoft.com/library/hh831747.aspx)
 
 ## Windows Server 2008R2
 

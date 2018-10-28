@@ -361,7 +361,7 @@ Following are the requirements for DNS when you deploy DirectAccess.
 -   For DirectAccess clients, you must use a DNS server that is running  Windows Server 2012 R2 ,  Windows Server 2012 ,  Windows Server 2008 R2 ,  Windows Server 2008 , or any other DNS server that supports IPv6.  
   
     > [!NOTE]  
-    > It is not recommended that you use DNS servers that are running Windows Server 2003 when you are deploying DirectAccess. Although Windows Server 2003 DNS servers do support IPv6 records, Windows Server 2003 is no longer supported by Microsoft. In addition, you should not deploy DirectAccess if your domain controllers are running Windows Server 2003 due to an issue with the File Replication Service. For more information, see [DirectAccess Unsupported Configurations](https://technet.microsoft.com/en-us/library/dn464274.aspx).  
+    > It is not recommended that you use DNS servers that are running Windows Server 2003 when you are deploying DirectAccess. Although Windows Server 2003 DNS servers do support IPv6 records, Windows Server 2003 is no longer supported by Microsoft. In addition, you should not deploy DirectAccess if your domain controllers are running Windows Server 2003 due to an issue with the File Replication Service. For more information, see [DirectAccess Unsupported Configurations](https://technet.microsoft.com/library/dn464274.aspx).  
   
 -   Use a DNS server that supports dynamic updates. You can use DNS servers that do not support dynamic updates, but you must manually update entries on these servers.  
   

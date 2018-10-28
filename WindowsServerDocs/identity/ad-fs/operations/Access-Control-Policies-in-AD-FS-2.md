@@ -264,7 +264,7 @@ By default, failed requests are logged to the application event log located unde
 
 ### Configuring Verbose AD FS Tracing Logs
 
-AD FS tracing events are logged to the AD FS 2.0 debug log. To enable tracing, see [Configure debug tracing for AD FS 2.0](https://technet.microsoft.com/en-us/library/adfs2-troubleshooting-configuring-computers.aspx).
+AD FS tracing events are logged to the AD FS 2.0 debug log. To enable tracing, see [Configure debug tracing for AD FS 2.0](https://technet.microsoft.com/library/adfs2-troubleshooting-configuring-computers.aspx).
 
 After you have enabled tracing, use the following command line syntax to enable the verbose logging level:
 wevtutil.exe sl “AD FS 2.0 Tracing/Debug” /l:5  

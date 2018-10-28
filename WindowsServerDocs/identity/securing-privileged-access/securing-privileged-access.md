@@ -115,7 +115,7 @@ To separate internet risks from all privileged administrative accounts, continue
 
 To lower the exposure time of privileges and increase visibility into their use, provide privileges just in time (JIT) using an appropriate solution such as the ones below:
 
--   For Active Directory Domain Services (AD DS), use Microsoft Identity Manager (MIM)'s [Privileged Access Manager (PAM)](https://technet.microsoft.com/en-us/library/mt150258.aspx) capability.
+-   For Active Directory Domain Services (AD DS), use Microsoft Identity Manager (MIM)'s [Privileged Access Manager (PAM)](https://technet.microsoft.com/library/mt150258.aspx) capability.
 
 -   For Azure Active Directory, use [Azure AD Privileged Identity Management (PIM)](http://aka.ms/AzurePIM) capability.
 
@@ -187,9 +187,9 @@ For more information on engaging Microsoft services to assist with any of these 
 
 [Microsoft Advanced Threat Analytics](http://aka.ms/ata)
 
-[Protect derived domain credentials with Credential Guard](https://technet.microsoft.com/en-us/library/mt483740%28v=vs.85%29.aspx)
+[Protect derived domain credentials with Credential Guard](https://technet.microsoft.com/library/mt483740%28v=vs.85%29.aspx)
 
-[Device Guard Overview](https://technet.microsoft.com/en-us/library/dn986865(v=vs.85).aspx)
+[Device Guard Overview](https://technet.microsoft.com/library/dn986865(v=vs.85).aspx)
 
 [Protecting high-value assets with secure admin workstations](https://msdn.microsoft.com/en-us/library/mt186538.aspx)
 

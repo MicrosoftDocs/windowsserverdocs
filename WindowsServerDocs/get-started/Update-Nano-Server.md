@@ -155,5 +155,5 @@ Other methods for updating Nano Server might overlap or complement the options a
   - WUStatusServer (generally uses the same value as WUServer)
   - UseWUServer
   - AUOptions
-- [Managing Fabric Updates in VMM](https://technet.microsoft.com/en-us/library/gg675084(v=sc.12).aspx)
-- [Registering a Scheduled Task](https://technet.microsoft.com/en-us/library/jj649811.aspx)
+- [Managing Fabric Updates in VMM](https://technet.microsoft.com/library/gg675084(v=sc.12).aspx)
+- [Registering a Scheduled Task](https://technet.microsoft.com/library/jj649811.aspx)
