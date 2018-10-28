@@ -12,7 +12,7 @@ ms.author: pashort
 author: shortpatti
 ---
 
-# Feature Comparison of Always On VPN and DirectAccess
+# Always On VPN features
 
 >Applies To: Windows Server \(Semi-Annual Channel\), Windows Server 2016, Windows 10
 
