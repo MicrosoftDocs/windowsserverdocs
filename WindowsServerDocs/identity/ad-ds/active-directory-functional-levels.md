@@ -36,7 +36,7 @@ Supported Domain Controller Operating System:
 ### Windows Server 2016 forest functional level features
 
 * All of the features that are available at the Windows Server 2012R2 forest functional level, and the following features, are available:
-   * [Privileged access management (PAM) using Microsoft Identity Manager (MIM)] (https://docs.microsoft.com/windows-server/identity/whats-new-active-directory-domain-services#a-namebkmkpamaprivileged-access-management)
+   * [Privileged access management (PAM) using Microsoft Identity Manager (MIM)](https://docs.microsoft.com/windows-server/identity/whats-new-active-directory-domain-services#a-namebkmkpamaprivileged-access-management)
 
 ### Windows Server 2016 domain functional level features
 

@@ -187,7 +187,7 @@ It is not recommended to do SSL termination before WAP. In case SSL termination 
 ### I am trying to get additional claims on the user info endpoint, but its only returning subject. How can I get additional claims?
 The ADFS userinfo endpoint always returns the subject claim as specified in the OpenID standards. AD FS does not provide additional claims requested via the UserInfo endpoint. If you need additional claims in ID token, refer to [Custom ID Tokens in AD FS](../development/custom-id-tokens-in-ad-fs.md).
 
-### Why do I see alot of 1021 errors on my AD FS servers?
+### Why do I see a lot of 1021 errors on my AD FS servers?
 This event is logged usually for an invalid resource access on AD FS for resource 00000003-0000-0000-c000-000000000000. This error is caused by an erroneous behavior of the client where it tries to get an access token for the Azure AD Graph service. Since the resource is not present on AD FS, this results in event ID 1021 on the AD FS servers. It’s safe to ignore any warnings or errors for resource 00000003-0000-0000-c000-000000000000 on AD FS. 
 
 ### Why am I seeing a warning for failure to add the AD FS service account to the Enterprise Key Admins group?
