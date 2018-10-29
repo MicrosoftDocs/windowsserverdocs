@@ -25,6 +25,10 @@ With the end of life of Windows 2003, Windows 2003 domain controllers (DCs) need
 
 At the Windows Server 2008 and higher domain functional levels, Distributed File Service (DFS) Replication is used to replicate SYSVOL folder contents between domain controllers. If you create a new domain at the Windows Server 2008 domain functional level or higher, DFS Replication is automatically used to replicate SYSVOL. If you created the domain at a lower functional level, you will need to migrate from using FRS to DFS replication for SYSVOL. For migration steps, you can either follow the [procedures on TechNet](https://technet.microsoft.com/library/dd640019(v=WS.10).aspx) or you can refer to the [streamlined set of steps on the Storage Team File Cabinet blog](http://blogs.technet.com/b/filecab/archive/2014/06/25/streamlined-migration-of-frs-to-dfsr-sysvol.aspx).
 
+## Windows Server, version 1809
+
+There are no new forest or domain functional levels added in this release.
+
 ## Windows Server 2016
 
 Supported Domain Controller Operating System:
