@@ -5,7 +5,7 @@ description:
 author: MicrosoftGuyJFlo
 ms.author: joflore
 manager: mtillman
-ms.date: 04/29/2018
+ms.date: 10/29/2018
 ms.topic: article
 ms.prod: windows-server-threshold
 
@@ -13,9 +13,9 @@ ms.technology: identity-adds
 ---
 # Forest-Wide Updates
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies To: Windows Server
 
-You can review the following set of changes to help understand and prepare for the schema updates that are performed by adprep /forestprep in Windows Server 2012 R2 and Windows Server 2012.
+You can review the following set of changes to help understand and prepare for the schema updates that are performed by adprep /forestprep in Windows Server 2019.
 
 Beginning in Windows Server 2012, Adprep commands run automatically as needed during AD DS installation. They can also be run separately in advance of AD DS installation. For more information, see [Running Adprep.exe](https://technet.microsoft.com/library/dd464018(v=ws.10).aspx).
 
