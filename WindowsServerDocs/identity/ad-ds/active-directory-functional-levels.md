@@ -5,7 +5,7 @@ description:
 ms.author: joflore
 author: MicrosoftGuyJFlo
 manager: mtillman
-ms.date: 08/08/2018
+ms.date: 10/29/2018
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.custom: it-pro
@@ -21,16 +21,19 @@ Functional levels determine the available Active Directory Domain Services (AD D
 
 When you deploy AD DS, set the domain and forest functional levels to the highest value that your environment can support. This way, you can use as many AD DS features as possible. When you deploy a new forest, you are prompted to set the forest functional level and then set the domain functional level. You can set the domain functional level to a value that is higher than the forest functional level, but you cannot set the domain functional level to a value that is lower than the forest functional level.
 
-With the end of life of Windows 2003, Windows 2003 domain controllers (DCs) need to be updated to Windows Server 2008, 2012 or 2016. As a result, any domain controller that runs Windows Server 2003 should be removed from the domain. We recommend that customers update their domain functional level (DFL) and forest functional level (FFL) as part of this, since the 2003 DFL and FFL have been deprecated in Windows Server 2016 and they will no longer be supported in future releases.
-
-For customers who need additional time to evaluate moving their DFL & FFL from 2003, the 2003 DFL and FFL will continue to be supported with Windows 10 and Windows Server 2016 provided all domain controllers in the domain and forest are either on Windows Server 2008, 2008R2, 2012, 2012R2, or 2016.
+With the end of life of Windows 2003, Windows 2003 domain controllers (DCs) need to be updated to Windows Server 2008, 2008R2, 2012, 2012R2, 2016, or 2019. As a result, any domain controller that runs Windows Server 2003 should be removed from the domain.
 
 At the Windows Server 2008 and higher domain functional levels, Distributed File Service (DFS) Replication is used to replicate SYSVOL folder contents between domain controllers. If you create a new domain at the Windows Server 2008 domain functional level or higher, DFS Replication is automatically used to replicate SYSVOL. If you created the domain at a lower functional level, you will need to migrate from using FRS to DFS replication for SYSVOL. For migration steps, you can either follow the [procedures on TechNet](https://technet.microsoft.com/library/dd640019(v=WS.10).aspx) or you can refer to the [streamlined set of steps on the Storage Team File Cabinet blog](http://blogs.technet.com/b/filecab/archive/2014/06/25/streamlined-migration-of-frs-to-dfsr-sysvol.aspx).
+
+## Windows Server, version 1809
+
+There are no new forest or domain functional levels added in this release.
 
 ## Windows Server 2016
 
 Supported Domain Controller Operating System:
 
+* Windows Server 2019
 * Windows Server 2016
 
 ### Windows Server 2016 forest functional level features
@@ -51,6 +54,7 @@ Supported Domain Controller Operating System:
 
 Supported Domain Controller Operating System:
 
+* Windows Server 2019
 * Windows Server 2016
 * Windows Server 2012 R2
 
@@ -75,6 +79,7 @@ Supported Domain Controller Operating System:
 
 Supported Domain Controller Operating System:
 
+* Windows Server 2019
 * Windows Server 2016
 * Windows Server 2012 R2
 * Windows Server 2012
@@ -92,6 +97,7 @@ Supported Domain Controller Operating System:
 
 Supported Domain Controller Operating System:
 
+* Windows Server 2019
 * Windows Server 2016
 * Windows Server 2012 R2
 * Windows Server 2012
@@ -112,6 +118,7 @@ Supported Domain Controller Operating System:
 
 Supported Domain Controller Operating System:
 
+* Windows Server 2019
 * Windows Server 2016
 * Windows Server 2012 R2
 * Windows Server 2012
