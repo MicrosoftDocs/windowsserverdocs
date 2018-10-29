@@ -257,3 +257,6 @@ On WAP servers you can still use Set-WebApplicationProxySslCertificate. On the A
 10. Put the selected WAP and AD FS servers back in production environment. 
     
 Perform the update on the rest of AD FS and WAP servers in similar fashion. 
+
+### Is ADFS supported when Web Application Proxy (WAP) servers are behind Azure Web Application Firewall(WAF)?
+ADFS and Web Application servers support any firewall that does not perform SSL termination on the endpoint. Additionally, ADFS/WAP servers have built in mechanisms to prevent common web attacks such as cross-site scripting, ADFS proxy and satisfy all requirements defined by the [MS-ADFSPIP protocol](https://msdn.microsoft.com/library/dn392811.aspx).

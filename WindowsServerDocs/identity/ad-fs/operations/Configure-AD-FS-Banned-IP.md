@@ -30,6 +30,8 @@ Allowed formats
 3.	CIDR format with IPv4 or v6
 4.	IP range with IPv4 or v6 ( i.e. 1.2.3.4-1.2.3.6 )
 
+There is a limit of 300 entries for banned IP addresses. You can use CIDR or range format to deny a large block of entries with a single entry.
+
 ## Removing banned IPs
 To remove banned IPs from the global list, use the below Powershell cmdlet:
 
