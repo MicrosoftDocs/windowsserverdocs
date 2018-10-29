@@ -5,7 +5,7 @@ description: Domain-wide schema updates performed by adprep /domainprep when pro
 author: MicrosoftGuyJFlo
 ms.author: joflore
 manager: mtillman
-ms.date: 07/14/2017
+ms.date: 10/29/2018
 ms.topic: article
 ms.prod: windows-server-threshold
 
@@ -13,9 +13,9 @@ ms.technology: identity-adds
 ---
 # Domain-wide schema updates
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies To: Windows Server
 
-You can review the following set of changes to help understand and prepare for the schema updates that are performed by adprep /domainprep in Windows Server. 
+You can review the following set of changes to help understand and prepare for the schema updates that are performed by adprep /domainprep in Windows Server.
 
 Beginning in Windows Server 2012, Adprep commands run automatically as needed during AD DS installation. They can also be run separately in advance of AD DS installation. For more information, see [Running Adprep.exe](https://technet.microsoft.com/library/dd464018(v=ws.10).aspx).
 
