@@ -17,7 +17,7 @@ ms.localizationpriority: medium
 ---
 # Upgrade and conversion options for Windows Server 2016
 
->Applies To: Windows Server 2016
+>Applies To: Windows Server 2019, Windows Server 2016
 
 This topic includes information about upgrading to Windows Server® 2016 from a variety of previous operating systems using a variety of methods.
 
