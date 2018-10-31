@@ -21,7 +21,7 @@ author: shortpatti
 
 This section covers features of Always On VPN. The following list is not exhaustive, but it does include some of the most common features and functionality used in remote access solutions. The features and functionality covered include enhancements and limitations in Always On VPN.
 
-| Functional area | Always On VPN equivalent |
+| Functional area | Always On VPN  |
 | ---- | ---- |
 | Seamless, transparent connectivity to the corporate network. | You can configure Always On VPN to support auto-triggering based on application launch or namespace resolution requests.<br><br>Define this functionality by using the VPNv2 CSP parameters:<br><br>**VPNv2/ProfileName/AlwaysOn**<br>**VPNv2/ProfileName/AppTriggerList**<br>**VPNv2/ProfileName/DomainNameInformationList/AutoTrigger** |
 | Use of a dedicated Infrastructure Tunnel to provide connectivity for users not signed into the corporate network. | You can achieve this functionality by using the Device Tunnel feature in the VPN profile.<p><p>**Note.**<br>Device Tunnel uses IKEv2 (only) as the protocol.<p>Define this functionality by using the VPNv2 CSP parameter:<br>**VPNv2/ProfileName/DeviceTunnel** |
@@ -41,7 +41,7 @@ This section covers features of Always On VPN. The following list is not exhaust
 Each item in this section is a use case scenario or commonly used remote access functionality for which Always On VPN has improved functionality—either through an expansion of functionality or elimination of a previous limitation.
 
 
-| Functional area | Always On VPN equivalent |
+| Functional area | Always On VPN  |
 | ---- | ---- |
 | Domain-joined devices with Enterprise SKUs requirement. | Always On VPN supports domain-joined, nondomain-joined (workgroup), or Azure AD–joined devices to allow for both enterprise and BYOD scenarios. Always On VPN is available in all Windows editions, and the platform features are available to third parties by way of UWP VPN plug-in support.<p>**Note.** There is no support for third-party control of the Device Tunnel. |
 | Support for both IPv4 and IPv6. | With Always On VPN, users can access both IPv4 and IPv6 resources on the corporate network. The Always On VPN client uses a dual-stack approach that doesn't specifically depend on IPv6 or the need for the VPN gateway to provide NAT64 or DNS64 translation services. |
