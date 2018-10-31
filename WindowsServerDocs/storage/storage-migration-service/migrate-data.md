@@ -59,7 +59,7 @@ In this step you transfer data after specifying where to put it on the destinati
  1. After the transfer completes, check out the destination server to make sure everything transferred properly. Select **Error log only** if you want to download a log of any files that didn't transfer.
 
   > [!NOTE]
-  > If you wish to keep an audit trail of transfers or are planning to perform more than one transfer in a job, click **Transfer log** to save a CSV copy. Every subsequent transfer overwrites the database information of a previous run. 
+  > If you want to keep an audit trail of transfers or are planning to perform more than one transfer in a job, click **Transfer log** to save a CSV copy. Every subsequent transfer overwrites the database information of a previous run. 
 
 At this point, you have two options:
 
