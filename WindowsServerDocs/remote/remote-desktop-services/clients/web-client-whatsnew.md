@@ -18,6 +18,18 @@ ms.localizationpriority: medium
 
 We regularly update the [Remote Desktop web client](remote-desktop-web-client.md), adding new features and fixing issues. Check out the latest updates below.
 
+## Updates for version 1.0.1
+*Published date: 10/29/2018*
+
+- Added an option to **Capture support information** on the About page to diagnose issues.
+- InPrivate mode is now supported.
+- Improved support for non-English keyboards.
+- Fixed an issue where tooltips with non-English characters showed incorrectly.
+- Fixed graphics rendering issue which affected Chrome users.
+- Updated time zone redirection with full DST support.
+- Improved the error message for out-of-memory error.
+- Various bug fixes.
+
 ## Updates for version 1.0.0
 *Published date: 07/16/2018*
 
