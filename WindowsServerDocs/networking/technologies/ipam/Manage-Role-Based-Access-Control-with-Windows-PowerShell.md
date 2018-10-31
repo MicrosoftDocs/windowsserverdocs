@@ -21,7 +21,7 @@ author: shortpatti
 You can use this topic to learn how to use IPAM to manage role based access control with Windows PowerShell.  
   
 >[!NOTE]
->For the IPAM Windows PowerShell command reference, see the [IpamServer cmdlets in Windows PowerShell](https://docs.microsoft.com/en-us/powershell/module/ipamserver/?view=win10-ps).  
+>For the IPAM Windows PowerShell command reference, see the [IpamServer cmdlets in Windows PowerShell](https://docs.microsoft.com/powershell/module/ipamserver/?view=win10-ps).  
   
 The new Windows PowerShell IPAM commands provide you with the ability to retrieve and change the access scopes of DNS and DHCP objects. The following table illustrates the correct command to use for each IPAM object.  
   
