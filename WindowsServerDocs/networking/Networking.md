@@ -9,8 +9,9 @@ ms.assetid: daaf6b61-5953-4c2d-b6b8-7c885b552646
 manager: dougkim
 ms.author: pashort
 author: shortpatti
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ---
+
 # Networking
 
 >[!TIP]
