@@ -68,7 +68,7 @@ Using your Build infrastructure (this could be as simple as opening Visual Studi
 
 To create the NuGet package, you need to first create a .nuspec file. A .nuspec file is an XML manifest that contains NuGet package metadata. This manifest is used both to build the package and to provide information to consumers.  Place this file at the root of the "NuGet Package" folder.
 
-Here's an example .nuspec file and the list of required or recommended properties. For the full schema, see the [.nuspec reference] (https://docs.microsoft.com/nuget/reference/nuspec). Save the .nuspec file to your project's root folder with a file name of your choice.
+Here's an example .nuspec file and the list of required or recommended properties. For the full schema, see the [.nuspec reference](https://docs.microsoft.com/nuget/reference/nuspec). Save the .nuspec file to your project's root folder with a file name of your choice.
 
 > [!IMPORTANT]
 > The ```<id>``` value in the .nuspec file needs to match the ```"name"``` value in your project's ```manifest.json``` file, or else your published extension won't load successfully in Windows Admin Center.

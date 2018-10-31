@@ -34,9 +34,9 @@ eventcreate [/s <Computer> [/u <Domain\User> [/p <Password>]] {[/l {APPLICATION|
 |/s \<Computer>|Specifies the name or IP address of a remote computer (do not use backslashes). The default is the local computer.|
 |/u \<Domain\User>|Runs the command with the account permissions of the user specified by \<User> or <Domain\User>. The default is the permissions of the current logged on user on the computer issuing the command.|
 |/p \<Password>|Specifies the password of the user account that is specified in the **/u** parameter.|
-|/l {APPLICATION|SYSTEM}|Specifies the name of the event log where the event will be created. The valid log names are APPLICATION and SYSTEM.|
+|/l {APPLICATION\|SYSTEM}|Specifies the name of the event log where the event will be created. The valid log names are APPLICATION and SYSTEM.|
 |/so \<SrcName>|Specifies the source to use for the event. A valid source can be any string and should represent the application or component that is generating the event.|
-|/t {ERROR|WARNING|INFORMATION|</br>SUCCESSAUDIT|FAILUREAUDIT}|Specifies the type of event to create. The valid types are ERROR, WARNING, INFORMATION, SUCCESSAUDIT, and FAILUREAUDIT.|
+|/t {ERROR\|WARNING\|INFORMATION\|</br>SUCCESSAUDIT\|FAILUREAUDIT}|Specifies the type of event to create. The valid types are ERROR, WARNING, INFORMATION, SUCCESSAUDIT, and FAILUREAUDIT.|
 |/id \<EventID>|Specifies the event ID for the event. A valid ID is any number from 1 to 1000.|
 |/d \<Description>|Specifies the description to use for the newly created event.|
 |/?|Displays help at the command prompt.|

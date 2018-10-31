@@ -49,6 +49,7 @@ The following sign-in SSO improvements have been made in AD FS 2019:
 - [Paginated UX with Centered Theme](../operations/AD-FS-paginated-sign-in.md) - ADFS now has moved to a paginated UX flow that allows ADFS to validate and provide a more smoother sign-in experience. ADFS now uses a centered UI (instead of the right side of the screen). You may require newer logo and background images to align with this experience. This also mirrors functionality offered in Azure AD.
 - **Bug fix: Persistent SSO state for Win10 devices when doing PRT auth**	This addresses an issue where MFA state was not persisted when using PRT authentication for Windows 10 devices. The result of the issue was that end users would get prompted for 2nd factor credential (MFA) frequently. The fix also makes the experience consistent when device auth is successfully performed via client TLS and via PRT mechanism. 
 
+
 ### Suppport for building modern line-of-business apps
 The following support for building modern LOB apps has been added to AD FS 2019:
 
@@ -151,7 +152,7 @@ AD FS provides the on premises component of conditional access policies in a hyb
 ![whats new](media/whats-new-in-active-directory-federation-services-for-windows-server-2016/ADFS_ITPRO4.png)  
 
  For more information about using device based conditional access in the cloud   
- *  [Azure Active Directory Conditional Access](https://azure.microsoft.com/en-us/documentation/articles/active-directory-conditional-access/)
+ *  [Azure Active Directory Conditional Access](https://azure.microsoft.com/documentation/articles/active-directory-conditional-access/)
 
 For more information about using device based conditional access with AD FS
 *  [Planning for Device Based Conditional Access with AD FS](../../ad-fs/deployment/Plan-Device-based-Conditional-Access-on-Premises.md)  
@@ -161,7 +162,7 @@ For more information about using device based conditional access with AD FS
 Windows 10 devices introduce Windows Hello and Windows Hello for Business, replacing user passwords with strong device-bound user credentials protected by a user's gesture (a PIN, a biometric gesture like fingerprint, or facial recognition). AD FS 2016 supports these new Windows 10 capabilities so that users can sign in to AD FS applications from the intranet or the extranet without the need to provide a password.
 
 For more information about using Microsoft Windows Hello for Business in your organization
-*  [Enable Windows Hello for Business in your organization](https://azure.microsoft.com/en-us/documentation/articles/active-directory-azureadjoin-passport-deployment/)
+*  [Enable Windows Hello for Business in your organization](https://azure.microsoft.com/documentation/articles/active-directory-azureadjoin-passport-deployment/)
 
 ## Secure Access to Applications
 
