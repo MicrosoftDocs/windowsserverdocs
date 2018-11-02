@@ -193,11 +193,11 @@ Windows 10 offers many CSPs, but this deployment focuses on using the VPNv2 CSP 
 
 
 
-## Next step
-|If you want to...  |Then see...  |
-|---------|---------|
-|Learn about the Always On VPN advanced features  |[Advance VPN features](deploy/always-on-vpn-adv-options.md): This page provides guidance on how to enable VPN Traffic Filters, how to configure Automatic VPN connections using App-Triggers, and how to configure NPS to only allow VPN Connections from clients using certificates issued by Azure AD.         |
-|Get started with your deployment |[Plan the Always On VPN deployment](deploy/always-on-vpn-deploy-deployment.md): Before you install the Remote Access server role on the computer you're planning on using as a VPN server. After proper planning, you can deploy Always On VPN, and optionally configure conditional access for VPN connectivity using Azure AD.  |
+## Next steps
+
+- [Learn about some of the advanced Always On VPN features](always-on-vpn-adv-options.md)
+
+- [Start planning your Always On VPN deployment](always-on-vpn-deploy-deployment.md)
 
 
 ---
