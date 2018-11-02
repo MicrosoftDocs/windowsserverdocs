@@ -1,6 +1,6 @@
 ---
 title: Always On VPN features 
-description: In previous versions of the Windows VPN architecture, platform limitations made it difficult to provide the critical functionality needed to replace DirectAccess (like automatic connections initiated before users sign in).
+description: In this topic, you learn about the features and functionality of Always On VPN. 
 ms.prod: windows-server-threshold
 ms.technology: networking
 ms.topic: article

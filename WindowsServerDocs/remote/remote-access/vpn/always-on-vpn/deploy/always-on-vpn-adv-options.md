@@ -8,7 +8,7 @@ ms.topic: article
 ms.date: 05/29/2018
 ms.author: pashort
 author: shortpatti
-manager: dougkim
+ms.localizationpriority: medium 
 ms.reviewer: deverette
 ---
 
@@ -21,7 +21,6 @@ ms.reviewer: deverette
 
 Beyond the deployment scenarios provided, you can add other advanced VPN features to improve the security and availability of your VPN connection. For example, such components can help ensure that the connecting client is healthy before allowing a connection.
 
-The following list includes some of these additional options.
 
 ## High Availability
 

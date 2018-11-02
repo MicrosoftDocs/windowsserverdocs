@@ -22,7 +22,7 @@ metadata:
 
   ms.author: pashort
 
-  ms.date: 05/28/2018
+  ms.date: 11/05/2018
 
   ms.topic: article
 
@@ -62,13 +62,13 @@ sections:
 
     - href: \windows-server\remote\remote-access\vpn\vpn-map-da
 
-      html: <p>Learn how Always On VPN has expanded the VPN functionality beyond the capabilities of DirectAccess.</p>
+      html: <p>Learn about the features and functionality of Always On VPN.</p>
 
       image:
 
         src: https://docs.microsoft.com/media/common/i_quick-start.svg
 
-      title: DirectAccess and Always On VPN feature comparison
+      title: Always On VPN features and funtionality
 
     - href: \windows-server\remote\remote-access\vpn\always-on-vpn\always-on-vpn-enhancements
 

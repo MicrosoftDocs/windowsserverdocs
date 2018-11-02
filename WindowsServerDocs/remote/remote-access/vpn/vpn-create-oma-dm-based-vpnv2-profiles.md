@@ -13,7 +13,7 @@ ms.topic: article
 ms.date: 07/13/2018
 ms.author: pashort
 author: shortpatti
-manager: dougkim
+ms.localizationpriority: medium 
 ms.reviewer: deverette
 ---
 

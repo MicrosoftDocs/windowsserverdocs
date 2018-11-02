@@ -7,7 +7,7 @@ ms.topic: article
 ms.date: 10/28/2018
 ms.author: pashort
 author: shortpatti
-manager: dougkim
+ms.localizationpriority: medium 
 ---
 
 

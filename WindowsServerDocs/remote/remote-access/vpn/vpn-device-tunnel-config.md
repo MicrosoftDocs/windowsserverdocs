@@ -1,7 +1,6 @@
 ---
 title: Configure the VPN device tunnel in Windows 10
 description: Learn how to create a VPN device tunnel in Windows 10.
-manager: dougkim
 ms.prod: windows-server-threshold
 ms.date: 07/19/2018
 ms.technology: networking-ras
@@ -9,6 +8,7 @@ ms.topic: article
 ms.assetid: 158b7a62-2c52-448b-9467-c00d5018f65b
 ms.author: pashort
 author: shortpatti
+ms.localizationpriority: medium 
 ---
 # Configure VPN device tunnels in Windows 10
 
@@ -103,7 +103,7 @@ The output displays a list of the device\-wide VPN profiles that are deployed on
 
 You can use the following Windows PowerShell script to assist in creating your own script for profile creation.
 
-``` syntax
+``` XML
 Param(
 [string]$xmlFilePath,
 [string]$ProfileName

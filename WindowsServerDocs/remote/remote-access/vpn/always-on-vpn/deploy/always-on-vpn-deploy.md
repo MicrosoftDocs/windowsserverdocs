@@ -5,8 +5,8 @@ ms.prod: windows-server-threshold
 ms.technology: networking-ras
 ms.topic: article
 ms.assetid: 5ae1a40b-4f10-4ace-8aaf-13f7ab581f4f
-manager: dougkim
-ms.date: 07/16/2018
+ms.localizationpriority: medium 
+ms.date: 11/05/2018
 ms.author: pashort
 author: shortpatti
 ---
@@ -47,18 +47,15 @@ You most likely have the technologies deployed that you can use to deploy Always
 
 ## <a name="bkmk_about"></a>About this deployment
 
-The instructions provided walk you through deploying Remote Access as a single tenant VPN RAS Gateway for point\-to\-site VPN connections, using any of the four scenarios mentioned below, for remote client computers that are running Windows 10. You also find instructions for modifying some of your existing infrastructure for the deployment. Also throughout this deployment, you find links to help you learn more about the VPN connection process, servers to configure, ProfileXML VPNv2 CSP node, and other technologies to deploy Always On VPN.
+The instructions provided walk you through deploying Remote Access as a single tenant VPN RAS Gateway for point\-to\-site VPN connections, using any of the scenarios mentioned below, for remote client computers that are running Windows 10. You also find instructions for modifying some of your existing infrastructure for the deployment. Also throughout this deployment, you find links to help you learn more about the VPN connection process, servers to configure, ProfileXML VPNv2 CSP node, and other technologies to deploy Always On VPN.
 
 **Always On VPN deployment scenarios:**
 
 1. Deploy Always On VPN only.
 2. Deploy Always On VPN with conditional access for VPN connectivity using Azure AD.
-3. Deploy Always On VPN and migrate from DirectAccess.
-4. Deploy Always On VPN with conditional access for VPN connectivity using Azure AD and migrate from DirectAccess.
+
 
 For more information and workflow of the scenarios presented, see [Deploy Always On VPN](always-on-vpn-deploy-deployment.md).
-
-
 
 
 ## <a name="bkmk_not"></a>What is not provided in this deployment
