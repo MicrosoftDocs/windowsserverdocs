@@ -8,6 +8,8 @@ ms.date: 11/05/2018
 
 # Common scenarios
 
+>Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
+
 ## Scenario: HCN 
 
 

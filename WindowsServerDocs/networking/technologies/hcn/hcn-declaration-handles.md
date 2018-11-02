@@ -1,5 +1,5 @@
 ---
-title: 
+title: RPC context handles for HCN
 description:
 ms.author: jmesser
 author: jmesser81
@@ -7,6 +7,9 @@ ms.date: 11/05/2018
 ---
 
 # RPC context handles for HCN
+
+>Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
+
 
 ## HCN_Network
 

@@ -8,6 +8,8 @@ ms.date: 11/05/2018
 
 # Example of C# generated code 
 
+>Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
+
 ```C#
 /* 
  * HCN API

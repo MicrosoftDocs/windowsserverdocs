@@ -8,6 +8,8 @@ ms.date: 11/05/2018
 
 # HCN JSON document schemas
 
+>Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
+
 ## HCN schema
 
 ```json
