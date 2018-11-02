@@ -101,13 +101,11 @@ The following are some of the configuration and compatibility improvements in Al
 
 ## Next steps
 
-- [Learn about some of the advanced Always On VPN features](always-on-vpn-adv-options.md)
+- [Learn about some of the advanced Always On VPN features](deploy/always-on-vpn-adv-options.md)
 
 - [Learn more about the Always On VPN technology](always-on-vpn-technology-overview.md)
 
-- [Start planning your Always On VPN deployment](../always-on-vpn-deploy-deployment.md)
-
-
+- [Start planning your Always On VPN deployment](deploy/always-on-vpn-deploy-deployment.md)
 
 
 
