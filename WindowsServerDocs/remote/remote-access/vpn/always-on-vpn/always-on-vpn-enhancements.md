@@ -1,14 +1,13 @@
 ---
 title: Always On VPN enhancements
 description: Always On VPN has many benefits over the Windows VPN solutions of the past. Key improvements in integration, security, connectivity, networking control, and compatibility align Always On VPN with Microsoft's cloud-first, mobile-first vision. 
-manager: dougkim
 ms.prod: windows-server
 ms.technology: networking-ras
 ms.topic: article
 ms.assetid: 
 ms.author: pashort
 author: shortpatti
-ms.date: 10/30/2018
+ms.date: 11/05/2018
 ---
 
 # Always On VPN enhancements
@@ -100,12 +99,15 @@ The following are some of the configuration and compatibility improvements in Al
 
 
 
-## Next step
-|If you want to...  |Then see...  |
-|---------|---------|
-|Learn more about the Always On VPN technology     |[Always On VPN Technology Overview](always-on-vpn-technology-overview.md): This page provides a brief overview of the Always On VPN technologies with links to detailed documents.         |
-|Learn more about the Always On VPN advanced features  |[Advanced Features of Always On VPN](deploy/always-on-vpn-adv-options.md): This page provides guidance on how to enable VPN Traffic Filters, how to configure Automatic VPN connections using App-Triggers, and how to configure NPS to only allow VPN Connections from clients using certificates issued by Azure AD.         |
-|Start planning your Always On VPN deployment |[Step 1. Plan the Always On VPN Deployment](deploy/always-on-vpn-deploy-planning.md): Before you install the Remote Access server role on the computer you're planning on using as a VPN server, perform the following tasks. After proper planning, you can deploy Always On VPN, and optionally configure conditional access for VPN connectivity using Azure AD.  |
+## Next steps
+
+- [Learn about some of the advanced Always On VPN features](always-on-vpn-adv-options.md)
+
+- [Learn more about the Always On VPN technology](always-on-vpn-technology-overview.md)
+
+- [Start planning your Always On VPN deployment](../always-on-vpn-deploy-deployment.md)
+
+
 
 
 
