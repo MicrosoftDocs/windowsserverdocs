@@ -106,7 +106,7 @@
 #### [Physical switch configuration](technologies/conv-nic/cnic-app-switch-config.md)
 #### [Troubleshooting Converged NIC](technologies/conv-nic/cnic-app-troubleshoot.md)
 
-### [Enhanced Transmission Selection (ETS)](technologies/dcb/dcb-top.md)
+### [Data Center Bridging \(DCB\)](technologies/dcb/dcb-top.md)
 #### [Install DCB](technologies/dcb/dcb-install.md)
 #### [Manage DCB](technologies/dcb/dcb-manage.md)
 
@@ -118,6 +118,12 @@
 #### [Windows PowerShell commands for RSS and vRSS](technologies/vrss/vrss-wps.md)
 #### [Resolve vRSS issues](technologies/vrss/vrss-resolve-issues.md)
 
+## [Host Compute Network (HCN) Service API](technologies/hcn/hcn-top.md)   
+### [Common HCN scenarios](technologies/hcn/hcn-scenarios.md)
+### [RPC context handles for HCN](technologies/hcn/hcn-declaration-handles.md)
+### [HCN JSON document schemas](technologies/hcn/hcn-json-document-schemas.md)
+### [Example of C# generated code](technologies/hcn/example-c-sharp.md)
+### [Example of Go generated code](technologies/hcn/example-go.md)
 
 ## [Hyper-V Virtual Switch](technologies/vswitch-stub.md)
 
