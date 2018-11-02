@@ -33,7 +33,7 @@ When you install the **DirectAccess and VPN (RAS)** role service, you are deploy
 >You can also deploy RAS Gateway as a Multitenant VPN server for use with Software Defined Networking \(SDN\), or as a DirectAccess server. For more information, see [RAS Gateway](https://docs.microsoft.com/windows-server/remote/remote-access/ras-gateway/ras-gateway), [Software Defined Networking (SDN)](https://docs.microsoft.com/windows-server/networking/sdn/software-defined-networking), and [DirectAccess](https://docs.microsoft.com/windows-server/remote/remote-access/directaccess/directaccess).
 
 ## Related topics
-- [Always On VPN and DirectAccess Features Comparison](vpn-map-da.md): In previous versions of the Windows VPN architecture, platform limitations made it difficult to provide the critical functionality needed to replace DirectAccess (like automatic connections initiated before users sign in). In this topic, you learn how Always On VPN has mitigated most of those limitations or expanded the VPN functionality beyond the capabilities of DirectAccess.
+- [Always On VPN features and functionality](vpn-map-da.md): In this topic, you learn about the features and functionality of Always On VPN. 
 
 - [Configure VPN Device Tunnels in Windows 10](vpn-device-tunnel-config.md): Always On VPN gives you the ability to create a dedicated VPN profile for device or machine. Always On VPN connections include two types of tunnels: _device tunnel_ and _user tunnel_. Device tunnel is used for pre-logon connectivity scenarios and device management purposes. User tunnel allows users to access organization resources through VPN servers.
 

@@ -19,7 +19,10 @@ author: shortpatti
 &#171;  [**Previous:** Always On VPN Deployment for Windows Server and Windows 10](always-on-vpn/deploy/always-on-vpn-deploy.md)<br>
 &#187; [ **Next:** Learn about the Always On VPN Enhancements](../vpn/always-on-vpn/always-on-vpn-enhancements.md)
 
-This section covers features of Always On VPN. The following list is not exhaustive, but it does include some of the most common features and functionality used in remote access solutions. The features and functionality covered include enhancements and limitations in Always On VPN.
+In this topic, you learn about the features and functionality of Always On VPN.  The following table is not an exhaustive list, however, it does include some of the most common features and functionality used in remote access solutions. 
+
+>[!TIP]
+>If you currently use DirectAccess, we recommend that you investigate the Always On VPN functionality carefully to determine if it addresses all of your remote access needs before migrating form DirectAccess to Always On VPN.  
 
 | Functional area | Always On VPN  |
 | ---- | ---- |
