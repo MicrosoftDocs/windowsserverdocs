@@ -34,6 +34,10 @@ This document contains a list of all of the documentation for deploying AD FS fo
 
 * [Upgrading to AD FS in Windows Server 2016 using a SQL database](deployment/Upgrading-to-AD-FS-in-Windows-Server-2016-SQL.md)  
 
+* [Deploy AD FS in Azure](deployment/how-to-connect-fed-azure-adfs.md)
+
+* [AD FS in Azure with Azure Traffic Manager](deployment/active-directory-adfs-in-azure-with-azure-traffic-manager.md)  
+
 * [Windows Server 2016 and 2012 R2 Deployment Guide](deployment/Windows-Server-2012-R2-AD-FS-Deployment-Guide.md)
 
 * [Windows Server 2012 Deployment Guide](deployment/Windows-Server-2012-AD-FS-Deployment-Guide.md)

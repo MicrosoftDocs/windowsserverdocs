@@ -20,11 +20,11 @@ The following new features in Active Directory Domain Services (AD DS) improve t
   
 - [Privileged access management](https://docs.microsoft.com/microsoft-identity-manager/pam/privileged-identity-management-for-active-directory-domain-services)  
   
-- [Extending cloud capabilities to Windows 10 devices through Azure Active Directory Join](https://azure.microsoft.com/en-us/documentation/articles/active-directory-azureadjoin-overview/)
+- [Extending cloud capabilities to Windows 10 devices through Azure Active Directory Join](https://azure.microsoft.com/documentation/articles/active-directory-azureadjoin-overview/)
   
-- [Connecting domain-joined devices to Azure AD for Windows 10 experiences](https://azure.microsoft.com/en-us/documentation/articles/active-directory-azureadjoin-devices-group-policy/)
+- [Connecting domain-joined devices to Azure AD for Windows 10 experiences](https://azure.microsoft.com/documentation/articles/active-directory-azureadjoin-devices-group-policy/)
   
-- [Enable Microsoft Passport for Work in your organization](https://azure.microsoft.com/en-us/documentation/articles/active-directory-azureadjoin-passport-deployment/)
+- [Enable Microsoft Passport for Work in your organization](https://azure.microsoft.com/documentation/articles/active-directory-azureadjoin-passport-deployment/)
   
 - [Deprecation of File Replication Service (FRS) and Windows Server 2003 functional levels](ad-ds/active-directory-functional-levels.md)  
   

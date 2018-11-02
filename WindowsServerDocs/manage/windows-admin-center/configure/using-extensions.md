@@ -55,7 +55,7 @@ After uninstall is complete, your browser will automatically be refreshed and Wi
 
 If Windows Admin Center is installed on a computer that isn't connected to the internet or is behind a proxy, it may not be able to access and install the extensions from the Windows Admin Center feed. You can download extension packages manually and configure Windows Admin Center to retrieve packages from a file share or local drive.
 
-1. On another computer that has internet connectivity, open a web browser and navigate to the following URL: [https://msft-sme.myget.org/feed/Packages/windows-admin-center-feed](https://msft-sme.myget.org/feed/Packages/windows-admin-center-feed) 
+1. On another computer that has internet connectivity, open a web browser and navigate to the following URL: [https://msft-sme.myget.org/gallery/windows-admin-center-feed](https://msft-sme.myget.org/gallery/windows-admin-center-feed) 
 
   * You may need to create an account on msft-sme.myget.org and login to view the extension packages.
 

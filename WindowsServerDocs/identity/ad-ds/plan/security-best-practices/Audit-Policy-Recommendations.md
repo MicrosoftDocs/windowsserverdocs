@@ -14,7 +14,7 @@ ms.technology: identity-adds
 
 # Audit Policy Recommendations
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows 10, Windows 8.1, Windows 7
 
 This section addresses the Windows default audit policy settings, baseline recommended audit policy settings, and the more aggressive recommendations from Microsoft, for workstation and server products.  
 
@@ -38,7 +38,9 @@ This section contains tables that list the audit setting recommendations that ap
 
 -   Windows Server 2008  
 
--   Windows 8  
+-   Windows 10
+
+-   Windows 8.1  
 
 -   Windows 7  
 
@@ -55,7 +57,7 @@ These tables contain the Windows default setting, the baseline recommendations, 
 |DC|Enable on domain controllers|  
 |[Blank]|No recommendation|  
 
-**Windows 8 and Windows 7 Audit Settings Recommendations**  
+**Windows 10, Windows 8, and Windows 7 Audit Settings Recommendations**  
 
 **Audit Policy**  
 
@@ -89,8 +91,8 @@ These tables contain the Windows default setting, the baseline recommendations, 
 |Audit IPsec Extended Mode||||  
 |Audit IPsec Main Mode|||IF     IF|  
 |Audit IPsec Quick Mode||||  
-|Audit Logoff|Yes    No|Yes    No|Yes    No|  
-|Audit Logon|Yes    No|Yes    No|Yes    Yes|  
+|Audit Logoff|Yes   No|Yes    No|Yes    No|  
+|Audit Logon <sup>1</sup>|Yes    Yes|Yes    Yes|Yes    Yes|  
 |Audit Network Policy Server|Yes    Yes|||  
 |Audit Other Logon/Logoff Events||||  
 |Audit Special Logon|Yes    No|Yes    No|Yes    Yes|  
@@ -133,6 +135,8 @@ These tables contain the Windows default setting, the baseline recommendations, 
 |Audit Security System Extension||||  
 |Audit System Integrity||||  
 
+<sup>1</sup> Beginning with Windows 10 version 1809, Audit Logon is enabled by default for both Success and Failure. In previous versions of Windows, only Success is enabled by default.
+
 **Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2, and Windows Server 2008 Audit Settings Recommendations**  
 
 |Audit Policy Category or Subcategory|Windows Default<br /><br />Success    Failure|Baseline Recommendation<br /><br />Success    Failure|Stronger Recommendation<br /><br />Success    Failure|  
@@ -166,7 +170,7 @@ These tables contain the Windows default setting, the baseline recommendations, 
 |Audit IPsec Main Mode|||IF     IF|  
 |Audit IPsec Quick Mode||||  
 |Audit Logoff|Yes    No|Yes    No|Yes    No|  
-|Audit Logon|Yes    No|Yes    Yes|Yes    Yes|  
+|Audit Logon|Yes    Yes|Yes    Yes|Yes    Yes|  
 |Audit Network Policy Server|Yes    Yes|||  
 |Audit Other Logon/Logoff Events|||Yes    Yes|  
 |Audit Special Logon|Yes    No|Yes    No|Yes    Yes|  

@@ -23,7 +23,7 @@ You can deploy a Remote Desktop Connection Broker (RD Connection Broker) cluster
 
 Set up a server to act as a second RD Connection Broker - this can be either a physical server or a VM.
 
-Set up a database for the Connection Broker. You can use [Azure SQL Database](https://azure.microsoft.com/en-us/documentation/articles/sql-database-get-started/#create-a-new-aure-sql-database) instance or SQL Server in your local environment. We talk about using Azure SQL below, but the steps still apply to SQL Server. You'll need to find the connection string for the database and make sure you have the correct ODBC driver.
+Set up a database for the Connection Broker. You can use [Azure SQL Database](https://azure.microsoft.com/documentation/articles/sql-database-get-started/#create-a-new-aure-sql-database) instance or SQL Server in your local environment. We talk about using Azure SQL below, but the steps still apply to SQL Server. You'll need to find the connection string for the database and make sure you have the correct ODBC driver.
 
 ## Step 1: Configure the database for the Connection Broker
 

@@ -24,8 +24,8 @@ If you haven't set up the Host Guardian Service or are running it in local mode 
 
 To learn how you can make your virtual machines more secure with the Host Guardian Service, see the following resources.  
 
-- [Harden the Fabric: Protecting Tenant Secrets in Hyper-V (Ignite video)](https://go.microsoft.com/fwlink/?LinkId=746379)  
-- [Guarded Fabric and Shielded VMs](https://go.microsoft.com/fwlink/?LinkId=746381)  
+- [Harden the Fabric: Protecting Tenant Secrets in Hyper-V (Ignite video)](https://go.microsoft.com/fwlink/?LinkId=746379)
+- [Guarded Fabric and Shielded VMs](https://go.microsoft.com/fwlink/?LinkId=746381)
 
 ## Secure Boot setting in Hyper-V Manager  
 
@@ -36,7 +36,8 @@ The templates described in the following table refer to the certificates that yo
 |Template name|Description|  
 |-----------------|---------------|  
 |Microsoft Windows|Select to secure boot the virtual machine for a Windows operating system.|  
-|Microsoft UEFI Certificate Authority|Select to  secure boot the virtual machine  for  a Linux distribution operating system.|  
+|Microsoft UEFI Certificate Authority|Select to  secure boot the virtual machine for  a Linux distribution operating system.|  
+|Open Source Shielded VM|This template is leveraged to secure boot for [Linux-based shielded VMs](https://docs.microsoft.com/windows-server/security/guarded-fabric-shielded-vm/guarded-fabric-create-a-linux-shielded-vm-template).|
 
 For more information, see the following topics.  
 

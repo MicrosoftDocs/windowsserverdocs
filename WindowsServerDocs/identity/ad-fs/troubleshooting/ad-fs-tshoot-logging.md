@@ -121,7 +121,7 @@ This file is located in **<%system root%>\Windows\ADFS** and is in XML format. T
 After you apply these changes, save the configuration, and restart the AD FS service. After you enable these traces by setting the appropriate switches, they will appear in the AD FS trace log in the Windows Event Viewer.
 
 ## Correlating Events
-One of the hardest things to troubleshoot is access issues that generate alot of error or debug events.
+One of the hardest things to troubleshoot is access issues that generate a lot of error or debug events.
 
 To help with this, AD FS correlates all events that are recorded to the Event Viewer, in both the admin and the debug logs, which correspond to a particular request by using a unique Globally Unique Identifier (GUID) called the Activity ID. This ID is generated when the token issuance request is initially presented to the web application (for applications using the passive requestor profile) or requests sent directly to the claims provider (for applications using WS-Trust). 
 

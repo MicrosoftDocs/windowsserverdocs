@@ -152,7 +152,7 @@ AD FS provides the on premises component of conditional access policies in a hyb
 ![whats new](media/whats-new-in-active-directory-federation-services-for-windows-server-2016/ADFS_ITPRO4.png)  
 
  For more information about using device based conditional access in the cloud   
- *  [Azure Active Directory Conditional Access](https://azure.microsoft.com/en-us/documentation/articles/active-directory-conditional-access/)
+ *  [Azure Active Directory Conditional Access](https://azure.microsoft.com/documentation/articles/active-directory-conditional-access/)
 
 For more information about using device based conditional access with AD FS
 *  [Planning for Device Based Conditional Access with AD FS](../../ad-fs/deployment/Plan-Device-based-Conditional-Access-on-Premises.md)  
@@ -162,7 +162,7 @@ For more information about using device based conditional access with AD FS
 Windows 10 devices introduce Windows Hello and Windows Hello for Business, replacing user passwords with strong device-bound user credentials protected by a user's gesture (a PIN, a biometric gesture like fingerprint, or facial recognition). AD FS 2016 supports these new Windows 10 capabilities so that users can sign in to AD FS applications from the intranet or the extranet without the need to provide a password.
 
 For more information about using Microsoft Windows Hello for Business in your organization
-*  [Enable Windows Hello for Business in your organization](https://azure.microsoft.com/en-us/documentation/articles/active-directory-azureadjoin-passport-deployment/)
+*  [Enable Windows Hello for Business in your organization](https://azure.microsoft.com/documentation/articles/active-directory-azureadjoin-passport-deployment/)
 
 ## Secure Access to Applications
 
