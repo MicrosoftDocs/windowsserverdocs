@@ -195,9 +195,9 @@ Windows 10 offers many CSPs, but this deployment focuses on using the VPNv2 CSP 
 
 ## Next steps
 
-- [Learn about some of the advanced Always On VPN features](always-on-vpn-adv-options.md)
+- [Learn about some of the advanced Always On VPN features](deploy/always-on-vpn-adv-options.md)
 
-- [Start planning your Always On VPN deployment](always-on-vpn-deploy-deployment.md)
+- [Start planning your Always On VPN deployment](deploy/always-on-vpn-deploy-deployment.md)
 
 
 ---

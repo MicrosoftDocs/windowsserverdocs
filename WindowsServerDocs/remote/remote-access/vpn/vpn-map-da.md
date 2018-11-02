@@ -59,12 +59,12 @@ Each item in this section is a use case scenario or commonly used remote access 
 
 ## Next steps
 
-- [Learn more about the Always On VPN enhancements](../always-on-vpn-enhancements.md)
+- [Learn more about the Always On VPN enhancements](always-on-vpn/always-on-vpn-enhancements.md)
 
-- [Learn about some of the advanced Always On VPN features](always-on-vpn-adv-options.md)
+- [Learn about some of the advanced Always On VPN features](always-on-vpn/deploy/always-on-vpn-adv-options.md)
 
-- [Learn more about the Always On VPN technology](../always-on-vpn-technology-overview.md)
+- [Learn more about the Always On VPN technology](always-on-vpn/always-on-vpn-technology-overview.md)
 
-- [Start planning your Always On VPN deployment](always-on-vpn-deploy-deployment.md)
+- [Start planning your Always On VPN deployment](always-on-vpn/deploy/always-on-vpn-deploy-deployment.md)
 
 ---
