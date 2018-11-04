@@ -49,7 +49,7 @@ The difference between the *l2bridge* and *l2tunnel* drivers are:
    ```
 
 >[!Note]
->[Nested virtualization](https://msdn.microsoft.com/en-us/virtualization/hyperv_on_windows/user_guide/nesting) and exposing virtualization extensions is not required unless using Hyper-V Containers. 
+>[Nested virtualization](https://msdn.microsoft.com/virtualization/hyperv_on_windows/user_guide/nesting) and exposing virtualization extensions is not required unless using Hyper-V Containers. 
 
 
 ## Workflow
