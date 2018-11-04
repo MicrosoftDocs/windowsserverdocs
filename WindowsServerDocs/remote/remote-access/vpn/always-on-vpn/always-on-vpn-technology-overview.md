@@ -4,7 +4,7 @@ description: 'This page provies a brief overview of the Always On VPN technologi
 ms.prod: windows-server-threshold
 ms.technology: networking-ras
 ms.topic: article
-ms.date: 10/28/2018
+ms.date: 11/05/2018
 ms.author: pashort
 author: shortpatti
 ms.localizationpriority: medium 
@@ -177,6 +177,7 @@ Table 1. VPN Features and Configurations Discussed in this Deployment
 | Name resolution | Domain Name Information List and DNS suffix   |
 | Triggering      | Always On and Trusted Network Detection       |
 | Authentication  | PEAP-TLS with TPM–protected user certificates |
+---
 
 >[!NOTE] 
 >PEAP-TLS and TPM are "Protected Extensible Authentication Protocol with Transport Layer Security" and "Trusted Platform Module," respectively.

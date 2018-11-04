@@ -2,7 +2,7 @@
 title: Configure the VPN device tunnel in Windows 10
 description: Learn how to create a VPN device tunnel in Windows 10.
 ms.prod: windows-server-threshold
-ms.date: 07/19/2018
+ms.date: 11/05/2018
 ms.technology: networking-ras
 ms.topic: article
 ms.assetid: 158b7a62-2c52-448b-9467-c00d5018f65b
@@ -15,8 +15,10 @@ ms.localizationpriority: medium
 >Applies To: Windows 10 version 1709
 
 Always On VPN gives you the ability to create a dedicated VPN profile for device or machine. Always On VPN connections include two types of tunnels: 
-* _Device tunnel_ connects to specified VPN servers before users log on to the device. Pre-login connectivity scenarios and device management purposes use device tunnel.
-* _User tunnel_ connects only after a user logs on to the device. User tunnel allows users to access organization resources through VPN servers.
+
+- _Device tunnel_ connects to specified VPN servers before users log on to the device. Pre-login connectivity scenarios and device management purposes use device tunnel.
+
+- _User tunnel_ connects only after a user logs on to the device. User tunnel allows users to access organization resources through VPN servers.
 
 Unlike _user tunnel_, which only connects after a user logs on to the device or machine, _device tunnel_ allows the VPN to establish connectivity before the user logs on. Both _device tunnel_ and _user tunnel_ operate independently with their VPN profiles, can be connected at the same time, and can use different authentication methods and other VPN configuration settings as appropriate. User tunnel supports SSTP and IKEv2, and device tunnel supports IKEv2 only with no support for SSTP fallback.
 
@@ -28,7 +30,7 @@ Device tunnel can only be configured on domain-joined devices running Windows 10
 ## Device Tunnel Requirements and Features
 You must enable machine certificate authentication for VPN connections and define a root certification authority for authenticating incoming VPN connections. 
 
-```syntax
+```PowerShell
 $VPNRootCertAuthority = “Common Name of trusted root certification authority”
 $RootCACert = (Get-ChildItem -Path cert:LocalMachine\root | Where-Object {$_.Subject -Like “*$VPNRootCertAuthority*” })
 Set-VpnAuthProtocol -UserAuthProtocolAccepted Certificate, EAP -RootCertificateNameToAccept $RootCACert -PassThru
@@ -47,7 +49,7 @@ For server-initiated push cases, like Windows Remote Management (WinRM), Remote 
 
 Following is the sample VPN profileXML.
 
-``` syntax
+``` xml
 <VPNProfile>  
   <NativeProfile>  
 <Servers>vpn.contoso.com</Servers>  
@@ -105,7 +107,7 @@ The output displays a list of the device\-wide VPN profiles that are deployed on
 
 You can use the following Windows PowerShell script to assist in creating your own script for profile creation.
 
-``` XML
+```PowerShell
 Param(
 [string]$xmlFilePath,
 [string]$ProfileName
