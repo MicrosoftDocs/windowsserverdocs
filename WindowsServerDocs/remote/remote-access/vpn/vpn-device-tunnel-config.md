@@ -18,9 +18,11 @@ Always On VPN gives you the ability to create a dedicated VPN profile for device
 * _Device tunnel_ connects to specified VPN servers before users log on to the device. Pre-login connectivity scenarios and device management purposes use device tunnel.
 * _User tunnel_ connects only after a user logs on to the device. User tunnel allows users to access organization resources through VPN servers.
 
-Unlike _user tunnel_, which only connects after a user logs on to the device or machine, _device tunnel_ allows the VPN to establish connectivity before the user logs on. Additionally, _device tunnel_ provides feature parity with the infrastructure tunnel concept of DirectAccess.
+Unlike _user tunnel_, which only connects after a user logs on to the device or machine, _device tunnel_ allows the VPN to establish connectivity before the user logs on. Both _device tunnel_ and _user tunnel_ operate independently with their VPN profiles, can be connected at the same time, and can use different authentication methods and other VPN configuration settings as appropriate. User tunnel supports SSTP and IKEv2, and device tunnel supports IKEv2 only with no support for SSTP fallback.
 
-Use traffic filters to control the availability of the corporate resources through the _device tunnel_ and when employing machine certificate authentication. Both _device tunnel_ and _user tunnel_ operate independently with their VPN profiles, can be connected at the same time, and can use different authentication methods and other VPN configuration settings as appropriate.
+User tunnel is supported on domain-joined, nondomain-joined (workgroup), or Azure AD–joined devices to allow for both enterprise and BYOD scenarios. It is available in all Windows editions, and the platform features are available to third parties by way of UWP VPN plug-in support.
+
+Device tunnel can only be configured on domain-joined devices running Windows 10 Enterprise or Education version 1709 or later. There is no support for third-party control of the device tunnel.
 
 
 ## Device Tunnel Requirements and Features
@@ -38,7 +40,7 @@ Set-VpnAuthProtocol -UserAuthProtocolAccepted Certificate, EAP -RootCertificateN
 
 The sample profile XML below provides good guidance for scenarios where only client initiated pulls are required over the device tunnel.  Traffic filters are leveraged to restrict the device tunnel to management traffic only.  This configuration works well for Windows Update, typical Group Policy (GP) and System Center Configuration Manager (SCCM) update scenarios, as well as VPN connectivity for first logon without cached credentials, or password reset scenarios. 
 
-For server initiated push cases, like Windows Remote Management (WinRM), Remote GPUpdate, and remote SCCM update scenarios – you must allow inbound traffic on the device tunnel, so traffic filters cannot be used.  This limitation is going to be removed in future releases.
+For server-initiated push cases, like Windows Remote Management (WinRM), Remote GPUpdate, and remote SCCM update scenarios – you must allow inbound traffic on the device tunnel, so traffic filters cannot be used.  If in the device tunnel profile you turn on traffic filters, then the Device Tunnel denies inbound traffic.  This limitation is going to be removed in future releases.
 
 
 ### Sample VPN profileXML
