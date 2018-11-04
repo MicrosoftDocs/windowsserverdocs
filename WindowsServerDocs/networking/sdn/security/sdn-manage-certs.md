@@ -53,7 +53,7 @@ When you create self\-signed certificates, you can use the following guidelines.
 
 #### Multiple node
 
-You can use the [New-SelfSignedCertificate](https://technet.microsoft.com/en-us/itpro/powershell/windows/pkiclient/new-selfsignedcertificate) Windows PowerShell command to create a self\-signed certificate.
+You can use the [New-SelfSignedCertificate](https://technet.microsoft.com/itpro/powershell/windows/pkiclient/new-selfsignedcertificate) Windows PowerShell command to create a self\-signed certificate.
 
 **Syntax**
 
@@ -65,7 +65,7 @@ You can use the [New-SelfSignedCertificate](https://technet.microsoft.com/en-us/
 
 #### Single node
 
-You can use the [New-SelfSignedCertificate](https://technet.microsoft.com/en-us/itpro/powershell/windows/pkiclient/new-selfsignedcertificate) Windows PowerShell command to create a self\-signed certificate.
+You can use the [New-SelfSignedCertificate](https://technet.microsoft.com/itpro/powershell/windows/pkiclient/new-selfsignedcertificate) Windows PowerShell command to create a self\-signed certificate.
 
 **Syntax**
 

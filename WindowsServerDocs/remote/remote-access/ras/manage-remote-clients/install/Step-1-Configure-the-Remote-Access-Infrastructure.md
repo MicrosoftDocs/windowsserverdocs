@@ -440,7 +440,7 @@ Whether you use a private certificate or a self-signed certificate, they require
   
     CRL distribution points can be accessed through:  
   
-    -   Web servers that use an HTTP-based URL, such as: http://crl.corp.contoso.com/crld/corp-APP1-CA.crl  
+    -   Web servers that use an HTTP-based URL, such as: https://crl.corp.contoso.com/crld/corp-APP1-CA.crl  
   
     -   File servers that are accessed through a universal naming convention (UNC) path, such as \\\crl.corp.contoso.com\crld\corp-APP1-CA.crl  
   
