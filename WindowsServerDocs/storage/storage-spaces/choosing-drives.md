@@ -96,7 +96,7 @@ For workloads which require vast capacity and write infrequently, such as archiv
 1. **SSD + HDD**. The SSDs will cache reads and writes, to absorb bursts and provide SSD-like write performance, with optimized de-staging later to the HDDs.
 
 >[!IMPORTANT]
->Not all HDD configurations are supported. High endurance SSDs caching to low endurance SSDs is not advised.
+>Configuration with HDDs only is not supported. High endurance SSDs caching to low endurance SSDs is not advised.
 
 ## Sizing considerations
 
