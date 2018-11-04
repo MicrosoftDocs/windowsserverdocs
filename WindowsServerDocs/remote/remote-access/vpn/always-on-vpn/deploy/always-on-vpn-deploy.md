@@ -78,7 +78,7 @@ This deployment does not provide instructions for:
 ## Next step
 |If you want to...  |Then see...  |
 |---------|---------|
-|Learn about the feature comparison between Always On VPN and DirectAccess    |[Feature Comparison of Always On VPN and DirectAccess](../../vpn-map-da.md): In previous versions of the Windows VPN architecture, platform limitations made it difficult to provide the critical functionality needed to replace DirectAccess (like automatic connections initiated before users sign in). Always On VPN, however, has mitigated most of those limitations or expanded the VPN functionality beyond the capabilities of DirectAccess.         |
+|Learn about Always On VPN features    |[Feature Comparison of Always On VPN and DirectAccess](../../vpn-map-da.md): Learn about the features and functionality of Always On VPN.         |
 |Learn about the Always On VPN feature enhancements |[Always On VPN enhancements](../always-on-vpn-enhancements.md): Discover new or improved features that Always On VPN offers to improve your configuration. |
 |Learn more about the Always On VPN technology     |[Always On VPN Technology Overview](../always-on-vpn-technology-overview.md): This page provides a brief overview of the Always On VPN technologies with links to detailed documents.         |
 |Learn more about the Always On VPN advanced features  |[Advanced VPN features](always-on-vpn-adv-options.md): This page provides guidance on how to enable VPN Traffic Filters, how to configure Automatic VPN connections using App-Triggers, and how to configure NPS to only allow VPN Connections from clients using certificates issued by Azure AD.         |
