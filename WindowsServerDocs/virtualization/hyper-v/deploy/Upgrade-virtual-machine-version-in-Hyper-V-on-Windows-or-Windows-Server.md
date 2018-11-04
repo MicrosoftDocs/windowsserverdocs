@@ -61,6 +61,9 @@ If you need to create a virtual machine that you can move to a Hyper-V Host that
 New-VM -Name "WindowsCV5" -Version 5.0
 ```
 
+>[!NOTE]
+>You can import virtual machines that have been created for a Hyper-V host running an older version of Windows or restore them from backup. If the VM's configuration version is not listed as supported for your Hyper-V host OS in the table below, you have to update the VM configuration version before you can start the VM.
+
 ### Supported VM configuration versions for long-term servicing hosts
 
 The following table lists the VM configuration versions that are supported on hosts running a long-term servicing version of Windows.
@@ -68,9 +71,10 @@ The following table lists the VM configuration versions that are supported on ho
 |Hyper-V host Windows version| 9.0 | 8.3 | 8.2 | 8.1 | 8.0 | 7.1 | 7.0 | 6.2 | 5.0 |
 |---|---|---|---|---|---|---|---|---|---|
 |Windows Server 2019|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|
+|Windows 10 Enterprise LTSC 2019|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|
 |Windows Server 2016|&#10006;|&#10006;|&#10006;|&#10006;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|
-|Windows 10, version 1607|&#10006;|&#10006;|&#10006;|&#10006;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|
-|Windows 10, version 1507|&#10006;|&#10006;|&#10006;|&#10006;|&#10006;|&#10006;|&#10006;|&#10004;|&#10004;|
+|Windows 10 Enterprise 2016 LTSB|&#10006;|&#10006;|&#10006;|&#10006;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|
+|Windows 10 Enterprise 2015 LTSB|&#10006;|&#10006;|&#10006;|&#10006;|&#10006;|&#10006;|&#10006;|&#10004;|&#10004;|
 |Windows Server 2012 R2|&#10006;|&#10006;|&#10006;|&#10006;|&#10006;|&#10006;|&#10006;|&#10006;|&#10004;|
 |Windows 8.1|&#10006;|&#10006;|&#10006;|&#10006;|&#10006;|&#10006;|&#10006;|&#10006;|&#10004;|
 

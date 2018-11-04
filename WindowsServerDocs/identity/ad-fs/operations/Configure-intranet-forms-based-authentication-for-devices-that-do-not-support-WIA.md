@@ -22,7 +22,7 @@ AD FS in Windows Server 2016 and Windows Server 2012 R2 provides the administrat
 
 
 - The **WIASupportedUserAgentStrings** property of the `Set-ADFSProperties` commandlet
-- The **WindowsIntegratedFallbackEnabled** property of the `Set-AdfsGlobalAuthenticationPolicy` commmandlet
+- The **WindowsIntegratedFallbackEnabled** property of the `Set-AdfsGlobalAuthenticationPolicy` commandlet
 
 The **WIASupportedUserAgentStrings** defines the user agents which support WIA. AD FS analyzes the user agent string when performing logins in a browser or browser control. If the component of the user agent string does not match any of the components of the user agent strings that are configured in **WIASupportedUserAgentStrings** property, AD FS will fall back to providing forms-based authentication, provided that the **WindowsIntegratedFallbackEnabled** flag is set to True.
 
