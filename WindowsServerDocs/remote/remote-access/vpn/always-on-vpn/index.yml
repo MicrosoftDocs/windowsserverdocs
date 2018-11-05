@@ -22,7 +22,7 @@ metadata:
 
   ms.author: pashort
 
-  ms.date: 05/28/2018
+  ms.date: 11/05/2018
 
   ms.topic: article
 
@@ -36,7 +36,7 @@ sections:
 
   - type: markdown
 
-    text: Get ready to deploy Remote Access as a single tenant VPN RAS Gateway for point-to-site VPN connections, using any of the four scenarios mentioned below, for remote client computers that are running Windows 10. 
+    text: Get ready to deploy Remote Access as a single tenant VPN RAS Gateway for point-to-site VPN connections, using any of the four scenarios mentioned below, for remote client computers that are running Windows 10.  If you currently use DirectAccess we recommend that you investigate the Always On VPN functionality carefully to determine if it addresses all of your remote access needs before migrating form DirectAccess to Always On VPN.  
 
 - items:
 
@@ -62,13 +62,13 @@ sections:
 
     - href: \windows-server\remote\remote-access\vpn\vpn-map-da
 
-      html: <p>Learn how Always On VPN has expanded the VPN functionality beyond the capabilities of DirectAccess.</p>
+      html: <p>Learn about the features and functionality of Always On VPN.</p>
 
       image:
 
         src: https://docs.microsoft.com/media/common/i_quick-start.svg
 
-      title: DirectAccess and Always On VPN feature comparison
+      title: Always On VPN features and funtionality
 
     - href: \windows-server\remote\remote-access\vpn\always-on-vpn\always-on-vpn-enhancements
 
@@ -127,16 +127,6 @@ sections:
         src: https://docs.microsoft.com/media/common/i_architecture.svg
       
       title: Deployment workflow and scenarios
-
-    - href: \windows-server\remote\remote-access\da-always-on-vpn-migration\da-always-on-migration-overview
-    
-      html: <p>Start planning the migration from DirectAccess to Always On VPN.</p>
-
-      image:
-
-        src: https://docs.microsoft.com/media/common/i_upgrade.svg
-      
-      title: Migrate from DirectAccess
 
     - href: \windows-server\remote\remote-access\vpn\always-on-vpn\deploy\always-on-vpn-deploy-planning
     

@@ -98,11 +98,11 @@ Connect both client computers to the Corpnet network, and then restart both clie
   
     The ability to ping APP2 is important, because success indicates that you were able to establish a connection using NAT64/DNS64, as APP2 is an IPv4 only resource.  
   
-11. Open Internet Explorer, in the Internet Explorer address bar, enter **http://app1/** and press ENTER. You will see the default IIS website on APP1.  
+11. Open Internet Explorer, in the Internet Explorer address bar, enter **https://app1/** and press ENTER. You will see the default IIS website on APP1.  
   
-12. In the Internet Explorer address bar, enter **http://2-app1/** and press ENTER. You will see the default website on 2-APP1.  
+12. In the Internet Explorer address bar, enter **https://2-app1/** and press ENTER. You will see the default website on 2-APP1.  
   
-13. In the Internet Explorer address bar, enter **http://app2/** and press ENTER. You will see the default website on APP2.  
+13. In the Internet Explorer address bar, enter **https://app2/** and press ENTER. You will see the default website on APP2.  
   
 14. On the **Start** screen, type**\\\2-App1\Files**, and then press ENTER. Double-click the example text file.  
   
@@ -174,11 +174,11 @@ Connect both client computers to the Corpnet network, and then restart both clie
   
     The ability to ping APP2 is important, because success indicates that you were able to establish a connection using NAT64/DNS64, as APP2 is an IPv4 only resource.  
   
-9. Open Internet Explorer, in the Internet Explorer address bar, enter **http://app1/** and press ENTER. You will see the default IIS website on APP1.  
+9. Open Internet Explorer, in the Internet Explorer address bar, enter **https://app1/** and press ENTER. You will see the default IIS website on APP1.  
   
-10. In the Internet Explorer address bar, enter **http://2-app1/** and press ENTER. You will see the default website on APP2.  
+10. In the Internet Explorer address bar, enter **https://2-app1/** and press ENTER. You will see the default website on APP2.  
   
-11. In the Internet Explorer address bar, enter **http://app2/** and press ENTER. You will see the default website on APP3.  
+11. In the Internet Explorer address bar, enter **https://app2/** and press ENTER. You will see the default website on APP3.  
   
 12. On the **Start** screen, type**\\\App1\Files**, and then press ENTER. Double-click the example text file.  
   

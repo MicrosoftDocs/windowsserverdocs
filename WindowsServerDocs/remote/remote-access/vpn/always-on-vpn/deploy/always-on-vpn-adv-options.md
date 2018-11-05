@@ -5,10 +5,10 @@ ms.assetid: 51a1ee61-3ffe-4f65-b8de-ff21903e1e74
 ms.prod: windows-server-threshold
 ms.technology: networking-ras
 ms.topic: article
-ms.date: 05/29/2018
+ms.date: 11/05/2018
 ms.author: pashort
 author: shortpatti
-manager: dougkim
+ms.localizationpriority: medium 
 ms.reviewer: deverette
 ---
 
@@ -16,12 +16,11 @@ ms.reviewer: deverette
 
 >Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows 10
 
-&#171;  [**Previous:** Learn about the Always On VPN Technology](../always-on-vpn-technology-overview.md)<br>
+&#171;  [**Previous:** Learn about the Always On VPN technology](../always-on-vpn-technology-overview.md)<br>
 &#187; [ **Next:** Start planning the Always On VPN deployment](always-on-vpn-deploy-planning.md)
 
 Beyond the deployment scenarios provided, you can add other advanced VPN features to improve the security and availability of your VPN connection. For example, such components can help ensure that the connecting client is healthy before allowing a connection.
 
-The following list includes some of these additional options.
 
 ## High Availability
 

@@ -60,7 +60,7 @@ For a summary of the features introduced in this version, see [What's new in Hyp
 
 ## How to get Hyper-V
 
-Hyper-V is available in Windows Server and Windows, as a server role available for x64 versions of Windows Server. For server instructions, see [Install the Hyper-V role on Windows Server](get-started/Install-the-Hyper-V-role-on-Windows-Server.md). On Windows, it's available as [feature](https://docs.microsoft.com/virtualization/hyper-v-on-windows/index) in some 64-bit versions of Windows. It's also available as a downloadable, standalone server product, [Microsoft Hyper-V Server](https://www.microsoft.com/en-us/evalcenter/evaluate-hyper-v-server-2019).
+Hyper-V is available in Windows Server and Windows, as a server role available for x64 versions of Windows Server. For server instructions, see [Install the Hyper-V role on Windows Server](get-started/Install-the-Hyper-V-role-on-Windows-Server.md). On Windows, it's available as [feature](https://docs.microsoft.com/virtualization/hyper-v-on-windows/index) in some 64-bit versions of Windows. It's also available as a downloadable, standalone server product, [Microsoft Hyper-V Server](https://www.microsoft.com/evalcenter/evaluate-hyper-v-server-2019).
 
 ## Supported operating systems
 
