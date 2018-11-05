@@ -115,10 +115,10 @@ This procedure describes how to publish a claims-based application, such as a Sh
   
     -   In the **External certificate** list, select a certificate whose subject covers the external URL.  
   
-    -   In the **Backend server URL** box, enter the URL of the backend server. Note that this value is automatically entered when you enter the external URL and you should change it only if the backend server URL is different; for example, http://sp/app1/.  
+    -   In the **Backend server URL** box, enter the URL of the backend server. Note that this value is automatically entered when you enter the external URL and you should change it only if the backend server URL is different; for example, https://sp/app1/.  
   
         > [!NOTE]  
-        > Web Application Proxy can translate host names in URLs, but cannot translate path names. Therefore, you can enter different host names, but you must enter the same path name. For example, you can enter an external URL of https://apps.contoso.com/app1/ and a backend server URL of http://app-server/app1/. However, you cannot enter an external URL of https://apps.contoso.com/app1/ and a backend server URL of https://apps.contoso.com/internal-app1/.  
+        > Web Application Proxy can translate host names in URLs, but cannot translate path names. Therefore, you can enter different host names, but you must enter the same path name. For example, you can enter an external URL of https://apps.contoso.com/app1/ and a backend server URL of https://app-server/app1/. However, you cannot enter an external URL of https://apps.contoso.com/app1/ and a backend server URL of https://apps.contoso.com/internal-app1/.  
   
 7.  On the **Confirmation** page, review the settings, and then click **Publish**. You can copy the PowerShell command to set up additional published applications.  
   
@@ -195,10 +195,10 @@ This procedure describes how to publish an application that uses Integrated Wind
   
     -   In the **External certificate** list, select a certificate whose subject covers the external URL.  
   
-    -   In the **Backend server URL** box, enter the URL of the backend server. Note that this value is automatically entered when you enter the external URL and you should change it only if the backend server URL is different; for example, http://owa/.  
+    -   In the **Backend server URL** box, enter the URL of the backend server. Note that this value is automatically entered when you enter the external URL and you should change it only if the backend server URL is different; for example, https://owa/.  
   
         > [!NOTE]  
-        > Web Application Proxy can translate host names in URLs, but cannot translate path names. Therefore, you can enter different host names, but you must enter the same path name. For example, you can enter an external URL of https://apps.contoso.com/app1/ and a backend server URL of http://app-server/app1/. However, you cannot enter an external URL of https://apps.contoso.com/app1/ and a backend server URL of https://apps.contoso.com/internal-app1/.  
+        > Web Application Proxy can translate host names in URLs, but cannot translate path names. Therefore, you can enter different host names, but you must enter the same path name. For example, you can enter an external URL of https://apps.contoso.com/app1/ and a backend server URL of https://app-server/app1/. However, you cannot enter an external URL of https://apps.contoso.com/app1/ and a backend server URL of https://apps.contoso.com/internal-app1/.  
   
     -   In the **Backend server SPN** box, enter the service principal name for the backend server; for example, HTTP/owa.contoso.com.  
   
@@ -405,10 +405,10 @@ This procedure describes how to publish an application for OAuth2. This type of 
   
         In order to make sure your users can access your app, even if they neglect to type HTTPS in the URL, select the **Enable HTTP to HTTPS Redirection** box.  
   
-    -   In the **Backend server URL** box, enter the URL of the backend server. Note that this value is automatically entered when you enter the external URL and you should change it only if the backend server URL is different; for example, http://sp/app1/.  
+    -   In the **Backend server URL** box, enter the URL of the backend server. Note that this value is automatically entered when you enter the external URL and you should change it only if the backend server URL is different; for example, https://sp/app1/.  
   
         > [!NOTE]  
-        > Web Application Proxy can translate host names in URLs, but cannot translate path names. Therefore, you can enter different host names, but you must enter the same path name. For example, you can enter an external URL of https://apps.contoso.com/app1/ and a backend server URL of http://app-server/app1/. However, you cannot enter an external URL of https://apps.contoso.com/app1/ and a backend server URL of https://apps.contoso.com/internal-app1/.  
+        > Web Application Proxy can translate host names in URLs, but cannot translate path names. Therefore, you can enter different host names, but you must enter the same path name. For example, you can enter an external URL of https://apps.contoso.com/app1/ and a backend server URL of https://app-server/app1/. However, you cannot enter an external URL of https://apps.contoso.com/app1/ and a backend server URL of https://apps.contoso.com/internal-app1/.  
   
 7.  On the **Confirmation** page, review the settings, and then click **Publish**. You can copy the PowerShell command to set up additional published applications.  
   

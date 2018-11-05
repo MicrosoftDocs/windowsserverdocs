@@ -122,7 +122,7 @@ The following sections provide more information about these elements of the SLB 
 ### SCVMM  
 With System Center 2016, you can configure Network Controller on  Windows Server 2016, including the SLB Manager and Health Monitor. You can also use System Center to deploy SLB MUXs and to install SLB Host Agents on computers that are running  Windows Server 2016 and Hyper-V.  
   
-For more information about System Center 2016, see [System Center 2016](https://www.microsoft.com/en-us/server-cloud/products/system-center-2016/).  
+For more information about System Center 2016, see [System Center 2016](https://www.microsoft.com/server-cloud/products/system-center-2016/).  
   
 > [!NOTE]  
 > If you do not want to use System Center 2016, you can use Windows PowerShell or another management application to install and configure Network Controller and other SLB infrastructure. For more information, see [Deploy Network Controller using Windows PowerShell](../../../sdn/deploy/Deploy-Network-Controller-using-Windows-PowerShell.md).  
@@ -150,7 +150,7 @@ The SLB Host Agent listens for SLB policy updates from Network Controller. In ad
 ### SDN Enabled Hyper-V Virtual Switch  
 For a virtual switch to be compatible with SLB, you must use Hyper-V Virtual Switch Manager or Windows PowerShell commands to create the switch, and then you must enable Virtual Filtering Platform (VFP) for the virtual switch.  
   
-For information on enabling VFP on virtual switches, see the Windows PowerShell commands [Get-VMSystemSwitchExtension](https://technet.microsoft.com/en-us/library/hh848603.aspx) and [Enable-VMSwitchExtension](https://technet.microsoft.com/en-us/library/hh848541.aspx?f=255&MSPPError=-2147217396).  
+For information on enabling VFP on virtual switches, see the Windows PowerShell commands [Get-VMSystemSwitchExtension](https://technet.microsoft.com/library/hh848603.aspx) and [Enable-VMSwitchExtension](https://technet.microsoft.com/library/hh848541.aspx?f=255&MSPPError=-2147217396).  
   
 The SDN enabled Hyper-V Virtual Switch performs the following actions for SLB.  
   

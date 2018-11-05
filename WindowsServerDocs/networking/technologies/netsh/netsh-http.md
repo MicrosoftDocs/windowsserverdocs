@@ -157,10 +157,10 @@ add urlacl [ url= ] URL [ [user=] User [ [ listen= ] yes | no [ delegate= ] yes 
 
 Following are four examples of the **add urlacl** command.
 
--   add urlacl url=http://+:80/MyUri user=DOMAIN\\user
--   add urlacl url=http://www.contoso.com:80/MyUri user=DOMAIN\\user listen=yes
--   add urlacl url=http://www.contoso.com:80/MyUri user=DOMAIN\\user delegate=no
--   add urlacl url=http://+:80/MyUri sddl=...
+-   add urlacl url=https://+:80/MyUri user=DOMAIN\\user
+-   add urlacl url=https://www.contoso.com:80/MyUri user=DOMAIN\\user listen=yes
+-   add urlacl url=https://www.contoso.com:80/MyUri user=DOMAIN\\user delegate=no
+-   add urlacl url=https://+:80/MyUri sddl=...
 
 ---
 
@@ -186,7 +186,7 @@ delete cache [ [ url= ] URL [ [recursive= ] yes | no ]
 
 Following are two examples of the **delete cache** command.
 
--   delete cache url=http://www.contoso.com:80/myresource/ recursive=yes
+-   delete cache url=https://www.contoso.com:80/myresource/ recursive=yes
 -   delete cache
 
 ---
@@ -296,8 +296,8 @@ delete urlacl [ url= ] URL
 
 Following are two examples of the **delete urlacl** command.
 
--   delete urlacl url=http://+:80/MyUri
--   delete urlacl url=http://www.contoso.com:80/MyUri
+-   delete urlacl url=https://+:80/MyUri
+-   delete urlacl url=https://www.contoso.com:80/MyUri
 
 ---
 
@@ -336,7 +336,7 @@ show cachestate [ [url= ] URL]
 
 Following are two examples of the **show cachestate** command:
 
--   show cachestate url=http://www.contoso.com:80/myresource
+-   show cachestate url=https://www.contoso.com:80/myresource
 -   show cachestate
 
 ---
@@ -443,8 +443,8 @@ show urlacl [ [url= ] URL]
 
 Following are three examples of the **show urlacl** command.
 
--   show urlacl url=http://+:80/MyUri
--   show urlacl url=http://www.contoso.com:80/MyUri
+-   show urlacl url=https://+:80/MyUri
+-   show urlacl url=https://www.contoso.com:80/MyUri
 -   show urlacl
 
 ---

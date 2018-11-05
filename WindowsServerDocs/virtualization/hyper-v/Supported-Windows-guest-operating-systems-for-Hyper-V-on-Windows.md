@@ -62,7 +62,7 @@ Microsoft provides support for guest operating systems in the following manner:
   
 -   For issues found in other operating systems that have been certified by the operating system vendor to run on Hyper-V, support is provided by the vendor.  
   
--   For issues found in other operating systems, Microsoft submits the issue to the multi-vendor support community, [TSANet](http://www.tsanet.org/).  
+-   For issues found in other operating systems, Microsoft submits the issue to the multi-vendor support community, [TSANet](https://www.tsanet.org/).  
   
 ## See also  
   

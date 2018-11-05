@@ -70,7 +70,7 @@ If you are going to use a URL to host the CA policy statement, then next three l
 ```
 [InternalPolicy]
 OID=1.1.1.1.1.1.2
-URL=http://pki.wingtiptoys.com/policies/legalpolicy.asp
+URL=https://pki.wingtiptoys.com/policies/legalpolicy.asp
 ```
 
 In addition:
@@ -86,7 +86,7 @@ An example of multiple notices and URLs in a policy section would look like:
 ```
 [InternalPolicy]
 OID=1.1.1.1.1.1.1
-URL=http://pki.wingtiptoys.com/policies/legalpolicy.asp
+URL=https://pki.wingtiptoys.com/policies/legalpolicy.asp
 URL=ftp://ftp.wingtiptoys.com/pki/policies/legalpolicy.asp
 Notice=”Legal policy statement text”
 ```
@@ -97,7 +97,7 @@ You can specify CRL Distribution Points (CDPs) for a root CA certificate in the 
 
 ```
 [CRLDistributionPoint]
-URL=http://pki.wingtiptoys.com/cdp/WingtipToysRootCA.crl
+URL=https://pki.wingtiptoys.com/cdp/WingtipToysRootCA.crl
 ```
 
 Some additional information about this section:
@@ -125,7 +125,7 @@ You can specify the authority information access points in the CAPolicy.inf for 
 
 ```
 [AuthorityInformationAccess]
-URL=http://pki.wingtiptoys.com/Public/myCA.crt
+URL=https://pki.wingtiptoys.com/Public/myCA.crt
 ```
 
 Some additional notes on the authority information access section:
@@ -216,7 +216,7 @@ Before you install AD CS, you configure the CAPolicy.inf file with specific sett
     [InternalPolicy]  
     OID=1.2.3.4.1455.67.89.5  
     Notice="Legal Policy Statement"  
-    URL=http://pki.corp.contoso.com/pki/cps.txt  
+    URL=https://pki.corp.contoso.com/pki/cps.txt  
     [Certsrv_Server]  
     RenewalKeyLength=2048  
     RenewalValidityPeriod=Years  
@@ -252,4 +252,4 @@ Before you install AD CS, you configure the CAPolicy.inf file with specific sett
 6.  Close Notepad.
 
 >   [!IMPORTANT]  
->   In the CAPolicy.inf, you can see there is a line specifying the URL http://pki.corp.contoso.com/pki/cps.txt. The Internal Policy section of the CAPolicy.inf is just shown as an example of how you would specify the location of a certificate practice statement (CPS). In this guide, you are not instructed to create the certificate practice statement (CPS).
+>   In the CAPolicy.inf, you can see there is a line specifying the URL https://pki.corp.contoso.com/pki/cps.txt. The Internal Policy section of the CAPolicy.inf is just shown as an example of how you would specify the location of a certificate practice statement (CPS). In this guide, you are not instructed to create the certificate practice statement (CPS).

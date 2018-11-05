@@ -98,7 +98,7 @@ This scenario can be used to integrate third party devices (such as hardware loa
   
 ## Configuration and deployment
 
-A GRE tunnel is exposed as an additional protocol within a S2S interface. It is implemented in a similar fashion as an IPSec S2S tunnel described in the following Networking Blog: [Multi-tenant Site-to-Site (S2S) VPN Gateway with Windows Server 2012 R2](http://blogs.technet.com/b/networking/archive/2013/09/29/multi-tenant-site-to-site-s2s-vpn-gateway-with-windows-server-2012-r2.aspx)  
+A GRE tunnel is exposed as an additional protocol within a S2S interface. It is implemented in a similar fashion as an IPSec S2S tunnel described in the following Networking Blog: [Multi-tenant Site-to-Site (S2S) VPN Gateway with Windows Server 2012 R2](https://blogs.technet.com/b/networking/archive/2013/09/29/multi-tenant-site-to-site-s2s-vpn-gateway-with-windows-server-2012-r2.aspx)  
   
 See the following topic for an example that deploys gateways, including GRE tunnel gateways:  
   
@@ -112,9 +112,9 @@ For more information about deploying S2S gateways, see the following topics:
   
 -   [Border Gateway Protocol &#40;BGP&#41;](../bgp/Border-Gateway-Protocol-BGP.md)  
   
--   [New! Windows Server 2012 R2 RAS Multitenant Gateway Deployment Guide](http://blogs.technet.com/b/wsnetdoc/archive/2014/03/26/new-windows-server-2012-r2-RAS-multitenant-gateway-deployment-guide.aspx)  
+-   [New! Windows Server 2012 R2 RAS Multitenant Gateway Deployment Guide](https://blogs.technet.com/b/wsnetdoc/archive/2014/03/26/new-windows-server-2012-r2-RAS-multitenant-gateway-deployment-guide.aspx)  
   
--   [Deploy Border Gateway Protocol (BGP) with the RAS Multitenant Gateway](http://blogs.technet.com/b/wsnetdoc/archive/2014/04/03/deploy-border-gateway-protocol-bgp-with-the-RAS-multitenant-gateway.aspx)  
+-   [Deploy Border Gateway Protocol (BGP) with the RAS Multitenant Gateway](https://blogs.technet.com/b/wsnetdoc/archive/2014/04/03/deploy-border-gateway-protocol-bgp-with-the-RAS-multitenant-gateway.aspx)  
   
 
 

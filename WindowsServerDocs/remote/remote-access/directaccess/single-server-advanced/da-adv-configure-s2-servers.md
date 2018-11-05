@@ -233,7 +233,7 @@ Set-DAClient -OnlyRemoteComputers 'Disabled' -Downlevel 'Enabled'
 To configure the DirectAccess client experience, including the friendly connection name and the web probe URL:  
   
 ```  
-Set-DAClientExperienceConfiguration -FriendlyName 'Contoso DirectAccess Connection' -PreferLocalNamesAllowed $False -PolicyStore 'corp.contoso.com\DirectAccess Client Settings' -CorporateResources @('HTTP:http://directaccess-WebProbeHost.corp.contoso.com')  
+Set-DAClientExperienceConfiguration -FriendlyName 'Contoso DirectAccess Connection' -PreferLocalNamesAllowed $False -PolicyStore 'corp.contoso.com\DirectAccess Client Settings' -CorporateResources @('HTTP:https://directaccess-WebProbeHost.corp.contoso.com')  
 ```  
   
 ## <a name="BKMK_Links"></a>Previous step  
