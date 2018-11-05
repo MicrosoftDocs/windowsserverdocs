@@ -94,11 +94,11 @@ Optionally, you can enter the application path. To specify an application path, 
 >[!NOTE]
 >The application path cannot include a path that resolves to a symbolic link.
 
-The URL must conform to  [RFC 1738](http://tools.ietf.org/html/rfc1738), in the form of `http[s]://<hostname\>:<port\>/<url-path>`. You can use a wildcard, `‘*’`, for `<hostname>` and/or `<port>`, e.g. `http://training.\*/, https://\*.\*`, but the wildcard cannot denote a substring of `<hostname>` or `<port>`.
+The URL must conform to  [RFC 1738](https://tools.ietf.org/html/rfc1738), in the form of `http[s]://<hostname\>:<port\>/<url-path>`. You can use a wildcard, `‘*’`, for `<hostname>` and/or `<port>`, e.g. `https://training.\*/, https://\*.\*`, but the wildcard cannot denote a substring of `<hostname>` or `<port>`.
 
-In other words, neither `http://my\*site/` nor `https://\*training\*/` is valid. 
+In other words, neither `https://my\*site/` nor `https://\*training\*/` is valid. 
 
-Optionally, you can check **Include subdirectories and files** to perform matching on all subdirectories and files following a URL. For example, if this option is checked and the URL is `http://training`, QoS Policy will consider requests for` http://training/video` a good match.
+Optionally, you can check **Include subdirectories and files** to perform matching on all subdirectories and files following a URL. For example, if this option is checked and the URL is `https://training`, QoS Policy will consider requests for` https://training/video` a good match.
 
 #### To configure the Application Name page of the QoS Policy wizard
 

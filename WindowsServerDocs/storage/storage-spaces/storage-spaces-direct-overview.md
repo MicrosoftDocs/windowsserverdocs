@@ -96,6 +96,10 @@ For other applications of Storage Spaces, such as Shared SAS clusters and stand-
 
 [Watch on YouTube](https://www.youtube.com/watch?v=5kaUiW3qo30)
 
+**Storage Spaces Direct at Microsoft Ignite 2017 (1 hour)**
+
+[Watch on YouTube](https://www.youtube.com/watch?v=5kaUiW3qo30)
+
 **Launch Event at Microsoft Ignite 2016 (1 hour)**
 
 [Watch on YouTube](https://www.youtube.com/watch?v=-LK2ViRGbWs)

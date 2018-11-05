@@ -152,7 +152,7 @@ Following are the features of the RAS Gateway BGP Router.
   
 **Internal BGP and External BGP support**. The BGP router supports both iBGP and eBGP peering. To configure either, you must ensure that the appropriate ASNs are assigned to the local and remote BGP Routers. All four BGP deployment topologies employ the use of eBGP peering, and the fourth topology uses iBGP peering as well.  
   
-**Interoperability with 3rd party solutions**. The BGP Router is based on the latest BGP version 4 specification, and has been tested for interoperability with most of the major third party BGP routing devices. For more information, see Request for Comments (RFC) 4271, [A Border Gateway Protocol 4 (BGP-4)](http://tools.ietf.org/html/rfc4271).  
+**Interoperability with 3rd party solutions**. The BGP Router is based on the latest BGP version 4 specification, and has been tested for interoperability with most of the major third party BGP routing devices. For more information, see Request for Comments (RFC) 4271, [A Border Gateway Protocol 4 (BGP-4)](https://tools.ietf.org/html/rfc4271).  
   
 **IPv4 and IPv6 transport peering support**. The BGP Router supports both IPv4 and IPv6 peering. However, you must configure the BGP Identifier as the IPv4 address of the BGP Router. For all of the BGP router deployment topologies, either of the two peering types (IPV4 / IPv6) can be used.  
   

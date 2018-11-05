@@ -60,7 +60,7 @@ Policies=InternalPolicy
 [InternalPolicy]  
 OID=1.2.3.4.1455.67.89.5  
 Notice="Legal Policy Statement"  
-URL=http://pki.corp.contoso.com/pki/cps.txt  
+URL=https://pki.corp.contoso.com/pki/cps.txt  
 [Certsrv_Server]  
 RenewalKeyLength=2048  
 RenewalValidityPeriod=Years  
@@ -72,7 +72,7 @@ AlternateSignatureAlgorithm=1
 ```  
 You must plan the following items for this file:  
   
--   **URL**. The example CAPolicy.inf file has a URL value of **http://pki.corp.contoso.com/pki/cps.txt**. This is because the Web server in this guide is named WEB1 and has a DNS CNAME resource record of pki. The Web server is also joined to the corp.contoso.com domain. In addition, there is a virtual directory on the Web server named "pki" where the certificate revocation list is stored. Ensure that the value that you provide for URL in your CAPolicy.inf file points to a virtual directory on your Web server in your domain.  
+-   **URL**. The example CAPolicy.inf file has a URL value of **https://pki.corp.contoso.com/pki/cps.txt**. This is because the Web server in this guide is named WEB1 and has a DNS CNAME resource record of pki. The Web server is also joined to the corp.contoso.com domain. In addition, there is a virtual directory on the Web server named "pki" where the certificate revocation list is stored. Ensure that the value that you provide for URL in your CAPolicy.inf file points to a virtual directory on your Web server in your domain.  
   
 -   **RenewalKeyLength**. The default renewal key length for AD CS in  Windows Server 2012  is 2048. The key length that you select should be as long as possible while still providing compatibility with the applications that you intend to use.  
   

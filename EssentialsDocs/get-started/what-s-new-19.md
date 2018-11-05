@@ -40,7 +40,7 @@ Evolve your business even further with [Microsoft 365 Business](https://www.micr
 
 ## AAD Connect can now be installed on Windows Server 2019 Essentials
 
-Windows Server 2019 Essentials includes new support for Azure Active Directory via [AAD Connect](https://docs.microsoft.com/en-us/azure/active-directory/connect/active-directory-aadconnect-prerequisites). 
+Windows Server 2019 Essentials includes new support for Azure Active Directory via [AAD Connect](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnect-prerequisites). 
 
 ## LTSC support for Windows Server 2016 Essentials
 

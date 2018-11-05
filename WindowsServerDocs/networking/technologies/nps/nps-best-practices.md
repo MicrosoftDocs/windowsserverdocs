@@ -65,7 +65,7 @@ Following are the best practices for installing NPS.
 
 - Before installing NPS, install and test each of your network access servers using local authentication methods before you configure them as RADIUS clients in NPS.
 
-- After you install and configure NPS, save the configuration by using the Windows PowerShell command [Export-NpsConfiguration](https://technet.microsoft.com/en-us/library/jj872749.aspx). Save the NPS configuration with this command each time you reconfigure the NPS.
+- After you install and configure NPS, save the configuration by using the Windows PowerShell command [Export-NpsConfiguration](https://technet.microsoft.com/library/jj872749.aspx). Save the NPS configuration with this command each time you reconfigure the NPS.
 
 >[!CAUTION]
 >- The exported NPS configuration file contains unencrypted shared secrets for RADIUS clients and members of remote RADIUS server groups. Because of this, make sure that you save the file to a secure location.

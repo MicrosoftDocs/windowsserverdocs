@@ -52,7 +52,7 @@ This guide also provides instructions on how to deploy three types of content se
   
 -   **File server-based content servers**. These content servers must be running Windows Server 2016,  Windows Server 2012 R2 ,  Windows Server 2012 , or  Windows Server 2008 R2  versions that support BranchCache and upon which the File Services server role is installed. In addition, the **BranchCache for network files** role service of the File Services server role must be installed and configured. These content servers send content to BranchCache client computers using the Server Message Block (SMB) protocol.  
   
-For more information, see [Operating system versions for BranchCache](https://technet.microsoft.com/en-us/windows-server-docs/networking/branchcache/branchcache#a-namebkmkosaoperating-system-versions-for-branchcache).  
+For more information, see [Operating system versions for BranchCache](https://technet.microsoft.com/windows-server-docs/networking/branchcache/branchcache#a-namebkmkosaoperating-system-versions-for-branchcache).  
   
 ### BranchCache deployment requirements
 
@@ -62,7 +62,7 @@ Following are the requirements for deploying BranchCache by using this guide.
   
 -   **Client computers** must be running Windows 10, Windows 8.1, or Windows 8 to make use of the most recent deployment model and the chunking and hashing improvements that were introduced with  Windows Server 2012 .  
   
--   **Hosted cache servers** must be running Windows Server 2016,  Windows Server 2012 R2, or  Windows Server 2012 to make use of the deployment improvements and scale features described in this document.  A computer that is running one of these operating systems that is configured as a hosted cache server can continue to serve client computers that are running  Windows 7 , but to do so, it must be equipped with a certificate that is suitable for Transport Layer Security (TLS), as described in the Windows Server 2008 R2 and Windows 7 [BranchCache Deployment Guide](https://technet.microsoft.com/en-us/library/ee649232.aspx).  
+-   **Hosted cache servers** must be running Windows Server 2016,  Windows Server 2012 R2, or  Windows Server 2012 to make use of the deployment improvements and scale features described in this document.  A computer that is running one of these operating systems that is configured as a hosted cache server can continue to serve client computers that are running  Windows 7 , but to do so, it must be equipped with a certificate that is suitable for Transport Layer Security (TLS), as described in the Windows Server 2008 R2 and Windows 7 [BranchCache Deployment Guide](https://technet.microsoft.com/library/ee649232.aspx).  
   
 -   **An Active Directory domain** is required to take advantage of Group Policy and hosted cache automatic discovery, but a domain is not required to use BranchCache.  You can configure individual computers by using Windows PowerShell. In addition, it is not required that your domain controllers are running  Windows Server 2012  or later to utilize new BranchCache Group Policy settings; you can import the BranchCache administrative templates onto domain controllers that are running earlier operating systems, or you can author the group policy objects remotely on other computers that are running Windows 10, Windows Server 2016, Windows 8.1, Windows Server 2012 R2, Windows 8, or Windows Server 2012.
 
@@ -75,8 +75,8 @@ BranchCache was first introduced in Windows 7&reg; and Windows Server&reg; 2008 
 > [!NOTE]
 > If you are deploying BranchCache in operating systems other than Windows Server 2016, the following documentation resources are available.
 > 
-> - For information about BranchCache in Windows 8, Windows 8.1, Windows Server 2012, and  Windows Server 2012 R2, see [BranchCache Overview](https://technet.microsoft.com/en-us/library/hh831696.aspx).  
-> - For information about BranchCache in Windows 7 and Windows Server 2008 R2, see  [BranchCache for Windows Server 2008 R2](https://technet.microsoft.com/en-us/library/dd996634.aspx).  
+> - For information about BranchCache in Windows 8, Windows 8.1, Windows Server 2012, and  Windows Server 2012 R2, see [BranchCache Overview](https://technet.microsoft.com/library/hh831696.aspx).  
+> - For information about BranchCache in Windows 7 and Windows Server 2008 R2, see  [BranchCache for Windows Server 2008 R2](https://technet.microsoft.com/library/dd996634.aspx).  
   
 
 

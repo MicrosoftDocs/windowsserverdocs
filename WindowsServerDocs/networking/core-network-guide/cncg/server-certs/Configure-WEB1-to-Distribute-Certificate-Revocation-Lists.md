@@ -15,7 +15,7 @@ author: shortpatti
 
 You can use this procedure to configure the web server WEB1 to distribute CRLs.  
   
-In the extensions of the root CA, it was stated that the CRL from the root CA would be available via http://pki.corp.contoso.com/pki. Currently, there is not a PKI virtual directory on WEB1, so one must be created.  
+In the extensions of the root CA, it was stated that the CRL from the root CA would be available via https://pki.corp.contoso.com/pki. Currently, there is not a PKI virtual directory on WEB1, so one must be created.  
   
 To perform this procedure, you must be a member of **Domain Admins**.  
   

@@ -50,7 +50,7 @@ To publish Outlook Web App using Integrated Windows authentication, you must use
   
 To allow users to authenticate using Kerberos constrained delegation the Web Application Proxy server must be joined to a domain.  
   
-You must configure the application to support Kerberos authentication. Additionally you need to register a service principal name (SPN) to the account that the web service is running under. You can do this on the domain controller or on the backend servers. In a load balanced Exchange environment this would require using the Alternate Service Account, see [Configuring Kerberos authentication for load-balanced Client Access servers](https://technet.microsoft.com/en-us/library/ff808312(v=exchg.150).aspx)  
+You must configure the application to support Kerberos authentication. Additionally you need to register a service principal name (SPN) to the account that the web service is running under. You can do this on the domain controller or on the backend servers. In a load balanced Exchange environment this would require using the Alternate Service Account, see [Configuring Kerberos authentication for load-balanced Client Access servers](https://technet.microsoft.com/library/ff808312(v=exchg.150).aspx)  
   
 You can also configure the application directly on the backend server if it is running on Windows Server 2012 R2 or Windows Server 2012. For more information, see [What's New in Kerberos Authentication](https://technet.microsoft.com/library/hh831747.aspx). You must also make sure that the Web Application Proxy servers are configured for delegation to the service principal names of the backend servers.  
   
@@ -155,7 +155,7 @@ If you want to restrict access to your Remote Access Gateway and add pre-authent
   
             This tells the Collection server to include the custom RDP properties in the RDP files that are sent to clients. These tell the client that pre-authentication is required and to pass the cookies for the pre-authentication server address to the Remote Desktop Connection client (mstsc.exe) . This, in conjunction with disabling HttpOnly on the Web Application Proxy application, allows the Remote Desktop Connection client (mstsc.exe) to utilize the Web Application Proxy authentication cookie obtained through the browser.  
   
-            For more information on RDP, see [Configuring the TS Gateway OTP Scenario](https://technet.microsoft.com/en-us/library/cc731249(v=ws.10).aspx).  
+            For more information on RDP, see [Configuring the TS Gateway OTP Scenario](https://technet.microsoft.com/library/cc731249(v=ws.10).aspx).  
   
 ## <a name="BKMK_Links"></a>See also  
   
