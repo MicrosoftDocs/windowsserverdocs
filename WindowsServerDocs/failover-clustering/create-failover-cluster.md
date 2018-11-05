@@ -6,7 +6,7 @@ ms.topic: article
 author: JasonGerend 
 ms.author: jgerend 
 ms.technology: storage-failover-clustering 
-ms.date: 07/9/2018
+ms.date: 11/05/2018
 ms.localizationpriority: medium
 ---
 # Create a failover cluster
@@ -256,7 +256,7 @@ The following example creates a cluster that is named *MyCluster* in the *Cluste
 New-Cluster -Name CN=MyCluster,OU=Cluster,DC=Contoso,DC=com -Node Server1, Server2
 ```
 
-For examples of how to add clustered roles, see topics such as [Add-ClusterFileServerRole](http://technet.microsoft.com/library/hh847258.aspx) and [Add-ClusterGenericApplicationRole](http://technet.microsoft.com/library/hh847236.aspx).
+For examples of how to add clustered roles, see topics such as [Add-ClusterFileServerRole](https://docs.microsoft.com/powershell/module/failoverclusters/add-clusterfileserverrole?view=win10-ps) and [Add-ClusterGenericApplicationRole](https://docs.microsoft.com/powershell/module/failoverclusters/add-clustergenericapplicationrole?view=win10-ps).
 
 ## More information
 
