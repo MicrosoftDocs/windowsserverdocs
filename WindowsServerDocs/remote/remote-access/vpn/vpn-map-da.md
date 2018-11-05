@@ -11,14 +11,14 @@ ms.author: pashort
 author: shortpatti
 ---
 
-# Always On VPN features and functionality
+# Always On VPN features and functionalities
 
 >Applies To: Windows Server \(Semi-Annual Channel\), Windows Server 2016, Windows 10
 
 &#171;  [**Previous:** Always On VPN Deployment for Windows Server and Windows 10](always-on-vpn/deploy/always-on-vpn-deploy.md)<br>
 &#187; [ **Next:** Learn about the Always On VPN Enhancements](../vpn/always-on-vpn/always-on-vpn-enhancements.md)
 
-In this topic, you learn about the features and functionality of Always On VPN.  The following table is not an exhaustive list, however, it does include some of the most common features and functionality used in remote access solutions. 
+In this topic, you learn about the features and functionalities of Always On VPN.  The following table is not an exhaustive list, however, it does include some of the most common features and functionalities used in remote access solutions. 
 
 >[!TIP]
 >If you currently use DirectAccess, we recommend that you investigate the Always On VPN functionality carefully to determine if it addresses all of your remote access needs before migrating form DirectAccess to Always On VPN.  
@@ -38,7 +38,7 @@ In this topic, you learn about the features and functionality of Always On VPN. 
 | Ability to define which management servers are accessible before user sign-in. | You can achieve this functionality in Always On VPN by using the Device Tunnel feature (available in version 1709 – for IKEv2 only) in the VPN profile combined with traffic filters to control which management systems on the corporate network are accessible through the Device Tunnel.<p><p>_**Note.**_<br>If you turn on traffic filters in the Device Tunnel profile, then the Device Tunnel denies inbound traffic (from the corporate network to the client).<p>Define using:<br>**VPNv2/ProfileName/DeviceTunnel**<br>**VPNv2/ProfileName/TrafficFilterList** |
 ---
 
-## Additional functionality
+## Additional functionalities
 
 Each item in this section is a use case scenario or commonly used remote access functionality for which Always On VPN has improved functionality—either through an expansion of functionality or elimination of a previous limitation.
 
