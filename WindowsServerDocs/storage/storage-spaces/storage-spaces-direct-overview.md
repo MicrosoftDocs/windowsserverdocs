@@ -6,7 +6,7 @@ ms.manager: dongill
 ms.technology: storage-spaces
 ms.topic: article
 author: cosmosdarwin
-ms.date: 10/23/2018
+ms.date: 11/05/2018
 ms.assetid: 8bd0d09a-0421-40a4-b752-40ecb5350ffd
 description: An overview of Storage Spaces Direct, a feature of Windows Server that enables you to cluster servers with internal storage into a software-defined storage solution.
 ms.localizationpriority: medium
@@ -76,7 +76,14 @@ For other applications of Storage Spaces, such as Shared SAS clusters and stand-
               <li><a href="storage-spaces-states.md">Troubleshoot health and operational states</a></li>
               <li><a href="data-collection.md">Collect diagnostic data with Storage Spaces Direct</a></li>
             </ul>
-
+         <td style="padding: 5px; border: 0;">
+            <strong>Recent blog posts</a></strong>
+            <ul>
+              <li><a href="https://blogs.technet.microsoft.com/filecab/2018/10/30/windows-server-2019-and-intel-optane-dc-persistent-memory/">13.7 million IOPS with Storage Spaces Direct: the new industry record for hyper-converged infrastructure</a></li>
+              <li><a href="https://blogs.technet.microsoft.com/filecab/2018/10/02/hci-the-countdown-clock-starts-now/">Hyper-converged infrastructure in Windows Server 2019 - the countdown clock starts now!</a></li>
+              <li><a href="https://blogs.technet.microsoft.com/filecab/2018/06/27/windows-server-summit-recap/">Five big announcements from the Windows Server Summit</a></li>
+              <li><a href="https://blogs.technet.microsoft.com/filecab/2018/03/27/storage-spaces-direct-momentum/">10,000 Storage Spaces Direct clusters and counting...</a></li>
+            </ul>
 </table>
 
 ## Videos
@@ -85,9 +92,9 @@ For other applications of Storage Spaces, such as Shared SAS clusters and stand-
 
 <iframe src="https://www.youtube-nocookie.com/embed/raeUiNtMk0E" width="560" height="315" allowfullscreen></iframe>
 
-**Storage Spaces Direct at Microsoft Ignite 2017 (1 hour)**
+**Storage Spaces Direct at Microsoft Ignite 2018 (1 hour)**
 
-[Watch on YouTube](https://www.youtube.com/watch?v=YDr2sqNB-3c)
+[Watch on YouTube](https://www.youtube.com/watch?v=5kaUiW3qo30)
 
 **Launch Event at Microsoft Ignite 2016 (1 hour)**
 
