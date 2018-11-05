@@ -18,6 +18,15 @@ This topic lists new and updated topics in the [Storage](storage.md) documentati
 
 > If you're looking for update history for Windows Server, see [Windows 10 and Windows Server 2016 update history](https://support.microsoft.com/help/4000825/windows-10-and-windows-server-2016-update-history).
 
+## November 2018
+
+|New or changed topic|Description|
+|---|---|
+|[DFS Replication: Frequently Asked Questions (FAQ)](dfsr-faq.md)|Migrated from the [Previous Versions]|
+|[Migrate SYSVOL replication to DFS Replication](migrate-sysvol-to-dfsr.md)|Migrated from the [Previous Versions]|
+|[SMB: File and printer sharing ports should be open](smb-open-file-sharing-ports.md)|Migrated from the [Previous Versions]|
+|[Volume Shadow Copy Service](volume-shadow-copy-service.md)|Migrated from the [Previous Versions]|
+
 ## October 2018
 
 |New or changed topic|Description|

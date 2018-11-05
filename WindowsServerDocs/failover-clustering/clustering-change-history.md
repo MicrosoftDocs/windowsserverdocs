@@ -18,6 +18,12 @@ This topic lists new and updated topics in the [Failover Clustering](failover-cl
 
 > If you're looking for update history for Windows Server 2016, see [Windows 10 and Windows Server 2016 update history](https://support.microsoft.com/help/4000825/windows-10-and-windows-server-2016-update-history).
 
+## November 2018
+
+|New or changed topic|Description|
+|---|---|
+|[Configuring cluster accounts in Active Directory](configure-ad-accounts.md)|Migrated from the [Previous Versions]|
+
 ## October 2018
 
 |New or changed topic|Description|
