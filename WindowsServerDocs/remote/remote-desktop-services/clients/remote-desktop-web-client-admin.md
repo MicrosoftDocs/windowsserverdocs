@@ -4,7 +4,7 @@ description: Describes how an admin can set up the Remote Desktop web client.
 ms.prod: windows-server-threshold
 ms.technology: remote-desktop-services
 ms.author: helohr
-ms.date: 08/02/2018
+ms.date: 11/2/2018
 ms.topic: article
 author: Heidilohr
 ms.localizationpriority: medium
@@ -25,8 +25,8 @@ Before getting started, keep the following things in mind:
 * Install the [Windows 10 KB4025334 update](https://support.microsoft.com/en-us/help/4025334/windows-10-update-kb4025334) on the RD Gateway. Later cumulative updates may already contains this KB.
 * Make sure public trusted certificates are configured for the RD Gateway and RD Web Access roles.
 * Make sure that any computers your users will connect to are running one of the following OS versions:
-    * Windows 10
-    * Windows Server 2008R2 or later
+  * Windows 10
+  * Windows Server 2008R2 or later
 
 Your users will see better performance connecting to Windows Server 2016 (or later) and Windows 10 (version 1611 or later).
 
@@ -52,7 +52,7 @@ To install the web client for the first time, follow these steps:
     ```PowerShell
     Install-Module -Name PowerShellGet -Force
     ```
-    
+
     >[!IMPORTANT]
     >You'll need to restart PowerShell before the update can take effect, otherwise the module may not work.
 
@@ -60,17 +60,17 @@ To install the web client for the first time, follow these steps:
     ```PowerShell
     Install-Module -Name RDWebClientManagement
     ```
-    
+
 5. After that, run the following cmdlet to download the latest version of the Remote Desktop web client:
     ```PowerShell
     Install-RDWebClientPackage
     ```
-    
+
 6. Next, run this cmdlet with the bracketed value replaced with the path of the .cer file that you copied from the RD Broker:
     ```PowerShell
     Import-RDWebClientBrokerCert <.cer file path>
     ```
-    
+
 7. Finally, run this cmdlet to publish the Remote Desktop web client:
     ```PowerShell
     Publish-RDWebClientPackage -Type Production -Latest
@@ -79,7 +79,7 @@ To install the web client for the first time, follow these steps:
 
     >[!NOTE]
     >When running the **Publish-RDWebClientPackage** cmdlet, you may see a warning that says per-device CALs are not supported, even if your deployment is configured for per-user CALs. If your deployment uses per-user CALs, you can ignore this warning. We display it to make sure you’re aware of the configuration limitation.
-8. When you're ready for users to acces the web client, just send them the web client URL you created.
+8. When you're ready for users to access the web client, just send them the web client URL you created.
 
 >[!NOTE]
 >To see a list of all supported cmdlets for the RDWebClientManagement module, run the following cmdlet in PowerShell:
@@ -91,7 +91,7 @@ To install the web client for the first time, follow these steps:
 
 When a new version of the Remote Desktop web client is available, follow these steps to update the deployment with the new client:
 
-1. Open an elevated PowerShell prompt on the RD Web Access server and run the following cmdlet to download the latest available version of the web cient:
+1. Open an elevated PowerShell prompt on the RD Web Access server and run the following cmdlet to download the latest available version of the web client:
     ```PowerShell
     Install-RDWebClientPackage
     ```
@@ -115,7 +115,7 @@ To remove all traces of the web client, follow these steps:
 
 1. On the RD Web Access server, open an elevated PowerShell prompt.
 2. Unpublish the Test and Production clients, uninstall all local packages and remove the web client settings:
-   
+
    ```PowerShell
    Uninstall-RDWebClient
    ```
@@ -125,6 +125,54 @@ To remove all traces of the web client, follow these steps:
    ```PowerShell
    Uninstall-Module -Name RDWebClientManagement
    ```
+
+## How to install the Remote Desktop web client without an internet connection
+
+Follow these steps to deploy the web client to an RD Web Access server that doesn't have an internet connection.
+
+> [!NOTE]
+> Installing without an internet connection is available in version 1.0.1 and above of the RDWebClientManagement PowerShell module.
+
+> [!NOTE]
+> You still need an admin PC with internet access to download the necessary files before transferring them to the offline server.
+
+> [!NOTE]
+> The end-user PC needs an internet connection for now. This will be addressed in a future release of the client to provide a complete offline scenario.
+
+### From a device with internet access
+
+1. Open a PowerShell prompt.
+
+2. Import the Remote Desktop web client management PowerShell module from the PowerShell gallery:
+    ```PowerShell
+    Import-Module -Name RDWebClientManagement
+    ```
+
+3. Download the latest version of the Remote Desktop web client for installation on a different device:
+    ```PowerShell
+    Save-RDWebClientPackage "C:\WebClient\"
+    ```
+
+4. Download the latest version of the RDWebClientManagement PowerShell module:
+    ```PowerShell
+    Find-Module -Name "RDWebClientManagement" -Repository "PSGallery" | Save-Module -Path "C:\WebClient\"
+    ```
+
+5. Copy the content of "C:\WebClient\" to the RD Web Access server.
+
+### From the RD Web Access server
+
+Follow the instructions under [How to publish the Remote Desktop web client](remote-desktop-web-client-admin.md#how-to-publish-the-remote-desktop-web-client), replacing steps 4 and 5 with the following.
+
+4. Import the Remote Desktop web client management PowerShell module from the local folder:
+    ```PowerShell
+    Import-Module -Name "C:\WebClient\"
+    ```
+
+5. Deploy the latest version of the Remote Desktop web client from the local folder (replace with the appropriate zip file):
+    ```PowerShell
+    Install-RDWebClientPackage -Source "C:\WebClient\rdwebclient-1.0.1.zip"
+    ```
 
 ## Troubleshooting
 
