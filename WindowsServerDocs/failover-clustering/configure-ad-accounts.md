@@ -17,7 +17,7 @@ In Windows Server 2008, when you create a failover cluster and configure cluste
 
 **In this guide**
 
-  - [Overview of Active Directory accounts needed by a failover cluster](#overview-of-active-directory-accounts-needed by-a-failover-cluster)
+  - [Overview of Active Directory accounts needed by a failover cluster](#overview-of-active-directory-accounts-needed-by-a-failover-cluster)
       
   - [Requirements related to failover clusters, Active Directory domains, and accounts](#requirements-related-to-failover-clusters-active-directory-domains-and-accounts)
       
@@ -81,7 +81,7 @@ The following table describes the permissions required for these accounts.
 <tr class="odd">
 <td><p>Computer account of a clustered service or application</p></td>
 <td><p>When the High Availability wizard is run (to create a new clustered service or application), in most cases a computer account for the clustered service or application is created in Active Directory. The cluster name account is granted the necessary permissions to control this account. The exception is a clustered Hyper-V virtual machine: no computer account is created for this.</p>
-<p>If you prestage the computer account for a clustered service or application, you must configure it with the necessary permissions. For more information, see [Steps for prestaging an account for a clustered service or application](#steps_for_prestaging_an_account_for_a_clustered_service_or_application), later in this guide.</p></td>
+<p>If you prestage the computer account for a clustered service or application, you must configure it with the necessary permissions. For more information, see [Steps for prestaging an account for a clustered service or application](#steps-for-prestaging-an-account-for-a-clustered-service-or-application), later in this guide.</p></td>
 </tr>
 </tbody>
 </table>
@@ -108,7 +108,7 @@ The following diagram illustrates how problems can result if the cluster name ac
 
 If the type of problem shown in the diagram occurs, a certain event (1193, 1194, 1206, or 1207) is logged in Event Viewer. For more information about these events, see [http://go.microsoft.com/fwlink/?LinkId=118271](http://go.microsoft.com/fwlink/?linkid=118271).
 
-Note that a similar problem with creating an account for a clustered service or application can occur if the domain-wide quota for creating computer objects (by default, 10) has been reached. If it has, it might be appropriate to consult with the domain administrator about increasing the quota, although this is a domain-wide setting and should be changed only after careful consideration, and only after confirming that the preceding diagram does not describe your situation. For more information, see [Steps for troubleshooting problems caused by changes in cluster-related Active Directory accounts](#steps_for_troubleshooting_problems_caused_by_changes_in_cluster_related_active_directory_accounts), later in this guide.
+Note that a similar problem with creating an account for a clustered service or application can occur if the domain-wide quota for creating computer objects (by default, 10) has been reached. If it has, it might be appropriate to consult with the domain administrator about increasing the quota, although this is a domain-wide setting and should be changed only after careful consideration, and only after confirming that the preceding diagram does not describe your situation. For more information, see [Steps for troubleshooting problems caused by changes in cluster-related Active Directory accounts](#steps-for-troubleshooting-problems-caused-by-changes-in-cluster-related-active-directory-accounts), later in this guide.
 
 ## Requirements related to failover clusters, Active Directory domains, and accounts
 
@@ -266,9 +266,9 @@ Membership in the **Account Operators** group, or equivalent, is the minimum req
 
 As described earlier in this guide, when you create a failover cluster and configure clustered services or applications, the failover cluster wizards create the necessary Active Directory accounts and give them the correct permissions. If a needed account is deleted, or necessary permissions are changed, problems can result. The following subsections provide steps for troubleshooting these issues.
 
-  - [Steps for troubleshooting password problems with the cluster name account](#steps_for_troubleshooting_password_problems_with_the_cluster_name_account)
+  - [Steps for troubleshooting password problems with the cluster name account](#steps-for-troubleshooting-password-problems-with-the-cluster-name-account)
       
-  - [Steps for troubleshooting problems caused by changes in cluster-related Active Directory accounts](#steps_for_troubleshooting_problems_caused_by_changes_in_cluster_related_active_directory_accounts)
+  - [Steps for troubleshooting problems caused by changes in cluster-related Active Directory accounts](#steps-for-troubleshooting-problems-caused-by-changes-in-cluster-related-active-directory-accounts)
       
 
 ### Steps for troubleshooting password problems with the cluster name account
