@@ -349,7 +349,7 @@ with
 
 **Modify the claim used for Name**
 
-From AD FS we are issuing the Nmae claim but we are not issuing NameIdentifier claim. The sample uses NameIdentifier to uniquely key in the ToDo items. For simplicity, you can safely remove the NameIdentifier with Name claim in the code. Find and replace all occurences of NameIdentifier wiht Name.
+From AD FS we are issuing the Nmae claim but we are not issuing NameIdentifier claim. The sample uses NameIdentifier to uniquely key in the ToDo items. For simplicity, you can safely remove the NameIdentifier with Name claim in the code. Find and replace all occurrences of NameIdentifier wiht Name.
 
 **Modify Post routine and CallGraphAPIOnBehalfOfUser()**
 

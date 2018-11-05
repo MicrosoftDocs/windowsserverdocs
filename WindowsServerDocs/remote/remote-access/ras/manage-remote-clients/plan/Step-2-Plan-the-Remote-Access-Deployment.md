@@ -50,7 +50,7 @@ There are three decisions to make when you are planning your client deployment:
   
     -   **Connectivity verifiers**  
   
-        A default web probe is created that clients use to validate connectivity to the internal network. The default name is http://directaccess-WebProbeHost.<domain_name>. The name should be registered manually in DNS. You can create other connectivity verifiers that use other web addresses over HTTP or PING. For each connectivity verifier, a DNS entry must exist.  
+        A default web probe is created that clients use to validate connectivity to the internal network. The default name is https://directaccess-WebProbeHost.<domain_name>. The name should be registered manually in DNS. You can create other connectivity verifiers that use other web addresses over HTTP or PING. For each connectivity verifier, a DNS entry must exist.  
   
     -   **Help Desk email address**  
   

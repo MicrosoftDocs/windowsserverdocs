@@ -5,17 +5,17 @@ ms.prod: windows-server-threshold
 ms.technology: networking-ras
 ms.topic: article
 ms.assetid: 3c9de3ec-4bbd-4db0-b47a-03507a315383
-manager: elizap
+ms.localizationpriority: medium 
 ms.author: pashort
 author: shortpatti
-ms.date: 06/11/2018
+ms.date: 11/05/2018
 ---
 # Step 1. Plan the Always On VPN deployment
 
 >Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows 10
 
 
-&#171;  [**Previous:** Learn about the workflow for deploying Always On VP](always-on-vpn-deploy-deployment.md)<br>
+&#171;  [**Previous:** Learn about the workflow for deploying Always On VPN](always-on-vpn-deploy-deployment.md)<br>
 &#187;  [**Next:** Step 2. Configure the Server Infrastructure](vpn-deploy-server-infrastructure.md)
 
 In this step, you start to plan and prepare your Always On VPN deployment. Before you install the Remote Access server role on the computer you're planning on using as a VPN server, perform the following tasks. After proper planning, you can deploy Always On VPN, and optionally configure conditional access for VPN connectivity using Azure AD. 

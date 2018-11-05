@@ -2,12 +2,12 @@
 title: Virtualization
 description: Provides an overview of virtualization technologies, such as Containers, Hyper-V, and Hyper-V Virtual Switch; and links to additional content for Windows Server 2016 and later versions of the operating system.
 ms.prod: windows-server-threshold
-manager: brianlic
+manager: dougkim
 ms.technology: compute
 ms.topic: article
 author: shortpatti
 ms.author: pashort
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.date: 03/16/2018
 ---
 # Virtualization

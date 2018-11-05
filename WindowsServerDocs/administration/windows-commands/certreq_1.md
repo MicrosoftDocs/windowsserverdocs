@@ -22,7 +22,8 @@ ms.date: 10/16/2017
 Certreq can be used to request certificates from a certification authority (CA), to retrieve a response to a previous request from a CA, to create a new request from an .inf file, to accept and install a response to a request, to construct a cross-certification or qualified subordination request from an existing CA certificate or request, and to sign a cross-certification or qualified subordination request.
 
 > [!WARNING]
-> Earlier versions of certreq may not provide all of the options that are described in this document. You can see all the options that a specific version of certreq provides by running the commands shown in the Syntax notations section.
+> - Earlier versions of certreq may not provide all of the options that are described in this document. You can see all the options that a specific version of certreq provides by running the commands shown in the Syntax notations section.
+> - Certreq does not support creating a new certificate request based on a Key Attestation template when in a CEP/CES environment
 
 ## <a name="BKMK_Contents"></a>Contents
 

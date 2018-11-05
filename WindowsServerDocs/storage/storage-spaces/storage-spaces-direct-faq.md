@@ -20,23 +20,24 @@ Yes, you can get both a performance and capacity tier in a 2-node or 3-node Stor
  
 ## Refs file system provides real-time tiaring with Storage Spaces Direct. Does REFS provides the same functionality with shared storage spaces in 2016?
 
-No, you won’t get real-time tiaring with shared storage spaces with 2016. This is only for Storage Spaces Direct. 
+No, you won’t get real-time tiering with shared storage spaces with 2016. This is only for Storage Spaces Direct. 
  
 ## Can I use an NTFS file system with Storage Spaces Direct?
   
 Yes, you can use the NTFS file system with Storage Spaces Direct. However, REFS is recommended. NTFS does not provide real-time tiering. 
  
-## I have configured 2 node Storage Spaces Direct clusters, where the vdisk is configured with resiliency 2-way mirror. If I add a new fault domain, what will be the resiliency for the existing vdisk?
+## I have configured 2 node Storage Spaces Direct clusters, where the virtual disk is configured as 2-way mirror resiliency. If I add a new fault domain, will the resiliency of the existing virtual disk change?
 
-After you have added the new fault domain, the new vdisk that you create will jump to 3-way mirror. However, the existing vdisk will be 2-way mirror. You can copy the data to the new vdisk from the existing volumes.
+After you have added the new fault domain, the new virtual disks that you create will jump to 3-way mirror. However, the existing virtual disk will remain a 2-way mirrored disk. You can copy the data to the new virtual disks from the existing volumes to gain the benefits of the new resiliency.
  
-## I used the autoconfig:0 switch while configuring Storage Spaces Direct, and created the Storage Spaces Direct pool manually. When I try to query the Storage Spaces Direct pool to create a new volume, I get a message that says, “Enable-ClusterS2D again.“ What should I do?
+## The Storage Spaces Direct was created using the autoconfig:0 switch and the pool created manually. When I try to query the Storage Spaces Direct pool to create a new volume, I get a message that says, “Enable-ClusterS2D again.“ What should I do?
 
-By default, when you configure Storage Spaces Direct by using the enable-S2D cmdlet, the cmdlet does everything for you. It creates the pool and tier. But when you use autoconfig:0, you must everything manually. If you created only the pool, the tier is not necessarily created also. You will receive an “Enable-ClusterS2D again” error message if you have either not created Tiers or not created Tiers that have the correct specification for the device. We recommend that you do not use the autoconfig switch in a production environment. 
+By default, when you configure Storage Spaces Direct by using the enable-S2D cmdlet, the cmdlet does everything for you. It creates the pool and the tiers. When using autoconfig:0, everything must be done manually. If you created only the pool, the tier is not necessarily created. You will receive an 
+“Enable-ClusterS2D again” error message if you have either not created Tiers at all or not created Tiers in a manner corresponding to the devices attached. We recommend that you do not use the autoconfig switch in a production environment. 
  
 ## Is it possible to add a spinning disk (HDD) to the Storage Spaces Direct pool after you have created Storage Spaces Direct with SSD devices?
 
-No. By default, if you use the same device type to create the pool, it would not configure cache devices, and every device would be used for capacity. You can add NVME to the configuration, and that would be configured as cache.
+No. By default, if you use the single device type to create the pool, it would not configure cache disks and all disks would be used for capacity. You can add NVME disks to the configuration, and NVME disks would be configured for cache.
  
 ## I have configured a 2-rack fault domain: RACK 1 has 2 fault domains, RACK 2 has 1 fault domain. Each server has 4 capacity 100 GB devices. Can I use all 1,200 GB of space from the pool?
 
@@ -54,13 +55,13 @@ Use the built-in utility PerfMon to inspect the cache misses. Review the cache m
 
 You can use the Storage Spaces Calculator to help with your planning. It is available at http://aka.ms/s2dcalc.
  
-## What is the best configuration that you would recommend for using 3 racks and 6 servers?
+## What is the best configuration that you would recommend when configuring 6 servers and 3 racks?
 
-You can move 2 servers to each rack so that vdisk resiliency would be 3-way mirror. This configuration will work only if your hardware is configured in the correct manner. That means that the hardware configuration is the same that we are configuring for the OS. 
+Use 2 servers on each of the racks to get the virtual disk resiliency of a 3-way mirror. Remember that the rack configuration would work correctly only if you are providing the configuration to the OS in the manner it is placed on the rack. 
  
-## Can I enable maintenance mode on specific disk and specific server in Storage Spaces Direct cluster?
+## Can I enable maintenance mode for a specific disk on a specific server in Storage Spaces Direct cluster?
 
-Yes, you can enable storage maintenance mode on a specific disk and specific fault domain. The Enable-StorageMaintenanceMode command is automatically invoked when you pause a node. You can enable a specific disk by running the following command:
+Yes, you can enable storage maintenance mode on a specific disk and a specific fault domain. The Enable-StorageMaintenanceMode command is automatically invoked when you pause a node. You can enable it for a specific disk by running the following command:
 
 ```powershell
 Get-PhysicalDisk -SerialNumber <SerialNumber> | Enable-StorageMaintenanceMode
