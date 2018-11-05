@@ -5,7 +5,7 @@ ms.prod: windows-server-threshold
 ms.technology: networking-ras
 ms.topic: article
 ms.assetid: 
-manager: dougkim
+ms.localizationpriority: medium 
 ms.author: pashort
 author: shortpatti
 ms.date: 08/30/2018
@@ -55,6 +55,7 @@ In this procedure, you install the Remote Access role as a single tenant RAS Gat
    | Success | Restart Needed | Exit Code | Feature Result                             |
    |---------|----------------|-----------|--------------------------------------------|
    | True    | No             | Success   | {RAS Connection Manager Administration Kit |
+   ---
 
 ### Install the Remote Access role by using Server Manager
 
@@ -151,6 +152,7 @@ In this section, you can configure Remote Access VPN to allow IKEv2 VPN connecti
     |---------------------|-------------------|
     | Remote Access activity logged on the Remote Access server | Make sure that **Windows Accounting** is selected.      |
     | NPS to perform accounting services for VPN   | Change **Accounting provider** to **RADIUS Accounting** and then configure the NPS as the accounting provider. |
+    ---
 
 15. Click the **IPv4** tab and do:
 

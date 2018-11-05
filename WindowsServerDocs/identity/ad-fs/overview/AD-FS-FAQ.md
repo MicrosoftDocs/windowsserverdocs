@@ -93,7 +93,7 @@ The value of “sub” claim is the hash of client ID + anchor claim value.
 The lifetime of refresh token will be the lifetime of the token that ADFS got from remote claims provider trust. The lifetime of the access token will be the token lifetime of the relying party for which access token is being issued.
 
 ### I need to return profile and email scopes as well in addition to the OpenId scope. Can I obtain additional information using scopes? How to do it in AD FS?
-You can use customized id_token to add relevant information in the id_token itself. For more, read here.
+You can use customized id_token to add relevant information in the id_token itself. For more information, see the article [Customize claims to be emitted in id_token](../development/Custom-Id-Tokens-in-AD-FS.md).
 
 ### How to issue json blobs inside JWT tokens?
 A special ValueType("http://www.w3.org/2001/XMLSchema#json" ) and escape character(\x22) for this was added in AD FS 2016. Please the sample below for the issuance rule and also the final output from the access token.
@@ -145,7 +145,7 @@ If you don't have Access control policies based on device on ADFS or Windows Hel
 
 ### How long are AD FS tokens valid?
 
-Often this question means ‘how long do users get single sign on (SSO) without having to enter new credentials, and how can I as an admin control that?’  This behavior, and the configuration settings that control it, are described in the article [here](https://technet.microsoft.com/en-us/windows-server-docs/identity/ad-fs/operations/ad-fs-2016-single-sign-on-settings).
+Often this question means ‘how long do users get single sign on (SSO) without having to enter new credentials, and how can I as an admin control that?’  This behavior, and the configuration settings that control it, are described in the article [AD FS Single Sign-On Settings](https://technet.microsoft.com/en-us/windows-server-docs/identity/ad-fs/operations/ad-fs-2016-single-sign-on-settings).
 
 The default lifetimes of the various cookies and tokens are listed below (as well as the parameters that govern the lifetimes):
 

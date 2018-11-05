@@ -18,7 +18,7 @@ ms.date: 12/02/2016
   
 To create and run virtual machines, install the Hyper-V role on Windows Server by using Server Manager or the Install-WindowsFeature cmdlet in Windows PowerShell. To install the Hyper-V role on a Nano Server, see [Getting Started with Nano Server](../../../get-started/Getting-Started-with-Nano-Server.md). For Windows 10, see [Install Hyper-V on Windows 10](https://docs.microsoft.com/virtualization/hyper-v-on-windows/quick-start/enable-hyper-v).
 
-To learn more about Hyper-V, see the [Hyper-V Technology Overview](..\Hyper-V-Technology-Overview.md). To try out Windows Server 2019, you can download and install an evaluation copy. See the [Evaluation Center](https://www.microsoft.com/en-us/evalcenter/evaluate-windows-server-2019).
+To learn more about Hyper-V, see the [Hyper-V Technology Overview](..\Hyper-V-Technology-Overview.md). To try out Windows Server 2019, you can download and install an evaluation copy. See the [Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-windows-server-2019).
 
 Before you install Windows Server or add the Hyper-V role, make sure that:
 - Your computer hardware is compatible. For details, see [System Requirements for Windows Server](../../../get-started/System-Requirements.md) and [System requirements for Hyper-V on Windows Server](../System-requirements-for-Hyper-V-on-Windows.md).

@@ -544,8 +544,8 @@ You can use the following commands to install and configure AD DS and DNS. You m
 
 >[!NOTE]
 >For more information about these Windows PowerShell commands, see the following reference topics.
->- [Install-WindowsFeature](https://docs.microsoft.com/en-us/powershell/module/servermanager/install-windowsfeature?view=win10-ps)
->- [Install-ADDSForest](https://docs.microsoft.com/en-us/powershell/module/addsdeployment/install-addsforest?view=win10-ps)
+>- [Install-WindowsFeature](https://docs.microsoft.com/powershell/module/servermanager/install-windowsfeature?view=win10-ps)
+>- [Install-ADDSForest](https://docs.microsoft.com/powershell/module/addsdeployment/install-addsforest?view=win10-ps)
 
 Membership in **Administrators** is the minimum required to perform this procedure.
 
@@ -1152,7 +1152,7 @@ For more information about the technologies in this guide, see the following res
 
  Windows Server 2016,  Windows Server 2012 R2 , and  Windows Server 2012  Technical Library Resources
 
--   [What's new in Active Directory Domain Services (AD DS) in Windows Server 2016](https://technet.microsoft.com/en-us/library/mt163897.aspx)
+-   [What's new in Active Directory Domain Services (AD DS) in Windows Server 2016](https://technet.microsoft.com/library/mt163897.aspx)
 
 -   [Active Directory Domain Services overview](https://technet.microsoft.com/library/hh831484.aspx) at https://technet.microsoft.com/library/hh831484.aspx.
 

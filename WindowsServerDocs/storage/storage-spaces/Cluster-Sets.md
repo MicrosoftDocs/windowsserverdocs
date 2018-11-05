@@ -247,9 +247,9 @@ Live migrating a virtual machine between different cluster set clusters is not t
 2. live migrate the virtual machine to a member node of a different cluster.
 3. add the virtual machine into the cluster as a new virtual machine role.
 
-With Cluster sets these steps are not necessary and only one command is needed.  For example, I want to move a Cluster Set virtual machine from CLUSTER1 to CLUSTER3.  The single command would be:
+With Cluster sets these steps are not necessary and only one command is needed.  For example, I want to move a Cluster Set virtual machine from CLUSTER1 to NODE2-CL3 on CLUSTER3.  The single command would be:
 
-        Move-ClusterSetVM -CimSession CSMASTER -VMName CSVM1 -ClusterName CLUSTER3
+        Move-ClusterSetVM -CimSession CSMASTER -VMName CSVM1 -Node NODE2-CL3
 
 Please note that this does not move the virtual machine storage or configuration files.  This is not necessary as the path to the virtual machine remains as \\SOFS-CLUSTER1\VOLUME1.  Once a virtual machine has been registered with cluster sets has the Infrastructure File Server share path, the drives and virtual machine do not require being on the same machine as the virtual machine.
 
@@ -325,7 +325,7 @@ For example, the command to remove the CLUSTER1 cluster from cluster sets would 
 **Answer:** PowerShell or WMI in this release.
 
 **Question:** How will the cross-cluster live migration work with processors of different generations?  <br>
-**Answer:** Cluster sets does not work around processor differences and supercede what Hyper-V currently supports.  Therefore, processor compatibility mode must be used with quick migrations.  The recommendation for Cluster sets is to use the same processor hardware within each individual Cluster as well as the entire Cluster Set for live migrations between clusters to occur.
+**Answer:** Cluster sets does not work around processor differences and supersede what Hyper-V currently supports.  Therefore, processor compatibility mode must be used with quick migrations.  The recommendation for Cluster sets is to use the same processor hardware within each individual Cluster as well as the entire Cluster Set for live migrations between clusters to occur.
 
 **Question:** Can my cluster set virtual machines automatically failover on a cluster failure?  <br>
 **Answer:** In this release, cluster set virtual machines can only be manually live-migrated across clusters; but cannot automatically failover. 
