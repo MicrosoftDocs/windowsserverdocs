@@ -70,4 +70,4 @@ These are the top Microsoft Support solutions for the most common issues experie
 - [Event ID 2108 and Event ID 1084 occur during inbound replication of Active Directory in Windows 2000 Server and in Windows Server 2003](https://support.microsoft.com/kb/837932)
 - [Troubleshooting AD Replication error 8451: The replication operation encountered a database error](https://support.microsoft.com/kb/2645996)
 - [Troubleshooting AD Replication error 1127: While accessing the hard disk, a disk operation failed even after retries](https://support.microsoft.com/kb/2025726)
-- [Clean Up Server Metadata](https://technet.microsoft.com/en-us/library/cc816907.aspx)
+- [Clean Up Server Metadata](https://technet.microsoft.com/library/cc816907.aspx)

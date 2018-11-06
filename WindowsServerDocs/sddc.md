@@ -78,7 +78,7 @@ Flexible and secure, and not bound to the underlying storage topology, Shared VH
 - Shared VHDX can reside on a Cluster Shared Volume (CSV) on block storage, or on SMB file-based storage.
 - Protected: Shared VHDX supports Hyper-V Replica and host-level backup.
 
-![](media/sddc/learn.png)**[Learn more about  Guest Clustering with Shared VHDX](https://technet.microsoft.com/en-us/library/dn281956(v=ws.11).aspx)**
+![](media/sddc/learn.png)**[Learn more about  Guest Clustering with Shared VHDX](https://technet.microsoft.com/library/dn281956(v=ws.11).aspx)**
 
 ### Hyper-V Replica ###
 

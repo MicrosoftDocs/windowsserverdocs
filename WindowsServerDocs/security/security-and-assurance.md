@@ -173,7 +173,7 @@ Windows Server security provides layers of protection built into the operating s
 <HR />
                         <p><h3><a href="https://docs.microsoft.com/windows/desktop/SecBP/control-flow-guard">Control Flow Guard</a></h3>Control Flow Guard provides built-in protection against some classes of memory corruption attacks.</p>
 <HR />
-                        <p><h3><a href="https://technet.microsoft.com/en-us/windows-server-docs/security/windows-defender/windows-defender-overview-windows-server">Windows Defender</a></h3>Windows Defender provides active detection capabilities to block known malware. Windows Defender is turned on by default and is optimized to support the various server roles in Windows Server.</p>
+                        <p><h3><a href="https://technet.microsoft.com/windows-server-docs/security/windows-defender/windows-defender-overview-windows-server">Windows Defender</a></h3>Windows Defender provides active detection capabilities to block known malware. Windows Defender is turned on by default and is optimized to support the various server roles in Windows Server.</p>
                     </div>
                 </div>
             </div>
@@ -267,7 +267,7 @@ Windows Server security provides layers of protection built into the operating s
 <HR />
                         <p><h3><a href="https://technet.microsoft.com/library/dn920240.aspx">Datacenter Firewall Overview</a></h3>This overview discusses Datacenter Firewall, a network layer, 5-tuple (protocol, source and destination port numbers, source and destination IP addresses), stateful, multitenant firewall.</p>
 <HR />
-                        <p><h3><a href="https://technet.microsoft.com/en-us/windows-server-docs/networking/dns/what-s-new-in-dns-server">What's New in DNS in Windows Server</a></h3>This overview topic provides brief descriptions of new capabilities in DNS, along with links for more information. </p>
+                        <p><h3><a href="https://technet.microsoft.com/windows-server-docs/networking/dns/what-s-new-in-dns-server">What's New in DNS in Windows Server</a></h3>This overview topic provides brief descriptions of new capabilities in DNS, along with links for more information. </p>
                     </div>
                 </div>
             </div>

@@ -133,7 +133,7 @@ You can use the following Windows PowerShell command to set the AD FS extranet l
 
     PS:\>Set-AdfsProperties -EnableExtranetLockout $true -ExtranetLockoutThreshold 15 -ExtranetObservationWindow ( new-timespan -Minutes 30 )
 
-For reference, the public documentation of this feature is [here](https://technet.microsoft.com/en-us/library/dn486806.aspx ). 
+For reference, the public documentation of this feature is [here](https://technet.microsoft.com/library/dn486806.aspx ). 
 
 ### Differentiate access policies for intranet and extranet access
 AD FS has the ability to differentiate access policies for requests that originate in the local, corporate network vs requests that come in from the internet via the proxy.  This can be done per application or globally.  For high business value applications or applications with sensitive or personally identifiable information, consider requiring multi factor authentication.  This can be done via the AD FS management snap-in.  
@@ -141,7 +141,7 @@ AD FS has the ability to differentiate access policies for requests that origina
 ### Require Multi factor authentication (MFA)
 AD FS can be configured to require strong authentication (such as multi factor authentication) specifically for requests coming in via the proxy, for individual applications, and for conditional access to both Azure AD / Office 365 and on premises resources.  Supported methods of MFA include both Microsoft Azure MFA and third party providers.  The user is prompted to provide the additional information (such as an SMS text containing a one time code), and AD FS works with the provider specific plug-in to allow access.  
 
-Supported external MFA providers include those listed in [this](https://technet.microsoft.com/en-us/library/dn758113.aspx) page, as well as HDI Global.
+Supported external MFA providers include those listed in [this](https://technet.microsoft.com/library/dn758113.aspx) page, as well as HDI Global.
 
 ### Hardware Security Module (HSM)
 In its default configuration, the keys AD FS uses to sign tokens never leave the federation servers on the intranet.  They are never present in the DMZ or on the proxy machines.  Optionally to provide additional protection, these keys can be protected in a hardware security module attached to AD FS.  Microsoft does not produce an HSM product, however there are several on the market that support AD FS.  In order to implement this recommendation, follow the vendor guidance to create the X509 certs for signing and encryption, then use the AD FS installation powershell commandlets, specifying your custom certificates as follows:

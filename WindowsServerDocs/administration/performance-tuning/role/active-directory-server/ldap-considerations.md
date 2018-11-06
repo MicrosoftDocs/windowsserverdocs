@@ -24,7 +24,7 @@ There is extensive documentation on MSDN about how to properly write, structure,
 
 When returning results with multiple objects in response to client requests, the domain controller has to temporarily store the result set in memory. Increasing page sizes will cause more memory usage and can age items out of cache unnecessarily. In this case, the default settings are optimal. There are several scenarios where recommendations were made to increase the page size settings. We recommend using the default values unless specifically identified as inadequate.
 
-When queries have many results, a limit of similar queries concurrently executed may be encountered.  This occurs as the LDAP server may deplete a global memory area known as the cookie pool.  It may be necessary to increase the size of the pool as discussed in [How LDAP Server Cookies Are Handled](https://technet.microsoft.com/en-us/windows-server-docs/identity/ad-ds/manage/how-ldap-server-cookies-are-handled).
+When queries have many results, a limit of similar queries concurrently executed may be encountered.  This occurs as the LDAP server may deplete a global memory area known as the cookie pool.  It may be necessary to increase the size of the pool as discussed in [How LDAP Server Cookies Are Handled](https://technet.microsoft.com/windows-server-docs/identity/ad-ds/manage/how-ldap-server-cookies-are-handled).
 
 To tune these settings, see [Windows Server 2008 and newer domain controller returns only 5000 values in a LDAP response](https://support.microsoft.com/kb/2009267).
 

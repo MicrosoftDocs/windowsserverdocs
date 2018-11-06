@@ -251,7 +251,7 @@ The following tables offer Microsoft guidance on disabling system services on Wi
 |	**Installation**	|	Only with Desktop Experience
 |	**StartType**	|	Manual
 |	**Recommendation**	|	OK to disable
-|	**Comments**	|	OK to disable if not used. Another disabling mechanism: https://technet.microsoft.com/en-us/library/dd252791.aspx
+|	**Comments**	|	OK to disable if not used. Another disabling mechanism: https://technet.microsoft.com/library/dd252791.aspx
 |||			
 			
 <br />			

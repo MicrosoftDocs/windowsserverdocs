@@ -92,7 +92,7 @@ There is a known issue where the AD user account cannot authenticate with AD FS 
 ## Additional references  
 [Best practices for securing Active Directory Federation Services](../../ad-fs/deployment/best-practices-securing-ad-fs.md)
 
-[Set-AdfsProperties](https://technet.microsoft.com/en-us/itpro/powershell/windows/adfs/set-adfsproperties)
+[Set-AdfsProperties](https://technet.microsoft.com/itpro/powershell/windows/adfs/set-adfsproperties)
 
 [AD FS Operations](../../ad-fs/AD-FS-2016-Operations.md)
 
