@@ -327,7 +327,7 @@ Membership in the **Domain Admins** group, or equivalent, is the minimum require
 
 9.  For the cluster name account (also known as the cluster name object or CNO), ensure that **Allow** is selected for the **Create Computer objects** and **Read All Properties** permissions.
     
-    ![](media/Cc731002.f5977c4d-a62e-4b17-81e3-8c19ddca2078(WS.10).gif)
+    ![](media/configure-ad-accounts/Cc731002.f5977c4d-a62e-4b17-81e3-8c19ddca2078(WS.10).gif)
 
 10. Click **OK** until you have returned to the **Active Directory Users and Computers** snap-in.
 
@@ -339,7 +339,7 @@ Membership in the **Domain Admins** group, or equivalent, is the minimum require
 
 14. On the **Security** tab, confirm that the cluster name account is listed among the accounts that have permissions, and select it. Confirm that the cluster name account has **Full Control** permission (the **Allow** check box is selected). If it does not, add the cluster name account to the list and give it **Full Control** permission.
     
-    ![](media/Cc731002.2e614376-87a6-453a-81ba-90ff7ebc3fa2(WS.10).gif)
+    ![](media/configure-ad-accounts/Cc731002.2e614376-87a6-453a-81ba-90ff7ebc3fa2(WS.10).gif)
 
 15. Repeat steps 13-14 for each clustered service and application configured in the cluster.
 

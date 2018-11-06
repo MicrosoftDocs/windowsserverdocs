@@ -17,7 +17,7 @@ Applies To: Windows Server 2003 R2, Windows Server 2008, Windows Server 2008 R2,
 
 This FAQ answers questions about Distributed File System (DFS) Replication (also known as DFS-R or DFSR) for the Windows Server 2012 R2, Windows Server 2012, Windows Server® 2008 R2, Windows Server 2008, and Windows Server 2003 R2 operating systems.
 
-For information about DFS Namespaces, see [DFS Namespaces: Frequently Asked Questions](https://technet.microsoft.com/en-us/library/Ee404780).
+For information about DFS Namespaces, see [DFS Namespaces: Frequently Asked Questions](https://technet.microsoft.com/en-us/library/ee404780).
 
 For information about what's new in DFS Replication, see the following topics:
 
@@ -292,7 +292,7 @@ The following are best practices for implementing file screens or quotas:
 
 ### Is DFS Replication cluster aware?
 
-Yes, DFS Replication in Windows Server 2012 R2, Windows Server 2012 and Windows Server 2008 R2 includes the ability to add a failover cluster as a member of a replication group. For more information, see [Add a Failover Cluster to a Replication Group](http://go.microsoft.com/fwlink/?linkid=155085) (http://go.microsoft.com/fwlink/?LinkId=155085).The DFS Replication service on versions of Windows prior to Windows Server 2008 R2 is not designed to coordinate with a failover cluster, and the service will not fail over to another node.
+Yes, DFS Replication in Windows Server 2012 R2, Windows Server 2012 and Windows Server 2008 R2 includes the ability to add a failover cluster as a member of a replication group. For more information, see [Add a Failover Cluster to a Replication Group](http://go.microsoft.com/fwlink/?linkid=155085) (http://go.microsoft.com/fwlink/?LinkId=155085). The DFS Replication service on versions of Windows prior to Windows Server 2008 R2 is not designed to coordinate with a failover cluster, and the service will not fail over to another node.
 
 
 > [!NOTE]
