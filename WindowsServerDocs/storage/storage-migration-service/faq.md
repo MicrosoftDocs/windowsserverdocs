@@ -4,7 +4,7 @@ description: Frequently asked questions about Storage Migration Service, such as
 author: nedpyle
 ms.author: nedpyle
 manager: siroy
-ms.date: 10/25/2018
+ms.date: 11/06/2018
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: storage
@@ -24,19 +24,19 @@ Storage Migration Service won't transfer files or folders that we know could int
 
 ## <a name="domain-migration"></a> Are domain migrations supported?
 
-Storage Migration Service does not allow migrating between Active Directory domains. Migrations between servers will always join the destination server to the same domain. You can use migration credentials from different domains in the Active Directory forest. The Storage Migration Sevice does support migrating between workgroups.  
+Storage Migration Service doesn't allow migrating between Active Directory domains. Migrations between servers will always join the destination server to the same domain. You can use migration credentials from different domains in the Active Directory forest. The Storage Migration Sevice does support migrating between workgroups.  
 
 ## <a name="cluster-support"></a> Are clusters supported as sources or destinations?
 
-Storage Migration Service does not currently migrate between Clusters in Windows Server 2019. We plan to add cluster support in a future release of the Storage Migration Service.
+Storage Migration Service doesn't currently migrate between Clusters in Windows Server 2019. We plan to add cluster support in a future release of the Storage Migration Service.
 
 ## <a name="local-principals"></a> Do local groups and local users migrate?
 
-Storage Migration Service does not currently migrate local users or local groups in Windows Server 2019. We plan to add local user and local group migration support in a future release of the Storage Migration Service.
+Storage Migration Service doesn't currently migrate local users or local groups in Windows Server 2019. We plan to add local user and local group migration support in a future release of the Storage Migration Service.
 
 ## <a name="domain-controller"></a> Is domain controller migration supported?
 
-Storage Migration Service does not currently migrate domain controllers in Windows Server 2019. As a workaround, as long as you have more than one domain controller in the Active Directory domain, demote the domain controller before migrating it, then promote the destination after cut over completes. We plan to add domain controller migration support in a future release of the Storage Migration Service.
+Storage Migration Service doesn't currently migrate domain controllers in Windows Server 2019. As a workaround, as long as you have more than one domain controller in the Active Directory domain, demote the domain controller before migrating it, then promote the destination after cut over completes. We plan to add domain controller migration support in a future release of the Storage Migration Service.
 
 ## <a name="share-attributes"></a> What attributes are migrated by the Storage Migration Service?
 
@@ -99,11 +99,11 @@ The Storage Migration Service version shipped in Windows Server 2019 supports mi
 
 ## <a name="previous-versions"></a> Can I migrate previous file versions?
 
-The Storage Migration Service version shipped in Windows Server 2019 does not support migrating Previous Versions (made with the volume shadow copy service) of files. Only the current version will migrate. 
+The Storage Migration Service version shipped in Windows Server 2019 doesn't support migrating Previous Versions (made with the volume shadow copy service) of files. Only the current version will migrate. 
 
 ## <a name="ntfs-refs"></a> Can I migrate from NTFS to REFS?
 
-The Storage Migration Service version shipped in Windows Server 2019 does not support migrating from the NTFS to REFS file systems. You can migrate from NTFS to NTFS and REFS to ReFS. This is by design, due to the many differences in functionality, metadata, and other aspects that ReFS does not duplicate from NTFS. ReFS is intended as an application workload file system, not a general file system. For more information, review [Resilient File System (ReFS) overview](https://docs.microsoft.com/en-us/windows-server/storage/refs/refs-overview)
+The Storage Migration Service version shipped in Windows Server 2019 doesn't support migrating from the NTFS to REFS file systems. You can migrate from NTFS to NTFS and REFS to ReFS. This is by design, due to the many differences in functionality, metadata, and other aspects that ReFS doesn't duplicate from NTFS. ReFS is intended as an application workload file system, not a general file system. For more information, see [Resilient File System (ReFS) overview](../refs/refs-overview.md)
 
 ## <a name="give-feedback"></a> What are my options to give feedback, file bugs, or get support?
 
