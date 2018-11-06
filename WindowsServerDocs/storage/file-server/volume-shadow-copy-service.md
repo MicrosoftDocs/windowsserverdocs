@@ -58,7 +58,7 @@ A complete VSS solution requires all of the following basic parts:
 
 The following diagram illustrates how the VSS service coordinates with requesters, writers, and providers to create a shadow copy of a volume.
 
-![](media/Ee923636.94dfb91e-8fc9-47c6-abc6-b96077196741(WS.10).jpg)
+![](media/volume-shadow-copy-service/Ee923636.94dfb91e-8fc9-47c6-abc6-b96077196741(WS.10).jpg)
 
 **Figure 1**   Architectural diagram of Volume Shadow Copy Service
 
@@ -66,7 +66,7 @@ The following diagram illustrates how the VSS service coordinates with requester
 
 This section puts the various roles of the requester, writer, and provider into context by listing the steps that need to be taken to create a shadow copy. The following diagram shows how the Volume Shadow Copy Service controls the overall coordination of the requester, writer, and provider.
 
-![](media/Ee923636.1c481a14-d6bc-4796-a3ff-8c6e2174749b(WS.10).jpg)
+![](media/volume-shadow-copy-service/Ee923636.1c481a14-d6bc-4796-a3ff-8c6e2174749b(WS.10).jpg)
 
 **Figure 2** Shadow copy creation process
 
@@ -310,7 +310,7 @@ With the Volume Shadow Copy Service and a storage array with a hardware provider
 
 3.  The data is now ready to be used.
 
-![](media/Ee923636.633752e0-92f6-49a7-9348-f451b1dc0ed7(WS.10).jpg)
+![](media/volume-shadow-copy-service/Ee923636.633752e0-92f6-49a7-9348-f451b1dc0ed7(WS.10).jpg)
 
 **Figure 3**   Shadow copy creation and transport between two servers
 
@@ -376,7 +376,7 @@ To exclude specific files from shadow copies, use the following registry key: **
 <UL>
 <LI>It cannot delete files from a shadow copy that was created on a Windows Server by using the Previous Versions feature.<BR><BR>
 <LI>It cannot delete files from shadow copies for shared folders.<BR><BR>
-<LI>It can delete files from a shadow copy that was created by using the [Diskshadow](../../administration/windows-commands/diskshadow) utility, but it cannot delete files from a shadow copy that was created by using the [Vssadmin](../../administration/windows-commands/vssadmin) utility.<BR><BR>
+<LI>It can delete files from a shadow copy that was created by using the [Diskshadow](https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/diskshadow) utility, but it cannot delete files from a shadow copy that was created by using the [Vssadmin](https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/vssadmin) utility.<BR><BR>
 <LI>Files are deleted from a shadow copy on a best-effort basis. This means that they are not guaranteed to be deleted.<BR><BR></LI></UL>
 
 
@@ -578,7 +578,7 @@ The following table lists the minimum supported operating system versions for VS
 </colgroup>
 <thead>
 <tr class="header">
-<th><img src="images/Dd560667.note(WS.10).gif" />Note</th>
+<th><img src="media/volume-shadow-copy-service/Dd560667.note(WS.10).gif" />Note</th>
 </tr>
 </thead>
 <tbody>
