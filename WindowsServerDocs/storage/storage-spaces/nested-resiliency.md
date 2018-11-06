@@ -47,7 +47,7 @@ RAID 5+1 is an established form of distributed storage resiliency that provides 
 
 Storage Spaces Direct in Windows Server 2019 offers two new resiliency options implemented in software, without the need for specialized RAID hardware:
 
-- **Nested two-way mirror.** Within each server, local resiliency is provided by two-way mirroring, and then further resiliency is provided by two-way mirroring between the two servers. It's essentially a four-way mirror, with two copies in each server. A nested two-way mirror provides uncompromising performance: writes go to all copies, and reads come from any copy.
+- **Nested two-way mirror.** Within each server, local resiliency is provided by two-way mirroring, and then further resiliency is provided by two-way mirroring between the two servers. It's essentially a four-way mirror, with two copies in each server. Nested two-way mirroring provides uncompromising performance: writes go to all copies, and reads come from any copy.
 
   ![Nested two-way mirror](media/nested-resiliency/nested-two-way-mirror.png)
 
