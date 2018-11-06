@@ -32,9 +32,9 @@ In Windows Server 2008, when you create a failover cluster and configure cluste
 
 For additional topics about Active Directory accounts and failover clusters, see the appendixes in this guide:
 
-  - [Appendix A: Dealing with Accounts After a Failover Cluster is Destroyed](cc771174\(v=ws.10\).md)  
+  - [Appendix A: Dealing with Accounts After a Failover Cluster is Destroyed](https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc771174(v=ws.10))  
       
-  - [Appendix B: Comparison Between Accounts for Server Clusters and for Failover Clusters](cc725957\(v=ws.10\).md)  
+  - [Appendix B: Comparison Between Accounts for Server Clusters and for Failover Clusters](https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc725957(v=ws.10))  
       
 
 ## Overview of Active Directory accounts needed by a failover cluster
@@ -96,7 +96,7 @@ The following table describes the permissions required for these accounts.
 
 The following diagram illustrates the use and creation of computer accounts (Active Directory objects) that are described in the previous subsection. These accounts come into play when an administrator runs the Create Cluster wizard and then runs the High Availability wizard (to configure a clustered service or application).
 
-![](images/Cc731002.e8a7686c-9ba8-4ddf-87b1-175b7b51f65d(WS.10).gif)
+![](media/configure-ad-accounts/Cc731002.e8a7686c-9ba8-4ddf-87b1-175b7b51f65d(WS.10).gif)
 
 Note that the above diagram shows a single administrator running both the Create Cluster wizard and the High Availability wizard. However, this could be two different administrators using two different user accounts, if both accounts had sufficient permissions. The permissions are described in more detail in Requirements related to failover clusters, Active Directory domains, and accounts, later in this guide.
 
@@ -104,7 +104,7 @@ Note that the above diagram shows a single administrator running both the Create
 
 The following diagram illustrates how problems can result if the cluster name account (one of the accounts required by the cluster) is changed after it is automatically created by the Create Cluster wizard.
 
-![](images/Cc731002.beecc4f7-049c-4945-8fad-2cceafd6a4a5(WS.10).gif)
+![](media/configure-ad-accounts/Cc731002.beecc4f7-049c-4945-8fad-2cceafd6a4a5(WS.10).gif)
 
 If the type of problem shown in the diagram occurs, a certain event (1193, 1194, 1206, or 1207) is logged in Event Viewer. For more information about these events, see [http://go.microsoft.com/fwlink/?LinkId=118271](http://go.microsoft.com/fwlink/?linkid=118271).
 
@@ -176,7 +176,7 @@ The minimum group membership required to complete the following procedure depend
           
     6.  In the **Permission Entry for***container* dialog box, locate the **Create Computer objects** and **Read All Properties** permissions, and make sure that the **Allow** check box is selected for each one.  
           
-        ![](images/Cc731002.0a863ac5-2024-4f9f-8a4d-a419aff32fa0(WS.10).gif)
+        ![](media/configure-ad-accounts/Cc731002.0a863ac5-2024-4f9f-8a4d-a419aff32fa0(WS.10).gif)
 
 ## Steps for prestaging the cluster name account
 
@@ -212,7 +212,7 @@ Membership in the **Domain Admins** group, or equivalent, is the minimum require
 
 11. In the **Permission Entry** dialog box, locate the **Create Computer objects** and **Read All Properties** permissions, and make sure that the **Allow** check box is selected for each one.
     
-    ![](images/Cc731002.f5977c4d-a62e-4b17-81e3-8c19ddca2078(WS.10).gif)
+    ![](media/configure-ad-accounts/Cc731002.f5977c4d-a62e-4b17-81e3-8c19ddca2078(WS.10).gif)
 
 12. Click **OK** until you have returned to the **Active Directory Users and Computers** snap-in.
 
@@ -228,7 +228,7 @@ Membership in the **Domain Admins** group, or equivalent, is the minimum require
           
     5.  Make sure that the user account that you just added is selected, and then, next to **Full Control**, select the **Allow** check box.  
           
-        ![](images/Cc731002.fffaafe2-a494-498b-974c-8f9d70f7103b(WS.10).gif)
+        ![](media/configure-ad-accounts/Cc731002.fffaafe2-a494-498b-974c-8f9d70f7103b(WS.10).gif)
 
 ## Steps for prestaging an account for a clustered service or application
 
@@ -260,7 +260,7 @@ Membership in the **Account Operators** group, or equivalent, is the minimum req
 
 10. Make sure that the cluster name account is selected, and then, next to **Full Control**, select the **Allow** check box.
     
-    ![](images/Cc731002.2e614376-87a6-453a-81ba-90ff7ebc3fa2(WS.10).gif)
+    ![](media/configure-ad-accounts/Cc731002.2e614376-87a6-453a-81ba-90ff7ebc3fa2(WS.10).gif)
 
 ## Steps for troubleshooting problems related to accounts used by the cluster
 
@@ -327,7 +327,7 @@ Membership in the **Domain Admins** group, or equivalent, is the minimum require
 
 9.  For the cluster name account (also known as the cluster name object or CNO), ensure that **Allow** is selected for the **Create Computer objects** and **Read All Properties** permissions.
     
-    ![](images/Cc731002.f5977c4d-a62e-4b17-81e3-8c19ddca2078(WS.10).gif)
+    ![](media/Cc731002.f5977c4d-a62e-4b17-81e3-8c19ddca2078(WS.10).gif)
 
 10. Click **OK** until you have returned to the **Active Directory Users and Computers** snap-in.
 
@@ -339,7 +339,7 @@ Membership in the **Domain Admins** group, or equivalent, is the minimum require
 
 14. On the **Security** tab, confirm that the cluster name account is listed among the accounts that have permissions, and select it. Confirm that the cluster name account has **Full Control** permission (the **Allow** check box is selected). If it does not, add the cluster name account to the list and give it **Full Control** permission.
     
-    ![](images/Cc731002.2e614376-87a6-453a-81ba-90ff7ebc3fa2(WS.10).gif)
+    ![](media/Cc731002.2e614376-87a6-453a-81ba-90ff7ebc3fa2(WS.10).gif)
 
 15. Repeat steps 13-14 for each clustered service and application configured in the cluster.
 
