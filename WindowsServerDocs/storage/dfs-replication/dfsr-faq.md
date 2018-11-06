@@ -28,7 +28,7 @@ For information about what's new in DFS Replication, see the following topics:
   - [Distributed File System](https://technet.microsoft.com/en-us/library/cc753479) topic in [Changes in Functionality from Windows Server 2003 with SP1 to Windows Server 2008](https://technet.microsoft.com/en-us/library/cc753208)  
       
 
-For a list of recent changes to this topic, see the Change History section of this topic.
+For a list of recent changes to this topic, see the [Change History](#change-history) section of this topic.
 
 <!-- Commented out for Task 18252216. Delete if we really meant to remove this. [v-gmoor, 2018-11-05]
 ## Interoperability
