@@ -173,7 +173,7 @@ There are some things you need to make sure of before installing SIL Aggregator 
 
 6.  In **Choose an Account Type**, select either **local user** or **gMSA**, depending on your preference.
 
-    Choosing the local user account option will create a local user with an auto generated strong password. This account will be used for all SIL Aggregator services and task operations on the local server.  Using Group Managed Service Accounts (gMSA) is recommended if the Aggregator is part of an Active Directory domain (Windows Server 2012 and above). For more information on gMSA, see: [Group Managed Service Accounts Overview](https://technet.microsoft.com/en-us/library/hh831782.aspx)
+    Choosing the local user account option will create a local user with an auto generated strong password. This account will be used for all SIL Aggregator services and task operations on the local server.  Using Group Managed Service Accounts (gMSA) is recommended if the Aggregator is part of an Active Directory domain (Windows Server 2012 and above). For more information on gMSA, see: [Group Managed Service Accounts Overview](https://technet.microsoft.com/library/hh831782.aspx)
 
     -   The gMSA account option must be used if you plan to run the SQL Server database on a separate server from the SIL Aggregator.
 
@@ -392,7 +392,7 @@ Following are descriptions of each column on the **Windows Server Detail** tab o
 |Host Last Seen Date Time|Date and time when the Aggregator last received data inventory over HTTPS from this Windows Server physical host.<br /><br />It is supported to have physical hosts, running Windows Server and HyperV, to enable SIL and forward inventory data over HTTPS to a SIL Aggregator.|
 
 ## SIL Aggregator Cmdlets Detail
-Following are details of the SIL Aggregator cmdlets. For the full cmdlet documentation, see: [SIL Aggregator PowerShell cmdlets](https://technet.microsoft.com/en-us/library/mt548455.aspx)
+Following are details of the SIL Aggregator cmdlets. For the full cmdlet documentation, see: [SIL Aggregator PowerShell cmdlets](https://technet.microsoft.com/library/mt548455.aspx)
 
 ### Publish-SilReport
 
@@ -582,8 +582,8 @@ When you want to start inventorying servers in your environment with a different
 
 ## See Also
 [Software Inventory Logging Aggregator 1.0 for Windows Server](https://www.microsoft.com/en-us/download/details.aspx?id=49046)<br>
-[SIL Aggregator PowerShell cmdlets](https://technet.microsoft.com/en-us/library/mt548455.aspx)<br>
-[SIL PowerShell cmdlets](https://technet.microsoft.com/en-us/library/dn283390.aspx)<br>
-[An Overview of SIL](https://technet.microsoft.com/en-us/library/dn268301.aspx)<br>
-[Managing SIL](https://technet.microsoft.com/en-us/library/dn383584.aspx)
+[SIL Aggregator PowerShell cmdlets](https://technet.microsoft.com/library/mt548455.aspx)<br>
+[SIL PowerShell cmdlets](https://technet.microsoft.com/library/dn283390.aspx)<br>
+[An Overview of SIL](https://technet.microsoft.com/library/dn268301.aspx)<br>
+[Managing SIL](https://technet.microsoft.com/library/dn383584.aspx)
 

@@ -99,7 +99,7 @@ specific browser session. If you reload your browser, you must re-enter your
 
 **Local Administrator Password Solution (LAPS)**
 
-If your environment uses [LAPS](https://technet.microsoft.com/en-us/mt227395.aspx), you can use LAPS credentials to authenticate with the managed node. **If you use this scenario, please** [provide feedback](http://aka.ms/WACFeedback).
+If your environment uses [LAPS](https://technet.microsoft.com/mt227395.aspx), you can use LAPS credentials to authenticate with the managed node. **If you use this scenario, please** [provide feedback](http://aka.ms/WACFeedback).
 
 ## Using tags to organize your connections ##
 

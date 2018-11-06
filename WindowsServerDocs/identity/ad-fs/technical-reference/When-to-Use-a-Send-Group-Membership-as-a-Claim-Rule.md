@@ -59,7 +59,7 @@ You create this rule using either the claim rule language or by using the Send L
   
 -   Specify an outgoing claim value  
   
-For more information about how to create this rule, see [Create a Rule to Send Group Membership as a Claim](https://technet.microsoft.com/en-us/library/ee913569.aspx).  
+For more information about how to create this rule, see [Create a Rule to Send Group Membership as a Claim](https://technet.microsoft.com/library/ee913569.aspx).  
   
 ## Using the claim rule language  
 If you want to issue claims based on an incoming SID other than a group SID, use the Transform an Incoming Claim rule template. If the administrator wants to retrieve the names for all the groups that the user is a member of, use the Send LDAP Attributes as Claims rule template instead with the **tokenGroups** attribute.  

@@ -41,7 +41,7 @@ Software Inventory Logging can assist server administrators in performing the fo
 -   Aggregating software and server inventory information for a wide variety of software asset management scenarios by enabling each server’s Software Inventory Logging feature and choosing a web server target URI, and certificate thumbprint for authentication.
 
 ## See Also
-[Software Inventory Logging Aggregator](https://technet.microsoft.com/en-US/library/mt572043.aspx)<br>
+[Software Inventory Logging Aggregator](https://technet.microsoft.com/library/mt572043.aspx)<br>
 [Manage Software Inventory Logging](manage-software-inventory-logging.md)<br>
 [Software Inventory Logging Cmdlets in Windows PowerShell](https://technet.microsoft.com/library/dn283390.aspx)<br>
 [Microsoft Assessment and Planning Toolkit](https://www.microsoft.com/download/en/details.aspx?id=7826)

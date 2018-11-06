@@ -26,7 +26,7 @@ Use the links in this topic to learn more about the concepts that were discussed
 
 -   [Power Policy Configuration and Deployment in Windows](https://msdn.microsoft.com/en-us/library/windows/hardware/mt422910.aspx)
 
--   [Using PowerCfg to Evaluate System Energy Efficiency](https://technet.microsoft.com/en-us/library/cc748940.aspx)
+-   [Using PowerCfg to Evaluate System Energy Efficiency](https://technet.microsoft.com/library/cc748940.aspx)
 
 -   [Interrupt-Affinity Policy Tool](https://support.microsoft.com/en-us/kb/252867)
 
@@ -36,7 +36,7 @@ Use the links in this topic to learn more about the concepts that were discussed
 
 -   [Windows Filtering Platform](https://msdn.microsoft.com/windows/hardware/gg463267.aspx)
 
--   [Networking Deployment Guide: Deploying High-Speed Networking Features](https://technet.microsoft.com/en-us/library/gg162681.aspx)
+-   [Networking Deployment Guide: Deploying High-Speed Networking Features](https://technet.microsoft.com/library/gg162681.aspx)
 
 ## Storage Subsystem Tuning Resources
 
@@ -56,7 +56,7 @@ Use the links in this topic to learn more about the concepts that were discussed
 
 ## Virtualization Server Tuning Resources
 
--   [What’s New in Hyper-V in Windows Server 2016](https://technet.microsoft.com/en-us/windows-server-docs/compute/hyper-v/what-s-new-in-hyper-v-on-windows)
+-   [What’s New in Hyper-V in Windows Server 2016](https://technet.microsoft.com/windows-server-docs/compute/hyper-v/what-s-new-in-hyper-v-on-windows)
 
 -   [Hyper-V Dynamic Memory Configuration Guide](https://technet.microsoft.com/library/ff817651.aspx)
 

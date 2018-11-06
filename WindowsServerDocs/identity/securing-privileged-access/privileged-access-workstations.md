@@ -24,7 +24,7 @@ The diagram below depicts a separate "channel" for administration (a highly sens
 
 ![Diagram showing a separate "channel" for administration (a highly sensitive task) that is created by maintaining separate dedicated administrative accounts and workstations](../media/privileged-access-workstations/PAWFig1.JPG)
 
-This architectural approach builds on the protections found in the Windows 10 [Credential Guard](https://technet.microsoft.com/en-us/library/mt483740%28v=vs.85%29.aspx) and [Device Guard](https://technet.microsoft.com/en-us/library/dn986865(v=vs.85).aspx) features and goes beyond those protections for sensitive accounts and tasks.
+This architectural approach builds on the protections found in the Windows 10 [Credential Guard](https://technet.microsoft.com/library/mt483740%28v=vs.85%29.aspx) and [Device Guard](https://technet.microsoft.com/library/dn986865(v=vs.85).aspx) features and goes beyond those protections for sensitive accounts and tasks.
 
 This methodology is appropriate for accounts with access to high value assets:
 
@@ -71,7 +71,7 @@ This section contains information on how the security of alternate approaches co
 
 **Credential Guard and Windows Hello for Business**
 
-Introduced in Windows 10, [Credential Guard](https://technet.microsoft.com/en-us/library/mt483740%28v=vs.85%29.aspx) uses hardware and virtualization-based security to mitigate common credential theft attacks, such as Pass-the-Hash, by protecting the derived credentials. The private key for credentials used by [Windows Hello for Business](http://aka.ms/passport) can be also be protected by Trusted Platform Module (TPM) hardware.
+Introduced in Windows 10, [Credential Guard](https://technet.microsoft.com/library/mt483740%28v=vs.85%29.aspx) uses hardware and virtualization-based security to mitigate common credential theft attacks, such as Pass-the-Hash, by protecting the derived credentials. The private key for credentials used by [Windows Hello for Business](http://aka.ms/passport) can be also be protected by Trusted Platform Module (TPM) hardware.
 
 These are powerful mitigations, but workstations can still be vulnerable to certain attacks even if the credentials are protected by Credential Guard or Windows Hello for Business. Attacks can include abusing privileges and use of credentials directly from a compromised device, reusing previously stolen credentials prior to enabling Credential Guard and abuse of management tools and weak application configurations on the workstation.
 
@@ -152,7 +152,7 @@ In simplest terms, a PAW is a hardened and locked down workstation designed to p
 > [!NOTE]
 > The PAW architecture doesn't require a 1:1 mapping of accounts to workstations, though this is a common configuration. PAW creates a trusted workstation environment that can be used by one or more accounts.
 
-In order to provide the greatest security, PAWs should always run the most up-to-date and secure operating system available: Microsoft strongly recommends Windows 10 Enterprise, which includes a number of additional security features not available in other editions (in particular, [Credential Guard](https://technet.microsoft.com/en-us/library/mt483740%28v=vs.85%29.aspx) and [Device Guard](https://technet.microsoft.com/en-us/library/dn986865(v=vs.85).aspx)).
+In order to provide the greatest security, PAWs should always run the most up-to-date and secure operating system available: Microsoft strongly recommends Windows 10 Enterprise, which includes a number of additional security features not available in other editions (in particular, [Credential Guard](https://technet.microsoft.com/library/mt483740%28v=vs.85%29.aspx) and [Device Guard](https://technet.microsoft.com/library/dn986865(v=vs.85).aspx)).
 
 > [!NOTE]
 > Organizations without access to Windows 10 Enterprise can use Windows 10 Pro, which includes many of the critical foundational technologies for PAWs, including Trusted Boot, BitLocker, and Remote Desktop.  Education customers can use Windows 10 Education.  Windows 10 Home should not be used for a PAW.
@@ -224,7 +224,7 @@ In this configuration, daily work that does not require administrative privilege
 
 To configure this, follow the instructions in this guidance for the PAW host, add Client Hyper-V features, create a User VM, and then install a Windows 10 corporate image on the User VM.
 
-Read [Client Hyper-V](https://technet.microsoft.com/en-us/library/hh857623.aspx) article for more information about this capability. Please note that the operating system in guest virtual machines will need to be licensed per [Microsoft product licensing](https://www.microsoft.com/en-us/Licensing/product-licensing/products.aspx), also described [here](https://www.microsoft.com/en-us/Licensing/learn-more/brief-windows-virtual-machine.aspx).
+Read [Client Hyper-V](https://technet.microsoft.com/library/hh857623.aspx) article for more information about this capability. Please note that the operating system in guest virtual machines will need to be licensed per [Microsoft product licensing](https://www.microsoft.com/en-us/Licensing/product-licensing/products.aspx), also described [here](https://www.microsoft.com/en-us/Licensing/learn-more/brief-windows-virtual-machine.aspx).
 
 **Simultaneous Use - Adding RemoteApp, RDP, or a VDI**
 
@@ -329,7 +329,7 @@ Phase 1 includes the following steps:
 
     2.  **Minimize the number of Tier 0 privileged administrators**.  Because each administrator must use a PAW, reducing the number of administrators reduces the number of PAWs required to support them and the associated costs. The lower count of administrators also results in lower exposure of these privileges and associated risks. While it is possible for administrators in one location to share a PAW, administrators in separate physical locations will require separate PAWs.
 
-    3.  **Acquire hardware from a trusted supplier that meets all technical requirements**. Microsoft recommends acquiring hardware that meets the technical requirements in the article [Protect domain credentials with Credential Guard](https://technet.microsoft.com/en-us/library/mt483740%28v=vs.85%29.aspx).
+    3.  **Acquire hardware from a trusted supplier that meets all technical requirements**. Microsoft recommends acquiring hardware that meets the technical requirements in the article [Protect domain credentials with Credential Guard](https://technet.microsoft.com/library/mt483740%28v=vs.85%29.aspx).
 
         > [!NOTE]
         > PAW installed on hardware without these capabilities can provide significant protections, but advanced security features such as Credential Guard and Device Guard will not be available.  Credential Guard and Device Guard are not required for Phase 1 deployment, but are strongly recommended as part of Phase 3 (advanced hardening).
@@ -353,7 +353,7 @@ Phase 1 includes the following steps:
     5.  **Ensure you have WSUS server available on the intranet**. You will need a WSUS server on the intranet to download and install updates for PAW. This WSUS server should be configured to automatically approve all security updates for Windows 10 or an administrative personnel should have responsibility and accountability to rapidly approve software updates.
 
         > [!NOTE]
-        > For more information, see the "Automatically Approve Updates for Installation" section in the [Approving Updates guidance](https://technet.microsoft.com/en-us/library/cc708458(v=ws.10).aspx).
+        > For more information, see the "Automatically Approve Updates for Installation" section in the [Approving Updates guidance](https://technet.microsoft.com/library/cc708458(v=ws.10).aspx).
 
 2.  Deploy the Admin OU Framework to host the PAWs
 
@@ -409,7 +409,7 @@ Phase 1 includes the following steps:
             > [!NOTE]
             > Do not add the PAW Users group to the membership list for the local Administrators group.  To ensure that PAW Users cannot accidentally or deliberately modify the security settings of the PAW itself, they should not be members of the local Administrators groups.
 
-            For more information on using Group Policy Preferences to modify group membership, please refer to the TechNet article [Configure a Local Group Item](https://technet.microsoft.com/en-us/library/cc732525.aspx).
+            For more information on using Group Policy Preferences to modify group membership, please refer to the TechNet article [Configure a Local Group Item](https://technet.microsoft.com/library/cc732525.aspx).
 
     2.  **Restrict Local Group Membership** - this setting will ensure that the membership of local admin groups on the workstation is always empty
 
@@ -914,7 +914,7 @@ Once you confirm that all steps were done, perform the steps below to complete P
         > [!NOTE]
         > If administrative personnel have duties to manage assets at multiple tiers, you will need to create a separate admin account per tier.
 
-4.  Enable Credential Guard to reduce risk of credential theft and reuse.  Credential Guard is a new feature of Windows 10 that restricts application access to credentials, preventing credential theft attacks (including Pass-the-Hash).  Credential Guard is completely transparent to the end user and requires minimal setup time and effort.  For further information on Credential Guard, including deployment steps and hardware requirements, please refer to the article, [Protect domain credentials with Credential Guard](https://technet.microsoft.com/en-us/library/mt483740%28v=vs.85%29.aspx).
+4.  Enable Credential Guard to reduce risk of credential theft and reuse.  Credential Guard is a new feature of Windows 10 that restricts application access to credentials, preventing credential theft attacks (including Pass-the-Hash).  Credential Guard is completely transparent to the end user and requires minimal setup time and effort.  For further information on Credential Guard, including deployment steps and hardware requirements, please refer to the article, [Protect domain credentials with Credential Guard](https://technet.microsoft.com/library/mt483740%28v=vs.85%29.aspx).
 
     > [!NOTE]
     > Device Guard must be enabled in order to configure and use Credential Guard.  However, you are not required to configure any other Device Guard protections in order to use Credential Guard.
@@ -993,7 +993,7 @@ Once you confirm that all steps were done, perform the steps below to complete P
 
         1.  Extract the contents of the Windows 10 Security Baselines ZIP file.
 
-        2.  Create these GPOs, [import the policy](https://technet.microsoft.com/en-us/library/cc753786.aspx) settings, and [link](https://technet.microsoft.com/en-us/library/cc732979.aspx) per this table. Link each policy to each location and ensure the order follows the table (lower entries in table should be applied later and higher priority):
+        2.  Create these GPOs, [import the policy](https://technet.microsoft.com/library/cc753786.aspx) settings, and [link](https://technet.microsoft.com/library/cc732979.aspx) per this table. Link each policy to each location and ensure the order follows the table (lower entries in table should be applied later and higher priority):
 
             **Policies:**
 
@@ -1106,9 +1106,9 @@ Follow the steps below to configure this phase:
 
 1.  Enable multi-factor authentication for privileged accounts.  Multi-factor authentication strengthens account security by requiring the user to provide a physical token in addition to credentials.  Multi-factor authentication complements authentication policies extremely well, but it does not depend on authentication policies for deployment (and, similarly, authentication policies do not require multi-factor authentication).  Microsoft recommends using one of these forms of multi-factor authentication:
 
-    -   **Smart card**:  A smart card is a tamper-resistant and portable physical device which provides a second verification during the Windows logon process.  By requiring an individual to possess a card for logon, you can reduce the risk of stolen credentials being reused remotely.  For details on smart card logon in Windows, please refer to the article [Smart Card Overview](https://technet.microsoft.com/en-us/library/hh831433.aspx).
+    -   **Smart card**:  A smart card is a tamper-resistant and portable physical device which provides a second verification during the Windows logon process.  By requiring an individual to possess a card for logon, you can reduce the risk of stolen credentials being reused remotely.  For details on smart card logon in Windows, please refer to the article [Smart Card Overview](https://technet.microsoft.com/library/hh831433.aspx).
 
-    -   **Virtual smart card**:  A virtual smart card provides the same security benefits as physical smart cards, with the added benefit of being linked to specific hardware.  For details on deployment and hardware requirements, please refer to the articles, [Virtual Smart Card Overview](https://technet.microsoft.com/en-us/library/dn593708.aspx) and [Get Started with Virtual Smart Cards: Walkthrough Guide](https://technet.microsoft.com/en-us/library/dn579260.aspx).
+    -   **Virtual smart card**:  A virtual smart card provides the same security benefits as physical smart cards, with the added benefit of being linked to specific hardware.  For details on deployment and hardware requirements, please refer to the articles, [Virtual Smart Card Overview](https://technet.microsoft.com/library/dn593708.aspx) and [Get Started with Virtual Smart Cards: Walkthrough Guide](https://technet.microsoft.com/library/dn579260.aspx).
 
     -   **Windows Hello for Business**: Windows Hello for Business lets users authenticate to a Microsoft account, an Active Directory account, a Microsoft Azure Active Directory (Azure AD) account, or non-Microsoft service that supports Fast ID Online (FIDO) authentication. After an initial two-step verification during Windows Hello for Business enrollment, a Windows Hello for Business is set up on the user's device and the user sets a gesture, which can be Windows Hello or a PIN. Windows Hello for Business credentials are an asymmetric key pair, which can be generated within isolated environments of Trusted Platform Modules (TPMs).
         For more information on Windows Hello for Business read [Windows Hello for Business](https://docs.microsoft.com/windows/security/identity-protection/hello-for-business/hello-identity-verification) article.
@@ -1121,7 +1121,7 @@ Follow the steps below to configure this phase:
 
     -   **Windows Defender Application Control**:  the new Windows Defender Application Control feature provides enhanced hardware-based application control which, unlike AppLocker, cannot be overridden on the impacted device.  Like AppLocker, Windows Defender Application Control can be controlled via group policy and targeted to specific users.  For more information on restricting application usage with Windows Defender Application Control, please refer to [Windows Defender Application Control Deployment Guide](https://docs.microsoft.com/en-gb/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control-deployment-guide).
 
-3.  **Use Protected Users, Authentication Policies, and Authentication Silos to further protect privileged accounts**.  The members of Protected Users are subject to additional security policies which protect the credentials stored in the local security agent (LSA) and greatly minimize the risk of credential theft and reuse.  Authentication policies and silos control how privileged users can access resources in the domain.  Collectively, these protections dramatically strengthen the account security of these privileged users.  For additional details on these features, please refer to the web article [How to Configure Protected Accounts](https://technet.microsoft.com/en-us/library/dn518179.aspx).
+3.  **Use Protected Users, Authentication Policies, and Authentication Silos to further protect privileged accounts**.  The members of Protected Users are subject to additional security policies which protect the credentials stored in the local security agent (LSA) and greatly minimize the risk of credential theft and reuse.  Authentication policies and silos control how privileged users can access resources in the domain.  Collectively, these protections dramatically strengthen the account security of these privileged users.  For additional details on these features, please refer to the web article [How to Configure Protected Accounts](https://technet.microsoft.com/library/dn518179.aspx).
 
     > [!NOTE]
     > These protections are meant to complement, not replace, existing security measures in Phase 1.  Administrators should still use separate accounts for administration and general use.
@@ -1148,7 +1148,7 @@ This table outlines different approaches that may be used to manage and monitor 
 |Approach|Considerations|
 |------|---------|
 |Default in PAW<br /><br />-   Windows Server Update Services<br />-   Windows Defender|-   No additional cost<br />-   Performs basic required security functions<br />-   Instructions included in this guidance|
-|Manage with [Intune](https://technet.microsoft.com/en-us/library/jj676587.aspx)|<ul><li>Provides cloud based visibility and control<br /><br /><ul><li>Software Deployment</li><li>o   Manage software updates</li><li>Windows Firewall policy management</li><li>Anti-malware protection</li><li>Remote assistance</li><li>Software license management.</li></ul></li><li>No server infrastructure required</li><li>Requires following "Enable Connectivity to Cloud Services" steps in Phase 2</li><li>If the PAW computer is not joined to a domain, this requires applying the SCM baselines to the local images using the tools provided in the security baseline download.</li></ul>|
+|Manage with [Intune](https://technet.microsoft.com/library/jj676587.aspx)|<ul><li>Provides cloud based visibility and control<br /><br /><ul><li>Software Deployment</li><li>o   Manage software updates</li><li>Windows Firewall policy management</li><li>Anti-malware protection</li><li>Remote assistance</li><li>Software license management.</li></ul></li><li>No server infrastructure required</li><li>Requires following "Enable Connectivity to Cloud Services" steps in Phase 2</li><li>If the PAW computer is not joined to a domain, this requires applying the SCM baselines to the local images using the tools provided in the security baseline download.</li></ul>|
 |New System Center instance(s) for managing PAWs|-   Provides visibility and control of configuration, software deployment, and security updates<br />-   Requires separate server infrastructure, securing it to level of PAWs, and staffing skills for those highly privileged personnel|
 |Manage PAWs with existing management tool(s)|-   Creates significant risk to compromise of PAWs unless the existing management infrastructure is brought up to security level of PAWs **Note:**     Microsoft would generally discourage this approach unless your organization has a specific reason to use it. In our experience, there is typically a very high cost of bringing all of these tools (and their security dependencies) up to the security level of the PAWs.<br />-   Most of these tools provide visibility and control of configuration, software deployment, and security updates|
 |Security Scanning or monitoring tools requiring admin access|Includes any tool that installs an agent or requires an account with local administrative access.<br /><br />-   Requires bringing tool security assurance up to level of PAWs.<br />-   May require lowering security posture of PAWs to support tool functionality (open ports, install Java or other middleware, etc.), creating a security trade-off decision,|
@@ -1165,9 +1165,9 @@ The PAW solution should be operated using the standards in [Operational Standard
 
 [Microsoft Advanced Threat Analytics](http://aka.ms/ata)
 
-[Protect derived domain credentials with Credential Guard](https://technet.microsoft.com/en-us/library/mt483740%28v=vs.85%29.aspx)
+[Protect derived domain credentials with Credential Guard](https://technet.microsoft.com/library/mt483740%28v=vs.85%29.aspx)
 
-[Device Guard Overview](https://technet.microsoft.com/en-us/library/dn986865(v=vs.85).aspx)
+[Device Guard Overview](https://technet.microsoft.com/library/dn986865(v=vs.85).aspx)
 
 [Protecting high-value assets with secure admin workstations](https://msdn.microsoft.com/en-us/library/mt186538.aspx)
 

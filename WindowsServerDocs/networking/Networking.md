@@ -61,7 +61,7 @@ This consistency means that your applications are now easier to scale, and you c
                                             </div>
                                         </div>
                                         <div class="cardText">
-                                        <h3><a href="sdn/software-defined-networking.md">Software Defined Networking (SDN)</a><hr /></h3>You can use this topic to learn about the SDN technologies that are provided in Windows Server, System Center, and Microsoft Azure.</p>
+                                        <h3><a href="https://docs.microsoft.com/windows-server/networking/sdn/">Software Defined Networking (SDN)</a><hr /></h3>You can use this topic to learn about the SDN technologies that are provided in Windows Server, System Center, and Microsoft Azure.</p>
                         
                                         <p><b>Note:</b> For Hyper-V hosts and virtual machines \(VMs\) that run SDN infrastructure servers, such as Network Controller and Software Load Balancing nodes, you must install Windows Server Datacenter edition. For Hyper-V hosts that contain only tenant workload VMs that are connected to SDN\-controlled networks, you can run Windows Server Standard edition.</p>                                        </div>
                                     </div>
