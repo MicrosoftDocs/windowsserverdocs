@@ -41,7 +41,7 @@ You will complete the following tasks to set up Windows Azure Pack in your envir
 
 Install and configure Windows Azure Pack (WAP) on the machine where you wish to host the web portal for your tenants. This machine will need to be able to reach the SPF server and be reachable by your tenants.
 
-1.  Reviewing [WAP system requirements](https://technet.microsoft.com/library/dn296442.aspx) and install the [prerequisite software](https://technet.microsoft.com/en-us/library/dn469335.aspx).
+1.  Reviewing [WAP system requirements](https://technet.microsoft.com/library/dn296442.aspx) and install the [prerequisite software](https://technet.microsoft.com/library/dn469335.aspx).
 
 2.  Download and install the [Web Platform Installer](https://www.microsoft.com/web/downloads/platform.aspx). If the machine is not connected to the Internet, follow the [offline installation instructions](http://www.iis.net/learn/install/web-platform-installer/web-platform-installer-v4-command-line-webpicmdexe-rtw-release).
 

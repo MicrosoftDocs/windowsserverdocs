@@ -145,7 +145,7 @@ If you don't have Access control policies based on device on ADFS or Windows Hel
 
 ### How long are AD FS tokens valid?
 
-Often this question means ‘how long do users get single sign on (SSO) without having to enter new credentials, and how can I as an admin control that?’  This behavior, and the configuration settings that control it, are described in the article [AD FS Single Sign-On Settings](https://technet.microsoft.com/en-us/windows-server-docs/identity/ad-fs/operations/ad-fs-2016-single-sign-on-settings).
+Often this question means ‘how long do users get single sign on (SSO) without having to enter new credentials, and how can I as an admin control that?’  This behavior, and the configuration settings that control it, are described in the article [AD FS Single Sign-On Settings](https://technet.microsoft.com/windows-server-docs/identity/ad-fs/operations/ad-fs-2016-single-sign-on-settings).
 
 The default lifetimes of the various cookies and tokens are listed below (as well as the parameters that govern the lifetimes):
 
