@@ -6,7 +6,7 @@ ms.manager: dongill
 ms.technology: storage-spaces
 ms.topic: article
 author: cosmosdarwin
-ms.date: 11/05/2018
+ms.date: 11/06/2018
 ms.assetid: 8bd0d09a-0421-40a4-b752-40ecb5350ffd
 description: An overview of Storage Spaces Direct, a feature of Windows Server that enables you to cluster servers with internal storage into a software-defined storage solution.
 ms.localizationpriority: medium
@@ -52,6 +52,7 @@ For other applications of Storage Spaces, such as Shared SAS clusters and stand-
             <ul>
 			  <li><a href="deploy-storage-spaces-direct.md">Deploy Storage Spaces Direct</a></li>
 			  <li><a href="create-volumes.md">Create volumes</a></li>
+              <li><a href="nested-resiliency.md">Nested resiliency</a></li>
               <li><a href="../../failover-clustering/manage-cluster-quorum.md">Configure quorum</a><br><br><br></li>
 		    </ul>
         </td>        

@@ -11,12 +11,22 @@ ms.topic: article
 author: lizap
 manager: dongill
 ms.author: elizapo
-ms.date: 10/01/2018
+ms.date: 11/06/2018
 ms.localizationpriority: medium
 ---
 # What's new for the Remote Desktop client on Windows?
 
 We regularly update the [Remote Desktop client for Windows](windows.md), adding new features and fixing issues. Check out the latest updates below.
+
+## Updates for version 10.1.1088
+*Published date: 11/06/2018*
+
+- Connection display name is now more discoverable.
+- Fixed a crash when closing the client window while a connection is still active.
+- Fix a hang when reconnecting after the client is minimized.
+- Allow desktops to be dragged anywhere in a group.
+- Ensure launching a connection from the jumplist results in a separate window when needed.
+- Additional bug fixes.
 
 ## Updates for version 10.1.1060
 *Published date: 09/14/2018*
