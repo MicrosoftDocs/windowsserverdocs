@@ -22,10 +22,10 @@ This topic lists new and updated topics in the [Storage](storage.md) documentati
 
 |New or changed topic|Description|
 |---|---|
-|[DFS Replication: Frequently Asked Questions (FAQ)](dfs-replication/dfsr-faq.md)|Migrated from the [Previous Versions]|
-|[Migrate SYSVOL replication to DFS Replication](dfs-replication/migrate-sysvol-to-dfsr.md)|Migrated from the [Previous Versions]|
-|[SMB: File and printer sharing ports should be open](file-server/best-practices-analyzer/smb-open-file-sharing-ports.md)|Migrated from the [Previous Versions]|
-|[Volume Shadow Copy Service](file-server/volume-shadow-copy-service.md)|Migrated from the [Previous Versions]|
+|[DFS Replication: Frequently Asked Questions (FAQ)](dfs-replication/dfsr-faq.md)|Migrated from the [Previous Versions](https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2003/)|
+|[Migrate SYSVOL replication to DFS Replication](dfs-replication/migrate-sysvol-to-dfsr.md)|Migrated from the [Previous Versions](https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/)|
+|[SMB: File and printer sharing ports should be open](file-server/best-practices-analyzer/smb-open-file-sharing-ports.md)|Migrated from the [Previous Versions](https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/)|
+|[Volume Shadow Copy Service](file-server/volume-shadow-copy-service.md)|Migrated from the [Previous Versions](https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/)|
 
 ## October 2018
 

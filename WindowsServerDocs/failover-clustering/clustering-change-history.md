@@ -22,7 +22,7 @@ This topic lists new and updated topics in the [Failover Clustering](failover-cl
 
 |New or changed topic|Description|
 |---|---|
-|[Configuring cluster accounts in Active Directory](configure-ad-accounts.md)|Migrated from the [Previous Versions]|
+|[Configuring cluster accounts in Active Directory](configure-ad-accounts.md)|Migrated from the [Previous Versions](https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/)|
 
 ## October 2018
 
