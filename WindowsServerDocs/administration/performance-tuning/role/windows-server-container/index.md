@@ -28,7 +28,7 @@ The additional isolation provided by Hyper-V containers is achieved in large par
 
 ### Nano Server and Server Core
 
-Windows Server Containers and Hyper-V containers offer support for Server Core and for a new installation option available in Windows Server 2016 : [Nano Server](https://technet.microsoft.com/en-us/windows-server-docs/compute/nano-server/getting-started-with-nano-server). 
+Windows Server Containers and Hyper-V containers offer support for Server Core and for a new installation option available in Windows Server 2016 : [Nano Server](https://technet.microsoft.com/windows-server-docs/compute/nano-server/getting-started-with-nano-server). 
 
 Nano Server is a remotely administered server operating system optimized for private clouds and datacenters. It is similar to Windows Server in Server Core mode, but significantly smaller, has no local logon capability, and only supports 64-bit applications, tools, and agents. It takes up far less disk space and starts faster.
 

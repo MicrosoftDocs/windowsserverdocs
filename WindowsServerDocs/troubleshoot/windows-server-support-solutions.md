@@ -176,7 +176,7 @@ These are the top Microsoft Support solutions for the most common issues experie
 <hr>
                          <a href="https://support.microsoft.com/kb/2025726">Troubleshooting AD Replication error 1127: While accessing the hard disk, a disk operation failed even after retries</a>
 <hr>
-                         <a href="https://technet.microsoft.com/en-us/library/cc816907.aspx">Clean Up Server Metadata</a>
+                         <a href="https://technet.microsoft.com/library/cc816907.aspx">Clean Up Server Metadata</a>
                     </div>
                 </div>
             </div>

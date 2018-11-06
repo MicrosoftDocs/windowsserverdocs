@@ -155,7 +155,7 @@ The following diagram shows a geographically redundant AD FS SQL Server farms wi
   
 -   When an AlwaysOn availability group containing a database that is a replication subscriber fails over, the replication subscription fails. To resume replication, a replication administrator must manually reconfigure the subscriber.  See the SQL Server description of specific issue at [Replication Subscribers and AlwaysOn Availability Groups \(SQL Server\)](https://technet.microsoft.com/library/hh882436.aspx) and overall support statements for AlwaysOn Availability groups with replication options [Replication, Change Tracking, Change Data Capture, and AlwaysOn Availability Groups \(SQL Server\)](https://technet.microsoft.com/library/hh403414.aspx).  
   
-For more detailed instructions on how to configure AD FS to use a SQL Server merge replication, see [Setup Geographic Redundancy with SQL Server Replication](https://technet.microsoft.com/en-us/library/dn632406.aspx).  
+For more detailed instructions on how to configure AD FS to use a SQL Server merge replication, see [Setup Geographic Redundancy with SQL Server Replication](https://technet.microsoft.com/library/dn632406.aspx).  
   
 ## See Also  
 [Plan Your AD FS Deployment Topology](Plan-Your-AD-FS-Deployment-Topology.md)  
