@@ -36,7 +36,10 @@ Approved updates imported from the Microsoft Update Catalog Site are downloaded 
 
 Note that you must access the Microsoft Update Catalog Site though the WSUS console to ensure that the updates are imported in a WSUS-compatible format. If you access the Microsoft Update Catalog website manually, any updates that you download are not imported into the WSUS server, but instead are downloaded as individual *.MSU files. WSUS does not currently have a supported mechanism for importing files in the \*.MSU format.
 
-if you run The Server cleanup Wizard, updates imported from the Microsoft Update Catalog that are set as Not Approved or as Declined may be removed from the WSUS server. If they are removed, they can be re-imported from the Microsoft Update Catalog.
+> [!NOTE]
+> If you are importing updates on a WSUS 10, please check [Known issue with importing updates from the Microsoft Update Catalog on WSUS 10.0 (Windows Server 2016)](https://techcommunity.microsoft.com/t5/Windows-10-servicing/Known-issue-with-importing-updates-from-the-Microsoft-Update/m-p/163830).
+
+If you run The Server cleanup Wizard, updates imported from the Microsoft Update Catalog that are set as Not Approved or as Declined may be removed from the WSUS server. If they are removed, they can be re-imported from the Microsoft Update Catalog.
 
 > [!NOTE]
 > You can remove updates that are imported from the Microsoft Update Catalog that are set as either Not Approved or Declined, by running the WSUS Server cleanup Wizard. You can re-imported updates that have been previously removed from your WSUS systems through the Microsoft Update Catalog.
@@ -66,7 +69,5 @@ WSUS administrators might consider restricting access to the hotfixes they have 
 
 5.  Approve the hotfix for the WSUS target group created in Step 2.
 
-## importing updates in different languages
-The Microsoft Update Catalog Web site includes updates that support multiple languages. It is very IMPORTANT to match the languages supported by the WSUS server with the languages supported by these updates. If the WSUS server does not support all the languages included in the update, the update will not be deployed to client computers. Likewise, if an update supporting multiple languages has been downloaded to the WSUS server but not yet deployed to client computers, and an administrator deselects one of the languages included the update, the update will not be deployed to the clients.
-
-
+## Importing updates in different languages
+The Microsoft Update Catalog Web site includes updates that support multiple languages. It is very **important** to match the languages supported by the WSUS server with the languages supported by these updates. If the WSUS server does not support all the languages included in the update, the update will not be deployed to client computers. Likewise, if an update supporting multiple languages has been downloaded to the WSUS server but not yet deployed to client computers, and an administrator deselects one of the languages included the update, the update will not be deployed to the clients.
