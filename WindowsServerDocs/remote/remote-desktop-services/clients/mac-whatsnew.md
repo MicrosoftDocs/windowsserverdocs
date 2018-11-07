@@ -11,7 +11,7 @@ ms.topic: article
 author: lizap
 manager: dongill
 ms.author: elizapo
-ms.date: 10/09/2018
+ms.date: 11/06/2018
 ms.localizationpriority: medium
 ---
 # What's new for the Remote Desktop client on macOS?
@@ -19,6 +19,21 @@ ms.localizationpriority: medium
 We regularly update the [Remote Desktop client for macOS](remote-desktop-mac.md), adding new features and fixing issues. Check out the latest updates below.
 
 If you encounter any issues, you can always contact us via Help > Report an Issue.
+
+## Updates for version 10.2.3
+*Published date: 11/06/2018*
+
+- Added support for the "remoteapplicationcmdline" RDP file setting for remote app scenarios.
+- The title of the session window now includes the name of the RDP file (and server name) when launched from an RDP file.
+- Fixed reported RD gateway performance issues.
+- Fixed reported RD gateway crashes.
+- Fixed issues where the connection would hang when connecting through an RD gateway.
+- Better handling of full-screen remote apps by intelligently hiding the menu bar and dock.
+- Fixed scenarios where remote apps remained hidden after being launched.
+- Addressed slow rendering updates when using "Fit to Window" with hardware acceleration disabled.
+- Handled database creation errors caused by incorrect permissions when the client starts up. 
+- Fixed an issue where the client was consistently crashing at launch and not starting for some users.
+- Fixed a scenario where connections were incorrectly imported as full-screen from Remote Desktop 8.
 
 ## Updates for version 10.2.2
 *Published date: 10/09/2018*
