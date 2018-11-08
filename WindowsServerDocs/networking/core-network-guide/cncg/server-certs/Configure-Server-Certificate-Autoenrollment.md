@@ -50,7 +50,7 @@ Membership in both the **Enterprise Admins** and the root domain's **Domain Admi
 4. In **Group Policy Object**, click **Browse**. The **Browse for a Group Policy Object** dialog box opens.
 5. In **Domains, OUs, and linked Group Policy Objects,** click **Default Domain Policy**, and then click **OK**.
 6. Click **Finish**, and then click **OK**.
-7. Double-click **Default Domain Policy**. In the console, expand the following path: **User Configuration**, **Policies**, **Windows Settings**, **Security Settings**, and then **Public Key Policies**.
+7. Double-click **Default Domain Policy**. In the console, expand the following path: **User Configuration**, **Policies**, **Windows Settings**, **Security Settings**.
 8. Click **Public Key Policies**. In the details pane, double-click **Certificate Services Client - Auto-Enrollment**. The **Properties** dialog box opens. Configure the following items, and then click **OK**:
 
      1. In **Configuration Model**, select **Enabled**.
