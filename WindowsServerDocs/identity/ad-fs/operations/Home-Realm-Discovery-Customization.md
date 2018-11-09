@@ -35,7 +35,7 @@ To configure an identity provider \(IDP\), such as `fabrikam`, to use certain em
 `Set-AdfsClaimsProviderTrust -TargetName fabrikam -OrganizationalAccountSuffix @("fabrikam.com";"fabrikam2.com") ` 
  
 >[!NOTE]
-> In a federated scenario where AD FS is the identity provider (IDP) and a federation provider, PromptLoginFederation on the claims provider trust needs to be set to ForwardPromptAndHintsOverWsFederation.  This is so that AD FS will send he login_hint and prompt paramter to the IDP.  This can be done by running the following PowerShell cmdlet.
+> When federating between two AD FS servers, set PromptLoginFederation property on the claims provider trust to ForwardPromptAndHintsOverWsFederation.  This is so that AD FS will forward the login_hint and prompt parmeter to the IDP.  This can be done by running the following PowerShell cmdlet.
 >
 >`Set-AdfsclaimsProviderTrust -PromptLoginFederation ForwardPromptAndHintsOverWsFederation`
 
