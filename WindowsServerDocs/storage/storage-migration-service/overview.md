@@ -92,3 +92,4 @@ The destination server must run one of the following operating systems:
 
 - [Migrate a file server by using Storage Migration Service](migrate-data.md)
 - [Storage Migration Services frequently asked questions (FAQ)](faq.md)
+- [Storage Migration Service known issues](known-issues.md)
