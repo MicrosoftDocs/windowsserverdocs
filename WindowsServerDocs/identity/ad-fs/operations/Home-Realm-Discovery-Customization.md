@@ -23,6 +23,9 @@ When the AD FS client first requests a resource, the resource federation server 
 > [!WARNING]  
 > Be aware that the Claims Provider name that shows up for local Active Directory is the federation service display name.  
   
+
+
+
 ## Configure Identity Provider to use certain email suffixes  
 An organization can federate with multiple claims providers. AD FS now provides the in\-box capability for administrators to list the suffixes, for example, @us.contoso.com, @eu.contoso.com, that is supported by a claims provider and enable it for suffix\-based discovery. With this configuration, end users can type in their organizational account, and AD FS automatically selects the corresponding claims provider.  
   
@@ -31,7 +34,11 @@ To configure an identity provider \(IDP\), such as `fabrikam`, to use certain em
 
 `Set-AdfsClaimsProviderTrust -TargetName fabrikam -OrganizationalAccountSuffix @("fabrikam.com";"fabrikam2.com") ` 
  
-  
+>[!NOTE]
+> When federating between two AD FS servers, set PromptLoginFederation property on the claims provider trust to ForwardPromptAndHintsOverWsFederation.  This is so that AD FS will forward the login_hint and prompt parmeter to the IDP.  This can be done by running the following PowerShell cmdlet:
+>
+>`Set-AdfsclaimsProviderTrust -PromptLoginFederation ForwardPromptAndHintsOverWsFederation`
+
 ## Configure an identity provider list per relying party  
 For some scenarios, an organizations might want end users to only see the claims providers that are specific to an application so that only a subset of claims provider are displayed on the home realm discovery page.  
   
