@@ -26,6 +26,14 @@ If you need to gather these logs for offline viewing or to send to Microsoft Sup
 
 Review the README for usage.
 
+# Storage Migration Service known issues
+
+When using the 1809 version of Windows Admin Center to manage a Windows Server 2019 orchestrator, you do not see the tool option for Storage Migration Service. 
+
+The the Windows Admin Center Storage Migration Service extension is version-bound to only manage WIndows Server 2019 version 1809 or later operating systems. If you use it to manage older Windows Server operating systems or insider previews, the tool will not appear. This behavior is by design. 
+
+To resolve, use or upgrade to Windows Server 2019 build 1809 or later.
+
 ## See also
 
 - [Storage Migration Service overview](overview.md)
