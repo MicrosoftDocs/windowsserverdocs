@@ -113,7 +113,7 @@ ms.localizationpriority: high
                             </div>
                           </a>
                         </li><li>
- <a href="../adminstration/OpenSSH/OpenSSH_Overview.md">
+ <a href="../administration/OpenSSH/OpenSSH_Overview.md">
                             <div class="cardSize">
                                 <div class="cardPadding">
                                     <div class="card">
