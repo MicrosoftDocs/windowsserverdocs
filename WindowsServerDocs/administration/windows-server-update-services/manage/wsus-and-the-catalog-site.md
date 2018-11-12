@@ -36,9 +36,6 @@ Approved updates imported from the Microsoft Update Catalog Site are downloaded 
 
 Note that you must access the Microsoft Update Catalog Site though the WSUS console to ensure that the updates are imported in a WSUS-compatible format. If you access the Microsoft Update Catalog website manually, any updates that you download are not imported into the WSUS server, but instead are downloaded as individual *.MSU files. WSUS does not currently have a supported mechanism for importing files in the \*.MSU format.
 
-> [!NOTE]
-> If you are importing updates on a WSUS 10, please check [Known issue with importing updates from the Microsoft Update Catalog on WSUS 10.0 (Windows Server 2016)](https://techcommunity.microsoft.com/t5/Windows-10-servicing/Known-issue-with-importing-updates-from-the-Microsoft-Update/m-p/163830).
-
 If you run The Server cleanup Wizard, updates imported from the Microsoft Update Catalog that are set as Not Approved or as Declined may be removed from the WSUS server. If they are removed, they can be re-imported from the Microsoft Update Catalog.
 
 > [!NOTE]
