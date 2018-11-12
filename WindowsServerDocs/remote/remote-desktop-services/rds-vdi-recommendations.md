@@ -416,7 +416,7 @@ Collapse **System**, and then expand **Windows Components**. Adjust each setting
 
 At the same level as the **Internet Explorer** settings you just adjusted in the preceding table, note another level of folders ranging from **Accelerators** to **Toolbars**. In other words, you are now at Local Computer Policy > Computer Configuration > Administrative Templates > Windows Components > Internet Explorer. 
 
-Open the **Delete Browsing History** folder, double-click **Allow deleting browing history on exit**, select **Enable**, and then click **OK** to save and exit.
+Open the **Delete Browsing History** folder, double-click **Allow deleting browsing history on exit**, select **Enable**, and then click **OK** to save and exit.
 
 Use the back arrow in the upper left of Local Group Policy Editor to go back to the **Internet Explorer** level. Double-click **Advanced Settings**, and then adjust the settings in the subfolders as follows:
 
