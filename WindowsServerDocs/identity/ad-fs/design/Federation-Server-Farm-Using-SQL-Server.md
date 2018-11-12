@@ -123,7 +123,7 @@ Configuring an AD FS farm with AlwaysOn Availability groups requires a slight mo
   
 3.  Finally, use PowerShell to edit the AD FS properties to update the SQL connection string to use the DNS address of the AlwaysOn Availability group’s listener.  
   
-    Example PSH commands to update the SQL connection string for the AD FS policy database:  
+    Example PSH commands to update the SQL connection string for the AD FS configuration database:  
   
     ```  
     PS:\>$temp= Get-WmiObject -namespace root/ADFS -class SecurityTokenService  
@@ -132,7 +132,7 @@ Configuring an AD FS farm with AlwaysOn Availability groups requires a slight mo
   
     ```  
   
-4.  Example PSH commands to update the SQL connection string for the AD FS policy database:  
+4.  Example PSH commands to update the SQL connection string for the AD FS artifact resolution service database:  
   
     ```  
     PS:\> Set-AdfsProperties –artifactdbconnection ”Data source=<SQLCluster\SQLInstance >;Initial Catalog=AdfsArtifactStore;Integrated Security=True”  
