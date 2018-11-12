@@ -7,7 +7,7 @@ ms.topic: article
 author: JasonGerend
 manager: brianlic
 ms.author: jgerend
-ms.date: 11/06/2018
+ms.date: 11/09/2018
 description: New and updated topics in the on-premises storage documentation for Windows Server for IT Pros.
 ---
 # Change history for storage topics in Windows Server
@@ -23,6 +23,7 @@ This topic lists new and updated topics in the [Storage](storage.md) documentati
 |New or changed topic                                        |Description|
 |---                                                         |---           |
 |[Nested resiliency](storage-spaces/nested-resiliency.md)    | New topic    |
+|[Storage Migration Service known issues](storage-migration-service/known-issues.md)   | New topic    |
 
 ## October 2018
 

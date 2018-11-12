@@ -81,14 +81,18 @@
 ### [iSCSI Target Server](iscsi/iscsi-target-server.md)
 ### [iSCSI Target Server scalability limits](iscsi/iscsi-target-server-limits.md)
 ### [iSCSI boot](iscsi/iscsi-boot-overview.md)
+
 ## [ReFS](refs/refs-overview.md)
 ### [Mirror-accelerated parity](refs/mirror-accelerated-parity.md)
 ### [Block cloning](refs/block-cloning.md)
 ### [Integrity streams](refs/integrity-streams.md)
+
 ## Storage Migration Service
 ### [Overview](storage-migration-service/overview.md)
 ### [Migrate a server](storage-migration-service/migrate-data.md)
 ### [Frequently asked questions (FAQ)](storage-migration-service/faq.md)
+### [Known issues](storage-migration-service/known-issues.md)
+
 ## [Storage Replica](storage-replica/storage-replica-overview.md)
 ### [Stretch Cluster Replication using Shared Storage](storage-replica/stretch-cluster-replication-using-shared-storage.md)
 ### [Server to server storage replication](storage-replica/server-to-server-storage-replication.md)
