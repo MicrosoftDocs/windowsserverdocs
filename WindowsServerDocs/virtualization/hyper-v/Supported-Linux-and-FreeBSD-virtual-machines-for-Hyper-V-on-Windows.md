@@ -40,7 +40,7 @@ The goal of this content is to provide information that helps facilitate your Li
 
 * Feature description for each LIS or BIS feature.
 
-**Want to make a suggestion about features and functionality?** Is there something we could do better? You can use the [Windows Server User Voice](https://windowsserver.uservoice.com/forums/295062-linux-support) site to suggest new features and capabilities for Linux and FreeBSD Virtual Machines on Hyper-V, and to see what other peopleare saying.
+**Want to make a suggestion about features and functionality?** Is there something we could do better? You can use the [Windows Server User Voice](https://windowsserver.uservoice.com/forums/295062-linux-support) site to suggest new features and capabilities for Linux and FreeBSD Virtual Machines on Hyper-V, and to see what other people are saying.
 
 ## In this section
 
