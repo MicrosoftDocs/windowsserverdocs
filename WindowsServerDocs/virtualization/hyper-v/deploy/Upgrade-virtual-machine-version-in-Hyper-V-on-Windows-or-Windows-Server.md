@@ -137,7 +137,7 @@ The following table shows the minimum virtual machine configuration version requ
 |Large memory VMs|8.0|
 |Increase the default maximum number for virtual devices to 64 per device (e.g. networking and assigned devices)|8.3|
 |Allow additional processor features for Perfmon|9.0|
-|Hyperthreading for VMs on hosts using the [Core Scheduler](https://docs.microsoft.com/windows-server/virtualization/hyper-v/manage/manage-hyper-v-scheduler-types#windows-server-2019-hyper-v-defaults-to-using-the-core-scheduler)|9.0|
+|Automatically expose [simultaneous multithreading](https://docs.microsoft.com/en-us/windows-server/virtualization/hyper-v/manage/manage-hyper-v-scheduler-types#background) configuration for VMs running on hosts using the [Core Scheduler](https://docs.microsoft.com/windows-server/virtualization/hyper-v/manage/manage-hyper-v-scheduler-types#windows-server-2019-hyper-v-defaults-to-using-the-core-scheduler)|9.0|
 |Hibernation support|9.0|
 
 For more information about these features, see [What's new in Hyper-V on Windows Server](../What-s-new-in-Hyper-V-on-Windows.md).
