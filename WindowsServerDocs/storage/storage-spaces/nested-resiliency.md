@@ -109,7 +109,7 @@ Then, create new volumes using the `New-Volume` cmdlet.
 To use nested two-way mirror, reference the `NestedMirror` tier template and specify the size. For example:
 
 ```PowerShell
-New-Volume -FriendlyName Volume01 -StorageTierFriendlyNames NestedMirror -StorageTierSizes 500GB
+New-Volume -StoragePoolFriendlyName S2D* -FriendlyName Volume01 -StorageTierFriendlyNames NestedMirror -StorageTierSizes 500GB
 ```
 
 #### Nested mirror-accelerated parity
@@ -117,7 +117,7 @@ New-Volume -FriendlyName Volume01 -StorageTierFriendlyNames NestedMirror -Storag
 To use nested mirror-accelerated parity, reference both the `NestedMirror` and `NestedParity` tier templates and specify two sizes, one for each part of the volume (mirror first, parity second). For example, to create one 500 GB volume that's 20% nested two-way mirror and 80% nested parity, run:
 
 ```PowerShell
-New-Volume -FriendlyName Volume02 -StorageTierFriendlyNames NestedMirror, NestedParity -StorageTierSizes 100GB, 400GB
+New-Volume -StoragePoolFriendlyName S2D* -FriendlyName Volume02 -StorageTierFriendlyNames NestedMirror, NestedParity -StorageTierSizes 100GB, 400GB
 ```
 
 ### Step 3: Continue in Windows Admin Center
