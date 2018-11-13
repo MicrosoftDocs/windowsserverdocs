@@ -154,7 +154,7 @@ After running the script, a new certificate appears in the My store:
         $store.add($certificate)
         $store.close()
 
-        # Important: Remove the certficate files when finished
+        # Important: Remove the certificate files when finished
         remove-item C:\$SubjectName.cer
         remove-item C:\$SubjectName.pfx
     }    
