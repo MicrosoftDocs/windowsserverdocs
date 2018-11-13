@@ -25,7 +25,7 @@ The following sections cover common problems related to certificates configured 
 ### Certificate Permissions
 
 HGS must be able to access both the public and private keys of the encryption and signing certificates added to HGS by the certificate thumbprint.
-Specifically, the group managed service accoung (gMSA) that runs the HGS service needs access to the keys.
+Specifically, the group managed service account (gMSA) that runs the HGS service needs access to the keys.
 To find the gMSA used by HGS, run the following command in an elevated PowerShell prompt on your HGS server:
 
 ```powershell
