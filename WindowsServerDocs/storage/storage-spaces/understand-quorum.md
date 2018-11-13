@@ -1,4 +1,4 @@
----
+--- 
 title: Understanding cluster and pool quorum
 description: Understanding Cluster and Pool Quorum, with specific examples to go over the intricacies.
 keywords: Storage Spaces Direct,Quorum,Witness,S2D,Cluster Quorum,Pool Quorum,Cluster,Pool
