@@ -110,7 +110,7 @@ If you encounter any issues, you can always contact us via Help > Report an Issu
 - Made security fixes to incorporate CredSSP encryption oracle remediation updates as described in CVE-2018-0886.
 - Improved RemoteApp icon and mouse cursor rendering to address reported mispaints.
 - Addressed issues where RemoteApp windows appeared behind the Connection Center.
-- Fixed a problem that occured when you edit local resources after importing from Remote Desktop 8.
+- Fixed a problem that occurred when you edit local resources after importing from Remote Desktop 8.
 - You can now start a connection by pressing ENTER on a desktop tile.
 - When you're in full screen view, CMD+M now correctly maps to WIN+M.
 - The Connection Center, Preferences, and About windows now respond to CMD+M.
