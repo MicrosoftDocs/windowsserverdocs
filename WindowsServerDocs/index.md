@@ -228,7 +228,7 @@ description: Windows Server documentation helps IT professionals evaluate, plan,
                                         </div>
                                         <div class="cardText">
                                             <h2>Failover Clustering</h2> 
-                                            <p>Combine individual servers into groups with Failover Clustering to increase fault-tolerance and availablity of systems that host business critical apps and services.</p>
+                                            <p>Combine individual servers into groups with Failover Clustering to increase fault-tolerance and availability of systems that host business critical apps and services.</p>
 <table>
      <tr>
         <td style="vertical-align: top;">
@@ -382,7 +382,7 @@ description: Windows Server documentation helps IT professionals evaluate, plan,
                                         </div>
                                         <div class="cardText">
                                             <h2>Remote</h2>
-                                            <p>Access and control computers and devices remotely to extend enterprise availabilty anywhere, anytime with technologies including Remote Desktop Services, Remote Access and Remote Server Administration Tools.</p>
+                                            <p>Access and control computers and devices remotely to extend enterprise availability anywhere, anytime with technologies including Remote Desktop Services, Remote Access and Remote Server Administration Tools.</p>
 <table>
      <tr>
         <td style="vertical-align: top;">
