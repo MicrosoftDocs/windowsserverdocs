@@ -6,7 +6,7 @@ ms.topic: article
 manager: dongill
 author: rpsqrd
 ms.technology: security-guarded-fabric
-ms.date: 10/19/2018
+ms.date: 11/03/2018
 ---
 
 # Setting up the Host Guardian Service for Always Encrypted with secure enclaves in SQL Server 
@@ -23,7 +23,7 @@ For the rest of this topic, we'll refer to the machine hosting SQL Server as sim
 
 There are two, mutually exclusive ways for the application to attest: 
 
-- Host key attestation authorizes a host by proving it possesses a known and trusted private key. Host key attestation and either a physical or a virtual host machine running SQL Server is recommended for pre-production environments.
+- Host key attestation authorizes a host by proving it possesses a known and trusted private key. Host key attestation and either a physical host machine or a generation 2 virtual machine running SQL Server is recommended for pre-production environments.
 - TPM attestation validates hardware measurements to make sure a host runs only the correct binaries and security policies. TPM attestation and a physical host machine (not a virtual machine) running SQL Server is recommended for production environments.
 
 For more information about the Host Guardian Service and what it can measure, see [Guarded fabric and shielded VMs overview](https://docs.microsoft.com/windows-server/virtualization/guarded-fabric-shielded-vm/guarded-fabric-and-shielded-vms). 
@@ -69,8 +69,11 @@ This section covers prerequisites for HGS and host machines.
     - Windows 10 Enterprise, version 1809  
     - Windows Server 2019 Datacenter (Semi-Annual Channel), version 1809
     - Windows Server 2019 Datacenter
-  - Physical machine (not a virtual machine)
+  - Physical machine for production, or a generation 2 virtual machine for testing (Note that Azure does not support generation 2 VMs)
   - General requirements listed in [Hardware and Software Requirements for Installing SQL Server](https://docs.microsoft.com/sql/sql-server/install/hardware-and-software-requirements-for-installing-sql-server?view=sql-server-2017).   
+
+  You can use either the [Long-Term Servicing Channel (LTSC)](https://docs.microsoft.com/windows-server/get-started/semi-annual-channel-overview#long-term-servicing-channel-ltsc) or the [Semi-Annual Channel](https://docs.microsoft.com/windows-server/get-started/semi-annual-channel-overview#semi-annual-channel). 
+  To register and download the Windows Server Insider Preview, see [Getting started with the Windows Insider Program](https://insider.windows.com/for-business-getting-started-server/).
 
 - Requirements specific to the chosen attestation mode:
   - **TPM mode** is the strongest attestation mode and will use a Trusted Platform Module (TPM) to cryptographically validate that your host machines are known to your datacenter (using a unique ID from each TPM), running trusted hardware and firmware configurations (using a TPM baseline), and running trustworthy kernel and user mode code (using Windows Defender Application Control). The following hardware is required to use TPM mode: 

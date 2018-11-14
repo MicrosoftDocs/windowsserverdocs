@@ -131,6 +131,7 @@
 ### [dir](dir.md)
 ### [diskcomp](diskcomp.md)
 ### [diskcopy](diskcopy.md)
+### [diskpart](diskpart.md)
 ### [diskperf](diskperf.md)
 ### [diskraid](diskraid.md)
 ### [diskshadow](diskshadow.md)
