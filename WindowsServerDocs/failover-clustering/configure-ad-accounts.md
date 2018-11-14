@@ -11,30 +11,9 @@ ms.author: jgerend
 # Configuring cluster accounts in Active Directory
 
 
-Applies To: Windows Server 2008, Windows Server 2008 R2, Windows Server 2016
+Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2, and Windows Server 2008
 
-In Windows Server 2008, when you create a failover cluster and configure clustered services or applications, the failover cluster wizards create the necessary Active Directory computer accounts (also called computer objects) and give them specific permissions. The wizards create a computer account for the cluster itself (this account is also called the cluster name object or CNO) and a computer account for most types of clustered services and applications, the exception being a Hyper-V virtual machine. The permissions for these accounts are set automatically by the failover cluster wizards. If the permissions are changed, they will need to be changed back to match cluster requirements. This guide describes these Active Directory accounts and permissions, provides background about why they are important, and describes steps for configuring and managing the accounts.
-
-**In this guide**
-
-  - [Overview of Active Directory accounts needed by a failover cluster](#overview-of-active-directory-accounts-needed-by-a-failover-cluster)
-      
-  - [Requirements related to failover clusters, Active Directory domains, and accounts](#requirements-related-to-failover-clusters-active-directory-domains-and-accounts)
-      
-  - [Steps for configuring the account for the person who installs the cluster](#steps-for-configuring-the-account-for-the-person-who-installs-the-cluster)
-      
-  - [Steps for prestaging the cluster name account](#steps-for-prestaging-the-cluster-name-account)  
-      
-  - [Steps for prestaging an account for a clustered service or application](#steps_for_prestaging_an_account_for_a_clustered_service_or_application)
-      
-  - [Steps for troubleshooting problems related to accounts used by the cluster](#steps_for_troubleshooting_problems_related_to_accounts_used_by_the_cluster)
-      
-
-For additional topics about Active Directory accounts and failover clusters, see the appendixes in this guide:
-
-  - [Appendix A: Dealing with Accounts After a Failover Cluster is Destroyed](https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc771174(v=ws.10))  
-      
-  - [Appendix B: Comparison Between Accounts for Server Clusters and for Failover Clusters](https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc725957(v=ws.10))  
+In Windows Server, when you create a failover cluster and configure clustered services or applications, the failover cluster wizards create the necessary Active Directory computer accounts (also called computer objects) and give them specific permissions. The wizards create a computer account for the cluster itself (this account is also called the cluster name object or CNO) and a computer account for most types of clustered services and applications, the exception being a Hyper-V virtual machine. The permissions for these accounts are set automatically by the failover cluster wizards. If the permissions are changed, they will need to be changed back to match cluster requirements. This guide describes these Active Directory accounts and permissions, provides background about why they are important, and describes steps for configuring and managing the accounts.
       
 
 ## Overview of Active Directory accounts needed by a failover cluster
@@ -88,7 +67,7 @@ The following table describes the permissions required for these accounts.
 
 
 > [!NOTE]
-> There is a change in the way the Cluster service runs in Windows Server 2008, as compared to Windows Server 2003. In Windows Server 2008, there is no Cluster service account. Instead, the Cluster service automatically runs in a special context that provides the specific permissions and privileges necessary for the service (similar to the local system context, but with reduced privileges). Other accounts are needed, however, as described in this guide. 
+> In earlier versions of Windows Server, there was an account for the Cluster service. Since Windows Server 2008, however, the Cluster service automatically runs in a special context that provides the specific permissions and privileges necessary for the service (similar to the local system context, but with reduced privileges). Other accounts are needed, however, as described in this guide. 
 <br>
 
 

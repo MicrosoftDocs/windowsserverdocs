@@ -13,9 +13,9 @@ ms.author: jgerend
 
 Updated: October 9, 2013
 
-Applies To: Windows Server 2003 R2, Windows Server 2008, Windows Server 2008 R2, Windows Server 2012, Windows Server 2012 R2, Windows Server 2016
+Applies To: Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2, Windows Server 2008
 
-This FAQ answers questions about Distributed File System (DFS) Replication (also known as DFS-R or DFSR) for the Windows Server 2012 R2, Windows Server 2012, Windows Server® 2008 R2, Windows Server 2008, and Windows Server 2003 R2 operating systems.
+This FAQ answers questions about Distributed File System (DFS) Replication (also known as DFS-R or DFSR) for Windows Server.
 
 For information about DFS Namespaces, see [DFS Namespaces: Frequently Asked Questions](https://technet.microsoft.com/en-us/library/ee404780).
 
@@ -30,203 +30,7 @@ For information about what's new in DFS Replication, see the following topics:
 
 For a list of recent changes to this topic, see the [Change History](#change-history) section of this topic.
 
-<!-- Commented out for Task 18252216. Delete if we really meant to remove this. [v-gmoor, 2018-11-05]
-## Interoperability
-
-  - Can DFS Replication communicate with FRS?  
       
-  - Can DFS Replication replace FRS for SYSVOL replication  
-      
-  - Can I upgrade from FRS to DFS Replication without losing configuration settings?  
-      
-  - Can I use DFS Replication in a mixed Windows/UNIX environment?  
-      
-  - Can I use the Volume Shadow Copy Service with DFS Replication?  
-      
-  - Can I use Windows Backup (Ntbackup.exe) to remotely back up a replicated folder?  
-      
-  - Do file system policies impact DFS Replication?  
-      
-  - Does DFS Replication replicate mailboxes hosted on Microsoft Exchange Server?  
-      
-  - Does DFS Replication support file screens created by File Server Resource Manager?  
-      
-  - Is DFS Replication cluster aware?  
-      
-  - Is DFS Replication compatible with Data Deduplication?  
-      
-  - Is DFS Replication compatible with RIS and WDS?  
-      
-  - Is it possible to use DFS Replication with Offline Files?  
-      
-  - What antivirus applications are compatible with DFS Replication?  
-      
-  - What are the benefits of using DFS Replication instead of Windows SharePoint Services?  
-      
-
-## Limitations and requirements
-
-  - Can DFS Replication replicate between branch offices without a VPN connection?  
-      
-  - Can DFS Replication replicate files encrypted with the Encrypting File System?  
-      
-  - Can DFS Replication replicate Outlook .pst or Microsoft Office Access database files?  
-      
-  - Can I use DFS Replication in a workgroup?  
-      
-  - Can more than one folder be replicated on a single server?  
-      
-  - Does DFS Replication require DFS Namespaces?  
-      
-  - Does DFS Replication require time synchronization between servers?  
-      
-  - Does DFS Replication support replicating an entire volume?  
-      
-  - Does DFS Replication support RPC over HTTP?  
-      
-  - Does DFS Replication work across wireless networks?  
-      
-  - Does DFS Replication work on ReFS or FAT volumes?  
-      
-  - Does DFS Replication work with sparse files?  
-      
-  - Do I need to log in as administrator to replicate files?  
-      
-  - How can I upgrade or replace a DFS Replication member?  
-      
-  - Is DFS Replication suitable for replicating roaming profiles?  
-      
-  - Is there a file character limit or limit to the folder depth?  
-      
-  - Must members of a replication group reside in the same domain?  
-      
-  - What are the supported limits of DFS Replication?  
-      
-  - When should I not use DFS Replication?  
-      
-  - Why is a schema update required for DFS Replication?  
-      
-
-## Monitoring and management tools
-
-  - Can I automate the health report to receive warnings?  
-      
-  - Can I use Microsoft System Center Operations Manager to monitor DFS Replication?  
-      
-  - Does DFS Replication support remote management?  
-      
-  - Do Ultrasound and Sonar work with DFS Replication?  
-      
-  - How can files be recovered from the ConflictAndDeleted or PreExisting folders?  
-      
-  - Is there a way to know the state of replication?  
-      
-
-## Performance
-
-  - Does DFS Replication support dial-up connections?  
-      
-  - Does DFS Replication perform bandwidth sensing?  
-      
-  - Does DFS Replication throttle bandwidth per schedule, per server, or per connection?  
-      
-  - Does DFS Replication use Active Directory Domain Services to calculate site links and connection costs?  
-      
-  - How can I improve replication performance?  
-      
-  - How does DFS Replication avoid saturating a connection?  
-      
-  - How does DFS Replication performance compare with FRS?  
-      
-  - How frequently does DFS Replication replicate data?  
-      
-  - How much of my server's system resources will DFS Replication consume?  
-      
-  - What happens if a WAN link fails during replication?  
-      
-
-## Remote Differential Compression details
-
-  - Are changes compressed before being replicated?  
-      
-  - Can an administrator turn off RDC or change the threshold?  
-      
-  - Does RDC work on all file types?  
-      
-  - How does RDC work on a compressed file?  
-      
-  - Is cross-file RDC enabled when upgrading to Windows Server Enterprise Edition or Datacenter Edition?  
-      
-  - Is RDC true block-level replication?  
-      
-  - What happens if I rename a file?  
-      
-  - What is cross-file RDC?  
-      
-  - What is RDC?  
-      
-  - When is RDC used for replication?  
-      
-  - Which editions of the Windows operating system support cross-file RDC?  
-      
-
-## Replication details
-
-  - Can I change the path for a replicated folder after it is created?  
-      
-  - Can I configure which file attributes are replicated?  
-      
-  - Can I control which member is replicated?  
-      
-  - Can I seed a replication group member with data prior to the initial replication?  
-      
-  - Does DFS Replication overcome common File Replication Service issues?  
-      
-  - Does DFS Replication replicate files in chronological order?  
-      
-  - Does DFS Replication replicate files that are being used by another application?  
-      
-  - Does DFS Replication replicate NTFS file permissions, alternate data streams, hard links, and reparse points?  
-      
-  - Does DFS Replication replicate timestamp changes if no other changes are made to the file?  
-      
-  - Does DFS Replication replicate updated permissions on a file or folder?  
-      
-  - Does DFS Replication support merging text files in the event of a conflict?  
-      
-  - Does DFS Replication use encryption when transmitting data?  
-      
-  - Is it possible to disable the use of encrypted RPC?  
-      
-  - How are simultaneous replications handled?  
-      
-  - How do I force replication or polling?  
-      
-  - Is it possible to configure a quiet time between replications for files that change frequently?  
-      
-  - Is it possible to configure one-way replication with DFS Replication?  
-      
-  - Is there a way to force a complete replication of all files including unchanged files?  
-      
-  - What happens if the primary member suffers a database loss during initial replication?  
-      
-  - What happens if the replication schedule closes while a file is being replicated?  
-      
-  - What happens when two users simultaneously update the same file on different servers?  
-      
-
-## Staging
-
-  - Does DFS Replication continue staging files when replication is disabled by a schedule or bandwidth throttling quota, or when a connection is manually disabled?  
-      
-  - Does DFS Replication prevent other applications from accessing a file during staging?  
-      
-  - Is it possible to change the location of the staging folder with the DFS Management Tool?  
-      
-  - When are files staged?  
-      
-  - What happens if a file is changed after it is staged but before it is completely transmitted to the remote site?  
--->      
 
 ## Interoperability
 
@@ -620,31 +424,31 @@ To use cross-file RDC, one member of the replication connection must be running 
 </tr>
 </thead>
 <tbody>
-<tr class="odd">
+<tr class="even">
 <td><p>Windows Server 2012 R2</p></td>
 <td><p>Yes*</p></td>
 <td><p>Not available</p></td>
 <td><p>Yes*</p></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td><p>Windows Server 2012</p></td>
 <td><p>Yes</p></td>
 <td><p>Not available</p></td>
 <td><p>Yes</p></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td><p>Windows Server 2008 R2</p></td>
 <td><p>No</p></td>
 <td><p>Yes</p></td>
 <td><p>Yes</p></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td><p>Windows Server 2008</p></td>
 <td><p>No</p></td>
 <td><p>Yes</p></td>
 <td><p>No</p></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td><p>Windows Server 2003 R2</p></td>
 <td><p>No</p></td>
 <td><p>Yes</p></td>
@@ -891,12 +695,12 @@ Files are staged on the sending member when the receiving member requests the fi
 </tr>
 </thead>
 <tbody>
-<tr class="odd">
+<tr class="even">
 <td><p>Sending member</p></td>
 <td><p>64 KB</p></td>
 <td><p>256 KB</p></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td><p>Receiving member</p></td>
 <td><p>64 KB by default</p></td>
 <td><p>64 KB by default</p></td>
@@ -926,47 +730,52 @@ If any part of the file is already being transmitted, DFS Replication continues 
 </thead>
 <tbody>
 <tr class="odd">
+<td><p>November 15, 2018</p></td>
+<td><p>Updated for Windows Server 2019.</p></td>
+<td><p>New operating system.</p></td>
+</tr>
+<tr class="even">
 <td><p>October 9th, 2013</p></td>
 <td><p>Updated the What are the supported limits of DFS Replication? section with results from tests on Windows Server 2012 R2.</p></td>
 <td><p>Updates for the latest version of Windows Server</p></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td><p>January 30th, 2013</p></td>
 <td><p>Added the Does DFS Replication continue staging files when replication is disabled by a schedule or bandwidth throttling quota, or when a connection is manually disabled? entry.</p></td>
 <td><p>Customer questions</p></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td><p>October 31st, 2012</p></td>
 <td><p>Edited the What are the supported limits of DFS Replication? entry to increase the tested number of replicated files on a volume.</p></td>
 <td><p>Customer feedback</p></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td><p>August 15, 2012</p></td>
 <td><p>Edited the Does DFS Replication replicate NTFS file permissions, alternate data streams, hard links, and reparse points? entry to further clarify how DFS Replication handles hard links and reparse points.</p></td>
 <td><p>Feedback from Customer Support Services</p></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td><p>June 13, 2012</p></td>
 <td><p>Edited the Does DFS Replication work on ReFS or FAT volumes? entry to add discussion of ReFS.</p></td>
 <td><p>Customer feedback</p></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td><p>April 25, 2012</p></td>
 <td><p>Edited the Does DFS Replication replicate NTFS file permissions, alternate data streams, hard links, and reparse points? entry to clarify how DFS Replication handles hard links.</p></td>
 <td><p>Reduce potential confusion</p></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td><p>March 30, 2011</p></td>
 <td><p>Edited the Can DFS Replication replicate Outlook .pst or Microsoft Office Access database files? entry to correct the potential impact of using DFS Replication with .pst and Access files.</p>
 <p>Added How can I improve replication performance?</p></td>
 <td><p>Customer questions about the previous entry, which incorrectly indicated that replicating .pst or Access files could corrupt the DFS Replication database.</p></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td><p>January 26, 2011</p></td>
 <td><p>Added How can files be recovered from the ConflictAndDeleted or PreExisting folders?</p></td>
 <td><p>Customer feedback</p></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td><p>October 20, 2010</p></td>
 <td><p>Added How can I upgrade or replace a DFS Replication member?</p></td>
 <td><p>Customer feedback</p></td>

@@ -10,7 +10,7 @@ ms.author: jgerend
 # DiskPart commands
 
 
-Applies To: Windows 7, Windows Server 2016, Windows Server 2008, Windows Server 2008 R2, Windows Vista
+Applies To: Windows 10, Windows 8.1, Windows 8, Windows 7, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, and Windows Server 2008 R2, Windows Server 2008
 
 DiskPart commands help you to manage your PC's drives (disks, partitions, volumes, or virtual hard disks). Before you can use DiskPart commands, you must first list, and then select an object to give it focus. When an object has focus, any DiskPart commands that you type will act on that object.
 

@@ -14,7 +14,7 @@ ms.author: jgerend
 
 Updated: February 2, 2011
 
-Applies To: Windows Server 2016, Windows Server 2012 R2, and Windows Server 2012, Windows Server 2008 R2
+Applies To: Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, and Windows Server 2012, Windows Server 2008 R2
 
 *This topic is intended to address a specific issue identified by a Best Practices Analyzer scan. You should apply the information in this topic only to computers that have had the File Services Best Practices Analyzer run against them and are experiencing the issue addressed by this topic. For more information about best practices and scans, see* [Best Practices Analyzer](http://go.microsoft.com/fwlink/?linkid=122786%0d%0a).
 
@@ -27,7 +27,7 @@ Applies To: Windows Server 2016, Windows Server 2012 R2, and Windows Server 2012
 <tbody>
 <tr class="odd">
 <td><p><strong>Operating System</strong></p></td>
-<td><p>Windows Server 2008 R2</p></td>
+<td><p>Windows Server</p></td>
 </tr>
 <tr class="even">
 <td><p><strong>Product/Feature</strong></p></td>
