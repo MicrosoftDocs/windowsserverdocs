@@ -246,6 +246,7 @@ To find information about a specific Windows Command, in the following A-Z menu,
 -   [dir](dir.md)
 -   [diskcomp](diskcomp.md)
 -   [diskcopy](diskcopy.md)
+-   [diskpart](diskpart.md)
 -   [diskperf](diskperf.md)
 -   [diskraid](diskraid.md)
 -   [diskshadow](diskshadow.md)
