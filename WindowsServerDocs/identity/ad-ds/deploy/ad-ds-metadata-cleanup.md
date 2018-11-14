@@ -91,5 +91,5 @@ As an alternative, you can clean up metadata by using Ntdsutil.exe, a command-li
 
 ## See Also
 
-* [Demoting Domain Controllers](ad-ds/deploy/Demoting-Domain-Controllers-and-Domains--Level-200-.md)
+* [Demoting Domain Controllers](Demoting-Domain-Controllers-and-Domains--Level-200-.md)
 * [Ntdsutil command reference](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc753343(v=ws.10))
