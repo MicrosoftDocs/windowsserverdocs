@@ -5,12 +5,11 @@ ms.technology: manage
 ms.topic: article
 author: jwwool
 ms.author: jeffrew
-ms.date: 10/04/2018
 ms.localizationpriority: medium
 ms.prod: windows-server-threshold
 ---
 
-# Windows Admin Center Known Issues 
+# Windows Admin Center Known Issues
 
 >Applies To: Windows Admin Center, Windows Admin Center Preview
 
@@ -18,7 +17,7 @@ If you encounter an issue not described on this page, please [let us know](http:
 
 ## Previous Insider preview builds of Windows 10 & Window Server 2019 (RS5)
 
-- There was a bug in approximate build numbers 17134-17673 which caused Windows Admin Center to fail. 
+- There was a bug in approximate build numbers 17134-17673 which caused Windows Admin Center to fail.
 
 ## Installer
 
@@ -36,10 +35,9 @@ If you encounter an issue not described on this page, please [let us know](http:
     ```powershell
     New-NetFirewallRule -DisplayName "SmeInboundOpenException" -Description "Windows Admin Center inbound port exception" -LocalPort <port> -RemoteAddress Any -Protocol TCP
     ```
- 
+
 >[!IMPORTANT]
 > You may see this when upgrading a Highly Available (HA) deployment of Windows Admin Center, since Update-WindowsAdminCenterHA.ps1 leverages msiexec in quiet mode. In this case, you will need to recreate the rule on all machines in the cluster.
-
 
 ## General
 
@@ -60,9 +58,9 @@ If you encounter an issue not described on this page, please [let us know](http:
 
 - In some tools, command buttons may not reflect state changes immediately after being clicked, and the tool UI may not automatically reflect changes to certain properties. You can click **Refresh** to retrieve the latest state from the target server. [11445790]
 
-- Tag filtering on connection list - if you select connections using the multiselect checkboxes, then filter your connection list by tags, the original selection persists so any action you select will apply to all the previously selected machines. [18099259] 
+- Tag filtering on connection list - if you select connections using the multiselect checkboxes, then filter your connection list by tags, the original selection persists so any action you select will apply to all the previously selected machines. [18099259]
 
-- There may be minor variance between version numbers of OS's running in Windows Admin Center modules, and what is listed within the 3rd Party Software Notice.
+- There may be minor variance between version numbers of OSS running in Windows Admin Center modules, and what is listed within the 3rd Party Software Notice.
 
 ### Extension Manager
 
@@ -75,7 +73,7 @@ If you configured your gateway for Azure connectivity when you set up Azure Site
 
 ## Browser Specific Issues
 
-### Microsoft Edge 
+### Microsoft Edge
 
 - In some cases, you may encounter long loading times when using Microsoft Edge to access a Windows Admin Center gateway over the Internet. This can occur on Azure VMs where the Windows Admin Center gateway is using a self-signed certificate. [13819912]
 
@@ -87,17 +85,15 @@ If you configured your gateway for Azure connectivity when you set up Azure Site
 
 ### Google Chrome
 
--	Chrome has a [bug](https://bugs.chromium.org/p/chromium/issues/detail?id=423609) regarding the websockets protocol and NTLM authentication. This effects the following tools: Events, PowerShell, Remote Desktop.
+- Prior to version 70 (released late October, 2018) Chrome had a [bug](https://bugs.chromium.org/p/chromium/issues/detail?id=423609) regarding the websockets protocol and NTLM authentication. This effects the following tools: Events, PowerShell, Remote Desktop.
 
--	Chrome may pop-up multiple credential prompts, especially during the add connection experience in a **workgroup** (non-domain) environment.
+- Chrome may pop-up multiple credential prompts, especially during the add connection experience in a **workgroup** (non-domain) environment.
 
 - If you have Windows Admin Center deployed as a service, popups from the gateway URL need to be enabled for any Azure integration functionality to work. These services include Azure Network Adapter, Azure Update Management and Azure Site Recovery.
 
-- Chrome Version 69, released September 4th 2018 - If you have Windows Admin Center deployed as a service, and you are using a DNS alias to access the site, the websocket functionality will fail. This impacts the following tools: Events, PowerShell, Remote Desktop. This does not occur in the previous version of Chrome (version 68.)
-
 ### Mozilla Firefox
 
-Windows Admin Center is not tested with Mozilla Firefox, but most functionality should work. 
+Windows Admin Center is not tested with Mozilla Firefox, but most functionality should work.
 
 - Windows 10 Installation: Mozilla Firefox has it’s own certificate store, so you must import the ```Windows Admin Center Client``` certificate into Firefox to use Windows Admin Center on Windows 10.
 
@@ -113,7 +109,7 @@ Remote Desktop, PowerShell, and Events modules in Windows Admin Center utilize t
 > Windows Admin Center requires PowerShell features that are not included in Windows Server 2012 R2, 2012, or 2008 R2. If you will manage Windows Server these with Windows Admin Center, you will need to install WMF version 5.1 or higher on those servers.
 
 Type `$PSVersiontable` in PowerShell to verify that WMF is installed,
-and that the version is 5.1 or higher. 
+and that the version is 5.1 or higher.
 
 If it is not installed, you can [download and install WMF 5.1](https://www.microsoft.com/en-us/download/details.aspx?id=54616).
 
@@ -131,92 +127,92 @@ If it is not installed, you can [download and install WMF 5.1](https://www.micro
 
 ### Certificates
 
-* Cannot import .PFX Encrypted Certificate in to current user store. [11818622]
+- Cannot import .PFX Encrypted Certificate in to current user store. [11818622]
 
 ### Devices
 
-* When navigating through the table with your keyboard, the selection may jump to the top of the table group. [16646059]
+- When navigating through the table with your keyboard, the selection may jump to the top of the table group. [16646059]
 
 ### Events
 
-* Events is effected by [websocket compatibility when using a proxy service.](#websockets)
+- Events is effected by [websocket compatibility when using a proxy service.](#websockets)
 
 - You may get an error that references “packet size” when exporting large log files. [16630279]
 
-  * To resolve this, use the following command in an elevated command prompt on the gateway machine: ```winrm set winrm/config @{MaxEnvelopeSizekb="8192"}```
+  - To resolve this, use the following command in an elevated command prompt on the gateway machine: ```winrm set winrm/config @{MaxEnvelopeSizekb="8192"}```
 
 ### Files
 
-* Uploading or downloading large files not yet supported. (\~100mb limit) [12524234]
+- Uploading or downloading large files not yet supported. (\~100mb limit) [12524234]
 
 ### PowerShell
 
-* PowerShell is effected by [websocket compatibility when using a proxy service](#websockets)
+- PowerShell is effected by [websocket compatibility when using a proxy service](#websockets)
 
-* Pasting with a single right-click as in the desktop PowerShell console does not work. Instead you will get the browser's context menu, where you can select paste. Ctrl-V works as well.
+- Pasting with a single right-click as in the desktop PowerShell console does not work. Instead you will get the browser's context menu, where you can select paste. Ctrl-V works as well.
 
-* Ctrl-C to copy does not work, it will always send the Ctrl-C break command to the console. Copy from the right-click context menu works.
+- Ctrl-C to copy does not work, it will always send the Ctrl-C break command to the console. Copy from the right-click context menu works.
 
-* When you make the Windows Admin Center window smaller, the terminal content will reflow, but when you make it larger again, the content may not return to it's previous state. If things get jumbled, you can try Clear-Host, or disconnect and reconnect using the button above the terminal.
+- When you make the Windows Admin Center window smaller, the terminal content will reflow, but when you make it larger again, the content may not return to it's previous state. If things get jumbled, you can try Clear-Host, or disconnect and reconnect using the button above the terminal.
 
 ### Registry Editor
 
-* Search functionality not implemented. [13820009]
+- Search functionality not implemented. [13820009]
 
 ### Remote Desktop
 
-* Remote Desktop is effected by [websocket compatibility when using a proxy service.](#websockets)
+- Remote Desktop is effected by [websocket compatibility when using a proxy service.](#websockets)
 
-* The Remote Desktop tool does not currently support any text, image, or file copy/paste between the local desktop and the remote session. 
+- The Remote Desktop tool does not currently support any text, image, or file copy/paste between the local desktop and the remote session.
 
-* To do any copy/paste within the remote session, you can copy as normal (right click + copy or Ctrl+C), but paste requires right click + paste (Ctrl+V does NOT work) 
+- To do any copy/paste within the remote session, you can copy as normal (right click + copy or Ctrl+C), but paste requires right click + paste (Ctrl+V does NOT work)
 
-* You cannot send the following key commands to the remote session 
-  * Alt+Tab 
-  * Function keys 
-  * Windows Key 
-  * PrtScn 
+- You cannot send the following key commands to the remote session
+  - Alt+Tab
+  - Function keys
+  - Windows Key
+  - PrtScn
 
-* Remote App – After enabling the Remote App tool from Remote Desktop settings, the tool may not appear in the tool list when managing a Server with Desktop Experience. [18906904]
+- Remote App – After enabling the Remote App tool from Remote Desktop settings, the tool may not appear in the tool list when managing a Server with Desktop Experience. [18906904]
 
 ### Roles and Features
 
-* When selecting roles or features with unavailable sources for install, they are skipped. [12946914]
+- When selecting roles or features with unavailable sources for install, they are skipped. [12946914]
 
-* If you choose not to automatically reboot after role installation, we won't ask again. [13098852]
+- If you choose not to automatically reboot after role installation, we won't ask again. [13098852]
 
-* If you do choose to automatically reboot, the reboot will occur before the status gets updated to 100%. [13098852]
+- If you do choose to automatically reboot, the reboot will occur before the status gets updated to 100%. [13098852]
 
 ### Storage
 
-* Fetching Quota information may fail without an error notification (there will still be an error in the browser’s console) [18962274]
+- Fetching Quota information may fail without an error notification (there will still be an error in the browser’s console) [18962274]
 
-* Down-level: DVD/CD/Floppy drives do not appear as volumes on down-level.
+- Down-level: DVD/CD/Floppy drives do not appear as volumes on down-level.
 
-* Down-level: Some properties in Volumes and Disks are not available down-level so they appear unknown or blank in details panel.
+- Down-level: Some properties in Volumes and Disks are not available down-level so they appear unknown or blank in details panel.
 
-* Down-level: When creating a new volume, ReFS only supports an allocation unit size of 64K on Windows 2012 and 2012 R2 machines. If a ReFS volume is created with a smaller allocation unit size on down-level targets, file system formatting will fail. The new volume will not be usable. The resolution is to delete the volume and use 64K allocation unit size.
+- Down-level: When creating a new volume, ReFS only supports an allocation unit size of 64K on Windows 2012 and 2012 R2 machines. If a ReFS volume is created with a smaller allocation unit size on down-level targets, file system formatting will fail. The new volume will not be usable. The resolution is to delete the volume and use 64K allocation unit size.
 
 ### Updates
 
-* After installing updates, install status may be cached and require a browser refresh.
+- After installing updates, install status may be cached and require a browser refresh.
 
-* You may encounter the error: "Keyset does not exist" when attempting to set up Azure Update management. In this case, please try the following remediation steps on the managed node -
+- You may encounter the error: "Keyset does not exist" when attempting to set up Azure Update management. In this case, please try the following remediation steps on the managed node -
     1. Stop ‘Cryptographic Services’ service.
     2. Change folder options to show hidden files (if required).
     3. Got to “%allusersprofile%\Microsoft\Crypto\RSA\S-1-5-18” folder and delete all its contents.
     4. Restart ‘Cryptographic Services’ service.
-    5. Repeat setting up Update Management with Windows Admin Center 
+    5. Repeat setting up Update Management with Windows Admin Center
 
 ### Virtual Machines
 
-* Azure Site Recovery – If ASR is setup on the host outside of WAC, you will be unable to protect a VM from within WAC [18972276]
+- Azure Site Recovery – If ASR is setup on the host outside of WAC, you will be unable to protect a VM from within WAC [18972276]
 
-* Advanced features available in Hyper-V Manager such as Virtual SAN Manager, Move VM, Export VM, VM Replication are currently not supported.
+- Advanced features available in Hyper-V Manager such as Virtual SAN Manager, Move VM, Export VM, VM Replication are currently not supported.
 
 ### Virtual Switches
 
-* Switch Embedded Teaming (SET): When adding NICs to a team, they must be on the same subnet.
+- Switch Embedded Teaming (SET): When adding NICs to a team, they must be on the same subnet.
 
 ## Computer Management Solution
 
@@ -224,24 +220,24 @@ The Computer Management solution contains a subset of the tools from the Server 
 
 - If you use a Microsoft Account ([MSA](https://account.microsoft.com/account/)) or if you use Azure Active Directory (AAD) to log on to you Windows 10 machine, you must specify "manage-as" credentials to manage your local machine [16568455]
 
-* When you try to manage the localhost, you will be prompted to elevate the gateway process. If you click **no** in the User Account Control popup that follows, Windows Admin Center won't be able to display it again. In this case, exit the gateway process by right-clicking the Windows Admin Center icon in the system tray and choosing exit, then relaunch Windows Admin Center from the Start Menu.
+- When you try to manage the localhost, you will be prompted to elevate the gateway process. If you click **no** in the User Account Control popup that follows, Windows Admin Center won't be able to display it again. In this case, exit the gateway process by right-clicking the Windows Admin Center icon in the system tray and choosing exit, then relaunch Windows Admin Center from the Start Menu.
 
-* Windows 10 does not have WinRM/PowerShell remoting on by default
+- Windows 10 does not have WinRM/PowerShell remoting on by default
   
-  * To enable management of the Windows 10 Client, you must issue the command ```Enable-PSRemoting``` from an elevated PowerShell prompt.
+  - To enable management of the Windows 10 Client, you must issue the command ```Enable-PSRemoting``` from an elevated PowerShell prompt.
 
-  * You may also need to update your firewall to allow connections from outside the local subnet with ```Set-NetFirewallRule -Name WINRM-HTTP-In-TCP -RemoteAddress Any```. For more restrictive networks scenarios, please refer to [this documentation](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/enable-psremoting?view=powershell-5.1).
+  - You may also need to update your firewall to allow connections from outside the local subnet with ```Set-NetFirewallRule -Name WINRM-HTTP-In-TCP -RemoteAddress Any```. For more restrictive networks scenarios, please refer to [this documentation](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/enable-psremoting?view=powershell-5.1).
 
 ## Failover Cluster Manager solution
 
-* When managing a cluster, (either Hyper-Converged or traditional?) you may encounter a **shell was not found** error. If this happens either reload your browser, or navigate away to another tool and back. [13882442]
+- When managing a cluster, (either Hyper-Converged or traditional?) you may encounter a **shell was not found** error. If this happens either reload your browser, or navigate away to another tool and back. [13882442]
 
-* An issue can occur when managing a down-level (Windows Server 2012 or 2012 R2) cluster that hasn't been configured completely. The fix for this issue is to ensure that the Windows feature **RSAT-Clustering-PowerShell** has been installed and enabled on **each member node** of the cluster. To do this with PowerShell, enter the command `Install-WindowsFeature -Name RSAT-Windows-PowerShell` on all the cluster nodes. [12524664]
+- An issue can occur when managing a down-level (Windows Server 2012 or 2012 R2) cluster that hasn't been configured completely. The fix for this issue is to ensure that the Windows feature **RSAT-Clustering-PowerShell** has been installed and enabled on **each member node** of the cluster. To do this with PowerShell, enter the command `Install-WindowsFeature -Name RSAT-Windows-PowerShell` on all the cluster nodes. [12524664]
 
-* The Cluster may need to be added with the entire FQDN to be discovered correctly.
+- The Cluster may need to be added with the entire FQDN to be discovered correctly.
 
-* When connecting to a cluster using Windows Admin Center installed as a gateway, and providing explicit username/password to authenticate, you must select **Use these credentials for all connections** so that the credentials are available to query the member nodes.
+- When connecting to a cluster using Windows Admin Center installed as a gateway, and providing explicit username/password to authenticate, you must select **Use these credentials for all connections** so that the credentials are available to query the member nodes.
 
 ## Hyper-Converged Cluster Manager solution
 
-* Some commands such as **Drives - Update firmware**, **Servers - Remove** and **Volumes - Open** are disabled and currently not supported.
+- Some commands such as **Drives - Update firmware**, **Servers - Remove** and **Volumes - Open** are disabled and currently not supported.
