@@ -31,7 +31,7 @@ The deployment consists of three layers:
 
 - Azure services - the Azure Management interfaces, including the Azure portal and APIs, and public networking services, such as DNS and public IP addressing.
 - Desktop hosting service - Virtual machines, networks, storage, Azure services, and Windows Server role services
-- Azure Fabric - Windows Server operating systems running the Hyper-V role, usded to virtualize physical servers, storage units, network switches, and routers. Using Azure Fabric lets you create VMs, networks, storage, and applications independent from underlying hardware.
+- Azure Fabric - Windows Server operating systems running the Hyper-V role, used to virtualize physical servers, storage units, network switches, and routers. Using Azure Fabric lets you create VMs, networks, storage, and applications independent from underlying hardware.
 
 
 In comparison, here is the architecture for a deployment that uses multiple Azure data centers:
