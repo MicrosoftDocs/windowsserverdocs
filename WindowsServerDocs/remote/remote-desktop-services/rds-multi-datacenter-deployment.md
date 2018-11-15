@@ -41,7 +41,7 @@ In comparison, here is the architecture for a deployment that uses multiple Azur
 The entire RDS deployment is replicated in a second Azure region to create a geo-redundant deployment. This architecture uses an active-passive model, where only one RDS deployment is running at a time. A VNet-to-VNet connection lets the two environments communicate with each other. The RDS deployments are based on a single Active Directory forest/domain, and the AD servers replicate across the two deployments, meaning users can sign into either deployment using the same credentials. User settings and data stored in User Profile Disks (UPD) are stored on a two-node cluster Storage Spaces Direct (S2D) scale-out file server (SOFS). A second identical S2D cluster is deployed in the second (passive) region, and Storage Replica is used to replicate the user profiles from the active to passive deployment. Azure Traffic Manager is used to automatically direct end users to whichever deployment is currently active - from the end user perspective, they access the deployment using a single URL and are not aware of which region they end up using.
 
 
-You *could* create a non-highly available RDS deployment in each region, but if even a single VM is restarted in one region, a failover would occur, increasing the likelihood of failovers occuring with associated performance impacts.
+You *could* create a non-highly available RDS deployment in each region, but if even a single VM is restarted in one region, a failover would occur, increasing the likelihood of failovers occurring with associated performance impacts.
 
 ## Deployment steps
 Create the following resources in Azure to create a geo-redundant multi-data center RDS deployment:
