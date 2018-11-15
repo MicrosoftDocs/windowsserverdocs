@@ -21,7 +21,7 @@ You can now run a Windows Server 2008/2008 R2 VM in the cloud with Azure.
 ## Prep the Windows Server 2008/2008 R2 specialized image
 Before you can upload an image, make the following changes:
 
-- Download and install [Windows Server 2008 Service Pack 2 (SP2)](https:\www.microsoft.com\en-us\download\details.aspx?id=16468) if you don’t already have it installed on your image.
+- Download and install Windows Server 2008 Service Pack 2 (SP2) if you don’t already have it installed on your image.
 
 - Configure Remote Desktop (RDP) settings.
    1. Go to **Control Panel** > **System settings**.   
