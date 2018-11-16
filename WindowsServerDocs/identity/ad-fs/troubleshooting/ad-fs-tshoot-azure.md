@@ -20,7 +20,7 @@ Redirection occurs when you sign-in to an application such as Office 365 and you
 
 
 ### First things to check
-If redirection is not occuring there are a few things you want to check
+If redirection is not occurring there are a few things you want to check
 
    1. Make sure that your Azure AD tenant is enabled for federation by signing in to the Azure portal and checking under Azure AD Connect.
 
