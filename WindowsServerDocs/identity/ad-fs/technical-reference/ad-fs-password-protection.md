@@ -4,7 +4,7 @@ description:  This document describes how to protect AD FS users from password a
 author: billmath
 manager: mtillman
 ms.reviewer: andandyMSFT
-ms.date: 09/05/2018
+ms.date: 11/15/2018
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
@@ -113,7 +113,7 @@ But by taking a few steps to configure the AD FS and network correctly, AD FS en
 If the AD FS environment is under active attack, the following steps should be implemented at the earliest:
 
  - Disable U/P endpoint in ADFS and require everyone to VPN to get access or be inside your network. This requires you to have step **Level 2 #1a** completed. Otherwise, all internal Outlook requests will still be routed via the cloud via EXO proxy auth.
- - Alternatively, if the attack is only coming via EXO, you can disable POP/IMAP protocols completely which is how we see a vast majority of these attacks coming from. Additionally, you can use CAR rules in EXO to have user specific policies on what is allowed. This handles it at the pre-auth stage. 
+ - If the attack is only coming via EXO, you can disable basic authentication for Exchange protocols (POP, IMAP, SMTP, EWS, etc) using Authentication Policies, these protocols and authentication methods are being used on the vast majority of these attacks. Additionally, Client Access Rules in EXO and per-mailbox protocol enablement are evaluated post-authentication and won’t help on mitigating the attacks. 
  - Selectively offer extranet access using Level 3 #1-3.
 
 ## Next steps

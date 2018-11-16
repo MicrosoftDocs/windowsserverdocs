@@ -5,7 +5,7 @@ description:
 author: billmath
 ms.author: billmath
 manager: mtillman
-ms.date: 09/19/2018
+ms.date: 11/14/2018
 ms.topic: article
 ms.prod: windows-server-threshold
 
@@ -173,7 +173,7 @@ HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Internet Settings\Zo
  
 ## Additional Details & Considerations
 
--   The Alternate login ID feature is only available for federated environments with AD FS deployed.  It is not supported in the following scenarios:
+-   The Alternate login ID feature is available for federated environments with AD FS deployed.  It is not supported in the following scenarios:
 	-   Non-routable domains (e.g. Contoso.local) that cannot be verified by Azure AD.
 	-   Managed environments that do not have AD FS deployed.
 
