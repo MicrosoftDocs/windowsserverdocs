@@ -24,7 +24,7 @@ Storage Migration Service won't transfer files or folders that we know could int
 
 ## <a name="domain-migration"></a> Are domain migrations supported?
 
-Storage Migration Service doesn't allow migrating between Active Directory domains. Migrations between servers will always join the destination server to the same domain. You can use migration credentials from different domains in the Active Directory forest. The Storage Migration Sevice does support migrating between workgroups.  
+Storage Migration Service doesn't allow migrating between Active Directory domains. Migrations between servers will always join the destination server to the same domain. You can use migration credentials from different domains in the Active Directory forest. The Storage Migration Service does support migrating between workgroups.  
 
 ## <a name="cluster-support"></a> Are clusters supported as sources or destinations?
 
