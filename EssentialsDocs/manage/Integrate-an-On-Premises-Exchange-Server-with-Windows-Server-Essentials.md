@@ -248,7 +248,7 @@ This guide provides information and basic instructions to help you set up and in
 15. Restart the server.  
   
 > [!NOTE]
->  If you decide to use a publically trusted SSL certificate instead of a self-issued certificate, you can follow the instructions in the setup guide to create a certificate request and send it to your selected Certification Authority. You can also use an Exchange PowerShell cmdlet to create a certificate request. An example follows.  
+>  If you decide to use a publicly trusted SSL certificate instead of a self-issued certificate, you can follow the instructions in the setup guide to create a certificate request and send it to your selected Certification Authority. You can also use an Exchange PowerShell cmdlet to create a certificate request. An example follows.  
 >   
 >  `New-ExchangeCertificate -GenerateRequest -SubjectName "C=US, S=Washington, L=Redmond, O=contoso, OU=contoso, CN=mail.contoso.com" -DomainName mail.contoso.com -PrivateKeyExportable $true | Set-Content -path "c:\Docs\MyCertRequest.req"`  
 >   
