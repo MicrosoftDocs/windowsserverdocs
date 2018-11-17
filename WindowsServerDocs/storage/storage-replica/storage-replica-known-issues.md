@@ -198,7 +198,7 @@ This occurs due to a by-design behavior in Windows Server 2016. Use `Set-SRPartn
 This behavior has been changed in Windows Server, version 1709 to allow manual and automated failovers with asynchronous replication, based on customer feedback.
 
 ## Attempting to add disks to a two-node asymmetric cluster returns "No disks suitable for cluster disks found" 
-When attempting to provision a cluster with only two nodes, prior to adding Storage Replica stretch replication, you attempt to add the disks in the second site to the Available Disks. You recieve the following error:
+When attempting to provision a cluster with only two nodes, prior to adding Storage Replica stretch replication, you attempt to add the disks in the second site to the Available Disks. You receive the following error:
 
     "No disks suitable for cluster disks found. For diagnostic information about disks available to the cluster, use the Validate a Configuration Wizard to run Storage tests." 
 
