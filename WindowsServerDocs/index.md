@@ -39,7 +39,45 @@ description: Windows Server documentation helps IT professionals evaluate, plan,
                             </div>
                             </a>
                         </li>
+<li>
+                            <a href="get-started-19/get-started-19.md">
+                            <div class="cardSize">
+                                <div class="cardPadding">
+                                    <div class="card">
+                                        <div class="cardImageOuter">
+                                            <div class="cardImage">
+                                                <img src="media/i-get-started.svg" alt="" />
+                                            </div>
+                                        </div>
+                                        <div class="cardText">
+                                            <h2>Get Started with<br>Windows Server 2019</h2>
+                                            <p>Start here for Windows Server 2019</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            </a>
+                        </li>
                         <li class="fullSpan">
+<li>
+                            <a href="http://aka.ms/upgradecenter">
+                            <div class="cardSize">
+                                <div class="cardPadding">
+                                    <div class="card">
+                                        <div class="cardImageOuter">
+                                            <div class="cardImage">
+                                                <img src="media/i-upgrade.svg" alt="" />
+                                            </div>
+                                        </div>
+                                        <div class="cardText">
+                                            <h2>Upgrade to Windows Server 2019</h2>
+                                            <p>Check out the Windows Server Upgrade Center for step-by-step guidance on upgrading Windows Server</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            </a>
+                        </li>
                             
                         <HR WIDTH="60%">
 
