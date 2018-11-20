@@ -181,8 +181,7 @@ description: Windows Server documentation helps IT professionals evaluate, plan,
     </li>
 </ul>
 
- 
- <h1>Guidance for Windows Server 2019 and Windows Server 2016</h1>
+<h1>Guidance for Windows Server 2019 and Windows Server 2016</h1>
     <h3>Windows Server documentation helps IT professionals evaluate, plan, deploy, secure, and manage Windows Server</h3>
     <ul class="pivots">
         <li>
