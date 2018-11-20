@@ -57,9 +57,8 @@ description: Windows Server documentation helps IT professionals evaluate, plan,
                                 </div>
                             </div>
                             </a>
-                        </li>
-                        <li class="fullSpan">
-<li>
+                </li>
+                <li>
                             <a href="http://aka.ms/upgradecenter">
                             <div class="cardSize">
                                 <div class="cardPadding">
@@ -77,73 +76,12 @@ description: Windows Server documentation helps IT professionals evaluate, plan,
                                 </div>
                             </div>
                             </a>
-                        </li>
-                            
-                        <HR WIDTH="60%">
+                </li>
 
-                        </li>
-<li>
-                            <a href="get-started-19/get-started-19.md">
-                            <div class="cardSize">
-                                <div class="cardPadding">
-                                    <div class="card">
-                                        <div class="cardImageOuter">
-                                            <div class="cardImage">
-                                                <img src="media/i-get-started.svg" alt="" />
-                                            </div>
-                                        </div>
-                                        <div class="cardText">
-                                            <h2>Get Started with<br>Windows Server 2019</h2>
-                                            <p>Start here for Windows Server 2019</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            </a>
-                        </li>
-<li>
-                            <a href="http://aka.ms/upgradecenter">
-                            <div class="cardSize">
-                                <div class="cardPadding">
-                                    <div class="card">
-                                        <div class="cardImageOuter">
-                                            <div class="cardImage">
-                                                <img src="media/i-upgrade.svg" alt="" />
-                                            </div>
-                                        </div>
-                                        <div class="cardText">
-                                            <h2>Upgrade to Windows Server 2019</h2>
-                                            <p>Check out the Windows Server Upgrade Center for step-by-step guidance on upgrading Windows Server</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            </a>
-                        </li>
-<li>
-                            <a href="get-started/Server-Basics.md">
-                            <div class="cardSize">
-                                <div class="cardPadding">
-                                    <div class="card">
-                                        <div class="cardImageOuter">
-                                            <div class="cardImage">
-                                                <img src="media/i-get-started.svg" alt="" />
-                                            </div>
-                                        </div>
-                                        <div class="cardText">
-                                            <h2>Get Started with<br>Windows Server 2016</h2>
-                                            <p>Start here for Windows Server 2016</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            </a>
-                        </li>
-                        <li class="fullSpan">
-                            
-                        <HR COLOR="purple" SIZE="6" WIDTH="60%">
+<li class="fullSpan">
+<HR WIDTH="60%">
+</li>
 
-                        </li>
  <li>
                             <a href="https://docs.microsoft.com/windows-server/manage/windows-admin-center/overview">
                             <div class="cardSize">
@@ -162,7 +100,27 @@ description: Windows Server documentation helps IT professionals evaluate, plan,
                                 </div>
                             </div>
                             </a>
-                        </li>
+</li>
+
+ <li>
+                            <a href="https://docs.microsoft.com/windows-server/hyperconverged">
+                            <div class="cardSize">
+                                <div class="cardPadding">
+                                    <div class="card">
+                                        <div class="cardImageOuter">
+                                            <div class="cardImage">
+                                                <img src="media/i-admin-center.svg" alt="" />
+                                            </div>
+                                        </div>
+                                        <div class="cardText">
+                                            <h2>Hyper-converged infrastructure</h2>
+                                            <p>Consolidate software-defined compute, storage, and networking into one cluster</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            </a>
+</li>
 <li>
                             <a href="https://docs.microsoft.com/windows-insider/at-work">
                             <div class="cardSize">
@@ -176,6 +134,36 @@ description: Windows Server documentation helps IT professionals evaluate, plan,
                                         <div class="cardText">
                                             <h2>Windows Insider Program for Server</h2>
                                             <p>Test the preview builds for Windows Server 2019</p>
+<li>
+
+<li class="fullSpan">
+<HR COLOR="purple" SIZE="6" WIDTH="60%">
+</li>
+
+<li>
+                            <a href="https://review.docs.microsoft.com/windows-server/get-started/server-basics">
+                            <div class="cardSize">
+                                <div class="cardPadding">
+                                    <div class="card">
+                                        <div class="cardImageOuter">
+                                            <div class="cardImage">
+                                                <img src="media/windows-server-2008R2.svg" alt="" />
+                                            </div>
+                                        </div>
+                                        <div class="cardText">
+                                            <h2>Get started with Windows Server 2016</h2>
+                                            <p>Start here for Windows Server 2016</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+    </ul>
 <li>
                             <a href="https://docs.microsoft.com/windows-server/get-started/modernize-windows-server-2008">
                             <div class="cardSize">
@@ -200,10 +188,9 @@ description: Windows Server documentation helps IT professionals evaluate, plan,
             </ul>
         </li>
     </ul>
-                  
-       <hr />
+
  
- <h1>Guidance for Windows Server 2016 and Windows Server 2019</h1>
+ <h1>Guidance for Windows Server 2019 and Windows Server 2016</h1>
     <h3>Windows Server documentation helps IT professionals evaluate, plan, deploy, secure, and manage Windows Server</h3>
     <ul class="pivots">
         <li>
