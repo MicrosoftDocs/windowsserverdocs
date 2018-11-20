@@ -108,7 +108,7 @@ description: Windows Server documentation helps IT professionals evaluate, plan,
                                     <div class="card">
                                         <div class="cardImageOuter">
                                             <div class="cardImage">
-                                                <img src="/media/i-virtualize.svg" alt="" />
+                                                <img src="media/i-virtualize.svg" alt="" />
                                             </div>
                                         </div>
                                         <div class="cardText">
@@ -144,7 +144,7 @@ description: Windows Server documentation helps IT professionals evaluate, plan,
                                     <div class="card">
                                         <div class="cardImageOuter">
                                             <div class="cardImage">
-                                                <img src="media/windows-server-2008R2.svg" alt="" />
+                                                <img src="media/windows-server-2012R2.svg" alt="" />
                                             </div>
                                         </div>
                                         <div class="cardText">
@@ -167,7 +167,7 @@ description: Windows Server documentation helps IT professionals evaluate, plan,
                                             </div>
                                         </div>
                                         <div class="cardText">
-                                            <h2>Windows Server 2008 R2 and Windows Server 2008 end of service</h2>
+                                            <h2>End of service for Windows Server 2008 R2 and Windows Server 2008</h2>
                                             <p>Prepare for the end of extended support on January 14, 2020</p>
                                         </div>
                                     </div>
