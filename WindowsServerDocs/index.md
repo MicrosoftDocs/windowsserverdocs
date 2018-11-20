@@ -24,25 +24,25 @@ description: Windows Server documentation helps IT professionals evaluate, plan,
         <ul id="mainPanel" class="cardsF">
             <li>
                 <a href="get-started-19/whats-new-19.md">
-                <div class="cardSize">
-                <div class="cardPadding">
-                <div class="card">
-                <div class="cardImageOuter">
-                <div class="cardImage">
-                <img src="media/i-whats-new.svg" alt="" />
-                </div>
-                </div>
-                <div class="cardText">
-                    <h2>What's new?</h2>
-                    <p>Find out what's new in Windows Server</p>
-                </div>
-                </div>
-                </div>
-                </div>
+                    <div class="cardSize">
+                        <div class="cardPadding">
+                            <div class="card">
+                                <div class="cardImageOuter">
+                                    <div class="cardImage">
+                                        <img src="media/i-whats-new.svg" alt="" />
+                                    </div>
+                                </div>
+                                <div class="cardText">
+                                    <h2>What's new?</h2>
+                                    <p>Find out what's new in Windows Server</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </a>
             </li>
             <li>
-                            <a href="get-started-19/get-started-19.md">
+                <a href="get-started-19/get-started-19.md">
                             <div class="cardSize">
                                 <div class="cardPadding">
                                     <div class="card">
@@ -108,7 +108,7 @@ description: Windows Server documentation helps IT professionals evaluate, plan,
                                     <div class="card">
                                         <div class="cardImageOuter">
                                             <div class="cardImage">
-                                                <img src="media/i-admin-center.svg" alt="" />
+                                                <img src="/media/i-virtualize.svg" alt="" />
                                             </div>
                                         </div>
                                         <div class="cardText">
@@ -167,8 +167,8 @@ description: Windows Server documentation helps IT professionals evaluate, plan,
                                             </div>
                                         </div>
                                         <div class="cardText">
-                                            <h2>Windows Server 2008 and 2008R2 end of service</h2>
-                                            <p>Prepare for the end of extended support for Windows Server 2008 and Windows Server 2008 R2 on January 14, 2020</p>
+                                            <h2>Windows Server 2008 R2 and Windows Server 2008 end of service</h2>
+                                            <p>Prepare for the end of extended support on January 14, 2020</p>
                                         </div>
                                     </div>
                                 </div>
