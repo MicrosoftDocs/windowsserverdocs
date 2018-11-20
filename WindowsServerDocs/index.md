@@ -52,7 +52,7 @@ description: Windows Server documentation helps IT professionals evaluate, plan,
                                             </div>
                                         </div>
                                         <div class="cardText">
-                                            <h2>Get Started with<br>Windows Server 2019</h2>
+                                            <h2>Get started with<br>Windows Server 2019</h2>
                                             <p>Start here for Windows Server 2019</p>
                                         </div>
                                     </div>
@@ -148,7 +148,7 @@ description: Windows Server documentation helps IT professionals evaluate, plan,
                                             </div>
                                         </div>
                                         <div class="cardText">
-                                            <h2>Get started with Windows Server 2016</h2>
+                                            <h2>Get started with<br>Windows Server 2016</h2>
                                             <p>Start here for Windows Server 2016</p>
                                         </div>
                                     </div>
@@ -167,7 +167,7 @@ description: Windows Server documentation helps IT professionals evaluate, plan,
                                             </div>
                                         </div>
                                         <div class="cardText">
-                                            <h2>End of service for Windows Server 2008 R2 and Windows Server 2008</h2>
+                                            <h2>End of service for<br> Windows Server 2008 R2 and Windows Server 2008</h2>
                                             <p>Prepare for the end of extended support on January 14, 2020</p>
                                         </div>
                                     </div>
