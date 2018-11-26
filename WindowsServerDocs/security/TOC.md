@@ -52,6 +52,7 @@
 ### [Manage](guarded-fabric-shielded-vm/guarded-fabric-manage-overview.md)
 #### [Manage the Host Guardian Service](guarded-fabric-shielded-vm/guarded-fabric-manage-hgs.md)
 #### [Branch office considerations](guarded-fabric-shielded-vm/guarded-fabric-manage-branch-office.md)
+#### [Upgrade a guarded fabric to Windows Server 2019](guarded-fabric-shielded-vm/guarded-fabric-upgrade-to-2019.md)
 ### [Troubleshoot](guarded-fabric-shielded-vm/guarded-fabric-troubleshoot-overview.md)
 #### [Guarded Fabric Diagnostic Tool](guarded-fabric-shielded-vm/guarded-fabric-troubleshoot-diagnostics.md)
 #### [HGS](guarded-fabric-shielded-vm/guarded-fabric-troubleshoot-hgs.md)
