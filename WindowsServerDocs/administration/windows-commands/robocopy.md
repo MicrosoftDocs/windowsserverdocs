@@ -43,7 +43,7 @@ robocopy <Source> <Destination> [<File>[ ...]] [<Options>]
 |/s|Copies subdirectories. Note that this option excludes empty directories.|
 |/e|Copies subdirectories. Note that this option includes empty directories. For additional information, see [Remarks](#BKMK_remarks).|
 |/lev:\<N>|Copies only the top *N* levels of the source directory tree.|
-|/z|Copies files in restartable mode.|
+|/z|Copies files in restartable mode. (only works with network devices/transfers. Not with local harddrives.)|
 |/b|Copies files in Backup mode.|
 |/zb|Uses restartable mode. If access is denied, this option uses Backup mode.|
 |/efsraw|Copies all encrypted files in EFS RAW mode.|
