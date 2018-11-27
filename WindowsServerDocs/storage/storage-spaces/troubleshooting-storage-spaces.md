@@ -189,6 +189,9 @@ For more information, see [Troubleshooting Storage Spaces Direct health and oper
 	
 ## Event 5120 with STATUS_IO_TIMEOUT c00000b5 
 
+>[!Important}
+>To reduce the chance of experiencing these symptoms while applying the update with the fix, it is recommended to use the Storage Maintenance Mode procedure below to install the [October 18, 2018, cumulative update for Windows Server 2016](https://support.microsoft.com/help/4462928) or a later version when the nodes currently have installed a Windows Server 2016 cumulative update that was released from [May 8, 2018](https://support.microsoft.com/help/4103723) to [October 9, 2018](https://support.microsoft.com/help/KB4462917).
+
 You might get event 5120 with STATUS_IO_TIMEOUT c00000b5 after you restart a node on Windows Server 2016, May 2018 update or later. When you restart the node, Event 5120 is logged in the System event log and includes one of the following error codes:
 
 ```
@@ -243,7 +246,7 @@ These improvements also inadvertently increased time-outs when SMB connections t
    ```
 
 ### Disabling live dumps
-To mitigate the effect of live dump generation on systems that have lots of memory and are under stress, you may additionally want to disable live dump generation. 
+To mitigate the effect of live dump generation on systems that have lots of memory and are under stress, you may additionally want to disable live dump generation. Three options are provided below.
 
 >[!Caution]
 >This procedure can prevent the collection of diagnostic information that Microsoft Support may need to investigate this problem. A Support agent may have to ask you to re-enable live dump generation based on specific troubleshooting scenarios.
@@ -251,7 +254,7 @@ To mitigate the effect of live dump generation on systems that have lots of memo
 There are two methods to disable live dumps, as described below.
 
 #### Method 1 (recommended in this scenario)
-To completely disable live dumps system-wide, follow these steps:
+To completely disable all dumps, including live dumps system-wide, follow these steps:
 
 1. Create the following registry key: HKLM\System\CurrentControlSet\Control\CrashControl\ForceDumpsDisabled
 2. Under the new **ForceDumpsDisabled** key, create a REG_DWORD property as GuardedHost, and then set its value to 0x10000000.
@@ -263,6 +266,17 @@ To completely disable live dumps system-wide, follow these steps:
 After this registry key is set, live dump creation will fail and generate a "STATUS_NOT_SUPPORTED" error.
 
 #### Method 2
+By default, Windows Error Reporting will allow only one LiveDump per report type per 7 days and only 1 LiveDump per machine per 5 days. You can change that by setting the following registry keys to only allow one LiveDump on the machine forever.
+```
+reg add "HKLM\Software\Microsoft\Windows\Windows Error Reporting\FullLiveKernelReports" /v SystemThrottleThreshold /t REG_DWORD /d 0xFFFFFFFF /f
+```
+```
+reg add "HKLM\Software\Microsoft\Windows\Windows Error Reporting\FullLiveKernelReports" /v ComponentThrottleThreshold /t REG_DWORD /d 0xFFFFFFFF /f
+```
+
+*Note* You have to restart the computer for the change to take effect.
+
+### Method 3
 To disable cluster generation of live dumps (such as when an Event 5120 is logged), run the following cmdlet:
 
 ```powershell
