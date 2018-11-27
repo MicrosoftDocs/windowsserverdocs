@@ -258,7 +258,7 @@ netsh http delete urlacl url=https://+:443/
 
 ## Having an issue with an Azure-related feature?
 
-Please send us an email at wacAzureFeedback@microsoft.com with the following information:
+Please send us an email at wacFeedbackAzure@microsoft.com with the following information:
 * General issue information from the [questions listed below](#filebug). 
 * Describe your issue and the steps you took to reproduce the issue. 
 * Did you previously register your gateway to Azure using the New-AadApp.ps1 downloadable script and then upgrade to version 1807? Or did you register your gateway to Azure using the UI from gateway Settings > Azure?
