@@ -189,7 +189,8 @@ For more information, see [Troubleshooting Storage Spaces Direct health and oper
 	
 ## Event 5120 with STATUS_IO_TIMEOUT c00000b5 
 
-You might get event 5120 with STATUS_IO_TIMEOUT c00000b5 after you restart a node on Windows Server 2016, May 2018 update or later. When you restart the node, Event 5120 is logged in the System event log and includes one of the following error codes:
+You might get event 5120 with STATUS_IO_TIMEOUT c00000b5 after you restart a node on Windows Server 2016 with cumulative update that were released from [May 8, 2018 KB 4103723](https://support.microsoft.com/help/4103723) to [October 9, 2018 KB 4462917](https://support.microsoft.com/help/4462917) installed.
+When you restart the node, Event 5120 is logged in the System event log and includes one of the following error codes:
 
 ```
 Event Source: Microsoft-Windows-FailoverClustering
@@ -210,6 +211,10 @@ Description: Cluster node 'NODENAME'was removed from the active failover cluster
 A change was introduced in the May 8, 2018, cumulative update to add SMB Resilient Handles for the Storage Spaces Direct intra-cluster SMB network sessions. This was done to improve resiliency to transient network failures and improve how RoCE handles network congestion.
 
 These improvements also inadvertently increased time-outs when SMB connections try to reconnect and waits to time-out when a node is restarted. These issues can affect a system that is under stress. During unplanned downtime, IO pauses of up to 60 seconds have also been observed while the system waits for connections to time-out.
+
+To fix this issue, install the [October 18, 2018, cumulative update for Windows Server 2016](https://support.microsoft.com/help/4462928) or a later version.
+
+*Note* This update aligns the CSV time-outs with SMB connection time-outs to fix this issue. It does not implement the changes to disable live dump generation mentioned in the Workaround section.
 	
 ### Shutdown process flow:
 
