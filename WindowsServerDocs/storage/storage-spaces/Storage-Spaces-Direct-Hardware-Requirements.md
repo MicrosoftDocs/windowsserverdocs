@@ -74,6 +74,7 @@ Storage Spaces Direct works with direct-attached SATA, SAS, or NVMe drives that 
 - 512n, 512e, and 4K native drives are all supported
 - Solid-state drives must provide [power-loss protection](https://blogs.technet.microsoft.com/filecab/2016/11/18/dont-do-it-consumer-ssd/)
 - Same number and types of drives in every server – see [Drive symmetry considerations](drive-symmetry-considerations.md)
+- NVMe driver is Microsoft's in-box or updated NVMe driver.
 - Recommended: Number of capacity drives is a whole multiple of the number of cache drives
 - Recommended: Cache drives should have high write endurance: at least 3 drive-writes-per-day (DWPD) or at least 4 terabytes written (TBW) per day – see [Understanding drive writes per day (DWPD), terabytes written (TBW), and the minimum recommended for Storage Spaces Direct](https://blogs.technet.microsoft.com/filecab/2017/08/11/understanding-dwpd-tbw/)
 
