@@ -117,7 +117,7 @@ Operating system components that are available as part of the Server Core App Co
 6.  After the progress bar completes, restart the operating system.
 
  
-#### Release notes and suggestions for the optional Internet Explorer 11 package
+#### Release notes and suggestions for the Server Core App Compatibility FOD and Internet Explorer 11 optional package
  
 - After installation of the App Compatibility FOD and reboot of the server, the command console window frame color will change to a different shade of blue.
 
