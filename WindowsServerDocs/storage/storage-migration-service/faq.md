@@ -105,6 +105,11 @@ The Storage Migration Service version shipped in Windows Server 2019 doesn't sup
 
 The Storage Migration Service version shipped in Windows Server 2019 doesn't support migrating from the NTFS to REFS file systems. You can migrate from NTFS to NTFS and REFS to ReFS. This is by design, due to the many differences in functionality, metadata, and other aspects that ReFS doesn't duplicate from NTFS. ReFS is intended as an application workload file system, not a general file system. For more information, see [Resilient File System (ReFS) overview](../refs/refs-overview.md)
 
+## <a name="consolidate-servers"></a> Can I consolidate multiple servers into one server?
+
+The Storage Migration Service version shipped in Windows Server 2019 doesn't support consolidating multiple servers into one server. An example of consolidation would be migrating three separate source servers - which may have the same share names and local file paths - onto a single new server that virtualized those paths and shares to prevent any overlap or collision, then answered all three previous servers names and IP address. We may add this functionality in a future version of the Storage Migration Service.  
+
+
 ## <a name="give-feedback"></a> What are my options to give feedback, file bugs, or get support?
 
 To give feedback on the Storage Migration Service:
