@@ -19,7 +19,7 @@ ms.localizationpriority: medium
 
 > Applies to Windows Server 2019
 
-The **Server Core App Compatibility Feature on Demand** is the first feature package that can be added to Windows Server 2019 at any time.
+The **Server Core App Compatibility Feature on Demand** is an optional feature package that can be added to Windows Server 2019, or Windows Server, version 1809, at any time.
 
 For more information on Features on Demand (FOD), see [Features On
 Demand](https://docs.microsoft.com/windows-hardware/manufacture/desktop/features-on-demand-v2--capabilities).
@@ -74,6 +74,9 @@ Operating system components that are available as part of the Server Core App Co
  - If you have a volume license you can download the Server FOD ISO image file from the same portal where the OS ISO image file is obtained: [Volume Licensing Service Center](https://www.microsoft.com/Licensing/servicecenter/default.aspx).
  - The Server FOD ISO image file is available on the [Microsoft Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-windows-server-2019) or on the [Visual Studio portal](https://visualstudio.microsoft.com) for subscribers.
 
+>[!NOTE] 
+   > The same FOD optional packages ISO can be used for either Windows Server 2019 Server Core installations, or Windows Server, version 1809, installations.
+
 2. Sign in as Administrator on the Server Core computer that is connected to your local network and that you want to add the FOD to.
 
 3. Use **net use**, or some other method, to connect to the location of the FOD ISO.
@@ -118,6 +121,8 @@ Operating system components that are available as part of the Server Core App Co
 
  
 #### Release notes and suggestions for the Server Core App Compatibility FOD and Internet Explorer 11 optional package
+
+- **Important:** please read the Windows Server 2019 release notes for any issues, considerations, or guidance before proceeding with installation and use of the Server Core App Compatibility FOD and Internet Explorer 11 optional package.
  
 - After installation of the App Compatibility FOD and reboot of the server, the command console window frame color will change to a different shade of blue.
 
