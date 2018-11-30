@@ -19,7 +19,7 @@ ms.localizationpriority: medium
 
 > Applies to Windows Server 2019 and Windows Server, version 1809
 
-The **Server Core App Compatibility Feature on Demand** is an optional feature package that can be added to Windows Server 2019, or Windows Server, version 1809, at any time.
+The **Server Core App Compatibility Feature on Demand** is an optional feature package that can be added to Windows Server 2019 Server Core installations, or Windows Server, version 1809, at any time.
 
 For more information on Features on Demand (FOD), see [Features On
 Demand](https://docs.microsoft.com/windows-hardware/manufacture/desktop/features-on-demand-v2--capabilities).
