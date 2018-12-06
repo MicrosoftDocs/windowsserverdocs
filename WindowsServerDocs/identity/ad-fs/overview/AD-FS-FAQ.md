@@ -2,10 +2,10 @@
 ms.assetid: acc9101b-841c-4540-8b3c-62a53869ef7a
 title: AD FS 2016 FAQ
 description: Frequently asked questions for AD FS 2016
-author: jenfieldmsft
+author: billmath
 ms.author:  billmath
-manager: femila
-ms.date: 03/06/2018
+manager: mtillman
+ms.date: 12/06/2018
 ms.topic: article
 ms.custom: it-pro
 ms.prod: windows-server-threshold
@@ -48,6 +48,19 @@ Yes, this is supported. However, as a side effect
 
 1. You will need to manually manage updating token signing certificates because Azure AD will not be able to access the federation metadata. For more information on manually updating token signing certificate read [Renew federation certificates for Office 365 and Azure Active Directory](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnect-o365-certs)
 2. You will not be able to leverage legacy auth flows (e.g. ExO proxy auth flow)
+
+### What are load balancing requirements for AD FS and WAP servers? 
+
+AD FS is a stateless system. Hence, load balancing is fairly simple for logins. The following are key recommendations for load balancing systems. 
+
+
+- Load balancers SHOULD not be configured with IP affinity. This may put undue load on a subset of your servers in certain Exchange Online scenarios.
+- Load balancers MUST not terminate the HTTPS connections and reinitiate a new connection to the ADFS server. 
+- Load balancers SHOULD ensure that the connecting IP address should be translated as the source IP in the HTTP packet when being sent to ADFS. In the event that a load balancer cannot send the source IP in the HTTP packet, the load balancer MUST add (or append in case of existing) the IP address to the x-forwarded-for header. This is required for the correct handling of certain IP related features (Banned IP, Extranet Smart Lockout,…) and could lead to reduced security if improperly configured. 
+- Load balancers SHOULD support SNI. In the event it does not, ensure that AD FS is configured to create HTTPS bindings to handle non SNI capable clients.
+- Load balancers SHOULD use the AD FS HTTP health probe endpoint to detect if the AD FS or WAP servers are up and running and exclude them if a 200 OK Is not returned. 
+
+
 
 ## Design
 
