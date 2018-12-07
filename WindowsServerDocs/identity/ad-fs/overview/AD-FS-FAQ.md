@@ -5,7 +5,7 @@ description: Frequently asked questions for AD FS 2016
 author: billmath
 ms.author:  billmath
 manager: mtillman
-ms.date: 12/06/2018
+ms.date: 12/07/2018
 ms.topic: article
 ms.custom: it-pro
 ms.prod: windows-server-threshold
