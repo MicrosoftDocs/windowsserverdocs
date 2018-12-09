@@ -103,7 +103,7 @@ You can use the following Windows PowerShell commands to create a DNS policy tha
 >[!NOTE]
 >In the example command below, the expression –ZoneScope "SeattleZoneScope,2; ChicagoZoneScope,1; DallasZoneScope,1" configures the DNS server with an array that includes the parameter combination \<ZoneScope\>,\<weight\>.
     
-    Add-DnsServerQueryResolutionPolicy -Name "AmericaPolicy" -Action ALLOW – -ZoneScope "SeattleZoneScope,2;ChicagoZoneScope,1;DallasZoneScope,1" -ZoneName "contosogiftservices.com"
+    Add-DnsServerQueryResolutionPolicy -Name "AmericaPolicy" -Action ALLOW -ZoneScope "SeattleZoneScope,2;ChicagoZoneScope,1;DallasZoneScope,1" -ZoneName "contosogiftservices.com"
     
 
 For more information, see [Add-DnsServerQueryResolutionPolicy](https://docs.microsoft.com/powershell/module/dnsserver/add-dnsserverqueryresolutionpolicy?view=win10-ps).  
