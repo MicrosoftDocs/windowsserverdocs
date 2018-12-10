@@ -146,7 +146,7 @@ Here's what's new in Storage Replica. For details, see [What's new in Storage Re
 
 ## Failover Clustering
 
-Here's a list of what's new in Storage Spaces Direct. For details, see [What's new in Failover Clustering](../failover-clustering/whats-new-in-failover-clustering.md).
+Here's a list of what's new in Failover Clustering. For details, see [What's new in Failover Clustering](../failover-clustering/whats-new-in-failover-clustering.md).
 
 - **Cluster sets**
 - **Azure-aware clusters**
