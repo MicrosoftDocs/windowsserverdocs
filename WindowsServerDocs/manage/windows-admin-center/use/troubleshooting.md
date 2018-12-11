@@ -5,7 +5,6 @@ ms.technology: manage
 ms.topic: article
 author: jwwool
 ms.author: jeffrew
-ms.date: 10/04/2018
 ms.localizationpriority: medium
 ms.prod: windows-server-threshold
 ---

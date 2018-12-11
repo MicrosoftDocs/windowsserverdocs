@@ -116,7 +116,7 @@ To give feedback on the Storage Migration Service:
 
 - Use the Feedback Hub tool included in Windows 10, clicking "Suggest a Feature", and specifying the category of "Windows Server" and subcategory of "Storage Migration"
 - Use the [Windows Server UserVoice](https://windowsserver.uservoice.com) site
-- Email srfeed@microsoft.com
+- Email smsfeed@microsoft.com
 
 To file bugs:
 

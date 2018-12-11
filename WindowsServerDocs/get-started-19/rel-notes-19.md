@@ -56,6 +56,11 @@ The following known issues are present in Windows Server 2019.
       <li>Do not attempt to acquire FODs and or Language Packs from Windows Update on a running server installation as this content is presently unavailable.  Any attempt will result in error.</li></ul>
 * (see <a href="https://docs.microsoft.com/windows-hardware/manufacture/desktop/add-or-remove-packages-offline-using-dism">Add or Remove Packages Offline Using DISM</a>)</td>
     </tr>
+    <tr>
+      <td>Windows Server branding image incorrect during setup of Windows Server, version 1809  </td>
+      <td>During the setup experience for Windows Server, version 1809, the background image on some initial screens shows "Windows Server 2019".  As with Windows Server, versions 1709 and 1803, this should simply say "Windows Server".  There are no other impacts anywhere else in the product, and there is no impact to the Windows Server 2019 product.  The issue is limited to this one image during setup of Windows Server, version 1809, available only to volume license customers accessing the Volume License Service Center.  
+      </td>
+    </tr>
   </tbody>
 </table>
 
