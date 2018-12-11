@@ -36,9 +36,6 @@ If you encounter an issue not described on this page, please [let us know](http:
     New-NetFirewallRule -DisplayName "SmeInboundOpenException" -Description "Windows Admin Center inbound port exception" -LocalPort <port> -RemoteAddress Any -Protocol TCP
     ```
 
->[!IMPORTANT]
-> You may see this when upgrading a Highly Available (HA) deployment of Windows Admin Center, since Update-WindowsAdminCenterHA.ps1 leverages msiexec in quiet mode. In this case, you will need to recreate the rule on all machines in the cluster.
-
 ## General
 
 - If you have Windows Admin Center installed as a gateway and your connection list appears to be corrupted, perform the following steps:
@@ -124,6 +121,10 @@ If it is not installed, you can [download and install WMF 5.1](https://www.micro
 - When RBAC is deployed, you may get unauthorized errors that are incorrectly attributed to the RBAC configuration. [16369238]
 
 ## Server Manager solution
+
+### Server Settings
+
+- If you modify a setting, then try to navigate away without saving, the page will warn you about the unsaved changes, but continue to navigate away. You may end up in a state where the settings tab that is selected does not match the content of the page. [19905798] [19905787]
 
 ### Certificates
 
