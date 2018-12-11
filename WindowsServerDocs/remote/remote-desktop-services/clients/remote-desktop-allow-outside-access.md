@@ -11,7 +11,8 @@ ms.topic: article
 author: haley-rowland
 manager: dongill
 ms.author: elizapo
-ms.date: 08/09/2017
+ms.date: 04/04/2018
+ms.localizationpriority: medium
 ---
 # Remote Desktop - Allow access to your PC from outside your PC's network
 
@@ -23,7 +24,7 @@ When you connect to your PC by using a Remote Desktop client, you're creating a 
 
 Port forwarding simply maps the port on your router's IP address (your public IP) to the port and IP address of the PC you want to access. 
 
-Specific steps for enabling port forwarding depend on the router you're using, so you'll need to search online for your router's instructions. For a general discussion of the steps, check out [wikiHow to Set Up Port Forwarding on a Router](http://www.wikihow.com/Set-Up-Port-Forwarding-on-a-Router).
+Specific steps for enabling port forwarding depend on the router you're using, so you'll need to search online for your router's instructions. For a general discussion of the steps, check out [wikiHow to Set Up Port Forwarding on a Router](https://www.wikihow.com/Set-Up-Port-Forwarding-on-a-Router).
 
 Before you map the port you'll need the following:
 
@@ -31,7 +32,7 @@ Before you map the port you'll need the following:
 
    ![Operational network configuration](../media/rdclient-operational-network.png)
 
-- Your public IP address (the router's IP). There are many ways to find this - you can search (in Bing or Google) for "my IP" or use a website like https://www.ip-adress.eu/.
+- Your public IP address (the router's IP). There are many ways to find this - you can search (in Bing or Google) for "my IP" or view the [Wi-Fi network properties](https://binged.it/2Gwob34) (for Windows 10).
 - Port number being mapped. In most cases this is 3389 - that's the default port used by Remote Desktop connections.
 - Admin access to your router.  
 
@@ -42,7 +43,10 @@ After you map the port, you'll be able to connect to your host PC from outside t
 
 The router's IP address can change - your internet service provider (ISP) can assign you a new IP at any time. To avoid running into this issue, consider using Dynamic DNS - this lets you connect to the PC using an easy to remember domain name, instead of the IP address. Your router automatically updates the DDNS service with your new IP address, should it change.
 
+With most routers you can define which source IP or source network can use port mapping. So, if you know you're only going to connect from work, you can add the IP address for your work network - that lets you avoid opening the port to the entire public internet. If the host you're using to connect uses dynamic IP address, set the source restriction to allow access from the whole range of that particular ISP.
+
 You might also consider setting up a [static IP address](/windows-hardware/customize/mobile/mcsf/enable-static-ip) on your PC so the internal IP address doesn't change. If you do that, then the router's port forwarding will always point to the correct IP address.
+
 
 ## Use a VPN
 

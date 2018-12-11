@@ -18,9 +18,11 @@ ms.date: 10/16/2017
 
 # ver
 
-> Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 Displays the operating system version number.
+
+This command is supported in the Windows Command prompt (Cmd.exe), but not in PowerShell.
 
 For examples of how to use this command, see [Examples](#BKMK_examples).
 
@@ -38,9 +40,18 @@ ver
 
 ## <a name="BKMK_examples"></a>Examples
 
-To obtain the version number of the operating system, type:
+To obtain the version number of the operating system from the Command shell (cmd.exe), type:
 
-`ver`
+```
+ver
+```
+
+The ver command does not work in PowerShell. To obtain the OS version from PowerShell, type:
+
+```powershell
+$PSVersionTable.BuildVersion
+````
+
 
 #### Additional references
 

@@ -17,7 +17,7 @@ ms.date: 10/16/2017
 
 # ksetup:delkdc
 
-> Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 Deletes instances of Key Distribution Center (KDC) names for the Kerberos realm. For examples of how this command can be used, see [Examples](#BKMK_Examples).
 

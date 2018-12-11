@@ -6,12 +6,12 @@ ms.prod: windows-server-threshold
 ms.technology: networking
 ms.topic: article
 ms.assetid: 2555f238-926e-4b20-9bfb-9774831062da
-author: jamesmci
-ms.author: jamesmci
+author: shortpatti
+ms.author: pashort
 ---
 # Wireless Access Deployment Process
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 The process that you use to deploy wireless access occurs in these stages:
 
@@ -44,7 +44,7 @@ To configure domain\-member computers using the settings in the wireless network
 
 You can also force Group Policy to refresh while logged on to a computer by running the command **gpupdate** at the command prompt.
 
-## Stage 4 – NPS server configuration
+## Stage 4 – NPS configuration
 
 Use a configuration wizard in NPS to add wireless access points as RADIUS clients, and to create the network policies that NPS uses when processing connection requests.
 

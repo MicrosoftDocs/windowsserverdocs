@@ -12,7 +12,7 @@ ms.date: 10/17/2017
 
 >Applies To: Windows Server (Semi-Annual Channel) and Windows Server 2016
 
-Because Server Core doesn't have a UI, you need to use Windows PowerShell cmdlets, command line tools, or remote tools to perform basic administration tasks. The following sections outline the PowerShell cmdlets and commands used for basic tasks. You can also use [Microsoft Project Honolulu](../../manage/honolulu/honolulu.md), a unified management portal currently in public preview, to administer your installation. 
+Because Server Core doesn't have a UI, you need to use Windows PowerShell cmdlets, command line tools, or remote tools to perform basic administration tasks. The following sections outline the PowerShell cmdlets and commands used for basic tasks. You can also use [Windows Admin Center](../../manage/windows-admin-center/overview.md), a unified management portal currently in public preview, to administer your installation. 
 
 ## Administrative tasks using PowerShell cmdlets
 Use the following information to perform basic administrative tasks with Windows PowerShell cmdlets.
@@ -31,7 +31,7 @@ To set a static IP address, do the following:
 3. Run the following cmdlet to set the static IP address:
 
    ```powershell
-   New-NetIPaddress -InterfaceIndex 12 -IPAddress -192.0.2.2 -PrefixLength 24 -DefaultGateway -192.0.2.1
+   New-NetIPaddress -InterfaceIndex 12 -IPAddress 192.0.2.2 -PrefixLength 24 -DefaultGateway 192.0.2.1
    ```
 
    where:
@@ -110,7 +110,7 @@ Use the following reference information to perform administrative tasks from the
 |Remove a computer from a domain|**netdom remove \<computername\>**| 
 |Add a user to the local Administrators group|**net localgroup Administrators /add \<domain\\username\>** |
 |Remove a user from the local Administrators group|**net localgroup Administrators /delete \<domain\\username\>** |
-|Add a user to the local computer|**net user \<domain\username\> /add** * |
+|Add a user to the local computer|**net user \<domain\username\> * /add** |
 |Add a group to the local computer|**net localgroup \<group name\> /add**|
 |Change the name of a domain-joined computer|**netdom renamecomputer %computername% /NewName:\<new computer name\> /userd:\<domain\\username\> /passwordd:** * |
 |Confirm the new computer name|**set**| 

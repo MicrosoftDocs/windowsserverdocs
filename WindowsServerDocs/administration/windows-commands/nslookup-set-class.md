@@ -17,7 +17,7 @@ ms.date: 10/16/2017
 
 # nslookup set class
 
-> Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 Changes the query class. The class specifies the protocol group of the information.
 

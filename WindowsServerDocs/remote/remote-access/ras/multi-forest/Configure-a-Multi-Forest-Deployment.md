@@ -11,8 +11,8 @@ ms.technology:
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 3c8feff2-cae1-4376-9dfa-21ad3e4d5d99
-ms.author: jamesmci
-author: jamesmci
+ms.author: pashort
+author: shortpatti
 ---
 # Configure a Multi-Forest Deployment
 
@@ -103,7 +103,7 @@ The PowerShell script, PKISync.ps1, is required for this procedure. See [AD CS: 
         certutil -dspublish -f <root-ca-cert-filename.cer> RootCA  
         ```  
   
-    2.  Grant Resource Forest certificate templates Read/Write permissions to the <Account Forest>\\<Administrator account>.  
+    2.  Grant Resource Forest certificate templates Read/Write permissions to the \<Account Forest\>\\<Administrator account\>.  
   
     3.  Extract all resource forest enterprise CA certificates by running the following command from an elevated command prompt:  
   

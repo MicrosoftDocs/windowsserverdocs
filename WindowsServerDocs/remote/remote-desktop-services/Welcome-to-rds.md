@@ -13,6 +13,7 @@ ms.topic: article
 ms.assetid: 52b9e09f-39e0-41a9-9d3b-4d5f4eacf3e0
 author: christianmontoya
 manager: scottman
+ms.localizationpriority: medium
 ---
 # Welcome to Remote Desktop Services 
 
@@ -43,5 +44,3 @@ Here are some next steps to help you get a better understanding of RDS and even 
 -	[Plan and design](rds-plan-and-design.md) an RDS environment to accommodate various requirements, such as high availability and multi-factor authentication.
 -	Review the [Remote Desktop Services architecture models](desktop-hosting-logical-architecture.md) that work best for your desired environment.
 -	Start to [deploy your RDS environment with ARM and Azure Marketplace](rds-in-azure.md).
-
-Not finding content you need? Windows 10 users, tell us what you want on [Feedback Hub](feedback-hub://?referrer=techDocsUcPage&tabid=2&contextid=898&newFeedback=true&topic=Welcome-to-rds.md). 

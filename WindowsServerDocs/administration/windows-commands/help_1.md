@@ -1,5 +1,5 @@
 ---
-title: help_1
+title: help
 description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
@@ -14,7 +14,7 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
 ---
-# help_1
+# help
 
 >Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
@@ -34,7 +34,7 @@ help [<command>]
 |-------|--------|  
 |<command>|Specifies the command for which to display detailed help information.|  
   
-## remarks  
+## Remarks  
   
 -   if no command is specified, **help** will display all possible commands.  
   

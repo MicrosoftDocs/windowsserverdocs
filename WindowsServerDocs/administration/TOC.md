@@ -1,15 +1,11 @@
-# [Manage Windows Server](manage-windows-server.md)
+# [Management](manage-windows-server.md)
+## [Use Windows Admin Center to manage your environment (New!)](../manage/windows-admin-center/overview.md)
 ## Manage Windows Server systems and environments
-### [Manage on-premises systems with Microsoft Project Honolulu](../manage/honolulu/honolulu.md)
-#### [Deploy Project Honolulu Gateway](../manage/honolulu/deployment-guide.md)
-#### [Manage Windows Server with Project Honolulu](../manage/honolulu/honolulu-manage.md) 
-##### [Manage Hyper-Converged Infrastructure with Project Honolulu](../manage/honolulu/honolulu-manage-hci.md)
-##### [Configure Windows Server standalone Hyper-V Server for management by Project Honolulu](../manage/honolulu/honolulu-standalone-hyper-v.md) 
-##### [Protect your Honolulu-managed Hyper-V Virtual Machines with Azure Site Recovery](../manage/honolulu/honolulu-and-asr.md) 
-#### [Troubleshoot Project Honolulu](../manage/honolulu/honolulu-troubleshoot.md) 
-##### [Project Honolulu known issues](../manage/honolulu/honolulu-known-issues.md)
-#### [Project Honolulu FAQ](../manage/honolulu/honolulu-faq.md)
+### [Manage Windows Server Hybrid Cloud Print](hybrid-cloud-print/hybrid-cloud-print-overview.md)
+#### [Deploy Windows Server Hybrid Cloud Print with Pre-Authentication](hybrid-cloud-print/hybrid-cloud-print-deploy.md)
+#### [Deploy Windows Server Hybrid Cloud Print with Passthrough Auth](hybrid-cloud-print/hybrid-cloud-print-deploy-passthrough.md)
 ### [What is the Server Core installation option?](server-core/what-is-server-core.md)
+#### [What's included in the Server Core installation option?](server-core/server-core-roles-and-services.md)
 #### [Basic administration tasks in Server Core](server-core/server-core-administer.md)
 #### [Manage Server Core](server-core/server-core-manage.md)
 #### [Configure memory dump files](server-core/server-core-memory-dump.md)
@@ -27,6 +23,10 @@
 #### [Filter, sort, and query Data in Server Manager Tiles](server-manager/filter-sort-and-query-data-in-server-manager-tiles.md)
 #### [Keyboard Shortcuts for Server Manager](server-manager/keyboard-shortcuts-for-server-manager.md)
 ### [Manage Server Core and remote systems Remote Server Administration Tools](../remote/remote-server-administration-tools.md)
+### [Manage Windows with OpenSSH](OpenSSH/OpenSSH_Overview.md)
+#### [Getting started with OpenSSH](OpenSSH/OpenSSH_Install_FirstUse.md)
+#### [Configuring Windows for OpenSSH](OpenSSH/OpenSSH_Server_Configuration.md)
+#### [Managing OpenSSH Keys](OpenSSH/OpenSSH_KeyManagement.md)
 ### [Windows Server Update Services (WSUS)](windows-server-update-services/get-started/windows-server-update-services-wsus.md)
 #### [Deploy Windows Server Update Services](windows-server-update-services/deploy/deploy-windows-server-update-services.md)
 ##### [Plan your WSUS deployment](windows-server-update-services/plan/plan-your-wsus-deployment.md)
@@ -48,6 +48,13 @@
 #### [Migrating the WSUS database from Windows Internal Database (WID) to SQL](windows-server-update-services/manage/wid-to-sql-migration.md)
 
 ## Collect information about your environment and systems
+### [System Insights](..\manage\system-insights\overview.md)
+#### [Understanding capabilities](..\manage\system-insights\understanding-capabilities.md)
+#### [Managing capabilities](..\manage\system-insights\managing-capabilities.md)
+#### [Adding and developing capabilities](..\manage\system-insights\adding-and-developing-capabilities.md)
+##### [Adding, removing, and updating capabilities](..\manage\system-insights\add-remove-update-capabilities.md)
+##### [Choosing capability data sources](..\manage\system-insights\data-sources.md)
+#### [FAQ](..\manage\system-insights\faq.md)
 ### [Collect events with Setup and Boot Event Collection](Get-started-with-Setup-and-Boot-Event-Collection.md)
 ### [Collect information about software Software Inventory Logging (SIL)](software-inventory-logging/get-started-with-software-inventory-logging.md)
 #### [Manage Software Inventory Logging](software-inventory-logging/manage-software-inventory-logging.md)
@@ -60,15 +67,17 @@
 ### [Microsoft Server Performance Advisor](server-performance-advisor/microsoft-server-performance-advisor.md)
 #### [Server Performance Advisor User's Guide](server-performance-advisor/server-performance-advisor-users-guide.md)
 #### [Server Performance Advisor Pack Development Guide](server-performance-advisor/server-performance-advisor-pack-development-guide.md)
-#### [Server Performance Advisor Pack for Tiered Storage Spaces](server-performance-advisor/server-performance-advisor-pack-for-tiered-storage-spaces.md)
 
 ## Automate Windows Server management
 ### [Windows PowerShell scripting](/powershell/scripting/powershell-scripting?view=powershell-5.1)
 ### [Windows Commands](windows-commands/windows-commands.md)
+
+
+<!--
 #### [A-Z list](windows-commands/a-z-list.md)
 #### [Command-Line Syntax Key](windows-commands/command-line-syntax-key.md)
 #### [Commands by Server Role](windows-commands/commands-by-server-role.md)
 ##### [Print Command Reference](windows-commands/print-command-reference.md)
 ##### [Services for Network File System Command Reference](windows-commands/services-for-network-file-system-command-reference.md)
 ##### [Remote Desktop Services (Terminal Services) Command Reference](windows-commands/remote-desktop-services-terminal-services-command-reference.md)
-##### [Windows Server Backup Command Reference](windows-commands/windows-server-backup-command-reference.md)
+##### [Windows Server Backup Command Reference](windows-commands/windows-server-backup-command-reference.md) -->

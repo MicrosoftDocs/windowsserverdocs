@@ -7,11 +7,11 @@ ms.topic: article
 ms.date: 
 ms.assetid: d9ad2929-0db8-4483-8a74-fd89ea451d8e
 manager: brianlic
-ms.author: jamesmci
-author: jamesmci
+ms.author: pashort
+author: shortpatti
 ---
 # Hyper-V Virtual Switch
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 Hyper-V Virtual Switch documentation is now located in the **Virtualization** section of this library, under **Hyper-V Virtual Switch**. Go to  [Hyper-V Virtual Switch](https://docs.microsoft.com/windows-server/virtualization/hyper-v-virtual-switch/hyper-v-virtual-switch).

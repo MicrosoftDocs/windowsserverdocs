@@ -53,7 +53,7 @@ logman update api <[-n] <name>> [options]
 |-[-]ano|Log (-ano) API names only, or do not log only (-ano) API names.|  
 |-[-]recursive|Log (-recursive) or do not log (-recursive) APIs recursively beyond the first layer.|  
 |-exe <value>|Specifies the full path to an executable for API Tracing.|  
-## remarks  
+## Remarks  
 Where [-] is listed, an extra - negates the option.  
 ## <a name="BKMK_examples"></a>Examples  
 The following command updates the existing API trace counter called trace_notepad for the executable file c:\windows\notepad.exe by excluding the API call TlsGetValue produced by the module kernel32.dll.  

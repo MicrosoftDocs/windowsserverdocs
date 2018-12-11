@@ -17,7 +17,7 @@ ms.date: 10/16/2017
 
 # uniqueid
 
-> Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 Displays or sets the GUID partition table (GPT) identifier or master boot record (MBR) signature for the disk with focus.
 

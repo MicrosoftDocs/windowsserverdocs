@@ -35,7 +35,7 @@ bootcfg /raw [/s <computer> [/u <Domain>\<User> /p <Password>]] <OSLoadOptionsSt
 |/id <OSEntryLineNum>|Specifies the operating system entry line number in the [operating systems] section of the Boot.ini file to update. The first line after the [operating systems] section header is 1.|
 |/a|Specifies that the operating system options being added should be appended to any existing operating system options.|
 |/?|Displays help at the command prompt.|
-##### remarks
+##### Remarks
 -   **bootcfg raw** is used to add text to the end of an operating system entry, overwriting any existing operating system entry options. This text should contain valid OS Load Options such as **/debug**, **/fastdetect**, **/nodebug**, **/baudrate**, **/crashdebug**, and **/sos**. For example, the following command adds "**/debug /fastdetect**" to the end of the first operating system entry, replacing any previous operating system entry options:
     ```
     bootcfg /raw "/debug /fastdetect" /id 1

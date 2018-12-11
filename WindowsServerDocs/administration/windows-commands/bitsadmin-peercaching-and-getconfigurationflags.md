@@ -17,7 +17,7 @@ ms.date: 10/16/2017
 
 # bitsadmin peercaching and getconfigurationflags
 
-> Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 Gets the configuration flags that determine if the computer serves content to peers and can download content from peers.
 

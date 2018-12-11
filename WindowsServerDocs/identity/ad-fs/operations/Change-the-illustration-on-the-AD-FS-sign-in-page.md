@@ -18,7 +18,7 @@ ms.technology: identity-adfs
 ## Change the Illustration  
 
 
-To change the illustration, the graphic on the left, which is displayed on the sign\-in page, use the following Windows PowerShell PowerShell cmdlet and syntax.  
+To change the illustration, the graphic on the left, which is displayed on the sign\-in page, use the following Windows PowerShell cmdlet and syntax.  
 
 ![change illustration](media/AD-FS-user-sign-in-customization/ADFS_Blue_Custom2.png)
   

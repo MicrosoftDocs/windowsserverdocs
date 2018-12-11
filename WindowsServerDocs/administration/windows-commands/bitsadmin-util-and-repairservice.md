@@ -1,6 +1,6 @@
 ---
 title: bitsadmin util and repairservice
-description: "Windows Commands topic for **bitsadmin util and repairservice** - Commmand used to fix known issues with various versions of BITS service."
+description: "Windows Commands topic for **bitsadmin util and repairservice** - Command used to fix known issues with various versions of BITS service."
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -17,9 +17,9 @@ ms.date: 10/16/2017
 
 # bitsadmin util and repairservice
 
-> Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-Commmand used to fix known issues with various versions of BITS service.
+
+Command used to fix known issues with various versions of BITS service.
 
 ## Syntax
 

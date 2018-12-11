@@ -17,7 +17,7 @@ ms.date: 10/16/2017
 
 # netsh
 
-> Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 **Netsh** is a command-line scripting utility that allows you to, either locally or remotely, display or modify the network configuration of a currently running computer.
 

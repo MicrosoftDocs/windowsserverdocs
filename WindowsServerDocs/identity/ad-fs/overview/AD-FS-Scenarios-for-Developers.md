@@ -128,7 +128,7 @@ AD FS responds by returning an authorization code as the "code" parameter in the
 2.  The native client then sends the code, along with the following parameters, to the AD FS token endpoint:  
   
 **Token Request:**  
-POST https://fs.contoso.com/adfs/oautincludes   
+POST https://fs.contoso.com/adfs/oauth2/token  
   
 Parameter|Value  
 ---------|---------  
@@ -148,7 +148,8 @@ Subsequent client requests within 1 hour (by default) the access_token will stil
   
 After the access token expires, ADAL will automatically send a refresh token based request to the AD FS token endpoint (skipping the authorization request automatically).  
 **Refresh token request:**  
-POST https://fs.contoso.com/adfs/oautincludes   
+POST https://fs.contoso.com/adfs/oauth2/token
+   
 
 Parameter|Value|
 ---------|---------
@@ -192,7 +193,7 @@ AD FS responds by returning an authorization code as the "code" parameter in the
   
 3.  At this point the web app, having received the code, initiates a request to the AD FS token endpoint, sending the following  
 **Token request:**  
-POST https://fs.contoso.com/adfs/oautincludes  
+POST https://fs.contoso.com/adfs/oauth2/token  
   
 Parameter|Value  
 ---------|---------  
@@ -209,7 +210,7 @@ claims
 4.  The web application then either consumes the access_token part of the above response (in the case in which the web app itself hosts the resource), or otherwise sends it as the Authorization header in the HTTP request to the web API.  
   
 #### Single sign on behavior  
-While the access token will still be valid for 1 hour (by default) in the client's cache, you may think that the second request will work as in the native client scenario above - that a new request will not trigger any traffic to AD FS as the access token will automatically be fetched from the cache by ADAL.  However, it is possible that the web app can sends distinct authorization and token requests, the former via distinct URL link, as in our sample.  
+While the access token will still be valid for 1 hour (by default) in the client's cache, you may think that the second request will work as in the native client scenario above - that a new request will not trigger any traffic to AD FS as the access token will automatically be fetched from the cache by ADAL.  However, it is possible that the web app can send distinct authorization and token requests, the former via distinct URL link, as in our sample.  
   
 In this case, it is the AD FS browser SSO cookie that enables AD FS to issue a new authorization code without prompting the user for credentials. The web app then calls to AD FS to exchange the new authorization code for a new access token.  The user is not prompted for credentials.  
   
@@ -218,7 +219,8 @@ Otherwise, if the web app is smart enough to know if the user is already authent
 * a request token based request can be sent to the AD FS token endpoint, as described below  
   
 **Refresh token request:**  
-POST https://fs.contoso.com/adfs/oautincludes   
+POST https://fs.contoso.com/adfs/oauth2/token
+   
 Parameter|Value  
 ---------|---------  
 grant_type|"refresh_token"  
@@ -260,7 +262,7 @@ AD FS responds with an HTTP 200 and form containing the below as hidden elements
 3.  At this point the web app, having received the code, initiates a request to the AD FS token endpoint, sending the following  
   
 **Token request:**  
-POST https://fs.contoso.com/adfs/oautincludes  
+POST https://fs.contoso.com/adfs/oauth2/token
   
   
   

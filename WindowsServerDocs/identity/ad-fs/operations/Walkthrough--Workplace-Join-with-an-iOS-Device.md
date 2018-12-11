@@ -4,8 +4,8 @@ title: Walkthrough - Workplace Join with an iOS Device
 description:
 author: billmath
 ms.author: billmath
-manager: femila
-ms.date: 05/31/2017
+manager: mtillman
+ms.date: 10/18/2018
 ms.topic: article
 ms.prod: windows-server-threshold
 
@@ -16,7 +16,11 @@ ms.technology: identity-adfs
 
 >Applies To: Windows Server 2012 R2
 
+> [!IMPORTANT] 
+> This method is relevant for only fully on-prem customers. Hybrid or cloud-only customers must not use this method to register their iOS devices. And this method is not compatible when the on-prem customers decide to move to cloud. The device must be unregistered and registered with the cloud. 
+
 This topic demonstrates Workplace Join on an iOS device. You must complete the steps in the [Set up the lab environment for AD FS in Windows Server 2012 R2](../../ad-fs/deployment/Set-up-the-lab-environment-for-AD-FS-in-Windows-Server-2012-R2.md) section before you can try out this walkthrough. You can use the device to access the same company web application that you accessed in [Walkthrough: Workplace Join with a Windows Device](Walkthrough--Workplace-Join-with-a-Windows-Device.md).
+
 
 ## Join an iOS device with Workplace Join
 
@@ -37,7 +41,7 @@ In this demonstration, you join the device to the workplace.
     -   **When On-premises DRS is the configured DRS**: 
         Open Apple Safari and navigate to the Device Registration Service (DRS) Over-the-Air Profile endpoint for iOS devices, `https://adf1s.contoso.com/enrollmentserver/otaprofile`
 
-    There are many ways to communicate this URL to your users. One recommended way is to publish this URL in a custom application access denied message in AD FS. This is covered in the upcoming section: [Create an application access policy and custom access denied message](https://msdn.microsoft.com/library/azure/dn788908.aspx)
+    There are many ways to communicate this URL to your users. One recommended way is to publish this URL in a custom application access denied message in AD FS. This is covered in the upcoming section: [Create an application access policy and custom access denied message](https://docs.microsoft.com/azure/active-directory/active-directory-device-registration-on-premises-setup#create-an-application-access-policy-and-custom-access-denied-message)
 
 2.  Log on to the webpage by using a company domain account:  **roberth@contoso.com** and password: **P@ssword**.
 

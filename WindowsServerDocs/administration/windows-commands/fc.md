@@ -17,7 +17,7 @@ ms.date: 10/16/2017
 
 # fc
 
-> Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 Compares two files or sets of files and displays the differences between them.
 
@@ -50,6 +50,8 @@ fc /b [<Drive1:>][<Path1>]<FileName1> [<Drive2:>][<Path2>]<FileName2>
 |/?|Displays help at the command prompt.|
 
 ## Remarks
+
+-   This command is implemeted by c:\WINDOWS\fc.exe. You can use this command within PowerShell, but be sure to spell out the full executable (fc.exe) since 'fc' is an alias for Format-Custom.
 
 -   Reporting differences between files for an ASCII comparison
 

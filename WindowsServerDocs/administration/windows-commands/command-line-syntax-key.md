@@ -17,7 +17,7 @@ ms.date: 10/16/2017
 
 # Command-Line Syntax Key
 
-> Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 The following table describes the notation used to indicate command-line syntax.
 
@@ -27,5 +27,5 @@ The following table describes the notation used to indicate command-line syntax.
 |\<Text inside angle brackets>|Placeholder for which you must supply a value|
 |[Text inside square brackets]|Optional items|
 |{Text inside braces}|Set of required items; choose one|
-|Vertical bar (|)|Separator for mutually exclusive items; choose one|
+|Vertical bar (\|)|Separator for mutually exclusive items; choose one|
 |Ellipsis (…)|Items that can be repeated|

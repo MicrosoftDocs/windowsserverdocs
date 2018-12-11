@@ -6,13 +6,13 @@ ms.prod: windows-server-threshold
 ms.technology: networking
 ms.topic: article
 ms.assetid: ca77d64a-065b-4bf2-8252-3e75f71b7734
-ms.author: jamesmci 
-author: jamesmci
+ms.author: pashort 
+author: shortpatti
 ---
 
 # Plan NPS as a RADIUS proxy
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 When you deploy Network Policy Server (NPS) as a Remote Authentication Dial-In User Service \(RADIUS\) proxy, NPS receives connection requests from RADIUS clients, such as network access servers or other RADIUS proxies, and then forwards these connection requests to servers running NPS or other RADIUS servers. You can use these planning guidelines to simplify your RADIUS deployment.
 
@@ -20,7 +20,7 @@ These planning guidelines do not include circumstances in which you want to depl
 
 Before you deploy NPS as a RADIUS proxy on your network, use the following guidelines to plan your deployment.
 
-- Plan NPS server configuration.
+- Plan NPS configuration.
 
 - Plan RADIUS clients.
 
@@ -32,9 +32,9 @@ Before you deploy NPS as a RADIUS proxy on your network, use the following guide
 
 - Plan NPS accounting.
 
-## Plan NPS server configuration
+## Plan NPS configuration
 
-When you use NPS as a RADIUS proxy, NPS forwards connection requests to an NPS server or other RADIUS servers for processing. Because of this, the domain membership of the NPS proxy is irrelevant. The proxy does not need to be registered in Active Directory Domain Services \(AD DS\) because it does not need access to the dial-in properties of user accounts. In addition, you do not need to configure network policies on an NPS proxy because the proxy does not perform authorization for connection requests. The NPS proxy can be a domain member or it can be a stand-alone server with no domain membership.
+When you use NPS as a RADIUS proxy, NPS forwards connection requests to an NPS or other RADIUS servers for processing. Because of this, the domain membership of the NPS proxy is irrelevant. The proxy does not need to be registered in Active Directory Domain Services \(AD DS\) because it does not need access to the dial-in properties of user accounts. In addition, you do not need to configure network policies on an NPS proxy because the proxy does not perform authorization for connection requests. The NPS proxy can be a domain member or it can be a stand-alone server with no domain membership.
 
 NPS must be configured to communicate with RADIUS clients, also called network access servers, by using the RADIUS protocol. In addition, you can configure the types of events that NPS records in the event log and you can enter a description for the server.
 
@@ -132,7 +132,7 @@ During the planning for connection request policies, you can use the following s
 
 - Plan additional conditions and settings that are required for each policy, combining this information with the remote RADIUS server group and the attribute manipulation rules planned for the policy.
 
-- Design the plan to distribute common connection request policies to all NPS proxies. Create policies common to multiple NPS proxies on one NPS server, and then use the Netsh commands for NPS to import the connection request policies and server configuration on all other proxies.
+- Design the plan to distribute common connection request policies to all NPS proxies. Create policies common to multiple NPS proxies on one NPS, and then use the Netsh commands for NPS to import the connection request policies and server configuration on all other proxies.
 
 ## Plan NPS accounting
 

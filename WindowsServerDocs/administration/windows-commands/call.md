@@ -12,12 +12,12 @@ ms.assetid: d34a41dc-e6c7-4467-bf6a-15cec704833e
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
-ms.date: 10/16/2017
+ms.date: 06/05/2018
 ---
 
 # call
 
-> Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 Calls one batch program from another without stopping the parent batch program. The **call** command accepts labels as the target of the call.
 
@@ -46,7 +46,7 @@ call [Drive:][Path]<FileName> [<BatchParameters>] [:<Label> [<Arguments>]]
 
 The batch script argument references (**%0**, **%1**, ...) are listed in the following tables.
 
-**%\*** in a batch script refers to all the arguments (for example, **%1**, **%2**, **%3**...)
+**%*** in a batch script refers to all the arguments (for example, **%1**, **%2**, **%3**...)
 
 You can use the following optional syntaxes as substitutions for batch parameters (**%n**):
 

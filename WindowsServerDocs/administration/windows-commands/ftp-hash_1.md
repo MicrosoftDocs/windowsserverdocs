@@ -25,7 +25,7 @@ hash
 ```  
 ### Parameters  
 none  
-## remarks  
+## Remarks  
 -   The size of a data block is 2048 bytes.  
 -   By default, **hash** is off.  
 ## <a name="BKMK_Examples"></a>Examples  

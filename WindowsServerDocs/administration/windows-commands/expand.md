@@ -37,9 +37,8 @@ expand <source>.cab /f:<files> <destination>
 |/d|Displays a list of files in the source location. Does not expand or extract the files.|  
 |/f:|Specifies the files in a cabinet (.cab) file that you want to expand. You can use wildcards (**\*** or **?**).|  
 |/?|Displays help at the command prompt.|  
-## remarks  
+## Remarks  
 -   Using **expand** at the recovery Console  
     The **expand** command, with different parameters, is available from the recovery Console. For more information about the recovery Console, see [article 314058](https://support.microsoft.com/kb/314058) in the Microsoft Knowledge Base.  
 ## additional references  
 [Command-Line Syntax Key](command-line-syntax-key.md)  
-[Command-Line Reference_1](command-line-reference_1.md)  

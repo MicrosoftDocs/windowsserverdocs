@@ -6,13 +6,13 @@ ms.prod: windows-server-threshold
 ms.technology: networking
 ms.topic: article
 ms.assetid: 90e544bd-e826-4093-8c3b-6a6fc2dfd1d6
-ms.author: jamesmci 
-author: jamesmci
+ms.author: pashort 
+author: shortpatti
 ---
 
 # Network Policy Server Best Practices
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 You can use this topic to learn about best practices for deploying and managing Network Policy Server \(NPS\).
 
@@ -38,7 +38,7 @@ To make the most effective use of NPS logging:
 
 - Use the RADIUS Class attribute to both track usage and simplify the identification of which department or user to charge for usage. Although the automatically generated Class attribute is unique for each request, duplicate records might exist in cases where the reply to the access server is lost and the request is resent. You might need to delete duplicate requests from your logs to accurately track usage.
 
-- If your network access servers and RADIUS proxy servers periodically send fictional connection request messages to NPS to verify that the NPS server is online, use the **ping user-name** registry setting. This setting configures NPS to automatically reject these false connection requests without processing them. In addition, NPS does not record transactions involving the fictional user name in any log files, which makes the event log easier to interpret.
+- If your network access servers and RADIUS proxy servers periodically send fictional connection request messages to NPS to verify that the NPS is online, use the **ping user-name** registry setting. This setting configures NPS to automatically reject these false connection requests without processing them. In addition, NPS does not record transactions involving the fictional user name in any log files, which makes the event log easier to interpret.
 
 - Disable NAS Notification Forwarding. You can disable the forwarding of start and stop messages from network access servers (NASs) to members of a remote RADIUS server group THAT IS configured in NPS. For more information, see [Disable NAS Notification Forwarding](nps-disable-nas-notifications.md).
 
@@ -50,8 +50,8 @@ For more information, see [Configure Network Policy Server Accounting](nps-accou
 
 Following are the best practices for authentication.
 
-- Use certificate-based authentication methods such as Protected Extensible Authentication Protocol \(PEAP\) and Extensible Authentication Protocol \(EAP\) for strong authentication. Do not use password-only authentication methods because they are vulnerable to a variety of attacks and are not secure. For secure wireless authentication, using PEAP\-MS\-CHAP v2 is recommended, because the NPS server proves its identity to wireless clients by using a server certificate, while users prove their identity with their user name and password.  For more information about using NPS in your wireless deployment, see [Deploy Password-Based 802.1X Authenticated Wireless Access](https://technet.microsoft.com/windows-server-docs/networking/core-network-guide/cncg/wireless/a-deploy-8021x-wireless-access).
-- Deploy your own certification authority \(CA\) with Active Directory&reg; Certificate Services \(AD CS\) when you use strong certificate-based authentication methods, such as PEAP and EAP, that require the use of a server certificate on NPS servers. You can also use your CA to enroll computer certificates and user certificates. For more information on deploying server certificates to NPS and Remote Access servers, see [Deploy Server Certificates for 802.1X Wired and Wireless Deployments](https://technet.microsoft.com/windows-server-docs/networking/core-network-guide/cncg/server-certs/deploy-server-certificates-for-802.1x-wired-and-wireless-deployments).
+- Use certificate-based authentication methods such as Protected Extensible Authentication Protocol \(PEAP\) and Extensible Authentication Protocol \(EAP\) for strong authentication. Do not use password-only authentication methods because they are vulnerable to a variety of attacks and are not secure. For secure wireless authentication, using PEAP\-MS\-CHAP v2 is recommended, because the NPS proves its identity to wireless clients by using a server certificate, while users prove their identity with their user name and password.  For more information about using NPS in your wireless deployment, see [Deploy Password-Based 802.1X Authenticated Wireless Access](https://technet.microsoft.com/windows-server-docs/networking/core-network-guide/cncg/wireless/a-deploy-8021x-wireless-access).
+- Deploy your own certification authority \(CA\) with Active Directory&reg; Certificate Services \(AD CS\) when you use strong certificate-based authentication methods, such as PEAP and EAP, that require the use of a server certificate on NPSs. You can also use your CA to enroll computer certificates and user certificates. For more information on deploying server certificates to NPS and Remote Access servers, see [Deploy Server Certificates for 802.1X Wired and Wireless Deployments](https://technet.microsoft.com/windows-server-docs/networking/core-network-guide/cncg/server-certs/deploy-server-certificates-for-802.1x-wired-and-wireless-deployments).
 
 ## Client computer configuration
 
@@ -65,11 +65,11 @@ Following are the best practices for installing NPS.
 
 - Before installing NPS, install and test each of your network access servers using local authentication methods before you configure them as RADIUS clients in NPS.
 
-- After you install and configure NPS, save the configuration by using the Windows PowerShell command [Export-NpsConfiguration](https://technet.microsoft.com/en-us/library/jj872749.aspx). Save the NPS configuration with this command each time you reconfigure the NPS server.
+- After you install and configure NPS, save the configuration by using the Windows PowerShell command [Export-NpsConfiguration](https://technet.microsoft.com/library/jj872749.aspx). Save the NPS configuration with this command each time you reconfigure the NPS.
 
 >[!CAUTION]
 >- The exported NPS configuration file contains unencrypted shared secrets for RADIUS clients and members of remote RADIUS server groups. Because of this, make sure that you save the file to a secure location.
->- The export process does not include logging settings for Microsoft SQL Server in the exported file. If you import the exported file to another NPS server, you must manually configure SQL Server Logging on the new server.
+>- The export process does not include logging settings for Microsoft SQL Server in the exported file. If you import the exported file to another NPS, you must manually configure SQL Server Logging on the new server.
 
 ## Performance tuning NPS
 
@@ -89,17 +89,17 @@ Following are the best practices for using NPS in large organizations.
 
 - Use a user principal name to refer to users whenever possible. A user can have the same user principal name regardless of domain membership. This practice provides scalability that might be required in organizations with a large number of domains.
 
-- If you installed Network Policy Server \(NPS\) on a computer other than a domain controller and the NPS server is receiving a large number of authentication requests per second, you can improve NPS performance by increasing the number of concurrent authentications allowed between the NPS server and the domain controller. For more information, see 
+- If you installed Network Policy Server \(NPS\) on a computer other than a domain controller and the NPS is receiving a large number of authentication requests per second, you can improve NPS performance by increasing the number of concurrent authentications allowed between the NPS and the domain controller. For more information, see 
 
 ## Security issues
 
 Following are the best practices for reducing security issues.
 
-When you are administering a NPS server remotely, do not send sensitive or confidential data (for example, shared secrets or passwords) over the network in plaintext. There are two recommended methods for remote administration of NPS servers:
+When you are administering a NPS remotely, do not send sensitive or confidential data (for example, shared secrets or passwords) over the network in plaintext. There are two recommended methods for remote administration of NPSs:
 
-- Use Remote Desktop Services to access the NPS server. When you use Remote Desktop Services, data is not sent between client and server. Only the user interface of the server (for example, the operating system desktop and NPS console image) is sent to the Remote Desktop Services client, which is named Remote Desktop Connection in Windows&reg; 10. The client sends keyboard and mouse input, which is processed locally by the server that has Remote Desktop Services enabled. When Remote Desktop Services users log on, they can view only their individual client sessions, which are managed by the server and are independent of each other. In addition, Remote Desktop Connection provides 128-bit encryption between client and server.
+- Use Remote Desktop Services to access the NPS. When you use Remote Desktop Services, data is not sent between client and server. Only the user interface of the server (for example, the operating system desktop and NPS console image) is sent to the Remote Desktop Services client, which is named Remote Desktop Connection in Windows&reg; 10. The client sends keyboard and mouse input, which is processed locally by the server that has Remote Desktop Services enabled. When Remote Desktop Services users log on, they can view only their individual client sessions, which are managed by the server and are independent of each other. In addition, Remote Desktop Connection provides 128-bit encryption between client and server.
 
-- Use Internet Protocol security (IPsec) to encrypt confidential data. You can use IPsec to encrypt communication between the NPS server and the remote client computer that you are using to administer NPS. To administer the server remotely, you can install the [Remote Server Administration Tools for Windows 10](https://www.microsoft.com/download/details.aspx?id=45520) on the client computer. After installation, use the Microsoft Management Console (MMC) to add the NPS server snap-in to the console.
+- Use Internet Protocol security (IPsec) to encrypt confidential data. You can use IPsec to encrypt communication between the NPS and the remote client computer that you are using to administer NPS. To administer the server remotely, you can install the [Remote Server Administration Tools for Windows 10](https://www.microsoft.com/download/details.aspx?id=45520) on the client computer. After installation, use the Microsoft Management Console (MMC) to add the NPS snap-in to the console.
 
 >[!IMPORTANT]
 >You can install Remote Server Administration Tools for Windows 10 only on the full release of Windows 10 Professional or Windows 10 Enterprise.

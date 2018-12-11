@@ -6,13 +6,13 @@ ms.prod: windows-server-threshold
 ms.technology: networking-bc
 ms.topic: article
 ms.assetid: 31e8428f-a482-4734-be1b-213912e34825
-ms.author: jamesmci
-author: jamesmci
+ms.author: pashort
+author: shortpatti
 ---
 
 # Create Content Server Data Packages for Web and File Content (Optional)
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 You can use this procedure to prehash content on Web and file servers, and then create data packages to import on your hosted cache server. 
 

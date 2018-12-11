@@ -6,12 +6,12 @@ ms.prod: windows-server-threshold
 ms.technology: networking
 ms.topic: article
 ms.assetid: 4b66f517-b17d-408c-828f-a3793086bc1f
-ms.author: jamesmci
-author: jamesmci
+ms.author: pashort
+author: shortpatti
 ---
 # Wireless Access Deployment
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 Follow these steps to deploy wireless access:
 
@@ -21,7 +21,7 @@ Follow these steps to deploy wireless access:
 
 - [Configure Wireless Network \(IEEE 802.11\) Policies](#bkmk_policies)
 
-- [Configure NPS Servers](#bkmk_nps)
+- [Configure NPSs](#bkmk_nps)
 
 - [Join New Wireless Computers to the Domain](#bkmk_domain)
 
@@ -73,7 +73,7 @@ This procedure enumerates items commonly configured on a wireless AP. The item n
 
 - **RADIUS server IP address**. Type the IP address of the server running NPS.
 
-- **UDP port\(s\)**. By default, NPS uses UDP ports 1812 and 1645 for authentication messages and UDP ports 1813 and 1646 for accounting messages. It is recommended that you use these same UDP ports on your APs, but if you have a valid reason to use different ports, ensure that you not only configure the APs with the new port numbers but also reconfigure all of your NPS servers to use the same port numbers as the APs. If the APs and the NPS servers are not configured with the same UDP ports, NPS cannot receive or process connection requests from the APs, and all wireless connection attempts on the network will fail.
+- **UDP port\(s\)**. By default, NPS uses UDP ports 1812 and 1645 for authentication messages and UDP ports 1813 and 1646 for accounting messages. It is recommended that you use these same UDP ports on your APs, but if you have a valid reason to use different ports, ensure that you not only configure the APs with the new port numbers but also reconfigure all of your NPSs to use the same port numbers as the APs. If the APs and the NPSs are not configured with the same UDP ports, NPS cannot receive or process connection requests from the APs, and all wireless connection attempts on the network will fail.
 
 - **VSAs**. Some wireless APs require vendor\-specific attributes \(VSAs\) to provide full wireless AP functionality. VSAs are added in NPS network policy.
 
@@ -278,7 +278,7 @@ Membership in **Domain Admins**, or equivalent, is the minimum required to compl
 
 13. In **Protected EAP Properties**, confirm that **Verify the server’s identity by validating the certificate** is selected.
 
-14. In **Trusted Root Certification Authorities**, select the trusted root certification authority \(CA\) that issued the server certificate to your NPS server.
+14. In **Trusted Root Certification Authorities**, select the trusted root certification authority \(CA\) that issued the server certificate to your NPS.
 
     > [!NOTE]  
     > This setting limits the root CAs that clients trust to the selected CAs. If no trusted root CAs are selected, then clients will trust all root CAs listed in their Trusted Root Certification Authorities certificate store.  
@@ -376,8 +376,8 @@ Membership in **Domain Admins**, or equivalent, is the minimum required to compl
 
     -   To specify that your users can only connect to allowed networks by using Group Policy profiles, select **Only use Group Policy profiles for allowed networks**.
 
-## <a name="bkmk_nps"></a>Configure your NPS Servers
-Follow these steps to configure NPS servers to perform 802.1X authentication for wireless access:
+## <a name="bkmk_nps"></a>Configure your NPSs
+Follow these steps to configure NPSs to perform 802.1X authentication for wireless access:
 
 - [Register NPS in Active Directory Domain Services](#bkmk_npsreg)
 
@@ -386,7 +386,7 @@ Follow these steps to configure NPS servers to perform 802.1X authentication for
 - [Create NPS Policies for 802.1X Wireless using a Wizard](#bkmk_npspolicy)
 
 ### <a name="bkmk_npsreg"></a>Register NPS in Active Directory Domain Services
-You can use this procedure to register a server running Network Policy Server \(NPS\) in Active Directory Domain Services \(AD DS\) in the domain where the NPS server is a member. For NPS servers to be granted permission to read the dial\-in properties of user accounts during the authorization process, each NPS server must be registered in AD DS. Registering an NPS server adds the server to the **RAS and IAS Servers** security group in AD DS.
+You can use this procedure to register a server running Network Policy Server \(NPS\) in Active Directory Domain Services \(AD DS\) in the domain where the NPS is a member. For NPSs to be granted permission to read the dial\-in properties of user accounts during the authorization process, each NPS must be registered in AD DS. Registering an NPS adds the server to the **RAS and IAS Servers** security group in AD DS.
 
 >[!NOTE]
 >You can install NPS on a domain controller or on a dedicated server. Run the following Windows PowerShell command to install NPS if you have not yet done so:
@@ -395,9 +395,9 @@ You can use this procedure to register a server running Network Policy Server \(
     
 Membership in **Domain Admins**, or equivalent, is the minimum required to complete this procedure.
 
-#### To register an NPS server in its default domain
+#### To register an NPS in its default domain
 
-1. On your NPS server, in **Server Manager**, click **Tools**, and then click **Network Policy Server**. The NPS snap\-in opens.
+1. On your NPS, in **Server Manager**, click **Tools**, and then click **Network Policy Server**. The NPS snap\-in opens.
 
 2. Right\-click **NPS \(Local\)**, and then click **Register Server in Active Directory**. The **Network Policy Server** dialog box opens.
 
@@ -407,13 +407,13 @@ Membership in **Domain Admins**, or equivalent, is the minimum required to compl
 You can use this procedure to configure an AP, also known as a *network access server \(NAS\)*, as a Remote Authentication Dial\-In User Service \(RADIUS\) client by using the NPS snap\-in. 
 
 >[!IMPORTANT]
->Client computers, such as wireless portable computers and other computers running client operating systems, are not RADIUS clients. RADIUS clients are network access servers—such as wireless access points, 802.1X\-capable switches, virtual private network \(VPN\) servers, and dial\-up servers—because they use the RADIUS protocol to communicate with RADIUS servers such as NPS servers.
+>Client computers, such as wireless portable computers and other computers running client operating systems, are not RADIUS clients. RADIUS clients are network access servers—such as wireless access points, 802.1X\-capable switches, virtual private network \(VPN\) servers, and dial\-up servers—because they use the RADIUS protocol to communicate with RADIUS servers such as NPSs.
 
 Membership in **Domain Admins**, or equivalent, is the minimum required to complete this procedure.
 
 #### To add a network access server as a RADIUS client in NPS
 
-1. On your NPS server, in **Server Manager**, click **Tools**, and then click **Network Policy Server**. The NPS snap\-in opens.
+1. On your NPS, in **Server Manager**, click **Tools**, and then click **Network Policy Server**. The NPS snap\-in opens.
 
 2. In the NPS snap\-in, double\-click **RADIUS Clients and Servers**. Right\-click **RADIUS Clients**, and then click **New**.
 
@@ -433,7 +433,7 @@ Membership in **Domain Admins**, or equivalent, is the minimum required to compl
 
     -   To manually configure a RADIUS shared secret, select **Manual**, and then in **Shared secret**, type the strong password that is also entered on the NAS. Retype the shared secret in **Confirm shared secret**.  
 
-    -   To automatically generate a shared secret, select the **Generate** check box, and then click the **Generate** button. Save the generated shared secret, and then use that value to configure the NAS so that it can communicate with the NPS server.  
+    -   To automatically generate a shared secret, select the **Generate** check box, and then click the **Generate** button. Save the generated shared secret, and then use that value to configure the NAS so that it can communicate with the NPS.  
 
         >[!IMPORTANT]
         >The RADIUS shared secret that you enter for your virtual AP’s in NPS must exactly match the RADIUS shared secret that is configured on your actual wireless AP’s. If you use the NPS option to generate a RADIUS shared secret, then you must configure the matching actual wireless AP with the RADIUS shared secret that was generated by NPS.
@@ -442,7 +442,7 @@ Membership in **Domain Admins**, or equivalent, is the minimum required to compl
 
 8. In **Additional Options**, if you are using any authentication methods other than EAP and PEAP, and if your NAS supports the use of the message authenticator attribute, select **Access Request messages must contain the Message\-Authenticator attribute**.
 
-9. Click **OK**. Your NAS appears in the list of RADIUS clients configured on the NPS server.
+9. Click **OK**. Your NAS appears in the list of RADIUS clients configured on the NPS.
 
 ### <a name="bkmk_npspolicy"></a>Create NPS Policies for 802.1X Wireless Using a Wizard
 You can use this procedure to create the connection request policies and network policies required to deploy either 802.1X\-capable wireless access points as Remote Authentication Dial\-In User Service \(RADIUS\) clients to the RADIUS server running Network Policy Server \(NPS\).  
@@ -459,7 +459,7 @@ Membership in **Domain Admins**, or equivalent, is the minimum required to compl
 
 #### Create policies for 802.1X authenticated wireless by using a wizard
 
-1. Open the NPS snap\-in. If it is not already selected, click **NPS \(Local\)**. If you are running the NPS MMC snap\-in and want to create policies on a remote NPS server, select the server.
+1. Open the NPS snap\-in. If it is not already selected, click **NPS \(Local\)**. If you are running the NPS MMC snap\-in and want to create policies on a remote NPS, select the server.
 
 2. In **Getting Started**, in **Standard Configuration**, select **RADIUS server for 802.1X Wireless or Wired Connections**. The text and links below the text change to reflect your selection.
 
@@ -476,16 +476,16 @@ Membership in **Domain Admins**, or equivalent, is the minimum required to compl
     -   To remove a NAS from the list, in **RADIUS clients**, select the NAS, and then click **Remove**.
 
         >[!WARNING]
-        >Removing a RADIUS client from within the **Configure 802.1X** wizard deletes the client from the NPS server configuration. All additions, modifications, and deletions that you make within the **Configure 802.1X**  wizard to RADIUS clients are reflected in the NPS snap\-in, in the **RADIUS Clients** node under **NPS** \/ **RADIUS Clients and Servers**. For example, if you use the wizard to remove an 802.1X switch, the switch is also removed from the NPS snap\-in.
+        >Removing a RADIUS client from within the **Configure 802.1X** wizard deletes the client from the NPS configuration. All additions, modifications, and deletions that you make within the **Configure 802.1X**  wizard to RADIUS clients are reflected in the NPS snap\-in, in the **RADIUS Clients** node under **NPS** \/ **RADIUS Clients and Servers**. For example, if you use the wizard to remove an 802.1X switch, the switch is also removed from the NPS snap\-in.
 
 6. Click **Next**. On the **Configure an Authentication Method** wizard page, in **Type \(based on method of access and network configuration\)**, select **Microsoft: Protected EAP \(PEAP\)**, and then click **Configure**.
 
     >[!TIP]
     >If you receive an error message indicating that a certificate cannot be found for use with the authentication method, and you have configured Active Directory Certificate Services to automatically issue certificates to RAS and IAS servers on your network, first ensure that you have followed the steps to Register NPS in Active Directory Domain Services, then use the following steps to update Group Policy: Click **Start**, click **Windows System**, click **Run**, and in **Open**, type **gpupdate**, and then press ENTER. When the command returns results indicating that both user and computer Group Policy have updated successfully, select **Microsoft: Protected EAP \(PEAP\)** again, and then click **Configure**.
     >
-    >If after refreshing Group Policy you continue to receive the error message indicating that a certificate cannot be found for use with the authentication method, the certificate is not being displayed because it does not meet the minimum server certificate requirements as documented in the Core Network Companion Guide: [Deploy Server Certificates for 802.1X Wired and Wireless Deployments](https://technet.microsoft.com/windows-server-docs/networking/core-network-guide/cncg/server-certs/deploy-server-certificates-for-802.1x-wired-and-wireless-deployments). If this happens, you must discontinue NPS configuration, revoke the certificate issued to your NPS server\(s\), and then follow the instructions to configure a new certificate by using the server certificates deployment guide.
+    >If after refreshing Group Policy you continue to receive the error message indicating that a certificate cannot be found for use with the authentication method, the certificate is not being displayed because it does not meet the minimum server certificate requirements as documented in the Core Network Companion Guide: [Deploy Server Certificates for 802.1X Wired and Wireless Deployments](https://technet.microsoft.com/windows-server-docs/networking/core-network-guide/cncg/server-certs/deploy-server-certificates-for-802.1x-wired-and-wireless-deployments). If this happens, you must discontinue NPS configuration, revoke the certificate issued to your NPS\(s\), and then follow the instructions to configure a new certificate by using the server certificates deployment guide.
 
-7.  On the **Edit Protected EAP Properties** wizard page, in **Certificate issued**, ensure that the correct NPS server certificate is selected, and then do the following:
+7.  On the **Edit Protected EAP Properties** wizard page, in **Certificate issued**, ensure that the correct NPS certificate is selected, and then do the following:
 
     >[!NOTE]
     >Verify that the value in **Issuer** is correct for the certificate selected in **Certificate issued**. For example, the expected issuer for a certificate issued by a CA running Active Directory Certificate Services \(AD CS\) named corp\DC1, in the domain contoso.com, is **corp\-DC1\-CA**.
@@ -507,7 +507,7 @@ Membership in **Domain Admins**, or equivalent, is the minimum required to compl
 Your NPS policies are now created, and you can move on to joining wireless computers to the domain.
 
 ## <a name="bkmk_domain"></a>Join New Wireless Computers to the Domain
-The easiest method to join new wireless computers to the domain is to physically attach the computer to a segment of the wired LAN \(a segment not controlled by an 802.1X switch\) before joining the computer to the domain. This is easiest because wireless group policy settings are automatically and immediately applied and, if you have deployed your own PKI, the computer receives the CA certificate and places it in the Trusted Root Certification Authorities certificate store, allowing the wireless client to trust NPS servers with server certs issued by your CA.
+The easiest method to join new wireless computers to the domain is to physically attach the computer to a segment of the wired LAN \(a segment not controlled by an 802.1X switch\) before joining the computer to the domain. This is easiest because wireless group policy settings are automatically and immediately applied and, if you have deployed your own PKI, the computer receives the CA certificate and places it in the Trusted Root Certification Authorities certificate store, allowing the wireless client to trust NPSs with server certs issued by your CA.
 
 Likewise, after a new wireless computer is joined to the domain, the preferred method for users to log on to the domain is to perform log on by using a wired connection to the network.
 

@@ -1,18 +1,18 @@
 ---
 ms.assetid: 5a64e790-6725-4099-aa08-8067d57c3168
-title: Enabling Oauth Confidential Clients with AD FS 2016
+title: Build a server side application using OAuth confidential clients with AD FS 2016
 description:
 author: billmath
 ms.author: billmath
-manager: femila
-ms.date: 05/31/2017
+manager: mtillman
+ms.date: 02/22/2018
 ms.topic: article
 ms.prod: windows-server-threshold
 
 ms.technology: identity-adfs
 ---
 
-# Enabling Oauth Confidential Clients with AD FS 2016
+# Build a server side application using OAuth confidential clients with AD FS 2016
 
 >Applies To: Windows Server 2016
 
@@ -261,5 +261,6 @@ In this section we will test the confidential client solution.  Use the followin
   
     ![AD FS Oauth](media/Enabling-Oauth-Confidential-Clients-with-AD-FS-2016/AD_FS_Confidential_35.PNG)  
   
-
+## Next Steps
+[AD FS Development](../../ad-fs/AD-FS-Development.md)  
 

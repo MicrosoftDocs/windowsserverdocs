@@ -1,5 +1,5 @@
 ---
-title: rem_1
+title: rem
 description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
@@ -15,9 +15,9 @@ manager: dongill
 ms.date: 10/16/2017
 ---
 
-# rem_1
+# rem
 
-> Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 Provides a way to add comments to a script.
 

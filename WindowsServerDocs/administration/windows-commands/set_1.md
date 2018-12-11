@@ -1,5 +1,5 @@
 ---
-title: set_1
+title: set
 description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
@@ -16,9 +16,9 @@ manager: dongill
 ms.date: 10/16/2017
 ---
 
-# set_1
+# set
 
-> Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 Displays, sets, or removes CMD.EXE environment variables. If used without parameters, **set** displays the current environment variable settings.
 

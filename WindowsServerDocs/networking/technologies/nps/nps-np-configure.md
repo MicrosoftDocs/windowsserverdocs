@@ -6,13 +6,13 @@ ms.prod: windows-server-threshold
 ms.technology: networking
 ms.topic: article
 ms.assetid: fe77655a-e2be-4949-92e1-aaaa215d86ea
-ms.author: jamesmci 
-author: jamesmci
+ms.author: pashort 
+author: shortpatti
 ---
 
 # Configure Network Policies
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 You can use this topic to configure network policies in NPS.
 
@@ -56,7 +56,7 @@ Membership in **Domain Admins**, or equivalent, is the minimum required to compl
 You can use this procedure to create the connection request policies and network policies required to deploy either dial-up servers or virtual private network \(VPN\) servers as Remote Authentication Dial-In User Service \(RADIUS\) clients to the NPS RADIUS server.
 
 >[!NOTE]
->Client computers, such as laptop computers and other computers running client operating systems, are not RADIUS clients. RADIUS clients are network access servers — such as wireless access points, 802.1X authenticating switches, virtual private network \(VPN\) servers, and dial-up servers — because these devices use the RADIUS protocol to communicate with RADIUS servers such as NPS servers.
+>Client computers, such as laptop computers and other computers running client operating systems, are not RADIUS clients. RADIUS clients are network access servers — such as wireless access points, 802.1X authenticating switches, virtual private network \(VPN\) servers, and dial-up servers — because these devices use the RADIUS protocol to communicate with RADIUS servers such as NPSs.
 
 This procedure explains how to open the New Dial-up or Virtual Private Network Connections wizard in NPS.
 
@@ -67,13 +67,13 @@ After you run the wizard, the following policies are created:
 
 You can run the New Dial-up or Virtual Private Network Connections wizard every time you need to create new policies for dial-up servers and VPN servers.
 
-Running the New Dial-up or Virtual Private Network Connections wizard is not the only step required to deploy dial-up or VPN servers as RADIUS clients to the NPS server. Both network access methods require that you deploy additional hardware and software components.
+Running the New Dial-up or Virtual Private Network Connections wizard is not the only step required to deploy dial-up or VPN servers as RADIUS clients to the NPS. Both network access methods require that you deploy additional hardware and software components.
 
 Membership in **Domain Admins**, or equivalent, is the minimum required to complete this procedure.
 
 ### To create policies for dial-up or VPN with a wizard
 
-1. Open the NPS console. If it is not already selected, click **NPS \(Local\)**. If you want to create policies on a remote NPS server, select the server.
+1. Open the NPS console. If it is not already selected, click **NPS \(Local\)**. If you want to create policies on a remote NPS, select the server.
 
 2. In **Getting Started** and **Standard Configuration**, select **RADIUS server for Dial-Up or VPN Connections**. The text and links under the text change to reflect your selection.
 
@@ -94,15 +94,15 @@ After you run the wizard, the following policies are created:
 
 You can run the New IEEE 802.1X Secure Wired and Wireless Connections wizard every time you need to create new policies for 802.1X access.
 
-Running the New IEEE 802.1X Secure Wired and Wireless Connections wizard is not the only step required to deploy 802.1X authenticating switches and wireless access points as RADIUS clients to the NPS server. Both network access methods require that you deploy additional hardware and software components.
+Running the New IEEE 802.1X Secure Wired and Wireless Connections wizard is not the only step required to deploy 802.1X authenticating switches and wireless access points as RADIUS clients to the NPS. Both network access methods require that you deploy additional hardware and software components.
 
 Membership in **Domain Admins**, or equivalent, is the minimum required to complete this procedure.
 
 ### To create policies for 802.1X wired or wireless with a wizard
 
-1. On the NPS server, in Server Manager, click **Tools**, and then click **Network Policy Server**. The NPS console opens. 
+1. On the NPS, in Server Manager, click **Tools**, and then click **Network Policy Server**. The NPS console opens. 
 
-2. If it is not already selected, click **NPS \(Local\)**. If you want to create policies on a remote NPS server, select the server.
+2. If it is not already selected, click **NPS \(Local\)**. If you want to create policies on a remote NPS, select the server.
 
 3. In **Getting Started** and **Standard Configuration**, select **RADIUS server for 802.1X Wireless or Wired Connections**. The text and links under the text change to reflect your selection.
 
@@ -124,7 +124,7 @@ You can use this procedure to configure NPS to ignore user account dial-in prope
 
 Membership in **Administrators**, or equivalent, is the minimum required to complete this procedure.
 
-1. On the NPS server, in Server Manager, click **Tools**, and then click **Network Policy Server**. The NPS console opens.
+1. On the NPS, in Server Manager, click **Tools**, and then click **Network Policy Server**. The NPS console opens.
 
 2. Double-click **Policies**, click **Network Policies**, and then in the details pane double-click the policy that you want to configure.
 
@@ -154,7 +154,7 @@ Membership in **Administrators**, or equivalent, is the minimum required to comp
 
 ### To configure a network policy for VLANs
 
-1. On the NPS server, in Server Manager, click **Tools**, and then click **Network Policy Server**. The NPS console opens.
+1. On the NPS, in Server Manager, click **Tools**, and then click **Network Policy Server**. The NPS console opens.
 
 2. Double-click **Policies**, click **Network Policies**, and then in the details pane double-click the policy that you want to configure.
 
@@ -191,7 +191,7 @@ In some cases, routers or firewalls drop packets because they are configured to 
 
 When you deploy NPS with network policies that use the Extensible Authentication Protocol \(EAP\) with Transport Layer Security \(TLS\), or EAP-TLS, as an authentication method, the default maximum transmission unit \(MTU\) that NPS uses for EAP payloads is 1500 bytes. 
 
-This maximum size for the EAP payload can create RADIUS messages that require fragmentation by a router or firewall between the NPS server and a RADIUS client. If this is the case, a router or firewall positioned between the RADIUS client and the NPS server might silently discard some fragments, resulting in authentication failure and the inability of the access client to connect to the network.
+This maximum size for the EAP payload can create RADIUS messages that require fragmentation by a router or firewall between the NPS and a RADIUS client. If this is the case, a router or firewall positioned between the RADIUS client and the NPS might silently discard some fragments, resulting in authentication failure and the inability of the access client to connect to the network.
 
 Use the following procedure to lower the maximum size that NPS uses for EAP payloads by adjusting the Framed-MTU attribute in a network policy to a value no greater than 1344.
 
@@ -199,7 +199,7 @@ Membership in **Administrators**, or equivalent, is the minimum required to comp
 
 ### To configure the Framed-MTU attribute
 
-1. On the NPS server, in Server Manager, click **Tools**, and then click **Network Policy Server**. The NPS console opens.
+1. On the NPS, in Server Manager, click **Tools**, and then click **Network Policy Server**. The NPS console opens.
  
 2. Double-click **Policies**, click **Network Policies**, and then in the details pane double-click the policy that you want to configure.
 

@@ -17,7 +17,7 @@ ms.date: 10/16/2017
 
 # openfiles
 
-> Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 Enables an administrator to query, display, or disconnect files and directories that have been opened on a system. Also enables or disables the system Maintain Objects List global flag.
 
@@ -45,7 +45,7 @@ openfiles /disconnect [/s <System> [/u [<Domain>\]<UserName> [/p [<Password>]]]]
 |/p [\<Password>]|Specifies the password of the user account that is specified in the **/u** option. If you do not use the **/p** option, a password prompt appears when the command is executed.|
 |/id \<OpenFileID>|Disconnects open files by the specified file ID. The wildcard character (**&#42;**) can be used with this parameter.</br>Note: You can use the **openfiles /query** command to find the file ID.|
 |/a \<AccessedBy>|Disconnects all open files associated with the user name that is specified in the *AccessedBy* parameter. The wildcard character (**&#42;**) can be used with this parameter.|
-|/o {read | write | read/write}|Disconnects all open files with the specified open mode value. Valid values are Read, Write, or Read/Write. The wildcard character (**&#42;**) can be used with this parameter.|
+|/o {read \| write \| read/write}|Disconnects all open files with the specified open mode value. Valid values are Read, Write, or Read/Write. The wildcard character (**&#42;**) can be used with this parameter.|
 |/op \<OpenFile>|Disconnects all open file connections that are created by a specific open file name. The wildcard character (**&#42;**) can be used with this parameter.|
 |/?|Displays help at the command prompt.|
 
@@ -89,7 +89,7 @@ openfiles /query [/s <System> [/u [<Domain>\]<UserName> [/p [<Password>]]]] [/fo
 |/s \<System>|Specifies the remote system to connect to (by name or IP address). Do not use backslashes. If you do not use the **/s** option, the command is executed on the local computer by default. This parameter applies to all files and folders that are specified in the command.|
 |/u [\<Domain>\]<UserName>|Executes the command by using the permissions of the specified user account. If you do not use the **/u** option, system permissions are used by default.|
 |/p [\<Password>]|Specifies the password of the user account that is specified in the **/u** option. If you do not use the **/p** option, a password prompt appears when the command is executed.|
-|[/fo {TABLE | LIST | CSV}]|Displays the output in the specified format. Valid values for *Format* are:</br>TABLE:  Displays output in a table.</br>LIST: Displays output in a list.</br>CSV: Displays output in Comma Separated Values format.|
+|[/fo {TABLE \| LIST \| CSV}]|Displays the output in the specified format. Valid values for *Format* are:</br>TABLE:  Displays output in a table.</br>LIST: Displays output in a list.</br>CSV: Displays output in Comma Separated Values format.|
 |/nh|Suppresses column header in the output. Valid only when the **/fo** parameter is set to **TABLE** or **CSV**.|
 |/v|Specifies that detailed information be displayed in the output.|
 |/?|Displays help at the command prompt.|
@@ -130,7 +130,7 @@ openfiles /local [on | off]
 
 |Parameter|Description|
 |---------|-----------|
-|[on | off]|Enables or disables the system Maintain Objects List global flag, which tracks local file handles.|
+|[on \| off]|Enables or disables the system Maintain Objects List global flag, which tracks local file handles.|
 |/?|Displays help at the command prompt.|
 
 ### Remarks

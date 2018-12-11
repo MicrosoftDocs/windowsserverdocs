@@ -11,7 +11,7 @@ ms.topic: article
 ms.assetid: 1099f21d-5f07-475a-92dd-ad08bc155da1
 author: haley-rowland
 ms.author: harowl
-ms.date: 06/24/2017
+ms.date: 07/17/2018
 manager: scottman
 ---
 # Deploy a two-node Storage Spaces Direct scale-out file server for UPD storage in Azure
@@ -50,17 +50,15 @@ Use the following steps to create a domain controller (we called ours "my-dc" be
    - Type of storage account: General purpose
    - Performance tier: Premium
    - Replication option: LRS
-4. Set up an Active Directory forest by doing one of the following: 
-   1.  Deploy using an Azure quickstart template:
+4. Set up an Active Directory forest by either using a quickstart template or deploying the forest manually. 
+   - Deploy using an Azure quickstart template:
       - [Create an Azure VM with a new AD forest](https://azure.microsoft.com/documentation/templates/active-directory-new-domain/)
       - [Create a new AD domain with 2 domain controllers](https://azure.microsoft.com/documentation/templates/active-directory-new-domain-ha-2-dc/) (for high availability)
-   2. Manually [deploy the forest](https://azure.microsoft.com/documentation/articles/active-directory-new-forest-virtual-machine/) with the following configurations:
+   - Manually [deploy the forest](https://azure.microsoft.com/documentation/articles/active-directory-new-forest-virtual-machine/) with the following configurations:
       - Create the virtual network in the same resource group as the storage account.
       - Recommended size: DS2 (increase the size if the domain controller will host more domain objects)
       - Use an automatically generated VNet.
       - Follow the steps to install AD DS.
-   3. Enable [Azure AD Domain Services](https://azure.microsoft.com/en-us/documentation/articles/active-directory-ds-getting-started/):
-      Note that this only works on a V1 VNet, while the rest of the deployment described below requires a V2 VNet. In order to allow communication between the cluster nodes and the domain controller, you will need to deploy [VNet peering](https://azure.microsoft.com/documentation/articles/virtual-network-peering-overview/) (you can also use a [quickstart template to deploy VNet peering](https://azure.microsoft.com/documentation/templates/201-vnet-to-vnet-peering/)).
 5. Set up the file server cluster nodes. You can do this by deploying the [Windows Server 2016 Storage Spaces Direct SOFS cluster Azure template](https://azure.microsoft.com/resources/templates/301-storage-spaces-direct/) or by following steps 6-11 to deploy manually.
 5. To manually set up the file server cluster nodes:
    1. Create the first node: 
@@ -80,7 +78,7 @@ Use the following steps to create a domain controller (we called ours "my-dc" be
 7. Set IP addresses for all VMs to **static**. 
    1. In the resource group, select a VM, and then click **Network interfaces** (under **settings**). Select the listed network interface, and then click **IP Configurations**. Select the listed IP configuration, select **static**, and then click **Save**.
    2. Note the domain controller (my-dc for our example) private IP address (10.x.x.x).
-8. Set primary DNS server address on NICs of the cluster node VMs to the my-dc server. Select the VM, and then click **Network Interfaces > DNS servers > Custom DNS**. Enter the the private IP address you noted above, and then click **Save**.
+8. Set primary DNS server address on NICs of the cluster node VMs to the my-dc server. Select the VM, and then click **Network Interfaces > DNS servers > Custom DNS**. Enter the private IP address you noted above, and then click **Save**.
 9. Create an [Azure storage account to be your cloud witness](https://docs.microsoft.com/windows-server/failover-clustering/deploy-cloud-witness). (If you use the linked instructions, stop when you get to "Configuring Cloud Witness with Failover Cluster Manager GUI" - we'll do that step below.)
 10. Set up the Storage Spaces Direct file server. Connect to a node VM, and then run the following Windows PowerShell cmdlets.
    1. Install Failover Clustering Feature and File Server Feature on the two file server cluster node VMs:

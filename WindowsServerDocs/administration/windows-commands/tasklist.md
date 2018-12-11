@@ -1,6 +1,6 @@
 ---
 title: tasklist
-description: "Windows Commands topic for **** - "
+description: Learn how to display a list of the processes running on the local or remote computer.
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -17,8 +17,6 @@ ms.date: 10/16/2017
 
 # tasklist
 
-> Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
-
 Displays a list of currently running processes on the local computer or on a remote computer. **Tasklist** replaces the **tlist** tool.
 
 For examples of how to use this command, see [Examples](#BKMK_examples).
@@ -34,12 +32,12 @@ tasklist [/s <Computer> [/u [<Domain>\]<UserName> [/p <Password>]]] [{/m <Module
 |Parameter|Description|
 |---------|-----------|
 |/s \<Computer>|Specifies the name or IP address of a remote computer (do not use backslashes). The default is the local computer.|
-|/u [\<Domain>\]<UserName>|Runs the command with the account permissions of the user who is specified by *UserName* or *Domain*\*UserName*. **/u** can be specified only if **/s** is specified. The default is the permissions of the user who is currently logged on to the computer that is issuing the command.|
+|/u [\<Domain>\\\]\<UserName>|Runs the command with the account permissions of the user who is specified by *UserName* or *Domain*\*UserName*. **/u** can be specified only if **/s** is specified. The default is the permissions of the user who is currently logged on to the computer that is issuing the command.|
 |/p \<Password>|Specifies the password of the user account that is specified in the **/u** parameter.|
 |/m \<Module>|Lists all tasks with DLL modules loaded that match the given pattern name. If the module name is not specified, this option displays all modules loaded by each task.|
 |/svc|Lists all the service information for each process without truncation. Valid when the **/fo** parameter is set to **table**.|
 |/v|Displays verbose task information in the output. For complete verbose output without truncation, use **/v** and **/svc** together.|
-|/fo {table | list | csv}|Specifies the format to use for the output. Valid values are **table**, **list**, and **csv**. The default format for output is **table**.|
+|/fo {table \| list \| csv}|Specifies the format to use for the output. Valid values are **table**, **list**, and **csv**. The default format for output is **table**.|
 |/nh|Suppresses column headers in the output. Valid when the **/fo** parameter is set to **table** or **csv**.|
 |/fi \<Filter>|Specifies the types of processes to include in or exclude from the query. See the following table for valid filter names, operators, and values.|
 |/?|Displays help at the command prompt.|
@@ -62,7 +60,7 @@ tasklist [/s <Computer> [/u [<Domain>\]<UserName> [/p <Password>]]] [{/m <Module
 
 ## Remarks
 
--   The WINDOWTITLE and STATUS filters are not supported when a remote system is specified.
+The WINDOWTITLE and STATUS filters are not supported when a remote system is specified.
 
 ## <a name="BKMK_examples"></a>Examples
 

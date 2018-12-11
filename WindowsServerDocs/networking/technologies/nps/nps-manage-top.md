@@ -6,13 +6,13 @@ ms.prod: windows-server-threshold
 ms.technology: networking
 ms.topic: article
 ms.assetid: a275b02c-62b3-4b8a-8417-a710f24bebfe
-ms.author: jamesmci 
-author: jamesmci
+ms.author: pashort 
+author: shortpatti
 ---
 
 # Manage Network Policy Server (NPS)
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 You can use the topics in this section to manage Network Policy Server.  
   
@@ -32,6 +32,6 @@ This section contains the following topics.
 - [Configure RADIUS Clients](nps-radius-clients-configure.md)
 - [Configure Remote RADIUS Server Groups](nps-crp-rrsg-configure.md)
 - [Manage Certificates Used with NPS](nps-manage-certificates.md)
-- [Manage NPS Servers](nps-manage-servers.md)
+- [Manage NPSs](nps-manage-servers.md)
 - [Manage NPS Templates](nps-manage-templates.md)
 

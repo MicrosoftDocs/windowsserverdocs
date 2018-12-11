@@ -11,8 +11,8 @@ ms.technology:
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 43abc30a-300d-4752-b845-10a6b9f32244
-ms.author: jamesmci
-author: jamesmci
+ms.author: pashort
+author: shortpatti
 ---
 # Step 1 Configure Advanced DirectAccess Infrastructure
 
@@ -540,7 +540,7 @@ The following are required for either type of certificate, if they do not alread
   
     CRL distribution points can be accessed through:  
   
-    -   Web servers by using an HTTP-based URL, such as: http://crl.corp.contoso.com/crld/corp-APP1-CA.crl  
+    -   Web servers by using an HTTP-based URL, such as: https://crl.corp.contoso.com/crld/corp-APP1-CA.crl  
   
     -   File servers that are accessed through a universal naming convention (UNC) path, such as \\\crl.corp.contoso.com\crld\corp-APP1-CA.crl  
   

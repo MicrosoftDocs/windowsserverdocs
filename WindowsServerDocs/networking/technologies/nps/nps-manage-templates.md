@@ -6,15 +6,15 @@ ms.prod: windows-server-threshold
 ms.technology: networking
 ms.topic: article
 ms.assetid: 989b00c5-4767-4081-ace5-6321f8b2c55e
-ms.author: jamesmci 
-author: jamesmci
+ms.author: pashort 
+author: shortpatti
 ---
 
 # Manage NPS Templates
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
 
-You can use Network Policy Server \(NPS\) templates to create configuration elements, such as Remote Authentication Dial-In User Service \(RADIUS\) clients or shared secrets, that you can reuse on the local NPS server and export for use on other NPS servers. 
+You can use Network Policy Server \(NPS\) templates to create configuration elements, such as Remote Authentication Dial-In User Service \(RADIUS\) clients or shared secrets, that you can reuse on the local NPS and export for use on other NPSs. 
 
 Templates Management provides a node in the NPS console where you can create, modify, delete, duplicate, and view the use of NPS templates. NPS templates are designed to reduce the amount of time and cost that it takes to configure NPS on one or more servers.
 
@@ -30,11 +30,11 @@ The following NPS template types are available for configuration in Templates Ma
 
 ## Create an NPS Template
 
-Configuring a template is different than configuring the NPS server directly. Creating a template does not affect the NPS server's functionality. It is only when you select the template in the appropriate location in the NPS console and apply the template that the template affects the NPS server functionality. 
+Configuring a template is different than configuring the NPS directly. Creating a template does not affect the NPS's functionality. It is only when you select the template in the appropriate location in the NPS console and apply the template that the template affects the NPS functionality. 
 
-For example, if you configure a RADIUS client in the NPS console under **RADIUS Clients and Servers**, you alter the NPS server configuration and take one step in configuring NPS to communicate with one of your network access servers. \(The next step is to configure the network access server \(NAS\) to communicate with NPS.\) 
+For example, if you configure a RADIUS client in the NPS console under **RADIUS Clients and Servers**, you alter the NPS configuration and take one step in configuring NPS to communicate with one of your network access servers. \(The next step is to configure the network access server \(NAS\) to communicate with NPS.\) 
 
-However, if you configure a new **RADIUS Clients** template in the NPS console under **Templates Management** rather than creating a new RADIUS client under **RADIUS Clients and Servers**, you have created a template, but you have not altered the NPS server functionality yet. To alter the NPS server functionality, you must apply the template from the correct location in the NPS console.
+However, if you configure a new **RADIUS Clients** template in the NPS console under **Templates Management** rather than creating a new RADIUS client under **RADIUS Clients and Servers**, you have created a template, but you have not altered the NPS functionality yet. To alter the NPS functionality, you must apply the template from the correct location in the NPS console.
 
 The following procedure provides instructions on how to create a new template.
 
@@ -43,7 +43,7 @@ Membership in **Administrators**, or equivalent, is the minimum required to comp
 ### To create an NPS template
 
 
-1. On the NPS server, in Server Manager, click **Tools**, and then click **Network Policy Server**. The NPS console opens. 
+1. On the NPS, in Server Manager, click **Tools**, and then click **Network Policy Server**. The NPS console opens. 
 
 2. In the NPS console, expand **Templates Management**, right-click a template type, such as **RADIUS Clients**, and then click **New**.
 
@@ -57,7 +57,7 @@ Membership in **Administrators**, or equivalent, is the minimum required to comp
 
 ### To apply an NPS template
 
-1. On the NPS server, in Server Manager, click **Tools**, and then click **Network Policy Server**. The NPS console opens.
+1. On the NPS, in Server Manager, click **Tools**, and then click **Network Policy Server**. The NPS console opens.
 
 2. In the NPS console, expand **RADIUS Clients and Servers**, and then expand **RADIUS Clients**.
 
@@ -67,7 +67,7 @@ Membership in **Administrators**, or equivalent, is the minimum required to comp
 
 ## Export or Import NPS Templates
 
-You can export templates for use on other NPS servers, or you can import templates into **Templates Management** for use on the local computer. 
+You can export templates for use on other NPSs, or you can import templates into **Templates Management** for use on the local computer. 
 
 Membership in **Administrators**, or equivalent, is the minimum required to complete this procedure.
 

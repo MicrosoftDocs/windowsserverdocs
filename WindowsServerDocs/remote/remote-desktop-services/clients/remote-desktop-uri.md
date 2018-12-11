@@ -12,16 +12,20 @@ ms.assetid: 0c3f1eb6-835c-4522-99ff-56c6ee4bb911
 author: lizap
 manager: dongill
 ms.author: elizapo
-ms.date: 11/02/2016
+ms.date: 06/11/2018
+ms.localizationpriority: medium
 ---
 # Remote Desktop client Universal Resource Identifier (URI) scheme support
 
->Applies To: Windows 10, Windows 8.1, Windows Server 2012 R2, Windows Server Technical Preview
+>Applies To: Windows Server, version 1803, Windows Server 2016, Windows Server 2012 R2
 
 Enabling a Uniform Resource Identifier (URI) scheme gives IT professionals and developers a way to integrate features of the Remote Desktop clients across platforms and enriches the user experience by allowing: 
 
 - Third-party applications to launch Microsoft Remote Desktop and start remote sessions with predefined settings (provided as part of the URI string).
 - End users to start remote connections using pre-configured URLs.
+
+>[!NOTE]
+> Using a URI to connect to the RD client is NOT supported for Windows operating systems - use the URI with MacOS, iOS, and Android devices.
 
 Microsoft Remote Desktop uses the URI scheme rdp://query_string to store pre-configured attribute settings that are used when launching the client. The query strings represent a single or set of RDP attributes provided in the URL. 
 

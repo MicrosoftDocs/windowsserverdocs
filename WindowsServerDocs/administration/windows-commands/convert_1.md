@@ -1,5 +1,5 @@
 ---
-title: convert_1
+title: convert
 description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
@@ -15,9 +15,9 @@ manager: dongill
 ms.date: 10/16/2017
 ---
 
-# convert_1
+# convert
 
-> Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 Converts a disk from one disk type to another.
 

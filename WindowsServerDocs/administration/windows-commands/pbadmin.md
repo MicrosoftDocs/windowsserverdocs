@@ -17,7 +17,7 @@ ms.date: 10/16/2017
 
 # pbadmin
 
-> Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 Pbadmin is deprecated, and is not guaranteed to be supported in future releases of Windows.
 

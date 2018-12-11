@@ -11,7 +11,7 @@ author: Heidilohr
 >Applies To: Windows Server 2008
 
 >[!NOTE]
->This information applies to Windows Server 2008. For information about Server Core in Windows Server, see [What is the Server Core Installation in Windows Server](https://docs.microsoft.com/en-us/windows-server/administration/server-core/what-is-server-core). 
+>This information applies to Windows Server 2008. For information about Server Core in Windows Server, see [What is the Server Core Installation in Windows Server](https://docs.microsoft.com/windows-server/administration/server-core/what-is-server-core). 
 
 The Server Core option is a new minimal installation option that is available when you are deploying the Standard, Enterprise, or Datacenter edition of Windows Server 2008. Server Core provides you with a minimal installation of Windows Server 2008 that supports installing only certain server roles, as described later in this chapter. Contrast this with the Full installation option for Windows Server 2008, which supports installing all available server roles and also other Microsoft or third-party server applications, such as Microsoft Exchange Server or SAP. 
 
@@ -110,7 +110,7 @@ A Server Core installation includes only a limited number of server roles compar
 | Terminal Services  | X  |  |
 | UDDI Services  | X  |  |
 | Web Server (IIS) | X | X |
-| Windows Deployment Services  | X | X |
+| Windows Deployment Services  | X |  |
 
 While the roles available for Server Core are generally the same regardless of architecture (x86 or x64) and product edition, there are a few exceptions:
 * The Hyper-V (virtualization) role is available only if you purchased Windows Server 2008 with Hyper-V product media (Hyper-V is available only for x64 versions). If you do not need this role, you can purchase Windows Server 2008 without Hyper-V product media instead. 

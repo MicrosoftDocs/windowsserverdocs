@@ -63,7 +63,7 @@ Example 3:
 > By default, when running Get-MsolDomainFederationSettings, certain properties are not displayed in the console.  To view these parameters it is recommended that you use the | fl * to force the output of all of the properties of the object.
 
 
-The following is more information about the PromptLoginBehavior paramter and its settings.
+The following is more information about the PromptLoginBehavior parameter and its settings.
    
    - <b>TranslateToFreshPasswordAuth</b> means the default Azure AD behavior of sending <b>wauth</b> and <b>wfresh</b> to AD FS instead of prompt=login
    - <b>NativeSupport</b> means that the prompt=login parameter will be sent as is to AD FS

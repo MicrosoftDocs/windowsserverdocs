@@ -29,12 +29,12 @@ auditpol /backup /file:<filename>
 |-------|--------|
 |/file|Specifies the name of the file to which the audit policy will be backed up.|
 |/?|Displays help at the command prompt.|
-## remarks
+## Remarks
 for backup operations for the per-user policy and system policy, you must have Write or Full Control permission on that object set in the security descriptor. You can also perform backup operations by possessing the **Manage auditing and security log** (SeSecurityPrivilege) user right. However, this right allows additional access that is not necessary to perform the list operation.
 ## <a name="BKMK_examples"></a>Examples
 To back up per-user audit policy settings for all users, system audit policy settings, and all auditing options into a CSV-formatted text file named auditpolicy.csv, type:
 ```
-auditpol /backup /file:C\auditpolicy.csv 
+auditpol /backup /file:C:\auditpolicy.csv 
 ```
 > [!NOTE]
 > if no drive is specified, the current directory is used.

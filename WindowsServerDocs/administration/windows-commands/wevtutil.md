@@ -17,7 +17,7 @@ ms.date: 10/16/2017
 
 # wevtutil
 
-> Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 Enables you to retrieve information about event logs and publishers. You can also use this command to install and uninstall event manifests, to run queries, and to export, archive, and clear logs. For examples of how to use this command, see [Examples](#BKMK_examples).
 
@@ -25,7 +25,7 @@ Enables you to retrieve information about event logs and publishers. You can als
 
 ```
 wevtutil [{el | enum-logs}] [{gl | get-log} <Logname> [/f:<Format>]]
-[{sl | set-log} <Logname> [/e:<Enabled>] [/i:<Isolation>] [/lfn:<Logpath>] [/rt:<Retention>] [/ab:<Auto>] [/ms:<Size>] [/l:<Level>] [/k:<Keywords>] [/ca:<Channel>] [/c:<Config>]] 
+[{sl | set-log} <Logname> [/e:<Enabled>] [/i:<Isolation>] [/lfn:<Logpath>] [/rt:<Retention>] [/ab:<Auto>] [/ms:<MaxSize>] [/l:<Level>] [/k:<Keywords>] [/ca:<Channel>] [/c:<Config>]] 
 [{ep | enum-publishers}] 
 [{gp | get-publisher} <Publishername> [/ge:<Metadata>] [/gm:<Message>] [/f:<Format>]] [{im | install-manifest} <Manifest>] 
 [{um | uninstall-manifest} <Manifest>] [{qe | query-events} <Path> [/lf:<Logfile>] [/sq:<Structquery>] [/q:<Query>] [/bm:<Bookmark>] [/sbm:<Savebm>] [/rd:<Direction>] [/f:<Format>] [/l:<Locale>] [/c:<Count>] [/e:<Element>]] 
@@ -39,30 +39,30 @@ wevtutil [{el | enum-logs}] [{gl | get-log} <Logname> [/f:<Format>]]
 
 |Parameter|Description|
 |---------|-----------|
-|{el | enum-logs}|Displays the names of all logs.|
-|{gl | get-log} \<Logname> [/f:<Format>]|Displays configuration information for the specified log, which includes whether the log is enabled or not, the current maximum size limit of the log, and the path to the file where the log is stored.|
-|{sl | set-log} \<Logname> [/e:<Enabled>] [/i:<Isolation>] [/lfn:<Logpath>] [/rt:<Retention>] [/ab:<Auto>] [/ms:<Size>] [/l:<Level>] [/k:<Keywords>] [/ca:<Channel>] [/c:<Config>]|Modifies the configuration of the specified log.|
-|{ep | enum-publishers}|Displays the event publishers on the local computer.|
-|{gp | get-publisher} \<Publishername> [/ge:<Metadata>] [/gm:<Message>] [/f:<Format>]]|Displays the configuration information for the specified event publisher.|
-|{im | install-manifest} \<Manifest>|Installs event publishers and logs from a manifest. For more information about event manifests and using this parameter, see the Windows Event Log SDK at the Microsoft Developers Network (MSDN) Web site (https://msdn.microsoft.com).|
-|{um | uninstall-manifest} \<Manifest>|Uninstalls all publishers and logs from a manifest. For more information about event manifests and using this parameter, see the Windows Event Log SDK at the Microsoft Developers Network (MSDN) Web site (https://msdn.microsoft.com).|
-|{qe | query-events} \<Path> [/lf:<Logfile>] [/sq:<Structquery>] [/q:<Query>] [/bm:<Bookmark>] [/sbm:<Savebm>] [/rd:<Direction>] [/f:<Format>] [/l:<Locale>] [/c:<Count>] [/e:<Element>]|Reads events from an event log, from a log file, or using a structured query. By default, you provide a log name for \<Path>. However, if you use the **/lf** option, then \<Path> must be a path to a log file. If you use the **/sq** parameter, \<Path> must be a path to a file that contains a structured query.|
-|{gli | get-loginfo} \<Logname> [/lf:<Logfile>]|Displays status information about an event log or log file. If the **/lf** option is used, \<Logname> is a path to a log file. You can run **wevtutil el** to obtain a list of log names.|
-|{epl | export-log} \<Path> <Exportfile> [/lf:<Logfile>] [/sq:<Structquery>] [/q:<Query>] [/ow:<Overwrite>]|Exports events from an event log, from a log file, or using a structured query to the specified file. By default, you provide a log name for \<Path>. However, if you use the **/lf** option, then \<Path> must be a path to a log file. If you use the **/sq** option, \<Path> must be a path to a file that contains a structured query. <Exportfile> is a path to the file where the exported events will be stored.|
-|{al | archive-log} \<Logpath> [/l:<Locale>]|Archives the specified log file in a self-contained format. A subdirectory with the name of the locale is created and all locale-specific information is saved in that subdirectory. After the directory and log file are created by running **wevtutil al**, events in the file can be read whether the publisher is installed or not.|
-|{cl | clear-log} \<Logname> [/bu:<Backup>]|Clears events from the specified event log. The **/bu** option can be used to back up the cleared events.|
+|{el \| enum-logs}|Displays the names of all logs.|
+|{gl \| get-log} \<Logname> [/f:\<Format>]|Displays configuration information for the specified log, which includes whether the log is enabled or not, the current maximum size limit of the log, and the path to the file where the log is stored.|
+|{sl \| set-log} \<Logname> [/e:\<Enabled>] [/i:\<Isolation>] [/lfn:\<Logpath>] [/rt:\<Retention>] [/ab:\<Auto>] [/ms:\<MaxSize>] [/l:\<Level>] [/k:\<Keywords>] [/ca:\<Channel>] [/c:\<Config>]|Modifies the configuration of the specified log.|
+|{ep \| enum-publishers}|Displays the event publishers on the local computer.|
+|{gp \| get-publisher} \<Publishername> [/ge:\<Metadata>] [/gm:\<Message>] [/f:\<Format>]]|Displays the configuration information for the specified event publisher.|
+|{im \| install-manifest} \<Manifest>|Installs event publishers and logs from a manifest. For more information about event manifests and using this parameter, see the Windows Event Log SDK at the Microsoft Developers Network (MSDN) Web site (https://msdn.microsoft.com).|
+|{um \| uninstall-manifest} \<Manifest>|Uninstalls all publishers and logs from a manifest. For more information about event manifests and using this parameter, see the Windows Event Log SDK at the Microsoft Developers Network (MSDN) Web site (https://msdn.microsoft.com).|
+|{qe \| query-events} \<Path> [/lf:\<Logfile>] [/sq:\<Structquery>] [/q:\<Query>] [/bm:\<Bookmark>] [/sbm:\<Savebm>] [/rd:\<Direction>] [/f:\<Format>] [/l:\<Locale>] [/c:\<Count>] [/e:\<Element>]|Reads events from an event log, from a log file, or using a structured query. By default, you provide a log name for \<Path>. However, if you use the **/lf** option, then \<Path> must be a path to a log file. If you use the **/sq** parameter, \<Path> must be a path to a file that contains a structured query.|
+|{gli \| get-loginfo} \<Logname> [/lf:\<Logfile>]|Displays status information about an event log or log file. If the **/lf** option is used, \<Logname> is a path to a log file. You can run **wevtutil el** to obtain a list of log names.|
+|{epl \| export-log} \<Path> \<Exportfile> [/lf:\<Logfile>] [/sq:\<Structquery>] [/q:\<Query>] [/ow:\<Overwrite>]|Exports events from an event log, from a log file, or using a structured query to the specified file. By default, you provide a log name for \<Path>. However, if you use the **/lf** option, then \<Path> must be a path to a log file. If you use the **/sq** option, \<Path> must be a path to a file that contains a structured query. \<Exportfile> is a path to the file where the exported events will be stored.|
+|{al \| archive-log} \<Logpath> [/l:\<Locale>]|Archives the specified log file in a self-contained format. A subdirectory with the name of the locale is created and all locale-specific information is saved in that subdirectory. After the directory and log file are created by running **wevtutil al**, events in the file can be read whether the publisher is installed or not.|
+|{cl \| clear-log} \<Logname> [/bu:\<Backup>]|Clears events from the specified event log. The **/bu** option can be used to back up the cleared events.|
 
 ## Options
 
 |Option|Description|
 |------|-----------|
-|/f:\<Format>|Specifies that the output should be either XML or text format. If \<Format> is XML, the output is displayed in XML format. If <Format> is Text, the output is displayed without XML tags. The default is Text.|
+|/f:\<Format>|Specifies that the output should be either XML or text format. If \<Format> is XML, the output is displayed in XML format. If \<Format> is Text, the output is displayed without XML tags. The default is Text.|
 |/e:\<Enabled>|Enables or disables a log. \<Enabled> can be true or false.|
 |/i:\<Isolation>|Sets the log isolation mode. \<Isolation> can be system, application or custom. The isolation mode of a log determines whether a log shares a session with other logs in the same isolation class. If you specify system isolation, the target log will share at least write permissions with the System log. If you specify application isolation, the target log will share at least write permissions with the Application log. If you specify custom isolation, you must also provide a security descriptor by using the **/ca** option.|
 |/lfn:\<Logpath>|Defines the log file name. \<Logpath> is a full path to the file where the Event Log service stores events for this log.|
 |/rt:\<Retention>|Sets the log retention mode. \<Retention> can be true or false. The log retention mode determines the behavior of the Event Log service when a log reaches its maximum size. If an event log reaches its maximum size and the log retention mode is true, existing events are retained and incoming events are discarded. If the log retention mode is false, incoming events overwrite the oldest events in the log.|
 |/ab:\<Auto>|Specifies the log auto-backup policy. \<Auto> can be true or false. If this value is true, the log will be backed up automatically when it reaches the maximum size. If this value is true, the retention (specified with the **/rt** option) must also be set to true.|
-|/ms:\<Size>|Sets the maximum size of the log in bytes. The minimum log size is 1048576 bytes (1024KB) and log files are always multiples of 64KB, so the value you enter will be rounded off accordingly.|
+|/ms:\<MaxSize>|Sets the maximum size of the log in bytes. The minimum log size is 1048576 bytes (1024KB) and log files are always multiples of 64KB, so the value you enter will be rounded off accordingly.|
 |/l:\<Level>|Defines the level filter of the log. \<Level> can be any valid level value. This option is only applicable to logs with a dedicated session. You can remove a level filter by setting <Level> to 0.|
 |/k:\<Keywords>|Specifies the keywords filter of the log. \<Keywords> can be any valid 64 bit keyword mask. This option is only applicable to logs with a dedicated session.|
 |/ca:\<Channel>|Sets the access permission for an event log. \<Channel> is a security descriptor that uses the Security Descriptor Definition Language (SDDL). For more information about SDDL format, see the Microsoft Developers Network (MSDN) Web site (https://msdn.microsoft.com).|

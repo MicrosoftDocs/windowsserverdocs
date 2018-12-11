@@ -9,7 +9,7 @@ This library provides info for IT pros to evaluate, plan, deploy, secure, and ma
 > [!Note] 
 > The next version of Windows Server is changing! You can find details about what's on the horizon by visiting [Windows Server Semi-annual Channel Overview](./get-started/semi-annual-channel-overview.md). 
 
-[![Windows Server 2016 Overview Video](media/front-page-video.png)](https://www.youtube.com/embed/V8oF0JpDzaM)
+[![Windows Server 2016 Overview Video](media/front-page-video.png)](https://www.youtube-nocookie.com/embed/V8oF0JpDzaM)
 
 <table border="0" width="100%" align='center'>
   <tr style="text-align:center;">
@@ -138,5 +138,3 @@ Virtualized Storage, Networking, Security and Management technologies are the bu
     <td align='center' style="width:10%; border:0;"></td>
   </tr>
 </table>
-
-Not finding content you need? Windows 10 users, tell us what you want on [Feedback Hub](feedback-hub://?referrer=techDocsUcPage&tabid=2&contextid=898&newFeedback=true&topic=Windows-Server-2016.md). 

@@ -17,7 +17,7 @@ ms.date: 10/16/2017
 
 # mount
 
-> Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 You can use **mount** to mount Network File System (NFS) network shares.
 

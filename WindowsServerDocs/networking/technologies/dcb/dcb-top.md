@@ -6,13 +6,13 @@ ms.technology: networking
 ms.topic: article
 ms.assetid: da58f312-bd3b-4bb6-98ca-6177869dd6ad
 manager: brianlic
-ms.author: jamesmci
-author: jamesmci
+ms.author: pashort
+author: shortpatti
 ---
 
 # Data Center Bridging \(DCB\)
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 You can use this topic for introductory information about Data Center Bridging \(DCB\).
 

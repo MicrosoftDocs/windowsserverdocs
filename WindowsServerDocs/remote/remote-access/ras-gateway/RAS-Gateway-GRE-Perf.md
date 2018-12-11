@@ -7,8 +7,8 @@ ms.date:
 ms.technology: networking-ras
 ms.topic: article
 ms.assetid: c051b2ec-de0f-49d1-82b9-5742b259cd7c
-ms.author: jamesmci
-author: jamesmci
+ms.author: pashort
+author: shortpatti
 ---
 
 # RAS Gateway GRE Tunnel Throughput and Performance
@@ -20,7 +20,7 @@ You can use this topic to learn about Remote Access Server \(RAS\) Gateway Gener
 RAS Gateway is a software router and gateway that you can use in either single tenant mode or multitenant mode. This topic discusses a single tenant mode, high availability configuration with Failover Clustering. The GRE tunnel performance statistics that are presented in this topic are valid for RAS Gateway in both singele tenant and multitenant modes.
 
 >[!NOTE]
->Failover Clustering is a Windows Server feature that enables you to group multiple servers together into a fault-tolerant cluster. For more information, see [Failover Clustering](https://docs.microsoft.com/windows-server/failover-clustering/failover-clustering-overview).
+>Failover Clustering is a Windows Server feature that enables you to group multiple servers together into a fault-tolerant cluster. For more information, see [Failover Clustering](../../../failover-clustering/failover-clustering-overview.md)
 
 Single tenant mode allows organizations of any size to deploy the gateway as an exterior, or Internet\-facing edge virtual private network \(VPN\) server. In single tenant mode, you can deploy RAS Gateway on a physical server or virtual machine \(VM\). This topic describes RAS Gateway deployment on two Virtual Machines \(VMs\) that are configured in a failover cluster.
 
@@ -29,7 +29,7 @@ Single tenant mode allows organizations of any size to deploy the gateway as an 
 
 GRE is a lightweight tunneling protocol that can encapsulate a wide variety of network layer protocols inside virtual point\-to\-point links over an Internet Protocol internetwork. The Microsoft GRE implementation encapsulates both IPv4 and IPv6.
 
-For more information, see the section **RAS Gateway Deployment Scenarios** in the topic [RAS Gateway](https://docs.microsoft.com/windows-server/remote/remote-access/ras-gateway/ras-gateway#bkmk_deploy).
+For more information, see the section **RAS Gateway Deployment Scenarios** in the topic [RAS Gateway](https://docs.microsoft.com/windows-server/remote/remote-access/ras-gateway/ras-gateway#bkmk_deploy). 
 
 In this test scenario, which is depicted in the following illustration, the traffic flow that is measured moves from the Organization Intranet 2 out to the Organization Intranet 1. Tenant Workload VMs send network traffic from Intranet 2 to Intranet 1 by using RAS Gateway.
 

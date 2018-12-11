@@ -12,7 +12,8 @@ ms.assetid: 64f038e1-40ec-4c67-938b-72edea49e5d8
 author: lizap
 manager: dongill
 ms.author: elizapo
-ms.date: 03/23/2017
+ms.date: 07/24/2018
+ms.localizationpriority: medium
 ---
 # Get started with Remote Desktop on Android
 
@@ -23,6 +24,7 @@ You can use the Remote Desktop client for Android to work with Windows apps and 
 Use the following information to get started. Be sure to check out the [FAQ](remote-desktop-client-faq.md) if you have any questions.
 
 > [!NOTE]
+> - Curious about the new releases for the Android client? Check out [What's new for Remote Desktop on Android?](android-whatsnew.md)
 > You can run the client on Android 4.1 and newer devices as well as on Chromebooks with ChromeOS 53 installed. Learn more about Android applications on Chrome [here](https://sites.google.com/a/chromium.org/dev/chromium-os/chrome-os-systems-supporting-android-apps).
 
 ## Get the RD client and start using it
@@ -59,6 +61,9 @@ To create a Remote Desktop connection:
 Need to edit these settings? Tap the overflow menu (**...**) next to the name of the desktop, and then tap **edit**.
 
 Want to delete the connection? Again, tap the overflow menu (**...**), and then tap **remove**.
+
+>[!TIP]
+> If you get error 0xf07 about a bad password ("We couldn't connect to the remote PC because the password associated with the user account has expired"), change your password and try again.
 
 ### Add a remote resource
 Remote resources are RemoteApp programs, session-based desktops, and virtual desktops published using RemoteApp and Desktop Connections.
@@ -188,5 +193,3 @@ The client uses standard touch gestures. You can also use touch gestures to repl
 
 > [!TIP]
 > Questions and comments are always welcome. However, please do NOT post a request for troubleshooting help by using the comment feature at the end of this article. Instead, go to the [Remote Desktop client forum](https://social.technet.microsoft.com/forums/windowsserver/en-us/home?forum=winrdc) and start a new thread. Have a feature suggestion? Tell us in the [client user voice forum](https://remotedesktop.uservoice.com/forums/272085-remote-desktop-for-android).
-
-Not finding content you need? Windows 10 users, tell us what you want on [Feedback Hub](feedback-hub://?referrer=techDocsUcPage&tabid=2&contextid=898&newFeedback=true&topic=remote-desktop-android.md). 

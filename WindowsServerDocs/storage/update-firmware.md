@@ -99,7 +99,7 @@ Once a server is in production, it's a good idea to make as few changes to the s
 
 1. Review the firmware release notes and confirm that the update addresses issues that could affect your environment, and that the firmware doesn't contain any known issues that could adversely affect you.
 
-2. Install the firmware on a server in your lab that has identical drives (including the revision of the drive if there are multiple revisions of the same drive), and test the drive under load with the new firmware. For info about doing synthetic load testing, see [Test Storage Spaces Performance Using Synthetic Workloads](https://technet.microsoft.com/en-us/library/dn894707.aspx).
+2. Install the firmware on a server in your lab that has identical drives (including the revision of the drive if there are multiple revisions of the same drive), and test the drive under load with the new firmware. For info about doing synthetic load testing, see [Test Storage Spaces Performance Using Synthetic Workloads](https://technet.microsoft.com/library/dn894707.aspx).
 
 ## Automated firmware updates with Storage Spaces Direct
 
@@ -145,7 +145,7 @@ To get the roll-out of the new firmware started in this Storage Spaces Direct cl
 ```powershell
 $SpacesDirect = Get-StorageSubSystem Clus*
 
-$CurrentDoc = $SpacesDirect | Get-StorageHealtHealth Service etting -Name "System.Storage.SupportedComponents.Document"
+$CurrentDoc = $SpacesDirect | Get-StorageHealthSetting -Name "System.Storage.SupportedComponents.Document"
 
 $CurrentDoc.Value | Out-File <Path>
 ```

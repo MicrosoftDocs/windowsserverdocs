@@ -17,7 +17,7 @@ ms.date: 10/16/2017
 
 # list providers
 
-> Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 Lists shadow copy providers that are currently registered on the system.
 

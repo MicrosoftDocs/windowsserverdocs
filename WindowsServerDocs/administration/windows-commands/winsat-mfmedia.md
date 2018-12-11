@@ -1,7 +1,6 @@
 ---
 title: winsat mfmedia
-description: "WIndows Commands"
-description: "Windows Commands topic for **** - "
+description: "Windows Commands"
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -18,7 +17,7 @@ ms.date: 10/16/2017
 
 # winsat mfmedia
 
-> Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 Measures the performance of video decoding (playback) using the Media Foundation framework.
 

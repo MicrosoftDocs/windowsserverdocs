@@ -1,6 +1,6 @@
 ---
 title: perfmon
-description: "Windows Commands topic for **** - "
+description: "Windows Commands topic for perfmon "
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -12,12 +12,10 @@ ms.assetid: 9a8d5eca-8473-463e-a6e0-7bbd590b18e1
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
-ms.date: 10/16/2017
+ms.date: 07/25/2018
 ---
 
 # perfmon
-
-> Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Start Windows Reliability and Performance Monitor in a specific standalone mode.
 
@@ -38,4 +36,4 @@ perfmon </res|report|rel|sys>
 
 #### Additional references
 
-[Windows Performance Monitor [w8]](AssetId:53582ab0-24a0-411c-9c7a-7b2466741699)
+[Windows Performance Monitor](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc749154(v%3dws.11))

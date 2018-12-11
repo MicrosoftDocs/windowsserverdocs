@@ -28,7 +28,7 @@ open <computer> [<Port>]
 |-------|--------|  
 |<computer>|Specifies the remote computer to which you are trying to connect.|  
 |[<Port>]|Specifies a TCP port number to use to connect to an ftp server. By default, TCP port 21 is used.|  
-## remarks  
+## Remarks  
 You can use an IP address or computer name (in which case a DNS server or Hosts file must be available) to specify **computer**.  
 ## <a name="BKMK_Examples"></a>Examples  
 Connect to the ftp server at **ftp.microsoft.com**.  

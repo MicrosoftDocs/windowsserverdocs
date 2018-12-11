@@ -2,7 +2,7 @@
 ms.assetid: 3bde2505-4d52-4886-8c84-7f494bf43eb1
 title: Changes Made by Adprep.exe
 ms.custom: it-pro
-ms.author: billmath
+ms.author: joflore
 ms.date: 05/31/2017
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -11,7 +11,6 @@ ms.suite: na
 ms.technology: active-directory-domain-services
 ms.tgt_pltfrm: na
 ms.topic: article
-ms.assetid: a5f06078-afa4-45ac-ae8a-94723b95d2fd
 author: Femila
 ---
 # Changes Made by Adprep.exe

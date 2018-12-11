@@ -17,7 +17,7 @@ ms.date: 10/16/2017
 
 # help
 
-> Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 Provides online information about system commands (that is, non-network commands). If used without parameters, **help** lists and briefly describes every system command.
 

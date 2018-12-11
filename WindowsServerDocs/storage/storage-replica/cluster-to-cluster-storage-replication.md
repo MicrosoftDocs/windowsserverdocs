@@ -102,14 +102,14 @@ Many of these requirements can be determined by using the `Test-SRTopology` cmdl
     > -   All log disks must have the same sector sizes.  
     > -   The log volumes should use flash-based storage, such as SSD.  Microsoft recommends that the log storage be faster than the data storage. Log volumes must never be used for other workloads.
     > -   The data disks can use HDD, SSD, or a tiered combination and can use either mirrored or parity spaces or RAID 1 or 10, or RAID 5 or RAID 50.  
-    > -   The log volume must be at least 9GB by default and may be larger or smaller based on log requirements.
-    > -   When using Storage Spaces Direct (S2D) with an NVME or SSD cache, you see a greater than expected increase in latency when configuring Storage Replica replication between S2D clusters. The change in latency is proprtionally much higher than you see when using NVME and SSD in a performance + capacity configuration and no HDD tier nor capacity tier.
+    > -   The log volume must be at least 8GB by default and may be larger or smaller based on log requirements.
+    > -   When using Storage Spaces Direct (S2D) with an NVME or SSD cache, you see a greater than expected increase in latency when configuring Storage Replica replication between S2D clusters. The change in latency is proportionally much higher than you see when using NVME and SSD in a performance + capacity configuration and no HDD tier nor capacity tier.
 
 This issue occurs due to architectural limitations within SR's log mechanism combined with the extremely low latency of NVME when compared to slower media. When using the S2D cache, all IO of SR logs, along with all recent read/write IO of applications, will occur in the cache and never on the performance or capacity tiers. This means that all SR activity happens on the same speed media - this configuration is not supported not recommended (see https://aka.ms/srfaq for log recommendations). 
 
 When using S2D with HDDs, you cannot disable or avoid the cache. As a workaround, if using just SSD and NVME, you can configure just performance and capacity tiers. If using that configuration, and by placing the SR logs on the performance tier only with the data volumes they service being on the capacity tier only, you will avoid the high latency issue described above. The same could be done with a mix of faster and slower SSDs and no NVME.
 
-This workaround is of course not ideal and some customers may not be able to make use of it. The SR team is working on optimizations and and updated log mechanism for the future to reduce these artifical bottlenecks that occur. There is no ETA for this, but when available to TAP customers for testing, this FAQ will be updated. 
+This workaround is of course not ideal and some customers may not be able to make use of it. The SR team is working on optimizations and updated log mechanism for the future to reduce these artificial bottlenecks that occur. There is no ETA for this, but when available to TAP customers for testing, this FAQ will be updated. 
 
     -   **For JBOD enclosures:**  
 
@@ -131,7 +131,7 @@ This workaround is of course not ideal and some customers may not be able to mak
 
     -   **For Storage Spaces Direct:**  
 
-        1.  Ensure that each cluster can see that site's storage enclosures only by deploying Storage Spaces Direct. (https://docs.microsoft.com/en-us/windows-server/storage/storage-spaces/hyper-converged-solution-using-storage-spaces-direct) 
+        1.  Ensure that each cluster can see that site's storage enclosures only by deploying Storage Spaces Direct. (https://docs.microsoft.com/windows-server/storage/storage-spaces/hyper-converged-solution-using-storage-spaces-direct) 
 
         2.  Ensure that the SR log volumes will always be on the fastest flash storage and the data volumes on slower high capacity storage.
 
@@ -208,13 +208,13 @@ You will now create two normal failover clusters. After configuration, validatio
 ## Step 3: Set up Cluster to Cluster Replication using Windows PowerShell  
 Now you will set up cluster-to-cluster replication using Windows PowerShell. You can perform all of the steps below on the nodes directly or from a remote management computer that contains the Windows Server 2016 RSAT management tools  
 
-1.  Grant the first cluster full access to the other cluster by running the **Grant-ClusterAccess** cmdlet on any node in the first cluster, or remotely.  
+1.  Grant the first cluster full access to the other cluster by running the **Grant-SRAccess** cmdlet on any node in the first cluster, or remotely.  
 
     ```PowerShell
     Grant-SRAccess -ComputerName SR-SRV01 -Cluster SR-SRVCLUSB  
     ```  
 
-2.  Grant the second cluster full access to the other cluster by running the **Grant-ClusterAccess** cmdlet on any node in the second cluster, or remotely.  
+2.  Grant the second cluster full access to the other cluster by running the **Grant-SRAccess** cmdlet on any node in the second cluster, or remotely.  
 
     ```PowerShell
     Grant-SRAccess -ComputerName SR-SRV03 -Cluster SR-SRVCLUSA  
@@ -279,7 +279,7 @@ Now you will set up cluster-to-cluster replication using Windows PowerShell. You
        ```PowerShell
          while($true) {  
          $v = (Get-SRGroup -Name "Replication 2").replicas | Select-Object numofbytesremaining  
-         [System.Console]::Write("Number of bytes remaining: {0}`r", $v.numofbytesremaining)  
+         [System.Console]::Write("Number of bytes remaining: {0}`n", $v.numofbytesremaining)  
          Start-Sleep -s 5  
         }
         ```

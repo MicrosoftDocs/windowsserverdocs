@@ -6,14 +6,14 @@ ms.technology: networking
 ms.topic: article
 ms.assetid: 0bc6746f-2adb-43d8-a503-52f473833164
 manager: brianlic
-ms.author: jamesmci
-author: jamesmci
+ms.author: pashort
+author: shortpatti
 ---
 
 
 # Troubleshooting Converged NIC Configurations
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 You can use the following script to verify whether the RDMA configuration is correct on the Hyper-V host.
 
@@ -50,27 +50,31 @@ Perform the following steps if you receive unexpected results when you run the *
 5. Make sure vSwitch is created over the right physical adapter by checking its RDMA capabilities.
 6. Check EventViewer System log and filter by source “Hyper-V-VmSwitch”.
 
-## Get SmbClientNetworkInterface
+--- 
+
+## Get-SmbClientNetworkInterface
 
 As an additional step to verify your RDMA configuration, run the following Windows PowerShell command on the Hyper-V server.
 
 
-    Get SmbClientNetworkInterface
+    Get-SmbClientNetworkInterface
 
-### Get SmbClientNetworkInterface expected results
+### Get-SmbClientNetworkInterface expected results
 
 The host vNIC should appear as RDMA capable from SMB’s perspective as well.
 
 ![Network adapter properties](../../media/Converged-NIC/CNIC-Troubleshooting/cnic-tshoot-03.jpg)
 
 
-### Get SmbClientNetworkInterface unexpected results
+### Get-SmbClientNetworkInterface unexpected results
 
 1. Make sure the Mlnx miniport and Mlnx bus drivers are latest. For Mellanox, use at least drop 42. 
 2. Verify that Mlnx miniport and bus drivers match by checking the driver version through Device Manager. The bus driver can be found in System Devices. The name should start with Mellanox Connect-X 3 PRO VPI, as illustrated in the following screen shot of network adapter properties.
 3. Make sure Network Direct (RDMA) is enabled on both the physical NIC and host vNIC.
 4. Make sure the Hyper-V Virtual Switch is created over the right physical adapter by checking its RDMA capabilities.
 5. Check EventViewer logs for “SMB Client” in **Application And Services | Microsoft | Windows**.
+
+--- 
 
 ## Get-NetAdapterQos
 
@@ -91,6 +95,7 @@ If your results are unexpected, perform the following steps.
 1. Ensure that the physical network adapter supports Data Center Bridging \(DCB\) and QoS
 2. Ensure that the network adapter drivers are up to date.
 
+--- 
 
 ## Get-SmbMultiChannelConnection
 
@@ -110,7 +115,9 @@ Remote node’s IP address is shown as RDMA capable.
 If your results are unexpected, perform the following steps.
 
 1. Make sure ping works both ways.
-2. Make sure the firewall is not blocking SMB connection initiation. Specifically, enable the firewall rule for SMB Direct port 5445.
+2. Make sure the firewall is not blocking SMB connection initiation. Specifically, enable the firewall rule for SMB Direct port 5445 for iWARP and 445 for ROCE.
+
+--- 
 
 ## Get-SmbClientNetworkInterface
 
@@ -132,6 +139,8 @@ If your results are unexpected, perform the following steps.
 1. Make sure ping works both ways.
 2. Make sure firewall is not blocking SMB connection initiation.
 
+--- 
+
 ## vstat \(Mellanox specific\)
 
 If you are using Mellanox network adapters, you can use the **vstat** command to verify the RDMA over Converged Ethernet \(RoCE\) version on Hyper-V nodes.
@@ -149,6 +158,7 @@ If your results are unexpected, perform the following steps.
 1. Set correct RoCE version using Set-MlnxDriverCoreSetting
 2. Install the latest firmware from Mellanox website.
 
+--- 
 
 ## Perfmon Counters
 
@@ -156,11 +166,12 @@ You can review counters in Performance Monitor to verify the RDMA activity of yo
 
 ![Performance monitor result examples](../../media/Converged-NIC/CNIC-Troubleshooting/cnic-tshoot-08.jpg)
 
-## All topics in this guide
+--- 
 
-This guide contains the following topics.
+## Related topics
 
 - [Converged NIC Configuration with a Single Network Adapter](cnic-single.md)
 - [Converged NIC Teamed NIC Configuration](cnic-datacenter.md)
 - [Physical Switch Configuration for Converged NIC](cnic-app-switch-config.md)
-- [Troubleshooting Converged NIC Configurations](cnic-app-troubleshoot.md)
+
+---

@@ -27,6 +27,8 @@ ftp [-v] [-d] [-i] [-n] [-g] [-s:<FileName>] [-a] [-A] [-x:<SendBuffer>] [-r:<Re
 |Parameter|Description|
 |-------|--------|
 |-v|Suppresses display of remote server responses.|
+|-d|Enables debugging, displaying all commands passed between the FTP client and FTP server.|
+|-i|Disables interactive prompting during multiple file transfers.|
 |-n|Suppresses auto-login upon initial connection.|
 |-g|Disables file name globbing.  **Glob** permits the use of the asterisk (*) and question mark (?) as wildcard characters in local file and path names. For more information, see [additional references](ftp.md#BKMK_additionalRef).|
 |-s:<FileName>|Specifies a text file that contains **ftp** commands. These commands run automatically after **ftp** starts. This parameter allows no spaces. Use this parameter instead of redirection (**<**). **Note:** In Windows 8 and  Windows Server 2012  or later operating systems, the text file must be written in UTF-8.|
@@ -38,7 +40,7 @@ ftp [-v] [-d] [-i] [-n] [-g] [-s:<FileName>] [-a] [-A] [-x:<SendBuffer>] [-r:<Re
 |-w:<WindowsSize>|Specifies the size of the transfer buffer. The default window size is 4096 bytes.|
 |-?|Displays help at the command prompt.|
 |<host>|Specifies the computer name, IP address, or IPv6 address of the ftp server to which to connect. The host name or address, if specified, must be the last parameter on the line.|
-## remarks
+## Remarks
 -   for more information about **ftp** commands on Windows Server 2003, see [ftp](https://technet.microsoft.com/library/cc756013(v=ws.10).aspx).
 -   **ftp** command-line parameters are case-sensitive.
 -   This command is available only if the **Internet Protocol (TCP/IP)** protocol is installed as a component in the properties of a network adapter in Network Connections.

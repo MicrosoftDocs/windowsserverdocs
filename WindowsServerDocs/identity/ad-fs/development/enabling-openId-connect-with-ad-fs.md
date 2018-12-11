@@ -1,18 +1,18 @@
 ---
 ms.assetid: d282bb4e-38a0-4c7c-83d8-f6ea89278057
-title: Enabling OpenId Connect with AD FS 2016
+title: Build a web application using OpenID Connect with AD FS 2016
 description:
 author: billmath
 ms.author: billmath
-manager: femila
-ms.date: 05/31/2017
+manager: mtillman
+ms.date: 02/22/2018
 ms.topic: article
 ms.prod: windows-server-threshold
 
 ms.technology: identity-adfs
 ---
 
-# Enabling OpenId Connect with AD FS 2016
+# Build a web application using OpenID Connect with AD FS 2016
 
 >Applies To: Windows Server 2016
 
@@ -20,8 +20,6 @@ Building on the initial Oauth support in AD FS in Windows Server 2012 R2, AD FS 
   
 ## Pre-requisites  
 The following are a list of pre-requisites that are required prior to completing this document. This document assumes that AD FS has been installed and an AD FS farm has been created.  
-  
--   An Azure AD subscription (a free trial is fine)  
   
 -   GitHub client tools  
   
@@ -36,7 +34,7 @@ The following section describes how to configure the application group in AD FS 
   
 1.  In AD FS Management, right-click on Application Groups and select **Add Application Group**.  
   
-2.  On the Application Group Wizard, for the name enter **ADFSSSO** and under **Standalone applications**select the **Server application or Website** template.  Click **Next**.  
+2.  On the Application Group Wizard, for the name enter **ADFSSSO** and under **Standalone applications** select the **Server application or Website** template.  Click **Next**.  
   
     ![AD FS OpenID](media/Enabling-OpenId-Connect-with-AD-FS-2016/AD_FS_OpenID_1.PNG)  
   
@@ -64,8 +62,8 @@ The following section describes how to configure the application group in AD FS 
   
 11. On the **Configure Web API** screen, enter the following for **Identifier** - **https://contoso.com/WebApp**.  Click **Add**. Click **Next**.  
   
-    ![AD FS OpenID](media/Enabling-OpenId-Connect-with-AD-FS-2016/AD_FS_OpenID_7.PNG)  
-  
+    ![AD FS OpenID](media/Enabling-OpenId-Connect-with-AD-FS-2016/AD_FS_OpenID_7.PNG) 
+    
 12. On the **Choose Access Control Policy** screen, select **Permit everyone** and click **Next**.  
   
     ![AD FS OpenID](media/Enabling-OpenId-Connect-with-AD-FS-2016/AD_FS_Confidential_7.PNG)  
@@ -164,5 +162,6 @@ Once this is successful you should see that you are now signed in.
   
 ![AD FS OpenID](media/Enabling-OpenId-Connect-with-AD-FS-2016/AD_FS_OpenID_14.PNG)  
   
-
+## Next Steps
+[AD FS Development](../../ad-fs/AD-FS-Development.md)  
 

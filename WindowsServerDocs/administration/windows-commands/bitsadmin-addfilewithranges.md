@@ -17,7 +17,7 @@ ms.date: 10/16/2017
 
 # bitsadmin addfilewithranges
 
-> Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 Adds a file to the specified job. BITS downloads the specified ranges from the remote file.
 

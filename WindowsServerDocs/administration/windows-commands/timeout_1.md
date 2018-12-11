@@ -1,5 +1,5 @@
 ---
-title: timeout_1
+title: timeout
 description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
@@ -16,9 +16,9 @@ manager: dongill
 ms.date: 10/16/2017
 ---
 
-# timeout_1
+# timeout
 
-> Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 Pauses the command processor for the specified number of seconds.
 
@@ -27,7 +27,7 @@ For examples of how to use this command, see [Examples](#BKMK_examples).
 ## Syntax
 
 ```
-timeout/t <TimeoutInSeconds> [/nobreak] 
+timeout /t <TimeoutInSeconds> [/nobreak] 
 ```
 
 ## Parameters

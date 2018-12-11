@@ -17,7 +17,7 @@ ms.date: 10/16/2017
 
 # wbadmin get status
 
-> Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 Reports the status of the backup or recovery operation that is currently running.
 

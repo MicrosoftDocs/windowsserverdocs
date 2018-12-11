@@ -6,13 +6,13 @@ ms.technology: networking
 ms.prod: windows-server-threshold
 ms.topic: article
 ms.assetid: d57af0bd-9301-4f62-9888-f528cd10451d
-ms.author: jamesmci
-author: jamesmci
+ms.author: pashort
+author: shortpatti
 ---
 
-# Core Network Companion Guides
+# Core network companion guidance
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 While the Windows Server 2016 [Core Network Guide](https://technet.microsoft.com/windows-server-docs/networking/core-network-guide/core-network-guide) provides instructions on how to deploy a new Active Directory&reg; forest with a new root domain and the supporting networking infrastructure, Companion Guides provide you with the ability to add features to your network.
 
@@ -37,7 +37,7 @@ For instructions on how to deploy server certificates, see [Deploy Server Certif
 
 This companion guide explains how to build upon the core network by providing instructions about how to deploy Institute of Electrical and Electronics Engineers \(IEEE\) 802.1X\-authenticated IEEE 802.11 wireless access using Protected Extensible Authentication Protocol\–Microsoft Challenge Handshake Authentication Protocol version 2 \(PEAP\-MS\-CHAP v2\).
 
-The authentication method PEAP\-MS\-CHAP v2 requires that authenticating servers running Network Policy Server \(NPS\) present wireless clients with a server certificate to prove the NPS server identity to the client, however user authentication is not performed by using a certificate - instead, users provide their domain user name and password.
+The authentication method PEAP\-MS\-CHAP v2 requires that authenticating servers running Network Policy Server \(NPS\) present wireless clients with a server certificate to prove the NPS identity to the client, however user authentication is not performed by using a certificate - instead, users provide their domain user name and password.
 
 Because PEAP\-MS\-CHAP v2 requires that users provide password-based credentials rather than a certificate during the authentication process, it is typically easier and less expensive to deploy than EAP\-TLS or PEAP\-TLS.
 

@@ -6,7 +6,7 @@ ms.manager: eldenc
 ms.technology: storage-spaces
 ms.topic: article
 author: eldenchristensen
-ms.date: 03/20/2017
+ms.date: 10/08/2018
 Keywords: Storage Spaces Direct, S2D, maintenance
 ms.assetid: 73dd8f9c-dcdb-4b25-8540-1d8707e9a148
 ms.localizationpriority: medium
@@ -14,7 +14,7 @@ ms.localizationpriority: medium
 
 # Taking a Storage Spaces Direct server offline for maintenance
 
-> Applies To: Windows Server 2016
+> Applies to: Windows Server 2019, Windows Server 2016
 
 This topic provides guidance on how to properly restart or shutdown servers with [Storage Spaces Direct](storage-spaces-direct-overview.md).
 
@@ -82,9 +82,6 @@ Once the server has completed draining, it will show as **Paused** in Failover C
 
 You can now safely restart or shut it down, just like you would normally (for example, by using the Restart-Computer or Stop-Computer PowerShell cmdlets).
 
-   > [!NOTE]
-   > While the server is paused, storage IO does not flow to its drives. This means that although all your volumes remain online and accessible, they will show as **Incomplete** in Failover Cluster Manager or PowerShell. This is expected.
-
 ```PowerShell
 Get-VirtualDisk 
 
@@ -95,7 +92,7 @@ MyVolume2    Mirror                Incomplete        Warning      True          
 MyVolume3    Mirror                Incomplete        Warning      True           1 TB
 ```
 
-This is normal and should not cause concern. All your volumes remain online and accessible.
+Incomplete or Degraded Operational Status is normal when nodes are shutting down or starting/stopping the cluster service on a node and should not cause concern. All your volumes remain online and accessible.
 
 ## Resuming the server
 
@@ -119,7 +116,7 @@ To do this in Failover Cluster Manager, go to **Nodes**, right-click the node, a
 
 ## Waiting for storage to resync
 
-When the server resumes, any new writes that happened while it was paused (while its drives were not receiving storage IO) need to resync. This happens automatically. Using intelligent change tracking, it's not necessary for *all* data to be scanned or synchronized; only the changes. This process is throttled to mitigate impact to production workloads. Depending on how long the server was paused, and how much new data as written, it may take many minutes to complete.
+When the server resumes, any new writes that happened while it was unavailable need to resync. This happens automatically. Using intelligent change tracking, it's not necessary for *all* data to be scanned or synchronized; only the changes. This process is throttled to mitigate impact to production workloads. Depending on how long the server was paused, and how much new data as written, it may take many minutes to complete.
 
 You must wait for re-syncing to complete before taking any others servers in the cluster offline.
 
@@ -164,6 +161,23 @@ MyVolume3    Mirror                OK                Healthy      True          
 ```
 
 It's now safe to pause and restart other servers in the cluster.
+
+## How to update Storage Spaces Direct nodes offline
+Use the following steps to path your Storage Spaces Direct system quickly. It involves scheduling a maintenance window and taking the system down for patching. If there is a critical security update that you need applied quickly or maybe you need to ensure patching completes in your maintenance window, this method may be for you. This process brings down the Storage Spaces Direct cluster, patches it, and brings it all up again. The trade-off is downtime to the hosted resources.
+
+1. Plan your maintenance window.
+2. Take the virtual disks offline.
+3. Stop the cluster to take the storage pool offline. Run the  **Stop-Cluster** cmdlet or use Failover Cluster Manager to stop the cluster.
+4. Set the cluster service to **Disabled** in Services.msc on each node. This prevents the cluster service from starting up while being patched.
+5. Apply the Dec 2017 Cumulative Update (KB 4053579) to all nodes. (You can update all nodes at the same time, no need to wait since the cluster is down).  
+6. Restart the nodes, and ensure everything looks good.
+7. Set the cluster service back to **Automatic** on each node.
+8. Start the cluster. Run the **Start-Cluster** cmdlet or use Failover Cluster Manager. 
+
+   Give it a few minutes.  Make sure the storage pool is healthy.
+9. Bring the virtual disks back online.
+10. Monitor the status of the virtual disks by running the **Get-Volume** and **Get-VirtualDisk** cmdlets.
+
 
 ## See also
 

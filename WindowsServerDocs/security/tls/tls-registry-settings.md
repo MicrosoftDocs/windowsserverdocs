@@ -11,12 +11,12 @@ ms.topic: article
 author: justinha
 ms.author: justinha
 manager: brianlic-msft
-ms.date: 08/07/2017
+ms.date: 10/19/2018
 ---
 
 # Transport Layer Security (TLS) registry settings
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2008 R2, Windows Server 2008, Windows 10, Windows 8.1, Windows 8, Windows 7, Windows Vista
+>Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows 10
 
 This reference topic for the IT professional contains supported registry setting information for the Windows implementation of the Transport Layer Security (TLS) protocol and the Secure Sockets Layer (SSL) protocol through the Schannel Security Support Provider (SSP). 
 The registry subkeys and entries covered in this topic help you administer and troubleshoot the Schannel SSP, specifically the TLS and SSL protocols. 
@@ -82,12 +82,45 @@ Registry path: HKLM SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL
 
 Default client cache time
 
+## EnableOcspStaplingForSni
+
+Online Certificate Status Protocol (OCSP) stapling enables a web server, such as Internet Information Services (IIS), to provide the current revocation status of a server certificate when it sends the server certificate to a client during the TLS handshake. 
+This feature reduces the load on OCSP servers because the web server can cache the current OCSP status of the server certificate and send it to multiple web clients. 
+Without this feature, each web client would try to retrieve the current OCSP status of the server certificate from the OCSP server. 
+This would generate a high load on that OCSP server. 
+
+In addition to IIS, web services over http.sys can also benefit from this setting, including Active Directory Federation Services (AD FS) and Web Application Proxy (WAP). 
+
+By default, OCSP support is enabled for IIS websites that have a simple secure (SSL/TLS) binding. 
+However, this support is not enabled by default if the IIS website is using either or both of the following types of secure (SSL/TLS) bindings:
+- Require Server Name Indication
+- Use Centralized Certificate Store
+
+In this case, the server hello response during the TLS handshake won't include an OCSP stapled status by default. 
+This behavior improves performance: The Windows OCSP stapling implementation scales to hundreds of server certificates. 
+Because SNI and CCS enable IIS to scale to thousands of websites that potentially have thousands of server certificates, setting this behavior to be enabled by default may cause performance issues.
+
+Applicable versions: All versions beginning with Windows Server 2012 and Windows 8. 
+
+Registry path: [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL]
+
+Add the following key:
+
+"EnableOcspStaplingForSni"=dword:00000001
+
+To disable, set the DWORD value to 0:
+
+"EnableOcspStaplingForSni"=dword:00000000
+
+>[!NOTE] 
+>Enabling this registry key has a potential performance impact.
+
 ## FIPSAlgorithmPolicy
 
 This entry controls Federal Information Processing (FIPS) compliance. 
 The default is 0.
 
-Applicable versions: As designated in the **Applies To** list that is at the beginning of this topic. 
+Applicable versions: All versions beginning with Windows Server 2012 and Windows 8. 
 
 Registry path: HKLM SYSTEM\CurrentControlSet\Control\LSA
 
@@ -109,7 +142,7 @@ This registry entry specifies the cache size.
 This entry does not exist in the registry by default. 
 The default value is 100. 
 
-Applicable versions: As designated in the **Applies To** list that is at the beginning of this topic.
+Applicable versions: All versions beginning with Windows Server 2008 and Windows Vista.
 
 Registry path: HKLM SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL
 
@@ -124,7 +157,7 @@ This cache is kept for performance reasons, so that the system does not continue
 This entry does not exist in the registry by default. 
 The default value is 10 minutes.
 
-Applicable versions: As designated in the **Applies To** list that is at the beginning of this topic.
+Applicable versions: All versions beginning with Windows Server 2008 and Windows Vista.
 
 Registry path: HKLM SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL
 
@@ -182,7 +215,7 @@ Each session-cache element typically requires 2 to 4 KB of memory.
 This entry does not exist in the registry by default. 
 The default value is 20,000 elements. 
 
-Applicable versions: As designated in the **Applies To** list that is at the beginning of this topic.
+Applicable versions: All versions beginning with Windows Server 2008 and Windows Vista.
 
 Registry path: HKLM SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL
 
@@ -239,7 +272,7 @@ Default Send Trusted Issuer List behavior
 | Windows Server 2012 and Windows 8 and later | FALSE |
 | Windows Server 2008 R2 and Windows 7 and earlier | TRUE |
 
-Applicable versions: As designated in the **Applies To** list that is at the beginning of this topic.
+Applicable versions: All versions beginning with Windows Server 2008 and Windows Vista.
 
 Registry path: HKLM SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL
 
@@ -251,7 +284,7 @@ Increasing ServerCacheTime above the default values causes Lsass.exe to consume 
 Each session cache element typically requires 2 to 4 KB of memory. 
 This entry does not exist in the registry by default. 
 
-Applicable versions: As designated in the **Applies To** list that is at the beginning of this topic.
+Applicable versions: All versions beginning with Windows Server 2008 and Windows Vista.
 
 Registry path: HKLM SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL
 
@@ -266,10 +299,9 @@ For a SSL 2.0 default settings, see [Protocols in the TLS/SSL (Schannel SSP)](ht
 
 Registry path: HKLM SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols
 
-To enable the SSL 2.0 protocol, create an **Enabled** entry in the appropriate subkey. 
+To enable the SSL 2.0 protocol, create an **Enabled** entry in either the Client or Server subkey, as described in the following table. 
 This entry does not exist in the registry by default. 
 After you have created the entry, change the DWORD value to 1. 
-To disable the protocol, change the DWORD value to 0.
 
 SSL 2.0 subkey table
 
@@ -277,7 +309,17 @@ SSL 2.0 subkey table
 |--------|-------------|
 | Client | Controls the use of SSL 2.0 on the SSL client. |
 | Server | Controls the use of SSL 2.0 on the SSL server. |
-| DisabledByDefault | Flag to disable SSL 2.0 by default. |
+
+To disable SSL 2.0 for client or server, change the DWORD value to 0. 
+If an SSPI app requests to use SSL 2.0, it will be denied. 
+
+To disable SSL 2.0 by default, create a **DisabledByDefault** entry and change the DWORD value to 1. 
+If an SSPI app explcitly requests to use SSL 2.0, it will be negotiated. 
+
+The following example shows SSL 2.0 disabled in the registry:
+
+![SSL 2.0 disabled](images/ssl-2-registry-setting.png)
+
 
 ## SSL 3.0
 
@@ -288,10 +330,9 @@ For SSL 3.0 default settings, see [Protocols in the TLS/SSL (Schannel SSP)](http
 
 Registry path: HKLM SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols
 
-To enable the SSL 3.0 protocol, create an Enabled entry in the appropriate subkey. 
+To enable the SSL 3.0 protocol, create an **Enabled** entry in either the Client or Server subkey, as described in the following table.  
 This entry does not exist in the registry by default. 
 After you have created the entry, change the DWORD value to 1. 
-To disable the protocol, change the DWORD value to 0.
 
 SSL 3.0 subkey table
 
@@ -299,20 +340,28 @@ SSL 3.0 subkey table
 |--------|-------------|
 | Client | Controls the use of SSL 3.0 on the SSL client. |
 | Server | Controls the use of SSL 3.0 on the SSL server. |
-| DisabledByDefault | Flag to disable SSL 3.0 by default. |
+
+To disable SSL 3.0 for client or server, change the DWORD value to 0.
+If an SSPI app requests to use SSL 3.0, it will be denied. 
+
+To disable SSL 3.0 by default, create a **DisabledByDefault** entry and change the DWORD value to 1. 
+If an SSPI app explicitly requests to use SSL 3.0, it will be negotiated. 
+
+The following example shows SSL 3.0 disabled in the registry:
+
+![SSL 3.0 disabled](images/ssl-3-registry-setting.png)
 
 ## TLS 1.0
 
 This subkey controls the use of TLS 1.0.
 
-For TLS 1.0 default settings, see see [Protocols in the TLS/SSL (Schannel SSP)](https://msdn.microsoft.com/library/windows/desktop/mt808159.aspx).
+For TLS 1.0 default settings, see [Protocols in the TLS/SSL (Schannel SSP)](https://msdn.microsoft.com/library/windows/desktop/mt808159.aspx).
 
 Registry path: HKLM SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols
 
-To disable the TLS 1.0 protocol, create an **Enabled** entry in the appropriate subkey. 
+To enable the TLS 1.0 protocol, create an **Enabled** entry in either the Client or Server subkey as described in the following table. 
 This entry does not exist in the registry by default. 
-After you have created the entry, change the DWORD value to 0. 
-To enable the protocol, change the DWORD value to 1.
+After you have created the entry, change the DWORD value to 1. 
 
 TLS 1.0 subkey table
 
@@ -320,7 +369,16 @@ TLS 1.0 subkey table
 |--------|-------------|
 | Client | Controls the use of TLS 1.0 on the TLS client. |
 | Server | Controls the use of TLS 1.0 on the TLS server. |
-| DisabledByDefault | Flag to disable TLS 1.0 by default. |
+
+To disable TLS 1.0 for client or server, change the DWORD value to 0.
+If an SSPI app requests to use TLS 1.0, it will be denied. 
+
+To disable TLS 1.0 by default, create a **DisabledByDefault** entry and change the DWORD value to 1. 
+If an SSPI app explicitly requests to use TLS 1.0, it will be negotiated. 
+
+The following example shows TLS 1.0 disabled in the registry:
+
+![TLS 1.0 disabled](images/tls-registry-setting.png)
 
 ## TLS 1.1
 
@@ -334,10 +392,9 @@ For TLS 1.1 default settings, see [Protocols in the TLS/SSL (Schannel SSP)](http
 
 Registry path: HKLM SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols
 
-To disable the TLS 1.1 protocol, create an **Enabled** entry in the appropriate subkey. 
+To enable the TLS 1.1 protocol, create an **Enabled** entry in either the Client or Server subkey as described in the following table. 
 This entry does not exist in the registry by default. 
-After you have created the entry, change the DWORD value to 0. 
-To enable the protocol, change the DWORD value to 1.
+After you have created the entry, change the DWORD value to 1. 
 
 TLS 1.1 subkey table
 
@@ -345,7 +402,16 @@ TLS 1.1 subkey table
 |--------|-------------|
 | Client | Controls the use of TLS 1.1 on the TLS client. |
 | Server | Controls the use of TLS 1.1 on the TLS server. |
-| DisabledByDefault | Flag to disable TLS 1.1 by default. |
+
+To disable TLS 1.1 for client or server, change the DWORD value to 0.
+If an SSPI app requests to use TLS 1.1, it will be denied. 
+
+To disable TLS 1.1 by default, create a **DisabledByDefault** entry and change the DWORD value to 1. 
+If an SSPI app explicitly requests to use TLS 1.1, it will be negotiated. 
+
+The following example shows TLS 1.1 disabled in the registry:
+
+![TLS 1.1 disabled](images/tls-11-registry-setting.png)
 
 ## TLS 1.2
 
@@ -359,10 +425,9 @@ For TLS 1.2 default settings, see [Protocols in the TLS/SSL (Schannel SSP)](http
 
 Registry path: HKLM SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols
 
-To disable the TLS 1.2 protocol, create an **Enabled** entry in the appropriate subkey. 
+To enable the TLS 1.2 protocol, create an **Enabled** entry in either the Client or Server subkey as described in the following table. 
 This entry does not exist in the registry by default. 
-After you have created the entry, change the DWORD value to 0. 
-To enable the protocol, change the DWORD value to 1.
+After you have created the entry, change the DWORD value to 1. 
 
 TLS 1.2 subkey table
 
@@ -370,7 +435,16 @@ TLS 1.2 subkey table
 |--------|-------------|
 | Client | Controls the use of TLS 1.2 on the TLS client. |
 | Server | Controls the use of TLS 1.2 on the TLS server. |
-| DisabledByDefault | Flag to disable TLS 1.2 by default. |
+
+To disable TLS 1.2 for client or server, change the DWORD value to 0.
+If an SSPI app requests to use TLS 1.2, it will be denied. 
+
+To disable TLS 1.2 by default, create a **DisabledByDefault** entry and change the DWORD value to 1. 
+If an SSPI app explicitly requests to use TLS 1.2, it will be negotiated. 
+
+The following example shows TLS 1.2 disabled in the registry:
+
+![TLS 1.2 disabled](images/tls-12-registry-setting.png)
 
 ## DTLS 1.0
 
@@ -380,10 +454,9 @@ For DTLS 1.0 default settings, see [Protocols in the TLS/SSL (Schannel SSP)](htt
 
 Registry path: HKLM SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols
 
-To disable the DTLS 1.0 protocol, create an **Enabled** entry in the appropriate subkey. 
+To enable the DTLS 1.0 protocol, create an **Enabled** entry in either the Client or Server subkey as described in the following table. 
 This entry does not exist in the registry by default. 
-After you have created the entry, change the DWORD value to 0. 
-To enable the protocol, change the DWORD value to 1.
+After you have created the entry, change the DWORD value to 1. 
 
 DTLS 1.0 subkey table
 
@@ -391,7 +464,16 @@ DTLS 1.0 subkey table
 |--------|-------------|
 | Client | Controls the use of DTLS 1.0 on the DTLS client. |
 | Server | Controls the use of DTLS 1.0 on the DTLS server. |
-| DisabledByDefault | Flag to disable DTLS 1.0 by default. |
+
+To disable DTLS 1.0 for client or server, change the DWORD value to 0.
+If an SSPI app requests to use DTLS 1.0, it will be denied. 
+
+To disable DTLS 1.0 by default, create a **DisabledByDefault** entry and change the DWORD value to 1. 
+If an SSPI app explicitly requests to use DTLS 1.0, it will be negotiated. 
+
+The following example shows DTLS 1.0 disabled in the registry:
+
+![DTLS 1.0 disabled](images/dtls-10-registry-setting.png)
 
 ## DTLS 1.2
 
@@ -401,10 +483,9 @@ For DTLS 1.2 default settings, see [Protocols in the TLS/SSL (Schannel SSP)](htt
 
 Registry path: HKLM SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols
 
-To disable the DTLS 1.2 protocol, create an **Enabled** entry in the appropriate subkey. 
+To enable the DTLS 1.2 protocol, create an **Enabled** entry in either the Client or Server subkey as described in the following table. 
 This entry does not exist in the registry by default. 
-After you have created the entry, change the DWORD value to 0. 
-To enable the protocol, change the DWORD value to 1.
+After you have created the entry, change the DWORD value to 1. 
 
 DTLS 1.2 subkey table
 
@@ -412,5 +493,16 @@ DTLS 1.2 subkey table
 |--------|-------------|
 | Client | Controls the use of DTLS 1.2 on the DTLS client. |
 | Server | Controls the use of DTLS 1.2 on the DTLS server. |
-| DisabledByDefault | Flag to disable DTLS 1.2 by default. |
+
+
+To disable DTLS 1.2 for client or server, change the DWORD value to 0.
+If an SSPI app requests to use DTLS 1.0, it will be denied. 
+
+To disable DTLS 1.2 by default, create a **DisabledByDefault** entry and change the DWORD value to 1. 
+If an SSPI app explicitly requests to use DTLS 1.2, it will be negotiated. 
+
+The following example shows DTLS 1.1 disabled in the registry:
+
+![DTLS 1.1 disabled](images/dtls-11-registry-setting.png)
+
 

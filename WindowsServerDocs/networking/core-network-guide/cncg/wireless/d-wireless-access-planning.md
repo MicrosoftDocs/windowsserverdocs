@@ -6,12 +6,12 @@ ms.prod: windows-server-threshold
 ms.technology: networking
 ms.topic: article
 ms.assetid: 8c632d02-2270-4a82-8fc4-74ea3747f079
-ms.author: jamesmci
-author: jamesmci
+ms.author: pashort
+author: shortpatti
 ---
 # Wireless Access Deployment Planning
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 Before you deploy wireless access, you must plan the following items:
 
@@ -92,14 +92,14 @@ If you are deploying a large wireless network that includes many APs, it is much
 ### Plan the use of PEAP Fast Reconnect
 In an 802.1X infrastructure, wireless access points are configured as RADIUS clients to RADIUS servers. When PEAP fast reconnect is deployed, a wireless client that roams between two or more access points is not required to be authenticated with each new association.
 
-PEAP fast reconnect reduces the response time for authentication between client and authenticator because the authentication request is forwarded from the new access point to the NPS server that originally performed authentication and authorization for the client connection request.
+PEAP fast reconnect reduces the response time for authentication between client and authenticator because the authentication request is forwarded from the new access point to the NPS that originally performed authentication and authorization for the client connection request.
 
-Because both the PEAP client and NPS server both use previously cached Transport Layer Security \(TLS\) connection properties \(the collection of which is named the TLS handle\), the NPS server can quickly determine that the client is authorized for a reconnect.
+Because both the PEAP client and NPS both use previously cached Transport Layer Security \(TLS\) connection properties \(the collection of which is named the TLS handle\), the NPS can quickly determine that the client is authorized for a reconnect.
 
 >[!IMPORTANT]
->For fast reconnect to function correctly, the APs must be configured as RADIUS clients of the same NPS server.
+>For fast reconnect to function correctly, the APs must be configured as RADIUS clients of the same NPS.
 
-If the original NPS server becomes unavailable, or if the client moves to an access point that is configured as a RADIUS client to a different RADIUS server, full authentication must occur between the client and the new authenticator.
+If the original NPS becomes unavailable, or if the client moves to an access point that is configured as a RADIUS client to a different RADIUS server, full authentication must occur between the client and the new authenticator.
 
 ### Wireless AP configuration
 The following list summarizes items commonly configured on 802.1X\-capable wireless APs:
@@ -132,7 +132,7 @@ The following list summarizes items commonly configured on 802.1X\-capable wirel
 
 - **RADIUS shared secret**. Use a unique RADIUS shared secret for each wireless AP unless you are planning to configure NPS RADIUS clients in groups - in which circumstance you must configure all of the APs in the group with the same shared secret. Shared secrets should be a random sequence of at least 22 characters long, with both uppercase and lowercase letters, numbers, and punctuation. To ensure randomness, you can use a random character generation program to create your shared secrets. It is recommended that you record the shared secret for each wireless AP and store it in a secure location, such as an office safe. When you configure RADIUS clients in the NPS console you will create a virtual version of each AP. The shared secret that you configure on each virtual AP in NPS must match the shared secret on the actual, physical AP.
 
-- **RADIUS server IP address**. Type the IP address of the NPS server that you want to use to authenticate and authorize connection requests to this access point.
+- **RADIUS server IP address**. Type the IP address of the NPS that you want to use to authenticate and authorize connection requests to this access point.
 
 - **UDP port\(s\)**. By default, NPS uses UDP ports 1812 and 1645 for RADIUS authentication messages and UDP ports 1813 and 1646 for RADIUS accounting messages. It is recommended that you do not change the default RADIUS UDP ports settings.
 

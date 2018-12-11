@@ -1,5 +1,5 @@
 ---
-title: create_1
+title: create
 description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
@@ -15,9 +15,9 @@ manager: dongill
 ms.date: 10/16/2017
 ---
 
-# create_1
+# create
 
-> Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 Starts the shadow copy creation process, using the current context and option settings. Requires at least one volume in the Shadow Copy Set.
 

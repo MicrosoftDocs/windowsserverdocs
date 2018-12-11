@@ -17,7 +17,7 @@ ms.date: 10/16/2017
 
 # sort
 
-> Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 Reads input, sorts data, and writes the results to the screen, to a file, or to another device.
 
@@ -38,9 +38,9 @@ sort [/r] [/+<N>] [/m <Kilobytes>] [/l <Locale>] [/rec <Characters>] [[<Drive1>:
 |/m \<Kilobytes>|Specifies the amount of main memory to use for the sort in kilobytes (KB).|
 |/l \<Locale>|Overrides the sort order of characters that are defined by the system default locale (that is, the language and Country/Region selected during installation).|
 |/rec \<Characters>|Specifies the maximum number of characters in a record or a line of the input file (the default value is 4,096 and the maximum is 65,535).|
-|[\<Drive1>:][<Path1>]<FileName1>|Specifies the file to be sorted. If no file name is specified, the standard input is sorted. Specifying the input file is faster than redirecting the same file as standard input.|
-|/t [\<Drive2>:][<Path2>]|Specifies the path of the directory to hold the **sort** command's working storage if the data does not fit in the main memory. By default, the system temporary directory is used.|
-|/o [\<Drive3>:][<Path3>]<FileName3>|Specifies the file where the sorted input is to be stored. If not specified, the data is written to the standard output. Specifying the output file is faster than redirecting standard output to the same file.|
+|[\<Drive1>:][\<Path1>]\<FileName1>|Specifies the file to be sorted. If no file name is specified, the standard input is sorted. Specifying the input file is faster than redirecting the same file as standard input.|
+|/t [\<Drive2>:][\<Path2>]|Specifies the path of the directory to hold the **sort** command's working storage if the data does not fit in the main memory. By default, the system temporary directory is used.|
+|/o [\<Drive3>:][\<Path3>]\<FileName3>|Specifies the file where the sorted input is to be stored. If not specified, the data is written to the standard output. Specifying the output file is faster than redirecting standard output to the same file.|
 |/?|Displays help at the command prompt.|
 
 ## Remarks

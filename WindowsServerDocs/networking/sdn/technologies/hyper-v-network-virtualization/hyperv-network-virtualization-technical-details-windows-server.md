@@ -12,12 +12,12 @@ ms.technology:
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 9efe0231-94c1-4de7-be8e-becc2af84e69
-ms.author: jamesmci
-author: jamesmci
+ms.author: pashort
+author: shortpatti
 ---
 # Hyper-V Network Virtualization Technical Details in Windows Server 2016
 
->Applies To:  Windows Server 2016
+>Applies to:  Windows Server 2016
 
 Server virtualization enables multiple server instances to run concurrently on a single physical host; yet server instances are isolated from each other. Each virtual machine essentially operates as if it is the only server running on the physical computer.  
   
@@ -35,6 +35,13 @@ There are two HNV implementations which will be available in  Windows Server 201
 -   **HNVv1**  
   
     HNVv1 is compatible with  Windows Server 2012 R2  and System Center 2012 R2 Virtual Machine Manager (VMM). Configuration for HNVv1 relies on WMI management and Windows PowerShell cmdlets (facilitated through System Center VMM) to define isolation settings and Customer Address (CA) - virtual network - to Physical Address (PA) mappings and routing. No additional features have been added to HNVv1 in  Windows Server 2016 and no new features are planned.  
+    
+    •	SET Teaming and HNV V1 are not compatible by platform.
+    
+    o	To use HA NVGRE gateways users need to either use LBFO team or No team. Or
+    
+    o	Use Network Controller Deployed gateways with SET teamed switch.
+
   
 -   **HNVv2**  
   
@@ -140,7 +147,7 @@ As a result, the mechanism to virtualize the network is to virtualize the networ
 HNV implements overlay tenant networks using either Network Virtualization Generic Routing Encapsulation (NVGRE) or the Virtual eXtensible Local Area Network (VXLAN).  VXLAN is the default.  
   
 ### Virtual eXtensible Local Area Network (VXLAN)  
-The Virtual eXtensible Local Area Network (VXLAN) ([RFC 7348](http://www.rfc-editor.org/info/rfc7348)) protocol has been widely adopted in the market place, with support from vendors like Cisco, Brocade, Arista, Dell, HP and others. The VXLAN protocol uses UDP as the transport. The IANA-assigned UDP destination port for VXLAN is 4789 and the UDP source port should be a hash of information from the inner packet to be used for ECMP spreading. After the UDP header, a VXLAN header is appended to the packet which includes a reserved 4-byte field followed by a 3-byte field for the VXLAN Network Identifier (VNI) - VSID - followed by another reserved 1-byte field. After the VXLAN header, the original CA L2 frame (without the CA Ethernet frame FCS) is appended.  
+The Virtual eXtensible Local Area Network (VXLAN) ([RFC 7348](https://www.rfc-editor.org/info/rfc7348)) protocol has been widely adopted in the market place, with support from vendors like Cisco, Brocade, Arista, Dell, HP and others. The VXLAN protocol uses UDP as the transport. The IANA-assigned UDP destination port for VXLAN is 4789 and the UDP source port should be a hash of information from the inner packet to be used for ECMP spreading. After the UDP header, a VXLAN header is appended to the packet which includes a reserved 4-byte field followed by a 3-byte field for the VXLAN Network Identifier (VNI) - VSID - followed by another reserved 1-byte field. After the VXLAN header, the original CA L2 frame (without the CA Ethernet frame FCS) is appended.  
   
 ![VXLAN packet header](../../../media/hyper-v-network-virtualization-technical-details-in-windows-server/VXLAN-packet-header.png)  
   
@@ -284,8 +291,8 @@ To learn more about HNVv2 see the following links:
   
 |Content type|References|  
 |----------------|--------------|  
-|**Community Resources**|-   [Private Cloud Architecture Blog](http://blogs.technet.com/b/privatecloud)<br />-   Ask questions: [cloudnetfb@microsoft.com](mailto:%20cloudnetfb@microsoft.com)|  
-|**RFC**|-   [NVGRE Draft RFC](http://www.ietf.org/id/draft-sridharan-virtualization-nvgre-07.txt)<br />-   [VXLAN - RFC 7348](http://www.rfc-editor.org/info/rfc7348)|  
+|**Community Resources**|-   [Private Cloud Architecture Blog](https://blogs.technet.com/b/privatecloud)<br />-   Ask questions: [cloudnetfb@microsoft.com](mailto:%20cloudnetfb@microsoft.com)|  
+|**RFC**|-   [NVGRE Draft RFC](https://www.ietf.org/id/draft-sridharan-virtualization-nvgre-07.txt)<br />-   [VXLAN - RFC 7348](https://www.rfc-editor.org/info/rfc7348)|  
 |**Related Technologies**|-   For Hyper-V Network Virtualization  technical details in  Windows Server 2012 R2 , see [Hyper-V Network Virtualization technical details](https://technet.microsoft.com/library/jj134174.aspx)<br />-   [Network Controller](../../../sdn/technologies/network-controller/Network-Controller.md)|  
   
 

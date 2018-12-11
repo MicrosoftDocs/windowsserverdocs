@@ -6,12 +6,12 @@ ms.prod: windows-server-threshold
 ms.technology: networking-bc
 ms.topic: get-started-article
 ms.assetid: e753c56b-8902-4610-9c53-381e77bf29ab
-ms.author: jamesmci
-author: jamesmci
+ms.author: pashort
+author: shortpatti
 ---
 # Install and Configure Content Servers
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 When you deploy BranchCache in distributed cache mode or hosted cache mode, you must deploy one or more content servers at your main office or in the cloud. Content servers that are Web servers or application servers use the BranchCache feature. Content servers that are file servers use the BranchCache for network files role service of the File Services server role in Windows Server 2016.  
   

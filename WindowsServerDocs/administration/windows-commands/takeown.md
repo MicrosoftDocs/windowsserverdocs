@@ -1,6 +1,6 @@
 ---
 title: takeown
-description: "Windows Commands topic for **** - "
+description: Learn how to get access to a file by becoming the owner of the file.
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -17,8 +17,6 @@ ms.date: 10/16/2017
 
 # takeown
 
-> Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
-
 Enables an administrator to recover access to a file that previously was denied, by making the administrator the owner of the file.
 
 For examples of how to use this command, see [Examples](#BKMK_examples).
@@ -29,7 +27,7 @@ For examples of how to use this command, see [Examples](#BKMK_examples).
 takeown [/s <Computer> [/u [<Domain>\]<User name> [/p [<Password>]]]] /f <File name> [/a] [/r [/d {Y|N}]]
 ```
 
-## Parameters
+### Parameters
 
 |Parameter|Description|
 |---------|-----------|
@@ -39,7 +37,7 @@ takeown [/s <Computer> [/u [<Domain>\]<User name> [/p [<Password>]]]] /f <File n
 |/f \<File name>|Specifies the file name or directory name pattern. You can use the wildcard character * when specifying the pattern. You can also use the syntax *ShareName*\*FileName*.|
 |/a|Gives ownership to the Administrators group instead of the current user.|
 |/r|Performs a recursive operation on all files in the specified directory and subdirectories.|
-|/d {Y | N}|Suppresses the confirmation prompt that is displayed when the current user does not have the "List Folder" permission on a specified directory, and instead uses the specified default value. Valid values for the **/d** option are as follows:</br>-   Y: Take ownership of the directory.</br>-   N: Skip the directory.</br>Note that you must use this option in conjunction with the **/r** option.|
+|/d {Y \| N}|Suppresses the confirmation prompt that is displayed when the current user does not have the "List Folder" permission on a specified directory, and instead uses the specified default value. Valid values for the **/d** option are as follows:</br>-   Y: Take ownership of the directory.</br>-   N: Skip the directory.</br>Note that you must use this option in conjunction with the **/r** option.|
 |/?|Displays help at the command prompt.|
 
 ## Remarks

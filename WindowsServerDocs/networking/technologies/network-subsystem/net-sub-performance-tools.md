@@ -5,14 +5,15 @@ ms.prod: windows-server-threshold
 ms.technology: networking
 ms.topic: article
 ms.assetid: c7789781-87e8-464e-981b-af887d01badd
-manager: brianlic
-ms.author: jamesmci
-author: jamesmci
+manager: dougkim
+ms.author: pashort
+author: shortpatti
+ms.date: 07/16/2018
 ---
 
 # Performance Tools for Network Workloads
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 You can use this topic to learn about performance tools.
 
@@ -22,7 +23,7 @@ This topic contains sections about the Client to Server Traffic tool, TCP/IP Win
 
 The Client to Server Traffic \(ctsTraffic\) tool provides you with the ability to create and verify network traffic.
 
-For more information, and to download the tool, see [ctsTraffic (Client-To-Server Traffic)](http://ctstraffic.codeplex.com/).
+For more information, and to download the tool, see [ctsTraffic (Client-To-Server Traffic)](https://github.com/Microsoft/ctsTraffic).
   
 ##  <a name="bkmk_size"></a> TCP/IP Window Size
 

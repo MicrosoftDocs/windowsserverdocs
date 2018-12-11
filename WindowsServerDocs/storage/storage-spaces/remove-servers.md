@@ -14,7 +14,7 @@ ms.localizationpriority: medium
 
 # Removing servers in Storage Spaces Direct
 
->Applies To: Windows Server 2016
+>Applies to: Windows Server 2019, Windows Server 2016
 
 This topic describes how to remove servers in [Storage Spaces Direct](storage-spaces-direct-overview.md) using PowerShell.
 
@@ -53,7 +53,7 @@ To permanently scale-in (remove a server *and* its drives), your cluster must me
 
 #### Enough capacity
 
-First, you must have enough storage capacity in the remaining servers to accomodate all your volumes.
+First, you must have enough storage capacity in the remaining servers to accommodate all your volumes.
 
 For example, if you have four servers, each with 10 x 1 TB drives, you have 40 TB of total physical storage capacity. After removing one server and all its drives, you will have 30 TB of capacity left. If the footprints of your volumes are more than 30 TB together, they won't fit in the remaining servers, so the cmdlet will return an error and not move any data.
 

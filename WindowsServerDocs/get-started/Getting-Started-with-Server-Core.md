@@ -12,8 +12,8 @@ ms.topic: article
 ms.assetid: 2d22818c-fbb7-487a-bb82-81ef0a3f7ede
 author: jaimeo
 ms.author: jaimeo
-manager: elizapo
-ms.localizationpriority: high
+manager: dougkim
+ms.localizationpriority: medium
 ---
 # Install Server Core
 > Applies To: Windows Server (Semi-Annual Channel) and Windows Server 2016
@@ -45,7 +45,7 @@ With the Server Core option, the standard user interface (the Desktop Experience
 
 **Install, configure, uninstall server roles locally:** at a command prompt with Windows PowerShell.
 
-**Install, configure, uninstall server roles remotely from a Windows client computer (or server with Desktop installed:** with Server Manager, Remote Server Administration Tools (RSAT), Windows PowerShell, or Project Honolulu.
+**Install, configure, uninstall server roles remotely from a Windows client computer (or server with Desktop installed:** with Server Manager, Remote Server Administration Tools (RSAT), Windows PowerShell, or Windows Admin Center.
 
 >[!NOTE]
 >
@@ -80,7 +80,7 @@ To install the Server Core installation option in Windows Server 2016, see [Wind
 
 Installation steps for Windows Server, version 1709, are the same as installing previous versions of Windows Server (from an .ISO image), with the following exceptions:
 - No supported upgrades from previous versions of Windows Server to Windows Server, version 1709. A fresh installation is always required.
-   This means that when you run setup.exe from the desktop of a Windows computer, the setup experience will not permit the upgrade option (it is grayed out).
+   This means that when you run setup.exe from the desktop of a Windows computer, the setup experience does not permit the upgrade option (it is grayed out).
 - There’s no evaluation version for Windows Server, version 1709.
 - There’s no OEM or retail version. Windows Server version 1709 can only be licensed through Software Assurance or loyalty programs.
 

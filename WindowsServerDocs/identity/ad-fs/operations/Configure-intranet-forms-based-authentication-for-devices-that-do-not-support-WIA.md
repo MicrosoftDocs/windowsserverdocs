@@ -22,7 +22,7 @@ AD FS in Windows Server 2016 and Windows Server 2012 R2 provides the administrat
 
 
 - The **WIASupportedUserAgentStrings** property of the `Set-ADFSProperties` commandlet
-- The **WindowsIntegratedFallbackEnabled** property of the `Set-AdfsGlobalAuthenticationPolicy` commmandlet
+- The **WindowsIntegratedFallbackEnabled** property of the `Set-AdfsGlobalAuthenticationPolicy` commandlet
 
 The **WIASupportedUserAgentStrings** defines the user agents which support WIA. AD FS analyzes the user agent string when performing logins in a browser or browser control. If the component of the user agent string does not match any of the components of the user agent strings that are configured in **WIASupportedUserAgentStrings** property, AD FS will fall back to providing forms-based authentication, provided that the **WindowsIntegratedFallbackEnabled** flag is set to True.
 
@@ -41,7 +41,7 @@ MSIE 9.0|IE 9.0 (no devices send this, so no need to make this more specific)|
 MSIE 10.0; Windows NT 6|IE 10.0 for Windows XP and newer versions of desktop operating system</br></br>Windows Phone 8.0 devices (with preference set to mobile) are excluded because they send</br></br>User-Agent: Mozilla/5.0 (compatible; MSIE 10.0; Windows Phone 8.0; Trident/6.0; IEMobile/10.0; ARM; Touch; NOKIA; Lumia 920)|
 Windows NT 6.3; Trident/7.0</br></br>Windows NT 6.3; Win64; x64; Trident/7.0</br></br>Windows NT 6.3; WOW64; Trident/7.0| Windows 8.1 desktop operating system, different platforms|
 Windows NT 6.2; Trident/7.0</br></br>Windows NT 6.2; Win64; x64; Trident/7.0</br></br>Windows NT 6.2; WOW64; Trident/7.0|Windows 8 desktop operating system, different platforms|
-Windows NT 6.1; Trident/7.0</br></br>Windows NT 6.1; Win64; x64; Trident/7.0</br></br>Windows NT 6.1; WOW64; Trident/7.0|Windows 7 desktop operating system, different platoforms|
+Windows NT 6.1; Trident/7.0</br></br>Windows NT 6.1; Win64; x64; Trident/7.0</br></br>Windows NT 6.1; WOW64; Trident/7.0|Windows 7 desktop operating system, different platforms|
 MSIPC| Microsoft Information Protection and Control Client|
 Windows Rights Management Client|Windows Rights Management Client|
 

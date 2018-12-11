@@ -17,7 +17,7 @@ ms.date: 10/16/2017
 
 # Using the add-AllDriverPackages subcommand
 
-> Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 Adds all driver packages that are stored in a folder to a server.
 

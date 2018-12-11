@@ -12,12 +12,12 @@ ms.assetid: 76a310d7-9925-4571-a252-0e28960d5f89
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
-ms.date: 10/16/2017
+ms.date: 08/21/2018
 ---
 
 # xcopy
 
-> Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 Copies files and directories, including subdirectories
 
@@ -47,7 +47,7 @@ Xcopy <Source> [<Destination>] [/w] [/p] [/c] [/v] [/q] [/f] [/l] [/g] [/d [:MM-
 |/u|Copies files from *Source* that exist on *Destination* only.|
 |/i|If *Source* is a directory or contains wildcards and *Destination* does not exist, **xcopy** assumes *Destination* specifies a directory name and creates a new directory. Then, **xcopy** copies all specified files into the new directory. By default, **xcopy** prompts you to specify whether *Destination* is a file or a directory.|
 |/s|Copies directories and subdirectories, unless they are empty. If you omit **/s**, **xcopy** works within a single directory.|
-|/e|Copies all subdirectories, even if they are empty. Use **/e** with the **/s** and **/t** command-line options. **/t**|
+|/e|Copies all subdirectories, even if they are empty. Use **/e** with the **/s** and **/t** command-line options.|
 |/t|Copies the subdirectory structure (that is, the tree) only, not files. To copy empty directories, you must include the **/e** command-line option.|
 |/k|Copies files and retains the read-only attribute on *Destination* files if present on the *Source* files. By default, **xcopy** removes the read-only attribute.|
 |/r|Copies read-only files.|
@@ -57,23 +57,22 @@ Xcopy <Source> [<Destination>] [/w] [/p] [/c] [/v] [/q] [/f] [/l] [/g] [/d [:MM-
 |/n|Creates copies by using the NTFS short file or directory names. **/n** is required when you copy files or directories from an NTFS volume to a FAT volume or when the FAT file system naming convention (that is, 8.3 characters) is required on the *Destination* file system. The *Destination* file system can be FAT or NTFS.|
 |/o|Copies file ownership and discretionary access control list (DACL) information.|
 |/x|Copies file audit settings and system access control list (SACL) information (implies **/o**).|
-|/exclude:FileName1[+[FileName2][+[FileName3]( \)]|Specifies a list of files. At least one file must be specified. Each file will contain search strings with each string on a separate line in the file.</br>When any of the strings match any part of the absolute path of the file to be copied, that file will be excuded from being copied. For example, specifying the string, or will exclude all files underneath the directory **obj** or all files with the **.obj** extension.|
+|/exclude:FileName1[+[FileName2][+[FileName3]( \)]|Specifies a list of files. At least one file must be specified. Each file will contain search strings with each string on a separate line in the file.</br>When any of the strings match any part of the absolute path of the file to be copied, that file will be excuded from being copied. For example, specifying the string **obj** will exclude all files underneath the directory **obj** or all files with the **.obj** extension.|
 |/y|Suppresses prompting to confirm that you want to overwrite an existing destination file.|
 |/-y|Prompts to confirm that you want to overwrite an existing destination file.|
 |/z|Copies over a network in restartable mode.|
 |/b|Copies the symbolic link instead of the files. This parameter was introduced in Windows Vista®.|
-|/j|Copies files without buffering. Recommended for very large files. This parameter was added introduced in Windows Server® 2008 R2.|
+|/j|Copies files without buffering. Recommended for very large files. This parameter was added in Windows Server 2008 R2.|
 |/?|Displays help at the command prompt.|
 
 ## Remarks
 
--   Using **/v**
 -   Using **/z**
 
     If you lose your connection during the copy phase (for example, if the server going offline severs the connection), it resumes after you reestablish the connection. **/z** also displays the percentage of the copy operation completed for each file.
 -   Using **/y** in the COPYCMD environment variable.
 
-    You can use **/y** in the COPYCMD environment variable. You can override this command by using **/-y** on the command line. By default, you are prompted to overwrite, unless you run **xcopy** from within a batch script.
+    You can use **/y** in the COPYCMD environment variable. You can override this command by using **/-y** on the command line. By default, you are prompted to overwrite.
 -   Copying encrypted files
 
     Copying encrypted files to a volume that does not support EFS results in an error. Decrypt the files first or copy the files to a volume that does support EFS.
@@ -149,9 +148,11 @@ rem the source drive or directory (%1) to the destination
 rem drive or directory (%2)
 xcopy %1 %2 /s /e
 if errorlevel 4 goto lowmemory
-if errorlevel 2 goto abortif errorlevel 0 goto exit
+if errorlevel 2 goto abort
+if errorlevel 0 goto exit
 :lowmemory
-echo Insufficient memory to copy files orecho invalid drive or command-line syntax.
+echo Insufficient memory to copy files or
+echo invalid drive or command-line syntax.
 goto exit
 :abort
 echo You pressed CTRL+C to end the copy operation.
@@ -162,7 +163,7 @@ To use this batch program to copy all files in the C:\Prgmcode directory and its
 ```
 copyit c:\prgmcode b:
 ```
-The command interpreter substitutes **C:\Prgmcode** for *%1* and **B:** for *%2*, then uses **xcopy** with the **/e** and **/s** command-line options. If **xcopy**encounters an error, the batch program reads the exit code and goes to the label indicated in the appropriate **IF ERRORLEVEL** statement, then displays the appropriate message and exits from the batch program.
+The command interpreter substitutes **C:\Prgmcode** for *%1* and **B:** for *%2*, then uses **xcopy** with the **/e** and **/s** command-line options. If **xcopy** encounters an error, the batch program reads the exit code and goes to the label indicated in the appropriate **IF ERRORLEVEL** statement, then displays the appropriate message and exits from the batch program.
 
 #### <a name="BKMK_addref"></a>Additional references
 

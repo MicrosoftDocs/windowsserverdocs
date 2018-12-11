@@ -1,6 +1,6 @@
 ---
 title: ren
-description: "Windows Commands topic for **** - "
+description: Learn how to rename a file or directory with the ren command.
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -12,12 +12,10 @@ ms.assetid: 60398e12-a05d-4524-a73a-0a925943e21d
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
-ms.date: 10/16/2017
+ms.date: 07/11/2018
 ---
 
 # ren
-
-> Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Renames files or directories. This command is the same as the **rename** command.
 
@@ -34,7 +32,7 @@ rename [<Drive>:][<Path>]<FileName1> <FileName2>
 
 |Parameter|Description|
 |---------|-----------|
-|[\<Drive>:][<Path>]<FileName1>|Specifies the location and name of the file or set of files you want to rename. *FileName1* can include wildcard characters (**&#42;** and **?**).|
+|[\<Drive>:][\<Path>]\<FileName1>|Specifies the location and name of the file or set of files you want to rename. *FileName1* can include wildcard characters (**&#42;** and **?**).|
 |\<FileName2>|Specifies the new name for the file. You can use wildcard characters to specify new names for multiple files.|
 |/?|Displays help at the command prompt.|
 

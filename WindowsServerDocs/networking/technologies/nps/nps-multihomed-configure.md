@@ -6,15 +6,15 @@ ms.prod: windows-server-threshold
 ms.technology: networking
 ms.topic: article
 ms.assetid: d9d9e9ac-4859-4522-89ed-a23092c9e12a
-ms.author: jamesmci 
-author: jamesmci
+ms.author: pashort 
+author: shortpatti
 ---
 
 # Configure NPS on a Multihomed Computer
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
 
-You can use this topic to configure an NPS server with multiple network adapters.
+You can use this topic to configure an NPS with multiple network adapters.
 
 When you use multiple network adapters in a server running Network Policy Server (NPS), you can configure the following:
 
@@ -27,11 +27,11 @@ By default, NPS listens for RADIUS traffic on ports 1812, 1813, 1645, and 1646 f
 >[!NOTE]
 >If you uninstall either IPv4 or IPv6 on a network adapter, NPS does not monitor RADIUS traffic for the uninstalled protocol.
 
-On an NPS server that has multiple network adapters installed, you might want to configure NPS to send and receive RADIUS traffic only on the adapters you specify.
+On an NPS that has multiple network adapters installed, you might want to configure NPS to send and receive RADIUS traffic only on the adapters you specify.
 
-For example, one network adapter installed in the NPS server might lead to a network segment that does not contain RADIUS clients, while a second network adapter provides NPS with a network path to its configured RADIUS clients. In this scenario, it is important to direct NPS to use the second network adapter for all RADIUS traffic.
+For example, one network adapter installed in the NPS might lead to a network segment that does not contain RADIUS clients, while a second network adapter provides NPS with a network path to its configured RADIUS clients. In this scenario, it is important to direct NPS to use the second network adapter for all RADIUS traffic.
 
-In another example, if your NPS server has three network adapters installed, but you only want NPS to use two of the adapters for RADIUS traffic, you can configure port information for the two adapters only. By excluding port configuration for the third adapter, you prevent NPS from using the adapter for RADIUS traffic.
+In another example, if your NPS has three network adapters installed, but you only want NPS to use two of the adapters for RADIUS traffic, you can configure port information for the two adapters only. By excluding port configuration for the third adapter, you prevent NPS from using the adapter for RADIUS traffic.
 
 ## Using a network adapter
 
@@ -48,14 +48,14 @@ The following characters can be used as delimiters for configuring IP address an
 
 ## Configuring network access servers
 
-Make sure that your network access servers are configured with the same RADIUS UDP port numbers that you configure on your NPS servers. The RADIUS standard UDP ports defined in RFCs 2865 and 2866 are 1812 for authentication and 1813 for accounting; however, some access servers are configured by default to use UDP port 1645 for authentication requests and UDP port 1646 for accounting requests.
+Make sure that your network access servers are configured with the same RADIUS UDP port numbers that you configure on your NPSs. The RADIUS standard UDP ports defined in RFCs 2865 and 2866 are 1812 for authentication and 1813 for accounting; however, some access servers are configured by default to use UDP port 1645 for authentication requests and UDP port 1646 for accounting requests.
 
 >[!IMPORTANT]
 >If you do not use the RADIUS default port numbers, you must configure exceptions on the firewall for the local computer to allow RADIUS traffic on the new ports. For more information, see [Configure Firewalls for RADIUS Traffic](nps-firewalls-configure.md).
 
-## Configure the multihomed NPS server
+## Configure the multihomed NPS
 
-You can use the following procedure to configure your multihomed NPS server.
+You can use the following procedure to configure your multihomed NPS.
 
 Membership in **Domain Admins**, or equivalent, is the minimum required to complete this procedure.
 

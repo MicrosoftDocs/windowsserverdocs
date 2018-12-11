@@ -6,13 +6,13 @@ ms.prod: windows-server-threshold
 ms.technology: networking
 ms.topic: article
 ms.assetid: 849d661a-42c1-4f93-b669-6009d52aad39
-ms.author: jamesmci 
-author: jamesmci
+ms.author: pashort 
+author: shortpatti
 ---
 
 # Connection Request Processing
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 You can use this topic to learn about connection request processing in Network Policy Server in Windows Server 2016.
 
@@ -49,21 +49,21 @@ When you use NPS as a RADIUS server, RADIUS messages provide authentication, aut
 
 1. Access servers, such as dial-up network access servers, VPN servers, and wireless access points, receive connection requests from access clients. 
 
-2. The access server, configured to use RADIUS as the authentication, authorization, and accounting protocol, creates an Access-Request message and sends it to the NPS server. 
+2. The access server, configured to use RADIUS as the authentication, authorization, and accounting protocol, creates an Access-Request message and sends it to the NPS. 
 
-3. The NPS server evaluates the Access-Request message. 
+3. The NPS evaluates the Access-Request message. 
 
-4. If required, the NPS server sends an Access-Challenge message to the access server. The access server processes the challenge and sends an updated Access-Request to the NPS server. 
+4. If required, the NPS sends an Access-Challenge message to the access server. The access server processes the challenge and sends an updated Access-Request to the NPS. 
 
 5. The user credentials are checked and the dial-in properties of the user account are obtained by using a secure connection to a domain controller. 
 
 6. The connection attempt is authorized with both the dial-in properties of the user account and network policies. 
 
-7. If the connection attempt is both authenticated and authorized, the NPS server sends an Access-Accept message to the access server. If the connection attempt is either not authenticated or not authorized, the NPS server sends an Access-Reject message to the access server. 
+7. If the connection attempt is both authenticated and authorized, the NPS sends an Access-Accept message to the access server. If the connection attempt is either not authenticated or not authorized, the NPS sends an Access-Reject message to the access server. 
 
-8. The access server completes the connection process with the access client and sends an Accounting-Request message to the NPS server, where the message is logged. 
+8. The access server completes the connection process with the access client and sends an Accounting-Request message to the NPS, where the message is logged. 
 
-9. The NPS server sends an Accounting-Response to the access server. 
+9. The NPS sends an Accounting-Response to the access server. 
 
 >[!NOTE]
 >The access server also sends Accounting-Request messages during the time in which the connection is established, when the access client connection is closed, and when the access server is started and stopped.
@@ -74,7 +74,7 @@ When NPS is used as a RADIUS proxy between a RADIUS client and a RADIUS server, 
 
 1. Access servers, such as dial-up network access servers, virtual private network (VPN) servers, and wireless access points, receive connection requests from access clients.
 
-2. The access server, configured to use RADIUS as the authentication, authorization, and accounting protocol, creates an Access-Request message and sends it to the NPS server that is being used as the NPS RADIUS proxy.
+2. The access server, configured to use RADIUS as the authentication, authorization, and accounting protocol, creates an Access-Request message and sends it to the NPS that is being used as the NPS RADIUS proxy.
 
 3. The NPS RADIUS proxy receives the Access-Request message and, based on the locally configured connection request policies, determines where to forward the Access-Request message.
 

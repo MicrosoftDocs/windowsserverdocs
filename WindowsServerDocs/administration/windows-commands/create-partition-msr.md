@@ -39,7 +39,7 @@ create partition msr [size=<n>] [offset=<n>] [noerr]
 |offset\=<n>|Specifies the offset in kilobytes \(KB\), at which the partition is created. The offset rounds up to completely fill whatever sector size is used. If no offset is given, the partition is placed in the first disk extent that is large enough to hold it.|  
 |noerr|for scripting only. When an error is encountered, DiskPart continues to process commands as if the error did not occur. Without this parameter, an error causes DiskPart to exit with an error code.|  
   
-## remarks  
+## Remarks  
   
 -   On gpt disks that are used to boot the Windows operating system, the Extensible Firmware Interface \(EFI\) system partition is the first partition on the disk, followed by the Microsoft Reserved partition. gpt disks that are used only for data storage do not have an EFI system partition, in which case the Microsoft Reserved partition is the first partition.  
   

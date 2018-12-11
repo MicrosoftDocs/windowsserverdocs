@@ -20,6 +20,7 @@ ms.date: 10/16/2017
 
 Ends one or more tasks or processes. Processes can be ended by process ID or image name. **taskkill** replaces the **kill** tool.
 for examples of how to use this command, see [Examples](#BKMK_examples).
+
 ## Syntax
 ```
 taskkill [/s <computer> [/u [<Domain>\]<UserName> [/p [<Password>]]]] {[/fi <Filter>] [...] [/pid <ProcessID> | /im <ImageName>]} [/f] [/t]
@@ -27,14 +28,15 @@ taskkill [/s <computer> [/u [<Domain>\]<UserName> [/p [<Password>]]]] {[/fi <Fil
 ## Parameters
 |Parameter|Description|
 |-------|--------|
-|/s <computer>|Specifies the name or IP address of a remote computer (do not use backslashes). The default is the local computer.|
-|/u <Domain>\\<UserName>|Runs the command with the account permissions of the user who is specified by *UserName* or *Domain*\\*UserName*. **/u** can be specified only if **/s** is specified. The default is the permissions of the user who is currently logged on to the computer that is issuing the command.|
-|/p <Password>|Specifies the password of the user account that is specified in the **/u** parameter.|
-|/fi <Filter>|Applies a filter to select a set of tasks. You can use more than one filter or use the wildcard character (**\***) to specify all tasks or image names. See the following [table for valid filter names](#BKMK_table), operators, and values.|
-|/pid <ProcessID>|Specifies the process ID of the process to be terminated.|
-|/im <ImageName>|Specifies the image name of the process to be terminated. Use the wildcard character (**\***) to specify all image names.|
+|/s \<computer>|Specifies the name or IP address of a remote computer (do not use backslashes). The default is the local computer.|
+|/u \<Domain>\\\<UserName>|Runs the command with the account permissions of the user who is specified by *UserName* or *Domain*\\*UserName*. **/u** can be specified only if **/s** is specified. The default is the permissions of the user who is currently logged on to the computer that is issuing the command.|
+|/p \<Password>|Specifies the password of the user account that is specified in the **/u** parameter.|
+|/fi \<Filter>|Applies a filter to select a set of tasks. You can use more than one filter or use the wildcard character (**\***) to specify all tasks or image names. See the following [table for valid filter names](#BKMK_table), operators, and values.|
+|/pid \<ProcessID>|Specifies the process ID of the process to be terminated.|
+|/im \<ImageName>|Specifies the image name of the process to be terminated. Use the wildcard character (**\***) to specify all image names.|
 |/f|Specifies that processes be forcefully terminated. This parameter is ignored for remote processes; all remote processes are forcefully terminated.|
 |/t|Terminates the specified process and any child processes started by it.|
+
 #### <a name="BKMK_table"></a>Filter names, operators, and values
 |Filter Name|Valid Operators|Valid Value(s)|
 |--------|----------|----------|
@@ -48,13 +50,15 @@ taskkill [/s <computer> [/u [<Domain>\]<UserName> [/p [<Password>]]]] {[/fi <Fil
 |SERVICES|eq, ne|Service name|
 |WINDOWTITLE|eq, ne|Window title|
 |MODULES|eq, ne|DLL name|
-## remarks
--   The WINDOWTITLE and STatUS filters are not supported when a remote system is specified.
--   The wildcard character (**\***) is accepted for the **/im** option only when a filter is applied.
--   Termination of remote processes is always carried out forcefully, regardless of whether the **/f** option is specified.
--   Supplying a computer name to the hostname filter causes a shutdown and all processes are stopped.
--   You can use **tasklist** to determine the process ID (PID) for the process to be terminated.
-## <a name="BKMK_examples"></a>Examples
+
+## Remarks
+* The WINDOWTITLE and STatUS filters are not supported when a remote system is specified.
+* The wildcard character (**\***) is accepted for the **/im** option only when a filter is applied.
+* Termination of remote processes is always carried out forcefully, regardless of whether the **/f** option is specified.
+* Supplying a computer name to the hostname filter causes a shutdown and all processes are stopped.
+* You can use **tasklist** to determine the process ID (PID) for the process to be terminated.
+
+## Examples
 To end the processes with process IDs 1230, 1241, and 1253, type:
 ```
 taskkill /pid 1230 /pid 1241 /pid 1253
@@ -75,5 +79,6 @@ To end all processes that have a process ID greater than or equal to 1000, regar
 ```
 taskkill /f /fi "PID ge 1000" /im *
 ```
+
 #### additional references
 [Command-Line Syntax Key](command-line-syntax-key.md)

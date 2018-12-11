@@ -1,20 +1,21 @@
 ---
 title: Configure Network Policy Server Accounting
 description: This topic provides information about text file and SQL Server logging for Network Policy Server in Windows Server 2016.
-manager: brianlic
+manager: dougkim
 ms.prod: windows-server-threshold
 ms.technology: networking
 ms.topic: article
 ms.assetid: dfde2e21-f3d5-41e8-8492-cb3f0d028afb
-ms.author: jamesmci 
-author: jamesmci
+ms.author: pashort 
+author: shortpatti
+ms.date: 05/25/2018
 ---
 
 # Configure Network Policy Server Accounting
 
 There are three types of logging for Network Policy Server \(NPS\):
 
-- **Event logging**. Used primarily for auditing and troubleshooting connection attempts. You can configure NPS event logging by obtaining the NPS server properties in the NPS console.
+- **Event logging**. Used primarily for auditing and troubleshooting connection attempts. You can configure NPS event logging by obtaining the NPS properties in the NPS console.
 
 - **Logging user authentication and accounting requests to a local file**. Used primarily for connection analysis and billing purposes. Also useful as a security investigation tool because it provides you with a method of tracking the activity of a malicious user after an attack. You can configure local file logging using the Accounting Configuration wizard.
 
@@ -68,12 +69,8 @@ Membership in the **Domain Admins** group is the minimum required to perform thi
 4. In **Log File Properties**, on the **Settings** tab, in **Log the following information**, ensure that you choose to log enough information to achieve your accounting goals. For example, if your logs need to accomplish session correlation, select all check boxes.
 5. In **Logging failure action**, select **If logging fails, discard connection requests** if you want NPS to stop processing Access-Request messages when log files are full or unavailable for some reason. If you want NPS to continue processing connection requests if logging fails, do not select this check box.
 6. In the **Log File Properties** dialog box, click the **Log File** tab.
-7. On the **Log File** tab, in **Directory**, type the location where you want to store NPS log files. The default location is the systemroot\System32\LogFiles folder.
-	>[!NOTE]
-	>If you do not supply a full path statement in **Log File Directory**, the default path is used. For example, if you type **NPSLogFile** in **Log File Directory**, the file is located at %systemroot%\System32\NPSLogFile.
-8. In **Format**, click **DTS Compliant**. If you prefer, you can instead select a legacy file format, such as **ODBC \(Legacy\)** or **IAS \(Legacy\)**.
-	>[!NOTE]
-	>**ODBC** and **IAS** legacy file types contain a subset of the information that NPS sends to its SQL Server database. The **DTS Compliant** file type’s XML format is identical to the XML format that NPS uses to import data into its SQL Server database. Therefore, the **DTS Compliant** file format provides a more efficient and complete transfer of data into the standard SQL Server database for NPS.
+7. On the **Log File** tab, in **Directory**, type the location where you want to store NPS log files. The default location is the systemroot\System32\LogFiles folder.<br>If you do not supply a full path statement in **Log File Directory**, the default path is used. For example, if you type **NPSLogFile** in **Log File Directory**, the file is located at %systemroot%\System32\NPSLogFile.
+8. In **Format**, click **DTS Compliant**. If you prefer, you can instead select a legacy file format, such as **ODBC \(Legacy\)** or **IAS \(Legacy\)**.<br>**ODBC** and **IAS** legacy file types contain a subset of the information that NPS sends to its SQL Server database. The **DTS Compliant** file type’s XML format is identical to the XML format that NPS uses to import data into its SQL Server database. Therefore, the **DTS Compliant** file format provides a more efficient and complete transfer of data into the standard SQL Server database for NPS.
 9. In **Create a new log file**, to configure NPS to start new log files at specified intervals, click the interval that you want to use:
 	- For heavy transaction volume and logging activity, click **Daily**.
 	- For lesser transaction volumes and logging activity, click **Weekly** or **Monthly**.
@@ -113,7 +110,7 @@ Membership in Domain Admins, or equivalent, is the minimum required to complete 
 
 ## Ping user-name
 
-Some RADIUS proxy servers and network access servers periodically send authentication and accounting requests (known as ping requests) to verify that the NPS server is present on the network. These ping requests include fictional user names. When NPS processes these requests, the event and accounting logs become filled with access reject records, making it more difficult to keep track of valid records.
+Some RADIUS proxy servers and network access servers periodically send authentication and accounting requests (known as ping requests) to verify that the NPS is present on the network. These ping requests include fictional user names. When NPS processes these requests, the event and accounting logs become filled with access reject records, making it more difficult to keep track of valid records.
 
 When you configure a registry entry for **ping user-name**, NPS matches the registry entry value against the user name value in ping requests by other servers. A **ping user-name** registry entry specifies the fictional user name (or a user name pattern, with variables, that matches the fictional user name) sent by RADIUS proxy servers and network access servers. When NPS receives ping requests that match the **ping user-name** registry entry value, NPS rejects the authentication requests without processing the request. NPS does not record transactions involving the fictional user name in any log files, which makes the event log easier to interpret.
 

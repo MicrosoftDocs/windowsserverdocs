@@ -1,24 +1,28 @@
 ---
-title: Single Page Application with AD FS
-description:
+title: Build a single page web application using OAuth and ADAL.JS with AD FS 2016
+description: A walkthrough which provides instructions for authenticating against AD FS using ADAL for JavaScript securing an AngularJS based single page application
 author: billmath
 ms.author: billmath
-manager: femila
-ms.date: 05/31/2017
+manager: mtillman
+ms.date: 06/12/2018
 ms.topic: article
 ms.prod: windows-server-threshold
 
 ms.technology: active-directory-federation-services
 ---
 
-# Single Page Application with AD FS
+# Build a single page web application using OAuth and ADAL.JS with AD FS 2016
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server 2016
 
 This walkthrough provides instruction for authenticating against AD FS using ADAL for JavaScript securing an AngularJS based single page application, implemented with an ASP.NET Web API backend.
 
+In this scenario, when the user signs in, the JavaScript front end uses [Active Directory Authentication Library for JavaScript (ADAL.JS)](https://github.com/AzureAD/azure-activedirectory-library-for-js) and the implicit authorization grant to obtain an ID token (id_token) from Azure AD. The token is cached and the client attaches it to the request as the bearer token when making calls to its Web API back end, which is secured using the OWIN middleware.
+
 >WARNING: The example that you can build here is for educational purposes only. These instructions are for the simplest, most minimal implementation possible to expose the required elements of the model. The example may not include all aspects of error handling and other relate functionality.
 
+>[!NOTE]
+>This walkthrough is applicable **only** to AD FS Server 2016 and higher 
 
 ## Overview
 In this sample we will be creating an authentication flow where a single page application client will be authenticating against AD FS to secure access to the WebAPI resources on the backend. Below is the overall authentication flow
@@ -167,3 +171,6 @@ In Fiddler you can see the token being returned as part of the URL in the # frag
 You will be able to now call the backend API to add ToDo List items for the logged-in user:
 
 ![Fiddler](media/Single-Page-Application-with-AD-FS/singleapp6.PNG)
+
+## Next Steps
+[AD FS Development](../../ad-fs/AD-FS-Development.md)  

@@ -17,7 +17,7 @@ ms.date: 10/16/2017
 
 # wbadmin start systemstaterecovery
 
-> Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 Performs a system state recovery to a location and from a backup that you specify.
 

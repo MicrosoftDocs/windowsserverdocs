@@ -4,14 +4,14 @@ title: iSCSI target boot overview
 ms.prod: windows-server-threshold
 ms.technology: storage-iscsi
 ms.topic: article
-author: MicGray-MS
-manager: dongill
-ms.author: micgray
-ms.date: 10/11/2016
+author: JasonGerend
+manager: dougkim
+ms.author: jgerend
+ms.date: 09/11/2018
 ---
 # iSCSI target boot overview
 
-> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
+> Applies to: Windows Server 2016
 
 iSCSI Target Server in Windows Server can boot hundreds of computers from a single operating system image that is stored in a centralized location. This improves efficiency, manageability, availability, and security.  
   

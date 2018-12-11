@@ -12,7 +12,8 @@ ms.assetid: 785a18cf-a5d0-4bc2-95e4-9ef53ee8f65a
 author: lizap
 manager: dongill
 ms.author: elizapo
-ms.date: 08/09/2017
+ms.date: 07/16/2018
+ms.localizationpriority: medium
 ---
 # Frequently asked questions about the Remote Desktop clients
 
@@ -22,11 +23,12 @@ Now that you've set up the Remote Desktop client on your device (Android, Mac, i
 
 - [Setting up](#Setting-up)
 - [Connections, gateway, and networks](#connection-gateway-and-networks)
+- [Web client](#web-client)
 - [Monitors, audio, and mouse](#monitors-audio-and-mouse)
 - [Mac hardware](#mac-client---hardware-questions)
 - [Specific error messages](#specific-errors)
 
-The majority of these questions apply to all of the clients, but there are a few specific to the Mac client.
+The majority of these questions apply to all of the clients, but there are a few client specific items.
 
 If you have additional questions that you'd like us to answer, leave them as feedback on this article.
 
@@ -46,18 +48,21 @@ Otherwise, if you prefer to do things manually, read on.
 
 For Windows 10, do the following:
 
-1. Open the Settings app, and then click **System.**
-2. Search for "remote" and then click **Allow remote access to your computer**.
-3. In the System Properties, on the Remote tab, under **Remote Desktop**, select **Allow remote connections to this computer**.
-4. Click **Select Users**.
-5. Make sure your user name has access, and then click **OK**.
+1. On the device you want to connect to, open **Settings**.
+2. Select **System** and then **Remote Desktop**.
+3. Use the slider to enable Remote Desktop.
+4. In general, it's best to keep the PC awake and discoverable to facilitate connections. Click **Show settings** to go to the power settings for your PC, where you can change this setting.
+   > [!NOTE]
+   > You can’t connect to a PC that's asleep or hibernating, so make sure the settings for sleep and hibernation on the remote PC are set to **Never**. (Hibernation isn't available on all PCs.)
+
+
+Make note of the name of this PC under **How to connect to this PC**. You'll need this to configure the clients.
+
+You can grant permission for specific users to access this PC - to do that, click **Select users that can remotely access this PC**.
+Members of the Administrators group automatically have access.
 
 For Windows 8.1, follow the instructions to allow remote connections in [Connect to another desktop using Remote Desktop Connections](https://support.microsoft.com/en-us/help/17463/windows-7-connect-to-another-computer-remote-desktop-connection#1TC=windows-8).
 
-> [!NOTE]
-> You can’t connect to a PC that's asleep or hibernating, so make sure the settings for sleep and hibernation on the remote PC are set to **Never** (hibernation isn't available on all PCs.).
-
-When you want to connect to a PC, you need the full name. You can find this information in the **System** settings.
 
 
 ## Connection, gateway, and networks
@@ -118,13 +123,35 @@ Verify that VPN is enabled on your device. You can test your VPN connection by g
 ### How do I configure L2TP or PPTP VPN connections?
 If you are using L2TP or PPTP in your VPN, make sure to set **Send all traffic** to **ON** in the VPN configuration.
 
+## Web client
+
+### Which browsers can I use?
+
+The web client supports Edge, Internet Explorer 11, Mozilla Firefox (v55.0 and later), Safari, and Google Chrome.
+
+### What PCs can I use to access the web client?
+
+The web client supports Windows, macOS, Linux, and ChromeOS. Mobile devices are not supported at this time.
+
+### Can I use the web client in a Remote Desktop deployment without a gateway?
+
+No. The client requires a Remote Desktop Gateway to connect. Don't know what that means? Ask your admin about it.
+
+### Does the Remote Desktop web client replace the Remote Desktop Web Access page?
+
+No. The Remote Desktop web client is hosted at a different URL than the Remote Desktop Web Access page. You can use either the web client or the Web Access page to view the remote resources in a browser.
+
+### Can I embed the web client in another web page?
+
+This feature is not supported at the moment.
+
 ## Monitors, audio, and mouse
 
 ### How do I use all of my monitors?
 To use two or more screens, do the following:
 
-1. Right-click the remote desktop that you want to enable multiple screens for, and then click **Edit.**
-2. Enable **Use all monitors** and **Full screen**. 
+1. Right-click the remote desktop that you want to enable multiple screens for, and then click **Edit**.
+2. Enable **Use all monitors** and **Full screen**.
 
 ### Is bi-directional sound supported?
 Sound upstream (from client to server, for microphones) is not supported by the Remote Desktop Client.
@@ -147,7 +174,7 @@ In order to make use of the right-click inside an open session you have three op
 No, the Remote Desktop client doesn't support AirPrint. (This is true for both Mac and iOS clients.)
 
 ### Why do incorrect characters appear in the session?
-If you are using an international keyboard, you might see an issue where the characters that appear in the session do match the characters you typed on the Mac keyboard. 
+If you are using an international keyboard, you might see an issue where the characters that appear in the session do match the characters you typed on the Mac keyboard.
 
 This can occur in the following scenarios:
 
@@ -198,11 +225,5 @@ This error is caused by a misconfiguration on the remote PC. Make sure the RDP s
 ### What does "TS_RAP You are not allowed to connect to the given host" mean?
 This error happens when a Resource Authorization Policy on the gateway server stops your user name from connecting to the remote PC. This can happen in the following instances:
 
-- The remote PC name is the same as the name of the gateway. Then, when you try to connect to the remote PC, the connection goes to the gateway instead, which you probably don't have permission to access. If you need to connect to the gateway, do not use the external gateway name as PC name. Instead use "localhost" or the IP address (127.0.0.1), or the internal server name. 
+- The remote PC name is the same as the name of the gateway. Then, when you try to connect to the remote PC, the connection goes to the gateway instead, which you probably don't have permission to access. If you need to connect to the gateway, do not use the external gateway name as PC name. Instead use "localhost" or the IP address (127.0.0.1), or the internal server name.
 - Your user account isn't a member of the user group for remote access.
-
-### What does the STOP error in Windows XP mean?
-This is a bug in Windows XP SP2 and SP3 and has been addressed by Microsoft. You need to open a support ticket with Microsoft to officially download the patch. 
-
-Not finding content you need? Windows 10 users, tell us what you want on [Feedback Hub](feedback-hub://?referrer=techDocsUcPage&tabid=2&contextid=898&newFeedback=true&topic=remote-desktop-client-faq.md). 
-

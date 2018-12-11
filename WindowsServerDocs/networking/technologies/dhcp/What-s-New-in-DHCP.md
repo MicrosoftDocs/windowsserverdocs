@@ -6,12 +6,12 @@ ms.prod: windows-server-threshold
 ms.technology: networking-dhcp
 ms.topic: get-started-article
 ms.assetid: c6f36998-5b64-45d1-b1f0-0f0d6604dbe3
-ms.author: jamesmci
-author: jamesmci
+ms.author: pashort
+author: shortpatti
 ---
 # What's New in DHCP
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 This topic describes the Dynamic Host Configuration Protocol (DHCP) functionality that is new or changed in Windows Server 2016.
   
@@ -23,7 +23,6 @@ The following sections provide information about new features and changes in fun
 
 DHCP now supports options 118 and 82 \(sub-option 5\). You can use these options to allow DHCP proxy clients and relay agents to request an IP address for a specific subnet, and from a specific IP address range and scope.
 
-If you are using a DHCP proxy client that is configured with DHCP option 118, such as a virtual private network \(VPN\) server that is running Windows Server 2016 and the Remote Access server role, the VPN server can request an IP address lease for VPN clients from a specific IP address range.
 
 If you are using a DHCP relay agent that is configured with DHCP option 82, sub\-option 5, the relay agent can request an IP address lease for DHCP clients from a specific IP address range.
 

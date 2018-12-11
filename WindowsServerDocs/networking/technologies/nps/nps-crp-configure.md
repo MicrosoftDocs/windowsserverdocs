@@ -6,15 +6,15 @@ ms.prod: windows-server-threshold
 ms.technology: networking
 ms.topic: article
 ms.assetid: f62c6a67-4dda-47f8-8bdf-9b76c37953e6
-ms.author: jamesmci 
-author: jamesmci
+ms.author: pashort 
+author: shortpatti
 ---
 
 # Configure Connection Request Policies
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
 
-You can use this topic to create and configure connection request policies that designate whether the local NPS server processes connection requests or forwards them to remote RADIUS server for processing.
+You can use this topic to create and configure connection request policies that designate whether the local NPS processes connection requests or forwards them to remote RADIUS server for processing.
 
 Connection request policies are sets of conditions and settings that allow network administrators to designate which Remote Authentication Dial-In User Service (RADIUS) servers perform the authentication and authorization of connection requests that the server running Network Policy Server \(NPS\) receives from RADIUS clients.
 
@@ -24,9 +24,9 @@ To configure a server running NPS to act as a RADIUS proxy and forward connectio
 
 You can create a new remote RADIUS server group while you are creating a new connection request policy with the New Connection Request Policy Wizard.
 
-If you do not want the NPS server to act as a RADIUS server and process connection requests locally, you can delete the default connection request policy.
+If you do not want the NPS to act as a RADIUS server and process connection requests locally, you can delete the default connection request policy.
 
-If you want the NPS server to act as both a RADIUS server, processing connection requests locally, and as a RADIUS proxy, forwarding some connection requests to a remote RADIUS server group, add a new policy using the following procedure and then verify that the default connection request policy is the last policy processed by placing it last in the list of policies.
+If you want the NPS to act as both a RADIUS server, processing connection requests locally, and as a RADIUS proxy, forwarding some connection requests to a remote RADIUS server group, add a new policy using the following procedure and then verify that the default connection request policy is the last policy processed by placing it last in the list of policies.
 
 ## Add a Connection Request Policy
 

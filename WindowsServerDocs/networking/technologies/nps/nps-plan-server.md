@@ -6,13 +6,13 @@ ms.prod: windows-server-threshold
 ms.technology: networking
 ms.topic: article
 ms.assetid: 2900dd2c-0f70-4f8d-9650-ed83d51d509a
-ms.author: jamesmci 
-author: jamesmci
+ms.author: pashort 
+author: shortpatti
 ---
 
 # Plan NPS as a RADIUS server
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 When you deploy Network Policy Server \(NPS\) as a Remote Authentication Dial-In User Service (RADIUS) server, NPS performs authentication, authorization, and accounting for connection requests for the local domain and for domains that trust the local domain. You can use these planning guidelines to simplify your RADIUS deployment.
 
@@ -20,7 +20,7 @@ These planning guidelines do not include circumstances in which you want to depl
 
 Before you deploy NPS as a RADIUS server on your network, use the following guidelines to plan your deployment.
 
-- Plan NPS server configuration.
+- Plan NPS configuration.
 
 - Plan RADIUS clients.
 
@@ -30,25 +30,25 @@ Before you deploy NPS as a RADIUS server on your network, use the following guid
 
 - Plan NPS accounting.
 
-## Plan NPS server configuration
+## Plan NPS configuration
 
-You must decide in which domain the NPS server is a member. For multiple-domain environments, an NPS server can authenticate credentials for user accounts in the domain of which it is a member and for all domains that trust the local domain of the NPS server. To allow the NPS server to read the dial-in properties of user accounts during the authorization process, you must add the computer account of the NPS server to the RAS and NPS servers group for each domain.
+You must decide in which domain the NPS is a member. For multiple-domain environments, an NPS can authenticate credentials for user accounts in the domain of which it is a member and for all domains that trust the local domain of the NPS. To allow the NPS to read the dial-in properties of user accounts during the authorization process, you must add the computer account of the NPS to the RAS and NPSs group for each domain.
 
-After you have determined the domain membership of the NPS server, the server must be configured to communicate with RADIUS clients, also called network access servers, by using the RADIUS protocol. In addition, you can configure the types of events that NPS records in the event log and you can enter a description for the server.
+After you have determined the domain membership of the NPS, the server must be configured to communicate with RADIUS clients, also called network access servers, by using the RADIUS protocol. In addition, you can configure the types of events that NPS records in the event log and you can enter a description for the server.
 
 ### Key steps
 
-During the planning for NPS server configuration, you can use the following steps.
+During the planning for NPS configuration, you can use the following steps.
 
-- Determine the RADIUS ports that the NPS server uses to receive RADIUS messages from RADIUS clients. The default ports are UDP ports 1812 and 1645 for RADIUS authentication messages and ports 1813 and 1646 for RADIUS accounting messages.
+- Determine the RADIUS ports that the NPS uses to receive RADIUS messages from RADIUS clients. The default ports are UDP ports 1812 and 1645 for RADIUS authentication messages and ports 1813 and 1646 for RADIUS accounting messages.
 
-- If the NPS server is configured with multiple network adapters, determine the adapters over which you want RADIUS traffic to be allowed.
+- If the NPS is configured with multiple network adapters, determine the adapters over which you want RADIUS traffic to be allowed.
 
 - Determine the types of events that you want NPS to record in the Event Log. You can log rejected authentication requests, successful authentication requests, or both types of requests.
 
-- Determine whether you are deploying more than one NPS server. To provide fault tolerance for RADIUS-based authentication and accounting, use at least two NPS servers. One NPS server is used as the primary RADIUS server and the other is used as a backup. Each RADIUS client is then configured on both NPS servers. If the primary NPS server becomes unavailable, RADIUS clients then send Access-Request messages to the alternate NPS server.
+- Determine whether you are deploying more than one NPS. To provide fault tolerance for RADIUS-based authentication and accounting, use at least two NPSs. One NPS is used as the primary RADIUS server and the other is used as a backup. Each RADIUS client is then configured on both NPSs. If the primary NPS becomes unavailable, RADIUS clients then send Access-Request messages to the alternate NPS.
 
-- Plan the script used to copy one NPS server configuration to other NPS servers to save on administrative overhead and to prevent the incorrect cofiguration of a server. NPS provides the Netsh commands that allow you to copy all or part of an NPS server configuration for import onto another NPS server. You can run the commands manually at the Netsh prompt. However, if you save your command sequence as a script, you can run the script at a later date if you decide to change your server configurations.
+- Plan the script used to copy one NPS configuration to other NPSs to save on administrative overhead and to prevent the incorrect cofiguration of a server. NPS provides the Netsh commands that allow you to copy all or part of an NPS configuration for import onto another NPS. You can run the commands manually at the Netsh prompt. However, if you save your command sequence as a script, you can run the script at a later date if you decide to change your server configurations.
 
 ## Plan RADIUS clients
 
@@ -67,7 +67,7 @@ During the planning for RADIUS clients, you can use the following steps.
 
 - Document the vendor-specific attributes (VSAs) you must configure in NPS. If your network access servers require VSAs, log the VSA information for later use when you configure your network policies in NPS. 
 
-- Document the IP addresses of RADIUS clients and your NPS server to simplify the configuration of all devices. When you deploy your RADIUS clients, you must configure them to use the RADIUS protocol, with the NPS server IP address entered as the authenticating server. And when you configure NPS to communicate with your RADIUS clients, you must enter the RADIUS client IP addresses into the NPS snap-in.
+- Document the IP addresses of RADIUS clients and your NPS to simplify the configuration of all devices. When you deploy your RADIUS clients, you must configure them to use the RADIUS protocol, with the NPS IP address entered as the authenticating server. And when you configure NPS to communicate with your RADIUS clients, you must enter the RADIUS client IP addresses into the NPS snap-in.
 
 - Create shared secrets for configuration on the RADIUS clients and in the NPS snap-in. You must configure RADIUS clients with a shared secret, or password, that you will also enter into the NPS snap-in while configuring RADIUS clients in NPS.
 
@@ -92,25 +92,25 @@ Both PEAP-MS-CHAP v2 and EAP-TLS are certificate-based authentication methods, b
 
 EAP-TLS uses certificates for both client and server authentication, and requires that you deploy a public key infrastructure (PKI) in your organization. Deploying a PKI can be complex, and requires a planning phase that is independent of planning for the use of NPS as a RADIUS server.
 
-With EAP-TLS, the NPS server enrolls a server certificate from a certification authority \(CA\), and the certificate is saved on the local computer in the certificate store. During the authentication process, server authentication occurs when the NPS server sends its server certificate to the access client to prove its identity to the access client. The access client examines various certificate properties to determine whether the certificate is valid and is appropriate for use during server authentication. If the server certificate meets the minimum server certificate requirements and is issued by a CA that the access client trusts, the NPS server is successfully authenticated by the client.
+With EAP-TLS, the NPS enrolls a server certificate from a certification authority \(CA\), and the certificate is saved on the local computer in the certificate store. During the authentication process, server authentication occurs when the NPS sends its server certificate to the access client to prove its identity to the access client. The access client examines various certificate properties to determine whether the certificate is valid and is appropriate for use during server authentication. If the server certificate meets the minimum server certificate requirements and is issued by a CA that the access client trusts, the NPS is successfully authenticated by the client.
 
-Similarly, client authentication occurs during the authentication process when the client sends its client certificate to the NPS server to prove its identity to the NPS server. The NPS server examines the certificate, and if the client certificate meets the minimum client certificate requirements and is issued by a CA that the NPS server trusts, the access client is successfully authenticated by the NPS server.
+Similarly, client authentication occurs during the authentication process when the client sends its client certificate to the NPS to prove its identity to the NPS. The NPS examines the certificate, and if the client certificate meets the minimum client certificate requirements and is issued by a CA that the NPS trusts, the access client is successfully authenticated by the NPS.
 
-Although it is required that the server certificate is stored in the certificate store on the NPS server, the client or user certificate can be stored in either the certificate store on the client or on a smart card.
+Although it is required that the server certificate is stored in the certificate store on the NPS, the client or user certificate can be stored in either the certificate store on the client or on a smart card.
 
 For this authentication process to succeed, it is required that all computers have your organization's CA certificate in the Trusted Root Certification Authorities certificate store for the Local Computer and the Current User.
 
 ### PEAP-MS-CHAP v2
 
-PEAP-MS-CHAP v2 uses a certificate for server authentication and password-based credentials for user authentication. Because certificates are used only for server authentication, you are not required to deploy a PKI in order to use PEAP-MS-CHAP v2. When you deploy PEAP-MS-CHAP v2, you can obtain a server certificate for the NPS server in one of the following two ways:
+PEAP-MS-CHAP v2 uses a certificate for server authentication and password-based credentials for user authentication. Because certificates are used only for server authentication, you are not required to deploy a PKI in order to use PEAP-MS-CHAP v2. When you deploy PEAP-MS-CHAP v2, you can obtain a server certificate for the NPS in one of the following two ways:
 
-- You can install Active Directory Certificate Services (AD CS), and then autoenroll certificates to NPS servers. If you use this method, you must also enroll the CA certificate to client computers connecting to your network so that they trust the certificate issued to the NPS server.
+- You can install Active Directory Certificate Services (AD CS), and then autoenroll certificates to NPSs. If you use this method, you must also enroll the CA certificate to client computers connecting to your network so that they trust the certificate issued to the NPS.
 
 - You can purchase a server certificate from a public CA such as VeriSign. If you use this method, make sure that you select a CA that is already trusted by client computers. To determine whether client computers trust a CA, open the Certificates Microsoft Management Console (MMC) snap-in on a client computer, and then view the Trusted Root Certification Authorities store for the Local Computer and for the Current User. If there is a certificate from the CA in these certificate stores, the client computer trusts the CA and will therefore trust any certificate issued by the CA.
 
-During the authentication process with PEAP-MS-CHAP v2, server authentication occurs when the NPS server sends its server certificate to the client computer. The access client examines various certificate properties to determine whether the certificate is valid and is appropriate for use during server authentication. If the server certificate meets the minimum server certificate requirements and is issued by a CA that the access client trusts, the NPS server is successfully authenticated by the client.
+During the authentication process with PEAP-MS-CHAP v2, server authentication occurs when the NPS sends its server certificate to the client computer. The access client examines various certificate properties to determine whether the certificate is valid and is appropriate for use during server authentication. If the server certificate meets the minimum server certificate requirements and is issued by a CA that the access client trusts, the NPS is successfully authenticated by the client.
 
-User authentication occurs when a user attempting to connect to the network types password-based credentials and tries to log on. NPS receives the credentials and performs authentication and authorization. If the user is authenticated and authorized successfully, and if the client computer successfully authenticated the NPS server, the connection request is granted.
+User authentication occurs when a user attempting to connect to the network types password-based credentials and tries to log on. NPS receives the credentials and performs authentication and authorization. If the user is authenticated and authorized successfully, and if the client computer successfully authenticated the NPS, the connection request is granted.
 
 ### Key steps
 
@@ -122,7 +122,7 @@ During the planning for the use of authentication methods, you can use the follo
 
 - If you are deploying EAP-TLS, plan your PKI deployment. This includes planning the certificate templates you are going to use for server certificates and client computer certificates. It also includes determining how to enroll certificates to domain member and non-domain member computers, and determining whether you want to use smart cards.
 
-- If you are deploying PEAP-MS-CHAP v2, determine whether you want to install AD CS to issue server certificates to your NPS servers or whether you want to purchase server certificates from a public CA, such as VeriSign.
+- If you are deploying PEAP-MS-CHAP v2, determine whether you want to install AD CS to issue server certificates to your NPSs or whether you want to purchase server certificates from a public CA, such as VeriSign.
 
 ### Plan network policies
 
@@ -154,7 +154,7 @@ During the planning for network policies, you can use the following steps.
 
 NPS provides the ability to log RADIUS accounting data, such as user authentication and accounting requests, in three formats: IAS format, database-compatible format, and Microsoft SQL Server logging. 
 
-IAS format and database-compatible format create log files on the local NPS server in text file format. 
+IAS format and database-compatible format create log files on the local NPS in text file format. 
 
 SQL Server logging provides the ability to log to a SQL Server 2000 or SQL Server 2005 XML-compliant database, extending RADIUS accounting to leverage the advantages of logging to a relational database.
 
@@ -192,7 +192,7 @@ NPS SQL Server logging is used when you need session state information, for repo
 
 NPS provides the ability to use SQL Server logging to record user authentication and accounting requests received from one or more network access servers to a data source on a computer running the Microsoft SQL Server Desktop Engine \(MSDE 2000\), or any version of SQL Server later than SQL Server 2000.
 
-Accounting data is passed from NPS in XML format to a stored procedure in the database, which supports both structured query language \(SQL\) and XML \(SQLXML\). Recording user authentication and accounting requests in an XML-compliant SQL Server database enables multiple NPS servers to have one data source.
+Accounting data is passed from NPS in XML format to a stored procedure in the database, which supports both structured query language \(SQL\) and XML \(SQLXML\). Recording user authentication and accounting requests in an XML-compliant SQL Server database enables multiple NPSs to have one data source.
 
 ### Key steps
 
@@ -200,7 +200,7 @@ During the planning for NPS accounting by using NPS SQL Server logging, you can 
 
 - Determine whether you or another member of your organization has SQL Server 2000 or SQL Server 2005 relational database development experience and you understand how to use these products to create, modify, administer, and manage SQL Server databases.
 
-- Determine whether SQL Server is installed on the NPS server or on a remote computer.
+- Determine whether SQL Server is installed on the NPS or on a remote computer.
 
 - Design the stored procedure that you will use in your SQL Server database to process incoming XML files that contain NPS accounting data.
 
@@ -214,9 +214,9 @@ During the planning for NPS accounting by using NPS SQL Server logging, you can 
 
 - Plan to use network access servers that send Accounting-on and Accounting-off messages.
 
-- Plan to use network access servers that support the storing and forwarding of accounting data. Network access servers that support this feature can store accounting data when the network access server cannot communicate with the NPS server. When the NPS server is available, the network access server forwards the stored records to the NPS server, providing increased reliability in accounting over network access servers that do not provide this feature.
+- Plan to use network access servers that support the storing and forwarding of accounting data. Network access servers that support this feature can store accounting data when the network access server cannot communicate with the NPS. When the NPS is available, the network access server forwards the stored records to the NPS, providing increased reliability in accounting over network access servers that do not provide this feature.
 
 - Plan to always configure the Acct-Interim-Interval attribute in network policies. The Acct-Interim-Interval attribute sets the interval (in seconds) between each interim update that the network access server sends. According to RFC 2869, the value of the Acct-Interim-Interval attribute must not be smaller than 60 seconds, or one minute, and should not be smaller than 600 seconds, or 10 minutes. For more information, see RFC 2869, "RADIUS Extensions."
 
-- Ensure that logging of periodic status is enabled on your NPS servers.
+- Ensure that logging of periodic status is enabled on your NPSs.
 

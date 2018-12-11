@@ -6,15 +6,15 @@ ms.prod: windows-server-threshold
 ms.technology: networking
 ms.topic: article
 ms.assetid: 4ec45e0c-6b37-4dfb-8158-5f40677b0157
-ms.author: jamesmci 
-author: jamesmci
+ms.author: pashort 
+author: shortpatti
 ---
 
 # Connection Request Policies
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
 
-You can use this topic to learn how to use NPS connection request policies to configure the NPS server as a RADIUS server, a RADIUS proxy, or both.
+You can use this topic to learn how to use NPS connection request policies to configure the NPS as a RADIUS server, a RADIUS proxy, or both.
 
 >[!NOTE]
 >In addition to this topic, the following connection request policy documentation is available.
@@ -32,9 +32,9 @@ With connection request policies, you can use NPS as a RADIUS server or as a RAD
 - The type of connection being requested
 - The IP address of the RADIUS client
 
-RADIUS Access-Request messages are processed or forwarded by NPS only if the settings of the incoming message match at least one of the connection request policies configured on the NPS server. 
+RADIUS Access-Request messages are processed or forwarded by NPS only if the settings of the incoming message match at least one of the connection request policies configured on the NPS. 
 
-If the policy settings match and the policy requires that the NPS server process the message, NPS acts as a RADIUS server, authenticating and authorizing the connection request. If the policy settings match and the policy requires that the NPS server forwards the message, NPS acts as a RADIUS proxy and forwards the connection request to a remote RADIUS server for processing.
+If the policy settings match and the policy requires that the NPS process the message, NPS acts as a RADIUS server, authenticating and authorizing the connection request. If the policy settings match and the policy requires that the NPS forwards the message, NPS acts as a RADIUS proxy and forwards the connection request to a remote RADIUS server for processing.
 
 If the settings of an incoming RADIUS Access-Request message do not match at least one of the connection request policies, an Access-Reject message is sent to the RADIUS client and the user or computer attempting to connect to the network is denied access.
 
@@ -44,7 +44,7 @@ The following configuration examples demonstrate how you can use connection requ
 
 ### NPS as a RADIUS server
 
-The default connection request policy is the only configured policy. In this example, NPS is configured as a RADIUS server and all connection requests are processed by the local NPS server. The NPS server can authenticate and authorize users whose accounts are in the domain of the NPS server domain and in trusted domains.
+The default connection request policy is the only configured policy. In this example, NPS is configured as a RADIUS server and all connection requests are processed by the local NPS. The NPS can authenticate and authorize users whose accounts are in the domain of the NPS domain and in trusted domains.
 
 
 ### NPS as a RADIUS proxy
@@ -58,7 +58,7 @@ In addition to the default connection request policy, a new connection request p
 
 ### NPS as RADIUS server with remote accounting servers
 
-In this example, the local NPS server is not configured to perform accounting and the default connection request policy is revised so that RADIUS accounting messages are forwarded to an NPS or other RADIUS server in a remote RADIUS server group. Although accounting messages are forwarded, authentication and authorization messages are not forwarded, and the local NPS server performs these functions for the local domain and all trusted domains.
+In this example, the local NPS is not configured to perform accounting and the default connection request policy is revised so that RADIUS accounting messages are forwarded to an NPS or other RADIUS server in a remote RADIUS server group. Although accounting messages are forwarded, authentication and authorization messages are not forwarded, and the local NPS performs these functions for the local domain and all trusted domains.
 
 
 ### NPS with Remote RADIUS to Windows User Mapping
@@ -68,6 +68,7 @@ In this example, NPS acts as both a RADIUS server and as a RADIUS proxy for each
 ## Connection request policy conditions
 
 Connection request policy conditions are one or more RADIUS attributes that are compared to the attributes of the incoming RADIUS Access-Request message. If there are multiple conditions, then all of the conditions in the connection request message and in the connection request policy must match in order for the policy to be enforced by NPS.
+
 
 Following are the available condition attributes that you can configure in connection request policies.
 
@@ -81,7 +82,7 @@ The Connection Properties attribute group contains the following attributes.
 
 ### Day and Time Restrictions attribute group 
 
-The Day and Time Restrictions attribute group contains the Day and Time Restrictions attribute. With this attribute, you can designate the day of the week and the time of day of the connection attempt. The day and time is relative to the day and time of the NPS server.
+The Day and Time Restrictions attribute group contains the Day and Time Restrictions attribute. With this attribute, you can designate the day of the week and the time of day of the connection attempt. The day and time is relative to the day and time of the NPS.
 
 ### Gateway attribute group
 
@@ -101,7 +102,7 @@ The Machine Identity attribute group contains the Machine Identity attribute. By
 
 The RADIUS Client Properties attribute group contains the following attributes.
 
-- **Calling Station ID**. Used to designate the phone number used by the caller (the access client). This attribute is a character string. You can use pattern-matching syntax to specify area codes.
+- **Calling Station ID**. Used to designate the phone number used by the caller (the access client). This attribute is a character string. You can use pattern-matching syntax to specify area codes.  In 802.1x authentications the MAC Address is typically populated and can be matched from the client.  This field is typically used for Mac Address Bypass scenarios when the connection request policy is configured for 'Accept users without validating credentials'.  
 - **Client Friendly Name**. Used to designate the name of the RADIUS client computer that is requesting authentication. This attribute is a character string. You can use pattern-matching syntax to specify client names.
 - **Client IPv4 Address**. Used to designate the IPv4 address of the network access server (the RADIUS client). This attribute is a character string. You can use pattern-matching syntax to specify IP networks.
 - **Client IPv6 Address**. Used to designate the IPv6 address of the network access server (the RADIUS client). This attribute is a character string. You can use pattern-matching syntax to specify IP networks.
@@ -137,9 +138,9 @@ By using this setting, you can configure connection request policy to forward ac
 >[!NOTE]
 >If you have multiple RADIUS servers and you want accounting information for all servers stored in one central RADIUS accounting database, you can use the connection request policy accounting setting in a policy on each RADIUS server to forward accounting data from all of the servers to one NPS or other RADIUS server that is designated as an accounting server.
 
-Connection request policy accounting settings function independent of the accounting configuration of the local NPS server. In other words, if you configure the local NPS server to log RADIUS accounting information to a local file or to a Microsoft SQL Server database, it will do so regardless of whether you configure a connection request policy to forward accounting messages to a remote RADIUS server group.
+Connection request policy accounting settings function independent of the accounting configuration of the local NPS. In other words, if you configure the local NPS to log RADIUS accounting information to a local file or to a Microsoft SQL Server database, it will do so regardless of whether you configure a connection request policy to forward accounting messages to a remote RADIUS server group.
 
-If you want accounting information logged remotely but not locally, you must configure the local NPS server to not perform accounting, while also configuring accounting in a connection request policy to forward accounting data to a remote RADIUS server group.
+If you want accounting information logged remotely but not locally, you must configure the local NPS to not perform accounting, while also configuring accounting in a connection request policy to forward accounting data to a remote RADIUS server group.
 
 ### Attribute manipulation
 
@@ -160,14 +161,14 @@ For examples of how to manipulate the realm name in the User Name attribute, see
 
 You can set the following forwarding request options that are used for RADIUS Access-Request messages:
 
-- **Authenticate requests on this server**. By using this setting, NPS uses a Windows NT 4.0 domain, Active Directory, or the local Security Accounts Manager (SAM) user accounts database to authenticate the connection request. This setting also specifies that the matching network policy configured in NPS, along with the dial-in properties of the user account, are used by NPS to authorize the connection request. In this case, the NPS server is configured to perform as a RADIUS server.
+- **Authenticate requests on this server**. By using this setting, NPS uses a Windows NT 4.0 domain, Active Directory, or the local Security Accounts Manager (SAM) user accounts database to authenticate the connection request. This setting also specifies that the matching network policy configured in NPS, along with the dial-in properties of the user account, are used by NPS to authorize the connection request. In this case, the NPS is configured to perform as a RADIUS server.
 
-- **Forward requests to the following remote RADIUS server group**. By using this setting, NPS forwards connection requests to the remote RADIUS server group that you specify. If the NPS server receives a valid Access-Accept message that corresponds to the Access-Request message, the connection attempt is considered authenticated and authorized. In this case, the NPS server acts as a RADIUS proxy.
+- **Forward requests to the following remote RADIUS server group**. By using this setting, NPS forwards connection requests to the remote RADIUS server group that you specify. If the NPS receives a valid Access-Accept message that corresponds to the Access-Request message, the connection attempt is considered authenticated and authorized. In this case, the NPS acts as a RADIUS proxy.
 
 - **Accept users without validating credentials**. By using this setting, NPS does not verify the identity of the user attempting to connect to the network and NPS does not attempt to verify that the user or computer has the right to connect to the network. When NPS is configured to allow unauthenticated access and it receives a connection request, NPS immediately sends an Access-Accept message to the RADIUS client and the user or computer is granted network access. This setting is used for some types of compulsory tunneling where the access client is tunneled before user credentials are authenticated.
 
 >[!NOTE]
->This authentication option cannot be used when the authentication protocol of the access client is MS-CHAP v2 or Extensible Authentication Protocol-Transport Layer Security (EAP-TLS), both of which provide mutual authentication. In mutual authentication, the access client proves that it is a valid access client to the authenticating server (the NPS server), and the authenticating server proves that it is a valid authenticating server to the access client. When this authentication option is used, the Access-Accept message is returned. However, the authenticating server does not provide validation to the access client, and mutual authentication fails.
+>This authentication option cannot be used when the authentication protocol of the access client is MS-CHAP v2 or Extensible Authentication Protocol-Transport Layer Security (EAP-TLS), both of which provide mutual authentication. In mutual authentication, the access client proves that it is a valid access client to the authenticating server (the NPS), and the authenticating server proves that it is a valid authenticating server to the access client. When this authentication option is used, the Access-Accept message is returned. However, the authenticating server does not provide validation to the access client, and mutual authentication fails.
 
 For examples of how to use regular expressions to create routing rules that forward RADIUS messages with a specified realm name to a remote RADIUS server group, see the section "Example for RADIUS message forwarding by a proxy server" in the topic [Use Regular Expressions in NPS](nps-crp-reg-expressions.md).
 
@@ -175,12 +176,12 @@ For examples of how to use regular expressions to create routing rules that forw
 
 You can set advanced properties to specify the series of RADIUS attributes that are:
 
-- Added to the RADIUS response message when the NPS server is being used as a RADIUS authentication or accounting server. When there are attributes specified on both a network policy and the connection request policy, the attributes that are sent in the RADIUS response message are the combination of the two sets of attributes.
-- Added to the RADIUS message when the NPS server is being used as a RADIUS authentication or accounting proxy. If the attribute already exists in the message that is forwarded, it is replaced with the value of the attribute specified in the connection request policy. 
+- Added to the RADIUS response message when the NPS is being used as a RADIUS authentication or accounting server. When there are attributes specified on both a network policy and the connection request policy, the attributes that are sent in the RADIUS response message are the combination of the two sets of attributes.
+- Added to the RADIUS message when the NPS is being used as a RADIUS authentication or accounting proxy. If the attribute already exists in the message that is forwarded, it is replaced with the value of the attribute specified in the connection request policy. 
 
 In addition, some attributes that are available for configuration on the connection request policy **Settings** tab in the **Advanced** category provide specialized functionality. For example, you can configure the **Remote RADIUS to Windows User Mapping** attribute when you want to split the authentication and authorization of a connection request between two user accounts databases.
 
-The **Remote RADIUS to Windows User Mapping** attribute specifies that Windows authorization occurs for users who are authenticated by a remote RADIUS server. In other words, a remote RADIUS server performs authentication against a user account in a remote user accounts database, but the local NPS server authorizes the connection request against a user account in a local user accounts database. This is useful when you want to allow visitors access to your network.
+The **Remote RADIUS to Windows User Mapping** attribute specifies that Windows authorization occurs for users who are authenticated by a remote RADIUS server. In other words, a remote RADIUS server performs authentication against a user account in a remote user accounts database, but the local NPS authorizes the connection request against a user account in a local user accounts database. This is useful when you want to allow visitors access to your network.
 
 For example, visitors from partner organizations can be authenticated by their own partner organization RADIUS server, and then use a Windows user account at your organization to access a guest local area network (LAN) on your network.
 
@@ -197,7 +198,7 @@ A default connection request policy is created when you install NPS. This policy
 - Authentication is not configured.
 - Accounting is not configured to forward accounting information to a remote RADIUS server group.
 - Attribute is not configured with attribute manipulation rules that forward connection requests to remote RADIUS server groups.
-- Forwarding Request is configured so that connection requests are authenticated and authorized on the local NPS server.
+- Forwarding Request is configured so that connection requests are authenticated and authorized on the local NPS.
 - Advanced attributes are not configured.
 
 The default connection request policy uses NPS as a RADIUS server. To configure a server running NPS to act as a RADIUS proxy, you must also configure a remote RADIUS server group. You can create a new remote RADIUS server group while you are creating a new connection request policy by using the New Connection Request Policy Wizard. You can either delete the default connection request policy or verify that the default connection request policy is the last policy processed by NPS by placing it last in the ordered list of policies.

@@ -11,8 +11,8 @@ ms.technology:
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 82bf5fed-93b3-4fa6-8e71-522146eccdb1
-ms.author: jamesmci
-author: jamesmci
+ms.author: pashort
+author: shortpatti
 ---
 # Step 2 Configure the Basic DirectAccess Server
 
@@ -50,11 +50,30 @@ To deploy Remote Access, you must install the Remote Access role on a server in 
   
 ![Windows PowerShell](../../../media/Step-2-Configure-the-DirectAccess-Server/PowerShellLogoSmall.gif)****Windows PowerShell equivalent commands****  
   
-The following Windows PowerShell cmdlet or cmdlets perform the same function as the preceding procedure. Enter each cmdlet on a single line, even though they may appear word-wrapped across several lines here because of formatting constraints.  
-  
-```  
-Install-WindowsFeature RemoteAccess -IncludeManagementTools  
-```  
+The following Windows PowerShell cmdlet or cmdlets install the Remote Access role: 
+
+1. Open PowerShell as administrator.
+
+2. Install Remote Access feature:
+
+   ```  
+   Install-WindowsFeature RemoteAccess   
+   ```  
+
+3. Restart the computer:
+
+   ```
+   Restart-Computer
+   ```
+   
+4. Install Remote Access PowerShell:
+
+   ```
+   Install-WindowsFeature RSAT-RemoteAccess-PowerShell
+   ```
+
+
+
   
 ## Configure DirectAccess with the Getting Started Wizard  
   

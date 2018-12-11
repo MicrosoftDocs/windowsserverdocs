@@ -9,7 +9,7 @@ ms.assetid: 35865398-b011-447a-b781-1c52bc0c9e3a
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
-ms.date: 10/16/2017
+ms.date: 05/24/2018
 ---
 # Plan your WSUS deployment
 
@@ -28,7 +28,8 @@ The first step in the deployment of Windows Server Update Services (WSUS) is to 
 |[1.7. Plan Automatic Updates settings](plan-your-wsus-deployment.md#BKMK_1.7.)|Plan how you will configure the automatic updates settings for your scenario.|
 
 ## <a name="BKMK_1.1"></a>1.1. Review considerations and system requirements
-**System Requirements:**
+
+### System Requirements
 
 Before you enable the WSUS server role, confirm that the server meets the system requirements and confirm that you have the necessary permissions to complete the installation by adhering with the following guidelines:
 
@@ -44,7 +45,7 @@ Before you enable the WSUS server role, confirm that the server meets the system
 
 -   Software Requirements:
 
-    -   For viewing reports, WSUS requires the [Microsoft Report Viewer Redistributable 2008](https://www.microsoft.com/download/details.aspx?id=6576)
+    -   For viewing reports, WSUS requires the [Microsoft Report Viewer Redistributable 2008](https://www.microsoft.com/download/details.aspx?id=6576). On Windows Server 2016, WSUS requires [Microsoft Report Viewer Runtime 2012](https://www.microsoft.com/download/details.aspx?id=35747)
 
 -   If you install roles or software updates that require you to restart the server when installation is complete, restart the server before you enable the WSUS server role.
 
@@ -61,7 +62,7 @@ Before you enable the WSUS server role, confirm that the server meets the system
 
 -   Confirm that the account you plan to use to install WSUS is a member of the Local Administrators group.
 
-**Installation Considerations:**
+### Installation Considerations
 
 During the installation process, WSUS will install the following by default:
 
@@ -83,21 +84,30 @@ During the installation process, WSUS will install the following by default:
 
     -   DSS Authentication Web Service
 
-**Features on Demand Considerations**
+### Features on Demand Considerations
 
 Be aware that configuring client computers (including servers) to update by using WSUS will result in the following limitations:
 
-1.  Server roles that have had their payloads removed using Features on Demand cannot be installed on demand from Microsoft Update. You will must either provide an installation source at the time you try to install such server roles, or configure a source for Features on Demand in Group Policy.
+1.  Server roles that have had their payloads removed using Features on Demand cannot be installed on demand from Microsoft Update. You must either provide an installation source at the time you try to install such server roles, or configure a source for Features on Demand in Group Policy.
 
 2.  Windows client editions will not be able to install .NET 3.5 on demand from the web. The same considerations as server roles apply to .NET 3.5.
 
-> [!NOTE]
-> Configuring a Features on Demand installation source does not involve WSUS. For information on how to configure Features, see [Configure Features on Demand in Windows Server](https://technet.microsoft.com/library/jj127275.aspx).
+    > [!NOTE]
+    > Configuring a Features on Demand installation source does not involve WSUS. For information on how to configure Features, see [Configure Features on Demand in Windows Server](https://technet.microsoft.com/library/jj127275.aspx).
+
+3. Enterprise devices running Windows 10, version 1709 or version 1803, cannot install any Features on Demand directly from WSUS. To install Features on Demand, [create a feature file (side-by-side store)](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/jj127275%28v=ws.11%29#create-a-feature-file-or-side-by-side-store) or obtain the Feature on Demand package from one of the following sources:
+    - [Volume Licensing Service Center](https://www.microsoft.com/licensing/servicecenter) (VLSC) - VL access is required
+    - OEM Portal - OEM access is required
+    - MSDN Download - MSDN subscription is required
+
+    Individually-obtained Feature on Demand packages can be installed using [DISM command-line options](https://docs.microsoft.com/windows-hardware/manufacture/desktop/dism-operating-system-package-servicing-command-line-options).
 
 ### <a name="BKM_1.1.1."></a>WSUS database requirements
 WSUS requires one of the following databases:
 
 -   Windows Internal Database (WID)
+
+-   Microsoft SQL Server 2017
 
 -   Microsoft SQL Server 2016
 
@@ -122,7 +132,7 @@ You can install the WSUS role on a computer that is separate from the database s
 
 1.  The database server cannot be configured as a domain controller.
 
-2.  The WSUS server cannot run remote Desktop Services.
+2.  The WSUS server cannot run Remote Desktop Services.
 
 3.  The database server must be in the same active directory domain as the WSUS server, or it must have a trust relationship with the active directory domain of the WSUS server.
 
@@ -156,8 +166,10 @@ You can create complex hierarchies of WSUS servers. Because you can synchronize 
 
 -   You can scale WSUS for a large organization that has more client computers than one WSUS server can effectively manage.
 
-> [!NOTE]
-> We recommend that you do not create a WSUS server hierarchy that is more than three levels deep. Each level adds time to propagate updates throughout the connected servers. Although there is no theoretical limit to a hierarchy, only deployments with a hierarchy of five levels deep have been tested by Microsoft Corporation.
+> [!NOTE] 
+> We recommend that you do not create a WSUS server hierarchy that is more than three levels deep. Each level adds time to propagate updates throughout the connected servers. Although there is no theoretical limit to a hierarchy, only deployments that have a hierarchy of five levels deep have been tested by Microsoft.
+>
+> Also, downstream servers must be at the same version or an earlier version of WSUS as the upstream server synchronization source.
 
 You can connect WSUS servers in Autonomous mode (to achieve distributed administration) or in Replica mode (to achieve centralized administration). You do not have to deploy a server hierarchy that uses only one mode: you can deploy a WSUS solution that uses both autonomous and replica WSUS servers.
 
@@ -298,15 +310,15 @@ Choosing languages for an upstream server is not the same as choosing languages 
 
 1.  If the upstream server has been configured to download update files in a subset of languages: In the WSUS Configuration Wizard, click **Download updates only in these languages (only languages marked with an asterisk are supported by the upstream server)**, and then select the languages for which you want updates.
 
-        > [!NOTE]
-        > You should do this even though you want the downstream server to download the same languages as the upstream server.
+> [!NOTE]
+> You should do this even though you want the downstream server to download the same languages as the upstream server.
 
-    2.  If the upstream server has been configured to download update files in all languages: In the WSUS Configuration Wizard, click **Download updates in all languages supported by the upstream server**.
+2.  If the upstream server has been configured to download update files in all languages: In the WSUS Configuration Wizard, click **Download updates in all languages supported by the upstream server**.
 
-        > [!NOTE]
-        > You should do this even though you want the downstream server to download the same languages as the upstream server. This setting causes the upstream server to download updates in all languages, including languages that were not originally configured for the upstream server. If you add languages to the upstream server, you should copy the new updates to its replica servers.
-        >
-        > Changing language options on the upstream server alone might cause a mismatch between the number of updates that are approved on the central server and the number of updates approved on the replica servers.
+> [!NOTE]
+> You should do this even though you want the downstream server to download the same languages as the upstream server. This setting causes the upstream server to download updates in all languages, including languages that were not originally configured for the upstream server. If you add languages to the upstream server, you should copy the new updates to its replica servers.
+>
+> Changing language options on the upstream server alone might cause a mismatch between the number of updates that are approved on the central server and the number of updates approved on the replica servers.
 
 ## <a name="BKMK_1.5"></a>1.5. Plan WSUS computer groups
 WSUS allows you to target updates to groups of client computers, so you can ensure that specific computers always get the right updates at the most convenient times. For example, if all the computers in one department (such as the Accounting team) have a specific configuration, you can set up a group for that team, decide which updates their computers need and what time they should be installed, and then use WSUS reports to evaluate the updates for the team.

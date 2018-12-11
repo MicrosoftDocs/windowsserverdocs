@@ -1,17 +1,17 @@
 ---
-title: Core Network Guide
+title: Core network components
 description: This guide provides instructions on how to plan and deploy the core components required for a fully functioning network and a new Active Directory domain in a new forest with Windows Server 2016
 manager: brianlic
 ms.prod: windows-server-threshold
 ms.technology: networking
 ms.topic: article
 ms.assetid: b3cd60f7-d380-4712-9a78-0a8f551e1121
-ms.author: jamesmci
-author: jamesmci
+ms.author: pashort
+author: shortpatti
 ---
-# Core Network Guide
+# Core network components
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 This guide provides instructions on how to plan and deploy the core components required for a fully functioning network and a new Active Directory domain in a new forest.
 
@@ -544,8 +544,8 @@ You can use the following commands to install and configure AD DS and DNS. You m
 
 >[!NOTE]
 >For more information about these Windows PowerShell commands, see the following reference topics.
->- [Install-WindowsFeature](https://technet.microsoft.com/itpro/powershell/windows/server-manager/install-windowsfeature)
->- [Install-ADDSForest](https://technet.microsoft.com/itpro/powershell/windows/adds/deployment/install-addsforest)
+>- [Install-WindowsFeature](https://docs.microsoft.com/powershell/module/servermanager/install-windowsfeature?view=win10-ps)
+>- [Install-ADDSForest](https://docs.microsoft.com/powershell/module/addsdeployment/install-addsforest?view=win10-ps)
 
 Membership in **Administrators** is the minimum required to perform this procedure.
 
@@ -983,7 +983,7 @@ Membership in **DHCP Administrators**, or equivalent, is the minimum required to
 5.  In **Password**, type your domain password, and then click the arrow, or press ENTER.
 
 ### <a name="BKMK_optionalfeatures"></a>Deploying optional features for network access authentication and Web services
-If you intend to deploy network access servers, such as wireless access points or VPN servers, after installing your core network, it is recommended that you deploy both an NPS server and a Web server. For network access deployments, the use of secure certificate-based authentication methods is recommended. You can use NPS to manage network access policies and to deploy secure authentication methods. You can use a Web server to publish the certificate revocation list (CRL) of your certification authority (CA) that provides certificates for secure authentication.
+If you intend to deploy network access servers, such as wireless access points or VPN servers, after installing your core network, it is recommended that you deploy both an NPS and a Web server. For network access deployments, the use of secure certificate-based authentication methods is recommended. You can use NPS to manage network access policies and to deploy secure authentication methods. You can use a Web server to publish the certificate revocation list (CRL) of your certification authority (CA) that provides certificates for secure authentication.
 
 > [!NOTE]
 > You can deploy server certificates and other additional features by using Core Network Companion Guides. For more information, see [Additional Technical Resources](#BKMK_resources).
@@ -1010,7 +1010,7 @@ NPS is an optional component of a core network, but you should install NPS if an
 
 -   You plan to deploy 802.1X authentication for wired or wireless  access.
 
-Before deploying this role service, you must perform the following steps on the computer you are configuring as an NPS server.
+Before deploying this role service, you must perform the following steps on the computer you are configuring as an NPS.
 
 -   Perform the steps in the section [Configuring All Servers](#BKMK_configuringAll).
 
@@ -1022,7 +1022,7 @@ To deploy NPS1, which is the computer running the Network Policy Server (NPS) ro
 
 -   [Install Network Policy Server (NPS)](#BKMK_installNPS)
 
--   [Register the NPS Server in the Default Domain](#BKMK_registerNPS)
+-   [Register the NPS in the Default Domain](#BKMK_registerNPS)
 
 > [!NOTE]
 > This guide provides instructions for deploying NPS on a standalone server or VM named NPS1.  Another recommended deployment model is the installation of NPS on a domain controller. If you prefer installing NPS on a domain controller instead of on a standalone server, install NPS on DC1.
@@ -1074,10 +1074,10 @@ To complete this procedure, you must be a member of the **Domain Admins** group.
 
 8.  In **Confirm installation selections**, click **Restart the destination server automatically if required**. When you are prompted to confirm this selection, click **Yes**, and then click **Install**. The Installation progress page displays status during the installation process. When the process completes, the message "Installation succeeded on *ComputerName*" is displayed, where *ComputerName* is the name of the computer upon which you installed Network Policy Server. Click **Close**.
 
-##### <a name="BKMK_registerNPS"></a>Register the NPS Server in the Default Domain
-You can use this procedure to register an NPS server in the domain where the server is a domain member.
+##### <a name="BKMK_registerNPS"></a>Register the NPS in the Default Domain
+You can use this procedure to register an NPS in the domain where the server is a domain member.
 
-NPS servers must be registered in Active Directory so that they have permission to read the dial-in properties of user accounts during the authorization process. Registering an NPS server adds the server to the **RAS and IAS Servers** group in Active Directory.
+NPSs must be registered in Active Directory so that they have permission to read the dial-in properties of user accounts during the authorization process. Registering an NPS adds the server to the **RAS and IAS Servers** group in Active Directory.
 
 **Administrative credentials**
 
@@ -1088,7 +1088,7 @@ To complete this procedure, you must be a member of the **Domain Admins** group.
 >
 > `netsh nps add registeredserver domain=corp.contoso.com server=NPS1.corp.contoso.com`
 
-###### To register an NPS server in its default domain
+###### To register an NPS in its default domain
 
 1.  On NPS1, in Server Manager, click Tools, and then click **Network Policy Server**. The Network Policy Server MMC opens.
 
@@ -1152,7 +1152,7 @@ For more information about the technologies in this guide, see the following res
 
  Windows Server 2016,  Windows Server 2012 R2 , and  Windows Server 2012  Technical Library Resources
 
--   [What's new in Active Directory Domain Services (AD DS) in Windows Server 2016](https://technet.microsoft.com/en-us/library/mt163897.aspx)
+-   [What's new in Active Directory Domain Services (AD DS) in Windows Server 2016](https://technet.microsoft.com/library/mt163897.aspx)
 
 -   [Active Directory Domain Services overview](https://technet.microsoft.com/library/hh831484.aspx) at https://technet.microsoft.com/library/hh831484.aspx.
 
@@ -1535,7 +1535,7 @@ The following three tables list pre-installation configuration items as describe
 |Computer name|NPS1||
 
 ##### Network Policy Server installation configuration items
-Configuration items for the Windows Server Core Network NPS deployment procedures [Install Network Policy Server (NPS)](#BKMK_installNPS) and [Register the NPS Server in the Default Domain](#BKMK_registerNPS).
+Configuration items for the Windows Server Core Network NPS deployment procedures [Install Network Policy Server (NPS)](#BKMK_installNPS) and [Register the NPS in the Default Domain](#BKMK_registerNPS).
 
 -   No additional configuration items are required to install and register NPS.
 

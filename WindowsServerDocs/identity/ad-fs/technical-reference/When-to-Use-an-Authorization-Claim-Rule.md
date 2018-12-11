@@ -70,7 +70,7 @@ Different authorization rule sets exist depending on the type of permit or deny 
 For more details about how the authorization rule process fits into the claims issuance pipeline, see The Role of the Claims Issuance Engine.  
   
 ### Supported claim types  
-AD FSdefines two claim types that are used to determine whether a user is permitted or denied. These claim type Uniform Resource Identifiers \(URIs\) are as follows:  
+AD FS defines two claim types that are used to determine whether a user is permitted or denied. These claim type Uniform Resource Identifiers \(URIs\) are as follows:  
   
 1.  **Permit**: http:\/\/schemas.microsoft.com\/authorization\/claims\/permit  
   

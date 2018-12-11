@@ -2,9 +2,9 @@
 ms.assetid: 8f994e2e-6c07-43f0-aef4-75f8b2c9a144
 title: Maintaining a More Secure Environment
 description:
-author: billmath
-ms.author: billmath
-manager: femila
+author: MicrosoftGuyJFlo
+ms.author: joflore
+manager: mtillman
 ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server-threshold

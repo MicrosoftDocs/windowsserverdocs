@@ -13,7 +13,7 @@ ms.date: 10/16/2017
 
 Linux and BSD virtual machines have additional considerations compared to Windows virtual machines in Hyper-V.
 
-The first consideration is whether Integration Services are present or if the VM is running merely on emulated hardware with no enlightenment. A table of Linux and BSD releases that have built-in or downloadable Integration Services is available in [Supported Linux and FreeBSD virtual machines for Hyper-V on Windows](https://technet.microsoft.com/en-us/windows-server-docs/compute/hyper-v/supported-linux-and-freebsd-virtual-machines-for-hyper-v-on-windows). These pages have grids of available Hyper-V features available to Linux distribution releases, and notes on those features where applicable.
+The first consideration is whether Integration Services are present or if the VM is running merely on emulated hardware with no enlightenment. A table of Linux and BSD releases that have built-in or downloadable Integration Services is available in [Supported Linux and FreeBSD virtual machines for Hyper-V on Windows](https://technet.microsoft.com/windows-server-docs/compute/hyper-v/supported-linux-and-freebsd-virtual-machines-for-hyper-v-on-windows). These pages have grids of available Hyper-V features available to Linux distribution releases, and notes on those features where applicable.
 
 Even when the guest is running Integration Services, it can be configured with legacy hardware which does not exhibit the best performance. For example, configure and use a virtual ethernet adapter for the guest instead of using a legacy network adapter. With Windows Server 2016, advanced networking like SR-IOV are available as well.
 
@@ -29,7 +29,7 @@ Similarly, the VMMQ (Virtual Switch RSS) feature can be enabled on the physical 
 
 In the guest additional TCP tuning can be performed by increasing limits. For the best performance spreading workload over multiple CPUs and having deep workloads produces the best throughput, as virtualized workloads will have higher latency than "bare metal" ones.
 
-Some example tuning paramters that have been useful in network benchmarks include:
+Some example tuning parameters that have been useful in network benchmarks include:
 
 ```PowerShell
 net.core.netdev_max_backlog = 30000
@@ -48,7 +48,7 @@ A useful tool for network microbenchmarks is ntttcp, which is available on both 
 
 ## Linux Storage Performance
 
-Some best practices, like the following, are listed on [Best Practices for Running Linux on Hyper-V](https://technet.microsoft.com/en-us/windows-server-docs/compute/hyper-v/best-practices-for-running-linux-on-hyper-v). The Linux kernel has different I/O schedulers to reorder requests with different algorithms. NOOP is a first-in first-out queue that passes the schedule decision to be made by the hypervisor. It is recommended to use NOOP as the scheduler when running Linux virtual machine on Hyper-V. To change the scheduler for a specific device, in the boot loader's configuration (/etc/grub.conf, for example), add `elevator=noop` to the kernel parameters, and then restart.
+Some best practices, like the following, are listed on [Best Practices for Running Linux on Hyper-V](https://technet.microsoft.com/windows-server-docs/compute/hyper-v/best-practices-for-running-linux-on-hyper-v). The Linux kernel has different I/O schedulers to reorder requests with different algorithms. NOOP is a first-in first-out queue that passes the schedule decision to be made by the hypervisor. It is recommended to use NOOP as the scheduler when running Linux virtual machine on Hyper-V. To change the scheduler for a specific device, in the boot loader's configuration (/etc/grub.conf, for example), add `elevator=noop` to the kernel parameters, and then restart.
 
 Similar to networking, Linux guest performance with storage benefits the most from multiple queues with enough depth to keep the host busy. Microbenchmarking storage performance is probably best with the fio benchmark tool with the libaio engine.
 

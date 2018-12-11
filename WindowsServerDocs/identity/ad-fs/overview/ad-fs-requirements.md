@@ -1,14 +1,13 @@
 ---
 ms.assetid: 28f4a518-1341-4a10-8a4e-5f84625b314b
 title: AD FS 2016 Requirements
-description:
+description: Requirements for installing Active Directory Federation Services.
 author: billmath
 ms.author: billmath
-manager: femila
-ms.date: 08/10/2017
+manager: mtillman
+ms.date: 03/06/2018
 ms.topic: article
 ms.prod: windows-server-threshold
-
 ms.technology: identity-adfs
 ---
 
@@ -65,7 +64,7 @@ By default, AD FS configures the SSL certificate provided upon initial configura
 - Use the same certificate as you use for SSL.  
 
 ### Token Signing Certificate
-This certificate is used sign issued tokens to relying parties, so relying party applications must recognize the certificate and it's associated key as known and trusted. When the token signing certificate changes, such as when it expires and you configure a new certificate, all relying parties must be updated.
+This certificate is used to sign issued tokens to relying parties, so relying party applications must recognize the certificate and it's associated key as known and trusted. When the token signing certificate changes, such as when it expires and you configure a new certificate, all relying parties must be updated.
 
 **Recommendation:**
 Use the AD FS default, internally generated, self-signed token signing certificates.  
@@ -110,7 +109,7 @@ If you are using SQL Server for your AD FS configuration database, size the SQL 
   
 -   For extranet access, you must deploy the Web Application Proxy role service \- part of the Remote Access server role. 
 
--   Third party proxies must support the [MS-ADFSPIP protocol](https://msdn.microsoft.com/en-us/library/dn392811.aspx) to be supported as an AD FS proxy.
+-   Third party proxies must support the [MS-ADFSPIP protocol](https://msdn.microsoft.com/en-us/library/dn392811.aspx) to be supported as an AD FS proxy.  For a list of 3rd party vendors see the [FAQ](AD-FS-FAQ.md#what-third-party-proxies-are-available-for-ad-fs-that-support-ms-adfspip).
 
 -   AD FS 2016 requires Web Application Proxy servers on Windows Server 2016.  A downlevel proxy cannot be configured for an AD FS 2016 farm running at the 2016 farm behavior level.
   
@@ -143,7 +142,7 @@ If you are using SQL Server for your AD FS configuration database, size the SQL 
   
 -   Any standard domain account can be used as a service account for AD FS. Group Managed Service accounts are also supported. The permissions required at runtime will be added automatically when you configure AD FS.
 
--   Group Managed service accounts require at least one domain controller running Windows Server 2012 or higher.  
+-   Group Managed service accounts require at least one domain controller running Windows Server 2012 or higher.  The GMSA must live under the default 'CN=Managed Service Accounts' container.  
 
 -   For Kerberos authentication, the service principal name ‘`HOST/<adfs\_service\_name>`’ must be registered on the AD FS service account. By default, AD FS will configure this when creating a new AD FS farm.  If this fails, such as in the case of a collision or insufficient permissions, you'll see a warning and you should add it manually.  
    
@@ -221,6 +220,17 @@ For additional information see [Best practices for securing Active Directory Fed
 -   For user certificate authentication on port 443, "certauth.\<federation service name\>" must be configured in DNS to resolve to the federation server or web application proxy.
 
 -   For device registration or for modern authentication to on premises resources using pre-Windows 10 clients, "enterpriseregistration.\<upn suffix\>", for each UPN suffix in use in your organization, must be configured to resolve to the federation server or web application proxy.
+
+**Load Balancer requirements**
+- The load balancer MUST NOT terminate SSL. AD FS supports multiple use cases with certificate authentication which will break when terminating SSL. Terminating SSL at the load balancer is not supported for any use case. 
+- It is recommended to use a load balancer that supports SNI. In the event it does not, using the 0.0.0.0 fallback binding on your AD FS / Web Application Proxy server should provide a workaround.
+- It is recommended to use the HTTP (not HTTPS) health probe endpoints to perform load balancer health checks for routing traffic. This avoids any issues relating to SNI. The response to these probe endpoints is an HTTP 200 OK and is served locally with no dependence on back-end services. The HTTP probe can be accessed over HTTP using the path ‘/adfs/probe’
+    - http://&lt;Web Application Proxy name&gt;/adfs/probe
+    - http://&lt;ADFS server name&gt;/adfs/probe
+    - http://&lt;Web Application Proxy IP address&gt;/adfs/probe
+    - http://&lt;ADFS IP address&gt;/adfs/probe
+- It is NOT recommended to use DNS round robin as a way to load balance. Using this type of load balancing does not provide an automated way to remove a node from the load balancer using health probes. 
+- It is NOT recommended to use IP based session affinity or sticky sessions for authentication traffic to AD FS within the load balancer. This can cause an overload of certain nodes when using legacy authentication protocol for mail clients to connect to Office 365 mail services (Exchange Online). 
 
 ## <a name="BKMK_13"></a>Permissions requirements  
 The administrator that performs the installation and the initial configuration of AD FS must have local administrator permissions on the AD FS server.  If the local administrator does not have permissions to create objects in Active Directory, they must first have a domain admin create the required AD objects, then configure the AD FS farm using the AdminConfiguration parameter.  

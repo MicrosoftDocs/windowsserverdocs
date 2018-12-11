@@ -12,14 +12,16 @@ ms.assetid: bb932dad-6f74-484f-8f7b-dd957b615d44
 author: lizap
 manager: dongill
 ms.author: elizapo
-ms.date: 03/22/2017
+ms.date: 06/05/2018
+ms.localizationpriority: medium
 ---
 
 # Remote Desktop client - supported configuration
 
 ## Supported PCs
 You can connect to PCs that are running the following Windows operating systems:
-- Windows 10
+- Windows 10 Pro
+- Windows 10 Enterprise
 - Windows 8 Enterprise
 - Windows 8 Professional
 - Windows 7 Professional

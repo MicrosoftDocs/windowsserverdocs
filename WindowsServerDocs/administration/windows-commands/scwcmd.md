@@ -19,7 +19,7 @@ ms.date: 10/16/2017
 
 > Applies To: Windows Server 2012 R2, Windows Server 2012
 
-The Scwcmd.exe command line-tool included with the Security Configuration Wizard (SCW) can be used to perform the following tasks:
+The Scwcmd.exe command-line tool included with the Security Configuration Wizard (SCW) can be used to perform the following tasks:
 -   Configure one or many servers with an SCW-generated policy.
 -   Analyze one or many servers with an SCW-generated policy.
 -   View analysis results in HTML format.

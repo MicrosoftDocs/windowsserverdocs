@@ -10,12 +10,12 @@ ms.technology: networking-sdn
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 5905532b-626d-4b35-99a3-72a063e25809
-ms.author: jamesmci
-author: jamesmci
+ms.author: pashort
+author: shortpatti
 ---
 # Manage Tenant Virtual Networks
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 You can use the topics in this section to manage Tenant Hyper-V Network Virtualization Virtual Networks after you have deployed Software Defined Networking by using the topic [Deploy a Software Defined Network infrastructure using scripts](../../sdn/deploy/Deploy-a-Software-Defined-Network-infrastructure-using-scripts.md).  
   

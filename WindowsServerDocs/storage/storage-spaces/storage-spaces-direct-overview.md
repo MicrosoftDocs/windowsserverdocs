@@ -1,90 +1,109 @@
 ---
-title: Storage Spaces Direct in Windows Server 2016
+title: Storage Spaces Direct overview
 ms.prod: windows-server-threshold
 ms.author: cosdar
 ms.manager: dongill
 ms.technology: storage-spaces
 ms.topic: article
 author: cosmosdarwin
-ms.date: 11/8/2017
+ms.date: 11/06/2018
 ms.assetid: 8bd0d09a-0421-40a4-b752-40ecb5350ffd
-description: An overview of Storage Spaces Direct, a feature of Windows Server Enterprise Edition that enables you to cluster servers with internal storage into a software-defined storage solution.
+description: An overview of Storage Spaces Direct, a feature of Windows Server that enables you to cluster servers with internal storage into a software-defined storage solution.
 ms.localizationpriority: medium
 ---
-# Storage Spaces Direct in Windows Server 2016
+# Storage Spaces Direct overview
 
->Applies to: Windows Server 2016
+>Applies to: Windows Server 2019, Windows Server 2016
 
-Storage Spaces Direct uses industry-standard servers with local-attached drives to create highly available, highly scalable software-defined storage at a fraction of the cost of traditional SAN or NAS arrays. Its converged or hyper-converged architecture radically simplifies procurement and deployment, while features like caching, storage tiers, and erasure coding, together with the latest hardware innovation like RDMA networking and NVMe drives, deliver unrivaled efficiency and performance.
+Storage Spaces Direct uses industry-standard servers with local-attached drives to create highly available, highly scalable software-defined storage at a fraction of the cost of traditional SAN or NAS arrays. Its converged or hyper-converged architecture radically simplifies procurement and deployment, while features such as caching, storage tiers, and erasure coding, together with the latest hardware innovations such as RDMA networking and NVMe drives, deliver unrivaled efficiency and performance.
 
-Storage Spaces Direct is included in Windows Server 2016 Datacenter and [Windows Server Insider Preview Builds](https://insider.windows.com/en-us/for-business-getting-started-server/).
+Storage Spaces Direct is included in Windows Server 2019 Datacenter, Windows Server 2016 Datacenter, and [Windows Server Insider Preview Builds](https://insider.windows.com/for-business-getting-started-server/). 
+
+For other applications of Storage Spaces, such as Shared SAS clusters and stand-alone servers, see [Storage Spaces overview](overview.md). If you're looking for info about using Storage Spaces on a Windows 10 PC, see [Storage Spaces in Windows 10](https://support.microsoft.com/help/12438/windows-10-storage-spaces).
 
 <table>
     <tr style="border: 0;">
-        <td style="padding: 10px; border: 0; width:125px">
-        <img src="media/Storage-Spaces-Direct-in-Windows-Server-2016/understand.png" width="125" alt="">        </td>
-        <td style="padding: 10px; border: 0;">
-            <strong><a href="understand-storage-spaces-direct.md">Understand</a></strong>
+        <td style="padding: 5px; border: 0;">
+            <strong>Understand</a></strong>
             <ul>
 			  <li>Overview (you are here)</li>
 			  <li><a href="understand-the-cache.md">Understand the cache</a></li>
 			  <li><a href="storage-spaces-fault-tolerance.md">Fault tolerance and storage efficiency</a></li>
+              <li><a href="drive-symmetry-considerations.md">Drive symmetry considerations</a></li>
+              <li><a href="understand-quorum.md">Understanding cluster and pool quorum</a></li>
+              <li><a href="cluster-sets.md">Cluster sets</a></li>
 		  	</ul>
         </td>
-        <td style="padding: 10px; border: 0; width:125px">
-        <img src="media/Storage-Spaces-Direct-in-Windows-Server-2016/plan.png" width="125" alt="">
-        </td>
-        <td style="padding: 10px; border: 0;">
-            <strong><a href="plan-storage-spaces-direct.md">Plan</a></strong>
+        <td style="padding: 5px; border: 0;">
+            <strong>Plan</a></strong>
             <ul>
 			  <li><a href="storage-spaces-direct-hardware-requirements.md">Hardware requirements</a></li>
+              <li><a href="csv-cache.md">Using the CSV in-memory read cache</li>
 			  <li><a href="choosing-drives.md">Choose drives</a></li>
 			  <li><a href="plan-volumes.md">Plan volumes</a></li>
-              <li><a href="storage-spaces-direct-in-vm.md">Guest VM clusters</a></li>
+              <li><a href="storage-spaces-direct-in-vm.md">Using guest VM clusters</a></li>
+              <li><a href="storage-spaces-direct-disaster-recovery.md">Disaster recovery</a></li>
 		    </ul>
         </td>
     </tr>
     <tr style="border: 0;">
-        <td style="padding: 10px; border: 0; width:125px">
-            <img src="media/Storage-Spaces-Direct-in-Windows-Server-2016/deploy.png" width="125" alt="">
-        </td>
-        <td style="padding: 10px; border: 0;">
-            <strong><a href="deploy-storage-spaces-direct.md">Deploy</a></strong>
+        <td style="padding: 5px; border: 0;">
+            <strong>Deploy</a></strong>
             <ul>
-			  <li><a href="hyper-converged-solution-using-storage-spaces-direct.md">Hyper-converged solution</a></li>
+			  <li><a href="deploy-storage-spaces-direct.md">Deploy Storage Spaces Direct</a></li>
 			  <li><a href="create-volumes.md">Create volumes</a></li>
+              <li><a href="nested-resiliency.md">Nested resiliency</a></li>
+              <li><a href="../../failover-clustering/manage-cluster-quorum.md">Configure quorum</a><br><br><br></li>
 		    </ul>
         </td>        
-        <td style="padding: 10px; border: 0; width:125px">
-            <img src="media/Storage-Spaces-Direct-in-Windows-Server-2016/manage.png" width="125" alt="">
-        </td>
-        <td style="padding: 10px; border: 0;">
-            <strong><a href="manage-storage-spaces-direct.md">Manage</a></strong>
+        <td style="padding: 5px; border: 0;">
+            <strong>Manage</a></strong>
             <ul>
+              <li><a href="../../manage/windows-admin-center/use/manage-hyper-converged.md">Manage with Windows Admin Center</a></li>
 			  <li><a href="add-nodes.md">Add servers or drives</a></li>
 			  <li><a href="maintain-servers.md">Taking a server offline for maintenance</li>
 			  <li><a href="remove-servers.md">Remove servers</a></li>
 			  <li><a href="resize-volumes.md">Extend volumes</a></li>
 			  <li><a href="../update-firmware.md">Update drive firmware</a></li>
+              <li><a href="performance-history.md">Performance history</a></li>
+              <li><a href="delimit-volume-allocation.md">Delimit the allocation of volumes</a></li>
 		    </ul>
         </td>
     </tr>
-    
+    <tr style="border: 0;">
+         <td style="padding: 5px; border: 0;">
+            <strong>Troubleshooting</a></strong>
+            <ul>
+              <li><a href="storage-spaces-states.md">Troubleshoot health and operational states</a></li>
+              <li><a href="data-collection.md">Collect diagnostic data with Storage Spaces Direct</a></li>
+            </ul>
+         <td style="padding: 5px; border: 0;">
+            <strong>Recent blog posts</a></strong>
+            <ul>
+              <li><a href="https://blogs.technet.microsoft.com/filecab/2018/10/30/windows-server-2019-and-intel-optane-dc-persistent-memory/">13.7 million IOPS with Storage Spaces Direct: the new industry record for hyper-converged infrastructure</a></li>
+              <li><a href="https://blogs.technet.microsoft.com/filecab/2018/10/02/hci-the-countdown-clock-starts-now/">Hyper-converged infrastructure in Windows Server 2019 - the countdown clock starts now!</a></li>
+              <li><a href="https://blogs.technet.microsoft.com/filecab/2018/06/27/windows-server-summit-recap/">Five big announcements from the Windows Server Summit</a></li>
+              <li><a href="https://blogs.technet.microsoft.com/filecab/2018/03/27/storage-spaces-direct-momentum/">10,000 Storage Spaces Direct clusters and counting...</a></li>
+            </ul>
 </table>
 
 ## Videos
 
-<table style="width: 100%; table-layout: fixed;">
-	<tr style="border: 0;">
-		<td style="padding: 10px; border: 0; width=50%">
-			<strong>Quick Video Overview</strong><br>(5 minutes)<br>
-			<iframe src="https://www.youtube.com/embed/raeUiNtMk0E" width="315" height="177" allowfullscreen></iframe>
-		</td>
-		<td style="padding: 10px; border: 0; width=50%">
-			<strong>Launch Event at Microsoft Ignite 2016</strong><br>(1 hour)<br>
-			<iframe src="https://www.youtube.com/embed/-LK2ViRGbWs" width="315" height="177" allowfullscreen></iframe>
-		</td>
-</table>
+**Quick Video Overview (5 minutes)**
+
+<iframe src="https://www.youtube-nocookie.com/embed/raeUiNtMk0E" width="560" height="315" allowfullscreen></iframe>
+
+**Storage Spaces Direct at Microsoft Ignite 2018 (1 hour)**
+
+[Watch on YouTube](https://www.youtube.com/watch?v=5kaUiW3qo30)
+
+**Storage Spaces Direct at Microsoft Ignite 2017 (1 hour)**
+
+[Watch on YouTube](https://www.youtube.com/watch?v=5kaUiW3qo30)
+
+**Launch Event at Microsoft Ignite 2016 (1 hour)**
+
+[Watch on YouTube](https://www.youtube.com/watch?v=-LK2ViRGbWs)
 
 ## Key benefits
 
@@ -151,7 +170,7 @@ Storage Spaces Direct was designed for two distinct deployment options:
 
 ### Hyper-Converged
 
-**One cluster for compute and storage.** The hyper-converged deployment option runs Hyper-V virtual machines or SQL Server databases directly on the servers providing the storage, storing their files on the local volumes. This eliminates the need to configure file server access and permissions, and reduces hardware costs for small-to-medium business or remote office/branch office deployments. See [Hyper-converged solution using Storage Spaces Direct](hyper-converged-solution-using-storage-spaces-direct.md).
+**One cluster for compute and storage.** The hyper-converged deployment option runs Hyper-V virtual machines or SQL Server databases directly on the servers providing the storage, storing their files on the local volumes. This eliminates the need to configure file server access and permissions, and reduces hardware costs for small-to-medium business or remote office/branch office deployments. See [Deploy Storage Spaces Direct](deploy-storage-spaces-direct.md).
 
 ![Storage Spaces Direct serves storage to Hyper-V VMs in the same cluster](media/storage-spaces-direct-in-windows-server-2016/hyper-converged-minimal.png)
 
@@ -171,7 +190,7 @@ Here's an overview of the Storage Spaces Direct stack:
 
 **Software Storage Bus.** The Software Storage Bus is new in Storage Spaces Direct. It spans the cluster and establishes a software-defined storage fabric whereby all the servers can see all of each other's local drives. You can think of it as replacing costly and restrictive Fibre Channel or Shared SAS cabling.
 
-**Storage Bus Layer Cache.** The [Software Storage Bus](software-storage-bus-overview.md) dynamically binds the fastest drives present (e.g. SSD) to slower drives (e.g. HDDs) to provide server-side read/write caching that accelerates IO and boosts throughput.
+**Storage Bus Layer Cache.** The Software Storage Bus dynamically binds the fastest drives present (e.g. SSD) to slower drives (e.g. HDDs) to provide server-side read/write caching that accelerates IO and boosts throughput.
 
 **Storage Pool.** The collection of drives that form the basis of Storage Spaces is called the storage pool. It is automatically created, and all eligible drives are automatically discovered and added to it. We strongly recommend you use one pool per cluster, with the default settings. Read our [Deep Dive into the Storage Pool](https://blogs.technet.microsoft.com/filecab/2016/11/21/deep-dive-pool-in-spaces-direct/) to learn more.
 
@@ -183,18 +202,35 @@ Here's an overview of the Storage Spaces Direct stack:
 
 **Scale-Out File Server.** This final layer is necessary in converged deployments only. It provides remote file access using the SMB3 access protocol to clients, such as another cluster running Hyper-V, over the network, effectively turning Storage Spaces Direct into network-attached storage (NAS).
 
+## Customer stories
+
+There are [over 10,000 clusters](https://blogs.technet.microsoft.com/filecab/2018/03/27/storage-spaces-direct-momentum/) worldwide running Storage Spaces Direct. Organizations of all sizes, from small businesses deploying just two nodes, to large enterprises and governments deploying hundreds of nodes, depend on Storage Spaces Direct for their critical applications and infrastructure.
+
+Visit [Microsoft.com/HCI](https://www.microsoft.com/hci) to read their stories:
+
+[![Grid of customer logos](media/storage-spaces-direct-in-windows-server-2016/customer-stories.png)](https://www.microsoft.com/hci)
+
+## Management tools
+
+The following tools can be used to manage and/or monitor Storage Spaces Direct:
+
+| Name | Graphical or command-line? | Paid or included? |
+|-----------------|----------------------------|-------------------|
+| [Windows Admin Center](../../manage/windows-admin-center/overview.md)     | Graphical    | Included |
+| Server Manager & Failover Cluster Manager                                 | Graphical    | Included |
+| Windows PowerShell                                                        | Command-line | Included |
+| [System Center Virtual Machine Manager (SCVMM)](https://technet.microsoft.com/system-center-docs/vmm/manage/manage-storage-spaces-direct-vmm) & [Operations Manager (SCOM)](https://www.microsoft.com/download/details.aspx?id=54700) | Graphical    | Paid     |
+
 ## Get started
 
 Try Storage Spaces Direct [in Microsoft Azure](https://blogs.technet.microsoft.com/filecab/2016/05/05/s2dazuretp5/), or download a 180-day-licensed evaluation copy of Windows Server from [Windows Server Evaluations](https://go.microsoft.com/fwlink/?linkid=842602).
 
 ## See also
 
--   [Storage Spaces Direct throughput with iWARP](https://blogs.technet.microsoft.com/filecab/2017/03/13/storage-spaces-direct-throughput-with-iwarp) (TechNet blog)
 -   [Fault tolerance and storage efficiency](storage-spaces-fault-tolerance.md)
+-   [Storage Replica](../storage-replica/storage-replica-overview.md)
+-   [Storage at Microsoft blog](https://blogs.technet.microsoft.com/filecab/)
+-   [Storage Spaces Direct throughput with iWARP](https://blogs.technet.microsoft.com/filecab/2017/03/13/storage-spaces-direct-throughput-with-iwarp) (TechNet blog)
 -   [What's New in Failover Clustering in Windows Server](../../failover-clustering/whats-new-in-failover-clustering.md)  
--   [Storage Replica in Windows Server 2016](../storage-replica/storage-replica-overview.md)  
 -   [Storage Quality of Service](../storage-qos/storage-qos-overview.md)
-- [Storage Spaces in Windows Server 2012 R2](https://technet.microsoft.com/library/hh831739%28v=ws.11%29.aspx) (with shared SAS storage enclosures)
-- [Windows IT Pro Support](https://www.microsoft.com/itpro/windows/support)
-
-Not finding content you need? Windows 10 users, tell us what you want on [Feedback Hub](feedback-hub://?referrer=techDocsUcPage&tabid=2&contextid=898&newFeedback=true&topic=storage-spaces-direct-overview.md). 
+-   [Windows IT Pro Support](https://www.microsoft.com/itpro/windows/support)

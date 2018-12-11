@@ -6,15 +6,15 @@ ms.technology: networking
 ms.topic: article
 ms.assetid: 528280e6-b47e-489f-b310-b257d434aa0d
 manager: brianlic
-ms.author: jamesmci
-author: jamesmci
+ms.author: pashort
+author: shortpatti
 ---
 
 # NPS Proxy Server Load Balancing
 
 Applies To: Windows Server 2016
 
-Remote Authentication Dial-In User Service (RADIUS) clients, which are network access servers such as virtual private network (VPN) servers and wireless access points, create connection requests and send them to RADIUS servers such as NPS. In some cases, an NPS server might receive too many connection requests at one time, resulting in degraded performance or an overload. When an NPS server is overloaded, it is a good idea to add more NPS servers to your network and to configure load balancing. When you evenly distribute incoming connection requests among multiple NPS servers to prevent the overloading of one or more NPS servers, it is called load balancing.
+Remote Authentication Dial-In User Service (RADIUS) clients, which are network access servers such as virtual private network (VPN) servers and wireless access points, create connection requests and send them to RADIUS servers such as NPS. In some cases, an NPS might receive too many connection requests at one time, resulting in degraded performance or an overload. When an NPS is overloaded, it is a good idea to add more NPSs to your network and to configure load balancing. When you evenly distribute incoming connection requests among multiple NPSs to prevent the overloading of one or more NPSs, it is called load balancing.
 
 Load balancing is particularly useful for:
 
@@ -22,10 +22,10 @@ Load balancing is particularly useful for:
 - Organizations that need to sustain continuous service availability.
 - Internet service providers \(ISPs\) that outsource VPN access for other organizations. The outsourced VPN services can generate a large volume of authentication traffic.
 
-There are two methods you can use to balance the load of connection requests sent to your NPS servers:
+There are two methods you can use to balance the load of connection requests sent to your NPSs:
 
 - Configure your network access servers to send connection requests to multiple RADIUS servers. For example, if you have 20 wireless access points and two RADIUS servers, configure each access point to send connection requests to both RADIUS servers. You can load balance and provide failover at each network access server by configuring the access server to send connection requests to multiple RADIUS servers in a specified order of priority. This method of load balancing is usually best for small organizations that do not deploy a large number of RADIUS clients.
-- Use NPS configured as a RADIUS proxy to load balance connection requests between multiple NPS servers or other RADIUS servers. For example, if you have 100 wireless access points, one NPS proxy, and three RADIUS servers, you can configure the access points to send all traffic to the NPS proxy. On the NPS proxy, configure load balancing so that the proxy evenly distributes the connection requests between the three RADIUS servers. This method of load balancing is best for medium and large organizations that have many RADIUS clients and servers.
+- Use NPS configured as a RADIUS proxy to load balance connection requests between multiple NPSs or other RADIUS servers. For example, if you have 100 wireless access points, one NPS proxy, and three RADIUS servers, you can configure the access points to send all traffic to the NPS proxy. On the NPS proxy, configure load balancing so that the proxy evenly distributes the connection requests between the three RADIUS servers. This method of load balancing is best for medium and large organizations that have many RADIUS clients and servers.
 
 In many cases, the best approach to load balancing is to configure RADIUS clients to send connection requests to two NPS proxy servers, and then configure the NPS proxies to load balance among RADIUS servers. This approach provides both failover and load balancing for NPS proxies and RADIUS servers.
 

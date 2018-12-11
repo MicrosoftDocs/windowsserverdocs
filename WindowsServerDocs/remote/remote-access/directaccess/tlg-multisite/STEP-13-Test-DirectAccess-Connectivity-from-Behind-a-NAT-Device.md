@@ -11,8 +11,8 @@ ms.technology:
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 796825c3-5e3e-4745-a921-25ab90b95ede
-ms.author: jamesmci
-author: jamesmci
+ms.author: pashort
+author: shortpatti
 ---
 # STEP 13 Test DirectAccess Connectivity from Behind a NAT Device
 
@@ -53,9 +53,9 @@ Before performing these tests, unplug CLIENT1 and CLIENT2 from the Internet swit
   
 8.  In the Windows PowerShell window, type **ping 2-app1** and press ENTER. You should see replies from the IPv6 address of 2-APP1, 2001:db8:2::3.  
   
-9. Open Internet Explorer, in the Internet Explorer address bar, enter **http://2-app1/** and press ENTER. You will see the default IIS website on 2-APP1.  
+9. Open Internet Explorer, in the Internet Explorer address bar, enter **https://2-app1/** and press ENTER. You will see the default IIS website on 2-APP1.  
   
-10. In the Internet Explorer address bar, enter **http://app2/** and press ENTER. You will see the default website on APP2.  
+10. In the Internet Explorer address bar, enter **https://app2/** and press ENTER. You will see the default website on APP2.  
   
 11. On the **Start** screen, type**\\\App2\Files**, and then press ENTER. Double-click the New Text Document file. This demonstrates that you were able to connect to an IPv4 only server using SMB to obtain a resource on an IPv4 only host.  
   
@@ -77,9 +77,9 @@ Before performing these tests, unplug CLIENT1 and CLIENT2 from the Internet swit
   
 7.  In the Windows PowerShell window, type **ping 2-app1** and press ENTER. You should see replies from the IPv6 address of 2-APP1, 2001:db8:2::3.  
   
-8.  Open Internet Explorer, in the Internet Explorer address bar, enter **http://2-app1/** and press ENTER. You will see the default IIS website on 2-APP1.  
+8.  Open Internet Explorer, in the Internet Explorer address bar, enter **https://2-app1/** and press ENTER. You will see the default IIS website on 2-APP1.  
   
-9. In the Internet Explorer address bar, enter **http://app2/** and press ENTER. You will see the default website on APP2.  
+9. In the Internet Explorer address bar, enter **https://app2/** and press ENTER. You will see the default website on APP2.  
   
 10. On the **Start** screen, type**\\\App2\Files**, and then press ENTER. Double-click the New Text Document file. This demonstrates that you were able to connect to an IPv4 only server using SMB to obtain a resource on an IPv4 only host.  
   

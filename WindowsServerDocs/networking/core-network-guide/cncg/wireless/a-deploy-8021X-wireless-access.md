@@ -6,13 +6,13 @@ ms.prod: windows-server-threshold
 ms.technology: networking
 ms.topic: article
 ms.assetid: ff06ba23-9c0f-49ec-8f7b-611cf8d73a1b
-ms.author: jamesmci
-author: jamesmci
+ms.author: pashort
+author: shortpatti
 ---
 
 # Deploy Password\-Based 802.1X Authenticated Wireless Access
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 This is a companion guide to the Windows Server&reg; 2016 Core Network Guide. The Core Network Guide provides instructions for planning and deploying the components required for a fully functioning network and a new Active Directory® domain in a new forest.
 
@@ -40,7 +40,7 @@ This guide, in combination with the prerequisite guides described below, provide
 
 ### Dependencies for this guide
 
-To successfully deploy authenticated wireless with this guide, you must have a network and domain environment with all of the required technologies deployed. You must also have server certificates deployed to your authenticating NPS servers.
+To successfully deploy authenticated wireless with this guide, you must have a network and domain environment with all of the required technologies deployed. You must also have server certificates deployed to your authenticating NPSs.
 
 The following sections provide links to documentation that shows you how to deploy these technologies.
 
@@ -78,7 +78,7 @@ Following are the requirements for deploying a wireless access infrastructure by
 
 - Active Directory Domain Services \(AD DS\) is installed, as are the other required network technologies, according to the instructions in the Windows Server 2016 Core Network Guide.  
 
-- AD CS is deployed, and server certificates are enrolled to NPS servers. These certificates are required when you deploy the PEAP\-MS\-CHAP v2 certificate\-based authentication method that is used in this guide.
+- AD CS is deployed, and server certificates are enrolled to NPSs. These certificates are required when you deploy the PEAP\-MS\-CHAP v2 certificate\-based authentication method that is used in this guide.
 
 - A member of your organization is familiar with the IEEE 802.11 standards that are supported by your wireless APs and the wireless network adapters that are installed in the client computers and devices on your network. For example, someone in your organization is familiar with radio frequency types, 802.11 wireless authentication \(WPA2 or WPA\), and ciphers \(AES or TKIP\).
 
@@ -99,9 +99,9 @@ Because many differences exist between brands and models of 802.1X\-capable wire
 
 Additionally, terminology and names for settings vary between wireless AP brands and models, and might not match the generic setting names that are used in this guide. For wireless AP configuration details, you must review the product documentation provided by the manufacturer of your wireless APs.
 
-### Instructions for deploying NPS server certificates
+### Instructions for deploying NPS certificates
   
-There are two alternatives for deploying NPS server certificates. This guide does not provide comprehensive guidance to help you determine which alternative will best meet your needs. In general, however, the choices you face are:
+There are two alternatives for deploying NPS certificates. This guide does not provide comprehensive guidance to help you determine which alternative will best meet your needs. In general, however, the choices you face are:
 
 - Purchasing certificates from a public CA, such as VeriSign, that are already trusted by Windows\-based clients. This option is typically recommended for smaller networks.
 
@@ -124,7 +124,7 @@ The IEEE 802.1X standard defines the port\-based network access control that is 
 ### 802.1X\-capable wireless access points \(APs\)
 This scenario requires the deployment of one or more 802.1X\-capable wireless APs that are compatible with the Remote Authentication Dial\-In User Service \(RADIUS\) protocol.
 
-802.1X and RADIUS\-compliant APs, when deployed in a RADIUS infrastructure with a RADIUS server such as an NPS server, are called *RADIUS clients*.
+802.1X and RADIUS\-compliant APs, when deployed in a RADIUS infrastructure with a RADIUS server such as an NPS, are called *RADIUS clients*.
 
 ### Wireless clients
 This guide provides comprehensive configuration details to supply 802.1X authenticated access for domain\-member users who connect to the network with wireless client computers running Windows 10, Windows 8.1, and Windows 8. Computers must be joined to the domain in order to successfully establish authenticated access.
@@ -204,7 +204,7 @@ Group Policy Management enables directory\-based change and configuration manage
 This guide provides detailed instructions about how to specify settings in the Wireless Network \(IEEE 802.11\) Policies extension of Group Policy Management. The Wireless Network \(IEEE 802.11\) Policies configure domain\-member wireless client computers with the necessary connectivity and wireless settings for 802.1X authenticated wireless access.
 
 ### Server certificates
-This deployment scenario requires server certificates for each NPS server that performs 802.1X authentication.  
+This deployment scenario requires server certificates for each NPS that performs 802.1X authentication.  
 
 A server certificate is a digital document that is commonly used for authentication and to secure information on open networks. A certificate securely binds a public key to the entity that holds the corresponding private key. Certificates are digitally signed by the issuing CA, and they can be issued for a user, a computer, or a service.  
 
@@ -213,7 +213,7 @@ A certification authority \(CA\) is an entity responsible for establishing and v
 Active Directory Certificate Services \(AD CS\) is a server role that issues certificates as a network CA. An AD CS certificate infrastructure, also known as a *public key infrastructure \(PKI\)*, provides customizable services for issuing and managing certificates for the enterprise.
 
 ### EAP, PEAP, and PEAP\-MS\-CHAP v2
-Extensible Authentication Protocol \(EAP\) extends Point\-to\-Point Protocol \(PPP\) by allowing additional authentication methods that use credential and information exchanges of arbitrary lengths. With EAP authentication, both the network access client and the authenticator \(such as the NPS server\) must support the same EAP type for successful authentication to occur. Windows Server 2016 includes an EAP infrastructure, supports two EAP types, and the ability to pass EAP messages to NPS servers. By using EAP, you can support additional authentication schemes, known as *EAP types*. The EAP types that are supported by Windows Server 2016 are:  
+Extensible Authentication Protocol \(EAP\) extends Point\-to\-Point Protocol \(PPP\) by allowing additional authentication methods that use credential and information exchanges of arbitrary lengths. With EAP authentication, both the network access client and the authenticator \(such as the NPS\) must support the same EAP type for successful authentication to occur. Windows Server 2016 includes an EAP infrastructure, supports two EAP types, and the ability to pass EAP messages to NPSs. By using EAP, you can support additional authentication schemes, known as *EAP types*. The EAP types that are supported by Windows Server 2016 are:  
 
 - Transport Layer Security \(TLS\)
 
@@ -222,7 +222,7 @@ Extensible Authentication Protocol \(EAP\) extends Point\-to\-Point Protocol \(P
 >[!IMPORTANT]
 >Strong EAP types \(such as those that are based on certificates\) offer better security against brute\-force attacks, dictionary attacks, and password guessing attacks than password\-based authentication protocols \(such as CHAP or MS\-CHAP version 1\).
 
-Protected EAP \(PEAP\) uses TLS to create an encrypted channel between an authenticating PEAP client, such as a wireless computer, and a PEAP authenticator, such as an NPS server or other RADIUS servers. PEAP does not specify an authentication method, but it provides additional security for other EAP authentication protocols \(such as EAP\-MS\-CHAP v2\) that can operate through the TLS encrypted channel provided by PEAP. PEAP is used as an authentication method for access clients that are connecting to your organization's network through the following types of network access servers \(NASs\):
+Protected EAP \(PEAP\) uses TLS to create an encrypted channel between an authenticating PEAP client, such as a wireless computer, and a PEAP authenticator, such as an NPS or other RADIUS servers. PEAP does not specify an authentication method, but it provides additional security for other EAP authentication protocols \(such as EAP\-MS\-CHAP v2\) that can operate through the TLS encrypted channel provided by PEAP. PEAP is used as an authentication method for access clients that are connecting to your organization's network through the following types of network access servers \(NASs\):
 
 - 802.1X\-capable wireless access points
 
@@ -232,9 +232,9 @@ Protected EAP \(PEAP\) uses TLS to create an encrypted channel between an authen
 
 - Computers running Windows Server 2016 and Remote Desktop Services
 
-PEAP\-MS\-CHAP v2 is easier to deploy than EAP\-TLS because user authentication is performed by using password\-based credentials \(user name and password\), instead of certificates or smart cards. Only NPS or other RADIUS servers are required to have a certificate. The NPS server certificate is used by the NPS server during the authentication process to prove its identity to PEAP clients.
+PEAP\-MS\-CHAP v2 is easier to deploy than EAP\-TLS because user authentication is performed by using password\-based credentials \(user name and password\), instead of certificates or smart cards. Only NPS or other RADIUS servers are required to have a certificate. The NPS certificate is used by the NPS during the authentication process to prove its identity to PEAP clients.
 
-This guide provides instructions to configure your wireless clients and your NPS server\(s\) to use PEAP\-MS\-CHAP v2 for 802.1X authenticated access.
+This guide provides instructions to configure your wireless clients and your NPS\(s\) to use PEAP\-MS\-CHAP v2 for 802.1X authenticated access.
 
 ### Network Policy Server
 Network Policy Server \(NPS\) allows you to centrally configure and manage network policies by using Remote Authentication Dial\-In User Service \(RADIUS\) server and RADIUS proxy. NPS is  required when you deploy 802.1X wireless access.
@@ -245,13 +245,13 @@ When you configure your 802.1X wireless access points as RADIUS clients in NPS, 
 
 Successful mutual PEAP\-MS\-CHAP v2 authentication has two main parts:
 
-1.  The client authenticates the NPS server.  During this phase of mutual authentication, the NPS server sends its server certificate to the client computer so that the client can verify the NPS server's identity with the certificate. To successfully authenticate the NPS server, the client computer must trust the CA that issued the NPS server certificate. The client trusts this CA when the CA’s certificate is present in the Trusted Root Certification Authorities certificate store on the client computer.
+1.  The client authenticates the NPS.  During this phase of mutual authentication, the NPS sends its server certificate to the client computer so that the client can verify the NPS's identity with the certificate. To successfully authenticate the NPS, the client computer must trust the CA that issued the NPS certificate. The client trusts this CA when the CA’s certificate is present in the Trusted Root Certification Authorities certificate store on the client computer.
 
     If you deploy your own private CA, the CA certificate is automatically installed in the Trusted Root Certification Authorities certificate store for the Current User and for the Local Computer when Group Policy is refreshed on the domain member client computer. If you decide to deploy server certificates from a public CA, ensure that the public CA certificate is already in the Trusted Root Certification Authorities certificate store.  
 
-2.  The NPS server authenticates the user. After the client successfully authenticates the NPS server, the client sends the user’s password\-based credentials to the NPS server, which verifies the user’s credentials against the user accounts database in Active Directory Doman Services \(AD DS\).
+2.  The NPS authenticates the user. After the client successfully authenticates the NPS, the client sends the user’s password\-based credentials to the NPS, which verifies the user’s credentials against the user accounts database in Active Directory Doman Services \(AD DS\).
 
-If the credentials are valid and authentication succeeds, the NPS server begins the authorization phase of processing the connection request. If the credentials are not valid and authentication fails, NPS sends an Access Reject message and the connection request is denied.  
+If the credentials are valid and authentication succeeds, the NPS begins the authorization phase of processing the connection request. If the credentials are not valid and authentication fails, NPS sends an Access Reject message and the connection request is denied.  
 
 #### Authorization
 

@@ -12,9 +12,7 @@ ms.assetid: 67a01889-fa36-4bc6-841d-363d76df6a66
 ---
 # Deploy graphics devices using Discrete Device Assignment
 
->Applies To: Microsoft Hyper-V Server 2016, Windows Server 2016
-
-**This is preliminary content and subject to change.**
+>Applies To: Microsoft Hyper-V Server 2016, Windows Server 2016, Windows Server 2019, Microsoft Hyper-V Server 2019  
 
 Starting with Windows Server 2016, you can use Discrete Device Assignment, or DDA, to pass an entire PCIe Device into a VM.  This will allow high performance access to devices like [NVMe storage](./Deploying-storage-devices-using-dda.md) or Graphics Cards from within a VM while being able to leverage the devices native drivers.  Please visit the [Plan for Deploying Devices using Discrete Device Assignment](../plan/Plan-for-Deploying-Devices-using-Discrete-Device-Assignment.md) for more details on which devices work, what are the possible security implications, etc.
 
