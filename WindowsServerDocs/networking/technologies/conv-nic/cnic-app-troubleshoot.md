@@ -52,21 +52,21 @@ Perform the following steps if you receive unexpected results when you run the *
 
 --- 
 
-## Get SmbClientNetworkInterface
+## Get-SmbClientNetworkInterface
 
 As an additional step to verify your RDMA configuration, run the following Windows PowerShell command on the Hyper-V server.
 
 
-    Get SmbClientNetworkInterface
+    Get-SmbClientNetworkInterface
 
-### Get SmbClientNetworkInterface expected results
+### Get-SmbClientNetworkInterface expected results
 
 The host vNIC should appear as RDMA capable from SMB’s perspective as well.
 
 ![Network adapter properties](../../media/Converged-NIC/CNIC-Troubleshooting/cnic-tshoot-03.jpg)
 
 
-### Get SmbClientNetworkInterface unexpected results
+### Get-SmbClientNetworkInterface unexpected results
 
 1. Make sure the Mlnx miniport and Mlnx bus drivers are latest. For Mellanox, use at least drop 42. 
 2. Verify that Mlnx miniport and bus drivers match by checking the driver version through Device Manager. The bus driver can be found in System Devices. The name should start with Mellanox Connect-X 3 PRO VPI, as illustrated in the following screen shot of network adapter properties.
