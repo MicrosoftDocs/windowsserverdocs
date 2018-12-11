@@ -7,7 +7,7 @@ ms.assetid: 915b1338-5085-481b-8904-75d29e609e93
 manager: dongill
 author: rpsqrd
 ms.technology: security-guarded-fabric
-ms.date: 08/29/2018
+ms.date: 12/10/2018
 ---
 
 # Authorize guarded hosts using TPM-based attestation
@@ -72,22 +72,21 @@ Code integrity policies can be configured to enforce the policy, blocking any so
 
 Starting with Windows Server version 1709, sample code integrity policies are included with Windows at C:\Windows\schemas\CodeIntegrity\ExamplePolicies. Two policies are recommended for Windows Server:
 
-- **AllowMicrosoft**: Allows all files signed by Microsoft. THis policy is recommended for server applications such as SQL or Exchange, or if the server is monitored by agents published by Microsoft.
+- **AllowMicrosoft**: Allows all files signed by Microsoft. This policy is recommended for server applications such as SQL or Exchange, or if the server is monitored by agents published by Microsoft.
 - **DefaultWindows_Enforced**: Allows only files that shipped in Windows and doesn't permit other applications released by Microsoft, such as Office. This policy is recommended for servers that run only built-in server roles and features such as Hyper-V. 
 
 It is recommended that you first create the CI policy in audit (logging) mode to see if it's missing anything, then enforce the policy for host production workloads. 
 
 If you use the [New-CIPolicy](https://docs.microsoft.com/powershell/module/configci/new-cipolicy?view=win10-ps) cmdlet to generate your own code integrity policy, you will need to decide the rule levels to use. 
-For Server Core, we recommend a primary level of **FilePublisher** with fallback to **Hash**. 
-This allows files with publishers to be updated without changing the CI policy. 
-Addition of new files or modifications to files without publishers (which are measured with a hash) will require you to create a new CI policy matching the new system requirements. 
-For Server with Desktop Experience, we recommend a primary level of **Publisher** with fallback to **Hash**. 
+We recommend a primary level of **Publisher** with fallback to **Hash**, which allows most digitally signed software to be updated without changing the CI policy.
+New software written by the same publisher can also be installed on the server without changing the CI policy.
+Executables that are not digitally signed will be hashed -- updates to these files will require you to create a new CI policy.
 For more information about the available CI policy rule levels, see [Deploy code integrity policies: policy rules and file rules](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-application-control/select-types-of-rules-to-create#windows-defender-application-control-policy-rules) and cmdlet help.
 
-1.  On the reference host, generate a new code integrity policy. The following commands create a policy at the **FilePublisher** level with fallback to **Hash**. It then converts the XML file to the binary file format Windows and HGS need to apply and measure the CI policy, respectively.
+1.  On the reference host, generate a new code integrity policy. The following commands create a policy at the **Publisher** level with fallback to **Hash**. It then converts the XML file to the binary file format Windows and HGS need to apply and measure the CI policy, respectively.
 
     ```powershell
-    New-CIPolicy -Level FilePublisher -Fallback Hash -FilePath 'C:\temp\HW1CodeIntegrity.xml' -UserPEs
+    New-CIPolicy -Level Publisher -Fallback Hash -FilePath 'C:\temp\HW1CodeIntegrity.xml' -UserPEs
 
     ConvertFrom-CIPolicy -XmlFilePath 'C:\temp\HW1CodeIntegrity.xml' -BinaryFilePath 'C:\temp\HW1CodeIntegrity.p7b'
     ```
