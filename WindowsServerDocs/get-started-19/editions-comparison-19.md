@@ -68,9 +68,12 @@ ms.localizationpriority: medium
 |Remote Desktop Services| |Yes|Yes|
 |Volume Activation Services| |Yes|Yes|
 |Web Services (IIS)| |Yes|Yes|
-|Windows Deployment Services| |Yes|Yes|
+|Windows Deployment Services| |Yes*|Yes*|
 |Windows Server Essentials Experience| |Yes|Yes|
 |Windows Server Update Services| |Yes|Yes|
+
+*WDS Transport Server is new to Server Core installations in Windows Server 2019 (also in the semi-annual channel starting with Windows Server, version 1803)
+
 
 ## Features
 
