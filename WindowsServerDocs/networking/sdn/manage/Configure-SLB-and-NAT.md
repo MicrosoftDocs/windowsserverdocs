@@ -18,17 +18,7 @@ ms.date: 08/23/2018
 
 >Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
 
-You can use this topic to learn how to use the Software Defined Networking \(SDN\)  software load balancer \(SLB\) to provide outbound network address translation NAT, inbound NAT, or load balancing between multiple instances of an application.
-
-This topic contains the following sections.
-
-- [Software Load Balancer Overview](#bkmk_slbover)
-- [Example: Create a public VIP for load balancing a pool of two VMs on a virtual network](#bkmk_publicvip)
-- [Example: Use SLB for outbound NAT](#bkmk_obnat)
-- [Example: Add network interfaces to the back-end pool](#bkmk_backend)
-- [Example: Use the Software Load Balancer for forwarding traffic](#bkmk_forward)
-- [Example: Use the Software Load Balancer for forwarding traffic with a dynamically allocated VIP](#bkmk_dynforward)
-- [Example: Remove a PublicIP address that is being used for forwarding traffic and return it to the VIP pool](#bkmk_removepip)
+You can use this topic to learn how to use the Software Defined Networking \(SDN\)  software load balancer \(SLB\) to provide outbound network address translation \(NAT\), inbound NAT, or load balancing between multiple instances of an application.
 
 ## Software Load Balancer overview
 
