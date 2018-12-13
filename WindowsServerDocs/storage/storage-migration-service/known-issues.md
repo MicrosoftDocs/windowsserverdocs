@@ -34,6 +34,12 @@ The the Windows Admin Center Storage Migration Service extension is version-boun
 
 To resolve, use or upgrade to Windows Server 2019 build 1809 or later.
 
+## Storage Migration Service doesn't let you choose static IP on cutover
+
+When using the 0.57 version of the Storage Migration Service extension in Windows Admin Center and you reach the Cutover phase, you cannot select "Static IP" for an address. You are forced to use DHCP. 
+
+To resolve this issue, look under Settings > Extensions for an alert stating that updated version Storage MIgration Service 0.57.1 is available to install. You may need to restart your browser tab for WIndows Admin center.
+
 ## See also
 
 - [Storage Migration Service overview](overview.md)
