@@ -17,7 +17,7 @@ This topic describes some of the new features in Windows Server 2019. Windows Se
 
 ### Desktop experience
 
-The <b>Desktop Experience</b> is back in Windows Server 2019!  It is not included in Windows Server, version 1709, Windows Server, version 1803, or Windows Server, version 1809.  
+Because Windows Server 2019 is an Long-Term Servicing Channel (LTSC) release, it includes the <b>Desktop Experience</b>.  (It is not included in Windows Server, version 1709, Windows Server, version 1803, or Windows Server, version 1809, because Semi-Annual Channel \[SAC\] releases don't including the Desktop Experience.)
 As with Windows Server 2016, during setup of the operating system it is possible to choose between Server Core installations or Server with Desktop Experience installations.
 
 ### System Insights
