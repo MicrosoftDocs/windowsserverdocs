@@ -60,6 +60,13 @@ AD FS is a stateless system. Hence, load balancing is fairly simple for logins. 
 - Load balancers SHOULD support SNI. In the event it does not, ensure that AD FS is configured to create HTTPS bindings to handle non SNI capable clients.
 - Load balancers SHOULD use the AD FS HTTP health probe endpoint to detect if the AD FS or WAP servers are up and running and exclude them if a 200 OK Is not returned. 
 
+### What multi-forest configurations are supported by AD FS? 
+
+AD FS supports multiple multi-forest configuration and relies on the underlying AD DS trust network to authenticate users across multiple trusted realms. We strongly  recommend 2-way forests trusts as this is a simpler setup to ensure that the trust subsystem works correctly without issues. Additionally, 
+
+- In the event of a one way forest trust such as a DMZ forest containing partner identities, we recommend deploying ADFS in the corp forest and treating the DMZ forest as another local claims provider trust connected via LDAP. In the event you cannot pursue this option, you would need to run ADFS in the “trusting” forest using a service account in the “trusted forest” that has full access to the users in the “trusting” forest.
+- While domain level trusts are supported and can work, we highly recommend you moving to a forest level trust model. Additionally, you would need to ensure that UPN routing and NETBIOS name resolution of names need to work accurately. 
+
 
 
 ## Design

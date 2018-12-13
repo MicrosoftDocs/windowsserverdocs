@@ -138,7 +138,7 @@ description: Windows Server documentation helps IT professionals evaluate, plan,
                     <HR COLOR="purple" SIZE="6" WIDTH="60%">
                     </li>
                         <li>
-                            <a href="https://review.docs.microsoft.com/windows-server/get-started/server-basics">
+                            <a href="https://docs.microsoft.com/windows-server/get-started/server-basics">
                             <div class="cardSize">
                                 <div class="cardPadding">
                                     <div class="card">
