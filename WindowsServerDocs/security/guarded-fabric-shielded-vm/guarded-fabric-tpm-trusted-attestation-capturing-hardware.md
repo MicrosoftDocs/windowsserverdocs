@@ -7,7 +7,7 @@ ms.assetid: 915b1338-5085-481b-8904-75d29e609e93
 manager: dongill
 author: rpsqrd
 ms.technology: security-guarded-fabric
-ms.date: 12/10/2018
+ms.date: 12/12/2018
 ---
 
 # Authorize guarded hosts using TPM-based attestation
@@ -59,7 +59,7 @@ A host can only attest if all artifacts (EKPub + TPM baseline + CI Policy) use t
     > If you encounter an error when adding a TPM identifier regarding an untrusted Endorsement Key Certificate (EKCert), ensure that the [trusted TPM root certificates have been added](guarded-fabric-install-trusted-tpm-root-certificates.md) to the HGS node.
     > Additionally, some TPM vendors do not use EKCerts.
     > You can check if an EKCert is missing by opening the XML file in an editor such as Notepad and checking for an error message indicating no EKCert was found.
-    > If this is the case, and you trust that the TPM in your machine is authentic, you can use the -PolicyVersion v1 parameter beginning with Windows Server 2019, or the -Force parameter in Windows Server 2016, to add the host identifier to HGS by using v1 attestation. The CI policy and the TPM baseline need to be created by using the same attestation version.
+    > If this is the case, and you trust that the TPM in your machine is authentic, you can use the `-Force` parameter to add the host identifier to HGS. In Windows Server 2019, you need to also use the `-PolicyVersion v1` parameter when using `-Force`. This creates a policy consistent with the Windows Server 2016 behavior and will require you to use `-PolicyVersion v1` when registering the CI policy and the TPM baseline as well.
 
 ## Create and apply a code integrity policy
 
