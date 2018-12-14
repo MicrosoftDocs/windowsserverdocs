@@ -125,7 +125,7 @@ Operating system components that are available as part of the Server Core App Co
 - **Important:** please read the Windows Server 2019 release notes for any issues, considerations, or guidance before proceeding with installation and use of the Server Core App Compatibility FOD and Internet Explorer 11 optional package.
  
  >[!NOTE] 
-   > It is possible to encounter flickering with the Server Core console experience when adding the App Compatibility FOD after using Windows Update to install cumulative updates.  This issue is resolved with December, 2018 updates.  Please read this [KB](https://support.microsoft.com/en-us/help/4481610/screen-flickers-after-fod-installation-windows2019-server-core) for more details and resolution steps if necessary.
+   > It's possible to encounter flickering with the Server Core console experience when adding the App Compatibility FOD after using Windows Update to install cumulative updates.  This issue is resolved with December, 2018 updates.  For more info and resolution steps, see [Knowledge Base article 4481610: Screen flickers after you install Server Core App Compatibility FOD in Windows Server 2019 Server Core](https://support.microsoft.com/help/4481610/screen-flickers-after-fod-installation-windows2019-server-core).
 
 - After installation of the App Compatibility FOD and reboot of the server, the command console window frame color will change to a different shade of blue.
 
