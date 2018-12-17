@@ -93,11 +93,11 @@ Get-ItemProperty -Path "HKLM:\Software\Microsoft\Windows NT\CurrentVersion" | Se
 ````
 
 ````
-ProductName               : Windows Server 2019 Datacenter\
-ReleaseId                 : 1809\
-InstallationType          : Server\
-CurrentMajorVersionNumber : 10\
-CurrentMinorVersionNumber : 0\
+ProductName               : Windows Server 2019 Datacenter
+ReleaseId                 : 1809
+InstallationType          : Server
+CurrentMajorVersionNumber : 10
+CurrentMinorVersionNumber : 0
 CurrentBuild              : 17763
 ````
 
@@ -108,17 +108,17 @@ Get-ItemProperty -Path "HKLM:\Software\Microsoft\Windows NT\CurrentVersion" | Se
 ````
 
 ````
-ProductName               : Windows Server Standard\
-ReleaseId                 : 1809\
-InstallationType          : Server Core\
-CurrentMajorVersionNumber : 10\
-CurrentMinorVersionNumber : 0\
+ProductName               : Windows Server Standard
+ReleaseId                 : 1809
+InstallationType          : Server Core
+CurrentMajorVersionNumber : 10
+CurrentMinorVersionNumber : 0
 CurrentBuild              : 17763
 ````
 
 To query if the new [Server Core App Compatibility FOD](https://docs.microsoft.com/windows-server/get-started-19/install-fod-19) is present on a server, use [Get-WindowsCapability](https://docs.microsoft.com/powershell/module/dism/get-windowscapability?view=win10-ps) Cmdlet and look for:
 ````
-Name    :     ServerCore.AppCompatibility~~~~0.0.1.0\
+Name    :     ServerCore.AppCompatibility~~~~0.0.1.0
 State     :     Installed
 ````
 
