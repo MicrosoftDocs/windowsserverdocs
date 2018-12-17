@@ -4,7 +4,7 @@ description: Known issues and troubleshooting support for Storage Migration Serv
 author: nedpyle
 ms.author: nedpyle
 manager: siroy
-ms.date: 11/09/2018
+ms.date: 12/17/2018
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: storage
@@ -30,7 +30,7 @@ Review the README for usage.
 
 When using the 1809 version of Windows Admin Center to manage a Windows Server 2019 orchestrator, you don't see the tool option for Storage Migration Service. 
 
-The the Windows Admin Center Storage Migration Service extension is version-bound to only manage WIndows Server 2019 version 1809 or later operating systems. If you use it to manage older Windows Server operating systems or insider previews, the tool will not appear. This behavior is by design. 
+The the Windows Admin Center Storage Migration Service extension is version-bound to only manage Windows Server 2019 version 1809 or later operating systems. If you use it to manage older Windows Server operating systems or insider previews, the tool will not appear. This behavior is by design. 
 
 To resolve, use or upgrade to Windows Server 2019 build 1809 or later.
 
@@ -38,7 +38,7 @@ To resolve, use or upgrade to Windows Server 2019 build 1809 or later.
 
 When using the 0.57 version of the Storage Migration Service extension in Windows Admin Center and you reach the Cutover phase, you cannot select "Static IP" for an address. You are forced to use DHCP. 
 
-To resolve this issue, look under Settings > Extensions for an alert stating that updated version Storage MIgration Service 0.57.1 is available to install. You may need to restart your browser tab for WIndows Admin center.
+To resolve this issue, look under Settings > Extensions for an alert stating that updated version Storage Migration Service 0.57.1 is available to install. You may need to restart your browser tab for Windows Admin center.
 
 ## See also
 
