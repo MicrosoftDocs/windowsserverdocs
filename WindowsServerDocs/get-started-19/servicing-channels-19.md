@@ -82,7 +82,7 @@ For more information about how to get involved with the Windows Insider Program,
 ## To identify Windows Server 2019 and Windows Server, version 1809
 
 >[!Note]  
-> The below guidance is intended to help identify and differentiate between LTSC and SAC for lifecycle and general inventory purposes only.  It is not intended for application compatibility or to represent a specific API surface.  App developers should use guidance elsewhere to properly ensure compatibility as components, APIs, and functionality can be added over the life of a system, or not yet be added. [Operating System Version](https://docs.microsoft.com/en-us/windows/desktop/SysInfo/operating-system-version) is a better starting point for App Developers.
+> The below guidance is intended to help identify and differentiate between LTSC and SAC for lifecycle and general inventory purposes only.  It is not intended for application compatibility or to represent a specific API surface.  App developers should use guidance elsewhere to properly ensure compatibility as components, APIs, and functionality can be added over the life of a system, or not yet be added. [Operating System Version](https://docs.microsoft.com/windows/desktop/SysInfo/operating-system-version) is a better starting point for App Developers.
 
 Open Powershell and use the Get-ItemProperty Cmdlet to check these properties in the registry.  Along with build number, this will indicate LTSC or SAC by the presence, or lack thereof, of the branded year, i.e. 2019.  LTSC has this, SAC does not.  This will also return the timing of the release with ReleaseId, i.e. 1809, as well as whether the installation is Server Core or Server with Desktop Experience. 
 
