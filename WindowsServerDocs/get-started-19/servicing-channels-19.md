@@ -88,31 +88,39 @@ Open Powershell and use the Get-ItemProperty Cmdlet to check these properties in
 
 **Windows Server 2019 Datacenter Edition (LTSC) with Desktop Experience example:**
 
-PS C:> Get-ItemProperty -Path "HKLM:\Software\Microsoft\Windows NT\CurrentVersion" | Select ProductName, ReleaseId, InstallationType, CurrentMajorVersionNumber,CurrentMinorVersionNumber,CurrentBuild
+````PowerShell
+Get-ItemProperty -Path "HKLM:\Software\Microsoft\Windows NT\CurrentVersion" | Select ProductName, ReleaseId, InstallationType, CurrentMajorVersionNumber,CurrentMinorVersionNumber,CurrentBuild
+````
 
+````
 ProductName               : Windows Server 2019 Datacenter\
 ReleaseId                 : 1809\
 InstallationType          : Server\
 CurrentMajorVersionNumber : 10\
 CurrentMinorVersionNumber : 0\
 CurrentBuild              : 17763
+````
 
 **Windows Server, version 1809 (SAC) Server Core example:**
 
-PS C:> Get-ItemProperty -Path "HKLM:\Software\Microsoft\Windows NT\CurrentVersion" | Select ProductName, ReleaseId, InstallationType, CurrentMajorVersionNumber,CurrentMinorVersionNumber,CurrentBuild
+````PowerShell
+Get-ItemProperty -Path "HKLM:\Software\Microsoft\Windows NT\CurrentVersion" | Select ProductName, ReleaseId, InstallationType, CurrentMajorVersionNumber,CurrentMinorVersionNumber,CurrentBuild
+````
 
+````
 ProductName               : Windows Server Standard\
 ReleaseId                 : 1809\
 InstallationType          : Server Core\
 CurrentMajorVersionNumber : 10\
 CurrentMinorVersionNumber : 0\
 CurrentBuild              : 17763
+````
 
 To query if the new [Server Core App Compatibility FOD](https://docs.microsoft.com/windows-server/get-started-19/install-fod-19) is present on a server, use [Get-WindowsCapability](https://docs.microsoft.com/powershell/module/dism/get-windowscapability?view=win10-ps) Cmdlet and look for:
-
+````
 Name    :     ServerCore.AppCompatibility~~~~0.0.1.0\
 State     :     Installed
-
+````
 
 # Related topics
 [Changes to Nano Server in Windows Server Semi-Annual Channel](../get-started/nano-in-semi-annual-channel.md)
