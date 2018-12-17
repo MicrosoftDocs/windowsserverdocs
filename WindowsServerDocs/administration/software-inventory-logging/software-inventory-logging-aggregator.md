@@ -68,8 +68,6 @@ Once deployed correctly, the following data can be viewed at the SIL Aggregator:
 
 Software Inventory Logging Aggregator (SIL Aggregator) on a minimum of one server for aggregation and reports, either in a VM or on physical hardware):
 
--   **Windows Server 2016**
-
 -   **Windows Server 2012 R2** (Standard or Datacenter Edition)
 
 -   **The IIS server role,** with .Net Framework 4.5, WCF Services, and HTTP Activation, all in the same selection tree in **Add Roles and Features Wizard**.
@@ -80,7 +78,12 @@ Software Inventory Logging Aggregator (SIL Aggregator) on a minimum of one serve
 
 -   Optional: **VMware PowerCLI 5.5.0.5836** (needed in VMware environments)
 
+>[!Note]
+>When using the Windows Management Framework, there is a known compatibility issue with WMF release 5.1, on the SIL Aggregator only.  It is not necessary to exceed WMF version 4.0 on servers with SIL Aggregator installed.
+
 Software Inventory Logging (SIL) exists in Windows Server versions with the following updates installed:
+
+-   **Windows Server 2016**, or higher
 
 -   **Windows Server 2012 R2** (Standard or Datacenter Edition)
 
@@ -525,7 +528,11 @@ With the `Set-SilAggregator` cmdlet you can:
 
     -   Don’t forget to reboot the server after joining it to the gMSA enabled machine group in Active Directory.
 
-    -   In the installation process, don’t use fully qualified domain when entering domain\user. For example, use **mydomain\gmsaaccount$**. Don’t enter **mydomain.com\gmsaaccount$**.
+    -   In the installation process, don’t use fully qualified domain when entering domain\user. For example, use **mydomain\gmsaaccount**. Don’t enter **mydomain.<i></i>com\gmsaaccount**.
+
+-   When using the Windows Management Framework in your environment:
+
+    -   Be sure the server(s) with SILA installed do not have WMF 5.1 installed.  It is possible to hit an error in the event log regarding the DLL **'mpunits.dll'**.  This will prevent proper operation.  SILA only requires WMF 4.0.
 
 ## Managing SIL Over Time
 
