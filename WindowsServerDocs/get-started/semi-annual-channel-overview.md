@@ -82,6 +82,8 @@ Microsoft depends on receiving feedback throughout the development process so th
 
 For more information about how to get involved with the Windows Insider Program, see the [Windows Insider Program for Server docs](https://docs.microsoft.com/windows-insider/at-work/).
 # Related topics
+[Windows Server 2019 servicing channels: LTSC and SAC](https://docs.microsoft.com/windows-server/get-started-19/servicing-channels-19)
+
 [Changes to Nano Server in Windows Server Semi-Annual Channel](nano-in-semi-annual-channel.md)
 
 [Windows Server support lifecycle](https://support.microsoft.com/en-us/lifecycle)
