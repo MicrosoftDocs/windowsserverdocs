@@ -6,7 +6,7 @@ title:  Open
 ---
 # OpenSSH in Windows
 
-OpenSSH is the open-source version of the Secure Scripting Host (SSH) tools used by administrators of Linux and other non-Windows for cross-platform management of remote systems. 
+OpenSSH is the open-source version of the Secure Shell (SSH) tools used by administrators of Linux and other non-Windows for cross-platform management of remote systems. 
 OpenSSH has been added to Windows as of autumn 2018, and is included in Windows 10 and Windows Server 2019. 
 
 SSH is based on a client-server architecture where the system the user is working on is the client and the remote system being managed is the server. 
