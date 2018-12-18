@@ -22,11 +22,11 @@ Some operating systems have the integration services built-in. Others require th
   
 ## Supported Windows Server guest operating systems  
 
-Following are the versions of Windows Server that are supported as guest operating systems for Hyper-V in Windows Server 2016. 
+Following are the versions of Windows Server that are supported as guest operating systems for Hyper-V in Windows Server 2016 and Windows Server 2019. 
   
 |Guest operating system (server)|Maximum number of virtual processors|Integration Services|Notes|  
 |-------------------------------------|----------------------------------------|------------------------|---------|  
-|Windows Server 2019 |240 for generation 2;<br>64 for generation 1|Built-in|| 
+|Windows Server 2019 |240 for generation 2;<br>64 for generation 1|Built-in|Not supported on Windows Server 2016 hosts| 
 |Windows Server 2016 |240 for generation 2;<br>64 for generation 1|Built-in|| 
 |Windows Server 2012 R2 |64|Built-in||  
 |Windows Server 2012 |64|Built-in||  

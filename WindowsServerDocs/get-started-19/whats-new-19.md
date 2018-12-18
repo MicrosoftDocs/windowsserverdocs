@@ -74,7 +74,7 @@ ATP's deep platform sensors and response actions expose memory and kernel level 
 Control](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control) (also
 known as Code Integrity (CI) policy) was released in Windows Server 2016.
 Customer feedback has suggested that it is a great concept, but hard to deploy.
-To address this, we have built default CI policies, which will allow all Windows
+To address this, we have built default CI policies, which allows all Windows
 in-box files and Microsoft applications, such as SQL Server, and block known
 executables that can bypass CI. 
 
@@ -98,7 +98,7 @@ For a complete list of what’s new in SDN see, [What’s New in SDN for Windows
 
     We've also made it easier to [troubleshoot your shielded virtual machines](https://docs.microsoft.com/windows-server/security/guarded-fabric-shielded-vm/guarded-fabric-troubleshoot-shielded-vms) by enabling support for VMConnect Enhanced Session Mode and PowerShell Direct. These tools are particularly useful if you've lost network connectivity to your VM and need to update its configuration to restore access. 
 
-    These features do not need to be configured, and they will automatically become available when a shielded VM is placed on a Hyper-V host running Windows Server version 1803 or later.
+    These features do not need to be configured, and they become available automatically when a shielded VM is placed on a Hyper-V host running Windows Server version 1803 or later.
 
 - **Linux support**
 
@@ -166,11 +166,11 @@ It is now possible to run Windows and Linux-based containers on the same contain
 
 ### Building Support for Kubernetes
 
-Windows Server 2019 continues the improvements to compute, networking and storage from the semi-annual channel releases needed to support Kubernetes on Windows. More details will be available in upcoming Kubernetes releases.
+Windows Server 2019 continues the improvements to compute, networking and storage from the semi-annual channel releases needed to support Kubernetes on Windows. More details are available in upcoming Kubernetes releases.
 
 - [Container Networking](https://docs.microsoft.com/windows-server/networking/sdn/technologies/containers/container-networking-overview) in Windows Server 2019 greatly improves usability of Kubernetes on Windows by enhancing platform networking resiliency and support of container networking plugins.
 
-- Deployed workloads on Kubernetes will be able to use network security to protect both Linux and Windows services using embedded tooling.
+- Deployed workloads on Kubernetes are able to use network security to protect both Linux and Windows services using embedded tooling.
 
 ### Container improvements
     
@@ -197,7 +197,7 @@ It also utilizes Datagram Transport Layer Security (DTLS) on the virtual subnet 
 
 ### Network performance improvements for virtual workloads
 
-[Network performance improvements for virtual workloads](https://docs.microsoft.com/windows-server/networking/technologies/hpn/hpn-insider-preview) will maximize the network throughput to virtual machines without requiring you to constantly tune or over-provision your host. This lowers the operations and maintenance cost while increasing the available density of your hosts. These new features are:
+[Network performance improvements for virtual workloads](https://docs.microsoft.com/windows-server/networking/technologies/hpn/hpn-insider-preview) maximizes the network throughput to virtual machines without requiring you to constantly tune or over-provision your host. This lowers the operations and maintenance cost while increasing the available density of your hosts. These new features are:
 
 * Receive Segment Coalescing in the vSwitch
 
@@ -220,7 +220,7 @@ The [Windows Time Service](https://docs.microsoft.com/windows-server/networking/
 
 ### New Deployment UI and Windows Admin Center extension for SDN
 
-Now, with Windows Server 2019, it’s easy to deploy and manage through a new deployment UI and Windows Admin Center extension that will enable anyone to harness the power of SDN. 
+Now, with Windows Server 2019, it’s easy to deploy and manage through a new deployment UI and Windows Admin Center extension that enable anyone to harness the power of SDN. 
 
 ### Persistent Memory support for Hyper-V VMs
 
