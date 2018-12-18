@@ -81,7 +81,7 @@ You need to deploy the following computers and connect them on a local area netw
 
 ```PowerShell
 Import-Module ServerManager
-Add-WindowsFeature FS-NFS-Services
+Add-WindowsFeature FS-NFS-Service
 Import-Module NFS
 ```
 
