@@ -246,7 +246,7 @@
 #### [Switch Embedded Teaming (SET) for SDN](sdn/technologies/Set-for-Sdn.md)
 #### [Container networking](sdn/technologies/Containers/Container-networking-overview.md)
 
-### [Plan an SDN Infrastructure](sdn/plan/Plan-a-Software-Defined-Network-Infrastructure.md)
+### [Plan for SDN](sdn/plan/Plan-a-Software-Defined-Network-Infrastructure.md)
 #### [Installation and preparation requirements for deploying Network Controller](sdn/plan/Installation-and-Preparation-Requirements-for-Deploying-Network-Controller.md)
 
 ### [Deploy SDN](sdn/deploy/Deploy-Software-Defined-Networking.md)
@@ -263,6 +263,7 @@
 ##### [Add a virtual gateway to a tenant virtual network](sdn/manage/add-a-Virtual-Gateway-to-a-Tenant-Virtual-Network.md)
 ##### [Connect container endpoints to a tenant virtual network](sdn/manage/Connect-container-endpoints-to-a-Tenant-Virtual-Network.md)
 ##### [Configure encryption for a virtual subnet](sdn/vnet-encryption/sdn-config-vnet-encryption.md)
+##### [Egress metering in a virtual network](sdn/manage/sdn-egress.md)
 
 #### [Manage tenant workloads](sdn/manage/Manage-Tenant-Workloads.md)
 ##### [Create a VM and connect to a tenant virtual network or VLAN](sdn/manage/create-a-Tenant-VM.md)
@@ -282,7 +283,6 @@
 ### [Virtual network peering](sdn/vnet-peering/sdn-vnet-peering.md)
 #### [Configure virtual network peering](sdn/vnet-peering/sdn-configure-vnet-peering.md)
 
-### [Egress metering in virtual network](sdn/sdn-egress.md)
 ### [Windows Server 2019 gateway performance](sdn/gateway-performance.md)
 ### [Gateway bandwidth allocation](sdn/gateway-allocation.md)
 
