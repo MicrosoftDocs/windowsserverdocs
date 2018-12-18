@@ -99,7 +99,7 @@ Start-Service sshd
 # OPTIONAL but recommended:
 Set-Service -Name sshd -StartupType 'Automatic'
 # Confirm the Firewall rule is configured. It should be created automatically by setup. 
-Get-NetFirewallRule –Name *ssh*
+Get-NetFirewallRule -Name *ssh*
 # There should be a firewall rule named "OpenSSH-Server-In-TCP", which should be enabled 
 ```
 
