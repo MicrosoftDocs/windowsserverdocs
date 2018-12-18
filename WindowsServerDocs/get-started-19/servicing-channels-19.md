@@ -84,7 +84,7 @@ For more information about how to get involved with the Windows Insider Program,
 >[!Note]  
 > The below guidance is intended to help identify and differentiate between LTSC and SAC for lifecycle and general inventory purposes only.  It is not intended for application compatibility or to represent a specific API surface.  App developers should use guidance elsewhere to properly ensure compatibility as components, APIs, and functionality can be added over the life of a system, or not yet be added. [Operating System Version](https://docs.microsoft.com/windows/desktop/SysInfo/operating-system-version) is a better starting point for App Developers.
 
-Open Powershell and use the Get-ItemProperty Cmdlet to check these properties in the registry.  Along with build number, this will indicate LTSC or SAC by the presence, or lack thereof, of the branded year, i.e. 2019.  LTSC has this, SAC does not.  This will also return the timing of the release with ReleaseId, i.e. 1809, as well as whether the installation is Server Core or Server with Desktop Experience. 
+Open Powershell and use the Get-ItemProperty Cmdlet, or the Get-ComputerInfo Cmdlet, to check these properties in the registry.  Along with build number, this will indicate LTSC or SAC by the presence, or lack thereof, of the branded year, i.e. 2019.  LTSC has this, SAC does not.  This will also return the timing of the release with ReleaseId or WindowsVersion, i.e. 1809, as well as whether the installation is Server Core or Server with Desktop Experience. 
 
 **Windows Server 2019 Datacenter Edition (LTSC) with Desktop Experience example:**
 
@@ -101,7 +101,7 @@ CurrentMinorVersionNumber : 0
 CurrentBuild              : 17763
 ````
 
-**Windows Server, version 1809 (SAC) Server Core example:**
+**Windows Server, version 1809 (SAC) Standard Edition Server Core example:**
 
 ````PowerShell
 Get-ItemProperty -Path "HKLM:\Software\Microsoft\Windows NT\CurrentVersion" | Select ProductName, ReleaseId, InstallationType, CurrentMajorVersionNumber,CurrentMinorVersionNumber,CurrentBuild
@@ -116,10 +116,26 @@ CurrentMinorVersionNumber : 0
 CurrentBuild              : 17763
 ````
 
+**Windows Server 2019 Standard Edition (LTSC) Server Core example:**
+
+
+````PowerShell
+Get-ComputerInfo | Select WindowsProductName, WindowsVersion, WindowsInstallationType, OsServerLevel, OsVersion, OsHardwareAbstractionLayer
+````
+
+````
+WindowsProductName            : Windows Server 2019 Standard
+WindowsVersion                : 1809
+WindowsInstallationType       : Server Core
+OsServerLevel                 : ServerCore
+OsVersion                     : 10.0.17763
+OsHardwareAbstractionLayer    : 10.0.17763.107
+````
+
 To query if the new [Server Core App Compatibility FOD](https://docs.microsoft.com/windows-server/get-started-19/install-fod-19) is present on a server, use [Get-WindowsCapability](https://docs.microsoft.com/powershell/module/dism/get-windowscapability?view=win10-ps) Cmdlet and look for:
 ````
 Name    :     ServerCore.AppCompatibility~~~~0.0.1.0
-State     :     Installed
+State   :     Installed
 ````
 
 # Related topics
