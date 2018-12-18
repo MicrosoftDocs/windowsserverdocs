@@ -27,7 +27,7 @@ Demand](https://docs.microsoft.com/windows-hardware/manufacture/desktop/features
 
 ## Why install the App Compatibility FOD? 
 
-App Compatibility, a Feature on Demand for Server Core, significantly improves the app compatibility of the Windows Server Core installation option by including a subset of binaries and packages from Windows Server with Desktop, without adding the Windows Server Desktop Experience graphical environment. This optional package is available on a separate ISO and can be added to Windows Server Core installations and images only.
+App Compatibility, a Feature on Demand for Server Core, significantly improves the app compatibility of the Windows Server Core installation option by including a subset of binaries and packages from Windows Server with Desktop Experience, without adding the Windows Server Desktop Experience graphical environment. This optional package is available on a separate ISO and can be added to Windows Server Core installations and images only.
 
 The two primary values the App Compatibility FOD provides are:
 

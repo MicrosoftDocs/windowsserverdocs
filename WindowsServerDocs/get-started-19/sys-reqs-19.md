@@ -46,7 +46,7 @@ The following are the estimated RAM requirements for this product:
 
 **Minimum**:  
 - 512 MB (2 GB for Server with Desktop Experience installation option)
-- ECC (Error Correcting Code) type or similar technology  
+- ECC (Error Correcting Code) type or similar technology, for physical host deployments
 
 > [!IMPORTANT]  
 > If you create a virtual machine with the minimum supported hardware parameters (1 processor core and 512 MB RAM) and then attempt to install this release on the virtual machine, Setup will fail.  
@@ -78,15 +78,15 @@ Network adapters used with this release should include these features:
 **Minimum**:  
 - An Ethernet adapter capable of at least gigabit throughput  
 - Compliant with the PCI Express architecture specification.  
-- Supports Pre-boot Execution Environment (PXE).  
 
 A network adapter that supports network debugging (KDNet) is useful, but not a minimum requirement.   
+
+A network adapter that supports the Pre-boot Execution Environment (PXE) is useful, but not a minimum requirement.
 
 
 
 ## Other requirements  
 Computers running this release also must have the following:  
-
 
 -   DVD drive (if you intend to install the operating system from DVD media)  
 
@@ -108,7 +108,3 @@ The following items are not strictly required, but are necessary for certain fea
 >- TPMs that implement version 2.0 must have an EK certificate that is either pre-provisioned to the TPM by the hardware vendor or be capable of being retrieved by the device during the first boot.  
 >- TPMs that implement version 2.0 must ship with SHA-256 PCR banks and implement PCRs 0 through 23 for SHA-256. It is acceptable to ship TPMs with a single switchable PCR bank that can be used for both SHA-1 and SHA-256 measurements.  
 >- A UEFI option to turn off the TPM is not a requirement.  
-
-
-
-

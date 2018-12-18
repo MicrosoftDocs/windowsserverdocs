@@ -71,10 +71,10 @@ In the list of installed features, select the OpenSSH Client or OpenSSH Server c
 To uninstall OpenSSH using PowerShell, use one of the following commands:
 
 ```powershell
-# Install the OpenSSH Client
+# Uninstall the OpenSSH Client
 Remove-WindowsCapability -Name OpenSSH.Client~~~~0.0.1.0
 
-# Install the OpenSSH Server
+# Uninstall the OpenSSH Server
 Remove-WindowsCapability -Name OpenSSH.Server~~~~0.0.1.0
 ```
 
@@ -99,7 +99,7 @@ Start-Service sshd
 # OPTIONAL but recommended:
 Set-Service -Name sshd -StartupType 'Automatic'
 # Confirm the Firewall rule is configured. It should be created automatically by setup. 
-Get-NetFirewallRule –Name *ssh*
+Get-NetFirewallRule -Name *ssh*
 # There should be a firewall rule named "OpenSSH-Server-In-TCP", which should be enabled 
 ```
 
