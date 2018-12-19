@@ -4,7 +4,7 @@ description: Cluster to Cluster Storage Replication cross region in Azure
 keywords: Storage Replica, Server Manager, Windows Server, Azure, Cluster, cross region, different region
 author: arduppal
 ms.author: arduppal
-ms.date: 5/04/2017
+ms.date: 12/19/2018
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: storage-replica
