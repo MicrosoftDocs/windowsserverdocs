@@ -7,7 +7,7 @@ ms.reviewer: na
 ms.suite: na
 ms.technology: remote-desktop-services
 ms.author: elizapo
-ms.date: 06/12/2017
+ms.date: 12/18/2018
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 2a44dc9f-c221-4bf7-89c3-fb4c86a90f8c
@@ -418,7 +418,7 @@ At the same level as the **Internet Explorer** settings you just adjusted in the
 
 Open the **Delete Browsing History** folder, double-click **Allow deleting browsing history on exit**, select **Enable**, and then click **OK** to save and exit.
 
-Use the back arrow in the upper left of Local Group Policy Editor to go back to the **Internet Explorer** level. Double-click **Advanced Settings**, and then adjust the settings in the subfolders as follows:
+Use the back arrow in the upper left of Local Group Policy Editor to go back to the **Internet Explorer** level. Double-click **Internet Settings**, double-click **Advanced Settings**, and then adjust the settings in the subfolders as follows:
 
 |Setting folder under **Advanced Settings**|Setting|Recommended value for VDI use|  
 |-------------------|-------|----------|

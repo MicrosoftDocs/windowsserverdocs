@@ -5,8 +5,9 @@ ms.prod: windows-server-threshold
 ms.mktglfcycl: manage
 ms.sitesec: library
 author: lizap
+ms.author: elizapo
 ms.localizationpriority: medium
-ms.date: 10/17/2017
+ms.date: 12/18/2018
 ---
 # Administer a Server Core server
 
@@ -130,7 +131,7 @@ Use the following reference information to perform administrative tasks from the
 |Task|Command| 
 |----|-------|
 |Configure your server to use a proxy server|**netsh Winhttp set proxy \<servername\>:\<port number\>** <br>**Note:** Server Core installations can't access the Internet through a proxy that requires a password to allow connections.|
-|Configure your server to bypass the proxy for Internet addresses|**netsh winttp set proxy \<servername\>:\<port number\>bypass-list="\<local\>"**| 
+|Configure your server to bypass the proxy for Internet addresses|**netsh winttp set proxy \<servername\>:\<port number\> bypass-list="\<local\>"**| 
 |Display or modify IPSEC configuration|**netsh ipsec**| 
 |Display or modify NAP configuration|**netsh nap**| 
 |Display or modify IP to physical address translation|**arp**| 
