@@ -11,7 +11,7 @@ ms.topic: article
 author: lizap
 manager: dongill
 ms.author: elizapo
-ms.date: 11/06/2018
+ms.date: 12/18/2018
 ms.localizationpriority: medium
 ---
 # What's new for the Remote Desktop client on macOS?
@@ -19,6 +19,17 @@ ms.localizationpriority: medium
 We regularly update the [Remote Desktop client for macOS](remote-desktop-mac.md), adding new features and fixing issues. Check out the latest updates below.
 
 If you encounter any issues, you can always contact us via Help > Report an Issue.
+
+## Updates for version 10.2.4
+*Published date: 12/18/2018*
+
+- Added dark mode support for macOS Mojave 10.14.
+- An option to import from Microsoft Remote Desktop 8 now appears in the Connection Center if it is empty.
+- Addressed folder redirection compatibility with some third-party enterprise applications.
+- Resolved issues where users were getting a 0x30000069 Remote Desktop Gateway error due to security protocol fallback issues.
+- Fixed progressive rendering issues some users were experiencing with fit to window mode.
+- Fixed a bug that prevented file copy and paste from copying the latest version of a file.
+- Improved mouse-based scrolling for small scroll deltas.
 
 ## Updates for version 10.2.3
 *Published date: 11/06/2018*
