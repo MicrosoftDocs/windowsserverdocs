@@ -1,6 +1,6 @@
 ---
 title: Network Policy Server (NPS)
-description: This topic provides an overview of Network Policy Server in Windows Server 2016/2019, and includes links to additional guidance about NPS.
+description: This topic provides an overview of Network Policy Server in Windows Server 2016 and Windows Server 2019, and includes links to additional guidance about NPS.
 manager: dougkim
 ms.prod: windows-server-threshold
 ms.technology: networking
@@ -48,7 +48,7 @@ You can configure NPS with any combination of these features. For example, you c
 
 NPS provides different functionality depending on the edition of Windows Server that you install.
 
-### Windows Server 2016/2019 Standard/Datacenter Edition
+### Windows Server 2016 or Windows Server 2019 Standard/Datacenter Edition
 
 With NPS in Windows Server 2016 Standard or Datacenter, you can configure an unlimited number of RADIUS clients and remote RADIUS server groups. In addition, you can configure RADIUS clients by specifying an IP address range.
 
