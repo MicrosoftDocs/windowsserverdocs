@@ -212,11 +212,16 @@ In all cases, the topologies support both running on physical hardware as well a
 
 Storage Replica also has a server-to-self mode, where you point replication to two different volumes on the same computer.
 
+## <a name="FAQ18"></a> Is Data Deduplication supported with Storage Replica?
+
+Yes, Data Deduplcation is supported with Storage Replica. Enable it on a volume on the source server, and during replication the destination server receives a deduplicated copy of the volume.
+
+While you should *install* Data Deduplication on both the source and destination servers (see [Installing and enabling Data Deduplication](../data-deduplication/install-enable.md), it’s important not to *enable* Data Deduplication on the destination server. Storage Replica allows writes only on the source server. Because Data Deduplication makes writes to the volume, it should run only on the source server. 
+
 ## <a name="FAQ17"></a> How do I report an issue with Storage Replica or this guide?  
 For technical assistance with Storage Replica, you can post at [the Microsoft TechNet forums](https://social.technet.microsoft.com/Forums/windowsserver/en-US/home?forum=WinServerPreview). You can also email srfeed@microsoft.com for questions on Storage Replica or issues with this documentation. The https://windowsserver.uservoice.com site is preferred for design change requests, as it allows your fellow customers to provide support and feedback for your ideas.
 
-## <a name="FAQ18"></a> Is Data Deduplication supported with Storage Replica?
-Yes, data deduplcation is supported with Storage Replica.
+
 
 ## Related Topics  
 - [Storage Replica Overview](storage-replica-overview.md) 
