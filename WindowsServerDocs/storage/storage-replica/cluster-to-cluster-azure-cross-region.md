@@ -155,18 +155,24 @@ Watch the video below for a complete walk-through of the process.
    - Copy the storage account name and key from "access keys"
    - Create the cloud witness from “failover cluster manager” and use the above account name and key to create it. 
 
-14. Configure cluster-to-cluster storage replica.
-15. Grant SR-Access from one cluster to another cluster in both direction
+14. Run [cluster validation tests](../../failover-clustering/create-failover-cluster.md#validate-the-configuration) before moving on to the next step
+
+15. Start Windows PowerShell and use the [Test-SRTopology](https://docs.microsoft.com/powershell/module/storagereplica/test-srtopology?view=win10-ps) cmdlet to determine if you meet all the Storage Replica requirements. You can use the cmdlet in a requirements-only mode for a quick test as well as a long running performance evaluation mode.
+ 
+16. Configure cluster-to-cluster storage replica.
+Grant access from one cluster to another cluster in both directions:
 
    From our example:
    ```powershell
      Grant-SRAccess -ComputerName az2az1 -Cluster SRAZCross
    ```
+If you're using Windows Server 2016 then also run this command:
+
    ```powershell
      Grant-SRAccess -ComputerName azcross1 -Cluster SRAZC1
    ```
 
-16. Create partnership for the two clusters:</ol>
+17. Create SR-Partnership for the two clusters:</ol>
 
    - For cluster **SRAZC1**
       - Volume location:- c:\ClusterStorage\DataDisk1
