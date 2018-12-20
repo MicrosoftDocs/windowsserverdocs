@@ -4,7 +4,7 @@ description: Brief description of topic for search engine results
 author: jasongerend
 ms.author: jgerend
 manager: elizapo
-ms.date: 09/24/2018
+ms.date: 12/20/2018
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: storage
@@ -55,16 +55,17 @@ In this step you transfer data after specifying where to put it on the destinati
  1. Add a destination server and mappings for any more source servers, and then select **Next**.
  1. Optionally adjust the transfer settings, and then select **Next**.
  1. Select **Validate** and then select **Next**.
- 1. Select **Start transfer** to start transferring data.
+ 1. Select **Start transfer** to start transferring data.<br>If there are existing files in the destination location the first time you transfer, we'll move the existing files to a backup folder. On subsequent transfers, by default we'll refresh the destination without backing it up first.
  1. After the transfer completes, check out the destination server to make sure everything transferred properly. Select **Error log only** if you want to download a log of any files that didn't transfer.
 
   > [!NOTE]
   > If you want to keep an audit trail of transfers or are planning to perform more than one transfer in a job, click **Transfer log** to save a CSV copy. Every subsequent transfer overwrites the database information of a previous run. 
 
-At this point, you have two options:
+At this point, you have three options:
 
 - **Go to the next step**, cutting over so that the destination servers adopt the identities of the source servers.
 - **Consider the migration complete** without taking over the source servers' identities.
+- **Transfer again**, copying only files that were updated since the last transfer.
 
 If your goal is to sync the files with Azure, you could set up the destination servers with Azure File Sync after transferring files, or after cutting over to the destination servers (see [Planning for an Azure File Sync deployment](https://docs.microsoft.com/azure/storage/files/storage-sync-files-planning)).
 
