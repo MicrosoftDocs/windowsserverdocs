@@ -42,8 +42,8 @@ Windows Server 2016 removes the restriction for the number of Connection Brokers
 
 | 3+ Connection Brokers in HA              | RDSH 2016 | RDVH 2016 | RDSH 2012 R2  | RDVH 2012 R2  |
 |------------------------------------------|-----------|-----------|---------------|---------------|
-| Windows Server 2016 Connection Broker    | Supported | Supported | Not supported | Not supported |
-| Windows Server 2012 R2 Connection Broker | N/A       | N/A       | Not supported | Not supported |
+| Windows Server 2016 Connection Broker    | Supported | Supported | Supported     | Not supported |
+| Windows Server 2012 R2 Connection Broker | N/A       | N/A       | Supported     | Not supported |
 
 ## Support for GPU Acceleration with Hyper-V
 The following table details the support for GPU acceleration on virtual machines. See [Which graphics virtualization technology is right for you?](rds-graphics-virtualization.md) for help figuring out what you need. For specific information about DDA, check out [Plan for deploying Discrete Device Assignment](../../virtualization/hyper-v/plan/plan-for-deploying-devices-using-discrete-device-assignment.md).
