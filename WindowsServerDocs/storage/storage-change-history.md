@@ -7,7 +7,7 @@ ms.topic: article
 author: JasonGerend
 manager: brianlic
 ms.author: jgerend
-ms.date: 12/19/2018
+ms.date: 12/20/2018
 description: New and updated topics in the on-premises storage documentation for Windows Server for IT Pros.
 ---
 # Change history for storage topics in Windows Server
@@ -22,6 +22,7 @@ This topic lists new and updated topics in the [Storage](storage.md) documentati
 
 |New or changed topic                                        |Description|
 |---                                                         |---           |
+|[Use Storage Migration Service to migrate a server](storage-migration-service/migrate-data.md)| Added some clarification on how we transfer files |
 |[Cluster to Cluster Storage Replica cross region in Azure](storage-replica/cluster-to-cluster-azure-cross-region.md)|Added validation steps|
 |[Cluster to Cluster Storage Replica within the same region in Azure](storage-replica/cluster-to-cluster-azure-one-region.md)|Added validation steps|
 |[Storage Replica frequently asked questions](storage-replica/storage-replica-frequently-asked-questions.md)| Added support statement for Data Deduplication|
