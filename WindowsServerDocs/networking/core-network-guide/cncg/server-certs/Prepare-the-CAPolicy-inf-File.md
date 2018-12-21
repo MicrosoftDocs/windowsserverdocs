@@ -97,7 +97,7 @@ You can specify CRL Distribution Points (CDPs) for a root CA certificate in the 
 
 ```
 [CRLDistributionPoint]
-URL=https://pki.wingtiptoys.com/cdp/WingtipToysRootCA.crl
+URL=http://pki.wingtiptoys.com/cdp/WingtipToysRootCA.crl
 ```
 
 Some additional information about this section:
