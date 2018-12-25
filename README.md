@@ -5,12 +5,12 @@ For more information see the [Code of Conduct FAQ](https://opensource.microsoft.
 
 # WindowsServerDocs-pr
 
-This repo is actively managed and includes the source for Windows Server content published to docs.microsoft.com:
+This repo is actively managed and includes the source for Windows Server content published to (docs.microsoft.com)[https://docs.microsoft.com]:
 
-- [Windows Server 2019](windowsserverdocs/get-started-19/get-started-19.md)
--  [Windows Server 2016](windowsserverdocs/get-started/windows-server-2016.md)
--  [Essentials Server 2016](essentialsdocs/get-started/what-s-new.md)
--  [Microsoft Hyper-V Server 2016](windowsserverdocs/virtualization/hyper-v/hyper-v-server-2016.md)
+- [Windows Server 2019](https://docs.microsoft.com/en-us/windows-server/get-started-19/get-started-19)
+- [Windows Server 2016](https://docs.microsoft.com/en-us/windows-server/get-started/server-basics)
+- [Essentials Server 2016 and Essentials Server 2019](https://docs.microsoft.com/en-us/windows-server-essentials/get-started/get-started)
+- [Microsoft Hyper-V Server 2016](https://docs.microsoft.com/en-us/windows-server/get-started/server-basics)
 
 
 To make a small update, simply edit the file and submit a pull request. Check out [Editing existing Windows professional documentation](https://docs.microsoft.com/en-us/windows/whats-new/contribute-to-a-topic) for more details.
