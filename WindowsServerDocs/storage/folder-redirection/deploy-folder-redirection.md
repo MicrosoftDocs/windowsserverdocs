@@ -111,7 +111,9 @@ Here's how to create a file share on Windows Server 2012 and Windows Server 2016
 </tr>
 <tr class="odd">
 <td>Security group of users needing to put data on share (Folder Redirection Users)</td>
-<td>List folder / read data<sup>1</sup><br />
+<td>Traverse folder / execute file<sup>1</sup><br />
+<br />
+List folder / read data<sup>1</sup><br />
 <br />
 Create folders / append data<sup>1</sup><br />
 <br />
