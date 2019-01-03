@@ -16,9 +16,9 @@ manager: dougkim
 ms.localizationpriority: medium
 ---
 # Install Server Core
-> Applies To: Windows Server (Semi-Annual Channel) and Windows Server 2016
+> Applies To: Windows Server (Semi-Annual Channel), version 1709, 1803, or 1809 and Windows Server (Long Term Servicing Channel) 2016, or 2019
   
-When you install Windows Server 2016 for the first time, you have the following installation options:
+When you install Windows Server (Long Term Servicing Channel) 2016, or 2019, for the first time, you have the following installation options:
 
 >[!NOTE]
 > In the following list, editions without “Desktop Experience” are the Server Core installation options
@@ -28,7 +28,7 @@ When you install Windows Server 2016 for the first time, you have the following 
 -	Windows Server Datacenter
 -	Windows Server Datacenter with Desktop Experience
 
-When you install Windows Server, version 1709, you have the following installation options:
+When you install Windows Server (Semi-Annual Channel), version 1709, 1803, or 1809, you have the following installation options:
 
 -	Windows Server Standard 
 -	Windows Server Datacenter
@@ -72,16 +72,16 @@ With the Server Core option, the standard user interface (the Desktop Experience
 - Virtualization
 - Volume Activation Services
 
-## Windows Server 2016 installation
+## Windows Server 2016, or 2019, installation
 
 To install the Server Core installation option in Windows Server 2016, see [Windows Server Installation and Upgrade](installation-and-upgrade.md).
 
-## Windows Server, version 1709, installation
+## Windows Server, version 1709, 1803, or 1809, installation
 
-Installation steps for Windows Server, version 1709, are the same as installing previous versions of Windows Server (from an .ISO image), with the following exceptions:
+Installation steps for Windows Server (Semi-Annual Channel) are the same as installing previous versions of Windows Server (from an .ISO image), with the following exceptions:
 - No supported upgrades from previous versions of Windows Server to Windows Server, version 1709. A fresh installation is always required.
    This means that when you run setup.exe from the desktop of a Windows computer, the setup experience does not permit the upgrade option (it is grayed out).
-- There’s no evaluation version for Windows Server, version 1709.
-- There’s no OEM or retail version. Windows Server version 1709 can only be licensed through Software Assurance or loyalty programs.
+- There’s no evaluation version for Windows Server (Semi-Annual Channel)
+- There’s no OEM or retail version. Windows Server (Semi-Annual Channel) can only be licensed through Software Assurance or loyalty programs.
 
 To get Windows Server version 1709, see [Introducing Windows Server, version 1709](get-started-with-1709.md).
