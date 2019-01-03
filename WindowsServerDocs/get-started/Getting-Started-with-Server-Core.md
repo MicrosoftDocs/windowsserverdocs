@@ -72,7 +72,7 @@ With the Server Core option, the standard user interface (the Desktop Experience
 - Virtualization
 - Volume Activation Services
 
-For roles not included in Server Core, see [Roles, Role Services, and Features not in Windows Server - Server Core](WindowsServerDocs/administration/server-core/server-core-removed-roles.md)
+For roles not included in Server Core, see [Roles, Role Services, and Features not in Windows Server - Server Core](https://docs.microsoft.com/en-us/windows-server/administration/server-core/server-core-removed-roles)
 
 ## Windows Server (Long Term Servicing Channel) 2016, or 2019, installation
 
