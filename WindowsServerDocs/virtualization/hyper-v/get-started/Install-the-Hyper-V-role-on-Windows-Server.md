@@ -16,7 +16,8 @@ ms.date: 12/02/2016
 
 >Applies To: Windows Server 2016, Windows Server 2019
   
-To create and run virtual machines, install the Hyper-V role on Windows Server by using Server Manager or the Install-WindowsFeature cmdlet in Windows PowerShell. To install the Hyper-V role on a Nano Server, see [Getting Started with Nano Server](../../../get-started/Getting-Started-with-Nano-Server.md). For Windows 10, see [Install Hyper-V on Windows 10](https://docs.microsoft.com/virtualization/hyper-v-on-windows/quick-start/enable-hyper-v).
+To create and run virtual machines, install the Hyper-V role on Windows Server by using Server Manager or the **Install-WindowsFeature** cmdlet in Windows PowerShell. 
+For Windows 10, see [Install Hyper-V on Windows 10](https://docs.microsoft.com/virtualization/hyper-v-on-windows/quick-start/enable-hyper-v).
 
 To learn more about Hyper-V, see the [Hyper-V Technology Overview](..\Hyper-V-Technology-Overview.md). To try out Windows Server 2019, you can download and install an evaluation copy. See the [Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-windows-server-2019).
 
@@ -69,7 +70,7 @@ If you want to install only the management tools, such as Hyper-V Manager, see [
     If you're connected locally to the server, run the command without `-ComputerName <computer_name>`.  
   
 > [!NOTE]  
-> If you install this role on a server that runs the Server Core installation option of Windows Server 2016 and use the parameter `-IncludeManagementTools`, only the Hyper-V Module for Windows PowerShell will be installed. You can use the GUI management tool, Hyper-V Manager, on another computer to remotely manage a Hyper-V host that runs on a Server Core installation. For instructions on connecting remotely, see [Remotely manage Hyper-V hosts with Hyper-V Manager](..\Manage\Remotely-manage-Hyper-V-hosts.md).  
+> If you install this role on a server that runs the Server Core installation option of Windows Server 2016 and use the parameter `-IncludeManagementTools`, only the Hyper-V Module for Windows PowerShell is installed. You can use the GUI management tool, Hyper-V Manager, on another computer to remotely manage a Hyper-V host that runs on a Server Core installation. For instructions on connecting remotely, see [Remotely manage Hyper-V hosts with Hyper-V Manager](..\Manage\Remotely-manage-Hyper-V-hosts.md).  
   
 ## See also  
   
