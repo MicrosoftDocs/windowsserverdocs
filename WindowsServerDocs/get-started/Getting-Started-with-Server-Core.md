@@ -15,6 +15,8 @@ ms.author: jaimeo
 manager: dougkim
 ms.localizationpriority: medium
 ---
+# Install Server Core
+
 > Applies to: Windows Server 2019, Windows Server 2016, Windows Server (Semi-Annual Channel)
   
 When you install Windows Server for the first time, you have the following installation options:
