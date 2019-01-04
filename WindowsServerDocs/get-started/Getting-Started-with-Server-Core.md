@@ -1,11 +1,11 @@
 ---
 title: Install Server Core
-description: Explains how to obtain and install a Server Core installation
+description: How to obtain and install a Server Core installation on Windows Server 2019, Windows Server 2016, or Windows Server (Semi-Annual Channel).
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.date: 10/17/2017
+ms.date: 1/04/2019
 ms.technology: server-general
 ms.tgt_pltfrm: na
 ms.topic: article
@@ -15,10 +15,9 @@ ms.author: jaimeo
 manager: dougkim
 ms.localizationpriority: medium
 ---
-# Install Server Core
-> Applies To: Windows Server (Semi-Annual Channel) and Windows Server (Long Term Servicing Channel) 2016, or 2019
+> Applies to: Windows Server 2019, Windows Server 2016, Windows Server (Semi-Annual Channel)
   
-When you install Windows Server (Long Term Servicing Channel) 2016, or 2019, for the first time, you have the following installation options:
+When you install Windows Server for the first time, you have the following installation options:
 
 >[!NOTE]
 > In the following list, editions without “Desktop Experience” are the Server Core installation options
@@ -72,13 +71,13 @@ With the Server Core option, the standard user interface (the Desktop Experience
 - Virtualization
 - Volume Activation Services
 
-For roles not included in Server Core, see [Roles, Role Services, and Features not in Windows Server - Server Core](https://docs.microsoft.com/en-us/windows-server/administration/server-core/server-core-removed-roles)
+For roles not included in Server Core, see [Roles, Role Services, and Features not in Windows Server - Server Core](../administration/server-core/server-core-removed-roles.md).
 
-## Windows Server (Long Term Servicing Channel) 2016, or 2019, installation
+## Installing on Windows Server 2019 or Windows Server 2016
 
 For general installation steps and options for Windows Server (Long Term Servicing Channel), see [Windows Server Installation and Upgrade](installation-and-upgrade.md).
 
-## Windows Server (Semi-Annual Channel) installation
+## Installing on Windows Server (Semi-Annual Channel)
 
 Installation steps for Windows Server (Semi-Annual Channel) are the same as installing previous versions of Windows Server (from an .ISO image), with the following exceptions:
 - No supported upgrades from previous versions of Windows Server to Windows Server, version 1709. A fresh installation is always required.
