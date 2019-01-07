@@ -21,15 +21,15 @@ The solution extension included in the XClarity Integrator extension allows conn
 
 By selecting a server, you can view the server's hardware inventory, available firmware updates, alerts, events, logs, power consumption and temperature. You can also run operations such as Remote Control and power on/off.
 
-![Lenovo Extension](../../media/extend-case-study-lenovo/lenovo-1.png)
+![Lenovo Extension](../../media/extend-case-study-lenovo/lenovo-2.png)
 
 The same tools are available as a tool extension when managing servers within Windows Admin Center as well, allowing an integrated and seamless hardware and software management experience.
 
-![Lenovo Extension](../../media/extend-case-study-lenovo/lenovo-1.png)
+![Lenovo Extension](../../media/extend-case-study-lenovo/lenovo-3.png)
 
 The tool extension for failover clusters and hyper-converged clusters provides a dashboard displaying overall cluster hardware health status, status alerts, firmware consistency status and report, power consumption and temperature, and fan and power supply health status.
 
-![Lenovo Extension](../../media/extend-case-study-lenovo/lenovo-1.png)
-![Lenovo Extension](../../media/extend-case-study-lenovo/lenovo-1.png)
+![Lenovo Extension](../../media/extend-case-study-lenovo/lenovo-4.png)
+![Lenovo Extension](../../media/extend-case-study-lenovo/lenovo-5.png)
 
 link
