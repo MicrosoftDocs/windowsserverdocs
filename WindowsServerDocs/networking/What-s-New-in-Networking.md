@@ -13,7 +13,7 @@ author: shortpatti
 >Applies to: Windows Server 2016
 
 Following are the new or enhanced networking technologies in Windows Server 2016.  
-  
+  Upd
 This topic contains the following sections.  
   
 -   [New Networking Features and Technologies](#bkmk_features)  
