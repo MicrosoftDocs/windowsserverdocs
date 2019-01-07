@@ -125,7 +125,7 @@ You can specify the authority information access points in the CAPolicy.inf for 
 
 ```
 [AuthorityInformationAccess]
-URL=https://pki.wingtiptoys.com/Public/myCA.crt
+URL=http://pki.wingtiptoys.com/Public/myCA.crt
 ```
 
 Some additional notes on the authority information access section:
