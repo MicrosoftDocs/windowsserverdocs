@@ -1,8 +1,9 @@
 ---
-ms.date:  08/14/2018 
-contributor:  JKeithB
+ms.date:  01/07/2018 
+contributor:  damaerteMSFT
+author: maertendMSFT
 keywords:  OpenSSH, SSH, Win32-OpenSSH
-title:  Open
+title:  OpenSSH in Windows
 ---
 # OpenSSH in Windows
 
@@ -28,4 +29,4 @@ Additional detailed documentation for common OpenSSH features is available onlin
 
 The master [OpenSSH open source project](https://www.openssh.com) is managed by developers at the OpenBSD Project. 
 The Microsoft fork of this project is in [Github](https://github.com/PowerShell/openssh-portable).
-Feedback on Windows OpenSSH is welcomed and can be provided by creating Github issues in our [OpenSSG Github repo](https://github.com/PowerShell/openssh-portable). 
+Feedback on Windows OpenSSH is welcomed and can be provided by creating Github issues in our [OpenSSH Github repo](https://github.com/PowerShell/openssh-portable). 
