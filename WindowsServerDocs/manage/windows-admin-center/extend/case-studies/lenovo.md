@@ -32,4 +32,4 @@ The tool extension for failover clusters and hyper-converged clusters provides a
 ![Lenovo Extension](../../media/extend-case-study-lenovo/lenovo-4.png)
 ![Lenovo Extension](../../media/extend-case-study-lenovo/lenovo-5.png)
 
-link
+Learn more about the Lenovo XClarity Integrator offerings for Windows Admin Center on the [Lenovo website](https://support.lenovo.com/us/en/solutions/ht507549).
