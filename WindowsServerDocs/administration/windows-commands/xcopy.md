@@ -12,9 +12,8 @@ ms.assetid: 76a310d7-9925-4571-a252-0e28960d5f89
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
-ms.date: 08/21/2018
+ms.date: 01/05/2019
 ---
-
 # xcopy
 
 
@@ -110,37 +109,37 @@ Xcopy <Source> [<Destination>] [/w] [/p] [/c] [/v] [/q] [/f] [/l] [/g] [/d [:MM-
 
 ## <a name="BKMK_examples"></a>Examples
 
-To copy all the files and subdirectories (including any empty subdirectories) from drive A to drive B, type:
+**1.** To copy all the files and subdirectories (including any empty subdirectories) from drive A to drive B, type:
 ```
 xcopy a: b: /s /e 
 ```
-To include any system or hidden files in the previous example, add the**/h** command-line option as follows:
+**2.** To include any system or hidden files in the previous example, add the**/h** command-line option as follows:
 ```
 xcopy a: b: /s /e /h
 ```
-To update files in the \Reports directory with the files in the \Rawdata directory that have changed since December 29, 1993, type:
+**3.** To update files in the \Reports directory with the files in the \Rawdata directory that have changed since December 29, 1993, type:
 ```
 xcopy \rawdata \reports /d:12-29-1993
 ```
-To update all the files that exist in \Reports in the previous example, regardless of date, type:
+**4.** To update all the files that exist in \Reports in the previous example, regardless of date, type:
 ```
 xcopy \rawdata \reports /u
 ```
-To obtain a list of the files to be copied by the previous command (that is, without actually copying the files), type:
+**5.** To obtain a list of the files to be copied by the previous command (that is, without actually copying the files), type:
 ```
 xcopy \rawdata \reports /d:12-29-1993 /l > xcopy.out
 ```
 The file xcopy.out lists every file that is to be copied.
 
-To copy the \Customer directory and all subdirectories to the directory \\\\Public\Address on network drive H:, retain the read-only attribute, and be prompted when a new file is created on H:, type:
+**6.** To copy the \Customer directory and all subdirectories to the directory \\\\Public\Address on network drive H:, retain the read-only attribute, and be prompted when a new file is created on H:, type:
 ```
 xcopy \customer h:\public\address /s /e /k /p
 ```
-To issue the previous command, ensure that **xcopy** creates the \Address directory if it does not exist, and suppress the message that appears when you create a new directory, add the **/i** command-line option as follows:
+**7.** To issue the previous command, ensure that **xcopy** creates the \Address directory if it does not exist, and suppress the message that appears when you create a new directory, add the **/i** command-line option as follows:
 ```
 xcopy \customer h:\public\address /s /e /k /p /i
 ```
-You can create a batch program to perform **xcopy** operations and use the batch **if** command to process the exit code if an error occurs. For example, the following batch program uses replaceable parameters for the **xcopy** source and destination parameters:
+**8.** You can create a batch program to perform **xcopy** operations and use the batch **if** command to process the exit code if an error occurs. For example, the following batch program uses replaceable parameters for the **xcopy** source and destination parameters:
 ```
 @echo off
 rem COPYIT.BAT transfers all files in all subdirectories of
@@ -159,11 +158,23 @@ echo You pressed CTRL+C to end the copy operation.
 goto exit
 :exit 
 ```
-To use this batch program to copy all files in the C:\Prgmcode directory and its subdirectories to drive B, type:
+To use the preceding batch program to copy all files in the C:\Prgmcode directory and its subdirectories to drive B, type:
 ```
 copyit c:\prgmcode b:
 ```
 The command interpreter substitutes **C:\Prgmcode** for *%1* and **B:** for *%2*, then uses **xcopy** with the **/e** and **/s** command-line options. If **xcopy** encounters an error, the batch program reads the exit code and goes to the label indicated in the appropriate **IF ERRORLEVEL** statement, then displays the appropriate message and exits from the batch program.
+
+**9.** This example all the non-empty directories, plus files whose name match the pattern given with the asterisk symbol.
+```
+xcopy .\toc*.yml ..\..\Copy-To\ /S /Y
+
+rem Output example.
+rem  .\d1\toc.yml
+rem  .\d1\d12\toc.yml
+rem  .\d2\toc.yml
+rem  3 File(s) copied
+```
+In the preceding example, this particular source parameter value **.\\toc\*.yml** copy the same 3 files even if its two path characters **.\\** were removed. However, no files would be copied if the asterisk wildcard was removed from the source parameter, making it just **.\\toc.yml**.
 
 #### <a name="BKMK_addref"></a>Additional references
 
