@@ -11,9 +11,9 @@ ms.prod: windows-server-threshold
 ---
 # Lenovo XClarity Integrator Extension
 
-## Integrated monitoring and management for hyper-converged infrastructure
+## Integrated hardware management everywhere!
 
-The [Lenovo XClarity Integrator](https://www.lenovo.com/us/en/data-center/software/systems-management/XClarity-Integrator/p/WMD00000370) for Windows Admin Center provides administrators a seamless experience to manage Lenovo infrastructure directly from Windows Admin Center. The XClarity Integrator extension includes a standalone solution extension and also extends the existing Server Manager, Failover Cluster Manager, and Hyper-Converged Cluster Manager solutions in a single unified UI to enable simple server management. 
+The [Lenovo XClarity Integrator](https://www.lenovo.com/us/en/data-center/software/systems-management/XClarity-Integrator/p/WMD00000370) extension for Windows Admin Center provides administrators a seamless experience to manage Lenovo infrastructure directly from Windows Admin Center. The XClarity Integrator extension includes a standalone solution extension and also extends the existing Server Manager, Failover Cluster Manager, and Hyper-Converged Cluster Manager solutions in a single, unified UI to enable simple server management. 
 
 The solution extension included in the XClarity Integrator extension allows connecting to a Lenovo XClarity Administrator, Lenovo rack or tower servers, or all the servers in an entire chassis at once. Once the servers are added, you can see the overall health status for all added nodes.
 
@@ -23,7 +23,7 @@ By selecting a server, you can view the server's hardware inventory, available f
 
 ![Lenovo Extension](../../media/extend-case-study-lenovo/lenovo-2.png)
 
-The same tools are available as a tool extension when managing servers within Windows Admin Center as well, allowing an integrated and seamless hardware and software management experience.
+The same tools are available as a tool extension when managing servers within Windows Admin Center as well, allowing you to seamlessly switch between managing your infrastructure software and hardware.
 
 ![Lenovo Extension](../../media/extend-case-study-lenovo/lenovo-3.png)
 

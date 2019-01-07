@@ -63,6 +63,12 @@ Lenovo's XClarity Integrator extension takes hardware management to the next lev
 
 ![Lenovo extension](../media/extensibility-overview/lenovo-extension.png)
 
+### Pure Storage
+
+Pure Storage provides enterprise, all-flash data storage solutions that deliver data-centric architecture to accelerate your business for a competitive advantage. The Pure Storage extension for Windows Admin Center provides a single-pane view into Pure FlashArray products and empowers users to conduct monitoring tasks, view real-time performance metrics, and manage storage volumes and initiators through a single UI experience. [Learn more about Pure's extensions and their development experience](case-studies/purestorage.md).
+
+![Pure Storage extension](../media/extensibility-overview/purestorage-extension.png)
+
 ### Squared Up
 
 Squared Up provides a best-in-class monitoring experience based on System Center Operations Manager and integrating with Azure Log Analytics, Application Insights and other monitoring solutions. The [Squared Up extension](https://squaredup.com/product/honolulu/windows-admin-center-extension/?utm_source=microsoft-docs&utm_medium=public-relations&utm_campaign=honolulu) brings historical performance data and live application topologies and dependencies into the context of server and cluster management that Windows Admin Center provides, and early customers have acclaimed the value of bringing immense data from many disparate sources into a single experience. [Learn more about Squared Up's extension and their development experience](case-studies/squared-up.md).
