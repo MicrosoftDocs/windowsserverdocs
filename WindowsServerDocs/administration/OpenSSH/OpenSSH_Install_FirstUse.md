@@ -72,10 +72,10 @@ To uninstall OpenSSH using PowerShell, use one of the following commands:
 
 ```powershell
 # Uninstall the OpenSSH Client
-Remove-WindowsCapability -Name OpenSSH.Client~~~~0.0.1.0
+Remove-WindowsCapability -Online -Name OpenSSH.Client~~~~0.0.1.0
 
 # Uninstall the OpenSSH Server
-Remove-WindowsCapability -Name OpenSSH.Server~~~~0.0.1.0
+Remove-WindowsCapability -Online -Name OpenSSH.Server~~~~0.0.1.0
 ```
 
 A Windows restart may be required after removing OpenSSH, if the service is in use at the time it was uninstalled.
