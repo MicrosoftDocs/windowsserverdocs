@@ -13,7 +13,7 @@ author: shortpatti
 >Applies to: Windows Server 2016
 
 Following are the new or enhanced networking technologies in Windows Server 2016.  
-  
+  Upd
 This topic contains the following sections.  
   
 -   [New Networking Features and Technologies](#bkmk_features)  
@@ -100,7 +100,7 @@ Following are the new or improved DNS server technologies.
   
 -   **Response Rate Limiting (RRL)**.  You can enable response rate limiting on your DNS servers. By doing this, you avoid the possibility of malicious systems using your DNS servers to initiate a denial of service attack on a DNS client.  
   
--   **DNS-based Authentication of Named Entities (DANE)**.   You can use TLSA (Transport Layer Security Authentication) records to provide information to DNS clients that state what certification authority (CA) they should expect a certificate from for your domain name. This prevents man-in-the-middle attacks where someone might corrupt the DNS cache to point to their won website, and provide a certificate they issued from a different CA.  
+-   **DNS-based Authentication of Named Entities (DANE)**.   You can use TLSA (Transport Layer Security Authentication) records to provide information to DNS clients that state what certification authority (CA) they should expect a certificate from for your domain name. This prevents man-in-the-middle attacks where someone might corrupt the DNS cache to point to their own website, and provide a certificate they issued from a different CA.  
   
 -   **Unknown record support**.   
      You can add records which are not explicitly supported by the Windows DNS server using the unknown record functionality.  

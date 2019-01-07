@@ -11,7 +11,7 @@ ms.localizationpriority: high
 
 # What's new in Windows Server 2019
 
-This topic describes some of the new features in Windows Server 2019. Windows Server 2019 is built on the strong foundation of Windows Server 2016 and brings numerous innovations on four key themes: Hybrid, Security, Application Platform, and Hyper-Converged Infrastructure (HCI). To find out What's New in Windows Server, version 1809, see [What's New in Windows Server, version 1809](../get-started/whats-new-in-windows-server-1809.md).
+This topic describes some of the new features in Windows Server 2019. Windows Server 2019 is built on the strong foundation of Windows Server 2016 and brings numerous innovations on four key themes: Hybrid Cloud, Security, Application Platform, and Hyper-Converged Infrastructure (HCI). To find out What's New in Windows Server, version 1809, see [What's New in Windows Server, version 1809](../get-started/whats-new-in-windows-server-1809.md).
 
 ## General
 
