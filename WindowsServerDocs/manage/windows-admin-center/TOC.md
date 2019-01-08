@@ -34,8 +34,8 @@
 ### [Configure Azure services](use/azure-services.md)
 #### [Protect your Hyper-V VMs with Azure Site Recovery](use/azure-site-recovery.md)
 #### [Update your servers with Azure Update Management](use/azure-update-management.md)
-### [Common troubleshooting steps](use/troubleshooting.md)
 ### [Logging](use/logging.md)
+### [Common troubleshooting steps](use/troubleshooting.md)
 ### [Known issues](use/known-issues.md)
 
 ## Extend
@@ -62,4 +62,6 @@
 ### Case Studies
 #### [DataON](extend/case-studies/dataon.md)
 #### [Fujitsu](extend/case-studies/fujitsu.md)
+#### [Lenovo](extend/case-studies/lenovo.md)
+#### [Pure Storage](extend/case-studies/purestorage.md)
 #### [Squared Up](extend/case-studies/squared-up.md)

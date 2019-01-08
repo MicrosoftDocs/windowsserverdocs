@@ -38,6 +38,8 @@ If you encounter an issue not described on this page, please [let us know](http:
 
 ## General
 
+- If you have Windows Admin Center installed as a gateway on **Windows Server 2016** under heavy use, the service may crash with an error in the event log that contains ```Faulting application name: sme.exe``` and ```Faulting module name: WsmSvc.dll```. This is due to a bug that has been fixed in Windows Server 2019, and will be backported to Windows Server 2016 in an upcoming cumulative update.
+
 - If you have Windows Admin Center installed as a gateway and your connection list appears to be corrupted, perform the following steps:
 
 >[!WARNING]

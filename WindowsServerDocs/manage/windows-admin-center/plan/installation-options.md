@@ -5,7 +5,6 @@ ms.technology: manage
 ms.topic: article
 author: nwashburn-ms
 ms.author: niwashbu
-ms.date: 09/23/2018
 ms.localizationpriority: medium
 ms.prod: windows-server-threshold
 ---
@@ -25,7 +24,7 @@ You can **install** Windows Admin Center on the following Windows operating syst
 |Windows Server 2016 | Gateway mode |
 |Windows Server 2019 | Gateway mode |
 
-**Desktop mode:** Connect to the Windows Admin Center gateway from the same computer on which it's installed (i.e. `https://localhost:6516`)
+**Desktop mode:** Launch from the Start Menu and connect to the Windows Admin Center gateway from the same computer on which it's installed (i.e. `https://localhost:6516`)
 
 **Gateway mode:** Connect to the Windows Admin Center gateway from a client browser on a different machine (i.e. `https://servername.contoso.com`) 
 
@@ -62,7 +61,6 @@ and that the version is 5.1 or higher.
 
 | ![img](../media/deployment-options/W10.png) | ![img](../media/deployment-options/gateway.png) | ![img](../media/deployment-options/node.png) | ![img](../media/deployment-options/HA.png) |
 |---|---|---|---|
-
 
 | Local Client | Gateway Server | Managed Server | Failover Cluster |
 | --- | --- | --- | --- |
