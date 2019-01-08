@@ -53,9 +53,21 @@ DataON MUST is a browser-based solution for monitoring and managing DataON hyper
 
 ### Fujitsu
 
-[Fujitsu’s ServerView Health and RAID Health extensions](https://aka.ms/wac-fujitsu-extension) for Windows Admin Center provide in-depth monitoring and management of critical hardware components such as processors, memory, power and storage subsystems for Fujitsu PRIMERGY servers. By utilizing the Windows Admin Center UX design patterns and UI controls, Fujitsu has brought us a huge step towards our vision of end-to-end insight into server roles and services, to operating system, and to hardware management through the Windows Admin Center platform. [Learn more about Fujitsu's extensions and their development experience](case-studies/fujitsu.md).
+Fujitsu’s ServerView Health and RAID Health extensions for Windows Admin Center provide in-depth monitoring and management of critical hardware components such as processors, memory, power and storage subsystems for Fujitsu PRIMERGY servers. By utilizing the Windows Admin Center UX design patterns and UI controls, Fujitsu has brought us a huge step towards our vision of end-to-end insight into server roles and services, to operating system, and to hardware management through the Windows Admin Center platform. [Learn more about Fujitsu's extensions and their development experience](case-studies/fujitsu.md).
 
 ![Fujitsu ServerView extension](../media/extensibility-overview/fujitsu-serverview-extension.png)
+
+### Lenovo
+
+Lenovo's XClarity Integrator extension takes hardware management to the next level by seamlessly integrating into various experiences within Windows Admin Center. The XClarity Integrator solution provides a high-level view of all your Lenovo servers, and different tool extensions provide hardware details whether you are connected to a single server, failover cluster or a hyper-converged cluster. [Learn more about the Lenovo XClarity Integrator extension](case-studies/lenovo.md).
+
+![Lenovo extension](../media/extensibility-overview/lenovo-extension.png)
+
+### Pure Storage
+
+Pure Storage provides enterprise, all-flash data storage solutions that deliver data-centric architecture to accelerate your business for a competitive advantage. The Pure Storage extension for Windows Admin Center provides a single-pane view into Pure FlashArray products and empowers users to conduct monitoring tasks, view real-time performance metrics, and manage storage volumes and initiators through a single UI experience. [Learn more about Pure's extensions and their development experience](case-studies/purestorage.md).
+
+![Pure Storage extension](../media/extensibility-overview/purestorage-extension.png)
 
 ### Squared Up
 
