@@ -10,17 +10,17 @@ title: OpenSSH Server Configuration for Windows
 
 This topic covers the Windows-specific configuration for OpenSSH Server (sshd). 
 
-OpenSSH maintains detailed documentation for configuration options online at [OpenSSH.com](https://www.openssh.com/manual.html), which will not be duplicated in this documentation set. 
+OpenSSH maintains detailed documentation for configuration options online at [OpenSSH.com](https://www.openssh.com/manual.html), which is not be duplicated in this documentation set. 
 
 ## Configuring the default shell for OpenSSH in Windows
 
-The default command shell provides the experience a user will see when connecting to the server using SSH. 
+The default command shell provides the experience a user sees when connecting to the server using SSH. 
 The initial default Windows is the Windows Command shell (cmd.exe). 
 Windows also includes PowerShell and Bash, and third party command shells are also available for Windows and may be configured as the default shell for a server.
 
 To set the default command shell, first confirm that the OpenSSH installation folder is on the system path. 
 For Windows, the default installation folder is SystemDrive:WindowsDirectory\System32\openssh. 
-The following commands will show the current path setting, and add the default OpenSSH installation folder to it. 
+The following commands shows the current path setting, and add the default OpenSSH installation folder to it. 
 
 Command shell | Command to use
 ------------- | -------------- 
@@ -29,7 +29,7 @@ PowerShell | $env:\path
 
 Configuring the default ssh shell is done in the Windows registry by adding the full path to the shell executable to Computer\HKEY_LOCAL_MACHINE\SOFTWARE\OpenSSH in the string value DefaultShell. 
 
-As an example, the following Powershell command will set the default shell to be PowerShell.exe:
+As an example, the following Powershell command sets the default shell to be PowerShell.exe:
 
 ```powershell
 New-ItemProperty -Path "HKLM:\SOFTWARE\OpenSSH" -Name DefaultShell -Value "C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe" -PropertyType String -Force
@@ -38,7 +38,7 @@ New-ItemProperty -Path "HKLM:\SOFTWARE\OpenSSH" -Name DefaultShell -Value "C:\Wi
 ## Windows Configurations in sshd_config 
 
 In Windows, sshd reads configuration data from %programdata%\ssh\sshd_config by default, or a different configuration file may be specified by launching sshd.exe with the -f parameter.
-If the file is absent, sshd will generate one with the default configuration when the service is started.
+If the file is absent, sshd generates one with the default configuration when the service is started.
 
 The elements listed below provide Windows-specific configuration possible through entries in sshd_config. 
 There are other configuration settings possible in that are not listed here, as they are covered in detail in the online [Win32 OpenSSH documentation](https://github.com/powershell/win32-openssh/wiki). 
@@ -52,7 +52,7 @@ All account names must be specified in lower case.
 See PATTERNS in ssh_config for more information on patterns for wildcards.
 
 When configuring user/group based rules with a domain user or group, use the following format: ``` user?domain* ```.
-Windows allows multiple of formats for specifying domain principals, but many will conflict with standard Linux patterns. 
+Windows allows multiple of formats for specifying domain principals, but many conflict with standard Linux patterns. 
 For that reason, * is added to cover FQDNs. 
 ALso, this approach uses "?" instead of @ avoids conflict with username@host format. 
 
@@ -77,7 +77,7 @@ AllowGroups sshusers
 
 ### AuthenticationMethods 
 
-For Windows OpehSSH, the only available authentication methods are "password" and "publickey".
+For Windows OpenSSH, the only available authentication methods are "password" and "publickey".
 
 ### AuthorizedKeysFile 
 
@@ -89,7 +89,7 @@ This directive is only supported with sftp sessions. A remote session into cmd.e
 
 ### HostKey
 
-The defaults are %programdata%/ssh/ssh_host_ecdsa_key, %programdata%/ssh/ssh_host_ed25519_key and %programdata%/ssh/ssh_host_rsa_key. If the defaults are not present, sshd will automatically generate these on a service start.
+The defaults are %programdata%/ssh/ssh_host_ecdsa_key, %programdata%/ssh/ssh_host_ed25519_key and %programdata%/ssh/ssh_host_rsa_key. If the defaults are not present, sshd automatically generates these on a service start.
 
 ### Match
 
@@ -101,7 +101,7 @@ Not applicable in Windows. To prevent administrator login, use Administrators wi
 
 ### SyslogFacility
 
-If you need file based logging, use LOCAL0. Logs will be generated under %programdata%\ssh\logs.
+If you need file based logging, use LOCAL0. Logs are generated under %programdata%\ssh\logs.
 Any other value, including the default value AUTH directs logging to ETW. For more info see Logging Facilities in Windows.
 
 ### Not supported 
