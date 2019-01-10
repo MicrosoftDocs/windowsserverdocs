@@ -3,6 +3,7 @@ ms.date: 09/27/2018
 ms.topic: conceptual
 keywords: OpenSSH, SSH, SSHD, install, setup
 contributor: maertendMSFT
+ms.product: w10
 author: maertendMSFT
 title: OpenSSH Server Configuration for Windows
 ---
