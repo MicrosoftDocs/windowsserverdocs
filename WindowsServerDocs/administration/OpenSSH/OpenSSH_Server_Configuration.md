@@ -2,7 +2,9 @@
 ms.date: 09/27/2018
 ms.topic: conceptual
 keywords: OpenSSH, SSH, SSHD, install, setup
-contributor: keithb
+contributor: maertendMSFT
+ms.product: w10
+author: maertendMSFT
 title: OpenSSH Server Configuration for Windows
 ---
 
@@ -54,7 +56,7 @@ See PATTERNS in ssh_config for more information on patterns for wildcards.
 When configuring user/group based rules with a domain user or group, use the following format: ``` user?domain* ```.
 Windows allows multiple of formats for specifying domain principals, but many will conflict with standard Linux patterns. 
 For that reason, * is added to cover FQDNs. 
-ALso, this approach uses "?" instead of @ avoids conflict with username@host format. 
+Also, this approach uses "?", instead of @, to avoid conflicts with the username@host format. 
 
 Work group users/groups and internet-connected accounts are always resolved to their local account name (no domain part, similar to standard Unix names). 
 Domain users and groups are strictly resolved to [NameSamCompatible](https://docs.microsoft.com/en-us/windows/desktop/api/secext/ne-secext-extended_name_format) format - domain_short_name\user_name. 

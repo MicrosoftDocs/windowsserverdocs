@@ -1,8 +1,9 @@
 ---
-ms.date:  08/13/2018
+ms.date:  01/07/2019
 ms.topic: conceptual
 keywords:  OpenSSH, SSH, SSHD, install, setup
-contributor:  keithb
+contributor:  maertendMSFT
+author: maertendMSFT
 title:  Installation of OpenSSH For Windows
 ---
 
@@ -79,15 +80,6 @@ Remove-WindowsCapability -Online -Name OpenSSH.Server~~~~0.0.1.0
 ```
 
 A Windows restart may be required after removing OpenSSH, if the service is in use at the time it was uninstalled.
-
-
-## Upgrading From "RS4"
-
-Users who installed the beta version of OpenSSH in Windows RS4 should consider the making following updates. 
-
-_Change the default location for administrator keys_
-* What is the reason for each activity?
-* Are there any other changes (e.g.: authorized key file location)
 
 
 ## Initial Configuration of SSH Server
