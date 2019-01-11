@@ -102,7 +102,6 @@ The following feature distribution map indicates the features in each version. T
    * **KVP daemon** - This daemon allows setting and querying intrinsic and extrinsic key value pairs.
    * **fcopy daemon** - This daemon implements a file copying service between the host and guest.
 
-
    To install the KVP daemon on 12.04, run the following commands as root (or sudo).
 
    ```bash
