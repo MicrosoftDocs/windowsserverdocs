@@ -42,6 +42,11 @@ With this being the case, there are several scenarios where the above is necessa
 - Cluster was built as a domain cluster and now needs to be part of a workgroup
 - Cluster is being moved to one area of the company to another and is a different subdomain
 
+Microsoft does not provide support to administrators who try to move resources from one domain to another if the underlying application operation is unsupported. For example, Microsoft does not provide support to administrators who try to move a Microsoft Exchange server from one domain to another.
+
+Warning:  We recommend that you perform a full backup of all data on all shared hard disks on each node in the cluster before you move the cluster.
+
+
 ## New Feature
 
 In Windows Server 2019, we introduced cross cluster domain migration capabilities.  So now, the scenarios listed above can easily be done and the need of rebuilding is no longer needed.  
