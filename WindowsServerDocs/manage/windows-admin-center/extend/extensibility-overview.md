@@ -47,7 +47,7 @@ See the amazing value our partners have started to bring to the Windows Admin Ce
 
 ### DataON
 
-DataON MUST is a browser-based solution for monitoring and managing DataON hyper-converged infrastructure running Windows Server. The [DataON MUST extension](http://www.dataonstorage.com/must/windows-admin-center/) provides unique value to customers such as historical data reporting, disk mapping, system alerts and call home service, complementing the Windows Admin Center server and hyper-converged infrastructure management capabilities, through a seamless, unified experience. [Learn more about DataON's MUST extension and their development experience](case-studies/dataon.md).
+DataON's MUST extension brings monitoring, management and end-to-end insight into DataON's hyper-converged infrastructure and storage systems based on Windows Server. The MUST extension adds unique value such as historical data reporting, disk mapping, system alerts and SAN-like call home service, complementing the Windows Admin Center server and hyper-converged infrastructure management capabilities, through a seamless, unified experience. [Learn more about DataON's MUST extension and their development experience](case-studies/dataon.md).
 
 ![DataON MUST extension](../media/extensibility-overview/dataon-must-extension.png)
 
