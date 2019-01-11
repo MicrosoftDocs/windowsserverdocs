@@ -30,8 +30,7 @@ The MUST extension extends the functionality of Windows Admin Center by providin
 ![DataON Extension](../../media/extend-case-study-dataon/dataon-1.png)
 *Disk mapping in the DataON MUST extension for Windows Admin Center*
 
-> <cite>“It’s great that Windows Admin Center allows for extensions such as DataON MUST so I can use both tools within the same console, and I like how seamless that integration is.
-> Windows Admin Center and DataON MUST together really does allow us to be more efficient and saves our team a ton of time. It allows us to achieve our administrator tasks a lot quicker than what we had before."</cite>
+> <cite>“It’s great that Windows Admin Center allows for extensions such as DataON MUST so I can use both tools within the same console, and I like how seamless that integration is. Windows Admin Center and DataON MUST together really does allow us to be more efficient and saves our team a ton of time. It allows us to achieve our administrator tasks a lot quicker than what we had before."</cite>
 >
 > -- Matt Roper, Facilitator of Technology Support Services, Cherokee County (GA) School District
 
