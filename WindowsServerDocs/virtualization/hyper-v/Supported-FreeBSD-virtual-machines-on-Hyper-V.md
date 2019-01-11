@@ -26,7 +26,7 @@ The following feature distribution map indicates the features in each version. T
 
 * (*blank*) - Feature not available
 
-|**Feature**|**Windows Server operating system version**|**11.1**|**11.0**|**10.3**|**10.2**|**10.0 - 10.1**|**9.1 - 9.3, 8.4**|
+|**Feature**|**Windows Server operating system version**|**11.1/11.2**|**11.0**|**10.3**|**10.2**|**10.0 - 10.1**|**9.1 - 9.3, 8.4**|
 |-|-|-|-|-|-|-|-|
 |**Availability**||Built in|Built in|Built in|Built in|Built in|[Ports](https://svnweb.freebsd.org/ports/branches/2015Q1/emulators/hyperv-is/) |
 |**[Core](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_core)**|2016, 2012 R2, 2012, 2008 R2|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004; |
