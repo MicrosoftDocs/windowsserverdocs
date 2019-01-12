@@ -2,13 +2,12 @@
 title: Understand and see storage resync
 description: Detailed info on when storage resync happens and how to see it in Windows Server 2019.
 keywords: Storage Spaces Direct,storage resync,resync, storage, S2D
-ms.assetid: 
-ms.prod: 
+ms.prod: windows-server-threshold
 ms.author: adagashe
 ms.technology: storage-spaces
 ms.topic: article
 author: adagashe
-ms.date: 11/26/2018 
+ms.date: 01/14/2019
 ms.localizationpriority: 
 ---
 ---
@@ -22,7 +21,7 @@ This topic provides background and steps to understand and see storage resync in
 
 ## Understanding resync
 
-Let's start with a simple example to understand storage gets out of sync. Keep in mind that any shared-nothing (local drives only) distributed storage solution exhibits this behavior. As you will see below, if one server node goes down, then its drives won't be updated until it comes back online - this is true for any hyper-converged architecture. 
+Let's start with a simple example to understand how storage gets out of sync. Keep in mind that any shared-nothing (local drives only) distributed storage solution exhibits this behavior. As you will see below, if one server node goes down, then its drives won't be updated until it comes back online - this is true for any hyper-converged architecture. 
 
 Suppose that we want to store the string "HELLO". 
 
@@ -50,21 +49,24 @@ So, this explains how data gets out of sync. But what does this look like at a h
 
 ## How to see storage resync in Windows Server 2019
 
-Now that you understand how storage resync works, let's look at how this shows up in Windows Server 2019. We have added a new fault to the [Health Service](../../failover-clustering/health-service-overview.md) that will show up when your storage is resyncing. More information on the Health Service can be found.
+Now that you understand how storage resync works, let's look at how this shows up in Windows Server 2019. We have added a new fault to the [Health Service](../../failover-clustering/health-service-overview.md) that will show up when your storage is resyncing.
 
 To view this fault in PowerShell, run:
 
 ``` PowerShell
-PS C:\> Get-HealthFault
+Get-HealthFault
 ```
 
 This is a new fault in Windows Server 2019, and will appear in PowerShell, in the cluster validation report, and anywhere else that builds on Health faults. 
 
 To get a deeper view, you can query the time series database in PowerShell as follows:
 
-``` PowerShell
-PS C:\> Get-ClusterNode | Get-ClusterPerf -ClusterNodeSeriesName ClusterNode.Storage.Degraded
+```PowerShell
+Get-ClusterNode | Get-ClusterPerf -ClusterNodeSeriesName ClusterNode.Storage.Degraded
+```
+Here's some example output:
 
+```
 Object Description: ClusterNode Server1
 
 Series                       Time                Value Unit
@@ -90,9 +92,13 @@ If you navigate to the *Servers* page in Windows Admin Center, click on *Invento
 
 As you can see, this alert is particularly helpful in getting a holistic view of what is happening at the storage layer. It effectively summarizes the information that you can get from the Get-StorageJob cmdlet, which returns information about long-running Storage module jobs, such as a repair operation on a storage space. An example is shown below:
 
-``` PowerShell
-PS C:\> Get-StorageJob
+```PowerShell
+Get-StorageJob
+```
 
+Here's example output:
+
+```
 Name                  ElapsedTime           JobState              PercentComplete       IsBackgroundTask
 ----                  -----------           --------              ---------------       ----------------
 Regeneration          00:01:19              Running               50                    True
