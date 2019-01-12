@@ -36,15 +36,15 @@ Suppose we update our string from "HELLO" to "HELP!" at this time.
 
 Once we update the string, copy #2 and #3 will be succesfully updated. However, copy #1 still cannot be accessed because server #1 is down temporarily (for maintanence). 
 
-![Video of writing to copy #2 and #2"](media/understand-storage-resync/write.mp4)
+![Gif of writing to copy #2 and #2"](media/understand-storage-resync/write.gif)
 
 Now, we have copy #1 which has data that is out of sync. The operating system uses granular dirty region tracking to keep track of the bits that are out of sync. This way when server #1 comes back online, we can sync the changes by reading the data from copy #2 or #3 and overwriting the data in copy #1. The advantages of this approach are that we only need to copy over the data that is stale, rather than resyncing all of the data from server #2 or server #3.
 
-![Video of overwriting to copy #1"](media/understand-storage-resync/overwrite.mp4)
+![Gif of overwriting to copy #1"](media/understand-storage-resync/overwrite.gif)
 
 So, this explains how data gets out of sync. But what does this look like at a high level? Assume for this example that we have a three server hyper-converged cluster. When server #1 is in maintenance, you will see it as being down. When you bring server #1 back up, it will start resyncing all of its storage using the granular dirty region tracking (explained above). Once the data is all back in sync, all servers will be shown as up.
 
-![Video of admin view of resync"](media/understand-storage-resync/admin.mp4)
+![Gif of admin view of resync"](media/understand-storage-resync/admin.gif)
 
 ## How to see storage resync in Windows Server 2019
 
