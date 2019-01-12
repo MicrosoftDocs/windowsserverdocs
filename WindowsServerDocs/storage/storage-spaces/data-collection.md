@@ -119,11 +119,11 @@ As you can see, script will also do validation of current cluster state
 
 As you can see, all data are being written to SDDCDiagTemp folder
 
-![](/media/data-collection/CollectDataFolder.png)
+![data in file explorer screenshot](/media/data-collection/CollectDataFolder.png)
 
 After script will finish, it will create ZIP in your users directory
 
-![](/media/data-collection/CollectDataResult.png)
+![data zip in powershell screenshot](/media/data-collection/CollectDataResult.png)
 
 Let's generate a report into a text file
 
