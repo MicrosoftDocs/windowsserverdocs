@@ -10,7 +10,6 @@ author: adagashe
 ms.date: 01/14/2019
 ms.localizationpriority: 
 ---
----
 # Understand and see storage resync
 
 >Applies to: Windows Server 2019
