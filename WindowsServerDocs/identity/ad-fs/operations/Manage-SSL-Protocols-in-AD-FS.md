@@ -257,16 +257,16 @@ For a full list of supported Cipher suites see [Cipher Suites in TLS/SSL (Schann
 The .NET Framework 3.5/4.0/4.5.x applications can switch the default protocol to TLS 1.2 by enabling the SchUseStrongCrypto registry key.  This registry key will force .NET applications to use TLS 1.2.
 
 > [!IMPORTANT]
-> For AD FS on Windows Server 2016 and Windows Server 2012 R2 you need to use the .NET Framework 4.0/4.5.x key:  HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\.NETFramework\v4.0.30319
+> For AD FS on Windows Server 2016 and Windows Server 2012 R2 you need to use the .NET Framework 4.0/4.5.x key:  HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\\.NETFramework\v4.0.30319
 
 
 For the .NET Framework 3.5 use the following registry key:
 
-[HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\.NETFramework\v2.0.50727]
+[HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\\.NETFramework\v2.0.50727]
 "SchUseStrongCrypto"=dword:00000001
 
 For the .NET Framework 4.0/4.5.x use the following registry key:
-HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\.NETFramework\v4.0.30319
+HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\\.NETFramework\v4.0.30319
 "SchUseStrongCrypto"=dword:00000001
 
 ![Strong Authentication](media/Managing-SSL-Protocols-in-AD-FS/strongauth.png)
