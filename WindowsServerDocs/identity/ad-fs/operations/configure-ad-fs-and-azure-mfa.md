@@ -5,7 +5,7 @@ description:
 ms.author: billmath
 author: billmath
 manager: mtillman
-ms.date: 08/28/2018
+ms.date: 01/14/2019
 ms.topic: article
 ms.prod: windows-server-threshold
 
@@ -22,11 +22,11 @@ Unlike with AD FS in Windows Server 2012 R2, the AD FS 2016 Azure MFA adapter in
 
 ## Registering users for Azure MFA with AD FS 2016
 
-AD FS does not support inline “proof up”, or registration of Azure MFA security verification information such as phone number or mobile app. This means users must get proofed up by visiting [https://account.activedirectory.windowsazure.com/Proofup.aspx](https://account.activedirectory.windowsazure.com/Proofup.aspx) prior to using Azure MFA to authenticate to AD FS applications. 
+AD FS does not support inline &#34;proof up&#34;, or registration of Azure MFA security verification information such as phone number or mobile app. This means users must get proofed up by visiting [https://account.activedirectory.windowsazure.com/Proofup.aspx](https://account.activedirectory.windowsazure.com/Proofup.aspx) prior to using Azure MFA to authenticate to AD FS applications. 
 When a user who has not yet proofed up in Azure AD tries to authenticate with Azure MFA at AD FS, they will get an AD FS error.  As an AD FS administrator, you can customize this error experience to guide the user to the proofup page instead.  You can do this using onload.js customization to detect the error message string within the AD FS page and show a new message to guide the users to visit [https://aka.ms/mfasetup](https://aka.ms/mfasetup), then re-attempt authentication. For detailed guidance see the "Customize the AD FS web page to guide users to register MFA verification methods" below in this article.
 
 >[!NOTE]
-> Previously, users were required to authenticate with MFA for registration (visiting [https://account.activedirectory.windowsazure.com/Proofup.aspx](https://account.activedirectory.windowsazure.com/Proofup.aspx), for example via the shortcut [https://aka.ms/mfasetup](https://aka.ms/mfasetup)).  Now, an AD FS user who has not yet registered MFA verification information can access Azure AD’s proofup page via the shortcut [https://aka.ms/mfasetup](https://aka.ms/mfasetup) using only primary authentication (such as Windows Integrated Authentication or username and password via the AD FS web pages).  If the user has no verification methods configured, Azure AD will perform inline registration in which the user sees the message “Your admin has required that you set up this account for additional security verification”, and the user can then select to “Set it up now”.
+> Previously, users were required to authenticate with MFA for registration (visiting [https://account.activedirectory.windowsazure.com/Proofup.aspx](https://account.activedirectory.windowsazure.com/Proofup.aspx), for example via the shortcut [https://aka.ms/mfasetup](https://aka.ms/mfasetup)).  Now, an AD FS user who has not yet registered MFA verification information can access Azure AD&#34;s proofup page via the shortcut [https://aka.ms/mfasetup](https://aka.ms/mfasetup) using only primary authentication (such as Windows Integrated Authentication or username and password via the AD FS web pages).  If the user has no verification methods configured, Azure AD will perform inline registration in which the user sees the message &#34;Your admin has required that you set up this account for additional security verification&#34;, and the user can then select to &#34;Set it up now&#34;.
 > Users who already have at least one MFA verification method configured will still be prompted to provide MFA when visiting the proofup page.
 
 ### Recommended deployment topologies
@@ -38,9 +38,9 @@ There are a couple of great reasons to use Azure MFA as Primary Authentication w
  - To avoid passwords for sign-in to Azure AD, Office 365 and other AD FS apps
  - To protect password based sign-in by requiring an additional factor such as verification code prior to the password
 
-If you wish to use Azure MFA as a primary authentication method in AD FS to achieve these benefits, you probably also want to keep the ability to use Azure AD conditional access including “true MFA” by prompting for additional factors in AD FS.
+If you wish to use Azure MFA as a primary authentication method in AD FS to achieve these benefits, you probably also want to keep the ability to use Azure AD conditional access including &#34;true MFA&#34; by prompting for additional factors in AD FS.
 
-You can now do this by configuring the Azure AD domain setting to do MFA on premises (setting “SupportsMfa” to $True).  In this configuration, AD FS can be prompted by Azure AD to perform additional authentication or “true MFA” for conditional access scenarios that require it.  
+You can now do this by configuring the Azure AD domain setting to do MFA on premises (setting &#34;SupportsMfa&#34; to $True).  In this configuration, AD FS can be prompted by Azure AD to perform additional authentication or &#34;true MFA&#34; for conditional access scenarios that require it.  
 
 As described above, any AD FS user who has not yet registered (configured MFA verification information) should be prompted via a customized AD FS error page to visit [https://aka.ms/mfasetup](https://aka.ms/mfasetup) to configure verification information, then re-attempt AD FS login.  
 Because Azure MFA as primary is considered a single factor, after initial configuration users will need to provide an additional factor to manage or update their verification information in Azure AD, or to access other resources that require MFA.
@@ -134,7 +134,7 @@ By default, when you configure AD FS with Azure MFA, the certificates generated 
 
 ### Assess AD FS Azure MFA certificate expiration date
 
-On each AD FS server, in the local computer My store, there will be a self signed certificate with “OU=Microsoft AD FS Azure MFA” in the Issuer and Subject.  This is the Azure MFA certificate.  Check the validity period of this certificate on each AD FS server to determine the expiration date.  
+On each AD FS server, in the local computer My store, there will be a self signed certificate with &#34;OU=Microsoft AD FS Azure MFA&#34; in the Issuer and Subject.  This is the Azure MFA certificate.  Check the validity period of this certificate on each AD FS server to determine the expiration date.  
 
 ### Create new AD FS Azure MFA Certificate on each AD FS server
 
@@ -209,6 +209,72 @@ When Azure AD as additional authentication is being attempted, the un-proofed us
 ### Catch the error and update the page text
 
 Catching the error and showing the user custom guidance is a matter of appending javascript to the end of the onload.js file that is part of the AD FS web theme to (1) search for the identifying error string(s) and (2) provide custom web content.  (For guidance in general on how to customize the onload.js file, see the article [Advanced Customization of AD FS Sign-in Pages](advanced-customization-of-ad-fs-sign-in-pages.md).)
+
+Here is a simple example, you may want to extend:
+
+1. Open Windows PowerShell on your primary AD FS server and create a new AD FS Web Theme by running the following command:
+
+``` PowerShell
+New-AdfsWebTheme –Name ProofUp –SourceName default
+```
+
+2. Next, export the default AD FS Web Theme:
+
+``` PowerShell
+Export-AdfsWebTheme –Name default –DirectoryPath c:\Theme
+```
+
+3. Open the C:\Theme\script\onload.js file in a text editor
+4. Append the following code to the end of the onload.js file
+
+``` JavaScript
+//Custom Code
+//Customize MFA exception
+//Begin
+
+var domain_hint = "<YOUR_DOMAIN_NAME_HERE>";
+var mfaSecondFactorErr = "The selected authentication method is not available for";
+var mfaProofupMessage = "You will be automatically redirected in 5 seconds to set up your account for additional security verification. Once you have completed the setup, please return to the application you are attempting to access.<br><br>If you are not redirected automatically, please click <a href='{0}'>here</a>."
+var authArea = document.getElementById("authArea");
+if (authArea) {
+    var errorMessage = document.getElementById("errorMessage");
+    if (errorMessage.innerHTML.indexOf(mfaSecondFactorErr) >= 0) {
+
+    //Hide the error message
+        var openingMessage = document.getElementById("openingMessage");
+        if (openingMessage) {
+            openingMessage.style.display = 'none'
+        }
+        var errorDetailsLink = document.getElementById("errorDetailsLink");
+        if (errorDetailsLink) {
+            errorDetailsLink.style.display = 'none'
+        }
+
+        //Provide a message and redirect to Azure AD MFA Registration Url
+        var mfaRegisterUrl = "https://account.activedirectory.windowsazure.com/proofup.aspx?proofup=1&whr=" + domain_hint;
+        errorMessage.innerHTML = "<br>" + mfaProofupMessage.replace("{0}", mfaRegisterUrl);
+        window.setTimeout(function () { window.location.href = mfaRegisterUrl; }, 5000);
+    }
+}
+
+//End Customize MFA Exception
+//End Custom Code
+Note that you need to change "<YOUR_DOMAIN_NAME_HERE>"; to use your domain name. For example
+var domain_hint = "contoso.com";
+```
+
+5. Save the onload.js file
+6. Import the onload.js file into your custom theme by typing the following Windows PowerShell command:
+
+``` PowerShell
+Set-AdfsWebTheme -TargetName ProofUp -AdditionalFileResource @{Uri=’/adfs/portal/script/onload.js’;path="c:\theme\script\onload.js"}
+```
+
+7. Finally, apply the custom AD FS Web Theme by typing the following Windows PowerShell command:
+
+``` PowerShell
+Set-AdfsWebConfig -ActiveThemeName
+```
 
 ## Next steps
 
