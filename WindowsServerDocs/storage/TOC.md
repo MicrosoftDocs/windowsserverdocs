@@ -113,6 +113,7 @@
 #### [Understand the cache](storage-spaces/understand-the-cache.md)
 #### [Fault tolerance and storage efficiency](storage-spaces/Storage-Spaces-Fault-Tolerance.md)
 #### [Drive symmetry considerations](storage-spaces/drive-symmetry-considerations.md)
+#### [Understand and monitor storage resync](storage-spaces/understand-storage-resync.md)
 #### [Cluster and pool quorum](storage-spaces/understand-quorum.md)
 #### [Cluster sets](storage-spaces/cluster-sets.md)
 ### Plan
