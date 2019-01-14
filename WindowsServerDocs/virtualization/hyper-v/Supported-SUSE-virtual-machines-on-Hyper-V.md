@@ -28,9 +28,9 @@ The built-in SUSE Linux Enterprise Service drivers for Hyper-V are certified by 
 
 * (*blank*) - Feature not available
 
-SLES12 and SLES12SP1 are 64-bit only.
+SLES12+ is 64-bit only.
 
-|**Feature**|**Windows Server operating system version**|**SLES 15**|**SLES 12 SP3**|**SLES 12 SP2**|**SLES 12 SP1**|**SLES 11 SP4**|**SLES 11 SP3**|
+|**Feature**|**Windows Server operating system version**|**SLES 15**|**SLES 12 SP3/SP4**|**SLES 12 SP2**|**SLES 12 SP1**|**SLES 11 SP4**|**SLES 11 SP3**|
 |-|-|-|-|-|-|-|-|
 |**Availability**||Built-in|Built-in|Built-in|Built-in|Built-in|Built-in|
 |**[Core](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_core)**|2019, 2016, 2012 R2, 2012, 2008 R2|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|
@@ -62,7 +62,7 @@ SLES12 and SLES12SP1 are 64-bit only.
 |Non-Maskable Interrupt|2019, 2016, 2012 R2|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|
 |File copy from host to guest|2019, 2016, 2012 R2|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;||
 |lsvmbus command|2019, 2016, 2012 R2, 2012, 2008 R2|&#10004;|&#10004;|&#10004;||||
-|Hyper-V Sockets|2019, 2016|||||||
+|Hyper-V Sockets|2019, 2016|&#10004;|&#10004;|||||
 |PCI Passthrough/DDA|2019, 2016|&#10004;|&#10004;|&#10004;|&#10004;|||
 |**[Generation 2 virtual machines](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_gen2)**||||||||
 |Boot using UEFI|2019, 2016, 2012 R2|&#10004; Note 9|&#10004; Note 9|&#10004; Note 9|&#10004; Note 9|&#10004; Note 9||
