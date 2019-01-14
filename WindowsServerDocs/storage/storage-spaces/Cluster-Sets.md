@@ -59,7 +59,7 @@ A fault domain is the grouping of software and hardware artifacts that the admin
 
 **Availability set**
 
-An availability set helps the administrator configure desired redundancy of clustered workloads across fault domains, by organizing those into an availability aet and deploying workloads into that availability set. Let’s say if you are deploying a two-tier application, we recommend that you configure at least two virtual machines in an availability set for each tier which will ensure that when one fault domain in that availability set goes down, your application will at least have one virtual machine in each tier hosted on a different fault domain of that same availability set.
+An availability set helps the administrator configure desired redundancy of clustered workloads across fault domains, by organizing those into an availability set and deploying workloads into that availability set. Let’s say if you are deploying a two-tier application, we recommend that you configure at least two virtual machines in an availability set for each tier which will ensure that when one fault domain in that availability set goes down, your application will at least have one virtual machine in each tier hosted on a different fault domain of that same availability set.
 
 ## Why use cluster sets
 
