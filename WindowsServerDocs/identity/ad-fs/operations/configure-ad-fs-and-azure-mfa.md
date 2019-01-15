@@ -208,22 +208,22 @@ When Azure AD as additional authentication is being attempted, the un-proofed us
 
 ### Catch the error and update the page text
 
-Catching the error and showing the user custom guidance is a matter of appending javascript to the end of the onload.js file that is part of the AD FS web theme to (1) search for the identifying error string(s) and (2) provide custom web content.  (For guidance in general on how to customize the onload.js file, see the article [Advanced Customization of AD FS Sign-in Pages](advanced-customization-of-ad-fs-sign-in-pages.md).)
+To catch the error and show the user custom guidance simply append the javascript to the end of the onload.js file that is part of the AD FS web theme.  This allows you to do the  following:
+ - search for the identifying error string(s)
+ - provide custom web content.  
+
+(For guidance in general on how to customize the onload.js file, see the article [Advanced Customization of AD FS Sign-in Pages](advanced-customization-of-ad-fs-sign-in-pages.md).)
 
 Here is a simple example, you may want to extend:
 
 1. Open Windows PowerShell on your primary AD FS server and create a new AD FS Web Theme by running the following command:
-
 ``` PowerShell
 New-AdfsWebTheme –Name ProofUp –SourceName default
 ```
-
 2. Next, export the default AD FS Web Theme:
-
 ``` PowerShell
 Export-AdfsWebTheme –Name default –DirectoryPath c:\Theme
 ```
-
 3. Open the C:\Theme\script\onload.js file in a text editor
 4. Append the following code to the end of the onload.js file
 
