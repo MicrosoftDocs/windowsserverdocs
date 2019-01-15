@@ -8,7 +8,6 @@ manager: mtillman
 ms.date: 01/15/2019
 ms.topic: article
 ms.prod: windows-server-threshold
-
 ms.technology: identity-adfs
 ---
 # Configure AD FS 2016 and Azure MFA
