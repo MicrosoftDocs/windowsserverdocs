@@ -8,9 +8,9 @@ ms.technology: storage-spaces
 ms.topic: article
 author: adagashe
 ms.date: 01/14/2019
-ms.localizationpriority: 
+ms.localizationpriority: medium
 ---
-# Understand and see storage resync
+# Understand and monitor storage resync
 
 >Applies to: Windows Server 2019
 
@@ -46,7 +46,7 @@ So, this explains how data gets out of sync. But what does this look like at a h
 
 ![Gif of admin view of resync"](media/understand-storage-resync/admin.gif)
 
-## How to see storage resync in Windows Server 2019
+## How to monitor storage resync in Windows Server 2019
 
 Now that you understand how storage resync works, let's look at how this shows up in Windows Server 2019. We have added a new fault to the [Health Service](../../failover-clustering/health-service-overview.md) that will show up when your storage is resyncing.
 
