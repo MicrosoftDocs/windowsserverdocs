@@ -216,64 +216,61 @@ To catch the error and show the user custom guidance simply append the javascrip
 
 Here is a simple example, you may want to extend:
 
-1. Open Windows PowerShell on your primary AD FS server and create a new AD FS Web Theme by running the following command:</br>
-
-``` PowerShell
-New-AdfsWebTheme –Name ProofUp –SourceName default
-``` 
+1. Open Windows PowerShell on your primary AD FS server and create a new AD FS Web Theme by running the following command:
+    ``` PowerShell
+        New-AdfsWebTheme –Name ProofUp –SourceName default
+    ``` 
 2. Next, export the default AD FS Web Theme:
 
-``` PowerShell
-Export-AdfsWebTheme –Name default –DirectoryPath c:\Theme
-```
+    ``` PowerShell
+       Export-AdfsWebTheme –Name default –DirectoryPath c:\Theme
+    ```
 3. Open the C:\Theme\script\onload.js file in a text editor
 4. Append the following code to the end of the onload.js file
-``` JavaScript
-//Custom Code
-//Customize MFA exception
-//Begin
+    ``` JavaScript
+    //Custom Code
+    //Customize MFA exception
+    //Begin
 
-var domain_hint = "<YOUR_DOMAIN_NAME_HERE>";
-var mfaSecondFactorErr = "The selected authentication method is not available for";
-var mfaProofupMessage = "You will be automatically redirected in 5 seconds to set up your account for additional security verification. Once you have completed the setup, please return to the application you are attempting to access.<br><br>If you are not redirected automatically, please click <a href='{0}'>here</a>."
-var authArea = document.getElementById("authArea");
-if (authArea) {
-    var errorMessage = document.getElementById("errorMessage");
-    if (errorMessage.innerHTML.indexOf(mfaSecondFactorErr) >= 0) {
+    var domain_hint = "<YOUR_DOMAIN_NAME_HERE>";
+    var mfaSecondFactorErr = "The selected authentication method is not available for";
+    var mfaProofupMessage = "You will be automatically redirected in 5 seconds to set up your account for additional security verification. Once you have completed the setup, please return to the application you are attempting to access.<br><br>If you are not redirected automatically, please click <a href='{0}'>here</a>."
+    var authArea = document.getElementById("authArea");
+    if (authArea) {
+        var errorMessage = document.getElementById("errorMessage");
+        if (errorMessage.innerHTML.indexOf(mfaSecondFactorErr) >= 0) {
 
-    //Hide the error message
-        var openingMessage = document.getElementById("openingMessage");
-        if (openingMessage) {
-            openingMessage.style.display = 'none'
+        //Hide the error message
+            var openingMessage = document.getElementById("openingMessage");
+            if (openingMessage) {
+                openingMessage.style.display = 'none'
+            }
+            var errorDetailsLink = document.getElementById("errorDetailsLink");
+            if (errorDetailsLink) {
+                errorDetailsLink.style.display = 'none'
+            }
+
+            //Provide a message and redirect to Azure AD MFA Registration Url
+            var mfaRegisterUrl = "https://account.activedirectory.windowsazure.com/proofup.aspx?proofup=1&whr=" + domain_hint;
+            errorMessage.innerHTML = "<br>" + mfaProofupMessage.replace("{0}", mfaRegisterUrl);
+            window.setTimeout(function () { window.location.href = mfaRegisterUrl; }, 5000);
         }
-        var errorDetailsLink = document.getElementById("errorDetailsLink");
-        if (errorDetailsLink) {
-            errorDetailsLink.style.display = 'none'
-        }
-
-        //Provide a message and redirect to Azure AD MFA Registration Url
-        var mfaRegisterUrl = "https://account.activedirectory.windowsazure.com/proofup.aspx?proofup=1&whr=" + domain_hint;
-        errorMessage.innerHTML = "<br>" + mfaProofupMessage.replace("{0}", mfaRegisterUrl);
-        window.setTimeout(function () { window.location.href = mfaRegisterUrl; }, 5000);
     }
-}
 
-//End Customize MFA Exception
-//End Custom Code
-Note that you need to change "<YOUR_DOMAIN_NAME_HERE>"; to use your domain name. For example
-var domain_hint = "contoso.com";
-```
+    //End Customize MFA Exception
+    //End Custom Code
+    Note that you need to change "<YOUR_DOMAIN_NAME_HERE>"; to use your domain name. For example
+    var domain_hint = "contoso.com";
+    ```
 5. Save the onload.js file
 6. Import the onload.js file into your custom theme by typing the following Windows PowerShell command:
-
-``` PowerShell
-Set-AdfsWebTheme -TargetName ProofUp -AdditionalFileResource @{Uri=’/adfs/portal/script/onload.js’;path="c:\theme\script\onload.js"}
-```
+    ``` PowerShell
+    Set-AdfsWebTheme -TargetName ProofUp -AdditionalFileResource @{Uri=’/adfs/portal/script/onload.js’;path="c:\theme\script\onload.js"}
+    ```
 7. Finally, apply the custom AD FS Web Theme by typing the following Windows PowerShell command:
-
-``` PowerShell
-Set-AdfsWebConfig -ActiveThemeName
-```
+    ``` PowerShell
+    Set-AdfsWebConfig -ActiveThemeName
+    ```
 
 ## Next steps
 
