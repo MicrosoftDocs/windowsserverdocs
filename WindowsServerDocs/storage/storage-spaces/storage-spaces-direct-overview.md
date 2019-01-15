@@ -6,7 +6,7 @@ ms.manager: dongill
 ms.technology: storage-spaces
 ms.topic: article
 author: cosmosdarwin
-ms.date: 11/06/2018
+ms.date: 01/14/2019
 ms.assetid: 8bd0d09a-0421-40a4-b752-40ecb5350ffd
 description: An overview of Storage Spaces Direct, a feature of Windows Server that enables you to cluster servers with internal storage into a software-defined storage solution.
 ms.localizationpriority: medium
@@ -30,6 +30,7 @@ For other applications of Storage Spaces, such as Shared SAS clusters and stand-
 			  <li><a href="understand-the-cache.md">Understand the cache</a></li>
 			  <li><a href="storage-spaces-fault-tolerance.md">Fault tolerance and storage efficiency</a></li>
               <li><a href="drive-symmetry-considerations.md">Drive symmetry considerations</a></li>
+              <li><a href="understand-storage-resync.md">Understand and monitor storage resync</a></li>
               <li><a href="understand-quorum.md">Understanding cluster and pool quorum</a></li>
               <li><a href="cluster-sets.md">Cluster sets</a></li>
 		  	</ul>
