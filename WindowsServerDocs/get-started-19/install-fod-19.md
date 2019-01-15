@@ -51,7 +51,7 @@ Operating system components that are available as part of the Server Core App Co
 
 -   Windows PowerShell (Powershell_ISE.exe)
 
--   Disk Manager (Diskmgmt.msc)
+-   Disk Management (Diskmgmt.msc)
 
 -   Failover Cluster Manager (CluAdmin.msc)
 
