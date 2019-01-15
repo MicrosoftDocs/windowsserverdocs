@@ -217,6 +217,7 @@ To catch the error and show the user custom guidance simply append the javascrip
 Here is a simple example, you may want to extend:
 
 1. Open Windows PowerShell on your primary AD FS server and create a new AD FS Web Theme by running the following command:
+    
     ``` PowerShell
         New-AdfsWebTheme –Name ProofUp –SourceName default
     ``` 
@@ -227,6 +228,7 @@ Here is a simple example, you may want to extend:
     ```
 3. Open the C:\Theme\script\onload.js file in a text editor
 4. Append the following code to the end of the onload.js file
+    
     ``` JavaScript
     //Custom Code
     //Customize MFA exception
@@ -264,10 +266,12 @@ Here is a simple example, you may want to extend:
     ```
 5. Save the onload.js file
 6. Import the onload.js file into your custom theme by typing the following Windows PowerShell command:
+    
     ``` PowerShell
     Set-AdfsWebTheme -TargetName ProofUp -AdditionalFileResource @{Uri=’/adfs/portal/script/onload.js’;path="c:\theme\script\onload.js"}
     ```
 7. Finally, apply the custom AD FS Web Theme by typing the following Windows PowerShell command:
+    
     ``` PowerShell
     Set-AdfsWebConfig -ActiveThemeName
     ```
