@@ -315,7 +315,7 @@ You can use this script on the Windows 10 desktop or in System Center Configurat
 
 ### Define key VPN profile parameters
 
-    $Script = '$ProfileName = ''' + $ProfileName + '''
+    $Script = '$ProfileName = ''' + $ProfileName + ''''
     $ProfileNameEscaped = $ProfileName -replace '' '', ''%20''
 
 ## Define VPN ProfileXML
