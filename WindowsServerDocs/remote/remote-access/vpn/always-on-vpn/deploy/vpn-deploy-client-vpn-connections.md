@@ -316,7 +316,7 @@ You can use this script on the Windows 10 desktop or in System Center Configurat
 ### Define key VPN profile parameters
 
     $Script = '$ProfileName = ''' + $ProfileName + '''
-    $ProfileNameEscaped = $ProfileName -replace '' '', ''%20''
+    $ProfileNameEscaped = $ProfileName -replace ' ', '%20'
 
 ## Define VPN ProfileXML
 
@@ -324,15 +324,15 @@ You can use this script on the Windows 10 desktop or in System Center Configurat
     
 ### Escape special characters in the profile
 
-    $ProfileXML = $ProfileXML -replace ''<'', ''&lt;''
-    $ProfileXML = $ProfileXML -replace ''>'', ''&gt;''
-    $ProfileXML = $ProfileXML -replace ''"'', ''&quot;''
+    $ProfileXML = $ProfileXML -replace '<', '&lt;'
+    $ProfileXML = $ProfileXML -replace '>', '&gt;'
+    $ProfileXML = $ProfileXML -replace '"', '&quot;'
     
 ### Define WMI-to-CSP Bridge properties
 
-    $nodeCSPURI = ''./Vendor/MSFT/VPNv2''
-    $namespaceName = ''root\cimv2\mdm\dmmap''
-    $className = ''MDM_VPNv2_01''
+    $nodeCSPURI = "./Vendor/MSFT/VPNv2"
+    $namespaceName = "root\cimv2\mdm\dmmap"
+    $className = "MDM_VPNv2_01"
 
 ### Determine user SID for VPN profile:
 
@@ -357,8 +357,8 @@ You can use this script on the Windows 10 desktop or in System Center Configurat
 
     $session = New-CimSession
     $options = New-Object Microsoft.Management.Infrastructure.Options.CimOperationOptions
-    $options.SetCustomOption(''PolicyPlatformContext_PrincipalContext_Type'', ''PolicyPlatform_UserContext'', $false)
-    $options.SetCustomOption(''PolicyPlatformContext_PrincipalContext_Id'', "$SidValue", $false)
+    $options.SetCustomOption("PolicyPlatformContext_PrincipalContext_Type", "PolicyPlatform_UserContext", $false)
+    $options.SetCustomOption("PolicyPlatformContext_PrincipalContext_Id", "$SidValue", $false)
 
 
 ### Detect and delete previous VPN profile:
@@ -393,11 +393,11 @@ You can use this script on the Windows 10 desktop or in System Center Configurat
     try
     {
     	$newInstance = New-Object Microsoft.Management.Infrastructure.CimInstance $className, $namespaceName
-    	$property = [Microsoft.Management.Infrastructure.CimProperty]::Create("ParentID", "$nodeCSPURI", ''String'', ''Key'')
+    	$property = [Microsoft.Management.Infrastructure.CimProperty]::Create("ParentID", "$nodeCSPURI", "String", "Key")
     	$newInstance.CimInstanceProperties.Add($property)
-    	$property = [Microsoft.Management.Infrastructure.CimProperty]::Create("InstanceID", "$ProfileNameEscaped", ''String'', ''Key'')
+    	$property = [Microsoft.Management.Infrastructure.CimProperty]::Create("InstanceID", "$ProfileNameEscaped", "String", "Key")
     	$newInstance.CimInstanceProperties.Add($property)
-    	$property = [Microsoft.Management.Infrastructure.CimProperty]::Create("ProfileXML", "$ProfileXML", ''String'', ''Property'')
+    	$property = [Microsoft.Management.Infrastructure.CimProperty]::Create("ProfileXML", "$ProfileXML", "String", "Property")
     	$newInstance.CimInstanceProperties.Add($property)
     	$session.CreateInstance($namespaceName, $newInstance, $options)
     	$Message = "Created $ProfileName profile."
@@ -483,17 +483,17 @@ The following example script includes all of the code examples from previous sec
     $ProfileXML | Out-File -FilePath ($env:USERPROFILE + '\desktop\VPN_Profile.xml')
     
     $Script = '$ProfileName = ''' + $ProfileName + '''
-    $ProfileNameEscaped = $ProfileName -replace '' '', ''%20''
+    $ProfileNameEscaped = $ProfileName -replace ' ', '%20'
     
     $ProfileXML = ''' + $ProfileXML + '''
     
-    $ProfileXML = $ProfileXML -replace ''<'', ''&lt;''
-    $ProfileXML = $ProfileXML -replace ''>'', ''&gt;''
-    $ProfileXML = $ProfileXML -replace ''"'', ''&quot;''
+    $ProfileXML = $ProfileXML -replace '<', '&lt;'
+    $ProfileXML = $ProfileXML -replace '>', '&gt;'
+    $ProfileXML = $ProfileXML -replace '"', '&quot;'
     
-    $nodeCSPURI = ''./Vendor/MSFT/VPNv2''
-    $namespaceName = ''root\cimv2\mdm\dmmap''
-    $className = ''MDM_VPNv2_01''
+    $nodeCSPURI = "./Vendor/MSFT/VPNv2"
+    $namespaceName = "root\cimv2\mdm\dmmap"
+    $className = "MDM_VPNv2_01"
     
     try
     {
@@ -513,8 +513,8 @@ The following example script includes all of the code examples from previous sec
     
     $session = New-CimSession
     $options = New-Object Microsoft.Management.Infrastructure.Options.CimOperationOptions
-    $options.SetCustomOption(''PolicyPlatformContext_PrincipalContext_Type'', ''PolicyPlatform_UserContext'', $false)
-    $options.SetCustomOption(''PolicyPlatformContext_PrincipalContext_Id'', "$SidValue", $false)
+    $options.SetCustomOption("PolicyPlatformContext_PrincipalContext_Type", "PolicyPlatform_UserContext", $false)
+    $options.SetCustomOption("PolicyPlatformContext_PrincipalContext_Id", "$SidValue", $false)
     
         try
     {
@@ -543,11 +543,11 @@ The following example script includes all of the code examples from previous sec
     try
     {
     	$newInstance = New-Object Microsoft.Management.Infrastructure.CimInstance $className, $namespaceName
-    	$property = [Microsoft.Management.Infrastructure.CimProperty]::Create("ParentID", "$nodeCSPURI", ''String'', ''Key'')
+    	$property = [Microsoft.Management.Infrastructure.CimProperty]::Create("ParentID", "$nodeCSPURI", "String", "Key")
     	$newInstance.CimInstanceProperties.Add($property)
-    	$property = [Microsoft.Management.Infrastructure.CimProperty]::Create("InstanceID", "$ProfileNameEscaped", ''String'', ''Key'')
+    	$property = [Microsoft.Management.Infrastructure.CimProperty]::Create("InstanceID", "$ProfileNameEscaped", "String", "Key")
     	$newInstance.CimInstanceProperties.Add($property)
-    	$property = [Microsoft.Management.Infrastructure.CimProperty]::Create("ProfileXML", "$ProfileXML", ''String'', ''Property'')
+    	$property = [Microsoft.Management.Infrastructure.CimProperty]::Create("ProfileXML", "$ProfileXML", "String", "Property")
     	$newInstance.CimInstanceProperties.Add($property)
     	$session.CreateInstance($namespaceName, $newInstance, $options)
     	$Message = "Created $ProfileName profile."
