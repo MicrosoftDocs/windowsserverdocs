@@ -54,19 +54,19 @@ The steps for creating a file share witness using a USB device on this particula
 
 1. Log into the router with the USB device plugged in.
 
-![NetGear Interface](media\File-Share-Witness\FSW2.png)
+   ![NetGear Interface](media\File-Share-Witness\FSW2.png)
 
 2. From the list of options, select ReadySHARE which is where shares can be created.
 
-![NetGear ReadySHARE](media\File-Share-Witness\FSW3.png)
+   ![NetGear ReadySHARE](media\File-Share-Witness\FSW3.png)
 
 3. For a file share witness, a basic share is all that is needed.  Selecting the Edit button will pop up a dialog where the share can be created on the USB device.
 
-![NetGear Share Interface](media\File-Share-Witness\FSW4.png)
+   ![NetGear Share Interface](media\File-Share-Witness\FSW4.png)
 
 4. Once selecting the Apply button, the share is created and can be seen in the list.
 
-![NetGear Shares](media\File-Share-Witness\FSW5.png)
+   ![NetGear Shares](media\File-Share-Witness\FSW5.png)
 
 5. Once the share has been created, creating the file share witness for Cluster is done with PowerShell.
 
