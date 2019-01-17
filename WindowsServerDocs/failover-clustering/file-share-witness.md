@@ -5,7 +5,7 @@ ms.manager: eldenc
 ms.technology: failover-clustering
 ms.topic: article
 author: johnmarlin-msft
-ms.date: 01/11/2019
+ms.date: 01/17/2019
 description: This article describes the new file share witness feature in Windows Server 2019
 ms.localizationpriority: medium
 ---
@@ -27,14 +27,14 @@ In Windows 2016 and below, to use a file share witness, the Failover Cluster nod
 
 - No or extremely poor Internet access because of a remote location, so cannot use a Cloud Witness
 - No shared drives for a disk witness. This could be a Storage Spaces Direct hyper-converged configuration, SQL Server Always On Availability Groups (AG), Exchange Database Availability Group (DAG), etc.  All of which do not utilize shared disks
-- A domain controller connection is not available as the Cluster has been dropped behind a DMZ
-- A workgroup or cross-domain cluster where there is no active directory CNO object
+- A domain controller connection is not available as the cluster has been dropped behind a DMZ
+- A workgroup or cross-domain cluster where there is no Active Directory CNO object
 
-## What's New
+## What's new in Windows Server 2019
 
 In Windows Server 2019, the Kerberos requirement has been removed when using PowerShell to create the witness resource type.  With **Set-ClusterQuorum**, a new switch of **-Credential** has been added so that a local non-administrative account on the server can be used.  When creating a file share witness through Cluster Manager, it will still use kerberos.
 
-With this new **-Credential** switch, the edge scenarios previously can now use a file share witness.  Devices other than just Windows Servers can house the file share witness, such as:
+With this new **-Credential** switch, the edge scenarios previously can now use a file share witness.  Devices other than just Windows servers can house the file share witness, such as:
 
 1.	NAS appliances
 2.	Non-domain joined Windows machines
@@ -50,30 +50,30 @@ At [Microsoft Ignite 2018](https://azure.microsoft.com/en-us/ignite/), [DataOn S
 
 The steps for creating a file share witness using a USB device on this particular router are listed below.  Please note that steps on other routers and NAS appliances will vary and should be accomplished using the vendor supplied directions.
 
-## Steps for creating
+## Creating a file share witness on a router with a USB device
 
-Step 1: Log into the router with the USB device plugged in.
+1. Log into the router with the USB device plugged in.
 
 ![NetGear Interface](media\File-Share-Witness\FSW2.png)
 
-Step 2: From the list of options, select ReadySHARE which is where shares can be created.
+2. From the list of options, select ReadySHARE which is where shares can be created.
 
 ![NetGear ReadySHARE](media\File-Share-Witness\FSW3.png)
 
-Step 3: For a file share witness, a basic share is all that is needed.  Selecting the Edit button will pop up a dialog where the share can be created on the USB device.
+3. For a file share witness, a basic share is all that is needed.  Selecting the Edit button will pop up a dialog where the share can be created on the USB device.
 
 ![NetGear Share Interface](media\File-Share-Witness\FSW4.png)
 
-Step 4: Once selecting the Apply button, the share is created and can be seen in the list.
+4. Once selecting the Apply button, the share is created and can be seen in the list.
 
 ![NetGear Shares](media\File-Share-Witness\FSW5.png)
 
-Step 5: Once the share has been created, creating the file share witness for Cluster is done with PowerShell.
+5. Once the share has been created, creating the file share witness for Cluster is done with PowerShell.
 
-    ```PowerShell
-    Set-ClusterQuorum -FileShareWitness \\readyshare\Witness -Credential ($Get-Credential)
-    ```
+   ```PowerShell
+   Set-ClusterQuorum -FileShareWitness \\readyshare\Witness -Credential ($Get-Credential)
+   ```
 
-This will popup a dialog box to enter the credentials for the account to log onto the share.
+   This displays a dialog box to enter the credentials for the account to log onto the share.
 
 These same similar steps can be done on other routers with USB capabilities, NAS devices, or other Windows devices.
