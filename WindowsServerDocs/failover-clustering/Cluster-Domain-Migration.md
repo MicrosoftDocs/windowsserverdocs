@@ -27,7 +27,8 @@ There are several scenarios where migrating a cluster from one doamin to another
 
 Microsoft doesn't provide support to administrators who try to move resources from one domain to another if the underlying application operation is unsupported. For example, Microsoft doesn't provide support to administrators who try to move a Microsoft Exchange server from one domain to another.
 
-Warning:  We recommend that you perform a full backup of all data on all shared hard disks on each server in the cluster before you move the cluster.
+   > [!WARNING]
+   > We recommend that you perform a full backup of all shared storage in the cluster before you move the cluster.
 
 ## Windows Server 2016 and earlier
 
