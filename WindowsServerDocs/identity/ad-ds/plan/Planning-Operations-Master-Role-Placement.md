@@ -82,3 +82,7 @@ Although this configuration results in successful replication between all of the
 For a worksheet to assist you in planning operations master role placement, see [Job Aids for Windows Server 2003 Deployment Kit](https://go.microsoft.com/fwlink/?LinkID=102558), download Job_Aids_Designing_and_Deploying_Directory_and_Security_Services.zip, and open Domain Controller Placement (DSSTOPO_4.doc).  
   
 You will need to refer to this information when you create the forest root domain and regional domains. For more information about deploying the forest root domain, see Deploying a [Deploying a Windows Server 2008 Forest Root Domain](https://technet.microsoft.com/library/cc731174.aspx). For more information about deploying regional domains, see [Deploying Windows Server 2008 Regional Domains](https://technet.microsoft.com/library/cc755118.aspx).  
+
+## Next steps
+
+Additional information about FSMO role placement can be found in the support topic [FSMO placement and optimization on Active Directory domain controllers](https://support.microsoft.com/help/223346)
