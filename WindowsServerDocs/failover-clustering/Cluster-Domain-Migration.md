@@ -5,14 +5,13 @@ ms.manager: eldenc
 ms.technology: failover-clustering
 ms.topic: article
 author: johnmarlin-msft
-ms.date: 01/11/2019
+ms.date: 01/18/2019
 description: This article describes moving a Windows Server 2019 Cluster from one domain to another
 ms.localizationpriority: medium
 ---
+# Failover Cluster domain migration
 
-# Failover Cluster Domain Migration
-
-> Applies To: Windows Server 2016, Windows Server 2019
+> Applies To: Windows Server 2019, Windows Server 2016
 
 This topic provides an overview for moving Windows Server failover clusters from one domain to another.
 
@@ -26,13 +25,13 @@ There are several scenarios where migrating a cluster from one doamin to another
 - Cluster was built as a domain cluster and now needs to be part of a workgroup
 - Cluster is being moved to one area of the company to another and is a different subdomain
 
-Microsoft does not provide support to administrators who try to move resources from one domain to another if the underlying application operation is unsupported. For example, Microsoft does not provide support to administrators who try to move a Microsoft Exchange server from one domain to another.
+Microsoft doesn't provide support to administrators who try to move resources from one domain to another if the underlying application operation is unsupported. For example, Microsoft doesn't provide support to administrators who try to move a Microsoft Exchange server from one domain to another.
 
-Warning:  We recommend that you perform a full backup of all data on all shared hard disks on each node in the cluster before you move the cluster.
+Warning:  We recommend that you perform a full backup of all data on all shared hard disks on each server in the cluster before you move the cluster.
 
-## Windows Server 2016 and below
+## Windows Server 2016 and earlier
 
-In previous versions of Failover Clustering, the Cluster Service did not have the capability of moving from one domain to another.  This was due to the increased dependence on Active Directory Domain Services and the virtual names created.   
+In Windows Server 2016 and earlier, the Cluster service didn't have the capability of moving from one domain to another.  This was due to the increased dependence on Active Directory Domain Services and the virtual names created.   
 
 ## Options
 
@@ -42,7 +41,7 @@ The first option involves destroying the cluster and rebuilding it in the new do
 
 ![Destroy and Rebuild](media\Cross-Domain-Cluster-Migration\Cross-Cluster-Domain-Migration-1.gif)
 
-The second option is less destructive but requires additional hardware as a new cluster would need to be built in the new domain.  Once the cluster is in the new domain, Cluster Migration Wizard can be run to migrate the resources.  Please note that this does not migrate data which would need to be done through other methods.
+The second option is less destructive but requires additional hardware as a new cluster would need to be built in the new domain.  Once the cluster is in the new domain, run the Cluster Migration Wizard to migrate the resources. Note that this doesn't migrate data - you'll need to use another tool to migrate data, such as [Storage Migration Service](../storage/storage-migration-service/overview.md)(once cluster support is added).
 
 ![Build and Migrate](media\Cross-Domain-Cluster-Migration\Cross-Cluster-Domain-Migration-2.gif)
 
@@ -54,71 +53,72 @@ In Windows Server 2019, we introduced cross cluster domain migration capabilitie
 
 Moving a cluster from one domain is a straight-forward process. To accomplish this, there are two new PowerShell commandlets.
 
-    **New-ClusterNameAccount** – creates a Cluster Name Account in Active Directory
-    **Remove-ClusterNameAccount** – removes the Cluster Name Accounts from Active Directory
+**New-ClusterNameAccount** – creates a Cluster Name Account in Active Directory
+**Remove-ClusterNameAccount** – removes the Cluster Name Accounts from Active Directory
 
 The process to accomplish this is to change the cluster from one domain to a workgroup and back to the new domain.  The need to destroy a cluster, rebuild a cluster, install applications, etc is not a requirement. For example, it would look like this:
 
 ![Migrate](media\Cross-Domain-Cluster-Migration\Cross-Cluster-Domain-Migration-3.gif)
 
-## Steps for Migrating
+## Migrating a cluster to a new domain
 
-In the following steps, a cluster is being moved from the Contoso.com domain to the new Fabrikam.com domain.  The Cluster Name is CLUSCLUS and with a file server role called FS-CLUSCLUS.
+In the following steps, a cluster is being moved from the Contoso.com domain to the new Fabrikam.com domain.  The cluster name is *CLUSCLUS* and with a file server role called *FS-CLUSCLUS*.
 
-Step 1:
-Create a local Administrator account with the same name and password on all nodes.  This may be needed to log in while the nodes are moving between domains.
+1. Create a local Administrator account with the same name and password on all servers in the cluster.  This may be needed to log in while the servers are moving between domains.
+2. Sign in to the first server with a domain user or administrator account that has Active Directory permissions to the Cluster Name Object (CNO), Virtual Computer Objects (VCO), has access to the Cluster, and open PowerShell.
+3. Ensure all Cluster Network Name resources are in an Offline state and run the below command.  This command will remove the Active Directory objects that the cluster may have.
 
-Step 2:
-Log on to the first node with a domain user or administrator account that has Active Directory permissions to the Cluster Name Object (CNO), Virtual Computer Objects (VCO), has access to the Cluster, and open PowerShell.
+   ```PowerShell
+   Remove-ClusterNameAccount -Cluster CLUSCLUS -DeleteComputerObjects
+   ```
+4. Use Active Directory Users and Computers to ensure the CNO and VCO computer objects associated with all clustered names have been removed.
 
-Step 3:
-Ensure all Cluster Network Name resources are in an Offline state and run the below command.  This command will remove the Active Directory objects that the cluster may have.
+   > [!NOTE]
+   > It's a good idea to stop the Cluster service on all servers in the cluster and set the service startup type to Manual so that the Cluster service doesn't start when the servers are restarting while changing domains.
 
-    Remove-ClusterNameAccount -Cluster CLUSCLUS -DeleteComputerObjects
+   ```PowerShell
+   Stop-Service -Name ClusSvc
 
-Step 4:
-Use Active Directory Users and Computers to ensure the CNO and VCO computer objects associated with all clustered names have been removed.
+   Set-Service -Name ClusSvc -StartupType Manual
+   ```
 
-Note:
-It is a good idea to go ahead and stop the Cluster Service on both nodes and set the service to MANUAL so that it does not start during reboots of the domain changes.
+5. Change the servers' domain membership to a workgroup, restart the servers, join the servers to the new domain, and restart again.
+6. Once the servers are in the new domain, sign in to a server with a domain user or administrator account that has Active Directory permissions to create objects, has access to the Cluster, and open PowerShell. Start the Cluster Service, and set it back to Automatic.
 
-    Stop-Service -Name ClusSvc
+   ```PowerShell
+   Start-Service -Name ClusSvc
 
-    Set-Service -Name ClusSvc -StartupType Manual
+   Set-Service -Name ClusSvc -StartupType Automatic
+   ```
+7. Bring the Cluster Name and all other cluster Network Name resources to an Online state.
 
-Step 5:
-Change the nodes domain membership to a workgroup, reboot, join the nodes to the new domain, and reboot again.
+   ```PowerShell
+   Start-ClusterResource -Name "Cluster Name"
 
-Step 6:
-Once the nodes are in the new domain, log on to a node with a domain user or administrator account that has Active Directory permissions to create objects, has access to the Cluster, and open PowerShell. Start the Cluster Service, and set it back to Automatic.
+   Start-ClusterResource -Name FS-CLUSCLUS
+   ```
 
-    Start-Service -Name ClusSvc
+8. Change the cluster to be a part of the new domain with associated active directory objects. To do this, the command is below and the network name resources must be in an online state.  What this command will do is recreate the name objects in Active Directory.
 
-    Set-Service -Name ClusSvc -StartupType Automatic
-
-Step 7:
-Bring the Cluster Name and all other cluster Network Name resources to an Online state.
-
-    Start-ClusterResource -Name "Cluster Name"
-
-    Start-ClusterResource -Name FS-CLUSCLUS
-
-Step 8:
-Change the cluster to be a part of the new domain with associated active directory objects. To do this, the command is below and the network name resources must be in an online state.  What this command will do is recreate the name objects in Active Directory.
-
-    New-ClusterNameAccount -Name CLUSTERNAME -Domain NEWDOMAINNAME.com -UpgradeVCOs
+   ```PowerShell
+   New-ClusterNameAccount -Name CLUSTERNAME -Domain NEWDOMAINNAME.com -UpgradeVCOs
+   ```
 
     NOTE: If you do not have any additional groups with network names (i.e. a Hyper-V Cluster with only virtual machines), the -UpgradeVCOs parameter switch is not needed.
 
-Step 9:
-Use Active Directory Users and Computers to check the new domain and ensure the associated computer objects were created. If they have, then bring the remaining resources in the groups online.
+9. Use Active Directory Users and Computers to check the new domain and ensure the associated computer objects were created. If they have, then bring the remaining resources in the groups online.
 
-    Start-ClusterGroup -Name "Cluster Group"
+   ```PowerShell
+   Start-ClusterGroup -Name "Cluster Group"
 
-    Start-ClusterGroup -Name FS-CLUSCLUS
+   Start-ClusterGroup -Name FS-CLUSCLUS
+   ```
 
-## Known Error
+## Known issues
 
-If you are using the new USB Witness feature, you will be unable to add the cluster to the new domain.  The reasoning is that the file share witness type must utilize Kerberos for authentication.  Change the witness to none before adding the cluster to the domain.  Once it is completed, recreate the USB witness.  The error you will see is:
+If you are using the new USB witness feature, you will be unable to add the cluster to the new domain.  The reasoning is that the file share witness type must utilize Kerberos for authentication.  Change the witness to none before adding the cluster to the domain.  Once it is completed, recreate the USB witness.  The error you will see is:
 
-    New-ClusternameAccount : Cluster name account cannot be created.  This cluster contains a file share witness with invalid permissions for a cluster of type AdministrativeAccesssPoint ActiveDirectoryAndDns. To proceed, delete the file share witness.  After this you can create the cluster name account and recreate the file share witness.  The new file share witness will be automatically created with valid permissions.
+```
+New-ClusternameAccount : Cluster name account cannot be created.  This cluster contains a file share witness with invalid permissions for a cluster of type AdministrativeAccesssPoint ActiveDirectoryAndDns. To proceed, delete the file share witness.  After this you can create the cluster name account and recreate the file share witness.  The new file share witness will be automatically created with valid permissions.
+```
+
