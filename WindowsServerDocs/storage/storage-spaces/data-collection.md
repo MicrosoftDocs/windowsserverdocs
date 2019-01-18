@@ -115,15 +115,15 @@ Get-SddcDiagnosticInfo -ClusterName S2D-Cluster -WriteToPath d:\SDDCDiagTemp
 ```
 As you can see, script will also do validation of current cluster state
 
-![data collection powershell screenshot](/media/data-collection/CollectData.png)
+![data collection powershell screenshot](media/data-collection/CollectData.png)
 
 As you can see, all data are being written to SDDCDiagTemp folder
 
-![data in file explorer screenshot](/media/data-collection/CollectDataFolder.png)
+![data in file explorer screenshot](media/data-collection/CollectDataFolder.png)
 
 After script will finish, it will create ZIP in your users directory
 
-![data zip in powershell screenshot](/media/data-collection/CollectDataResult.png)
+![data zip in powershell screenshot](media/data-collection/CollectDataResult.png)
 
 Let's generate a report into a text file
 
@@ -141,6 +141,15 @@ Let's generate a report into a text file
 ```
 
 For reference, here is a link to the [sample report](https://github.com/Microsoft/WSLab/blob/dev/Scenarios/S2D%20Tools/Get-SDDCDiagnosticInfo/SDDCReport.txt) and [sample zip](https://github.com/Microsoft/WSLab/blob/dev/Scenarios/S2D%20Tools/Get-SDDCDiagnosticInfo/HealthTest-S2D-Cluster-20180522-1546.ZIP).
+
+To view this in Windows Admin Center (version 1812 onwards), navigate to the *Diagnostics* tab. As you see in the screenshot below, you can 
+
+- Install diagnostic tools
+- Update them (if they are out-of-date), 
+- Schedule daily diagnostic runs (these have a low impact on your system, usually take <5 minutes in the background, and won't take up more than 500mb on your cluster)
+- View previously collected diagnostic information if you need to give it to support or analyze it yourself.
+
+![wac diagnostics screenshot](media/data-collection/Wac.png)
 
 ## Get-SDDCDiagnosticInfo output
 
