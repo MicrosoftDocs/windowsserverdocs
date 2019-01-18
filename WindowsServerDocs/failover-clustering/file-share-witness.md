@@ -1,21 +1,21 @@
 ---
-title: File share witness in Windows Server 2019
+title: USB File Share Witness in Windows Server 2019
 ms.prod: windows-server-threshold
 ms.manager: eldenc
 ms.technology: failover-clustering
 ms.topic: article
 author: johnmarlin-msft
 ms.date: 01/17/2019
-description: This article describes the new file share witness feature in Windows Server 2019
+description: This article describes the new USB File Share Witness feature in Windows Server 2019
 ms.localizationpriority: medium
 ---
-# File share witness
+# File Share Witness
 
 > Applies To: Windows Server 2019
 
 A file share witness is an SMB share that Failover Cluster will connect to and utilize as a vote in the cluster. This topic provides an overview for the new feature set included with Windows Server 2019.
 
-The recommendations for using a file share witness are:
+The recommendations for using a file share witness have been:
 
 - SMB file share on a Windows server
 - Must have a minimum of 5 megabytes of free space
@@ -23,16 +23,18 @@ The recommendations for using a file share witness are:
 - The Cluster Name Object (CNO) must have write permissions on the share
 - For high availability, the file share can be located on a separate Failover Cluster
 
-In Windows 2016 and below, to use a file share witness, the Failover Cluster nodes and the file share witness server needed to be domain joined and part of the same forest.  This is due to the use of Kerberos for authentication to the share.  There are some scenarios at the edge where a file share witness cannot be used:
+There are some scenarios at the edge where the file share witness is needed.  
 
-- No or extremely poor Internet access because of a remote location, so cannot use a Cloud Witness
-- No shared drives for a disk witness. This could be a Storage Spaces Direct hyper-converged configuration, SQL Server Always On Availability Groups (AG), Exchange Database Availability Group (DAG), etc.  All of which do not utilize shared disks
-- A domain controller connection is not available as the cluster has been dropped behind a DMZ
-- A workgroup or cross-domain cluster where there is no Active Directory CNO object
+- A Cloud Witness cannot be used if there is no or extremely poor Internet access because of a remote location
+- No shared drives are avaialble for a disk witness. This could be a Storage Spaces Direct hyper-converged configuration, SQL Server Always On Availability Groups (AG), Exchange Database Availability Group (DAG), etc.  All of which do not utilize shared disks
 
-## What's new in Windows Server 2019
+Up through Windows Server 2016, if there is no domain controller available or if this is a workgroup/cross-domain cluster (no Active Directory CNO object), the File Share Witness cannot be used.
 
-In Windows Server 2019, the Kerberos requirement has been removed when using PowerShell to create the witness resource type.  With **Set-ClusterQuorum**, a new switch of **-Credential** has been added so that a local non-administrative account on the server can be used.  When creating a file share witness through Cluster Manager, it will still use kerberos.
+Windows Server 2019 has addressed this with the ability to now use a USB drive as the witness.
+
+## USB as the witness in Windows Server 2019
+
+In Windows Server 2019, the Kerberos requirement has been removed when using PowerShell to create the witness resource type.  With **Set-ClusterQuorum**, a new switch of **-Credential** has been added so that a local non-administrative account can be used.  When creating a file share witness through Cluster Manager, it will still use kerberos.
 
 With this new **-Credential** switch, the edge scenarios previously can now use a file share witness.  Devices other than just Windows servers can house the file share witness, such as:
 
@@ -41,6 +43,7 @@ With this new **-Credential** switch, the edge scenarios previously can now use 
 3.	USB port on a router
 
 The only requirement is that it must be able to create a local account on the device and use at least Server Message Block (SMB) 2.
+
 
 ## Example
 
