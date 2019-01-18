@@ -142,6 +142,15 @@ Let's generate a report into a text file
 
 For reference, here is a link to the [sample report](https://github.com/Microsoft/WSLab/blob/dev/Scenarios/S2D%20Tools/Get-SDDCDiagnosticInfo/SDDCReport.txt) and [sample zip](https://github.com/Microsoft/WSLab/blob/dev/Scenarios/S2D%20Tools/Get-SDDCDiagnosticInfo/HealthTest-S2D-Cluster-20180522-1546.ZIP).
 
+To view this in Windows Admin Center (version 1812 onwards), navigate to the *Diagnostics* tab. As you see in the screenshot below, you can 
+
+- Install diagnostic tools
+- Update them (if they are out-of-date), 
+- Schedule daily diagnostic runs (these have a low impact on your system, usually take <5 minutes in the background, and won't take up more than 500mb on your cluster)
+- View previously collected diagnostic information if you need to give it to support or analyze it yourself.
+
+![data in file explorer screenshot](/media/data-collection/Wac.png)
+
 ## Get-SDDCDiagnosticInfo output
 
 The following are the files included in the zipped output of Get-SDDCDiagnosticInfo.
