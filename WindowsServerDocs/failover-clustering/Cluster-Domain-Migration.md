@@ -42,9 +42,21 @@ The first option involves destroying the cluster and rebuilding it in the new do
 
 ![Destroy and Rebuild](media\Cross-Domain-Cluster-Migration\Cross-Cluster-Domain-Migration-1.gif)
 
+As the animation shows, this option is destructive with the steps being:
+
+1. Destroy the Cluster.
+2. Change the domain membership of the nodes into the new domain.
+3. Recreate the Cluster as new in the updated domain.  This would entail having to recreate all the resources.
+
 The second option is less destructive but requires additional hardware as a new cluster would need to be built in the new domain.  Once the cluster is in the new domain, run the Cluster Migration Wizard to migrate the resources. Note that this doesn't migrate data - you'll need to use another tool to migrate data, such as [Storage Migration Service](../storage/storage-migration-service/overview.md)(once cluster support is added).
 
 ![Build and Migrate](media\Cross-Domain-Cluster-Migration\Cross-Cluster-Domain-Migration-2.gif)
+
+As the animation shows, this option is not destructive but does require either different hardware or a node from the existing cluster than has been removed.
+
+1. Create a new clusterin the new domain while still having theold cluster available.
+2. Use the [Cluster Migration Wizard](https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc754481(v=ws.10)) to migrate all the resources to the new cluster. Reminder, this does not opy data, so will need to be done separately.
+3. Decommission or destroy the old cluster.
 
 In both options, the new cluster would need to have all [cluster-aware applications](https://technet.microsoft.com/aa369082(v=vs.90)) installed, drivers all up-to-date, and possibly testing to ensure all will run properly.  This is a time consuming process if data also needs to be moved.
 
