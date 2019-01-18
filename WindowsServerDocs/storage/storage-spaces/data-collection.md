@@ -33,7 +33,7 @@ The **Get-SDDCDiagnosticInfo** PowerShell cmdlet (a.k.a. **Get-PCStorageDiagnost
 
 There are two methods of installing the script, both of which are outlines below.
 
-### PowerShell Gallery 
+### PowerShell Gallery
 
 The [PowerShell Gallery](https://www.powershellgallery.com/packages/PrivateCloud.DiagnosticInfo) is a snapshot of the GitHub Repo. Note that installing items from the PowerShell Gallery requires the latest version of the PowerShellGet module, which is available in Windows 10, in Windows Management Framework (WMF) 5.0, or in the MSI-based installer (for PowerShell 3 and 4).
 
@@ -51,7 +51,7 @@ To update the module, run the following command in PowerShell:
 Update-Module PrivateCloud.DiagnosticInfo
 ```
 
-### GitHub 
+### GitHub
 
 The [GitHub Repo](https://github.com/PowerShell/PrivateCloud.DiagnosticInfo/) is the most up-to-date version of the module, since we are continually iterating here. To install the module from GitHub, download the latest module from the [archive](https://github.com/PowerShell/PrivateCloud.DiagnosticInfo/archive/master.zip) and extract the PrivateCloud.DiagnosticInfo directory to the correct PowerShell modules path pointed by ```$env:PSModulePath```
 
@@ -87,32 +87,37 @@ If you need to get this module on an offline cluster, download the zip, move it 
 
 After you have enabled event channels and completed the installation process, you can use the Get-SDDCDiagnosticInfo PowerShell cmdlet in the module to get:
 
-1. Reports on storage health, plus details on unhealthy components
-2. Reports of storage capacity by pool, volume and deduplicated volume
-3. Event logs from all cluster nodes and a summary error report
+- Reports on storage health, plus details on unhealthy components
+- Reports of storage capacity by pool, volume and deduplicated volume
+- Event logs from all cluster nodes and a summary error report
 
 Assume that your storage cluster has the name *"CLUS01".*
 
 To execute against a remote storage cluster:
+
 ``` PowerShell
 Get-SDDCDiagnosticInfo -ClusterName CLUS01
 ```
 
 To execute locally on clustered storage node:
+
 ``` PowerShell
 Get-SDDCDiagnosticInfo
 ```
 
 To save results to a specified folder:
+
 ``` PowerShell
 Get-SDDCDiagnosticInfo -WriteToPath D:\Folder 
 ```
 
 Here is an example of how this looks on a real cluster:
+
 ``` PowerShell
 New-Item -Name SDDCDiagTemp -Path d:\ -ItemType Directory -Force
 Get-SddcDiagnosticInfo -ClusterName S2D-Cluster -WriteToPath d:\SDDCDiagTemp
 ```
+
 As you can see, script will also do validation of current cluster state
 
 ![data collection powershell screenshot](media/data-collection/CollectData.png)
@@ -156,20 +161,22 @@ To view this in Windows Admin Center (version 1812 onwards), navigate to the *Di
 The following are the files included in the zipped output of Get-SDDCDiagnosticInfo.
 
 ### Health Summary Report
+
 The health summary report is saved as:
 - 0_CloudHealthSummary.log
 
 This file is generated after parsing all the data collected and is meant to provide a quick summary of your system. It contains:
-1. System information
-2. Storage health overview (number of nodes up, resources online, cluster shared volumes online, unhealthy components, etc.)
-3. Details on unhealthy components (cluster resources that are offline, failed, or online pending)
-4. Firmware and driver information
-5. Pool, physical disk, and volume details
-6. Storage Performance (performance counters are collected)
+
+- System information
+- Storage health overview (number of nodes up, resources online, cluster shared volumes online, unhealthy components, etc.)
+- Details on unhealthy components (cluster resources that are offline, failed, or online pending)
+- Firmware and driver information
+- Pool, physical disk, and volume details
+- Storage Performance (performance counters are collected)
 
 This report is being continually updated to include more useful information. For the latest information, see the [GitHub README](https://github.com/PowerShell/PrivateCloud.DiagnosticInfo/edit/master/README.md).
 
-### Logs and XMLfiles
+### Logs and XML files
 
 The script runs various log gathering scripts and saves the output as xml files. We collect cluster and health logs, system information (MSInfo32), unfiltered event logs (failover clustering, dis diagnostics, hyper-v, storage spaces, and more), and storage diagnostics information (operational logs). For the latest information on what information is collected, see the [GitHub README (what we collect)](https://github.com/PowerShell/PrivateCloud.DiagnosticInfo/blob/master/README.md#what-does-the-cmdlet-output-include).
 
@@ -232,9 +239,11 @@ You can consume the data from the XML files provided in data collected by the **
 
 To see the results of these outputs, open a PowerShell window and run the following steps. 
 
-1. ipmo storage 
-2. $d = import-clixml <filename> 
-3. $d
+```PowerShell
+ipmo storage
+$d = import-clixml <filename> 
+$d
+```
 
 ## What to expect next?
 A lot of improvements and new cmdlets to analyze SDDC system health.
