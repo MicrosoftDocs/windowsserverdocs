@@ -5,15 +5,15 @@ ms.manager: eldenc
 ms.technology: failover-clustering
 ms.topic: article
 author: johnmarlin-msft
-ms.date: 01/17/2019
-description: This article describes the new USB File Share Witness feature in Windows Server 2019
+ms.date: 01/18/2019
+description: File share witnesses allow you to use a file share to vote in cluster quorum. This topic describes file share witnesses and the new functionality, including using a USB drive connected to a router as a file share witness.
 ms.localizationpriority: medium
 ---
 # File share witness
 
-> Applies To: Windows Server 2019
+> Applies To: Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-A file share witness is an SMB share that Failover Cluster will connect to and utilize as a vote in the cluster. This topic provides an overview of the technology and the new functionality in Windows Server 2019, including using a USB drive connected to a router as a file share witness.
+A file share witness is an SMB share that Failover Cluster uses as a vote in the cluster quorum. This topic provides an overview of the technology and the new functionality in Windows Server 2019, including using a USB drive connected to a router as a file share witness.
 
 File share witnesses are handy in the following circumstances:  
 
@@ -22,7 +22,7 @@ File share witnesses are handy in the following circumstances:
 
 ## File share witness requirements
 
-You host a file share witness on a domain-joined Windows server, or if your cluster is running Windows Server 2019, any device that can host an SMB 2 or later file share.
+You can host a file share witness on a domain-joined Windows server, or if your cluster is running Windows Server 2019, any device that can host an SMB 2 or later file share.
 
 |File server type                 | Supported clusters |
 |---------------------------------|--------------------|
@@ -47,7 +47,7 @@ If the cluster is running  Windows Server 2016 or earlier, here are the requirem
 
 Other notes:
 - To use a file share witness hosted by devices other than a domain-joined Windows server, you currently must use the **Set-ClusterQuorum -Credential** PowerShell cmdlet to set the witness, as described later in this topic.
-- For high availability, you can use a file share witness a separate Failover Cluster
+- For high availability, you can use a file share witness on a separate Failover Cluster
 - The file share can be used by multiple clusters
 
 ## Creating a file share witness on a router with a USB device
