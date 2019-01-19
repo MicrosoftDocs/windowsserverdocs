@@ -8,7 +8,7 @@ ms.manager: dongill
 author: JasonGerend
 ms.author: jgerend  
 ms.technology: storage-failover-clustering
-ms.date: 10/05/2018
+ms.date: 1/18/2019
 ms.localizationpriority: high
 ---
 # Failover Clustering in Windows Server
@@ -122,7 +122,9 @@ Failover Clustering has many practical applications, including:
 <HR />
                                         <p><a href="create-failover-cluster.md">Creating a Failover Cluster</a></p> 
 <HR />
-                                        <p><a href="deploy-cloud-witness.md">Deploy a Cloud Witness for a Failover Cluster</a></p> 
+                                        <p><a href="manage-cluster-quorum.md">Manage the quorum and witnesses</a></p> 
+<HR />
+                                        <p><a href="deploy-cloud-witness.md">Deploy a cloud witness</a></p>
 <HR />
                                         <p><a href="cluster-operating-system-rolling-upgrade.md">Cluster operating system rolling upgrades</a></p> 
 <HR />
@@ -147,8 +149,6 @@ Failover Clustering has many practical applications, including:
                                         </div>
                                         <div class="cardText">
                                         <h3>Manage</h3>
-<HR />
-                                        <p><a href="manage-cluster-quorum.md">Configure and Manage the Quorum in a Failover Cluster</a></p> 
 <HR />
                                         <p><a href="cluster-aware-updating.md">Cluster-Aware Updating</a></p> 
 <HR />

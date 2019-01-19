@@ -16,7 +16,8 @@
 ### [Create a failover cluster](create-failover-cluster.md)
 ### [Prestage a cluster in AD DS](prestage-cluster-adds.md)
 #### [Configuring cluster accounts in Active Directory](configure-ad-accounts.md)
-### [Deploy a Cloud Witness for a Failover Cluster](deploy-cloud-witness.md)
+### [Manage quorum and witnesses](manage-cluster-quorum.md)
+### [Deploy a Cloud Witness](deploy-cloud-witness.md)
 ### [Cluster operating system rolling upgrades](cluster-operating-system-rolling-upgrade.md)
 ## Manage
 ### [Cluster-Aware Updating](cluster-aware-updating.md)
@@ -29,6 +30,5 @@
 #### [Faults](health-service-faults.md)
 #### [Actions](health-service-actions.md)
 #### [Settings](health-service-settings.md)
-### [Configure and manage quorum](manage-cluster-quorum.md)
 ### [Troubleshooting using Windows Error Reporting](troubleshooting-using-WER-reports.md)
 ## [Change history for Failover Clustering topics](clustering-change-history.md)
