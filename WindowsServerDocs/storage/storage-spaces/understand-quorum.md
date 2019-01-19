@@ -224,4 +224,4 @@ Each of the 24 drives has one vote and node two also has one vote (since it's th
 ## More information
 
 - [Configure and manage quorum](../../failover-clustering/manage-cluster-quorum.md)
-- [Deploy a cloud witness](../failover-clustering/deploy-cloud-witness.md)
+- [Deploy a cloud witness](../../failover-clustering/deploy-cloud-witness.md)
