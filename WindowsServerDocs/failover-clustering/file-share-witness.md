@@ -9,51 +9,55 @@ ms.date: 01/17/2019
 description: This article describes the new USB File Share Witness feature in Windows Server 2019
 ms.localizationpriority: medium
 ---
-# File Share Witness
+# File share witness
 
 > Applies To: Windows Server 2019
 
-A file share witness is an SMB share that Failover Cluster will connect to and utilize as a vote in the cluster. This topic provides an overview for the new feature set included with Windows Server 2019.
+A file share witness is an SMB share that Failover Cluster will connect to and utilize as a vote in the cluster. This topic provides an overview of the technology and the new functionality in Windows Server 2019, including using a USB drive connected to a router as a file share witness.
 
-The recommendations for using a file share witness have been:
+File share witnesses are handy in the following circumstances:  
 
-- SMB file share on a Windows server
-- Must have a minimum of 5 megabytes of free space
-- The file share can be used by multiple clusters
+- A cloud witness can't be used because not all servers in the cluster have a reliable Internet connection
+- A disk witness can't be used because there aren't any shared drives to use for a disk witness. This could be a Storage Spaces Direct cluster, SQL Server Always On Availability Groups (AG), Exchange Database Availability Group (DAG), etc.  None of these types of clusters use shared disks.
+
+## File share witness requirements
+
+You can now host a file share witness on a domain-joined Windows server, or if your cluster is running Windows Server 2019, any device.
+
+|File server type                 | Supported clusters |
+|---------------------------------|--------------------|
+|Any device w/an SMB 2 file share | Windows Server 2019|
+|Domain-joined Windows Server     | Windows Server 2008 and later|
+
+If the cluster is running Windows Server 2019, here are the requirements:
+
+- An SMB file share *on any device that uses the SMB 2 or later protocol, including:
+    - Network-attached storage (NAS) devices
+    - Windows computers joined to a workgroup
+    - Routers with locally-connected USB storage
+- A local account on the device for authenticating the cluster
+- If you're instead using Active Directory for authenticating the cluster with the file share, the Cluster Name Object (CNO) must have write permissions on the share, and the server must be in the same Active Directory forest as the cluster
+- The file share has a minimum of 5 MB of free space
+
+If the cluster is running  Windows Server 2016 or earlier, here are the requirements:
+
+- SMB file share *on a Windows server joined to the same Active Directory forest as the cluster*
 - The Cluster Name Object (CNO) must have write permissions on the share
-- For high availability, the file share can be located on a separate Failover Cluster
+- The file share has a minimum of 5 MB of free space
 
-There are some scenarios at the edge where the file share witness is needed.  
+Other notes:
+- To use a file share witness hosted by devices other than a domain-joined Windows server, you currently must use the **Set-ClusterQuorum -Credential** PowerShell cmdlet to set the witness, as described later in this topic.
+- For high availability, you can use a file share witness a separate Failover Cluster
+- The file share can be used by multiple clusters
 
-- A Cloud Witness cannot be used if there is no or extremely poor Internet access because of a remote location
-- No shared drives are avaialble for a disk witness. This could be a Storage Spaces Direct hyper-converged configuration, SQL Server Always On Availability Groups (AG), Exchange Database Availability Group (DAG), etc.  All of which do not utilize shared disks
+## Creating a file share witness on a router with a USB device
 
-Up through Windows Server 2016, if there is no domain controller available or if this is a workgroup/cross-domain cluster (no Active Directory CNO object), the File Share Witness cannot be used.
-
-Windows Server 2019 has addressed this with the ability to now use a USB drive as the witness.
-
-## USB as the witness in Windows Server 2019
-
-In Windows Server 2019, the Kerberos requirement has been removed when using PowerShell to create the witness resource type.  With **Set-ClusterQuorum**, a new switch of **-Credential** has been added so that a local non-administrative account can be used.  When creating a file share witness through Cluster Manager, it will still use kerberos.
-
-With this new **-Credential** switch, the edge scenarios previously can now use a file share witness.  Devices other than just Windows servers can house the file share witness, such as:
-
-1.	NAS appliances
-2.	Non-domain joined Windows machines
-3.	USB port on a router
-
-The only requirement is that it must be able to create a local account on the device and use at least Server Message Block (SMB) 2.
-
-
-## Example
-
-At [Microsoft Ignite 2018](https://azure.microsoft.com/en-us/ignite/), [DataOn Storage](http://www.dataonstorage.com/) had a Storage Spaces Direct Cluster in their kiosk area.  This cluster was connected to a [NetGear](https://www.netgear.com) Nighthawk X4S WiFi Router using the USB port as a file share witness similar to this.
+At [Microsoft Ignite 2018](https://azure.microsoft.com/ignite/), [DataOn Storage](http://www.dataonstorage.com/) had a Storage Spaces Direct Cluster in their kiosk area.  This cluster was connected to a [NetGear](https://www.netgear.com) Nighthawk X4S WiFi Router using the USB port as a file share witness similar to this.
 
 ![NetGear witness](media\File-Share-Witness\FSW1.png)
 
-The steps for creating a file share witness using a USB device on this particular router are listed below.  Please note that steps on other routers and NAS appliances will vary and should be accomplished using the vendor supplied directions.
+The steps for creating a file share witness using a USB device on this particular router are listed below.  Note that steps on other routers and NAS appliances will vary and should be accomplished using the vendor supplied directions.
 
-## Creating a file share witness on a router with a USB device
 
 1. Log into the router with the USB device plugged in.
 
@@ -77,6 +81,6 @@ The steps for creating a file share witness using a USB device on this particula
    Set-ClusterQuorum -FileShareWitness \\readyshare\Witness -Credential ($Get-Credential)
    ```
 
-   This displays a dialog box to enter the credentials for the account to log onto the share.
+   This displays a dialog box to enter the credentials for the local account on the device used to log onto the share.
 
 These same similar steps can be done on other routers with USB capabilities, NAS devices, or other Windows devices.
