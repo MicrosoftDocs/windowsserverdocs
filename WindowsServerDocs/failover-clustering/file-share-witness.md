@@ -22,7 +22,7 @@ File share witnesses are handy in the following circumstances:
 
 ## File share witness requirements
 
-You can now host a file share witness on a domain-joined Windows server, or if your cluster is running Windows Server 2019, any device.
+You host a file share witness on a domain-joined Windows server, or if your cluster is running Windows Server 2019, any device that can host an SMB 2 or later file share.
 
 |File server type                 | Supported clusters |
 |---------------------------------|--------------------|
@@ -31,7 +31,7 @@ You can now host a file share witness on a domain-joined Windows server, or if y
 
 If the cluster is running Windows Server 2019, here are the requirements:
 
-- An SMB file share *on any device that uses the SMB 2 or later protocol, including:
+- An SMB file share *on any device that uses the SMB 2 or later protocol*, including:
     - Network-attached storage (NAS) devices
     - Windows computers joined to a workgroup
     - Routers with locally-connected USB storage
@@ -81,6 +81,6 @@ The steps for creating a file share witness using a USB device on this particula
    Set-ClusterQuorum -FileShareWitness \\readyshare\Witness -Credential ($Get-Credential)
    ```
 
-   This displays a dialog box to enter the credentials for the local account on the device used to log onto the share.
+   This displays a dialog box to enter the local account on the device.
 
 These same similar steps can be done on other routers with USB capabilities, NAS devices, or other Windows devices.
