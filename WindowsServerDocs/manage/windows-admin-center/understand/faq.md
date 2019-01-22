@@ -118,20 +118,16 @@ Windows Admin Center and SCVMM are complementary; Windows Admin Center is intend
 
 ## What is Windows Admin Center Preview, which version is right for me?
 
-There are two versions of Windows Admin Center<!-- available for download-->:
+There are two versions of Windows Admin Center available for download:
 
 ### Windows Admin Center
 
-* For IT admins who are not able to update frequently or who want more validation time for the releases they use in production, this version is for you. Our current generally available (GA) release is Windows Admin Center 1809.
+* For IT admins who are not able to update frequently or who want more validation time for the releases they use in production, this version is for you. Our current generally available (GA) release is Windows Admin Center 1809.5.
 * To get the latest GA release, [download here](https://aka.ms/WACDownload).
 
-* Windows Admin Center GA releases are supported continuously, based on Microsoft’s [Modern Lifecycle Policy](https://na01.safelinks.protection.outlook.com/?url=https%3A%2F%2Fsupport.microsoft.com%2Fen-us%2Fhelp%2F30881%2Fmodern-lifecycle-policy&data=02%7C01%7C%7C5a213cf1adca4176786108d61779470b%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C636722206982112012&sdata=2oQt%2B%2BwG7gn5Gm5iMFNzKirYWyKGxrww0B7b8Tok85Q%3D&reserved=0). This means that only the latest released version of Windows Admin Center GA is serviced and supported, and users must “stay current” by upgrading to the latest Windows Admin Center GA release within 30 days of availability to remain supported. This policy applies to both the Windows Admin Center platform itself, as well as any Microsoft extensions which are GA and published in the Windows Admin Center extension feed. Note that some extensions may be updated more frequently than others, between Windows Admin Center GA releases.
+* Windows Admin Center GA releases are supported continuously, based on Microsoft’s [Modern Lifecycle Policy](https://support.microsoft.com/help/30881/modern-lifecycle-policy). This means that only the latest released version of Windows Admin Center GA is serviced and supported, and users must “stay current” by upgrading to the latest Windows Admin Center GA release within 30 days of availability to remain supported. This policy applies to both the Windows Admin Center platform itself, as well as any Microsoft extensions which are GA and published in the Windows Admin Center extension feed. Note that some extensions may be updated more frequently than others, between Windows Admin Center GA releases.
 
 ### Windows Admin Center Preview
-
->[!NOTE]
->The current GA version (Windows Admin Center 1809.5) contains all previous preview functionality.
->The Insider Preview will return soon.
 
 * For IT admins who want the latest and greatest features on a regular cadence, this version is for you. Our intent is to provide subsequent update releases every month or so. The core platform continues to be production-ready and the license provides production use rights. However, note that you will see the introduction of new tools and capabilities which are clearly marked as PREVIEW and are suitable for evaluation and testing.
 * To get the latest Preview release, registered Insiders may download Windows Admin Center Preview directly from the [Windows Server Insider Preview download page](https://www.microsoft.com/en-us/software-download/windowsinsiderpreviewserver), under the Additional Downloads dropdown. If you have not yet registered as an Insider, see [Getting Started with Windows Server](https://insider.windows.com/en-us/for-business-getting-started-server/) on the Windows Insiders for Business portal.

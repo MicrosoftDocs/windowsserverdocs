@@ -30,6 +30,15 @@ In the **Language/Region** tab, users can change the language and region formats
 
 In the **Suggestions** tab, users can toggle suggestions about Azure services and new features.
 
+### Dark theme
+
+> Applies To: Windows Admin Center Preview
+
+In Windows Admin Center Preview, you can unlock an additional **Personalization** section, which contains the option to toggle to a dark UI theme. To enable the **Personalization** section, enter ```msft.sme.shell.personalization``` as an experiment key.
+
+>[!IMPORTANT]
+> Dark theme is a work in progress, please do not report bugs at this time.
+
 ## Gateway settings
 
 Gateway-level settings consist of the following sections:

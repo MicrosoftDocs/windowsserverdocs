@@ -5,7 +5,6 @@ ms.technology: manage
 ms.topic: article
 author: daniellee-msft
 ms.author: jol
-ms.date: 06/18/2018
 ms.localizationpriority: medium
 ms.prod: windows-server-threshold
 ---
@@ -64,5 +63,47 @@ If Windows Admin Center is installed on a computer that isn't connected to the i
 4. Repeat steps 2 and 3 for all the packages you want to download.
 5. Copy the package files to a file share that can be accessed from the computer Windows Admin Center is installed on, or to the local disk of the computer.
 6. [Follow the instructions above](#installing-extensions-from-a-different-feed) to add the file share or local folder location as an additional feed. 
+
+## Manage extensions with PowerShell
+
+>Applies To: Windows Admin Center, Windows Admin Center Preview
+
+Windows Admin Center Preview includes a PowerShell module to manage your gateway extensions.
+
+>[!IMPORTANT]
+>Managing gateway extensions with the PowerShell module is only supported when Windows Admin Center is deployed as a gateway service on Windows Server.
+
+```powershell
+# Add the module to the current session
+Import-Module "$env:ProgramFiles\windows admin center\PowerShell\Modules\ExtensionTools"
+# Available cmdlets: Get-Feed, Add-Feed, Remove-Feed, Get-Extension, Install-Extension, Uninstall-Extension, Update-Extension
+
+# List feeds
+Get-Feed "https://wac.contoso.com"
+
+# Add a new extension feed
+Add-Feed -GatewayEndpoint "https://wac.contoso.com" -Feed "\\WAC\our-private-extensions"
+
+# Remove an extension feed
+Remove-Feed -GatewayEndpoint "https://wac.contoso.com" -Feed "\\WAC\our-private-extensions"
+
+# List all extensions
+Get-Extension "https://wac.contoso.com"
+
+# Install an extension (locate the latest version from all feeds and install it)
+Install-Extension -GatewayEndpoint "https://wac.contoso.com" "msft.sme.containers"
+
+# Install an extension (latest version from a specific feed, if the feed is not present, it will be added)
+Install-Extension -GatewayEndpoint "https://wac.contoso.com" "msft.sme.containers" -Feed "https://aka.ms/sme-extension-feed"
+
+# Install an extension (install a specific version)
+Install-Extension "https://wac.contoso.com" "msft.sme.certificate-manager" "0.133.0"
+
+# Uninstall-Extension
+Uninstall-Extension "https://wac.contoso.com" "msft.sme.containers"
+
+# Update-Extension
+Update-Extension "https://wac.contoso.com" "msft.sme.containers"
+```
 
 ### [Learn more about building an extension with the Windows Admin Center SDK](../extend/extensibility-overview.md).
