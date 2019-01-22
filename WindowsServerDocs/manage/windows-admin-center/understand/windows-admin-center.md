@@ -16,15 +16,16 @@ Windows Admin Center is a locally deployed, browser-based app for managing serve
 
 ## Download now
 
-<!-- **Windows Admin Center Preview** (version 1812)
+**Windows Admin Center Preview** (version 1812)
 
 Includes the latest feature updates. [Get it from Windows Server Insider Preview](https://www.microsoft.com/en-us/software-download/windowsinsiderpreviewserver) > Additional Downloads
 
-[Which version is right for me?](faq.md#what-is-windows-admin-center-preview-which-version-is-right-for-me)-->
-
 **Windows Admin Center** (version 1809.5)
-<!-- Broadly validated & generally available.-->
+
+Broadly validated & generally available.
 [Get it here](https://aka.ms/WACDownload)
+
+[Which version is right for me?](faq.md#what-is-windows-admin-center-preview-which-version-is-right-for-me)
 
 ********************
 
