@@ -38,7 +38,7 @@ If you encounter an issue not described on this page, please [let us know](http:
 
 ## General
 
-- If you have Windows Admin Center installed as a gateway on **Windows Server 2016** under heavy use, the service may crash with an error in the event log that contains ```Faulting application name: sme.exe``` and ```Faulting module name: WsmSvc.dll```. This is due to a bug that has been fixed in Windows Server 2019, and will be backported to Windows Server 2016 in an upcoming cumulative update.
+- If you have Windows Admin Center installed as a gateway on **Windows Server 2016** under heavy use, the service may crash with an error in the event log that contains ```Faulting application name: sme.exe``` and ```Faulting module name: WsmSvc.dll```. This is due to a bug that has been fixed in Windows Server 2019. The patch will come to Windows Server 2016 in the February 2019 cumulative update, or you can install [KB4480977](https://www.catalog.update.microsoft.com/Search.aspx?q=4480977) manually.
 
 - If you have Windows Admin Center installed as a gateway and your connection list appears to be corrupted, perform the following steps:
 
@@ -164,7 +164,9 @@ If it is not installed, you can [download and install WMF 5.1](https://www.micro
 
 ### Remote Desktop
 
-- Remote Desktop is effected by [websocket compatibility when using a proxy service.](#websockets)
+- Some configurations can block Windows Admin Center's remote desktop client with group policy. If you encounter this, enable ```Allow users to connect remotely by using Remote Desktop Services``` under ```Computer Configuration/Policies/Administrative Templates/Windows Components/Remote Desktop Services/Remote Desktop Session Host/Connections```
+
+- Remote Desktop is effected by [websocket compatibility.](#websockets)
 
 - The Remote Desktop tool does not currently support any text, image, or file copy/paste between the local desktop and the remote session.
 

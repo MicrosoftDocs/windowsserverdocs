@@ -5,7 +5,6 @@ ms.technology: manage
 ms.topic: article
 author: nwashburn-ms
 ms.author: niwashbu
-ms.date: 09/19/2018
 ms.localizationpriority: medium
 ms.prod: windows-server-threshold
 ---
@@ -133,6 +132,54 @@ Once tags have been added to one or more server connections, you can view the ta
 * You can select "or", "and", or "not" to modify the filter behavior of the selected tags.
 ![](../media/launch/tags-8.png)
 
+## Use PowerShell to import or export your connections (with tags)
+
+> Applies To: Windows Admin Center Preview
+
+Windows Admin Center Preview includes a PowerShell module to import or export your connection list.
+
+>[!IMPORTANT]
+>Import and export of connections with the PowerShell module is only supported when Windows Admin Center is deployed as a gateway service on Windows Server.
+
+```powershell
+# Load the module
+Import-Module "$env:ProgramFiles\windows admin center\PowerShell\Modules\ConnectionTools"
+# Available cmdlets: Export-Connection, Import-Connection
+
+# Export connections (including tags) to .csv files
+Export-Connection "https://wac.contoso.com" -fileName "WAC-connections.csv"
+# Import connections (including tags) from .csv files
+Import-Connection "https://wac.contoso.com" -fileName "WAC-connections.csv"
+```
+
+### CSV file format for importing connections
+
+The format of the CSV file starts with the three headings: ```"name","type","tags"```, followed by each connection on a new line.
+
+**name** is the FQDN of the connection
+
+**type** is the connection type. For the default connections included with Windows Admin Center, you will use one of the following:
+
+| Connection type | Connection string |
+|------|-------------------------------|
+| Windows Server | msft.sme.connection-type.server |
+| Windows 10 PC | msft.sme.connection-type.windows-client |
+| Failover Cluster | msft.sme.connection-type.cluster |
+| Hyper-Converged Cluster | msft.sme.connection-type.hyper-converged-cluster |
+
+**tags** are pipe-separated.
+
+### Example CSV file for importing connections
+
+```
+"name","type","tags"
+"myServer.contoso.com","msft.sme.connection-type.server","hyperv"
+"myDesktop.contoso.com","msft.sme.connection-type.windows-client","hyperv"
+"mycluster.contoso.com","msft.sme.connection-type.cluster","legacyCluster|WS2016"
+"myHCIcluster.contoso.com,"msft.sme.connection-type.hyper-converged-cluster","myHCIcluster|hyperv|JIT|WS2019"
+"myclusterNode.contoso.com","msft.sme.connection-type.server","legacyCluster|WS2016"
+"myHCIclusterNode.contoso.com","msft.sme.connection-type.server","myHCIcluster|hyperv|JIT|WS2019"
+```
 
 ## View PowerShell scripts used in Windows Admin Center
 

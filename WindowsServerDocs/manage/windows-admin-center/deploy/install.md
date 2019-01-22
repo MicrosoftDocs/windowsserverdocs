@@ -1,13 +1,12 @@
 ---
 title: Install Windows Admin Center
-description: Install Windows Admin Center (Project Honolulu)
+description: Install Windows Admin Center
 ms.technology: manage
 ms.topic: article
-author: nwashburn-ms
-ms.author: niwashbu
+author: jwwool
+ms.author: jeffrew
 ms.localizationpriority: medium
 ms.prod: windows-server-threshold
-ms.date: 01/08/2019
 ---
 
 # Install Windows Admin Center
@@ -50,7 +49,7 @@ Once the install is complete, open a browser from a remote computer and navigate
 If you have a Server Core installation of Windows Server, you can install Windows Admin Center from the command prompt (running as Administrator). Specify a port and SSL certificate by using the `SME_PORT` and `SSL_CERTIFICATE_OPTION` arguments respectively. If you're going to use an existing certificate, use the `SME_THUMBPRINT` to specify its thumbprint.
 
 > [!WARNING]
-> Automatically generated certificates expire 60 days after installation.
+> Installing Windows Admin Center will restart the WinRM service, which will sever all remote PowerShells sessions. It is recommended that you install from a local Cmd or PowerShell.
 
 Run the following command to install Windows Admin Center and automatically generate a self-signed certificate:
 
@@ -64,9 +63,9 @@ Run the following command to install Windows Admin Center with an existing certi
 msiexec /i <WindowsAdminCenterInstallerName>.msi /qn /L*v log.txt SME_PORT=<port> SME_THUMBPRINT=<thumbprint> SSL_CERTIFICATE_OPTION=installed
 ```
 
-> [!WARNING] 
+> [!WARNING]
 > Don't invoke `msiexec` from PowerShell using dot-slash relative path notation (like,  `.\<WindowsAdminCenterInstallerName>.msi`). That notation isn't supported, the installation will fail. Remove the `.\` prefix or specify the full path to the MSI.
 
-## Updating Windows Admin Center 
+## Updating Windows Admin Center
 
 Your settings are preserved when upgrading to a new version of Windows Admin Center. We don't officially support upgrading Insider Preview versions of Windows Admin Center - we think it's better to do a clean install - but we don't block it.
