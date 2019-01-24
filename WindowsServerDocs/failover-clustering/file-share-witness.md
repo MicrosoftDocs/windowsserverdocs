@@ -5,7 +5,7 @@ ms.manager: eldenc
 ms.technology: failover-clustering
 ms.topic: article
 author: johnmarlin-msft
-ms.date: 01/18/2019
+ms.date: 01/24/2019
 description: File share witnesses allow you to use a file share to vote in cluster quorum. This topic describes file share witnesses and the new functionality, including using a USB drive connected to a router as a file share witness.
 ms.localizationpriority: medium
 ---
