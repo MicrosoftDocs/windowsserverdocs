@@ -49,7 +49,7 @@ Other notes:
 - To use a file share witness hosted by devices other than a domain-joined Windows server, you currently must use the **Set-ClusterQuorum -Credential** PowerShell cmdlet to set the witness, as described later in this topic.
 - For high availability, you can use a file share witness on a separate Failover Cluster
 - The file share can be used by multiple clusters
-- •	The use of a Distributed File System (DFS) share or replicated storage is not supported with any version of failover clustering.  These can cause a split brain situation where clustered servers are running independently of each other and could cause data loss.
+- The use of a Distributed File System (DFS) share or replicated storage is not supported with any version of failover clustering.  These can cause a split brain situation where clustered servers are running independently of each other and could cause data loss.
 
 ## Creating a file share witness on a router with a USB device
 
