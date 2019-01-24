@@ -5,7 +5,7 @@ ms.manager: eldenc
 ms.technology: storage-spaces
 ms.topic: article
 author: johnmarlin-msft
-ms.date: 06/25/2018
+ms.date: 01/24/2019
 description: This article describes the Cluster sets scenario
 ms.localizationpriority: medium
 ---
