@@ -58,9 +58,9 @@ For more information about the basic message sequence for Kerberos delegation wi
 
 **Security Implications of Resource-based Constrained Delegation**
 
-Resource-based constrained delegation does not consider the Active Directory attributes of a delegated resource when generating a delegated ticket. This is due to the fact that the services may be in separate domains and cannot query for attributes. As a result the Trusted-to-Authenticate-for-Delegation bit is ignored and effectively treated as always set to true, meaning protocol transition is always allowed.
+Resource-based constrained delegation puts control of delegation in the hands of the administrator owning the resource being accessed. It depends on attributes of the resource service rather than the service being trusted to delegate. As a result, resource-based constrained delegation cannot use the Trusted-to-Authenticate-for-Delegation bit that previously controlled protocol transition. The KDC always allows protocol transition when performing resource-based constrained delegation as though the bit were set.
 
-Two new well-known SIDs were introduced to let resources identify whether the user was authenticated by Active Directory or by the delegating service using protocol transition.
+Because the KDC does not limit protocol transition, two new well-known SIDs were introduced to give this control to the resource administrator.  These SIDs identify whether protocol transition has occurred, and can be used with standard access control lists to grant or limit access as needed.
 
 |SID|Description|
 |-------|--------|
