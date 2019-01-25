@@ -18,6 +18,19 @@ ms.localizationpriority: medium
 
 We regularly update the [Remote Desktop web client](remote-desktop-web-client.md), adding new features and fixing issues. Check out the latest updates below.
 
+## Updates for version 1.0.7
+*Published date: 1/24/2019*
+
+- Fixed accessibility bugs enabling users with visual disabilities to use the web client.
+- Implemented limit for feed retrieval attempts to prevent DoS.
+- Added Ctrl+Alt+End (Windows) and fn+control+option+delete (MacOS) shortcuts to invoke Ctrl+Alt+Del in remote session.
+- Improved graphics rendering for non-Edge browsers.
+- Improved error messages for feed errors. 
+- Updated telemetry for crash events.
+- Offline use is now supported.
+- Improved our build pipeline and build tools.
+- Various bug fixes.
+
 ## Updates for version 1.0.1
 *Published date: 10/29/2018*
 
