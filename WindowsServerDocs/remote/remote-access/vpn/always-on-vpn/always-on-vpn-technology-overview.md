@@ -40,7 +40,7 @@ The connection process depicted in this illustration is comprised of the followi
 For more information on each infrastructure component depicted in the illustration above, see the following sections.
 
 >[!NOTE]
->If you already have some of these technologies deployed on your network, you can use the instructions in this deployment guidance to perform additional configuration of the technologies for this deployment purpose. F
+>If you already have some of these technologies deployed on your network, you can use the instructions in this deployment guidance to perform additional configuration of the technologies for this deployment purpose.
 
 ## Domain Name System (DNS)
 
@@ -93,7 +93,7 @@ During completion of the deployment, you will configure the following certificat
 
 -   The VPN Server Authentication certificate template
 
-The NPS Server Authentication certificate template
+-   The NPS Server Authentication certificate template
 
 ### Certificate Templates
 
