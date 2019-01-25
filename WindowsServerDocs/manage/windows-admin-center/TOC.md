@@ -26,7 +26,7 @@
 ### [Manage Azure VMs with Windows Admin Center](configure/manage-azure-vms.md)
 
 ## Use
-### [Launch Windows Admin Center](use/launch.md)
+### [Get started](use/get-started.md)
 ### [Manage servers](use/manage-servers.md)
 ### [Manage hyper-converged infrastructure](use/manage-hyper-converged.md)
 ### [Manage failover clusters](use/manage-failover-clusters.md)

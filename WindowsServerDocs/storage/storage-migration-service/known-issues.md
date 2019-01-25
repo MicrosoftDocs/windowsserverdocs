@@ -30,7 +30,7 @@ Review the README for usage.
 
 When using the 1809 version of Windows Admin Center to manage a Windows Server 2019 orchestrator, you don't see the tool option for Storage Migration Service. 
 
-The the Windows Admin Center Storage Migration Service extension is version-bound to only manage Windows Server 2019 version 1809 or later operating systems. If you use it to manage older Windows Server operating systems or insider previews, the tool will not appear. This behavior is by design. 
+The Windows Admin Center Storage Migration Service extension is version-bound to only manage Windows Server 2019 version 1809 or later operating systems. If you use it to manage older Windows Server operating systems or insider previews, the tool will not appear. This behavior is by design. 
 
 To resolve, use or upgrade to Windows Server 2019 build 1809 or later.
 
@@ -39,6 +39,17 @@ To resolve, use or upgrade to Windows Server 2019 build 1809 or later.
 When using the 0.57 version of the Storage Migration Service extension in Windows Admin Center and you reach the Cutover phase, you cannot select a static IP for an address. You are forced to use DHCP.
 
 To resolve this issue, in Windows Admin Center, look under **Settings** > **Extensions** for an alert stating that updated version Storage Migration Service 0.57.2 is available to install. You may need to restart your browser tab for Windows Admin center.
+
+## Storage Migration Service cutover validation fails with error "Access is denied for the token filter policy on destination computer"
+
+When running cutover validation, you receive error "Fail: Access is denied for the token filter policy on destination computer." This occurs even if you provided correct local administrator credentials for both the source and destination computers.
+
+This issue is caused by a code defect in Windows Server 2019. The issue will occur when you are using the destination computer as a Storage Migration Service Orchestrator.
+
+To work around this issue, install the Storage Migration Service on a Windows Server 2019 computer that is not the intended migration destination, then connect to that server with Windows Admin Center and perform the migration.
+
+We intend to fix this issue in a later release of Windows Server. Please open a support case via [Microsoft Support](https://support.microsoft.com) to request a backport of this fix be created.
+
 
 ## See also
 
