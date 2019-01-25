@@ -1,6 +1,6 @@
 ---
-title: Launch Windows Admin Center
-description: Launch Windows Admin Center (Project Honolulu)
+title: Get started with Windows Admin Center
+description: Get started with Windows Admin Center
 ms.technology: manage
 ms.topic: article
 author: nwashburn-ms
@@ -9,7 +9,7 @@ ms.localizationpriority: medium
 ms.prod: windows-server-threshold
 ---
 
-# Launch Windows Admin Center
+# Get Started with Windows Admin Center
 
 >Applies To: Windows Admin Center, Windows Admin Center Preview
 
