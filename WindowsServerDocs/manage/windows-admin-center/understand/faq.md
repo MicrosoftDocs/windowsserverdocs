@@ -74,7 +74,7 @@ Yes, Windows Admin Center can be installed on Windows 10 (version 1709 or later)
 
 ## I've heard that Windows Admin Center uses PowerShell under the hood, can I see the actual scripts that it uses?
 
-Yes! the [Showscript feature](..\use\launch.md#view-powershell-scripts-used-in-windows-admin-center) was added in Windows Admin Center Preview 1806, and is now included in the GA channel.
+Yes! the [Showscript feature](..\use\get-started.md#view-powershell-scripts-used-in-windows-admin-center) was added in Windows Admin Center Preview 1806, and is now included in the GA channel.
 
 ## Are there any plans for Windows Admin Center to manage Windows Server 2008 R2 or earlier?
 
