@@ -115,7 +115,7 @@ To accomplish the equivalent installation of AD FS via Windows PowerShell, use t
   
 ```powershell  
 Add-WindowsFeature RSAT-AD-Tools  
-Add-WindowsFeature AD FS-Federation –IncludeManagementTools  
+Add-WindowsFeature ADFS-Federation –IncludeManagementTools  
 ```  
   
 ## Configure AD FS  
