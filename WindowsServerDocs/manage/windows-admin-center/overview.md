@@ -67,7 +67,7 @@ Welcome to Windows Admin Center!
         <td style="vertical-align: top;">
             <h2>Use</h2>
             <ul>
-            <li><a href="use/launch.md">Launch Windows Admin Center</a>
+            <li><a href="use/get-started.md">Launch & add connections</a>
             <li><a href="use/manage-servers.md">Manage servers</a>
             <li><a href="use/manage-hyper-converged.md">Manage hyper-converged infrastructure</a>
             <li><a href="use/manage-failover-clusters.md">Manage failover clusters</a>
@@ -100,7 +100,7 @@ You can get Windows Admin Center up and running in your environment in minutes:
 
 1. [Download Windows Admin Center](https://aka.ms/windowsadmincenter)
 2. [Install Windows Admin Center](deploy/install.md)
-3. [Launch Windows Admin Center](use/launch.md)
+3. [Get started with Windows Admin Center](use/get-started.md)
 
 ## Windows Admin Center at a glance
 
@@ -112,7 +112,7 @@ You can get Windows Admin Center up and running in your environment in minutes:
 
 Learn about our latest released features:
 
-- Version [1812](https://aka.ms/wac1812) added dark theme (in preview), power configuration settings, BMC info, and PowerShell support to manage [extensions](./configure/using-extensions.md#manage-extensions-with-powershell) and [connections](./use/launch.md#use-powershell-to-import-or-export-your-connections-with-tags).
+- Version [1812](https://aka.ms/wac1812) added dark theme (in preview), power configuration settings, BMC info, and PowerShell support to manage [extensions](./configure/using-extensions.md#manage-extensions-with-powershell) and [connections](./use/get-started.md#use-powershell-to-import-or-export-your-connections-with-tags).
 - Version [1809.5](https://aka.ms/wac1809.5) is a GA cumulative update that includes various quality and functional improvements and bug fixes throughout the platform and a few new features in the hyper-converged infrastructure management solution.
 - Version [1809](https://cloudblogs.microsoft.com/windowsserver/2018/09/20/windows-admin-center-1809-and-sdk-now-generally-available/) was a GA release that brought features that were previously in preview to the GA channel.
 - Version [1808](https://aka.ms/WACPreview1808-InsiderBlog) added Installed Apps tool, lots of under the hood improvements, and major updates to the preview SDK.

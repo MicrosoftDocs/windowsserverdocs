@@ -405,7 +405,7 @@
 #### [Create a Non-Claims Aware Relying Party Trust](ad-fs/operations/create-a-Non-Claims-Aware-Relying-Party-Trust.md)
 #### [Create a Relying Party Trust](ad-fs/operations/create-a-Relying-Party-Trust.md) 
 #### [Device Authentication Controls in AD FS](ad-fs/operations/device-authentication-controls-in-AD-FS.md)
-#### [User privacy and AD FS](ad-fs/operations/GDPR-and-AD-FS-Compliance.md)
+
 #### [Improved interoperability with SAML 2.0](ad-fs/operations/Improved-interoperability-with-SAML-2.0.md)
 #### [Join to Workplace from Any Device for SSO and Seamless Second Factor Authentication Across company Applications](ad-fs/operations/Join-to-Workplace-from-Any-Device-for-SSO-and-Seamless-Second-Factor-Authentication-Across-company-Applications.md)
 #### [Manage Risk with additional Multi-Factor Authentication for Sensitive Applications](ad-fs/operations/Manage-Risk-with-additional-Multi-Factor-Authentication-for-Sensitive-Applications.md)
@@ -439,6 +439,7 @@
 
 
 ### [AD FS Technical Reference](ad-fs/AD-FS-Technical-Reference.md)
+#### [User privacy and AD FS](ad-fs/technical-reference/GDPR-and-AD-FS-Compliance.md)
 #### [AD FS and certificate KeySpec property information](ad-fs/technical-reference/AD-FS-and-KeySpec-Property.md)
 #### [Auditing Enhancements to AD FS in Windows Server](ad-fs/technical-reference/auditing-enhancements-to-ad-fs-in-windows-server.md)
 #### [Understanding Key AD FS Concepts](ad-fs/technical-reference/Understanding-Key-AD-FS-Concepts.md)
