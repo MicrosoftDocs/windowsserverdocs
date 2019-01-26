@@ -13,7 +13,7 @@ ms.date: 08/30/2018
 
 # Step 4. Install and configure the Network Policy Server (NPS)
 
->   Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows 10
+>   Applies To: Windows Server 2019, Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows 10
 
 
 &#171;  [**Next:** Step 3. Configure the Remote Access Server for Always On VPN](vpn-deploy-ras.md)<br>
@@ -32,6 +32,9 @@ The steps in this section allow you to complete the following items:
 
    >[!TIP] 
    >If you already have one or more NPS servers on your network, you do not need to perform NPS Server installation - instead, you can use this topic to update the configuration of an existing NPS server.
+
+>[!NOTE]  
+You can not install the Network Poilicy Server service on WIndows Server Core.
 
 2.  On the organization/corporate NPS server, you can configure NPS to perform as a RADIUS server that processes the connection requests received from the VPN server.
 
