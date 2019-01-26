@@ -78,7 +78,7 @@ If you configured your gateway for Azure connectivity when you set up Azure Site
 
 - When using Azure Active Directory as your identity provider and Windows Admin Center is configured with a self-signed or otherwise untrusted certificate, you cannot complete the AAD authentication in Microsoft Edge.  [15968377]
 
-- If you have Windows Admin Center deployed as a service and you are using Microsoft Edge as your browser, connecting your gateway to Azure may fail after spawning a new browser window. You may be able to work around this issue by adding login.microsoftonline.com and the URL of your gateway as trusted sites. See [here](https://github.com/AzureAD/azure-activedirectory-library-for-js/wiki/Known-issues-on-Edge) for more information. [17990376]
+- If you have Windows Admin Center deployed as a service and you are using Microsoft Edge as your browser, connecting your gateway to Azure may fail after spawning a new browser window. Try to work around this issue by adding https://login.microsoftonline.com, https://login.live.com, and the URL of your gateway as trusted sites and allowed sites for pop-up blocker settings on your client side browser. For more guidance on fixing this in the [troubleshooting guide](troubleshooting.md#azlogin). [17990376]
 
 - If you have Windows Admin Center installed in desktop mode, the browser tab in Microsoft Edge won't display the favicon. [17665801]
 

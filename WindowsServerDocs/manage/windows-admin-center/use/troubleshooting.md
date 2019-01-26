@@ -35,6 +35,8 @@ ms.prod: windows-server-threshold
 
 * [I'm having trouble with the Remote Desktop, Events, and PowerShell tools.](#websockets)
 
+* [I'm having issues using Azure features in Edge](#azlogin)
+
 * [I can connect to some servers, but not others](#connectionissues)
 
 * [I'm using Windows Admin Center in a **workgroup**](#workgroup)
@@ -250,6 +252,22 @@ Manually run these two commands in an elevated command prompt:
 netsh http delete sslcert ipport=0.0.0.0:443
 netsh http delete urlacl url=https://+:443/
 ```
+
+[[back to top]](#toc)
+
+<a id="azlogin"></a>
+
+## I'm having issues using Azure features in Edge
+
+Edge has [known issues](https://github.com/AzureAD/azure-activedirectory-library-for-js/wiki/Known-issues-on-Edge) related to security zones that affect Azure login in Windows Admin Center. If you are having trouble using Azure features when using Edge, try adding https://login.microsoftonline.com, https://login.live.com and the URL of your gateway as trusted sites and to allowed sites for Edge pop-up blocker settings on your client side browser. 
+
+To do this:
+1. Search for **Internet Options** in the Windows Start Menu
+2. Go to the **Security** tab
+3. Under the **Trusted Sites** option, click on the **sites** button and add the URLs in the dialog box that opens. You'll need to add your gateway URL as well as https://login.microsoftonline.com and https://login.live.com.
+4. Go to the **Privacy** tab
+5. Under the **Pop-up Blocker** section, click on the **Settings** button and add the URLs in the dialog box that opens. You'll need to add your gateway URL as well as https://login.microsoftonline.com and https://login.live.com.
+
 
 [[back to top]](#toc)
 

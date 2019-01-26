@@ -20,3 +20,6 @@ Windows Admin Center streamlines the process of setting up various Azure service
 [Protect your Hyper-V Virtual Machines from Windows Admin Center with Azure Site Recovery](azure-site-recovery.md)
 
 [Manage operating system updates for all your Windows servers, both on-premises or in the cloud, with Azure Update Management.](azure-update-management.md)
+
+> [!NOTE] 
+> If you're having issues using Azure-related features in Microsoft Edge, please refer to the [related troubleshooting topic](troubleshooting.md#azlogin).
