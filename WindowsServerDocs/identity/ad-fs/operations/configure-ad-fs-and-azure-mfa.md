@@ -5,7 +5,7 @@ description:
 ms.author: billmath
 author: billmath
 manager: mtillman
-ms.date: 01/15/2019
+ms.date: 01/28/2019
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
@@ -260,9 +260,11 @@ Here is a simple example, you may want to extend:
 
     //End Customize MFA Exception
     //End Custom Code
-    Note that you need to change "<YOUR_DOMAIN_NAME_HERE>"; to use your domain name. For example
-    var domain_hint = "contoso.com";
     ```
+    > [!IMPORTANT]
+    > You need to change "<YOUR_DOMAIN_NAME_HERE>"; to use your domain name. For example:
+    > `var domain_hint = "contoso.com";`
+    
 5. Save the onload.js file
 6. Import the onload.js file into your custom theme by typing the following Windows PowerShell command:
     
