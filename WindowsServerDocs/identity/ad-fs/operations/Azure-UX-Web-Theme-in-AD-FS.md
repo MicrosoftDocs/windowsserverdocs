@@ -33,8 +33,8 @@ To enable the new web theme use the following procedure:
 4.  Test the sign-in by going to https://<AD FS name.domain>/adfs/ls/idpinitiatedsignon.htm
 ![Sign-on](media/Azure-UX-Web-Theme-in-AD-FS/three.png)
 
->![NOTE]
->You need to ensure that idpinitiatedsignon has been enabled.  It is not enabled by default.  To enable idpinitiatedsignon use the following PowerShell command:  `Set-AdfsProperties –EnableIdpInitiatedSignonPage $True`
+> ![NOTE]
+> You need to ensure that idpinitiatedsignon has been enabled.  It is not enabled by default.  To enable idpinitiatedsignon use the following PowerShell command:  `Set-AdfsProperties –EnableIdpInitiatedSignonPage $True`
 
 ## Image Recommendations
 Enabling the centered UI enables you to use the same images for background and logo that you might already have for Azure Active Directory company branding. Generally, the same recommendations for size, ratio, and format do apply.
