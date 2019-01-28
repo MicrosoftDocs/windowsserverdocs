@@ -26,7 +26,7 @@ This is the release model you’re already familiar with (formerly called the �
 > **The current LTSC product is Windows Server 2019**. If you want to stay in this channel, you should install (or continue using) Windows Server 2019, which can be installed in Server Core installation option or Server with Desktop Experience installation option.
 
 ## Semi-Annual Channel 
-The Semi-Annual Channel is perfect for customer who are innovating quickly to take advantage of new operating system capabilities at a faster pace, both in applications – particularly those built on containers and microservices, as well as in the software-defined hybrid datacenter. Windows Server products in the Semi-Annual Channel will have new releases available twice a year, in spring and fall. Each release in this channel will be supported for 18 months from the initial release.
+The Semi-Annual Channel is perfect for customers who are innovating quickly to take advantage of new operating system capabilities at a faster pace, both in applications – particularly those built on containers and microservices, as well as in the software-defined hybrid datacenter. Windows Server products in the Semi-Annual Channel will have new releases available twice a year, in spring and fall. Each release in this channel will be supported for 18 months from the initial release.
 
 Most of the features introduced in the Semi-Annual Channel will be rolled up into the next Long-Term Servicing Channel release of Windows Server. The editions, functionality, and supporting content might vary from release to release depending on customer feedback.
 
