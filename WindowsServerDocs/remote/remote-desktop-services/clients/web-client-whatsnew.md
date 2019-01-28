@@ -11,7 +11,7 @@ ms.topic: article
 author: lizap
 manager: dongill
 ms.author: elizapo
-ms.date: 07/16/2018
+ms.date: 1/28/2019
 ms.localizationpriority: medium
 ---
 # What's new for the Remote Desktop web client?
