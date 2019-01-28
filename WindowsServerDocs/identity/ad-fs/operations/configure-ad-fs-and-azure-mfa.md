@@ -5,7 +5,7 @@ description:
 ms.author: billmath
 author: billmath
 manager: mtillman
-ms.date: 01/15/2019
+ms.date: 01/28/2019
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
@@ -101,7 +101,7 @@ In order to enable the AD FS servers to communicate with the Azure Multi-Factor 
 
 **Set the certificate as the new credential against the Azure Multi-Factor Auth Client**  
 
-	`New-MsolServicePrincipalCredential -AppPrincipalId 981f26a1-7f43-403b-a875-f8b09b8cd720 -Type asymmetric -Usage verify -Value $certBase64 `
+`New-MsolServicePrincipalCredential -AppPrincipalId 981f26a1-7f43-403b-a875-f8b09b8cd720 -Type asymmetric -Usage verify -Value $certBase64`
 
 > [!IMPORTANT]
 > This command needs to be run on all of the AD FS servers in your farm.  Azure AD MFA will fail on servers that have not have the certificate set as the new credential against the Azure Multi-Factor Auth Client.
@@ -260,9 +260,11 @@ Here is a simple example, you may want to extend:
 
     //End Customize MFA Exception
     //End Custom Code
-    Note that you need to change "<YOUR_DOMAIN_NAME_HERE>"; to use your domain name. For example
-    var domain_hint = "contoso.com";
     ```
+    > [!IMPORTANT]
+    > You need to change "<YOUR_DOMAIN_NAME_HERE>"; to use your domain name. For example:
+    > `var domain_hint = "contoso.com";`
+    
 5. Save the onload.js file
 6. Import the onload.js file into your custom theme by typing the following Windows PowerShell command:
     
