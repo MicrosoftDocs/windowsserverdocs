@@ -34,7 +34,7 @@ The steps in this section allow you to complete the following items:
    >If you already have one or more NPS servers on your network, you do not need to perform NPS Server installation - instead, you can use this topic to update the configuration of an existing NPS server.
 
 >[!NOTE]  
-You can not install the Network Poilicy Server service on WIndows Server Core.
+You can not install the Network Policy Server service on Windows Server Core.
 
 2.  On the organization/corporate NPS server, you can configure NPS to perform as a RADIUS server that processes the connection requests received from the VPN server.
 
