@@ -24,13 +24,14 @@ If you encounter any issues, you can always contact us via Help > Report an Issu
 *Published date: 1/28/2019*
 
 - Added support for the AVC (420 and 444) codec, available when connecting to current versions of Windows 10.
-- In “fit to window mode”, a window refresh now occurs immediately after a resize to ensure that content is rendered at the correct interpolation level.
+- In Fit to Window mode, a window refresh now occurs immediately after a resize to ensure that content is rendered at the correct interpolation level.
 - Fixed a layout bug that caused feed headers to overlap for some users.
 - Cleaned up the Application Preferences UI.
 - Polished the Add/Edit Desktop UI.
 - Made lots of fit and finish adjustments to the Connection Center tile and list views for desktops and feeds.
 
-NOTE: There is a bug in macOS 10.14.0 and 10.14.1 that can cause the ".com.microsoft.rdc.application-data_SUPPORT/_EXTERNAL_DATA" folder (nested deep inside the ~/Library folder) to consume a large amount of disk space. To resolve this issue, delete the folder content and upgrade to macOS 10.14.2. Note that a side-effect of deleting the folder contents is that snapshot images assigned to bookmarks will be deleted. These images will be regenerated when reconnecting to the remote PC.
+>[!NOTE]
+>There is a bug in macOS 10.14.0 and 10.14.1 that can cause the ".com.microsoft.rdc.application-data_SUPPORT/_EXTERNAL_DATA" folder (nested deep inside the ~/Library folder) to consume a large amount of disk space. To resolve this issue, delete the folder content and upgrade to macOS 10.14.2. Note that a side-effect of deleting the folder contents is that snapshot images assigned to bookmarks will be deleted. These images will be regenerated when reconnecting to the remote PC.
 
 ## Updates for version 10.2.4
 *Published date: 12/18/2018*
