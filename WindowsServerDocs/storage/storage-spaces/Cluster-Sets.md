@@ -5,12 +5,12 @@ ms.manager: eldenc
 ms.technology: storage-spaces
 ms.topic: article
 author: johnmarlin-msft
-ms.date: 06/25/2018
+ms.date: 01/30/2019
 description: This article describes the Cluster sets scenario
 ms.localizationpriority: medium
 ---
-
 # Cluster sets
+
 > Applies To: Windows Server Insider Preview build 17650 and later
 
 Cluster sets is the new cloud scale-out technology in this preview release that increases cluster node count in a single Software Defined Data Center (SDDC) cloud by orders of magnitude. A cluster set is a loosely-coupled grouping of multiple Failover Clusters: compute, storage or hyper-converged. Cluster sets technology enables virtual machine fluidity across member clusters within a cluster set and a unified storage namespace across the set in support of virtual machine fluidity. 
@@ -21,7 +21,7 @@ While preserving existing Failover Cluster management experiences on member clus
 
 Cluster sets technology is developed to meet specific customer requests operating Software Defined Datacenter (SDDC) clouds at scale. Cluster sets value proposition in this Preview release may be summarized as the following:  
 
-- Significantly increase the supported SDDC cloud scale for running highly avaialble virtual machines by combining multiple smaller clusters into a single large fabric, even while keeping the software fault boundary to a single cluster
+- Significantly increase the supported SDDC cloud scale for running highly available virtual machines by combining multiple smaller clusters into a single large fabric, even while keeping the software fault boundary to a single cluster
 - Manage entire Failover Cluster lifecycle including onboarding and retiring clusters, without impacting tenant virtual machine availability, via fluidly migrating virtual machines across this large fabric
 - Easily change the compute-to-storage ratio in your hyper-converged I
 - Benefit from [Azure-like Fault Domains and Availability sets](htttps://docs.microsoft.com/azure/virtual-machines/windows/manage-availability) across clusters in initial virtual machine placement and subsequent virtual machine migration
@@ -72,7 +72,7 @@ Cluster sets allows for clustering multiple clusters together to create a large 
 3. Add additional compute nodes with drives into the current cluster.  This takes us back to Option 1 needing to be considered.
 4. Purchase a whole new cluster
 
-This is where cluster sets provides the benefit of scaling.  If I add my clusters into a cluster set, I can take advantage of storage or memory that may be available on another cluster without any additional purchases.  From a resiliency perspective, adding additional nodes to a Storage Spaces Direct is not going to provide additional votes for quorum.  As mentioned [here](https://docs.microsoft.com/windows-server/storage/storage-spaces/drive-symmetry-considerations), a Storage Spaces Direct Cluster can survive the loss of 2 nodes before going down.  If you have a 4-node HCI cluster, 3 nodes go down will take the entire cluster down.  If you have an 8-node cluster, 3 nodes go down will take the entire cluster down.  With Cluster sets that has two 4-node HCI clusters in the set, 2 nodes in one HCI go down and 1 node in the other HCI go down, both clusters remain up.  Is it better to create one large 16-node Storage Spaces Direct cluster or break it down into four 4-node clusters and use cluster sets?  Having four 4-node clusters with cluster sets gives the same scale, but better resiliency in that multiple compute nodes can go down (unexpectedly or for maintenance) and production remains.
+This is where cluster sets provides the benefit of scaling.  If I add my clusters into a cluster set, I can take advantage of storage or memory that may be available on another cluster without any additional purchases.  From a resiliency perspective, adding additional nodes to a Storage Spaces Direct is not going to provide additional votes for quorum.  As mentioned [here](drive-symmetry-considerations.md), a Storage Spaces Direct Cluster can survive the loss of 2 nodes before going down.  If you have a 4-node HCI cluster, 3 nodes go down will take the entire cluster down.  If you have an 8-node cluster, 3 nodes go down will take the entire cluster down.  With Cluster sets that has two 4-node HCI clusters in the set, 2 nodes in one HCI go down and 1 node in the other HCI go down, both clusters remain up.  Is it better to create one large 16-node Storage Spaces Direct cluster or break it down into four 4-node clusters and use cluster sets?  Having four 4-node clusters with cluster sets gives the same scale, but better resiliency in that multiple compute nodes can go down (unexpectedly or for maintenance) and production remains.
 
 ## Considerations for deploying cluster sets
 
@@ -111,21 +111,23 @@ At the time the cluster set is created, the administrator has the option to use 
 ## Creating a Cluster Set
 
 ### Prerequisites
+
 When creating a cluster set, you following prerequisites are recommended:
 
 1. Configure a management client running the latest Windows Server Insider release.
 2. Install the Failover Cluster tools on this management server.
 3. Create cluster members (at least two clusters with at least two Cluster Shared Volumes on each cluster)
-4. Create a management cluster (physical or guest) that straddles the member clusters.  This approach ensures that the Cluster setsagement plane continues to be available despite possible member cluster failures.
+4. Create a management cluster (physical or guest) that straddles the member clusters.  This approach ensures that the Cluster sets management plane continues to be available despite possible member cluster failures.
 
 ### Steps
+
 1. Create a new cluster set from three clusters as defined in the prerequisites.  The below chart gives an example of clusters to create.  The name of the cluster set in this example will be **CSMASTER**.
 
-        | Cluster Name               | Infrastructure SOFS Name to be used later | 
-        |----------------------------|-------------------------------------------|
-        | SET-CLUSTER                | SOFS-CLUSTERSET                           |
-        | CLUSTER1                   | SOFS-CLUSTER1                             |
-        | CLUSTER2                   | SOFS-CLUSTER2                             |
+   | Cluster Name               | Infrastructure SOFS Name to be used later | 
+   |----------------------------|-------------------------------------------|
+   | SET-CLUSTER                | SOFS-CLUSTERSET                           |
+   | CLUSTER1                   | SOFS-CLUSTER1                             |
+   | CLUSTER2                   | SOFS-CLUSTER2                             |
 
 2. Once all cluster have been created, use the following commands to create the cluster set master.
 
@@ -136,8 +138,8 @@ When creating a cluster set, you following prerequisites are recommended:
         Add-ClusterSetMember -ClusterName CLUSTER1 -CimSession CSMASTER -InfraSOFSName SOFS-CLUSTER1
         Add-ClusterSetMember -ClusterName CLUSTER2 -CimSession CSMASTER -InfraSOFSName SOFS-CLUSTER2
 
-**NOTE:**
-If you are using a static IP Address scheme, you must include *-StaticAddress x.x.x.x* on the **New-ClusterSet** command.
+   > [!NOTE]
+   > If you are using a static IP Address scheme, you must include *-StaticAddress x.x.x.x* on the **New-ClusterSet** command.
 
 4. Once you have created the cluster set out of cluster members, you can list the nodes set and its properties.  To enumerate all the member clusters in the cluster set:
 
@@ -163,7 +165,7 @@ If you are using a static IP Address scheme, you must include *-StaticAddress x.
 
         Get-ClusterSetLog -ClusterSetCimSession CSMASTER -IncludeClusterLog -IncludeManagementClusterLog -DestinationFolderPath <path>
 
-9. Configure kerberos [constrained delegation](https://blogs.technet.microsoft.com/virtualization/2017/02/01/live-migration-via-constrained-delegation-with-kerberos-in-windows-server-2016/) between all cluster set members.
+9. Configure Kerberos [constrained delegation](https://blogs.technet.microsoft.com/virtualization/2017/02/01/live-migration-via-constrained-delegation-with-kerberos-in-windows-server-2016/) between all cluster set members.
 
 10. Configure the cross-cluster virtual machine live migration authentication type to Kerberos on each node in the Cluster Set.
 
@@ -189,17 +191,20 @@ The below commands will both identify the optimal cluster and deploy the virtual
 - set the virtual processor used at 1
 - check to ensure there is at least 10% CPU available for the virtual machine
 
-        # Identify the optimal node to create a new virtual machine
-        $memoryinMB=4096
-        $vpcount = 1
-        $targetnode = Get-ClusterSetOptimalNodeForVM -CimSession CSMASTER -VMMemory $memoryinMB -VMVirtualCoreCount $vpcount -VMCpuReservation 10
-        $secure_string_pwd = convertto-securestring "<password>" -asplaintext -force
-        $cred = new-object -typename System.Management.Automation.PSCredential ("<domain\account>",$secure_string_pwd)
+   ```PowerShell
+   # Identify the optimal node to create a new virtual machine
+   $memoryinMB=4096
+   $vpcount = 1
+   $targetnode = Get-ClusterSetOptimalNodeForVM -CimSession CSMASTER -VMMemory $memoryinMB -VMVirtualCoreCount $vpcount -VMCpuReservation 10
+   $secure_string_pwd = convertto-securestring "<password>" -asplaintext -force
+   $cred = new-object -typename System.Management.Automation.PSCredential ("<domain\account>",$secure_string_pwd)
 
-        # Deploy the virtual machine on the optimal node
-        Invoke-Command -ComputerName $targetnode.name -scriptblock { param([String]$storagepath); New-VM CSVM1 -MemoryStartupBytes 3072MB -path $storagepath -NewVHDPath CSVM.vhdx -NewVHDSizeBytes 4194304 } -ArgumentList @("\\SOFS-CLUSTER1\VOLUME1") -Credential $cred | Out-Null
-        Start-VM CSVM1 -ComputerName $targetnode.name | Out-Null
-        Get-VM CSVM1 -ComputerName $targetnode.name | fl State, ComputerName
+   # Deploy the virtual machine on the optimal node
+   Invoke-Command -ComputerName $targetnode.name -scriptblock { param([String]$storagepath); New-VM CSVM1 -MemoryStartupBytes 3072MB -path $storagepath -NewVHDPath CSVM.vhdx -NewVHDSizeBytes 4194304 } -ArgumentList @("\\SOFS-CLUSTER1\VOLUME1") -Credential $cred | Out-Null
+   
+   Start-VM CSVM1 -ComputerName $targetnode.name | Out-Null
+   Get-VM CSVM1 -ComputerName $targetnode.name | fl State, ComputerName
+   ```
 
 When it completes, you will be given the information about the virtual machine and where it was placed.  In the above example, it would show as:
 
@@ -220,7 +225,7 @@ When it completes, the output will be:
          --  ------  -----  ----------  --------------
           1  CSVM1      On  CLUSTER1    CSMASTER
 
-If you have added a cluster with existing virtual machines, the virtual machines will alos need to be registered with Cluster setso register all the virtual machines at once, the command to use is:
+If you have added a cluster with existing virtual machines, the virtual machines will also need to be registered with Cluster sets so register all the virtual machines at once, the command to use is:
 
         Get-ClusterSetMember -name CLUSTER3 -CimSession CSMASTER | Register-ClusterSetVM -RegisterAll -CimSession CSMASTER
 
@@ -255,7 +260,7 @@ Please note that this does not move the virtual machine storage or configuration
 
 ## Creating Availability sets Fault Domains
 
-As described in the introduction, Azure-like fault domans and availability sets can be configured in a cluster set.  This is beneficial for initial virtual machine placements and migrations between clusters.  
+As described in the introduction, Azure-like fault domains and availability sets can be configured in a cluster set.  This is beneficial for initial virtual machine placements and migrations between clusters.  
 
 In the example below, there are four clusters participating in the cluster set.  Within the set, a logical fault domain will be created with two of the clusters and a fault domain created with the other two clusters.  These two fault domains will comprise the Availabiilty Set. 
 
