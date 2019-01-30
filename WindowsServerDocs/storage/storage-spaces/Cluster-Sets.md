@@ -5,12 +5,12 @@ ms.manager: eldenc
 ms.technology: storage-spaces
 ms.topic: article
 author: johnmarlin-msft
-ms.date: 06/25/2018
+ms.date: 01/30/2019
 description: This article describes the Cluster sets scenario
 ms.localizationpriority: medium
 ---
-
 # Cluster sets
+
 > Applies To: Windows Server Insider Preview build 17650 and later
 
 Cluster sets is the new cloud scale-out technology in this preview release that increases cluster node count in a single Software Defined Data Center (SDDC) cloud by orders of magnitude. A cluster set is a loosely-coupled grouping of multiple Failover Clusters: compute, storage or hyper-converged. Cluster sets technology enables virtual machine fluidity across member clusters within a cluster set and a unified storage namespace across the set in support of virtual machine fluidity. 
@@ -119,13 +119,14 @@ When creating a cluster set, you following prerequisites are recommended:
 4. Create a management cluster (physical or guest) that straddles the member clusters.  This approach ensures that the Cluster setsagement plane continues to be available despite possible member cluster failures.
 
 ### Steps
+
 1. Create a new cluster set from three clusters as defined in the prerequisites.  The below chart gives an example of clusters to create.  The name of the cluster set in this example will be **CSMASTER**.
 
-        | Cluster Name               | Infrastructure SOFS Name to be used later | 
-        |----------------------------|-------------------------------------------|
-        | SET-CLUSTER                | SOFS-CLUSTERSET                           |
-        | CLUSTER1                   | SOFS-CLUSTER1                             |
-        | CLUSTER2                   | SOFS-CLUSTER2                             |
+   | Cluster Name               | Infrastructure SOFS Name to be used later | 
+   |----------------------------|-------------------------------------------|
+   | SET-CLUSTER                | SOFS-CLUSTERSET                           |
+   | CLUSTER1                   | SOFS-CLUSTER1                             |
+   | CLUSTER2                   | SOFS-CLUSTER2                             |
 
 2. Once all cluster have been created, use the following commands to create the cluster set master.
 
@@ -136,8 +137,8 @@ When creating a cluster set, you following prerequisites are recommended:
         Add-ClusterSetMember -ClusterName CLUSTER1 -CimSession CSMASTER -InfraSOFSName SOFS-CLUSTER1
         Add-ClusterSetMember -ClusterName CLUSTER2 -CimSession CSMASTER -InfraSOFSName SOFS-CLUSTER2
 
-**NOTE:**
-If you are using a static IP Address scheme, you must include *-StaticAddress x.x.x.x* on the **New-ClusterSet** command.
+   > [!NOTE]
+   > If you are using a static IP Address scheme, you must include *-StaticAddress x.x.x.x* on the **New-ClusterSet** command.
 
 4. Once you have created the cluster set out of cluster members, you can list the nodes set and its properties.  To enumerate all the member clusters in the cluster set:
 
@@ -163,7 +164,7 @@ If you are using a static IP Address scheme, you must include *-StaticAddress x.
 
         Get-ClusterSetLog -ClusterSetCimSession CSMASTER -IncludeClusterLog -IncludeManagementClusterLog -DestinationFolderPath <path>
 
-9. Configure kerberos [constrained delegation](https://blogs.technet.microsoft.com/virtualization/2017/02/01/live-migration-via-constrained-delegation-with-kerberos-in-windows-server-2016/) between all cluster set members.
+9. Configure Kerberos [constrained delegation](https://blogs.technet.microsoft.com/virtualization/2017/02/01/live-migration-via-constrained-delegation-with-kerberos-in-windows-server-2016/) between all cluster set members.
 
 10. Configure the cross-cluster virtual machine live migration authentication type to Kerberos on each node in the Cluster Set.
 
@@ -189,17 +190,20 @@ The below commands will both identify the optimal cluster and deploy the virtual
 - set the virtual processor used at 1
 - check to ensure there is at least 10% CPU available for the virtual machine
 
-        # Identify the optimal node to create a new virtual machine
-        $memoryinMB=4096
-        $vpcount = 1
-        $targetnode = Get-ClusterSetOptimalNodeForVM -CimSession CSMASTER -VMMemory $memoryinMB -VMVirtualCoreCount $vpcount -VMCpuReservation 10
-        $secure_string_pwd = convertto-securestring "<password>" -asplaintext -force
-        $cred = new-object -typename System.Management.Automation.PSCredential ("<domain\account>",$secure_string_pwd)
+   ```PowerShell
+   # Identify the optimal node to create a new virtual machine
+   $memoryinMB=4096
+   $vpcount = 1
+   $targetnode = Get-ClusterSetOptimalNodeForVM -CimSession CSMASTER -VMMemory $memoryinMB -VMVirtualCoreCount $vpcount -VMCpuReservation 10
+   $secure_string_pwd = convertto-securestring "<password>" -asplaintext -force
+   $cred = new-object -typename System.Management.Automation.PSCredential ("<domain\account>",$secure_string_pwd)
 
-        # Deploy the virtual machine on the optimal node
-        Invoke-Command -ComputerName $targetnode.name -scriptblock { param([String]$storagepath); New-VM CSVM1 -MemoryStartupBytes 3072MB -path $storagepath -NewVHDPath CSVM.vhdx -NewVHDSizeBytes 4194304 } -ArgumentList @("\\SOFS-CLUSTER1\VOLUME1") -Credential $cred | Out-Null
-        Start-VM CSVM1 -ComputerName $targetnode.name | Out-Null
-        Get-VM CSVM1 -ComputerName $targetnode.name | fl State, ComputerName
+   # Deploy the virtual machine on the optimal node
+   Invoke-Command -ComputerName $targetnode.name -scriptblock { param([String]$storagepath); New-VM CSVM1 -MemoryStartupBytes 3072MB -path $storagepath -NewVHDPath CSVM.vhdx -NewVHDSizeBytes 4194304 } -ArgumentList @("\\SOFS-CLUSTER1\VOLUME1") -Credential $cred | Out-Null
+   
+   Start-VM CSVM1 -ComputerName $targetnode.name | Out-Null
+   Get-VM CSVM1 -ComputerName $targetnode.name | fl State, ComputerName
+   ```
 
 When it completes, you will be given the information about the virtual machine and where it was placed.  In the above example, it would show as:
 
