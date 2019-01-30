@@ -8,7 +8,7 @@ manager: dongill
 author: justinha
 ms.author: justinha
 ms.technology: security-guarded-fabric
-ms.date: 12/31/2018
+ms.date: 01/30/2019
 ---
 
 # Quick start for guarded fabric deployment
@@ -120,9 +120,9 @@ Now you can create a shielded VM template disk and a shielding data file so shie
 
 A shielded VM template protects template disks by creating a signature of the disk at a known trustworthy point in time. 
 If the template disk is later infected by malware, its signature will differ original template which will be detected by the secure shielded VM provisioning process. 
-Shielded template disks are created by running the **Shielded Template Disk Creation Wizard** against a regular template disk. 
+Shielded template disks are created by running the **Shielded Template Disk Creation Wizard** or `Protect-TemplateDisk` against a regular template disk. 
 
-This wizard is included with the **Shielded VM Tools** feature in the [Remote Server Administration Tools for Windows 10](https://www.microsoft.com/download/details.aspx?id=45520).
+Each is included with the **Shielded VM Tools** feature in the [Remote Server Administration Tools for Windows 10](https://www.microsoft.com/download/details.aspx?id=45520).
 After you download RSAT, run this command to install the **Shielded VM Tools** feature:
 
 ```powershell
