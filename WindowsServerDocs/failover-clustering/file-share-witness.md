@@ -1,5 +1,5 @@
 ---
-title: USB File Share Witness in Windows Server 2019
+title: Deploy a File Share Witness in Windows Server 2019
 ms.prod: windows-server-threshold
 ms.manager: eldenc
 ms.technology: failover-clustering
@@ -9,7 +9,7 @@ ms.date: 01/24/2019
 description: File share witnesses allow you to use a file share to vote in cluster quorum. This topic describes file share witnesses and the new functionality, including using a USB drive connected to a router as a file share witness.
 ms.localizationpriority: medium
 ---
-# File share witness
+# Deploy a file share witness
 
 > Applies To: Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 

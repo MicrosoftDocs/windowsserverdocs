@@ -18,6 +18,7 @@
 #### [Configuring cluster accounts in Active Directory](configure-ad-accounts.md)
 ### [Manage quorum and witnesses](manage-cluster-quorum.md)
 ### [Deploy a Cloud Witness](deploy-cloud-witness.md)
+### [Deploy a file share witness](file-share-witness.md)
 ### [Cluster operating system rolling upgrades](cluster-operating-system-rolling-upgrade.md)
 ## Manage
 ### [Cluster-Aware Updating](cluster-aware-updating.md)
@@ -30,5 +31,6 @@
 #### [Faults](health-service-faults.md)
 #### [Actions](health-service-actions.md)
 #### [Settings](health-service-settings.md)
+### [Cluster-domain migration](cluster-domain-migration.md)
 ### [Troubleshooting using Windows Error Reporting](troubleshooting-using-WER-reports.md)
 ## [Change history for Failover Clustering topics](clustering-change-history.md)
