@@ -7,7 +7,7 @@ ms.assetid: 49f4e84d-c1f7-45e5-9143-e7ebbb2ef052
 manager: dongill
 author: rpsqrd
 ms.technology: security-guarded-fabric
-ms.date: 08/29/2018
+ms.date: 01/30/2019
 ---
 
 
@@ -143,7 +143,7 @@ You or your hosting service provider can obtain the guardian metadata from HGS b
 
 Obtain the guardian metadata files for each guarded fabric you wish to authorize your shielded VMs to run on before continuing.
 
-## Create a shielding data file and add guardians
+## Create a shielding data file and add guardians using the Shielding Data File wizard
 
 Run the Shielding Data File wizard to create a shielding data (PDK) file. Here, you'll add the RDP certificate, unattend file, volume signature catalogs, owner guardian and the downloaded guardian metadata obtained in the preceding step.
 
@@ -189,6 +189,16 @@ Run the Shielding Data File wizard to create a shielding data (PDK) file. Here, 
 7.  Review your selections on the next page, and then click **Generate**.
 
 8.  Close the wizard after it has completed.
+
+## Create a shielding data file and add guardians using PowerShell
+
+As an alternative to the Shielding Data File wizard, you can run [New-ShieldingDataFile](https://docs.microsoft.com/powershell/module/shieldedvmdatafile/new-shieldingdatafile?view=win10-ps) to create a shielding data file. 
+The following example uses the guardian and volume ID specified by the _Owner_ and _VolumeIDQualifier_ parameters.
+
+```powershell
+
+New-ShieldingDataFile -ShieldingDataFilePath "C:\temp\Marketing-HBI.pdk" -Owner Relecloud -VolumeIDQualifier <VolumeIDQualifier[]>
+```
 
 ## See also
 
