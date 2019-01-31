@@ -234,8 +234,8 @@ If you want to keep both the **log-level** and the **keyword-mask** at their def
 These event channels will be enabled on every cluster node when the cluster service starts or whenever the **EnabledEventLogs** property is changed.
 -->
 
-## How to consume the XML files from Get-PCStroageDiagnosticinfo
-You can consume the data from the XML files provided in data collected by the **Get-PCStroageDiagnosticinfo** cmdlet. These files have information about the virtual disks, physical disks, basic cluster info and other PowerShell related outputs. 
+## How to consume the XML files from Get-PCStorageDiagnosticInfo
+You can consume the data from the XML files provided in data collected by the **Get-PCStorageDiagnosticInfo** cmdlet. These files have information about the virtual disks, physical disks, basic cluster info and other PowerShell related outputs. 
 
 To see the results of these outputs, open a PowerShell window and run the following steps. 
 
