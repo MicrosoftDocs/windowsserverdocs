@@ -15,7 +15,7 @@ A failover cluster is a group of independent computers that work together to inc
 
 This guide describes the steps for installing and configuring a general purpose file server failover cluster that has two nodes. By creating the configuration in this guide, you can learn about failover clusters and familiarize yourself with the Failover Cluster Management snap-in interface in Windows Server® 2016 or Windows Server® 2019.
 
-# In this guide
+## In this guide
 
 Overview for a two-node file server cluster
 
@@ -31,7 +31,7 @@ Steps for installing a two-node file server cluster
 
 Steps for configuring a two-node file server cluster
 
-# Overview for a two-node file server cluster
+## Overview for a two-node file server cluster
 
 Servers in a failover cluster can function in a variety of roles, including the roles of file server, mail server, Hyper-V server or database server, and can provide high availability for a variety of other services and applications. This guide describes how to configure a two-node file server cluster.
 
@@ -47,7 +47,7 @@ Note that for the maximum availability of any server, it is important to follow 
 
 The following scenario describes how a file server failover cluster can be configured. The files being shared are on the cluster storage, and either clustered server can act as the file server that shares them.
 
-# Shared Folders in a failover cluster
+## Shared Folders in a failover cluster
 
 In Windows Server 2008, the interfaces for viewing or configuring shared folders in a failover cluster have been extended and streamlined. Configuration is more straightforward and misconfiguration is less likely. The following list describes functionality that is integrated into failover clustering:
 
@@ -61,7 +61,7 @@ In Windows Server 2008, the interfaces for viewing or configuring shared folders
 
 - Integration of Services for Network File System: The File Server role in Windows Server includes the optional role service called Services for Network File System (NFS). By installing the role service and configuring shared folders with Services for NFS, you can create a clustered file server that supports UNIX-based clients.
 
-# Requirements for a two-node failover cluster
+## Requirements for a two-node failover cluster
 
 For a failover cluster in Windows Server 2016 or Windows Server 2019 to be considered an officially supported solution by Microsoft, the solution must meet the following criteria.
 
@@ -93,7 +93,7 @@ The following will be needed for a two-node failover cluster.
     - The storage must respond correctly to specific SCSI commands, the storage must follow the standard called SCSI Primary Commands-3 (SPC-3). In particular, the storage must support Persistent Reservations as specified in the SPC-3 standard. 
     -  The miniport driver used for the storage must work with the Microsoft Storport storage driver.
 
-# Deploying storage area networks with failover clusters
+## Deploying storage area networks with failover clusters
 
 When deploying a storage area network (SAN) with a failover cluster, the following guidelines should be observed.
 
@@ -103,7 +103,7 @@ When deploying a storage area network (SAN) with a failover cluster, the followi
 
 - **Consider using multipath I/O software:** In a highly available storage fabric, you can deploy failover clusters with multiple host bus adapters by using multipath I/O software. This provides the highest level of redundancy and availability. The multipath solution must be based on Microsoft Multipath I/O (MPIO). The storage hardware vendor may supply an MPIO device-specific module (DSM) for your hardware, although Windows Server 2016 and Windows Server 2019 include one or more DSMs as part of the operating system.
 
-# Network infrastructure and domain account requirements
+## Network infrastructure and domain account requirements
 
 You will need the following network infrastructure for a two-node failover cluster and an administrative account with the following domain permissions:
 
@@ -123,7 +123,7 @@ You will need the following network infrastructure for a two-node failover clust
 
 - **Account for administering the cluster:** When you first create a cluster or add servers to it, you must be logged on to the domain with an account that has administrator rights and permissions on all servers in that cluster. The account does not need to be a Domain Admins account, but can be a Domain Users account that is in the Administrators group on each clustered server. In addition, if the account is not a Domain Admins account, the account (or the group that the account is a member of) must be given the **Create Computer Objects** and **Read All Properties** permissions in the domain organizational unit (OU) that is will reside in.
 
-# Steps for installing a two node file server cluster
+## Steps for installing a two node file server cluster
 
 You must complete the following steps to install a two-node file server failover cluster.
 
@@ -137,13 +137,13 @@ Step 4: Create the cluster
 
 If you have already installed the cluster nodes and want to configure a file server failover cluster, see Steps for configuring a two-node file server cluster, later in this guide.
 
-## Step 1: Connect the cluster servers to the networks and storage
+### Step 1: Connect the cluster servers to the networks and storage
 
 For a failover cluster network, avoid having single points of failure. There are multiple ways of accomplishing this. You can connect your cluster nodes by multiple, distinct networks. Alternatively, you can connect your cluster nodes with one network that is constructed with teamed network adapters, redundant switches, redundant routers, or similar hardware that removes single points of failure (If you use a network for iSCSI, you must create this network in addition to the other networks).
 
 For a two-node file server cluster, when you connect the servers to the cluster storage, you must expose at least two volumes (LUNs). You can expose additional volumes as needed for thorough testing of your configuration. Do not expose the clustered volumes to servers that are not in the cluster.
 
-### To connect the cluster servers to the networks and storage
+#### To connect the cluster servers to the networks and storage
 
 1. Review the details about networks in Hardware requirements for a two-node failover cluster and Network infrastructure and domain account requirements for a two-node failover cluster, earlier in this guide.
 
@@ -167,11 +167,11 @@ For a two-node file server cluster, when you connect the servers to the cluster 
 
 9. Check the format of any exposed volume or LUN. We recommend NTFS for the format (for the witness disk, you must use NTFS).
 
-## Step 2: Install the file server role and failover cluster feature
+### Step 2: Install the file server role and failover cluster feature
 
 In this step, the file server role and failover cluster feature will be installed. Both servers must be running either Windows Server 2016 or Windows Server 2019.
 
-### Using Server Manager
+#### Using Server Manager
 
 1. Open **Server Manager** and under the **Manage** drop down, select **Add Roles and Features**.
 
@@ -197,7 +197,7 @@ In this step, the file server role and failover cluster feature will be installe
 
 9. Repeat the steps on the second machine.
 
-### Using PowerShell
+#### Using PowerShell
 
 1. Open an administrative PowerShell command window.
 
@@ -226,11 +226,11 @@ In this step, the file server role and failover cluster feature will be installe
 
 6. Repeat the steps on the second machine.
 
-## Step 3: Validate the cluster configuration
+### Step 3: Validate the cluster configuration
 
 Before creating a cluster, we strongly recommend that you validate your configuration. Validation helps you confirm that the configuration of your servers, network, and storage meets a set of specific requirements for failover clusters.
 
-### Using Failover Cluster Manager
+#### Using Failover Cluster Manager
 
 1. From **Server Manager**, choose the **Tools** drop down and select **Failover Cluster Manager**.
 
@@ -258,7 +258,7 @@ Before creating a cluster, we strongly recommend that you validate your configur
 
 9. To view Help topics about cluster validation after you close the wizard, in Failover Cluster Management, click Help, click Help Topics, click the Contents tab, expand the contents for the failover cluster Help, and click Validating a Failover Cluster Configuration.
 
-### Using PowerShell
+#### Using PowerShell
 
 1. Open an administrative PowerShell command window.
 
@@ -284,11 +284,11 @@ Before creating a cluster, we strongly recommend that you validate your configur
 
 5. To view Help topics about cluster validation after you close the wizard, in Failover Cluster Management, click Help, click Help Topics, click the Contents tab, expand the contents for the failover cluster Help, and click Validating a Failover Cluster Configuration.
 
-## Step 4: Create the Cluster
+### Step 4: Create the Cluster
 
 The following will create a cluster out of the machines and configuration you have.
 
-### Using Failover Cluster Manager
+#### Using Failover Cluster Manager
 
 1. From **Server Manager**, choose the **Tools** drop down and select **Failover Cluster Manager**.
 
@@ -308,7 +308,7 @@ The following will create a cluster out of the machines and configuration you ha
 
 8. On the **Summary** page, it will give you the configuration it has created.  You can select View Report to see the report of the creation.
 
-### Using PowerShell
+#### Using PowerShell
 
 1. Open an administrative PowerShell command window.
 
@@ -326,7 +326,7 @@ The following will create a cluster out of the machines and configuration you ha
 
     New-Cluster -Name CLUSTER -Node "NODE1","NODE2"
 
-## Steps for configuring a file server failover cluster
+### Steps for configuring a file server failover cluster
 
 To configure a file server failover cluster, follow the below steps.
 
@@ -372,11 +372,11 @@ To configure a file server failover cluster, follow the below steps.
 
 12. On the **Confirmation** page, verify what you have configured and select **Create** to create the file server share.
 
-8. On the **Results** page, select Close if it created the share.  If it could not create the share, it will give you the errors incurred.
+13. On the **Results** page, select Close if it created the share.  If it could not create the share, it will give you the errors incurred.
 
-9. Choose **Close**.
+14. Choose **Close**.
 
-10. Repeat this process for any additional shares.
+15. Repeat this process for any additional shares.
 
 
 
