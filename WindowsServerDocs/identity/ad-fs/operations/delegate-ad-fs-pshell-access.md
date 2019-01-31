@@ -1,5 +1,4 @@
 ---
-ms.assetid: eefcc989-8763-45ee-8a64-3a97b4397160
 title: Delegate AD FS Powershell Commandlet Access to Non-Admin Users 
 description:This document descirbes how to delegate permissions to non-admins for AD FS PowerShell cmdlts.
 author: billmath
@@ -15,6 +14,7 @@ ms.technology: identity-adfs
 
 # Delegate AD FS Powershell Commandlet Access to Non-Admin Users 
 By default, AD FS administration via PowerShell can only be accomplished by AD FS administrators. For many large organizations, this may not be a viable operational model when dealing with other personas such as a help desk personnel.  
+
 With Just Enough Administration (JEA), customers can now delegate specific commandlets to different personnel groups.  
 A good example of this use case is allowing help desk personnel to query AD FS account lockout status and reset account lockout state in AD FS once a user has been vetted. In this case, the commandlets that would need to be delegated are: 
 - `Get-ADFSAccountActivity`
