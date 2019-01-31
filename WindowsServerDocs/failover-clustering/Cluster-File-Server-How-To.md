@@ -7,7 +7,6 @@ ms.topic: article
 author: johnmarlin-msft
 ms.date: 01/30/2019
 description: This article describes creating a 2-node File Server Cluster
-ms.localizationpriority: medium
 ---
 
 > Applies To: Windows Server 2016, Windows Server 2019
