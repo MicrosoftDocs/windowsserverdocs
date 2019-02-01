@@ -192,13 +192,42 @@ Run the Shielding Data File wizard to create a shielding data (PDK) file. Here, 
 
 ## Create a shielding data file and add guardians using PowerShell
 
-As an alternative to the Shielding Data File wizard, you can run [New-ShieldingDataFile](https://docs.microsoft.com/powershell/module/shieldedvmdatafile/new-shieldingdatafile?view=win10-ps) to create a shielding data file. 
-The following example uses the guardian and volume ID specified by the _Owner_ and _VolumeIDQualifier_ parameters.
+As an alternative to the Shielding Data File wizard, you can run [New-ShieldingDataFile](https://docs.microsoft.com/powershell/module/shieldedvmdatafile/new-shieldingdatafile?view=win10-ps) to create a shielding data file.
+
+All shielding data files need to be configured with the correct owner and guardian certificates to authorize your shielded VMs to be run on a guarded fabric.
+You can check if you have any guardians installed locally by running [Get-HgsGuardian](https://docs.microsoft.com/en-us/powershell/module/hgsclient/get-hgsguardian?view=win10-ps). Owner guardians have private keys while guardians for your datacenter typically do not.
+
+If you need to create an owner guardian, run the following command:
 
 ```powershell
-
-New-ShieldingDataFile -ShieldingDataFilePath "C:\temp\Marketing-HBI.pdk" -Owner Relecloud -VolumeIDQualifier <VolumeIDQualifier[]>
+New-HgsGuardian -Name "Owner" -GenerateCertificates
 ```
+
+This command creates a pair of signing and encryption certificates in the local machine's certificate store under the "Shielded VM Local Certificates" folder.
+You will need the owner certificates and their corresponding private keys to unshield a virtual machine, so ensure these certificates are backed up and protected from theft.
+An attacker with access to the owner certificates can use them to start up your shielded virtual machine or change its security configuration.
+
+If you need to import guardian information from a guarded fabric where you want to run your virtual machine (your primary datacenter, backup datacenters, etc.), run the following command for each [metadata file retrieved from your guarded fabrics](#Select-trusted-fabrics).
+
+```powershell
+Import-HgsGuardian -Name 'EAST-US Datacenter' -Path '.\EastUSGuardian.xml'
+```
+
+> [!TIP]
+> If you used self-signed certificates or the certificates registered with HGS are expired, you may need to use the `-AllowUntrustedRoot` and/or `-AllowExpired` flags with the Import-HgsGuardian command to bypass the security checks.
+
+You will also need to [obtain a volume signature catalog](#Get-the-volume-signature-catalog-file) for each template disk you want to use with this shielding data file and a [shielding data answer file](#Create-an-answer-file) to allow the operating system to complete its specialization tasks automatically.
+Lastly, decide if you want your VM to be fully shielded or just vTPM-enabled.
+Use `-Policy Shielded` for a fully shielded VM or `-Policy EncryptionSupported` for a vTPM enabled VM that allows basic console connections and PowerShell Direct.
+
+Once everything is ready, run the following command to create your shielding data file:
+
+```powershell
+$viq = New-VolumeIDQualifier -VolumeSignatureCatalogFilePath 'C:\temp\marketing-ws2016.vsc' -VersionRule Equals
+New-ShieldingDataFile -ShieldingDataFilePath "C:\temp\Marketing-LBI.pdk" -Policy EncryptionSupported -Owner 'Owner' -Guardian 'EAST-US Datacenter' -VolumeIDQualifier $viq -AnswerFile 'C:\temp\marketing-ws2016-answerfile.xml'
+```
+
+See the cmdlet documentation for [New-ShieldingDataFile](https://docs.microsoft.com/en-us/powershell/module/shieldedvmdatafile/New-ShieldingDataFile?view=win10-ps) and [New-VolumeIDQualifier](https://docs.microsoft.com/en-us/powershell/module/shieldedvmdatafile/New-VolumeIDQualifier?view=win10-ps) to learn about additional ways to configure your shielding data file.
 
 ## See also
 
