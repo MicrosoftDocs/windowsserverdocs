@@ -1,14 +1,14 @@
 ---
-title: Deplopying a two-node clustered file server
+title: Deploying a two-node clustered file server
 ms.prod: windows-server-threshold
 ms.manager: eldenc
 ms.technology: failover-clustering
 ms.topic: article
 author: johnmarlin-msft
-ms.date: 01/30/2019
-description: This article describes creating a 2-node File Server Cluster
+ms.date: 02/01/2019
+description: This article describes creating a two-node file server cluster
 ---
-# Deplopying a two-node clustered file server
+# Deploying a two-node clustered file server
 
 > Applies To: Windows Server 2019, Windows Server 2016
 
@@ -60,7 +60,7 @@ The following will be needed for a two-node failover cluster.
 
 - **Network Adapters and cable:** The network hardware, like other components in the failover cluster solution, must be compatible with Windows Server 2016 or Windows Server 2019. If you use iSCSI, the network adapters must be dedicated to either network communication or iSCSI, not both. In the network infrastructure that connects your cluster nodes, avoid having single points of failure. There are multiple ways of accomplishing this. You can connect your cluster nodes by multiple, distinct networks. Alternatively, you can connect your cluster nodes with one network that is constructed with teamed network adapters, redundant switches, redundant routers, or similar hardware that removes single points of failure.
 
-   > NOTE
+   > [!NOTE]
    > If the cluster nodes are connected with a single network, the network will pass the redundancy requirement in the Validate a Configuration wizard.  However, the report will include a warning that the network should not have a single point of failure.
 
 - **Device Controllers or appropriate adapters for storage:**
@@ -185,14 +185,7 @@ In this step, the file server role and failover cluster feature will be installe
 
 #### Using PowerShell
 
-1. Open an administrative PowerShell command window.
-
-    - Hit the Start window icon in lower left
-    - Right mouse click on **Windows PowerShell**
-    - Choose **More**
-    - Choose **Run as administrator**
-    - Select **Yes** to allow changes
-
+1. Open an administrative PowerShell session by right-clicking the Start button and then selecting **Windows PowerShell (Admin)**.
 2. To install the File Server Role, run the command:
 
     ```PowerShell
@@ -240,34 +233,20 @@ Before creating a cluster, we strongly recommend that you validate your configur
 
 7. Once completed, the **Summary** page appears after the tests run. To view Help topics that will help you interpret the results, click **More about cluster validation tests**.
 
-8. While still on the Summary page, click View Report and read the test results.
-
-    To view the results of the tests after you close the wizard, see
-
-    SystemRoot\Cluster\Reports\Validation Report date and time.html
-
-    where SystemRoot is the folder in which the operating system is installed (for example, C:\Windows).
-
-    As necessary, make changes in the configuration and rerun the tests.
+8. While still on the Summary page, click View Report and read the test results. Make any necessary changes in the configuration and rerun the tests. <br>To view the results of the tests after you close the wizard, see *SystemRoot\Cluster\Reports\Validation Report date and time.html*.
 
 9. To view Help topics about cluster validation after you close the wizard, in Failover Cluster Management, click Help, click Help Topics, click the Contents tab, expand the contents for the failover cluster Help, and click Validating a Failover Cluster Configuration.
 
 #### Using PowerShell
 
-1. Open an administrative PowerShell command window. <br>To do so, right-click Start and then select **Windows PowerShell (Admin)**.
+1. Open an administrative PowerShell session by right-clicking the Start button and then selecting **Windows PowerShell (Admin)**.
 
 2. To validate the machines (for example, the machine names being NODE1 and NODE2) for Failover Clustering, run the command:
 
     ```PowerShell
     Test-Cluster -Node "NODE1","NODE2"
     ```
-4. To view the results of the tests after you close the wizard, see the file specified.
-
-    SystemRoot\Cluster\Reports\Validation Report date and time.html
-
-    where SystemRoot is the folder in which the operating system is installed (for example, C:\Windows).
-
-    As necessary, make changes in the configuration and rerun the tests.
+4. To view the results of the tests after you close the wizard, see the file specified (in SystemRoot\Cluster\Reports\), then make any necessary changes in the configuration and rerun the tests.
 
 For more info, see [Validating a Failover Cluster Configuration](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj134244(v=ws.11)).
 
@@ -287,7 +266,8 @@ The following will create a cluster out of the machines and configuration you ha
 
 5. In the **Access Point for Administering the Cluster** window, input the name of the cluster you will be using.  Please note that this is not the name you will be using to connect to your file shares with.  This is for simply administrating the cluster.
 
-    **NOTE:** If you are using static IP Addresses, you will need to select the network to use and input the IP Address it will use for the cluster name.  If you are using DHCP for your IP Addresses, the IP Address will be configured automatically for you.
+   > [!NOTE]
+   > If you are using static IP Addresses, you will need to select the network to use and input the IP Address it will use for the cluster name.  If you are using DHCP for your IP Addresses, the IP Address will be configured automatically for you.
 
 6. Choose **Next**.
 
@@ -297,21 +277,19 @@ The following will create a cluster out of the machines and configuration you ha
 
 #### Using PowerShell
 
-1. Open an administrative PowerShell command window.
-
-    - Hit the Start window icon in lower left
-    - Right mouse click on **Windows PowerShell**
-    - Choose **More**
-    - Choose **Run as administrator**
-    - Select **Yes** to allow changes
+1. Open an administrative PowerShell session by right-clicking the Start button and then selecting **Windows PowerShell (Admin)**.
 
 2. Run the following command to create the cluster if you are using static IP Addresses.  For example, the machine names are NODE1 and NODE2, the name of the cluster will be CLUSTER, and the IP Address will be 1.1.1.1.
 
+   ```PowerShell
     New-Cluster -Name CLUSTER -Node "NODE1","NODE2" -StaticAddress 1.1.1.1
+   ```
 
 3. Run the following command to create the cluster if you are using DHCP for IP Addresses.  For example, the machine names are NODE1 and NODE2, and the name of the cluster will be CLUSTER.
 
-    New-Cluster -Name CLUSTER -Node "NODE1","NODE2"
+   ```PowerShell    
+   New-Cluster -Name CLUSTER -Node "NODE1","NODE2"
+   ```
 
 ### Steps for configuring a file server failover cluster
 
@@ -319,7 +297,7 @@ To configure a file server failover cluster, follow the below steps.
 
 1. From **Server Manager**, choose the **Tools** drop down and select **Failover Cluster Manager**.
 
-2. When Filaover Cluster Manager opens, it should automatically bring in the name of the cluster you created.  If it does not, go to the middle column under **Management** and choose **Connect to Cluster**.  Input the name of the cluster you created and **OK**.
+2. When Failover Cluster Manager opens, it should automatically bring in the name of the cluster you created.  If it does not, go to the middle column under **Management** and choose **Connect to Cluster**.  Input the name of the cluster you created and **OK**.
 
 3. In the console tree, click the ">" sign next to the cluster that you created to expand the items underneath it.
 
@@ -329,15 +307,14 @@ To configure a file server failover cluster, follow the below steps.
 
 6. In the list of roles, choose **File Server** and **Next**.
 
-7. For the File Server Type, select **File Server for general use** and **Next**.
+7. For the File Server Type, select **File Server for general use** and **Next**.<br>For info about Scale-Out File Server, see [Scale-Out File Server overview](sofs-overview.md).
 
-![File Server Type](media\Cluster-File-Server\Cluster-FS-File-Server-Type.png)
-
-    Please note that Scale-Out File Server for application data will be covered in a different topic.
+   ![File Server Type](media\Cluster-File-Server\Cluster-FS-File-Server-Type.png)
 
 8. In the **Client Access Point** window, input the name of the file server you will be using.  Please note that this is not the name of the cluster.  This is for the file share connectivity.  For example, if I want to connect to \\SERVER, the name inputted would be SERVER.
 
-    **NOTE:** If you are using static IP Addresses, you will need to select the network to use and input the IP Address it will use for the cluster name.  If you are using DHCP for your IP Addresses, the IP Address will be configured automatically for you.
+   > [!NOTE]
+   > If you are using static IP Addresses, you will need to select the network to use and input the IP Address it will use for the cluster name.  If you are using DHCP for your IP Addresses, the IP Address will be configured automatically for you.
 
 6. Choose **Next**.
 
@@ -364,17 +341,3 @@ To configure a file server failover cluster, follow the below steps.
 14. Choose **Close**.
 
 15. Repeat this process for any additional shares.
-
-
-
-
-
-
-
-
-
-
-
-
-
-

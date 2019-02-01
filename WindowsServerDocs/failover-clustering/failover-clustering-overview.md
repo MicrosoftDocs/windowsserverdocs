@@ -122,6 +122,8 @@ Failover Clustering has many practical applications, including:
 <HR />
                                         <p><a href="create-failover-cluster.md">Creating a Failover Cluster</a></p> 
 <HR />
+                                        <p><a href="deploy-two-node-clustered-file-server.md">Deploy a two-node file server</a></p> 
+<HR />
                                         <p><a href="manage-cluster-quorum.md">Manage the quorum and witnesses</a></p> 
 <HR />
                                         <p><a href="deploy-cloud-witness.md">Deploy a cloud witness</a></p>

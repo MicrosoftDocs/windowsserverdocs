@@ -16,7 +16,7 @@ ms.date: 10/16/2017
 ---
 # Software Inventory Logging Aggregator
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2
+>Applies To: Windows Server 2012 R2
 
 ## What is Software Inventory Logging Aggregator?
 Software Inventory Logging Aggregator (SILA) receives, aggregates, and produces basic reports of the number and types of Microsoft enterprise software installed on Windows Servers in a data center.

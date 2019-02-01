@@ -404,6 +404,7 @@
 #### [Create a Claims Provider Trust](ad-fs/operations/create-a-Claims-Provider-Trust.md) 
 #### [Create a Non-Claims Aware Relying Party Trust](ad-fs/operations/create-a-Non-Claims-Aware-Relying-Party-Trust.md)
 #### [Create a Relying Party Trust](ad-fs/operations/create-a-Relying-Party-Trust.md) 
+#### [Delegate AD FS Powershell Commandlet Access to Non-Admin Users](ad-fs/operations/delegate-ad-fs-pshell-access.md)
 #### [Device Authentication Controls in AD FS](ad-fs/operations/device-authentication-controls-in-AD-FS.md)
 
 #### [Improved interoperability with SAML 2.0](ad-fs/operations/Improved-interoperability-with-SAML-2.0.md)
