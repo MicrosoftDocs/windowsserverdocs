@@ -14,6 +14,7 @@
 ### [Using guest VM clusters](../storage/storage-spaces/storage-spaces-direct-in-vm.md)
 ## Deploy
 ### [Create a failover cluster](create-failover-cluster.md)
+### [Deploy a two-node file server](deploy-two-node-clustered-file-server.md)
 ### [Prestage a cluster in AD DS](prestage-cluster-adds.md)
 #### [Configuring cluster accounts in Active Directory](configure-ad-accounts.md)
 ### [Manage quorum and witnesses](manage-cluster-quorum.md)
