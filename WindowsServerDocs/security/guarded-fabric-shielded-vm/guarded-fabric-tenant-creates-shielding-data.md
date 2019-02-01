@@ -227,6 +227,13 @@ $viq = New-VolumeIDQualifier -VolumeSignatureCatalogFilePath 'C:\temp\marketing-
 New-ShieldingDataFile -ShieldingDataFilePath "C:\temp\Marketing-LBI.pdk" -Policy EncryptionSupported -Owner 'Owner' -Guardian 'EAST-US Datacenter' -VolumeIDQualifier $viq -AnswerFile 'C:\temp\marketing-ws2016-answerfile.xml'
 ```
 
+In the above command, the guardian named "Owner" (obtained from Get-HgsGuardian) will be able to change the security configuration of the VM in the future, while 'EAST-US Datacenter' can run the VM but not change its settings.
+If you have more than one guardian, separate the names of the guardians with commas like `'EAST-US Datacenter', 'EMEA Datacenter'`.
+The volume ID qualifier specifies whether you trust only the exact version (Equals) of the template disk or future versions (GreaterThanOrEquals) as well.
+The disk name and signing certificate must match exactly for the version comparison to considered at deployment time.
+You can trust more than one template disk by providing a comma-separated list of volume ID qualifiers to the `-VolumeIDQualifier` parameter.
+Finally, if you have other files that need to accompany the answer file with the VM, use the `-OtherFile` parameter and provide a comma-separated list of file paths.
+
 See the cmdlet documentation for [New-ShieldingDataFile](https://docs.microsoft.com/en-us/powershell/module/shieldedvmdatafile/New-ShieldingDataFile?view=win10-ps) and [New-VolumeIDQualifier](https://docs.microsoft.com/en-us/powershell/module/shieldedvmdatafile/New-VolumeIDQualifier?view=win10-ps) to learn about additional ways to configure your shielding data file.
 
 ## See also
