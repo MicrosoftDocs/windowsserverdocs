@@ -11,7 +11,7 @@ ms.topic: article
 author: justinha
 ms.author: justinha
 manager: brianlic-msft
-ms.date: 10/19/2018
+ms.date: 02/02/2019
 ---
 
 # Transport Layer Security (TLS) registry settings
@@ -386,10 +386,6 @@ This subkey controls the use of TLS 1.1.
 
 For TLS 1.1 default settings, see [Protocols in the TLS/SSL (Schannel SSP)](https://msdn.microsoft.com/library/windows/desktop/mt808159.aspx).
 
->[!Note] 
->For TLS 1.1 to be enabled and negotiated on servers that run Windows Server 2008 R2, you MUST create the **DisabledByDefault** entry in the appropriate subkey (Client, Server) and set it to "0". 
->The entry will not be seen in the registry and it is set to "1" by default.
-
 Registry path: HKLM SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols
 
 To enable the TLS 1.1 protocol, create an **Enabled** entry in either the Client or Server subkey as described in the following table. 
@@ -418,10 +414,6 @@ The following example shows TLS 1.1 disabled in the registry:
 This subkey controls the use of TLS 1.2.
 
 For TLS 1.2 default settings, see [Protocols in the TLS/SSL (Schannel SSP)](https://msdn.microsoft.com/library/windows/desktop/mt808159.aspx).
-
->[!Note] 
->For TLS 1.2 to be enabled and negotiated on servers that run Windows Server 2008 R2, you MUST create the **DisabledByDefault** entry in the appropriate subkey (Client, Server) and set it to "0". 
->The entry will not be seen in the registry and it is set to "1" by default.
 
 Registry path: HKLM SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols
 
