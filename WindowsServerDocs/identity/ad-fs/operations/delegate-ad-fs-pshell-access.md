@@ -22,10 +22,11 @@ A good example of this use case is allowing help desk personnel to query AD FS a
 - `Reset-ADFSAccountLockout` 
 
 We will use this example in the rest of this document. However, one can customize this to also allow delegation to set properties of relying parties and hand this off to application owners within the organization.  
-Setup Instructions 
-## Create the required groups necessary to grant users permissions 
+
+
+##  Create the required groups necessary to grant users permissions 
 1. Create a [Group Managed Service Account](https://docs.microsoft.com/windows-server/security/group-managed-service-accounts/group-managed-service-accounts-overview). The gMSA account is used to allow the JEA user to access network resources as other machines or web services. It provides a domain identity which can be used to authenticate against resources on any machine within the domain. The gMSA account will be granted the necessary administrative rights later in the setup. For this example, we will call the account **gMSAContoso**. 
-2. Create an Active Directory group can be populated with users that need to be granted the rights to the delegated commands. In this example, help desk personnel are granted permissions to read, update, and reset the ADFS lockout state. We will refer to this group throughout the example as JEAContoso. 
+2. Create an Active Directory group can be populated with users that need to be granted the rights to the delegated commands. In this example, help desk personnel are granted permissions to read, update, and reset the ADFS lockout state. We will refer to this group throughout the example as **JEAContoso**. 
 
 ### Install the gMSA account on the ADFS Server: 
 Create a service account which has administrative rights to the ADFS servers. This can be performed on the domain controller or remotely as long as the AD RSAT package is installed.  The service account must be created in the same forest as the ADFS server. 
@@ -63,7 +64,17 @@ Create the JEA role in a notepad file. Instructions to create the role is provid
  
 The commandlets delegated in this example are `Reset-AdfsAccountLockout, Get-ADFSAccountActivity, and Set-ADFSAccountActivity`. 
 
-![](media/delegate-ad-fs-pshell-access/delegate1.png)
+Sample JEA role delegating access of ‘Reset-ADFSAccountLockout’, ‘Get-ADFSAccountActivity’, and ‘Set-ADFSAccountActivity’ commandlets:
+
+```
+@{
+GUID = 'b35d3985-9063-4de5-81f8-241be1f56b52'
+ModulesToImport = 'adfs'
+VisibleCmdlets = 'Reset-AdfsAccountLockout', 'Get-ADFSAccountActivity', 'Set-ADFSAccountActivity'
+}
+```
+
+
 
 ### Create the JEA Session Configuration File 
 Follow the instructions to create the [JEA session configuration](https://docs.microsoft.com/powershell/jea/session-configurations) file. The configuration file determines who can use the JEA endpoint, and what capabilities they will have access to. 
@@ -73,7 +84,16 @@ Role capabilities are referenced by the flat name (filename without the extensio
 To specify a Role Capability File with a path, use the `RoleCapabilityFiles` argument. For a subfolder, JEA will look for valid Powershell modules that contain a `RoleCapabilities` subfolder, where the `RoleCapabilityFiles` argument should be modified to be `RoleCapabilities`. 
 
 Sample session configuration file: 
-![](media/delegate-ad-fs-pshell-access/delegate2.png)
+
+```
+@{
+SchemaVersion = '2.0.0.0'
+GUID = '54c8d41b-6425-46ac-a2eb-8c0184d9c6e6'
+SessionType = 'RestrictedRemoteServer'
+GroupManagedServiceAccount = gMSAcontoso
+RoleDefinitions = @{ JEAcontoso = @{ RoleCapabilityFiles = ':\Program Files\WindowsPowershell\Modules\AccountActivityJEA\RoleCapabilities\JEAAccountActivityResetRole.psrc' } }
+}
+```
 
 Save the session configuration file. 
  
