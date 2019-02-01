@@ -355,7 +355,12 @@ PS C:\>Restart-service adfssrv
 
 
 ## Manage User Account Activity
-AD FS provides 3 cmdlets to manage user account activity data.  These cmdlets automatically connect to the node in the farm which holds the master role (though this behavior can be overridden by passing the -Server parameter)
+AD FS provides 3 cmdlets to manage user account activity data.  These cmdlets automatically connect to the node in the farm which holds the master role (though this behavior can be overridden by passing the -Server parameter).
+
+> [!NOTE] 
+> For information on delegating permissions for using these cmdlets, see [Delegate AD FS Powershell Commandlet Access to Non-Admin Users](delegate-ad-fs-pshell-access.md)
+
+These cmdlets are:
 
 `Get-ADFSAccountActivity`
 
