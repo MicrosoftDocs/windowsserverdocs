@@ -60,7 +60,7 @@ The following will be needed for a two-node failover cluster.
 
 - **Network Adapters and cable:** The network hardware, like other components in the failover cluster solution, must be compatible with Windows Server 2016 or Windows Server 2019. If you use iSCSI, the network adapters must be dedicated to either network communication or iSCSI, not both. In the network infrastructure that connects your cluster nodes, avoid having single points of failure. There are multiple ways of accomplishing this. You can connect your cluster nodes by multiple, distinct networks. Alternatively, you can connect your cluster nodes with one network that is constructed with teamed network adapters, redundant switches, redundant routers, or similar hardware that removes single points of failure.
 
-   > NOTE
+   > [!NOTE]
    > If the cluster nodes are connected with a single network, the network will pass the redundancy requirement in the Validate a Configuration wizard.  However, the report will include a warning that the network should not have a single point of failure.
 
 - **Device Controllers or appropriate adapters for storage:**
@@ -233,15 +233,7 @@ Before creating a cluster, we strongly recommend that you validate your configur
 
 7. Once completed, the **Summary** page appears after the tests run. To view Help topics that will help you interpret the results, click **More about cluster validation tests**.
 
-8. While still on the Summary page, click View Report and read the test results.
-
-    To view the results of the tests after you close the wizard, see
-
-    SystemRoot\Cluster\Reports\Validation Report date and time.html
-
-    where SystemRoot is the folder in which the operating system is installed (for example, C:\Windows).
-
-    As necessary, make changes in the configuration and rerun the tests.
+8. While still on the Summary page, click View Report and read the test results. Make any necessary changes in the configuration and rerun the tests. <br>To view the results of the tests after you close the wizard, see *SystemRoot\Cluster\Reports\Validation Report date and time.html*.
 
 9. To view Help topics about cluster validation after you close the wizard, in Failover Cluster Management, click Help, click Help Topics, click the Contents tab, expand the contents for the failover cluster Help, and click Validating a Failover Cluster Configuration.
 
@@ -254,13 +246,7 @@ Before creating a cluster, we strongly recommend that you validate your configur
     ```PowerShell
     Test-Cluster -Node "NODE1","NODE2"
     ```
-4. To view the results of the tests after you close the wizard, see the file specified.
-
-    SystemRoot\Cluster\Reports\Validation Report date and time.html
-
-    where SystemRoot is the folder in which the operating system is installed (for example, C:\Windows).
-
-    As necessary, make changes in the configuration and rerun the tests.
+4. To view the results of the tests after you close the wizard, see the file specified (in SystemRoot\Cluster\Reports\), then make any necessary changes in the configuration and rerun the tests.
 
 For more info, see [Validating a Failover Cluster Configuration](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj134244(v=ws.11)).
 
@@ -280,7 +266,8 @@ The following will create a cluster out of the machines and configuration you ha
 
 5. In the **Access Point for Administering the Cluster** window, input the name of the cluster you will be using.  Please note that this is not the name you will be using to connect to your file shares with.  This is for simply administrating the cluster.
 
-    **NOTE:** If you are using static IP Addresses, you will need to select the network to use and input the IP Address it will use for the cluster name.  If you are using DHCP for your IP Addresses, the IP Address will be configured automatically for you.
+   > [!NOTE]
+   > If you are using static IP Addresses, you will need to select the network to use and input the IP Address it will use for the cluster name.  If you are using DHCP for your IP Addresses, the IP Address will be configured automatically for you.
 
 6. Choose **Next**.
 
