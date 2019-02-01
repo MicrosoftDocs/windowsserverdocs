@@ -7,7 +7,7 @@ ms.topic: article
 author: JasonGerend
 manager: dougkim
 ms.author: jgerend
-ms.date: 01/30/2018
+ms.date: 02/01/2019
 description: New and updated topics in the Failover Clustering documentation for Windows Server 2016
 ---
 # Change history for Failover Clustering topics
@@ -17,6 +17,12 @@ description: New and updated topics in the Failover Clustering documentation for
 This topic lists new and updated topics in the [Failover Clustering](failover-clustering-overview.md) documentation for Windows Server.
 
 > If you're looking for update history for Windows Server 2016, see [Windows 10 and Windows Server 2016 update history](https://support.microsoft.com/help/4000825/windows-10-and-windows-server-2016-update-history).
+
+## February 2019
+
+|New or changed topic                                    |Description |
+|--------------------------------------------------------|------------|
+|[Deploy a two-node file server](deploy-two-node-clustered-file-server.md)| New |
 
 ## January 2019
 
