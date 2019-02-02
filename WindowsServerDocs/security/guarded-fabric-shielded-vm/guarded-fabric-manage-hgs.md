@@ -676,7 +676,7 @@ See the section on [adding new keys](#adding-new-keys) for detailed information 
 
     ```powershell
     Set-HgsKeyProtectionCertificate -CertificateType Signing -Thumbprint <Thumbprint> -IsPrimary
-    Set-HgsKeyProtectionCertificate -CertificateType Signing -Thumbprint <Thumbprint> -IsPrimary
+    Set-HgsKeyProtectionCertificate -CertificateType Encryption -Thumbprint <Thumbprint> -IsPrimary
     ```
 
 At this point, shielding data created with metadata obtained from the HGS node will use the new certificates, but existing VMs will continue to work because the older certificates are still there.
