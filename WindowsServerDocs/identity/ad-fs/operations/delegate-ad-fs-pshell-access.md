@@ -113,5 +113,5 @@ To use the delegated commands:
 
 ``` PowerShell
 Enter-pssession -ComputerName server01.contoso.com -ConfigurationName "AccountActivityAdministration" -Credential <User Using JEA> 
-PS>Get-AdfsAccountActivity <User> 
+Get-AdfsAccountActivity <User> 
 ```
