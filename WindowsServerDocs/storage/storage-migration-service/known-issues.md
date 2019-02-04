@@ -4,7 +4,7 @@ description: Known issues and troubleshooting support for Storage Migration Serv
 author: nedpyle
 ms.author: nedpyle
 manager: siroy
-ms.date: 12/20/2018
+ms.date: 2/04/2019
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: storage
@@ -50,13 +50,13 @@ To work around this issue, install the Storage Migration Service on a Windows Se
 
 We intend to fix this issue in a later release of Windows Server. Please open a support case via [Microsoft Support](https://support.microsoft.com) to request a backport of this fix be created.
 
-## Storage Migration Service not included in Windows Server 2019 Evaluation edition"
+## Storage Migration Service isn't included in Windows Server 2019 Evaluation edition
 
-When using Windows Admin Center to connect to a [Windows Server 2019 Evaluation release](https://www.microsoft.com/en-us/evalcenter/evaluate-windows-server-2019) there is no option to manage the Storage Migration Service. There is also no Storage Migration Service included in Roles and Features.
+When using Windows Admin Center to connect to a [Windows Server 2019 Evaluation release](https://www.microsoft.com/evalcenter/evaluate-windows-server-2019) there isn't an option to manage the Storage Migration Service. Storage Migration Service also isn't included in Roles and Features.
 
 This is issue is caused by a servicing issue in the Evaluation media of Windows Server 2019. 
 
-To work around this issue, install a retail, MSDN, OEM, or Volume License version of Windows Server 2019 and do not activate it, Without activation, all editions of Windows Server operate in evaluation mode for 180 days. 
+To work around this issue, install a retail, MSDN, OEM, or Volume License version of Windows Server 2019 and don't activate it. Without activation, all editions of Windows Server operate in evaluation mode for 180 days. 
 
 We have fixed this issue in a later release of Windows Server 2019. We may release an update to the existing version of Windows Server 2019 as part of the normal monthly update cycle. 
 
