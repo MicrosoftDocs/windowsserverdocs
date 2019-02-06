@@ -504,6 +504,10 @@ On the host that failed attestation, run the following command to get a detailed
 Get-HgsTrace -RunDiagnostics -Detailed
 ```
 
+> [!IMPORTANT]
+> If you're using Windows Server 2019 or Windows 10, version 1809 and are using code integrity policies, `Get-HgsTrace` may return a failure for the **Code Integrity Policy Active** diagnostic.
+> You can safely ignore this result when it is the only failing diagnostic.
+
 ### Review attestation policies
 To review the current state of the policies configured on HGS, run the following commands on any HGS node:
 
