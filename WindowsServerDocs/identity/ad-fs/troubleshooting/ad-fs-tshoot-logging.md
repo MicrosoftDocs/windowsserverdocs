@@ -81,7 +81,7 @@ The table below describes the basic types of events.
 |Sign Out Failure|1207|Describes a failed sign-out request.|  
 
 ## Security Auditing
-Securtity auditing of the AD FS service account can sometimes assist in tracking down issues with password updates, request/response logging, request contect headers and device registration results.  Auditing of the AD FS service account is disabled by default.
+Security auditing of the AD FS service account can sometimes assist in tracking down issues with password updates, request/response logging, request contect headers and device registration results.  Auditing of the AD FS service account is disabled by default.
 
 ### To enable security auditing
 1.       Click Start, point to **Programs**, point to **Administrative Tools**, and then click **Local Security Policy**.
