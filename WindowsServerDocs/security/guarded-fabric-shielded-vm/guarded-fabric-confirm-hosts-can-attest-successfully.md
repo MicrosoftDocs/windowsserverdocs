@@ -7,7 +7,7 @@ ms.assetid: 7485796b-b840-4678-9b33-89e9710fbbc7
 manager: dongill
 author: rpsqrd
 ms.technology: security-guarded-fabric
-ms.date: 08/29/2018
+ms.date: 02/05/2019
 ---
 
 # Confirm guarded hosts can attest 
@@ -45,6 +45,10 @@ A fabric administrator needs to confirm that Hyper-V hosts can run as guarded ho
     The output of the command indicates whether the host passed attestation and is now guarded. If `IsHostGuarded` does not return **True**, you can run the HGS diagnostics tool, [Get-HgsTrace](https://technet.microsoft.com/library/mt718831.aspx), to investigate. To run diagnostics, enter the following command in an elevated Windows PowerShell prompt on the host:
 
         Get-HgsTrace -RunDiagnostics -Detailed
+
+    > [!IMPORTANT]
+    > If you're using Windows Server 2019 or Windows 10, version 1809 and are using code integrity policies, `Get-HgsTrace` may return a failure for the **Code Integrity Policy Active** diagnostic.
+    > You can safely ignore this result when it is the only failing diagnostic.
 
 ## Next step
 
