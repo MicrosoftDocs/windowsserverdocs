@@ -76,7 +76,7 @@ In this step you cut over from the source servers to the destination servers, mo
  1. If you've navigated away from the migration job, in Windows Admin Center, go to **Server Manager** > **Storage Migration Service** and then select the job that you want to complete. 
  1. On the **Cut over to the new servers** > **Enter credentials** page, select **Next** to use the credentials you typed previously.
  1. On the **Configure cutover** page, specify which network adapters to take over each source device's settings. This moves the IP address from the source to the destination as part of the cutover.
- 1. Specify what IP address to use for the source server after cutover moves its address to the destination. You can use DHCP or a static address.
+ 1. Specify what IP address to use for the source server after cutover moves its address to the destination. You can use DHCP or a static address. If using a static address, the new network must be the same as the old network or cutover will fail.
     ![Screenshot showing a source server and its IP addresses and computer names and what they'll be replaced with after the cutover](media/migrate/cutover.png)
     **Figure 4: A source server and how its network configuration will move to the destination**
  1. Specify how to rename the source server after the destination server takes over its name. You can use a randomly generated name or type one yourself. Then select **Next**.
