@@ -161,6 +161,12 @@ The client uses standard touch gestures. You can also use touch gestures to repl
 | Mouse pointer | Mouse wheel          | 2 finger tap and hold, then drag up or down                |
 | Mouse pointer | Zoom                 | Pinch 2 fingers to zoom in or spread 2 fingers to zoom out |
 
+## Supported input devices
+
+The [Remote Desktop iOS beta client](aka.ms/rdiosbeta) supports the Swiftpoint GT and ProPoint physical mice. Swiftpoint is offering an [exclusive discount](https://www.swiftpoint.com/) on the GT and ProPoint devices for iOS beta client users.
+
+The iOS client currently only supports Swiftpoint mice. Refer to the [What's new for the Remote Desktop client on iOS](remote-desktop-ios.md) page and the [iOS app store](aka.ms/rdios) for news about support for other devices in the future.
+
 ## Use a keyboard in a remote session
 
 You can use either an on-screen keyboard or physical keyboard in your remote session.
@@ -183,8 +189,6 @@ Be aware that, due to limitations on the OS, special keys such as Ctrl, Option, 
 - Copy: Command+C = Ctrl+C (Copy in most programs)
 - Paste: Command+V = Ctrl+V (Paste in most programs)
 - Symbols: Alt+Alphanumeric keys will produce different symbols depending on the language configured
-
-
 
 > [!TIP]
 > Questions and comments are always welcome. However, please do NOT post a request for troubleshooting help by using the comment feature at the end of this article. Instead, go to the [Remote Desktop client forum](https://social.technet.microsoft.com/forums/windowsserver/en-us/home?forum=winrdc) and start a new thread. Have a feature suggestion? Tell us in the [client user voice forum](https://remotedesktop.uservoice.com/forums/272085-remote-desktop-for-android).
