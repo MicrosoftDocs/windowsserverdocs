@@ -199,7 +199,15 @@ Import-RDWebClientBrokerCert <certificate file path>
 
 ### Diagnose issues with the console log
 
-If you can't solve the issue based on the troubleshooting instructions in this article, you can try to diagnose the source of the problem yourself by watching the console log in the browser. The console is generally located under the developer tools. For example, you can access the log in Edge by pressing the **F12** key, or by selecting the ellipsis, then navigating to **More tools** > **Developer Tools**.
+If you can't solve the issue based on the troubleshooting instructions in this article, you can try to diagnose the source of the problem yourself by watching the console log in the browser. The web client provides a method for recording the browser console log activity while using the web client to help diagnose issues.
+
+* Select the ellipsis in the upper-right corner and navigate to the **About** page in the dropdown menu.
+* Under **Capture support information** select the **Start recording** button.
+* Perform the operation(s) in the web client that produced the issue you are trying to diagnose.
+* Navigate to the **About** page and select **Stop recording**.
+* Your browser will automatically download a .txt file titled **RD Console Logs.txt**. This file will contain the full console log activity generated while reproducing the target issue.
+
+The console may also be accessed directly through your browser. The console is generally located under the developer tools. For example, you can access the log in Microsoft Edge by pressing the **F12** key, or by selecting the ellipsis, then navigating to **More tools** > **Developer Tools**.
 
 ## Get help with the web client
 
