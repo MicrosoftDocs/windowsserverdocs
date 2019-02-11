@@ -31,7 +31,7 @@ Below is an alphabetical list of Microsoft and third-party providers with MFA of
 ||||
 |-|-|-|
 |**Provider**|**Offering**|**Link to learn more**|
-|aPersona|aPersona Adaptive Multi-Factor Authentication for Microsoft ADFS SSO|[aPersona Adaptive Multi-Factor Authentication for Microsoft ADFS SSO](https://www.apersona.com/) (see the PDF document linked in the main page)|
+|aPersona|aPersona Adaptive Multi-Factor Authentication for Microsoft ADFS SSO|[aPersona ASM ADFS Adapter](https://www.apersona.com/adfs)|
 |Duo Security|Duo MFA Adapter for AD FS|[Duo Authentication for AD FS](https://duo.com/docs/adfs)|
 |Gemalto|Gemalto Identity & Security Services|[http://www.gemalto.com/identity](http://www.gemalto.com/identity)|
 |inWebo Technologies|inWebo Enterprise Authentication service|[inWebo Enterprise Authentication](http://www.inwebo.com)|
