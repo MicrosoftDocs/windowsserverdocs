@@ -7,6 +7,7 @@ author: jwwool
 ms.author: jeffrew
 ms.localizationpriority: medium
 ms.prod: windows-server-threshold
+ms.date: 02/12/2019
 ---
 
 # Troubleshooting Windows Admin Center
@@ -121,7 +122,7 @@ This can happen if your default PowerShell module path has been modified or remo
 
 * If you are using Windows 10 version 1703 or below, Windows Admin Center is not supported on your version of Microsoft Edge. Either upgrade to a recent version of Windows 10 or use Chrome.
 
-* If you are using an insider preview version of Windows 10 or Server with a build version between 17134 and 17637, Windows Admin Center has a [known incompatibility.](known-issues.md#previous-insider-preview-builds-of-windows-10--window-server-2019-rs5)
+* If you are using an insider preview version of Windows 10 or Server with a build version between 17134 and 17637, Windows Admin Center has a [known incompatibility.](known-issues.md#previous-RS5-insider-previews)
 
 ### Make sure the Windows Remote Management (WinRM) service is running on both the gateway machine and managed node
 
