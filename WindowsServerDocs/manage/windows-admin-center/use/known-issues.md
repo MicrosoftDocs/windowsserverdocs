@@ -7,6 +7,7 @@ author: jwwool
 ms.author: jeffrew
 ms.localizationpriority: medium
 ms.prod: windows-server-threshold
+ms.date: 02/12/2019
 ---
 
 # Windows Admin Center Known Issues
@@ -15,7 +16,7 @@ ms.prod: windows-server-threshold
 
 If you encounter an issue not described on this page, please [let us know](http://aka.ms/WACfeedback).
 
-## Previous Insider preview builds of Windows 10 & Window Server 2019 (RS5)
+## <a name="previous-RS5-insider-previews"></aPrevious Insider preview builds of Windows 10 and Window Server 2019 (RS5)
 
 - There was a bug in approximate build numbers 17134-17673 which caused Windows Admin Center to fail.
 
