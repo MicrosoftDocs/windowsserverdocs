@@ -21,8 +21,8 @@ We regularly update the [Remote Desktop web client](remote-desktop-web-client.md
 ## Updates for version 1.0.7
 *Published date: 1/24/2019*
 
-- Offline use is now supported.
-- Improved rendering on non-Edge browsers.
+- Offline use on internal networks is now supported.
+- Improved rendering on non-Microsoft Edge browsers.
 - Implemented limit for feed retrieval retry attempts to prevent DoS.
 - Fixed accessibility bugs, enabling users with visual disabilities to use the web client.
 - Improved error messages displayed to the user for feed errors.

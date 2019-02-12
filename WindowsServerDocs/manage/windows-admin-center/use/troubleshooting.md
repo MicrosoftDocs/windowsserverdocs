@@ -7,6 +7,7 @@ author: jwwool
 ms.author: jeffrew
 ms.localizationpriority: medium
 ms.prod: windows-server-threshold
+ms.date: 02/12/2019
 ---
 
 # Troubleshooting Windows Admin Center
@@ -34,6 +35,8 @@ ms.prod: windows-server-threshold
 * [I get the message: "Cant connect securely to this page. This might be because the site uses outdated or unsafe TLS security settings."](#tls)
 
 * [I'm having trouble with the Remote Desktop, Events, and PowerShell tools.](#websockets)
+
+* [I'm having issues using Azure features in Edge](#azlogin)
 
 * [I can connect to some servers, but not others](#connectionissues)
 
@@ -119,7 +122,7 @@ This can happen if your default PowerShell module path has been modified or remo
 
 * If you are using Windows 10 version 1703 or below, Windows Admin Center is not supported on your version of Microsoft Edge. Either upgrade to a recent version of Windows 10 or use Chrome.
 
-* If you are using an insider preview version of Windows 10 or Server with a build version between 17134 and 17637, Windows Admin Center has a [known incompatibility.](known-issues.md#previous-insider-preview-builds-of-windows-10--windows-server-2019-rs5)known-issues#previous-insider-preview-builds-of-windows-10--window-server-2019-rs5
+* If you are using an insider preview version of Windows 10 or Server with a build version between 17134 and 17637, Windows Admin Center has a [known incompatibility.](known-issues.md#previous-RS5-insider-previews)
 
 ### Make sure the Windows Remote Management (WinRM) service is running on both the gateway machine and managed node
 
@@ -250,6 +253,22 @@ Manually run these two commands in an elevated command prompt:
 netsh http delete sslcert ipport=0.0.0.0:443
 netsh http delete urlacl url=https://+:443/
 ```
+
+[[back to top]](#toc)
+
+<a id="azlogin"></a>
+
+## I'm having issues using Azure features in Edge
+
+Edge has [known issues](https://github.com/AzureAD/azure-activedirectory-library-for-js/wiki/Known-issues-on-Edge) related to security zones that affect Azure login in Windows Admin Center. If you are having trouble using Azure features when using Edge, try adding https://login.microsoftonline.com, https://login.live.com and the URL of your gateway as trusted sites and to allowed sites for Edge pop-up blocker settings on your client side browser. 
+
+To do this:
+1. Search for **Internet Options** in the Windows Start Menu
+2. Go to the **Security** tab
+3. Under the **Trusted Sites** option, click on the **sites** button and add the URLs in the dialog box that opens. You'll need to add your gateway URL as well as https://login.microsoftonline.com and https://login.live.com.
+4. Go to the **Privacy** tab
+5. Under the **Pop-up Blocker** section, click on the **Settings** button and add the URLs in the dialog box that opens. You'll need to add your gateway URL as well as https://login.microsoftonline.com and https://login.live.com.
+
 
 [[back to top]](#toc)
 
