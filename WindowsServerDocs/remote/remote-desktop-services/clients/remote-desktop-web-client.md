@@ -19,7 +19,7 @@ The Remote Desktop web client lets you use a compatible web browser to access yo
 ## What you'll need to use the web client
 
 * For the web client, you'll need a PC running Windows, macOS, ChromeOS, or Linux. Mobile devices are not supported at this time.
-* A modern browser like Edge, Internet Explorer 11, Google Chrome, Safari, or Mozilla Firefox (v55.0 and later).
+* A modern browser like Microsoft Edge, Internet Explorer 11, Google Chrome, Safari, or Mozilla Firefox (v55.0 and later).
 * The URL your admin sent you.
 
 >[!NOTE]

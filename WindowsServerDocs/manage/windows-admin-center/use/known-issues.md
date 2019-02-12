@@ -7,6 +7,7 @@ author: jwwool
 ms.author: jeffrew
 ms.localizationpriority: medium
 ms.prod: windows-server-threshold
+ms.date: 02/12/2019
 ---
 
 # Windows Admin Center Known Issues
@@ -15,7 +16,7 @@ ms.prod: windows-server-threshold
 
 If you encounter an issue not described on this page, please [let us know](http://aka.ms/WACfeedback).
 
-## Previous Insider preview builds of Windows 10 & Windows Server 2019 (RS5)
+## <a name="previous-RS5-insider-previews"></aPrevious Insider preview builds of Windows 10 and Window Server 2019 (RS5)
 
 - There was a bug in approximate build numbers 17134-17673 which caused Windows Admin Center to fail.
 
@@ -78,7 +79,7 @@ If you configured your gateway for Azure connectivity when you set up Azure Site
 
 - When using Azure Active Directory as your identity provider and Windows Admin Center is configured with a self-signed or otherwise untrusted certificate, you cannot complete the AAD authentication in Microsoft Edge.  [15968377]
 
-- If you have Windows Admin Center deployed as a service and you are using Microsoft Edge as your browser, connecting your gateway to Azure may fail after spawning a new browser window. You may be able to work around this issue by adding login.microsoftonline.com and the URL of your gateway as trusted sites. See [here](https://github.com/AzureAD/azure-activedirectory-library-for-js/wiki/Known-issues-on-Edge) for more information. [17990376]
+- If you have Windows Admin Center deployed as a service and you are using Microsoft Edge as your browser, connecting your gateway to Azure may fail after spawning a new browser window. Try to work around this issue by adding https://login.microsoftonline.com, https://login.live.com, and the URL of your gateway as trusted sites and allowed sites for pop-up blocker settings on your client side browser. For more guidance on fixing this in the [troubleshooting guide](troubleshooting.md#azlogin). [17990376]
 
 - If you have Windows Admin Center installed in desktop mode, the browser tab in Microsoft Edge won't display the favicon. [17665801]
 
