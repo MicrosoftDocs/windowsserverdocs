@@ -4,7 +4,7 @@ description: Known issues and troubleshooting support for Storage Migration Serv
 author: nedpyle
 ms.author: nedpyle
 manager: siroy
-ms.date: 2/04/2019
+ms.date: 2/14/2019
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: storage
@@ -72,16 +72,18 @@ To work around this issue:
 
 1. On the orchestrator computer, edit the *%SYSTEMROOT%\SMS\Microsoft.StorageMigration.Service.exe.config* file using Notepad.exe to change the "sendTimeout" from its 1 minute default to 10 minutes
 
-`     <bindings>`
-`      <netTcpBinding>`
-`        <binding name="NetTcpBindingSms"`
-`                 sendTimeout="00:01:00"`
+   ```
+     <bindings>
+      <netTcpBinding>
+        <binding name="NetTcpBindingSms"
+                 sendTimeout="00:01:00"
+   ```
 
 2. Restart the "Storage Migration Service" service on the orchestrator computer. 
 3. On the orchestrator computer, start Regedit.exe
 4. Locate and then click the following registry subkey: 
 
- `HKEY_LOCAL_MACHINE\\Software\\Microsoft\\SMSPowershell`
+   `HKEY_LOCAL_MACHINE\\Software\\Microsoft\\SMSPowershell`
 
 5. On the Edit menu, point to New, and then click DWORD Value. 
 6. Type "WcfOperationTimeoutInMinutes" for the name of the DWORD, and then press ENTER.
