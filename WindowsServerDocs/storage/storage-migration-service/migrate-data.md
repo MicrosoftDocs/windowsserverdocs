@@ -4,7 +4,7 @@ description: Brief description of topic for search engine results
 author: jasongerend
 ms.author: jgerend
 manager: elizapo
-ms.date: 12/20/2018
+ms.date: 02/13/2019
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: storage
@@ -28,6 +28,10 @@ Before you get started, install Storage Migration Service and make sure that the
     - Netlogon Service (NP-In)
     - Windows Management Instrumentation (DCOM-In)
     - Windows Management Instrumentation (WMI-In)
+
+   > [!NOTE]
+   > If you're using third party firewalls, the inbound port ranges to open are TCP/445 (SMB) , TCP/135 (RPC/DCOM endpoint mapper), and TCP 1025-65535 (RPC/DCOM ephemeral ports).
+
 1. If you're using an orchestrator server to manage the migration and you want to download events or a log of what data you transfer, check that the File and Printer Sharing (SMB-In) firewall rule is enabled on that server as well.
 
 ## Step 1: Create a job and inventory your servers to figure out what to migrate
