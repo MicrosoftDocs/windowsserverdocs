@@ -45,7 +45,7 @@ There are several different implementations of persistent VDI:
 
     -   Changes such as event log writes, log writes, etc. are redirected to the read/write virtual disk assigned to that VM.
 
-    -   In this circumstance, operating system and app servicing may operate normally, using traditional servicing software such as Windows Server Update Services or other management technologies.
+    -   In this circumstance, operating system and app servicing might operate normally, using traditional servicing software such as Windows Server Update Services or other management technologies.
 
  ### Non-Persistent VDI
 
@@ -79,10 +79,10 @@ automatically with this PowerShell command:
 
 
 
-One of the challenges with non-persistent VDI is that when a user logs off, nearly all the operating system activity is discarded. The user’s profile and or state may be
+One of the challenges with non-persistent VDI is that when a user logs off, nearly all the operating system activity is discarded. The user’s profile and or state might be
 saved, but the virtual machine itself discards nearly all changes that were made since the last boot. Therefore, optimizations intended for a Windows computer that saves state from one session to the next are not applicable.
 
-Depending on the architecture of VDI VM, things like PreFetch and SuperFetch are not going to help from one session to the next, as all the optimizations are discarded on VM restart. Indexing may be a partial waste of resources, as would be any disk optimizations such as a traditional defragmentation.
+Depending on the architecture of VDI VM, things like PreFetch and SuperFetch are not going to help from one session to the next, as all the optimizations are discarded on VM restart. Indexing might be a partial waste of resources, as would be any disk optimizations such as a traditional defragmentation.
 
 ### To Sysprep or not Sysprep
 
@@ -91,7 +91,7 @@ Tool](https://docs.microsoft.com/windows-hardware/manufacture/desktop/sysprep--s
 (often abbreviiated to  "Sysprep"). The Sysprep tool is used to prepare a customized Windows 10 image for duplication. The Sysprep process assures the resulting operating system is properly unique
 to run in production.
 
-There are reasons for and against running Sysprep. In the case of VDI, you may want the ability to customize the default user profile which would be used as the profile template for subsequent users that log on using this image. You may have apps that you want installed, but also able to control per-app settings.
+There are reasons for and against running Sysprep. In the case of VDI, you might want the ability to customize the default user profile which would be used as the profile template for subsequent users that log on using this image. You might have apps that you want installed, but also able to control per-app settings.
 
 The alternative is to use a standard .ISO to install from, possibly using an unattended installation answer file, and a task sequence to install applications or remove applications. You can also use a task sequence to set local policy settings in the image, perhaps using the [Local Group Policy Object Utility (LGPO)](https://blogs.technet.microsoft.com/secguide/2016/01/21/lgpo-exe-local-group-policy-object-utility-v1-0/)
 tool.
@@ -155,7 +155,7 @@ Global VDI setting can be categorized as follows:
 ### Universal Windows Platform (UWP) app cleanup
 
 One of the goals of a VDI image is to be as small as possible. One way to reduce the size of the image is to remove UWP applications that will not be used in the environment. With UWP apps, there are the main application files, also known as the payload. There is a small amount of data stored in each user’s profile for application specific settings. There is also a small amount of data in the “All
-User’” profile.
+Users” profile.
 
 Connectivity and timing are everything when it comes to UWP app cleanup. If you deploy your base image to either a device with no network connectivity, Windows 10 cannot connect to the Microsoft Store and download apps and try to install them while you are trying to uninstall them.
 
@@ -175,12 +175,8 @@ Run the following command to enumerate provisioned UWP apps from a running opera
 `Get-AppxProvisionedPackage -Online DisplayName : Microsoft.3DBuilder Version : 13.0.10349.0 Architecture : neutral ResourceId : \~ PackageName : Microsoft.3DBuilder_13.0.10349.0_neutral_\~_8wekyb3d8bbwe Regions : DisplayName : Microsoft.Appconnector Version : 2015.707.550.0 Architecture : neutral ResourceId : \~ PackageName : Microsoft.Appconnector_2015.707.550.0_neutral_\~_8wekyb3d8bbwe Regions : ... `
 
 
-UWP apps that are provisioned to a system can be removed during operating system installation
-as part of a task sequence, or later after the operating system is installed. This may be the
-preferred method because it makes the overall process of creating and/or
-maintaining an image modular. Once you develop the scripts, if something changes
-in a subsequent build you edit an existing script rather than repeat the process
-from scratch. Here are some links to information on this topic:
+UWP apps that are provisioned to a system can be removed during operating system installation as part of a task sequence, or later after the operating system is installed. This might be the
+preferred method because it makes the overall process of creating or maintaining an image modular. Once you develop the scripts, if something changes in a subsequent build you edit an existing script rather than repeat the process from scratch. Here are some links to information on this topic:
 
 [Removing Windows 10 in-box apps during a task
 sequence](https://blogs.technet.microsoft.com/mniehaus/2015/11/11/removing-windows-10-in-box-apps-during-a-task-sequence/)
@@ -192,81 +188,55 @@ sequence](https://blogs.technet.microsoft.com/mniehaus/2015/11/11/removing-windo
 update](https://blogs.technet.microsoft.com/mniehaus/2016/08/23/windows-10-1607-keeping-apps-from-coming-back-when-deploying-the-feature-update/)
 
 Then run the
-[Remove-AppxProvisionedPackage](https://docs.microsoft.com/en-us/powershell/module/dism/remove-appxprovisionedpackage?view=win10-ps)
-PowerShell command to remove UWP app payloads is as follows:
+[Remove-AppxProvisionedPackage](https://docs.microsoft.com/powershell/module/dism/remove-appxprovisionedpackage?view=win10-ps)
+PowerShell command to remove UWP app payloads:
 
-|                                                                            |
-| PS C:\\\> Remove-AppxProvisionedPackage -Online -PackageName MyAppxPackage |
-|----------------------------------------------------------------------------|
+`Remove-AppxProvisionedPackage -Online -PackageName MyAppxPackage`
 
+As a final note on this topic, each UWP app should be evaluated for applicability in each unique environment. You will want to install a default installation of Windows 10 1803, then note which apps are running and consuming memory. For example, you might want to consider removing apps that start automatically, or apps that automatically display information on the Start Menu, such as Weather and News, and that might not be of use in your environment.
 
-As a final note on this topic, each UWP app should be evaluated for
-applicability in each unique environment. You will want to install a default
-installation of Windows 10 1803, then note which apps are running and consuming
-memory. For example, you may want to consider removing apps that start
-automatically, or apps that automatically display information on the Start Menu,
-such as Weather and News, and that may not be of use in your environment.
-
-Also, if not using the Photos app, consider removing the Photos app. As of 1803,
-there is a default setting in the Photos app called “Show a notification when
-new albums are available”
+Also, if not using the Photos app, consider removing the Photos app. As of 1803, there is a default setting in the Photos app called “Show a notification when new albums are available”
 
 ![](media/a39405a0b57ef3c25fc61c68a9f1a2d0.png)
 
-This is the default setting, and according to Task Manager on a new installation
-in a virtual machine, this app uses approximately 145 MB of memory, and
-specifically ‘private working set’. The memory usage of an “average” virtual
-machine, with 3GB RAM, is depicted in the following illustration:
+This is the default setting, and according to Task Manager on a new installation in a virtual machine, this app uses approximately 145 MB of memory, and specifically ‘private working set’. The memory usage of an “average” virtual machine, with 3GB RAM, as shown here:
 
 ![](media/20ae1c6530c012190a7d65e4da66194c.png)
 
-Changing the “Show a notification when new albums are available” setting for all
-users is not practical at this time.
+Changing the “Show a notification when new albums are available” setting for all users is not practical at this time.
 
-### Windows Optional Features cleanup
+### Cleaning up Windows Optional features
 
 #### Managing Optional Features with PowerShell
 
 Source:
 <https://social.technet.microsoft.com/wiki/contents/articles/39386.windows-10-managing-optional-features-with-powershell.aspx>
 
-You can manage Windows Optional Features using PowerShell. To enumerate
-currently installed Windows Features, run the following PowerShell command:
+You can manage Windows Optional Features using PowerShell. To enumerate currently installed Windows Features, run this PowerShell command:
 
-|                                              |
-| PS C:\\\> Get-WindowsOptionalFeature -Online |
-|----------------------------------------------|
+`Get-WindowsOptionalFeature -Online`
 
 
-Using PowerShell, an enumerated Windows Optional Feature can be configured as
-enabled or disabled, as in the following example:
+Using PowerShell, you can enable or disable a specific Windows Optional Feature as in this example:
 
-| PS C:\\\> Enable-WindowsOptionalFeature -Online -FeatureName “DirectPlay” -All |
-|--------------------------------------------------------------------------------|
+`Enable-WindowsOptionalFeature -Online -FeatureName “DirectPlay” -All`
 
 
-#### Enable or Disable Windows Features Using DISM
+#### Enable or disable Windows Features by using DISM
 
-You can use the built-in Dism.exe tool to enumerate and control Windows Optional
-Features. A Dism.exe script could be developed and run during an operating
-system installation task sequence.
+You can use the built-in **Dism.exe** tool to enumerate and control Windows Optional Features. You can set up a Dism.exe script to run during a task sequence that installs the operating system.
 
 ### Local policy settings
 
-Many optimizations for Windows 10 in a VDI environment can be made using Windows
-policy. The settings listed in the table in this section can be applied locally
-to the base/gold image. Then if the equivalent settings are not specified in any
-way such as group policy, the settings would still apply.
+Many optimizations for Windows 10 in a VDI environment can be made using Windows policy. The settings listed in the table in this section can be applied locally to the base/gold image. Then if the equivalent settings are not specified in any way such as group policy, the settings would still apply.
 
-Note that some decisions may be based on the specifics of the environment.
+Note that some decisions might be based on the specifics of the environment, for example:
 
 -   Is the VDI environment allowed to access the Internet?
 
 -   Is the VDI solution persistent or non-persistent?
 
-The following settings were chosen to not counter or conflict with any setting
-that has anything to do with security. These settings were chosen to remove
-settings that may not be applicable to VDI environments.
+The following settings specifically do not counter or conflict with any setting that has anything to do with security. These settings were chosen to remove settings that might not be applicable to VDI environments.
 
 | Policy Setting                                                                                                                      | Item                                                                                                                                      | Sub-item                                                             | Possible setting and comments                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
 |-------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -318,7 +288,7 @@ settings that may not be applicable to VDI environments.
 | **Internet Communication Management**\\ Internet Communication settings                                                             | Turn off the "Publish to Web" task for files and folders                                                                                  |                                                                      | Enabled                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
 | **Internet Communication Management**\\ Internet Communication settings                                                             | Turn off the Windows Messenger Customer Experience Improvement Program                                                                    |                                                                      | Enabled                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
 | **Internet Communication Management**\\ Internet Communication settings                                                             | Turn off Windows Customer Experience Improvement Program                                                                                  |                                                                      | Enabled                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
-| **\*Internet Communication Management**\\ Internet Communication settings                                                           | Turn off Windows Network Connectivity Status indicator active tests                                                                       |                                                                      | Enabled (This policy setting turns off the active tests performed by the Windows Network Connectivity Status Indicator (NCSI) to determine whether your computer is connected to the Internet or to a more limited network As part of determining the connectivity level, NCSI performs one of two active tests: downloading a page from a dedicated Web server or making a DNS request for a dedicated address. If you enable this policy setting, NCSI does not run either of the two active tests. This may reduce the ability of NCSI, and of other components that use NCSI, to determine Internet access) NOTE: There are other policies that allow you to redirect NCSI tests to internal resources, if this functionality is desired. |
+| **\*Internet Communication Management**\\ Internet Communication settings                                                           | Turn off Windows Network Connectivity Status indicator active tests                                                                       |                                                                      | Enabled (This policy setting turns off the active tests performed by the Windows Network Connectivity Status Indicator (NCSI) to determine whether your computer is connected to the Internet or to a more limited network As part of determining the connectivity level, NCSI performs one of two active tests: downloading a page from a dedicated Web server or making a DNS request for a dedicated address. If you enable this policy setting, NCSI does not run either of the two active tests. This might reduce the ability of NCSI, and of other components that use NCSI, to determine Internet access) NOTE: There are other policies that allow you to redirect NCSI tests to internal resources, if this functionality is desired. |
 | **Internet Communication Management**\\ Internet Communication settings                                                             | Turn off Windows Error Reporting                                                                                                          |                                                                      | Enabled                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
 | **Internet Communication Management**\\ Internet Communication settings                                                             | Turn off Windows Update device driver searching                                                                                           |                                                                      | Enabled                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
 | **Logon**                                                                                                                           | Show first sign-in animation                                                                                                              |                                                                      | Disabled                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
@@ -327,7 +297,7 @@ settings that may not be applicable to VDI environments.
 | **Power Management**                                                                                                                | Select an active power plan                                                                                                               | High Performance                                                     | Enabled                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
 | **Recovery**                                                                                                                        | Allow restore of system to default state                                                                                                  |                                                                      | Disabled                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
 | \***Storage Health**                                                                                                                | Allow downloading updates to the Disk Failure Prediction Model                                                                            |                                                                      | Disabled (Updates would not be downloaded for the Disk Failure Prediction Failure Model)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
-| \***Windows Time Services**\\ Time Providers                                                                                        | Enable Windows NTP Client                                                                                                                 |                                                                      | Disabled (If you disable or do not configure this policy setting, the local computer clock does not synchronize time with NTP servers) **NOTE**: CONSIDER THIS SETTING VERY CAREFULLY. Windows domain joined client computers should use **NT5DS**. DC to parent domain DC may use NTP. PDCe role may use NTP. Virtual machines sometimes use “enhancements” or “integration services”.                                                                                                                                                                                                                                                                                                                                                       |
+| \***Windows Time Services**\\ Time Providers                                                                                        | Enable Windows NTP Client                                                                                                                 |                                                                      | Disabled (If you disable or do not configure this policy setting, the local computer clock does not synchronize time with NTP servers) **NOTE**: *CONSIDER THIS SETTING VERY CAREFULLY*. Windows devices that are joined to adomain should use **NT5DS**. DC to parent domain DC might use NTP. PDCe role might use NTP. Virtual machines sometimes use “enhancements” or “integration services”.                                                                                                                                                                                                                                                                                                                                                       |
 | **Troubleshooting and Diagnostics**\\ Scheduled Maintenance                                                                         | Configure Scheduled Maintenance Behavior                                                                                                  |                                                                      | Disabled                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
 | **Troubleshooting and Diagnostics**\\ Windows Boot Performance Diagnostics                                                          | Configure Scenario Execution Level                                                                                                        |                                                                      | Disabled                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
 | **Troubleshooting and Diagnostics**\\ Windows Memory Leak Diagnostics                                                               | Configure Scenario Execution Level                                                                                                        |                                                                      | Disabled                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
@@ -400,7 +370,7 @@ settings that may not be applicable to VDI environments.
 | **Location and Sensors**                                                                                                            | Turn off sensors                                                                                                                          |                                                                      | Enabled                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
 | **Locations and Sensors /** Windows Location Provider                                                                               | Turn off Windows Location Provider                                                                                                        |                                                                      | Enabled                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
 | \***Maps**                                                                                                                          | Turn off Automatic Download and Update of Map Data                                                                                        |                                                                      | Enabled (If you enable this setting the automatic download and update of map data is turned off)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
-| \***Maps**                                                                                                                          | Turn off unsolicited network traffic on the Offline Maps settings page                                                                    |                                                                      | Enabled (If you enable this policy setting, features that generate network traffic on the Offline Maps settings page are turned off. Note: This may turn off the entire settings page)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+| \***Maps**                                                                                                                          | Turn off unsolicited network traffic on the Offline Maps settings page                                                                    |                                                                      | Enabled (If you enable this policy setting, features that generate network traffic on the Offline Maps settings page are turned off. Note: This might turn off the entire settings page)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
 | \***Messaging**                                                                                                                     | Allow Message Service Cloud Sync                                                                                                          |                                                                      | Disabled (This policy setting allows backup and restore of cellular text messages to Microsoft's cloud services.)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
 | \***Microsoft Edge**                                                                                                                | Allow Address bar drop-down list suggestions                                                                                              |                                                                      | Disabled                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
 | \***Microsoft Edge**                                                                                                                | Allow configuration updates for the Books Library                                                                                         |                                                                      | Disabled (turns off compatibility lists in Microsoft Edge)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
@@ -449,7 +419,7 @@ settings that may not be applicable to VDI environments.
 | **Windows Mobility Center**                                                                                                         | Turn off Windows Mobility Center                                                                                                          |                                                                      | **Enabled**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
 | **Windows Reliability Analysis**                                                                                                    | Configure Reliability WMI Providers                                                                                                       |                                                                      | **Disabled**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
 | **Windows Update**                                                                                                                  | Allow Automatic Updates immediate installation                                                                                            |                                                                      | **Enabled**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
-| **Windows Update**                                                                                                                  | Do not connect to any Windows Update Internet locations                                                                                   |                                                                      | **Enabled** (Enabling this policy will disable that functionality, and may cause connection to public services such as the Windows Store to stop working. Note: This policy applies only when this PC is configured to connect to an intranet update service using the "Specify intranet Microsoft update service location" policy.                                                                                                                                                                                                                                                                                                                                                                                                           |
+| **Windows Update**                                                                                                                  | Do not connect to any Windows Update Internet locations                                                                                   |                                                                      | **Enabled** (Enabling this policy will disable that functionality, and might cause connection to public services such as the Windows Store to stop working. Note: This policy applies only when this PC is configured to connect to an intranet update service using the "Specify intranet Microsoft update service location" policy.                                                                                                                                                                                                                                                                                                                                                                                                           |
 | **Windows Update**                                                                                                                  | Remove access to all Windows Update features                                                                                              |                                                                      | **Enabled**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
 | **\*Windows Update**\\ Windows Update for Business                                                                                  | Manage preview builds                                                                                                                     | Set the behavior for receiving preview builds:                       | **Enabled** (Selecting "Disable preview builds" will prevent preview builds from installing on the device. This will prevent users from opting into the Windows Insider Program, through Settings -\> Update and Security)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
 |                                                                                                                                     |                                                                                                                                           | Disable preview builds                                               |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
@@ -490,7 +460,7 @@ the Internet at all, or connects indirectly, you can set a group policy setting
 to remove the Network icon from the Taskbar. The reason you might want to remove
 the Network icon from the Taskbar is if you turn off Internet connectivity
 checks, there will be a yellow flag on the Network icon, even though the network
-may be functioning normally. If you would like to remove the network icon as a
+might be functioning normally. If you would like to remove the network icon as a
 group policy setting, you can find that in this location:
 
 | Windows Update\\ Windows Update for Business                                | Select when Quality Updates are received | 1. 30 days 2. Pause quality updates starting yyyy-mm-dd | Enabled                                                                             |
@@ -515,7 +485,7 @@ article:
 
 <https://docs.microsoft.com/en-us/windows-server/security/windows-services/security-guidelines-for-disabling-system-services-in-windows-server>
 
-Note that a lot of services that may seem to be good candidates to disable are
+Note that a lot of services that might seem to be good candidates to disable are
 set to manual service start type. This means that the service will not
 automatically start and is not started unless a specific application or service
 triggers a request to the service being consider for disabling. Services that
@@ -543,19 +513,13 @@ are already set to start type manual are usually not listed here.
 
 ### Scheduled tasks
 
-Like other items in Windows, you want to be sure an item is not needed before
-considering for disablement.
+Like other items in Windows, ensure that an item is not needed before you consider disabling it.
 
-The following list of tasks are those that perform optimizations or data
-collections on computers that maintain their state across reboots. When a VDI VM
-task reboots and discards all changes since last boot, optimizations intended
-for physical computers are not helpful.
+The following list of tasks are those that perform optimizations or data collections on computers that maintain their state across reboots. When a VDI VM task reboots and discards all changes since last boot, optimizations intended for physical computers are not helpful.
 
-You can get all of the current scheduled tasks, including descriptions, with the
-following PowerShell code:
+You can get all of the current scheduled tasks, including descriptions, with the following PowerShell code:
 
-Get-ScheduledTask \| Select-Object -Property TaskPath,TaskName,State,Description
-\|Export-CSV -Path C:\\Temp\\W10_1803_SchTasks.csv -NoTypeInformation
+`Get-ScheduledTask \| Select-Object -Property TaskPath,TaskName,State,Description \|Export-CSV -Path C:\\Temp\\W10_1803_SchTasks.csv -NoTypeInformation`
 
 NOTE:
 
@@ -565,38 +529,27 @@ NOTE:
 
 ### Apply Windows and other updates
 
-Whether from Microsoft Update, or from your internal resources, apply available
-updates including Windows Defender signatures. This is a good time to apply
-other available updates including Microsoft Office if installed, and other
-software updates.
+Whether from Microsoft Update, or from your internal resources, apply available updates including Windows Defender signatures. This is a good time to apply other available updates including those for Microsoft Office if installed.
 
 ### Automatic Windows traces
 
-Windows is configured, by default, to collect and save limited diagnostic data.
-The purpose is to enable diagnostics, or to record data in the event that
-further troubleshooting is necessary. Automatic system traces can be found at
-the location depicted in the following illustration:
+Windows is configured, by default, to collect and save limited diagnostic data. The purpose is to enable diagnostics, or to record data in the event that further troubleshooting is necessary. Automatic system traces can be found at the location depicted in the following illustration:
 
 ![](media/b7446d0e09cae2106953222cdba0da52.png)
 
-Some of the traces displayed under ‘Event Trace Sessions’ and ‘Startup Event
-Trace Sessions’ cannot and should not be stopped. Others, such as the
-‘WiFiSession’ trace can be stopped. To stop a running trace under ‘Event Trace
-Sessions’ right-click the trace and then click ‘Stop’. However to prevent the
-traces from starting automatically on startup:
+Some of the traces displayed under ‘Event Trace Sessions’ and ‘Startup Event Trace Sessions’ cannot and should not be stopped. Others, such as the ‘WiFiSession’ trace can be stopped. To stop a running trace under ‘Event Trace Sessions’ right-select the trace and then select ‘Stop’. To prevent the traces from starting automatically on startup, follow these steps:
 
-1.  Click the ‘**Startup Event Trace Sessions**’ folder
+1.  Select the **Startup Event Trace Sessions** folder
 
-2.  Locate the trace of interest, and then double-click that trace
+2.  Locate the trace of interest, and then double-click that trace.
 
-3.  Click the ‘**Trace Session**’ tab
+3.  Select the **Trace Session** tab.
 
-4.  Click the box labeled ‘**Enabled**’ to remove the checkmark
+4.  Clear the box labeled **Enabled**. 
 
-5.  Click ‘**Ok**’
+5.  Select **OK**.
 
-The following are some system traces that could be considered for disablement
-for VDI:
+Here are some system traces to consider disabling for VDI use:
 
 | Name                    | Comment                                       |
 |-------------------------|-----------------------------------------------|
@@ -609,187 +562,105 @@ for VDI:
 | WiFiDriverIHVSession    | If not using a WiFi device                    |
 | WiFiSession             |                                               |
 
-#### Servicing OS and apps
+#### Servicing the operating system and apps
 
-At some point during the image optimization process available Windows updates
-should be applied. There is a setting in Windows 10 update settings that can
-provide additional updates:
+At some point during the image optimization process available Windows updates should be applied. There is a setting in Windows 10 update settings that can provide additional updates:
 
 ![](media/4b396ffb87ef2fd15103dcee0a3a7507.png)
 
-This would be a good setting in case you are going to install Microsoft
-applications such as Microsoft Office to the base image. That way Office is up
-to date when the image is put in service. There are also .NET updates and
-certain third-party components such as Adobe that have updates available through
-Windows Update.
+This would be a good setting in case you are going to install Microsoft applications such as Microsoft Office to the base image. That way Office is up to date when the image is put in service. There are also .NET updates and certain third-party components such as Adobe that have updates available through Windows Update.
 
-One very important consideration for non-persistent VDI VMs are security
-updates, including security software definition files. These updates may be
-released once or even more than once per day. There may be a way to retain these
-updates, including Windows Defender and third-party components.
+One very important consideration for non-persistent VDI VMs are security updates, including security software definition files. These updates might be released once or even more than once per day. There might be a way to retain these updates, including Windows Defender and third-party components.
 
-For Windows Defender it may be best to allow the updates to occur, even on
-non-persistent VDI. The updates are going to apply nearly every logon session,
-but the updates are small and should not be a problem. Plus, the VM won’t be
-behind on updates because only the latest available will apply. The same may be
-true for third-party definition files.
+For Windows Defender it might be best to allow the updates to occur, even on non-persistent VDI. The updates are going to apply nearly every logon session, but the updates are small and should not be a problem. Plus, the VM won’t be behind on updates because only the latest available will apply. The same might be true for third-party definition files.
 
-**Note** that Store apps (UWP apps) update through the Windows Store. Modern
-versions of Office such as Office 365 update through their own mechanisms when
-directly connected to the Internet, or via management technologies when not.
+> [!NOTE]  
+> Store apps (UWP apps) update through the Windows Store. Modern versions of Office such as Office 365 update through their own mechanisms when directly connected to the Internet, or via management technologies when not.
 
 ### Windows Defender optimization with VDI
 
-Microsoft has recently published documentation regarding Windows Defender in a
-VDI environment, at this location:
+Microsoft has recently published documentation regarding Windows Defender in a VDI environment. See [Deployment guide for Windows Defender Antivirus in a virtual desktop infrastructure (VDI) environment](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-antivirus/deployment-vdi-windows-defender-antivirus) for details.
 
-[Deployment guide for Windows Defender Antivirus in a virtual desktop
-infrastructure (VDI)
-environment](https://docs.microsoft.com/en-us/windows/security/threat-protection/windows-defender-antivirus/deployment-vdi-windows-defender-antivirus)
+The above article contains procedures to service the ‘gold’ VDI image, and how to maintain the VDI clients as they are running. To reduce network bandwidth when VDI computers need to update their Windows Defender signatures, stagger reboots, and schedule reboots during off hours where possible. The Windows Defender signature updates can be contained internally on file shares, and where
+practical, have those files shares on the same or close networking segments as the VDI virtual machines.
 
-The above article contains procedures to service the ‘gold’ VDI image, and how
-to maintain the VDI clients as they are running. To reduce network bandwidth
-when VDI computers need to update their Windows Defender signatures, stagger
-reboots, and schedule reboots during off hours where possible. The Windows
-Defender signature updates can be contained internally on file shares, and where
-practical, have those files shares on the same or close networking segments as
-the VDI virtual machines.
+{See the paper listed at }the beginning of this section for much more information about optimizing Windows Defender with VDI.
 
-See the paper listed at the beginning of this section for much more information
-about optimizing Windows Defender with VDI.
+### Tuning Windows 10 network performance by using registry settings
 
-### Client network performance tuning by registry settings
+This is especially important in environments where the VDI or physical computer has a workload that is primarily network-based. The settings in this section bias performance to favor networking, by setting up additional buffering and caching of things like directory entries and so on.
 
-There are some registry settings that can increase network performance. This is
-especially important in environments where the VDI or even physical computer has
-a workload that is primarily network based. The settings in this section are
-recommended to bias performance toward networking, by setting up additional
-buffering and caching of things like directory entries and so on.
+Note that some settings in this section are *registry-based only* and should be incorporated in the base image before the image is deployed for production use.
 
-Note that some settings in this section are registry-based only and should be
-incorporated in the base image before the image is deployed for production use.
-
-The following settings are documented in the [Windows Server 2016 Performance
-Tuning
-Guideline](https://docs.microsoft.com/en-us/windows-server/administration/performance-tuning/)
+The following settings are documented in the [Windows Server 2016 Performance Tuning Guideline](https://docs.microsoft.com/windows-server/administration/performance-tuning/)
 information, published on Microsoft.com by the Windows Product Group.
 
 #### DisableBandwidthThrottling
 
 HKLM\\System\\CurrentControlSet\\Services\\LanmanWorkstation\\Parameters\\DisableBandwidthThrottling
 
-Applies to Windows 10. The default is **0**. By default, the SMB redirector
-throttles throughput across high-latency network connections, in some cases to
-avoid network-related timeouts. Setting this registry value to 1 disables this
-throttling, enabling higher file transfer throughput over high-latency network
-connections. Consider setting this value to **1**.
+Applies to Windows 10. The default is **0**. By default, the SMB redirector throttles throughput across high-latency network connections, in some cases to avoid network-related timeouts. Setting this registry value to **1** disables this throttling, enabling higher file transfer throughput over high-latency network connections, so you should consider this setting.
 
 #### FileInfoCacheEntriesMax
 
 HKLM\\System\\CurrentControlSet\\Services\\LanmanWorkstation\\Parameters\\FileInfoCacheEntriesMax
 
-Applies to Windows 10. The default is **64**, with a valid range of 1 to 65536.
-This value is used to determine the amount of file metadata that can be cached
-by the client. Increasing the value can reduce network traffic and increase
-performance when many files are accessed. Try increasing this value to **1024**.
+Applies to Windows 10. The default is **64**, with a valid range of 1 to 65536. This value is used to determine the amount of file metadata that can be cached by the client. Increasing the value can reduce network traffic and increase performance when many files are accessed. Try increasing this value to **1024**.
 
 #### DirectoryCacheEntriesMax
 
 HKLM\\System\\CurrentControlSet\\Services\\LanmanWorkstation\\Parameters\\DirectoryCacheEntriesMax
 
-Applies to Windows 10. The default is **16**, with a valid range of 1 to 4096.
-This value is used to determine the amount of directory information that can be
-cached by the client. Increasing the value can reduce network traffic and
-increase performance when large directories are accessed. Consider increasing
-this value to **1024**.
+Applies to Windows 10. The default is **16**, with a valid range of 1 to 4096. This value is used to determine the amount of directory information that can be cached by the client. Increasing the value can reduce network traffic and increase performance when large directories are accessed. Consider increasing this value to **1024**.
 
 #### FileNotFoundCacheEntriesMax
 
 HKLM\\System\\CurrentControlSet\\Services\\LanmanWorkstation\\Parameters\\FileNotFoundCacheEntriesMax
 
-Applies to Windows 10. The default is **128**, with a valid range of 1 to 65536.
-This value is used to determine the amount of file name information that can be
-cached by the client. Increasing the value can reduce network traffic and
-increase performance when many file names are accessed. Consider increasing this
-value to **2048**.
+Applies to Windows 10. The default is **128**, with a valid range of 1 to 65536. This value is used to determine the amount of file name information that can be cached by the client. Increasing the value can reduce network traffic and increase performance when many file names are accessed. Consider increasing this value to **2048**.
 
 #### DormantFileLimit
 
 HKLM\\System\\CurrentControlSet\\Services\\LanmanWorkstation\\Parameters\\DormantFileLimit
 
-Applies to Windows 10. The default is **1023**. This parameter specifies the
-maximum number of files that should be left open on a shared resource after the
-application has closed the file. Where many thousands of clients are connecting
-to SMB servers, consider reducing this value to **256**.
+Applies to Windows 10. The default is **1023**. This parameter specifies the maximum number of files that should be left open on a shared resource after the application has closed the file. Where many thousands of clients are connecting to SMB servers, consider reducing this value to **256**.
 
-you can configure many of these SMB settings by using the
-[Set-SmbClientConfiguration](https://docs.microsoft.com/en-us/powershell/module/smbshare/set-smbclientconfiguration)
-and
-[Set-SmbServerConfiguration](https://docs.microsoft.com/en-us/powershell/module/smbshare/set-smbserverconfiguration)
-Windows PowerShell cmdlets. Registry-only settings can be configured by using
-Windows PowerShell as well, as in the following example:
+You can configure many of these SMB settings by using the [Set-SmbClientConfiguration](https://docs.microsoft.com/powershell/module/smbshare/set-smbclientconfiguration)
+and [Set-SmbServerConfiguration](https://docs.microsoft.com/powershell/module/smbshare/set-smbserverconfiguration)
+Windows PowerShell cmdlets. You can configure registry-only settings by using Windows PowerShell as well, as in the following example:
 
-Set-ItemProperty -Path
-"HKLM:\\SYSTEM\\CurrentControlSet\\Services\\LanmanWorkstation\\Parameters"
-RequireSecuritySignature -Value 0 -Force
+`Set-ItemProperty -Path "HKLM:\\SYSTEM\\CurrentControlSet\\Services\\LanmanWorkstation\\Parameters" RequireSecuritySignature -Value 0 -Force`
 
 ### Additional settings from the Windows Restricted Traffic Limited Functionality Baseline guidance
 
-Microsoft has released a baseline, created using the same procedures as the
-[Windows Security
-Baselines](https://docs.microsoft.com/en-us/windows/device-security/windows-security-baselines),
-for environments that are either not connected directly to the Internet, or wish
-to reduce data sent to Microsoft and other services.
+Microsoft has released a baseline  created using the same procedures as the [Windows Security
+Baselines](https://docs.microsoft.com/windows/device-security/windows-security-baselines), for environments that are either not connected directly to the Internet, or want to reduce data sent to Microsoft and other services.
 
-The [Windows Restricted Traffic Limited Functionality
-Baseline](https://docs.microsoft.com/en-us/windows/privacy/manage-connections-from-windows-operating-system-components-to-microsoft-services)
-settings are called out in the group policy table with an asterisk.
+The [Windows Restricted Traffic Limited Functionality Baseline](https://docs.microsoft.com/windows/privacy/manage-connections-from-windows-operating-system-components-to-microsoft-services)
+settings are marked in the Group Policy table with an asterisk.
 
-### Disk cleanup (including using the Disk Cleanup Wizard)
+### Disk cleanup (including using the Disk Cleanup Wwizard)
 
-Disk cleanup can be especially helpful with gold/master image VDI
-implementations. After the gold/master image is prepared, updated, and
-configured, one of the last tasks to perform is disk cleanup. There is a
-built-in tool called the “Disk Cleanup Wizard” that can help clean up most
-potential areas of disk space savings. On a VM that has very little installed,
-but was fully patched (as of 10/24/18), this was the potential disk space
-savings:
+Disk cleanup can be especially helpful with gold/master image VDI implementations. After the gold/master image is prepared, updated, and configured, one of the last tasks to perform is disk cleanup. The Disk Cleanup wizard built into Windows can help clean up most potential areas of disk space savings. On a VM that has very little installed, but was fully patched (as of 10/24/18), this was the potential disk space savings:
 
 ![](media/36896b772bd84b2fb43578c35da28696.png)
 
 ![](media/7d86ed7605284ead5b13b85f6933b6f3.png)
 
-Figure 1: WinSxS folder before Disk Cleanup Wizard (new install)
 
-Here are suggestions for various disk cleanup tasks. These should all be tested
-before implementing:
+Here are suggestions for various disk cleanup tasks. These should all be tested before implementing:
 
-1.  Run (elevated) Disk Cleanup Wizard after applying all updates. Include the
-    categories ‘Delivery Optimization’ and ‘Windows Update Cleanup’. This
-    process can be automated, using command line “Cleanmgr.exe” with the
-    “/SAGESET:11” option. The “/SAGESET” option sets registry values that can be
-    used later to automate disk cleanup, that uses every available option in the
-    Disk Cleanup Wizard.
+1.  Run (elevated) Disk Cleanup Wizard after applying all updates. Include the categories ‘Delivery Optimization’ and ‘Windows Update Cleanup’. This process can be automated, using command line “Cleanmgr.exe” with the “/SAGESET:11” option. The “/SAGESET” option sets registry values that can be used later to automate disk cleanup, that uses every available option in the Disk Cleanup Wizard.
 
-    1.  On a test VM, from a clean installation, running “Cleanmgr.exe
-        /SAGESET:11” reveals that there are only two automatic disk cleanup
-        options enabled by default:
+    1.  On a test VM, from a clean installation, running “Cleanmgr.exe /SAGESET:11” reveals that there are only two automatic disk cleanup options enabled by default:
 
         1.  Downloaded Program Files
 
         2.  Temporary Internet Files
 
-    2.  If you set more options, or all options, those options are recorded in
-        the registry, according to the “index” value provided in the previous
-        command (Cleanmgr.exe /SAGESET:11). In this case, we are going to use
-        the value ‘11’ as our index, for a subsequent automated disk cleanup
-        procedure.
+    2.  If you set more options, or all options, those options are recorded in the registry, according to the “index” value provided in the previous command (Cleanmgr.exe /SAGESET:11). In this case, we are going to use the value ‘11’ as our index, for a subsequent automated disk cleanup procedure.
 
-    3.  After running “Cleanmgr.exe /SAGESET:11” you will see a number of
-        categories of disk cleanup options. You can check every option, and then
-        click “OK”. You will notice that the Disk Cleanup Wizard just
-        disappears. However, the setting you selected are saved in the registry,
-        and can be invoked by running “Cleanmgr.exe /SAGERUN:11”.
+    3.  After running “Cleanmgr.exe /SAGESET:11” you will see a number of categories of disk cleanup options. You can check every option, and then select “OK”. You will notice that the Disk Cleanup Wizard just disappears. However, the setting you selected are saved in the registry, and can be invoked by running “Cleanmgr.exe /SAGERUN:11”.
 
 2.  Cleanup Volume Shadow Copy storage, if any is in use.
 
@@ -799,8 +670,7 @@ before implementing:
 
         vssadmin list shadowstorage
 
-        If output from these commands is “No items found that satisfy the
-        query.”, then there is no VSS storage in use
+        If output from these commands is “No items found that satisfy the query.”, then there is no VSS storage in use
 
 3.  Cleanup temporary files and logs. From an elevated command prompt:
 
@@ -817,16 +687,10 @@ before implementing:
 
 ### Remove OneDrive
 
-Removing OneDrive involves removing the package, uninstalling, and removing
-\*.lnk files. The following sample PowerShell code can be used to assist in
-removing OneDrive from the image:
+Removing OneDrive involves removing the package, uninstalling, and removing \*.lnk files. The following sample PowerShell code can be used to assist in removing OneDrive from the image:
 
 | Taskkill.exe /F /IM "OneDrive.exe" Taskkill.exe /F /IM "Explorer.exe" if (Test-Path "C:\\Windows\\System32\\OneDriveSetup.exe") { Start-Process "C:\\Windows\\System32\\OneDriveSetup.exe" -ArgumentList "/uninstall" -Wait } if (Test-Path "C:\\Windows\\SysWOW64\\OneDriveSetup.exe") { Start-Process "C:\\Windows\\SysWOW64\\OneDriveSetup.exe" -ArgumentList "/uninstall" -Wait } Remove-Item -Path "C:\\Windows\\ServiceProfiles\\LocalService\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\OneDrive.lnk" -Force Remove-Item -Path "C:\\Windows\\ServiceProfiles\\NetworkService\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\OneDrive.lnk" -Force \# Remove the automatic start item for OneDrive from the default user profile registry hive Start-Process C:\\Windows\\System32\\Reg.exe -ArgumentList "Load HKLM\\Temp C:\\Users\\Default\\NTUSER.DAT" -Wait Start-Process C:\\Windows\\System32\\Reg.exe -ArgumentList "Delete HKLM\\Temp\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run /v OneDriveSetup /f" -Wait Start-Process C:\\Windows\\System32\\Reg.exe -ArgumentList "Unload HKLM\\Temp" -Wait Start-Process -FilePath C:\\Windows\\Explorer.exe -Wait |
 |----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 
 
-For any questions or concerns about the information in this paper, contact your
-Microsoft account team, research the Microsoft VDI blog, post a message to
-Microsoft forums, or contact Microsoft for questions or concerns.
-
-End of article.
+For any questions or concerns about the information in this paper, contact your Microsoft account team, research the {Microsoft VDI blog}, post a message to Microsoft forums, or contact Microsoft for questions or concerns.
