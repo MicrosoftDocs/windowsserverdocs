@@ -66,9 +66,11 @@ There are many scripts available on the Internet for downloading NuGet packages 
 
 1. As described in the [blog post](https://weblogs.asp.net/jongalloway/downloading-a-local-nuget-repository-with-powershell), install the script as a NuGet package, or copy and paste the script into the PowerShell ISE.
 2. Edit the first line of the script to your NuGet feed's v2 URL. If you are downloading packages from the Windows Admin Center official feed, use the URL below.
+
 ```powershell
 $feedUrlBase = "https://aka.ms/sme-extension-feed"
 ```
+
 3. Run the script and it will download all the NuGet packages from the feed to the following local folder: %USERPROFILE%\Documents\NuGetLocal
 4. [Follow the instructions to install extensions from a different feed](#installing-extensions-from-a-different-feed).
 
