@@ -9,15 +9,13 @@ ms.topic: article
 ms.assetid: b491089c-5bcb-49d4-95b1-915b7ce69f88
 ms.author: pashort
 author: shortpatti 
-ms.datae: 08/09/2018
+ms.date: 02/06/2019
 ---
 # SDN Technologies
 
->Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server 2019, Windows Server 2016, Windows Server (Semi-Annual Channel)
 
 The topics in this section provide overview and technical information about the Software Defined Networking technologies that are included in Windows Server 2016.  
-
-
 
 ## [Network Controller](network-controller/Network-Controller.md)
 
@@ -28,7 +26,7 @@ The network controller is a highly available and scalable server and provides tw
 1. **Southbound API** – allows the network controller to communicate with the network.
 2. **Northbound API** – allows you to communicate with the network controller.
 
-You can use wither Windows PowerShell, the Representational State Transfer (REST) API or a management application to manage the following physical and virtual network infrastructure. 
+You can use Windows PowerShell, the Representational State Transfer (REST) API, or a management application to manage the following physical and virtual network infrastructure:
 
 - Hyper-V VMs and virtual switches 
 - Physical network switches 
@@ -46,9 +44,9 @@ Hyper-V Network Virtualization (HNV) helps you abstract your applications and wo
   
 ## [Hyper-V Virtual Switch](../../../virtualization/hyper-v-virtual-switch/Hyper-V-Virtual-Switch.md) 
 
-The Hyper-V Virtual Switch is a software-based layer-2 Ethernet network switch that is available in Hyper-V Manager after you have installed the Hyper-V server role. The switch includes programmatically managed and extensible capabilities to connect virtual machines to both virtual networks and the physical network. Also, Hyper-V Virtual Switch provides policy enforcement for security, isolation, and service levels.  
+The Hyper-V Virtual Switch is a software-based layer-2 Ethernet network switch that is available in Hyper-V Manager after you have installed the Hyper-V server role. The switch includes programmatically managed and extensible capabilities to connect virtual machines to both virtual networks and the physical network. Also, Hyper-V Virtual Switch provides policy enforcement for security, isolation, and service levels.
   
-In Hyper-V Virtual Switch in  Windows Server 2016, you can also deploy Switch Embedded Teaming (SET) and Remote Direct Memory Access (RDMA). For more information, see the section [Remote Direct Memory Access (RDMA) and Switch Embedded Teaming (SET)](#bkmk_rdma) in this topic.  
+You can also deploy the Hyper-V Virtual Switch with Switch Embedded Teaming (SET) and Remote Direct Memory Access (RDMA). For more information, see the section [Remote Direct Memory Access (RDMA) and Switch Embedded Teaming (SET)](#bkmk_rdma) in this topic.  
 
 ## [Internal DNS Service (iDNS) for SDN](Idns-for-Sdn.md)
 
