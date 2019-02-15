@@ -169,7 +169,7 @@ To better understand CORS request, let’s walkthrough a scenario where a single
     - Origin – includes the origin of the web API 
     - All headers included in the Access-Control-Allow-Headers response header 
 5. Once verified, AD FS approves the request by including the web API domain (origin) in the Access-Control-Allow-Origin response header.  
-6. The inclusion of the Access-Control-Allow-Origin header will allow the browser to go ahead with calling the requested API.  
+6. The inclusion of the Access-Control-Allow-Origin header will allow the browser to go ahead with calling the requested API.
 
 #### CORS customization 
 By default, CORS functionality will not be enabled; however, admins can enable the functionality through the Set-AdfsResponseHeaders cmdlet.  
