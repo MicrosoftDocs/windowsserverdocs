@@ -157,8 +157,9 @@ To better understand CORS request, let’s walkthrough a scenario where a single
     - Origin – includes the origin of the web API
     - Access-Control-Request-Method – identifies the HTTP method (eg, DELETE) to be used when actual request is made 
     - Access-Control-Request-Headers - identifies the HTTP headers to be used when actual request is made 
-    >[!NOTE]
-    >CORS request resembles a standard HTTP request, however, the presence of an origin header signals the incoming request is CORS related. 
+    
+   >[!NOTE]
+   >CORS request resembles a standard HTTP request, however, the presence of an origin header signals the incoming request is CORS related. 
 3. AD FS verifies that the web API origin included in the header is listed in the trusted origins configured in AD FS (details on how to modify trusted origins in CORS Customization section below). AD FS then responds with following headers.  
     - Access-Control-Allow-Origin – value same as in the Origin header 
     - Access-Control-Allow-Method – value same as in the Access-Control-Request-Method header 
