@@ -152,7 +152,7 @@ Web browser security prevents a web page from making cross-origin requests initi
 To better understand CORS request, let’s walkthrough a scenario where a single page application (SPA) needs to call a web API with a different domain. Further, let’s consider that both SPA and API are configured on ADFS 2019 and AD FS has CORS enabled i.e. AD FS can identify CORS headers in the HTTP request, validate header values, and include appropriate CORS headers in the response (details on how to enable and configure CORS on AD FS 2019 in CORS Customization section below). Sample flow: 
 
 1. User accesses SPA through client browser and is redirected to AD FS auth endpoint for authentication. Since SPA is configured for implicit grant flow, request returns an Access + ID token to the browser after successful authentication.  
-2. After user authentication, the front-end JavaScript included in SPA makes a request to access the web API. The request is redirected to AD FS with following headers 
+2. After user authentication, the front-end JavaScript included in SPA makes a request to access the web API. The request is redirected to AD FS with following headers
     - Options – describes the communication options for the target resource 
     - Origin – includes the origin of the web API
     - Access-Control-Request-Method – identifies the HTTP method (eg, DELETE) to be used when actual request is made 
