@@ -11,14 +11,19 @@ ms.topic: article
 author: lizap
 manager: dongill
 ms.author: elizapo
-ms.date: 01/28/2019
+ms.date: 02/06/2019
 ms.localizationpriority: medium
 ---
 # What's new for the Remote Desktop client on macOS?
 
 We regularly update the [Remote Desktop client for macOS](remote-desktop-mac.md), adding new features and fixing issues. Check out the latest updates below.
 
-If you encounter any issues, you can always contact us via Help > Report an Issue.
+If you encounter any issues, you can always contact us via **Help > Report an Issue**.
+
+## Updates for version 10.2.7
+*Published date: 2/6/2019*
+
+- In this release we addressed graphics mispaints (caused by a server encoding bug) that appeared when using AVC444 mode.
 
 ## Updates for version 10.2.6
 *Published date: 1/28/2019*

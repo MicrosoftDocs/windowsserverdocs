@@ -4,7 +4,7 @@ description: Brief description of topic for search engine results
 author: jasongerend
 ms.author: jgerend
 manager: elizapo
-ms.date: 12/20/2018
+ms.date: 02/13/2019
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: storage
@@ -28,6 +28,10 @@ Before you get started, install Storage Migration Service and make sure that the
     - Netlogon Service (NP-In)
     - Windows Management Instrumentation (DCOM-In)
     - Windows Management Instrumentation (WMI-In)
+
+   > [!NOTE]
+   > If you're using third party firewalls, the inbound port ranges to open are TCP/445 (SMB) , TCP/135 (RPC/DCOM endpoint mapper), and TCP 1025-65535 (RPC/DCOM ephemeral ports).
+
 1. If you're using an orchestrator server to manage the migration and you want to download events or a log of what data you transfer, check that the File and Printer Sharing (SMB-In) firewall rule is enabled on that server as well.
 
 ## Step 1: Create a job and inventory your servers to figure out what to migrate
@@ -76,7 +80,7 @@ In this step you cut over from the source servers to the destination servers, mo
  1. If you've navigated away from the migration job, in Windows Admin Center, go to **Server Manager** > **Storage Migration Service** and then select the job that you want to complete. 
  1. On the **Cut over to the new servers** > **Enter credentials** page, select **Next** to use the credentials you typed previously.
  1. On the **Configure cutover** page, specify which network adapters to take over each source device's settings. This moves the IP address from the source to the destination as part of the cutover.
- 1. Specify what IP address to use for the source server after cutover moves its address to the destination. You can use DHCP or a static address.
+ 1. Specify what IP address to use for the source server after cutover moves its address to the destination. You can use DHCP or a static address. If using a static address, the new subnet must be the same as the old subnet or cutover will fail.
     ![Screenshot showing a source server and its IP addresses and computer names and what they'll be replaced with after the cutover](media/migrate/cutover.png)
     **Figure 4: A source server and how its network configuration will move to the destination**
  1. Specify how to rename the source server after the destination server takes over its name. You can use a randomly generated name or type one yourself. Then select **Next**.

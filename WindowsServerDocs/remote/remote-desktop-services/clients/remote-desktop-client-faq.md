@@ -127,7 +127,7 @@ If you are using L2TP or PPTP in your VPN, make sure to set **Send all traffic**
 
 ### Which browsers can I use?
 
-The web client supports Edge, Internet Explorer 11, Mozilla Firefox (v55.0 and later), Safari, and Google Chrome.
+The web client supports Microsoft Edge, Internet Explorer 11, Mozilla Firefox (v55.0 and later), Safari, and Google Chrome.
 
 ### What PCs can I use to access the web client?
 
