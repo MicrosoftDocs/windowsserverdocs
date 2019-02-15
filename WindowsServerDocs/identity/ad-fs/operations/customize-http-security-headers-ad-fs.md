@@ -66,7 +66,7 @@ Set-AdfsResponseHeaders
    - SetHeaderValue "max-age=<seconds>; includeSubDomains" 
 ``` 
 
-Example: 
+"mple: 
 
 ```PowerShell
 Set-AdfsResponseHeaders 
@@ -90,7 +90,7 @@ This HTTP security response header is used to communicate to the browser2 whethe
  
 - **deny** – The page in a frame will not be displayed. This is the default and recommended setting.  
 - **sameorigin** – The page will only be displayed in the frame if the origin is the same as the origin of the web page. The option is not very useful unless all ancestors are also in the same origin.  
-- **allow-from <specified origin>** - The page will only be displayed in the frame if the origin (eg, https://www.example.com) matches the specific origin in the header. 
+- **allow-from <specified origin>** - The page will only be displayed in the frame if the origin (eg, https://www.".com) matches the specific origin in the header. 
 
 #### X-Frame-Options Customization  
 By default, header will be set to deny; however, admins can modify the value through the `Set-AdfsResponseHeaders` cmdlet.  
@@ -100,12 +100,12 @@ Set-AdfsResponseHeaders
    - SetHeaderValue "<deny/sameorigin/allow-from<specified origin>>" 
  ```
 
-Example: 
+": 
 
 ```PowerShell
 Set-AdfsResponseHeaders 
    - SetHeaderName "X-Frame-Options" 
-   - SetHeaderValue "allow-from https://www.example.com" 
+   - SetHeaderValue "allow-from https://www.".com" 
  ```
 
 By default, the header is included in the `ResponseHeaders` attribute; however, administrators can remove the header through the `Set-AdfsResponseHeaders` cmdlet.  
@@ -131,7 +131,7 @@ Set-AdfsResponseHeaders
    - SetHeaderValue "<0/1/1; mode=block/1; report=<reporting-uri>>" 
 ``` 
 
-Example: 
+": 
 
 ```PowerShell
 Set-AdfsResponseHeaders 
@@ -147,7 +147,7 @@ Set-AdfsResponseHeaders
 ```
 
 ### Cross Origin Resource Sharing (CORS) headers 
-￼Browser security prevents a web page from making cross-origin requests initiated from within scripts. However, sometimes you might want to access resources in other origins (domains). CORS is a W3C standard that allows a server to relax the same-origin policy. Using CORS, a server can explicitly allow some cross-origin requests while rejecting others.  
+Web browser security prevents a web page from making cross-origin requests initiated from within scripts. However, sometimes you might want to access resources in other origins (domains). CORS is a W3C standard that allows a server to relax the same-origin policy. Using CORS, a server can explicitly allow some cross-origin requests while rejecting others.  
  
 To better understand CORS request, let’s walkthrough a scenario where a single page application (SPA) needs to call a web API with a different domain. Further, let’s consider that both SPA and API are configured on ADFS 2019 and AD FS has CORS enabled i.e. AD FS can identify CORS headers in the HTTP request, validate header values, and include appropriate CORS headers in the response (details on how to enable and configure CORS on AD FS 2019 in CORS Customization section below). Sample flow: 
 
@@ -178,7 +178,7 @@ Set-AdfsResponseHeaders
    - EnableCORS $true 
  ```
 
-One enabled, admins will be able to enumerate a list of trusted origins using the same cmdlet. For instance, the following command would allow CORS requests from the origins https://example1.com and https://example1.com 
+One enabled, admins will be able to enumerate a list of trusted origins using the same cmdlet. For instance, the following command would allow CORS requests from the origins **https&#58;//example1.com** and **https&#58;//example1.com**. 
  
 ```PowerShell
 Set-AdfsResponseHeaders 
@@ -196,7 +196,7 @@ Customization of CSP header involves modifying the security policy that defines 
  
 Content-Security-Policy: default-src ‘self’ ‘unsafe-inline’ ‘’unsafe-eval’; img-src ‘self’ data:; 
  
-The **default-src** directive is used to modify -src directives6 without listing each directive explicitly. For instance, in the example below the policy 1 is same as the policy 2.  
+The **default-src** directive is used to modify -src directives6 without listing each directive explicitly. For instance, in the "mple below the policy 1 is same as the policy 2.  
 
 Policy 1 
 ```PowerShell
@@ -213,7 +213,7 @@ Set-AdfsResponseHeaders
 frame-src 'self'; manifest-src 'self'; media-src 'self';" 
 ```
 
-If a directive is explicitly listed, the specified value overrides the value given for default-src. In the example below, the img-src will take the value as ‘*’ (allowing images to be loaded from any origin) while other -src directives will take the value as ‘self’ (restricting to same origin as the web page).  
+If a directive is explicitly listed, the specified value overrides the value given for default-src. In the "mple below, the img-src will take the value as ‘*’ (allowing images to be loaded from any origin) while other -src directives will take the value as ‘self’ (restricting to same origin as the web page).  
 
 ```PowerShell
 Set-AdfsResponseHeaders 
@@ -234,7 +234,7 @@ Following sources can be defined for the default-src policy
 ### Custom Headers 
 In addition to the above listed security response headers (HSTS, CSP, X-Frame-Options, X-XSS-Protection and CORS), AD FS 2019 provides the ability to Set new headers.  
  
-Example: To set a new header "TestHeader" with value as "TestHeaderValue" 
+"mple: To set a new header "TestHeader" with value as "TestHeaderValue" 
 
 ```PowerShell
 Set-AdfsResponseHeaders 
