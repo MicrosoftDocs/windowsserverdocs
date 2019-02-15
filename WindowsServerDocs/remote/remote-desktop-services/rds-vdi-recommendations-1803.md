@@ -568,11 +568,11 @@ At some point during the image optimization process available Windows updates sh
 
 ![](media/4b396ffb87ef2fd15103dcee0a3a7507.png)
 
-This would be a good setting in case you are going to install Microsoft applications such as Microsoft Office to the base image. That way Office is up to date when the image is put in service. There are also .NET updates and certain third-party components such as Adobe that have updates available through Windows Update.
+This would be a good setting in case you are going to install Microsoft applications such as Microsoft Office to the base image. That way Office is up to date when the image is put in service. There are also .NET updates and certain non-Microsoft components such as Adobe that have updates available through Windows Update.
 
-One very important consideration for non-persistent VDI VMs are security updates, including security software definition files. These updates might be released once or even more than once per day. There might be a way to retain these updates, including Windows Defender and third-party components.
+One very important consideration for non-persistent VDI VMs are security updates, including security software definition files. These updates might be released once or even more than once per day. There might be a way to retain these updates, including Windows Defender and non-Microsoft components.
 
-For Windows Defender it might be best to allow the updates to occur, even on non-persistent VDI. The updates are going to apply nearly every logon session, but the updates are small and should not be a problem. Plus, the VM won’t be behind on updates because only the latest available will apply. The same might be true for third-party definition files.
+For Windows Defender it might be best to allow the updates to occur, even on non-persistent VDI. The updates are going to apply nearly every logon session, but the updates are small and should not be a problem. Plus, the VM won’t be behind on updates because only the latest available will apply. The same might be true for non-Microsoft definition files.
 
 > [!NOTE]  
 > Store apps (UWP apps) update through the Windows Store. Modern versions of Office such as Office 365 update through their own mechanisms when directly connected to the Internet, or via management technologies when not.
