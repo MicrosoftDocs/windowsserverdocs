@@ -18,19 +18,15 @@ ms.reviewer: mas
 
 Securing privileged access is a critical first step to establishing security assurances for business assets in a modern organization. The security of most or all business assets in an IT organization depends on the integrity of the privileged accounts used to administer, manage, and develop. Cyber-attackers often target these accounts and other elements of privileged access to gain access to data and systems using credential theft attacks like [Pass-the-Hash and Pass-the-Ticket](https://www.microsoft.com/pth).
 
-Protecting privileged access against determined adversaries requires you to take a complete and thoughtful approach to isolate these systems from risks. This guide recommends a plan of action spread over three phases:
+Protecting privileged access against determined adversaries requires you to take a complete and thoughtful approach to isolate these systems from risks.
 
-* Phase 1: First 30 days
-   * Quickly mitigate the most frequently used attack techniques.
-* Phase 2: 90 days
-   * Enhance visibility and control of privileged access.
-* Phase 3: Ongoing
-   * Continue to build defenses to enable proactive security posture.
+## What are privileged accounts?
 
-Microsoft recommends you follow this roadmap to secure privileged access against determined adversaries. You may adjust this roadmap to accommodate your existing capabilities and specific requirements in your organizations.
+Before we talk about how to secure them lets define privileged accounts.
 
-> [!NOTE]
-> Securing privileged access requires a broad range of elements including technical components (host defenses, account protections, identity management, etc.) as well as changes to process, and administrative practices and knowledge.
+Today a privileged account could include things you may think of today like an Active Directory Domain Administrator, Azure Active Directory Global Administrator, a security or management tool administrator, or even your organization's social media account.
+
+If compromised these accounts could potentially cause significant impact to your organization.
 
 ## Why is Securing Privileged Access important?
 
@@ -66,17 +62,19 @@ The roadmap is designed to maximize the use of technologies that you already hav
 
 The roadmap of Microsoft recommendations is broken into 3 phases:
 
-* Phase 1: First 30 days
+* [Phase 1: First 30 days](#phase-1-mitigate-frequently-used-attack-techniques)
    * Quickly mitigate the most frequently used attack techniques.
-* Phase 2: 90 days
+* [Phase 2: 90 days](#phase-2-enhance-visibility-and-control-of-privileged-access)
    * Enhance visibility and control of privileged access.
-* Phase 3: Ongoing
+* [Phase 3: Ongoing](#phase-3-continue-to-build-defenses)
    * Continue to build defenses to enable proactive security posture.
 
 Each phase of the roadmap is designed to raise the cost and difficulty for adversaries to attack privileged access for your on-premises and cloud assets. The roadmap is prioritized to schedule the most effective and the quickest implementations first based on our experiences with these attacks and solution implementation.
 
+Microsoft recommends you follow this roadmap to secure privileged access against determined adversaries. You may adjust this roadmap to accommodate your existing capabilities and specific requirements in your organizations.
+
 > [!NOTE]
-> The timelines for the roadmap are approximate and are based on our experience with customer implementations. The duration will vary in your organization depending on the complexity of your environment and your change management processes.
+> Securing privileged access requires a broad range of elements including technical components (host defenses, account protections, identity management, etc.) as well as changes to process, and administrative practices and knowledge. The timelines for the roadmap are approximate and are based on our experience with customer implementations. The duration will vary in your organization depending on the complexity of your environment and your change management processes.
 
 ## Phase 1: Mitigate frequently used attack techniques
 
@@ -90,7 +88,7 @@ To help separate internet risks (phishing attacks, web browsing) from privileged
 
 ### 2. Unique local admin passwords for workstations
 
-### 3. Unique Local Admin Passwords for Servers**
+### 3. Unique Local Admin Passwords for Servers
 
 To mitigate the risk of an adversary stealing a local administrator account password hash from the local SAM database and abusing it to attack other computers, you should use the LAPS tool to configure unique random passwords on each workstation and server and register those passwords in Active Directory. You can obtain the Local Administrator Password Solution for use on workstations and servers [here](http://Aka.ms/LAPS).
 
