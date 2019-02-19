@@ -7,11 +7,10 @@ layout: LandingPage
 ms.prod: windows-server-threshold
 ms.technology: storage
 ms.assetid: 6b74bc7c-a58d-4915-af8e-2cc27f2c4726
-ms.tgt_pltfrm: na
-ms.devlang: na
 ms.topic: landing-page
 ms.author: jgerend
 ms.localizationpriority: medium
+ms.date: 02/19/2019
 ---
 # Storage
 
