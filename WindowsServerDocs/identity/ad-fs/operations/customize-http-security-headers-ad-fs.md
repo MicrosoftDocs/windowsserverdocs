@@ -248,7 +248,7 @@ Once set, the new header is sent in the AD FS response (fiddler snippet below).
 ## Web browswer compatibility
 Use the following table and links to determine which web browsers are compatible with each of the security response headers.
 
-|HTTP Security Response Headers Browser Compatibility|Link|
+|HTTP Security Response Headers|Browser Compatibility|
 |-----|-----|
 |HTTP Strict-Transport-Security (HSTS)|[HSTS browser compatibility](https://developer.mozilla.org/docs/Web/HTTP/Headers/Strict-Transport-Security#Browser_compatibility)|
 |X-Frame-Options|[X-Frame-Options browser compatibility](https://developer.mozilla.org/docs/Web/HTTP/Headers/X-Frame-Options#Browser_compatibility)| 
