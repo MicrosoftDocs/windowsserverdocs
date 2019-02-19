@@ -259,4 +259,4 @@ Use the following table and links to determine which web browsers are compatible
 ## Next
 
 - [Use AD FS Help troublehshooting guides](https://aka.ms/adfshelp/troubleshooting )
-- [AD FS Troubleshooting](ad-fs-tshoot-overview.md)
+- [AD FS Troubleshooting](../../ad-fs/troubleshooting/ad-fs-tshoot-overview.md)
