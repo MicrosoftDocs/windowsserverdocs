@@ -5,7 +5,7 @@ author: billmath
 ms.author: billmath
 manager: daveba
 ms.reviewer: akgoel23
-ms.date: 02/13/2019
+ms.date: 02/19/2019
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
@@ -25,13 +25,11 @@ In this document we will discuss commonly used security response headers to demo
 >[!NOTE]
 >The document assumes that AD FS 2019 has been installed.  
 
->[!IMPORTANT]
->To view a list of compatible web browsers, see [X-Frame-Options browser compatibility](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Frame-Options#Browser_compatibility).
  
 Before we discuss headers, let’s look into a few scenarios creating the need for admins to customize security headers 
  
 ## Scenarios 
-1. Administrator has enabled [**HTTP Strict-Transport-Security**](#http-strict-transport-security-hsts) (forces all connections over HTTPS encryption) to protect the users who might access the web app using HTTP from a public wifi access point that might be hacked. She would like to further strengthen security by enabling HSTS for subdomains.  
+1. Administrator has enabled [**HTTP Strict-Transport-Security (HSTS)**](#http-strict-transport-security-hsts) (forces all connections over HTTPS encryption) to protect the users who might access the web app using HTTP from a public wifi access point that might be hacked. She would like to further strengthen security by enabling HSTS for subdomains.  
 2. Administrator has configured the [**X-Frame-Options**](#x-frame-options) response header (prevents rendering any web page in an iFrame) to protect the web pages from being clickjacked. However, she needs to customize the header value due to a new business requirement to display data (in iFrame) from an application with a different origin (domain).
 3. Administrator has enabled [**X-XSS-Protection**](#x-xss-protection) (prevents cross scripting attacks) to sanitize and block the page if browser detects cross scripting attacks. However, she needs to customize header to allow the page to load once sanitized.  
 4. Administrator needs to enable [**Cross Origin Resource Sharing (CORS)**](#cross-origin-resource-sharing-cors-headers) and set the origin (domain) on AD FS to allow a Single Page Application to access a web API with another domain.  
@@ -197,7 +195,7 @@ Customization of CSP header involves modifying the security policy that defines 
  
 Content-Security-Policy: default-src ‘self’ ‘unsafe-inline’ ‘’unsafe-eval’; img-src ‘self’ data:; 
  
-The **default-src** directive is used to modify -src directives6 without listing each directive explicitly. For instance, in the "mple below the policy 1 is same as the policy 2.  
+The **default-src** directive is used to modify [-src directives](https://developer.mozilla.org/docs/Web/HTTP/Headers/Content-Security-Policy/default-src) without listing each directive explicitly. For instance, in the "mple below the policy 1 is same as the policy 2.  
 
 Policy 1 
 ```PowerShell
@@ -246,6 +244,17 @@ Set-AdfsResponseHeaders
 Once set, the new header is sent in the AD FS response (fiddler snippet below).  
  
 ![Fiddler](media\customize-http-security-headers-ad-fs\header2.png)
+
+## Web browswer compatibility
+Use the following table and links to determine which web browsers are compatible with each of the security response headers.
+
+|HTTP Security Response Headers Browser Compatibility|Link|
+|-----|-----|
+|HTTP Strict-Transport-Security (HSTS)|[HSTS browser compatibility](https://developer.mozilla.org/docs/Web/HTTP/Headers/Strict-Transport-Security#Browser_compatibility)|
+|X-Frame-Options|[X-Frame-Options browser compatibility](https://developer.mozilla.org/docs/Web/HTTP/Headers/X-Frame-Options#Browser_compatibility)| 
+|X-XSS-Protection|[X-XSS-Protection browser compatibility](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-XSS-Protection#Browser_compatibility)| 
+|Cross Origin Resource Sharing (CORS)|[CORS browser compatibility](https://developer.mozilla.org/docs/Web/HTTP/CORS#Browser_compatibility) 
+|Content Security Policy (CSP)|[CSP browser compatibility](https://developer.mozilla.org/docs/Web/HTTP/CSP#Browser_compatibility) 
 
 ## Next
 
