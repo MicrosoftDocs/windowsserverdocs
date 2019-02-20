@@ -5,7 +5,7 @@ description:
 author: billmath
 ms.author: billmath
 manager: mtilman
-ms.date: 02/01/2019
+ms.date: 02/20/2019
 ms.topic: article
 ms.prod: windows-server-threshold
 
@@ -123,7 +123,7 @@ In this mode, AD FS populates users familiar location information and writes sec
 As AD FS learns, it stores login activity per user (whether in log only mode or enforce mode). 
 
 >[!NOTE]
->Configuring `ExtranetLockoutMode` to `AdfsSmartlockoutLogOnly` will cause the legacy AD FS “extranet soft lockout” behavior to no longer be in effect, even if the `EnableExtranetLockout` property is set to True.  This means that users who exceed lockout thresholds from familiar or unfamiliar IP addresses will not be locked out.  This is intended to be a temporary state so that the system can learn login behavior prior to re-introducing lockout enforcement with the new smart lockout behavior.
+>Configuring `ExtranetLockoutMode` to `AdfsSmartlockoutLogOnly` will cause the legacy AD FS “extranet soft lockout” behavior to no longer be in effect, even if the `EnableExtranetLockout` property is set to True.  This means that users who exceed lockout thresholds from familiar or unfamiliar IP addresses will not be locked out by AD FS Smart Lockout. However, on-premises AD may lockout the user based on the configuration there.  This is intended to be a temporary state so that the system can learn login behavior prior to re-introducing lockout enforcement with the new smart lockout behavior.
 
 For the new mode to take effect, restart the AD FS service on all nodes in the farm
   
