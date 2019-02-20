@@ -53,7 +53,15 @@ To change how much memory is allocated, modify this value using PowerShell. For 
 (Get-Cluster).BlockCacheSize = 2048
 ```
 
-To make changes take effect immediately, pause then resume the CSV, or move it between servers.
+For changes to take effect immediately, pause then resume your CSV volumes, or move them between servers. For example, use this PowerShell fragment to move each CSV to another server node and back again:
+
+```PowerShell
+Get-ClusterSharedVolume | ForEach {
+    $Owner = $_.OwnerNode
+    $_ | Move-ClusterSharedVolume
+    $_ | Move-ClusterSharedVolume -Node $Owner
+}
+```
 
 ## See also
 
