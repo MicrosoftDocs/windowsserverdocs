@@ -11,7 +11,7 @@ ms.topic: article
 author: lizap
 manager: dongill
 ms.author: elizapo
-ms.date: 2/20/2019
+ms.date: 02/20/2019
 ms.localizationpriority: medium
 ---
 # What's new for the Remote Desktop client on iOS?
