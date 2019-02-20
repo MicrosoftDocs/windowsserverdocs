@@ -16,10 +16,6 @@ ms.date: 02/12/2019
 
 If you encounter an issue not described on this page, please [let us know](http://aka.ms/WACfeedback).
 
-## <a name="previous-RS5-insider-previews"></aPrevious Insider preview builds of Windows 10 and Window Server 2019 (RS5)
-
-- There was a bug in approximate build numbers 17134-17673 which caused Windows Admin Center to fail.
-
 ## Installer
 
 - When installing Windows Admin Center using your own certificate, be mindful that if you copy the thumbprint from the certificate manager MMC tool, [it will contain an invalid character at the beginning.](https://support.microsoft.com/help/2023835/certificate-thumbprint-displayed-in-mmc-certificate-snap-in-has-extra) As a workaround, type the first character of the thumbprint, and copy/paste the rest.
