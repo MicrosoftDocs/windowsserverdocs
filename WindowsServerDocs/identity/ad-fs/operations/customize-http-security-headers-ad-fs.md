@@ -44,7 +44,7 @@ The response headers are included in the outgoing HTTP response sent by AD FS to
 The `ResponseHeaders` attribute in the above screenshot identifies the security headers that will be included by AD FS in every HTTP response. The response headers will be sent only if `ResponseHeadersEnabled` is set to `True` (default value). The value can be set to `False` to prevent AD FS including any of the security headers in the HTTP response. However this is not recommended.  To do this use the following:
 
 ```PowerShell
-Set-AdfsResponseHeaders - EnableResponseHeaders $false
+Set-AdfsResponseHeaders -EnableResponseHeaders $false
 ```
  
 ### HTTP Strict-Transport-Security (HSTS) 
@@ -59,19 +59,19 @@ All AD FS endpoints for web authentication traffic are opened exclusively over H
 By default, the header is enabled and `max-age` set to 1 year; however, administrators can modify the `max-age` (lowering max-age value is not recommended) or enable HSTS for subdomains through the `Set-AdfsResponseHeaders` cmdlet.  
  
 ```PowerShell
-Set-AdfsResponseHeaders - SetHeaderName "Strict-Transport-Security" - SetHeaderValue "max-age=<seconds>; includeSubDomains" 
+Set-AdfsResponseHeaders -SetHeaderName "Strict-Transport-Security" -SetHeaderValue "max-age=<seconds>; includeSubDomains" 
 ``` 
 
 Example: 
 
 ```PowerShell
-Set-AdfsResponseHeaders - SetHeaderName "Strict-Transport-Security" - SetHeaderValue "max-age=31536000; includeSubDomains" 
+Set-AdfsResponseHeaders -SetHeaderName "Strict-Transport-Security" -SetHeaderValue "max-age=31536000; includeSubDomains" 
  ```
 
 By default, the header is included in the `ResponseHeaders` attribute; however, administrators can remove the header through the `Set-AdfsResponseHeaders` cmdlet.  
  
 ```PowerShell
-Set-AdfsResponseHeaders - RemoveHeaders "Strict-Transport-Security" 
+Set-AdfsResponseHeaders -RemoveHeaders "Strict-Transport-Security" 
 ```
 
 ### X-Frame-Options 
@@ -88,19 +88,19 @@ This HTTP security response header is used to communicate to the browser whether
 #### X-Frame-Options Customization  
 By default, header will be set to deny; however, admins can modify the value through the `Set-AdfsResponseHeaders` cmdlet.  
 ```PowerShell
-Set-AdfsResponseHeaders - SetHeaderName "X-Frame-Options" - SetHeaderValue "<deny/sameorigin/allow-from<specified origin>>" 
+Set-AdfsResponseHeaders -SetHeaderName "X-Frame-Options" -SetHeaderValue "<deny/sameorigin/allow-from<specified origin>>" 
  ```
 
 Example: 
 
 ```PowerShell
-Set-AdfsResponseHeaders - SetHeaderName "X-Frame-Options" - SetHeaderValue "allow-from https://www.example.com" 
+Set-AdfsResponseHeaders -SetHeaderName "X-Frame-Options" -SetHeaderValue "allow-from https://www.example.com" 
  ```
 
 By default, the header is included in the `ResponseHeaders` attribute; however, administrators can remove the header through the `Set-AdfsResponseHeaders` cmdlet.  
 
 ```PowerShell
-Set-AdfsResponseHeaders - RemoveHeaders "X-Frame-Options" 
+Set-AdfsResponseHeaders -RemoveHeaders "X-Frame-Options" 
 ```
 
 ### X-XSS-Protection 
@@ -114,19 +114,19 @@ This HTTP security response header is used to stop web pages from loading when c
 By default, the header will be set to 1; mode=block; however, administrators can modify the value through the `Set-AdfsResponseHeaders` cmdlet.  
 
 ```PowerShell
-Set-AdfsResponseHeaders - SetHeaderName "X-XSS-Protection" - SetHeaderValue "<0/1/1; mode=block/1; report=<reporting-uri>>" 
+Set-AdfsResponseHeaders -SetHeaderName "X-XSS-Protection" -SetHeaderValue "<0/1/1; mode=block/1; report=<reporting-uri>>" 
 ``` 
 
 Example: 
 
 ```PowerShell
-Set-AdfsResponseHeaders - SetHeaderName "X-XSS-Protection" - SetHeaderValue "1" 
+Set-AdfsResponseHeaders -SetHeaderName "X-XSS-Protection" -SetHeaderValue "1" 
  ```
 
 By default, the header is included in the `ResponseHeaders` attribute; however, admins can remove the header through the `Set-AdfsResponseHeaders` cmdlet. 
 
 ```PowerShell
-Set-AdfsResponseHeaders - RemoveHeaders "X-XSS-Protection" 
+Set-AdfsResponseHeaders -RemoveHeaders "X-XSS-Protection" 
 ```
 
 ### Cross Origin Resource Sharing (CORS) headers 
@@ -158,13 +158,13 @@ To better understand CORS request, let’s walkthrough a scenario where a single
 By default, CORS functionality will not be enabled; however, admins can enable the functionality through the Set-AdfsResponseHeaders cmdlet.  
 
 ```PowerShell 
-Set-AdfsResponseHeaders - EnableCORS $true 
+Set-AdfsResponseHeaders -EnableCORS $true 
  ```
 
 One enabled, admins will be able to enumerate a list of trusted origins using the same cmdlet. For instance, the following command would allow CORS requests from the origins **https&#58;//example1.com** and **https&#58;//example1.com**. 
  
 ```PowerShell
-Set-AdfsResponseHeaders - CORSTrustedOrigins "https://example1.com,https://example2.com" 
+Set-AdfsResponseHeaders -CORSTrustedOrigins https://example1.com,https://example2.com 
  ```
 
 > [!NOTE]
@@ -182,19 +182,19 @@ The **default-src** directive is used to modify [-src directives](https://develo
 
 Policy 1 
 ```PowerShell
-Set-AdfsResponseHeaders - SetHeaderName "Content-Security-Policy" - SetHeaderValue "default-src 'self'" 
+Set-AdfsResponseHeaders -SetHeaderName "Content-Security-Policy" -SetHeaderValue "default-src 'self'" 
 ```
  
 Policy 2
 ```PowerShell 
-Set-AdfsResponseHeaders - SetHeaderName "Content-Security-Policy" - SetHeaderValue "script-src ‘self’; img-src ‘self’; font-src 'self';  
+Set-AdfsResponseHeaders -SetHeaderName "Content-Security-Policy" -SetHeaderValue "script-src ‘self’; img-src ‘self’; font-src 'self';  
 frame-src 'self'; manifest-src 'self'; media-src 'self';" 
 ```
 
 If a directive is explicitly listed, the specified value overrides the value given for default-src. In the example below, the img-src will take the value as ‘*’ (allowing images to be loaded from any origin) while other -src directives will take the value as ‘self’ (restricting to same origin as the web page).  
 
 ```PowerShell
-Set-AdfsResponseHeaders - SetHeaderName "Content-Security-Policy" - SetHeaderValue "default-src ‘self’; img-src *" 
+Set-AdfsResponseHeaders -SetHeaderName "Content-Security-Policy" -SetHeaderValue "default-src ‘self’; img-src *" 
 ```
 Following sources can be defined for the default-src policy 
  
@@ -213,7 +213,7 @@ In addition to the above listed security response headers (HSTS, CSP, X-Frame-Op
 Example: To set a new header "TestHeader" with value as "TestHeaderValue" 
 
 ```PowerShell
-Set-AdfsResponseHeaders - SetHeaderName "TestHeader" - SetHeaderValue "TestHeaderValue" 
+Set-AdfsResponseHeaders -SetHeaderName "TestHeader" -SetHeaderValue "TestHeaderValue" 
  ```
 
 Once set, the new header is sent in the AD FS response (fiddler snippet below).  
