@@ -174,6 +174,76 @@ Follow the instructions under [How to publish the Remote Desktop web client](rem
     Install-RDWebClientPackage -Source "C:\WebClient\rdwebclient-1.0.1.zip"
     ```
 
+## Connecting to RD Connection Broker without RD Gateway in Windows Server 2019
+This section describes how to enable a web client connection to an RD Connection Broker without an RD Gateway in Windows Server 2019.
+
+### Setting up the RD Broker Server
+
+#### Follow these steps if there is no certificate bound to the RD Broker Server
+
+1. Open **Server Manager** > **Remote Desktop Services**.
+
+2. In **Deployment Overview** section, select the **Tasks** dropdown menu.
+
+3. Select **Edit Deployment Properties**, a new window titled **Deployment Properties** will open.
+
+4. In the **Deployment Properties** window, select **Certificates** in the left menu.
+
+5. In the list of Certificate Levels, select **RD Connection Broker - Enable Single Sign On**. You have two options: (1) create a new certificate or (2) an existing certificate.
+
+#### Follow these steps if there is a certificate previously bound to the RD Broker Server
+
+1. Open the certificate bound to the Broker and copy the **Thumbprint** value.
+
+2. To bind this certificate to the secure port 3392, open an elevated PowerShell window and run the following command, replacing **"< thumbprint >"** with the value copied from the previous step:
+
+    ```PowerShell
+    netsh http add sslcert ipport=0.0.0.0:3392 certhash="<thumbprint>" certstorename="Remote Desktop" appid="{00000000-0000-0000-0000-000000000000}"
+    ```
+
+    > [!NOTE]
+    > To check if the certificate has been bound correctly, run the following command:
+    >
+    > ```PowerShell
+    > netsh http show sslcert
+    > ```
+    >
+    > In the list of SSL Certificate bindings, ensure that the correct certificate is bound to port 3392.
+
+3. Open the Windows Registry (regedit) and nagivate to ```HKLM\SYSTEM\CurrentControlSet\Control\Terminal Server\WinStations\RDP-Tcp``` and locate the key **WebSocketURI**. The value must be set to **https://+:3392/rdp/**.
+
+### Setting up the RD Session Host
+Follow these steps if the RD Session Host server is different from the RD Broker Server:
+
+1. Create a certificate for the RD Session Host machine, open it and copy the **Thumbprint** value.
+
+2. To bind this certificate to the secure port 3392, open an elevated PowerShell window and run the following command, replacing **"< thumbprint >"** with the value copied from the previous step:
+
+    ```PowerShell
+    netsh http add sslcert ipport=0.0.0.0:3392 certhash="<thumbprint>" appid="{00000000-0000-0000-0000-000000000000}"
+    ```
+
+    > [!NOTE]
+    > To check if the certificate has been bound correctly, run the following command:
+    >
+    > ```PowerShell
+    > netsh http show sslcert
+    > ```
+    >
+    > In the list of SSL Certificate bindings, ensure that the correct certificate is bound to port 3392.
+
+3. Open the Windows Registry (regedit) and nagivate to ```HKLM\SYSTEM\CurrentControlSet\Control\Terminal Server\WinStations\RDP-Tcp``` and locate the key **WebSocketURI**. The value must be set to **https://+:3392/rdp/**.
+
+### General Observations
+
+* Ensure that both the RD Session Host and RD Broker Server are running Windows Server 2019.
+
+* Ensure that public trusted certificates are configured for both the RD Session Host and RD Broker Server.
+    > [!NOTE]
+    > If both the RD Session Host and the RD Broker Server share the same machine, set the RD Broker Server certificate only. If the RD Session Host and RD Broker Server use different machines, both must be configured with unique certificates.
+
+* The **Subject Alternative Name (SAN)** for each certificate must be set to the machine's **Fully Qualified Domain Name (FQDN)**. The **Common Name (CN)** must match the SAN for each certificate.
+
 ## Troubleshooting
 
 If a user reports any of the following issues when opening the web client for the first time, the following sections will tell you what to do to fix them.
