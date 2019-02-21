@@ -174,12 +174,12 @@ Follow the instructions under [How to publish the Remote Desktop web client](rem
     Install-RDWebClientPackage -Source "C:\WebClient\rdwebclient-1.0.1.zip"
     ```
 
-## Connecting to RD Connection Broker without RD Gateway in Windows Server 2019
-This section describes how to enable a web client connection to an RD Connection Broker without an RD Gateway in Windows Server 2019.
+## Connecting to RD Broker without RD Gateway in Windows Server 2019
+This section describes how to enable a web client connection to an RD Broker without an RD Gateway in Windows Server 2019.
 
-### Setting up the RD Broker Server
+### Setting up the RD Broker server
 
-#### Follow these steps if there is no certificate bound to the RD Broker Server
+#### Follow these steps if there is no certificate bound to the RD Broker server
 
 1. Open **Server Manager** > **Remote Desktop Services**.
 
@@ -191,7 +191,7 @@ This section describes how to enable a web client connection to an RD Connection
 
 5. In the list of Certificate Levels, select **RD Connection Broker - Enable Single Sign On**. You have two options: (1) create a new certificate or (2) an existing certificate.
 
-#### Follow these steps if there is a certificate previously bound to the RD Broker Server
+#### Follow these steps if there is a certificate previously bound to the RD Broker server
 
 1. Open the certificate bound to the Broker and copy the **Thumbprint** value.
 
@@ -213,7 +213,7 @@ This section describes how to enable a web client connection to an RD Connection
 3. Open the Windows Registry (regedit) and nagivate to ```HKLM\SYSTEM\CurrentControlSet\Control\Terminal Server\WinStations\RDP-Tcp``` and locate the key **WebSocketURI**. The value must be set to **https://+:3392/rdp/**.
 
 ### Setting up the RD Session Host
-Follow these steps if the RD Session Host server is different from the RD Broker Server:
+Follow these steps if the RD Session Host server is different from the RD Broker server:
 
 1. Create a certificate for the RD Session Host machine, open it and copy the **Thumbprint** value.
 
@@ -236,11 +236,11 @@ Follow these steps if the RD Session Host server is different from the RD Broker
 
 ### General Observations
 
-* Ensure that both the RD Session Host and RD Broker Server are running Windows Server 2019.
+* Ensure that both the RD Session Host and RD Broker server are running Windows Server 2019.
 
-* Ensure that public trusted certificates are configured for both the RD Session Host and RD Broker Server.
+* Ensure that public trusted certificates are configured for both the RD Session Host and RD Broker server.
     > [!NOTE]
-    > If both the RD Session Host and the RD Broker Server share the same machine, set the RD Broker Server certificate only. If the RD Session Host and RD Broker Server use different machines, both must be configured with unique certificates.
+    > If both the RD Session Host and the RD Broker server share the same machine, set the RD Broker server certificate only. If the RD Session Host and RD Broker server use different machines, both must be configured with unique certificates.
 
 * The **Subject Alternative Name (SAN)** for each certificate must be set to the machine's **Fully Qualified Domain Name (FQDN)**. The **Common Name (CN)** must match the SAN for each certificate.
 
