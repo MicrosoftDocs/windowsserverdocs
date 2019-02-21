@@ -68,6 +68,7 @@ This walkthrough uses the following environment as an example:
 If you're using Windows Admin Center to manage Storage Replica, use the following steps to prep your PC to manage Storage Replica.
 1. Download and install [Windows Admin Center](../../manage/windows-admin-center/overview.md).
 2. Download and install the [Remote Server Administration Tools](https://www.microsoft.com/download/details.aspx?id=45520).
+    - If you're using Windows 10 October 2018 Update (1809) or later, install the "RSAT: Storage Replica Module for Windows PowerShell" from Features on Demand.
 3. Open a PowerShell session as administrator by selecting the **Start** button, typing **PowerShell**, right-clicking **Windows PowerShell,** and then selecting **Run as administrator**.
 4. Enter the following command to enable the WS-Management protocol on the local computer and set up the default configuration for remote management on the client.
 
