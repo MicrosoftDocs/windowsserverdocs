@@ -5,7 +5,7 @@ author: billmath
 ms.author: billmath
 manager: mtillman
 ms.reviewer: anandyadavMSFT 
-ms.date: 07/31/2018
+ms.date: 02/13/2019
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
@@ -94,7 +94,7 @@ Each test result is displayed with details that describe the test and the resolu
 
 ## Next
 
-- [Use AD FS Help troublehsooting guides](https://aka.ms/adfshelp/troubleshooting )
+- [Use AD FS Help troublehshooting guides](https://aka.ms/adfshelp/troubleshooting )
 - [AD FS Troubleshooting](ad-fs-tshoot-overview.md)
 
  
