@@ -122,16 +122,16 @@ tool.
  ##### Global VDI operating system optimization
 
 
-Global VDI setting can be categorized as follows:
+Global VDI settings include the following:
 
 -   [Universal Windows Platform (UWP) app
-    cleanup](#universal-windows-platform-(uwp)-app-cleanup)
+    cleanup](#universal-windows-platform-app-cleanup)
 
--   [Optional Features cleanup](#Optional_Features_cleanup)
+-   [Clean up optional features](#clean-up-optional-features)
 
 -   [Local policy settings](#local-policy-settings)
 
--   [System services](#System_Services)
+-   [System services](#system_services)
 
 -   [Scheduled tasks](#scheduled-tasks)
 
@@ -148,9 +148,9 @@ Global VDI setting can be categorized as follows:
     Functionality Baseline](https://go.microsoft.com/fwlink/?linkid=828887)
     guidance.
 
--   [Disk cleanup](#Disk_cleanup) (including using the Disk Cleanup wizard)
+-   [Disk cleanup](#disk_cleanup) (including using the Disk Cleanup wizard)
 
-### Universal Windows Platform (UWP) app cleanup
+### Universal Windows Platform app cleanup
 
 One of the goals of a VDI image is to be as small as possible. One way to reduce the size of the image is to remove UWP applications that will not be used in the environment. With UWP apps, there are the main application files, also known as the payload. There is a small amount of data stored in each user’s profile for application specific settings. There is also a small amount of data in the “All
 Users” profile.
@@ -203,30 +203,28 @@ This is the default setting, and according to Task Manager on a new installation
 
 Changing the “Show a notification when new albums are available” setting for all users is not practical at this time.
 
-### Cleaning up Windows optional features
+### Clean up optional features
 
-#### Managing Optional Features with PowerShell
+#### Managing optional features with PowerShell
 
-Source:
-<https://social.technet.microsoft.com/wiki/contents/articles/39386.windows-10-managing-optional-features-with-powershell.aspx>
-
-You can manage Windows Optional Features using PowerShell. To enumerate currently installed Windows Features, run this PowerShell command:
+ To enumerate currently installed Windows Features, run this PowerShell command:
 
 `Get-WindowsOptionalFeature -Online`
 
 
-Using PowerShell, you can enable or disable a specific Windows optional feature as in this example:
+You can enable or disable a specific Windows optional feature as in this example:
 
 `Enable-WindowsOptionalFeature -Online -FeatureName “DirectPlay” -All`
 
+For more about this, see [Windows 10: Managing optional features with PowerShell](https://social.technet.microsoft.com/wiki/contents/articles/39386.windows-10-managing-optional-features-with-powershell.aspx).
 
-#### Enable or disable Windows Features by using DISM
+#### Enable or disable Windows features by using DISM
 
 You can use the built-in **Dism.exe** tool to enumerate and control Windows optional features. You can set up a Dism.exe script to run during a task sequence that installs the operating system.
 
 ### Local policy settings
 
-Many optimizations for Windows 10 in a VDI environment can be made using Windows policy. The settings listed in the table in this section can be applied locally to the base image. Then if the equivalent settings are not specified in any other way such as by group policy, the settings would still apply.
+Many optimizations for Windows 10 in a VDI environment can be made using Windows policy. The settings listed here can be applied locally to the base image. Then if the equivalent settings are not specified in any other way such as by group policy, the settings would still apply.
 
 Some decisions might be based on the specifics of the environment, for example:
 
@@ -454,7 +452,7 @@ Baseline](https://go.microsoft.com/fwlink/?linkid=828887).
 \* Comes from the “[Windows Restricted Traffic Limited Functionality
 Baseline](https://go.microsoft.com/fwlink/?linkid=828887).”
 
-### Notes about Network Connectivity Status Indicator
+### Notes about Network Connectivity Status indicator
 
 The group policy settings above include settings to turn off checking to see if
 the system is connected to the Internet. If your environment does not connect to
@@ -465,7 +463,7 @@ checks, there will be a yellow flag on the Network icon, even though the network
 might be functioning normally. If you would like to remove the network icon as a
 group policy setting, you can find that in this location:
 
-| Windows Update\\ Windows Update for Business                                | Select when Quality Updates are received | 1. 30 days 2. Pause quality updates starting yyyy-mm-dd | Enabled                                                                             |
+| Windows Update or Windows Update for Business                                | Select when Quality Updates are received | 1. 30 days 2. Pause quality updates starting yyyy-mm-dd | Enabled                                                                             |
 |-----------------------------------------------------------------------------|------------------------------------------|---------------------------------------------------------|-------------------------------------------------------------------------------------|
 | **Local Computer Policy \\ User Configuration \\ Administrative Templates** |                                          |                                                         |                                                                                     |
 | **Start Menu and Taskbar**                                                  | Remove the networking icon               |                                                         | **Enabled** (the networking icon is not displayed in the system notification area.) |
