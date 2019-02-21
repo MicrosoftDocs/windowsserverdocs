@@ -169,7 +169,7 @@ The client uses standard touch gestures. You can also use touch gestures to repl
 
 The [Remote Desktop iOS beta client](https://aka.ms/rdiosbeta) supports the Swiftpoint GT and ProPoint physical mice. Swiftpoint is offering an [exclusive discount](https://www.swiftpoint.com/microsoft/) on the GT for iOS beta client users.
 
-The iOS client currently only supports Swiftpoint mice. Refer to the [What's new in the iOS cleint](ios-whatsnew.md) page and the [iOS App Store](https://aka.ms/rdios) for news about support for other devices in the future.
+The iOS client currently only supports Swiftpoint mice. Refer to the [What's new in the iOS client](ios-whatsnew.md) page and the [iOS App Store](https://aka.ms/rdios) for news about support for other devices in the future.
 
 ## Use a keyboard in a remote session
 
