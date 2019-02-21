@@ -21,15 +21,15 @@ This article helps you choose settings for Windows 10,  version 1803 (build 1713
 In a VDI environment the key ways to optimize Windows 10 performance are to minimize app graphic redraws, background activities that have no major benefit to the VDI environment, and generally reduce running processes to the bare minimum. A secondary goal is to reduce disk space usage in the base image to the bare minimum. With VDI implementations, the smallest possible base, or “gold” image size, can slightly reduce memory usage on the hypervisor, as well as a small reduction in overall network operations required to deliver the desktop image to the consumer.
 
 > [!NOTE]  
-> Settings recommended here can be applied to other installation of Windows 10, version 180, including those on physical or other virtual devices. No recommendations in this topic should affect  the supportability of Windows 10, version 1803.
+> Settings recommended here can be applied to other installation of Windows 10, version 1803, including those on physical or other virtual devices. No recommendations in this topic should affect  the supportability of Windows 10, version 1803.
 
 ## VDI optimization principles
 
-A VDI environment presents a full desktop session, including applications, to a computer user over a network. VDI environments usually use a “base” operating system image, which then becomes the basis for the desktops subsequently presented to the users for work. There are variations of VDI implementations such as “persistent”, “non-persistent”, and “desktop session”. The persistent type preserves changes to the VDI desktop operating system from one session to the next. The non-persistent type does not preserve changes to the VDI desktop perating system from one session to the next. To the user this desktop is little different than other virtual or physical device, other than it is accessed over a network.
+A VDI environment presents a full desktop session, including applications, to a computer user over a network. VDI environments usually use a base operating system image, which then becomes the basis for the desktops subsequently presented to the users for work. There are variations of VDI implementations such as “persistent”, “non-persistent”, and “desktop session.” The persistent type preserves changes to the VDI desktop operating system from one session to the next. The non-persistent type does not preserve changes to the VDI desktop perating system from one session to the next. To the user this desktop is little different than other virtual or physical device, other than it is accessed over a network.
 
-The optimization settings would take place on a reference device. A VM would be an ideal place to build the VM, because state can be saved, checkpoints can be made, backups can be made, etc. A default operating system is installed on the base VM. That base VM is then optimized by removing unneeded apps, installing Windows updates, installing other updates, deleting temporary files, applying settings, etc.
+The optimization settings would take place on a reference device. A VM is an ideal place to build the image, because you can save the state, make checkpoints and backups can be made, and other useful tasks. Start by installing default operating system on the base VM, and then optimize the base VM for VDI use by removing unneeded apps, installing Windows updates, installing other updates, deleting temporary files, applying settings, etc.
 
-There are other types of VDI such as “persistent” and Remote Desktop Services (RDS). An in-depth discussion regarding these technologies is outside the scope of this article, which focuses on the Windows base image settings, with reference to other factors in the environment such as host optimization.
+There are other types of VDI such as “persistent” and Remote Desktop Services (RDS). An in-depth discussion regarding these technologies is outside the scope of this topic, which focuses on the Windows base image settings with reference to other factors in the environment such as host optimization.
 
 ### Persistent VDI
 
@@ -56,7 +56,7 @@ With image-based non-persistent VDI, the base image is read-only. When a non-per
 One important aspect of non-persitent VDI that is based on a single image is servicing. Updates to the operating system are delivered usually once per month.
 With image-based VDI, there is a set of processes to perform in order to get updates to the image:
 
--   On a given host, all the VMs on that host, based from the base image must be shut down or turned off. This means the users are redirected to other VMs.
+-   On a given host, all the VMs on that host that are derived from the base image must be shut down or turned off. This means the users are redirected to other VMs.
 
 -   The base image is then opened and started up. All maintenance activities are then performed, such as operating system updates, .NET updates, app updates, etc.
 
@@ -71,9 +71,7 @@ With image-based VDI, there is a set of processes to perform in order to get upd
 -   Users are allowed to log back on.
 
 > [!NOTE]  
-> Windows 10 performs a set of maintenance tasks automatically, on a periodic basis. There is a scheduled task that is set to run at 3:00 AM every
-day by default. This scheduled task performs a list of tasks, including Windows Update cleanup. You can view all the categories of maintenance that take place
-automatically with this PowerShell command:
+> Windows 10 performs a set of maintenance tasks automatically, on a periodic basis. There is a scheduled task that is set to run at 3:00 AM local time every day by default. This scheduled task performs a list of tasks, including Windows Update cleanup. You can view all the categories of maintenance that take place automatically with this PowerShell command:
 
 `Get-ScheduledTask \| ? {\$_.Settings.MaintenanceSettings}`
 
@@ -127,9 +125,9 @@ tool.
 Global VDI setting can be categorized as follows:
 
 -   [Universal Windows Platform (UWP) app
-    cleanup](#universal-windows-platform-uwp-app-cleanup)
+    cleanup](#universal-windows-platform-(uwp)-app-cleanup)
 
--   [Optional Features cleanup](#_Optional_Features_cleanup)
+-   [Optional Features cleanup](#Optional_Features_cleanup)
 
 -   [Local policy settings](#local-policy-settings)
 
@@ -150,7 +148,7 @@ Global VDI setting can be categorized as follows:
     Functionality Baseline](https://go.microsoft.com/fwlink/?linkid=828887)
     guidance.
 
--   [Disk cleanup](#Disk_cleanup) (including using the Disk Cleanup Wizard)
+-   [Disk cleanup](#Disk_cleanup) (including using the Disk Cleanup wizard)
 
 ### Universal Windows Platform (UWP) app cleanup
 
@@ -193,19 +191,19 @@ PowerShell command to remove UWP app payloads:
 
 `Remove-AppxProvisionedPackage -Online -PackageName MyAppxPackage`
 
-As a final note on this topic, each UWP app should be evaluated for applicability in each unique environment. You will want to install a default installation of Windows 10 1803, then note which apps are running and consuming memory. For example, you might want to consider removing apps that start automatically, or apps that automatically display information on the Start Menu, such as Weather and News, and that might not be of use in your environment.
+Each UWP app should be evaluated for applicability in each unique environment. You will want to install a default installation of Windows 10 1803, then note which apps are running and consuming memory. For example, you might want to consider removing apps that start automatically, or apps that automatically display information on the Start menu, such as Weather and News, and that might not be of use in your environment.
 
 Also, if not using the Photos app, consider removing the Photos app. As of 1803, there is a default setting in the Photos app called “Show a notification when new albums are available”
 
 ![](media/a39405a0b57ef3c25fc61c68a9f1a2d0.png)
 
-This is the default setting, and according to Task Manager on a new installation in a virtual machine, this app uses approximately 145 MB of memory, and specifically ‘private working set’. The memory usage of an “average” virtual machine, with 3GB RAM, as shown here:
+This is the default setting, and according to Task Manager on a new installation in a virtual machine, this app uses approximately 145 MB of memory, specifically private working set memory. The memory usage of an average virtual machine, with 3 GB RAM, is shown here:
 
 ![](media/20ae1c6530c012190a7d65e4da66194c.png)
 
 Changing the “Show a notification when new albums are available” setting for all users is not practical at this time.
 
-### Cleaning up Windows Optional features
+### Cleaning up Windows optional features
 
 #### Managing Optional Features with PowerShell
 
@@ -217,26 +215,30 @@ You can manage Windows Optional Features using PowerShell. To enumerate currentl
 `Get-WindowsOptionalFeature -Online`
 
 
-Using PowerShell, you can enable or disable a specific Windows Optional Feature as in this example:
+Using PowerShell, you can enable or disable a specific Windows optional feature as in this example:
 
 `Enable-WindowsOptionalFeature -Online -FeatureName “DirectPlay” -All`
 
 
 #### Enable or disable Windows Features by using DISM
 
-You can use the built-in **Dism.exe** tool to enumerate and control Windows Optional Features. You can set up a Dism.exe script to run during a task sequence that installs the operating system.
+You can use the built-in **Dism.exe** tool to enumerate and control Windows optional features. You can set up a Dism.exe script to run during a task sequence that installs the operating system.
 
 ### Local policy settings
 
-Many optimizations for Windows 10 in a VDI environment can be made using Windows policy. The settings listed in the table in this section can be applied locally to the base/gold image. Then if the equivalent settings are not specified in any way such as group policy, the settings would still apply.
+Many optimizations for Windows 10 in a VDI environment can be made using Windows policy. The settings listed in the table in this section can be applied locally to the base image. Then if the equivalent settings are not specified in any other way such as by group policy, the settings would still apply.
 
-Note that some decisions might be based on the specifics of the environment, for example:
+Some decisions might be based on the specifics of the environment, for example:
 
 -   Is the VDI environment allowed to access the Internet?
 
 -   Is the VDI solution persistent or non-persistent?
 
 The following settings specifically do not counter or conflict with any setting that has anything to do with security. These settings were chosen to remove settings that might not be applicable to VDI environments.
+
+> [!NOTE]  
+> In this table of group policy settings, items marked with an asterisk are from the [Windows Restricted Traffic Limited Functionality
+Baseline](https://go.microsoft.com/fwlink/?linkid=828887).
 
 | Policy Setting                                                                                                                      | Item                                                                                                                                      | Sub-item                                                             | Possible setting and comments                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
 |-------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -280,7 +282,7 @@ The following settings specifically do not counter or conflict with any setting 
 | **Internet Communication Management**\\ Internet Communication settings                                                             | Turn off handwriting recognition error reporting                                                                                          |                                                                      | Enabled                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
 | **Internet Communication Management**\\ Internet Communication settings                                                             | Turn off Help and Support Center "Did you know?" content                                                                                  |                                                                      | Enabled                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
 | **Internet Communication Management**\\ Internet Communication settings                                                             | Turn off Help and Support Center Microsoft Knowledge Base search                                                                          |                                                                      | Enabled                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
-| **Internet Communication Management**\\ Internet Communication settings                                                             | Turn off Internet Connection Wizard if URL connection is referring to Microsoft.com                                                       |                                                                      | Enabled                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
+| **Internet Communication Management**\\ Internet Communication settings                                                             | Turn off Internet Connection wizard if URL connection is referring to Microsoft.com                                                       |                                                                      | Enabled                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
 | **Internet Communication Management**\\ Internet Communication settings                                                             | Turn off Internet download for Web publishing and online ordering wizards                                                                 |                                                                      | Enabled                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
 | **Internet Communication Management**\\ Internet Communication settings                                                             | Turn off Internet File Association service                                                                                                |                                                                      | Enabled                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
 | **Internet Communication Management**\\ Internet Communication settings                                                             | Turn off Registration if URL connection is referring to Microsoft.com                                                                     |                                                                      | Enabled                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
@@ -639,58 +641,75 @@ Baselines](https://docs.microsoft.com/windows/device-security/windows-security-b
 The [Windows Restricted Traffic Limited Functionality Baseline](https://docs.microsoft.com/windows/privacy/manage-connections-from-windows-operating-system-components-to-microsoft-services)
 settings are marked in the Group Policy table with an asterisk.
 
-### Disk cleanup (including using the Disk Cleanup Wwizard)
+### Disk cleanup (including using the Disk Cleanup wizard)
 
-Disk cleanup can be especially helpful with gold/master image VDI implementations. After the gold/master image is prepared, updated, and configured, one of the last tasks to perform is disk cleanup. The Disk Cleanup wizard built into Windows can help clean up most potential areas of disk space savings. On a VM that has very little installed, but was fully patched (as of 10/24/18), this was the potential disk space savings:
+Disk cleanup can be especially helpful with master image VDI implementations. After the master image is prepared, updated, and configured, one of the last tasks to perform is disk cleanup. The Disk Cleanup wizard built into Windows can help clean up most potential areas of disk space savings.
+
+> [!NOTE]  
+> The Disk Cleanup wizard is no longer being developed. Windows will use other methods to provide disk cleanup functions.
 
 ![](media/36896b772bd84b2fb43578c35da28696.png)
 
 ![](media/7d86ed7605284ead5b13b85f6933b6f3.png)
 
 
-Here are suggestions for various disk cleanup tasks. These should all be tested before implementing:
+Here are suggestions for various disk cleanup tasks. You should test these before implementing any of them:
 
-1.  Run (elevated) Disk Cleanup Wizard after applying all updates. Include the categories ‘Delivery Optimization’ and ‘Windows Update Cleanup’. This process can be automated, using command line “Cleanmgr.exe” with the “/SAGESET:11” option. The “/SAGESET” option sets registry values that can be used later to automate disk cleanup, that uses every available option in the Disk Cleanup Wizard.
+1.  Run the Disk Cleanup wizard (elevated) after applying all updates. Include the categories ‘Delivery Optimization’ and ‘Windows Update Cleanup’. You can automate this process with **Cleanmgr.exe** with the **/SAGESET:11** option. This option sets registry values that can be used later to automate disk cleanup, using every available option in the Disk Cleanup wizard.
 
-    1.  On a test VM, from a clean installation, running “Cleanmgr.exe /SAGESET:11” reveals that there are only two automatic disk cleanup options enabled by default:
+    1.  On a test VM, from a clean installation, running **Cleanmgr.exe /SAGESET:11** reveals that there are only two automatic disk cleanup options enabled by default:
 
-        1.  Downloaded Program Files
+    - Downloaded Program Files
 
-        2.  Temporary Internet Files
+    - Temporary Internet Files
 
-    2.  If you set more options, or all options, those options are recorded in the registry, according to the “index” value provided in the previous command (Cleanmgr.exe /SAGESET:11). In this case, we are going to use the value ‘11’ as our index, for a subsequent automated disk cleanup procedure.
+    2.  If you set more options, or all options, those options are recorded in the registry, according to the “index” value provided in the previous command (**Cleanmgr.exe /SAGESET:11**). In this example, we use the value *11* as our index, for a subsequent automated disk cleanup procedure.
 
-    3.  After running “Cleanmgr.exe /SAGESET:11” you will see a number of categories of disk cleanup options. You can check every option, and then select “OK”. You will notice that the Disk Cleanup Wizard just disappears. However, the setting you selected are saved in the registry, and can be invoked by running “Cleanmgr.exe /SAGERUN:11”.
+    3.  After running **Cleanmgr.exe /SAGESET:11** you will see a number of categories of disk cleanup options. You can select every option, and then select **OK**. You will notice that the Disk Cleanup wizard just disappears. However, the settings you selected are saved in the registry, and can be invoked by running **Cleanmgr.exe /SAGERUN:11**.
 
-2.  Cleanup Volume Shadow Copy storage, if any is in use.
+2.  Clean up Volume Shadow Copy storage, if any is in use. To do this, run the following commands in an elevated prompt:
 
-    1.  Open an elevated command prompt and run the following commands:
+    - **vssadmin list shadows**
 
-        vssadmin list shadows
+    - **vssadmin list shadowstorage**
 
-        vssadmin list shadowstorage
+        If the output from these commands is *No items found that satisfy the query.*, then there is no VSS storage in use.
 
-        If output from these commands is “No items found that satisfy the query.”, then there is no VSS storage in use
+3.  Cleanup temporary files and logs. From an elevated command prompt, run these commands:
 
-3.  Cleanup temporary files and logs. From an elevated command prompt:
+    - **Del C:\\\*.tmp /s**
 
-    1.  Del C:\\\*.tmp /s
+    - **Del C:\\Windows\\Temp\\.**
 
-    2.  Del C:\\Windows\\Temp\\.
+    - **Del %temp%\\.**
 
-    3.  Del %temp%\\.
+4.  Delete any unused profiles on the system with this command:
 
-4.  Delete any unused profiles on the system
-
-    1.  wmic path win32_UserProfile where LocalPath="c:\\\\users\\\\\<user\>"
-        Delete
+    **wmic path win32_UserProfile where LocalPath="c:\\\\users\\\\\<user\>" Delete**
 
 ### Remove OneDrive
 
-Removing OneDrive involves removing the package, uninstalling, and removing \*.lnk files. The following sample PowerShell code can be used to assist in removing OneDrive from the image:
+Removing OneDrive involves removing the package, uninstalling, and removing \*.lnk files. You can use following sample PowerShell code to assist in removing OneDrive from the image:
 
-| Taskkill.exe /F /IM "OneDrive.exe" Taskkill.exe /F /IM "Explorer.exe" if (Test-Path "C:\\Windows\\System32\\OneDriveSetup.exe") { Start-Process "C:\\Windows\\System32\\OneDriveSetup.exe" -ArgumentList "/uninstall" -Wait } if (Test-Path "C:\\Windows\\SysWOW64\\OneDriveSetup.exe") { Start-Process "C:\\Windows\\SysWOW64\\OneDriveSetup.exe" -ArgumentList "/uninstall" -Wait } Remove-Item -Path "C:\\Windows\\ServiceProfiles\\LocalService\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\OneDrive.lnk" -Force Remove-Item -Path "C:\\Windows\\ServiceProfiles\\NetworkService\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\OneDrive.lnk" -Force \# Remove the automatic start item for OneDrive from the default user profile registry hive Start-Process C:\\Windows\\System32\\Reg.exe -ArgumentList "Load HKLM\\Temp C:\\Users\\Default\\NTUSER.DAT" -Wait Start-Process C:\\Windows\\System32\\Reg.exe -ArgumentList "Delete HKLM\\Temp\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run /v OneDriveSetup /f" -Wait Start-Process C:\\Windows\\System32\\Reg.exe -ArgumentList "Unload HKLM\\Temp" -Wait Start-Process -FilePath C:\\Windows\\Explorer.exe -Wait |
-|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+```azurecli
+
+Taskkill.exe /F /IM "OneDrive.exe"
+Taskkill.exe /F /IM "Explorer.exe"` 
+    if (Test-Path "C:\\Windows\\System32\\OneDriveSetup.exe")`
+     { Start-Process "C:\\Windows\\System32\\OneDriveSetup.exe"`
+         -ArgumentList "/uninstall"`
+         -Wait }
+    if (Test-Path "C:\\Windows\\SysWOW64\\OneDriveSetup.exe")`
+     { Start-Process "C:\\Windows\\SysWOW64\\OneDriveSetup.exe"`
+         -ArgumentList "/uninstall"`
+         -Wait }
+Remove-Item -Path
+"C:\\Windows\\ServiceProfiles\\LocalService\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\OneDrive.lnk" -Force
+Remove-Item -Path "C:\\Windows\\ServiceProfiles\\NetworkService\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\OneDrive.lnk" -Force \# Remove the automatic start item for OneDrive from the default user profile registry hive
+Start-Process C:\\Windows\\System32\\Reg.exe -ArgumentList "Load HKLM\\Temp C:\\Users\\Default\\NTUSER.DAT" -Wait
+Start-Process C:\\Windows\\System32\\Reg.exe -ArgumentList "Delete HKLM\\Temp\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run /v OneDriveSetup /f" -Wait
+Start-Process C:\\Windows\\System32\\Reg.exe -ArgumentList "Unload HKLM\\Temp" -Wait Start-Process -FilePath C:\\Windows\\Explorer.exe -Wait
+```
 
 
 For any questions or concerns about the information in this paper, contact your Microsoft account team, research the {Microsoft VDI blog}, post a message to Microsoft forums, or contact Microsoft for questions or concerns.
