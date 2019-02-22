@@ -11,12 +11,21 @@ ms.topic: article
 author: lizap
 manager: dongill
 ms.author: elizapo
-ms.date: 1/28/2019
+ms.date: 02/22/2019
 ms.localizationpriority: medium
 ---
 # What's new for the Remote Desktop web client?
 
 We regularly update the [Remote Desktop web client](remote-desktop-web-client.md), adding new features and fixing issues. Check out the latest updates below.
+
+## Updates for version 1.0.11
+*Published date: 2/22/2019*
+
+- Enabled connection to RD Broker without an RD Gateway in Windows Server 2019.
+- Sorted feeds alphabetically (i.e., RemoteApps first, Desktops second).
+- Fixed multiple accessibility bugs improving screen reader compatibility.
+- Updated our build tools.
+- Various bug fixes.
 
 ## Updates for version 1.0.7
 *Published date: 1/24/2019*
