@@ -326,11 +326,11 @@ Phase 1 includes the following steps:
    >
    > For more background on the importance of supply chain security, visit [this site](https://www.microsoft.com/security/cybersecurity/).
 
-4. Acquire and validate the required Windows 10 Enterprise Edition and application software. Obtain the software required for PAW and validate it using the guidance in [Clean Source for installation media](http://aka.ms/cleansource).
+4. **Acquire and validate the required Windows 10 Enterprise Edition and application software**. Obtain the software required for PAW and validate it using the guidance in [Clean Source for installation media](http://aka.ms/cleansource).
 
    * Windows 10 Enterprise Edition
    * [Remote Server Administration Tools](https://www.microsoft.com/en-us/download/details.aspx?id=45520.) for Windows 10
-   * Windows 10 [Security Baselines](http://aka.ms/win10baselines)
+   * [Windows 10 Security Baselines](http://aka.ms/win10baselines)
 
       > [!NOTE]
       > Microsoft publishes MD5 hashes for all operating systems and applications on MSDN, but not all software vendors provide similar documentation.  In those cases, other strategies will be required.  For additional information on validating software, please refer to [Clean Source](http://aka.ms/cleansource) for installation media.
@@ -407,7 +407,7 @@ In this section, you will create a new "PAW Configuration - Computer" GPO which 
       * Power Users
       * Remote Desktop Users
       * Replicators
-   3. PAW Logon Restrictions - this setting will limit the accounts which can log onto the PAW. Follow the steps below to configure this setting:
+   3. **PAW Logon Restrictions** - this setting will limit the accounts which can log onto the PAW. Follow the steps below to configure this setting:
       1. Go to Computer Configuration\Policies\Windows Settings\Security Settings\Local Policies\User Rights Assignment\Allow log on locally.
       2. Select Define these policy settings and add "PAW Users" and Administrators (again, do not use the Browse button to select Administrators).
    4. **Block Inbound Network Traffic** - This setting will ensure that no unsolicited inbound network traffic is allowed to the PAW. Follow the steps below to configure this setting:
@@ -896,7 +896,7 @@ Scope: These protections enhance the systems built in Phase 1, bolstering the ba
 
 Follow the steps below to configure this phase:
 
-1. Enable multi-factor authentication for privileged accounts.  Multi-factor authentication strengthens account security by requiring the user to provide a physical token in addition to credentials.  Multi-factor authentication complements authentication policies extremely well, but it does not depend on authentication policies for deployment (and, similarly, authentication policies do not require multi-factor authentication).  Microsoft recommends using one of these forms of multi-factor authentication:
+1. **Enable multi-factor authentication for privileged accounts**.  Multi-factor authentication strengthens account security by requiring the user to provide a physical token in addition to credentials.  Multi-factor authentication complements authentication policies extremely well, but it does not depend on authentication policies for deployment (and, similarly, authentication policies do not require multi-factor authentication).  Microsoft recommends using one of these forms of multi-factor authentication:
 
    * **Smart card**: A smart card is a tamper-resistant and portable physical device which provides a second verification during the Windows logon process.  By requiring an individual to possess a card for logon, you can reduce the risk of stolen credentials being reused remotely.  For details on smart card logon in Windows, please refer to the article [Smart Card Overview](https://technet.microsoft.com/library/hh831433.aspx).
    * **Virtual smart card**:  A virtual smart card provides the same security benefits as physical smart cards, with the added benefit of being linked to specific hardware.  For details on deployment and hardware requirements, please refer to the articles, [Virtual Smart Card Overview](https://technet.microsoft.com/library/dn593708.aspx) and [Get Started with Virtual Smart Cards: Walkthrough Guide](https://technet.microsoft.com/library/dn579260.aspx).
