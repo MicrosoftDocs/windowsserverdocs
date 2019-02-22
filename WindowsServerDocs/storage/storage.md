@@ -7,11 +7,10 @@ layout: LandingPage
 ms.prod: windows-server-threshold
 ms.technology: storage
 ms.assetid: 6b74bc7c-a58d-4915-af8e-2cc27f2c4726
-ms.tgt_pltfrm: na
-ms.devlang: na
 ms.topic: landing-page
 ms.author: jgerend
 ms.localizationpriority: medium
+ms.date: 02/19/2019
 ---
 # Storage
 
@@ -21,7 +20,6 @@ ms.localizationpriority: medium
 > Looking for information about older versions of Windows Server? Check out our other [Windows Server libraries](/previous-versions/windows/) on docs.microsoft.com. You can also [search this site](https://docs.microsoft.com/search/index?search=Windows+Server&dataSource=previousVersions) for specific information.
 
 <hr />
-
 Storage in Windows Server provides new and improved features for software-defined datacenter (SDDC) customers focusing on virtualized workloads. Windows Server also provides extensive support for enterprise customers using file servers with existing workloads.
 
 <hr />

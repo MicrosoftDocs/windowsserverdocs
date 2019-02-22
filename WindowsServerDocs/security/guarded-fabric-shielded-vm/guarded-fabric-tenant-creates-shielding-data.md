@@ -7,7 +7,7 @@ ms.assetid: 49f4e84d-c1f7-45e5-9143-e7ebbb2ef052
 manager: dongill
 author: rpsqrd
 ms.technology: security-guarded-fabric
-ms.date: 08/29/2018
+ms.date: 01/30/2019
 ---
 
 
@@ -143,7 +143,7 @@ You or your hosting service provider can obtain the guardian metadata from HGS b
 
 Obtain the guardian metadata files for each guarded fabric you wish to authorize your shielded VMs to run on before continuing.
 
-## Create a shielding data file and add guardians
+## Create a shielding data file and add guardians using the Shielding Data File wizard
 
 Run the Shielding Data File wizard to create a shielding data (PDK) file. Here, you'll add the RDP certificate, unattend file, volume signature catalogs, owner guardian and the downloaded guardian metadata obtained in the preceding step.
 
@@ -189,6 +189,52 @@ Run the Shielding Data File wizard to create a shielding data (PDK) file. Here, 
 7.  Review your selections on the next page, and then click **Generate**.
 
 8.  Close the wizard after it has completed.
+
+## Create a shielding data file and add guardians using PowerShell
+
+As an alternative to the Shielding Data File wizard, you can run [New-ShieldingDataFile](https://docs.microsoft.com/powershell/module/shieldedvmdatafile/new-shieldingdatafile?view=win10-ps) to create a shielding data file.
+
+All shielding data files need to be configured with the correct owner and guardian certificates to authorize your shielded VMs to be run on a guarded fabric.
+You can check if you have any guardians installed locally by running [Get-HgsGuardian](https://docs.microsoft.com/en-us/powershell/module/hgsclient/get-hgsguardian?view=win10-ps). Owner guardians have private keys while guardians for your datacenter typically do not.
+
+If you need to create an owner guardian, run the following command:
+
+```powershell
+New-HgsGuardian -Name "Owner" -GenerateCertificates
+```
+
+This command creates a pair of signing and encryption certificates in the local machine's certificate store under the "Shielded VM Local Certificates" folder.
+You will need the owner certificates and their corresponding private keys to unshield a virtual machine, so ensure these certificates are backed up and protected from theft.
+An attacker with access to the owner certificates can use them to start up your shielded virtual machine or change its security configuration.
+
+If you need to import guardian information from a guarded fabric where you want to run your virtual machine (your primary datacenter, backup datacenters, etc.), run the following command for each [metadata file retrieved from your guarded fabrics](#Select-trusted-fabrics).
+
+```powershell
+Import-HgsGuardian -Name 'EAST-US Datacenter' -Path '.\EastUSGuardian.xml'
+```
+
+> [!TIP]
+> If you used self-signed certificates or the certificates registered with HGS are expired, you may need to use the `-AllowUntrustedRoot` and/or `-AllowExpired` flags with the Import-HgsGuardian command to bypass the security checks.
+
+You will also need to [obtain a volume signature catalog](#Get-the-volume-signature-catalog-file) for each template disk you want to use with this shielding data file and a [shielding data answer file](#Create-an-answer-file) to allow the operating system to complete its specialization tasks automatically.
+Lastly, decide if you want your VM to be fully shielded or just vTPM-enabled.
+Use `-Policy Shielded` for a fully shielded VM or `-Policy EncryptionSupported` for a vTPM enabled VM that allows basic console connections and PowerShell Direct.
+
+Once everything is ready, run the following command to create your shielding data file:
+
+```powershell
+$viq = New-VolumeIDQualifier -VolumeSignatureCatalogFilePath 'C:\temp\marketing-ws2016.vsc' -VersionRule Equals
+New-ShieldingDataFile -ShieldingDataFilePath "C:\temp\Marketing-LBI.pdk" -Policy EncryptionSupported -Owner 'Owner' -Guardian 'EAST-US Datacenter' -VolumeIDQualifier $viq -AnswerFile 'C:\temp\marketing-ws2016-answerfile.xml'
+```
+
+In the above command, the guardian named "Owner" (obtained from Get-HgsGuardian) will be able to change the security configuration of the VM in the future, while 'EAST-US Datacenter' can run the VM but not change its settings.
+If you have more than one guardian, separate the names of the guardians with commas like `'EAST-US Datacenter', 'EMEA Datacenter'`.
+The volume ID qualifier specifies whether you trust only the exact version (Equals) of the template disk or future versions (GreaterThanOrEquals) as well.
+The disk name and signing certificate must match exactly for the version comparison to considered at deployment time.
+You can trust more than one template disk by providing a comma-separated list of volume ID qualifiers to the `-VolumeIDQualifier` parameter.
+Finally, if you have other files that need to accompany the answer file with the VM, use the `-OtherFile` parameter and provide a comma-separated list of file paths.
+
+See the cmdlet documentation for [New-ShieldingDataFile](https://docs.microsoft.com/en-us/powershell/module/shieldedvmdatafile/New-ShieldingDataFile?view=win10-ps) and [New-VolumeIDQualifier](https://docs.microsoft.com/en-us/powershell/module/shieldedvmdatafile/New-VolumeIDQualifier?view=win10-ps) to learn about additional ways to configure your shielding data file.
 
 ## See also
 
