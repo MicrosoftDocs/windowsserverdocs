@@ -28,9 +28,9 @@ Today a privileged account could include things you may think of today like an A
 
 If compromised these accounts could potentially cause significant impact to your organization.
 
-## Why is Securing Privileged Access important?
+## Why securing privileged access is important?
 
-In most organizations, the security of most or all business assets depends on the integrity of the privileged accounts that administer, manage, and develop information systems. Cyber-attackers focus on privileged access to systems like Active Directory to rapidly gain access to all of an organizations targeted data.
+In most organizations, the security of most or all business assets depends on the integrity of the privileged accounts that administer, manage, and develop information systems. Cyber-attackers focus on privileged access to systems like Active Directory (AD) to rapidly gain access to all of an organizations targeted data.
 
 Traditional security approaches have focused on the network and firewalls as the primary security perimeter, but the effectiveness of network security has been significantly diminished by two trends:
 
@@ -84,29 +84,25 @@ Phase 1 of the roadmap is focused on quickly mitigating the most frequently used
 
 ### 1. Separate accounts
 
-To help separate internet risks (phishing attacks, web browsing) from privileged access accounts, create a dedicated account for all personnel with privileged access. Administrators should not be browsing the web, checking their email, and doing day to day productivity tasks with highly privileged accounts.
+To help separate internet risks (phishing attacks, web browsing) from privileged access accounts, create a dedicated account for all personnel with privileged access. Administrators should not be browsing the web, checking their email, and doing day to day productivity tasks with highly privileged accounts. More information on this can be found in the section [Separate administrative accounts](securing-privileged-access-reference-material.md#separate-administrative-accounts) of the reference document.
 
-Create at least two emergency ["break-glass" emergency access administration accounts](/azure/active-directory/users-groups-roles/directory-emergency-access).
+Follow the guidance in the article [Manage emergency access accounts in Azure AD](/azure/active-directory/users-groups-roles/directory-emergency-access) to create at least two emergency access accounts, with permanently assigned administrator rights, in both your on-premises AD and Azure AD environments. These accounts are only for use when traditional administrator accounts are unable to perform a required task such as in a the case of a disaster.
 
-Additional guidance on this is included in the PAW instructions published [here](http://Aka.ms/CyberPAW).
+### 2. Just in time local admin passwords
 
-### 2. Unique local admin passwords for servers and workstations
-
-To mitigate the risk of an adversary stealing a local administrator account password hash from the local SAM database and abusing it to attack other computers, you should use the Local Administrator Password Solution (LAPS) tool to configure unique random passwords on each workstation and server and register those passwords in Active Directory. You can obtain the Local Administrator Password Solution for use on workstations and servers from [the Microsoft Download Center](http://Aka.ms/LAPS).
+To mitigate the risk of an adversary stealing a local administrator account password hash from the local SAM database and abusing it to attack other computers, organizations should ensure every machine has a unique local administrator password. The Local Administrator Password Solution (LAPS) tool can configure unique random passwords on each workstation and server store them in Active Directory (AD) protected by an ACL. Only eligible authorized users can read or request the reset of these local administrator account passwords. You can obtain the Local Administrator Password Solution for use on workstations and servers from [the Microsoft Download Center](http://Aka.ms/LAPS).
 
 Additional guidance for operating an environment with LAPS and PAWs can be found [here](http://aka.ms/securitystandards).
 
+### 3. Administrative workstations
 
-
-### 3. Deploy privileged access workstations
-
-To help separate internet risks (phishing attacks, web browsing) from domain administrative privileges, create dedicated privileged access workstations (PAW) for personnel with Azure Active Directory and traditional on-premises Active Directory administrative privileges.
-
-This step maps to Phase 1 of the PAW program mapped out in the article [Privileged Access Workstations](http://Aka.ms/CyberPAW).
+As an initial security measure for those users with Azure Active Directory and traditional on-premises Active Directory administrative privileges, ensure they are using Windows 10 devices configured with the [Standards for a highly secure Windows 10 device](/windows-hardware/design/device-experiences/oem-highly-secure). This maps to [Phase 1: Immediate deployment for Active Directory administrators](privileged-access-workstations.md#phase-1-immediate-deployment-for-active-directory-administrators) of a privileged admin workstation rollout.
 
 ### 4. Identity attack detection
 
-Deploy [Azure Advanced Threat Protection](http://aka.ms/azureatp) and [Azure AD Identity Protection](/azure/active-directory/identity-protection/index) to help protect hybrid environments from multiple types of advanced targeted cyber attacks and insider threats.
+[Azure Advanced Threat Protection (ATP)](/azure-advanced-threat-protection/what-is-atp) is a cloud-based security solution that identifies, detects, and helps you investigate advanced threats, compromised identities, and malicious insider actions directed at your on-premises Active Directory environment. 
+
+Additionally [Azure AD Identity Protection](/azure/active-directory/identity-protection/index) can be leveraged to help protect cloud and hybrid environments from threats.
 
 ## Phase 2: Enhance visibility and control of privileged access
 
