@@ -100,9 +100,7 @@ As an initial security measure for those users with Azure Active Directory and t
 
 ### 4. Identity attack detection
 
-[Azure Advanced Threat Protection (ATP)](/azure-advanced-threat-protection/what-is-atp) is a cloud-based security solution that identifies, detects, and helps you investigate advanced threats, compromised identities, and malicious insider actions directed at your on-premises Active Directory environment. 
-
-Additionally [Azure AD Identity Protection](/azure/active-directory/identity-protection/index) can be leveraged to help protect cloud and hybrid environments from threats.
+[Azure Advanced Threat Protection (ATP)](/azure-advanced-threat-protection/what-is-atp) is a cloud-based security solution that identifies, detects, and helps you investigate advanced threats, compromised identities, and malicious insider actions directed at your on-premises Active Directory environment.
 
 ## Phase 2: Enhance visibility and control of privileged access
 
@@ -110,35 +108,36 @@ Phase 2 builds on the work done in phase 1 and is designed to be completed in ap
 
 ![Diagram showing the steps of stage 2](../media/securing-privileged-access/PAW_LP_Fig7.JPG)
 
-### 1. Require Windows Hello for Business and MFA for 
+### 1. Require Windows Hello for Business and MFA
 
+Administrators can benefit from the ease of use associated with Windows Hello for Business. Admins can replace their complex passwords with strong two-factor authentication on their PCs. An attacker must have both the device and the biometric info or PIN, it’s much more difficult to gain access without the employee’s knowledge. More details about Windows Hello for Business and the path to roll out can be found in the article [Windows Hello for Business Overview](/windows/security/identity-protection/hello-for-business/hello-overview)
 
-
-
-
+Enable multi-factor authentication (MFA) for your administrator accounts in Azure AD using Azure MFA. At minimum enable the [baseline protection conditional access policy](/azure/active-directory/conditional-access/baseline-protection#require-mfa-for-admins) more information about Azure Multi-Factor Authentication can be found in the article [Deploy cloud-based Azure Multi-Factor Authentication](/azure/active-directory/authentication/howto-mfa-getstarted)
 
 ### 2. Deploy PAW to all privileged identity access account holders
 
-To separate internet risks from all privileged identity access accounts, continue with the PAW you started in stage 1 and implement dedicated workstations for all personnel with privileged access to identity systems. This maps to Phase 2 and 3 of the guidance published [here](http://Aka.ms/CyberPAW).
+Continuing the process of separating privileged accounts from threats found in email, web browsing, and other non-administrative tasks, implement dedicated Privileged Access Workstations (PAW) for all personnel with privileged access to your organization's information systems. Additional guidance for PAW deployment can be found in the article [Privileged Access Workstations](privileged-access-workstations.md#paw-phased-implementation).
 
-### 3. Time-bound privileges (no permanent administrators)
+### 3. Just in time privileges
 
 To lower the exposure time of privileges and increase visibility into their use, provide privileges just in time (JIT) using an appropriate solution such as the ones below:
 
-* For Active Directory Domain Services (AD DS), use Microsoft Identity Manager (MIM)'s [Privileged Access Manager (PAM)](https://technet.microsoft.com/library/mt150258.aspx) capability.
-* For Azure Active Directory, use [Azure AD Privileged Identity Management (PIM)](http://aka.ms/AzurePIM) capability.
+* For Active Directory Domain Services (AD DS), use Microsoft Identity Manager (MIM)'s [Privileged Access Manager (PAM)](/microsoft-identity-manager/pam/privileged-identity-management-for-active-directory-domain-services) capability.
+* For Azure Active Directory, use [Azure AD Privileged Identity Management (PIM)](/azure/active-directory/privileged-identity-management/pim-deployment-plan) capability.
 
 ### 4. Enable Windows Defender Credential Guard
 
-Enabling Credential Guard helps to protect NTLM password hashes, Kerberos Ticket Granting Tickets, and credentials stored by applications as domain credentials. This capability helps to prevent credential theft attacks, such as Pass-the-Hash or Pass-The-Ticket.
+Enabling Credential Guard helps to protect NTLM password hashes, Kerberos Ticket Granting Tickets, and credentials stored by applications as domain credentials. This capability helps to prevent credential theft attacks, such as Pass-the-Hash or Pass-The-Ticket. Information on how Credential Guard works and how to deploy can be found in the article [Protect derived domain credentials with Windows Defender Credential Guard](/windows/security/identity-protection/credential-guard/credential-guard)
 
 ### 5. Leaked credentials reporting
 
-Enable Azure AD Identity Protection to report on and manually take action on users with leaked credentials.
+"Every day, Microsoft analyzes over 6.5 trillion signals in order to identify emerging threats and protect customers" - [Microsoft By the Numbers](https://news.microsoft.com/bythenumbers/cyber-attacks)
+
+Put Microsoft Azure AD Identity Protection to work for your organization to report on and allow you to manually take action on users with leaked credentials. [Azure AD Identity Protection](/azure/active-directory/identity-protection/index) can be leveraged to help your organization protect cloud and hybrid environments from threats.
 
 ### 6. Azure ATP Lateral Movement Paths
 
-Ensure privileged access account holders are using their PAW for administration only so that a compromised non-privileged accounts cannot gain access to a privileged account via credential theft attacks, such as Pass-the-Hash or Pass-The-Ticket.
+Ensure privileged access account holders are using their PAW for administration only so that a compromised non-privileged accounts cannot gain access to a privileged account via credential theft attacks, such as Pass-the-Hash or Pass-The-Ticket. [Azure ATP Lateral Movement Paths (LMPs)](/azure-advanced-threat-protection/use-case-lateral-movement-path) provides easy to understand reporting to identify where privileged accounts may be open to compromise.
 
 ## Phase 3: Continue to build defenses
 
@@ -150,19 +149,19 @@ These capabilities will build on the steps from previous phases and move your de
 
 ### 1. Review role-based access control
 
-Reduce risks associated with tier combinations and ensure privileges are consistent with the role that a user has. Users should not be given more access than required.
+Using the three tiered model outlined in the article [Active Directory administrative tier model](securing-privileged-access-reference-material.md), review and curtail the access given to administrators to reduce the threat of compromise.
 
-### 2. Expand privileged access workstation rollout
+### 2. Reduce attack surfaces
 
-To separate internet risks from all privileged access accounts, continue with the PAW rollout and implement dedicated workstations for all personnel with privileged access to systems. This maps to Phase 2 and 3 of the guidance published [here](http://Aka.ms/CyberPAW).
+Harden your identity workloads including Domains, Domain Controllers, ADFS, and Azure AD Connect since compromising one of these systems could result in compromise of other systems in your organization. The articles [Reducing the Active Directory Attack Surface](../ad-ds/plan/security-best-practices/reducing-the-active-directory-attack-surface.md) and [Five steps to securing your identity infrastructure](/azure/security/azure-ad-secure-steps) provide guidance for securing your on-premises and hybrid identity environments.
 
-### 3. Reduce attack surface area
+### 3. Integrate logs with SEIM
 
-Harden your Active Directory implementation using the guidance found in the article [Reducing the Active Directory Attack Surface](../ad-ds/plan/security-best-practices/reducing-the-active-directory-attack-surface.md).
+The articles [Monitoring Active Directory for Signs of Compromise](../ad-ds/plan/security-best-practices/monitoring-active-directory-for-signs-of-compromise.md) and [Appendix L: Events to Monitor](../ad-ds/plan/appendix-l--events-to-monitor#appendix-l-events-to-monitor.md) provide guidance on events that should be monitored in your environment. Integrating this logging into a centralized security information and event management (SEIM) tool can help your organization to analyze, detect, and respond to security events.
 
-### 4. Enable Azure AD Identity Protection leaked credentials automation
+### 4. Leaked credentials - Force password reset
 
-Force password reset when Azure AD Identity Protection detects leaked credentials using the guidance found in the article [Use risk events to trigger Multi-Factor Authentication and password changes](/azure/active-directory/authentication/tutorial-risk-based-sspr-mfa)
+Continue to enhance your security posture by enabling Azure AD Identity Protection to automatically force password resets when passwords are suspected of compromise. The guidance found in the article [Use risk events to trigger Multi-Factor Authentication and password changes](/azure/active-directory/authentication/tutorial-risk-based-sspr-mfa) explains how to enable this using a conditional access policy.
 
 ## Am I done?
 
@@ -178,30 +177,6 @@ For more information on engaging Microsoft services to assist with any of these 
 
 ### Next steps
 
-[Microsoft Security Response Center](https://www.microsoft.com/msrc)
+[Privileged Access Workstations](privileged-access-workstations.md)
 
-[Taste of Premier: How to Mitigate Pass-the-Hash and Other Forms of Credential Theft](https://channel9.msdn.com/Blogs/Taste-of-Premier/Taste-of-Premier-How-to-Mitigate-Pass-the-Hash-and-Other-Forms-of-Credential-Theft)
-
-[Microsoft Advanced Threat Analytics](http://aka.ms/ata)
-
-[Protect derived domain credentials with Credential Guard](https://technet.microsoft.com/library/mt483740%28v=vs.85%29.aspx)
-
-[Device Guard Overview](https://technet.microsoft.com/library/dn986865(v=vs.85).aspx)
-
-[Protecting high-value assets with secure admin workstations](https://msdn.microsoft.com/en-us/library/mt186538.aspx)
-
-[Isolated User Mode in Windows 10 with Dave Probert (Channel 9)](https://channel9.msdn.com/Blogs/Seth-Juarez/Isolated-User-Mode-in-Windows-10-with-Dave-Probert)
-
-[Isolated User Mode Processes and Features in Windows 10 with Logan Gabriel (Channel 9)](http://channel9.msdn.com/Blogs/Seth-Juarez/Isolated-User-Mode-Processes-and-Features-in-Windows-10-with-Logan-Gabriel)
-
-[More on Processes and Features in Windows 10 Isolated User Mode with Dave Probert (Channel 9)](https://channel9.msdn.com/Blogs/Seth-Juarez/More-on-Processes-and-Features-in-Windows-10-Isolated-User-Mode-with-Dave-Probert)
-
-[Mitigating Credential Theft using the Windows 10 Isolated User Mode (Channel 9)](https://channel9.msdn.com/Blogs/Seth-Juarez/Mitigating-Credential-Theft-using-the-Windows-10-Isolated-User-Mode)
-
-[Enabling Strict KDC Validation in Windows Kerberos](https://www.microsoft.com/en-us/download/details.aspx?id=6382)
-
-[What's New in Kerberos Authentication for Windows Server 2012](https://technet.microsoft.com/library/hh831747.aspx)
-
-[Authentication Mechanism Assurance for AD DS in Windows Server 2008 R2 Step-by-Step Guide](https://technet.microsoft.com/library/dd378897(v=ws.10).aspx)
-
-[Trusted Platform Module](https://docs.microsoft.com/windows/device-security/tpm/trusted-platform-module-overview)
+[Active Directory administrative tier model](securing-privileged-access-reference-material.md)

@@ -140,9 +140,9 @@ This document will describe why this practice is recommended for protecting high
 
 This document provides detailed guidance for implementing several PAW configurations and includes detailed implementation instructions to get you started on protecting common high impact accounts:
 
-* **Phase 1 - Immediate Deployment for Active Directory Administrators** this provides a PAW quickly that can protect on premises domain and forest administration roles
-* **Phase 2 - Extend PAW to all administrators** this enables protection for administrators of cloud services like Office 365 and Azure, enterprise servers, enterprise applications, and workstations
-* **Phase 3 - Advanced PAW security** this discusses additional protections and considerations for PAW security
+* [**Phase 1 - Immediate Deployment for Active Directory Administrators**](#phase-1-immediate-deployment-for-active-directory-administrators) this provides a PAW quickly that can protect on premises domain and forest administration roles
+* [**Phase 2 - Extend PAW to all administrators**](#phase-2-extend-paw-to-all-administrators) this enables protection for administrators of cloud services like Office 365 and Azure, enterprise servers, enterprise applications, and workstations
+* [**Phase 3 - Advanced PAW security**](#phase-3-extend-and-enhance-protection) this discusses additional protections and considerations for PAW security
 
 ### Why dedicated workstations?
 
@@ -282,9 +282,9 @@ Because the PAW must provide a secure and trusted source for administration, it'
 
 The instructions are divided into three phases which focus on putting the most critical mitigations in place quickly and then progressively increasing and expanding the usage of PAW for the enterprise.
 
-* Phase 1 - Immediate Deployment for Active Directory Administrators
-* Phase 2 - Extend PAW to all administrators
-* Phase 3 - Advanced PAW security
+* [Phase 1 - Immediate Deployment for Active Directory Administrators](#phase-1-immediate-deployment-for-active-directory-administrators)
+* [Phase 2 - Extend PAW to all administrators](#phase-2-extend-paw-to-all-administrators)
+* [Phase 3 - Advanced PAW security](#phase-3-extend-and-enhance-protection)
 
 It is important to note that the phases should always be performed in order even if they are planned and implemented as part of the same overall project.
 
