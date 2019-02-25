@@ -153,7 +153,7 @@ Harden your identity workloads including Domains, Domain Controllers, ADFS, and 
 
 ### 3. Integrate logs with SIEM
 
-Integrating logging into a centralized SIEM tool can help your organization to analyze, detect, and respond to security events. The articles [Monitoring Active Directory for Signs of Compromise](../ad-ds/plan/security-best-practices/monitoring-active-directory-for-signs-of-compromise.md) and [Appendix L: Events to Monitor](../ad-ds/plan/appendix-l--events-to-monitor#appendix-l-events-to-monitor.md) provide guidance on events that should be monitored in your environment.
+Integrating logging into a centralized SIEM tool can help your organization to analyze, detect, and respond to security events. The articles [Monitoring Active Directory for Signs of Compromise](../ad-ds/plan/security-best-practices/monitoring-active-directory-for-signs-of-compromise.md) and [Appendix L: Events to Monitor](../ad-ds/plan/appendix-l--events-to-monitor.md) provide guidance on events that should be monitored in your environment.
 
 This is part of the beyond plan because aggregating, creating, and tuning alerts in a security information and event management (SIEM)  requires skilled analysts (unlike Azure ATP in the 30 day plan which includes out of the box alerting)
 
