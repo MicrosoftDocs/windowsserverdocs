@@ -11,12 +11,9 @@ ms.prod: windows-server-threshold
 
 ms.technology: identity-adds
 ---
+# Appendix L: Events to Monitor
 
-# Appendix L: Events
-
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
-
-## Appendix L: Events to Monitor
+>Applies To: Windows Server
 
 The following table lists events that you should monitor in your environment, according to the recommendations provided in [Monitoring Active Directory for Signs of Compromise](../../ad-ds/plan/security-best-practices/Monitoring-Active-Directory-for-Signs-of-Compromise.md). In the following table, the "Current Windows Event ID" column lists the event ID as it is implemented in versions of Windows and Windows Server that are currently in mainstream support.  
   
