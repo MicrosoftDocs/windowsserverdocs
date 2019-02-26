@@ -82,3 +82,4 @@
 ### [What's new in the web client?](clients/web-client-whatsnew.md)
 ### [Remote Desktop client FAQ](clients/remote-desktop-client-faq.md)
 ### [Remote Desktop URI scheme](clients/remote-desktop-uri.md)
+### [Troubleshooting Remote Desktop Connections](clients/troubleshoot-remote-desktop-connections.md)
