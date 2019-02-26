@@ -191,13 +191,13 @@ PowerShell command to remove UWP app payloads:
 
 `Remove-AppxProvisionedPackage -Online -PackageName MyAppxPackage`
 
-Each UWP app should be evaluated for applicability in each unique environment. You will want to install a default installation of Windows 10 1803, then note which apps are running and consuming memory. For example, you might want to consider removing apps that start automatically, or apps that automatically display information on the Start menu, such as Weather and News, and that might not be of use in your environment.
+Each UWP app should be evaluated for applicability in each unique environment. You will want to install a default installation of Windows 10, version 1803, then note which apps are running and consuming memory. For example, you might want to consider removing apps that start automatically, or apps that automatically display information on the Start menu, such as Weather and News, and that might not be of use in your environment.
 
-Also, if not using the Photos app, consider removing the Photos app. As of 1803, there is a default setting in the Photos app called “Show a notification when new albums are available”
+Also, if not using the Photos app, consider removing it. Starting with Windows 10, version 1803, there is a default setting in the Photos app called **Show a notification when new albums are available**:
 
 ![](media/a39405a0b57ef3c25fc61c68a9f1a2d0.png)
 
-This is the default setting, and according to Task Manager on a new installation in a virtual machine, this app uses approximately 145 MB of memory, specifically private working set memory. The memory usage of an average virtual machine, with 3 GB RAM, is shown here:
+This is the default setting, and according to Task Manager on a new installation in a virtual machine, this app uses approximately 145 MB of memory, specifically private working set memory. The memory usage of an average virtual machine, with 3 GB RAM, is shown here: {DO WE REALLY NEED A PICTURE OF TASK MANAGER? SYSADMINS ARE SUPER FAMILIAR WITH USING IT ALREADY....}]
 
 ![](media/20ae1c6530c012190a7d65e4da66194c.png)
 
@@ -465,28 +465,18 @@ group policy setting, you can find that in this location:
 | **Local Computer Policy \\ User Configuration \\ Administrative Templates** |          |                         |                     |
 | **Start Menu and Taskbar**                  | Remove the networking icon               |                         | **Enabled** (the networking icon is not displayed in the system notification area.) |
 
-There is some good information on the Network Connection Status Indicator
-(NCSI), at this location:
-
-https://blogs.technet.microsoft.com/networking/2012/12/20/the-network-connection-status-icon/
+For more about the Network Connection Status Indicator
+(NCSI), see: [The Network Connection Status icon](https://blogs.technet.microsoft.com/networking/2012/12/20/the-network-connection-status-icon/)
 
 ### System services
 
-If considering disabling system services to conserve resources, great care
-should be taken that the service being considered is not in some way a component
+If you are considering disabling system services to conserve resources, take great care that the service being considered is not in some way a component
 of some other service.
 
 Also, most of these recommendations mirror recommendations for Windows Server
-2016, installed with the Desktop Experience, per the following Microsoft
-article:
+2016 with Desktop Experience; for more information, see [Guidance on disabling system services in Windows Server 2016 with Desktop Experience](https://docs.microsoft.com/windows-server/security/windows-services/security-guidelines-for-disabling-system-services-in-windows-server).
 
-<https://docs.microsoft.com/en-us/windows-server/security/windows-services/security-guidelines-for-disabling-system-services-in-windows-server>
-
-Note that a lot of services that might seem to be good candidates to disable are
-set to manual service start type. This means that the service will not
-automatically start and is not started unless a specific application or service
-triggers a request to the service being consider for disabling. Services that
-are already set to start type manual are usually not listed here.
+Note that a lot of services that might seem to be good candidates to disable are set to manual service start type. This means that the service will not automatically start and is not started unless a specific application or service triggers a request to the service being consider for disabling. Services that are already set to start type manual are usually not listed here.
 
 | Windows Service                                                                                                                               | Item                                                                                     | Comment                                                                            |
 |-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
