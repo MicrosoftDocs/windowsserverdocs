@@ -4,7 +4,7 @@ description: Known issues and troubleshooting support for Storage Migration Serv
 author: nedpyle
 ms.author: nedpyle
 manager: siroy
-ms.date: 2/14/2019
+ms.date: 02/27/2019
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: storage
@@ -94,6 +94,17 @@ To work around this issue:
 11. Attempt to download the errors-only CSV file again. 
 
 We intend to change this behavior in a later release of Windows Server 2019.  
+
+## Cutover fails when migrating between networks
+
+When migrating to a destination VM running in a different network than the source, such as an Azure IaaS instance, cutover fails to complete when the source was using a static IP address. 
+
+This behavior is by design, to prevent connectivity issues after migration from users, applications, and scripts connecting via IP address. When the IP address is moved from the old source computer to the new destination target, it won't match the new network subnet information and perhaps DNS and WINS.
+
+To workaround this issue, perform a migration to a computer on the same network. Then move that computer to a new network and reassign its IP information. For instance, if migrating to Azure IaaS, first migrate to a local VM, then use Azure Migrate to shift the VM to Azure.  
+
+We have fixed this issue in a later release of Windows Server 2019. We'll now allow you to specify migrations that don't alter the destination server's network settings. We may release an update to the existing version of Windows Server 2019 as part of the normal monthly update cycle. 
+
 
 ## See also
 
