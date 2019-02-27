@@ -63,11 +63,12 @@ The CAL used by users or devices must correspond to the version of Windows Serve
 
 The following table shows the CALs that are compatible on RD Session Hosts and RD Virtualization Hosts.
 
-|      |2008 R2 and earlier CAL|2012 CAL|2016 CAL|
-|--------------|--------|------|------|
-| **2008, 2008 R2 license server**|Yes    | No   | No   |
-| **2012 license server** |Yes    | Yes  | No   |
-| **2012 R2 license server** |Yes    | Yes  | No   |
-| **2016 license server**|Yes  | Yes    | Yes  |
+|                  |2008 R2 and earlier CAL|2012 CAL|2016 CAL|2019 CAL|
+|---------------------------------|--------|--------|--------|--------|
+| **2008, 2008 R2 license server**| Yes    | No     | No     | No     |
+| **2012 license server**         | Yes    | Yes    | No     | No     |
+| **2012 R2 license server**      | Yes    | Yes    | No     | No     |
+| **2016 license server**         | Yes    | Yes    | Yes    | No     |
+| **2019 license server**         | Yes    | Yes    | Yes    | Yes    |
 
 Any RDS license server can host licenses from all previous versions of Remote Desktop Services and the current version of Remote Desktop Services. For example, a Windows Server 2016 RDS license server can host licenses from all previous versions of RDS, while a Windows Server 2012 R2 RDS license server can only host licenses up to Windows Server 2012 R2.
