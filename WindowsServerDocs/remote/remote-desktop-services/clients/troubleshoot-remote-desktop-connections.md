@@ -15,7 +15,7 @@ ms.author: v-tea
 ms.date: 02/22/2019
 ms.localizationpriority: medium
 ---
-#Troubleshooting Remote Desktop connections
+# Troubleshooting Remote Desktop connections
 For brief explanations of several of the most common Remote Desktop Services (RDS) issues, see Frequently asked questions about the Remote Desktop clients. This article describes several more advanced approaches to troubleshooting connection problems. Many of these procedures apply whether you are troubleshooting a simple configuration, such as one physical computer connecting to another physical computer, or a more complicated configuration. Some procedures address issues that occur only in more complicated multi-user scenarios. For more information about the remote desktop components and how they work together, see [Remote Desktop Services architecture](https://docs.microsoft.com/en-us/windows-server/remote/remote-desktop-services/desktop-hosting-logical-architecture).
 
 > [!NOTE]  
@@ -71,7 +71,7 @@ To check and change the status of the RDP protocol on a remote computer, use a n
 If you cannot turn on RDP in the user interface or if the value of **fDenyTSConnections** reverts to **1** after you have changed it, a GPO may be overriding the computer-level settings.
 
 To check the group policy configuration on a local computer, open a Command Prompt window as an administrator, and enter the following command:
-```DOS
+```
 gpresult /H c:\gpresult.html
 ```
 After this command finishes, open gpresult.html. In **Computer Configuration\\Administrative Templates\\Windows Components\\Remote Desktop Services\\Remote Desktop Session Host\\Connections**, find the **Allow users to connect remotely by using Remote Desktop Services** policy.
@@ -85,7 +85,7 @@ After this command finishes, open gpresult.html. In **Computer Configuration\\Ad
 #### Check whether a GPO is blocking RDP on a remote computer
 
 To check the Group Policy configuration on a remote computer, the command is almost the same as for a local computer:
-```DOS
+```
 gpresult /S <computer name> /H c:\gpresult-<computer name>.html
 ```
 The file that this command produces (**gpresult-\<computer name\>.html**) uses the same information format as the local computer version (**gpresult.html**) uses.
@@ -180,7 +180,7 @@ If you cannot turn on RDP in the user interface or if the value of **fDenyTSConn
 
 To check the group policy configuration on a local computer, open a Command Prompt window as an administrator, and enter the following command:
 
-```DOS
+```
 gpresult /H c:\gpresult.html
 ```
 
@@ -195,7 +195,7 @@ After this command finishes, open gpresult.html. In **Computer Configuration\\Ad
 
 To check the Group Policy configuration on a remote computer, the command is almost the same as for a local computer:
 
-```DOS
+```
 gpresult /S <computer name> /H c:\gpresult-<computer name>.html
 ```
 
@@ -249,11 +249,11 @@ For this procedure, use a PowerShell instance that has administrative permission
     4. Copy the exported .reg file to the affected computer.
 5. To import the RDP listener configuration, open a PowerShell window that has administrative permissions on the affected computer (or open the PowerShell window and connect to the affected computer remotely).
     1. To back up the existing registry entry, enter the following command:
-        ```PowerShell  
+        ```ps  
         cmd /c 'reg export "HKLM\SYSTEM\CurrentControlSet\Control\Terminal Server\WinStations\RDP-tcp" C:\Rdp-tcp-backup.reg'  
         ```
         To remove the existing registry entry, enter the following commands:  
-        ```PowerShell 
+        ```ps  
         Remove-Item -path 'HKLM:\SYSTEM\CurrentControlSet\Control\Terminal Server\WinStations\RDP-tcp' -Recurse -Force  
         cmd /c 'regedit /s c:\<filename>.reg'  
         Restart-Service TermService -Force  
@@ -304,7 +304,7 @@ For this procedure, use a PowerShell instance that has administrative permission
 
 1. Open a PowerShell window. To connect to a remote computer, enter **Enter-PSSession -ComputerName \<computer name\>**.
 2. Enter the following command:  
-     ```PowerShell  
+     ```ps  
     cmd /c 'netstat -ano | find "3389"'  
     ```
     ![ ](..\media\troubleshoot-remote-desktop-connections\WPS_netstat.png)
@@ -312,7 +312,7 @@ For this procedure, use a PowerShell instance that has administrative permission
     > [!NOTE]  
    > The PID (Process Identifier) of the process or service using that port appears under the PID column.
 4. To determine which application is using port 3389 (or the assigned RDP port), enter the following command:  
-     ```PowerShell  
+     ```ps  
     cmd /c 'tasklist /svc | find "<pid listening on 3389>"'  
     ``` 
     ![ ](..\media\troubleshoot-remote-desktop-connections\WPS_tasklist.png)
@@ -328,17 +328,17 @@ Use the **psping** tool to test whether you can reach the affected computer by u
 
 1. On a computer that is different from the affected computer, download **psping** from <https://live.sysinternals.com/psping.exe>.
 2. Open a Command Prompt window as an administrator, change to the directory in which you installed **psping**, and then enter the following command:  
-    ```DOS  
-    psping -accepteula <computer IP>:3389  
-    ```
+   ```  
+   psping -accepteula <computer IP>:3389  
+   ```
 3. Check the output of the **psping** command for results such as the following:  
       - **Connecting to \<computer IP\>**: The remote computer is reachable.
       - **(0% loss)**: All attempts to connect succeeded.
       - **The remote computer refused the network connection**: The remote computer is not reachable.
       - **(100% loss)**: All attempts to connect failed.
-4. Run **psping** on multiple computers to test their ability to connect to the affected computer.
-5. Note whether the affected computer blocks connections from all other computers, some other computers, or only one other computer.
-6. Recommended next steps:
+1. Run **psping** on multiple computers to test their ability to connect to the affected computer.
+1. Note whether the affected computer blocks connections from all other computers, some other computers, or only one other computer.
+1. Recommended next steps:
       - Engage your network administrators to verify that the network allows RDP traffic to the affected computer.
       - Investigate the configurations of any firewalls between the source computers and the affected computer (including Windows Firewall on the affected computer) to determine whether a firewall is blocking the RDP port.
 
@@ -604,7 +604,7 @@ You can set the limit on the number of simultaneous remote desktop connections a
 
 To check the current settings and identify any existing GPOs on the RDSH server, open a command prompt window as an administrator and enter the following command:
 
-```DOS
+```
 gpresult /H c:\gpresult.html
 ```
 After this command finishes, open gpresult.html, and in **Computer Configuration\\Administrative Templates\\Windows Components\\Remote Desktop Services\\Remote Desktop Session Host\\Connections**, find the **Limit number of connections** policy.
