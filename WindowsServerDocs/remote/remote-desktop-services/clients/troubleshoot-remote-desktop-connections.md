@@ -256,11 +256,13 @@ For this procedure, use a PowerShell instance that has administrative permission
   
 
         To remove the existing registry entry, enter the following commands:  
-        ```  
+   
+        ```powershell  
         Remove-Item -path 'HKLM:\SYSTEM\CurrentControlSet\Control\Terminal Server\WinStations\RDP-tcp' -Recurse -Force  
         cmd /c 'regedit /s c:\<filename>.reg'  
         Restart-Service TermService -Force  
         ```
+  
         where \<filename\> is the name of the exported .reg file.
 1. Test the configuration by trying the remote desktop connection again. If you still cannot connect, restart the affected computer.
 1. If you still cannot connect, [check the status of the RDP self-signed certificate](#check-the-status-of-the-rdp-self-signed-certificate).
@@ -307,20 +309,24 @@ For this procedure, use a PowerShell instance that has administrative permission
 
 1. Open a PowerShell window. To connect to a remote computer, enter **Enter-PSSession -ComputerName \<computer name\>**.
 2. Enter the following command:  
-     ```  
+   
+     ```powershell  
     cmd /c 'netstat -ano | find "3389"'  
     ```
+  
     ![ ](..\media\troubleshoot-remote-desktop-connections\WPS_netstat.png)
-3. Look for an entry for TCP port 3389 (or the assigned RDP port) with a status of **Listening**. 
+1. Look for an entry for TCP port 3389 (or the assigned RDP port) with a status of **Listening**. 
     > [!NOTE]  
    > The PID (Process Identifier) of the process or service using that port appears under the PID column.
-4. To determine which application is using port 3389 (or the assigned RDP port), enter the following command:  
-     ```  
+1. To determine which application is using port 3389 (or the assigned RDP port), enter the following command:  
+   
+     ```powershell  
     cmd /c 'tasklist /svc | find "<pid listening on 3389>"'  
-    ``` 
+    ```  
+  
     ![ ](..\media\troubleshoot-remote-desktop-connections\WPS_tasklist.png)
-5. Look for an entry for the PID number that is associated with the port (from the **netstat** output). The services or processes that are associated with that PID appear on the right.
-6. If an application or service other than Remote Desktop Services (TermServ.exe) is using the port, you can resolve the conflict by using one of the following methods:
+1. Look for an entry for the PID number that is associated with the port (from the **netstat** output). The services or processes that are associated with that PID appear on the right.
+1. If an application or service other than Remote Desktop Services (TermServ.exe) is using the port, you can resolve the conflict by using one of the following methods:
       - Configure the other application or service to use a different port (recommended).
       - Uninstall the other application or service.
       - Configure RDP to use a different port, and then restart the Remote Desktop Services service (not recommended).
@@ -331,9 +337,11 @@ Use the **psping** tool to test whether you can reach the affected computer by u
 
 1. On a computer that is different from the affected computer, download **psping** from <https://live.sysinternals.com/psping.exe>.
 2. Open a Command Prompt window as an administrator, change to the directory in which you installed **psping**, and then enter the following command:  
+   
    ```  
    psping -accepteula <computer IP>:3389  
    ```
+   
 3. Check the output of the **psping** command for results such as the following:  
       - **Connecting to \<computer IP\>**: The remote computer is reachable.
       - **(0% loss)**: All attempts to connect succeeded.
@@ -606,10 +614,11 @@ To resolve this issue, apply the following updates to the RDSH servers:
 You can set the limit on the number of simultaneous remote desktop connections at the individual computer level or by configuring a group policy object (GPO). By default, the limit is not set.
 
 To check the current settings and identify any existing GPOs on the RDSH server, open a command prompt window as an administrator and enter the following command:
-
+  
 ```
 gpresult /H c:\gpresult.html
 ```
+   
 After this command finishes, open gpresult.html, and in **Computer Configuration\\Administrative Templates\\Windows Components\\Remote Desktop Services\\Remote Desktop Session Host\\Connections**, find the **Limit number of connections** policy.
 
   - If the setting for this policy is **Disabled**, then group policy is not limiting RDP connections.
