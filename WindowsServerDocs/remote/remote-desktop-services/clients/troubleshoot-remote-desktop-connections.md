@@ -249,23 +249,23 @@ For this procedure, use a PowerShell instance that has administrative permission
     4. Copy the exported .reg file to the affected computer.
 5. To import the RDP listener configuration, open a PowerShell window that has administrative permissions on the affected computer (or open the PowerShell window and connect to the affected computer remotely).
     1. To back up the existing registry entry, enter the following command:  
-  
+   
         ```powershell  
         cmd /c 'reg export "HKLM\SYSTEM\CurrentControlSet\Control\Terminal Server\WinStations\RDP-tcp" C:\Rdp-tcp-backup.reg'   
         ```  
-  
+   
 
-        To remove the existing registry entry, enter the following commands:  
+     2. To remove the existing registry entry, enter the following commands:  
    
         ```powershell  
         Remove-Item -path 'HKLM:\SYSTEM\CurrentControlSet\Control\Terminal Server\WinStations\RDP-tcp' -Recurse -Force  
         cmd /c 'regedit /s c:\<filename>.reg'  
         Restart-Service TermService -Force  
         ```
-  
+   
         where \<filename\> is the name of the exported .reg file.
-1. Test the configuration by trying the remote desktop connection again. If you still cannot connect, restart the affected computer.
-1. If you still cannot connect, [check the status of the RDP self-signed certificate](#check-the-status-of-the-rdp-self-signed-certificate).
+6. Test the configuration by trying the remote desktop connection again. If you still cannot connect, restart the affected computer.
+7. If you still cannot connect, [check the status of the RDP self-signed certificate](#check-the-status-of-the-rdp-self-signed-certificate).
 
 #### Check the status of the RDP self-signed certificate
 
