@@ -581,7 +581,7 @@ Specifies whether the **Install Updates and Shut Down** option is allowed as the
 
 **Options:** There are no options for this setting.
 
-#### <a name="BKMK_Client3"></a>remove access to use all Windows Update features
+#### <a name="BKMK_Client3"></a>Remove access to use all Windows Update features
 This setting enables you to remove WSUS client access to Windows Update.
 
 |Supported on:|Excluding:|
@@ -616,10 +616,10 @@ The procedure that follows describes how to open the GPMC on your domain control
 
 4.  Do one of the following:
 
-5.  **To open an existing domain-level GPO for editing**, double click the domain that contains the Group Policy object that you want to manage, right-click the domain policy you want to manage, and then click **edit**. Group Policy Management editor (GPME) opens.
+    -  **To open an existing domain-level GPO for editing**, double click the domain that contains the Group Policy object that you want to manage, right-click the domain policy you want to manage, and then click **edit**. Group Policy Management editor (GPME) opens.
 
-6.  ###### **To create a new Group Policy object and open for editing**:
-7.  1.  1.  Right-click the domain for which you want to create a new Group Policy object, and then click **create a GPO in this domain, and Link it here**.
+    -  **To create a new Group Policy object and open for editing**:
+        1.  Right-click the domain for which you want to create a new Group Policy object, and then click **create a GPO in this domain, and Link it here**.
 
         2.  In **New GPO**, in **Name**, type a name for the new Group Policy object, and then click **OK**.
 
@@ -635,7 +635,7 @@ The procedure that follows describes how to open the GPMC on your domain control
 
     -   **Open the computer Configuration > Maintenance Scheduler extension of Group Policy**. In GPOE, navigate to *PolicyName* > **computer Configuration** > **Policies** > **Administrative Templates** > **Windows components** > **Maintenance Scheduler**.
 
-for more information about the Group Policy, see [Group Policy Overview](https://technet.microsoft.com/library/hh831791.aspx(v=ws.12)).
+For more information about the Group Policy, see [Group Policy Overview](https://technet.microsoft.com/library/hh831791.aspx(v=ws.12)).
 
 > [!TIP]
 > After you have opened the extension of Group Policy you want, you can use the following steps to enable, disable, or navigate between settings:
@@ -646,9 +646,9 @@ for more information about the Group Policy, see [Group Policy Overview](https:/
 
 2.  To configure the setting, do one of the following:
 
-    -   To retain the default unspecified state of the setting, select **Not Configured**
+    -   To retain the default unspecified state of the setting, select **Not Configured**.
 
-    -   To enable the setting, select **Enabled**
+    -   To enable the setting, select **Enabled**.
 
     -   To disable the setting, select **Disabled**.
 
@@ -662,7 +662,7 @@ for more information about the Group Policy, see [Group Policy Overview](https:/
 
     -   To discard all unsaved changes and close the dialog box, click **Cancel**.
 
-### <a name="BKMK_changes"></a>changes to WSUS relevant to this guide
+### <a name="BKMK_changes"></a>Changes to WSUS relevant to this guide
 The following table summarizes key differences between the current and past versions of WSUS that are relevant to this guide.
 
 |Windows Server and WSUS versions|Description|
