@@ -5,9 +5,9 @@ ms.prod: windows-server-threshold
 ms.technology: storage-failover-clustering
 ms.topic: article
 author: JasonGerend
-manager: dougkim
+manager: daveba
 ms.author: jgerend
-ms.date: 02/01/2019
+ms.date: 02/28/2019
 description: New and updated topics in the Failover Clustering documentation for Windows Server 2016
 ---
 # Change history for Failover Clustering topics
@@ -22,6 +22,7 @@ This topic lists new and updated topics in the [Failover Clustering](failover-cl
 
 |New or changed topic                                    |Description |
 |--------------------------------------------------------|------------|
+| [Upgrading a failover cluster on the same hardware](upgrade-option-same-hardware.md)| New |
 |[Deploy a two-node file server](deploy-two-node-clustered-file-server.md)| New |
 
 ## January 2019
