@@ -248,19 +248,22 @@ For this procedure, use a PowerShell instance that has administrative permission
     3. Export the entry to a .reg file. For example, in Registry Editor, right-click the entry, select **Export**, and then enter a filename for the exported settings.
     4. Copy the exported .reg file to the affected computer.
 5. To import the RDP listener configuration, open a PowerShell window that has administrative permissions on the affected computer (or open the PowerShell window and connect to the affected computer remotely).
-    1. To back up the existing registry entry, enter the following command:
-        ```ps  
-        cmd /c 'reg export "HKLM\SYSTEM\CurrentControlSet\Control\Terminal Server\WinStations\RDP-tcp" C:\Rdp-tcp-backup.reg'  
-        ```
+    1. To back up the existing registry entry, enter the following command:  
+  
+        ```powershell  
+        cmd /c 'reg export "HKLM\SYSTEM\CurrentControlSet\Control\Terminal Server\WinStations\RDP-tcp" C:\Rdp-tcp-backup.reg'   
+        ```  
+  
+
         To remove the existing registry entry, enter the following commands:  
-        ```ps  
+        ```  
         Remove-Item -path 'HKLM:\SYSTEM\CurrentControlSet\Control\Terminal Server\WinStations\RDP-tcp' -Recurse -Force  
         cmd /c 'regedit /s c:\<filename>.reg'  
         Restart-Service TermService -Force  
         ```
         where \<filename\> is the name of the exported .reg file.
-6. Test the configuration by trying the remote desktop connection again. If you still cannot connect, restart the affected computer.
-7. If you still cannot connect, [check the status of the RDP self-signed certificate](#check-the-status-of-the-rdp-self-signed-certificate).
+1. Test the configuration by trying the remote desktop connection again. If you still cannot connect, restart the affected computer.
+1. If you still cannot connect, [check the status of the RDP self-signed certificate](#check-the-status-of-the-rdp-self-signed-certificate).
 
 #### Check the status of the RDP self-signed certificate
 
@@ -304,7 +307,7 @@ For this procedure, use a PowerShell instance that has administrative permission
 
 1. Open a PowerShell window. To connect to a remote computer, enter **Enter-PSSession -ComputerName \<computer name\>**.
 2. Enter the following command:  
-     ```ps  
+     ```  
     cmd /c 'netstat -ano | find "3389"'  
     ```
     ![ ](..\media\troubleshoot-remote-desktop-connections\WPS_netstat.png)
@@ -312,7 +315,7 @@ For this procedure, use a PowerShell instance that has administrative permission
     > [!NOTE]  
    > The PID (Process Identifier) of the process or service using that port appears under the PID column.
 4. To determine which application is using port 3389 (or the assigned RDP port), enter the following command:  
-     ```ps  
+     ```  
     cmd /c 'tasklist /svc | find "<pid listening on 3389>"'  
     ``` 
     ![ ](..\media\troubleshoot-remote-desktop-connections\WPS_tasklist.png)
