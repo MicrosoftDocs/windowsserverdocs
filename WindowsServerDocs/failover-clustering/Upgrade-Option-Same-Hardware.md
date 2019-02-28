@@ -33,9 +33,9 @@ Before starting any upgrade, please ensure a current backup, including system st
 
 In the example below, the name of the failover cluster is CLUSTER and the node names are NODE1 and NODE2.
 
-## Steps for the first node
+## Step 1: Evict first node and upgrade to Windows Server 2016
 
-1. Drain all resources from NODE1 to NODE2 by right mouse clicking on the node and selecting **Pause** and **Drain Roles**.  Alternatively, you can use the PowerShell command [SUSPEND-CLUSTERNODE](https://docs.microsoft.com/powershell/module/failoverclusters/suspend-clusternode).
+1. In Failover Cluster Manager, drain all resources from NODE1 to NODE2 by right mouse clicking on the node and selecting **Pause** and **Drain Roles**.  Alternatively, you can use the PowerShell command [SUSPEND-CLUSTERNODE](https://docs.microsoft.com/powershell/module/failoverclusters/suspend-clusternode).
 
     ![Drain Node](media\In-Place-Upgrade\In-Place-Upgrade-2.png)
 
@@ -43,7 +43,7 @@ In the example below, the name of the failover cluster is CLUSTER and the node n
 
     ![Drain Node](media\In-Place-Upgrade\In-Place-Upgrade-3.png)
 
-3. As a precaution, disconnect NODE1 from the storage you are using.  Depending on your storage, this may not be necessary.
+3. As a precaution, detach NODE1 from the storage you are using.  In some cases, disconnecting the storage cables from the machine will suffice.  Check with your storage vendor for proper detachment steps if needed.  Depending on your storage, this may not be necessary.
 
 4. Rebuild NODE1 with Windows Server 2016.  Ensure you have added all the necessary roles, features, drivers and security updates.
 
@@ -57,15 +57,15 @@ In the example below, the name of the failover cluster is CLUSTER and the node n
 
 7.  Once all the resources have been migrated, power down NODE2 (original cluster) and disconnect the storage so as to not cause any interference.  Connect the storage to NODE1.  Once all is connected, bring all the resources online and ensure they are functioning as should.
 
-## Steps for the second node
+## Step 2: Rebuild second node to Windows Server 2019
 
 Once you have verified everything is working as it should, NODE2 can be rebuilt to Windows Server 2019 and joined to the Cluster.
 
-1. Rebuild NODE2 to Windows Server 2019. Ensure you have added all the necessary roles, features, drivers and security updates.
+1. Perform a clean installation of Windows Server 2019 on NODE2. Ensure you have added all the necessary roles, features, drivers and security updates.
 
 2. Now that the original cluster (CLUSTER) is gone, you can leave the new cluster name as CLUSTER1 or go back to the original name.  If you wish to go back to the original name, follow these steps:
    
-   a. On NODE1, in Failover Cluster managerright mouse click the name of the cluster (CLUSTER1) and choose **Properties**.
+   a. On NODE1, in Failover Cluster Manager right mouse click the name of the cluster (CLUSTER1) and choose **Properties**.
    
    b. On the **General** tab, rename the cluster to CLUSTER.
 
@@ -77,13 +77,13 @@ Once you have verified everything is working as it should, NODE2 can be rebuilt 
 
 3. On NODE1, open Failover Cluster Manager.  Right mouse click on **Nodes** and select **Add Node**.  Go through the wizard adding NODE2 to the Cluster.
 
-4. Attach the storage to NODE2.  
+4. Attach the storage to NODE2. This could include reconnecting the storage cables. 
 
 5. Drain all resources from NODE1 to NODE2 by right mouse clicking on the node and selecting **Pause** and **Drain Roles**.  Alternatively, you can use the PowerShell command [SUSPEND-CLUSTERNODE](https://docs.microsoft.com/powershell/module/failoverclusters/suspend-clusternode).  Ensure all resources are online and they are functioning as should.
 
-## Steps to complete the process to full Windows Server 2019 Cluster
+## Step 3: Rebuild first node to Windows Server 2019
 
-1. Evict NODE1 from the cluster and disconnect the storage from the node.
+1. Evict NODE1 from the cluster and disconnect the storage from the node in the manner from which you previously .
 
 2. Rebuild or upgrade NODE1 to Windows Server 2019.  Ensure you have added all the necessary roles, features, drivers and security updates.
 
