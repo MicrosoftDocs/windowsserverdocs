@@ -11,12 +11,12 @@ ms.topic: article
 author: justinha
 ms.author: justinha
 manager: brianlic-msft
-ms.date: 02/02/2019
+ms.date: 02/28/2019
 ---
 
 # Transport Layer Security (TLS) registry settings
 
->Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows 10
+>Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows 10
 
 This reference topic for the IT professional contains supported registry setting information for the Windows implementation of the Transport Layer Security (TLS) protocol and the Secure Sockets Layer (SSL) protocol through the Schannel Security Support Provider (SSP). 
 The registry subkeys and entries covered in this topic help you administer and troubleshoot the Schannel SSP, specifically the TLS and SSL protocols. 
@@ -314,7 +314,7 @@ To disable SSL 2.0 for client or server, change the DWORD value to 0.
 If an SSPI app requests to use SSL 2.0, it will be denied. 
 
 To disable SSL 2.0 by default, create a **DisabledByDefault** entry and change the DWORD value to 1. 
-If an SSPI app explcitly requests to use SSL 2.0, it will be negotiated. 
+If an SSPI app explcitly requests to use SSL 2.0, it may be negotiated. 
 
 The following example shows SSL 2.0 disabled in the registry:
 
@@ -345,7 +345,7 @@ To disable SSL 3.0 for client or server, change the DWORD value to 0.
 If an SSPI app requests to use SSL 3.0, it will be denied. 
 
 To disable SSL 3.0 by default, create a **DisabledByDefault** entry and change the DWORD value to 1. 
-If an SSPI app explicitly requests to use SSL 3.0, it will be negotiated. 
+If an SSPI app explicitly requests to use SSL 3.0, it may be negotiated. 
 
 The following example shows SSL 3.0 disabled in the registry:
 
@@ -374,7 +374,7 @@ To disable TLS 1.0 for client or server, change the DWORD value to 0.
 If an SSPI app requests to use TLS 1.0, it will be denied. 
 
 To disable TLS 1.0 by default, create a **DisabledByDefault** entry and change the DWORD value to 1. 
-If an SSPI app explicitly requests to use TLS 1.0, it will be negotiated. 
+If an SSPI app explicitly requests to use TLS 1.0, it may be negotiated. 
 
 The following example shows TLS 1.0 disabled in the registry:
 
@@ -403,7 +403,7 @@ To disable TLS 1.1 for client or server, change the DWORD value to 0.
 If an SSPI app requests to use TLS 1.1, it will be denied. 
 
 To disable TLS 1.1 by default, create a **DisabledByDefault** entry and change the DWORD value to 1. 
-If an SSPI app explicitly requests to use TLS 1.1, it will be negotiated. 
+If an SSPI app explicitly requests to use TLS 1.1, it may be negotiated. 
 
 The following example shows TLS 1.1 disabled in the registry:
 
@@ -432,7 +432,7 @@ To disable TLS 1.2 for client or server, change the DWORD value to 0.
 If an SSPI app requests to use TLS 1.2, it will be denied. 
 
 To disable TLS 1.2 by default, create a **DisabledByDefault** entry and change the DWORD value to 1. 
-If an SSPI app explicitly requests to use TLS 1.2, it will be negotiated. 
+If an SSPI app explicitly requests to use TLS 1.2, it may be negotiated. 
 
 The following example shows TLS 1.2 disabled in the registry:
 
@@ -461,7 +461,7 @@ To disable DTLS 1.0 for client or server, change the DWORD value to 0.
 If an SSPI app requests to use DTLS 1.0, it will be denied. 
 
 To disable DTLS 1.0 by default, create a **DisabledByDefault** entry and change the DWORD value to 1. 
-If an SSPI app explicitly requests to use DTLS 1.0, it will be negotiated. 
+If an SSPI app explicitly requests to use DTLS 1.0, it may be negotiated. 
 
 The following example shows DTLS 1.0 disabled in the registry:
 
@@ -491,7 +491,7 @@ To disable DTLS 1.2 for client or server, change the DWORD value to 0.
 If an SSPI app requests to use DTLS 1.0, it will be denied. 
 
 To disable DTLS 1.2 by default, create a **DisabledByDefault** entry and change the DWORD value to 1. 
-If an SSPI app explicitly requests to use DTLS 1.2, it will be negotiated. 
+If an SSPI app explicitly requests to use DTLS 1.2, it may be negotiated. 
 
 The following example shows DTLS 1.1 disabled in the registry:
 
