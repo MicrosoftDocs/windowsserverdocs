@@ -5,25 +5,24 @@ ms.manager: eldenc
 ms.technology: failover-clustering
 ms.topic: article
 author: johnmarlin-msft
-ms.date: 02/07/2019
+ms.date: 02/28/2019
 description: This article describes upgrading a 2-node Failover Cluster using the same hardware
 ms.localizationpriority: medium
 ---
 
-# Upgrading Failover Clusters Using the Same Hardware
+# Upgrading Failover Clusters on the same hardware
 
-> Applies To: Windows Server 2016, Windows Server 2019
+> Applies To: Windows Server 2019, Windows Server 2016
 
 A failover cluster is a group of independent computers that work together to increase the availability of applications and services. The clustered servers (called nodes) are connected by physical cables and by software. If one of the cluster nodes fails, another node begins to provide service (a process known as failover). Users experience a minimum of disruptions in service.
 
-This guide describes the steps for "upgrading" the cluster nodes to Windows Server® 2016 or Windows Server® 2019 from an older version using the same hardware.
-
+This guide describes the steps for upgrading the cluster nodes to Windows Server 2019 or Windows Server 2016 from an earlier version using the same hardware.
 
 ## Overview
 
-Upgrading the operating system on an existing failover cluster is only supported when going from Windows Server 2016 to Windows 2019.  If the failover cluster is running an older version, such such as Windows Server 2012 R2 and earlier, upgrading while the cluster services are running will not allow joining nodes together.  If using the same hardware, steps can be taken to get it to the newer version.  
+Upgrading the operating system on an existing failover cluster is only supported when going from Windows Server 2016 to Windows 2019.  If the failover cluster is running an earlier version, such such as Windows Server 2012 R2 and earlier, upgrading while the cluster services are running will not allow joining nodes together.  If using the same hardware, steps can be taken to get it to the newer version.  
 
-Before any upgrade of your failover cluster, please consult the [Windows Upgrade Center](https://www.microsoft.com/upgradecenter).  When you upgrade a Windows Server in-place, you move from an existing operating system release to a more recent release while staying on the same hardware. Windows Server can be upgraded in-place at least one, and sometimes two versions forward. For example, Windows Server 2012 R2 and Windows Server 2016 can be upgraded in-place to Windows Server 2019.  Also keep in mind that the [Cluster Migration Wizard](https://blogs.msdn.microsoft.com/clustering/2012/06/25/how-to-move-highly-available-clustered-vms-to-windows-server-2012-with-the-cluster-migration-wizard/) can be used but is only supported up to two versions back. The following graphic shows the upgrade paths for Windows Server. Downward pointing arrows represent the supported upgrade path moving from older versions up to Windows Server 2019.
+Before any upgrade of your failover cluster, please consult the [Windows Upgrade Center](https://www.microsoft.com/upgradecenter).  When you upgrade a Windows Server in-place, you move from an existing operating system release to a more recent release while staying on the same hardware. Windows Server can be upgraded in-place at least one, and sometimes two versions forward. For example, Windows Server 2012 R2 and Windows Server 2016 can be upgraded in-place to Windows Server 2019.  Also keep in mind that the [Cluster Migration Wizard](https://blogs.msdn.microsoft.com/clustering/2012/06/25/how-to-move-highly-available-clustered-vms-to-windows-server-2012-with-the-cluster-migration-wizard/) can be used but is only supported up to two versions back. The following graphic shows the upgrade paths for Windows Server. Downward pointing arrows represent the supported upgrade path moving from earlier versions up to Windows Server 2019.
 
 ![In-place Upgrade Diagram](media\In-Place-Upgrade\In-Place-Upgrade-1.png)
 
@@ -95,17 +94,9 @@ Once you have verified everything is working as it should, NODE2 can be rebuilt 
 
 You are now running with a fully functional Windows Server 2019 Failover Cluster.
 
-## Additional Notes
+## Additional notes
 
 - As explained previously, disconnecting the storage may or may not be necessary.  In our documentation, we want to err on the side of caution.  Please consult with your storage vendor.
 - If your starting point is Windows Server 2008 or 2008 R2 clusters, an additional run through of steps may be needed.
 - If the cluster is running virtual machines, ensure you upgrade the virtual machine level once the cluster functional level has been done with the PowerShell command [UPDATE-VMVERSION](https://docs.microsoft.com/powershell/module/hyper-v/update-vmversion).
 - Please note that if you are running an application such as SQL Server, Exchange Server, etc, the application will not be migrated with the Copy Cluster Roles wizard.  You should consult your application vendor for proper migration steps of the application.
- 
-
-
-
-
-
-
-
