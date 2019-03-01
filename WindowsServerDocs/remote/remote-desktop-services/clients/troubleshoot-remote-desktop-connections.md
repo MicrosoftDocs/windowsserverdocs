@@ -16,7 +16,7 @@ ms.date: 02/22/2019
 ms.localizationpriority: medium
 ---
 # Troubleshooting Remote Desktop connections
-For brief explanations of several of the most common Remote Desktop Services (RDS) issues, see Frequently asked questions about the Remote Desktop clients. This article describes several more advanced approaches to troubleshooting connection problems. Many of these procedures apply whether you are troubleshooting a simple configuration, such as one physical computer connecting to another physical computer, or a more complicated configuration. Some procedures address issues that occur only in more complicated multi-user scenarios. For more information about the remote desktop components and how they work together, see [Remote Desktop Services architecture](https://docs.microsoft.com/en-us/windows-server/remote/remote-desktop-services/desktop-hosting-logical-architecture).
+For brief explanations of several of the most common Remote Desktop Services (RDS) issues, see [Frequently asked questions about the Remote Desktop clients](https://review.docs.microsoft.com/en-us/windows-server/remote/remote-desktop-services/clients/remote-desktop-client-faq). This article describes several more advanced approaches to troubleshooting connection problems. Many of these procedures apply whether you are troubleshooting a simple configuration, such as one physical computer connecting to another physical computer, or a more complicated configuration. Some procedures address issues that occur only in more complicated multi-user scenarios. For more information about the remote desktop components and how they work together, see [Remote Desktop Services architecture](https://docs.microsoft.com/en-us/windows-server/remote/remote-desktop-services/desktop-hosting-logical-architecture).
 
 > [!NOTE]  
 > Many of the procedures that are described in this article require you to access multiple computers, some of which you may have to access remotely. For more information about remote administration tools and how to configure them, see [Remote Server Administration Tools (RSAT) for Windows operating systems](https://support.microsoft.com/en-us/help/2693643/remote-server-administration-tools-rsat-for-windows-operating-systems).
@@ -31,6 +31,9 @@ In the following list, identify the type of symptom that you (or your users) are
 - [The remote desktop client disconnects and cannot reconnect to the same session](#rd-client-disconnects-and-cannot-reconnect-to-the-same-session)
 - [The user connects to a remote laptop over a wireless network, and then the laptop disconnects from the network](#remote-laptop-disconnects-from-wireless-network).
 - [The user experiences poor performance or problems with remote applications](#user-experiences-poor-performance-or-application-problems)
+
+> [!NOTE]  
+> For a current list of RDP disconnect codes, see [ExtendedDisconnectReasonCode enumeration](https://docs.microsoft.com/en-us/windows/desktop/TermServ/extendeddisconnectreasoncode). 
 
 ## No specific symptoms or messages (general troubleshooting steps)
 
