@@ -4,7 +4,7 @@ description: Known issues and troubleshooting support for Storage Migration Serv
 author: nedpyle
 ms.author: nedpyle
 manager: siroy
-ms.date: 2/04/2019
+ms.date: 02/27/2019
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: storage
@@ -54,11 +54,56 @@ We intend to fix this issue in a later release of Windows Server. Please open a 
 
 When using Windows Admin Center to connect to a [Windows Server 2019 Evaluation release](https://www.microsoft.com/evalcenter/evaluate-windows-server-2019) there isn't an option to manage the Storage Migration Service. Storage Migration Service also isn't included in Roles and Features.
 
-This is issue is caused by a servicing issue in the Evaluation media of Windows Server 2019. 
+This issue is caused by a servicing issue in the Evaluation media of Windows Server 2019. 
 
 To work around this issue, install a retail, MSDN, OEM, or Volume License version of Windows Server 2019 and don't activate it. Without activation, all editions of Windows Server operate in evaluation mode for 180 days. 
 
-We have fixed this issue in a later release of Windows Server 2019. We may release an update to the existing version of Windows Server 2019 as part of the normal monthly update cycle. 
+We have fixed this issue in a later release of Windows Server 2019.  
+
+## Storage Migration Service times out downloading the transfer error CSV
+
+When using Windows Admin Center or PowerShell to download the transfer operations detailed errors-only CSV log, you receive error:
+
+ >   Transfer Log - Please check file sharing is allowed in your firewall. : This request operation sent to net.tcp://localhost:28940/sms/service/1/transfer did not receive a reply within the configured timeout (00:01:00). The time allotted to this operation may have been a portion of a longer timeout. This may be because the service is still processing the operation or because the service was unable to send a reply message. Please consider increasing the operation timeout (by casting the channel/proxy to IContextChannel and setting the OperationTimeout property) and ensure that the service is able to connect to the client.
+
+This issue is caused by an extremely large number of transferred files that cannot be filtered in the default one minute timeout allowed by Storage MIgration Service. 
+
+To work around this issue:
+
+1. On the orchestrator computer, edit the *%SYSTEMROOT%\SMS\Microsoft.StorageMigration.Service.exe.config* file using Notepad.exe to change the "sendTimeout" from its 1 minute default to 10 minutes
+
+   ```
+     <bindings>
+      <netTcpBinding>
+        <binding name="NetTcpBindingSms"
+                 sendTimeout="00:01:00"
+   ```
+
+2. Restart the "Storage Migration Service" service on the orchestrator computer. 
+3. On the orchestrator computer, start Regedit.exe
+4. Locate and then click the following registry subkey: 
+
+   `HKEY_LOCAL_MACHINE\\Software\\Microsoft\\SMSPowershell`
+
+5. On the Edit menu, point to New, and then click DWORD Value. 
+6. Type "WcfOperationTimeoutInMinutes" for the name of the DWORD, and then press ENTER.
+7. Right-click "WcfOperationTimeoutInMinutes", and then click Modify. 
+8. In the Base data box, click "Decimal"
+9. In the Value data box, type "10", and then click OK.
+10. Exit Registry Editor.
+11. Attempt to download the errors-only CSV file again. 
+
+We intend to change this behavior in a later release of Windows Server 2019.  
+
+## Cutover fails when migrating between networks
+
+When migrating to a destination VM running in a different network than the source, such as an Azure IaaS instance, cutover fails to complete when the source was using a static IP address. 
+
+This behavior is by design, to prevent connectivity issues after migration from users, applications, and scripts connecting via IP address. When the IP address is moved from the old source computer to the new destination target, it won't match the new network subnet information and perhaps DNS and WINS.
+
+To workaround this issue, perform a migration to a computer on the same network. Then move that computer to a new network and reassign its IP information. For instance, if migrating to Azure IaaS, first migrate to a local VM, then use Azure Migrate to shift the VM to Azure.  
+
+We have fixed this issue in a later release of Windows Server 2019. We'll now allow you to specify migrations that don't alter the destination server's network settings. We may release an update to the existing version of Windows Server 2019 as part of the normal monthly update cycle. 
 
 
 ## See also

@@ -58,6 +58,7 @@
 #### [UI text and design style guide](extend/guides/ui-text-style-guide.md)
 #### [Using PowerShell in your extension](extend/guides/powershell.md)
 #### [CSS icon guide](extend/guides/cssicons.md)
+#### [Migrate to the latest SDK](extend/guides/migration-guide-0_1-1_0.md)
 ### [Publishing extensions](extend/publish-extensions.md)
 ### Case Studies
 #### [DataON](extend/case-studies/dataon.md)

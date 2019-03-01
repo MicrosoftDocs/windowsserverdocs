@@ -4,8 +4,8 @@ title: What's new in Active Directory Federation Services for Windows Server 201
 description:
 author: billmath
 ms.author: billmath
-manager: femila
-ms.date: 09/20/2018
+manager: daveba
+ms.date: 02/26/2019
 ms.topic: article
 ms.prod: windows-server-threshold
 
@@ -34,6 +34,8 @@ The following additional security improvements are available in AD FS 2019:
      - HSTS: This conveys that ADFS endpoints can only be used on HTTPS endpoints for a compliant browser to enforce
      - x-frame-options: Allows ADFS admins to allow specific relying parties to embed iFrames for ADFS interactive login pages. This should be used with care and only on HTTPS hosts. 
      - Future header: Additional future headers can be configured as well. 
+
+For more information see [Customize HTTP security response headers with AD FS 2019](../../ad-fs/operations/customize-http-security-headers-ad-fs.md) 
 
 ### Authentication/Policy capabilities
 The following authentication/policy capabilities are in AD FS 2019:

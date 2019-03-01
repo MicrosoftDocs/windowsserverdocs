@@ -10,16 +10,16 @@ ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
 ---
-# Configure AD FS 2016 and Azure MFA
+# Configure Azure MFA as authentication provider with AD FS
 
->Applies To: Windows Server 2016
+>Applies To: Windows Server 2016, Windows Server 2019
 
-If your organization is federated with Azure AD, you can use Azure Multi-Factor Authentication to secure AD FS resources, both on-premises and in the cloud. Azure MFA enables you to eliminate passwords and provide a more secure way to authenticate.  Starting with Windows Server 2016, you can now configure Azure MFA for primary authentication. 
+If your organization is federated with Azure AD, you can use Azure Multi-Factor Authentication to secure AD FS resources, both on-premises and in the cloud. Azure MFA enables you to eliminate passwords and provide a more secure way to authenticate.  Starting with Windows Server 2016, you can now configure Azure MFA for primary authentication or use it as an additional authentication provider. 
   
 Unlike with AD FS in Windows Server 2012 R2, the AD FS 2016 Azure MFA adapter integrates directly with Azure AD and does not require an on premises Azure MFA server.   The Azure MFA adapter is built in to Windows Server 2016, and there is no need for additional installation.
 
 
-## Registering users for Azure MFA with AD FS 2016
+## Registering users for Azure MFA with AD FS
 
 AD FS does not support inline &#34;proof up&#34;, or registration of Azure MFA security verification information such as phone number or mobile app. This means users must get proofed up by visiting [https://account.activedirectory.windowsazure.com/Proofup.aspx](https://account.activedirectory.windowsazure.com/Proofup.aspx) prior to using Azure MFA to authenticate to AD FS applications. 
 When a user who has not yet proofed up in Azure AD tries to authenticate with Azure MFA at AD FS, they will get an AD FS error.  As an AD FS administrator, you can customize this error experience to guide the user to the proofup page instead.  You can do this using onload.js customization to detect the error message string within the AD FS page and show a new message to guide the users to visit [https://aka.ms/mfasetup](https://aka.ms/mfasetup), then re-attempt authentication. For detailed guidance see the "Customize the AD FS web page to guide users to register MFA verification methods" below in this article.
@@ -28,9 +28,9 @@ When a user who has not yet proofed up in Azure AD tries to authenticate with Az
 > Previously, users were required to authenticate with MFA for registration (visiting [https://account.activedirectory.windowsazure.com/Proofup.aspx](https://account.activedirectory.windowsazure.com/Proofup.aspx), for example via the shortcut [https://aka.ms/mfasetup](https://aka.ms/mfasetup)).  Now, an AD FS user who has not yet registered MFA verification information can access Azure AD&#34;s proofup page via the shortcut [https://aka.ms/mfasetup](https://aka.ms/mfasetup) using only primary authentication (such as Windows Integrated Authentication or username and password via the AD FS web pages).  If the user has no verification methods configured, Azure AD will perform inline registration in which the user sees the message &#34;Your admin has required that you set up this account for additional security verification&#34;, and the user can then select to &#34;Set it up now&#34;.
 > Users who already have at least one MFA verification method configured will still be prompted to provide MFA when visiting the proofup page.
 
-### Recommended deployment topologies
+## Recommended deployment topologies
 
-#### Azure MFA as Primary Authentication
+### Azure MFA as Primary Authentication
 
 There are a couple of great reasons to use Azure MFA as Primary Authentication with AD FS:
 
@@ -44,7 +44,14 @@ You can now do this by configuring the Azure AD domain setting to do MFA on prem
 As described above, any AD FS user who has not yet registered (configured MFA verification information) should be prompted via a customized AD FS error page to visit [https://aka.ms/mfasetup](https://aka.ms/mfasetup) to configure verification information, then re-attempt AD FS login.  
 Because Azure MFA as primary is considered a single factor, after initial configuration users will need to provide an additional factor to manage or update their verification information in Azure AD, or to access other resources that require MFA.
 
-#### Azure MFA as Additional authentication to Office 365
+>[!NOTE]
+> With ADFS 2019, you are required to make a modification to the anchor claim type for the Active Directory Claims Provider trust and modify this from the windowsaccountname to UPN. Execute the below powershell commandlet provided below. This has no impact on the internal functioning of the AD FS farm. You may notice a few users may be reprompted for credentials once this change is made. After logging in again, end users will see no difference. 
+
+```powershell
+Set-AdfsClaimsProviderTrust -AnchorClaimType "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/upn" -TargetName "Active Directory"
+```
+
+### Azure MFA as Additional authentication to Office 365
 
 Previously, if you wished to have Azure MFA as an additional authentication method in AD FS for Office 365 or other relying parties, the best option was to configure Azure AD to do compound MFA, in which primary authentication is performed on premises in AD FS and MFA is triggered by Azure AD. 
 Now, you can use Azure MFA as additional authentication in AD FS when the domain SupportsMfa setting is set to $True.  

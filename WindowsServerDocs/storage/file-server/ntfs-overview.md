@@ -56,7 +56,7 @@ To allow proper extension of large .vhdx files, there are new recommendations fo
 For example, the following cmdlet formats drive D as an NTFS volume, with FRS enabled and an allocation unit size of 64 KB.
 
 ```PowerShell
-Format-Volume -DriveLetter D -FileSystem NTFS -AllocationUnitSize 64KB -UseLargeFR
+Format-Volume -DriveLetter D -FileSystem NTFS -AllocationUnitSize 64KB -UseLargeFRS
 ```
 
 You also can use the **format** command. At a system command prompt, enter the following command, where **/L** formats a large FRS volume and **/A:64k** sets a 64 KB allocation unit size:
