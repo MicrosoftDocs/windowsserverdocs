@@ -48,7 +48,8 @@ If your organization uses Azure Active Directory (Azure AD), you can choose to a
 
 Note that Azure AD authentication does not replace the existing requirement that users be a member of the Local users (or local administrators) group on the server where Windows Admin Center is installed.
 
-When Azure AD authentication is enabled, users accessing Windows Admin Center will receive a prompt from the browser for credentials to access the machine on which Windows Admin Center is installed. Here users will need to enter credentials that are a memeber the Local users or Local administrators group of the Windows Admin Center gateway machine. Users will then get the additional Azure Active Directory authentication prompt, which requires the credentials of an Azure account that has been granted access in the Azure AD application in Azure. 
+When Azure AD authentication is enabled, users accessing Windows Admin Center will receive a prompt from the browser for credentials to access the machine on which Windows Admin Center is installed. Here users will need to enter credentials that are a member of the Local users or Local administrators group of the Windows Admin Center gateway machine. Users will then get the additional Azure Active Directory authentication prompt, which requires the credentials of an Azure account that has been granted access in the Azure AD application in Azure. 
+Users with Administrator rights on the gateway machine will not be prompted for the Azure AD authentication.
 
 ### Configuring Azure Active Directory authentication for Windows Admin Center Preview
 
