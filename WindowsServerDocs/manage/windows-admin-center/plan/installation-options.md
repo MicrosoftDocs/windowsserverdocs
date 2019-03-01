@@ -45,7 +45,9 @@ You can **manage** the following Windows operating systems using Windows Admin C
 | Windows Server Semi-Annual Channel | Yes | Yes | N/A |
 | Windows Server 2019 | Yes | Yes | Yes |
 | Windows Server 2016 | Yes | Yes | Yes, with [latest cumulative update](../use/manage-hyper-converged.md#prepare-your-windows-server-2016-cluster-for-windows-admin-center) |
+| Microsoft Hyper-V Server 2016 | Yes | Yes | N/A |
 | Windows Server 2012 R2 | Yes | Yes | N/A |
+| Microsoft Hyper-V Server 2012 R2 | Yes | Yes | N/A |
 | Windows Server 2012 | Yes | Yes | N/A |
 | Windows Server 2008 R2 | Yes, limited functionality | N/A | N/A |
 
