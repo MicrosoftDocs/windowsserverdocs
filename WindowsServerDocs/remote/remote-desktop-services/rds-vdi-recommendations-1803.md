@@ -73,7 +73,7 @@ With image-based VDI, there is a set of processes to perform in order to get upd
 > [!NOTE]  
 > Windows 10 performs a set of maintenance tasks automatically, on a periodic basis. There is a scheduled task that is set to run at 3:00 AM local time every day by default. This scheduled task performs a list of tasks, including Windows Update cleanup. You can view all the categories of maintenance that take place automatically with this PowerShell command:
 
-`Get-ScheduledTask \| ? {\$_.Settings.MaintenanceSettings}`
+`Get-ScheduledTask | ? {$_.Settings.MaintenanceSettings}`
 
 
 
@@ -506,7 +506,7 @@ The following list of tasks are those that perform optimizations or data collect
 
 You can get all of the current scheduled tasks, including descriptions, with the following PowerShell code:
 
-`Get-ScheduledTask \| Select-Object -Property TaskPath,TaskName,State,Description \|Export-CSV -Path C:\\Temp\\W10_1803_SchTasks.csv -NoTypeInformation`
+`Get-ScheduledTask | Select-Object -Property TaskPath,TaskName,State,Description |Export-CSV -Path C:\Temp\W10_1803_SchTasks.csv -NoTypeInformation`
 
 Valid **Scheduled Task Name** values include:
 
