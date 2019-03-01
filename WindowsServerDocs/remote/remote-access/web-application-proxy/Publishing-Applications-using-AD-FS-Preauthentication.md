@@ -381,7 +381,7 @@ This procedure describes how to publish an application for OAuth2. This type of 
   
 -   Verified that a certificate on the Web Application Proxy server is suitable for the application you want to publish.  
   
-#### To publish and OAuth2 app  
+#### To publish an OAuth2 app  
   
 1.  On the Web Application Proxy server, in the Remote Access Management console, in the **Navigation** pane, click **Web Application Proxy**, and then in the **Tasks** pane, click **Publish**.  
   

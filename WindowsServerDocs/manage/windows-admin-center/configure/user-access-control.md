@@ -44,11 +44,11 @@ On the **Administrators** tab you can control who can access Windows Admin Cente
 
 ## Azure Active Directory
 
-If your organization uses Azure Active Directory (Azure AD), you can choose to add an additional layer of security to Windows Admin Center by requiring Azure AD authentication to access the gateway. In order to access Windows Admin Center, users must also be a member of the local Users group on the gateway server (even if Azure AD authentication is used). When you use Azure AD, you'll manage user and administrator access permissions from the Azure Portal, rather than from within the Windows Admin Center UI.
+If your organization uses Azure Active Directory (Azure AD), you can choose to add an _additional_ layer of security to Windows Admin Center by requiring Azure AD authentication to access the gateway. In order to access Windows Admin Center, users must also be a member of the local Users group on the gateway server (even if Azure AD authentication is used). When you use Azure AD, you'll manage user and administrator access permissions from the Azure Portal, rather than from within the Windows Admin Center UI.
 
-Note that Azure AD authentication does not replace the existing requirement that users be a member of the Local users (or local administrators) group on the server where Windows Admin Center is installed.
+Note that Azure AD authentication does *not* replace the existing requirement that users be a member of the local Users (or local Administrators) group on the server where Windows Admin Center is installed.
 
-When Azure AD authentication is enabled, users accessing Windows Admin Center will receive a prompt from the browser for credentials to access the machine on which Windows Admin Center is installed. Here users will need to enter credentials that are a memeber the Local users or Local administrators group of the Windows Admin Center gateway machine. Users will then get the additional Azure Active Directory authentication prompt, which requires the credentials of an Azure account that has been granted access in the Azure AD application in Azure. 
+When Azure AD authentication is enabled, users accessing Windows Admin Center will receive a prompt from the browser for credentials to access the machine on which Windows Admin Center is installed. Here, users will need to enter credentials that are a member of the local Users or local Administrators group of the Windows Admin Center gateway machine. Users will then get the additional Azure Active Directory authentication prompt, which requires the credentials of an Azure AD account that has been granted access in the Azure AD application in Azure. Users with Administrator rights on the gateway machine won't be prompted for the Azure AD authentication.
 
 ### Configuring Azure Active Directory authentication for Windows Admin Center Preview
 
@@ -191,12 +191,12 @@ Invoke-RestMethod -Uri "https://localhost:6516/api/nodes/all/features/jea/endpoi
 When you expand the zip archive, you'll see the following folder structure:
 - InstallJeaFeatures.ps1
 - JustEnoughAdministration (directory)
+- Microsoft.SME.Jea (directory)
 - Modules (directory)
     - Microsoft.SME.\* (directories)
-    - WindowsAdminCenter.Jea (directory)
 
 To configure support for role-based access control on a node, you need to perform the following actions:
-1.  Copy the JustEnoughAdministration, Microsoft.SME.\*, and WindowsAdminCenter.Jea modules to the PowerShell module directory on the target machine. Typically, this is located at `C:\Program Files\WindowsPowerShell\Modules`.
+1.  Copy the JustEnoughAdministration, Microsoft.SME.\*, and Microsoft.SME.Jea modules to the PowerShell module directory on the target machine. Typically, this is located at `C:\Program Files\WindowsPowerShell\Modules`.
 2.  Update **InstallJeaFeature.ps1** file to match your desired configuration for the RBAC endpoint.
 3.  Run InstallJeaFeature.ps1 to compile the DSC resource.
 4.  Deploy your DSC configuration to all of your machines to apply the configuration.
