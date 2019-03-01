@@ -218,7 +218,7 @@ You will now create a normal failover cluster. After configuration, validation, 
 
 15. **(Optional)** Configure VM resiliency so that guests do not pause for long during node failures. Instead, they failover to the new replication source storage within 10 seconds.  
 
-    ```  
+    ```PowerShell  
     (Get-Cluster).ResiliencyDefaultPeriod=10  
     ```  
 
@@ -229,7 +229,7 @@ You will now create a normal failover cluster. After configuration, validation, 
 
 1.  Test the proposed cluster and analyze the results to ensure you can continue:  
 
-    ```  
+    ```PowerShell  
     Test-Cluster SR-SRV01, SR-SRV02, SR-SRV03, SR-SRV04  
     ```  
 
@@ -237,14 +237,14 @@ You will now create a normal failover cluster. After configuration, validation, 
     >  You should expect storage errors from cluster validation, due to the use of asymmetric storage.  
 
 2.  Create the Hyper-V compute cluster (you must specify your own static IP address the cluster will use). Ensure that the cluster name is 15 characters or fewer.  If the nodes reside in different subnets, than an IP Address for the additional site must be created using the “OR” dependency. More information can be found at [Configuring IP Addresses and Dependencies for Multi-Subnet Clusters – Part III](https://blogs.msdn.microsoft.com/clustering/2011/08/31/configuring-ip-addresses-and-dependencies-for-multi-subnet-clusters-part-iii/).
-```
-New-ClusterNew-Cluster -Name SR-SRVCLUS -Node SR-SRV01, SR-SRV02, SR-SRV03, SR-SRV04 -StaticAddress <your IP here>  
+```PowerShell  
+New-Cluster -Name SR-SRVCLUS -Node SR-SRV01, SR-SRV02, SR-SRV03, SR-SRV04 -StaticAddress <your IP here>  
 Add-ClusterResource -Name NewIPAddress -ResourceType “IP Address” -Group “Cluster Group”
 Set-ClusterResourceDependency -Resource “Cluster Name” -Dependency “[Cluster IP Address] or [NewIPAddress]”
 ```  
 3.  Configure a File Share Witness or Cloud (Azure) witness in the cluster that points to a share hosted on the domain controller or some other independent server. For example:  
 
-    ```  
+    ```PowerShell  
     Set-ClusterQuorum -FileShareWitness \\someserver\someshare  
     ```  
 
@@ -284,7 +284,7 @@ Set-ClusterResourceDependency -Resource “Cluster Name” -Dependency “[Clust
 
 10. **(Optional)** Configure VM resiliency so that guests do not pause for long periods during node failures. Instead, they failover to the new replication source storage within 10 seconds.  
 
-    ```  
+    ```PowerShell  
     (Get-Cluster).ResiliencyDefaultPeriod=10  
     ```  
 
@@ -341,7 +341,7 @@ You will now create a normal failover cluster. After configuration, validation, 
 
 15.  Configure stretch cluster site awareness so that servers SR-SRV01 and SR-SRV02 are in site Redmond, SR-SRV03 and SR-SRV04 are in site Bellevue, and Redmond is preferred for node ownership of the source storage and VMs:  
 
-    ```PowerShell
+    ```PowerShell  
     New-ClusterFaultDomain -Name Seattle -Type Site -Description "Primary" -Location "Seattle Datacenter"  
 
     New-ClusterFaultDomain -Name Bellevue -Type Site -Description "Secondary" -Location "Bellevue Datacenter"  
@@ -352,7 +352,7 @@ You will now create a normal failover cluster. After configuration, validation, 
     Set-ClusterFaultDomain -Name sr-srv04 -Parent Bellevue  
 
     (Get-Cluster).PreferredSite="Seattle"  
-    ```
+    ```  
 
        >[!NOTE]
        > There is no option to configure site awareness using Failover Cluster Manager in Windows Server 2016.  
@@ -395,12 +395,14 @@ You will now create a normal failover cluster. After configuration, validation, 
 
 6.  Configure a File Server role. For example:   
 
+        ```PowerShell  
         Get-ClusterResource  
         Add-ClusterFileServerRole -Name SR-CLU-FS2 -Storage "Cluster Disk 4"  
 
         MD e:\share01  
 
         New-SmbShare -Name Share01 -Path f:\share01 -ContinuouslyAvailable $false  
+        ```
 
 7. Configure stretch cluster site awareness so that servers SR-SRV01 and SR-SRV02 are in site Redmond, SR-SRV03 and SR-SRV04 are in site Bellevue, and Redmond is preferred for node ownership of the source storage and virtual machines:  
 
@@ -560,7 +562,6 @@ If replicating a physical disk resource (PDR) workload like File Server for gene
 
         ```PowerShell  
         Get-WinEvent -ProviderName Microsoft-Windows-StorageReplica -max 20  
-
         ```  
 
     2.  On the destination server, run the following command to see the Storage Replica events that show creation of the partnership. This event states the number of copied bytes and the time taken. Example:  

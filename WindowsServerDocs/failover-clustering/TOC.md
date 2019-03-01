@@ -21,6 +21,7 @@
 ### [Deploy a Cloud Witness](deploy-cloud-witness.md)
 ### [Deploy a file share witness](file-share-witness.md)
 ### [Cluster operating system rolling upgrades](cluster-operating-system-rolling-upgrade.md)
+### [Upgrading a failover cluster on the same hardware](upgrade-option-same-hardware.md)
 ## Manage
 ### [Cluster-Aware Updating](cluster-aware-updating.md)
 #### [Requirements and best practices](cluster-aware-updating-requirements.md)

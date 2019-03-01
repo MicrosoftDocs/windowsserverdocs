@@ -6,7 +6,7 @@ ms.manager: dongill
 ms.technology: storage-spaces
 ms.topic: article
 author: cosmosdarwin
-ms.date: 01/14/2019
+ms.date: 02/11/2019
 ms.assetid: 8bd0d09a-0421-40a4-b752-40ecb5350ffd
 description: An overview of Storage Spaces Direct, a feature of Windows Server that enables you to cluster servers with internal storage into a software-defined storage solution.
 ms.localizationpriority: medium
@@ -100,7 +100,7 @@ For other applications of Storage Spaces, such as Shared SAS clusters and stand-
 
 **Storage Spaces Direct at Microsoft Ignite 2017 (1 hour)**
 
-[Watch on YouTube](https://www.youtube.com/watch?v=5kaUiW3qo30)
+[Watch on YouTube](https://www.youtube.com/watch?v=YDr2sqNB-3c)
 
 **Launch Event at Microsoft Ignite 2016 (1 hour)**
 
