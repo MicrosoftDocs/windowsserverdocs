@@ -124,4 +124,5 @@ You can either synchronize your WSUS server manually or specify a time for it to
 
 2.  In the **Overview** pane, under **Synchronization Status**, click **Synchronize now**.
 
-
+> [!NOTE]
+> The synchronization is initiated by the downstream server.
