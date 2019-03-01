@@ -481,8 +481,7 @@ Note that a lot of services that might seem to be good candidates to disable are
 |-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | CDPUserService                                                                                                                                | This user service is used for Connected Devices Platform scenarios                                                                       | NOTE: This is a per-user service, and as such, the *template service* must be disabled.                                                          |
 | Connected User Experiences and Telemetry                                                                                                                      | Enables features that support in-application and connected user experiences. Additionally, this service manages the event-driven collection and transmission of diagnostic and usage information (used to improve the experience and quality of the Windows Platform) when the diagnostics and usage privacy option settings are enabled under Feedback and Diagnostics. | Consider disabling if on disconnected network                                                                      |
-| Contact Data                                                                                                                                  | Indexes contact data for fast contact searching. If you stop or disable this service, contacts might be missing from your search results.                                                                | (PimIndexMaintenanceSvc)                                                                           |
-|                                                                                                                               |                                                                                          | NOTE: This is a per-user service, and as such, the *template service* must be disabled.                                                          |
+| Contact Data                                                                                                                                  | Indexes contact data for fast contact searching. If you stop or disable this service, contacts might be missing from your search results.                                                                | (PimIndexMaintenanceSvc) NOTE: This is a per-user service, and as such, the *template service* must be disabled.              |
 | Diagnostic Policy Service                                                                                                                     | Enables problem detection, troubleshooting and resolution for Windows components. If this service is stopped, diagnostics will no longer function.                                                       |                                                                                    |
 | Downloaded Maps Manager                                                                                                                       | Windows service for application access to downloaded maps. This service is started on-demand by application accessing downloaded maps. Disabling this service will prevent apps from accessing maps.                                                     |                                                                                    |
 | Geolocation Service                                                                                                                           | Monitors the current location of the system and manages geofences                                                                        |                                                                                    |
@@ -495,7 +494,9 @@ Note that a lot of services that might seem to be good candidates to disable are
 | Windows Media Player Network Sharing Service                                                                                                                  | Shares Windows Media Player libraries to other networked players and media devices using Universal Plug and Play                                                                         | Not needed unless customers are sharing WMP libraries on the network.                                                              |
 | Windows Mobile Hotspot Service                                                                                                                                | Provides the ability to share a cellular data connection with another device.                                                                            |                                                                                    |
 | Windows Search                                                                                                                                | Provides content indexing, property caching, and search results for files, e-mail, and other content.                                                                    | Probably not needed especially with non-persistent VDI                                                             |
-| Per-user services in Windows <https://docs.microsoft.com/en-us/windows/application-management/per-user-services-in-windows> Per-user services are services that are created when a user signs into Windows or Windows Server and are stopped and deleted when that user signs out. These services run in the security context of the user account - this provides better resource management than the previous approach of running these kinds of services in Explorer, associated with a preconfigured account, or as tasks. |                                                                                          |                                                                                    |
+
+#### Per-user services in Windows
+[Per-user services](https://docs.microsoft.com/windows/application-management/per-user-services-in-windows) are services that are created when a user signs into Windows or Windows Server and are stopped and deleted when that user signs out. These services run in the security context of the user account - this provides better resource management than the previous approach of running these kinds of services in Explorer, associated with a preconfigured account, or as tasks. 
 
 ### Scheduled tasks
 
@@ -507,11 +508,63 @@ You can get all of the current scheduled tasks, including descriptions, with the
 
 `Get-ScheduledTask \| Select-Object -Property TaskPath,TaskName,State,Description \|Export-CSV -Path C:\\Temp\\W10_1803_SchTasks.csv -NoTypeInformation`
 
-NOTE:
+Valid **Scheduled Task Name** values include:
 
-| **Scheduled Task Name**                                                                                                                                                                                                                                           |
-|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| OneDrive Standalone Update Task v2 Microsoft Compatibility Appraiser ProgramDataUpdater StartupAppTask CleanupTemporaryState Proxy UninstallDeviceTask ProactiveScan Consolidator UsbCeip Data Integrity Scan Data Integrity Scan for Crash Recovery ScheduledDefrag SilentCleanup Microsoft-Windows-DiskDiagnosticDataCollector Diagnostics StorageSense DmClient DmClientOnScenarioDownload File History (maintenance mode) ScanForUpdates ScanForUpdatesAsUser SmartRetry Notifications WindowsActionDialog WinSAT Cellular MapsToastTask ProcessMemoryDiagnosticEvents RunFullMemoryDiagnostic MNO Metadata Parser LPRemove GatherNetworkInfo WiFiTask Sqm-Tasks AnalyzeSystem MobilityManager VerifyWinRE RegIdleBackup FamilySafetyMonitor FamilySafetyRefreshTask IndexerAutomaticMaintenance SpaceAgentTask SpaceManagerTask HeadsetButtonPress SpeechModelDownloadTask ResPriStaticDbSync WsSwapAssessmentTask SR SynchronizeTimeZone Usb-Notifications QueueReporting UpdateLibrary Scheduled Start sih XblGameSaveTask |
+- OneDrive Standalone Update Task v2
+- Microsoft Compatibility Appraiser
+- ProgramDataUpdater
+- StartupAppTask
+- CleanupTemporaryState
+- Proxy
+- UninstallDeviceTask
+- ProactiveScan
+- Consolidator
+- UsbCeip
+- Data Integrity Scan
+- Data Integrity Scan for Crash Recovery
+- ScheduledDefrag
+- SilentCleanup
+- Microsoft-Windows-DiskDiagnosticDataCollector
+- Diagnostics
+- StorageSense
+- DmClient
+- DmClientOnScenarioDownload
+- File History (maintenance mode)
+- ScanForUpdates
+- ScanForUpdatesAsUser
+- SmartRetry
+- Notifications
+- WindowsActionDialog
+- WinSAT Cellular
+- MapsToastTask
+- ProcessMemoryDiagnosticEvents
+- RunFullMemoryDiagnostic
+- MNO Metadata Parser
+- LPRemove
+- GatherNetworkInfo
+- WiFiTask
+- Sqm-Tasks
+- AnalyzeSystem
+- MobilityManager
+- VerifyWinRE
+- RegIdleBackup
+- FamilySafetyMonitor
+- FamilySafetyRefreshTask
+- IndexerAutomaticMaintenance
+- SpaceAgentTask
+- SpaceManagerTask
+- HeadsetButtonPress
+- SpeechModelDownloadTask
+- ResPriStaticDbSync
+- WsSwapAssessmentTask
+- SR
+- SynchronizeTimeZone
+- Usb-Notifications
+- QueueReporting
+- UpdateLibrary
+- Scheduled Start
+- sih
+- XblGameSaveTask
 
 ### Apply Windows and other updates
 
