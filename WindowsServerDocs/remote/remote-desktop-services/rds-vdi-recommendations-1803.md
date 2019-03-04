@@ -155,10 +155,9 @@ One of the goals of a VDI image is to be as small as possible. One way to reduce
 
 Connectivity and timing are everything when it comes to UWP app cleanup. If you deploy your base image to either a device with no network connectivity, Windows 10 cannot connect to the Microsoft Store and download apps and try to install them while you are trying to uninstall them.
 
-If you modify your base .WIM that you use to install Windows 10 and remove unneeded UWP apps from the .WIM before you install, the apps will not be installed to begin with and your profile creation times should be shorter. There is a [link later in this section] with information on how to remove UWP apps from your installation .WIM file.
+If you modify your base .WIM that you use to install Windows 10 and remove unneeded UWP apps from the .WIM before you install, the apps will not be installed to begin with and your profile creation times should be shorter. Later in this section, you'll find information on how to remove UWP apps from your installation .WIM file.
 
-A good strategy for VDI is to provision the apps you want in the base image, then limit or block access to the Microsoft Store afterward. Store apps are updated periodically in the background on normal computers. The UWP apps can be updated during the maintenance window when other updates are applied. See [Universal Windows Platform
-Apps](https://docs.citrix.com/en-us/xenapp-and-xendesktop/current-release/manage-deployment/applications-manage/universal-apps.html) for more information  {GENERALLY WE DO NOT LINK OUT TO SITES NOT OWNED OR MAINTAINED BY MS}
+A good strategy for VDI is to provision the apps you want in the base image, then limit or block access to the Microsoft Store afterward. Store apps are updated periodically in the background on normal computers. The UWP apps can be updated during the maintenance window when other updates are applied. 
 
 #### Delete the payload of UWP apps
 
@@ -166,9 +165,21 @@ UWP apps that are not needed are still in the file system consuming a small amou
 
 In fact, if you remove those from the installation .WIM file using the links provided later in this section, you should be able to start from the beginning with a very slim list of UWP apps.
 
-Run the following command to enumerate provisioned UWP apps from a running operating system, as in this truncated example output from PowerShell:
+Run the following command to enumerate provisioned UWP apps from a running Windows 10 operating system, as in this truncated example output from PowerShell:
 
-`Get-AppxProvisionedPackage -Online DisplayName : Microsoft.3DBuilder Version : 13.0.10349.0 Architecture : neutral ResourceId : \~ PackageName : Microsoft.3DBuilder_13.0.10349.0_neutral_\~_8wekyb3d8bbwe Regions : DisplayName : Microsoft.Appconnector Version : 2015.707.550.0 Architecture : neutral ResourceId : \~ PackageName : Microsoft.Appconnector_2015.707.550.0_neutral_\~_8wekyb3d8bbwe Regions : ... `
+```azurecli
+
+    Get-AppxProvisionedPackage -Online 
+    DisplayName : Microsoft.3DBuilder
+    Version : 13.0.10349.0  
+    Architecture : neutral
+    ResourceId : \~ 
+    PackageName : Microsoft.3DBuilder_13.0.10349.0_neutral_\~_8wekyb3d8bbwe 
+    Regions : 
+    DisplayName : Microsoft.Appconnector Version : 2015.707.550.0 Architecture : neutral
+    ResourceId : \~ 
+    PackageName : Microsoft.Appconnector_2015.707.550.0_neutral_\~_8wekyb3d8bbwe Regions : ... 
+```
 
 
 UWP apps that are provisioned to a system can be removed during operating system installation as part of a task sequence, or later after the operating system is installed. This might be the
@@ -193,12 +204,10 @@ Each UWP app should be evaluated for applicability in each unique environment. Y
 
 Also, if not using the Photos app, consider removing it. Starting with Windows 10, version 1803, there is a default setting in the Photos app called **Show a notification when new albums are available**.
 
-[//]: # ![](media/a39405a0b57ef3c25fc61c68a9f1a2d0.png)
 
 
 In new installations on a virtual machine, this app uses approximately 145 MB of memory, specifically private working set memory. 
 
-[//]: # ![](media/20ae1c6530c012190a7d65e4da66194c.png)
 
 Changing the **Show a notification when new albums are available** setting for all users is not practical at this time.
 
@@ -444,7 +453,6 @@ Baseline](https://go.microsoft.com/fwlink/?linkid=828887).
 | **File Explorer**                                   | Turn off display of recent search entries in the File Explorer search box                 |                      | **Enabled**                                                                                                                                                                                   |
 | **File Explorer**                                   | Turn off the caching of thumbnails in hidden thumbs.db file                               |                      | **Enabled**                                                                                                                                                                                   |
 
-[//]: # ![](media/ef33d15925396c7d4bd1ee4dd4dd2b58.png)
 
 
 
@@ -574,7 +582,6 @@ Whether from Microsoft Update, or from your internal resources, apply available 
 
 Windows is configured, by default, to collect and save limited diagnostic data. The purpose is to enable diagnostics, or to record data in the event that further troubleshooting is necessary. You can find automatic system traces by starting the Computer Management app, and then expanding **System Tools**, **Performance**, **Data Collector Sets**, and then selecting **Event Trace Sessions**.
 
-[//]: # ![](media/b7446d0e09cae2106953222cdba0da52.png)
 
 Some of the traces displayed under **Event Trace Sessions** and **Startup Event Trace Sessions** cannot and should not be stopped. Others, such as the **WiFiSession** trace can be stopped. To stop a running trace under **Event Trace Sessions** right-click the trace and then select **Stop**. To prevent the traces from starting automatically on startup, follow these steps:
 
@@ -683,9 +690,6 @@ Disk cleanup can be especially helpful with master image VDI implementations. Af
 > [!NOTE]  
 > The Disk Cleanup wizard is no longer being developed. Windows will use other methods to provide disk cleanup functions.
 
-[//]: # ![](media/36896b772bd84b2fb43578c35da28696.png)
-
-[//]: # ![](media/7d86ed7605284ead5b13b85f6933b6f3.png)
 
 
 Here are suggestions for various disk cleanup tasks. You should test these before implementing any of them:
