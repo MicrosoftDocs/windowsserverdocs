@@ -142,6 +142,10 @@ If you are using SQL Server for your AD FS configuration database, size the SQL 
   
 -   Any standard domain account can be used as a service account for AD FS. Group Managed Service accounts are also supported. The permissions required at runtime will be added automatically when you configure AD FS.
 
+-   The User Rights Assignment required for the AD service account is 'Log on as a Service'
+
+-   The User Rights Assignments required for the 'NT Service\adfssrv' and 'NT Service\drs' are 'Generate Security Audits' and 'Log on as a Service'.
+
 -   Group Managed service accounts require at least one domain controller running Windows Server 2012 or higher.  The GMSA must live under the default 'CN=Managed Service Accounts' container.  
 
 -   For Kerberos authentication, the service principal name ‘`HOST/<adfs\_service\_name>`’ must be registered on the AD FS service account. By default, AD FS will configure this when creating a new AD FS farm.  If this fails, such as in the case of a collision or insufficient permissions, you'll see a warning and you should add it manually.  
