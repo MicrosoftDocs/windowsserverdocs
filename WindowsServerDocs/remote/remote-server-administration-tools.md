@@ -81,7 +81,7 @@ When installing on Windows 10 April 2018 Update (1803) or earlier, for managing 
 #### <a name="BKMK_installthresh"></a>Download the RSAT package to install Remote Server Administration Tools for Windows 10
 
 1.  Download the Remote Server Administration Tools for Windows 10 package from the [Microsoft Download Center](https://go.microsoft.com/fwlink/?LinkID=404281). You can either run the installer from the Download Center website, or save the download package to a local computer or share.
-I
+
     > [!IMPORTANT]
     > You can only install Remote Server Administration Tools for Windows 10 on computers that are running Windows 10. Remote Server Administration Tools cannot be installed on computers that are running Windows RT 8.1 or other system-on-chip devices.
 
