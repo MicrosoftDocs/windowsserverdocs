@@ -17,9 +17,7 @@ ms.date: 10/16/2017
 
 # bitsadmin setaclflag
 
-
-
-Sets the access control list propagations flags.
+Sets the access control list (ACL) propagations flags for the job. The flags indicate that you want to maintain the owner and ACL information with the file being downloaded. For example, to maintain the owner and group with the file, set **Flags** to `OG`.
 
 ## Syntax
 
@@ -36,7 +34,7 @@ bitsadmin /SetAclFlags <Job> <Flags>
 
 ## Remarks
 
-The SetAclFlags command is used to maintain Owner and access control list information when a job is downloading data from a Windows (SMB) share.
+The SetAclFlags switch is used to maintain Owner and access control list information when a job is downloading data from a Windows (SMB) share.
 
 ## <a name="BKMK_examples"></a>Examples
 

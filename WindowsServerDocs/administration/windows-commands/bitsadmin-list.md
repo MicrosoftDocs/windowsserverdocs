@@ -32,7 +32,7 @@ bitsadmin /List [/allusers][/verbose]
 |Parameter|Description|
 |---------|-----------|
 |/Allusers|Optional—lists jobs for all users|
-|/Verbose|Optional—provides detail information for each job.|
+|/Verbose|Optional—provides detailed information for each job.|
 
 ## Remarks
 
