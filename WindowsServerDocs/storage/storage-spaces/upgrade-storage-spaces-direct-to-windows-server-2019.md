@@ -178,7 +178,7 @@ servers in the cluster, as well as all VMs, will remain running.
     PowerShell cmdlet `Update-ClusterFunctionalLevel` to update the cluster
     functional level.
 
-    >   [NOTE]
+    >   [!NOTE]
     >   We recommend updating the cluster functional level as soon as possible, though technically you have up to four weeks to do so.
 
 1.  After the cluster functional level has been updated, use the
@@ -294,7 +294,7 @@ servers in the cluster, as well as all VMs, will remain running.
 3.  After all servers have been upgraded to Windows Server 2019, use the
     `Update-ClusterFunctionalLevel` to update the cluster functional level.
 
-    >   [NOTE]
+    >   [!NOTE]
     >   We recommend updating the cluster functional level as soon as possible, though technically you have up to four weeks to do so.
 
 1.  After the cluster functional level has been updated, use the
@@ -387,7 +387,7 @@ servers in the cluster remain running.
 2.  After all servers have been upgraded to Windows Server 2019, use the
     `Update-ClusterFunctionalLevel` to update the cluster functional level.
 
-    >   [NOTE]
+    >   [!NOTE]
     >   We recommend updating the cluster functional level as soon as possible, though technically you have up to four weeks to do so.
 
 1.  After the cluster functional level has been updated, use the
@@ -488,7 +488,7 @@ servers in the cluster remain running.
 2.  After all servers have been upgraded to Windows Server 2019, use the
     `Update-ClusterFunctionalLevel` to update the cluster functional level.
 
-    >   [NOTE]
+    >   [!NOTE]
     >   We recommend updating the cluster functional level as soon as possible, though technically you have up to four weeks to do so.
 
 1.  After the cluster functional level has been updated, use the
