@@ -20,6 +20,12 @@ We regularly update the [Remote Desktop client for macOS](remote-desktop-mac.md)
 
 If you encounter any issues, you can always contact us via **Help > Report an Issue**.
 
+## Updates for version 10.2.9
+*Published date: 3/6/2019*
+
+- In this release we fixed an RD gateway connectivity issue that can occur when server redirection takes place.
+- We also addressed an RD gateway regression caused by the 10.2.8 update.
+
 ## Updates for version 10.2.8
 *Published date: 3/1/2019*
 
