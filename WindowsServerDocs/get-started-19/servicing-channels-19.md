@@ -1,6 +1,6 @@
 ---
 title: Servicing Channels
-description: "Explanation of Windows Server 2019 service channels: LTSC and SAC"
+description: "Explanation of Windows Server service channels: LTSC and SAC"
 ms.prod: windows-server-threshold
 ms.technology: server-general
 ms.topic: article
@@ -9,9 +9,9 @@ ms.author: coreyp
 ms.localizationpriority: high
 ---
 
-# Windows Server 2019 servicing channels: LTSC and SAC
+# Windows Server servicing channels: LTSC and SAC
 
->Applies To: Windows Server 2019
+>Applies To: Windows Server 2019, Windows Server 2016
 
 
 **There are two primary release channels available to Windows Server customers, the Long-Term Servicing Channel and the Semi-Annual Channel.** 
