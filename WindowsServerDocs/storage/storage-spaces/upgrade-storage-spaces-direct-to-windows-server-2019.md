@@ -480,11 +480,8 @@ servers in the cluster remain running.
 
 3.  Perform the following steps on one cluster server at a time:
 
-    1.  Use Hyper-V VM live migration to move running VMs off the server you’re
-        about to upgrade.
-
     2.  Pause the cluster server using the following PowerShell command—note that some internal groups are hidden.  
-    We recommend this step to be cautious—if you didn’t already live migrate VMs off the server this cmdlet will do that for you, so you could skip the previous step if you prefer.
+    We recommend this step to be cautious.
 
          ```PowerShell
         Suspend-ClusterNode -Drain
