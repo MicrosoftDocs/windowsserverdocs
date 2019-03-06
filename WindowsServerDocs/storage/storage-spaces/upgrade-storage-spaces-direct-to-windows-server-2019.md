@@ -136,7 +136,9 @@ servers in the cluster, as well as all VMs, will remain running.
         PowerShell commands:
 
         ```PowerShell
-        Get-StorageFaultDomain -type StorageScaleUnit | Where FriendlyName -Eq <ServerName> | Enable-StorageMaintenanceMode
+        Get-StorageFaultDomain -type StorageScaleUnit | 
+        Where FriendlyName -Eq <ServerName> | 
+        Enable-StorageMaintenanceMode
         ```
 
 2.  Run the `Get-PhysicalDisk` cmdlet to check that that the
@@ -157,7 +159,9 @@ servers in the cluster, as well as all VMs, will remain running.
     PowerShell command:
 
     ```PowerShell
-    Get-StorageFaultDomain -type StorageScaleUnit | Where FriendlyName -Eq <ServerName> | Disable-StorageMaintenanceMode
+    Get-StorageFaultDomain -type StorageScaleUnit | 
+    Where FriendlyName -Eq <ServerName> | 
+    Disable-StorageMaintenanceMode
     ```
 
 1.  Resume the server by using the following PowerShell command:
@@ -244,7 +248,9 @@ servers in the cluster, as well as all VMs, will remain running.
         PowerShell commands:
 
         ```PowerShell
-        Get-StorageFaultDomain -type StorageScaleUnit | Where FriendlyName -Eq <ServerName> | Enable-StorageMaintenanceMode
+        Get-StorageFaultDomain -type StorageScaleUnit | 
+        Where FriendlyName -Eq <ServerName> | 
+        Enable-StorageMaintenanceMode
         ```
 
 2.  Run the `Get-PhysicalDisk` cmdlet to check that that the
@@ -280,7 +286,9 @@ servers in the cluster, as well as all VMs, will remain running.
     PowerShell command:
 
     ```PowerShell
-    Get-StorageFaultDomain -type StorageScaleUnit | Where FriendlyName -Eq <ServerName> | Disable-StorageMaintenanceMode
+    Get-StorageFaultDomain -type StorageScaleUnit | 
+    Where FriendlyName -Eq <ServerName> | 
+    Disable-StorageMaintenanceMode
     ```
 
 1.  Wait for storage repair jobs to finish – the `Get-StorageJob` cmdlet will
@@ -310,7 +318,8 @@ servers in the cluster, as well as all VMs, will remain running.
     re-enable VM Live verification checks:
 
     ```PowerShell
-    Get-ClusterResourceType -Cluster {clusterName} -Name "Virtual Machine" | Set-ClusterParameter SkipMigrationDestinationCheck -Value 0
+    Get-ClusterResourceType -Cluster {clusterName} -Name "Virtual Machine" | 
+    Set-ClusterParameter SkipMigrationDestinationCheck -Value 0
     ```
 
 1.  Verify that the upgraded cluster functions as expected.  
@@ -348,7 +357,9 @@ servers in the cluster remain running.
         PowerShell commands:
 
         ```PowerShell
-        Get-StorageFaultDomain -type StorageScaleUnit | Where FriendlyName -Eq <ServerName> | Enable-StorageMaintenanceMode
+        Get-StorageFaultDomain -type StorageScaleUnit | 
+        Where FriendlyName -Eq <ServerName> | 
+        Enable-StorageMaintenanceMode
         ```
 
 4.  Run the `Get-PhysicalDisk` cmdlet to check that that the
@@ -369,7 +380,9 @@ servers in the cluster remain running.
     PowerShell command:
 
     ```PowerShell
-    Get-StorageFaultDomain -type StorageScaleUnit | Where FriendlyName -Eq <ServerName> | Disable-StorageMaintenanceMode
+    Get-StorageFaultDomain -type StorageScaleUnit | 
+    Where FriendlyName -Eq <ServerName> | 
+    Disable-StorageMaintenanceMode
     ```
 
 1.  Resume the server by using the following PowerShell command:
@@ -423,7 +436,7 @@ servers in the cluster remain running.
     (Feb 19th, 2019). The build number (see `ver` command) should be
     14393.2828 or higher.
 
-2.  Stop the VMs running on the cluster
+2.  Stop the VMs running on the cluster.
 
 3.  Perform the following steps on one cluster server at a time:
 
@@ -440,7 +453,9 @@ servers in the cluster remain running.
         PowerShell commands:
 
         ```PowerShell
-        Get-StorageFaultDomain -type StorageScaleUnit | Where FriendlyName -Eq <ServerName> | Enable-StorageMaintenanceMode
+        Get-StorageFaultDomain -type StorageScaleUnit | 
+        Where FriendlyName -Eq <ServerName> | 
+        Enable-StorageMaintenanceMode
         ```
 
 1.  Run the `Get-PhysicalDisk` cmdlet to check that that the
@@ -476,7 +491,9 @@ servers in the cluster remain running.
     PowerShell command:
 
     ```PowerShell
-    Get-StorageFaultDomain -type StorageScaleUnit | Where FriendlyName -Eq <ServerName> | Disable-StorageMaintenanceMode
+    Get-StorageFaultDomain -type StorageScaleUnit | 
+    Where FriendlyName -Eq <ServerName> | 
+    Disable-StorageMaintenanceMode
     ```
 
 1.  Wait for storage repair jobs to finish – the `Get-StorageJob` cmdlet will
