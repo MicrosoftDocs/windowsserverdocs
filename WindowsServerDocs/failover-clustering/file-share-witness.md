@@ -79,7 +79,7 @@ The steps for creating a file share witness using a USB device on this particula
 5. Once the share has been created, creating the file share witness for Cluster is done with PowerShell.
 
    ```PowerShell
-   Set-ClusterQuorum -FileShareWitness \\readyshare\Witness -Credential ($Get-Credential)
+   Set-ClusterQuorum -FileShareWitness \\readyshare\Witness -Credential (Get-Credential)
    ```
 
    This displays a dialog box to enter the local account on the device.
