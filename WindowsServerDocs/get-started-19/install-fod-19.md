@@ -27,7 +27,7 @@ Demand](https://docs.microsoft.com/windows-hardware/manufacture/desktop/features
 
 ## Why install the App Compatibility FOD? 
 
-App Compatibility, a Feature on Demand for Server Core, significantly improves the app compatibility of the Windows Server Core installation option by including a subset of binaries and packages from Windows Server with Desktop Experience, without adding the Windows Server Desktop Experience graphical environment. This optional package is available on a separate ISO and can be added to Windows Server Core installations and images only.
+App Compatibility, a Feature on Demand for Server Core, significantly improves the app compatibility of the Windows Server Core installation option by including a subset of binaries and packages from Windows Server with Desktop Experience, without adding the Windows Server Desktop Experience graphical environment. This optional package is available on a separate ISO, or from Windows Update, but can only be added to Windows Server Core installations and images.
 
 The two primary values the App Compatibility FOD provides are:
 
@@ -71,13 +71,17 @@ Operating system components that are available as part of the Server Core App Co
  >[!NOTE] 
    > This procedure uses Deployment Image Servicing and Management (DISM.exe), a command-line tool. For more information about DISM commands, see [DISM Capabilities Package Servicing Command-Line Options](https://docs.microsoft.com/windows-hardware/manufacture/desktop/dism-capabilities-package-servicing-command-line-options).
 
+>[!NOTE] 
+   > The same FOD optional packages ISO can be used for either Windows Server 2019 Server Core installations, or Windows Server, version 1809, installations.
+
+>[!NOTE] 
+   > If your computer or virtual machine that is running Server Core is able to connect to Windows Update, steps 1 - 7 below can be skipped. But be sure to leave off /Source and /LimitAccess from the DISM command in step 8.
+
 1. Download the Server FOD optional packages ISO, and copy the ISO to a shared folder on your local network:
 
  - If you have a volume license you can download the Server FOD ISO image file from the same portal where the OS ISO image file is obtained: [Volume Licensing Service Center](https://www.microsoft.com/Licensing/servicecenter/default.aspx).
- - The Server FOD ISO image file is available on the [Microsoft Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-windows-server-2019) or on the [Visual Studio portal](https://visualstudio.microsoft.com) for subscribers.
+ - The Server FOD ISO image file is also available on the [Microsoft Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-windows-server-2019) or on the [Visual Studio portal](https://visualstudio.microsoft.com) for subscribers.
 
->[!NOTE] 
-   > The same FOD optional packages ISO can be used for either Windows Server 2019 Server Core installations, or Windows Server, version 1809, installations.
 
 2. Sign in as Administrator on the Server Core computer that is connected to your local network and that you want to add the FOD to.
 

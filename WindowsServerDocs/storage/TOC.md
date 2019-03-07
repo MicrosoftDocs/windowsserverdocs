@@ -128,6 +128,7 @@
 #### [Create volumes](storage-spaces/create-volumes.md)
 #### [Nested resiliency](storage-spaces/nested-resiliency.md)
 #### [Configure quorum](../failover-clustering/manage-cluster-quorum.md)
+#### [Upgrade a Storage Spaces Direct cluster to Windows Server 2019](storage-spaces/upgrade-storage-spaces-direct-to-windows-server-2019.md)
 ### Manage
 #### [Manage with Windows Admin Center](../manage/windows-admin-center/use/manage-hyper-converged.md)
 #### [Add servers or drives](storage-spaces/add-nodes.md)
