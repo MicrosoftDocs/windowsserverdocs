@@ -133,7 +133,7 @@ The office applications rely on information pushed by the directory administrato
 
 |Regkey to add|Regkey data name, type, and value|Windows 7/8|Windows 10|Description|
 |-----|-----|-----|-----|-----|
-|HKEY_CURRENT_USER\Software\Microsoft\Auth|DomainHint</br>REG_SZ</br>contoso.com|Required|Required|The value of this regkey is a verified custom domain name in the tenant of the organization. For example, Contoso corp can provide a value of Contoso.com in this regkey if Contoso.com is one of the verified custom domain names in the tenant Contoso.onmicrosoft.com.|
+|HKEY_CURRENT_USER\Software\Microsoft\AuthN|DomainHint</br>REG_SZ</br>contoso.com|Required|Required|The value of this regkey is a verified custom domain name in the tenant of the organization. For example, Contoso corp can provide a value of Contoso.com in this regkey if Contoso.com is one of the verified custom domain names in the tenant Contoso.onmicrosoft.com.|
 HKEY_CURRENT_USER\Software\Microsoft\Office\16.0\Common\Identity|EnableAlternateIdSupport</br>REG_DWORD</br>1|Required for Outlook 2016 ProPlus|Required for Outlook 2016 ProPlus|The value of this regkey can be 1 / 0 to indicate to Outlook application whether it should engage the improved alternate-id authentication logic.|
 HKEY_CURRENT_USER\SOFTWARE\Microsoft\Office\16.0\Common\Identity|DisableADALatopWAMOverride</br>REG_DWORD</br>1|Not applicable|Required.|This ensures that Office does not use WAM as alt-id is not supported by WAM.|
 HKEY_CURRENT_USER\SOFTWARE\Microsoft\Office\16.0\Common\Identity|DisableAADWAM</br>REG_DWORD</br>1|Not applicable|Required.|This ensures that Office does not use WAM as alt-id is not supported by WAM.|
