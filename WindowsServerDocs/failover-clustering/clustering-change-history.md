@@ -22,7 +22,7 @@ This topic lists new and updated topics in the [Failover Clustering](failover-cl
 
 |New or changed topic                                    |Description |
 |--------------------------------------------------------|------------|
-|[Cluster affinity](failover-clustering/cluster-affinity.md)| New     |
+|[Cluster affinity](cluster-affinity.md)| New     |
 
 ## February 2019
 
