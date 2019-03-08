@@ -11,7 +11,7 @@ ms.topic: article
 author: lizap
 manager: dongill
 ms.author: elizapo
-ms.date: 02/06/2019
+ms.date: 03/06/2019
 ms.localizationpriority: medium
 ---
 # What's new for the Remote Desktop client on macOS?
@@ -19,6 +19,21 @@ ms.localizationpriority: medium
 We regularly update the [Remote Desktop client for macOS](remote-desktop-mac.md), adding new features and fixing issues. Check out the latest updates below.
 
 If you encounter any issues, you can always contact us via **Help > Report an Issue**.
+
+## Updates for version 10.2.9
+*Published date: 3/6/2019*
+
+- In this release we fixed an RD gateway connectivity issue that can occur when server redirection takes place.
+- We also addressed an RD gateway regression caused by the 10.2.8 update.
+
+## Updates for version 10.2.8
+*Published date: 3/1/2019*
+
+- Resolved connectivity issues that surfaced when using an RD Gateway.
+- Fixed incorrect certificate warnings that were displayed when connecting.
+- Addressed some cases where the menu bar and dock would needlessly hide when launching remote apps.
+- Reworked the clipboard redirection code to address crashes and hangs that have been plaguing some users.
+- Fixed a bug that caused the Connection Center to needlessly scroll when launching a connection.
 
 ## Updates for version 10.2.7
 *Published date: 2/6/2019*
