@@ -27,7 +27,7 @@
 #### [Optimize Namespace Polling](dfs-namespaces/optimize-namespace-polling.md)
 #### [Enable Access-based Enumeration on a Namespace](dfs-namespaces/enable-access-based-enumeration-on-a-namespace.md)
 #### [Using Inherited Permissions with Access-based Enumeration](dfs-namespaces/using-inherited-permissions-with-access-based-enumeration.md)
-## DFS Replication
+## [DFS Replication](dfs-replication/dfsr-overview.md)
 ### [Migrate SYSVOL replication to DFS Replication](dfs-replication/migrate-sysvol-to-dfsr.md)
 ### [Use robocopy to preseed files for DFS replication](dfs-replication/preseed-dfsr-with-robocopy.md)
 ### [DFS Replication: Frequently Asked Questions (FAQ)](dfs-replication/dfsr-faq.md)
