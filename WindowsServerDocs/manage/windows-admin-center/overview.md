@@ -15,17 +15,32 @@ ms.prod: windows-server-threshold
 
 Welcome to Windows Admin Center!
 
-**Windows Admin Center** is an evolution of Windows Server in-box management tools; it’s a single pane of glass that consolidates all aspects of local and remote server management. As a locally deployed, browser-based management experience, an Internet connection and Azure aren’t required. Windows Admin Center gives you full control of all aspects of your deployment, including private networks that aren’t Internet-connected.
+**Windows Admin Center** (codenamed **Project Honolulu**) is an evolution of Windows Server in-box management tools; it’s a single pane of glass that consolidates all aspects of local and remote server management. As a locally deployed, browser-based management experience, an Internet connection and Azure aren’t required. Windows Admin Center gives you full control of all aspects of your deployment, including private networks that aren’t Internet-connected.
 
-> ## **Project Honolulu** is now [**Windows Admin Center**!](understand/windows-admin-center.md)
+## Introduction
+
+>[!VIDEO https://www.youtube.com/embed/PcQj6ZklmK0]
+
+![Windows Admin Center Infographic](media/WAC1809Poster_thumb.PNG)
+
+[Download the PDF](https://github.com/MicrosoftDocs/windowsserverdocs/raw/master/WindowsServerDocs/manage/windows-admin-center/media/WindowsAdminCenter1809Poster.pdf)
+
+## Quick start
+
+You can get Windows Admin Center up and running in your environment in minutes:
+
+1. [Download](https://aka.ms/windowsadmincenter)
+2. [Install](deploy/install.md)
+3. [Get started](use/get-started.md)
+
+## Contents at a glance
 
 <table>
     <tr></tr>
     <tr>
         <td style="vertical-align: top;">
-            <h2>Understand</h2>
+            <h3>Understand</h3>
             <ul>
-            <li><a href="#get-started">Get Started</a>
             <li><a href="understand/what-is.md">What is Windows Admin Center?</a>
             <li><a href="understand/faq.md">FAQ</a>
             <li><a href="understand/case-studies.md">Case studies</a>
@@ -34,7 +49,7 @@ Welcome to Windows Admin Center!
             </ul>
         </td>
         <td style="vertical-align: top;">
-            <h2>Plan</h2>
+            <h3>Plan</h3>
             <ul>
             <li><a href="plan/installation-options.md">What type of installation is right for you?</a>
             <li><a href="plan/user-access-options.md">User access options</a>
@@ -45,7 +60,7 @@ Welcome to Windows Admin Center!
     </tr>
     <tr>
         <td style="vertical-align: top;">
-            <h2>Deploy</h2>
+            <h3>Deploy</h3>
             <ul>
             <li><a href="deploy/prepare-environment.md">Prepare your environment</a>
             <li><a href="deploy/install.md">Install Windows Admin Center</a>
@@ -53,7 +68,7 @@ Welcome to Windows Admin Center!
          </ul>
         </td>
         <td style="vertical-align: top;">
-            <h2>Configure</h2>
+            <h3>Configure</h3>
             <ul>
             <li><a href="configure/settings.md">Windows Admin Center settings</a>
             <li><a href="configure/user-access-control.md">User access control and permissions</a>
@@ -65,7 +80,7 @@ Welcome to Windows Admin Center!
     </tr>
     <tr>
         <td style="vertical-align: top;">
-            <h2>Use</h2>
+            <h3>Use</h3>
             <ul>
             <li><a href="use/get-started.md">Launch & add connections</a>
             <li><a href="use/manage-servers.md">Manage servers</a>
@@ -79,7 +94,7 @@ Welcome to Windows Admin Center!
             </ul>
         </td>
         <td style="vertical-align: top;">
-            <h2>Extend</h2>
+            <h3>Extend</h3>
             <ul>
             <li><a href="extend/extensibility-overview.md">Overview of extensions</a>
             <li><a href="extend/understand-extensions.md">Understanding extensions</a>
@@ -92,23 +107,7 @@ Welcome to Windows Admin Center!
 
 </table>
 
-## Get Started
-
->[!VIDEO https://www.youtube.com/embed/PcQj6ZklmK0]
-
-You can get Windows Admin Center up and running in your environment in minutes:
-
-1. [Download Windows Admin Center](https://aka.ms/windowsadmincenter)
-2. [Install Windows Admin Center](deploy/install.md)
-3. [Get started with Windows Admin Center](use/get-started.md)
-
-## Windows Admin Center at a glance
-
-![Windows Admin Center Infographic](media/WAC1809Poster_thumb.PNG)
-
-[Download the PDF](https://github.com/MicrosoftDocs/windowsserverdocs/raw/master/WindowsServerDocs/manage/windows-admin-center/media/WindowsAdminCenter1809Poster.pdf)
-
-## Latest features
+## Release history
 
 Learn about our latest released features:
 
@@ -126,4 +125,8 @@ Learn about our latest released features:
 - Version [1711](https://cloudblogs.microsoft.com/windowsserver/2017/12/01/1711-update-to-project-honolulu-technical-preview-is-now-available/) added highly anticipated tools (Remote Desktop and PowerShell) along with other improvements.
 - Version [1709](https://cloudblogs.microsoft.com/windowsserver/2017/09/22/project-honolulu-technical-preview-is-now-available-for-download/) launched as our first public preview release.
 
-## Follow us &nbsp; <a target="_blank" class="mscom-link twitter-follow-link" title="Follow us on Twitter" aria-label="Follow us on Twitter" data-info="Twitter" href="https://twitter.com/servermgmt"><picture><source srcset="//img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/REOolR" media="(min-width:0)"><img srcset="//img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/REOolR" alt="Follow us on Twitter" src="//img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/REOolR"></picture></a>&nbsp; <a target="_blank" class="mscom-link blogs-follow-link" title="Follow us on Blogs" aria-label="Follow us on Blogs" data-info="Blogs" href="https://blogs.technet.microsoft.com/servermanagement/"><picture><source srcset="//img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/REOtyw" media="(min-width:0)"><img srcset="//img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/REOtyw" alt="Follow us on Blogs" src="//img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/REOtyw"></picture></a>
+## Stay updated
+
+<a target="_blank" class="mscom-link twitter-follow-link" title="Follow us on Twitter" aria-label="Follow us on Twitter" data-info="Twitter" href="https://twitter.com/servermgmt"><picture><source srcset="//img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/REOolR" media="(min-width:0)"><img srcset="//img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/REOolR" alt="Follow us on Twitter" src="//img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/REOolR"></picture></a>
+ | 
+<a target="_blank" class="mscom-link blogs-follow-link" title="Read our Blogs" aria-label="Visit our Blogs" data-info="Blogs" href="https://blogs.technet.microsoft.com/servermanagement/"><picture><source srcset="//img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/REOtyw" media="(min-width:0)"><img srcset="//img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/REOtyw" alt="Follow us on Blogs" src="//img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/REOtyw"></picture></a>

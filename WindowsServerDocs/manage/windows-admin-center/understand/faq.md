@@ -142,7 +142,7 @@ Our [launch page](https://aka.ms/WindowsAdminCenter) is the best starting point 
 
 ## What is the version history of Windows Admin Center?
 
-[View the version history here.](..\overview.md#latest-features)
+[View the version history here.](..\overview.md#release-history)
 
 ## I'm having an issue with Windows Admin Center, where can I get help?
 

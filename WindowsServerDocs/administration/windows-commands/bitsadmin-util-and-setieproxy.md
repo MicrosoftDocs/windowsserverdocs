@@ -24,7 +24,7 @@ Set proxy settings to use when transferring files using a service account.
 ## Syntax
 
 ```
-bitsadmin /Util /GetIEProxy <Account> <Usage>[/Conn <ConnectionName>]
+bitsadmin /Util /SetIEProxy <Account> <Usage>[/Conn <ConnectionName>]
 ```
 
 ## Parameters
