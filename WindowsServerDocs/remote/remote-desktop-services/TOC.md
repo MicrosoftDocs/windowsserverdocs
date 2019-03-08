@@ -68,16 +68,16 @@
 ### [Which client works best for you?](clients/remote-desktop-app-compare.md)
 #### [Remote Desktop client FAQ](clients/remote-desktop-client-faq.md)
 #### [Remote Desktop URI scheme](clients/remote-desktop-uri.md)
-### Remote Desktop client on Windows
+### Remote Desktop client for Windows
 #### [Get started](clients/windows.md)
 #### [What's new in the Windows client?](clients/windows-whatsnew.md)
-### Remote Desktop client on Android
+### Remote Desktop client for Android
 #### [Get started](clients/remote-desktop-android.md)
 #### [What's new in the Android client?](clients/android-whatsnew.md)
-### Remote Desktop client on iOS
+### Remote Desktop client for iOS
 #### [Get started](clients/remote-desktop-ios.md)
 #### [What's new in the iOS client?](clients/ios-whatsnew.md)
-### Remote Desktop client on Mac
+### Remote Desktop client for Mac
 #### [Get started](clients/remote-desktop-mac.md)
 #### [What's new in the MacOS client?](clients/mac-whatsnew.md)
 ### Remote Desktop web client
