@@ -32,19 +32,26 @@ Let's say I've developed an extension that supports servers from a company named
 
 1. The tag for the manufacturer would be "Manufacturer_/Contoso Inc./". The tag for the models could be ``"Model_ /R[34]../"``. Depending on how strictly you want to define the match condition, there will be different ways to define the regular expression.
 2. You can test the regular expression with your web browser's DevTools Console. In Edge or Chrome, hit F12 to open the DevTools window, and in the Console tab, type the following and hit Enter:
-```javascript
+
+```
 var regex = /R[34]../
 ```
+
 Then if you type and run the following, it will return 'true'.
-```javascript
+
+```
 regex.test('R300')
 ```
+
 And if you run the following, it will return 'false'.
-```javascript
+
+```
 regex.test('R500')
 ```
+
 3. Once you've verified the regular expression, you can encode it in the DevTools Console as well, using the following Javascript method:
-```javascript
+
+```
 encodeURI(/R[34]../)
 /R%5B34%5D../
 ```
