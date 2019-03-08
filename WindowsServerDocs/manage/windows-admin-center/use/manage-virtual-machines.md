@@ -13,7 +13,7 @@ ms.prod: windows-server-threshold
 
 >Applies To: Windows Admin Center, Windows Admin Center Preview
 
-The Virtual Machines tool is available in [Server](manage-servers.md), [Failover Cluster](manage-failover-clusters.md) or [Hyper-Converged Cluster](manage-hyper-converged.md) connections if the Hyper-V role is enabled on the server or cluster. You can use the Virtual Machines tool to manage Hyper-V hosts running Windows Server 2012 or later, either installed with Desktop Experience or as Server Core. Hyper-V Server 2012 and 2016 are also supported.
+The Virtual Machines tool is available in [Server](manage-servers.md), [Failover Cluster](manage-failover-clusters.md) or [Hyper-Converged Cluster](manage-hyper-converged.md) connections if the Hyper-V role is enabled on the server or cluster. You can use the Virtual Machines tool to manage Hyper-V hosts running Windows Server 2012 or later, either installed with Desktop Experience or as Server Core. Hyper-V Server 2012, 2016 and 2019 are also supported.
 
 ## Key features
 
@@ -31,6 +31,8 @@ Here are some of the Hyper-V tasks you can do in Windows Admin Center:
 - [Change virtual machine settings](#change-virtual-machine-settings)
 - [Live migrate a virtual machine to another cluster node](#live-migrate-a-virtual-machine-to-another-cluster-node)
 - [Advanced management and troubleshooting for a single virtual machine](#advanced-management-and-troubleshooting-for-a-single-virtual-machine)
+- [Manage a virtual machine through the Hyper-V host (VMConnect)](#manage-a-virtual-machine-through-the-hyper-v-host-vmconnect)
+- [Change Hyper-V host settings](#change-hyper-v-host-settings)
 - [View Hyper-V event logs](#view-hyper-v-event-logs)
 - [Protect virtual machines with Azure Site Recovery](#protect-virtual-machines-with-azure-site-recovery)
 
@@ -59,6 +61,7 @@ Here are some of the Hyper-V tasks you can do in Windows Admin Center:
     - [Change settings for a virtual machine](#change-virtual-machine-settings).
     - Connect to a virtual machine console using VMConnect via the Hyper-V host.
     - [Replicate a virtual machine using Azure Site Recovery](#protect-virtual-machines-with-azure-site-recovery).
+    - For operations that can be run on multiple VMs, such as Start, Shut down, Save, Pause, Delete, Reset, you can select multiple VMs and run the operation at once.
 
 NOTE: If you are connected to a cluster, the Virtual Machine tool will only display clustered virtual machines. We plan to also show non-clustered virtual machines in the future.
 
@@ -82,7 +85,7 @@ NOTE: If you are connected to a cluster, the Virtual Machine tool will only disp
 
 1. Click the **Virtual Machines** tool from the left side navigation pane.
 2. At the top of the Virtual Machines tool, choose the **Inventory** tab. Choose a virtual machine from the list and click **More** > **Settings**.
-3. Switch between the **General**, **Memory**, **Processors**, **Disks**, **Networks**, **Boot order** and **Checkpoints** tab, configure the necessary settings, then click **Save** to save the current tab's settings. The settings available will vary depending on the virtual machine's generation. Also, some settings cannot be changed for running virtual machines and you will need to stop the virtual machine first.
+3. Switch between the **General**, **Security**, **Memory**, **Processors**, **Disks**, **Networks**, **Boot order** and **Checkpoints** tab, configure the necessary settings, then click **Save** to save the current tab's settings. The settings available will vary depending on the virtual machine's generation. Also, some settings cannot be changed for running virtual machines and you will need to stop the virtual machine first.
 
 ## Live migrate a virtual machine to another cluster node
 
@@ -110,6 +113,23 @@ You can view detailed information and performance charts for a single virtual ma
     - [Change settings for the virtual machine](#change-virtual-machine-settings).
     - Connect to the virtual machine console using VMConnect via the Hyper-V host.
     - [Replicate the virtual machine using Azure Site Recovery](#protect-virtual-machines-with-azure-site-recovery).
+
+## Manage a virtual machine through the Hyper-V host (VMConnect)
+
+![VM Connect through your web browser](../media/manage-virtual-machines/vm-connect.png)
+
+## Change Hyper-V host settings
+
+![Hyper-V host settings screen](../media/manage-virtual-machines/host-settings.png)
+
+1. On a Server, Hyper-converged Cluster or Failover Cluster connection, click the **Settings** menu at the bottom of the left side navigation pane.
+2. On a Hyper-V host server or cluster, you will see a **Hyper-V Host Settings** group with the following sections:
+    - General: Change virtual hard disks and virtual machines file path, and hypervisor schedule type (if supported)
+    - Enhanced Session Mode
+    - NUMA Spanning
+    - Live Migration
+    - Storage Migration
+3. If you make any Hyper-V host setting changes in a Hyper-converged Cluster or Failover Cluster connection, the change will be applied to all cluster nodes.
 
 ## View Hyper-V event logs
 
