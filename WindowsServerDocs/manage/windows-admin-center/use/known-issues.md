@@ -7,7 +7,7 @@ author: jwwool
 ms.author: jeffrew
 ms.localizationpriority: medium
 ms.prod: windows-server-threshold
-ms.date: 02/12/2019
+ms.date: 03/07/2019
 ---
 
 # Windows Admin Center Known Issues
@@ -160,6 +160,8 @@ If it is not installed, you can [download and install WMF 5.1](https://www.micro
 - Search functionality not implemented. [13820009]
 
 ### Remote Desktop
+
+- When using the Remote Desktop to connect to a machine that is not Domain joined, you must enter your account in the ```MACHINENAME\USERNAME``` format.
 
 - Some configurations can block Windows Admin Center's remote desktop client with group policy. If you encounter this, enable ```Allow users to connect remotely by using Remote Desktop Services``` under ```Computer Configuration/Policies/Administrative Templates/Windows Components/Remote Desktop Services/Remote Desktop Session Host/Connections```
 
