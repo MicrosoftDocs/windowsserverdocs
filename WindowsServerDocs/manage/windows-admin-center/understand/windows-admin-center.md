@@ -29,7 +29,7 @@ Broadly validated & generally available.
 
 ********************
 
-Quick links: [Documentation](../overview.md) | [Latest features](../overview.md#latest-features) | [For developers](../extend/extensibility-overview.md) | [Give feedback](https://aka.ms/WACFeedback)
+Quick links: [Documentation](../overview.md) | [Latest features](../overview.md#release-history) | [For developers](../extend/extensibility-overview.md) | [Give feedback](https://aka.ms/WACFeedback)
 
 ********************
 
