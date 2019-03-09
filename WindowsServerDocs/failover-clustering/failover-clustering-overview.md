@@ -8,7 +8,7 @@ ms.manager: dongill
 author: JasonGerend
 ms.author: jgerend  
 ms.technology: storage-failover-clustering
-ms.date: 02/28/2019
+ms.date: 03/08/2019
 ms.localizationpriority: high
 ---
 # Failover Clustering in Windows Server
@@ -76,6 +76,8 @@ Failover Clustering has many practical applications, including:
                                         <p><a href="vm-load-balancing-overview.md">VM load balancing</a></p>
 <HR />
                                         <p><a href="../storage/storage-spaces/cluster-sets.md">Cluster sets</a></p>
+<HR />
+                                        <p><a href="cluster-affinity.md">Cluster affinity</a></p>
                                         </div>
                                     </div>
                                 </div>
