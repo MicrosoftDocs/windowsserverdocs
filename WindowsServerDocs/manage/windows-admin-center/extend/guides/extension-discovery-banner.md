@@ -1,6 +1,6 @@
 ---
-title: Control your tool's visibility in a solution
-description: Control your tool's visibility in a solution Windows Admin Center SDK (Project Honolulu)
+title: Enable extension discovery banner
+description: Enable the extension discovery banner
 ms.technology: manage
 ms.topic: article
 author: daniellee-msft
