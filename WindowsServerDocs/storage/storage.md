@@ -10,7 +10,7 @@ ms.assetid: 6b74bc7c-a58d-4915-af8e-2cc27f2c4726
 ms.topic: landing-page
 ms.author: jgerend
 ms.localizationpriority: medium
-ms.date: 02/19/2019
+ms.date: 03/08/2019
 ---
 # Storage
 
@@ -92,7 +92,7 @@ Storage in Windows Server provides new and improved features for software-define
 <HR />
                         <p><h3><a href="dfs-namespaces/dfs-overview.md">DFS Namespaces</a></h3> Group shared folders that are located on different servers into one or more logically structured namespaces. Each namespace appears to users as a single shared folder with a series of subfolders. However, the underlying structure of the namespace can consist of numerous file shares that are located on different servers and in multiple sites.</p>
 <HR />
-                        <p><h3><a href="https://technet.microsoft.com/library/jj127250(v=ws.11).aspx">DFS Replication</a></h3> Replicate folders (including those referred to by a DFS namespace path) across multiple servers and sites. DFS Replication uses a compression algorithm known as remote differential compression (RDC). RDC detects changes to the data in a file, and it enables DFS Replication to replicate only the changed file blocks instead of the entire file.</p>
+                        <p><h3><a href="dfs-replication/dfsr-overview.md">DFS Replication</a></h3> Replicate folders (including those referred to by a DFS namespace path) across multiple servers and sites. DFS Replication uses a compression algorithm known as remote differential compression (RDC). RDC detects changes to the data in a file, and it enables DFS Replication to replicate only the changed file blocks instead of the entire file.</p>
 <HR />
                         <p><h3><a href="fsrm/fsrm-overview.md">File Server Resource Manager</a></h3> Manage and classify data stored on file servers.<p>
 <HR />
