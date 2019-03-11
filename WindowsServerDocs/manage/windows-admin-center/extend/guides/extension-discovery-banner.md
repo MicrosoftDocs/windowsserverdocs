@@ -49,7 +49,7 @@ And if you run the following, it will return 'false'.
 regex.test('R500')
 ```
 
-`3. Once you've verified the regular expression, you can encode it in the DevTools Console as well, using the following Javascript method:
+3. Once you've verified the regular expression, you can encode it in the DevTools Console as well, using the following Javascript method:
 
 ```javascript
 encodeURI(/R[34]../)
@@ -62,4 +62,5 @@ The final format of the tag string to add to your .nuspec file would be:
 ```
 
 > [!Tip]
-> We understand that a hardware manufacturer may have a very wide range of model names of which some may be supported while some are not. Keep in mind that this feature is meant to help with the **discovery** of your extension, but it doesn't not have to be a perfectly up-to-date inventory of all your models. You can define your regular expression to be a simpler expression that matches a subset of your models. A user might not see the discovery banner if they first connect to a server model that doesn't match the condition, but sooner or later they will connect to another server that does and will discover and install the extension. You can also consider defining a simple regular expression that only matches your manufacturer name. In some cases, your extension may not actually support a specific model, but you can use the [dynamic tool display feature](./dynamic-tool-display.md) to define a custom PowerShell script to check model support and only show your extension when applicable, or provide limited functionality in your extension for models that don't support all capabilities.
+> We understand that a hardware manufacturer may have a very wide range of model names of which some may be supported while some are not. Keep in mind that this feature is meant to help with the **discovery** of your extension, but it doesn't not have to be a perfectly up-to-date inventory of all your models. You can define your regular expression to be a simpler expression that matches a subset of your models. A user might not see the discovery banner if they first connect to a server model that doesn't match the condition, but sooner or later they will connect to another server that does and will discover and install the extension. 
+> You can also consider defining a simple regular expression that only matches your manufacturer name. In some cases, your extension may not actually support a specific model, but you can use the [dynamic tool display feature](./dynamic-tool-display.md) to define a custom PowerShell script to check model support and only show your extension when applicable, or provide limited functionality in your extension for models that don't support all capabilities.
