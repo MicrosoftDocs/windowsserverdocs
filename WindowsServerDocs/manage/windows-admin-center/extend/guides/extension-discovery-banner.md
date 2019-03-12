@@ -1,6 +1,6 @@
 ---
-title: Enable extension discovery banner
-description: Enable the extension discovery banner
+title: Enabling the extension discovery banner
+description: Enabling the extension discovery banner
 ms.technology: manage
 ms.topic: article
 author: daniellee-msft
@@ -10,7 +10,7 @@ ms.localizationpriority: medium
 ms.prod: windows-server-threshold
 ---
 
-# Enable extension discovery banner #
+# Enabling the extension discovery banner #
 
 >Applies To: Windows Admin Center, Windows Admin Center Preview
 
@@ -30,11 +30,11 @@ The "tags" metadata in the .nuspec file is used to declare which hardware manufa
 
 Let's say I've developed an extension that supports servers from a company named Contoso Inc., with model name R3xx and R4xx.
 
-1. The tag for the manufacturer would be ``"Manufacturer_/Contoso Inc./"``. The tag for the models could be ``"Model_/R[34]../"``. Depending on how strictly you want to define the matching condition, there will be different ways to define your regular expression. You can also separate the Manufacturer or Model tags into multiple tags, for example, the Model tag above can also be ``"Model_/R3../ Model_/R4../"``.
+1. The tag for the manufacturer would be ``"Manufacturer_/Contoso Inc./"``. The tag for the models could be ``"Model_/^R[34][0-9]{2}$/"``. Depending on how strictly you want to define the matching condition, there will be different ways to define your regular expression. You can also separate the Manufacturer or Model tags into multiple tags, for example, the Model tag could also be ``"Model_/R3../ Model_/R4../"``.
 2. You can test the regular expression with your web browser's DevTools Console. In Edge or Chrome, hit F12 to open the DevTools window, and in the Console tab, type the following and hit Enter:
 
 ```javascript
-var regex = /R[34]../
+var regex = /^R[34][0-9]{2}$/
 ```
 
 Then if you type and run the following, it will return 'true'.
@@ -52,13 +52,13 @@ regex.test('R500')
 3. Once you've verified the regular expression, you can encode it in the DevTools Console as well, using the following Javascript method:
 
 ```javascript
-encodeURI(/R[34]../)
+encodeURI(/^R[34][0-9]{2}$/)
 ```
 
 The final format of the tag string to add to your .nuspec file would be:
 
 ```
-<tags>Manufacturer_/Contoso%20Inc./ Model_/R%5B34%5D../</tags>
+<tags>Manufacturer_/Contoso%20Inc./ Model_/%5ER%5B34%5D%5B0-9%5D%7B2%7D$/</tags>
 ```
 
 > [!Tip]
