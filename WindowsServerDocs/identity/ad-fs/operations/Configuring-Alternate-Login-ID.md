@@ -125,18 +125,19 @@ Using alternate-id can cause extra prompts for authentication if these additiona
 
 With the following additional configuration, the user experience is improved significantly, and you can achieve near zero prompts for authentication for alternate-id users in your organization.
 
-##### Step 1. Update to required office version
-Office version 1712 (build no 8827.2148) and above have updated the authentication logic to handle the alternate-id scenario. In order to leverage the new logic, the client machines need to be updated to office version 1712 (build no 8827.2148) and above.
+##### Step 1. Update to required Office version
+Office version 1712 (build no 8827.2148) and above have updated the authentication logic to handle the alternate-id scenario. In order to leverage the new logic, the client machines need to be updated to Office version 1712 (build no 8827.2148) and above.
 
-##### Step 2. Configure registry for impacted users using group policy
+##### Step 2. Update to required Windows version
+Windows version 1709 and above have updated the authentication logic to handle the alternate-id scenario. In order to leverage the new logic, the client machines need to be updated to Windows version 1709 and above.
+
+##### Step 3. Configure registry for impacted users using group policy
 The office applications rely on information pushed by the directory administrator to identify the alternate-id environment. The following registry keys need to be configured to help office applications authenticate the user with alternate-id without showing any extra prompts
 
 |Regkey to add|Regkey data name, type, and value|Windows 7/8|Windows 10|Description|
 |-----|-----|-----|-----|-----|
 |HKEY_CURRENT_USER\Software\Microsoft\AuthN|DomainHint</br>REG_SZ</br>contoso.com|Required|Required|The value of this regkey is a verified custom domain name in the tenant of the organization. For example, Contoso corp can provide a value of Contoso.com in this regkey if Contoso.com is one of the verified custom domain names in the tenant Contoso.onmicrosoft.com.|
 HKEY_CURRENT_USER\Software\Microsoft\Office\16.0\Common\Identity|EnableAlternateIdSupport</br>REG_DWORD</br>1|Required for Outlook 2016 ProPlus|Required for Outlook 2016 ProPlus|The value of this regkey can be 1 / 0 to indicate to Outlook application whether it should engage the improved alternate-id authentication logic.|
-HKEY_CURRENT_USER\SOFTWARE\Microsoft\Office\16.0\Common\Identity|DisableADALatopWAMOverride</br>REG_DWORD</br>1|Not applicable|Required.|This ensures that Office does not use WAM as alt-id is not supported by WAM.|
-HKEY_CURRENT_USER\SOFTWARE\Microsoft\Office\16.0\Common\Identity|DisableAADWAM</br>REG_DWORD</br>1|Not applicable|Required.|This ensures that Office does not use WAM as alt-id is not supported by WAM.|
 HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Internet Settings\ZoneMap\Domains\contoso.com\sts|&#42;</br>REG_DWORD</br>1|Required|Required|This regkey can be used to set the STS as a trusted Zone in the internet settings. Standard ADFS deployment recommends adding the ADFS namespace to the Local Intranet Zone for Internet Explorer|
 
 ## New authentication flow after additional configuration
