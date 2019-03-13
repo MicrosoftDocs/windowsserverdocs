@@ -4,7 +4,7 @@ description: Known issues and troubleshooting support for Storage Migration Serv
 author: nedpyle
 ms.author: nedpyle
 manager: siroy
-ms.date: 02/27/2019
+ms.date: 03/13/2019
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: storage
@@ -103,7 +103,7 @@ This behavior is by design, to prevent connectivity issues after migration from 
 
 To workaround this issue, perform a migration to a computer on the same network. Then move that computer to a new network and reassign its IP information. For instance, if migrating to Azure IaaS, first migrate to a local VM, then use Azure Migrate to shift the VM to Azure.  
 
-We have fixed this issue in a later release of Windows Admin Center. We'll now allow you to specify migrations that don't alter the destination server's network settings. The updated WAC extension will be listed here when released. 
+We have fixed this issue in a later release of Windows Admin Center. We'll now allow you to specify migrations that don't alter the destination server's network settings. The updated extension will be listed here when released. 
 
 ## Validation warnings for destination proxy and credential administrative privileges
 
