@@ -6,6 +6,7 @@ ms.topic: landing-page
 layout: LandingPage
 author: haley-rowland
 ms.author: harowl
+ms.date: 03/07/2019
 ms.localizationpriority: high
 ms.prod: windows-server-threshold
 ---
@@ -16,11 +17,11 @@ Windows Admin Center is a locally deployed, browser-based app for managing serve
 
 ## Download now
 
-**Windows Admin Center Preview** (version 1812)
+**Windows Admin Center Preview** (version 1902)
 
 Includes the latest feature updates. [Get it from Windows Server Insider Preview](https://www.microsoft.com/en-us/software-download/windowsinsiderpreviewserver) > Additional Downloads
 
-**Windows Admin Center** (version 1809.5)
+**Windows Admin Center** (version 1809.51)
 
 Broadly validated & generally available.
 [Get it here](https://aka.ms/WACDownload)
@@ -29,7 +30,7 @@ Broadly validated & generally available.
 
 ********************
 
-Quick links: [Documentation](../overview.md) | [Latest features](../overview.md#latest-features) | [For developers](../extend/extensibility-overview.md) | [Give feedback](https://aka.ms/WACFeedback)
+Quick links: [Documentation](../overview.md) | [Latest features](../overview.md#release-history) | [For developers](../extend/extensibility-overview.md) | [Give feedback](https://aka.ms/WACFeedback)
 
 ********************
 

@@ -1,7 +1,6 @@
 ---
-title: bitsadmin get priority
-description: "Windows Commands topic for **bitsadmin get priority** - 
-Retrieves the priority of the specified job."
+title: bitsadmin getpriority
+description: "Windows Commands topic for **bitsadmin getpriority** - Retrieves the priority of the specified job."
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -9,16 +8,13 @@ ms.suite: na
 ms.technology: manage-windows-commands
 ms.tgt_pltfrm: na
 ms.topic: article
-ms.assetid: ff958003-fcc8-4ad8-a9c7-868a48d9bdeb
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
-ms.date: 10/16/2017
+ms.date: 03/01/2019
 ---
 
-# bitsadmin get priority
-
-
+# bitsadmin getpriority
 
 Retrieves the priority of the specified job.
 
@@ -36,7 +32,7 @@ bitsadmin /GetPriority <Job>
 
 ## Remarks
 
--   The priority is either FOREGROUND, HIGH, NORMAL, LOW, or UNKNOWN.
+The priority is either **FOREGROUND**, **HIGH**, **NORMAL**, **LOW**, or **UNKNOWN**.
 
 ## <a name="BKMK_examples"></a>Examples
 
