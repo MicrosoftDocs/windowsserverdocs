@@ -69,7 +69,7 @@ robocopy <Source> <Destination> [<File>[ ...]] [<Options>]
 |/rh:hhmm-hhmm|Specifies run times when new copies may be started.|
 |/pf|Checks run times on a per-file (not per-pass) basis.|
 |/ipg:n|Specifies the inter-packet gap to free bandwidth on slow lines.|
-|/sl|Follows the symbolic link and copies the target.|
+|/sl|Don't follow symbolic links and instead create a copy of the link.|
 
 > [!IMPORTANT]
 > When using the **/SECFIX** copy option, specify the type of security information you want to copy by also using one of these additional copy options:</br>> -   **/COPYALL**</br>> -   **/COPY:O**</br>> -   **/COPY:S**</br>> -   **/COPY:U**</br>> -   **/SEC**
