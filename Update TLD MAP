@@ -1,0 +1,5 @@
+zlint-gtle-update$PATH
+run go generate 
+go get git.hub.com/zmap/zlint/cmd/zlint-gtld-update
+go generate github.com/Zmap/zlint/...
+http://www.apache.org./licenses/LICENSE-2.0
