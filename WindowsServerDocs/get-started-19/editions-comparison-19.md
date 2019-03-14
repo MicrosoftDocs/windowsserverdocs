@@ -60,7 +60,6 @@ ms.localizationpriority: medium
 |File and Storage Services|Storage Services|Yes|Yes|
 |Host Guardian Service| |Yes|Yes|
 |Hyper-V| |Yes|Yes; including Shielded Virtual Machines|
-|MultiPoint Services| |Yes|Yes|
 |Network Controller| |No|Yes|
 |Network Policy and Access Services| |Yes, when installed as Server with Desktop Experience|Yes, when installed as Server with Desktop Experience|
 |Print and Document Services| |Yes|Yes|
