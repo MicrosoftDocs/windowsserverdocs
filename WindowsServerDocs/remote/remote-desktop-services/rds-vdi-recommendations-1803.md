@@ -628,7 +628,7 @@ Microsoft has recently published documentation regarding Windows Defender in a V
 The above article contains procedures to service the gold VDI image, and how to maintain the VDI clients as they are running. To reduce network bandwidth when VDI computers need to update their Windows Defender signatures, stagger reboots, and schedule reboots during off hours where possible. The Windows Defender signature updates can be contained internally on file shares, and where
 practical, have those files shares on the same or close networking segments as the VDI virtual machines.
 
-{See the paper listed at }the beginning of this section for much more information about optimizing Windows Defender with VDI.
+See the paper listed at the beginning of this section for much more information about optimizing Windows Defender with VDI.
 
 ### Tuning Windows 10 network performance by using registry settings
 
@@ -751,4 +751,4 @@ Start-Process C:\\Windows\\System32\\Reg.exe -ArgumentList "Unload HKLM\\Temp" -
 ```
 
 
-For any questions or concerns about the information in this paper, contact your Microsoft account team, research the {Microsoft VDI blog}, post a message to Microsoft forums, or contact Microsoft for questions or concerns.
+For any questions or concerns about the information in this paper, contact your Microsoft account team, research the Microsoft VDI blog, post a message to Microsoft forums, or contact Microsoft for questions or concerns.
