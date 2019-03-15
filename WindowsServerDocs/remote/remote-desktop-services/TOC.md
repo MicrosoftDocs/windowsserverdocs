@@ -59,6 +59,7 @@
 ### [Set up and configure RemoteFX vGPU for Remote Desktop Services](rds-remotefx-vgpu.md)
 ### [Manage personal desktop session collections](rds-manage-personal-collection.md)
 ### [Recommended configuration for VDI desktops](rds-vdi-recommendations.md)
+### [Optimizing Windows 10, version 1803, for a Virtual Desktop Infrastructure (VDI) role](rds-vdi-recommendations-1803.md)
 ### [Manage users in your RDS collection](rds-user-management.md)
 ### [Customize the RDS title “Work Resources” using PowerShell on Windows Server](rds-work-resources.md)
 ### [Diagnose app performance issues with performance counters](rds-rdsh-performance-counters.md)
