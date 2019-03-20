@@ -13,10 +13,15 @@ ms.technology: identity-adfs
 
 # AD FS Extranet Lockout and Extranet Smart Lockout
 
-# Overview
+
 
 >Applies To: Windows Server 2019, Windows Server 2016, Windows Server 2012 R2
-Extranet Smart Lockout (ESL) protects your users from experiencing extranet account lockout from malicious activity.  ESL enables AD FS to differentiate between sign-in attempts from a familiar location for a user and sign-in attempts from what may be an attacker. AD FS can lock out attackers while letting valid users continue to use their accounts. This prevents and protects against denial-of-service and certain classes of password spray attacks on the user. ESL is available for AD FS in Windows Server 2016 and is built into AD FS in Windows Server 2019. 
+
+## Overview
+
+Extranet Smart Lockout (ESL) protects your users from experiencing extranet account lockout from malicious activity.  
+
+ESL enables AD FS to differentiate between sign-in attempts from a familiar location for a user and sign-in attempts from what may be an attacker. AD FS can lock out attackers while letting valid users continue to use their accounts. This prevents and protects against denial-of-service and certain classes of password spray attacks on the user. ESL is available for AD FS in Windows Server 2016 and is built into AD FS in Windows Server 2019. 
 
 ESL is only available for the username and password authentication requests which come through the extranet with the Web Application Proxy or a supported 3rd party proxy.   
 
@@ -87,7 +92,7 @@ The AccountActivity table is populated both during ‘Log-Only’ mode and ‘En
    PS C:\>$cred = Get-Credential 
    PS C:\>Update-AdfsArtifactDatabasePermission -Credential $cred 
    ``` 
-   >![NOTE]
+   >[!NOTE]
    >The $cred placeholder is an account that has AD FS administrator permissions. This should provide the write permissions to create the table. 
 
    The commands above may fail due to lack of sufficient permission because your AD FS farm is using SQL Server, and the credential provided above does not have admin permission on your SQL server. In this case, you can configure database permissions manually in SQL Server Database by running the following command when you’re connected to the AdfsArtifactStore database. 
@@ -196,7 +201,7 @@ For the new mode to take effect, restart the AD FS service on all nodes in the f
 
 ## Manage user account activity 
 AD FS provides three cmdlets to manage account activity data. These cmdlets automatically connect to the node in the farm that holds the master role. 
->![NOTE] 
+>[!NOTE] 
 >Just Enough Administration (JEA) can be used to delegate AD FS commandlets to reset account lockouts. For example, Help Desk personnel can be delegated permissions to use ESL commandlets. For information on delegating permissions for using these cmdlets, see [Delegate AD FS Powershell Commandlet Access to Non-Admin Users](delegate-ad-fs-pshell-access.md)
 
 This behavior can be overridden by passing the -Server parameter. 
