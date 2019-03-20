@@ -118,6 +118,9 @@ You can view detailed information and performance charts for a single virtual ma
 
 ![VM Connect through your web browser](../media/manage-virtual-machines/vm-connect.png)
 
+1. Click the **Virtual Machines** tool from the left side navigation pane.
+2. At the top of the Virtual Machines tool, choose the **Inventory** tab. Choose a virtual machine from the list and click **More** > **Connect** or **Download RDP file**. **Connect** will allow you to interact with the guest VM through the Remote Desktop web console, integrated in to Windows Admin Center. **Download RDP file** will download an .rdp file that you can open with the Remote Desktop Connection application (mstsc.exe). Both options will use VMConnect to connect to the guest VM through the Hyper-V host and will require you to enter administrator credentials for the Hyper-V host server.
+
 ## Change Hyper-V host settings
 
 ![Hyper-V host settings screen](../media/manage-virtual-machines/host-settings.png)
