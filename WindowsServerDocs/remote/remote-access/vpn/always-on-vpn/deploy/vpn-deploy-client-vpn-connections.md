@@ -482,10 +482,10 @@ The following example script includes all of the code examples from previous sec
     
     $ProfileXML | Out-File -FilePath ($env:USERPROFILE + '\desktop\VPN_Profile.xml')
     
-    $Script = '$ProfileName = ''' + $ProfileName + '''
+    $Script = '$ProfileName = ' + $ProfileName + ''
     $ProfileNameEscaped = $ProfileName -replace ' ', '%20'
     
-    $ProfileXML = ''' + $ProfileXML + '''
+    $ProfileXML = '' + $ProfileXML + ''
     
     $ProfileXML = $ProfileXML -replace '<', '&lt;'
     $ProfileXML = $ProfileXML -replace '>', '&gt;'
@@ -562,7 +562,7 @@ The following example script includes all of the code examples from previous sec
     }
     
     $Message = "Script Complete"
-    Write-Host "$Message"'
+    Write-Host "$Message"
     
     $Script | Out-File -FilePath ($env:USERPROFILE + '\desktop\VPN_Profile.ps1')
     
