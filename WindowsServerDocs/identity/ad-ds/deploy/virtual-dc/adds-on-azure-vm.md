@@ -242,7 +242,7 @@ From the Azure portal, browse to **Resource groups** and choose the resource gro
 
 From Azure CLI run the following command:
 
-```azurecli-interactive
+```azurecli
 az group delete --name ADonAzureVMs
 ```
 
