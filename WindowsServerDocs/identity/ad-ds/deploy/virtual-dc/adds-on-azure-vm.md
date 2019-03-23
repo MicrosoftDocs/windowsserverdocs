@@ -16,21 +16,17 @@ Many customers find that it is easier to complete migrations to the cloud when t
 Components
 
 * A resource group to put everything in.
-* An [Azure Virtual Network](../virtual-network/virtual-networks-overview.md), subnet, network security group, and rule to allow RDP access to VMs.
-* An Azure virtual machine [availability set](../virtual-machines/windows/manage-availability.md#configure-multiple-virtual-machines-in-an-availability-set-for-redundancy) to put two Active Directory Domain Services (AD DS) domain controllers in.
+* An [Azure Virtual Network](https://docs.microsoft.com/azure/virtual-network/virtual-networks-overview.md), subnet, network security group, and rule to allow RDP access to VMs.
+* An Azure virtual machine [availability set](https://docs.microsoft.com/azure/virtual-machines/windows/regions-and-availability#availability-sets) to put two Active Directory Domain Services (AD DS) domain controllers in.
 * Two Azure virtual machines to run AD DS and DNS.
 
 Some items that are not covered here
 
-* [Creating a site-to-site VPN connection](../vpn-gateway/vpn-gateway-howto-site-to-site-resource-manager-portal.md) from an on-premises location
-* [Securing network traffic in Azure](../security/azure-network-security.md)
+* [Creating a site-to-site VPN connection](https://docs.microsoft.com/azure/vpn-gateway/vpn-gateway-howto-site-to-site-resource-manager-portal.md) from an on-premises location
+* [Securing network traffic in Azure](https://docs.microsoft.com/azure/security/azure-security-network-security-best-practices.md)
 * [Designing the site topology](https://docs.microsoft.com/windows-server/identity/ad-ds/plan/designing-the-site-topology)
 * [Planning operations master role placement](https://docs.microsoft.com/windows-server/identity/ad-ds/plan/planning-operations-master-role-placement)
 * [Deploying Azure AD Connect to synchronize identities to Azure AD](https://docs.microsoft.com/azure/active-directory/hybrid/how-to-connect-install-express)
-
-[!INCLUDE [cloud-shell-try-it.md](../../includes/cloud-shell-try-it.md)]
-
-If you choose to install and use the CLI locally, this quickstart requires that you are running the Azure CLI version 2.0.4 or later. Run `az --version` to find the version. If you need to install or upgrade, see [Install Azure CLI 2.0](https://docs.microsoft.com/cli/azure/install-azure-cli?view=azure-cli-latest).
 
 ## Build the test environment
 
@@ -42,7 +38,9 @@ If you don't have an Azure subscription, [create a free account](https://azure.m
 
 ### Using Azure CLI
 
-The following script automates the process of building two Windows Server 2016 VMs for the purpose of building domain controllers for a new Active Directory Forest in Azure. An administrator can modify the variables to suit their needs then complete as one operation. The script creates the necessary resource group, network security group with a traffic rule for Remote Desktop, virtual network and subnet, and availability group. The VMs are each then built with a 20-GB data disk with caching disabled for AD DS to be installed to.
+The following script automates the process of building two Windows Server 2016 VMs for the purpose of building domain controllers for a new Active Directory Forest in Azure. An administrator can modify the variables to suit their needs then complete as one operation. The script creates the necessary resource group, network security group with a traffic rule for Remote Desktop, virtual network and subnet, and availability group. The VMs are each then built with a 20 GB data disk with caching disabled for AD DS to be installed to.
+
+If you choose to install and use the CLI locally, this quickstart requires that you are running the Azure CLI version 2.0.4 or later. Run `az --version` to find the version. If you need to install or upgrade, see [Install Azure CLI 2.0](https://docs.microsoft.com/cli/azure/install-azure-cli?view=azure-cli-latest).
 
 | Variable Name | Purpose |
 | :---: | :--- |
@@ -62,7 +60,7 @@ The following script automates the process of building two Windows Server 2016 V
 | DomainController2 | Name of second domain controller.|
 | DC2IP | IP address for second domain controller.|
 
-```azurecli-interactive
+```azurecli
 #Update based on your organizational requirements
 Location=westus2
 ResourceGroupName=ADonAzureVMs
@@ -155,7 +153,8 @@ If the Azure virtual machines created as part of this process will be an extensi
 
 After promoting the new domain controllers in Azure they will need to be set to the primary and secondary DNS Servers for the virtual network and any on-premises DNS Servers would be demoted to tertiary and beyond. More information on changing DNS Servers can be found in the article [Create, change, or delete a virtual network](https://docs.microsoft.com/azure/virtual-network/manage-virtual-network#change-dns-servers).
 
-Information about extending an on-premises network to Azure can be found in the article [Creating a site-to-site VPN connection](../vpn-gateway/vpn-gateway-howto-site-to-site-resource-manager-portal.md).
+Information about extending an on-premises network to Azure can be found in the article [Creating a site-to-site VPN connection](https://docs.microsoft.com/azure/vpn-gateway/vpn-gateway-howto-site-to-site-resource-manager-portal
+).
 
 ## Configure the VMs and install Active Directory Domain Services
 
@@ -250,9 +249,9 @@ az group delete --name ADonAzureVMs
 ## Next steps
 
 * [Safely virtualizing Active Directory Domain Services (AD DS)](../../Introduction-to-Active-Directory-Domain-Services-AD-DS-Virtualization-Level-100.md)
-* Azure AD Connect - https://docs.microsoft.com/en-us/azure/active-directory/connect/active-directory-aadconnect-get-started-express
-* Backup and recovery https://docs.microsoft.com/en-us/azure/virtual-machines/windows/backup-recovery
-* Site to site VPN connectivity https://docs.microsoft.com/en-us/azure/vpn-gateway/vpn-gateway-howto-site-to-site-resource-manager-portal
-* Monitoring https://docs.microsoft.com/en-us/azure/virtual-machines/windows/monitor
-* Security and policy https://docs.microsoft.com/en-us/azure/virtual-machines/windows/security-policy
-* Maintenance and updates https://docs.microsoft.com/en-us/azure/virtual-machines/windows/maintenance-and-updates
+* [Azure AD Connect](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnect-get-started-express)
+* [Backup and recovery](https://docs.microsoft.com/azure/virtual-machines/windows/backup-recovery)
+* [Site to site VPN connectivity](https://docs.microsoft.com/azure/vpn-gateway/vpn-gateway-howto-site-to-site-resource-manager-portal)
+* [Monitoring](https://docs.microsoft.com/azure/virtual-machines/windows/monitor)
+* [Security and policy](https://docs.microsoft.com/azure/virtual-machines/windows/security-policy)
+* [Maintenance and updates](https://docs.microsoft.com/azure/virtual-machines/windows/maintenance-and-updates)
