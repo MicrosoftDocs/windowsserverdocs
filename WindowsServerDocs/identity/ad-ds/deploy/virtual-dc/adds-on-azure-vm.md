@@ -208,7 +208,6 @@ Initialize and format the data disk as F:
    * Change the paths from C: to point to the F: drive we created when prompted for their location
    * Ensure Domain Name System (DNS) server and Global Catalog (GC) checked on the Domain Controller Options page
    * Specify a Directory Services Restore Mode password
-   * Change the paths from C: to point to the F: drive we created when prompted for their location
    * Review the selections made in the wizard and choose **Next**
 
 > [!NOTE]
