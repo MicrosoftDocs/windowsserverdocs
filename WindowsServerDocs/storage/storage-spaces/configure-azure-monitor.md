@@ -12,7 +12,7 @@ ms.date: 3/6/2019
 ms.localizationpriority: 
 ---
 ---
-# Understand and configure Azure Monitor
+# Use Azure Monitor to send emails for Health Service Faults
 
 >Applies to: Windows Server 2016 and Windows Server 2019
 
@@ -34,7 +34,7 @@ All data collected by Azure Monitor fits into one of two fundamental types: metr
 
 We will have more details below on how to configure these alerts.
 
-## Configuring your hyper-converged cluster
+## Configuring Health Service
 
 The first thing that you need to do is configure your cluster. As you may know, the [Health Service](../../failover-clustering/health-service-overview.md) improves the day-to-day monitoring and operational experience for clusters running Storage Spaces Direct. 
 
@@ -92,7 +92,7 @@ Before installing the Microsoft Monitoring Agent for Windows, you need the works
 4. Select **Connected Sources**, and then select **Windows Servers**.   
 5. The value to the right of **Workspace ID** and **Primary Key**. Save both temporarily - copy and paste both into your favorite editor for the time being.   
 
-## Install the agent for Windows
+## Installing the agent on Windows
 The following steps install and configure the Microsoft Monitoring Agent. **Be sure to install this agent on each server in your cluster and indicate that you want the agent to run at Windows Startup.**
 
 1. On the **Windows Servers** page, select the appropriate **Download Windows Agent** version to download depending on the processor architecture of the Windows operating system.
@@ -114,7 +114,7 @@ When complete, the **Microsoft Monitoring Agent** appears in **Control Panel**. 
 
 To understand the supported configuration, review [supported Windows operating systems](https://docs.microsoft.com/en-us/azure/azure-monitor/platform/log-analytics-agent#supported-windows-operating-systems) and [network firewall configuration](https://docs.microsoft.com/en-us/azure/azure-monitor/platform/log-analytics-agent#network-firewall-requirements).
 
-## Collect event and performance data
+## Collecting event and performance data
 
 Log Analytics can collect events from the Windows event log and performance counters that you specify for longer term analysis and reporting, and take action when a particular condition is detected.  Follow these steps to configure collection of events from the Windows event log, and several common performance counters to start with.  
 
@@ -131,7 +131,7 @@ Event Channel: Microsoft-Windows-Health/Operational
 8. When you first configure Windows Performance counters for a new Log Analytics workspace, you are given the option to quickly create several common counters. They are listed with a checkbox next to each.<br> ![Default Windows performance counters selected](media/configure-azure-monitor/windows-perfcounters-default.png)<br> Click **Add the selected performance counters**.  They are added and preset with a ten second collection sample interval.  
 9. Click **Save** at the top of the page to save the configuration.
 
-## Create alerts based on log data
+## Creating alerts based on log data
 
 If you've made it this far, your cluster should be sending your logs and performance counters to Log Analytics. The next step is to create alert rules that automatically run log searches at regular intervals. If results of the log search match particular criteria, then an alert is fired that sends you an email or text notification. Let's explore this below.
 
@@ -168,15 +168,15 @@ After you have the approriate queries made for events you care about, save them 
 Now, let's walk through an example for creating an alert.
 
 1. In the Azure portal, click **All services**. In the list of resources, type **Log Analytics**. As you begin typing, the list filters based on your input. Select **Log Analytics**.
-2. In the left-hand pane, select **Alerts** and then click **New Alert Rule** from the top of the page to create a new alert.<br><br> ![Create new alert rule](/media/configure-azure-monitor/alert-rule-02.png)<br>
-3. For the first step, under the **Create Alert** section, you are going to select your Log Analytics workspace as the resource, since this is a log based alert signal.  Filter the results by choosing the specific **Subscription** from the drop-down list if you have more than one, which contains Log Analytics workspace created earlier.  Filter the **Resource Type** by selecting **Log Analytics** from the drop-down list.  Finally, select the **Resource** **DefaultLAWorkspace** and then click **Done**.<br><br> ![Create alert step 1 task](/media/configure-azure-monitor/alert-rule-03.png)<br>
+2. In the left-hand pane, select **Alerts** and then click **New Alert Rule** from the top of the page to create a new alert.<br><br> ![Create new alert rule](media/configure-azure-monitor/alert-rule-02.png)<br>
+3. For the first step, under the **Create Alert** section, you are going to select your Log Analytics workspace as the resource, since this is a log based alert signal.  Filter the results by choosing the specific **Subscription** from the drop-down list if you have more than one, which contains Log Analytics workspace created earlier.  Filter the **Resource Type** by selecting **Log Analytics** from the drop-down list.  Finally, select the **Resource** **DefaultLAWorkspace** and then click **Done**.<br><br> ![Create alert step 1 task](media/configure-azure-monitor/alert-rule-03.png)<br>
 4. Under the section **Alert Criteria**, click **Add Criteria** to select your saved query and then specify logic that the alert rule follows.
 5. Configure the alert with the following information:  
    a. From the **Based on** drop-down list, select **Metric measurement**.  A metric measurement will create an alert for each object in the query with a value that exceeds our specified threshold.  
    b. For the **Condition**, select **Greater than** and specify a thershold.  
    c. Then define when to trigger the alert. For example you could select **Consecutive breaches** and from the drop-down list select **Greater than** a value of 3.  
    d. Under Evaluation based on section, modify the **Period** value to **30** minutes and **Frequency** to 5. The rule will run every five minutes and return records that were created within the last thirty minutes from the current time.  Setting the time period to a wider window accounts for the potential of data latency, and ensures the query returns data to avoid a false negative where the alert never fires.  
-6. Click **Done** to complete the alert rule.<br><br> ![Configure alert signal](/media/configure-azure-monitor/alert-signal-logic-02.png)<br> 
+6. Click **Done** to complete the alert rule.<br><br> ![Configure alert signal](media/configure-azure-monitor/alert-signal-logic-02.png)<br> 
 7. Now moving onto the second step, provide a name of your alert in the **Alert rule name** field, such as **Alert on all Error Events**.  Specify a **Description** detailing specifics for the alert, and select **Critical(Sev 0)** for the **Severity** value from the options provided.
 8. To immediately activate the alert rule on creation, accept the default value for **Enable rule upon creation**.
 9. For the third and final step, you specify an **Action Group**, which ensures that the same actions are taken each time an alert is triggered and can be used for each rule you define. Configure a new action group with the following information:  
@@ -187,16 +187,16 @@ Now, let's walk through an example for creating an alert.
    e. On the **Email/SMS/Push/Voice** pane, select and setup your preference. For example, enable **Email** and provide a valid email SMTP address to deliver the message to.  
    f. Click **OK** to save your changes.<br><br> 
 
-    ![Create new action group](./media/configure-azure-monitor/action-group-properties-01.png)
+    ![Create new action group](media/configure-azure-monitor/action-group-properties-01.png)
 
 10. Click **OK** to complete the action group. 
-11. Click **Create alert rule** to complete the alert rule. It starts running immediately.<br><br> ![Complete creating new alert rule](./media/configure-azure-monitor/alert-rule-01.png)<br> 
+11. Click **Create alert rule** to complete the alert rule. It starts running immediately.<br><br> ![Complete creating new alert rule](media/configure-azure-monitor/alert-rule-01.png)<br> 
 
 ### Test alerts
 
 For reference, this is what an example alert looks like:
 
-![Alert email example](./media/configure-azure-monitor/warning.png)
+![Alert email example](media/configure-azure-monitor/warning.png)
 
 ## See also
 
