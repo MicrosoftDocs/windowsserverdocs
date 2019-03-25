@@ -8,8 +8,8 @@ ms.suite: na
 ms.technology: remote-desktop-services
 ms.tgt_pltfrm: na
 ms.topic: article
-author: lizap
-manager: dongill
+author: davidbel
+manager: daveba
 ms.author: davidbel
 ms.date: 03/21/2019
 ms.localizationpriority: medium
