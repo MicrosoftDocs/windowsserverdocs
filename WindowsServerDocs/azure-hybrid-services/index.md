@@ -37,15 +37,15 @@ You can add an additional layer of security to Windows Admin Center by requiring
 For more info, see [Configure Azure AD authentication for Windows Admin Center.](../manage/windows-admin-center/configure/user-access-control.md#azure-active-directory)  
 
 - **Protect your Hyper-V virtual machines with [Azure Site Recovery](https://docs.microsoft.com/azure/site-recovery/site-recovery-overview)**  
-You can replicate workloads running on VMs so that your business-critical infrastructure is protected in case of a disaster. Windows Admin Center streamlines setup and the process of replicating your virtual machines on your Hyper-V servers or clusters, making it easy to bolster the resiliency of your environment with Azure Site Recovery’s disaster recovery service.  
+You can replicate workloads running on VMs so that your business-critical infrastructure is protected in case of a disaster. Windows Admin Center streamlines setup and the process of replicating your virtual machines on your Hyper-V servers or clusters, making it easier to bolster the resiliency of your environment with Azure Site Recovery’s disaster recovery service.  
 For more info, see [Protect your VMs with Azure Site Recovery and Windows Admin Center](../manage/windows-admin-center/use/azure-site-recovery.md).
 
 - **Back up your Windows servers with [Azure Backup](https://docs.microsoft.com/azure/backup/backup-overview)**  
-You can back up your Windows servers to Azure, protecting you from accidental or malicious deletions, corruption and even ransomware.  
+You can back up your Windows servers to Azure, helping to protect you from accidental or malicious deletions, corruption, and ransomware.  
 For more info, see [Back up your servers with Azure Backup](../manage/windows-admin-center/use/azure-backup.md).
 
 - **Monitor and get email alerts for all the servers in your environment with [Azure Monitor for Virtual Machines](https://docs.microsoft.com/azure/azure-monitor/insights/vminsights-overview)**  
-You can use Azure Monitor, also known as Virtual Machines insights, to monitor server health and events, create email alerts, get a consolidated view of server performance across your environment, and visualize apps, systems, and services connected to a given server.  
+You can use Azure Monitor, also known as Virtual Machines Insights, to monitor server health and events, create email alerts, get a consolidated view of server performance across your environment, and visualize apps, systems, and services connected to a given server.  
 For more info, see [Connect your servers to Azure Monitor and configure email notifications](../manage/windows-admin-center/use/azure-monitor.md).
 
 - **Centrally manage operating system updates for all your Windows Servers with [Azure Update Management](https://docs.microsoft.com/azure/automation/automation-update-management)**  
