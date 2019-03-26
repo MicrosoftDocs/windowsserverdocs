@@ -34,7 +34,7 @@
 ### [Configure Azure services](use/azure-services.md)
 #### [Azure Backup](use/azure-backup.md)
 #### [Azure Site Recovery](use/azure-site-recovery.md)
-#### [Azure Montior](use/azure-monitor.md)
+#### [Azure Monitor](use/azure-monitor.md)
 #### [Azure Update Management](use/azure-update-management.md)
 ### [Logging](use/logging.md)
 ### [Common troubleshooting steps](use/troubleshooting.md)
