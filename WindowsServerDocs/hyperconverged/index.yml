@@ -95,7 +95,7 @@ sections:
 
       image:
 
-        src: https://docs.microsoft.com/media/i-admin-center.svg
+        src: ../media/i-admin-center.svg
 
       title: Windows Admin Center      
       
@@ -105,7 +105,7 @@ sections:
 
       image:
 
-        src: https://docs.microsoft.com/media/i-microsoft-azure.svg
+        src: ../media/i-microsoft-azure.svg
 
       title: Connect to Azure hybrid services      
     
