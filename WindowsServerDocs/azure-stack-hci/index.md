@@ -56,19 +56,13 @@ Many Microsoft customers have complex IT environments and our goal is to provide
 ### Will I be able to upgrade from Azure Stack HCI to Azure Stack? 
 No, but customers can migrate their workloads from Azure Stack HCI to Azure Stack or Azure.
 
+### What Azure services can I connect to Azure Stack HCI?
+
+For an updated list of Azure services that you can connect Azure Stack HCI to, see [Connecting Windows Server to Azure hybrid services](../azure-hybrid-services/index.md).
+
 ### How do I buy Azure Stack HCI solutions?
 Follow these steps:
 
 1. Buy a Microsoft-validated hardware system from your preferred hardware partner.
 1. Install Windows Server 2019 Datacenter edition and Windows Admin Center for management and the ability to connect to Azure for cloud services
 1. Optionally use your Azure account to attach cloud-based management and security services to your workloads.
-
-### How does the cost of Azure Stack HCI compare to Azure Stack?
-
-This depends on many factors.
-
-Azure Stack HCI solutions follow a traditional pricing model. Validated hardware can be purchased from Azure Stack HCI partners and software (Windows Server 2019 Datacenter edition with software-defined datacenter capabilities and Windows Admin Center) can be purchased from various existing channels. For any optional Azure services that you choose to use, you pay with an Azure subscription. 
-
-By comparison, Azure Stack is sold as a fully integrated system that includes services and support. It can be purchased as a system you manage, or as a fully managed service from our partners. In addition to the base system, any Azure services that run on Azure Stack or Azure are sold on a pay-as-you-use basis.
-
-We recommend working with your Microsoft partner or account team for pricing details.
