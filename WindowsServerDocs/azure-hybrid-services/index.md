@@ -38,19 +38,19 @@ For more info, see [Configure Azure AD authentication for Windows Admin Center.]
 
 - Protect your Hyper-V virtual machines with [Azure Site Recovery](https://docs.microsoft.com/azure/site-recovery/site-recovery-overview)  
 You can replicate workloads running on VMs so that your business-critical infrastructure is protected in case of a disaster. Windows Admin Center streamlines setup and the process of replicating your virtual machines on your Hyper-V servers or clusters, making it easy to bolster the resiliency of your environment with Azure Site Recovery’s disaster recovery service.  
-For more info, see [Protect your VMs with Azure Site Recovery and Windows Admin Center](../use/azure-site-recovery.md).
+For more info, see [Protect your VMs with Azure Site Recovery and Windows Admin Center](../manage/windows-admin-center/use/azure-site-recovery.md).
 
 - Back up your Windows servers with [Azure Backup](https://docs.microsoft.com/azure/backup/backup-overview)  
 You can back up your Windows servers to Azure, protecting you from accidental or malicious deletions, corruption and even ransomware.  
-For more info, see [Back up your servers with Azure Backup](../use/azure-backup.md).
+For more info, see [Back up your servers with Azure Backup](../manage/windows-admin-center/use/azure-backup.md).
 
 - Monitor and get email alerts for all the servers in your environment with [Azure Monitor for Virtual Machines](https://docs.microsoft.com/azure/azure-monitor/insights/vminsights-overview)  
 You can use Azure Monitor, also known as Virtual Machines insights, to monitor server health and events, create email alerts, get a consolidated view of server performance across your environment, and visualize apps, systems, and services connected to a given server.  
-For more info, see [Connect your servers to Azure Monitor and configure email notifications](../use/azure-monitor.md).
+For more info, see [Connect your servers to Azure Monitor and configure email notifications](../manage/windows-admin-center/use/azure-monitor.md).
 
 - Centrally manage operating system updates for all your Windows Servers with [Azure Update Management](https://docs.microsoft.com/azure/automation/automation-update-management)  
-You can manage updates and patches for multiple servers and VMs from a single place, rather than on a per-server basis. With Azure Update Management, you can quickly assess the status of available updates, schedule installation of required updates, and review deployment results to verify updates that apply successfully. This is possible whether your servers are Azure VMs, hosted by other cloud providers, or on premises.  
-For more info, see [Configure servers for Azure Update Management](../use/azure-update-management.md).
+You can manage updates and patches for multiple servers and VMs from a single place, rather than on a per-server basis. With Azure Update Management, you can quickly assess the status of available updates, schedule installation of required updates, and review deployment results to verify updates that apply successfully. This is possible whether your servers are Azure VMs, hosted by other cloud providers, or on-premises.  
+For more info, see [Configure servers for Azure Update Management](../manage/windows-admin-center/use/azure-update-management.md).
 
 - Connect your on-premises servers to an Azure Virtual Network with an [Azure Network Adapter](https://aka.ms/WACNetworkAdapter)  
 You can add an Azure Network Adapter to your on-premises servers to help you securely connect the server to an Azure Virtual Network.  
