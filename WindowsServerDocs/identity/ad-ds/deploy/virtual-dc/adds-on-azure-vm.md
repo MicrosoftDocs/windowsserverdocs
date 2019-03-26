@@ -197,11 +197,13 @@ Connect to AZDC02 using the credentials in the script.
 
 Initialize and format the data disk as F:
 
-* Open the Start menu and browse to **Computer Management**
+   * Open the Start menu and browse to **Computer Management**
    * Browse to **Storage** > **Disk Management**
    * Initialize the disk as MBR
    * Create a New Simple Volume and Assign the drive letter F: (provide a Volume label if you wish)
-* Install Active Directory Domain Services using Server Manager
+
+Install Active Directory Domain Services using Server Manager
+
    * Promote the domain controller
    * Add a domain controller to an existing domain - CONTOSO.com
    * Supply credentials to perform the operation
