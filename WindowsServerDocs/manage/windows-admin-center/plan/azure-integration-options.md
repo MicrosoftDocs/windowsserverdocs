@@ -29,15 +29,26 @@ You can use Windows Admin Center to manage your Azure VMs as well as on-premises
 ## Protect your Hyper-V virtual machines with Azure Site Recovery
 [Azure Site Recovery](https://docs.microsoft.com/azure/site-recovery/site-recovery-overview) is an Azure service that replicates workloads running on VMs so that your business-critical infrastructure is protected in case of a disaster. Windows Admin Center streamlines setup and the process of replicating your virtual machines on your Hyper-V servers or clusters, making it easy to bolster the resiliency of your environment with Azure Site Recovery’s disaster recovery service.
 
-[Learn how to protect your virtual machines with Azure Site Recovery with Windows Admin Center.](../use/azure-site-recovery.md)
+[Learn how to protect your virtual machines with Azure Site Recovery from Windows Admin Center.](../use/azure-site-recovery.md)
+
+##  Backup your Windows Servers from Windows Admin Center with Azure Backup 
+[Azure Backup](https://docs.microsoft.com/azure/backup/backup-overview) enables you to back up your Windows Servers to Azure, protecting you from accidental or malicious deletions, corruption and even ransomware.
+
+[Learn how to backup your servers with Azure Backup from Windows Admin Center.](../use/azure-backup.md)
+
+## Monitor and get email alerts for all the servers in your environment with Azure Monitor for Virtual Machines
+[Azure Monitor for Virtual Machines](https://docs.microsoft.com/azure/azure-monitor/insights/vminsights-overview), also known as Virtual Machines insights, is a solution in Azure Monitor that allows you to monitor server health and events, create email alerts, get a consolidated view of server performance across your environment, and visualize apps, systems, and services connected to a given server.
+
+[Learn how to connect your servers to Azure Monitor and configure email notifications using Windows Admin Center.](../use/azure-monitor.md)
+
 
 ## Centrally manage operating system updates for all your Windows Servers with Azure Update Management
 [Azure Update Management](https://docs.microsoft.com/azure/automation/automation-update-management) is a solution in Azure Automation that allows you to manage updates and patches for multiple machines from a single place, rather than on a per-server basis. With Azure Update Management, you can quickly assess the status of available updates, schedule installation of required updates, and review deployment results to verify updates that apply successfully. This is possible whether your machines are Azure VMs, hosted by other cloud providers, or on premise. 
 
 [Learn how to configure servers for Azure Update Management with Windows Admin Center.](../use/azure-update-management.md)
 
-## Azure Network Adapter (Preview)
+## Easily connect your on-premises servers to an Azure Virtual Network with Azure Network Adapter
 
 In the network tool, you’ll find the option to add an Azure Network Adapter. This is a virtual NIC that will help you securely connect your local computer to an Azure Virtual Network.
 
-[Learn how to configure a point-to-site VPN connection between an on-premises Windows Server and an Azure Virtual Network in one click](https://blogs.technet.microsoft.com/networking/2018/09/05/azurenetworkadapter/)
+[Learn how to configure a point-to-site VPN connection between an on-premises Windows Server and an Azure Virtual Network in one click.](https://aka.ms/WACNetworkAdapter)
