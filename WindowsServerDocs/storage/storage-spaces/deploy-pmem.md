@@ -8,7 +8,7 @@ ms.author: adagashe
 ms.technology: storage-spaces
 ms.topic: article
 author: adagashe
-ms.date: 1/11/2019 
+ms.date: 3/26/2019 
 ms.localizationpriority: 
 ---
 ---
@@ -16,7 +16,7 @@ ms.localizationpriority:
 
 >Applies to: Windows Server 2019
 
-Persistent Memory (or PMem) is a new type of memory technology that delivers a unique combination of affordable large capacity and persistence. This topic provides background on PMem and the steps to deploy it with Windows Server 2019with Storage Spaces Direct.
+Persistent Memory (or PMem) is a new type of memory technology that delivers a unique combination of affordable large capacity and persistence. This topic provides background on PMem and the steps to deploy it with Windows Server 2019 with Storage Spaces Direct.
 
 ## Background
 
