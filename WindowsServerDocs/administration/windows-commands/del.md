@@ -79,7 +79,7 @@ del c:\test\*.*
 ```
 To delete all files with the .bat file name extension from the current directory, type:
 ```
-del *.bak
+del *.bat
 ```
 To delete all read-only files in the current directory, type:
 ```
