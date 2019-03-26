@@ -4,4 +4,4 @@
 ## [Failover Clustering](../failover-clustering/failover-clustering-overview.md)
 ## [Software Defined Networking](https://docs.microsoft.com/windows-server/networking/sdn/)
 ## [Windows Admin Center](../manage/windows-admin-center/overview.md)
-## [Connect to Azure](../azure-hybrid-services/)
+## [Connect to Azure](../azure-hybrid-services/index.md)
