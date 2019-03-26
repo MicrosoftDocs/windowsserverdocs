@@ -24,7 +24,7 @@ You can extend on-premises deployments of Windows Server to the cloud by using A
 Azure hybrid services work with Windows Servers in the following configurations:
 
 - Stand-alone physical servers and virtual machines (VMs)
-- Clusters, including hyper-converged clusters, [Azure Stack HCI](../azure-stack-hci), and [Windows Server Software-Defined (WSSD)](https://www.microsoft.com/en-us/cloud-platform/software-defined-datacenter)
+- Clusters, including hyper-converged clusters, [Azure Stack HCI](../azure-stack-hci/index.md), and [Windows Server Software-Defined (WSSD)](https://www.microsoft.com/en-us/cloud-platform/software-defined-datacenter)
 
 While you can set up most Azure hybrid services using the Azure portal and a download or two, many are integrated directly into Windows Admin Center to provide a simplified setup experience and a server-centric view of the services.
 
@@ -34,7 +34,7 @@ These are the Azure services that provide functionality to stand-alone servers a
 
 - Add an layer of security to Windows Admin Center by adding [Azure Active Directory (Azure AD)](https://azure.microsoft.com/services/active-directory/) authentication  
 You can add an additional layer of security to Windows Admin Center by requiring users to authenticate using Azure Active Directory (Azure AD) identities to access the gateway. Azure AD authentication also lets you take advantage of Azure AD’s security features like conditional access and multi-factor authentication.  
-For more info, see [Configure Azure AD authentication for Windows Admin Center.](../configure/user-access-control.md#azure-active-directory)  
+For more info, see [Configure Azure AD authentication for Windows Admin Center.](../manage/windows-admin-center/configure/user-access-control.md#azure-active-directory)  
 
 - Protect your Hyper-V virtual machines with [Azure Site Recovery](https://docs.microsoft.com/azure/site-recovery/site-recovery-overview)  
 You can replicate workloads running on VMs so that your business-critical infrastructure is protected in case of a disaster. Windows Admin Center streamlines setup and the process of replicating your virtual machines on your Hyper-V servers or clusters, making it easy to bolster the resiliency of your environment with Azure Site Recovery’s disaster recovery service.  
@@ -56,8 +56,8 @@ For more info, see [Configure servers for Azure Update Management](../use/azure-
 You can add an Azure Network Adapter to your on-premises servers to help you securely connect the server to an Azure Virtual Network.  
 For more info, see [Configure a point-to-site VPN connection between an on-premises Windows Server and an Azure Virtual Network](https://aka.ms/WACNetworkAdapter).
 
-- [Manage Azure IaaS virtual machines in Windows Admin Center](../configure/manage-azure-vms.md)  
-You can use Windows Admin Center to manage your Azure VMs as well as on-premises machines. By configuring your Windows Admin Center gateway to connect to your Azure VNet, you can manage virtual machines in Azure using the consistent, simplified tools that Windows Admin Center provides. For more info, see [Configure Windows Admin Center to manage VMs in Azure.](../configure/manage-azure-vms.md).
+- [Manage Azure IaaS virtual machines in Windows Admin Center](../manage/windows-admin-center/configure/manage-azure-vms.md)  
+You can use Windows Admin Center to manage your Azure VMs as well as on-premises machines. By configuring your Windows Admin Center gateway to connect to your Azure VNet, you can manage virtual machines in Azure using the consistent, simplified tools that Windows Admin Center provides. For more info, see [Configure Windows Admin Center to manage VMs in Azure.](../manage/windows-admin-center/configure/manage-azure-vms.md).
 
 ## Services for clusters
 

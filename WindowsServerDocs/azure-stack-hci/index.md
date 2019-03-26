@@ -16,7 +16,7 @@ ms.date: 03/26/2019
 
 Azure Stack HCI is a hyper-converged Windows Server 2019 cluster solution that uses validated hardware purchased from one of our hardware partners to run your virtualized workloads on-premises, optionally using relevant Azure services for cloud-based backup, site-recovery and more. Azure Stack HCI is an improved and updated version of the Windows Server Software-Defined solutions, which are based on Windows Server 2016.
 
-# The Azure and Azure Stack family
+## The Azure Stack family
 
 Azure Stack HCI is part of the Azure and Azure Stack family, using the same software-defined compute, storage, and networking software as Azure Stack. Here's a quick summary of the different solutions:
 
