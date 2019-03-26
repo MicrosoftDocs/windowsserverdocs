@@ -8,13 +8,13 @@ ms.author: adagashe
 ms.technology: storage-spaces
 ms.topic: article
 author: adagashe
-ms.date: 3/6/2019 
+ms.date: 3/26/2019 
 ms.localizationpriority: 
 ---
 ---
 # Use Azure Monitor to send emails for Health Service Faults
 
->Applies to: Windows Server 2016 and Windows Server 2019
+>Applies to: Windows Server 2019, Windows Server 2016
 
 Azure Monitor maximizes the availability and performance of your applications by delivering a comprehensive solution for collecting, analyzing, and acting on telemetry from your cloud and on-premises environments. It helps you understand how your applications are performing and proactively identifies issues affecting them and the resources they depend on.
 
@@ -23,7 +23,8 @@ This is particularly helpful for your on-premises hyper-converged cluster. With 
 
 ## Understanding Azure Monitor
 
-All data collected by Azure Monitor fits into one of two fundamental types: metrics and logs. 
+All data collected by Azure Monitor fits into one of two fundamental types: metrics and logs.
+
 1. [Metrics](https://docs.microsoft.com/en-us/azure/azure-monitor/platform/data-collection#metrics) are numerical values that describe some aspect of a system at a particular point in time. They are lightweight and capable of supporting near real-time scenarios. You'll see data collected by Azure Monitor right in their Overview page in the Azure portal.
 
 ![image of metrics ingesting in metrics explorer](media/configure-azure-monitor/metrics.png)
@@ -71,13 +72,17 @@ Log in to the Azure portal at [https://portal.azure.com](https://portal.azure.co
 
 For more details on the steps listed below, see the [Azure Monitor documentation](https://docs.microsoft.com/en-us/azure/azure-monitor/learn/quick-collect-windows-computer).
 
-1. In the Azure portal, click **All services**. In the list of resources, type **Log Analytics**. As you begin typing, the list filters based on your input. Select **Log Analytics**.<br><br> ![Azure portal](media/configure-azure-monitor/azure-portal-01.png)<br><br>
+1. In the Azure portal, click **All services**. In the list of resources, type **Log Analytics**. As you begin typing, the list filters based on your input. Select **Log Analytics**.<br><br> 
+
+   ![Azure portal](media/configure-azure-monitor/azure-portal-01.png)<br><br>
 
 2. Click **Create**, and then select choices for the following items:
 
-  * Provide a name for the new **Log Analytics Workspace**, such as *DefaultLAWorkspace*. 
-  * Select a **Subscription** to link to by selecting from the drop-down list if the default selected is not appropriate.
-  * For **Resource Group**, select an existing resource group that contains one or more Azure virtual machines. <br><br>![Create Log Analytics resource blade](media/configure-azure-monitor/create-loganalytics-workspace-02.png) <br><br>  
+   * Provide a name for the new **Log Analytics Workspace**, such as *DefaultLAWorkspace*. 
+   * Select a **Subscription** to link to by selecting from the drop-down list if the default selected is not appropriate.
+   * For **Resource Group**, select an existing resource group that contains one or more Azure virtual machines. <br><br>
+
+      ![Create Log Analytics resource blade](media/configure-azure-monitor/create-loganalytics-workspace-02.png) <br><br>  
 
 3. After providing the required information on the **Log Analytics Workspace** pane, click **OK**.  
 
