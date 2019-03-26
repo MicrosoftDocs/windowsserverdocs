@@ -102,7 +102,7 @@ description: Windows Server documentation helps IT professionals evaluate, plan,
                             </a>
             </li>
             <li>
-                            <a href="https://docs.microsoft.com/windows-server/hyperconverged">
+                            <a href="hyperconverged/index.yml">
                             <div class="cardSize">
                                 <div class="cardPadding">
                                     <div class="card">
