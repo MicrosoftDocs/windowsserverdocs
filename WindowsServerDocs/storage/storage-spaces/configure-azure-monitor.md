@@ -66,7 +66,7 @@ If you don't have an Azure subscription, create a [free account](https://azure.m
 
 ### Login in to Azure Portal
 
-Log in to the Azure portal at [https://portal.azure.com](https://portal.azure.com).
+Log in to the Azure portal at [https://portal.azure.com](https://azure.microsoft.com/free/?WT.mc_id=A261C142F).
 
 ### Create a workspace
 
