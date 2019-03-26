@@ -121,7 +121,7 @@ description: Windows Server documentation helps IT professionals evaluate, plan,
                             </a>
             </li>
             <li>
-                            <a href="https://docs.microsoft.com/windows-server/azure-hybrid-services">
+                            <a href="azure-hybrid-services/index.md">
                             <div class="cardSize">
                                 <div class="cardPadding">
                                     <div class="card">

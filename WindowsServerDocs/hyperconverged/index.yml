@@ -89,7 +89,7 @@ sections:
 
       title: Software Defined Networking
 
-     - href: ../manage/windows-admin-center/overview.md
+    - href: ../manage/windows-admin-center/overview.md
 
       html: <p>Manages your cluster and other Windows servers.</p>
 
@@ -99,7 +99,7 @@ sections:
 
       title: Windows Admin Center      
       
-      - href: ../azure-hybrid-services.md
+    - href: ../azure-hybrid-services.md
 
       html: <p>Connects your cluster to Azure hybrid services for site recovery, monitoring, and more.</p>
 
@@ -109,7 +109,7 @@ sections:
 
       title: Connect to Azure hybrid services      
     
-      - href: ../azure-stack-hci
+    - href: ../azure-stack-hci
 
       html: <p>Pairs Windows Server 2019 virtualization and clustering technologies with validated hardware solutions by the partner of your choice, helping to take the guesswork out of tuning a software-defined datacenter.</p>
 
@@ -119,7 +119,7 @@ sections:
 
       title: Azure Stack HCI     
       
-      - href: https://www.microsoft.com/cloud-platform/software-defined-datacenter
+    - href: https://www.microsoft.com/cloud-platform/software-defined-datacenter
 
       html: <p>Pairs Windows Server virtualization and clustering technologies with validated hardware solutions by the partner of your choice, helping to take the guesswork out of tuning a software-defined datacenter.</p>
 
