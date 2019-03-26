@@ -1,0 +1,180 @@
+---
+title: Understand and Deploy Persistent Memory
+description: Detailed info on what persistent memory is and how to set it up with storage spaces direct in Windows Server 2019.
+keywords: Storage Spaces Direct,persistent memory,pmem, storage, S2D
+ms.assetid: 
+ms.prod: 
+ms.author: adagashe
+ms.technology: storage-spaces
+ms.topic: article
+author: adagashe
+ms.date: 1/11/2019 
+ms.localizationpriority: 
+---
+---
+# Understand and deploy persistent memory
+
+>Applies to: Windows Server 2019
+
+Persistent Memory (or PMem) is a new type of memory technology that delivers a unique combination of affordable large capacity and persistence. This topic provides background on PMem and the steps to deploy it with Windows Server 2019with Storage Spaces Direct.
+
+## Background
+
+PMem is a type of non-volatile DRAM (NVDIMM) that has the speed of DRAM, but retains its memory content through power cycles (the memory contents remain even when system power goes down in the event of an unexpected power loss, user initiated shutdown, system crash, etc.). Because of this, resuming from where you left off is significantly faster, since the content of your RAM doesn't need to be reloaded. Another unique characteristic is that PMem is byte addressable, which means you can also use it as storage (which is why you may hear PMem being referred to as storage-class memory).
+
+
+To see some of these benefits, let's look at the this demo from Microsoft Ignite 2018:
+
+[![Microsoft Ignite 2018 Pmem demo](http://img.youtube.com/vi/8WMXkMLJORc/0.jpg)](http://www.youtube.com/watch?v=8WMXkMLJORc)
+
+Any storage system that provides fault tolerance necessarily makes distributed copies of writes, which must traverse the network and incurs backend write amplification. For this reason, the absolute largest IOPS benchmark numbers are typically achieved with reads only, especially if the storage system has common-sense optimizations to read from the local copy whenever possible, which Storage Spaces Direct does.
+
+**With 100% reads, the cluster delivers 13,798,674 IOPS.**
+
+![13.7m IOPS record screenshot](media/deploy-pmem/iops-record.png)
+
+If you watch the video closely, you'll notice thatwhat’s even more jaw-dropping is the latency: even at over 13.7 M IOPS, the filesystem in Windows is reporting latency that’s consistently less than 40 µs! (That’s the symbol for microseconds, one-millionth of a second.) This is an order of magnitude faster than what typical all-flash vendors proudly advertise today.
+
+Together, Storage Spaces Direct in Windows Server 2019 and Intel® Optane™ DC persistent memory deliver breakthrough performance. This industry-leading HCI benchmark of over 13.7M IOPS, with predictable and extremely low latency, is more than double our previous industry-leading benchmark of 6.7M IOPS. What’s more, this time we needed just 12 server nodes, 25% fewer than two years ago.
+
+![IOPS gains](media/deploy-pmem/iops-gains.png)
+
+Now, let's dive into how you configure persistent memory.
+
+## Interleave sets
+
+### Understanding interleave sets
+
+Recall that the NVDIMM-N resides in a standard DIMM (memory) slot, placing data closer to the processor (thus, reducing the latency and fetching better performance). To build on this, an interleave set is when two or more NVDIMMs create an N-Way interleave set to provide stripes read/write operations for increased throughput. The most common setups are 2-Way or 4-Way interleaving.
+
+Interleaved sets can often be created in a platform's BIOS to make multiple persistent memory devices appear as a single logical disk to Windows Server. Each persistent memory logical disk contains an interleaved set of physical devices by running:
+
+```PowerShell
+Get-PmemDisk
+```
+
+An example output is shown below:
+
+```
+DiskNumber Size   HealthStatus AtomicityType CanBeRemoved PhysicalDeviceIds UnsafeShutdownCount
+---------- ----   ------------ ------------- ------------ ----------------- -------------------
+2          252 GB Healthy      None          True         {20, 120}         0
+3          252 GB Healthy      None          True         {1020, 1120}      0
+```
+
+We can see that the logical pmem disk #2 has physical devices of Id20 and Id120 and logical pmem disk #3 has physical devices of Id1020 and Id1120. We can also feed a specific pmem disk to Get-PmemPhysicalDevice to get all its physical NVDIMMs in the interleave set as below.
+
+
+```PowerShell
+(Get-PmemDisk)[0] | Get-PmemPhysicalDevice
+```
+
+An example output is shown below:
+
+```
+DeviceId DeviceType           HealthStatus OperationalStatus PhysicalLocation FirmwareRevision Persistent memory size Volatile memory size
+-------- ----------           ------------ ----------------- ---------------- ---------------- ---------------------- --------------------
+20       Intel INVDIMM device Healthy      {Ok}              CPU1_DIMM_C1     102005310        126 GB                 0 GB
+120      Intel INVDIMM device Healthy      {Ok}              CPU1_DIMM_F1     102005310        126 GB                 0 GB
+```
+
+### Configuring interleave sets
+
+To configure an interleave set, run the following PowerShell cmdlet:
+
+```PowerShell
+Get-PmemUnusedRegion
+
+RegionId TotalSizeInBytes DeviceId
+-------- ---------------- --------
+       1     270582939648 {20, 120}
+       3     270582939648 {1020, 1120}
+```
+
+This shows all the persistent memory region(s) not assigned to a logical persistent memory disk on the system.
+
+To see all of the persistent memory devices information in the system, including device device type, location, health and operational status, etc. you can run the following cmdlet on the local server:
+
+```PowerShell
+Get-PmemPhysicalDevice
+
+DeviceId DeviceType           HealthStatus OperationalStatus PhysicalLocation FirmwareRevision Persistent memory size Volatile
+                                                                                                                      memory size
+-------- ----------           ------------ ----------------- ---------------- ---------------- ---------------------- --------------
+1020     Intel INVDIMM device Healthy      {Ok}              CPU2_DIMM_C1     102005310        126 GB                 0 GB
+1120     Intel INVDIMM device Healthy      {Ok}              CPU2_DIMM_F1     102005310        126 GB                 0 GB
+120      Intel INVDIMM device Healthy      {Ok}              CPU1_DIMM_F1     102005310        126 GB                 0 GB
+20       Intel INVDIMM device Healthy      {Ok}              CPU1_DIMM_C1     102005310        126 GB                 0 GB
+```
+
+Since we we have available unused pmem region, we can create new persistent memory disks. We can create multiple persistent memory disk using the unused region by:
+
+```PowerShell
+Get-PmemUnusedRegion | New-PmemDisk
+Creating new persistent memory disk. This may take a few moments.
+```
+
+Ater this is done, we can see the results by running:
+
+```PowerShell
+Get-PmemDisk
+
+DiskNumber Size   HealthStatus AtomicityType CanBeRemoved PhysicalDeviceIds UnsafeShutdownCount
+---------- ----   ------------ ------------- ------------ ----------------- -------------------
+2          252 GB Healthy      None          True         {20, 120}         0
+3          252 GB Healthy      None          True         {1020, 1120}      0
+```
+
+It is worth noting that we could have ran **Get-PhysicalDisk | Where MediaType -Eq SCM** instead of **Get-PmemDisk** to get the same results. The newly created persistent memory disk corresponds 1:1 to drives that appear in PowerShell and Windows Admin Center.
+
+### Using persistent memory for cache or capacity
+
+Storage Spaces Direct on Windows Server 2019 supports using persistent memory as either a cache or capacity drive. See this [documentation](understand-the-cache.md) for more details on setting up cache and capacity drives.
+
+## Monitoring Health
+
+When you use persistent memory, there are a few differences in the monitoring experience:
+
+1. Persistent memory doesn't create Physical Disk performance counters, so you won't see if appear on charts in Windows Admin Center.
+2. Persistent memory doesn't create Storport 505 data, so you won't get proactive outlier detection.
+
+Apart from that, the monitoring experience is the same as any other physical disk. You can query for the health of a persistent memory disk by running:
+
+```PowerShell
+Get-PmemDisk
+
+DiskNumber Size   HealthStatus AtomicityType CanBeRemoved PhysicalDeviceIds UnsafeShutdownCount
+---------- ----   ------------ ------------- ------------ ----------------- -------------------
+2          252 GB Unhealthy    None          True         {20, 120}         2
+3          252 GB Healthy      None          True         {1020, 1120}      0
+
+Get-PmemDisk | Get-PhysicalDisk | select SerialNumber, HealthStatus, OperationalStatus, OperationalDetails
+
+SerialNumber               HealthStatus OperationalStatus  OperationalDetails
+------------               ------------ ------------------ ------------------
+802c-01-1602-117cb5fc      Healthy      OK
+802c-01-1602-117cb64f      Warning      Predictive Failure {Threshold Exceeded,NVDIMM_N Error}
+```
+
+**HealthStatus** shows if the persistent memory disk is healthy or not. The **UnsafeshutdownCount** tracks the number of shutdowns that may cause data loss on this logical disk. It is the sum of the unsafe shutdown counts of all the underlying persistent memory devices of this disk. We can also use the below commands to query health info. The **OperationalStatus** and **OperationalDetails** provide more information about the health status.
+
+To query the health of persistent memory device:
+
+```PowerShell
+Get-PmemPhysicalDevice
+
+DeviceId DeviceType           HealthStatus OperationalStatus PhysicalLocation FirmwareRevision Persistent memory size Volatile memory size
+-------- ----------           ------------ ----------------- ---------------- ---------------- ---------------------- --------------------
+1020     Intel INVDIMM device Healthy      {Ok}              CPU2_DIMM_C1     102005310        126 GB                 0 GB
+1120     Intel INVDIMM device Healthy      {Ok}              CPU2_DIMM_F1     102005310        126 GB                 0 GB
+120      Intel INVDIMM device Healthy      {Ok}              CPU1_DIMM_F1     102005310        126 GB                 0 GB
+20       Intel INVDIMM device Unhealthy    {HardwareError}   CPU1_DIMM_C1     102005310        126 GB                 0 GB
+```
+
+This shows which persistent memory device is unhealthy. The unhealthy device (**DeviceId** 20 matches the case in the above **Get-PmemDisk** example. The **PhysicalLocation** from BIOS can help identify which persistent memory device is in faulty state.
+
+## See also
+
+- [Storage Spaces Direct overview](storage-spaces-direct-overview.md)
+- [Storage-class Memory (NVDIMM-N) Health Management in Windows](storage-class-memory-health.md)
+- [Understand the cache](understand-the-cache.md)
