@@ -131,6 +131,80 @@ It is worth noting that we could have ran **Get-PhysicalDisk | Where MediaType -
 
 Storage Spaces Direct on Windows Server 2019 supports using persistent memory as either a cache or capacity drive. See this [documentation](understand-the-cache.md) for more details on setting up cache and capacity drives.
 
+## Creating a DAX Volume
+
+### Understanding DAX
+
+There are two methods for accessing persistent memory. They are:
+
+1. **Direct access (DAX)**, which operates like memory to get the lowest latency. The app directly modifies the persistent memory, bypassing the stack. Note that this can only be used with NTFS.
+2. **Block access**, which operates like storage for app compatibility. The data flows through the stack in this setup, and this can be used with NTFS and ReFS.
+
+An example of this can be seen below:
+
+![DAX stack](media/deploy-pmem/dax.png)
+
+### Configuring DAX
+
+We will need to use PowerShell cmdlets to create a DAX volume on a persistent memory. By using the **-IsDax** switch, we can format a volume to be DAX enabled.
+
+```PowerShell
+Format-Volume -IsDax:$true
+```
+
+The following code snippet will help you create a DAX volume on a persistent memory disk.
+
+```PowerShell
+# Here we use the first pmem disk to create the volume as an example
+$disk = (Get-PmemDisk)[0] | Get-PhysicalDisk | Get-Disk
+# Initialize the disk to GPT if it is not initialized
+If ($disk.partitionstyle -eq "RAW") {$disk | Initialize-Disk -PartitionStyle GPT}
+# Create a partition with drive letter 'S' (can use any available drive letter)
+$disk | New-Partition -DriveLetter S -UseMaximumSize
+
+
+   DiskPath: \\?\scmld#ven_8980&dev_097a&subsys_89804151&rev_0018#3&1b1819f6&0&03018089fb63494db728d8418b3cbbf549997891#{53f56307-b6
+bf-11d0-94f2-00a0c91efb8b}
+
+PartitionNumber  DriveLetter Offset                                               Size Type
+---------------  ----------- ------                                               ---- ----
+2                S           16777216                                        251.98 GB Basic
+
+# Format the volume with drive letter 'S' to DAX Volume
+Format-Volume -FileSystem NTFS -IsDax:$true -DriveLetter S
+
+DriveLetter FriendlyName FileSystemType DriveType HealthStatus OperationalStatus SizeRemaining      Size
+----------- ------------ -------------- --------- ------------ ----------------- -------------      ----
+S                        NTFS           Fixed     Healthy      OK                    251.91 GB 251.98 GB
+
+# Verify the volume is DAX enabled
+Get-Partition -DriveLetter S | fl
+
+
+UniqueId             : {00000000-0000-0000-0000-000100000000}SCMLD\VEN_8980&DEV_097A&SUBSYS_89804151&REV_0018\3&1B1819F6&0&03018089F
+                       B63494DB728D8418B3CBBF549997891:WIN-8KGI228ULGA
+AccessPaths          : {S:\, \\?\Volume{cf468ffa-ae17-4139-a575-717547d4df09}\}
+DiskNumber           : 2
+DiskPath             : \\?\scmld#ven_8980&dev_097a&subsys_89804151&rev_0018#3&1b1819f6&0&03018089fb63494db728d8418b3cbbf549997891#{5
+                       3f56307-b6bf-11d0-94f2-00a0c91efb8b}
+DriveLetter          : S
+Guid                 : {cf468ffa-ae17-4139-a575-717547d4df09}
+IsActive             : False
+IsBoot               : False
+IsHidden             : False
+IsOffline            : False
+IsReadOnly           : False
+IsShadowCopy         : False
+IsDAX                : True                   # <- True: DAX enabled
+IsSystem             : False
+NoDefaultDriveLetter : False
+Offset               : 16777216
+OperationalStatus    : Online
+PartitionNumber      : 2
+Size                 : 251.98 GB
+Type                 : Basic
+```
+
 ## Monitoring Health
 
 When you use persistent memory, there are a few differences in the monitoring experience:
@@ -172,6 +246,43 @@ DeviceId DeviceType           HealthStatus OperationalStatus PhysicalLocation Fi
 ```
 
 This shows which persistent memory device is unhealthy. The unhealthy device (**DeviceId** 20 matches the case in the above **Get-PmemDisk** example. The **PhysicalLocation** from BIOS can help identify which persistent memory device is in faulty state.
+
+## Replacing persistent memory
+
+Above we described how to view the health status of your persistent memory. If you need to replace a failed module, you will need to re-provision the persistent memory disk (refer to the steps we outlined above).
+
+When troubleshooting, you may need to use **Remove-PmemDisk**, which removes a specific persistent memory disk. We can remove all current persistent disks by:
+
+```PowerShell
+Get-PmemDisk | Remove-PmemDisk
+
+cmdlet Remove-PmemDisk at command pipeline position 1
+Supply values for the following parameters:
+DiskNumber: 2
+
+This will remove the persistent memory disk(s) from the system and will result in data loss.
+Remove the persistent memory disk(s)?
+[Y] Yes  [A] Yes to All  [N] No  [L] No to All  [S] Suspend  [?] Help (default is "Y"): Y
+Removing the persistent memory disk. This may take a few moments.
+```
+
+It is important to note that removing a persistent memory disk will result in data loss on that disk.
+
+Another cmdlet you may need is **Initialize-PmemPhysicalDevice**, which will initialize the label storage area on the physical persistent memory devices. This can be used to clear corrupted label storage info on the persistent memory devices.
+
+```PowerShell
+Get-PmemPhysicalDevice | Initialize-PmemPhysicalDevice
+
+This will initialize the label storage area on the physical persistent memory device(s) and will result in data loss.
+Initializes the physical persistent memory device(s)?
+[Y] Yes  [A] Yes to All  [N] No  [L] No to All  [S] Suspend  [?] Help (default is "Y"): A
+Initializing the physical persistent memory device. This may take a few moments.
+Initializing the physical persistent memory device. This may take a few moments.
+Initializing the physical persistent memory device. This may take a few moments.
+Initializing the physical persistent memory device. This may take a few moments.
+```
+
+It is important to note that this command should be used as a last resort to fix persistent memory related issues. It will result in data loss to the persistent memory.
 
 ## See also
 
