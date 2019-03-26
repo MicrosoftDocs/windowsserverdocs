@@ -31,7 +31,7 @@ Some solutions, like Azure Update Management, also depend on Azure Automation, w
 
 From within WAC, you can enable two monitoring solutions:
 
-- [Azure Update Management](azure-update-management) (in the Updates tool)
+- [Azure Update Management](azure-update-management.md) (in the Updates tool)
 - Azure Monitor for VMs (in server Settings), a.k.a Virtual Machines insights
 
 You can get started using Azure Monitor from either of these tools. If you've never used Azure Monitor before, WAC will automatically provision a Log Analytics workspace (and Azure Automation account, if needed), and install and configure the Microsoft Monitoring Agent (MMA) on the target server. It will then install the corresponding solution into the workspace. 
