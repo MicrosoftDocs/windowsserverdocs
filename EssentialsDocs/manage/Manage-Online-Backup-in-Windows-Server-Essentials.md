@@ -441,7 +441,7 @@ manager: dongill
 |------------|-----------------|  
 |**Folder Name:**|The name of the folder that is included in the online backup.<br /><br /> To add or exclude a folder, run the **Configure online backup** task.|  
 |**Folder Path:**|The location of the folder.|  
-|**Status:**|There are three types of status  � **Protected**, **Not protected**, and **Unknown**.|  
+|**Status:**|There are three types of status - **Protected**, **Not protected**, and **Unknown**.|  
   
 ###  <a name="BKMK_19"></a> Online backup history in Windows Server Essentials  
  The **Backup History** sub-section in the Online Backup section of the Dashboard displays a list of recent online backups. You can use successful backups to restore file and folders. The following table describes the information that is included in the list.  
@@ -450,7 +450,7 @@ manager: dongill
 |------------|-----------------|  
 |**Operation:**|There are two types of operations - **Backup** and **Restore**.|  
 |**Time:**|This is the time logged for the most recent status.|  
-|**Status:**|There are five types of status  � **Success**, **In progress**, **Canceled**, **Warning**, and **Unsuccessful**.|  
+|**Status:**|There are five types of status - **Success**, **In progress**, **Canceled**, **Warning**, and **Unsuccessful**.|  
   
 ## See also  
   

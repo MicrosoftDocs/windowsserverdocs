@@ -385,14 +385,14 @@ gpupdate
  You must change the DNS64 configuration to listen to the IP-HTTPS interface by using the following Windows PowerShell command.  
   
 ```powershell  
-Set-NetDnsTransitionConfiguration  �AcceptInterface IPHTTPSInterface  
+Set-NetDnsTransitionConfiguration -AcceptInterface IPHTTPSInterface  
 ```  
   
 ##  <a name="BKMK_ExemptPort"></a> Step 9: Reserve ports for the WinNat service  
  Use the following Windows PowerShell command to reserve ports for the WinNat service. Replace "192.168.1.100" with the actual IPv4 address of your  Windows Server Essentials server.  
   
 ```powershell  
-Set-NetNatTransitionConfiguration  �IPv4AddressPortPool @("192.168.1.100, 10000-47000")  
+Set-NetNatTransitionConfiguration -IPv4AddressPortPool @("192.168.1.100, 10000-47000")  
 ```  
   
 > [!IMPORTANT]
@@ -466,8 +466,8 @@ gpupdate
 # Enable client computers running Windows 7 to use DirectAccess  
 $allcertsinroot = dir cert:\LocalMachine\root  
 $rootcert = $allcertsinroot | Where-Object{$_.Subject -like "*-CAA*"}  
-Set-DAServer  �IPSecRootCertificate $rootcert[0]  
-Set  �DAClient  �OnlyRemoteComputers Disabled -Downlevel Enabled  
+Set-DAServer -IPSecRootCertificate $rootcert[0]  
+Set -DAClient -OnlyRemoteComputers Disabled -Downlevel Enabled  
   
 #Set the appropriate security group used for DA client computers. Replace the group name below with the one you created for DA clients  
 Add-DAClient -SecurityGroupNameList $DaSecurityGroup   
@@ -496,7 +496,7 @@ XCOPY 'C:\inetpub\wwwroot' 'C:\Program Files\Windows Server\Bin\WebApps\Site\ins
 XCOPY 'C:\Program Files\Windows Server\Bin\WebApps\Site\Default.aspx' 'C:\Program Files\Windows Server\Bin\WebApps\Site\insideoutside' /Y  
   
 # Reserve ports for the WinNat service  
-Set-NetNatTransitionConfiguration  �IPv4AddressPortPool @("192.168.1.100, 10000-47000")  
+Set-NetNatTransitionConfiguration -IPv4AddressPortPool @("192.168.1.100, 10000-47000")  
   
 # Restart the WinNat service  
 Restart-Service winnat  

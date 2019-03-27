@@ -124,7 +124,7 @@ manager: dongill
 > [!NOTE]
 >   Windows Server Essentials does not support the following restore scenarios:  
 >   
->  -   Restoring a Master Boot Record (MBR) disk to a Unified Extensible Firmware Interface (UEFI) �based computer.  
+>  -   Restoring a Master Boot Record (MBR) disk to a Unified Extensible Firmware Interface (UEFI)-based computer.  
 > -   Restoring a UEFI/GPT backup to a BIOS system.  
 >   
 >  If you restore data in either of these scenarios, you will not be able to boot the system. In addition, you might not be able to use hard drives that are larger than two terabytes in size.  
@@ -235,7 +235,7 @@ manager: dongill
         1.  Click **Run Disk Manager (advanced)**, and create a new volume that is the same size as the system reserved volume.  
   
             > [!NOTE]
-            >  If a client computer is Unified Extensible Firmware Interface (UEFI) �based, you must use the **diskpart** tool to initialize the system disk. To do this, open a command window (press Ctrl+Alt+Shift for 5 seconds in the WinPE environment), run **diskpart.exe**, and then run the following diskpart commands:  
+            >  If a client computer is Unified Extensible Firmware Interface (UEFI)-based, you must use the **diskpart** tool to initialize the system disk. To do this, open a command window (press Ctrl+Alt+Shift for 5 seconds in the WinPE environment), run **diskpart.exe**, and then run the following diskpart commands:  
             >   
             >  1.  **DISKPART>  list disk**  
             > 2.  **DISKPART> select disk #** *<disk\>*  
