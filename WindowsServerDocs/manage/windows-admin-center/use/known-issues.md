@@ -7,7 +7,7 @@ author: jwwool
 ms.author: jeffrew
 ms.localizationpriority: medium
 ms.prod: windows-server-threshold
-ms.date: 03/07/2019
+ms.date: 03/25/2019
 ---
 
 # Windows Admin Center Known Issues
@@ -62,10 +62,6 @@ If you encounter an issue not described on this page, please [let us know](http:
 
 - When you update Windows Admin Center, you must reinstall your extensions.
 - If you add an extension feed that is inaccessible, there is no warning. [14412861]
-
-### Azure
-
-If you configured your gateway for Azure connectivity when you set up Azure Site Recovery and you used the New-AsrAadApp.ps1 available in our documentation prior to the version 1804.25 release, you need to delete your existing Azure AD application. In the Azure portal go to **Azure Active Directory** > **Application registration** > **All applications** and search for "ASR" (the old Azure AD app is named "ASR-Honolulu-*gateway*"). Follow the instructions above to create the replacement application with the correct permissions.
 
 ## Browser Specific Issues
 
@@ -124,6 +120,7 @@ If it is not installed, you can [download and install WMF 5.1](https://www.micro
 ### Server Settings
 
 - If you modify a setting, then try to navigate away without saving, the page will warn you about the unsaved changes, but continue to navigate away. You may end up in a state where the settings tab that is selected does not match the content of the page. [19905798] [19905787]
+- Monitoring and alerts integration with Azure Monitor has a dependency on an Azure API with an issue and causes the functionality of Windows Admin Center integration to fail. This will be resolved by 3/29/2019. This only applies to Windows Admin Center Preview.
 
 ### Certificates
 
@@ -207,6 +204,8 @@ If it is not installed, you can [download and install WMF 5.1](https://www.micro
     3. Got to “%allusersprofile%\Microsoft\Crypto\RSA\S-1-5-18” folder and delete all its contents.
     4. Restart ‘Cryptographic Services’ service.
     5. Repeat setting up Update Management with Windows Admin Center
+
+- There is a known issue with an Azure API that has broken the functionality of Azure Update Management in Windows Admin Center. This will be fixed by 3/29/2019. 
 
 ### Virtual Machines
 
