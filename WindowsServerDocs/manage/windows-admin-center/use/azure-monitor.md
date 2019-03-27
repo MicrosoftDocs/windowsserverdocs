@@ -49,9 +49,6 @@ If you connect to a different server, but have already setup a Log Analytics wor
 ## Azure Monitor for virtual machines (a.k.a. Virtual Machine insights)
 >Applies To: Windows Admin Center Preview
 
-> [!NOTE]
-> We are releasing this feature with Windows Admin Center Preview 1903 to Windows Insiders March 25th, however there is a pending API update in Azure that is not rolled out yet. The feature will not be functional end-to-end until the update in Azure is live by the end of the week, March 29th.
-
 When you set up Azure Monitor for VMs in server Settings, Windows Admin Center enables the Azure Monitor for VMs solution, also known as Virtual Machine insights. This solution allows you to monitor server health and events, create email alerts, get a consolidated view of server performance across your environment, and visualize apps, systems, and services connected to a given server.
 
 > [!NOTE]
