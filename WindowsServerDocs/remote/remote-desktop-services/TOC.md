@@ -71,6 +71,7 @@
 #### [Remote Desktop URI scheme](clients/remote-desktop-uri.md)
 #### [Remote Desktop client FAQ](clients/remote-desktop-client-faq.md)
 #### [Privacy settings for managed apps and desktops](clients/remote-privacy-settings.md)
+#### [Troubleshooting Remote Desktop Connections](clients/troubleshoot-remote-desktop-connections.md)
 ### Remote Desktop client for Windows
 #### [Get started](clients/windows.md)
 #### [What's new in the Windows client?](clients/windows-whatsnew.md)
