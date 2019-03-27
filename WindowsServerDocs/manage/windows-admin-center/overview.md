@@ -111,6 +111,7 @@ You can get Windows Admin Center up and running in your environment in minutes:
 
 Learn about our latest released features:
 
+- Version [1903] (https://aka.ms/wac1903) brings email notifications from Azure Monitor, the ability to add Server or PC connections from Active Directory, and new tools to manage Active Directory, DHCP, and DNS.
 - Version [1902] (https://aka.ms/wac1902) added a shared connection list & improvements to software defined network (SDN) management, including new SDN tools to manage ACLs, gateway connections, and logical networks.
 - Version [1812](https://aka.ms/wac1812) added dark theme (in preview), power configuration settings, BMC info, and PowerShell support to manage [extensions](./configure/using-extensions.md#manage-extensions-with-powershell) and [connections](./use/get-started.md#use-powershell-to-import-or-export-your-connections-with-tags).
 - Version [1809.5](https://aka.ms/wac1809.5) is a GA cumulative update that includes various quality and functional improvements and bug fixes throughout the platform and a few new features in the hyper-converged infrastructure management solution.

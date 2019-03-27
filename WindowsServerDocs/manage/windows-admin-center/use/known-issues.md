@@ -120,7 +120,6 @@ If it is not installed, you can [download and install WMF 5.1](https://www.micro
 ### Server Settings
 
 - If you modify a setting, then try to navigate away without saving, the page will warn you about the unsaved changes, but continue to navigate away. You may end up in a state where the settings tab that is selected does not match the content of the page. [19905798] [19905787]
-- Monitoring and alerts integration with Azure Monitor has a dependency on an Azure API with an issue and causes the functionality of Windows Admin Center integration to fail. This will be resolved by 3/29/2019. This only applies to Windows Admin Center Preview.
 
 ### Certificates
 
@@ -204,8 +203,6 @@ If it is not installed, you can [download and install WMF 5.1](https://www.micro
     3. Got to “%allusersprofile%\Microsoft\Crypto\RSA\S-1-5-18” folder and delete all its contents.
     4. Restart ‘Cryptographic Services’ service.
     5. Repeat setting up Update Management with Windows Admin Center
-
-- There is a known issue with an Azure API that has broken the functionality of Azure Update Management in Windows Admin Center. This will be fixed by 3/29/2019. 
 
 ### Virtual Machines
 
