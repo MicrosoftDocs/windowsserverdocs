@@ -73,7 +73,7 @@ If you onboard multiple servers to a single Log Analytics workspace within Azure
 When Admin Center onboards a server into the VM insights solution within Azure Monitor, it also lights up a capability called [Service Map](https://docs.microsoft.com/azure/azure-monitor/insights/service-map). This capability automatically discovers application components and maps the communication between services so that you can easily visualize connections between servers with great detail from the Azure portal. You can find this by going to the Azure portal > Azure Monitor > Virtual Machines (under Insights), and navigating to the "Maps" tab.
 
 > [!NOTE]
-> The visualizations for Virtual Machines Insights for Azure Monitor is only supported for the following Azure regions: East US, West Central US, West Europe, and Southeast Asia. You must deploy the Log Analytics workspace in one of these regions to get the additional benefits provided by the Virtual Machines Insights solution described above.
+> The visualizations for Virtual Machines Insights for Azure Monitor are offered in 6 public regions currently.  For the latest information, check the [Azure Monitor for VMs documentation](https://docs.microsoft.com/azure/azure-monitor/insights/vminsights-onboard#log-analytics).  You must deploy the Log Analytics workspace in one of the supported regions to get the additional benefits provided by the Virtual Machines Insights solution described above.
 
 ## Disabling Monitoring
 
