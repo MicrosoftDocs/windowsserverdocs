@@ -269,7 +269,7 @@ manager: dongill
     >  If BitLocker Drive Encryption was enabled on the computer before the restore, you must enable BitLocker manually after the computer restarts.  
   
 ##  <a name="BKMK_FindDrivers"></a> Where can I find the drivers for my hardware?  
- Depending on the new or restored computer hardware, the restore media may not include all of the storage and network adapter drivers that are needed when you restart your restored computer. You must determine which drivers are missing, locate those drivers on existing media or on the manufacturer ��s website, copy them to a flash drive, and then copy them from the flash drive to the new or restored computer when you run the Full System Restore Wizard.  
+ Depending on the new or restored computer hardware, the restore media may not include all of the storage and network adapter drivers that are needed when you restart your restored computer. You must determine which drivers are missing, locate those drivers on existing media or on the manufacturer's website, copy them to a flash drive, and then copy them from the flash drive to the new or restored computer when you run the Full System Restore Wizard.  
   
  When a computer is backed up, the drivers for the computer are saved in the backup. If your recovery media does not include all of the drivers that you need, you can open a backup for that computer, and then copy the drivers to a USB flash drive.  
   

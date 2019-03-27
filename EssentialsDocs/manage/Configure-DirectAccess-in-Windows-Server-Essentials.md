@@ -18,7 +18,7 @@ manager: dongill
 
 >Applies To: Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, Windows Server 2012 Essentials
 
-This topic provides step-by-step instructions for configuring DirectAccess in  Windows Server Essentials to enable your mobile workforce to seamlessly connect to your organization ��s network from any Internet-equipped remote location without establishing a virtual private network (VPN) connection. DirectAccess can offer mobile workers the same connectivity experience inside and outside the office from their  Windows 8.1,  Windows 8, and  Windows 7 computers.  
+This topic provides step-by-step instructions for configuring DirectAccess in  Windows Server Essentials to enable your mobile workforce to seamlessly connect to your organization's network from any Internet-equipped remote location without establishing a virtual private network (VPN) connection. DirectAccess can offer mobile workers the same connectivity experience inside and outside the office from their  Windows 8.1,  Windows 8, and  Windows 7 computers.  
   
  In  Windows Server Essentials, if the domain contains more than one  Windows Server Essentials server, DirectAccess must be configured on the domain controller.  
   
@@ -37,7 +37,7 @@ This topic provides step-by-step instructions for configuring DirectAccess in  W
   
 -   [Step 3: Prepare a certificate and DNS record for the network location server](Configure-DirectAccess-in-Windows-Server-Essentials.md#BKMK_DNS)  
   
-    -   [Step 3a: Grant full permissions to Authenticated Users for the Web server ��s certificate template](#BKMK_GrantFullPermissions)  
+    -   [Step 3a: Grant full permissions to Authenticated Users for the Web server's certificate template](#BKMK_GrantFullPermissions)  
   
     -   [Step 3b: Enroll a certificate for the network location server with a common name that is unresolvable from the external network](#BKMK_EnrollaCertificate)  
   
@@ -128,16 +128,16 @@ This topic provides step-by-step instructions for configuring DirectAccess in  W
 ##  <a name="BKMK_DNS"></a> Step 3: Prepare a certificate and DNS record for the network location server  
  To prepare a certificate and DNS record for the network location server, perform the following tasks:  
   
--   [Step 3a: Grant full permissions to Authenticated Users for the Web server ��s certificate template](#BKMK_GrantFullPermissions)  
+-   [Step 3a: Grant full permissions to Authenticated Users for the Web server's certificate template](#BKMK_GrantFullPermissions)  
   
 -   [Step 3b: Enroll a certificate for the network location server with a common name that is unresolvable from the external network](#BKMK_EnrollaCertificate)  
   
 -   [Step 3c: Add a new host on the DNS server and map it to the Windows Server Essentials server address.](#BKMK_MapNewHosttoServerAddress)  
   
-###  <a name="BKMK_GrantFullPermissions"></a> Step 3a: Grant full permissions to Authenticated Users for the Web server ��s certificate template  
- Your first task is to grant full permissions to authenticate users for the Web server ��s certificate template in the certification authority.  
+###  <a name="BKMK_GrantFullPermissions"></a> Step 3a: Grant full permissions to Authenticated Users for the Web server's certificate template  
+ Your first task is to grant full permissions to authenticate users for the Web server's certificate template in the certification authority.  
   
-####  <a name="BKMK_ToGrantFullPermissions"></a> To grant full permissions to Authenticated Users for the Web server ��s certificate template  
+####  <a name="BKMK_ToGrantFullPermissions"></a> To grant full permissions to Authenticated Users for the Web server's certificate template  
   
 1.  On the **Start** page, open **Certification Authority**.  
   
@@ -193,7 +193,7 @@ This topic provides step-by-step instructions for configuring DirectAccess in  W
   
 1.  On the Start page, open DNS Manager. To open DNS Manager, search for **dnsmgmt.msc**, and then click **dnsmgmt.msc** in the results.  
   
-2.  In the DNS Manager console tree, expand the local server, expand **Forward Lookup Zones**, right-click the zone with server ��s domain suffix, and then click **New Host (A or AAAA)**.  
+2.  In the DNS Manager console tree, expand the local server, expand **Forward Lookup Zones**, right-click the zone with server's domain suffix, and then click **New Host (A or AAAA)**.  
   
 3.  Type the name and IP address of the server (for example, DirectAccess-NLS.contoso.local) and its corresponding server address (for example, 192.168.x.x).  
   
@@ -294,7 +294,7 @@ gpupdate
   
 ##### To enable  Windows 7 Enterprise computers to use DirectAccess  
   
-1.  On the server ��s Start page, open **Remote Access Management**.  
+1.  On the server's Start page, open **Remote Access Management**.  
   
 2.  In the Remote Access Management Console, click **Configuration**. Then, in the **Setup Details** pane, under **Step 2**, click **Edit**.  
   
