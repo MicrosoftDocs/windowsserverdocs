@@ -111,7 +111,7 @@ The following example illustrates using the **-protectors** command to add an **
 ```
 manage-bde  protectors  add E: -sid DOMAIN\user
 ```
-The following example illustrates using the ** protectors** command to disable protection until the computer has rebooted 3 times.
+The following example illustrates using the **protectors** command to disable protection until the computer has rebooted 3 times.
 ```
 manage-bde  protectors  disable C: -rc 3
 ```

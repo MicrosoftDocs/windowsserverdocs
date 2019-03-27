@@ -109,7 +109,7 @@ Some of the parameters are stored in clock ticks in the registry and some are in
   
 -   1 ms = 10,000 clock ticks on a Windows system, as described at [DateTime.Ticks Property](https://docs.microsoft.com/dotnet/api/system.datetime.ticks?redirectedfrom=MSDN&view=netframework-4.7.2#System_DateTime_Ticks).  
   
-For example, 5 minutes would become 5*60\*1000\*10000 = 3000000000 clock ticks. 
+For example, 5 minutes would become 5\*60\*1000\*10000 = 3000000000 clock ticks. 
 
 All versions include Windows 7, Windows 8, Windows 10, Windows Server 2008 , and  Windows Server 2008 R2, Windows Server 2012, Windows Server 2012R2, Windows Server 2016.  Some entries are only availalbe on newer Windows versions.
 
@@ -204,7 +204,7 @@ W32tm /query /status /verbose
 ClockRate: 0.0156000s  
 ```  
   
-SystemclockRate is the rate of the clock on the system. Using 156000 seconds as an example, the SystemclockRate would be = 0.0156000 * 1000 \* 10000 = 156000 clock ticks.  
+SystemclockRate is the rate of the clock on the system. Using 156000 seconds as an example, the SystemclockRate would be = 0.0156000 \* 1000 \* 10000 = 156000 clock ticks.  
   
 MaxAllowedPhaseOffset is also in seconds. To convert it to clock ticks, multiply MaxAllowedPhaseOffset*1000\*10000.  
   
