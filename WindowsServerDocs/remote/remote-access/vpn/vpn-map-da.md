@@ -15,8 +15,8 @@ author: shortpatti
 
 >Applies To: Windows Server \(Semi-Annual Channel\), Windows Server 2016, Windows 10
 
-&#171;  [**Previous:** Always On VPN Deployment for Windows Server and Windows 10](always-on-vpn/deploy/always-on-vpn-deploy.md)<br>
-&#187; [ **Next:** Learn about the Always On VPN Enhancements](../vpn/always-on-vpn/always-on-vpn-enhancements.md)
+&#171; [**Previous:** Always On VPN Deployment for Windows Server and Windows 10](always-on-vpn/deploy/always-on-vpn-deploy.md)<br>
+&#187; [**Next:** Learn about the Always On VPN Enhancements](../vpn/always-on-vpn/always-on-vpn-enhancements.md)
 
 In this topic, you learn about the features and functionalities of Always On VPN.  The following table is not an exhaustive list, however, it does include some of the most common features and functionalities used in remote access solutions. 
 
