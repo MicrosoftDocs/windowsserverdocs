@@ -26,6 +26,10 @@ You can use Windows Admin Center to manage your Azure VMs as well as on-premises
 
 [Learn how to configure Windows Admin Center to manage VMs in Azure.](../configure/manage-azure-vms.md)
 
+## Configure Azure hybrid services for your managed servers
+
+Using the [Azure hybrid services](../use/azure-services.md#azure-hybrid-services-tool) tool in Windows Admin Center, you can discover all the integrated Azure services that bring hybrid value to your on-premises environment. All the services described throughout the remainder of this article can be found and configured from the Azure hybrid services tool.
+
 ## Protect your Hyper-V virtual machines with Azure Site Recovery
 [Azure Site Recovery](https://docs.microsoft.com/azure/site-recovery/site-recovery-overview) is an Azure service that replicates workloads running on VMs so that your business-critical infrastructure is protected in case of a disaster. Windows Admin Center streamlines setup and the process of replicating your virtual machines on your Hyper-V servers or clusters, making it easy to bolster the resiliency of your environment with Azure Site Recovery’s disaster recovery service.
 
@@ -35,6 +39,11 @@ You can use Windows Admin Center to manage your Azure VMs as well as on-premises
 [Azure Backup](https://docs.microsoft.com/azure/backup/backup-overview) enables you to back up your Windows Servers to Azure, protecting you from accidental or malicious deletions, corruption and even ransomware.
 
 [Learn how to backup your servers with Azure Backup from Windows Admin Center.](../use/azure-backup.md)
+
+## Sync your file server with the cloud using Azure File Sync
+[Azure File Sync](https://aka.ms/AFS) allows you to connect an on-premises server to an Azure file share with Azure File Sync to tier data to the cloud and sync files across your servers.
+
+[Learn how to tier data to the cloud and sync files with Azure File Sync from Windows Admin Center.](../use/azure-file-sync.md)
 
 ## Monitor and get email alerts for all the servers in your environment with Azure Monitor for Virtual Machines
 [Azure Monitor for Virtual Machines](https://docs.microsoft.com/azure/azure-monitor/insights/vminsights-overview), also known as Virtual Machines insights, is a solution in Azure Monitor that allows you to monitor server health and events, create email alerts, get a consolidated view of server performance across your environment, and visualize apps, systems, and services connected to a given server.
