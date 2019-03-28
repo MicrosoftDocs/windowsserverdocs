@@ -11,12 +11,22 @@ ms.topic: article
 author: lizap
 manager: dongill
 ms.author: elizapo
-ms.date: 07/06/2018
+ms.date: 03/25/2019
 ms.localizationpriority: medium
 ---
 # What's new for the Remote Desktop client on Android?
 
 We regularly update the [Remote Desktop client for Android](remote-desktop-android.md), adding new features and fixing issues. Check out the latest updates below.
+
+## Updates for version 8.1.66
+*Published date: 03/19/2019*
+
+- Added initial support for [Windows Virtual Desktop](https://aka.ms/wvd).
+- Fixed an issue that caused a black area to be shown at the bottom of the screen on some Chromebook devices and DeX scenarios.
+- Added immersive mode support for Samsung DeX, hiding the bottom taskbar.
+- Added support for sending Meta and Alt keys from the physical keyboard to the remote session for Samsung DeX.
+- The mouse pointer now updates based on the content of the remote session (Android 7.0+)
+- Additional bug fixes.
 
 ## Updates for version 8.1.61
 *Published date: 07/05/2018*
