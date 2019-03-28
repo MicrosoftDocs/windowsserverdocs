@@ -14,7 +14,7 @@ ms.date: 03/24/2019
 
 [Learn more about Azure integration with Windows Admin Center.](../plan/azure-integration-options.md)
 
-[Azure Monitor](https://docs.microsoft.com/azure/azure-monitor/overview) is a solution that collects, analyzes, and acts on telemetry from a variety of resources, including Windows Servers and VMs, both on-premises and in the cloud. Though Azure Monitor pulls data from Azure VMs, and other Azure resources, this article focuses on how Azure Monitor works with on-premises servers and VMs, specifically with Windows Admin Center.  
+[Azure Monitor](https://docs.microsoft.com/azure/azure-monitor/overview) is a solution that collects, analyzes, and acts on telemetry from a variety of resources, including Windows Servers and VMs, both on-premises and in the cloud. Though Azure Monitor pulls data from Azure VMs, and other Azure resources, this article focuses on how Azure Monitor works with on-premises servers and VMs, specifically with Windows Admin Center. If you're interested to learn how you can use Azure Monitor to get email alerts about your hyper-converged cluster, read about [using Azure Monitor to send emails for Health Service Faults](https://docs.microsoft.com/windows-server/storage/storage-spaces/configure-azure-monitor).
 
 ## How does Azure Monitor work?
 ![img](../media/azure-monitor-diagram.png) 

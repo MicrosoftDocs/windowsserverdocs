@@ -10,7 +10,7 @@ ms.localizationpriority: medium
 ms.prod: windows-server-threshold
 ---
 
-# Settings
+# Windows Admin Center Settings
 
 > Applies To: Windows Admin Center
 
@@ -43,6 +43,7 @@ Gateway-level settings consist of the following sections:
 - Extensions
 - Access
 - Azure
+- Shared Connections
 
 Only gateway administrators are able to see and change these settings. Changes to these settings change the configuration of the gateway and affect all users of the Windows Admin Center gateway.
 
@@ -51,3 +52,5 @@ In the **Extensions** tab, administrators can install, uninstall, or update gate
 The **Access** tab lets administrators configure who can access the Windows Admin Center gateway, as well as the identity provider used to authenticate users. [Learn more about controlling access to the gateway.](user-access-control.md)
 
 From the **Azure** tab, administrators can register the gateway with Azure to enable [Azure integration features](azure-integration.md) in Windows Admin Center.
+
+Using the **Shared Connections** tab, administrators can configure a single list of connections to be shared across all users of the Windows Admin Center gateway. [Learn more about configuring connections once for all users of a gateway.](shared-connections.md)
