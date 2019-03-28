@@ -48,7 +48,10 @@ If your target VMs (the VMs you want to manage with Windows Admin Center) have p
 
 ### Connecting to VMs without a public IP
 
-If your target Azure VMs don't have public IPs, and you want to manage these VMs from a Windows Admin Center gateway deployed in your on-premises network, you need to configure your on-premises network to have connectivity to the VNet on which the target VMs are connected. There are 3 ways you can do this: ExpressRoute, Site-to-Site VPN, or Point-to-Site. [Learn which connectivity option makes sense in your environment.](https://docs.microsoft.com/azure/vpn-gateway/vpn-gateway-plan-design) 
+If your target Azure VMs don't have public IPs, and you want to manage these VMs from a Windows Admin Center gateway deployed in your on-premises network, you need to configure your on-premises network to have connectivity to the VNet on which the target VMs are connected. There are 3 ways you can do this: ExpressRoute, Site-to-Site VPN, or Point-to-Site VPN. [Learn which connectivity option makes sense in your environment.](https://docs.microsoft.com/azure/vpn-gateway/vpn-gateway-plan-design) 
+
+>[!TIP]
+>If you wish to use a Point-to-Site VPN to connect your Windows Admin Center gateway to an Azure VNet to manage Azure VMs in that VNet, you can use the [Azure Network Adapter](https://aka.ms/WACNetworkAdapter) feature in Windows Admin Center. To do so, connect to the server on which Windows Admin Center is installed, navigate to the Network tool and select "Add Azure Network Adapter". When you provide the necessary details and click "Set up", Windows Admin Center will configure a Point-to-Site VPN to the Azure VNet you specify, after which, you can connect to and manage Azure VMs from your on-premises Windows Admin Center gateway.
 
 Ensure WinRM is running on your target VMs by running the following in PowerShell or the Command Prompt on the target VM: `winrm quickconfig`
 
