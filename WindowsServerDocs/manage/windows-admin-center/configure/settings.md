@@ -34,7 +34,7 @@ In the **Language/Region** tab, users can change the language and region formats
 
 In the **Suggestions** tab, users can toggle suggestions about Azure services and new features.
 
-The **Advanced** tab gives 
+The **Advanced** tab gives Windows Admin Center extension developers additional features.
 
 ## Gateway settings
 
