@@ -48,9 +48,9 @@ Set-AdfsResponseHeaders -EnableResponseHeaders $false
 ```
  
 ### HTTP Strict-Transport-Security (HSTS) 
-HSTS is a web security policy mechanism which helps mitigate protocol downgrade attacks and cookie hijacking for services that have both HTTP and HTTPS endpoints. It allows web servers to declare that web browsers (or other complying user agents) should only interact with it using HTTPS and never via the HTTP protocol.  
- 
-All AD FS endpoints for web authentication traffic are opened exclusively over HTTPS. As a result, AD FS effectively mitigates the threats that HTTP Strict Transport Security policy mechanism provides (by default there is no downgrade to HTTP since there are no listeners in HTTP). The header can be customized by setting the following parameters 
+HSTS is a web security policy mechanism which helps mitigate protocol downgrade attacks and cookie hijacking for services that have both HTTP and HTTPS endpoints. It allows web servers to declare that web browsers (or other complying user agents) should only interact with it using HTTPS and never via the HTTP protocol. This protects against an active MitM attack using software such as sslstrip.
+
+The header can be customized by setting the following parameters 
  
 - **max-age=&lt;expire-time&gt;** – The expiry time (in seconds) specifies how long the site should only be accessed using HTTPS. Default and recommended value is 31536000 seconds (1 year).  
 - **includeSubDomains** – This is an optional parameter. If specified, the HSTS rule applies to all subdomains as well.  
