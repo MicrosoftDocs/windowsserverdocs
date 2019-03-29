@@ -11,12 +11,17 @@ ms.topic: article
 author: lizap
 manager: dongill
 ms.author: elizapo
-ms.date: 03/25/2019
+ms.date: 03/28/2019
 ms.localizationpriority: medium
 ---
 # What's new for the Remote Desktop client on Android?
 
 We regularly update the [Remote Desktop client for Android](remote-desktop-android.md), adding new features and fixing issues. Check out the latest updates below.
+
+## Updates for version 8.1.67
+*Published date: 03/28/2019*
+
+- Fixed an issue where key presses were repeated while typing in a remote session.
 
 ## Updates for version 8.1.66
 *Published date: 03/19/2019*
