@@ -88,13 +88,12 @@ There are four sections of the test results:
 3. Not applicable: This section contains the list of tests that were not executed because they were not applicable for the particular server on which the command was executing.
 4. Passed: This section contains the list of tests that passed and have no action item for the user.
 
+![AD FS diagnostics analyzer tool - test results list](media/ad-fs-diagonostics-analyzer/step3a_v2.png)
 Each test result is displayed with details that describe the test and the resolution the steps:
 
 1. Test Name: Name of the test that was executed
 2. Details: Description of the overall operation that was performed during the test
 3. Resolution steps: The suggested steps to resolve the issue highlighted by the test
-
-![AD FS diagnostics analyzer tool - test results list](media/ad-fs-diagonostics-analyzer/step3a_v2.png)
 
 ![AD FS diagnostics analyzer tool - failure resolution](media/ad-fs-diagonostics-analyzer/step3b_v2.png)
 
