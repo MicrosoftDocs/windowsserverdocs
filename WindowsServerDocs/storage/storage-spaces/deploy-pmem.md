@@ -39,8 +39,7 @@ Together, Storage Spaces Direct in Windows Server 2019 and Intel® Optane™ DC 
 
 ![IOPS gains](media/deploy-pmem/iops-gains.png)
 
-The hardware used was 12-nodes with Triple-Mirrored Scoped Spaces with ReFS
-**12** x Intel® S2600WFT, **384 GiB** memory, 2 x 28-core “CascadeLake”, **1.5 TB** Intel® Optane™ DC persistent memory as cache, **32 TB** NVMe (4 x 8TB Intel® DC P4510) as capacity, **2** x Mellanox ConnectX-4 25 Gbps
+The hardware used was a 12-server cluster using three-way mirroring and delimited ReFS volumes, **12** x Intel® S2600WFT, **384 GiB** memory, 2 x 28-core “CascadeLake”, **1.5 TB** Intel® Optane™ DC persistent memory as cache, **32 TB** NVMe (4 x 8TB Intel® DC P4510) as capacity, **2** x Mellanox ConnectX-4 25 Gbps
 
 The table below has the full performance numbers: 
 
@@ -52,9 +51,9 @@ The table below has the full performance numbers:
 
 ### Supported Hardware
 
-The table below shows supported persistent memory hardware for Windows Server 2016 and 2019. Note that Intel Optane specifically supports both memory mode and app-direct mode. Windows Server 2019 supports mixed-mode operations.
+The table below shows supported persistent memory hardware for Windows Server 2019 and Windows Server 2016. Note that Intel Optane specifically supports both memory mode and app-direct mode. Windows Server 2019 supports mixed-mode operations.
 
-| Persistent Memory Technology                                      | Windows Server 2016 LTSC | Windows Server 2019 LTSC |
+| Persistent Memory Technology                                      | Windows Server 2016 | Windows Server 2019 |
 |-------------------------------------------------------------------|--------------------------|--------------------------|
 | **NVDIMM-N** in App-Direct Mode                                       | Supported                | Supported                |
 | **Intel Optane™ DC Persistent Memory** in App-Direct Mode             | Not Supported            | Supported                |
