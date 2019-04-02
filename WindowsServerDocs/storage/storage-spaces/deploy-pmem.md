@@ -39,6 +39,26 @@ Together, Storage Spaces Direct in Windows Server 2019 and Intel® Optane™ DC 
 
 ![IOPS gains](media/deploy-pmem/iops-gains.png)
 
+The hardware used was a 12-server cluster using three-way mirroring and delimited ReFS volumes, **12** x Intel® S2600WFT, **384 GiB** memory, 2 x 28-core “CascadeLake”, **1.5 TB** Intel® Optane™ DC persistent memory as cache, **32 TB** NVMe (4 x 8TB Intel® DC P4510) as capacity, **2** x Mellanox ConnectX-4 25 Gbps
+
+The table below has the full performance numbers: 
+
+| Benchmark                   | Performance         |
+|-----------------------------|---------------------|
+| 4K 100% Random Read         | 13.8 Million IOPS   |
+| 4K 90/10% Random Read/Write | 9.45 million IOPS   |
+| 2MB Sequential Read         | 549 GB/s Throughput |
+
+### Supported Hardware
+
+The table below shows supported persistent memory hardware for Windows Server 2019 and Windows Server 2016. Note that Intel Optane specifically supports both memory mode and app-direct mode. Windows Server 2019 supports mixed-mode operations.
+
+| Persistent Memory Technology                                      | Windows Server 2016 | Windows Server 2019 |
+|-------------------------------------------------------------------|--------------------------|--------------------------|
+| **NVDIMM-N** in App-Direct Mode                                       | Supported                | Supported                |
+| **Intel Optane™ DC Persistent Memory** in App-Direct Mode             | Not Supported            | Supported                |
+| **Intel Optane™ DC Persistent Memory** in Two-Level-Memory Mode (2LM) | Not Supported            | Supported                |
+
 Now, let's dive into how you configure persistent memory.
 
 ## Interleave sets
@@ -107,7 +127,7 @@ DeviceId DeviceType           HealthStatus OperationalStatus PhysicalLocation Fi
 20       Intel INVDIMM device Healthy      {Ok}              CPU1_DIMM_C1     102005310        126 GB                 0 GB
 ```
 
-Since we we have available unused pmem region, we can create new persistent memory disks. We can create multiple persistent memory disk using the unused region by:
+Since we we have available unused pmem region, we can create new persistent memory disks. We can create multiple persistent memory disks using the unused regions by:
 
 ```PowerShell
 Get-PmemUnusedRegion | New-PmemDisk
@@ -125,7 +145,7 @@ DiskNumber Size   HealthStatus AtomicityType CanBeRemoved PhysicalDeviceIds Unsa
 3          252 GB Healthy      None          True         {1020, 1120}      0
 ```
 
-It is worth noting that we could have ran **Get-PhysicalDisk | Where MediaType -Eq SCM** instead of **Get-PmemDisk** to get the same results. The newly created persistent memory disk corresponds 1:1 to drives that appear in PowerShell and Windows Admin Center.
+It is worth noting that we could have run **Get-PhysicalDisk | Where MediaType -Eq SCM** instead of **Get-PmemDisk** to get the same results. The newly created persistent memory disk corresponds 1:1 to drives that appear in PowerShell and Windows Admin Center.
 
 ### Using persistent memory for cache or capacity
 
@@ -245,7 +265,7 @@ DeviceId DeviceType           HealthStatus OperationalStatus PhysicalLocation Fi
 20       Intel INVDIMM device Unhealthy    {HardwareError}   CPU1_DIMM_C1     102005310        126 GB                 0 GB
 ```
 
-This shows which persistent memory device is unhealthy. The unhealthy device (**DeviceId** 20 matches the case in the above **Get-PmemDisk** example. The **PhysicalLocation** from BIOS can help identify which persistent memory device is in faulty state.
+This shows which persistent memory device is unhealthy. The unhealthy device (**DeviceId**) 20 matches the case in the above example. The **PhysicalLocation** from BIOS can help identify which persistent memory device is in faulty state.
 
 ## Replacing persistent memory
 
