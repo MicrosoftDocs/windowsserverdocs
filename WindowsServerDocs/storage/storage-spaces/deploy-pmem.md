@@ -128,7 +128,7 @@ DeviceId DeviceType           HealthStatus OperationalStatus PhysicalLocation Fi
 20       Intel INVDIMM device Healthy      {Ok}              CPU1_DIMM_C1     102005310        126 GB                 0 GB
 ```
 
-Since we we have available unused pmem region, we can create new persistent memory disks. We can create multiple persistent memory disk using the unused region by:
+Since we we have available unused pmem region, we can create new persistent memory disks. We can create multiple persistent memory disks using the unused regions by:
 
 ```PowerShell
 Get-PmemUnusedRegion | New-PmemDisk
@@ -146,7 +146,7 @@ DiskNumber Size   HealthStatus AtomicityType CanBeRemoved PhysicalDeviceIds Unsa
 3          252 GB Healthy      None          True         {1020, 1120}      0
 ```
 
-It is worth noting that we could have ran **Get-PhysicalDisk | Where MediaType -Eq SCM** instead of **Get-PmemDisk** to get the same results. The newly created persistent memory disk corresponds 1:1 to drives that appear in PowerShell and Windows Admin Center.
+It is worth noting that we could have run **Get-PhysicalDisk | Where MediaType -Eq SCM** instead of **Get-PmemDisk** to get the same results. The newly created persistent memory disk corresponds 1:1 to drives that appear in PowerShell and Windows Admin Center.
 
 ### Using persistent memory for cache or capacity
 
@@ -266,7 +266,7 @@ DeviceId DeviceType           HealthStatus OperationalStatus PhysicalLocation Fi
 20       Intel INVDIMM device Unhealthy    {HardwareError}   CPU1_DIMM_C1     102005310        126 GB                 0 GB
 ```
 
-This shows which persistent memory device is unhealthy. The unhealthy device (**DeviceId** 20 matches the case in the above **Get-PmemDisk** example. The **PhysicalLocation** from BIOS can help identify which persistent memory device is in faulty state.
+This shows which persistent memory device is unhealthy. The unhealthy device (**DeviceId**) 20 matches the case in the above example. The **PhysicalLocation** from BIOS can help identify which persistent memory device is in faulty state.
 
 ## Replacing persistent memory
 
