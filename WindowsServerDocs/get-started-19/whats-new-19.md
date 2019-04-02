@@ -226,3 +226,23 @@ Now, with Windows Server 2019, it’s easy to deploy and manage through a new de
 
 To leverage the high throughput and low latency of persistent memory (a.k.a. storage class memory) in virtual machines, it can now be projected directly into VMs. This can help to drastically reduce database transaction latency or reduce recovery times for low latency in-memory databases on failure.
 
+### EnterPrise Hyper-Converged Infrastructure
+
+With the release of Windows Server 2019, Microsoft rolls up three years of updates for its HCI platform. That’s because the steady upgrade schedule Microsoft currently includes what it calls Semi-Annual Channel releases – incremental upgrades as they become available. Every couple of years it builds a major release called the Long-Term Servicing Channel (LTSC) version that comprises the upgrades from the former Semi-Annual Channel releases.
+
+The LTSC Windows Server 2019 is due out this fall, and is now available to members of Microsoft’s Insider program.
+
+For more information on Microsoft’s Insider program, see  : https://insider.windows.com/en-us/for-business-getting-started-server/
+
+While the vital components of HCI (compute, storage and networking) have been improved with the Semi-Annual Channel releases, for organizations building datacenters and high-scale software defined platforms, Windows Server 2019 is a significant release for the software-defined datacenter.
+With the latest release, HCI is delivered on top of a set of components that are bundled in with the server license. This means a backbone of servers running HyperV to enable dynamic upsurge or reduction of capacity for workloads without downtime. 
+
+### Project Honolulu
+
+With the announcement of Windows Server 2019, Microsoft will formally release their Project Honolulu server management tool. Project Honolulu is a central console that allows IT professionals  to easily manage GUI and GUI-less Windows 2019, 2016 and 2012R2 servers in their environments. 
+Early adopters have found the ease of management that Project Honolulu delivers by rolling up common tasks such as performance monitoring (PerfMon), server configuration and settings tasks, and the management of Windows Services that run on server systems.  This makes these tasks easier for administrators to manage on a mix of servers in their environment.
+
+
+For more information on Microsoft’s Project Honolulu program, see  :
+
+https://docs.microsoft.com/en-us/windows-server/manage/windows-admin-center/overview
