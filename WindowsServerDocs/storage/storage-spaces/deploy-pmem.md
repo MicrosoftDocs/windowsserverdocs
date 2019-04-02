@@ -39,6 +39,17 @@ Together, Storage Spaces Direct in Windows Server 2019 and Intel® Optane™ DC 
 
 ![IOPS gains](media/deploy-pmem/iops-gains.png)
 
+The hardware used was 12-nodes with Triple-Mirrored Scoped Spaces with ReFS
+**12** x Intel® S2600WFT, **384 GiB** memory, 2 x 28-core “CascadeLake”, **1.5 TB** Intel® Optane™ DC persistent memory as cache, **32 TB** NVMe (4 x 8TB Intel® DC P4510) as capacity, **2** x Mellanox ConnectX-4 25 Gbps
+
+The table below has the full performance numbers: 
+
+| Benchmark                   | Performance         |
+|-----------------------------|---------------------|
+| 4K 100% Random Read         | 13.8 Million IOPS   |
+| 4K 90/10% Random Read/Write | 9.45 million IOPS   |
+| 2MB Sequential Read         | 549 GB/s Throughput |
+
 ### Supported Hardware
 
 The table below shows supported persistent memory hardware for Windows Server 2016 and 2019.
