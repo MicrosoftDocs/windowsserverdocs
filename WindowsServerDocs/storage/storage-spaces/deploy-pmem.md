@@ -52,7 +52,7 @@ The table below has the full performance numbers:
 
 ### Supported Hardware
 
-The table below shows supported persistent memory hardware for Windows Server 2016 and 2019.
+The table below shows supported persistent memory hardware for Windows Server 2016 and 2019. Note that Intel Optane specifically supports both memory mode and app-direct mode. Windows Server 2019 supports mixed-mode operations.
 
 | Persistent Memory Technology                                      | Windows Server 2016 LTSC | Windows Server 2019 LTSC |
 |-------------------------------------------------------------------|--------------------------|--------------------------|
