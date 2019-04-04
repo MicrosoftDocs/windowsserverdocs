@@ -22,7 +22,7 @@ The Semi-Annual Channel provides opportunity for customers who are innovating qu
 
 | Windows Server release | Version | OS Build | Availability |Mainstream support end date|Extended support end date|
 |----------------|---------|----------|----------|---------|----------|
-|Windows Server 2019 (Long-Term Servicing Channel)(Datacenter, Essentials, Multipoint Premium Server, Standard)||17763.107.1010129-1455|11/13/2018|01/09/2024|01/09/2029|
+|Windows Server 2019 (Long-Term Servicing Channel)(Datacenter, Essentials, Multipoint Premium Server, Standard)|1809|17763.107.1010129-1455|11/13/2018|01/09/2024|01/09/2029|
 |Windows Server, version 1809 (Semi-Annual Channel)(Datacenter Core, Standard Core)|1809|17763.107.1010129-1455|11/13/2018|5/11/2020|Review note|
 | Windows Server, version 1803 (Semi-Annual Channel) (Datacenter, Standard)| 1803 |17134.1.180410-1804 |04/30/2018| 11/12/2019|Review note|
 | Windows Server, version 1709 (Semi-Annual Channel)| 1709 | 16299.15|   10/17/2017|04/09/2019|N/A|
