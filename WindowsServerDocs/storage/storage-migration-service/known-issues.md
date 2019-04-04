@@ -143,7 +143,7 @@ When inventorying or transferring files from source to destination computers, fi
 
 This issue is caused by a code defect in the Storage Migration Service where the backup privilege was not being invoked. 
 
-To resolve this issue, install [Windows Update April 2, 2019—KB4490481 (OS Build 17763.404)](https://support.microsoft.com/en-us/help/4490481/windows-10-update-kb4490481) on the orchestrator computer and the destination computer if the proxy service is installed there. Ensure that the source migration user account is a local administrator on the source computer and the Storage Migration Service orchestrator. Ensure that the destination migration user account is a local administrator on the destination computer and the Storage Migration Service orchestrator. 
+To resolve this issue, install [Windows Update April 2, 2019—KB4490481 (OS Build 17763.404)](https://support.microsoft.com/help/4490481/windows-10-update-kb4490481) on the orchestrator computer and the destination computer if the proxy service is installed there. Ensure that the source migration user account is a local administrator on the source computer and the Storage Migration Service orchestrator. Ensure that the destination migration user account is a local administrator on the destination computer and the Storage Migration Service orchestrator. 
 
 ## DFSR hashes mismatch when using Storage Migration Service to preseed data
 
@@ -181,7 +181,7 @@ DFSR Debug Log:
 
 This issue is caused by a code defect in a library used by the Storage Migration Service to set security audit ACLs (SACL). A non-null SACL is unintentionally set when the SACL was empty, leading DFSR to correctly identify a hash mismatch. 
 
-To workaround this issue, continue using Robocopy for [DFSR pre-seeding and DFSR Database cloning operations](https://docs.microsoft.com/en-us/windows-server/storage/dfs-replication/preseed-dfsr-with-robocopy) instead of the Storage Migration Service. We are investigating this issue and intend to resolve this in a later version of Windows Server and possibly a backported Windows Update. 
+To workaround this issue, continue using Robocopy for [DFSR pre-seeding and DFSR Database cloning operations](../dfs-replication/preseed-dfsr-with-robocopy.md) instead of the Storage Migration Service. We are investigating this issue and intend to resolve this in a later version of Windows Server and possibly a backported Windows Update. 
 
 ## See also
 
