@@ -552,4 +552,4 @@ Networking resources for operating systems earlier than Windows Server 2016 are 
 
 - Windows Server 2012 and Windows Server 2012 R2 [Networking Overview](https://technet.microsoft.com/library/hh831357.aspx)
 - Windows Server 2008 and Windows Server 2008 R2 [Networking](https://technet.microsoft.com/library/cc753940)
-- Windows Server 2003 [Windows Server 2003/2003 R2 Retired Content ](https://www.microsoft.com/download/details.aspx?id=53314)
+- Windows Server 2003 [Windows Server 2003/2003 R2 Retired Content](https://www.microsoft.com/download/details.aspx?id=53314)

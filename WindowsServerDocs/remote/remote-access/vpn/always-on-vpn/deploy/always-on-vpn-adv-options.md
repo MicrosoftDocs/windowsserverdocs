@@ -16,8 +16,8 @@ ms.reviewer: deverette
 
 >Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows 10
 
-&#171;  [**Previous:** Learn about the Always On VPN technology](../always-on-vpn-technology-overview.md)<br>
-&#187; [ **Next:** Start planning the Always On VPN deployment](always-on-vpn-deploy-planning.md)
+&#171; [**Previous:** Learn about the Always On VPN technology](../always-on-vpn-technology-overview.md)<br>
+&#187; [**Next:** Start planning the Always On VPN deployment](always-on-vpn-deploy-planning.md)
 
 Beyond the deployment scenarios provided, you can add other advanced VPN features to improve the security and availability of your VPN connection. For example, such components can help ensure that the connecting client is healthy before allowing a connection.
 

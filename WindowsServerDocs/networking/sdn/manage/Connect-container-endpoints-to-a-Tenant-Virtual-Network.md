@@ -55,9 +55,9 @@ The difference between the *l2bridge* and *l2tunnel* drivers are:
 ## Workflow
 
 [1. Add multiple IP configurations to an existing VM NIC resource through Network Controller (Hyper-V Host)](#1-add-multiple-ip-configurations)
-[2. Enable the network proxy on the host to allocate CA IP Addresses for container endpoints (Hyper-V Host) ](#2-enable-the-network-proxy)
-[3. Install the private cloud plug-in to assign CA IP addresses to container endpoints (Container Host VM) ](#3-install-the-private-cloud-plug-in)
-[4. Create an *l2bridge* or *l2tunnel* network using docker (Container Host VM) ](#4-create-an-l2bridge-container-network)
+[2. Enable the network proxy on the host to allocate CA IP Addresses for container endpoints (Hyper-V Host)](#2-enable-the-network-proxy)
+[3. Install the private cloud plug-in to assign CA IP addresses to container endpoints (Container Host VM)](#3-install-the-private-cloud-plug-in)
+[4. Create an *l2bridge* or *l2tunnel* network using docker (Container Host VM)](#4-create-an-l2bridge-container-network)
  
 >[!NOTE]
 >Multiple IP configurations is not supported on VM NIC resources created through System Center Virtual Machine Manager. It is recommended for these deployments types that you create the VM NIC resource out of band using Network Controller PowerShell.

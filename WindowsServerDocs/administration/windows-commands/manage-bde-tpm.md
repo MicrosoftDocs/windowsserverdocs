@@ -40,7 +40,7 @@ The following example illustrates using the **-tpm** command to turn on the TPM.
 ```
 manage-bde  tpm -turnon
 ```
-The following example illustrates using the ** tpm** command to take ownership of the TPM and set the owner password to 0wnerP@ss.
+The following example illustrates using the **tpm** command to take ownership of the TPM and set the owner password to 0wnerP@ss.
 ```
 manage-bde  tpm  takeownership 0wnerP@ss
 ```

@@ -42,7 +42,7 @@ shadow {<SessionName> | <SessionID>} [/server:<ServerName>] [/v]
 -   Before monitoring begins, the server warns the user that the session is about to be remotely controlled, unless this warning is disabled. Your session might appear to be frozen for a few seconds while it waits for a response from the user. To configure remote control for users and sessions, use the Remote Desktop Services Configuration tool or the Remote Desktop Services extensions to Local Users and Groups and active directory Users and computers.
 -   Your session must be capable of supporting the video resolution used at the session that you are remotely controlling or the operation fails.
 -   The console session can neither remotely control another session nor can it be remotely controlled by another session.
--   When you want to end remote control (shadowing), press CTRL+* (by using \* from the numeric keypad only).
+-   When you want to end remote control (shadowing), press CTRL+\* (by using \* from the numeric keypad only).
 
 ## <a name="BKMK_examples"></a>Examples
 -   To shadow session 93, type:
