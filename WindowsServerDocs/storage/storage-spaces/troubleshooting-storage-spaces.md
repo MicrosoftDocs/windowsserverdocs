@@ -189,8 +189,8 @@ For more information, see [Troubleshooting Storage Spaces Direct health and oper
 	
 ## Event 5120 with STATUS_IO_TIMEOUT c00000b5 
 
->[!Important}
->To reduce the chance of experiencing these symptoms while applying the update with the fix, it is recommended to use the Storage Maintenance Mode procedure below to install the [October 18, 2018, cumulative update for Windows Server 2016](https://support.microsoft.com/help/4462928) or a later version when the nodes currently have installed a Windows Server 2016 cumulative update that was released from [May 8, 2018](https://support.microsoft.com/help/4103723) to [October 9, 2018](https://support.microsoft.com/help/KB4462917).
+> [!Important]
+> To reduce the chance of experiencing these symptoms while applying the update with the fix, it is recommended to use the Storage Maintenance Mode procedure below to install the [October 18, 2018, cumulative update for Windows Server 2016](https://support.microsoft.com/help/4462928) or a later version when the nodes currently have installed a Windows Server 2016 cumulative update that was released from [May 8, 2018](https://support.microsoft.com/help/4103723) to [October 9, 2018](https://support.microsoft.com/help/KB4462917).
 
 You might get event 5120 with STATUS_IO_TIMEOUT c00000b5 after you restart a node on Windows Server 2016 with cumulative update that were released from [May 8, 2018 KB 4103723](https://support.microsoft.com/help/4103723) to [October 9, 2018 KB 4462917](https://support.microsoft.com/help/4462917) installed.
 
