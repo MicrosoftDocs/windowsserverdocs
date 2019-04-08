@@ -133,7 +133,7 @@ Global VDI settings include the following:
 
 -   [Local policy settings](#local-policy-settings)
 
--   [System services](#system_services)
+-   [System services](#system-services)
 
 -   [Scheduled tasks](#scheduled-tasks)
 
@@ -150,7 +150,7 @@ Global VDI settings include the following:
     Functionality Baseline](https://go.microsoft.com/fwlink/?linkid=828887)
     guidance.
 
--   [Disk cleanup](#disk_cleanup) (including using the Disk Cleanup wizard)
+-   [Disk cleanup](#disk-cleanup) (including using the Disk Cleanup wizard)
 
 ### Universal Windows Platform app cleanup
 
