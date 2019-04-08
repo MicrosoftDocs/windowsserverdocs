@@ -5,7 +5,7 @@ ms.technology: manage
 ms.topic: article
 author: haley-rowland
 ms.author: harowl
-ms.date: 09/19/2018
+ms.date: 04/12/2018
 ms.localizationpriority: medium
 ms.prod: windows-server-threshold
 ---
@@ -28,7 +28,7 @@ User-level settings consist of the following sections:
 
 In the **Account** tab, users can review the credentials they have used to authenticate to Windows Admin Center. If Azure AD is configured to be the identity provider, the user can log out of their Azure AD account from this tab.
 
-In the **Personalization** tab, users can toggle to a dark UI theme. 
+In the **Personalization** tab, users can toggle to a dark UI theme.
 
 In the **Language/Region** tab, users can change the language and region formats displayed by Windows Admin Center.
 
