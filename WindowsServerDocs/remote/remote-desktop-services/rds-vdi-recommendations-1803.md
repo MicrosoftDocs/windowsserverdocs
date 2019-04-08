@@ -23,6 +23,9 @@ In a VDI environment the key ways to optimize Windows 10 performance are to mini
 > [!NOTE]  
 > Settings recommended here can be applied to other installation of Windows 10, version 1803, including those on physical or other virtual devices. No recommendations in this topic should affect  the supportability of Windows 10, version 1803.
 
+> [!TIP]  
+> A script that implements the optimizations discussed in this topic--as well as a GPO export file that you can import with **LGPO.exe**--is available at [TheVDIGuys](https://github.com//TheVDIGuys) on GitHub.
+
 ## VDI optimization principles
 
 A VDI environment presents a full desktop session, including applications, to a computer user over a network. VDI environments usually use a base operating system image, which then becomes the basis for the desktops subsequently presented to the users for work. There are variations of VDI implementations such as “persistent”, “non-persistent”, and “desktop session.” The persistent type preserves changes to the VDI desktop operating system from one session to the next. The non-persistent type does not preserve changes to the VDI desktop perating system from one session to the next. To the user this desktop is little different than other virtual or physical device, other than it is accessed over a network.
