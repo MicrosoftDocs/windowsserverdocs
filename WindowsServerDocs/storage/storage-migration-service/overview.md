@@ -48,6 +48,7 @@ To use Storage Migration Service, you need the following:
 - A **destination server** running Windows Server 2019 to migrate to—Windows Server 2016 and Windows Server 2012 R2 work as well but are around 50% slower
 - An **orchestrator server** running Windows Server 2019 to manage the migration  <br>If you're migrating only a few servers and one of the servers is running Windows Server 2019, you can use that as the orchestrator. If you're migrating more servers, we recommend using a separate orchestrator server.
 - A **PC or server running [Windows Admin Center](../../manage/windows-admin-center/understand/windows-admin-center.md)** to run the Storage Migration Service user interface, unless you prefer using PowerShell to manage the migration. The Windows Admin Center and Windows Server 2019 version must both be at least version 1809. 
+It is strongly recommended that the orchestrator and destination computers have at least two cores or two vCPUs, and at least 2GB of memory. Iinventory and transfer performance benefits significantly from more processors and memory.
 
 ### Security requirements
 
