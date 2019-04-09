@@ -9,7 +9,7 @@ ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: troubleshooting
 ms.assetid: 
-author: Teresa-Motiv, jobende
+author: jobende
 manager: 
 ms.author: v-tea;kaushika;rklemen;josh.bender
 ms.date: 02/22/2019
