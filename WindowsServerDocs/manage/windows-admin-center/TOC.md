@@ -17,6 +17,7 @@
 ### [Prepare your environment](deploy/prepare-environment.md)
 ### [Install Windows Admin Center](deploy/install.md)
 ### [High availability](deploy/high-availability.md)
+### [Deploy Windows Admin Center in Azure](deploy/deploy-wac-in-azure.md)
 
 ## Configure
 ### [Windows Admin Center settings](configure/settings.md)
