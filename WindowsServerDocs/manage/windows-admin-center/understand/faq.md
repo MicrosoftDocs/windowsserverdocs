@@ -22,7 +22,9 @@ Windows Admin Center is a lightweight, browser-based GUI platform and toolset fo
 
 ## Can I use Windows Admin Center in production environments?
 
-Yes. Windows Admin Center is generally available and ready for broad usage and production deployments. As a platform that will continue to grow and mature, exiting preview means that the current platform capabilities and core tools meet Microsoft’s standard release criteria and our quality bar for usability, reliability, performance, accessibility, security, and adoption.
+Yes. Windows Admin Center is generally available and ready for broad usage and production deployments. The current platform capabilities and core tools meet Microsoft’s standard release criteria and our quality bar for usability, reliability, performance, accessibility, security, and adoption.
+
+[!INCLUDE [support-policy](../includes/support-policy.md)]
 
 ## How much does it cost to use Windows Admin Center?
 
