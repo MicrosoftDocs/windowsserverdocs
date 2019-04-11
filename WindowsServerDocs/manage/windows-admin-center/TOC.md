@@ -39,8 +39,12 @@
 #### [Azure Monitor](use/azure-monitor.md)
 #### [Azure Update Management](use/azure-update-management.md)
 ### [Logging](use/logging.md)
+
+## Support
+### [Support policy](support/index.md)
 ### [Common troubleshooting steps](use/troubleshooting.md)
 ### [Known issues](use/known-issues.md)
+
 
 ## Extend
 ### [Overview of extensions](extend/extensibility-overview.md)
