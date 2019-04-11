@@ -44,7 +44,7 @@ The following tools are available for server connections:
 | Tool | Description |
 | ---- | ----------- |
 | [Overview](#overview) | View server details and control server state |
-| [Active Directory](#active-directory) | Manage Active Directory |
+| [Active Directory](#active-directory-preview) | Manage Active Directory |
 | [Backup](#backup) | View and configure Azure Backup |  
 | [Certificates](#certificates) | View and modify certificates |
 | [Containers](#containers) | View Containers |
@@ -95,7 +95,7 @@ The following features are supported in Server Manager Overview:
 
 ## Active Directory (Preview)
 
-**Active Directory** is an early preview that is available on the [extension feed](../configure/usingextensions.md).
+**Active Directory** is an early preview that is available on the [extension feed](../configure/using-extensions.md).
 
 ### Features
 
@@ -404,7 +404,7 @@ The following features are supported in Services:
 ### Features
 
 - View and modify user and system environment variables
-- View the configuration for monitoring alerts from [Azure Monitor](..azure-monitor.md)
+- View the configuration for monitoring alerts from [Azure Monitor](azure-monitor.md)
 - View and modify the power configuration
 - View and modify Remote Desktop settings
 - View and modify role-based access control settings
