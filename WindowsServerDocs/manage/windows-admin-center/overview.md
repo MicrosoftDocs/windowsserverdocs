@@ -5,7 +5,7 @@ ms.technology: manage
 ms.topic: article
 author: nwashburn-ms
 ms.author: niwashbu
-ms.date: 04/12/2019
+ms.date: 04/13/2019
 ms.localizationpriority: high
 ms.prod: windows-server-threshold
 ---
@@ -51,7 +51,6 @@ You can get Windows Admin Center up and running in your environment in minutes:
             <ul>
             <li><a href="plan/installation-options.md">What type of installation is right for you?</a>
             <li><a href="plan/user-access-options.md">User access options</a>
-            <li><a href="plan/azure-integration-options.md">What Azure integration options are there?</a>
             <br>
             </ul>
         </td>
@@ -63,7 +62,6 @@ You can get Windows Admin Center up and running in your environment in minutes:
             <li><a href="deploy/prepare-environment.md">Prepare your environment</a>
             <li><a href="deploy/install.md">Install Windows Admin Center</a>
             <li><a href="deploy/high-availability.md">Enable high availability</a>
-            <li><a href="deploy/deploy-wac-in-azure.md">Deploy Windows Admin Center in Azure</a>
          </ul>
         </td>
         <td style="vertical-align: top;">
@@ -72,8 +70,6 @@ You can get Windows Admin Center up and running in your environment in minutes:
             <li><a href="configure/settings.md">Windows Admin Center settings</a>
             <li><a href="configure/user-access-control.md">User access control and permissions</a>
             <li><a href="configure/using-extensions.md">Extensions</a>
-            <li><a href="configure/azure-integration.md">Integrate with Azure</a>
-            <li><a href="configure/manage-azure-vms.md">Manage Azure VMs with Windows Admin Center</a>
             </ul>
         </td>
     </tr>
@@ -86,13 +82,30 @@ You can get Windows Admin Center up and running in your environment in minutes:
             <li><a href="use/manage-hyper-converged.md">Manage hyper-converged infrastructure</a>
             <li><a href="use/manage-failover-clusters.md">Manage failover clusters</a>
             <li><a href="use/manage-virtual-machines.md">Manage virtual machines</a>
-            <li><a href="azure/index.md">Leverage Azure services</a>
-            <li><a href="use/troubleshooting.md">Common troubleshooting steps</a>
             <li><a href="use/logging.md">Logging</a>
-            <li><a href="use/known-issues.md">Known issues</a>
             </ul>
         </td>
         <td style="vertical-align: top;">
+            <h3>Connect to Azure</h3>
+            <ul>
+            <li><a href="azure/index.md">Azure hybrid services</a></li>
+            <li><a href="azure/azure-integration.md">Connect Windows 
+Admin Center to Azure</a></li>
+            <li><a href="azure/deploy-wac-in-azure.md">Deploy Windows Admin Center in Azure</a></li>
+            <li><a href="azure/manage-azure-vms.md">Manage Azure VMs with Windows Admin Center</a></li>
+            </ul>
+        </td>
+    </tr>
+    <tr>
+            <td style="vertical-align: top;">
+            <h3>Support</h3>
+            <li><a href="support/index.md">Support policy</a>
+            <li><a href="use/troubleshooting.md">Common troubleshooting steps</a>
+            <li><a href="use/known-issues.md">Known issues</a>
+            <ul>
+            </ul>
+        </td>
+            <td style="vertical-align: top;">
             <h3>Extend</h3>
             <ul>
             <li><a href="extend/extensibility-overview.md">Overview of extensions</a>
@@ -102,19 +115,6 @@ You can get Windows Admin Center up and running in your environment in minutes:
             <li><a href="extend/publish-extensions.md">Publishing extensions</a>
             </ul>
         </td>
-    </tr>
-        <td style="vertical-align: top;">
-            <h3>Azure</h3>
-            <ul>
-            <li><a href="azure/index.md">Azure hybrid services</a></li>
-            <li><a href="azure/azure-integration.md">Connect Windows 
-Admin Center to Azure</a></li>
-            <li><a href="azure/deploy-wac-in-azure.md">Deploy Windows Admin Center in Azure</a></li>
-            <li><a href="azure/manage-azure-vms.md">Manage Azure VMs with Windows Admin Center</a></li>
-            </ul>
-        </td>
-    <tr>
-    
     </tr>
 
 </table>

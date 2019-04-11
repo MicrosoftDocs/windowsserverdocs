@@ -31,6 +31,18 @@
 ### [Manage Hyper-V virtual machines](use/manage-virtual-machines.md)
 ### [Logging](use/logging.md)
 
+
+## Connect to Azure
+### [Azure hybrid services](azure/index.md)
+#### [Azure Backup](azure/azure-backup.md)
+#### [Azure Site Recovery](azure/azure-site-recovery.md)
+#### [Azure File Sync](azure/azure-file-sync.md)
+#### [Azure Monitor](azure/azure-monitor.md)
+#### [Azure Update Management](azure/azure-update-management.md)
+### [Connect Windows Admin Center to Azure](azure/azure-integration.md)
+### [Deploy Windows Admin Center in Azure](azure/deploy-wac-in-azure.md)
+### [Manage Azure VMs with Windows Admin Center](azure/manage-azure-vms.md)
+
 ## Support
 ### [Support policy](support/index.md)
 ### [Common troubleshooting steps](use/troubleshooting.md)
@@ -69,13 +81,3 @@
 #### [Squared Up](extend/case-studies/squared-up.md)
 
 
-## Azure
-### [Azure hybrid services](azure/index.md)
-#### [Azure Backup](azure/azure-backup.md)
-#### [Azure Site Recovery](azure/azure-site-recovery.md)
-#### [Azure File Sync](azure/azure-file-sync.md)
-#### [Azure Monitor](azure/azure-monitor.md)
-#### [Azure Update Management](azure/azure-update-management.md)
-### [Connect Windows Admin Center to Azure](azure/azure-integration.md)
-### [Deploy Windows Admin Center in Azure](azure/deploy-wac-in-azure.md)
-### [Manage Azure VMs with Windows Admin Center](azure/manage-azure-vms.md)
