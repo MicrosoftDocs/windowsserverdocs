@@ -25,11 +25,29 @@ Azure hybrid services work with Windows Servers in the following configurations:
 - Stand-alone physical servers and virtual machines (VMs)
 - Clusters, including hyper-converged clusters certified by the [Azure Stack HCI](../azure-stack-hci/index.md), and [Windows Server Software-Defined (WSSD)](https://www.microsoft.com/en-us/cloud-platform/software-defined-datacenter) programs
 
-While you can set up most Azure hybrid services using the Azure portal and a download or two, many are integrated directly into [Windows Admin Center](../manage/windows-admin-center/overview.md) to provide a simplified setup experience and a server-centric view of the services.
+While you can set up most Azure hybrid services using the Azure portal and a download or two, many are integrated directly into Windows Admin Center to provide a simplified setup experience and a server-centric view of the services.
+
+## Azure hybrid services tool
+
+The Azure hybrid services tool in [Windows Admin Center](../manage/windows-admin-center/understand/windows-admin-center.md) consolidates all the integrated Azure services into a centralized hub where you can easily discover all the available Azure services that bring value to your on-premises or hybrid environment. 
+
+![Screenshot of Windows Admin Center showing the Azure Hybrid Services tool](../manage/windows-admin-center/media/azure-services/ahs-discover.png)
+
+If you connect to a server with Azure services already enabled, the Azure hybrid services tool serves as a single pane of glass to see all enabled services on that server. You can easily get to the relevant tool within Windows Admin Center, launch out to the Azure portal for deeper management of those Azure services, or read more with documentation at your fingertips. 
+
+![Screenshot of Windows Admin Center showing Azure services that are already installed on the server](../manage/windows-admin-center/media/azure-services/ahs-dayN.png)
+
+From the Azure hybrid services tool, you can:
+- Backup your Windows Server from Windows Admin Center with [Azure Backup](azure-backup.md)
+- Protect your Hyper-V Virtual Machines from Windows Admin Center with [Azure Site Recovery](azure-site-recovery.md)
+- Sync your file server with the cloud, using [Azure File Sync](azure-file-sync.md)
+- Manage operating system updates for all your Windows servers, both on-premises or in the cloud, with [Azure Update Management](azure-update-management.md)
+- Monitor servers, both on-premises or in the cloud, and configure alerts with [Azure Monitor](azure-monitor.md)
+- Connect your on-premises servers to an Azure Virtual Network with [Azure Network Adapter](https://aka.ms/WACNetworkAdapter)
 
 ## Services for stand-alone servers and VMs
 
-These are the Azure services that provide functionality to stand-alone servers and VMs:
+This is the complete list of Azure services that provide functionality to stand-alone servers and VMs:
 
 - **(New) Sync your file server with the cloud by using [Azure File Sync](https://aka.ms/afs)**  
 Sync files on this server with Azure file shares. Keep all your files local or use cloud tiering and cache only the most frequently used files on the server, tiering cold data to the cloud. Data in the cloud can be backed up, eliminating the need to worry about on-premises server backup. Additionally, multi-site-sync can keep a set of files in sync across multiple servers.
@@ -59,7 +77,7 @@ You can add an Azure Network Adapter to your on-premises servers to help you sec
 For more info, see [Configure a point-to-site VPN connection between an on-premises Windows Server and an Azure Virtual Network](https://aka.ms/WACNetworkAdapter).
 
 - **Manage Azure IaaS virtual machines with [Windows Admin Center](../manage/windows-admin-center/configure/manage-azure-vms.md)**  
-You can use Windows Admin Center to manage your Azure VMs as well as on-premises machines. By configuring your Windows Admin Center gateway to connect to your Azure VNet, you can manage virtual machines in Azure using the consistent, simplified tools that Windows Admin Center provides. For more info, see [Configure Windows Admin Center to manage VMs in Azure.](../manage/windows-admin-center/configure/manage-azure-vms.md).
+You can use Windows Admin Center to manage your Azure VMs as well as on-premises machines. By configuring your Windows Admin Center gateway to connect to your Azure VNet, you can manage virtual machines in Azure using the consistent, simplified tools that Windows Admin Center provides. For more info, see [Configure Windows Admin Center to manage VMs in Azure](../manage/windows-admin-center/configure/manage-azure-vms.md).
 
 ## Services for clusters
 
@@ -69,3 +87,7 @@ These are the Azure services that provide functionality to clusters as a whole:
 - [Protect your VMs with Azure Site Recovery](../manage/windows-admin-center/use/azure-site-recovery.md)
 - [Deploy a cluster cloud witness](../failover-clustering/deploy-cloud-witness.md)
 
+## See also
+
+- [Connect Windows Admin Center to Azure](configure/azure-integration.md)
+- [Deploy Windows Admin Center in Azure](deploy/deploy-wac-in-azure.md)
