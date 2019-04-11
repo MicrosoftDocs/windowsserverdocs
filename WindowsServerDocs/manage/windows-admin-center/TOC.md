@@ -70,12 +70,12 @@
 
 
 ## Azure
-### [Azure hybrid services](../../azure-hybrid-services/index.md)
-#### [Azure Backup](use/azure-backup.md)
-#### [Azure Site Recovery](use/azure-site-recovery.md)
-#### [Azure File Sync](use/azure-file-sync.md)
-#### [Azure Monitor](use/azure-monitor.md)
-#### [Azure Update Management](use/azure-update-management.md)
-### [Connect Windows Admin Center to Azure](configure/azure-integration.md)
-### [Deploy Windows Admin Center in Azure](deploy/deploy-wac-in-azure.md)
-### [Manage Azure VMs with Windows Admin Center](configure/manage-azure-vms.md)
+### [Azure hybrid services](azure/index.md)
+#### [Azure Backup](azure/azure-backup.md)
+#### [Azure Site Recovery](azure/azure-site-recovery.md)
+#### [Azure File Sync](azure/azure-file-sync.md)
+#### [Azure Monitor](azure/azure-monitor.md)
+#### [Azure Update Management](azure/azure-update-management.md)
+### [Connect Windows Admin Center to Azure](azure/azure-integration.md)
+### [Deploy Windows Admin Center in Azure](azure/deploy-wac-in-azure.md)
+### [Manage Azure VMs with Windows Admin Center](azure/manage-azure-vms.md)
