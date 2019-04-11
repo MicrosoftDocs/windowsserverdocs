@@ -139,9 +139,6 @@ Once tags have been added to one or more server connections, you can view the ta
 
 Windows Admin Center Preview includes a PowerShell module to import or export your connection list.
 
->[!IMPORTANT]
->Import and export of connections with the PowerShell module is only supported when Windows Admin Center is deployed as a gateway service on Windows Server.
-
 ```powershell
 # Load the module
 Import-Module "$env:ProgramFiles\windows admin center\PowerShell\Modules\ConnectionTools"
