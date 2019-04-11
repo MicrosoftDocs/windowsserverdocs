@@ -8466,7 +8466,11 @@
   "redirect_url": "/windows-server/manage/windows-admin-center/azure/index",
   "redirect_document_id": false
 },
-
+{
+  "source_path": "WindowsServerDocs/manage/windows-admin-center/use/azure-backup.md",
+  "redirect_url": "/windows-server/manage/windows-admin-center/azure/azure-backup",
+  "redirect_document_id": false
+},
 
 
     {
