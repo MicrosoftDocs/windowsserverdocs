@@ -70,7 +70,7 @@
 
 
 ## Azure
-### [Azure hybrid services](../azure-hybrid-services/index.md)
+### [Azure hybrid services](../../azure-hybrid-services/index.md)
 #### [Azure Backup](use/azure-backup.md)
 #### [Azure Site Recovery](use/azure-site-recovery.md)
 #### [Azure File Sync](use/azure-file-sync.md)
