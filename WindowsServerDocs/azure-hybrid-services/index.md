@@ -81,7 +81,7 @@ You can use Windows Admin Center to manage your Azure VMs as well as on-premises
 
 ## Services for clusters
 
-These are the Azure services that provide functionality to clusters as a whole:
+These are the Azure services that provide functionality to clusters as a whole (these aren't all integrated into Windows Admin Center yet):
 
 - [Monitor a hyper-converged cluster with Azure Monitor](../storage/storage-spaces/configure-azure-monitor.md)
 - [Protect your VMs with Azure Site Recovery](../manage/windows-admin-center/use/azure-site-recovery.md)
