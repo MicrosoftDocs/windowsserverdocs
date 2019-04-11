@@ -23,7 +23,7 @@ You can extend on-premises deployments of Windows Server to the cloud by using A
 Azure hybrid services work with Windows Servers in the following configurations:
 
 - Stand-alone physical servers and virtual machines (VMs)
-- Clusters, including hyper-converged clusters certified by the [Azure Stack HCI](../../azure-stack-hci/index.md), and [Windows Server Software-Defined (WSSD)](https://www.microsoft.com/en-us/cloud-platform/software-defined-datacenter) programs
+- Clusters, including hyper-converged clusters certified by the [Azure Stack HCI](../../../azure-stack-hci/index.md), and [Windows Server Software-Defined (WSSD)](https://www.microsoft.com/en-us/cloud-platform/software-defined-datacenter) programs
 
 While you can set up most Azure hybrid services using the Azure portal and a download or two, many are integrated directly into Windows Admin Center to provide a simplified setup experience and a server-centric view of the services.
 
@@ -76,18 +76,18 @@ For more info, see [Configure servers for Azure Update Management](azure-update-
 You can add an Azure Network Adapter to your on-premises servers to help you securely connect the server to an Azure Virtual Network.  
 For more info, see [Configure a point-to-site VPN connection between an on-premises Windows Server and an Azure Virtual Network](https://aka.ms/WACNetworkAdapter).
 
-- **Manage Azure IaaS virtual machines with [Windows Admin Center](../manage/windows-admin-center/configure/manage-azure-vms.md)**  
+- **Manage Azure IaaS virtual machines with [Windows Admin Center](manage-azure-vms.md)**  
 You can use Windows Admin Center to manage your Azure VMs as well as on-premises machines. By configuring your Windows Admin Center gateway to connect to your Azure VNet, you can manage virtual machines in Azure using the consistent, simplified tools that Windows Admin Center provides. For more info, see [Configure Windows Admin Center to manage VMs in Azure](manage-azure-vms.md).
 
 ## Services for clusters
 
 These are the Azure services that provide functionality to clusters as a whole (these aren't all integrated into Windows Admin Center yet):
 
-- [Monitor a hyper-converged cluster with Azure Monitor](../storage/storage-spaces/configure-azure-monitor.md)
+- [Monitor a hyper-converged cluster with Azure Monitor](../../../storage/storage-spaces/configure-azure-monitor.md)
 - [Protect your VMs with Azure Site Recovery](azure-site-recovery.md)
-- [Deploy a cluster cloud witness](../failover-clustering/deploy-cloud-witness.md)
+- [Deploy a cluster cloud witness](../../../failover-clustering/deploy-cloud-witness.md)
 
 ## See also
 
-- [Connect Windows Admin Center to Azure](configure/azure-integration.md)
-- [Deploy Windows Admin Center in Azure](deploy/deploy-wac-in-azure.md)
+- [Connect Windows Admin Center to Azure](azure-integration.md)
+- [Deploy Windows Admin Center in Azure](deploy-wac-in-azure.md)

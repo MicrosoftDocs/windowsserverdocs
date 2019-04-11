@@ -18,7 +18,7 @@ ms.prod: windows-server-threshold
 > [!NOTE]
 > To follow this guide, you will need build 1.2.1904.02001 or higher. To check your build number open Windows Admin Center and click the question mark in the top right.
 
-If you haven't already, create a [tool extension](develop-tool.md) for Windows Admin Center. After you have completed this make note of the values used when creating an extension:
+If you haven't already, create a [tool extension](../develop-tool.md) for Windows Admin Center. After you have completed this make note of the values used when creating an extension:
 | Value | Explanation | Example |
 | ----- | ----------- | ------- |
 | ```{!Company Name}``` | Your company name (with spaces) | ```Contoso``` |
@@ -130,7 +130,7 @@ export class DefaultModule { }
 
 The last step is building a NuGet package with the files we have added and then installing that package in Windows Admin Center.
 
-Follow the [Publishing Extensions](extend/publish-extensions) guide if you have not created an extension package before. 
+Follow the [Publishing Extensions](publish-extensions) guide if you have not created an extension package before. 
 > [!IMPORTANT]
 > In your .nuspec file for this extension, it is important that the ```<id>``` value matches the name in your project's ```manifest.json``` and the ```<version>``` matches what was added to ```\src\app\default.component.ts```. Also add an entry under ```<files>```: 
 

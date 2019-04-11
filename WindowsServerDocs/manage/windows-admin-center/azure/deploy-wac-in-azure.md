@@ -169,7 +169,7 @@ Before installing Windows Admin Center on your desired gateway VM, install a SSL
 
 4. Start the Windows Admin Center service (run C:/Program Files/Windows Admin Center/sme.exe)
 
-[Learn more about deploying Windows Admin Center.](install.md)
+[Learn more about deploying Windows Admin Center.](../deploy/install.md)
 
 ### Configure the gateway VM to enable HTTPS port access: 
 
