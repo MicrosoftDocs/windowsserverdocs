@@ -26,7 +26,7 @@ ms.date: 02/12/2019
 * I get a **This site/page can't be reached** error in my web browser (select your deployment type)
     * [I have Windows Admin Center installed as an App on Windows 10](#whitescreenw10)
     * [I have Windows Admin Center installed as an Gateway on Windows Server](#whitescreenws)
-    * [I have Windows Admin Center installed as an Gateway on an Azure VM](#whitescreenzvm)
+    * [I have Windows Admin Center installed as an Gateway on an Azure VM](#whitescreenazvm)
 
 * [Windows Admin Center home page loads, but I'm stuck on the Add Connection pane, or I can't connect to any machine.](#winvercompat)
 
