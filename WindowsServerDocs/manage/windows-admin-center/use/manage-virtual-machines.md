@@ -148,7 +148,7 @@ You can view Hyper-V event logs directly from the Virtual Machines tool.
 
 ## Protect virtual machines with Azure Site Recovery
 
-You can use Windows Admin Center to configure Azure Site Recovery and replicate your on-premises virtual machines to Azure. [Learn more](azure-services.md)
+You can use Windows Admin Center to configure Azure Site Recovery and replicate your on-premises virtual machines to Azure. [Learn more](../azure/azure-site-recovery.md)
 
 ## More Coming
 

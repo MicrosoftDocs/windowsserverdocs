@@ -9,12 +9,9 @@ ms.date: 04/12/2019
 ms.localizationpriority: high
 ms.prod: windows-server-threshold
 ---
-
 # Windows Admin Center
 
 >Applies To: Windows Admin Center, Windows Admin Center Preview
-
-Welcome to Windows Admin Center!
 
 **Windows Admin Center** (codenamed **Project Honolulu**) is an evolution of Windows Server in-box management tools; it’s a single pane of glass that consolidates all aspects of local and remote server management. As a locally deployed, browser-based management experience, an Internet connection and Azure aren’t required. Windows Admin Center gives you full control of all aspects of your deployment, including private networks that aren’t Internet-connected.
 
@@ -89,7 +86,7 @@ You can get Windows Admin Center up and running in your environment in minutes:
             <li><a href="use/manage-hyper-converged.md">Manage hyper-converged infrastructure</a>
             <li><a href="use/manage-failover-clusters.md">Manage failover clusters</a>
             <li><a href="use/manage-virtual-machines.md">Manage virtual machines</a>
-            <li><a href="use/azure-services.md">Leverage Azure services</a>
+            <li><a href="azure/index.md">Leverage Azure services</a>
             <li><a href="use/troubleshooting.md">Common troubleshooting steps</a>
             <li><a href="use/logging.md">Logging</a>
             <li><a href="use/known-issues.md">Known issues</a>
@@ -105,6 +102,19 @@ You can get Windows Admin Center up and running in your environment in minutes:
             <li><a href="extend/publish-extensions.md">Publishing extensions</a>
             </ul>
         </td>
+    </tr>
+        <td style="vertical-align: top;">
+            <h3>Azure</h3>
+            <ul>
+            <li><a href="azure/index.md">Azure hybrid services</a></li>
+            <li><a href="azure/azure-integration.md">Connect Windows 
+Admin Center to Azure</a></li>
+            <li><a href="azure/deploy-wac-in-azure.md">Deploy Windows Admin Center in Azure</a></li>
+            <li><a href="azure/manage-azure-vms.md">Manage Azure VMs with Windows Admin Center</a></li>
+            </ul>
+        </td>
+    <tr>
+    
     </tr>
 
 </table>
