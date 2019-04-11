@@ -8511,6 +8511,17 @@
   "redirect_url": "/windows-server/manage/windows-admin-center/azure/deploy-wac-in-azure",
   "redirect_document_id": false
 },
+{
+  "source_path": "WindowsServerDocs/manage/windows-admin-center/use/troubleshooting.md",
+  "redirect_url": "/windows-server/manage/windows-admin-center/support/troubleshooting",
+  "redirect_document_id": false
+},
+{
+  "source_path": "WindowsServerDocs/manage/windows-admin-center/use/known-issues.md",
+  "redirect_url": "/windows-server/manage/windows-admin-center/support/known-issues",
+  "redirect_document_id": false
+},
+
     {
       "source_path": "WindowsServerDocs/administration/kernel-soft-reboot.md",
       "redirect_url": "/windows-server/windows-server",

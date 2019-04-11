@@ -25,7 +25,7 @@ If you've already installed Windows Admin Center on an on-premises gateway (eith
 If your target VMs (the VMs you want to manage with Windows Admin Center) have public IPs, add them to your Windows Admin Center gateway by IP address, or by FQDN. There are a couple considerations to take into account:
 
 - You must enable WinRM access to your target VM by running the following in PowerShell or the Command Prompt on the target VM: `winrm quickconfig`
-- If you haven't domain-joined the Azure VM, the VM behaves like a server in workgroup, so you'll need to make sure you account for [using Windows Admin Center in a workgroup](../use/troubleshooting.md#using-windows-admin-center-in-a-workgroup).
+- If you haven't domain-joined the Azure VM, the VM behaves like a server in workgroup, so you'll need to make sure you account for [using Windows Admin Center in a workgroup](../support/troubleshooting.md#using-windows-admin-center-in-a-workgroup).
 - You must also enable inbound connections to port 5985 for WinRM over HTTP in order for Windows Admin Center to manage the target VM:
    1. Run the following PowerShell script on the target VM to enable inbound connections to port 5985 on the guest OS:   
 `Set-NetFirewallRule -Name WINRM-HTTP-In-TCP-PUBLIC -RemoteAddress Any`
@@ -56,9 +56,9 @@ If your target Azure VMs don't have public IPs, and you want to manage these VMs
 
 Ensure WinRM is running on your target VMs by running the following in PowerShell or the Command Prompt on the target VM: `winrm quickconfig`
 
-If you haven't domain-joined the Azure VM, the VM behaves like a server in workgroup, so you'll need to make sure you account for [using Windows Admin Center in a workgroup](../use/troubleshooting.md#using-windows-admin-center-in-a-workgroup).
+If you haven't domain-joined the Azure VM, the VM behaves like a server in workgroup, so you'll need to make sure you account for [using Windows Admin Center in a workgroup](../support/troubleshooting.md#using-windows-admin-center-in-a-workgroup).
 
-If you run into any issues, consult [Troubleshoot Windows Admin Center](../use/troubleshooting.md) to see if additional steps are required for configuration (for example, if you are connecting using a local administrator account or are not domain-joined).
+If you run into any issues, consult [Troubleshoot Windows Admin Center](../support/troubleshooting.md) to see if additional steps are required for configuration (for example, if you are connecting using a local administrator account or are not domain-joined).
 
 ## Use a Windows Admin Center gateway deployed in Azure
 
@@ -68,4 +68,4 @@ To manage VMs outside of the VNet on which the Windows Admin Center gateway is d
 
 Windows Admin Center can be installed on an existing or newly deployed VM in your environment. The VM that you choose for Windows Admin Center installation must have a public IP and DNS name.
 
-[Learn more about Deploying a Windows Admin Center gateway in Azure](../deploy/deploy-wac-in-azure.md)
+[Learn more about Deploying a Windows Admin Center gateway in Azure](deploy-wac-in-azure.md)

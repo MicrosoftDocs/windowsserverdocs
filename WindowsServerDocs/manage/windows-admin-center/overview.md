@@ -100,8 +100,8 @@ Admin Center to Azure</a></li>
             <td style="vertical-align: top;">
             <h3>Support</h3>
             <li><a href="support/index.md">Support policy</a>
-            <li><a href="use/troubleshooting.md">Common troubleshooting steps</a>
-            <li><a href="use/known-issues.md">Known issues</a>
+            <li><a href="support/troubleshooting.md">Common troubleshooting steps</a>
+            <li><a href="support/known-issues.md">Known issues</a>
             <ul>
             </ul>
         </td>

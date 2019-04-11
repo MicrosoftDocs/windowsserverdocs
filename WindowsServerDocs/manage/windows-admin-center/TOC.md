@@ -45,8 +45,8 @@
 
 ## Support
 ### [Support policy](support/index.md)
-### [Common troubleshooting steps](use/troubleshooting.md)
-### [Known issues](use/known-issues.md)
+### [Common troubleshooting steps](support/troubleshooting.md)
+### [Known issues](support/known-issues.md)
 
 
 ## Extend

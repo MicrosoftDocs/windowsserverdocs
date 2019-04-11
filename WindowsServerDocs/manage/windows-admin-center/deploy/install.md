@@ -26,7 +26,7 @@ Review the [installation options](..\plan\installation-options.md) which include
 When you install Windows Admin Center on Windows 10, it uses port 6516 by default, but you have the option to specify a different port. You can also create a desktop shortcut and let Windows Admin Center manage your TrustedHosts.
 
 > [!NOTE]
-> Modifying TrustedHosts is required in a workgroup environment, or when using local administrator credentials in a domain. If you choose to forego this setting, you must [configure TrustedHosts manually](../use/troubleshooting.md#configure-trustedhosts).
+> Modifying TrustedHosts is required in a workgroup environment, or when using local administrator credentials in a domain. If you choose to forego this setting, you must [configure TrustedHosts manually](../support/troubleshooting.md#configure-trustedhosts).
 
 When you start Windows Admin Center from the **Start** menu, it opens in your default browser.
 
@@ -37,7 +37,7 @@ When you start Windows Admin Center for the first time, you'll see an icon in th
 On Windows Server, Windows Admin Center is installed as a network service. You must specify the port that the service listens on, and it requires a certificate for HTTPS. The installer can create a self-signed certificate for testing, or you can provide the thumbprint of a certificate already installed on the computer. If you use the generated certificate, it will match the DNS name of the server. If you use your own certificate, make sure the name provided in the certificate matches the machine name (wildcard certificates are not supported.) You are also given the choice to let Windows Admin Center manage your TrustedHosts.
 
 > [!NOTE]
-> Modifying TrustedHosts is required in a workgroup environment, or when using local administrator credentials in a domain. If you choose to forego this setting, you must [configure TrustedHosts manually](../use/troubleshooting.md#configure-trustedhosts)
+> Modifying TrustedHosts is required in a workgroup environment, or when using local administrator credentials in a domain. If you choose to forego this setting, you must [configure TrustedHosts manually](../support/troubleshooting.md#configure-trustedhosts)
 
 Once the install is complete, open a browser from a remote computer and navigate to URL presented in the last step of the installer.
 
