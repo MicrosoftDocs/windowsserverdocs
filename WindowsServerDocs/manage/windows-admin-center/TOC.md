@@ -11,20 +11,17 @@
 ## Plan
 ### [What type of installation is right for you?](plan/installation-options.md)
 ### [User access options](plan/user-access-options.md)
-### [Azure integration options](plan/azure-integration-options.md)
 
 ## Deploy
 ### [Prepare your environment](deploy/prepare-environment.md)
 ### [Install Windows Admin Center](deploy/install.md)
 ### [High availability](deploy/high-availability.md)
-### [Deploy Windows Admin Center in Azure](deploy/deploy-wac-in-azure.md)
+
 
 ## Configure
 ### [Windows Admin Center settings](configure/settings.md)
 ### [User access control and permissions](configure/user-access-control.md)
 ### [Using extensions](configure/using-extensions.md)
-### [Configure Azure integration](configure/azure-integration.md)
-### [Manage Azure VMs with Windows Admin Center](configure/manage-azure-vms.md)
 
 ## Use
 ### [Get started](use/get-started.md)
@@ -32,12 +29,6 @@
 ### [Manage hyper-converged infrastructure](use/manage-hyper-converged.md)
 ### [Manage failover clusters](use/manage-failover-clusters.md)
 ### [Manage Hyper-V virtual machines](use/manage-virtual-machines.md)
-### [Configure Azure services](use/azure-services.md)
-#### [Azure Backup](use/azure-backup.md)
-#### [Azure Site Recovery](use/azure-site-recovery.md)
-#### [Azure File Sync](use/azure-file-sync.md)
-#### [Azure Monitor](use/azure-monitor.md)
-#### [Azure Update Management](use/azure-update-management.md)
 ### [Logging](use/logging.md)
 
 ## Support
@@ -76,3 +67,16 @@
 #### [NEC](extend/case-studies/nec.md)
 #### [Pure Storage](extend/case-studies/purestorage.md)
 #### [Squared Up](extend/case-studies/squared-up.md)
+
+
+## Azure
+### [Connect Windows Admin Center to Azure](configure/azure-integration.md)
+### [Deploy Windows Admin Center in Azure](deploy/deploy-wac-in-azure.md)
+### [Manage Azure VMs with Windows Admin Center](configure/manage-azure-vms.md)
+### [Azure hybrid services](../azure-hybrid-services/index.md)
+### [Configure Azure services](use/azure-services.md)
+#### [Azure Backup](use/azure-backup.md)
+#### [Azure Site Recovery](use/azure-site-recovery.md)
+#### [Azure File Sync](use/azure-file-sync.md)
+#### [Azure Monitor](use/azure-monitor.md)
+#### [Azure Update Management](use/azure-update-management.md)

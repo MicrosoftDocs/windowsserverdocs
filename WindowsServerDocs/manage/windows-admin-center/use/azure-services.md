@@ -5,7 +5,7 @@ ms.technology: manage
 ms.topic: article
 author: haley-rowland
 ms.author: harowl
-ms.date: 06/18/2018
+ms.date: 04/12/2019
 ms.localizationpriority: medium
 ms.prod: windows-server-threshold
 ---
@@ -30,7 +30,7 @@ If you connect to a server with Azure services already enabled, the Azure hybrid
 From the Azure hybrid services tool, you can:
 - Backup your Windows Server from Windows Admin Center with [Azure Backup](azure-backup.md)
 - Protect your Hyper-V Virtual Machines from Windows Admin Center with [Azure Site Recovery](azure-site-recovery.md)
-- Sync your file server with the cloud using [Azure File Sync](azure-file-sync.md)
+- Sync your file server with the cloud, using [Azure File Sync](azure-file-sync.md)
 - Manage operating system updates for all your Windows servers, both on-premises or in the cloud, with [Azure Update Management](azure-update-management.md)
 - Monitor servers, both on-premises or in the cloud, and configure alerts with [Azure Monitor](azure-monitor.md)
 - Connect your on-premises servers to an Azure Virtual Network with [Azure Network Adapter](https://aka.ms/WACNetworkAdapter)

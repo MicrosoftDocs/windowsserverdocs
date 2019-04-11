@@ -7,9 +7,8 @@ author: jasongerend
 ms.author: jgerend
 ms.localizationpriority: medium
 ms.prod: windows-server-threshold
-ms.date: 03/26/2019
+ms.date: 04/12/2019
 ---
-
 # Connecting Windows Server to Azure hybrid services
 
 >Applies to: Windows Server 2019, Windows Server 2016
@@ -24,13 +23,16 @@ You can extend on-premises deployments of Windows Server to the cloud by using A
 Azure hybrid services work with Windows Servers in the following configurations:
 
 - Stand-alone physical servers and virtual machines (VMs)
-- Clusters, including hyper-converged clusters, [Azure Stack HCI](../azure-stack-hci/index.md), and [Windows Server Software-Defined (WSSD)](https://www.microsoft.com/en-us/cloud-platform/software-defined-datacenter)
+- Clusters, including hyper-converged clusters certified by the [Azure Stack HCI](../azure-stack-hci/index.md), and [Windows Server Software-Defined (WSSD)](https://www.microsoft.com/en-us/cloud-platform/software-defined-datacenter) programs
 
 While you can set up most Azure hybrid services using the Azure portal and a download or two, many are integrated directly into [Windows Admin Center](../manage/windows-admin-center/overview.md) to provide a simplified setup experience and a server-centric view of the services.
 
 ## Services for stand-alone servers and VMs
 
 These are the Azure services that provide functionality to stand-alone servers and VMs:
+
+- **(New) Sync your file server with the cloud by using [Azure File Sync](https://aka.ms/afs)**  
+Sync files on this server with Azure file shares. Keep all your files local or use cloud tiering and cache only the most frequently used files on the server, tiering cold data to the cloud. Data in the cloud can be backed up, eliminating the need to worry about on-premises server backup. Additionally, multi-site-sync can keep a set of files in sync across multiple servers.
 
 - **Add an layer of security to Windows Admin Center by adding [Azure Active Directory (Azure AD)](https://azure.microsoft.com/services/active-directory/) authentication**  
 You can add an additional layer of security to Windows Admin Center by requiring users to authenticate using Azure Active Directory (Azure AD) identities to access the gateway. Azure AD authentication also lets you take advantage of Azure AD’s security features like conditional access and multi-factor authentication.  
