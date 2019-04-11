@@ -130,7 +130,7 @@ export class DefaultModule { }
 
 The last step is building a NuGet package with the files we have added and then installing that package in Windows Admin Center.
 
-Follow the [Publishing Extensions](publish-extensions.md) guide if you have not created an extension package before. 
+Follow the [Publishing Extensions](../publish-extensions.md) guide if you have not created an extension package before. 
 > [!IMPORTANT]
 > In your .nuspec file for this extension, it is important that the ```<id>``` value matches the name in your project's ```manifest.json``` and the ```<version>``` matches what was added to ```\src\app\default.component.ts```. Also add an entry under ```<files>```: 
 
