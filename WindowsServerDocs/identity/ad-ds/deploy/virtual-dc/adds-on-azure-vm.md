@@ -225,7 +225,7 @@ After promoting the new domain controllers in Azure they will need to be set to 
 
 ### Wrap up
 
-At this point, the environment has a pair of domain controllers and we have configured the Azure virtual network so that additional servers may be added to the environment. Traditional management tasks for Active Directory Domain Services like configuring sites and services, auditing, backup, and securing the built-in administrator account should be completed.
+At this point, the environment has a pair of domain controllers and we have configured the Azure virtual network so that additional servers may be added to the environment. Post-install tasks for Active Directory Domain Services like configuring sites and services, auditing, backup, and securing the built-in administrator account should be completed at this point.
 
 ## Removing the environment
 
