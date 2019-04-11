@@ -2,7 +2,7 @@
 title: Windows Admin Center
 description: Learn how to manage Windows and Windows Server with a new browser-based app, Windows Admin Center (formerly Project Honolulu)
 ms.technology: manage
-ms.topic: landing-page
+ms.topic: article
 layout: LandingPage
 author: haley-rowland
 ms.author: harowl
