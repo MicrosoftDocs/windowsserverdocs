@@ -7,7 +7,7 @@ author: nwashburn-ms
 ms.author: niwashbu
 ms.localizationpriority: medium
 ms.prod: windows-server-threshold
-ms.date: 04/13/2019
+ms.date: 04/12/2019
 ---
 # What type of installation is right for you?
 

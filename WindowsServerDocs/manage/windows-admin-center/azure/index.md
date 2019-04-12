@@ -7,7 +7,7 @@ author: jasongerend
 ms.author: jgerend
 ms.localizationpriority: medium
 ms.prod: windows-server-threshold
-ms.date: 04/13/2019
+ms.date: 04/12/2019
 ---
 # Connecting Windows Server to Azure hybrid services
 
