@@ -71,7 +71,7 @@ This can happen if your default PowerShell module path has been modified or remo
 
 * Make sure you are using either Microsoft Edge or Google Chrome as your web browser.
 
-* Did you select the correct certificate on [first launch?](get-started.md#selecting-a-client-certificate)
+* Did you select the correct certificate on [first launch?](../use/get-started.md#selecting-a-client-certificate)
 
   * Try opening your browser in a private session - if that works, you'll need to clear your cache.
 

@@ -88,7 +88,7 @@ We are investigating due to customer demand, but there is currently no locked pl
 
 ## Which web browsers are supported by Windows Admin Center?
 
-The latest versions of Microsoft Edge (Windows 10, version 1709 or later) and Google Chrome browsers are tested and supported on Windows 10. [View browser specific known issues](..\use\known-issues.md#browser-specific-issues). Other modern web browsers or other platforms are not currently part of our test matrix and are therefore not *officially* supported.
+The latest versions of Microsoft Edge (Windows 10, version 1709 or later) and Google Chrome browsers are tested and supported on Windows 10. [View browser specific known issues](..\support\known-issues.md#browser-specific-issues). Other modern web browsers or other platforms are not currently part of our test matrix and are therefore not *officially* supported.
 
 ## How does Windows Admin Center handle security?
 
