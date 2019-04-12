@@ -18,7 +18,7 @@ ms.localizationpriority: medium
 
 # Compare the client apps
 
->Applies To: Windows 10, Windows 8.1, Windows Server 2012 R2, Windows Server 2016
+>Applies to: Windows 10, Windows 8.1, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2
 
 We're often asked how the different Remote Desktop client apps compare to each other. Do they all do the same thing? Here are the answers to those questions.
 
