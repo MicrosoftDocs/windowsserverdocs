@@ -28,6 +28,9 @@ Windows Admin Center is a locally deployed, browser-based app for managing serve
 
 You can update non-preview versions of Windows Admin Center by using Microsoft Update or by manually installing. Each non-preview version of Windows Admin Center is supported until 30 days after the next non-preview version is released. See our [support policy](../support/index.md) for more info.
 
+> [!IMPORTANT]
+> Lenovo XClarity Integrator users, please read this [known issue](../support/known-issues.md#Lenovo-XClarity-Integrator) before installing Windows Admin Center version 1904.
+
 ********************
 
 >[!VIDEO https://www.youtube.com/embed/WCWxAp27ERk]
