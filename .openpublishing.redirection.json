@@ -8461,6 +8461,67 @@
   "redirect_url": "/windows-server/manage/windows-admin-center/overview",
   "redirect_document_id": false
 },
+{
+  "source_path": "WindowsServerDocs/azure-hybrid-services/index.md",
+  "redirect_url": "/windows-server/manage/windows-admin-center/azure/index",
+  "redirect_document_id": false
+},
+{
+  "source_path": "WindowsServerDocs/manage/windows-admin-center/use/azure-backup.md",
+  "redirect_url": "/windows-server/manage/windows-admin-center/azure/azure-backup",
+  "redirect_document_id": false
+},
+{
+  "source_path": "WindowsServerDocs/manage/windows-admin-center/use/azure-monitor.md",
+  "redirect_url": "/windows-server/manage/windows-admin-center/azure/azure-monitor",
+  "redirect_document_id": false
+},
+{
+  "source_path": "WindowsServerDocs/manage/windows-admin-center/use/azure-services.md",
+  "redirect_url": "/windows-server/manage/windows-admin-center/azure/index",
+  "redirect_document_id": false
+},
+{
+  "source_path": "WindowsServerDocs/manage/windows-admin-center/use/azure-site-recovery.md",
+  "redirect_url": "/windows-server/manage/windows-admin-center/azure/azure-site-recovery",
+  "redirect_document_id": false
+},
+{
+  "source_path": "WindowsServerDocs/manage/windows-admin-center/use/azure-update-management.md",
+  "redirect_url": "/windows-server/manage/windows-admin-center/azure/azure-update-management",
+  "redirect_document_id": false
+},
+{
+  "source_path": "WindowsServerDocs/manage/windows-admin-center/plan/azure-integration-options.md",
+  "redirect_url": "/windows-server/manage/windows-admin-center/azure/index",
+  "redirect_document_id": false
+},
+{
+  "source_path": "WindowsServerDocs/manage/windows-admin-center/configure/azure-integration.md",
+  "redirect_url": "/windows-server/manage/windows-admin-center/azure/azure-integration",
+  "redirect_document_id": false
+},
+{
+  "source_path": "WindowsServerDocs/manage/windows-admin-center/configure/manage-azure-vms.md",
+  "redirect_url": "/windows-server/manage/windows-admin-center/azure/manage-azure-vms",
+  "redirect_document_id": false
+},
+{
+  "source_path": "WindowsServerDocs/manage/windows-admin-center/deploy/deploy-wac-in-azure.md",
+  "redirect_url": "/windows-server/manage/windows-admin-center/azure/deploy-wac-in-azure",
+  "redirect_document_id": false
+},
+{
+  "source_path": "WindowsServerDocs/manage/windows-admin-center/use/troubleshooting.md",
+  "redirect_url": "/windows-server/manage/windows-admin-center/support/troubleshooting",
+  "redirect_document_id": false
+},
+{
+  "source_path": "WindowsServerDocs/manage/windows-admin-center/use/known-issues.md",
+  "redirect_url": "/windows-server/manage/windows-admin-center/support/known-issues",
+  "redirect_document_id": false
+},
+
     {
       "source_path": "WindowsServerDocs/administration/kernel-soft-reboot.md",
       "redirect_url": "/windows-server/windows-server",

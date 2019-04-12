@@ -7,14 +7,21 @@ author: jwwool
 ms.author: jeffrew
 ms.localizationpriority: medium
 ms.prod: windows-server-threshold
-ms.date: 04/08/2019
+ms.date: 04/12/2019
 ---
-
 # Windows Admin Center Known Issues
 
 >Applies To: Windows Admin Center, Windows Admin Center Preview
 
 If you encounter an issue not described on this page, please [let us know](http://aka.ms/WACfeedback).
+
+## Lenovo XClarity Integrator
+An incompatibility exists between a specific version combination of Lenovo XClarity Integrator and Windows Admin Center. If you currently use or plan to use the Lenovo XClarity Integrator extension in Windows Admin Center, here’s what you need to know:
+
+- Lenovo XClarity Integrator extension version 1.0.4 is fully compatible with Windows Admin Center 1809.5.
+- Lenovo XClarity Integrator extension version 1.0.4 has exposed a compatibility issue on Windows Admin Center 1904. Microsoft and Lenovo engineers are actively investigating together, and we hope to provide a solution as soon as possible. Any updates will be posted here on the Windows Admin Center docs site, and you can also refer to [Lenovo’s support page](https://support.lenovo.com/solutions/ht507549) for reference.
+- If you are a frequent user of Lenovo’s XClarity functionality, you can either stay on Windows Admin Center 1809.5 to continue to use XClarity Integrator 1.0.4, or you can upgrade to Windows Admin Center 1904 and separately use the standalone XClarity Administrator software as a workaround for now.
+
 
 ## Installer
 
