@@ -8,6 +8,7 @@
         ],
         "exclude": [
           "**/obj/**",
+          "**/includes/**",
           "windows-server/**"
         ]
       }
