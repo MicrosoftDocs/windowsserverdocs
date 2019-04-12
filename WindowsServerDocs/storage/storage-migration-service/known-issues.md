@@ -183,6 +183,14 @@ This issue is caused by a code defect in a library used by the Storage Migration
 
 To workaround this issue, continue using Robocopy for [DFSR pre-seeding and DFSR Database cloning operations](../dfs-replication/preseed-dfsr-with-robocopy.md) instead of the Storage Migration Service. We are investigating this issue and intend to resolve this in a later version of Windows Server and possibly a backported Windows Update. 
 
+## Error 404 when downloading CSV logs
+
+When attempting to download the transfer or error logs at the end of a transfer operation, you receive error:
+
+  $jobname : Transfer log : ajax error 404
+
+This error is expected if you have not enabled the "File and Printer Sharing (SMB-In)" firewall rule on the orchestrator server. Windows Admin Center file downloads require port TCP/445 (SMB) on connected computers.  
+
 ## See also
 
 - [Storage Migration Service overview](overview.md)
