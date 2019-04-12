@@ -11,7 +11,7 @@ manager: dougkim
 ---
 # Remote Desktop Services roles
 
->Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016
 
 This article describes the roles within a Remote Desktop Services environment.
 
