@@ -21,7 +21,7 @@ ms.localizationpriority: medium
 
 Now that you've set up the Remote Desktop client on your device (Android, Mac, iOS, or Windows), you may have questions. Here are answers to the most commonly asked questions about the Remote Desktop clients. 
 
-- [Setting up](#Setting-up)
+- [Setting up](#setting-up)
 - [Connections, gateway, and networks](#connection-gateway-and-networks)
 - [Web client](#web-client)
 - [Monitors, audio, and mouse](#monitors-audio-and-mouse)
