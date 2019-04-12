@@ -8,6 +8,7 @@
 ### [VM load balancing](vm-load-balancing-overview.md)
 ### [VM load balancing deep-dive](vm-load-balancing-deep-dive.md)
 ### [Cluster sets](../storage/storage-spaces/cluster-sets.md)
+### [Cluster affinity](cluster-affinity.md)
 ## Plan
 ### [Hardware requirements](clustering-requirements.md)
 ### [Use Cluster Shared Volumes (CSVs)](failover-cluster-csvs.md)
@@ -21,6 +22,7 @@
 ### [Deploy a Cloud Witness](deploy-cloud-witness.md)
 ### [Deploy a file share witness](file-share-witness.md)
 ### [Cluster operating system rolling upgrades](cluster-operating-system-rolling-upgrade.md)
+### [Upgrading a failover cluster on the same hardware](upgrade-option-same-hardware.md)
 ## Manage
 ### [Cluster-Aware Updating](cluster-aware-updating.md)
 #### [Requirements and best practices](cluster-aware-updating-requirements.md)

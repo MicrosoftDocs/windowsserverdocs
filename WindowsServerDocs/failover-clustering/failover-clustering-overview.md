@@ -8,7 +8,7 @@ ms.manager: dongill
 author: JasonGerend
 ms.author: jgerend  
 ms.technology: storage-failover-clustering
-ms.date: 1/30/2019
+ms.date: 03/08/2019
 ms.localizationpriority: high
 ---
 # Failover Clustering in Windows Server
@@ -76,6 +76,8 @@ Failover Clustering has many practical applications, including:
                                         <p><a href="vm-load-balancing-overview.md">VM load balancing</a></p>
 <HR />
                                         <p><a href="../storage/storage-spaces/cluster-sets.md">Cluster sets</a></p>
+<HR />
+                                        <p><a href="cluster-affinity.md">Cluster affinity</a></p>
                                         </div>
                                     </div>
                                 </div>
@@ -131,6 +133,8 @@ Failover Clustering has many practical applications, including:
                                         <p><a href="file-share-witness.md">Deploy a file share witness</a></p>
 <HR />
                                         <p><a href="cluster-operating-system-rolling-upgrade.md">Cluster operating system rolling upgrades</a></p> 
+<HR />
+                                        <p><a href="upgrade-option-same-hardware.md">Upgrading a failover cluster on the same hardware</a></p>
 <HR />
                                         <p><a href="https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn265970\(v%3dws.11\)">Deploy an Active Directory Detached Cluster</a></p>
                                         </div>

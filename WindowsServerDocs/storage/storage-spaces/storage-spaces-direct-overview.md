@@ -6,7 +6,7 @@ ms.manager: dongill
 ms.technology: storage-spaces
 ms.topic: article
 author: cosmosdarwin
-ms.date: 01/14/2019
+ms.date: 03/26/2019
 ms.assetid: 8bd0d09a-0421-40a4-b752-40ecb5350ffd
 description: An overview of Storage Spaces Direct, a feature of Windows Server that enables you to cluster servers with internal storage into a software-defined storage solution.
 ms.localizationpriority: medium
@@ -51,10 +51,11 @@ For other applications of Storage Spaces, such as Shared SAS clusters and stand-
         <td style="padding: 5px; border: 0;">
             <strong>Deploy</a></strong>
             <ul>
-			  <li><a href="deploy-storage-spaces-direct.md">Deploy Storage Spaces Direct</a></li>
-			  <li><a href="create-volumes.md">Create volumes</a></li>
+			        <li><a href="deploy-storage-spaces-direct.md">Deploy Storage Spaces Direct</a></li>
+			        <li><a href="create-volumes.md">Create volumes</a></li>
               <li><a href="nested-resiliency.md">Nested resiliency</a></li>
-              <li><a href="../../failover-clustering/manage-cluster-quorum.md">Configure quorum</a><br><br><br></li>
+              <li><a href="../../failover-clustering/manage-cluster-quorum.md">Configure quorum</a></li>
+              <li><a href="upgrade-storage-spaces-direct-to-windows-server-2019.md">Upgrade a Storage Spaces Direct cluster to Windows Server 2019</a></li>
 		    </ul>
         </td>        
         <td style="padding: 5px; border: 0;">
@@ -68,6 +69,7 @@ For other applications of Storage Spaces, such as Shared SAS clusters and stand-
 			  <li><a href="../update-firmware.md">Update drive firmware</a></li>
               <li><a href="performance-history.md">Performance history</a></li>
               <li><a href="delimit-volume-allocation.md">Delimit the allocation of volumes</a></li>
+              <li><a href="configure-azure-monitor.md">Use Azure Monitor on a hyper-converged cluster</a></li>
 		    </ul>
         </td>
     </tr>
@@ -100,7 +102,7 @@ For other applications of Storage Spaces, such as Shared SAS clusters and stand-
 
 **Storage Spaces Direct at Microsoft Ignite 2017 (1 hour)**
 
-[Watch on YouTube](https://www.youtube.com/watch?v=5kaUiW3qo30)
+[Watch on YouTube](https://www.youtube.com/watch?v=YDr2sqNB-3c)
 
 **Launch Event at Microsoft Ignite 2016 (1 hour)**
 

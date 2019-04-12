@@ -7,7 +7,7 @@ ms.topic: article
 author: JasonGerend
 manager: brianlic
 ms.author: jgerend
-ms.date: 01/14/2019
+ms.date: 03/25/2019
 description: New and updated topics in the on-premises storage documentation for Windows Server for IT Pros.
 ---
 # Change history for storage topics in Windows Server
@@ -18,11 +18,25 @@ This topic lists new and updated topics in the [Storage](storage.md) documentati
 
 > If you're looking for update history for Windows Server, see [Windows 10 and Windows Server 2016 update history](https://support.microsoft.com/help/4000825/windows-10-and-windows-server-2016-update-history).
 
+## March 2019
+
+|New or changed topic                                        |Description|
+|---                                                         |---           |
+|[Monitor with Azure Monitor](storage-spaces/configure-azure-monitor.md)| New|
+|[Upgrade a Storage Spaces Direct cluster to Windows Server 2019](storage-spaces/upgrade-storage-spaces-direct-to-windows-server-2019.md)| New        |
+|[DFS Replication](dfs-replication/dfsr-overview.md)        | Migrated from the [Previous Versions](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc770278(v%3dws.11)) library|
+
+## February 2019
+
+|New or changed topic                                        |Description|
+|---                                                         |---           |
+|[Storage Migration Service known issues](storage-migration-service/known-issues.md)   | Added an issue    |
+
 ## January 2019
 
 |New or changed topic                                        |Description|
 |---                                                         |---           |
-|[Understand and monitor storage resync](storage-spaces/understand-storage-resync.md)|New topic.|
+|[Understand and monitor storage resync](storage-spaces/understand-storage-resync.md)|New topic|
 
 ## December 2018
 

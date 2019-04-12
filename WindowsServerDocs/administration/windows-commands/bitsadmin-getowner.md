@@ -17,9 +17,7 @@ ms.date: 10/16/2017
 
 # bitsadmin getowner
 
-
-
-Retrieves the owner of the specified job.
+Displays the display name or GUID of the owner of the specified job.
 
 ## Syntax
 

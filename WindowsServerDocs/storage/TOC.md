@@ -27,9 +27,9 @@
 #### [Optimize Namespace Polling](dfs-namespaces/optimize-namespace-polling.md)
 #### [Enable Access-based Enumeration on a Namespace](dfs-namespaces/enable-access-based-enumeration-on-a-namespace.md)
 #### [Using Inherited Permissions with Access-based Enumeration](dfs-namespaces/using-inherited-permissions-with-access-based-enumeration.md)
-## DFS Replication
+## [DFS Replication](dfs-replication/dfsr-overview.md)
 ### [Migrate SYSVOL replication to DFS Replication](dfs-replication/migrate-sysvol-to-dfsr.md)
-### [Use robocopy to preseed files for DFS replication](dfs-replication/preseed-dfsr-with-robocopy.md)
+### [Use robocopy to preseed files for DFS Replication](dfs-replication/preseed-dfsr-with-robocopy.md)
 ### [DFS Replication: Frequently Asked Questions (FAQ)](dfs-replication/dfsr-faq.md)
 ## [Disk Management](disk-management/overview-of-disk-management.md)
 ## [File Server and SMB](file-server/file-server-smb-overview.md)
@@ -128,6 +128,7 @@
 #### [Create volumes](storage-spaces/create-volumes.md)
 #### [Nested resiliency](storage-spaces/nested-resiliency.md)
 #### [Configure quorum](../failover-clustering/manage-cluster-quorum.md)
+#### [Upgrade a Storage Spaces Direct cluster to Windows Server 2019](storage-spaces/upgrade-storage-spaces-direct-to-windows-server-2019.md)
 ### Manage
 #### [Manage with Windows Admin Center](../manage/windows-admin-center/use/manage-hyper-converged.md)
 #### [Add servers or drives](storage-spaces/add-nodes.md)
@@ -135,13 +136,6 @@
 #### [Remove servers](storage-spaces/remove-servers.md)
 #### [Update drive firmware](update-firmware.md)
 #### [Extend volumes](storage-spaces/resize-volumes.md)
-### Troubleshoot
-#### [Troubleshooting scenarios](storage-spaces/troubleshooting-storage-spaces.md)
-#### [Health and operational states](storage-spaces/storage-spaces-states.md)
-#### [Collect data](storage-spaces/data-collection.md)
-#### [Frequently asked questions](storage-spaces/storage-spaces-direct-faq.md)
-### Insider Preview
-#### [Cluster sets](storage-spaces/cluster-sets.md)
 #### [Performance history](storage-spaces/performance-history.md)
 ##### [Drives](storage-spaces/performance-history-for-drives.md)
 ##### [Network adapters](storage-spaces/performance-history-for-network-adapters.md)
@@ -152,6 +146,12 @@
 ##### [Clusters](storage-spaces/performance-history-for-clusters.md)
 ##### [Scripting samples](storage-spaces/performance-history-scripting.md)
 #### [Delimit the allocation of volumes](storage-spaces/delimit-volume-allocation.md)
+#### [Monitor with Azure Monitor](storage-spaces/configure-azure-monitor.md)
+### Troubleshoot
+#### [Troubleshooting scenarios](storage-spaces/troubleshooting-storage-spaces.md)
+#### [Health and operational states](storage-spaces/storage-spaces-states.md)
+#### [Collect data](storage-spaces/data-collection.md)
+#### [Frequently asked questions](storage-spaces/storage-spaces-direct-faq.md)
 ## [Work Folders](work-folders/work-folders-overview.md)
 ### [Designing a Work Folders Implementation](work-folders/plan-work-folders.md)
 ### [Deploying Work Folders](work-folders/deploy-work-folders.md)

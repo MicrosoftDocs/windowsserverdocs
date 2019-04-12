@@ -35,9 +35,9 @@ In addition to providing resiliency improvements, ReFS introduces new features f
     
       | Performance tier | Capacity tier |
       |----------------|-----------------|
-       Mirrored SSD | Mirrored HDD |
-       Mirrored SSD | Parity SSD |
-       Mirrored SSD | Parity HDD |
+      |Mirrored SSD | Mirrored HDD |
+      |Mirrored SSD | Parity SSD |
+      |Mirrored SSD | Parity HDD |
             
     - Once these tiers are configured, ReFS use them to deliver fast storage for hot data and capacity-efficient storage for cold data:
         - All writes will occur in the performance tier, and large chunks of data that remain in the performance tier will be efficiently moved to the capacity tier in real-time.
@@ -117,7 +117,7 @@ Deploying ReFS as a backup target is best suited for applications and hardware t
 |---------------------------|------------------|-----------------------|
 | BitLocker encryption | Yes | Yes |
 | Data Deduplication | Yes<sup>1</sup> | Yes |
-| Cluster Shared Volume (CSV) support | Yes | Yes |
+| Cluster Shared Volume (CSV) support | Yes<sup>2</sup> | Yes |
 | Soft links | Yes | Yes |
 | Failover cluster support | Yes | Yes |
 | Access-control lists | Yes | Yes |
@@ -131,11 +131,12 @@ Deploying ReFS as a backup target is best suited for applications and hardware t
 | Oplocks | Yes | Yes |
 | Sparse files | Yes | Yes |
 | Named streams | Yes | Yes |
-| Thin Provisioning | Yes<sup>2</sup> | Yes |
+| Thin Provisioning | Yes<sup>3</sup> | Yes |
 | Offloaded Data Transfer (ODX) | No | Yes |
-| Trim/Unmap | Yes<sup>2</sup> | Yes |
+| Trim/Unmap | Yes<sup>3</sup> | Yes |
 1. Available on Windows Server, version 1709 and later.
-2. Storage Spaces only
+2. Available on Windows Server 2012 R2 and later.
+3. Storage Spaces only
 
 #### The following features are only available on ReFS:
 

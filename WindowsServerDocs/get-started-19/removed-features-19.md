@@ -11,7 +11,7 @@ ms.topic: article
 author: coreyp-at-msft
 ms.author: coreyp
 manager: jasgro
-ms.date: 10/30/2018
+ms.date: 03/29/2019
 ms.localizationpriority: medium
 ---
 
@@ -34,7 +34,6 @@ We're removing the following features and functionalities from the installed pro
 |Feature	|Instead you can use...|
 |-----------|--------------------
 |Business Scanning, also called Distributed Scan Management (DSM)|We're removing this secure scanning and scanner management capability - there are no devices that support this feature.|
-|Internet Storage Name Service (iSNS)|The iSNS protocol is used for interaction between iSNS servers and clients. [Server Message Block](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831795\(v=ws.11\)) provides essentially the same functionality, as well as other features.|
 |Print components - now optional component for Server Core installations|In previous releases of Windows Server, the print components were *disabled* by default in the Server Core installation option. We changed that in Windows Server 2016, enabling them by default. In Windows Server 2019, those print components are once again disabled by default for Server Core. If you need to enable the print components, you can do so by running the **Install-WindowsFeature Print-Server** cmdlet.|
 |[Remote Desktop Connection Broker and Remote Desktop Virtualization Host](../remote/remote-desktop-services/desktop-hosting-service.md) in a Server Core installation|Most Remote Desktop Services deployments have these roles co-located with the Remote Desktop Session Host (RDSH), which requires Server with Desktop Experience; to be consistent with RDSH we're changing these roles to also require Server with Desktop Experience. These RDS roles are no longer available for use in a [Server Core installation](../administration/server-core/what-is-server-core.md). If you need to [deploy these roles as part of your Remote Desktop infrastructure](../remote/remote-desktop-services/rds-deploy-infrastructure.md), you can [install them on Windows Server with Desktop Experience](../get-started/getting-started-with-server-with-desktop-experience.md). <br/><br/>These roles are also included in the Desktop Experience installation option of Windows Server 2019. |
 

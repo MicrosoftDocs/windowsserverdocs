@@ -8,6 +8,7 @@
         ],
         "exclude": [
           "**/obj/**",
+          "**/includes/**",
           "windows-server/**"
         ]
       }
@@ -51,6 +52,7 @@
     "template": [
       null
     ],
-    "dest": "windows-server"
+    "dest": "windows-server",
+    "markdownEngineName": "dfm"
   }
 }

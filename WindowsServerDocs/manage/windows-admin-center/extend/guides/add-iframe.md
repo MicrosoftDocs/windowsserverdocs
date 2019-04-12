@@ -43,3 +43,6 @@ Add the following content to the html file:
 ```
 
 That's it, you've added an iFrame to your extension.  Next, you can [build and side load](..\develop-tool.md#build-and-side-load-your-extension) your extension in Windows Admin Center to see the results.
+
+> [!Note]
+> Content Security Policy (CSP) settings could prevent some sites from rendering in an iFrame within Windows Admin Center. You can learn more about this [here](https://content-security-policy.com/). 
