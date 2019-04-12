@@ -16,7 +16,7 @@ manager: dongill
 ---
 # Remote Desktop Services - High availability
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016
 
 Failures and throttling are unavoidable in large-scale systems. It’s simple to set up Remote Desktop infrastructure roles to support high availability and allow end users to connect seamlessly, every time.
 
