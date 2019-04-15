@@ -1,7 +1,7 @@
 ---
 layout: HubPage
 hide_bc: true
-author: coreyp
+author: jasongerend
 ms.author: apexprodleads
 ms.topic: hub-page
 title: Windows Server documentation
@@ -102,7 +102,7 @@ description: Windows Server documentation helps IT professionals evaluate, plan,
                             </a>
             </li>
             <li>
-                            <a href="https://docs.microsoft.com/windows-server/hyperconverged">
+                            <a href="hyperconverged/index.yml">
                             <div class="cardSize">
                                 <div class="cardPadding">
                                     <div class="card">
@@ -121,19 +121,19 @@ description: Windows Server documentation helps IT professionals evaluate, plan,
                             </a>
             </li>
             <li>
-                            <a href="https://docs.microsoft.com/windows-insider/at-work">
+                            <a href="azure-hybrid-services/index.md">
                             <div class="cardSize">
                                 <div class="cardPadding">
                                     <div class="card">
                                         <div class="cardImageOuter">
                                             <div class="cardImage">
-                                                <img src="media/i-insider.svg" alt="" />
+                                                <img src="media/i-microsoft-azure.svg" alt="" />
                                             </div>
                                         </div>
                                         <div class="cardText">
-                                            <h2>Windows Insider Program for Server</h2>
-                                            <p>Test the preview builds for Windows Server 2019</p>
-            <li>
+                                            <h2>Connect to Azure hybrid services</h2>
+                                            <p>Connect your server or cluster to Azure hybrid services to combine the best of on-premises and the cloud.</p>
+            </li>
                     <li class="fullSpan">
                     <HR COLOR="purple" SIZE="6" WIDTH="60%">
                     </li>
@@ -174,6 +174,20 @@ description: Windows Server documentation helps IT professionals evaluate, plan,
                                 </div>
                             </div>
                             </a>
+            </li>
+            <li>
+                            <a href="https://docs.microsoft.com/windows-insider/at-work">
+                            <div class="cardSize">
+                                <div class="cardPadding">
+                                    <div class="card">
+                                        <div class="cardImageOuter">
+                                            <div class="cardImage">
+                                                <img src="media/i-insider.svg" alt="" />
+                                            </div>
+                                        </div>
+                                        <div class="cardText">
+                                            <h2>Windows Insider Program for Server</h2>
+                                            <p>Test the preview builds for Windows Server 2019</p>
             </li>
         </ul>
     </li>

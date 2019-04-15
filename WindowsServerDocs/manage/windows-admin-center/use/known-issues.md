@@ -7,7 +7,7 @@ author: jwwool
 ms.author: jeffrew
 ms.localizationpriority: medium
 ms.prod: windows-server-threshold
-ms.date: 03/07/2019
+ms.date: 03/25/2019
 ---
 
 # Windows Admin Center Known Issues
@@ -62,10 +62,6 @@ If you encounter an issue not described on this page, please [let us know](http:
 
 - When you update Windows Admin Center, you must reinstall your extensions.
 - If you add an extension feed that is inaccessible, there is no warning. [14412861]
-
-### Azure
-
-If you configured your gateway for Azure connectivity when you set up Azure Site Recovery and you used the New-AsrAadApp.ps1 available in our documentation prior to the version 1804.25 release, you need to delete your existing Azure AD application. In the Azure portal go to **Azure Active Directory** > **Application registration** > **All applications** and search for "ASR" (the old Azure AD app is named "ASR-Honolulu-*gateway*"). Follow the instructions above to create the replacement application with the correct permissions.
 
 ## Browser Specific Issues
 

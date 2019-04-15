@@ -7,7 +7,7 @@ ms.assetid: 915b1338-5085-481b-8904-75d29e609e93
 manager: dongill
 author: rpsqrd
 ms.technology: security-guarded-fabric
-ms.date: 12/12/2018
+ms.date: 04/01/2019
 ---
 
 # Authorize guarded hosts using TPM-based attestation
@@ -98,8 +98,11 @@ For more information about the available CI policy rule levels, see [Deploy code
 
 3.  Apply the CI policy to your reference host:
 
-    1.  Copy the binary CI policy file (HW1CodeIntegrity.p7b) to the following location on your reference host (the filename must exactly match):<br>
-        **C:\\Windows\\System32\\CodeIntegrity\\SIPolicy.p7b**
+    1.  Run the following command to configure the machine to use your CI policy. You can also deploy the CI policy with [Group Policy](https://docs.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/deploy-windows-defender-application-control-policies-using-group-policy) or [System Center Virtual Machine Manager](https://docs.microsoft.com/en-us/system-center/vmm/guarded-deploy-host?view=sc-vmm-2019#manage-and-deploy-code-integrity-policies-with-vmm).
+
+        ```powershell
+        Invoke-CimMethod -Namespace root/Microsoft/Windows/CI -ClassName PS_UpdateAndCompareCIPolicy -MethodName Update -Arguments @{ FilePath = "C:\temp\HW1CodeIntegrity.p7b" }
+        ```
 
     2.  Restart the host to apply the policy.
 
@@ -116,8 +119,8 @@ For more information about the available CI policy rule levels, see [Deploy code
 5.  Apply the CI policy to all of your hosts (with identical hardware and software configuration) using the following commands:
 
     ```powershell
-    Copy-Item -Path '<Path to HW1CodeIntegrity\_enforced.p7b>' -Destination 'C:\Windows\System32\CodeIntegrity\SIPolicy.p7b'
-
+    Invoke-CimMethod -Namespace root/Microsoft/Windows/CI -ClassName PS_UpdateAndCompareCIPolicy -MethodName Update -Arguments @{ FilePath = "C:\temp\HW1CodeIntegrity.p7b" }
+    
     Restart-Computer
     ```
 

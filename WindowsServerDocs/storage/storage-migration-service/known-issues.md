@@ -4,7 +4,7 @@ description: Known issues and troubleshooting support for Storage Migration Serv
 author: nedpyle
 ms.author: nedpyle
 manager: siroy
-ms.date: 02/27/2019
+ms.date: 03/13/2019
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: storage
@@ -97,13 +97,24 @@ We intend to change this behavior in a later release of Windows Server 2019.
 
 ## Cutover fails when migrating between networks
 
-When migrating to a destination VM running in a different network than the source, such as an Azure IaaS instance, cutover fails to complete when the source was using a static IP address. 
+When migrating to a destination computer running in a different network than the source, such as an Azure IaaS instance, cutover fails to complete when the source was using a static IP address. 
 
 This behavior is by design, to prevent connectivity issues after migration from users, applications, and scripts connecting via IP address. When the IP address is moved from the old source computer to the new destination target, it won't match the new network subnet information and perhaps DNS and WINS.
 
 To workaround this issue, perform a migration to a computer on the same network. Then move that computer to a new network and reassign its IP information. For instance, if migrating to Azure IaaS, first migrate to a local VM, then use Azure Migrate to shift the VM to Azure.  
 
-We have fixed this issue in a later release of Windows Server 2019. We'll now allow you to specify migrations that don't alter the destination server's network settings. We may release an update to the existing version of Windows Server 2019 as part of the normal monthly update cycle. 
+We have fixed this issue in a later release of Windows Admin Center. We'll now allow you to specify migrations that don't alter the destination server's network settings. The updated extension will be listed here when released. 
+
+## Validation warnings for destination proxy and credential administrative privileges
+
+When validating a transfer job, you see the following warnings:
+
+ > **The credential has administrative privileges.**
+ > Warning: Action isn't available remotely.
+ > **The destination proxy is registered.**
+ > Warning: The destination proxy wasn't found.
+
+If you have not installed the Storage Migration Service Proxy service on the Windows Server 2019 destination computer, or the destinaton computer is Windows Server 2016 or Windows Server 2012 R2, this behavior is by design. We recommend migrating to a Windows Server 2019 computer with the proxy installed for significantly improved transfer performance.  
 
 
 ## See also

@@ -20,6 +20,11 @@ We regularly update the [Remote Desktop client for macOS](remote-desktop-mac.md)
 
 If you encounter any issues, you can always contact us via **Help > Report an Issue**.
 
+## Updates for version 10.2.10
+*Published date: 3/30/2019*
+
+- In this release we addressed instability caused by the recent macOS 10.14.4 update. We also fixed mispaints that appeared when decoding AVC codec data encoded by a server using NVIDIA hardware.
+
 ## Updates for version 10.2.9
 *Published date: 3/6/2019*
 
