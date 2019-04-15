@@ -30,7 +30,7 @@
     "overwrite": [],
     "externalReference": [],
     "globalMetadata": {
-        "uhfHeaderId": "MSDocsHeader-WindowsIT", 
+     "uhfHeaderId": "MSDocsHeader-WindowsIT", 
 		"breadcrumb_path": "/windows-server/breadcrumbs/toc.json",
     "extendBreadcrumb":  true,
 	    "feedback_system": "GitHub",
