@@ -48,7 +48,7 @@ Following is the list of pre-requisites required to build this sample plug-in
 
  1.	Download the sample plug-in, use Git Bash and type the following: 
 
-   `git clone https://github.com/Azure-Samples/[repo path to be added]`
+   `git clone https://github.com/Microsoft/adfs-sample-RiskAssessmentModel-RiskyIPBlock`
 
  2.	Create a **.csv** file at any location on your AD FS server (In my case, I created the **authconfigdb.csv** file at **C:\extensions**) and add the IPs you want to block to this file. 
 
