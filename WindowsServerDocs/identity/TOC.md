@@ -365,6 +365,8 @@
 
 
 ### [AD FS Development](ad-fs/AD-FS-Development.md)
+
+#### [Build Plug-ins with AD FS 2019 Risk Assessment Model](ad-fs/development/ad-fs-risk-assessment-model.md)
 #### [Custom Id Tokens in AD FS](ad-fs/development/Custom-Id-Tokens-in-AD-FS.md)
 #### [AD FS On-behalf-of Authentication in Windows Server 2016](ad-fs/development/AD-FS-On-behalf-of-Authentication-in-Windows-Server.md)
 #### [Enabling OpenId Connect with AD FS 2016](ad-fs/development/Enabling-OpenId-Connect-with-AD-FS.md)
