@@ -32,7 +32,7 @@ The model allows to plug-in code at any of three stages of AD FS authentication 
 
 3.	**Post-Authentication** – Enables building plug-in to assess risk after user has provided credentials and AD FS has performed authentication. At this stage, in addition to the request context, security context, and protocol context, you also have information on the authentication result (Success or Failure). The plug-in can evaluate the risk score based on the available information and pass the risk score to claim and policy rules for further evaluation. 
 
-To better understand how to build a risk assessment plug-in and run it in line with AD FS process, let’s build a sample plug-in that blocks the requests coming from certain IPs identified as risky, register the plug-in with AD FS and finally test the functionality. 
+To better understand how to build a risk assessment plug-in and run it in line with AD FS process, let’s build a sample plug-in that blocks the requests coming from certain **extranet** IPs identified as risky, register the plug-in with AD FS and finally test the functionality. 
 
 >[!NOTE]
 >This walkthrough is only to show you how you can create a sample plug-in. By no means is the solution we are creating an enterprise ready solution.  
@@ -50,9 +50,9 @@ Following is the list of pre-requisites required to build this sample plug-in
 
    `git clone https://github.com/Azure-Samples/[repo path to be added]`
 
- 2.	Create a **.csv** file at any location on your AD FS server (In my case, I created the **authconfigdb.csv** file at **C:\extensions**) and add IPs you want to block to this file. 
+ 2.	Create a **.csv** file at any location on your AD FS server (In my case, I created the **authconfigdb.csv** file at **C:\extensions**) and add the IPs you want to block to this file. 
 
-   The sample plug-in will block any authentication requests coming from the IPs listed in this file. 
+   The sample plug-in will block any authentication requests coming from the **Extranet IPs** listed in this file. 
 
    Note: If you have an AD FS Farm, you can create the file on any or all the AD FS servers. Any of the files can be used to import the risky IPs into AD FS. We will discuss the import process in detail in the [Register the plug-in dll with AD FS](#register-the-plug-in-dll-with-ad-fs) section below. 
 
@@ -153,7 +153,7 @@ In my case, the command is:
 
 ### Testing the plug-in
 
- 1.	Open the **authconfig.csv** file we created earlier (in my case at location **C:\extensions**) and add the IPs you want to block. Every IP should be on a separate line and there should be no spaces at the end</br>
+ 1.	Open the **authconfig.csv** file we created earlier (in my case at location **C:\extensions**) and add the **Extranet IPs** you want to block. Every IP should be on a separate line and there should be no spaces at the end</br>
  ![model](media\ad-fs-risk-assessment-model\risk18.png)
  
  2.	Save and close the file
