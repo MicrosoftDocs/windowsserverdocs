@@ -110,7 +110,7 @@ We need to register the dll in AD FS by using the `Register-AdfsThreatDetectionM
  ![model](media\ad-fs-risk-assessment-model\risk12.png)
 
  3.	Run the **SN** command with the **-T** parameter and the location of the file (In my case `SN -T “C:\extensions\ThreatDetectionModule.dll”`)
- ![model](media\ad-fs-risk-assessment-model\risk13.png)
+ ![model](media\ad-fs-risk-assessment-model\risk13.png)</br>
  The command will provide you the public key token (For me, the **Public Key Token is 714697626ef96b35**)
 
  4.	Add the dll to the **Global Assembly Cache** of the AD FS server
