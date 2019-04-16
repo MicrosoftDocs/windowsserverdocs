@@ -79,18 +79,17 @@ Following is the list of pre-requisites required to build this sample plug-in
    a.	Right click on the name of the project, ThreatDetectionModule. From the menu, click Properties
    ![model](media\ad-fs-risk-assessment-model\risk6.png)
    
-   b.	From the Properties page, click Signing, on the left, and then check the checkbox marked Sign the assembly. From the Choose a strong name key file: pull down menu, select <New...>
+   b.	From the Properties page, click Signing, on the left, and then check the checkbox marked Sign the assembly. From the Choose a strong name key file: pull down menu, select <New...></br>
    ![model](media\ad-fs-risk-assessment-model\risk7.png)
 
    c.	In the Create Strong Name Key dialogue, type a name (you can choose any name) for the key, uncheck the checkbox Protect my key file with password. Then, click OK
    ![model](media\ad-fs-risk-assessment-model\risk8.png)</br>
  
-   d.	Save the project as shown below
+   d.	Save the project as shown below</br>
    ![model](media\ad-fs-risk-assessment-model\risk9.png)
 
-7.	Build the project by clicking Build and then Rebuild Solution as shown below
-
-   ![model](media\ad-fs-risk-assessment-model\risk10.png)
+7.	Build the project by clicking Build and then Rebuild Solution as shown below</br>
+ ![model](media\ad-fs-risk-assessment-model\risk10.png)
 
 
 Check the Output window, at the bottom of the screen, to see if any errors occurred
@@ -162,10 +161,10 @@ UnRegister-AdfsThreatDetectionModule -Name "<name used while registering the dll
  4.	Initiate authentication request from the server with the same IP you added in authconfig.csv
  For this demonstration, I will be using AD FS Help Claims X-Ray tool to initiate a request. If you would like to use the X-Ray tool, please follow the instructions 
 
- Enter federation server instance and hit Test Authentication button. 
+ Enter federation server instance and hit Test Authentication button.</br> 
  ![model](media\ad-fs-risk-assessment-model\risk15.png) 
 
- 5.	Authentication is blocked as shown below
+ 5.	Authentication is blocked as shown below.</br>
  ![model](media\ad-fs-risk-assessment-model\risk16.png)
  
 Now that we know how to build and register the plug-in, let’s walkthrough the plug-in code to understand the implementation using the new interfaces and classes introduced with the model. 
