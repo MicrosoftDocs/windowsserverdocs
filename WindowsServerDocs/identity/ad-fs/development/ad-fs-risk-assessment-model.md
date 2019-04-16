@@ -111,8 +111,6 @@ We need to register the dll in AD FS by using the `Register-AdfsThreatDetectionM
 
  3.	Run the **SN** command with the **-T** parameter and the location of the file (In my case `SN -T “C:\extensions\ThreatDetectionModule.dll”`)
  ![model](media\ad-fs-risk-assessment-model\risk13.png)
- 
-
  The command will provide you the public key token (For me, the **Public Key Token is 714697626ef96b35**)
 
  4.	Add the dll to the **Global Assembly Cache** of the AD FS server
@@ -123,19 +121,20 @@ We need to register the dll in AD FS by using the `Register-AdfsThreatDetectionM
    b.	Run the **Gacutil** command (In my case `Gacutil /IF C:\extensions\ThreatDetectionModule.dll`)
  ![model](media\ad-fs-risk-assessment-model\risk14.png)
  
-
-   Note: If you have an AD FS farm, the above needs to be executed on each AD FS server in the farm. 
+ >[!NOTE]
+ >If you have an AD FS farm, the above needs to be executed on each AD FS server in the farm. 
 
  5.	Open **Windows PowerShell** and run the following command to register the dll
-  ```
- Register-AdfsThreatDetectionModule -Name "<Add a name>" -TypeName "<class name that implements interface>, <dll name>, Version=10.0.0.0, Culture=neutral, PublicKeyToken=< Add the Public Key Token from Step 2. above>" -ConfigurationFilePath "<path of the .csv file>”
- ```
- In my case, the command is: 
- ```
- Register-AdfsThreatDetectionModule -Name "IPBlockPlugin" -TypeName "ThreatDetectionModule.UserRiskAnalyzer, ThreatDetectionModule, Version=10.0.0.0, Culture=neutral, PublicKeyToken=714697626ef96b35" -ConfigurationFilePath "C:\extensions\authconfigdb.csv”
- ```
+    ```
+    Register-AdfsThreatDetectionModule -Name "<Add a name>" -TypeName "<class name that implements interface>, <dll name>, Version=10.0.0.0, Culture=neutral, PublicKeyToken=< Add the Public Key Token from Step 2. above>" -ConfigurationFilePath "<path of the .csv file>”
+    ```
+    In my case, the command is: 
+    ```
+    Register-AdfsThreatDetectionModule -Name "IPBlockPlugin" -TypeName "ThreatDetectionModule.UserRiskAnalyzer, ThreatDetectionModule, Version=10.0.0.0, Culture=neutral, PublicKeyToken=714697626ef96b35" -ConfigurationFilePath "C:\extensions\authconfigdb.csv”
+    ```
  
- Note: You need to register the dll only once, even if you have an AD FS farm. 
+    >[!NOTE]
+    >You need to register the dll only once, even if you have an AD FS farm. 
 
  6.	Restart the AD FS service after registering the dll
 
