@@ -50,7 +50,7 @@ Following is the list of pre-requisites required to build this sample plug-in
 
    `git clone https://github.com/Azure-Samples/[repo path to be added]`
 
- 2.	Create a **.csv** file at any location on your AD FS server (In my case created **authconfigdb.csv** file at `C:\extensions\`) and add IPs you want to block to this file. 
+ 2.	Create a **.csv** file at any location on your AD FS server (In my case, I created the **authconfigdb.csv** file at **C:\extensions**) and add IPs you want to block to this file. 
 
    The sample plug-in will block any authentication requests coming from the IPs listed in this file. 
 
@@ -66,9 +66,9 @@ Following is the list of pre-requisites required to build this sample plug-in
    a.	Right click on **References** in **Solutions Explorer** and select **Add Reference…**</br> 
    ![model](media\ad-fs-risk-assessment-model\risk3.png)
    
-   b.	On the **Reference Manager** window select **Browse**. In the **Select the files to reference…** dialogue, select `Microsoft.IdentityServer.dll` from your AD FS installation folder (in my case `C:\Windows\ADFS\`) and click **Add**.
+   b.	On the **Reference Manager** window select **Browse**. In the **Select the files to reference…** dialogue, select `Microsoft.IdentityServer.dll` from your AD FS installation folder (in my case **C:\Windows\ADFS**) and click **Add**.
    
-   Note: In my case I am building the plug-in on the AD FS server itself. If your development environment is on a different server, copy the Microsoft.IdentityServer.dll from your AD FS installation folder on AD FS server on to your development box.</br> 
+   Note: In my case I am building the plug-in on the AD FS server itself. If your development environment is on a different server, copy the `Microsoft.IdentityServer.dll` from your AD FS installation folder on AD FS server on to your development box.</br> 
    ![model](media\ad-fs-risk-assessment-model\risk4.png)
    
    c.	Click **OK** on the **Reference Manager** window after making sure `Microsoft.IdentityServer.dll` checkbox is selected</br>
@@ -96,7 +96,7 @@ Check the **Output window**, at the bottom of the screen, to see if any errors o
 ![model](media\ad-fs-risk-assessment-model\risk11.png)
 
 
-The plug-in (dll) is now ready for use and is in the `\bin\Debug\` folder of the project folder (In my case, that's `C:\extensions\ThreatDetectionModule\bin\Debug\ThreatDetectionModule.dll`). 
+The plug-in (dll) is now ready for use and is in the **\bin\Debug** folder of the project folder (In my case, that's **C:\extensions\ThreatDetectionModule\bin\Debug\ThreatDetectionModule.dll**). 
 
 The next step is to register this dll with AD FS, so it runs in line with AD FS authentication process. 
 
@@ -104,9 +104,9 @@ The next step is to register this dll with AD FS, so it runs in line with AD FS 
 
 We need to register the dll in AD FS by using the `Register-AdfsThreatDetectionModule` PowerShell command on the AD FS server, however, before we register, we need to get the Public Key Token. This public key token was created when we created the key and signed the dll using that key. To learn what the Public Key Token for the dll is, you can use the **SN.exe** as follows
 
- 1.	Copy the dll file from the `\bin\Debug\` folder to another location (In my case copying it to `C:\extensions`)
+ 1.	Copy the dll file from the **\bin\Debug** folder to another location (In my case copying it to **C:\extensions**)
 
- 2.	Start the **Developer Command Prompt** for Visual Studio and go to the directory containing the **sn.exe** (In my case the directory is `C:\Program Files (x86)\Microsoft SDKs\Windows\v10.0A\bin\NETFX 4.7.2 Tools`)
+ 2.	Start the **Developer Command Prompt** for Visual Studio and go to the directory containing the **sn.exe** (In my case the directory is **C:\Program Files (x86)\Microsoft SDKs\Windows\v10.0A\bin\NETFX 4.7.2 Tools**)
  ![model](media\ad-fs-risk-assessment-model\risk12.png)
 
  3.	Run the **SN** command with the **-T** parameter and the location of the file (In my case `SN -T “C:\extensions\ThreatDetectionModule.dll”`)
@@ -118,7 +118,7 @@ We need to register the dll in AD FS by using the `Register-AdfsThreatDetectionM
  4.	Add the dll to the **Global Assembly Cache** of the AD FS server
  Our best practice would be that you create a proper installer for your project and use the installer to add the file to the GAC. Another solution is to use **Gacutil.exe** (more information on **Gacutil.exe** available [here](https://docs.microsoft.com/dotnet/framework/tools/gacutil-exe-gac-tool)) on your development machine.  Since I have my visual studio on the same server as AD FS, I will be using **Gacutil.exe** as follows
 
-   a.	On Developer Command Prompt for Visual Studio and go to the directory containing the **Gacutil.exe** (In my case the directory is `C:\Program Files (x86)\Microsoft SDKs\Windows\v10.0A\bin\NETFX 4.7.2 Tools`)
+   a.	On Developer Command Prompt for Visual Studio and go to the directory containing the **Gacutil.exe** (In my case the directory is **C:\Program Files (x86)\Microsoft SDKs\Windows\v10.0A\bin\NETFX 4.7.2 Tools**)
 
    b.	Run the **Gacutil** command (In my case `Gacutil /IF C:\extensions\ThreatDetectionModule.dll`)
  ![model](media\ad-fs-risk-assessment-model\risk14.png)
@@ -153,7 +153,7 @@ In my case, the command is:
 
 ### Testing the plug-in
 
- 1.	Open the **authconfig.csv** file we created earlier (in my case at location `C:\extensions\`) and add the IPs you want to block. Every IP should be on a separate line and there should be no spaces at the end</br>
+ 1.	Open the **authconfig.csv** file we created earlier (in my case at location **C:\extensions**) and add the IPs you want to block. Every IP should be on a separate line and there should be no spaces at the end</br>
  ![model](media\ad-fs-risk-assessment-model\risk18.png)
  
  2.	Save and close the file
@@ -183,7 +183,7 @@ Now that we know how to build and register the plug-in, let’s walkthrough the 
 
 ## Plug-in code walkthrough
 
-Open the project  `ThreatDetectionModule.sln` using Visual Studio and then open the main file **UserRiskAnalyzer.cs** from the **Solutions Explorer** on the right of the screen
+Open the project `ThreatDetectionModule.sln` using Visual Studio and then open the main file **UserRiskAnalyzer.cs** from the **Solutions Explorer** on the right of the screen</br>
 ![model](media\ad-fs-risk-assessment-model\risk17.png)
  
 The file contains the main class UserRiskAnalyzer which implements the abstract class ThreatDetectionModule and interface IRequestReceivedThreatDetectionModule to read the IP from the request context, compare the obtained IP with the IPs loaded from AD FS DB, and block request if there is an IP match. Let’s go over these types in more detail
