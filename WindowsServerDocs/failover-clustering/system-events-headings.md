@@ -760,9 +760,13 @@ currently granted to the service account. Use the 'sc.exe qprivs clussvc' to
 verify the privileges of the Cluster service (ClusSvc). Additionally check for
 any security policies or group policies in Active Directory Domain Services that
 may have altered the default privileges. Type the following command to grant the
-Cluster service the necessary privileges to function correctly: <br><br>sc.exe privs
+Cluster service the necessary privileges to function correctly:
+
+```
+sc.exe privs
 clussvc
 SeBackupPrivilege/SeRestorePrivilege/SeIncreaseQuotaPrivilege/SeIncreaseBasePriorityPrivilege/SeTcbPrivilege/SeDebugPrivilege/SeSecurityPrivilege/SeAuditPrivilege/SeImpersonatePrivilege/SeChangeNotifyPrivilege/SeIncreaseWorkingSetPrivilege/SeManageVolumePrivilege/SeCreateSymbolicLinkPrivilege/SeLoadDriverPrivilege
+```
 
 ### Event 1242: RES_IPADDR_LEASE_EXPIRED
 
