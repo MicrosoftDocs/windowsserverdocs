@@ -73,6 +73,7 @@ Following is the list of pre-requisites required to build this sample plug-in
    
    >[!NOTE]
     >In my case I am building the plug-in on the AD FS server itself. If your development environment is on a different server, copy the `Microsoft.IdentityServer.dll` from your AD FS installation folder on AD FS server on to your development box.</br> 
+   
    ![model](media\ad-fs-risk-assessment-model\risk4.png)
    
    c.	Click **OK** on the **Reference Manager** window after making sure `Microsoft.IdentityServer.dll` checkbox is selected</br>
