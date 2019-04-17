@@ -48,13 +48,16 @@ Following is the list of pre-requisites required to build this sample plug-in
 
  1.	Download the sample plug-in, use Git Bash and type the following: 
 
-   `git clone https://github.com/Microsoft/adfs-sample-RiskAssessmentModel-RiskyIPBlock`
+   ```
+   git clone https://github.com/Microsoft/adfs-sample-RiskAssessmentModel-RiskyIPBlock`
+   ```
 
  2.	Create a **.csv** file at any location on your AD FS server (In my case, I created the **authconfigdb.csv** file at **C:\extensions**) and add the IPs you want to block to this file. 
 
    The sample plug-in will block any authentication requests coming from the **Extranet IPs** listed in this file. 
 
-   Note: If you have an AD FS Farm, you can create the file on any or all the AD FS servers. Any of the files can be used to import the risky IPs into AD FS. We will discuss the import process in detail in the [Register the plug-in dll with AD FS](#register-the-plug-in-dll-with-ad-fs) section below. 
+   >{!NOTE]
+    > If you have an AD FS Farm, you can create the file on any or all the AD FS servers. Any of the files can be used to import the risky IPs into AD FS. We will discuss the import process in detail in the [Register the plug-in dll with AD FS](#register-the-plug-in-dll-with-ad-fs) section below. 
 
  3.	Open the project `ThreatDetectionModule.sln` using Visual Studio
 
@@ -68,7 +71,8 @@ Following is the list of pre-requisites required to build this sample plug-in
    
    b.	On the **Reference Manager** window select **Browse**. In the **Select the files to reference…** dialogue, select `Microsoft.IdentityServer.dll` from your AD FS installation folder (in my case **C:\Windows\ADFS**) and click **Add**.
    
-   Note: In my case I am building the plug-in on the AD FS server itself. If your development environment is on a different server, copy the `Microsoft.IdentityServer.dll` from your AD FS installation folder on AD FS server on to your development box.</br> 
+   >[!NOTE]
+    >In my case I am building the plug-in on the AD FS server itself. If your development environment is on a different server, copy the `Microsoft.IdentityServer.dll` from your AD FS installation folder on AD FS server on to your development box.</br> 
    ![model](media\ad-fs-risk-assessment-model\risk4.png)
    
    c.	Click **OK** on the **Reference Manager** window after making sure `Microsoft.IdentityServer.dll` checkbox is selected</br>
@@ -140,10 +144,11 @@ We need to register the dll in AD FS by using the `Register-AdfsThreatDetectionM
 
 That’s it, the dll is now registered with AD FS and ready for use!
 
-Note: If any changes are made to the plugin and the project is rebuilt, then the updated dll needs to be registered again. Before registering, you will need to unregister the current dll using the following command:
- ```
-UnRegister-AdfsThreatDetectionModule -Name "<name used while registering the dll in 5. above>"
- ``` 
+ >[!NOTE]
+ > If any changes are made to the plugin and the project is rebuilt, then the updated dll needs to be registered again. Before registering, you will need to unregister the current dll using the following command:</br></br>
+ >`
+  UnRegister-AdfsThreatDetectionModule -Name "<name used while registering the dll in 5. above>"
+ >` 
 
 In my case, the command is:
  ``` 
@@ -241,7 +246,8 @@ The method returns ThrottleStatus (0 if NotEvaluated, 1 to Block, and 2 to Allow
 
 In our sample plug-in, EvaluateRequest method implementation parses the clientIpAddress from the requestContext parameter and compares it with all the IPs loaded from the AD FS DB. If a match is found, method returns 2 for Block, else it returns 1 for Allow. Based on the returned value, AD FS either blocks or allows the request. 
 
-Note: The sample plug-in discussed above implements only IRequestReceivedThreatDetectionModule interface. However, the risk assessment model provides two additional interfaces –IPreAuthenticationThreatDetectionModule (to implement risk assessment logic duing pre-authentication stage) and IPostAuthenticationThreatDetectionModule (to implement risk assessment logic during post-authentication stage). The details on the two interfaces are provided below. 
+>[!NOTE]
+>The sample plug-in discussed above implements only IRequestReceivedThreatDetectionModule interface. However, the risk assessment model provides two additional interfaces –IPreAuthenticationThreatDetectionModule (to implement risk assessment logic duing pre-authentication stage) and IPostAuthenticationThreatDetectionModule (to implement risk assessment logic during post-authentication stage). The details on the two interfaces are provided below. 
 
 #### IPreAuthenticationThreatDetectionModule Interface 
 
@@ -261,7 +267,8 @@ IList<Claim> additionalClams
 ```
 The interface includes EvaluatePreAuthentication method which allows you to use the information passed in the RequestContext requestContext, SecurityContext securityContext, ProtocolContext protocolContext, and IList<Claim> additionalClams input parameters to write your pre-authentication risk assessment logic. 
 
-Note: For list of properties passed with each context type, visit RequestContext, SecurityContext, and ProtocolContext class definitions. 
+>[!NOTE]
+>For list of properties passed with each context type, visit RequestContext, SecurityContext, and ProtocolContext class definitions. 
 
 The other input parameter passed is logger which is type ThreatDetectionLogger. The parameter can be used to write the error, audit and/or debug messages to AD FS logs.
 
@@ -287,13 +294,15 @@ IList<Claim> additionalClams
 
 The interface includes EvaluatePreAuthentication method which allows you to use the information passed in the RequestContext requestContext, SecurityContext securityContext, ProtocolContext protocolContext, AuthenticationResult authenticationResult, and IList<Claim> additionalClams input parameters to write your post-authentication risk assessment logic. 
 
-Note: For complete list of properties passed with each context type, refer RequestContext, SecurityContext, and ProtocolContext class definitions. 
+>[!NOTE]
+> For complete list of properties passed with each context type, refer RequestContext, SecurityContext, and ProtocolContext class definitions. 
 
 The other input parameter passed is logger which is type ThreatDetectionLogger. The parameter can be used to write the error, audit and/or debug messages to AD FS logs. 
 
 The method returns the Risk Score which can be used in AD FS policy and claim rules. 
 
-Note: For plug-in to work, the main class (in this case UserRiskAnalyzer) needs to derive ThreatDetectionModule abstract class and should implement atleast one of the three interfaces described above. Once the dll is registered, AD FS checks which of the interfaces are implemented and calls them at appropriate stage in the pipeline.
+>[!NOTE]
+>For plug-in to work, the main class (in this case UserRiskAnalyzer) needs to derive ThreatDetectionModule abstract class and should implement atleast one of the three interfaces described above. Once the dll is registered, AD FS checks which of the interfaces are implemented and calls them at appropriate stage in the pipeline.
 
 ### FAQs
 
