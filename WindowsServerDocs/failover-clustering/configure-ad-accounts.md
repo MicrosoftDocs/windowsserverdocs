@@ -108,7 +108,7 @@ As described in the preceding three sections, certain requirements must be met b
 
 ### Planning ahead for password resets and other account maintenance
 
-The administrators of failover clusters might sometimes need to reset the password of the cluster name account. This action requires a specific permission, the **Reset password** permission. Therefore, it is a best practice to edit the permissions of the cluster name account (by using the Active Directory Users and Computers snap-in) to give the administrators of the cluster the **Reset password** permission for the cluster name account. For more information, see [Steps for troubleshooting password problems with the cluster name account](#steps_for_troubleshooting_password_problems_with_the_cluster_name_account), later in this guide.
+The administrators of failover clusters might sometimes need to reset the password of the cluster name account. This action requires a specific permission, the **Reset password** permission. Therefore, it is a best practice to edit the permissions of the cluster name account (by using the Active Directory Users and Computers snap-in) to give the administrators of the cluster the **Reset password** permission for the cluster name account. For more information, see [Steps for troubleshooting password problems with the cluster name account](#steps-for-troubleshooting-password-problems-with-the-cluster-name-account), later in this guide.
 
 ## Steps for configuring the account for the person who installs the cluster
 

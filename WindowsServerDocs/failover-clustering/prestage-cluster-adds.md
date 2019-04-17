@@ -89,7 +89,7 @@ If you prestaged the CNO in AD DS, you can do either of the following to create 
 >[!NOTE]
 >Membership in the **Domain Admins** group, or equivalent, is the minimum required to complete the steps for this option.
 
-- Option 2: [Prestage a VCO for a clustered role](#prestage-a-vco-for-the-clustered-role). Use this option if it is necessary to prestage accounts for clustered roles because of requirements in your organization. For example, you may want to control the naming convention, or control which clustered roles are created.
+- Option 2: [Prestage a VCO for a clustered role](#prestage-a-vco-for-a-clustered-role). Use this option if it is necessary to prestage accounts for clustered roles because of requirements in your organization. For example, you may want to control the naming convention, or control which clustered roles are created.
 
 >[!NOTE]
 >Membership in the **Account Operators** group is the minimum required to complete the steps for this option.
@@ -97,7 +97,7 @@ If you prestaged the CNO in AD DS, you can do either of the following to create 
 ### Grant the CNO permissions to the OU
 
 1. In Active Directory Users and Computers, on the **View** menu, make sure that **Advanced Features** is selected.
-2. Right-click the OU where you created the CNO in [Step 1: Prestage the CNO in AD DS](#step-1:-prestage-the-CNO-in-ad-ds), and then select **Properties**.
+2. Right-click the OU where you created the CNO in [Step 1: Prestage the CNO in AD DS](#step-1-prestage-the-CNO-in-ad-ds), and then select **Properties**.
 3. On the **Security** tab, select **Advanced**.
 4. In the **Advanced Security Settings** dialog box, select **Add**.
 5. Next to **Principal**, select **Select a principal**.
