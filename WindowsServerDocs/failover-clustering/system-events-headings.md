@@ -190,7 +190,7 @@ the latest copy of cluster configuration data. Changes to the cluster occurred
 while this node was not in membership and as a result was not able to receive
 configuration data updates.
 
-Guidance:
+#### Guidance
 
 Attempt to start the cluster service on all nodes in the cluster so that nodes
 with the latest copy of the cluster configuration data can first form the
@@ -807,8 +807,11 @@ configured to use.
 
 Cluster network name resource failed registration of one or more associated DNS
 names(s) because the corresponding DNS Zone does not accept dynamic
-updates.<br><br>Cluster Network name: '%1'<br>DNS Zone: '%2'<br><br>Guidance:<br>Ensure that
-the DNS is configured as a Dynamic DNS zone. If the DNS server does not accept
+updates.<br><br>Cluster Network name: '%1'<br>DNS Zone: '%2'
+
+#### Guidance
+
+Ensure that the DNS is configured as a Dynamic DNS zone. If the DNS server does not accept
 dynamic updates uncheck the 'Register this connection's' addresses in DNS' in
 the properties of the network adapter.
 
@@ -838,22 +841,31 @@ Secure DNS Zone.
 ### Event 1260: RES_NETNAME_DNS_REGISTRATION_MODIFY_FAILED
 
 Cluster network name resource failed to modify the DNS registration.<br><br>Cluster
-Network name: '%1'<br>Error code: '%2'<br><br>Guidance:<br>Ensure that the network
-adapters associated with dependent IP address resources are configured with
+Network name: '%1'<br>Error code: '%2'
+
+#### Guidance
+
+Ensure that the network adapters associated with dependent IP address resources are configured with
 access to at least one DNS server.
 
 ### Event 1261: RES_NETNAME_DNS_REGISTRATION_MODIFY_FAILED_STATUS
 
 Cluster network name resource failed to modify the DNS registration.<br><br>Cluster
-Network name: '%1'<br>Reason: '%2'<br><br>Guidance:<br>Ensure that the network adapters
-associated with dependent IP address resources are configured with access to at
-least one DNS server.
+Network name: '%1'<br>Reason: '%2'
+
+#### Guidance
+
+Ensure that the network adapters associated with dependent IP address resources are configured with access to at least one DNS server.
 
 ### Event 1262: RES_NETNAME_DNS_REGISTRATION_PUBLISH_PTR_FAILED
 
 Cluster network name resource failed to publish the PTR record in the DNS
 reverse lookup zone.<br><br>Cluster Network name: '%1'<br>Error Code:
-'%2'<br><br>Guidance:<br><br>Ensure that the network adapters associated with dependent
+'%2'
+
+#### Guidance
+
+Ensure that the network adapters associated with dependent
 IP address resources are configured with access to at least one DNS server and
 that the DNS reverse lookup zone exists.
 
@@ -861,9 +873,11 @@ that the DNS reverse lookup zone exists.
 
 Cluster network name resource failed to publish the PTR record in the DNS
 reverse lookup zone.<br><br>Cluster Network name: '%1'<br>Reason:
-'%2'<br><br>Guidance:<br><br>Ensure that the network adapters associated with dependent
-IP address resources are configured with access to at least one DNS server and
-that the DNS reverse lookup zone exists.
+'%2'
+
+#### Guidance
+
+Ensure that the network adapters associated with dependent IP address resources are configured with access to at least one DNS server and that the DNS reverse lookup zone exists.
 
 ### Event 1265: RES_TYPE_CONTROL_TIMED_OUT
 
@@ -965,8 +979,11 @@ adapters.
 ### Event 1568: RES_CLOUD_WITNESS_CANT_COMMUNICATE_TO_AZURE
 
 Cloud witness resource could not reach Microsoft Azure storage
-services.<br><br>Cluster resource: %1 <br>Cluster node: %2 <br><br>Guidance:<br>This
-could be due to network communication between the cluster node and the Microsoft
+services.<br><br>Cluster resource: %1 <br>Cluster node: %2 
+
+#### Guidance
+
+This could be due to network communication between the cluster node and the Microsoft
 Azure service being blocked. Verify the node's internet connectivity to
 Microsoft Azure. Connect to the Microsoft Azure portal and verify that the
 storage account exists.
@@ -984,7 +1001,10 @@ to check your network configuration.
 
 Cloud witness resource failed to authenticate with Microsoft Azure storage
 services. An access denied error was returned while attempting to contact the
-Microsoft Azure storage account. <br><br>Cluster resource: %1 <br><br>Guidance:<br>
+Microsoft Azure storage account. <br><br>Cluster resource: %1 
+
+#### Guidance
+
 The storage account's access key may no longer be valid. Use the Configure
 Cluster Quorum Wizard in the Failover Cluster Manager or the Set-ClusterQuorum
 Windows PowerShell cmdlet, to configure the Cloud witness resource with the
@@ -1164,15 +1184,22 @@ failure. When the problem is resolved, you can retry the drain operation.
 
 The cluster service was unable to reach any available domain controller on the
 domain. This may impact functionality that is dependent on Cluster network name
-authentication.<br><br>DC Server: %1 <br><br>Guidance:<br> Verify that domain controllers
-are accessible on the network to the cluster nodes.
+authentication.<br><br>DC Server: %1 
+
+#### Guidance
+
+Verify that domain controllers are accessible on the network to the cluster nodes.
 
 ### Event 1684: RES_NETNAME_COMPUTER_OBJECT_VCO_NOT_FOUND
 
 Cluster network name resource failed to find the associated computer object in
 Active Directory. This may impact functionality that is dependent on Cluster
 network name authentication.<br><br>Network Name: %1<br>Organizational Unit:
-%2<br><br>Guidance:<br><br>Restore the computer object for the network name from the
+%2
+
+#### Guidance
+
+Restore the computer object for the network name from the
 Active Directory recycle bin. Alternately, offline the cluster network name
 resource and run the Repair action to recreate the computer object in Active
 Directory.
@@ -1182,24 +1209,32 @@ Directory.
 Cluster network name resource failed to find the associated computer object in
 Active Directory. This may impact functionality that is dependent on Cluster
 network name authentication.<br><br>Network Name: %1<br>Organizational Unit:
-%2<br><br>Guidance:<br><br>Restore the computer object for the network name from the
-Active Directory recycle bin.
+%2
+#### Guidance
+
+Restore the computer object for the network name from the Active Directory recycle bin.
 
 ### Event 1686: RES_NETNAME_COMPUTER_OBJECT_VCO_DISABLED
 
 Cluster network name resource found the associated computer object in Active
 Directory to be disabled. This may impact functionality that is dependent on
 Cluster network name authentication.<br><br>Network Name: %1<br>Organizational Unit:
-%2<br><br>Guidance:<br><br>Enable the computer object for the network name in Active
-Directory.
+%2
+
+#### Guidance
+
+Enable the computer object for the network name in Active Directory.
 
 ### Event 1687: RES_NETNAME_COMPUTER_OBJECT_CNO_DISABLED
 
 Cluster network name resource found the associated computer object in Active
 Directory to be disabled. This may impact functionality that is dependent on
 Cluster network name authentication.<br><br>Network Name: %1<br>Organizational Unit:
-%2<br><br>Guidance:<br><br>Enable the computer object for the network name in Active
-Directory. Alternately, offline the cluster network name resource and run the
+%2
+
+#### Guidance
+
+Enable the computer object for the network name in Active Directory. Alternately, offline the cluster network name resource and run the
 Repair action to enable the computer object in Active Directory.
 
 ### Event 1688: RES_NETNAME_COMPUTER_OBJECT_FAILED
@@ -1208,8 +1243,11 @@ Cluster network name resource detected that the associated computer object in
 Active Directory was disabled and failed in its attempt to enable it. This may
 impact functionality that is dependent on Cluster network name
 authentication.<br><br>Network Name: %1<br>Organizational Unit:
-%2<br><br>Guidance:<br><br>Enable the computer object for the network name in Active
-Directory.
+%2
+
+#### Guidance
+
+Enable the computer object for the network name in Active Directory.
 
 ### Event 4608: NODECLEANUP_GET_CLUSTERED_DISKS_FAILED
 
@@ -1459,9 +1497,11 @@ available within the set of nodes attempting to start the cluster. Changes to
 the cluster occurred while the set of nodes were not in membership and as a
 result were not able to receive configuration data updates. .<br><br>Votes required
 to start cluster: %1<br>Votes available: %2<br>Nodes with votes:
-%3<br><br>Guidance:<br>Attempt to start the cluster service on all nodes in the
-cluster so that nodes with the latest copy of the cluster configuration data can
-first form the cluster. The cluster will be able to start and the nodes will
+%3
+
+#### Guidance
+
+Attempt to start the cluster service on all nodes in the cluster so that nodes with the latest copy of the cluster configuration data can first form the cluster. The cluster will be able to start and the nodes will
 automatically obtain the updated cluster configuration data. If there are no
 nodes available with the latest copy of the cluster configuration data, run the
 'Start-ClusterNode -FQ' Windows PowerShell cmdlet. Using the ForceQuorum (FQ)
@@ -1770,8 +1810,11 @@ Check the application event log for additional information from ChkDsk.
 ### Event 1671: RES_DISK_ONLINE_SET_ATTRIBUTES_COMPLETED_FAILURE
 
 Cluster physical disk resource cannot be brought online.<br><br>Physical Disk
-resource name: %1<br>Error Code: %2<br>Time Elapsed (seconds): %3<br><br>Guidance:<br>Run
-the Validate a Configuration wizard to check your storage configuration. If the
+resource name: %1<br>Error Code: %2<br>Time Elapsed (seconds): %3
+
+#### Guidance
+
+Run the Validate a Configuration wizard to check your storage configuration. If the
 error code was ERROR_CLUSTER_SHUTDOWN then the Online Pending state was
 cancelled by an administrator. If this is a replicated volume then this could be
 the result of a failure to set the disk attributes. Review the Storage
