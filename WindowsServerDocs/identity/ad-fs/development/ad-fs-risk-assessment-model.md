@@ -216,10 +216,7 @@ The class includes following methods and properties.
 |OnAuthenticationPipelineLoad |Void|Called by AD FS when the plugin is loaded into its pipeline| 
 |OnAuthenticationPipelineUnload |Void|Called by AD FS when the plugin is unloaded from its pipeline| 
 |OnConfigurationUpdate| Void|Called by AD FS on config update |
-   
-
-|Property |Type |Definition|
-|-----|-----|-----| 
+|**Property** |**Type** |**Definition**|
 |VendorName |String |Gets the name of the vendor owning the plugin|
 |ModuleIdentifier |String |Gets the identifier of the plugin|
 
