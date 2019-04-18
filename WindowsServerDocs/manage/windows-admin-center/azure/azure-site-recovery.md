@@ -31,7 +31,7 @@ Completing setup for the replication component alone is sufficient to protect yo
 ## Prerequisites and planning
 
 - The target servers hosting the VMs you want to protect must have Internet access to replicate to Azure.
-- [Connect your Windows Admin Center gateway to Azure](../configure/azure-integration.md).
+- [Connect your Windows Admin Center gateway to Azure](azure-integration.md).
 - [Review the capacity planning tool to evaluate the requirements for successful replication and failover](https://docs.microsoft.com/azure/site-recovery/hyper-v-site-walkthrough-capacity).
 
 ## Step 1: Set up VM protection on your target host
