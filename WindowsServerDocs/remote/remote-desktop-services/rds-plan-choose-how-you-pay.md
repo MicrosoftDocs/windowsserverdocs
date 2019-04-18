@@ -16,7 +16,7 @@ manager: scottman
 ---
 # Remote Desktop Services - Choose how you pay
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016
 
 Choose your licensing based on what makes sense for your company. License per user to enable users to remote on any of their devices in a BYOD scenario. License per device if users share the same devices. If you are a service provider (HSP or MSP) or ISV, choose the per user SALs license for a flexible, pay-as-you-go model.
 

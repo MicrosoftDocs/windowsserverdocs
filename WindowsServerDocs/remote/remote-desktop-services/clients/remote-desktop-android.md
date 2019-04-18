@@ -17,7 +17,7 @@ ms.localizationpriority: medium
 ---
 # Get started with Remote Desktop on Android
 
->Applies To: Windows 10, Windows 8.1, Windows Server 2012 R2, Windows Server 2016
+>Applies to: Windows 10, Windows 8.1, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2
 
 You can use the Remote Desktop client for Android to work with Windows apps and desktops directly from your Android device.
 
