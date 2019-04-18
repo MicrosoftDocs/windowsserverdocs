@@ -16,7 +16,7 @@ manager: dongill
 ---
 # Create virtual machines for Remote Desktop
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016
 
 You can install Remote Desktop Services components on physical servers or on virtual machines. 
 
