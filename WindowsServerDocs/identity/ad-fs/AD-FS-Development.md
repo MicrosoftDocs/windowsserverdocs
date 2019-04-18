@@ -13,11 +13,13 @@ ms.technology: identity-adfs
 ---
 # AD FS Development
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies To: Windows Server 2019, Windows Server 2016, Windows Server 2012 R2
 
-This document contains a list of all of the documentation walkthroughs for AD FS for Windows Server 2016. This includes the following:  
+This document contains a list of all of the documentation walkthroughs for AD FS development. This includes the following:  
   
  
+
+- [Build Plug-ins with AD FS 2019 Risk Assessment Model](../ad-fs/development/ad-fs-risk-assessment-model.md)
   
 * [Build a web application using OpenID Connect with AD FS 2016](../ad-fs/development/Enabling-OpenId-Connect-with-AD-FS.md)  
 
@@ -36,6 +38,7 @@ This document contains a list of all of the documentation walkthroughs for AD FS
 - [Identity delegation with AD FS](../ad-fs/development/ad-fs-identity-delegation.md)
 
 - [Single log-out for OpenID Connect with AD FS 2016](../ad-fs/development/ad-fs-logout-openid-connect.md)
+
 
 
 
