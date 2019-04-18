@@ -16,9 +16,9 @@ ms.date: 02/10/2017
 ---
 # Seamlessly deploy RDS with ARM and Azure Marketplace
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2
+>Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2
 
-Remote Desktop Services (RDS) is the platform of choice to cost-effectively host Windows desktops and applications. You can use an [Azure Marketplace offering](#basic-rds-through-the-azure-marketplace) or a [quickstart template](#Customized-RDS-using-Quickstart-templates) to quickly create an RDS on Azure IaaS deployment. Azure marketplace creates a test domain for you, making it a simple and easy mechanism for testing and proof-of-concepts. The quickstart templates, on the other hand, allow you to use an existing domain, making them a great tool to build out a production environment. Once set up, you can connect to the published desktops and applications from various platforms and devices, using the Microsoft Remote Desktop apps for Windows, Mac, iOS, and Android.
+Remote Desktop Services (RDS) is the platform of choice to cost-effectively host Windows desktops and applications. You can use an [Azure Marketplace offering](#basic-rds-through-the-azure-marketplace) or a [quickstart template](#customized-rds-using-quickstart-templates) to quickly create an RDS on Azure IaaS deployment. Azure marketplace creates a test domain for you, making it a simple and easy mechanism for testing and proof-of-concepts. The quickstart templates, on the other hand, allow you to use an existing domain, making them a great tool to build out a production environment. Once set up, you can connect to the published desktops and applications from various platforms and devices, using the Microsoft Remote Desktop apps for Windows, Mac, iOS, and Android.
 
 ## Basic RDS through the Azure Marketplace
 

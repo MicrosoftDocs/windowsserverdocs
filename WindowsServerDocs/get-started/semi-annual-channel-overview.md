@@ -4,10 +4,10 @@ description: Microsoft is streamlining servicing of Windows Server to make opera
 ms.prod: windows-server-threshold
 ms.mktglfcycl: manage
 ms.sitesec: library
-author: jaimeo
+author: jasongerend
+ms.author: jgerend
 ms.localizationpriority: high
-ms.date: 05/07/2018
-ms.tgt_pltfrm: na
+ms.date: 04/10/2019
 ms.topic: get-started-article
 ms.assetid: 9cf87597-b15d-4f43-8aa1-91e60367f011
 ---
@@ -36,7 +36,7 @@ Most of the features introduced in the Semi-Annual Channel will be rolled up int
 The Semi-Annual Channel will be available to volume-licensed customers with [Software Assurance](https://www.microsoft.com/en-us/licensing/licensing-programs/software-assurance-default.aspx), as well as via the Azure Marketplace or other cloud/hosting service providers and loyalty programs such as Visual Studio Subscriptions.
 
 > [!Note]  
-> **The current Semi-Annual Channel release is Windows Server, version 1803**. If you want to put servers in this channel, you should install Windows Server, version 1803, which can be installed in Server Core mode or as Nano Server run in a container. See [Introducing Windows Server, version 1803](get-started-with-1803.md) to learn how to obtain and activate Windows Server, version 1803. In-place upgrades from Windows Server 2016 to Windows Server, version 1803 are not supported because they are in **different release channels**. Windows Server, version 1803 is not an update to Windows Server 2016 – it is the next Windows Server release in the Semi-Annual Channel.
+> **The current Semi-Annual Channel release is Windows Server, version 1809**. If you want to put servers in this channel, you should install Windows Server, version 1809, which can be installed in Server Core mode or as Nano Server run in a container. See [Introducing Windows Server, version 1809](get-started-with-1803.md) to learn how to obtain and activate Semi-Annual Channel releases. In-place upgrades from Windows Server 2016 to Windows Server, version 1809 are not supported because they are in **different release channels**. Semi-Annual Channel releases aren't updates to Windows Server 2016 – it's the next Windows Server release in the Semi-Annual Channel.
 
 
 
