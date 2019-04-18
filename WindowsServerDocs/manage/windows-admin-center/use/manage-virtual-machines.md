@@ -74,6 +74,10 @@ NOTE: If you are connected to a cluster, the Virtual Machine tool will only disp
 3. Enter the virtual machine name and choose between generation 1 and 2 virtual machines.
 4. If you are creating a virtual machine on a cluster, you can choose which host to initially create the virtual machine on. If you are running Windows Server 2016 or later, the tool will provide a host recommendation for you.
 5. Choose a path for the virtual machine files. Choose a volume from the dropdown list or click **Browse** to choose a folder using the folder picker. The virtual machine configuration files and virtual hard disk file will be saved in a single folder under the `\Hyper-V\\[virtual machine name]` path of the selected volume or path.
+
+>[!Tip]
+> In the folder picker, you can browse to any available SMB share on the network by entering the path in the **Folder name** field as ```\\server\share```. Using a network share for VM storage will require [CredSSP](../understand/faq.md#does-windows-admin-center-use-credssp).
+
 6. Choose the number of virtual processors, whether you want nested virtualization enabled, configure memory settings, network adapters, virtual hard disks and choose whether you want to install an operating system from an .iso image file or from the network.
 7. Click **Create** to create the virtual machine.
 8. Once the virtual machine is created and appears in the virtual machine list, you can start the virtual machine.
@@ -144,7 +148,7 @@ You can view Hyper-V event logs directly from the Virtual Machines tool.
 
 ## Protect virtual machines with Azure Site Recovery
 
-You can use Windows Admin Center to configure Azure Site Recovery and replicate your on-premises virtual machines to Azure. [Learn more](azure-services.md)
+You can use Windows Admin Center to configure Azure Site Recovery and replicate your on-premises virtual machines to Azure. [Learn more](../azure/azure-site-recovery.md)
 
 ## More Coming
 

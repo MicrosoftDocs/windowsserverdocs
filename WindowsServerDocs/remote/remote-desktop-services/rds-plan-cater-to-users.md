@@ -16,7 +16,7 @@ manager: scottman
 ---
 # Remote Desktop Services - Cater to different kinds of users
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016
 
 Scale your deployment depending on the expected need of each type of user.
 For example, users may carry out data entry on lightweight apps, manipulate large datasets with productivity apps like Office, or work with heavy-duty engineering or graphics apps.
