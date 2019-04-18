@@ -136,13 +136,6 @@
 #### [Remove servers](storage-spaces/remove-servers.md)
 #### [Update drive firmware](update-firmware.md)
 #### [Extend volumes](storage-spaces/resize-volumes.md)
-### Troubleshoot
-#### [Troubleshooting scenarios](storage-spaces/troubleshooting-storage-spaces.md)
-#### [Health and operational states](storage-spaces/storage-spaces-states.md)
-#### [Collect data](storage-spaces/data-collection.md)
-#### [Frequently asked questions](storage-spaces/storage-spaces-direct-faq.md)
-### Insider Preview
-#### [Cluster sets](storage-spaces/cluster-sets.md)
 #### [Performance history](storage-spaces/performance-history.md)
 ##### [Drives](storage-spaces/performance-history-for-drives.md)
 ##### [Network adapters](storage-spaces/performance-history-for-network-adapters.md)
@@ -153,6 +146,12 @@
 ##### [Clusters](storage-spaces/performance-history-for-clusters.md)
 ##### [Scripting samples](storage-spaces/performance-history-scripting.md)
 #### [Delimit the allocation of volumes](storage-spaces/delimit-volume-allocation.md)
+#### [Monitor with Azure Monitor](storage-spaces/configure-azure-monitor.md)
+### Troubleshoot
+#### [Troubleshooting scenarios](storage-spaces/troubleshooting-storage-spaces.md)
+#### [Health and operational states](storage-spaces/storage-spaces-states.md)
+#### [Collect data](storage-spaces/data-collection.md)
+#### [Frequently asked questions](storage-spaces/storage-spaces-direct-faq.md)
 ## [Work Folders](work-folders/work-folders-overview.md)
 ### [Designing a Work Folders Implementation](work-folders/plan-work-folders.md)
 ### [Deploying Work Folders](work-folders/deploy-work-folders.md)

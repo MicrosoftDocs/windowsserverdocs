@@ -6,7 +6,7 @@ ms.manager: dongill
 ms.technology: storage-spaces
 ms.topic: article
 author: cosmosdarwin
-ms.date: 03/06/2019
+ms.date: 03/26/2019
 ms.assetid: 8bd0d09a-0421-40a4-b752-40ecb5350ffd
 description: An overview of Storage Spaces Direct, a feature of Windows Server that enables you to cluster servers with internal storage into a software-defined storage solution.
 ms.localizationpriority: medium
@@ -69,6 +69,7 @@ For other applications of Storage Spaces, such as Shared SAS clusters and stand-
 			  <li><a href="../update-firmware.md">Update drive firmware</a></li>
               <li><a href="performance-history.md">Performance history</a></li>
               <li><a href="delimit-volume-allocation.md">Delimit the allocation of volumes</a></li>
+              <li><a href="configure-azure-monitor.md">Use Azure Monitor on a hyper-converged cluster</a></li>
 		    </ul>
         </td>
     </tr>

@@ -5,7 +5,7 @@ For more information see the [Code of Conduct FAQ](https://opensource.microsoft.
 
 # WindowsServerDocs-pr
 
-This repo is actively managed and includes the source for Windows Server content published to (docs.microsoft.com)[https://docs.microsoft.com]:
+This repo is actively managed and includes the source for Windows Server content published to [docs.microsoft.com](https://docs.microsoft.com):
 
 - [Windows Server 2019](https://docs.microsoft.com/en-us/windows-server/get-started-19/get-started-19)
 - [Windows Server 2016](https://docs.microsoft.com/en-us/windows-server/get-started/server-basics)
