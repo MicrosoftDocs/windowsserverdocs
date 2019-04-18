@@ -11,14 +11,14 @@ ms.topic: article
 author: davidbel
 manager: daveba
 ms.author: davidbel
-ms.date: 03/21/2019
+ms.date: 04/12/2019
 ms.localizationpriority: medium
 ---
 # Privacy settings for managed apps and desktops
 
->Applies to: Windows 10, Windows 8.1, Windows Server 2012 R2, Windows Server 2016
+>Applies to: Windows 10, Windows 7, Windows Server 2012 R2, Windows Server 2016, Windows Server 2019
 
-When accessing managed resources (apps or desktops) provided by your IT administrator, the privacy settings for the remote system have been preconfigured by your IT administrator. These settings may be different than the privacy settings on your local system. 
+When accessing managed resources (apps or desktops) provided by your IT administrator, the privacy settings for the remote system have been preconfigured by your IT administrator. These settings may be different than the privacy settings on your local system. If you have questions, contact your IT administrator.
 
 >[!NOTE]
 >Using managed resources in regions other than the United States may result in data transfer to the United States.
