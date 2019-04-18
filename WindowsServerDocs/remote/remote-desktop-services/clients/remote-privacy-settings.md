@@ -24,6 +24,7 @@ When accessing managed resources (apps or desktops) provided by your IT administ
 >Using managed resources in regions other than the United States may result in data transfer to the United States.
 
 These are some of the Windows 10 privacy settings you can configure in your managed desktop:
+
 - [Speech recognition](https://go.microsoft.com/fwlink/?linkid=874646)
 - [Find my device](https://go.microsoft.com/fwlink/?linkid=533063)
 - [Inking & typing](https://go.microsoft.com/fwlink/?linkid=874646)
