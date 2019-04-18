@@ -39,25 +39,27 @@ color [[<B>]<F>]
 
 ## Remarks
 
--   The following table lists valid hexadecimal digits that you can use as the values for *B* and *F*.  
-    |Value|Color|
-    |-----|-----|
-    |0|Black|
-    |1|Blue|
-    |2|Green|
-    |3|Aqua|
-    |4|Red|
-    |5|Purple|
-    |6|Yellow|
-    |7|White|
-    |8|Gray|
-    |9|Light blue|
-    |A|Light green|
-    |B|Light aqua|
-    |C|Light red|
-    |D|Light purple|
-    |E|Light yellow|
-    |F|Bright white|
+-   The following table lists valid hexadecimal digits that you can use as the values for *B* and *F*.
+
+|Value|Color|
+|-----|-----|
+|0|Black|
+|1|Blue|
+|2|Green|
+|3|Aqua|
+|4|Red|
+|5|Purple|
+|6|Yellow|
+|7|White|
+|8|Gray|
+|9|Light blue|
+|A|Light green|
+|B|Light aqua|
+|C|Light red|
+|D|Light purple|
+|E|Light yellow|
+|F|Bright white|
+    
 -   Do not use space characters between *B* and *F*.
 -   If you specify only one hexadecimal digit, the corresponding color is used as the foreground color and the background color is set to the default color.
 -   To set the default Command Prompt window color, click the upper-left corner of the Command Prompt window, click **Defaults**, click the **Colors** tab, and then click the colors that you want to use for the **Screen Text** and **Screen Background**.
