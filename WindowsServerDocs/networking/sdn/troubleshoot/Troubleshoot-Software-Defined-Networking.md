@@ -26,8 +26,9 @@ The topics in this section provide information about troubleshooting the Softwar
 
 This section contains the following topics.
 
-- [Troubleshoot the Windows Server Software Defined Networking Stack](https://docs.microsoft.com/windows-server/networking/sdn/troubleshoot/troubleshoot-windows-server-software-defined-networking-stack)  
-- Blog post [Troubleshoot Configuring SDN RAS Gateway VPN Bandwidth Settings in Virtual Machine Manager](https://blogs.technet.microsoft.com/wsnetdoc/2017/03/02/troubleshoot-changing-sdn-ras-gateway-vpn-bandwidth-settings-in-virtual-machine-manager/)
-- Blog post [SDN Troubleshooting: Find the Local SDN RAS Gateway Server IP Address](https://blogs.technet.microsoft.com/wsnetdoc/2017/03/23/sdn-troubleshooting-find-the-local-sdn-ras-gateway-server-ip-address/)
-- Blog post [SDN Troubleshooting: UDP Communication and Changing Network Controller Cert](https://blogs.technet.microsoft.com/wsnetdoc/2017/08/25/sdn-troubleshooting-udp-communication-and-changing-network-controller-cert/)
+- [Troubleshoot the Windows Server Software Defined Networking Stack](https://docs.microsoft.com/windows-server/networking/sdn/troubleshoot/troubleshoot-windows-server-software-defined-networking-stack)
+- Blog post [SDN Troubleshooting: UDP Communication failures and changing the Network Controller Certificate](https://techcommunity.microsoft.com/t5/Networking-Blog/SDN-Troubleshooting-UDP-Communication-failures-and-changing-the/ba-p/339694)
+- Blog post [Troubleshooting certificate issues in Software Defined Networking (SDN) ](https://techcommunity.microsoft.com/t5/Networking-Blog/Troubleshooting-certificate-issues-in-Software-Defined/ba-p/339671)
+- Blog post [How to find the SDN gateway local address for BGP peering in Windows Server 2016 ](https://techcommunity.microsoft.com/t5/Networking-Blog/How-to-find-the-SDN-gateway-local-address-for-BGP-peering-in/ba-p/339663)
+- Blog post [Troubleshoot Configuring SDN RAS Gateway VPN Bandwidth Settings in Virtual Machine Manager ](https://techcommunity.microsoft.com/t5/Networking-Blog/Troubleshoot-Configuring-SDN-RAS-Gateway-VPN-Bandwidth-Settings/ba-p/339661)
 

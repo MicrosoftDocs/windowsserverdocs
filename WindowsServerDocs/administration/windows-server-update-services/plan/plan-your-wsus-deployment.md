@@ -391,7 +391,7 @@ Install actions override uninstall actions. Required installs override optional 
 Actions that have a deadline override those with no deadline.  Actions with earlier deadlines override those with later deadlines.
 
 ## <a name="BKMK_1.6."></a>1.6. Plan WSUS performance considerations
-There are some areas that you should carefully plan before deploy WSUS so that you can have optimized performance. The key areas are:
+There are some areas that you should carefully plan before deploying WSUS so that you can have optimized performance. The key areas are:
 
 -   Network setup
 

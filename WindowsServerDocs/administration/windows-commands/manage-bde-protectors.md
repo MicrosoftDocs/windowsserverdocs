@@ -27,7 +27,7 @@ manage-bde -protectors [{-get|-add|-delete|-disable|-enable|-adbackup|-aadbackup
 |Parameter|Description|
 |-------|--------|
 |-get|Displays all the key protection methods enabled on the drive and provides their type and identifier (ID).|
-|-add|adds key protection methods as specified by using additional [ add parameters](manage-bde-protectors.md#BKMK_addprotectors).|
+|-add|adds key protection methods as specified by using additional [add parameters](manage-bde-protectors.md#BKMK_addprotectors).|
 |-delete|deletes key protection methods used by BitLocker. All key protectors will be removed from a drive unless the optional [-delete parameters](manage-bde-protectors.md#BKMK_deleteprotectors) are used to specify which protectors to delete. When the last protector on a drive is deleted, BitLocker protection of the drive is disabled to ensure that access to data is not lost inadvertently.|
 |-disable|Disables protection, which will allow anyone to access encrypted data by making the encryption key available unsecured on drive. No key protectors are removed. Protection will be resumed the next time Windows is booted unless the optional [-disable parameters](manage-bde-protectors.md#BKMK_disableprot) are used to specify the reboot count.|
 |-enable|Enables protection by removing the unsecured encryption key from the drive. All configured key protectors on the drive will be enforced.|
@@ -111,7 +111,7 @@ The following example illustrates using the **-protectors** command to add an **
 ```
 manage-bde  protectors  add E: -sid DOMAIN\user
 ```
-The following example illustrates using the ** protectors** command to disable protection until the computer has rebooted 3 times.
+The following example illustrates using the **protectors** command to disable protection until the computer has rebooted 3 times.
 ```
 manage-bde  protectors  disable C: -rc 3
 ```
