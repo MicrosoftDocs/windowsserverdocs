@@ -59,7 +59,7 @@ After you have completed the installation of Windows Admin Center, you can add s
 
     ![](../media/launch/addserver2.png)
 
-   **-- OR --**  
+   **-- OR --**
 
 **Bulk import multiple servers**
 
@@ -68,6 +68,18 @@ After you have completed the installation of Windows Admin Center, you can add s
     ![](../media/launch/import-servers.png)
 
  2. Click **Browse** and select a text file that contains a comma, or new line separated, list of FQDNs for the servers you want to add.
+
+    **-- OR --**
+
+**Add servers by searching Active Directory**
+
+ 1. On the **Add Server Connection** page, choose the **Search Active Directory** tab.
+
+    ![](../media/launch/search-ad.png)
+
+ 2. Enter your search criteria and click **Search**. Wildcards (*) are supported.
+
+ 3. After the search completes - select one or more of the results, optionally add tags, and click **Add**.
 
 ## Authenticate with the managed node ##
 
@@ -139,9 +151,6 @@ Once tags have been added to one or more server connections, you can view the ta
 
 Windows Admin Center Preview includes a PowerShell module to import or export your connection list.
 
->[!IMPORTANT]
->Import and export of connections with the PowerShell module is only supported when Windows Admin Center is deployed as a gateway service on Windows Server.
-
 ```powershell
 # Load the module
 Import-Module "$env:ProgramFiles\windows admin center\PowerShell\Modules\ConnectionTools"
@@ -155,7 +164,7 @@ Import-Connection "https://wac.contoso.com" -fileName "WAC-connections.csv"
 
 ### CSV file format for importing connections
 
-The format of the CSV file starts with the three headings: ```"name","type","tags"```, followed by each connection on a new line.
+The format of the CSV file starts with the four headings ```"name","type","tags","groupId"```, followed by each connection on a new line.
 
 **name** is the FQDN of the connection
 
@@ -170,15 +179,17 @@ The format of the CSV file starts with the three headings: ```"name","type","tag
 
 **tags** are pipe-separated.
 
+**groupId** is used for shared connections. Use the value ```global``` in this column to make this a shared connection.
+
 ### Example CSV file for importing connections
 
 ```
-"name","type","tags"
+"name","type","tags","groupId"
 "myServer.contoso.com","msft.sme.connection-type.server","hyperv"
 "myDesktop.contoso.com","msft.sme.connection-type.windows-client","hyperv"
-"mycluster.contoso.com","msft.sme.connection-type.cluster","legacyCluster|WS2016"
+"teamcluster.contoso.com","msft.sme.connection-type.cluster","legacyCluster|WS2016","global"
 "myHCIcluster.contoso.com,"msft.sme.connection-type.hyper-converged-cluster","myHCIcluster|hyperv|JIT|WS2019"
-"myclusterNode.contoso.com","msft.sme.connection-type.server","legacyCluster|WS2016"
+"teamclusterNode.contoso.com","msft.sme.connection-type.server","legacyCluster|WS2016","global"
 "myHCIclusterNode.contoso.com","msft.sme.connection-type.server","myHCIcluster|hyperv|JIT|WS2019"
 ```
 
@@ -267,7 +278,7 @@ Use the script below to export saved connections in [RDCman](https://blogs.techn
    RdgToWacCsv -RDGfilepath "path\to\myRDCManfile.rdg"
    ```
 
-3. Import the resulting .CSV file in to Windows Admin Center, and all your RDCMan grouping hierarchy will be represented by tags in the connection list. For details, see [Use PowerShell to import or export your connections (with tags)](#use-powershell-to-import-or-export-your-connections-(with-tags)).
+3. Import the resulting .CSV file in to Windows Admin Center, and all your RDCMan grouping hierarchy will be represented by tags in the connection list. For details, see [Use PowerShell to import or export your connections (with tags)](#use-powershell-to-import-or-export-your-connections-with-tags).
 
 ## View PowerShell scripts used in Windows Admin Center
 

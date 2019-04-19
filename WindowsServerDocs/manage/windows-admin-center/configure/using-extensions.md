@@ -80,9 +80,6 @@ $feedUrlBase = "https://aka.ms/sme-extension-feed"
 
 Windows Admin Center Preview includes a PowerShell module to manage your gateway extensions.
 
->[!IMPORTANT]
->Managing gateway extensions with the PowerShell module is only supported when Windows Admin Center is deployed as a gateway service on Windows Server.
-
 ```powershell
 # Add the module to the current session
 Import-Module "$env:ProgramFiles\windows admin center\PowerShell\Modules\ExtensionTools"
