@@ -1,7 +1,7 @@
 ---
 ms.assetid: a9f229eb-bef4-4231-97d0-0899e17cef32
 title: Creating volumes in Storage Spaces Direct
-ms.prod: windows-server-threshold
+ms.prod: X-server-threshold
 ms.author: cosdar
 ms.manager: eldenc
 ms.technology: storage-spaces
@@ -13,7 +13,7 @@ ms.localizationpriority: medium
 
 # Creating volumes in Storage Spaces Direct
 
->Applies To: Windows Server 2016
+>Applies to: Windows Server 2019, Windows Server 2016
 
 This topic describes how to create volumes in Storage Spaces Direct using PowerShell or Failover Cluster Manager.
 
