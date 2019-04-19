@@ -73,7 +73,6 @@ In step 2 on [https://aka.ms/adfsdiagnosticsanalyzer](https://aka.ms/adfsdiagnos
 
 Click on **Upload** to finish the upload and move to the next step.
 
-## Step 2: Sign in to upload a diagnostics file, view previously uploaded diagnostics runs, or send information to support.
 
 By signing in with a Microsoft account, your diagnostics results can be saved for a later viewing point and can be sent to Microsoft support. If at any point you open a support case, Microsoft will be able to view the Diagnostic Analyzer results and help troubleshoot your issue faster.
 
