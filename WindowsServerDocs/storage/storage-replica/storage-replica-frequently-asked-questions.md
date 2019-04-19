@@ -6,12 +6,12 @@ ms.author: nedpyle
 ms.technology: storage-replica
 ms.topic: get-started-article
 author: nedpyle
-ms.date: 12/19/2018
+ms.date: 04/19/2019
 ms.assetid: 12bc8e11-d63c-4aef-8129-f92324b2bf1b
 ---
 # Frequently Asked Questions about Storage Replica
 
->Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server 2019, Windows Server 2016, Windows Server (Semi-Annual Channel)
 
 This topic contains answers to frequently asked questions (FAQs) about Storage Replica.
 
@@ -217,6 +217,12 @@ Storage Replica also has a server-to-self mode, where you point replication to t
 Yes, Data Deduplcation is supported with Storage Replica. Enable Data Deduplication on a volume on the source server, and during replication the destination server receives a deduplicated copy of the volume.
 
 While you should *install* Data Deduplication on both the source and destination servers (see [Installing and enabling Data Deduplication](../data-deduplication/install-enable.md)), it’s important not to *enable* Data Deduplication on the destination server. Storage Replica allows writes only on the source server. Because Data Deduplication makes writes to the volume, it should run only on the source server. 
+
+## <a name="FAQ19"></a> Can I replicate between Windows Server 2019 and Windows Server 2016?
+
+Unfortunately, we don't support creating a *new* partnership between Windows Server 2019 and Windows Server 2016. You can safely upgrade a server or cluster running Windows Server 2016 to Windows Server 2019 and any *existing* partnerships will continue to work. 
+
+However, to get the improved replication performance of Windows Server 2019, all members of the partnership must run Windows Server 2019 and you must delete existing partnerships and associated replication groups and then recreate them.
 
 ## <a name="FAQ17"></a> How do I report an issue with Storage Replica or this guide?  
 For technical assistance with Storage Replica, you can post at [the Microsoft TechNet forums](https://social.technet.microsoft.com/Forums/windowsserver/en-US/home?forum=WinServerPreview). You can also email srfeed@microsoft.com for questions on Storage Replica or issues with this documentation. The https://windowsserver.uservoice.com site is preferred for design change requests, as it allows your fellow customers to provide support and feedback for your ideas.
