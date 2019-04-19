@@ -5,7 +5,7 @@ manager: siroy
 ms.author: nedpyle
 ms.technology: storage-replica
 ms.topic: get-started-article
-author: nedpyle,arduppal
+author: nedpyle
 ms.date: 04/19/2019
 ms.assetid: 12bc8e11-d63c-4aef-8129-f92324b2bf1b
 ---
