@@ -17,7 +17,7 @@ ms.localizationpriority: medium
 ---
 # Remote Desktop client Universal Resource Identifier (URI) scheme support
 
->Applies To: Windows Server, version 1803, Windows Server 2016, Windows Server 2012 R2
+>Applies to: Windows Server, version 1803, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2
 
 Enabling a Uniform Resource Identifier (URI) scheme gives IT professionals and developers a way to integrate features of the Remote Desktop clients across platforms and enriches the user experience by allowing: 
 
