@@ -157,7 +157,7 @@ Collection is handled by the Health Service, which is highly available: if the n
 
 ### Handling measurement gaps
 
-When measurements are merged into less granular series that span more time, as described in [Timeframes](#Timeframes), periods of missing data are excluded. For example, if the server was down for 30 minutes, then running at 50% CPU for the next 30 minutes, the `ClusterNode.Cpu.Usage` average for the hour will be recorded correctly as 50% (not 25%).
+When measurements are merged into less granular series that span more time, as described in [Timeframes](#timeframes), periods of missing data are excluded. For example, if the server was down for 30 minutes, then running at 50% CPU for the next 30 minutes, the `ClusterNode.Cpu.Usage` average for the hour will be recorded correctly as 50% (not 25%).
 
 ### Extensibility and customization
 
