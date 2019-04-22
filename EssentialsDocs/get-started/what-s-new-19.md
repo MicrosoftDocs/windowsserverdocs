@@ -1,5 +1,5 @@
 ---
-title: "What's New in Windows Server 2019 Essentials"
+title: "Windows Server 2019 Essentials の新機能"
 description: "Describes what's changed in Windows Server Essentials 2019"
 ms.custom: na
 ms.prod: windows-server-2019-essentials
@@ -13,13 +13,13 @@ ms.author: coreyp
 manager: jasgroce
 ---
 
-#What's New in Windows Server 2019 Essentials
+#Windows Server 2019 Essentials の新機能
 
-> Applies To: Windows Server 2019 Essentials
+> 適用対象: Windows Server 2019 Essentials
 
-## Windows Server Essentials Experience Role has been deprecated
+## Windows Server Essentials Experience の役割は非推奨に
 
-The Windows Server Essentials Experience Role has been removed from all server SKUs, including Windows Server 2019 Essentials. This means that the [Administrative Dashboard](../manage/overview-of-the-dashboard-in-windows-server-essentials.md) that used to be the core feature for Essentials Experience Role is no longer accessible and all management and configuration must be completed manually. 
+Windows Server Essentials Experienceの役割は、Windows Server 2019 Essentialsを含むすべてのサーバーSKUから削除されました。 よって、Essentials Experience Roleの中心的機能であった[管理ダッシュボード](../manage/overview-of-the-dashboard-in-windows-server-essentials.md)にアクセスできなくなり、すべての管理と構成を手動で完了する必要があります。
 
 With Server Essentials Experience Role deprecation, the following features are no longer available:
 
