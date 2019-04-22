@@ -17,14 +17,14 @@ This topic describes some of the new features in Windows Server, version 1903, w
 To instead find out what's new in the latest Long-Term Servicing Channel (LTSC) release of Windows Server, see see [What's New in Windows Server 2019](../get-started-19/whats-new-19.md).
 
 > [!NOTE]
-> Windows containers must use the same version of Windows as the host server, or an *earlier* version. For example, a host server running the released version of Windows Server, version 1903 (build 18342) can run Windows Server containers with the same or earlier version and build number (even if the container uses an Insider Preview version of Windows). For more info, see [Windows container version compability](https://docs.microsoft.com/virtualization/windowscontainers/deploy-containers/version-compatibility).
+> Windows containers must use the same version of Windows as the host server, or an *earlier* version. For example, a host server running the released version of Windows Server, version 1903 (build 18342) can run Windows Server containers with the same or earlier version and build number (even if the container uses an Insider Preview version of Windows). For more info, see [Windows container version compatibility](https://docs.microsoft.com/virtualization/windowscontainers/deploy-containers/version-compatibility).
 
 ## Enhanced support for non-Microsoft container services
 
 We enhanced platform capabilities to support Azure container services and non-Microsoft container services.
 
 - We integrated CRI-containerd with Host Compute Service (HCS) to support pods of Windows containers and Linux containers on Windows (LCOW) on Azure.
-- We worked with the Kubernetes community to enable Windows container support. With the release of Kubernetes v1.14, Windows Server node support officially graduated from beta to stable. For more info, see [Windows containers now supported in Kubernetes](https://cloudblogs.microsoft.com/opensource/2019/03/25/windows-server-containers-now-supported-kubernetes/). 
+- We worked with the Kubernetes community to enable Windows container support. With the release of Kubernetes v1.14, Windows Server node support officially graduated from beta to stable. For more info, see [Windows containers now supported in Kubernetes](https://cloudblogs.microsoft.com/opensource/2019/03/25/windows-server-containers-now-supported-kubernetes/).
 - Tigera Calico for Windows is now generally available as part of Tigera Essentials subscription and offers both non-overlay networking and network policy interoperable across mixed Linux/Windows environments.
 - We delivered scalability improvements enhancing overlay networking support for Windows containers, including integration with Kubernetes through the latest release of Flannel and Kubernetes v1.14. For more info, see [Intro to Windows support in Kubernetes](https://kubernetes.io/docs/setup/windows/).
 
@@ -42,8 +42,7 @@ As you might know, we recommend using the Server Core installation option when u
 
 So, based on customer feedback, we added two more tools to the App Compatibility feature in this version: Task Scheduler (taskschd.msc) and Hyper-V Manager (virtmgmt.msc).
 
-For more info, see 
-[Server Core app compatibility feature](../get-started-19/install-fod-19.md).
+For more info, see [Server Core app compatibility feature](../get-started-19/install-fod-19.md).
 
 ## Storage Migration Service now migrates local accounts, clusters, and Linux servers
 
