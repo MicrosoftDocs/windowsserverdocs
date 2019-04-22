@@ -1,5 +1,5 @@
 ---
-title: "What's New in Windows Server 2019 Essentials"
+title: "Windows Server 2019 Essentials の新機能"
 description: "Describes what's changed in Windows Server Essentials 2019"
 ms.custom: na
 ms.prod: windows-server-2019-essentials
