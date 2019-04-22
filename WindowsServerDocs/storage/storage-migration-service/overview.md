@@ -4,7 +4,7 @@ description: Brief description of topic for search engine results
 author: jasongerend
 ms.author: jgerend
 manager: elizapo
-ms.date: 04/08/2019
+ms.date: 04/19/2019
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: storage
@@ -53,8 +53,8 @@ We strongly recommend that the orchestrator and destination computers have at le
 
 ### Security requirements
 
-- A migration account that is an administrator on the source computers.
-- A migration account that is an administrator on the destination computers.
+- A migration account that is an administrator on the source computers and the orchestrator computer.
+- A migration account that is an administrator on the destination computers and the orchestrator computer.
 - The orchestrator computer must have the File and Printer Sharing (SMB-In) firewall rule enabled *inbound*.
 - The source and destination computers must have the following firewall rules enabled *inbound* (though you might already have them enabled):
   - File and Printer Sharing (SMB-In)
