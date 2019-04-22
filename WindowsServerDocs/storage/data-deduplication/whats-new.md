@@ -11,11 +11,7 @@ ms.date: 04/17/2019
 ---
 # What's New in Data Deduplication
 
-<<<<<<< HEAD
 > Applies to: Windows Server 2019, Windows Server (Semi-Annual Channel), Windows Server 2016
-=======
-> Applies to: Windows Server 2019, Windows Server 2016, Windows Server (Semi-Annual Channel)
->>>>>>> ce067499f96c19b2d0860b6f865810884173a3c5
 
 [Data Deduplication](overview.md) in Windows Server has been optimized to be highly performant, flexible, and manageable at private cloud scale. For more information about the software-defined storage stack in Windows Server 2016, please see [What's New in Storage in Windows Server 2016](../whats-new-in-storage.md).
 
