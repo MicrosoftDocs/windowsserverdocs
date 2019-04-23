@@ -10,7 +10,7 @@ author: cosmosdarwin
 ms.date: 08/14/2017
 ---
 # Health Service settings
-> Applies to Windows Server 2016
+> Applies to: Windows Server 2019, Windows Server 2016
 
 The Health Service is a new feature in Windows Server 2016 that improves the day-to-day monitoring and operational experience for clusters running Storage Spaces Direct.
 
