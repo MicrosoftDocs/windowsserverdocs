@@ -12,7 +12,7 @@ description: New and updated topics in the Failover Clustering documentation for
 ---
 # Change history for Failover Clustering topics
 
->Applies to: Windows Server 2019, Windows Server 2016, Windows Server (Semi-Annual Channel)
+>Applies to: Windows Server 2019, Windows Server 2016
 
 This topic lists new and updated topics in the [Failover Clustering](failover-clustering-overview.md) documentation for Windows Server.
 
