@@ -449,4 +449,4 @@ We've identified a critical issue that affects some Storage Spaces Direct users 
 >[!NOTE]
 > Individual OEMs may have devices that are based on the Intel P3x00 family of NVMe devices with unique firmware version strings. Contact your OEM for more information of the latest firmware version.
 
-If you are using hardware in your deployment based on the Intel P3x00 family of NVMe devices, we recommend that you immediately apply the latest available firmware (at least Maintenance Release 8). This [Microsoft Support article](https://support.microsoft.com/en-us/help/4052341/slow-performance-or-lost-communication-io-error-detached-or-no-redunda) provides additional information about this issue. 
+If you are using hardware in your deployment based on the Intel P3x00 family of NVMe devices, we recommend that you immediately apply the latest available firmware (at least Maintenance Release 8). This [Microsoft Support article](https://support.microsoft.com/help/4052341/slow-performance-or-lost-communication-io-error-detached-or-no-redunda) provides additional information about this issue. 
