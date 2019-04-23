@@ -13,7 +13,7 @@ ms.localizationpriority: medium
 
 # Storage Spaces Direct hardware requirements
 
-> Applies to: Windows Server 2016, Windows Server Insider Preview
+> Applies to: Windows Server 2016
 
 This topic describes minimum hardware requirements for Storage Spaces Direct.
 
