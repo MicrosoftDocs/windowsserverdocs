@@ -21,7 +21,7 @@ In general, start with the following steps:
 1. Confirm the make/model of SSD is certified for Windows Server 2016 and Windows Server 2019 using the Windows Server Catalog. Confirm with vendor that the drives are supported for Storage Spaces Direct.
 2. Inspect the storage for any faulty drives. Use storage management software to check the status of the drives. If any of the drives are faulty, work with your vendor. 
 3. Update storage and drive firmware if necessary.
-   Ensure the latest Windows Updates are installed on all nodes. You can get the latest updates for Windows Server 2016 from [Windows 10 and Windows Server 2016 update history](https://aka.ms/update2016) and for Windows Server 2019 from [Windows 10 and Windows Server 2019 update history](https://support.microsoft.com/en-us/help/4464619).
+   Ensure the latest Windows Updates are installed on all nodes. You can get the latest updates for Windows Server 2016 from [Windows 10 and Windows Server 2016 update history](https://aka.ms/update2016) and for Windows Server 2019 from [Windows 10 and Windows Server 2019 update history](https://support.microsoft.com/help/4464619).
 4. Update network adapter drivers and firmware.
 5. Run cluster validation and review the Storage Space Direct section, ensure the drives that will used for the cache are reported correctly and no errors.
 
