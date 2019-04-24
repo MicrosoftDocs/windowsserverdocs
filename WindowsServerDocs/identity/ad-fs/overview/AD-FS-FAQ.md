@@ -5,7 +5,7 @@ description: Frequently asked questions for AD FS 2016
 author: billmath
 ms.author:  billmath
 manager: mtillman
-ms.date: 12/07/2018
+ms.date: 04/17/2019
 ms.topic: article
 ms.custom: it-pro
 ms.prod: windows-server-threshold
@@ -64,7 +64,7 @@ AD FS is a stateless system. Hence, load balancing is fairly simple for logins. 
 
 AD FS supports multiple multi-forest configuration and relies on the underlying AD DS trust network to authenticate users across multiple trusted realms. We strongly  recommend 2-way forests trusts as this is a simpler setup to ensure that the trust subsystem works correctly without issues. Additionally,
 
-- In the event of a one way forest trust such as a DMZ forest containing partner identities, we recommend deploying ADFS in the corp forest and treating the DMZ forest as another local claims provider trust connected via LDAP. In this case Windows Integrated auth will not work for DMZ forest users and they will be required to perform Password auth as that is the only supported mechanism for LDAP. In the event you cannot pursue this option, you would need to set up another ADFS in the DMZ forest and add that as Claims Provider Trust in the ADFS in the corp forest. User’s will need to do Home realm discovery but both Windows Integrated auth and Password auth will work fine. Please make appropriate changes in the issuance rules in ADFS in DMZ forest as ADFS in the corp forest will not be able to get extra user information about the user from the DMZ forest.
+- In the event of a one way forest trust such as a DMZ forest containing partner identities, we recommend deploying ADFS in the corp forest and treating the DMZ forest as another local claims provider trust connected via LDAP. In this case Windows Integrated auth will not work for the DMZ forest users and they will be required to perform Password auth as that is the only supported mechanism for LDAP. In the event you cannot pursue this option, you would need to set up another ADFS in the DMZ forest and add that as Claims Provider Trust in the ADFS in the corp forest. Users will need to do Home realm discovery but both Windows Integrated auth and Password auth will work. Please make appropriate changes in the issuance rules in ADFS in DMZ forest as ADFS in the corp forest will not be able to get extra user information about the user from the DMZ forest.
 - While domain level trusts are supported and can work, we highly recommend you moving to a forest level trust model. Additionally, you would need to ensure that UPN routing and NETBIOS name resolution of names need to work accurately.
 
 
@@ -133,6 +133,16 @@ With AD FS on Server 2019, you can now pass the resource value embedded in the s
 ### Does AD FS support PKCE extension?
 AD FS in Server 2019 supports Proof Key for Code Exchange (PKCE) for OAuth Authorization Code Grant flow
 
+### What permitted scopes are supported by AD FS?
+- aza - If using [OAuth 2.0 Protocol Extensions for Broker Clients](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-oapxbc/2f7d8875-0383-4058-956d-2fb216b44706) and if the scope parameter contains the scope "aza", the server issues a new primary refresh token and sets it in the refresh_token field of the response, as well as setting the refresh_token_expires_in field to the lifetime of the new primary refresh token if one is enforced.
+- openid - Allows application to request use of the OpenID Connect authorization protocol.
+- logon_cert - The logon_cert scope allows an application to request logon certificates, which can be used to interactively logon authenticated users. The AD FS server omits the access_token parameter from the response and instead provides a base64-encoded CMS certificate chain or a CMC full PKI response. More details available [here](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-oapx/32ce8878-7d33-4c02-818b-6c9164cc731e). 
+- user_impersonation - The user_impersonation scope is necessary to successfully request an on-behalf-of access token from AD FS. For details on how to use this scope refer [Build a multi-tiered application using On-Behalf-Of (OBO) using OAuth with AD FS 2016](../../ad-fs/development/ad-fs-on-behalf-of-authentication-in-windows-server.md).
+- vpn_cert - The vpn_cert scope allows an application to request VPN certificates, which can be used to establish VPN connections using EAP-TLS authentication. This is not supported anymore.
+- email - Allows application to request email claim for the signed in user. This is not supported anymore. 
+- profile - Allows application to request profile related claims for the sign-in user. This is not supported anymore. 
+
+
 ## Operations
 
 ### How do I replace the SSL certificate for AD FS?
@@ -155,6 +165,9 @@ Use the following guidance with regard to the proxy SSL certificate and the AD F
 
 ### How can I configure prompt=login behavior for AD FS?
 For information on how to configure prompt=login, see [Active Directory Federation Services prompt=login parameter support](../operations/AD-FS-Prompt-Login.md).
+
+### How can I change the AD FS service account?
+To change the AD FS service account, follow the instructions using the AD FS toolbox [Service Account Powershell Module](https://github.com/Microsoft/adfsToolbox/tree/master/serviceAccountModule). 
 
 ### How can I configure browsers to use Windows Integrated Authentication (WIA) with AD FS?
 
@@ -231,7 +244,7 @@ A proper solution to this problem is to configure the AD FS and WAP servers to s
 
 When exporting the SSL certificate, from one machine, to be imported to the computer’s personal store, of the AD FS and WAP server(s), make sure to export the Private key and select **Personal Information Exchange - PKCS #12**.
 
-It is important that the check box to **Include all certificates in the certificate path if possible** is checked, as well as **Export all extended properties**.
+It is important that the check box to **Include all certificates in the certificate path if possible** is checked, as well as **Export all extended properties**.  
 
 Run certlm.msc on the Windows servers and import the *.PFX into the Computer’s Personal Certificate store. This will cause the server to pass the entire certificate chain to the ADAL library.
 
