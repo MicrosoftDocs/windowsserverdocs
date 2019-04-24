@@ -32,7 +32,7 @@ The **WIASupportedUserAgents** defines the user agents which support WIA. AD FS 
 You can view the current settings using the following PowerShell example:
 
 ```powershell
-    $strings = Get-AdfsProperties | select -ExpandProperty WiaSupportedUserAgents
+    Get-AdfsProperties | select -ExpandProperty WiaSupportedUserAgents
 ```
 
 ![WIA Support](../operations/media/Configure-AD-FS-Browser-WIA/wiasupport.png)
