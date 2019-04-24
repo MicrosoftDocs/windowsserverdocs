@@ -11,12 +11,20 @@ ms.topic: article
 author: lizap
 manager: dongill
 ms.author: elizapo
-ms.date: 03/28/2019
+ms.date: 04/19/2019
 ms.localizationpriority: medium
 ---
 # What's new for the Remote Desktop client on Android?
 
 We regularly update the [Remote Desktop client for Android](remote-desktop-android.md), adding new features and fixing issues. Check out the latest updates below.
+
+## Updates for version 8.1.68
+*Published date: 04/15/2019*
+
+- Fixed an issue where the Remote Resource Feed URL didn't load.
+- Fixed an issue where the app started in phone size on first launch on Samsung DeX running Android 9.0.
+- Updated the app icon.
+- Additional bug fixes.
 
 ## Updates for version 8.1.67
 *Published date: 03/28/2019*
