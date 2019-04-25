@@ -285,7 +285,7 @@ Here is a simple example, you may want to extend:
 7. Finally, apply the custom AD FS Web Theme by typing the following Windows PowerShell command:
     
     ``` PowerShell
-    Set-AdfsWebConfig -ActiveThemeName
+    Set-AdfsWebConfig -ActiveThemeName "ProofUp"
     ```
 
 ## Next steps
