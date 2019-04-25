@@ -47,7 +47,7 @@ Many of these requirements can be determined by using the `Test-SRTopology` cmdl
 
 ## Provision operating system, features, roles, storage, and network  
 
-1.  Install Windows Server 2016 Datacenter Edition on all server nodes. Do not choose Standard Edition if it is available, as it does not contain Storage Replica. Use of Windows Server Desktop Experience, Core, and Nano installation modes are all supported.  
+1.  Install Windows Server 2016 on all server nodes, using either the Server Core or Server with Desktop Experience installation options.  
     > [!IMPORTANT]
     > From this point on, always logon as a domain user who is a member of the built-in administrator group on all servers. Always remember to elevate your PowerShell and CMD prompts going forward when running on a graphical server installation or on a Windows 10 computer.
 
