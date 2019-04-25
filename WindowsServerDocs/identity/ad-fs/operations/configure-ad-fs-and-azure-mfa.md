@@ -231,10 +231,10 @@ Here is a simple example, you may want to extend:
     ``` PowerShell
         New-AdfsWebTheme –Name ProofUp –SourceName default
     ``` 
-2. Next, export the default AD FS Web Theme:
+2. Next, create the folder and export the default AD FS Web Theme:
 
     ``` PowerShell
-       Export-AdfsWebTheme –Name default –DirectoryPath c:\Theme
+       New-Item -Path 'c:\Theme' -ItemType Directory;Export-AdfsWebTheme –Name default –DirectoryPath c:\Theme
     ```
 3. Open the C:\Theme\script\onload.js file in a text editor
 4. Append the following code to the end of the onload.js file
