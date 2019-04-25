@@ -7,7 +7,7 @@ ms.author: nedpyle
 ms.technology: storage-replica
 ms.topic: get-started-article
 author: nedpyle
-ms.date: 06/04/2018
+ms.date: 04/26/2019
 ms.assetid: 61881b52-ee6a-4c8e-85d3-702ab8a2bd8c
 ---
 # Server-to-server storage replication with Storage Replica
@@ -25,7 +25,7 @@ Here's an overview video of using Storage Replica in Windows Admin Center.
 ## Prerequisites  
 
 * Active Directory Domain Services forest (doesn't need to run Windows Server 2016).  
-* Two servers with Windows Server 2016 Datacenter Edition installed.  
+* Two servers running Windows Server 2016, Datacenter Edition or newer. If you're running Windows Server 2019, you can instead use Standard Edition if you're OK replicating only a single volume up to 2 TB in size.  
 * Two sets of storage, using SAS JBODs, fibre channel SAN, iSCSI target, or local SCSI/SATA storage. The storage should contain a mix of HDD and SSD media. You will make each storage set available only to each of the servers, with no shared access.  
 * Each set of storage must allow creation of at least two virtual disks, one for replicated data and one for logs. The physical storage must have the same sector sizes on all the data disks. The physical storage must have the same sector sizes on all the log disks.  
 * At least one ethernet/TCP connection on each server for synchronous replication, but preferably RDMA.   
@@ -46,7 +46,7 @@ To use Storage Replica and Windows Admin Center together, you need the following
 
 | System                        | Operating system                                            | Required for     |
 |-------------------------------|-------------------------------------------------------------|------------------|
-| Two servers <br>(any mix of on-premises hardware, VMs, and cloud VMs including Azure VMs)| Datacenter edition of Windows Server (Semi-Annual Channel) or Windows Server 2016 | Storage Replica  |
+| Two servers <br>(any mix of on-premises hardware, VMs, and cloud VMs including Azure VMs)| Windows Server 2019, Windows Server 2016, or Windows Server (Semi-Annual Channel) | Storage Replica  |
 | One PC                     | Windows 10                                                  | Windows Admin Center |
 
 > [!NOTE]
@@ -80,7 +80,7 @@ If you're using Windows Admin Center to manage Storage Replica, use the followin
 
 ## <a name="provision-os"></a>Step 2: Provision operating system, features, roles, storage, and network
 
-1.  Install Windows Server 2016 on both server nodes with an installation type of Windows Server 2016 Datacenter **(Desktop Experience)**. Don't choose Standard Edition if it's available, as it doesn't contain Storage Replica.
+1.  Install Windows Server on both server nodes with an installation type of Windows Server **(Desktop Experience)**. 
  
     To use an Azure VM connected to your network via an ExpressRoute, see [Adding an Azure VM connected to your network via ExpressRoute](#add-azure-vm-expressroute).
 

@@ -7,23 +7,23 @@ ms.technology: storage-replica
 ms.topic: get-started-article
 ms.assetid: 834e8542-a67a-4ba0-9841-8a57727ef876
 author: nedpyle
-ms.date: 10/11/2017
+ms.date: 04/26/2019
 description: How to use Storage Replica to replicate volumes in one cluster to another cluster running Windows Server 2016 Datacenter Edition.
 ---
 # Cluster to cluster Storage Replication
 
-> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
+> Applies to: Windows Server 2019, Windows Server 2016, Windows Server (Semi-Annual Channel)
 
-Cluster-to-cluster replication is now available in Windows Server 2016 Datacenter Edition, including the replication of clusters using Storage Spaces Direct (i.e. shared nothing, direct-attached storage). The management and configuration is similar to server-to-server replication.  
+Storage Replica can replicate volumes between clusters, including the replication of clusters using Storage Spaces Direct. The management and configuration is similar to server-to-server replication.  
 
 You will configure these computers and storage in a cluster-to-cluster configuration, where one cluster replicates its own set of storage with another cluster and its set of storage. These nodes and their storage should be located in separate physical sites, although it is not required.  
 
-There are no graphical tools in Windows Server 2016 Datacenter Edition that can configure Storage Replica for cluster-to-cluster replication, though Azure Site Recovery will be able to configure this scenario in the future.
+There are no graphical tools that can configure Storage Replica for cluster-to-cluster replication, though Azure Site Recovery will be able to configure this scenario in the future.
 
 > [!IMPORTANT]
 > In this test, the four servers are an example. You can use any number of servers supported by Microsoft in each cluster, which is currently 8 for a Storage Spaces Direct cluster and 64 for a shared storage cluster.  
 >   
-> This guide does not cover configuring Storage Spaces Direct. For information about configuring Storage Spaces Direct, see [Storage Spaces Direct in Windows Server 2016](../storage-spaces/storage-spaces-direct-overview.md).  
+> This guide does not cover configuring Storage Spaces Direct. For information about configuring Storage Spaces Direct, see [Storage Spaces Direct overview](../storage-spaces/storage-spaces-direct-overview.md).  
 
 This walkthrough uses the following environment as an example:  
 
@@ -40,7 +40,7 @@ This walkthrough uses the following environment as an example:
 ## Prerequisites  
 
 * Active Directory Domain Services forest (does not need to run Windows Server 2016).  
-* At least four servers (two servers in two clusters) with Windows Server 2016 Datacenter Edition installed. Supports up to two 64 node clusters.  
+* 4-128 servers (two clusters of 2-64 servers) running Windows Server 2016, Datacenter Edition or newer. If you're running Windows Server 2019, you can instead use Standard Edition if you're OK replicating only a single volume up to 2 TB in size.  
 * Two sets of storage, using SAS JBODs, fibre channel SAN, Shared VHDX, Storage Spaces Direct, or iSCSI target. The storage should contain a mix of HDD and SSD media. You will make each storage set available only to each of the clusters, with no shared access between clusters.  
 * Each set of storage must allow creation of at least two virtual disks, one for replicated data and one for logs. The physical storage must have the same sector sizes on all the data disks. The physical storage must have the same sector sizes on all the log disks.  
 * At least one ethernet/TCP connection on each server for synchronous replication, but preferably RDMA.   
@@ -53,7 +53,7 @@ Many of these requirements can be determined by using the `Test-SRTopology` cmdl
 
 ## Step 1: Provision operating system, features, roles, storage, and network
 
-1.  Install Windows Server 2016 on all four server nodes with an installation type of Windows Server 2016 Datacenter **(Desktop Experience)**. Do not choose Standard Edition if it is available, as it does not contain Storage Replica.  
+1.  Install Windows Server on all four server nodes with an installation type of Windows Server **(Desktop Experience)**. 
 
 2.  Add network information and join them to the domain, then restart them.  
 
