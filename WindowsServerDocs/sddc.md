@@ -35,16 +35,15 @@ The technologies built into Windows Server and System Center are the main buildi
 ![](media/sddc/spacer1.png)<a href="https://github.com/MicrosoftDocs/windowsserverdocs/blob/master/WindowsServerDocs//media/sddc/sddc_poster_0801417_ANSI-E.pdf"><img src="media/sddc/poster.png"></a>
 
 
-## Windows Server software-defined (WSSD) solutions ##
+## Azure Stack HCI solutions ##
 
-Building your Windows Server software-defined datacenter on the right hardware infrastructure is a crucial first step to success. That's why we've partnered with **DataON**, **Fujitsu**, **Lenovo**, **QCT**, **SuperMicro**, **Hewlett Packard Enterprise** and **Dell EMC**, to create Microsoft-validated SDDC designs and best practices for deployment. 
-Microsoft partners offer an array of Windows Server software-defined (WSSD) solutions that work with Window Server 2016 and Windows Server 2019 to deliver high-performance, hyper-converged, storage and networking infrastructure. Hyper-converged solutions bring together compute, storage, and networking on industry-standard servers and components for improved datacenter intelligence and control.
+Building your Windows Server software-defined datacenter on the right hardware infrastructure is a crucial first step to success. That's why we've partnered with 15 partners to create Microsoft-validated SDDC designs and best practices for deployment.
 
-
-
-![](media/sddc/learn.png)**[Learn more about WSSD Solutions](https://www.microsoft.com/en-us/cloud-platform/software-defined-datacenter)**
+Microsoft partners offer an array of solutions that work with Window Server 2019 via the Azure Stack HCI program and Windows Server 2016 via the Windows Server software-defined (WSSD) program to deliver high-performance, hyper-converged, storage and networking infrastructure. Hyper-converged solutions bring together compute, storage, and networking on industry-standard servers and components for improved datacenter intelligence and control.
 
 ![](media/sddc/learn.png)**[Learn more about Azure Stack HCI Solutions](https://azure.microsoft.com/overview/azure-stack/hci)**
+
+![](media/sddc/learn.png)**[Learn more about WSSD Solutions](https://www.microsoft.com/en-us/cloud-platform/software-defined-datacenter)**
 
 ## Windows Server virtualized technologies ##
 

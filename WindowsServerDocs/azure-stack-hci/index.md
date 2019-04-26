@@ -12,7 +12,7 @@ ms.date: 03/26/2019
 
 # Azure Stack HCI overview
 
->Applies to: Windows Server 2019
+>Applies to: Windows Server 2019, Windows Server 2016
 
 Azure Stack HCI is a hyper-converged Windows Server 2019 cluster that uses validated hardware to run virtualized workloads on-premises, optionally connecting to Azure services for cloud-based backup, site-recovery and more. Azure Stack HCI solutions use Microsoft-validated hardware to ensure optimal performance and reliability, and include support for technologies such as NVMe drives, persistent memory, and remote-direct memory access (RDMA) networking.
 
@@ -24,11 +24,11 @@ Azure Stack HCI is a solution that combines several products:
 
 - Windows Admin Center
 
-- Azure services
+- Azure services (optional)
 
 ![Azure Stack HCI is Microsoft’s hyperconverged solution available from a wide range of hardware partners.](media/AS_HCI_solution.png)
 
-Azure Stack HCI is Microsoft’s hyperconverged solution available from a wide range of hardware partners.
+Azure Stack HCI is Microsoft’s hyperconverged solution available from a wide range of hardware partners. Consider the following scenarios for a hyperconverged solution to help you determine if Azure Stack HCI is the solution that best suits your needs:
 
 - **Refresh aging hardware.** Replace older servers and storage infrastructure and run Windows and Linux virtual machines on-premises and at the edge with existing IT skills and tools.
 
@@ -44,7 +44,13 @@ Azure Stack HCI is part of the Azure and Azure Stack family, using the same soft
 - [Azure Stack](https://azure.microsoft.com/overview/azure-stack) - Operate cloud services on-premises
 - [Azure Stack HCI](https://azure.microsoft.com/overview/azure-stack/hci) - Run virtualized apps on-premises, with optional connections to Azure
 
-![Azure and Azure Stack run cloud services, while Azure Stack HCI runs virtualized applications on-premises](media/az_and_azurestackfam.png)
+![Azure and Azure Stack run cloud services, while Azure Stack HCI runs virtualized applications on-premises](media/azure_family.png)
+
+|Azure: Use public cloud services|Azure Stack: Operate cloud services on-premises|Azure Stack HCI: Run virtualized apps on-premises|
+|-----------------|-----------------|-----------------|
+|For on-demand, self-service computing resources to migrate and modernize existing apps and build new cloud-native apps.|Build and run cloud applications at the edge, when disconnected, or to meet regulatory requirements, using consistent Azure services on-premises.| Run virtualized applications on-premise, replace and consolidate aging server infrastructure, and connect to Azure for cloud services.|
+|*What I use:*|*What I use:*|*What I use:*|
+|More than 100 services available in 54 regions around the globe|Azure VMs For Windows and Linux, Azure Web Apps and Functions, Azure Key Vault, Azure Resource Manager, Azure Marketplace, Containers, Azure IoT and Event Hubs, Admine tools (Plans, offers, RBAC)|Validated HCI solutions powered by Hyper V and Storage Spaces Direct with Windows Server 2019 SDDC and Windows Admin Center for management and integrated access to Azure services.|
 
 To learn more:
 
@@ -53,7 +59,7 @@ To learn more:
 
 ## Hyperconverged efficiencies
 
-Azure Stack HCI solutions bring together highly virtualized compute, storage, and networking on industry-standard x86 servers and components. Combining resources in the same server node cluster makes it easier for you to deploy, manage, and scale. Manage with your choice of command-line automation or Windows Admin Center.
+Azure Stack HCI solutions bring together highly virtualized compute, storage, and networking on industry-standard x86 servers and components. Combining resources in the same cluster makes it easier for you to deploy, manage, and scale. Manage with your choice of command-line automation or Windows Admin Center.
 
 Achieve industry-leading virtual machine performance for your server applications with Hyper-V, the foundational hypervisor technology of the Microsoft cloud, and Storage Spaces Direct technology with built-in support for NVMe, persistent memory, and remote-direct memory access (RDMA) networking.
 
@@ -62,8 +68,6 @@ Help keep apps and data secure with shielded virtual machines, network microsegm
 ## Hybrid capabilities
 
 You can take advantage of cloud and on-premises working together with a hyperconverged infrastructure platform in public cloud. Your team can start building cloud skills with built-in integration to Azure infrastructure management services:
-
-IT admins can use Windows Admin Center for simplified integration with Azure hybrid services to seamlessly connect to Azure for:
 
 - Azure Site Recovery for high availability and disaster recovery as a service (DRaaS).
 
@@ -77,13 +81,15 @@ IT admins can use Windows Admin Center for simplified integration with Azure hyb
 
 - Azure Network Adapter to connect resources on-premises with your VMs in Azure via a point-to-site VPN.
 
+- Sync your file server with the cloud, using [Azure File Sync](../manage/windows-admin-center/azure/azure-file-sync.md).
+
 ## Management tools and System Center
 
-Azure Stack HCI uses the same software-defined networking software as Azure Stack. With Azure Stack HCI you have full admin rights: you can use System Center and any feature of Hyper-V, Storage Spaces Direct, PowerShell, and third-party tools, such as 5Nine Manager.
+Azure Stack HCI uses the same virtualization and software-defined storage and networking software as Azure Stack. With Azure Stack HCI you have full admin rights on the cluster: you can use Windows Admin Center, System Center and any feature of Hyper-V, Storage Spaces Direct, PowerShell, and third-party tools, such as 5Nine Manager.
 
 Microsoft Azure runs on the same Windows Server and Hyper-V platform that are included in Windows Server. Windows Server and System Center include improvements and best practices from Microsoft's experience in operating global scale datacenter networks like Microsoft Azure to you so that you can deploy the same technologies for flexibility, automation, and control when using software designed networking technologies.
 
-Deploy and manage the SDN infrastructure with System Center Virtual Machine Management (VMM) and System Center Operations Manager. With VMM, you provision and manage the resources needed to create and deploy virtual machines and services to private clouds. With Operations Manager, you monitor services, devices, and operations across your enterprise to identify problems for immediate action.
+Deploy and manage the infrastructure with System Center Virtual Machine Management (VMM) and System Center Operations Manager. With VMM, you provision and manage the resources needed to create and deploy virtual machines and services to private clouds. With Operations Manager, you monitor services, devices, and operations across your enterprise to identify problems for immediate action.
 
 ## Hardware partners
 
@@ -141,6 +147,15 @@ Follow these steps:
 
 As your organization digitally transforms, you may find that you can move faster by using public cloud services to build on modern architectures and refresh legacy apps. However, for reasons that include technological and regulatory obstacles, many workloads must remain on-premises. The following table helps you determine which Microsoft hybrid cloud strategy provides what you need where you need it, delivering cloud innovation for workloads wherever they reside.
 
-Choose from two comprehensive Azure Stack solutions.
-
-![Choose from two comprehensive Azure Stack solutions.](media/when_use_azure_stack_hci.png)
+|Azure Stack|Azure Stack HCI|
+|--------|-------|
+|New skills, innovative processes|Same skills, familiar processes|
+|Azure services in your datacenter|Connect your datacenter to Azure services|
+|*When to use Azure Stack*||
+|Use Azure Stack for self-service Infrastructure-as-a-Service (IaaS), with strong isolation and precise usage tracking and chargeback for multiple co-located tenants. Ideal for service providers and enterprise private clouds. Templates from the Azure Marketplace.|Azure Stack HCI does not natively enforce or provide for multi-tenancy.|
+|Use Azure Stack to develop and run apps that rely on Platform-as-a-Service (PaaS) services like Web Apps, Functions, or Event Hubs on-premises. These services run on Azure Stack exactly like they do in Azure, providing a consistent hybrid development and runtime environment.|Azure Stack HCI does not run PaaS services on premises.
+|Use Azure Stack to modernize app deployment and operation with DevOps practices like infrastructure as code, continuous integration and continuous deployment (CI/CD), and convenient features like Azure-consistent VM Extensions. Ideal for Dev and DevOps teams.|Azure Stack HCI does not natively include any DevOps tooling.
+||*When to use Azure Stack HCI*|
+|Azure Stack requires minimum 4 nodes and its own network switches.|Use Azure Stack HCI for the minimum footprint for remote-office / branch-office (ROBO). Start with just 2 server nodes and switchless back-to-back networking for peak simplicity and affordability. Hardware offers start at 4 drives, 64 GB of memory, well under $10k / node.
+|Azure Stack constrains Hyper V configurability and feature set for consistency with Azure.|Use Azure Stack HCI for no-frills Hyper-V virtualization for classic enterprise apps like Exchange, SharePoint, and SQL Server, and to virtualize Windows Server roles like File Server, DNS, DHCP, IIS, and AD. Unrestricted access to all Hyper-V features like Shielded VMs.|
+|Azure Stack does not expose these infrastructural technologies.|Use Azure Stack HCI to substitute software-defined infrastructure in place of aging storage arrays or network appliances, without major re-architecture. Built-in Storage Spaces Direct and Software-Defined Networking (SDN) offer frictionless integration with Hyper-V environments.|
