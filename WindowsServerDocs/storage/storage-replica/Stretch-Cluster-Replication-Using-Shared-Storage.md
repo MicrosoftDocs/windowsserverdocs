@@ -149,7 +149,7 @@ You will now create a normal failover cluster. After configuration, validation, 
 4.  Configure a File Share Witness or Cloud Witness to provide quorum in the event of site loss.  
 
     > [!NOTE]  
-    > Windows Server 2016 now includes an option for Cloud (Azure)-based Witness. You can choose this quorum option instead of the file share witness.  
+    > WIndows Server now includes an option for Cloud (Azure)-based Witness. You can choose this quorum option instead of the file share witness.  
 
     > [!WARNING]  
     > For more information about quorum configuration, see the [Configure and Manage the Quorum in a Windows Server 2012 Failover Cluster guide's Witness Configuration](https://technet.microsoft.com/library/jj612870.aspx). For more information on the `Set-ClusterQuorum` cmdlet, see [Set-ClusterQuorum](https://docs.microsoft.com/powershell/module/failoverclusters/set-clusterquorum).  
@@ -251,7 +251,7 @@ You will now create a normal failover cluster. After configuration, validation, 
     ```  
 
     > [!NOTE]
-    > Windows Server 2016 now includes an option for Cloud (Azure)-based Witness. You can choose this quorum option instead of the file share witness.  
+    > WIndows Server now includes an option for Cloud (Azure)-based Witness. You can choose this quorum option instead of the file share witness.  
     
     For more information about quorum configuration, see the [Configure and Manage the Quorum in a Windows Server 2012 Failover Cluster guide's Witness Configuration](https://technet.microsoft.com/library/jj612870.aspx). For more information on the `Set-ClusterQuorum` cmdlet, see [Set-ClusterQuorum](https://docs.microsoft.com/powershell/module/failoverclusters/set-clusterquorum).  
 
@@ -313,7 +313,7 @@ You will now create a normal failover cluster. After configuration, validation, 
 
 4.  Configure a File Share Witness or Cloud Witness to provide quorum in the event of site loss.  
     >[!NOTE]
-    > Windows Server 2016 now includes an option for Cloud (Azure)-based Witness. You can choose this quorum option instead of the file share witness.                                                                                                                                                                             
+    > WIndows Server now includes an option for Cloud (Azure)-based Witness. You can choose this quorum option instead of the file share witness.                                                                                                                                                                             
     >[!NOTE]
     >  For more information about quorum configuration, see the [Configure and Manage the Quorum in a Windows Server 2012 Failover Cluster guide's Witness Configuration](https://technet.microsoft.com/library/jj612870.aspx). For more information on the Set-ClusterQuorum cmdlet, see [Set-ClusterQuorum](https://docs.microsoft.com/powershell/module/failoverclusters/set-clusterquorum). 
 
