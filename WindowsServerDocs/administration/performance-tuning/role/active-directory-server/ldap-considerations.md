@@ -45,7 +45,7 @@ Indexing attributes is useful when searching for objects that have the attribute
     -   **NTDS\\Request Latency** – This is subject to how long the request takes to process. Active Directory times out requests after 120 seconds (default), however, the majority should run much faster and extremely long running queries should get hidden in the overall numbers. Look for changes in this baseline, rather than absolute thresholds.
 
         **Note**  
-        High values here can also be indicators of delays in “proxying�? requests to other domains and CRL checks.
+        High values here can also be indicators of delays in "proxying" requests to other domains and CRL checks.
 
 
     -   **NTDS\\Estimated Queue Delay** – This should ideally be near 0 for optimal performance as this means that requests spend no time waiting to be serviced.
@@ -60,7 +60,7 @@ These scenarios can be detected using one or more of the following approaches:
 
 -   [Microsoft Server Performance Advisor](../../../server-performance-advisor/microsoft-server-performance-advisor.md) Active Directory Advisor Pack
 
--   Searches using any filter besides “(objectClass=\*)�? that use the Ancestors Index.
+-   Searches using any filter besides "(objectClass=\*)" that use the Ancestors Index.
 
 ### Other index considerations
 
