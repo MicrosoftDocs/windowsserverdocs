@@ -6,7 +6,7 @@ ms.author: nedpyle
 ms.technology: storage-replica
 ms.topic: get-started-article
 author: nedpyle
-ms.date: 10/22/2018
+ms.date: 04/26/2019
 ms.assetid: ceddb0fa-e800-42b6-b4c6-c06eb1d4bc55
 ---
 # Known issues with Storage Replica
@@ -276,7 +276,7 @@ Under rare and usually unreproducable circumstances, rebooting a server that is 
 
     Guidance: Possible causes include network failures, share creation failures for the remote replication group, or firewall settings. Make sure SMB traffic is allowed and there are no connectivity issues between the local computer and the remote computer. You should expect this event when suspending replication or removing a replication partnership.
 
-Note the `Status: "{Access Denied}"` and the message `A process has requested access to an object, but has not been granted those access rights.` This is a known issue within Storage Replica and was fixed in Quality Update September 12, 2017—KB4038782 (OS Build 14393.1715) https://support.microsoft.com/en-us/help/4038782/windows-10-update-kb4038782 
+Note the `Status: "{Access Denied}"` and the message `A process has requested access to an object, but has not been granted those access rights.` This is a known issue within Storage Replica and was fixed in Quality Update September 12, 2017—KB4038782 (OS Build 14393.1715) https://support.microsoft.com/help/4038782/windows-10-update-kb4038782 
 
 ## Error "Failed to bring the resource 'Cluster Disk x' online." with a stretch cluster
 When attempting to bring a cluster disk online after a successful failover, where you are attempting to make the original source site primary again, you receive an error in Failover Cluster Manager. For example:
@@ -338,8 +338,8 @@ Run Get-Cluster | fl * on each node.
 If ClusterFunctionalLevel = 9, that is the Windows 2016 ClusterFunctionalLevel version needed to implement Storage Replica on this node.
 If ClusterFunctionalLevel is not 9, the ClusterFunctionalLevel will need to be updated in order to implement Storage Replica on this node.
 
-To resolve the issue, raise the cluster functional level by running the PowerShell cmdlet: Update-ClusterFunctionalLevel
-https://technet.microsoft.com/itpro/powershell/windows/failoverclusters/update-clusterfunctionallevel
+To resolve the issue, raise the cluster functional level by running the PowerShell cmdlet: [Update-ClusterFunctionalLevel]
+(https://docs.microsoft.com/powershell/module/failoverclusters/update-clusterfunctionallevel)
 
 ## Small unknown partition listed in DISKMGMT for each replicated volume
 
