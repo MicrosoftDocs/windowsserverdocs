@@ -1,0 +1,17 @@
+- name: Azure Stack HCI
+  href: index.md
+  items:
+  - name: Hyper-V
+    href: ../virtualization/hyper-v/index.md
+  - name: Storage Spaces Direct
+    href: ../storage/storage-spaces/storage-spaces-direct-overview.md
+  - name: Failover Clustering
+    href: ../failover-clustering/failover-clustering-overview.md
+  - name: Software Defined Networking
+    href: https://docs.microsoft.com/windows-server/networking/sdn/
+  - name: Windows Server software-defined datacenter
+    href: https://docs.microsoft.com/windows-server/sddc/
+  - name: Windows Admin Center
+    href: ../manage/windows-admin-center/overview.md
+  - name: Connect to Azure
+    href: ../azure-hybrid-services/index.md

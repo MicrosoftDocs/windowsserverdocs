@@ -13,19 +13,19 @@ manager: dongill
 ms.date: 08/28/2017
 ms.localizationpriority: medium
 ---
-# Windows Server Software-Defined Datacenter
+# Windows Server software-defined datacenter
 
->Applies To: Windows Server 2016
+>Applies To: Windows Server 2016, Windows Server 2019
 
 ![](media/sddc/heading.png)
 
-## What is Windows Server Software-Defined Datacenter? ##
+## What is Windows Server software-defined datacenter? ##
 
-Software-Defined Datacenter (SDDC) is a common industry term that generally refers to a datacenter where all of the infrastructure is virtualized. Virtualization is the key, and it simply means that the hardware and software in the datacenter expand beyond a traditional one-to-one ratio. With a software hypervisor emulating hardware, operating systems and applications can be abstracted away from physical hardware, and multiplied to form elastic resource pools of processors, memory, I/O and networks.
+Software-defined datacenter (SDDC) is a common industry term that generally refers to a datacenter where all of the infrastructure is virtualized. Virtualization is the key, and it simply means that the hardware and software in the datacenter expand beyond a traditional one-to-one ratio. With a software hypervisor emulating hardware, operating systems and applications can be abstracted away from physical hardware, and multiplied to form elastic resource pools of processors, memory, I/O and networks.
  
 Microsoft's implementation of the SDDC consists of the Windows Server technologies highlighted in this article. It starts with the Hyper-V hypervisor that provides the virtualization platform upon which networking and storage are built. Security technologies, developed for the unique challenges of virtualized infrastructure, mitigate internal and external threats. With PowerShell built into Windows Server, and the addition of [System Center](https://docs.microsoft.com/system-center/) and/or [Operations Management Suite](https://docs.microsoft.com/azure/operations-management-suite/operations-management-suite-overview), you can program and automate provisioning, deployment, configuration and management.
 
-The technologies built into Windows Server and System Center are the main building blocks of the Windows Server SDDC experience. But even though it's a virtualized platform, it still requires the right hardware underneath. Microsoft partners participating in the **Windows Server Software-Defined (WSSD) Solutions** program can help your enterprise acquire the right hardware and get it up and running on day zero.
+The technologies built into Windows Server and System Center are the main building blocks of the Windows Server SDDC experience. But even though it's a virtualized platform, it still requires the right hardware underneath. Microsoft partners participating in the **Windows Server Software-Defined (WSSD) Solutions** and the **Azure Stack HCI Solutions** programs can help your enterprise acquire the right hardware and get it up and running on day zero.
 
 ![](media/sddc/video.png)**[Watch a video to learn more about Microsoft's SDDC](https://mva.microsoft.com/en-US/training-courses/whats-new-in-windows-server-2016-16457?l=YcsJR6sXC_1006218965)**
 
@@ -35,11 +35,13 @@ The technologies built into Windows Server and System Center are the main buildi
 ![](media/sddc/spacer1.png)<a href="https://github.com/MicrosoftDocs/windowsserverdocs/blob/master/WindowsServerDocs//media/sddc/sddc_poster_0801417_ANSI-E.pdf"><img src="media/sddc/poster.png"></a>
 
 
-## Windows Server Software-Defined (WSSD) Solutions ##
-Building your Windows Server Software-Defined Datacenter on the right hardware infrastructure is a crucial first step to success. That's why we've partnered with **DataON**, **Fujitsu**, **Lenovo**, **QCT**, **SuperMicro**, **Hewlett Packard Enterprise** and **Dell EMC**, to create Microsoft-validated SDDC designs and best practices for deployment. 
-Microsoft partners offer an array of Windows Server Software-Defined (WSSD) solutions that work with Window Server 2016 to deliver high-performance, hyper-converged, storage and networking infrastructure. Hyper-converged solutions bring together compute, storage, and networking on industry-standard servers and components for improved datacenter intelligence and control.
+## Azure Stack HCI solutions ##
 
+Building your Windows Server software-defined datacenter on the right hardware infrastructure is a crucial first step to success. That's why we've partnered with 15 partners to create Microsoft-validated SDDC designs and best practices for deployment.
 
+Microsoft partners offer an array of solutions that work with Window Server 2019 via the Azure Stack HCI program and Windows Server 2016 via the Windows Server software-defined (WSSD) program to deliver high-performance, hyper-converged, storage and networking infrastructure. Hyper-converged solutions bring together compute, storage, and networking on industry-standard servers and components for improved datacenter intelligence and control.
+
+![](media/sddc/learn.png)**[Learn more about Azure Stack HCI Solutions](https://azure.microsoft.com/overview/azure-stack/hci)**
 
 ![](media/sddc/learn.png)**[Learn more about WSSD Solutions](https://www.microsoft.com/en-us/cloud-platform/software-defined-datacenter)**
 
@@ -289,5 +291,4 @@ Windows Admin Center is a locally deployed, browser-based, management tool set t
 
 Publishing the web server to DNS and setting up the corporate firewall can allow you to access Windows Admin Center from the public internet, enabling you to connect to, and manage, your servers from anywhere with Microsoft Edge or Google Chrome.
 
-![](media/sddc/learn.png)**[Learn more about Microsoft Project Windows Admin Center](manage/windows-admin-center/overview.md)**
-
+![](media/sddc/learn.png)**[Learn more about Windows Admin Center](manage/windows-admin-center/overview.md)**
