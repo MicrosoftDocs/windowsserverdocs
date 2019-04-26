@@ -105,11 +105,11 @@ Storage Replica includes the following features:
 
 ## <a name="BKMK_SR3"></a> Storage Replica prerequisites  
 
-* Active Directory Domain Services forest.  
-* Storage Spaces with SAS JBODs, Storage Spaces Direct, fibre channel SAN, shared VHDX, iSCSI Target, or local SAS/SCSI/SATA storage. SSD or faster recommended for replication log drives. Microsoft recommends that the log storage be faster than the data storage. Log volumes must never be used for other workloads. 
-* At least one ethernet/TCP connection on each server for synchronous replication, but preferably RDMA.   
-* At least 2GB of RAM and two cores per server.  
-* A network between servers with enough bandwidth to contain your IO write workload and an average of 5ms round trip latency or lower, for synchronous replication. Asynchronous replication does not have a latency recommendation.  
+* Active Directory Domain Services forest.
+* Storage Spaces with SAS JBODs, Storage Spaces Direct, fibre channel SAN, shared VHDX, iSCSI Target, or local SAS/SCSI/SATA storage. SSD or faster recommended for replication log drives. Microsoft recommends that the log storage be faster than the data storage. Log volumes must never be used for other workloads.
+* At least one ethernet/TCP connection on each server for synchronous replication, but preferably RDMA.
+* At least 2GB of RAM and two cores per server.
+* A network between servers with enough bandwidth to contain your IO write workload and an average of 5ms round trip latency or lower, for synchronous replication. Asynchronous replication does not have a latency recommendation.
 * Windows Server, Datacenter Edition, or Windows Server, Standard Edition. Storage Replica running on Windows Server, Standard Edition, has the following limitations:
 
   * You must use Windows Server 2019 or later
