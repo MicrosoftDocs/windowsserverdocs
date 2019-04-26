@@ -28,7 +28,7 @@ Further notes on guest clustering in Azure can be found at: [Deploying IaaS VM G
 Important notes:
 
 1. Azure doesn't support shared VHDX guest clustering, so Windows Failover Cluster virtual machines must use iSCSI targets for classic shared-storage persistent disk reservation clustering or Storage Spaces Direct.
-2. There are Azure Resource Manager templates for Storage Spaces Direct-based Storage Replica clustering at [Create a Storage Spaces Direct (S2D) SOFS Clusters with Storage Replica for Disaster Recovery across Azure Regions](https://aka.ms/azure-storage-replica-cluster).  
+2. There are Azure Resource Manager templates for Storage Spaces Direct-based Storage Replica clustering at [Create a Storage Spaces Direct  SOFS Clusters with Storage Replica for Disaster Recovery across Azure Regions](https://aka.ms/azure-storage-replica-cluster).  
 3. Cluster to cluster RPC communication in Azure (required by the cluster APIs for granting access between cluster) requires configuring network access for the CNO. You must allow TCP port 135 and the dynamic range above TCP port 49152. Reference [Building Windows Server Failover Cluster on Azure IAAS VM – Part 2 Network and Creation](https://blogs.technet.microsoft.com/askcore/2015/06/24/building-windows-server-failover-cluster-on-azure-iaas-vm-part-2-network-and-creation/).  
 4. It's possible to use two-node guest clusters, where each node is using loopback iSCSI for an asymmetric cluster replicated by Storage Replica. But this will likely have very poor performance and should be used only for very limited workloads or testing.  
 
@@ -152,7 +152,7 @@ Then, after you switch replication direction, remove replication, or are simply 
 
     vssadmin list shadows
      vssadmin revert shadow /shadow={shadown copy ID GUID listed previously}
-You can also schedule this tool to run periodically using a scheduled task. For more information on using VSS, review [Vssadmin](https://technet.microsoft.com/library/cc754968.aspx). There is no need or value in backing up the log volumes. Attempting to do so will be ignored by VSS.
+You can also schedule this tool to run periodically using a scheduled task. For more information on using VSS, review [Vssadmin](../../administration/windows-commands/vssadmin.md). There is no need or value in backing up the log volumes. Attempting to do so will be ignored by VSS.
 Use of Windows Server Backup, Microsoft Azure Backup, Microsoft DPM, or other snapshot, VSS, virtual machine, or file-based technologies are supported by Storage Replica as long as they operate within the volume layer. Storage Replica does not support block-based backup and restore.
 
 ## <a name="FAQ14"></a> Can I configure replication to restrict bandwidth usage?
