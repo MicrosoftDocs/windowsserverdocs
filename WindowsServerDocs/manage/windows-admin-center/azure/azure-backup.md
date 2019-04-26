@@ -35,7 +35,7 @@ Windows Admin Center exposes the Azure Backup integration via the native **Backu
 
 - An Azure Account with at least one active subscription
 - The target Windows Servers that you want to backup must have Internet access to Azure
-- [Connect your Windows Admin Center gateway to Azure](../configure/azure-integration.md)
+- [Connect your Windows Admin Center gateway to Azure](azure-integration.md)
 
 To start the workflow to backup your Windows Server, open a server connection, click on the **Backup** tool and follow the steps mentioned below.
 

@@ -4,7 +4,7 @@ description: Brief description of topic for search engine results
 author: jasongerend
 ms.author: jgerend
 manager: elizapo
-ms.date: 09/24/2018
+ms.date: 04/19/2019
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: storage
@@ -49,10 +49,12 @@ To use Storage Migration Service, you need the following:
 - An **orchestrator server** running Windows Server 2019 to manage the migration  <br>If you're migrating only a few servers and one of the servers is running Windows Server 2019, you can use that as the orchestrator. If you're migrating more servers, we recommend using a separate orchestrator server.
 - A **PC or server running [Windows Admin Center](../../manage/windows-admin-center/understand/windows-admin-center.md)** to run the Storage Migration Service user interface, unless you prefer using PowerShell to manage the migration. The Windows Admin Center and Windows Server 2019 version must both be at least version 1809. 
 
+We strongly recommend that the orchestrator and destination computers have at least two cores or two vCPUs, and at least 2 GB of memory. Inventory and transfer operations are significantly faster with more processors and memory.
+
 ### Security requirements
 
-- A migration account that is an administrator on the source computers.
-- A migration account that is an administrator on the destination computers.
+- A migration account that is an administrator on the source computers and the orchestrator computer.
+- A migration account that is an administrator on the destination computers and the orchestrator computer.
 - The orchestrator computer must have the File and Printer Sharing (SMB-In) firewall rule enabled *inbound*.
 - The source and destination computers must have the following firewall rules enabled *inbound* (though you might already have them enabled):
   - File and Printer Sharing (SMB-In)

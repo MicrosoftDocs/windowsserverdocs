@@ -323,7 +323,7 @@ The following are common issues seen during the Windows Server 2012 development 
 |-|-|  
 |Issue|The Next button is not available on the Domain Controller Options page|  
 |Symptoms|Even though you have set a password, the **Next** button on the **Domain Controller Options** page in Server Manager is not available. There is no site listed in the **Site name** menu.|  
-|Resolution and Notes|You have multiple AD DS sites and at least one is missing subnets; this future domain controller belongs to one of those subnets. You must manually select the subnet from the Site name dropdown menu. You should also review all AD sites using DSSITE.MSC or use the following Windows PowerShell command to find all sites missing subnets:<br /><br />Code - get-adreplicationsite -filter * -property subnets &#124; where-object {!$_.subnets -eq "\*"} &#124; format-table name|  
+|Resolution and Notes|You have multiple AD DS sites and at least one is missing subnets; this future domain controller belongs to one of those subnets. You must manually select the subnet from the Site name dropdown menu. You should also review all AD sites using DSSITE.MSC or use the following Windows PowerShell command to find all sites missing subnets:<br /><br />Code - get-adreplicationsite -filter \* -property subnets &#124; where-object {!$_.subnets -eq "\*"} &#124; format-table name|  
   
 |||  
 |-|-|  

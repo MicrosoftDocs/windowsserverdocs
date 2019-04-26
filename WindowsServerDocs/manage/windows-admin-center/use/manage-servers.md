@@ -44,10 +44,13 @@ The following tools are available for server connections:
 | Tool | Description |
 | ---- | ----------- |
 | [Overview](#overview) | View server details and control server state |
+| [Active Directory](#active-directory-preview) | Manage Active Directory |
 | [Backup](#backup) | View and configure Azure Backup |  
 | [Certificates](#certificates) | View and modify certificates |
 | [Containers](#containers) | View Containers |
 | [Devices](#devices) | View and modify devices |
+| [DHCP](#dhcp) | View and manage DHCP server configuration |
+| [DNS](#dns) | View and manage DNS server configuration |
 | [Events](#events) | View events |
 | [Files](#files) | Browse files and folders |
 | [Firewall](#firewall) | View and modify firewall rules |
@@ -61,6 +64,7 @@ The following tools are available for server connections:
 | [Roles and Features](#roles-and-features) | View and modify roles and features |
 | [Scheduled Tasks](#scheduled-tasks) | View and modify scheduled tasks |
 | [Services](#services) | View and modify services |
+| [Settings](#settings) | View and modify services |
 | [Storage](#storage) | View and modify storage devices |
 | [Storage Migration Service](#storage-migration-service) | Migrate servers and file shares to Azure or Windows Server 2019 |
 | [Storage Replica](#storage-replica) | Use Storage Replica to manage server-to-server storage replication |
@@ -71,7 +75,7 @@ The following tools are available for server connections:
 
 ## Overview
 
-**Overview** Allows you to see the current state of CPU, memory, and network performance, as well as perform operations and modify settings on a target computer or server.
+**Overview** allows you to see the current state of CPU, memory, and network performance, as well as perform operations and modify settings on a target computer or server.
 
 ### Features
 
@@ -85,8 +89,29 @@ The following features are supported in Server Manager Overview:
 - Shutdown server
 - Enable disk metrics on server
 - Edit Computer ID on server
+- View BMC IP address with hyperlink (requires IPMI-compatible BMC).
 
 [**View feedback and proposed features for Server Overview**](https://windowsserver.uservoice.com/forums/295071/filters/top?category_id=319162&query=%5BOverview%5D).
+
+## Active Directory (Preview)
+
+**Active Directory** is an early preview that is available on the [extension feed](../configure/using-extensions.md).
+
+### Features
+
+The following Active Directory management are available:
+
+- Create user
+- Create group
+- Search for users, computers, and groups
+- Details pane for users, computers, and groups when selected in grid
+- Global Grid actions users, computers, and groups (disable/enable, remove)
+- Reset user password
+- User objects: configure basic properties & group memberships
+- Computer objects: configure delegation to a single machine
+- Group objects: manage membership (add/remove 1 user at a time)  
+
+[**View feedback and proposed features for Active Directory**](https://windowsserver.uservoice.com/forums/295071/filters/top?category_id=319162&query=%5BActive%20Directory%5D).
 
 ## Backup
 
@@ -143,6 +168,33 @@ The following features are supported in Devices:
 - Update driver on a device
 
 [**View feedback and proposed features for Devices**](https://windowsserver.uservoice.com/forums/295071/filters/top?category_id=319162&query=%5BDevices%5D).
+
+## DHCP
+
+**DHCP** allows you to manage connected devices on a computer or server.
+
+### Features
+
+- Create/configure/view IPV4 and IPV6 scopes
+- Create address exclusions and configure start and end IP address
+- Create address reservations and configure client MAC address (IPV4), DUID and IAID (IPV6)
+
+[**View feedback and proposed features for DHCP**](https://windowsserver.uservoice.com/forums/295071/filters/top?category_id=319162&query=%5BDHCP%5D).
+
+## DNS
+
+**DNS** allows you to manage connected devices on a computer or server.
+
+### Features
+
+- View details of DNS Forward Lookup zones, Reverse Lookup zones and DNS records
+- Create forward Lookup zones (primary, secondary, or stub), and configure forward lookup zone properties
+- Create Host (A or AAAA), CNAME or MX type of DNS records
+- Configure DNS records properties
+- Create IPV4 and IPV6 Reverse Lookup zones (primary, secondary and stub), configure reverse lookup zone properties
+- Create PTR, CNAME type of DNS records under reverse lookup zone.
+
+[**View feedback and proposed features for DHCP**](https://windowsserver.uservoice.com/forums/295071/filters/top?category_id=319162&query=%5BDNS%5D).
 
 ## Events
 
@@ -344,6 +396,19 @@ The following features are supported in Services:
 - Edit the properties of a service
 
 [**View feedback and proposed features for Services**](https://windowsserver.uservoice.com/forums/295071/filters/top?category_id=319162&query=%5BServices%5D).
+
+## Settings
+
+**Settings** is a central location to manage settings on a computer or server.
+
+### Features
+
+- View and modify user and system environment variables
+- View the configuration for monitoring alerts from [Azure Monitor](azure-monitor.md)
+- View and modify the power configuration
+- View and modify Remote Desktop settings
+- View and modify role-based access control settings
+- View and modify Hyper-V host settings, if applicable
 
 ## Storage
 

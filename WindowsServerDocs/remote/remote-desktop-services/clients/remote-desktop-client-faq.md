@@ -17,11 +17,11 @@ ms.localizationpriority: medium
 ---
 # Frequently asked questions about the Remote Desktop clients
 
->Applies To: Windows 10, Windows 8.1, Windows Server 2012 R2, Windows Server 2016
+>Applies to: Windows 10, Windows 8.1, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2
 
 Now that you've set up the Remote Desktop client on your device (Android, Mac, iOS, or Windows), you may have questions. Here are answers to the most commonly asked questions about the Remote Desktop clients. 
 
-- [Setting up](#Setting-up)
+- [Setting up](#setting-up)
 - [Connections, gateway, and networks](#connection-gateway-and-networks)
 - [Web client](#web-client)
 - [Monitors, audio, and mouse](#monitors-audio-and-mouse)

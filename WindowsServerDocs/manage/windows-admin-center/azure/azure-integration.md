@@ -24,4 +24,4 @@ The first time you try to use an Azure integration feature in Windows Admin Cent
 
 The guided in-product steps will create an Azure AD app in your directory, which allows Windows Admin Center to communicate with Azure. To view the Azure AD app that is automatically created, go to the **Azure** tab of Windows Admin Center settings. The **View in Azure** hyperlink lets you view the Azure AD app in the Azure portal. 
 
-The Azure AD app created is used for all points of Azure integration in Windows Admin Center, including [Azure AD authentication to the gateway](user-access-control.md#azure-active-directory).
+The Azure AD app created is used for all points of Azure integration in Windows Admin Center, including [Azure AD authentication to the gateway](../configure/user-access-control.md#azure-active-directory).

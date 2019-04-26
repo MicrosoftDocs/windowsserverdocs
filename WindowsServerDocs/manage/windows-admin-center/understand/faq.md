@@ -6,9 +6,9 @@ ms.topic: article
 author: nwashburn-ms
 ms.author: niwashbu
 ms.localizationpriority: medium
+ms.date: 04/12/2019
 ms.prod: windows-server-threshold
 ---
-
 # Windows Admin Center Frequently Asked Questions
 
 >Applies To: Windows Admin Center, Windows Admin Center Preview
@@ -21,7 +21,9 @@ Windows Admin Center is a lightweight, browser-based GUI platform and toolset fo
 
 ## Can I use Windows Admin Center in production environments?
 
-Yes. Windows Admin Center is generally available and ready for broad usage and production deployments. As a platform that will continue to grow and mature, exiting preview means that the current platform capabilities and core tools meet Microsoft’s standard release criteria and our quality bar for usability, reliability, performance, accessibility, security, and adoption.
+Yes. Windows Admin Center is generally available and ready for broad usage and production deployments. The current platform capabilities and core tools meet Microsoft’s standard release criteria and our quality bar for usability, reliability, performance, accessibility, security, and adoption.
+
+[!INCLUDE [support-policy](../includes/support-policy.md)]
 
 ## How much does it cost to use Windows Admin Center?
 
@@ -86,11 +88,24 @@ We are investigating due to customer demand, but there is currently no locked pl
 
 ## Which web browsers are supported by Windows Admin Center?
 
-The latest versions of Microsoft Edge (Windows 10, version 1709 or later) and Google Chrome browsers are tested and supported on Windows 10. [View browser specific known issues](..\use\known-issues.md#browser-specific-issues). Other modern web browsers or other platforms are not currently part of our test matrix and are therefore not *officially* supported.
+The latest versions of Microsoft Edge (Windows 10, version 1709 or later) and Google Chrome browsers are tested and supported on Windows 10. [View browser specific known issues](..\support\known-issues.md#browser-specific-issues). Other modern web browsers or other platforms are not currently part of our test matrix and are therefore not *officially* supported.
 
 ## How does Windows Admin Center handle security?
 
 Traffic from the browser to the Windows Admin Center gateway uses HTTPS. Traffic from the gateway to managed servers is standard PowerShell and WMI over WinRM. We support LAPS (Local Administrator Password Solution), resource-based constrained delegation, gateway access control using AD or Azure AD, and role-based access control for managing target servers.
+
+## Does Windows Admin Center use CredSSP?
+
+Yes, in a few cases Windows Admin Center requires CredSSP. This is required to pass your credentials for authentication to machines beyond the specific server you are targeting for management. For example, if you are managing virtual machines on **server B**, but want to store the vhdx files for those virtual machines on a file share hosted by **server C**, Windows Admin Center must use CredSSP to authenticate with **server C** to access the file share.
+
+Windows Admin Center handles the configuration of CredSSP automatically after prompting for consent from you. Before configuring CredSSP, Windows Admin Center will check to make sure that the system has the recent CredSSP [updates](https://support.microsoft.com/help/4093492/credssp-updates-for-cve-2018-0886-march-13-2018). While CredSSP is enabled, there will be a badge on the Server Overview, and an option to disable it -
+
+![CredSSP on server overview](../media/CredSSP-overview.png)
+
+CredSSP is currently used in the following areas:
+
+- Using disaggregated SMB storage in the virtual machines tool (the example above.)
+- Using the Updates tool in either the Failover or Hyper-Converged cluster management solutions, which performs [Cluster-Aware Updating](https://docs.microsoft.com/windows-server/failover-clustering/cluster-aware-updating) 
 
 ## Are there any cloud dependencies?
 
@@ -122,15 +137,18 @@ There are two versions of Windows Admin Center available for download:
 
 ### Windows Admin Center
 
-* For IT admins who are not able to update frequently or who want more validation time for the releases they use in production, this version is for you. Our current generally available (GA) release is Windows Admin Center 1809.5.
-* To get the latest GA release, [download here](https://aka.ms/WACDownload).
-
-* Windows Admin Center GA releases are supported continuously, based on Microsoft’s [Modern Lifecycle Policy](https://support.microsoft.com/help/30881/modern-lifecycle-policy). This means that only the latest released version of Windows Admin Center GA is serviced and supported, and users must “stay current” by upgrading to the latest Windows Admin Center GA release within 30 days of availability to remain supported. This policy applies to both the Windows Admin Center platform itself, as well as any Microsoft extensions which are GA and published in the Windows Admin Center extension feed. Note that some extensions may be updated more frequently than others, between Windows Admin Center GA releases.
+* For IT admins who are not able to update frequently or who want more validation time for the releases they use in production, this version is for you. Our current generally available (GA) release is Windows Admin Center 1904.
+* [!INCLUDE [support-policy](../includes/support-policy.md)]
+* To get the latest release, [download here](https://aka.ms/WACDownload).
 
 ### Windows Admin Center Preview
 
+>[!NOTE]
+>The current GA version (Windows Admin Center 1904) contains all previous preview functionality.
+>The Insider Preview will return in the coming months.
+
 * For IT admins who want the latest and greatest features on a regular cadence, this version is for you. Our intent is to provide subsequent update releases every month or so. The core platform continues to be production-ready and the license provides production use rights. However, note that you will see the introduction of new tools and capabilities which are clearly marked as PREVIEW and are suitable for evaluation and testing.
-* To get the latest Preview release, registered Insiders may download Windows Admin Center Preview directly from the [Windows Server Insider Preview download page](https://www.microsoft.com/en-us/software-download/windowsinsiderpreviewserver), under the Additional Downloads dropdown. If you have not yet registered as an Insider, see [Getting Started with Windows Server](https://insider.windows.com/en-us/for-business-getting-started-server/) on the Windows Insiders for Business portal.
+* To get the latest Insider Preview release, registered Insiders may download Windows Admin Center Preview directly from the [Windows Server Insider Preview download page](https://www.microsoft.com/en-us/software-download/windowsinsiderpreviewserver), under the Additional Downloads dropdown. If you have not yet registered as an Insider, see [Getting Started with Windows Server](https://insider.windows.com/en-us/for-business-getting-started-server/) on the Windows Insiders for Business portal.
 
 ## Why was "Windows Admin Center" chosen as the final name for "Project Honolulu"?
 

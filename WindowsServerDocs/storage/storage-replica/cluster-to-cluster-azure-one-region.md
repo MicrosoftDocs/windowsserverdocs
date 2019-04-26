@@ -1,17 +1,20 @@
 ---
-title: Cluster to Cluster Storage Replica within the same region in Azure
-description: Cluster to Cluster Storage Replication within the same region in Azure
+title: Cluster to cluster Storage Replica within the same region in Azure
+description: Cluster to cluster Storage Replication within the same region in Azure
 keywords: Storage Replica, Server Manager, Windows Server, Azure, Cluster, the same region
 author: arduppal
 ms.author: arduppal
-ms.date: 12/19/2017
+ms.date: 04/26/2019
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: storage-replica
 manager: mchad
 ---
-# Cluster to Cluster Storage Replica within the same region in Azure
-You can configure Cluster to Cluster Storage Replicas within the same region in Azure. In the examples below, we use a two-node cluster, but Cluster to Cluster storage replica isn’t restricted to a two-node cluster. The illustration below is a two-node Storage Space Direct cluster that can communicate with each other, are in the same domain, and within the same region.
+# Cluster to cluster Storage Replica within the same region in Azure
+
+> Applies to: Windows Server 2019, Windows Server 2016, Windows Server (Semi-Annual Channel)
+
+You can configure cluster to cluster storage replication within the same region in Azure. In the examples below, we use a two-node cluster, but cluster to cluster storage replica isn’t restricted to a two-node cluster. The illustration below is a two-node Storage Space Direct cluster that can communicate with each other, are in the same domain, and within the same region.
 
 Watch the videos below for a complete walk-through of the process.
 

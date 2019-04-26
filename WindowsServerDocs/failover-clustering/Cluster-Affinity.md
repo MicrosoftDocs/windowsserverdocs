@@ -10,7 +10,7 @@ description: This article describes Failover Cluster AntiAffinity levels
 ---
 # Cluster Affinity
 
-> Applies To: Windows Server 2019, Windows Server 2016
+> Applies to: Windows Server 2019, Windows Server 2016
 
 A failover cluster can hold numerous roles that can move between nodes and run.  There are times when certain roles (i.e. virtual machines, resource groups, etc) should not run on the same node.  This could be due to resource consumption, memory usage, etc.  For example, there are two virtual machines that are memory and CPU intensive and if the two virtual machines are running on the same node, one or both of the virtual machines could have performance impact issues.  This article will explain cluster antiaffinity levels and how you can use them.
 

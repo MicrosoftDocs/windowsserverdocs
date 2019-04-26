@@ -4,11 +4,11 @@ ms.technology: system-insights
 ms.topic: article
 author: gawatu
 ms.author: gawatu
-ms.date: 02/27/2019
+ms.date: 02/15/2019
 ---
 # MICROSOFT SOFTWARE LICENSE TERMS
 
-## MICROSOFT.WINDOWSSERVER.SYSTEMINSIGHTS.CAPABILITIES
+## MICROSOFT.WINDOWSSERVER.SYSTEMINSIGHTS
 
 These license terms are an agreement between you and Microsoft Corporation (or
 one of its affiliates). They apply to the software named above and any Microsoft
@@ -20,7 +20,7 @@ HAVE THE RIGHTS BELOW. BY USING THE SOFTWARE, YOU ACCEPT THESE TERMS.
 
 1. **INSTALLATION AND USE RIGHTS.**
 
-   **a) General.** You may install and use any number of copies of the software.
+   **a) General.** You may install and use any number of copies of the software to develop and test libraries with Windows Server.
 
    **b) Third Party Software.** The software may include third party applications that Microsoft, not the third party, licenses to you under this agreement. Any included notices for third party applications are for your information only.
 

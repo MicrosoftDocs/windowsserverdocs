@@ -5,7 +5,7 @@ ms.technology: manage
 ms.topic: article
 author: haley-rowland
 ms.author: harowl
-ms.date: 09/19/2018
+ms.date: 04/12/2018
 ms.localizationpriority: medium
 ms.prod: windows-server-threshold
 ---
@@ -21,23 +21,20 @@ Windows Admin Center settings consist of user-level and gateway-level settings. 
 User-level settings consist of the following sections:
 
 - Account
+- Personalization
 - Language/Region
 - Suggestions
+- Advanced
 
 In the **Account** tab, users can review the credentials they have used to authenticate to Windows Admin Center. If Azure AD is configured to be the identity provider, the user can log out of their Azure AD account from this tab.
+
+In the **Personalization** tab, users can toggle to a dark UI theme.
 
 In the **Language/Region** tab, users can change the language and region formats displayed by Windows Admin Center.
 
 In the **Suggestions** tab, users can toggle suggestions about Azure services and new features.
 
-### Dark theme
-
-> Applies To: Windows Admin Center Preview
-
-In Windows Admin Center Preview, you can unlock an additional **Personalization** section, which contains the option to toggle to a dark UI theme. To enable the **Personalization** section, enter ```msft.sme.shell.personalization``` as an experiment key.
-
->[!IMPORTANT]
-> Dark theme is a work in progress, please do not report bugs at this time.
+The **Advanced** tab gives Windows Admin Center extension developers additional capabilities.
 
 ## Gateway settings
 

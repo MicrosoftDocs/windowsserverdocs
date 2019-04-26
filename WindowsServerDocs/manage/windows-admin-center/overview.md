@@ -5,15 +5,13 @@ ms.technology: manage
 ms.topic: article
 author: nwashburn-ms
 ms.author: niwashbu
+ms.date: 04/12/2019
 ms.localizationpriority: high
 ms.prod: windows-server-threshold
 ---
-
 # Windows Admin Center
 
 >Applies To: Windows Admin Center, Windows Admin Center Preview
-
-Welcome to Windows Admin Center!
 
 **Windows Admin Center** (codenamed **Project Honolulu**) is an evolution of Windows Server in-box management tools; it’s a single pane of glass that consolidates all aspects of local and remote server management. As a locally deployed, browser-based management experience, an Internet connection and Azure aren’t required. Windows Admin Center gives you full control of all aspects of your deployment, including private networks that aren’t Internet-connected.
 
@@ -53,7 +51,6 @@ You can get Windows Admin Center up and running in your environment in minutes:
             <ul>
             <li><a href="plan/installation-options.md">What type of installation is right for you?</a>
             <li><a href="plan/user-access-options.md">User access options</a>
-            <li><a href="plan/azure-integration-options.md">What Azure integration options are there?</a>
             <br>
             </ul>
         </td>
@@ -73,8 +70,6 @@ You can get Windows Admin Center up and running in your environment in minutes:
             <li><a href="configure/settings.md">Windows Admin Center settings</a>
             <li><a href="configure/user-access-control.md">User access control and permissions</a>
             <li><a href="configure/using-extensions.md">Extensions</a>
-            <li><a href="configure/azure-integration.md">Integrate with Azure</a>
-            <li><a href="configure/manage-azure-vms.md">Manage Azure VMs with Windows Admin Center</a>
             </ul>
         </td>
     </tr>
@@ -87,13 +82,30 @@ You can get Windows Admin Center up and running in your environment in minutes:
             <li><a href="use/manage-hyper-converged.md">Manage hyper-converged infrastructure</a>
             <li><a href="use/manage-failover-clusters.md">Manage failover clusters</a>
             <li><a href="use/manage-virtual-machines.md">Manage virtual machines</a>
-            <li><a href="use/azure-services.md">Leverage Azure services</a>
-            <li><a href="use/troubleshooting.md">Common troubleshooting steps</a>
             <li><a href="use/logging.md">Logging</a>
-            <li><a href="use/known-issues.md">Known issues</a>
             </ul>
         </td>
         <td style="vertical-align: top;">
+            <h3>Connect to Azure</h3>
+            <ul>
+            <li><a href="azure/index.md">Azure hybrid services</a></li>
+            <li><a href="azure/azure-integration.md">Connect Windows 
+Admin Center to Azure</a></li>
+            <li><a href="azure/deploy-wac-in-azure.md">Deploy Windows Admin Center in Azure</a></li>
+            <li><a href="azure/manage-azure-vms.md">Manage Azure VMs with Windows Admin Center</a></li>
+            </ul>
+        </td>
+    </tr>
+    <tr>
+            <td style="vertical-align: top;">
+            <h3>Support</h3>
+            <ul>
+            <li><a href="support/index.md">Support policy</a>
+            <li><a href="support/troubleshooting.md">Common troubleshooting steps</a>
+            <li><a href="support/known-issues.md">Known issues</a>
+            </ul>
+        </td>
+            <td style="vertical-align: top;">
             <h3>Extend</h3>
             <ul>
             <li><a href="extend/extensibility-overview.md">Overview of extensions</a>
@@ -111,8 +123,9 @@ You can get Windows Admin Center up and running in your environment in minutes:
 
 Learn about our latest released features:
 
-- Version [1903] (https://aka.ms/wac1903) brings email notifications from Azure Monitor, the ability to add Server or PC connections from Active Directory, and new tools to manage Active Directory, DHCP, and DNS.
-- Version [1902] (https://aka.ms/wac1902) added a shared connection list & improvements to software defined network (SDN) management, including new SDN tools to manage ACLs, gateway connections, and logical networks.
+- Version [1904](https://aka.ms/wac1904) is the most recent GA release that introduces the Azure Hybrid Services tool, and brings features that were previously in preview to the GA channel.
+- Version [1903](https://aka.ms/wac1903) brings email notifications from Azure Monitor, the ability to add Server or PC connections from Active Directory, and new tools to manage Active Directory, DHCP, and DNS.
+- Version [1902](https://aka.ms/wac1902) added a shared connection list & improvements to software defined network (SDN) management, including new SDN tools to manage ACLs, gateway connections, and logical networks.
 - Version [1812](https://aka.ms/wac1812) added dark theme (in preview), power configuration settings, BMC info, and PowerShell support to manage [extensions](./configure/using-extensions.md#manage-extensions-with-powershell) and [connections](./use/get-started.md#use-powershell-to-import-or-export-your-connections-with-tags).
 - Version [1809.5](https://aka.ms/wac1809.5) is a GA cumulative update that includes various quality and functional improvements and bug fixes throughout the platform and a few new features in the hyper-converged infrastructure management solution.
 - Version [1809](https://cloudblogs.microsoft.com/windowsserver/2018/09/20/windows-admin-center-1809-and-sdk-now-generally-available/) was a GA release that brought features that were previously in preview to the GA channel.

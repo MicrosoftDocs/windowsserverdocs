@@ -11,7 +11,7 @@ ms.date: 05/09/2017
 ---
 # Data Deduplication Overview
 
-> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
+> Applies to: Windows Server 2019, Windows Server (Semi-Annual Channel), Windows Server 2016
 
 ## <a name="what-is-dedup"></a>What is Data Deduplication?
 

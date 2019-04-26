@@ -12,7 +12,7 @@ ms.localizationpriority: medium
 ---
 # Planning volumes in Storage Spaces Direct
 
-> Applies To: Windows Server 2016, Windows Server 2019
+> Applies to: Windows Server 2019, Windows Server 2016
 
 This topic provides guidance for how to plan volumes in Storage Spaces Direct to meet the performance and capacity needs of your workloads, including choosing their filesystem, resiliency type, and size.
 

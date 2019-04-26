@@ -58,6 +58,9 @@ export class PluginService {
 
 Change references to ```Sample Uno``` and ```Sample%20Uno``` to your feature name as appropriate.
 
+[!WARNING]
+> It is recommended that the built in ```this.appContextService.node``` is used for calling any API that is defined in your custom gateway plugin. This will ensure that if credentials are required inside of your gateway plugin that they will be handled properly.
+
 ### Modify module.ts
 
 Open the ```module.ts``` file of the new module created earlier (i.e. ```{!Module-Name}.module.ts```):

@@ -19,7 +19,7 @@ ms.date: 08/07/2018
 
 >Applies To: Windows Server
 
-For detailed information about using Repadmin.exe to manage Active Directory replication, see the following resource:
+For detailed information about using Repadmin.exe to manage Active Directory replication, see the following resource: 
 
 - [Monitoring and Troubleshooting Active Directory Replication Using Repadmin](https://go.microsoft.com/fwlink/?LinkId=122830)
 
