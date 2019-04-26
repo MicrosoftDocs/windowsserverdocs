@@ -11,7 +11,7 @@ ms.topic: article
 author: lizap
 manager: dongill
 ms.author: elizapo
-ms.date: 03/06/2019
+ms.date: 04/26/2019
 ms.localizationpriority: medium
 ---
 # What's new for the Remote Desktop client on macOS?
