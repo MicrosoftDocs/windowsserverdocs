@@ -18,8 +18,6 @@ Storage Replica can replicate volumes between clusters, including the replicatio
 
 You will configure these computers and storage in a cluster-to-cluster configuration, where one cluster replicates its own set of storage with another cluster and its set of storage. These nodes and their storage should be located in separate physical sites, although it is not required.  
 
-There are no graphical tools that can configure Storage Replica for cluster-to-cluster replication, though Azure Site Recovery will be able to configure this scenario in the future.
-
 > [!IMPORTANT]
 > In this test, the four servers are an example. You can use any number of servers supported by Microsoft in each cluster, which is currently 8 for a Storage Spaces Direct cluster and 64 for a shared storage cluster.  
 >   
@@ -153,7 +151,7 @@ For example,
     ![Screen showing replication topology report results](./media/Cluster-to-Cluster-Storage-Replication/SRTestSRTopologyReport.png)      
 
 ## Step 2: Configure two Scale-Out File Server Failover Clusters  
-You will now create two normal failover clusters. After configuration, validation, and testing, you will replicate them using Storage Replica. You can perform all of the steps below on the cluster nodes directly or from a remote management computer that contains the Windows Server 2016 RSAT management tools.  
+You will now create two normal failover clusters. After configuration, validation, and testing, you will replicate them using Storage Replica. You can perform all of the steps below on the cluster nodes directly or from a remote management computer that contains the Windows Server Remote Server Administration Tools.  
 
 ### Graphical method  
 
@@ -206,9 +204,9 @@ You will now create two normal failover clusters. After configuration, validatio
 4.  Create the clustered Scale-Out File Servers on both clusters using the instructions in [Configure Scale-Out File Server](https://technet.microsoft.com/library/hh831718.aspx)  
 
 ## Step 3: Set up Cluster to Cluster Replication using Windows PowerShell  
-Now you will set up cluster-to-cluster replication using Windows PowerShell. You can perform all of the steps below on the nodes directly or from a remote management computer that contains the Windows Server 2016 RSAT management tools  
+Now you will set up cluster-to-cluster replication using Windows PowerShell. You can perform all of the steps below on the nodes directly or from a remote management computer that contains the Windows Server Remote Server Administration Tools  
 
-1.  Grant the first cluster full access to the other cluster by running the **Grant-SRAccess** cmdlet on any node in the first cluster, or remotely.  
+1.  Grant the first cluster full access to the other cluster by running the **Grant-SRAccess** cmdlet on any node in the first cluster, or remotely.  Windows Server Remote Server Administration Tools
 
     ```PowerShell
     Grant-SRAccess -ComputerName SR-SRV01 -Cluster SR-SRVCLUSB  
@@ -294,9 +292,9 @@ Now you will set up cluster-to-cluster replication using Windows PowerShell. You
 
 ## Step 4: Manage replication
 
-Now you will manage and operate your cluster-to-cluster replication. You can perform all of the steps below on the cluster nodes directly or from a remote management computer that contains the Windows Server 2016 RSAT management tools.  
+Now you will manage and operate your cluster-to-cluster replication. You can perform all of the steps below on the cluster nodes directly or from a remote management computer that contains the Windows Server Remote Server Administration Tools.  
 
-1.  Use **Get-ClusterGroup** or **Failover Cluster Manager** to determine the current source and destination of replication and their status.  
+1.  Use **Get-ClusterGroup** or **Failover Cluster Manager** to determine the current source and destination of replication and their status.  Windows Server Remote Server Administration Tools
 
 2.  To measure replication performance, use the **Get-Counter** cmdlet on both the source and destination nodes. The counter names are:  
 
@@ -361,14 +359,14 @@ Now you will manage and operate your cluster-to-cluster replication. You can per
     ```  
 
     > [!NOTE]  
-    > Windows Server 2016 prevents role switching when initial sync is ongoing, as it can lead to data loss if you attempt to switch before allowing initial replication to complete. Do not force switch directions until initial sync is complete.
+    > Windows Server prevents role switching when initial sync is ongoing, as it can lead to data loss if you attempt to switch before allowing initial replication to complete. Do not force switch directions until initial sync is complete.
 
     Check the event logs to see the direction of replication change and recovery mode occur, and then reconcile. Write IOs can then write to the storage owned by the new source server. Changing the replication direction will block write IOs on the previous source computer.  
 
     > [!NOTE]  
     > The destination cluster disk will always show as **Online (No Access)** when replicated.  
 
-4.  To change the log size from the default 8GB in Windows Server 2016, use **Set-SRGroup** on both the source and destination Storage Replica groups.  
+4.  To change the log size from the default 8GB, use **Set-SRGroup** on both the source and destination Storage Replica groups.  
 
     > [!IMPORTANT]  
     > The default log size is 8GB. Depending on the results of the **Test-SRTopology** cmdlet, you may decide to use -LogSizeInBytes with a higher or lower value.  

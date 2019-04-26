@@ -204,7 +204,7 @@ If you're using Windows Admin Center to manage Storage Replica, use the followin
 
 ### Using Windows PowerShell
 
-Now you will configure server-to-server replication using Windows PowerShell. You must perform all of the steps below on the nodes directly or from a remote management computer that contains the Windows Server 2016 RSAT management tools.  
+Now you will configure server-to-server replication using Windows PowerShell. You must perform all of the steps below on the nodes directly or from a remote management computer that contains the Windows Server Remote Server Administration Tools.  
 
 1. Ensure you are using an elevated Powershell console as an administrator.  
 2. Configure the server-to-server replication, specifying the source and destination disks, the source and destination logs, the source and destination nodes, and the log size.  
@@ -308,7 +308,7 @@ Now you will configure server-to-server replication using Windows PowerShell. Yo
 
 ## Step 4: Manage replication
 
-Now you will manage and operate your server-to-server replicated infrastructure. You can perform all of the steps below on the nodes directly or from a remote management computer that contains the Windows Server 2016 RSAT management tools.  
+Now you will manage and operate your server-to-server replicated infrastructure. You can perform all of the steps below on the nodes directly or from a remote management computer that contains the Windows Server Remote Server Administration Tools.  
 
 1.  Use `Get-SRPartnership` and `Get-SRGroup` to determine the current source and destination of replication and their status.  
 
@@ -375,7 +375,7 @@ Now you will manage and operate your server-to-server replicated infrastructure.
     ```  
 
     > [!WARNING]  
-    > Windows Server 2016 prevents role switching when the initial sync is ongoing, as it can lead to data loss if you attempt to switch before allowing initial replication to complete. Don't force switch directions until the initial sync is complete.  
+    > Windows Server prevents role switching when the initial sync is ongoing, as it can lead to data loss if you attempt to switch before allowing initial replication to complete. Don't force switch directions until the initial sync is complete.  
 
     Check the event logs to see the direction of replication change and recovery mode occur, and then reconcile. Write IOs can then write to the storage owned by the new source server. Changing the replication direction will block write IOs on the previous source computer.  
 

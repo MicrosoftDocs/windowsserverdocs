@@ -133,7 +133,7 @@ After you setup your server nodes, the next step is to create one of the followi
 >[!NOTE]
 > Skip this section and go to the  [Configure a file server for general use cluster](#BKMK_FileServer) section,  if you want to create a file server cluster and not a Hyper-V cluster.  
 
-You will now create a normal failover cluster. After configuration, validation, and testing, you will stretch it using Storage Replica. You can perform all of the steps below on the cluster nodes directly or from a remote management computer that contains the Windows Server 2016 RSAT management tools.  
+You will now create a normal failover cluster. After configuration, validation, and testing, you will stretch it using Storage Replica. You can perform all of the steps below on the cluster nodes directly or from a remote management computer that contains the Windows Server Remote Server Administration Tools.  
 
 #### Graphical method  
 
@@ -300,7 +300,7 @@ You will now create a normal failover cluster. After configuration, validation, 
 >[!NOTE]
 > Skip this section if you have already configured a Hyper-V Failover cluster as described in [Configure a Hyper-V Failover Cluster](#BKMK_HyperV).  
 
-You will now create a normal failover cluster. After configuration, validation, and testing, you will stretch it using Storage Replica. You can perform all of the steps below on the cluster nodes directly or from a remote management computer that contains the Windows Server 2016 RSAT management tools.  
+You will now create a normal failover cluster. After configuration, validation, and testing, you will stretch it using Storage Replica. You can perform all of the steps below on the cluster nodes directly or from a remote management computer that contains the Windows Server Remote Server Administration Tools.  
 
 #### Graphical method  
 
@@ -433,7 +433,7 @@ For more information, review the Microsoft Ignite session [Stretching Failover C
     For more information, review the Microsoft Ignite session [Stretching Failover Clusters and Using Storage Replica in Windows Server vNext](http://channel9.msdn.com/events/ignite/2015/brk3487) and the blog post [Enable Change Notifications between Sites - How and Why](http://blogs.technet.com/b/qzaidi/archive/2010/09/23/enable-change-notifications-between-sites-how-and-why.aspx).
 
 ### Configure a stretch cluster  
-Now you will configure the stretch cluster, using either Failover Cluster Manager or Windows PowerShell. You can perform all of the steps below on the cluster nodes directly or from a remote management computer that contains the Windows Server 2016 RSAT management tools.  
+Now you will configure the stretch cluster, using either Failover Cluster Manager or Windows PowerShell. You can perform all of the steps below on the cluster nodes directly or from a remote management computer that contains the Windows Server Remote Server Administration Tools.  
 
 #### Failover Cluster Manager Method  
 
@@ -625,7 +625,7 @@ If replicating a physical disk resource (PDR) workload like File Server for gene
     ```  
 
 ### Manage stretched cluster replication  
-Now you will manage and operate your stretch cluster. You can perform all of the steps below on the cluster nodes directly or from a remote management computer that contains the Windows Server 2016 RSAT management tools.  
+Now you will manage and operate your stretch cluster. You can perform all of the steps below on the cluster nodes directly or from a remote management computer that contains the Windows Server Remote Server Administration Tools.  
 
 #### Graphical Tools Method  
 
@@ -661,7 +661,7 @@ Now you will manage and operate your stretch cluster. You can perform all of the
         > [!NOTE]
         > Storage Replica dismounts the destination volumes. This is by design.  
 
-4.  To change the log size from the default 8GB in Windows Server 2016, right-click both the source and destination log disks, click the **Replication Log** tab, then change the sizes on both the  disks to match.  
+4.  To change the log size from the default 8GB, right-click both the source and destination log disks, click the **Replication Log** tab, then change the sizes on both the  disks to match.  
 
     > [!NOTE]  
     > The default log size is 8GB. Depending on the results of the `Test-SRTopology` cmdlet, you may decide to use `-LogSizeInBytes` with a higher or lower value.  
@@ -765,7 +765,7 @@ Now you will manage and operate your stretch cluster. You can perform all of the
         > [!NOTE]  
         > Storage Replica dismounts the destination volumes. This is by design.  
 
-4.  To change the log size from the default 8GB in Windows Server 2016, use **Set-SRGroup** on both the source and destination Storage Replica Groups.   For example, to set all logs to 2GB:  
+4.  To change the log size from the default 8GB, use **Set-SRGroup** on both the source and destination Storage Replica Groups.   For example, to set all logs to 2GB:  
 
     ```PowerShell  
     Get-SRGroup | Set-SRGroup -LogSizeInBytes 2GB  
