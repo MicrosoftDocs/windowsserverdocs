@@ -4,7 +4,7 @@ description: A walkthrough which provides instructions for authenticating agains
 author: billmath
 ms.author: billmath
 manager: mtillman
-ms.date: 06/12/2018
+ms.date: 06/13/2018
 ms.topic: article
 ms.prod: windows-server-threshold
 
@@ -22,7 +22,7 @@ In this scenario, when the user signs in, the JavaScript front end uses [Active 
 >WARNING: The example that you can build here is for educational purposes only. These instructions are for the simplest, most minimal implementation possible to expose the required elements of the model. The example may not include all aspects of error handling and other relate functionality.
 
 >[!NOTE]
->This walkthrough is applicable **only** to AD FS Server 2016 and higher 
+>This walkthrough is applicable **only** to AD FS Server 2016 and higher
 
 ## Overview
 In this sample we will be creating an authentication flow where a single page application client will be authenticating against AD FS to secure access to the WebAPI resources on the backend. Below is the overall authentication flow
@@ -48,7 +48,7 @@ You can, if you want, use only two machines. One for DC/AD FS and the other for 
 
 How to setup the domain controller and AD FS is beyond the scope of this article. For additional deployment information see:
 
-- [AD DS Deployment](../../ad-ds/deploy/AD-DS-Deployment.md) 
+- [AD DS Deployment](../../ad-ds/deploy/AD-DS-Deployment.md)
 - [AD FS Deployment](../AD-FS-Deployment.md)
 
 
@@ -111,7 +111,7 @@ Open the **app.js** file and change the **adalProvider.init** definition to:
 |clientID|This is the client ID you specified while configuring the public client for your single page application
 
 ## Configure WebAPI to use AD FS
-Open the **Startup.Auth.cs** file in the sample and add the following at the beginning: 
+Open the **Startup.Auth.cs** file in the sample and add the following at the beginning:
 
 	using System.IdentityModel.Tokens;
 
