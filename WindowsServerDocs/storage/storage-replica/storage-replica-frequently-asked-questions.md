@@ -23,7 +23,7 @@ Yes. You can use the following scenarios with Azure:
 3. Cluster-to-cluster replication inside Azure (synchronously or asynchronously between IaaS VMs in one or two datacenter fault domains, or asynchronously between two separate regions)
 4. Cluster-to-cluster asynchronous replication between Azure and on-premises (using VPN or Azure ExpressRoute)
 
-Further notes on guest clustering in Azure can be found at: [Deploying IaaS VM Guest Clusters in Microsoft Azure](https://blogs.msdn.microsoft.com/clustering/2017/02/14/deploying-an-iaas-vm-guest-clusters-in-microsoft-azure/).
+Further notes on guest clustering in Azure can be found at: [Deploying IaaS VM Guest Clusters in Microsoft Azure](https://techcommunity.microsoft.com/t5/Failover-Clustering/Deploying-IaaS-VM-Guest-Clusters-in-Microsoft-Azure/ba-p/372126).
 
 Important notes:
 

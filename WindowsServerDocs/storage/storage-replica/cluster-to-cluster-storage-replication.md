@@ -350,7 +350,7 @@ Now you will manage and operate your cluster-to-cluster replication. You can per
 
     -   \Storage Replica Statistics(*)\Number of Messages Sent  
 
-    For more information on performance counters in Windows PowerShell, see [Get-Counter](https://docs.microsoft.com/en-us/powershell/module/Microsoft.PowerShell.Diagnostics/Get-Counter).  
+    For more information on performance counters in Windows PowerShell, see [Get-Counter](https://docs.microsoft.com/powershell/module/Microsoft.PowerShell.Diagnostics/Get-Counter).  
 
 3.  To move the replication direction from one site, use the **Set-SRPartnership** cmdlet.  
 
