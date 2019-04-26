@@ -133,11 +133,9 @@ You can also use seeded data volumes to reduce bandwidth usage and sometimes tim
 2. Restored snapshot or restored snapshot-based backup - by restoring a volume-based snapshot onto the destination volume, there should be minimal differences in the block layout. This is the next most effective method as blocks are likely to match thanks to volume snapshots being mirror images.
 3. Copied files - by creating a new volume on the destination that has never been used before and performing a full robocopy /MIR tree copy of the data, there are likely to be block matches. Using Windows File Explorer or copying some portion of the tree will not create many block matches. Copying files manually is the least effective method of seeding.
 
-
-
 ## <a name="FAQ13"></a> Can I delegate users to administer replication?  
 
-You can use the `Grant-SRDelegation` cmdlet in Windows Server 2016. This allows you to set specific users in server to server, cluster to cluster, and stretch cluster replication scenarios as having the permissions to create, modify, or remove replication, without being a member of the local administrators group. For example:  
+You can use the `Grant-SRDelegation` cmdlet. This allows you to set specific users in server to server, cluster to cluster, and stretch cluster replication scenarios as having the permissions to create, modify, or remove replication, without being a member of the local administrators group. For example:  
 
     Grant-SRDelegation -UserName contso\tonywang  
 
@@ -238,4 +236,4 @@ For technical assistance with Storage Replica, you can post at [the Microsoft Te
 
 ## See Also  
 - [Storage Overview](../storage.md)  
-- [Storage Spaces Direct in Windows Server 2016](../storage-spaces/storage-spaces-direct-overview.md)  
+- [Storage Spaces Direct](../storage-spaces/storage-spaces-direct-overview.md)  
