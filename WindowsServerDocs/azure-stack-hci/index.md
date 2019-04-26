@@ -49,8 +49,7 @@ Azure Stack HCI is part of the Azure and Azure Stack family, using the same soft
 |Azure: Use public cloud services|Azure Stack: Operate cloud services on-premises|Azure Stack HCI: Run virtualized apps on-premises|
 |-----------------|-----------------|-----------------|
 |For on-demand, self-service computing resources to migrate and modernize existing apps and build new cloud-native apps.|Build and run cloud applications at the edge, when disconnected, or to meet regulatory requirements, using consistent Azure services on-premises.| Run virtualized applications on-premise, replace and consolidate aging server infrastructure, and connect to Azure for cloud services.|
-|*What I use:*|*What I use:*|*What I use:*|
-|More than 100 services available in 54 regions around the globe|Azure VMs For Windows and Linux, Azure Web Apps and Functions, Azure Key Vault, Azure Resource Manager, Azure Marketplace, Containers, Azure IoT and Event Hubs, Admine tools (Plans, offers, RBAC)|Validated HCI solutions powered by Hyper V and Storage Spaces Direct with Windows Server 2019 SDDC and Windows Admin Center for management and integrated access to Azure services.|
+|More than 100 services available in 54 regions around the globe|Azure VMs For Windows and Linux, Azure Web Apps and Functions, Azure Key Vault, Azure Resource Manager, Azure Marketplace, Containers, Azure IoT and Event Hubs, Admin tools (plans, offers, RBAC)|Validated HCI solutions powered by Hyper V and Storage Spaces Direct with Windows Server 2019 and Windows Admin Center for management and integrated access to Azure services.|
 
 To learn more:
 
@@ -151,11 +150,18 @@ As your organization digitally transforms, you may find that you can move faster
 |--------|-------|
 |New skills, innovative processes|Same skills, familiar processes|
 |Azure services in your datacenter|Connect your datacenter to Azure services|
-|*When to use Azure Stack*||
+
+### When to use Azure Stack
+
+|Azure Stack|Azure Stack HCI|
+|--------|-------|
 |Use Azure Stack for self-service Infrastructure-as-a-Service (IaaS), with strong isolation and precise usage tracking and chargeback for multiple co-located tenants. Ideal for service providers and enterprise private clouds. Templates from the Azure Marketplace.|Azure Stack HCI does not natively enforce or provide for multi-tenancy.|
 |Use Azure Stack to develop and run apps that rely on Platform-as-a-Service (PaaS) services like Web Apps, Functions, or Event Hubs on-premises. These services run on Azure Stack exactly like they do in Azure, providing a consistent hybrid development and runtime environment.|Azure Stack HCI does not run PaaS services on premises.
 |Use Azure Stack to modernize app deployment and operation with DevOps practices like infrastructure as code, continuous integration and continuous deployment (CI/CD), and convenient features like Azure-consistent VM Extensions. Ideal for Dev and DevOps teams.|Azure Stack HCI does not natively include any DevOps tooling.
-||*When to use Azure Stack HCI*|
+
+### When to use Azure Stack HCI
+|Azure Stack HCI|Azure Stack|
+|---------------|---------------|
 |Azure Stack requires minimum 4 nodes and its own network switches.|Use Azure Stack HCI for the minimum footprint for remote-office / branch-office (ROBO). Start with just 2 server nodes and switchless back-to-back networking for peak simplicity and affordability. Hardware offers start at 4 drives, 64 GB of memory, well under $10k / node.
 |Azure Stack constrains Hyper V configurability and feature set for consistency with Azure.|Use Azure Stack HCI for no-frills Hyper-V virtualization for classic enterprise apps like Exchange, SharePoint, and SQL Server, and to virtualize Windows Server roles like File Server, DNS, DHCP, IIS, and AD. Unrestricted access to all Hyper-V features like Shielded VMs.|
 |Azure Stack does not expose these infrastructural technologies.|Use Azure Stack HCI to substitute software-defined infrastructure in place of aging storage arrays or network appliances, without major re-architecture. Built-in Storage Spaces Direct and Software-Defined Networking (SDN) offer frictionless integration with Hyper-V environments.|

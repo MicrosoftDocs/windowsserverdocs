@@ -291,5 +291,4 @@ Windows Admin Center is a locally deployed, browser-based, management tool set t
 
 Publishing the web server to DNS and setting up the corporate firewall can allow you to access Windows Admin Center from the public internet, enabling you to connect to, and manage, your servers from anywhere with Microsoft Edge or Google Chrome.
 
-![](media/sddc/learn.png)**[Learn more about Microsoft Project Windows Admin Center](manage/windows-admin-center/overview.md)**
-
+![](media/sddc/learn.png)**[Learn more about Windows Admin Center](manage/windows-admin-center/overview.md)**
