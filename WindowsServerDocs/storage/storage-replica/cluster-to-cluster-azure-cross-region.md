@@ -26,7 +26,7 @@ Watch the video below for a complete walk-through of the process.
 
     For example, **SR-AZ2AZ** in **West US 2** and **SR-AZCROSS** in **West Central US**, as shown above.
 
-2. Create two [availability sets](https://ms.portal.azure.com/#create/Microsoft.AvailabilitySet-ARM), one in each resource group for each cluster
+2. Create two [availability sets](https://ms.portal.azure.com/#create/Microsoft.AvailabilitySet-ARM), one in each resource group for each cluster.
     - Availability set (**az2azAS1**) in (**SR-AZ2AZ**)
     - Availability set (**azcross-AS**) in (**SR-AZCROSS**)
 
@@ -36,7 +36,7 @@ Watch the video below for a complete walk-through of the process.
 
 4. Create two network security groups
    - Create the [network security group](https://ms.portal.azure.com/#create/Microsoft.NetworkSecurityGroup-ARM) (**az2az-NSG**) in the first resource group (**SR-AZ2AZ**).
-   - Create the [network security group](https://ms.portal.azure.com/#create/Microsoft.NetworkSecurityGroup-ARM)  (**azcross-NSG**) in the second resource group (**SR-AZCROSS**). 
+   - Create the [network security group](https://ms.portal.azure.com/#create/Microsoft.NetworkSecurityGroup-ARM)  (**azcross-NSG**) in the second resource group (**SR-AZCROSS**).
 
    Add one Inbound security rule for RDP:3389 to both Network Security Groups. You can choose to remove this rule once you finish your setup.
 
