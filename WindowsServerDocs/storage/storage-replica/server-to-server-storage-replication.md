@@ -404,7 +404,7 @@ Storage Replica has none of these limitations. It does, however, have several th
 If these are not blocking factors, Storage Replica allows you to replace DFS Replication servers with this newer technology.   
 The process is, at a high level:  
 
-1.  Install Windows Server 2016 on two servers and configure your storage. This could mean upgrading an existing set of servers or cleanly installing.  
+1.  Install Windows Server on two servers and configure your storage. This could mean upgrading an existing set of servers or cleanly installing.  
 2.  Ensure that any data you want to replicate exists on one or more data volumes and not on the C: drive.   
 a.  You can also seed the data on the other server to save time, using a backup or file copies, as well as use thin provisioned storage. Making the metadata-like security match perfectly is unnecessary, unlike DFS Replication.  
 3.  Share the data on your source server and make it accessible through a DFS namespace. This is important, to ensure that users can still access it if the server name changes to one in a disaster site.  
