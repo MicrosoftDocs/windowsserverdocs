@@ -9,7 +9,7 @@ ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: troubleshooting
 ms.assetid: 
-author: jobende; RobVyK
+author: RobVyK
 manager: 
 ms.author: kaushika; rklemen; josh.bender; v-tea
 ms.date: 02/22/2019
