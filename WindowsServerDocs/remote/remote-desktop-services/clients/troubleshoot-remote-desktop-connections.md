@@ -3,13 +3,13 @@ title: Troubleshooting Remote Desktop connections
 description: Troubleshooting procedures arranged by symptom
 ms.custom: na
 
-ms.reviewer: rklemen;josh.bender
+ms.reviewer: rklemen; josh.bender
 ms.suite: na
 
 ms.tgt_pltfrm: na
 ms.topic: troubleshooting
 ms.assetid: 
-author: jobende;RobVyK
+author: jobende; RobVyK
 manager: 
 ms.author: kaushika;rklemen;josh.bender;v-tea
 ms.date: 02/22/2019
