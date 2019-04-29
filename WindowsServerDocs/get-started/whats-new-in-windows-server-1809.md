@@ -39,7 +39,7 @@ In addition to features that are new in Windows Server version 1809, the followi
 * Linux containers on Windows
 * [Low Extra Delay Background Transport (LEDBAT)](https://blogs.technet.microsoft.com/networking/2018/07/25/ledbat/)
 * Network performance improvements for virtual workloads
-* [Server Core App Compatibility feature on demand (FOD) ](https://docs.microsoft.com/windows-server/get-started-19/install-fod-19)
+* [Server Core App Compatibility feature on demand (FOD)](https://docs.microsoft.com/windows-server/get-started-19/install-fod-19)
 * [Storage Migration Service (SMS)](../storage/whats-new-in-storage.md#storage-spaces-direct)
 * Storage Replica
 * System Insights 

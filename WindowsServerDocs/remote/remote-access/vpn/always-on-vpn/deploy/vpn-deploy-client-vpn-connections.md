@@ -16,8 +16,8 @@ ms.reviewer: deverette
 >Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows 10
 
 
-&#171;  [**Previous:** Step 5. Configure DNS and Firewall Settings](vpn-deploy-dns-firewall.md)<br>
-&#187; [ **Next:** Step 7. (Optional) Conditional access for VPN connectivity using Azure AD](../../ad-ca-vpn-connectivity-windows10.md)
+&#171; [**Previous:** Step 5. Configure DNS and Firewall Settings](vpn-deploy-dns-firewall.md)<br>
+&#187; [**Next:** Step 7. (Optional) Conditional access for VPN connectivity using Azure AD](../../ad-ca-vpn-connectivity-windows10.md)
 
 In this step, you learn about the ProfileXML options and schema, and configure the Windows 10 client computers to communicate with that infrastructure with a VPN connection. 
 

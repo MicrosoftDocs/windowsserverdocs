@@ -56,7 +56,7 @@
 #### [Edit Auto Apply Quota Properties](fsrm/edit-auto-apply-quota-properties.md)
 ### [File screening Management](fsrm/file-screening-management.md)
 #### [Define File Groups for Screening](fsrm/define-file-groups-for-screening.md)
-#### [Create a File Screen ](fsrm/create-file-screen.md)
+#### [Create a File Screen](fsrm/create-file-screen.md)
 #### [Create a File Screen Exception](fsrm/create-file-screen-exception.md)
 #### [Create a File Screen Template](fsrm/create-file-screen-template.md)
 #### [Edit File Screen Template Properties](fsrm/edit-file-screen-template-properties.md)

@@ -164,7 +164,7 @@ Here's a list of what's new in Failover Clustering. For details, see [What's new
 
 It is now possible to run Windows and Linux-based containers on the same container host, using the same docker daemon. This enables you to have a heterogenous container host environment while providing flexibility to application developers.
 
-### Building Support for Kubernetes
+### Built-in Support for Kubernetes
 
 Windows Server 2019 continues the improvements to compute, networking and storage from the semi-annual channel releases needed to support Kubernetes on Windows. More details are available in upcoming Kubernetes releases.
 
