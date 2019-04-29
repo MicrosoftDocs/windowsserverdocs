@@ -26,7 +26,7 @@ If you encounter any issues, you can always contact us via **Help > Report an Is
 - Resolved random disconnects (with error code 0x904) that took place when connecting via an RD Gateway.
 - Fixed a bug that caused the resolutions list in application preferences to be empty after installation.
 - Fixed a bug that caused the client to crash if certain resolutions were added to the resolutions list.
-- Addressed an ADAL authentication prompt loop when connecting to WVD deployments.
+- Addressed an ADAL authentication prompt loop when connecting to Windows Virtual Desktop deployments.
 
 ## Updates for version 10.2.10
 *Published date: 3/30/2019*
