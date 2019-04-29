@@ -23,7 +23,7 @@ The gulp build process has a generate step that will take any ```{!ScriptName}.p
 >[!NOTE] 
 > Don't manually update the ```powershell-scripts.ts``` nor the ```strings.ts``` files. Any change you make will be overwritten on the next generate.
 
-## Running a Powerhell Script ##
+## Running a PowerShell Script ##
 Any scripts that you want to run on a node can be placed in ```\src\resources\scripts\{!ScriptName}.ps1```. 
 >[!IMPORTANT] 
 > Any changes make in a ```{!ScriptName}.ps1``` file will not be reflected in your project unless a generate 
