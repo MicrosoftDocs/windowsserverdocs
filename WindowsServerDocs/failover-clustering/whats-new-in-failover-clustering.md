@@ -11,9 +11,9 @@ ms.date: 10/18/2018
 ---
 # What's new in Failover Clustering
 
-> Applies to: Windows Server 2019, Windows Server 2016, Windows Server (Semi-Annual Channel)
+> Applies to: Windows Server 2019, Windows Server 2016
 
-This topic explains the new and changed functionality in Failover Clustering for Windows Server 2019, Windows Server 2016, and Windows Server Semi-Annual Channel releases.
+This topic explains the new and changed functionality in Failover Clustering for Windows Server 2019 and Windows Server 2016.
 
 ## What's new in Windows Server 2019
 
