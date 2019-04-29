@@ -12,7 +12,7 @@ ms.assetid: 12efe858-6b76-4e08-9f72-b9603aceb0fc
 author: lizap
 manager: dongill
 ms.author: elizapo
-ms.date: 06/22/2018
+ms.date: 04/26/2019
 ms.localizationpriority: medium
 ---
 
@@ -34,7 +34,7 @@ If you remote into your personal desktop, there are additional redirections that
 |-------------|-------------------------------|-----------|---------|-----|-------|------------|
 | Keyboard    | X                             | X         | X       | X   | X     | X          |
 | Mouse       | X                             | X         | X       | X*    | X     | X          |
-| Touch       | X                             | X         | X       | X   |       |            |
+| Touch       | X                             | X         | X       | X   |       | X (Edge and IE not supported) |
 | Other       | Pen                           |           |         |     |       |            |
 *View the [list of supported input devices for the Remote Desktop iOS Beta client](remote-desktop-ios.md#supported-input-devices).
 
@@ -65,7 +65,7 @@ When you enable USB port redirection, any USB devices attached to the USB port a
 
 *For printer redirection - the macOS app supports the Publisher Imagesetter printer driver by default. They do not support redirecting native printer drivers.
 
-### Supported RDP Settings
+## Supported RDP Settings
 This table includes list of supported RDP file settings that may be used with the Windows and HTML clients. An “x” in the platform column indicates that the setting is supported. Please note that this is not an exhaustive list of supported settings for the Windows and HTML5 clients. We will continue to update this table to include more supported RDP settings for the Windows and HTML5 clients as well as the macOS, iOS, and Android clients.
 
 | RDP Setting                        | Description            | Values                 | Default Value          | Windows Virtual Desktop | Windows | HTML5   |
