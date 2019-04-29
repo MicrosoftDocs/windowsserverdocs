@@ -18,9 +18,6 @@ ms.technology: identity-adfs
 
 ## What's new in Active Directory Federation Services for Windows Server 2019
 
-### Risk Assessment Model
-You can now build your own plug-ins to block or assign a risk score to authentication requests during various stages – request received, pre-authentication and post-authentication. This can be accomplished using the new introduced with AD FS 2019. 
-
 ### Protected Logins
 The following is a brief summary of updates to protected logins available in AD FS 2019:
 - **External Auth Providers as Primary** - Customers can now use 3rd party authentication products as the first factor and not expose passwords as the first factor. In the cases where an externa auth provider can prove 2 factors it can claim MFA. 
