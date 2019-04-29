@@ -65,7 +65,7 @@ When you enable USB port redirection, any USB devices attached to the USB port a
 
 *For printer redirection - the macOS app supports the Publisher Imagesetter printer driver by default. They do not support redirecting native printer drivers.
 
-### Supported RDP Settings
+## Supported RDP Settings
 This table includes list of supported RDP file settings that may be used with the Windows and HTML clients. An “x” in the platform column indicates that the setting is supported. Please note that this is not an exhaustive list of supported settings for the Windows and HTML5 clients. We will continue to update this table to include more supported RDP settings for the Windows and HTML5 clients as well as the macOS, iOS, and Android clients.
 
 | RDP Setting                        | Description            | Values                 | Default Value          | Windows Virtual Desktop | Windows | HTML5   |
