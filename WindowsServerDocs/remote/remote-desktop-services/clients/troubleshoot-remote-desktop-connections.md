@@ -11,7 +11,7 @@ ms.topic: troubleshooting
 ms.assetid: 
 author: jobende;RobVyK
 manager: 
-ms.author: v-tea;kaushika;rklemen;josh.bender
+ms.author: kaushika;rklemen;josh.bender;v-tea
 ms.date: 02/22/2019
 ms.localizationpriority: medium
 ---
