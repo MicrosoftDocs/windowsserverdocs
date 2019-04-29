@@ -3,7 +3,7 @@ title: Troubleshooting Remote Desktop connections
 description: Troubleshooting procedures arranged by symptom
 ms.custom: na
 
-ms.reviewer: rklemen; josh.bender
+ms.reviewer: rklemen;  josh.bender
 ms.suite: na
 
 ms.tgt_pltfrm: na
