@@ -552,7 +552,7 @@ Organizations should control and monitor membership in all of the Tier 0 groups 
 - Server Operators
 - Domain Controllers
 - Read-only Domain Controllers
-- Group Policy Creators Owners
+- Group Policy Creator Owners
 - Cryptographic Operators
 - Distributed COM Users
 - Other Delegated Groups - Custom groups that may be created by your organization to manage directory operations that may also have effective Tier 0 access.
