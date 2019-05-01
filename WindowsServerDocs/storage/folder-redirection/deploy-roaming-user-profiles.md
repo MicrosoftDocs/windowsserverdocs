@@ -18,7 +18,7 @@ This topic describes how to use Windows Server to deploy [Roaming User Profiles]
 For a list of recent changes to this topic, see the [Change history](#change-history) section of this topic.
 
 >[!IMPORTANT]
->Due to the security changes made in [MS16-072](https://support.microsoft.com/help/3163622/ms16-072-security-update-for-group-policy-june-14%2c-2016), we updated [Step 4: Optionally create a GPO for Roaming User Profiles](#step-4:-optionally-create-a-gpo-for-roaming-user-profiles) in this topic so that Windows can properly apply the Roaming User Profiles policy (and not revert to local policies on affected PCs).
+>Due to the security changes made in [MS16-072](https://support.microsoft.com/help/3163622/ms16-072-security-update-for-group-policy-june-14%2c-2016), we updated [Step 4: Optionally create a GPO for Roaming User Profiles](#step-4-optionally-create-a-gpo-for-roaming-user-profiles) in this topic so that Windows can properly apply the Roaming User Profiles policy (and not revert to local policies on affected PCs).
 
 > [!IMPORTANT]
 >  User customizations to Start is lost after an OS in-place upgrade in the following configuration:
@@ -59,7 +59,7 @@ If you decide to use Roaming User Profiles across multiple versions of Windows, 
 - Allocate sufficient storage for Roaming User Profiles. If you support two operating system versions, profiles will double in number (and thus total space consumed) because a separate profile is maintained for each operating system version.
 - Don't use Roaming User Profiles across computers running Windows Vista/Windows Server 2008 and Windows 7/Windows Server 2008 R2. Roaming between these operating system versions isn't supported due to incompatibilities in their profile versions.
 - Inform your users that changes made on one operating system version won’t roam to another operating system version.
-- When moving your environment to a version of Windows that uses a different profile version (such as from Windows 10 to Windows 10, version 1607—see [Appendix B: Profile version reference information](#appendix-b:-profile-version-reference-information) for a list), users receive a new, empty roaming user profile. You can minimize the impact of getting a new profile by using Folder Redirection to redirect common folders. There isn't a supported method of migrating roaming user profiles from one profile version to another.
+- When moving your environment to a version of Windows that uses a different profile version (such as from Windows 10 to Windows 10, version 1607—see [Appendix B: Profile version reference information](#appendix-b-profile-version-reference-information) for a list), users receive a new, empty roaming user profile. You can minimize the impact of getting a new profile by using Folder Redirection to redirect common folders. There isn't a supported method of migrating roaming user profiles from one profile version to another.
 
 ## Step 1: Enable the use of separate profile versions
 
@@ -194,7 +194,7 @@ Here's how to create a GPO for Roaming User Profiles:
 
 ## Step 5: Optionally set up Roaming User Profiles on user accounts
 
-If you are deploying Roaming User Profiles to user accounts, use the following procedure to specify roaming user profiles for user accounts in Active Directory Domain Services. If you are deploying Roaming User Profiles to computers, as is typically done for Remote Desktop Services or virtualized desktop deployments, instead use the procedure documented in [Step 6: Optionally set up Roaming User Profiles on computers](#step-6:-optionally-set-up-roaming-user-profiles-on-computers).
+If you are deploying Roaming User Profiles to user accounts, use the following procedure to specify roaming user profiles for user accounts in Active Directory Domain Services. If you are deploying Roaming User Profiles to computers, as is typically done for Remote Desktop Services or virtualized desktop deployments, instead use the procedure documented in [Step 6: Optionally set up Roaming User Profiles on computers](#step-6-optionally-set-up-roaming-user-profiles-on-computers).
 
 >[!NOTE]
 >If you set up Roaming User Profiles on user accounts by using Active Directory and on computers by using Group Policy, the computer-based policy setting takes precedence.
@@ -217,7 +217,7 @@ Here's how to set up Roaming User Profiles on user accounts:
 
 ## Step 6: Optionally set up Roaming User Profiles on computers
 
-If you are deploying Roaming User Profiles to computers, as is typically done for Remote Desktop Services or virtualized desktop deployments, use the following procedure. If you are deploying Roaming User Profiles to user accounts, instead use the procedure described in [Step 5: Optionally set up Roaming User Profiles on user accounts](#step-5:-optionally-set-up-roaming-user-profiles-on-user-accounts).
+If you are deploying Roaming User Profiles to computers, as is typically done for Remote Desktop Services or virtualized desktop deployments, use the following procedure. If you are deploying Roaming User Profiles to user accounts, instead use the procedure described in [Step 5: Optionally set up Roaming User Profiles on user accounts](#step-5-optionally-set-up-roaming-user-profiles-on-user-accounts).
 
 You can use Group Policy to apply Roaming User Profiles to computers running Windows 8.1, Windows 8, Windows 7, Windows Vista, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2, or Windows Server 2008.
 
@@ -392,14 +392,14 @@ The following table summarizes some of the most important changes to this topic.
 |April 10th, 2018|Added discussion of when user customizations to Start are lost after an OS in-place upgrade|Callout known issue.|
 |March 13th, 2018 |Updated for Windows Server 2016 | Moved out of Previous Versions library and updated for current version of Windows Server.|
 |April 13th, 2017|Added profile information for Windows 10, version 1703, and clarified how roaming profile versions work when upgrading operating systems—see [Considerations when using Roaming User Profiles on multiple versions of Windows](#considerations-when-using-roaming-user-profiles-on-multiple-versions-of-windows).|Customer feedback.|
-|March 14th, 2017|Added optional step for specifying a mandatory Start layout for Windows 10 PCs in [Appendix A: Checklist for deploying Roaming User Profiles](#appendix-a:-checklist-for-displaying-roaming-user-profiles).|Feature changes in latest Windows update.|
-|January 23rd, 2017|Added a step to [Step 4: Optionally create a GPO for Roaming User Profiles](#step-4:-optionally-create-a-gpo-for-roaming-user-profiles) to delegate Read permissions to Authenticated Users, which is now required because of a Group Policy security update.|Security changes to Group Policy processing.|
-|December 29th, 2016|Added a link in [Step 7: Enable the Roaming User Profiles GPO](#step-7:-enable-the-roaming-user-profiles-gpo) to make it easier to get info on how to set Group Policy for primary computers. Also fixed a couple references to steps 5 and 6 that had the numbers wrong.|Customer feedback.|
+|March 14th, 2017|Added optional step for specifying a mandatory Start layout for Windows 10 PCs in [Appendix A: Checklist for deploying Roaming User Profiles](#appendix-a-checklist-for-displaying-roaming-user-profiles).|Feature changes in latest Windows update.|
+|January 23rd, 2017|Added a step to [Step 4: Optionally create a GPO for Roaming User Profiles](#step-4-optionally-create-a-gpo-for-roaming-user-profiles) to delegate Read permissions to Authenticated Users, which is now required because of a Group Policy security update.|Security changes to Group Policy processing.|
+|December 29th, 2016|Added a link in [Step 7: Enable the Roaming User Profiles GPO](#step-7-enable-the-roaming-user-profiles-gpo) to make it easier to get info on how to set Group Policy for primary computers. Also fixed a couple references to steps 5 and 6 that had the numbers wrong.|Customer feedback.|
 |December 5th, 2016|Added info explaining a Start menu settings roaming issue.|Customer feedback.|
-|July 6th, 2016|Added Windows 10 profile version suffixes in [Appendix B: Profile version reference information](#appendix-b:-profile-version-reference-information). Also removed Windows XP and Windows Server 2003 from the list of supported operating systems.|Updates for the new versions of Windows, and removed info about versions of Windows that are no longer supported.|
+|July 6th, 2016|Added Windows 10 profile version suffixes in [Appendix B: Profile version reference information](#appendix-b-profile-version-reference-information). Also removed Windows XP and Windows Server 2003 from the list of supported operating systems.|Updates for the new versions of Windows, and removed info about versions of Windows that are no longer supported.|
 |July 7th, 2015|Added requirement and step to disable continuous availability when using a clustered file server.|Clustered file shares have better performance for small writes (which are typical with roaming user profiles) when continuous availability is disabled.|
-|March 19th, 2014|Capitalized profile version suffixes (.V2, .V3, .V4) in [Appendix B: Profile version reference information](#appendix-b:-profile-version-reference-information).|Although Windows is case insensitive, if you use NFS with the file share, it’s important to have the correct (uppercase) capitalization for the profile suffix.|
-|October 9th, 2013|Revised for Windows Server 2012 R2 and Windows 8.1, clarified a few things, and added the [Considerations when using Roaming User Profiles on multiple versions of Windows](#considerations-when-using-roaming-user-profiles-on-multiple-versions-of-windows) and [Appendix B: Profile version reference information](#appendix-b:-profile-version-reference-information) sections.|Updates for new version; customer feedback.|
+|March 19th, 2014|Capitalized profile version suffixes (.V2, .V3, .V4) in [Appendix B: Profile version reference information](#appendix-b-profile-version-reference-information).|Although Windows is case insensitive, if you use NFS with the file share, it’s important to have the correct (uppercase) capitalization for the profile suffix.|
+|October 9th, 2013|Revised for Windows Server 2012 R2 and Windows 8.1, clarified a few things, and added the [Considerations when using Roaming User Profiles on multiple versions of Windows](#considerations-when-using-roaming-user-profiles-on-multiple-versions-of-windows) and [Appendix B: Profile version reference information](#appendix-b-profile-version-reference-information) sections.|Updates for new version; customer feedback.|
 
 ## More information
 
