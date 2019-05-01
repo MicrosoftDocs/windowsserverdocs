@@ -11,7 +11,7 @@ ms.localizationpriority: medium
 ---
 # Deploy Folder Redirection with Offline Files
 
->Applies to: Windows 10, Windows 7, Windows 8, Windows 8.1, Windows Server 2008 R2, Windows Server 2012, Windows Server 2012 R2, Windows Server 2016, Windows Vista
+>Applies to: Windows 10, Windows 7, Windows 8, Windows 8.1, Windows Vista, Windows Server 2019, Windows Server 2016, Windows Server 2012, Windows (Semi-annual Channel), Windows Server 2012 R2, Windows Server 2008 R2
 
 This topic describes how to use Windows Server to deploy Folder Redirection with Offline Files to Windows client computers.
 
@@ -64,7 +64,7 @@ If you do not already have a file share for redirected folders, use the followin
 >[!NOTE]
 >Some functionality might differ or be unavailable if you create the file share on a server running another version of Windows Server.
 
-Here's how to create a file share on Windows Server 2012 and Windows Server 2016:
+Here's how to create a file share on Windows Server 2019, Windows Server 2016, and Windows Server 2012:
 
 1. In the Server Manager navigation pane, select **File and Storage Services**, and then select **Shares** to display the Shares page.
 2. In the **Shares** tile, select **Tasks**, and then select **New Share**. The New Share Wizard appears.

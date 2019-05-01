@@ -12,6 +12,8 @@ manager: mchad
 ---
 # Cluster to Cluster Storage Replica cross region in Azure
 
+> Applies to: Windows Server 2019, Windows Server 2016, Windows Server (Semi-Annual Channel)
+
 You can configure Cluster to Cluster Storage Replicas for cross-region applications in Azure. In the examples below, we use a two-node cluster, but Cluster to Cluster storage replica isn’t restricted to a two-node cluster. The illustration below is a two-node Storage Space Direct cluster that can communicate with each other, are in the same domain, and are cross-region.
 
 Watch the video below for a complete walk-through of the process.
@@ -167,7 +169,7 @@ Grant access from one cluster to another cluster in both directions:
    ```powershell
      Grant-SRAccess -ComputerName az2az1 -Cluster SRAZCross
    ```
-If you're using Windows Server 2016 then also run this command:
+If you're using Windows Server 2016, then also run this command:
 
    ```powershell
      Grant-SRAccess -ComputerName azcross1 -Cluster SRAZC1
