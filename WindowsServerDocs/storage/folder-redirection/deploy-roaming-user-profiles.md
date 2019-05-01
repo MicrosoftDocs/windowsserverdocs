@@ -11,7 +11,7 @@ ms.author: jgerend
 ---
 # Deploying Roaming User Profiles
 
->Applies to: Windows 10, Windows 8.1, Windows 8, Windows 7, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2
+>Applies to: Windows 10, Windows 8.1, Windows 8, Windows 7, Windows Server 2019, Windows Server 2016, Windows Server (Semi-annual Channel), Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2
 
 This topic describes how to use Windows Server to deploy [Roaming User Profiles](folder-redirection-rup-overview.md) to Windows client computers. Roaming User Profiles redirects user profiles to a file share so that users receive the same operating system and application settings on multiple computers.
 
@@ -392,9 +392,9 @@ The following table summarizes some of the most important changes to this topic.
 |April 10th, 2018|Added discussion of when user customizations to Start are lost after an OS in-place upgrade|Callout known issue.|
 |March 13th, 2018 |Updated for Windows Server 2016 | Moved out of Previous Versions library and updated for current version of Windows Server.|
 |April 13th, 2017|Added profile information for Windows 10, version 1703, and clarified how roaming profile versions work when upgrading operating systems—see [Considerations when using Roaming User Profiles on multiple versions of Windows](#considerations-when-using-roaming-user-profiles-on-multiple-versions-of-windows).|Customer feedback.|
-|March 14th, 2017|Added optional step for specifying a mandatory Start layout for Windows 10 PCs in [Appendix A: Checklist for deploying Roaming User Profiles](#appendix-a-checklist-for-displaying-roaming-user-profiles).|Feature changes in latest Windows update.|
+|March 14th, 2017|Added optional step for specifying a mandatory Start layout for Windows 10 PCs in [Appendix A: Checklist for deploying Roaming User Profiles](#appendix-a-checklist-for-deploying-roaming-user-profiles).|Feature changes in latest Windows update.|
 |January 23rd, 2017|Added a step to [Step 4: Optionally create a GPO for Roaming User Profiles](#step-4-optionally-create-a-gpo-for-roaming-user-profiles) to delegate Read permissions to Authenticated Users, which is now required because of a Group Policy security update.|Security changes to Group Policy processing.|
-|December 29th, 2016|Added a link in [Step 7: Enable the Roaming User Profiles GPO](#step-7-enable-the-roaming-user-profiles-gpo) to make it easier to get info on how to set Group Policy for primary computers. Also fixed a couple references to steps 5 and 6 that had the numbers wrong.|Customer feedback.|
+|December 29th, 2016|Added a link in [Step 8: Enable the Roaming User Profiles GPO](#step-8-enable-the-roaming-user-profiles-gpo) to make it easier to get info on how to set Group Policy for primary computers. Also fixed a couple references to steps 5 and 6 that had the numbers wrong.|Customer feedback.|
 |December 5th, 2016|Added info explaining a Start menu settings roaming issue.|Customer feedback.|
 |July 6th, 2016|Added Windows 10 profile version suffixes in [Appendix B: Profile version reference information](#appendix-b-profile-version-reference-information). Also removed Windows XP and Windows Server 2003 from the list of supported operating systems.|Updates for the new versions of Windows, and removed info about versions of Windows that are no longer supported.|
 |July 7th, 2015|Added requirement and step to disable continuous availability when using a clustered file server.|Clustered file shares have better performance for small writes (which are typical with roaming user profiles) when continuous availability is disabled.|

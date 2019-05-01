@@ -11,7 +11,7 @@ ms.localizationpriority: medium
 ---
 # Deploy Folder Redirection with Offline Files
 
->Applies to: Windows 10, Windows 7, Windows 8, Windows 8.1, Windows Vista, Windows Server 2019, Windows Server 2016, Windows Server 2012, Windows (Semi-annual Channel), Windows Server 2012 R2, Windows Server 2008 R2
+>Applies to: Windows 10, Windows 7, Windows 8, Windows 8.1, Windows Vista, Windows Server 2019, Windows Server 2016, Windows Server (Semi-annual Channel), Windows Server 2012, Windows Server 2012 R2, Windows Server 2008 R2
 
 This topic describes how to use Windows Server to deploy Folder Redirection with Offline Files to Windows client computers.
 
@@ -31,7 +31,7 @@ Folder Redirection requires an x64-based or x86-based computer; it is not suppor
 Folder Redirection has the following software requirements:
 
 - To administer Folder Redirection, you must be signed in as a member of the Domain Administrators security group, the Enterprise Administrators security group, or the Group Policy Creator Owners security group.
-- Client computers must run Windows 10, Windows 8.1, Windows 8, Windows 7, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2, or Windows Server 2008.
+- Client computers must run Windows 10, Windows 8.1, Windows 8, Windows 7, Windows Server 2019, Windows Server 2016, Windows Server (Semi-annual Channel), Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2, or Windows Server 2008.
 - Client computers must be joined to the Active Directory Domain Services (AD DS) that you are managing.
 - A computer must be available with Group Policy Management and Active Directory Administration Center installed.
 - A file server must be available to host redirected folders.
