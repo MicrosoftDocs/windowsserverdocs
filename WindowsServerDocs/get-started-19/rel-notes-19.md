@@ -54,7 +54,7 @@ The following known issues are present in Windows Server 2019.
 ### Copyright  
 This document is provided "as-is". Information and views expressed in this document, including URL and other Internet Web site references, may change without notice.  
 
-This document does not provide you with any legal rights to any intellectual property in any Microsoft product. You may copy and use this document for your internal, reference purposes.  
+This document does not provide you with any legal rights to any intellectual property in any Microsoft product. You may copy and use this document for your internal, reference purposes.
 
 &copy; 2019 Microsoft Corporation. All rights reserved.  
 
