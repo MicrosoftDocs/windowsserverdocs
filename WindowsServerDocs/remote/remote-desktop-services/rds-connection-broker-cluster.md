@@ -56,7 +56,7 @@ Set up a database for the Connection Broker. You can use [Azure SQL Database](ht
 
 ## Step 2: Configure load balancing on the RD Connection Brokers 
 
-If you are using Azure infrastructure, you can create an [Azure load balancer](#create-a-load-balancer); if not, you can set up [DNS round-robin](#configure-dns-round--robin). 
+If you are using Azure infrastructure, you can create an [Azure load balancer](#create-a-load-balancer); if not, you can set up [DNS round-robin](#configure-dns-round-robin).
 
 ### Create a load balancer  
 1. Create an Azure Load Balancer   
@@ -84,7 +84,7 @@ If you are using Azure infrastructure, you can create an [Azure load balancer](#
       3. In the left-hand pane, expand **DNS**, click the DNS machine, click **Forward Lookup Zones**, and then click your domain name (for example, Contoso.com). (It might take a few seconds to process the query to the DNS server for the information.)  
       4. Click **Action > New Host (A or AAAA)**.   
       9. Enter the name (for example, hacb) and the IP address specified earlier (for example, 10.0.0.32).   
-  
+
 ### Configure DNS round-robin  
   
 The following steps are an alternative to creating an Azure Internal Load Balancer.   

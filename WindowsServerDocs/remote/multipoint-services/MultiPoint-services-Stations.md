@@ -1,4 +1,4 @@
----
+    ---
 title: MultiPoint Stations
 description: Learn about stations in MultiPoint Services, including the different options for users
 ms.custom: na
@@ -76,7 +76,7 @@ From a deployment and administration perspective, the following differences exis
   
 -   No split-screen functionality.  
   
-    For more information, see [Split-screen Stations](#a-namebkmksplitscreenstationsasplit-screen-stations) later in this topic  
+    For more information, see [Split-screen Stations](#split-screen-stations) later in this topic  
   
 -   No station rename or configuring automatic logon through the MultiPoint Manager console  
   
@@ -86,7 +86,7 @@ From a deployment and administration perspective, the following differences exis
   
 ## Additional configuration options  
   
-### <a name="BKMK_SplitscreenStations"></a>Split-screen stations  
+### Split-screen stations  
 MultiPoint Services offers a split screen option on computers with direct-video-connected stations or USB-zero-client-connected stations. A split screen provides the ability to create an additional station per monitor. Instead of requiring two monitors, you can use one monitor with two station hub setups to create two stations with one monitor. You can quickly increase the number of available stations without purchasing additional monitors, USB-zero clients, or video cards.  
   
 The benefits of using a split-screen station can include:  
