@@ -19,7 +19,7 @@ ms.date: 10/16/2017
 >Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Ends one or more tasks or processes. Processes can be ended by process ID or image name. **taskkill** replaces the **kill** tool.
-for examples of how to use this command, see [Examples](#BKMK_examples).
+for examples of how to use this command, see [Examples](#examples).
 
 ## Syntax
 ```

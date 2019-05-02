@@ -18,7 +18,7 @@ This topic describes how to use Windows Server to deploy Folder Redirection with
 For a list of recent changes to this topic, see [Change history](#change-history).
 
 >[!IMPORTANT]
->Due to the security changes made in [MS16-072](https://support.microsoft.com/en-us/help/3163622/ms16-072-security-update-for-group-policy-june-14-2016), we updated [Step 3: Create a GPO for Folder Redirection](#step-3:-create-a-gpo-for-folder-redirection) of this topic so that Windows can properly apply the Folder Redirection policy (and not revert redirected folders on affected PCs).
+>Due to the security changes made in [MS16-072](https://support.microsoft.com/en-us/help/3163622/ms16-072-security-update-for-group-policy-june-14-2016), we updated [Step 3: Create a GPO for Folder Redirection](#step-3-create-a-gpo-for-folder-redirection) of this topic so that Windows can properly apply the Folder Redirection policy (and not revert redirected folders on affected PCs).
 
 ## Prerequisites
 
@@ -221,7 +221,7 @@ The following table summarizes some of the most important changes to this topic.
 
 |Date|Description|Reason|
 |---|---|---|
-|January 18, 2017|Added a step to [Step 3: Create a GPO for Folder Redirection](#step-3:-create-a-gpo-for-folder-redirection) to delegate Read permissions to Authenticated Users, which is now required because of a Group Policy security update.|Customer feedback.|
+|January 18, 2017|Added a step to [Step 3: Create a GPO for Folder Redirection](#step-3-create-a-gpo-for-folder-redirection) to delegate Read permissions to Authenticated Users, which is now required because of a Group Policy security update.|Customer feedback.|
 
 ## More information
 

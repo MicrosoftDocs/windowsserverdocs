@@ -35,18 +35,15 @@ You can use Windows PowerShell, the Representational State Transfer (REST) API, 
 - VPN Gateways, including Remote Access Service (RAS) Multitenant Gateways 
 - Load Balancers 
   
-
-  
 ## [Hyper-V Network Virtualization](hyper-v-network-virtualization/Hyper-V-Network-Virtualization.md)
 
-Hyper-V Network Virtualization (HNV) helps you abstract your applications and workloads from the physical network by using virtual networks. Virtual networks provide the necessary multitenant isolation while running on a shared physical network fabric, thereby driving up resource utilization. To ensure that you can carry forward your existing investments, you can set up virtual networks on existing networking gear. Also, virtual networks are compatible with virtual Local Area Networks (VLANs).   
-  
+Hyper-V Network Virtualization (HNV) helps you abstract your applications and workloads from the physical network by using virtual networks. Virtual networks provide the necessary multitenant isolation while running on a shared physical network fabric, thereby driving up resource utilization. To ensure that you can carry forward your existing investments, you can set up virtual networks on existing networking gear. Also, virtual networks are compatible with virtual Local Area Networks (VLANs).
   
 ## [Hyper-V Virtual Switch](../../../virtualization/hyper-v-virtual-switch/Hyper-V-Virtual-Switch.md) 
 
 The Hyper-V Virtual Switch is a software-based layer-2 Ethernet network switch that is available in Hyper-V Manager after you have installed the Hyper-V server role. The switch includes programmatically managed and extensible capabilities to connect virtual machines to both virtual networks and the physical network. Also, Hyper-V Virtual Switch provides policy enforcement for security, isolation, and service levels.
   
-You can also deploy the Hyper-V Virtual Switch with Switch Embedded Teaming (SET) and Remote Direct Memory Access (RDMA). For more information, see the section [Remote Direct Memory Access (RDMA) and Switch Embedded Teaming (SET)](#bkmk_rdma) in this topic.  
+You can also deploy the Hyper-V Virtual Switch with Switch Embedded Teaming (SET) and Remote Direct Memory Access (RDMA). For more information, see the section [Remote Direct Memory Access (RDMA) and Switch Embedded Teaming (SET)](#remote-direct-memory-access-rdma-and-switch-embedded-teaming-set) in this topic.
 
 ## [Internal DNS Service (iDNS) for SDN](Idns-for-Sdn.md)
 
@@ -64,18 +61,15 @@ The following Network Function Virtualization technologies are available.
   
 -   **RAS Gateway for SDN**. Route network traffic between the physical network and VM network resources, regardless of the location. You can route the network traffic at the same physical location or many different locations. For more details, see [RAS Gateway for SDN](network-function-virtualization/RAS-Gateway-for-SDN.md).
 
-  
-## [Remote Direct Memory Access (RDMA) and Switch Embedded Teaming (SET)](https://docs.microsoft.com/windows-server/virtualization/hyper-v-virtual-switch/rdma-and-switch-embedded-teaming)  
-In  Windows Server 2016, you can  enable RDMA on network adapters that are  bound to a Hyper-V Virtual Switch with or without Switch Embedded Teaming (SET). This allows you to use fewer network adapters when you want to use RDMA and SET at the same time.  
+## Remote Direct Memory Access (RDMA) and Switch Embedded Teaming (SET)  
+In  Windows Server 2016, you can enable RDMA on network adapters that are bound to a Hyper-V Virtual Switch with or without Switch Embedded Teaming (SET). This allows you to use fewer network adapters when you want to use RDMA and SET at the same time.  
   
 SET is an alternative NIC Teaming solution that you can use in environments that include Hyper-V and the Software Defined Networking (SDN) stack in  Windows Server 2016. SET integrates some of the NIC Teaming functionality into the Hyper-V Virtual Switch.  
   
 SET allows you to group between one and eight physical Ethernet network adapters into one or more software-based virtual network adapters. These virtual network adapters provide fast performance and fault tolerance in the event of a network adapter failure.  
 SET member network adapters must all be installed in the same physical Hyper-V host to be placed in a team.  
   
-In addition,  you can use Windows PowerShell commands to enable Data Center Bridging (DCB), create a Hyper-V Virtual Switch with an RDMA virtual NIC (vNIC), and create a Hyper-V Virtual Switch with SET and RDMA vNICs.  
-
-  
+In addition,  you can use Windows PowerShell commands to enable Data Center Bridging (DCB), create a Hyper-V Virtual Switch with an RDMA virtual NIC (vNIC), and create a Hyper-V Virtual Switch with SET and RDMA vNICs. For more information, see [Remote Direct Memory Access (RDMA) and Switch Embedded Teaming (SET)](https://docs.microsoft.com/windows-server/virtualization/hyper-v-virtual-switch/rdma-and-switch-embedded-teaming.md).
 
 ## [Border Gateway Protocol (BGP)](../../../remote/remote-access/bgp/Border-Gateway-Protocol-BGP.md)
   
@@ -88,8 +82,8 @@ Cloud Service Providers (CSPs) and Enterprises that deploy SDN can use Software 
 
 Windows Server Containers are a lightweight operating system virtualization method separating applications or services from other services running on the same container host. Each container has its own operating system, processes, file system, registry, and IP addresses, which you can connect to virtual networks. 
 
+## System Center
 
-## System Center  
 Deploy and manage the SDN infrastructure with [Virtual Machine Management (VMM)](https://docs.microsoft.com/system-center/vmm/) and [Operations Manager](https://docs.microsoft.com/system-center/scom/). With VMM, you provision and manage the resources needed to create and deploy virtual machines and services to private clouds.  With Operations Manager, you monitor services, devices, and operations across your enterprise to identify problems for immediate action. 
 
 
