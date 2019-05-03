@@ -13,7 +13,7 @@ ms.date: 09/16/2016
 
 > Applies to: Windows Server 2019 and Windows Server 2016
 
-Failover Clustering enables multiple servers to work together to provide high availability – or put another way, to provide node fault tolerance. But today's businesses demand ever-greater availability from their infrastructure. To achieve cloud-like uptime, even highly unlikely occurrences such as chassis failures, rack outages, or natural disasters must be protected against. That's why Failover Clustering in Windows Server 2016 introduces chassis, rack, and site fault tolerance as well.
+Failover Clustering enables multiple servers to work together to provide high availability – or put another way, to provide node fault tolerance. But today's businesses demand ever-greater availability from their infrastructure. To achieve cloud-like uptime, even highly unlikely occurrences such as chassis failures, rack outages, or natural disasters must be protected against. That's why Failover Clustering in Windows Server 2016 introduced chassis, rack, and site fault tolerance as well.
 
 >[!NOTE]
 >Fault domain awareness is available in Windows Server 2019 but by default, it's disabled and must be enabled through the Registry.
@@ -173,5 +173,6 @@ You can provide optional **Location** or **Description** metadata for any fault 
 [![Click to see a short video demonstrating the value of adding location descriptors to fault domains](media/Fault-Domains-in-Windows-Server-2016/part-4-location-description.jpg)](https://channel9.msdn.com/Blogs/windowsserver/Fault-Domain-Awareness-in-WS2016-Part-4-Location-Description)
 
 ## See Also  
--   [Windows Server 2016](../get-started/windows-server-2016.md)  
--   [Storage Spaces Direct in Windows Server 2016](../storage/storage-spaces/storage-spaces-direct-overview.md) 
+- [Get started with Windows Server 2019](https://docs.microsoft.com/windows-server/get-started-19/get-started-19)  
+- [Get started with Windows Server 2016](https://docs.microsoft.com/windows-server/get-started/server-basics)  
+-   [Storage Spaces Direct Overview](../storage/storage-spaces/storage-spaces-direct-overview.md) 
