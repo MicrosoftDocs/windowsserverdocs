@@ -133,7 +133,7 @@ You can convert the evaluation version of Windows Server 2012 Standard to either
 
 As described in [Upgrade Windows Server 2008 and Windows Server 2008 R2](modernize-windows-server-2008.md), the extended support for Windows Server 2008 R2/Windows Server 2008 ends in January of 2020. To ensure no gap in support, you need to upgrade to a supported version of Windows Server, or rehost in Azure by moving to [specialized Windows Server 2008 R2 VMs](uploading-specialized-WS08-image-to-azure.md). Check out the  [Migration Guide for Windows Server](https://go.microsoft.com/fwlink/?linkid=872689) for information and considerations for planning your migration/upgrade.
 
-For on-premises servers, there is no direct upgrade path from Windows Server 2008 R2 to Windows Server 2016 or later. Instead, upgrade first to Windows Server 2012 R2, and then [upgrade to Windows Server 2016](#Upgrading-to-Windows-Server-2016).
+For on-premises servers, there is no direct upgrade path from Windows Server 2008 R2 to Windows Server 2016 or later. Instead, upgrade first to Windows Server 2012 R2, and then [upgrade to Windows Server 2016](#upgrading-to-windows-server-2016).
 
 As you are planning your upgrade, be aware of the following guidelines for the middle step of upgrading to Windows Server 2012 R2.
 

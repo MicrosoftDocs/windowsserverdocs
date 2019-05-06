@@ -50,7 +50,7 @@ There are several different implementations of persistent VDI:
 
     -   In this circumstance, operating system and app servicing might operate normally, using traditional servicing software such as Windows Server Update Services or other management technologies.
 
- ### Non-Persistent VDI
+### Non-Persistent VDI
 
 When a non-persistent VDI implementation is based on a base or “gold” image, the optimizations are mostly performed in the base image, and then through local settings and local policies.
 
@@ -121,13 +121,11 @@ tool.
 
 -   Hypervisor / Host settings
 
- ##### Global VDI operating system optimization
-
+##### Global VDI operating system optimization
 
 Global VDI settings include the following:
 
--   [Universal Windows Platform (UWP) app
-    cleanup](#universal-windows-platform-app-cleanup)
+-   [Universal Windows Platform (UWP) app cleanup](#universal-windows-platform-app-cleanup)
 
 -   [Clean up optional features](#clean-up-optional-features)
 
@@ -150,7 +148,7 @@ Global VDI settings include the following:
     Functionality Baseline](https://go.microsoft.com/fwlink/?linkid=828887)
     guidance.
 
--   [Disk cleanup](#disk-cleanup) (including using the Disk Cleanup wizard)
+-   [Disk cleanup](#disk-cleanup-including-using-the-disk-cleanup-wizard)
 
 ### Universal Windows Platform app cleanup
 
@@ -170,7 +168,7 @@ In fact, if you remove those from the installation .WIM file using the links pro
 
 Run the following command to enumerate provisioned UWP apps from a running Windows 10 operating system, as in this truncated example output from PowerShell:
 
-```PowerShell example:
+```powershell
 
     Get-AppxProvisionedPackage -Online 
     

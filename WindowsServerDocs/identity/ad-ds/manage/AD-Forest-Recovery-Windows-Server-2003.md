@@ -16,9 +16,9 @@ ms.technology: identity-adds
 
 This topic includes forest recovery procedures for domain controllers (DCs) that run Windows Server 2003. The general process for forest recovery is no different with Windows Server 2003 DCs, but specific procedures can differ because of different tools. For example, Ntdsutil.exe can be used to backup and restore DCs that run Windows Server 2003 DCs, whereas Windows Server Backup or Wbadmin.exe is used for DCs that run Windows Server 2008 or later.  
   
-- [Backing up the System State data](#Backing-up-the-System-State-data)  
-- [Performing a nonauthoritative restore](#Performing-a-nonauthoritative restore)  
-- [Install and configure the DNS Server service](#Install-and-configure-the-DNS-Server-service)  
+- [Backing up the System State data](#backing-up-the-system-state-data)  
+- [Performing a nonauthoritative restore](#performing-a-nonauthoritative-restore)  
+- [Install and configure the DNS Server service](#install-and-configure-the-dns-server-service)
 
 ## Backing up the System State data
 Use the following procedure to back up the System State data, along with any other data you have selected for the current backup operation, of a DC that runs Windows Server 2003. Windows Server 2003 includes the Ntbackup tool, which you can use to back up System State data.  

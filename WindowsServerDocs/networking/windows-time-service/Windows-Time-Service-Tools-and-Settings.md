@@ -65,7 +65,7 @@ The following tables describe the parameters that are used with W32tm.exe.
 ---  
 For more information about **W32tm.exe**, see Help and Support Center in Windows XP, Windows Vista,  Windows 7 , Windows Server 2003, Windows Server 2003 R2,  Windows Server 2008 , and  Windows Server 2008 R2.  
   
-## Windows Time Service Registry Entries  
+## Windows Time Service Registry Entries
 The following registry entries are associated with the Windows Time service.  
   
 This information is provided as a reference for use in troubleshooting or verifying that the required settings are applied. It is recommended that you do not directly edit the registry unless there is no other alternative. Modifications to the registry are not validated by the registry editor or by Windows before they are applied, and as a result, incorrect values can be stored. This can result in unrecoverable errors in the system.  
@@ -81,11 +81,11 @@ Many registry entries for the Windows Time service are the same as the Group Pol
 
   
 There are several registry keys at this registry location. The Windows Time settings are stored in values across all of these keys:
-* [Parameters](#Parameters)
-* [Config](#Configuration)
-* [NtpClient](#NtpClient)
-* [NtpServer](#NtpServer)
-  
+
+* [Parameters](#hklmsystemcurrentcontrolsetservicesw32timeparameters)
+* [Config](#hklmsystemcurrentcontrolsetservicesw32timeconfig)
+* [NtpClient](#hklmsystemcurrentcontrolsetservicesw32timetimeprovidersntpclient)
+* [NtpServer](#hklmsystemcurrentcontrolsetservicesw32timetimeprovidersntpserver)
 
 Many of the values in the W32Time section of the registry are used internally by W32Time to store information. These values should not be manually changed at any time. Do not modify any of the settings in this section unless you are familiar with the setting and are certain that the new value will work as expected. The following registry entries are located under:
 
@@ -113,7 +113,6 @@ For example, 5 minutes would become 5\*60\*1000\*10000 = 3000000000 clock ticks.
 
 All versions include Windows 7, Windows 8, Windows 10, Windows Server 2008 , and  Windows Server 2008 R2, Windows Server 2012, Windows Server 2012R2, Windows Server 2016.  Some entries are only availalbe on newer Windows versions.
 
-
 #### HKLM\SYSTEM\CurrentControlSet\Services\W32Time\Parameters
 
 |Registry Entry|Version|Description|
@@ -135,7 +134,7 @@ All versions include Windows 7, Windows 8, Windows 10, Windows Server 2008 , and
 |LargePhaseOffset|All|Entry specifies that a time offset greater than or equal to this value in 10<sup>-7</sup> seconds is considered a spike. A network disruption such as a large amount of traffic might cause a spike. A spike will be ignored unless it persists for a long period of time. The default value on domain members is 50000000. The default value on stand-alone clients and servers is 50000000.  |
 |LastClockRate|All|Entry is maintained by W32Time. It contains reserved data that is used by the Windows operating system, and any changes to this setting can cause unpredictable results. The default value on domain members is 156250. The default value on stand-alone clients and servers is 156250.  |
 |LocalClockDispersion|All|Entry controls the dispersion (in seconds) that you must assume when the only time source is the built-in CMOS clock. The default value on domain members is 10. The default value on stand-alone clients and servers is 10.|
-|MaxAllowedPhaseOffset|All|Entry specifies the maximum offset (in seconds) for which W32Time attempts to adjust the computer clock by using the clock rate. When the offset exceeds this rate, W32Time sets the computer clock directly. The default value for domain members is 300. The default value for stand-alone clients and servers is 1.  [See below for more information](#MaxAllowedPhaseOffset).|
+|MaxAllowedPhaseOffset|All|Entry specifies the maximum offset (in seconds) for which W32Time attempts to adjust the computer clock by using the clock rate. When the offset exceeds this rate, W32Time sets the computer clock directly. The default value for domain members is 300. The default value for stand-alone clients and servers is 1.  [See below for more information](#maxallowedphaseoffset-information).|
 |MaxClockRate|All|Entry is maintained by W32Time. It contains reserved data that is used by the Windows operating system, and any changes to this setting can cause unpredictable results. The default value for domain members is 155860. The default value for stand-alone clients and servers is 155860.  |
 |MaxNegPhaseCorrection|All|Entry specifies the largest negative time correction in seconds that the service makes. If the service determines that a change larger than this is required, it logs an event instead. Special case: 0xFFFFFFFF means always make time correction. The default value for domain members is 0xFFFFFFFF. The default value for stand-alone clients and servers is 54,000 (15 hrs).  |
 |MaxPollInterval|All|Entry specifies the largest interval, in log2 seconds, allowed for the system polling interval. Note that while a system must poll according to the scheduled interval, a provider can refuse to produce samples when requested to do so. The default value for domain controllers is 10. The default value for domain members is 15. The default value for stand-alone clients and servers is 15.  |
@@ -292,7 +291,7 @@ You can find the Group Policy settings used to configure W32Time in the Group Po
 > [!WARNING]  
 > Some of the preset values that are configured in the System Administrative template file (System.adm) for the Group Policy object (GPO) settings are different from the corresponding default registry entries. If you plan to use a GPO to configure any Windows Time setting, be sure that you review [Preset values for the Windows Time service Group Policy settings are different from the corresponding Windows Time service registry entries in Windows Server 2003](https://go.microsoft.com/fwlink/?LinkId=186066). This issue applies to  Windows Server 2008 R2 ,  Windows Server 2008 , Windows Server 2003 R2, and Windows Server 2003.  
   
-The following table lists the global Group Policy settings that are associated with the Windows Time service and the pre-set value associated with each setting. For more information about each setting, see the corresponding registry entries in "[Windows Time Service Registry Entries](#w2k3tr_times_tools_uhlp)" earlier in this subject. The following settings are contained in a single GPO called **Global Configuration Settings**.  
+The following table lists the global Group Policy settings that are associated with the Windows Time service and the pre-set value associated with each setting. For more information about each setting, see the corresponding registry entries in [Windows Time Service Registry Entries](#windows-time-service-registry-entries) earlier in this subject. The following settings are contained in a single GPO called **Global Configuration Settings**.  
   
 **Global Group Policy Settings Associated with Windows Time**  
   
@@ -314,7 +313,7 @@ The following table lists the global Group Policy settings that are associated w
 |SpikeWatchPeriod|90|  
 |UpdateInterval|100|  
   
-The following table lists the available settings for the **Configure Windows NTP Client** GPO and the pre-set values that are associated with the Windows Time service. For more information about each setting, see the corresponding registry entries in "[Windows Time Service Registry Entries](#w2k3tr_times_tools_uhlp)" earlier in this subject.  
+The following table lists the available settings for the **Configure Windows NTP Client** GPO and the pre-set values that are associated with the Windows Time service. For more information about each setting, see the corresponding registry entries in [Windows Time Service Registry Entries](#windows-time-service-registry-entries) earlier in this subject.  
   
 **NTP Client Group Policy Settings Associated with Windows Time**  
   

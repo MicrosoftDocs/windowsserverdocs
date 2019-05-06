@@ -98,13 +98,13 @@ If you prestaged the CNO in AD DS, you can do either of the following to create 
 
 1. In Active Directory Users and Computers, on the **View** menu, make sure that **Advanced Features** is selected.
 2. Right-click the OU where you created the CNO in [Step 1: Prestage the CNO in AD DS](#step-1-prestage-the-cno-in-ad-ds), and then select **Properties**.
-1. On the **Security** tab, select **Advanced**.
-1. In the **Advanced Security Settings** dialog box, select **Add**.
-1. Next to **Principal**, select **Select a principal**.
-1. In the **Select User, Computer, Service Account, or Groups** dialog box, select **Object Types**, select the **Computers** check box, and then select **OK**.
-1. Under **Enter the object names to select**, enter the name of the CNO, select **Check Names**, and then select **OK**. In response to the warning message that says that you are about to add a disabled object, select **OK**.
-1. In the **Permission Entry** dialog box, make sure that the **Type** list is set to **Allow**, and the **Applies to** list is set to **This object and all descendant objects**.
-1. Under **Permissions**, select the **Create Computer objects** check box.
+3. On the **Security** tab, select **Advanced**.
+4. In the **Advanced Security Settings** dialog box, select **Add**.
+5. Next to **Principal**, select **Select a principal**.
+6. In the **Select User, Computer, Service Account, or Groups** dialog box, select **Object Types**, select the **Computers** check box, and then select **OK**.
+7. Under **Enter the object names to select**, enter the name of the CNO, select **Check Names**, and then select **OK**. In response to the warning message that says that you are about to add a disabled object, select **OK**.
+8. In the **Permission Entry** dialog box, make sure that the **Type** list is set to **Allow**, and the **Applies to** list is set to **This object and all descendant objects**.
+9. Under **Permissions**, select the **Create Computer objects** check box.
 
   ![Granting the Create Computer objects permission to the CNO](media/prestage-cluster-adds/granting-create-computer-objects-permission-to-the-cno.png)
 
