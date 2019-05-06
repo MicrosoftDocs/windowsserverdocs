@@ -37,7 +37,7 @@ On rebooting, the user will automatically be signed in via the Autologon mechani
 > [!NOTE]
 > After a Windows Update induced reboot, the last interactive user is automatically signed on and the session is locked. This gives the ability for a user's lock screen apps to still run despite the Windows Update reboot.
 
-![winlogon](media/Winlogon-Automatic-Restart-Sign-On--ARSO-/GTR_ADDS_LockScreenApp.png)
+![Settings Page](media/Winlogon-Automatic-Restart-Sign-On--ARSO-/GTR_ADDS_LockScreenApp.PNG)
 
 
 
