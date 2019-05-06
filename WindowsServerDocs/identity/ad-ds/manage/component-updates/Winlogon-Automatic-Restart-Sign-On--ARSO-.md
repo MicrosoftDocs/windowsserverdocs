@@ -15,10 +15,8 @@ ms.technology: identity-adds
 # Winlogon Automatic Restart Sign-On (ARSO)
 
 
-**Author**: Candace Hicks, Program Manager for Enterprise and Security
+**Author**: Candace Hicks, Program Manager for the Enterprise and Security Group
 
-> [!NOTE]
-> This content is written by a Microsoft customer support engineer, and is intended for experienced administrators and systems architects who are looking for deeper technical explanations of features and solutions in Windows Server 2012 R2 than topics on TechNet usually provide. However, it has not undergone the same editing passes, so some of the language may seem less polished than what is typically found on TechNet.
 
 ## Overview
 During a Windows Update, there are user specific processes that must happen for the update to be complete. These processes require the user to be logged in to their device. On the first login after an update has been initiated, users must wait until these user specific processes are complete before they can start using their device.
