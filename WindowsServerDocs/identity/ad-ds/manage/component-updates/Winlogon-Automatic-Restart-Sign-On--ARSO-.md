@@ -35,11 +35,11 @@ On rebooting, the user will automatically be signed in via the Autologon mechani
  For managed devices, TPM 2.0, SecureBoot, and BitLocker are required for ARSO configuration. IT admins can override this requirement via Group Policy.
 
 > [!NOTE]
-> After a Windows Update induced reboot, the last interactive user is automatically signed on and the session is locked so the user's lock screen apps can run.
+> After a Windows Update induced reboot, the last interactive user is automatically signed on and the session is locked. This gives the ability for a user's lock screen apps to still run despite the Windows Update reboot.
 
-![winlogon](media/Winlogon-Automatic-Restart-Sign-On--ARSO-/GTR_ADDS_LockScreenApp.gif)
+![winlogon](media/Winlogon-Automatic-Restart-Sign-On--ARSO-/GTR_ADDS_LockScreenApp.png)
 
-![winlogon](media/Winlogon-Automatic-Restart-Sign-On--ARSO-/GTR_ADDS_LockScreen.gif)
+
 
 **Quick Overview**
 
