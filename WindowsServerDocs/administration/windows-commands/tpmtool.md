@@ -1,3 +1,18 @@
+---
+title: tpmtool
+description: "Windows Commands topic for tpmtool - gets information about the Trusted Platform Module."
+ms.custom: na
+ms.prod: windows-server-threshold
+ms.reviewer: na
+ms.suite: na
+ms.technology: manage-windows-commands
+ms.tgt_pltfrm: na
+ms.topic: article
+author: ashleytqy
+ms.author: ashleytqy
+manager: ronaldai
+ms.date: 05/07/2019
+---
 # tpmtool
 
 This utility can be used to get information about the [Trusted Platform Module (TPM)](https://docs.microsoft.com/windows/security/information-protection/tpm/trusted-platform-module-overview).
