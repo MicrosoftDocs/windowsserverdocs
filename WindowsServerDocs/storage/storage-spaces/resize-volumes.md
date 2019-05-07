@@ -1,20 +1,36 @@
 ---
 title: Extending volumes in Storage Spaces Direct
-ms.assetid: fa48f8f7-44e7-4a0b-b32d-d127eff470f0
+description: How to resize volumes in Storage Spaces Direct using Windows Admin Center and PowerShell.
 ms.prod: windows-server-threshold
-ms.author: cosmosdarwin
-ms.manager: eldenc
-ms.technology: storage-spaces
-ms.topic: article
+ms.reviewer: cosmosdarwin
 author: cosmosdarwin
-ms.date: 01/23/2017
-ms.localizationpriority: medium
+ms.author: cosdar
+manager: eldenc
+ms.technology: storage-spaces
+ms.date: 05/07/2019
 ---
 
 # Extending volumes in Storage Spaces Direct
 > Applies to: Windows Server 2019, Windows Server 2016
 
 This topic provides instructions for resizing volumes in [Storage Spaces Direct](storage-spaces-direct-overview.md).
+
+## Extend volumes
+
+To resize a volume in Windows Admin Center:
+
+1. In Windows Admin Center, navigate to the left pane, and click **Volumes**.
+2. In the Volumes window, switch to the **Inventory** tab, and click **Create volume**.
+3. Choose the volume that you want to resize.
+
+    On the Volumes detail page, the storage capacity for the volume is indicated. You can also open the Volumes detail page directly from the Dashboard. On the Dashboard, in the Alerts pane, click the alert, which notifies you if a volume is running low on storage capacity, and then click **Go To Volume**.
+
+4. At the top of the Volumes detail page, click **Resize**.
+5. Enter a new larger size, and then click **Resize**.
+
+    On the Volumes detail page, the larger storage capacity for the volume is indicated, and the alert on the Dashboard is cleared.
+
+![](media/creating-volumes/video.png)**[Watch a quick video on how to resize a volume](https://youtu.be/hqyBzipBoTI)**
 
 ## Prerequisites
 
@@ -124,3 +140,4 @@ That's it!
 - [Storage Spaces Direct in Windows Server 2016](storage-spaces-direct-overview.md)
 - [Planning volumes in Storage Spaces Direct](plan-volumes.md)
 - [Creating volumes in Storage Spaces Direct](create-volumes.md)
+- [Deleting volumes in Storage Spaces Direct](delete-volumes.md)

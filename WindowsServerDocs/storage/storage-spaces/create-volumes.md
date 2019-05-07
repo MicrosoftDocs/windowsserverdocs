@@ -1,14 +1,13 @@
 ---
-ms.assetid: a9f229eb-bef4-4231-97d0-0899e17cef32
 title: Creating volumes in Storage Spaces Direct
+description: How to create volumes in Storage Spaces Direct using Windows Admin Center and PowerShell.
 ms.prod: windows-server-threshold
-ms.author: cosdar
-ms.manager: eldenc
-ms.technology: storage-spaces
-ms.topic: article
+ms.reviewer: cosmosdarwin
 author: cosmosdarwin
-ms.date: 01/11/2017
-ms.localizationpriority: medium
+ms.author: cosdar
+manager: eldenc
+ms.technology: storage-spaces
+ms.date: 05/07/2019
 ---
 
 # Creating volumes in Storage Spaces Direct
@@ -19,6 +18,68 @@ This topic describes how to create volumes in Storage Spaces Direct using PowerS
 
    >[!TIP]
    >  If you haven't already, check out [Planning volumes in Storage Spaces Direct](plan-volumes.md) first.
+
+## Create a three-way mirror volume
+
+To create a three-way mirror volume in Windows Admin Center: 
+
+1. In Windows Admin Center, navigate to the left pane, and click **Volumes**.
+2. In the Volumes window, switch to the **Inventory** tab, and click **Create volume**.
+3. In the **Create volume** pane, enter a name for the volume, and leave **Resiliency** as **Three-way mirror**.
+4. In **Size on HDD**, specify the size of the volume. For example, 5 TB (terabytes).
+5. Click **Create**.
+
+Depending on the size, creating the volume can take a few minutes. Notifications in the upper-right will let you know when the volume is created. The new volume appears in the Inventory list.
+
+![](media/creating-volumes/video.png)**[Watch a quick video on how to create a three-way mirror volume](https://youtu.be/o66etKq70N8)**
+
+## Create a mirror-accelerated parity volume
+
+Mirror-accelerated parity reduces the footprint of the volume on the HDD. For example, a three-way mirror volume would mean that for every 10 terabytes of size, you will need 30 terabytes as footprint. To reduce the overhead in footprint, create a volume with mirror-accelerated parity. This reduces the footprint from 30 terabytes to just 22 terabytes, even with only 4 servers, by mirroring the most active 20 percent of data, and using parity, which is more space efficient, to store the rest. You can adjust this ratio of parity and mirror to make the performance versus capacity tradeoff that's right for your workload. For example, 90 percent parity and 10 percent mirror yields less performance but streamlines the footprint even further.
+
+To create a volume with mirror-accelerated parity in Windows Admin Center:
+
+1. In Windows Admin Center, navigate to the left pane, and click **Volumes**.
+2. In the Volumes window, switch to the **Inventory** tab, and click **Create volume**.
+3. In the **Create volume** pane, enter a name for the volume.
+4. In **Resiliency**, select **Mirror-accelerated parity**.
+5. In **Parity percentage**, select the percentage of parity.
+6. Click **Create**.
+
+![](media/creating-volumes/video.png)**[Watch a quick video on how to create a mirror-accelerated parity volume](https://youtu.be/R72QHudqWpE)**
+
+## Open volume and add files
+
+To open a volume and add files to the volume in Windows Admin Center:
+
+1. In Windows Admin Center, navigate to the left pane, and click **Volumes**.
+2. In the Volumes window, switch to the **Inventory** tab.
+3. In the list of volumes, choose the name of the volume that want to open.
+
+    On the volume details page, you can see the path to the volume.
+
+4. At the top of the page, click **Open**. This launches the Files tool in Windows Admin Center.
+5. Navigate to the path of the volume. Here you can browse the files in the volume.
+6. Click **Upload**, and then select a file to upload.
+7. Use the browser **Back** button to go back to the Tools pane in Windows Admin Center.
+
+![](media/creating-volumes/video.png)**[Watch a quick video on how to open a volume and add files](https://youtu.be/j59z7ulohs4)**
+
+## Turn on deduplication and compression
+
+Deduplication and compression is managed per volume. Deduplication and compression uses a post-processing model, which means that you won't see savings until it runs. When it does, it'll work over all files, even those that were there from before.
+
+1. In Windows Admin Center, navigate to the left pane, and click **Volumes**.
+2. In the Volumes window, switch to the **Inventory** tab.
+3. In the list of volumes, click the name of the volume that want to manage.
+4. On the volume details page, click the switch labeled **Deduplication and compression**.
+5. In the Enable deduplication pane, select the deduplication mode.
+
+    Instead of complicated settings, Windows Admin Center lets you choose between ready-made profiles for different workloads. If you're not sure, leave the Default.
+
+6. Click **Enable**.
+
+![](media/creating-volumes/video.png)**[Watch a quick video on how to turn on deduplication and compression](https://youtu.be/PRibTacyKko)**
 
 ## Create volumes using PowerShell
 
@@ -115,3 +176,5 @@ You're done! Repeat as needed to create more than one volume.
 
 - [Storage Spaces Direct overview](storage-spaces-direct-overview.md)
 - [Planning volumes in Storage Spaces Direct](plan-volumes.md)
+- [Extending volumes in Storage Spaces Direct](resize-volumes.md)
+- [Deleting volumes in Storage Spaces Direct](delete-volumes.md)
