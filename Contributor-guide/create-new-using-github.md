@@ -60,7 +60,7 @@ You need to clone the repo get a local copy of the repo on to your local device.
 
 3. Copy the token and put it somewhere safe. You’ll need this for the rest of the process and after you leave the page, you won’t be able to get back to it.
 
-4. Open a Git Bash command and change directories to where you want to store your repo. We recommend using, `C:\users\<your_name>\Documents\GitHub`, because GitHub creates this directory by default.
+4. Open a Git Bash command and change directories to where you want to store your repo. We recommend using, `C:\users\<your_name>\GitHub`.
 
 5. Type the following commands using your specific information, one at a time, to clone your repo and set up your remote branches:
 
