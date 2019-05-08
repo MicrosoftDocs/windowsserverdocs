@@ -15,27 +15,28 @@ ms.date: 09/16/2016
 
 Failover Clustering enables multiple servers to work together to provide high availability – or put another way, to provide node fault tolerance. But today's businesses demand ever-greater availability from their infrastructure. To achieve cloud-like uptime, even highly unlikely occurrences such as chassis failures, rack outages, or natural disasters must be protected against. That's why Failover Clustering in Windows Server 2016 introduced chassis, rack, and site fault tolerance as well.
 
-## Fault domain awareness in Windows 2019
-
-Fault domain awareness is available in Windows Server 2019 but it's disabled by default and must be enabled through the Windows Registry.
-
-To enable failover clustering, go to the Windows Registry and set the (Get-Cluster).AutoAssignNodeSite registry key to 1.
-
-```Registry
-    (Get-Cluster).AutoAssignNodeSite=1
-```
-
-To disable failover clustering for Windows 2019, go to the Windows Registry and set the (Get-Cluster).AutoAssignNodeSite registry key to 0.
-
-```Registry
-    (Get-Cluster).AutoAssignNodeSite=0
-```
-
+## Fault domain awareness
 
 Fault domains and fault tolerance are closely related concepts. A fault domain is a set of hardware components that share a single point of failure. To be fault tolerant to a certain level, you need multiple fault domains at that level. For example, to be rack fault tolerant, your servers and your data must be distributed across multiple racks.
 
 This short video presents an overview of fault domains in Windows Server 2016:  
 [![Click this image to watch an overview of fault domains in Windows Server 2016](media/Fault-Domains-in-Windows-Server-2016/Part-1-Fault-Domains-Overview.jpg)](https://channel9.msdn.com/Blogs/windowsserver/Fault-Domain-Awareness-in-WS2016-Part-1-Overview)
+
+### Fault domain awareness in Windows Server 2019
+
+Fault domain awareness is available in Windows Server 2019 but it's disabled by default and must be enabled through the Windows Registry.
+
+To enable fault domain awareness in Windows Server 2019, go to the Windows Registry and set the (Get-Cluster).AutoAssignNodeSite registry key to 1.
+
+```Registry
+    (Get-Cluster).AutoAssignNodeSite=1
+```
+
+To disable fault domain awareness in Windows 2019, go to the Windows Registry and set the (Get-Cluster).AutoAssignNodeSite registry key to 0.
+
+```Registry
+    (Get-Cluster).AutoAssignNodeSite=0
+```
 
 ## Benefits
 - **Storage Spaces, including Storage Spaces Direct, uses fault domains to maximize data safety.**  
