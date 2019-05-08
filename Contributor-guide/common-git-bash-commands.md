@@ -33,7 +33,7 @@ You must always use master as your base for any new branch.
 
 | Command | Description |
 |---------|-------------|
-| `git add .` | After you save your work, add it to a branch |
+| `git add --all` | After you save your work, add it to a branch |
 | `git commit -m “public comment, including quotes”` | Commit your changes to your branch |
 | `git pull upstream master` | Update your local copy of master from the production repo |
 | `git push origin <name-of-branch>` | Push to the remote version of your local branch |

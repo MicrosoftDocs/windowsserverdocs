@@ -24,13 +24,14 @@ After you have your GitHub account, you'll also need to download and install the
 
 This repo is actively managed and includes the source for Windows Server content published to [docs.microsoft.com](https://docs.microsoft.com):
 
+- [Windows Server home page](https://docs.microsoft.com/windows-server/)
 - [Windows Server 2019](https://docs.microsoft.com/windows-server/get-started-19/get-started-19)
 - [Windows Server 2016](https://docs.microsoft.com/windows-server/get-started/server-basics)
 - [Essentials Server 2016 and Essentials Server 2019](https://docs.microsoft.com/windows-server-essentials/get-started/get-started)
 
 ## How can I contribute?
 
-There are a couple of ways to contribute to the documentation, review the sections below to find out which one is right for you.
+There are a few ways to contribute to the private documentation set:
 
 ### Lightweight editing in the GitHub browser
 

@@ -62,7 +62,7 @@ After you update the text, you must preview your changes to make sure they appea
 
 2. Make sure your article looks how you expect it to look.
 
-    After you're sure it looks right, you can commit your changes create a pull request for publication.
+    After you're sure it looks right, you can commit your changes and create a pull request for publication.
 
 ### Commit your changes
 
