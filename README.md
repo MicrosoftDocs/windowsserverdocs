@@ -24,6 +24,7 @@ After you have your GitHub account, you'll also need to download and install the
 
 This repo is actively managed and includes the source for Windows Server content published to [docs.microsoft.com](https://docs.microsoft.com):
 
+- [Windows Server home page](https://docs.microsoft.com/windows-server/)
 - [Windows Server 2019](https://docs.microsoft.com/windows-server/get-started-19/get-started-19)
 - [Windows Server 2016](https://docs.microsoft.com/windows-server/get-started/server-basics)
 - [Essentials Server 2016 and Essentials Server 2019](https://docs.microsoft.com/windows-server-essentials/get-started/get-started)
