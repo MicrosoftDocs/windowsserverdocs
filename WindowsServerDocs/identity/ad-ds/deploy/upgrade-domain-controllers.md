@@ -27,7 +27,7 @@ The recommended way to upgrade a domain is to promote domain controllers that ru
 5.	Check connectivity to the target server from the computer where you plan to run the installation. 
 6.	Check for availability of necessary operation master roles: 
 	- To install the first DC that runs Windows Server 2016 in an existing domain and forest, the machine where you run the installation needs connectivity to the **schema master** in order to run adprep /forestprep and the infrastructure master in order to run adprep /domainprep. 
-	- To install the first DC in a domain where the forest schema is already extended, you only need connectivity to infrastructure master. 
+	- To install the first DC in a domain where the forest schema is already extended, you only need connectivity to **infrastructure master**. 
 	- To install or remove a domain in an existing forest, you need connectivity to the **domain naming master**. 
 	- Any domain controller installation also requires connectivity to the **RID master.** 
 	- If you are installing the first read-only domain controller in an existing forest, you need connectivity to the infrastructure master for each application directory partition, also known as a non-domain naming context or NDNC. 
