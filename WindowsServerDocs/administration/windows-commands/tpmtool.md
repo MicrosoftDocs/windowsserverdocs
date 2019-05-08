@@ -13,6 +13,9 @@ ms.author: ashleytqy
 manager: ronaldai
 ms.date: 05/07/2019
 ---
+>[!IMPORTANT]
+>Some information relates to prereleased product which may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here.
+
 # tpmtool
 
 This utility can be used to get information about the [Trusted Platform Module (TPM)](https://docs.microsoft.com/windows/security/information-protection/tpm/trusted-platform-module-overview).
