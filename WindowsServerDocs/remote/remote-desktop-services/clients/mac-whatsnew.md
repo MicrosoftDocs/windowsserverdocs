@@ -20,6 +20,12 @@ We regularly update the [Remote Desktop client for macOS](remote-desktop-mac.md)
 
 If you encounter any issues, you can always contact us via **Help > Report an Issue**.
 
+## Updates for version 10.2.13
+*Published date: 5/8/2019*
+
+- Fixed a hang that occurred when connecting via an RD Gateway.
+- Added a privacy notice to the "Add Feed" dialog.
+
 ## Updates for version 10.2.12
 *Published date: 4/16/2019*
 
