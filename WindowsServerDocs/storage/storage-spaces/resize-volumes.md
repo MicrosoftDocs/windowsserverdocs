@@ -19,14 +19,14 @@ This topic provides instructions for resizing volumes in [Storage Spaces Direct]
 
 To resize a volume in Windows Admin Center:
 
-1. In Windows Admin Center, navigate to the left pane, and click **Volumes**.
-2. In the Volumes window, switch to the **Inventory** tab, and click **Create volume**.
+1. In Windows Admin Center, navigate to the left pane, and select **Volumes**.
+2. In the Volumes window, switch to the **Inventory** tab, and select **Create volume**.
 3. Choose the volume that you want to resize.
 
-    On the Volumes detail page, the storage capacity for the volume is indicated. You can also open the Volumes detail page directly from the Dashboard. On the Dashboard, in the Alerts pane, click the alert, which notifies you if a volume is running low on storage capacity, and then click **Go To Volume**.
+    On the Volumes detail page, the storage capacity for the volume is indicated. You can also open the Volumes detail page directly from the Dashboard. On the Dashboard, in the Alerts pane, select the alert, which notifies you if a volume is running low on storage capacity, and then select **Go To Volume**.
 
-4. At the top of the Volumes detail page, click **Resize**.
-5. Enter a new larger size, and then click **Resize**.
+4. At the top of the Volumes detail page, select **Resize**.
+5. Enter a new larger size, and then select **Resize**.
 
     On the Volumes detail page, the larger storage capacity for the volume is indicated, and the alert on the Dashboard is cleared.
 

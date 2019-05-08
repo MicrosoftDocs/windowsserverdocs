@@ -19,11 +19,11 @@ This topic provides instructions for deleting volumes in [Storage Spaces Direct]
 
 To delete a volume in Windows Admin Center:
 
-1. In Windows Admin Center, navigate to the left pane, and click **Volumes**.
-2. In the Volumes window, switch to the **Inventory** tab, and click **Create volume**.
+1. In Windows Admin Center, navigate to the left pane, and select **Volumes**.
+2. In the Volumes window, switch to the **Inventory** tab, and select **Create volume**.
 3. Choose the volume that you want to delete.
-4. At the top of the Volumes detail page, click **Delete**.
-5. In the confirmations dialog, select the check box to confirm that you want to delete the volume, and click **Delete**.
+4. At the top of the Volumes detail page, select **Delete**.
+5. In the confirmations dialog, select the check box to confirm that you want to delete the volume, and select **Delete**.
 
 ![](media/creating-volumes/video.png)**[Watch a quick video on how to delete a volume](https://youtu.be/DbjF8r2F6Jo)**
 
