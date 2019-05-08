@@ -45,7 +45,7 @@ We've tried to make editing an existing, public file as simple as possible.
 
     ![GitHub Web, showing the Preview Changes tab](media/preview-changes.png)
 
-6. When you’re done editing the topic, scroll to the bottom of the page, and then select **Propose file change** to create a fork in your personal GitHub account.
+6. When you’re done editing the topic, scroll to the bottom of the page, type a descriptive name for your fork, and then click **Propose file change** to create the fork in your personal GitHub account.
 
     ![GitHub Web, showing the Propose file change button](media/propose-file-change.png)
 
@@ -58,6 +58,8 @@ We've tried to make editing an existing, public file as simple as possible.
     ![GitHub Web, showing the Comparing changes screen](media/compare-changes.png)
 
 8. Select **Create pull request**.
+
+    Pull requests let you tell others about changes you've pushed to a branch in a repository on GitHub. After a pull request is opened, you can discuss and review the potential changes with collaborators and add follow-up commits before your changes are merged into the base branch. For more information, see [About pull requests](https://help.github.com/articles/about-pull-requests)
 
 9. Enter a title and description to give the approver the appropriate context about what’s in the request.
 
