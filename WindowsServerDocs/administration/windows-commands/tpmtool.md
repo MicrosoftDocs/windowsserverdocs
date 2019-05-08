@@ -32,7 +32,7 @@ tpmtool /parameter [<arguments>]
 |Parameter|Description|
 |---------|-----------|
 |getdeviceinformation|Displays the basic information of the TPM.|
-|gatherlogs [output directory path]|Collects TPM logs and places them in the specified directory. If path is not specified, will default to current directory.|
+|gatherlogs [output directory path]|Collects TPM logs and places them in the specified directory. By default, they are placed in the current directory.|
 |/?|Displays help at the command prompt.|
 
 ## <a name="tpmtool_examples"></a>Examples
