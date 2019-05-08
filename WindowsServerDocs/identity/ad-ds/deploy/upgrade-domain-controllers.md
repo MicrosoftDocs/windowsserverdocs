@@ -30,7 +30,7 @@ The recommended way to upgrade a domain is to promote domain controllers that ru
 	- To install the first DC in a domain where the forest schema is already extended, you only need connectivity to infrastructure master. 
 	- To install or remove a domain in an existing forest, you need connectivity to the **domain naming master**. 
 	- Any domain controller installation also requires connectivity to the **RID master.** 
-	- If you are installing the first read-only domain controller in an existing forest, you need connectivity to the infrastructure master for each application directory partition, also known as a non-domain naming context or NDNC. 
+	- If you are installing the first read-only domain controller in an existing forest, you need connectivity to the **infrastructure master** for each application directory partition, also known as a non-domain naming context or NDNC. 
 
 ### Installation steps and required administrative levels
 The following table provides a summary of the upgrade steps and the permission requirements to accomplish these steps
