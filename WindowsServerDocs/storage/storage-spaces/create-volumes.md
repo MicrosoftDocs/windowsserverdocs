@@ -52,8 +52,9 @@ To create a volume with mirror-accelerated parity in Windows Admin Center:
 
 To open a volume and add files to the volume in Windows Admin Center:
 
-2. On the Volumes page of a Storage Spaces Direct cluster, switch to the **Inventory** tab.
-3. In the list of volumes, choose the name of the volume that want to open.
+1. In Windows Admin Center, connect to a Storage Spaces Direct cluster, and then select **Volumes** from the **Tools** pane.
+2. On the Volumes page, select the **Inventory** tab.
+2. In the list of volumes, select the name of the volume that you want to open.
 
     On the volume details page, you can see the path to the volume.
 

@@ -15,17 +15,14 @@ ms.date: 05/07/2019
 
 This topic provides instructions for deleting volumes in on a [Storage Spaces Direct](storage-spaces-direct-overview.md) cluster by using Windows Admin Center.
 
-## Delete volumes
+![](media/creating-volumes/video.png)**[Watch a quick video on how to delete a volume](https://youtu.be/DbjF8r2F6Jo)**
 
 To delete a volume in Windows Admin Center:
 
 1. In Windows Admin Center, connect to a Storage Spaces Direct cluster, and then select **Volumes** from the **Tools** pane.
 2. On the Volumes page, select the **Inventory** tab, and then select the volume that you want to delete.
-4. At the top of the Volumes detail page, select **Delete**.
+4. At the top of the volumes detail page, select **Delete**.
 5. In the confirmations dialog, select the check box to confirm that you want to delete the volume, and select **Delete**.
-
-![](media/creating-volumes/video.png)**[Watch a quick video on how to delete a volume](https://youtu.be/DbjF8r2F6Jo)**
-
 
 ## See also
 
