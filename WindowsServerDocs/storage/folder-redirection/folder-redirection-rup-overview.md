@@ -11,7 +11,7 @@ ms.localizationpriority: medium
 ---
 # Folder Redirection, Offline Files, and Roaming User Profiles overview
 
->Applies to: Windows 10, Windows 8, Windows 8.1, Windows Server 2012, Windows Server 2012 R2, Windows Server 2016
+>Applies to: Windows 10, Windows 8, Windows 8.1, Windows Server 2019, Windows Server 2016, Windows Server 2012, Windows Server 2012 R2
 
 This topic discusses the Folder Redirection, Offline Files (client-side caching or CSC), and Roaming User Profiles (sometimes known as RUP) technologies, including what’s new and where to find additional information.
 
@@ -70,7 +70,7 @@ For more information, see [Enable the Always Offline Mode to Provide Faster Acce
 With cost-aware synchronization, Windows disables background synchronization when the user is using a metered network connection, such as a 4G mobile network, and the subscriber is near or over their bandwidth limit, or roaming on another provider’s network.
 
 >[!NOTE]
->Metered network connections usually have round-trip network latencies that are slower than the default 35 millisecond latency value for transitioning to Offline (Slow Connection) mode in Windows 8, Windows Server 2012, and Windows Server 2016. Therefore, these connections usually transition to Offline (Slow Connection) mode automatically.
+>Metered network connections usually have round-trip network latencies that are slower than the default 35 millisecond latency value for transitioning to Offline (Slow Connection) mode in Windows 8, Windows Server 2019, Windows Server 2016, and Windows Server 2012. Therefore, these connections usually transition to Offline (Slow Connection) mode automatically.
 
 ### What value does cost-aware synchronization add?
 
@@ -117,7 +117,7 @@ Folder Redirection, Offline Files, and Roaming User Profiles require an x64-base
 To designate primary computers, your environment must meet the following requirements:
 
 - The Active Directory Domain Services (AD DS) schema must be updated to include Windows Server 2012 schema and conditions (installing a Windows Server 2012 or later domain controller automatically updates the schema). For more information about upgrading the AD DS schema, see [Upgrade Domain Controllers to Windows Server 2016](../../identity/ad-ds/deploy/upgrade-domain-controllers.md).
-- Client computers must run Windows 10, Windows 8.1, Windows 8, Windows Server 2016, Windows Server 2012 R2, or Windows Server 2012 and be joined to the Active Directory domain that you are managing.
+- Client computers must run Windows 10, Windows 8.1, Windows 8, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, or Windows Server 2012 and be joined to the Active Directory domain that you are managing.
 
 ## More information
 

@@ -1,14 +1,14 @@
 ---
-title: Cluster AntiAffinity
+title: Cluster affinity
 ms.prod: windows-server-threshold
 ms.manager: eldenc
 ms.technology: failover-clustering
 ms.topic: article
 author: johnmarlin-msft
 ms.date: 03/07/2019
-description: This article describes Failover Cluster AntiAffinity levels
+description: This article describes failover cluster affinity and antiAffinity levels
 ---
-# Cluster Affinity
+# Cluster affinity
 
 > Applies to: Windows Server 2019, Windows Server 2016
 
