@@ -11,7 +11,7 @@ ms.localizationpriority: medium
 ---
 # Troubleshoot user profiles with events
 
->Applies to: Windows 10, Windows 8, Windows 8.1, Windows Server 2012, Windows Server 2012 R2, and Windows Server 2016.
+>Applies to: Windows 10, Windows 8, Windows 8.1, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, and Windows Server (Semi-annual Channel).
 
 This topic discusses how to troubleshoot problems loading and unloading user profiles by using events and trace logs. The following sections describe how to use the three event logs that record user profile information.
 

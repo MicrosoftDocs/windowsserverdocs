@@ -11,7 +11,7 @@ ms.author: jgerend
 ---
 # Checklist: Apply a Quota to a volume or folder
 
-> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2
+> Applies to: Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2, Windows Server (Semi-Annual Channel)
 
 1. Configure e-mail settings if you plan to send threshold notifications or storage reports by e-mail. [Configure E-Mail Notifications](configure-email-notifications.md)
 
