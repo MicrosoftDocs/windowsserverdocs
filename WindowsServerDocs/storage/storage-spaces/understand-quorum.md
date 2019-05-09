@@ -21,7 +21,7 @@ Quorum is designed to prevent *split-brain* scenarios which can happen when ther
 
 Quorum determines the number of failures that the cluster can sustain while still remaining online. Quorum is designed to handle the scenario when there is a problem with communication between subsets of cluster nodes, so that multiple servers don't try to simultaneously host a resource group and write to the same disk at the same time. By having this concept of quorum, the cluster will force the cluster service to stop in one of the subsets of nodes to ensure that there is only one true owner of a particular resource group. Once nodes which have been stopped can once again communicate with the main group of nodes, they will automatically rejoin the cluster and start their cluster service.
 
-In Windows Server 2016, there are two components of the system that have their own quorum mechanisms:
+In Windows Server 2019 and Windows Server 2016, there are two components of the system that have their own quorum mechanisms:
 
 - <strong>Cluster Quorum</strong>: This operates at the cluster level (i.e. you can lose nodes and have the cluster stay up)
 - <strong>Pool Quorum</strong>: This operates on the pool level when Storage Spaces Direct is enabled (i.e. you can lose nodes and drives and have the pool stay up). Storage pools were designed to be used in both clustered and non-clustered scenarios, which is why they have a different quorum mechanism.
