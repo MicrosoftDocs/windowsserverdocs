@@ -26,7 +26,7 @@ The gulp build process has a generate step that will take any ```{!ScriptName}.p
 ## Running a PowerShell Script ##
 Any scripts that you want to run on a node can be placed in ```\src\resources\scripts\{!ScriptName}.ps1```. 
 >[!IMPORTANT] 
-> Any changes make in a ```{!ScriptName}.ps1``` file will not be reflected in your project unless a generate 
+> Any changes make in a ```{!ScriptName}.ps1``` file will not be reflected in your project until ```gulp generate``` has been run.
 
 The API works by first creating a PowerShell session on the nodes you are targeting, creating the PowerShell script with any parameters that need to be passed in, and then running the script on the sessions that were created.
 
