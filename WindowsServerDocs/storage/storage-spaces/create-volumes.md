@@ -7,14 +7,14 @@ author: cosmosdarwin
 ms.author: cosdar
 manager: eldenc
 ms.technology: storage-spaces
-ms.date: 05/07/2019
+ms.date: 05/09/2019
 ---
 
 # Creating volumes in Storage Spaces Direct
 
 >Applies to: Windows Server 2019, Windows Server 2016
 
-This topic describes how to create volumes in Storage Spaces Direct using PowerShell or Failover Cluster Manager.
+This topic describes how to create volumes on a Storage Spaces Direct cluster by using Windows Admin Center, PowerShell, or Failover Cluster Manager.
 
    >[!TIP]
    >  If you haven't already, check out [Planning volumes in Storage Spaces Direct](plan-volumes.md) first.
@@ -23,8 +23,8 @@ This topic describes how to create volumes in Storage Spaces Direct using PowerS
 
 To create a three-way mirror volume in Windows Admin Center: 
 
-1. In Windows Admin Center, navigate to the left pane, and select **Volumes**.
-2. In the Volumes window, switch to the **Inventory** tab, and select **Create volume**.
+1. In Windows Admin Center, connect to a Storage Spaces Direct cluster, and then select **Volumes** from the **Tools** pane.
+2. On the Volumes page, select the **Inventory** tab, and then select **Create volume**.
 3. In the **Create volume** pane, enter a name for the volume, and leave **Resiliency** as **Three-way mirror**.
 4. In **Size on HDD**, specify the size of the volume. For example, 5 TB (terabytes).
 5. Select **Create**.
@@ -39,8 +39,8 @@ Mirror-accelerated parity reduces the footprint of the volume on the HDD. For ex
 
 To create a volume with mirror-accelerated parity in Windows Admin Center:
 
-1. In Windows Admin Center, navigate to the left pane, and select **Volumes**.
-2. In the Volumes window, switch to the **Inventory** tab, and select **Create volume**.
+1. In Windows Admin Center, connect to a Storage Spaces Direct cluster, and then select **Volumes** from the **Tools** pane.
+2. On the Volumes page, select the **Inventory** tab, and then select **Create volume**.
 3. In the **Create volume** pane, enter a name for the volume.
 4. In **Resiliency**, select **Mirror-accelerated parity**.
 5. In **Parity percentage**, select the percentage of parity.
@@ -52,8 +52,7 @@ To create a volume with mirror-accelerated parity in Windows Admin Center:
 
 To open a volume and add files to the volume in Windows Admin Center:
 
-1. In Windows Admin Center, navigate to the left pane, and select **Volumes**.
-2. In the Volumes window, switch to the **Inventory** tab.
+2. On the Volumes page of a Storage Spaces Direct cluster, switch to the **Inventory** tab.
 3. In the list of volumes, choose the name of the volume that want to open.
 
     On the volume details page, you can see the path to the volume.
@@ -69,13 +68,13 @@ To open a volume and add files to the volume in Windows Admin Center:
 
 Deduplication and compression is managed per volume. Deduplication and compression uses a post-processing model, which means that you won't see savings until it runs. When it does, it'll work over all files, even those that were there from before.
 
-1. In Windows Admin Center, navigate to the left pane, and select **Volumes**.
-2. In the Volumes window, switch to the **Inventory** tab.
+1. In Windows Admin Center, connect to a Storage Spaces Direct cluster, and then select **Volumes** from the **Tools** pane.
+2. On the Volumes page, select the **Inventory** tab.
 3. In the list of volumes, select the name of the volume that want to manage.
 4. On the volume details page, click the switch labeled **Deduplication and compression**.
 5. In the Enable deduplication pane, select the deduplication mode.
 
-    Instead of complicated settings, Windows Admin Center lets you choose between ready-made profiles for different workloads. If you're not sure, leave the Default.
+    Instead of complicated settings, Windows Admin Center lets you choose between ready-made profiles for different workloads. If you're not sure, use the default setting.
 
 6. Select **Enable**.
 
