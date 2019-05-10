@@ -4,7 +4,7 @@ Welcome to the open source documentation of Microsoft Windows Server. Please rev
 
 ## Getting Started
 
-Contributing to open source is more than just providing updates, it's also letting us know when there is an issue. Read our [Contributing guidance](https://github.com/MicrosoftDocs/windowsserverdocs-pr/blob/master/contributor-guide.md) to find out more.
+Contributing to open source is more than just providing updates, it's also letting us know when there is an issue. Read our [Contributing guidance](https://github.com/MicrosoftDocs/windowsserverdocs-pr/tree/master/Contributor-guide) to find out more.
 
 ## Prerequisites
 
