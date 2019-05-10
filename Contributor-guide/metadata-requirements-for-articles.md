@@ -29,6 +29,8 @@ ms.author: Your Microsoft alias
 
 manager: Your manager’s Microsoft alias
 
+ms.topic: Type of article, including article, landing-page, get-started-article, or reference
+
 ms.date: Date of change (MM/DD/YYYY)
 
 ---
@@ -47,6 +49,7 @@ ms.reviewer: alainch
 author: danielle-github
 ms.author: danielle
 manager: alainch
+ms.topic: article
 ms.date: 07/06/2019
 ---
 

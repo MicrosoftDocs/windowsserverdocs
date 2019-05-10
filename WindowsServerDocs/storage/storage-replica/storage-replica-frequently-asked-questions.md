@@ -15,7 +15,7 @@ ms.assetid: 12bc8e11-d63c-4aef-8129-f92324b2bf1b
 
 This topic contains answers to frequently asked questions (FAQs) about Storage Replica.
 
-## <a name="FAQ1"></a> Is Storage Replica supported on Azure?  
+## <a name="FAQ1"></a> Is Storage Replica supported on Azure?
 Yes. You can use the following scenarios with Azure:
 
 1. Server-to-server replication inside Azure (synchronously or asynchronously between IaaS VMs in one or two datacenter fault domains, or asynchronously between two separate regions)
@@ -120,10 +120,10 @@ Specify `New-SRPartnership -ReplicationMode` and provide argument **Asynchronous
 ## <a name="FAQ10"></a>How do I prevent automatic failover of a stretch cluster?  
 To prevent automatic failover, you can use PowerShell to configure `Get-ClusterNode -Name "NodeName").NodeWeight=0`. This removes the vote on each node in the disaster recovery site. Then you can use `Start-ClusterNode -PreventQuorum` on nodes in the primary site and `Start-ClusterNode -ForceQuorum` on nodes in the disaster site to force failover. There is no graphical option for preventing automatic failover, and preventing automatic failover is not recommended.  
 
-## <a name="FAQ11"></a>How do I disable virtual machine resiliency?  
+## <a name="FAQ11"></a>How do I disable virtual machine resiliency?
 To prevent the new Hyper-V virtual machine resiliency feature from running and therefore pausing virtual machines instead of failing them over to the disaster recovery site, run `(Get-Cluster).ResiliencyDefaultPeriod=0`  
 
-## <a name="FAQ12"></a> How can I reduce time for initial synchronization?  
+## <a name="FAQ12"></a> How can I reduce time for initial synchronization?
 
 You can use thin-provisioned storage as one way to speed up initial sync times. Storage Replica queries for and automatically uses thin-provisioned storage, including non-clustered Storage Spaces, Hyper-V dynamic disks, and SAN LUNs.  
 
@@ -198,13 +198,13 @@ You can get log sizing recommendations by running the Test-SRTopology tool. Alte
 ONLY the Data disk from the Source cluster should be backed-up. The Storage Replica Log disks should NOT be backed-up since a backup can conflict with Storage Replica operations.
 
 ## <a name="FAQ16"></a> Why would you choose a stretch cluster versus cluster-to-cluster versus server-to-server topology?  
-Storage Replica comes in three main configurations: strech cluster, cluster-to-cluster, and server-to-server. There are different advantages to each.
+Storage Replica comes in three main configurations: stretch cluster, cluster-to-cluster, and server-to-server. There are different advantages to each.
 
 The stretch cluster topology is ideal for workloads requiring automatic failover with orchestration, such as Hyper-V private cloud clusters and SQL Server FCI. It also has a built-in graphical interface using Failover Cluster Manager. It utilizes the classic asymmetric cluster shared storage architecture of Storage Spaces, SAN, iSCSI, and RAID via persistent reservation. You can run this with as few as 2 nodes.
 
 The cluster-to-cluster topology uses two separate clusters and is ideal for administrators who want manual failover, especially when the second site is provisioned for disaster recovery and not everyday usage. Orchestration is manual. Unlike stretch cluster, Storage Spaces Direct can be used in this configuration (with caveats - see the Storage Replica FAQ and cluster-to-cluster documentation). You can run this with as few as four nodes. 
 
-The server-to-server topology is ideal for customers running hardware that cannot be clustered. It requires manual failover and orchestration. It is ideal for inexpensive deployments between branch offices and central datacenters, especially when using asynchronous replication. This configuration can often replace instances of DFSR-protected File Servers used for single-master disaster recovery scenarios.
+The server-to-server topology is ideal for customers running hardware that cannot be clustered. It requires manual failover and orchestration. It is ideal for inexpensive deployments between branch offices and central data centers, especially when using asynchronous replication. This configuration can often replace instances of DFSR-protected File Servers used for single-master disaster recovery scenarios.
 
 In all cases, the topologies support both running on physical hardware as well as virtual machines. When in virtual machines, the underlying hypervisor doesn't require Hyper-V; it can be VMware, KVM, Xen, etc.
 
@@ -220,7 +220,7 @@ While you should *install* Data Deduplication on both the source and destination
 
 Unfortunately, we don't support creating a *new* partnership between Windows Server 2019 and Windows Server 2016. You can safely upgrade a server or cluster running Windows Server 2016 to Windows Server 2019 and any *existing* partnerships will continue to work.
 
-However, to get the improved replication performance of Windows Server 2019, all members of the partnership must run Windows Server 2019 and you must delete existing partnerships and associated replication groups and then recreate them with seeded data (either when creating the partnership in Windows Admin Center or with the New-srpartnership cmdlet).
+However, to get the improved replication performance of Windows Server 2019, all members of the partnership must run Windows Server 2019 and you must delete existing partnerships and associated replication groups and then recreate them with seeded data (either when creating the partnership in Windows Admin Center or with the New-SRPartnership cmdlet).
 
 ## <a name="FAQ17"></a> How do I report an issue with Storage Replica or this guide?  
 For technical assistance with Storage Replica, you can post at [the Microsoft TechNet forums](https://social.technet.microsoft.com/Forums/windowsserver/en-US/home?forum=WinServerPreview). You can also email srfeed@microsoft.com for questions on Storage Replica or issues with this documentation. The https://windowsserver.uservoice.com site is preferred for design change requests, as it allows your fellow customers to provide support and feedback for your ideas.

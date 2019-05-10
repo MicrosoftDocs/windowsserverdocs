@@ -31,7 +31,7 @@ This repo is actively managed and includes the source for Windows Server content
 
 ## How can I contribute?
 
-There are a couple of ways to contribute to the documentation, review the sections below to find out which one is right for you.
+There are a few ways to contribute to the private documentation set:
 
 ### Lightweight editing in the GitHub browser
 
