@@ -66,6 +66,7 @@ For other applications of Storage Spaces, such as Shared SAS clusters and stand-
 			  <li><a href="maintain-servers.md">Taking a server offline for maintenance</li>
 			  <li><a href="remove-servers.md">Remove servers</a></li>
 			  <li><a href="resize-volumes.md">Extend volumes</a></li>
+			  <li><a href="delete-volumes.md">Delete volumes</a></li>
 			  <li><a href="../update-firmware.md">Update drive firmware</a></li>
               <li><a href="performance-history.md">Performance history</a></li>
               <li><a href="delimit-volume-allocation.md">Delimit the allocation of volumes</a></li>
