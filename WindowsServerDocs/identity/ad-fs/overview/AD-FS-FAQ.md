@@ -173,7 +173,7 @@ To change the AD FS service account, follow the instructions using the AD FS too
 
 For information on how to configure browsers see [Configure browsers to use Windows Integrated Authentication (WIA) with AD FS](../operations/Configure-AD-FS-Browser-WIA.md).
 
-### Can I trun off BrowserSsoEnabled?
+### Can I turn off BrowserSsoEnabled?
 If you don't have Access control policies based on device on ADFS or Windows Hello for Business Certificate enrollment using ADFS; you can turn off BrowserSsoEnabled. BrowserSsoEnabled allows ADFS to collect a PRT(Primary Refresh Token) from client which contains device information. Without that device authentication of ADFS will not work on Windows 10 devices.
 
 ### How long are AD FS tokens valid?
