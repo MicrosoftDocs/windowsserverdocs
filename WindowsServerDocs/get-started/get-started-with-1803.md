@@ -1,5 +1,5 @@
 ---
-title: Introducing Windows Server, version 1809
+title: Introducing Windows Server, version 1903
 description: How to obtain, install, and activate
 ms.prod: windows-server-threshold
 ms.mktglfcycl: manage
@@ -7,15 +7,15 @@ ms.sitesec: library
 author: jasongerend
 ms.author: jgerend
 ms.localizationpriority: high
-ms.date: 04/10/2019
+ms.date: 05/21/2019
 ms.topic: get-started-article
 ms.assetid: 9cf87597-b15d-4f43-8aa1-91e60367f011
 ---
-# Introducing Windows Server, version 1809
+# Introducing Windows Server, version 1903
 
 >Applies to: Windows Server (Semi-Annual Channel)
 
-** Windows Server, version 1809 is the current release in the Semi-Annual Channel**
+** Windows Server, version 1903 is the current release in the Semi-Annual Channel**
 
 ## What the Semi-Annual Channel is--and isn't
 
@@ -27,7 +27,7 @@ Windows Server Semi-Annual Channel releases aren't "updates" or "service packs" 
 
 Semi-Annual Channel releases of Windows Server run in Server Core mode. Windows Server Core mode offers great advantages such as smaller hardware requirements, much smaller attack surface, and a reduction in the need for updates. Since it has no graphical user interface, Windows Server Core mode is best managed remotely. If you're new to working with Server Core, [Manage a Server Core server](../administration/server-core/server-core-manage.md) will help you get used to this environment. [Manage Windows Server](../administration/manage-windows-server.md) shows you the various options for managing servers remotely.
 
-[What's New in Windows Server version 1809](whats-new-in-windows-server-1809.md) introduces you to the new features and functionality added in the latest Semi-Annual Channel release.
+[What's New in Windows Server version 1903](whats-new-in-windows-server-1903.md) introduces you to the new features and functionality added in the latest Semi-Annual Channel release.
 
 ### Why do Semi-Annual Channel releases offer only the Server Core installation option?
 One of the most important steps we take in planning each release of Windows Server is listening to customer feedback – how are you using Windows Server? What new features will have the greatest impact on your Windows Server deployments, and by extension, your day-to-day business? Your feedback tells us that delivering new innovation as quickly and efficiently as possible is a key priority. At the same time, for those customers innovating most quickly, you’ve told us that you’re primarily using command line scripting with PowerShell to manage your datacenters, and as such don’t have a strong need for the desktop GUI available in the installation of Windows Server with Desktop Experience. By focusing on the Server Core installation option, we’re able to dedicate more resources toward those new innovations, while also maintaining traditional Windows Server platform functionality and application compatibility. If you have feedback about this or other issues concerning Windows Server and our future releases, you can make suggestions and comments through the [Feedback Hub](https://support.microsoft.com/help/4021566/windows-10-send-feedback-to-microsoft-with-feedback-hub-app).
@@ -39,8 +39,8 @@ Nano Server is available as a container operating system. See [Changes to Nano S
 ## Additional information about this release
 To get a comprehensive view of the key facts about Semi-Annual Channel release of Windows Server,  review these topics prior to installing:
 
-- What hardware is needed to run it? See [System requirements](system-requirements.md); the system requirements for this release are the same as for Windows Server 2016.
-- What new features and functionality have been added? See [What's New in Windows Server version 1809](whats-new-in-windows-server-1809.md)
+- What hardware is needed to run it? See [System requirements](../get-started-19/sys-reqs-19.md); the system requirements for this release are the same as for Windows Server 2019.
+- What new features and functionality have been added? See [What's New in Windows Server version 1903](whats-new-in-windows-server-1903.md)
 - What has been removed recently? See [Features Removed or Planned for Replacement starting with Windows Server, version 1803](windows-server-1803-removed-features.md)
 
 
