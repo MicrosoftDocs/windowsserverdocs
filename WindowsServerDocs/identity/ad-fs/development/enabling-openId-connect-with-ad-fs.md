@@ -49,7 +49,7 @@ The following section describes how to configure the application group in AD FS 
 6.  On the **Complete** screen,  click **Close**.  
 
 ## Download and modify sample application to authenticate via OpenID Connect and AD FS  
-This section discusses how to download the sample Web API and modify it in Visual Studio.   We will be using the Azure AD sample that is [here](https://github.com/Azure-Samples/active-directory-dotnet-webapp-openidconnect).  
+This section discusses how to download the sample Web APP and modify it in Visual Studio.   We will be using the Azure AD sample that is [here](https://github.com/Azure-Samples/active-directory-dotnet-webapp-openidconnect).  
 
 To download the sample project, use Git Bash and type the following:  
 
@@ -97,7 +97,7 @@ git clone https://github.com/Azure-Samples/active-directory-dotnet-webapp-openid
 
         ![AD FS OpenID](media/Enabling-OpenId-Connect-with-AD-FS-2016/AD_FS_OpenID_10.PNG)  
 
-    -   Farther down, modify the OpenId Connect middleware options as in the following:  
+    -   Further down, modify the OpenId Connect middleware options as in the following:  
 
         ```  
         app.UseOpenIdConnectAuthentication(  
@@ -106,8 +106,8 @@ git clone https://github.com/Azure-Samples/active-directory-dotnet-webapp-openid
                 ClientId = clientId,  
                 //Authority = authority,  
                 MetadataAddress = metadataAddress,  
-                RedirectUri = postLogoutRedirectUri,  
-                PostLogoutRedirectUri = postLogoutRedirectUri
+                PostLogoutRedirectUri = postLogoutRedirectUri,
+                RedirectUri = postLogoutRedirectUri
         ```  
 
         ![AD FS OpenID](media/Enabling-OpenId-Connect-with-AD-FS-2016/AD_FS_OpenID_11.PNG)  
