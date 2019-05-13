@@ -16,7 +16,7 @@ ms.date: 05/07/2019
 This topic provides instructions for resizing volumes on a [Storage Spaces Direct](storage-spaces-direct-overview.md) cluster by using Windows Admin Center.
 
 Watch a quick video on how to resize a volume.
-> [!VIDEO https://youtube-nocookie.com/embed/hqyBzipBoTI]
+> [!VIDEO https://youtube-nocookie.com/hqyBzipBoTI]
 
 ## Extending volumes using Windows Admin Center
 
