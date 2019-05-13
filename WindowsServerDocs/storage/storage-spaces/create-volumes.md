@@ -32,7 +32,7 @@ To create a three-way mirror volume in Windows Admin Center:
 Depending on the size, creating the volume can take a few minutes. Notifications in the upper-right will let you know when the volume is created. The new volume appears in the Inventory list.
 
 Watch a quick video on how to create a three-way mirror volume.
-> [!VIDEO https://youtube/embed/o66etKq70N8]
+> [!VIDEO https://youtube-nocookie/embed/o66etKq70N8]
 
 ## Create a mirror-accelerated parity volume
 
@@ -48,7 +48,7 @@ To create a volume with mirror-accelerated parity in Windows Admin Center:
 6. Select **Create**.
 
 Watch a quick video on how to create a mirror-accelerated parity volume.
-> [!VIDEO https://youtube/embed/R72QHudqWpE]
+> [!VIDEO https://youtube-nocookie/embed/R72QHudqWpE]
 
 ## Open volume and add files
 
@@ -66,7 +66,7 @@ To open a volume and add files to the volume in Windows Admin Center:
 7. Use the browser **Back** button to go back to the Tools pane in Windows Admin Center.
 
 Watch a quick video on how to open a volume and add files.
-> [!VIDEO https://youtube/embed/j59z7ulohs4]
+> [!VIDEO https://youtube-nocookie/embed/j59z7ulohs4]
 
 ## Turn on deduplication and compression
 
@@ -83,7 +83,7 @@ Deduplication and compression is managed per volume. Deduplication and compressi
 6. Select **Enable**.
 
 Watch a quick video on how to turn on deduplication and compression.
-> [!VIDEO https://youtube/embed/PRibTacyKko]
+> [!VIDEO https://youtube-nocookie/embed/PRibTacyKko]
 
 ## Create volumes using PowerShell
 
