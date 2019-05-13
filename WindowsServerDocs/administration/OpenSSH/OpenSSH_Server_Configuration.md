@@ -27,7 +27,7 @@ The following commands shows the current path setting, and add the default OpenS
 Command shell | Command to use
 ------------- | -------------- 
 Command | path
-PowerShell | $env:\path
+PowerShell | $env:path
 
 Configuring the default ssh shell is done in the Windows registry by adding the full path to the shell executable to Computer\HKEY_LOCAL_MACHINE\SOFTWARE\OpenSSH in the string value DefaultShell. 
 

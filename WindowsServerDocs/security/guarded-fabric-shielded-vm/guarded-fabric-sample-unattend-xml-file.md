@@ -33,10 +33,8 @@ The following sections show how you can use the function parameters for an `unat
 - [Basic Windows Answer File](#basic-windows-answer-file)
 - [Windows answer file with domain join](#windows-answer-file-with-domain-join)
 - [Windows answer file with static IPv4 addresses](#windows-answer-file-with-static-ipv4-addresses)
-- [Windows answer file with a custom locale](#windows-answer-file-with-custom-locale)
+- [Windows answer file with a custom locale](#windows-answer-file-with-a-custom-locale)
 - [Basic Linux answer file](#basic-linux-answer-file)
-
-You can also review the [function parameters](#function-parameters), later in this topic.
 
 ## Basic Windows answer file
 

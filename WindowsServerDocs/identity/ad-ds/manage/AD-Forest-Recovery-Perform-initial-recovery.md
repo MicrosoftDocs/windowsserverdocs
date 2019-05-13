@@ -16,9 +16,9 @@ ms.technology: identity-adds
 
 This section includes the following steps:  
 
-- [Restore the first writeable domain controller in each domain](#Restore-the-first-writeable-domain-controller-in-each-domain)  
-- [Reconnect each restored writeable domain controller to the network](#Reconnect-each-restored-writeable-domain-controller-to-a-common-network)  
-- [Add the global catalog to a domain controller in the forest root domain](#Add-the-global-catalog-to-a-domain-controller-in-the-forest-root-domain)  
+- [Restore the first writeable domain controller in each domain](#restore-the-first-writeable-domain-controller-in-each-domain)  
+- [Reconnect each restored writeable domain controller to the network](#reconnect-each-restored-writeable-domain-controller-to-a-common-network)  
+- [Add the global catalog to a domain controller in the forest root domain](#add-the-global-catalog-to-a-domain-controller-in-the-forest-root-domain)  
 
 ## Restore the first writeable domain controller in each domain  
 

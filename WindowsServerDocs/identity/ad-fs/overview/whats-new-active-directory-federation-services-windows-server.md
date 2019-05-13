@@ -5,7 +5,7 @@ description:
 author: billmath
 ms.author: billmath
 manager: daveba
-ms.date: 02/26/2019
+ms.date: 04/23/2019
 ms.topic: article
 ms.prod: windows-server-threshold
 
@@ -22,7 +22,7 @@ ms.technology: identity-adfs
 The following is a brief summary of updates to protected logins available in AD FS 2019:
 - **External Auth Providers as Primary** - Customers can now use 3rd party authentication products as the first factor and not expose passwords as the first factor. In the cases where an externa auth provider can prove 2 factors it can claim MFA. 
 - **Password Authentication as additional Authentication** - Customers have a fully supported inbox option to use password only for the additional factor after a password less option is used as the first factor. This improves the customer experience from ADFS 2016 where customers had to download a github adapter which is supported as is. 
-- **Pluggable Threat Module Framework** - Customers can now build their own plug in modules to block certain types of requests during pre-authentication stage. This makes it easier for customers to use cloud intelligence such as Identity protection to block logins for risky users or risky transactions.
+- **Pluggable Risk Assessment Module** - Customers can now build their own plug in modules to block certain types of requests during pre-authentication stage. This makes it easier for customers to use cloud intelligence such as Identity protection to block logins for risky users or risky transactions.  For more information see [ Build Plug-ins with AD FS 2019 Risk Assessment Model](../../ad-fs/development/ad-fs-risk-assessment-model.md) 
 - **ESL improvements** - Improves on the ESL QFE in 2016 by adding the following capabilities
     - Enables customers to be in audit mode while being protected by 'classic' extranet lockout functionality available since ADFS 2012R2. Currently 2016 customers would have no protection while in audit mode. 
     - Enables independent lockout threshold for familiar locations. This makes it possible for multiple instances of apps running with a common service account to roll over passwords with the least amount of impact. 

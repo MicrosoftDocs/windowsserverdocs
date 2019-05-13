@@ -41,7 +41,7 @@ You cannot remove the default realm name from the domain controller because this
 
 ## <a name="BKMK_Examples"></a>Examples
 
-Mistakenly set the realm name by misspelling â€œ.COMâ€? on the local computer to CORP.CONTOSO.CON
+Mistakenly set the realm name by misspelling ".COM" on the local computer to CORP.CONTOSO.CON
 ```
 ksetup /setrealm CORP.CONTOSO.CON
 ```

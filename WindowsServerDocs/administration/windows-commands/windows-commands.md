@@ -46,8 +46,8 @@ To find information about a specific command, in the following A-Z menu, click t
 [V](#BKMK_v) | 
 [W](#BKMK_w) | 
 [X](#BKMK_x) | 
-[Y](#BKMK_y) | 
-[Z](#BKMK_z)
+Y | 
+Z
 
 ## <a name="BKMK_PREREQ"></a>Prerequisites
 The information that is contained in this PDF applies to:
@@ -110,8 +110,8 @@ To find information about a specific Windows Command, in the following A-Z menu,
 [V](#BKMK_v) | 
 [W](#BKMK_w) | 
 [X](#BKMK_x) | 
-[Y](#BKMK_y) | 
-[Z](#BKMK_z)
+Y | 
+Z)
 
 ### <a name="BKMK_a"></a>A
 -   [append](append.md)

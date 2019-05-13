@@ -24,8 +24,8 @@ ms.reviewer: deverette
 
 In this step, you deploy the conditional access root certificate as trusted root certificate for VPN authentication to your on-premises AD.
 
-&#171;  [**Previous:** Step 7.3. Configure the Conditional Access policy](vpn-config-conditional-access-policy.md)<br>
-&#187; [ **Next:** Step 7.5. Create OMA-DM based VPNv2 Profiles to Windows 10 devices](vpn-create-oma-dm-based-vpnv2-profiles.md)
+&#171; [**Previous:** Step 7.3. Configure the Conditional Access policy](vpn-config-conditional-access-policy.md)<br>
+&#187; [**Next:** Step 7.5. Create OMA-DM based VPNv2 Profiles to Windows 10 devices](vpn-create-oma-dm-based-vpnv2-profiles.md)
 
 1. On the **VPN connectivity** page, click **Download certificate**. 
    

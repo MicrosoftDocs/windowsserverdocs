@@ -16,11 +16,11 @@ ms.author: billmath
 >Applies To: Windows Server 2019, Windows Server 2016
 
 
-## Upgrading a Windows Server 2012 R2 or 2016 AD FS farm to Windows Server 2019 
+## Upgrading a Windows Server 2012 R2 or 2016 AD FS farm to Windows Server 2019
 The following document will describe how to upgrade your AD FS farm to AD FS in Windows Server 2019 when you are using a WID database.  
 
 ### AD FS Farm Behavior Levels (FBL)  
-In AD FS for Windows Server 2016, the farm behavior level (FBL) was introduced. This is farm-wide setting that determines the features the AD FS farm can use. 
+In AD FS for Windows Server 2016, the farm behavior level (FBL) was introduced. This is farm-wide setting that determines the features the AD FS farm can use.
 
 The following table lists the FBL values by Windows Server version:
 | Windows Server Version  | FBL | AD FS Configuration Database Name |
@@ -54,7 +54,7 @@ The remainder of the is document provides the steps for adding a Windows Server 
 
 ##### To upgrade your AD FS farm to Windows Server 2019 Farm Behavior Level  
 
-1.  Using Server Manager, install the Active Directory Federation Services Role on the Windows Server 2019 
+1.  Using Server Manager, install the Active Directory Federation Services Role on the Windows Server 2019
 
 2.  Using the AD FS Configuration wizard, join the new Windows Server 2019 server to the existing AD FS farm.  
 
@@ -72,45 +72,56 @@ The remainder of the is document provides the steps for adding a Windows Server 
 
     ![upgrade](media/Upgrading-to-AD-FS-in-Windows-Server-2016/ADFS_Mixed_5.png)  
 
-6.  On each Web Application Proxy, re-configure the WAP by executing the following PowerShell command in an elevated window:  
-```powershell
-$trustcred = Get-Credential -Message "Enter Domain Administrator credentials"
-Install-WebApplicationProxy -CertificateThumbprint {SSLCert} -fsname fsname -FederationServiceTrustCredential $trustcred  
-```
-
-7.  Now on the Windows Server 2016 federation server open AD FS Management. Note that now all of the admin capabilities appear because the primary role has been transferred to this server.  
+6.  Now on the Windows Server 2016 federation server open AD FS Management. Note that now all of the admin capabilities appear because the primary role has been transferred to this server.  
 
     ![upgrade](media/Upgrading-to-AD-FS-in-Windows-Server-2016/ADFS_Mixed_6.png)  
 
-8.  If you are upgrading an AD FS 2012 R2 farm to 2016 or 2019, the farm upgrade requires the AD schema to be at least level 85.  To upgrade the schema, With the Windows Server 2016 installation media, open a command prompt and navigate to support\adprep directory. Run the following:  `adprep /forestprep`
+7.  If you are upgrading an AD FS 2012 R2 farm to 2016 or 2019, the farm upgrade requires the AD schema to be at least level 85.  To upgrade the schema, With the Windows Server 2016 installation media, open a command prompt and navigate to support\adprep directory. Run the following:  `adprep /forestprep`
 
     ![upgrade](media/Upgrading-to-AD-FS-in-Windows-Server-2016/ADFS_Mixed_7.png)  
 
     Once that completes run `adprep/domainprep`
     >[!NOTE]
-    >Prior to running the next step, ensure Windows Server is current by running Windows Update from Settings. Continue this process until no further updates are needed. 
-    > 
-    
+    >Prior to running the next step, ensure Windows Server is current by running Windows Update from Settings. Continue this process until no further updates are needed.
+    >
+
     ![upgrade](media/Upgrading-to-AD-FS-in-Windows-Server-2016/ADFS_Mixed_8.png)  
 
-9. Now on the Windows Server 2016 Server open PowerShell and run the following cmdlt:
+8. Now on the Windows Server 2016 Server open PowerShell and run the following cmdlt:
     >[!NOTE]
     > All 2012 R2 servers must be removed from the farm before running the next step.
- 
+
     `Invoke-AdfsFarmBehaviorLevelRaise`  
 
     ![upgrade](media/Upgrading-to-AD-FS-in-Windows-Server-2016/ADFS_Mixed_9.png)  
 
-10. When prompted, type Y. This will begin raising the level. Once this completes you have successfully raised the FBL.  
+9. When prompted, type Y. This will begin raising the level. Once this completes you have successfully raised the FBL.  
 
     ![upgrade](media/Upgrading-to-AD-FS-in-Windows-Server-2016/ADFS_Mixed_10.png)  
 
-11. Now, if you go to AD FS Management, you will see the new capabilities have been added for the later AD FS version 
+10. Now, if you go to AD FS Management, you will see the new capabilities have been added for the later AD FS version
 
     ![upgrade](media/Upgrading-to-AD-FS-in-Windows-Server-2016/ADFS_Mixed_12.png)  
 
-13. Likewise, you can use the PowerShell cmdlt:  `Get-AdfsFarmInformation` to show you the current FBL.  
+11. Likewise, you can use the PowerShell cmdlt:  `Get-AdfsFarmInformation` to show you the current FBL.  
 
     ![upgrade](media/Upgrading-to-AD-FS-in-Windows-Server-2016/ADFS_Mixed_13.png)  
-    
 
+12. To upgrade the WAP servers to the latest level, on each Web Application Proxy, re-configure the WAP by executing the following PowerShell command in an elevated window:  
+    ```powershell
+    $trustcred = Get-Credential -Message "Enter Domain Administrator credentials"
+    Install-WebApplicationProxy -CertificateThumbprint {SSLCert} -fsname fsname -FederationServiceTrustCredential $trustcred  
+    ```
+    Remove old servers from the cluster and keep only the WAP servers running the latest server version, which were reconfigured above, by running the following Powershell commandlet.
+    ```powershell
+    Set-WebApplicationProxyConfiguration -ConnectedServersName WAPServerName1, WAPServerName2
+    ```
+    Check the WAP configuration by running the Get-WebApplicationProxyConfiguration commmandlet. The ConnectedServersName will reflect the server run from the prior command.
+    ```powershell
+    Get-WebApplicationProxyConfiguration
+    ```
+    To upgrade the ConfigurationVersion of the WAP servers, run the following Powershell command.
+    ```powershell
+    Set-WebApplicationProxyConfiguration -UpgradeConfigurationVersion
+    ```
+    This will complete the upgrade of the WAP servers.

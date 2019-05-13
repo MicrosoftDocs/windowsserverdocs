@@ -13,11 +13,11 @@ ms.localizationpriority: medium
 
 # Storage Spaces Direct hardware requirements
 
-> Applies to: Windows Server 2016, Windows Server Insider Preview
+> Applies to: Windows Server 2016
 
 This topic describes minimum hardware requirements for Storage Spaces Direct.
 
-For production, Microsoft recommends these [Windows Server Software-Defined](https://microsoft.com/wssd) hardware/software offers from our partners, which include deployment tools and procedures. They are designed, assembled, and validated against our reference architecture to ensure compatibility and reliability, so you get up and running quickly. Learn more at [https://microsoft.com/wssd](https://microsoft.com/wssd).
+For production, Microsoft recommends purchasing a validated hardware/software solution from our partners, which  which include deployment tools and procedures. These solutions are designed, assembled, and validated against our reference architecture to ensure compatibility and reliability, so you get up and running quickly. For Windows Server 2019 solutions, visit the [Azure Stack HCI solutions website](https://azure.microsoft.com/overview/azure-stack/hci). For Windows Server 2016 solutions, learn more at [Windows Server Software-Defined](https://microsoft.com/wssd).
 
 ![logos of our Windows Server Software Defined partners](media/hardware-requirements/wssd-partners.png)
 

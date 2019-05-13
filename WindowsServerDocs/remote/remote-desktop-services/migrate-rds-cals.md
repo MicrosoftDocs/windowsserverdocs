@@ -21,12 +21,12 @@ You have three options to migrate your RDS CALs:
 2. Using a web browser: This method allows migration when the server running the Remote Desktop Licensing Manager tool does not have internet connectivity, but the administrator has internet connectivity on a separate device. The URL for the Web migration method is displayed in the Manage RDS CALs Wizard. 
 3. Using a telephone: This method allows the administrator to complete the migration process over the phone with a Microsoft representative. The appropriate telephone number is determined by the country/region that you chose in the Activate Server Wizard and is displayed in the Manage RDS CALs Wizard.
 
-In this article, the [Establish RDS CAL migration method](#establish-RDS-CAL-migration-method) highlights the general steps common across any RDS CAL migration method, while [Migrate RDS CALs](#migrate-RDS-CALs) highlights the steps specific to each migration method.
+In this article, the [Establish RDS CAL migration method](#establish-rds-cal-migration-method) highlights the general steps common across any RDS CAL migration method, while [Migrate RDS CALs](#migrate-rds-cals) highlights the steps specific to each migration method.
 
 Regardless of migration method, you must, at a minimum, be a member of the local Administrators group to perform the migration steps.
 
-
 ## Establish RDS CAL migration method
+
 1. On the license server, open **Remote Desktop Licensing Manager**. (Click **Start > Administrative Tools**. Enter the **Remote Desktop Services** directory, and launch **Remote Desktop Licensing Manager**.)
 2. Verify the connection method for the Remote Desktop license server: right-click the license server to which you want to migrate the RDS CALs, and then click **Properties**. On the **Connection Method** tab, verify the **Connection method** - you can change it in the dropdown menu. Click **OK**.
 3. Right-click the license server to which you want to migrate the RDS CALs, and then click **Manage RDS CALs**.
@@ -48,12 +48,14 @@ Regardless of migration method, you must, at a minimum, be a member of the local
 The next step is to migrate the CALs - use the information below to complete the wizard. Note that what you see in the wizard depends on the connection method you identified in Step 2 above.
 
 ## Migrate RDS CALs
+
 There are three mechanisms to migrate licenses to the destination license server; continue the steps corresponding to the **Connection method** verified in Step 2:
-  - [Automatic connection method](#Automatic-connection-method)
-  - [Using a web browser](#Using-a-web-browser)
-  - [Using a telephone](#Using-a-telephone)
+  - [Automatic connection method](#automatic-connection-method)
+  - [Using a web browser](#using-a-web-browser)
+  - [Using a telephone](#using-a-telephone)
 
 ### Automatic connection method
+
 1. On the **License Program** page, select the appropriate program through which you purchased your RDS CALs, then click **Next**.
 2. Enter the required information (typically a license code or an agreement number, depending on the **License program**), and then click **Next**. Consult the documentation provided when you purchased your RDS CALs.
 4. Select the appropriate product version, license type, and quantity of RDS CALs for your environment based on your RDS CAL purchase agreement, and then click **Next**.

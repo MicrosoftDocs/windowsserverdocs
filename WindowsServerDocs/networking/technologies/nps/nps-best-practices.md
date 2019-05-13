@@ -26,7 +26,7 @@ There are two types of accounting, or logging, in NPS:
 
 - Event logging for NPS. You can use event logging to record NPS events in the system and security event logs. This is used primarily for auditing and troubleshooting connection attempts.
 
-- Logging user authentication and accounting requests. You can log user authentication and accounting requests to log files in text format or database format, or you can log to a stored procedure in a SQL Server 2000 database. Request logging is used primarily for connection analysis and billing purposes, and is also useful as a security investigation tool, providing you with a method of tracking down the activity an attacker.
+- Logging user authentication and accounting requests. You can log user authentication and accounting requests to log files in text format or database format, or you can log to a stored procedure in a SQL Server 2000 database. Request logging is used primarily for connection analysis and billing purposes, and is also useful as a security investigation tool, providing you with a method of tracking down the activity of an attacker.
 
 To make the most effective use of NPS logging:
 

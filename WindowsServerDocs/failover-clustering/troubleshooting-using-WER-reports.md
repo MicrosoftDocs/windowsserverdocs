@@ -13,7 +13,7 @@ ms.localizationpriority:
 ---
 # Troubleshooting a Failover Cluster using Windows Error Reporting 
 
-> Applies to: Windows Server 2016, Windows Server
+> Applies to: Windows Server 2019, Windows Server 2016, Windows Server
 
 Windows Error Reporting (WER) is a flexible event-based feedback infrastructure designed to help advanced administrators or Tier 3 support gather information about the hardware and software problems that Windows can detect, report the information to Microsoft, and provide users with any available solutions. This [reference](https://docs.microsoft.com/powershell/module/windowserrorreporting/) provides descriptions and syntax for all WindowsErrorReporting cmdlets.
 

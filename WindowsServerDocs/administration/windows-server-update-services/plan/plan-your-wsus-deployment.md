@@ -190,7 +190,7 @@ You can leverage the Branch Office feature in Windows to optimize WSUS deploymen
 2.  In branch offices that have low-bandwidth connections to the central office but high-bandwidth connections to the Internet, the Branch Office feature can also be used. In this case you may want to configure downstream WSUS servers to get information about which updates to install from the central WSUS server, but download the updates from Microsoft Update.
 
 ### Network Load Balancing
-Network Load Balancing (NLB) increases the reliability and performance of your WSUS network. You can set up multiple WSUS servers that share a single failover cluster running QL Server such as SQL Server 2008 R2 SP1. In this configuration you must use a full SQL Server installation, not the Windows Internal Database installation that is provided by WSUS, and the database role must be installed on all WSUS front-end servers. You can also have all the WSUS servers use a distributed file system (DFS) to store their content.
+Network Load Balancing (NLB) increases the reliability and performance of your WSUS network. You can set up multiple WSUS servers that share a single failover cluster running SQL Server such as SQL Server 2008 R2 SP1. In this configuration you must use a full SQL Server installation, not the Windows Internal Database installation that is provided by WSUS, and the database role must be installed on all WSUS front-end servers. You can also have all the WSUS servers use a distributed file system (DFS) to store their content.
 
 **WSUS setup for NLB:** compared to WSUS 3.2 setup for NLB, a special setup call and parameters are no longer required to configure WSUS for NLB. You need only setup each WSUS server, keeping the following considerations in mind.
 
@@ -230,7 +230,7 @@ SQL Server, SQL Server Express, and Windows Internal Database provide the same p
 By default, the installation wizard creates and uses a Windows Internal Database that is named SUSDB.mdf. This database is located in the %windir%\wid\data\ folder, where %windir% is the local drive on which the WSUS server software is installed.
 
 > [!NOTE]
-> Windows Internal Database (WID) was introduced in  Windows Server 2012 .
+> Windows Internal Database (WID) was introduced in Windows Server 2008 .
 
 WSUS supports Windows authentication only for the database. You cannot use SQL Server authentication with WSUS. If you use Windows Internal Database for the WSUS database, WSUS Setup creates an instance of SQL Server that is named server\Microsoft##WID, where server is the name of the computer. With either database option, WSUS Setup creates a database named SUSDB. The name of this database is not configurable.
 
@@ -391,7 +391,7 @@ Install actions override uninstall actions. Required installs override optional 
 Actions that have a deadline override those with no deadline.  Actions with earlier deadlines override those with later deadlines.
 
 ## <a name="BKMK_1.6."></a>1.6. Plan WSUS performance considerations
-There are some areas that you should carefully plan before deploy WSUS so that you can have optimized performance. The key areas are:
+There are some areas that you should carefully plan before deploying WSUS so that you can have optimized performance. The key areas are:
 
 -   Network setup
 

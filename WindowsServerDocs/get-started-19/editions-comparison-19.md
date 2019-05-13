@@ -118,7 +118,7 @@ ms.localizationpriority: medium
 |SMTP Server|Yes|Yes|
 |SNMP Service|Yes|Yes|
 |Software Load Balancer|Yes|Yes|
-|Storage Replica|No|Yes|
+|Storage Replica|Yes|Yes|
 |Telnet Client|Yes|Yes|
 |TFTP Client|Yes, when installed as Server with Desktop Experience|Yes, when installed as Server with Desktop Experience|
 |VM Shielding Tools for Fabric Management|Yes|Yes|

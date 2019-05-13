@@ -40,5 +40,5 @@ If you are a software vendor partner looking for more information on Windows Ser
 | Project Server 2019                                          | No                                       |   | Yes                                             | Yes           |   | [Software requirements for Project Server 2019](https://docs.microsoft.com/project/software-requirements-for-project-server-2019)                                                                          |
 | Skype for Business 2019                                      | No                                       |   | Yes                                             | Yes           |   | [Install prerequisites for Skype for Business Server](https://docs.microsoft.com/skypeforbusiness/deploy/install/install-prerequisites)                                                                          |
 
-\*May have limitations or may require the [Server Core App Compatibility Feature on Demand (FOD). ](install-fod-19.md)
+\*May have limitations or may require the [Server Core App Compatibility Feature on Demand (FOD)](install-fod-19.md).
 Please refer to specific product or FOD documentation.
