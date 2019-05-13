@@ -42,7 +42,7 @@ To verify a writer by specifying its GUID (for this example, 4dc3bdd4-ab48-4d07-
 ```
 writer verify {4dc3bdd4-ab48-4d07-adb0-3bee2926fd7f}
 ```
-To exclude a writer with the name â€œSystem Writer,â€? type:
+To exclude a writer with the name "System Writer," type:
 ```
 writer exclude "System Writer"
 ```
