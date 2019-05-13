@@ -19,12 +19,12 @@ ms.date: 10/16/2017
 
 
 
-Wipes the free space on the volume removing any data fragments that may have existed in the space. Running this command on a volume that was encrypted using the “Used Space Only�? encryption method provides the same level of protection as the “Full Volume Encryption�? encryption method. For examples of how this command can be used, see [Examples](#BKMK_Examples).
+Wipes the free space on the volume removing any data fragments that may have existed in the space. Running this command on a volume that was encrypted using the "Used Space Only" encryption method provides the same level of protection as the "Full Volume Encryption" encryption method. For examples of how this command can be used, see [Examples](#BKMK_Examples).
 
 ## Syntax
 
 ```
-manage-bde –WipeFreeSpace|-w [<Drive>] [-Cancel] [-computername <Name>] [{-?|/?}] [{-help|-h}]
+manage-bde -WipeFreeSpace|-w [<Drive>] [-Cancel] [-computername <Name>] [{-?|/?}] [{-help|-h}]
 ```
 
 ### Parameters
@@ -44,7 +44,7 @@ The following example illustrates using the **-w** command to create wipe the fr
 ```
 manage-bde -w C:
 ```
-The following example illustrates using the **-w** command with the **–cancel** parameter to cancel the wipe the free space on drive C.
+The following example illustrates using the **-w** command with the **-cancel** parameter to cancel the wipe the free space on drive C.
 ```
 manage-bde -w -Cancel C:
 ```

@@ -199,14 +199,16 @@ For more information about GitHub and the markdown language, see:
 
 ### Git concepts
 
-* https://guides.github.com/introduction/git-handbook/ 
+- [GitHub Guides-Git Handbook Intro](https://guides.github.com/introduction/git-handbook/)
 
-* https://guides.github.com/activities/forking/
+- [GitHub Guides-Forking projects](https://guides.github.com/activities/forking/)
 
-* https://guides.github.com/introduction/flow/
+- [GitHub Guides-Understanding the GitHub flow](https://guides.github.com/introduction/flow/)
 
-* https://learngitbranching.js.org/ (Great for visual learners!)
+- [Learn Git Branching](https://learngitbranching.js.org/ (Great for visual learners!))
 
 ### Markdown
 
-* https://www.markdowntutorial.com/
+- [Our internal markdown guidance](https://review.docs.microsoft.com/help/contribute/markdown-reference?branch=master)
+
+- [External, GitHub tutorial](https://www.markdowntutorial.com/)
