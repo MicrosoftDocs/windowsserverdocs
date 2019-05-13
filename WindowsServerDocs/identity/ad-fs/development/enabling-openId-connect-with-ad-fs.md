@@ -12,11 +12,9 @@ ms.prod: windows-server-threshold
 ms.technology: identity-adfs
 ---
 
-# Build a web application using OpenID Connect with AD FS 2016
+# Build a web application using OpenID Connect with AD FS 2016 and above
 
->Applies To: Windows Server 2016
-
-Building on the initial Oauth support in AD FS in Windows Server 2012 R2, AD FS 2016 introduces support for using the OpenId  Connect sign-on.  
+>Applies To: Windows Server 2016 and above
 
 ## Pre-requisites  
 The following are a list of pre-requisites that are required prior to completing this document. This document assumes that AD FS has been installed and an AD FS farm has been created.  
@@ -27,14 +25,14 @@ The following are a list of pre-requisites that are required prior to completing
 
 -   Visual Studio 2013 or later.  
 
-## Create an Application Group in AD FS 2016  
-The following section describes how to configure the application group in AD FS 2016.  
+## Create an Application Group in AD FS 2016 and above
+The following section describes how to configure the application group in AD FS 2016 and above.  
 
 #### Create Application Group  
 
 1.  In AD FS Management, right-click on Application Groups and select **Add Application Group**.  
 
-2.  On the Application Group Wizard, for the name enter **ADFSSSO** and under **Client-Server applications** select the **Web browser accessing a web application** template.  Click **Next**.  
+2.  On the Application Group Wizard, for the name enter **ADFSSSO** and under **Client-Server applications** select the **Web browser accessing a web application** template.  Click **Next**.
 
     ![AD FS OpenID](media/Enabling-OpenId-Connect-with-AD-FS-2016/AD_FS_OpenID_1.PNG)  
 
@@ -44,41 +42,13 @@ The following section describes how to configure the application group in AD FS 
 
     ![AD FS OpenID](media/Enabling-OpenId-Connect-with-AD-FS-2016/AD_FS_OpenID_2.PNG)  
 
-5.  On the **Configure Application Credentials** screen, place a check in **Generate a shared secret** and copy the secret. Click **Next**  
+5.  On the **Summary** screen,  click **Next**.  
 
-    ![AD FS OpenID](media/Enabling-OpenId-Connect-with-AD-FS-2016/AD_FS_OpenID_3.PNG)  
+    ![AD FS OpenID](media/Enabling-OpenId-Connect-with-AD-FS-2016/AD_FS_OpenID_3.PNG)
 
-6.  On the **Summary** screen,  click **Next**.  
+6.  On the **Complete** screen,  click **Close**.  
 
-7.  On the **Complete** screen,  click **Close**.  
-
-8.  Now, on the right-click the new Application Group and select **Properties**.  
-
-9. On the **ADFSSSO Properties** click **Add application**.  
-
-10. On the **Add a new application to Sample Application** select **Web API** and click **Next**.  
-
-    ![AD FS OpenID](media/Enabling-OpenId-Connect-with-AD-FS-2016/AD_FS_OpenID_4.PNG)  
-
-11. On the **Configure Web API** screen, enter the following for **Identifier** - **https://contoso.com/WebApp**.  Click **Add**. Click **Next**.  
-
-    ![AD FS OpenID](media/Enabling-OpenId-Connect-with-AD-FS-2016/AD_FS_OpenID_7.PNG)
-
-12. On the **Choose Access Control Policy** screen, select **Permit everyone** and click **Next**.  
-
-    ![AD FS OpenID](media/Enabling-OpenId-Connect-with-AD-FS-2016/AD_FS_Confidential_7.PNG)  
-
-13. On the **Configure Application Permissions** screen,  make sure **openid** is selected and click **Next**.  
-
-    ![AD FS OpenID](media/Enabling-OpenId-Connect-with-AD-FS-2016/AD_FS_OpenID_7.PNG)  
-
-14. On the **Summary** screen,  click **Next**.  
-
-15. On the **Complete** screen,  click **Close**.  
-
-16. On the **Sample Application Properties** click **OK**.  
-
-## Download and Modify MVP App to Authenticate via OpenId Connect and AD FS  
+## Download and modify sample application to authenticate via OpenID Connect and AD FS  
 This section discusses how to download the sample Web API and modify it in Visual Studio.   We will be using the Azure AD sample that is [here](https://github.com/Azure-Samples/active-directory-dotnet-webapp-openidconnect).  
 
 To download the sample project, use Git Bash and type the following:  
@@ -93,15 +63,14 @@ git clone https://github.com/Azure-Samples/active-directory-dotnet-webapp-openid
 
 1.  Open the sample using Visual Studio.  
 
-2.  Compile the app so that all of the missing NuGets are restored.  
+2.  Rebuild the app so that all of the missing NuGets are restored.  
 
 3.  Open the web.config file.  Modify the following values so the look like the following:  
 
     ```  
-    <add key="ida:ClientId" value="8219ab4a-df10-4fbd-b95a-8b53c1d8669e" />  
-    <add key="ida:ADFSDiscoveryDoc" value="https://adfs.contoso.com/adfs/.well-known/openid-configuration" />  
+    <add key="ida:ClientId" value="[Replace this Client Id obtained while creating application group]" />  
+    <add key="ida:ADFSDiscoveryDoc" value="https://[Your ADFS hostname]/adfs/.well-known/openid-configuration" />  
     <!--<add key="ida:Tenant" value="[Enter tenant name, e.g. contoso.onmicrosoft.com]" />      
-    <add key="ida:ResourceID" value="https://contoso.com/WebApp"  
     <add key="ida:AADInstance" value="https://login.microsoftonline.com/{0}" />-->  
     <add key="ida:PostLogoutRedirectUri" value="https://localhost:44320/" />  
     ```  
@@ -113,7 +82,7 @@ git clone https://github.com/Azure-Samples/active-directory-dotnet-webapp-openid
     -   Comment out the following:  
 
         ```  
-        //public static readonly string Authority = String.Format(CultureInfo.InvariantCulture, aadInstance, tenant);  
+        //string Authority = String.Format(CultureInfo.InvariantCulture, aadInstance, tenant);  
         ```  
 
     -   Tweak the OpenId Connect middleware initialization logic with the following changes:  
