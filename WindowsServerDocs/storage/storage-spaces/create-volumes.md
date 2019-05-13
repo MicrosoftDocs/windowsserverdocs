@@ -32,7 +32,9 @@ To create a three-way mirror volume in Windows Admin Center:
 Depending on the size, creating the volume can take a few minutes. Notifications in the upper-right will let you know when the volume is created. The new volume appears in the Inventory list.
 
 Watch a quick video on how to create a three-way mirror volume.
-> [!VIDEO https://youtube-nocookie.com/o66etKq70N8]
+
+> [!VIDEO https://www.youtube.com/embed/o66etKq70N8]
+
 
 ## Create a mirror-accelerated parity volume
 
