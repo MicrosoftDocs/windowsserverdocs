@@ -63,17 +63,13 @@ As described above, any AD FS user who has not yet registered (configured MFA ve
 The following pre-requisites are required when using Azure MFA for authentication with AD FS:  
   
 - An [Azure subscription with Azure Active Directory](https://azure.microsoft.com/pricing/free-trial/).  
-- [Azure Multi-Factor Authentication](https://azure.microsoft.com/documentation/articles/multi-factor-authentication/)  
-- Web app proxy is able to communicate with the following over ports 80 and 443:
-
-	- https://adnotifications.windowsazure.com
-	- https://login.microsoftonline.com
+- [Azure Multi-Factor Authentication](https://azure.microsoft.com/documentation/articles/multi-factor-authentication/) 
 
 
 > [!NOTE]
 > Azure AD and Azure MFA are included in Azure AD Premium and the Enterprise Mobility Suite (EMS).  If you have either of these you do not need individual subscriptions.
 - A Windows Server 2016 AD FS on-premises environment.  
-   - The server needs to be able to communicate with the following URLs over ports 80 and 443.
+   - The server needs to be able to communicate with the following URLs over port 443.
       - https://adnotifications.windowsazure.com
       - https://login.microsoftonline.com
 - Your on-premises environment is [federated with Azure AD.](https://azure.microsoft.com/documentation/articles/active-directory-aadconnect-get-started-custom/#configuring-federation-with-ad-fs)  
