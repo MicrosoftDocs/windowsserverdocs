@@ -2,7 +2,7 @@
 title: DFS Namespaces overview
 ms.prod: windows-server-threshold
 ms.author: jgerend
-ms.manager: brianlic
+ms.manager: daveba
 ms.technology: storage
 ms.topic: article
 author: jasongerend
@@ -40,7 +40,7 @@ Servers that are running the following operating systems can host multiple domai
 - Windows Server 2016
 - Windows Server 2012 R2
 - Windows Server 2012
-- Windows Server 2008 R2 Datacenter/Enterprise
+- Windows Server 2008 R2 Datacenter and Enterprise Editions
 - Windows Server (Semi-Annual Channel)
 
 Servers that are running the following operating systems can host a single stand-alone namespace:
