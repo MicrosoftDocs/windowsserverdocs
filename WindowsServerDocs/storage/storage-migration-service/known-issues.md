@@ -4,7 +4,7 @@ description: Known issues and troubleshooting support for Storage Migration Serv
 author: nedpyle
 ms.author: nedpyle
 manager: siroy
-ms.date: 04/04/2019
+ms.date: 05/14/2019
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: storage
@@ -198,7 +198,7 @@ When attempting to transfer data from a Windows Server 2008 R2 source computer, 
   Couldn't transfer storage on any of the endpoints.
   0x9044
 
-This error is expected if your Windows Server 2008 R2 computer is not fully patched with all Critical and Important updates from Windows Update. Irrespective of SMS, we always recommend patching a Windows Server 2008 R2 computer for security purposes, as that legacy operating system does not contain the architectural safeguards of those that followed it.
+This error is expected if your Windows Server 2008 R2 computer isn't fully patched with all Critical and Important updates from Windows Update. Irrespective of Storage Migration Service, we always recommend patching a Windows Server 2008 R2 computer for security purposes, as that operating system doesn't contain the security improvements of newer versions of Windows Server.
 
 ## See also
 
