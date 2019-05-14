@@ -4,14 +4,15 @@ description: How to prestage cluster computer objects in Active Directory Domain
 ms.prod: windows-server-threshold 
 ms.topic: article 
 author: JasonGerend 
-ms.author: jgerend 
+ms.author: jgerend
+ms.manager: daveba
 ms.technology: storage-failover-clustering 
 ms.date: 05/09/2019
 ms.localizationpriority: medium
 ---
 # Prestage cluster computer objects in Active Directory Domain Services
 
->Applies to: Windows Server 2019, Windows Server 2016, Windows Server 2012, Windows Server 2012 R2
+>Applies to: Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 This topic shows how to prestage cluster computer objects in Active Directory Domain Services (AD DS). You can use this procedure to enable a user or group to create a failover cluster when they do not have permissions to create computer objects in AD DS.
 
