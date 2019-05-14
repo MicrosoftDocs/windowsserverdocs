@@ -18,6 +18,14 @@ This topic lists new and updated topics in the [Storage](storage.md) documentati
 
 > If you're looking for update history for Windows Server, see [Windows 10 and Windows Server 2016 update history](https://support.microsoft.com/help/4000825/windows-10-and-windows-server-2016-update-history).
 
+## May 2019
+
+|New or changed topic                                        |Description|
+|---                                                         |---           |
+|[Delete volumes](storage-spaces/delete-volumes.md)| New        |
+|[Create volumes](storage-spaces/create-volumes.md)| Added steps and videos for creating a volume in Windows Admin Center.|
+|[Extend volumes](storage-spaces/resize-volumes.md)| Added steps and video for resizing a volume in Windows Admin Center.|
+
 ## March 2019
 
 |New or changed topic                                        |Description|
