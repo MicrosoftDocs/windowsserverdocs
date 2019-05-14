@@ -43,7 +43,7 @@ On the third page, you’ll be asked to enter your password (assuming you select
 ## How to get the new experience
 
 ### New installation of AD FS
-If you are a new customer to AD FS, you'll receive the new design by default
+If you are a new customer to AD FS, you'll receive the new design by default.
 
 ### Upgrading a farm
 If you are an existing customer AD FS 2012 R2 or 2016, there are two ways to receive the new design after upgrading servers to AD FS 2019 and enabling the FBL to 2019.
@@ -56,7 +56,7 @@ If you are a new customer to AD FS, you’ll receive the new design by default. 
 ``Set-AdfsGlobalAuthenticationPolicy -AllowAdditionalAuthenticationAsPrimary $true``
 
 ## Customization
-The options for customization will still be applicable for AD FS 2019. 
+The options for customization will still be applicable for AD FS 2019.
 Below are some links to other documents for your reference.
 
 •	For those who do not plan to upgrade their servers to AD FS 2019 but still want the new design: [Using an Azure AD UX Web Theme in Active Directory Federation Services](azure-ux-web-theme-in-ad-fs.md)
