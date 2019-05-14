@@ -79,7 +79,7 @@ Want to learn more about managing replication? Check out [Cluster to cluster Sto
 
 To enable UPDs on both deployments, do the following:
 
-1. Run the [Set-RDSessionCollectionConfiguration cmdlet](https://technet.microsoft.com/itpro/powershell/windows/remote-desktop/set-rdsessioncollectionconfiguration) to enable the user profile disks for the primary (active) deployment - provide a path to the file share on the source volume (which you created in Step 7 in the deployment steps).
+1. Run the [Set-RDSessionCollectionConfiguration cmdlet](/powershell/module/remotedesktop/set-rdsessioncollectionconfiguration) to enable the user profile disks for the primary (active) deployment - provide a path to the file share on the source volume (which you created in Step 7 in the deployment steps).
 2. Reverse the Storage Replica direction so that the destination volume becomes the source volume (this mounts the volume and makes it accessible by the secondary deployment). You can run **Set-SRPartnership** cmdlet to do this. For example:
 
    ```powershell
