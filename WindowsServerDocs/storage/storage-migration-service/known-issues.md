@@ -4,7 +4,7 @@ description: Known issues and troubleshooting support for Storage Migration Serv
 author: nedpyle
 ms.author: nedpyle
 manager: siroy
-ms.date: 04/04/2019
+ms.date: 05/14/2019
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: storage
@@ -190,6 +190,15 @@ When attempting to download the transfer or error logs at the end of a transfer 
   $jobname : Transfer log : ajax error 404
 
 This error is expected if you have not enabled the "File and Printer Sharing (SMB-In)" firewall rule on the orchestrator server. Windows Admin Center file downloads require port TCP/445 (SMB) on connected computers.  
+
+## Error "" when transfering from Windows Server 2008 R2
+
+When attempting to transfer data from a Windows Server 2008 R2 source computer, no data trasnfers and you receieve error:  
+
+  Couldn't transfer storage on any of the endpoints.
+  0x9044
+
+This error is expected if your Windows Server 2008 R2 computer isn't fully patched with all Critical and Important updates from Windows Update. Irrespective of Storage Migration Service, we always recommend patching a Windows Server 2008 R2 computer for security purposes, as that operating system doesn't contain the security improvements of newer versions of Windows Server.
 
 ## See also
 
