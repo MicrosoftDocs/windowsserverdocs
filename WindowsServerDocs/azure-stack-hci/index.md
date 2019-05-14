@@ -160,7 +160,7 @@ As your organization digitally transforms, you may find that you can move faster
 |Use Azure Stack to modernize app deployment and operation with DevOps practices like infrastructure as code, continuous integration and continuous deployment (CI/CD), and convenient features like Azure-consistent VM Extensions. Ideal for Dev and DevOps teams.|Azure Stack HCI does not natively include any DevOps tooling.
 
 ### When to use Azure Stack HCI
-|Azure Stack HCI|Azure Stack|
+|Azure Stack|Azure Stack HCI|
 |---------------|---------------|
 |Azure Stack requires minimum 4 nodes and its own network switches.|Use Azure Stack HCI for the minimum footprint for remote-office / branch-office (ROBO). Start with just 2 server nodes and switchless back-to-back networking for peak simplicity and affordability. Hardware offers start at 4 drives, 64 GB of memory, well under $10k / node.
 |Azure Stack constrains Hyper V configurability and feature set for consistency with Azure.|Use Azure Stack HCI for no-frills Hyper-V virtualization for classic enterprise apps like Exchange, SharePoint, and SQL Server, and to virtualize Windows Server roles like File Server, DNS, DHCP, IIS, and AD. Unrestricted access to all Hyper-V features like Shielded VMs.|
