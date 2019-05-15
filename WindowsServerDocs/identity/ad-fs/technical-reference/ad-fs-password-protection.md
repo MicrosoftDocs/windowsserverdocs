@@ -42,8 +42,6 @@ This attack pattern evades most detection techniques because from the vantage po
 
 For attackers, it’s a numbers game: they know that there are some passwords out there that are very common.  The attacker will get a few successes for every thousand accounts attacked, and that’s enough to be effective. They use the accounts to get data from emails, harvest contact info, and send phishing links or just expand the password spray target group. The attackers don’t care much about who those initial targets are—just that they have some success that they can leverage.
 
-They use the accounts to get data from emails, harvest contact info, and send phishing links or just expand the password spray target group. The attackers don’t care much about who those initial targets are—just that they have some success that they can leverage.
-
 But by taking a few steps to configure the AD FS and network correctly, AD FS endpoints can be secured against these type of attacks. This article covers 3 areas that need to be configured properly to help secure against these attacks.
 
 ### Brute Force Password Attack 
