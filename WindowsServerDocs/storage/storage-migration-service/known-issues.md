@@ -191,7 +191,7 @@ When attempting to download the transfer or error logs at the end of a transfer 
 
 This error is expected if you have not enabled the "File and Printer Sharing (SMB-In)" firewall rule on the orchestrator server. Windows Admin Center file downloads require port TCP/445 (SMB) on connected computers.  
 
-## Error "" when transfering from Windows Server 2008 R2
+## Error "Couldn't transfer storage on any of the endpoints" when transfering from Windows Server 2008 R2
 
 When attempting to transfer data from a Windows Server 2008 R2 source computer, no data trasnfers and you receieve error:  
 
