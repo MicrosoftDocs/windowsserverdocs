@@ -1,6 +1,6 @@
 ---
 ms.assetid: d282bb4e-38a0-4c7c-83d8-f6ea89278057
-title: Build a web application using OpenID Connect with AD FS 2016
+title: Build a web application using OpenID Connect with AD FS 2016 and later
 description:
 author: billmath
 ms.author: billmath
@@ -12,9 +12,9 @@ ms.prod: windows-server-threshold
 ms.technology: identity-adfs
 ---
 
-# Build a web application using OpenID Connect with AD FS 2016 and above
+# Build a web application using OpenID Connect with AD FS 2016 and later
 
->Applies To: Windows Server 2016 and above
+>Applies To: Windows Server 2016 and later
 
 ## Pre-requisites  
 The following are a list of pre-requisites that are required prior to completing this document. This document assumes that AD FS has been installed and an AD FS farm has been created.  
@@ -25,8 +25,8 @@ The following are a list of pre-requisites that are required prior to completing
 
 -   Visual Studio 2013 or later.  
 
-## Create an Application Group in AD FS 2016 and above
-The following section describes how to configure the application group in AD FS 2016 and above.  
+## Create an Application Group in AD FS 2016 and later
+The following section describes how to configure the application group in AD FS 2016 and later.  
 
 #### Create Application Group  
 
