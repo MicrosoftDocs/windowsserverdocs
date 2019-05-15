@@ -109,29 +109,29 @@ Many of these requirements can be determined by using the `Test-SRTopology` cmdl
 
     This workaround is of course not ideal and some customers may not be able to make use of it. The SR team is working on optimizations and updated log mechanism for the future to reduce these artificial bottlenecks that occur. There is no ETA for this, but when available to TAP customers for testing, this FAQ will be updated. 
 
-    -   **For JBOD enclosures:**  
+-   **For JBOD enclosures:**  
 
-        1.  Ensure that each cluster can see that site's storage enclosures only and that the SAS connections are correctly configured.  
+1. Ensure that each cluster can see that site's storage enclosures only and that the SAS connections are correctly configured.  
 
-        2.  Provision the storage using Storage Spaces by following **Steps 1-3** provided in the [Deploy Storage Spaces on a Stand-Alone Server](../storage-spaces/deploy-standalone-storage-spaces.md) using Windows PowerShell or Server Manager.  
+2. Provision the storage using Storage Spaces by following **Steps 1-3** provided in the [Deploy Storage Spaces on a Stand-Alone Server](../storage-spaces/deploy-standalone-storage-spaces.md) using Windows PowerShell or Server Manager.  
 
-    -   **For iSCSI Target storage:**  
+-   **For iSCSI Target storage:**  
 
-        1.  Ensure that each cluster can see that site's storage enclosures only. You should use more than one single network adapter if using iSCSI.  
+1. Ensure that each cluster can see that site's storage enclosures only. You should use more than one single network adapter if using iSCSI.  
 
-        2.  Provision the storage using your vendor documentation. If using Windows-based iSCSI Targeting, consult [iSCSI Target Block Storage, How To](../iscsi/iscsi-target-server.md).  
+2. Provision the storage using your vendor documentation. If using Windows-based iSCSI Targeting, consult [iSCSI Target Block Storage, How To](../iscsi/iscsi-target-server.md).  
 
-    -   **For FC SAN storage:**  
+-   **For FC SAN storage:**  
 
-        1.  Ensure that each cluster can see that site's storage enclosures only and that you have properly zoned the hosts.  
+1. Ensure that each cluster can see that site's storage enclosures only and that you have properly zoned the hosts.  
 
-        2.  Provision the storage using your vendor documentation.  
+2. Provision the storage using your vendor documentation.  
 
-    -   **For Storage Spaces Direct:**  
+-   **For Storage Spaces Direct:**  
 
-        1.  Ensure that each cluster can see that site's storage enclosures only by deploying Storage Spaces Direct. (https://docs.microsoft.com/windows-server/storage/storage-spaces/hyper-converged-solution-using-storage-spaces-direct) 
+1. Ensure that each cluster can see that site's storage enclosures only by deploying Storage Spaces Direct. (https://docs.microsoft.com/windows-server/storage/storage-spaces/hyper-converged-solution-using-storage-spaces-direct) 
 
-        2.  Ensure that the SR log volumes will always be on the fastest flash storage and the data volumes on slower high capacity storage.
+2. Ensure that the SR log volumes will always be on the fastest flash storage and the data volumes on slower high capacity storage.
 
 10. Start Windows PowerShell and use the `Test-SRTopology` cmdlet to determine if you meet all the Storage Replica requirements. You can use the cmdlet in a requirements-only mode for a quick test as well as a long running performance evaluation mode.  
 For example,  
