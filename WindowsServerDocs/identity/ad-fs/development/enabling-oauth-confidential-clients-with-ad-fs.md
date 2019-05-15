@@ -28,7 +28,7 @@ The following are a list of pre-requisites that are required prior to completing
 
 -   Visual Studio 2013 or later.  
 
-## Create an Application Group in AD FS 2016  
+## Create an Application Group in AD FS 2016 or later
 The following section describes how to configure the application group in AD FS 2016 or later.  
 
 #### Create the Application Group  
