@@ -156,7 +156,7 @@ Change the appsettings as below:
 ## Running the solution
 Clean the solution, rebuild the solution and run it. If you want to see detailed traces, launch Fiddler and enable HTTPS decryption.
 
-The browser will load the SPA and you will be presented with the following screen:
+The browser (use Chrome browser) will load the SPA and you will be presented with the following screen:
 
 ![Register the client](media/Single-Page-Application-with-AD-FS/singleapp3.PNG)
 
