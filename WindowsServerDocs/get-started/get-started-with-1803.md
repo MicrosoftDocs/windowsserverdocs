@@ -43,7 +43,7 @@ To get a comprehensive view of the key facts about Semi-Annual Channel release o
 
 - What hardware is needed to run it? See [System requirements](../get-started-19/sys-reqs-19.md); the system requirements for this release are the same as for Windows Server 2019.
 - What new features and functionality have been added? See [What's New in Windows Server version 1903](whats-new-in-windows-server-1903.md)
-- What has been removed recently? See [Features Removed or Planned for Replacement starting with Windows Server, version 1803](windows-server-1803-removed-features.md)
+- What has been removed recently? See [Features Removed or Planned for Replacement starting with Windows Server, version 1903](../get-started-19/removed-features-1903.md)
 
 
 ## Where to obtain Semi-Annual Channel releases
@@ -54,10 +54,10 @@ Semi-Annual Channel releases should be installed as a clean installation.
 
 - Semi-Annual Channel releases are also available in [Microsoft Azure](https://azuremarketplace.microsoft.com/en-us/marketplace/apps/Microsoft.WindowsServer?tab=Overview).
 
-- Visual Studio Subscriptions: Visual Studio Subscribers can obtain Windows Server, version 1803 by downloading it from the [Visual Studio Subscriber download page](https://my.visualstudio.com/downloads?pid=2347). If you are not already a subscriber, go to [Visual Studio Subscriptions](https://www.visualstudio.com/subscriptions/) to sign up, and then visit the [Visual Studio Subscriber download page](https://my.visualstudio.com/downloads?pid=2347) as above. Releases obtained through Visual Studio Subscriptions are for development and testing only.
+- Visual Studio Subscriptions: Visual Studio Subscribers can obtain Semi-Annual Channel releases by downloading them from the [Visual Studio Subscriber download page](https://my.visualstudio.com/downloads?pid=2347). If you are not already a subscriber, go to [Visual Studio Subscriptions](https://www.visualstudio.com/subscriptions/) to sign up, and then visit the [Visual Studio Subscriber download page](https://my.visualstudio.com/downloads?pid=2347) as above. Releases obtained through Visual Studio Subscriptions are for development and testing only.
 
 ## Activating Semi-Annual Channel releases
 
-- If you've obtained this release from the Volume Licensing Service Center, you can activate it by using your Windows Server 2016 CSVLK with your Key Management System (KMS) environment.
+- If you've obtained this release from the Volume Licensing Service Center, you can activate it by using your Windows Server 2019 CSVLK with your Key Management System (KMS) environment.
 - If you are using Microsoft Azure, this release should automatically be activated.
-- If you obtain this release from Visual Studio Subscriptions, you can activate it by using your Windows Server 2016 CSVLK with your Key Management System (KMS) environment. 
+- If you obtain this release from Visual Studio Subscriptions, you can activate it by using your Windows Server 2019 CSVLK with your Key Management System (KMS) environment. 
