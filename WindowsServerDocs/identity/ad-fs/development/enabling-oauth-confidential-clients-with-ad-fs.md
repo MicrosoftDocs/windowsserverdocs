@@ -47,7 +47,7 @@ The following section describes how to configure the application group in AD FS 
   
 4.  Enter the following for **Redirect URI:** - **https://localhost:44323**.  Click **Add**. Click **Next**.  
   
-5.  On the **Configure Application Credentials** screen, place a check in **Generate a shared secret**and copy the secret.  This will be used later as the value for **ida:AppKey** in the applications web.config file.  Click **Next**.  
+5.  On the **Configure Application Credentials** screen, place a check in **Generate a shared secret** and copy the secret.  This will be used later as the value for **ida:AppKey** in the applications web.config file.  Click **Next**.  
   
     ![AD FS Oauth](media/Enabling-Oauth-Confidential-Clients-with-AD-FS-2016/AD_FS_Confidential_4.PNG)  
   
@@ -59,7 +59,7 @@ The following section describes how to configure the application group in AD FS 
   
 9. On **ADFSOAUTHCC Properties** click **Add application**.  
   
-10. On the **Add a new application to Sample Application** select **Web API**and click **Next**.  
+10. On the **Add a new application to Sample Application** select **Web API** and click **Next**.  
   
     ![AD FS Oauth](media/Enabling-Oauth-Confidential-Clients-with-AD-FS-2016/AD_FS_Confidential_6.PNG)  
   
@@ -96,7 +96,7 @@ git clone https://github.com/Azure-Samples/active-directory-dotnet-webapp-webapi
   
 #### To upgrade the database file  
   
-1.  Open the project in Visual Studio, there will be a pop-up telling you that the app requires SQL Server 2102 Express or you will need to upgrade the database.  Click Ok.  
+1.  Open the project in Visual Studio, there will be a pop-up telling you that the app requires SQL Server 2012 Express or you will need to upgrade the database.  Click Ok.  
   
     ![AD FS Oauth](media/Enabling-Oauth-Confidential-Clients-with-AD-FS-2016/AD_FS_Confidential_12.PNG)  
   
