@@ -58,6 +58,7 @@ Semi-Annual Channel releases should be installed as a clean installation.
 
 ## Activating Semi-Annual Channel releases
 
-- If you've obtained this release from the Volume Licensing Service Center, you can activate it by using your Windows Server 2019 CSVLK with your Key Management System (KMS) environment.
-- If you are using Microsoft Azure, this release should automatically be activated.
-- If you obtain this release from Visual Studio Subscriptions, you can activate it by using your Windows Server 2019 CSVLK with your Key Management System (KMS) environment. 
+- If you're using Microsoft Azure, this release should automatically be activated.
+- If you've obtained this release from the Volume Licensing Service Center or Visual Studio Subscriptions, you can activate it by using your Windows Server 2019 CSVLK with your Key Management System (KMS) environment.
+
+Semi-Annual Channel releases that were released before Windows Server 2019 use the Windows Server 2016 CSVLK.
