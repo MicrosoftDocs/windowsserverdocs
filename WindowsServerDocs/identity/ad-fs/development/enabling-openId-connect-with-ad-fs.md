@@ -68,11 +68,11 @@ git clone https://github.com/Azure-Samples/active-directory-dotnet-webapp-openid
 3.  Open the web.config file.  Modify the following values so the look like the following:  
 
     ```  
-    <add key="ida:ClientId" value="[Replace this Client Id obtained while creating application group]" />  
+    <add key="ida:ClientId" value="[Replace this Client Id from #3 in above section]" />  
     <add key="ida:ADFSDiscoveryDoc" value="https://[Your ADFS hostname]/adfs/.well-known/openid-configuration" />  
     <!--<add key="ida:Tenant" value="[Enter tenant name, e.g. contoso.onmicrosoft.com]" />      
     <add key="ida:AADInstance" value="https://login.microsoftonline.com/{0}" />-->  
-    <add key="ida:PostLogoutRedirectUri" value="https://localhost:44320/" />  
+    <add key="ida:PostLogoutRedirectUri" value="[Replace this with Redirect URI from #4 in the above section]" />  
     ```  
 
     ![AD FS OpenID](media/Enabling-OpenId-Connect-with-AD-FS-2016/AD_FS_OpenID_9.PNG)  
