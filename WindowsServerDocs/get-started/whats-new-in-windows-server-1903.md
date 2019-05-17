@@ -14,7 +14,7 @@ ms.date: 05/21/2019
 
 This topic describes some of the new features in Windows Server, version 1903, which is a Semi-Annual Channel release. These features include enhancements for running and managing containers, tools for working in Server Core installations, and the ability to migrate storage from Linux devices.
 
-To instead find out what's new in the latest Long-Term Servicing Channel (LTSC) release of Windows Server, see see [What's New in Windows Server 2019](../get-started-19/whats-new-19.md).
+To instead find out what's new in the latest Long-Term Servicing Channel (LTSC) release of Windows Server, see see [What's New in Windows Server 2019](../get-started-19/whats-new-19.md). Also see [What's new in Windows 10, version 1903 IT Pro content](https://docs.microsoft.com/windows/whats-new/whats-new-windows-10-version-1903).
 
 > [!NOTE]
 > Windows containers must use the same version of Windows as the host server, or an *earlier* version. For example, a host server running the released version of Windows Server, version 1903 (build 18342) can run Windows Server containers with the same or earlier version and build number (even if the container uses an Insider Preview version of Windows). For more info, see [Windows container version compatibility](https://docs.microsoft.com/virtualization/windowscontainers/deploy-containers/version-compatibility).
@@ -68,3 +68,7 @@ This capability is also available for servers running Windows Server 2019.
 ## Windows Admin Center enhancements
 
 A new release of Windows Admin Center is out, adding new functionality to Windows Server. For info on the latest features, see [Windows Admin Center](../manage/windows-admin-center/understand/windows-admin-center.md).
+
+## Security baseline for Windows 10 and Windows Server
+
+The draft release of the [security configuration baseline settings](https://blogs.technet.microsoft.com/secguide/2019/04/24/security-baseline-draft-for-windows-10-v1903-and-windows-server-v1903/) for Windows 10 version 1903, and for Windows Server version 1903 is available.

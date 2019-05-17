@@ -8,7 +8,6 @@ author: jasongerend
 ms.author: jgerend
 ms.localizationpriority: medium
 ms.date: 05/21/2019
-ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ---
 # KMS client setup keys
@@ -29,9 +28,9 @@ Windows to a KMS client, install the applicable setup key (GVLK) from the
 following tables. To install a client setup key, open an administrative command
 prompt on the client, type **slmgr /ipk \<setup key\>** and then press **Enter**.
 
-| If you want to…                                                                                                                                                                                          | …use these resources                                                                                                         |
-|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------|
-| Activate Windows outside of a volume-activation scenario (that is, you’re trying to activate a retail version of Windows), **these keys will not work**.                                                     | Use these links for retail versions of Windows:                                                                              |
+| If you want to…    | …use these resources   |
+|--------------------|------------------------|
+| Activate Windows outside of a volume-activation scenario (that is, you’re trying to activate a retail version of Windows), **these keys will not work**. | Use these links for retail versions of Windows: |
 | Fix this error that you get when you try to activate a Windows 8.1, Windows Server 2012 R2 or newer system: “Error: 0xC004F050 The Software Licensing Service reported that the product key is invalid”… | [Install this update](https://support.microsoft.com/en-us/help/3172614/july-2016-update-rollup-for-windows-8-1-and-windows-server-2012-r2) on the KMS host if it is running Windows 8.1, Windows Server 2012 R2, Windows 8, or Windows Server 2012. |
 
 -   [Get Windows 10](https://www.microsoft.com/en-us/windows/get-windows-10)
@@ -44,21 +43,14 @@ prompt on the client, type **slmgr /ipk \<setup key\>** and then press **Enter**
 >   If you are running Windows Server 2008 R2 or Windows 7, be on the lookout
 >   for an update to support using those as KMS hosts for Windows 10 clients.
 
-
 ## Windows Server Semi-Annual Channel versions
 
-### Windows Server, version 1903
-| Operating system edition       | KMS Client Setup Key          |
-|--------------------------------|-------------------------------|
-| Windows Server Datacenter |   | 
-| Windows Server Standard |   |
+### Windows Server, version 1903 and Windows Server, version 1809
 
-### Windows Server, version 1809
-| Operating system edition       | KMS Client Setup Key          |
-|--------------------------------|-------------------------------|
-| Windows Server Datacenter | 6NMRW-2C8FM-D24W7-TQWMY-CWH2D  | 
-| Windows Server Standard | N2KJX-J94YW-TQVFB-DG9YT-724CC  |
-
+| Operating system edition  | KMS Client Setup Key          |
+|---------------------------|-------------------------------|
+| Windows Server Datacenter | 6NMRW-2C8FM-D24W7-TQWMY-CWH2D |
+| Windows Server Standard   | N2KJX-J94YW-TQVFB-DG9YT-724CC |
 
 ### Windows Server, version 1803
 
