@@ -164,6 +164,7 @@ Where `type` is one of:
 
 * Classic
 * Core
+* Root
 
 The system must be rebooted for any changes to the hypervisor scheduler type to take effect.
 
