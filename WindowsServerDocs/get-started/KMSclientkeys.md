@@ -4,21 +4,18 @@ description: Keys needed to activate Windows products from a KMS server
 ms.prod: windows-server-threshold
 ms.mktglfcycl: manage
 ms.sitesec: library
-author: jaimeo
+author: jasongerend
+ms.author: jgerend
 ms.localizationpriority: medium
-ms.date: 10/02/2018
+ms.date: 05/21/2019
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ---
+# KMS client setup keys
 
-# KMS Client Setup Keys
+>Applies to: Windows Server 2019, Windows Server Semi-Annual Channel, Windows Server 2016, Windows 10
 
->Applies To: Windows Server 2019, Windows Server Semi-Annual Channel, Windows Server 2016, Windows 10
-
-Computers that are running volume licensed editions of Windows Server, Windows 10, Windows 8.1,
-Windows Server 2012 R2, Windows 8, Windows Server 2012, Windows 7, Windows
-Server 2008 R2, Windows Vista, and Windows Server 2008 are, by default, KMS
-clients with no additional configuration needed.
+Computers that are running volume licensed editions of Windows Server, Windows 10, Windows 8.1, Windows Server 2012 R2, Windows 8, Windows Server 2012, Windows 7, Windows Server 2008 R2, Windows Vista, and Windows Server 2008 are, by default, KMS clients with no additional configuration needed.
 
 >[!NOTE]
 > In the tables that follow, "LTSC" stands for "Long-Term Servicing Channel," while "LTSB" refers to the "Long-Term Servicing Branch." 
@@ -49,6 +46,12 @@ prompt on the client, type **slmgr /ipk \<setup key\>** and then press **Enter**
 
 
 ## Windows Server Semi-Annual Channel versions
+
+### Windows Server, version 1903
+| Operating system edition       | KMS Client Setup Key          |
+|--------------------------------|-------------------------------|
+| Windows Server Datacenter |   | 
+| Windows Server Standard |   |
 
 ### Windows Server, version 1809
 | Operating system edition       | KMS Client Setup Key          |
