@@ -212,7 +212,7 @@ Once this is successful you should see that you are now signed in.
 
 ![AD FS OpenID](media/Custom-Id-Tokens-in-AD-FS/AD_FS_OpenID_8.PNG)
 
-Click About link. You will see Hello [Username] which is retrieved from the username claim in id_token
+Click About link. You will see Hello [Username] which is retrieved from the username claim in ID token
 
 ![AD FS OpenID](media/Custom-Id-Tokens-in-AD-FS/AD_FS_OpenID_9.PNG)
 
