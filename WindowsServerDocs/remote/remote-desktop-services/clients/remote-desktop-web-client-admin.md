@@ -245,18 +245,18 @@ Follow these steps if the RD Session Host server is different from the RD Broker
 * The **Subject Alternative Name (SAN)** for each certificate must be set to the machine's **Fully Qualified Domain Name (FQDN)**. The **Common Name (CN)** must match the SAN for each certificate.
 
 ## How to pre-configure settings for Remote Desktop web client users
-The following steps detail how to use Powershell to configure settings for your Remote Desktop web client deployment. These Powershell commands can be used to control a user's ability to change settings based on your organization's security concerns or intended workflow. The settings described below are all located in the **Settings** side panel of the web client. 
+This section will tell you how to use PowerShell to configure settings for your Remote Desktop web client deployment. These PowerShell cmdlets control a user's ability to change settings based on your organization's security concerns or intended workflow. The following settings are all located in the **Settings** side panel of the web client. 
 
 ### Suppress telemetry
 By default, users may choose to enable or disable collection of telemetry data that is sent to Microsoft. For information about the telemetry data Microsoft collects, please refer to our Privacy Statement via the link in the **About** side panel.
 
-As an administrator, you can choose to suppress telemetry collection for your deployment using the following Powershell command:
+As an administrator, you can choose to suppress telemetry collection for your deployment using the following PowerShell cmdlet:
 
    ```PowerShell
     Set-RDWebClientDeploymentSetting -SuppressTelemetry $true
    ```
 
-By **default**, the user may select to enable or disable telemetry. A boolean value **$false** will match the default client behavior. A boolean value **$true** disables telemetry and restricts the user from enabling telemetry.
+By default, the user may select to enable or disable telemetry. A boolean value **$false** will match the default client behavior. A boolean value **$true** disables telemetry and restricts the user from enabling telemetry.
 
 ### Remote resource launch method
 By default, users may choose to launch remote resources (1) in the browser or (2) by downloading an .rdp file to handle with another client installed on their machine. As an administrator, you can choose to restrict the remote resource launch method for your deployment with the following Powershell command:
@@ -264,10 +264,11 @@ By default, users may choose to launch remote resources (1) in the browser or (2
    ```PowerShell
     Set-RDWebClientDeploymentSetting -LaunchResourceInBrowser ($true|$false)
    ```
- By **default**, the user may select either launch method. A boolean value **$true** will force the user to launch resources in the browser. A boolean value **$false** will force the user to launch resources by downloading an .rdp file to handle with a locally-installed RDP client.
+ By default, the user may select either launch method. A boolean value **$true** will force the user to launch resources in the browser. A boolean value **$false** will force the user to launch resources by downloading an .rdp file to handle with a locally installed RDP client.
 
 ### Reset RDWebClientDeploymentSetting configurations to default
-To reset all deployment-level web client settings to the default configurations, run the following Powershell command:
+To reset all deployment-level web client settings to the default configurations, run the following PowerShell cmdlet:
+
    ```PowerShell
     Reset-RDWebClientDeploymentSetting 
    ```
