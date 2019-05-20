@@ -84,7 +84,10 @@ The source server must run one of the following operating systems:
 If the orchestrator is running Windows Server, version 1903 or later, you can migrate the following additional source types:
 
 - Failover clusters
-- Linux servers that use Samba
+- Linux servers that use Samba. We've tested the following:
+    - RedHat Enterprise Linux 7.6, CentOS 7, Debian 8, Ubuntu 16.04 and 12.04.5, SUSE Linux Enterprise Server (SLES) 11 SP4
+    - Samba Samba 4.x, 3.6.x
+
 
 ### Requirements for destination servers
 
