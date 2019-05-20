@@ -15,7 +15,7 @@ ms.date: 05/21/2019
 
 This topic describes some of the new features in Windows Server 2019. Windows Server 2019 is built on the strong foundation of Windows Server 2016 and brings numerous innovations on four key themes: Hybrid Cloud, Security, Application Platform, and Hyper-Converged Infrastructure (HCI).
 
-To find out what's new in Windows Server Semi-Annual Channel releases, see [What's New in Windows Server](../get-started/whats-new-in-windows-server.md).
+To find out what's new in Windows Server Semi-Annual Channel releases, see [What's New in Windows Server](../get-started/whats-new-in-windows-server.md). 
 
 ## General
 

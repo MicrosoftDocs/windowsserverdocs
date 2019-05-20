@@ -17,7 +17,9 @@ ms.assetid: 9cf87597-b15d-4f43-8aa1-91e60367f011
 
 The Windows Server release model offers a new option in order to align with similar release and servicing models for [Windows 10](https://docs.microsoft.com/windows/deployment/update/waas-overview) and [Office 365 ProPlus](https://support.office.com/article/Overview-of-the-upcoming-changes-to-Office-365-ProPlus-update-management-78b33779-9356-4cdf-9d2c-08350ef05cca?ui=en-US&rs=en-US&ad=US). If you've been working with Windows 10 or Office 365 ProPlus, these improvements might already be familiar to you.
 
-**There are two primary release channels available to Windows Server customers, the Long-Term Servicing Channel and the Semi-Annual Channel.** You can keep servers on the Long-Term Servicing Channel (LTSC), move them to the Semi-Annual Channel, or have some servers on either track, depending on what works best for your needs.
+**There are two primary release channels available to Windows Server customers, the Long-Term Servicing Channel and the Semi-Annual Channel.** You can keep servers on the Long-Term Servicing Channel (LTSC), move them to the Semi-Annual Channel, or have some servers on either track, depending on what works best for your needs. Semi-Annual Channel releases aren't "updates" or "service packs" for Windows Server.
+
+[What's New in Windows Server version 1903](../get-started-19/whats-new-in-windows-server-1903.md) introduces you to the new features and functionality added in the latest Semi-Annual Channel release.
 
 ## Long-Term Servicing Channel (LTSC)
 
@@ -28,14 +30,16 @@ This is the release model you’re already familiar with (formerly called the �
 
 ## Semi-Annual Channel
 
-The Semi-Annual Channel is perfect for customer who are innovating quickly to take advantage of new operating system capabilities at a faster pace, both in applications – particularly those built on containers and microservices. Windows Server products in the Semi-Annual Channel will have new releases available twice a year, in spring and fall. Each release in this channel will be supported for 18 months from the initial release.
+The Semi-Annual Channel is for customers who are innovating quickly to take advantage of new operating system capabilities at a faster pace, both in applications – particularly those built on containers and microservices. Windows Server products in the Semi-Annual Channel will have new releases available twice a year, in spring and fall. Each release in this channel will be supported for 18 months from the initial release.
 
 Most of the features introduced in the Semi-Annual Channel will be rolled up into the next Long-Term Servicing Channel release of Windows Server. The editions, functionality, and supporting content might vary from release to release depending on customer feedback.
 
 The Semi-Annual Channel will be available to volume-licensed customers with [Software Assurance](https://www.microsoft.com/en-us/licensing/licensing-programs/software-assurance-default.aspx), as well as via the Azure Marketplace or other cloud/hosting service providers and loyalty programs such as Visual Studio Subscriptions.
 
+Semi-Annual Channel releases of Windows Server run in Server Core mode. Windows Server Core mode offers great advantages such as smaller hardware requirements, much smaller attack surface, and a reduction in the need for updates. Since it has no graphical user interface, Windows Server Core mode is best managed remotely. If you're new to working with Server Core, [Manage a Server Core server](../administration/server-core/server-core-manage.md) will help you get used to this environment. [Manage Windows Server](../administration/manage-windows-server.md) shows you the various options for managing servers remotely.
+
 > [!Note]  
-> **The current Semi-Annual Channel release is Windows Server, version 1903**. If you want to put servers in this channel, you should install Windows Server, version 1903, which can be installed in Server Core mode or as Nano Server run in a container. See [Introducing Windows Server, version 1903](get-started-with-1803.md) to learn how to obtain and activate Semi-Annual Channel releases. In-place upgrades from a long-term servicing channel release aren't supported because they are in **different release channels**. Semi-Annual Channel releases aren't updates – it's the next Windows Server release in the Semi-Annual Channel.
+> **The current Semi-Annual Channel release is Windows Server, version 1903**. If you want to put servers in this channel, you should install Windows Server, version 1903, which can be installed in Server Core mode or as Nano Server run in a container. In-place upgrades from a long-term servicing channel release aren't supported because they are in **different release channels**. Semi-Annual Channel releases aren't updates – it's the next Windows Server release in the Semi-Annual Channel.
 
 In this model, Windows Server releases are identified by the year and month of release: for example, in 2017, a release in the 9th month (September) would be identified as **version 1709**. Fresh releases of Windows Server in the Semi-Annual Channel will occur twice each year. The support lifecycle for each release is 18 months.
 
@@ -75,14 +79,18 @@ There are many tools with which IT pros can service Windows Server. Each option 
 
 You’ve likely already chosen to use at least one of these options based on your resources, staff, and expertise. You can continue using the same process for Semi-Annual Channel Releases: for example, if you already use System Center Configuration Manager to manage updates, you can continue to use it. Similarly, if you are using WSUS, you can continue to use that.
 
-## Obtain preview releases through the Windows Insider Program
 
-Testing the early builds of Windows Server helps both Microsoft and its customers because of the opportunity to discover possible issues before release. It also gives customers a unique opportunity to directly influence the functionality in the product. 
 
-Microsoft depends on receiving feedback throughout the development process so that adjustments may be made as quickly as possible. Early testing and feedback is essential to the rapid release model.
 
-For more information about how to get involved with the Windows Insider Program, see the [Windows Insider Program for Server docs](https://docs.microsoft.com/windows-insider/at-work/).
-# Related topics
+## Additional information about this release
+
+To get a comprehensive view of the key facts about Semi-Annual Channel release of Windows Server, review these topics prior to installing:
+
+- What hardware is needed to run it? See [System requirements](../get-started-19/sys-reqs-19.md); the system requirements for this release are the same as for Windows Server 2019.
+- What has been removed recently? See [Features Removed or Planned for Replacement starting with Windows Server, version 1903](../get-started-19/removed-features-1903.md)
+
+## Related topics
+
 [Windows Server 2019 servicing channels: LTSC and SAC](https://docs.microsoft.com/windows-server/get-started-19/servicing-channels-19)
 
 [Changes to Nano Server in Windows Server Semi-Annual Channel](nano-in-semi-annual-channel.md)
