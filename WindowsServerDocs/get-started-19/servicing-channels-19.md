@@ -101,7 +101,7 @@ By focusing on the Server Core installation option, we’re able to dedicate mor
 
 ## What about Nano Server?
 
-Nano Server is available as a container operating system in the Semi-Annual Channel. See [Changes to Nano Server in Windows Server Semi-Annual Channel](nano-in-semi-annual-channel.md) for details.
+Nano Server is available as a container operating system in the Semi-Annual Channel. See [Changes to Nano Server in Windows Server Semi-Annual Channel](../get-started/nano-in-semi-annual-channel.md) for details.
 
 ## How to tell whether a server is running an LTSC or SAC release
 
