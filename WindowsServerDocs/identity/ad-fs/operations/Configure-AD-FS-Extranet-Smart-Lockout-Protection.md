@@ -206,11 +206,11 @@ AD FS provides three cmdlets to manage account activity data. These cmdlets auto
 
 This behavior can be overridden by passing the -Server parameter.
 
-- Get-ADFSAccountActivity
+- Get-ADFSAccountActivity -UserPrincipalName
 
   Read the current account activity for a user account. The cmdlet always automatically connects to the farm master by using the Account Activity REST endpoint. Therefore, all data should always be consistent.
 
-  Example: Get-ADFSAccountActivity user@contoso.com
+`Get-ADFSAccountActivity user@contoso.com`
 
   Properties:
     - BadPwdCountFamiliar: Incremented when an authentication is successful from a known location.
@@ -224,14 +224,14 @@ This behavior can be overridden by passing the -Server parameter.
 
      Adds new familiar locations. The familiar IP list has a maximum of 20 entries, if this is exceeded, the oldest IP in the list will be removed.
 
-     Example: Set-ADFSAccountActivity user@contoso.com -AdditionalFamiliarIps “1.2.3.4”
+`Set-ADFSAccountActivity user@contoso.com -AdditionalFamiliarIps “1.2.3.4”`
 
 - Reset-ADFSAccountLockout
 
   Resets the lockout counter for a user account for each Familiar location (badPwdCountFamiliar) or Unfamiliar Location counters (badPwdCountUnfamiliar). By resetting a counter, the “FamiliarLockout” or “UnfamiliarLockout” value will update, as the reset counter will be less than the threshold.  
 
-   Example: Reset-ADFSAccountLockout user@contoso.com -Location Familiar
-   Example:  Reset-ADFSAccountLockout user@contoso.com -Location Unknown
+`Reset-ADFSAccountLockout user@contoso.com -Location Familiar`
+`Reset-ADFSAccountLockout user@contoso.com -Location Unknown`
 
 ## Event Logging & User Activity Information for AD FS Extranet Lockout
 
