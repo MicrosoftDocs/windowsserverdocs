@@ -22,7 +22,7 @@ Long-Term Servicing Channel (LTSC) releases:
 
 Semi-Annual Channel releases:
 
-- [What's New in Windows Server, version 1903](whats-new-in-windows-server-1903.md)
+- [What's New in Windows Server, version 1903](../get-started-19/whats-new-in-windows-server-1903.md)
 - [What's New in Windows Server, version 1809](whats-new-in-windows-server-1809.md)
 - [What's New in Windows Server, version 1803](whats-new-in-windows-server-1803.md)
 - [What's New in Windows Server, version 1709](whats-new-in-windows-server-1709.md)
