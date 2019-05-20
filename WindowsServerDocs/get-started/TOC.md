@@ -1,8 +1,6 @@
 # Get Started
 ## [Get Started with Windows Server 2016](Server-Basics.md)
-## [Introducing Windows Server, version 1809](get-started-with-1803.md)
 ## [What's New in Windows Server](whats-new-in-windows-server.md)
-### [What's New in Windows Server, version 1903](../get-started-19/whats-new-in-windows-server-1903.md)
 ### [What's New in Windows Server 2019](../get-started-19/whats-new-19.md)
 ### [What's New in Windows Server 2016](whats-new-in-windows-server-2016.md)
 ### [Express updates available for Windows Server 2016](express-updates.md)

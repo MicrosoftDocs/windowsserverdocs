@@ -4,14 +4,18 @@ description: An overview of new features in Windows Server 2019, including Deskt
 ms.prod: windows-server-threshold
 ms.technology: server-general
 ms.topic: article
-author: coreyp-at-msft
-ms.author: coreyp
+author: jasongerend
+ms.author: jgerend
 ms.localizationpriority: high
+ms.date: 05/21/2019
 ---
-
 # What's new in Windows Server 2019
 
-This topic describes some of the new features in Windows Server 2019. Windows Server 2019 is built on the strong foundation of Windows Server 2016 and brings numerous innovations on four key themes: Hybrid Cloud, Security, Application Platform, and Hyper-Converged Infrastructure (HCI). To find out What's New in Windows Server, version 1809, see [What's New in Windows Server, version 1809](../get-started/whats-new-in-windows-server-1809.md).
+> Applies to: Windows Server 2019
+
+This topic describes some of the new features in Windows Server 2019. Windows Server 2019 is built on the strong foundation of Windows Server 2016 and brings numerous innovations on four key themes: Hybrid Cloud, Security, Application Platform, and Hyper-Converged Infrastructure (HCI).
+
+To find out what's new in Windows Server Semi-Annual Channel releases, see [What's New in Windows Server](../get-started/whats-new-in-windows-server.md).
 
 ## General
 
