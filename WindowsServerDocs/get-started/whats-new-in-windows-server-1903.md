@@ -55,7 +55,7 @@ In this version of Windows Server, we've added the following abilities:
 - Migrate storage from a Linux server that uses Samba
 - More easily sync migrated shares into Azure by using Azure File Sync
 
-For more info, see [Storage Migration Service overview](../storage/storage-migration-service/overview.md).
+For more info about Storage Migration Service, see [Storage Migration Service overview](../storage/storage-migration-service/overview.md).
 
 ## System Insights disk anomaly detection
 
