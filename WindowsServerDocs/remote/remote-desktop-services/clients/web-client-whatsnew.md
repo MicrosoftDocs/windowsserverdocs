@@ -19,20 +19,20 @@ ms.localizationpriority: medium
 We regularly update the [Remote Desktop web client](remote-desktop-web-client.md), adding new features and fixing issues. Check out the latest updates below.
 
    >[!NOTE]
-    >We have changed the versioning system used for the web client. Beginning with version 1.0.18.0, all web client release versions will contain four numbers, i.e., **W.X.Y.Z**. RDS web client releases will always end in 0, e.g., **W.X.Y.0**. Each WVD web client releases will increment the fourth digit until the next RDS client release, e.g., **1.0.18.1**.
+    >We've changed the versioning system for the web client. Starting with version 1.0.18.0, all web client release versions will contain numbers (in the format of "W.X.Y.Z"). Release numbers for the Remote Desktop web client will always end with a 0 (for example, W.X.Y.0). Each Windows Virtual Desktop web client release will change the last digit until the next Remote Desktop web client release (for example, 1.0.18.1).
 
 ## Updates for version 1.0.18.0
 *Published date: 5/14/2019*
 
-- Added Resource Launch Method configuration in the Settings tab, enabling users to either (1) open resources in the browser or (2) download an rdp file to handle with another client. This setting may be configured by your admin. Details regarding admin configurations for this feature can be found in the [web client setup documentation](remote-desktop-web-client-admin.md).
+- Added Resource Launch Method configuration in the Settings tab, enabling users to either open resources in the browser or download an .rdp file to handle with another client. This setting may be configured by your admin. Details regarding admin configurations for this feature can be found in the [web client setup documentation](remote-desktop-web-client-admin.md).
 - Fixed color rendering issues, enabling more vivid colors in your remote session.
 - Revised error messages related to remote resource feed errors. 
-- Added support for more office shortcuts, such as paste special (Ctrl + Alt + V).
-- Added keyboard shortcut for users to invoke the Windows Key in the remote session (Alt + F3)
+- Added support for more office shortcuts, such as paste special (Ctrl+Alt+V).
+- Added keyboard shortcut for users to invoke the Windows Key in the remote session (Alt+F3)
 - Updated error message for users attempting to authenticate using an expired password.
 - Refreshed feed UI on the All Resources page.
 - Resolved overlapping dialogues that occurred during session reconnect.
-- Fixed remote resource icon sizing in the resource bar. 
+- Fixed remote resource icon sizing in the resource taskbar. 
 
 ## Updates for version 1.0.11
 *Published date: 2/22/2019*
