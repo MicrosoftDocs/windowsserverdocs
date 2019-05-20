@@ -11,7 +11,7 @@ ms.date: 05/21/2019
 ---
 # Windows Server servicing channels: LTSC and SAC
 
->Applies to: Windows Server 2019, Windows Server 2016
+>Applies to: Windows Server 2019, Windows Server 2016, Windows Server (Semi-Annual Channel)
 
 There are two primary release channels available to Windows Server customers, the Long-Term Servicing Channel and the Semi-Annual Channel.
 

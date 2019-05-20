@@ -5,7 +5,7 @@
 ### [What's New in Windows Server 2016](whats-new-in-windows-server-2016.md)
 ### [Express updates available for Windows Server 2016](express-updates.md)
 ### [What's New in the Windows Console in Windows Server 2016](whats-new-in-console.md)
-## [Windows Server Semi-Annual Channel Overview](semi-annual-channel-overview.md)
+## [Comparison of servicing channels](..\get-started-19\servicing-channels-19.md)
 ## [Installation and Upgrade of Windows Server Releases](Installation-and-Upgrade.md)
 ## [Upgrade Windows Server 2008 and Windows Server 2008 R2](modernize-windows-server-2008.md)
 ### [Upload a Windows Server 2008/2008 R2 specialized image to Azure](uploading-specialized-WS08-image-to-azure.md)
