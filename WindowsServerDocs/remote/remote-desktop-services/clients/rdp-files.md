@@ -11,7 +11,7 @@ ms.topic: article
 author: btaintor
 manager: dongill
 ms.author: helohr
-ms.date: 05/13/2019
+ms.date: 05/20/2019
 ms.localizationpriority: medium
 ---
 # Supported Remote desktop RDP file settings
