@@ -81,7 +81,10 @@ The source server must run one of the following operating systems:
 - Windows Server 2003 R2
 - Windows Server 2003
 
-You can also migrate storage from a Linux server that uses Samba if the destination runs Window Server, version 1903 or later.
+If the orchestrator is running Windows Server, version 1903 or later, you can migrate the following additional source types:
+
+- Failover clusters
+- Linux servers that use Samba
 
 ### Requirements for destination servers
 
@@ -97,12 +100,13 @@ The destination server must run one of the following operating systems:
 
 ## What's new in Storage Migration Service
 
-Windows Server, version 1903 adds the following new features, when run on the destination server:
+Windows Server, version 1903 adds the following new features, when run on the orchestrator server:
 
 - Migrate local users and groups to the new server
 - Migrate storage from failover clusters
 - Migrate storage from a Linux server that uses Samba
 - More easily sync migrated shares into Azure by using Azure File Sync
+- Migrate to new networks such as Azure
 
 ## See also
 

@@ -48,12 +48,13 @@ For more info, see [Server Core app compatibility feature](../get-started-19/ins
 
 Storage Migration Service makes it easier to migrate servers to a newer version of Windows Server. It provides a graphical tool that inventories data on servers and then transfers the data and configuration to newer servers—all without apps or users having to change anything.
 
-In this version of Windows Server, we've added the following abilities:
+When using this version of Windows Server to orchestrate migrations, we've added the following abilities:
 
 - Migrate local users and groups to the new server
 - Migrate storage from failover clusters
 - Migrate storage from a Linux server that uses Samba
 - More easily sync migrated shares into Azure by using Azure File Sync
+- Migrate to new networks such as Azure
 
 For more info about Storage Migration Service, see [Storage Migration Service overview](../storage/storage-migration-service/overview.md).
 
