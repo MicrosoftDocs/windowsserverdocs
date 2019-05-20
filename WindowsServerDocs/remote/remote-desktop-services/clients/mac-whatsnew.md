@@ -11,7 +11,7 @@ ms.topic: article
 author: lizap
 manager: dongill
 ms.author: elizapo
-ms.date: 03/06/2019
+ms.date: 04/29/2019
 ms.localizationpriority: medium
 ---
 # What's new for the Remote Desktop client on macOS?
@@ -19,6 +19,20 @@ ms.localizationpriority: medium
 We regularly update the [Remote Desktop client for macOS](remote-desktop-mac.md), adding new features and fixing issues. Check out the latest updates below.
 
 If you encounter any issues, you can always contact us via **Help > Report an Issue**.
+
+## Updates for version 10.2.13
+*Published date: 5/8/2019*
+
+- Fixed a hang that occurred when connecting via an RD Gateway.
+- Added a privacy notice to the "Add Feed" dialog.
+
+## Updates for version 10.2.12
+*Published date: 4/16/2019* 
+
+- Resolved random disconnects (with error code 0x904) that took place when connecting via an RD Gateway.
+- Fixed a bug that caused the resolutions list in application preferences to be empty after installation.
+- Fixed a bug that caused the client to crash if certain resolutions were added to the resolutions list.
+- Addressed an ADAL authentication prompt loop when connecting to Windows Virtual Desktop deployments.
 
 ## Updates for version 10.2.10
 *Published date: 3/30/2019*

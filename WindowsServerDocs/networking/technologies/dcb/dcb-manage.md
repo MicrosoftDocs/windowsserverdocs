@@ -36,7 +36,7 @@ the system level is not applied on network adapters until you do the following.
 2. Enable DCB on the network adapters. See [Enable and Display DCB Settings on  Network Adapters](#bkmk_enabledcb).
 
 >[!NOTE]
->If you want to configure DCB from a switch through DCBX, see [DCBX settings](#BKMK_DCBX_Settings)
+>If you want to configure DCB from a switch through DCBX, see [DCBX settings](#dcb-configuration-on-network-adapters).
 
 The DCBX Willing bit is described in the DCB specification. If the Willing bit on a device is set to true, the device is willing to accept configurations from a remote device through DCBX. If the Willing bit on a device is set to false, the device will reject all configuration attempts from remote devices and enforce only the local configurations.
 

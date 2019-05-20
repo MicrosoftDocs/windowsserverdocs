@@ -3,10 +3,10 @@ title: "Optimizing Windows 10, version 1803, for a Virtual Desktop Infrastructur
 description: Recommended settings and configuration to minimize overhead for Windows 10 1803) desktops used as VDI images
 ms.custom: na
 ms.prod: windows-server-threshold
-ms.reviewer: na
+ms.reviewer: robsmi
 ms.suite: na
 ms.technology: remote-desktop-services
-ms.author: jaimeo
+ms.author: jaimeo, robsmi
 ms.tgt_pltfrm: na
 ms.topic: article
 author: jaimeo
@@ -28,7 +28,7 @@ In a VDI environment the key ways to optimize Windows 10 performance are to mini
 
 ## VDI optimization principles
 
-A VDI environment presents a full desktop session, including applications, to a computer user over a network. VDI environments usually use a base operating system image, which then becomes the basis for the desktops subsequently presented to the users for work. There are variations of VDI implementations such as “persistent”, “non-persistent”, and “desktop session.” The persistent type preserves changes to the VDI desktop operating system from one session to the next. The non-persistent type does not preserve changes to the VDI desktop perating system from one session to the next. To the user this desktop is little different than other virtual or physical device, other than it is accessed over a network.
+A VDI environment presents a full desktop session, including applications, to a computer user over a network. VDI environments usually use a base operating system image, which then becomes the basis for the desktops subsequently presented to the users for work. There are variations of VDI implementations such as “persistent”, “non-persistent”, and “desktop session.” The persistent type preserves changes to the VDI desktop operating system from one session to the next. The non-persistent type does not preserve changes to the VDI desktop operating system from one session to the next. To the user this desktop is little different than other virtual or physical device, other than it is accessed over a network.
 
 The optimization settings would take place on a reference device. A VM is an ideal place to build the image, because you can save the state, make checkpoints and backups can be made, and other useful tasks. Start by installing default operating system on the base VM, and then optimize the base VM for VDI use by removing unneeded apps, installing Windows updates, installing other updates, deleting temporary files, applying settings, etc.
 
@@ -50,7 +50,7 @@ There are several different implementations of persistent VDI:
 
     -   In this circumstance, operating system and app servicing might operate normally, using traditional servicing software such as Windows Server Update Services or other management technologies.
 
- ### Non-Persistent VDI
+### Non-Persistent VDI
 
 When a non-persistent VDI implementation is based on a base or “gold” image, the optimizations are mostly performed in the base image, and then through local settings and local policies.
 
@@ -121,13 +121,11 @@ tool.
 
 -   Hypervisor / Host settings
 
- ##### Global VDI operating system optimization
-
+##### Global VDI operating system optimization
 
 Global VDI settings include the following:
 
--   [Universal Windows Platform (UWP) app
-    cleanup](#universal-windows-platform-app-cleanup)
+-   [Universal Windows Platform (UWP) app cleanup](#universal-windows-platform-app-cleanup)
 
 -   [Clean up optional features](#clean-up-optional-features)
 
@@ -150,7 +148,7 @@ Global VDI settings include the following:
     Functionality Baseline](https://go.microsoft.com/fwlink/?linkid=828887)
     guidance.
 
--   [Disk cleanup](#disk-cleanup) (including using the Disk Cleanup wizard)
+-   [Disk cleanup](#disk-cleanup-including-using-the-disk-cleanup-wizard)
 
 ### Universal Windows Platform app cleanup
 
@@ -170,18 +168,17 @@ In fact, if you remove those from the installation .WIM file using the links pro
 
 Run the following command to enumerate provisioned UWP apps from a running Windows 10 operating system, as in this truncated example output from PowerShell:
 
-```azurecli
+```powershell
 
     Get-AppxProvisionedPackage -Online 
-    DisplayName : Microsoft.3DBuilder
-    Version : 13.0.10349.0  
+    
+    DisplayName  : Microsoft.3DBuilder
+    Version      : 13.0.10349.0  
     Architecture : neutral
-    ResourceId : \~ 
-    PackageName : Microsoft.3DBuilder_13.0.10349.0_neutral_\~_8wekyb3d8bbwe 
-    Regions : 
-    DisplayName : Microsoft.Appconnector Version : 2015.707.550.0 Architecture : neutral
-    ResourceId : \~ 
-    PackageName : Microsoft.Appconnector_2015.707.550.0_neutral_\~_8wekyb3d8bbwe Regions : ... 
+    ResourceId   : \~ 
+    PackageName  : Microsoft.3DBuilder_13.0.10349.0_neutral_\~_8wekyb3d8bbwe 
+    Regions      : 
+    ...
 ```
 
 
@@ -205,14 +202,7 @@ PowerShell command to remove UWP app payloads:
 
 Each UWP app should be evaluated for applicability in each unique environment. You will want to install a default installation of Windows 10, version 1803, then note which apps are running and consuming memory. For example, you might want to consider removing apps that start automatically, or apps that automatically display information on the Start menu, such as Weather and News, and that might not be of use in your environment.
 
-Also, if not using the Photos app, consider removing it. Starting with Windows 10, version 1803, there is a default setting in the Photos app called **Show a notification when new albums are available**.
-
-
-
-In new installations on a virtual machine, this app uses approximately 145 MB of memory, specifically private working set memory. 
-
-
-Changing the **Show a notification when new albums are available** setting for all users is not practical at this time.
+One of the "inbox" UWP apps called Photos, has a default setting called **Show a notification when new albums are available**.  The Photos app can use approximately 145 MB of memory; specifically private working set memory, even if not being used.  Changing the **Show a notification when new albums are available** setting for all users is not practical at this time, hence the recommendation to remove the Photos app if it is not needed or desired.
 
 ### Clean up optional features
 

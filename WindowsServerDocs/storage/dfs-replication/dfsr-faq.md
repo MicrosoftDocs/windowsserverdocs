@@ -11,7 +11,7 @@ ms.author: jgerend
 # DFS Replication: Frequently Asked Questions (FAQ)
 
 
-Updated: October 9, 2013
+Updated: April 30, 2019
 
 Applies To: Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2, Windows Server 2008
 

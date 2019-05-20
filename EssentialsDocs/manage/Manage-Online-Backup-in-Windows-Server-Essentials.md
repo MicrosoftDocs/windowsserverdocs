@@ -66,7 +66,7 @@ manager: dongill
   
 3.  In the **ONLINE BACKUP** area, click **Upload certificate to Azure Backup vault**.  
   
-     That opens **Recovery Services** in the  Azure Management Portal. If you aren ��t already signed in to  Azure, you'll need to sign in using your Microsoft account.  
+     That opens **Recovery Services** in the  Azure Management Portal. If you aren't already signed in to  Azure, you'll need to sign in using your Microsoft account.  
   
 4.  Click the name of the backup vault you'll use for online backups to open the **Quick Start** page for the backup vault.  
   
@@ -371,7 +371,7 @@ manager: dongill
   
      If you already have an  Azure subscription, click **Portal** in the upper-right corner of the web page to go to the  Azure Management Portal.  
   
-5.  On the  Azure Management Portal page, you'll see **Recovery Services** in the left pane. That ��s where you ��ll manage the backup vaults that store your online backups from Windows Server Essentials.  
+5.  On the  Azure Management Portal page, you'll see **Recovery Services** in the left pane. That's where you'll manage the backup vaults that store your online backups from Windows Server Essentials.  
   
 ####  <a name="BKMK_Createabackupvaulttostoreonlinebackups"></a> Create a backup vault to store online backups  
   
@@ -441,7 +441,7 @@ manager: dongill
 |------------|-----------------|  
 |**Folder Name:**|The name of the folder that is included in the online backup.<br /><br /> To add or exclude a folder, run the **Configure online backup** task.|  
 |**Folder Path:**|The location of the folder.|  
-|**Status:**|There are three types of status  � **Protected**, **Not protected**, and **Unknown**.|  
+|**Status:**|There are three types of status - **Protected**, **Not protected**, and **Unknown**.|  
   
 ###  <a name="BKMK_19"></a> Online backup history in Windows Server Essentials  
  The **Backup History** sub-section in the Online Backup section of the Dashboard displays a list of recent online backups. You can use successful backups to restore file and folders. The following table describes the information that is included in the list.  
@@ -450,7 +450,7 @@ manager: dongill
 |------------|-----------------|  
 |**Operation:**|There are two types of operations - **Backup** and **Restore**.|  
 |**Time:**|This is the time logged for the most recent status.|  
-|**Status:**|There are five types of status  � **Success**, **In progress**, **Canceled**, **Warning**, and **Unsuccessful**.|  
+|**Status:**|There are five types of status - **Success**, **In progress**, **Canceled**, **Warning**, and **Unsuccessful**.|  
   
 ## See also  
   

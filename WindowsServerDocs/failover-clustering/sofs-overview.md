@@ -1,6 +1,6 @@
 ---
 title: Scale-Out File Server for application data overview
-description: Overview of the Scale-Out File Server feature for Windows Server 201 R2, Windows Server 2012, and Windows Server 2016.
+description: Overview of the Scale-Out File Server feature for Windows Server 201 R2 and Windows Server 2012.
 ms.prod: windows-server-threshold 
 ms.topic: article 
 author: JasonGerend 
@@ -11,7 +11,7 @@ ms.localizationpriority: medium
 ---
 # Scale-Out File Server for application data overview
 
->Applies to: Windows Server 2012 R2, Windows Server 2012, Windows Server 2016
+>Applies to: Windows Server 2012 R2, Windows Server 2012
 
 Scale-Out File Server is a feature that is designed to provide scale-out file shares that are continuously available for file-based server application storage. Scale-out file shares provides the ability to share the same folder from multiple nodes of the same cluster. This scenario focuses on how to plan for and deploy Scale-Out File Server.
 

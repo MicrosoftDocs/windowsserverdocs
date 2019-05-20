@@ -48,7 +48,7 @@ manager: dongill
   
          Before you manually configure the router to forward the required ports to Windows Server Essentials, you must set up a Dynamic Host Configuration Protocol (DHCP) reservation for your server that is running Windows Server Essentials on the router. This step guarantees that the IP address that you will be forwarding the ports to do not change.  
   
-         For information about how to manually set up a DHCP reservation for your server on your router, see the manufacturer ��s documentation for your router.  
+         For information about how to manually set up a DHCP reservation for your server on your router, see the manufacturer's documentation for your router.  
   
     -   Configure port forwarding on your router for the following ports:  
   
@@ -57,7 +57,7 @@ manager: dongill
         |HTTP|TCP 80|  
         |HTTPS|TCP 443|  
   
-     For information about how to manually set up port forwarding on your router, see the manufacturer ��s documentation.  
+     For information about how to manually set up port forwarding on your router, see the manufacturer's documentation.  
   
      A typical router configuration page includes a table that resembles the following.  
   

@@ -26,7 +26,7 @@ ms.date: 02/12/2019
 * I get a **This site/page can't be reached** error in my web browser (select your deployment type)
     * [I have Windows Admin Center installed as an App on Windows 10](#whitescreenw10)
     * [I have Windows Admin Center installed as an Gateway on Windows Server](#whitescreenws)
-    * [I have Windows Admin Center installed as an Gateway on an Azure VM](#whitescreenazvm)
+    * [I have Windows Admin Center installed as an Gateway on an Azure VM](#if-you-have-installed-windows-admin-center-in-an-azure-windows-server-vm)
 
 * [Windows Admin Center home page loads, but I'm stuck on the Add Connection pane, or I can't connect to any machine.](#winvercompat)
 
@@ -104,9 +104,7 @@ This can happen if your default PowerShell module path has been modified or remo
 
 [[back to top]](#toc)
 
-<a id="whitescreenazvm"></a>  
-
-### If you've installed Windows Admin Center in an Azure Windows Server VM
+### If you have installed Windows Admin Center in an Azure Windows Server VM
 
 * [Check the Windows version](#winvercompat)
 * Did you add an inbound port rule for HTTPS? 

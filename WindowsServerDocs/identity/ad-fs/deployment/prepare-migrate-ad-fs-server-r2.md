@@ -14,7 +14,7 @@ ms.technology: identity-adfs
 
 This document describes how to migrate an AD FS 2.0 or Windows Server 2012 federation server farm to a Windows Server 2012 R2 AD FS farm.  The steps can be used with AD FS farms that use either WID or SQL Server as the underlying database.  
   
--   [Migration Process Outline](prepare-migrate-ad-fs-server-r2.md#migrate-process-outline)  
+-   [Migration Process Outline](prepare-migrate-ad-fs-server-r2.md#migration-process-outline)  
   
 -   [New AD FS functionality in Windows Server 2012 R2](prepare-migrate-ad-fs-server-r2.md#new-ad-fs-functionality-in-windows-server-2012-r2)  
   
@@ -24,7 +24,8 @@ This document describes how to migrate an AD FS 2.0 or Windows Server 2012 feder
   
 -   [Other migration tasks and considerations](prepare-migrate-ad-fs-server-r2.md#other-migration-tasks-and-considerations)  
   
-##  Migration Process Outline  
+##  Migration Process Outline
+
  To complete the migration of your AD FS federation server farm to Windows Server 2012 R2, you must complete the following tasks:  
   
 1.  Export, record, and backup the following configuration data in your existing AD FS farm. For detailed instructions on how to complete these tasks, see [Migrating the AD FS Federation Server](migrate-ad-fs-fed-server-r2.md).  

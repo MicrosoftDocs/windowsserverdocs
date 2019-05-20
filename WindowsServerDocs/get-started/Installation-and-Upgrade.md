@@ -1,23 +1,21 @@
 --- 
 title: Windows Server Installation and Upgrade
-description: 
-ms.custom: na
+description: How to install, upgrade, or migrate to a newer version of Windows Server.
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
-ms.date: 07/12/2018
+ms.date: 05/14/2019
 ms.technology: server-general
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 98f876bd-63ff-4c3a-95d4-a8dd8d0d119c
-author: jaimeo
-ms.author: jaimeo
+author: jasongerend
+ms.author: jgerend
 manager: dougkim
 ms.localizationpriority: medium
 ---
-# Windows Server Installation and Upgrade
+# Windows Server installation and upgrade
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2, Windows Server 2008
+>Applies to: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2, Windows Server 2008
+
+Looking for Windows Server 2019? See [Install, upgrade, or migrate to Windows Server 2019](../get-started-19/install-upgrade-migrate-19.md).
 
 > [!IMPORTANT]
 > Extended support for Windows Server 2008 R2 and Windows Server 2008 ends in January 2020. [Learn about your upgrade options](#upgrading-from-windows-server-2008-r2-or-windows-server-2008).
@@ -25,13 +23,14 @@ ms.localizationpriority: medium
 Is it time to move to a newer version of Windows Server? Depending on what you are running now, you have lots of options to get there.
 
 ## Installation
+
 If you want to move to a newer version of Windows Server on the same hardware, one way that always works is a **clean installation**, where you just install the newer operating system directly over the old one on the same hardware, thus deleting the previous operating system. That is the simplest way, but you will need to back up your data first and plan to reinstall your applications. There are a few things to be aware of, such as system requirements, so be sure to check the details for [Windows Server 2016](https://go.microsoft.com/fwlink/?LinkID=825558), [Windows Server 2012 R2](https://technet.microsoft.com/library/dn303418), and [Windows Server 2012](https://technet.microsoft.com/library/jj134246.aspx).
 
 Moving from any pre-release version (such as Windows Server 2016 Technical Preview) to the released version (Windows Server 2016) always requires a clean installation.
 
 ## Migration (recommended for Windows Server 2016)
 
-Windows Server [migration] documentation helps you migrate one role or feature at a time from a source computer that is running Windows Server to another destination computer that is running Windows Server, either the same or a newer version. For these purposes, migration is defined as moving one role or feature and its data to a different computer, not upgrading the feature on the same computer. This is the recommended manner in which to move your existing workload and data to a more recent version of Windows Server. To get started, check the [server role upgrade and migration matrix](https://go.microsoft.com/fwlink/?LinkId=828595) for Windows Server 2016.
+Windows Server migration documentation helps you migrate one role or feature at a time from a source computer that is running Windows Server to another destination computer that is running Windows Server, either the same or a newer version. For these purposes, migration is defined as moving one role or feature and its data to a different computer, not upgrading the feature on the same computer. This is the recommended manner in which to move your existing workload and data to a more recent version of Windows Server. To get started, check the [server role upgrade and migration matrix](https://go.microsoft.com/fwlink/?LinkId=828595) for Windows Server.
 
 ## Cluster OS Rolling Upgrade
 Cluster OS Rolling Upgrade is a new feature in Windows Server 2016 that enables an administrator to upgrade the operating system of the cluster nodes from Windows Server 2012 R2 to Windows Server 2016 without stopping the Hyper-V or the Scale-Out File Server workloads. This feature allows you to avoid downtime which could impact Service Level Agreements. This new feature is discussed in more detail at [Cluster operating system rolling upgrade](https://technet.microsoft.com/windows-server-docs/failover-clustering/cluster-operating-system-rolling-upgrade).
@@ -133,7 +132,7 @@ You can convert the evaluation version of Windows Server 2012 Standard to either
 
 As described in [Upgrade Windows Server 2008 and Windows Server 2008 R2](modernize-windows-server-2008.md), the extended support for Windows Server 2008 R2/Windows Server 2008 ends in January of 2020. To ensure no gap in support, you need to upgrade to a supported version of Windows Server, or rehost in Azure by moving to [specialized Windows Server 2008 R2 VMs](uploading-specialized-WS08-image-to-azure.md). Check out the  [Migration Guide for Windows Server](https://go.microsoft.com/fwlink/?linkid=872689) for information and considerations for planning your migration/upgrade.
 
-For on-premises servers, there is no direct upgrade path from Windows Server 2008 R2 to Windows Server 2016 or later. Instead, upgrade first to Windows Server 2012 R2, and then [upgrade to Windows Server 2016](#Upgrading-to-Windows-Server-2016).
+For on-premises servers, there is no direct upgrade path from Windows Server 2008 R2 to Windows Server 2016 or later. Instead, upgrade first to Windows Server 2012 R2, and then [upgrade to Windows Server 2016](#upgrading-to-windows-server-2016).
 
 As you are planning your upgrade, be aware of the following guidelines for the middle step of upgrading to Windows Server 2012 R2.
 
