@@ -10,7 +10,7 @@ ms.prod: windows-server-threshold
 ms.technology: identity-adfs
 ---
 
-# Configure 3rd party authenticaiton providers as primary authentication in AD FS 2019
+# Configure 3rd party authentication providers as primary authentication in AD FS 2019
 
 >Applies To: Windows Server 2019
 

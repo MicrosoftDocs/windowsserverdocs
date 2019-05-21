@@ -99,7 +99,7 @@ After you minimize locks on the files that will be replicated, you can preseed t
     |"\<destination replicated folder path\>"|Specifies the path to the folder that will store the preseeded files.<br><br>The destination folder must not already exist on the destination server. To get matching file hashes, Robocopy must create the root folder when it preseeds the files.|
     |/e|Copies subdirectories and their files, as well as empty subdirectories.|
     |/b|Copies files in Backup mode.|
-    |/copyal|Copies all file information, including data, attributes, time stamps, the NTFS access control list (ACL), owner information, and auditing information.|
+    |/copyall|Copies all file information, including data, attributes, time stamps, the NTFS access control list (ACL), owner information, and auditing information.|
     |/r:6|Retries the operation six times when an error occurs.|
     |/w:5|Waits 5 seconds between retries.|
     |MT:64|Copies 64 files simultaneously.|
