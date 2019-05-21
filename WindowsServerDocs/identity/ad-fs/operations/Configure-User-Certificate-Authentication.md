@@ -38,7 +38,7 @@ For more information on configuring this for Chrome, please refer to this [link]
 
 
 ## Troubleshooting
-- If certificate authentication requests fail with an HTTP 204 "No Content from https://certauth.fs.contoso.com" response, verify that the root and any intermediate CA certificates are installed, respectively, to the trusted root CA and intermediate CA certificate stores on all federation servers.
+- If certificate authentication requests fail with an HTTP 204 "No Content from https:\//certauth.fs.contoso.com" response, verify that the root and any intermediate CA certificates are installed, respectively, to the trusted root CA and intermediate CA certificate stores on all federation servers.
 - If certificate authentication requests are failing for unknown reasons, export the client certificate to a .cer file, and run the command 
 
 `certutil -f -urlfetch -verify certificatefilename.cer`
