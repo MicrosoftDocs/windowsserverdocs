@@ -21,93 +21,29 @@ Storage Spaces Direct is included in Windows Server 2019 Datacenter, Windows Ser
 
 For other applications of Storage Spaces, such as Shared SAS clusters and stand-alone servers, see [Storage Spaces overview](overview.md). If you're looking for info about using Storage Spaces on a Windows 10 PC, see [Storage Spaces in Windows 10](https://support.microsoft.com/help/12438/windows-10-storage-spaces).
 
-<table>
-    <tr style="border: 0;">
-        <td style="padding: 5px; border: 0;">
-            <strong>Understand</a></strong>
-            <ul>
-			  <li>Overview (you are here)</li>
-			  <li><a href="understand-the-cache.md">Understand the cache</a></li>
-			  <li><a href="storage-spaces-fault-tolerance.md">Fault tolerance and storage efficiency</a></li>
-              <li><a href="drive-symmetry-considerations.md">Drive symmetry considerations</a></li>
-              <li><a href="understand-storage-resync.md">Understand and monitor storage resync</a></li>
-              <li><a href="understand-quorum.md">Understanding cluster and pool quorum</a></li>
-              <li><a href="cluster-sets.md">Cluster sets</a></li>
-		  	</ul>
-        </td>
-        <td style="padding: 5px; border: 0;">
-            <strong>Plan</a></strong>
-            <ul>
-			  <li><a href="storage-spaces-direct-hardware-requirements.md">Hardware requirements</a></li>
-              <li><a href="csv-cache.md">Using the CSV in-memory read cache</li>
-			  <li><a href="choosing-drives.md">Choose drives</a></li>
-			  <li><a href="plan-volumes.md">Plan volumes</a></li>
-              <li><a href="storage-spaces-direct-in-vm.md">Using guest VM clusters</a></li>
-              <li><a href="storage-spaces-direct-disaster-recovery.md">Disaster recovery</a></li>
-		    </ul>
-        </td>
-    </tr>
-    <tr style="border: 0;">
-        <td style="padding: 5px; border: 0;">
-            <strong>Deploy</a></strong>
-            <ul>
-			        <li><a href="deploy-storage-spaces-direct.md">Deploy Storage Spaces Direct</a></li>
-			        <li><a href="create-volumes.md">Create volumes</a></li>
-              <li><a href="nested-resiliency.md">Nested resiliency</a></li>
-              <li><a href="../../failover-clustering/manage-cluster-quorum.md">Configure quorum</a></li>
-              <li><a href="upgrade-storage-spaces-direct-to-windows-server-2019.md">Upgrade a Storage Spaces Direct cluster to Windows Server 2019</a></li>
-		    </ul>
-        </td>        
-        <td style="padding: 5px; border: 0;">
-            <strong>Manage</a></strong>
-            <ul>
-              <li><a href="../../manage/windows-admin-center/use/manage-hyper-converged.md">Manage with Windows Admin Center</a></li>
-			  <li><a href="add-nodes.md">Add servers or drives</a></li>
-			  <li><a href="maintain-servers.md">Taking a server offline for maintenance</li>
-			  <li><a href="remove-servers.md">Remove servers</a></li>
-			  <li><a href="resize-volumes.md">Extend volumes</a></li>
-			  <li><a href="delete-volumes.md">Delete volumes</a></li>
-			  <li><a href="../update-firmware.md">Update drive firmware</a></li>
-              <li><a href="performance-history.md">Performance history</a></li>
-              <li><a href="delimit-volume-allocation.md">Delimit the allocation of volumes</a></li>
-              <li><a href="configure-azure-monitor.md">Use Azure Monitor on a hyper-converged cluster</a></li>
-		    </ul>
-        </td>
-    </tr>
-    <tr style="border: 0;">
-         <td style="padding: 5px; border: 0;">
-            <strong>Troubleshooting</a></strong>
-            <ul>
-              <li><a href="storage-spaces-states.md">Troubleshoot health and operational states</a></li>
-              <li><a href="data-collection.md">Collect diagnostic data with Storage Spaces Direct</a></li>
-            </ul>
-         <td style="padding: 5px; border: 0;">
-            <strong>Recent blog posts</a></strong>
-            <ul>
-              <li><a href="https://blogs.technet.microsoft.com/filecab/2018/10/30/windows-server-2019-and-intel-optane-dc-persistent-memory/">13.7 million IOPS with Storage Spaces Direct: the new industry record for hyper-converged infrastructure</a></li>
-              <li><a href="https://blogs.technet.microsoft.com/filecab/2018/10/02/hci-the-countdown-clock-starts-now/">Hyper-converged infrastructure in Windows Server 2019 - the countdown clock starts now!</a></li>
-              <li><a href="https://blogs.technet.microsoft.com/filecab/2018/06/27/windows-server-summit-recap/">Five big announcements from the Windows Server Summit</a></li>
-              <li><a href="https://blogs.technet.microsoft.com/filecab/2018/03/27/storage-spaces-direct-momentum/">10,000 Storage Spaces Direct clusters and counting...</a></li>
-            </ul>
-</table>
+|       |       |
+|   -   |   -   |
+|**Understand**<br><ul><li>Overview (you are here)</li><li>[Understand the cache](../understand-the-cache.md)</li><li>[Fault tolerance and storage efficiency](../storage-spaces-fault-tolerance.md)<li>[Drive symmetry considerations](../drive-symmetry-considerations.md)[Understand and monitor storage resync](../understand-storage-resync.md)<li>[](../)<a href="understand-storage-resync.md">Understand and monitor storage resync</a></li><li>[](../)<a href="understand-quorum.md">Understanding cluster and pool quorum</a></li><li>[](../)<a href="cluster-sets.md">Cluster sets</a></li>|**Plan**<br><ul><li>[](../)<a href="storage-spaces-direct-hardware-requirements.md">Hardware requirements</a></li><li>[](../)<a href="csv-cache.md">Using the CSV in-memory read cache</li><li>[](../)<a href="choosing-drives.md">Choose drives</a></li><li>[](../)<a href="plan-volumes.md">Plan volumes</a></li><li>[](../)<a href="storage-spaces-direct-in-vm.md">Using guest VM clusters</a></li><li>[](../)<a href="storage-spaces-direct-disaster-recovery.md">Disaster recovery</a></li>|
+|**Deploy**<br><ul><li>[](../)<a href="deploy-storage-spaces-direct.md">Deploy Storage Spaces Direct</a></li><li><a href="create-volumes.md">Create volumes</a></li><li><a href="nested-resiliency.md">Nested resiliency</a></li><li>[](../)<a href="../../failover-clustering/manage-cluster-quorum.md">Configure quorum</a></li><li>[](../)<a href="upgrade-storage-spaces-direct-to-windows-server-2019.md">Upgrade a Storage Spaces Direct cluster to Windows Server 2019</a></li>|**Manage**<br><ul><li>[](../)<a href="../../manage/windows-admin-center/use/manage-hyper-converged.md">Manage with Windows Admin Center</a></li><li>[](../)<a href="add-nodes.md">Add servers or drives</a></li><li>[](../)<a href="maintain-servers.md">Taking a server offline for maintenance</li><li>[](../)<a href="remove-servers.md">Remove servers</a></li><li>[](../)<a href="resize-volumes.md">Extend volumes</a></li><li>[](../)<a href="delete-volumes.md">Delete volumes</a></li><li>[](../)<a href="../update-firmware.md">Update drive firmware</a></li><li>[](../)<a href="performance-history.md">Performance history</a></li><li>[](../)<a href="delimit-volume-allocation.md">Delimit the allocation of volumes</a></li><li>[](../)<a href="configure-azure-monitor.md">Use Azure Monitor on a hyper-converged cluster</a></li>|
+|**Troubleshooting**<br><ul><li>[](../)<a href="storage-spaces-states.md">Troubleshoot health and operational states</a></li><li>[](../)<a href="data-collection.md">Collect diagnostic data with Storage Spaces Direct</a></li>|**Recent blog posts**<br><ul><li>[](../)a href="https://blogs.technet.microsoft.com/filecab/2018/10/30/windows-server-2019-and-intel-optane-dc-persistent-memory/">13.7 million IOPS with Storage Spaces Direct: the new industry record for hyper-converged infrastructure</a></li><li>[](../)<a href="https://blogs.technet.microsoft.com/filecab/2018/10/02/hci-the-countdown-clock-starts-now/">Hyper-converged infrastructure in Windows Server 2019 - the countdown clock starts now!</a></li><li>[](../)<a href="https://blogs.technet.microsoft.com/filecab/2018/06/27/windows-server-summit-recap/">Five big announcements from the Windows Server Summit</a></li><li>[](../)<a href="https://blogs.technet.microsoft.com/filecab/2018/03/27/storage-spaces-direct-momentum/">10,000 Storage Spaces Direct clusters and counting...</a></li>|
 
 ## Videos
 
 **Quick Video Overview (5 minutes)**
 
-<iframe src="https://www.youtube-nocookie.com/embed/raeUiNtMk0E" width="560" height="315" allowfullscreen></iframe>
+>[!Video https://www.youtube-nocookie.com/embed/raeUiNtMk0E]
 
 **Storage Spaces Direct at Microsoft Ignite 2018 (1 hour)**
 
-[Watch on YouTube](https://www.youtube.com/watch?v=5kaUiW3qo30)
+>[!Video https://www.youtube.com/watch?v=5kaUiW3qo30]
 
 **Storage Spaces Direct at Microsoft Ignite 2017 (1 hour)**
 
-[Watch on YouTube](https://www.youtube.com/watch?v=YDr2sqNB-3c)
+>[!Video https://www.youtube.com/watch?v=5kaUiW3qo30)
 
 **Launch Event at Microsoft Ignite 2016 (1 hour)**
 
-[Watch on YouTube](https://www.youtube.com/watch?v=-LK2ViRGbWs)
+>[!Video https://www.youtube.com/watch?v=5kaUiW3qo30]
 
 ## Key benefits
 

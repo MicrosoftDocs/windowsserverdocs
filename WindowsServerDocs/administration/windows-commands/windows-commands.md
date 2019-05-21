@@ -22,34 +22,34 @@ This set of documentation describes the Windows Commands you can use to automate
 
 To find information about a specific command, in the following A-Z menu, click the letter that the command starts with, and then click the command name.
 
-[A](#BKMK_a) |
-[B](#BKMK_b) | 
-[C](#BKMK_c) | 
-[D](#BKMK_d) | 
-[E](#BKMK_e) | 
-[F](#BKMK_f) | 
-[G](#BKMK_g) | 
-[H](#BKMK_h) | 
-[I](#BKMK_i) |
-[J](#BKMK_j) | 
-[K](#BKMK_k) | 
-[L](#BKMK_l) | 
-[M](#BKMK_m) | 
-[N](#BKMK_n) | 
-[O](#BKMK_o) | 
-[P](#BKMK_p) | 
-[Q](#BKMK_q) | 
-[R](#BKMK_r) | 
-[S](#BKMK_s) | 
-[T](#BKMK_t) | 
-[U](#BKMK_u) | 
-[V](#BKMK_v) | 
-[W](#BKMK_w) | 
-[X](#BKMK_x) | 
+[A](#a) |
+[B](#b) | 
+[C](#c) | 
+[D](#d) | 
+[E](#e) | 
+[F](#f) | 
+[G](#g) | 
+[H](#h) | 
+[I](#i) |
+[J](#j) | 
+[K](#k) | 
+[L](#l) | 
+[M](#m) | 
+[N](#n) | 
+[O](#o) | 
+[P](#p) | 
+[Q](#q) | 
+[R](#r) | 
+[S](#s) | 
+[T](#t) | 
+[U](#u) | 
+[V](#v) | 
+[W](#w) | 
+[X](#x) | 
 Y | 
 Z
 
-## <a name="BKMK_PREREQ"></a>Prerequisites
+## Prerequisites
 The information that is contained in this PDF applies to:
 
 -   Windows Server 2019
@@ -62,7 +62,7 @@ The information that is contained in this PDF applies to:
 -   Windows 10
 -   Windows 8.1
 
-### <a name="BKMK_OVR"></a>Command shell overview
+### Command shell overview
 The Command shell was the first shell built into Windows to automate routine tasks, like user account management or nightly backups, with batch (.bat) files. With Windows Script Host you could run more sophisticated scripts in the Command shell. For more information, see [cscript](cscript.md) or [wscript](wscript.md). You can perform operations more efficiently by using scripts than you can by using the user interface. Scripts accept all Commands that are available at the command line.
 
 Windows has two command shells: The Command shell and [PowerShell](https://docs.microsoft.com/powershell/scripting/powershell-scripting?view=powershell-6). Each shell is a software program that provides direct communication between you and the operating system or application, providing an environment to automate IT operations.
@@ -83,37 +83,37 @@ For the most robust, up-to-date Windows automation, we recommend using PowerShel
 > 
 > To set the **reg_DWOrd** value, use the hexadecimal value of a control character for a particular function (for example, **0 9** is Tab and **0 08** is Backspace). User-specified settings take precedence over computer settings, and command-line options take precedence over registry settings.
 
-## <a name="BKMK_CmdRef"></a>Command-line reference A-Z
+## Command-line reference A-Z
 To find information about a specific Windows Command, in the following A-Z menu, click the letter that the Command starts with, and then click the Command name.
 
-[A](#BKMK_a) |
-[B](#BKMK_b) | 
-[C](#BKMK_c) | 
-[D](#BKMK_d) | 
-[E](#BKMK_e) | 
-[F](#BKMK_f) | 
-[G](#BKMK_g) | 
-[H](#BKMK_h) | 
-[I](#BKMK_i) |
-[J](#BKMK_j) | 
-[K](#BKMK_k) | 
-[L](#BKMK_l) | 
-[M](#BKMK_m) | 
-[N](#BKMK_n) | 
-[O](#BKMK_o) | 
-[P](#BKMK_p) | 
-[Q](#BKMK_q) | 
-[R](#BKMK_r) | 
-[S](#BKMK_s) | 
-[T](#BKMK_t) | 
-[U](#BKMK_u) | 
-[V](#BKMK_v) | 
-[W](#BKMK_w) | 
-[X](#BKMK_x) | 
+[A](#a) |
+[B](#b) | 
+[C](#c) | 
+[D](#d) | 
+[E](#e) | 
+[F](#f) | 
+[G](#g) | 
+[H](#h) | 
+[I](#i) |
+[J](#j) | 
+[K](#k) | 
+[L](#l) | 
+[M](#m) | 
+[N](#n) | 
+[O](#o) | 
+[P](#p) | 
+[Q](#q) | 
+[R](#r) | 
+[S](#s) | 
+[T](#t) | 
+[U](#u) | 
+[V](#v) | 
+[W](#w) | 
+[X](#x) | 
 Y | 
 Z)
 
-### <a name="BKMK_a"></a>A
+### A
 -   [append](append.md)
 -   [arp](arp.md)
 -   [assoc](assoc.md)
@@ -125,7 +125,7 @@ Z)
 -   [autoconv](autoconv.md)
 -   [autofmt](autofmt.md)
 
-### <a name="BKMK_b"></a>B
+### B
 -   [bcdboot](bcdboot.md)
 -   [bcdedit](bcdedit.md)
 -   [bdehdcfg](bdehdcfg.md)
@@ -204,7 +204,7 @@ Z)
   -   [bootcfg timeout](bootcfg-timeout.md)
 -   [break](break_1.md)
 
-### <a name="BKMK_c"></a>C
+### C
 -   [cacls](cacls_1.md)
 -   [call](call.md)
 -   [cd](cd.md)
@@ -236,7 +236,7 @@ Z)
 -   [cprofile](cprofile.md)
 -   [cscript](cscript.md)
 
-### <a name="BKMK_d"></a>D
+### D
 -   [date](date.md)
 -   [dcgpofix](dcgpofix.md)
 -   [defrag](defrag.md)
@@ -255,7 +255,7 @@ Z)
 -   [doskey](doskey.md)
 -   [driverquery](driverquery.md)
 
-### <a name="BKMK_e"></a>E
+### E
 -   [echo](echo.md)
 -   [edit](edit.md)
 -   [endlocal](endlocal.md)
@@ -268,7 +268,7 @@ Z)
 -   [expand](expand.md)
 -   [extract](extract.md)
 
-### <a name="BKMK_f"></a>F
+### F
 -   [fc](fc.md)
 -   [find](find.md)
 -   [findstr](findstr.md)
@@ -300,7 +300,7 @@ Z)
 -   [ftype](ftype.md)
 -   [fveupdate](fveupdate.md)
 
-### <a name="BKMK_g"></a>G
+### G
 -   [getmac](getmac.md)
 -   [gettype](gettype.md)
 -   [goto](goto.md)
@@ -309,12 +309,12 @@ Z)
 -   [gpupdate](gpupdate.md)
 -   [graftabl](graftabl.md)
 
-### <a name="BKMK_h"></a>H
+### H
 -   [help](help.md)
 -   [helpctr](helpctr.md)
 -   [hostname](hostname.md)
 
-### <a name="BKMK_i"></a>I
+### I
 -   [icacls](icacls.md)
 -   [if](if.md)
 -   [inuse](inuse.md)
@@ -322,10 +322,10 @@ Z)
 -   [ipxroute](ipxroute.md)
 -   [irftp](irftp.md)
 
-### <a name="BKMK_j"></a>J
+### J
 -   [jetpack](jetpack.md)
 
-### <a name="BKMK_k"></a>K
+### K
 -   [klist](klist.md)
 -   [ksetup](ksetup.md)
   -   [ksetup:setrealm](ksetup-setrealm.md)
@@ -353,7 +353,7 @@ Z)
 -   [ktmutil](ktmutil.md)
 -   [ktpass](ktpass.md)
 
-### <a name="BKMK_l"></a>L
+### L
 -   [label](label.md)
 -   [lodctr](lodctr.md)
 -   [logman](logman.md)
@@ -367,7 +367,7 @@ Z)
 -   [lpq](lpq.md)
 -   [lpr](lpr.md)
 
-### <a name="BKMK_m"></a>M
+### M
 -   [macfile](macfile.md)
 -   [makecab](makecab.md)
 -   [manage-bde](manage-bde.md)
@@ -408,7 +408,7 @@ Z)
 -   [msinfo32](msinfo32.md)
 -   [mstsc](mstsc.md)
 
-### <a name="BKMK_n"></a>N
+### N
 -   [nbtstat](nbtstat.md)
 -   [netcfg](netcfg.md)
 -   [netsh](netsh.md)
@@ -447,10 +447,10 @@ Z)
 -   [ntcmdprompt](ntcmdprompt.md)
 -   [ntfrsutl](ntfrsutl.md)
 
-### <a name="BKMK_o"></a>O
+### O
 -   [openfiles](openfiles.md)
 
-### <a name="BKMK_p"></a>P
+### P
 -   [pagefileconfig](pagefileconfig.md)
 -   [path](path.md)
 -   [pathping](pathping.md)
@@ -476,14 +476,14 @@ Z)
 -   [pushd](pushd.md)
 -   [pushprinterconnections](pushprinterconnections.md)
 
-### <a name="BKMK_q"></a>Q
+### Q
 -   [qappsrv](qappsrv.md)
 -   [qprocess](qprocess.md)
 -   [query](query.md)
 -   [quser](quser.md)
 -   [qwinsta](qwinsta.md)
 
-### <a name="BKMK_r"></a>R
+### R
 -   [rcp](rcp.md)
 -   [rd](rd.md)
 -   [rdpsign](rdpsign.md)
@@ -520,7 +520,7 @@ Z)
 -   [rundll32](rundll32.md)
 -   [rwinsta](rwinsta.md)
 
-### <a name="BKMK_s"></a>S
+### S
 -   [schtasks](schtasks.md)
 -   [scwcmd](Scwcmd.md)
   -   [scwcmd: analyze](scwcmd-analyze.md)
@@ -554,7 +554,7 @@ Z)
 -   [sysocmgr](sysocmgr.md)
 -   [systeminfo](systeminfo.md)
 
-### <a name="BKMK_t"></a>T
+### T
 -   [takeown](takeown.md)
 -   [tapicfg](tapicfg.md)
 -   [taskkill](taskkill.md)
@@ -579,17 +579,17 @@ Z)
 -   [typeperf](typeperf.md)
 -   [tzutil](tzutil.md)
 
-### <a name="BKMK_u"></a>U
+### U
 -   [unlodctr](unlodctr_1.md)
 
-### <a name="BKMK_v"></a>V
+### V
 -   [ver](ver.md)
 -   [verifier](verifier.md)
 -   [verify](verify_1.md)
 -   [vol](vol.md)
 -   [vssadmin](vssadmin.md)- 
 
-### <a name="BKMK_w"></a>W
+### W
 -   [waitfor](waitfor.md)
 -   [wbadmin](wbadmin.md)
   -   [wbadmin enable backup](wbadmin-enable-backup.md)
@@ -620,5 +620,5 @@ Z)
 -   [wmic](wmic.md)
 -   [wscript](wscript.md)
 
-### <a name="BKMK_x"></a>X
+### X
 -   [xcopy](xcopy.md)
