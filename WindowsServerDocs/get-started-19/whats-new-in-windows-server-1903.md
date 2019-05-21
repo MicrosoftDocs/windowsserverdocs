@@ -16,7 +16,7 @@ This topic describes some of the new features in Windows Server, version 1903, w
 
 To instead find out what's new in the latest Long-Term Servicing Channel (LTSC) release of Windows Server, see see [What's New in Windows Server 2019](../get-started-19/whats-new-19.md). Also see [What's new in Windows 10, version 1903 IT Pro content](https://docs.microsoft.com/windows/whats-new/whats-new-windows-10-version-1903).
 
-The system requirements for this release are the same as for Windows Server 2019, see [System requirements](../get-started-19/sys-reqs-19.md) for more info. To see what's been removed recently, see [Features Removed or Planned for Replacement starting with Windows Server, version 1903](../get-started-19/removed-features-1903.md)
+The system requirements for this release are the same as for Windows Server 2019—see [System requirements](../get-started-19/sys-reqs-19.md) for more info. To see what's been removed recently, see [Features Removed or Planned for Replacement starting with Windows Server, version 1903](../get-started-19/removed-features-1903.md)
 
 > [!NOTE]
 > Windows containers must use the same version of Windows as the host server, or an *earlier* version. For example, a host server running the released version of Windows Server, version 1903 (build 18342) can run Windows Server containers with the same or earlier version and build number (even if the container uses an Insider Preview version of Windows). For more info, see [Windows container version compatibility](https://docs.microsoft.com/virtualization/windowscontainers/deploy-containers/version-compatibility).

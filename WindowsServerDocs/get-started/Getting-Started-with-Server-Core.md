@@ -85,7 +85,6 @@ Installation steps for Windows Server (Semi-Annual Channel) are the same as inst
 - There’s no evaluation version for Windows Server (Semi-Annual Channel)
 - There’s no OEM or retail version. Windows Server (Semi-Annual Channel) can only be licensed through Software Assurance or loyalty programs.
 
-
-To get Windows Server version 1803, see [Introducing Windows Server, version 1803](get-started-with-1803.md).
+For more info about Semi-Annual Channel, see [Comparison of servicing channels](../get-started-19/servicing-channels-19.md).
 
 To see what's new in Windows Server Semi-Annual Channel, see [What's New in Windows Server](whats-new-in-windows-server.md)
