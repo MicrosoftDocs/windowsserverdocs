@@ -17,7 +17,7 @@ ms.date: 12/05/2016
 >Applies To: Windows 10, Windows Server 2016, Microsoft Hyper-V Server 2016, Windows Server 2019, Microsoft Hyper-V Server 2019
 
 > [!WARNING]
-> If you plan to ever upload a Windows virtual machines (VM) from on-premises to Microsoft Azure, **only generation 1 VMs** that are in the VHD file format and have a fixed sized disk are supported. For more information on uploading a Windows VHD or VHDX, see [Prepare a Windows VHD or VHDX to upload to Azure](https://docs.microsoft.com/en-us/azure/virtual-machines/windows/prepare-for-upload-vhd-image).
+> If you plan to ever upload a Windows virtual machines (VMs) from on-premises to Microsoft Azure, **only generation 1 VMs** that are in the VHD file format and have a fixed sized disk are currently supported in production. Support for Generation 2 VMs is currently available in [preview](https://docs.microsoft.com/en-us/azure/virtual-machines/windows/generation-2). For more information on uploading a Windows VHD or VHDX, see [Prepare a Windows VHD or VHDX to upload to Azure](https://docs.microsoft.com/en-us/azure/virtual-machines/windows/prepare-for-upload-vhd-image).  
 
 Your choice to create a generation 1 or generation 2 virtual machine depends on which guest operating system you want to install and the boot method you want to use to deploy the virtual machine. We recommend that you create a generation 2 virtual machine to take advantage of features like Secure Boot unless one of the following statements is true:  
 
