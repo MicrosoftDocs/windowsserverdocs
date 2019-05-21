@@ -412,6 +412,21 @@
       "redirect_document_id": true
     },
     {
+      "source_path": "WindowsServerDocs/get-started/semi-annual-channel-overview.md",
+      "redirect_url": "/windows-server/get-started-19/servicing-channels-19",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/get-started/get-started-with-1709.md",
+      "redirect_url": "/windows-server/get-started-19/servicing-channels-19",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/get-started/get-started-with-1803.md",
+      "redirect_url": "/windows-server/get-started-19/servicing-channels-19",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "WindowsServerDocs/compute/Compute.md",
       "redirect_url": "/windows-server/virtualization/Compute",
       "redirect_document_id": true
