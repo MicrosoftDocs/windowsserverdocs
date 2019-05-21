@@ -1,6 +1,8 @@
-- name: Azure Stack HCI
+- name: Azure Stack HCI content
   href: index.md
   items:
+  - name: Azure Stack HCI overview
+    href: index.md
   - name: Hyper-V
     href: ../virtualization/hyper-v/index.md
   - name: Storage Spaces Direct
