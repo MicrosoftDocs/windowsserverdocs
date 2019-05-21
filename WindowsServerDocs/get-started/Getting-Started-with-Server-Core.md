@@ -65,10 +65,10 @@ With the Server Core option, the standard user interface (the Desktop Experience
 - Windows Server Update Server
 - Active Directory Rights Management Server
 - Routing and Remote Access Server and the following sub-roles:
-- Remote Desktop Services Connection Broker
-- Licensing
-- Virtualization
-- Volume Activation Services
+   - Remote Desktop Services Connection Broker
+   - Licensing
+   - Virtualization
+   - Volume Activation Services
 
 For roles not included in Server Core, see [Roles, Role Services, and Features not in Windows Server - Server Core](../administration/server-core/server-core-removed-roles.md).
 

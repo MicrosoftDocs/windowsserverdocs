@@ -31,7 +31,7 @@ Release channels are summarized in the following table.
 | Availability  | Software Assurance or Azure (cloud hosted)  | All channels |
 | Naming convention  | Windows Server, version YYMM  | Windows Server YYYY |
 
-For more information, see [Windows Server Semi-annual Channel Overview](https://docs.microsoft.com/windows-server/get-started/semi-annual-channel-overview).
+For more information, see [Comparison of servicing channels](https://docs.microsoft.com/windows-server/get-started/semi-annual-channel-overview).
 
 ## Application containers and micro-services
 
@@ -119,7 +119,7 @@ An issue, known as “SMBLoris”, which could result in denial of service, has 
     netsh int tcp set supplemental template=internet congestionprovider=compound
     ```
 
-- **Receive Window Autotuning**: TCP autotuning logic computes the “receive window” parameter of a TCP connection.  High speed and/or long delay connections need this algorithm to achieve good performance characteristics.  In this release, the algorithm is modified to use a step function to converge on the maximum receive window value for a given connection.
+- **Receive Window Autotuning**: TCP autotuning logic computes the “receive window” parameter of a TCP connection.  High speed and/or long delay connections need this algorithm to achieve good performance characteristics.  In this release, the algorithm is modified to use a step function to converge on the maximum receive window value for a given connection.
 - **TCP stats API**: A new API is introduced called SIO_TCP_INFO.  SIO_TCP_INFO allows developers to query rich information on individual TCP connections using a socket option.
 - **IPv6**: There are multiple improvements in IPv6 in this release.
     - **RFC 6106** support: RFC 6106 which allows for DNS configuration through router advertisements (RAs). You can use the following command to enable or disable RFC 6106 support:
