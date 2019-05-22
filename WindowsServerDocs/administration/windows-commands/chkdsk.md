@@ -30,7 +30,7 @@ Checks the file system and file system metadata of a volume for logical and phys
 > [!IMPORTANT]
 > **Note:** Chkdsk can be used only for local disks. The command cannot be used with a local drive letter that has been redirected over the network.
 
-For examples of how to use this command, see [Examples](examples).
+For examples of how to use this command, see [Examples](#examples).
 
 ##Syntax
 

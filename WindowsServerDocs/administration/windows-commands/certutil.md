@@ -54,9 +54,9 @@ The following table describes the verbs that can be used with the certutil comma
 |[-ping](#-ping)|Attempt to contact the Active Directory Certificate Services Request interface|
 |-pingadmin|Attempt to contact the Active Directory Certificate Services Admin interface|
 |[-CAInfo](#-cainfo)|Display information about the certification authority|
-|[-ca.cert](#ca.cert)|Retrieve the certificate for the certification authority|
-|[-ca.chain](#ca.chain)|Retrieve the certificate chain for the certification authority|
-|[-GetCRL](#=getCRL)|Get a certificate revocation list (CRL)|
+|[-ca.cert](#-ca.cert)|Retrieve the certificate for the certification authority|
+|[-ca.chain](#-ca.chain)|Retrieve the certificate chain for the certification authority|
+|[-GetCRL](#-getCRL)|Get a certificate revocation list (CRL)|
 |[-CRL](#-crl)|Publish new certificate revocation lists (CRLs) [or only delta CRLs]|
 |[-shutdown](#-shutdown)|Shutdown Active Directory Certificate Services|
 |[-installCert](#-installcert)|Install a certification authority certificate|
@@ -66,12 +66,12 @@ The following table describes the verbs that can be used with the certutil comma
 |[-db](#-db)|Dump the raw database|
 |[-deleterow](#-deleterow)|Delete a row from the server database|
 |[-backup](#-backup)|Backup Active Directory Certificate Services|
-|[-backupDB](#-backupDB)|Backup the Active Directory Certificate Services database|
-|[-backupKey](#-backupKey)|Backup the Active Directory Certificate Services certificate and private key|
+|[-backupDB](#-backupdb)|Backup the Active Directory Certificate Services database|
+|[-backupKey](#-backupkey)|Backup the Active Directory Certificate Services certificate and private key|
 |[-restore](#-restore)|Restore Active Directory Certificate Services|
-|[-restoreDB](#-restoreDB)|Restore the Active Directory Certificate Services database|
+|[-restoreDB](#-restoredb)|Restore the Active Directory Certificate Services database|
 |[-restoreKey](#-restorekey)|Restore the Active Directory Certificate Services certificate and private key|
-|[-importPFX](#-importPFX)|Import certificate and private key|
+|[-importPFX](#-importpfx)|Import certificate and private key|
 |[-dynamicfilelist](#-dynamicfilelist)|Display a dynamic file list|
 |[-databaselocations](#-databaselocations)|Display database locations|
 |[-hashfile](#-hashfile)|Generate and display a cryptographic hash over a file|
@@ -87,7 +87,7 @@ The following table describes the verbs that can be used with the certutil comma
 |[-Template](#-template)|Display certificate templates|
 |[-TemplateCAs](#-templatecas)|Display the certification authorities (CAs) for a certificate template|
 |[-CATemplates](#-catemplates)|Display templates for CA|
-|[-SetCASites](#-Setcasites)|Manage Site Names for CAs|
+|[-SetCASites](#-setcasites)|Manage Site Names for CAs|
 |[-enrollmentServerURL](#-enrollmentserverurl)|Display, add or delete enrollment server URLs associated with a CA|
 |[-ADCA](#-adca)|Display AD CAs|
 |[-CA](#-ca)|Display Enrollment Policy CAs|
@@ -97,9 +97,9 @@ The following table describes the verbs that can be used with the certutil comma
 |[-InstallDefaultTemplates](#-installdefaulttemplates)|Install default certificate templates|
 |[-URLCache](#-urlcache)|Display or delete URL cache entries|
 |[-pulse](#-pulse)|Pulse auto enrollment events|
-|[-MachineInfo](#-machineInfo)|Display information about the Active Directory machine object|
+|[-MachineInfo](#-machineinfo)|Display information about the Active Directory machine object|
 |[-DCInfo](#-dcinfo)|Display information about the domain controller|
-|[-EntInfo](#-entInfo)|Display information about an enterprise CA|
+|[-EntInfo](#-entinfo)|Display information about an enterprise CA|
 |[-TCAInfo](#-tcainfo)|Display information about the CA|
 |[-SCInfo](#-scinfo)|Display information about the smart card|
 |[-SCRoots](#-scroots)|Manage smart card root certificates|
@@ -120,7 +120,7 @@ The following table describes the verbs that can be used with the certutil comma
 |[-delreg](#-delreg)|Delete a registry value|
 |[-ImportKMS](#-importkms)|Import user keys and certificates into the server database for key archival|
 |[-ImportCert](#-importcert)|Import a certificate file into the database|
-|[-GetKey](#-getKey)|Retrieve an archived private key recovery blob|
+|[-GetKey](#-getkey)|Retrieve an archived private key recovery blob|
 |[-RecoverKey](#-recoverkey)|Recover an archived private key|
 |[-MergePFX](#-mergepfx)|Merge PFX files|
 |[-ConvertEPF](#-convertepf)|Convert a PFX file into an EPF file|
@@ -762,7 +762,7 @@ CertUtil [Options] -addstore CertificateStoreName InFile
 
 Add certificate to store
 
-CertificateStoreName: Certificate store name.  See [-store](#Store).
+CertificateStoreName: Certificate store name.  See [-store](#-store).
 
 InFile: Certificate or CRL file to add to store.
 
@@ -776,9 +776,9 @@ CertUtil [Options] -delstore CertificateStoreName CertId
 
 Delete certificate from store
 
-CertificateStoreName: Certificate store name.  See [-store](#Store).
+CertificateStoreName: Certificate store name.  See [-store](#-store).
 
-CertId: Certificate or CRL match token.  See [-store](#Store).
+CertId: Certificate or CRL match token.  See [-store](#-store).
 
 [-enterprise] [-user] [-GroupPolicy] [-dc DCName]
 
@@ -790,9 +790,9 @@ CertUtil [Options] -verifystore CertificateStoreName [CertId]
 
 Verify certificate in store
 
-CertificateStoreName: Certificate store name.  See [-store](#Store).
+CertificateStoreName: Certificate store name.  See [-store](#-store).
 
-CertId: Certificate or CRL match token.  See [-store](#Store).
+CertId: Certificate or CRL match token.  See [-store](#-store).
 
 [-enterprise] [-user] [-GroupPolicy] [-silent] [-split] [-dc DCName] [-t Timeout]
 
@@ -804,9 +804,9 @@ CertUtil [Options] -repairstore CertificateStoreName CertIdList [PropertyInfFile
 
 Repair key association or update certificate properties or key security descriptor
 
-CertificateStoreName: Certificate store name.  See [-store](#Store).
+CertificateStoreName: Certificate store name.  See [-store](#-store).
 
-CertIdList: comma separated list of Certificate or CRL match tokens. See [-store](#Store) CertId description.
+CertIdList: comma separated list of Certificate or CRL match tokens. See [-store](#-store) CertId description.
 
 PropertyInfFile -- INF file containing external properties:
 
@@ -1578,7 +1578,7 @@ UserKeyAndCertFile -- Data file containing user private keys and certificates to
 - Exchange Key Management Server (KMS) export file
 - PFX file
 
-CertId: KMS export file decryption certificate match token.  See [-store](#Store).
+CertId: KMS export file decryption certificate match token.  See [-store](#-store).
 
 Use -f to import certificates not issued by the CA.
 
@@ -1679,7 +1679,7 @@ cast: Use CAST 64 encryption
 
 cast-: Use CAST 64 encryption (export)
 
-V3CACertId: V3 CA Certificate match token.  See [-store](#Store) CertId description.
+V3CACertId: V3 CA Certificate match token.  See [-store](#-store) CertId description.
 
 Salt: EPF output file salt string
 
