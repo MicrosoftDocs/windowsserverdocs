@@ -1,5 +1,4 @@
 - name: Azure Stack HCI content
-  href: index.md
   items:
   - name: Azure Stack HCI overview
     href: index.md

@@ -85,7 +85,7 @@ For details, see [Connecting Windows Server to Azure hybrid services](..\manage\
 
 ## Management tools and System Center
 
-Azure Stack HCI uses the same virtualization and software-defined storage and networking software as Azure Stack. With Azure Stack HCI you have full admin rights on the cluster: you can use [Windows Admin Center](..\WindowsServerDocs\manage\windows-admin-center\overview.md), [System Center](https://www.microsoft.com/cloud-platform/system-center) and any feature of [Hyper-V](../virtualization/hyper-v/hyper-v-on-windows-server.md), [Storage Spaces Direct](..\storage\storage-spaces\storage-spaces-direct-overview.md), PowerShell, and third-party tools, such as 5Nine Manager.
+Azure Stack HCI uses the same virtualization and software-defined storage and networking software as Azure Stack. With Azure Stack HCI you have full admin rights on the cluster: you can use [Windows Admin Center](..\manage\windows-admin-center\overview.md), [System Center](https://www.microsoft.com/cloud-platform/system-center) and any feature of [Hyper-V](../virtualization/hyper-v/hyper-v-on-windows-server.md), [Storage Spaces Direct](..\storage\storage-spaces\storage-spaces-direct-overview.md), PowerShell, and third-party tools, such as 5Nine Manager.
 
 Microsoft Azure runs on the same Windows Server and Hyper-V platform that are included in Windows Server. Windows Server and System Center include improvements and best practices from Microsoft's experience in operating global scale datacenter networks like Microsoft Azure to you so that you can deploy the same technologies for flexibility, automation, and control when using software designed networking technologies.
 
