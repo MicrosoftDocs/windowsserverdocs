@@ -16,7 +16,6 @@ ms.technology: identity-adfs
 
 
 # Customize HTTP security response headers with AD FS 2019 
-Applies To: Windows Server 2019 
  
 To protect against common security vulnerabilities and provide administrators the ability to take advantage of the latest advancements in browser-based protection mechanisms, AD FS 2019 added the functionality to customize the HTTP security response headers sent by AD FS. This is accomplished through the introduction of two new cmdlets: `Get-AdfsResponseHeaders` and `Set-AdfsResponseHeaders`.  
  

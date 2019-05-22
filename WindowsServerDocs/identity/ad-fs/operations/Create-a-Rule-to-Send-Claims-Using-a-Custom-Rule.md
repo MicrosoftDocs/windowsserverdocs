@@ -14,7 +14,6 @@ ms.technology: identity-adfs
 
 # Create a Rule to Send Claims Using a Custom Rule
 
->Applies To: Windows Server 2016, Windows Server 2012 R2
 
 By using the **Send Claims Using a Custom Rule** template in Active Directory Federation Services (AD FS), you can create custom claim rules for situation in which a standard rule template does not satisfy the requirements of your organization. Custom claim rules are written in the claim rule language and must then be copied into the **Custom rule** text box before they can be used in a rule set. For information about constructing the syntax for an advanced rule, see [The Role of the Claim Rule Language](../../ad-fs/technical-reference/The-Role-of-the-Claim-Rule-Language.md).  
   

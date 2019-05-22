@@ -12,7 +12,6 @@ ms.technology: identity-adfs
 ---
 # Configuring AD FS for user certificate authentication
 
->Applies To: Windows Server 2016, Windows Server 2012 R2
 
 AD FS can be configured for x509 user certificate authentication using one of the modes described in [this article](ad-fs-support-for-alternate-hostname-binding-for-certificate-authentication.md). This capability can be used [with Azure Active Directory](https://blogs.msdn.microsoft.com/samueld/2016/07/19/adfs-certauth-aad-o365/) or on its own, to enable clients and devices provisioned with user certificates to access AD FS resources from the intranet or the extranet.
 

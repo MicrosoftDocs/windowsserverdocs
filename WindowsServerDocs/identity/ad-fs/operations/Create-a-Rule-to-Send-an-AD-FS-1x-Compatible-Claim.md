@@ -14,9 +14,6 @@ ms.technology: identity-adfs
 
 # Create a Rule to Send an AD FS 1.x Compatible Claim
 
->Applies To: Windows Server 2016, Windows Server 2012 R2
-
-
 In situations in which you are using Active Directory Federation Services \(AD FS\) to issue claims that will be received by federation servers running AD FS 1.0 \(Windows Server 2003 R2\) or AD FS 1.1 \(Windows Server 2008 or Windows Server 2008 R2\), you must do the following:  
   
 -   Create a rule that will send a Name ID claim type with a format of UPN, Email, or Common Name.  
