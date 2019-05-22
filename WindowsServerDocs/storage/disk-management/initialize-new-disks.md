@@ -16,7 +16,7 @@ ms.author: jgerend
 If you add a brand new disk to your PC and it doesn't show up in File Explorer, you might need to [add a drive letter](change-a-drive-letter.md), or initialize it before using it. You can only initialize a drive that's not yet formatted. Initializing a disk erases everything on it and prepares it for use by Windows, after which you can format it and then store files on it.
 
 > [!WARNING]
-> If your disk already has files on it that you care about, don't initialize it - you'll lose all the files. Instead we recommend troubleshooting the disk to see if you can read the files - see [A disk's status is Not Initialized or the disk is missing entirely](troubleshooting-disk-management.md#disk-not-initialized).
+> If your disk already has files on it that you care about, don't initialize it - you'll lose all the files. Instead we recommend troubleshooting the disk to see if you can read the files - see [A disk's status is Not Initialized or the disk is missing entirely](troubleshooting-disk-management.md#a-disks-status-is-not-initialized-or-the-disk-is-missing).
 
 ## To initialize new disks
 
@@ -32,7 +32,7 @@ Here's how to initialize a new disk using Disk Management. If you prefer using P
     ![Disk Management showing an unformatted disk with the Initialize Disk shortcut menu displayed](media\uninitialized-disk.PNG)
 2. In the **Initialize Disk** dialog box (shown here), check to make sure that the correct disk is selected and then click **OK** to accept the default partition style. If you need to change the partition style (GPT or MBR) see [About partition styles - GPT and MBR](#about-partition-styles---gpt-and-mbr).
 
-     The disk status briefly changes to **Initializing** and then to the **Online** status. If initializing fails for some reason, see [A disk's status is Not Initialized or the disk is missing entirely](troubleshooting-disk-management.md#disk-not-initialized).
+     The disk status briefly changes to **Initializing** and then to the **Online** status. If initializing fails for some reason, see [A disk's status is Not Initialized or the disk is missing entirely](troubleshooting-disk-management.md#a-disks-status-is-not-initialized-or-the-disk-is-missing).
 
     ![The Initialize Disk dialog box with the GPT partition style selected](media\initialize-disk.PNG)
 

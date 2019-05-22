@@ -20,8 +20,8 @@ For logical drives, and boot or system volumes, you can extend the volume only i
 
 ## Extending a basic volume
 
--   [Using the Windows interface](#toextendabasicvolumeusingthewindowsinterface)
--   [Using a command line](#toextendabasicvolumeusingacommandline)
+-   [Using the Windows interface](#to-extend-a-basic-volume-using-the-windows-interface)
+-   [Using a command line](#to-extend-a-basic-volume-using-a-command-line)
 
 #### To extend a basic volume using the Windows interface
 
