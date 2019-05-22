@@ -14,8 +14,6 @@ ms.technology: identity-adfs
 
 # Provide Your Active Directory Users Access to Your Claims-Aware Applications and Services
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
-
 When you are an administrator in the account partner organization in an Active Directory Federation Services \(AD FS\) deployment and you have a deployment goal to provide single\-sign\-on \(SSO\) access for employees on the corporate network to your hosted resources:  
   
 -   Employees who are logged on to an Active Directory forest in the corporate network can use SSO to access multiple applications or services in the perimeter network in your own organization. These applications and services are secured by AD FS.  

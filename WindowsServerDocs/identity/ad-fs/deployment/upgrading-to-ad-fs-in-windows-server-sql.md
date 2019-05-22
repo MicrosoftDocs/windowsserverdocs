@@ -13,7 +13,6 @@ ms.author: billmath
 
 # Upgrading to AD FS in Windows Server 2016 with SQL Server
 
->Applies To: Windows Server 2016
 
 
 ## Moving from a Windows Server 2012 R2 AD FS farm to a Windows Server 2016 AD FS farm  

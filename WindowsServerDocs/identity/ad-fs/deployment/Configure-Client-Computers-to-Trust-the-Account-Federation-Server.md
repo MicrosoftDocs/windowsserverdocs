@@ -14,8 +14,6 @@ ms.author: billmath
 
 # Configure Client Computers to Trust the Account Federation Server
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
-
 So that client computers can successfully access federated applications using Active Directory Federation Services \(AD FS\), you must first configure the Internet Explorer settings on each client computer so that the browser trusts the account federation server. You can do this manually or through Group Policy, depending on your administrative preference, by completing one of the following procedures.  
   
 ## Configuring Internet Explorer settings manually  

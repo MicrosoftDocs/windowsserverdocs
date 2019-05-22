@@ -14,8 +14,6 @@ ms.technology: identity-adfs
 
 # When to Create a Federation Server Proxy
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
-
 Creating a federation server proxy in your organization adds additional security layers to your Active Directory Federation Services \(AD FS\) deployment. Consider deploying a federation server proxy in your organization's perimeter network when you want to:  
   
 -   Prevent external client computers from directly accessing your federation servers. By deploying a federation server proxy in your perimeter network, you effectively isolate your federation servers so that they can be accessed only by client computers that are logged in to the corporate network through federation server proxies, which act on behalf of the external client computers. Federation server proxies do not have access to the private keys that are used to produce tokens. For more information, see [Where to Place a Federation Server Proxy](Where-to-Place-a-Federation-Server-Proxy.md).  

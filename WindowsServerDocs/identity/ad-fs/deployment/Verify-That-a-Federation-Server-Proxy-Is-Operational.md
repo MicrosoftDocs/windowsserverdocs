@@ -15,7 +15,6 @@ ms.author: billmath
 
 # Verify That a Federation Server Proxy Is Operational
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 You can use the following procedure to verify that the federation server proxy can communicate with the Federation Service in Active Directory Federation Services \(AD FS\). You run this procedure after you run the **AD FS Federation Server Proxy Configuration Wizard** to configure the computer to run in the federation server proxy role. For more information about how to run this wizard, see [Configure a Computer for the Federation Server Proxy Role](Configure-a-Computer-for-the-Federation-Server-Proxy-Role.md).  
   

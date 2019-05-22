@@ -14,7 +14,6 @@ ms.author: billmath
 
 # Add a Federation Server to a Federation Server Farm
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 After you install the Federation Service role service and configure the required certificates on a computer, you are ready to configure the computer to become a federation server. You can use the following procedure to join a computer to a new federation server farm.  
   
