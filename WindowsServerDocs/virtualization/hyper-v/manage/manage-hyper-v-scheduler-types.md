@@ -136,7 +136,7 @@ Windows Server 2016 Hyper-V uses the classic hypervisor scheduler model by defau
 
 ## Windows Server 2019 Hyper-V defaults to using the core scheduler
 
-To help ensure Hyper-V hosts are deployed in the optimal security configuaration, Windows Server 2019 Hyper-V will now use the core hypervisor scheduler model by default. The host administrator may optionally configure the host to use the legacy classic scheduler. Administrators should carefully read, understand and consider the impacts each scheduler type has on the security and performance of virtualization hosts prior to overriding the scheduler type default settings.  See [Understanding Hyper-V scheduler type selection](https://docs.microsoft.com/windows-server/virtualization/hyper-v/manage/understanding-hyper-v-scheduler-type-selection) for more information.
+To help ensure Hyper-V hosts are deployed in the optimal security configuration, Windows Server 2019 Hyper-V will now use the core hypervisor scheduler model by default. The host administrator may optionally configure the host to use the legacy classic scheduler. Administrators should carefully read, understand and consider the impacts each scheduler type has on the security and performance of virtualization hosts prior to overriding the scheduler type default settings.  See [Understanding Hyper-V scheduler type selection](https://docs.microsoft.com/windows-server/virtualization/hyper-v/manage/understanding-hyper-v-scheduler-type-selection) for more information.
 
 ### Required updates
 
@@ -172,7 +172,7 @@ The system must be rebooted for any changes to the hypervisor scheduler type to 
 
 ## Determining the current scheduler type
 
-You can determine the current hypervisor scheduler type in use by examining the Sysem log in Event Viewer for the most recent hypervisor launch event ID 2, which reports the hypervisor scheduler type configured at hypervisor launch. Hypervisor launch events can be obtained from the Windows Event Viewer, or via PowerShell.
+You can determine the current hypervisor scheduler type in use by examining the System log in Event Viewer for the most recent hypervisor launch event ID 2, which reports the hypervisor scheduler type configured at hypervisor launch. Hypervisor launch events can be obtained from the Windows Event Viewer, or via PowerShell.
 
 Hypervisor launch event ID 2 denotes the hypervisor scheduler type, where:
 
