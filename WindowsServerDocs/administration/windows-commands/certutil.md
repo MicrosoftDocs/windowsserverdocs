@@ -54,9 +54,9 @@ The following table describes the verbs that can be used with the certutil comma
 |[-ping](#-ping)|Attempt to contact the Active Directory Certificate Services Request interface|
 |-pingadmin|Attempt to contact the Active Directory Certificate Services Admin interface|
 |[-CAInfo](#-cainfo)|Display information about the certification authority|
-|[-ca.cert](#-ca.cert)|Retrieve the certificate for the certification authority|
-|[-ca.chain](#-ca.chain)|Retrieve the certificate chain for the certification authority|
-|[-GetCRL](#-getCRL)|Get a certificate revocation list (CRL)|
+|[-ca.cert](#-cacert)|Retrieve the certificate for the certification authority|
+|[-ca.chain](#-cachain)|Retrieve the certificate chain for the certification authority|
+|[-GetCRL](#-getcrl)|Get a certificate revocation list (CRL)|
 |[-CRL](#-crl)|Publish new certificate revocation lists (CRLs) [or only delta CRLs]|
 |[-shutdown](#-shutdown)|Shutdown Active Directory Certificate Services|
 |[-installCert](#-installcert)|Install a certification authority certificate|
@@ -668,7 +668,7 @@ CertUtil [Options] -importPFX [CertificateStoreName] PFXFile [Modifiers]
 
 Import certificate and private key
 
-CertificateStoreName: Certificate store name.  See [-store](#Store).
+CertificateStoreName: Certificate store name.  See [-store](#store).
 
 PFXFile: PFX file to be imported
 
