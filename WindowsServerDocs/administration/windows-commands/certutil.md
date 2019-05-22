@@ -668,7 +668,7 @@ CertUtil [Options] -importPFX [CertificateStoreName] PFXFile [Modifiers]
 
 Import certificate and private key
 
-CertificateStoreName: Certificate store name.  See [-store](#store).
+CertificateStoreName: Certificate store name.  See [-store](#-store).
 
 PFXFile: PFX file to be imported
 
