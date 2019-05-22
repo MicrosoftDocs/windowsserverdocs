@@ -7,12 +7,11 @@ author: jasongerend
 ms.author: jgerend
 ms.localizationpriority: medium
 ms.prod: windows-server-threshold
-ms.date: 03/26/2019
+ms.date: 05/22/2019
 ---
-
 # Azure Stack HCI overview
 
->Applies to: Windows Server 2019, Windows Server 2016
+>Applies to: Windows Server 2019
 
 Azure Stack HCI is a hyper-converged Windows Server 2019 cluster that uses validated hardware to run virtualized workloads on-premises, optionally connecting to Azure services for cloud-based backup, site-recovery and more. Azure Stack HCI solutions use Microsoft-validated hardware to ensure optimal performance and reliability, and include support for technologies such as NVMe drives, persistent memory, and remote-direct memory access (RDMA) networking.
 
@@ -80,11 +79,13 @@ You can take advantage of cloud and on-premises working together with a hypercon
 
 - Azure Network Adapter to connect resources on-premises with your VMs in Azure via a point-to-site VPN.
 
-- Sync your file server with the cloud, using [Azure File Sync](../manage/windows-admin-center/azure/azure-file-sync.md).
+- Sync your file server with the cloud, using Azure File Sync.
+
+For details, see [Connecting Windows Server to Azure hybrid services](..\manage\windows-admin-center\azure\index.md).
 
 ## Management tools and System Center
 
-Azure Stack HCI uses the same virtualization and software-defined storage and networking software as Azure Stack. With Azure Stack HCI you have full admin rights on the cluster: you can use Windows Admin Center, System Center and any feature of Hyper-V, Storage Spaces Direct, PowerShell, and third-party tools, such as 5Nine Manager.
+Azure Stack HCI uses the same virtualization and software-defined storage and networking software as Azure Stack. With Azure Stack HCI you have full admin rights on the cluster: you can use [Windows Admin Center](..\manage\windows-admin-center\overview.md), [System Center](https://www.microsoft.com/cloud-platform/system-center) and any feature of [Hyper-V](../virtualization/hyper-v/hyper-v-on-windows-server.md), [Storage Spaces Direct](..\storage\storage-spaces\storage-spaces-direct-overview.md), PowerShell, and third-party tools, such as 5Nine Manager.
 
 Microsoft Azure runs on the same Windows Server and Hyper-V platform that are included in Windows Server. Windows Server and System Center include improvements and best practices from Microsoft's experience in operating global scale datacenter networks like Microsoft Azure to you so that you can deploy the same technologies for flexibility, automation, and control when using software designed networking technologies.
 
@@ -98,18 +99,21 @@ Visit the [Azure Stack HCI website](https://azure.microsoft.com/overview/azure-s
 
 ## FAQ
 
-### What do Azure Stack and Azure Stack HCI solutions have in common? 
+### What do Azure Stack and Azure Stack HCI solutions have in common?
+
 Azure Stack HCI solutions feature the same Hyper-V based software-defined compute, storage, and networking technologies as Azure Stack. Both offerings meet rigorous testing and validation criteria to ensure reliability and compatibility with the underlying hardware platform.
 
 ### How are they different?
+
 With Azure Stack, you run cloud services on-premises. You can run Azure IaaS and PaaS services on-premises to consistently build and run cloud applications anywhere, managed with the Azure Portal on-premises.
 
 With Azure Stack HCI, you run virtualized workloads on-premises, managed with Windows Admin Center and familiar Windows Server tools. You can optionally connect to Azure for hybrid scenarios such as cloud-based site recovery, monitoring, and others.
 
-### Why is Microsoft bringing its HCI offering to the Azure Stack family? 
+### Why is Microsoft bringing its HCI offering to the Azure Stack family?
+
 Microsoft’s hyperconverged technology is already the foundation of Azure Stack.
 
-Many Microsoft customers have complex IT environments and our goal is to provide solutions that meet them where they are with the right technology for the right business need. Azure Stack HCI is an evolution of the Windows Server 2016-based Windows Server Software-Defined (WSSD) solutions previously available from our hardware partners. We brought it into the Azure Stack family because we have started to offer new options to connect seamlessly with Azure for infrastructure management services. 
+Many Microsoft customers have complex IT environments and our goal is to provide solutions that meet them where they are with the right technology for the right business need. Azure Stack HCI is an evolution of the Windows Server 2016-based Windows Server Software-Defined (WSSD) solutions previously available from our hardware partners. We brought it into the Azure Stack family because we have started to offer new options to connect seamlessly with Azure for infrastructure management services.
 
 ### Does Azure Stack HCI need to be connected to Azure?
 
@@ -134,6 +138,7 @@ Azure Stack is sold as a fully integrated system that includes services and supp
 Azure Stack HCI solutions follow the traditional purchasing model. You can purchase validated hardware from Azure Stack HCI partners and software (Windows Server 2019 Datacenter edition with software-defined datacenter capabilities and Windows Admin Center) from various existing channels. For Azure services that you can use with Windows Admin Center, you pay with an Azure subscription.
 
 ### How do I buy Azure Stack HCI solutions?
+
 Follow these steps:
 
 1. Buy a Microsoft-validated hardware system from your preferred hardware partner.
@@ -160,6 +165,7 @@ As your organization digitally transforms, you may find that you can move faster
 |Use Azure Stack to modernize app deployment and operation with DevOps practices like infrastructure as code, continuous integration and continuous deployment (CI/CD), and convenient features like Azure-consistent VM Extensions. Ideal for Dev and DevOps teams.|Azure Stack HCI does not natively include any DevOps tooling.
 
 ### When to use Azure Stack HCI
+
 |Azure Stack|Azure Stack HCI|
 |---------------|---------------|
 |Azure Stack requires minimum 4 nodes and its own network switches.|Use Azure Stack HCI for the minimum footprint for remote-office / branch-office (ROBO). Start with just 2 server nodes and switchless back-to-back networking for peak simplicity and affordability. Hardware offers start at 4 drives, 64 GB of memory, well under $10k / node.
