@@ -17,11 +17,9 @@ ms.date: 10/16/2017
 
 # findstr
 
-
-
 Searches for patterns of text in files.
 
-For examples of how to use this command, see [Examples](#BKMK_examples).
+For examples of how to use this command, see [Examples](#examples).
 
 ## Syntax
 
@@ -83,7 +81,7 @@ findstr [/b] [/e] [/l | /r] [/s] [/i] [/x] [/v] [/n] [/m] [/o] [/p] [/f:<File>] 
     b.*ing
     ```
 
-## <a name="BKMK_examples"></a>Examples
+## Examples
 
 Use spaces to separate multiple search strings unless the argument is prefixed with **/c**.
 

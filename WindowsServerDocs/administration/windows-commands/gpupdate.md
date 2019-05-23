@@ -20,7 +20,7 @@ ms.date: 10/16/2017
 
 
 
-Updates Group Policy settings. For examples of how this command can be used, see [Examples](#BKMK_Examples).
+Updates Group Policy settings. For examples of how this command can be used, see [Examples](#examples).
 
 ## Syntax
 
@@ -44,7 +44,7 @@ gpupdate [/target:{Computer | User}] [/force] [/wait:<VALUE>] [/logoff] [/boot] 
 
 -   The **gpupdate** command is available in Windows Server 2008 R2, Windows Server 2008, Windows 7 Ultimate, Windows 7 Professional, Windows Vista Ultimate, Windows Vista Enterprise, and Windows Vista Business.
 
-## <a name="BKMK_Examples"></a>Examples
+## Examples
 
 Force a background update of all Group Policy settings, regardless of whether they have changed.
 ```

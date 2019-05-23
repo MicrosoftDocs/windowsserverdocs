@@ -30,7 +30,7 @@ Checks the file system and file system metadata of a volume for logical and phys
 > [!IMPORTANT]
 > **Note:** Chkdsk can be used only for local disks. The command cannot be used with a local drive letter that has been redirected over the network.
 
-For examples of how to use this command, see [Examples](#BKMK_examples).
+For examples of how to use this command, see [Examples](#examples).
 
 ##Syntax
 
@@ -55,7 +55,7 @@ chkdsk [<Volume>[[<Path>]<FileName>]] [/f] [/v] [/r] [/x] [/i] [/c] [/l[:<Size>]
 |/b|NTFS only: Clears the list of bad clusters on the volume and rescans all allocated and free clusters for errors. **/b** includes the functionality of **/r**. Use this parameter after imaging a volume to a new hard disk drive.|
 |/?|Displays help at the command prompt.|
 
-##Remarks
+## Remarks
 
 -   Skipping volume checks
 
@@ -109,7 +109,7 @@ chkdsk [<Volume>[[<Path>]<FileName>]] [/f] [/v] [/r] [/x] [/i] [/c] [/l[:<Size>]
 -   The **chkdsk** command, with different parameters, is available from the Recovery Console.
 -   On servers that are infrequently restarted, you may want to use the **chkntfs** or the **fsutil dirty query** commands to determine whether the volume's dirty bit is already set before running chkdsk.
 
-## <a name="BKMK_examples"></a>Examples
+## Examples
 
 If you want to check the disk in drive D and have Windows fix errors, type:
 ```
