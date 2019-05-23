@@ -12,7 +12,6 @@ ms.technology: identity-adfs
 
 # AD FS and banned IP addresses
 
->Applies To: Windows Server 2016
 
 In June 2018, AD FS on Windows Server 2016 introduced **Banned IPs** with the AD FS June 2018 update.  This update enables you to configure a set of IP addresses globally in AD FS, so that requests coming from those IP addresses, or that have those IP addresses in the **x-forwarded-for** or **x-ms-forwarded-client-ip** headers, will be blocked by AD FS.
 

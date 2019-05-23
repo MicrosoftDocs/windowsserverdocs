@@ -12,7 +12,6 @@ ms.prod: windows-server-threshold
 ms.technology: identity-adfs
 ---
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 # When to Use a Pass Through or Filter Claim Rule
 You can use this rule in Active Directory Federation Services \(AD FS\) when you need to take a specific incoming claim type and then apply an action that will determine what output should occur based on the values in the incoming claim. When you use this rule, you pass through or filter any claims that match the rule logic in the following table, based on either of the options you configure in the rule.  

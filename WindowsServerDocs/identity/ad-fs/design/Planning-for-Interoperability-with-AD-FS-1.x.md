@@ -14,8 +14,6 @@ ms.technology: identity-adfs
 
 # Planning for Interoperability with AD FS 1.x
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
-
 Active Directory Federation Services \(AD FS\) federation servers running Windows Server® 2012 can interoperate with both an AD FS 1.0 \(installed with Windows Server 2003 R2\) Federation Service and an AD FS 1.1 \(installed with Windows Server 2008 or Windows Server 2008 R2\) Federation Service. Any of the following interoperability combinations are supported:  
   
 -   Any AD FS 1.*x* Federation Service can send a claim that can be consumed by an AD FS Federation Service in  Windows Server 2012 . For more information, see [Checklist: Configuring AD FS  to Consume Claims from AD FS 1.x](../../ad-fs/deployment/Checklist--Configuring-AD-FS--to-Consume-Claims-from-AD-FS-1.x.md).  

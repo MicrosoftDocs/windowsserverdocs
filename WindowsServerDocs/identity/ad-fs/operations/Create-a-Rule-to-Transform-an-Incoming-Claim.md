@@ -16,7 +16,6 @@ ms.technology: identity-adfs
 
 # Create a Rule to Transform an Incoming Claim
 
->Applies To: Windows Server 2016, Windows Server 2012 R2
 
 By using the **Transform an Incoming Claim** rule template in Active Directory Federation Services \(AD FS\), you can select an incoming claim, change its claim type, and change its claim value. For example, you can use this rule template to create a rule that sends a role claim with the same claim value of an incoming group claim. You can also use this rule to send a group claim with a claim value of Purchasers when there is an incoming group claim with a value of Admins, or you can send only user principal name \(UPN\) claims that end with @fabrikam.  
   

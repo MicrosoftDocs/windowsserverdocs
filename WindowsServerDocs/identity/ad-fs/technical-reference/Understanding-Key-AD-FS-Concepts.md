@@ -12,7 +12,6 @@ ms.prod: windows-server-threshold
 ms.technology: identity-adfs
 ---
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 # Understanding Key AD FS Concepts
 It is recommended that you learn about the important concepts for Active Directory Federation Services and become familiar with its feature set.  

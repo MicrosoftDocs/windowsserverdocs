@@ -13,8 +13,6 @@ ms.technology: active-directory-federation-services
 
 # Build a single page web application using OAuth and ADAL.JS with AD FS 2016 or later
 
->Applies To: Windows Server 2016 and later
-
 This walkthrough provides instruction for authenticating against AD FS using ADAL for JavaScript securing an AngularJS based single page application, implemented with an ASP.NET Web API backend.
 
 In this scenario, when the user signs in, the JavaScript front end uses [Active Directory Authentication Library for JavaScript (ADAL.JS)](https://github.com/AzureAD/azure-activedirectory-library-for-js) and the implicit authorization grant to obtain an ID token (id_token) from Azure AD. The token is cached and the client attaches it to the request as the bearer token when making calls to its Web API back end, which is secured using the OWIN middleware.

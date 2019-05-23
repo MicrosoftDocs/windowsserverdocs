@@ -14,8 +14,6 @@ ms.technology: identity-adfs
 
 # Token-Signing Certificates
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
-
 Federation servers require token\-signing certificates to prevent attackers from altering or counterfeiting security tokens in an attempt to gain unauthorized access to federated resources. The private\/public key pairing that is used with token\-signing certificates is the most important validation mechanism of any federated partnership because these keys verify that a security token was issued by a valid partner federation server and that the token was not modified during transit.  
   
 ## Token\-signing certificate requirements  

@@ -14,8 +14,6 @@ ms.technology: identity-adfs
 
 # Federated Web SSO Design
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
-
 The Federated Web Single\-Sign\-On \(SSO\) design in Active Directory Federation Services \(AD FS\) involves secure communication that spans multiple firewalls, perimeter networks, and name\-resolution servers—in addition to the entire Internet routing infrastructure.  
   
 Typically, this design is used when two organizations agree to create a federation trust relationship to allow users in one organization \(the account partner organization\) to access Web\-based applications or services, which are secured by AD FS, in the other organization \(the resource partner organization\).  

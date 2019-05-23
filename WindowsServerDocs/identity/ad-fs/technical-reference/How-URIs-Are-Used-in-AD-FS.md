@@ -12,7 +12,6 @@ ms.prod: windows-server-threshold
 ms.technology: identity-adfs
 ---
 
->Applies To: Windows Server 2016, Windows Server 2012 R2
 
 # How URIs Are Used in AD FS
 A Uniform Resource Identifier \(URI\) is a string of characters that is used as a unique identifier.  In AD FS, URIs are used to identify both partner network addresses and configuration objects.  When used to identify partner network addresses, the URI is always a URL.  When used to identify configuration objects, the URI may be a URN or a URL.  For more general information about URIs, see [RFC 2396](https://go.microsoft.com/fwlink/?LinkId=48289) and [RFC 3986](https://go.microsoft.com/fwlink/?LinkId=90453).  

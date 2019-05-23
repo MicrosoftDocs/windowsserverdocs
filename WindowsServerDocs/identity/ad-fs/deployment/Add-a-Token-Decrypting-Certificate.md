@@ -14,8 +14,6 @@ ms.author: billmath
 
 # Add a Token-Decrypting Certificate
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
-
 Federation servers use a token\-decryption certificate when a relying party federation server must decrypt tokens that are issued with an older certificate after a new certificate is set as the primary decryption certificate. Active Directory Federation Services \(AD FS\) uses the Secure Sockets Layer \(SSL\) certificate for Internet Information Services \(IIS\) as the default decryption certificate.  
   
 > [!CAUTION]  

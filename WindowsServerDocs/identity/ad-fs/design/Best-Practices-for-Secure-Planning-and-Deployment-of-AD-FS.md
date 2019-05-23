@@ -14,7 +14,6 @@ ms.technology: identity-adfs
 
 # Best Practices for Secure Planning and Deployment of AD FS
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 This topic provides best-practice information to help you plan and evaluate security when you design your Active Directory Federation Services (AD FS) deployment. This topic is a starting point for reviewing and assessing considerations that affect the overall security of your use of AD FS. The information in this topic is meant to compliment and extend your existing security planning and other design best practices.  
   

@@ -16,7 +16,6 @@ ms.technology: identity-adfs
 
 # Create a Relying Party Trust
 
->Applies To: Windows Server 2016, Windows Server 2012 R2
 
 The following document provides information on creating a relying party trust manually and using federation metadata.
   

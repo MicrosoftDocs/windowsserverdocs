@@ -1,3 +1,4 @@
+
 ---
 ms.assetid: 4ef052f0-61a9-4912-b780-5c96187c850f
 title: AD FS Deployment Topology Considerations
@@ -13,8 +14,6 @@ ms.technology: identity-adfs
 ---
 
 # AD FS Deployment Topology Considerations
-
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 This topic describes important considerations to help you plan and design which Active Directory Federation Services \(AD FS\) deployment topology to use in your production environment. This topic is a starting point for reviewing and assessing considerations that affect what features or capabilities will be available to you after you deploy AD FS. For example, depending on which database type you choose to store the AD FS configuration database will ultimately determine whether you can implement certain Security Assertion Markup Language \(SAML\) features that require SQL Server.  
   

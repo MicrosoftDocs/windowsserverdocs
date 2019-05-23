@@ -20,30 +20,26 @@ For logical drives, and boot or system volumes, you can extend the volume only i
 
 ## Extending a basic volume
 
--   [Using the Windows interface](#BKMK_WINUI)
--   [Using a command line](#BKMK_CMD)
+-   [Using the Windows interface](#to-extend-a-basic-volume-using-the-windows-interface)
+-   [Using a command line](#to-extend-a-basic-volume-using-a-command-line)
 
-<a href="" id="BKMK_WINUI"></a>
 #### To extend a basic volume using the Windows interface
 
-1.  In Disk Manager, right-click the basic volume you want to extend.
+1. In Disk Manager, right-click the basic volume you want to extend.
 
-2.  Click **Extend Volume**.
+2. Click **Extend Volume**.
 
-3.  Follow the on-screen instructions.
+3. Follow the on-screen instructions.
 
-<a href="" id="BKMK_CMD"></a>
 #### To extend a basic volume using a command line
 
-1.  Open a command prompt and type `diskpart`.
+1. Open a command prompt and type `diskpart`.
 
-2.  At the **DISKPART** prompt, type `list volume`. Make note of the basic volume you want to extend.
+2. At the **DISKPART** prompt, type `list volume`. Make note of the basic volume you want to extend.
 
-3.  At the **DISKPART** prompt, type `select volume <volumenumber>`. This selects the basic volume *volumenumber* that you want to extend into contiguous, empty space on the same disk.
+3. At the **DISKPART** prompt, type `select volume <volumenumber>`. This selects the basic volume *volumenumber* that you want to extend into contiguous, empty space on the same disk.
 
-4.  At the **DISKPART** prompt, type `extend [size=<size>]`. This extends the selected volume by *size* in megabytes (MB).
-
-<br />
+4. At the **DISKPART** prompt, type `extend [size=<size>]`. This extends the selected volume by *size* in megabytes (MB).
 
 | Value | Description |
 | --- | --- |
@@ -59,5 +55,3 @@ For logical drives, and boot or system volumes, you can extend the volume only i
 ## See Also
 
 -   [Command-line syntax notation](https://technet.microsoft.com/library/cc742449(v=ws.11).aspx)
-
-

@@ -14,8 +14,6 @@ ms.technology: identity-adfs
 
 # When to Create a Federation Server Farm
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
-
 Consider creating a federation server farm in Active Directory Federation Services \(AD FS\) when you have a larger AD FS deployment and you want to provide fault tolerance, load\-balancing, or scalability to your organization's Federation Service. The act of creating two or more federation servers in the same network, configuring each of them to use the same Federation Service, and adding the public key of each server's token\-signing certificates to the AD FS Management snap\-in creates a federation server farm.  
   
 You can create a federation server farm or install additional federation servers to an existing farm by using the AD FS Federation Server Configuration Wizard. For more information, see [When to Create a Federation Server](When-to-Create-a-Federation-Server.md).  

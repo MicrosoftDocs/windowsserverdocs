@@ -14,8 +14,6 @@ ms.technology: identity-adfs
 
 # Build a web application using OpenID Connect with AD FS 2016 and later
 
->Applies To: Windows Server 2016 and later
-
 ## Pre-requisites  
 The following are a list of pre-requisites that are required prior to completing this document. This document assumes that AD FS has been installed and an AD FS farm has been created.  
 

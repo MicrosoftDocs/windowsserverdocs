@@ -13,7 +13,7 @@ ms.technology: identity-adfs
 
 # AD FS Requirements
 
->Applies To: Windows Server 2016
+
 
 The following are the requirements for deploying AD FS:  
   

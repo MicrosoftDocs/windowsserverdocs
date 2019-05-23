@@ -12,8 +12,6 @@ ms.technology: identity-adfs
 ---
 # AD FS Single Sign-On Settings
 
->Applies To: Windows Server 2016, Windows Server 2012 R2
-
 Single Sign-On (SSO) allows users to authenticate once and access multiple resources without being prompted for additional credentials.  This article describes the default AD FS behavior for SSO, as well as the configuration settings that allow you to customize this behavior.  
 
 ## Supported types of Single Sign-On

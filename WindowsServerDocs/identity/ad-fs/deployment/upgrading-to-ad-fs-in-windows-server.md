@@ -13,7 +13,6 @@ ms.author: billmath
 
 # Upgrading to AD FS in Windows Server 2016 using a WID database
 
->Applies To: Windows Server 2019, Windows Server 2016
 
 
 ## Upgrading a Windows Server 2012 R2 or 2016 AD FS farm to Windows Server 2019
