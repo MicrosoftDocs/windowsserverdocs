@@ -12,9 +12,7 @@ ms.prod: windows-server-threshold
 ms.technology: identity-adfs
 ---
 
-# AD FS Design Guide in Windows Server 2012 R2
-
->Applies To: Windows Server 2016, Windows Server 2012 R2
+# AD FS Design Guide in Windows Server 
 
 Active Directory Federation Services \(AD FS\) provides simplified, secured identity federation and Web single sign\-on \(SSO\) capabilities for end users who want to access applications within an AD FS\-secured enterprise, in federation partner organizations, or in the cloud.  
   

@@ -15,7 +15,6 @@ ms.technology: identity-adfs
 
 # Create a Rule to Send an Authentication Method Claim
 
->Applies To: Windows Server 2016, Windows Server 2012 R2
 
 You can use either the **Send Group Membership as Claims** rule template or the **Transform an Incoming Claim** rule template to send an authentication method claim. The relying party can use an authentication method claim to determine the logon mechanism that the user uses to authenticate and obtain claims from Active Directory Federation Services \(AD FS\). You can also use the Authentication Mechanism Assurance feature of Active Directory Federation Services \(AD FS\) in  Windows Server 2012 R2  as input to generate authentication method claims for situations in which the relying party wants to determine the level of access that is based on smart card logons. For example, a developer can assign different levels of access to federated users of the relying party application. The levels of access are based on whether the users log on with their user name and password credentials, as opposed to their smart cards.  
   

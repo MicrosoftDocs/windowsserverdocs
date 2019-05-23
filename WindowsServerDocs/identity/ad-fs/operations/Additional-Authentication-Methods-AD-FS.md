@@ -12,7 +12,6 @@ ms.technology: identity-adfs
 
 # Configure 3rd party authentication providers as primary authentication in AD FS 2019
 
->Applies To: Windows Server 2019
 
 Organizations are experiencing attacks that attempt to brute force, compromise, or otherwise lock out user accounts by sending password based authentication requests.  To help protect organizations from compromise, AD FS has introduced capabilities such as extranet “smart” lockout and IP address based blocking.  
 

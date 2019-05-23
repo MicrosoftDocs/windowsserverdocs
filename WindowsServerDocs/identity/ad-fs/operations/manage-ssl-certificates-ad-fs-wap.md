@@ -14,7 +14,7 @@ ms.technology: identity-adfs
 
 # Managing SSL Certificates in AD FS and WAP in Windows Server 2016
 
->Applies To: Windows Server 2016
+
 
 This article describes how to deploy a new SSL certificate to your AD FS and WAP servers.
 

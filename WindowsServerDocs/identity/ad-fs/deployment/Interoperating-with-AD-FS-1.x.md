@@ -13,8 +13,6 @@ ms.author: billmath
 ---
 # Interoperating with AD FS 1.x
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
-
 For interoperability between Active Directory Federation Services \(AD FS\) in Windows Server® 2012 and AD FS 1.*x*, complete one or more of the following tasks, depending on the needs of your organization:  
   
 -   Plan for interoperability between AD FS in  Windows Server 2012  and previous versions of AD FS, and learn more about the Name ID claim type. For more information, see [Planning for Interoperability with AD FS 1.x](https://technet.microsoft.com/library/ff678040.aspx).  

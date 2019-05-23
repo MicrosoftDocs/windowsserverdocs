@@ -14,8 +14,6 @@ ms.technology: identity-adfs
 
 # AD FS Requirements
 
->Applies To: Windows Server 2012 R2
-
 The following are the various requirements that you must conform to when deploying AD FS:  
   
 -   [Certificate requirements](AD-FS-Requirements.md#BKMK_1)  

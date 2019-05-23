@@ -14,7 +14,6 @@ ms.technology: identity-adfs
 
 # Build a server side application using OAuth confidential clients with AD FS 2016 or later
 
->Applies To: Windows Server 2016 and later
 
 AD FS 2016 and later releases provide support for clients capable of maintaining their own secret, such as an app or service running on a web server.  These clients are known as confidential clients.
 Below is a schematic of a web application running on a web server and serving as a confidential client to AD FS:  

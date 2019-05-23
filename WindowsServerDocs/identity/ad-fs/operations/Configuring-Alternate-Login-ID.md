@@ -13,7 +13,6 @@ ms.technology: identity-adfs
 ---
 # Configuring Alternate Login ID
 
->Applies To: Windows Server 2019, Windows Server 2016, Windows Server 2012 R2
 
 ## What is Alternate Login ID?
 In most scenarios, users use their UPN (User Principal Names) to login to their accounts. However, in some environments due to corporate policies or on-premises line-of-business application dependencies, the users may be using some other form of sign-in. 

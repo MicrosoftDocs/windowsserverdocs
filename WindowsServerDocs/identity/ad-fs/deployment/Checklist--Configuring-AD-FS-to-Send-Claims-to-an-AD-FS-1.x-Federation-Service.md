@@ -14,7 +14,6 @@ ms.author: billmath
 
 # Checklist: Configuring AD FS to Send Claims to an AD FS 1.x Federation Service
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
   
 ## Checklist: Configuring AD FS to send claims to an AD FS 1.x Federation Service  
 This checklist includes the tasks that are necessary for configuring your Active Directory Federation Services \(AD FS\) Federation Service in  Windows Server 2012  to send claims that can be understood by an AD FS 1.*x* Federation Service.  

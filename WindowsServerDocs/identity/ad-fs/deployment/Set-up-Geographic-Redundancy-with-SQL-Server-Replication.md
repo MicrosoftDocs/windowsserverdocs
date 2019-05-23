@@ -14,7 +14,6 @@ ms.assetId: 7b9f9a4f-888c-4358-bacd-3237661b1935
 
 # Setup Geographic Redundancy with SQL Server Replication
 
->Applies To: Windows Server 2016, Windows Server 2012 R2
 
 > [!IMPORTANT]  
 > If you want to create an AD FS farm and use SQL Server to store your configuration data, you can use SQL Server 2008 or higher.

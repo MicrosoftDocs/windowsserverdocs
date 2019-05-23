@@ -13,7 +13,6 @@ ms.technology: identity-adfs
 
 # Access Control Policies in Windows Server 2012 R2 and Windows Server 2012 AD FS
 
->Applies To: Windows Server 2012 R2 and Windows Server 2012 
 
 The policies described in this article make use of two kinds of claims  
   

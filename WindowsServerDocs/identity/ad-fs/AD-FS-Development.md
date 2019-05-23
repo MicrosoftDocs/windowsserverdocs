@@ -13,7 +13,6 @@ ms.technology: identity-adfs
 ---
 # AD FS Development
 
->Applies To: Windows Server 2019, Windows Server 2016, Windows Server 2012 R2
 
 This document contains a list of all of the documentation walkthroughs for AD FS development. This includes the following:  
   

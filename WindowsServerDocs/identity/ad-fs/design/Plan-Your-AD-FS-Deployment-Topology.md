@@ -14,8 +14,6 @@ ms.technology: identity-adfs
 
 # Plan Your AD FS Deployment Topology
 
->Applies To: Windows Server 2016, Windows Server 2012 R2
-
 The first step in planning a deployment of Active Directory Federation Services \(AD FS\) is to determine the right deployment topology to meet the needs of your organization.  
   
 Before you read this topic, review how AD FS data is stored and replicated to other federation servers in a federation server farm and make sure you understand the purpose of and the replication methods that can be used for the underlying data that is stored in the AD FS configuration database.  

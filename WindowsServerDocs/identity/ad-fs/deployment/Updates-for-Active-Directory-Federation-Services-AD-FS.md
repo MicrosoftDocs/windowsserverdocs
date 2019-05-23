@@ -13,7 +13,6 @@ ms.technology: identity-adfs
 ---
 # Required Updates for Active Directory Federation Services (AD FS) and Web Application Proxy (WAP)
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2 SP1
 
 As of October 2016, all updates to all components of Windows Server are released only via Windows Update (WU).  There are no more hotfixes or individual downloads.
 This applies to Windows Server 2016, Windows Server 2012 R2, Windows Server 2012 and Windows Server 2008 R2 SP1.

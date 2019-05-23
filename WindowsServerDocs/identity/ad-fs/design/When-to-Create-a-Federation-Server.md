@@ -14,8 +14,6 @@ ms.technology: identity-adfs
 
 # When to Create a Federation Server
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
-
 When you create a federation serverin Active Directory Federation Services \(AD FS\), you provide a means by which your organization can:  
   
 -   Engage in Web single\-sign\-on \(SSO\)–based communication with another organization \(that also has at least one federation server\) and, when necessary, with the employees in your own organization \(who need access over the Internet\).  

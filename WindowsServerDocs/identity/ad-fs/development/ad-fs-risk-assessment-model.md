@@ -14,7 +14,6 @@ ms.technology: identity-adfs
 
 
 # Build Plug-ins with AD FS 2019 Risk Assessment Model
-Applies To: Windows Server 2019
 
 You can now build your own plug-ins to block or assign a risk score to authentication requests during various stages – request received, pre-authentication and post-authentication. This can be accomplished using the new Risk Assessment Model introduced with AD FS 2019. 
 

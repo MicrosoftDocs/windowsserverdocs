@@ -14,7 +14,6 @@ ms.technology: identity-adfs
 
 # Add an Attribute Store
 
->Applies To: Windows Server 2016, Windows Server 2012 R2
 
 User accounts and computer accounts that require access to a resource that is protected by Active Directory Federation Services \(AD FS\) are stored in an attribute store, such as Active Directory Domain Services \(AD DS\). The claims issuance engine uses attribute stores to gather data that is necessary to issue claims. Data from the attribute stores is then projected as claims.  
   

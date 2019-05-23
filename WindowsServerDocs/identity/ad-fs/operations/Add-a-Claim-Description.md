@@ -14,7 +14,6 @@ ms.technology: identity-adfs
 
 # Add a Claim Description
 
->Applies To: Windows Server 2016, Windows Server 2012 R2
 
 In an account partner organization, administrators create claims to represent a user's membership in a group or role or to represent some data about a user, for example, a user’s employee identification number.
 

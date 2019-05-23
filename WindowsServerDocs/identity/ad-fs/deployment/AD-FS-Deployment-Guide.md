@@ -13,7 +13,6 @@ ms.technology: identity-adfs
 ---
 # AD FS 2016 Deployment Guide
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 The AD FS deployment guide is a comprehensive guide for deploying AD FS.  This guide is made up of the following:
 

@@ -13,7 +13,7 @@ ms.technology: identity-adfs
 
 # Multi-factor authentication and external authentication providers customization 
 
->Applies To: Windows Server 2016, Windows Server 2012 R2
+
 
 In AD FS, the support for multifactor authentication is provided out\-of\-the\-box. For example, you can configure AD FS to use built\-in Certificate Authentication as the second factor authentication. You can also use external authentication providers. This approach can enable AD FS to integrate with additional services, such as Azure Multi-factor Authentication, or you can develop your own provider. See [Solution Guide: Manage Risk with Multi\-factor Access Control](https://technet.microsoft.com/library/dn280937.aspx) for more information about how to register external authentication provider by using AD FS.  
   

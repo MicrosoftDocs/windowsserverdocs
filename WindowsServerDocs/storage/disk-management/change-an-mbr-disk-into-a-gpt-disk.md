@@ -18,15 +18,11 @@ Master Boot Record (MBR) disks use the standard BIOS partition table. GUID Parti
 
 You can change a disk from MBR to GPT partition style as long as the disk contains no partitions or volumes.
 
-
 > [!NOTE]
 > Before you convert a disk, backup any data on it and close any programs that are accessing the disk.
 
-
 > [!NOTE]
 > You must be a member of the **Backup Operators** or **Administrators** group, at minimum, to complete these steps.
-
-<a id="BKMK_WINUI"></a>
 
 ## Converting using the Windows interface
 
@@ -35,8 +31,6 @@ You can change a disk from MBR to GPT partition style as long as the disk contai
 2.  If the disk contains any partitions or volumes, right-click each and then click **Delete Partition** or **Delete Volume**.
 
 3.  Right-click the MBR disk that you want to change into a GPT disk, and then click **Convert to GPT Disk**.
-
-<a id="BKMK_CMD"></a>
 
 ## Converting using a command line
 
@@ -59,14 +53,12 @@ Use the following steps to convert an empty MBR disk to a GPT disk. There's also
 
 7.  At the **DISKPART** prompt, type `convert gpt`.
 
-<br />
-
 | Value  | Description  |
 | ----- | ----|
-| <p>**list disk**</p> | <p>Displays a list of disks and information about them, such as their size, the amount of available free space, whether the disk is a basic or dynamic disk, and whether the disk uses the Master Boot Record (MBR) or GUID Partition Table (GPT) partition style. The disk marked with an asterisk (*) has focus.</p> |
-| <p>**select disk** <em>disknumber</em></p> | <p>Selects the specified disk, where <em>disknumber</em> is the disk number, and gives it focus.</p> |
-| <p>**clean**</p> | <p>Removes all partitions or volumes from the disk with focus.</p>  |
-| <p>**convert gpt**</p>| <p>Converts an empty basic disk with the Master Boot Record (MBR) partition style into a basic disk with the GUID Partition Table (GPT) partition style.</p> |
+| **list disk** | Displays a list of disks and information about them, such as their size, the amount of available free space, whether the disk is a basic or dynamic disk, and whether the disk uses the Master Boot Record (MBR) or GUID Partition Table (GPT) partition style. The disk marked with an asterisk (*) has focus. |
+| **select disk** *disknumber* | Selects the specified disk, where *disknumber* is the disk number, and gives it focus. |
+| **clean** | Removes all partitions or volumes from the disk with focus.  |
+| **convert gpt**| Converts an empty basic disk with the Master Boot Record (MBR) partition style into a basic disk with the GUID Partition Table (GPT) partition style. |
 
 ## See Also
 
