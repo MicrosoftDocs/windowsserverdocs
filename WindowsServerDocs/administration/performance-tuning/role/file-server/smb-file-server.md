@@ -128,6 +128,8 @@ The following REG\_DWORD registry settings can affect the performance of SMB fil
     >[!TIP]
     > An indication that the value may need to be increased is if the SMB2 work queues are growing very large (performance counter ‘Server Work Queues\\Queue Length\\SMB2 NonBlocking \*'  is consistently above ~100).
 
+    >[!Note]
+    >In Windows 10 and Server 2016, MaxThreadsPerQueue is unavailable. The number of threads for a thread pool will be "20 * the number of processors in a NUMA node".
      
 
 -   **AsynchronousCredits**
