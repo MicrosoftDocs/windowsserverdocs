@@ -14,8 +14,6 @@ ms.technology: identity-adfs
 
 # Walkthrough: Workplace Join with a Windows Device
 
->Applies To: Windows Server 2016, Windows Server 2012 R2
-
 This topic demonstrates how to use Workplace Join to connect your Windows device with your workplace and how to access a web application by using Single Sign-On. You must complete the steps in the [Set up the lab environment for AD FS in Windows Server 2012 R2](../deployment/Set-up-the-lab-environment-for-AD-FS-in-Windows-Server-2012-R2.md) section before you can try out this walkthrough.
 
 ## Access the web application before device registration

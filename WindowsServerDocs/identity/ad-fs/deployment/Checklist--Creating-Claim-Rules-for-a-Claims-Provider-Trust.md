@@ -15,7 +15,6 @@ ms.author: billmath
 
 # Checklist: Creating Claim Rules for a Claims Provider Trust
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 This checklist includes tasks for planning, designing, and deploying claim rules that are associated with a claims provider trust in Active Directory Federation Services \(AD FS\).  
   

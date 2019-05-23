@@ -14,7 +14,6 @@ ms.technology: identity-adfs
 
 # AD FS Frequently Asked Questions (FAQ)
 
->Applies To: Windows Server 2016
 
 The following documentation is a home to frequently asked questions with regard to Active Directory Federation Services.  The document has been split into groups based on the type of question.
 

@@ -14,7 +14,6 @@ ms.technology: identity-adfs
 
 # Build a multi-tiered application using On-Behalf-Of (OBO) using OAuth with AD FS 2016 or later
 
->Applies To: Windows Server 2016 and later
 
 This walkthrough provides instruction for implementing an on-behalf-of (OBO) authentication using AD FS in Windows Server 2016 TP5 or later. To learn more about OBO authentication please read [AD FS Scenarios for Developers](../../ad-fs/overview/AD-FS-Scenarios-for-Developers.md)
 

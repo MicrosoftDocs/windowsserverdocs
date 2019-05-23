@@ -13,7 +13,6 @@ ms.technology: identity-adfs
 ---
 # Plan Device-based Conditional Access on-Premises
 
->Applies To: Windows Server 2016
 
 This document describes conditional access policies based on devices in a hybrid scenario where the on-premises directories are connected to Azure AD using Azure AD Connect.     
 

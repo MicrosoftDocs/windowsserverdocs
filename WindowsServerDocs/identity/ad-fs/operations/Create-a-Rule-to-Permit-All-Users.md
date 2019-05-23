@@ -14,8 +14,6 @@ ms.technology: identity-adfs
 
 # Create a Rule to Permit All Users
 
->Applies To: Windows Server 2016, Windows Server 2012 R2
-
 In Windows Server 2016, you can use an **Access Control Policy** to create a rule that will give all users access to a relying party.  In Windows Server 2012 R2, using the **Permit All Users** rule template in Active Directory Federation Services \(AD FS\), you can create an authorization rule that will give all users access to the relying party. 
 
 You can use additional authorization rules to further restrict access. Users who are permitted to access the relying party from the Federation Service may still be denied service by the relying party.  

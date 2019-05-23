@@ -13,7 +13,6 @@ ms.technology: identity-adfs
 ---
 # Customization for Localization 
 
->Applies To: Windows Server 2016, Windows Server 2012 R2
 
 Localizing web content into languages other than English is possible. Be aware of the following considerations when you localize.  
   

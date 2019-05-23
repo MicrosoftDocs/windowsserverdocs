@@ -12,7 +12,6 @@ ms.prod: windows-server-threshold
 ms.technology: identity-adfs
 ---
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 # The Role of the Claims Pipeline
 The claims pipeline in Active Directory Federation Services \(AD FS\) represents the path that claims must follow through the Federation Service before they can be issued. The Federation Service manages the entire end\-to\-end process of flowing claims through the various stages of the claims pipeline, which also includes the processing of claim rules by the claim rule engine.  
