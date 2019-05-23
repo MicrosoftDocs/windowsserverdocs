@@ -35,12 +35,6 @@ Evolve your business further with [Microsoft 365 Business](https://www.microsoft
 ## AAD Connect can now be installed on Windows Server 2019 Essentials
 
 Windows Server 2019 Essentials includes new support for Azure Active Directory via [AAD Connect](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnect-prerequisites). 
-=======
-Evolve your business even further with [Microsoft 365 Business](https://www.microsoft.com/en-us/microsoft-365/business), which includes even more Office features, like e-mail and calendaring, file storage in the cloud, data protection, and more. Microsoft 365 Business will help your small business achieve new levels of productivity.
-
-## AAD Connect can now be installed on Windows Server 2019 Essentials
-
-Windows Server 2019 Essentials includes new support for Azure Active Directory via [AAD Connect](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnect-prerequisites). 
 
 ## LTSC support for Windows Server 2016 Essentials
 
