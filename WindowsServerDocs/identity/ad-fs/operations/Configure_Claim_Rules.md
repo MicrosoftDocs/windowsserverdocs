@@ -14,8 +14,6 @@ ms.technology: identity-adfs
 
 # Configure Claim Rules
 
->Applies To: Windows Server 2016, Windows Server 2012 R2
-
 In a claims\-based identity model, the function of Active Directory Federation Services (AD FS) as federation services is to issue a token that contains a set of claims. Claims rules govern the decisions with regard to claims that AD FS issues. Claim rules and all server configuration data are stored in the AD FS configuration database.  
   
 AD FS makes issuance decisions that are based on identity information that is provided to it in the form of claims and other contextual information. At a high level, AD FS operates as a rules processor by taking one set of claims as input, performs a number of transformations, and then returns a different set of claims as output. 

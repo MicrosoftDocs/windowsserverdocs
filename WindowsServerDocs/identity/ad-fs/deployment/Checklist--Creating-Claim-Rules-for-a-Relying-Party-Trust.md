@@ -15,7 +15,6 @@ ms.author: billmath
 
 # Checklist: Creating Claim Rules for a Relying Party Trust
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 This checklist includes the tasks that are necessary for planning, designing, and deploying claim rules that are associated with a relying party trust in Active Directory Federation Services \(AD FS\).  
   

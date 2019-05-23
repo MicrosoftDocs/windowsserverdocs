@@ -14,7 +14,6 @@ ms.technology: identity-adfs
 
 # Walkthrough: Workplace Join with an iOS Device
 
->Applies To: Windows Server 2012 R2
 
 > [!IMPORTANT] 
 > This method is relevant for only fully on-prem customers. Hybrid or cloud-only customers must not use this method to register their iOS devices. And this method is not compatible when the on-prem customers decide to move to cloud. The device must be unregistered and registered with the cloud. 

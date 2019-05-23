@@ -11,7 +11,6 @@ ms.technology: identity-adfs
 ---
 # AD FS paginated sign-in
 
->Applies To: Windows Server 2019
 
 For AD FS 2019, we’ve redesigned the sign-in UI.  Now, the AD FS sign-in will have the same look and feel of Azure AD.  This will provide users a more consistent sign-in experience, incorporating a centered and paginated user flow. 
 

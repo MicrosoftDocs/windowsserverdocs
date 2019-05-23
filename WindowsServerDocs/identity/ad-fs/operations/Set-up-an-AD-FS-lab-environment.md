@@ -14,8 +14,6 @@ ms.author: billmath
 ---
 # Set up an AD FS lab environment
 
->Applies To: Windows Server 2012 R2
-
 This topic outlines the steps to configure a test environment that can be used to complete the walkthroughs in the following walkthrough guides:  
   
 -   [Walkthrough: Workplace Join with an iOS Device](Walkthrough--Workplace-Join-with-an-iOS-Device.md)  

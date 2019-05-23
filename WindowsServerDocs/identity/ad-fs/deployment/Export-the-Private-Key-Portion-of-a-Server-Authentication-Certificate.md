@@ -15,8 +15,6 @@ ms.author: billmath
 
 # Export the Private Key Portion of a Server Authentication Certificate
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
-
 Every federation server in an Active Directory Federation Services \(AD FS\) farm must have access to the private key of the server authentication certificate. If you are implementing a server farm of federation servers or Web servers, you must have a single authentication certificate. This certificate must be issued by an enterprise certification authority \(CA\), and it must have an exportable private key. The private key of the server authentication certificate must be exportable so that it can be made available to all the servers in the farm.  
   
 This same concept is true of federation server proxy farms in the sense that all federation server proxies in a farm must share the private key portion of the same server authentication certificate.  

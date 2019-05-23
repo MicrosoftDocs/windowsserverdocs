@@ -13,7 +13,6 @@ ms.technology: identity-adfs
 ---
 # Configure AD FS to Send Password Expiry Claims
 
->Applies To: Windows Server 2016, Windows Server 2012 R2
 
 You can configure Active Directory Federation Services (AD FS) to send password expiry claims to the relying party trusts (applications) that are protected by ADFS. How these claims are used depends on the application. For example, with Office 365 as your relying party, updates have been implemented to Exchange and Outlook to notify federated users of their soon-to-be-expired passwords.
 

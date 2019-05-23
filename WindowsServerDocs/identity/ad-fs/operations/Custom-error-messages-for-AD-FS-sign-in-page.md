@@ -14,7 +14,6 @@ ms.technology: identity-adfs
 
 # Custom error messages for AD FS sign-in page  
 
->Applies To: Windows Server 2016, Windows Server 2012 R2
 
 You can configure custom error messages that can be tailored to your organization. The following illustration shows a customized error page description and a generic error message. Use the following Windows PowerShell cmdlets to customize your error messages.  
   

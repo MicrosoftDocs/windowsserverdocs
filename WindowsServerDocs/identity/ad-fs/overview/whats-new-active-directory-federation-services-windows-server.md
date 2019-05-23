@@ -14,8 +14,6 @@ ms.technology: identity-adfs
 # What's new in Active Directory Federation Services
 
 
->Applies To: Windows Server 2019, Windows Server 2016
-
 ## What's new in Active Directory Federation Services for Windows Server 2019
 
 ### Protected Logins

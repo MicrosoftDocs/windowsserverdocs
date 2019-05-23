@@ -14,7 +14,7 @@ ms.technology: identity-adfs
 
 # Walkthrough Guide: Manage Risk with Conditional Access Control
 
->Applies To: Windows Server 2012 R2
+
 
 
 ## About This Guide

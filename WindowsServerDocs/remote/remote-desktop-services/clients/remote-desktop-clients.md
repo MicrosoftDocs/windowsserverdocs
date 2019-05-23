@@ -32,10 +32,10 @@ The following client apps are available:
 | iOS      | [iOS client in the iTunes store](https://itunes.apple.com/us/app/microsoft-remote-desktop/id714464092?mt=8)     | [Getting started with Remote Desktop client on iOS](remote-desktop-ios.md)         |
 | macOS    | [macOS client in the iTunes store](https://itunes.apple.com/us/app/microsoft-remote-desktop/id1295203466?mt=12) | [Getting started with Remote Desktop client on Mac](remote-desktop-mac.md)         |
 
-
 ## Configuring the remote PC
 
 To configure your remote PC before accessing it remotely, [Allow access to your PC](remote-desktop-allow-access.md).
 
 ## Remote Desktop client URI scheme
+
 You can integrate features of Remote Desktop clients across platforms by enabling a Uniform Resource Identifier (URI) scheme. Check out the [supported URI attributes](remote-desktop-uri.md) that you can use with the iOS, Mac, and Android clients.

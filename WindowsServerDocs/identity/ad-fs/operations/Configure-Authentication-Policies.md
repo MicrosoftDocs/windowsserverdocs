@@ -3,24 +3,16 @@ ms.assetid: 8e7015bc-c489-4ec7-8b6e-3ece90f72317
 title: Configure Authentication Policies
 description:
 author: billmath
-ms.author: billmath
-ms.author: billmath
-ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server-threshold
-
 ms.technology: identity-adfs
 ms.author: billmath
-ms.author: billmath
-ms.author: billmath
-ms.author: billmath
+
 ---
 
 # Configure Authentication Policies
-
->Applies To: Windows Server 2012 R2
 
 In AD FS, in Windows Server 2012 R2, both access control and the authentication mechanism are enhanced with multiple factors that include user, device, location, and authentication data. These enhancements enable you, either through the user interface or through Windows PowerShell, to manage the risk of granting access permissions to AD FS\-secured applications via multi\-factor access control and multi\-factor authentication that are based on user identity or group membership, network location, device data that is workplace\-joined, and the authentication state when multi\-factor authentication \(MFA\) was performed.  
   

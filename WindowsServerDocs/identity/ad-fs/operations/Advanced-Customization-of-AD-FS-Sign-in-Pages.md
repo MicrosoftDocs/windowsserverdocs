@@ -16,7 +16,6 @@ ms.technology: identity-adfs
 
 # Advanced Customization of AD FS Sign-in Pages
 
->Applies To: Windows Server 2016, Windows Server 2012 R2
   
 ## Advanced Customization of AD FS Sign\-in Pages  
 AD FS in Windows Server 2012 R2 provides built\-in support for customizing the sign\-in experience. For a majority of these scenarios, the built\-in Windows PowerShell cmdlets are all that is required.  It is recommended that you use the built\-in Windows PowerShell commands to customize standard elements for AD FS sign\-in experience whenever possible.  See [AD-FS user sign-in customization](AD-FS-user-sign-in-customization.md) for more information.  

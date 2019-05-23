@@ -14,7 +14,6 @@ ms.technology: identity-adfs
 
 # Create a Rule to Permit or Deny Users Based on an Incoming Claim 
 
->Applies To: Windows Server 2016, Windows Server 2012 R2
 
 In Windows Server 2016, you can use an **Access Control Policy** to create a rule that will permit or deny users based on an incoming claim.  In Windows Server 2012 R2, using the **Permit or Deny Users Based on an Incoming Claim** rule template in Active Directory Federation Services \(AD FS\), you can create an authorization rule that will grant or deny user’s access to the relying party based on the type and value of an incoming claim. 
 

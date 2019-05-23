@@ -12,7 +12,6 @@ ms.prod: windows-server-threshold
 ms.technology: identity-adfs
 ---
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 # The Role of Claim Rules
 The overall function of the Federation Service in Active Directory Federation Services \(AD FS\) is to issue a token that contains a set of claims. The decision regarding what claims AD FS accepts and then issues is governed by claim rules.  
