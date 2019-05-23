@@ -39,11 +39,11 @@ For other applications of Storage Spaces, such as Shared SAS clusters and stand-
 
 **Storage Spaces Direct at Microsoft Ignite 2017 (1 hour)**
 
-> [!Video https://www.youtube.com/embed/5kaUiW3qo30]
+> [!Video https://www.youtube-nocookie.com/embed/YDr2sqNB-3c]
 
 **Launch Event at Microsoft Ignite 2016 (1 hour)**
 
-> [!Video https://www.youtube-nocookie.com/watch?v=5kaUiW3qo30]
+> [!Video https://www.youtube-nocookie.com/embed/LK2ViRGbWs]
 
 ## Key benefits
 
