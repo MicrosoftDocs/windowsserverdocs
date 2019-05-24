@@ -87,50 +87,15 @@ Here's how to create a file share on Windows Server 2019, Windows Server 2016, a
 
 ### Required permissions for the file share hosting redirected folders
 
-<table>
-<tbody>
-<tr class="odd">
-<td>User Account</td>
-<td>Access</td>
-<td>Applies to</td>
-</tr>
-<tr class="even">
-<td>System</td>
-<td>Full control</td>
-<td>This folder, subfolders and files</td>
-</tr>
-<tr class="odd">
-<td>Administrators</td>
-<td>Full Control</td>
-<td>This folder only</td>
-</tr>
-<tr class="even">
-<td>Creator/Owner</td>
-<td>Full Control</td>
-<td>Subfolders and files only</td>
-</tr>
-<tr class="odd">
-<td>Security group of users needing to put data on share (Folder Redirection Users)</td>
-<td>List folder / read data<sup>1</sup><br />
-<br />
-Create folders / append data<sup>1</sup><br />
-<br />
-Read attributes<sup>1</sup><br />
-<br />
-Read extended attributes<sup>1</sup><br />
-<br />
-Read permissions<sup>1</sup></td>
-<td>This folder only</td>
-</tr>
-<tr class="even">
-<td>Other groups and accounts</td>
-<td>None (remove)</td>
-<td></td>
-</tr>
-</tbody>
-</table>
 
-1 Advanced permissions
+|User Account  |Access  |Applies to  |
+|---------|---------|---------|
+| User Account | Access | Applies to |
+|System     | Full control        |    This folder, subfolders and files     |
+|Administrators     | Full Control       | This folder only        |
+|Creator/Owner     |   Full Control      |   Subfolders and files only      |
+|Security group of users needing to put data on share (Folder Redirection Users)     |   List folder / read data *(Advanced permissions)* <br /><br />Create folders / append data *(Advanced permissions)* <br /><br />Read attributes *(Advanced permissions)* <br /><br />Read extended attributes *(Advanced permissions)* <br /><br />Read permissions *(Advanced permissions)*      |  This folder only       |
+|Other groups and accounts     |  None (remove)       |         |
 
 ## Step 3: Create a GPO for Folder Redirection
 

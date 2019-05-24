@@ -23,8 +23,6 @@ You can change a disk from a GPT to an MBR partition style as long as the disk i
 > [!NOTE]
 > You must be a member of the **Backup Operators** or **Administrators** group, at minimum, to complete these steps.
 
-<a id="BKMK_WINUI"></a>
-
 ## Converting using the Windows interface
 
 1.  Back up or move all volumes on the basic GPT disk you want to convert into an MBR disk.
@@ -32,8 +30,6 @@ You can change a disk from a GPT to an MBR partition style as long as the disk i
 2.  If the disk contains any partitions or volumes, right-click each and then click **Delete Volume**.
 
 3.  Right-click the GPT disk that you want to change into an MBR disk, and then click **Convert to MBR disk**.
-
-<a id="BKMK_CMD"></a>
 
 ## Converting using a command line
 
