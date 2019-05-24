@@ -21,7 +21,7 @@ ms.date: 10/16/2017
 
 Deletes a service subkey from the registry. If the service is running or if another process has an open handle to the service, the service is marked for deletion.
 
-For examples of how to use this command, see [Examples](#BKMK_examples).
+For examples of how to use this command, see [Examples](#examples).
 
 ## Syntax
 
@@ -41,7 +41,7 @@ sc [<ServerName>] delete [<ServiceName>]
 
 Use **Add or Remove Programs** on **Control Panel** to delete DHCP, DNS, or any other built-in operating system services. Note that **Add or Remove Programs** will not only remove the registry subkey for the service, but it will also uninstall the service and delete any shortcuts to it.
 
-## <a name="BKMK_examples"></a>Examples
+## Examples
 
 To delete the service subkey **NewServ** from the registry on the local computer, type:
 ```
