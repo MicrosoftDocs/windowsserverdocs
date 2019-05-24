@@ -9,7 +9,7 @@ author: jasongerend
 ms.author: jgerend
 manager: jasgroce
 ms.localizationpriority: medium
-ms.date: 05/22/2019
+ms.date: 05/24/2019
 ---
 # Server Core App Compatibility Feature on Demand (FOD)
 
@@ -54,7 +54,7 @@ Operating system components that are available as part of the Server Core App Co
         -   From an elevated PowerShell session: 
 
             ```PowerShell
-            Install-WindowsFeature -NameFailover-Clustering -IncludeManagementTools`
+            Install-WindowsFeature -NameFailover-Clustering -IncludeManagementTools
             ```
         -   To run Failover Cluster Manager, enter **cluadmin** at the command prompt.
 
@@ -76,7 +76,7 @@ The App Compatibility FOD can only be installed on Server Core. Don't attempt to
 2. If the server can't connect to Windows Update, instead download the Server FOD optional packages ISO, and copy the ISO to a shared folder on your local network:
 
    - If you have a volume license you can download the Server FOD ISO image file from the same portal where the OS ISO image file is obtained: [Volume Licensing Service Center](https://www.microsoft.com/Licensing/servicecenter/default.aspx).
-   - The Server FOD ISO image file is also available on the [Microsoft Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-windows-server-2019) or on the [Visual Studio portal](https://visualstudio.microsoft.com) for subscribers.
+   - The Server FOD ISO image file is also available on the [Microsoft Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-windows-server) or on the [Visual Studio portal](https://visualstudio.microsoft.com) for subscribers.
 
 3. Sign in with an administrator account on the Server Core computer that is connected to your local network and that you want to add the FOD to.
 
@@ -148,7 +148,7 @@ The App Compatibility FOD can only be installed on Server Core. Don't attempt to
 1. Download the Windows Server and Server FOD ISO image files to a local folder on a Windows computer.
 
    - If you have a volume license you can download the Windows Server and Server FOD ISO image files from the [Volume Licensing Service Center](https://www.microsoft.com/Licensing/servicecenter/default.aspx).
-   - The Server FOD ISO image file is also available on the [Microsoft Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-windows-server-2019) or on the [Visual Studio portal](https://visualstudio.microsoft.com) for subscribers.
+   - The Server FOD ISO image file is also available on the [Microsoft Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-windows-server) or on the [Visual Studio portal](https://visualstudio.microsoft.com) for subscribers.
 
 2. Open a PowerShell session as an administrator and then use the following commands to mount the image files as drives:
 
@@ -157,18 +157,17 @@ The App Compatibility FOD can only be installed on Server Core. Don't attempt to
    Mount-DiskImage -ImagePath <Path_To_Windows_Server_ISO>
    ```
 
-3. Copy the the contents of the Windows Server ISO file to a local folder.
+3. Copy the the contents of the Windows Server ISO file to a local folder (for example, `C:\SetupFiles\WindowsServer`).
 
-4. Get the image name you want to modify within the Install.wim file by using the following command, replacing <Install.wim path> with the path to the Install.wim file, located inside the \Sources folder of the ISO file:
+4. Get the image name you want to modify within the Install.wim file by using the following command, replacing <Install.wim path> with the path to the Install.wim file, located inside the \Sources folder of the ISO file (for example, `C:\SetupFiles\WindowsServer\Install.wim`):
 
    ```PowerShell
    Get-WindowsImage -ImagePath <Install.wim path>
    ```
 
-5. Mount the Install.wim file in a new folder (we're using c:\test\offline as an example) by using these commands, replacing <Install.wim path> with the path to the Install.wim file, and <ImageName> with the name of the image you want to mount, for example "Windows Server Datacenter":
+5. Mount the Install.wim file in a new folder (we're using c:\test\offline as an example) by using these commands, replacing <Install.wim path> with the path to the Install.wim file (`C:\SetupFiles\WindowsServer\Install.wim`), and <ImageName> with the name of the image you want to mount, for example "Windows Server Datacenter":
 
    ```PowerShell
-   MD C:\test\offline
    Mount-WindowsImage -ImagePath <Install.wim path> -Name <ImageName> -path c:\test\offline
    ```
 
@@ -185,4 +184,4 @@ The App Compatibility FOD can only be installed on Server Core. Don't attempt to
    Dismount-WindowsImage -Path C:\test\offline -Save
    ```
 
-You now should have an updated Windows Server installation source (ISO) that you can use to upgrade Windows Server, with the additional capabilities and optional packages included.
+You can now upgrade your server by running setup.exe from the folder you created for the Windows Server installation files (in this example: `C:\SetupFiles\WindowsServer`). This folder now contains the Windows Server installation files with the additional capabilities and optional packages included.
