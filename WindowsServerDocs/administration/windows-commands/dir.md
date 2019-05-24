@@ -21,7 +21,7 @@ ms.date: 10/16/2017
 
 Displays a list of a directory's files and subdirectories. If used without parameters, **dir** displays the disk's volume label and serial number, followed by a list of directories and files on the disk (including their names and the date and time each was last modified). For files, **dir** displays the name extension and the size in bytes. **Dir** also displays the total number of files and directories listed, their cumulative size, and the free space (in bytes) remaining on the disk.
 
-For examples of how to use this command, see [Examples](#BKMK_examples).
+For examples of how to use this command, see [Examples](#examples).
 
 ## Syntax
 
@@ -88,7 +88,7 @@ dir [<Drive>:][<Path>][<FileName>] [...] [/p] [/q] [/w] [/d] [/a[[:]<Attributes>
     When you use the redirection symbol (**>**) to send **dir** output to a file or a pipe (**|**) to send **dir** output to another command, use **/a:-d** and **/b** to list the file names only. You can use *FileName* with **/b** and **/s** to specify that **dir** is to search the current directory and its subdirectories for all file names that match *FileName*. **Dir** lists only the drive letter, directory name, file name, and file name extension (one path per line), for each file name it finds. Before you use a pipe to send **dir** output to another command, you should set the TEMP environment variable in your Autoexec.nt file.
 -   The **dir** command, with different parameters, is available from the Recovery Console.
 
-## <a name="BKMK_examples"></a>Examples
+## Examples
 
 To display all directories one after the other, in alphabetical order, in wide format, and pausing after each screen, make sure that the root directory is the current directory, and then type:
 ```

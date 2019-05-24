@@ -9,7 +9,7 @@ author: jasongerend
 ms.author: jgerend
 manager: jasgroce
 ms.localizationpriority: medium
-ms.date: 05/22/2019
+ms.date: 05/24/2019
 ---
 # Server Core App Compatibility Feature on Demand (FOD)
 
@@ -54,8 +54,9 @@ Operating system components that are available as part of the Server Core App Co
         -   From an elevated PowerShell session: 
 
             ```PowerShell
-            Install-WindowsFeature -NameFailover-Clustering -IncludeManagementTools`
+            Install-WindowsFeature -NameFailover-Clustering -IncludeManagementTools
             ```
+
         -   To run Failover Cluster Manager, enter **cluadmin** at the command prompt.
 
 Servers running Windows Server, version 1903 and later also support the following components:
@@ -76,7 +77,7 @@ The App Compatibility FOD can only be installed on Server Core. Don't attempt to
 2. If the server can't connect to Windows Update, instead download the Server FOD optional packages ISO, and copy the ISO to a shared folder on your local network:
 
    - If you have a volume license you can download the Server FOD ISO image file from the same portal where the OS ISO image file is obtained: [Volume Licensing Service Center](https://www.microsoft.com/Licensing/servicecenter/default.aspx).
-   - The Server FOD ISO image file is also available on the [Microsoft Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-windows-server-2019) or on the [Visual Studio portal](https://visualstudio.microsoft.com) for subscribers.
+   - The Server FOD ISO image file is also available on the [Microsoft Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-windows-server) or on the [Visual Studio portal](https://visualstudio.microsoft.com) for subscribers.
 
 3. Sign in with an administrator account on the Server Core computer that is connected to your local network and that you want to add the FOD to.
 
@@ -96,7 +97,7 @@ The App Compatibility FOD can only be installed on Server Core. Don't attempt to
     Add-WindowsCapability -Online -Name ServerCore.AppCompatibility~~~~0.0.1.0 -Source <Mounted_Server_FOD_Drive> -LimitAccess
      ```
 
-8.  After the progress bar completes, restart the operating system.
+8. After the progress bar completes, restart the operating system.
 
  For more information about DISM commands, see [Use DISM in Windows PowerShell](https://docs.microsoft.com/windows-hardware/manufacture/desktop/use-dism-in-windows-powershell-s14)
 
@@ -105,23 +106,25 @@ The App Compatibility FOD can only be installed on Server Core. Don't attempt to
  >[!NOTE]  
    > The Server Core App Compatibility FOD is required for the addition of Internet Explorer 11, but Internet Explorer 11 is not required to add the Server Core App Compatibility FOD.
 
-1.  Sign in as Administrator on the Server Core computer that has the App Compatibility FOD already added and the Server FOD optional package ISO copied locally.
+1. Sign in as Administrator on the Server Core computer that has the App Compatibility FOD already added and the Server FOD optional package ISO copied locally.
 
-2.  Start PowerShell by entering **powershell.exe** at a command prompt.
+2. Start PowerShell by entering **powershell.exe** at a command prompt.
 
-3.  Mount the FoD ISO by using the following command:
+3. Mount the FOD ISO by using the following command:
 
     ```PowerShell
     Mount-DiskImage -ImagePath drive_letter:\folder_where_ISO_is_saved\ISO_filename.iso
     ```
 
-5. Run the following command, replacing <Path_to_IE_Package_in_Mounted_Server_FOD> with the path to the Internet Explorer cab file (often called Microsoft-Windows-InternetExplorer-Optional-Package~31bf3856ad364e35~amd64~~.cab):
+4. Run the following command, using the `$package_path` variable to enter the path to the Internet Explorer cab file:
 
     ```PowerShell
-    Add-WindowsPackage -Online -PackagePath <Path_to_IE_Package_in_Mounted_Server_FOD>
+    $package_path = "D:\Microsoft-Windows-InternetExplorer-Optional-Package~31bf3856ad364e35~amd64~~.cab"
+
+    Add-WindowsPackage -Online -PackagePath $package_path
     ```
 
-6.  After the progress bar completes, restart the operating system.
+5. After the progress bar completes, restart the operating system.
 
 ## Release notes and suggestions for the Server Core App Compatibility FOD and Internet Explorer 11 optional package
 
@@ -134,7 +137,7 @@ The App Compatibility FOD can only be installed on Server Core. Don't attempt to
 
 - After installation of the App Compatibility FOD and reboot of the server, the command console window frame color will change to a different shade of blue.
 
-- If you choose to also install the Internet Explorer 11 optional package, note that double clicking to open locally saved .htm files is not supported. However, you can **right-click** and choose **Open with IE**, or you can open it directly from Internet Explorer **File** -> **Open**. 
+- If you choose to also install the Internet Explorer 11 optional package, note that double clicking to open locally saved .htm files is not supported. However, you can **right-click** and choose **Open with IE**, or you can open it directly from Internet Explorer **File** -> **Open**.
 
 - To further enhance the app compatibility of Server Core with the App Compatibility FOD, the IIS Management Console has been added to Server Core as an optional component.  However, it is absolutely necessary to first add the App Compatibility FOD to use the IIS Management Console. IIS Management Console relies on the Microsoft Management Console (mmc.exe), which is only available on Server Core with the addition of the App Compatibility FOD.  Use Powershell [**Install-WindowsFeature**](https://docs.microsoft.com/powershell/module/microsoft.windows.servermanager.migration/install-windowsfeature?view=win10-ps) to add IIS Management Console.
 
@@ -148,41 +151,57 @@ The App Compatibility FOD can only be installed on Server Core. Don't attempt to
 1. Download the Windows Server and Server FOD ISO image files to a local folder on a Windows computer.
 
    - If you have a volume license you can download the Windows Server and Server FOD ISO image files from the [Volume Licensing Service Center](https://www.microsoft.com/Licensing/servicecenter/default.aspx).
-   - The Server FOD ISO image file is also available on the [Microsoft Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-windows-server-2019) or on the [Visual Studio portal](https://visualstudio.microsoft.com) for subscribers.
+   - The Server FOD ISO image file is also available on the [Microsoft Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-windows-server) or on the [Visual Studio portal](https://visualstudio.microsoft.com) for subscribers.
 
 2. Open a PowerShell session as an administrator and then use the following commands to mount the image files as drives:
 
    ```PowerShell
-   Mount-DiskImage -ImagePath <Path_To_ServerFOD_ISO>
-   Mount-DiskImage -ImagePath <Path_To_Windows_Server_ISO>
+   Mount-DiskImage -ImagePath Path_To_ServerFOD_ISO
+   Mount-DiskImage -ImagePath Path_To_Windows_Server_ISO
    ```
 
-3. Copy the the contents of the Windows Server ISO file to a local folder.
+3. Copy the the contents of the Windows Server ISO file to a local folder (for example, *C:\SetupFiles\WindowsServer*).
 
-4. Get the image name you want to modify within the Install.wim file by using the following command, replacing <Install.wim path> with the path to the Install.wim file, located inside the \Sources folder of the ISO file:
+4. Get the image name you want to modify within the Install.wim file by using the following command.<br>
+Use the `$install_wim_path` variable to enter the path to the Install.wim file, located inside the \Sources folder of the ISO file.
 
    ```PowerShell
-   Get-WindowsImage -ImagePath <Install.wim path>
+   $install_wim_path = "C:\SetupFiles\WindowsServer\sources\install.wim"
+
+   Get-WindowsImage -ImagePath $install_wim_path
    ```
 
-5. Mount the Install.wim file in a new folder (we're using c:\test\offline as an example) by using these commands, replacing <Install.wim path> with the path to the Install.wim file, and <ImageName> with the name of the image you want to mount, for example "Windows Server Datacenter":
+5. Mount the Install.wim file in a new folder by using the following command replacing the sample variable values with your own, and reusing the `$install_wim_path` variable from the previous command.<br>
+
+   - `$image_name` - Enter the name of the image you want to mount.
+   - `$mount_folder variable` - Specify the folder to use when accessing the contents of the Install.wim file.
 
    ```PowerShell
-   MD C:\test\offline
-   Mount-WindowsImage -ImagePath <Install.wim path> -Name <ImageName> -path c:\test\offline
+   $image_name = "Windows Server Datacenter"
+   $mount_folder = "c:\test\offline"
+
+   Mount-WindowsImage -ImagePath $install_wim_path -Name $image_name -path $mount_folder
    ```
 
-6. Add capabilities and packages you want to the mounted Install.wim image. For example, to add Internet Explorer and the ServerCore.AppCompatibility package, use the following commands:
+6. Add capabilities and packages you want to the mounted Install.wim image by using the following commands, replacing the sample variable values with your own.<br>
+
+   - `$capability_name` - Specify the name of the capability to install (in this case, the AppCompatibility capability).
+   - `$package_path` - Specify the path to the package to install (in this case, Internet Explorer).
+   - `$fod_drive` - Specify the drive letter of the mounted Server FOD image.
 
    ```PowerShell
-   Add-WindowsCapability -Path C:\test\offline -Name ServerCore.AppCompatibility~~~~0.0.1.0 -Source <Mounted_Server_FOD_Drive> -LimitAccess
-   Add-WindowsPackage -Path C:\test\offline -PackagePath <Path_to_IE_Package_in_Mounted_Server_FOD>
+   $capability_name = "ServerCore.AppCompatibility~~~~0.0.1.0"
+   $package_path = "D:\Microsoft-Windows-InternetExplorer-Optional-Package~31bf3856ad364e35~amd64~~.cab"
+   $fod_drive = "d:\"
+
+   Add-WindowsCapability -Path $mount_folder -Name $capability_name -Source $fod_drive -LimitAccess
+   Add-WindowsPackage -Path $mount_folder -PackagePath $package_path
    ```
 
-7. Dismount and commit changes to the Install.wim file by using the following command:
+7. Dismount and commit changes to the Install.wim file by using the following command, which uses the `$mount_folder` variable from previous commands:
 
    ```PowerShell
-   Dismount-WindowsImage -Path C:\test\offline -Save
+   Dismount-WindowsImage -Path $mount_folder -Save
    ```
 
-You now should have an updated Windows Server installation source (ISO) that you can use to upgrade Windows Server, with the additional capabilities and optional packages included.
+You can now upgrade your server by running setup.exe from the folder you created for the Windows Server installation files (in this example: *C:\SetupFiles\WindowsServer*). This folder now contains the Windows Server installation files with the additional capabilities and optional packages included.
