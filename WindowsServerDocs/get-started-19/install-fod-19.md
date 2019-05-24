@@ -123,7 +123,7 @@ The App Compatibility FOD can only be installed on Server Core. Don't attempt to
 ## Release notes and suggestions for the Server Core App Compatibility FOD and Internet Explorer 11 optional package
 
 > [!IMPORTANT]
-> FODs installed on Windows Server, version 1809 won't remain in place after an in-place upgrade to Windows Server, version 1903, so you'd have to install them again after the upgrade. Alternatively, you can add FODs to the new Windows Server installation source prior to upgrading. This ensures that the new version of any FODs are present after the upgrade completes. For more info, see the [Adding capabilities and optional packages to an offline WIM Server Core image](install-fod-19.md#Adding-capabilities-and-optional-packages-to-an-offline-WIM-Server-Core-image).
+> FODs installed on Windows Server, version 1809 won't remain in place after an in-place upgrade to Windows Server, version 1903, so you'd have to install them again after the upgrade. Alternatively, you can add FODs to the new Windows Server installation source prior to upgrading. This ensures that the new version of any FODs are present after the upgrade completes. For more info, see the [Adding capabilities and optional packages to an offline WIM Server Core image](install-fod-19.md#add-capabilities).
 
 - **Important:** Read the Windows Server 2019 release notes for any issues, considerations, or guidance before proceeding with installation and use of the Server Core App Compatibility FOD and Internet Explorer 11 optional package.
 
@@ -140,7 +140,7 @@ The App Compatibility FOD can only be installed on Server Core. Don't attempt to
  - As an example, SQL Server Management Studio for SQL Server 2016 and SQL Server 2017 can be installed on Server Core and is fully functional when the App Compatibility FOD is present.  See, [Install SQL Server from the Command Prompt](https://docs.microsoft.com/sql/database-engine/install-windows/install-sql-server-from-the-command-prompt?view=sql-server-2017).
  - If SQL Server Management Studio is not desired, then it is unnecessary to install the Server Core App Compatibility FOD.  See, [Install SQL Server on Server Core](https://docs.microsoft.com/sql/database-engine/install-windows/install-sql-server-on-server-core?view=sql-server-2017).
 
-## Adding capabilities and optional packages to an offline WIM Server Core image
+## <a id="add-capabilities"> Adding capabilities and optional packages to an offline WIM Server Core image
 
 1. Download the Windows Server and Server FOD ISO image files to a local folder on a Windows computer.
 
