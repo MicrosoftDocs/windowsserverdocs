@@ -21,22 +21,20 @@ This topic describes how to delete everything on a dynamic disk and then convert
 
 ## Changing a dynamic disk back to a basic disk
 
--   [Using the Windows interface](#BKMK_WINUI)
--   [Using a command line](#BKMK_CMD)
+-   [Using the Windows interface](#to-change-a-dynamic-disk-back-to-a-basic-disk-using-the-windows-interface)
+-   [Using a command line](#to-change-a-dynamic-disk-back-to-a-basic-disk-using-a-command-line)
 
 > [!NOTE]
 > You must be a member of the **Backup Operators** or **Administrators** group, at minimum, to complete these steps.
 
-<a href="" id="BKMK_WINUI"></a>
 #### To change a dynamic disk back to a basic disk using the Windows interface
+
 1.  Back up all volumes on the disk you want to convert from dynamic to basic.
 
 2.  In Disk Management, right-click each volume on the dynamic disk you want to convert to a basic disk, and then click **Delete Volume** for each volume on the disk.
 
 3.  When all volumes on the disk have been deleted, right-click the disk, and then click **Convert to Basic Disk**.
 
-
-<a href="" id="BKMK_CMD"></a>
 #### To change a dynamic disk back to a basic disk using a command line
 
 1.  Back up all volumes on the disk you want to convert from dynamic to basic.
