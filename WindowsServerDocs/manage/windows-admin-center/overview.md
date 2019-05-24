@@ -123,6 +123,7 @@ Admin Center to Azure</a></li>
 
 Learn about our latest released features:
 
+- Version 1904.1 - Maintenance update to improve stability of gateway plugins, including the [Lenovo XClarity Integrator extension plugin](./manage/windows-admin-center/support/known-issues#lenovo-xclarity-integrator).
 - Version [1904](https://aka.ms/wac1904) is the most recent GA release that introduces the Azure Hybrid Services tool, and brings features that were previously in preview to the GA channel.
 - Version [1903](https://aka.ms/wac1903) brings email notifications from Azure Monitor, the ability to add Server or PC connections from Active Directory, and new tools to manage Active Directory, DHCP, and DNS.
 - Version [1902](https://aka.ms/wac1902) added a shared connection list & improvements to software defined network (SDN) management, including new SDN tools to manage ACLs, gateway connections, and logical networks.
