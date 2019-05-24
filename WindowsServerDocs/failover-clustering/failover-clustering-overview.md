@@ -31,12 +31,12 @@ Failover Clustering has many practical applications, including:
 
 |  |  |
 |---------|---------|
-|![](../media/i-whats-new.svg)    | **What's new in Failover Clustering**        |
+|![What's new](../media/i-whats-new.svg)  | [**What's new in Failover Clustering**](whats-new-in-failover-clustering.md) |
 
 
 |  |  |  |
 |---------|---------|---------|
-|![Understand](../media/i-whats-new.svg)**Understand**  |  ![Planning](../media/i-whats-new.svg)**Planning**  |  ![Deployment](../media/i-whats-new.svg)**Deployment**       |
+|![Understand](../media/i-cluster.svg)**Understand**  |  ![Planning](../media/i-cluster.svg)**Planning**  |  ![Deployment](../media/i-cluster.svg)**Deployment**       |
 | [Scale-Out File Server for application data](sofs-overview.md)    |   [Planning Failover Clustering Hardware Requirements and Storage Options](clustering-requirements.md)      |  [Deployment Prestage Cluster Computer Objects in Active Directory Domain Services](prestage-cluster-adds.md)  |
 |  [Cluster and pool quorum](../storage/storage-spaces/understand-quorum.md)   |   [Use Cluster Shared Volumes (CSVs)](failover-cluster-csvs.md)      | [Creating a Failover Cluster](create-failover-cluster.md)        |
 |  [Fault domain awareness](fault-domains.md)   |  [Using guest virtual machine clusters with Storage Spaces Direct](../storage/storage-spaces/storage-spaces-direct-in-vm.md)       | [Deploy a two-node file server](../storage/storage-spaces/storage-spaces-direct-in-vm.md)        |
@@ -50,7 +50,7 @@ Failover Clustering has many practical applications, including:
 
 |  |  |  |
 |---------|---------|---------|
-|![Manage](../media/i-whats-new.svg)**Manage**  |  ![Tools and settings](../media/i-whats-new.svg)**Tools and settings**  |  ![Community resources](../media/i-whats-new.svg)**Community resources**       |
+|![Manage](../media/i-cluster.svg)**Manage**  |  ![Tools and settings](../media/i-cluster.svg)**Tools and settings**  |  ![Community resources](../media/i-cluster.svg)**Community resources**       |
 | [Cluster-Aware Updating](cluster-aware-updating.md)    |   [Failover Clustering PowerShell Cmdlets](https://docs.microsoft.com/powershell/module/failoverclusters/?view=win10-ps)      |  [High Availability (Clustering) Forum](https://go.microsoft.com/fwlink/p/?LinkId=230641)       |
 |  [Health Service](health-service-overview.md)   |   [Cluster Aware Updating PowerShell Cmdlets](https://docs.microsoft.com/powershell/module/clusterawareupdating/?view=win10-ps)      | [Failover Clustering and Network Load Balancing Team Blog](http://blogs.msdn.com/b/clustering/)        |
 |  [Cluster-domain migration](cluster-domain-migration.md)   |         |         |

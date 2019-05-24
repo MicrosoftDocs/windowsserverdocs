@@ -19,13 +19,13 @@ The first step in the deployment of Windows Server Update Services (WSUS) is to 
 
 |Task|Description|
 |----|--------|
-|[1.1. Review considerations and system requirements](plan-your-wsus-deployment.md#11-review-considerations-and-system-requirements)|Review the list of considerations and system requirements to ensure that you have all the necessary hardware and software to deploy WSUS.|
-|[1.2. Choose a WSUS deployment scenario](plan-your-wsus-deployment.md#choose-a-wsus-deployment-scenario)|Decide which WSUS deployment scenario will be used.|
-|[1.3. Choose a WSUS storage strategy](plan-your-wsus-deployment.md#13-choose-a-wsus-storage-strategy)|Decide which WSUS storage strategy best fits your deployment.|
-|[1.4. Choose WSUS update languages](plan-your-wsus-deployment.md#14-choose-wsus-update-languages)|Decide which WSUS update languages will be installed.|
-|[1.5. Plan WSUS computer groups](plan-your-wsus-deployment.md#15-plan-wsus-computer-groups)|Plan the WSUS computer group approach that you will use for your deployment.|
-|[1.6. Plan WSUS Performance Considerations: Background Intelligent Transfer Service](plan-your-wsus-deployment.md#16-plan-wsus-performance-considerations)|Plan a WSUS design for optimized performance.|
-|[1.7. Plan Automatic Updates settings](plan-your-wsus-deployment.md#17-plan-automatic-updates-settings)|Plan how you will configure the automatic updates settings for your scenario.|
+|[1.1. Review considerations and system requirements](#11-review-considerations-and-system-requirements)|Review the list of considerations and system requirements to ensure that you have all the necessary hardware and software to deploy WSUS.|
+|[1.2. Choose a WSUS deployment scenario](#12-choose-a-wsus-deployment-scenario)|Decide which WSUS deployment scenario will be used.|
+|[1.3. Choose a WSUS storage strategy](#13-choose-a-wsus-storage-strategy)|Decide which WSUS storage strategy best fits your deployment.|
+|[1.4. Choose WSUS update languages](#14-choose-wsus-update-languages)|Decide which WSUS update languages will be installed.|
+|[1.5. Plan WSUS computer groups](#15-plan-wsus-computer-groups)|Plan the WSUS computer group approach that you will use for your deployment.|
+|[1.6. Plan WSUS Performance Considerations: Background Intelligent Transfer Service](#16-plan-wsus-performance-considerations)|Plan a WSUS design for optimized performance.|
+|[1.7. Plan Automatic Updates settings](#17-plan-automatic-updates-settings)|Plan how you will configure the automatic updates settings for your scenario.|
 
 ## 1.1. Review considerations and system requirements
 

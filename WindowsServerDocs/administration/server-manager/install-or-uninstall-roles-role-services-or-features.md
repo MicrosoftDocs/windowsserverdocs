@@ -33,7 +33,7 @@ This topic contains the following sections.
   
 -   [Install roles, role services, and features by using Windows PowerShell cmdlets](#install-roles-role-services-and-features-by-using-windows-powershell-cmdlets)  
   
--   [Remove roles, role services, and features by using the remove Roles and Features Wizard](#remove-roles-role services-and-features-by-using-the-remove-roles-and-features-wizard)  
+-   [Remove roles, role services, and features by using the remove Roles and Features Wizard](#remove-roles-role-services-and-features-by-using-the-remove-roles-and-features-wizard)  
   
 -   [Remove roles, role services, and features by using Windows PowerShell cmdlets](#remove-roles-role-services-and-features-by-using-windows-powershell-cmdlets)  
   

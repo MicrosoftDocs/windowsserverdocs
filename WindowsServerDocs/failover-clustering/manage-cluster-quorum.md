@@ -25,9 +25,6 @@ The quorum model in Windows Server is flexible. If you need to modify the quorum
 
 The following table lists the three quorum configuration options that are available in the Configure Cluster Quorum Wizard.
 
-| Option | Description|
-
-
 |Option  |Description  |
 |---------|---------|
 |Use typical settings     |  The cluster automatically assigns a vote to each node and dynamically manages the node votes. If it is suitable for your cluster, and there is cluster shared storage available, the cluster selects a disk witness. This option is recommended in most cases, because the cluster software automatically chooses a quorum and witness configuration that provides the highest availability for your cluster.       |

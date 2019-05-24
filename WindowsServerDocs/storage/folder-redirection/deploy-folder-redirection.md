@@ -88,12 +88,13 @@ Here's how to create a file share on Windows Server 2019, Windows Server 2016, a
 ### Required permissions for the file share hosting redirected folders
 
 
-|User Account  |Access<  |Applies to  |
+|User Account  |Access  |Applies to  |
 |---------|---------|---------|
+| User Account | Access | Applies to |
 |System     | Full control        |    This folder, subfolders and files     |
 |Administrators     | Full Control       | This folder only        |
 |Creator/Owner     |   Full Control      |   Subfolders and files only      |
-|Security group of users needing to put data on share (Folder Redirection Users)     |   List folder / read data *(Advanced permissions)* <br /><br />Create folders / append data *(Advanced permissions)* <br /><br />Read attributes *(Advanced permissions)* <br /><br />Read extended attributes *(Advanced permissions)* <br /><br />Read permissions *(Advanced permissions)*      |         |
+|Security group of users needing to put data on share (Folder Redirection Users)     |   List folder / read data *(Advanced permissions)* <br /><br />Create folders / append data *(Advanced permissions)* <br /><br />Read attributes *(Advanced permissions)* <br /><br />Read extended attributes *(Advanced permissions)* <br /><br />Read permissions *(Advanced permissions)*      |  This folder only       |
 |Other groups and accounts     |  None (remove)       |         |
 
 ## Step 3: Create a GPO for Folder Redirection
