@@ -123,7 +123,7 @@ The App Compatibility FOD can only be installed on Server Core. Don't attempt to
 ## Release notes and suggestions for the Server Core App Compatibility FOD and Internet Explorer 11 optional package
 
 > [!IMPORTANT]
-> FODs installed on Windows Server, version 1809 won't remain in place after an in-place upgrade to Windows Server, version 1903, so you'd have to install them again after the upgrade.
+> FODs installed on Windows Server, version 1809 won't remain in place after an in-place upgrade to Windows Server, version 1903, so you'd have to install them again after the upgrade. Alternatively, you can add FODs to the new Windows Server installation source prior to upgrading. This ensures that the new version of any FODs are present after the upgrade completes. For more info, see the [Adding capabilities and optional packages to an offline WIM Server Core image](install-fod-19.md#Adding-capabilities-and-optional-packages-to-an-offline-WIM-Server-Core-image).
 
 - **Important:** Read the Windows Server 2019 release notes for any issues, considerations, or guidance before proceeding with installation and use of the Server Core App Compatibility FOD and Internet Explorer 11 optional package.
 
