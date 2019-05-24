@@ -51,7 +51,7 @@ The following feature distribution map indicates the features that are present i
 |Dynamic Memory - Hot-Add|2019, 2016, 2012 R2, 2012|&#10004; Note 8|||
 |Dynamic Memory - Ballooning|2019, 2016, 2012 R2, 2012|&#10004; Note 8|||
 |Runtime Memory Resize|2019, 2016|&#10004; Note 8|||
-|**[Video](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#Bvideo)**|
+|**[Video](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#video)**|
 |Hyper-V-specific video device|2019, 2016, 2012 R2, 2012, 2008 R2|&#10004;|&#10004;||
 |**[Miscellaneous](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#miscellaneous)**|
 |Key-Value Pair|2019, 2016, 2012 R2, 2012, 2008 R2|&#10004; Note 4|&#10004; Note 4||

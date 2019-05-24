@@ -117,7 +117,7 @@ The Oracle Linux Unbreakable Enterprise Kernel (UEK) is 64-bit only and has LIS 
 |lsvmbus command|2016, 2012 R2, 2012, 2008 R2|||||
 |Hyper-V Sockets|2016|||||
 |PCI Passthrough/DDA|2016|||||
-|**[Generation 2 virtual machines](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#Bgeneration-2-virtual-machines)**|
+|**[Generation 2 virtual machines](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#generation-2-virtual-machines)**|
 |Boot using UEFI|2016, 2012 R2|&#10004;||||
 |Secure boot|2016|&#10004;||||
 

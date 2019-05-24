@@ -58,9 +58,9 @@ This section provides details about the following computer-based policy settings
 
 -   [Delay restart for scheduled installations](#delay-restart-for-scheduled-installations)
 
--   [Do not adjust default option to "Install Updates and Shut Down" in Shut Down Windows dialog](#do-not-adjust-default-option-to-"install-updates-and-shut-down"-in-shut-down-windows-dialog-box)
+-   [Do not adjust default option to "Install Updates and Shut Down" in Shut Down Windows dialog](#do-not-adjust-default-option-to-install-updates-and-shut-down-in-shut-down-windows-dialog)
 
--   [Do not display "Install updates and Shut Down" option in Shut Down Windows dialog](#do-not-display-"install-updates-and-shut-down"-option-in-shut-down-windows-dialog)
+-   [Do not display "Install updates and Shut Down" option in Shut Down Windows dialog](#do-not-display-install-updates-and-shut-down-option-in-shut-down-windows-dialog)
 
 -   [Enable client-side targeting](#enable-client-side-targeting)
 
@@ -228,7 +228,7 @@ Specifies the amount of time Automatic Updates will wait before proceeding with 
 
 **Options:** if this setting is enabled, you can use this option to specify the amount of time (in minutes) Automatic Updates waits before proceeding with a scheduled restart.
 
-#### Do not adjust default option to "Install Updates and Shut Down" in Shut Down Windows dialog
+#### Do not adjust default option to Install Updates and Shut Down in Shut Down Windows dialog
 This policy setting enables you to specify whether the **Install Updates and Shut Down** option is permitted as the default choice in the **Shut Down Windows** dialog box.
 
 |Supported on:|Excluding:|
@@ -268,7 +268,7 @@ Enabling this policy will disable the functionality to periodically retrieve inf
 
 **Options:** There are no options for this setting.
 
-#### Do not display "Install updates and Shut Down" option in Shut Down Windows dialog
+#### Do not display Install updates and Shut Down option in Shut Down Windows dialog
 Specifies whether the **Install Updates and Shut Down** option is displayed in the **Shut Down Windows** dialog box.
 
 |Supported on:|Excluding:|
@@ -532,9 +532,9 @@ The maintenance wake-up policy specifies whether Automatic Maintenance should ma
 ### User Configuration > Windows Update policy settings
 This section provides details about the following user-based policy settings:
 
--   [Do not display "Install Updates and Shut Down" option in Shut Down Windows dialog box](#do-not-display-"install-updates-and-shut-down"-option-in-shut-down-windows-dialog)
+-   [Do not display "Install Updates and Shut Down" option in Shut Down Windows dialog box](#do-not-display-install-updates-and-shut-down-option-in-shut-down-windows-dialog)
 
--   [Do not adjust default option to "Install Updates and Shut Down" in Shut Down Windows dialog box](#do-not-adjust-default-option-to-"install-updates-and-shut-down"-in-shut-down-windows-dialog-box)
+-   [Do not adjust default option to "Install Updates and Shut Down" in Shut Down Windows dialog box](#do-not-adjust-default-option-to-install-updates-and-shut-down-in-shut-down-windows-dialog)
 
 -   [remove access to use all Windows Update features](#remove-access-to-use-all-windows-update-features)
 
