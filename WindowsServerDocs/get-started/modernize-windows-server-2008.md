@@ -37,12 +37,11 @@ You can migrate your on-premises Windows Server 2008 and Windows Server 2008 R2 
 - By migrating SQL Server to Azure Managed Instances or VMs, you get three more years of Windows Server 2008 R2 or 2008 critical security updates, included at no additional charge. 
 - Leverage existing SQL Server and Windows Server licenses for cloud savings unique to Azure.
 
-<a href="uploading-specialized-WS08-image-to-azure.md"><img src="media/WS08-image-banner-small.png"></a>
+[![Start migrating to Azure with a specialized image](./media/WS08-image-banner-small.png)](uploading-specialized-WS08-image-to-azure.md)
 
 To get started migrating, see [Upload a Windows Server 2008/2008 R2 specialized image to Azure](uploading-specialized-WS08-image-to-azure.md).
 
 To help you understand how to analyze existing IT resources, assess what you have, and identify the benefits of moving specific services and applications to the cloud or keeping workloads on-premises and upgrading to the latest version of Windows Server, see [Migration Guide for Windows Server](https://go.microsoft.com/fwlink/?linkid=872689).
-
 
 ## Upgrade SQL Server 2008/2008 R2 in parallel with your Windows Servers
 
