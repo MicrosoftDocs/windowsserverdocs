@@ -51,8 +51,11 @@ Operating system components that are available as part of the Server Core App Co
 
     -   Requires addition of the Failover Clustering Windows Server feature first.
 
-        -   Use Powershell Cmdlet to add, `Install-WindowsFeature -NameFailover-Clustering -IncludeManagementTools`
+        -   From an elevated PowerShell session: 
 
+            ```PowerShell
+            Install-WindowsFeature -NameFailover-Clustering -IncludeManagementTools`
+            ```
         -   To run Failover Cluster Manager, enter **cluadmin** at the command prompt.
 
 Servers running Windows Server, version 1903 and later also support the following components:
