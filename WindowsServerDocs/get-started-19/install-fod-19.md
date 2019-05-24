@@ -108,7 +108,9 @@ The App Compatibility FOD can only be installed on Server Core. Don't attempt to
 
 3.  Mount the FoD ISO by using the following command:
 
-         Mount-DiskImage -ImagePath drive_letter:\folder_where_ISO_is_saved\ISO_filename.iso
+    ```PowerShell
+    Mount-DiskImage -ImagePath drive_letter:\folder_where_ISO_is_saved\ISO_filename.iso
+    ```
 
 5. Run the following command, replacing <Path_to_IE_Package_in_Mounted_Server_FOD> with the path to the Internet Explorer cab file (often called Microsoft-Windows-InternetExplorer-Optional-Package~31bf3856ad364e35~amd64~~.cab):
 
