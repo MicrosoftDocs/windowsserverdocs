@@ -27,10 +27,10 @@ winrs [/<parameter>[:<value>]] <command>
 ### Parameters  
 |Parameter|Description|  
 |-------|--------|  
-|[/remote]:\<endpoint>|Specifies the target endpoint using a NetBIOS name or the standard connection:<br /><br />-   <url>: [\<transport>://]\<target>[:\<port>]<br /><br />if not specified, **/r:localhost** is used.|  
-|/unencrypted]|Specifies that the messages to the remote shell will not be encrypted. This is useful for troubleshooting or when the network traffic is already encrypted using **ipsec**, or when physical security is enforced.<br /><br />By default, the messages are encrypted using Kerberos or NTLM keys.<br /><br />This command-line option is ignored when HTTPS transport is selected.|  
-|/username]:\<username>|Specifies username on command line.<br /><br />if not specified, the tool will use Negotiate authentication or prompt for the name.<br /><br />if **/username** is specified, **/password** must also be specified.|  
-|/password]:\<password>|Specifies password on command line.<br /><br />if **/password** is not specified but **/username** is, the tool will prompt for the password.<br /><br />if **/password** is specified, **/username** must also be specified.|  
+|/remote:\<endpoint>|Specifies the target endpoint using a NetBIOS name or the standard connection:<br /><br />-   <url>: [\<transport>://]\<target>[:\<port>]<br /><br />if not specified, **/r:localhost** is used.|  
+|/unencrypted|Specifies that the messages to the remote shell will not be encrypted. This is useful for troubleshooting or when the network traffic is already encrypted using **ipsec**, or when physical security is enforced.<br /><br />By default, the messages are encrypted using Kerberos or NTLM keys.<br /><br />This command-line option is ignored when HTTPS transport is selected.|  
+|/username:\<username>|Specifies username on command line.<br /><br />if not specified, the tool will use Negotiate authentication or prompt for the name.<br /><br />if **/username** is specified, **/password** must also be specified.|  
+|/password:\<password>|Specifies password on command line.<br /><br />if **/password** is not specified but **/username** is, the tool will prompt for the password.<br /><br />if **/password** is specified, **/username** must also be specified.|  
 |/timeout:\<seconds>|This option is deprecated.|  
 |/directory:\<path>|Specifies starting directory for remote shell.<br /><br />if not specified, the remote shell will start in the user's home directory defined by the environment variable **%USERPROFILE%**.|  
 |/environment:\<string>=<value>|Specifies a single environment variable to be set when shell starts, which allows changing default environment for shell.<br /><br />Multiple occurrences of this switch must be used to specify multiple environment variables.|  
