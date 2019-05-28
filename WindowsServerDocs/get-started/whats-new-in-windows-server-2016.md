@@ -19,7 +19,7 @@ ms.localizationpriority: medium
 
 >Applies to: Windows Server 2016
 
-<img src="media/whats-new.png" style='float:left; padding:.5em;' alt="Icon showing a newspaper">To learn about the latest features in Windows, see [What's New in Windows Server](whats-new-in-windows-server.md). The content in this section describes what's new and changed in Windows Server&reg; 2016. The new features and changes listed here are the ones most likely to have the greatest impact as you work with this release.  
+![Icon showing a newspaper](media/whats-new.png) To learn about the latest features in Windows, see [What's New in Windows Server](whats-new-in-windows-server.md). The content in this section describes what's new and changed in Windows Server&reg; 2016. The new features and changes listed here are the ones most likely to have the greatest impact as you work with this release.
 
 ## [Compute](../virtualization/virtualization.md)
 
