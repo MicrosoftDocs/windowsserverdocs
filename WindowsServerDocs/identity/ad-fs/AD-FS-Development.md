@@ -17,7 +17,7 @@ ms.technology: identity-adfs
 This document contains a list of all of the documentation walkthroughs for AD FS development. This includes the following:  
   
  
-- [Build a Custom Authentication Method for AD FS](../ad-fs-build-custom-auth-method.md)
+- [Build a Custom Authentication Method for AD FS](../development/ad-fs-build-custom-auth-method.md)
 
 - [Build Plug-ins with AD FS 2019 Risk Assessment Model](../ad-fs/development/ad-fs-risk-assessment-model.md)
   
