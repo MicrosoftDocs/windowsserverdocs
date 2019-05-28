@@ -35,7 +35,7 @@ When appropriate, use Disk Deduplication and caching to reduce the disk read loa
 
 Introduced in Windows Server 2012 R2, Data Deduplication supports optimization of open files. In order to use virtual machines running on a deduplicated volume, the virtual machine files need to be stored on a separate host from the Hyper-V host. If Hyper-V and deduplication are running on the same machine, the two features will contend for system resources and negatively impact overall performance.
 
-The volume must also be configured to use the “Virtual Desktop Infrastructure (VDI)�? deduplication optimization type. You can configure this by using Server Manager (**File and Storage Services** -&gt; **Volumes** -&gt; **Dedup Settings**) or by using the following Windows PowerShell command:
+The volume must also be configured to use the "Virtual Desktop Infrastructure (VDI)" deduplication optimization type. You can configure this by using Server Manager (**File and Storage Services** -&gt; **Volumes** -&gt; **Dedup Settings**) or by using the following Windows PowerShell command:
 
 ``` syntax
 Enable-DedupVolume <volume> -UsageType HyperV
