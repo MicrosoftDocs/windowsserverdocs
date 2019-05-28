@@ -31,7 +31,7 @@ The first step of planning for a basic Remote Access deployment on a single serv
   
 The planning tasks do not need to be done in a specific order.  
   
-## <a name="bkmk_1_1_Network_svr_top_settings"></a>Plan network topology and settings  
+## Plan network topology and settings  
   
 ### Plan network adapters and IP addressing  
   
@@ -51,7 +51,7 @@ The planning tasks do not need to be done in a specific order.
   
 3.  Configure required adapters and addressing according to the following table. For deployments behind a NAT device using a single network adapter, configure your IP addresses using only the 'Internal network adapter' column.  
   
-    ||External network adapter|Internal network adapter<sup>1</sup>|Routing requirements|  
+    ||External network adapter|Internal network adapter|Routing requirements|  
     |-|--------------|--------------------|------------|  
     |IPv4 intranet and IPv4 Internet|Configure the following:<br /><br />-   One static public IPv4 address with the appropriate subnet masks.<br />-   A default gateway IPv4 address of your Internet firewall or local Internet service provider (ISP) router.|Configure the following:<br /><br />-   An IPv4 intranet address with the appropriate subnet mask.<br />-   A connection-specific DNS suffix of your intranet namespace. The DNS Server must also be configured on the Internal interface.<br />-   Do not configure a default gateway on any intranet interfaces.|To configure the Remote Access server to reach all subnets on the internal IPv4 network do the following:<br /><br />1.  List the IPv4 address spaces for all the locations on your intranet.<br />2.  Use the **route add -p** or **netsh interface ipv4 add route** commands to add the IPv4 address spaces as static routes in the IPv4 routing table of the Remote Access server.|  
     |IPv6 Internet and IPv6 intranet|Configure the following:<br /><br />-   Use the autoconfigured address configuration provided by your ISP.<br />-   Use the **route print** command to ensure that a default IPv6 route pointing to the ISP router exists in the IPv6 routing table.<br />-   Determine whether the ISP and intranet routers are using default router preferences described in RFC 4191, and using a higher default preference than your local intranet routers. If both of these are true, no other configuration for the default route is required. The higher preference for the ISP router ensures that the active default IPv6 route of the Remote Access server points to the IPv6 Internet.<br /><br />Because the Remote Access server is an IPv6 router, if you have a native IPv6 infrastructure, the Internet interface can also reach the domain controllers on the intranet. In this case, add packet filters to the domain controller in the perimeter network that prevent connectivity to the IPv6 address of the Internet-facing interface of the Remote Access server.|Configure the following:<br /><br />-   If you are not using default preference levels, configure your intranet interfaces with the **netsh interface ipv6 set InterfaceIndex ignoredefaultroutes=enabled** command. This command ensures that additional default routes pointing to intranet routers will not be added to the IPv6 routing table. You can obtain the InterfaceIndex of your intranet interfaces from the display of the netsh interface show interface command.|If you have an IPv6 intranet, to configure the Remote Access server to reach all of the IPv6 locations, do the following:<br /><br />1.  List the IPv6 address spaces for all the locations on your intranet.<br />2.  Use the **netsh interface ipv6 add route** command to add the IPv6 address spaces as static routes in the IPv6 routing table of the Remote Access server.|  
@@ -84,7 +84,7 @@ When using additional firewalls, apply the following internal network firewall e
   
 -   TCP/UDP for all IPv4/IPv6 traffic  
   
-### <a name="bkmk_1_2_CAs_and_certs"></a>Plan certificate requirements  
+### Plan certificate requirements  
 Certificate requirements for IPsec include a computer certificate used by DirectAccess client computers when establishing the IPsec connection between the client and the Remote Access server, and a computer certificate used by Remote Access servers to establish IPsec connections with DirectAccess clients. For DirectAccess in Windows Server 2012 the use of these IPsec certificates is not mandatory. The Enable DirectAccess Wizard configures the Remote Access server to act as a Kerberos proxy to perform IPsec authentication without requiring certificates.  
   
 1.  **IP-HTTPS server** -When you configure Remote Access, the Remote Access server is automatically configured to act as the IP-HTTPS web listener. The IP-HTTPS site requires a website certificate, and client computers must be able to contact the certificate revocation list (CRL) site for the certificate. The Enable DirectAccess wizard tries to use the SSTP VPN certificate. If SSTP is not configured, it checks if a certificate for IP-HTTPS is present in the machine personal store. If none is available, it automatically creates a self-signed certificate.  
@@ -99,7 +99,7 @@ The certification requirements for each of these are summarized in the following
 ||Internal CA -You can use an internal CA to issue the IP-HTTPS certificate; however, you must make sure that the CRL distribution point is available externally.|Self-signed certificate -You can use a self-signed certificate for the network location server website; however, you cannot use a self-signed certificate in multisite deployments.|  
 ||Self-signed certificate -You can use a self-signed certificate for the IP-HTTPS server; however, you must make sure that the CRL distribution point is available externally. A self-signed certificate cannot be used in a multisite deployment.||  
   
-#### <a name="bkmk_website_cert_IPHTTPS"></a>Plan certificates for IP-HTTPS  
+#### Plan certificates for IP-HTTPS  
 The Remote Access server acts as an IP-HTTPS listener, and you must manually install an HTTPS website certificate on the server. Note the following when planning:  
   
 -   Using a public CA is recommended, so that CRLs are readily available.  
@@ -168,7 +168,7 @@ In a Remote Access deployment, DNS is required for the following:
   
 -   For DirectAccess clients, you must use either a DNS server running Windows Server 2003,  Windows Server 2008 ,  Windows Server 2008 R2 ,  Windows Server 2012 , or any DNS server that supports IPv6.  
   
-### <a name="bkmk_1_6_AD"></a>Plan Active Directory  
+### Plan Active Directory  
 Remote Access uses Active Directory and Active Directory Group Policy Objects as follows:  
   
 -   **Authentication** -Active Directory is used for authentication. The intranet tunnel uses Kerberos authentication for the user to access internal resources.  
@@ -201,7 +201,7 @@ When planning Active Directory for a Remote Access deployment, the following is 
 > -   The Remote Access server cannot be a domain controller.  
 > -   The Active Directory domain controller used for Remote Access must not be reachable from the external Internet adapter of the Remote Access server (the adapter must not be in the domain profile of Windows Firewall).  
   
-### <a name="bkmk_1_7_GPOs"></a>Plan Group Policy Objects  
+### Plan Group Policy Objects  
 DirectAccess settings configured when you configure Remote Access are collected into Group Policy Objects (GPO). Three different GPOs are populated with DirectAccess settings, and distributed as follows:  
   
 -   **DirectAccess client GPO** -This GPO contains client settings, including IPv6 transition technology settings, NRPT entries, and Windows Firewall with Advanced Security connection security rules. The GPO is applied to the security groups specified for the client computers.  

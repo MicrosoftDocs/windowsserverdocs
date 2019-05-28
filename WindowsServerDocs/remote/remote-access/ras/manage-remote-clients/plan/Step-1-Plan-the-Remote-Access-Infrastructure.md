@@ -24,16 +24,16 @@ This topic describes the steps for planning an infrastructure that you can use t
   
 |Task|Description|  
 |----|--------|  
-|[Plan network topology and server settings](#BKMK_Network)|Decide where to place the Remote Access server (at the edge or behind a Network Address Translation (NAT) device or firewall), and plan IP addressing and routing.|  
-|[Plan firewall requirements](#BKMK_Firewall)|Plan for allowing Remote Access through edge firewalls.|  
-|[Plan certificate requirements](#bkmk_12CAsandcerts)|Decide if you will use Kerberos protocol or certificates for client authentication, and plan your website certificates.<br /><br />IP-HTTPS is a transition protocol that is used by DirectAccess clients to tunnel IPv6 traffic over IPv4 networks. Decide whether to authenticate IP-HTTPS for the server by using a certificate that is issued by a certification authority (CA), or by using a self-signed certificate that is issued automatically by the Remote Access server.|  
-|[Plan DNS requirements](#BKMK_DNS)|Plan the Domain Name System (DNS) settings for the Remote Access server, infrastructure servers, local name resolution options, and client connectivity.| 
-|[Plan the network location server configuration](#BKMK_Location)|Decide where to place the network location server website in your organization (on the Remote Access server or an alternative server), and plan the certificate requirements if the network location server will be located on the Remote Access server. **Note:** The network location server is used by DirectAccess clients to determine whether they are located on the internal network.|  
-|[Plan management servers' configurations](#BKMK_Management)|Plan for management servers (such as update servers) that are used during remote client management. **Note:** Administrators can remotely manage DirectAccess client computers that are located outside the corporate network by using the Internet.|  
-|[Plan Active Directory requirements](#BKMK_ActiveDirectory)|Plan your domain controllers, your Active Directory requirements, client authentication, and multiple domain structure.|  
-|[Plan Group Policy Object creation](#BKMK_GPOs)|Decide what GPOs are required in your organization and how to create and edit the GPOs.|  
+|[Plan network topology and server settings](#plan-network-topology-and-settings)|Decide where to place the Remote Access server (at the edge or behind a Network Address Translation (NAT) device or firewall), and plan IP addressing and routing.|  
+|[Plan firewall requirements](#plan-firewall-requirements)|Plan for allowing Remote Access through edge firewalls.|  
+|[Plan certificate requirements](#plan-certificate-requirements)|Decide if you will use Kerberos protocol or certificates for client authentication, and plan your website certificates.<br /><br />IP-HTTPS is a transition protocol that is used by DirectAccess clients to tunnel IPv6 traffic over IPv4 networks. Decide whether to authenticate IP-HTTPS for the server by using a certificate that is issued by a certification authority (CA), or by using a self-signed certificate that is issued automatically by the Remote Access server.|  
+|[Plan DNS requirements](#plan-dns-requirements)|Plan the Domain Name System (DNS) settings for the Remote Access server, infrastructure servers, local name resolution options, and client connectivity.| 
+|[Plan the network location server configuration](#plan-the-network-location-server-configuration)|Decide where to place the network location server website in your organization (on the Remote Access server or an alternative server), and plan the certificate requirements if the network location server will be located on the Remote Access server. **Note:** The network location server is used by DirectAccess clients to determine whether they are located on the internal network.|  
+|[Plan management servers' configurations](#plan-management-servers-configuration)|Plan for management servers (such as update servers) that are used during remote client management. **Note:** Administrators can remotely manage DirectAccess client computers that are located outside the corporate network by using the Internet.|  
+|[Plan Active Directory requirements](#plan-active-directory-requirements)|Plan your domain controllers, your Active Directory requirements, client authentication, and multiple domain structure.|  
+|[Plan Group Policy Object creation](#plan-group-policy-object-creation)|Decide what GPOs are required in your organization and how to create and edit the GPOs.|  
   
-## <a name="BKMK_Network"></a>Plan network topology and settings  
+## Plan network topology and settings  
 When you plan your network, you need to consider the network adapter topology, settings for IP addressing, and requirements for ISATAP.  
   
 ### Plan network adapters and IP addressing  
@@ -80,7 +80,7 @@ ISATAP is required for remote management of DirectAccessclients, so that DirectA
 > [!IMPORTANT]  
 > Ensure that you do not have public IP addresses on the internal interface of the DirectAccess server. If you have public IP address on the internal interface, connectivity through ISATAP may fail.  
   
-### <a name="BKMK_Firewall"></a>Plan firewall requirements  
+### Plan firewall requirements  
 If the Remote Access server is behind an edge firewall, the following exceptions will be required for Remote Access traffic when the Remote Access server is on the IPv4 Internet:  
   
 -   For IP-HTTPS: Transmission Control Protocol (TCP) destination port 443, and TCP source port 443 outbound.  
@@ -115,7 +115,7 @@ When you are using additional firewalls, apply the following internal network fi
   
 -   For Teredo: ICMP for all IPv4/IPv6 traffic  
   
-### <a name="bkmk_12CAsandcerts"></a>Plan certificate requirements  
+### Plan certificate requirements  
 There are three scenarios that require certificates when you deploy a single Remote Access server.  
   
 -   **IPsec authentication**: Certificate requirements for IPsec include a computer certificate that is used by DirectAccess client computers when they establish the IPsec connection with the Remote Access server, and a computer certificate that is used by Remote Access servers to establish IPsec connections with DirectAccess clients.  
@@ -177,7 +177,7 @@ Consider the following when you are planning the network location server website
 > [!NOTE]  
 > Ensure that the certificates for IP-HTTPS and network location server have a subject name. If the certificate uses an alternative name, it will not be accepted by the Remote Access Wizard.  
   
-#### <a name="BKMK_DNS"></a>Plan DNS requirements  
+#### Plan DNS requirements  
 This section explains the DNS requirements for clients and servers in a Remote Access deployment.  
   
 ##### DirectAccess client requests  
@@ -221,7 +221,7 @@ Remote Access creates a default web probe that is used by DirectAccess client co
   
 You can create additional connectivity verifiers by using other web addresses over HTTP or PING. For each connectivity verifier, a DNS entry must exist.  
   
-##### <a name="BKMK_DNSServer"></a>DNS server requirements  
+##### DNS server requirements  
   
 -   For DirectAccess clients, you must use a DNS server running  Windows Server 2012 ,  Windows Server 2008 R2 ,  Windows Server 2008 , Windows Server 2003, or any DNS server that supports IPv6.  
   
@@ -229,7 +229,7 @@ You can create additional connectivity verifiers by using other web addresses ov
   
 -   The FQDN for your CRL distribution points must be resolvable by using Internet DNS servers. For example, if URL https://crl.contoso.com/crld/corp-DC1-CA.crl is in the **CRL Distribution Points** field of the IP-HTTPS certificate of the Remote Access server, you must ensure that the FQDN crld.contoso.com is resolvable by using Internet DNS servers.  
   
-#### <a name="BKMK_NameResolution"></a>Plan for local name resolution  
+#### Plan for local name resolution  
 Consider the following when you are planning for local name resolution:  
   
 ##### NRPT  
@@ -279,7 +279,7 @@ When the DNS Client service performs local name resolution for intranet server n
   
 -   **Use local name resolution for any kind of DNS resolution error (least secure)**: This is the least secure option because the names of intranet network servers can be leaked to the local subnet through local name resolution.  
   
-#### <a name="BKMK_Location"></a>Plan the network location server configuration  
+#### Plan the network location server configuration  
 The network location server is a website that is used to detect whether DirectAccess clients are located in the corporate network. Clients in the corporate network do not use DirectAccess to reach internal resources; but instead, they connect directly.  
   
 The network location server website can be hosted on the Remote Access server or on another server in your organization. If you host the network location server on the Remote Access server, the website is created automatically when you deploy Remote Access. If you host the network location server on another server running a Windows operating system, you must make sure that Internet Information Services (IIS) is installed on that server, and that the website is created. Remote Access does not configure settings on the network location server.  
@@ -312,7 +312,7 @@ When you obtain the website certificate to use for the network location server, 
 ##### Plan DNS for the network location server  
 DirectAccess clients attempt to reach the network location server to determine if they are on the internal network. Clients on the internal network must be able to resolve the name of the network location server, but must be prevented from resolving the name when they are located on the Internet. To ensure this occurs, by default, the FQDN of the network location server is added as an exemption rule to the NRPT.  
   
-### <a name="BKMK_Management"></a>Plan management servers' configuration  
+### Plan management servers' configuration  
 DirectAccess clients initiate communication with management servers that provide services such as Windows Update and antivirus updates. DirectAccess clients also use the Kerberos protocol to authenticate to domain controllers before they access the internal network. During remote management of DirectAccess clients, management servers communicate with client computers to perform management functions such as software or hardware inventory assessments. Remote Access can automatically discover some management servers, including:  
   
 -   Domain controllers: Automatic discovery of domain controllers is performed for the domains that contain client computers and for all domains in the same forest as the Remote Access server.  
@@ -327,7 +327,7 @@ Domain controllers and System Center Configuration Manager servers are automatic
   
 -   Management servers that initiate connections to DirectAccess clients must fully support IPv6, by means of a native IPv6 address or by using an address that is assigned by ISATAP.  
   
-### <a name="BKMK_ActiveDirectory"></a>Plan Active Directory requirements  
+### Plan Active Directory requirements  
 Remote Access uses Active Directory as follows:  
   
 -   **Authentication**: The infrastructure tunnel uses NTLMv2 authentication for the computer account that is connecting to the Remote Access server, and the account must be in an Active Directory domain. The intranet tunnel uses Kerberos authentication for the user to create the intranet tunnel.  
@@ -374,7 +374,7 @@ This authentication is automatic if the domains are in the same forest. If there
   
 Where possible, common domain name suffixes should be added to the NRPT during Remote Access deployment. For example, if you have two domains, domain1.corp.contoso.com and domain2.corp.contoso.com, instead of adding two entries into the NRPT, you can add a common DNS suffix entry, where the domain name suffix is corp.contoso.com. This happens automatically for domains in the same root. Domains that are not in the same root must be added manually.  
   
-### <a name="BKMK_GPOs"></a>Plan Group Policy Object creation  
+### Plan Group Policy Object creation  
 When you configure Remote Access, DirectAccess settings are collected into Group Policy Objects (GPOs). Two GPOs are populated with DirectAccess settings, and they are distributed as follows:  
   
 -   **DirectAccess client GPO**: This GPO contains client settings, including IPv6 transition technology settings, NRPT entries, and connection security rules for Windows Firewall with Advanced Security. The GPO is applied to the security groups that are specified for the client computers.  
