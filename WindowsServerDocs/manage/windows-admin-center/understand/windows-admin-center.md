@@ -35,9 +35,9 @@ You can update non-preview versions of Windows Admin Center by using Microsoft U
 
 |   |   |
 |:-:|:--|
-| [Icon representing app window](/media/simple-icon.png)| **Simple & lightweight** <br/> Familiar tools are streamlined to make management tasks a breeze. Install in under 5 minutes and manage servers in your environment immediately, no target configuration required. |
-| [Icon representing hybrid cloud](/media/future-icon.png)| **Built for the future** <br/> Integration with Azure services helps you leverage the power of the hybrid world. Manage Hyper-Converged clusters with powerful yet simple tools. |
-| [Icon representing secure server](/media/secure-icon.png)| **Secure management** <br/> Control who can manage servers and get insight into the actions administrators perform in your environment. |
+| ![Icon representing app window](../media/simple-icon.png)| **Simple & lightweight** <br/> Familiar tools are streamlined to make management tasks a breeze. Install in under 5 minutes and manage servers in your environment immediately, no target configuration required. |
+| ![Icon representing hybrid cloud](../media/future-icon.png)| **Built for the future** <br/> Integration with Azure services helps you leverage the power of the hybrid world. Manage Hyper-Converged clusters with powerful yet simple tools. |
+| ![Icon representing secure server](../media/secure-icon.png)| **Secure management** <br/> Control who can manage servers and get insight into the actions administrators perform in your environment. |
 
 [Learn how Windows Admin Center can improve management of your server environment.](../overview.md)
 
