@@ -9,7 +9,7 @@ author: jasongerend
 ms.author: jgerend
 manager: jasgroce
 ms.localizationpriority: medium
-ms.date: 05/24/2019
+ms.date: 05/29/2019
 ---
 # Server Core App Compatibility Feature on Demand (FOD)
 
@@ -151,7 +151,7 @@ The App Compatibility FOD can only be installed on Server Core. Don't attempt to
 1. Download the Windows Server and Server FOD ISO image files to a local folder on a Windows computer.
 
    - If you have a volume license you can download the Windows Server and Server FOD ISO image files from the [Volume Licensing Service Center](https://www.microsoft.com/Licensing/servicecenter/default.aspx).
-   - The Server FOD ISO image file is also available on the [Microsoft Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-windows-server) or on the [Visual Studio portal](https://visualstudio.microsoft.com) for subscribers.
+   - The Server FOD ISO image file is also available for Long-Term Servicing Channel releases on the [Microsoft Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-windows-server) or on the [Visual Studio portal](https://visualstudio.microsoft.com) for subscribers.
 
 2. Open a PowerShell session as an administrator and then use the following commands to mount the image files as drives:
 
