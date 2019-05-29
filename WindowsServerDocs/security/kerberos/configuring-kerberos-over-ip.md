@@ -9,13 +9,12 @@ description: "Kerberos support for IP-based SPNs"
 
 Beginning with Windows 10 version 1507 and Windows Server 2016, Kerberos clients can be configured to support IPv4 and IPv6 hostnames in SPNs.
 
-By default Windows will not attempt Kerberos authentication for a host if the hostname is an IP address. It will fall back to legacy authentication protocols like NTLM if enabled. However, applications are sometimes hardcoded to always use IP addresses which means the application will always fall back to NTLM. This can cause compatibility issues if NTLM is disabled.
+By default Windows will not attempt Kerberos authentication for a host if the hostname is an IP address. It will fall back to other enabled authentication protocols like NTLM. However, applications are sometimes hardcoded to use IP addresses which means the application will fall back to NTLM and not use Kerberos. This can cause compatibility issues as environments move to disable NTLM.
 
-This capability is enabled on the client through a registry key value.
+To reduce the impact of disabling NTLM a new capability was introduced that lets administrators use IP addresses as hostnames in Service Principal Names. This capability is enabled on the client through a registry key value.
 
-Registry path:
-```
-HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System\Kerberos\Parameters
+```cmd
+reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System\Kerberos\Parameters" /v TryIPSPN /t REG_DWORD /d 1 /f
 ```
 
 To configure support for IP address hostnames in SPNs, create a TryIPSPN entry. This entry does not exist in the registry by default. After you have created the entry, change the DWORD value to 1. This registry value will need to be set on each client machine that needs to access Kerberos-protected resources by IP address.
