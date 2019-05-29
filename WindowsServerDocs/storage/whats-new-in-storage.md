@@ -31,7 +31,7 @@ When using this version of Windows Server to orchestrate migrations, we've added
 - More easily sync migrated shares into Azure by using Azure File Sync
 - Migrate to new networks such as Azure
 
-For more info about Storage Migration Service, see [Storage Migration Service overview](../storage-migration-service/overview.md).
+For more info about Storage Migration Service, see [Storage Migration Service overview](storage-migration-service/overview.md).
 
 ### System Insights disk anomaly detection
 
