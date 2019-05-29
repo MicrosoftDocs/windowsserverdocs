@@ -51,7 +51,7 @@ When you attempt to open Update Services on the WSUS server you receive the foll
 
 > An error occurred trying to connect to the WSUS server. This error can happen for a number of reasons. Please contact your network administrator if the problem persists. Click the reset Server Node to connect to the server again.
 
-In addition to the above, attempts to access the URL for the WSUS Administration website (i.e., http://CM12CAS:8530) fails with the error:
+In addition to the above, attempts to access the URL for the WSUS Administration website (i.e., `http://CM12CAS:8530`) fails with the error:
 
 > HTTP Error 503. The service is unavailable
 
