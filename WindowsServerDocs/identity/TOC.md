@@ -461,6 +461,10 @@
 #### [AD FS Password Attack Protection](ad-fs/technical-reference/ad-fs-password-protection.md)
 ### [AD FS 2016 FAQ](ad-fs/overview/AD-FS-FAQ.md)
 
+## [Active Directory Federation Services](ad-rms/adrms-deploy.md)
+### [Upgrading AD RMS to Windows Server 2016](ad-rms/adrms-deploy.md)
+
+
 ## [Securing Privileged Access](securing-privileged-access/securing-privileged-access.md)
 ### [Privileged Access Workstations](securing-privileged-access/privileged-access-workstations.md)
 ### [Securing Privileged Access Reference Material](securing-privileged-access/securing-privileged-access-reference-material.md)
