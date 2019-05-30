@@ -7,13 +7,13 @@ ms.manager: eldenc
 ms.technology: storage-spaces
 ms.topic: article
 author: eldenchristensen
-ms.date: 04/12/2018
+ms.date: 06/01/2019
 ms.localizationpriority: medium
 ---
 
 # Storage Spaces Direct hardware requirements
 
-> Applies to: Windows Server 2016
+> Applies to: Windows Server 2019, Windows Server 2016
 
 This topic describes minimum hardware requirements for Storage Spaces Direct.
 
@@ -74,6 +74,8 @@ Storage Spaces Direct works with direct-attached SATA, SAS, or NVMe drives that 
 - 512n, 512e, and 4K native drives are all supported
 - Solid-state drives must provide [power-loss protection](https://blogs.technet.microsoft.com/filecab/2016/11/18/dont-do-it-consumer-ssd/)
 - Same number and types of drives in every server – see [Drive symmetry considerations](drive-symmetry-considerations.md)
+- Cache devices must be 32 GB or larger
+- When using persistent memory devices as cache devices, you must use NVMe or SSD capacity devices (you can't use HDDs)
 - NVMe driver is Microsoft's in-box or updated NVMe driver.
 - Recommended: Number of capacity drives is a whole multiple of the number of cache drives
 - Recommended: Cache drives should have high write endurance: at least 3 drive-writes-per-day (DWPD) or at least 4 terabytes written (TBW) per day – see [Understanding drive writes per day (DWPD), terabytes written (TBW), and the minimum recommended for Storage Spaces Direct](https://blogs.technet.microsoft.com/filecab/2017/08/11/understanding-dwpd-tbw/)
@@ -115,5 +117,7 @@ Drives can be internal to the server, or in an external enclosure that is connec
 
 ### Maximum capacity
 
-- Recommended: Maximum 100 terabytes (TB) raw storage capacity per server
-- Maximum 1 petabyte (1,000 TB) raw capacity in the storage pool
+| Maximums                | Windows Server 2019  | Windows Server 2016  |
+| ---                     | ---------            | ---------            |
+| Raw capacity per server | 100 TB               | 100 TB               |
+| Pool capacity           | 4 PB (4,000 TB)      | 1 PB                 |
