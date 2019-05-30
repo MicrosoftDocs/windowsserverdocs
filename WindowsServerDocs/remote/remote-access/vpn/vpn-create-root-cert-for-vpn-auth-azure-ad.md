@@ -22,8 +22,8 @@ ms.reviewer: deverette
 
 >Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows 10
 
-&#171;  [**Previous:** Step 7.1. Configure EAP-TLS to ignore Certificate Revocation List (CRL) checking](vpn-config-eap-tls-to-ignore-crl-checking.md)<br>
-&#187; [ **Next:** Step 7.3. Configure the Conditional Access policy](vpn-config-conditional-access-policy.md)
+&#171; [**Previous:** Step 7.1. Configure EAP-TLS to ignore Certificate Revocation List (CRL) checking](vpn-config-eap-tls-to-ignore-crl-checking.md)<br>
+&#187; [**Next:** Step 7.3. Configure the Conditional Access policy](vpn-config-conditional-access-policy.md)
 
 In this step, you configure conditional access root certificates for VPN authentication with Azure AD, which automatically creates a Cloud app called VPN Server in the tenant. To configure conditional access for VPN connectivity, you need to:
 

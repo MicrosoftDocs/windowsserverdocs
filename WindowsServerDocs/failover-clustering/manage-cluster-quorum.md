@@ -206,7 +206,7 @@ Membership in the local **Administrators** group on each clustered server, or eq
 
 1. In Failover Cluster Manager, select or specify the cluster that you want to change.
 2. With the cluster selected, under **Actions**, select **More Actions**, and then select **Configure Cluster Quorum Settings**. The Configure Cluster Quorum Wizard appears. Select **Next**.
-3. On the **Select Quorum Configuration Option** page, select one of the three configuration options and complete the steps for that option. Before you configure the quorum settings, you can review your choices. For more information about the options, see [Overview of the quorum in a failover cluster](#overview-of-the-quorum-in-a-failover-cluster), earlier in this topic.
+3. On the **Select Quorum Configuration Option** page, select one of the three configuration options and complete the steps for that option. Before you configure the quorum settings, you can review your choices. For more information about the options, see [Understanding quorum](#understanding-quorum), earlier in this topic.
 
     - To allow the cluster to automatically reset the quorum settings that are optimal for your current cluster configuration, select **Use typical settings** and then complete the wizard.
     - To add or change the quorum witness, select **Add or change the quorum witness**, and then complete the following steps. For information and considerations about configuring a quorum witness, see [Witness configuration](#witness-configuration) earlier in this topic.

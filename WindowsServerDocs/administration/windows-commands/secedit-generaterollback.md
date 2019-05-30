@@ -43,7 +43,7 @@ If the path for the log file is not provided, the default log file, (*systemroot
 
 Beginning with Windows Server 2008, `Secedit /refreshpolicy` has been replaced with `gpupdate`. For information on how to refresh security settings, see [Gpupdate](gpupdate.md).
 
-The successful running of this command will state â€œThe task has completed successfully.â€? and logs only the mismatches between the stated security template and security policy configuration. It lists these mismatches in the scesrv.log.
+The successful running of this command will state "The task has completed successfully." and logs only the mismatches between the stated security template and security policy configuration. It lists these mismatches in the scesrv.log.
 
 If an existing rollback template is specified, this command will overwrite it. You can create a new rollback template with this command. No additional parameters are needed for either condition.
 

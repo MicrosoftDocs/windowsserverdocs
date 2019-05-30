@@ -11,14 +11,14 @@ ms.localizationpriority: medium
 ---
 # Deploy Folder Redirection with Offline Files
 
->Applies to: Windows 10, Windows 7, Windows 8, Windows 8.1, Windows Server 2008 R2, Windows Server 2012, Windows Server 2012 R2, Windows Server 2016, Windows Vista
+>Applies to: Windows 10, Windows 7, Windows 8, Windows 8.1, Windows Vista, Windows Server 2019, Windows Server 2016, Windows Server (Semi-annual Channel), Windows Server 2012, Windows Server 2012 R2, Windows Server 2008 R2
 
 This topic describes how to use Windows Server to deploy Folder Redirection with Offline Files to Windows client computers.
 
 For a list of recent changes to this topic, see [Change history](#change-history).
 
 >[!IMPORTANT]
->Due to the security changes made in [MS16-072](https://support.microsoft.com/en-us/help/3163622/ms16-072-security-update-for-group-policy-june-14-2016), we updated [Step 3: Create a GPO for Folder Redirection](#step-3:-create-a-gpo-for-folder-redirection) of this topic so that Windows can properly apply the Folder Redirection policy (and not revert redirected folders on affected PCs).
+>Due to the security changes made in [MS16-072](https://support.microsoft.com/help/3163622/ms16-072-security-update-for-group-policy-june-14-2016), we updated [Step 3: Create a GPO for Folder Redirection](#step-3-create-a-gpo-for-folder-redirection) of this topic so that Windows can properly apply the Folder Redirection policy (and not revert redirected folders on affected PCs).
 
 ## Prerequisites
 
@@ -31,7 +31,7 @@ Folder Redirection requires an x64-based or x86-based computer; it is not suppor
 Folder Redirection has the following software requirements:
 
 - To administer Folder Redirection, you must be signed in as a member of the Domain Administrators security group, the Enterprise Administrators security group, or the Group Policy Creator Owners security group.
-- Client computers must run Windows 10, Windows 8.1, Windows 8, Windows 7, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2, or Windows Server 2008.
+- Client computers must run Windows 10, Windows 8.1, Windows 8, Windows 7, Windows Server 2019, Windows Server 2016, Windows Server (Semi-annual Channel), Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2, or Windows Server 2008.
 - Client computers must be joined to the Active Directory Domain Services (AD DS) that you are managing.
 - A computer must be available with Group Policy Management and Active Directory Administration Center installed.
 - A file server must be available to host redirected folders.
@@ -64,7 +64,7 @@ If you do not already have a file share for redirected folders, use the followin
 >[!NOTE]
 >Some functionality might differ or be unavailable if you create the file share on a server running another version of Windows Server.
 
-Here's how to create a file share on Windows Server 2012 and Windows Server 2016:
+Here's how to create a file share on Windows Server 2019, Windows Server 2016, and Windows Server 2012:
 
 1. In the Server Manager navigation pane, select **File and Storage Services**, and then select **Shares** to display the Shares page.
 2. In the **Shares** tile, select **Tasks**, and then select **New Share**. The New Share Wizard appears.
@@ -221,7 +221,7 @@ The following table summarizes some of the most important changes to this topic.
 
 |Date|Description|Reason|
 |---|---|---|
-|January 18, 2017|Added a step to [Step 3: Create a GPO for Folder Redirection](#step-3:-create-a-gpo-for-folder-redirection) to delegate Read permissions to Authenticated Users, which is now required because of a Group Policy security update.|Customer feedback.|
+|January 18, 2017|Added a step to [Step 3: Create a GPO for Folder Redirection](#step-3-create-a-gpo-for-folder-redirection) to delegate Read permissions to Authenticated Users, which is now required because of a Group Policy security update.|Customer feedback.|
 
 ## More information
 

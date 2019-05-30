@@ -6,12 +6,12 @@ ms.author: nedpyle
 ms.technology: storage-replica
 ms.topic: get-started-article
 author: nedpyle
-ms.date: 3/29/2018
+ms.date: 4/26/2019
 ms.assetid: e9b18e14-e692-458a-a39f-d5b569ae76c5
 ---
 # Storage Replica overview
 
->Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016
+>Applies to: Windows Server 2019, Windows Server 2016, Windows Server (Semi-Annual Channel)
 
 Storage Replica is Windows Server technology that enables replication of volumes between servers or clusters for disaster recovery. It also enables you to create stretch failover clusters that span two sites, with all nodes staying in sync.
 
@@ -19,7 +19,6 @@ Storage Replica supports synchronous and asynchronous replication:
 
 * **Synchronous replication** mirrors data within a low-latency network site with crash-consistent volumes to ensure zero data loss at the file-system level during a failure.
 * **Asynchronous replication** mirrors data across sites beyond metropolitan ranges over network links with higher latencies, but without a guarantee that both sites have identical copies of the data at the time of a failure.
-
 
 ## Why use Storage Replica?
 
@@ -33,7 +32,7 @@ Storage Replica also supports asynchronous replication for longer ranges and hig
 
 ## <a name="BKMK_SRSupportedScenarios"></a>Supported configurations
 
-Using this guide and Windows Server 2016 Datacenter Edition, you can deploy storage replication in a stretch cluster, between cluster-to-cluster, and in server-to-server configurations (see Figures 1-3).
+You can deploy Storage Replica in a stretch cluster, between cluster-to-cluster, and in server-to-server configurations (see Figures 1-3).
 
 **Stretch Cluster** allows configuration of computers and storage in a single cluster, where some nodes share one set of asymmetric storage and some nodes share another, then synchronously or asynchronously replicate with site awareness. This scenario can utilize Storage Spaces with shared SAS storage, SAN and iSCSI-attached LUNs. It is managed with PowerShell and the Failover Cluster Manager graphical tool, and allows for automated workload failover.  
 
@@ -62,7 +61,7 @@ Using this guide and Windows Server 2016 Datacenter Edition, you can deploy stor
 
 * **Simple deployment and management**. Storage Replica has a design mandate for ease of use. Creation of a replication partnership between two servers can utilize the Windows Admin Center. Deployment of stretch clusters uses intuitive wizard in the familiar Failover Cluster Manager tool.   
 
-* **Guest and host**. All capabilities of Storage Replica are exposed in both virtualized guest and host-based deployments. This means guests can replicate their data volumes even if running on non-Windows virtualization platforms or in public clouds, as long as using Windows Server 2016 Datacenter Edition in the guest.  
+* **Guest and host**. All capabilities of Storage Replica are exposed in both virtualized guest and host-based deployments. This means guests can replicate their data volumes even if running on non-Windows virtualization platforms or in public clouds, as long as using Windows Server in the guest.  
 
 * **SMB3-based**. Storage Replica uses the proven and mature technology of SMB 3, first released in Windows Server 2012. This means all of SMB's advanced characteristics - such as multichannel and SMB direct support on RoCE, iWARP, and InfiniBand RDMA network cards - are available to Storage Replica.   
 
@@ -78,7 +77,7 @@ Using this guide and Windows Server 2016 Datacenter Edition, you can deploy stor
 
 * **Thin provisioning**. Support for thin provisioning in Storage Spaces and SAN devices is supported, in order to provide near-instantaneous initial replication times under many circumstances.  
 
-Windows Server 2016 implements the following features in Storage Replica:  
+Storage Replica includes the following features:  
 
 |Feature|Details|  
 |-----------|-----------|  
@@ -87,7 +86,7 @@ Windows Server 2016 implements the following features in Storage Replica:
 |Asynchronous|Yes|  
 |Storage hardware agnostic|Yes|  
 |Replication unit|Volume (Partition)|  
-|Windows Server Stretch Cluster creation|Yes|  
+|Windows Server stretch cluster creation|Yes|  
 |Server to server replication|Yes|  
 |Cluster to cluster replication|Yes|  
 |Transport|SMB3|  
@@ -106,11 +105,16 @@ Windows Server 2016 implements the following features in Storage Replica:
 
 ## <a name="BKMK_SR3"></a> Storage Replica prerequisites  
 
-* Active Directory Domain Services forest.  
-* Storage Spaces with SAS JBODs, Storage Spaces Direct, fibre channel SAN, shared VHDX, iSCSI Target, or local SAS/SCSI/SATA storage. SSD or faster recommended for replication log drives. Microsoft recommends that the log storage be faster than the data storage. Log volumes must never be used for other workloads. 
-* At least one ethernet/TCP connection on each server for synchronous replication, but preferably RDMA.   
-* At least 2GB of RAM and two cores per server.  
-* A network between servers with enough bandwidth to contain your IO write workload and an average of 5ms round trip latency or lower, for synchronous replication. Asynchronous replication does not have a latency recommendation.  
+* Active Directory Domain Services forest.
+* Storage Spaces with SAS JBODs, Storage Spaces Direct, fibre channel SAN, shared VHDX, iSCSI Target, or local SAS/SCSI/SATA storage. SSD or faster recommended for replication log drives. Microsoft recommends that the log storage be faster than the data storage. Log volumes must never be used for other workloads.
+* At least one ethernet/TCP connection on each server for synchronous replication, but preferably RDMA.
+* At least 2GB of RAM and two cores per server.
+* A network between servers with enough bandwidth to contain your IO write workload and an average of 5ms round trip latency or lower, for synchronous replication. Asynchronous replication does not have a latency recommendation.
+* Windows Server, Datacenter Edition, or Windows Server, Standard Edition. Storage Replica running on Windows Server, Standard Edition, has the following limitations:
+
+  * You must use Windows Server 2019 or later
+  * Storage Replica replicates a single volume instead of an unlimited number of volumes.
+  * Volumes can have a size of up to 2 TB instead of an unlimited size.
 
 ##  <a name="BKMK_SR4"> </a> Background  
 This section includes information about high-level industry terms, synchronous and asynchronous replication, and key behaviors.
@@ -146,13 +150,13 @@ With its higher than zero RPO, asynchronous replication is less suitable for HA 
 
 -   The destination volume is not accessible while replicating in Windows Server 2016. When you configure replication, the destination volume dismounts, making it inaccessible to any reads or writes by users. Its driver letter may be visible in typical interfaces like File Explorer, but an application cannot access the volume itself. Block-level replication technologies are incompatible with allowing access to the destination target's mounted file system in a volume; NTFS and ReFS do not support users writing data to the volume while blocks change underneath them. 
 
-In Windows Server, version 1709 the **Test-Failover** cmdlet was added. This now supports temporarily mounting a read-write snapshot of the destination volume for backups, testing, etc. See https://aka.ms/srfaq for more info.
+In Windows Server 2019 (and Windows Server, version 1709) the **Test-Failover** cmdlet was added. This now supports temporarily mounting a read-write snapshot of the destination volume for backups, testing, etc. See https://aka.ms/srfaq for more info.
 
 -   The Microsoft implementation of asynchronous replication is different than most. Most industry implementations of asynchronous replication rely on snapshot-based replication, where periodic differential transfers move to the other node and merge. Storage Replica asynchronous replication operates just like synchronous replication, except that it removes the requirement for a serialized synchronous acknowledgment from the destination. This means that Storage Replica theoretically has a lower RPO as it continuously replicates. However, this also means it relies on internal application consistency guarantees rather than using snapshots to force consistency in application files. Storage Replica guarantees crash consistency in all replication modes  
 
 -   Many customers use DFS Replication as a disaster recovery solution even though often impractical for that scenario - DFS Replication cannot replicate open files and is designed to minimize bandwidth usage at the expense of performance, leading to large recovery point deltas. Storage Replica may allow you to retire DFS Replication from some of these types of disaster recovery duties.  
 
--   Storage Replica is not backup. Some IT environments deploy replication systems as backup solutions, due to their zero data loss options when compared to daily backups. Storage Replica replicates all changes to all blocks of data on the volume, regardless of the change type. If a user deletes all data from a volume, Storage Replica replicates the deletion instantly to the other volume, irrevocably removing the data from both servers. Do not use Storage Replica as a replacement for a point-in-time backup solution.  
+-   Storage Replica is not a backup solution. Some IT environments deploy replication systems as backup solutions, due to their zero data loss options when compared to daily backups. Storage Replica replicates all changes to all blocks of data on the volume, regardless of the change type. If a user deletes all data from a volume, Storage Replica replicates the deletion instantly to the other volume, irrevocably removing the data from both servers. Do not use Storage Replica as a replacement for a point-in-time backup solution.  
 
 -   Storage Replica is not Hyper-V Replica or Microsoft SQL AlwaysOn Availability Groups. Storage Replica is a general purpose, storage-agnostic engine. By definition, it cannot tailor its behavior as ideally as application-level replication. This may lead to specific feature gaps that encourage you to deploy or remain on specific application replication technologies.  
 

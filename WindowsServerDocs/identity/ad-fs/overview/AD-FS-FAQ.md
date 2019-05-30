@@ -133,6 +133,16 @@ With AD FS on Server 2019, you can now pass the resource value embedded in the s
 ### Does AD FS support PKCE extension?
 AD FS in Server 2019 supports Proof Key for Code Exchange (PKCE) for OAuth Authorization Code Grant flow
 
+### What permitted scopes are supported by AD FS?
+- aza - If using [OAuth 2.0 Protocol Extensions for Broker Clients](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-oapxbc/2f7d8875-0383-4058-956d-2fb216b44706) and if the scope parameter contains the scope "aza", the server issues a new primary refresh token and sets it in the refresh_token field of the response, as well as setting the refresh_token_expires_in field to the lifetime of the new primary refresh token if one is enforced.
+- openid - Allows application to request use of the OpenID Connect authorization protocol.
+- logon_cert - The logon_cert scope allows an application to request logon certificates, which can be used to interactively logon authenticated users. The AD FS server omits the access_token parameter from the response and instead provides a base64-encoded CMS certificate chain or a CMC full PKI response. More details available [here](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-oapx/32ce8878-7d33-4c02-818b-6c9164cc731e). 
+- user_impersonation - The user_impersonation scope is necessary to successfully request an on-behalf-of access token from AD FS. For details on how to use this scope refer [Build a multi-tiered application using On-Behalf-Of (OBO) using OAuth with AD FS 2016](../../ad-fs/development/ad-fs-on-behalf-of-authentication-in-windows-server.md).
+- vpn_cert - The vpn_cert scope allows an application to request VPN certificates, which can be used to establish VPN connections using EAP-TLS authentication. This is not supported anymore.
+- email - Allows application to request email claim for the signed in user. This is not supported anymore. 
+- profile - Allows application to request profile related claims for the sign-in user. This is not supported anymore. 
+
+
 ## Operations
 
 ### How do I replace the SSL certificate for AD FS?
@@ -234,7 +244,7 @@ A proper solution to this problem is to configure the AD FS and WAP servers to s
 
 When exporting the SSL certificate, from one machine, to be imported to the computer’s personal store, of the AD FS and WAP server(s), make sure to export the Private key and select **Personal Information Exchange - PKCS #12**.
 
-It is important that the check box to **Include all certificates in the certificate path if possible** is checked, as well as **Export all extended properties**.
+It is important that the check box to **Include all certificates in the certificate path if possible** is checked, as well as **Export all extended properties**.  
 
 Run certlm.msc on the Windows servers and import the *.PFX into the Computer’s Personal Certificate store. This will cause the server to pass the entire certificate chain to the ADAL library.
 

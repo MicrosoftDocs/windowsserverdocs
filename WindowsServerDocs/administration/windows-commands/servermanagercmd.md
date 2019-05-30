@@ -59,7 +59,7 @@ The following example shows how to use **servermanagercmd** to install the Web S
 ```
 servermanagercmd -install Web-Server -resultpath installResult.xml
 ```
-The following example shows how to use the ** whatif** parameter with **servermanagercmd** to display detailed information about the roles, role services, and features that would be installed or removed, based upon instructions that are specified in an XML answer file represented by *install.xml*.
+The following example shows how to use the **whatif** parameter with **servermanagercmd** to display detailed information about the roles, role services, and features that would be installed or removed, based upon instructions that are specified in an XML answer file represented by *install.xml*.
 ```
 servermanagercmd -inputpath install.xml -whatif
 ```

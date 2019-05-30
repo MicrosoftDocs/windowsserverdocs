@@ -231,10 +231,10 @@ Here is a simple example, you may want to extend:
     ``` PowerShell
         New-AdfsWebTheme –Name ProofUp –SourceName default
     ``` 
-2. Next, export the default AD FS Web Theme:
+2. Next, create the folder and export the default AD FS Web Theme:
 
     ``` PowerShell
-       Export-AdfsWebTheme –Name default –DirectoryPath c:\Theme
+       New-Item -Path 'c:\Theme' -ItemType Directory;Export-AdfsWebTheme –Name default –DirectoryPath c:\Theme
     ```
 3. Open the C:\Theme\script\onload.js file in a text editor
 4. Append the following code to the end of the onload.js file
@@ -250,22 +250,24 @@ Here is a simple example, you may want to extend:
     var authArea = document.getElementById("authArea");
     if (authArea) {
         var errorMessage = document.getElementById("errorMessage");
-        if (errorMessage.innerHTML.indexOf(mfaSecondFactorErr) >= 0) {
+        if (errorMessage) {
+            if (errorMessage.innerHTML.indexOf(mfaSecondFactorErr) >= 0) {
 
-        //Hide the error message
-            var openingMessage = document.getElementById("openingMessage");
-            if (openingMessage) {
-                openingMessage.style.display = 'none'
-            }
-            var errorDetailsLink = document.getElementById("errorDetailsLink");
-            if (errorDetailsLink) {
-                errorDetailsLink.style.display = 'none'
-            }
+                //Hide the error message
+                var openingMessage = document.getElementById("openingMessage");
+                if (openingMessage) {
+                    openingMessage.style.display = 'none'
+                }
+                var errorDetailsLink = document.getElementById("errorDetailsLink");
+                if (errorDetailsLink) {
+                    errorDetailsLink.style.display = 'none'
+                }
 
-            //Provide a message and redirect to Azure AD MFA Registration Url
-            var mfaRegisterUrl = "https://account.activedirectory.windowsazure.com/proofup.aspx?proofup=1&whr=" + domain_hint;
-            errorMessage.innerHTML = "<br>" + mfaProofupMessage.replace("{0}", mfaRegisterUrl);
-            window.setTimeout(function () { window.location.href = mfaRegisterUrl; }, 5000);
+                //Provide a message and redirect to Azure AD MFA Registration Url
+                var mfaRegisterUrl = "https://account.activedirectory.windowsazure.com/proofup.aspx?proofup=1&whr=" + domain_hint;
+                errorMessage.innerHTML = "<br>" + mfaProofupMessage.replace("{0}", mfaRegisterUrl);
+                window.setTimeout(function () { window.location.href = mfaRegisterUrl; }, 5000);
+            }
         }
     }
 
@@ -285,7 +287,7 @@ Here is a simple example, you may want to extend:
 7. Finally, apply the custom AD FS Web Theme by typing the following Windows PowerShell command:
     
     ``` PowerShell
-    Set-AdfsWebConfig -ActiveThemeName
+    Set-AdfsWebConfig -ActiveThemeName "ProofUp"
     ```
 
 ## Next steps

@@ -21,8 +21,8 @@ ms.reviewer: deverette
 
 >Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows 10
 
-&#171;  [**Previous:** Step 7. (Optional) Conditional access for VPN connectivity using Azure AD](ad-ca-vpn-connectivity-windows10.md)<br>
-&#187; [ **Next:** Step 7.2. Create root certificates for VPN authentication with Azure AD](vpn-create-root-cert-for-vpn-auth-azure-ad.md)
+&#171; [**Previous:** Step 7. (Optional) Conditional access for VPN connectivity using Azure AD](ad-ca-vpn-connectivity-windows10.md)<br>
+&#187; [**Next:** Step 7.2. Create root certificates for VPN authentication with Azure AD](vpn-create-root-cert-for-vpn-auth-azure-ad.md)
 
 >[!IMPORTANT]
 >Failure to implement this registry change will cause IKEv2 connections using cloud certificates with PEAP to fail, but IKEv2 connections using Client Auth certificates issued from the on-premises CA would continue to work.
