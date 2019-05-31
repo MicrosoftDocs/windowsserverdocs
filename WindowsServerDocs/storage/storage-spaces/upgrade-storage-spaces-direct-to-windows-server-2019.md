@@ -14,8 +14,7 @@ ms.technology: storage-spaces
 This topic describes how to upgrade a Storage Spaces Direct cluster to Windows
 Server 2019. There are four approaches to upgrading a Storage Spaces Direct
 cluster from Windows Server 2016 to Windows Server 2019, using the [cluster OS
-rolling upgrade
-process](../../failover-clustering/Cluster-Operating-System-Rolling-Upgrade.md)—two
+rolling upgrade process](../../failover-clustering/Cluster-Operating-System-Rolling-Upgrade.md) —two
 that involve keeping the VMs running, and two that involve stopping all VMs.
 Each approach has different strengths and weaknesses, so select that one that
 best suits the needs of your organization:
@@ -74,7 +73,7 @@ There are some limitations with the upgrade process to be aware of:
 -   Before upgrading a Windows Server 2016 Storage Spaces Direct cluster server,
     we recommend putting the server into storage maintenance mode. For more
     info, see the Event 5120 section of [Troubleshoot Storage Spaces
-    Direct](troubleshooting-storage-spaces.md#event-5120-with-statusiotimeout-c00000b5).
+    Direct](troubleshooting-storage-spaces.md#event-5120-with-statustotimeout-c00000b5).
     Although this issue has been fixed in Windows Server 2016, we recommend
     putting each Storage Spaces Direct server into storage maintenance mode
     during the upgrade as a best practice.
