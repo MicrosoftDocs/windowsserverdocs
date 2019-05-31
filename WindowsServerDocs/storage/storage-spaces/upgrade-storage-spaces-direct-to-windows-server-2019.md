@@ -73,7 +73,7 @@ There are some limitations with the upgrade process to be aware of:
 -   Before upgrading a Windows Server 2016 Storage Spaces Direct cluster server,
     we recommend putting the server into storage maintenance mode. For more
     info, see the Event 5120 section of [Troubleshoot Storage Spaces
-    Direct](troubleshooting-storage-spaces.md#event-5120-with-statustotimeout-c00000b5).
+    Direct](troubleshooting-storage-spaces.md#event-5120-with-status-to-timeout-c00000b5).
     Although this issue has been fixed in Windows Server 2016, we recommend
     putting each Storage Spaces Direct server into storage maintenance mode
     during the upgrade as a best practice.
