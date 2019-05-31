@@ -108,7 +108,7 @@ To disable certificate revocation for these VPN connections, set **CertAuthFlags
    certutil -setreg chain\ChainCacheResyncFiletime @now
    ```
 
-How to verify that certificate revocation for IKEv2 machine certificate-based VPN connections is working:
+**How to verify that certificate revocation for IKEv2 machine certificate-based VPN connections is working**  
 >[!Note]  
 > Before you use this procedure, make sure that you have enabled the CAPI2 operational event log.
 1. Follow the previous steps to revoke a VPN client certificate.
