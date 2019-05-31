@@ -14,8 +14,6 @@ ms.technology: identity-adfs
 
 # When to Create a Federation Server Proxy Farm
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
-
 Consider installing additional federation server proxies when you have a large Active Directory Federation Services \(AD FS\) deployment and you want to provide fault tolerance, load\-balancing, and scalability for your proxy deployment. The act of creating two or more federation server proxies in the same perimeter network and configuring each of them to protect the same AD FS Federation Service creates a federation server proxy farm.  
   
 You can create a federation server proxy farm or install additional federation server proxies to an existing farm by using the AD FS Federation Server Proxy Configuration Wizard. For more information, see [When to Create a Federation Server Proxy](When-to-Create-a-Federation-Server-Proxy.md).  

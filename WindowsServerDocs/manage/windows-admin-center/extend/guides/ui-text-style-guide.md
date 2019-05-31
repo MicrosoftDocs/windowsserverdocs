@@ -194,12 +194,12 @@ Null state occurs when customer data or content is absent from an app or feature
 
 ### Guidelines
 
- - If possible, use null state situations as an opportunity to educate people about how to use the feature (for example, how to add music, where to find pictures, etc.)  
-- If you have a title in your UI, explain the action to take to “fix” the null state (for example, “Add some music”) 
-- Have fun with the text. This space can be an opportunity to provide delight since it will probably not be seen several times. 
-- Avoid “It’s lonely in here.” This is sad and has been overused. 
-- Avoid questions like “Haven’t connected your printer?” Okay to use once, but this format tends to get overused, and questions put extra burden/pressure on the customer. It can also feel condescending. 
-- Variety in null state text is a good thing. 
+- If possible, use null state situations as an opportunity to educate people about how to use the feature (for example, how to add music, where to find pictures, etc.)  
+  - If you have a title in your UI, explain the action to take to “fix” the null state (for example, “Add some music”) 
+  - Have fun with the text. This space can be an opportunity to provide delight since it will probably not be seen several times. 
+  - Avoid “It’s lonely in here.” This is sad and has been overused. 
+  - Avoid questions like “Haven’t connected your printer?” Okay to use once, but this format tends to get overused, and questions put extra burden/pressure on the customer. It can also feel condescending. 
+  - Variety in null state text is a good thing. 
 
 ### Examples
 

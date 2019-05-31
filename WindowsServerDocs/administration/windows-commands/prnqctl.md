@@ -19,13 +19,14 @@ ms.date: 07/11/2018
 >Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Prints a test page, pauses or resumes a printer, and clears a printer queue.  
-  
+
 ## Syntax  
 ```  
 cscript Prnqctl {-z | -m | -e | -x | -?} [-s <ServerName>]   
 [-p <printerName>] [-u <UserName>] [-w <Password>]  
 ```  
 ## Parameters  
+
 |Parameter|Description|  
 |-------|--------|  
 |-z|pauses printing on the printer specified with the **-p** parameter.|  
@@ -38,11 +39,11 @@ cscript Prnqctl {-z | -m | -e | -x | -?} [-s <ServerName>]
 |/?|Displays help at the command prompt.|  
 
 ## Remarks  
--   The **prnqctl** command is a Visual Basic script located in the %WINdir%\System32\printing_Admin_Scripts\\<language> directory. To use this command, at a command prompt, type **cscript** followed by the full path to the prnqctl file, or change directories to the appropriate folder. For example:  
-    ```  
-    cscript %WINdir%\System32\printing_Admin_Scripts\en-US\prnqctl  
-    ```  
--   if the information that you supply contains spaces, use quotation marks around the text (for example, `"computer Name"`).  
+- The **prnqctl** command is a Visual Basic script located in the %WINdir%\System32\printing_Admin_Scripts\\<language> directory. To use this command, at a command prompt, type **cscript** followed by the full path to the prnqctl file, or change directories to the appropriate folder. For example:  
+  ```  
+  cscript %WINdir%\System32\printing_Admin_Scripts\en-US\prnqctl  
+  ```  
+- if the information that you supply contains spaces, use quotation marks around the text (for example, `"computer Name"`).  
 
 ## <a name="BKMK_examples"></a>Examples  
 To print a test page on the Laserprinter1 printer shared by the \\\Server1 computer, type:  

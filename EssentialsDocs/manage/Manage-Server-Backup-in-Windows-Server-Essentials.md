@@ -70,17 +70,17 @@ manager: dongill
   
 #### To use Remote Web Access to manage your server  
   
-1.  Open a web browser.  
+1. Open a web browser.  
   
-2.  In the address box, type the name of the Windows Server Essentials domain.  
+2. In the address box, type the name of the Windows Server Essentials domain.  
   
-3.  When prompted, enter your user name and password.  
+3. When prompted, enter your user name and password.  
   
-4.  When you click the name of the server in  Remote Web Access, the logon page for the Dashboard is displayed.  
+4. When you click the name of the server in  Remote Web Access, the logon page for the Dashboard is displayed.  
   
-5.  Log on to the Dashboard as an administrator, and then click **Devices**.  
+5. Log on to the Dashboard as an administrator, and then click **Devices**.  
   
- For more information about  Remote Web Access, see [Remote Web Access overview](Manage-Remote-Web-Access-in-Windows-Server-Essentials.md#BKMK_Overview).  
+   For more information about  Remote Web Access, see [Remote Web Access overview](Manage-Remote-Web-Access-in-Windows-Server-Essentials.md#BKMK_Overview).  
   
 ##  <a name="BKMK_4"></a> Disable server backup  
  You should protect your server and its data automatically by scheduling daily backups. It is recommended that you maintain a daily backup plan because most organizations cannot afford to lose the data that has been created over several days.  
@@ -133,12 +133,12 @@ manager: dongill
   
 > [!NOTE]
 >  In the default installation of Windows Server Essentials, the server is configured to automatically perform a defragmentation once each week. This can result in larger than normal backups if you use non-Microsoft imaging software. If it is not necessary to defragment the server on a regular basis, you can follow these steps to turn off the defragmentation schedule:  
->   
->  1.  Press the Windows key + W to open **Search**.  
-> 2.  In the Search text box, type **Defragment**.  
-> 3.  In the results section, click **Defragment and Optimize Drives**.  
-> 4.  In the **Optimize Drives** page, select a drive, and then click **Change settings**.  
-> 5.  In the **Optimization schedule** window, clear the **Run on a schedule (recommended)** check box, and then click **OK** to save the change.  
+> 
+> 1. Press the Windows key + W to open **Search**.  
+>    2. In the Search text box, type **Defragment**.  
+>    3. In the results section, click **Defragment and Optimize Drives**.  
+>    4. In the **Optimize Drives** page, select a drive, and then click **Change settings**.  
+>    5. In the **Optimization schedule** window, clear the **Run on a schedule (recommended)** check box, and then click **OK** to save the change.  
   
 ### Items to be backed up  
  By default, all operating system files and folders are selected for backup. You can choose to back up all the hard disks, files, and folders on the server, or select only individual hard disks, files, or folders to backup. To add or remove items for the backup, do one of the following:  

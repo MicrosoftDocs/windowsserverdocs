@@ -13,7 +13,7 @@ ms.technology: identity-adfs
 
 # Verify your Windows Server 2012 R2 Federation Server is Operational
 
->Applies To: Windows Server 2016, Windows Server 2012 R2
+
 
 You can use the following procedures to verify that a federation server is operational; that is, that any client on the same network can reach a new federation server.  
   

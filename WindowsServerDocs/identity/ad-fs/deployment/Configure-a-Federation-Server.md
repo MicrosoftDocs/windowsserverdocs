@@ -14,8 +14,6 @@ ms.technology: identity-adfs
 
 # Configure a Federation Server
 
->Applies To: Windows Server 2016, Windows Server 2012 R2
-
 After you install the Active Directory Federation Services \(AD FS\) role service on your computer, you are ready to configure this computer to become a federation server. You can do one of the following:  
   
 -   [Configure the first federation server in a new federation server farm](assetId:///e340cf8f-acf3-4cba-8135-a9353b85e714#BKMK_1)  

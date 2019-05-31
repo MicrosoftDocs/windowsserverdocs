@@ -13,10 +13,6 @@ ms.technology: identity-adfs
 
 # AD FS Extranet Lockout and Extranet Smart Lockout
 
-
-
->Applies To: Windows Server 2019, Windows Server 2016, Windows Server 2012 R2
-
 ## Overview
 
 Extranet Smart Lockout (ESL) protects your users from experiencing extranet account lockout from malicious activity.  

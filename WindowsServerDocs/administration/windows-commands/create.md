@@ -31,5 +31,7 @@ create vdisk
 
 ## Parameters
 
-|Parameter|Description|
-|---------|-----------|
+| Parameter | Description |
+|-----------|-------------|
+|           |             |
+

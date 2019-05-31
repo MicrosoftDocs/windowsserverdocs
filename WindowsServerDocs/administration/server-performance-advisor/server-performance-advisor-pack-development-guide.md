@@ -270,6 +270,7 @@ KeytypeId | Smallint NOT NULL | Internal type Id
 Value | Nvarchar(4000) NOT NULL | All the values
 
 The **KeytypeID** column can have one of the following types:
+
 ID | Type
 --- | ---
 1 | String
@@ -444,7 +445,7 @@ Here s an example of a simple rule:
 
 ``` syntax
 <advisorPack>
-   
+
   <reportDefinition>
     <thresholds>
       <threshold  />
@@ -936,7 +937,7 @@ DECLARE @freediskSize FLOat
 exec dbo.GetThreshold N freediskSize , @freediskSize output
 
 if (@freediskSizeInGB < @freediskSize)
- 
+
 ```
 
 ### Set or remove the single value
@@ -1028,7 +1029,7 @@ INSERT INTO #NetworkAdapterInformation (
   MACaddress
 )
 VALUES (
-   
+
 )
 ```
 
@@ -1087,7 +1088,7 @@ The SPA console can run in two modes, Debug or Release. Release mode is the defa
     **Note**
     You can also press F11 to step into the previous statement and debug.
 
-     
+
 
 Running \[dbo\].\[DebugReportScript\] returns multiple result sets, including:
 
@@ -1105,9 +1106,9 @@ Running \[dbo\].\[DebugReportScript\] returns multiple result sets, including:
 
 ### Naming convention and styles
 
-Pascal casing | Camel casing | Uppercase
---- | ---- | ---
-<ul><li>Names in ProvisionMetadata.xml</li><li>Stored procedures</li><li>Functions</li><li>View names</li><li>Temporary table names</li></ul> | <ul><li>Parameter names</li><li>Local variables</li></ul> | Use for all SQL reserved keywords
+|                                                                 Pascal casing                                                                 |                       Camel casing                        |             Uppercase             |
+|-----------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------|-----------------------------------|
+| <ul><li>Names in ProvisionMetadata.xml</li><li>Stored procedures</li><li>Functions</li><li>View names</li><li>Temporary table names</li></ul> | <ul><li>Parameter names</li><li>Local variables</li></ul> | Use for all SQL reserved keywords |
 
 ### Other recommendations
 
@@ -1139,13 +1140,13 @@ The following example shows the workflow for running two advisor packs.
 
 The Merger Data Collector Set is only for collecting performance counter and ETW data sources. The following merge rules apply:
 
-1.  SPA takes the biggest duration as the new duration.
+1. SPA takes the biggest duration as the new duration.
 
-2.  Where there are merge conflicts, the following rules are followed:
+2. Where there are merge conflicts, the following rules are followed:
 
-    1.  Take the smallest interval as the new interval.
+   1. Take the smallest interval as the new interval.
 
-    2.  Take the super set of the performance counters. For example, with **Process(\*)\\% Processor time** and **Process(\*)\\\*,\\Process(\*)\\\*** returns more data, so **Process(\*)\\% Processor time** and **Process(\*)\\\*** is removed from the merged data collector set.
+   2. Take the super set of the performance counters. For example, with **Process(\*)\\% Processor time** and **Process(\*)\\\*,\\Process(\*)\\\\*** returns more data, so **Process(\*)\\% Processor time** and **Process(\*)\\\\*** is removed from the merged data collector set.
 
 ### Collect dynamic data
 
@@ -1165,7 +1166,7 @@ It returns a list of network adapter objects. Each object has a property called 
 ROOT\*ISatAP\0001
 PCI\VEN_8086&DEV_4238&SUBSYS_11118086&REV_35\4&372A6B86&0&00E4
 ROOT\*IPHTTPS\0000
- 
+
 ```
 
 To find the **FriendlyName** value, open registry editor and navigate to registry setting by combining **HKEY\_LOCAL\_MACHINE\\SYSTEM\\CurrentControlSet\\Enum\\** with each line in the previous sample. , for example: **HKEY\_LOCAL\_MACHINE\\SYSTEM\\CurrentControlSet\\Enum\\ ROOT\\\*IPHTTPS\\0000**.

@@ -35,7 +35,7 @@ bitsadmin /ReplaceRemotePrefix <Job> <OldPrefix> <NewPrefix
 |OldPrefix|Existing URL prefix|
 |NewPrefix|New URL prefix|
 
-## <a name="BKMK_examples"></a>Examples
+## Examples
 
 The following example changes all files in job named *myDownloadJob* whose remote URL begins with *http://stageserver* to *http://prodserver*.
 ```

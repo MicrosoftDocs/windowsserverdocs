@@ -30,6 +30,7 @@ reset session {<SessionName> | <SessionID>} [/server:<ServerName>] [/v]
 ```  
 
 ## Parameters  
+
 |Parameter|Description|  
 |-------|--------|  
 |\<SessionName>|Specifies the name of the session that you want to reset. To determine the name of the session, use the **query session** command.|  
@@ -45,14 +46,14 @@ reset session {<SessionName> | <SessionID>} [/server:<ServerName>] [/v]
 -   The **/server** parameter is required only if you use **reset session** from a remote server.  
 
 ## <a name="BKMK_examples"></a>Examples  
--   To reset the session designated rdp-tcp#6, type:  
-    ```  
-    reset session rdp-tcp#6  
-    ```  
--   To reset the session that uses session ID 3, type:  
-    ```  
-    reset session 3  
-    ```  
+- To reset the session designated rdp-tcp#6, type:  
+  ```  
+  reset session rdp-tcp#6  
+  ```  
+- To reset the session that uses session ID 3, type:  
+  ```  
+  reset session 3  
+  ```  
 
 #### Additional references  
 [Command-Line Syntax Key](command-line-syntax-key.md)  

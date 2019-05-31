@@ -25,19 +25,19 @@ Network Controller deployment requires one or more computers or VMs that serve a
 - Any computer or virtual machine (VM) upon which you install Network Controller must be running the Datacenter edition of Windows Server 2016. 
 - The management client computer or VM for Network Controller must be running Windows 10. 
 
-  
+
 ## Configuration requirements
 
 Before deploying Network Controller, you must configure the security groups, log file locations (if needed), and dynamic DNS registration.
-  
+
 ### Step 1. Configure your security groups
-  
+
 The first thing you want to do is create two security groups for Kerberos authentication. 
 
 You create groups for users who have permission to: 
 
 1. Configure Network Controller<p>You can name this group Network Controller Admins, for example. 
-2.	Configure and manage the network by using Network Controller<p>You can name this group Network Controller Users, for example. Use Representational State Transfer (REST) to configure and manage Network Controller.
+2.  Configure and manage the network by using Network Controller<p>You can name this group Network Controller Users, for example. Use Representational State Transfer (REST) to configure and manage Network Controller.
 
 >[!NOTE]
 >All of the users you add must be members of the Domain Users group in Active Directory Users and Computers.
@@ -51,22 +51,24 @@ The next thing you want to do is configure the file locations to store Network C
 
 
 ### Step 3. Configure dynamic DNS registration for Network Controller
-  
+
 Finally, the next thing you want to do is deploy Network Controller cluster nodes on the same subnet or different subnets. 
 
-|If...  |Then...  |
-|---------|---------|
-|On the same subnet, |You must provide the Network Controller REST IP address. |
-|On different subnets, |You must provide the Network Controller REST DNS name, which you create during the deployment process. You must also do the following:<ul><li>Configure DNS dynamic updates for the Network Controller DNS name on the DNS server.</li><li>Restrict the DNS dynamic updates to Network Controller nodes only.</li></ul> |
+
+|         If...         |                                                                                                                                                         Then...                                                                                                                                                         |
+|-----------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|  On the same subnet,  |                                                                                                                                You must provide the Network Controller REST IP address.                                                                                                                                 |
+| On different subnets, | You must provide the Network Controller REST DNS name, which you create during the deployment process. You must also do the following:<ul><li>Configure DNS dynamic updates for the Network Controller DNS name on the DNS server.</li><li>Restrict the DNS dynamic updates to Network Controller nodes only.</li></ul> |
+
 ---
 
 > [!NOTE]
 > Membership in **Domain Admins**, or equivalent, is the minimum required to perform these procedures.
-  
+
 1. Allow DNS dynamic updates for a zone.
 
    a. Open DNS Manager, and in the console tree, right-click the applicable zone, and then click **Properties**. 
-      
+
    b. On the **General** tab, verify that the zone type is either **Primary** or **Active Directory-integrated**.
 
    c. In **Dynamic updates**, verify that **Secure only** is selected, and then click **OK**.
@@ -76,7 +78,7 @@ Finally, the next thing you want to do is deploy Network Controller cluster node
    a.  Click the **Security** tab, and then click **Advanced**. 
 
    b. In **Advanced Security Settings**, click **Add**. 
-  
+
    c. Click **Select a principal**. 
 
    d. In the **Select User, Computer, Service Account, or Group** dialog box, click **Object Types**. 
@@ -89,7 +91,7 @@ Finally, the next thing you want to do is deploy Network Controller cluster node
 
       - **Type** = Allow
       - **Applies to** = This object and all descendant objects
-  
+
    h. In **Permissions**, select **Write all properties** and **Delete**, and then click **OK**.
 
 3. Repeat for all computers and VMs in the Network Controller cluster.
@@ -109,19 +111,19 @@ The setup is highly available with three Network Controller nodes  configured on
 ### Network controller and software load balancer deployment
 
 For high availablity, there are two or more SLB/MUX nodes.
-   
+
 ![SDN NC Planning](../../media/Plan-a-Software-Defined-Network-Infrastructure/SDN-SLB-Deployment.png)
-  
+
 ### Network Controller, Software Load Balancer, and RAS Gateway deployment
 
 There are three gateway virtual machines; two are active, and one is redundant.
 
 ![SDN NC Planning](../../media/Plan-a-Software-Defined-Network-Infrastructure/SDN-GW-Deployment.png)  
-  
-  
-  
+
+
+
 For TP5-based deployment automation, Active Directory must be available and reachable from these subnets. For more information about Active Directory, see [Active Directory Domain Services Overview](https://docs.microsoft.com/windows-server/identity/ad-ds/get-started/virtual-dc/active-directory-domain-services-overview).  
-  
+
 >[!IMPORTANT] 
 >If you deploy using VMM, ensure your infrastructure virtual machines (VMM Server, AD/DNS, SQL Server, etc.) are not hosted on any of the four hosts shown in the diagrams.  
 

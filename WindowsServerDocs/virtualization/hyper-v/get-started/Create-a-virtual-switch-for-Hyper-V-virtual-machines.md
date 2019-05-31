@@ -18,9 +18,9 @@ ms.date: 10/04/2016
   
 A virtual switch allows virtual machines created on Hyper-V hosts to communicate with other computers. You can create a virtual switch when you first install the Hyper-V role on Windows Server. To create additional virtual switches, use Hyper-V Manager or Windows PowerShell. To learn more about virtual switches, see [Hyper-V Virtual Switch](../../hyper-v-virtual-switch/Hyper-V-Virtual-Switch.md).  
   
-Virtual machine networking can be a complex subject. And there are several new virtual switch features that you may want to use like [Switch Embedded Teaming (SET)](../../hyper-v-virtual-switch/RDMA-and-Switch-Embedded-Teaming.md#bkmk_sswitchembedded). But basic networking is fairly easy to do. This topic covers just enough so that you can create networked virtual machines in Hyper-V. To learn more about how you can set up your networking infrastructure, review the [Networking](../../../networking/Networking.md) documentation.   
+Virtual machine networking can be a complex subject. And there are several new virtual switch features that you may want to use like [Switch Embedded Teaming (SET)](../../hyper-v-virtual-switch/RDMA-and-Switch-Embedded-Teaming.md#switch-embedded-teaming-set). But basic networking is fairly easy to do. This topic covers just enough so that you can create networked virtual machines in Hyper-V. To learn more about how you can set up your networking infrastructure, review the [Networking](../../../networking/Networking.md) documentation.   
   
-## <a name="BKMK_HyperVMan"></a>Create a virtual switch by using Hyper-V Manager  
+## Create a virtual switch by using Hyper-V Manager  
   
 1.  Open Hyper-V Manager, select the Hyper-V host computer name.  
   
@@ -59,7 +59,7 @@ Virtual machine networking can be a complex subject. And there are several new v
   
     ![Screenshot that shows the "Pending changes may disrupt network connectivity" message](../media/Hyper-V-NewVSwitch-DisruptNetwork.png)  
   
-## <a name="BKMK_WPS"></a>Create a virtual switch by using Windows PowerShell  
+## Create a virtual switch by using Windows PowerShell  
   
 1.  On the Windows desktop, click the Start button and type any part of the name **Windows PowerShell**.  
   

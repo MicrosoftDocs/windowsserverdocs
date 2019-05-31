@@ -14,8 +14,6 @@ ms.author: billmath
 
 # Create a Stand-Alone Federation Server
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
-
 After you install the Federation Service role service and configure the required certificates on a computer, you are ready to configure the computer to become a federation server. You can use the following procedure to set up the computer to become a stand\-alone federation server. The act of creating a stand\-alone federation server also creates a new Federation Service. You do create a federation server with the AD FS Federation Server Configuration Wizard.  
   
 > [!NOTE]  

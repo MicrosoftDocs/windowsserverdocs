@@ -11,9 +11,12 @@ ms.date: 09/16/2016
 ---
 # Data Deduplication interoperability
 
-> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
+> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2019
 
 ## <a id="supported"></a>Supported
+
+### <a id="supported-ReFS"></a>ReFS
+Data Deduplication is supported as of Windows Server 2019. 
 
 ### <a id="supported-clusters"></a>Failover Clustering
 
@@ -70,8 +73,6 @@ Windows Server Backup can back up an optimized volume as-is (that is, without re
     ```
 
 ## <a id="unsupported"></a>Unsupported
-### <a id="unsupported-refs"></a>ReFS
-Windows Server 2016 does not support Data Deduplication on ReFS-formatted volumes. [Vote for this item for Windows Server vNext on the Windows Server Storage UserVoice](https://windowsserver.uservoice.com/forums/295056-storage/suggestions/7962813-support-deduplication-on-refs).
 
 ### <a id="unsupported-windows-client"></a>Windows 10 (client OS)
 Data Deduplication is not supported on Windows 10. There are several popular blog posts in the Windows community describing how to remove the binaries from Windows Server 2016 and install on Windows 10, but this scenario has not been validated as part of the development of Data Deduplication. [Vote for this item for Windows 10 vNext on the Windows Server Storage UserVoice](https://windowsserver.uservoice.com/forums/295056-storage/suggestions/9011008-add-deduplication-support-to-client-os).

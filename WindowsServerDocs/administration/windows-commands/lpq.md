@@ -19,18 +19,20 @@ ms.date: 10/16/2017
 >Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Displays the status of a print queue on a computer running Line printer Daemon (LPD).  
-  
+
 ## Syntax  
 ```  
 lpq -S <ServerName> -P <printerName> [-l]  
 ```  
 ## Parameters  
-|Parameter|Description|  
-|-------|--------|  
-|-S <ServerName>|Specifies (by name or IP address) the computer or printer sharing device that hosts the LPD print queue with a status that you want to display. Required.|  
-|-P <printerName>|Specifies (by name) the printer for the print queue with a status that you want to display. Required.|  
-|-l|Specifies that you want to display details about the status of the print queue.|  
-|/?|Displays help at the command prompt.|  
+
+|    Parameter     |                                                                        Description                                                                        |
+|------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------|
+| -S <ServerName>  | Specifies (by name or IP address) the computer or printer sharing device that hosts the LPD print queue with a status that you want to display. Required. |
+| -P <printerName> |                           Specifies (by name) the printer for the print queue with a status that you want to display. Required.                           |
+|        -l        |                                      Specifies that you want to display details about the status of the print queue.                                      |
+|        /?        |                                                           Displays help at the command prompt.                                                            |
+
 ## Remarks  
 The **-S** and **-P** parameters are case sensitive and must be typed in upper-case letters.  
 ## <a name="BKMK_examples"></a>Examples  
