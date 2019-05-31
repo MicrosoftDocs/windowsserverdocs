@@ -21,7 +21,7 @@ ms.localizationpriority: medium
 
 The Remote Desktop Services team have created a poster to help you plan, build, and run your RDS environment.
 
-![Remote Desktop Services poster](.\media\rds-poster-download.png)
+![Remote Desktop Services poster](./media/rds-poster-download.png)
 
 You can get a copy of the poster by right-clicking the image and saving it to your local system.
 
