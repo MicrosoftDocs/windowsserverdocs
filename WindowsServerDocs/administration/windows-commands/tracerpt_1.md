@@ -32,49 +32,49 @@ tracerpt <[-l] <value [value [...]]>|-rt <session_name [session_name [...]]>> [o
 
 ## Options
 
-|Option flag|Description|
-|-----------|-----------|
-|-?|Displays context sensitive help.|
-|-config \<filename>|Load a settings file containing command options.|
-|-y|Answer yes to all questions without prompting.|
-|-f \<XML | HTML>|Define report format.|
-|-of \<CSV | EVTX | XML>|Define dump format. Default is XML.|
-|-df \<filename>|Create a Microsoft-specific counting/reporting schema file.|
-|-int \<filename>|Dump the interpreted event structure to the specified file.|
-|-rts|Report raw timestamp in the event trace header. Can only be used with -o, not -report or -summary.|
-|-tmf \<filename>|Specify a Trace Message Format definition file.|
-|-tp \<value>|Specify the TMF file search path. Multiple paths may be used, separated by a semicolon (;).|
-|-i \<value>|Specify the provider image path. The matching PDB will be located in the Symbol Server. Multiple paths can be used, separated by a semicolon (;).|
-|-pdb \<value>|Specify the symbol server path. Multiple paths can be used, separated by a semicolon (;).|
-|-gmt|Convert WPP payload timestamps to Greenwich Mean Time.|
-|-rl \<value>|Define System Report Level from 1 to 5. Default is 1.|
-|-summary [filename]|Generate a summary report text file. Filename if not specified is summary.txt.|
-|-o [filename]|Generate a text output file. Filename if not specified is dumpfile.xml.|
-|-report [filename]|Generate a text output report file. Filename if not specified is workload.xml.|
-|-lr|Specify "less restrictive." This uses best efforts for events that do not match the events schema.|
-|-export [filename]|Generate an Event Schema export file. Filename if not specified is schema.man.|
-|[-l] \<value [value […]]>|Specify the Event Trace log file to process.|
-|-rt \<session_name [session_name […]]>|Specify Real-time Event Trace Session data sources.|
+|              Option flag               |                                                                    Description                                                                    |
+|----------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------|
+|                   -?                   |                                                         Displays context sensitive help.                                                          |
+|          -config \<filename>           |                                                 Load a settings file containing command options.                                                  |
+|                   -y                   |                                                  Answer yes to all questions without prompting.                                                   |
+|                -f \<XML                |                                                                       HTML>                                                                       |
+|               -of \<CSV                |                                                                       EVTX                                                                        |
+|            -df \<filename>             |                                            Create a Microsoft-specific counting/reporting schema file.                                            |
+|            -int \<filename>            |                                            Dump the interpreted event structure to the specified file.                                            |
+|                  -rts                  |                        Report raw timestamp in the event trace header. Can only be used with -o, not -report or -summary.                         |
+|            -tmf \<filename>            |                                                  Specify a Trace Message Format definition file.                                                  |
+|              -tp \<value>              |                            Specify the TMF file search path. Multiple paths may be used, separated by a semicolon (;).                            |
+|              -i \<value>               | Specify the provider image path. The matching PDB will be located in the Symbol Server. Multiple paths can be used, separated by a semicolon (;). |
+|             -pdb \<value>              |                             Specify the symbol server path. Multiple paths can be used, separated by a semicolon (;).                             |
+|                  -gmt                  |                                              Convert WPP payload timestamps to Greenwich Mean Time.                                               |
+|              -rl \<value>              |                                               Define System Report Level from 1 to 5. Default is 1.                                               |
+|          -summary [filename]           |                                  Generate a summary report text file. Filename if not specified is summary.txt.                                   |
+|             -o [filename]              |                                      Generate a text output file. Filename if not specified is dumpfile.xml.                                      |
+|           -report [filename]           |                                  Generate a text output report file. Filename if not specified is workload.xml.                                   |
+|                  -lr                   |                        Specify "less restrictive." This uses best efforts for events that do not match the events schema.                         |
+|           -export [filename]           |                                  Generate an Event Schema export file. Filename if not specified is schema.man.                                   |
+|       [-l] \<value [value […]]>        |                                                   Specify the Event Trace log file to process.                                                    |
+| -rt \<session_name [session_name […]]> |                                                Specify Real-time Event Trace Session data sources.                                                |
 
 ## <a name="BKMK_EXAMPLES"></a>Examples
 
--   This example creates a report based on the two event logs **logfile1.etl** and **logfile2.etl** and creates the dump file **logdump.xml** in XML format.  
-    ```
-    tracerpt logfile1.etl logfile2.etl -o logdump.xml -of XML
-    ```  
--   This example creates a report based on the event log **logfile.etl**, creates the dump file **logdmp.xml** in XML format, uses best efforts to identify events not in the schema, produces a summary report file **logdump.txt**, and produces the report file **logrpt.xml**.  
-    ```
-    tracerpt logfile.etl -o logdmp.xml -of XML -lr -summary logdmp.txt -report logrpt.xml
-    ```  
--   This example uses the two event logs **logfile1.etl** and **logfile2.etl** to produce a dump file and report file with the default filenames.  
-    ```
-    tracerpt logfile1.etl logfile2.etl -o -report
-    ```  
--   This example uses the event log **logfile.etl** and the performance log **counterfile.blg** to produce the report file **logrpt.xml** and the Microsoft-specific XML schema file **schema.xml**.  
-    ```
-    tracerpt logfile.etl counterfile.blg -report logrpt.xml -df schema.xml
-    ```  
--   This example reads the real-time Event Trace Session "NT Kernel Logger" and produces the dump file **logfile.csv** in CSV format.  
-    ```
-    tracerpt -rt "NT Kernel Logger" -o logfile.csv -of CSV
-    ```
+- This example creates a report based on the two event logs **logfile1.etl** and **logfile2.etl** and creates the dump file **logdump.xml** in XML format.  
+  ```
+  tracerpt logfile1.etl logfile2.etl -o logdump.xml -of XML
+  ```  
+- This example creates a report based on the event log **logfile.etl**, creates the dump file **logdmp.xml** in XML format, uses best efforts to identify events not in the schema, produces a summary report file **logdump.txt**, and produces the report file **logrpt.xml**.  
+  ```
+  tracerpt logfile.etl -o logdmp.xml -of XML -lr -summary logdmp.txt -report logrpt.xml
+  ```  
+- This example uses the two event logs **logfile1.etl** and **logfile2.etl** to produce a dump file and report file with the default filenames.  
+  ```
+  tracerpt logfile1.etl logfile2.etl -o -report
+  ```  
+- This example uses the event log **logfile.etl** and the performance log **counterfile.blg** to produce the report file **logrpt.xml** and the Microsoft-specific XML schema file **schema.xml**.  
+  ```
+  tracerpt logfile.etl counterfile.blg -report logrpt.xml -df schema.xml
+  ```  
+- This example reads the real-time Event Trace Session "NT Kernel Logger" and produces the dump file **logfile.csv** in CSV format.  
+  ```
+  tracerpt -rt "NT Kernel Logger" -o logfile.csv -of CSV
+  ```

@@ -113,7 +113,7 @@ In Windows Server 2016, the default value for Boost Mode is 3.
 | 3 (Efficient Enabled) | Efficient | Efficient Enabled |
 | 4 (Efficient Aggressive) | Efficient | Aggressive |
 
- 
+ 
 The following commands enable Processor Performance Boost Mode on the current power plan (specify the policy by using a GUID alias):
 
 ``` syntax

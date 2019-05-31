@@ -24,17 +24,17 @@ Before you can upload an image, make the following changes:
 - Download and install Windows Server 2008 Service Pack 2 (SP2) if you don’t already have it installed on your image.
 
 - Configure Remote Desktop (RDP) settings.
-   1. Go to **Control Panel** > **System settings**.   
-   2. Select **Remote settings** in the left-hand menu.
+  1. Go to **Control Panel** > **System settings**.   
+  2. Select **Remote settings** in the left-hand menu.
 
-   ![Screenshot of system settings, highlighting "Remote settings."](media/1a_remote_settings.png)
+     ![Screenshot of system settings, highlighting "Remote settings."](media/1a_remote_settings.png)
 
-   3. Select the **Remote** tab in System Properties.   
+  3. Select the **Remote** tab in System Properties.   
 
-   ![Screenshot of the remote tab in system properties.](media/2c_sysprops.png)
+     ![Screenshot of the remote tab in system properties.](media/2c_sysprops.png)
 
-   4. Select Allow connections from computers running any version of Remote Desktop (less secure).   
-   5. Click **Apply**, and **OK**.
+  4. Select Allow connections from computers running any version of Remote Desktop (less secure).   
+  5. Click **Apply**, and **OK**.
 - Configure Windows Firewall settings.   
    1. At the command prompt in Admin mode, enter “**wf.msc**” for Windows Firewall and advanced security settings.   
    2. Sort findings by **Ports**, select **port 3389**.   

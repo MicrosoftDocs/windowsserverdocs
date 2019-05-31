@@ -31,7 +31,7 @@ Run the following commands in an elevated PowerShell session to add the HGS serv
 
 ## Next step
 
->[!div class="nextstepaction"]
-[Initialize HGS](guarded-fabric-initialize-hgs.md)
+> [!div class="nextstepaction"]
+> [Initialize HGS](guarded-fabric-initialize-hgs.md)
 
 

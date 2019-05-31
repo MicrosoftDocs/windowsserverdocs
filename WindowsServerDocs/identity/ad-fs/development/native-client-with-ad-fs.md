@@ -159,7 +159,7 @@ Running the application
 
 In this step, the native application redirected to AD FS and got an ID token and an access token for the Web API
 
-3.	Enter a to do item in the text box and click on Add item. In this step, the application reaches out to the Web API to add the to do item, and in order to do so, presents the access token to the WebAPI obtained from AD FS. The Web API matches the audience value to make sure the token is intended for it and verifies the token signature using the info from the federation metadata.
+3. Enter a to do item in the text box and click on Add item. In this step, the application reaches out to the Web API to add the to do item, and in order to do so, presents the access token to the WebAPI obtained from AD FS. The Web API matches the audience value to make sure the token is intended for it and verifies the token signature using the info from the federation metadata.
 
 ![Sign-in](media/native-client-with-ad-fs-2016/clienttodoadd.png)
 

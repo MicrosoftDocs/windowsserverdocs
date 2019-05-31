@@ -31,16 +31,16 @@ driverquery [/s <System> [/u [<Domain>\]<Username> [/p <Password>]]] [/fo {table
 
 ## Parameters
 
-|Parameter|Description|
-|---------|-----------|
-|/s \<System>|Specifies the name or IP address of a remote computer. Do not use backslashes. The default is the local computer.|
-|/u [\<Domain>\]<Username>|Runs the command with the credentials of the user account as specified by *User* or *Domain*\*User*. By default, **/s** uses the credentials of the user who is currently logged on to the computer that is issuing the command. **/u** cannot be used unless **/s** is specified.|
-|/p \<Password>|Specifies the password of the user account that is specified in the **/u** parameter. **/p** cannot be used unless **/u** is specified.|
-|/fo {table | list | csv}|Specifies the format to display the driver information. Valid values are **table**, **list**, and **csv**. The default format for output is **table**.|
-|/nh|Omits the header row from the displayed driver information. Not valid if the **/fo** parameter is set to **list**.|
-|/v|Displays verbose output. **/v** is not valid for signed drivers.|
-|/si|Provides information about signed drivers.|
-|/?|Displays help at the command prompt.|
+|         Parameter         |                                                                                                                                         Description                                                                                                                                          |
+|---------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|       /s \<System>        |                                                                                      Specifies the name or IP address of a remote computer. Do not use backslashes. The default is the local computer.                                                                                       |
+| /u [\<Domain>\]<Username> | Runs the command with the credentials of the user account as specified by *User* or *Domain*\*User<em>. By default, \*\*/s</em>\* uses the credentials of the user who is currently logged on to the computer that is issuing the command. **/u** cannot be used unless **/s** is specified. |
+|      /p \<Password>       |                                                                           Specifies the password of the user account that is specified in the **/u** parameter. **/p** cannot be used unless **/u** is specified.                                                                            |
+|        /fo {table         |                                                                                                                                             list                                                                                                                                             |
+|            /nh            |                                                                                      Omits the header row from the displayed driver information. Not valid if the **/fo** parameter is set to **list**.                                                                                      |
+|            /v             |                                                                                                               Displays verbose output. **/v** is not valid for signed drivers.                                                                                                               |
+|            /si            |                                                                                                                          Provides information about signed drivers.                                                                                                                          |
+|            /?             |                                                                                                                             Displays help at the command prompt.                                                                                                                             |
 
 ## <a name="BKMK_examples"></a>Examples
 

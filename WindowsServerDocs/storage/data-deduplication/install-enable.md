@@ -39,16 +39,16 @@ To install Data Deduplication in a Nano Server installation:
 2. From a server running Windows Server 2016 in any mode other than Nano Server, or from a Windows PC with the [Remote Server Administration Tools](https://www.microsoft.com/download/details.aspx?id=45520) (RSAT) installed, install Data Deduplication with an explicit reference to the Nano Server instance (replace 'MyNanoServer' with the real name of the Nano Server instance):  
 	```PowerShell
 	Install-WindowsFeature -ComputerName <MyNanoServer> -Name FS-Data-Deduplication
-	```  
+    ```  
 	<br />
-	**-- OR --**
+    <strong>-- OR --</strong>
 	<br />
 	Connect remotely to the Nano Server instance with PowerShell remoting and install Data Deduplication by using DISM:  
 	
 	```PowerShell
 	Enter-PSSession -ComputerName MyNanoServer 
 	dism /online /enable-feature /featurename:dedup-core /all
-	```
+    ```
 
 ## <a id="enable-dedup"></a>Enable Data Deduplication
 ### <a id="enable-dedup-candidate-workloads"></a>Determine which workloads are candidates for Data Deduplication
@@ -126,7 +126,7 @@ Before enabling Data Deduplication, you must choose the [Usage Type](understand.
 1. With an administrator context, run the following PowerShell command:  
 	```PowerShell
 	Enable-DedupVolume -Volume <Volume-Path> -UsageType <Selected-Usage-Type>
-	```
+    ```
 
 2. If you are running a recommended workload, you're done. For other workloads, see [Other considerations](#enable-dedup-sometimes-considerations).
 

@@ -180,18 +180,18 @@ If using the Failover Cluster Manager snap-in:
     The action 'Move' did not complete.
     Error Code: 0x80071398
     The operation failed because either the specified cluster node is not the owner of the group, or the node is not a possible owner of the group
-    
+
 If using the Cluster powershell cmdlet:
 
     PS C:\> Move-ClusterGroup -Name sr-fs-006 -Node sr-srv07
     Move-ClusterGroup : An error occurred while moving the clustered role 'sr-fs-006'.
-    The operation failed because either the specified cluster node is not the owner of the group, or the node is not a
+    The operation failed because either the specified cluster node is not the owner of the group, or the node is not a
     possible owner of the group
     At line:1 char:1
     + Move-ClusterGroup -Name sr-fs-006 -Node sr-srv07
     + ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-    + CategoryInfo          : NotSpecified: (:) [Move-ClusterGroup], ClusterCmdletException
-    + FullyQualifiedErrorId : Move-ClusterGroup,Microsoft.FailoverClusters.PowerShell.MoveClusterGroupCommand
+    + CategoryInfo          : NotSpecified: (:) [Move-ClusterGroup], ClusterCmdletException
+    + FullyQualifiedErrorId : Move-ClusterGroup,Microsoft.FailoverClusters.PowerShell.MoveClusterGroupCommand
 
 This occurs due to a by-design behavior in Windows Server 2016. Use `Set-SRPartnership` to move these PDR disks in an asynchronous stretched cluster.  
 
@@ -284,16 +284,16 @@ When attempting to bring a cluster disk online after a successful failover, wher
     Error
     The operation has failed.
     Failed to bring the resource 'Cluster Disk 2' online.
-    
+
     Error Code: 0x80071397
     The operation failed because either the specified cluster node is not the owner of the resource, or the node is not a possible owner of the resource.
-    
+
 If you attempt to move the disk or CSV manually, you receive an additional error. For example:
 
     Error
     The operation has failed.
     The action 'Move' did not complete.
-    
+
     Error Code: 0x8007138d
     A cluster node is not available for this operation
 
@@ -321,7 +321,7 @@ When running Test-SRTopology, it fails with:
 
     WARNING: Object reference not set to an instance of an object.
     WARNING: System.NullReferenceException
-    WARNING:    at Microsoft.FileServices.SR.Powershell.MSFTPartition.GetPartitionInStorageNodeByAccessPath(String AccessPath, String ComputerName, MIObject StorageNode)
+    WARNING:    at Microsoft.FileServices.SR.Powershell.MSFTPartition.GetPartitionInStorageNodeByAccessPath(String AccessPath, String ComputerName, MIObject StorageNode)
        at Microsoft.FileServices.SR.Powershell.Volume.GetVolume(String Path, String ComputerName)
        at Microsoft.FileServices.SR.Powershell.TestSRTopologyCommand.BeginProcessing()
     Test-SRTopology : Object reference not set to an instance of an object.
@@ -338,8 +338,7 @@ Run Get-Cluster | fl * on each node.
 If ClusterFunctionalLevel = 9, that is the Windows 2016 ClusterFunctionalLevel version needed to implement Storage Replica on this node.
 If ClusterFunctionalLevel is not 9, the ClusterFunctionalLevel will need to be updated in order to implement Storage Replica on this node.
 
-To resolve the issue, raise the cluster functional level by running the PowerShell cmdlet: [Update-ClusterFunctionalLevel]
-(https://docs.microsoft.com/powershell/module/failoverclusters/update-clusterfunctionallevel)
+To resolve the issue, raise the cluster functional level by running the PowerShell cmdlet: [Update-ClusterFunctionalLevel](https://docs.microsoft.com/powershell/module/failoverclusters/update-clusterfunctionallevel)
 
 ## Small unknown partition listed in DISKMGMT for each replicated volume
 

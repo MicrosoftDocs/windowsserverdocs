@@ -24,10 +24,12 @@ Connects to the specified ftp server.
 open <computer> [<Port>]  
 ```  
 ### Parameters  
-|Parameter|Description|  
-|-------|--------|  
-|<computer>|Specifies the remote computer to which you are trying to connect.|  
-|[<Port>]|Specifies a TCP port number to use to connect to an ftp server. By default, TCP port 21 is used.|  
+
+| Parameter  |                                           Description                                            |
+|------------|--------------------------------------------------------------------------------------------------|
+| <computer> |                Specifies the remote computer to which you are trying to connect.                 |
+|  [<Port>]  | Specifies a TCP port number to use to connect to an ftp server. By default, TCP port 21 is used. |
+
 ## Remarks  
 You can use an IP address or computer name (in which case a DNS server or Hosts file must be available) to specify **computer**.  
 ## <a name="BKMK_Examples"></a>Examples  

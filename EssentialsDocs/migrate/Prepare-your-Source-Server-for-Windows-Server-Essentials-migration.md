@@ -84,20 +84,20 @@ Complete the following preliminary steps to ensure that the settings and data on
   
 ###### To use the Windows Server Solutions BPA to analyze your Source Server  
   
-1.  Download and install the [Windows Server Solutions Best Practices Analyzer](https://www.microsoft.com/en-us/download/details.aspx?id=15556) at the Microsoft Download Center.  
+1. Download and install the [Windows Server Solutions Best Practices Analyzer](https://www.microsoft.com/en-us/download/details.aspx?id=15556) at the Microsoft Download Center.  
   
-2.  After the download is complete, click **Start**, point to **All Programs**, and then click **SBS Best Practices Analyzer Tool**.  
+2. After the download is complete, click **Start**, point to **All Programs**, and then click **SBS Best Practices Analyzer Tool**.  
   
-    > [!NOTE]
-    >  Check for updates before you scan the server.  
+   > [!NOTE]
+   >  Check for updates before you scan the server.  
   
-3.  In the navigation pane, click **Start a scan**.  
+3. In the navigation pane, click **Start a scan**.  
   
-4.  In the details pane, type the scan label, and then click **Start scanning**. The scan label is the name of the scan report, for example, **SBS BPA Scan 1Jul2012**.  
+4. In the details pane, type the scan label, and then click **Start scanning**. The scan label is the name of the scan report, for example, **SBS BPA Scan 1Jul2012**.  
   
-5.  After the scan finishes, click **View a report of this Best Practices scan**.  
+5. After the scan finishes, click **View a report of this Best Practices scan**.  
   
- After collecting information about server configuration, the Windows Server Solutions BPA verifies that the information is correct and then presents administrators with a list of information and issues sorted by severity. The list describes each issue and provides a recommendation or possible solution. Three report types are available:  
+   After collecting information about server configuration, the Windows Server Solutions BPA verifies that the information is correct and then presents administrators with a list of information and issues sorted by severity. The list describes each issue and provides a recommendation or possible solution. Three report types are available:  
   
 |Report Type|Description|  
 |-----------------|-----------------|  
@@ -135,25 +135,25 @@ Complete the following preliminary steps to ensure that the settings and data on
   
 ##### To verify that you have the appropriate permissions to run the tool on the Source Server  
   
-1.  On the Source Server, click **Start**, click **Administrative Tools**, and then click **Active Directory Users and Computers**.  
+1. On the Source Server, click **Start**, click **Administrative Tools**, and then click **Active Directory Users and Computers**.  
   
-2.  In the console tree, click to expand your domain, and then click **Users**.  
+2. In the console tree, click to expand your domain, and then click **Users**.  
   
-3.  Right-click the administrator account that you are using for the migration, and then click **Properties**.  
+3. Right-click the administrator account that you are using for the migration, and then click **Properties**.  
   
-4.  Click the **Member Of** tab, and then verify that Enterprise Admins, Schema Admins, and Domain Admins are listed in the **Member of** text box.  
+4. Click the **Member Of** tab, and then verify that Enterprise Admins, Schema Admins, and Domain Admins are listed in the **Member of** text box.  
   
-5.  If the groups are not listed, click **Add**, and then add each group that is not listed.  
+5. If the groups are not listed, click **Add**, and then add each group that is not listed.  
   
-    > [!NOTE]
-    >  -   You might receive a permission error if the Netlogon service is not started.  
-    > -   You must log off and log back on the server for the changes to take effect.  
+   > [!NOTE]
+   > - You might receive a permission error if the Netlogon service is not started.  
+   >   -   You must log off and log back on the server for the changes to take effect.  
   
-     You can use the latest version of the Windows Update Agent to ensure that the server update process works properly.  
+    You can use the latest version of the Windows Update Agent to ensure that the server update process works properly.  
   
- You can use the latest version of the Windows Update Agent to ensure that the server update process works properly.  
+   You can use the latest version of the Windows Update Agent to ensure that the server update process works properly.  
   
- Before you can install Windows Update Agent on the Source Server, you must first install Windows PowerShell 2.0 and Microsoft Baseline Configuration Analyzer 2.0.  
+   Before you can install Windows Update Agent on the Source Server, you must first install Windows PowerShell 2.0 and Microsoft Baseline Configuration Analyzer 2.0.  
   
 -   To download and install Windows PowerShell 2.0, see [article 968929](https://go.microsoft.com/fwlink/p/?LinkId=241483) in the Microsoft Knowledge Base.  
   
@@ -163,34 +163,34 @@ Complete the following preliminary steps to ensure that the settings and data on
   
 ##### To install and run the Migration Preparation Tool on the Source Server  
   
-1.  Insert  Windows Server Essentials DVD1 in the DVD drive on the Source Server.  
+1. Insert  Windows Server Essentials DVD1 in the DVD drive on the Source Server.  
   
-2.  Open Windows Explorer, browse to the **\support\tools** folder of the DVD, and then double-click the **sourcetool.msi** file.  
+2. Open Windows Explorer, browse to the **\support\tools** folder of the DVD, and then double-click the **sourcetool.msi** file.  
   
-    > [!NOTE]
-    >  -   If the Migration Preparation Tool is already installed on the server, run the tool from the **Start** menu.  
-    > -   To ensure that you are prepared for the best possible migration experience, it is recommended that you always choose to install the most recent update.  
+   > [!NOTE]
+   > - If the Migration Preparation Tool is already installed on the server, run the tool from the **Start** menu.  
+   >   -   To ensure that you are prepared for the best possible migration experience, it is recommended that you always choose to install the most recent update.  
   
-     The wizard installs the Migration Preparation Tool on the Source Server. When the installation is complete, the Migration Preparation Tool runs automatically and installs the latest updates.  
+    The wizard installs the Migration Preparation Tool on the Source Server. When the installation is complete, the Migration Preparation Tool runs automatically and installs the latest updates.  
   
-3.  In the Migration Preparation Tool, select **I have a backup and am ready to proceed**, and then click **Next**.  
+3. In the Migration Preparation Tool, select **I have a backup and am ready to proceed**, and then click **Next**.  
   
-    > [!WARNING]
-    >  If you receive an error message relating to a hotfix installation, see Method 2: Rename the Catroot2 Folder in [article 822798](https://go.microsoft.com/FWLink/p/?LinkID=118672) in the Microsoft Knowledge Base.  
+   > [!WARNING]
+   >  If you receive an error message relating to a hotfix installation, see Method 2: Rename the Catroot2 Folder in [article 822798](https://go.microsoft.com/FWLink/p/?LinkID=118672) in the Microsoft Knowledge Base.  
   
-     The Migration Preparation Tool prepares the source domain for migration by extending the Active Directory schema. After the task is completed, click **Next** to continue.  
+    The Migration Preparation Tool prepares the source domain for migration by extending the Active Directory schema. After the task is completed, click **Next** to continue.  
   
-4.  After preparing the source domain, the Migration Preparation Tool scans the Source Server to identify two types of potential issues.  
+4. After preparing the source domain, the Migration Preparation Tool scans the Source Server to identify two types of potential issues.  
   
-    -   **Errors** Issues found on the Source Server that can block the migration or cause the migration to fail. Follow the instructions in the error message to fix the issues, and then click **Scan Again**.  
+   - **Errors** Issues found on the Source Server that can block the migration or cause the migration to fail. Follow the instructions in the error message to fix the issues, and then click **Scan Again**.  
   
-    -   **Warnings** Issues found on the Source Server that can cause functional problems during migration. It is strongly recommended that you follow the instructions in the error message to fix issues before proceeding with the migration.  
+   - **Warnings** Issues found on the Source Server that can cause functional problems during migration. It is strongly recommended that you follow the instructions in the error message to fix issues before proceeding with the migration.  
   
      After you fix or acknowledge all of the issues, click **Next**.  
   
-5.  In the Migration Preparation Tool, click **Finish**.  
+5. In the Migration Preparation Tool, click **Finish**.  
   
-6.  When the Migration Preparation Tool finishes, you may be prompted to restart the Source Server before you can begin migrating to  Windows Server Essentials.  
+6. When the Migration Preparation Tool finishes, you may be prompted to restart the Source Server before you can begin migrating to  Windows Server Essentials.  
   
 > [!NOTE]
 >  You must complete a successful run of the Migration Preparation Tool on the Source Server within two weeks of installing  Windows Server Essentials on the Destination Server. Otherwise, installation of  Windows Server Essentials on the Destination Server will be blocked. If this occurs, you must run the Migration Preparation Tool on the Source Server again.  

@@ -79,7 +79,7 @@ diskcopy [<Drive1>: [<Drive2>:]] [/v]
 
 > [!NOTE]
 > You cannot use **xcopy** to copy a startup disk.
--   Understanding **diskcopy** exit codes
+> -   Understanding **diskcopy** exit codes
 
     The following table explains each exit code.  
     |Exit code|Description|

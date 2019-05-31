@@ -40,20 +40,20 @@ PS c:\>New-VHD -Path c:\base.vhds -SizeBytes 10GB
 
 Migrating an existing shared VHDX to a VHDS requires taking the VM offline. This is the recommended process using Windows PowerShell:
 
-1.	Remove the VHDX from the VM. For example, run: 
-  ``` PowerShell
-  PS c:\>Remove-VMHardDiskDrive existing.vhdx
-  ```
+1. Remove the VHDX from the VM. For example, run: 
+   ``` PowerShell
+   PS c:\>Remove-VMHardDiskDrive existing.vhdx
+   ```
   
-2.	Convert the VHDX to a VHDS. For example, run:
-  ``` PowerShell
-  PS c:\>Convert-VHD existing.vhdx new.vhds
-  ```
+2. Convert the VHDX to a VHDS. For example, run:
+   ``` PowerShell
+   PS c:\>Convert-VHD existing.vhdx new.vhds
+   ```
   
-3.	Add the VHDS to the VM. For example, run:
-  ``` PowerShell
-  PS c:\>Add-VMHardDiskDrive new.vhds
-  ```
+3. Add the VHDS to the VM. For example, run:
+   ``` PowerShell
+   PS c:\>Add-VMHardDiskDrive new.vhds
+   ```
   
 
 

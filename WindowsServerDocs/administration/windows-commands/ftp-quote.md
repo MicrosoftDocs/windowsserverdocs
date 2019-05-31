@@ -24,9 +24,11 @@ Sends verbatim arguments to the remote ftp server. A single ftp reply code is re
 quote <Argument>[ ]  
 ```  
 ### Parameters  
-|Parameter|Description|  
-|-------|--------|  
-|<Argument>|Specifies the argument to send to the ftp server.|  
+
+| Parameter  |                    Description                    |
+|------------|---------------------------------------------------|
+| <Argument> | Specifies the argument to send to the ftp server. |
+
 ## Remarks  
 The **quote** command is identical to the **literal** command.  
 ## <a name="BKMK_Examples"></a>Examples  

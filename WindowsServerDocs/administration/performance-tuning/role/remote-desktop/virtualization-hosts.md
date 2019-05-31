@@ -216,14 +216,14 @@ Each specific service should be evaluated appropriately prior to any broad deplo
 | Internet connection sharing                  | Consumer centric service                                                                                                                                                                                  |
 | Media Center extended services               | Consumer centric service                                                                                                                                                                                  |
 
- 
+ 
 
 **Note**  
 This list is not meant to be a complete list, because any changes will affect the intended goals and scenarios. For more info, see [Hot off the presses, get it now, the Windows 8 VDI optimization script, courtesy of PFE!](http://blogs.technet.com/b/jeff_stokes/archive/2013/04/09/hot-off-the-presses-get-it-now-the-windows-8-vdi-optimization-script-courtesy-of-pfe.aspx).
 
- 
+ 
 
 **Note**  
 SuperFetch in Windows 8 is enabled by default. It is VDI-aware and should not be disabled. SuperFetch can further reduce memory consumption through memory page sharing, which is beneficial for VDI. Pooled virtual desktops running Windows 7, SuperFetch should be disabled, but for personal virtual desktops running Windows 7, it should be left on.
 
- 
+ 

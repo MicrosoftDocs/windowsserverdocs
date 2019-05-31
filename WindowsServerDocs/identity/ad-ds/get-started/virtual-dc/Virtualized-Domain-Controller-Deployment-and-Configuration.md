@@ -640,11 +640,11 @@ For example:
   
 ![Virtualized DC Deployment](media/Virtualized-Domain-Controller-Deployment-and-Configuration/ADDS_VDC_PSGetVMSnap.png)  
   
-> [!WARNING]  
+> [!WARNING]
 > Ensure that, when importing the computer, static MAC addresses were not assigned to the source domain controller. If a source computer with a static MAC is cloned, those copied computers will not correctly send or receive any network traffic. Set a new unique static or dynamic MAC address if this is the case. You can see if a VM uses static MAC addresses with the command:  
->   
+> 
 > **Get-VM -VMName**   
->  ***test-vm* | Get-VMNetworkAdapter | fl \***  
+>  ***test-vm* | Get-VMNetworkAdapter | fl \\***  
   
 ### Step 9 - Clone the New Virtual Machine  
 Optionally, before you begin cloning, restart the offline clone source domain controller. Ensure that the PDC emulator is online, regardless.  

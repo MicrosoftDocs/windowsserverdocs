@@ -52,7 +52,7 @@ This topic describes how to delete everything on a dynamic disk and then convert
 7.  At the **DISKPART** prompt, type `select disk <disknumber>`, specifying the disk number of the disk that you want to convert to a basic disk.
 
 8.  At the **DISKPART** prompt, type `convert basic`.
- 
+ 
 <br /> <br />
 
 | Value  | Description |

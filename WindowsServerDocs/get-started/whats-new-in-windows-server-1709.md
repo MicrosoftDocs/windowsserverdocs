@@ -122,20 +122,20 @@ An issue, known as “SMBLoris”, which could result in denial of service, has 
 - **Receive Window Autotuning**: TCP autotuning logic computes the “receive window” parameter of a TCP connection.  High speed and/or long delay connections need this algorithm to achieve good performance characteristics.  In this release, the algorithm is modified to use a step function to converge on the maximum receive window value for a given connection.
 - **TCP stats API**: A new API is introduced called SIO_TCP_INFO.  SIO_TCP_INFO allows developers to query rich information on individual TCP connections using a socket option.
 - **IPv6**: There are multiple improvements in IPv6 in this release.
-    - **RFC 6106** support: RFC 6106 which allows for DNS configuration through router advertisements (RAs). You can use the following command to enable or disable RFC 6106 support:
+  - **RFC 6106** support: RFC 6106 which allows for DNS configuration through router advertisements (RAs). You can use the following command to enable or disable RFC 6106 support:
 
     ```
     netsh int ipv6 set interface <ifindex> rabaseddnsconfig=<enabled | disabled>
     ```
 
-    - **Flow Labels**: Beginning with the Creators Update, outbound TCP and UDP packets over IPv6 have this field set to a hash of the 5-tuple (Src IP, Dst IP, Src Port, Dst Port).  This will make IPv6 only datacenters doing load balancing or flow classification more efficient. To enable flowlabels:
+  - **Flow Labels**: Beginning with the Creators Update, outbound TCP and UDP packets over IPv6 have this field set to a hash of the 5-tuple (Src IP, Dst IP, Src Port, Dst Port).  This will make IPv6 only datacenters doing load balancing or flow classification more efficient. To enable flowlabels:
 
     ```
     netsh int ipv6 set flowlabel=[disabled|enabled] (enabled by default)
     netsh int ipv6 set global flowlabel=<enabled | disabled>
     ```
 
-    - **ISATAP and 6to4**: As a step towards future deprecation, the Creators Update will have these technologies disabled by default.
+  - **ISATAP and 6to4**: As a step towards future deprecation, the Creators Update will have these technologies disabled by default.
 - **Dead Gateway Detection (DGD)**: The DGD algorithm automatically transitions connections over to another gateway when the current gateway is unreachable. In this release, the algorithm is improved to periodically re-probe the network environment.
 - [Test-NetConnection](https://technet.microsoft.com/itpro/powershell/windows/nettcpip/test-netconnection) is a built-in cmdlet in Windows PowerShell that performs a variety of network diagnostics.  In this release we have enhanced the cmdlet to provide detailed information about both route selection as well as source address selection.
 

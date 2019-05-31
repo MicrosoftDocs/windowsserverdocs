@@ -121,9 +121,9 @@ If you're not sure which implementation you've used for existing cmdlets you wan
 * %UserProfile%\Documents\WindowsPowerShell\Modules   
 * \<your product installation location>   
     
- Check in these locations for these details:  
- * CIM cmdlets have .cdxml file extensions.  
- * .NET cmdlets have .dll file extensions, or have assemblies installed to the GAC listed in the .psd1 file under the RootModule, ModuleToProcess, or NestedModules fields.  
+  Check in these locations for these details:  
+  * CIM cmdlets have .cdxml file extensions.  
+  * .NET cmdlets have .dll file extensions, or have assemblies installed to the GAC listed in the .psd1 file under the RootModule, ModuleToProcess, or NestedModules fields.  
 * PowerShell script cmdlets have .psm1 or .ps1 file extensions.   
   
 ## Porting CIM cmdlets  
