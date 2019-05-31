@@ -22,6 +22,7 @@
 ### [Windows Admin Center settings](configure/settings.md)
 ### [User access control and permissions](configure/user-access-control.md)
 ### [Using extensions](configure/using-extensions.md)
+### [Shared connections](configure/shared-connections.md)
 
 ## Use
 ### [Get started](use/get-started.md)

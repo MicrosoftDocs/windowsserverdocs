@@ -41,7 +41,7 @@ Secedit /analyze /db <database file name> [/cfg <configuration file name>] [/ove
 
 The analysis results are stored in a separate area of the database and can be viewed in the Security Configuration and Analysis snap-in to the MMC.
 
-If the path for the log file is not provided, the default log file, (*systemroot*\Documents and Settings\*UserAccount*\My Documents\Security\Logs\*DatabaseName*.log) is used.
+If the path for the log file is not provided, the default log file, (*systemroot*\Documents and Settings\*UserAccount<em>\My Documents\Security\Logs\*DatabaseName</em>.log) is used.
 
 In Windows Server 2008, `Secedit /refreshpolicy` has been replaced with `gpupdate`. For information on how to refresh security settings, see [Gpupdate](gpupdate.md).
 

@@ -123,7 +123,7 @@ Here's how to create a file share on Windows Server:
 8. Select **Disable inheritance**, and then select **Convert inherited permissions into explicit permission on this object**.
 9. Set the permissions as described in [Required permissions for the file share hosting roaming user profiles](#required-permissions-for-the-file-share-hosting-roaming-user-profiles) and shown in the following screen shot, removing permissions for unlisted groups and accounts, and adding special permissions to the Roaming User Profiles Users and Computers group that you created in Step 1.
     
-    ![Advanced Security Settings window showing permissions as described in Table 1](media\advanced-security-user-profiles.jpg)
+    ![Advanced Security Settings window showing permissions as described in Table 1](media/advanced-security-user-profiles.jpg)
     
     **Figure 1** Setting the permissions for the roaming user profiles share
 10. If you chose the **SMB Share - Advanced** profile, on the **Management Properties** page, select the **User Files** Folder Usage value.
@@ -312,20 +312,20 @@ The following table lists the location of Roaming User Profiles on various versi
 
 Here are some ways to work around Start menu layouts getting reset after an in-place upgrade:
 
- - If only one user ever uses the device and the IT Admin uses a managed OS deployment strategy such as SCCM they can do the following:
+- If only one user ever uses the device and the IT Admin uses a managed OS deployment strategy such as SCCM they can do the following:
     
-    1. Export the Start menu layout with Export-Startlayout before the upgrade 
-    2. Import the Start menu layout with Import-StartLayout after OOBE but before the user signs in  
+  1. Export the Start menu layout with Export-Startlayout before the upgrade 
+  2. Import the Start menu layout with Import-StartLayout after OOBE but before the user signs in  
  
-    > [!NOTE] 
-    > Importing a StartLayout modifies the Default User profile. All user profiles created after the import has occurred will get the imported Start-Layout.
+     > [!NOTE] 
+     > Importing a StartLayout modifies the Default User profile. All user profiles created after the import has occurred will get the imported Start-Layout.
  
- - IT Admins can opt to manage Start’s Layout with Group Policy. Using Group Policy provides a centralized management solution to apply a standardized Start Layout to users. There are 2 modes to modes to using Group Policy for Start management. Full Lockdown and Partial Lockdown. The full lockdown scenario prevents the user from making any changes to Start’s layout. The partial lockdown scenario allows user to make changes to a specific area of Start. For more info, see [Customize and export Start layout](https://docs.microsoft.com/windows/configuration/customize-and-export-start-layout).
+- IT Admins can opt to manage Start’s Layout with Group Policy. Using Group Policy provides a centralized management solution to apply a standardized Start Layout to users. There are 2 modes to modes to using Group Policy for Start management. Full Lockdown and Partial Lockdown. The full lockdown scenario prevents the user from making any changes to Start’s layout. The partial lockdown scenario allows user to make changes to a specific area of Start. For more info, see [Customize and export Start layout](https://docs.microsoft.com/windows/configuration/customize-and-export-start-layout).
         
-    > [!NOTE]
-    > User made changes in the partial lockdown scenario will still be lost during upgrade.
+   > [!NOTE]
+   > User made changes in the partial lockdown scenario will still be lost during upgrade.
 
- -	Let the Start layout reset occur and allow end users to reconfigure Start. A notification email or other notification can be sent to end users to expect their Start layouts to be reset after the OS upgrade to minimized impact. 
+- Let the Start layout reset occur and allow end users to reconfigure Start. A notification email or other notification can be sent to end users to expect their Start layouts to be reset after the OS upgrade to minimized impact. 
 
 # Change history
 

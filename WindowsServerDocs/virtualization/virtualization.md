@@ -36,7 +36,7 @@ Virtualization in Windows Server is one of the foundational technologies require
                     <div class="cardText">
                         <h3>Guarded Fabric and Shielded VMs</h3>
 <HR />
-                        <p>As a cloud service provider or enterprise private cloud administrator, you can use a guarded fabric to provide a more secure environment for VMs. A guarded fabric consists of one Host Guardian Service \(HGS\) - typically, a cluster of three nodes - plus one or more guarded hosts, and a set of shielded VMs.</p>
+                        <p>As a cloud service provider or enterprise private cloud administrator, you can use a guarded fabric to provide a more secure environment for VMs. A guarded fabric consists of one Host Guardian Service (HGS) - typically, a cluster of three nodes - plus one or more guarded hosts, and a set of shielded VMs.</p>
                      </div>
                   </div>
               </div>

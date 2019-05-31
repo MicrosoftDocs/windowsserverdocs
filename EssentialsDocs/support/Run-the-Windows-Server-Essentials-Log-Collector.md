@@ -23,20 +23,20 @@ You can run the  Windows Server Essentials Log Collector from the server or a co
   
 #### To run the Log Collector on the server by using the wizard  
   
-1.  On the **Start** page of the server, click **Windows Server Essentials Log Collector**.  
+1. On the **Start** page of the server, click **Windows Server Essentials Log Collector**.  
   
-    > [!NOTE]
-    >  -   If the Log Collector program does not appear on the **Start** page, browse to **%system%\Program Files (x86)\Windows Server Essentials Log Collector**, and then double-click **LogCollector**.  
-    > -   If you are not logged on to the server with administrative privileges, the Log Collector prompts you to enter your credentials.  
+   > [!NOTE]
+   > - If the Log Collector program does not appear on the **Start** page, browse to **%system%\Program Files (x86)\Windows Server Essentials Log Collector**, and then double-click **LogCollector**.  
+   >   -   If you are not logged on to the server with administrative privileges, the Log Collector prompts you to enter your credentials.  
   
-2.  When you are prompted for a location to save the collected log files, you can choose the default location, **\\\\<ServerName\>\logs**, or specify another location. To accept the default location, click **Next**. To change the location, click **Browse**, navigate to the folder where you want to save the log files, and then click **Save**.  
+2. When you are prompted for a location to save the collected log files, you can choose the default location, **\\\\<ServerName\>\logs**, or specify another location. To accept the default location, click **Next**. To change the location, click **Browse**, navigate to the folder where you want to save the log files, and then click **Save**.  
   
-    > [!NOTE]
-    >  You do not need to supply file names for the log files. The Log Collector names the zip file collection by concatenating the computer name and the time stamp of the file.  
+   > [!NOTE]
+   >  You do not need to supply file names for the log files. The Log Collector names the zip file collection by concatenating the computer name and the time stamp of the file.  
   
-3.  A progress bar is displayed while the logs are being collected.  
+3. A progress bar is displayed while the logs are being collected.  
   
-4.  To view the contents of the log collection file, select the **Open the file location where the logs were saved** check box, and click **Close** to close the wizard and open the log collection file.  
+4. To view the contents of the log collection file, select the **Open the file location where the logs were saved** check box, and click **Close** to close the wizard and open the log collection file.  
   
 #### To run the Log Collector on a network computer by using the wizard  
   

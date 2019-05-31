@@ -23,7 +23,7 @@ Use the links below to view technical content for IT professionals for the diffe
 
 > [!IMPORTANT]
 > Do you have Windows running on your PC? Windows 10, Windows 8 or 8.1? Windows 7? Do you have a problem? Go to [Microsoft Support](https://support.microsoft.com) - just type your problem into the search bar. They have information about Windows, Office, Skype, you name it. 
-
+> 
 > The information below is *only* about Windows **Server**.
 
 ## Windows Server 2016

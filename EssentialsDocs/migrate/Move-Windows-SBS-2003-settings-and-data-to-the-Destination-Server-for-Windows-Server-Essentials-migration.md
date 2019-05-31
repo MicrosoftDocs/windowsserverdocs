@@ -161,13 +161,13 @@ Move settings and data to the Destination Server as follows:
   
 #### To configure the network  
   
-1.  On the Destination Server, open the Dashboard.  
+1. On the Destination Server, open the Dashboard.  
   
-2.  On the Dashboard **Home** page, click **SETUP**, click **Set up Anywhere Access**, and then choose the **Click to configure Anywhere Access** option.  
+2. On the Dashboard **Home** page, click **SETUP**, click **Set up Anywhere Access**, and then choose the **Click to configure Anywhere Access** option.  
   
-3.  Follow the instructions in the **Set up Anywhere Access** wizard to configure your router and domain name.  
+3. Follow the instructions in the **Set up Anywhere Access** wizard to configure your router and domain name.  
   
- If your router does not support the UPnP framework, or if the UPnP framework is disabled, a yellow warning icon may appear next to the router name. Ensure that the following ports are open and that they are directed to the IP address of the Destination Server:  
+   If your router does not support the UPnP framework, or if the UPnP framework is disabled, a yellow warning icon may appear next to the router name. Ensure that the following ports are open and that they are directed to the IP address of the Destination Server:  
   
 -   Port 80: HTTP Web traffic  
   

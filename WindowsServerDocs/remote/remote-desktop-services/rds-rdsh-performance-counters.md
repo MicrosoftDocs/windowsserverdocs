@@ -19,11 +19,11 @@ The User Input Delay counter can help you quickly identify the root cause for ba
 
 The following image shows a rough representation of user input flow from client to application.
 
-![Remote Desktop - User input flows from the users Remote Desktop client to the application](.\media\rds-user-input.png)
+![Remote Desktop - User input flows from the users Remote Desktop client to the application](./media/rds-user-input.png)
 
 The User Input Delay counter measures the max delta (within an interval of time) between the input being queued and when it’s picked up by the app in a [traditional message loop](https://msdn.microsoft.com/library/windows/desktop/ms644927.aspx#loop), as shown in the following flow chart:
 
-![Remote Desktop - User input Delay performance counter flow](.\media\rds-user-input-delay.png)
+![Remote Desktop - User input Delay performance counter flow](./media/rds-user-input-delay.png)
 
 One important detail of this counter is that it reports the maximum user input delay within a configurable interval. This is the longest time it takes for an input to reach the application, which can impact the speed of important and visible actions like typing.
 
@@ -46,13 +46,13 @@ reg add "HKLM\System\CurrentControlSet\Control\Terminal Server" /v "EnableLagCou
 
 Next, restart the server. Then, open the Performance Monitor, and select the plus sign (+), as shown in the following screen shot.
 
-![Remote Desktop - A screenshot showing how to add the User input Delay performance counter](.\media\rds-add-user-input-counter-screen.png)
+![Remote Desktop - A screenshot showing how to add the User input Delay performance counter](./media/rds-add-user-input-counter-screen.png)
 
 After doing that, you should see the Add Counters dialog, where you can select **User Input Delay per Process** or **User Input Delay per Session**.
 
-![Remote Desktop - A screenshot showing how to add the User input Delay per session](.\media\rds-user-delay-per-session.png)
+![Remote Desktop - A screenshot showing how to add the User input Delay per session](./media/rds-user-delay-per-session.png)
 
-![Remote Desktop - A screenshot showing how to add the User input Delay per process](.\media\rds-user-delay-per-process.png)
+![Remote Desktop - A screenshot showing how to add the User input Delay per process](./media/rds-user-delay-per-process.png)
 
 If you select **User Input Delay per Process**, you'll see the **Instances of the selected object** (in other words, the processes) in ```SessionID:ProcessID <Process Image>``` format.
 
@@ -63,7 +63,7 @@ For example, if the Calculator app is running in a [Session ID 1](https://msdn.m
 
 The counter starts reporting user input delay as soon as you add it. Note that the maximum scale is set to 100 (ms) by default. 
 
-![Remote Desktop - An example of activity for the User Input Delay per process in the Performance Monitor](.\media\rds-sample-user-input-delay-perfmon.png)
+![Remote Desktop - An example of activity for the User Input Delay per process in the Performance Monitor](./media/rds-sample-user-input-delay-perfmon.png)
 
 Next, let’s look at the **User Input Delay per Session**. There are instances for each session ID, and their counters show the user input delay of any process within the specified session. In addition, there are two instances called "Max" (the maximum user input delay across all sessions) and "Average" (the average acorss all sessions).
 
@@ -83,7 +83,7 @@ This table shows a visual example of these instances. (You can get the same info
 
 Now let's look at what you'll see in the report if performance for an app is degraded. The following graph shows readings for users working remotely in Microsoft Word. In this case, the RDSH server performance degrades over time as more users log in.
 
-![Remote Desktop - An example performance graph for the RDSH server running Microsoft Word](.\media\rds-user-input-perf-graph.png)
+![Remote Desktop - An example performance graph for the RDSH server running Microsoft Word](./media/rds-user-input-perf-graph.png)
 
 Here's how to read the graph's lines:
 
@@ -98,7 +98,7 @@ You’ll notice that there's a correlation between CPU spikes and user input del
 
 An important thing to remember when using this performance counter is that it reports user input delay on an interval of 1,000 ms by default. If you set the performance counter sample interval property (as shown in the following screenshot) to anything different, the reported value will be incorrect.
 
-![Remote Desktop - The properties for your performance monitor](.\media\rds-user-input-perfmon-properties.png)
+![Remote Desktop - The properties for your performance monitor](./media/rds-user-input-perfmon-properties.png)
 
 To fix this, you can set the following registry key to match the interval (in milliseconds) that you want to use. For example, if we change Sample every x seconds to 5 seconds, we need to set this key to 5000 ms.
 
@@ -119,7 +119,7 @@ We’ve also added a couple of keys you might find helpful under the same regist
 
 This is what it looks like if you turn both keys on:
 
-![Remote Desktop - The performance monitor with both keys on](.\media\rds-user-input-delay-with-two-counters.png)
+![Remote Desktop - The performance monitor with both keys on](./media/rds-user-input-delay-with-two-counters.png)
 
 ## Using the new counters with non-Microsoft tools
 

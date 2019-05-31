@@ -25,7 +25,7 @@ Volumes are the datastores where you put the files your workloads need, such as 
 
 ![what-are-volumes](media/plan-volumes/what-are-volumes.png)
 
-All volumes are accessible by all servers in the cluster at the same time. Once created, they show up at **C:\ClusterStorage\** on all servers.
+All volumes are accessible by all servers in the cluster at the same time. Once created, they show up at **C:\ClusterStorage\\** on all servers.
 
 ![csv-folder-screenshot](media/plan-volumes/csv-folder-screenshot.png)
 

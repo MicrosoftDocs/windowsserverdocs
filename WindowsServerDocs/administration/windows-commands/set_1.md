@@ -46,59 +46,60 @@ set /a <Variable>=<Expression>
 
 ## Remarks
 
--   Using **set** with command extensions enabled
+- Using **set** with command extensions enabled
 
-    When command extensions are enabled (the default) and you run **set** with a value, it displays all of the variables that begin with that value.
--   Using special characters
+  When command extensions are enabled (the default) and you run **set** with a value, it displays all of the variables that begin with that value.
+- Using special characters
 
-    The characters **<**, **>**, **|**, **&**, **^** are special command shell characters, and they must be preceded by the escape character (**^**) or enclosed in quotation marks when used in *String* (for example, **"StringContaining&Symbol"**). If you use quotation marks to enclose a string that contains one of the special characters, the quotation marks are set as part of the environment variable value.
--   Using environment variables
+  The characters **<**, **>**, **|**, **&**, **^** are special command shell characters, and they must be preceded by the escape character (**^**) or enclosed in quotation marks when used in *String* (for example, **"StringContaining&Symbol"**). If you use quotation marks to enclose a string that contains one of the special characters, the quotation marks are set as part of the environment variable value.
+- Using environment variables
 
-    Use environment variables to control the behavior of some batch files and programs and to control the way Windows and the MS-DOS subsystem appears and works. The **set** command is often used in the Autoexec.nt file to set environment variables.
--   Displaying the current environment settings
+  Use environment variables to control the behavior of some batch files and programs and to control the way Windows and the MS-DOS subsystem appears and works. The **set** command is often used in the Autoexec.nt file to set environment variables.
+- Displaying the current environment settings
 
-    When you type the **set** command alone, the current environment settings are displayed. These settings usually include the COMSPEC and PATH environment variables, which are used to help find programs on disk. Two other environment variables used by Windows are PROMPT and DIRCMD.
--   Using parameters
+  When you type the **set** command alone, the current environment settings are displayed. These settings usually include the COMSPEC and PATH environment variables, which are used to help find programs on disk. Two other environment variables used by Windows are PROMPT and DIRCMD.
+- Using parameters
 
-    When you specify values for *Variable* and *String*, the specified *variable* value is added to the environment and *String* is associated with that variable. If the variable already exists in the environment, the new string value replaces the old string value.
+  When you specify values for *Variable* and *String*, the specified *variable* value is added to the environment and *String* is associated with that variable. If the variable already exists in the environment, the new string value replaces the old string value.
 
-    If you specify only a variable and an equal sign (without *String*) for the **set** command, the *String* value associated with the variable is cleared (as if the variable is not there).
--   Using **/a**
+  If you specify only a variable and an equal sign (without *String*) for the **set** command, the *String* value associated with the variable is cleared (as if the variable is not there).
+- Using **/a**
 
-    The following table lists the operators supported for **/a** in descending order of precedence.  
-    |Operator|Operation performed|
-    |--------|-------------------|
-    |( )|Grouping|
-    |! ~ -|Unary|
-    |* / %|Arithmetic|
-    |+ -|Arithmetic|
-    |<< >>|Logical shift|
-    |&|Bitwise AND|
-    |^|Bitwise exclusive OR|
-    |||Bitwise OR|
-    |= *= /= %= += -= &= ^= |= <<= >>=|Assignment|
-    |,|Expression separator|
+  The following table lists the operators supported for **/a** in descending order of precedence.  
 
-    If you use logical (**&&** or **||**) or modulus (**%**) operators, enclose the expression string in quotation marks. Any non-numeric strings in the expression are considered environment variable names, and their values are converted to numbers before they are processed. If you specify an environment variable name that is not defined in the current environment, a value of zero is allotted, which allows you to perform arithmetic with environment variable values without using the % to retrieve a value.
+  |        Operator         | Operation performed  |
+  |-------------------------|----------------------|
+  |           ( )           |       Grouping       |
+  |          ! ~ -          |        Unary         |
+  |         \* / %          |      Arithmetic      |
+  |           + -           |      Arithmetic      |
+  |          << >>          |    Logical shift     |
+  |            &            |     Bitwise AND      |
+  |            ^            | Bitwise exclusive OR |
+  |                         |                      |
+  | = \*= /= %= += -= &= ^= |      = <<= >>=       |
+  |            ,            | Expression separator |
 
-    If you run **set /a** from the command line outside of a command script, it displays the final value of the expression.
+  If you use logical (**&&** or **||**) or modulus (**%**) operators, enclose the expression string in quotation marks. Any non-numeric strings in the expression are considered environment variable names, and their values are converted to numbers before they are processed. If you specify an environment variable name that is not defined in the current environment, a value of zero is allotted, which allows you to perform arithmetic with environment variable values without using the % to retrieve a value.
 
-    Numeric values are decimal numbers unless prefixed by 0× for hexadecimal numbers or 0 for octal numbers. Therefore, 0×12 is the same as 18, which is the same as 022.
--   Supporting delayed environment variable expansion
+  If you run **set /a** from the command line outside of a command script, it displays the final value of the expression.
 
-    Delayed environment variable expansion support is disabled by default, but you can enable or disable it by using **cmd /v**.
--   Working with command extensions
+  Numeric values are decimal numbers unless prefixed by 0× for hexadecimal numbers or 0 for octal numbers. Therefore, 0×12 is the same as 18, which is the same as 022.
+- Supporting delayed environment variable expansion
 
-    When command extensions are enabled (the default) and you run **set** alone, it displays all current environment variables. If you run **set** with a value, it displays the variables that match that value.
--   Using **set** in batch files
+  Delayed environment variable expansion support is disabled by default, but you can enable or disable it by using **cmd /v**.
+- Working with command extensions
 
-    When creating batch files, you can use **set** to create variables, and then use them in the same way that you would use the numbered variables **%0** through **%9**. You can also use the variables **%0** through **%9** as input for **set**.
--   Calling a **set** variable from a batch file
+  When command extensions are enabled (the default) and you run **set** alone, it displays all current environment variables. If you run **set** with a value, it displays the variables that match that value.
+- Using **set** in batch files
 
-    When you call a variable value from a batch file, enclose the value with percent signs (**%**). For example, if your batch program creates an environment variable named BAUD, you can use the string associated with BAUD as a replaceable parameter by typing **%baud%** at the command prompt.
--   Using **set** at the Recovery Console
+  When creating batch files, you can use **set** to create variables, and then use them in the same way that you would use the numbered variables **%0** through **%9**. You can also use the variables **%0** through **%9** as input for **set**.
+- Calling a **set** variable from a batch file
 
-    The **set** command, with different parameters, is available from the Recovery Console.
+  When you call a variable value from a batch file, enclose the value with percent signs (**%**). For example, if your batch program creates an environment variable named BAUD, you can use the string associated with BAUD as a replaceable parameter by typing **%baud%** at the command prompt.
+- Using **set** at the Recovery Console
+
+  The **set** command, with different parameters, is available from the Recovery Console.
 
 ## <a name="BKMK_examples"></a>Examples
 
@@ -109,26 +110,26 @@ set testVar=test^^1
 
 > [!NOTE]
 > The **set** command assigns everything that follows the equal sign (=) to the value of the variable. If you type:
-```
-set testVar="test^1"
-```
-You get the following result:
-```
-testVar="test^1"
-```
-To set an environment variable named TEST&1, type:
-```
-set testVar=test^&1
-```
-To set an environment variable named INCLUDE so that the string C:\Inc (the \Inc directory on drive C) is associated with it, type:
-```
-set include=c:\inc
-```
-You can then use the string C:\Inc in batch files by enclosing the name INCLUDE with percent signs (**%**). For example, you might include the following command in a batch file so that you can display the contents of the directory that is associated with the INCLUDE environment variable:
-```
-dir %include%
-```
-When this command is processed, the string C:\Inc replaces **%include%**.
+> ```
+> set testVar="test^1"
+> ```
+> You get the following result:
+> ```
+> testVar="test^1"
+> ```
+> To set an environment variable named TEST&1, type:
+> ```
+> set testVar=test^&1
+> ```
+> To set an environment variable named INCLUDE so that the string C:\Inc (the \Inc directory on drive C) is associated with it, type:
+> ```
+> set include=c:\inc
+> ```
+> You can then use the string C:\Inc in batch files by enclosing the name INCLUDE with percent signs (**%**). For example, you might include the following command in a batch file so that you can display the contents of the directory that is associated with the INCLUDE environment variable:
+> ```
+> dir %include%
+> ```
+> When this command is processed, the string C:\Inc replaces **%include%**.
 
 You can also use **set** in a batch program that adds a new directory to the PATH environment variable. For example:
 ```

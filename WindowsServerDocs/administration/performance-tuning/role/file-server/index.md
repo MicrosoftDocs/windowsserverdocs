@@ -91,7 +91,7 @@ The following REG\_DWORD registry settings can affect the performance of client 
     > [!Note]  
     > This parameter controls caching of directory metadata in the absence of directory leases.
 
-     
+     
 
 -   **DirectoryCacheEntrySizeMax**
 
@@ -217,7 +217,7 @@ The general tuning parameters for client computers can optimize a computer for a
 | FileNotFoundCacheEntriesMax | 32768 | 128     |
 | MaxCmds                     | 32768 | 15      |
 
- 
+ 
 
 Starting in Windows 8, you can configure many of these SMB settings by using the **Set-SmbClientConfiguration** and **Set-SmbServerConfiguration** Windows PowerShell cmdlets. Registry-only settings can be configured by using Windows PowerShell as well.
 

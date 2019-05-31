@@ -189,13 +189,13 @@ This topic lists new and updated topics in the [Storage](storage.md) documentati
 
 ## May 2017
 
-|New or changed topic|Description|
-|---|---|
-|[Data Deduplication overview](data-deduplication/overview.md) and <br>[Install Data Deduplication](data-deduplication/install-enable.md)|Updated the system requirements to include a newer software update. |
-|[Deploying Work Folders](work-folders/deploy-work-folders.md)|Added info about Azure AD Application Proxy support & updated required steps.|
-|[Deploying Storage Spaces Direct](storage-spaces/deploy-storage-spaces-direct.md)|Added step 1.3 with required features and fixed an obsolete parameter in Enable-NetAdapterQos.||[Storage Replica overview](storage-replica/storage-replica-overview.md) (and other Storage Replica topics)|Added recommendation to use fast, exclusive storage for Storage Replica logs.|
-|[Storage Replica frequently asked questions](storage-replica/storage-replica-frequently-asked-questions.md)|Added info on how to choose between different replication topologies.|
-|[Storage Spaces Direct hardware requirements](storage-spaces/storage-spaces-direct-hardware-requirements.md)|Changed drive endurance requirements for cache devices.|
+|                                                           New or changed topic                                                           |                                          Description                                           |
+|------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------|
+| [Data Deduplication overview](data-deduplication/overview.md) and <br>[Install Data Deduplication](data-deduplication/install-enable.md) |              Updated the system requirements to include a newer software update.               |
+|                                      [Deploying Work Folders](work-folders/deploy-work-folders.md)                                       |         Added info about Azure AD Application Proxy support & updated required steps.          |
+|                            [Deploying Storage Spaces Direct](storage-spaces/deploy-storage-spaces-direct.md)                             | Added step 1.3 with required features and fixed an obsolete parameter in Enable-NetAdapterQos. |
+|               [Storage Replica frequently asked questions](storage-replica/storage-replica-frequently-asked-questions.md)                |             Added info on how to choose between different replication topologies.              |
+|               [Storage Spaces Direct hardware requirements](storage-spaces/storage-spaces-direct-hardware-requirements.md)               |                    Changed drive endurance requirements for cache devices.                     |
 
 ## April 2017
 

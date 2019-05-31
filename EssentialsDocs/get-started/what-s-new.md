@@ -14,13 +14,13 @@ ms.author: coreyp
 manager: dongill
 ---
 
-#What's New in Windows Server 2016 Essentials
+# What's New in Windows Server 2016 Essentials
 
 > Applies To: Windows Server 2016 Essentials
 
 Following are new and enhanced features in Windows Server 2016 Essentials.
 
-##[Integration with Azure Site Recovery Services](azure-site-recovery-services-integration.md)
+## [Integration with Azure Site Recovery Services](azure-site-recovery-services-integration.md)
 
 **What it does** -- When a virtual machine that is protected  fails, or the host server that the protected virtual machine runs on fails, failing-over with Azure Site Recovery Services  maintains business continuity until the on premises virtual machine or host server is repaired and available. 
 
@@ -35,7 +35,7 @@ Following are new and enhanced features in Windows Server 2016 Essentials.
 
 
 
-##[Support for Larger Deployments](support-for-larger-deployments.md) 
+## [Support for Larger Deployments](support-for-larger-deployments.md) 
 
 Some larger small businesses need more functionality and capacity to implement Windows Server Essentials effectively. Windows Server 2016 Essentials provides increased manageability of domains, users and devices by adding support for larger deployments with:                                                                                                                                                                                                 
 

@@ -30,6 +30,7 @@ tskill {<ProcessID> | <ProcessName>} [/server:<ServerName>] [/id:<SessionID> | /
 ```
 
 ## Parameters
+
 |Parameter|Description|
 |-------|--------|
 |\<ProcessID>|Specifies the ID of the process that you want to end.|
@@ -41,19 +42,19 @@ tskill {<ProcessID> | <ProcessName>} [/server:<ServerName>] [/id:<SessionID> | /
 |/?|Displays help at the command prompt.|
 
 ## Remarks
--   You can use **tskill** to end only those processes that belong to you, unless you are an administrator. Administrators have full access to all **tskill** functions and can end processes that are running in other user sessions.
--   When all processes that are running in a session end, the session also ends.
--   if you use the *ProcessName* and the **/server:***ServerName* parameters, you must also specify either the **/id:***SessionID* or the **/a** parameter.
+- You can use **tskill** to end only those processes that belong to you, unless you are an administrator. Administrators have full access to all **tskill** functions and can end processes that are running in other user sessions.
+- When all processes that are running in a session end, the session also ends.
+- if you use the *ProcessName* and the **/server:**<em>ServerName</em> parameters, you must also specify either the **/id:**<em>SessionID</em> or the **/a** parameter.
 
 ## <a name="BKMK_examples"></a>Examples
--   To end process 6543, type:
-    ```
-    tskill 6543
-    ```
--   To end the process "explorer" running on session 5, type:
-    ```
-    tskill explorer /id:5
-    ```
-#### Additional references
-[Command-Line Syntax Key](command-line-syntax-key.md)
-[Remote Desktop Services &#40;Terminal Services&#41; Command Reference](remote-desktop-services-terminal-services-command-reference.md)
+- To end process 6543, type:
+  ```
+  tskill 6543
+  ```
+- To end the process "explorer" running on session 5, type:
+  ```
+  tskill explorer /id:5
+  ```
+  #### Additional references
+  [Command-Line Syntax Key](command-line-syntax-key.md)
+  [Remote Desktop Services &#40;Terminal Services&#41; Command Reference](remote-desktop-services-terminal-services-command-reference.md)

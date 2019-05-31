@@ -53,40 +53,40 @@ dir [<Drive>:][<Path>][<FileName>] [...] [/p] [/q] [/w] [/d] [/a[[:]<Attributes>
 
 ## Remarks
 
--   To use multiple *FileName* parameters, separate each file name with a space, comma, or semicolon.
--   You can use wildcard characters (**&#42;** or**?**), to represent one or more characters of a file name and to display a subset of files or subdirectories.
+- To use multiple *FileName* parameters, separate each file name with a space, comma, or semicolon.
+- You can use wildcard characters (**&#42;** or<strong>?</strong>), to represent one or more characters of a file name and to display a subset of files or subdirectories.
 
-    **Asterisk (\*):** Use the asterisk as a substitute for any string of characters, for example:  
-    -   **dir \*.txt** lists all files in the current directory with extensions that begin with .txt, such as .txt, .txt1, .txt_old.
-    -   **dir read\*.txt** lists all files in the current directory that begin with "read" and with extensions that begin with .txt, such as .txt, .txt1, or .txt_old.
-    -   **dir read\*.\*** lists all files in the current directory that begin with "read" with any extension.
+  **Asterisk (\*):** Use the asterisk as a substitute for any string of characters, for example:  
+  - **dir \*.txt** lists all files in the current directory with extensions that begin with .txt, such as .txt, .txt1, .txt_old.
+  - **dir read\*.txt** lists all files in the current directory that begin with "read" and with extensions that begin with .txt, such as .txt, .txt1, or .txt_old.
+  - **dir read\*.\\*** lists all files in the current directory that begin with "read" with any extension.
 
-    The asterisk wildcard always uses short file name mapping, so you might get unexpected results. For example, the following directory contains two files (t.txt2 and t97.txt):  
-    ```
-    C:\test>dir /x
-    Volume in drive C has no label.
-    Volume Serial Number is B86A-EF32
+  The asterisk wildcard always uses short file name mapping, so you might get unexpected results. For example, the following directory contains two files (t.txt2 and t97.txt):  
+  ```
+  C:\test>dir /x
+  Volume in drive C has no label.
+  Volume Serial Number is B86A-EF32
     
-    Directory of C:\test
+  Directory of C:\test
     
-    11/30/2004  01:40 PM <DIR>  .
-    11/30/2004  01:40 PM <DIR> ..
-    11/30/2004  11:05 AM 0 T97B4~1.TXT t.txt2
-    11/30/2004  01:16 PM 0 t97.txt
-    ```  
-    You might expect that typing **dir t97\*** would return the file t97.txt. However, typing **dir t97\*** returns both files, because the asterisk wildcard matches the file t.txt2 to t97.txt by using its short name map T97B4~1.TXT. Similarly, typing **del t97\*** would delete both files.
+  11/30/2004  01:40 PM <DIR>  .
+  11/30/2004  01:40 PM <DIR> ..
+  11/30/2004  11:05 AM 0 T97B4~1.TXT t.txt2
+  11/30/2004  01:16 PM 0 t97.txt
+  ```  
+  You might expect that typing **dir t97\\*** would return the file t97.txt. However, typing **dir t97\\*** returns both files, because the asterisk wildcard matches the file t.txt2 to t97.txt by using its short name map T97B4~1.TXT. Similarly, typing **del t97\\*** would delete both files.
 
-    **Question mark (?):** Use the question mark as a substitute for a single character in a name. For example, typing **dir read???.txt** lists any files in the current directory with the .txt extension that begin with "read" and are followed by up to three characters. This includes Read.txt, Read1.txt, Read12.txt, Read123.txt, and Readme1.txt, but not Readme12.txt.
--   Specifying file display attributes
+  **Question mark (?):** Use the question mark as a substitute for a single character in a name. For example, typing **dir read???.txt** lists any files in the current directory with the .txt extension that begin with "read" and are followed by up to three characters. This includes Read.txt, Read1.txt, Read12.txt, Read123.txt, and Readme1.txt, but not Readme12.txt.
+- Specifying file display attributes
 
-    If you use **/a** with more than one value in *Attributes*, **dir** displays the names of only those files with all the specified attributes. For example, if you use **/a** with **r** and **-h** as attributes (by using either **/a:r-h** or **/ar-h**), **dir** will only display the names of the read-only files that are not hidden.
--   Specifying file name sorting
+  If you use **/a** with more than one value in *Attributes*, **dir** displays the names of only those files with all the specified attributes. For example, if you use **/a** with **r** and **-h** as attributes (by using either **/a:r-h** or **/ar-h**), **dir** will only display the names of the read-only files that are not hidden.
+- Specifying file name sorting
 
-    If you specify more than one *SortOrder* value, **dir** sorts the file names by the first criterion, then by the second criterion, and so on. For example, if you use **/o** with the **e** and **-s** values for *SortOrder* (by using either **/o:e-s** or **/oe-s**), **dir** sorts the names of directories and files by extension, with the largest first, and then displays the final result. The alphabetic sorting by extension causes file names with no extensions to appear first, then directory names, and then file names with extensions.
--   Using redirection symbols and pipes
+  If you specify more than one *SortOrder* value, **dir** sorts the file names by the first criterion, then by the second criterion, and so on. For example, if you use **/o** with the **e** and **-s** values for *SortOrder* (by using either **/o:e-s** or **/oe-s**), **dir** sorts the names of directories and files by extension, with the largest first, and then displays the final result. The alphabetic sorting by extension causes file names with no extensions to appear first, then directory names, and then file names with extensions.
+- Using redirection symbols and pipes
 
-    When you use the redirection symbol (**>**) to send **dir** output to a file or a pipe (**|**) to send **dir** output to another command, use **/a:-d** and **/b** to list the file names only. You can use *FileName* with **/b** and **/s** to specify that **dir** is to search the current directory and its subdirectories for all file names that match *FileName*. **Dir** lists only the drive letter, directory name, file name, and file name extension (one path per line), for each file name it finds. Before you use a pipe to send **dir** output to another command, you should set the TEMP environment variable in your Autoexec.nt file.
--   The **dir** command, with different parameters, is available from the Recovery Console.
+  When you use the redirection symbol (**>**) to send **dir** output to a file or a pipe (**|**) to send **dir** output to another command, use **/a:-d** and **/b** to list the file names only. You can use *FileName* with **/b** and **/s** to specify that **dir** is to search the current directory and its subdirectories for all file names that match *FileName*. **Dir** lists only the drive letter, directory name, file name, and file name extension (one path per line), for each file name it finds. Before you use a pipe to send **dir** output to another command, you should set the TEMP environment variable in your Autoexec.nt file.
+- The **dir** command, with different parameters, is available from the Recovery Console.
 
 ## Examples
 
