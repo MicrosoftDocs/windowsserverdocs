@@ -88,9 +88,8 @@ The following REG\_DWORD registry settings can affect the performance of client 
 
     The default is 10 seconds. This is the directory cache timeout.
 
-    > [!Note]  
+    > [!Note]
     > This parameter controls caching of directory metadata in the absence of directory leases.
-
      
 
 -   **DirectoryCacheEntrySizeMax**
