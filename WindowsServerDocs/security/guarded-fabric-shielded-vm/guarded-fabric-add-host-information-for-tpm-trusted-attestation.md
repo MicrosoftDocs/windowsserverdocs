@@ -52,5 +52,5 @@ This completes the process of configuring an HGS cluster for TPM mode. The fabri
 
 ## Next step
 
->[!div class="nextstepaction"]
-[Confirm attestation](guarded-fabric-confirm-hosts-can-attest-successfully.md)
+> [!div class="nextstepaction"]
+> [Confirm attestation](guarded-fabric-confirm-hosts-can-attest-successfully.md)

@@ -31,30 +31,30 @@ The most common reason for changing when Data Deduplication jobs run is to ensur
 	```PowerShell
 	Set-DedupSchedule -Name BackgroundOptimization -Enabled $false
 	Set-DedupSchedule -Name PriorityOptimization -Enabled $false
-	```
+    ```
 
 2. Remove the currently scheduled [Garbage Collection](understand.md#job-info-gc) and [Integrity Scrubbing](understand.md#job-info-scrubbing) jobs.
 	```PowerShell
 	Get-DedupSchedule -Type GarbageCollection | ForEach-Object { Remove-DedupSchedule -InputObject $_ }
 	Get-DedupSchedule -Type Scrubbing | ForEach-Object { Remove-DedupSchedule -InputObject $_ }
-	```
+    ```
 
 3. Create a nightly Optimization job that runs at 7:00 PM with high priority and all the CPUs and memory available on the system.
 	```PowerShell
 	New-DedupSchedule -Name "NightlyOptimization" -Type Optimization -DurationHours 11 -Memory 100 -Cores 100 -Priority High -Days @(1,2,3,4,5) -Start (Get-Date "2016-08-08 19:00:00")
-	```
+    ```
 
 	>[!NOTE]  
 	> The *date* part of the `System.Datetime` provided to `-Start` is irrelevant (as long as it's in the past), but the *time* part specifies when the job should start.
 4. Create a weekly Garbage Collection job that runs on Saturday starting at 7:00 AM with high priority and all the CPUs and memory available on the system.
 	```PowerShell
 	New-DedupSchedule -Name "WeeklyGarbageCollection" -Type GarbageCollection -DurationHours 23 -Memory 100 -Cores 100 -Priority High -Days @(6) -Start (Get-Date "2016-08-13 07:00:00")
-	```
+    ```
 
 5. Create a weekly Integrity Scrubbing job that runs on Sunday starting at 7 AM with high priority and all the CPUs and memory available on the system.
 	```PowerShell
 	New-DedupSchedule -Name "WeeklyIntegrityScrubbing" -Type Scrubbing -DurationHours 23 -Memory 100 -Cores 100 -Priority High -Days @(0) -Start (Get-Date "2016-08-14 07:00:00")
-	```
+    ```
 
 ### <a id="modifying-job-schedules-available-settings"></a>Available job-wide settings
 You can toggle the following settings for new or scheduled Data Deduplication jobs:
@@ -91,7 +91,7 @@ You can toggle the following settings for new or scheduled Data Deduplication jo
 					<li>Low</li>
 				</ul>
 			</td>
-			<td>This value helps the system determine how to allocate CPU time. *High* will use more CPU time, *low* will use less.</td>
+            <td>This value helps the system determine how to allocate CPU time. <em>High</em> will use more CPU time, <em>low</em> will use less.</td>
 		</tr>
 		<tr>
 			<td>Days</td>
@@ -117,7 +117,7 @@ You can toggle the following settings for new or scheduled Data Deduplication jo
 			<td>DurationHours</td>
 			<td>The maximum number of hours a job should be allowed to run</td>
 			<td>Positive integers</td>
-			<td>To prevent a job for running into a workload's non-idle hours</td>
+            <td>To prevent a job for running into a workload&#39;s non-idle hours</td>
 		</tr>
 		<tr>
 			<td>Enabled</td>
@@ -135,7 +135,7 @@ You can toggle the following settings for new or scheduled Data Deduplication jo
 			<td>InputOutputThrottle</td>
 			<td>Specifies the amount of input/output throttling applied to the job</td>
 			<td>Integers 0-100 (indicates a percentage)</td>
-			<td>Throttling ensures that jobs don't interfere with other I/O-intensive processes.</td>
+            <td>Throttling ensures that jobs don&#39;t interfere with other I/O-intensive processes.</td>
 		</tr>
 		<tr>
 			<td>Memory</td>
@@ -158,8 +158,8 @@ You can toggle the following settings for new or scheduled Data Deduplication jo
 		<tr>
 			<td>Start</td>
 			<td>Specifies the time a job should start</td>
-			<td>`System.DateTime`</td>
-			<td>The *date* part of the `System.Datetime` provided to *Start* is irrelevant (as long as it's in the past), but the *time* part specifies when the job should start.</td>
+            <td><code>System.DateTime</code></td>
+            <td>The <em>date</em> part of the <code>System.Datetime</code> provided to <em>Start</em> is irrelevant (as long as it&#39;s in the past), but the <em>time</em> part specifies when the job should start.</td>
 		</tr>
 		<tr>
 			<td>StopWhenSystemBusy</td>
@@ -182,12 +182,12 @@ The main reasons to modify the volume settings from the selected usage type are 
 1. See the current volume settings for Cluster Shared Volume 1.
 	```PowerShell
 	Get-DedupVolume -Volume C:\ClusterStorage\Volume1 | Select *
-	```
+    ```
 
 2. Enable OptimizePartialFiles on Cluster Shared Volume 1 so that the MinimumFileAge policy applies to sections of the file rather than the whole file. This ensures that the majority of the file gets optimized even though sections of the file change regularly.
 	```PowerShell
 	Set-DedupVolume -Volume C:\ClusterStorage\Volume1 -OptimizePartialFiles
-	```
+    ```
 
 ### <a id="modifying-volume-settings-available-settings"></a>Available volume-wide settings
 <table>
@@ -202,9 +202,9 @@ The main reasons to modify the volume settings from the selected usage type are 
 	<tbody>
 		<tr>
 			<td>ChunkRedundancyThreshold</td>
-			<td>The number of times that a chunk is referenced before a chunk is duplicated into the hotspot section of the Chunk Store. The value of the hotspot section is that so-called "hot" chunks that are referenced frequently have multiple access paths to improve access time.</td>
+            <td>The number of times that a chunk is referenced before a chunk is duplicated into the hotspot section of the Chunk Store. The value of the hotspot section is that so-called &quot;hot&quot; chunks that are referenced frequently have multiple access paths to improve access time.</td>
 			<td>Positive integers</td>
-			<td>The main reason to modify this number is to increase the savings rate for volumes with high duplication. In general, the default value (100) is the recommended setting, and you shouldn't need to modify this.</td>
+            <td>The main reason to modify this number is to increase the savings rate for volumes with high duplication. In general, the default value (100) is the recommended setting, and you shouldn&#39;t need to modify this.</td>
 		</tr>
 		<tr>
 			<td>ExcludeFileType</td>
@@ -222,13 +222,13 @@ The main reasons to modify the volume settings from the selected usage type are 
 			<td>InputOutputScale</td>
 			<td>Specifies the level of IO parallelization (IO queues) for Data Deduplication to use on a volume during a post-processing job</td>
 			<td>Positive integers ranging 1-36</td>
-			<td>The main reason to modify this value is to decrease the impact on the performance of a high IO workload by restricting the number of IO queues that Data Deduplication is allowed to use on a volume. Note that modifying this setting from the default may cause Data Deduplication's post-processing jobs to run slowly.</td>
+            <td>The main reason to modify this value is to decrease the impact on the performance of a high IO workload by restricting the number of IO queues that Data Deduplication is allowed to use on a volume. Note that modifying this setting from the default may cause Data Deduplication&#39;s post-processing jobs to run slowly.</td>
 		</tr>
 		<tr>
 			<td>MinimumFileAgeDays</td>
 			<td>Number of days after the file is created before the file is considered to be in-policy for optimization.</td>
 			<td>Positive integers (inclusive of zero)</td>
-			<td>The **Default** and **HyperV** usage types set this value to 3 to maximize performance on hot or recently created files. You may want to modify this if you want Data Deduplication to be more aggressive or if you do not care about the extra latency associated with deduplication.</td>
+            <td>The <strong>Default</strong> and <strong>HyperV</strong> usage types set this value to 3 to maximize performance on hot or recently created files. You may want to modify this if you want Data Deduplication to be more aggressive or if you do not care about the extra latency associated with deduplication.</td>
 		</tr>
 		<tr>
 			<td>MinimumFileSize</td>
@@ -252,7 +252,7 @@ The main reasons to modify the volume settings from the selected usage type are 
 			<td>OptimizeInUseFiles</td>
 			<td>When enabled, files that have active handles against them will be considered as in-policy for optimization.</td>
 			<td>True/false</td>
-			<td>Enable this setting if your workload keeps files open for extended periods of time. If this setting is not enabled, a file would never get optimized if the workload has an open handle to it, even if it's only occasionally appending data at the end.</td>
+            <td>Enable this setting if your workload keeps files open for extended periods of time. If this setting is not enabled, a file would never get optimized if the workload has an open handle to it, even if it&#39;s only occasionally appending data at the end.</td>
 		</tr>
 		<tr>
 			<td>OptimizePartialFiles</td>
@@ -278,12 +278,12 @@ For example, you may want to disable full Garbage Collection. More information a
 	```PowerShell
 	Set-ItemProperty -Path HKLM:\System\CurrentControlSet\Services\ddpsvc\Settings -Name DeepGCInterval -Type DWord -Value 0xFFFFFFFF
 	Set-ItemProperty -Path HKLM:\CLUSTER\Dedup -Name DeepGCInterval -Type DWord -Value 0xFFFFFFFF
-	```
+    ```
 
 * If Data Deduplication is not running in a cluster:
 	```PowerShell
 	Set-ItemProperty -Path HKLM:\System\CurrentControlSet\Services\ddpsvc\Settings -Name DeepGCInterval -Type DWord -Value 0xFFFFFFFF
-	```
+    ```
 
 ### <a id="modifying-dedup-system-settings-available-settings"></a>Available system-wide settings
 <table>
@@ -304,9 +304,9 @@ For example, you may want to disable full Garbage Collection. More information a
 		</tr>
 		<tr>
 			<td>DeepGCInterval</td>
-			<td>This setting configures the interval at which regular Garbage Collection jobs become [full Garbage Collection jobs](advanced-settings.md#faq-full-v-regular-gc). A setting of n would mean that every n<sup>th</sup> job was a full Garbage Collection job. Note that full Garbage Collection is always disabled (regardless of the registry value) for volumes with the [Backup Usage Type](understand.md#usage-type-backup). `Start-DedupJob -Type GarbageCollection -Full` may be used if full Garbage Collection is desired on a Backup volume.</td>
+            <td>This setting configures the interval at which regular Garbage Collection jobs become <a href="advanced-settings.md#faq-full-v-regular-gc" data-raw-source="[full Garbage Collection jobs](advanced-settings.md#faq-full-v-regular-gc)">full Garbage Collection jobs</a>. A setting of n would mean that every n<sup>th</sup> job was a full Garbage Collection job. Note that full Garbage Collection is always disabled (regardless of the registry value) for volumes with the <a href="understand.md#usage-type-backup" data-raw-source="[Backup Usage Type](understand.md#usage-type-backup)">Backup Usage Type</a>. <code>Start-DedupJob -Type GarbageCollection -Full</code> may be used if full Garbage Collection is desired on a Backup volume.</td>
 			<td>Integers (-1 indicates disabled)</td>
-			<td>See [this frequently asked question](advanced-settings.md#faq-why-disable-full-gc)</td>
+            <td>See <a href="advanced-settings.md#faq-why-disable-full-gc" data-raw-source="[this frequently asked question](advanced-settings.md#faq-why-disable-full-gc)">this frequently asked question</a></td>
 		</tr>
 	</tbody>
 </table>

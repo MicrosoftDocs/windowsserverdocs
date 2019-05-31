@@ -43,10 +43,10 @@ Because Data Deduplication uses a post-processing model, it is important that [D
 
 One indicator of [Optimization job](understand.md#job-info-optimization) failure is a downward-trending optimization rate which might indicate that the Optimization jobs are not keeping up with the rate of changes, or churn. You can check the optimization rate by using the [`Get-DedupStatus`](https://technet.microsoft.com/library/hh848437.aspx) PowerShell cmdlet.
 
-> [!Important]  
+> [!Important]
 > `Get-DedupStatus` has two fields that are relevant to the optimization rate: `OptimizedFilesSavingsRate` and `SavingsRate`. These are both important values to track, but each has a unique meaning.
-- `OptimizedFilesSavingsRate` applies only to the files that are 'in-policy' for optimization (`space used by optimized files after optimization / logical size of optimized files`).
-- `SavingsRate` applies to the entire volume (`space used by optimized files after optimization / total logical size of the optimization`).
+> - `OptimizedFilesSavingsRate` applies only to the files that are 'in-policy' for optimization (`space used by optimized files after optimization / logical size of optimized files`).
+> - `SavingsRate` applies to the entire volume (`space used by optimized files after optimization / total logical size of the optimization`).
 
 ## <a id="disabling-dedup"></a>Disabling Data Deduplication
 To turn off Data Deduplication, run the [Unoptimization job](understand.md#job-info-unoptimization). To undo volume optimization, run the following command:

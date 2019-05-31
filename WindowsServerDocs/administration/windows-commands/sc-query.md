@@ -31,31 +31,31 @@ sc [<ServerName>] query [<ServiceName>] [type= {driver | service | all}] [type= 
 
 ## Parameters
 
-|Parameter|Description|
-|---------|-----------|
-|\<ServerName>|Specifies the name of the remote server on which the service is located. The name must use the Universal Naming Convention (UNC) format (for example, \\\\myserver). To run SC.exe locally, omit this parameter.|
-|\<ServiceName>|Specifies the service name returned by the **getkeyname** operation. This **query** parameter is not used in conjunction with other **query** parameters (other than *ServerName*).|
-|type= {driver | service | all}|Specifies what to enumerate. The default value for the first type is **service**.</br>- driver: Specifies that only drivers are enumerated.</br>- service: Specifies that only services are enumerated.</br>- all: Specifies that both drivers and services are enumerated.|
-|type= {own | share | interact | kernel | filesys | rec | adapt}|Specifies the type of services or type of drivers to be enumerated. The default value for the second type is **own**.</br>- own: Specifies that the service runs in its own process. It does not share an executable file with other services.</br>- share: Specifies that the service runs as a shared process. It shares an executable file with other services.</br>- interact: Specifies that the service can interact with the desktop, receiving input from users. Interactive services must be run under the LocalSystem account.</br>- kernel: Specifies a driver.</br>- filesys: Specifies a file system driver.|
-|state= {active | inactive | all}|Specifies the started state of the service to be enumerated. The default state is **active**.</br>- active: Specifies all active services.</br>- inactive: Specifies all paused or stopped services.</br>- all: Specifies all services.|
-|bufsize= \<BufferSize>|Specifies the size (in bytes) of the enumeration buffer. The default buffer size is 1,024 bytes. You should increase the size of the enumeration buffer when the display resulting from a query exceeds 1,024 bytes.|
-|ri= \<ResumeIndex>|Specifies the index number at which enumeration is to begin or resume. The default value is **0** (zero). Use this parameter in conjunction with the **bufsize=** parameter when more information is returned by a query than the default buffer can display.|
-|group= \<GroupName>|Specifies the service group to be enumerated. By default, all groups are enumerated (**group= ""**).|
-|/?|Displays help at the command prompt.|
+|       Parameter        |                                                                                                                          Description                                                                                                                          |
+|------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|     \<ServerName>      |                       Specifies the name of the remote server on which the service is located. The name must use the Universal Naming Convention (UNC) format (for example, \\\\myserver). To run SC.exe locally, omit this parameter.                        |
+|     \<ServiceName>     |                                      Specifies the service name returned by the **getkeyname** operation. This **query** parameter is not used in conjunction with other **query** parameters (other than *ServerName*).                                      |
+|     type= {driver      |                                                                                                                            service                                                                                                                            |
+|       type= {own       |                                                                                                                             share                                                                                                                             |
+|     state= {active     |                                                                                                                           inactive                                                                                                                            |
+| bufsize= \<BufferSize> |                     Specifies the size (in bytes) of the enumeration buffer. The default buffer size is 1,024 bytes. You should increase the size of the enumeration buffer when the display resulting from a query exceeds 1,024 bytes.                      |
+|   ri= \<ResumeIndex>   | Specifies the index number at which enumeration is to begin or resume. The default value is **0** (zero). Use this parameter in conjunction with the **bufsize=** parameter when more information is returned by a query than the default buffer can display. |
+|  group= \<GroupName>   |                                                                             Specifies the service group to be enumerated. By default, all groups are enumerated (**group= ""**).                                                                              |
+|           /?           |                                                                                                             Displays help at the command prompt.                                                                                                              |
 
 ## Remarks
 
--   Without a space between a parameter and its value (that is, **type= own**, not **type=own**), the operation will fail.
--   The **query** operation displays the following information about a service: SERVICE_NAME (service's registry subkey name), TYPE, STATE (as well as states which are not available), WIN32_EXIT_B, SERVICE_EXIT_B, CHECKPOINT, and WAIT_HINT.
--   The **type=** parameter can be used twice in some cases. The first appearance of the **type=** parameter specifies whether to query services, drivers, or both (**all**). The second appearance of the **type=** parameter specifies a type from the **create** operation to further narrow a query's scope.
--   When the display resulting from a **query** command exceeds the size of the enumeration buffer, a message similar to the following is displayed:  
-    ```
-    Enum: more data, need 1822 bytes start resume at index 79
-    ```  
-    To display the remaining **query** information, rerun **query**, setting **bufsize=** to be the number of bytes and setting **ri=** to the specified index. For example, the remaining output would be displayed by typing the following at the command prompt:  
-    ```
-    sc query bufsize= 1822 ri= 79
-    ```
+- Without a space between a parameter and its value (that is, **type= own**, not **type=own**), the operation will fail.
+- The **query** operation displays the following information about a service: SERVICE_NAME (service's registry subkey name), TYPE, STATE (as well as states which are not available), WIN32_EXIT_B, SERVICE_EXIT_B, CHECKPOINT, and WAIT_HINT.
+- The **type=** parameter can be used twice in some cases. The first appearance of the **type=** parameter specifies whether to query services, drivers, or both (**all**). The second appearance of the **type=** parameter specifies a type from the **create** operation to further narrow a query's scope.
+- When the display resulting from a **query** command exceeds the size of the enumeration buffer, a message similar to the following is displayed:  
+  ```
+  Enum: more data, need 1822 bytes start resume at index 79
+  ```  
+  To display the remaining **query** information, rerun **query**, setting **bufsize=** to be the number of bytes and setting **ri=** to the specified index. For example, the remaining output would be displayed by typing the following at the command prompt:  
+  ```
+  sc query bufsize= 1822 ri= 79
+  ```
 
 ## <a name="BKMK_examples"></a>Examples
 

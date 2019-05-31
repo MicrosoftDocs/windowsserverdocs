@@ -26,7 +26,7 @@ To migrate a WID farm to Windows Server 2012, perform the following procedure:
 > [!IMPORTANT]
 >  As the result of the operating system upgrade, the AD FS configuration on this server is lost and the AD FS 2.0 server role is removed. The Windows Server 2012 AD FS server role is installed instead, but it is not configured. You must create the original AD FS configuration and restore the remaining AD FS settings to complete the federation server migration.  
   
-4.  Create the original AD FS configuration on this server.  
+4. Create the original AD FS configuration on this server.  
   
 You can create the original AD FS configuration by using the **AD FS Federation Server Configuration Wizard** to add a federation server to a WID farm. For more information, see [Add a Federation Server to a Federation Server Farm](add-a-federation-server-to-a-federation-server-farm.md).  
   
@@ -35,13 +35,13 @@ You can create the original AD FS configuration by using the **AD FS Federation 
 >  
 > When you reach the **Specify the Federation Service Name** page, be sure to select the same SSL certificate you recorded in the “Prepare to migrate a WID farm” in [Prepare to Migrate the AD FS 2.0 Federation Server](prepare-to-migrate-a-wid-farm.md).  
   
-5.  Update your AD FS webpages on this server. If you backed up your customized AD FS webpages while preparing for the migration, you need to use your backup data to overwrite the default AD FS webpages that were created by default in the **%systemdrive%\inetpub\adfs\ls** directory as a result of the AD FS configuration on Windows Server 2012.  
+5. Update your AD FS webpages on this server. If you backed up your customized AD FS webpages while preparing for the migration, you need to use your backup data to overwrite the default AD FS webpages that were created by default in the **%systemdrive%\inetpub\adfs\ls** directory as a result of the AD FS configuration on Windows Server 2012.  
   
-6.  Add the server that you just upgraded to Windows Server 2012 to the load balancer.  
+6. Add the server that you just upgraded to Windows Server 2012 to the load balancer.  
   
-7.  Repeat steps 1 through 6 for the remaining secondary servers in your WID farm.  
+7. Repeat steps 1 through 6 for the remaining secondary servers in your WID farm.  
   
-8.  Promote one of the upgraded secondary servers to be the primary server in your WID farm. To do this, open Windows PowerShell and run the following command: `PSH:> Set-AdfsSyncProperties –Role PrimaryComputer`.  
+8. Promote one of the upgraded secondary servers to be the primary server in your WID farm. To do this, open Windows PowerShell and run the following command: `PSH:> Set-AdfsSyncProperties –Role PrimaryComputer`.  
   
 9. Remove the original primary server of your WID farm from the load balancer.  
   

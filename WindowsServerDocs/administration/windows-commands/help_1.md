@@ -30,9 +30,9 @@ help [<command>]
   
 ## Parameters  
   
-|Parameter|Description|  
-|-------|--------|  
-|<command>|Specifies the command for which to display detailed help information.|  
+| Parameter |                              Description                              |
+|-----------|-----------------------------------------------------------------------|
+| <command> | Specifies the command for which to display detailed help information. |
   
 ## Remarks  
   

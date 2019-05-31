@@ -112,5 +112,5 @@ Winows PowerShell is a command-line shell and scripting language designed to let
 The Windows command-line tools are used to perform administrative tasks in Windows. You can use the command reference to familiarize yourself with the command-line tools, to learn about the command shell, and to automate command-line tasks by using batch files or scripting tools.
 
 ## Windows Server Insider Preview
-### [System Insights](..\manage\system-insights\overview.md)
+### [System Insights](../manage/system-insights/overview.md)
 System Insights is a new feature that introduces predictive analytics natively to Windows Server. These predictive capabilities locally analyze Windows Server system data, such as performance counters or ETW events, helping IT administrators proactively detect and address problematic behavior in their deployments. 

@@ -12,7 +12,7 @@ ms.author: coreyp
 manager: dougkim
 ms.date: 10/16/2017
 ---
-#Monthly Delta update ISV support without WSUS
+# Monthly Delta update ISV support without WSUS
 
 >Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows 10
 
@@ -24,7 +24,7 @@ If you do not currently have WSUS installed, but you need smaller update package
 
 ![Download size comparison](../../media/express-update-delivery-isv-support/delta-1.png)
 
-##What is Monthly Delta update?
+## What is Monthly Delta update?
 
 There are two variants of the monthly security update: Delta and Cumulative.
 

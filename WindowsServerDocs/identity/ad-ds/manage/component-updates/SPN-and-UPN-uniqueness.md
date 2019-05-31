@@ -77,7 +77,7 @@ An attempt to create a new user in Active Directory Administrative Center with a
   
 **Figure  SEQ Figure \\\* ARABIC 2 Event ID 2974 with error 8648**  
   
-The event 2974 lists the value that was blocked and a list of one or more objects (up to 10) that already contain that value.  In the following figure, you can see that UPN attribute value ***dhunt@blue.contoso.com*** already exists on four other objects.  Since this is a new feature in Windows Server 2012 R2, accidental creation of duplicate UPN and SPNs in a mixed environment will still occur when down-level DCs process the write attempt.  
+The event 2974 lists the value that was blocked and a list of one or more objects (up to 10) that already contain that value.  In the following figure, you can see that UPN attribute value **<em>dhunt@blue.contoso.com</em>** already exists on four other objects.  Since this is a new feature in Windows Server 2012 R2, accidental creation of duplicate UPN and SPNs in a mixed environment will still occur when down-level DCs process the write attempt.  
   
 ![SPN and UPN uniqueness](media/SPN-and-UPN-uniqueness/GTR_ADDS_Fig05_Event2974ShowAllDups.gif)  
   

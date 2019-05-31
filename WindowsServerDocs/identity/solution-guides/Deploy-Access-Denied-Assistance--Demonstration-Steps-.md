@@ -66,7 +66,7 @@ You can configure access-denied assistance for the domain by using Group Policy 
   
     3.  Leave the remaining default settings.  
   
-![solution guides](media/Deploy-Access-Denied-Assistance--Demonstration-Steps-/PowerShellLogoSmall.gif)****Windows PowerShell equivalent commands****  
+![solution guides](media/Deploy-Access-Denied-Assistance--Demonstration-Steps-/PowerShellLogoSmall.gif)***<em>Windows PowerShell equivalent commands</em>***  
   
 The following Windows PowerShell cmdlet or cmdlets perform the same function as the preceding procedure. Enter each cmdlet on a single line, even though they may appear word-wrapped across several lines here because of formatting constraints.  
   
@@ -114,7 +114,7 @@ Alternatively, you can configure access-denied assistance individually on each f
   
 8.  Click **OK**.  
   
-![solution guides](media/Deploy-Access-Denied-Assistance--Demonstration-Steps-/PowerShellLogoSmall.gif)****Windows PowerShell equivalent commands****  
+![solution guides](media/Deploy-Access-Denied-Assistance--Demonstration-Steps-/PowerShellLogoSmall.gif)***<em>Windows PowerShell equivalent commands</em>***  
   
 The following Windows PowerShell cmdlet or cmdlets perform the same function as the preceding procedure. Enter each cmdlet on a single line, even though they may appear word-wrapped across several lines here because of formatting constraints.
   
@@ -138,7 +138,7 @@ After you configure the access-denied assistance, you must enable it for all fil
   
 5.  Click **Enabled**, and then click **OK**.  
   
-![solution guides](media/Deploy-Access-Denied-Assistance--Demonstration-Steps-/PowerShellLogoSmall.gif)****Windows PowerShell equivalent commands****  
+![solution guides](media/Deploy-Access-Denied-Assistance--Demonstration-Steps-/PowerShellLogoSmall.gif)***<em>Windows PowerShell equivalent commands</em>***  
   
 The following Windows PowerShell cmdlet or cmdlets perform the same function as the preceding procedure. Enter each cmdlet on a single line, even though they may appear word-wrapped across several lines here because of formatting constraints. 
   
@@ -177,7 +177,7 @@ You can also specify a separate access-denied message for each shared folder on 
   
 7.  Click **OK**, and then click **Close**.  
   
-![solution guides](media/Deploy-Access-Denied-Assistance--Demonstration-Steps-/PowerShellLogoSmall.gif)****Windows PowerShell equivalent commands****  
+![solution guides](media/Deploy-Access-Denied-Assistance--Demonstration-Steps-/PowerShellLogoSmall.gif)***<em>Windows PowerShell equivalent commands</em>***  
   
 The following Windows PowerShell cmdlet or cmdlets perform the same function as the preceding procedure. Enter each cmdlet on a single line, even though they may appear word-wrapped across several lines here because of formatting constraints. 
   
@@ -206,7 +206,7 @@ You must configure the email notification settings on each file server that will
   
 6.  Click **OK**.  
   
-![solution guides](media/Deploy-Access-Denied-Assistance--Demonstration-Steps-/PowerShellLogoSmall.gif)****Windows PowerShell equivalent commands****  
+![solution guides](media/Deploy-Access-Denied-Assistance--Demonstration-Steps-/PowerShellLogoSmall.gif)***<em>Windows PowerShell equivalent commands</em>***  
   
 The following Windows PowerShell cmdlet or cmdlets perform the same function as the preceding procedure. Enter each cmdlet on a single line, even though they may appear word-wrapped across several lines here because of formatting constraints.
   

@@ -29,9 +29,9 @@ set all
 
 ## Parameters
 
-|Parameter|Description|
-|---------|-----------|
-|{help | ?}|Displays a short summary of **nslookup** subcommands.|
+| Parameter | Description |
+|-----------|-------------|
+|   {help   |     ?}      |
 
 ## Remarks
 

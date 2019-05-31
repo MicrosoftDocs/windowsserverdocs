@@ -25,7 +25,7 @@ Volumes are the datastores where you put the files your workloads need, such as 
 
 ![what-are-volumes](media/plan-volumes/what-are-volumes.png)
 
-All volumes are accessible by all servers in the cluster at the same time. Once created, they show up at **C:\ClusterStorage\** on all servers.
+All volumes are accessible by all servers in the cluster at the same time. Once created, they show up at **C:\ClusterStorage\\** on all servers.
 
 ![csv-folder-screenshot](media/plan-volumes/csv-folder-screenshot.png)
 
@@ -81,9 +81,9 @@ Which resiliency type to use depends on the needs of your workload. Here's a tab
 
 | **Resiliency type**| **Capacity efficiency**| **Speed**| **Workloads**
 |--------------------|--------------------------------|--------------------------------|--------------------------
-| **Mirror**         | ![Storage efficiency showing 33%](media\plan-volumes\3-way-mirror-storage-efficiency.png)<br>Three-way mirror: 33% <br>Two-way-mirror: 50%     |![Performance showing 100%](media\plan-volumes\three-way-mirror-perf.png)<br> Highest performance  | Virtualized workloads<br> Databases<br>Other high performance workloads |
-| **Mirror-accelerated parity** |![Storage efficiency showing around 50%](media\plan-volumes\mirror-accelerated-parity-storage-efficiency.png)<br> Depends on proportion of mirror and parity | ![Performance showing around 20%](media\plan-volumes\mirror-accelerated-parity-perf.png)<br>Much slower than mirror, but up to twice as fast as dual-parity<br> Best for large sequential writes and reads | Archival and backup<br> Virtualized desktop infrastructure     |
-| **Dual-parity**               | ![Storage efficiency showing around 80%](media\plan-volumes\dual-parity-storage-efficiency.png)<br>4 servers: 50% <br>16 servers: up to 80% | ![Performance showing around 10%](media\plan-volumes\dual-parity-perf.png)<br>Highest I/O latency & CPU usage on writes<br> Best for large sequential writes and reads | Archival and backup<br> Virtualized desktop infrastructure  |
+| **Mirror**         | ![Storage efficiency showing 33%](media/plan-volumes/3-way-mirror-storage-efficiency.png)<br>Three-way mirror: 33% <br>Two-way-mirror: 50%     |![Performance showing 100%](media/plan-volumes/three-way-mirror-perf.png)<br> Highest performance  | Virtualized workloads<br> Databases<br>Other high performance workloads |
+| **Mirror-accelerated parity** |![Storage efficiency showing around 50%](media/plan-volumes/mirror-accelerated-parity-storage-efficiency.png)<br> Depends on proportion of mirror and parity | ![Performance showing around 20%](media/plan-volumes/mirror-accelerated-parity-perf.png)<br>Much slower than mirror, but up to twice as fast as dual-parity<br> Best for large sequential writes and reads | Archival and backup<br> Virtualized desktop infrastructure     |
+| **Dual-parity**               | ![Storage efficiency showing around 80%](media/plan-volumes/dual-parity-storage-efficiency.png)<br>4 servers: 50% <br>16 servers: up to 80% | ![Performance showing around 10%](media/plan-volumes/dual-parity-perf.png)<br>Highest I/O latency & CPU usage on writes<br> Best for large sequential writes and reads | Archival and backup<br> Virtualized desktop infrastructure  |
 
 #### When performance matters most
 

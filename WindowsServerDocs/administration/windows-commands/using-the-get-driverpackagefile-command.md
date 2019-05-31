@@ -29,11 +29,11 @@ WDSUTIL /Get-DriverPackageFile /InfFile:<Inf File path> [/Architecture:{x86 | ia
 
 ## Parameters
 
-|Parameter|Description|
-|---------|-----------|
-|/InfFile:\<Inf File path>|Specifies the full path and file name of the driver package .inf file.|
-|[/Architecture:{x86 | ia64 | x64}]|Specifies the architecture of the driver package.|
-|[/Show: {Drivers | Files | All}]|Indicates the package information to display. If **/Show** is not specified, the default is to return only the driver package metadata. **Drivers** displays the list of drivers in the package. **Files** displays the list of files in the package. **All** displays drivers and files.|
+|         Parameter         |                              Description                               |
+|---------------------------|------------------------------------------------------------------------|
+| /InfFile:\<Inf File path> | Specifies the full path and file name of the driver package .inf file. |
+|    [/Architecture:{x86    |                                  ia64                                  |
+|     [/Show: {Drivers      |                                 Files                                  |
 
 ## <a name="BKMK_examples"></a>Examples
 

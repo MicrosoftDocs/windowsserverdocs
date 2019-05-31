@@ -55,26 +55,26 @@ Other notes:
 
 At [Microsoft Ignite 2018](https://azure.microsoft.com/ignite/), [DataOn Storage](http://www.dataonstorage.com/) had a Storage Spaces Direct Cluster in their kiosk area.  This cluster was connected to a [NetGear](https://www.netgear.com) Nighthawk X4S WiFi Router using the USB port as a file share witness similar to this.
 
-![NetGear witness](media\File-Share-Witness\FSW1.png)
+![NetGear witness](media/File-Share-Witness/FSW1.png)
 
 The steps for creating a file share witness using a USB device on this particular router are listed below.  Note that steps on other routers and NAS appliances will vary and should be accomplished using the vendor supplied directions.
 
 
 1. Log into the router with the USB device plugged in.
 
-   ![NetGear Interface](media\File-Share-Witness\FSW2.png)
+   ![NetGear Interface](media/File-Share-Witness/FSW2.png)
 
 2. From the list of options, select ReadySHARE which is where shares can be created.
 
-   ![NetGear ReadySHARE](media\File-Share-Witness\FSW3.png)
+   ![NetGear ReadySHARE](media/File-Share-Witness/FSW3.png)
 
 3. For a file share witness, a basic share is all that is needed.  Selecting the Edit button will pop up a dialog where the share can be created on the USB device.
 
-   ![NetGear Share Interface](media\File-Share-Witness\FSW4.png)
+   ![NetGear Share Interface](media/File-Share-Witness/FSW4.png)
 
 4. Once selecting the Apply button, the share is created and can be seen in the list.
 
-   ![NetGear Shares](media\File-Share-Witness\FSW5.png)
+   ![NetGear Shares](media/File-Share-Witness/FSW5.png)
 
 5. Once the share has been created, creating the file share witness for Cluster is done with PowerShell.
 

@@ -44,23 +44,23 @@ This topic applies to a server running Windows Server 2012 R2 Standard, Windows 
   
 #### To join Windows Server Essentials to a workgroup or domain  
   
-1.  After you complete the installation of Windows Server Essentials on your second server, close the Configure Windows Server Essentials Wizard.  
+1. After you complete the installation of Windows Server Essentials on your second server, close the Configure Windows Server Essentials Wizard.  
   
-2.  In the **Search** box, type **System Settings**, and in the search results, click **View advanced system settings**.  
+2. In the **Search** box, type **System Settings**, and in the search results, click **View advanced system settings**.  
   
-3.  In **System Properties**, click the **Computer Name** tab.  
+3. In **System Properties**, click the **Computer Name** tab.  
   
-4.  In **Computer Name**, in the **Domain** section, click **Change**.  
+4. In **Computer Name**, in the **Domain** section, click **Change**.  
   
-5.  In **Computer Name/Domain Changes**, in the **Member** section, choose if you want to join the server running  Windows Server Essentials to a **Workgroup** or to a **Domain**.  
+5. In **Computer Name/Domain Changes**, in the **Member** section, choose if you want to join the server running  Windows Server Essentials to a **Workgroup** or to a **Domain**.  
   
-    -   To add the server to a workgroup, type **workgroup**, and then click **OK**.  
+   -   To add the server to a workgroup, type **workgroup**, and then click **OK**.  
   
-    -   To join this server to an existing Active Directory domain, type the name of the domain, and then click **OK**.  
+   -   To join this server to an existing Active Directory domain, type the name of the domain, and then click **OK**.  
   
-6.  Restart the server to apply the changes.  
+6. Restart the server to apply the changes.  
   
- After you have joined the server to your primary server „¢s domain, you can continue to configure Windows Server Essentials by running the Configure Windows Server Essentials Wizard from Server Manager.  
+   After you have joined the server to your primary server ï¿½ï¿½s domain, you can continue to configure Windows Server Essentials by running the Configure Windows Server Essentials Wizard from Server Manager.  
   
 #### To configure Windows Server Essentials Experience on a member server  
   

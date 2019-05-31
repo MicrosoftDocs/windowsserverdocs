@@ -19,19 +19,19 @@ To send these notifications and storage reports, you must specify the SMTP serve
 
 ## To configure e-mail options
 
-1.  In the console tree, right-click **File Server Resource Manager**, and then click **Configure Options**. The **File Server Resource Manager Options** dialog box opens.
+1. In the console tree, right-click **File Server Resource Manager**, and then click **Configure Options**. The **File Server Resource Manager Options** dialog box opens.
 
-2.  On the **E-mail Notifications** tab, under **SMTP server name or IP address**, type the host name or the IP address of the SMTP server that will forward e-mail notifications and storage reports.
+2. On the **E-mail Notifications** tab, under **SMTP server name or IP address**, type the host name or the IP address of the SMTP server that will forward e-mail notifications and storage reports.
 
-3.  If you want to routinely notify certain administrators about quota or file screening events or e-mail storage reports, under **Default administrator recipients**, type each e-mail address.
+3. If you want to routinely notify certain administrators about quota or file screening events or e-mail storage reports, under **Default administrator recipients**, type each e-mail address.
 
-    Use the format *account@domain*. Use semicolons to separate multiple accounts.
+   Use the format <em>account@domain</em>. Use semicolons to separate multiple accounts.
 
-4.  To specify a different "From" address for e-mail notifications and storage reports sent from File Server Resource Manager, under the **Default "From" e-mail address**, type the e-mail address that you want to appear in your message.
+4. To specify a different "From" address for e-mail notifications and storage reports sent from File Server Resource Manager, under the **Default "From" e-mail address**, type the e-mail address that you want to appear in your message.
 
-5.  To test your settings, click **Send Test E-mail**.
+5. To test your settings, click **Send Test E-mail**.
 
-6.  Click **OK**.
+6. Click **OK**.
 
 
 ## See also

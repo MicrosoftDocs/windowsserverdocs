@@ -30,12 +30,13 @@ If you remote into your personal desktop, there are additional redirections that
 
 ### Input redirection
 
-| Redirection | Remote Desktop<br> Connection | Universal | Android | iOS | macOS | web client |
-|-------------|-------------------------------|-----------|---------|-----|-------|------------|
-| Keyboard    | X                             | X         | X       | X   | X     | X          |
-| Mouse       | X                             | X         | X       | X*    | X     | X          |
-| Touch       | X                             | X         | X       | X   |       | X (Edge and IE not supported) |
-| Other       | Pen                           |           |         |     |       |            |
+| Redirection | Remote Desktop<br> Connection | Universal | Android | iOS | macOS |          web client           |
+|-------------|-------------------------------|-----------|---------|-----|-------|-------------------------------|
+|  Keyboard   |               X               |     X     |    X    |  X  |   X   |               X               |
+|    Mouse    |               X               |     X     |    X    | X\* |   X   |               X               |
+|    Touch    |               X               |     X     |    X    |  X  |       | X (Edge and IE not supported) |
+|    Other    |              Pen              |           |         |     |       |                               |
+
 *View the [list of supported input devices for the Remote Desktop iOS Beta client](remote-desktop-ios.md#supported-input-devices).
 
 ### Port redirection   

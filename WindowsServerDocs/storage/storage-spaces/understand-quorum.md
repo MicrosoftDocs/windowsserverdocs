@@ -23,8 +23,8 @@ Quorum determines the number of failures that the cluster can sustain while stil
 
 In Windows Server 2019 and Windows Server 2016, there are two components of the system that have their own quorum mechanisms:
 
-- <strong>Cluster Quorum</strong>: This operates at the cluster level (i.e. you can lose nodes and have the cluster stay up)
-- <strong>Pool Quorum</strong>: This operates on the pool level when Storage Spaces Direct is enabled (i.e. you can lose nodes and drives and have the pool stay up). Storage pools were designed to be used in both clustered and non-clustered scenarios, which is why they have a different quorum mechanism.
+- **Cluster Quorum**: This operates at the cluster level (i.e. you can lose nodes and have the cluster stay up)
+- **Pool Quorum**: This operates on the pool level when Storage Spaces Direct is enabled (i.e. you can lose nodes and drives and have the pool stay up). Storage pools were designed to be used in both clustered and non-clustered scenarios, which is why they have a different quorum mechanism.
 
 ## Cluster quorum overview
 
@@ -42,9 +42,9 @@ The table below gives an overview of the Cluster Quorum outcomes per scenario:
 
 ### Cluster quorum recommendations
 
-- If you have two nodes, a witness is <strong>required</strong>.
-- If you have three or four nodes, witness is <strong>strongly recommended</strong>.
-- If you have Internet access, use a <strong>[cloud witness](../../failover-clustering/deploy-cloud-witness.md)</strong>
+- If you have two nodes, a witness is **required**.
+- If you have three or four nodes, witness is **strongly recommended**.
+- If you have Internet access, use a **[cloud witness](../../failover-clustering/deploy-cloud-witness.md)**
 - If you’re in an IT environment with other machines and file shares, use a file share witness
 
 ## How cluster quorum works
@@ -58,7 +58,7 @@ There are two ways the cluster can make the *total number of votes* odd:
 1. First, it can go *up* one by adding a *witness* with an extra vote. This requires user set-up.
 2.	Or, it can go *down* one by zeroing one unlucky node’s vote (happens automatically as needed).
 
-Whenever surviving nodes successfully verify they are the *majority*, the definition of *majority* is updated to be among just the survivors. This allows the cluster to lose one node, then another, then another, and so forth. This concept of the *total number of votes* adapting after successive failures is known as <strong>*Dynamic quorum*</strong>.  
+Whenever surviving nodes successfully verify they are the *majority*, the definition of *majority* is updated to be among just the survivors. This allows the cluster to lose one node, then another, then another, and so forth. This concept of the *total number of votes* adapting after successive failures is known as ***Dynamic quorum***.  
 
 ### Dynamic witness
 
@@ -68,10 +68,10 @@ Dynamic quorum works with Dynamic witness in the way described below.
 
 ### Dynamic quorum behavior
 
-- If you have an <strong>even</strong> number of nodes and no witness, *one node gets its vote zeroed*. For example, only three of the four nodes get votes, so the *total number of votes* is three, and two survivors with votes are considered a majority.
-- If you have an <strong>odd</strong> number of nodes and no witness, *they all get votes*.
-- If you have an <strong>even</strong> number of nodes plus witness, *the witness votes*, so the total is odd.
-- If you have an <strong>odd</strong> number of nodes plus witness, *the witness doesn't vote*.
+- If you have an **even** number of nodes and no witness, *one node gets its vote zeroed*. For example, only three of the four nodes get votes, so the *total number of votes* is three, and two survivors with votes are considered a majority.
+- If you have an **odd** number of nodes and no witness, *they all get votes*.
+- If you have an **even** number of nodes plus witness, *the witness votes*, so the total is odd.
+- If you have an **odd** number of nodes plus witness, *the witness doesn't vote*.
 
 Dynamic quorum enables the ability to assign a vote to a node dynamically to avoid losing the majority of votes and to allow the cluster to run with one node (known as last-man standing). Let’s take a four-node cluster as an example. Assume that quorum requires 3 votes. 
 
@@ -88,67 +88,67 @@ The above scenario applies to a general cluster that doesn't have Storage Spaces
 ### Examples
 
 #### Two nodes without a witness. 
-One node’s vote is zeroed, so the *majority* vote is determined out of a total of <strong>1 vote</strong>. If the non-voting node goes down unexpectedly, the survivor has 1/1 and the cluster survives. If the voting node goes down unexpectedly, the survivor has 0/1 and the cluster goes down. If the voting node is gracefully powered down, the vote is transferred to the other node, and the cluster survives. *<strong>This is why it's critical to configure a witness.</strong>*
+One node’s vote is zeroed, so the *majority* vote is determined out of a total of **1 vote**. If the non-voting node goes down unexpectedly, the survivor has 1/1 and the cluster survives. If the voting node goes down unexpectedly, the survivor has 0/1 and the cluster goes down. If the voting node is gracefully powered down, the vote is transferred to the other node, and the cluster survives. ***This is why it's critical to configure a witness.***
 
 ![Quorum explained in the case with two nodes without a witness](media/understand-quorum/2-node-no-witness.png)
 
-- Can survive one server failure: <strong>Fifty percent chance</strong>.
-- Can survive one server failure, then another: <strong>No</strong>.
-- Can survive two server failures at once: <strong>No</strong>. 
+- Can survive one server failure: **Fifty percent chance**.
+- Can survive one server failure, then another: **No**.
+- Can survive two server failures at once: **No**. 
 
 #### Two nodes with a witness. 
-Both nodes vote, plus the witness votes, so the *majority* is determined out of a total of <strong>3 votes</strong>. If either node goes down, the survivor has 2/3 and the cluster survives.
+Both nodes vote, plus the witness votes, so the *majority* is determined out of a total of **3 votes**. If either node goes down, the survivor has 2/3 and the cluster survives.
 
 ![Quorum explained in the case with two nodes with a witness](media/understand-quorum/2-node-witness.png)
 
-- Can survive one server failure: <strong>Yes</strong>.
-- Can survive one server failure, then another: <strong>No</strong>.
-- Can survive two server failures at once: <strong>No</strong>. 
+- Can survive one server failure: **Yes**.
+- Can survive one server failure, then another: **No**.
+- Can survive two server failures at once: **No**. 
 
 #### Three nodes without a witness.
-All nodes vote, so the *majority* is determined out of a total of <strong>3 votes</strong>. If any node goes down, the survivors are 2/3 and the cluster survives. The cluster becomes two nodes without a witness – at that point, you’re in Scenario 1.
+All nodes vote, so the *majority* is determined out of a total of **3 votes**. If any node goes down, the survivors are 2/3 and the cluster survives. The cluster becomes two nodes without a witness – at that point, you’re in Scenario 1.
 
 ![Quorum explained in the case with three nodes without a witness](media/understand-quorum/3-node-no-witness.png)
 
-- Can survive one server failure: <strong>Yes</strong>.
-- Can survive one server failure, then another: <strong>Fifty percent chance</strong>.
-- Can survive two server failures at once: <strong>No</strong>. 
+- Can survive one server failure: **Yes**.
+- Can survive one server failure, then another: **Fifty percent chance**.
+- Can survive two server failures at once: **No**. 
 
 #### Three nodes with a witness.
-All nodes vote, so the witness doesn't initially vote. The *majority* is determined out of a total of <strong>3 votes</strong>. After one failure, the cluster has two nodes with a witness – which is back to Scenario 2. So, now the two nodes and the witness vote.
+All nodes vote, so the witness doesn't initially vote. The *majority* is determined out of a total of **3 votes**. After one failure, the cluster has two nodes with a witness – which is back to Scenario 2. So, now the two nodes and the witness vote.
 
 ![Quorum explained in the case with three nodes with a witness](media/understand-quorum/3-node-witness.png)
 
-- Can survive one server failure: <strong>Yes</strong>.
-- Can survive one server failure, then another: <strong>Yes</strong>.
-- Can survive two server failures at once: <strong>No</strong>. 
+- Can survive one server failure: **Yes**.
+- Can survive one server failure, then another: **Yes**.
+- Can survive two server failures at once: **No**. 
 
 #### Four nodes without a witness
-One node’s vote is zeroed, so the *majority* is determined out of a total of <strong>3 votes</strong>. After one failure, the cluster becomes three nodes, and you’re in Scenario 3.
+One node’s vote is zeroed, so the *majority* is determined out of a total of **3 votes**. After one failure, the cluster becomes three nodes, and you’re in Scenario 3.
 
 ![Quorum explained in the case with four nodes without a witness](media/understand-quorum/4-node-no-witness.png)
 
-- Can survive one server failure: <strong>Yes</strong>.
-- Can survive one server failure, then another: <strong>Yes</strong>.
-- Can survive two server failures at once: <strong>Fifty percent chance</strong>. 
+- Can survive one server failure: **Yes**.
+- Can survive one server failure, then another: **Yes**.
+- Can survive two server failures at once: **Fifty percent chance**. 
 
 #### Four nodes with a witness.
-All nodes votes and the witness votes, so the *majority* is determined out of a total of <strong>5 votes</strong>. After one failure, you’re in Scenario 4. After two simultaneous failures, you skip down to Scenario 2.
+All nodes votes and the witness votes, so the *majority* is determined out of a total of **5 votes**. After one failure, you’re in Scenario 4. After two simultaneous failures, you skip down to Scenario 2.
 
 ![Quorum explained in the case with four nodes with a witness](media/understand-quorum/4-node-witness.png)
 
-- Can survive one server failure: <strong>Yes</strong>.
-- Can survive one server failure, then another: <strong>Yes</strong>.
-- Can survive two server failures at once: <strong>Yes</strong>. 
+- Can survive one server failure: **Yes**.
+- Can survive one server failure, then another: **Yes**.
+- Can survive two server failures at once: **Yes**. 
 
 #### Five nodes and beyond.
 All nodes vote, or all but one vote, whatever makes the total odd. Storage Spaces Direct cannot handle more than two nodes down anyway, so at this point, no witness is needed or useful.
 
 ![Quorum explained in the case with five nodes and beyond](media/understand-quorum/5-nodes.png)
 
-- Can survive one server failure: <strong>Yes</strong>.
-- Can survive one server failure, then another: <strong>Yes</strong>.
-- Can survive two server failures at once: <strong>Yes</strong>. 
+- Can survive one server failure: **Yes**.
+- Can survive one server failure, then another: **Yes**.
+- Can survive two server failures at once: **Yes**. 
 
 Now that we understand how quorum works, let's look at the types of quorum witnesses.
 
@@ -156,11 +156,11 @@ Now that we understand how quorum works, let's look at the types of quorum witne
 
 Failover Clustering supports three types of Quorum Witnesses:
 
-- <strong>[Cloud Witness](../../failover-clustering\deploy-cloud-witness.md)</strong> - Blob storage in Azure accessible by all nodes of the cluster. It maintains clustering information in a witness.log file, but doesn't store a copy of the cluster database.
-- <strong>File Share Witness</strong> – A SMB file share that is configured on a file server running Windows Server. It maintains clustering information in a witness.log file, but doesn't store a copy of the cluster database.
-- <strong>Disk Witness</strong> - A small clustered disk which is in the Cluster Available Storage group. This disk is highly-available and can failover between nodes. It contains a copy of the cluster database.  <strong>*A Disk Witness isn't supported with Storage Spaces Direct*</strong>.
+- **[Cloud Witness](../../failover-clustering/deploy-cloud-witness.md)** - Blob storage in Azure accessible by all nodes of the cluster. It maintains clustering information in a witness.log file, but doesn't store a copy of the cluster database.
+- **File Share Witness** – A SMB file share that is configured on a file server running Windows Server. It maintains clustering information in a witness.log file, but doesn't store a copy of the cluster database.
+- **Disk Witness** - A small clustered disk which is in the Cluster Available Storage group. This disk is highly-available and can failover between nodes. It contains a copy of the cluster database.  ***A Disk Witness isn't supported with Storage Spaces Direct***.
 
-## <a id="poolQuorum"></a>Pool quorum overview
+## Pool quorum overview
 
 We just talked about Cluster Quorum, which operates at the cluster level. Now, let's dive into Pool Quorum, which operates on the pool level (i.e. you can lose nodes and drives and have the pool stay up). Storage pools were designed to be used in both clustered and non-clustered scenarios, which is why they have a different quorum mechanism.
 
@@ -189,31 +189,31 @@ But pool quorum works differently from cluster quorum in the following ways:
 ### Examples
 
 #### Four nodes with a symmetrical layout. 
-Each of the 16 drives has one vote and node two also has one vote (since it's the pool resource owner). The *majority* is determined out of a total of <strong>16 votes</strong>. If nodes three and four go down, the surviving subset has 8 drives and the pool resource owner, which is 9/16 votes. So, the pool survives.
+Each of the 16 drives has one vote and node two also has one vote (since it's the pool resource owner). The *majority* is determined out of a total of **16 votes**. If nodes three and four go down, the surviving subset has 8 drives and the pool resource owner, which is 9/16 votes. So, the pool survives.
 
 ![Pool Quorum 1](media/understand-quorum/pool-1.png)
 
-- Can survive one server failure: <strong>Yes</strong>.
-- Can survive one server failure, then another: <strong>Yes</strong>.
-- Can survive two server failures at once: <strong>Yes</strong>. 
+- Can survive one server failure: **Yes**.
+- Can survive one server failure, then another: **Yes**.
+- Can survive two server failures at once: **Yes**. 
 
 #### Four nodes with a symmetrical layout and drive failure. 
-Each of the 16 drives has one vote and node 2 also has one vote (since it's the pool resource owner). The *majority* is determined out of a total of <strong>16 votes</strong>. First, drive 7 goes down. If nodes three and four go down, the surviving subset has 7 drives and the pool resource owner, which is 8/16 votes. So, the pool doesn't have majority and goes down.
+Each of the 16 drives has one vote and node 2 also has one vote (since it's the pool resource owner). The *majority* is determined out of a total of **16 votes**. First, drive 7 goes down. If nodes three and four go down, the surviving subset has 7 drives and the pool resource owner, which is 8/16 votes. So, the pool doesn't have majority and goes down.
 
 ![Pool Quorum 2](media/understand-quorum/pool-2.png)
 
-- Can survive one server failure: <strong>Yes</strong>.
-- Can survive one server failure, then another: <strong>No</strong>.
-- Can survive two server failures at once: <strong>No</strong>. 
+- Can survive one server failure: **Yes**.
+- Can survive one server failure, then another: **No**.
+- Can survive two server failures at once: **No**. 
 
 #### Four nodes with a non-symmetrical layout. 
-Each of the 24 drives has one vote and node two also has one vote (since it's the pool resource owner). The *majority* is determined out of a total of <strong>24 votes</strong>. If nodes three and four go down, the surviving subset has 8 drives and the pool resource owner, which is 9/24 votes. So, the pool doesn't have majority and goes down.
+Each of the 24 drives has one vote and node two also has one vote (since it's the pool resource owner). The *majority* is determined out of a total of **24 votes**. If nodes three and four go down, the surviving subset has 8 drives and the pool resource owner, which is 9/24 votes. So, the pool doesn't have majority and goes down.
 
 ![Pool Quorum 3](media/understand-quorum/pool-3.png)
 
-- Can survive one server failure: <strong>Yes</strong>.
-- Can survive one server failure, then another: <strong>Depends </strong>(cannot survive if both nodes three and four go down, but can survive all other scenarios.
-- Can survive two server failures at once: <strong>Depends </strong>(cannot survive if both nodes three and four go down, but can survive all other scenarios.
+- Can survive one server failure: **Yes**.
+- Can survive one server failure, then another: **Depends **(cannot survive if both nodes three and four go down, but can survive all other scenarios.
+- Can survive two server failures at once: **Depends **(cannot survive if both nodes three and four go down, but can survive all other scenarios.
 
 ### Pool quorum recommendations
 

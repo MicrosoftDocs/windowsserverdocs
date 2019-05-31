@@ -173,7 +173,7 @@ Here are some of the advantages you get when you use a generation 2 virtual mach
 - **Larger boot volume**
     The maximum boot volume for generation 2 virtual machines is 64 TB. This is the maximum disk size supported by a .VHDX. For generation 1 virtual machines, the maximum boot volume is 2TB for a .VHDX and 2040GB for a .VHD. For more information, see [Hyper-V Virtual Hard Disk Format Overview](https://technet.microsoft.com/library/hh831446.aspx).  
 
- You may also see a slight improvement in virtual machine boot and installation times with generation 2 virtual machines.
+  You may also see a slight improvement in virtual machine boot and installation times with generation 2 virtual machines.
 
 ## <a name="BKMK_DeviceCompare"></a> What's the difference in device support?
 

@@ -29,9 +29,9 @@ Nslookup /exit
 
 ## Parameters
 
-|Parameter|Description|
-|---------|-----------|
-|{help | ?}|Displays a short summary of **nslookup** subcommands.|
+| Parameter | Description |
+|-----------|-------------|
+|   {help   |     ?}      |
 
 #### Additional references
 

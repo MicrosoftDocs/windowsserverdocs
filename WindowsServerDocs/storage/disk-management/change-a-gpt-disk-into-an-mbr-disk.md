@@ -52,11 +52,12 @@ You can change a disk from a GPT to an MBR partition style as long as the disk i
 
 <br />
 
-| Value | Description |
-| --- | --- |
-| <p>**list disk**</p> | <p>Displays a list of disks and information about them, such as their size, the amount of available free space, whether the disk is a Basic or Dynamic disk, and whether the disk uses the Master Boot Record (MBR) or GUID Partition Table (GPT) partition style. The disk marked with an asterisk (*) has focus.</p> |
-| <p>**select disk**</p> | <p>Selects the specified disk, where <em>disknumber</em> is the disk number, and gives it focus.</p> | <p>**clean**</p> | <p>Removes all partitions or volumes from the disk with focus.</p> |
-| <p>**convert mbr**</p> | <p>Converts an empty basic disk with the GUID Partition Table (GPT) partition style to a basic disk with the Master Boot Record (MBR) partition style.</p>
+
+|                Value                |                                                                                                                                                       Description                                                                                                                                                       |
+|-------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|  <p><strong>list disk</strong></p>  | <p>Displays a list of disks and information about them, such as their size, the amount of available free space, whether the disk is a Basic or Dynamic disk, and whether the disk uses the Master Boot Record (MBR) or GUID Partition Table (GPT) partition style. The disk marked with an asterisk (\*) has focus.</p> |
+| <p><strong>select disk</strong></p> |                                                                                                          <p>Selects the specified disk, where <em>disknumber</em> is the disk number, and gives it focus.</p>                                                                                                           |
+| <p><strong>convert mbr</strong></p> |                                                                               <p>Converts an empty basic disk with the GUID Partition Table (GPT) partition style to a basic disk with the Master Boot Record (MBR) partition style.</p>                                                                                |
 
 ## See Also
 

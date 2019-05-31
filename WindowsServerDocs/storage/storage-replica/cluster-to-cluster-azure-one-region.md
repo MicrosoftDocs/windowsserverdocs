@@ -24,7 +24,7 @@ Part one
 Part two
 > [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE269Pq]
 
-![The architecture diagram showcasing Cluster-to-cluster Storage Replica in Azure within same region.](media\Cluster-to-cluster-azure-one-region\architecture.png)
+![The architecture diagram showcasing Cluster-to-cluster Storage Replica in Azure within same region.](media/Cluster-to-cluster-azure-one-region/architecture.png)
 > [!IMPORTANT]
 > All referenced examples are specific to the illustration above.
 
@@ -54,42 +54,42 @@ Part two
    - Login as contosoadmin from all the nodes. 
     
 9. Create the clusters (**SRAZC1**, **SRAZC2**). 
-Below is the PowerShell commands for our example
-```PowerShell
+   Below is the PowerShell commands for our example
+   ```PowerShell
     New-Cluster -Name SRAZC1 -Node az2az1,az2az2 –StaticAddress 10.3.0.100
-```
-```PowerShell
+   ```
+   ```PowerShell
     New-Cluster -Name SRAZC2 -Node az2az3,az2az4 –StaticAddress 10.3.0.101
-```
+   ```
 10. Enable storage spaces direct
-```PowerShell
+    ```PowerShell
     Enable-clusterS2D
-```   
+    ```   
    
-   For each cluster create virtual disk and volume. One for the data and another for the log. 
+    For each cluster create virtual disk and volume. One for the data and another for the log. 
    
 11. Create an internal Standard SKU [Load Balancer](https://ms.portal.azure.com/#create/Microsoft.LoadBalancer-ARM) for each cluster (**azlbr1**,**azlbr2**). 
    
-   Provide the Cluster IP address as static private IP address for the load balancer.
-   - azlbr1 => Frontend IP: 10.3.0.100 (Pick up an unused IP address from the Virtual network (**az2az-Vnet**) subnet)
-   - Create Backend Pool for each load balancer. Add the associated cluster nodes.
-   - Create Health Probe: port 59999
-   - Create Load Balance Rule: Allow HA ports, with enabled Floating IP. 
+    Provide the Cluster IP address as static private IP address for the load balancer.
+    - azlbr1 => Frontend IP: 10.3.0.100 (Pick up an unused IP address from the Virtual network (**az2az-Vnet**) subnet)
+    - Create Backend Pool for each load balancer. Add the associated cluster nodes.
+    - Create Health Probe: port 59999
+    - Create Load Balance Rule: Allow HA ports, with enabled Floating IP. 
    
-   Provide the Cluster IP address as static private IP address for the load balancer.
-   - azlbr2 => Frontend IP: 10.3.0.101 (Pick up an unused IP address from the Virtual network (**az2az-Vnet**) subnet)
-   - Create Backend Pool for each load balancer. Add the associated cluster nodes.
-   - Create Health Probe: port 59999
-   - Create Load Balance Rule: Allow HA ports, with enabled Floating IP. 
+    Provide the Cluster IP address as static private IP address for the load balancer.
+    - azlbr2 => Frontend IP: 10.3.0.101 (Pick up an unused IP address from the Virtual network (**az2az-Vnet**) subnet)
+    - Create Backend Pool for each load balancer. Add the associated cluster nodes.
+    - Create Health Probe: port 59999
+    - Create Load Balance Rule: Allow HA ports, with enabled Floating IP. 
    
 12. On each cluster node, open port 59999 (Health Probe). 
    
     Run the following command on each node:
-```PowerShell
-netsh advfirewall firewall add rule name=PROBEPORT dir=in protocol=tcp action=allow localport=59999 remoteip=any profile=any 
-```   
+    ```PowerShell
+    netsh advfirewall firewall add rule name=PROBEPORT dir=in protocol=tcp action=allow localport=59999 remoteip=any profile=any 
+    ```   
 13. Instruct the cluster to listen for Health Probe messages on Port 59999 and respond from the node that currently owns this resource. 
-Run it once from any one node of the cluster, for each cluster. 
+    Run it once from any one node of the cluster, for each cluster. 
     
     In our example, make sure to change the "ILBIP" according to your configuration values. Run the following command from any one node **az2az1**/**az2az2**:
 
@@ -110,16 +110,16 @@ Run it once from any one node of the cluster, for each cluster.
     [int]$ProbePort = 59999
     Get-ClusterResource $IPResourceName | Set-ClusterParameter -Multiple @{"Address"="$ILBIP";"ProbePort"=$ProbePort;"SubnetMask"="255.255.255.255";"Network"="$ClusterNetworkName";”ProbeFailureThreshold”=5;"EnableDhcp"=0}  
     ```   
-   Make sure both clusters can connect / communicate with each other. 
+    Make sure both clusters can connect / communicate with each other. 
 
-   Either use "Connect to Cluster" feature in Failover cluster manager to connect to the other cluster or check other cluster responds from one of the nodes of the current cluster.  
+    Either use "Connect to Cluster" feature in Failover cluster manager to connect to the other cluster or check other cluster responds from one of the nodes of the current cluster.  
    
-   ```PowerShell
+    ```PowerShell
      Get-Cluster -Name SRAZC1 (ran from az2az3)
-   ```
-   ```PowerShell
+    ```
+    ```PowerShell
      Get-Cluster -Name SRAZC2 (ran from az2az1)
-   ```   
+    ```   
 
 15. Create cloud witnesses for both clusters. Create two [storage accounts](https://ms.portal.azure.com/#create/Microsoft.StorageAccount-ARM) (**az2azcw**, **az2azcw2**) in azure one for each cluster in the same resource group (**SR-AZ2AZ**).
 
@@ -132,25 +132,25 @@ Run it once from any one node of the cluster, for each cluster.
 
 18. Configure cluster-to-cluster Storage Replica.
    
-   Grant access from one cluster to another cluster in both directions:
+    Grant access from one cluster to another cluster in both directions:
 
-   In our example:
+    In our example:
 
-   ```PowerShell
+    ```PowerShell
       Grant-SRAccess -ComputerName az2az1 -Cluster SRAZC2
-   ```
-If you're using Windows Server 2016 then also run this command:
+    ```
+    If you're using Windows Server 2016 then also run this command:
 
-   ```PowerShell
+    ```PowerShell
       Grant-SRAccess -ComputerName az2az3 -Cluster SRAZC1
-   ```   
+    ```   
    
 19. Create SRPartnership for the clusters:</ol>
 
- - For cluster **SRAZC1**.
-   - Volume location:- c:\ClusterStorage\DataDisk1
-   - Log location:- g:
- - For cluster **SRAZC2**
+    - For cluster **SRAZC1**.
+    - Volume location:- c:\ClusterStorage\DataDisk1
+    - Log location:- g:
+    - For cluster **SRAZC2**
     - Volume location:- c:\ClusterStorage\DataDisk2
     - Log location:- g:
 

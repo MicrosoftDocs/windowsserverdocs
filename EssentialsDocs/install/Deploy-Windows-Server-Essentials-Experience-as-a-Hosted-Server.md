@@ -111,35 +111,35 @@ This document includes information that is specific to hosters who intend to dep
   
  Here are the two typical server-side networking topologies, and how the VPN and Remote Web Access could be configured:  
   
--   **Topology 1** (This is the preferred topology, and it places all the servers and VPN IP range in the same subnet.):  
+- **Topology 1** (This is the preferred topology, and it places all the servers and VPN IP range in the same subnet.):  
   
-    -   Set up the Server in a separate virtual network under a Network Address Translation (NAT) device.  
+  -   Set up the Server in a separate virtual network under a Network Address Translation (NAT) device.  
   
-    -   Enable the DHCP service in the virtual network, or assign a static IP address for the server.  
+  -   Enable the DHCP service in the virtual network, or assign a static IP address for the server.  
   
-    -   Forward public IP port 443 on the router to local network address of the server.  
+  -   Forward public IP port 443 on the router to local network address of the server.  
   
-    -   Allow VPN passthrough for port 443.  
+  -   Allow VPN passthrough for port 443.  
   
-    -   Set the VPN IPv4 address pool in the same subnet range as the server address.  
+  -   Set the VPN IPv4 address pool in the same subnet range as the server address.  
   
-    -   Assign second servers a static IP address within the same subnet, but out of the VPN address pool.  
+  -   Assign second servers a static IP address within the same subnet, but out of the VPN address pool.  
   
--   **Topology 2**:  
+- **Topology 2**:  
   
-    -   Assign the server a private IP address.  
+  -   Assign the server a private IP address.  
   
-    -   Allow Port 443 on the server to reach a public port 443 IP address.  
+  -   Allow Port 443 on the server to reach a public port 443 IP address.  
   
-    -   Allow VPN passthrough for port 443.  
+  -   Allow VPN passthrough for port 443.  
   
-    -   Assign different ranges for the VPN IPv4 address pool and the server address.  
+  -   Assign different ranges for the VPN IPv4 address pool and the server address.  
   
- With Topology 2, second server scenarios are not supported because you cannot add another server to the same domain.  
+  With Topology 2, second server scenarios are not supported because you cannot add another server to the same domain.  
   
- You can enable VPN during an unattended deployment by using our Windows PowerShell script, or it can be configured with the wizard after the initial configuration.  
+  You can enable VPN during an unattended deployment by using our Windows PowerShell script, or it can be configured with the wizard after the initial configuration.  
   
- To enable VPN by using Windows PowerShell, run the following command with administrative privileges on the server running Windows Server Essentials, and provide all the necessary information.  
+  To enable VPN by using Windows PowerShell, run the following command with administrative privileges on the server running Windows Server Essentials, and provide all the necessary information.  
   
 ```  
 ##  
@@ -172,19 +172,19 @@ Install-WssVpnServer -IPv4AddressRange ('192.168.0.160','192.168.0.240') -ApplyT
   
  If this key is set to 0x1, some of the on-premises features will change behavior. These feature changes include:  
   
--   **Client Backup** Client backup will be turned off by default for newly joined client computers.  
+- **Client Backup** Client backup will be turned off by default for newly joined client computers.  
   
--   **Client Restore Service** Client Restore Service will be disabled, and the UI will be hidden from the Dashboard.  
+- **Client Restore Service** Client Restore Service will be disabled, and the UI will be hidden from the Dashboard.  
   
--   **File History** File History settings for newly created user accounts will not be automatically managed by the server.  
+- **File History** File History settings for newly created user accounts will not be automatically managed by the server.  
   
--   **Server Backup** Server Backup service will be disabled, and the Server Backup UI will be hidden from the Dashboard.  
+- **Server Backup** Server Backup service will be disabled, and the Server Backup UI will be hidden from the Dashboard.  
   
--   **Storage Spaces** The UI for creating or managing Storage Spaces will be hidden from the Dashboard.  
+- **Storage Spaces** The UI for creating or managing Storage Spaces will be hidden from the Dashboard.  
   
--   **Anywhere Access** Router and VPN configuration will be skipped by default when you run the Set Up Anywhere Access Wizard.  
+- **Anywhere Access** Router and VPN configuration will be skipped by default when you run the Set Up Anywhere Access Wizard.  
   
- If you want to control the behavior of each feature listed, you can set the corresponding registry key for each of them. For information about how to set the registry key, refer to the [Customize and Deploy Windows Server Essentials in Windows Server 2012 R2](https://technet.microsoft.com/library/dn293241.aspx)  
+  If you want to control the behavior of each feature listed, you can set the corresponding registry key for each of them. For information about how to set the registry key, refer to the [Customize and Deploy Windows Server Essentials in Windows Server 2012 R2](https://technet.microsoft.com/library/dn293241.aspx)  
   
 ##  <a name="BKMK_AutomateDeployment"></a> Automate the deployment of Windows Server Essentials Experience  
  To automate the deployment, you need to first deploy the operating system and then install the  Windows Server Essentials Experience role.  
@@ -212,9 +212,9 @@ New-ItemProperty "HKLM:\Software\Microsoft\Windows Server\Setup"Ã‚Â  -Name 
   
 > [!NOTE]
 >  We recommend that you put the source server and the destination server in the same subnet. If this is not possible, you should make sure that:  
->   
->  -   The source server and the destination server can access each other „¢s internal DNS names.  
-> -   All the necessary ports are open.  
+> 
+> - The source server and the destination server can access each other „¢s internal DNS names.  
+>   -   All the necessary ports are open.  
   
  After migration, you can upgrade your licenses to remove the locks and limits. For more information, see [Transition from Windows Server Essentials to Windows Server 2012 Standard](https://technet.microsoft.com/library/jj247582.aspx).  
   

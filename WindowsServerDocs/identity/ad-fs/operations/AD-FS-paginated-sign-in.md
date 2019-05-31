@@ -43,12 +43,12 @@ On the third page, you’ll be asked to enter your password (assuming you select
 If you are a new customer to AD FS, you’ll receive the new design by default. However, if you are an existing customer with AD FS 2012 R2 or 2016, there are several steps you’ll need to take to receive the new design: 
 
 1. Upgrade your servers to AD FS 2019. 
-2.	Enable your FBL to 2019.
-3.	Enable the new sign-in experience.
-- Allow the new sign-in via PowerShell. In PowerShell, run the following command to enable pagination: 
-``Set-AdfsGlobalAuthenticationPolicy -EnablePaginatedAuthenticationPages $true``
-- Allow external authentication as primary, either via PowerShell or through the AD FS Server Manager. In PowerShell, run the following command to allow external authentication as primary: 
-``Set-AdfsGlobalAuthenticationPolicy -AllowAdditionalAuthenticationAsPrimary $true``
+2. Enable your FBL to 2019.
+3. Enable the new sign-in experience.
+4. Allow the new sign-in via PowerShell. In PowerShell, run the following command to enable pagination: 
+   ``Set-AdfsGlobalAuthenticationPolicy -EnablePaginatedAuthenticationPages $true``
+5. Allow external authentication as primary, either via PowerShell or through the AD FS Server Manager. In PowerShell, run the following command to allow external authentication as primary: 
+   ``Set-AdfsGlobalAuthenticationPolicy -AllowAdditionalAuthenticationAsPrimary $true``
 
 ## Customization
 The options for customization will still be applicable for AD FS 2019. 

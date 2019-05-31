@@ -30,6 +30,7 @@ rdpsign /sha1 <hash> [/q | /v |] [/l] <file_name.rdp>
 ```
 
 ## Parameters
+
 |Parameter|Description|
 |-------|--------|
 |/sha1 \<hash>|Specifies the thumbprint, which is the Secure Hash Algorithm 1 (SHA1) hash of the signing certificate that is included in the certificate store.|
@@ -49,20 +50,20 @@ rdpsign /sha1 <hash> [/q | /v |] [/l] <file_name.rdp>
 -   if any of the .rdp files cannot be read or written to, the tool will continue to the next file if multiple files are specified.
 
 ## <a name="BKMK_examples"></a>Examples
--   To sign an .rdp file that is named File1.rdp, navigate to the folder where you saved the .rdp file, and then type the following:
-    ```
-    rdpsign /sha1 hash file1.rdp
-    ```
-    > [!NOTE]
-    > The *hash* value represents the SHA1 certificate thumbprint, without any spaces.
--   To test whether digital signing will succeed for an .rdp file without actually signing the file, type the following:
-    ```
-    rdpsign /sha1 hash /l file1.rdp
-    ```
--   To sign multiple .rdp files, separate the file names by using spaces. For example, to sign multiple .rdp files that are named File1.rdp, File2.rdp, and File3.rdp, type the following:
-    ```
-    rdpsign /sha1 hash file1.rdp file2.rdp file3.rdp
-    ```
-## See Also
-[Command-Line Syntax Key](command-line-syntax-key.md)
-[Remote Desktop Services &#40;Terminal Services&#41; Command Reference](remote-desktop-services-terminal-services-command-reference.md)
+- To sign an .rdp file that is named File1.rdp, navigate to the folder where you saved the .rdp file, and then type the following:
+  ```
+  rdpsign /sha1 hash file1.rdp
+  ```
+  > [!NOTE]
+  > The *hash* value represents the SHA1 certificate thumbprint, without any spaces.
+- To test whether digital signing will succeed for an .rdp file without actually signing the file, type the following:
+  ```
+  rdpsign /sha1 hash /l file1.rdp
+  ```
+- To sign multiple .rdp files, separate the file names by using spaces. For example, to sign multiple .rdp files that are named File1.rdp, File2.rdp, and File3.rdp, type the following:
+  ```
+  rdpsign /sha1 hash file1.rdp file2.rdp file3.rdp
+  ```
+  ## See Also
+  [Command-Line Syntax Key](command-line-syntax-key.md)
+  [Remote Desktop Services &#40;Terminal Services&#41; Command Reference](remote-desktop-services-terminal-services-command-reference.md)

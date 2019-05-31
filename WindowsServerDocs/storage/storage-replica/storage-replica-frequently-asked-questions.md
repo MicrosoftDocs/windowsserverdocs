@@ -223,7 +223,7 @@ Unfortunately, we don't support creating a *new* partnership between Windows Ser
 However, to get the improved replication performance of Windows Server 2019, all members of the partnership must run Windows Server 2019 and you must delete existing partnerships and associated replication groups and then recreate them with seeded data (either when creating the partnership in Windows Admin Center or with the New-SRPartnership cmdlet).
 
 ## <a name="FAQ17"></a> How do I report an issue with Storage Replica or this guide?  
-For technical assistance with Storage Replica, you can post at [the Microsoft TechNet forums](https://social.technet.microsoft.com/Forums/windowsserver/en-US/home?forum=WinServerPreview). You can also email srfeed@microsoft.com for questions on Storage Replica or issues with this documentation. The https://windowsserver.uservoice.com site is preferred for design change requests, as it allows your fellow customers to provide support and feedback for your ideas.
+For technical assistance with Storage Replica, you can post at [the Microsoft TechNet forums](https://social.technet.microsoft.com/Forums/windowsserver/en-US/home?forum=WinServerPreview). You can also email srfeed@microsoft.com for questions on Storage Replica or issues with this documentation. The <https://windowsserver.uservoice.com> site is preferred for design change requests, as it allows your fellow customers to provide support and feedback for your ideas.
 
 
 

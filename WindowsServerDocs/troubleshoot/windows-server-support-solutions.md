@@ -78,10 +78,9 @@ These are the top Microsoft Support solutions for the most common issues experie
                         <p><a href="https://technet.microsoft.com/library/ee939272.aspx">How to troubleshoot the Key Management Service (KMS)</a></p>
 <hr>
                         <p><a href="https://technet.microsoft.com/library/ff793439.aspx">Volume Activation Troubleshooting</a></p>
-<hr>                       
-                        <p><a href="https://technet.microsoft.com/library/ff793399.aspx">Activation Error Codes</a></p>
+<hr><br/>                        <p><a href="https://technet.microsoft.com/library/ff793399.aspx">Activation Error Codes</a></p>
 <hr>
-                        <p><a href="https://support.microsoft.com/help/2796988/windows-8-or-windows-server-2012-installation-may-fail-with-error-mess">Windows installation may fail with error "The product key entered does not match any of the Windows images available for installation. Enter a different product key"</a></p>
+                        <p><a href="https://support.microsoft.com/help/2796988/windows-8-or-windows-server-2012-installation-may-fail-with-error-mess">Windows installation may fail with error &quot;The product key entered does not match any of the Windows images available for installation. Enter a different product key&quot;</a></p>
                     </div>
                 </div>
             </div>
@@ -132,8 +131,7 @@ These are the top Microsoft Support solutions for the most common issues experie
                         <a href="/azure/active-directory/active-directory-conditional-access-automatic-device-registration-setup">How to configure automatic registration of Windows domain-joined devices with Azure Active Directory</a>
 <hr>
                         <p><a href="/azure/active-directory/device-management-hybrid-azuread-joined-devices-setup#step-2-setup-issuance-of-claims">Setup issuance of claims</a></p>
-<hr>  
-                        <p><a href="../identity/ad-fs/operations/configure-ad-fs-to-authenticate-users-stored-in-ldap-directories.md">Configure AD FS to authenticate users stored in LDAP directories</a></p>
+<hr><br/>                        <p><a href="../identity/ad-fs/operations/configure-ad-fs-to-authenticate-users-stored-in-ldap-directories.md">Configure AD FS to authenticate users stored in LDAP directories</a></p>
 <hr>
                         <p><a href="../identity/ad-fs/operations/ad-fs-support-for-alternate-hostname-binding-for-certificate-authentication.md">AD FS support for alternate hostname binding for certificate authentication</a></p>
 <hr>

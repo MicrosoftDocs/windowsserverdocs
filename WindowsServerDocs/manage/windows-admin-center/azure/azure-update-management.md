@@ -23,5 +23,5 @@ Once you've configured your server to be managed by Azure Update Management, you
 
 [Learn how to stop using Azure Update Management to update your server.](azure-monitor.md#disabling-monitoring)
 
-Note that you must [register your Windows Admin Center gateway with Azure](..\configure\azure-integration.md) before setting up Azure Update Management.
+Note that you must [register your Windows Admin Center gateway with Azure](../configure/azure-integration.md) before setting up Azure Update Management.
 
