@@ -12,16 +12,16 @@ ms.technology: identity-adfs
 # AD FS paginated sign-in
 
 
-For AD FS 2019, we’ve redesigned the sign-in UI.  Now, the AD FS sign-in will have the same look and feel of Azure AD.  This will provide users a more consistent sign-in experience, incorporating a centered and paginated user flow.
+For AD FS in Windows Server 2019, we’ve redesigned the sign-in UI.  Now, the AD FS sign-in will have the same look and feel of Azure AD.  This will provide users a more consistent sign-in experience, incorporating a centered and paginated user flow.
 
 ## What’s changing
-In AD FS 2012 R2 and 2016, your sign-in screen looked something like this:
+In AD FS in Windows Server 2012 R2 and 2016, your sign-in screen looked something like this:
 
 ![oldsignin](media/AD-FS-paginated-sign-in/signin1.png)
 
 We’re moving away from displaying a single form located on the right side of the screen.
 
-In AD FS 2019, these are the major design changes that you’ll see:
+In AD FS in Windows Server 2019, these are the major design changes that you’ll see:
 
 
 - **A centered UI**. Previously, the sign-in UI existed on the right side of the screen, as shown above. We’ve moved the UI front and center to modernize the experience.
