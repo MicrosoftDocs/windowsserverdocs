@@ -11,29 +11,16 @@ ms.technology: storage-spaces
 ---
 # Upgrade a Storage Spaces Direct cluster to Windows Server 2019
 
-This topic describes how to upgrade a Storage Spaces Direct cluster to Windows
-Server 2019. There are four approaches to upgrading a Storage Spaces Direct
-cluster from Windows Server 2016 to Windows Server 2019, using the [cluster OS
-rolling upgrade process](../../failover-clustering/Cluster-Operating-System-Rolling-Upgrade.md) —two
-that involve keeping the VMs running, and two that involve stopping all VMs.
-Each approach has different strengths and weaknesses, so select that one that
-best suits the needs of your organization:
+This topic describes how to upgrade a Storage Spaces Direct cluster to Windows Server 2019. There are four approaches to upgrading a Storage Spaces Direct
+cluster from Windows Server 2016 to Windows Server 2019, using the [cluster OS rolling upgrade process](../../failover-clustering/Cluster-Operating-System-Rolling-Upgrade.md) —two that involve keeping the VMs running, and two that involve stopping all VMs. Each approach has different strengths and weaknesses, so select that one that best suits the needs of your organization:
 
--   **In-place upgrade while VMs are running** on each server in the
-    cluster—this option incurs no VM downtime, but you’ll need to wait for
-    storage jobs (mirror repair) to complete after each server is upgraded.
+- **In-place upgrade while VMs are running** on each server in the cluster—this option incurs no VM downtime, but you’ll need to wait for storage jobs (mirror repair) to complete after each server is upgraded.
 
--   **Clean-OS installation while VMs are running** on each server in the
-    cluster—this option incurs no VM downtime, but you’ll need to wait for
-    storage jobs (mirror repair) to complete after each server is upgraded, and
-    you’ll have to set up each server and all its apps and roles again.
+- **Clean-OS installation while VMs are running** on each server in the cluster—this option incurs no VM downtime, but you’ll need to wait for storage jobs (mirror repair) to complete after each server is upgraded, and you’ll have to set up each server and all its apps and roles again.
 
--   **In-place upgrade while VMs are stopped** on each server in the
-    cluster—this option incurs VM downtime, but you don’t need to wait for
-    storage jobs (mirror repair), so it’s faster.
+- **In-place upgrade while VMs are stopped** on each server in the cluster—this option incurs VM downtime, but you don’t need to wait for storage jobs (mirror repair), so it’s faster.
 
--   **Clean-OS install while VMs are stopped** on each server in the
-    cluster—This option incurs VM downtime, but you don’t need to wait for
+- **Clean-OS install while VMs are stopped** on each server in the cluster—This option incurs VM downtime, but you don’t need to wait for
     storage jobs (mirror repair) so it’s faster.
 
 ## Prerequisites and limitations
@@ -70,7 +57,7 @@ There are some limitations with the upgrade process to be aware of:
     -   **Compaction** efficiency improvements in Windows Server 2019 that are
         specific to multi-resilient volumes
 
-- Before upgrading a Windows Server 2016 Storage Spaces Direct cluster server, we recommend putting the server into storage maintenance mode. For more info, see the Event 5120 section of [Troubleshoot Storage Spaces Direct](troubleshooting-storage-spaces.md#event-5120-with-status-to-timeout-c00000b). Although this issue has been fixed in Windows Server 2016, we recommend putting each Storage Spaces Direct server into storage maintenance mode during the upgrade as a best practice.
+- Before upgrading a Windows Server 2016 Storage Spaces Direct cluster server, we recommend putting the server into storage maintenance mode. For more info, see the Event 5120 section of [Troubleshoot Storage Spaces Direct](troubleshooting-storage-spaces.md#event-5120-with-statustotimeout-c00000b). Although this issue has been fixed in Windows Server 2016, we recommend putting each Storage Spaces Direct server into storage maintenance mode during the upgrade as a best practice.
 
 -   There is a known issue with Software Defined Networking environments that
     use SET switches. This issue involves Hyper-V VM live migrations from
