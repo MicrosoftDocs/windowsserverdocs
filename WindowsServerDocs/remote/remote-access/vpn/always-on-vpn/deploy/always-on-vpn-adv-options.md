@@ -84,7 +84,7 @@ The following table lists the approximate release dates of the fixes for each ve
 1. Make sure that all the VPN client and RRAS server certificates that you use have CDP entries, and that the RRAS server can reach the respective CRLs.
 1. On the RRAS server, use the **Set-VpnAuthProtocol** PowerShell cmdlet to configure the **RootCertificateNameToAccept** parameter.<br />
    The following example lists the commands to use to do this. In the example, <CN=Contoso Root Certification Authority> represents the distinguished name of the Root Certification Authority. 
-   ``` ps
+   ``` powershell
    $cert1 = ( Get-ChildItem -Path cert:LocalMachine\root | Where-Object -FilterScript { $_.Subject -Like "*<CN=Contoso Root Certification Authority>,*" } )
    Set-VpnAuthProtocol -RootCertificateNameToAccept $cert1 -PassThru
    ```
