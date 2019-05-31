@@ -203,53 +203,53 @@ Before you install AD CS, you configure the CAPolicy.inf file with specific sett
 
 **Prerequisite:** You must be a member of the Administrators group.
 
-1.  On the computer where you are planning to install AD CS, open Windows PowerShell, type **notepad c:\CAPolicy.inf** and press ENTER.
+1. On the computer where you are planning to install AD CS, open Windows PowerShell, type **notepad c:\CAPolicy.inf** and press ENTER.
 
-2.  When prompted to create a new file, click **Yes**.
+2. When prompted to create a new file, click **Yes**.
 
-3.  Enter the following as the contents of the file:
+3. Enter the following as the contents of the file:
    ```
    [Version]  
-    Signature="$Windows NT$"  
-    [PolicyStatementExtension]  
-    Policies=InternalPolicy  
-    [InternalPolicy]  
-    OID=1.2.3.4.1455.67.89.5  
-    Notice="Legal Policy Statement"  
-    URL=https://pki.corp.contoso.com/pki/cps.txt  
-    [Certsrv_Server]  
-    RenewalKeyLength=2048  
-    RenewalValidityPeriod=Years  
-    RenewalValidityPeriodUnits=5  
-    CRLPeriod=weeks  
-    CRLPeriodUnits=1  
-    LoadDefaultTemplates=0  
-    AlternateSignatureAlgorithm=1  
-    [CRLDistributionPoint]  
-    [AuthorityInformationAccess]
+   Signature="$Windows NT$"  
+   [PolicyStatementExtension]  
+   Policies=InternalPolicy  
+   [InternalPolicy]  
+   OID=1.2.3.4.1455.67.89.5  
+   Notice="Legal Policy Statement"  
+   URL=https://pki.corp.contoso.com/pki/cps.txt  
+   [Certsrv_Server]  
+   RenewalKeyLength=2048  
+   RenewalValidityPeriod=Years  
+   RenewalValidityPeriodUnits=5  
+   CRLPeriod=weeks  
+   CRLPeriodUnits=1  
+   LoadDefaultTemplates=0  
+   AlternateSignatureAlgorithm=1  
+   [CRLDistributionPoint]  
+   [AuthorityInformationAccess]
    ```
-1.  Click **File**, and then click **Save As**.
+4. Click **File**, and then click **Save As**.
 
-2.  Navigate to the %systemroot% folder.
+5. Navigate to the %systemroot% folder.
 
-3.  Ensure the following:
+6. Ensure the following:
 
-    -   **File name** is set to **CAPolicy.inf**
+   -   **File name** is set to **CAPolicy.inf**
 
-    -   **Save as type** is set to **All Files**
+   -   **Save as type** is set to **All Files**
 
-    -   **Encoding** is **ANSI**
+   -   **Encoding** is **ANSI**
 
-4.  Click **Save**.
+7. Click **Save**.
 
-5.  When you are prompted to overwrite the file, click **Yes**.
+8. When you are prompted to overwrite the file, click **Yes**.
 
-    ![Save As location for the CAPolicy.inf file](../../../media/Prepare-the-CAPolicy-inf-File/001-SaveCAPolicyORCA1.gif)
+   ![Save As location for the CAPolicy.inf file](../../../media/Prepare-the-CAPolicy-inf-File/001-SaveCAPolicyORCA1.gif)
 
-    >   [!CAUTION]  
-    >   Be sure to save the CAPolicy.inf with the inf extension. If you do not specifically type **.inf** at the end of the file name and select the options as described, the file will be saved as a text file and will not be used during CA installation.
+   > [!CAUTION]
+   >   Be sure to save the CAPolicy.inf with the inf extension. If you do not specifically type **.inf** at the end of the file name and select the options as described, the file will be saved as a text file and will not be used during CA installation.
 
-6.  Close Notepad.
+9. Close Notepad.
 
->   [!IMPORTANT]  
+> [!IMPORTANT]
 >   In the CAPolicy.inf, you can see there is a line specifying the URL https://pki.corp.contoso.com/pki/cps.txt. The Internal Policy section of the CAPolicy.inf is just shown as an example of how you would specify the location of a certificate practice statement (CPS). In this guide, you are not instructed to create the certificate practice statement (CPS).

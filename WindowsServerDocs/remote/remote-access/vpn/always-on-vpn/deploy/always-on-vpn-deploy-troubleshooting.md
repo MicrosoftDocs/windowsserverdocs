@@ -117,7 +117,7 @@ The application logs on client computers record most of the higher-level details
 Look for events from source RasClient. All error messages return the error code at the end of the message. Some of the more common error codes are detailed below, but a full list is available in [Routing and Remote Access Error Codes](https://msdn.microsoft.com/library/windows/desktop/bb530704.aspx).
 
 ## NPS logs
-NPS creates and stores the NPS accounting logs. By default, these are stored in %SYSTEMROOT%\\System32\\Logfiles\\ in a file named IN*XXXX.*txt, where *XXXX* is the date the file was created.
+NPS creates and stores the NPS accounting logs. By default, these are stored in %SYSTEMROOT%\\System32\\Logfiles\\ in a file named IN<em>XXXX.</em>txt, where *XXXX* is the date the file was created.
 
 By default, these logs are in comma-separated values format, but they don’t include a heading row. The heading row is:
 
@@ -163,121 +163,121 @@ A small misconfiguration can cause the client connection to fail and can be chal
 
 ### Oops - You can't get to this yet
 
--   **Error description.** When the Conditional Access policy is not satisfied, blocking the VPN connection, but connects after the user clicks **X** to close the message.  Clicking **OK** causes another authentication attempt, which ends in another _Oops_ message. These events are recorded in the AAD Operational Event log of the client. 
+- **Error description.** When the Conditional Access policy is not satisfied, blocking the VPN connection, but connects after the user clicks **X** to close the message.  Clicking **OK** causes another authentication attempt, which ends in another _Oops_ message. These events are recorded in the AAD Operational Event log of the client. 
 
--   **Possible cause.** 
+- **Possible cause.** 
 
-    - The user has a valid client authentication certificate in their Personal Certificate store that was not issued by Azure AD.
+  - The user has a valid client authentication certificate in their Personal Certificate store that was not issued by Azure AD.
 
-    - The VPN profile \<TLSExtensions\> section is either missing or does not contain the **\<EKUName\>AAD Conditional Access\</EKUName\>\<EKUOID\>1.3.6.1.4.1.311.87</EKUOID\>\<EKUName>AAD Conditional Access</EKUName\>\<EKUOID\>1.3.6.1.4.1.311.87</EKUOID\>** entries. The \<EKUName> and \<EKUOID> entries tell the VPN client which certificate to retrieve from the user's certificate store when passing the certificate to the VPN server. Without this, the VPN client uses whatever valid Client Authentication certificate is in the user's certificate store and authentication succeeds. 
+  - The VPN profile \<TLSExtensions\> section is either missing or does not contain the **\<EKUName\>AAD Conditional Access\</EKUName\>\<EKUOID\>1.3.6.1.4.1.311.87</EKUOID\>\<EKUName>AAD Conditional Access</EKUName\>\<EKUOID\>1.3.6.1.4.1.311.87</EKUOID\>** entries. The \<EKUName> and \<EKUOID> entries tell the VPN client which certificate to retrieve from the user's certificate store when passing the certificate to the VPN server. Without this, the VPN client uses whatever valid Client Authentication certificate is in the user's certificate store and authentication succeeds. 
 
-    - The RADIUS server (NPS) has not been configured to only accept client certificates that contain the **AAD Conditional Access** OID.
+  - The RADIUS server (NPS) has not been configured to only accept client certificates that contain the **AAD Conditional Access** OID.
 
--   **Possible solution.** To escape this loop, do the following:
+- **Possible solution.** To escape this loop, do the following:
 
-    1. In Windows PowerShell, run the **Get-WmiObject** cmdlet to dump the VPN profile configuration. 
-    2. Verify that the **\<TLSExtensions>**, **\<EKUName>**, and **\<EKUOID>** sections exist and shows the correct name and OID. 
-        ```
-        PS C:\> Get-WmiObject -Class MDM_VPNv2_01 -Namespace root\cimv2\mdm\dmmap
+  1. In Windows PowerShell, run the **Get-WmiObject** cmdlet to dump the VPN profile configuration. 
+  2. Verify that the **\<TLSExtensions>**, **\<EKUName>**, and **\<EKUOID>** sections exist and shows the correct name and OID. 
+      ```
+      PS C:\> Get-WmiObject -Class MDM_VPNv2_01 -Namespace root\cimv2\mdm\dmmap
 
-        __GENUS                 : 2
-        __CLASS                 : MDM_VPNv2_01
-        __SUPERCLASS            :
-        __DYNASTY               : MDM_VPNv2_01
-        __RELPATH               : MDM_VPNv2_01.InstanceID="AlwaysOnVPN",ParentID="./Vendor/MSFT/VPNv2"
-        __PROPERTY_COUNT        : 10
-        __DERIVATION            : {}
-        __SERVER                : DERS2
-        __NAMESPACE             : root\cimv2\mdm\dmmap
-        __PATH                  : \\DERS2\root\cimv2\mdm\dmmap:MDM_VPNv2_01.InstanceID="AlwaysOnVPN",ParentID="./Vendor/MSFT/VP
-                                    Nv2"
-        AlwaysOn                :
-        ByPassForLocal          :
-        DnsSuffix               :
-        EdpModeId               :
-        InstanceID              : AlwaysOnVPN
-        LockDown                :
-        ParentID                : ./Vendor/MSFT/VPNv2
-        ProfileXML              : <VPNProfile><RememberCredentials>false</RememberCredentials><DeviceCompliance><Enabled>true</
-                                    Enabled><Sso><Enabled>true</Enabled></Sso></DeviceCompliance><NativeProfile><Servers>derras2.
-                                    corp.deverett.info;derras2.corp.deverett.info</Servers><RoutingPolicyType>ForceTunnel</Routin
-                                    gPolicyType><NativeProtocolType>Ikev2</NativeProtocolType><Authentication><UserMethod>Eap</Us
-                                    erMethod><MachineMethod>Eap</MachineMethod><Eap><Configuration><EapHostConfig
-                                    xmlns="https://www.microsoft.com/provisioning/EapHostConfig"><EapMethod><Type
-                                    xmlns="https://www.microsoft.com/provisioning/EapCommon">25</Type><VendorId
-                                    xmlns="https://www.microsoft.com/provisioning/EapCommon">0</VendorId><VendorType
-                                    xmlns="https://www.microsoft.com/provisioning/EapCommon">0</VendorType><AuthorId
-                                    xmlns="https://www.microsoft.com/provisioning/EapCommon">0</AuthorId></EapMethod><Config
-                                    xmlns="https://www.microsoft.com/provisioning/EapHostConfig"><Eap xmlns="https://www.microsoft.
-                                    com/provisioning/BaseEapConnectionPropertiesV1"><Type>25</Type><EapType xmlns="https://www.mic
-                                    rosoft.com/provisioning/MsPeapConnectionPropertiesV1"><ServerValidation><DisableUserPromptFor
-                                    ServerValidation>true</DisableUserPromptForServerValidation><ServerNames></ServerNames></Serv
-                                    erValidation><FastReconnect>true</FastReconnect><InnerEapOptional>false</InnerEapOptional><Ea
-                                    p xmlns="https://www.microsoft.com/provisioning/BaseEapConnectionPropertiesV1"><Type>13</Type>
-                                    <EapType xmlns="https://www.microsoft.com/provisioning/EapTlsConnectionPropertiesV1"><Credenti
-                                    alsSource><CertificateStore><SimpleCertSelection>true</SimpleCertSelection></CertificateStore
-                                    ></CredentialsSource><ServerValidation><DisableUserPromptForServerValidation>true</DisableUse
-                                    rPromptForServerValidation><ServerNames></ServerNames><TrustedRootCA>5a 89 fe cb 5b 49 a7 0b
-                                    1a 52 63 b7 35 ee d7 1c c2 68 be 4b </TrustedRootCA></ServerValidation><DifferentUsername>fal
-                                    se</DifferentUsername><PerformServerValidation xmlns="https://www.microsoft.com/provisioning/E
-                                    apTlsConnectionPropertiesV2">true</PerformServerValidation><AcceptServerName xmlns="https://ww
-                                    w.microsoft.com/provisioning/EapTlsConnectionPropertiesV2">false</AcceptServerName><TLSExtens
-                                    ions
-                                    xmlns="https://www.microsoft.com/provisioning/EapTlsConnectionPropertiesV2"><FilteringInfo xml
-                                    ns="https://www.microsoft.com/provisioning/EapTlsConnectionPropertiesV3"><EKUMapping><EKUMap><
-                                    EKUName>AAD Conditional
-                                    Access</EKUName><EKUOID>1.3.6.1.4.1.311.87</EKUOID></EKUMap></EKUMapping><ClientAuthEKUList
-                                    Enabled="true"><EKUMapInList><EKUName>AAD Conditional Access</EKUName></EKUMapInList></Client
-                                    AuthEKUList></FilteringInfo></TLSExtensions></EapType></Eap><EnableQuarantineChecks>false</En
-                                    ableQuarantineChecks><RequireCryptoBinding>false</RequireCryptoBinding><PeapExtensions><Perfo
-                                    rmServerValidation xmlns="https://www.microsoft.com/provisioning/MsPeapConnectionPropertiesV2"
-                                    >false</PerformServerValidation><AcceptServerName xmlns="https://www.microsoft.com/provisionin
-                                    g/MsPeapConnectionPropertiesV2">false</AcceptServerName></PeapExtensions></EapType></Eap></Co
-                                    nfig></EapHostConfig></Configuration></Eap></Authentication></NativeProfile></VPNProfile>
-        RememberCredentials     : False
-        TrustedNetworkDetection :
-        PSComputerName          : DERS2
-        ```
+      __GENUS                 : 2
+      __CLASS                 : MDM_VPNv2_01
+      __SUPERCLASS            :
+      __DYNASTY               : MDM_VPNv2_01
+      __RELPATH               : MDM_VPNv2_01.InstanceID="AlwaysOnVPN",ParentID="./Vendor/MSFT/VPNv2"
+      __PROPERTY_COUNT        : 10
+      __DERIVATION            : {}
+      __SERVER                : DERS2
+      __NAMESPACE             : root\cimv2\mdm\dmmap
+      __PATH                  : \\DERS2\root\cimv2\mdm\dmmap:MDM_VPNv2_01.InstanceID="AlwaysOnVPN",ParentID="./Vendor/MSFT/VP
+                                  Nv2"
+      AlwaysOn                :
+      ByPassForLocal          :
+      DnsSuffix               :
+      EdpModeId               :
+      InstanceID              : AlwaysOnVPN
+      LockDown                :
+      ParentID                : ./Vendor/MSFT/VPNv2
+      ProfileXML              : <VPNProfile><RememberCredentials>false</RememberCredentials><DeviceCompliance><Enabled>true</
+                                  Enabled><Sso><Enabled>true</Enabled></Sso></DeviceCompliance><NativeProfile><Servers>derras2.
+                                  corp.deverett.info;derras2.corp.deverett.info</Servers><RoutingPolicyType>ForceTunnel</Routin
+                                  gPolicyType><NativeProtocolType>Ikev2</NativeProtocolType><Authentication><UserMethod>Eap</Us
+                                  erMethod><MachineMethod>Eap</MachineMethod><Eap><Configuration><EapHostConfig
+                                  xmlns="https://www.microsoft.com/provisioning/EapHostConfig"><EapMethod><Type
+                                  xmlns="https://www.microsoft.com/provisioning/EapCommon">25</Type><VendorId
+                                  xmlns="https://www.microsoft.com/provisioning/EapCommon">0</VendorId><VendorType
+                                  xmlns="https://www.microsoft.com/provisioning/EapCommon">0</VendorType><AuthorId
+                                  xmlns="https://www.microsoft.com/provisioning/EapCommon">0</AuthorId></EapMethod><Config
+                                  xmlns="https://www.microsoft.com/provisioning/EapHostConfig"><Eap xmlns="https://www.microsoft.
+                                  com/provisioning/BaseEapConnectionPropertiesV1"><Type>25</Type><EapType xmlns="https://www.mic
+                                  rosoft.com/provisioning/MsPeapConnectionPropertiesV1"><ServerValidation><DisableUserPromptFor
+                                  ServerValidation>true</DisableUserPromptForServerValidation><ServerNames></ServerNames></Serv
+                                  erValidation><FastReconnect>true</FastReconnect><InnerEapOptional>false</InnerEapOptional><Ea
+                                  p xmlns="https://www.microsoft.com/provisioning/BaseEapConnectionPropertiesV1"><Type>13</Type>
+                                  <EapType xmlns="https://www.microsoft.com/provisioning/EapTlsConnectionPropertiesV1"><Credenti
+                                  alsSource><CertificateStore><SimpleCertSelection>true</SimpleCertSelection></CertificateStore
+                                  ></CredentialsSource><ServerValidation><DisableUserPromptForServerValidation>true</DisableUse
+                                  rPromptForServerValidation><ServerNames></ServerNames><TrustedRootCA>5a 89 fe cb 5b 49 a7 0b
+                                  1a 52 63 b7 35 ee d7 1c c2 68 be 4b </TrustedRootCA></ServerValidation><DifferentUsername>fal
+                                  se</DifferentUsername><PerformServerValidation xmlns="https://www.microsoft.com/provisioning/E
+                                  apTlsConnectionPropertiesV2">true</PerformServerValidation><AcceptServerName xmlns="https://ww
+                                  w.microsoft.com/provisioning/EapTlsConnectionPropertiesV2">false</AcceptServerName><TLSExtens
+                                  ions
+                                  xmlns="https://www.microsoft.com/provisioning/EapTlsConnectionPropertiesV2"><FilteringInfo xml
+                                  ns="https://www.microsoft.com/provisioning/EapTlsConnectionPropertiesV3"><EKUMapping><EKUMap><
+                                  EKUName>AAD Conditional
+                                  Access</EKUName><EKUOID>1.3.6.1.4.1.311.87</EKUOID></EKUMap></EKUMapping><ClientAuthEKUList
+                                  Enabled="true"><EKUMapInList><EKUName>AAD Conditional Access</EKUName></EKUMapInList></Client
+                                  AuthEKUList></FilteringInfo></TLSExtensions></EapType></Eap><EnableQuarantineChecks>false</En
+                                  ableQuarantineChecks><RequireCryptoBinding>false</RequireCryptoBinding><PeapExtensions><Perfo
+                                  rmServerValidation xmlns="https://www.microsoft.com/provisioning/MsPeapConnectionPropertiesV2"
+                                  >false</PerformServerValidation><AcceptServerName xmlns="https://www.microsoft.com/provisionin
+                                  g/MsPeapConnectionPropertiesV2">false</AcceptServerName></PeapExtensions></EapType></Eap></Co
+                                  nfig></EapHostConfig></Configuration></Eap></Authentication></NativeProfile></VPNProfile>
+      RememberCredentials     : False
+      TrustedNetworkDetection :
+      PSComputerName          : DERS2
+      ```
 
-    3. To determine if there are valid certificates in the user's certificate store, run the **Certutil** command:
+  3. To determine if there are valid certificates in the user's certificate store, run the **Certutil** command:
 
-       ```
-       C:\>certutil -store -user My
+     ```
+     C:\>certutil -store -user My
 
-        My "Personal"
-        ================ Certificate 0 ================
-        Serial Number: 32000000265259d0069fa6f205000000000026
-        Issuer: CN=corp-DEDC0-CA, DC=corp, DC=deverett, DC=info
-         NotBefore: 12/8/2017 8:07 PM
-         NotAfter: 12/8/2018 8:07 PM
-        Subject: E=winfed@deverett.info, CN=WinFed, OU=Users, OU=Corp, DC=corp, DC=deverett, DC=info
-        Certificate Template Name (Certificate Type): User
-        Non-root Certificate
-        Template: User
-        Cert Hash(sha1): a50337ab015d5612b7dc4c1e759d201e74cc2a93
-          Key Container = a890fd7fbbfc072f8fe045e680c501cf_5834bfa9-1c4a-44a8-a128-c2267f712336
-          Simple container name: te-User-c7bcc4bd-0498-4411-af44-da2257f54387
-          Provider = Microsoft Enhanced Cryptographic Provider v1.0
-        Encryption test passed
+      My "Personal"
+      ================ Certificate 0 ================
+      Serial Number: 32000000265259d0069fa6f205000000000026
+      Issuer: CN=corp-DEDC0-CA, DC=corp, DC=deverett, DC=info
+       NotBefore: 12/8/2017 8:07 PM
+       NotAfter: 12/8/2018 8:07 PM
+      Subject: E=winfed@deverett.info, CN=WinFed, OU=Users, OU=Corp, DC=corp, DC=deverett, DC=info
+      Certificate Template Name (Certificate Type): User
+      Non-root Certificate
+      Template: User
+      Cert Hash(sha1): a50337ab015d5612b7dc4c1e759d201e74cc2a93
+        Key Container = a890fd7fbbfc072f8fe045e680c501cf_5834bfa9-1c4a-44a8-a128-c2267f712336
+        Simple container name: te-User-c7bcc4bd-0498-4411-af44-da2257f54387
+        Provider = Microsoft Enhanced Cryptographic Provider v1.0
+      Encryption test passed
         
-        ================ Certificate 1 ================
-        Serial Number: 367fbdd7e6e4103dec9b91f93959ac56
-        Issuer: CN=Microsoft VPN root CA gen 1
-         NotBefore: 12/8/2017 6:24 PM
-         NotAfter: 12/8/2017 7:29 PM
-        Subject: CN=WinFed@deverett.info
-        Non-root Certificate
-        Cert Hash(sha1): 37378a1b06dcef1b4d4753f7d21e4f20b18fbfec
-          Key Container = 31685cae-af6f-48fb-ac37-845c69b4c097
-          Unique container name: bf4097e20d4480b8d6ebc139c9360f02_5834bfa9-1c4a-44a8-a128-c2267f712336
-          Provider = Microsoft Software Key Storage Provider
-        Private key is NOT exportable
-        Encryption test passed
-       ```
-       >[!NOTE]
-       >If a certificate from Issuer **CN=Microsoft VPN root CA gen 1** is present in the user's Personal store, but the user gained access by clicking **X** to close the Oops message, collect CAPI2 event logs to verify the certificate used to authenticate was a valid Client Authentication certificate that was not issued from the Microsoft VPN root CA.
+      ================ Certificate 1 ================
+      Serial Number: 367fbdd7e6e4103dec9b91f93959ac56
+      Issuer: CN=Microsoft VPN root CA gen 1
+       NotBefore: 12/8/2017 6:24 PM
+       NotAfter: 12/8/2017 7:29 PM
+      Subject: CN=WinFed@deverett.info
+      Non-root Certificate
+      Cert Hash(sha1): 37378a1b06dcef1b4d4753f7d21e4f20b18fbfec
+        Key Container = 31685cae-af6f-48fb-ac37-845c69b4c097
+        Unique container name: bf4097e20d4480b8d6ebc139c9360f02_5834bfa9-1c4a-44a8-a128-c2267f712336
+        Provider = Microsoft Software Key Storage Provider
+      Private key is NOT exportable
+      Encryption test passed
+     ```
+     >[!NOTE]
+     >If a certificate from Issuer **CN=Microsoft VPN root CA gen 1** is present in the user's Personal store, but the user gained access by clicking **X** to close the Oops message, collect CAPI2 event logs to verify the certificate used to authenticate was a valid Client Authentication certificate that was not issued from the Microsoft VPN root CA.
 
-   4. If a valid Client Authentication certificate exists in the user's Personal store, the connection fails (as it should) after the user clicks the **X** and  if the **\<TLSExtensions>**, **\<EKUName>**, and **\<EKUOID>** sections exist and contain the correct information.<p>The _A certificate could not be found that can be used with the Extensible Authenticate Protocol._ error message appears.
+  4. If a valid Client Authentication certificate exists in the user's Personal store, the connection fails (as it should) after the user clicks the **X** and  if the **\<TLSExtensions>**, **\<EKUName>**, and **\<EKUOID>** sections exist and contain the correct information.<p>The _A certificate could not be found that can be used with the Extensible Authenticate Protocol._ error message appears.
 
 ### Unable to delete the certificate from the VPN connectivity blade
 

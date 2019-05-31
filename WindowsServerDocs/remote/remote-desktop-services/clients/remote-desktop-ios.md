@@ -44,14 +44,14 @@ On your iOS device, follow [these instructions](https://aka.ms/rdiosbeta) to dow
 To create a remote desktop connection: 
 1. In the Connection Center tap **+**, and then tap **Add PC or Server**.
 2. Enter the following information for the remote desktop connection:
-  - **PC name** – the name of the computer. This can be a Windows computer name, an Internet domain name, or an IP address. You can also append port information to the PC name (for example, **MyDesktop:3389** or **10.0.0.1:3389**).
-  - **User name** – The user name to use to access the remote PC. You can use the following formats: *user_name*, *domain\user_name*, or *user_name@domain.com*. You can also specify whether to prompt for a user name and password.
+   - **PC name** – the name of the computer. This can be a Windows computer name, an Internet domain name, or an IP address. You can also append port information to the PC name (for example, **MyDesktop:3389** or **10.0.0.1:3389**).
+   - **User name** – The user name to use to access the remote PC. You can use the following formats: *user_name*, *domain\user_name*, or <em>user_name@domain.com</em>. You can also specify whether to prompt for a user name and password.
 3. You can also set the following additional options:
-  - **Friendly name (optional)** – An easy-to-remember name for the PC you are connecting to. You can use any string, but if you do not specify a friendly name, the PC name is displayed.
-  - **Gateway (optional)** – The Remote Desktop gateway that you want to use to connect to virtual desktops, RemoteApp programs, and session-based desktops on an internal corporate network. Get the information about the gateway from your system administrator.
-  - **Sound** – Select the device to use for audio during your remote session. You can choose to play sound on the local devices, the remote device, or not at all.
-  - **Swap mouse buttons** – Whenever a mouse gesture would send a command with the left mouse button, it sends the same command with the right mouse button instead. This is necessary if the remote PC is configured for left-handed mouse mode.
-  - **Admin Mode** - Connect to an administration session on a server running Windows Server 2003 or later.
+   - **Friendly name (optional)** – An easy-to-remember name for the PC you are connecting to. You can use any string, but if you do not specify a friendly name, the PC name is displayed.
+   - **Gateway (optional)** – The Remote Desktop gateway that you want to use to connect to virtual desktops, RemoteApp programs, and session-based desktops on an internal corporate network. Get the information about the gateway from your system administrator.
+   - **Sound** – Select the device to use for audio during your remote session. You can choose to play sound on the local devices, the remote device, or not at all.
+   - **Swap mouse buttons** – Whenever a mouse gesture would send a command with the left mouse button, it sends the same command with the right mouse button instead. This is necessary if the remote PC is configured for left-handed mouse mode.
+   - **Admin Mode** - Connect to an administration session on a server running Windows Server 2003 or later.
 4. Tap **Save**.
 
 Need to edit these settings? Press and hold the desktop you want to edit, and then tap the settings icon. 
@@ -83,8 +83,8 @@ To set up a new gateway:
 1. In the Connection Center, tap **Settings > Gateways**. 
 2. Tap **Add Remote Desktop gateway**.
 3. Enter the following information:
-  - **Server name** – The name of the computer you want to use as a gateway. This can be a Windows computer name, an Internet domain name, or an IP address. You can also add port information to the server name (for example: **RDGateway:443** or **10.0.0.1:443**).
-  - **User name** - The user name and password to be used for the Remote Desktop gateway you are connecting to. You can also select **Use connection credentials** to use the same user name and password as those used for the remote desktop connection.
+   - **Server name** – The name of the computer you want to use as a gateway. This can be a Windows computer name, an Internet domain name, or an IP address. You can also add port information to the server name (for example: **RDGateway:443** or **10.0.0.1:443**).
+   - **User name** - The user name and password to be used for the Remote Desktop gateway you are connecting to. You can also select **Use connection credentials** to use the same user name and password as those used for the remote desktop connection.
 
 
 ## Manage your user accounts 

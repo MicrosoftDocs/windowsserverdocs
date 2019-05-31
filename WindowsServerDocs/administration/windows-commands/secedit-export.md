@@ -25,7 +25,6 @@ Exports security settings stored in a database configured with security template
 
 ```
 Secedit /export /db <database file name> [/mergedpolicy] /cfg <configuration file name> [/areas [securitypolicy | group_mgmt | user_rights | regkeys | filestore | services]] [/log <log file name>] [/quiet]
-
 ```
 
 ### Parameters
@@ -43,7 +42,7 @@ Secedit /export /db <database file name> [/mergedpolicy] /cfg <configuration fil
 
 You can use this command to backup your security policies on a local computer in addition to importing the settings to another computer.
 
-If the path for the log file is not provided, the default log file, (*systemroot*\Documents and Settings\*UserAccount*\My Documents\Security\Logs\*DatabaseName*.log) is used.
+If the path for the log file is not provided, the default log file, (*systemroot*\Documents and Settings\*UserAccount<em>\My Documents\Security\Logs\*DatabaseName</em>.log) is used.
 
 In Windows Server 2008, `Secedit /refreshpolicy` has been replaced with `gpupdate`. For information on how to refresh security settings, see [Gpupdate](gpupdate.md).
 

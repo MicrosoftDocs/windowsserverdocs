@@ -22,13 +22,13 @@ manager: dongill
  The next step in the migration process is to join client computers to the new  Windows Server Essentials network and update Group Policy settings.  
   
 ### Domain-joined client computers  
- Browse to **http://***destination-servername***/connect** and install the Windows Server Connector software as if this was a new computer. The installation process is the same for domain-joined or non-domain-joined client computers.  
+ Browse to **http://**<em>destination-servername</em>**/connect** and install the Windows Server Connector software as if this was a new computer. The installation process is the same for domain-joined or non-domain-joined client computers.  
   
 > [!NOTE]
 >  The Windows Server Connector software does not support computers that are running Windows XP or Windows Vista. If you have computers running Windows XP or Windows Vista that are already joined to the domain, you can skip this step.  
   
 ### Non-domain-joined client computers  
- Browse to **http://***destination-servername***/connect** and install the Windows Server Connector software as if this was a new computer. The installation process is the same for domain joined or non-domain joined client computers.  
+ Browse to **http://**<em>destination-servername</em>**/connect** and install the Windows Server Connector software as if this was a new computer. The installation process is the same for domain joined or non-domain joined client computers.  
   
 > [!NOTE]
 >  The Windows Server Connector software does not support computers that are running Windows XP or Windows Vista. If you have computers running Windows XP or Windows Vista that are already joined to the domain, you can skip this step.  

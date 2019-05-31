@@ -51,19 +51,19 @@ In this step, you specify what servers to migrate and then scan them to collect 
 
 In this step you transfer data after specifying where to put it on the destination servers.
 
- 1. On the **Transfer data** > **Enter credentials** page, type admin credentials that work on the destination servers you want to migrate to, and then select **Next**.
- 1. On the **Add a destination device and mappings** page, the first source server is listed. Type the name of the server to which you want to migrate and then select **Scan device**.
- 1. Map the source volumes to destination volumes, clear the **Include** checkbox for any shares you don't want to transfer (including any administrative shares located in the Windows system folder), and then select **Next**.
-    ![Screenshot showing a source server and its volumes and shares and where they'll be transferred to on the destination](media/migrate/transfer.png)
-     **Figure 3: A source server and where its storage will be transferred to**
- 1. Add a destination server and mappings for any more source servers, and then select **Next**.
- 1. Optionally adjust the transfer settings, and then select **Next**.
- 1. Select **Validate** and then select **Next**.
- 1. Select **Start transfer** to start transferring data.<br>The first time you transfer, we'll move any existing files in a destination to a backup folder. On subsequent transfers, by default we'll refresh the destination without backing it up first. <br>Also, Storage Migration Service is smart enough to deal with overlapping shares—we won’t copy the same folders twice in the same job.
- 1. After the transfer completes, check out the destination server to make sure everything transferred properly. Select **Error log only** if you want to download a log of any files that didn't transfer.
+1. On the **Transfer data** > **Enter credentials** page, type admin credentials that work on the destination servers you want to migrate to, and then select **Next**.
+2. On the **Add a destination device and mappings** page, the first source server is listed. Type the name of the server to which you want to migrate and then select **Scan device**.
+3. Map the source volumes to destination volumes, clear the **Include** checkbox for any shares you don't want to transfer (including any administrative shares located in the Windows system folder), and then select **Next**.
+   ![Screenshot showing a source server and its volumes and shares and where they'll be transferred to on the destination](media/migrate/transfer.png)
+    **Figure 3: A source server and where its storage will be transferred to**
+4. Add a destination server and mappings for any more source servers, and then select **Next**.
+5. Optionally adjust the transfer settings, and then select **Next**.
+6. Select **Validate** and then select **Next**.
+7. Select **Start transfer** to start transferring data.<br>The first time you transfer, we'll move any existing files in a destination to a backup folder. On subsequent transfers, by default we'll refresh the destination without backing it up first. <br>Also, Storage Migration Service is smart enough to deal with overlapping shares—we won’t copy the same folders twice in the same job.
+8. After the transfer completes, check out the destination server to make sure everything transferred properly. Select **Error log only** if you want to download a log of any files that didn't transfer.
 
-  > [!NOTE]
-  > If you want to keep an audit trail of transfers or are planning to perform more than one transfer in a job, click **Transfer log** to save a CSV copy. Every subsequent transfer overwrites the database information of a previous run. 
+   > [!NOTE]
+   > If you want to keep an audit trail of transfers or are planning to perform more than one transfer in a job, click **Transfer log** to save a CSV copy. Every subsequent transfer overwrites the database information of a previous run. 
 
 At this point, you have three options:
 

@@ -47,13 +47,13 @@ command </parameter> </param2>
 if you specify an object \(such as a namespace server\) at the end of a command, most commands will display information about the object without requiring further parameters or commands. For example, when using the dfsutil Root command, you can append a namespace root to the command to view information about the root.
 
 ## <a name="BKMK_Examples"></a>Examples
-<Here is where you put a detailed description of your example.>
+&lt;Here is where you put a detailed description of your example.&gt;
 
 ```
 This /is /the /example /of /calling /command /with /parameters
 ```
 
-<Here is where you put a detailed description of another example.>
+&lt;Here is where you put a detailed description of another example.&gt;
 
 ```
 This /is /a:different /example

@@ -62,7 +62,7 @@ Cross domain trust scenarios are an area that has been consistently a pain point
         > [!Note]  
         > There is a practical limit of about 50 to the number of domain controllers the client can consume. These should be the most site-optimal and highest capacity domain controllers.
 
-         
+         
 
     -   Consider placing domain controllers from trusted and trusting domains in the same physical location.
 

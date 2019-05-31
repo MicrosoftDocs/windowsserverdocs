@@ -40,15 +40,15 @@ Set up a server to act as an additional RD Web and RD Gateway - this can be eith
     4. On the Confirmation page, select **Restart remote computers as needed**, and then click **Add**.  
     5. Repeat these steps to add the RD Gateway server, but choose **RD Gateway Servers** in step b.
 4. Re-install certificates for the RD Gateway servers:
-    1.  In Server Manager on the RDMS server, click **Remote Desktop Services > Overview > Tasks > Edit Deployment Properties**.  
-    2.  Expand **Certificates**.  
-    3.  Scroll down to the table. Click RD **Gateway Role Service > Select existing certificate.**  
-    4.  Click **Choose a different certificate** and then browse to the certificate location. For example, \Contoso-CB1\Certificates). Select the certificate file for the RD Web and Gateway server created during the prerequisites (e.g. ContosoRdGwCert), and then click **Open**.  
-    5.  Enter the password for the certificate, select **Allow the certificate to be added to the Trusted Root Certificate Authorities certificate store on the destination computers**, and then click **OK**.  
-    6.  Click **Apply**.
-    > [!Note] 
-    > You may need to manually restart the TSGateway service running on each RD Gateway server, either through Server Manager or Task Manager.
-    7.  Repeat steps a through f for the RD Web Access Role Service.
+   1. In Server Manager on the RDMS server, click **Remote Desktop Services > Overview > Tasks > Edit Deployment Properties**.  
+   2. Expand **Certificates**.  
+   3. Scroll down to the table. Click RD **Gateway Role Service > Select existing certificate.**  
+   4. Click **Choose a different certificate** and then browse to the certificate location. For example, \Contoso-CB1\Certificates). Select the certificate file for the RD Web and Gateway server created during the prerequisites (e.g. ContosoRdGwCert), and then click **Open**.  
+   5. Enter the password for the certificate, select **Allow the certificate to be added to the Trusted Root Certificate Authorities certificate store on the destination computers**, and then click **OK**.  
+   6. Click **Apply**.
+      > [!Note] 
+      > You may need to manually restart the TSGateway service running on each RD Gateway server, either through Server Manager or Task Manager.
+   7. Repeat steps a through f for the RD Web Access Role Service.
 
 ## Step 2: Configure RD Web and RD Gateway properties on the new server
 1. Configure the server to be part of an RD Gateway farm:

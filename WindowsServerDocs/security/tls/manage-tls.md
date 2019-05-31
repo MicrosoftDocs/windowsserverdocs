@@ -34,22 +34,22 @@ Changes to the TLS cipher suite order will take effect on the next boot. Until r
 
 You can use the SSL Cipher Suite Order Group Policy settings to configure the default TLS cipher suite order.
 
-1.	From the Group Policy Management Console, go to **Computer Configuration** > **Administrative Templates** > **Networks** > **SSL Configuration Settings**.
-2.	Double-click **SSL Cipher Suite Order**, and then click the **Enabled** option.
-3.	Right-click **SSL Cipher Suites** box and select **Select all** from the pop-up menu.
+1. From the Group Policy Management Console, go to **Computer Configuration** > **Administrative Templates** > **Networks** > **SSL Configuration Settings**.
+2. Double-click **SSL Cipher Suite Order**, and then click the **Enabled** option.
+3. Right-click **SSL Cipher Suites** box and select **Select all** from the pop-up menu.
 
-    ![Group Policy setting](../media/Transport-Layer-Security-protocol/ssl-cipher-suite-order-gp-setting.png)
+   ![Group Policy setting](../media/Transport-Layer-Security-protocol/ssl-cipher-suite-order-gp-setting.png)
 
-4.	Right-click the selected text, and select **copy** from the pop-up menu.
-5.	Paste the text into a text editor such as notepad.exe and update with the new cipher suite order list.
+4. Right-click the selected text, and select **copy** from the pop-up menu.
+5. Paste the text into a text editor such as notepad.exe and update with the new cipher suite order list.
 
-    > [!NOTE]
-    > The TLS cipher suite order list must be in strict comma delimited format. Each cipher suite string will end with a comma (,) to the right side of it. 
+   > [!NOTE]
+   > The TLS cipher suite order list must be in strict comma delimited format. Each cipher suite string will end with a comma (,) to the right side of it. 
+   > 
+   > Additionally, the list of cipher suites is limited to 1,023 characters.
 
-    > Additionally, the list of cipher suites is limited to 1,023 characters.
-
-6.	Replace the list in the **SSL Cipher Suites** with the updated ordered list.
-7.	Click **OK** or **Apply**.
+6. Replace the list in the **SSL Cipher Suites** with the updated ordered list.
+7. Click **OK** or **Apply**.
 
 ### Configuring TLS Cipher Suite Order by using MDM
 

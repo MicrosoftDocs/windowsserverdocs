@@ -23,9 +23,9 @@ When you are troubleshooting computer issues, a representative from Microsoft Cu
  The Log Collector copies program logs, event reviewer logs, and related environment information into a single zip file at a specified location. You can run the Log Collector directly from the server or any computer on the network, or by using a remote connection to the computers.  
   
 > [!NOTE]
->  -   The Log Collector does not analyze network issues or make changes to any server or computer on the network. For information about how to troubleshoot network issues, see the Help documentation for your server product.  
-> -   In this guide, the computers on your network, other than your server, are called network computers.  
-> -   [Download the Windows Server Essentials Log Collector installation package](https://go.microsoft.com/fwlink/?LinkID=266341).  
+> - The Log Collector does not analyze network issues or make changes to any server or computer on the network. For information about how to troubleshoot network issues, see the Help documentation for your server product.  
+>   -   In this guide, the computers on your network, other than your server, are called network computers.  
+>   -   [Download the Windows Server Essentials Log Collector installation package](https://go.microsoft.com/fwlink/?LinkID=266341).  
   
  To install and run the Log Collector, perform the steps in the following topics:  
   

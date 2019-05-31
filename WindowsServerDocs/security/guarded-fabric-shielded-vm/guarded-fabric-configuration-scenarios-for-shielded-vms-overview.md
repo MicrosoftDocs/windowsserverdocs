@@ -35,8 +35,8 @@ The following topics describe how a tenant can work with shielded VMs.
 
 ## Next step
 
->[!div class="nextstepaction"]
-[Create a shielded VM template](guarded-fabric-create-a-shielded-vm-template.md)
+> [!div class="nextstepaction"]
+> [Create a shielded VM template](guarded-fabric-create-a-shielded-vm-template.md)
 
 ## See also
 
