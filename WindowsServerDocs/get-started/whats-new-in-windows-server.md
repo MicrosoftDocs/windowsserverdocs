@@ -27,6 +27,8 @@ Semi-Annual Channel releases:
 - [What's New in Windows Server, version 1803](whats-new-in-windows-server-1803.md)
 - [What's New in Windows Server, version 1709](whats-new-in-windows-server-1709.md) (Out of support as of April 9, 2019)
 
+Windows Server Semi-Annual Channel releases deliver new operating system capabilities at a faster pace. A new release comes out every six months and is supported for 18 months. Check [Windows Server release information](windows-server-release-info.md) and [Lifecycle Support Page](https://support.microsoft.com/lifecycle) for support dates and always use the latest release if possible.
+
 ## See also
 
 - [Release Notes: Important issues in Windows Server 2019](../get-started-19/rel-notes-19.md)
