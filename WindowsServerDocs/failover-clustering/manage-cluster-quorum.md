@@ -87,7 +87,7 @@ The vote assignment for all cluster nodes can be verified by using the **Validat
 - Dynamic quorum management does not allow the cluster to sustain a simultaneous failure of a majority of voting members. To continue running, the cluster must always have a quorum majority at the time of a node shutdown or failure.
 
 - If you have explicitly removed the vote of a node, the cluster cannot dynamically add or remove that vote.
-- When Storage Spaces Direct is enabled, the cluster can only support two node failures. This is explained more in the [pool quorum section](../storage/storage-spaces/understand-quorum.md#poolQuorum)
+- When Storage Spaces Direct is enabled, the cluster can only support two node failures. This is explained more in the [pool quorum section](../storage/storage-spaces/understand-quorum.md#pool-quorum-overview)
 
 ## General recommendations for quorum configuration
 
