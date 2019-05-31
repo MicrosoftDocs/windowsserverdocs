@@ -59,9 +59,9 @@ Following are additional options for advanced features.
 
 
 ---
-## Enforced Certificate Revocation
+## Blocking VPN Clients that Use Revoked Certificates
   
-After you install updates, the RRAS server can enforce certificate revocation.
+After you install updates, the RRAS server can enforce certificate revocation. This means that the RRAS server can deny VPN connections to clients that try to use a revoked certificate.
 
 **Availability**
 
@@ -69,11 +69,11 @@ The following table lists the approximate release dates of the fixes for each ve
 
 |Operating system version |Release date* |
 |---------|---------|
-|Windows Server 2016, version 1906<br />Windows 10, version 1906  |Q2, 2019  |
-|Windows Server 2016, version 1903<br />Windows 10, version 1903  |Q3, 2019  |
-|Windows Server 2016, version 1809<br />Windows 10, version 1809  |Q3, 2019  |
-|Windows Server 2016, version 1803<br />Windows 10, version 1803  |Q3, 2019  |
-|Windows Server 2016, version 1709<br />Windows 10, version 1709  |Q3, 2019  |
+|Windows Server 2019<br />Windows Server, version 1906<br />Windows 10, version 1906  |Q2, 2019  |
+|Windows Server, version 1903<br />Windows 10, version 1903  |Q3, 2019  |
+|Windows Server 2019<br />Windows Server, version 1809<br />Windows 10, version 1809  |Q3, 2019  |
+|Windows Server, version 1803<br />Windows 10, version 1803  |Q3, 2019  |
+|Windows Server, version 1709<br />Windows 10, version 1709  |Q3, 2019  |
 |Windows Server 2016, version 1607<br />Windows 10, version 1607  |Q2, 2019  |
   
 \* All release dates are listed in calendar quarters. Dates are approximate and may change without notice.
@@ -115,7 +115,12 @@ To disable certificate revocation for these VPN connections, set **CertAuthFlags
 1. Try to connect to the VPN by using a client that has the revoked certificate.<br />
 The RRAS server should refuse the connection and display a message such as “IKE authentication credentials are unacceptable.” 
 1. On the RRAS server, open Event Viewer and navigate to **Applications and Services Logs/Microsoft/Windows/CAPI2**. 
-1. Search for an event that has Event ID 41 and includes a reference to the FQDN of the client. The **<Result>** field of the event data should include **The certificate is revoked**. For example, see the following excerpts from an event:
+1. Search for an event that has the following information:
+   * Log Name: **Microsoft-Windows-CAPI2/Operational Microsoft-Windows-CAPI2/Operational**
+   * Event ID: **41** 
+   * The event contains the following text: **subject="*Client FQDN*"** (*Client FQDN* represents the fully qualified domain name of the client that has the revoked certificate) 
+
+   The **<Result>** field of the event data should include **The certificate is revoked**. For example, see the following excerpts from an event:
    ```xml
    Log Name:      Microsoft-Windows-CAPI2/Operational Microsoft-Windows-CAPI2/Operational  
    Source:        Microsoft-Windows-CAPI2  
