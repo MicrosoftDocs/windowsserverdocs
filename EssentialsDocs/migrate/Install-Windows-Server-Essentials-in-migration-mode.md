@@ -42,25 +42,25 @@ You can have only one server on your network that is running  Windows Server Ess
   
 #### To install Windows Server Essentials on the Destination Server  
   
-1.  Turn on the Destination Server and insert  Windows Server Essentials DVD1 into the DVD drive. If you see a message that asks if you want to boot from a CD or DVD, press any key to do so.  
+1. Turn on the Destination Server and insert  Windows Server Essentials DVD1 into the DVD drive. If you see a message that asks if you want to boot from a CD or DVD, press any key to do so.  
   
-    > [!NOTE]
-    >  If the Destination Server supports booting from a USB flash drive, you can use the **Windows 7 USB/DVD Download Tool** to create a bootable USB Flash drive from the  Windows Server Essentials ISO file. Using a USB flash drive can significantly speed up the installation process because flash drives read data much faster than DVD-ROM drives do. After you create a bootable USB flash drive, you can add an answer file to the flash drive. You can [download the Windows 7 USB/DVD Download Tool](https://go.microsoft.com/fwlink/p/?LinkId=248282) free at Microsoft Store website.  
+   > [!NOTE]
+   >  If the Destination Server supports booting from a USB flash drive, you can use the **Windows 7 USB/DVD Download Tool** to create a bootable USB Flash drive from the  Windows Server Essentials ISO file. Using a USB flash drive can significantly speed up the installation process because flash drives read data much faster than DVD-ROM drives do. After you create a bootable USB flash drive, you can add an answer file to the flash drive. You can [download the Windows 7 USB/DVD Download Tool](https://go.microsoft.com/fwlink/p/?LinkId=248282) free at Microsoft Store website.  
   
-    > [!NOTE]
-    >  If the Destination Server does not boot from the DVD, restart the computer and check the BIOS Setup to ensure that **DVD-ROM** is listed first in the boot sequence. For more information about how to change the BIOS Setup boot sequence, see your hardware manufacturer's documentation.  
+   > [!NOTE]
+   >  If the Destination Server does not boot from the DVD, restart the computer and check the BIOS Setup to ensure that **DVD-ROM** is listed first in the boot sequence. For more information about how to change the BIOS Setup boot sequence, see your hardware manufacturer's documentation.  
   
-2.  Click **New Installation**.  
+2. Click **New Installation**.  
   
-3.  If you have an internal hard drive that is not displayed in the list, click **Load Drivers** and install the necessary driver before continuing.  
+3. If you have an internal hard drive that is not displayed in the list, click **Load Drivers** and install the necessary driver before continuing.  
   
-4.  Select the check box that verifies all files and folders on your primary hard drive will be deleted, and then click **Install**.  
+4. Select the check box that verifies all files and folders on your primary hard drive will be deleted, and then click **Install**.  
   
-5.  On the **Choose server installation mode** page, click **Server migration**, and then provide the required migration information.  
+5. On the **Choose server installation mode** page, click **Server migration**, and then provide the required migration information.  
   
-6.  When the **Your server is successfully migrated** message appears, click **Close**.  
+6. When the **Your server is successfully migrated** message appears, click **Close**.  
   
- After the installation finishes, you are automatically logged on with the administrator user account and password that you provided in the migration answer file.  
+   After the installation finishes, you are automatically logged on with the administrator user account and password that you provided in the migration answer file.  
   
 > [!NOTE]
 >  To unlock the desktop while  Windows Server Essentials is installing, use the built-in administrator account and leave the password blank.  

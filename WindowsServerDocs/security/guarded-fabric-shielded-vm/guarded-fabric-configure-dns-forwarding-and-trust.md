@@ -32,5 +32,5 @@ Use the following steps to set up DNS forwarding and establish a one-way trust w
 
 ## Next step 
 
->[!div class="nextstepaction"]
-[Configure HTTPS](guarded-fabric-configure-hgs-https.md)
+> [!div class="nextstepaction"]
+> [Configure HTTPS](guarded-fabric-configure-hgs-https.md)

@@ -82,25 +82,25 @@ Wbadmin start backup
 The following examples show how the **wbadmin start backup** command can be used in different backup scenarios:
 
 Scenario #1
--   Create a backup of volumes e:, d:\mountpoint, and \\\\?\Volume{cc566d14-4410-11d9-9d93-806e6f6e6963}
--   Save the backup to volume f:
-```
-wbadmin start backup -backupTarget:f: -include:e:,d:\mountpoint,\\?\Volume{cc566d14-44a0-11d9-9d93-806e6f6e6963}\
-```
-Scenario #2
--   Perform a one-time backup of *f:\folder1* and *h:\folder2* to volume *d:*.
--   Backup the system state
--   Make a copy backup so that the normally scheduled differential backup is not impacted.
-```
-wbadmin start backup –backupTarget:d: -include:g\folder1,h:\folder2 –systemstate -vsscopy
-```
-Scenario #3
--   Perform a one-time backup of *d:\folder1* that should be backed up non-recursively.
--   Backup the folder to the network location *\\\\backupshare\backup1*
--   Restrict access to the backup to members of the **Administrators** or **Backup Operators** group.
-```
-wbadmin start backup –backupTarget: \\backupshare\backup1 -noinheritacl -nonrecurseinclude:d:\folder1
-```
+- Create a backup of volumes e:, d:\mountpoint, and \\\\?\Volume{cc566d14-4410-11d9-9d93-806e6f6e6963}
+- Save the backup to volume f:
+  ```
+  wbadmin start backup -backupTarget:f: -include:e:,d:\mountpoint,\\?\Volume{cc566d14-44a0-11d9-9d93-806e6f6e6963}\
+  ```
+  Scenario #2
+- Perform a one-time backup of *f:\folder1* and *h:\folder2* to volume *d:*.
+- Backup the system state
+- Make a copy backup so that the normally scheduled differential backup is not impacted.
+  ```
+  wbadmin start backup –backupTarget:d: -include:g\folder1,h:\folder2 –systemstate -vsscopy
+  ```
+  Scenario #3
+- Perform a one-time backup of *d:\folder1* that should be backed up non-recursively.
+- Backup the folder to the network location *\\\\backupshare\backup1*
+- Restrict access to the backup to members of the **Administrators** or **Backup Operators** group.
+  ```
+  wbadmin start backup –backupTarget: \\backupshare\backup1 -noinheritacl -nonrecurseinclude:d:\folder1
+  ```
 
 #### Additional references
 

@@ -414,10 +414,11 @@ To use this setting, you must set two server name values: the server from which 
 
 **Options:** When this policy setting is enabled, you must specify the intranet update service that WSUS clients will use when detecting updates, and the Internet statistics server to which updated WSUS clients will upload statistics. Example values:
 
-|Setting option:|Example value:|
-|----------|---------|
-|Set the intranet update service for detecting updates|http://wsus01:8530|
-|Set the intranet statistics server|http://IntranetUpd01|
+
+|                    Setting option:                    |    Example value:    |
+|-------------------------------------------------------|----------------------|
+| Set the intranet update service for detecting updates |  http://wsus01:8530  |
+|          Set the intranet statistics server           | http://IntranetUpd01 |
 
 #### Turn on recommended updates via Automatic Updates
 Specifies whether Automatic Updates will deliver IMPORTANT and recommended updates from WSUS.
@@ -580,7 +581,7 @@ Specifies whether the **Install Updates and Shut Down** option is allowed as the
 |**Disabled**|Specifies whether the **Install Updates and Shut Down** option will be the default option in the **Shut Down Windows** dialog box if updates are available for installation at the time the user selects the Shut Down option to shut down the computer.|
 
 **Options:** There are no options for this setting.
-    
+
 #### Remove access to use all Windows Update features
 This setting enables you to remove WSUS client access to Windows Update.
 

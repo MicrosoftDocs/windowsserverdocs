@@ -54,10 +54,10 @@ Follow these steps to migrate a session collection in Windows Server 2012 R2 to 
 1. [Upgrade the session collection](Upgrade-to-RDSH-2016.md) from Windows Server 2012 R2 to Windows Server 2016.
 2. Add the new RD Session Host server running Windows Server 2016 to the session collection.
 3. Sign out of all sessions in the RD Session Host servers, and remove the servers that require migration from the session collection. 
-> [!NOTE]
-> If the UVHD template (UVHD-template.vhdx) is enabled in the session collection and the file server has been migrated to a new server, update the User Profile Disks: Location collection property with the new path. The User Profile Disks must be available at the same relative path in the new location as they were on the source server.
->
-> A session collection of RD Session Host servers with a mix of servers running Windows Server 2012 R2 and Windows Server 2016 is not supported.
+   > [!NOTE]
+   > If the UVHD template (UVHD-template.vhdx) is enabled in the session collection and the file server has been migrated to a new server, update the User Profile Disks: Location collection property with the new path. The User Profile Disks must be available at the same relative path in the new location as they were on the source server.
+   >
+   > A session collection of RD Session Host servers with a mix of servers running Windows Server 2012 R2 and Windows Server 2016 is not supported.
 
 ## Migrate virtual desktop collections
 

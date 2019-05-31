@@ -63,13 +63,13 @@ The following are the estimated **minimum** disk space requirements for the syst
 
 **Minimum**: 32 GB  
 
-   > [!NOTE]  
-    > Be aware that 32 GB should be considered an *absolute minimum* value for successful installation. This minimum should allow you to install Windows Server 2019 in Server Core mode, with the Web Services (IIS) server role. A server in Server Core mode is about 4 GB smaller than the same server in Server with a GUI mode. 
-    >   
-    > The system partition will need extra space for any of the following circumstances:  
-    >   
-    > -   If you install the system over a network.  
-    > -   Computers with more than 16 GB of RAM will require more disk space for paging, hibernation, and dump files.  
+> [!NOTE]
+> Be aware that 32 GB should be considered an *absolute minimum* value for successful installation. This minimum should allow you to install Windows Server 2019 in Server Core mode, with the Web Services (IIS) server role. A server in Server Core mode is about 4 GB smaller than the same server in Server with a GUI mode. 
+> 
+> The system partition will need extra space for any of the following circumstances:  
+> 
+> -   If you install the system over a network.  
+> -   Computers with more than 16 GB of RAM will require more disk space for paging, hibernation, and dump files.  
 
 ## Network adapter requirements  
 

@@ -26,12 +26,12 @@ glob
 ### Parameters  
 none  
 ## Remarks  
--   By default, globbing is on.  
--   Globbing permits the use of the asterisk (*) and question mark (?) as wildcard characters in local file or path names.  
-## <a name="BKMK_Examples"></a>Examples  
-Toggle wildcard expansion of local file names.  
-```  
-glob  
-```  
-## additional references  
--   [Command-Line Syntax Key](command-line-syntax-key.md)  
+- By default, globbing is on.  
+- Globbing permits the use of the asterisk (*) and question mark (?) as wildcard characters in local file or path names.  
+  ## <a name="BKMK_Examples"></a>Examples  
+  Toggle wildcard expansion of local file names.  
+  ```  
+  glob  
+  ```  
+  ## additional references  
+- [Command-Line Syntax Key](command-line-syntax-key.md)  

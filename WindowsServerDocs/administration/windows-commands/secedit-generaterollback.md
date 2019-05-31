@@ -39,7 +39,7 @@ Secedit /generaterollback /db <database file name> /cfg <configuration file name
 
 ## Remarks
 
-If the path for the log file is not provided, the default log file, (*systemroot*\Users \*UserAccount*\My Documents\Security\Logs\*DatabaseName*.log) is used.
+If the path for the log file is not provided, the default log file, (*systemroot*\Users \*UserAccount<em>\My Documents\Security\Logs\*DatabaseName</em>.log) is used.
 
 Beginning with Windows Server 2008, `Secedit /refreshpolicy` has been replaced with `gpupdate`. For information on how to refresh security settings, see [Gpupdate](gpupdate.md).
 

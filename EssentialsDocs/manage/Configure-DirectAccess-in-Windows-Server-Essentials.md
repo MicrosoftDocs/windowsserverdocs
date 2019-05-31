@@ -204,16 +204,16 @@ This topic provides step-by-step instructions for configuring DirectAccess in  W
   
 #### To add a security group for client computers that use DirectAccess  
   
-1.  On the Server Manager Dashboard, click **Tools**, and then click **Active Directory Users and Computers**.  
+1. On the Server Manager Dashboard, click **Tools**, and then click **Active Directory Users and Computers**.  
   
-    > [!NOTE]
-    >  If you do not see **Active Directory Users and Computers** on the **Tools** menu, you need to install the feature. To install Active Directory Users and Groups, run the following Windows PowerShell cmdlet as an administrator: `Install-WindowsFeature RSAT-ADDS-Tools`. For more information, see [Installing or Removing the Remote Server Administration Tool Pack](https://technet.microsoft.com/library/cc730825.aspx).  
+   > [!NOTE]
+   >  If you do not see **Active Directory Users and Computers** on the **Tools** menu, you need to install the feature. To install Active Directory Users and Groups, run the following Windows PowerShell cmdlet as an administrator: `Install-WindowsFeature RSAT-ADDS-Tools`. For more information, see [Installing or Removing the Remote Server Administration Tool Pack](https://technet.microsoft.com/library/cc730825.aspx).  
   
-2.  In the console tree, expand the server, right-click **Users**, click **New**, and then click **Group**.  
+2. In the console tree, expand the server, right-click **Users**, click **New**, and then click **Group**.  
   
-3.  Enter a group name, group scope, and group type (create a security group), and then click **OK**.  
+3. Enter a group name, group scope, and group type (create a security group), and then click **OK**.  
   
- The new security group is added to the **Users** folder.  
+   The new security group is added to the **Users** folder.  
   
 #### To add computer accounts to the security group  
   
@@ -306,11 +306,11 @@ gpupdate
   
 > [!IMPORTANT]
 >  There is a known issue for  Windows 7 Enterprise computers connecting over DirectAccess if the  Windows Server Essentials server did not come with UR1 pre-installed. To enable DirectAccess connections in that environment, you must perform these additional steps:  
->   
->  1.  Install the hotfix described in [Microsoft Knowledge Base (KB) article 2796394](https://support.microsoft.com/kb/2796394) on the Windows Server Essentials server. Then restart the server.  
-> 2.  Then install the hotfix described in [Microsoft Knowledge Base (KB) article 2615847](https://support.microsoft.com/kb/2615847) on each  Windows 7 computer.  
->   
->      This issue was resolved in  Windows Server Essentials.  
+> 
+> 1. Install the hotfix described in [Microsoft Knowledge Base (KB) article 2796394](https://support.microsoft.com/kb/2796394) on the Windows Server Essentials server. Then restart the server.  
+>    2. Then install the hotfix described in [Microsoft Knowledge Base (KB) article 2615847](https://support.microsoft.com/kb/2615847) on each  Windows 7 computer.  
+> 
+>    This issue was resolved in  Windows Server Essentials.  
   
 ###  <a name="BKMK_NLS"></a> Step 5d: Configure the network location server  
  This section provides step-by-step instructions to configure the network location server settings.  

@@ -85,7 +85,6 @@ The following feature distribution map indicates the features in each version. T
    ```bash
    # apt-get update
    # apt-get install linux-azure
-
    ```
 
    12.04 does not have a separate virtual kernel. To install the generic HWE kernel on 12.04, run the following commands as root (or sudo):
@@ -93,7 +92,6 @@ The following feature distribution map indicates the features in each version. T
    ```bash
    # apt-get update
    # apt-get install linux-generic-lts-trusty
-
    ```
 
    On Ubuntu 12.04 the following Hyper-V daemons are in a separately installed package:
@@ -106,7 +104,6 @@ The following feature distribution map indicates the features in each version. T
 
    ```bash
    # apt-get install hv-kvp-daemon-init linux-tools-lts-trusty linux-cloud-tools-generic-lts-trusty
-
    ```
 
    Whenever the kernel is updated, the virtual machine must be rebooted to use it.
@@ -118,7 +115,6 @@ The following feature distribution map indicates the features in each version. T
    ```bash
    # apt-get update
    # apt-get install linux-azure
-
    ```
 
    Whenever the kernel is updated, the virtual machine must be rebooted to use it.
@@ -137,42 +133,37 @@ The following feature distribution map indicates the features in each version. T
 
 11. On Windows Server 2012 R2, Generation 2 virtual machines have secure boot enabled by default and some Linux virtual machines will not boot unless the secure boot option is disabled. You can disable secure boot in the **Firmware** section of the settings for the virtual machine in **Hyper-V Manager** or you can disable it using Powershell:
 
-   ```Powershell
-   Set-VMFirmware -VMName "VMname" -EnableSecureBoot Off
-
-   ```
+    ```Powershell
+    Set-VMFirmware -VMName "VMname" -EnableSecureBoot Off
+    ```
 
 12. Before attempting to copy the VHD of an existing Generation 2 VHD virtual machine to create new Generation 2 virtual machines, follow these steps:
 
-   1. Log in to the existing Generation 2 virtual machine.
+    1. Log in to the existing Generation 2 virtual machine.
 
-   2. Change directory to the boot EFI directory:
+    2. Change directory to the boot EFI directory:
 
-      ```bash
-      # cd /boot/efi/EFI
+       ```bash
+       # cd /boot/efi/EFI
+       ```
 
-      ```
+    3. Copy the ubuntu directory in to a new directory named boot:
 
-   3. Copy the ubuntu directory in to a new directory named boot:
+       ```bash
+       # sudo cp -r ubuntu/ boot
+       ```
 
-      ```bash
-      # sudo cp -r ubuntu/ boot
+    4. Change directory to the newly created boot directory:
 
-      ```
+       ```bash
+       # cd boot
+       ```
 
-   4. Change directory to the newly created boot directory:
+    5. Rename the shimx64.efi file:
 
-      ```bash
-      # cd boot
-
-      ```
-
-   5. Rename the shimx64.efi file:
-
-      ```bash
-      # sudo mv shimx64.efi bootx64.efi
-
-      ```
+       ```bash
+       # sudo mv shimx64.efi bootx64.efi
+       ```
 
 ## See Also
 

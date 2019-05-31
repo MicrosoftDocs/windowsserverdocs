@@ -42,5 +42,5 @@ ms.date: 08/29/2018
 
 ## Next step
 
->[!div class="nextstepaction"]
-[Configure fabric DNS](guarded-fabric-configuring-fabric-dns-ad.md)
+> [!div class="nextstepaction"]
+> [Configure fabric DNS](guarded-fabric-configuring-fabric-dns-ad.md)

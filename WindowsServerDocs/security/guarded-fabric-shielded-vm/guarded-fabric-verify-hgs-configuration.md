@@ -33,6 +33,6 @@ Run the diagnostics on each node in your HGS cluster.
 
 ## Next step
 
->[!div class="nextstepaction"]
-[Deploy guarded hosts](guarded-fabric-configure-hgs-with-authorized-hyper-v-hosts.md)
+> [!div class="nextstepaction"]
+> [Deploy guarded hosts](guarded-fabric-configure-hgs-with-authorized-hyper-v-hosts.md)
 

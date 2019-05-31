@@ -29,12 +29,12 @@ WDSUTIL /Add-AllDriverPackages /FolderPath:<Folder Path> [/Server:<Server name>]
 
 ## Parameters
 
-|Parameter|Description|
-|---------|-----------|
-|/FolderPath:\<Folder Path>|Specifies the full path to the folder that contains the .inf files for the driver packages.|
-|[/Server:\<Server name>]|Specifies the name of the server. This can be the NetBIOS name or the FQDN. If no server name is specified, the local server is used.|
-|[/Architecture:{x86 | ia64 | x64}]|Specifies the architecture of the driver packages to add. Driver packages for other architectures are ignored.|
-|[/DriverGroup:\<Group Name>]|Specifies the name of the driver group to which the packages should be added.|
+|          Parameter           |                                                              Description                                                              |
+|------------------------------|---------------------------------------------------------------------------------------------------------------------------------------|
+|  /FolderPath:\<Folder Path>  |                      Specifies the full path to the folder that contains the .inf files for the driver packages.                      |
+|   [/Server:\<Server name>]   | Specifies the name of the server. This can be the NetBIOS name or the FQDN. If no server name is specified, the local server is used. |
+|     [/Architecture:{x86      |                                                                 ia64                                                                  |
+| [/DriverGroup:\<Group Name>] |                             Specifies the name of the driver group to which the packages should be added.                             |
 
 ## <a name="BKMK_examples"></a>Examples
 

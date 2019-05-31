@@ -158,8 +158,8 @@ Save-VolumeSignatureCatalog -TemplateDiskPath 'C:\temp\MyLinuxTemplate.vhdx' -Vo
 
 ## Next step
 
->[!div class="nextstepaction"]
-[Create a shielding data file](guarded-fabric-tenant-creates-shielding-data.md)
+> [!div class="nextstepaction"]
+> [Create a shielding data file](guarded-fabric-tenant-creates-shielding-data.md)
 
 ## See also
 

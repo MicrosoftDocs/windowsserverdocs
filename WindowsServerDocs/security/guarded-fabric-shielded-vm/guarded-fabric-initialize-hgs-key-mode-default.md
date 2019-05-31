@@ -41,5 +41,5 @@ ms.date: 08/29/2018
 
 ## Next step
 
->[!div class="nextstepaction"]
-[Create host key](guarded-fabric-create-host-key.md)
+> [!div class="nextstepaction"]
+> [Create host key](guarded-fabric-create-host-key.md)

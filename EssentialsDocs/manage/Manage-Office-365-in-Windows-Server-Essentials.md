@@ -38,44 +38,44 @@ When you integrate your  Windows Server Essentials server with Microsoft  Office
 ##  <a name="BKMK_IntegrationOverview"></a> Why should I integrate Office 365 with my server?  
  There are a lot of good reasons to integrate  Office 365 with your  Windows Server Essentials server. If you manage some of your resources in-house but use  Office 365 for other services, you'll be able to manage your  Office 365 services and resources from the Dashboard, along with your on-premises resources, instead of working in two places.  
   
--   Manage the online accounts that give your users access to  Office 365 along with your user accounts:  
+- Manage the online accounts that give your users access to  Office 365 along with your user accounts:  
   
-    -   Create Microsoft Online Services accounts for your users in a single step, or create user accounts on the server for your existing online accounts. You can also add an online account to a new or existing user account.  
+  -   Create Microsoft Online Services accounts for your users in a single step, or create user accounts on the server for your existing online accounts. You can also add an online account to a new or existing user account.  
   
-         When you create the online accounts from the Dashboard, users sign in to  Office 365 with the same password they use on the server. If they change the password for their user account, the online password changes also. And you know that their online account passwords always meet the security requirements you set for your user accounts.  
+       When you create the online accounts from the Dashboard, users sign in to  Office 365 with the same password they use on the server. If they change the password for their user account, the online password changes also. And you know that their online account passwords always meet the security requirements you set for your user accounts.  
   
-    -   Manage an online account along with the user account throughout the lifecycle of the user account. If you deactivate a user account, the online account is deactivated also. If you remove a user account, the online account also is removed.  
+  -   Manage an online account along with the user account throughout the lifecycle of the user account. If you deactivate a user account, the online account is deactivated also. If you remove a user account, the online account also is removed.  
   
-    -   On a  Windows Server Essentials server, manage Exchange Online distribution groups for email also.  
+  -   On a  Windows Server Essentials server, manage Exchange Online distribution groups for email also.  
   
--   Send and receive email from your organization's Internet domain (for example, contoso.com) by linking a custom Internet domain to your  Office 365 subscription.  
+- Send and receive email from your organization's Internet domain (for example, contoso.com) by linking a custom Internet domain to your  Office 365 subscription.  
   
--   Manage your subscription and  Office 365 integration from the Dashboard.  
+- Manage your subscription and  Office 365 integration from the Dashboard.  
   
--   If your subscription includes  SharePoint Online libraries,  Office 365 integration with a  Windows Server Essentials server lets you:  
+- If your subscription includes  SharePoint Online libraries,  Office 365 integration with a  Windows Server Essentials server lets you:  
   
-    -   Create and manage your  SharePoint Online libraries from the Dashboard.  
+  - Create and manage your  SharePoint Online libraries from the Dashboard.  
   
-        > [!NOTE]
-        >  You'll also be able to use the My Server 2012 R2 app to work with documents in your  SharePoint Online libraries from your laptop, mobile device, or Windows phone. This feature is only available for  Windows Server Essentials. For more information, see [Use the My Server App](../use/Use-the-My-Server-App-to-Connect-to-Windows-Server-Essentials.md).  
+    > [!NOTE]
+    >  You'll also be able to use the My Server 2012 R2 app to work with documents in your  SharePoint Online libraries from your laptop, mobile device, or Windows phone. This feature is only available for  Windows Server Essentials. For more information, see [Use the My Server App](../use/Use-the-My-Server-App-to-Connect-to-Windows-Server-Essentials.md).  
   
-    -   Change permissions for a  SharePoint Online team site from the Dashboard, or open the team site from the Dashboard to make other changes.  
+  - Change permissions for a  SharePoint Online team site from the Dashboard, or open the team site from the Dashboard to make other changes.  
   
-     For more information, see [Manage SharePoint Online](Manage-SharePoint-Online-in-Windows-Server-Essentials.md).  
+    For more information, see [Manage SharePoint Online](Manage-SharePoint-Online-in-Windows-Server-Essentials.md).  
   
--   If you subscribe to Exchange Online,  Office 365 integration with a  Windows Server Essentials server lets you manage the mobile devices that your users use to connect to your company email server:  
+- If you subscribe to Exchange Online,  Office 365 integration with a  Windows Server Essentials server lets you manage the mobile devices that your users use to connect to your company email server:  
   
-    -   Require password protection when mobile devices connect to the company email server. Set a minimum password length, the number of failed sign-in attempts to allow, and the minimum time required between sign-in attempts.  
+  -   Require password protection when mobile devices connect to the company email server. Set a minimum password length, the number of failed sign-in attempts to allow, and the minimum time required between sign-in attempts.  
   
-    -   Block a mobile device from connecting to Exchange Online if you know of security issues with the device model.  
+  -   Block a mobile device from connecting to Exchange Online if you know of security issues with the device model.  
   
-    -   If a mobile device is lost or stolen, wipe the device to delete any sensitive company data the next time the device is turned on.  
+  -   If a mobile device is lost or stolen, wipe the device to delete any sensitive company data the next time the device is turned on.  
   
--    Office 365 integration gives you new ways to connect to  Office 365 services and resources:  
+- Office 365 integration gives you new ways to connect to  Office 365 services and resources:  
   
-    -   Open  Office 365 services from the  Windows Server Essentials Launchpad. For information, see [Quick Start Guide to Using Microsoft Office 365](../use/Quick-Start-Guide-to-Using-Microsoft-Office-365-with-Windows-Server-Essentials.md).  
+  -   Open  Office 365 services from the  Windows Server Essentials Launchpad. For information, see [Quick Start Guide to Using Microsoft Office 365](../use/Quick-Start-Guide-to-Using-Microsoft-Office-365-with-Windows-Server-Essentials.md).  
   
-    -   Use the My Server 2012 R2 app to work with documents in your  SharePoint Online libraries from your laptop, mobile device, or Windows phone. For information, see [Use the My Server App](../use/Use-the-My-Server-App-to-Connect-to-Windows-Server-Essentials.md). This feature is only available in  Windows Server Essentials.  
+  -   Use the My Server 2012 R2 app to work with documents in your  SharePoint Online libraries from your laptop, mobile device, or Windows phone. For information, see [Use the My Server App](../use/Use-the-My-Server-App-to-Connect-to-Windows-Server-Essentials.md). This feature is only available in  Windows Server Essentials.  
   
 ##  <a name="BKMK_Configure"></a> Set up Office 365 integration  
  You can integrate your server with  Office 365 at any time after you complete the server installation. If you don't already have an  Office 365 subscription, you can purchase one or sign up for a free trial subscription.  
@@ -112,23 +112,23 @@ When you integrate your  Windows Server Essentials server with Microsoft  Office
   
 ##### To integrate the server with Office 365  
   
-1.  Sign in on the server as an administrator, and open the  Windows Server Essentials Dashboard.  
+1. Sign in on the server as an administrator, and open the  Windows Server Essentials Dashboard.  
   
-2.  On the **Home** page, click **Services** (in  Windows Server Essentials, click **Email**), click **Integrate with Microsoft Office 365**, and then click **Set up Microsoft Office 365 Integration**.  
+2. On the **Home** page, click **Services** (in  Windows Server Essentials, click **Email**), click **Integrate with Microsoft Office 365**, and then click **Set up Microsoft Office 365 Integration**.  
   
-     The Integrate with Microsoft Office 365 Wizard appears.  
+    The Integrate with Microsoft Office 365 Wizard appears.  
   
-3.  On the **Get Started** page, take one of following actions:  
+3. On the **Get Started** page, take one of following actions:  
   
-    -   If you don't have a subscription to  Office 365, click **Next**, and follow the instructions to subscribe to  Office 365 or sign up for a trial subscription.  
+   -   If you don't have a subscription to  Office 365, click **Next**, and follow the instructions to subscribe to  Office 365 or sign up for a trial subscription.  
   
-         You'll need to sign in to  Office 365 before you return to the wizard. But you don't need to perform any of the tasks in the **Start here** section of the  Office 365 portal.  
+        You'll need to sign in to  Office 365 before you return to the wizard. But you don't need to perform any of the tasks in the **Start here** section of the  Office 365 portal.  
   
-    -   If you already have a subscription to  Office 365 that you want to integrate with the server, select **I already have a subscription for Office 365**, and then click **Next**.  
+   -   If you already have a subscription to  Office 365 that you want to integrate with the server, select **I already have a subscription for Office 365**, and then click **Next**.  
   
-4.  Follow the instructions to complete the wizard.  
+4. Follow the instructions to complete the wizard.  
   
- After the wizard completes successfully, you'll notice the following changes to the Dashboard:  
+   After the wizard completes successfully, you'll notice the following changes to the Dashboard:  
   
 -   There's a new **Office 365** page, which is used to manage the integration and your  Office 365 subscription.  
   
@@ -145,19 +145,19 @@ When you integrate your  Windows Server Essentials server with Microsoft  Office
   
  Setting up a custom domain to use with  Office 365 involves four tasks:  
   
-1.  **Buy a domain name.** That is, register it with a domain registrar or DNS hosting provider.  
+1. **Buy a domain name.** That is, register it with a domain registrar or DNS hosting provider.  
   
-    -   Pick a domain name that works with  Office 365. You can use a 2nd-level domain name ?for example, buycontoso.com ?but not a 3rd-level domain name ?for example, marketing.contoso.com. For more information about choosing a domain to use in  Office 365, see [Domains](https://technet.microsoft.com/library/office-365-domains.aspx).  
+   -   Pick a domain name that works with  Office 365. You can use a 2nd-level domain name ?for example, buycontoso.com ?but not a 3rd-level domain name ?for example, marketing.contoso.com. For more information about choosing a domain to use in  Office 365, see [Domains](https://technet.microsoft.com/library/office-365-domains.aspx).  
   
-    -   Buy it from a domain registrar that allows the domain name server (DNS) records required by  Office 365. To find out which domain registrars allow the required DNS records, see [How to buy a domain name](https://office.microsoft.com/office365-suite-help/how-to-buy-a-domain-name-HA102819883.aspx?CTT=5&origin=HA102818660). If you already registered your domain with a different registrar, don't worry; you can transfer the domain to a different registrar when you link the domain to  Office 365.  
+   -   Buy it from a domain registrar that allows the domain name server (DNS) records required by  Office 365. To find out which domain registrars allow the required DNS records, see [How to buy a domain name](https://office.microsoft.com/office365-suite-help/how-to-buy-a-domain-name-HA102819883.aspx?CTT=5&origin=HA102818660). If you already registered your domain with a different registrar, don't worry; you can transfer the domain to a different registrar when you link the domain to  Office 365.  
   
-2.  **Configure DNS records that allow Office 365 services to use the domain name.** The easiest way is to let the wizard configure the DNS records for you when you link the domain to your  Office 365 subscription in step 3. If you'd rather do it yourself, see [How to manually configure DNS records for Office 365 integration](#BKMK_ManuallyConfigureDNS).  
+2. **Configure DNS records that allow Office 365 services to use the domain name.** The easiest way is to let the wizard configure the DNS records for you when you link the domain to your  Office 365 subscription in step 3. If you'd rather do it yourself, see [How to manually configure DNS records for Office 365 integration](#BKMK_ManuallyConfigureDNS).  
   
-3.  **Link your custom Internet domain to your Office 365 subscription.** You'll use the **Link a domain to Office 365** action.  
+3. **Link your custom Internet domain to your Office 365 subscription.** You'll use the **Link a domain to Office 365** action.  
   
-4.  **Verify that your Office 365 services are using the new domain name.**  
+4. **Verify that your Office 365 services are using the new domain name.**  
   
- If you complete steps 1 and 2 before you use the **Link a domain to Office 365** task, the wizard can link the domain name to  Office 365. Alternatively, you can have a wizard help you with some or all of steps 1 and 2.  
+   If you complete steps 1 and 2 before you use the **Link a domain to Office 365** task, the wizard can link the domain name to  Office 365. Alternatively, you can have a wizard help you with some or all of steps 1 and 2.  
   
 ##### To link your organization's Internet domain to Office 365  
   

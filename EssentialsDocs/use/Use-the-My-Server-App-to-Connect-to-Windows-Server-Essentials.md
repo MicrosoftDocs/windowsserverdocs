@@ -23,7 +23,7 @@ The My Server apps for  Windows Server Essentials let you connect to resources a
  If your server is running the  Windows Server Essentials operating system, use the original My Server app. If your server is running the  Windows Server Essentials operating system, you must use the updated My Server 2012 R2 app. Both apps can be downloaded from [Apps for Windows](https://windows.microsoft.com/windows-8/apps).  
   
 > [!TIP]
-
+> 
 >  To access resources in  Windows Server Essentials from your Windows Phone, use the My Server phone app (for  Windows Server Essentials) or the My Server 2012 R2 phone app (for  Windows Server Essentials). For information about the My Server phone app, see [Use the My Server app for Windows Phone](Work-Remotely-in-Windows-Server-Essentials.md#BKMK_2). For information about the My Server 2012 R2 phone app, see the blog entry [My Server 2012 R2 Windows and Windows Phone apps](http://blogs.technet.com/b/sbs/archive/2013/11/19/my-server-2012-r2-windows-and-windows-phone-apps.aspx).  
   
 ## In this topic  

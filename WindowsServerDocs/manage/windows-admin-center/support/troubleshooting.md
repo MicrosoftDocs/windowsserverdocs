@@ -210,22 +210,22 @@ When installing Windows Admin Center, you are given the option to let Windows Ad
     Get-Item WSMan:\localhost\Client\TrustedHosts
     ```
 
-    > [!WARNING]
-    > If the current setting of your TrustedHosts is not empty, the commands below will overwrite your setting. We recommend that you save the current setting to a text file with the following command so you can restore it if needed:
-
-    > `Get-Item WSMan:localhost\Client\TrustedHosts | Out-File C:\OldTrustedHosts.txt`
+   > [!WARNING]
+   > If the current setting of your TrustedHosts is not empty, the commands below will overwrite your setting. We recommend that you save the current setting to a text file with the following command so you can restore it if needed:
+   > 
+   > `Get-Item WSMan:localhost\Client\TrustedHosts | Out-File C:\OldTrustedHosts.txt`
 
 3. Set TrustedHosts to the NetBIOS, IP, or FQDN of the machines you
-intend to manage:
+   intend to manage:
 
     ```powershell
     Set-Item WSMan:localhost\Client\TrustedHosts -Value '192.168.1.1,server01.contoso.com,server02'
     ```
 
-    > [!TIP] 
-    >For an easy way to set all TrustedHosts at once, you can use a wildcard.
-
-    >     Set-Item WSMan:\localhost\Client\TrustedHosts -Value '*'
+   > [!TIP]
+   > For an easy way to set all TrustedHosts at once, you can use a wildcard.
+   > 
+   >     Set-Item WSMan:\localhost\Client\TrustedHosts -Value '*'
 
 4. When you are done testing, you can issue the following command from an elevated PowerShell session to clear your TrustedHosts setting:
 

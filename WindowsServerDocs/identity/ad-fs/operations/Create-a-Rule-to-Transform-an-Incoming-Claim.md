@@ -128,9 +128,9 @@ Membership in **Administrators**, or equivalent, on the local computer is the mi
 >   
 > For more information about Dynamic Access Control scenarios, see [Dynamic Access Control Content Roadmap](../../solution-guides/dynamic-access-control--scenario-overview.md) or [Using AD DS Claims with AD FS](https://technet.microsoft.com/library/hh831504.aspx).  
   
-7.  Click **Finish**.  
+7. Click **Finish**.  
   
-8.  In the **Edit Claim Rules** dialog box, click **OK** to save the rule.  
+8. In the **Edit Claim Rules** dialog box, click **OK** to save the rule.  
 
 ## Additional references 
 [Configure Claim Rules](Configure-Claim-Rules.md)  

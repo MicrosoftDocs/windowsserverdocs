@@ -23,7 +23,7 @@ Starting with Windows Server 2016 and Windows 10, you can choose between standar
   
 - Standard checkpoints capture the state, data, and hardware configuration of a running virtual machine and are intended for use in development and test scenarios. Standard checkpoints can be useful if you need to recreate a specific state or condition of a running virtual machine so that you can troubleshoot a problem.  
  
- ## Change checkpoints to production or standard checkpoints  
+  ## Change checkpoints to production or standard checkpoints  
   
 1.  In **Hyper-V Manager**, right-click the virtual machine and click **Settings**.  
   

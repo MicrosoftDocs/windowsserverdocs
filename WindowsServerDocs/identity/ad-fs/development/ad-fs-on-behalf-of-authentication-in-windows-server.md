@@ -225,22 +225,24 @@ In order to complete the on-behalf-of flow, you need to create a backend resourc
 * Add the following code in the controller
 
 
-        using System;
-        using System.Collections.Generic;
-        using System.Linq;
-        using System.Net;
-        using System.Net.Http;
-        using System.Web.Http;
-        namespace WebAPIOBO.Controllers
+~~~
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+    using System.Net;
+    using System.Net.Http;
+    using System.Web.Http;
+    namespace WebAPIOBO.Controllers
+    {
+        public class WebAPIOBOController : ApiController
         {
-            public class WebAPIOBOController : ApiController
+            public IHttpActionResult Get()
             {
-                public IHttpActionResult Get()
-                {
-                    return Ok("WebAPI via OBO");
-                }
+                return Ok("WebAPI via OBO");
             }
         }
+    }
+~~~
 
 This code will simply return the string when anyone puts a Get request for the WebAPI WebAPIOBO
 
@@ -268,15 +270,14 @@ Continue through the rest of the wizard same as when we configured the ToDoListS
 * Open the Web.config file
 * Modify the following keys
 
-| Key | Value |
-|:-----|:-------|
-|ida:Audience| ID of the ToDoListService as given to AD FS while configuring the ToDoListService WebAPI, for example, https://localhost:44321/|
-|ida:ClientID| ID of the ToDoListService as given to AD FS while configuring the ToDoListService WebAPI, for example, https://localhost:44321/ </br>**It is very important that the ida:Audience and ida:ClientID match each other**|
-|ida:ClientSecret| This is the secret that AD FS generated when you were configuring the ToDoListService client in AD FS|
-|ida:AdfsMetadataEndpoint| This is the URL to your AD FS metadata, for e.g. https://fs.anandmsft.com/federationmetadata/2007-06/federationmetadata.xml|
-|ida:OBOWebAPIBase| This is the base address that we will use to call the backend API, for e.g. https://localhost:44300|
-|ida:Authority| This is the URL for your AD FS service, example https://fs.anandmsft.com/adfs/|
-
+| Key                      | Value                                                                                                                                                                                                                   |
+|:-------------------------|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| ida:Audience             | ID of the ToDoListService as given to AD FS while configuring the ToDoListService WebAPI, for example, https://localhost:44321/                                                                                         |
+| ida:ClientID             | ID of the ToDoListService as given to AD FS while configuring the ToDoListService WebAPI, for example, <https://localhost:44321/> </br>**It is very important that the ida:Audience and ida:ClientID match each other** |
+| ida:ClientSecret         | This is the secret that AD FS generated when you were configuring the ToDoListService client in AD FS                                                                                                                   |
+| ida:AdfsMetadataEndpoint | This is the URL to your AD FS metadata, for e.g. https://fs.anandmsft.com/federationmetadata/2007-06/federationmetadata.xml                                                                                             |
+| ida:OBOWebAPIBase        | This is the base address that we will use to call the backend API, for e.g. https://localhost:44300                                                                                                                     |
+| ida:Authority            | This is the URL for your AD FS service, example https://fs.anandmsft.com/adfs/                                                                                                                                          |
 
 All other ida:XXXXXXX keys in the **appsettings** node can be commented out or deleted
 

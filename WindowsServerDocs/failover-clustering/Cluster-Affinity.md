@@ -63,7 +63,7 @@ The value of "0" means it is disabled and not to be enforced.  The value of "1" 
 
 When both of these are set, the group will be prevented from coming online together.  If they are on the same node, this is what you would see in Failover Cluster Manager.
 
-![Cluster Affinity](media\Cluster-Affinity\Cluster-Affinity-1.png)
+![Cluster Affinity](media/Cluster-Affinity/Cluster-Affinity-1.png)
 
 In a PowerShell listing of the groups, you would see this:
 

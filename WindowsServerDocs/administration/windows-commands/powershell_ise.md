@@ -28,27 +28,27 @@ The **PowerShell_ISE.exe** tool starts a Windows PowerShell ISE session. When yo
 ## Using PowerShell_ISE.exe
 
 You can use **PowerShell_ISE.exe** to start and end a Windows PowerShell session as follows:
--   To start a Windows PowerShell ISE session, in a Command Prompt window, in Windows PowerShell, or at the Start menu, type:  
-    ```
-    PowerShell_Ise
-    ```  
--   To open a script (.ps1), script module (.psm1), module manifest (.psd1), XML file, or any other supported file in Windows PowerShell ISE, use the following command format:  
-    ```
-    PowerShell_Ise <FilePath>
-    ```  
-    In Windows PowerShell 3.0, you can use the optional **File** parameter as follows:  
-    ```
-    PowerShell_Ise -File <FilePath>
-    ```  
--   To start a Windows PowerShell ISE session without your Windows PowerShell profiles, use the **NoProfile** parameter. (The **NoProfile** parameter is introduced in Windows PowerShell 3.0.)  
-    ```
-    PowerShell_Ise -NoProfile
-    ```  
--   To see the **PowerShell_ISE.exe** Help file in a Command Prompt window, use the following command format:  
-    ```
-    PowerShell_Ise -help, -?, /?
-    ```  
-For a complete list of the **PowerShell_ISE.exe** command-line parameters, see [about_PowerShell_Ise.exe](https://go.microsoft.com/fwlink/?LinkId=256512).
+- To start a Windows PowerShell ISE session, in a Command Prompt window, in Windows PowerShell, or at the Start menu, type:  
+  ```
+  PowerShell_Ise
+  ```  
+- To open a script (.ps1), script module (.psm1), module manifest (.psd1), XML file, or any other supported file in Windows PowerShell ISE, use the following command format:  
+  ```
+  PowerShell_Ise <FilePath>
+  ```  
+  In Windows PowerShell 3.0, you can use the optional **File** parameter as follows:  
+  ```
+  PowerShell_Ise -File <FilePath>
+  ```  
+- To start a Windows PowerShell ISE session without your Windows PowerShell profiles, use the **NoProfile** parameter. (The **NoProfile** parameter is introduced in Windows PowerShell 3.0.)  
+  ```
+  PowerShell_Ise -NoProfile
+  ```  
+- To see the **PowerShell_ISE.exe** Help file in a Command Prompt window, use the following command format:  
+  ```
+  PowerShell_Ise -help, -?, /?
+  ```  
+  For a complete list of the **PowerShell_ISE.exe** command-line parameters, see [about_PowerShell_Ise.exe](https://go.microsoft.com/fwlink/?LinkId=256512).
 
 ## Start Windows PowerShell ISE in other ways
 

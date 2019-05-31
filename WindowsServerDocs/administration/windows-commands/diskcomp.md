@@ -37,69 +37,70 @@ diskcomp [<Drive1>: [<Drive2>:]]
 
 ## Remarks
 
--   Using disks
+- Using disks
 
-    The **diskcomp** command works only with floppy disks. You cannot use **diskcomp** with a hard disk. If you specify a hard disk drive for *Drive1* or *Drive2*, **diskcomp** displays the following error message:  
-    ```
-    Invalid drive specification
-    Specified drive does not exist
-    or is nonremovable
-    ```  
--   Comparing disks
+  The **diskcomp** command works only with floppy disks. You cannot use **diskcomp** with a hard disk. If you specify a hard disk drive for *Drive1* or *Drive2*, **diskcomp** displays the following error message:  
+  ```
+  Invalid drive specification
+  Specified drive does not exist
+  or is nonremovable
+  ```  
+- Comparing disks
 
-    If all tracks on the two disks being compared are the same, **diskcomp** displays the following message:  
-    ```
-    Compare OK
-    ```  
-    If the tracks are not the same, **diskcomp** displays a message similar to the following:  
-    ```
-    Compare error on
-    side 1, track 2
-    ```  
-    When **diskcomp** completes the comparison, it displays the following message:  
-    ```
-    Compare another diskette (Y/N)?
-    ```  
-    If you press Y, **diskcomp** prompts you to insert the disk for the next comparison. If you press N, **diskcomp** stops the comparison.
+  If all tracks on the two disks being compared are the same, **diskcomp** displays the following message:  
+  ```
+  Compare OK
+  ```  
+  If the tracks are not the same, **diskcomp** displays a message similar to the following:  
+  ```
+  Compare error on
+  side 1, track 2
+  ```  
+  When **diskcomp** completes the comparison, it displays the following message:  
+  ```
+  Compare another diskette (Y/N)?
+  ```  
+  If you press Y, **diskcomp** prompts you to insert the disk for the next comparison. If you press N, **diskcomp** stops the comparison.
 
-    When **diskcomp** makes the comparison, it ignores a disk's volume number.
--   Omitting drive parameters
+  When **diskcomp** makes the comparison, it ignores a disk's volume number.
+- Omitting drive parameters
 
-    If you omit the *Drive2* parameter, **diskcomp** uses the current drive for *Drive2*. If you omit both drive parameters, **diskcomp** uses the current drive for both. If the current drive is the same as *Drive1*, **diskcomp** prompts you to swap disks as necessary.
--   Using one drive
+  If you omit the *Drive2* parameter, **diskcomp** uses the current drive for *Drive2*. If you omit both drive parameters, **diskcomp** uses the current drive for both. If the current drive is the same as *Drive1*, **diskcomp** prompts you to swap disks as necessary.
+- Using one drive
 
-    If you specify the same floppy disk drive for *Drive1* and *Drive2*, **diskcomp** compares them by using one drive and prompts you to insert the disks as necessary. You might have to swap the disks more than once, depending on the capacity of the disks and the amount of available memory.
--   Comparing different types of disks
+  If you specify the same floppy disk drive for *Drive1* and *Drive2*, **diskcomp** compares them by using one drive and prompts you to insert the disks as necessary. You might have to swap the disks more than once, depending on the capacity of the disks and the amount of available memory.
+- Comparing different types of disks
 
-    **Diskcomp** cannot compare a single-sided disk with a double-sided disk, nor a high-density disk with a double-density disk. If the disk in *Drive1* is not of the same type as the disk in *Drive2*, **diskcomp** displays the following message:  
-    ```
-    Drive types or diskette types not compatible
-    ```  
--   Using **diskcomp** with networks and redirected drives
+  **Diskcomp** cannot compare a single-sided disk with a double-sided disk, nor a high-density disk with a double-density disk. If the disk in *Drive1* is not of the same type as the disk in *Drive2*, **diskcomp** displays the following message:  
+  ```
+  Drive types or diskette types not compatible
+  ```  
+- Using **diskcomp** with networks and redirected drives
 
-    **Diskcomp** does not work on a network drive or on a drive created by the **subst** command. If you attempt to use **diskcomp** with a drive of any of these types, **diskcomp** displays the following error message:  
-    ```
-    Invalid drive specification
-    ```  
--   Comparing an original disk with a copy
+  **Diskcomp** does not work on a network drive or on a drive created by the **subst** command. If you attempt to use **diskcomp** with a drive of any of these types, **diskcomp** displays the following error message:  
+  ```
+  Invalid drive specification
+  ```  
+- Comparing an original disk with a copy
 
-    When you use **diskcomp** with a disk that you made by using **copy**, **diskcomp** might display a message similar to the following:  
-    ```
-    Compare error on 
-    side 0, track 0
-    ```  
-    This type of error can occur even if the files on the disks are identical. Although **copy** duplicates information, it does not necessarily place it in the same location on the destination disk.
--   Understanding **diskcomp** exit codes
+  When you use **diskcomp** with a disk that you made by using **copy**, **diskcomp** might display a message similar to the following:  
+  ```
+  Compare error on 
+  side 0, track 0
+  ```  
+  This type of error can occur even if the files on the disks are identical. Although **copy** duplicates information, it does not necessarily place it in the same location on the destination disk.
+- Understanding **diskcomp** exit codes
 
-    The following table explains each exit code.  
-    |Exit code|Description|
-    |---------|-----------|
-    |0|Disks are the same|
-    |1|Differences were found|
-    |3|Hard error occurred|
-    |4|Initialization error occurred|
+  The following table explains each exit code.  
 
-    To process exit codes that are returned by **diskcomp**, you can use the ERRORLEVEL environment variable on the **if** command line in a batch program.
+  |Exit code|Description|
+  |---------|-----------|
+  |0|Disks are the same|
+  |1|Differences were found|
+  |3|Hard error occurred|
+  |4|Initialization error occurred|
+
+  To process exit codes that are returned by **diskcomp**, you can use the ERRORLEVEL environment variable on the **if** command line in a batch program.
 
 ## <a name="BKMK_examples"></a>Examples
 

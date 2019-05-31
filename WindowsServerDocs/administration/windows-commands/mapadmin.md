@@ -48,7 +48,7 @@ In addition to specific command arguments, **mapadmin** accepts the following ar
 Specifies the remote computer running the User Name Mapping service that you want to administer. You can specify the computer using a Windows Internet Name Service (WINS) name or a Domain Name System (DNS) name, or by Internet Protocol (IP) address.
 
 -u &lt;user&gt;
-Specifies the user name of the user whose credentials are to be used. It might be necessary to add the domain name to the user name in the form *domain***\\***user name*.
+Specifies the user name of the user whose credentials are to be used. It might be necessary to add the domain name to the user name in the form <em>domain</em>**\\**<em>user name</em>.
 
 -p &lt;password&gt;
 Specifies the password of the user. If you specify the **-u** option but omit the **-p** option, you are prompted for the user's password.

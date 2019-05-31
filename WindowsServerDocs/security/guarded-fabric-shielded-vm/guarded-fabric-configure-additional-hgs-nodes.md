@@ -146,6 +146,6 @@ To decommission an HGS node:
 
 ## Next step
 
->[!div class="nextstepaction"]
-[Validate the HGS configuration](guarded-fabric-verify-hgs-configuration.md)
+> [!div class="nextstepaction"]
+> [Validate the HGS configuration](guarded-fabric-verify-hgs-configuration.md)
 

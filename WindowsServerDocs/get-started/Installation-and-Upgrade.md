@@ -40,10 +40,10 @@ In some operating system releases, you can convert a particular edition of the r
 
 ## Upgrade
 If you want to keep the same hardware and all the server roles you have set up without flattening the server, **upgrading** is an option—and there are lots of ways to do it. In the classic upgrade, you go from an older operating system to a newer one, keeping your settings, server roles, and data intact. For example, if your server is running Windows Server 2012 R2, you can upgrade it to Windows Server 2016. However, not every older operating system has a pathway to every newer one.
- 
+ 
 >[!NOTE]
 >Upgrade works best in virtual machines where specific OEM hardware drivers are not needed for a successful upgrade.
- 
+ 
 You can upgrade from an evaluation version of the operating system to a retail version, from an older retail version to a newer version, or, in some cases, from a volume-licensed edition of the operating system to an ordinary retail edition.
 
 Before you get started with an upgrade, have a look at the tables on this page to see how to get from where you are to where you want to be.
@@ -52,14 +52,14 @@ For information about the differences between the installation options available
 
 >[!NOTE]
 >Whenever you migrate or upgrade to any version of Windows Server, you should review and understand the [support lifecycle policy](https://support.microsoft.com/lifecycle) and timeframe for that version and plan accordingly. You can [search for the lifecycle information](https://support.microsoft.com/lifecycle) for the particular Windows Server release that you are interested in.
- 
- 
+ 
+ 
 ## Upgrading to Windows Server 2016
 For details, including important caveats and limitations on upgrade, license conversion between editions of Windows Server 2016, and conversion of evaluation editions to retail, see [Supported Upgrade Paths for Windows Server 2016](https://go.microsoft.com/fwlink/?LinkId=828602).
- 
+ 
 >[!NOTE]
 >Note: Upgrades that switch from a Server Core installation to a Server with a Desktop installation (or vice versa) are not supported. If the older operating system you are upgrading or converting is a Server Core installation, the result will still be a Server Core installation of the newer operating system.
- 
+ 
 Quick reference table of supported upgrade paths from older Windows Server retail editions to Windows Server 2016 retail editions:
 
 
@@ -75,7 +75,7 @@ Quick reference table of supported upgrade paths from older Windows Server retai
 |Windows Storage Server 2012 Workgroup|Windows Storage Server 2016 Workgroup|
 |Windows Storage Server 2012 R2 Standard|Windows Storage Server 2016 Standard|
 |Windows Storage Server 2012 R2 Workgroup|Windows Storage Server 2016 Workgroup|
- 
+ 
 ### License conversion
 You can convert Windows Server 2016 Standard (retail) to Windows Server 2016 Datacenter (retail).
 
@@ -84,7 +84,7 @@ You can convert Windows Server 2016 Essentials (retail) to Windows Server 2016 S
 You can convert the evaluation version of Windows Server 2016 Standard to either Windows Server 2016 Standard (retail) or Datacenter (retail).
 
 You can convert the evaluation version of Windows Server 2016 Datacenter to Windows Server 2016 Datacenter (retail).
- 
+ 
 ## Upgrading to Windows Server 2012 R2
 For details, including important caveats and limitations on upgrade, license conversion between editions of Windows Server 2012 R2, and conversion of evaluation editions to retail, see [Upgrade Options for Windows Server 2012 R2](https://technet.microsoft.com/library/dn303416.aspx).
 
@@ -109,7 +109,7 @@ You can convert the evaluation version of Windows Server 2012 Standard to either
 
 ## Upgrading to Windows Server 2012
 For details, including important caveats and limitations on upgrade, and conversion of evaluation editions to retail, see [Evaluation Versions and Upgrade Options for Windows Server 2012](https://technet.microsoft.com/library/jj574204.aspx).
- 
+ 
 Quick reference table of supported upgrade paths from older Windows Server retail editions to Windows Server 2012 retail editions:
 
 |If you are running:|You can upgrade to these editions:|
