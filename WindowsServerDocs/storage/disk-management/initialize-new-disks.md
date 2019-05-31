@@ -29,12 +29,12 @@ Here's how to initialize a new disk using Disk Management. If you prefer using P
 
      Note that some USB drives don't have the option to be initialized, they just get formatted and a [drive letter](change-a-drive-letter.md).
 
-    ![Disk Management showing an unformatted disk with the Initialize Disk shortcut menu displayed](media\uninitialized-disk.PNG)
+    ![Disk Management showing an unformatted disk with the Initialize Disk shortcut menu displayed](media/uninitialized-disk.PNG)
 2. In the **Initialize Disk** dialog box (shown here), check to make sure that the correct disk is selected and then click **OK** to accept the default partition style. If you need to change the partition style (GPT or MBR) see [About partition styles - GPT and MBR](#about-partition-styles---gpt-and-mbr).
 
      The disk status briefly changes to **Initializing** and then to the **Online** status. If initializing fails for some reason, see [A disk's status is Not Initialized or the disk is missing entirely](troubleshooting-disk-management.md#a-disks-status-is-not-initialized-or-the-disk-is-missing).
 
-    ![The Initialize Disk dialog box with the GPT partition style selected](media\initialize-disk.PNG)
+    ![The Initialize Disk dialog box with the GPT partition style selected](media/initialize-disk.PNG)
 
 ## About partition styles - GPT and MBR
 

@@ -99,7 +99,7 @@ This topic lists new and updated topics in the [Storage](storage.md) documentati
 |[Deploy Storage Spaces on a stand-alone server](storage-spaces/deploy-standalone-storage-spaces.md)|Migrated from the [Previous Versions](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012) library.|
 |[NTFS Overview](file-server/ntfs-overview.md)|Migrated from the [Previous Versions](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012) library.|
 |[Use Robocopy to Preseed Files for DFS Replication](dfs-replication/preseed-dfsr-with-robocopy.md)|Migrated from the [Previous Versions](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012) library.|
-|[Vssadmin - Previous Versions command line tool](..\administration\windows-commands\vssadmin.md)|Migrated from the [Previous Versions](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012) library.|
+|[Vssadmin - Previous Versions command line tool](../administration/windows-commands/vssadmin.md)|Migrated from the [Previous Versions](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012) library.|
 |[File Server Resource Manager overview](fsrm/fsrm-overview.md)| Added info about a new registry setting in Windows Server 2016, version 1803.|
 |[Server-to-server storage replication](storage-replica/server-to-server-storage-replication.md)|Added info on using Windows Admin Center.|
 |[Storage Replica known issues](storage-replica/storage-replica-known-issues.md)|Added new information.|

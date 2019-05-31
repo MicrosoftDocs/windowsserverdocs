@@ -59,8 +59,8 @@ Cross domain trust scenarios are an area that has been consistently a pain point
 
     -   Use DnsAvoidRegisterRecords to eliminate poorly performing or high-latency domain controllers, such as those in satellite sites, from advertising to the generic locators. For more info, see [How to optimize the location of a domain controller or global catalog that resides outside of a client's site](https://support.microsoft.com/kb/306602).
 
-        > [!Note]  
-        > There is a practical limit of about 50 to the number of domain controllers the client can consume. These should be the most site-optimal and highest capacity domain controllers.
+    > [!Note]
+    > There is a practical limit of about 50 to the number of domain controllers the client can consume. These should be the most site-optimal and highest capacity domain controllers.
 
          
 
