@@ -2,7 +2,7 @@
 title: What's New in Windows Server
 description: "What are the new features in compute, identity, management, automation, networking, security, storage."
 ms.prod: windows-server
-ms.date: 05/21/2019
+ms.date: 05/31/2019
 ms.technology: server-general
 ms.topic: article
 author: jasongerend
@@ -25,7 +25,7 @@ Semi-Annual Channel releases:
 - [What's New in Windows Server, version 1903](../get-started-19/whats-new-in-windows-server-1903.md)
 - [What's New in Windows Server, version 1809](whats-new-in-windows-server-1809.md)
 - [What's New in Windows Server, version 1803](whats-new-in-windows-server-1803.md)
-- [What's New in Windows Server, version 1709](whats-new-in-windows-server-1709.md)
+- [What's New in Windows Server, version 1709](whats-new-in-windows-server-1709.md) (Out of support as of April 9, 2019)
 
 ## See also
 
