@@ -30,21 +30,21 @@ In this step, you configure the global object access policy in the domain contro
   
 #### To configure a global object access policy  
   
-1.  Sign in to the domain controller DC1 as contoso\administrator with the password **pass@word1**.  
+1. Sign in to the domain controller DC1 as contoso\administrator with the password <strong>pass@word1</strong>.  
   
-2.  In Server Manager, point to **Tools**, and then click **Group Policy Management**.  
+2. In Server Manager, point to **Tools**, and then click **Group Policy Management**.  
   
-3.  In the console tree, double-click **Domains**, double-click **contoso.com**, click **Contoso**, and then double-click **File Servers**.  
+3. In the console tree, double-click **Domains**, double-click **contoso.com**, click **Contoso**, and then double-click **File Servers**.  
   
-4.  Right-click **FlexibleAccessGPO**, and click **Edit**.  
+4. Right-click **FlexibleAccessGPO**, and click **Edit**.  
   
-5.  Double-click **Computer Configuration**, double-click **Policies**, and then double-click **Windows Settings**.  
+5. Double-click **Computer Configuration**, double-click **Policies**, and then double-click **Windows Settings**.  
   
-6.  Double-click **Security Settings**, double-click **Advanced Audit Policy Configuration**, and then double-click **Audit Policies**.  
+6. Double-click **Security Settings**, double-click **Advanced Audit Policy Configuration**, and then double-click **Audit Policies**.  
   
-7.  Double-click **Object Access**, and then double-click **Audit File System**.  
+7. Double-click **Object Access**, and then double-click **Audit File System**.  
   
-8.  Select the **Configure the following events** check box, select the **Success** and **Failure** check boxes, and then click **OK**.  
+8. Select the **Configure the following events** check box, select the **Success** and **Failure** check boxes, and then click **OK**.  
   
 9. In the navigation pane, double-click **Global Object Access Auditing**, and then double-click **File system**.  
   
@@ -66,14 +66,14 @@ In this step, you update the Group Policy settings after you have created the au
   
 #### To update Group Policy settings  
   
-1.  Sign in to the file server, FILE1 as contoso\Administrator, with the password **pass@word1**.  
+1. Sign in to the file server, FILE1 as contoso\Administrator, with the password <strong>pass@word1</strong>.  
   
-2.  Press the Windows key+R, then type **cmd** to open a Command Prompt window.  
+2. Press the Windows key+R, then type **cmd** to open a Command Prompt window.  
   
-    > [!NOTE]  
-    > If the **User Account Control** dialog box appears, confirm that the action it displays is what you want, and then click **Yes**.  
+   > [!NOTE]  
+   > If the **User Account Control** dialog box appears, confirm that the action it displays is what you want, and then click **Yes**.  
   
-3.  Type **gpupdate /force** and then press ENTER.  
+3. Type **gpupdate /force** and then press ENTER.  
   
 ## <a name="BKMK_3"></a>Verify that the global object access policy has been applied  
 After the Group Policy settings have been applied, you can verify that the audit policy settings were applied correctly.  

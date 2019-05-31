@@ -74,7 +74,7 @@ or "ping &lt;source DC name&gt;".
 3) Verify that the source domain controller is using a valid DNS server 
 for DNS services, and that the source domain controller's host record 
 and CNAME record are correctly registered, using the DNS Enhanced 
-version of DCDIAG.EXE available on https://www.microsoft.com/dns 
+version of DCDIAG.EXE available on <https://www.microsoft.com/dns> 
 
 dcdiag /test:dns 
 
@@ -86,7 +86,7 @@ domain controller, as follows:
 dcdiag /test:dns 
 
 5) For further analysis of DNS error failures see KB 824449: 
-https://support.microsoft.com/?kbid=824449 
+<https://support.microsoft.com/?kbid=824449> 
 
 Additional Data 
 Error value: 
@@ -102,7 +102,7 @@ type was found</code>
   <section>
     <title>Resolution</title>
     <content>
-      <para>Proceed with DNS testing as described in "<link xlink:href="85b1d179-f53e-4f95-b0b8-5b1c096a8076">Event ID 2087: DNS lookup failure caused replication to fail</link>."</para>
+      <para>Proceed with DNS testing as described in &quot;<link xlink:href="85b1d179-f53e-4f95-b0b8-5b1c096a8076">Event ID 2087: DNS lookup failure caused replication to fail</link>.&quot;</para>
     </content>
   </section>
   <relatedTopics />

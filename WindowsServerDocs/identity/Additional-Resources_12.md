@@ -40,4 +40,4 @@ For information about Active Directory known issues and best practices, see the 
 For general information about how to manage and configure Active Directory Domain Services (AD DS) and how it works, see the following resources:
 
 - [Administering Active Directory Operations](https://go.microsoft.com/fwlink/?LinkId=128798)
-- [Active Directory Collection](<https://go.microsoft.com/fwlink/?LinkId=34157)
+- [Active Directory Collection](https://go.microsoft.com/fwlink/?LinkId=34157)

@@ -132,13 +132,13 @@ In order for an integration service to be fully functional, its corresponding se
 
 Linux integration services are generally provided through the Linux kernel. The Linux integration services driver is named **hv_utils**.
 
-1.  To find out if **hv_utils** is loaded, use this command:
+1. To find out if **hv_utils** is loaded, use this command:
 
-    ``` BASH
-    lsmod | grep hv_utils
-    ``` 
+   ``` BASH
+   lsmod | grep hv_utils
+   ``` 
   
-1. The output should look similar to this:  
+2. The output should look similar to this:  
   
     ``` BASH
     Module                  Size   Used by
@@ -146,13 +146,13 @@ Linux integration services are generally provided through the Linux kernel. The 
     hv_vmbus               61440   8 hv_balloon,hyperv_keyboard,hv_netvsc,hid_hyperv,hv_utils,hyperv_fb,hv_storvsc
     ```
 
-1. To find out if the required daemons are running, use this command.
+3. To find out if the required daemons are running, use this command.
   
     ``` BASH
     ps -ef | grep hv
     ```
   
-1. The output should look similar to this: 
+4. The output should look similar to this: 
   
     ```BASH
     root       236     2  0 Jul11 ?        00:00:00 [hv_vmbus_con]
@@ -165,13 +165,13 @@ Linux integration services are generally provided through the Linux kernel. The 
     scooley  43774 43755  0 21:20 pts/0    00:00:00 grep --color=auto hv          
     ```
 
-1. To see what daemons are available, run:
+5. To see what daemons are available, run:
 
     ``` BASH
     compgen -c hv_
     ```
   
-1. The output should look similar to this:
+6. The output should look similar to this:
   
     ``` BASH
     hv_vss_daemon
@@ -182,10 +182,10 @@ Linux integration services are generally provided through the Linux kernel. The 
     hv_fcopy_daemon     
     ```
   
- Integration service daemons that might be listed include the following. If any are missing, they might not be supported on your system or they might not be installed. Find details, see [Supported Linux and FreeBSD virtual machines for Hyper-V on Windows](https://technet.microsoft.com/library/dn531030.aspx).  
-  - **hv_vss_daemon**: This daemon is required to create live Linux virtual machine backups.
-  - **hv_kvp_daemon**: This daemon allows setting and querying intrinsic and extrinsic key value pairs.
-  - **hv_fcopy_daemon**: This daemon implements a file copying service between the host and guest.  
+   Integration service daemons that might be listed include the following. If any are missing, they might not be supported on your system or they might not be installed. Find details, see [Supported Linux and FreeBSD virtual machines for Hyper-V on Windows](https://technet.microsoft.com/library/dn531030.aspx).  
+   - **hv_vss_daemon**: This daemon is required to create live Linux virtual machine backups.
+   - **hv_kvp_daemon**: This daemon allows setting and querying intrinsic and extrinsic key value pairs.
+   - **hv_fcopy_daemon**: This daemon implements a file copying service between the host and guest.  
 
 ### Examples
 

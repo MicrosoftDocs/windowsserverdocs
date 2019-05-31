@@ -47,17 +47,17 @@ After you have completed the installation of Windows Admin Center, you can add s
 
  **Add a single server or a cluster as a managed node**
 
- 1. Click **+ Add** under **All Connections**.
+1. Click **+ Add** under **All Connections**.
 
-    ![](../media/launch/addserver0.png)
+   ![](../media/launch/addserver0.png)
 
- 2. Choose to add a Server, Failover Cluster or Hyper-Converged Cluster connection:
+2. Choose to add a Server, Failover Cluster or Hyper-Converged Cluster connection:
     
-    ![](../media/launch/addserver1.png)
+   ![](../media/launch/addserver1.png)
 
- 3. Type the name of the server or cluster to manage and click **Submit**. The server or cluster will be added to your connection list on the overview page.
+3. Type the name of the server or cluster to manage and click **Submit**. The server or cluster will be added to your connection list on the overview page.
 
-    ![](../media/launch/addserver2.png)
+   ![](../media/launch/addserver2.png)
 
    **-- OR --**
 
@@ -91,7 +91,7 @@ You can use your current Windows credentials to authenticate with the managed no
 
 **Single sign-on when deployed as a Service on Windows Server**
 
-If you have installed Windows Admin Center on Windows Server, additional configuration is required for single sign-on.  [Configure your environment for delegation](..\configure\user-access-control.md)
+If you have installed Windows Admin Center on Windows Server, additional configuration is required for single sign-on.  [Configure your environment for delegation](../configure/user-access-control.md)
 
 **-- OR --**
 

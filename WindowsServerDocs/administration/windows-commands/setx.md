@@ -33,21 +33,21 @@ setx [/s <Computer> [/u [<Domain>\]<User name> [/p [<Password>]]]] /f <FileName>
 
 ## Parameters
 
-|Parameter|Description|
-|---------|-----------|
-|/s \<Computer>|Specifies the name or IP address of a remote computer. Do not use backslashes. The default value is the name of the local computer.|
-|/u [\<Domain>\]<User name>|Runs the script with the credentials of the specified user account. The default value is the system permissions.|
-|/p [\<Password>]|Specifies the password of the user account that is specified in the **/u** parameter.|
-|\<Variable>|Specifies the name of the environment variable that you want to set.|
-|\<Value>|Specifies the value to which you want to set the environment variable.|
-|/k \<Path>|Specifies that the variable is set based on information from a registry key. The p*ath* uses the following syntax:</br>`\\<HIVE>\<KEY>\...\<Value>`</br>For example, you might specify the following path:</br>`HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\TimeZoneInformation\StandardName`|
-|/f \<File name>|Specifies the file that you want to use.|
-|/a \<X>,<Y>|Specifies absolute coordinates and offset as search parameters.|
-|/r \<X>,<Y> "<String>"|Specifies relative coordinates and offset from **String** as search parameters.|
-|/m|Specifies to set the variable in the system environment. The default setting is the local environment.|
-|/x|Displays file coordinates, ignoring the **/a**, **/r**, and **/d** command-line options.|
-|/d \<Delimiters>|Specifies delimiters such as "**,**" or "**\**" to be used in addition to the four built-in delimiters — SPACE, TAB, ENTER, and LINEFEED. Valid delimiters include any ASCII character. The maximum number of delimiters is 15, including built-in delimiters.|
-|/?|Displays help at the command prompt.|
+|         Parameter          |                                                                                                                                              Description                                                                                                                                              |
+|----------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|       /s \<Computer>       |                                                                                  Specifies the name or IP address of a remote computer. Do not use backslashes. The default value is the name of the local computer.                                                                                  |
+| /u [\<Domain>\]<User name> |                                                                                           Runs the script with the credentials of the specified user account. The default value is the system permissions.                                                                                            |
+|      /p [\<Password>]      |                                                                                                         Specifies the password of the user account that is specified in the **/u** parameter.                                                                                                         |
+|        \<Variable>         |                                                                                                                 Specifies the name of the environment variable that you want to set.                                                                                                                  |
+|          \<Value>          |                                                                                                                Specifies the value to which you want to set the environment variable.                                                                                                                 |
+|         /k \<Path>         | Specifies that the variable is set based on information from a registry key. The p*ath* uses the following syntax:</br>`\\<HIVE>\<KEY>\...\<Value>`</br>For example, you might specify the following path:</br>`HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\TimeZoneInformation\StandardName` |
+|      /f \<File name>       |                                                                                                                               Specifies the file that you want to use.                                                                                                                                |
+|        /a \<X>,<Y>         |                                                                                                                    Specifies absolute coordinates and offset as search parameters.                                                                                                                    |
+|   /r \<X>,<Y> "<String>"   |                                                                                                            Specifies relative coordinates and offset from **String** as search parameters.                                                                                                            |
+|             /m             |                                                                                                Specifies to set the variable in the system environment. The default setting is the local environment.                                                                                                 |
+|             /x             |                                                                                                       Displays file coordinates, ignoring the **/a**, **/r**, and **/d** command-line options.                                                                                                        |
+|      /d \<Delimiters>      |                    Specifies delimiters such as "**,**" or "**\\**" to be used in addition to the four built-in delimiters — SPACE, TAB, ENTER, and LINEFEED. Valid delimiters include any ASCII character. The maximum number of delimiters is 15, including built-in delimiters.                    |
+|             /?             |                                                                                                                                 Displays help at the command prompt.                                                                                                                                  |
 
 ## Remarks
 

@@ -48,16 +48,16 @@ chdir [..]
 ## Remarks
 
 If command extensions are enabled, the following conditions apply to the **cd** command:
--   The current directory string is converted to use the same case as the names on the disk. For example, `cd C:\TEMP` would set the current directory to C:\Temp if that is the case on the disk.
--   Spaces are not treated as delimiters, so *Path* can contain spaces without enclosing quotation marks. For example:  
-    ```
-    cd username\programs\start menu
-    ```  
-    is the same as:  
-    ```
-    cd "username\programs\start menu"
-    ```  
-    The quotation marks are required, however, if extensions are disabled.
+- The current directory string is converted to use the same case as the names on the disk. For example, `cd C:\TEMP` would set the current directory to C:\Temp if that is the case on the disk.
+- Spaces are not treated as delimiters, so *Path* can contain spaces without enclosing quotation marks. For example:  
+  ```
+  cd username\programs\start menu
+  ```  
+  is the same as:  
+  ```
+  cd "username\programs\start menu"
+  ```  
+  The quotation marks are required, however, if extensions are disabled.
 
 To disable command extensions, type:
 ```

@@ -57,8 +57,8 @@ This is a companion guide to the Windows Server 2016 Core Network Guide. To depl
 	- Windows 8.1 Enterprise
 	- Windows 8 Enterprise
 
->[!NOTE]
->In the following operating systems, BranchCache does not support HTTP and SMB functionality, but does support BranchCache BITS functionality.
+> [!NOTE]
+> In the following operating systems, BranchCache does not support HTTP and SMB functionality, but does support BranchCache BITS functionality.
 >     - Windows 10 Pro, BITS support only
 >     - Windows 8.1 Pro, BITS support only
 >     - Windows 8 Pro, BITS support only

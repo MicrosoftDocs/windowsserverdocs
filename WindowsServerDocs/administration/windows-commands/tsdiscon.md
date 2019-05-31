@@ -30,6 +30,7 @@ tsdiscon [<SessionID> | <SessionName>] [/server:<ServerName>] [/v]
 ```
 
 ## Parameters
+
 |Parameter|Description|
 |-------|--------|
 |\<SessionId>|Specifies the ID of the session to disconnect.|
@@ -46,18 +47,18 @@ tsdiscon [<SessionID> | <SessionName>] [/server:<ServerName>] [/v]
 -   The console session cannot be disconnected.
 
 ## <a name="BKMK_examples"></a>Examples
--   To disconnect the current session, type:
-    ```
-    tsdiscon
-    ```
--   To disconnect session 10, type:
-    ```
-    tsdiscon 10
-    ```
--   To disconnect the session named TERM04, type:
-    ```
-    tsdiscon TERM04
-    ```
-#### Additional references
-[Command-Line Syntax Key](command-line-syntax-key.md)
-[Remote Desktop Services &#40;Terminal Services&#41; Command Reference](remote-desktop-services-terminal-services-command-reference.md)
+- To disconnect the current session, type:
+  ```
+  tsdiscon
+  ```
+- To disconnect session 10, type:
+  ```
+  tsdiscon 10
+  ```
+- To disconnect the session named TERM04, type:
+  ```
+  tsdiscon TERM04
+  ```
+  #### Additional references
+  [Command-Line Syntax Key](command-line-syntax-key.md)
+  [Remote Desktop Services &#40;Terminal Services&#41; Command Reference](remote-desktop-services-terminal-services-command-reference.md)

@@ -73,9 +73,9 @@ You can configure your Hyper-Converged Infrastructure running Windows Server 201
 2. Download all the folder and files under SDN Express from [https://github.com/Microsoft/SDN/tree/master/SDNExpress](https://github.com/Microsoft/SDN/tree/master/SDNExpress).
 3. Prepare a different VM using the deployment console. This VM should be able to access the SDN hosts. Also, the VM should be have the RSAT Hyper-V tool installed.
 4. Copy everything you downloaded for SDN Express to the deployment console VM. And share this **SDNExpress** folder. Make sure every host can access the **SDNExpress** shared folder, as defined in the configuration file line 8:
-```
+   ```
     \\$env:Computername\SDNExpress
-```
+   ```
 5. Copy the VHD of the OS to the **images** folder under the **SDNExpress** folder on the deployment console VM.
 6. Modify the SDN Express configuration with your environment setup. Finish the following two steps after you modify the SDN Express configuration based on your environment information.
 7. Run PowerShell with Admin privilege to deploy SDN:

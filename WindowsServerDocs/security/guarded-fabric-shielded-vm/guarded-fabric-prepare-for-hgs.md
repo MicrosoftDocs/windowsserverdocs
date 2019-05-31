@@ -35,5 +35,5 @@ If you've already deployed HGS and want to upgrade its operating system, follow 
 
 ## Next step
 
->[!div class="nextstepaction"]
-[Obtain certificates for HGS](guarded-fabric-obtain-certs.md)
+> [!div class="nextstepaction"]
+> [Obtain certificates for HGS](guarded-fabric-obtain-certs.md)

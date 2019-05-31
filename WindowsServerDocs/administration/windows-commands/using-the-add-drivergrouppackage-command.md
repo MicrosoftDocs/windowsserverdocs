@@ -24,12 +24,14 @@ adds a driver package to a driver group.
 wdsutil /add-DriverGroupPackage /DriverGroup:<Group Name> [/Server:<Server Name>] {/DriverPackage:<Name> | /PackageId:<ID>}
 ```
 ## Parameters
-|Parameter|Description|
-|-------|--------|
-|/DriverGroup:<Group Name>|Specifies the name of the driver group.|
-|/Server:<Server name>|Specifies the name of the server. This can be the NetBIOS name or the FQDN. If no server name is specified, the local server is used.|
-|/DriverPackage:<Name>|Specifies the name of the driver package to be added to the group. You must specify this option if the driver package cannot be uniquely identified by name.|
-|/PackageId:<ID>|Specifies the ID for a package. To find the Package ID, click the driver group that the package is in (or the **All Packages** node), right-click the package, and then click **Properties**. The Package ID is listed on the **General** tab, for example: **{DD098D20-1850-4fc8-8E35-EA24A1BEFF5E}**.|
+
+|         Parameter         |                                                                                                                                               Description                                                                                                                                               |
+|---------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| /DriverGroup:<Group Name> |                                                                                                                                 Specifies the name of the driver group.                                                                                                                                 |
+|   /Server:<Server name>   |                                                                                  Specifies the name of the server. This can be the NetBIOS name or the FQDN. If no server name is specified, the local server is used.                                                                                  |
+|   /DriverPackage:<Name>   |                                                                      Specifies the name of the driver package to be added to the group. You must specify this option if the driver package cannot be uniquely identified by name.                                                                       |
+|      /PackageId:<ID>      | Specifies the ID for a package. To find the Package ID, click the driver group that the package is in (or the **All Packages** node), right-click the package, and then click **Properties**. The Package ID is listed on the **General** tab, for example: **{DD098D20-1850-4fc8-8E35-EA24A1BEFF5E}**. |
+
 ## <a name="BKMK_examples"></a>Examples
 To add a driver package, type one of the following:
 ```

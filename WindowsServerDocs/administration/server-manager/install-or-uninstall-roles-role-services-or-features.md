@@ -94,53 +94,53 @@ The Server Manager deployment cmdlets for Windows PowerShell function similarly 
   
 #### To install roles and features by using the Install-WindowsFeature cmdlet  
   
-1.  Do one of the following to open a Windows PowerShell session with elevated user rights.  
+1. Do one of the following to open a Windows PowerShell session with elevated user rights.  
   
-    > [!NOTE]  
-    > If you are installing roles and features on a remote server, you do not need to run Windows PowerShell with elevated user rights.  
+   > [!NOTE]  
+   > If you are installing roles and features on a remote server, you do not need to run Windows PowerShell with elevated user rights.  
   
-    -   On the Windows desktop, right-click **Windows PowerShell** on the taskbar, and then click **Run as Administrator**.  
+   -   On the Windows desktop, right-click **Windows PowerShell** on the taskbar, and then click **Run as Administrator**.  
   
-    -   On the Windows **Start** screen, right-click the tile for Windows PowerShell, and then on the app bar, click **Run as Administrator**.  
+   -   On the Windows **Start** screen, right-click the tile for Windows PowerShell, and then on the app bar, click **Run as Administrator**.  
   
-2.  Type **Get-WindowsFeature** and then press **Enter** to view a list of available and installed roles and features on the local server. If the local computer is not a server, or if you want information about a remote server, run **Get-WindowsFeature -computerName <***computer_name***>**, in which *computer_name* represents the name of a remote computer that is running Windows Server 2016. The results of the cmdlet contain the command names of roles and features that you add to your cmdlet in step 4.  
+2. Type **Get-WindowsFeature** and then press **Enter** to view a list of available and installed roles and features on the local server. If the local computer is not a server, or if you want information about a remote server, run **Get-WindowsFeature -computerName <**<em>computer_name</em>**>**, in which *computer_name* represents the name of a remote computer that is running Windows Server 2016. The results of the cmdlet contain the command names of roles and features that you add to your cmdlet in step 4.  
   
-    > [!NOTE]  
-    > In Windows PowerShell 3.0 and later releases of Windows PowerShell, there is no need to import the Server Manager cmdlet module into the Windows PowerShell session before running cmdlets that are part of the module. A module is automatically imported the first time you run a cmdlet that is part of the module. Also, neither Windows PowerShell cmdlets nor the feature names used with the cmdlets are case-sensitive.  
+   > [!NOTE]  
+   > In Windows PowerShell 3.0 and later releases of Windows PowerShell, there is no need to import the Server Manager cmdlet module into the Windows PowerShell session before running cmdlets that are part of the module. A module is automatically imported the first time you run a cmdlet that is part of the module. Also, neither Windows PowerShell cmdlets nor the feature names used with the cmdlets are case-sensitive.  
   
-3.  type **Get-help Install-WindowsFeature**, and then press **Enter** to view the syntax and accepted parameters for the `Install-WindowsFeature` cmdlet.  
+3. type **Get-help Install-WindowsFeature**, and then press **Enter** to view the syntax and accepted parameters for the `Install-WindowsFeature` cmdlet.  
   
-4.  type the following, and then press **Enter**, where *feature_name* represents the command name of a role or feature that you want to install (obtained in step 2), and *computer_name* represents a remote computer on which you want to install roles and features. Separate multiple values for *feature_name* by using commas. The `Restart` parameter automatically restarts the destination server if required by the role or feature installation.  
+4. type the following, and then press **Enter**, where *feature_name* represents the command name of a role or feature that you want to install (obtained in step 2), and *computer_name* represents a remote computer on which you want to install roles and features. Separate multiple values for *feature_name* by using commas. The `Restart` parameter automatically restarts the destination server if required by the role or feature installation.  
   
-    ```  
-    Install-WindowsFeature -Name <feature_name> -computerName <computer_name> -Restart  
-    ```  
+   ```  
+   Install-WindowsFeature -Name <feature_name> -computerName <computer_name> -Restart  
+   ```  
   
-    To install roles and features on an offline VHD, add both the `computerName` parameter and the `VHD` parameter. If you do not add the `computerName` parameter, the cmdlet assumes that the local computer is mounted to access the VHD. The `computerName` parameter contains the name of the server on which to mount the VHD, and the `VHD` parameter contains the path to the VHD file on the specified server.  
+   To install roles and features on an offline VHD, add both the `computerName` parameter and the `VHD` parameter. If you do not add the `computerName` parameter, the cmdlet assumes that the local computer is mounted to access the VHD. The `computerName` parameter contains the name of the server on which to mount the VHD, and the `VHD` parameter contains the path to the VHD file on the specified server.  
   
-    > [!NOTE]  
-    > You must add the `computerName` parameter if you are running the cmdlet from a computer that is running a Windows client operating system.  
-    >   
-    > To install roles and features on offline VHDs, target VHDs must meet the following requirements.  
-    >   
-    > -   VHDs must be running the release of Windows Server that matches the version of Server Manager you are running. See the note at the start of [Install roles, role services, and features by using the add Roles and Features Wizard](#install-roles-role-services-and-features-by-using-the-add-roles-and-features-wizard).  
-    > -   VHDs cannot have more than one system volume or partition.  
-    > -   The network shared folder in which the VHD file is stored must grant the following access rights to the computer (or local system) account of server that you have selected to mount the VHD. User-only account access is not sufficient. The share can grant **Read** and **Write** permissions to the **Everyone** group to allow access to the VHD, but for security reasons, this is not recommended.  
-    >   
-    >     -   **Read/Write** access on the **File Sharing** dialog box.  
-    >     -   **Full Control** access on the **Security** tab, file or folder **Properties** dialog box.  
+   > [!NOTE]  
+   > You must add the `computerName` parameter if you are running the cmdlet from a computer that is running a Windows client operating system.  
+   >   
+   > To install roles and features on offline VHDs, target VHDs must meet the following requirements.  
+   >   
+   > -   VHDs must be running the release of Windows Server that matches the version of Server Manager you are running. See the note at the start of [Install roles, role services, and features by using the add Roles and Features Wizard](#install-roles-role-services-and-features-by-using-the-add-roles-and-features-wizard).  
+   > -   VHDs cannot have more than one system volume or partition.  
+   > -   The network shared folder in which the VHD file is stored must grant the following access rights to the computer (or local system) account of server that you have selected to mount the VHD. User-only account access is not sufficient. The share can grant **Read** and **Write** permissions to the **Everyone** group to allow access to the VHD, but for security reasons, this is not recommended.  
+   >   
+   >     -   **Read/Write** access on the **File Sharing** dialog box.  
+   >     -   **Full Control** access on the **Security** tab, file or folder **Properties** dialog box.  
   
-    ```  
-    Install-WindowsFeature -Name <feature_name> -VHD <path> -computerName <computer_name> -Restart  
-    ```  
+   ```  
+   Install-WindowsFeature -Name <feature_name> -VHD <path> -computerName <computer_name> -Restart  
+   ```  
   
-    **Example:** The following cmdlet installs the active directory Domain Services role and the Group Policy Management feature on a remote server, ContosoDC1. Management tools and snap-ins are added by using the `IncludeManagementTools` parameter, and the destination server is to be restarted automatically, if installation requires that the servers be restarted.  
+   **Example:** The following cmdlet installs the active directory Domain Services role and the Group Policy Management feature on a remote server, ContosoDC1. Management tools and snap-ins are added by using the `IncludeManagementTools` parameter, and the destination server is to be restarted automatically, if installation requires that the servers be restarted.  
   
-    ```  
-    Install-WindowsFeature -Name AD-Domain-Services,GPMC -computerName ContosoDC1 -IncludeManagementTools -Restart  
-    ```  
+   ```  
+   Install-WindowsFeature -Name AD-Domain-Services,GPMC -computerName ContosoDC1 -IncludeManagementTools -Restart  
+   ```  
   
-5.  When installation is finished, verify installation by opening the **All Servers** page in Server Manager, selecting a server on which you installed roles and features, and viewing the **Roles and Features** tile on the page for the selected server. You can also run the `Get-WindowsFeature` cmdlet targeted at the selected server (Get-WindowsFeature -computerName <*computer_name*>) to view a list of roles and features that are installed on the server.  
+5. When installation is finished, verify installation by opening the **All Servers** page in Server Manager, selecting a server on which you installed roles and features, and viewing the **Roles and Features** tile on the page for the selected server. You can also run the `Get-WindowsFeature` cmdlet targeted at the selected server (Get-WindowsFeature -computerName <*computer_name*>) to view a list of roles and features that are installed on the server.  
   
 ## Remove roles, role services, and features by using the remove Roles and Features Wizard  
 You must be logged on to a server as an administrator to uninstall roles, role services, and features. If you are logged on to the local computer with an account that does not have administrator rights on your uninstallation target server, right-click the target server in the **Servers** tile, and then click **Manage As** to provide an account that has administrator rights. The server on which you want to mount an offline VHD must be added to Server Manager, and you must have Administrator rights on that server.  
@@ -185,49 +185,49 @@ The Server Manager deployment cmdlets for Windows PowerShell function similarly 
   
 #### To remove roles and features by using the Uninstall-WindowsFeature cmdlet  
   
-1.  Do one of the following to open a Windows PowerShell session with elevated user rights.  
+1. Do one of the following to open a Windows PowerShell session with elevated user rights.  
   
-    > [!NOTE]  
-    > If you are uninstalling roles and features from a remote server, you do not need to run Windows PowerShell with elevated user rights.  
+   > [!NOTE]  
+   > If you are uninstalling roles and features from a remote server, you do not need to run Windows PowerShell with elevated user rights.  
   
-    -   On the Windows desktop, right-click **Windows PowerShell** on the taskbar, and then click **Run as Administrator**.  
+   -   On the Windows desktop, right-click **Windows PowerShell** on the taskbar, and then click **Run as Administrator**.  
   
-    -   On the Windows **start** screen, right-click the Windows PowerShell tile, and then on the app bar, click **Run as Administrator**.  
+   -   On the Windows **start** screen, right-click the Windows PowerShell tile, and then on the app bar, click **Run as Administrator**.  
   
-2.  Type **Get-WindowsFeature** and then press **Enter** to view a list of available and installed roles and features on the local server. If the local computer is not a server, or if you want information about a remote server, run **Get-WindowsFeature -computerName <***computer_name***>**, in which *computer_name* represents the name of a remote computer that is running Windows Server 2016. The results of the cmdlet contain the command names of roles and features that you add to your cmdlet in step 4.  
+2. Type **Get-WindowsFeature** and then press **Enter** to view a list of available and installed roles and features on the local server. If the local computer is not a server, or if you want information about a remote server, run **Get-WindowsFeature -computerName <**<em>computer_name</em>**>**, in which *computer_name* represents the name of a remote computer that is running Windows Server 2016. The results of the cmdlet contain the command names of roles and features that you add to your cmdlet in step 4.  
   
-    > [!NOTE]  
-    > In Windows PowerShell 3.0 and later releases of Windows PowerShell, there is no need to import the Server Manager cmdlet module into the Windows PowerShell session before running cmdlets that are part of the module. A module is automatically imported the first time you run a cmdlet that is part of the module. Also, neither Windows PowerShell cmdlets nor the feature names used with the cmdlets are case-sensitive.  
+   > [!NOTE]  
+   > In Windows PowerShell 3.0 and later releases of Windows PowerShell, there is no need to import the Server Manager cmdlet module into the Windows PowerShell session before running cmdlets that are part of the module. A module is automatically imported the first time you run a cmdlet that is part of the module. Also, neither Windows PowerShell cmdlets nor the feature names used with the cmdlets are case-sensitive.  
   
-3.  type **Get-help Uninstall-WindowsFeature**, and then press **Enter** to view the syntax and accepted parameters for the `Uninstall-WindowsFeature` cmdlet.  
+3. type **Get-help Uninstall-WindowsFeature**, and then press **Enter** to view the syntax and accepted parameters for the `Uninstall-WindowsFeature` cmdlet.  
   
-4.  Type the following, and then press **Enter**, where *feature_name* represents the command name of a role or feature that you want to remove (obtained in step 2), and *computer_name* represents a remote computer from which you want to remove roles and features. Separate multiple values for *feature_name* by using commas. The `Restart` parameter automatically restarts destination servers if required by the role or feature removal.  
+4. Type the following, and then press **Enter**, where *feature_name* represents the command name of a role or feature that you want to remove (obtained in step 2), and *computer_name* represents a remote computer from which you want to remove roles and features. Separate multiple values for *feature_name* by using commas. The `Restart` parameter automatically restarts destination servers if required by the role or feature removal.  
   
-    ```  
-    Uninstall-WindowsFeature -Name <feature_name> -computerName <computer_name> -Restart  
-    ```  
+   ```  
+   Uninstall-WindowsFeature -Name <feature_name> -computerName <computer_name> -Restart  
+   ```  
   
-    To remove roles and features from an offline VHD, add both the `computerName` parameter and the `VHD` parameter. If you do not add the `computerName` parameter, the cmdlet assumes that the local computer is mounted to access the VHD. The `computerName` parameter contains the name of the server on which to mount the VHD, and the `VHD` parameter contains the path to the VHD file on the specified server.  
+   To remove roles and features from an offline VHD, add both the `computerName` parameter and the `VHD` parameter. If you do not add the `computerName` parameter, the cmdlet assumes that the local computer is mounted to access the VHD. The `computerName` parameter contains the name of the server on which to mount the VHD, and the `VHD` parameter contains the path to the VHD file on the specified server.  
   
-    > [!NOTE]  
-    > You must add the `computerName` parameter if you are running the cmdlet from a computer that is running a Windows client operating system.  
-    >   
-    > The network shared folder in which the VHD file is stored must grant the following access rights to the computer (or local system) account of server that you have selected to mount the VHD. User-only account access is not sufficient. The share can grant **Read** and **Write** permissions to the **Everyone** group to allow access to the VHD, but for security reasons, this is not recommended.  
-    >   
-    > -   **Read/Write** access on the **File Sharing** dialog box.  
-    > -   **Full Control** access on the **Security** tab, file or folder **Properties** dialog box.  
+   > [!NOTE]  
+   > You must add the `computerName` parameter if you are running the cmdlet from a computer that is running a Windows client operating system.  
+   >   
+   > The network shared folder in which the VHD file is stored must grant the following access rights to the computer (or local system) account of server that you have selected to mount the VHD. User-only account access is not sufficient. The share can grant **Read** and **Write** permissions to the **Everyone** group to allow access to the VHD, but for security reasons, this is not recommended.  
+   >   
+   > -   **Read/Write** access on the **File Sharing** dialog box.  
+   > -   **Full Control** access on the **Security** tab, file or folder **Properties** dialog box.  
   
-    ```  
-    Uninstall-WindowsFeature -Name <feature_name> -VHD <path> -computerName <computer_name> -Restart  
-    ```  
+   ```  
+   Uninstall-WindowsFeature -Name <feature_name> -VHD <path> -computerName <computer_name> -Restart  
+   ```  
   
-    **Example:** The following cmdlet removes the active directory Domain Services role and the Group Policy Management feature from a remote server, ContosoDC1. Management tools and snap-ins are also removed, and the destination server is to be restarted automatically, if removal requires that the servers be restarted.  
+   **Example:** The following cmdlet removes the active directory Domain Services role and the Group Policy Management feature from a remote server, ContosoDC1. Management tools and snap-ins are also removed, and the destination server is to be restarted automatically, if removal requires that the servers be restarted.  
   
-    ```  
-    Uninstall-WindowsFeature -Name AD-Domain-Services,GPMC -computerName ContosoDC1 -IncludeManagementTools -Restart  
-    ```  
+   ```  
+   Uninstall-WindowsFeature -Name AD-Domain-Services,GPMC -computerName ContosoDC1 -IncludeManagementTools -Restart  
+   ```  
   
-5.  When removal is finished, verify that the roles and features are removed by opening the **All Servers** page in Server Manager, selecting the server from which you removed roles and features, and viewing the **Roles and Features** tile on the page for the selected server. You can also run the `Get-WindowsFeature` cmdlet targeted at the selected server (Get-WindowsFeature -computerName <*computer_name*>) to view a list of roles and features that are installed on the server.  
+5. When removal is finished, verify that the roles and features are removed by opening the **All Servers** page in Server Manager, selecting the server from which you removed roles and features, and viewing the **Roles and Features** tile on the page for the selected server. You can also run the `Get-WindowsFeature` cmdlet targeted at the selected server (Get-WindowsFeature -computerName <*computer_name*>) to view a list of roles and features that are installed on the server.  
   
 ## Install roles and features on multiple servers by running a Windows PowerShell script  
 Although you cannot use the add Roles and Features Wizard to install roles, role services, and features on more than one target server in a single wizard session, you can use a Windows PowerShell script to install roles, role services, and features on multiple target servers that you are managing by using Server Manager. The script that you use to perform batch deployment, as this process is called, points to an XML configuration file that you can create easily by using the add Roles and Features Wizard, and clicking **Export configuration settings** after advancing through the wizard to the **Confirm installation selections** page of the add Roles and Features Wizard.  
@@ -331,25 +331,25 @@ You can install .NET Framework 3.5 by doing one of the following.
   
 ### To install .NET Framework 3.5 by using the add Roles and Features Wizard  
   
-1.  On the **Manage** menu in Server Manager, click **add Roles and Features**.  
+1. On the **Manage** menu in Server Manager, click **add Roles and Features**.  
   
-2.  Select a destination server that is running Windows Server 2016.  
+2. Select a destination server that is running Windows Server 2016.  
   
-3.  On the **select features** page of the add Roles and Features Wizard, select **.NET Framework 3.5**.  
+3. On the **select features** page of the add Roles and Features Wizard, select **.NET Framework 3.5**.  
   
-4.  If the local computer is allowed to do so by Group Policy settings, the installation process attempts to get missing feature files by using Windows Update. Click **Install**; you do not need to go on to the next step.  
+4. If the local computer is allowed to do so by Group Policy settings, the installation process attempts to get missing feature files by using Windows Update. Click **Install**; you do not need to go on to the next step.  
   
-    if Group Policy settings do not allow this, or you want to use another source for the .NET Framework 3.5 feature files, on the **Confirm installation selections** page of the wizard, click **Specify an alternate source path**.  
+   if Group Policy settings do not allow this, or you want to use another source for the .NET Framework 3.5 feature files, on the **Confirm installation selections** page of the wizard, click **Specify an alternate source path**.  
   
-5.  Provide a path to a side-by-side store (referred to as **SxS**) in installation media, or to a WIM file. In the following example, installation media is located on drive D.  
+5. Provide a path to a side-by-side store (referred to as **SxS**) in installation media, or to a WIM file. In the following example, installation media is located on drive D.  
   
-    **D:\Sources\SxS\\**  
+   **D:\Sources\SxS\\**  
   
-    To specify a WIM file, add a **WIM:** prefix, and add the index of the image to use in the WIM file as a suffix, as shown in the following example.  
+   To specify a WIM file, add a **WIM:** prefix, and add the index of the image to use in the WIM file as a suffix, as shown in the following example.  
   
-    **WIM:\\\\***server_name***\share\install.wim:3**  
+   **WIM:\\\\**<em>server_name</em>**\share\install.wim:3**  
   
-6.  Click **OK**, and then click **Install**.  
+6. Click **OK**, and then click **Install**.  
   
 ### To install .NET Framework 3.5 by using DISM  
   
@@ -389,23 +389,23 @@ The Group Policy setting described in this section specifies authorized source l
   
 ##### To configure a default alternate source path in Group Policy  
   
-1.  In Local Group Policy editor or Group Policy Management Console, open the following policy setting.  
+1. In Local Group Policy editor or Group Policy Management Console, open the following policy setting.  
   
-    **computer Configuration\Administrative Templates\System\Specify settings for optional component installation and component repair**  
+   **computer Configuration\Administrative Templates\System\Specify settings for optional component installation and component repair**  
   
 2. Sselect **Enabled** to enable the policy setting, if it is not already enabled.  
   
-3.  In the **Alternate source file path** text box in the **Options** area, specify a fully qualified path to a shared folder or a WIM file. To specify a WIM file as an alternate source file location, add the prefix **WIM:** to the path, and add the index of the image to use in the WIM file as a suffix. The following are examples of values that you can specify.  
+3. In the **Alternate source file path** text box in the **Options** area, specify a fully qualified path to a shared folder or a WIM file. To specify a WIM file as an alternate source file location, add the prefix **WIM:** to the path, and add the index of the image to use in the WIM file as a suffix. The following are examples of values that you can specify.  
   
-    -   path to a shared folder:  **\\\\***server_name***\share\\***folder_name*  
+   - path to a shared folder:  **\\\\**<em>server_name</em>**\share\\**<em>folder_name</em>  
   
-    -   path to a WIM file, in which **3** represents the index of the image in which the feature files are found:  **WIM:\\\\***server_name***\share\install.wim:3**  
+   - path to a WIM file, in which **3** represents the index of the image in which the feature files are found:  **WIM:\\\\**<em>server_name</em>**\share\install.wim:3**  
   
-4.  if you do not want computers that are controlled by this policy setting to search for missing feature files in Windows Update, select **Never attempt to download payload from Windows Update**.  
+4. if you do not want computers that are controlled by this policy setting to search for missing feature files in Windows Update, select **Never attempt to download payload from Windows Update**.  
   
-5.  If the computers that are controlled by this policy setting typically receive updates through WSUS, but you prefer to go through Windows Update and not WSUS to find missing feature files, select **Contact Windows Update directly to download repair content instead of Windows Server Update Services (WSUS)**.  
+5. If the computers that are controlled by this policy setting typically receive updates through WSUS, but you prefer to go through Windows Update and not WSUS to find missing feature files, select **Contact Windows Update directly to download repair content instead of Windows Server Update Services (WSUS)**.  
   
-6.  Click **OK** when you are finished changing this policy setting, and then close the Group Policy editor.  
+6. Click **OK** when you are finished changing this policy setting, and then close the Group Policy editor.  
   
 ## See Also  
 [Windows Server Installation Options](https://go.microsoft.com/fwlink/p/?LinkId=241573)  

@@ -185,25 +185,25 @@ Digital media refers to audio, video, and photo content that has been digitally 
   
 #### To play shared media files when you are away from the network  
   
-1.  Open an Internet browser.  
+1. Open an Internet browser.  
   
-2.  Go to your Remote Web Access website. Type **https://<YourDomainName\>/remote** in the address bar of the Internet browser, and then press Enter.  
+2. Go to your Remote Web Access website. Type **https://<YourDomainName\>/remote** in the address bar of the Internet browser, and then press Enter.  
   
-    > [!NOTE]
-    >  *<YourDomainName\>* is a placeholder. It will be a name that is unique to your server, so the address you type will look like **https://contoso.com/remote**. If you do not know the name of your domain, ask the administrator who chose the domain name when the Remote Access functionality was set on the server. For more information, see [Turn on Remote Web Access](../manage/Manage-Remote-Web-Access-in-Windows-Server-Essentials.md#BKMK_TurnOnRWA).  
+   > [!NOTE]
+   >  *<YourDomainName\>* is a placeholder. It will be a name that is unique to your server, so the address you type will look like **https://contoso.com/remote**. If you do not know the name of your domain, ask the administrator who chose the domain name when the Remote Access functionality was set on the server. For more information, see [Turn on Remote Web Access](../manage/Manage-Remote-Web-Access-in-Windows-Server-Essentials.md#BKMK_TurnOnRWA).  
   
-3.  On the Remote Web Access sign-in page, type your user account name and password, and then click the arrow.  
+3. On the Remote Web Access sign-in page, type your user account name and password, and then click the arrow.  
   
-4.  Use whatever method you like to search for the media file that you want to play.  
+4. Use whatever method you like to search for the media file that you want to play.  
   
-    > [!NOTE]
+   > [!NOTE]
+   > 
+   >  For information about the various search methods, see [Search for and play media files on Windows Server Essentials from a computer or digital media player on the network](Play-Digital-Media-in-Windows-Server-Essentials.md#BKMK_2.1).  
+   > 
+   >  For information about the various search methods, see [Search for and play media files on Windows Server Essentials from a computer or digital media player on the network](../use/Play-Digital-Media-in-Windows-Server-Essentials.md#BKMK_2.1).  
 
-    >  For information about the various search methods, see [Search for and play media files on Windows Server Essentials from a computer or digital media player on the network](Play-Digital-Media-in-Windows-Server-Essentials.md#BKMK_2.1).  
-
-    >  For information about the various search methods, see [Search for and play media files on Windows Server Essentials from a computer or digital media player on the network](../use/Play-Digital-Media-in-Windows-Server-Essentials.md#BKMK_2.1).  
-
   
-5.  When the media file name appears, click the file name to play the media.  
+5. When the media file name appears, click the file name to play the media.  
   
 ##  <a name="BKMK_4"></a> Add digital media files to the server  
 
@@ -236,21 +236,21 @@ Digital media refers to audio, video, and photo content that has been digitally 
   
  Choose the following option that fits your needs for downloads:  
   
--   **Compressed ZIP file (.zip)**  
+- **Compressed ZIP file (.zip)**  
   
-     Zipping a file creates a compressed version of the file that is smaller than the original file. The zipped version of the file has a .zip file name extension. File types that are reduced the most by zipping are text-oriented file types (such as .txt, .doc, and .xls), and graphics files that use non-compressed file types (such as .bmp). Some graphic files, such as .jpg and .gif files, already use compression, and the file size is reduced very little by zipping. Also, a Word document that contains a lot of graphics is not reduced as much as a document that is mostly text.  
+   Zipping a file creates a compressed version of the file that is smaller than the original file. The zipped version of the file has a .zip file name extension. File types that are reduced the most by zipping are text-oriented file types (such as .txt, .doc, and .xls), and graphics files that use non-compressed file types (such as .bmp). Some graphic files, such as .jpg and .gif files, already use compression, and the file size is reduced very little by zipping. Also, a Word document that contains a lot of graphics is not reduced as much as a document that is mostly text.  
   
-    > [!NOTE]
-    >  This option provides limited support for international file names.  
+  > [!NOTE]
+  >  This option provides limited support for international file names.  
   
--   **Self-extracting executable file (.exe)**  
+- **Self-extracting executable file (.exe)**  
   
-     A self-extracting executable file is a file that you can download that combines the decompression (executable) program with the compressed files. When you run the executable program, it automatically decompresses the compressed files. This is a common way to distribute compressed data without worrying about whether the recipient has the right decompression utility.  
+   A self-extracting executable file is a file that you can download that combines the decompression (executable) program with the compressed files. When you run the executable program, it automatically decompresses the compressed files. This is a common way to distribute compressed data without worrying about whether the recipient has the right decompression utility.  
   
-    > [!NOTE]
-    >  This option supports Unicode characters.  
+  > [!NOTE]
+  >  This option supports Unicode characters.  
   
- Before the actual download begins, the .exe or .zip file is created. Depending on the number of files and the total size of the files to be downloaded, this may take several minutes. After the download file is created, downloading the file occurs in the background. This allows you to continue working while the download process completes.  
+  Before the actual download begins, the .exe or .zip file is created. Depending on the number of files and the total size of the files to be downloaded, this may take several minutes. After the download file is created, downloading the file occurs in the background. This allows you to continue working while the download process completes.  
   
 ##  <a name="BKMK_6"></a> Easy File Upload tool  
  The Easy File Upload tool streamlines the process of uploading files on your  Windows Server Essentials server. You can add as many files as you want to the Easy File Upload tool, and then upload them to the Shared Folders on the  Windows Server Essentials server in a single batch. For more information, see the blog post [Understanding Remote Web Access File Sharing](http://blogs.technet.com/b/sbs/archive/2012/04/19/understanding-remote-web-access-file-sharing.aspx).  

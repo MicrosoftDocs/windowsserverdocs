@@ -28,111 +28,111 @@ You can add tasks to the **SETUP**, **ADD-INS**, **QUICK STATUS** task lists, an
   
 ##### To define the tasks and links  
   
-1.  Open Visual Studio 2010 or higher as an administrator by right-clicking the program in the Start menu and selecting **Run as administrator**.  
+1. Open Visual Studio 2010 or higher as an administrator by right-clicking the program in the Start menu and selecting **Run as administrator**.  
   
-2.  Click **File**, click **New**, and then click **Project**.  
+2. Click **File**, click **New**, and then click **Project**.  
   
-3.  In the **Templates** pane, click **Class Library**, type **OEMHomePageContent** in the **Name** box, and then click **OK**.  
+3. In the **Templates** pane, click **Class Library**, type **OEMHomePageContent** in the **Name** box, and then click **OK**.  
   
-4.  Delete the Class1.cs file.  
+4. Delete the Class1.cs file.  
   
-5.  Right-click the new project, click **Add**, and then click **New Item**.  
+5. Right-click the new project, click **Add**, and then click **New Item**.  
   
-6.  In the **Templates** pane, click **XML File**, type **OEMHomePageContent.home** in the **Name** box, and then click **Add**.  
+6. In the **Templates** pane, click **XML File**, type **OEMHomePageContent.home** in the **Name** box, and then click **Add**.  
   
-    > [!NOTE]
-    >  If the XML file is being installed without a resource file, it must be named OEMHomePageContent.home. If it is included in an assembly, it can be given any name as long as it has a .home extension.  
+   > [!NOTE]
+   >  If the XML file is being installed without a resource file, it must be named OEMHomePageContent.home. If it is included in an assembly, it can be given any name as long as it has a .home extension.  
   
-7.  Add the following XML code to the OEMHomePageContent.home file:  
+7. Add the following XML code to the OEMHomePageContent.home file:  
   
-    ```  
+   ```  
   
-    <Tasks version=?2.0? xmlns=?https://schemas.microsoft.com/WindowsServerSolutions/2010/01/Dashboard>  
-       <SetupMyServerTasks>  
-          <Task name="MyTask"  
-             description="MyTaskDescription"  
-             id="GUID">  
-                  <Action   
-                  name=?MyAction1Name?   
-                  image=?IconForAction1?  
-                  type=?TaskType?  
-                  exelocation=?ActionExeLocation? />  
-                  <Action   
-                  name=?MyAction2Name?   
-                  image=?IconForAction2?  
-                  type=?TaskType?  
-                  exelocation=?ActionExeLocation? />  
-                   ¦  
-           </Task>  
-                   ¦  
-        </SetupMyServerTasks>  
-    <MailServiceTasks>  
-         <!-- Same schema as in œSetupMyServerTasks? but the tasks are shown in œConnect to Email Service? category. -->  
-    </MailServiceTasks>  
-    <LineOfBusinessTasks>  
-         <!-- Same schema as in œSetupMyServerTasks? but the tasks are shown in œAdd-ins? category. -->  
+   <Tasks version=?2.0? xmlns=?https://schemas.microsoft.com/WindowsServerSolutions/2010/01/Dashboard>  
+      <SetupMyServerTasks>  
+         <Task name="MyTask"  
+            description="MyTaskDescription"  
+            id="GUID">  
+                 <Action   
+                 name=?MyAction1Name?   
+                 image=?IconForAction1?  
+                 type=?TaskType?  
+                 exelocation=?ActionExeLocation? />  
+                 <Action   
+                 name=?MyAction2Name?   
+                 image=?IconForAction2?  
+                 type=?TaskType?  
+                 exelocation=?ActionExeLocation? />  
+                  ¦  
+          </Task>  
+                  ¦  
+       </SetupMyServerTasks>  
+   <MailServiceTasks>  
+        <!-- Same schema as in œSetupMyServerTasks? but the tasks are shown in œConnect to Email Service? category. -->  
+   </MailServiceTasks>  
+   <LineOfBusinessTasks>  
+        <!-- Same schema as in œSetupMyServerTasks? but the tasks are shown in œAdd-ins? category. -->  
   
-    <GetQuickStatusTasks>  
-          <Task name="MyQuickStatusTask1"  
-             description="MyQuickStatusTask1Desc   "  
-             id="GUID"  
-             assembly="AssemblyName of quick status query implementation"  
-             class="ClassName of quick status query implementation"           
-             replaceid="GUID"/>  
-               <!--  Same schema as Actions in œSetupMyServerTasks? -->   
-             </Task>  
-    </GetQuickStatusTasks>  
-       <Links>  
-          <Link  
-             ID=?GUID?  
-             Title="Displayed text of the link"  
-             Description="A very short description"  
-             ShellExecPath="Path to the application or URL"/>  
-       </Links>  
-    </Tasks>  
-    ```  
+   <GetQuickStatusTasks>  
+         <Task name="MyQuickStatusTask1"  
+            description="MyQuickStatusTask1Desc   "  
+            id="GUID"  
+            assembly="AssemblyName of quick status query implementation"  
+            class="ClassName of quick status query implementation"           
+            replaceid="GUID"/>  
+              <!--  Same schema as Actions in œSetupMyServerTasks? -->   
+            </Task>  
+   </GetQuickStatusTasks>  
+      <Links>  
+         <Link  
+            ID=?GUID?  
+            Title="Displayed text of the link"  
+            Description="A very short description"  
+            ShellExecPath="Path to the application or URL"/>  
+      </Links>  
+   </Tasks>  
+   ```  
   
-     Where:  
+    Where:  
   
-    |Attribute|Description|  
-    |---------------|-----------------|  
-    |Name (Task)|The name that is displayed for the task in the list. If you create an embedded resource file, the value of this attribute is the string resource.|  
-    |description (Task)|The description of the task. If you create an embedded resource file, the value of this attribute is the string resource.|  
-    |id (Task)|The identifier of the task. This identifier must be a GUID. You create a new GUID for an **exe** task, but for a **global** task, you use the GUID that you created when you defined the task for the task pane of the sub-tab. For more information about creating a GUID, see [Create Guid (guidgen.exe)](https://go.microsoft.com/fwlink/?LinkId=116098).|  
-    |image|This field will be ignored.|  
-    |Name (Action)|Displays the name of the task.|  
-    |Type (Action)|Describes the type of task. The task can one of the following:- **global** task, **exe**, or a url task. A **global** task is the same global task that you created when defining the tasks for the task pane in the sub-tab. For more information about creating a global task that can be used in both the tasks pane of the sub-tab and the Getting Started Tasks or Common Tasks lists of the home page, see œCreating the support classes? in œHow to: Create a Sub-Tab? of the [Windows Server Solutions SDK](https://go.microsoft.com/fwlink/?LinkID=248648). An **exe** task can be used to run applications from the Getting Started Tasks or Common Tasks lists.|  
-    |exelocation|The path to the application that is associated with the task. This attribute is only used for **exe** tasks.|  
-    |replaceid|The identifier of the task that is replaced with this task.|  
-    |assembly|The AssemblyName of the assembly which provides the class to implement quick status query. The assembly needs to be located in Program files\ windows server\bin\\.|  
-    |class|The name of the class implements quick status query. The class needs to implement **ITaskStatusQuery** interface.|  
-    |Title (link)|The text that is displayed for the link. If you create an embedded resource file, the value of this attribute is the string resource.|  
-    |Description (link)|The description of the link destination. If you create an embedded resource file, the value of this attribute is the string resource.|  
-    |ShellExecPath|The path to the application or the URL.<br /><br /> **Note:** Environment variables are supported in the ShellExecPath attribute.|  
+   |Attribute|Description|  
+   |---------------|-----------------|  
+   |Name (Task)|The name that is displayed for the task in the list. If you create an embedded resource file, the value of this attribute is the string resource.|  
+   |description (Task)|The description of the task. If you create an embedded resource file, the value of this attribute is the string resource.|  
+   |id (Task)|The identifier of the task. This identifier must be a GUID. You create a new GUID for an **exe** task, but for a **global** task, you use the GUID that you created when you defined the task for the task pane of the sub-tab. For more information about creating a GUID, see [Create Guid (guidgen.exe)](https://go.microsoft.com/fwlink/?LinkId=116098).|  
+   |image|This field will be ignored.|  
+   |Name (Action)|Displays the name of the task.|  
+   |Type (Action)|Describes the type of task. The task can one of the following:- **global** task, **exe**, or a url task. A **global** task is the same global task that you created when defining the tasks for the task pane in the sub-tab. For more information about creating a global task that can be used in both the tasks pane of the sub-tab and the Getting Started Tasks or Common Tasks lists of the home page, see œCreating the support classes? in œHow to: Create a Sub-Tab? of the [Windows Server Solutions SDK](https://go.microsoft.com/fwlink/?LinkID=248648). An **exe** task can be used to run applications from the Getting Started Tasks or Common Tasks lists.|  
+   |exelocation|The path to the application that is associated with the task. This attribute is only used for **exe** tasks.|  
+   |replaceid|The identifier of the task that is replaced with this task.|  
+   |assembly|The AssemblyName of the assembly which provides the class to implement quick status query. The assembly needs to be located in Program files\ windows server\bin\\.|  
+   |class|The name of the class implements quick status query. The class needs to implement **ITaskStatusQuery** interface.|  
+   |Title (link)|The text that is displayed for the link. If you create an embedded resource file, the value of this attribute is the string resource.|  
+   |Description (link)|The description of the link destination. If you create an embedded resource file, the value of this attribute is the string resource.|  
+   |ShellExecPath|The path to the application or the URL.<br /><br /> **Note:** Environment variables are supported in the ShellExecPath attribute.|  
   
-     The following code example shows how to define a link to an application:  
+    The following code example shows how to define a link to an application:  
   
-    ```  
-    <Links>  
-       <Link Title="Calc" Description="Launches Calc" ShellExecPath="%windir%\system32\calc.exe" />  
-    </Links>  
-    ```  
+   ```  
+   <Links>  
+      <Link Title="Calc" Description="Launches Calc" ShellExecPath="%windir%\system32\calc.exe" />  
+   </Links>  
+   ```  
   
-     The following code example shows how to define a link to a Web page:  
+    The following code example shows how to define a link to a Web page:  
   
-    ```  
-    <Links>  
-       <Link Title="Browser" Description="Open browser" ShellExecPath="http://www.adventureworks.com/" />  
-    </Links>  
-    ```  
+   ```  
+   <Links>  
+      <Link Title="Browser" Description="Open browser" ShellExecPath="http://www.adventureworks.com/" />  
+   </Links>  
+   ```  
   
-8.  Change the attribute values to represent your task or link.  
+8. Change the attribute values to represent your task or link.  
   
 9. In **Solution Explorer**, right-click **OEMHomePageContent.home**, and then click **Properties**.  In the **Properties** pane, under **Build Action**, select **Embedded Resource**.  
   
 10. Save the OEMHomePageContent.home file.  
   
- For how to implement a quick status query, please refer to documents and samples in the [Windows Server Solutions SDK](https://go.microsoft.com/fwlink/?LinkID=248648).  
+    For how to implement a quick status query, please refer to documents and samples in the [Windows Server Solutions SDK](https://go.microsoft.com/fwlink/?LinkID=248648).  
   
 #### Change the status of a SETUP/ADD-INS task  
  The tasks that are listed in SETUP and ADD-INS can be toggled in states of completed (configured for Add-ins) and not completed (not configured for Add-ins).  

@@ -153,7 +153,7 @@ Membership in the local **Administrators** group on each clustered server, or eq
 
 4. Select **Next**. Confirm your selections on the confirmation page that appears, and then select **Next**.
 
-After the wizard runs and the **Summary** page appears, if you want to view a report of the tasks that the wizard performed, select **View Report**. The most recent report will remain in the *systemroot***\\Cluster\\Reports** folder with the name **QuorumConfiguration.mht**.
+After the wizard runs and the **Summary** page appears, if you want to view a report of the tasks that the wizard performed, select **View Report**. The most recent report will remain in the <em>systemroot</em>**\\Cluster\\Reports** folder with the name **QuorumConfiguration.mht**.
 
 >[!NOTE]
 >After you configure the cluster quorum, we recommend that you run the **Validate Quorum Configuration** test to verify the updated quorum settings.

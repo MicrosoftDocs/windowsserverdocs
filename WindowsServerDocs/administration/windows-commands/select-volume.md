@@ -30,10 +30,10 @@ select volume={<n>|<d>}
   
 ## Parameters  
   
-|Parameter|Description|  
-|-------|--------|  
-|<n>|The number of the volume to receive the focus. You can view the numbers for all volumes on the disk currently selected by using the **list volume** command in DiskPart.|  
-|<d>|The drive letter or mount point path of the volume to receive the focus.|  
+| Parameter |                                                                               Description                                                                                |
+|-----------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|    <n>    | The number of the volume to receive the focus. You can view the numbers for all volumes on the disk currently selected by using the **list volume** command in DiskPart. |
+|    <d>    |                                                 The drive letter or mount point path of the volume to receive the focus.                                                 |
   
 ## Remarks  
   

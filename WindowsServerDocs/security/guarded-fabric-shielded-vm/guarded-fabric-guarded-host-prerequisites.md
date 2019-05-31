@@ -43,8 +43,8 @@ Guarded hosts using TPM mode must meet the following prerequisites:
 > For more information, see [Compatible hardware with Windows Server Virtualization-based protection of Code Integrity](guarded-fabric-compatible-hardware-with-virtualization-based-protection-of-code-integrity.md).
 
 **Next step:** 
->[!div class="nextstepaction"]
-[Capture TPM info](guarded-fabric-tpm-trusted-attestation-capturing-hardware.md)
+> [!div class="nextstepaction"]
+> [Capture TPM info](guarded-fabric-tpm-trusted-attestation-capturing-hardware.md)
 
 ## Host key attestation
 
@@ -59,8 +59,8 @@ The host can be joined to either a domain or a workgroup.
 For host key attestation, HGS must be running Windows Server 2019 and operating with v2 attestation. For more information see [HGS prerequisites](guarded-fabric-prepare-for-hgs.md#prerequisites). 
 
 **Next step:** 
->[!div class="nextstepaction"]
-[Create a key pair](guarded-fabric-create-host-key.md)
+> [!div class="nextstepaction"]
+> [Create a key pair](guarded-fabric-create-host-key.md)
 
 ## Admin-trusted attestation
 
@@ -85,5 +85,5 @@ Hyper-V hosts must meet the following prerequisites for AD mode:
 > For more information, see [Compatible hardware with Windows Server 2016 Virtualization-based protection of Code Integrity](guarded-fabric-compatible-hardware-with-virtualization-based-protection-of-code-integrity.md).
 
 **Next step:** 
->[!div class="nextstepaction"]
-[Place guarded hosts in a security group](guarded-fabric-admin-trusted-attestation-creating-a-security-group.md)
+> [!div class="nextstepaction"]
+> [Place guarded hosts in a security group](guarded-fabric-admin-trusted-attestation-creating-a-security-group.md)

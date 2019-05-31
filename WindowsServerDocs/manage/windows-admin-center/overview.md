@@ -69,6 +69,7 @@ You can get Windows Admin Center up and running in your environment in minutes:
             <ul>
             <li><a href="configure/settings.md">Windows Admin Center settings</a>
             <li><a href="configure/user-access-control.md">User access control and permissions</a>
+            <li><a href="configure/shared-connections.md">Shared connections</a>
             <li><a href="configure/using-extensions.md">Extensions</a>
             </ul>
         </td>
