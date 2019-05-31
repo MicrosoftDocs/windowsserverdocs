@@ -109,7 +109,8 @@ To disable certificate revocation for these VPN connections, set **CertAuthFlags
    ```
 
 How to verify that certificate revocation for IKEv2 machine certificate-based VPN connections is working:
-	Note: Before you use this procedure, make sure that you have enabled the CAPI2 operational event log.
+>[!Note]  
+> Before you use this procedure, make sure that you have enabled the CAPI2 operational event log.
 1. Follow the previous steps to revoke a VPN client certificate.
 1. Try to connect to the VPN by using a client that has the revoked certificate.<br />
 The RRAS server should refuse the connection and display a message such as “IKE authentication credentials are unacceptable.” 
