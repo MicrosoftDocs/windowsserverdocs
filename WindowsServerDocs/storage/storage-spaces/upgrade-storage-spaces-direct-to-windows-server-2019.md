@@ -70,13 +70,7 @@ There are some limitations with the upgrade process to be aware of:
     -   **Compaction** efficiency improvements in Windows Server 2019 that are
         specific to multi-resilient volumes
 
--   Before upgrading a Windows Server 2016 Storage Spaces Direct cluster server,
-    we recommend putting the server into storage maintenance mode. For more
-    info, see the Event 5120 section of [Troubleshoot Storage Spaces
-    Direct](troubleshooting-storage-spaces.md#event-5120-with-status-to-timeout-c00000b5).
-    Although this issue has been fixed in Windows Server 2016, we recommend
-    putting each Storage Spaces Direct server into storage maintenance mode
-    during the upgrade as a best practice.
+- Before upgrading a Windows Server 2016 Storage Spaces Direct cluster server, we recommend putting the server into storage maintenance mode. For more info, see the Event 5120 section of [Troubleshoot Storage Spaces Direct](troubleshooting-storage-spaces.md#event-5120-with-status-to-timeout-c00000b). Although this issue has been fixed in Windows Server 2016, we recommend putting each Storage Spaces Direct server into storage maintenance mode during the upgrade as a best practice.
 
 -   There is a known issue with Software Defined Networking environments that
     use SET switches. This issue involves Hyper-V VM live migrations from
