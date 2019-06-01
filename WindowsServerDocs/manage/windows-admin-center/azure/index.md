@@ -7,11 +7,11 @@ author: jasongerend
 ms.author: jgerend
 ms.localizationpriority: medium
 ms.prod: windows-server-threshold
-ms.date: 04/12/2019
+ms.date: 05/31/2019
 ---
 # Connecting Windows Server to Azure hybrid services
 
->Applies to: Windows Server 2019, Windows Server 2016
+>Applies to: Windows Server 2019, Windows Server 2016, Windows Server (Semi-Annual Channel)
 
 You can extend on-premises deployments of Windows Server to the cloud by using Azure hybrid services. These cloud services provide an array of useful functions, including the following:
 
@@ -23,7 +23,7 @@ You can extend on-premises deployments of Windows Server to the cloud by using A
 Azure hybrid services work with Windows Servers in the following configurations:
 
 - Stand-alone physical servers and virtual machines (VMs)
-- Clusters, including hyper-converged clusters certified by the [Azure Stack HCI](../../../azure-stack-hci/index.md), and [Windows Server Software-Defined (WSSD)](https://www.microsoft.com/en-us/cloud-platform/software-defined-datacenter) programs
+- Clusters, including hyper-converged clusters certified by the [Azure Stack HCI](https://docs.microsoft.com/azure-stack/operator/azure-stack-hci-overview), and [Windows Server Software-Defined (WSSD)](https://www.microsoft.com/en-us/cloud-platform/software-defined-datacenter) programs
 
 While you can set up most Azure hybrid services using the Azure portal and a download or two, many are integrated directly into Windows Admin Center to provide a simplified setup experience and a server-centric view of the services.
 
