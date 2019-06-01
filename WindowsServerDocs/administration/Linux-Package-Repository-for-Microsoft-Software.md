@@ -55,24 +55,6 @@ Repositories can be configured automatically by installing the Linux package tha
 		sudo apt-add-repository https://packages.microsoft.com/ubuntu/16.04/prod
 		sudo apt-get update
 
- - Ubuntu 16.10 (Yakkety)	
-
-		curl https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
-		sudo apt-add-repository https://packages.microsoft.com/ubuntu/16.10/prod
-		sudo apt-get update
-
- - Ubuntu 17.04 (Zesty)
- 
- 		curl https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
-		sudo apt-add-repository https://packages.microsoft.com/ubuntu/17.04/prod
-		sudo apt-get update
-
- - Ubuntu 17.10 (Artful)
- 
- 		curl https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
-		sudo apt-add-repository https://packages.microsoft.com/ubuntu/17.10/prod
-		sudo apt-get update
-
  - Ubuntu 18.04 (Bionic)
  
  		curl https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
