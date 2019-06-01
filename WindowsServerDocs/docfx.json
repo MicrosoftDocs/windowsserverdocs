@@ -53,6 +53,6 @@
       null
     ],
     "dest": "windows-server",
-    "markdownEngineName": "markdig"
+    "markdownEngineName": "dfm"
   }
 }
