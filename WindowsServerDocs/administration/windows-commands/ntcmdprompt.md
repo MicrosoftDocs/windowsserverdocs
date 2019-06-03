@@ -24,14 +24,16 @@ Runs the command interpreter **Cmd.exe**, rather than **Command.com**, after run
 ntcmdprompt
 ```
 ### Parameters
-|Parameter|Description|
-|-------|--------|
-|/?|Displays help at the command prompt.|
+
+| Parameter |             Description              |
+|-----------|--------------------------------------|
+|    /?     | Displays help at the command prompt. |
+
 ## Remarks
--   When **Command.com** is running, some features of **Cmd.exe**, such as the **doskey** display of command history, are not available. If you would prefer to run the **Cmd.exe** command interpreter after you have started a Terminate and Stay Resident (TSR) or started the command prompt from within an application based on MS-DOS, you can use the **ntcmdprompt** command. However, keep in mind that the TSR may not be available for use when you are running **Cmd.exe**. You can include the **ntcmdprompt** command in your **Config.nt** file or the equivalent custom startup file in an application's program information file (Pif).
-## Examples
-To include **ntcmdprompt** in your **Config.nt** file, or the configuration startup file specified in the Pif, type:
-**ntcmdprompt**
-## additional references
--   [Command-Line Syntax Key](command-line-syntax-key.md)
+- When **Command.com** is running, some features of **Cmd.exe**, such as the **doskey** display of command history, are not available. If you would prefer to run the **Cmd.exe** command interpreter after you have started a Terminate and Stay Resident (TSR) or started the command prompt from within an application based on MS-DOS, you can use the **ntcmdprompt** command. However, keep in mind that the TSR may not be available for use when you are running **Cmd.exe**. You can include the **ntcmdprompt** command in your **Config.nt** file or the equivalent custom startup file in an application's program information file (Pif).
+  ## Examples
+  To include **ntcmdprompt** in your **Config.nt** file, or the configuration startup file specified in the Pif, type:
+  **ntcmdprompt**
+  ## additional references
+- [Command-Line Syntax Key](command-line-syntax-key.md)
 

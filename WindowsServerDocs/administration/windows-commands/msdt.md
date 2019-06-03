@@ -32,10 +32,12 @@ msdt </id <name> | /path <name> | /cab < name>> <</parameter> [options] … <par
 
 The following table includes the parameters and options supported by msdt.exe.
 
-|Parameter|Description|
-|---------|-----------|
-|/id \<package name>|Specifies which diagnostic package to run. For a list of available packages, see the Troubleshooting Pack ID in the “Available troubleshooting packs�? section later in this topic.|
-|/path \<directory | .diagpkg file | .diagcfg file>|Specifies the full path to a diagnostic package. If you specify a directory, the directory must contain a diagnostic package. You cannot use the /path parameter in conjunction with the */id*, */dci*, or */cab* parameter.|
-|/dci \<passkey>|Prepopulates the passkey field in msdt. This parameter is only used when a support provider has supplied a passkey.|
-|/dt \<directory>|Displays the troubleshooting history in the specified directory. Diagnostic results are stored in the user’s **%LOCALAPPDATA%\Diagnostics** or **%LOCALAPPDATA%\ElevatedDiagnostics** directories.|
-|/af \<answer file>|Specifies an answer file in XML format that contains responses to one or more diagnostic interactions.|
+
+|      Parameter      |                                                                                            Description                                                                                             |
+|---------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| /id \<package name> |        Specifies which diagnostic package to run. For a list of available packages, see the Troubleshooting Pack ID in the “Available troubleshooting packs�? section later in this topic.         |
+|  /path \<directory  |                                                                                           .diagpkg file                                                                                            |
+|   /dci \<passkey>   |                                        Prepopulates the passkey field in msdt. This parameter is only used when a support provider has supplied a passkey.                                         |
+|  /dt \<directory>   | Displays the troubleshooting history in the specified directory. Diagnostic results are stored in the user’s **%LOCALAPPDATA%\Diagnostics** or **%LOCALAPPDATA%\ElevatedDiagnostics** directories. |
+| /af \<answer file>  |                                               Specifies an answer file in XML format that contains responses to one or more diagnostic interactions.                                               |
+

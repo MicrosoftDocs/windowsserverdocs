@@ -25,7 +25,6 @@ Imports security settings stored in an inf file previously exported from the dat
 
 ```
 Secedit /import /db <database file name> /cfg <configuration file name> [/overwrite] [/areas [securitypolicy | group_mgmt | user_rights | regkeys | filestore | services]] [/log <log file name>] [/quiet]
-
 ```
 
 ### Parameters
@@ -44,7 +43,7 @@ Secedit /import /db <database file name> /cfg <configuration file name> [/overwr
 
 Before importing an .inf file onto another computer, run the command secedit /generaterollback on the database on which the import will be performed and secedit /validate on the import file to verify its integrity.
 
-If the path for the log file is not provided, the default log file, (*systemroot*\Documents and Settings\*UserAccount*\My Documents\Security\Logs\*DatabaseName*.log) is used.
+If the path for the log file is not provided, the default log file, (*systemroot*\Documents and Settings\*UserAccount<em>\My Documents\Security\Logs\*DatabaseName</em>.log) is used.
 
 In Windows Server 2008, `Secedit /refreshpolicy` has been replaced with `gpupdate`. For information on how to refresh security settings, see [Gpupdate](gpupdate.md).
 

@@ -21,15 +21,15 @@ This document contains a list of all of the documentation walkthroughs for AD FS
 
 - [Build Plug-ins with AD FS 2019 Risk Assessment Model](../ad-fs/development/ad-fs-risk-assessment-model.md)
   
-* [Build a web application using OpenID Connect with AD FS 2016](../ad-fs/development/Enabling-OpenId-Connect-with-AD-FS.md)  
+- [Build a web application using OpenID Connect with AD FS 2016](../ad-fs/development/Enabling-OpenId-Connect-with-AD-FS.md)  
 
 - [Build a single page web application using OAuth and ADAL.JS with AD FS 2016](../ad-fs/development/Single-Page-Application-with-AD-FS.md)
   
-* [Build a server side application using OAuth confidential clients with AD FS 2016](../ad-fs/development/Enabling-Oauth-Confidential-Clients-with-AD-FS-2016.md)
+- [Build a server side application using OAuth confidential clients with AD FS 2016](../ad-fs/development/Enabling-Oauth-Confidential-Clients-with-AD-FS-2016.md)
 
-* [Build a multi-tiered application using On-Behalf-Of (OBO) using OAuth with AD FS 2016](../ad-fs/development/AD-FS-On-behalf-of-Authentication-in-Windows-Server-2016.md) 
+- [Build a multi-tiered application using On-Behalf-Of (OBO) using OAuth with AD FS 2016](../ad-fs/development/AD-FS-On-behalf-of-Authentication-in-Windows-Server-2016.md) 
 
-* [Build a native client application using OAuth public clients with AD FS 2012 R2 or higher](https://msdn.microsoft.com/library/dn633593.aspx)
+- [Build a native client application using OAuth public clients with AD FS 2012 R2 or higher](https://msdn.microsoft.com/library/dn633593.aspx)
 
 - [Build a native client application using OAuth public clients with AD FS 2016](../ad-fs/development/native-client-with-ad-fs.md)
 

@@ -25,11 +25,11 @@ fsutil dirty {query | set} <VolumePath>
 
 ## Parameters
 
-|Parameter|Description|
-|-------------|---------------|
-|query|Queries the specified volume's dirty bit.|
-|set|Sets the specified volume's dirty bit.|
-|\<VolumePath>|Specifies the drive name followed by a colon or GUID in the following format: **Volume{***GUID***}**.|
+|   Parameter   |                                                 Description                                                  |
+|---------------|--------------------------------------------------------------------------------------------------------------|
+|     query     |                                  Queries the specified volume's dirty bit.                                   |
+|      set      |                                    Sets the specified volume's dirty bit.                                    |
+| \<VolumePath> | Specifies the drive name followed by a colon or GUID in the following format: **Volume{**<em>GUID</em>**}**. |
 
 ## Remarks
 

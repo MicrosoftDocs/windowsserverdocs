@@ -97,23 +97,23 @@ It's important to note that, while providing relatively long periods of single s
 ## PSSO revocation  
  To protect security, AD FS will reject any persistent SSO cookie previously issued when the following conditions are met. This will require the user to provide their credentials in order to authenticate with AD FS again. 
   
--   User changes password  
+- User changes password  
   
--   Persistent SSO setting is disabled in AD FS  
+- Persistent SSO setting is disabled in AD FS  
   
--   Device is disabled by the administrator in lost or stolen case  
+- Device is disabled by the administrator in lost or stolen case  
   
--   AD FS receives a persistent SSO cookie which is issued for a registered user but the user or the device is not registered anymore  
+- AD FS receives a persistent SSO cookie which is issued for a registered user but the user or the device is not registered anymore  
   
--   AD FS receives a persistent SSO cookie for a registered user but the user re-registered  
+- AD FS receives a persistent SSO cookie for a registered user but the user re-registered  
   
--   AD FS receives a persistent SSO cookie which is issued as a result of “keep me signed in” but “keep me signed in” setting is disabled in AD FS  
+- AD FS receives a persistent SSO cookie which is issued as a result of “keep me signed in” but “keep me signed in” setting is disabled in AD FS  
   
--   AD FS receives a persistent SSO cookie which is issued for a registered user but device certificate is missing or altered during authentication  
+- AD FS receives a persistent SSO cookie which is issued for a registered user but device certificate is missing or altered during authentication  
   
--   AD FS administrator has set a cutoff time for persistent SSO. When this is configured, AD FS will reject any persistent SSO cookie issued before this time  
+- AD FS administrator has set a cutoff time for persistent SSO. When this is configured, AD FS will reject any persistent SSO cookie issued before this time  
   
- To set the cutoff time, run the following PowerShell cmdlet:  
+  To set the cutoff time, run the following PowerShell cmdlet:  
   
 
 ``` powershell
@@ -157,7 +157,7 @@ To Summarize:
     <th>YES</th>
   </tr>
  <tr align="center">
-    <td>SSO=>set Refresh Token=></td>
+    <td>SSO=&gt;set Refresh Token=&gt;</td>
     <td>8 Hrs</td>
     <td>N/A</td>
     <td>N/A</td>
@@ -168,7 +168,7 @@ To Summarize:
   </tr>
 
  <tr align="center">
-    <td>PSSO=>set Refresh Token=></td>
+    <td>PSSO=&gt;set Refresh Token=&gt;</td>
     <td>N/A</td>
     <td>24 Hrs</td>
     <td>7 Days</td>

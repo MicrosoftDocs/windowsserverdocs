@@ -32,20 +32,20 @@ The benefits of using virtual network peering include:
 
 Virtual network peering has a few requirements and constraints:
 
--   Peered virtual networks must:
+- Peered virtual networks must:
 
-    -   Have non-overlapping IP address spaces
+  -   Have non-overlapping IP address spaces
 
-    -   Be managed by the same Network Controller
+  -   Be managed by the same Network Controller
 
--   Once you peer a virtual network with another virtual network, you cannot add or delete address ranges in the address space.
+- Once you peer a virtual network with another virtual network, you cannot add or delete address ranges in the address space.
 
-   >[!TIP]
-   >If you need to add address ranges:<ol><li>Remove the peering.</li><li>Add the address space.</li><li>Add the peering again.</li></ol>
+  >[!TIP]
+  >If you need to add address ranges:<ol><li>Remove the peering.</li><li>Add the address space.</li><li>Add the peering again.</li></ol>
 
--   Since virtual network peering is between two virtual networks, there is no derived transitive relationship across peerings. For example, if you peer virtualNetworkA with virtualNetworkB and virtualNetworkB with virtualNetworkC, then virtualNetworkA does not get peered with virtualNetworkC.
+- Since virtual network peering is between two virtual networks, there is no derived transitive relationship across peerings. For example, if you peer virtualNetworkA with virtualNetworkB and virtualNetworkB with virtualNetworkC, then virtualNetworkA does not get peered with virtualNetworkC.
 
-    [image here]
+  [image here]
 
 ## Connectivity
 

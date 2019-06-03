@@ -25,20 +25,19 @@ fsutil transaction [fileinfo] <Filename>
 fsutil transaction [list]
 fsutil transaction [query] [{Files|All}] <GUID>
 fsutil transaction [rollback] <GUID>
-
 ```
 
 ### Parameters
 
-|Parameter|Description|
-|-------------|---------------|
-|commit|Marks the end of a successful implicit or explicit specified transaction.|
-|<GUID>|Specifies the GUID value that represents a transaction.|
-|fileinfo|Displays transaction information for the specified file.|
-|<Filename>|Specifies full path and file name.|
-|list|Displays a list of currently running transactions.|
-|query|Displays information for the specified transaction.<br /><br />-   If **fsutil transaction query Files** is specified, the file information will be displayed only for the specified transaction.<br />-   If **fsutil transaction query All** is specified, all information for the transaction will be displayed.|
-|rollback|Rolls back a specified transaction to the beginning.|
+| Parameter  |                                                                                                                                                     Description                                                                                                                                                     |
+|------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|   commit   |                                                                                                                      Marks the end of a successful implicit or explicit specified transaction.                                                                                                                      |
+|   <GUID>   |                                                                                                                               Specifies the GUID value that represents a transaction.                                                                                                                               |
+|  fileinfo  |                                                                                                                              Displays transaction information for the specified file.                                                                                                                               |
+| <Filename> |                                                                                                                                         Specifies full path and file name.                                                                                                                                          |
+|    list    |                                                                                                                                 Displays a list of currently running transactions.                                                                                                                                  |
+|   query    | Displays information for the specified transaction.<br /><br />-   If **fsutil transaction query Files** is specified, the file information will be displayed only for the specified transaction.<br />-   If **fsutil transaction query All** is specified, all information for the transaction will be displayed. |
+|  rollback  |                                                                                                                                Rolls back a specified transaction to the beginning.                                                                                                                                 |
 
 ### Remarks
 

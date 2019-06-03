@@ -29,6 +29,7 @@ for examples of how to use this command, see [Examples](#BKMK_examples).
 tscon {<SessionID> | <SessionName>} [/dest:<SessionName>] [/password:<pw> | /password:*] [/v]  
 ```  
 ## Parameters  
+
 |Parameter|Description|  
 |-------|--------|  
 |\<SessionID>|Specifies the ID of the session to which you want to connect. If you use the optional **/dest:**<*SessionName*> parameter, this is the ID of the session to which you want to connect.|  
@@ -46,18 +47,18 @@ tscon {<SessionID> | <SessionName>} [/dest:<SessionName>] [/password:<pw> | /pas
 -   You cannot connect to the console session.  
 
 ## <a name="BKMK_examples"></a>Examples  
--   To connect to session 12 on the current rd Session Host server and disconnect the current session, type:  
-    ```  
-    tscon 12  
-    ```  
--   To connect to session 23 on the current rd Session Host server, by using the password mypass, and disconnect the current session, type:  
-    ```  
-    tscon 23 /password:mypass  
-    ```  
--   To connect the session named TERM03 to the session named TERM05, and then disconnect session TERM05, if it is connected, type:  
-    ```  
-    tscon TERM03 /v /dest:TERM05  
-    ```  
-#### Additional references  
-[Command-Line Syntax Key](command-line-syntax-key.md)  
-[Remote Desktop Services &#40;Terminal Services&#41; Command Reference](remote-desktop-services-terminal-services-command-reference.md)  
+- To connect to session 12 on the current rd Session Host server and disconnect the current session, type:  
+  ```  
+  tscon 12  
+  ```  
+- To connect to session 23 on the current rd Session Host server, by using the password mypass, and disconnect the current session, type:  
+  ```  
+  tscon 23 /password:mypass  
+  ```  
+- To connect the session named TERM03 to the session named TERM05, and then disconnect session TERM05, if it is connected, type:  
+  ```  
+  tscon TERM03 /v /dest:TERM05  
+  ```  
+  #### Additional references  
+  [Command-Line Syntax Key](command-line-syntax-key.md)  
+  [Remote Desktop Services &#40;Terminal Services&#41; Command Reference](remote-desktop-services-terminal-services-command-reference.md)  

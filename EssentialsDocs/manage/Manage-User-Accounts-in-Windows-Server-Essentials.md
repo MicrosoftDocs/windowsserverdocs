@@ -58,8 +58,8 @@ The Users page of the Windows Server Essentials Dashboard centralizes informatio
 -   Assign user groups ( Windows Server Essentials only).  
   
 > [!NOTE]
->  -   Non-ASCII characters are not supported in  Microsoft Azure Active Directory (Azure AD). Do not use any non-ASCII characters in your password, if your server is integrated with  Azure AD.  
-> -   The email options are only available if you install an add-in that provides email service.  
+> - Non-ASCII characters are not supported in  Microsoft Azure Active Directory (Azure AD). Do not use any non-ASCII characters in your password, if your server is integrated with  Azure AD.  
+>   -   The email options are only available if you install an add-in that provides email service.  
   
 ##### To add a user account  
   
@@ -75,7 +75,7 @@ The Users page of the Windows Server Essentials Dashboard centralizes informatio
  When you choose to remove a user account from the server, a wizard deletes the selected account. Because of this, you can no longer use the account to log on to the network or to access any of the network resources. As an option, you can also delete the files for the user account at the same time that you remove the account. If you do not want to permanently remove the user account, you can deactivate the user account instead to suspend access to network resources.  
   
 > [!IMPORTANT]
->  If a user account has a Microsoft online account assigned, when you remove the user account, the online account also is removed from Microsoft Online Services, and the user „¢s data, including email, is subject to data retention policies in Microsoft Online Services. If you want to retain user data for the online account, deactivate the user account instead of removing it. For more information, see [Manage Online Accounts for Users](Manage-Online-Accounts-for-Users.md).  
+>  If a user account has a Microsoft online account assigned, when you remove the user account, the online account also is removed from Microsoft Online Services, and the user ï¿½ï¿½s data, including email, is subject to data retention policies in Microsoft Online Services. If you want to retain user data for the online account, deactivate the user account instead of removing it. For more information, see [Manage Online Accounts for Users](Manage-Online-Accounts-for-Users.md).  
   
 ##### To remove a user account  
   
@@ -87,12 +87,12 @@ The Users page of the Windows Server Essentials Dashboard centralizes informatio
   
 4.  In the **<User Account\> Tasks** pane, click **Remove the user account**. The Delete a User Account Wizard appears.  
   
-5.  On the **Do you want to keep the files?** page of the wizard, you can choose to delete the user „¢s files, including File History backups and the redirected folder for the user account. To keep the user „¢s files, leave the check box empty. After making your selection, click **Next**.  
+5.  On the **Do you want to keep the files?** page of the wizard, you can choose to delete the user ï¿½ï¿½s files, including File History backups and the redirected folder for the user account. To keep the user ï¿½ï¿½s files, leave the check box empty. After making your selection, click **Next**.  
   
 6.  Click **Delete account**.  
   
 > [!NOTE]
->  After you remove a user account, the account no longer appears in the list of user accounts. If you chose to delete the files, the server permanently deletes the user „¢s folder from the **Users** server folder and from the **File History Backups** server folder.  
+>  After you remove a user account, the account no longer appears in the list of user accounts. If you chose to delete the files, the server permanently deletes the user ï¿½ï¿½s folder from the **Users** server folder and from the **File History Backups** server folder.  
 >   
 >  If you have an integrated email provider, the email account assigned to the user account will also be removed.  
   
@@ -160,7 +160,7 @@ The Users page of the Windows Server Essentials Dashboard centralizes informatio
 ###  <a name="BKMK_Manage6"></a> Deactivate a user account  
  When you deactivate a user account, account access to the server is temporarily suspended. Because of this, the assigned user cannot use the account to access network resources such as shared folders or the Remote Web Access site until you activate the account.  
   
- If the user account has a Microsoft online account assigned, the online account is also deactivated. The user cannot use resources in  Office 365 and other online services that you subscribe to, but the user „¢s data, including email, is retained in Microsoft Online Services.  
+ If the user account has a Microsoft online account assigned, the online account is also deactivated. The user cannot use resources in  Office 365 and other online services that you subscribe to, but the user ï¿½ï¿½s data, including email, is retained in Microsoft Online Services.  
   
 > [!NOTE]
 >  You can only deactivate a user account that is currently active.  
@@ -192,41 +192,41 @@ The Users page of the Windows Server Essentials Dashboard centralizes informatio
 -   **Administrator** accounts provide the most control over a computer network. You should assign the administrator account type only when necessary.  
   
 ###  <a name="BKMK_Manage8"></a> Manage user accounts using the Dashboard  
- Windows Server Essentials makes it possible to perform common administrative tasks by using the Windows Server Essentials Dashboard. By default, the **Users** page of the Dashboard includes two tabs  œ **Users** and **Users Groups**.  
+ Windows Server Essentials makes it possible to perform common administrative tasks by using the Windows Server Essentials Dashboard. By default, the **Users** page of the Dashboard includes two tabs  ï¿½ **Users** and **Users Groups**.  
   
 > [!NOTE]
->  -   If you integrate your server that is running  Windows Server Essentials with Office 365, a new tab called **Distribution Groups** is also added within the **Users** page of the Dashboard.  
-> -   In  Windows Server Essentials, the **Users** page of the Dashboard includes only a single tab - **Users**.  
+> - If you integrate your server that is running  Windows Server Essentials with Office 365, a new tab called **Distribution Groups** is also added within the **Users** page of the Dashboard.  
+>   -   In  Windows Server Essentials, the **Users** page of the Dashboard includes only a single tab - **Users**.  
   
  The **Users** tab includes the following:  
   
--   A list of user accounts, which displays:  
+- A list of user accounts, which displays:  
   
-    -   The name of the user.  
+  -   The name of the user.  
   
-    -   The Logon name for the user account.  
+  -   The Logon name for the user account.  
   
-    -   Whether the user account has Anywhere Access permission. Anywhere Access permission for a user account is either **Allowed** or **Not allowed**.  
+  -   Whether the user account has Anywhere Access permission. Anywhere Access permission for a user account is either **Allowed** or **Not allowed**.  
   
-    -   Whether the File History for this user account is managed by the server running Windows Server Essentials. The File History status for a user account is either **Managed** or **Not managed**.  
+  -   Whether the File History for this user account is managed by the server running Windows Server Essentials. The File History status for a user account is either **Managed** or **Not managed**.  
   
-    -   The level of access that is assigned to the user account. You can assign either **Standard user** access or **Administrator** access for a user account.  
+  -   The level of access that is assigned to the user account. You can assign either **Standard user** access or **Administrator** access for a user account.  
   
-    -   The user account status. A user account can be **Active**, **Inactive**, or **Incomplete**.  
+  -   The user account status. A user account can be **Active**, **Inactive**, or **Incomplete**.  
   
-    -   In  Windows Server Essentials, if the server is integrated with  Office 365 or Windows Intune, the Microsoft online account is displayed.  
+  -   In  Windows Server Essentials, if the server is integrated with  Office 365 or Windows Intune, the Microsoft online account is displayed.  
   
-    -   In  Windows Server Essentials, if the server is integrated with Microsoft Office 365, the status of the Office 365 account (known in  Windows Server Essentials as the Microsoft online account) for the user account is displayed.  
+  -   In  Windows Server Essentials, if the server is integrated with Microsoft Office 365, the status of the Office 365 account (known in  Windows Server Essentials as the Microsoft online account) for the user account is displayed.  
   
--   A details pane with additional information about a selected user account.  
+- A details pane with additional information about a selected user account.  
   
--   A tasks pane that includes:  
+- A tasks pane that includes:  
   
-    -   A set of user account administrative tasks such as viewing and removing user accounts, and changing passwords.  
+  -   A set of user account administrative tasks such as viewing and removing user accounts, and changing passwords.  
   
-    -   Tasks that allow you to globally set or change settings for all user accounts in the network.  
+  -   Tasks that allow you to globally set or change settings for all user accounts in the network.  
   
- The following table describes the various user account tasks that are available from the **Users** tab. Some of the tasks are user account-specific, and they are only visible when you select a user account in the list.  
+  The following table describes the various user account tasks that are available from the **Users** tab. Some of the tasks are user account-specific, and they are only visible when you select a user account in the list.  
   
 > [!NOTE]
 >  If you integrate  Office 365 with Windows Server Essentials, additional tasks will become available. For more information, see [Manage Online Accounts for Users](Manage-Online-Accounts-for-Users.md).  
@@ -281,55 +281,55 @@ The Users page of the Windows Server Essentials Dashboard centralizes informatio
   
 ##### To reset the password for a user account  
   
-1.  Open the Windows Server Essentials Dashboard.  
+1. Open the Windows Server Essentials Dashboard.  
   
-2.  On the navigation bar, click **Users**.  
+2. On the navigation bar, click **Users**.  
   
-3.  In the list of user accounts, select the user account that you want to reset.  
+3. In the list of user accounts, select the user account that you want to reset.  
   
-4.  In the **<User Account\> Tasks** pane, click **Change the user account password**. The Change User Account Password Wizard appears.  
+4. In the **<User Account\> Tasks** pane, click **Change the user account password**. The Change User Account Password Wizard appears.  
   
-5.  Type a new password for the user account, and then type the password again to confirm it.  
+5. Type a new password for the user account, and then type the password again to confirm it.  
   
-6.  Click **Change password**.  
+6. Click **Change password**.  
   
-7.  Provide the new password to the user.  
+7. Provide the new password to the user.  
   
-    > [!IMPORTANT]
-    >  -   You may not be able to change your password if the password policy for your account has been set to **Passwords never expire**.  
-    > -   Non-ASCII characters are not supported in  Azure AD. Therefore, if your server is integrated with  Azure AD, do not use any non-ASCII characters in your password.  
-    > -   If a Microsoft online account (known in  Windows Server Essentials as an  Office 365 account) is assigned to the user, the password is synchronized with the online account password. The user will use the new password to sign in on the server or sign in to Office 365. For more information, see [Manage Online Accounts for Users](Manage-Online-Accounts-for-Users.md).  
+   > [!IMPORTANT]
+   > - You may not be able to change your password if the password policy for your account has been set to **Passwords never expire**.  
+   >   -   Non-ASCII characters are not supported in  Azure AD. Therefore, if your server is integrated with  Azure AD, do not use any non-ASCII characters in your password.  
+   >   -   If a Microsoft online account (known in  Windows Server Essentials as an  Office 365 account) is assigned to the user, the password is synchronized with the online account password. The user will use the new password to sign in on the server or sign in to Office 365. For more information, see [Manage Online Accounts for Users](Manage-Online-Accounts-for-Users.md).  
   
 ###  <a name="BKMK_Access3"></a> What you should know about password policies  
  The password policy is a set of rules that define how users create and use passwords. The policy helps to prevent unauthorized access to user data and other information that is stored on the server. The password policy is applied to all user accounts that access the network.  
   
  The Windows Server Essentials password policy consists of three primary elements as follows:  
   
--   **Password length**.  The longer a password is, the more secure it is. Blank passwords are not secure.  
+- **Password length**.  The longer a password is, the more secure it is. Blank passwords are not secure.  
   
--   **Password complexity**.  Complex passwords contain a mixture of uppercase and lowercase letters (a-z, A-Z), base numbers (0-9), and non-alphabetic symbols (such as; !,@,#,_,-). Complex passwords are much less susceptible to unauthorized access. Passwords that contain user names, birthdates, or other personal information do not provide adequate security.  
+- **Password complexity**.  Complex passwords contain a mixture of uppercase and lowercase letters (a-z, A-Z), base numbers (0-9), and non-alphabetic symbols (such as; !,@,#,_,-). Complex passwords are much less susceptible to unauthorized access. Passwords that contain user names, birthdates, or other personal information do not provide adequate security.  
   
--   **Password age**.  Windows Server Essentials requires that users change their password at least once every 180 days. As an option, you can choose to have passwords never expire.  
+- **Password age**.  Windows Server Essentials requires that users change their password at least once every 180 days. As an option, you can choose to have passwords never expire.  
   
- To make it easier to implement a password policy on your computer network, Windows Server Essentials provides a simple tool that allows you to set or change the password policy to any of the following four pre-defined policy profiles:  
+  To make it easier to implement a password policy on your computer network, Windows Server Essentials provides a simple tool that allows you to set or change the password policy to any of the following four pre-defined policy profiles:  
   
--   **Weak**.  Users can specify any password that is not blank.  
+- **Weak**.  Users can specify any password that is not blank.  
   
--   **Medium**.  These passwords must contain at least 5 characters. A complex password is not required.  
+- **Medium**.  These passwords must contain at least 5 characters. A complex password is not required.  
   
--   **Medium Strong**.  These passwords must contain at least 5 characters, and must include letters, numbers, and symbols.  
+- **Medium Strong**.  These passwords must contain at least 5 characters, and must include letters, numbers, and symbols.  
   
--   **Strong**.  These passwords must contain at least 7 characters, and must include letters, numbers, and symbols. These passwords are more secure, but may be more difficult for users to remember.  
+- **Strong**.  These passwords must contain at least 7 characters, and must include letters, numbers, and symbols. These passwords are more secure, but may be more difficult for users to remember.  
   
-    > [!NOTE]
-    >  Passwords cannot contain the user name or email address.  
-    >   
-    >  If you integrate with Office 365, the integration enforces the **Strong** password policy, and updates the policy to include the following requirements:  
-    >   
-    >  -   Passwords must contain 8 œ16 characters.  
-    > -   Passwords cannot contain a space or the Office 365 email name.  
+  > [!NOTE]
+  >  Passwords cannot contain the user name or email address.  
+  > 
+  >  If you integrate with Office 365, the integration enforces the **Strong** password policy, and updates the policy to include the following requirements:  
+  > 
+  > - Passwords must contain 8 ï¿½16 characters.  
+  >   -   Passwords cannot contain a space or the Office 365 email name.  
   
- By default, server installation sets the default password policy to the **Strong** option.  
+  By default, server installation sets the default password policy to the **Strong** option.  
   
 ###  <a name="BKMK_Access4"></a> Change the password policy  
  Use the following procedure to set or change the password policy to any of four pre-defined policy profiles.  
@@ -361,28 +361,28 @@ The Users page of the Windows Server Essentials Dashboard centralizes informatio
 -   **No access**.  Choose this setting if you do not want the user account to access any files in the shared folder.  
   
 ###  <a name="BKMK_Access6"></a> Retain and manage access to files for removed user accounts  
- The network administrator can remove a user account and choose to keep the user „¢s files for future use. In this scenario, the removed user account can no longer be used to sign in to the network; however, the files for this user will be saved in a shared folder, which can be shared with another user.  
+ The network administrator can remove a user account and choose to keep the user ï¿½ï¿½s files for future use. In this scenario, the removed user account can no longer be used to sign in to the network; however, the files for this user will be saved in a shared folder, which can be shared with another user.  
   
 > [!IMPORTANT]
 >  Be aware that if you remove a user account that has a Microsoft online account assigned, the online account is also removed, and the user data, including email, is subject to data retention policies in Microsoft Online Services. To retain the user data for the online account, deactivate the user account instead of removing it. For more information, see [Manage Online Accounts for Users](Manage-Online-Accounts-for-Users.md).  
   
-##### To remove a user account but retain access to the user „¢s files  
+##### To remove a user account but retain access to the user ï¿½ï¿½s files  
   
-1.  Open the Windows Server Essentials Dashboard.  
+1. Open the Windows Server Essentials Dashboard.  
   
-2.  On the navigation bar, click **Users**.  
+2. On the navigation bar, click **Users**.  
   
-3.  In the list of user accounts, select the user account that you want to remove.  
+3. In the list of user accounts, select the user account that you want to remove.  
   
-4.  In the **<User Account\> Tasks** pane, click **Remove the user account**. The Delete a User Account Wizard appears.  
+4. In the **<User Account\> Tasks** pane, click **Remove the user account**. The Delete a User Account Wizard appears.  
   
-5.  On the **Do you want to keep the files?** page, make sure that the **Delete the files including File History backups and redirected folder for this user account** check box is clear, and then click **Next**.  
+5. On the **Do you want to keep the files?** page, make sure that the **Delete the files including File History backups and redirected folder for this user account** check box is clear, and then click **Next**.  
   
-     A confirmation page appears warning you that are deleting the account but keeping the files.  
+    A confirmation page appears warning you that are deleting the account but keeping the files.  
   
-6.  Click **Delete account** to remove the user account.  
+6. Click **Delete account** to remove the user account.  
   
- After the user account is removed, the administrator can give another user account access to the shared folder.  
+   After the user account is removed, the administrator can give another user account access to the shared folder.  
   
 ##### To give a user account permission to access a shared folder  
   
@@ -405,19 +405,19 @@ The Users page of the Windows Server Essentials Dashboard centralizes informatio
 ###  <a name="BKMK_Access7"></a> Synchronize the DSRM password with the network administrator password  
  Directory Services Restore Mode (DSRM) is a special boot mode for repairing or recovering Active Directory. The operating system uses DSRM to log on to the computer if Active Directory fails or needs to be restored. If your network administrator password and the DSRM password are different, DSRM will not load.  
   
- During a clean, first-time installation of Windows Server Essentials, the program sets the DSRM password to the network administrator account password that you specify during setup or in the migration answer file. When you change your network administrator password (as recommended typically every 60 days for increased server security), the password change is not forwarded to DSRM. This results in a password mismatch. If this occurs, you can use the following solutions to manually or automatically synchronize your network administrator „¢s password with the DSRM password.  
+ During a clean, first-time installation of Windows Server Essentials, the program sets the DSRM password to the network administrator account password that you specify during setup or in the migration answer file. When you change your network administrator password (as recommended typically every 60 days for increased server security), the password change is not forwarded to DSRM. This results in a password mismatch. If this occurs, you can use the following solutions to manually or automatically synchronize your network administrator ï¿½ï¿½s password with the DSRM password.  
   
 ##### To manually synchronize the DSRM password to a network administrator account  
   
-1.  At a command prompt, run `ntdsutil.exe` to open the ntdsutil tool.  
+1. At a command prompt, run `ntdsutil.exe` to open the ntdsutil tool.  
   
-2.  To reset the DSRM password, type **set dsrm password**.  
+2. To reset the DSRM password, type **set dsrm password**.  
   
-3.  To synchronize the DSRM password on a domain controller with the current network administrator „¢s account, type:  
+3. To synchronize the DSRM password on a domain controller with the current network administrator ï¿½ï¿½s account, type:  
   
-     **sync from domain account** *<current_network_administrator_account>*, and then press Enter.  
+    **sync from domain account** *<current_network_administrator_account>*, and then press Enter.  
   
- Because you will periodically change the password for the network administrator account, to ensure that the DSRM password is always the same as the current password of the network administrator, we recommend that you create a schedule task to automatically synchronize the DSRM password to the network administrator password daily.  
+   Because you will periodically change the password for the network administrator account, to ensure that the DSRM password is always the same as the current password of the network administrator, we recommend that you create a schedule task to automatically synchronize the DSRM password to the network administrator password daily.  
   
 ##### To automatically synchronize the DSRM password to a network administrator account  
   
@@ -444,7 +444,7 @@ The Users page of the Windows Server Essentials Dashboard centralizes informatio
   
     2.  In the **Action** list, click **Start a program**, and then browse to **C:\WINDOWS\SYSTEM32\ntdsutil.exe**.  
   
-    3.  In the **Add arguments**(optional) text box, type the following (you must include the quotation marks): **set dsrm password sync from domain account SBS_network_administrator_account q q** where *SBS_network_administrator_account* is the current network administrator „¢s account name.  
+    3.  In the **Add arguments**(optional) text box, type the following (you must include the quotation marks): **set dsrm password sync from domain account SBS_network_administrator_account q q** where *SBS_network_administrator_account* is the current network administrator ï¿½ï¿½s account name.  
   
 6.  Click **OK** twice to save the task and close the **Create Task** dialog box. The new task appears in the **Active Tasks** section of **Task Schedule**.  
   
@@ -455,15 +455,15 @@ The Users page of the Windows Server Essentials Dashboard centralizes informatio
   
  The Set up Anywhere Access Wizard allows you to enable two methods of remote access:  
   
--   Virtual private network (VPN)  
+- Virtual private network (VPN)  
   
--   Remote Web Access  
+- Remote Web Access  
   
- When you run the wizard, you can also choose to allow Anywhere Access for all current and newly added user accounts.  
+  When you run the wizard, you can also choose to allow Anywhere Access for all current and newly added user accounts.  
   
- To set up Anywhere Access, open the Dashboard **Home** page, click **SETUP**, and then click **Set up Anywhere Access**.  
+  To set up Anywhere Access, open the Dashboard **Home** page, click **SETUP**, and then click **Set up Anywhere Access**.  
   
- For more information about Anywhere Access, see [Manage Anywhere Access](Manage-Anywhere-Access-in-Windows-Server-Essentials.md).  
+  For more information about Anywhere Access, see [Manage Anywhere Access](Manage-Anywhere-Access-in-Windows-Server-Essentials.md).  
   
 ###  <a name="BKMK_Access9"></a> Enable users to access resources on the server  
   This section applies to a server running Windows Server Essentials or Windows Server Essentials, or to a server running Windows Server 2012 R2 Standard or Windows Server 2012 R2 Datacenter with the Windows Server Essentials Experience role installed.  

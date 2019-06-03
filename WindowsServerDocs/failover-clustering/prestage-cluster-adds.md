@@ -42,14 +42,14 @@ As a best practice, we recommend that you create an OU for the cluster objects. 
 3. In the console tree, right-click the OU where you want to create the CNO, point to **New**, and then select **Computer**.
 4. In the **Computer name** box, enter the name that will be used for the failover cluster, and then select **OK**.
 
-  >[!NOTE]
-  >This is the cluster name that the user who creates the cluster will specify on the **Access Point for Administering the Cluster** page in the Create Cluster wizard or as the value of the *–Name* parameter for the **New-Cluster** Windows PowerShell cmdlet.
+   >[!NOTE]
+   >This is the cluster name that the user who creates the cluster will specify on the **Access Point for Administering the Cluster** page in the Create Cluster wizard or as the value of the *–Name* parameter for the **New-Cluster** Windows PowerShell cmdlet.
 
 5. As a best practice, right-click the computer account that you just created, select **Properties**, and then select the **Object** tab. On the **Object** tab, select the **Protect object from accidental deletion** check box, and then select **OK**.
 6. Right-click the computer account that you just created, and then select **Disable Account**. Select **Yes** to confirm, and then select **OK**.
 
-  >[!NOTE]
-  >You must disable the account so that during cluster creation, the cluster creation process can confirm that the account is not currently in use by an existing computer or cluster in the domain.
+   >[!NOTE]
+   >You must disable the account so that during cluster creation, the cluster creation process can confirm that the account is not currently in use by an existing computer or cluster in the domain.
 
 ![Disabled CNO in the example Clusters OU](media/prestage-cluster-adds/disabled-cno-in-the-example-clusters-ou.png)
 
@@ -69,9 +69,9 @@ Here's how to grant the user permissions to create the cluster:
 4. In the **Select Users, Computers, or Groups** dialog box, specify the user account or group that you want to grant permissions to, and then select **OK**.
 5. Select the user account or group that you just added, and then next to **Full control**, select the **Allow** check box.
   
-  ![Granting Full Control to the user or group that will create the cluster](media/prestage-cluster-adds/granting-full-control-to-the-user-create-the-cluster.png)
+   ![Granting Full Control to the user or group that will create the cluster](media/prestage-cluster-adds/granting-full-control-to-the-user-create-the-cluster.png)
   
-  **Figure 2. Granting Full Control to the user or group that will create the cluster**
+   **Figure 2. Granting Full Control to the user or group that will create the cluster**
 6. Select **OK**.
 
 After you complete this step, the user who you granted permissions to can create the failover cluster. However, if the CNO is located in an OU, the user cannot create clustered roles that require a client access point until you complete Step 3.
@@ -107,9 +107,9 @@ If you prestaged the CNO in AD DS, you can do either of the following to create 
 8. In the **Permission Entry** dialog box, make sure that the **Type** list is set to **Allow**, and the **Applies to** list is set to **This object and all descendant objects**.
 9. Under **Permissions**, select the **Create Computer objects** check box.
 
-  ![Granting the Create Computer objects permission to the CNO](media/prestage-cluster-adds/granting-create-computer-objects-permission-to-the-cno.png)
+   ![Granting the Create Computer objects permission to the CNO](media/prestage-cluster-adds/granting-create-computer-objects-permission-to-the-cno.png)
 
-  **Figure 3. Granting the Create Computer objects permission to the CNO**
+   **Figure 3. Granting the Create Computer objects permission to the CNO**
 10. Select **OK** until you return to the Active Directory Users and Computers snap-in.
 
 An administrator on the failover cluster can now create clustered roles with client access points, and bring the resources online.

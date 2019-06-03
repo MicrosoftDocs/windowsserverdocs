@@ -31,42 +31,42 @@ manager: dongill
   
  The most common reasons for restoring a server are:  
   
--   A virus on the server cannot be inoculated or deleted.  
+- A virus on the server cannot be inoculated or deleted.  
   
--   The server configuration settings are bad, and you cannot start the server.  
+- The server configuration settings are bad, and you cannot start the server.  
   
--   You replaced the system drive.  
+- You replaced the system drive.  
   
--   You are retiring the server, and you want to restore to a new server.  
+- You are retiring the server, and you want to restore to a new server.  
   
- You can either restore the server from a backup, or you can restore the server to factory default settings.  
+  You can either restore the server from a backup, or you can restore the server to factory default settings.  
   
--   [Restoring the server from a backup](Restore-or-repair-your-server-running-Windows-Server-Essentials.md#BKMK_RestoreFromBackup)  
+- [Restoring the server from a backup](Restore-or-repair-your-server-running-Windows-Server-Essentials.md#BKMK_RestoreFromBackup)  
   
--   [Resetting the server to factory default settings](Restore-or-repair-your-server-running-Windows-Server-Essentials.md#BKMK_FactoryReset)  
+- [Resetting the server to factory default settings](Restore-or-repair-your-server-running-Windows-Server-Essentials.md#BKMK_FactoryReset)  
   
 ###  <a name="BKMK_RestoreFromBackup"></a> Restoring the server from a backup  
  This section provides guidance on what type of backup to choose.  
   
- If a backup is available, your best choice for restoring your server is to use the manufacturer „¢s installation media to restore from an external backup. The restoration will recover server settings and folders from the backup that you choose. You only need to configure settings and restore data created after the backup.  
+ If a backup is available, your best choice for restoring your server is to use the manufacturer ï¿½ï¿½s installation media to restore from an external backup. The restoration will recover server settings and folders from the backup that you choose. You only need to configure settings and restore data created after the backup.  
   
  When you choose to recover your server by restoring from a previous backup, you must choose the specific backup that you want restored, and you must have a valid backup file on an external hard drive that is directly connected to the server:  
   
--   **If you have a very recent successful backup of the server**, and you know that the backup contains all of your critical data, your choice is fairly straightforward. You will only need to recreate data that was created after your last good backup and reconfigure settings changes made after the backup.  
+- **If you have a very recent successful backup of the server**, and you know that the backup contains all of your critical data, your choice is fairly straightforward. You will only need to recreate data that was created after your last good backup and reconfigure settings changes made after the backup.  
   
--   **If you are restoring your server because of a virus**, select a backup that you know occurred prior to receiving the virus. You might need to go back several days to select a backup that is clean.  
+- **If you are restoring your server because of a virus**, select a backup that you know occurred prior to receiving the virus. You might need to go back several days to select a backup that is clean.  
   
--   **If you are restoring your server because of bad configuration settings**, select a backup that you know occurred prior to the configuration setting change that is causing the issue on the server.  
+- **If you are restoring your server because of bad configuration settings**, select a backup that you know occurred prior to the configuration setting change that is causing the issue on the server.  
   
- When you restore from a backup, the exact process and the required follow-up depend on the number of hard drives on the server and whether the system drive is replaced:  
+  When you restore from a backup, the exact process and the required follow-up depend on the number of hard drives on the server and whether the system drive is replaced:  
   
--   **If the server has a single hard drive and the drive is not replaced**, the drive partition information is left intact when you restore the server. The system volume is restored, and the data on the remaining volume is preserved.  
+- **If the server has a single hard drive and the drive is not replaced**, the drive partition information is left intact when you restore the server. The system volume is restored, and the data on the remaining volume is preserved.  
   
--   **If the server has a single hard drive and the drive is replaced**, the system volume is restored, and then you must manually restore folders to the data volume. Any non-default shared folders need to be created because they are not created when the server storage is recreated.  
+- **If the server has a single hard drive and the drive is replaced**, the system volume is restored, and then you must manually restore folders to the data volume. Any non-default shared folders need to be created because they are not created when the server storage is recreated.  
   
--   **If the server has multiple hard drives, and drive 0 (contains the system volume) is not replaced**, the drive partition information is left intact when you restore the server. The system volume is restored, and the data on all remaining volumes is preserved.  
+- **If the server has multiple hard drives, and drive 0 (contains the system volume) is not replaced**, the drive partition information is left intact when you restore the server. The system volume is restored, and the data on all remaining volumes is preserved.  
   
--   **If the server has multiple hard drives, and drive 0 (contains the system volume) is replaced**, the system volume is restored, and then you must manually restore any shared folders that were previously stored on drive 0.  
+- **If the server has multiple hard drives, and drive 0 (contains the system volume) is replaced**, the system volume is restored, and then you must manually restore any shared folders that were previously stored on drive 0.  
   
 ###  <a name="BKMK_FactoryReset"></a> Resetting the server to factory default settings  
  If you do not have a backup that you can restore from, or for some other reason you want or need to perform a full system restore without restoring the previous server configuration, you can perform a restore that resets the server to factory default settings by using installation or recovery media from the server hardware manufacturer.  
@@ -78,7 +78,7 @@ manager: dongill
 -   If you choose to keep all your data, all data on the system volume is deleted, but the data on other volumes is retained.  
   
     > [!CAUTION]
-    >  If the disk settings do not match the default settings, all data on a disk will be deleted. If you replaced the system disk, the new disk must be larger than the original disk „¢s system volume.  
+    >  If the disk settings do not match the default settings, all data on a disk will be deleted. If you replaced the system disk, the new disk must be larger than the original disk ï¿½ï¿½s system volume.  
     >   
     >  If the partition information for a system drive is unreadable, or if you replace the system drive, all data on the system drive will be removed, even if you choose to keep all your data.  
   
@@ -212,7 +212,7 @@ manager: dongill
 >  For more information about backing up and restoring files and folders, see [Manage Backup and Restore](Manage-Backup-and-Restore-in-Windows-Server-Essentials.md).  
   
 ###  <a name="BKMK_ConfigreSharedFolders"></a> Restore shared folders on the server  
- After you restore the server „¢s system drive, if shared folders are still on the data partition or were restored to the data partition, you might need to configure the shared folders again in order for the server to recognize the folders. The following procedure describes how to add shared folders that have been shared before.  
+ After you restore the server ï¿½ï¿½s system drive, if shared folders are still on the data partition or were restored to the data partition, you might need to configure the shared folders again in order for the server to recognize the folders. The following procedure describes how to add shared folders that have been shared before.  
   
 ##### To add an existing folder to the server shared folders  
   
