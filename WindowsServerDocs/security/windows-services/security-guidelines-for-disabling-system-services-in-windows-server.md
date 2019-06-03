@@ -506,12 +506,20 @@ The following tables offer Microsoft guidance on disabling system services on Wi
 |   **Comments**    |   
 |||         
 
-<br /><br/>
-##  Device Install Service<br/>| | |<br/>|---|---|<br/>|   <strong>Service description</strong> |   Enables a computer to recognize and adapt to hardware changes with little or no user input. Stopping or disabling this service will result in system instability.
-|   <strong>Service name</strong>    |   DeviceInstall
-|   <strong>Installation</strong>    |   Always installed
-|   <strong>StartType</strong>   |   Manual
-|   <strong>Recommendation</strong>  | No guidance<br/>|   <strong>Comments</strong>    |<br/>|||<br/>
+<br />
+
+##  Device Install Service
+
+| | |
+|---|---|
+|   **Service description** |   Enables a computer to recognize and adapt to hardware changes with little or no user input. Stopping or disabling this service will result in system instability.
+|   **Service name**    |   DeviceInstall
+|   **Installation**    |   Always installed
+|   **StartType**   |   Manual
+|   **Recommendation**  | No guidance
+|   **Comments**    |
+|||
+
 <br />          
 
 ##  Device Management Enrollment Service        
@@ -863,14 +871,19 @@ The following tables offer Microsoft guidance on disabling system services on Wi
 |   **Comments**    |   See HvHost
 |||         
 
-<br /><br/>
-## Hyper-V Heartbeat Service<br/>| | |<br/>|---|---|<br/>|   <strong>Service description</strong> |   Monitors the state of this virtual machine by reporting a heartbeat at regular intervals. This service helps you identify running virtual machines that have stopped responding.
-|   <strong>Service name</strong>    |   vmicheartbeat
-|   <strong>Installation</strong>    |   Always installed
-|   <strong>StartType</strong>   |   Manual
-|   <strong>Recommendation</strong>  |   Do not disable
-|   <strong>Comments</strong>    |   See HvHost
-|||<br/>
+<br />
+
+## Hyper-V Heartbeat Service
+| | |
+|---|---|
+|   **Service description** |   Monitors the state of this virtual machine by reporting a heartbeat at regular intervals. This service helps you identify running virtual machines that have stopped responding.
+|   **Service name**    |   vmicheartbeat
+|   **Installation**    |   Always installed
+|   **StartType**   |   Manual
+|   **Recommendation**  |   Do not disable
+|   **Comments**    |   See HvHost
+|||
+
 <br />          
 
 ## Hyper-V PowerShell Direct Service            
@@ -1068,14 +1081,19 @@ The following tables offer Microsoft guidance on disabling system services on Wi
 |   **Comments**    |   
 |||         
 
-<br /><br/>
-## Microsoft Account Sign-in Assistant<br/>| | |<br/>|---|---|<br/>|   <strong>Service description</strong> |   Enables user sign-in through Microsoft account identity services. If this service is stopped, users will not be able to log on to the computer with their Microsoft account.
-|   <strong>Service name</strong>    |   wlidsvc
-|   <strong>Installation</strong>    |   Only with Desktop Experience
-|   <strong>StartType</strong>   |   Manual
-|   <strong>Recommendation</strong>  |   OK to disable
-|   <strong>Comments</strong>    |   Microsoft Accounts are N/A on Windows Server
-|||<br/>
+<br />
+
+## Microsoft Account Sign-in Assistant
+| | |
+|---|---|
+|   **Service description** |   Enables user sign-in through Microsoft account identity services. If this service is stopped, users will not be able to log on to the computer with their Microsoft account.
+|   **Service name**    |   wlidsvc
+|   **Installation**    |   Only with Desktop Experience
+|   **StartType**   |   Manual
+|   **Recommendation**  |   OK to disable
+|   **Comments**    |   Microsoft Accounts are N/A on Windows Server
+|||
+
 <br />          
 
 ##  Microsoft App-V Client      
@@ -2539,14 +2557,19 @@ The following tables offer Microsoft guidance on disabling system services on Wi
 |   **Comments**    |   User service template
 |||         
 
-<br /><br/>
-## Windows Remote Management (WS-Management)<br/>| | |<br/>|---|---|<br/>|   <strong>Service description</strong> |   Windows Remote Management (WinRM) service implements the WS-Management protocol for remote management. WS-Management is a standard web services protocol used for remote software and hardware management. The WinRM service listens on the network for WS-Management requests and processes them. The WinRM Service needs to be configured with a listener using winrm.cmd command line tool or through Group Policy in order for it to listen over the network. The WinRM service provides access to WMI data and enables event collection. Event collection and subscription to events require that the service is running. WinRM messages use HTTP and HTTPS as transports. The WinRM service does not depend on IIS but is preconfigured to share a port with IIS on the same machine.  The WinRM service reserves the /wsman URL prefix. To prevent conflicts with IIS, administrators should ensure that any websites hosted on IIS do not use the /wsman URL prefix.
-|   <strong>Service name</strong>    |   WinRM
-|   <strong>Installation</strong>    |   Always installed
-|   <strong>StartType</strong>   |   Automatic
-|   <strong>Recommendation</strong>  |   Do not disable
-|   <strong>Comments</strong>    |   Needed for remote management
-|||<br/>
+<br />
+
+## Windows Remote Management (WS-Management)
+| | |
+|---|---|
+|   **Service description** |   Windows Remote Management (WinRM) service implements the WS-Management protocol for remote management. WS-Management is a standard web services protocol used for remote software and hardware management. The WinRM service listens on the network for WS-Management requests and processes them. The WinRM Service needs to be configured with a listener using winrm.cmd command line tool or through Group Policy in order for it to listen over the network. The WinRM service provides access to WMI data and enables event collection. Event collection and subscription to events require that the service is running. WinRM messages use HTTP and HTTPS as transports. The WinRM service does not depend on IIS but is preconfigured to share a port with IIS on the same machine.  The WinRM service reserves the /wsman URL prefix. To prevent conflicts with IIS, administrators should ensure that any websites hosted on IIS do not use the /wsman URL prefix.
+|   **Service name**    |   WinRM
+|   **Installation**    |   Always installed
+|   **StartType**   |   Automatic
+|   **Recommendation**  |   Do not disable
+|   **Comments**    |   Needed for remote management
+|||
+
 <br />          
 
 ##  Windows Search      
