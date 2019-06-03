@@ -7,7 +7,7 @@ ms.topic: article
 author: coreyp-at-msft
 ms.author: coreyp
 ms.localizationpriority: medium
-ms.date: 05/31/2019
+ms.date: 06/03/2019
 ---
 # What's New in Windows Server version 1709
 

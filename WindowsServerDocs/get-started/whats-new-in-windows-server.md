@@ -2,7 +2,7 @@
 title: What's New in Windows Server
 description: "What are the new features in compute, identity, management, automation, networking, security, storage."
 ms.prod: windows-server
-ms.date: 05/31/2019
+ms.date: 06/03/2019
 ms.technology: server-general
 ms.topic: article
 author: jasongerend

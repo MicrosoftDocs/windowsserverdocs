@@ -7,10 +7,9 @@ ms.manager: eldenc
 ms.technology: storage-spaces
 ms.topic: article
 author: eldenchristensen
-ms.date: 06/01/2019
+ms.date: 06/04/2019
 ms.localizationpriority: medium
 ---
-
 # Storage Spaces Direct hardware requirements
 
 > Applies to: Windows Server 2019, Windows Server 2016
@@ -82,19 +81,19 @@ Storage Spaces Direct works with direct-attached SATA, SAS, or NVMe drives that 
 
 Here's how drives can be connected for Storage Spaces Direct:
 
-1. Direct-attached SATA drives
-2. Direct-attached NVMe drives
-3. SAS host-bus adapter (HBA) with SAS drives
-4. SAS host-bus adapter (HBA) with SATA drives
-5. **NOT SUPPORTED:** RAID controller cards or SAN (Fibre Channel, iSCSI, FCoE) storage. Host-bus adapter (HBA) cards must implement simple pass-through mode.
+- Direct-attached SATA drives
+- Direct-attached NVMe drives
+- SAS host-bus adapter (HBA) with SAS drives
+- SAS host-bus adapter (HBA) with SATA drives
+- **NOT SUPPORTED:** RAID controller cards or SAN (Fibre Channel, iSCSI, FCoE) storage. Host-bus adapter (HBA) cards must implement simple pass-through mode.
 
 ![diagram of supported drive interconnects](media/hardware-requirements/drive-interconnect-support-1.png)
 
 Drives can be internal to the server, or in an external enclosure that is connected to just one server. SCSI Enclosure Services (SES) is required for slot mapping and identification. Each external enclosure must present a unique identifier (Unique ID).
 
-1. Drives internal to the server
-2. Drives in an external enclosure ("JBOD") connected to one server
-3. **NOT SUPPORTED:** Shared SAS enclosures connected to multiple servers or any form of multi-path IO (MPIO) where drives are accessible by multiple paths.
+- Drives internal to the server
+- Drives in an external enclosure ("JBOD") connected to one server
+- **NOT SUPPORTED:** Shared SAS enclosures connected to multiple servers or any form of multi-path IO (MPIO) where drives are accessible by multiple paths.
 
 ![diagram of supported drive interconnects](media/hardware-requirements/drive-interconnect-support-2.png)
 
@@ -105,8 +104,10 @@ Drives can be internal to the server, or in an external enclosure that is connec
 
 | Drive types present   | Minimum number required |
 |-----------------------|-------------------------|
+| All persistent memory (same model) | 4 persistent memory |
 | All NVMe (same model) | 4 NVMe                  |
 | All SSD (same model)  | 4 SSD                   |
+| Persistent memory + NVMe or SSD | 2 persistent memory + 4 NVMe or SSD |
 | NVMe + SSD            | 2 NVMe + 4 SSD          |
 | NVMe + HDD            | 2 NVMe + 4 HDD          |
 | SSD + HDD             | 2 SSD + 4 HDD           |
