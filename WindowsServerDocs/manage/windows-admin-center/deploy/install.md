@@ -19,7 +19,7 @@ ms.prod: windows-server-threshold
 
 ## Determine your installation type
 
-Review the [installation options](..\plan\installation-options.md) which includes the [supported operating systems](..\plan\installation-options.md#supported-operating-systems-installation). To install Windows Admin Center on a VM in Azure, see [Deploy Windows Admin Center in Azure](../azure/deploy-wac-in-azure.md).
+Review the [installation options](../plan/installation-options.md) which includes the [supported operating systems](../plan/installation-options.md#supported-operating-systems-installation). To install Windows Admin Center on a VM in Azure, see [Deploy Windows Admin Center in Azure](../azure/deploy-wac-in-azure.md).
 
 ## Install on Windows 10
 

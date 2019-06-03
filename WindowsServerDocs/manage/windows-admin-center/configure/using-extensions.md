@@ -52,7 +52,7 @@ If Windows Admin Center is installed on a computer that isn't connected to the i
 
 1. On another computer that has internet connectivity, open a web browser and navigate to the following URL: [https://msft-sme.myget.org/gallery/windows-admin-center-feed](https://msft-sme.myget.org/gallery/windows-admin-center-feed) 
 
-  * You may need to create an account on msft-sme.myget.org and login to view the extension packages.
+   * You may need to create an account on msft-sme.myget.org and login to view the extension packages.
 
 2. Click on the name of the package you want to install to view the package details page.
 3. Click on the **Download** link in the right-side pane of the package details page and download the .nupkg file for the extension.

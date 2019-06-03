@@ -39,7 +39,7 @@ convert basic [noerr]
 
 > [!IMPORTANT]
 > The disk must be empty to convert it to a basic disk. Back up your data, and then delete all partitions or volumes before converting the disk.
--   A dynamic disk must be selected for this operation to succeed. Use the **select disk** command to select a dynamic disk and shift the focus to it.
+> -   A dynamic disk must be selected for this operation to succeed. Use the **select disk** command to select a dynamic disk and shift the focus to it.
 
 ## <a name="BKMK_examples"></a>Examples
 

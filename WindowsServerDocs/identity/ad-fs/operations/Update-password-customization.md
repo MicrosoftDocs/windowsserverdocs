@@ -14,7 +14,6 @@ ms.technology: identity-adfs
 
 # Update password customization 
 
->Applies To: Windows Server 2016, Windows Server 2012 R2
 
 In some instances, users might not be able to connect to the corporate network to change their account password. This factor can be problematic especially for remote employees who might live far from the nearest corporate office. For these specific cases, the update password page can be used by only connecting to the Internet.  
   

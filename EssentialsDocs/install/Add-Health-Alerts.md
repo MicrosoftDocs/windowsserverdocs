@@ -27,13 +27,13 @@ A health add-in provides definitions for alerts, health checks, and repairs for 
   
 #### To install the xml files on the server  
   
-1.  In the **%ProgramFiles%\Windows Server\Bin\Feature Definitions** folder, create a new folder named **MyHealthAddIn**. You can give this folder any name. It is suggested that the name of the folder be the same as the feature name.  
+1. In the **%ProgramFiles%\Windows Server\Bin\Feature Definitions** folder, create a new folder named **MyHealthAddIn**. You can give this folder any name. It is suggested that the name of the folder be the same as the feature name.  
   
-2.  Copy the Definition.xml and the Definition.xml.config files to the new folder.  
+2. Copy the Definition.xml and the Definition.xml.config files to the new folder.  
   
-3.  If you created binary files for conditions or actions, you should also copy those files to **%ProgramFiles%\Windows Server\Bin**.  
+3. If you created binary files for conditions or actions, you should also copy those files to **%ProgramFiles%\Windows Server\Bin**.  
   
- Client computers run a scheduled task every 6 hours that pulls the XML files to the appropriate location. You can force the synchronization between the client computer and the server by manually running the task.  
+   Client computers run a scheduled task every 6 hours that pulls the XML files to the appropriate location. You can force the synchronization between the client computer and the server by manually running the task.  
   
 #### To install the xml files on the client computer  
   

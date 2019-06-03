@@ -19,41 +19,43 @@ ms.date: 10/16/2017
 >Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Ends one or more tasks or processes. Processes can be ended by process ID or image name. **taskkill** replaces the **kill** tool.
-for examples of how to use this command, see [Examples](#BKMK_examples).
+for examples of how to use this command, see [Examples](#examples).
 
 ## Syntax
 ```
 taskkill [/s <computer> [/u [<Domain>\]<UserName> [/p [<Password>]]]] {[/fi <Filter>] [...] [/pid <ProcessID> | /im <ImageName>]} [/f] [/t]
 ```
 ## Parameters
-|Parameter|Description|
-|-------|--------|
-|/s \<computer>|Specifies the name or IP address of a remote computer (do not use backslashes). The default is the local computer.|
-|/u \<Domain>\\\<UserName>|Runs the command with the account permissions of the user who is specified by *UserName* or *Domain*\\*UserName*. **/u** can be specified only if **/s** is specified. The default is the permissions of the user who is currently logged on to the computer that is issuing the command.|
-|/p \<Password>|Specifies the password of the user account that is specified in the **/u** parameter.|
-|/fi \<Filter>|Applies a filter to select a set of tasks. You can use more than one filter or use the wildcard character (**\***) to specify all tasks or image names. See the following [table for valid filter names](#BKMK_table), operators, and values.|
-|/pid \<ProcessID>|Specifies the process ID of the process to be terminated.|
-|/im \<ImageName>|Specifies the image name of the process to be terminated. Use the wildcard character (**\***) to specify all image names.|
-|/f|Specifies that processes be forcefully terminated. This parameter is ignored for remote processes; all remote processes are forcefully terminated.|
-|/t|Terminates the specified process and any child processes started by it.|
 
-#### <a name="BKMK_table"></a>Filter names, operators, and values
-|Filter Name|Valid Operators|Valid Value(s)|
-|--------|----------|----------|
-|STatUS|eq, ne|RUNNING &#124; NOT RESPONDING &#124; UNKNOWN|
-|IMAGENAME|eq, ne|Image name|
-|PID|eq, ne, gt, lt, ge, le|PID value|
-|SESSION|eq, ne, gt, lt, ge, le|Session number|
-|CPUtime|eq, ne, gt, lt, ge, le|CPU time in the format *HH***:***MM***:***SS*, where *MM* and *SS* are between 0 and 59 and *HH* is any unsigned number|
-|MEMUSAGE|eq, ne, gt, lt, ge, le|Memory usage in KB|
-|USERNAME|eq, ne|Any valid user name (*User* or *Domain*\\*User*)|
-|SERVICES|eq, ne|Service name|
-|WINDOWTITLE|eq, ne|Window title|
-|MODULES|eq, ne|DLL name|
+|         Parameter         |                                                                                                                                        Description                                                                                                                                        |
+|---------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|      /s \<computer>       |                                                                                    Specifies the name or IP address of a remote computer (do not use backslashes). The default is the local computer.                                                                                     |
+| /u \<Domain>\\\<UserName> | Runs the command with the account permissions of the user who is specified by *UserName* or *Domain*\\*UserName*. **/u** can be specified only if **/s** is specified. The default is the permissions of the user who is currently logged on to the computer that is issuing the command. |
+|      /p \<Password>       |                                                                                                   Specifies the password of the user account that is specified in the **/u** parameter.                                                                                                   |
+|       /fi \<Filter>       |          Applies a filter to select a set of tasks. You can use more than one filter or use the wildcard character (**\\**\*) to specify all tasks or image names. See the following [table for valid filter names](#filter-names-operators-and-values), operators, and values.           |
+|     /pid \<ProcessID>     |                                                                                                                 Specifies the process ID of the process to be terminated.                                                                                                                 |
+|     /im \<ImageName>      |                                                                                Specifies the image name of the process to be terminated. Use the wildcard character (**\\**\*) to specify all image names.                                                                                |
+|            /f             |                                                                    Specifies that processes be forcefully terminated. This parameter is ignored for remote processes; all remote processes are forcefully terminated.                                                                     |
+|            /t             |                                                                                                          Terminates the specified process and any child processes started by it.                                                                                                          |
+
+#### Filter names, operators, and values
+
+| Filter Name |    Valid Operators     |                                                                Valid Value(s)                                                                |
+|-------------|------------------------|----------------------------------------------------------------------------------------------------------------------------------------------|
+|   STatUS    |         eq, ne         |                                                 RUNNING &#124; NOT RESPONDING &#124; UNKNOWN                                                 |
+|  IMAGENAME  |         eq, ne         |                                                                  Image name                                                                  |
+|     PID     | eq, ne, gt, lt, ge, le |                                                                  PID value                                                                   |
+|   SESSION   | eq, ne, gt, lt, ge, le |                                                                Session number                                                                |
+|   CPUtime   | eq, ne, gt, lt, ge, le | CPU time in the format <em>HH</em>**:**<em>MM</em>**:**<em>SS</em>, where *MM* and *SS* are between 0 and 59 and *HH* is any unsigned number |
+|  MEMUSAGE   | eq, ne, gt, lt, ge, le |                                                              Memory usage in KB                                                              |
+|  USERNAME   |         eq, ne         |                                               Any valid user name (*User* or *Domain*\\*User*)                                               |
+|  SERVICES   |         eq, ne         |                                                                 Service name                                                                 |
+| WINDOWTITLE |         eq, ne         |                                                                 Window title                                                                 |
+|   MODULES   |         eq, ne         |                                                                   DLL name                                                                   |
 
 ## Remarks
 * The WINDOWTITLE and STatUS filters are not supported when a remote system is specified.
-* The wildcard character (**\***) is accepted for the **/im** option only when a filter is applied.
+* The wildcard character (**\\**<em>) is accepted for the **/im</em>* option only when a filter is applied.
 * Termination of remote processes is always carried out forcefully, regardless of whether the **/f** option is specified.
 * Supplying a computer name to the hostname filter causes a shutdown and all processes are stopped.
 * You can use **tasklist** to determine the process ID (PID) for the process to be terminated.

@@ -28,6 +28,7 @@ cscript prndrvr {-a | -d | -l | -x | -?} [-m <model>] [-v {0|1|2|3}]
 ```
 
 ## Parameters
+
 |Parameter|Description|
 |-------|--------|
 |-a|Installs a driver.|
@@ -44,15 +45,15 @@ cscript prndrvr {-a | -d | -l | -x | -?} [-m <model>] [-v {0|1|2|3}]
 |/?|Displays help at the command prompt.|
 
 ## Remarks
--   The **prndrvr** command is a Visual Basic script located in the %WINdir%\System32\printing_Admin_Scripts\\<language> directory. To use this command, at a command prompt, type **cscript** followed by the full path to the prndrvr file, or change directories to the appropriate folder.
-   
-   For example:
-    ```
-    cscript %WINdir%\System32\printing_Admin_Scripts\en-US\prndrvr
-    ```
--   If the information that you supply contains spaces, use quotation marks around the text (for example, `"computer Name"`).
--   The -x option deletes all additional printer drivers (drivers installed for use on clients running alternate versions of Windows), even if the primary driver is in use. If the fax component is installed, this option also deletes fax drivers. The primary fax driver is deleted if it is not in use (that is, if there is no queue using it). If the primary fax driver is deleted, the only way to re-enable fax is to reinstall the fax component.
--   Used without parameters, **prndrvr** displays command-line help for the **prndrvr** command.
+- The **prndrvr** command is a Visual Basic script located in the %WINdir%\System32\printing_Admin_Scripts\\<language> directory. To use this command, at a command prompt, type **cscript** followed by the full path to the prndrvr file, or change directories to the appropriate folder.
+
+  For example:
+  ```
+  cscript %WINdir%\System32\printing_Admin_Scripts\en-US\prndrvr
+  ```
+- If the information that you supply contains spaces, use quotation marks around the text (for example, `"computer Name"`).
+- The -x option deletes all additional printer drivers (drivers installed for use on clients running alternate versions of Windows), even if the primary driver is in use. If the fax component is installed, this option also deletes fax drivers. The primary fax driver is deleted if it is not in use (that is, if there is no queue using it). If the primary fax driver is deleted, the only way to re-enable fax is to reinstall the fax component.
+- Used without parameters, **prndrvr** displays command-line help for the **prndrvr** command.
 
 ## <a name="BKMK_examples"></a>Examples
 

@@ -43,8 +43,8 @@ You don't have to have the page file on the partition where the operating system
 9. Right-click **DumpFileSize**, and then click **Modify**.
 10. In **Edit DWORD Value**, under **Base**, click **Decimal**.
 11. In **Value data**, type the appropriate value, and then click **OK**.
-   >[!NOTE]
-   > The size of the dump file is in megabytes (MB).
+    >[!NOTE]
+    > The size of the dump file is in megabytes (MB).
 12. Exit the Registry Editor.
 
 After you determine the partition location of the memory dump, configure the destination path for the page file. To view the current destination path for the page file, run the following command:

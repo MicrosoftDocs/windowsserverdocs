@@ -29,10 +29,10 @@ ksetup /mapuser <Principal> <Account>
 
 ### Parameters
 
-|Parameter|Description|
-|---------|-----------|
-|\<Principal>|The fully qualified domain name of any principal; for example, mike@corp.CONTOSO.COM.|
-|\<Account>|Any account or security group name that exists on this computer, such as Guest, Domain Users, or Administrator.|
+|  Parameter   |                                                   Description                                                   |
+|--------------|-----------------------------------------------------------------------------------------------------------------|
+| \<Principal> |              The fully qualified domain name of any principal; for example, mike@corp.CONTOSO.COM.              |
+|  \<Account>  | Any account or security group name that exists on this computer, such as Guest, Domain Users, or Administrator. |
 
 ## Remarks
 

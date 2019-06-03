@@ -31,7 +31,7 @@ To prepare to create a shielding data file, take the following steps:
 
 Then you can create the shielding data file:
 
-- [Create a shielding data file and add guardians](#create-a-shielding-data-file-and-add-guardians)
+- [Create a shielding data file and add guardians](#create-a-shielding-data-file-and-add-guardians-using-the-shielding-data-file-wizard)
 
 
 ## Obtain a certificate for Remote Desktop Connection
@@ -207,7 +207,7 @@ This command creates a pair of signing and encryption certificates in the local 
 You will need the owner certificates and their corresponding private keys to unshield a virtual machine, so ensure these certificates are backed up and protected from theft.
 An attacker with access to the owner certificates can use them to start up your shielded virtual machine or change its security configuration.
 
-If you need to import guardian information from a guarded fabric where you want to run your virtual machine (your primary datacenter, backup datacenters, etc.), run the following command for each [metadata file retrieved from your guarded fabrics](#Select-trusted-fabrics).
+If you need to import guardian information from a guarded fabric where you want to run your virtual machine (your primary datacenter, backup datacenters, etc.), run the following command for each [metadata file retrieved from your guarded fabrics](#select-trusted-fabrics).
 
 ```powershell
 Import-HgsGuardian -Name 'EAST-US Datacenter' -Path '.\EastUSGuardian.xml'
@@ -216,7 +216,7 @@ Import-HgsGuardian -Name 'EAST-US Datacenter' -Path '.\EastUSGuardian.xml'
 > [!TIP]
 > If you used self-signed certificates or the certificates registered with HGS are expired, you may need to use the `-AllowUntrustedRoot` and/or `-AllowExpired` flags with the Import-HgsGuardian command to bypass the security checks.
 
-You will also need to [obtain a volume signature catalog](#Get-the-volume-signature-catalog-file) for each template disk you want to use with this shielding data file and a [shielding data answer file](#Create-an-answer-file) to allow the operating system to complete its specialization tasks automatically.
+You will also need to [obtain a volume signature catalog](#get-the-volume-signature-catalog-file) for each template disk you want to use with this shielding data file and a [shielding data answer file](#create-an-answer-file) to allow the operating system to complete its specialization tasks automatically.
 Lastly, decide if you want your VM to be fully shielded or just vTPM-enabled.
 Use `-Policy Shielded` for a fully shielded VM or `-Policy EncryptionSupported` for a vTPM enabled VM that allows basic console connections and PowerShell Direct.
 

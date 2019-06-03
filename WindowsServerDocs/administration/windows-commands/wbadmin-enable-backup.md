@@ -71,7 +71,6 @@ wbadmin enable backup
 [-password:<Password>]
 [-quiet] 
 [-allowDeleteOldBackups]
-
 ```
 
 ## Parameters
@@ -104,26 +103,26 @@ To view the disk identifier value for your disks, type **wbadmin get disks**.
 The following examples show how the **wbadmin enable backup** command can be used in different backup scenarios:
 
 Scenario #1
--   Schedule backups of hard disk drives e:, d:\mountpoint, and \\\\?\Volume{cc566d14-44a0-11d9-9d93-806e6f6e6963}\
--   Save the files to the disk DiskID
--   Run backups daily at 9:00 A.M. and 6:00 P.M.
-```
-wbadmin enable backup -addtarget:DiskID -schedule:09:00,18:00 -include:e:,d:\mountpoint,\\?\Volume{cc566d14-44a0-11d9-9d93-806e6f6e6963}\
-```
-Scenario #2
--   Schedule backups of the folder d:\documents to the network location \\\\backupshare\backup1
--   Use the network credentials for the backup administrator Aaren Ekelund (aekel), who is a member of the domain CONTOSOEAST to authenticate access to the network share. Aaren’s password is *$3hM9^5lp*.
--   Run backups daily at 12:00 A.M. and 7:00 P.M.
-```
-wbadmin enable backup –addtarget:\\backupshare\backup1 –include: d:\documents –user:CONTOSOEAST\aekel –password:$3hM9^5lp –schedule:00:00,19:00
-```
-Scenario #3
--   Schedule backups of volume t: and folder d:\documents to the drive h:, but exclude the folder d:\documents\~tmp
--   Perform a full backup using the Volume Shadow Copy Service.
--   Run backups daily at 1:00 A.M.
-```
-wbadmin enable backup –addtarget:H: –include T:,D:\documents –exclude D:\documents\~tmp –vssfull –schedule:01:00
-```
+- Schedule backups of hard disk drives e:, d:\mountpoint, and \\\\?\Volume{cc566d14-44a0-11d9-9d93-806e6f6e6963}\
+- Save the files to the disk DiskID
+- Run backups daily at 9:00 A.M. and 6:00 P.M.
+  ```
+  wbadmin enable backup -addtarget:DiskID -schedule:09:00,18:00 -include:e:,d:\mountpoint,\\?\Volume{cc566d14-44a0-11d9-9d93-806e6f6e6963}\
+  ```
+  Scenario #2
+- Schedule backups of the folder d:\documents to the network location \\\\backupshare\backup1
+- Use the network credentials for the backup administrator Aaren Ekelund (aekel), who is a member of the domain CONTOSOEAST to authenticate access to the network share. Aaren’s password is *$3hM9^5lp*.
+- Run backups daily at 12:00 A.M. and 7:00 P.M.
+  ```
+  wbadmin enable backup –addtarget:\\backupshare\backup1 –include: d:\documents –user:CONTOSOEAST\aekel –password:$3hM9^5lp –schedule:00:00,19:00
+  ```
+  Scenario #3
+- Schedule backups of volume t: and folder d:\documents to the drive h:, but exclude the folder d:\documents\~tmp
+- Perform a full backup using the Volume Shadow Copy Service.
+- Run backups daily at 1:00 A.M.
+  ```
+  wbadmin enable backup –addtarget:H: –include T:,D:\documents –exclude D:\documents\~tmp –vssfull –schedule:01:00
+  ```
 
 #### Additional references
 

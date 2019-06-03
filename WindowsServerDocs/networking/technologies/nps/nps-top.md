@@ -34,10 +34,10 @@ You can also configure NPS as a Remote Authentication Dial-In User Service (RADI
 
 NPS allows you to centrally configure and manage network access authentication, authorization, and accounting with the following features:
 
-- **RADIUS server**. NPS performs centralized authentication, authorization, and accounting for wireless, authenticating switch, remote access dial-up and virtual private network (VPN) connections. When you use NPS as a RADIUS server, you configure network access servers, such as wireless access points and VPN servers, as RADIUS clients in NPS. You also configure network policies that NPS uses to authorize connection requests, and you can configure RADIUS accounting so that NPS logs accounting information to log files on the local hard disk or in a Microsoft SQL Server database. For more information, see [RADIUS server](#bkmk_server).
-- **RADIUS proxy**. When you use NPS as a RADIUS proxy, you configure connection request policies that tell the NPS which connection requests to forward to other RADIUS servers and to which RADIUS servers you want to forward connection requests. You can also configure NPS to forward accounting data to be logged by one or more computers in a remote RADIUS server group. To configure NPS as a RADIUS proxy server, see the following topics. For more information, see [RADIUS proxy](#bkmk_proxy).
+- **RADIUS server**. NPS performs centralized authentication, authorization, and accounting for wireless, authenticating switch, remote access dial-up and virtual private network (VPN) connections. When you use NPS as a RADIUS server, you configure network access servers, such as wireless access points and VPN servers, as RADIUS clients in NPS. You also configure network policies that NPS uses to authorize connection requests, and you can configure RADIUS accounting so that NPS logs accounting information to log files on the local hard disk or in a Microsoft SQL Server database. For more information, see [RADIUS server](#radius-server).
+- **RADIUS proxy**. When you use NPS as a RADIUS proxy, you configure connection request policies that tell the NPS which connection requests to forward to other RADIUS servers and to which RADIUS servers you want to forward connection requests. You can also configure NPS to forward accounting data to be logged by one or more computers in a remote RADIUS server group. To configure NPS as a RADIUS proxy server, see the following topics. For more information, see [RADIUS proxy](#radius-proxy).
 	- [Configure Connection Request Policies](nps-crp-configure.md)
-- **RADIUS accounting**. You can configure NPS to log events to a local log file or to a local or remote instance of Microsoft SQL Server. For more information, see [NPS logging](#bkmk_logging).
+- **RADIUS accounting**. You can configure NPS to log events to a local log file or to a local or remote instance of Microsoft SQL Server. For more information, see [NPS logging](#nps-logging).
 
 >[!IMPORTANT]
 >Network Access Protection \(NAP\), Health Registration Authority \(HRA\), and Host Credential Authorization Protocol \(HCAP\) were deprecated in Windows Server 2012 R2, and are not available in Windows Server 2016. If you have a NAP deployment using operating systems earlier than Windows Server 2016, you cannot migrate your NAP deployment to Windows Server 2016.
@@ -61,7 +61,7 @@ The following sections provide more detailed information about NPS as a RADIUS s
 
 You can use NPS as a RADIUS server, a RADIUS proxy, or both.
 
-### <a name="bkmk_server"></a>RADIUS server
+### RADIUS server
 
 NPS is the Microsoft implementation of the RADIUS standard specified by the Internet Engineering Task Force \(IETF\) in RFCs 2865 and 2866. As a RADIUS server, NPS performs centralized connection authentication, authorization, and accounting for many types of network access, including wireless, authenticating switch, dial-up and virtual private network \(VPN\) remote access, and router-to-router connections.
 
@@ -92,7 +92,7 @@ The following illustration shows NPS as a RADIUS server for a variety of access 
 
 ![NPS as a RADIUS Server](../../media/Nps-Server/Nps-Server.jpg)
 
-### <a name="bkmk_proxy"></a>RADIUS proxy
+### RADIUS proxy
 
 As a RADIUS proxy, NPS forwards authentication and accounting messages to NPS and other RADIUS servers. You can use NPS as a RADIUS proxy to provide the routing of RADIUS messages between RADIUS clients \(also called network access servers\) and RADIUS servers that perform user authentication, authorization, and accounting for the connection attempt. 
 
@@ -178,7 +178,7 @@ For instructions on making these configurations, see the following topics.
 - [Configure Remote RADIUS Server Groups](nps-crp-rrsg-configure.md)
 - [Configure Connection Request Policies](nps-crp-configure.md)
 
-## <a name="bkmk_logging"></a>NPS logging
+## NPS logging
 
 NPS logging is also called RADIUS accounting. Configure NPS logging to your requirements whether NPS is used as a RADIUS server, proxy, or any combination of these configurations.
 

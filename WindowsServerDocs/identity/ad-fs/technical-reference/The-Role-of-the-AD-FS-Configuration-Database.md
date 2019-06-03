@@ -12,7 +12,6 @@ ms.prod: windows-server-threshold
 ms.technology: identity-adfs
 ---
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 # The Role of the AD FS Configuration Database
 The AD FS configuration database stores all the configuration data that represents a single instance of Active Directory Federation Services \(AD FS\) \(that is, the Federation Service\). The AD FS configuration database defines the set of parameters that a Federation Service requires to identify partners, certificates, attribute stores, claims, and various data about these associated entities. You can store this configuration data in either a Microsoft SQL Server® database or the Windows Internal Database \(WID\) feature that is included with Windows Server® 2008, Windows Server 2008 R2 and Windows Server® 2012.  

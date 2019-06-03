@@ -16,8 +16,8 @@ ms.date: 08/29/2018
 
 ## Next step
 
->[!div class="nextstepaction"]
-[Configure HTTPS](guarded-fabric-configure-hgs-https.md)
+> [!div class="nextstepaction"]
+> [Configure HTTPS](guarded-fabric-configure-hgs-https.md)
 
 ## See also
 

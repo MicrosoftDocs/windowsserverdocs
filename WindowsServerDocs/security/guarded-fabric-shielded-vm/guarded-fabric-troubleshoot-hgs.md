@@ -88,7 +88,7 @@ Contact your HSM manufacturer for accurate information pertaining to your specif
 HSM Brand/Series      | Suggestion
 ----------------------|-------------
 Gemalto SafeNet       | Ensure the Key Usage Property in the certificate request file is set to 0xa0, allowing the certificate to be used for signing and encryption. Additionally, you must grant the gMSA account *read* access to the private key using the local certificate manager tool (see steps above).
-Thales nShield        | Ensure each HGS node has access to the security world containing the signing and encryption keys. You do not need to configure gMSA-specific permissions.
+nCipher nShield        | Ensure each HGS node has access to the security world containing the signing and encryption keys. You do not need to configure gMSA-specific permissions.
 Utimaco CryptoServers | Ensure the Key Usage Property in the certificate request file is set to 0x13, allowing the certificate to be used for encryption, decryption, and signing.
 
 ### Certificate requests

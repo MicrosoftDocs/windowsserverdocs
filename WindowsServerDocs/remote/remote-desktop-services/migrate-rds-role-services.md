@@ -22,8 +22,8 @@ Migration for a Remote Desktop Services deployment is supported from source serv
 
 For more information on the upgrade process and requirements, see [upgrading your Remote Desktop Services deployments to Windows Server 2016](upgrade-to-rds-2016.md).
 
-Use the following steps to migrate your Remote Desktop Services deployment: 
-- [Migrate RD Connection Broker servers](#migrate-rd-connection-broker-servers) 
+Use the following steps to migrate your Remote Desktop Services deployment:
+- [Migrate RD Connection Broker servers](#migrate-rd-connection-broker-servers)
 - [Migrate session collections](#migrate-session-collections)
 - [Migrate virtual desktop collections](#migrate-virtual-desktop-collections)
 - [Migrate RD Web Access servers](#migrate-rd-web-access-servers)
@@ -49,22 +49,22 @@ This is the first and most important step for migrating: migrating your RD Conne
 
 Follow these steps to migrate a session collection in Windows Server 2012 R2 to a session collection in Windows Server 2016.
 > [!IMPORTANT] 
-> Migrate session collections only after successfully completing the previous step, [Migrate RD Connection Broker servers](#Migrate-RD-Connection-Broker-servers).
+> Migrate session collections only after successfully completing the previous step, [Migrate RD Connection Broker servers](#migrate-rd-connection-broker-servers).
 
 1. [Upgrade the session collection](Upgrade-to-RDSH-2016.md) from Windows Server 2012 R2 to Windows Server 2016.
 2. Add the new RD Session Host server running Windows Server 2016 to the session collection.
 3. Sign out of all sessions in the RD Session Host servers, and remove the servers that require migration from the session collection. 
-> [!NOTE]
-> If the UVHD template (UVHD-template.vhdx) is enabled in the session collection and the file server has been migrated to a new server, update the User Profile Disks: Location collection property with the new path. The User Profile Disks must be available at the same relative path in the new location as they were on the source server.
->
-> A session collection of RD Session Host servers with a mix of servers running Windows Server 2012 R2 and Windows Server 2016 is not supported.
+   > [!NOTE]
+   > If the UVHD template (UVHD-template.vhdx) is enabled in the session collection and the file server has been migrated to a new server, update the User Profile Disks: Location collection property with the new path. The User Profile Disks must be available at the same relative path in the new location as they were on the source server.
+   >
+   > A session collection of RD Session Host servers with a mix of servers running Windows Server 2012 R2 and Windows Server 2016 is not supported.
 
 ## Migrate virtual desktop collections
 
 Follow these steps to migrate a virtual desktop collection from a source server running Windows Server 2012 R2 to a destination server running Windows Server 2016.
 
 > [!IMPORTANT] 
-> Migrate virtual desktop collections only after successfully completing the previous step, [Migrate RD Connection Broker servers](#Migrate-RD-Connection-Broker-servers).
+> Migrate virtual desktop collections only after successfully completing the previous step, [Migrate RD Connection Broker servers](#migrate-rd-connection-broker-servers).
 
 1. [Upgrade the virtual desktop collection](Upgrade-to-RDVH-2016.md) from the server running Windows Server 2012 R2 to Windows Server 2016.
 2. Add the new Windows Server 2016 RD Virtualization Host servers to the virtual desktop collection.
@@ -80,14 +80,14 @@ Follow these steps to migrate a virtual desktop collection from a source server 
 Follow these steps to migrate RD Web Access servers:
 - Join the destination servers running Windows Server 2016 to the Remote Desktop Services deployment and install the RD Web role
 - Use [IIS Web Deploy tool](https://www.iis.net/) to migrate the RD Web website settings from the current RD Web Access servers to the destination servers running Windows Server 2016.
-- [Migrate certificates](#Migrate-certificates) to the destination servers running Windows Server 2016.
+- [Migrate certificates](#migrate-certificates) to the destination servers running Windows Server 2016.
 - Remove the source servers from the Remote Desktop Services deployment  
 
 ## Migrate RD Gateway servers
 Follow these steps to migrate RD Gateway servers:
 - Join the destination servers running Windows Server 2016 to the Remote Desktop Services deployment and install the RD Gateway role
 - Use [IIS Web Deploy tool](https://www.iis.net/) to migrate the RD Gateway endpoint settings from the current RD Gateway servers to the destination servers running Windows Server 2016.
-- [Migrate certificates](#Migrate-certificates) to the destination servers running Windows Server 2016.
+- [Migrate certificates](#migrate-certificates) to the destination servers running Windows Server 2016.
 - Remove the source servers from the Remote Desktop Services deplyoment  
 
 ## Migrate RD Licensing servers

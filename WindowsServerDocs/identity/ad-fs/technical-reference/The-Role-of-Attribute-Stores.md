@@ -12,7 +12,6 @@ ms.prod: windows-server-threshold
 ms.technology: identity-adfs
 ---
 
- >Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 # The Role of Attribute Stores
 Active Directory Federation Services uses the term “attribute stores” to refer to directories or databases that an organization uses to store its user accounts and their associated attribute values. After it is configured in an identity provider organization, AD FS retrieves these attribute values from the store and creates claims based on that information so that a Web application or service that is hosted in a relying party organization can make the appropriate authorization decisions whenever a federated user \(a user whose account is stored in the identity provider organization\) attempts to access the application or service.  

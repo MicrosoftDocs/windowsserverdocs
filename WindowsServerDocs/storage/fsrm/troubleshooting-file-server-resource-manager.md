@@ -12,7 +12,7 @@ ms.author: jgerend
 
 # Troubleshooting File Server Resource Manager
 
-> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2
+> Applies to: Windows Server 2019, Windows Server 2016, Windows Server (Semi-Annual Channel), Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2
 
 This section lists common issues that you might encounter when using File Server Resource Manager.
 

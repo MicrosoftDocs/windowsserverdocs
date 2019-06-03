@@ -12,7 +12,6 @@ ms.prod: windows-server-threshold
 ms.technology: identity-adfs
 ---
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 # When to Use a Custom Claim Rule
 You write a custom claim rule in Active Directory Federation Services \(AD FS\) using the claim rule language, which is the framework that the claims issuance engine uses to programmatically generate, transform, pass through, and filter claims. By using a custom rule, you can create rules with more complex logic than a standard rule template. Consider using a custom rule when you want to:  

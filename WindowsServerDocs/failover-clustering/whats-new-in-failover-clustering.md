@@ -11,9 +11,9 @@ ms.date: 10/18/2018
 ---
 # What's new in Failover Clustering
 
-> Applies to: Windows Server 2019, Windows Server 2016, Windows Server (Semi-Annual Channel)
+> Applies to: Windows Server 2019, Windows Server 2016
 
-This topic explains the new and changed functionality in Failover Clustering for Windows Server 2019, Windows Server 2016, and Windows Server Semi-Annual Channel releases.
+This topic explains the new and changed functionality in Failover Clustering for Windows Server 2019 and Windows Server 2016.
 
 ## What's new in Windows Server 2019
 
@@ -45,10 +45,10 @@ This topic explains the new and changed functionality in Failover Clustering for
 
 - **File share witness enhancements**
     We enabled the use of a file share witness in the following scenarios: 
-    - Absent or extremely poor Internet access because of a remote location, preventing the use of a cloud witness. 
-    - Lack of shared drives for a disk witness. This could be a Storage Spaces Direct hyperconverged configuration, a SQL Server Always On Availability Groups (AG), or an * Exchange Database Availability Group (DAG), none of which use shared disks. 
-    - Lack of a domain controller connection due to the cluster being behind a DMZ. 
-    - A workgroup or cross-domain cluster for which there is no Active Directory cluster name object (CNO). Find out more about these enhancements in the following post in Server & Management Blogs: Failover Cluster File Share Witness and DFS.
+  - Absent or extremely poor Internet access because of a remote location, preventing the use of a cloud witness. 
+  - Lack of shared drives for a disk witness. This could be a Storage Spaces Direct hyperconverged configuration, a SQL Server Always On Availability Groups (AG), or an * Exchange Database Availability Group (DAG), none of which use shared disks. 
+  - Lack of a domain controller connection due to the cluster being behind a DMZ. 
+  - A workgroup or cross-domain cluster for which there is no Active Directory cluster name object (CNO). Find out more about these enhancements in the following post in Server & Management Blogs: Failover Cluster File Share Witness and DFS.
     
     We now also explicitly block the use of a DFS Namespaces share as a location. Adding a file share witness to a DFS share can cause stability issues for your cluster, and this configuration has never been supported. We added logic to detect if a share uses DFS Namespaces, and if DFS Namespaces is detected, Failover Cluster Manager blocks creation of the witness and displays an error message about not being supported.
 - **Cluster hardening**

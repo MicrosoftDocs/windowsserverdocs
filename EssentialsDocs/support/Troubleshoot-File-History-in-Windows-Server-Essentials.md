@@ -24,11 +24,11 @@ manager: dongill
 ### File History data is not automatically deleted  
  The File History data may not get deleted automatically if:  
   
--   When deleting a user account, you choose to not delete the user account „¢s File History data, and opt to delete the data manually.  
+- When deleting a user account, you choose to not delete the user account ï¿½ï¿½s File History data, and opt to delete the data manually.  
   
--   When you try to delete the File History data, the File History data is in use by other process.  
+- When you try to delete the File History data, the File History data is in use by other process.  
   
- To resolve this issue, you must manually delete the File History using the following procedure:  
+  To resolve this issue, you must manually delete the File History using the following procedure:  
   
 ####  <a name="BKMK_manuallyDelete"></a> To manually delete File History backups for a user or a computer  
   
@@ -40,7 +40,7 @@ manager: dongill
   
 4.  Delete the shared folder that stores the File History backup:  
   
-    -   To delete file history for a user, delete the File History backup child folder that has the user „¢s name.  
+    -   To delete file history for a user, delete the File History backup child folder that has the user ï¿½ï¿½s name.  
   
     -   To delete file history for a computer, delete the File History backup child folder that has the computer name. For example, if a user retired <MyComputer01\> after she began working on her new laptop, <MyComputer02\>, you would delete C:\ServerFolders\File History Backups\\<MyAccount\>\\<MyComputer01\> after you verify with the user that she has transferred all files and folders to her new laptop and has no need for the file history in the future.  
   
@@ -73,7 +73,7 @@ manager: dongill
 ### A user account was removed, but the user's file history remains  
  In some cases the network administrator might choose to remove a user or computer from the server, but to keep the File History backup for future use. When you no longer need the file history, remove the File History Backups folder for the user or the computer from shared folders on the server. To do this, see [To manually delete File History backups for a user or a computer](Troubleshoot-File-History-in-Windows-Server-Essentials.md#BKMK_manuallyDelete).  
 
-5.  You can now add the new user. For instructions, see Add a user account? in [Manage User Accounts](../manage/Manage-User-Accounts-in-Windows-Server-Essentials.md).  
+5. You can now add the new user. For instructions, see Add a user account? in [Manage User Accounts](../manage/Manage-User-Accounts-in-Windows-Server-Essentials.md).  
   
 ### A user account was removed, but the user's file history remains  
  In some cases the network administrator might choose to remove a user or computer from the server, but to keep the File History backup for future use. When you no longer need the file history, remove the File History Backups folder for the user or the computer from shared folders on the server. To do this, see [To manually delete File History backups for a user or a computer](../support/Troubleshoot-File-History-in-Windows-Server-Essentials.md#BKMK_manuallyDelete).  

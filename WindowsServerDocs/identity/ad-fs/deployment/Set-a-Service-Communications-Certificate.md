@@ -14,7 +14,6 @@ ms.author: billmath
 
 # Set a Service Communications Certificate
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Federation servers in Active Directory Federation Services \(AD FS\) use the service communications certificate to secure Web services traffic for Secure Sockets Layer \(SSL\) communication with Web clients or with federation server proxies.
 

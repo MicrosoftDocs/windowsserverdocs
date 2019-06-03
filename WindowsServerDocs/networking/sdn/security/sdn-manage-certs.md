@@ -124,12 +124,12 @@ You can use the Certificates snap-in to request certificates. You can request an
 
 1. Open the Certificates snap-in for a computer.
 2. In the console tree, click **Certificates \(Local Computer\)**. Select the **Personal** certificate store.
-3. On the **Action** menu, point to** All Tasks**, and then click **Request New Certificate** to start the Certificate Enrollment wizard. Click **Next**.
+3. On the **Action** menu, point to** All Tasks<strong>, and then click **Request New Certificate</strong> to start the Certificate Enrollment wizard. Click **Next**.
 4. Select the **Configured by your administrator** Certificate Enrollment Policy and click **Next**.
 5. Select the **Active Directory Enrollment Policy** \(based on the CA template that you configured in the previous section\).
 6. Expand the **Details** section and configure the following items.
-	1. Ensure that **Key usage** includes both **Digital Signature **and **Key encipherment**.
-	2. Ensure that **Application policies** includes both **Server Authentication** \(1.3.6.1.5.5.7.3.1\) and **Client Authentication** \(1.3.6.1.5.5.7.3.2\).
+   1. Ensure that **Key usage** includes both <strong>Digital Signature **and **Key encipherment</strong>.
+   2. Ensure that **Application policies** includes both **Server Authentication** \(1.3.6.1.5.5.7.3.1\) and **Client Authentication** \(1.3.6.1.5.5.7.3.2\).
 7. Click **Properties**.
 8. On the **Subject** tab, in **Subject name**, in **Type**, select **Common name**. In Value, specify **Network Controller REST Endpoint**.
 9. Click **Apply**, and then click **OK**.

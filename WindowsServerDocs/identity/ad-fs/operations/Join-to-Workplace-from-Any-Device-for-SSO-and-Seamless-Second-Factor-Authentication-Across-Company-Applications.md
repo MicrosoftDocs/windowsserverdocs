@@ -14,7 +14,7 @@ ms.technology: identity-adfs
 
 # Join to Workplace from Any Device for SSO and Seamless Second Factor Authentication Across Company Applications
 
->Applies To: Windows Server 2012 R2
+
 
 The rapid increase in the number of consumer devices and ubiquitous information access is changing the way that people perceive their technology. The constant use of information technology throughout the day, along with easy access of information, is blurring traditional boundaries between work and home life. These shifting boundaries are accompanied by a belief that personal technology-selected and customized to fit users' personalities, activities, and schedules-should extend into the workplace. To accommodate the growing requirement of personal consumer devices to be connected to enterprise networks, we are introducing the following value propositions:
 

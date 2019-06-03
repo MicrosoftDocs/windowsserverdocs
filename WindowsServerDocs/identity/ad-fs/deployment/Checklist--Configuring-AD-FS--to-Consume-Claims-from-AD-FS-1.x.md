@@ -14,7 +14,6 @@ ms.author: billmath
 
 # Checklist: Configuring AD FS  to Consume Claims from AD FS 1.x
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
   
 ## Checklist: Configuring AD FS to consume claims from AD FS 1.x  
 This checklist includes the tasks that are necessary for configuring your Active Directory Federation Services \(AD FS\) Federation Service in  Windows Server 2012  to consume claims that are sent by an AD FS 1.*x* Federation Service.  

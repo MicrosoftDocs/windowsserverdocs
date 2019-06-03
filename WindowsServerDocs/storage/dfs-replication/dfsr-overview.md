@@ -20,7 +20,7 @@ For more information about replicating SYSVOL using DFS Replication, see [Migrat
 
 To use DFS Replication, you must create replication groups and add replicated folders to the groups. Replication groups, replicated folders, and members are illustrated in the following figure.
 
-![A replication group containing a connection between two members, each having a couple replicated folders](media\dfsr-overview.gif)
+![A replication group containing a connection between two members, each having a couple replicated folders](media/dfsr-overview.gif)
 
 This figure shows that a replication group is a set of servers, known as members, which participates in the replication of one or more replicated folders. A replicated folder is a folder that stays synchronized on each member. In the figure, there are two replicated folders: Projects and Proposals. As the data changes in each replicated folder, the changes are replicated across connections between the members of the replication group. The connections between all members form the replication topology.
 Creating multiple replicated folders in a single replication group simplifies the process of deploying replicated folders because the topology, schedule, and bandwidth throttling for the replication group are applied to each replicated folder. To deploy additional replicated folders, you can use Dfsradmin.exe or a follow the instructions in a wizard to define the local path and permissions for the new replicated folder.

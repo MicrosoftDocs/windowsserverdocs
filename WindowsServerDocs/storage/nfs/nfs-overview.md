@@ -45,7 +45,7 @@ New and changed functionality in Network File System includes support for the NF
 
 |Feature/functionality|New or updated|Description|
 |---|---|---|
-|[NFS version 4.1](#nfs-version-4.1)|New|Increased security, performance, and interoperability compared to NFS version 3.|
+|[NFS version 4.1](#nfs-version-41)|New|Increased security, performance, and interoperability compared to NFS version 3.|
 |[NFS infrastructure](#nfs-infrastructure)|Updated|Improves deployment and manageability, and increases security.|
 |[NFS version 3 continuous availability](#nfs-version-3-continuous-availability)|Updated|Improves continuous availability on NFS version 3 clients.|
 |[Deployment and manageability improvements](#deployment-and-manageability-improvements)|Updated|Enables you to easily deploy and manage NFS with new Windows PowerShell cmdlets and a new WMI provider.|

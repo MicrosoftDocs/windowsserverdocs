@@ -48,7 +48,7 @@ Configure a non-Windows KDC server and the realm that the workstation should use
 ```
 ksetup /addkdc CORP.CONTOSO.COM mitkdc.contoso.com
 ```
-Run the Ksetup tool at the command line of the same computer as in the preceding command to set the local computer account password to â€œp@sswrd1%â€?. Then restart the computer.
+Run the Ksetup tool at the command line of the same computer as in the preceding command to set the local computer account password to "p@sswrd1%". Then restart the computer.
 ```
 Ksetup /setcomputerpassword p@sswrd1%
 ```

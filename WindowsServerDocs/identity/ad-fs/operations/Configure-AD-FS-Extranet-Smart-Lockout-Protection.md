@@ -13,10 +13,6 @@ ms.technology: identity-adfs
 
 # AD FS Extranet Lockout and Extranet Smart Lockout
 
-
-
->Applies To: Windows Server 2019, Windows Server 2016, Windows Server 2012 R2
-
 ## Overview
 
 Extranet Smart Lockout (ESL) protects your users from experiencing extranet account lockout from malicious activity.  
@@ -220,11 +216,11 @@ This behavior can be overridden by passing the -Server parameter.
     - FamiliarLockout: Boolean value which will be “True” if the “BadPwdCountFamiliar” > ExtranetLockoutThreshold 
     - UnknownLockout: Boolean value which will be “True” if the “BadPwdCountUnknown” > ExtranetLockoutThreshold  
     - FamiliarIPs: maximum of 20 IPs which are familiar for the user. When this is exceeded the oldest IP in the list will be removed. 
--    Set-ADFSAccountActivity 
+- Set-ADFSAccountActivity 
      
-     Adds new familiar locations. The familiar IP list has a maximum of 20 entries, if this is exceeded, the oldest IP in the list will be removed. 
+  Adds new familiar locations. The familiar IP list has a maximum of 20 entries, if this is exceeded, the oldest IP in the list will be removed. 
 
-     Example: Set-ADFSAccountActivity user@contoso.com -AdditionalFamiliarIps “1.2.3.4”
+  Example: Set-ADFSAccountActivity user@contoso.com -AdditionalFamiliarIps “1.2.3.4”
 
 - Reset-ADFSAccountLockout 
    

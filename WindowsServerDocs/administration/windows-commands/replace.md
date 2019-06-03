@@ -46,25 +46,25 @@ replace [<Drive1>:][<Path1>]<FileName> [<Drive2>:][<Path2>] [/p] [/r] [/s] [/w] 
 
 ## Remarks
 
--   As **replace** adds or replaces files, the file names are displayed on the screen. After **replace** is finished, a summary line is displayed in one of the following formats:  
-    ```
-    nnn files added
-    nnn files replaced
-    no file added
-    no file replaced
-    ```  
--   If you are using floppy disks and you need to switch disks during the **replace** operation, you can specify the **/w** command-line option so that **replace** will wait for you to switch the disks.
--   You cannot use **replace** to update hidden files or system files.
--   The following table shows each exit code and a brief description of its meaning:  
-    |Exit code|Description|
-    |---------|-----------|
-    |0|The **replace** command successfully replaced or added the files.|
-    |1|The **replace** command encountered an incorrect version of MS-DOS.|
-    |2|The **replace** command could not find the source files.|
-    |3|The **replace** command could not find the source or destination path.|
-    |5|The user does not have access to the files that you want to replace.|
-    |8|There is insufficient system memory to carry out the command.|
-    |11|The user used the wrong syntax on the command line.|
+- As **replace** adds or replaces files, the file names are displayed on the screen. After **replace** is finished, a summary line is displayed in one of the following formats:  
+  ```
+  nnn files added
+  nnn files replaced
+  no file added
+  no file replaced
+  ```  
+- If you are using floppy disks and you need to switch disks during the **replace** operation, you can specify the **/w** command-line option so that **replace** will wait for you to switch the disks.
+- You cannot use **replace** to update hidden files or system files.
+- The following table shows each exit code and a brief description of its meaning:  
+  |Exit code|Description|
+  |---------|-----------|
+  |0|The **replace** command successfully replaced or added the files.|
+  |1|The **replace** command encountered an incorrect version of MS-DOS.|
+  |2|The **replace** command could not find the source files.|
+  |3|The **replace** command could not find the source or destination path.|
+  |5|The user does not have access to the files that you want to replace.|
+  |8|There is insufficient system memory to carry out the command.|
+  |11|The user used the wrong syntax on the command line.|
 
 > [!NOTE]
 > You can use the ERRORLEVEL parameter on the **if** command line in a batch program to process exit codes that are returned by **replace**.

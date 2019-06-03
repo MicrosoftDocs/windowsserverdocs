@@ -14,7 +14,6 @@ ms.technology: identity-adfs
 
 # AD FS Frequently Asked Questions (FAQ)
 
->Applies To: Windows Server 2016
 
 The following documentation is a home to frequently asked questions with regard to Active Directory Federation Services.  The document has been split into groups based on the type of question.
 
@@ -116,7 +115,7 @@ The lifetime of refresh token will be the lifetime of the token that ADFS got fr
 You can use customized id_token to add relevant information in the id_token itself. For more information, see the article [Customize claims to be emitted in id_token](../development/Custom-Id-Tokens-in-AD-FS.md).
 
 ### How to issue json blobs inside JWT tokens?
-A special ValueType("http://www.w3.org/2001/XMLSchema#json" ) and escape character(\x22) for this was added in AD FS 2016. Please the sample below for the issuance rule and also the final output from the access token.
+A special ValueType("<http://www.w3.org/2001/XMLSchema#json>" ) and escape character(\x22) for this was added in AD FS 2016. Please the sample below for the issuance rule and also the final output from the access token.
 
 Sample issuance rule:
 

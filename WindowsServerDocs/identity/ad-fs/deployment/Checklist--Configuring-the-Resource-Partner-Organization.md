@@ -14,8 +14,6 @@ ms.author: billmath
 
 # Checklist: Configuring the Resource Partner Organization
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
-
 The resource partner organization contains the Web servers hosting the Web\-based applications that will be accessed by users in the account partner. Administrators in this organization must use the AD FS Management snap\-in to create claims provider trusts to represent their trust relationships with account partner organizations. In turn, the account partner administrator must create relying party trusts for each account partner organization that they want to trust.  
   
 This checklist includes the tasks that are necessary for deploying Active Directory Federation Services \(AD FS\) in the resource partner organization. It also includes tasks for configuring the components that are required to establish one\-half of a federation partnership.  

@@ -18,7 +18,7 @@ ms.date: 12/06/2016
 
 This article lists the supported combinations of Hyper-V hosts and Hyper-V Manager versions and describes how to connect to remote and local Hyper-V hosts so you can manage them. 
 
-Hyper-V Manager lets you manage a small number of Hyper-V hosts, both remote and local. It's installed when you install the Hyper-V Management Tools, which you can do either through a full Hyper-V installation or a tools-only installation. Doing a tools-only installation means you can use the tools on computers that don't meet the hardware requirements to host Hyper-V. For details about hardware for Hyper-V hosts, see [System requirements](..\System-requirements-for-Hyper-V-on-Windows.md).
+Hyper-V Manager lets you manage a small number of Hyper-V hosts, both remote and local. It's installed when you install the Hyper-V Management Tools, which you can do either through a full Hyper-V installation or a tools-only installation. Doing a tools-only installation means you can use the tools on computers that don't meet the hardware requirements to host Hyper-V. For details about hardware for Hyper-V hosts, see [System requirements](../System-requirements-for-Hyper-V-on-Windows.md).
 
 If Hyper-V Manager isn't installed, see the [instructions](#install-hyper-v-manager) below.
 
@@ -53,8 +53,8 @@ Hyper-V Manager doesn't list any computers that host Hyper-V until you add the c
 
 If you can't connect:
 
-* It's possible that only the Hyper-V tools are installed. To check that Hyper-V platform is installed, look for the Virtual Machine Management service. \(Open the Services desktop app: click **Start**, click the **Start Search** box, type **services.msc**, and then press **Enter**. If the Virtual Machine Management service isn't listed, install the Hyper-V platform by following the instructions in [Install Hyper-V](..\get-started\Install-the-Hyper-V-role-on-Windows-Server.md).\)
-* Check that your hardware meets the requirements. See [System requirements](..\System-requirements-for-Hyper-V-on-Windows.md).
+* It's possible that only the Hyper-V tools are installed. To check that Hyper-V platform is installed, look for the Virtual Machine Management service. /(Open the Services desktop app: click **Start**, click the **Start Search** box, type **services.msc**, and then press **Enter**. If the Virtual Machine Management service isn't listed, install the Hyper-V platform by following the instructions in [Install Hyper-V](../get-started/Install-the-Hyper-V-role-on-Windows-Server.md).
+* Check that your hardware meets the requirements. See [System requirements](../System-requirements-for-Hyper-V-on-Windows.md).
 * Check that your user account belongs to the Administrators group or the Hyper-V Administrators group.
 
 ## Manage Hyper-V hosts remotely  
@@ -165,5 +165,5 @@ add-windowsfeature rsat-hyper-v-tools
 
 ## See also  
  
-[Install Hyper-V](..\get-started\Install-the-Hyper-V-role-on-Windows-Server.md) 
+[Install Hyper-V](../get-started/Install-the-Hyper-V-role-on-Windows-Server.md) 
 

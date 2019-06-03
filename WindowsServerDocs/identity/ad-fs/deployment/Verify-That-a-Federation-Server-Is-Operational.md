@@ -13,7 +13,6 @@ ms.author: billmath
 
 # Verify That a Federation Server Is Operational
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 You can use the following procedures to verify that a federation server is operational; that is, that any client on the same network can reach a new federation server.  
   

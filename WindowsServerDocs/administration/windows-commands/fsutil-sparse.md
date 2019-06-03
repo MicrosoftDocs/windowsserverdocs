@@ -28,15 +28,15 @@ fsutil sparse [setrange] <FileName> <BeginningOffset> <Length>
 
 ## Parameters
 
-|Parameter|Description|
-|-------------|---------------|
-|queryflag|Queries sparse.|
-|queryrange|Scans a file and searches for ranges that may contain nonzero data.|
-|setflag|Marks the indicated file as sparse.|
-|setrange|Fills a specified range of a file with zeros.|
-|<FileName>|Specifies the full path to the file including the file name and extension, for example C:\documents\filename.txt.|
-|<BeginningOffset>|Specifies the offset within the file to mark as sparse.|
-|<Length>|Specifies the length of the region in the file to be marked as sparse (in bytes).|
+|     Parameter     |                                                    Description                                                    |
+|-------------------|-------------------------------------------------------------------------------------------------------------------|
+|     queryflag     |                                                  Queries sparse.                                                  |
+|    queryrange     |                        Scans a file and searches for ranges that may contain nonzero data.                        |
+|      setflag      |                                        Marks the indicated file as sparse.                                        |
+|     setrange      |                                   Fills a specified range of a file with zeros.                                   |
+|    <FileName>     | Specifies the full path to the file including the file name and extension, for example C:\documents\filename.txt. |
+| <BeginningOffset> |                              Specifies the offset within the file to mark as sparse.                              |
+|     <Length>      |                 Specifies the length of the region in the file to be marked as sparse (in bytes).                 |
 
 ## Remarks
 

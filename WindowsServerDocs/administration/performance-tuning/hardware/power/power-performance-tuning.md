@@ -55,7 +55,7 @@ You need to thoroughly understand your workload requirements to choose an optima
 
 **PowerCfg.exe** supports a command-line option that you can use to analyze the idle energy efficiency of your server. When you run PowerCfg.exe with the **/energy** option, the tool performs a 60-second test to detect potential energy efficiency issues. The tool generates a simple HTML report in the current directory.
 
->[!Important]
+> [!Important]
 > To ensure an accurate analysis, make sure that all local apps are closed before you run **PowerCfg.exe**. 
 
 Shortened timer tick rates, drivers that lack power management support, and excessive CPU utilization are a few of the behavioral issues that are detected by the **powercfg /energy** command. This tool provides a simple way to identify and fix power management issues, potentially resulting in significant cost savings in a large datacenter.
@@ -77,7 +77,7 @@ These power plans exist in Windows for alternating current (AC) and direct curre
 
 For more info on power plans and power policy configurations, see [Power Policy Configuration and Deployment in Windows](https://msdn.microsoft.com/windows/hardware/gg463243.aspx).
 
->[!Note]
+> [!Note]
 > Some server manufactures have their own power management options available through the BIOS settings. If the operating system does not have control over the power management, changing the power plans in Windows will not affect system power and performance.
 
 ## Tuning processor power management parameters
@@ -92,7 +92,7 @@ Intel Turbo Boost and AMD Turbo CORE technologies are features that allow proces
 
 Turbo is enabled for High Performance power plans on all Intel and AMD processors and it is disabled for Power Saver power plans. For Balanced power plans on systems that rely on traditional P-state-based frequency management, Turbo is enabled by default only if the platform supports the EPB register.
 
->[!Note]
+> [!Note]
 > The EPB register is only supported in Intel Westmere and later processors.
 
 For Intel Nehalem and AMD processors, Turbo is disabled by default on P-state-based platforms. However, if a system supports Collaborative Processor Performance Control (CPPC), which is a new alternative mode of performance communication between the operating system and the hardware (defined in ACPI 5.0), Turbo may be engaged if the Windows operating system dynamically requests the hardware to deliver the highest possible performance levels.
@@ -113,7 +113,7 @@ In Windows Server 2016, the default value for Boost Mode is 3.
 | 3 (Efficient Enabled) | Efficient | Efficient Enabled |
 | 4 (Efficient Aggressive) | Efficient | Aggressive |
 
- 
+ 
 The following commands enable Processor Performance Boost Mode on the current power plan (specify the policy by using a GUID alias):
 
 ``` syntax
@@ -121,7 +121,7 @@ Powercfg -setacvalueindex scheme_current sub_processor PERFBOOSTMODE 1
 Powercfg -setactive scheme_current
 ```
 
->[!Important] 
+> [!Important]
 > You must run the **powercfg -setactive** command to enable the new settings. You do not need to reboot the server.
 
 To set this value for power plans other than the currently selected plan, you can use aliases such as SCHEME\_MAX (Power Saver), SCHEME\_MIN (High Performance), and SCHEME\_BALANCED (Balanced) in place of SCHEME\_CURRENT. Replace "scheme current" in the powercfg -setactive commands previously shown with the desired alias to enable that power plan.

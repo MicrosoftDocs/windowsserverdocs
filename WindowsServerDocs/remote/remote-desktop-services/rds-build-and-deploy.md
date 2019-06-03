@@ -18,7 +18,7 @@ manager: dongill
 
 A Remote Desktop Services deployment is the infrastructure used to share apps and resources with your users. Depending on the experience you want to provide, you can make it as small or complex as you need. Remote Desktop deployments are easily scaled. You can increase and decrease Remote Desktop Web Access, Gateway, Connection Broker and Session Host servers at will. You can use Remote Desktop Connection Broker to distribute workloads. Active Directory based authentication provides a highly secure environment. 
 
-[Remote Desktop clients](clients\remote-desktop-clients.md) enable access from any Windows, Apple, or Android computer, tablet, or phone.
+[Remote Desktop clients](clients/remote-desktop-clients.md) enable access from any Windows, Apple, or Android computer, tablet, or phone.
 
 See [Remote Desktop Services architecture](desktop-hosting-logical-architecture.md) for a detailed discussion of the different pieces that work together to make up your Remote Desktop Services deployment.
 

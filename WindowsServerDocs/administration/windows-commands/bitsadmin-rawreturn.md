@@ -29,7 +29,7 @@ bitsadmin /RawReturn
 
 Strips newline characters and formatting from the output.
 
-Typically, you use this command in conjunction with the **Create** and **Get\*** switches to receive only the value. You must specify this switch before other switches.
+Typically, you use this command in conjunction with the **Create** and **Get\\*** switches to receive only the value. You must specify this switch before other switches.
 
 ## <a name="BKMK_examples"></a>Examples
 

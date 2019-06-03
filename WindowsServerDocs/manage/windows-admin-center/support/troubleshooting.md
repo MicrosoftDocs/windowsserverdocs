@@ -26,7 +26,7 @@ ms.date: 02/12/2019
 * I get a **This site/page can't be reached** error in my web browser (select your deployment type)
     * [I have Windows Admin Center installed as an App on Windows 10](#whitescreenw10)
     * [I have Windows Admin Center installed as an Gateway on Windows Server](#whitescreenws)
-    * [I have Windows Admin Center installed as an Gateway on an Azure VM](#whitescreenazvm)
+    * [I have Windows Admin Center installed as an Gateway on an Azure VM](#if-you-have-installed-windows-admin-center-in-an-azure-windows-server-vm)
 
 * [Windows Admin Center home page loads, but I'm stuck on the Add Connection pane, or I can't connect to any machine.](#winvercompat)
 
@@ -104,9 +104,7 @@ This can happen if your default PowerShell module path has been modified or remo
 
 [[back to top]](#toc)
 
-<a id="whitescreenazvm"></a>  
-
-### If you've installed Windows Admin Center in an Azure Windows Server VM
+### If you have installed Windows Admin Center in an Azure Windows Server VM
 
 * [Check the Windows version](#winvercompat)
 * Did you add an inbound port rule for HTTPS? 
@@ -212,22 +210,22 @@ When installing Windows Admin Center, you are given the option to let Windows Ad
     Get-Item WSMan:\localhost\Client\TrustedHosts
     ```
 
-    > [!WARNING]
-    > If the current setting of your TrustedHosts is not empty, the commands below will overwrite your setting. We recommend that you save the current setting to a text file with the following command so you can restore it if needed:
-
-    > `Get-Item WSMan:localhost\Client\TrustedHosts | Out-File C:\OldTrustedHosts.txt`
+   > [!WARNING]
+   > If the current setting of your TrustedHosts is not empty, the commands below will overwrite your setting. We recommend that you save the current setting to a text file with the following command so you can restore it if needed:
+   > 
+   > `Get-Item WSMan:localhost\Client\TrustedHosts | Out-File C:\OldTrustedHosts.txt`
 
 3. Set TrustedHosts to the NetBIOS, IP, or FQDN of the machines you
-intend to manage:
+   intend to manage:
 
     ```powershell
     Set-Item WSMan:localhost\Client\TrustedHosts -Value '192.168.1.1,server01.contoso.com,server02'
     ```
 
-    > [!TIP] 
-    >For an easy way to set all TrustedHosts at once, you can use a wildcard.
-
-    >     Set-Item WSMan:\localhost\Client\TrustedHosts -Value '*'
+   > [!TIP]
+   > For an easy way to set all TrustedHosts at once, you can use a wildcard.
+   > 
+   >     Set-Item WSMan:\localhost\Client\TrustedHosts -Value '*'
 
 4. When you are done testing, you can issue the following command from an elevated PowerShell session to clear your TrustedHosts setting:
 

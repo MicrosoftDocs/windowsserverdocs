@@ -64,7 +64,7 @@ Virtual NUMA and Dynamic Memory features cannot be used at the same time. A virt
 
 For more info on Virtual NUMA, see [Hyper-V Virtual NUMA Overview](https://technet.microsoft.com/library/dn282282.aspx).
 
-##See also
+## See also
 
 -   [Hyper-V terminology](terminology.md)
 

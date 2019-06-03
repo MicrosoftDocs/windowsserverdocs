@@ -16,7 +16,6 @@ ms.technology: identity-adfs
 
 # Create a Relying Party Trust
 
->Applies To: Windows Server 2016, Windows Server 2012 R2
 
 The following document provides information on creating a relying party trust manually and using federation metadata.
   
@@ -73,22 +72,22 @@ Membership in **Administrators**, or equivalent, on the local computer is the mi
 
 1. In Server Manager, click **Tools**, and then select **AD FS Management**.  
   
-2.  Under **Actions**, click **Add Relying Party Trust**.  
-![relying party](media/Create-a-Relying-Party-Trust/addtrust1.PNG)   
+2. Under **Actions**, click **Add Relying Party Trust**.  
+   ![relying party](media/Create-a-Relying-Party-Trust/addtrust1.PNG)   
 
-3.  On the **Welcome** page, choose **Claims aware** and click **Start**.  
-![relying party](media/Create-a-Relying-Party-Trust/addtrust2.PNG) 
+3. On the **Welcome** page, choose **Claims aware** and click **Start**.  
+   ![relying party](media/Create-a-Relying-Party-Trust/addtrust2.PNG) 
   
-4.  On the **Select Data Source** page, click **Import data about the relying party published online or on a local network*. In **Federation metadata address (host name or URL)**, type the federation metadata URL or host name for the partner, and then click **Next**.  
-![relying party](media/Create-a-Relying-Party-Trust/addtrust12.PNG) 
+4. On the **Select Data Source** page, click <strong>Import data about the relying party published online or on a local network*. In **Federation metadata address (host name or URL)</strong>, type the federation metadata URL or host name for the partner, and then click **Next**.  
+   ![relying party](media/Create-a-Relying-Party-Trust/addtrust12.PNG) 
 
-5.  On the Specify Display Name page type a name in **Display name**, under Notes type a description for this relying party trust, and then click **Next**.
+5. On the Specify Display Name page type a name in **Display name**, under Notes type a description for this relying party trust, and then click **Next**.
 
-6.  On the Choose Issuance Authorization Rules page, select either **Permit all users to access this relying party** or **Deny all users access to this relying party**, and then click **Next**.
+6. On the Choose Issuance Authorization Rules page, select either **Permit all users to access this relying party** or **Deny all users access to this relying party**, and then click **Next**.
 
-7.  On the Ready to Add Trust page, review the settings, and then click **Next** to save your relying party trust information.
+7. On the Ready to Add Trust page, review the settings, and then click **Next** to save your relying party trust information.
 
-8.  On the Finish page, click **Close**. This action automatically displays the Edit Claim Rules dialog box. For more information about how to proceed with adding claim rules for this relying party trust, see the Additional references.
+8. On the Finish page, click **Close**. This action automatically displays the Edit Claim Rules dialog box. For more information about how to proceed with adding claim rules for this relying party trust, see the Additional references.
 
 
 

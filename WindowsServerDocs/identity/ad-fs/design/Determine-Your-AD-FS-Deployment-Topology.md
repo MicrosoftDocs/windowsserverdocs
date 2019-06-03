@@ -14,8 +14,6 @@ ms.technology: identity-adfs
 
 # Determine Your AD FS Deployment Topology
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
-
 The first step in planning a deployment of Active Directory Federation Services \(AD FS\) is to determine the right deployment topology to meet the single sign\-on \(SSO\) needs of your organization. The topics in this section describe the various deployment topologies that you can use with AD FS. They also describe the benefits and limitations associated with each deployment topology so that you can select the most appropriate topology for your specific business needs.  
   
 Before you read this deployment topology topic, we recommend that you first complete the tasks in the order shown in the following table.  

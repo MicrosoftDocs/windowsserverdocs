@@ -14,8 +14,6 @@ ms.technology: identity-adfs
 
 # Planning for Federation Server Capacity
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
-
 Capacity planning for federation servers helps you estimate:  
   
 -   Which factors grow the size of the AD FS configuration database.  
