@@ -15,7 +15,7 @@ ms.date: 05/29/2019
 
 This topic explains the new and changed functionality in storage in Windows Server 2019, Windows Server 2016, and Windows Server Semi-Annual Channel releases.
 
-## What's new in storage in Windows Server 2019 and Windows Server, version 1903
+## What's new in storage in Windows Server, version 1903
 
 This release of Windows Server adds the following changes and technologies.
 
