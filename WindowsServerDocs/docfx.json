@@ -52,7 +52,6 @@
     "template": [
       null
     ],
-    "dest": "windows-server",
-    "markdownEngineName": "dfm"
+    "dest": "windows-server"
   }
 }
