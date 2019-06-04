@@ -29,7 +29,7 @@ At the Windows Server 2008 and higher domain functional levels, Distributed File
 
 There are no new forest or domain functional levels added in this release.
 
-The minimum requirement to add a Windows Server 2019 Domain Controller is a Windows Server 2008 functional level. The domain also has to use DFS-R as the engine to replciate SYSVOL.
+The minimum requirement to add a Windows Server 2019 Domain Controller is a Windows Server 2008 functional level. The domain also has to use DFS-R as the engine to replicate SYSVOL.
 
 ## Windows Server 2016
 
