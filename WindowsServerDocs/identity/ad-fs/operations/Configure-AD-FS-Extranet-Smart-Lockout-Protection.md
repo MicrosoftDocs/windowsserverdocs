@@ -269,6 +269,7 @@ A: The typical goal of the brute force attack scenario is to guess a password an
 A: If a user submits multiple bad passwords (i.e. legitimately mis-typing) and on the following attempt gets the password correct, then the user will immediately succeed to sign in.  This will clear the bad password count and add that IP to the FamiliarIPs list.  However, if they go above the threshold of failed logins from the unknown location, they will enter into lockout state and they will require to wait past the observation window and sign-in with a valid password or require admin intervention to reset their account.  
  
 **Does ESL work on intranet too?**   
+
 A: If the clients connect directly to the ADFS servers and not via Web Application Proxy servers then the ESL behavior will not apply.  
  
 **I am seeing Microsoft IP addresses in the Client IP field. Does ESL block EXO proxied brute force attacks?**   
