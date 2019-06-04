@@ -52,7 +52,6 @@
     "template": [
       null
     ],
-    "dest": "windows-server",
-    "markdownEngineName": "markdig"
+    "dest": "windows-server"
   }
 }

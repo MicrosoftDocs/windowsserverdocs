@@ -8536,15 +8536,20 @@
   "redirect_url": "/windows-server/manage/windows-admin-center/support/known-issues",
   "redirect_document_id": false
  },
-    {
-      "source_path": "WindowsServerDocs/administration/kernel-soft-reboot.md",
-      "redirect_url": "/windows-server/windows-server",
-      "redirect_document_id": true
-    },
-    {
-      "source_path": "WindowsServerDocs/windows-server.md",
-      "redirect_url": "/windows-server/index",
-      "redirect_document_id": true
-    }
+{
+  "source_path": "WindowsServerDocs/administration/kernel-soft-reboot.md",
+  "redirect_url": "/windows-server/windows-server",
+  "redirect_document_id": true
+ },
+ {
+  "source_path": "WindowsServerDocs/windows-server.md",
+  "redirect_url": "/windows-server/index",
+  "redirect_document_id": true
+ },
+ {
+  "source_path": "WindowsServerDocs/azure-stack-hci/index.md",
+  "redirect_url": "https://docs.microsoft.com/azure-stack/operator/azure-stack-hci-overview",
+  "redirect_document_id": true
+ }
   ]
 }
