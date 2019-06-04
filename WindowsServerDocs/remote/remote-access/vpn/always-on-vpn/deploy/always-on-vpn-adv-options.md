@@ -61,7 +61,7 @@ Following are additional options for advanced features.
 ---
 ## Blocking VPN Clients that Use Revoked Certificates
   
-After you install updates, the RRAS server can enforce certificate revocation. This means that the RRAS server can deny VPN connections to clients that try to use a revoked certificate.
+After you install updates, the RRAS server can enforce certificate revocation for IKEv2 VPN connections that require computer-based certificates, such as Device Tunnel in an Always-On VPN. This means that the RRAS server can deny VPN connections to clients that try to use a revoked certificate.
 
 **Availability**
 
