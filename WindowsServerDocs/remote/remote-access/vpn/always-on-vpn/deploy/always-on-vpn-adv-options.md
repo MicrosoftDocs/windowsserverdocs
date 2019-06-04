@@ -69,12 +69,11 @@ The following table lists the approximate release dates of the fixes for each ve
 
 |Operating system version |Release date* |
 |---------|---------|
-|Windows Server 2019<br />Windows Server, version 1906<br />Windows 10, version 1906  |Q2, 2019  |
-|Windows Server, version 1903<br />Windows 10, version 1903  |Q3, 2019  |
-|Windows Server 2019<br />Windows Server, version 1809<br />Windows 10, version 1809  |Q3, 2019  |
-|Windows Server, version 1803<br />Windows 10, version 1803  |Q3, 2019  |
-|Windows Server, version 1709<br />Windows 10, version 1709  |Q3, 2019  |
-|Windows Server 2016, version 1607<br />Windows 10, version 1607  |Q2, 2019  |
+|Windows Server, version 1903  |Q2, 2019  |
+|Windows Server 2019<br />Windows Server, version 1809  |Q3, 2019  |
+|Windows Server, version 1803  |Q3, 2019  |
+|Windows Server, version 1709  |Q3, 2019  |
+|Windows Server 2016, version 1607  |Q2, 2019  |
   
 \* All release dates are listed in calendar quarters. Dates are approximate and may change without notice.
 
@@ -83,9 +82,9 @@ The following table lists the approximate release dates of the fixes for each ve
 1. Install the Windows updates as they become available.
 1. Make sure that all the VPN client and RRAS server certificates that you use have CDP entries, and that the RRAS server can reach the respective CRLs.
 1. On the RRAS server, use the **Set-VpnAuthProtocol** PowerShell cmdlet to configure the **RootCertificateNameToAccept** parameter.<br />
-   The following example lists the commands to use to do this. In the example, <CN=Contoso Root Certification Authority> represents the distinguished name of the Root Certification Authority. 
+   The following example lists the commands to use to do this. In the example, **CN=Contoso Root Certification Authority** represents the distinguished name of the Root Certification Authority. 
    ``` powershell
-   $cert1 = ( Get-ChildItem -Path cert:LocalMachine\root | Where-Object -FilterScript { $_.Subject -Like "*<CN=Contoso Root Certification Authority>,*" } )
+   $cert1 = ( Get-ChildItem -Path cert:LocalMachine\root | Where-Object -FilterScript { $_.Subject -Like "*CN=Contoso Root Certification Authority,*" } )
    Set-VpnAuthProtocol -RootCertificateNameToAccept $cert1 -PassThru
    ```
 **How to configure the RRAS server to enforce certificate revocation for VPN connections that are based on IKEv2 machine certificates**
