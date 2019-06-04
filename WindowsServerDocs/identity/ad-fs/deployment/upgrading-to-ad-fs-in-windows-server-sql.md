@@ -15,8 +15,7 @@ ms.author: billmath
 
 
 > [!NOTE]  
-> Only begin an upgrade with a definitive time frame planned for completion. It is not recommended to keep AD FS in a mixed mode state for an extended 
-period of time, as leaving AD FS in a mixed mode state may cause issues with the farm.
+> Only begin an upgrade with a definitive time frame planned for completion. It is not recommended to keep AD FS in a mixed mode state for an extended period of time, as leaving AD FS in a mixed mode state may cause issues with the farm.
 
 
 ## Moving from a Windows Server 2012 R2 AD FS farm to a Windows Server 2016 AD FS farm  
