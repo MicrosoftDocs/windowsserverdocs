@@ -7,7 +7,7 @@ ms.topic: article
 author: jasongerend
 ms.author: jgerend
 ms.localizationpriority: high
-ms.date: 05/21/2019
+ms.date: 06/04/2019
 ---
 # What's new in Windows Server 2019
 
@@ -15,9 +15,17 @@ ms.date: 05/21/2019
 
 This topic describes some of the new features in Windows Server 2019. Windows Server 2019 is built on the strong foundation of Windows Server 2016 and brings numerous innovations on four key themes: Hybrid Cloud, Security, Application Platform, and Hyper-Converged Infrastructure (HCI).
 
-To find out what's new in Windows Server Semi-Annual Channel releases, see [What's New in Windows Server](../get-started/whats-new-in-windows-server.md). 
+To find out what's new in Windows Server Semi-Annual Channel releases, see [What's New in Windows Server](../get-started/whats-new-in-windows-server.md).
 
 ## General
+
+### Windows Admin Center
+
+Windows Admin Center is a locally deployed, browser-based app for managing servers, clusters, hyper-converged infrastructure, and Windows 10 PCs. It comes at no additional cost beyond Windows and is ready to use in production.
+
+You can install Windows Admin Center on Windows Server 2019 as well as Windows 10 and earlier versions of Windows and Windows Server, and use it to manage servers and clusters running Windows Server 2008 R2 and later.
+
+For more info, see [Windows Admin Center](../manage/windows-admin-center/understand/windows-admin-center.md).
 
 ### Desktop experience
 
@@ -126,7 +134,7 @@ Storage Migration Service is a new technology that makes it easier to migrate se
 
 ### Storage Spaces Direct
 
-Here's a list of what's new in Storage Spaces Direct. For details, see [What's new in Storage Spaces Direct](../storage/whats-new-in-storage.md#storage-spaces-direct).
+Here's a list of what's new in Storage Spaces Direct. For details, see [What's new in Storage Spaces Direct](../storage/whats-new-in-storage.md#storage-spaces-direct). Also see [Azure Stack HCI](https://docs.microsoft.com/azure-stack/operator/azure-stack-hci-overview) for info on acquiring validated Storage Spaces Direct systems.
 
 - **Deduplication and compression for ReFS volumes**
 - **Native support for persistent memory**
