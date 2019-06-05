@@ -23,7 +23,7 @@ The recommended way to upgrade a domain is to promote domain controllers that ru
 1. Verify the target server meets system requirements. 
 2. Verify Application compatibility. 
 3. Review Recommendations for moving to Windows Server 2016 
-4. Verify security settings. For more information, see [Deprecated features and behavior changes related  to AD DS in Windows Server 2016](../../../get-started/deprecated-features.md). 
+4. Verify security settings. For more information, see [Deprecated features and behavior changes related to AD DS in Windows Server 2016](https://docs.microsoft.com/en-us/windows-server/get-started/deprecated-features). 
 5. Check connectivity to the target server from the computer where you plan to run the installation. 
 6. Check for availability of necessary operation master roles: 
    - To install the first DC that runs Windows Server 2016 in an existing domain and forest, the machine where you run the installation needs connectivity to the **schema master** in order to run adprep /forestprep and the infrastructure master in order to run adprep /domainprep. 
