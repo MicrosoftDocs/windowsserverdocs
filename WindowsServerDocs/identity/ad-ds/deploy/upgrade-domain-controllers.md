@@ -20,17 +20,17 @@ Services in Windows Server 2016 and explains the process for upgrading domain co
 ## Pre-requisites
 The recommended way to upgrade a domain is to promote domain controllers that run newer versions of Windows Server and demote the older domain controllers as needed. That method is preferable to upgrading the operating system of an existing domain controller. This list covers general steps to follow before you promote a domain controller that runs a newer version of Windows Server: 
 
-1.  Verify the target server meets system requirements. 
-2.	Verify Application compatibility. 
-3.	Review Recommendations for moving to Windows Server 2016 
-4.	Verify security settings. For more information, see [Deprecated features and behavior changes related  to AD DS in Windows Server 2016](../../../get-started\deprecated-features.md). 
-5.	Check connectivity to the target server from the computer where you plan to run the installation. 
-6.	Check for availability of necessary operation master roles: 
-	- To install the first DC that runs Windows Server 2016 in an existing domain and forest, the machine where you run the installation needs connectivity to the **schema master** in order to run adprep /forestprep and the infrastructure master in order to run adprep /domainprep. 
-	- To install the first DC in a domain where the forest schema is already extended, you only need connectivity to infrastructure master. 
-	- To install or remove a domain in an existing forest, you need connectivity to the **domain naming master**. 
-	- Any domain controller installation also requires connectivity to the **RID master.** 
-	- If you are installing the first read-only domain controller in an existing forest, you need connectivity to the **infrastructure master** for each application directory partition, also known as a non-domain naming context or NDNC. 
+1. Verify the target server meets system requirements. 
+2. Verify Application compatibility. 
+3. Review Recommendations for moving to Windows Server 2016 
+4. Verify security settings. For more information, see [Deprecated features and behavior changes related to AD DS in Windows Server 2016](https://docs.microsoft.com/en-us/windows-server/get-started/deprecated-features). 
+5. Check connectivity to the target server from the computer where you plan to run the installation. 
+6. Check for availability of necessary operation master roles: 
+   - To install the first DC that runs Windows Server 2016 in an existing domain and forest, the machine where you run the installation needs connectivity to the **schema master** in order to run adprep /forestprep and the infrastructure master in order to run adprep /domainprep. 
+   - To install the first DC in a domain where the forest schema is already extended, you only need connectivity to infrastructure master. 
+   - To install or remove a domain in an existing forest, you need connectivity to the **domain naming master**. 
+   - Any domain controller installation also requires connectivity to the **RID master.** 
+   - If you are installing the first read-only domain controller in an existing forest, you need connectivity to the infrastructure master for each application directory partition, also known as a non-domain naming context or NDNC. 
 
 ### Installation steps and required administrative levels
 The following table provides a summary of the upgrade steps and the permission requirements to accomplish these steps
