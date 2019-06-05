@@ -19,10 +19,10 @@ ms.reviewer: deverette
 
 # Step 7.1. Configure EAP-TLS to ignore Certificate Revocation List (CRL) checking
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows 10
+>Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows 10
 
-&#171; [**Previous:** Step 7. (Optional) Conditional access for VPN connectivity using Azure AD](ad-ca-vpn-connectivity-windows10.md)<br>
-&#187; [**Next:** Step 7.2. Create root certificates for VPN authentication with Azure AD](vpn-create-root-cert-for-vpn-auth-azure-ad.md)
+- [**Previous:** Step 7. (Optional) Conditional access for VPN connectivity using Azure AD](ad-ca-vpn-connectivity-windows10.md)
+- [**Next:** Step 7.2. Create root certificates for VPN authentication with Azure AD](vpn-create-root-cert-for-vpn-auth-azure-ad.md)
 
 >[!IMPORTANT]
 >Failure to implement this registry change will cause IKEv2 connections using cloud certificates with PEAP to fail, but IKEv2 connections using Client Auth certificates issued from the on-premises CA would continue to work.
@@ -57,8 +57,6 @@ For more information, see [How to Enable or Disable Certificate Revocation Check
 |HKLM\SYSTEM\CurrentControlSet\Services\RasMan\PPP\EAP\25     |PEAP         |
 |HKLM\SYSTEM\CurrentControlSet\Services\RasMan\PPP\EAP\26     |EAP-MSCHAP v2         |
 
-## Next step
+## Next steps
 
-[Step 7.2. Create root certificates for VPN authentication with Azure AD](vpn-create-root-cert-for-vpn-auth-azure-ad.md): In this step, you configure conditional access root certificates for VPN authentication with Azure AD, which automatically creates a VPN Server cloud app in the tenant. 
-
----
+[Step 7.2. Create root certificates for VPN authentication with Azure AD](vpn-create-root-cert-for-vpn-auth-azure-ad.md): In this step, you configure conditional access root certificates for VPN authentication with Azure AD, which automatically creates a VPN Server cloud app in the tenant.

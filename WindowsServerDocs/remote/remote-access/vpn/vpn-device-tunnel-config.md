@@ -12,7 +12,7 @@ ms.localizationpriority: medium
 ---
 # Configure VPN device tunnels in Windows 10
 
->Applies To: Windows 10 version 1709
+>Applies to: Windows 10 version 1709
 
 Always On VPN gives you the ability to create a dedicated VPN profile for device or machine. Always On VPN connections include two types of tunnels: 
 
@@ -98,7 +98,9 @@ For guidelines on how to deploy a per device `(.\Device)` vs. a per user `(.\Use
 
 Run the following Windows PowerShell command to verify that you have successfully deployed a device profile:
 
-    `Get-VpnConnection -AllUserConnection`
+  ```powershell
+  Get-VpnConnection -AllUserConnection
+  ```
 
 The output displays a list of the device\-wide VPN profiles that are deployed on the device.
 
@@ -181,4 +183,3 @@ Following are RAS Gateway resources.
 >[!IMPORTANT]
 >When using Device Tunnel with a Microsoft RAS gateway, you will need to configure the RRAS server to support IKEv2 machine certificate authentication by enabling the **Allow machine certificate authentication for IKEv2** authentication method as described [here](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee922682%28v=ws.10%29). Once this setting is enabled, it is strongly recommended that the **Set-VpnAuthProtocol** PowerShell cmdlet, along with the **RootCertificateNameToAccept** optional parameter, is used to ensure that RRAS IKEv2 connections are only permitted for VPN client certificates that chain to an explicitly defined internal/private Root Certification Authority. Alternatively, the **Trusted Root Certification Authorities** store on the RRAS server should be amended to ensure that it does not contain public certification authorities as discussed [here](https://blogs.technet.microsoft.com/rrasblog/2009/06/10/what-type-of-certificate-to-install-on-the-vpn-server/). Similar methods may also need to be considered for other VPN gateways.
 
----

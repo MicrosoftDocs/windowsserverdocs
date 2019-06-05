@@ -14,8 +14,8 @@ ms.reviewer: deverette
 
 # Step 7. (Optional) Conditional access for VPN connectivity using Azure AD
 
-&#171; [**Previous:** Step 6. Configure Windows 10 Client Always On VPN Connections](always-on-vpn/deploy/vpn-deploy-client-vpn-connections.md)<br>
-&#187; [**Next:** Step 7.1. Configure EAP-TLS to ignore Certificate Revocation List (CRL) checking](vpn-config-eap-tls-to-ignore-crl-checking.md)
+- [**Previous:** Step 6. Configure Windows 10 Client Always On VPN Connections](always-on-vpn/deploy/vpn-deploy-client-vpn-connections.md)
+- [**Next:** Step 7.1. Configure EAP-TLS to ignore Certificate Revocation List (CRL) checking](vpn-config-eap-tls-to-ignore-crl-checking.md)
 
 In this optional step, you can fine-tune how VPN users access your resources using [Azure Active Directory (Azure AD) conditional access](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-azure-portal). With Azure AD conditional access for virtual private network (VPN) connectivity, you can help protect the VPN connections. Conditional Access is a policy-based evaluation engine that lets you create access rules for any Azure Active Directory (Azure AD) connected application. 
 
@@ -77,8 +77,6 @@ In this step, you can create OMA-DM based VPNv2 profiles using Intune to deploy 
 ## Next step
 [Step 7.1. Configure EAP-TLS to ignore Certificate Revocation List (CRL) checking](vpn-config-eap-tls-to-ignore-crl-checking.md): In this step, you must add **IgnoreNoRevocationCheck** and set it to allow authentication of clients when the certificate does not include CRL distribution points. By default, IgnoreNoRevocationCheck is set to 0 (disabled).
 
----
-
 ## Related topics
 - [Configure VPNv2 Profiles](https://docs.microsoft.com/windows/access-protection/vpn/vpn-conditional-access): The VPN client is now able to integrate with the cloud-based Conditional Access Platform to provide a device compliance option for remote clients. In this step, you configure the VPNv2 profiles with **\<DeviceCompliance> \<Enabled>true\</Enabled>**. 
  
@@ -87,5 +85,3 @@ In this step, you can create OMA-DM based VPNv2 profiles using Intune to deploy 
 - [Conditional access in Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-azure-portal): Security is a top concern for organizations using the cloud. A key aspect of cloud security is identity and access when it comes to managing your cloud resources. In a mobile-first, cloud-first world, users can access your organization's resources using a variety of devices and apps from anywhere. As a result of this, just focusing on who can access a resource is not sufficient anymore. In order to master the balance between security and productivity, IT professionals also need to factor how a resource is being accessed into an access control decision.
 
 - [VPN and conditional access](https://docs.microsoft.com/windows/access-protection/vpn/vpn-conditional-access): The VPN client is now able to integrate with the cloud-based Conditional Access Platform to provide a device compliance option for remote clients. Conditional Access is a policy-based evaluation engine that lets you create access rules for any Azure Active Directory (Azure AD) connected application. 
-
----

@@ -22,8 +22,8 @@ ms.reviewer: deverette
 
 >Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows 10
 
-&#171; [**Previous:** Step 7.2. Create root certificates for VPN authentication with Azure AD](vpn-create-root-cert-for-vpn-auth-azure-ad.md)<br>
-&#187; [**Next:** Step 7.4. Deploy conditional access root certificates to on-premises AD](vpn-deploy-cond-access-root-cert-to-on-premise-ad.md)
+- [**Previous:** Step 7.2. Create root certificates for VPN authentication with Azure AD](vpn-create-root-cert-for-vpn-auth-azure-ad.md)
+- [**Next:** Step 7.4. Deploy conditional access root certificates to on-premises AD](vpn-deploy-cond-access-root-cert-to-on-premise-ad.md)
 
 In this step, you configure the conditional access policy for VPN connectivity. When the first root certificate is created in the 'VPN connectivity' blade, it automatically creates a 'VPN Server' cloud application in the tenant. 
 
@@ -71,11 +71,11 @@ This step covers creation of the most basic Conditional Access policy.  If desi
 
     d. Select **VPN Server**.
 
-13. On the **New** page, to open the **Grant** page, in the **Controls** section, click **Grant**.
+6.  On the **New** page, to open the **Grant** page, in the **Controls** section, click **Grant**.
 
     ![Select grant](../../media/Always-On-Vpn/13.png)
 
-14. On the **Grant** page, perform the following steps:
+7.  On the **Grant** page, perform the following steps:
 
     ![Select require multi-factor authentication](../../media/Always-On-Vpn/14.png)
 
@@ -83,14 +83,12 @@ This step covers creation of the most basic Conditional Access policy.  If desi
 
     b. Click **Select**.
 
-15. On the **New** page, under **Enable policy**, click **On**.
+8.  On the **New** page, under **Enable policy**, click **On**.
 
     ![Enable policy](../../media/Always-On-Vpn/15.png)
 
-16. On the **New** page, click **Create**.
+9.  On the **New** page, click **Create**.
 
 
-## Next step
+## Next steps
 [Step 7.4. Deploy conditional access root certificates to on-premises AD](vpn-deploy-cond-access-root-cert-to-on-premise-ad.md): In this step, you deploy the conditional access root certificate as trusted root certificate for VPN authentication to your on-premises AD.
-
----

@@ -891,7 +891,7 @@ Create the VPN device configuration policy to configure the Windows 10 client co
     
     - **Remember credentials at each logon**:  Boolean value (true or false) for caching credentials. If set to true, credentials are cached whenever possible.
 
-3.  Copy the following XML string to a text editor:<p>
+3.  Copy the following XML string to a text editor:
  
     [!INCLUDE [important-lower-case-true-include](../../../includes/important-lower-case-true-include.md)]
     

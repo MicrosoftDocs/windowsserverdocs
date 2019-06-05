@@ -25,13 +25,13 @@ IKEv2 is a VPN tunneling protocol described in Internet Engineering Task Force R
 
 Configure the RRAS server to support IKEv2 connections while disabling unused protocols, which reduces the server’s security footprint. Additionally, configure the server to assign addresses to VPN clients from a static address pool. You can feasibly assign addresses from either a pool or a DHCP server; however, using a DHCP server adds complexity to the design and delivers minimal benefits.
 
->[!Important]
+>[!IMPORTANT]
 >It is important to:
 >- Install two Ethernet network adapters in the physical server. If you are installing the VPN server on a VM, you must create two External virtual switches, one for each physical network adapter; and then create two virtual network adapters for the VM, with each network adapter connected to one virtual switch.
 >
 >- Install the server on your perimeter network between your edge and internal firewalls, with one network adapter connected to the External Perimeter Network, and one network adapter connected to the Internal Perimeter Network.
 
->[!Warning]
+>[!WARNING]
 >Before you get started, make sure to enable IPv6 on the VPN server. Otherwise, a connection cannot be established and an error message displays.
 
 ## Install Remote Access as a RAS Gateway VPN Server
@@ -44,47 +44,53 @@ In this procedure, you install the Remote Access role as a single tenant RAS Gat
 
 2. Type the following command and press **ENTER**:
 
-   `Install-WindowsFeature DirectAccess-VPN -IncludeManagementTools`
+   ```powershell
+   Install-WindowsFeature DirectAccess-VPN -IncludeManagementTools
+   ```
 
    After installation completes, the following message appears in Windows PowerShell.
 
-
+   ```powershell
    | Success | Restart Needed | Exit Code |               Feature Result               |
    |---------|----------------|-----------|--------------------------------------------|
    |  True   |       No       |  Success  | {RAS Connection Manager Administration Kit |
+   ```
 
 ### Install the Remote Access role by using Server Manager
 
 You can use the following procedure to install the Remote Access role using Server Manager.
 
-1.  On the VPN server, in Server Manager, click **Manage** and click **Add Roles and Features**. <p>The Add Roles and Features Wizard opens.
+1. On the VPN server, in Server Manager, click **Manage** and click **Add Roles and Features**.
+   
+   The Add Roles and Features Wizard opens.
 
-2.  On the Before you begin page, click **Next**.
+2. On the Before you begin page, click **Next**.
 
-3.  On the Select Installation Type page, select the **Role-Based or feature-based installation** option and click **Next**.
+3. On the Select Installation Type page, select the **Role-Based or feature-based installation** option and click **Next**.
 
-4.  On the Select destination server page, select the **Select a server from the server pool** option.
+4. On the Select destination server page, select the **Select a server from the server pool** option.
 
-5.  Under Server Pool, select the local computer and click **Next**.
+5. Under Server Pool, select the local computer and click **Next**.
 
-6.  On the Select server roles page, in **Roles**, click **Remote Access**, and
-    then **Next**.
+6. On the Select server roles page, in **Roles**, click **Remote Access**, then **Next**.
 
-7.  On the Select features page, click **Next**.
+7. On the Select features page, click **Next**.
 
-8.  On the Remote Access page, click **Next**.
+8. On the Remote Access page, click **Next**.
 
-9.  On the Select role service page, in **Role services**, click **DirectAccess and VPN (RAS)**.<p>The **Add Roles and Features Wizard** dialog box opens.
+9.  On the Select role service page, in **Role services**, click **DirectAccess and VPN (RAS)**.
 
-10. On the Add Roles and Features dialog, click **Add Features** and click **Next**.
+   The **Add Roles and Features Wizard** dialog box opens.
 
-11. On the Web Server Role (IIS) page, click **Next**.
+11. On the Add Roles and Features dialog, click **Add Features** and click **Next**.
 
-12. On the Select role services page, click **Next**.
+12. On the Web Server Role (IIS) page, click **Next**.
 
-13. On the Confirm installation selections page, review your choices, and click **Install**.
+13. On the Select role services page, click **Next**.
 
-14. When the installation is complete, click **Close**.
+14. On the Confirm installation selections page, review your choices, and click **Install**.
+
+15. When the installation is complete, click **Close**.
 
 ## Configure Remote Access as a VPN Server
 
@@ -94,12 +100,14 @@ In this section, you can configure Remote Access VPN to allow IKEv2 VPN connecti
 
 2. In the **Tasks** menu, click **Open the Getting Started Wizard*
 
-   The Configure Remote Access wizard opens. 
+   The Configure Remote Access wizard opens.
 
    >[!NOTE] 
    >The Configure Remote Access wizard might open behind Server Manager. If you think the wizard is taking too long to open, move or minimize Server Manager to find out whether the wizard is behind it. If not, wait for the wizard to initialize.
 
-3. Click **Deploy VPN only**.<p>The Routing and Remote Access Microsoft Management Console (MMC) opens.
+3. Click **Deploy VPN only**.
+
+    The Routing and Remote Access Microsoft Management Console (MMC) opens.
 
 4. Right-click the VPN server, and click **Configure and Enable Routing and Remote Access**.
 
@@ -115,7 +123,7 @@ In this section, you can configure Remote Access VPN to allow IKEv2 VPN connecti
 
 8. Click **Finish** to close the wizard, and click **OK** to close the Routing and Remote Access dialog box.
 
-9. Click **Start service** to start Remote Access.
+9.  Click **Start service** to start Remote Access.
 
 10. In the Remote Access MMC, right-click the VPN server, and click **Properties**.
 
@@ -135,7 +143,9 @@ In this section, you can configure Remote Access VPN to allow IKEv2 VPN connecti
     
        For example, if the NetBIOS name of your NPS server is NPS1 and your domain name is corp.contoso.com, type **NPS1.corp.contoso.com**.
 
-    e. In **Shared secret**, click **Change**.<p>The Change Secret dialog box opens.
+    e. In **Shared secret**, click **Change**.
+
+       The Change Secret dialog box opens.
 
     f. In **New secret**, type a text string.
 
@@ -152,7 +162,9 @@ In this section, you can configure Remote Access VPN to allow IKEv2 VPN connecti
 
     - **Port**
 
-13. If necessary, change the values to match the requirements for your environment and click **OK**.<p>A NAS is a device that provides some level of access to a larger network. A NAS using a RADIUS infrastructure is also a RADIUS client, sending connection requests and accounting messages to a RADIUS server for authentication, authorization, and accounting.
+13. If necessary, change the values to match the requirements for your environment and click **OK**.
+
+    A NAS is a device that provides some level of access to a larger network. A NAS using a RADIUS infrastructure is also a RADIUS client, sending connection requests and accounting messages to a RADIUS server for authentication, authorization, and accounting.
 
 14. Review the setting for **Accounting provider**:
 
@@ -185,7 +197,9 @@ In this section, you can configure Remote Access VPN to allow IKEv2 VPN connecti
 
     c. Under Type of network access server, select **Remote Access Server (VPN-Dial up)** from the drop-down.
 
-18. In the Routing and Remote Access MMC, right-click **Ports,** and then click **Properties**. <p>The Ports Properties dialog box opens.
+18. In the Routing and Remote Access MMC, right-click **Ports,** and then click **Properties**. 
+    
+    The Ports Properties dialog box opens.
 
 19. Click **WAN Miniport (SSTP)** and click **Configure**. The Configure Device - WAN Miniport (SSTP) dialog box opens.
 
