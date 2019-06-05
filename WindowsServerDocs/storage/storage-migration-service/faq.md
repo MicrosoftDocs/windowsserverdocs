@@ -4,7 +4,7 @@ description: Frequently asked questions about Storage Migration Service, such as
 author: nedpyle
 ms.author: nedpyle
 manager: siroy
-ms.date: 11/06/2018
+ms.date: 06/04/2019
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: storage
@@ -82,17 +82,6 @@ The Storage Migration Service uses an extensible storage engine (ESE) database t
 7. Remove your own accounts permissions.
 8. Start the "Storage Migration Service" service.
 
-## <a name="transfer-threads"></a> Can I increase the number of files that copy simultaneously?
-
-The Storage Migration Service Proxy service copies 8 files simultaneously in a given job. This service runs on the orchestrator during transfer if the destination computers are Windows Server 2012 R2 or Windows Server 2016, but also runs on all Windows Server 2019 destination nodes. You can increase the number of simultaneous copy threads by adjusting the following registry REG_DWORD value name in decimal on every node running the SMS Proxy:
-
-    HKEY_Local_Machine\Software\Microsoft\SMSProxy
-    FileTransferThreadCount
-
- The valid range is 1 to 128 in Windows Server 2019. 
-
- After changing you must restart the Storage Migration Service Proxy service on all computers partipating in a migration. We plan to raise this number in a future version of Storage Migration Service.
-
 ## <a name="non-windows"></a> Can I migrate from sources other than Windows Server?
 
 The Storage Migration Service version shipped in Windows Server 2019 supports migrating from Windows Server 2003 and later operating systems. It cannot currently migrate from Linux, Samba, NetApp, EMC, or other SAN and NAS storage devices. We plan to allow this in a future version of Storage Migration Service, starting with Linux Samba support.
@@ -109,6 +98,41 @@ The Storage Migration Service version shipped in Windows Server 2019 doesn't sup
 
 The Storage Migration Service version shipped in Windows Server 2019 doesn't support consolidating multiple servers into one server. An example of consolidation would be migrating three separate source servers - which may have the same share names and local file paths - onto a single new server that virtualized those paths and shares to prevent any overlap or collision, then answered all three previous servers names and IP address. We may add this functionality in a future version of the Storage Migration Service.  
 
+## <a name="optimize"></a> Optimizing inventory and transfer performance
+
+The Storage Migration Service contains a multi-threaded read and copy engine called the Storage Migration Service Proxy service which we designed to be both fast as well as bring along perfect data fidelity lacking in many file copy tools. While the default configuration will be optimal for many customers, there are ways to improve SMS performance during inventory and transfer.
+
+- **Use Windows Server 2019 for the destination operating system.** Windows Server 2019 contains the Storage Migration Service Proxy service. When you install this feature and migrate to Windows Server 2019 destinations, all transfers operate as direct line of sight between source and destination. This service runs on the orchestrator during transfer if the destination computers are Windows Server 2012 R2 or Windows Server 2016, which means the transfers double-hop and will be much slower. If there are multiple jobs running with Windows Server 2012 R2 or Windows Server 2016 destinations, the orchestrator will become a bottleneck. 
+
+- **Alter default transfer threads.** The Storage Migration Service Proxy service copies 8 files simultaneously in a given job. You can increase the number of simultaneous copy threads by adjusting the following registry REG_DWORD value name in decimal on every node running the SMS Proxy:
+
+    HKEY_Local_Machine\Software\Microsoft\SMSProxy
+    FileTransferThreadCount
+
+   The valid range is 1 to 128 in Windows Server 2019. After changing you must restart the Storage Migration Service Proxy service on all computers participating in a migration. Use caution with this setting; setting it higher may require additional cores, storage performance, and network bandwidth. Setting it too high may lead to reduced performance compared to default settings. The ability to heuristically change thread settings based on CPU, memory, network, and storage is planned for a later version of SMS.
+
+- **Add cores and memory.**  We strongly recommend that the source, orchestrator, and destination computers have at least two processor cores or two vCPUs, and more can significantly aid inventory and transfer performance, especially when combined with FileTransferThreadCount (above). When transferring files that are larger than the usual Office formats (gigabytes or greater) transfer performance will benefit from more memory than the default 2GB minimum.
+
+- **Create multiple job.** When creating a job with multiple server sources, each server is contacted in serial fashion for inventory, transfer, and cutover. This means that each server must complete its phase before another server starts. To run more servers in parallel, simply create multiple jobs, with each job containing only one servers. SMS supports up to 100 simultaneously running jobs, meaning a single orchestrator can parallelize many Windows Server 2019 destination computers. We do not recommend running multiple parallel jobs if your destination computers are Windows Server 2016 or Windows Server 2012 R2 as without the SMS proxy service running on the destination, the orchestrator must perform all transfers itself and could become a bottleneck. The ability for servers to run in parallel inside a single job is a feature we plan to add in a later version of SMS.
+
+- **Use SMB 3 with RDMA networks.** If transferring from a Windows Server 2012 or later source computer, SMB 3.x supports SMB Direct mode and RDMA networking. RDMA moves most CPU cost of transfer from the motherboard CPUs to onboard NIC processors, reducing latency and server CPU utilization. In addition, RDMA networks like ROCE and iWARP typically have substantially higher bandwidth than typical TCP/ethernet, including 25, 50, and 100Gb speeds per interface. Using SMB Direct typically moves the transfer speed limit from the network down to the storage itself.   
+
+- **Use SMB 3 multichannel.** If transferring from a Windows Server 2012 or later source computer, SMB 3.x supports multichannel copies that can greatly improve file copy performance. This feature works automatically as long as the source and destination both have:
+
+   - Multiple network adapters
+   - One or more network adapters that support Receive Side Scaling (RSS)
+   - One of more network adapters that are configured by using NIC Teaming
+   - One or more network adapters that support RDMA
+
+- **Update drivers.** As appropriate, install latest vendor storage and enclosure firmware and drivers, latest vendor HBA drivers, latest vendor BIOS/UEFI firmware, latest vendor network drivers, and latest motherboard chipset drivers on source, destination, and orchestrator servers. Restart nodes as needed. Consult your hardware vendor documentation for configuring shared storage and networking hardware.
+
+- **Enable high-performance processing.** Ensure that BIOS/UEFI settings for servers enable high performance, such as disabling C-State, setting QPI speed, enabling NUMA, and setting highest memory frequency. Ensure power management in Windows Server is set to High Performance. Restart as required. Don't forget to return these to appropriate states after completing migration. 
+
+- **Tune hardware** Review the [Performance Tuning Guidelines for Windows Server 2016](https://docs.microsoft.com/en-us/windows-server/administration/performance-tuning/) for tuning the orchestrator and destination computers running Windows Server 2019 and Windows Server 2016. The [Network Subsystem Performance Tuning](https://docs.microsoft.com/en-us/windows-server/networking/technologies/network-subsystem/net-sub-performance-tuning-nics) section contains especially valuable information.
+
+- **Use faster storage.** While it may be difficult to upgrade the source computer storage speed, you should ensure the destination storage is at least as fast at write IO performance as the source is at read IO performance in order to ensure there is no unnecessary  bottleneck in transfers. If the destination is a VM, ensure that, at least for the purposes of migration, it runs in the fastest storage layer of your hypervisor hosts, such as on the flash tier or with Storage Spaces Direct HCI clusters utilizing mirrored all-flash or hybrid spaces. When the SMS migration is complete the VM can be live migrated to a slower tier or host.
+
+- **Update antivirus.** Always ensure your source and destination are running the latest patched version of antivirus software to ensure minimal performance overhead. As a test, you can *temporarily* exclude scanning of folders you're inventorying or migrating on the source and destination servers. If your transfer performance is improved, contact your antivirus software vendor for instructions or for an updated version of the antivirus software or an explanation of expected performance degradation.
 
 ## <a name="give-feedback"></a> What are my options to give feedback, file bugs, or get support?
 

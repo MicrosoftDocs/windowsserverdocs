@@ -13,7 +13,7 @@ ms.technology: identity-adfs
 
 # AD FS Requirements
 
->Applies To: Windows Server 2016
+
 
 The following are the requirements for deploying AD FS:  
   
@@ -190,16 +190,16 @@ The following table provides a summary of how many AD FS servers are supported i
 ## <a name="BKMK_6"></a>Browser requirements  
 When AD FS authentication is performed via a browser or browser control, your browser must comply to the following requirements:  
   
--   JavaScript must be enabled  
+- JavaScript must be enabled  
   
--   For single sign on, the client browser must be configured to allow cookies  
+- For single sign on, the client browser must be configured to allow cookies  
   
--   Server Name Indication \(SNI\) must be supported  
+- Server Name Indication \(SNI\) must be supported  
   
--   For user certificate & device certificate authentication, the browser must support SSL client certificate authentication  
+- For user certificate & device certificate authentication, the browser must support SSL client certificate authentication  
 
--   For seamless sign on using Windows Integrated Authentication, the federation service name (such as https:\/\/fs.contoso.com) must be configured in local intranet zone or trusted sites zone.
-## <a name="BKMK_7"></a>Network requirements  
+- For seamless sign on using Windows Integrated Authentication, the federation service name (such as https:\/\/fs.contoso.com) must be configured in local intranet zone or trusted sites zone.
+  ## <a name="BKMK_7"></a>Network requirements  
  
 **Firewall Requirements**  
   
@@ -209,7 +209,7 @@ In addition, if client user certificate authentication \(clientTLS authenticatio
 
 For additional information on hybrid port requirements see [Hybrid Identity Ports and Protocols](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnect-ports). 
 
-For additional information see [Best practices for securing Active Directory Federation Services](..\deployment\Best-Practices-Securing-AD-FS.md)
+For additional information see [Best practices for securing Active Directory Federation Services](../deployment/Best-Practices-Securing-AD-FS.md)
   
 **DNS Requirements**  
   

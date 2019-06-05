@@ -195,7 +195,7 @@ If you're using Windows Admin Center to manage Storage Replica, use the followin
 3. Select **Storage Replica** from Tools panel.
 4. Select **New** to create a new partnership.
 5. Provide the details of the partnership, and then select **Create**. <br>
-![The New Partnership screen showing partnership details, such as an 8 GB log size.](media\Storage-Replica-UI\Honolulu_SR_Create_Partnership.png)
+   ![The New Partnership screen showing partnership details, such as an 8 GB log size.](media/Storage-Replica-UI/Honolulu_SR_Create_Partnership.png)
 
     **Figure 3: Creating a new partnership**
 
@@ -404,23 +404,23 @@ Storage Replica has none of these limitations. It does, however, have several th
 If these are not blocking factors, Storage Replica allows you to replace DFS Replication servers with this newer technology.   
 The process is, at a high level:  
 
-1.  Install Windows Server on two servers and configure your storage. This could mean upgrading an existing set of servers or cleanly installing.  
-2.  Ensure that any data you want to replicate exists on one or more data volumes and not on the C: drive.   
-a.  You can also seed the data on the other server to save time, using a backup or file copies, as well as use thin provisioned storage. Making the metadata-like security match perfectly is unnecessary, unlike DFS Replication.  
-3.  Share the data on your source server and make it accessible through a DFS namespace. This is important, to ensure that users can still access it if the server name changes to one in a disaster site.  
-a.  You can create matching shares on the destination server, which will be unavailable during normal operations,   
-b.  Don't add the destination server to the DFS Namespaces namespace, or if you do, ensure that all its folder targets are disabled.  
-4.  Enable Storage Replica replication and complete initial sync. Replication can be either synchronous or asynchronous.   
-a.  However, synchronous is recommended in order to guarantee IO data consistency on the destination server.   
-b.  We strongly recommend enabling Volume Shadow Copies and periodically taking snapshots with VSSADMIN or your other tools of choice. This will guarantee applications flush their data files to disk consistently. In the event of a disaster, you can recover files from snapshots on the destination server that might have been partially replicated asynchronously. Snapshots replicate along with files.  
-5.  Operate normally until there is a disaster.  
-6.  Switch the destination server to be the new source, which surfaces its replicated volumes to users.  
-7.  If using synchronous replication, no data restore will be necessary unless the user was using an application that was writing data without transaction protection (this is irrespective of replication) during loss of the source server. If using asynchronous replication, the need for a VSS snapshot mount is higher but consider using VSS in all circumstances for application consistent snapshots.  
-8.  Add the server and its shares as a DFS Namespaces folder target.   
-9.  Users can then access their data.  
+1. Install Windows Server on two servers and configure your storage. This could mean upgrading an existing set of servers or cleanly installing.  
+2. Ensure that any data you want to replicate exists on one or more data volumes and not on the C: drive.   
+   a.  You can also seed the data on the other server to save time, using a backup or file copies, as well as use thin provisioned storage. Making the metadata-like security match perfectly is unnecessary, unlike DFS Replication.  
+3. Share the data on your source server and make it accessible through a DFS namespace. This is important, to ensure that users can still access it if the server name changes to one in a disaster site.  
+   a.  You can create matching shares on the destination server, which will be unavailable during normal operations,   
+   b.  Don't add the destination server to the DFS Namespaces namespace, or if you do, ensure that all its folder targets are disabled.  
+4. Enable Storage Replica replication and complete initial sync. Replication can be either synchronous or asynchronous.   
+   a.  However, synchronous is recommended in order to guarantee IO data consistency on the destination server.   
+   b.  We strongly recommend enabling Volume Shadow Copies and periodically taking snapshots with VSSADMIN or your other tools of choice. This will guarantee applications flush their data files to disk consistently. In the event of a disaster, you can recover files from snapshots on the destination server that might have been partially replicated asynchronously. Snapshots replicate along with files.  
+5. Operate normally until there is a disaster.  
+6. Switch the destination server to be the new source, which surfaces its replicated volumes to users.  
+7. If using synchronous replication, no data restore will be necessary unless the user was using an application that was writing data without transaction protection (this is irrespective of replication) during loss of the source server. If using asynchronous replication, the need for a VSS snapshot mount is higher but consider using VSS in all circumstances for application consistent snapshots.  
+8. Add the server and its shares as a DFS Namespaces folder target.   
+9. Users can then access their data.  
 
- > [!NOTE]
- > Disaster Recovery planning is a complex subject and requires great attention to detail. Creation of runbooks and the performance of annual live failover drills is highly recommended. When an actual disaster strikes, chaos will rule and experienced personnel may be unavailable.  
+   > [!NOTE]
+   > Disaster Recovery planning is a complex subject and requires great attention to detail. Creation of runbooks and the performance of annual live failover drills is highly recommended. When an actual disaster strikes, chaos will rule and experienced personnel may be unavailable.  
 
 ## <a name="add-azure-vm-expressroute"></a>Adding an Azure VM connected to your network via ExpressRoute
 

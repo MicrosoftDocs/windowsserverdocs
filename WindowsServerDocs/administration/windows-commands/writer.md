@@ -30,11 +30,11 @@ writer exclude [<Writer> | <Component>]
 
 ## Parameters
 
-|Parameter|Description|
-|---------|-----------|
-|verify|Verifies that the specified writer or component is included in the backup or restore procedure. The backup or restore procedure will fail if the writer or component is not included.|
-|exclude|Excludes the specified writer or component from the backup or restore procedure.|
-|[\<Writer> | <Component>]|Specifies the writer or component to verify or exclude. Writers are specified by writer GUID or by the writer name, for example "System Writer."|
+| Parameter  |                                                                                      Description                                                                                      |
+|------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|   verify   | Verifies that the specified writer or component is included in the backup or restore procedure. The backup or restore procedure will fail if the writer or component is not included. |
+|  exclude   |                                                   Excludes the specified writer or component from the backup or restore procedure.                                                    |
+| [\<Writer> |                                                                                     <Component>]                                                                                      |
 
 ## <a name="BKMK_examples"></a>Examples
 

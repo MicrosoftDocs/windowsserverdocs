@@ -14,7 +14,7 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017 
 ---
-#bitsadmin getpeercachingflags
+# bitsadmin getpeercachingflags
 
 >Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 

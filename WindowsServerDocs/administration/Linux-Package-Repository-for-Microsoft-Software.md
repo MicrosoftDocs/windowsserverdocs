@@ -23,8 +23,8 @@ Microsoft’s Linux Software Repository is comprised of multiple sub-repositorie
 
  - mssql-server - These repositories contain packages for Microsoft SQL Server on Linux - See also: [SQL Server on Linux](https://www.microsoft.com/en-us/sql-server/sql-server-vnext-including-Linux).
 
->[!Note]
-Packages in the Linux software repositories are subject to the license terms located in the packages. Please read the license terms prior to using the package. Your installation and use of the package constitutes your acceptance of these terms. If you do not agree with the license terms, do not use the package.
+> [!Note]
+> Packages in the Linux software repositories are subject to the license terms located in the packages. Please read the license terms prior to using the package. Your installation and use of the package constitutes your acceptance of these terms. If you do not agree with the license terms, do not use the package.
 
 
 ## Configuring the repositories

@@ -14,7 +14,6 @@ ms.author: billmath
 
 # Configure Name Resolution for a Federation Server Proxy in a DNS Zone That Serves Only the Perimeter Network
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 So that name resolution can work successfully for a federation server in an Active Directory Federation Services \(AD FS\) scenario in which one or more Domain Name System \(DNS\) zones serve only the perimeter network, the following tasks must be completed:  
   

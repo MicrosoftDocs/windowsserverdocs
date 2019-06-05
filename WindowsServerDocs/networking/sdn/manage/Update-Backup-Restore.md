@@ -126,18 +126,18 @@ Regular backups of the Network Controller database ensures business continuity i
 
 **Procedure:**
 
-1.	Use the VM backup method of your choice, or use Hyper-V to export a copy of each Network Controller VM.<p>Backing up the Network Controller VM ensures that the necessary certificates for decrypting the database are present.  
+1. Use the VM backup method of your choice, or use Hyper-V to export a copy of each Network Controller VM.<p>Backing up the Network Controller VM ensures that the necessary certificates for decrypting the database are present.  
 
-2.	If using System Center Virtual Machine Manager (SCVMM), stop the SCVMM service and back it up via SQL Server.<p>The goal here is to ensure that no updates get made to SCVMM during this time, which could create an inconsistency between the Network Controller backup and SCVMM.  
+2. If using System Center Virtual Machine Manager (SCVMM), stop the SCVMM service and back it up via SQL Server.<p>The goal here is to ensure that no updates get made to SCVMM during this time, which could create an inconsistency between the Network Controller backup and SCVMM.  
 
    >[!IMPORTANT]
    >Do not re-start the SCVMM service until the Network Controller backup is complete.
 
-3.	Backup the Network Controller database with the `new-networkcontrollerbackup` cmdlet.
+3. Backup the Network Controller database with the `new-networkcontrollerbackup` cmdlet.
 
-4.	Check the completion and success of the backup with the `get-networkcontrollerbackup` cmdlet.
+4. Check the completion and success of the backup with the `get-networkcontrollerbackup` cmdlet.
 
-5.	If using SCVMM, start SCVMM service.
+5. If using SCVMM, start SCVMM service.
 
 
 

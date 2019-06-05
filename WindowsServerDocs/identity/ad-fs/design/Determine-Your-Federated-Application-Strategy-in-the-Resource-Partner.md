@@ -14,8 +14,6 @@ ms.technology: identity-adfs
 
 # Determine Your Federated Application Strategy in the Resource Partner
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
-
 An important part of designing a new Active Directory Federation Services \(AD FS\) infrastructure in the resource partner organization is determining your full set of applications and services that will be used to participate in the federation and which account partners will be the recipients of those resources. Before you design a federated application and services strategy, consider the following questions:  
   
 -   Will you be enabling and deploying an ASP.NET application or a Windows Communication Foundation \(WCF\) service for federation?  

@@ -14,8 +14,6 @@ ms.technology: identity-adfs
 
 # Create a Rule to Pass Through or Filter an Incoming Claim
 
->Applies To: Windows Server 2016, Windows Server 2012 R2
-
 Using the Pass Through or Filter an Incoming Claim rule template in Active Directory Federation Services \(AD FS\), you can pass through all incoming claims with a selected claim type. You can also filter the values of incoming claims with a selected claim type. For example, you can use this rule template to create a rule that will send all incoming group claims. You can also use this rule to send only user principal name \(UPN\) claims that end with @fabrikam.  
   
 You can use the following procedure to create a claim rule with the AD FS Management snap\-in.  

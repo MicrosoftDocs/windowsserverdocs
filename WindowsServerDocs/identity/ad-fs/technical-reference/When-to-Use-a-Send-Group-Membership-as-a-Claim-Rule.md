@@ -12,8 +12,6 @@ ms.prod: windows-server-threshold
 ms.technology: identity-adfs
 ---
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
-
 # When to Use a Send Group Membership as a Claim Rule
 You can use this rule in Active Directory Federation Services \(AD FS\) when you want to issue a new outgoing claim value for only those users who are members of a specified Active Directory security group. When you use this rule, you issue a single claim for only the group that you specify and that matches the rule logic, as described in the following table.  
   

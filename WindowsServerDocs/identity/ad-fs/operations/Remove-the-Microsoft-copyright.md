@@ -13,7 +13,7 @@ ms.technology: identity-adfs
 ---
 # Remove the Microsoft copyright 
 
->Applies To: Windows Server 2016, Windows Server 2012 R2
+
  
 By default, the AD FS pages contain the Microsoft copyright. To remove this copyright from your customized pages, you can use the following procedure. 
 

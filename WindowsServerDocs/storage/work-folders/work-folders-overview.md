@@ -18,18 +18,18 @@ This topic discusses Work Folders, a role service for file servers running Windo
   
 If you're looking to download or use Work Folders on Windows 10, Windows 7, or an Android or iOS device, see the following:
 
--   [Work Folders for Windows 10](https://support.microsoft.com/help/12370/windows-10-work-folders)
--   [Work Folders for Windows 7 (64 bit download)](https://www.microsoft.com/download/details.aspx?id=42558)
--   [Work Folders for Windows 7 (32 bit download)](https://www.microsoft.com/download/details.aspx?id=42559)
+- [Work Folders for Windows 10](https://support.microsoft.com/help/12370/windows-10-work-folders)
+- [Work Folders for Windows 7 (64 bit download)](https://www.microsoft.com/download/details.aspx?id=42558)
+- [Work Folders for Windows 7 (32 bit download)](https://www.microsoft.com/download/details.aspx?id=42559)
 - [Work Folders for iOS](https://itunes.apple.com/app/work-folders/id950878067)
 - [Work Folders for Android](https://play.google.com/store/apps/details?id=com.microsoft.workfolders)
 
-##  <a name="BKMK_OVER"></a> Role description  
+## Role description  
  With Work Folders users can store and access work files on personal computers and devices, often referred to as bring-your-own device (BYOD), in addition to corporate PCs. Users gain a convenient location to store work files, and they can access them from anywhere. Organizations maintain control over corporate data by storing the files on centrally managed file servers, and optionally specifying user device policies such as encryption and lock-screen passwords.  
   
  Work Folders can be deployed with existing deployments of Folder Redirection, Offline Files, and home folders. Work Folders stores user files in a folder on the server called a *sync share*. You can specify a folder that already contains user data, which enables you to adopt Work Folders without migrating servers and data or immediately phasing out your existing solution.  
   
-##  <a name="BKMK_APP"></a> Practical applications  
+## Practical applications  
  Administrators can use Work Folders to provide users with access to their work files while keeping centralized storage and control over the organization's data. Some specific applications for Work Folders include:  
   
 -   Provide a single point of access to work files from a user's work and personal computers and devices  
@@ -44,7 +44,8 @@ If you're looking to download or use Work Folders on Windows 10, Windows 7, or a
   
 -   Use Failover Clustering with Work Folders to provide a high-availability solution  
   
-##  <a name="BKMK_NEW"></a> Important functionality  
+## Important functionality
+
  Work Folders includes the following functionality.  
   
 |Functionality|Availability|Description|  
@@ -54,7 +55,8 @@ If you're looking to download or use Work Folders on Windows 10, Windows 7, or a
 |Work Folders integration with Windows|Windows 10<br /><br /> Windows 8.1<br /><br /> Windows RT 8.1<br /><br /> Windows 7 (download required)|Work Folders provides the following functionality in Windows computers:<br /><br /> -   A Control Panel item that sets up and monitors Work Folders<br />-   File Explorer integration that enables easy access to files in Work Folders<br />-   A sync engine that transfers files to and from a central file server while maximizing battery life and system performance|  
 |Work Folders app for devices|Android<br /><br /> Apple iPhone and iPad®|An app that allows popular devices to access files in Work Folders|  
   
-##  <a name="BKMK_New"></a> New and changed functionality  
+## New and changed functionality
+  
  The following table describes some of the major changes in Work Folders.  
   
 |Feature/functionality|New or updated?|Description|  
@@ -64,7 +66,7 @@ If you're looking to download or use Work Folders on Windows 10, Windows 7, or a
 |Integrated with Windows Information Protection (WIP)|Added to Windows 10 version 1607|If an administrator deploys WIP, Work Folders can enforce data protection by encrypting the data on the PC. The encryption is using a key associated with the Enterprise ID, which can be remotely wiped by using a supported mobile device management package such as Microsoft Intune.|  
 |Microsoft Office integration|Added to Windows 10 version 1511|In Windows 8.1 you can navigate to Work Folders inside Office apps by clicking or tapping This PC and then navigating to the Work Folders location on your PC. In Windows 10 you can make it even easier to get to Work Folders by adding it to the list of locations that Office shows when saving or opening files. For more info, see [Work Folders in Windows 10](https://windows.microsoft.com/windows-10/work-folders-in-windows-10) and  [Troubleshooting using Work Folders as a Place in Microsoft Office](https://social.technet.microsoft.com/wiki/contents/articles/32881.troubleshooting-using-work-folders-as-a-place-in-microsoft-office.aspx).|  
   
-##  <a name="BKMK_SOFT"></a> Software requirements  
+## Software requirements
 
 Work Folders has the following software requirements for file servers and your network infrastructure:  
   
@@ -120,7 +122,7 @@ Work Folders has the following software requirements for client computers:
   
 -   Work Folders doesn't support rolling back the virtual machine state of client virtual machines. Instead perform backup and restore operations from inside the client virtual machine by using System Image Backup or another backup app.  
   
-##  <a name="BKMK_Comparison"></a> Work Folders compared to other sync technologies  
+## Work Folders compared to other sync technologies  
 
 The following table discusses how various Microsoft sync technologies are positioned and when to use each.  
   
@@ -135,7 +137,7 @@ The following table discusses how various Microsoft sync technologies are positi
 > [!NOTE]
 >  In addition to the sync technologies listed in the previous table, Microsoft offers other replication technologies, including DFS Replication, which is designed for server-to-server replication, and BranchCache, which is designed as a branch office WAN acceleration technology. For more information, see [DFS Namespaces and DFS Replication](https://technet.microsoft.com/library/jj127250(v=ws.11).aspx) and [BranchCache Overview](https://technet.microsoft.com/library/hh831696(v=ws.11).aspx)  
   
-##  <a name="BKMK_INSTALL"></a> Server Manager information  
+## Server Manager information  
 
 Work Folders is part of the File and Storage Services role. You can install Work Folders by using the Add Roles and Features Wizard or the `Install-WindowsFeature` cmdlet. Both methods accomplish the following:  
   
@@ -145,12 +147,13 @@ Work Folders is part of the File and Storage Services role. You can install Work
   
 -   Installs the SyncShare Windows PowerShell module to manage Work Folders on the server  
   
-##  <a name="BKMK_Azure"></a> Interoperability with Windows Azure virtual machines  
+## Interoperability with Windows Azure virtual machines
+
  You can run this Windows Server role service on a virtual machine in Windows Azure. This scenario has been tested with Windows Server 2012 R2 and Windows Server 2016.  
   
 To learn about how to get started with Windows Azure virtual machines, visit the [Windows Azure web site](http://www.windowsazure.com/documentation/services/virtual-machines).  
   
-##  <a name="BKMK_LINKS"></a> See also  
+## See also  
  For additional related information, see the following resources.  
   
 |Content type|References|  

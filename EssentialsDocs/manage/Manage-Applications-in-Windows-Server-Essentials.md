@@ -27,21 +27,21 @@ manager: dongill
 ##  <a name="BKMK_1"></a> Application management tasks in the Dashboard  
  The **Applications** management page of the Dashboard provides:  
   
--   A list of installed add-ins, which displays:  
+- A list of installed add-ins, which displays:  
   
-    -   The name of the online service or add-in  
+  -   The name of the online service or add-in  
   
-    -   The update status of the add-in  
+  -   The update status of the add-in  
   
-    -   The subscription status of the add-in  
+  -   The subscription status of the add-in  
   
-    -   The name of the company or publisher that is making the add-in available  
+  -   The name of the company or publisher that is making the add-in available  
   
--   A tasks pane that includes a set of tasks for managing a selected add-in  
+- A tasks pane that includes a set of tasks for managing a selected add-in  
   
--   A list of add-ins that are available to download and install from Microsoft Pinpoint  
+- A list of add-ins that are available to download and install from Microsoft Pinpoint  
   
- The following table describes the various add-in management tasks that are available in the server Dashboard. Some of the tasks are add-in specific, so they are only visible when you select an add-in in the list.  
+  The following table describes the various add-in management tasks that are available in the server Dashboard. Some of the tasks are add-in specific, so they are only visible when you select an add-in in the list.  
   
 |Task name|Description|  
 |---------------|-----------------|  

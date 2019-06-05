@@ -22,13 +22,13 @@ manager: dongill
   
 ### To run the Repair Anywhere Access Wizard  
   
-1.  Open the Dashboard.  
+1. Open the Dashboard.  
   
-2.  Click **Settings**, click the **Anywhere Access** tab, and then click **Repair**.  
+2. Click **Settings**, click the **Anywhere Access** tab, and then click **Repair**.  
   
-3.  Follow the instructions in the Repair Anywhere Access Wizard.  
+3. Follow the instructions in the Repair Anywhere Access Wizard.  
   
- If you are using an advanced network setup or using a non-Microsoft firewall, you may need to open additional ports on the firewall. The ports in the following table are registered with Internet Assigned Numbers Authority (IANA).  
+   If you are using an advanced network setup or using a non-Microsoft firewall, you may need to open additional ports on the firewall. The ports in the following table are registered with Internet Assigned Numbers Authority (IANA).  
   
 |Port Number|Description|  
 |-----------------|-----------------|  

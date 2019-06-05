@@ -13,11 +13,11 @@ ms.technology: identity-adfs
 ---
 
 
-#Client access policy claim Types in AD FS
+# Client access policy claim Types in AD FS
 
 To provide additional request context information, Client Access Policies use the following claim types, which AD FS generates from request header information for processing.  For more information see [The role of the claims engine](../technical-reference/the-role-of-the-claims-engine.md).
 
-##X-MS-Forwarded-Client-IP
+## X-MS-Forwarded-Client-IP
 
 Claim type: `https://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-forwarded-client-ip`
 
@@ -30,8 +30,8 @@ This AD FS claim represents a “best attempt” at ascertaining the IP address 
 	>The IP address of a client on the corporate network will appear as the external interface IP address of the organization’s outbound proxy or gateway.
 
 - One or more IP addresses
-	- If Exchange Online cannot determine the IP address of the connecting client, it will set the value based on the value of the x-forwarded-for header, a non-standard header that can be included in HTTP based requests and is supported by many clients, load balancers, and proxies on the market.
-	- Multiple IP addresses indicating the client IP address and the address of each proxy that passed the request will be separated by a comma.
+  - If Exchange Online cannot determine the IP address of the connecting client, it will set the value based on the value of the x-forwarded-for header, a non-standard header that can be included in HTTP based requests and is supported by many clients, load balancers, and proxies on the market.
+  - Multiple IP addresses indicating the client IP address and the address of each proxy that passed the request will be separated by a comma.
 
 	>![Note]
 	>IP addresses related to Exchange Online infrastructure will not be present in the list.

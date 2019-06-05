@@ -13,8 +13,6 @@ ms.technology: identity-adfs
 ---
 
 # When to Use Identity Delegation
-
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
   
 ## What is identity delegation?  
 Identity delegation is a feature of Active Directory Federation Services \(AD FS\) that allows administrator\-specified accounts to impersonate users. The account that impersonates the user is called the *delegate*. This delegation capability is critical for many distributed applications for which there is a series of access control checks that must be made sequentially for each application, database, or service that is in the authorization chain for the originating request. Many real\-world scenarios exist in which a Web application “front end” must retrieve data from a more secure “back end”, such as a Web service that is connected to a Microsoft SQL Server database.  

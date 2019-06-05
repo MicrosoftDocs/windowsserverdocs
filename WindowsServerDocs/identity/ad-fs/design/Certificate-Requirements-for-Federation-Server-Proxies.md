@@ -14,8 +14,6 @@ ms.technology: identity-adfs
 
 # Certificate Requirements for Federation Server Proxies
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
-
 Servers that are running in the federation server proxy role in Active Directory Federation Services \(AD FS\) are required to use Secure Sockets Layer \(SSL\) server authentication certificates. Federation server proxies use SSL server authentication certificates to secure Web server traffic communication with Web clients.  
   
 Federation server proxies are usually exposed to computers on the Internet that are not included in your enterprise public key infrastructure \(PKI\). Therefore, use a server authentication certificate that is issued by a public \(third\-party\) certification authority \(CA\), for example, VeriSign.  

@@ -14,7 +14,6 @@ ms.technology: identity-adfs
 
 # Mapping Your Deployment Goals to an AD FS Design
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 After you finish reviewing the existing Active Directory Federation Services \(AD FS\) deployment goals and you determine which goals are related to your deployment, you can map those goals to a specific AD FS design. For more information about AD FS predefined deployment goals, see [Identifying Your AD FS Deployment Goals](Identifying-Your-AD-FS-Deployment-Goals.md).  
   

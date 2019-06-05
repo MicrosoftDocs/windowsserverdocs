@@ -14,7 +14,6 @@ ms.technology: identity-adfs
 
 ## Best practices for securing Active Directory Federation Services
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 This document provides best practices for the secure planning and deployment of Active Directory Federation Services (AD FS) and Web Application Proxy.  It contains information about the default behaviors of these components and recommendations for additional security configurations for an organization with specific use cases and security requirements.
 

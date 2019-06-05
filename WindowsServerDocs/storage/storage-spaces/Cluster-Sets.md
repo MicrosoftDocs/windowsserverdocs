@@ -29,7 +29,7 @@ Cluster sets technology is developed to meet specific customer requests operatin
 
 From a high level view, this is what cluster sets can look like.
 
-![Cluster sets solution View](media\Cluster-sets-Overview\Cluster-sets-solution-View.png)
+![Cluster sets solution View](media/Cluster-sets-Overview/Cluster-sets-solution-View.png)
 
 The following provides a quick summary of each of the elements in the above image:
 

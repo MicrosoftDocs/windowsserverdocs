@@ -16,8 +16,8 @@ ms.date: 12/05/2016
 
 >Applies To: Windows 10, Windows Server 2016, Microsoft Hyper-V Server 2016, Windows Server 2019, Microsoft Hyper-V Server 2019
 
-> [!WARNING]
-> If you plan to ever upload a Windows virtual machines (VM) from on-premises to Microsoft Azure, **only generation 1 VMs** that are in the VHD file format and have a fixed sized disk are supported. For more information on uploading a Windows VHD or VHDX, see [Prepare a Windows VHD or VHDX to upload to Azure](https://docs.microsoft.com/en-us/azure/virtual-machines/windows/prepare-for-upload-vhd-image).
+> [!NOTE]
+> If you plan to ever upload a Windows virtual machines (VM) from on-premises to Microsoft Azure, generation 1 and generation 2 VMs in the VHD file format and have a fixed sized disk are supported. See [Generation 2 VMs on Azure](https://docs.microsoft.com/azure/virtual-machines/windows/generation-2) to learn more about generation 2 capabilities supported on Azure. For more information on uploading a Windows VHD or VHDX, see [Prepare a Windows VHD or VHDX to upload to Azure](https://docs.microsoft.com/azure/virtual-machines/windows/prepare-for-upload-vhd-image).
 
 Your choice to create a generation 1 or generation 2 virtual machine depends on which guest operating system you want to install and the boot method you want to use to deploy the virtual machine. We recommend that you create a generation 2 virtual machine to take advantage of features like Secure Boot unless one of the following statements is true:  
 
@@ -173,7 +173,7 @@ Here are some of the advantages you get when you use a generation 2 virtual mach
 - **Larger boot volume**
     The maximum boot volume for generation 2 virtual machines is 64 TB. This is the maximum disk size supported by a .VHDX. For generation 1 virtual machines, the maximum boot volume is 2TB for a .VHDX and 2040GB for a .VHD. For more information, see [Hyper-V Virtual Hard Disk Format Overview](https://technet.microsoft.com/library/hh831446.aspx).  
 
- You may also see a slight improvement in virtual machine boot and installation times with generation 2 virtual machines.
+  You may also see a slight improvement in virtual machine boot and installation times with generation 2 virtual machines.
 
 ## <a name="BKMK_DeviceCompare"></a> What's the difference in device support?
 

@@ -38,20 +38,19 @@ WDSUTIL [Options] /New-CaptureImage [/Server:<Server name>]
 
 ## Parameters
 
-|Parameter|Description|
-|---------|-----------|
-|[/Server:\<Server name>]|Specifies the name of the server. This can be either the NetBIOS name or the fully qualified domain name (FQDN). If no server name is specified, the local server will be used.|
-|/Image:\<Image name>|Specifies the name of the source boot image.|
-|/Architecture: {x86 | ia64 | x64}|Specifies the architecture of the image to use. Because you can have the same image name for different boot images in different architectures, specifying this ensures the correct image is used.|
-|[/Filename: \<Filename>]|If the image cannot be uniquely identified by name, you must use this option to specify the file name.|
-|/DestinationImage|Specifies the settings for the destination image. You specify the settings using the following options:</br>-   /FilePath: \<File path and name> Sets the full file path for the new capture image.</br>-   [/Name: \<Name>] - Sets the display name of the image. If no display name is specified, the display name of the source image will be used.</br>-   [/Description: \<Description>] - Sets the description of the image.</br>-   [/Overwrite: {Yes | No | Append}] - Determines whether the file specified in **/DestinationImage** should be overwritten if another file with that name already exists at the /FilePath. **Yes** overwrites the existing file. **No** (default) causes an error to occur if another file with the same name already exists. **Append** attaches the generated image as a new image within the existing .wim file.</br>-   [/UnattendFilePath: \<File path>] - Sets the full path and name for the unattended image capture file.|
+|        Parameter         |                                                                                                                                                                                                                         Description                                                                                                                                                                                                                          |
+|--------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| [/Server:\<Server name>] |                                                                                                                                       Specifies the name of the server. This can be either the NetBIOS name or the fully qualified domain name (FQDN). If no server name is specified, the local server will be used.                                                                                                                                        |
+|   /Image:\<Image name>   |                                                                                                                                                                                                         Specifies the name of the source boot image.                                                                                                                                                                                                         |
+|   /Architecture: {x86    |                                                                                                                                                                                                                             ia64                                                                                                                                                                                                                             |
+| [/Filename: \<Filename>] |                                                                                                                                                                            If the image cannot be uniquely identified by name, you must use this option to specify the file name.                                                                                                                                                                            |
+|    /DestinationImage     | Specifies the settings for the destination image. You specify the settings using the following options:</br>-   /FilePath: \<File path and name> Sets the full file path for the new capture image.</br>-   [/Name: \<Name>] - Sets the display name of the image. If no display name is specified, the display name of the source image will be used.</br>-   [/Description: \<Description>] - Sets the description of the image.</br>-   [/Overwrite: {Yes |
 
 ## <a name="BKMK_examples"></a>Examples
 
 To create a capture image and name it WinPECapture.wim, type:
 ```
 WDSUTIL /New-CaptureImage /Image:"WinPE boot image" /Architecture:x86 /DestinationImage /FilePath:"C:\Temp\WinPECapture.wim"
-
 ```
 To create a capture image and apply the specified settings, type:
 ```

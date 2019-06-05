@@ -24,11 +24,13 @@ changes configuration settings that affect how lookups function.
 set <KeyWord>[=<Value>]
 ```
 ## Parameters
-|Parameter|Description|
-|-------|--------|
-|<KeyWord>|Identifies subcommands that are derived from the **set** subcommand. For example, the subcommand **set d2** has a keyword of [**no**]**d2**. For the list of subcommands that are derived from the **set** subcommand, see additional references.|
-|<Value>|Specifies the nslookup configuration setting value for each subcommand.|
-|{help &#124; ?}|Displays a short summary of **nslookup** subcommands.|
+
+|    Parameter    |                                                                                                                    Description                                                                                                                    |
+|-----------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|    <KeyWord>    | Identifies subcommands that are derived from the **set** subcommand. For example, the subcommand **set d2** has a keyword of [**no**]**d2**. For the list of subcommands that are derived from the **set** subcommand, see additional references. |
+|     <Value>     |                                                                                      Specifies the nslookup configuration setting value for each subcommand.                                                                                      |
+| {help &#124; ?} |                                                                                               Displays a short summary of **nslookup** subcommands.                                                                                               |
+
 ## Remarks
 Use **set all** to see a listing of the current settings.
 ## additional references

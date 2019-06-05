@@ -68,6 +68,7 @@
 ## [Remote Desktop clients](clients/remote-desktop-clients.md)
 ### General information
 #### [Which client works best for you?](clients/remote-desktop-app-compare.md)
+#### [Remote Desktop RDP file settings](clients/rdp-files.md)
 #### [Remote Desktop URI scheme](clients/remote-desktop-uri.md)
 #### [Remote Desktop client FAQ](clients/remote-desktop-client-faq.md)
 #### [Privacy settings for managed apps and desktops](clients/remote-privacy-settings.md)
