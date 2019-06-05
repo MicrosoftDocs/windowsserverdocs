@@ -31,20 +31,20 @@ To view the command syntax, click one of the following commands:
 
 ## Remarks
 
--   **SchTasks.exe** performs the same operations as **Scheduled Tasks** in **Control Panel**. You can use these tools together and interchangeably.
--   **Schtasks** replaces **At.exe**, a tool included in previous versions of Windows. Although **At.exe** is still included in the Windows Server 2003 family, **schtasks** is the recommended command-line task scheduling tool.
--   The parameters in a **schtasks** command can appear in any order. Typing **schtasks** without any parameters performs a query.
--   Permissions for **schtasks**  
-    -   You must have permission to run the command. Any user can schedule a task on the local computer, and they can view and change the tasks that they scheduled. Members of the Administrators group can schedule, view, and change all tasks on the local computer.
-    -   To schedule, view, or change a task on a remote computer, you must be member of the Administrators group on the remote computer, or you must use the **/u** parameter to provide the credentials of an Administrator of the remote computer.
-    -   You can use the **/u** parameter in a **/create** or **/change** operation only when the local and remote computers are in the same domain or the local computer is in a domain that the remote computer domain trusts. Otherwise, the remote computer cannot authenticate the user account specified and it cannot verify that the account is a member of the Administrators group.
-    -   The task must have permission to run. The permissions required vary with the task. By default, tasks run with the permissions of the current user of the local computer, or with the permissions of the user specified by the **/u** parameter, if one is included. To run a task with permissions of a different user account or with system permissions, use the **/ru** parameter.
--   To verify that a scheduled task ran or to find out why a scheduled task did not run, see the Task Scheduler service transaction log, *SystemRoot*\SchedLgU.txt. This log records attempted runs initiated by all tools that use the service, including **Scheduled Tasks** and **SchTasks.exe**.
--   On rare occasions, task files become corrupted. Corrupted tasks do not run. When you try to perform an operation on corrupted tasks, **SchTasks.exe** displays the following error message:  
-    ```
-    ERROR: The data is invalid.
-    ```  
-    You cannot recover corrupted tasks. To restore the task scheduling features of the system, use **SchTasks.exe** or **Scheduled Tasks** to delete the tasks from the system and reschedule them.
+- **SchTasks.exe** performs the same operations as **Scheduled Tasks** in **Control Panel**. You can use these tools together and interchangeably.
+- **Schtasks** replaces **At.exe**, a tool included in previous versions of Windows. Although **At.exe** is still included in the Windows Server 2003 family, **schtasks** is the recommended command-line task scheduling tool.
+- The parameters in a **schtasks** command can appear in any order. Typing **schtasks** without any parameters performs a query.
+- Permissions for **schtasks**  
+  -   You must have permission to run the command. Any user can schedule a task on the local computer, and they can view and change the tasks that they scheduled. Members of the Administrators group can schedule, view, and change all tasks on the local computer.
+  -   To schedule, view, or change a task on a remote computer, you must be member of the Administrators group on the remote computer, or you must use the **/u** parameter to provide the credentials of an Administrator of the remote computer.
+  -   You can use the **/u** parameter in a **/create** or **/change** operation only when the local and remote computers are in the same domain or the local computer is in a domain that the remote computer domain trusts. Otherwise, the remote computer cannot authenticate the user account specified and it cannot verify that the account is a member of the Administrators group.
+  -   The task must have permission to run. The permissions required vary with the task. By default, tasks run with the permissions of the current user of the local computer, or with the permissions of the user specified by the **/u** parameter, if one is included. To run a task with permissions of a different user account or with system permissions, use the **/ru** parameter.
+- To verify that a scheduled task ran or to find out why a scheduled task did not run, see the Task Scheduler service transaction log, *SystemRoot*\SchedLgU.txt. This log records attempted runs initiated by all tools that use the service, including **Scheduled Tasks** and **SchTasks.exe**.
+- On rare occasions, task files become corrupted. Corrupted tasks do not run. When you try to perform an operation on corrupted tasks, **SchTasks.exe** displays the following error message:  
+  ```
+  ERROR: The data is invalid.
+  ```  
+  You cannot recover corrupted tasks. To restore the task scheduling features of the system, use **SchTasks.exe** or **Scheduled Tasks** to delete the tasks from the system and reschedule them.
 
 ## <a name="BKMK_create"></a>schtasks create
 
@@ -123,10 +123,11 @@ The **/u** and **/p** parameters are valid only for scheduling a task on a remot
 
 Runs the task with permissions of the specified user account. By default, the task runs with the permissions of the current user of the local computer, or with the permission of the user specified by the **/u** parameter, if one is included. The **/ru** parameter is valid when scheduling tasks on local or remote computers.
 
-|Value|Description|
-|-----|-----------|
-|[\<Domain>\]<User>|Specifies an alternate user account.|
-|System or ""|Specifies the local System account, a highly privileged account used by the operating system and system services.|
+
+|       Value        |                                                    Description                                                    |
+|--------------------|-------------------------------------------------------------------------------------------------------------------|
+| [\<Domain>\]<User> |                                       Specifies an alternate user account.                                        |
+|    System or ""    | Specifies the local System account, a highly privileged account used by the operating system and system services. |
 
 ##### /rp \<Password>
 
@@ -156,11 +157,12 @@ Specifies how often the task runs within its schedule type. This parameter is va
 
 Specifies a day (or days) of the week or a day (or days) of a month. Valid only with a WEEKLY or MONTHLY schedule.
 
-|Schedule type|Modifier|Day values (/d)|Description|
-|-------------|--------|---------------|-----------|
-|WEEKLY|1 - 52|MON - SUN[,MON - SUN...] | *|Optional. MON is the default. The wildcard value (*) means every day.|
-|MONTHLY|FIRST, SECOND, THIRD, FOURTH, LAST|MON - SUN|Required for a specific week schedule.|
-|MONTHLY|None or {1 - 12}|1 - 31|Optional and valid only with no modifier (**/mo**) parameter (a specific date schedule) or when the **/mo** is 1 - 12 (an "every \<N> months" schedule). The default is day 1 (the first day of the month).|
+
+| Schedule type |              Modifier              |     Day values (/d)      |                                                                                                 Description                                                                                                 |
+|---------------|------------------------------------|--------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|    WEEKLY     |               1 - 52               | MON - SUN[,MON - SUN...] |                                                                                                     \*                                                                                                      |
+|    MONTHLY    | FIRST, SECOND, THIRD, FOURTH, LAST |        MON - SUN         |                                                                                   Required for a specific week schedule.                                                                                    |
+|    MONTHLY    |          None or {1 - 12}          |          1 - 31          | Optional and valid only with no modifier (**/mo**) parameter (a specific date schedule) or when the **/mo** is 1 - 12 (an "every \<N> months" schedule). The default is day 1 (the first day of the month). |
 
 ##### /m Month[,Month...]
 
@@ -207,11 +209,12 @@ The format for *StartDate* varies with the locale selected for the local compute
 
 The valid date formats are listed in the following table. Use the format most similar to the format selected for **Short date** in **Regional and Language Options** in **Control Panel** on the local computer.
 
-|Value|Description|
-|-----|-----------|
-|\<MM>/<DD>/<YYYY>|Use for month-first formats, such as **English (United States)** and **Spanish (Panama)**.|
-|\<DD>/<MM>/<YYYY>|Use for day-first formats, such as **Bulgarian** and **Dutch (Netherlands)**.|
-|\<YYYY>/<MM>/<DD>|Use for year-first formats, such as **Swedish** and **French (Canada)**.|
+
+|       Value       |                                        Description                                         |
+|-------------------|--------------------------------------------------------------------------------------------|
+| \<MM>/<DD>/<YYYY> | Use for month-first formats, such as **English (United States)** and **Spanish (Panama)**. |
+| \<DD>/<MM>/<YYYY> |       Use for day-first formats, such as **Bulgarian** and **Dutch (Netherlands)**.        |
+| \<YYYY>/<MM>/<DD> |          Use for year-first formats, such as **Swedish** and **French (Canada)**.          |
 
 /ed \<EndDate>
 
@@ -221,11 +224,12 @@ The format for *EndDate* varies with the locale selected for the local computer 
 
 The valid date formats are listed in the following table. Use the format most similar to the format selected for **Short date** in **Regional and Language Options** in **Control Panel** on the local computer.
 
-|Value|Description|
-|-----|-----------|
-|\<MM>/<DD>/<YYYY>|Use for month-first formats, such as **English (United States)** and **Spanish (Panama)**.|
-|\<DD>/<MM>/<YYYY>|Use for day-first formats, such as **Bulgarian** and **Dutch (Netherlands)**.|
-|\<YYYY>/<MM>/<DD>|Use for year-first formats, such as **Swedish** and **French (Canada)**.|
+
+|       Value       |                                        Description                                         |
+|-------------------|--------------------------------------------------------------------------------------------|
+| \<MM>/<DD>/<YYYY> | Use for month-first formats, such as **English (United States)** and **Spanish (Panama)**. |
+| \<DD>/<MM>/<YYYY> |       Use for day-first formats, such as **Bulgarian** and **Dutch (Netherlands)**.        |
+| \<YYYY>/<MM>/<DD> |          Use for year-first formats, such as **Swedish** and **French (Canada)**.          |
 
 ##### /it
 
@@ -442,7 +446,7 @@ schtasks /create /tn <TaskName> /tr <TaskRun> /sc weekly [/d {<MON - SUN>[,MON -
 
 #### Remarks
 
-The "day of the week" schedule is a variation of the weekly schedule. In a weekly schedule, the **/sc weekly** parameter is required. The **/mo** (modifier) parameter is optional and specifies the number of weeks between each run of the task. The default value for **/mo** is 1 (every week). The **/d** parameter, which is optional, schedules the task to run on specified days of the week, or on all days (*). The default is MON (Monday). The every day option (**/d \***) is equivalent to scheduling a daily task.
+The "day of the week" schedule is a variation of the weekly schedule. In a weekly schedule, the **/sc weekly** parameter is required. The **/mo** (modifier) parameter is optional and specifies the number of weeks between each run of the task. The default value for **/mo** is 1 (every week). The **/d** parameter, which is optional, schedules the task to run on specified days of the week, or on all days (<em>). The default is MON (Monday). The every day option (</em>*/d \***) is equivalent to scheduling a daily task.
 
 #### Examples
 
@@ -470,7 +474,7 @@ schtasks /create /tn <TaskName> /tr <TaskRun> /sc monthly /mo {FIRST | SECOND | 
 
 #### Remarks
 
-In this schedule type, the **/sc monthly** parameter, the **/mo** (modifier) parameter, and the **/d** (day) parameter are required. The **/mo** (modifier) parameter specifies the week on which the task runs. The **/d** parameter specifies the day of the week. (You can specify only one day of the week for this schedule type.) This schedule also has an optional **/m** (month) parameter that lets you schedule the task for particular months or every month (*). The default for the **/m** parameter is every month (*).
+In this schedule type, the **/sc monthly** parameter, the **/mo** (modifier) parameter, and the **/d** (day) parameter are required. The **/mo** (modifier) parameter specifies the week on which the task runs. The **/d** parameter specifies the day of the week. (You can specify only one day of the week for this schedule type.) This schedule also has an optional **/m** (month) parameter that lets you schedule the task for particular months or every month (<em>). The default for the **/m</em>* parameter is every month (*).
 
 #### Examples
 
@@ -500,7 +504,7 @@ schtasks /create /tn <TaskName> /tr <TaskRun> /sc monthly /d {1 - 31} [/m {JAN -
 
 In the specific date schedule type, the **/sc monthly** parameter and the **/d** (day) parameter are required. The **/d** parameter specifies a date of the month (1 - 31), not a day of the week. You can specify only one day in the schedule. The **/mo** (modifier) parameter is not valid with this schedule type.
 
-The **/m** (month) parameter is optional for this schedule type and the default is every month (*). **Schtasks** does not let you schedule a task for a date that does not occur in a month specified by the **/m** parameter. However, if omit the **/m** parameter, and schedule a task for a date that does not appear in every month, such as the 31st day, then the task does not run in the shorter months. To schedule a task for the last day of the month, use the last day schedule type.
+The **/m** (month) parameter is optional for this schedule type and the default is every month (<em>). **Schtasks</em>* does not let you schedule a task for a date that does not occur in a month specified by the **/m** parameter. However, if omit the **/m** parameter, and schedule a task for a date that does not appear in every month, such as the 31st day, then the task does not run in the shorter months. To schedule a task for the last day of the month, use the last day schedule type.
 
 #### Examples
 
@@ -692,7 +696,6 @@ Type the password for Marketing\Admin01:********
 Please enter the run as password for Reskits\User01: ********
 
 SUCCESS: The scheduled task "My App" has successfully been created.
-
 ```
 
 #### To run a task only when a particular user is logged on
@@ -734,7 +737,6 @@ In response, **SchTasks.exe** displays an informational message and a success me
 ```
 INFO: The task will be created under user name ("NT AUTHORITY\SYSTEM").
 SUCCESS: The Scheduled task "My App" has successfully been created.
-
 ```
 
 #### To run a task with system permissions on a remote computer
@@ -754,29 +756,28 @@ Type the password for Admin01:**********
 INFO: The Schedule Task "My App" will be created under user name ("NT AUTHORITY\
 SYSTEM").
 SUCCESS: The scheduled task "My App" has successfully been created.
-
 ```
 
 ### <a name="BKMK_multi_progs"></a>To schedule a task that runs more than one program
 
 Each task runs only one program. However, you can create a batch file that runs multiple programs and then schedule a task to run the batch file. The following procedure demonstrates this method:
-1.  Create a batch file that starts the programs you want to run.
+1. Create a batch file that starts the programs you want to run.
 
-    In this example, you create a batch file that starts Event Viewer (Eventvwr.exe) and System Monitor (Perfmon.exe).  
-    -   Open a text editor, such as Notepad.
-    -   Type the name and fully qualified path to the executable file for each program. In this case, the file includes the following statements.  
-        ```
-        C:\Windows\System32\Eventvwr.exe 
-        C:\Windows\System32\Perfmon.exe
-        ```  
-    -   Save the file as MyApps.bat.
-2.  Use **Schtasks.exe** to create a task that runs MyApps.bat.
+   In this example, you create a batch file that starts Event Viewer (Eventvwr.exe) and System Monitor (Perfmon.exe).  
+   - Open a text editor, such as Notepad.
+   - Type the name and fully qualified path to the executable file for each program. In this case, the file includes the following statements.  
+     ```
+     C:\Windows\System32\Eventvwr.exe 
+     C:\Windows\System32\Perfmon.exe
+     ```  
+   - Save the file as MyApps.bat.
+2. Use **Schtasks.exe** to create a task that runs MyApps.bat.
 
-    The following command creates the Monitor task, which runs whenever anyone logs on. It uses the **/tn** parameter to name the task, and the **/tr** parameter to run MyApps.bat. It uses the **/sc** parameter to indicate the OnLogon schedule type and the **/ru** parameter to run the task with the permissions of the user's Administrator account.  
-    ```
-    schtasks /create /tn Monitor /tr C:\MyApps.bat /sc onlogon /ru Reskit\Administrator
-    ```  
-    As a result of this command, whenever a user logs on to the computer, the task starts both Event Viewer and System Monitor.
+   The following command creates the Monitor task, which runs whenever anyone logs on. It uses the **/tn** parameter to name the task, and the **/tr** parameter to run MyApps.bat. It uses the **/sc** parameter to indicate the OnLogon schedule type and the **/ru** parameter to run the task with the permissions of the user's Administrator account.  
+   ```
+   schtasks /create /tn Monitor /tr C:\MyApps.bat /sc onlogon /ru Reskit\Administrator
+   ```  
+   As a result of this command, whenever a user logs on to the computer, the task starts both Event Viewer and System Monitor.
 
 ### <a name="BKMK_remote"></a>To schedule a task that runs on a remote computer
 
@@ -819,7 +820,6 @@ SUCCESS: The scheduled task "My App" has successfully been created.
 
 WARNING: The Scheduled task "My App" has been created, but may not run because
 the account information could not be set.
-
 ```
 This warning indicates that the remote domain could not authenticate the account specified by the **/u** parameter. In this case, the remote domain could not authenticate the user account because the local computer is not a member of a domain that the remote computer domain trusts. When this occurs, the task job appears in the list of scheduled tasks, but the task is actually empty and it will not run.
 
@@ -858,7 +858,6 @@ Repeat: Until: Duration: Disabled
 Repeat: Stop If Still Running: Disabled
 Idle Time: Disabled
 Power Management: Disabled
-
 ```
 
 #### Remarks
@@ -889,27 +888,27 @@ schtasks /change /tn <TaskName> [/s <Computer> [/u [<Domain>\]<User> [/p <Passwo
 
 ### Parameters
 
-|Term|Definition|
-|----|----------|
-|/tn \<TaskName>|Identifies the task to be changed. Enter the task name.|
-|/s \<Computer>|Specifies the name or IP address of a remote computer (with or without backslashes). The default is the local computer.|
-|/u [\<Domain>\]<User>|Runs this command with the permissions of the specified user account. The default is the permissions of the current user of the local computer. The specified user account must be a member of the Administrators group on the remote computer. The **/u** and **/p** parameters are valid only for changing a task on a remote computer (**/s**).|
-|/p \<Password>|Specifies the password of the user account specified in the **/u** parameter. If you use the **/u** parameter, but omit the **/p** parameter or the password argument, **schtasks** prompts you for a password.</br>The **/u** and **/p** parameters are valid only when you use **/s**.|
-|/ru {[\<Domain>\]<User> | System}|Specifies to change the user account under which the task runs. For specifying the local System account, valid entries are "", "NT AUTHORITY\SYSTEM", or "SYSTEM".</br>When you change the user account, you must also change the user password. If a command has an **/ru** parameter but not an **/rp** parameter, **schtasks** prompts for a new password.</br>Tasks run with permissions of the local System account do not require or prompt for a password.|
-|/rp \<Password>|Specifies a new password for the existing user account, or the user account specified by the **/ru** parameter. This parameter is ignored with used with the local System account.|
-|/tr \<TaskRun>|Changes the program that the task runs. Enter the fully qualified path and file name of an executable file, script file, or batch file. If you omit the path, **schtasks** assumes that the file is in the \<systemroot>\System32 directory. The specified program replaces the original program run by the task.|
-|/st \<Starttime>|Specifies the start time for the task, using the 24-hour time format, HH:mm. For example, a value of 14:30 is equivalent to the 12-hour time of 2:30 PM.|
-|/ri \<Interval>|Specifies the repetition interval for the scheduled task, in minutes. Valid range is 1 - 599940 (599940 minutes = 9999 hours).|
-|/et \<EndTime>|Specifies the end time for the task, using the 24-hour time format, HH:mm. For example, a value of 14:30 is equivalent to the 12-hour time of 2:30 PM.|
-|/du \<Duration>|Specifies to close the task at the \<EndTime> or <Duration>, if specified.|
-|/k|Stops the program that the task runs at the time specified by **/et** or **/du**. Without **/k**, **schtasks** does not start the program again after it reaches the time specified by **/et** or **/du**, but it does not stop the program if it is still running. This parameter is optional and valid only with a MINUTE or HOURLY schedule.|
-|/sd \<StartDate>|Specifies the first date on which the task should be run. The date format is MM/DD/YYYY.|
-|/ed \<EndDate>|Specifies the last date on which the task should be run. The format is MM/DD/YYYY.|
-|/ENABLE|Specifies to enable the scheduled task.|
-|/DISABLE|Specifies to disable the scheduled task.|
-|/it|Specifies to run the scheduled task only when the "run as" user (the user account under which the task runs) is logged on to the computer.</br>This parameter has no effect on tasks that run with system permissions or tasks that already have the interactive-only property set. You cannot use a change command to remove the interactive-only property from a task.</br>By default, the "run as" user is the current user of the local computer when the task is scheduled or the account specified by the **/u** parameter, if one is used. However, if the command includes the **/ru** parameter, then the "run as" user is the account specified by the **/ru** parameter.|
-|/z|Specifies to delete the task upon the completion of its schedule.|
-|/?|Displays help at the command prompt.|
+|          Term           |                                                                                                                                                                                                                                                                                                                                     Definition                                                                                                                                                                                                                                                                                                                                      |
+|-------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|     /tn \<TaskName>     |                                                                                                                                                                                                                                                                                                               Identifies the task to be changed. Enter the task name.                                                                                                                                                                                                                                                                                                               |
+|     /s \<Computer>      |                                                                                                                                                                                                                                                                               Specifies the name or IP address of a remote computer (with or without backslashes). The default is the local computer.                                                                                                                                                                                                                                                                               |
+|  /u [\<Domain>\]<User>  |                                                                                                                                                                 Runs this command with the permissions of the specified user account. The default is the permissions of the current user of the local computer. The specified user account must be a member of the Administrators group on the remote computer. The **/u** and **/p** parameters are valid only for changing a task on a remote computer (**/s**).                                                                                                                                                                  |
+|     /p \<Password>      |                                                                                                                                                                                              Specifies the password of the user account specified in the **/u** parameter. If you use the **/u** parameter, but omit the **/p** parameter or the password argument, **schtasks** prompts you for a password.</br>The **/u** and **/p** parameters are valid only when you use **/s**.                                                                                                                                                                                               |
+| /ru {[\<Domain>\]<User> |                                                                                                                                                                                                                                                                                                                                       System}                                                                                                                                                                                                                                                                                                                                       |
+|     /rp \<Password>     |                                                                                                                                                                                                                                                 Specifies a new password for the existing user account, or the user account specified by the **/ru** parameter. This parameter is ignored with used with the local System account.                                                                                                                                                                                                                                                  |
+|     /tr \<TaskRun>      |                                                                                                                                                                                  Changes the program that the task runs. Enter the fully qualified path and file name of an executable file, script file, or batch file. If you omit the path, **schtasks** assumes that the file is in the \<systemroot>\System32 directory. The specified program replaces the original program run by the task.                                                                                                                                                                                  |
+|    /st \<Starttime>     |                                                                                                                                                                                                                                                              Specifies the start time for the task, using the 24-hour time format, HH:mm. For example, a value of 14:30 is equivalent to the 12-hour time of 2:30 PM.                                                                                                                                                                                                                                                               |
+|     /ri \<Interval>     |                                                                                                                                                                                                                                                                           Specifies the repetition interval for the scheduled task, in minutes. Valid range is 1 - 599940 (599940 minutes = 9999 hours).                                                                                                                                                                                                                                                                            |
+|     /et \<EndTime>      |                                                                                                                                                                                                                                                               Specifies the end time for the task, using the 24-hour time format, HH:mm. For example, a value of 14:30 is equivalent to the 12-hour time of 2:30 PM.                                                                                                                                                                                                                                                                |
+|     /du \<Duration>     |                                                                                                                                                                                                                                                                                                     Specifies to close the task at the \<EndTime> or <Duration>, if specified.                                                                                                                                                                                                                                                                                                      |
+|           /k            |                                                                                                                                                                   Stops the program that the task runs at the time specified by **/et** or **/du**. Without **/k**, **schtasks** does not start the program again after it reaches the time specified by **/et** or **/du**, but it does not stop the program if it is still running. This parameter is optional and valid only with a MINUTE or HOURLY schedule.                                                                                                                                                                   |
+|    /sd \<StartDate>     |                                                                                                                                                                                                                                                                                              Specifies the first date on which the task should be run. The date format is MM/DD/YYYY.                                                                                                                                                                                                                                                                                               |
+|     /ed \<EndDate>      |                                                                                                                                                                                                                                                                                                 Specifies the last date on which the task should be run. The format is MM/DD/YYYY.                                                                                                                                                                                                                                                                                                  |
+|         /ENABLE         |                                                                                                                                                                                                                                                                                                                       Specifies to enable the scheduled task.                                                                                                                                                                                                                                                                                                                       |
+|        /DISABLE         |                                                                                                                                                                                                                                                                                                                      Specifies to disable the scheduled task.                                                                                                                                                                                                                                                                                                                       |
+|           /it           | Specifies to run the scheduled task only when the "run as" user (the user account under which the task runs) is logged on to the computer.</br>This parameter has no effect on tasks that run with system permissions or tasks that already have the interactive-only property set. You cannot use a change command to remove the interactive-only property from a task.</br>By default, the "run as" user is the current user of the local computer when the task is scheduled or the account specified by the **/u** parameter, if one is used. However, if the command includes the **/ru** parameter, then the "run as" user is the account specified by the **/ru** parameter. |
+|           /z            |                                                                                                                                                                                                                                                                                                          Specifies to delete the task upon the completion of its schedule.                                                                                                                                                                                                                                                                                                          |
+|           /?            |                                                                                                                                                                                                                                                                                                                        Displays help at the command prompt.                                                                                                                                                                                                                                                                                                                         |
 
 ### Remarks
 
@@ -1008,13 +1007,13 @@ schtasks /run /tn <TaskName> [/s <Computer> [/u [<Domain>\]<User> [/p <Password>
 
 ### Parameters
 
-|Term|Definition|
-|----|----------|
-|/tn \<TaskName>|Required. Identifies the task.|
-|/s \<Computer>|Specifies the name or IP address of a remote computer (with or without backslashes). The default is the local computer.|
-|/u [\<Domain>\]<User>|Runs this command with the permissions of the specified user account. By default, the command runs with the permissions of the current user of the local computer.</br>The specified user account must be a member of the Administrators group on the remote computer. The **/u** and **/p** parameters are valid only when you use **/s**.|
-|/p \<Password>|Specifies the password of the user account specified in the **/u** parameter. If you use the **/u** parameter, but omit the **/p** parameter or the password argument, **schtasks** prompts you for a password.</br>The **/u** and **/p** parameters are valid only when you use **/s**.|
-|/?|Displays help at the command prompt.|
+|         Term          |                                                                                                                                                                 Definition                                                                                                                                                                  |
+|-----------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|    /tn \<TaskName>    |                                                                                                                                                       Required. Identifies the task.                                                                                                                                                        |
+|    /s \<Computer>     |                                                                                                           Specifies the name or IP address of a remote computer (with or without backslashes). The default is the local computer.                                                                                                           |
+| /u [\<Domain>\]<User> | Runs this command with the permissions of the specified user account. By default, the command runs with the permissions of the current user of the local computer.</br>The specified user account must be a member of the Administrators group on the remote computer. The **/u** and **/p** parameters are valid only when you use **/s**. |
+|    /p \<Password>     |                          Specifies the password of the user account specified in the **/u** parameter. If you use the **/u** parameter, but omit the **/p** parameter or the password argument, **schtasks** prompts you for a password.</br>The **/u** and **/p** parameters are valid only when you use **/s**.                           |
+|          /?           |                                                                                                                                                    Displays help at the command prompt.                                                                                                                                                     |
 
 ### Remarks
 
@@ -1053,7 +1052,6 @@ The attempt to log on to the account associated with the task failed, therefore,
 The specific error is:
 0x8007052e: Logon failure: unknown user name or bad password.
 Verify that the task's Run-as name and password are valid and try again.
-
 ```
 Apparently, the user name or password in the task is not valid on the system. The following **schtasks /change** command updates the user name and password for the Update task on Svr01:
 ```
@@ -1077,13 +1075,13 @@ schtasks /end /tn <TaskName> [/s <Computer> [/u [<Domain>\]<User> [/p <Password>
 
 ### Parameters
 
-|Term|Definition|
-|----|----------|
-|/tn \<TaskName>|Required. Identifies the task that started the program.|
-|/s \<Computer>|Specifies the name or IP address of a remote computer. The default is the local computer.|
-|/u [\<Domain>\]<User>|Runs this command with the permissions of the specified user account. By default, the command runs with the permissions of the current user of the local computer. The specified user account must be a member of the Administrators group on the remote computer. The **/u** and **/p** parameters are valid only when you use **/s**.|
-|/p \<Password>|Specifies the password of the user account specified in the **/u** parameter. If you use the **/u** parameter, but omit the **/p** parameter or the password argument, **schtasks** prompts you for a password.</br>The **/u** and **/p** parameters are valid only when you use **/s**.|
-|/?|Displays help.|
+|         Term          |                                                                                                                                                               Definition                                                                                                                                                                |
+|-----------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|    /tn \<TaskName>    |                                                                                                                                         Required. Identifies the task that started the program.                                                                                                                                         |
+|    /s \<Computer>     |                                                                                                                        Specifies the name or IP address of a remote computer. The default is the local computer.                                                                                                                        |
+| /u [\<Domain>\]<User> | Runs this command with the permissions of the specified user account. By default, the command runs with the permissions of the current user of the local computer. The specified user account must be a member of the Administrators group on the remote computer. The **/u** and **/p** parameters are valid only when you use **/s**. |
+|    /p \<Password>     |                        Specifies the password of the user account specified in the **/u** parameter. If you use the **/u** parameter, but omit the **/p** parameter or the password argument, **schtasks** prompts you for a password.</br>The **/u** and **/p** parameters are valid only when you use **/s**.                         |
+|          /?           |                                                                                                                                                             Displays help.                                                                                                                                                              |
 
 ### Remarks
 
@@ -1125,19 +1123,19 @@ schtasks /delete /tn {<TaskName> | *} [/f] [/s <Computer> [/u [<Domain>\]<User> 
 
 ### Parameters
 
-|Term|Definition|
-|----|----------|
-|/tn {\<TaskName>| *}|Required. Identifies the task being deleted.</br>**\<TaskName>** - Deletes the named task.</br>**<\*>** - Deletes all scheduled tasks on the computer.|
-|/f|Suppresses the confirmation message. The task is deleted without warning.|
-|/s \<Computer>|Specifies the name or IP address of a remote computer (with or without backslashes). The default is the local computer.|
-|/u [\<Domain>\]<User>|Runs this command with the permissions of the specified user account. By default, the command runs with the permissions of the current user of the local computer.</br>The specified user account must be a member of the Administrators group on the remote computer. The **/u** and **/p** parameters are valid only when you use **/s**.|
-|/p \<Password>|Specifies the password of the user account specified in the **/u** parameter. If you use the **/u** parameter, but omit the **/p** parameter or the password argument, **schtasks** prompts you for a password.</br>The **/u** and **/p** parameters are valid only when you use **/s**.|
-|/?|Displays help at the command prompt.|
+|         Term          |                                                                                                                                                                 Definition                                                                                                                                                                  |
+|-----------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|   /tn {\<TaskName>    |                                                                                                                                                                     \*}                                                                                                                                                                     |
+|          /f           |                                                                                                                                  Suppresses the confirmation message. The task is deleted without warning.                                                                                                                                  |
+|    /s \<Computer>     |                                                                                                           Specifies the name or IP address of a remote computer (with or without backslashes). The default is the local computer.                                                                                                           |
+| /u [\<Domain>\]<User> | Runs this command with the permissions of the specified user account. By default, the command runs with the permissions of the current user of the local computer.</br>The specified user account must be a member of the Administrators group on the remote computer. The **/u** and **/p** parameters are valid only when you use **/s**. |
+|    /p \<Password>     |                          Specifies the password of the user account specified in the **/u** parameter. If you use the **/u** parameter, but omit the **/p** parameter or the password argument, **schtasks** prompts you for a password.</br>The **/u** and **/p** parameters are valid only when you use **/s**.                           |
+|          /?           |                                                                                                                                                    Displays help at the command prompt.                                                                                                                                                     |
 
 ### Remarks
 
--   The **delete** operation deletes the task from the schedule. It does not delete the program that the task runs or interrupt a running program.
--   The **delete \*** command deletes all tasks scheduled for the computer, not just the tasks scheduled by the current user.
+- The **delete** operation deletes the task from the schedule. It does not delete the program that the task runs or interrupt a running program.
+- The **delete \\*** command deletes all tasks scheduled for the computer, not just the tasks scheduled by the current user.
 
 ### Examples
 
@@ -1147,7 +1145,7 @@ The following command deletes the "Start Mail" task from the schedule of a remot
 ```
 schtasks /delete /tn "Start Mail" /s Svr16
 ```
-In response, **SchTasks.exe** displays the following confirmation message. To delete the task, press Y**.** To cancel the command, type **n**:
+In response, **SchTasks.exe** displays the following confirmation message. To delete the task, press Y<strong>.</strong> To cancel the command, type **n**:
 ```
 WARNING: Are you sure you want to remove the task "Start Mail" (Y/N )? 
 SUCCESS: The scheduled task "Start Mail" was successfully deleted.
@@ -1155,7 +1153,7 @@ SUCCESS: The scheduled task "Start Mail" was successfully deleted.
 
 ### To delete all tasks scheduled for the local computer
 
-The following command deletes all tasks from the schedule of the local computer, including tasks scheduled by other users. It uses the **/tn \*** parameter to represent all tasks on the computer and the **/f** parameter to suppress the confirmation message.
+The following command deletes all tasks from the schedule of the local computer, including tasks scheduled by other users. It uses the **/tn \\*** parameter to represent all tasks on the computer and the **/f** parameter to suppress the confirmation message.
 ```
 schtasks /delete /tn * /f
 ```
@@ -1175,16 +1173,16 @@ schtasks [/query] [/fo {TABLE | LIST | CSV}] [/nh] [/v] [/s <Computer> [/u [<Dom
 
 ### Parameters
 
-|Term|Definition|
-|----|----------|
-|[/query]|The operation name is optional. Typing **schtasks** without any parameters performs a query.|
-|/fo {TABLE| LIST| CSV}|Specifies the output format. **TABLE** is the default.|
-|/nh|Omits column headings from the table display. This parameter is valid with the **TABLE** and **CSV** output formats.|
-|/v|Adds advanced properties of the tasks to the display.</br>Queries using **/v** should be formatted as **LIST** or **CSV**.|
-|/s \<Computer>|Specifies the name or IP address of a remote computer (with or without backslashes). The default is the local computer.|
-|/u [\<Domain>\]<User>|Runs this command with the permissions of the specified user account. By default, the command runs with the permissions of the current user of the local computer.</br>The specified user account must be a member of the Administrators group on the remote computer. The **/u** and **/p** parameters are valid only when you use **/s**.|
-|/p \<Password>|Specifies the password of the user account specified in the **/u** parameter. If you use **/u**, but omit **/p** or the password argument, **schtasks** prompts you for a password.</br>The **/u** and **/p** parameters are valid only when you use **/s**.|
-|/?|Displays help at the command prompt.|
+|         Term          |                                                                                                                                                                 Definition                                                                                                                                                                  |
+|-----------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|       [/query]        |                                                                                                                        The operation name is optional. Typing **schtasks** without any parameters performs a query.                                                                                                                         |
+|      /fo {TABLE       |                                                                                                                                                                    LIST                                                                                                                                                                     |
+|          /nh          |                                                                                                            Omits column headings from the table display. This parameter is valid with the **TABLE** and **CSV** output formats.                                                                                                             |
+|          /v           |                                                                                                         Adds advanced properties of the tasks to the display.</br>Queries using **/v** should be formatted as **LIST** or **CSV**.                                                                                                          |
+|    /s \<Computer>     |                                                                                                           Specifies the name or IP address of a remote computer (with or without backslashes). The default is the local computer.                                                                                                           |
+| /u [\<Domain>\]<User> | Runs this command with the permissions of the specified user account. By default, the command runs with the permissions of the current user of the local computer.</br>The specified user account must be a member of the Administrators group on the remote computer. The **/u** and **/p** parameters are valid only when you use **/s**. |
+|    /p \<Password>     |                                        Specifies the password of the user account specified in the **/u** parameter. If you use **/u**, but omit **/p** or the password argument, **schtasks** prompts you for a password.</br>The **/u** and **/p** parameters are valid only when you use **/s**.                                         |
+|          /?           |                                                                                                                                                    Displays help at the command prompt.                                                                                                                                                     |
 
 ### Remarks
 
@@ -1205,7 +1203,6 @@ TaskName Next Run Time Status
 ========================= ======================== ==============
 Microsoft Outlook At logon time
 SecureScript 14:42:00 PM , 2/4/2001
-
 ```
 
 ### To display advanced properties of scheduled tasks
@@ -1248,7 +1245,6 @@ Idle: If Not Idle Retry For X Minutes: Disabled
 Idle: Stop Task If Idle State End: Disabled
 Power Mgmt: No Start On Batteries: Disabled
 Power Mgmt: Stop On Battery Mode: Disabled
-
 ```
 
 ### To log tasks scheduled for a remote computer

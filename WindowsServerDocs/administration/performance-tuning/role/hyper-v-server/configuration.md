@@ -71,15 +71,15 @@ Hyper-V publishes performance counters to help characterize the behavior of the 
 
 You should always measure the CPU usage of the physical system by using the Hyper-V Hypervisor Logical Processor performance counters. The CPU utilization counters that Task Manager and Performance Monitor report in the root and child partitions do not reflect the actual physical CPU usage. Use the following performance counters to monitor performance:
 
--   **Hyper-V Hypervisor Logical Processor (\*)\\% Total Run Time** The total non-idle time of the logical processors
+- **Hyper-V Hypervisor Logical Processor (\*)\\% Total Run Time** The total non-idle time of the logical processors
 
--   **Hyper-V Hypervisor Logical Processor (\*)\\% Guest Run Time** The time spent running cycles within a guest or within the host
+- **Hyper-V Hypervisor Logical Processor (\*)\\% Guest Run Time** The time spent running cycles within a guest or within the host
 
--   **Hyper-V Hypervisor Logical Processor (\*)\\% Hypervisor Run Time** The time spent running within the hypervisor
+- **Hyper-V Hypervisor Logical Processor (\*)\\% Hypervisor Run Time** The time spent running within the hypervisor
 
--   **Hyper-V Hypervisor Root Virtual Processor (\*)\\\*** Measures the CPU usage of the root partition
+- **Hyper-V Hypervisor Root Virtual Processor (\*)\\\\*** Measures the CPU usage of the root partition
 
--   **Hyper-V Hypervisor Virtual Processor (\*)\\\*** Measures the CPU usage of guest partitions
+- **Hyper-V Hypervisor Virtual Processor (\*)\\\\*** Measures the CPU usage of guest partitions
 
 
 ## See also

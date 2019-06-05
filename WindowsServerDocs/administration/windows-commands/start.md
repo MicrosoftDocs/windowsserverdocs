@@ -49,15 +49,15 @@ start ["<Title>"] [/d <Path>] [/i] [{/min | /max}] [{/separate | /shared}] [{/lo
 
 ## Remarks
 
--   You can run nonexecutable files through their file association by typing the name of the file as a command.
--   When you run a command that contains the string "CMD" as the first token without an extension or path qualifier, "CMD" is replaced with the value of the COMSPEC variable. This prevents users from picking up **cmd** from the current directory.
--   When you run a 32-bit graphical user interface (GUI) application, **cmd** does not wait for the application to quit before returning to the command prompt. This behavior does not occur if you run the application from a command script.
--   When you run a command that uses a first token that does not contain an extension, Cmd.exe uses the value of the PATHEXT environment variable to determine which extensions to look for and in what order. The default value for the PATHEXT variable is:  
-    ```
-    .COM;.EXE;.BAT;.CMD 
-    ```  
-    Note that the syntax is the same as the PATH variable, with semicolons separating each extension.
--   When it searches for an executable file, if there is no match on any extension, **start** checks to see if the name matches a directory name. If it does, **start** opens Explorer.exe on that path.
+- You can run nonexecutable files through their file association by typing the name of the file as a command.
+- When you run a command that contains the string "CMD" as the first token without an extension or path qualifier, "CMD" is replaced with the value of the COMSPEC variable. This prevents users from picking up **cmd** from the current directory.
+- When you run a 32-bit graphical user interface (GUI) application, **cmd** does not wait for the application to quit before returning to the command prompt. This behavior does not occur if you run the application from a command script.
+- When you run a command that uses a first token that does not contain an extension, Cmd.exe uses the value of the PATHEXT environment variable to determine which extensions to look for and in what order. The default value for the PATHEXT variable is:  
+  ```
+  .COM;.EXE;.BAT;.CMD 
+  ```  
+  Note that the syntax is the same as the PATH variable, with semicolons separating each extension.
+- When it searches for an executable file, if there is no match on any extension, **start** checks to see if the name matches a directory name. If it does, **start** opens Explorer.exe on that path.
 
 ## <a name="BKMK_examples"></a>Examples
 

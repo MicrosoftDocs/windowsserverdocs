@@ -40,7 +40,7 @@ In order to do such a move, there are two options.
 
 The first option involves destroying the cluster and rebuilding it in the new domain.
 
-![Destroy and Rebuild](media\Cross-Domain-Cluster-Migration\Cross-Cluster-Domain-Migration-1.gif)
+![Destroy and Rebuild](media/Cross-Domain-Cluster-Migration/Cross-Cluster-Domain-Migration-1.gif)
 
 As the animation shows, this option is destructive with the steps being:
 
@@ -50,7 +50,7 @@ As the animation shows, this option is destructive with the steps being:
 
 The second option is less destructive but requires additional hardware as a new cluster would need to be built in the new domain.  Once the cluster is in the new domain, run the Cluster Migration Wizard to migrate the resources. Note that this doesn't migrate data - you'll need to use another tool to migrate data, such as [Storage Migration Service](../storage/storage-migration-service/overview.md)(once cluster support is added).
 
-![Build and Migrate](media\Cross-Domain-Cluster-Migration\Cross-Cluster-Domain-Migration-2.gif)
+![Build and Migrate](media/Cross-Domain-Cluster-Migration/Cross-Cluster-Domain-Migration-2.gif)
 
 As the animation shows, this option is not destructive but does require either different hardware or a node from the existing cluster than has been removed.
 
@@ -71,7 +71,7 @@ Moving a cluster from one domain is a straight-forward process. To accomplish th
 
 The process to accomplish this is to change the cluster from one domain to a workgroup and back to the new domain.  The need to destroy a cluster, rebuild a cluster, install applications, etc is not a requirement. For example, it would look like this:
 
-![Migrate](media\Cross-Domain-Cluster-Migration\Cross-Cluster-Domain-Migration-3.gif)
+![Migrate](media/Cross-Domain-Cluster-Migration/Cross-Cluster-Domain-Migration-3.gif)
 
 ## Migrating a cluster to a new domain
 

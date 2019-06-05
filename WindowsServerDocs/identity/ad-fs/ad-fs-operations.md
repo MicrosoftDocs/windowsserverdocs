@@ -11,9 +11,9 @@ ms.prod: windows-server-threshold
 
 ms.technology: identity-adfs
 ---
-# AD FS 2016 Operations
+# AD FS Operations
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 This document contains a list of all of the documentation operations for AD FS for Windows Server 2016. This includes the following:  
   

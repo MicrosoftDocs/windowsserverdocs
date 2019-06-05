@@ -74,26 +74,26 @@ This topic provides troubleshooting for issues that occur when installing  Windo
   
 ##### To manually install a storage controller driver  
   
-1.  Find the drivers for your storage controller. These are provided by the hardware manufacturer, and they might also be available on the manufacturer's Web site.  
+1. Find the drivers for your storage controller. These are provided by the hardware manufacturer, and they might also be available on the manufacturer's Web site.  
   
-2.  Create a folder called DRIVERS on a floppy disk or a USB flash drive, and then copy the drivers into the folder.  
+2. Create a folder called DRIVERS on a floppy disk or a USB flash drive, and then copy the drivers into the folder.  
   
-3.  Attach the floppy drive or USB flash drive with the drivers to the computer  
+3. Attach the floppy drive or USB flash drive with the drivers to the computer  
   
-4.  Boot the computer from the  Windows Server Essentials DVD.  
+4. Boot the computer from the  Windows Server Essentials DVD.  
   
-     If any storage controller drivers are missing, the  Windows Server Essentials Setup Error dialog box is displayed.  
+    If any storage controller drivers are missing, the  Windows Server Essentials Setup Error dialog box is displayed.  
   
-5.  In the  Windows Server Essentials Setup Error dialog box, click **Yes** to load the additional storage drivers.  
+5. In the  Windows Server Essentials Setup Error dialog box, click **Yes** to load the additional storage drivers.  
   
-6.  At the **Please select your driver's inf file** prompt, navigate to the .inf file in the DRIVERS folder on your floppy disk or USB flash drive, select the file, right-click the file name, and then click **Open**. This loads the driver.  
+6. At the **Please select your driver's inf file** prompt, navigate to the .inf file in the DRIVERS folder on your floppy disk or USB flash drive, select the file, right-click the file name, and then click **Open**. This loads the driver.  
   
-    > [!NOTE]
-    >  Before you attempt to load the file, verify that the file name extension (.inf) is in lowercase letters. This operation is case sensitive, and a driver file will not load if the file name extension has uppercase letters.  
+   > [!NOTE]
+   >  Before you attempt to load the file, verify that the file name extension (.inf) is in lowercase letters. This operation is case sensitive, and a driver file will not load if the file name extension has uppercase letters.  
   
-7.  At the prompt, click **Yes** to make the storage driver available during the text-mode phase of Setup.  
+7. At the prompt, click **Yes** to make the storage driver available during the text-mode phase of Setup.  
   
- Setup should now continue normally.  
+   Setup should now continue normally.  
   
 ###  <a name="BKMK_AddingNICdrivers"></a> Adding drivers for network adapters  
  If a network adapter on the computer is not supported by  Windows Server Essentials, your server will not have network connectivity after Setup completes, and you will not be able to connect computers to your server.  

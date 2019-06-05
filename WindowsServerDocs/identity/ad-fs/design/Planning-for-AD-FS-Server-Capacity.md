@@ -14,7 +14,6 @@ ms.technology: identity-adfs
 
 # Planning for AD FS Server Capacity
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
   
 > [!NOTE]  

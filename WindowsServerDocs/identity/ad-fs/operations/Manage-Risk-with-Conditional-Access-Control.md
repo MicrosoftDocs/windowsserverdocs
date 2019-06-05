@@ -14,7 +14,7 @@ ms.technology: identity-adfs
 
 # Manage Risk with Conditional Access Control
 
->Applies To: Windows Server 2012 R2
+
 
 
 -   [Key concepts-conditional access control in AD FS](../../ad-fs/operations/Manage-Risk-with-Conditional-Access-Control.md#BKMK_1)

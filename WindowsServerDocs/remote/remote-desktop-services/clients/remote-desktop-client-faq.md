@@ -75,12 +75,12 @@ Here are some possible solutions to common problems you might encounter when try
 - **There’s a problem with the network.** Make sure you have internet connection. 
 - **The Remote Desktop port might be blocked by a firewall.** If you're using Windows Firewall, follow these steps:
 
-   1. Open Windows Firewall. 
-   2. Click **Allow an app or feature through Windows Firewall**. 
-   3. Click **Change settings**. You might be asked for an admin password or to confirm your choice.
-   4. Under **Allowed apps and features**, select **Remote Desktop**, and then tap or click **OK**.
+  1. Open Windows Firewall. 
+  2. Click **Allow an app or feature through Windows Firewall**. 
+  3. Click **Change settings**. You might be asked for an admin password or to confirm your choice.
+  4. Under **Allowed apps and features**, select **Remote Desktop**, and then tap or click **OK**.
 
-   If you're using a different firewall, make sure the port for Remote Desktop (usually 3389) is open.
+     If you're using a different firewall, make sure the port for Remote Desktop (usually 3389) is open.
 - **Remote connections might not be set up on the remote PC.** To fix this, scroll back up to [How do I set up a PC for Remote Desktop?](#how-do-i-set-up-a-pc-for-remote-desktop) question in this topic.
 - **The remote PC might only allow PCs to connect that have Network Level Authentication set up.** 
 - **The remote PC might be turned off.** You can’t connect to a PC that's turned off, asleep, or hibernating, so make sure the settings for sleep and hibernation on the remote PC are set to **Never** (hibernation isn't available on all PCs.).

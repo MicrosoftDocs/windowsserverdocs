@@ -14,8 +14,6 @@ ms.technology: identity-adfs
 
 # Configure AD FS Extranet Lockout Protection
 
->Applies To: Windows Server 2012 R2
-
 In AD FS on Windows Server 2012 R2, we introduced a security feature called Extranet Lockout.  With this feature, AD FS will "stop" authenticating the "malicious" user account from outside for a period of time.  This prevents your user accounts from being locked out in Active Directory.  In addition to protecting your users from an AD account lockout, AD FS extranet lockout also protects against brute force password guessing attacks
 
 > [!NOTE]

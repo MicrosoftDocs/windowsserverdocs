@@ -1,6 +1,6 @@
 ---
 title: Common Git Bash commands for use with GitHub
-description: A list of somme of the most frequently used commands in Git Bash when working with GitHub. 
+description: A list of some of the most frequently used commands in Git Bash when working with GitHub. 
 author: eross-msft
 ms.author: lizross
 ms.date: 05/06/2019
@@ -33,7 +33,7 @@ You must always use master as your base for any new branch.
 
 | Command | Description |
 |---------|-------------|
-| `git add .` | After you save your work, add it to a branch |
+| `git add --all` | After you save your work, add it to a branch |
 | `git commit -m “public comment, including quotes”` | Commit your changes to your branch |
 | `git pull upstream master` | Update your local copy of master from the production repo |
 | `git push origin <name-of-branch>` | Push to the remote version of your local branch |

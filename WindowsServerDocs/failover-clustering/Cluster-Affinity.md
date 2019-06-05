@@ -1,14 +1,14 @@
 ---
-title: Cluster AntiAffinity
+title: Cluster affinity
 ms.prod: windows-server-threshold
 ms.manager: eldenc
 ms.technology: failover-clustering
 ms.topic: article
 author: johnmarlin-msft
 ms.date: 03/07/2019
-description: This article describes Failover Cluster AntiAffinity levels
+description: This article describes failover cluster affinity and antiAffinity levels
 ---
-# Cluster Affinity
+# Cluster affinity
 
 > Applies to: Windows Server 2019, Windows Server 2016
 
@@ -63,7 +63,7 @@ The value of "0" means it is disabled and not to be enforced.  The value of "1" 
 
 When both of these are set, the group will be prevented from coming online together.  If they are on the same node, this is what you would see in Failover Cluster Manager.
 
-![Cluster Affinity](media\Cluster-Affinity\Cluster-Affinity-1.png)
+![Cluster Affinity](media/Cluster-Affinity/Cluster-Affinity-1.png)
 
 In a PowerShell listing of the groups, you would see this:
 

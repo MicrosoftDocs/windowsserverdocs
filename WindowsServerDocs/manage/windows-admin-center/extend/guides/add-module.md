@@ -18,7 +18,7 @@ In this article, we will add an empty module to a tool extension we have created
 
 ## Prepare your environment
 
-If you haven't already, follow the directions in develop a [tool](..\develop-tool.md) (or [solution](..\develop-solution.md)) extension to prepare your environment and create a new, empty tool extension.
+If you haven't already, follow the directions in develop a [tool](../develop-tool.md) (or [solution](../develop-solution.md)) extension to prepare your environment and create a new, empty tool extension.
 
 ## Use the Angular CLI to create a module (and component)
 
@@ -176,4 +176,4 @@ Here's an example of an updated default path:
 
 ## Build and side load your extension
 
-You've now added a module to your extension.  Next, you can [build and side load](..\develop-tool.md#build-and-side-load-your-extension) your extension in Windows Admin Center to see the results.
+You've now added a module to your extension.  Next, you can [build and side load](../develop-tool.md#build-and-side-load-your-extension) your extension in Windows Admin Center to see the results.

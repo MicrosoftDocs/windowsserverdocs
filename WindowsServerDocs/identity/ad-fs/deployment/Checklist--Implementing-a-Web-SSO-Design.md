@@ -14,8 +14,6 @@ ms.author: billmath
 
 # Checklist: Implementing a Web SSO Design
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
-
 This parent checklist includes cross\-reference links to important concepts about the Web Single\-Sign\-On \(SSO\) design for Active Directory Federation Services \(AD FS\). It also contains links to subordinate checklists that will help you complete the tasks that are required to implement this design.  
   
 > [!NOTE]  

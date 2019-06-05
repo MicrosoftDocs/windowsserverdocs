@@ -210,7 +210,7 @@ This section describes how to enable a web client connection to an RD Broker wit
     >
     > In the list of SSL Certificate bindings, ensure that the correct certificate is bound to port 3392.
 
-3. Open the Windows Registry (regedit) and nagivate to ```HKLM\SYSTEM\CurrentControlSet\Control\Terminal Server\WinStations\RDP-Tcp``` and locate the key **WebSocketURI**. The value must be set to **https://+:3392/rdp/**.
+3. Open the Windows Registry (regedit) and nagivate to ```HKLM\SYSTEM\CurrentControlSet\Control\Terminal Server\WinStations\RDP-Tcp``` and locate the key **WebSocketURI**. The value must be set to <strong>https://+:3392/rdp/</strong>.
 
 ### Setting up the RD Session Host
 Follow these steps if the RD Session Host server is different from the RD Broker server:
@@ -232,7 +232,7 @@ Follow these steps if the RD Session Host server is different from the RD Broker
     >
     > In the list of SSL Certificate bindings, ensure that the correct certificate is bound to port 3392.
 
-3. Open the Windows Registry (regedit) and nagivate to ```HKLM\SYSTEM\CurrentControlSet\Control\Terminal Server\WinStations\RDP-Tcp``` and locate the key **WebSocketURI**. The value must be set to **https://+:3392/rdp/**.
+3. Open the Windows Registry (regedit) and nagivate to ```HKLM\SYSTEM\CurrentControlSet\Control\Terminal Server\WinStations\RDP-Tcp``` and locate the key **WebSocketURI**. The value must be set to <strong>https://+:3392/rdp/</strong>.
 
 ### General Observations
 
@@ -243,6 +243,35 @@ Follow these steps if the RD Session Host server is different from the RD Broker
     > If both the RD Session Host and the RD Broker server share the same machine, set the RD Broker server certificate only. If the RD Session Host and RD Broker server use different machines, both must be configured with unique certificates.
 
 * The **Subject Alternative Name (SAN)** for each certificate must be set to the machine's **Fully Qualified Domain Name (FQDN)**. The **Common Name (CN)** must match the SAN for each certificate.
+
+## How to pre-configure settings for Remote Desktop web client users
+This section will tell you how to use PowerShell to configure settings for your Remote Desktop web client deployment. These PowerShell cmdlets control a user's ability to change settings based on your organization's security concerns or intended workflow. The following settings are all located in the **Settings** side panel of the web client. 
+
+### Suppress telemetry
+By default, users may choose to enable or disable collection of telemetry data that is sent to Microsoft. For information about the telemetry data Microsoft collects, please refer to our Privacy Statement via the link in the **About** side panel.
+
+As an administrator, you can choose to suppress telemetry collection for your deployment using the following PowerShell cmdlet:
+
+   ```PowerShell
+    Set-RDWebClientDeploymentSetting -SuppressTelemetry $true
+   ```
+
+By default, the user may select to enable or disable telemetry. A boolean value **$false** will match the default client behavior. A boolean value **$true** disables telemetry and restricts the user from enabling telemetry.
+
+### Remote resource launch method
+By default, users may choose to launch remote resources (1) in the browser or (2) by downloading an .rdp file to handle with another client installed on their machine. As an administrator, you can choose to restrict the remote resource launch method for your deployment with the following Powershell command:
+
+   ```PowerShell
+    Set-RDWebClientDeploymentSetting -LaunchResourceInBrowser ($true|$false)
+   ```
+ By default, the user may select either launch method. A boolean value **$true** will force the user to launch resources in the browser. A boolean value **$false** will force the user to launch resources by downloading an .rdp file to handle with a locally installed RDP client.
+
+### Reset RDWebClientDeploymentSetting configurations to default
+To reset all deployment-level web client settings to the default configurations, run the following PowerShell cmdlet:
+
+   ```PowerShell
+    Reset-RDWebClientDeploymentSetting 
+   ```
 
 ## Troubleshooting
 

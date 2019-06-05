@@ -8,7 +8,17 @@ ms.date: 05/02/2019
 
 # Create new Windows Server articles using GitHub and Visual Studio Code
 
-As a Microsoft employee, you can follow these instructions to create and set up your GitHub account and tools, fork and clone the windowsserverdocs-pr repo, set up your remote branch, create a new article, and create a new pull request for approval and publishing.
+There are two separate locations where we keep Windows Server technical content. One of the locations is public (windowsserverdocs) while the other is private (windowsserverdocs-pr). Who you are determines which location you contribute to:
+
+- **I'm a Microsoft employee.** As a Microsoft employee, you have options, based on what you're trying to do:
+
+    - **Create a brand-new article.** To create a brand-new article, you must create and set up your GitHub account and tools, fork and clone the windowsserverdocs-pr repo, set up your remote branch, create the article, and finally create a new pull request for approval and publishing. For these instructions, continue reading this article.
+
+    - **Make large changes to an existing article.** To make substantial changes to an existing article, you can follow the instructions in the [Edit an existing Windows Server article using GitHub and Visual Studio Code](edit-existing-using-github.md) article.
+
+    - **Make minor changes to an existing article.** To make minor changes to an existing article, you can follow the instructions in the [Update existing Windows Server articles using a web browser and GitHub](github-browser-updates.md) article.
+
+- **I'm not a Microsoft employee.** As a non-Microsoft employee, you must contribute to the public location. For information about how to do that, see the [Contributing to Windows Server technical documentation](https://github.com/MicrosoftDocs/windowsserverdocs/blob/master/CONTRIBUTING.md) article.
 
 ## Prerequisites
 
@@ -60,7 +70,7 @@ You need to clone the repo get a local copy of the repo on to your local device.
 
 3. Copy the token and put it somewhere safe. You’ll need this for the rest of the process and after you leave the page, you won’t be able to get back to it.
 
-4. Open a Git Bash command and change directories to where you want to store your repo. We recommend using, `C:\users\<your_name>\Documents\GitHub`, because GitHub creates this directory by default.
+4. Open a Git Bash command and change directories to where you want to store your repo. We recommend using, `C:\users\<your_name>\GitHub`.
 
 5. Type the following commands using your specific information, one at a time, to clone your repo and set up your remote branches:
 
@@ -143,7 +153,7 @@ After you add your text to your new file, you must preview your changes to make 
 
 2. Make sure your article looks how you expect it to look.
 
-    After you're sure it looks right, you can commit your changes create a pull request for publication.
+    After you're sure it looks right, you can commit your changes and create a pull request for publication.
 
 ### Commit your changes
 
@@ -199,14 +209,16 @@ For more information about GitHub and the markdown language, see:
 
 ### Git concepts
 
-* https://guides.github.com/introduction/git-handbook/ 
+- [GitHub Guides-Git Handbook Intro](https://guides.github.com/introduction/git-handbook/)
 
-* https://guides.github.com/activities/forking/
+- [GitHub Guides-Forking projects](https://guides.github.com/activities/forking/)
 
-* https://guides.github.com/introduction/flow/
+- [GitHub Guides-Understanding the GitHub flow](https://guides.github.com/introduction/flow/)
 
-* https://learngitbranching.js.org/ (Great for visual learners!)
+- [Learn Git Branching](https://learngitbranching.js.org/ (Great for visual learners!))
 
 ### Markdown
 
-* https://www.markdowntutorial.com/
+- [Our internal markdown guidance](https://review.docs.microsoft.com/help/contribute/markdown-reference?branch=master)
+
+- [External, GitHub tutorial](https://www.markdowntutorial.com/)

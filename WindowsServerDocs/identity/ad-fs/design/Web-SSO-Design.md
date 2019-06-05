@@ -14,8 +14,6 @@ ms.technology: identity-adfs
 
 # Web SSO Design
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
-
 In the Web Single\-Sign\-On \(SSO\) design in Active Directory Federation Services \(AD FS\), users must authenticate only once to access multiple AD FS\-secured applications or services. In this design all users are external, and no federation trust exists because there are no partner organizations. Typically, you deploy this design when you want to provide individual consumer or customer access to one or more AD FS–secured services or applications over the Internet, as shown in the following illustration.  
   
 ![web sso design](media/adfs2_WebSSODesign.gif)  

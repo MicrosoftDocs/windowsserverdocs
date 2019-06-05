@@ -31,10 +31,10 @@ recover [<Drive>:][<Path>]<FileName>
 
 ## Parameters
 
-|Parameter|Description|
-|---------|-----------|
-|[\<Drive>:][<Path>]<FileName>|Specifies the location and name of the file that you want to recover. *FileName* is required.|
-|/?|Displays help at the command prompt.|
+|           Parameter           |                                          Description                                          |
+|-------------------------------|-----------------------------------------------------------------------------------------------|
+| [\<Drive>:][<Path>]<FileName> | Specifies the location and name of the file that you want to recover. *FileName* is required. |
+|              /?               |                             Displays help at the command prompt.                              |
 
 ## Remarks
 

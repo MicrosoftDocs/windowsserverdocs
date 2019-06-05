@@ -29,29 +29,31 @@ Windows Server 2008 R2:
 wdsutil /Get-AllNamespaces [/Server:<Server name>] [/ContentProvider:<name>] [/details:Clients] [/ExcludedeletePending]
 ```
 ## Parameters
-|Parameter|Windows Server 2008|Windows Server 2008 R2|
-|-------|------------|-------------|
-|[/Server:<Server name>]|Specifies the name of the server. This can be either the NetBIOS name or the fully qualified domain name (FQDN). If no server name is specified, the local server will be used.||
-|[/ContentProvider:<name>]|Displays the namespaces for the specified content provider only.||
-|[/Show:Clients]|Only supported for Windows Server 2008. Displays information about client computers that are connected to the namespace.||
-|[/details:Clients]|Only supported for Windows Server 2008 R2. Displays information about client computers that are connected to the namespace.||
-|[/ExcludedeletePending]|Excludes any deactivated transmissions from the list.||
+
+|         Parameter         |                                                                               Windows Server 2008                                                                               | Windows Server 2008 R2 |
+|---------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------|
+|  [/Server:<Server name>]  | Specifies the name of the server. This can be either the NetBIOS name or the fully qualified domain name (FQDN). If no server name is specified, the local server will be used. |                        |
+| [/ContentProvider:<name>] |                                                        Displays the namespaces for the specified content provider only.                                                         |                        |
+|      [/Show:Clients]      |                            Only supported for Windows Server 2008. Displays information about client computers that are connected to the namespace.                             |                        |
+|    [/details:Clients]     |                           Only supported for Windows Server 2008 R2. Displays information about client computers that are connected to the namespace.                           |                        |
+|  [/ExcludedeletePending]  |                                                              Excludes any deactivated transmissions from the list.                                                              |                        |
+
 ## <a name="BKMK_examples"></a>Examples
 To view all namespaces, type:
 ```
 wdsutil /Get-AllNamespaces
 ```
 To view all namespaces except those that are deactivated, type:
--   Windows Server 2008
-    ```
-    wdsutil /Get-AllNamespaces /Server:MyWDSServer /ContentProvider:"MyContentProv" /Show:Clients /ExcludedeletePending
-    ```
--   Windows Server 2008 R2
-    ```
-    wdsutil /Get-AllNamespaces /Server:MyWDSServer /ContentProvider:"MyContentProv" /details:Clients /ExcludedeletePending
-    ```
-#### additional references
-[Command-Line Syntax Key](command-line-syntax-key.md)
-[Using the new-Namespace Command](using-the-new-namespace-command.md)
-[Using the remove-Namespace Command](using-the-remove-namespace-command.md)
-[Subcommand: start-Namespace](subcommand-start-namespace.md)
+- Windows Server 2008
+  ```
+  wdsutil /Get-AllNamespaces /Server:MyWDSServer /ContentProvider:"MyContentProv" /Show:Clients /ExcludedeletePending
+  ```
+- Windows Server 2008 R2
+  ```
+  wdsutil /Get-AllNamespaces /Server:MyWDSServer /ContentProvider:"MyContentProv" /details:Clients /ExcludedeletePending
+  ```
+  #### additional references
+  [Command-Line Syntax Key](command-line-syntax-key.md)
+  [Using the new-Namespace Command](using-the-new-namespace-command.md)
+  [Using the remove-Namespace Command](using-the-remove-namespace-command.md)
+  [Subcommand: start-Namespace](subcommand-start-namespace.md)

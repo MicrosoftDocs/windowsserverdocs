@@ -24,9 +24,11 @@ deletes a remote directory.
 rmdir <directory>  
 ```  
 ### Parameters  
-|Parameter|Description|  
-|-------|--------|  
-|<directory>|Specifies the name of the remote directory to delete.|  
+
+|  Parameter  |                      Description                      |
+|-------------|-------------------------------------------------------|
+| <directory> | Specifies the name of the remote directory to delete. |
+
 ## <a name="BKMK_Examples"></a>Examples  
 delete the **Pictures** remote directory.  
 ```  

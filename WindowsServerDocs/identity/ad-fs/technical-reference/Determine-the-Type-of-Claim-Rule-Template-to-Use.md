@@ -15,7 +15,6 @@ ms.technology: identity-adfs
 
 # Determine the Type of Claim Rule Template to Use
 
->Applies To: Windows Server 2016, Windows Server 2012 R2
 
 An important part of designing an Active Directory Federation Services \(AD FS\) infrastructure is determining the complete set of claim rules—and which corresponding claim rule templates you should use to create them—for each partner that will participate in federation with your organization. You create rules by using claim rule templates in the AD FS Management snap\-in.  
   

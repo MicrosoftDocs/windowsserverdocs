@@ -78,11 +78,11 @@ manager: dongill
 ####  <a name="BKMK_Collecting"></a> Step 2: Collect the factory reset images and XML files  
  To reset a server to factory defaults, the following two images need to be captured:  
   
--   The system drive image  
+- The system drive image  
   
--   The system reserved partition  
+- The system reserved partition  
   
- To capture these images, the GenDiskXML.exe tool is provided. GenDiskXML.exe also collects a file named disk.xml that is used by the recovery process to recreate the disk configuration.  
+  To capture these images, the GenDiskXML.exe tool is provided. GenDiskXML.exe also collects a file named disk.xml that is used by the recovery process to recreate the disk configuration.  
   
 1.  Following Sysprep, reboot the system by using any 64-bit version of Windows PE.  
   
@@ -112,29 +112,29 @@ manager: dongill
 > [!NOTE]
 >  The file names that are listed must match exactly.  
   
-1.  The wizard page has a link for additional help. If this .chm file exists, it will override the FWLink for web Help. The Help file is located at:  
+1. The wizard page has a link for additional help. If this .chm file exists, it will override the FWLink for web Help. The Help file is located at:  
   
-     <DVD Root\>\\$OEM$\Customization\\<culture name\>\RestartHelp.chm  
+    <DVD Root\>\\$OEM$\Customization\\<culture name\>\RestartHelp.chm  
   
-2.  This file contains the text that the customer sees on the wizard page. The text should explain how to boot the server into recovery mode. The control is scrollable, which places a practical limit on the amount of text that can be added.  
+2. This file contains the text that the customer sees on the wizard page. The text should explain how to boot the server into recovery mode. The control is scrollable, which places a practical limit on the amount of text that can be added.  
   
-     The following file is used to replace the sample picture in the wizard, and it is primarily about branding. It must be a .png file. The file size must be 256 pixels x 256 pixels, or it will be cropped when it is displayed in the wizard.  
+    The following file is used to replace the sample picture in the wizard, and it is primarily about branding. It must be a .png file. The file size must be 256 pixels x 256 pixels, or it will be cropped when it is displayed in the wizard.  
   
-     <DVD Root\>\\$OEM$\Customization\\<culture name\>\RestartInstructions.rtf  
+    <DVD Root\>\\$OEM$\Customization\\<culture name\>\RestartInstructions.rtf  
   
-3.  <DVD Root\>\\$OEM$\Customization\\<culture name\>\ServerImage.png  
+3. <DVD Root\>\\$OEM$\Customization\\<culture name\>\ServerImage.png  
   
- When you are converting your server recovery DVD to support multiple languages, ensure that you do the following:  
+   When you are converting your server recovery DVD to support multiple languages, ensure that you do the following:  
   
-1.  You must always have the en-us folder. If the server recovery application does not find the culture-specific files that match the client computer it is running on, it falls back to en-us.  
+4. You must always have the en-us folder. If the server recovery application does not find the culture-specific files that match the client computer it is running on, it falls back to en-us.  
   
-2.  In each culture folder that you create, add the three customization files (.png, .chm, and .rtf).  
+5. In each culture folder that you create, add the three customization files (.png, .chm, and .rtf).  
   
-3.  Copy both of the culture folders from Language Packs\\<CultureName\>\Server Recovery to the root of the server recovery DVD. For example: Both the ES and ES-ES folders would be copied to the root of the DVD to support Spanish.  
+6. Copy both of the culture folders from Language Packs\\<CultureName\>\Server Recovery to the root of the server recovery DVD. For example: Both the ES and ES-ES folders would be copied to the root of the DVD to support Spanish.  
   
-4.  Finalize the ISO file.  
+7. Finalize the ISO file.  
   
- Supported culture names include:  
+   Supported culture names include:  
 
 |-|-|  
 |- cs-CZ<br /><br /> - de-DE<br /><br /> - en-US<br /><br /> - es-ES<br /><br /> - fr-FR<br /><br /> - hu-HU<br /><br /> - it-IT<br /><br /> - ja-JP<br /><br /> - ko-KR<br /><br /> - nl-NL|- pl-PL<br /><br /> - pt-BR<br /><br /> - pt-PT<br /><br /> - ru-RU<br /><br /> - sv-SE<br /><br /> - tr-TR<br /><br /> - zh-CN<br /><br /> - zh-HK<br /><br /> - zh-TW

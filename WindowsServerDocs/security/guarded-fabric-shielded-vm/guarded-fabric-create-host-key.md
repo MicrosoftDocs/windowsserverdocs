@@ -58,8 +58,8 @@ Add-HgsAttestationHostKey -Name MyHost01 -Path "C:\temp\MyHost01-HostKey.cer"
 
 ## Next step
 
->[!div class="nextstepaction"]
-[Confirm hosts can attest successfully](guarded-fabric-confirm-hosts-can-attest-successfully.md)
+> [!div class="nextstepaction"]
+> [Confirm hosts can attest successfully](guarded-fabric-confirm-hosts-can-attest-successfully.md)
 
 ## See also
 

@@ -51,7 +51,7 @@ To deploy Remote Access, you must install the Remote Access role on a server in 
   
 6.  On the **Installation progress** page, verify that the installation was successful, and then click **Close**.  
   
-![Installation progress success](../../../media/Step-2-Configuring-DirectAccess-Servers/PowerShellLogoSmall.gif)****Windows PowerShell equivalent commands****  
+![Installation progress success](../../../media/Step-2-Configuring-DirectAccess-Servers/PowerShellLogoSmall.gif)***<em>Windows PowerShell equivalent commands</em>***  
   
 The following Windows PowerShell cmdlet or cmdlets perform the same function as the preceding procedure. Enter each cmdlet on a single line, even though they may appear word-wrapped across several lines here because of formatting constraints.  
   

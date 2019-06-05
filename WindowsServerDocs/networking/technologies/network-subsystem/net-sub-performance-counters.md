@@ -26,43 +26,43 @@ This topic lists the counters that are relevant to managing network performance,
 
 The following performance counters are relevant to network resource utilization.  
   
--   IPv4, IPv6  
+- IPv4, IPv6  
   
-    -   Datagrams Received/sec  
+  -   Datagrams Received/sec  
   
-    -   Datagrams Sent/sec  
+  -   Datagrams Sent/sec  
   
--   TCPv4, TCPv6  
+- TCPv4, TCPv6  
   
-    -   Segments Received/sec  
+  -   Segments Received/sec  
   
-    -   Segments Sent/sec  
+  -   Segments Sent/sec  
   
-    -   Segments Retransmitted/sec  
+  -   Segments Retransmitted/sec  
   
--   Network Interface(*), Network Adapter(\*)  
+- Network Interface(*), Network Adapter(\*)  
   
-    -   Bytes Received/sec  
+  - Bytes Received/sec  
   
-    -   Bytes Sent/sec  
+  - Bytes Sent/sec  
   
-    -   Packets Received/sec  
+  - Packets Received/sec  
   
-    -   Packets Sent/sec  
+  - Packets Sent/sec  
   
-    -   Output Queue Length  
+  - Output Queue Length  
   
-     This counter is the length of the output packet queue \(in packets\). If this is longer than 2, delays occur. You should find the bottleneck and eliminate it if you can. Because NDIS queues the requests, this length should always be 0.  
+    This counter is the length of the output packet queue \(in packets\). If this is longer than 2, delays occur. You should find the bottleneck and eliminate it if you can. Because NDIS queues the requests, this length should always be 0.  
   
--   Processor Information  
+- Processor Information  
   
-    -   % Processor Time  
+  - % Processor Time  
   
-    -   Interrupts/sec  
+  - Interrupts/sec  
   
-    -   DPCs Queued/sec  
+  - DPCs Queued/sec  
   
-     This counter is an average rate at which DPCs were added to the logical processor's DPC queue. Each logical processor has its own DPC queue. This counter measures the rate at which DPCs are added to the queue, not the number of DPCs in the queue. It displays the difference between the values that were observed in the last two samples, divided by the duration of the sample interval.  
+    This counter is an average rate at which DPCs were added to the logical processor's DPC queue. Each logical processor has its own DPC queue. This counter measures the rate at which DPCs are added to the queue, not the number of DPCs in the queue. It displays the difference between the values that were observed in the last two samples, divided by the duration of the sample interval.  
   
 ##  <a name="bkmk_np"></a> Potential Network Problems  
 

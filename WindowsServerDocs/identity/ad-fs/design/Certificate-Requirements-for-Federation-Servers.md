@@ -14,8 +14,6 @@ ms.technology: identity-adfs
 
 # Certificate Requirements for Federation Servers
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
-
 In any Active Directory Federation Services \(AD FS\) design, various certificates must be used to secure communication and facilitate user authentications between Internet clients and federation servers. Each federation server must have a service communication certificate and a token\-signing certificate before it can participate in AD FS communications. The following table describes the certificate types that are associated with federation server.  
   
 |Certificate type|Description|  

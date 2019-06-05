@@ -101,7 +101,7 @@ For more information, see [Add-DnsServerZoneScope](https://docs.microsoft.com/po
 #### <a name="bkmk_records"></a>Add Records to the Zone Scopes  
 Now you must add the records representing the web server host into the two zone scopes.  
   
-For example, in **SeattleZoneScope**, the record **www.contosogiftservices.com** is added with IP address 192.0.0.1, which is located in a Seattle datacenter. Similarly, in **DublinZoneScope**, the record **www.contosogiftservices.com** is added with IP address 141.1.0.3 in the Dublin datacenter  
+For example, in **SeattleZoneScope**, the record <strong>www.contosogiftservices.com</strong> is added with IP address 192.0.0.1, which is located in a Seattle datacenter. Similarly, in **DublinZoneScope**, the record <strong>www.contosogiftservices.com</strong> is added with IP address 141.1.0.3 in the Dublin datacenter  
   
 You can use the following Windows PowerShell commands to add records to the zone scopes.  
   

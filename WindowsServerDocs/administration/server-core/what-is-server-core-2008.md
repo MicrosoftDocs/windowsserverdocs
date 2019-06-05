@@ -7,7 +7,7 @@ ms.date: 11/01/2017
 ms.topic: article
 author: Heidilohr
 ---
-#What is Server Core 2008?
+# What is Server Core 2008?
 >Applies To: Windows Server 2008
 
 >[!NOTE]
@@ -18,6 +18,7 @@ The Server Core option is a new minimal installation option that is available wh
 Before we go any further, the phrase "installation option" needs to be explained. Normally, when you purchase a copy of Windows Server 2008, you purchase a license to use certain editions or stock-keeping units (SKUs). Table 1-1 lists the various editions of Windows Server 2008 that are available. The table also indicates which installation options (Full, Server Core, or both) are available for each edition.
 
 **Table 1-1** Windows Server 2008 editions and their support for installation options
+
 | Edition       | Full          | Server Core  |
 | ------------- | :-------------: | :------------: |
 | Windows Server 2008 Standard (x86 and x64)       | X | X        |
@@ -38,14 +39,14 @@ To understand what an "installation option" is, let's say you've purchased a vol
 
 In Figure 1-1, your volume license (or product key, for retail media) gives you two installation options you can choose between: the second option (a Full Installation of Windows Server 2008 Enterprise) and the fifth option (a Server Core Installation of Windows Server 2008 Enterprise), with the latter selected in this example. 
 
-##Full vs. Server Core 
+## Full vs. Server Core 
 Since the early days of the Microsoft Windows platform, Windows servers were essentially "everything" servers that included all kinds of features, some of which you might never actually use in your networking environment. For instance, when you installed Windows Server 2003 on a system, the binaries for Routing and Remote Access Service (RRAS) were installed on your server even if you had no need for this service (although you still had to configure and enable RRAS before it would work). Windows Server 2008 improves earlier versions by installing the binaries needed by a server role only if you choose to install that particular role on your server. However, the Full installation option of Windows Server 2008 still installs many services and other components that are often not needed for a particular usage scenario. 
 
 That's the reason Microsoft created a second installation option—Server Core—for Windows Server 2008: to eliminate any services and other features that are not essential for the support of certain commonly used server roles. For example, a Domain Name System (DNS) server really doesn't need Windows Internet Explorer installed on it because you wouldn't want to browse the Web from a DNS server for security reasons. And a DNS server doesn't even need a graphical user interface (GUI), because you can manage virtually all aspects of DNS either from the command line using the powerful Dnscmd.exe command, or remotely using the DNS Microsoft Management Console (MMC) snap-in.
 
 To avoid this, Microsoft decided to strip everything from Windows Server 2008 that was not absolutely essential for running core network services like Active Directory Domain Services (AD DS), DNS, Dynamic Host Configuration Protocol (DHCP), File and Print, and a few other server roles. The result is the new Server Core installation option, which can be used to create a server that supports only a limited number of roles and features. 
 
-##The Server Core GUI
+## The Server Core GUI
 When you finish installing Server Core on a system and log on for the first time, you're in for a bit of a surprise. Figure 1-2 shows the Server Core user interface after first logon.
 
 ![Server Core user interface](../media/what-is-server-core-2008/Fig1-2.png)
@@ -63,6 +64,7 @@ You'll learn more about configuring and managing a Server Core installation in C
 Table 1-2 lists the main GUI applications, together with their executables, that are available in a Server Core installation.
 
 **Table 1-2** GUI applications available in a Server Core installation
+
 | GUI application | Executable with path |
 | -------------   | -------------       | 
 | Command prompt | %WINDIR%\System32\Cmd.exe |
@@ -87,10 +89,11 @@ The .NET Framework is also not present in Server Core, which means there's no su
 >[!NOTE]
 >Because Windows PowerShell requires the .NET Framework, you cannot install Windows PowerShell onto Server Core. You can, however, manage a Server Core installation remotely using Windows PowerShell so long as you use only PowerShell WMI commands.
 
-##Supported server roles 
+## Supported server roles 
 A Server Core installation includes only a limited number of server roles compared with a Full installation of Windows Server 2008. Table 1-3 compares the roles available for both Full and Server Core installations of Windows Server 2008 Enterprise Edition. 
 
 **Table 1-3** Comparison of server roles for Full and Server Core installations of Windows Server 2008 Enterprise Edition
+
 | Server role  | Available in Full installation  | Available in Server Core  |
 | ------------- | :-------------: | :------------: |
 | Active Directory Certificate Services (AD CS)  | X |  |
@@ -118,7 +121,7 @@ While the roles available for Server Core are generally the same regardless of a
 * Before you can install the Streaming Media Services role on Server Core, you need to download and install the appropriate Microsoft Update Standalone Package (.msu file) for your server's architecture (x86 or x64) from the Microsoft Download Center.
 * The Web Server (IIS) role does not support ASP.NET. This is because the .NET Framework is not supported on Server Core, which limits what you can do with a Server Core Web server. 
 
-##Supported optional features
+## Supported optional features
 A Server Core installation also supports only a limited subset of the features available on a Full installation of Windows Server 2008. Table 1-4 compares the features available for both Full and Server Core installations of Windows Server 2008 Enterprise Edition.
 
 **Table 1-4** Comparison of features for Full and Server Core installations of Windows Server 2008 Enterprise Edition
@@ -165,7 +168,7 @@ Again, there are some points you need to know about concerning the features avai
 * Some features may require special hardware to function properly (or at all) on Server Core. These features include BitLocker Drive Encryption, Failover Clustering, Multipath IO, Network Load Balancing, and Removable Storage. 
 * Failover Clustering is not available on Standard Edition.
 
-##Server Core architecture
+## Server Core architecture
 Digging deeper into Server Core, let's briefly look at the architecture of a Server Core installation of Windows Server 2008 by comparing it with that of a Full installation. First, remember that Server Core is not a different version of Windows Server 2008 but simply an installation option that you can select when installing Windows Server 2008 onto a system. This implies the following:
 * The kernel on a Server Core installation is the same one found on a Full installation of the same hardware architecture (x86 or x64) and edition. 
 * If a binary is present on a Server Core installation, a Full installation of the same hardware architecture (x86 or x64) and edition has the same version of that particular binary (with two exceptions discussed later). 
@@ -179,7 +182,7 @@ The diagram illustrates the modular architecture of Windows Server 2008, with Se
 
 **Figure 1-3** The architectures of Server Core and Full installations
 
-##Driver support
+## Driver support
 The architectural diagram of Server Core shown in Figure 1-3 is obviously simplified; one thing it doesn't show is the difference in device driver support between Server Core and Full installations. A Full installation of Windows Server 2008 contains thousands of in-box drivers for different types of devices, which enable you to install products on a wide variety of different hardware configurations. (Client operating systems like Windows Vista include even more drivers to support devices such as digital cameras and scanners that are normally not used with servers.) 
 
 If a new device is connected to (or installed in) a Full installation of Windows Server 2008, the Plug and Play (PnP) subsystem first checks whether an in-box driver for the device is present. If a compatible in-box driver is found, the PnP subsystem automatically installs the driver and the device then operates. On a Full installation of Windows Server 2008, a balloon popup notification may be displayed, indicating that the driver has been installed and the device is ready for use. 
@@ -195,7 +198,7 @@ Also, when the PnP subsystem automatically installs a driver for a new device, i
 
 So what do you do when you add the Print Services role to a Server Core installation and you want to install a printer? You add the printer driver manually to the server—Server Core has no in-box print drivers.
 
-##Service footprint
+## Service footprint
 Because Server Core is a minimal installation, it has a smaller system service footprint than a corresponding Full installation of the same hardware architecture and edition. For example, about 75 system services are installed by default on a Full installation of Windows Server 2008, of which approximately 50 are configured for automatic startup. By contrast, Server Core has only about 70 services installed by default, and fewer than 40 of these start automatically. 
 
 Table 1-5 lists the services that are installed by default on a Server Core installation, with the startup mode for and account used by each service.

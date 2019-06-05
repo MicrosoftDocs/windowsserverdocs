@@ -39,7 +39,7 @@ To learn more about guarded fabrics, please see the Introducing Shielded VMs sec
 
 You can add a key storage drive to an empty slot on one of the virtual machine's IDE controllers. To do this, click **Add Key Storage Drive** to add a key storage drive to the first free IDE controller slot of this virtual machine.
 
-##See also
+## See also
 
 - [Generation 2 virtual machine security settings in Hyper-V manager](Generation-2-virtual-machine-security-settings-for-hyper-v.md)
 - [Security and Assurance](../../../security/Security-and-Assurance.md)
