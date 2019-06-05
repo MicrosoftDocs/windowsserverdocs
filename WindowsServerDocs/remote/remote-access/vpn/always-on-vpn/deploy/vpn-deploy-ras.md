@@ -14,11 +14,10 @@ ms.reviewer: deverette
 
 # Step 3. Configure the Remote Access Server for Always On VPN
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows 10
+>Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows 10
 
-&#171;  [**Previous:** Step 2. Configure the Server Infrastructure](vpn-deploy-server-infrastructure.md)<br>
-&#187;  [**Previous:** Step 4. Install and configure the Network Policy Server (NPS)](vpn-deploy-nps.md)
-
+- [**Previous:** Step 2. Configure the Server Infrastructure](vpn-deploy-server-infrastructure.md)
+- [**Previous:** Step 4. Install and configure the Network Policy Server (NPS)](vpn-deploy-nps.md)
 
 RRAS is designed to perform well as both a router and a remote access server because it supports a wide array of features. For the purposes of this deployment, you require only a small subset of these features: support for IKEv2 VPN connections and LAN routing.
 
@@ -26,13 +25,11 @@ IKEv2 is a VPN tunneling protocol described in Internet Engineering Task Force R
 
 Configure the RRAS server to support IKEv2 connections while disabling unused protocols, which reduces the server’s security footprint. Additionally, configure the server to assign addresses to VPN clients from a static address pool. You can feasibly assign addresses from either a pool or a DHCP server; however, using a DHCP server adds complexity to the design and delivers minimal benefits.
 
-
 >[!Important]
 >It is important to:
 >- Install two Ethernet network adapters in the physical server. If you are installing the VPN server on a VM, you must create two External virtual switches, one for each physical network adapter; and then create two virtual network adapters for the VM, with each network adapter connected to one virtual switch.
 >
 >- Install the server on your perimeter network between your edge and internal firewalls, with one network adapter connected to the External Perimeter Network, and one network adapter connected to the Internal Perimeter Network.
-
 
 >[!Warning]
 >Before you get started, make sure to enable IPv6 on the VPN server. Otherwise, a connection cannot be established and an error message displays.
@@ -40,7 +37,6 @@ Configure the RRAS server to support IKEv2 connections while disabling unused pr
 ## Install Remote Access as a RAS Gateway VPN Server
 
 In this procedure, you install the Remote Access role as a single tenant RAS Gateway VPN server. For more information, see [Remote Access](../../../Remote-Access.md).
-
 
 ### Install the Remote Access role by using Windows PowerShell
 
@@ -56,8 +52,6 @@ In this procedure, you install the Remote Access role as a single tenant RAS Gat
    | Success | Restart Needed | Exit Code |               Feature Result               |
    |---------|----------------|-----------|--------------------------------------------|
    |  True   |       No       |  Success  | {RAS Connection Manager Administration Kit |
-
-   ---
 
 ### Install the Remote Access role by using Server Manager
 
@@ -98,20 +92,26 @@ In this section, you can configure Remote Access VPN to allow IKEv2 VPN connecti
 
 1. On the VPN server, in Server Manager, click the **Notifications** flag.
 
-2. In the **Tasks** menu, click **Open the Getting Started Wizard**.<p>The Configure Remote Access wizard opens. 
+2. In the **Tasks** menu, click **Open the Getting Started Wizard*
+
+   The Configure Remote Access wizard opens. 
 
    >[!NOTE] 
    >The Configure Remote Access wizard might open behind Server Manager. If you think the wizard is taking too long to open, move or minimize Server Manager to find out whether the wizard is behind it. If not, wait for the wizard to initialize.
 
 3. Click **Deploy VPN only**.<p>The Routing and Remote Access Microsoft Management Console (MMC) opens.
 
-4. Right-click the VPN server, and click **Configure and Enable Routing and Remote Access**.<p>The Routing and Remote Access Server Setup Wizard opens.
+4. Right-click the VPN server, and click **Configure and Enable Routing and Remote Access**.
+
+   The Routing and Remote Access Server Setup Wizard opens.
 
 5. In the Welcome to the Routing and Remote Access Server Setup Wizard, click **Next**.
 
 6. In **Configuration**, click **Custom Configuration**, and then click **Next**.
 
-7. In **Custom Configuration**, click **VPN access**, and then click **Next**.<p>The Completing the Routing and Remote Access Server Setup Wizard opens.
+7. In **Custom Configuration**, click **VPN access**, and then click **Next**.
+
+   The Completing the Routing and Remote Access Server Setup Wizard opens.
 
 8. Click **Finish** to close the wizard, and click **OK** to close the Routing and Remote Access dialog box.
 
@@ -123,11 +123,17 @@ In this section, you can configure Remote Access VPN to allow IKEv2 VPN connecti
 
     a. Click **Authentication provider** and click **RADIUS Authentication**.
 
-    b. Click **Configure**.<p>The RADIUS Authentication dialog box opens.
+    b. Click **Configure**.
 
-    c. Click **Add**.<p>The Add RADIUS Server dialog box opens.
+       The RADIUS Authentication dialog box opens.
 
-    d. In **Server name**, type the Fully Qualified Domain Name (FQDN) of the NPS server on your Organization/Corporate network.<p>For example, if the NetBIOS name of your NPS server is NPS1 and your domain name is corp.contoso.com, type **NPS1.corp.contoso.com**.
+    c. Click **Add**.
+
+       The Add RADIUS Server dialog box opens.
+
+    d. In **Server name**, type the Fully Qualified Domain Name (FQDN) of the NPS server on your Organization/Corporate network.
+    
+       For example, if the NetBIOS name of your NPS server is NPS1 and your domain name is corp.contoso.com, type **NPS1.corp.contoso.com**.
 
     e. In **Shared secret**, click **Change**.<p>The Change Secret dialog box opens.
 
@@ -135,7 +141,7 @@ In this section, you can configure Remote Access VPN to allow IKEv2 VPN connecti
 
     g. In **Confirm new secret**, type the same text string, and click **OK**.
 
-    >[!IMPORTANT] 
+    >[!IMPORTANT]
     >Save this text string. When you configure the NPS Server on your Organization/Corporate network, you will add this VPN Server as a RADIUS Client. During that configuration, you will use this same shared secret so that the NPS and VPN Servers can communicate.
 
 12. In **Add RADIUS Server**, review the default settings for:
@@ -150,19 +156,18 @@ In this section, you can configure Remote Access VPN to allow IKEv2 VPN connecti
 
 14. Review the setting for **Accounting provider**:
 
-
     |                    If you want the...                     |                                                     Then…                                                      |
     |-----------------------------------------------------------|----------------------------------------------------------------------------------------------------------------|
     | Remote Access activity logged on the Remote Access server |                               Make sure that **Windows Accounting** is selected.                               |
     |        NPS to perform accounting services for VPN         | Change **Accounting provider** to **RADIUS Accounting** and then configure the NPS as the accounting provider. |
 
-    ---
-
 15. Click the **IPv4** tab and do:
 
     a. Click **Static address pool**.
 
-    b. Click **Add** to configure an IP address pool.<p>The static address pool should contain addresses from the internal perimeter network. These addresses are on the internal-facing network connection on the VPN server, not the corporate network.
+    b. Click **Add** to configure an IP address pool.
+
+       The static address pool should contain addresses from the internal perimeter network. These addresses are on the internal-facing network connection on the VPN server, not the corporate network.
 
     c. In **Start IP address**, type the starting IP address in the range you want to assign to VPN clients.
 
@@ -209,10 +214,5 @@ In this section, you can configure Remote Access VPN to allow IKEv2 VPN connecti
 23. If prompted, click **Yes** to confirm restarting the server and click **Close** to restart the server.
 
 ## Next step
+
 [Step 4. Install and configure the Network Policy Server (NPS)](vpn-deploy-nps.md): In this step, you install Network Policy Server (NPS) by using either Windows PowerShell or the Server Manager Add Roles and Features Wizard. You also configure NPS to handle all authentication, authorization, and accounting duties for connection requests that it receives from the VPN server.
-
-
-
-
-
----
