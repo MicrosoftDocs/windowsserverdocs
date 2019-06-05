@@ -216,7 +216,7 @@ If you are using MDE logging for troubleshooting, we recommend disabling it afte
 
 The following sections provide guidance on how to add a Windows Server 2016-based AD RMS Server into the current Windows Server 2012 R2 cluster. The server will be added into the cluster and the information will be replicated to it so that the previous AD RMS server can be deprecated to free up resources.
 
-After you add one Windows Server 2016-based AD RMS server has been added to yuour AD RMS cluster, all nodes based on older versions of Windows will become inactive. After this is done you can deprovision those servers (e.g. shut down, repurpose or reinstall with Windows Server 2016 to join the AD RMS cluster). 
+After you add one Windows Server 2016-based AD RMS server has been added to your AD RMS cluster, all nodes based on older versions of Windows will become inactive. After this is done you can deprovision those servers (e.g. shut down, repurpose or reinstall with Windows Server 2016 to join the AD RMS cluster). 
 
 You can deploy additional AD RMS servers to the cluster to support the load on your AD RMS deployment. You may also choose to perform this action in the event of increased traffic to the AD RMS servers.
 
@@ -254,6 +254,7 @@ If your AD RMS cluster is using a Hardware Security Module instead of a Centrall
 
 13. Once logged back on, open **Server Manager** select **Tools** and then **Active Directory Rights Management**. The management window should appear and indicate that the cluster has the additional server in the cluster.
 
+14. 14.	If the AD RMS Mobile Device Extension was installed in the original AD RMS cluster, you need to also install the MDE in the updated cluster nodes. Follow the instructions in the MDE documentation to add MDE to your AD RMS cluster. 
 At this point, you can repurpose all the preexisting nodes or upgrade them to Windows Server 2016 and re-join them to the AD RMS cluster using the same process outlined above. 
 
 ### Configuring Windows Server 2016 Web Application Proxy (WAP)
