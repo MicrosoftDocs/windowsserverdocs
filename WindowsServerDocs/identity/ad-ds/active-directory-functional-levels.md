@@ -136,13 +136,15 @@ Supported Domain Controller Operating System:
 * All of the default AD DS features, all of the features from the Windows Server 2003 domain functional level, and the following features are available:
   * Distributed File System (DFS) replication support for the Windows Server 2003 System Volume (SYSVOL)
     * DFS replication support provides more robust and detailed replication of SYSVOL contents.
-      [!NOTE]>
-      >Beginning with Windows Server 2012 R2, File Replication Service (FRS) is deprecated. A new domain that is created on a domain controller that runs at least Windows Server 2012 R2 must be set to the Windows Server 2008 domain functional level or higher.
+
+      > [!NOTE]
+      > Beginning with Windows Server 2012 R2, File Replication Service (FRS) is deprecated. A new domain that is created on a domain controller that runs at least Windows Server 2012 R2 must be set to the Windows Server 2008 domain functional level or higher.
 
   * Domain-based DFS namespaces running in Windows Server 2008 Mode, which includes support for access-based enumeration and increased scalability. Domain-based namespaces in Windows Server 2008 mode also require the forest to use the Windows Server 2003 forest functional level. For more information, see [Choose a Namespace Type](https://go.microsoft.com/fwlink/?LinkId=180400).
   * Advanced Encryption Standard (AES 128 and AES 256) support for the Kerberos protocol. In order for TGTs to be issued using AES, the domain functional level must be Windows Server 2008 or higher and the domain password needs to be changed. 
     * For more information, see [Kerberos Enhancements](https://technet.microsoft.com/library/cc749438(ws.10).aspx).
-      [!NOTE]>
+
+      > [!NOTE]
       >Authentication errors may occur on a domain controller after the domain functional level is raised to Windows Server 2008 or higher if the domain controller has already replicated the DFL change but has not yet refreshed the krbtgt password. In this case, a restart of the KDC service on the domain controller will trigger an in-memory refresh of the new krbtgt password and resolve related authentication errors.
 
   * [Last Interactive Logon](https://go.microsoft.com/fwlink/?LinkId=180387) Information displays the following information:
