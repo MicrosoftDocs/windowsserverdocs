@@ -103,10 +103,12 @@ After running the script, a new certificate appears in the My store:
 
 2. Export the certificate to a file.<p>You need two copies of the certificate, one with the private key and one without.
 
+```
    $subjectName = "EncryptedVirtualNetworks"
    $cert = Get-ChildItem cert:\localmachine\my | ? {$_.Subject -eq "CN=$subjectName"}
    [System.io.file]::WriteAllBytes("c:\$subjectName.pfx", $cert.Export("PFX", "secret"))
    Export-Certificate -Type CERT -FilePath "c:\$subjectName.cer" -cert $cert
+```
 
 3. Install the certificates on each of your hyper-v hosts 
 
@@ -125,6 +127,7 @@ Mode                LastWriteTime         Length Name
 
 4. Installing on a Hyper-V host
 
+```
    $server = "Server01"
 
    $subjectname = "EncryptedVirtualNetworks"
@@ -159,7 +162,8 @@ Mode                LastWriteTime         Length Name
        # Important: Remove the certificate files when finished
        remove-item C:\$SubjectName.cer
        remove-item C:\$SubjectName.pfx
-   }    
+   }
+```
 
 5. Repeat for each server in your environment.<p>After repeating for each server, you should have a certificate installed in the root and my store of each Hyper-V host. 
 

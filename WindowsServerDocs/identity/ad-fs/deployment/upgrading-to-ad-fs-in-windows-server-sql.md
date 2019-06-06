@@ -14,6 +14,9 @@ ms.author: billmath
 # Upgrading to AD FS in Windows Server 2016 with SQL Server
 
 
+> [!NOTE]  
+> Only begin an upgrade with a definitive time frame planned for completion. It is not recommended to keep AD FS in a mixed mode state for an extended period of time, as leaving AD FS in a mixed mode state may cause issues with the farm.
+
 
 ## Moving from a Windows Server 2012 R2 AD FS farm to a Windows Server 2016 AD FS farm  
 The following document will describe how to upgrade your AD FS Windows Server 2012 R2 farm to AD FS in Windows Server 2016 when you are using a SQL Server for the AD FS database.  
@@ -107,4 +110,3 @@ Prior to this step you need to ensure that forestprep and domainprep have been r
     Set-WebApplicationProxyConfiguration -UpgradeConfigurationVersion
     ```
 5. Verify the ConfigurationVersion has been upgraded with the Get-WebApplicationProxyConfiguration Powershell command.
-    
