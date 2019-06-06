@@ -107,3 +107,33 @@ conceptualContent:
       footerLink: 
         url: /windows-server/networking/networking
         text: See More
+
+    - title: Remote 
+      links: 
+        - url: /windows-server/remote/remote-desktop-services/welcome-to-rds
+          itemType: overview
+          text: Remote Desktop Services overview
+        - url: /windows-server/remote/remote-desktop-services/clients/remote-desktop-clients
+          itemType: overview
+          text: Remote Desktop clients
+        - url: /windows-server/remote/remote-desktop-services/clients/remote-desktop-allow-access
+          itemType: how-to-guide
+          text: Remote Desktop - Allow access to your PC
+      footerLink: 
+        url: /windows-server/remote/index
+        text: See More
+
+    - title: Security and Assurance 
+      links: 
+        - url: /windows-server/security/windows-authentication/windows-authentication-overview
+          itemType: overview
+          text: Windows Authentication overview
+        - url: /windows-server/security/group-managed-service-accounts/getting-started-with-group-managed-service-accounts
+          itemType: how-to-guide
+          text: Getting started with group managed service accounts
+        - url: /windows-server/security/windows-authentication/credentials-processes-in-windows-authentication
+          itemType: overview
+          text: Credentials processes in Windows Authentication
+      footerLink: 
+        url: /windows-server/security/security-and-assurance
+        text: See More
