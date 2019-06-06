@@ -321,11 +321,9 @@ Domain-joined VPN servers
 
 11. In the navigation pane of the Certification Authority snap-in, right-click **Certificate Templates**, select **New** and then select **Certificate Template to Issue**.
 
-12. Restart the Certificate Authority services.
+12. Select the name you chose in step 4 above, and click **OK**.
 
-13. Select the name you chose in step 4 above, and select **OK**.
-
-14. Close the Certification Authority snap-in.
+13. Close the Certification Authority snap-in.
 
 ## Create the NPS Server Authentication template
 
