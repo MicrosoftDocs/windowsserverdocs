@@ -68,9 +68,6 @@ conceptualContent:
         - url: /windows-server/failover-clustering/create-failover-cluster
           itemType: how-to-guide
           text: Create a failover cluster    
-        - url: /windows-server/failover-clustering/troubleshooting-using-wer-reports
-          itemType: how-to-guide
-          text: Troubleshooting using Windows Error Reporting
         - url: /windows-server/failover-clustering/cluster-aware-updating
           itemType: overview
           text: Cluster-Aware Updating overview
@@ -137,3 +134,64 @@ conceptualContent:
       footerLink: 
         url: /windows-server/security/security-and-assurance
         text: See More
+
+    - title: Storage 
+      links: 
+        - url: /windows-server/storage/whats-new-in-storage
+          itemType: whats-new
+          text: What's new in Storage
+        - url: /windows-server/storage/disk-management/overview-of-disk-management
+          itemType: overview
+          text: Disk management overview
+        - url: /windows-server/storage/storage-spaces/understand-quorum
+          itemType: overview
+          text: Understanding cluster and pool quorum
+        - url: /windows-server/storage/disk-management/initialize-new-disks
+          itemType: how-to-guide
+          text: Initialize new disks
+      footerLink: 
+        url: /windows-server/storage/storage
+        text: See More
+
+    - title: Troubleshooting 
+      links: 
+        - url: /windows-server/manage/windows-admin-center/support/troubleshooting
+          itemType: how-to-guide
+          text: Troubleshooting Windows Admin Center
+        - url: /windows-server/failover-clustering/troubleshooting-using-wer-reports
+          itemType: how-to-guide
+          text: Troubleshooting failover clustering using Windows Error Reporting
+        - url: /windows-server/storage/disk-management/troubleshooting-disk-management
+          itemType: how-to-guide
+          text: Troubleshooting Disk Management
+      footerLink: 
+        url: /windows-server/troubleshoot/windows-server-support-solutions
+        text: See More
+
+    - title: Virtualization 
+      links: 
+        - url: /virtualization/windowscontainers/
+          itemType: overview
+          text: Containers on Windows overview
+        - url: /windows-server/virtualization/hyper-v/hyper-v-on-windows-server
+          itemType: overview
+          text: Hyper-V on Windows Server
+        - url: /windows-server/virtualization/hyper-v-virtual-switch/hyper-v-virtual-switch
+          itemType: overview
+          text: Hyper-V Virtual Switch overview
+      footerLink: 
+        url: /windows-server/virtualization/virtualization
+        text: See More  
+
+additionalContent:
+  sections:
+    - items:
+      - title: Windows Server 2012 R2 and Windows Server 2012
+        summary: Technical content for IT professionals administering Windows Server 2012 R2 and Windows Server 2012.
+        url: https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd349801(v=ws.10)
+      - title: Windows Server 2008 R2 and Windows Server 2008
+        summary: Technical content for IT professionals administering Windows Server 2008 R2 and Windows Server 2008.
+        url: https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh801901(v=ws.11)
+      - title: Windows Server 2008 Developer Story
+        summary: Content for developers and other technology experts and managers interested in exploring some of the new and extended features in Windows Server 2008.
+        url: https://docs.microsoft.com/previous-versions/windows/server-2008/bb852234(v=msdn.10)
