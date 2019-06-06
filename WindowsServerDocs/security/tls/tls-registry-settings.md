@@ -21,13 +21,13 @@ ms.date: 02/28/2019
 This reference topic for the IT professional contains supported registry setting information for the Windows implementation of the Transport Layer Security (TLS) protocol and the Secure Sockets Layer (SSL) protocol through the Schannel Security Support Provider (SSP). 
 The registry subkeys and entries covered in this topic help you administer and troubleshoot the Schannel SSP, specifically the TLS and SSL protocols. 
 
->[!Caution]
->This information is provided as a reference to use when you are troubleshooting or verifying that the required settings are applied. 
->We recommend that you do not directly edit the registry unless there is no other alternative.
->Modifications to the registry are not validated by the Registry Editor or by the Windows operating system before they are applied. 
->As a result, incorrect values can be stored, and this can result in unrecoverable errors in the system. 
->When possible, instead of editing the registry directly, use Group Policy or other Windows tools such as the Microsoft Management Console (MMC) to accomplish tasks. 
->If you must edit the registry, use extreme caution. 
+> [!Caution]
+> This information is provided as a reference to use when you are troubleshooting or verifying that the required settings are applied.
+> We recommend that you do not directly edit the registry unless there is no other alternative.
+> Modifications to the registry are not validated by the Registry Editor or by the Windows operating system before they are applied.
+> As a result, incorrect values can be stored, and this can result in unrecoverable errors in the system.
+> When possible, instead of editing the registry directly, use Group Policy or other Windows tools such as the Microsoft Management Console (MMC) to accomplish tasks.
+> If you must edit the registry, use extreme caution.
 
 ## CertificateMappingMethods 
 
@@ -112,8 +112,8 @@ To disable, set the DWORD value to 0:
 
 "EnableOcspStaplingForSni"=dword:00000000
 
->[!NOTE] 
->Enabling this registry key has a potential performance impact.
+> [!NOTE] 
+> Enabling this registry key has a potential performance impact.
 
 ## FIPSAlgorithmPolicy
 

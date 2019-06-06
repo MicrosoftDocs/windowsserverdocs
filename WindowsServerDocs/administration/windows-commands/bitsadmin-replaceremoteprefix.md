@@ -17,8 +17,6 @@ ms.date: 10/16/2017
 
 # bitsadmin replaceremoteprefix
 
-
-
 All files in the job whose remote URL begins with *OldPrefix* are changed to use *NewPrefix*.
 
 ## Syntax
@@ -38,6 +36,7 @@ bitsadmin /ReplaceRemotePrefix <Job> <OldPrefix> <NewPrefix
 ## Examples
 
 The following example changes all files in job named *myDownloadJob* whose remote URL begins with *http://stageserver* to *http://prodserver*.
+
 ```
 C:\>bitsadmin /ReplaceRemotePrefix myDownloadJob http://stageserver http://prodserver
 ```

@@ -21,18 +21,18 @@ The built-in Red Hat Enterprise Linux Integration Services drivers for Hyper-V (
 
 Because of potential conflicts between the built-in LIS support and the downloadable LIS support when you upgrade the kernel, disable automatic updates, uninstall the LIS downloadable packages, update the kernel, reboot, and then install the latest LIS release, and reboot again.
 
->[!NOTE]
->Official Red Hat Enterprise Linux certification information is available through the [Red Hat Customer Portal](https://access.redhat.com/ecosystem/search/#/category/Server?sort=sortTitle%20asc&query=windows%20server&ecosystem=Red%20Hat%20Enterprise%20Linux).
+> [!NOTE]
+> Official Red Hat Enterprise Linux certification information is available through the [Red Hat Customer Portal](https://access.redhat.com/ecosystem/search/#/category/Server?sort=sortTitle%20asc&query=windows%20server&ecosystem=Red%20Hat%20Enterprise%20Linux).
 
 In this section:
 
-* [RHEL/CentOS 7.x Series](Supported-CentOS-and-Red-Hat-Enterprise-Linux-virtual-machines-on-Hyper-V.md#BKMK_7x)
+* [RHEL/CentOS 7.x Series](#rhelcentos-7x-series)
 
-* [RHEL/CentOS 6.x Series](Supported-CentOS-and-Red-Hat-Enterprise-Linux-virtual-machines-on-Hyper-V.md#BKMK_6x)
+* [RHEL/CentOS 6.x Series](#rhelcentos-6x-series)
 
-* [RHEL/CentOS 5.x Series](Supported-CentOS-and-Red-Hat-Enterprise-Linux-virtual-machines-on-Hyper-V.md#BKMK_5x)
+* [RHEL/CentOS 5.x Series](#rhelcentos-5x-series)
 
-* [Notes](Supported-CentOS-and-Red-Hat-Enterprise-Linux-virtual-machines-on-Hyper-V.md#BKMK_notes)
+* [Notes](#notes)
 
 ## Table legend
 
@@ -42,7 +42,7 @@ In this section:
 
 * (*blank*) - Feature not available
 
-## <a name="BKMK_7x"></a>RHEL/CentOS 7.x Series
+## RHEL/CentOS 7.x Series
 
 This series only has 64-bit kernels.
 
@@ -85,7 +85,7 @@ This series only has 64-bit kernels.
 |                                                               Boot using UEFI                                                                |        2019, 2016, 2012 R2         |                          &#10004; Note 14                           |                          &#10004; Note 14                           |                          &#10004; Note 14                           |  &#10004; Note 14   |  &#10004; Note 14   |  &#10004; Note 14   |  &#10004; Note 14   |  &#10004; Note 14   |    &#10004; Note 14    |
 |                                                                 Secure boot                                                                  |             2019, 2016             |                              &#10004;                               |                              &#10004;                               |                              &#10004;                               |      &#10004;       |      &#10004;       |      &#10004;       |      &#10004;       |      &#10004;       |        &#10004;        |
 
-## <a name="BKMK_6x"></a>RHEL/CentOS 6.x Series
+## RHEL/CentOS 6.x Series
 
 The 32-bit kernel for this series is PAE enabled. There is no built-in LIS support for RHEL/CentOS 6.0-6.3.
 
@@ -129,7 +129,7 @@ The 32-bit kernel for this series is PAE enabled. There is no built-in LIS suppo
 |                                                                                                                                              |             2019, 2016             |                          &#10004; Note 14                           |                          &#10004; Note 14                           |    &#10004; Note 14    |                           |                           |                            |
 |                                                                 Secure boot                                                                  |             2019, 2016             |                                                                     |                                                                     |                        |                           |                           |                            |
 
-## <a name="BKMK_5x"></a>RHEL/CentOS 5.x Series
+## RHEL/CentOS 5.x Series
 
 This series has a supported 32-bit PAE kernel available. There is no built-in LIS support for RHEL/CentOS before 5.9.
 
@@ -172,7 +172,7 @@ This series has a supported 32-bit PAE kernel available. There is no built-in LI
 |                                                               Boot using UEFI                                                                |        2019, 2016, 2012 R2         |                                                                     |                                                                     |                       |
 |                                                                 Secure boot                                                                  |             2019, 2016             |                                                                     |                                                                     |                       |
 
-## <a name="BKMK_notes"></a>Notes
+## Notes
 
 1. For this RHEL/CentOS release, VLAN tagging works but VLAN trunking does not.
 

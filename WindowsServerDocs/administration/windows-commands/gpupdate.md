@@ -18,8 +18,6 @@ ms.date: 10/16/2017
 
 # gpupdate
 
-
-
 Updates Group Policy settings. For examples of how this command can be used, see [Examples](#examples).
 
 ## Syntax
@@ -47,6 +45,7 @@ gpupdate [/target:{Computer | User}] [/force] [/wait:<VALUE>] [/logoff] [/boot] 
 ## Examples
 
 Force a background update of all Group Policy settings, regardless of whether they have changed.
+
 ```
 gpupdate /force
 ```
