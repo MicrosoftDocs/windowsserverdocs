@@ -53,9 +53,6 @@ conceptualContent:
         - url: /windows-server/identity/securing-privileged-access/securing-privileged-access
           itemType: concept
           text: Securing privileged access
-        - url: /windows-server/identity/software-restriction-policies/software-restriction-policies
-          itemType: concept
-          text: Software Restriction Policies
       footerLink: 
         url: /windows-server/identity/identity-and-access
         text: See More
@@ -146,9 +143,6 @@ conceptualContent:
         - url: /windows-server/storage/storage-spaces/understand-quorum
           itemType: overview
           text: Understanding cluster and pool quorum
-        - url: /windows-server/storage/disk-management/initialize-new-disks
-          itemType: how-to-guide
-          text: Initialize new disks
       footerLink: 
         url: /windows-server/storage/storage
         text: See More
