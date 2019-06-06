@@ -42,7 +42,7 @@ You can troubleshoot connection issues in several ways. For client-side issues a
 
 ### Error code: 809
 
-- **Error description.**  The network connection between your computer and the VPN server could not be established because the remote server is not responding. This could be because one of the network devices \(e.g., firewalls, NAT, routers\) between your computer and the remote server is not configured to allow VPN connections. Please contact your administrator or your service provider to determine which device may be causing the problem.
+- **Error description.**  The network connection between your computer and the VPN server could not be established because the remote server is not responding. This could be because one of the network devices (e.g., firewalls, NAT, routers) between your computer and the remote server is not configured to allow VPN connections. Please contact your administrator or your service provider to determine which device may be causing the problem.
 
 - **Possible cause.** This error is caused by blocked UDP 500 or 4500 ports on the VPN server or the firewall.
 
@@ -158,7 +158,7 @@ A small misconfiguration can cause the client connection to fail and can be chal
 
 ### Oops - You can't get to this yet
 
-- **Error description.** When the Conditional Access policy is not satisfied, blocking the VPN connection, but connects after the user clicks **X** to close the message.  Clicking **OK** causes another authentication attempt, which ends in another _Oops_ message. These events are recorded in the AAD Operational Event log of the client. 
+- **Error description.** When the Conditional Access policy is not satisfied, blocking the VPN connection, but connects after the user selects **X** to close the message.  Selecting **OK** causes another authentication attempt, which ends in another "Oops" message. These events are recorded in the AAD Operational Event log of the client.
 
 - **Possible cause**
 
@@ -271,9 +271,9 @@ A small misconfiguration can cause the client connection to fail and can be chal
       Encryption test passed
      ```
      >[!NOTE]
-     >If a certificate from Issuer **CN=Microsoft VPN root CA gen 1** is present in the user's Personal store, but the user gained access by clicking **X** to close the Oops message, collect CAPI2 event logs to verify the certificate used to authenticate was a valid Client Authentication certificate that was not issued from the Microsoft VPN root CA.
+     >If a certificate from Issuer **CN=Microsoft VPN root CA gen 1** is present in the user's Personal store, but the user gained access by selecting **X** to close the Oops message, collect CAPI2 event logs to verify the certificate used to authenticate was a valid Client Authentication certificate that was not issued from the Microsoft VPN root CA.
 
-  4. If a valid Client Authentication certificate exists in the user's Personal store, the connection fails (as it should) after the user clicks the **X** and  if the **\<TLSExtensions>**, **\<EKUName>**, and **\<EKUOID>** sections exist and contain the correct information.
+  4. If a valid Client Authentication certificate exists in the user's Personal store, the connection fails (as it should) after the user selects the **X** and  if the **\<TLSExtensions>**, **\<EKUName>**, and **\<EKUOID>** sections exist and contain the correct information.
    
      An error message that says "A certificate could not be found that can be used with the Extensible Authenticate Protocol" appears.
 
@@ -286,6 +286,6 @@ A small misconfiguration can cause the client connection to fail and can be chal
 - **Possible solution.**
 
     1. In the VPN connectivity blade, select the certificate.
-    2. Under **Primary**, select **No** and click **Save**.
+    2. Under **Primary**, select **No**, then select **Save**.
     3. In the VPN connectivity blade, select the certificate again.
-    4. Click **Delete**.
+    4. Select **Delete**.

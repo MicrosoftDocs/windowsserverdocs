@@ -131,9 +131,9 @@ Before creating the template, take note the hostname or fully qualified domain n
 >[!NOTE]
 >If you have multiple NPS servers, complete these steps on each one so that the VPN profile can verify each of them should they be used.
 
-### Configure the template VPN profile on a domain\-joined client computer
+### Configure the template VPN profile on a domain-joined client computer
 
-Now that you have the necessary information configure the template VPN profile on a domain-joined client computer. The type of user account you use (that is, standard user or administrator) for this part of the process does not matter. 
+Now that you have the necessary information configure the template VPN profile on a domain-joined client computer. The type of user account you use (that is, standard user or administrator) for this part of the process does not matter.
 
 However, if you haven’t restarted the computer since configuring certificate autoenrollment, do so before configuring the template VPN connection to ensure you have a usable certificate enrolled on it.
 
@@ -152,7 +152,7 @@ However, if you haven’t restarted the computer since configuring certificate a
 
 5.  In Connection Name, type **Template**.
 
-6.  In Server name or address, type the **external** FQDN of your VPN server \(for example, **vpn.contoso.com**\).
+6.  In Server name or address, type the **external** FQDN of your VPN server (for example, **vpn.contoso.com**).
 
 7.  Click **Save**.
 
@@ -217,7 +217,7 @@ The Windows PowerShell script in Listing 1 creates two files on the desktop, bot
 
 1. Sign in to the domain-joined client computer containing the template VPN profile with the same user account that the section [Manually create a template connection profile](#manually-create-a-template-connection-profile) described.
 
-2. Paste Listing 1 into Windows PowerShell integrated scripting environment \(ISE\), and customize the parameters described in the comments. These are $Template, $ProfileName, $Servers, $DnsSuffix, $DomainName, $TrustedNetwork, and $DNSServers. A full description of each setting is in the comments.
+2. Paste Listing 1 into Windows PowerShell integrated scripting environment (ISE), and customize the parameters described in the comments. These are $Template, $ProfileName, $Servers, $DnsSuffix, $DomainName, $TrustedNetwork, and $DNSServers. A full description of each setting is in the comments.
 
 3. Run the script to generate **VPN_Profile.xml** and **VPN_Profile.ps1** on the desktop.
 
@@ -604,7 +604,9 @@ To configure the VPNv2 CSP on a Windows 10 client computer, run the VPN_Profile.
 
 After running VPN_Profile.ps1 to configure the VPN profile, you can verify at any time that it was successful by running the following command in the Windows PowerShell ISE:
 
-    Get-WmiObject -Namespace root\cimv2\mdm\dmmap -Class MDM_VPNv2_01
+```powershell
+Get-WmiObject -Namespace root\cimv2\mdm\dmmap -Class MDM_VPNv2_01
+```
 
 **Successful results from the Get-WmiObject cmdlet**
 

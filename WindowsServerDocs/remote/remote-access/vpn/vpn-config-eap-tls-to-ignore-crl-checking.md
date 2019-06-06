@@ -42,11 +42,11 @@ Since the authentication method is EAP-TLS, this registry value is only needed u
 
 2. Navigate to **HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\RasMan\PPP\EAP\13**.
 
-3. Click **Edit > New** and select **DWORD (32-bit) Value** and type **IgnoreNoRevocationCheck**.
+3. Select **Edit > New** and select **DWORD (32-bit) Value** and enter **IgnoreNoRevocationCheck**.
 
 4. Double-click **IgnoreNoRevocationCheck** and set the Value data to **1**.
 
-5. Click **OK** and reboot the server. Restarting the RRAS and NPS services does not suffice.
+5. Select **OK** and reboot the server. Restarting the RRAS and NPS services does not suffice.
 
 For more information, see [How to Enable or Disable Certificate Revocation Checking (CRL) on Clients](https://technet.microsoft.com/library/bb680540.aspx).
 

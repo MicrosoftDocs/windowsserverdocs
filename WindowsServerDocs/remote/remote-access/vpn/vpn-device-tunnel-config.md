@@ -86,15 +86,15 @@ Following is the sample VPN profileXML.
 Depending on the needs of each particular deployment scenario, another VPN feature that can be configured with the device tunnel is [Trusted Network Detection](https://social.technet.microsoft.com/wiki/contents/articles/38546.new-features-for-vpn-in-windows-10-and-windows-server-2016.aspx#Trusted_Network_Detection).
 
 ```
- <!-- inside/outside detection --> 
-  <TrustedNetworkDetection>corp.contoso.com</TrustedNetworkDetection> 
+ <!-- inside/outside detection -->
+  <TrustedNetworkDetection>corp.contoso.com</TrustedNetworkDetection>
 ```
 
 ## Deployment and Testing
 
-You can configure device tunnels by using a Windows PowerShell script and using the Windows Management Instrumentation \(WMI\) bridge. The Always On VPN device tunnel must be configured in the context of the **LOCAL SYSTEM** account. To accomplish this, it will be necessary to use [PsExec](https://docs.microsoft.com/sysinternals/downloads/psexec), one of the [PsTools](https://docs.microsoft.com/sysinternals/downloads/pstools) included in the [Sysinternals](https://docs.microsoft.com/sysinternals/) suite of utilities.
+You can configure device tunnels by using a Windows PowerShell script and using the Windows Management Instrumentation (WMI) bridge. The Always On VPN device tunnel must be configured in the context of the **LOCAL SYSTEM** account. To accomplish this, it will be necessary to use [PsExec](https://docs.microsoft.com/sysinternals/downloads/psexec), one of the [PsTools](https://docs.microsoft.com/sysinternals/downloads/pstools) included in the [Sysinternals](https://docs.microsoft.com/sysinternals/) suite of utilities.
 
-For guidelines on how to deploy a per device `(.\Device)` vs. a per user `(.\User)` profile, see [Using PowerShell scripting with the WMI Bridge Provider](https://docs.microsoft.com/windows/client-management/mdm/using-powershell-scripting-with-the-wmi-bridge-provider). 
+For guidelines on how to deploy a per device `(.\Device)` vs. a per user `(.\User)` profile, see [Using PowerShell scripting with the WMI Bridge Provider](https://docs.microsoft.com/windows/client-management/mdm/using-powershell-scripting-with-the-wmi-bridge-provider).
 
 Run the following Windows PowerShell command to verify that you have successfully deployed a device profile:
 
@@ -103,7 +103,6 @@ Run the following Windows PowerShell command to verify that you have successfull
   ```
 
 The output displays a list of the device\-wide VPN profiles that are deployed on the device.
-
 
 ### Example Windows PowerShell Script
 
@@ -162,19 +161,19 @@ Write-Host "$Message"
 
 ## Additional Resources
 
-Following are additional resources to assist with your VPN deployment.
+The following are additional resources to assist with your VPN deployment.
 
 ### VPN client configuration resources
 
-These are VPN client configuration resources.
+The following are VPN client configuration resources.
 
 - [How to Create VPN profiles in System Center Configuration Manager](https://docs.microsoft.com/sccm/protect/deploy-use/create-vpn-profiles)
 - [Configure Windows 10 Client Always On VPN Connections](always-on-vpn/deploy/vpn-deploy-client-vpn-connections.md)
 - [VPN profile options](https://docs.microsoft.com/windows/access-protection/vpn/vpn-profile-options)
 
-### Remote Access Server \(RAS\) Gateway resources
+### Remote Access Server Gateway resources
 
-Following are RAS Gateway resources.
+The following are Remote Access Server (RAS) Gateway resources.
 
 - [Configure RRAS with a Computer Authentication Certificate](https://technet.microsoft.com/library/dd458982.aspx)
 - [Troubleshooting IKEv2 VPN Connections](https://technet.microsoft.com/library/dd941612.aspx)

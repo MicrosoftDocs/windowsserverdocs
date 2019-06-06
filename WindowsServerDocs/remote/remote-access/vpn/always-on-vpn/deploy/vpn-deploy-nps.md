@@ -56,34 +56,34 @@ Install-WindowsFeature NPAS -IncludeManagementTools
 1.  In Server Manager, select **Manage**, then select **Add Roles and Features**.
         The Add Roles and Features Wizard opens.
 
-2.  In Before You Begin, click **Next**.
+2.  In Before You Begin, select **Next**.
 
     >[!NOTE] 
     >The **Before You Begin** page of the Add Roles and Features Wizard is not displayed if you had previously selected **Skip this page by default** when the Add Roles and Features Wizard ran.
 
-3.  In Select Installation Type, ensure that **Role-Based or feature-based installation** is selected, and click **Next**.
+3.  In Select Installation Type, ensure that **Role-Based or feature-based installation** is selected, and select **Next**.
 
 4.  In Select destination server, ensure that **Select a server from the server pool** is selected.
 
-5.  In Server Pool, ensure that the local computer is selected and click **Next**.
+5.  In Server Pool, ensure that the local computer is selected and select **Next**.
 
 6.  In Select Server Roles, in **Roles**, select **Network Policy and Access Services**. A dialog box opens asking if it should add features required for Network Policy and Access Services.
 
-7.  Click **Add Features**, and click **Next**
+7.  Select **Add Features**, then select **Next**
 
-8.  In Select features, click **Next**, and in Network Policy and Access Services, review the information provided, and click **Next**.
+8.  In Select features, select **Next**, and in Network Policy and Access Services, review the information provided, then select **Next**.
 
-9.  In Select role services, click **Network Policy Server**.
+9.  In Select role services, select **Network Policy Server**.
 
-10. For features required for Network Policy Server, click **Add Features** and, click **Next**.
+10. For features required for Network Policy Server, select **Add Features**, then select **Next**.
 
-11. In Confirm installation selections, click **Restart the destination server automatically if required**.
+11. In Confirm installation selections, select **Restart the destination server automatically if required**.
 
-12. Click **Yes** to confirm the selected, and then click **Install**.
+12. Select **Yes** to confirm the selected, and then select **Install**.
     
     The Installation progress page displays the status during the installation process. When the process completes, the message "Installation succeeded on *ComputerName*" is displayed, where *ComputerName* is the name of the computer upon which you installed Network Policy Server.
 
-13. Click **Close**.
+13. Select **Close**.
 
 ## Configure NPS
 
@@ -95,13 +95,13 @@ In this procedure, you register the server in Active Directory so that it has pe
 
 **Procedure:**
 
-1.  In Server Manager, click **Tools**, and then click **Network Policy Server**. The NPS console opens.
+1.  In Server Manager, select **Tools**, and then select **Network Policy Server**. The NPS console opens.
 
-2.  In the NPS console, right-click **NPS (Local)**, and click **Register server in Active Directory** to select it.
+2.  In the NPS console, right-click **NPS (Local)**, then select **Register server in Active Directory**.
    
      The Network Policy Server dialog box opens.
 
-3.  In the Network Policy Server dialog box, click **OK** twice.
+3.  In the Network Policy Server dialog box, select **OK** twice.
 
 For alternate methods of registering NPS, see [Register an NPS Server in an Active Directory Domain](../../../../../networking/technologies/nps/nps-manage-register.md).
 
@@ -130,7 +130,7 @@ In this procedure, you use the same shared secret text string to configure the V
 
 1. On the NPS server, in the NPS console, double-click **RADIUS Clients and Servers**.
 
-2. Right-click **RADIUS Clients** and click **New**. The New RADIUS Client dialog box opens.
+2. Right-click **RADIUS Clients** and select **New**. The New RADIUS Client dialog box opens.
 
 3. Verify that the **Enable this RADIUS client** check box is selected.
 
@@ -138,7 +138,7 @@ In this procedure, you use the same shared secret text string to configure the V
 
 5. In **Address (IP or DNS)**, enter the NAS IP address or FQDN.
      
-     If you enter the FQDN, click **Verify** if you want to verify that the name is correct and maps to a valid IP address.
+     If you enter the FQDN, select **Verify** if you want to verify that the name is correct and maps to a valid IP address.
 
 6. In **Shared secret**, do:
 
@@ -146,9 +146,9 @@ In this procedure, you use the same shared secret text string to configure the V
 
     2. Enter the strong text string that you also entered on the VPN server.
 
-    3. Retype the shared secret in Confirm shared secret.
+    3. Reenter the shared secret in Confirm shared secret.
 
-7. Click **OK**. The VPN Server appears in the list of RADIUS clients configured on the NPS server.
+7. Select **OK**. The VPN Server appears in the list of RADIUS clients configured on the NPS server.
 
 ## Configure NPS as a RADIUS for VPN Connections
 
@@ -158,52 +158,53 @@ In this procedure, you configure NPS as a RADIUS server on your organization net
 
 1. In the NPS console, in Standard Configuration, ensure that **RADIUS server for Dial-Up or VPN Connections** is selected.
 
-2. Click **Configure VPN or Dial-Up**.
-        The Configure VPN or Dial-Up wizard opens.
+2. Select **Configure VPN or Dial-Up**.
+        
+    The Configure VPN or Dial-Up wizard opens.
 
-3. Click **Virtual Private Network (VPN) Connections**, and click **Next**.
+3. Select **Virtual Private Network (VPN) Connections**, and select **Next**.
 
-4. In Specify Dial-Up or VPN Server, in RADIUS clients, select the name of the VPN Server that you added in the previous step. For example, if your VPN server NetBIOS name is RAS1, click **RAS1**.
+4. In Specify Dial-Up or VPN Server, in RADIUS clients, select the name of the VPN Server that you added in the previous step. For example, if your VPN server NetBIOS name is RAS1, select **RAS1**.
 
-5. Click **Next**.
+5. Select **Next**.
 
 6. In Configure Authentication Methods, complete the following steps:
 
     1. Clear the **Microsoft Encrypted Authentication version 2 (MS-CHAPv2)** check box.
 
-    2. Click the **Extensible Authentication Protocol** check box to select it.
+    2. Select the **Extensible Authentication Protocol** check box to select it.
 
-    3. In Type (based on the method of access and network configuration), click **Microsoft: Protected EAP (PEAP)**, and click **Configure**.
+    3. In Type (based on the method of access and network configuration), select **Microsoft: Protected EAP (PEAP)**, then select **Configure**.
       
         The Edit Protected EAP Properties dialog box opens.
 
-    4. Click **Remove** to remove the Secured Password (EAP-MSCHAP v2) EAP type.
+    4. Select **Remove** to remove the Secured Password (EAP-MSCHAP v2) EAP type.
 
-    5. Click **Add**. The Add EAP dialog box opens.
+    5. Select **Add**. The Add EAP dialog box opens.
 
-    6. Click **Smart Card or other certificate**, and click **OK**.
+    6. Select **Smart Card or other certificate**, then select **OK**.
 
-    7. Click **OK** to close Edit Protected EAP Properties.
+    7. Select **OK** to close Edit Protected EAP Properties.
 
-7. Click **Next**.
+7. Select **Next**.
 
 8. In Specify User Groups, complete the following steps:
 
-    1. Click **Add**. The Select Users, Computers, Service Accounts, or Groups dialog box opens.
+    1. Select **Add**. The Select Users, Computers, Service Accounts, or Groups dialog box opens.
 
-    2. Type **VPN Users** and click **OK**.
+    2. Enter **VPN Users**, then select **OK**.
 
-    3. Click **Next**.
+    3. Select **Next**.
 
-9. In Specify IP Filters, click **Next**.
+9. In Specify IP Filters, select **Next**.
 
-10. In Specify Encryption Settings, click **Next**. Do not make any changes.
+10. In Specify Encryption Settings, select **Next**. Do not make any changes.
 
     These settings apply only to Microsoft Point-to-Point Encryption (MPPE) connections, which this scenario doesn’t support.
 
-11. In Specify a Realm Name, click **Next**.
+11. In Specify a Realm Name, select **Next**.
 
-12. Click **Finish** to close the wizard.
+12. Select **Finish** to close the wizard.
 
 ## Autoenroll the NPS Server Certificate
 

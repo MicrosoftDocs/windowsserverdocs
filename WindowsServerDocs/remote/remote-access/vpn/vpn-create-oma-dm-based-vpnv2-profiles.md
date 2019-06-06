@@ -37,7 +37,7 @@ Windows 10 client computer has already been configured with a VPN connection usi
 
 **Procedure:**
 
-1. In the Azure portal, click **Intune** > **Device Configuration** > **Profiles** and select the VPN profile you created earlier in [Configure the VPN client by using Intune](always-on-vpn/deploy/vpn-deploy-client-vpn-connections.md#configure-the-vpn-client-by-using-intune).
+1. In the Azure portal, select **Intune** > **Device Configuration** > **Profiles** and select the VPN profile you created earlier in [Configure the VPN client by using Intune](always-on-vpn/deploy/vpn-deploy-client-vpn-connections.md#configure-the-vpn-client-by-using-intune).
     
 2. In the policy editor, select **Properties** > **Settings** > **Base VPN**. Extend the existing **EAP Xml** to include a filter that gives the VPN client the logic it needs to retrieve the AAD Conditional Access certificate from the user's certificate store instead of leaving it to chance allowing it to use the first certificate discovered.
 
@@ -58,29 +58,31 @@ Windows 10 client computer has already been configured with a VPN connection usi
 
     ![Conditional Access for Always On VPN - Properties](../../media/Always-On-Vpn/vpn-conditional-access-azure-ad.png)
 
-5. Click **OK**.
+5. Select **OK**.
 
-6. Select **Assignments**, under Include, click **Select groups to include**.
+6. Select **Assignments**, under Include, select **Select groups to include**.
 
-7. Select the **VPN Users** group that receives this policy and click **Save**.
+7. Select the **VPN Users** group that receives this policy and select **Save**.
 
     ![CAP for Auto VPN Users - Assignments](../../media/Always-On-Vpn/cap-for-auto-vpn-users-assignments.png)
 
 ## Force MDM Policy Sync on the Client
+
 If the VPN profile does not show up on the client device, under Settings\\Network & Internet\\VPN, you can force MDM policy to sync.
 
 1. Sign in to a domain-joined client computer as a member of the **VPN Users** group.
 
-2. On the Start menu, type **account**, and press Enter.
+2. On the Start menu, enter **account**, and press Enter.
 
-3.  In the left navigation pane, click **Access work or school**.
+3. In the left navigation pane, select **Access work or school**.
 
-5.  Under Access work or school, click **Connected to <\domain> MDM** and click **Info**.
+4. Under Access work or school, select **Connected to <\domain> MDM**, then select **Info**.
 
-6.  Click **Sync** and verify the VPN profile appears under Settings\\Network & Internet\\VPN.
+5. Select **Sync** and verify the VPN profile appears under Settings\\Network & Internet\\VPN.
 
 
-## Next step
+## Next steps
+
 You are done configuring the VPN profile to use Azure AD conditional access. 
 
 |If you want to...  |Then see...  |
@@ -90,6 +92,7 @@ You are done configuring the VPN profile to use Azure AD conditional access.
 
 
 ## Related topics
+
 - [VPNv2 CSP](https://msdn.microsoft.com/windows/hardware/commercialize/customize/mdm/vpnv2-csp):  This topic provides you with an overview of VPNv2 CSP. The VPNv2 configuration service provider allows the mobile device management (MDM) server to configure the VPN profile of the device.
 
 - [Configure Windows 10 Client Always On VPN Connections](https://docs.microsoft.com/windows-server/remote/remote-access/vpn/always-on-vpn/deploy/vpn-deploy-client-vpn-connections): This topic provides information about the ProfileXML options and schema, and how to create the ProfileXML VPN. After setting up the server infrastructure, you must configure the Windows 10 client computers to communicate with that infrastructure with a VPN connection. 

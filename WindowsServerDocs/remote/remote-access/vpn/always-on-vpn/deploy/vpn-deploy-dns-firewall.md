@@ -29,20 +29,20 @@ To ensure that remote clients can connect to your VPN server, you can create a D
 
 ### To add a host (A or AAAA) resource record to a zone
 
-1. On a DNS server, in Server Manager, click **Tools**, and then click **DNS**. DNS Manager opens.
-2. In the DNS Manager console tree, click the server that you want to manage.
+1. On a DNS server, in Server Manager, select **Tools**, and then select **DNS**. DNS Manager opens.
+2. In the DNS Manager console tree, select the server that you want to manage.
 3. In the details pane, in **Name**, double-click **Forward Lookup Zones** to expand the view.
-4. In **Forward Lookup Zones** details, right-click the forward lookup zone to which you want to add a record, and then click **New Host (A or AAAA)**. The **New Host** dialog box opens.
-5. In **New Host**, in **Name**, type the certificate subject alternative name for the VPN server.
-6. In IP address, type the IP address for the VPN server. You can type the address in IP version 4 (IPv4) format to add a host (A) resource record, or IP version 6 (IPv6) format to add a host (AAAA) resource record.
-7. If you created a reverse lookup zone for a range of IP addresses, including the IP address that you typed, then select the **Create associated pointer (PTR) record** check box.  Selecting this option creates an additional pointer (PTR) resource record in a reverse zone for this host, based on the information you entered in **Name** and **IP address**.
-8. Click **Add Host**.
+4. In **Forward Lookup Zones** details, right-click the forward lookup zone to which you want to add a record, and then select **New Host (A or AAAA)**. The **New Host** dialog box opens.
+5. In **New Host**, in **Name**, enter the certificate subject alternative name for the VPN server.
+6. In IP address, enter the IP address for the VPN server. You can enter the address in IP version 4 (IPv4) format to add a host (A) resource record, or IP version 6 (IPv6) format to add a host (AAAA) resource record.
+7. If you created a reverse lookup zone for a range of IP addresses, including the IP address that you entered, then select the **Create associated pointer (PTR) record** check box.  Selecting this option creates an additional pointer (PTR) resource record in a reverse zone for this host, based on the information you entered in **Name** and **IP address**.
+8. Select **Add Host**.
 
 ## Configure the Edge Firewall
 
 The Edge Firewall separates the External Perimeter Network from the Public Internet. For a visual representation of this separation, see the illustration in the topic [Always On VPN Technology Overview](../always-on-vpn-technology-overview.md).
 
-Your Edge Firewall must allow and forward specific ports to your VPN server. If you use Network Address Translation \(NAT\) on your edge firewall, you might need to enable port forwarding for User Datagram Protocol (UDP) ports 500 and 4500. Forward these ports to the IP address that is assigned to the external interface of your VPN server.
+Your Edge Firewall must allow and forward specific ports to your VPN server. If you use Network Address Translation (NAT) on your edge firewall, you might need to enable port forwarding for User Datagram Protocol (UDP) ports 500 and 4500. Forward these ports to the IP address that is assigned to the external interface of your VPN server.
 
 If you’re routing traffic inbound and performing NAT at or behind the VPN server, then you must open your firewall rules to allow UDP ports 500 and 4500 inbound to the external IP address applied to the public interface on the VPN server.
 

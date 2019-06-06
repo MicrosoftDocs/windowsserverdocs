@@ -43,6 +43,6 @@ When you install the **DirectAccess and VPN (RAS)** role service, you are deploy
 
 - [How to Create VPN profiles in System Center Configuration Manager](https://docs.microsoft.com/sccm/protect/deploy-use/create-vpn-profiles): In this topic, you learn how to create VPN profiles in System Center Configuration Manager (SCCM).
 
-- [Configure Windows 10 Client Always On VPN Connections](https://docs.microsoft.com/windows-server/remote/remote-access/vpn/always-on-vpn/deploy/vpn-deploy-client-vpn-connections): This topic describes the ProfileXML options and schema, and how to create the ProfileXML VPN. After setting up the server infrastructure, you must configure the Windows 10 client computers to communicate with that infrastructure with a VPN connection. 
+- [Configure Windows 10 Client Always On VPN Connections](https://docs.microsoft.com/windows-server/remote/remote-access/vpn/always-on-vpn/deploy/vpn-deploy-client-vpn-connections): This topic describes the ProfileXML options and schema, and how to create the ProfileXML VPN. After setting up the server infrastructure, you must configure the Windows 10 client computers to communicate with that infrastructure with a VPN connection.
 
 - [VPN profile options](https://docs.microsoft.com/windows/access-protection/vpn/vpn-profile-options): This topic describes the VPN profile settings in Windows 10 and learn how to configure VPN profiles using Intune or SCCM. You can configure all VPN settings in Windows 10 using the ProfileXML node in the VPNv2 CSP.
