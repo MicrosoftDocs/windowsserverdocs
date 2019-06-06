@@ -40,15 +40,14 @@ Indexing attributes is useful when searching for objects that have the attribute
 
 -   A query is taking a long time and is not completing in an acceptable timeframe to the client due to lack of covering indices.
 
--   Large volumes of queries with high durations are causing consumption and exhaustion of ATQ LDAP Threads. Monitor the following performance counters:
+- Large volumes of queries with high durations are causing consumption and exhaustion of ATQ LDAP Threads. Monitor the following performance counters:
 
-    -   **NTDS\\Request Latency** – This is subject to how long the request takes to process. Active Directory times out requests after 120 seconds (default), however, the majority should run much faster and extremely long running queries should get hidden in the overall numbers. Look for changes in this baseline, rather than absolute thresholds.
+    - **NTDS\\Request Latency** – This is subject to how long the request takes to process. Active Directory times out requests after 120 seconds (default), however, the majority should run much faster and extremely long running queries should get hidden in the overall numbers. Look for changes in this baseline, rather than absolute thresholds.
 
-        > [!Note]  
+        > [!Note]
         > High values here can also be indicators of delays in "proxying" requests to other domains and CRL checks.
 
-
-    -   **NTDS\\Estimated Queue Delay** – This should ideally be near 0 for optimal performance as this means that requests spend no time waiting to be serviced.
+    - **NTDS\\Estimated Queue Delay** – This should ideally be near 0 for optimal performance as this means that requests spend no time waiting to be serviced.
 
 These scenarios can be detected using one or more of the following approaches:
 

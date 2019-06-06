@@ -29,7 +29,7 @@ At the Windows Server 2008 and higher domain functional levels, Distributed File
 
 There are no new forest or domain functional levels added in this release.
 
-The minimum requirement to add a Windows Server 2019 Domain Controller is a Windows Server 2008 functional level. The domain also has to use DFS-R as the engine to replciate SYSVOL.
+The minimum requirement to add a Windows Server 2019 Domain Controller is a Windows Server 2008 functional level. The domain also has to use DFS-R as the engine to replicate SYSVOL.
 
 ## Windows Server 2016
 
@@ -134,25 +134,27 @@ Supported Domain Controller Operating System:
 ### Windows Server 2008 domain functional level features
 
 * All of the default AD DS features, all of the features from the Windows Server 2003 domain functional level, and the following features are available:
-   * Distributed File System (DFS) replication support for the Windows Server 2003 System Volume (SYSVOL)
-      * DFS replication support provides more robust and detailed replication of SYSVOL contents.
-        [!NOTE]>
-        >Beginning with Windows Server 2012 R2, File Replication Service (FRS) is deprecated. A new domain that is created on a domain controller that runs at least Windows Server 2012 R2 must be set to the Windows Server 2008 domain functional level or higher.
+  * Distributed File System (DFS) replication support for the Windows Server 2003 System Volume (SYSVOL)
+    * DFS replication support provides more robust and detailed replication of SYSVOL contents.
 
-   * Domain-based DFS namespaces running in Windows Server 2008 Mode, which includes support for access-based enumeration and increased scalability. Domain-based namespaces in Windows Server 2008 mode also require the forest to use the Windows Server 2003 forest functional level. For more information, see [Choose a Namespace Type](https://go.microsoft.com/fwlink/?LinkId=180400).
-   * Advanced Encryption Standard (AES 128 and AES 256) support for the Kerberos protocol. In order for TGTs to be issued using AES, the domain functional level must be Windows Server 2008 or higher and the domain password needs to be changed. 
-      * For more information, see [Kerberos Enhancements](https://technet.microsoft.com/library/cc749438(ws.10).aspx).
-        [!NOTE]>
-        >Authentication errors may occur on a domain controller after the domain functional level is raised to Windows Server 2008 or higher if the domain controller has already replicated the DFL change but has not yet refreshed the krbtgt password. In this case, a restart of the KDC service on the domain controller will trigger an in-memory refresh of the new krbtgt password and resolve related authentication errors.
+      > [!NOTE]
+      > Beginning with Windows Server 2012 R2, File Replication Service (FRS) is deprecated. A new domain that is created on a domain controller that runs at least Windows Server 2012 R2 must be set to the Windows Server 2008 domain functional level or higher.
 
-   * [Last Interactive Logon](https://go.microsoft.com/fwlink/?LinkId=180387) Information displays the following information:
-      * The total number of failed logon attempts at a domain-joined Windows Server 2008 server or a Windows Vista workstation
-      * The total number of failed logon attempts after a successful logon to a Windows Server 2008 server or a Windows Vista workstation
-      * The time of the last failed logon attempt at a Windows Server 2008 or a Windows Vista workstation
-      * The time of the last successful logon attempt at a Windows Server 2008 server or a Windows Vista workstation
-   * Fine-grained password policies make it possible for you to specify password and account lockout policies for users and global security groups in a domain. For more information, see [Step-by-Step Guide for Fine-Grained Password and Account Lockout Policy Configuration](https://go.microsoft.com/fwlink/?LinkID=91477).
-   * Personal Virtual Desktops
-      * To use the added functionality provided by the Personal Virtual Desktop tab in the User Account Properties dialog box in Active Directory Users and Computers, your AD DS schema must be extended for Windows Server 2008 R2 (schema object version = 47). For more information, see [Deploying Personal Virtual Desktops by Using RemoteApp and Desktop Connection Step-by-Step Guide](https://go.microsoft.com/fwlink/?LinkId=183552).
+  * Domain-based DFS namespaces running in Windows Server 2008 Mode, which includes support for access-based enumeration and increased scalability. Domain-based namespaces in Windows Server 2008 mode also require the forest to use the Windows Server 2003 forest functional level. For more information, see [Choose a Namespace Type](https://go.microsoft.com/fwlink/?LinkId=180400).
+  * Advanced Encryption Standard (AES 128 and AES 256) support for the Kerberos protocol. In order for TGTs to be issued using AES, the domain functional level must be Windows Server 2008 or higher and the domain password needs to be changed. 
+    * For more information, see [Kerberos Enhancements](https://technet.microsoft.com/library/cc749438(ws.10).aspx).
+
+      > [!NOTE]
+      >Authentication errors may occur on a domain controller after the domain functional level is raised to Windows Server 2008 or higher if the domain controller has already replicated the DFL change but has not yet refreshed the krbtgt password. In this case, a restart of the KDC service on the domain controller will trigger an in-memory refresh of the new krbtgt password and resolve related authentication errors.
+
+  * [Last Interactive Logon](https://go.microsoft.com/fwlink/?LinkId=180387) Information displays the following information:
+     * The total number of failed logon attempts at a domain-joined Windows Server 2008 server or a Windows Vista workstation
+     * The total number of failed logon attempts after a successful logon to a Windows Server 2008 server or a Windows Vista workstation
+     * The time of the last failed logon attempt at a Windows Server 2008 or a Windows Vista workstation
+     * The time of the last successful logon attempt at a Windows Server 2008 server or a Windows Vista workstation
+  * Fine-grained password policies make it possible for you to specify password and account lockout policies for users and global security groups in a domain. For more information, see [Step-by-Step Guide for Fine-Grained Password and Account Lockout Policy Configuration](https://go.microsoft.com/fwlink/?LinkID=91477).
+  * Personal Virtual Desktops
+     * To use the added functionality provided by the Personal Virtual Desktop tab in the User Account Properties dialog box in Active Directory Users and Computers, your AD DS schema must be extended for Windows Server 2008 R2 (schema object version = 47). For more information, see [Deploying Personal Virtual Desktops by Using RemoteApp and Desktop Connection Step-by-Step Guide](https://go.microsoft.com/fwlink/?LinkId=183552).
 
 ## Windows Server 2003
 

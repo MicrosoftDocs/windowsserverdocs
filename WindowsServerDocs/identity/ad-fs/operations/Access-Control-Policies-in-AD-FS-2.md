@@ -32,14 +32,14 @@ On the Active Directory claims provider trust, create a new acceptance transform
 #### To add a claim rule to the Active Directory claims provider trust for each of the five context claim types:
 
 
-1. Click Start, point to Programs, point to Administrative Tools, and then click AD FS 2.0 Management.
-2. In the console tree, under AD FS 2.0\Trust Relationships, click Claims Provider Trusts, right-click Active Directory, and then click Edit Claim Rules.
+1. Click Start, point to Programs, point to Administrative Tools, and then click AD FS 2.0 Management.
+2. In the console tree, under AD FS 2.0\Trust Relationships, click Claims Provider Trusts, right-click Active Directory, and then click Edit Claim Rules.
 3. In the Edit Claim Rules dialog box, select the Acceptance Transform Rules tab, and then click Add Rule to start the Rule wizard.
 4. On the Select Rule Template page, under Claim rule template, select Pass Through or Filter an Incoming Claim from the list, and then click Next.
 5. On the Configure Rule page, under Claim rule name, type the display name for this rule; in Incoming claim type, type the following claim type URL, and then select Pass through all claim values.</br>
-		`https://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-forwarded-client-ip`</br>
+        `https://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-forwarded-client-ip`</br>
 6. To verify the rule, select it in the list and click Edit Rule, then click View Rule Language. The claim rule language should appear as follows: 
-		`c:[Type == "https://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-forwarded-client-ip"] => issue(claim = c);`
+        `c:[Type == "https://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-forwarded-client-ip"] => issue(claim = c);`
 7. Click Finish.
 8. In the Edit Claim Rules dialog box, click OK to save the rules.
 9. Repeat steps 2 through 6 to create an additional claim rule for each of the remaining four claim types shown below until all five rules have been created.
@@ -47,11 +47,13 @@ On the Active Directory claims provider trust, create a new acceptance transform
     `https://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-client-application`
 
 
-	`https://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-client-user-agent`
+~~~
+`https://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-client-user-agent`
 
-	`https://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-proxy`
+`https://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-proxy`
 
-	`https://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-endpoint-absolute-path`
+`https://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-endpoint-absolute-path`
+~~~
 
 ### Step 3: Update the Microsoft Office 365 Identity Platform relying party trust
 
@@ -68,15 +70,15 @@ This client access policy scenario allows access from all internal clients and b
 
 
 
-1. Click Start, point to Programs, point to Administrative Tools, and then click AD FS 2.0 Management.
-2. In the console tree, under AD FS 2.0\Trust Relationships, click Relying Party Trusts, right-click the Microsoft Office 365 Identity Platform trust, and then click Edit Claim Rules. 
+1. Click Start, point to Programs, point to Administrative Tools, and then click AD FS 2.0 Management.
+2. In the console tree, under AD FS 2.0\Trust Relationships, click Relying Party Trusts, right-click the Microsoft Office 365 Identity Platform trust, and then click Edit Claim Rules. 
 3. In the Edit Claim Rules dialog box, select the Issuance Authorization Rules tab, and then click Add Rule to start the Claim Rule Wizard.
 4. On the Select Rule Template page, under Claim rule template, select Send Claims Using a Custom Rule, and then click Next.
 5. On the Configure Rule page, under Claim rule name, type the display name for this rule. Under Custom rule, type or paste the following claim rule language syntax:
-	`exists([Type == "https://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-proxy"]) &&
-	NOT exists([Type == "https://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-forwarded-client-ip",
-	Value=~"customer-provided public ip address regex"])
-	=> issue(Type = "https://schemas.microsoft.com/authorization/claims/deny", Value = "true");` 
+    `exists([Type == "https://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-proxy"]) &&
+    NOT exists([Type == "https://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-forwarded-client-ip",
+    Value=~"customer-provided public ip address regex"])
+    => issue(Type = "https://schemas.microsoft.com/authorization/claims/deny", Value = "true");` 
 6. Click Finish. Verify that the new rule appears immediately below the Permit Access to All Users rule in the Issuance Authorization Rules list.
 7. To save the rule, in the Edit Claim Rules dialog box, click OK.
 
@@ -92,19 +94,19 @@ The following example allows access to all Office 365 applications, including Ex
 
 
 
-1. Click Start, point to Programs, point to Administrative Tools, and then click AD FS 2.0 Management.
-2. In the console tree, under AD FS 2.0\Trust Relationships, click Relying Party Trusts, right-click the Microsoft Office 365 Identity Platform trust, and then click Edit Claim Rules. 
+1. Click Start, point to Programs, point to Administrative Tools, and then click AD FS 2.0 Management.
+2. In the console tree, under AD FS 2.0\Trust Relationships, click Relying Party Trusts, right-click the Microsoft Office 365 Identity Platform trust, and then click Edit Claim Rules. 
 3. In the Edit Claim Rules dialog box, select the Issuance Authorization Rules tab, and then click Add Rule to start the Claim Rule Wizard.
 4. On the Select Rule Template page, under Claim rule template, select Send Claims Using a Custom Rule, and then click Next.
 5. On the Configure Rule page, under Claim rule name, type the display name for this rule. Under Custom rule, type or paste the following claim rule language syntax:
-	`exists([Type == "https://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-proxy"]) &&
-	NOT exists([Type == "https://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-client-application",
-	Value=="Microsoft.Exchange.Autodiscover"]) &&
-	NOT exists([Type == "https://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-client-application",
-	Value=="Microsoft.Exchange.ActiveSync"]) &&
-	NOT exists([Type == "https://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-forwarded-client-ip",
-	Value=~"customer-provided public ip address regex"])
-	=> issue(Type = "https://schemas.microsoft.com/authorization/claims/deny", Value = "true");`
+    `exists([Type == "https://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-proxy"]) &&
+    NOT exists([Type == "https://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-client-application",
+    Value=="Microsoft.Exchange.Autodiscover"]) &&
+    NOT exists([Type == "https://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-client-application",
+    Value=="Microsoft.Exchange.ActiveSync"]) &&
+    NOT exists([Type == "https://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-forwarded-client-ip",
+    Value=~"customer-provided public ip address regex"])
+    => issue(Type = "https://schemas.microsoft.com/authorization/claims/deny", Value = "true");`
 6. Click Finish. Verify that the new rule appears immediately below the Permit Access to All Users rule in the Issuance Authorization Rules list.
 7. To save the rule, in the Edit Claim Rules dialog box, click OK.
 
@@ -122,16 +124,16 @@ The rule set builds on the default Issuance Authorization rule titled Permit Acc
 
 
 
-1. Click Start, point to Programs, point to Administrative Tools, and then click AD FS 2.0 Management.
-2. In the console tree, under AD FS 2.0\Trust Relationships, click Relying Party Trusts, right-click the Microsoft Office 365 Identity Platform trust, and then click Edit Claim Rules. 
+1. Click Start, point to Programs, point to Administrative Tools, and then click AD FS 2.0 Management.
+2. In the console tree, under AD FS 2.0\Trust Relationships, click Relying Party Trusts, right-click the Microsoft Office 365 Identity Platform trust, and then click Edit Claim Rules. 
 3. In the Edit Claim Rules dialog box, select the Issuance Authorization Rules tab, and then click Add Rule to start the Claim Rule Wizard.
 4. On the Select Rule Template page, under Claim rule template, select Send Claims Using a Custom Rule, and then click Next.
 5. On the Configure Rule page, under Claim rule name, type the display name for this rule. Under Custom rule, type or paste the following claim rule language syntax:
-	`exists([Type == "https://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-proxy"]) &&
-	NOT exists([Type == "https://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-forwarded-client-ip",
-	Value=~"customer-provided public ip address regex"]) &&
-	NOT exists([Type == "https://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-endpoint-absolute-path", Value == "/adfs/ls/"])
-	=> issue(Type = "https://schemas.microsoft.com/authorization/claims/deny", Value = "true");`
+    `exists([Type == "https://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-proxy"]) &&
+    NOT exists([Type == "https://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-forwarded-client-ip",
+    Value=~"customer-provided public ip address regex"]) &&
+    NOT exists([Type == "https://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-endpoint-absolute-path", Value == "/adfs/ls/"])
+    => issue(Type = "https://schemas.microsoft.com/authorization/claims/deny", Value = "true");`
 6. Click Finish. Verify that the new rule appears immediately below the Permit Access to All Users rule in the Issuance Authorization Rules list.
 7. To save the rule, in the Edit Claim Rules dialog box, click OK.
 
@@ -143,32 +145,32 @@ The following example enables access from internal clients based on IP address. 
 
 
 
-1. Click Start, point to Programs, point to Administrative Tools, and then click AD FS 2.0 Management.
-2. In the console tree, under AD FS 2.0\Trust Relationships, click Relying Party Trusts, right-click the Microsoft Office 365 Identity Platform trust, and then click Edit Claim Rules. 
+1. Click Start, point to Programs, point to Administrative Tools, and then click AD FS 2.0 Management.
+2. In the console tree, under AD FS 2.0\Trust Relationships, click Relying Party Trusts, right-click the Microsoft Office 365 Identity Platform trust, and then click Edit Claim Rules. 
 3. In the Edit Claim Rules dialog box, select the Issuance Authorization Rules tab, and then click Add Rule to start the Claim Rule Wizard.
 4. On the Select Rule Template page, under Claim rule template, select Send Claims Using a Custom Rule, and then click Next.
 5. On the Configure Rule page, under Claim rule name, type the display name for this rule. Under Custom rule, type or paste the following claim rule language syntax:
-	`exists([Type == "https://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-proxy"]) &&
-	exists([Type == "https://schemas.microsoft.com/ws/2008/06/identity/claims/groupsid", Value =~ "Group SID value of allowed AD group"]) &&
-	NOT exists([Type == "https://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-forwarded-client-ip",
-	Value=~"customer-provided public ip address regex"])
-	=> issue(Type = "https://schemas.microsoft.com/authorization/claims/deny", Value = "true");`
+    `exists([Type == "https://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-proxy"]) &&
+    exists([Type == "https://schemas.microsoft.com/ws/2008/06/identity/claims/groupsid", Value =~ "Group SID value of allowed AD group"]) &&
+    NOT exists([Type == "https://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-forwarded-client-ip",
+    Value=~"customer-provided public ip address regex"])
+    => issue(Type = "https://schemas.microsoft.com/authorization/claims/deny", Value = "true");`
 6. Click Finish. Verify that the new rule appears immediately below the Permit Access to All Users rule in the Issuance Authorization Rules list.
 7. To save the rule, in the Edit Claim Rules dialog box, click OK.
 
 
 ### Descriptions of the claim rule language syntax used in the above scenarios
 
-|Description|Claim Rule language syntax|
-|-----|-----| 
-|Default AD FS rule to Permit Access to All Users. This rule should already exist in the Microsoft Office 365 Identity Platform relying party trust Issuance Authorization Rules list.|=> issue(Type = "https://schemas.microsoft.com/authorization/claims/permit", Value = "true");| 
-|Adding this clause to a new, custom rule specifies that the request has come from the federation server proxy (i.e., it has the x-ms-proxy header)
-It is recommended that all rules include this.|exists([Type == "https://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-proxy"])| 
-|Used to establish that the request is from a client with an IP in the defined acceptable range.|NOT exists([Type == "https://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-forwarded-client-ip", Value=~"customer-provided public ip address regex"])| 
-|This clause is used to specify that if the application being accessed is not Microsoft.Exchange.ActiveSync the request should be denied.|NOT exists([Type == "https://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-client-application", Value=="Microsoft.Exchange.ActiveSync"])| 
-|This rule allows you to determine whether the call was through a Web browser, and will not be denied.|NOT exists([Type == "https://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-endpoint-absolute-path", Value == "/adfs/ls/"])| 
-|This rule states that the only users in a particular Active Directory group (based on SID value) should be denied. Adding NOT to this statement means a group of users will be allowed, regardless of location.|exists([Type == "https://schemas.microsoft.com/ws/2008/06/identity/claims/groupsid", Value =~ "{Group SID value of allowed AD group}"])| 
-|This is a required clause to issue a deny when all preceding conditions are met.|=> issue(Type = "https://schemas.microsoft.com/authorization/claims/deny", Value = "true");|
+|                                                                                                   Description                                                                                                   |                                                                     Claim Rule language syntax                                                                     |
+|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|              Default AD FS rule to Permit Access to All Users. This rule should already exist in the Microsoft Office 365 Identity Platform relying party trust Issuance Authorization Rules list.              |                                  => issue(Type = "<https://schemas.microsoft.com/authorization/claims/permit>", Value = "true");                                   |
+|                               Adding this clause to a new, custom rule specifies that the request has come from the federation server proxy (i.e., it has the x-ms-proxy header)                                |                                                                                                                                                                    |
+|                                                                                 It is recommended that all rules include this.                                                                                  |                                    exists([Type == "<https://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-proxy>"])                                    |
+|                                                         Used to establish that the request is from a client with an IP in the defined acceptable range.                                                         | NOT exists([Type == "<https://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-forwarded-client-ip>", Value=~"customer-provided public ip address regex"]) |
+|                                    This clause is used to specify that if the application being accessed is not Microsoft.Exchange.ActiveSync the request should be denied.                                     |       NOT exists([Type == "<https://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-client-application>", Value=="Microsoft.Exchange.ActiveSync"])        |
+|                                                      This rule allows you to determine whether the call was through a Web browser, and will not be denied.                                                      |              NOT exists([Type == "<https://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-endpoint-absolute-path>", Value == "/adfs/ls/"])               |
+| This rule states that the only users in a particular Active Directory group (based on SID value) should be denied. Adding NOT to this statement means a group of users will be allowed, regardless of location. |             exists([Type == "<https://schemas.microsoft.com/ws/2008/06/identity/claims/groupsid>", Value =~ "{Group SID value of allowed AD group}"])              |
+|                                                                This is a required clause to issue a deny when all preceding conditions are met.                                                                 |                                   => issue(Type = "<https://schemas.microsoft.com/authorization/claims/deny>", Value = "true");                                    |
 
 ### Building the IP address range expression
 
@@ -271,4 +273,4 @@ wevtutil.exe sl “AD FS 2.0 Tracing/Debug” /l:5
 
 ## Related
 For more information on the new claim types see [AD FS Claims Types](AD-FS-Claims-Types.md).
- 
+

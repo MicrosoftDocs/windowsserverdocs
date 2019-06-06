@@ -115,7 +115,7 @@ The lifetime of refresh token will be the lifetime of the token that ADFS got fr
 You can use customized id_token to add relevant information in the id_token itself. For more information, see the article [Customize claims to be emitted in id_token](../development/Custom-Id-Tokens-in-AD-FS.md).
 
 ### How to issue json blobs inside JWT tokens?
-A special ValueType("http://www.w3.org/2001/XMLSchema#json" ) and escape character(\x22) for this was added in AD FS 2016. Please the sample below for the issuance rule and also the final output from the access token.
+A special ValueType("<http://www.w3.org/2001/XMLSchema#json>" ) and escape character(\x22) for this was added in AD FS 2016. Please the sample below for the issuance rule and also the final output from the access token.
 
 Sample issuance rule:
 
@@ -166,13 +166,13 @@ Use the following guidance with regard to the proxy SSL certificate and the AD F
 For information on how to configure prompt=login, see [Active Directory Federation Services prompt=login parameter support](../operations/AD-FS-Prompt-Login.md).
 
 ### How can I change the AD FS service account?
-To change the AD FS service account, follow the instructions using the AD FS toolbox [Service Account Powershell Module](https://github.com/Microsoft/adfsToolbox/tree/master/serviceAccountModule). 
+To change the AD FS service account, follow the instructions using the AD FS toolbox [Service Account Powershell Module](https://github.com/Microsoft/adfsToolbox/tree/master/serviceAccountModule).
 
 ### How can I configure browsers to use Windows Integrated Authentication (WIA) with AD FS?
 
 For information on how to configure browsers see [Configure browsers to use Windows Integrated Authentication (WIA) with AD FS](../operations/Configure-AD-FS-Browser-WIA.md).
 
-### Can I trun off BrowserSsoEnabled?
+### Can I turn off BrowserSsoEnabled?
 If you don't have Access control policies based on device on ADFS or Windows Hello for Business Certificate enrollment using ADFS; you can turn off BrowserSsoEnabled. BrowserSsoEnabled allows ADFS to collect a PRT(Primary Refresh Token) from client which contains device information. Without that device authentication of ADFS will not work on Windows 10 devices.
 
 ### How long are AD FS tokens valid?
@@ -292,3 +292,8 @@ Perform the update on the rest of AD FS and WAP servers in similar fashion.
 
 ### Is ADFS supported when Web Application Proxy (WAP) servers are behind Azure Web Application Firewall(WAF)?
 ADFS and Web Application servers support any firewall that does not perform SSL termination on the endpoint. Additionally, ADFS/WAP servers have built in mechanisms to prevent common web attacks such as cross-site scripting, ADFS proxy and satisfy all requirements defined by the [MS-ADFSPIP protocol](https://msdn.microsoft.com/library/dn392811.aspx).
+
+### I am seeing an "Event 441: A token with a bad token binding key was found." What should I do to resolve this?
+In AD FS 2016, token binding is automatically enabled and causes multiple known issues with proxy and federation scenarios which result in this error. To resolve this, run the following Powershell command and remove token binding support.
+
+`Set-AdfsProperties -IgnoreTokenBinding $true`

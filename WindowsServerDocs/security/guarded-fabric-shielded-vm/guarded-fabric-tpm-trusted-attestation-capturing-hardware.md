@@ -169,5 +169,5 @@ A TPM baseline is required for each unique class of hardware in your datacenter 
 
 ## Next step
 
->[!div class="nextstepaction"]
-[Confirm attestation](guarded-fabric-confirm-hosts-can-attest-successfully.md)
+> [!div class="nextstepaction"]
+> [Confirm attestation](guarded-fabric-confirm-hosts-can-attest-successfully.md)

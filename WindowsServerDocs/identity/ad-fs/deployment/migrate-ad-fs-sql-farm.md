@@ -26,7 +26,7 @@ This document provides detailed information on migrating an AD FS 2.0 SQL farm t
 > [!IMPORTANT]
 >  As the result of the operating system upgrade, the AD FS configuration on this server is lost and the AD FS 2.0 server role is removed. The Windows Server 2012 AD FS server role is installed instead, but it is not configured. You must manually create the original AD FS configuration and restore the remaining AD FS settings to complete the federation server migration.  
   
-4.  Create the original AD FS configuration on this server in your SQL Server farm by using AD FS Windows PowerShell cmdlets to add a server to an existing farm.  
+4. Create the original AD FS configuration on this server in your SQL Server farm by using AD FS Windows PowerShell cmdlets to add a server to an existing farm.  
   
 > [!IMPORTANT]
 >  You must use Windows PowerShell to create the original AD FS configuration if you are using SQL Server to store your AD FS configuration database.  
@@ -35,11 +35,11 @@ This document provides detailed information on migrating an AD FS 2.0 SQL farm t
   - Enter the name and the password of the service account that you recorded while preparing your SQL Server farm for migration.  
   - Run the following command: `Add-AdfsFarmNode -ServiceAccountCredential $fscredential -SQLConnectionString "Data Source=<Data Source>;Integrated Security=True"`, where `Data Source` is the data source value in the policy store connection string value in the following file: `%programfiles%\Active Directory Federation Services 2.0\Microsoft.IdentityServer.Servicehost.exe.config`.  
   
-5.  Add the server that you just upgraded to Windows Server 2012 to the load balancer.  
+5. Add the server that you just upgraded to Windows Server 2012 to the load balancer.  
   
-6.  Repeat steps 2 through 6 for the remaining nodes in your SQL Server farm.  
+6. Repeat steps 2 through 6 for the remaining nodes in your SQL Server farm.  
   
-7.  When all of the servers in your SQL Server farm are upgraded to Windows Server 2012, restore any remaining AD FS customizations, such as custom attribute stores.  
+7. When all of the servers in your SQL Server farm are upgraded to Windows Server 2012, restore any remaining AD FS customizations, such as custom attribute stores.  
 
 ## Next Steps
  [Prepare to Migrate the AD FS 2.0 Federation Server](prepare-to-migrate-ad-fs-fed-server.md)   

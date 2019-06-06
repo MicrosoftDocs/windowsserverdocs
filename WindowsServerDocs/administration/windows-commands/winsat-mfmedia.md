@@ -49,10 +49,10 @@ winsat mfmedia <parameters>
 
 ## <a name="BKMK_examples"></a>Examples
 
--   The following example runs the assessment with the input file that is used during a **winsat formal** assessment, without employing the Media Foundation Protected Media Pipeline (MFPMP), on a computer where c:\windows is the location of the Windows folder.  
-    ```
-    winsat mfmedia -input c:\windows\performance\winsat\winsat.wmv -nopmp
-    ```
+- The following example runs the assessment with the input file that is used during a **winsat formal** assessment, without employing the Media Foundation Protected Media Pipeline (MFPMP), on a computer where c:\windows is the location of the Windows folder.  
+  ```
+  winsat mfmedia -input c:\windows\performance\winsat\winsat.wmv -nopmp
+  ```
 
 ## Remarks
 

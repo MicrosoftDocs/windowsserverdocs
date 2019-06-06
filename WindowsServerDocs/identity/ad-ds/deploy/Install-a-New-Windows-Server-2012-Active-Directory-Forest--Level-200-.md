@@ -84,15 +84,15 @@ These new features are not backwards compatible to Windows Server 2008 R2 or old
   
 ![Install a new forest](media/Install-a-New-Windows-Server-2012-Active-Directory-Forest--Level-200-/ADDS_PSInstallADDSForest.png)  
   
-> [!IMPORTANT]  
+> [!IMPORTANT]
 > Dcpromo.exe no longer contains a graphical wizard and no longer installs role or feature binaries. Attempting to run Dcpromo.exe from the Explorer shell returns:  
->   
-> "The Active Directory Domain Services Installation Wizard is relocated in Server Manager. For more information, see https://go.microsoft.com/fwlink/?LinkId=220921."  
->   
+> 
+> "The Active Directory Domain Services Installation Wizard is relocated in Server Manager. For more information, see <https://go.microsoft.com/fwlink/?LinkId=220921>."  
+> 
 > Attempting to run Dcpromo.exe /unattend still installs the binaries, as in previous operating systems, but warns:  
->   
-> "The dcpromo unattended operation is replaced by the ADDSDeployment module for Windows PowerShell. For more information, see https://go.microsoft.com/fwlink/?LinkId=220924."  
->   
+> 
+> "The dcpromo unattended operation is replaced by the ADDSDeployment module for Windows PowerShell. For more information, see <https://go.microsoft.com/fwlink/?LinkId=220924>."  
+> 
 > Windows Server 2012 deprecates dcpromo.exe and it will not be included with future versions of Windows, nor will it receive further enhancements in this operating system. Administrators should discontinue its use and switch to the supported Windows PowerShell modules if they wish to create domain controllers from the command-line.  
   
 #### Prerequisite Checking  

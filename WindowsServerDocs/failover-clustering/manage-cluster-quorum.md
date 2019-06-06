@@ -87,7 +87,7 @@ The vote assignment for all cluster nodes can be verified by using the **Validat
 - Dynamic quorum management does not allow the cluster to sustain a simultaneous failure of a majority of voting members. To continue running, the cluster must always have a quorum majority at the time of a node shutdown or failure.
 
 - If you have explicitly removed the vote of a node, the cluster cannot dynamically add or remove that vote.
-- When Storage Spaces Direct is enabled, the cluster can only support two node failures. This is explained more in the [pool quorum section](../storage/storage-spaces/understand-quorum.md#poolQuorum)
+- When Storage Spaces Direct is enabled, the cluster can only support two node failures. This is explained more in the [pool quorum section](../storage/storage-spaces/understand-quorum.md)
 
 ## General recommendations for quorum configuration
 
@@ -153,7 +153,7 @@ Membership in the local **Administrators** group on each clustered server, or eq
 
 4. Select **Next**. Confirm your selections on the confirmation page that appears, and then select **Next**.
 
-After the wizard runs and the **Summary** page appears, if you want to view a report of the tasks that the wizard performed, select **View Report**. The most recent report will remain in the *systemroot***\\Cluster\\Reports** folder with the name **QuorumConfiguration.mht**.
+After the wizard runs and the **Summary** page appears, if you want to view a report of the tasks that the wizard performed, select **View Report**. The most recent report will remain in the <em>systemroot</em>**\\Cluster\\Reports** folder with the name **QuorumConfiguration.mht**.
 
 >[!NOTE]
 >After you configure the cluster quorum, we recommend that you run the **Validate Quorum Configuration** test to verify the updated quorum settings.

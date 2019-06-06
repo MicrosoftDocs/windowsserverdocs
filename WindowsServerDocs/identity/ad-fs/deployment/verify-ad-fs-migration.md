@@ -22,7 +22,7 @@ Membership in **Users**, **Backup Operators**, **Power Users**, **Administrators
   
 If in your browser window you can see the federation server metadata without any SSL errors or warnings, your federation server is operational.  
   
-2.  You can also browse to the AD FS sign-in page (your federation service name appended with `adfs/ls/idpinitiatedsignon.htm`, for example, `https://fs.contoso.com/adfs/ls/idpinitiatedsignon.htm`).  This displays the AD FS sign-in page where you can sign in with domain administrator credentials.  
+2. You can also browse to the AD FS sign-in page (your federation service name appended with `adfs/ls/idpinitiatedsignon.htm`, for example, `https://fs.contoso.com/adfs/ls/idpinitiatedsignon.htm`).  This displays the AD FS sign-in page where you can sign in with domain administrator credentials.  
   
 > [!IMPORTANT]
 >  Make sure to configure your browser settings to trust the federation server role by adding your federation service name (for example, `https://fs.contoso.com`) to the browser’s local intranet zone.  

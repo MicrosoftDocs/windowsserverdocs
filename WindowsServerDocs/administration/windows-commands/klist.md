@@ -115,52 +115,51 @@ The parameters display the following information:
 
 ## <a name="BKMK_Examples"></a>Examples
 
-1.  When you are diagnosing an Event ID 27 while processing a ticket-granting service (TGS) request for the target server, the account did not have a suitable key to generate a Kerberos ticket. You can use Klist to query the Kerberos ticket cache to determine if any tickets are missing, if the target server or account is in error, or if the encryption type is not supported.  
-    ```
-    klist 
-    ```  
-    ```
-    klist –li 0x3e7
-    ```  
-2.  When you diagnose errors and you want to know the specifics of each ticket-granting-ticket that is cached on the computer for a logon session, you can use Klist to display the TGT information.  
-    ```
-    klist tgt
-    ```  
-3.  If you are unable to establish a connection and diagnosis might take too long, you can purge the Kerberos ticket cache, log off, and then log back on.  
-    ```
-    klist purge
-    ```  
-    ```
-    klist purge –li 0x3e7
-    ```  
-4.  When you want to diagnose a logon session for a user or a service, you can use the following command to find the LogonID that is used in other Klist commands.  
-    ```
-    klist sessions
-    ```  
-5.  When you want to diagnose Kerberos constrained delegation failure, you can use the following command to find the last error that was encountered.  
-    ```
-    klist kcd_cache
-    ```  
-6.  When you want to diagnose if a user or a service can get a ticket to a server, you can use this command to request a ticket for a specific SPN.  
-    ```
-    klist get host/%computername%
-    ```  
-7.  When diagnosing replication issues across domain controllers, you typically need the client computer to target a specific domain controller. In these cases, you can use the following command to target the client computer to that specific domain controller.  
-    ```
-    klist add_bind CONTOSO KDC.CONTOSO.COM
-    
-    ```  
-    ```
-    klist add_bind CONTOSO.COM KDC.CONTOSO.COM
-    ```  
-8.  To query what domain controllers this computer recently contacted, you can use the following command.  
-    ```
-    klist query_bind
-    ```  
-9.  When you want Kerberos to rediscover domain controllers, you can use the following command. This command can also be used to flush the cache before creating new domain controller bindings with klist add_bind.  
-    ```
-    klist purge_bind
-    ```
+1. When you are diagnosing an Event ID 27 while processing a ticket-granting service (TGS) request for the target server, the account did not have a suitable key to generate a Kerberos ticket. You can use Klist to query the Kerberos ticket cache to determine if any tickets are missing, if the target server or account is in error, or if the encryption type is not supported.  
+   ```
+   klist 
+   ```  
+   ```
+   klist –li 0x3e7
+   ```  
+2. When you diagnose errors and you want to know the specifics of each ticket-granting-ticket that is cached on the computer for a logon session, you can use Klist to display the TGT information.  
+   ```
+   klist tgt
+   ```  
+3. If you are unable to establish a connection and diagnosis might take too long, you can purge the Kerberos ticket cache, log off, and then log back on.  
+   ```
+   klist purge
+   ```  
+   ```
+   klist purge –li 0x3e7
+   ```  
+4. When you want to diagnose a logon session for a user or a service, you can use the following command to find the LogonID that is used in other Klist commands.  
+   ```
+   klist sessions
+   ```  
+5. When you want to diagnose Kerberos constrained delegation failure, you can use the following command to find the last error that was encountered.  
+   ```
+   klist kcd_cache
+   ```  
+6. When you want to diagnose if a user or a service can get a ticket to a server, you can use this command to request a ticket for a specific SPN.  
+   ```
+   klist get host/%computername%
+   ```  
+7. When diagnosing replication issues across domain controllers, you typically need the client computer to target a specific domain controller. In these cases, you can use the following command to target the client computer to that specific domain controller.  
+   ```
+   klist add_bind CONTOSO KDC.CONTOSO.COM
+   ```  
+   ```
+   klist add_bind CONTOSO.COM KDC.CONTOSO.COM
+   ```  
+8. To query what domain controllers this computer recently contacted, you can use the following command.  
+   ```
+   klist query_bind
+   ```  
+9. When you want Kerberos to rediscover domain controllers, you can use the following command. This command can also be used to flush the cache before creating new domain controller bindings with klist add_bind.  
+   ```
+   klist purge_bind
+   ```
 
 #### Additional references
 

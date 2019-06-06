@@ -22,11 +22,11 @@ This guide describes how to migrate an existing Windows SBS 2008 domain to  Wind
   
 > [!NOTE]
 >  To avoid problems during migration, the  Windows Server Essentials product development team strongly recommends that you read this document before you begin the migration.  
-  
+> 
 > [!NOTE]
-
+> 
 >  To migrate your server data to the latest version of Windows Server Essentials, see [Migrate to Windows Server Essentials](Migrate-from-Previous-Versions-to-Windows-Server-Essentials-or-Windows-Server-Essentials-Experience.md).  
-
+> 
 >  To migrate your server data to the latest version of Windows Server Essentials, see [Migrate to Windows Server Essentials](../migrate/Migrate-from-Previous-Versions-to-Windows-Server-Essentials-or-Windows-Server-Essentials-Experience.md).  
 
   

@@ -184,7 +184,7 @@ In the case of hostname, a hostname with more dotted elements (more depth) has a
   
 - library (depth = 1)
   
- **video.internal.training.hr.mycompany.com** has the highest priority, and **selfguide.training.mycompany.com** has the next highest priority. **Training** and **library** share the same lowest priority.  
+  **video.internal.training.hr.mycompany.com** has the highest priority, and **selfguide.training.mycompany.com** has the next highest priority. **Training** and **library** share the same lowest priority.  
   
 ####  <a name="bkmk_QoS_UrlPort"></a> 3. URL port
 

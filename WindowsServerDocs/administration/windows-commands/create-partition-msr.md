@@ -33,11 +33,11 @@ create partition msr [size=<n>] [offset=<n>] [noerr]
   
 ## Parameters  
   
-|Parameter|Description|  
-|-------|--------|  
-|size\=<n>|The size of the partition in megabytes \(MB\). The partition is at least as long in bytes as the number specified by <n>. If no size is given, the partition continues until there is no more free space in the current region.|  
-|offset\=<n>|Specifies the offset in kilobytes \(KB\), at which the partition is created. The offset rounds up to completely fill whatever sector size is used. If no offset is given, the partition is placed in the first disk extent that is large enough to hold it.|  
-|noerr|for scripting only. When an error is encountered, DiskPart continues to process commands as if the error did not occur. Without this parameter, an error causes DiskPart to exit with an error code.|  
+|  Parameter  |                                                                                                                         Description                                                                                                                         |
+|-------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|  size\=<n>  |               The size of the partition in megabytes \(MB\). The partition is at least as long in bytes as the number specified by <n>. If no size is given, the partition continues until there is no more free space in the current region.               |
+| offset\=<n> | Specifies the offset in kilobytes \(KB\), at which the partition is created. The offset rounds up to completely fill whatever sector size is used. If no offset is given, the partition is placed in the first disk extent that is large enough to hold it. |
+|    noerr    |                            for scripting only. When an error is encountered, DiskPart continues to process commands as if the error did not occur. Without this parameter, an error causes DiskPart to exit with an error code.                             |
   
 ## Remarks  
   

@@ -25,7 +25,7 @@ Schannel is a Security Support Provider (SSP) that implements the SSL, TLS and D
 For more information about Microsoft's implementation of TLS and SSL in the Schannel SSP, see the [TLS/SSL Technical Reference (2003)](https://technet.microsoft.com/library/cc784149(v=ws.10).aspx).
 
 
-##TLS/SSL (Schannel SSP) features
+## TLS/SSL (Schannel SSP) features
 The following describes features of TLS in the Schannel SSP.
 
 ### TLS session resumption

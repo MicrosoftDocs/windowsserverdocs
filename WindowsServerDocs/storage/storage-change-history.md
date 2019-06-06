@@ -7,7 +7,7 @@ ms.topic: article
 author: JasonGerend
 manager: brianlic
 ms.author: jgerend
-ms.date: 03/25/2019
+ms.date: 06/04/2019
 description: New and updated topics in the on-premises storage documentation for Windows Server for IT Pros.
 ---
 # Change history for storage topics in Windows Server
@@ -16,7 +16,13 @@ description: New and updated topics in the on-premises storage documentation for
 
 This topic lists new and updated topics in the [Storage](storage.md) documentation for Windows Server.
 
-> If you're looking for update history for Windows Server, see [Windows 10 and Windows Server 2016 update history](https://support.microsoft.com/help/4000825/windows-10-and-windows-server-2016-update-history).
+> If you're looking for update history for Windows Server, see [Windows 10 and Windows Server 2019 update history](https://support.microsoft.com/help/4464619) or [Windows Server 2016 update history](https://support.microsoft.com/help/4000825/windows-10-and-windows-server-2016-update-history).
+
+## June 2019
+
+| New or changed topic                                        | Description|
+| ---                                                         | ---           |
+| [Storage Migration Service FAQ](storage-migration-service/faq.md#consolidate-servers) | Added performance optimization info. |
 
 ## May 2019
 
@@ -99,7 +105,7 @@ This topic lists new and updated topics in the [Storage](storage.md) documentati
 |[Deploy Storage Spaces on a stand-alone server](storage-spaces/deploy-standalone-storage-spaces.md)|Migrated from the [Previous Versions](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012) library.|
 |[NTFS Overview](file-server/ntfs-overview.md)|Migrated from the [Previous Versions](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012) library.|
 |[Use Robocopy to Preseed Files for DFS Replication](dfs-replication/preseed-dfsr-with-robocopy.md)|Migrated from the [Previous Versions](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012) library.|
-|[Vssadmin - Previous Versions command line tool](..\administration\windows-commands\vssadmin.md)|Migrated from the [Previous Versions](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012) library.|
+|[Vssadmin - Previous Versions command line tool](../administration/windows-commands/vssadmin.md)|Migrated from the [Previous Versions](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012) library.|
 |[File Server Resource Manager overview](fsrm/fsrm-overview.md)| Added info about a new registry setting in Windows Server 2016, version 1803.|
 |[Server-to-server storage replication](storage-replica/server-to-server-storage-replication.md)|Added info on using Windows Admin Center.|
 |[Storage Replica known issues](storage-replica/storage-replica-known-issues.md)|Added new information.|
@@ -189,13 +195,13 @@ This topic lists new and updated topics in the [Storage](storage.md) documentati
 
 ## May 2017
 
-|New or changed topic|Description|
-|---|---|
-|[Data Deduplication overview](data-deduplication/overview.md) and <br>[Install Data Deduplication](data-deduplication/install-enable.md)|Updated the system requirements to include a newer software update. |
-|[Deploying Work Folders](work-folders/deploy-work-folders.md)|Added info about Azure AD Application Proxy support & updated required steps.|
-|[Deploying Storage Spaces Direct](storage-spaces/deploy-storage-spaces-direct.md)|Added step 1.3 with required features and fixed an obsolete parameter in Enable-NetAdapterQos.||[Storage Replica overview](storage-replica/storage-replica-overview.md) (and other Storage Replica topics)|Added recommendation to use fast, exclusive storage for Storage Replica logs.|
-|[Storage Replica frequently asked questions](storage-replica/storage-replica-frequently-asked-questions.md)|Added info on how to choose between different replication topologies.|
-|[Storage Spaces Direct hardware requirements](storage-spaces/storage-spaces-direct-hardware-requirements.md)|Changed drive endurance requirements for cache devices.|
+|                                                           New or changed topic                                                           |                                          Description                                           |
+|------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------|
+| [Data Deduplication overview](data-deduplication/overview.md) and <br>[Install Data Deduplication](data-deduplication/install-enable.md) |              Updated the system requirements to include a newer software update.               |
+|                                      [Deploying Work Folders](work-folders/deploy-work-folders.md)                                       |         Added info about Azure AD Application Proxy support & updated required steps.          |
+|                            [Deploying Storage Spaces Direct](storage-spaces/deploy-storage-spaces-direct.md)                             | Added step 1.3 with required features and fixed an obsolete parameter in Enable-NetAdapterQos. |
+|               [Storage Replica frequently asked questions](storage-replica/storage-replica-frequently-asked-questions.md)                |             Added info on how to choose between different replication topologies.              |
+|               [Storage Spaces Direct hardware requirements](storage-spaces/storage-spaces-direct-hardware-requirements.md)               |                    Changed drive endurance requirements for cache devices.                     |
 
 ## April 2017
 

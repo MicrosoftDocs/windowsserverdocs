@@ -84,13 +84,13 @@ Considerations for creating forests for data isolation include the following:
 
 - Organizational forests created for data isolation can trust domains from other forests, but users from other forests must not be included in any of the following:  
 
-   - Groups responsible for service management or groups that can manage the membership of service administrator groups  
+  - Groups responsible for service management or groups that can manage the membership of service administrator groups  
 
-   - Groups that have administrative control over computers that store protected data  
+  - Groups that have administrative control over computers that store protected data  
 
-   - Groups that have access to protected data or groups that are responsible for the management of user objects or group objects that have access to protected data  
+  - Groups that have access to protected data or groups that are responsible for the management of user objects or group objects that have access to protected data  
 
-   If users from another forest are included in any of these groups, a compromise of the other forest might lead to a compromise of the isolated forest and to disclosure of protected data.  
+    If users from another forest are included in any of these groups, a compromise of the other forest might lead to a compromise of the isolated forest and to disclosure of protected data.  
 
 - Other forests can be configured to trust the organizational forest created for data isolation so that users in the isolated forest can access resources in other forests. However, users from the isolated forest must never interactively log on to workstations in the trusting forest. The computer in the trusting forest can potentially be compromised by malicious software and can be used to capture the logon credentials of the user.  
 

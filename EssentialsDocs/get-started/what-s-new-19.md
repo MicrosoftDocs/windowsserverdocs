@@ -13,7 +13,7 @@ ms.author: coreyp
 manager: jasgroce
 ---
 
-#What's New in Windows Server 2019 Essentials
+# What's New in Windows Server 2019 Essentials
 
 > Applies To: Windows Server 2019 Essentials
 

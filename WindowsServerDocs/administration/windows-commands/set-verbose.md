@@ -29,9 +29,9 @@ set verbose {on | off}
 
 ## Parameters
 
-|Parameter|Description|
-|---------|-----------|
-|{on | off}|Turns verbose mode on or off.|
+| Parameter | Description |
+|-----------|-------------|
+|    {on    |    off}     |
 
 ## Remarks
 

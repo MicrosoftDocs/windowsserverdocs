@@ -50,15 +50,15 @@ manager: dongill
 ###  <a name="BKMK_Overview"></a> Remote Web Access overview  
  When you are away from your office, you can open a web browser and access  Remote Web Access from anywhere that has Internet access. In  Remote Web Access, you can:  
   
--   Access shared files and folders on the server.  
+- Access shared files and folders on the server.  
   
--   Access your server and computers on the network. This means that you can access the desktop of a networked computer as if you were sitting in front of it at your office.  
+- Access your server and computers on the network. This means that you can access the desktop of a networked computer as if you were sitting in front of it at your office.  
   
   Remote Web Access is not turned on by default. When you run the Set up Anywhere Access Wizard, the wizard attempts to set up your router and Internet connectivity. After  Remote Web Access is turned on, you can set up a domain name for your server and customize  Remote Web Access. You can also set up the router again if you change your router.  
   
- Permission to access  Remote Web Access is not automatically granted when you add a new user account. When you add a user account, you can choose to allow access to shared folders, the Media Library, computers, Home page links, and the server Dashboard. You can also specify that a user not be allowed to use  Remote Web Access.  
+  Permission to access  Remote Web Access is not automatically granted when you add a new user account. When you add a user account, you can choose to allow access to shared folders, the Media Library, computers, Home page links, and the server Dashboard. You can also specify that a user not be allowed to use  Remote Web Access.  
   
- The  Remote Web Access setting is displayed for each user account on the **USERS** tab of the Windows Server Essentials Dashboard. To change the  Remote Web Access setting, right-click the user account, and then click **View the account properties**.  
+  The  Remote Web Access setting is displayed for each user account on the **USERS** tab of the Windows Server Essentials Dashboard. To change the  Remote Web Access setting, right-click the user account, and then click **View the account properties**.  
   
 ###  <a name="BKMK_TurnOnRWA"></a> Turn on Remote Web Access  
  You can turn on Remote Web Access by running the Set up Anywhere Access Wizard from the server Dashboard.  
@@ -93,17 +93,17 @@ manager: dongill
   
 ##### To manage Remote Web Access permissions for a user account  
   
-1.  Log on to the Dashboard, and then click **Users**.  
+1. Log on to the Dashboard, and then click **Users**.  
   
-2.  Click the user account that you want to manage, and then click **View the account properties** in the **Tasks** pane.  
+2. Click the user account that you want to manage, and then click **View the account properties** in the **Tasks** pane.  
   
-3.  In the **Properties** dialog box, click the **Anywhere Access** tab.  
+3. In the **Properties** dialog box, click the **Anywhere Access** tab.  
   
-4.  On the **Anywhere Access** tab, select the **Allow Remote Web Access and access to web services applications** check box to allow a user to connect to the server using Remote Web Access.  
+4. On the **Anywhere Access** tab, select the **Allow Remote Web Access and access to web services applications** check box to allow a user to connect to the server using Remote Web Access.  
   
-5.  Click **Apply**, and then click **OK**.  
+5. Click **Apply**, and then click **OK**.  
   
- For more information, see [Manage User Accounts](Manage-User-Accounts-in-Windows-Server-Essentials.md).  
+   For more information, see [Manage User Accounts](Manage-User-Accounts-in-Windows-Server-Essentials.md).  
   
 ###  <a name="BKMK_SecureRWA"></a> Secure Remote Web Access  
  Windows Server Essentials uses a security certificate to help secure the information that is exchanged between the software and a web browser. When you install the Connector software on your computers, the security certificate for Windows Server Essentials is added to the trusted certificate list on your computers. The best way for users to access Remote Web Access when they are away from your office is to use a portable computer that has the Connector software installed on it.  
@@ -231,13 +231,13 @@ manager: dongill
 ###  <a name="BKMK_PersonalizedNames"></a> Understand Microsoft personalized domain names  
  A Microsoft personalized domain name includes the following features:  
   
--   A custom domain name for  Remote Web Access (for example, *yourhostname*.remotewebaccess.com). Your domain name is associated with your public IP address.  
+- A custom domain name for  Remote Web Access (for example, *yourhostname*.remotewebaccess.com). Your domain name is associated with your public IP address.  
   
--   A DNS dynamic update protocol service so that  Remote Web Access using your domain name will not be interrupted if your public IP address changes. Typically, Internet Service Providers (ISPs) for your organization's broadband connections provide dynamic public IP addresses that can change.  
+- A DNS dynamic update protocol service so that  Remote Web Access using your domain name will not be interrupted if your public IP address changes. Typically, Internet Service Providers (ISPs) for your organization's broadband connections provide dynamic public IP addresses that can change.  
   
--   A trusted certificate associated with the domain name.  
+- A trusted certificate associated with the domain name.  
   
- To integrate a Microsoft personalized domain name with your server, you need a Microsoft account (formerly known as a Windows Live ID). If you do not have a Microsoft account, you can sign up for one at the [Microsoft Hotmail](https://login.live.com/) website.  
+  To integrate a Microsoft personalized domain name with your server, you need a Microsoft account (formerly known as a Windows Live ID). If you do not have a Microsoft account, you can sign up for one at the [Microsoft Hotmail](https://login.live.com/) website.  
   
 > [!IMPORTANT]
 >  Windows Live allows special characters in your Microsoft account password that the server does not support. If you use a Microsoft personalized domain, ensure that your Microsoft account password contains only characters that the server supports. The server does not support use of the characters $, /, ', and %.  
@@ -342,15 +342,15 @@ manager: dongill
 ###  <a name="BKMK_SetNameManually"></a> Set up a domain name manually  
  If you choose this option, the server does not monitor or maintain your domain name, and it does not alert you if there is a configuration issue. You might also consider this option if any of the following is true:  
   
--   No partner domain name providers are listed for your country or region.  
+- No partner domain name providers are listed for your country or region.  
   
--   The partner domain providers listed do not support your domain name extension.  
+- The partner domain providers listed do not support your domain name extension.  
   
--   You have an existing domain name from a domain name provider that is not currently a partner, and you do not want to transfer that domain name to a Windows Server Essentials supported domain name provider.  
+- You have an existing domain name from a domain name provider that is not currently a partner, and you do not want to transfer that domain name to a Windows Server Essentials supported domain name provider.  
   
--   The wizard does not list the domain name extension that you want to use, but the extension is available from a domain name provider that is not currently a partner.  
+- The wizard does not list the domain name extension that you want to use, but the extension is available from a domain name provider that is not currently a partner.  
   
- If you choose to set up your domain name manually, work with your domain name service provider to create an A Record for your domain.  
+  If you choose to set up your domain name manually, work with your domain name service provider to create an A Record for your domain.  
   
 ##### To create an A Record  
   
@@ -368,15 +368,15 @@ manager: dongill
   
 ##### To find the domain name service provider for your domain name  
   
-1.  Open a web browser, and then type **www.internic.com** in the address bar to go to the Internic home page.  
+1. Open a web browser, and then type <strong>www.internic.com</strong> in the address bar to go to the Internic home page.  
   
-2.  On the Internic home page, click **Whois**.  
+2. On the Internic home page, click **Whois**.  
   
-3.  In the **Whois** box, type your domain name (for example contoso.com).  
+3. In the **Whois** box, type your domain name (for example contoso.com).  
   
-4.  Click the **Domain** option, and then click **Submit**.  
+4. Click the **Domain** option, and then click **Submit**.  
   
-5.  In the search results, the name of your domain name service provider is listed under **Registrar**.  
+5. In the search results, the name of your domain name service provider is listed under **Registrar**.  
   
 ##  <a name="BKMK_4"></a> Customize Remote Web Access  
  You can customize your Remote Web Access site by adding a personal logo or background image. You can also add links on the Home page so that this information is available to all of your users. For more information, see the following topics:  

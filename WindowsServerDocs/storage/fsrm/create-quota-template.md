@@ -49,38 +49,38 @@ For example, you could configure thresholds to send an e-mail message to the adm
 
 **To configure notifications that File Server Resource Manager will generate at a quota threshold**
 
-1.  In the **Create Quota Template** dialog box, under **Notification thresholds**, click **Add**. The **Add Threshold** dialog box appears.
+1. In the **Create Quota Template** dialog box, under **Notification thresholds**, click **Add**. The **Add Threshold** dialog box appears.
 
-2.  To set a quota limit percentage that will generate a notification:
+2. To set a quota limit percentage that will generate a notification:
 
-    In the **Generate notifications when usage reaches (%)** text box, enter a percentage of the quota limit for the notification threshold. (The default percentage for the first notification threshold is 85 percent.)
+   In the **Generate notifications when usage reaches (%)** text box, enter a percentage of the quota limit for the notification threshold. (The default percentage for the first notification threshold is 85 percent.)
 
-3.  To configure e-mail notifications:
+3. To configure e-mail notifications:
 
-    On the **E-mail Message** tab, set the following options:
+   On the **E-mail Message** tab, set the following options:
 
-    -   To notify administrators when a threshold is reached, select the **Send e-mail to the following administrators** check box, and then enter the names of the administrative accounts that will receive the notifications. Use the format *account@domain*, and use semicolons to separate multiple accounts.
-    -   To send e-mail to the person who saved the file that reached the quota threshold, select the **Send e-mail to the user who exceeded the threshold** check box.
-    -   To configure the message, edit the default subject line and message body that are provided. The text that is in brackets inserts variable information about the quota event that caused the notification. For example, the **\[Source Io Owner\]** variable inserts the name of the user who saved the file that reached the quota threshold. To insert additional variables in the text, click **Insert Variable**.
-    -   To configure additional headers (including From, Cc, Bcc, and Reply-to), click **Additional E-mail Headers**.
+   - To notify administrators when a threshold is reached, select the **Send e-mail to the following administrators** check box, and then enter the names of the administrative accounts that will receive the notifications. Use the format <em>account@domain</em>, and use semicolons to separate multiple accounts.
+   - To send e-mail to the person who saved the file that reached the quota threshold, select the **Send e-mail to the user who exceeded the threshold** check box.
+   - To configure the message, edit the default subject line and message body that are provided. The text that is in brackets inserts variable information about the quota event that caused the notification. For example, the **\[Source Io Owner\]** variable inserts the name of the user who saved the file that reached the quota threshold. To insert additional variables in the text, click **Insert Variable**.
+   - To configure additional headers (including From, Cc, Bcc, and Reply-to), click **Additional E-mail Headers**.
 
-4.  To log an event:
+4. To log an event:
 
-    On the **Event Log** tab, select the **Send warning to event log** check box, and edit the default log entry.
+   On the **Event Log** tab, select the **Send warning to event log** check box, and edit the default log entry.
 
-5.  To run a command or script:
+5. To run a command or script:
 
-    On the **Command** tab, select the **Run this command or script** check box. Then type the command, or click **Browse** to search for the location where the script is stored. You can also enter command arguments, select a working directory for the command or script, or modify the command security setting.
+   On the **Command** tab, select the **Run this command or script** check box. Then type the command, or click **Browse** to search for the location where the script is stored. You can also enter command arguments, select a working directory for the command or script, or modify the command security setting.
 
-6.  To generate one or more storage reports:
+6. To generate one or more storage reports:
 
-    On the **Report** tab, select the **Generate reports** check box, and then select which reports to generate. (You can choose one or more administrative e-mail recipients for the report or e-mail the report to the user who reached the threshold.)
+   On the **Report** tab, select the **Generate reports** check box, and then select which reports to generate. (You can choose one or more administrative e-mail recipients for the report or e-mail the report to the user who reached the threshold.)
 
-    The report is saved in the default location for incident reports, which you can modify in the **File Server Resource Manager Options** dialog box.
+   The report is saved in the default location for incident reports, which you can modify in the **File Server Resource Manager Options** dialog box.
 
-7.  Click **OK** to save your notification threshold.
+7. Click **OK** to save your notification threshold.
 
-8.  Repeat these steps if you want to configure additional notification thresholds for the quota template.
+8. Repeat these steps if you want to configure additional notification thresholds for the quota template.
 
 ## See also
 

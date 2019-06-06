@@ -79,7 +79,7 @@ git clone https://github.com/Azure-Samples/active-directory-dotnet-webapp-webapi
 
 #### To upgrade the database file  
 
-1.  Open the project in Visual Studio, there will be a pop-up telling you that the app requires SQL Server 2102 Express or you will need to upgrade the database.  Click Ok.  
+1.  Open the project in Visual Studio, there will be a pop-up telling you that the app requires SQL Server 2012 Express or you will need to upgrade the database.  Click Ok.  
 
     ![AD FS Oauth](media/Enabling-Oauth-Confidential-Clients-with-AD-FS-2016/AD_FS_Confidential_12.PNG)  
 
@@ -222,25 +222,25 @@ In this section we will test the confidential client solution.  Use the followin
 
 #### Testing the confidential client solution  
 
-1.  At the top of Visual Studio, make sure Internet Explorer is selected and click the green arrow.  
+1. At the top of Visual Studio, make sure Internet Explorer is selected and click the green arrow.  
 
-    ![AD FS Oauth](media/Enabling-Oauth-Confidential-Clients-with-AD-FS-2016/AD_FS_Confidential_36.png)  
+   ![AD FS Oauth](media/Enabling-Oauth-Confidential-Clients-with-AD-FS-2016/AD_FS_Confidential_36.png)  
 
-2.  Once the ASP.Net page comes up, click on **Register** on top right of the page.  Enter a username and password and then click **Register** button.  This creates a local account in the SQL database.  
+2. Once the ASP.Net page comes up, click on **Register** on top right of the page.  Enter a username and password and then click **Register** button.  This creates a local account in the SQL database.  
 
-    ![AD FS Oauth](media/Enabling-Oauth-Confidential-Clients-with-AD-FS-2016/AD_FS_Confidential_31.PNG)  
+   ![AD FS Oauth](media/Enabling-Oauth-Confidential-Clients-with-AD-FS-2016/AD_FS_Confidential_31.PNG)  
 
-4.  Notice now, the ASP.NET site says Hello abby@contoso.com!.  Click **Profile**.  
+3. Notice now, the ASP.NET site says Hello abby@contoso.com!.  Click **Profile**.  
 
-    ![AD FS Oauth](media/Enabling-Oauth-Confidential-Clients-with-AD-FS-2016/AD_FS_Confidential_32.PNG)  
+   ![AD FS Oauth](media/Enabling-Oauth-Confidential-Clients-with-AD-FS-2016/AD_FS_Confidential_32.PNG)  
 
-5.  This brings up a page without any information and says that we must click here to sign-in.  Click **here**.  
+4. This brings up a page without any information and says that we must click here to sign-in.  Click **here**.  
 
-    ![AD FS Oauth](media/Enabling-Oauth-Confidential-Clients-with-AD-FS-2016/AD_FS_Confidential_33.PNG)  
+   ![AD FS Oauth](media/Enabling-Oauth-Confidential-Clients-with-AD-FS-2016/AD_FS_Confidential_33.PNG)  
 
-6.  You will now be prompted to sign-in to AD FS.  
+5. You will now be prompted to sign-in to AD FS.  
 
-    ![AD FS Oauth](media/Enabling-Oauth-Confidential-Clients-with-AD-FS-2016/AD_FS_Confidential_35.PNG)  
+   ![AD FS Oauth](media/Enabling-Oauth-Confidential-Clients-with-AD-FS-2016/AD_FS_Confidential_35.PNG)  
 
 ## Next Steps
 [AD FS Development](../../ad-fs/AD-FS-Development.md)  

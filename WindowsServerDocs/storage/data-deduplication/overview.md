@@ -65,7 +65,7 @@ The space savings that you can gain from Data Deduplication depend on the datase
                     <li><b>Remote access</b>: Users can access enterprise applications from devices such as home computers, kiosks, low-powered hardware, and operating systems other than Windows.</li>
                     <li><b>Branch office access</b>: VDI deployments can provide better application performance for branch office workers who need access to centralized data stores. Data-intensive applications sometimes do not have client/server protocols that are optimized for low-speed connections.</li>
                 </ul>
-                VDI deployments are great candidates for Data Deduplication because the virtual hard disks that drive the remote desktops for users are essentially identical. Additionally, Data Deduplication can help with the so-called *VDI boot storm*, which is the drop in storage performance when many users simultaneously sign in to their desktops to start the day.
+                VDI deployments are great candidates for Data Deduplication because the virtual hard disks that drive the remote desktops for users are essentially identical. Additionally, Data Deduplication can help with the so-called <em>VDI boot storm</em>, which is the drop in storage performance when many users simultaneously sign in to their desktops to start the day.
             </td>
         </tr>
         <tr>
@@ -79,7 +79,7 @@ The space savings that you can gain from Data Deduplication depend on the datase
             <td style="text-align:center;min-width:150px;vertical-align:center;"><img src="media/overview-other.png" alt="Illustration of other workloads" /></td>
             <td style="vertical-align:top">
                 <b>Other workloads</b><br />
-                [Other workloads may also be excellent candidates for Data Deduplication](install-enable.md#enable-dedup-candidate-workloads).
+                <a href="install-enable.md#enable-dedup-candidate-workloads" data-raw-source="[Other workloads may also be excellent candidates for Data Deduplication](install-enable.md#enable-dedup-candidate-workloads)">Other workloads may also be excellent candidates for Data Deduplication</a>.
             </td>
         </tr>
     </tbody>

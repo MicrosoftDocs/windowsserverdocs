@@ -47,24 +47,24 @@ Windows Server 2016 is the cloud-ready operating system that supports your curre
 ## Transition to  Windows Server 2012 R2 Standard  
  After you have decided to transition from  Windows Server Essentials to  Windows Server 2012 R2 Standard, complete these two steps:  
   
-1.  Purchase a license for  Windows Server 2012 R2 Standard and the appropriate number of user and/or device client access licenses for your environment.  
+1. Purchase a license for  Windows Server 2012 R2 Standard and the appropriate number of user and/or device client access licenses for your environment.  
   
-     You can purchase a license for  Windows Server 2012 R2 Standard from a Retail Outlet, a Distributor, or with the help of a [Microsoft Partner](https://pinpoint.microsoft.com/SelectCulture.aspx).  
+    You can purchase a license for  Windows Server 2012 R2 Standard from a Retail Outlet, a Distributor, or with the help of a [Microsoft Partner](https://pinpoint.microsoft.com/SelectCulture.aspx).  
   
-    > [!NOTE]
-    >  If you purchased  Windows Server 2012 R2 Standard initially and exercised your downgrade rights to install one of your two virtual instances as  Windows Server Essentials, you do not need to purchase anything additional.  
-    >   
-    >  If you purchase  Windows Server 2012 R2 Standard through the Volume Licensing channel, you can download an ISO image and a product key for  Windows Server 2012 R2 Standard from the Volume Licensing Service Center (VLSC).  
-    >   
-    >  If you purchase  Windows Server 2012 R2 Standard from any other channel, you can download an ISO image and an evaluation product key for  Windows Server Essentials from the [TechNet Evaluation Center](https://technet.microsoft.com/evalcenter/jj659306.aspx). Performing the transition as described in the next step will convert the evaluation product to a fully licensed and supported product.  
+   > [!NOTE]
+   >  If you purchased  Windows Server 2012 R2 Standard initially and exercised your downgrade rights to install one of your two virtual instances as  Windows Server Essentials, you do not need to purchase anything additional.  
+   >   
+   >  If you purchase  Windows Server 2012 R2 Standard through the Volume Licensing channel, you can download an ISO image and a product key for  Windows Server 2012 R2 Standard from the Volume Licensing Service Center (VLSC).  
+   >   
+   >  If you purchase  Windows Server 2012 R2 Standard from any other channel, you can download an ISO image and an evaluation product key for  Windows Server Essentials from the [TechNet Evaluation Center](https://technet.microsoft.com/evalcenter/jj659306.aspx). Performing the transition as described in the next step will convert the evaluation product to a fully licensed and supported product.  
   
-2.  Open Windows PowerShell as Administrator, and then run the following command:  
+2. Open Windows PowerShell as Administrator, and then run the following command:  
   
-     **dism /online /set-edition:ServerStandard /accepteula /productkey:** *Product Key* (where *Product Key* is the product key for your copy of  Windows Server 2012 R2 Standard).  
+    **dism /online /set-edition:ServerStandard /accepteula /productkey:** *Product Key* (where *Product Key* is the product key for your copy of  Windows Server 2012 R2 Standard).  
   
-     The server restarts to finish the transition process.  
+    The server restarts to finish the transition process.  
   
- After the transition, the  Windows Server Essentials features remain on the server and are supported for up to 100 users and 200 devices.  
+   After the transition, the  Windows Server Essentials features remain on the server and are supported for up to 100 users and 200 devices.  
   
 ## See also  
   

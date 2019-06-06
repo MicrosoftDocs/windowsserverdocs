@@ -55,31 +55,32 @@ findstr [/b] [/e] [/l | /r] [/s] [/i] [/x] [/v] [/n] [/m] [/o] [/p] [/f:<File>] 
 
 ## Remarks
 
--   All **findstr** command-line options must precede *Strings* and *FileName* in the command string.
--   Regular expressions use both literal characters and metacharacters to find patterns of text, rather than exact strings of characters. A literal character is a character that does not have a special meaning in the regular-expression syntax—it matches an occurrence of that character. For example, letters and numbers are literal characters. A metacharacter is a symbol with special meaning (an operator or delimiter) in the regular-expression syntax.
+- All **findstr** command-line options must precede *Strings* and *FileName* in the command string.
+- Regular expressions use both literal characters and metacharacters to find patterns of text, rather than exact strings of characters. A literal character is a character that does not have a special meaning in the regular-expression syntax—it matches an occurrence of that character. For example, letters and numbers are literal characters. A metacharacter is a symbol with special meaning (an operator or delimiter) in the regular-expression syntax.
 
-    The following table lists the metacharacters that **findstr** accepts.  
-    |Metacharacter|Value|
-    |-------------|-----|
-    |.|Wildcard: any character|
-    |*|Repeat: zero or more occurrences of the previous character or class|
-    |^|Line position: beginning of the line|
-    |$|Line position: end of the line|
-    |[class]|Character class: any one character in a set|
-    |[^class]|Inverse class: any one character not in a set|
-    |[x-y]|Range: any characters within the specified range|
-    |\x|Escape: literal use of a metacharacter x|
-    |\\<string|Word position: beginning of the word|
-    |string\>|Word position: end of the word|
+  The following table lists the metacharacters that **findstr** accepts.  
 
-    The special characters in regular expression syntax have the most power when you use them together. For example, use the following combination of the wildcard character (.) and repeat (*) character to match any string of characters:  
-    ```
-    .*
-    ```  
-    Use the following expression as part of a larger expression to match any string beginning with "b" and ending with "ing":  
-    ```
-    b.*ing
-    ```
+  |Metacharacter|Value|
+  |-------------|-----|
+  |.|Wildcard: any character|
+  |*|Repeat: zero or more occurrences of the previous character or class|
+  |^|Line position: beginning of the line|
+  |$|Line position: end of the line|
+  |[class]|Character class: any one character in a set|
+  |[^class]|Inverse class: any one character not in a set|
+  |[x-y]|Range: any characters within the specified range|
+  |\x|Escape: literal use of a metacharacter x|
+  |\\<string|Word position: beginning of the word|
+  |string\>|Word position: end of the word|
+
+  The special characters in regular expression syntax have the most power when you use them together. For example, use the following combination of the wildcard character (.) and repeat (*) character to match any string of characters:  
+  ```
+  .*
+  ```  
+  Use the following expression as part of a larger expression to match any string beginning with "b" and ending with "ing":  
+  ```
+  b.*ing
+  ```
 
 ## Examples
 
