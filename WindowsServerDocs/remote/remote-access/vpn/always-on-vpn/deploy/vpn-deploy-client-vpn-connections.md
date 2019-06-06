@@ -230,7 +230,7 @@ After you assemble a script from this example code and run the script, the scrip
 Use the **VPN_Profile.ps1** script in Windows PowerShell or System Center Configuration Manager to configure ProfileXML on the Windows 10 desktop.
 
 >[!NOTE]
->To view the full example script, see the section [MakeProfile.ps1 Full Script](#makeprofile.ps1-full-script).
+>To view the full example script, see the section [MakeProfile.ps1 Full Script](#listing-1.-makeprofile.ps1-full-script).
 
 #### Parameters
 
