@@ -462,7 +462,7 @@
 #### [AD FS Password Attack Protection](ad-fs/technical-reference/ad-fs-password-protection.md)
 ### [AD FS 2016 FAQ](ad-fs/overview/AD-FS-FAQ.md)
 
-## Active Directory Rights Management Servicead-rms/adrms-deploy.md
+## Active Directory Rights Management Service
 ### [Upgrading AD RMS to Windows Server 2016](ad-rms/adrms-deploy.md)
 
 
