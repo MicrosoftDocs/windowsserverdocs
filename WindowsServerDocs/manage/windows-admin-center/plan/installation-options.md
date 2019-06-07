@@ -55,16 +55,17 @@ You can **manage** the following Windows operating systems using Windows Admin C
 
 > [!NOTE]
 > Windows Admin Center requires PowerShell features that are not included in Windows Server 2008 R2, 2012, and 2012 R2. If you will manage these with Windows Admin Center, you will need to install Windows Management Framework (WMF) version 5.1 or higher on those servers.
-
->Type `$PSVersiontable` in PowerShell to verify that WMF is installed,
-and that the version is 5.1 or higher. 
-
->If WMF is not installed, you can [download WMF 5.1](https://www.microsoft.com/en-us/download/details.aspx?id=54616).
+> 
+> Type `$PSVersiontable` in PowerShell to verify that WMF is installed,
+> and that the version is 5.1 or higher. 
+> 
+> If WMF is not installed, you can [download WMF 5.1](https://www.microsoft.com/en-us/download/details.aspx?id=54616).
 
 ## Deployment options
 
 | ![img](../media/deployment-options/W10.png) | ![img](../media/deployment-options/gateway.png) | ![img](../media/deployment-options/node.png) | ![img](../media/deployment-options/HA.png) |
-|---|---|---|---|
+|---------------------------------------------|-------------------------------------------------|----------------------------------------------|--------------------------------------------|
+|                                             |                                                 |                                              |                                            |
 
 | Local Client | Gateway Server | Managed Server | Failover Cluster |
 | --- | --- | --- | --- |

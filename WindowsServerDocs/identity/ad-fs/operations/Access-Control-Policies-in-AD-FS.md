@@ -13,8 +13,6 @@ ms.technology: identity-adfs
 ---
 # Access Control Policies in Windows Server 2016 AD FS
 
->Applies To: Windows Server 2016
-
   
 ## Access Control Policy Templates in AD FS  
 Active Directory Federation Services now supports the use of access control policy templates.  By using access control policy templates, an administrator can enforce policy settings by assigning the policy template to a group of relying parties (RPs). Administrator can also make updates to the policy template and the changes will be applied to the relying parties automatically if there is no user interaction needed.  

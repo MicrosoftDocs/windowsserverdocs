@@ -224,7 +224,7 @@ While Repadmin.exe is good at returning information about replication topology l
   
 For example, after a rapid expansion of new branch offices, combined with the consolidation of others, you might have a hundred site changes to make based on physical locations, network changes, and new capacity requirements. Rather than using Dssites.msc and Adsiedit.msc to make changes, you can automate. This is especially compelling when you start with a spreadsheet of data provided by your network and facilities teams.  
   
-The **Get-Adreplication\*** cmdlets return information about replication topology and are useful for pipelining into the **Set-Adreplication\*** cmdlets in bulk. **Get** cmdlets do not change data, they only show data or to create Windows PowerShell session objects that can be pipelined to **Set-Adreplication\*** cmdlets. The **New** and **Remove** cmdlets are useful for creating or removing Active Directory topology objects.  
+The **Get-Adreplication\\*** cmdlets return information about replication topology and are useful for pipelining into the **Set-Adreplication\\*** cmdlets in bulk. **Get** cmdlets do not change data, they only show data or to create Windows PowerShell session objects that can be pipelined to **Set-Adreplication\\*** cmdlets. The **New** and **Remove** cmdlets are useful for creating or removing Active Directory topology objects.  
   
 For example, you can create new sites using a CSV file:  
   

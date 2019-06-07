@@ -69,14 +69,14 @@ wbadmin start systemstaterecovery
 
 ## <a name="BKMK_examples"></a>Examples
 
--   To perform a system state recovery of the backup from 03/31/2013 at 9:00 A.M., type:  
-    ```
-    wbadmin start systemstaterecovery -version:03/31/2013-09:00
-    ```  
--   To perform a system state recovery of the backup from 04/30/2013 at 9:00 A.M. that is stored on the shared resource \\\\servername\share for server01, type:  
-    ```
-    wbadmin start systemstaterecovery -version:04/30/2013-09:00 -backupTarget:\\servername\share -machine:server01
-    ```
+- To perform a system state recovery of the backup from 03/31/2013 at 9:00 A.M., type:  
+  ```
+  wbadmin start systemstaterecovery -version:03/31/2013-09:00
+  ```  
+- To perform a system state recovery of the backup from 04/30/2013 at 9:00 A.M. that is stored on the shared resource \\\\servername\share for server01, type:  
+  ```
+  wbadmin start systemstaterecovery -version:04/30/2013-09:00 -backupTarget:\\servername\share -machine:server01
+  ```
 
 #### Additional references
 

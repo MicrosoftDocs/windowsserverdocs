@@ -11,22 +11,21 @@ ms.technology: identity-adfs
 ---
 # AD FS paginated sign-in
 
->Applies To: Windows Server 2019
 
-For AD FS 2019, we’ve redesigned the sign-in UI.  Now, the AD FS sign-in will have the same look and feel of Azure AD.  This will provide users a more consistent sign-in experience, incorporating a centered and paginated user flow. 
+For AD FS in Windows Server 2019, we’ve redesigned the sign-in UI.  Now, the AD FS sign-in will have the same look and feel of Azure AD.  This will provide users a more consistent sign-in experience, incorporating a centered and paginated user flow.
 
 ## What’s changing
-In AD FS 2012 R2 and 2016, your sign-in screen looked something like this:
+In AD FS in Windows Server 2012 R2 and 2016, your sign-in screen looked something like this:
 
 ![oldsignin](media/AD-FS-paginated-sign-in/signin1.png)
 
 We’re moving away from displaying a single form located on the right side of the screen.
 
-In AD FS 2019, these are the major design changes that you’ll see:
+In AD FS in Windows Server 2019, these are the major design changes that you’ll see:
 
 
 - **A centered UI**. Previously, the sign-in UI existed on the right side of the screen, as shown above. We’ve moved the UI front and center to modernize the experience.
-- **Pagination**. Instead of providing you a long form to fill out, we’ve incorporated a new flow that will take you through the sign-in experience step-by-step. Our telemetry shows that with this approach, our customers have more successful sign-ins. It also provides us more flexibility to incorporate various authentication methods, such us phone factor authentication. 
+- **Pagination**. Instead of providing you a long form to fill out, we’ve incorporated a new flow that will take you through the sign-in experience step-by-step. Our telemetry shows that with this approach, our customers have more successful sign-ins. It also provides us more flexibility to incorporate various authentication methods, such us phone factor authentication.
 
 ![newsignin](media/AD-FS-paginated-sign-in/signin2.png)
 
@@ -38,22 +37,26 @@ On the second page, you’ll be presented with authentication options, configure
 
 ![newsignin](media/AD-FS-paginated-sign-in/signin4.png)
 
-On the third page, you’ll be asked to enter your password (assuming you selected “Password” as your authentication option). 
+On the third page, you’ll be asked to enter your password (assuming you selected “Password” as your authentication option).
 
 ## How to get the new experience
-If you are a new customer to AD FS, you’ll receive the new design by default. However, if you are an existing customer with AD FS 2012 R2 or 2016, there are several steps you’ll need to take to receive the new design: 
 
-1. Upgrade your servers to AD FS 2019. 
-2.	Enable your FBL to 2019.
-3.	Enable the new sign-in experience.
-- Allow the new sign-in via PowerShell. In PowerShell, run the following command to enable pagination: 
-``Set-AdfsGlobalAuthenticationPolicy -EnablePaginatedAuthenticationPages $true``
-- Allow external authentication as primary, either via PowerShell or through the AD FS Server Manager. In PowerShell, run the following command to allow external authentication as primary: 
+### New installation of AD FS
+If you are a new customer to AD FS, you'll receive the new design by default.
+
+### Upgrading a farm
+If you are an existing customer AD FS 2012 R2 or 2016, there are two ways to receive the new design after upgrading servers to AD FS 2019 and enabling the FBL to 2019.
+
+- Allow the new sign-in via Powershell. Run the following command to enable pagination:
+ ``Set-AdfsGlobalAuthenticationPolicy -EnablePaginatedAuthenticationPages $true``
+
+ - Enable external authentication as primary, either via Powershell or through the AD FS Server Manager. The new paginated sign in pages will be enabled when this feature is enabled.
+If you are a new customer to AD FS, you’ll receive the new design by default. However, if you are an existing customer with AD FS 2012 R2 or 2016, there are several steps you’ll need to take to receive the new design:
 ``Set-AdfsGlobalAuthenticationPolicy -AllowAdditionalAuthenticationAsPrimary $true``
 
 ## Customization
-The options for customization will still be applicable for AD FS 2019. 
-Below are some links to other documents for your reference. 
+The options for customization will still be applicable for AD FS 2019.
+Below are some links to other documents for your reference.
 
 •	For those who do not plan to upgrade their servers to AD FS 2019 but still want the new design: [Using an Azure AD UX Web Theme in Active Directory Federation Services](azure-ux-web-theme-in-ad-fs.md)
 

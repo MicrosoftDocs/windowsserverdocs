@@ -136,6 +136,7 @@
 #### [Remove servers](storage-spaces/remove-servers.md)
 #### [Update drive firmware](update-firmware.md)
 #### [Extend volumes](storage-spaces/resize-volumes.md)
+#### [Delete volumes](storage-spaces/delete-volumes.md)
 #### [Performance history](storage-spaces/performance-history.md)
 ##### [Drives](storage-spaces/performance-history-for-drives.md)
 ##### [Network adapters](storage-spaces/performance-history-for-network-adapters.md)

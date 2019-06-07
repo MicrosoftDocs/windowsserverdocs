@@ -1,5 +1,3 @@
-
-
 ---
 title: Get Started with Software Inventory Logging
 description: Describes how to install and start using Software Inventory Logging

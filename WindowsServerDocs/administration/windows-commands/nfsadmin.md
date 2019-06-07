@@ -56,7 +56,7 @@ In addition to service\-specific command arguments and options, **nfsadmin** acc
 Specifies the remote computer you want to administer. You can specify the computer using a Windows Internet Name Service \(WINS\) name or a Domain Name System \(DNS\) name, or by Internet Protocol \(IP\) address.  
   
 **\-u** *UserName*  
-Specifies the user name of the user whose credentials are to be used. It might be necessary to add the domain name to the user name in the form *domain***\\***UserName*  
+Specifies the user name of the user whose credentials are to be used. It might be necessary to add the domain name to the user name in the form <em>domain</em>**\\**<em>UserName</em>  
   
 **\-p** *Password*  
 Specifies the password of the user specified using the **\-u** option. If you specify the **\-u** option but omit the **\-p** option, you are prompted for the user's password.  
@@ -79,7 +79,7 @@ Stops the Server for NFS service.
 **config**  
 Specifies general settings for Server for NFS. You must supply at least one of the following options with the **config** command argument:  
   
-**mapsvr\=***server*  
+**mapsvr\=**<em>server</em>  
 Sets *server* as the User Name Mapping server for Server for NFS. Although this option continues to be supported for compatibility with previous versions, you should use the **sfuadmin** utility instead.  
   
 **auditlocation\=**{**eventlog** | **file** | **both** | **none**}  
@@ -97,7 +97,7 @@ Specifies that audited events will be recorded in the Event Viewer application l
 **none**  
 Specifies that events will not be audited.  
   
-**fname\=***file*  
+**fname\=**<em>file</em>  
 Sets the file specified by *file* as the audit file. The default is %sfudir%\\log\\nfssvr.log  
   
 **fsize\=**\=*size*  
@@ -106,7 +106,7 @@ Sets *size* as the maximum size in megabytes of the audit file. The default maxi
 **audit\=**\[**\+**|**\-**\]**mount** \[**\+**|**\-**\]**read** \[**\+**|**\-**\]**write** \[**\+**|**\-**\]**create** \[**\+**|**\-**\]**delete** \[**\+**|**\-**\]**locking** \[**\+**|**\-**\]**all**  
 Specifies the events to be logged. To start logging an event, type a plus sign \(**\+**\) before the event name; to stop logging an event, type a minus sign \(**\-**\) before the event name. If the sign is omitted, the plus sign is assumed. Do not use **all** with any other event name.  
   
-**lockperiod\=***seconds*  
+**lockperiod\=**<em>seconds</em>  
 Specifies the number of seconds that Server for NFS will wait to reclaim locks after a connection to Server for NFS has been lost and then reestablished or after the Server for NFS service has been restarted.  
   
 Portmapprotocol\={TCP | UDP | TCP\+UDP  
@@ -130,10 +130,10 @@ Specifies whether NFS version 3 protocols will be supported. The default setting
 **renewauth\=**{**yes** | **no**}  
 Specifies whether client connections will be required to be reauthenticated after the period specified by **config renewauthinterval**. The default setting is **no**.  
   
-**renewauthinterval\=***seconds*  
+**renewauthinterval\=**<em>seconds</em>  
 Specifies the number of seconds that elapse before a client is forced to be reauthenticated if **config renewauth** is set to **yes**. The default value is 600 seconds.  
   
-**dircache\=***size*  
+**dircache\=**<em>size</em>  
 Specifies the size in kilobytes of the directory cache. The number specified as *size* must be a multiple of 4 between 4 and 128. The default directory\-cache size is 128 KB.  
   
 **translationfile**\=\[file\]  
@@ -192,28 +192,28 @@ Stops the Client for NFS service.
 **config**  
 Specifies general settings for Client for NFS. You must supply at least one of the following options with the **config** command argument:  
   
-**fileaccess\=***mode*  
+**fileaccess\=**<em>mode</em>  
 -   Specifies the default permission mode for files created on Network File System \(NFS\) servers. The *mode* argument consists of a three digits from 0 to 7 \(inclusive\) representing the default permissions granted the user, group, and others \(respectively\). The digits translate to UNIX\-style permissions as follows: 0\=none, 1\=x, 2\=w, 3\=wx, 4\=r, 5\=rx, 6\=rw, and 7\=rwx. For example, **fileaccess\=750** gives rwx permission to the owner, rx permission to the group, and no access permission to others.  
   
-**mapsvr\=***server*  
+**mapsvr\=**<em>server</em>  
 Sets *server* as the User Name Mapping server for Client for NFS. Although this option continues to be supported for compatibility with previous versions, you should use the **sfuadmin** utility instead.  
   
 **mtype\=**{**hard** | **soft**}  
 Specifies the default mount type. For a hard mount, Client for NFS continues to retry a failed RPC until it succeeds. For a soft mount, Client for NFS returns failure to the calling application after retrying the call the number of times specified by the **retry** option.  
   
-**retry\=***number*  
+**retry\=**<em>number</em>  
 Specifies the number of times to try to make a connection for a soft mount. This value must be from 1 to 10, inclusive. The default is 1.  
   
-**timeout\=***seconds*  
+**timeout\=**<em>seconds</em>  
 Specifies the number of seconds to wait for a connection \(remote procedure call\). This value must be 0.8, 0.9, or an integer from 1 to 60, inclusive. The default is 0.8.  
   
 **Protocol\={TCP | UDP | TCP\+UDP}**  
 Specifies which transport protocols the client supports. The default setting is **TCP\+UDP**  
   
-**rsize\=***size*  
+**rsize\=**<em>size</em>  
 Specifies the size, in kilobytes, of the read buffer. This value can be 0.5, 1, 2, 4, 8, 16, or 32. The default is 32.  
   
-**wsize\=***size*  
+**wsize\=**<em>size</em>  
 Specifies the size, in kilobytes, of the write buffer. This value can be 0.5, 1, 2, 4, 8, 16, or 32. The default is 32.  
   
 **perf\=default**  
@@ -229,7 +229,7 @@ Restores the following performance settings to default values:
   
 -   **wsize**  
   
-**fileaccess\=***mode*  
+**fileaccess\=**<em>mode</em>  
 Specifies the default permission mode for files created on Network File System \(NFS\) servers. The *mode* argument consists of a three digits from 0 to 7 \(inclusive\) representing the default permissions granted the user, group, and others \(respectively\). The digits translate to UNIX\-style permissions as follows: 0\=none, 1\=x, 2\=w, 3\=wx, 4\=r, 5\=rx, 6\=rw, and 7\=rwx. For example, **fileaccess\=750** gives rwx permission to the owner, rx permission to the group, and no access permission to others.  
   
 if you do not specify a command option or argument, **nfsadmin client** displays the current Client for NFS configuration settings.  

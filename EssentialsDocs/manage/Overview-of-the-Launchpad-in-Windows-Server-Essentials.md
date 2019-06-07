@@ -24,20 +24,20 @@ The Windows Server Essentials Launchpad is a small application that is installed
   
  The following Windows operating systems support the use of the Windows Server Essentials Launchpad:  
   
--   **Windows 8**: All editions.  
+- **Windows 8**: All editions.  
   
--   **Windows 7**: All editions.  
--   **Windows 10**: All editions. 
+- **Windows 7**: All editions.  
+- **Windows 10**: All editions. 
   
- The following operating systems do not support the use of the Windows Server Essentials Launchpad:  
+  The following operating systems do not support the use of the Windows Server Essentials Launchpad:  
   
--   **Additional servers**: You cannot run the Windows Server Essentials Launchpad on any additional computers that run a Windows Server operating system.  
+- **Additional servers**: You cannot run the Windows Server Essentials Launchpad on any additional computers that run a Windows Server operating system.  
   
- In this topic:  
+  In this topic:  
   
--   [Use the Launchpad](Overview-of-the-Launchpad-in-Windows-Server-Essentials.md#BKMK_Launchpad)  
+- [Use the Launchpad](Overview-of-the-Launchpad-in-Windows-Server-Essentials.md#BKMK_Launchpad)  
   
--   [Use the Launchpad with a Mac computer](Overview-of-the-Launchpad-in-Windows-Server-Essentials.md#BKMK_Mac)  
+- [Use the Launchpad with a Mac computer](Overview-of-the-Launchpad-in-Windows-Server-Essentials.md#BKMK_Mac)  
   
 ##  <a name="BKMK_Launchpad"></a> Use the Launchpad  
  The following links and information are available on the Windows Server Essentials Launchpad.  
@@ -45,13 +45,13 @@ The Windows Server Essentials Launchpad is a small application that is installed
 ### Backup  
  Click **Backup** to open the **Backup Properties** for the computer. On the **Backup Properties** page, you can:  
   
--   Start or stop a backup.  
+- Start or stop a backup.  
   
--   View the status and details for the most recent backup.  
+- View the status and details for the most recent backup.  
   
--   Specify how to manage computer power when backup runs.  
+- Specify how to manage computer power when backup runs.  
   
- For information about how to use Launchpad to back up your computer, see [Manage Client Backup](Manage-Client-Computer-Backup-in-Windows-Server-Essentials.md).  
+  For information about how to use Launchpad to back up your computer, see [Manage Client Backup](Manage-Client-Computer-Backup-in-Windows-Server-Essentials.md).  
   
 ### Remote Web Access  
  Click **Remote Web Access** to open the web browser to the Remote Web Access site. The Remote Web Access site enables you to connect to other computers and to access some of the network resources from within the office or from any remote location with an Internet-enabled computer. For more information about Remote Web Access, see [Manage Remote Web Access](Manage-Remote-Web-Access-in-Windows-Server-Essentials.md).  

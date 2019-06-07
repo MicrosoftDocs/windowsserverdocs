@@ -127,9 +127,9 @@ Log Analytics can collect events from the Windows event log and performance coun
 2. Select **Advanced settings**.<br><br> ![Log Analytics Advance Settings](media/configure-azure-monitor/log-analytics-advanced-settings-01.png)<br><br> 
 3. Select **Data**, and then select **Windows Event Logs**.  
 4. Here, add the Health Service event channel by typing in the name below and the click the plus sign **+**.  
-```
-Event Channel: Microsoft-Windows-Health/Operational
-```
+   ```
+   Event Channel: Microsoft-Windows-Health/Operational
+   ```
 5. In the table, check the severities **Error** and **Warning**.   
 6. Click **Save** at the top of the page to save the configuration.
 7. Select **Windows Performance Counters** to enable collection of performance counters on a Windows computer. 

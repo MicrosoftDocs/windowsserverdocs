@@ -21,7 +21,7 @@ ms.date: 10/16/2017
 
 Displays messages or turns on or off the command echoing feature. If used without parameters, **echo** displays the current echo setting.
 
-For examples of how to use this command, see [Examples](#BKMK_examples).
+For examples of how to use this command, see [Examples](#examples).
 
 ## Syntax
 
@@ -46,7 +46,7 @@ echo [on | off]
 -   To prevent echoing a particular command in a batch file, insert an at sign (@) in front of the command. To prevent echoing all commands in a batch file, include the **echo off** command at the beginning of the file.
 -   To display a pipe (**|**) or redirection character (**<** or **>**) when you are using **echo**, use a caret (^) immediately before the pipe or redirection character (for example, **^|**, **^>**, or **^<**). To display a caret, type two carets in succession (**^^**).
 
-## <a name="BKMK_examples"></a>Examples
+## Examples
 
 To display the current **echo** setting, type:
 ```

@@ -24,9 +24,11 @@ deletes files on remote computers.
 delete <remoteFile>  
 ```  
 ### Parameters  
-|Parameter|Description|  
-|-------|--------|  
-|<remoteFile>|Specifies the file to delete.|  
+
+|  Parameter   |          Description          |
+|--------------|-------------------------------|
+| <remoteFile> | Specifies the file to delete. |
+
 ## <a name="BKMK_Examples"></a>Examples  
 delete the file test.txt on the remote computer.  
 ```  

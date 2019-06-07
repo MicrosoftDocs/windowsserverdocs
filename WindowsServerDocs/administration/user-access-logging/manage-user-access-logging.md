@@ -205,13 +205,13 @@ UAL is not intended to be a mission critical component. Its design is intended t
   
 #### To delete data logged by UAL  
   
-1.  Stop the User Access Logging Service.  
+1. Stop the User Access Logging Service.  
   
-2.  Open Windows Explorer.  
+2. Open Windows Explorer.  
   
-3.  Go to **\Windows\System32\Logfiles\SUM\**.  
+3. Go to **\Windows\System32\Logfiles\SUM\\**.  
   
-4.  Delete all files in the folder.  
+4. Delete all files in the folder.  
   
 ## Managing UAL in high volume environments  
 This section describes what an administrator can expect when UAL is used on a server with high client volume:  

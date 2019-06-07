@@ -51,26 +51,26 @@ After you finish installing  Windows Server Essentials and you complete the task
   
 ##### To Uninstall Exchange Server 2003 from the Source Server  
   
-1.  Log on to the Source Server as an administrator  
+1. Log on to the Source Server as an administrator  
   
-2.  Click **Start**, click **Control Panel**, and then click **Add or Remove Programs**.  
+2. Click **Start**, click **Control Panel**, and then click **Add or Remove Programs**.  
   
-3.  In the list of programs, select **Windows Small Business Server 2003**, and then click **Change/Remove**.  
+3. In the list of programs, select **Windows Small Business Server 2003**, and then click **Change/Remove**.  
   
-4.  In the Setup Wizard, click **Next** until the **Component Selection** page appears.  
+4. In the Setup Wizard, click **Next** until the **Component Selection** page appears.  
   
-5.  On the Component Selection page, expand **Exchange Server**, and then choose **Remove**.  
+5. On the Component Selection page, expand **Exchange Server**, and then choose **Remove**.  
   
-    > [!NOTE]
+   > [!NOTE]
+   > 
+   >  Exchange Server will check to make sure that there are no mailboxes or public folders on the server. If any data remains, an error message appears when you click **Remove**. To avoid this issue, make sure that you have completed all of the procedures in the topic [Move SBS 2003 settings and data to the Destination Server](Move-Windows-SBS-2003-settings-and-data-to-the-Destination-Server-for-Windows-Server-Essentials-migration.md).  
+   > 
+   >  Exchange Server will check to make sure that there are no mailboxes or public folders on the server. If any data remains, an error message appears when you click **Remove**. To avoid this issue, make sure that you have completed all of the procedures in the topic [Move SBS 2003 settings and data to the Destination Server](../migrate/Move-Windows-SBS-2003-settings-and-data-to-the-Destination-Server-for-Windows-Server-Essentials-migration.md).  
 
-    >  Exchange Server will check to make sure that there are no mailboxes or public folders on the server. If any data remains, an error message appears when you click **Remove**. To avoid this issue, make sure that you have completed all of the procedures in the topic [Move SBS 2003 settings and data to the Destination Server](Move-Windows-SBS-2003-settings-and-data-to-the-Destination-Server-for-Windows-Server-Essentials-migration.md).  
-
-    >  Exchange Server will check to make sure that there are no mailboxes or public folders on the server. If any data remains, an error message appears when you click **Remove**. To avoid this issue, make sure that you have completed all of the procedures in the topic [Move SBS 2003 settings and data to the Destination Server](../migrate/Move-Windows-SBS-2003-settings-and-data-to-the-Destination-Server-for-Windows-Server-Essentials-migration.md).  
-
   
-6.  Click **Next**.  
+6. Click **Next**.  
   
-7.  When prompted, insert Windows Small Business Server 2003 CD#3, and follow the onscreen instructions.  
+7. When prompted, insert Windows Small Business Server 2003 CD#3, and follow the onscreen instructions.  
   
 ###  <a name="BKMK_PhysicallyDisconnect"></a> Disconnect printers that are directly connected to the Source Server  
  Before you demote the Source Server, physically disconnect any printers that are directly connected to the Source Server and are shared through the Source Server. Ensure that no Active Directory objects remain for the printers that were directly connected to the Source Server. The printers can then be directly connected to the Destination Server and shared from  Windows Server Essentials.  
@@ -93,22 +93,22 @@ After you finish installing  Windows Server Essentials and you complete the task
   
 ##### To demote the Source Server  
   
-1.  On the Source Server, click **Start**, click **Run**, type **dcpromo**, and then click **OK**.  
+1. On the Source Server, click **Start**, click **Run**, type **dcpromo**, and then click **OK**.  
   
-2.  Click **Next** twice.  
+2. Click **Next** twice.  
   
-    > [!NOTE]
-    >  Do not select **This server is the last domain controller in the domain**.  
+   > [!NOTE]
+   >  Do not select **This server is the last domain controller in the domain**.  
   
-3.  Type a password for the new Administrator account on the server, and then click **Next**.  
+3. Type a password for the new Administrator account on the server, and then click **Next**.  
   
-4.  In the **Summary** dialog box, you are informed that AD DS will be removed from the computer and that the server will become a member of the domain. Click **Next**.  
+4. In the **Summary** dialog box, you are informed that AD DS will be removed from the computer and that the server will become a member of the domain. Click **Next**.  
   
-5.  Click **Finish**. The Source Server restarts.  
+5. Click **Finish**. The Source Server restarts.  
   
-6.  After the Source Server restarts, add the Source Server as a member of a workgroup before you disconnect it from the network.  
+6. After the Source Server restarts, add the Source Server as a member of a workgroup before you disconnect it from the network.  
   
- After you add the Source Server as a member of a workgroup and disconnect it from the network, you must remove it from AD DS on the Destination Server.  
+   After you add the Source Server as a member of a workgroup and disconnect it from the network, you must remove it from AD DS on the Destination Server.  
   
 ##### To remove the Source Server from Active Directory  
   
@@ -123,9 +123,9 @@ After you finish installing  Windows Server Essentials and you complete the task
 ###  <a name="BKMK_MoveTheDHCPRole"></a> Move the DHCP Server role from the Source Server to the router  
   
 > [!NOTE]
-
+> 
 >  If you already performed this task before you started the migration process, continue with the section [Remove and repurpose the Source Server](Demote-and-remove-the-Source-Server-from-the-new-Windows-Server-Essentials-network.md#BKMK_RemoveTheSourceServer).  
-
+> 
 >  If you already performed this task before you started the migration process, continue with the section [Remove and repurpose the Source Server](../migrate/Demote-and-remove-the-Source-Server-from-the-new-Windows-Server-Essentials-network.md#BKMK_RemoveTheSourceServer).  
 
   

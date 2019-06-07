@@ -11,7 +11,7 @@ ms.localizationpriority: medium
 ---
 # Enable Always Offline mode for faster access to files
 
->Applies to: Windows 10, Windows 8, Windows 8.1, Windows Server 2012, Windows Server 2012 R2, Windows Server 2016
+>Applies to: Windows 10, Windows 8, Windows 8.1, Windows Server 2019, Windows Server 2016, Windows Server 2012, Windows Server 2012 R2, and Windows (Semi-annual Channel)
 
 This document describes how to use the Always Offline mode of Offline Files to provide faster access to cached files and redirected folders. Always Offline also provides lower bandwidth usage because users are always working offline, even when they are connected through a high-speed network connection.
 
@@ -38,7 +38,7 @@ To enable Always Offline mode, use Group Policy to enable the **Configure slow-l
 6. Select **Enabled**.
 7. In the **Options** box, select **Show**. The **Show Contents window** will appear.
 8. In the **Value name** box, specify the file share for which you want to enable Always Offline mode.
-9. To enable Always Offline mode on all file shares, enter **\***.
+9. To enable Always Offline mode on all file shares, enter **\\***.
 10. In the **Value** box, enter **Latency=1** to set the latency threshold to one millisecond, and then select **OK**.
 
 >[!NOTE]

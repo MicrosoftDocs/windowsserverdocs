@@ -38,7 +38,7 @@ Depending on the configuration, NIC Teaming may send packets from the same IP ad
 
 A common reason for a NIC Team to fail is that the team interface is disabled, and in many cases, by accident when running a sequence of commands.  This particular sequence of commands does not enable all of the NetAdapters disabled because disabling all of the underlying physical members of NICs removes the NIC team interface. 
 
-In this case, the NIC team interface no longer shows in Get-NetAdapter, and because of this, **Enable-NetAdapter \*** does not enable the NIC Team. The **Enable-NetAdapter \*** command does, however, enable the member NICs, which then (after a short time) recreates the team interface. The team interface remains in the "disabled" state until re-enabled, allowing network traffic to begin flowing. 
+In this case, the NIC team interface no longer shows in Get-NetAdapter, and because of this, **Enable-NetAdapter \\*** does not enable the NIC Team. The **Enable-NetAdapter \\*** command does, however, enable the member NICs, which then (after a short time) recreates the team interface. The team interface remains in the "disabled" state until re-enabled, allowing network traffic to begin flowing. 
 
 The following Windows PowerShell sequence of commands may disable the team interface by accident:  
   

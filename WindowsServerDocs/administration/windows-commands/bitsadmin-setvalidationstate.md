@@ -29,11 +29,11 @@ bitsadmin /SetValidationState <Job> <file index> <true|false>
 
 ## Parameters
 
-|Parameter|Description|
-|---------|-----------|
-|Job|The job's display name or GUID|
-|File index|Starts from 0|
-|True|False|Set to TRUE if the file content is valid, otherwise set to FALSE|
+| Parameter  |          Description           |
+|------------|--------------------------------|
+|    Job     | The job's display name or GUID |
+| File index |         Starts from 0          |
+|    True    |             False              |
 
 ## <a name="BKMK_examples"></a>Examples
 

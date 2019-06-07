@@ -146,72 +146,24 @@ Here's how to create a clustered role:
     
     The following table shows the clustered roles that you can configure in the High Availability Wizard and the associated server role or feature that you must install as a prerequisite.
     
-    <table>
-    <thead>
-    <tr class="header">
-    <th>Clustered Role</th>
-    <th>Role or Feature Prerequisite</th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr class="odd">
-    <td>DFS Namespace Server</td>
-    <td>DFS Namespaces (part of File Server role)</td>
-    </tr>
-    <tr class="even">
-    <td>DHCP Server</td>
-    <td>DHCP Server role</td>
-    </tr>
-    <tr class="odd">
-    <td>Distributed Transaction Coordinator (DTC)</td>
-    <td>None</td>
-    </tr>
-    <tr class="even">
-    <td>File Server</td>
-    <td>File Server role</td>
-    </tr>
-    <tr class="odd">
-    <td>Generic Application</td>
-    <td>Not applicable</td>
-    </tr>
-    <tr class="even">
-    <td>Generic Script</td>
-    <td>Not applicable</td>
-    </tr>
-    <tr class="odd">
-    <td>Generic Service</td>
-    <td>Not applicable</td>
-    </tr>
-    <tr class="even">
-    <td>Hyper-V Replica Broker</td>
-    <td>Hyper-V role</td>
-    </tr>
-    <tr class="odd">
-    <td>iSCSI Target Server</td>
-    <td>iSCSI Target Server (part of File Server role)</td>
-    </tr>
-    <tr class="even">
-    <td>iSNS Server</td>
-    <td>iSNS Server Service feature</td>
-    </tr>
-    <tr class="odd">
-    <td>Message Queuing</td>
-    <td>Message Queuing Services feature</td>
-    </tr>
-    <tr class="even">
-    <td>Other Server</td>
-    <td>None</td>
-    </tr>
-    <tr class="odd">
-    <td>Virtual Machine</td>
-    <td>Hyper-V role</td>
-    </tr>
-    <tr class="even">
-    <td>WINS Server</td>
-    <td>WINS Server feature</td>
-    </tr>
-    </tbody>
-    </table>
+
+|Clustered Role  |Role or Feature Prerequisite  |
+|---------|---------|
+|Namespace Server     |   Namespaces (part of File Server role)       |
+|DFS Namespace Server     |  DHCP Server role       |
+|Distributed Transaction Coordinator (DTC)     | None        |
+|File Server     |  File Server role       |
+|Generic Application     |  Not applicable       |
+|Generic Script     |   Not applicable      |
+|Generic Service     |   Not applicable      |
+|Hyper-V Replica Broker     |   Hyper-V role      |
+|iSCSI Target Server     |    iSCSI Target Server (part of File Server role)     |
+|iSNS Server     |  iSNS Server Service feature       |
+|Message Queuing     |  Message Queuing Services feature       |
+|Other Server     |  None       |
+|Virtual Machine     |  Hyper-V role       |
+|WINS Server     |   WINS Server feature      |
+
 2. In Failover Cluster Manager, expand the cluster name, right-click **Roles**, and then select **Configure Role**.
 3. Follow the steps in the High Availability Wizard to create the clustered role.
 4. To verify that the clustered role was created, in the **Roles** pane, make sure that the role has a status of **Running**. The Roles pane also indicates the owner node. To test failover, right-click the role, point to **Move**, and then select **Select Node**. In the **Move Clustered Role** dialog box, select the desired cluster node, and then select **OK**. In the **Owner Node** column, verify that the owner node changed.

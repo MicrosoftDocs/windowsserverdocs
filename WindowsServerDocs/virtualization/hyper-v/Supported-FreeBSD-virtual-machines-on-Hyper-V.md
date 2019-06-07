@@ -29,9 +29,9 @@ The following feature distribution map indicates the features in each version. T
 |**Feature**|**Windows Server operating system version**|**11.1/11.2**|**11.0**|**10.3**|**10.2**|**10.0 - 10.1**|**9.1 - 9.3, 8.4**|
 |-|-|-|-|-|-|-|-|
 |**Availability**||Built in|Built in|Built in|Built in|Built in|[Ports](https://svnweb.freebsd.org/ports/branches/2015Q1/emulators/hyperv-is/) |
-|**[Core](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_core)**|2016, 2012 R2, 2012, 2008 R2|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004; |
+|**[Core](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#core)**|2016, 2012 R2, 2012, 2008 R2|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004; |
 |Windows Server 2016 Accurate Time|2016|&#10004;||||||
-|**[Networking](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_Networking)**||||||||
+|**[Networking](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#networking)**||||||||
 |Jumbo frames|2016, 2012 R2, 2012, 2008 R2|&#10004; Note 3|&#10004; Note 3|&#10004; Note 3|&#10004; Note 3|&#10004; Note 3|&#10004; Note 3|
 |VLAN tagging and trunking|2016, 2012 R2, 2012, 2008 R2|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|
 |Live migration|2016, 2012 R2, 2012, 2008 R2|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|
@@ -40,28 +40,28 @@ The following feature distribution map indicates the features in each version. T
 |TCP Segmentation and Checksum Offloads|2016, 2012 R2, 2012, 2008 R2|&#10004;|&#10004;|&#10004;|&#10004;|||
 |Large Receive Offload (LRO)|2016, 2012 R2, 2012, 2008 R2|&#10004;|&#10004;|&#10004;||||
 |SR-IOV|2016|||||||
-|**[Storage](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_Storage)**||Note 1|Note 1|Note 1|Note 1|Note 1,2|Note 1,2|
+|**[Storage](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#storage)**||Note 1|Note 1|Note 1|Note 1|Note 1,2|Note 1,2|
 |VHDX resize|2016, 2012 R2|&#10004; Note 7|&#10004; Note 7|||||
 |Virtual Fibre Channel|2016, 2012 R2|||||||
 |Live virtual machine backup|2016, 2012 R2|&#10004;||||||
 |TRIM support|2016, 2012 R2|&#10004;||||||
 |SCSI WWN|2016, 2012 R2|||||||
-|**[Memory](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_Memory)**||||||||
+|**[Memory](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#memory)**||||||||
 |PAE Kernel Support|2016, 2012 R2, 2012, 2008 R2|||||||
 |Configuration of MMIO gap|2016, 2012 R2|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|
 |Dynamic Memory - Hot-Add|2016, 2012 R2, 2012|||||||
 |Dynamic Memory - Ballooning|2016, 2012 R2, 2012|||||||
 |Runtime Memory Resize|2016|||||||
-|**[Video](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_Video)**||||||||
+|**[Video](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#video)**||||||||
 |Hyper-V specific video device|2016, 2012 R2, 2012, 2008 R2|||||||
-|**[Miscellaneous](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_Misc)**||||||||
+|**[Miscellaneous](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#miscellaneous)**||||||||
 |Key/value pair|2016, 2012 R2, 2012, 2008 R2|&#10004;|&#10004;|&#10004;|&#10004; Note 6|&#10004; Note 5, 6|&#10004; Note 6|
 |Non-Maskable Interrupt|2016, 2012 R2|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|
 |File copy from host to guest|2016, 2012 R2|||||||
 |lsvmbus command|2016, 2012 R2, 2012, 2008 R2|||||||
 |Hyper-V Sockets|2016|||||||
 |PCI Passthrough/DDA|2016|&#10004;||||||
-|**[Generation 2 virtual machines](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_gen2)**||||||||
+|**[Generation 2 virtual machines](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#generation-2-virtual-machines)**||||||||
 |Boot using UEFI|2016, 2012 R2|&#10004;||||||
 |Secure boot|2016|||||||
 
@@ -88,7 +88,7 @@ The following feature distribution map indicates the features in each version. T
     # dd if=/dev/da1 of=/dev/da1 count=0
     # gpart recover da1
     ```
-**Additional Notes**: The feature matrix of 10 stable and 11 stable is same with FreeBSD 11.1 release. In addition, FreeBSD 10.2 and previous versions (10.1, 10.0, 9.x, 8.x) are end of life. Please refer [here](https://security.freebsd.org/) for an up-to-date list of supported releases and the latest security advisories.
+   **Additional Notes**: The feature matrix of 10 stable and 11 stable is same with FreeBSD 11.1 release. In addition, FreeBSD 10.2 and previous versions (10.1, 10.0, 9.x, 8.x) are end of life. Please refer [here](https://security.freebsd.org/) for an up-to-date list of supported releases and the latest security advisories.
 
 **Additional Notes**: The feature matrix of 10 stable and 11 stable is same with FreeBSD 11.1 release. In addition, FreeBSD 10.2 and previous versions (10.1, 10.0, 9.x, 8.x) are end of life. Please refer [here](https://security.freebsd.org/) for an up-to-date list of supported releases and the latest security advisories.
 

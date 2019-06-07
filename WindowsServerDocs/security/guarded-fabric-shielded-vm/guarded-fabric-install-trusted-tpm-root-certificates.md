@@ -53,8 +53,8 @@ Existing certificates will remain trusted but new certificates found in the expa
 
 ## Next step
 
->[!div class="nextstepaction"]
-[Configure fabric DNS](guarded-fabric-configuring-fabric-dns-tpm.md)
+> [!div class="nextstepaction"]
+> [Configure fabric DNS](guarded-fabric-configuring-fabric-dns-tpm.md)
 
 
 

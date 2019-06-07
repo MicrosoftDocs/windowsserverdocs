@@ -13,7 +13,6 @@ ms.technology: identity-adfs
 ---
 # Auditing Enhancements to AD FS in Windows Server 2016
 
->Applies To: Windows Server 2016
 
 Currently, in AD FS for Windows Server 2012 R2 there are numerous audit events generated for a single request and the relevant information about a log-in or token issuance activity is either absent (in some versions of AD FS) or spread across multiple audit events. By default the AD FS audit events are turned off due to their verbose nature.  
     With the release of AD FS in Windows Server 2016, auditing has become more streamlined and less verbose.  

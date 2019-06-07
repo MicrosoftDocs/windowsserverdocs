@@ -14,7 +14,7 @@ ms.technology: identity-adfs
 
 # Walkthrough Guide: Manage Risk with Conditional Access Control
 
->Applies To: Windows Server 2012 R2
+
 
 
 ## About This Guide
@@ -93,14 +93,18 @@ You can complete this task using either AD FS Management Console or via Windows 
 1.  On your federation server, open the Windows PowerShell command window and run the following command:
 
 
-    `$rp = Get-AdfsRelyingPartyTrust -Name claimapp`
+~~~
+`$rp = Get-AdfsRelyingPartyTrust -Name claimapp`
+~~~
 
 
-2.  In the same Windows PowerShell command window, run the following command:
+2. In the same Windows PowerShell command window, run the following command:
 
 
-    `$GroupAuthzRule = '@RuleTemplate = "Authorization" @RuleName = "Foo" c:[Type == "https://schemas.microsoft.com/ws/2008/06/identity/claims/groupsid", Value =~ "^(?i)<group_SID>$"] =>issue(Type = "https://schemas.microsoft.com/authorization/claims/deny", Value = "DenyUsersWithClaim");'
-    Set-AdfsRelyingPartyTrust -TargetRelyingParty $rp -IssuanceAuthorizationRules $GroupAuthzRule`
+~~~
+`$GroupAuthzRule = '@RuleTemplate = "Authorization" @RuleName = "Foo" c:[Type == "https://schemas.microsoft.com/ws/2008/06/identity/claims/groupsid", Value =~ "^(?i)<group_SID>$"] =>issue(Type = "https://schemas.microsoft.com/authorization/claims/deny", Value = "DenyUsersWithClaim");'
+Set-AdfsRelyingPartyTrust -TargetRelyingParty $rp -IssuanceAuthorizationRules $GroupAuthzRule`
+~~~
 
 > [!NOTE]
 > Make sure to replace <group_SID> with the value of the SID of your AD **Finance** group.

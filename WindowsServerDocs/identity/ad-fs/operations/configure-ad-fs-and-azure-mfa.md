@@ -12,8 +12,6 @@ ms.technology: identity-adfs
 ---
 # Configure Azure MFA as authentication provider with AD FS
 
->Applies To: Windows Server 2016, Windows Server 2019
-
 If your organization is federated with Azure AD, you can use Azure Multi-Factor Authentication to secure AD FS resources, both on-premises and in the cloud. Azure MFA enables you to eliminate passwords and provide a more secure way to authenticate.  Starting with Windows Server 2016, you can now configure Azure MFA for primary authentication or use it as an additional authentication provider. 
   
 Unlike with AD FS in Windows Server 2012 R2, the AD FS 2016 Azure MFA adapter integrates directly with Azure AD and does not require an on premises Azure MFA server.   The Azure MFA adapter is built in to Windows Server 2016, and there is no need for additional installation.
@@ -63,17 +61,14 @@ As described above, any AD FS user who has not yet registered (configured MFA ve
 The following pre-requisites are required when using Azure MFA for authentication with AD FS:  
   
 - An [Azure subscription with Azure Active Directory](https://azure.microsoft.com/pricing/free-trial/).  
-- [Azure Multi-Factor Authentication](https://azure.microsoft.com/documentation/articles/multi-factor-authentication/)  
-- Web app proxy is able to communicate with the following over ports 80 and 443:
-
-	- https://adnotifications.windowsazure.com
-	- https://login.microsoftonline.com
+- [Azure Multi-Factor Authentication](https://azure.microsoft.com/documentation/articles/multi-factor-authentication/) 
 
 
 > [!NOTE]
 > Azure AD and Azure MFA are included in Azure AD Premium and the Enterprise Mobility Suite (EMS).  If you have either of these you do not need individual subscriptions.
+
 - A Windows Server 2016 AD FS on-premises environment.  
-   - The server needs to be able to communicate with the following URLs over ports 80 and 443.
+   - The server needs to be able to communicate with the following URLs over port 443.
       - https://adnotifications.windowsazure.com
       - https://login.microsoftonline.com
 - Your on-premises environment is [federated with Azure AD.](https://azure.microsoft.com/documentation/articles/active-directory-aadconnect-get-started-custom/#configuring-federation-with-ad-fs)  

@@ -12,7 +12,6 @@ ms.prod: windows-server-threshold
 ms.technology: identity-adfs
 ---
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 # When to Use an Authorization Claim Rule
 You can use this rule in Active Directory Federation Services \(AD FS\) when you need to take an incoming claim type and then apply an action that will determine whether a user will be permitted or denied access based on the value that you specify in the rule. When you use this rule, you pass through or transform claims that match the following rule logic, based on either of the options you configure in the rule:  

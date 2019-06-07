@@ -14,8 +14,6 @@ ms.technology: identity-adfs
 
 # Planning for Federation Server Proxy Capacity
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
-
 Capacity planning for federation server proxies helps you estimate:  
   
 -   The appropriate hardware requirements for each federation server proxy.  

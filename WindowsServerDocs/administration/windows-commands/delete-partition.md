@@ -38,8 +38,8 @@ delete partition [noerr] [override]
 
 > [!CAUTION]
 > Deleting a partition on a dynamic disk can delete all dynamic volumes on the disk, thus destroying any data and leaving the disk in a corrupt state. To delete a dynamic volume, always use the **delete volume** command instead. Partitions can be deleted from dynamic disks, but they should not be created. For example, it is possible to delete an unrecognized GUID Partition Table (GPT) partition on a dynamic GPT disk. Deleting such a partition does not cause the resulting free space to become available. This command is intended to allow you to reclame space on a corrupted offline dynamic disk in an emergency situation where the **clean** command in DiskPart cannot be used.
--   You cannot delete the system partition, boot partition, or any partition that contains the active paging file or crash dump information.
--   A partition must be selected for this operation to succeed. Use the **select partition** command to select a partition and shift the focus to it.
+> -   You cannot delete the system partition, boot partition, or any partition that contains the active paging file or crash dump information.
+> -   A partition must be selected for this operation to succeed. Use the **select partition** command to select a partition and shift the focus to it.
 
 ## <a name="BKMK_examples"></a>Examples
 

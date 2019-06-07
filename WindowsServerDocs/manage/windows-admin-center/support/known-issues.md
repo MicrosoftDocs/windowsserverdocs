@@ -16,12 +16,10 @@ ms.date: 04/12/2019
 If you encounter an issue not described on this page, please [let us know](http://aka.ms/WACfeedback).
 
 ## Lenovo XClarity Integrator
-An incompatibility exists between a specific version combination of Lenovo XClarity Integrator and Windows Admin Center. If you currently use or plan to use the Lenovo XClarity Integrator extension in Windows Admin Center, here’s what you need to know:
+The previously disclosed incompatibility issue of the Lenovo XClarity Integrator extension and Windows Admin Center version 1904 is now resolved with Windows Admin Center version 1904.1. We highly recommend that you update to the latest supported version of Windows Admin Center.
 
-- Lenovo XClarity Integrator extension version 1.0.4 is fully compatible with Windows Admin Center 1809.5.
-- Lenovo XClarity Integrator extension version 1.0.4 has exposed a compatibility issue on Windows Admin Center 1904. Microsoft and Lenovo engineers are actively investigating together, and we hope to provide a solution as soon as possible. Any updates will be posted here on the Windows Admin Center docs site, and you can also refer to [Lenovo’s support page](https://support.lenovo.com/solutions/ht507549) for reference.
-- If you are a frequent user of Lenovo’s XClarity functionality, you can either stay on Windows Admin Center 1809.5 to continue to use XClarity Integrator 1.0.4, or you can upgrade to Windows Admin Center 1904 and separately use the standalone XClarity Administrator software as a workaround for now.
-
+- Lenovo XClarity Integrator extension version 1.1 is fully compatible with Windows Admin Center 1904.1. We highly recommend that you update to the latest version of Windows Admin Center and the Lenovo extension.
+- For any reason, if you need to continue using Windows Admin Center 1809.5 for the time being, you may use XClarity Integrator 1.0.4 which will also be available in the Windows Admin Center Extension Feed until Windows Admin Center 1809.5 is no longer supported based on our [support policy](../support/index.md).
 
 ## Installer
 

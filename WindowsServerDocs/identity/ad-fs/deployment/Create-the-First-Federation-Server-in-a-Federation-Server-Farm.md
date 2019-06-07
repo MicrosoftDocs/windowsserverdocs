@@ -14,8 +14,6 @@ ms.author: billmath
 
 # Create the First Federation Server in a Federation Server Farm
 
- >Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
-
 After you install the Federation Service role service and configure the required certificates on a computer, you are ready to configure the computer to become a federation server. You can use the following procedure to set up the computer to become the first federation server in a new federation server farm using the AD FS Federation Server Configuration Wizard.  
   
 The act of creating the first federation server in a farm also creates a new Federation Service and makes this computer the primary federation server. This means that this computer will be configured with a read\/write copy of the AD FS configuration database. All other federation servers in this farm must replicate any changes that are made on the primary federation server to their read\-only copies of the AD FS configuration database that they store locally. For more information about this replication process, see [The Role of the AD FS Configuration Database](../../ad-fs/technical-reference/The-Role-of-the-AD-FS-Configuration-Database.md).  

@@ -14,8 +14,6 @@ ms.technology: identity-adfs
 
 # Federation Server Farm Using WID and Proxies
 
->Applies To: Windows Server 2012
-
 This deployment topology for Active Directory Federation Services \(AD FS\) is identical to the federation server farm with Windows Internal Database \(WID\) topology, but it adds federation server proxies to the perimeter network to support external users. The federation server proxies redirect client authentication requests that come from outside your corporate network to the federation server farm.  
   
 ## Deployment considerations  
