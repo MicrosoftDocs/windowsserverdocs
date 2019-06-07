@@ -33,7 +33,7 @@ This can happen if your default PowerShell module path has been modified or remo
 > [!NOTE] 
 > After rebooting, you must launch Windows Admin Center from the Start Menu.  
 
-* [Check the Windows version](#checkthewindowsversion)
+* [Check the Windows version](#check-the-windows-version)
 
 * Make sure you are using either Microsoft Edge or Google Chrome as your web browser.
 
@@ -53,7 +53,7 @@ This can happen if your default PowerShell module path has been modified or remo
     Get-NetFirewallRule -DisplayName "SmeInboundOpenException"
     ```
 
-* [Check the Windows version](#checkthewindowsversion) of the client and server.
+* [Check the Windows version](#check-the-windows-version) of the client and server.
 
 * Make sure you are using either Microsoft Edge or Google Chrome as your web browser.
 
@@ -68,7 +68,7 @@ This can happen if your default PowerShell module path has been modified or remo
 
 ### If you have installed Windows Admin Center in an Azure Windows Server VM
 
-* [Check the Windows version](#checkthewindowsversion)
+* [Check the Windows version](#check-the-windows-version)
 * Did you add an inbound port rule for HTTPS? 
 * [Learn more about installing Windows Admin Center in an Azure VM](https://docs.microsoft.com/windows-server/manage/windows-admin-center/configure/azure-integration#use-a-windows-admin-center-gateway-deployed-in-azure)
 
@@ -226,16 +226,16 @@ File a bug on our [UserVoice](https://windowsserver.uservoice.com/forums/295071/
 Please include any errors or warning you find in the event log, as well as the following information: 
 
 * Platform where Windows Admin Center is **installed** (Windows 10 or Windows Server):
-    * If installed on Server, what is the Windows [version](#checkthewindowsversion) of **the machine running the browser** to access Windows Admin Center: 
+    * If installed on Server, what is the Windows [version](#check-the-windows-version) of **the machine running the browser** to access Windows Admin Center: 
     * Are you using the self-signed certificate created by the installer?
     * If you are using your own certificate, does the subject name match the machine?
     * If you are using your own certificate, does it specify an alternate subject name?
 * Did you install with the default port setting?
     * If not, which port did you specify?
 * Is the machine where Windows Admin Center is **installed** joined to a domain?
-* Windows [version](#checkthewindowsversion) where Windows Admin Center is **installed**:
+* Windows [version](#check-the-windows-version) where Windows Admin Center is **installed**:
 * Is the machine that you are **trying to manage** joined to a domain?
-* Windows [version](#checkthewindowsversion) of the machine that you are **trying to manage**:
+* Windows [version](#check-the-windows-version) of the machine that you are **trying to manage**:
 * What browser are you using?
     * If you are using Google Chrome, what is the version? (Help > About Google Chrome)
 

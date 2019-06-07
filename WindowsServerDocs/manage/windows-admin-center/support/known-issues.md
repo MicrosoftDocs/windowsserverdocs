@@ -133,7 +133,7 @@ If it is not installed, you can [download and install WMF 5.1](https://www.micro
 
 ### Events
 
-- Events is effected by [websocket compatibility when using a proxy service.](#websocket-compatibility-when-using-a-proxy-services)
+- Events is effected by [websocket compatibility when using a proxy service.](#websocket-compatibility-when-using-a-proxy-service)
 
 - You may get an error that references “packet size” when exporting large log files. [16630279]
 
@@ -145,7 +145,7 @@ If it is not installed, you can [download and install WMF 5.1](https://www.micro
 
 ### PowerShell
 
-- PowerShell is effected by [websocket compatibility when using a proxy service](#websocket-compatibility-when-using-a-proxy-services)
+- PowerShell is effected by [websocket compatibility when using a proxy service](#websocket-compatibility-when-using-a-proxy-service)
 
 - Pasting with a single right-click as in the desktop PowerShell console does not work. Instead you will get the browser's context menu, where you can select paste. Ctrl-V works as well.
 
@@ -165,7 +165,7 @@ If it is not installed, you can [download and install WMF 5.1](https://www.micro
 
 - Some configurations can block Windows Admin Center's remote desktop client with group policy. If you encounter this, enable ```Allow users to connect remotely by using Remote Desktop Services``` under ```Computer Configuration/Policies/Administrative Templates/Windows Components/Remote Desktop Services/Remote Desktop Session Host/Connections```
 
-- Remote Desktop is effected by [websocket compatibility.](#websocket-compatibility-when-using-a-proxy-services)
+- Remote Desktop is effected by [websocket compatibility.](#websocket-compatibility-when-using-a-proxy-service)
 
 - The Remote Desktop tool does not currently support any text, image, or file copy/paste between the local desktop and the remote session.
 
