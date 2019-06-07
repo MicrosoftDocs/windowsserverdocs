@@ -335,7 +335,7 @@ The following table summarizes some of the most important changes to this topic.
 
 | Date | Description |Reason|
 | --- | ---         | ---   |
-| May 1st, 2019 |A dded updates for Windows Server 2019 |
+| May 1st, 2019 | Added updates for Windows Server 2019 |
 | April 10th, 2018 | Added discussion of when user customizations to Start are lost after an OS in-place upgrade|Callout known issue. |
 | March 13th, 2018 | Updated for Windows Server 2016 | Moved out of Previous Versions library and updated for current version of Windows Server. |
 | April 13th, 2017 | Added profile information for Windows 10, version 1703, and clarified how roaming profile versions work when upgrading operating systems—see [Considerations when using Roaming User Profiles on multiple versions of Windows](#considerations-when-using-roaming-user-profiles-on-multiple-versions-of-windows). | Customer feedback. |
