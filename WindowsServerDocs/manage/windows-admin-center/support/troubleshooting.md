@@ -33,7 +33,7 @@ This can happen if your default PowerShell module path has been modified or remo
 > [!NOTE] 
 > After rebooting, you must launch Windows Admin Center from the Start Menu.  
 
-* [Check the Windows version](#winvercompat)
+* [Check the Windows version](#checkthewindowsversion)
 
 * Make sure you are using either Microsoft Edge or Google Chrome as your web browser.
 
@@ -43,7 +43,7 @@ This can happen if your default PowerShell module path has been modified or remo
 
 * Did you recently upgrade Windows 10 to a new build or version?
 
-  * This may have cleared your trusted hosts settings. [Follow these instructions to update your trusted hosts settings.](#configure-trustedhosts) 
+  * This may have cleared your trusted hosts settings. [Follow these instructions to update your trusted hosts settings.](#configure-trustedhosts)
 
 ### If you've installed Windows Admin Center as a **Gateway on Windows Server**
 
@@ -53,7 +53,7 @@ This can happen if your default PowerShell module path has been modified or remo
     Get-NetFirewallRule -DisplayName "SmeInboundOpenException"
     ```
 
-* [Check the Windows version](#winvercompat) of the client and server.
+* [Check the Windows version](#checkthewindowsversion) of the client and server.
 
 * Make sure you are using either Microsoft Edge or Google Chrome as your web browser.
 
@@ -68,7 +68,7 @@ This can happen if your default PowerShell module path has been modified or remo
 
 ### If you have installed Windows Admin Center in an Azure Windows Server VM
 
-* [Check the Windows version](#winvercompat)
+* [Check the Windows version](#checkthewindowsversion)
 * Did you add an inbound port rule for HTTPS? 
 * [Learn more about installing Windows Admin Center in an Azure VM](https://docs.microsoft.com/windows-server/manage/windows-admin-center/configure/azure-integration#use-a-windows-admin-center-gateway-deployed-in-azure)
 
@@ -108,7 +108,7 @@ These three tools require the websocket protocol, which is commonly blocked by p
 
 * Log on to the gateway machine locally and try to ```Enter-PSSession <machine name>``` in PowerShell, replacing \<machine name> with the name of the Machine you are trying to manage in Windows Admin Center. 
 
-* If your environment uses a workgroup instead of a domain, see [using Windows Admin Center in a workgroup](#workgroup).
+* If your environment uses a workgroup instead of a domain, see [using Windows Admin Center in a workgroup](#using-windows-admin-center-in-a-workgroup).
 
 * **Using local administrator accounts:** If you are using a local user account that is not the built-in administrator account, you will need to enable the policy on the target machine by running the following command in PowerShell or at a Command Prompt as Administrator on the target machine:
 
@@ -116,7 +116,7 @@ These three tools require the websocket protocol, which is commonly blocked by p
     REG ADD HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System /v LocalAccountTokenFilterPolicy /t REG_DWORD /d 1
     ```
 
-## Using Windows Admin Center in a workgroup 
+## Using Windows Admin Center in a workgroup
 
 ### What account are you using?
 Make sure the credentials you are using are a member of the target server's local administrators group. In some cases, WinRM also requires membership in the Remote Management Users group. If you are using a local user account that is **not the built-in administrator account**, you will need to enable the policy on the target machine by running the following command in PowerShell or at a Command Prompt as Administrator on the target machine:
@@ -191,7 +191,7 @@ netsh http delete sslcert ipport=0.0.0.0:443
 netsh http delete urlacl url=https://+:443/
 ```
 
-## I'm having issues using Azure features in Edge
+## Azure features don't work properly in Edge
 
 Edge has [known issues](https://github.com/AzureAD/azure-activedirectory-library-for-js/wiki/Known-issues-on-Edge) related to security zones that affect Azure login in Windows Admin Center. If you are having trouble using Azure features when using Edge, try adding https://login.microsoftonline.com, https://login.live.com and the URL of your gateway as trusted sites and to allowed sites for Edge pop-up blocker settings on your client side browser. 
 
@@ -205,7 +205,7 @@ To do this:
 ## Having an issue with an Azure-related feature?
 
 Please send us an email at wacFeedbackAzure@microsoft.com with the following information:
-* General issue information from the [questions listed below](#filebug). 
+* General issue information from the [questions listed below](#providing-feedback-on-issues).
 * Describe your issue and the steps you took to reproduce the issue. 
 * Did you previously register your gateway to Azure using the New-AadApp.ps1 downloadable script and then upgrade to version 1807? Or did you register your gateway to Azure using the UI from gateway Settings > Azure?
 * Is your Azure account associated with multiple directories/tenants?
@@ -217,7 +217,7 @@ Please send us an email at wacFeedbackAzure@microsoft.com with the following inf
 * Is the machine you are trying to manage an Azure VM?
 * Is Windows Admin Center installed on an Azure VM?
 
-## Still not working, or is your issue not captured here? [troubleshooting common questions]
+## Providing feedback on issues
 
 Go to Event Viewer > Application and Services > Microsoft-ServerManagementExperience and look for any errors or warnings.
 
@@ -226,16 +226,16 @@ File a bug on our [UserVoice](https://windowsserver.uservoice.com/forums/295071/
 Please include any errors or warning you find in the event log, as well as the following information: 
 
 * Platform where Windows Admin Center is **installed** (Windows 10 or Windows Server):
-    * If installed on Server, what is the Windows [version](#winvercompat) of **the machine running the browser** to access Windows Admin Center: 
+    * If installed on Server, what is the Windows [version](#checkthewindowsversion) of **the machine running the browser** to access Windows Admin Center: 
     * Are you using the self-signed certificate created by the installer?
     * If you are using your own certificate, does the subject name match the machine?
     * If you are using your own certificate, does it specify an alternate subject name?
 * Did you install with the default port setting?
     * If not, which port did you specify?
 * Is the machine where Windows Admin Center is **installed** joined to a domain?
-* Windows [version](#winvercompat) where Windows Admin Center is **installed**:
+* Windows [version](#checkthewindowsversion) where Windows Admin Center is **installed**:
 * Is the machine that you are **trying to manage** joined to a domain?
-* Windows [version](#winvercompat) of the machine that you are **trying to manage**:
+* Windows [version](#checkthewindowsversion) of the machine that you are **trying to manage**:
 * What browser are you using?
     * If you are using Google Chrome, what is the version? (Help > About Google Chrome)
 
