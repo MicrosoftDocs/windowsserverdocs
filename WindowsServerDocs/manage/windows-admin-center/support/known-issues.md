@@ -7,15 +7,16 @@ author: jwwool
 ms.author: jeffrew
 ms.localizationpriority: medium
 ms.prod: windows-server-threshold
-ms.date: 04/12/2019
+ms.date: 06/07/2019
 ---
 # Windows Admin Center Known Issues
 
->Applies To: Windows Admin Center, Windows Admin Center Preview
+> Applies to: Windows Admin Center, Windows Admin Center Preview
 
 If you encounter an issue not described on this page, please [let us know](http://aka.ms/WACfeedback).
 
 ## Lenovo XClarity Integrator
+
 The previously disclosed incompatibility issue of the Lenovo XClarity Integrator extension and Windows Admin Center version 1904 is now resolved with Windows Admin Center version 1904.1. We highly recommend that you update to the latest supported version of Windows Admin Center.
 
 - Lenovo XClarity Integrator extension version 1.1 is fully compatible with Windows Admin Center 1904.1. We highly recommend that you update to the latest version of Windows Admin Center and the Lenovo extension.
@@ -44,8 +45,8 @@ The previously disclosed incompatibility issue of the Lenovo XClarity Integrator
 
 - If you have Windows Admin Center installed as a gateway and your connection list appears to be corrupted, perform the following steps:
 
->[!WARNING]
->This will delete the connection list and settings for all Windows Admin Center users on the gateway.
+   > [!WARNING]
+   >This will delete the connection list and settings for all Windows Admin Center users on the gateway.
 
   1. Uninstall Windows Admin Center
   2. Delete the **Server Management Experience** folder under **C:\Windows\ServiceProfiles\NetworkService\AppData\Roaming\Microsoft**

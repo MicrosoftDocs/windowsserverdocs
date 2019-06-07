@@ -7,46 +7,14 @@ author: jwwool
 ms.author: jeffrew
 ms.localizationpriority: medium
 ms.prod: windows-server-threshold
-ms.date: 02/12/2019
+ms.date: 06/07/2019
 ---
-
 # Troubleshooting Windows Admin Center
 
->Applies To: Windows Admin Center, Windows Admin Center Preview
+> Applies to: Windows Admin Center, Windows Admin Center Preview
 
 > [!Important]
 > This guide will help you diagnose and resolve issues that are preventing you from using Windows Admin Center. If you are having an issue with a specific tool, please check to see if you are experiencing a [known issue.](http://aka.ms/wacknownissues)
-
-<a id="toc"></a>
-
-## Quick links
-
-* [The installer fails with message: **_The Module 'Microsoft.PowerShell.LocalAccounts' could not be loaded._**](#psmodulepath)
-
-* I get a **This site/page can't be reached** error in my web browser (select your deployment type)
-    * [I have Windows Admin Center installed as an App on Windows 10](#whitescreenw10)
-    * [I have Windows Admin Center installed as an Gateway on Windows Server](#whitescreenws)
-    * [I have Windows Admin Center installed as an Gateway on an Azure VM](#if-you-have-installed-windows-admin-center-in-an-azure-windows-server-vm)
-
-* [Windows Admin Center home page loads, but I'm stuck on the Add Connection pane, or I can't connect to any machine.](#winvercompat)
-
-* [I get the message: "Error while loading the module. Rpc: Expired retries 'Ping'."](#winvercompat)
-
-* [I get the message: "Cant connect securely to this page. This might be because the site uses outdated or unsafe TLS security settings."](#tls)
-
-* [I'm having trouble with the Remote Desktop, Events, and PowerShell tools.](#websockets)
-
-* [I'm having issues using Azure features in Edge](#azlogin)
-
-* [I can connect to some servers, but not others](#connectionissues)
-
-* [I'm using Windows Admin Center in a **workgroup**](#workgroup)
-
-* [I previously had Windows Admin Center installed, and now nothing else can use the same TCP/IP port](#urlacl)
-
-* [My issue is not listed here, or the steps on this page did not resolve my issue.](#filebug)
-
-<a id="psmodulepath"></a>
 
 ## Installer fails with message: **_The Module 'Microsoft.PowerShell.LocalAccounts' could not be loaded._**
 
@@ -57,8 +25,6 @@ This can happen if your default PowerShell module path has been modified or remo
 ```
 
 ## I get a **This site/page can't be reached** error in my web browser
-
-<a id="whitescreenw10"></a>
 
 ### If you've installed Windows Admin Center as an **App on Windows 10**
 
@@ -79,13 +45,10 @@ This can happen if your default PowerShell module path has been modified or remo
 
   * This may have cleared your trusted hosts settings. [Follow these instructions to update your trusted hosts settings.](#configure-trustedhosts) 
 
-[[back to top]](#toc)
-
-<a id="whitescreenws"></a>
-
 ### If you've installed Windows Admin Center as a **Gateway on Windows Server**
 
 * Did you upgrade from a previous version of Windows Admin Center? Check to make sure the firewall rule was not deleted due to [this known issue](known-issues.md#upgrade). Use the PowerShell command below to determine if the rule exists. If not, follow [these instructions](known-issues.md#upgrade) to recreate it.
+    
     ```powershell
     Get-NetFirewallRule -DisplayName "SmeInboundOpenException"
     ```
@@ -98,21 +61,16 @@ This can happen if your default PowerShell module path has been modified or remo
 ![](../media/Service-TaskMan.PNG)
 
 * Test the network connection to the Gateway (replace \<values> with the information from your deployment)
+
     ```powershell
     Test-NetConnection -Port <port> -ComputerName <gateway> -InformationLevel Detailed
     ```
-
-[[back to top]](#toc)
 
 ### If you have installed Windows Admin Center in an Azure Windows Server VM
 
 * [Check the Windows version](#winvercompat)
 * Did you add an inbound port rule for HTTPS? 
 * [Learn more about installing Windows Admin Center in an Azure VM](https://docs.microsoft.com/windows-server/manage/windows-admin-center/configure/azure-integration#use-a-windows-admin-center-gateway-deployed-in-azure)
-
-[[back to top]](#toc)
-
-<a id="winvercompat"></a>
 
 ### Check the Windows version
 
@@ -132,10 +90,6 @@ This can happen if your default PowerShell module path has been modified or remo
 
 * This may have cleared your trusted hosts settings. [Follow these instructions to update your trusted hosts settings.](#configure-trustedhosts) 
 
-[[back to top]](#toc)
-
-<a id="tls"></a>
-
 ## I get the message: "Cant connect securely to this page. This might be because the site uses outdated or unsafe TLS security settings.
 
 <!--REF: https://docs.microsoft.com/iis/get-started/whats-new-in-iis-10/http2-on-iis#when-is-http2-not-supported -->
@@ -146,32 +100,21 @@ EnableHttp2Cleartext=dword:00000000
 EnableHttp2Tls=dword:00000000
 ```
 
-[[back to top]](#toc)
-
-<a id="websockets"></a> 
-
 ## I'm having trouble with the Remote Desktop, Events, and PowerShell tools.
 
 These three tools require the websocket protocol, which is commonly blocked by proxy servers and firewalls. If you are using Google Chrome, there is a [known issue](known-issues.md#google-chrome) with websockets and NTLM authentication.
 
-[[back to top]](#toc)
-
-
-<a id="connectionissues"></a> 
-
 ## I can connect to some servers, but not others
+
 * Log on to the gateway machine locally and try to ```Enter-PSSession <machine name>``` in PowerShell, replacing \<machine name> with the name of the Machine you are trying to manage in Windows Admin Center. 
 
 * If your environment uses a workgroup instead of a domain, see [using Windows Admin Center in a workgroup](#workgroup).
 
 * **Using local administrator accounts:** If you are using a local user account that is not the built-in administrator account, you will need to enable the policy on the target machine by running the following command in PowerShell or at a Command Prompt as Administrator on the target machine:
 
-        REG ADD HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System /v LocalAccountTokenFilterPolicy /t REG_DWORD /d 1
-
-
-[[back to top]](#toc)
-
-<a id="workgroup"></a>
+    ```
+    REG ADD HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System /v LocalAccountTokenFilterPolicy /t REG_DWORD /d 1
+    ```
 
 ## Using Windows Admin Center in a workgroup 
 
@@ -239,10 +182,6 @@ When installing Windows Admin Center, you are given the option to let Windows Ad
     Set-Item WSMan:localhost\Client\TrustedHosts -Value '<paste values from text file>'
     ```
 
-[[back to top]](#toc)
-
-<a id="urlacl"></a>
-
 ## I previously had Windows Admin Center installed, and now nothing else can use the same TCP/IP port
 
 Manually run these two commands in an elevated command prompt:
@@ -251,10 +190,6 @@ Manually run these two commands in an elevated command prompt:
 netsh http delete sslcert ipport=0.0.0.0:443
 netsh http delete urlacl url=https://+:443/
 ```
-
-[[back to top]](#toc)
-
-<a id="azlogin"></a>
 
 ## I'm having issues using Azure features in Edge
 
@@ -266,11 +201,6 @@ To do this:
 3. Under the **Trusted Sites** option, click on the **sites** button and add the URLs in the dialog box that opens. You'll need to add your gateway URL as well as https://login.microsoftonline.com and https://login.live.com.
 4. Go to the **Privacy** tab
 5. Under the **Pop-up Blocker** section, click on the **Settings** button and add the URLs in the dialog box that opens. You'll need to add your gateway URL as well as https://login.microsoftonline.com and https://login.live.com.
-
-
-[[back to top]](#toc)
-
-<a id="azissue"></a>
 
 ## Having an issue with an Azure-related feature?
 
@@ -286,10 +216,6 @@ Please send us an email at wacFeedbackAzure@microsoft.com with the following inf
 * Does your Azure account require multi-factor authentication?
 * Is the machine you are trying to manage an Azure VM?
 * Is Windows Admin Center installed on an Azure VM?
-
-[[back to top]](#toc)
-
-<a id="filebug"></a>
 
 ## Still not working, or is your issue not captured here? [troubleshooting common questions]
 
@@ -313,4 +239,3 @@ Please include any errors or warning you find in the event log, as well as the f
 * What browser are you using?
     * If you are using Google Chrome, what is the version? (Help > About Google Chrome)
 
-[[back to top]](#toc)

@@ -6,7 +6,7 @@ ms.manager: daveba
 ms.technology: storage
 ms.topic: article
 author: jasongerend
-ms.date: 05/09/2019
+ms.date: 06/07/2019
 description: This topic describes DFS Namespaces, which is a role service in Windows Server enabling you to group shared folders located on different servers into one or more logically structured namespaces.
 ---
 # DFS Namespaces overview
@@ -49,11 +49,11 @@ Servers that are running the following operating systems can host a single stand
 
 The following table describes additional factors to consider when choosing servers to host a namespace.
 
-|Server Hosting Stand-Alone Namespaces|Server Hosting Domain-Based Namespaces|
-|---|---|
-|Must contain an NTFS volume to host the namespace.|Must contain an NTFS volume to host the namespace.|
-|Can be a member server or domain controller.|Must be a member server or domain controller in the domain in which the namespace is configured. (This requirement applies to every namespace server that hosts a given domain-based namespace.)|
-|Can be hosted by a failover cluster to increase the availability of the namespace.|The namespace cannot be a clustered resource in a failover cluster. However, you can locate the namespace on a server that also functions as a node in a failover cluster if you configure the namespace to use only local resources on that server.|
+| Server Hosting Stand-Alone Namespaces | Server Hosting Domain-Based Namespaces |
+| ---                                   |        ---                                |
+| Must contain an NTFS volume to host the namespace.|Must contain an NTFS volume to host the namespace. |
+| Can be a member server or domain controller.|Must be a member server or domain controller in the domain in which the namespace is configured. (This requirement applies to every namespace server that hosts a given domain-based namespace.) |
+| Can be hosted by a failover cluster to increase the availability of the namespace.|The namespace cannot be a clustered resource in a failover cluster. However, you can locate the namespace on a server that also functions as a node in a failover cluster if you configure the namespace to use only local resources on that server. |
 
 ## Installing DFS Namespaces
 
@@ -83,10 +83,10 @@ Open a Windows PowerShell session with elevated user rights, and then type the f
 Install-WindowsFeature <name>
 ```
 
-|Role service or feature|Name|
-|---|---|
-|DFS Namespaces|`FS-DFS-Namespace`|
-|DFS Management Tools|`RSAT-DFS-Mgmt-Con`|
+| Role service or feature | Name |
+| ----------------------- | ---- |
+| DFS Namespaces          | `FS-DFS-Namespace` |
+| DFS Management Tools    | `RSAT-DFS-Mgmt-Con` |
 
 For example, to install the Distributed File System Tools portion of the Remote Server Administration Tools feature, type:
 
@@ -114,12 +114,12 @@ To learn about how to get started with Azure virtual machines, see [Azure virtua
 
 For additional related information, see the following resources.
 
-|Content type|References|
-|------------------|----------------|
-|**Product evaluation**|[What's New in DFS Namespaces and DFS Replication in Windows Server](https://technet.microsoft.com/library/dn281957(v=ws.11).aspx)|
-|**Deployment**|[DFS Namespace Scalability Considerations](http://blogs.technet.com/b/filecab/archive/2012/08/26/dfs-namespace-scalability-considerations.aspx)|
-|**Operations**|[DFS Namespaces: Frequently Asked Questions](https://technet.microsoft.com/library/ee404780.aspx)|
-|**Community resources**|[The File Services and Storage TechNet Forum](https://social.technet.microsoft.com/forums/winserverfiles/threads/)|
-|**Protocols**|[File Services Protocols in Windows Server](https://msdn.microsoft.com/en-us/library/cc239318.aspx) (Deprecated)|
-|**Related technologies**| [Failover Clustering](../../failover-clustering/failover-clustering-overview.md)|
-|**Support**|[Windows IT Pro Support](https://www.microsoft.com/itpro/windows/support)|
+| Content type        | References |
+| ------------------  | ----------------|
+| **Product evaluation** | [What's New in DFS Namespaces and DFS Replication in Windows Server](https://technet.microsoft.com/library/dn281957(v=ws.11).aspx) |
+| **Deployment**    | [DFS Namespace Scalability Considerations](http://blogs.technet.com/b/filecab/archive/2012/08/26/dfs-namespace-scalability-considerations.aspx) |
+| **Operations**    | [DFS Namespaces: Frequently Asked Questions](https://technet.microsoft.com/library/ee404780.aspx) |
+| **Community resources** | [The File Services and Storage TechNet Forum](https://social.technet.microsoft.com/forums/winserverfiles/threads/) |
+| **Protocols**        | [File Services Protocols in Windows Server](https://msdn.microsoft.com/en-us/library/cc239318.aspx) (Deprecated) |
+| **Related technologies** | [Failover Clustering](../../failover-clustering/failover-clustering-overview.md)|
+| **Support** | [Windows IT Pro Support](https://www.microsoft.com/itpro/windows/support)|
