@@ -24,17 +24,18 @@ For more information on the upgrade process and requirements, see [upgrading you
 
 Use the following steps to migrate your Remote Desktop Services deployment:
 
-- [Migrate Remote Desktop Connection Broker servers](#migrate-remote-desktop-connection-broker-servers)
+- [Migrate RD Connection Broker servers](#migrate-rd-connection-broker-servers)
 - [Migrate session collections](#migrate-session-collections)
 - [Migrate virtual desktop collections](#migrate-virtual-desktop-collections)
-- [Migrate Remote Desktop Web Access servers](#migrate-remote-desktop-web-access-servers)
-- [Migrate Remote Desktop Gateway servers](#migrate-remote-desktop-gateway-servers)
-- [Migrate Remote Desktop Licensing servers](#migrate-remote-desktop-licensing-servers)
+- [Migrate RD Web Access servers](#migrate-rd-web-access-servers)
+- [Migrate RD Gateway servers](#migrate-rd-gateway-servers)
+- [Migrate RD Licensing servers](#migrate-rd-licensing-servers)
 - [Migrate certificates](#migrate-certificates)
 
-## Migrate Remote Desktop Connection Broker servers
+## Migrate RD Connection Broker servers
 
 This is the first and most important step for migrating: migrating your RD Connection Brokers to destination servers running Windows Server 2016.
+
 > [!IMPORTANT] 
 > The Remote Desktop Connection Broker (RD Connection Broker) source servers must be configured for high availability to support migration. For more information, see [Deploy a Remote Desktop Connection Broker cluster](Deploy-a-Remote-Desktop-Connection-Broker-cluster.md).
 
@@ -49,6 +50,7 @@ This is the first and most important step for migrating: migrating your RD Conne
 ## Migrate session collections
 
 Follow these steps to migrate a session collection in Windows Server 2012 R2 to a session collection in Windows Server 2016.
+
 > [!IMPORTANT] 
 > Migrate session collections only after successfully completing the previous step, [Migrate RD Connection Broker servers](#migrate-rd-connection-broker-servers).
 
@@ -77,7 +79,7 @@ Follow these steps to migrate a virtual desktop collection from a source server 
 >
 > A virtual desktop collection of RD Virtualization Host servers with a mix of servers running Windows Server 2012 R2 and Windows Server 2016 is not supported.
 
-## Migrate Remote Desktop Web Access servers
+## Migrate RD Web Access servers
 
 Follow these steps to migrate RD Web Access servers:
 - Join the destination servers running Windows Server 2016 to the Remote Desktop Services deployment and install the RD Web role
@@ -85,7 +87,7 @@ Follow these steps to migrate RD Web Access servers:
 - [Migrate certificates](#migrate-certificates) to the destination servers running Windows Server 2016.
 - Remove the source servers from the Remote Desktop Services deployment  
 
-## Migrate Remote Desktop Gateway servers
+## Migrate RD Gateway servers
 
 Follow these steps to migrate RD Gateway servers:
 
@@ -94,7 +96,7 @@ Follow these steps to migrate RD Gateway servers:
 - [Migrate certificates](#migrate-certificates) to the destination servers running Windows Server 2016.
 - Remove the source servers from the Remote Desktop Services deployment.  
 
-## Migrate Remote Desktop Licensing servers
+## Migrate RD Licensing servers
 
 Follow these steps to migrate an RD Licensing server from a source server running Windows Server 2012 or Windows Server 2012 R2 to a destination server running Windows Server 2016.
 
