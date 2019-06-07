@@ -7,7 +7,7 @@ author: nwashburn-ms
 ms.author: niwashbu
 ms.localizationpriority: medium
 ms.prod: windows-server-threshold
-ms.date: 04/12/2019
+ms.date: 06/07/2019
 ---
 # What type of installation is right for you?
 
@@ -19,12 +19,12 @@ This topic describes the different installation options for Windows Admin Center
 
 You can **install** Windows Admin Center on the following Windows operating systems:
 
-| **Version** | **Installation mode** |
-|-------------|-----------------------|
-|Windows 10, version 1709 or newer | Desktop mode |
-|Windows Server Semi-Annual Channel | Gateway mode |
-|Windows Server 2016 | Gateway mode |
-|Windows Server 2019 | Gateway mode |
+| **Version**  | **Installation mode** |
+| -------------| -----------------------|
+| Windows 10, version 1709 or newer | Desktop mode |
+| Windows Server Semi-Annual Channel | Gateway mode |
+| Windows Server 2016 | Gateway mode |
+| Windows Server 2019 | Gateway mode |
 
 **Desktop mode:** Launch from the Start Menu and connect to the Windows Admin Center gateway from the same computer on which it's installed (i.e. `https://localhost:6516`)
 
@@ -41,8 +41,8 @@ You can **install** Windows Admin Center on the following Windows operating syst
 
 You can **manage** the following Windows operating systems using Windows Admin Center:
 
-| Version | Manage *node* via *Server Manager* | Manage *cluster* via *Failover Cluster Manager* | Manage *HCI* via *HCI Cluster Manager*|
-|-------------------------|---------------|-----|------------------------|
+| Version | Manage *node* via *Server Manager* | Manage *cluster* via *Failover Cluster Manager* | Manage *HCI* via *HCI Cluster Manager* |
+| ------------------------- |--------------- | ----- | ------------------------ |
 | Windows 10, version 1709 or newer | Yes (via Computer Management) | N/A | N/A |
 | Windows Server Semi-Annual Channel | Yes | Yes | N/A |
 | Windows Server 2019 | Yes | Yes | Yes |
@@ -64,7 +64,7 @@ You can **manage** the following Windows operating systems using Windows Admin C
 ## Deployment options
 
 | ![img](../media/deployment-options/W10.png) | ![img](../media/deployment-options/gateway.png) | ![img](../media/deployment-options/node.png) | ![img](../media/deployment-options/HA.png) |
-|---------------------------------------------|-------------------------------------------------|----------------------------------------------|--------------------------------------------|
+| --------------------------------------------- | ------------------------------------------------- |----------------------------------------------|-------------------------------------------- |
 |                                             |                                                 |                                              |                                            |
 
 | Local Client | Gateway Server | Managed Server | Failover Cluster |
