@@ -16,7 +16,7 @@ ms.topic: get-started-article
 
 Computers that are running volume licensed editions of Windows Server, Windows 10, Windows 8.1, Windows Server 2012 R2, Windows 8, Windows Server 2012, Windows 7, Windows Server 2008 R2, Windows Vista, and Windows Server 2008 are, by default, KMS clients with no additional configuration needed.
 
->[!NOTE]
+> [!NOTE]
 > In the tables that follow, "LTSC" stands for "Long-Term Servicing Channel," while "LTSB" refers to the "Long-Term Servicing Branch." 
 
 **To use the keys listed here (which are GVLKs), you must first have a KMS host

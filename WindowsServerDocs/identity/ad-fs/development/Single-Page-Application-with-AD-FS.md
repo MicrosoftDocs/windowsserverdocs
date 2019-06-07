@@ -17,7 +17,8 @@ This walkthrough provides instruction for authenticating against AD FS using ADA
 
 In this scenario, when the user signs in, the JavaScript front end uses [Active Directory Authentication Library for JavaScript (ADAL.JS)](https://github.com/AzureAD/azure-activedirectory-library-for-js) and the implicit authorization grant to obtain an ID token (id_token) from Azure AD. The token is cached and the client attaches it to the request as the bearer token when making calls to its Web API back end, which is secured using the OWIN middleware.
 
->WARNING: The example that you can build here is for educational purposes only. These instructions are for the simplest, most minimal implementation possible to expose the required elements of the model. The example may not include all aspects of error handling and other relate functionality.
+>[!IMPORTANT]
+>The example that you can build here is for educational purposes only. These instructions are for the simplest, most minimal implementation possible to expose the required elements of the model. The example may not include all aspects of error handling and other relate functionality.
 
 >[!NOTE]
 >This walkthrough is applicable **only** to AD FS Server 2016 and later 
@@ -105,11 +106,11 @@ Open the **app.js** file and change the **adalProvider.init** definition to:
         $httpProvider
         );
 
-|Configuration|Description
-|--------|--------
-|instance|Your STS URL, e.g. https://fs.contoso.com/
-|tenant|Keep it as 'adfs'
-|clientID|This is the client ID you specified while configuring the public client for your single page application
+|Configuration|Description|
+|--------|--------|
+|instance|Your STS URL, e.g. https://fs.contoso.com/|
+|tenant|Keep it as 'adfs'|
+|clientID|This is the client ID you specified while configuring the public client for your single page application|
 
 ## Configure WebAPI to use AD FS
 Open the **Startup.Auth.cs** file in the sample and add the following at the beginning:
@@ -139,11 +140,11 @@ and add:
     }
     );
 
-|Parameter|Description
-|--------|--------
-|ValidAudience|This configures the value of 'audience' that will be checked against in the token
-|ValidIssuer|This configures the value of 'issuer that will be checked against in the token
-|MetadataEndpoint|This points to the metadata information of your STS
+|Parameter|Description|
+|--------|--------|
+|ValidAudience|This configures the value of 'audience' that will be checked against in the token|
+|ValidIssuer|This configures the value of 'issuer that will be checked against in the token|
+|MetadataEndpoint|This points to the metadata information of your STS|
 
 ## Add application configuration for AD FS
 Change the appsettings as below:

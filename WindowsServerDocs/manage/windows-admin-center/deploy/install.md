@@ -1,17 +1,19 @@
 ---
 title: Install Windows Admin Center
-description: How to install Windows Admin Center on a Windows PC or server.
+description: How to install Windows Admin Center on a Windows PC or on a server so that multiple users can access Windows Admin Center using a web browser.
 ms.technology: manage
 ms.topic: article
 author: jwwool
 ms.author: jeffrew
-ms.date: 04/12/2019
+ms.date: 06/07/2019
 ms.localizationpriority: medium
 ms.prod: windows-server-threshold
 ---
 # Install Windows Admin Center
 
->Applies To: Windows Admin Center, Windows Admin Center Preview
+> Applies to: Windows Admin Center, Windows Admin Center Preview
+
+This topic describes how to install Windows Admin Center on a Windows PC or on a server so that multiple users can access Windows Admin Center using a web browser.
 
 > [!Tip]
 > New to Windows Admin Center?
