@@ -23,6 +23,7 @@ Migration for a Remote Desktop Services deployment is supported from source serv
 For more information on the upgrade process and requirements, see [upgrading your Remote Desktop Services deployments to Windows Server 2016](upgrade-to-rds-2016.md).
 
 Use the following steps to migrate your Remote Desktop Services deployment:
+
 - [Migrate RD Connection Broker servers](#migrate-rd-connection-broker-servers)
 - [Migrate session collections](#migrate-session-collections)
 - [Migrate virtual desktop collections](#migrate-virtual-desktop-collections)
@@ -77,6 +78,7 @@ Follow these steps to migrate a virtual desktop collection from a source server 
 > A virtual desktop collection of RD Virtualization Host servers with a mix of servers running Windows Server 2012 R2 and Windows Server 2016 is not supported.
 
 ## Migrate RD Web Access servers
+
 Follow these steps to migrate RD Web Access servers:
 - Join the destination servers running Windows Server 2016 to the Remote Desktop Services deployment and install the RD Web role
 - Use [IIS Web Deploy tool](https://www.iis.net/) to migrate the RD Web website settings from the current RD Web Access servers to the destination servers running Windows Server 2016.
@@ -84,11 +86,13 @@ Follow these steps to migrate RD Web Access servers:
 - Remove the source servers from the Remote Desktop Services deployment  
 
 ## Migrate RD Gateway servers
+
 Follow these steps to migrate RD Gateway servers:
+
 - Join the destination servers running Windows Server 2016 to the Remote Desktop Services deployment and install the RD Gateway role
 - Use [IIS Web Deploy tool](https://www.iis.net/) to migrate the RD Gateway endpoint settings from the current RD Gateway servers to the destination servers running Windows Server 2016.
 - [Migrate certificates](#migrate-certificates) to the destination servers running Windows Server 2016.
-- Remove the source servers from the Remote Desktop Services deplyoment  
+- Remove the source servers from the Remote Desktop Services deployment.  
 
 ## Migrate RD Licensing servers
 
