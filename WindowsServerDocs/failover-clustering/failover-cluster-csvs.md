@@ -6,7 +6,7 @@ ms.topic: article
 author: JasonGerend 
 ms.author: jgerend 
 ms.technology: storage-failover-clustering 
-ms.date: 06/06/2019
+ms.date: 06/07/2019
 ms.localizationpriority: medium
 ---
 # Use Cluster Shared Volumes in a failover cluster
@@ -21,7 +21,7 @@ CSV provide a general-purpose, clustered file system, which is layered above NTF
 - Scale-out file shares to store application data for the Scale-Out File Server clustered role. Examples of the application data for this role include Hyper-V virtual machine files and Microsoft SQL Server data. (Be aware that ReFS is not supported for a Scale-Out File Server.) For more information about Scale-Out File Server, see [Scale-Out File Server for Application Data](sofs-overview.md).
 
 > [!NOTE]
-> SV does not support the Microsoft SQL Server clustered workload in SQL Server 2012 and earlier versions of SQL Server.
+> CSVs don't support the Microsoft SQL Server clustered workload in SQL Server 2012 and earlier versions of SQL Server.
 
 In Windows Server 2012, CSV functionality was significantly enhanced. For example, dependencies on Active Directory Domain Services were removed. Support was added for the functional improvements in **chkdsk**, for interoperability with antivirus and backup applications, and for integration with general storage features such as BitLocker-encrypted volumes and Storage Spaces. For an overview of CSV functionality that was introduced in Windows Server 2012, see [What's New in Failover Clustering in Windows Server 2012 \[redirected\]](<https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn265972(v%3dws.11)>).
 
@@ -231,9 +231,9 @@ You can monitor the CSV cache in Performance Monitor by adding the counters unde
 > * After you enable or disable CSV cache on an individual disk, for the setting to take effect, you must take the Physical Disk resource offline and bring it back online. (By default, in Windows Server 2012 R2 and later, the CSV cache is enabled.) 
 > * For more information about CSV cache that includes information about performance counters, see the blog post [How to Enable CSV Cache](https://blogs.msdn.microsoft.com/clustering/2013/07/19/how-to-enable-csv-cache/).
 
-## Back up CSV
+## Backing up CSVs
 
-There are multiple methods to back up information that is stored on CSV in a failover cluster. You can use a Microsoft backup application or a non-Microsoft application. In general, CSV do not impose special backup requirements beyond those for clustered storage formatted with NTFS or ReFS. CSV backups also do not disrupt other CSV storage operations.
+There are multiple methods to back up information that is stored on CSVs in a failover cluster. You can use a Microsoft backup application or a non-Microsoft application. In general, CSV do not impose special backup requirements beyond those for clustered storage formatted with NTFS or ReFS. CSV backups also do not disrupt other CSV storage operations.
 
 You should consider the following factors when you select a backup application and backup schedule for CSV:
 

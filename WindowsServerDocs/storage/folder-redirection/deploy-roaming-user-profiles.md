@@ -135,9 +135,8 @@ Here's how to create a file share on Windows Server:
 
 ### Required permissions for the file share hosting roaming user profiles
 
-|       |       |       |
-|   -   |   -   |   -   |
 | User Account | Access | Applies to |
+|   -   |   -   |   -   |
 |   System    |  Full control     |  This folder, subfolders and files     |
 |  Administrators     |  Full Control     |  This folder only     |
 |  Creator/Owner     |  Full Control     |  Subfolders and files only     |
