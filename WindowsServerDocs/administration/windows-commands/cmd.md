@@ -71,10 +71,12 @@ The following table lists valid hexadecimal digits that you can use as the value
 
 -   Using multiple commands
 
-    To use multiple commands for \<String>, separate them by the command separator **&&** and enclose them in quotation marks. For example:  
+    To use multiple commands for \<String>, separate them by the command separator **&&** and enclose them in quotation marks. For example:
+
     ```
     "<Command>&&<Command>&&<Command>"
-    ```  
+    ``` 
+ 
 -   Processing quotation marks
 
     If you specify **/c** or **/k**, **cmd** processes the remainder of *String,* and quotation marks are preserved only if all of the following conditions are met:  

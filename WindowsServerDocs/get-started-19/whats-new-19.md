@@ -80,8 +80,6 @@ ATP's deep platform sensors and response actions expose memory and kernel level 
     protection](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-exploit-guard/exploit-protection-exploit-guard) is a set of mitigations for vulnerability exploits (replacing EMET)that can
     be easily configured to protect your system and applications.
 
-
-
 [Windows Defender Application
 Control](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control) (also
 known as Code Integrity (CI) policy) was released in Windows Server 2016.

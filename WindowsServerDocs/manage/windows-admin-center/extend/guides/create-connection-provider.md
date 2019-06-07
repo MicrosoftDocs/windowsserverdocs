@@ -5,11 +5,10 @@ ms.technology: manage
 ms.topic: article
 author: nwashburn-ms
 ms.author: niwashbu
-ms.date: 09/18/2018
+ms.date: 06/06/2019
 ms.localizationpriority: medium
 ms.prod: windows-server-threshold
 ---
-
 # Create a connection provider for a solution extension
 
 >Applies To: Windows Admin Center, Windows Admin Center Preview
@@ -78,19 +77,17 @@ An entry point of type "connnectionProvider" indicates to the Windows Admin Cent
 | description | Enter a short description of the entry point. |
 | connectionType | Represents the connection type that the provider will load. The value entered here will also be used in the Solution entry point to specify that the Solution can load those connections. The value entered here will also be used in Tool entry point(s) to indicate that the Tool is compatible with this type. This value entered here will also be used in the connection object that is submitted to the RPC call on the "Add window", in the application layer implementation step. |
 | connectionTypeName | Used in the connections table to represent a connection that uses your Connection Provider. This is expected to be the plural name of the type. |
-| connectionTypeUrlName | Used in creating the URL to represent the loaded Solution, after Windows Admin Center has connected to an instance. This entry is used after connections, and before the target. In this example, "connectionexample" is where this value appears in the URL: http://localhost:6516/solutionexample/connections/connectionexample/con-fake1.corp.contoso.com |
-| connectionTypeDefaultSolution | Represents the default component that should be loaded by the Connection Provider. This value is a combination of: [a] The name of the extension package defined at the top of the manifest; [b] Exclamation point (!); [c] The Solution entry point name.	For a project with name "msft.sme.mySample-extension", and a Solution entry point with name "example", this value would be "msft.sme.solutionExample-extension!example". |
-| connectionTypeDefaultTool | Represents the default Tool that should be loaded on a successful connection. This property value is made up of two parts, similar to the connectionTypeDefaultSolution. This value is a combination of: [a] The name of the extension package defined at the top of the manifest; [b] Exclamation point (!); [c] The Tool entry point name for the Tool that should be loaded initially. For a project with name "msft.sme.solutionExample-extension", and a Solution entry point with name "example", this value would be "msft.sme.solutionExample-extension!example". |
+| connectionTypeUrlName | Used in creating the URL to represent the loaded Solution, after Windows Admin Center has connected to an instance. This entry is used after connections, and before the target. In this example, "connectionexample" is where this value appears in the URL: `http://localhost:6516/solutionexample/connections/connectionexample/con-fake1.corp.contoso.com` |
+| connectionTypeDefaultSolution | Represents the default component that should be loaded by the Connection Provider. This value is a combination of: <br>[a] The name of the extension package defined at the top of the manifest; <br>[b] Exclamation point (!); <br>[c] The Solution entry point name.	<br>For a project with name "msft.sme.mySample-extension", and a Solution entry point with name "example", this value would be "msft.sme.solutionExample-extension!example". |
+| connectionTypeDefaultTool | Represents the default Tool that should be loaded on a successful connection. This property value is made up of two parts, similar to the connectionTypeDefaultSolution. This value is a combination of: <br>[a] The name of the extension package defined at the top of the manifest; <br>[b] Exclamation point (!); <br>[c] The Tool entry point name for the Tool that should be loaded initially. <br>For a project with name "msft.sme.solutionExample-extension", and a Solution entry point with name "example", this value would be "msft.sme.solutionExample-extension!example". |
 | connectionStatusProvider | Please see section "Define Connection Status Provider" |
 
 ## Define Connection Status Provider
 
 Connection Status Provider is the mechanism by which a target is validated to be online and available, also ensuring that the connecting user has permission to access the target. There are currently two types of Connection Status Providers:  PowerShell, and RelativeGatewayUrl.
 
-*	PowerShell Connection Status Provider
-    * 	Determines if a target is online and accessible with a PowerShell script. The result must be returned in an object with a single property "status", defined below.
-*	RelativeGatewayUrl Connection Status Provider
-    *	Determines if a target is online and accessible with a rest call. The result must be returned in an object with a single property "status", defined below.
+*	<strong>PowerShell Connection Status Provider</strong> - Determines if a target is online and accessible with a PowerShell script. The result must be returned in an object with a single property "status", defined below.
+*	<strong>RelativeGatewayUrl Connection Status Provider</strong> -	Determines if a target is online and accessible with a rest call. The result must be returned in an object with a single property "status", defined below.
 
 ### Define status
 
@@ -108,25 +105,22 @@ Connection Status Providers are required to return an object with a single prope
 
 Status properties:
 
-* Label
-    * A label describing the status return type. Note, values for label can be mapped in runtime. See entry below for mapping values in runtime.
+* <strong>Label</strong> - A label describing the status return type. Note, values for label can be mapped in runtime. See entry below for mapping values in runtime.
 
-* Type
-    * The status return type. Type has the following enumeration values. For any value 2 or above, the platform will not navigate to the connected object, and an error will be displayed in the UI.
+* <strong>Type</strong> - The status return type. Type has the following enumeration values. For any value 2 or above, the platform will not navigate to the connected object, and an error will be displayed in the UI.
 
-Types:
+   Types:
 
-| Value | Description |
-| ----- | ----------- |
-| 0 | Online |
-| 1 | Warning |
-| 2 | Unauthorized |
-| 3 | Error |
-| 4 | Fatal |
-| 5 | Unknown |
+  | Value | Description |
+  | ----- | ----------- |
+  | 0 | Online |
+  | 1 | Warning |
+  | 2 | Unauthorized |
+  | 3 | Error |
+  | 4 | Fatal |
+  | 5 | Unknown |
 
-* Details
-    * Additional details describing the status return type.
+* <strong>Details</strong> - Additional details describing the status return type.
 
 ### PowerShell Connection Status Provider script
 
@@ -134,7 +128,7 @@ The Connection Status Provider PowerShell script determines if a target is onlin
 
 Example PowerShell script:
 
-``` ts
+```PowerShell
 ## Get-My-Status ##
 
 function Get-Status()

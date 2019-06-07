@@ -14,7 +14,6 @@ You should select the proper hardware to satisfy the expected file server load, 
 
 ## General tuning parameters for clients
 
-
 The following REG\_DWORD registry settings can affect the performance of client computers that interact with SMB file servers:
 
 -   **ConnectionCountPerNetworkInterface**
@@ -88,7 +87,7 @@ The following REG\_DWORD registry settings can affect the performance of client 
 
     The default is 10 seconds. This is the directory cache timeout.
 
-    > [!Note]
+    > [!NOTE]
     > This parameter controls caching of directory metadata in the absence of directory leases.
      
 
