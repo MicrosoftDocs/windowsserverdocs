@@ -5,18 +5,17 @@ ms.technology: manage
 ms.topic: article
 author: haley-rowland
 ms.author: harowl
-ms.date: 03/19/2019
+ms.date: 06/07/2019
 ms.localizationpriority: medium
 ms.prod: windows-server-threshold
 ---
-
 # Configure User Access Control and Permissions
 
->Applies To: Windows Admin Center, Windows Admin Center Preview
+> Applies to: Windows Admin Center, Windows Admin Center Preview
 
 If you haven't already, familiarize yourself with the [user access control options in Windows Admin Center](../plan/user-access-options.md)
 
->[!NOTE]
+> [!NOTE]
 > Group based access in Windows Admin Center is not supported in workgroup environments or across non-trusted domains.
 
 ## Gateway access role definitions
@@ -36,7 +35,7 @@ By default, Active Directory or local machine groups are used to control gateway
 
 On the **Users** tab you can control who can access Windows Admin Center as a gateway user. By default, and if you don't specify a security group, any user that accesses the gateway URL has access. Once you add one or more security groups to the users list, access is restricted to the members of those groups.
 
-If you don't use an Active Directory domain in your environment, access is controlled by the ```Users``` and ```Administrators``` local groups on the Windows Admin Center gateway machine.
+If you don't use an Active Directory domain in your environment, access is controlled by the `Users` and `Administrators` local groups on the Windows Admin Center gateway machine.
 
 ### Smartcard authentication
 
@@ -139,6 +138,7 @@ Setting up RBAC consists of 2 steps: enabling support on the target computer(s) 
 
 The single machine deployment model is ideal for simple environments with only a few computers to manage.
 Configuring a machine with support for role-based access control will result in the following changes:
+
 -   PowerShell modules with functions required by Windows Admin Center will be installed on your system drive, under `C:\Program Files\WindowsPowerShell\Modules`. All modules will start with **Microsoft.Sme**
 -   Desired State Configuration will run a one-time configuration to configure a Just Enough Administration endpoint on the machine, named **Microsoft.Sme.PowerShell**. This endpoint defines the 3 roles used by Windows Admin Center and will run as a temporary local administrator when a user connects to it.
 -   3 new local groups will be created to control which users are assigned access to which roles:
@@ -187,6 +187,7 @@ Invoke-RestMethod -Uri "https://localhost:6516/api/nodes/all/features/jea/endpoi
 ```
 
 When you expand the zip archive, you'll see the following folder structure:
+
 - InstallJeaFeatures.ps1
 - JustEnoughAdministration (directory)
 - Modules (directory)
@@ -194,6 +195,7 @@ When you expand the zip archive, you'll see the following folder structure:
     - WindowsAdminCenter.Jea (directory)
 
 To configure support for role-based access control on a node, you need to perform the following actions:
+
 1.  Copy the JustEnoughAdministration, Microsoft.SME.\*, and WindowsAdminCenter.Jea modules to the PowerShell module directory on the target machine. Typically, this is located at `C:\Program Files\WindowsPowerShell\Modules`.
 2.  Update **InstallJeaFeature.ps1** file to match your desired configuration for the RBAC endpoint.
 3.  Run InstallJeaFeature.ps1 to compile the DSC resource.
