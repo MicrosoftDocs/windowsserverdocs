@@ -24,17 +24,17 @@ For more information on the upgrade process and requirements, see [upgrading you
 
 Use the following steps to migrate your Remote Desktop Services deployment:
 
-- [Migrate RD Connection Broker servers](#migrate-rd-connection-broker-servers)
+- [Migrate RD Connection Broker servers](#migrate-rdconnection-broker-servers)
 
 - [Migrate session collections](#migrate-session-collections)
 
 - [Migrate virtual desktop collections](#migrate-virtual-desktop-collections)
 
-- [Migrate RD Web Access servers](#migrate-rd-web-access-servers)
+- [Migrate RD Web Access servers](#migrate-rdweb-access-servers)
 
-- [Migrate RD Gateway servers](#migrate-rd-gateway-servers)
+- [Migrate RD Gateway servers](#migrate-rdgateway-servers)
 
-- [Migrate RD Licensing servers](#migrate-rd-gateway-servers)
+- [Migrate RD Licensing servers](#migrate-rdgateway-servers)
 
 - [Migrate certificates](#migrate-certificates)
 
@@ -60,7 +60,7 @@ This is the first and most important step for migrating: migrating your RD Conne
 Follow these steps to migrate a session collection in Windows Server 2012 R2 to a session collection in Windows Server 2016.
 
 > [!IMPORTANT]
-> Migrate session collections only after successfully completing the previous step, [Migrate RD Connection Broker servers](#migrate-rd-connection-broker-servers).
+> Migrate session collections only after successfully completing the previous step, [Migrate RD Connection Broker servers](#migrate-rdconnection-broker-servers).
 
 1. [Upgrade the session collection](Upgrade-to-RDSH-2016.md) from Windows Server 2012 R2 to Windows Server 2016.
 
@@ -78,7 +78,7 @@ Follow these steps to migrate a session collection in Windows Server 2012 R2 to 
 Follow these steps to migrate a virtual desktop collection from a source server running Windows Server 2012 R2 to a destination server running Windows Server 2016.
 
 > [!IMPORTANT]
-> Migrate virtual desktop collections only after successfully completing the previous step, [Migrate RD Connection Broker servers](#migrate-rd-connection-broker-servers).
+> Migrate virtual desktop collections only after successfully completing the previous step, [Migrate RD Connection Broker servers](#migrate-rdconnection-broker-servers).
 
 1. [Upgrade the virtual desktop collection](Upgrade-to-RDVH-2016.md) from the server running Windows Server 2012 R2 to Windows Server 2016.
 
