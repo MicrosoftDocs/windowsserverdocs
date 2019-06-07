@@ -21,13 +21,13 @@ Use one of the following tools to export the NPS configuration:
 - In Windows Server 2016, Windows Server 2012 R2, and Windows Server 2012, you can use Netsh, or you can use Windows PowerShell.
 - In Windows Server 2008 R2 and Windows Server 2008, use Netsh.
 
->[!IMPORTANT]
->Do not use this procedure if the source NPS database has a higher version number than the version number of the destination NPS database. You can view the version number of the NPS database from the display of the **netsh nps show config** command.
+> [!IMPORTANT]
+> Do not use this procedure if the source NPS database has a higher version number than the version number of the destination NPS database. You can view the version number of the NPS database from the display of the **netsh nps show config** command.
 
 Because NPS configurations are not encrypted in the exported XML file, sending it over a network might pose a security risk, so take precautions when moving the XML file from the source server to the destination servers. For example, add the file to an encrypted, password protected archive file before moving the file. In addition, store the file in a secure location to prevent malicious users from accessing it.
 
->[!NOTE]
->If SQL Server logging is configured on the source NPS, SQL Server logging settings are not exported to the XML file. After you import the file on another NPS, you must manually configure SQL Server logging.
+> [!NOTE]
+> If SQL Server logging is configured on the source NPS, SQL Server logging settings are not exported to the XML file. After you import the file on another NPS, you must manually configure SQL Server logging.
 
 ## Export and Import the NPS configuration by using Windows PowerShell
 
@@ -75,8 +75,8 @@ You can use Network Shell \(Netsh\) to export the NPS configuration by using the
 
 When the **netsh nps import** command is run, NPS is automatically refreshed with the updated configuration settings. You do not need to stop NPS on the destination computer to run the **netsh nps import** command, however if the NPS console or NPS MMC snap-in is open during the configuration import, changes to the server configuration are not visible until you refresh the view. 
 
->[!NOTE]
->When you use the **netsh nps export** command, you are required to provide the command parameter **exportPSK** with the value **YES**. This parameter and value explicitly state that you understand that you are exporting the NPS configuration, and that the exported XML file contains unencrypted shared secrets for RADIUS clients and members of remote RADIUS server groups.
+> [!NOTE]
+> When you use the **netsh nps export** command, you are required to provide the command parameter **exportPSK** with the value **YES**. This parameter and value explicitly state that you understand that you are exporting the NPS configuration, and that the exported XML file contains unencrypted shared secrets for RADIUS clients and members of remote RADIUS server groups.
 
 **Administrative credentials**
 

@@ -7,15 +7,16 @@ author: jwwool
 ms.author: jeffrew
 ms.localizationpriority: medium
 ms.prod: windows-server-threshold
-ms.date: 04/12/2019
+ms.date: 06/07/2019
 ---
 # Windows Admin Center Known Issues
 
->Applies To: Windows Admin Center, Windows Admin Center Preview
+> Applies to: Windows Admin Center, Windows Admin Center Preview
 
 If you encounter an issue not described on this page, please [let us know](http://aka.ms/WACfeedback).
 
 ## Lenovo XClarity Integrator
+
 The previously disclosed incompatibility issue of the Lenovo XClarity Integrator extension and Windows Admin Center version 1904 is now resolved with Windows Admin Center version 1904.1. We highly recommend that you update to the latest supported version of Windows Admin Center.
 
 - Lenovo XClarity Integrator extension version 1.1 is fully compatible with Windows Admin Center 1904.1. We highly recommend that you update to the latest version of Windows Admin Center and the Lenovo extension.
@@ -44,8 +45,8 @@ The previously disclosed incompatibility issue of the Lenovo XClarity Integrator
 
 - If you have Windows Admin Center installed as a gateway and your connection list appears to be corrupted, perform the following steps:
 
->[!WARNING]
->This will delete the connection list and settings for all Windows Admin Center users on the gateway.
+   > [!WARNING]
+   >This will delete the connection list and settings for all Windows Admin Center users on the gateway.
 
   1. Uninstall Windows Admin Center
   2. Delete the **Server Management Experience** folder under **C:\Windows\ServiceProfiles\NetworkService\AppData\Roaming\Microsoft**
@@ -76,7 +77,7 @@ The previously disclosed incompatibility issue of the Lenovo XClarity Integrator
 
 - When using Azure Active Directory as your identity provider and Windows Admin Center is configured with a self-signed or otherwise untrusted certificate, you cannot complete the AAD authentication in Microsoft Edge.  [15968377]
 
-- If you have Windows Admin Center deployed as a service and you are using Microsoft Edge as your browser, connecting your gateway to Azure may fail after spawning a new browser window. Try to work around this issue by adding https://login.microsoftonline.com, https://login.live.com, and the URL of your gateway as trusted sites and allowed sites for pop-up blocker settings on your client side browser. For more guidance on fixing this in the [troubleshooting guide](troubleshooting.md#azlogin). [17990376]
+- If you have Windows Admin Center deployed as a service and you are using Microsoft Edge as your browser, connecting your gateway to Azure may fail after spawning a new browser window. Try to work around this issue by adding https://login.microsoftonline.com, https://login.live.com, and the URL of your gateway as trusted sites and allowed sites for pop-up blocker settings on your client side browser. For more guidance on fixing this in the [troubleshooting guide](troubleshooting.md#azure-features-dont-work-properly-in-edge). [17990376]
 
 - If you have Windows Admin Center installed in desktop mode, the browser tab in Microsoft Edge won't display the favicon. [17665801]
 
@@ -94,8 +95,6 @@ Windows Admin Center is not tested with Mozilla Firefox, but most functionality 
 
 - Windows 10 Installation: Mozilla Firefox has it’s own certificate store, so you must import the ```Windows Admin Center Client``` certificate into Firefox to use Windows Admin Center on Windows 10.
 
-<a id="websockets"></a>
-
 ## WebSocket compatibility when using a proxy service
 
 Remote Desktop, PowerShell, and Events modules in Windows Admin Center utilize the WebSocket protocol, which is often not supported when using a proxy service. Websocket support in Azure AD Application Proxy compatibility is in [preview](https://blogs.technet.microsoft.com/applicationproxyblog/2018/03/28/limited-websocket-support-now-in-public-preview/) and looking for feedback on compatibility.
@@ -109,8 +108,6 @@ Type `$PSVersiontable` in PowerShell to verify that WMF is installed,
 and that the version is 5.1 or higher.
 
 If it is not installed, you can [download and install WMF 5.1](https://www.microsoft.com/en-us/download/details.aspx?id=54616).
-
-<a id="rbacknownissues"></a>
 
 ## Role Based Access Control (RBAC)
 
@@ -136,7 +133,7 @@ If it is not installed, you can [download and install WMF 5.1](https://www.micro
 
 ### Events
 
-- Events is effected by [websocket compatibility when using a proxy service.](#websockets)
+- Events is effected by [websocket compatibility when using a proxy service.](#websocket-compatibility-when-using-a-proxy-service)
 
 - You may get an error that references “packet size” when exporting large log files. [16630279]
 
@@ -148,7 +145,7 @@ If it is not installed, you can [download and install WMF 5.1](https://www.micro
 
 ### PowerShell
 
-- PowerShell is effected by [websocket compatibility when using a proxy service](#websockets)
+- PowerShell is effected by [websocket compatibility when using a proxy service](#websocket-compatibility-when-using-a-proxy-service)
 
 - Pasting with a single right-click as in the desktop PowerShell console does not work. Instead you will get the browser's context menu, where you can select paste. Ctrl-V works as well.
 
@@ -168,7 +165,7 @@ If it is not installed, you can [download and install WMF 5.1](https://www.micro
 
 - Some configurations can block Windows Admin Center's remote desktop client with group policy. If you encounter this, enable ```Allow users to connect remotely by using Remote Desktop Services``` under ```Computer Configuration/Policies/Administrative Templates/Windows Components/Remote Desktop Services/Remote Desktop Session Host/Connections```
 
-- Remote Desktop is effected by [websocket compatibility.](#websockets)
+- Remote Desktop is effected by [websocket compatibility.](#websocket-compatibility-when-using-a-proxy-service)
 
 - The Remote Desktop tool does not currently support any text, image, or file copy/paste between the local desktop and the remote session.
 

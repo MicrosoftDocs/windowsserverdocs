@@ -43,7 +43,7 @@ Virtual NUMA | 1 and 2 | Any supported guest
 ## Development and test  
 Feature  | Generation | Guest operating system  
 ------------- | ------------- | -----------  
-COM/Serial ports | 1 and 2 <br>**Note:** For generation 2, use Windows PowerShell to configure. For details, see [Add a COM port for kernel debugging](./plan/should-i-create-a-generation-1-or-2-virtual-machine-in-hyper-v.md#BKMK_Debug). | Any supported guest  
+COM/Serial ports | 1 and 2 <br>**Note:** For generation 2, use Windows PowerShell to configure. For details, see [Add a COM port for kernel debugging](./plan/should-i-create-a-generation-1-or-2-virtual-machine-in-hyper-v.md#add-a-com-port-for-kernel-debugging). | Any supported guest  
   
 ## Mobility  
   

@@ -26,5 +26,5 @@ The Semi-Annual Channel provides opportunity for customers who are innovating qu
 | Windows Server, version 1803 (Semi-Annual Channel) (Datacenter, Standard)| 1803 |17134.1.180410-1804 |04/30/2018| 11/12/2019|Review note|
 | Windows Server 2016 (Long-Term Servicing Channel)| 1607 | 14393.0 | 10/15/2016 |01/11/2022| 01/11/2027|
 
->[!NOTE]
+> [!NOTE]
 > Windows Server, version 1803 and later are governed by the [Modern Lifecycle Policy](https://support.microsoft.com/help/30881). See the [Windows Lifecycle FAQ](https://support.microsoft.com/help/18581/lifecycle-faq-windows-products) and [Comparison of servicing channels](../get-started-19/servicing-channels-19.md) for details regarding servicing requirements and other important information.

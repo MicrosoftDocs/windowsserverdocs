@@ -11,7 +11,7 @@ ms.author: jgerend
 ---
 # Change a drive letter
 
-> **Applies To:** Windows 10, Windows 8.1, Windows 7, Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> **Applies To:** Windows 10, Windows 8.1, Windows 7, Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 If you don't like the drive letter assigned to a drive, or if you've got a drive that doesn't yet have a drive letter, you can use Disk Management to change it.
 
