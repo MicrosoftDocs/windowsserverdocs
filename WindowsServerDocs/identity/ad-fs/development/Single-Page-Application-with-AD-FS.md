@@ -106,11 +106,11 @@ Open the **app.js** file and change the **adalProvider.init** definition to:
         $httpProvider
         );
 
-|Configuration|Description
-|--------|--------
-|instance|Your STS URL, e.g. https://fs.contoso.com/
-|tenant|Keep it as 'adfs'
-|clientID|This is the client ID you specified while configuring the public client for your single page application
+|Configuration|Description|
+|--------|--------|
+|instance|Your STS URL, e.g. https://fs.contoso.com/|
+|tenant|Keep it as 'adfs'|
+|clientID|This is the client ID you specified while configuring the public client for your single page application|
 
 ## Configure WebAPI to use AD FS
 Open the **Startup.Auth.cs** file in the sample and add the following at the beginning:
@@ -140,11 +140,11 @@ and add:
     }
     );
 
-|Parameter|Description
-|--------|--------
-|ValidAudience|This configures the value of 'audience' that will be checked against in the token
-|ValidIssuer|This configures the value of 'issuer that will be checked against in the token
-|MetadataEndpoint|This points to the metadata information of your STS
+|Parameter|Description|
+|--------|--------|
+|ValidAudience|This configures the value of 'audience' that will be checked against in the token|
+|ValidIssuer|This configures the value of 'issuer that will be checked against in the token|
+|MetadataEndpoint|This points to the metadata information of your STS|
 
 ## Add application configuration for AD FS
 Change the appsettings as below:
