@@ -14,7 +14,6 @@ ms.technology: identity-adfs
 
 # Configuring intranet forms-based authentication for devices that do not support WIA
 
->Applies To: Windows Server 2016, Windows Server 2012 R2
 
 By default, Windows Integrated Authentication (WIA) is enabled in Active Directory Federation Services (AD FS) in Windows Server 2012 R2 for authentication requests that occur within the organization’s internal network (intranet) for any application that uses a browser for its authentication. For example, these can be browser-based applications that use WS-Federation or SAML protocols and rich applications that use the OAuth protocol. WIA provides end users with seamless logon to the applications without having to manually entering their credentials. However, some devices and browsers are not capable of supporting WIA and as a result authentication requests from these devices fail. Also, the experience on certain browsers that negotiate to NTLM is not desirable. The recommended approach is to fallback to forms-based authentication for such devices and browsers.
 

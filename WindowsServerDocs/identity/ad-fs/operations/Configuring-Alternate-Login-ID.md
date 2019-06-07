@@ -13,7 +13,6 @@ ms.technology: identity-adfs
 ---
 # Configuring Alternate Login ID
 
->Applies To: Windows Server 2019, Windows Server 2016, Windows Server 2012 R2
 
 ## What is Alternate Login ID?
 In most scenarios, users use their UPN (User Principal Names) to login to their accounts. However, in some environments due to corporate policies or on-premises line-of-business application dependencies, the users may be using some other form of sign-in. 
@@ -27,9 +26,9 @@ Active Directory Federation Services (AD FS) enables federated applications usin
 
 ## Alternate id in Azure AD
 An organization may have to use alternate ID in the following scenarios:
-1.	The on-premises domain name is non-routable, ex. Contoso.local and as a result the default user principal name is non-routable (jdoe@contoso.local). Existing UPN cannot be changed due to local application dependencies or company policies. Azure AD and Office 365 require all domain suffixes associated with Azure AD directory to be fully internet routable. 
-2.	The on-premises UPN is not same as the user’s email address and to sign-in to Office 365, users use email address and UPN cannot be used due to organizational constraints.
-In the above-mentioned scenarios, alternate ID with AD FS enables users to sign-in to Azure AD without modifying your on-premises UPNs. 
+1. The on-premises domain name is non-routable, ex. Contoso.local and as a result the default user principal name is non-routable (jdoe@contoso.local). Existing UPN cannot be changed due to local application dependencies or company policies. Azure AD and Office 365 require all domain suffixes associated with Azure AD directory to be fully internet routable. 
+2. The on-premises UPN is not same as the user’s email address and to sign-in to Office 365, users use email address and UPN cannot be used due to organizational constraints.
+   In the above-mentioned scenarios, alternate ID with AD FS enables users to sign-in to Azure AD without modifying your on-premises UPNs. 
 
 ## End-User Experience with Alternate Login ID
 The end-user experience varies depending on the authentication method used with alternate login id.  Currently there three different ways in which using alternate login id can be achieved.  They are:
@@ -59,9 +58,9 @@ When Azure AD Connect is provided details about AD FS environment, it automatica
 In order to configure alternate login ID, you must perform the following tasks:
 Configure your AD FS claims provider trusts to enable alternate login ID
 
-1.	If you have Server 2012R2, ensure you have KB2919355 installed on all the AD FS servers. You can get it via Windows Update Services or download it directly. 
+1.  If you have Server 2012R2, ensure you have KB2919355 installed on all the AD FS servers. You can get it via Windows Update Services or download it directly. 
 
-2.	Update the AD FS configuration by running the following PowerShell cmdlet on any of the federation servers in your farm (if you have a WID farm, you must run this command on the primary AD FS server in your farm):
+2.  Update the AD FS configuration by running the following PowerShell cmdlet on any of the federation servers in your farm (if you have a WID farm, you must run this command on the primary AD FS server in your farm):
 
 ``` powershell
 Set-AdfsClaimsProviderTrust -TargetIdentifier "AD AUTHORITY" -AlternateLoginID <attribute> -LookupForests <forest domain>
@@ -79,7 +78,7 @@ In the following example, you are enabling alternate login ID functionality such
 Set-AdfsClaimsProviderTrust -TargetIdentifier "AD AUTHORITY" -AlternateLoginID mail -LookupForests contoso.com,fabrikam.com
 ```
 
-3.	To disable this feature, set the value for both parameters to be null.
+3. To disable this feature, set the value for both parameters to be null.
 
 ``` powershell
 Set-AdfsClaimsProviderTrust -TargetIdentifier "AD AUTHORITY" -AlternateLoginID $NULL -LookupForests $NULL
@@ -154,9 +153,10 @@ HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Internet Settings\Zo
 ## Applications and user experience after the additional configuration
 
 ### Non-Exchange and Skype for Business Clients
+
 |Client|Support statement|Remarks|
 | ----- | -----|-----|
-|Microsoft Teams|Supported|<li>Microsoft Teams supports AD FS (SAML-P, WS-Fed, WS-Trust, and OAuth) and Modern Authentication.</li><li> Core Microsoft Teams such as Channels, chats and files functionalities does work with Alternate Login ID.</li><li>1st and 3rd party apps must be separately investigated by the customer. This is because each application has their own supportability authentication protocols.</li>| 	
+|Microsoft Teams|Supported|<li>Microsoft Teams supports AD FS (SAML-P, WS-Fed, WS-Trust, and OAuth) and Modern Authentication.</li><li> Core Microsoft Teams such as Channels, chats and files functionalities does work with Alternate Login ID.</li><li>1st and 3rd party apps must be separately investigated by the customer. This is because each application has their own supportability authentication protocols.</li>|     
 |OneDrive for Business|Supported - client-side registry key recommended |With Alternate ID configured you see the on-premises UPN is pre-populated In the verification field. This needs to be changed to the alternate Identity that is being used. We recommend using the client side registry key noted in this article: Office 2013 and Lync 2013 periodically prompt for credentials to SharePoint Online, OneDrive, and Lync Online.|
 |OneDrive for Business Mobile Client|Supported|| 
 |Office 365 Pro Plus activation page|Supported - client-side registry key recommended|With Alternate ID configured you see the on-premises UPN is pre-populated in the verification field. This needs to be changed to the alternate Identity that is being used. We recommend using the client-side registry key noted in this article: Office 2013 and Lync 2013 periodically prompt for credentials to SharePoint Online, OneDrive, and Lync Online.|
@@ -172,12 +172,12 @@ HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Internet Settings\Zo
 |Outlook Web Access|Supported|Supported|
 |Outlook Mobile Apps for Android, IOS, and Windows Phone|Supported|Supported|
 |Skype for Business/ Lync|Supported, with no extra prompts|Supported (except as noted) but there is a potential for user confusion.</br></br>On mobile clients, Alternate Id is supported only if SIP address= email address = Alternate ID.</br></br> Users may need to sign-in twice to the Skype for Business desktop client, first using the on-premises UPN and then using the Alternate ID. (Note that the “Sign-in address” is actually the SIP address which may not be the same as the “User name”, though often is). When first prompted for a User name, the user should enter the UPN, even if it is incorrectly pre-populated with the Alternate ID or SIP address. After the user clicks sign-in with the UPN, the User name prompt reappears, this time prepopulated with the UPN. This time the user must replace this with the Alternate ID and click Sign in to complete the sign in process. On mobile clients, users should enter the on-premises user ID in the advanced page, using SAM-style format (domain\username), not UPN format.</br></br>After successful sign-in, if Skype for Business or Lync says "Exchange needs your credentials", you need to provide the credentials that are valid for where the mailbox is located. If the mailbox is in the cloud you need to provide the Alternate ID. If the Mailbox is on-premises you need to provide the on-premises UPN.| 
- 
+
 ## Additional Details & Considerations
 
 -   The Alternate login ID feature is available for federated environments with AD FS deployed.  It is not supported in the following scenarios:
-	-   Non-routable domains (e.g. Contoso.local) that cannot be verified by Azure AD.
-	-   Managed environments that do not have AD FS deployed.
+    -   Non-routable domains (e.g. Contoso.local) that cannot be verified by Azure AD.
+    -   Managed environments that do not have AD FS deployed.
 
 
 -   When enabled, the alternate login ID feature is only available for username/password authentication across all the user name/password authentication protocols supported by AD FS (SAML-P, WS-Fed, WS-Trust, and OAuth).
@@ -210,12 +210,12 @@ The following are various error cases and corresponding impact on a user's sign-
 
 
 
-**Error Cases**|**Impact on Sign-in Experience**|**Event**|
----------|---------|---------
-Unable to get a value for SAMAccountName for the user object|Login failure|Event ID 364 with exception message MSIS8012: Unable to find samAccountName for the user: '{0}'.|
-The CanonicalName attribute is not accessible|Login failure|Event ID 364 with exception message MSIS8013: CanonicalName: '{0}' of the user:'{1}' is in bad format.|
-Multiple user objects are found in one forests|Login failure|Event ID 364 with exception message MSIS8015: Found multiple user accounts with identity '{0}' in forest '{1}' with identities: {2}|
-Multiple user objects are found across multiple forests|Login failure|Event ID 364 with exception message MSIS8014: Found multiple user accounts with identity '{0}' in forests: {1}|
+|                       **Error Cases**                        | **Impact on Sign-in Experience** |                                                              **Event**                                                              |
+|--------------------------------------------------------------|----------------------------------|-------------------------------------------------------------------------------------------------------------------------------------|
+| Unable to get a value for SAMAccountName for the user object |          Login failure           |                  Event ID 364 with exception message MSIS8012: Unable to find samAccountName for the user: '{0}'.                   |
+|        The CanonicalName attribute is not accessible         |          Login failure           |               Event ID 364 with exception message MSIS8013: CanonicalName: '{0}' of the user:'{1}' is in bad format.                |
+|        Multiple user objects are found in one forests        |          Login failure           | Event ID 364 with exception message MSIS8015: Found multiple user accounts with identity '{0}' in forest '{1}' with identities: {2} |
+|   Multiple user objects are found across multiple forests    |          Login failure           |           Event ID 364 with exception message MSIS8014: Found multiple user accounts with identity '{0}' in forests: {1}            |
 
 ## See Also
 [AD FS Operations](../../ad-fs/AD-FS-2016-Operations.md)

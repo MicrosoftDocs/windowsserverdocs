@@ -68,7 +68,7 @@ This topic provides the supported and tested Microsoft iSCSI Target Server limit
 <td><p>Locally mounted virtual disks or snapshots per storage appliance</p></td>
 <td><p>32</p></td>
 <td><p>Yes</p></td>
-<td><p>Locally mounted virtual disks don't offer any iSCSI-specific functionality, and are deprecated - for more info, see <a href="https://technet.microsoft.com/library/dn303411.aspx">Features Removed or Deprecated in Windows Server 2012 R2</a>.</p></td>
+<td><p>Locally mounted virtual disks don&#39;t offer any iSCSI-specific functionality, and are deprecated - for more info, see <a href="https://technet.microsoft.com/library/dn303411.aspx">Features Removed or Deprecated in Windows Server 2012 R2</a>.</p></td>
 </tr>
 </tbody>
 </table>
@@ -100,7 +100,7 @@ This topic provides the supported and tested Microsoft iSCSI Target Server limit
 <tr class="even">
 <td><p>Multiple active cluster nodes</p></td>
 <td><p>Supported</p></td>
-<td> 
+<td> 
 <p>N/A</p></td>
 <td><p>Each active node in the failover cluster owns a different iSCSI Target Server clustered instance with other nodes acting as possible owner nodes.</p></td>
 </tr>
@@ -195,13 +195,12 @@ This topic provides the supported and tested Microsoft iSCSI Target Server limit
 <td><p>TCP offload</p></td>
 <td><p>Supported</p></td>
 <td><p>N/A</p></td>
-<td><p>Leverage Large Send (segmentation), checksum, interrupt moderation, and RSS offload</p></td>
+<td><p>Leverage Large Send (segmentation), checksum, interrupt moderation, and RSS offload</p></td>
 </tr>
 <tr class="odd">
 <td><p>iSCSI offload</p></td>
 <td><p>Not supported</p></td>
-<td>              
-<p>N/A</p></td>
+<td><br/><p>N/A</p></td>
 <td></td>
 </tr>
 <tr class="even">
@@ -244,7 +243,7 @@ This topic provides the supported and tested Microsoft iSCSI Target Server limit
 </thead>
 <tbody>
 <tr class="odd">
-<td><p>From an iSCSI initiator converting the virtual disk from a basic disk to a dynamic disk </p></td>
+<td><p>From an iSCSI initiator converting the virtual disk from a basic disk to a dynamic disk </p></td>
 <td><p>Yes</p></td>
 <td><p>No</p></td>
 <td></td>
@@ -259,7 +258,7 @@ This topic provides the supported and tested Microsoft iSCSI Target Server limit
 <tr class="odd">
 <td><p>VHD minimum format size</p></td>
 <td><p>.vhdx: 3 MB</p>
-<p>.vhd: 8 MB</p></td>
+<p>.vhd: 8 MB</p></td>
 <td><p>Yes</p></td>
 <td><p>Applies to all supported VHD types: parent, differencing, and fixed.</p></td>
 </tr>
@@ -307,7 +306,7 @@ This topic provides the supported and tested Microsoft iSCSI Target Server limit
 <td><p>.vhdx: Yes</p>
 <p>.vhd: Yes (No on Windows Server 2012)</p></td>
 <td><p>Yes</p></td>
-<td><p>Unmap isn't supported.</p></td>
+<td><p>Unmap isn&#39;t supported.</p></td>
 </tr>
 <tr class="odd">
 <td><p>exFAT/FAT32/FAT (hosting volume of the VHD)</p></td>
@@ -343,7 +342,7 @@ This topic provides the supported and tested Microsoft iSCSI Target Server limit
 <td><p>Thin provisioning</p></td>
 <td><p>No</p></td>
 <td><p>N/A</p></td>
-<td><p>Dynamic VHDs are supported, but Unmap isn't supported.</p></td>
+<td><p>Dynamic VHDs are supported, but Unmap isn&#39;t supported.</p></td>
 </tr>
 <tr class="odd">
 <td><p>Logical Unit shrink</p></td>
@@ -430,7 +429,7 @@ If you want to create volume shadow copies (VSS open-file snapshots) of data on 
 
 The iSCSI Target Storage Provider is a role service in Windows Server 2016, Windows Server 2012 R2, and Windows Server 2012; you can also download and install [iSCSI Target Storage Providers (VDS/VSS) for down-level application servers](http://www.microsoft.com/download/details.aspx?id=34759) on the following operating systems as long as the iSCSI Target Server is running on Windows Server 2012:
 
-  - Windows Storage Server 2008 R2
+  - Windows Storage Server 2008 R2
 
   - Windows Server 2008 R2
 
@@ -537,9 +536,9 @@ We've also tested the following iSCSI initiators performing a diskless boot from
 
 The following list provides additional resources about iSCSI Target Server and related technologies.
 
-  - [iSCSI Target Block Storage Overview](iscsi-target-server.md)
+- [iSCSI Target Block Storage Overview](iscsi-target-server.md)
 
-  - [iSCSI Target Boot Overview](iscsi-boot-overview.md)
+- [iSCSI Target Boot Overview](iscsi-boot-overview.md)
 
-  - [Storage in Windows Server](..\storage.md)
+- [Storage in Windows Server](../storage.md)
 

@@ -14,7 +14,7 @@ ms.author: coreyp
 manager: dongill
 ---
 
-#Azure Site Recovery Services integration
+# Azure Site Recovery Services integration
 
 >Applies To: Windows Server 2016 Essentials
 

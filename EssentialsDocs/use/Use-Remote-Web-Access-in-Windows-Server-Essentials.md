@@ -134,21 +134,21 @@ manager: dongill
   
 ###### To upload files  
   
-1.  In Remote Web Access, click the **Shared Folders** tab, and then click a shared-folder link. A list of the files and folders in that shared folder is displayed.  
+1. In Remote Web Access, click the **Shared Folders** tab, and then click a shared-folder link. A list of the files and folders in that shared folder is displayed.  
   
-2.  From the shared-folder list of files and folders, click the folder where you want to upload the file to, and then click **Upload**.  
+2. From the shared-folder list of files and folders, click the folder where you want to upload the file to, and then click **Upload**.  
   
-3.  If the standard upload tool is not already loaded, click **Use the standard upload method**.  
+3. If the standard upload tool is not already loaded, click **Use the standard upload method**.  
   
-4.  Click **Browse**  to find a file on your computer.  
+4. Click **Browse**  to find a file on your computer.  
   
-5.  Navigate through the folders on your computer to find the file that you want to upload, and then click **Open**.  
+5. Navigate through the folders on your computer to find the file that you want to upload, and then click **Open**.  
   
-6.  Repeat Steps 2 and 3 for each file that you want to upload.  
+6. Repeat Steps 2 and 3 for each file that you want to upload.  
   
-7.  When you have added all of the files that you want to upload, click **Upload**.  
+7. When you have added all of the files that you want to upload, click **Upload**.  
   
- The Easy File Upload tool streamlines the process of uploading files on your server running Windows Server Essentials. You can add as many files as you want to the Easy File Upload tool by using the drag-and-drop feature, and then upload them to the shared folders on the server.  
+   The Easy File Upload tool streamlines the process of uploading files on your server running Windows Server Essentials. You can add as many files as you want to the Easy File Upload tool by using the drag-and-drop feature, and then upload them to the shared folders on the server.  
   
 > [!NOTE]
 >  Uploading of multiple files is natively supported in web browsers that are compatible with HTML5. This tool is only necessary when the web browser does not support HTML5.  
@@ -173,39 +173,39 @@ manager: dongill
   
 ###### To download a single file  
   
-1.  In Remote Web Access, click the **Shared Folders** tab, and then click a shared-folder link. A list of the files and folders in that shared folder is displayed.  
+1. In Remote Web Access, click the **Shared Folders** tab, and then click a shared-folder link. A list of the files and folders in that shared folder is displayed.  
   
-2.  From the shared-folder file list, click the check box next to the file that you want to download to your home computer.  
+2. From the shared-folder file list, click the check box next to the file that you want to download to your home computer.  
   
-3.  Click **Download** to begin the download.  
+3. Click **Download** to begin the download.  
   
-4.  On the **File Download** dialog box, click **Save** to save the file to your computer.  
+4. On the **File Download** dialog box, click **Save** to save the file to your computer.  
   
-5.  In the **Save As** dialog box, select the location to save the file, and then click **Save**. A single file is not compressed before it is downloaded.  
+5. In the **Save As** dialog box, select the location to save the file, and then click **Save**. A single file is not compressed before it is downloaded.  
   
- There are two options for downloading multiple files or folders. Choose the option that fits your needs:  
+   There are two options for downloading multiple files or folders. Choose the option that fits your needs:  
   
 > [!NOTE]
 >  These options are available only when you are downloading multiple files or folders to your computer.  
   
--   **Self-extracting executable file (.exe)**  
+- **Self-extracting executable file (.exe)**  
   
-    > [!NOTE]
-    >   This section applies to a server running Windows Server Essentials.  
+  > [!NOTE]
+  >   This section applies to a server running Windows Server Essentials.  
   
-     A self-extracting executable file is a file that you can download that combines the decompression (executable) program with the compressed files. When you run the executable program, it automatically decompresses the compressed files (self-extracting). This is a common way to distribute compressed data without worrying about whether the recipient has the right decompression utility.  
+   A self-extracting executable file is a file that you can download that combines the decompression (executable) program with the compressed files. When you run the executable program, it automatically decompresses the compressed files (self-extracting). This is a common way to distribute compressed data without worrying about whether the recipient has the right decompression utility.  
   
-    > [!NOTE]
-    >  This option supports Unicode characters.  
+  > [!NOTE]
+  >  This option supports Unicode characters.  
   
--   **Windows Compressed folder (.zip)**  
+- **Windows Compressed folder (.zip)**  
   
-     Zipping a file creates a compressed version of the file that is smaller than the original file. The zipped version of the file has a .zip file name extension. File types that are reduced the most by zipping are text-oriented file types, such as .txt, .doc, .xls, and graphics files that use non-compressed file types such as .bmp. Some graphic files, such as .jpg and .gif files, already use compression, and the file size is reduced very little by zipping. Also, a Word document that contains a lot of graphics is not reduced as much as a document that is mostly text.  
+   Zipping a file creates a compressed version of the file that is smaller than the original file. The zipped version of the file has a .zip file name extension. File types that are reduced the most by zipping are text-oriented file types, such as .txt, .doc, .xls, and graphics files that use non-compressed file types such as .bmp. Some graphic files, such as .jpg and .gif files, already use compression, and the file size is reduced very little by zipping. Also, a Word document that contains a lot of graphics is not reduced as much as a document that is mostly text.  
   
-    > [!NOTE]
-    >  This option provides limited support for international file names in  Windows Server Essentials.  
+  > [!NOTE]
+  >  This option provides limited support for international file names in  Windows Server Essentials.  
   
- Before the actual download begins, the exe or zip file is created. Depending on the number of files and the total size of the files to be downloaded, this may take several minutes. After the download file is created, downloading the file occurs in the background. This allows you to continue working while the download process completes.  
+  Before the actual download begins, the exe or zip file is created. Depending on the number of files and the total size of the files to be downloaded, this may take several minutes. After the download file is created, downloading the file occurs in the background. This allows you to continue working while the download process completes.  
   
 ###### To download multiple files or folders  
   
@@ -321,13 +321,13 @@ manager: dongill
   
 ##### To return to the mobile version of Remote Web Access  
   
-1.  Log off.  
+1. Log off.  
   
-2.  Open a Web browser and type **https://***<YourDomainName\>***/remote/m** in the address bar. Make sure that you include the s in https.  
+2. Open a Web browser and type **https://***<YourDomainName\>***/remote/m** in the address bar. Make sure that you include the s in https.  
   
-3.  The mobile version of  Remote Web Access is displayed. On the  Remote Web Access logon page, type your user name and password in the text boxes, and then click the arrow. You are logged on to the mobile version of  Remote Web Access.  
+3. The mobile version of  Remote Web Access is displayed. On the  Remote Web Access logon page, type your user name and password in the text boxes, and then click the arrow. You are logged on to the mobile version of  Remote Web Access.  
   
- You can search for files and folders in the shared folders on the server.  
+   You can search for files and folders in the shared folders on the server.  
   
 ###  <a name="BKMK_9"></a> Supported Web browsers for mobile devices  
  Supported web browsers for mobile devices include:  

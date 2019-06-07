@@ -29,11 +29,11 @@ set [no]d2
 
 ## Parameters
 
-|Parameter|Description|
-|---------|-----------|
-|**nod2**|Turns off exhaustive Debugging Mode. The default syntax is **nod2**.|
-|**d2**|Turns on exhaustive Debugging Mode.|
-|{help | ?}|Displays a short summary of **nslookup** subcommands.|
+| Parameter |                             Description                              |
+|-----------|----------------------------------------------------------------------|
+| **nod2**  | Turns off exhaustive Debugging Mode. The default syntax is **nod2**. |
+|  **d2**   |                 Turns on exhaustive Debugging Mode.                  |
+|   {help   |                                  ?}                                  |
 
 #### Additional references
 

@@ -84,5 +84,5 @@ You can also add or change the SSL certificate at a later time using the [Set-Hg
 
 ## Next step
 
->[!div class="nextstepaction"]
-[Install HGS](guarded-fabric-choose-where-to-install-hgs.md)
+> [!div class="nextstepaction"]
+> [Install HGS](guarded-fabric-choose-where-to-install-hgs.md)

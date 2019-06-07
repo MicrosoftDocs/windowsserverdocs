@@ -24,10 +24,12 @@ renames remote files.
 rename <FileName> <NewFileName>  
 ```  
 ### Parameters  
-|Parameter|Description|  
-|-------|--------|  
-|<FileName>|Specifies the file that you want to rename.|  
-|<NewFileName>|Specifies the new file name.|  
+
+|   Parameter   |                 Description                 |
+|---------------|---------------------------------------------|
+|  <FileName>   | Specifies the file that you want to rename. |
+| <NewFileName> |        Specifies the new file name.         |
+
 ## <a name="BKMK_Examples"></a>Examples  
 rename the remote file **example.txt** to **example1.txt**  
 ```  

@@ -14,8 +14,6 @@ ms.technology: identity-adfs
 
 # Configure a federation server with Device Registration Service
 
->Applies To: Windows Server 2012 R2
-
 You can enable Device Registration Service \(DRS\) on your federation server after you complete the procedures in [Step 4: Configure a Federation Server](https://technet.microsoft.com/library/dn303424.aspx). The Device Registration Service provides an onboarding mechanism for seamless second factor authentication, persistent single sign\-on \(SSO\), and conditional access to consumers that require access to company resources. For more information about DRS, see [Join to Workplace from Any Device for SSO and Seamless Second Factor Authentication Across Company Applications](../../ad-fs/operations/Join-to-Workplace-from-Any-Device-for-SSO-and-Seamless-Second-Factor-Authentication-Across-Company-Applications.md)  
   
 ## Prepare your Active Directory forest to support devices  

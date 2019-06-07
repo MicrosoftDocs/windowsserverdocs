@@ -57,7 +57,7 @@ The following options appear when you create a new forest.
   
 -   When you create a new forest, you must specify a name for the forest root domain. The forest root domain name cannot be single-labeled (for example, it must be "contoso.com" instead of "contoso"). It must use allowed DNS domain naming conventions. You can specify an Internationalized Domain Name (IDN). For more information about DNS domain naming conventions, see [KB 909264](https://support.microsoft.com/kb/909264).  
   
--   Do not create new Active Directory forests with the same name as your external DNS name. For example, if your Internet DNS URL is http://contoso.com, you must choose a different name for your internal forest to avoid future compatibility issues. That name should be unique and unlikely for web traffic, such as corp.contoso.com.  
+-   Do not create new Active Directory forests with the same name as your external DNS name. For example, if your Internet DNS URL is http:\//contoso.com, you must choose a different name for your internal forest to avoid future compatibility issues. That name should be unique and unlikely for web traffic, such as corp.contoso.com.  
   
 -   You must be a member of Administrators group on the server where you want to create a new forest.  
   

@@ -15,8 +15,6 @@ ms.author: billmath
 
 # Checklist: Setting Up a Federation Server
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
-
 This checklist includes the deployment tasks that are necessary to prepare a server running Windows Server® 2012 for the federation server role in Active Directory Federation Services \(AD FS\).  
   
 > [!NOTE]  

@@ -34,17 +34,17 @@ more [/c] [/p] [/s] [/t<N>] [+<N>] [<Files>]
 
 ## Parameters
 
-|Parameter|Description|
-|---------|-----------|
-|\<Command>|Specifies a command for which you want to display the output.|
-|/c|Clears the screen before displaying a page.|
-|/p|Expands form-feed characters.|
-|/s|Displays multiple blank lines as a single blank line.|
-|/t\<N>|Displays tabs as the number of spaces specified by *N*.|
-|+\<N>|Displays the first file beginning at the line specified by *N*.|
-|[\<Drive>:] [<Path>]<FileName>|Specifies the location and name of a file to display.|
-|\<Files>|Specifies a list of files to display. Separate file names with a space.|
-|/?|Displays help at the command prompt.|
+|           Parameter            |                               Description                               |
+|--------------------------------|-------------------------------------------------------------------------|
+|           \<Command>           |      Specifies a command for which you want to display the output.      |
+|               /c               |               Clears the screen before displaying a page.               |
+|               /p               |                      Expands form-feed characters.                      |
+|               /s               |          Displays multiple blank lines as a single blank line.          |
+|             /t\<N>             |         Displays tabs as the number of spaces specified by *N*.         |
+|             +\<N>              |     Displays the first file beginning at the line specified by *N*.     |
+| [\<Drive>:] [<Path>]<FileName> |          Specifies the location and name of a file to display.          |
+|            \<Files>            | Specifies a list of files to display. Separate file names with a space. |
+|               /?               |                  Displays help at the command prompt.                   |
 
 ## Remarks
 
@@ -88,25 +88,25 @@ The **more** command displays the first screen of information from Clients.new, 
 ### Using more subcommands
 
 The following examples can be used at the **more** prompt (`-- More --`).
--   To display the file one line at a time, press ENTER at the **more** prompt.
--   To display the next screen, press the SPACEBAR at the **more** prompt.
--   To display the next file listed on the command line, type **f** at the **more** prompt.
--   To show the available commands, type **?** at the **more** prompt.
--   To quit **more**, type **q** at the **more** prompt.
--   To display the current line number, type **=** at the **more** prompt. The current line number is added to the **more** prompt as follows:  
-    ```
-    -- More [Line: 24] --
-    ```  
--   To display a specific number of lines, type **p** at the **more** prompt. **More** prompts you for the number of lines to display as follows:  
-    ```
-    -- More -- Lines:
-    ```  
-    Type the number of lines to display, and then press ENTER. **More** displays the specified number of lines.
--   To skip a specific number of lines, type **s** at the **more** prompt. **More** prompts you for the number of lines to skip as follows:  
-    ```
-    -- More -- Lines:
-    ```  
-    Type the number of lines to skip, and then press ENTER. **More** skips the specified number of lines and displays the next screen of information.
+- To display the file one line at a time, press ENTER at the **more** prompt.
+- To display the next screen, press the SPACEBAR at the **more** prompt.
+- To display the next file listed on the command line, type **f** at the **more** prompt.
+- To show the available commands, type **?** at the **more** prompt.
+- To quit **more**, type **q** at the **more** prompt.
+- To display the current line number, type **=** at the **more** prompt. The current line number is added to the **more** prompt as follows:  
+  ```
+  -- More [Line: 24] --
+  ```  
+- To display a specific number of lines, type **p** at the **more** prompt. **More** prompts you for the number of lines to display as follows:  
+  ```
+  -- More -- Lines:
+  ```  
+  Type the number of lines to display, and then press ENTER. **More** displays the specified number of lines.
+- To skip a specific number of lines, type **s** at the **more** prompt. **More** prompts you for the number of lines to skip as follows:  
+  ```
+  -- More -- Lines:
+  ```  
+  Type the number of lines to skip, and then press ENTER. **More** skips the specified number of lines and displays the next screen of information.
 
 #### Additional references
 

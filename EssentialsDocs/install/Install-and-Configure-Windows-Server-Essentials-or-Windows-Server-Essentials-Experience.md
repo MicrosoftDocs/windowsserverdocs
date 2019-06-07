@@ -68,28 +68,28 @@ Before you install Windows Server Essentials or the Essentials Experience role, 
   
 ##### To configure Windows Server Essentials on a physical server  
   
-1.  After the Windows **Welcome** page, the **Configure Windows Server Essentials Wizard** is visible on your desktop.  
+1. After the Windows **Welcome** page, the **Configure Windows Server Essentials Wizard** is visible on your desktop.  
   
-2.  Follow the instructions to complete the wizard as follows:  
+2. Follow the instructions to complete the wizard as follows:  
   
-    1.  On the **Configure Windows Server Essentials** page, click **Next**.  
+   1.  On the **Configure Windows Server Essentials** page, click **Next**.  
   
-    2.  In **Time settings**, make sure your date, time, and time zone are correct, and then click **Next**.  
+   2.  In **Time settings**, make sure your date, time, and time zone are correct, and then click **Next**.  
   
-    3.  In **Company Information**, type your company name, such as **Contoso,Ltd.**, and then click **Next**. Optionally, you can change the internal domain name and server name.  
+   3.  In **Company Information**, type your company name, such as **Contoso,Ltd.**, and then click **Next**. Optionally, you can change the internal domain name and server name.  
   
-    4.  In **Create network admin**, type a new administrator account name and password.  
+   4.  In **Create network admin**, type a new administrator account name and password.  
   
-        > [!NOTE]
-        >  Do not use the default **Administrator** account name and password.  
+       > [!NOTE]
+       >  Do not use the default **Administrator** account name and password.  
   
-    5.  Click **Configure**.  
+   5.  Click **Configure**.  
   
-3.  The server will restart multiple times during the configuration process, and your logons will be automatic until the configuration is finished. This process takes about 20 minutes.  
+3. The server will restart multiple times during the configuration process, and your logons will be automatic until the configuration is finished. This process takes about 20 minutes.  
   
-4.  On the desktop, click the Dashboard icon to start the server Dashboard. On the **Home** page, complete the **Getting Started** tasks listed on the **Setup** tab.  
+4. On the desktop, click the Dashboard icon to start the server Dashboard. On the **Home** page, complete the **Getting Started** tasks listed on the **Setup** tab.  
   
- After you have completed the server configuration, the server that is running Windows Server Essentials will be set up as a domain controller.  
+   After you have completed the server configuration, the server that is running Windows Server Essentials will be set up as a domain controller.  
   
 ###  <a name="BKMK_DeployWSERole"></a> Deploying the Windows Server Essentials Experience role in Windows Server 2012 R2 Standard and Datacenter  
  You can use Server Manager to enable and configure the  Windows Server Essentials Experience role in  Windows Server 2012 R2 Standard or  Windows Server 2012 R2 Datacenter by using the following procedure.  
