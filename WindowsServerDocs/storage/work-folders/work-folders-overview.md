@@ -52,8 +52,8 @@ If you're looking to download or use Work Folders on Windows 10, Windows 7, or a
   
 | Functionality | Availability | Description |  
 | ------------------- | ------------------ | ----------------- |  
-| Work Folders role service in Server Manager | Windows Server 2019, Windows Server 2016, Windows Server 2012 R2 or Windows Server 2016|File and Storage Services provides a way to set up sync shares (folders that store user's work files), monitors Work Folders, and manages sync shares and user access |
-| Work Folders cmdlets | Windows Server 2019, Windows Server 2016, Windows Server 2012 R2 or Windows Server 2016 | A Windows PowerShell module that contains comprehensive cmdlets for managing Work Folders servers |  
+| Work Folders role service in Server Manager | Windows Server 2019, Windows Server 2016, or Windows Server 2012 R2 | File and Storage Services provides a way to set up sync shares (folders that store user's work files), monitors Work Folders, and manages sync shares and user access |
+| Work Folders cmdlets | Windows Server 2019, Windows Server 2016, or Windows Server 2012 R2 | A Windows PowerShell module that contains comprehensive cmdlets for managing Work Folders servers |  
 | Work Folders integration with Windows | Windows 10<br /><br /> Windows 8.1<br /><br /> Windows RT 8.1<br /><br /> Windows 7 (download required) | Work Folders provides the following functionality in Windows computers:<br /><br /> -   A Control Panel item that sets up and monitors Work Folders<br />-   File Explorer integration that enables easy access to files in Work Folders<br />-   A sync engine that transfers files to and from a central file server while maximizing battery life and system performance |
 | Work Folders app for devices | Android<br /><br /> Apple iPhone and iPad® | An app that allows popular devices to access files in Work Folders |  
   
@@ -72,7 +72,7 @@ The following table describes some of the major changes in Work Folders.
 
 Work Folders has the following software requirements for file servers and your network infrastructure:  
   
--   A server running Windows Server 2012 R2 or Windows Server 2016 for hosting sync shares with user files  
+-   A server running Windows Server 2019, Windows Server 2016, or Windows Server 2012 R2 for hosting sync shares with user files  
   
 -   A volume formatted with the NTFS file system for storing user files  
   
@@ -80,7 +80,7 @@ Work Folders has the following software requirements for file servers and your n
 
 -   A server certificate for each file server that will host Work Folders. These certificates should be from a certification authority (CA) that is trusted by your users—ideally a public CA.
 
--   (Optional) An Active Directory Domain Services forest with schema extensions in Windows Server 2012 R2 to support automatically referring PCs and devices to the correct file server when using multiple file servers.  
+-   (Optional) An Active Directory Domain Services forest with the schema extensions in Windows Server 2012 R2 to support automatically referring PCs and devices to the correct file server when using multiple file servers.  
   
 To enable users to sync across the Internet, there are additional requirements:  
   
@@ -137,7 +137,7 @@ The following table discusses how various Microsoft sync technologies are positi
 | **Supported clients** | PCs, iOS, Android | PCs in a corporate network or connected through DirectAccess, VPNs, or other remote access technologies | PCs, iOS, Android, Windows Phone | PCs, Mac computers, Windows Phone, iOS, Android |
   
 > [!NOTE]
->  In addition to the sync technologies listed in the previous table, Microsoft offers other replication technologies, including DFS Replication, which is designed for server-to-server replication, and BranchCache, which is designed as a branch office WAN acceleration technology. For more information, see [DFS Namespaces and DFS Replication](https://technet.microsoft.com/library/jj127250(v=ws.11).aspx) and [BranchCache Overview](https://technet.microsoft.com/library/hh831696(v=ws.11).aspx)  
+>  In addition to the sync technologies listed in the previous table, Microsoft offers other replication technologies, including DFS Replication, which is designed for server-to-server replication, and BranchCache, which is designed as a branch office WAN acceleration technology. For more information, see [DFS Namespaces and DFS Replication](https://technet.microsoft.com/library/jj127250(v=ws.11).aspx) and [BranchCache Overview](https://technet.microsoft.com/library/hh831696(v=ws.11).aspx) 
   
 ## Server Manager information  
 

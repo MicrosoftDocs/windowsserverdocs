@@ -130,7 +130,6 @@ Deploying ReFS as a backup target is best suited for applications and hardware t
 | Sparse files | Yes | Yes |
 | Named streams | Yes | Yes |
 | Thin Provisioning | Yes<sup>3</sup> | Yes |
-| Offloaded Data Transfer (ODX) | No | Yes |
 | Trim/Unmap | Yes<sup>3</sup> | Yes |
 1. Available on Windows Server, version 1709 and later.
 2. Available on Windows Server 2012 R2 and later.
@@ -153,6 +152,7 @@ Deploying ReFS as a backup target is best suited for applications and hardware t
 | Transactions | No | Yes |
 | Hard links | No | Yes |
 | Object IDs | No | Yes |
+| Offloaded Data Transfer (ODX) | No | Yes |
 | Short names | No | Yes |
 | Extended attributes | No | Yes |
 | Disk quotas | No | Yes |
