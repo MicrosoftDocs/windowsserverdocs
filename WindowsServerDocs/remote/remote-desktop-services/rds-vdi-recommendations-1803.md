@@ -75,10 +75,11 @@ With image-based VDI, there is a set of processes to perform in order to get upd
 
 > [!NOTE]  
 > Windows 10 performs a set of maintenance tasks automatically, on a periodic basis. There is a scheduled task that is set to run at 3:00 AM local time every day by default. This scheduled task performs a list of tasks, including Windows Update cleanup. You can view all the categories of maintenance that take place automatically with this PowerShell command:
-
-`Get-ScheduledTask | ? {$_.Settings.MaintenanceSettings}`
-
-
+>
+>```powershell
+>Get-ScheduledTask | ? {$_.Settings.MaintenanceSettings}
+>```
+>
 
 One of the challenges with non-persistent VDI is that when a user logs off, nearly all the operating system activity is discarded. The user’s profile and or state might be
 saved, but the virtual machine itself discards nearly all changes that were made since the last boot. Therefore, optimizations intended for a Windows computer that saves state from one session to the next are not applicable.
@@ -87,8 +88,7 @@ Depending on the architecture of VDI VM, things like PreFetch and SuperFetch are
 
 ### To Sysprep or not Sysprep
 
-Windows 10 has a built-in capability called the [System Preparation
-Tool](https://docs.microsoft.com/windows-hardware/manufacture/desktop/sysprep--system-preparation--overview),
+Windows 10 has a built-in capability called the [System Preparation Tool](https://docs.microsoft.com/windows-hardware/manufacture/desktop/sysprep--system-preparation--overview),
 (often abbreviiated to "Sysprep"). The Sysprep tool is used to prepare a customized Windows 10 image for duplication. The Sysprep process assures the resulting operating system is properly unique to run in production.
 
 There are reasons for and against running Sysprep. In the case of VDI, you might want the ability to customize the default user profile which would be used as the profile template for subsequent users that log on using this image. You might have apps that you want installed, but also able to control per-app settings.
@@ -119,7 +119,7 @@ tool.
 
 -   User settings
 
--   Hypervisor / Host settings
+-   Hypervisor/Host settings
 
 ##### Global VDI operating system optimization
 
@@ -139,13 +139,11 @@ Global VDI settings include the following:
 
 -   [Automatic Windows traces](#automatic-windows-traces)
 
--   [Windows Defender optimization with
-    VDI](#windows-defender-optimization-with-vdi)
+-   [Windows Defender optimization with VDI](#windows-defender-optimization-with-vdi)
 
 -   [Tuning Windows 10 network performance by using registry settings](#tuning-windows-10-network-performance-by-using-registry-settings)
 
--   Additional settings from the [Windows Restricted Traffic Limited
-    Functionality Baseline](https://go.microsoft.com/fwlink/?linkid=828887)
+-   Additional settings from the [Windows Restricted Traffic Limited Functionality Baseline](https://go.microsoft.com/fwlink/?linkid=828887)
     guidance.
 
 -   [Disk cleanup](#disk-cleanup-including-using-the-disk-cleanup-wizard)
@@ -185,20 +183,17 @@ Run the following command to enumerate provisioned UWP apps from a running Windo
 UWP apps that are provisioned to a system can be removed during operating system installation as part of a task sequence, or later after the operating system is installed. This might be the
 preferred method because it makes the overall process of creating or maintaining an image modular. Once you develop the scripts, if something changes in a subsequent build you edit an existing script rather than repeat the process from scratch. Here are some links to information on this topic:
 
-[Removing Windows 10 in-box apps during a task
-sequence](https://blogs.technet.microsoft.com/mniehaus/2015/11/11/removing-windows-10-in-box-apps-during-a-task-sequence/)
+[Removing Windows 10 in-box apps during a task sequence](https://blogs.technet.microsoft.com/mniehaus/2015/11/11/removing-windows-10-in-box-apps-during-a-task-sequence/)
 
-[Removing Built-in apps from Windows 10 WIM-File with Powershell - Version
-1.3](https://gallery.technet.microsoft.com/Removing-Built-in-apps-65dc387b)
+[Removing Built-in apps from Windows 10 WIM-File with Powershell - Version 1.3](https://gallery.technet.microsoft.com/Removing-Built-in-apps-65dc387b)
 
-[Windows 10 1607: Keeping apps from coming back when deploying the feature
-update](https://blogs.technet.microsoft.com/mniehaus/2016/08/23/windows-10-1607-keeping-apps-from-coming-back-when-deploying-the-feature-update/)
+[Windows 10 1607: Keeping apps from coming back when deploying the feature update](https://blogs.technet.microsoft.com/mniehaus/2016/08/23/windows-10-1607-keeping-apps-from-coming-back-when-deploying-the-feature-update/)
 
-Then run the
-[Remove-AppxProvisionedPackage](https://docs.microsoft.com/powershell/module/dism/remove-appxprovisionedpackage?view=win10-ps)
-PowerShell command to remove UWP app payloads:
+Then run the [Remove-AppxProvisionedPackage](https://docs.microsoft.com/powershell/module/dism/remove-appxprovisionedpackage?view=win10-ps) PowerShell command to remove UWP app payloads:
 
-`Remove-AppxProvisionedPackage -Online -PackageName MyAppxPackage`
+```powershell
+Remove-AppxProvisionedPackage -Online -PackageName 
+```
 
 Each UWP app should be evaluated for applicability in each unique environment. You will want to install a default installation of Windows 10, version 1803, then note which apps are running and consuming memory. For example, you might want to consider removing apps that start automatically, or apps that automatically display information on the Start menu, such as Weather and News, and that might not be of use in your environment.
 
@@ -210,12 +205,15 @@ One of the "inbox" UWP apps called Photos, has a default setting called **Show a
 
  To enumerate currently installed Windows Features, run this PowerShell command:
 
-`Get-WindowsOptionalFeature -Online`
-
+```powershell
+Get-WindowsOptionalFeature -Online
+```
 
 You can enable or disable a specific Windows optional feature as in this example:
 
-`Enable-WindowsOptionalFeature -Online -FeatureName "DirectPlay" -All`
+```powershell
+Enable-WindowsOptionalFeature -Online -FeatureName "DirectPlay" -All
+```
 
 For more about this, see [Windows 10: Managing optional features with PowerShell](https://social.technet.microsoft.com/wiki/contents/articles/39386.windows-10-managing-optional-features-with-powershell.aspx).
 
@@ -494,6 +492,7 @@ Note that a lot of services that might seem to be good candidates to disable are
 | Windows Search                                                                                                                                | Provides content indexing, property caching, and search results for files, e-mail, and other content.                                                                    | Probably not needed especially with non-persistent VDI                                                             |
 
 #### Per-user services in Windows
+
 [Per-user services](https://docs.microsoft.com/windows/application-management/per-user-services-in-windows) are services that are created when a user signs into Windows or Windows Server and are stopped and deleted when that user signs out. These services run in the security context of the user account - this provides better resource management than the previous approach of running these kinds of services in Explorer, associated with a preconfigured account, or as tasks. 
 
 ### Scheduled tasks
@@ -667,8 +666,7 @@ Windows PowerShell cmdlets. You can configure registry-only settings by using Wi
 
 ### Additional settings from the Windows Restricted Traffic Limited Functionality Baseline guidance
 
-Microsoft has released a baseline  created using the same procedures as the [Windows Security
-Baselines](https://docs.microsoft.com/windows/device-security/windows-security-baselines), for environments that are either not connected directly to the Internet, or want to reduce data sent to Microsoft and other services.
+Microsoft has released a baseline  created using the same procedures as the [Windows Security Baselines](https://docs.microsoft.com/windows/device-security/windows-security-baselines), for environments that are either not connected directly to the Internet, or want to reduce data sent to Microsoft and other services.
 
 The [Windows Restricted Traffic Limited Functionality Baseline](https://docs.microsoft.com/windows/privacy/manage-connections-from-windows-operating-system-components-to-microsoft-services)
 settings are marked in the Group Policy table with an asterisk.
