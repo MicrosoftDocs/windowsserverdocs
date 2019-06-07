@@ -32,7 +32,7 @@ We regularly update the [Remote Desktop web client](remote-desktop-web-client.md
 - Updated error message for users attempting to authenticate using an expired password.
 - Refreshed feed UI on the All Resources page.
 - Resolved overlapping dialogues that occurred during session reconnect.
-- Fixed remote resource icon sizing in the resource taskbar. 
+- Fixed remote resource icon sizing in the resource taskbar.
 
 ## Updates for version 1.0.11
 *Published date: 2/22/2019*
@@ -52,7 +52,7 @@ We regularly update the [Remote Desktop web client](remote-desktop-web-client.md
 - Fixed accessibility bugs, enabling users with visual disabilities to use the web client.
 - Improved error messages displayed to the user for feed errors.
 - Added Ctrl + Alt + End (Windows) and fn + control + option + delete (Mac) shortcuts to invoke Ctrl + Alt + Del in remote machine.
-- Improved telemetry for crash events. 
+- Improved telemetry for crash events.
 - Improved our build pipeline and build tools.
 - Various bug fixes.
 
@@ -80,7 +80,7 @@ We regularly update the [Remote Desktop web client](remote-desktop-web-client.md
 
 - New sign in experience within the web client.
 - No longer prompted for credentials when launching a desktop or app connection (Single sign on).
-- Moved the web client to a new URL: **https://server_FQDN/RDWeb/webclient/index.html**
+- Moved the web client to a new URL: <https://server_FQDN/RDWeb/webclient/index.html>
 - Added time zone redirection.
 - Various bug fixes.
 
