@@ -18,7 +18,7 @@ ms.date: 01/05/2019
 
 Copies files and directories, including subdirectories.
 
-For examples of how to use this command, see [Examples](examples).
+For examples of how to use this command, see [Examples](#examples).
 
 ## Syntax
 

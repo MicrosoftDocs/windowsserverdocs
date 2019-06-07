@@ -18,11 +18,11 @@ Windows Server 2016 supports two types of virtual desktops, personal virtual de
 
 **In this topic:**
 
--   [General considerations](#general)
+-   [General considerations](#general-considerations)
 
--   [Performance optimizations](#perfopt)
+-   [Performance optimizations](#performance-optimizations)
 
-## <a href="" id="general"></a>General considerations
+## General considerations
 
 
 ### Storage
@@ -170,7 +170,7 @@ The following performance counters are available on the RemoteFX server to measu
 
 In addition to the RemoteFX virtual GPU performance counters, you can also measure the GPU utilization by using Process Explorer, which shows video memory usage and the GPU utilization.
 
-## <a href="" id="perfopt"></a>Performance optimizations
+## Performance optimizations
 
 ### Dynamic Memory
 

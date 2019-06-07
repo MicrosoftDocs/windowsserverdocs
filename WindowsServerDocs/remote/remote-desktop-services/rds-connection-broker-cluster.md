@@ -21,7 +21,7 @@ You can deploy a Remote Desktop Connection Broker (RD Connection Broker) cluster
 
 ## Pre-requisites
 
-Set up a server to act as a second RD Connection Broker - this can be either a physical server or a VM.
+Set up a server to act as a second RD Connection Broker—this can be either a physical server or a VM.
 
 Set up a database for the Connection Broker. You can use [Azure SQL Database](https://azure.microsoft.com/documentation/articles/sql-database-get-started/#create-a-new-aure-sql-database) instance or SQL Server in your local environment. We talk about using Azure SQL below, but the steps still apply to SQL Server. You'll need to find the connection string for the database and make sure you have the correct ODBC driver.
 
@@ -30,21 +30,23 @@ Set up a database for the Connection Broker. You can use [Azure SQL Database](ht
 1. Find the connection string for the database you created - you need it both to identify the version of ODBC driver you need and later, when you're configuring the Connection Broker itself (step 3), so save the string someplace where you can reference it easily. Here's how you find the connection string for Azure SQL:  
     1. In the Azure portal, click **Browse > Resource groups** and click the resource group for the deployment.   
     2. Select the SQL database you just created (for example, CB-DB1).   
-    3. Click **Settings > Properties > Show database connection strings**.   
+    3. Click **Settings** > **Properties** > **Show database connection strings**.   
     4. Copy the connection string for **ODBC (includes Node.js)**, which should look like this:   
       
-        Driver={SQL Server Native Client 13.0};Server=tcp:cb-sqls1.database.windows.net,1433;Database=CB-DB1;Uid=sqladmin@contoso;Pwd={your_password_here};Encrypt=yes;TrustServerCertificate=no;Connection Timeout=30;   
+        ```
+        Driver={SQL Server Native Client 13.0};Server=tcp:cb-sqls1.database.windows.net,1433;Database=CB-DB1;Uid=sqladmin@contoso;Pwd={your_password_here};Encrypt=yes;TrustServerCertificate=no;Connection Timeout=30;
+        ```
   
     5. Replace "your_password_here" with the actual password. You'll use this entire string, with your included password, when connecting to the database. 
 2. Install the ODBC driver on the new Connection Broker: 
    1. If you are using a VM for the Connection Broker, create a public IP address for the first RD Connection Broker. (You only have to do this if the RDMS virtual machine does not already have a public IP address to allow RDP connections.)
-       1. In the Azure portal, click **Browse > Resource groups**, click the resource group for the deployment, and then click the first RD Connection Broker virtual machine (for example, Contoso-Cb1).
+       1. In the Azure portal, click **Browse** > **Resource groups**, click the resource group for the deployment, and then click the first RD Connection Broker virtual machine (for example, Contoso-Cb1).
        2. Click **Settings > Network interfaces**, and then click the corresponding network interface.
        3. Click **Settings > IP address**.
        4. For **Public IP address**, select **Enabled**, and then click **IP address**.
        5. If you have an existing public IP address you want to use, select it from the list. Otherwise, click **Create new**, enter a name, and then click **OK** and then **Save**.
    2. Connect to the first RD Connection Broker:
-       1. In the Azure portal, click **Browse > Resource groups**, click the resource group for the deployment, and then click the first RD Connection Broker virtual machine (for example, Contoso-Cb1).
+       1. In the Azure portal, click **Browse** > **Resource groups**, click the resource group for the deployment, and then click the first RD Connection Broker virtual machine (for example, Contoso-Cb1).
        2. Click **Connect > Open** to open the Remote Desktop client.
        3. In the client, click **Connect**, and then click **Use another user account**. Enter the user name and password for a domain administrator account.
        4. Click **Yes** when warned about the certificate.

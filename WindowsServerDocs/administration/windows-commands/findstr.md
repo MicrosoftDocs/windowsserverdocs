@@ -73,10 +73,12 @@ findstr [/b] [/e] [/l | /r] [/s] [/i] [/x] [/v] [/n] [/m] [/o] [/p] [/f:<File>] 
   |\\<string|Word position: beginning of the word|
   |string\>|Word position: end of the word|
 
-  The special characters in regular expression syntax have the most power when you use them together. For example, use the following combination of the wildcard character (.) and repeat (*) character to match any string of characters:  
+  The special characters in regular expression syntax have the most power when you use them together. For example, use the following combination of the wildcard character (.) and repeat (*) character to match any string of characters:
+
   ```
   .*
-  ```  
+  ``` 
+
   Use the following expression as part of a larger expression to match any string beginning with "b" and ending with "ing": 
 
   ```

@@ -46,7 +46,7 @@ Set up a server to act as an additional RD Web and RD Gateway - this can be eith
    4. Click **Choose a different certificate** and then browse to the certificate location. For example, \Contoso-CB1\Certificates). Select the certificate file for the RD Web and Gateway server created during the prerequisites (e.g. ContosoRdGwCert), and then click **Open**.  
    5. Enter the password for the certificate, select **Allow the certificate to be added to the Trusted Root Certificate Authorities certificate store on the destination computers**, and then click **OK**.  
    6. Click **Apply**.
-      > [!Note] 
+      > [!NOTE] 
       > You may need to manually restart the TSGateway service running on each RD Gateway server, either through Server Manager or Task Manager.
    7. Repeat steps a through f for the RD Web Access Role Service.
 
@@ -84,7 +84,7 @@ Set up a server to act as an additional RD Web and RD Gateway - this can be eith
 
 If you are using Azure infrastructure, you can create an external Azure load balancer; if not, you can set up a separate hardware or software load balancer. Load balancing is key so that traffic will be evenly distributed the long-lived connections from Remote Desktop clients, through the RD Gateway, to the servers that users will be running their workloads.
 
-> [!Note] 
+> [!NOTE] 
 > If your previous server running RD Web and RD Gateway was already set up behind an external load balancer, skip ahead to step 4, select the existing backend pool, and add the new server to the pool.
 
 1.  Create an Azure Load Balancer:  
