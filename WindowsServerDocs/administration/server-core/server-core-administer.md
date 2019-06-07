@@ -96,8 +96,7 @@ You can configure Windows Firewall locally on the Server Core computer using Win
 
 You can enable Windows PowerShell Remoting, in which commands typed in Windows PowerShell on one computer run on another computer. Enable Windows PowerShell Remoting with **Enable-PSRemoting**.
 
-For more information, see [About Remote FAQ](/powershell/module/microsoft.powershell.core/about/about_remote_faq?view=powershell-5.1)
-</br>
+For more information, see [About Remote FAQ](/powershell/module/microsoft.powershell.core/about/about_remote_faq?view=powershell-5.1).
 
 ## Administrative tasks from the command line
 Use the following reference information to perform administrative tasks from the command line.

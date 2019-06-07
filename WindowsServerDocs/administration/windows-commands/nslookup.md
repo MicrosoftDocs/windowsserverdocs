@@ -20,6 +20,7 @@ ms.date: 10/16/2017
 
 Displays information that you can use to diagnose Domain Name System (DNS) infrastructure. Before using this tool, you should be familiar with how DNS works. The nslookup command-line tool is available only if you have installed the TCP/IP protocol.
 ## Syntax
+
 ```
 nslookup [<-SubCommand ...>] [{<computerTofind> | -<Server>}]
 nslookup /exit
@@ -49,6 +50,7 @@ nslookup /set type=<ResourceRecordtype>
 nslookup /set [no]vc
 nslookup /view <FileName>
 ```
+
 ## Parameters
 
 |                       Parameter                       |                                                                                                         Description                                                                                                         |

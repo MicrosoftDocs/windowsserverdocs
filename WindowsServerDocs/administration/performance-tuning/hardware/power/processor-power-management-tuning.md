@@ -15,7 +15,7 @@ Starting with Windows Server 2008, Windows Server provides three power plans: **
 
 If you run a server system that has dramatically different workload characteristics or performance and power requirements than these workloads, you might want to consider tuning the default power settings (i.e., create a custom power plan). One source of useful tuning information is the [Server Hardware Power Considerations](../power.md). Alternately, you may decide that the **High Performance** power plan is the right choice for your environment, recognizing that you will likely take a significant energy hit in exchange for some level of increased responsiveness.
 
->[!Important]
+> [!IMPORTANT]
 > You should leverage the power policies that are included with Windows Server unless you have a specific need to create a custom one and have a very good understanding that your results will vary depending on the characteristics of your workload.
 
 ## Windows Processor Power Tuning Methodology
@@ -55,7 +55,7 @@ For each release of Windows, the most current production servers are used in the
 
 Given that most servers are sold with 1 to 4 processor sockets, and since scale-up servers are less likely to have energy efficiency as a primary concern, the power plan optimization tests are primarily run on 2-socket and 4-socket systems. The amount of RAM, disk, and network resources for each test are chosen to allow each system to run all the way up to its full capacity, while taking into account the cost restrictions that would normally be in place for real-world server environments, such as keeping the configurations reasonable.
 
->[!Important]
+> [!IMPORTANT]
 > Even though the system can run at its peak load, we typically optimize for lower load levels, since servers that consistently run at their peak load levels would be well-advised to use the **High Performance** power plan unless energy efficiency is a high priority.
 
 ### Metrics
@@ -68,7 +68,7 @@ Therefore, the PPM tuning analysis also uses throughput as its performance metri
 
 Running the CPU cores at lower frequencies reduces energy consumption. However, lower frequencies typically decrease throughput and increase response time. For the **Balanced** power plan, there is an intentional tradeoff of responsiveness and power efficiency. The SAP workload tests, as well as the response time SLAs on the other workloads, make sure that the response time increase doesn’t exceed certain threshold (5% as an example) for these specific workloads.
 
->[!Note]
+> [!NOTE]
 > If the workload uses response time as the performance metric, the system should either switch to the **High Performance** power plan or change **Balanced** power plan as suggested in [Recommended Balanced Power Plan Parameters for Quick Response Time](recommended-balanced-plan-parameters.md).
 
 ### Tuning results
