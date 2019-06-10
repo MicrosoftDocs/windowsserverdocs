@@ -8227,6 +8227,41 @@
       "redirect_document_id": true
     },
     {
+      "source_path": "EssentialsDocs/migrate/Move-Windows-SBS-2011-Essentials-settings-and-data-to-the-Destination-Server-for-Windows-Server-Essentials-migration.md",
+      "redirect_url": "/windows-server-essentials/migrate/Move-Windows-SBS-2011-Essentials-to-the-Destination-Server-for-migration",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "EssentialsDocs/migrate/Move-Windows-SBS-2003-settings-and-data-to-the-Destination-Server-for-Windows-Server-Essentials-migration.md",
+      "redirect_url": "/windows-server-essentials/migrate/Move-Windows-SBS-2003-to-the-Destination-Server-for-migration",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "EssentialsDocs/migrate/Move-Windows-SBS-2008-settings-and-data-to-the-Destination-Server-for-Windows-Server-Essentials-migration.md",
+      "redirect_url": "/windows-server-essentials/migrate/Move-Windows-SBS-2008-to-the-Destination-Server-for-migration",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "EssentialsDocs/migrate/Move-Windows-SBS-2011-Standard-settings-and-data-to-the-Destination-Server-for-Windows-Server-Essentials-migration.md",
+      "redirect_url": "/windows-server-essentials/migrate/Move-Windows-SBS-2011-Standard-to-the-Destination-Server-for-migration",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "EssentialsDocs/migrate/Move-Windows-Server-2008-Foundation-settings-and-data-to-the-Destination-Server-for-Windows-Server-Essentials-migration.md",
+      "redirect_url": "/windows-server-essentials/migrate/Move-Windows-Server-2008-Foundation-to-the-Destination-Server-for-migration",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/identity/ad-fs/deployment/Configure-Name-Resolution-for-a-Federation-Server-Proxy-in-a-DNS-Zone-That-Serves-Only-the-Perimeter-Network.md",
+      "redirect_url": "/windows-server/identity/ad-fs/deployment/Configure-Name-Resolution-for-Federation-Server-Proxy-in-DNS-Zone-Serving-Only-Perimeter-Network",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/identity/ad-fs/deployment/Configure-Name-Resolution-for-a-Federation-Server-Proxy-in-a-DNS-Zone-That-Serves-Both-the-Perimeter-Network-and-Internet-Clients.md",
+      "redirect_url": "/windows-server/identity/ad-fs/deployment/Configure-Name-Resolution-for-Federation-Server-Proxy-in-DNS-Zone-Serving-Both-Perimeter-Network-and-Internet-Clients",
+      "redirect_document_id": true
+    },
+    {
       "source_path": "WindowsServerDocs/identity/web-application-proxy/web-application-proxy-windows-server.md",
       "redirect_url": "/windows-server/remote/remote-access/web-application-proxy/web-application-proxy-windows-server",
       "redirect_document_id": true

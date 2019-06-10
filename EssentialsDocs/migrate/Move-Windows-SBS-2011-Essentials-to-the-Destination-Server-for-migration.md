@@ -1,5 +1,5 @@
 ---
-title: "Move Windows Server 2008 Foundation settings and data to the Destination Server for Windows Server Essentials migration"
+title: "Move Windows SBS 2011 Essentials settings and data to the Destination Server for Windows Server Essentials migration"
 description: "Describes how to use Windows Server Essentials"
 ms.custom: na
 ms.date: 10/03/2016
@@ -8,29 +8,28 @@ ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
-ms.assetid: 3ff7d040-ebd1-421c-80db-765deacedd4c
+ms.assetid: 47548994-9fa0-42e0-afa4-c2ccbd063acb
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
 ---
 
-# Move Windows Server 2008 Foundation settings and data to the Destination Server for Windows Server Essentials migration
+# Move Windows SBS 2011 Essentials settings and data to the Destination Server for Windows Server Essentials migration
 
 >Applies To: Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, Windows Server 2012 Essentials
 
-Move settings and data to the Destination Server as follows: 
+Move settings and data to the Destination Server as follows:  
+  
 
-1.  [Copy data to the Destination Server (optional)](Move-Windows-Server-2008-Foundation-settings-and-data-to-the-Destination-Server-for-Windows-Server-Essentials-migration.md#BKMK_CopyData)  
+1.  [Copy data to the Destination Server](Move-Windows-SBS-2011-Essentials-to-the-Destination-Server-for-migration.md#BKMK_CopyData)  
   
-2.  [Import Active Directory user accounts to the Windows Server Essentials Dashboard (optional)](Move-Windows-Server-2008-Foundation-settings-and-data-to-the-Destination-Server-for-Windows-Server-Essentials-migration.md#BKMK_ImportADaccounts)  
+2.  [Import Active Directory user accounts to the Windows Server Essentials Dashboard (optional)](Move-Windows-SBS-2011-Essentials-to-the-Destination-Server-for-migration.md#BKMK_ImportADaccounts)  
   
-3.  [Move the DHCP Server role from the Source Server to the router](Move-Windows-Server-2008-Foundation-settings-and-data-to-the-Destination-Server-for-Windows-Server-Essentials-migration.md#BKMK_MoveDHCP)  
+3.  [Configure the network](Move-Windows-SBS-2011-Essentials-to-the-Destination-Server-for-migration.md#BKMK_Network)  
   
-4.  [Configure the network](Move-Windows-Server-2008-Foundation-settings-and-data-to-the-Destination-Server-for-Windows-Server-Essentials-migration.md#BKMK_Network)  
-  
-5.  [Map permitted computers to user accounts](Move-Windows-Server-2008-Foundation-settings-and-data-to-the-Destination-Server-for-Windows-Server-Essentials-migration.md#BKMK_MapPermittedComputers)  
-  
-##  <a name="BKMK_CopyData"></a> Copy data to the Destination Server (optional)  
+4.  [Map permitted computers to user accounts](Move-Windows-SBS-2011-Essentials-to-the-Destination-Server-for-migration.md#BKMK_MapPermittedComputers)  
+ 
+##  <a name="BKMK_CopyData"></a> Copy data to the Destination Server  
  Before you copy data from the Source Server to the Destination Server, perform the following tasks:  
   
 -   Review the list of shared folders on the Source Server, including permissions for each folder. Create or customize the folders on the Destination Server to match the folder structure that you are migrating from the Source Server.  
@@ -41,7 +40,7 @@ Move settings and data to the Destination Server as follows:
   
 #### To copy data from the Source Server to the Destination Server  
   
-1.  Sign on to the Destination Server as a domain administrator, and then open a command window.  
+1.  Sign in to the Destination Server as a domain administrator, and then open a command window.  
   
 2.  At the command prompt, type the following command, and then press ENTER:  
   
@@ -52,7 +51,7 @@ Move settings and data to the Destination Server as follows:
      - \<SharedSourceFolderName\> is the name of the shared folder on the Source Server
      - \<DestinationServerName\> is the name of the Destination Server,
      - \<SharedDestinationFolderName\> is the shared folder on the Destination Server to which the data will be copied.  
-  
+        
 3.  Repeat the previous step for each shared folder that you are migrating from the Source Server.  
   
 ##  <a name="BKMK_ImportADaccounts"></a> Import Active Directory user accounts to the Windows Server Essentials Dashboard (optional)  
@@ -68,32 +67,7 @@ Move settings and data to the Destination Server as follows:
   
      `Import-WssUser  SamAccountName [AD username]`  
   
-##  <a name="BKMK_MoveDHCP"></a> Move the DHCP Server role from the Source Server to the router  
- If your Source Server is running the DHCP role, perform the following steps to move the DHCP role to the router.  
-  
-#### To move the DHCP role from the Source Server to the router  
-  
-1.  Turn off the DHCP service on the Source Server, as follows:  
-  
-    1.  On the Source Server, click **Start**, click **Administrative Tools**, and then click **Services**.  
-  
-    2.  In the list of currently running services, right-click **DHCP Server**, and then click **Properties**.  
-  
-    3.  For **Start type**, select **Disabled**.  
-  
-    4.  Stop the service.  
-  
-2.  Turn on the DHCP Role on your router.  
-  
-    1.  Follow the instructions in your router documentation to turn on the DHCP role on the router.  
-  
-    2.  To ensure that IP addresses issued by the Source Server remain the same, follow the instructions in your router documentation to configure the DHCP range on the router to be the same as the DHCP range on the Source Server.  
-  
-        > [!IMPORTANT]
-        >  If you have not set up a static IP or DHCP reservations on the router for the Destination Server, and the DHCP range is not the same as the Source Server, it is possible that the router will issue a new IP address for Destination Server. If this happens, reset the port forwarding rules of the router to forward to the new IP address of the Destination Server.  
-  
 ##  <a name="BKMK_Network"></a> Configure the network  
- After you move the DHCP role to the router, configure the network settings on the Destination Server.  
   
 #### To configure the network  
   
@@ -110,7 +84,7 @@ Move settings and data to the Destination Server as follows:
 -   Port 443: HTTPS Web traffic  
   
 ##  <a name="BKMK_MapPermittedComputers"></a> Map permitted computers to user accounts  
- In  Windows Server Essentials, a user must be explicitly assigned to a computer for it to be displayed in Remote Web Access. Each user account that is migrated from Windows Server 2008 Foundation must be mapped to one or more computers.  
+ Each user account that is migrated from Windows Small Business Server 2011 Essentials must be mapped to one or more computers.  
   
 #### To map user accounts to computers  
   
