@@ -9,7 +9,7 @@ author: jasongerend
 ms.author: jgerend
 manager: jasgroce
 ms.localizationpriority: medium
-ms.date: 05/29/2019
+ms.date: 06/07/2019
 ---
 # Server Core App Compatibility Feature on Demand (FOD)
 
@@ -59,7 +59,7 @@ Operating system components that are available as part of the Server Core App Co
 
         -   To run Failover Cluster Manager, enter **cluadmin** at the command prompt.
 
-Servers running Windows Server, version 1903 and later also support the following components:
+Servers running Windows Server, version 1903 and later also support the following components (when using the same version of the App Compatibility FOD):
 
 - Hyper-V Manager (virtmgmt.msc)
 - Task Scheduler (taskschd.msc)

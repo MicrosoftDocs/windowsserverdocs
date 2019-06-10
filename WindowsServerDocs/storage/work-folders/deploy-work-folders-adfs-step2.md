@@ -6,7 +6,7 @@ ms.topic: article
 manager: klaasl
 ms.author: jeffpatt
 author: JeffPatt24
-ms.date: 4/5/2017
+ms.date: 06/06/2019
 ms.assetid: 0a48852e-48cc-4047-ae58-99f11c273942
 ---
 # Deploy Work Folders with AD FS and Web Application Proxy: Step 2, AD FS Post-Configuration Work
@@ -26,11 +26,12 @@ This topic describes the second step in deploying Work Folders with Active Direc
 -   [Deploy Work Folders with AD FS and Web Application Proxy: Step 5, Set Up Clients](deploy-work-folders-adfs-step5.md)  
   
 > [!NOTE]
->   The instructions covered in this section are for a Server 2016 environment. If you're using Windows Server 2012 R2, follow the [Windows Server 2012 R2 instructions](https://technet.microsoft.com/library/dn747208(v=ws.11).aspx).
+> The instructions covered in this section are for a Windows Server 2019 or Windows Server 2016 environment. If you're using Windows Server 2012 R2, follow the [Windows Server 2012 R2 instructions](https://technet.microsoft.com/library/dn747208(v=ws.11).aspx).
 
 In step 1, you installed and configured AD FS. Now, you need to perform the following post-configuration steps for AD FS.  
   
-## Configure DNS entries  
+## Configure DNS entries
+
 You must create two DNS entries for AD FS. These are the same two entries that were used in the pre-installation steps when you created the subject alternative name (SAN) certificate.  
   
 The DNS entries are in the form:  
@@ -47,7 +48,8 @@ In the test example, the values are:
   
 -   **enterpriseregistration.contoso.com**  
   
-## Create the A and CNAME records for AD FS  
+## Create the A and CNAME records for AD FS
+
 To create A and CNAME records for AD FS, follow these steps:  
   
 1.  On your domain controller, open DNS Manager.  
@@ -60,7 +62,7 @@ To create A and CNAME records for AD FS, follow these steps:
   
     > [!IMPORTANT]  
     > When you set up AD FS by using the Windows Server user interface (UI) instead of Windows PowerShell, you must create an A record instead of a CNAME record for AD FS. The reason is that the service principal name (SPN) that is created via the UI contains only the alias that is used to set up the AD FS service as the host.  
-    >   
+
 4.  In **IP address**, enter the IP address for the AD FS server. In the test example, this is **192.168.0.160**. Click **Add Host**.  
   
 5.  In the Forward Lookup Zones folder, right-click on your domain again, and select **New Alias (CNAME)**.  
@@ -71,12 +73,13 @@ To create A and CNAME records for AD FS, follow these steps:
   
 To accomplish the equivalent steps via Windows PowerShell, use the following command. The command must be executed on the domain controller.  
   
-```powershell  
+```Powershell  
 Add-DnsServerResourceRecord  -ZoneName "contoso.com" -Name blueadfs -A -IPv4Address 192.168.0.160   
-Add-DnsServerResourceRecord  -ZoneName "contoso.com" -Name enterpriseregistration -CName  -HostNameAlias 2016-ADFS.contoso.com   
+Add-DnsServerResourceRecord  -ZoneName "contoso.com" -Name enterpriseregistration -CName  -HostNameAlias 2016-ADFS.contoso.com
 ```  
   
-## Set up the AD FS relying party trust for Work Folders  
+## Set up the AD FS relying party trust for Work Folders
+
 You can set up and configure the relying party trust for Work Folders, even though Work Folders hasn't been set up yet. The relying party trust must be set up to enable Work Folders to use AD FS. Because you're in the process of setting up AD FS, now is a good time to do this step.  
   
 To set up the relying party trust:  
@@ -95,7 +98,7 @@ To set up the relying party trust:
   
 7.  On the **Configure URL** page, click **Next**.  
   
-8. On the **Configure Identifiers** page, add the following identifier: **https://windows-server-work-folders/V1**. This identifier is a hard-coded value used by Work Folders, and is sent by the Work Folders service when it is communicating with AD FS. Click **Next**.  
+8. On the **Configure Identifiers** page, add the following identifier: `https://windows-server-work-folders/V1`. This identifier is a hard-coded value used by Work Folders, and is sent by the Work Folders service when it is communicating with AD FS. Click **Next**.  
   
 9. On the Choose Access Control Policy page, select **Permit Everyone**, and then click **Next**.  
   
@@ -125,7 +128,8 @@ To set up the relying party trust:
   
 18. Click **Finish**. You'll see the WorkFolders rule listed on the Issuance Transform Rules tab and click **OK**.  
   
-### Set relying part trust options  
+### Set relying part trust options
+
 After the relying party trust has been set up for AD FS, you must finish the configuration by running five commands in Windows PowerShell. These commands set options that are needed for Work Folders to communicate successfully with AD FS, and can't be set through the UI. These options are:  
   
 -   Enable the use of JSON web tokens (JWTs)  
@@ -148,7 +152,8 @@ Set-ADFSRelyingPartyTrust -TargetIdentifier "https://windows-server-work-folders
 Grant-AdfsApplicationPermission -ServerRoleIdentifier "https://windows-server-work-folders/V1" -AllowAllRegisteredClients -ScopeNames openid,profile  
 ```  
   
-## Enable Workplace Join  
+## Enable Workplace Join
+
 Enabling Workplace Join is optional, but can be useful when you want users to be able to use their personal devices to access workplace resources.  
   
 To enable device registration for Workplace Join, you must run the following Windows PowerShell commands, which will configure device registration and set the global authentication policy:  
@@ -159,7 +164,8 @@ Initialize-ADDeviceRegistration -ServiceAccountName <your AD FS service account>
 Set-ADFSGlobalAuthenticationPolicy -DeviceAuthenticationEnabled $true   
 ```  
   
-## Export the AD FS certificate  
+## Export the AD FS certificate
+
 Next, export the self\-signed AD FS certificate so that it can be installed on the following machines in the test environment:  
   
 -   The server that is used for Work Folders  
@@ -200,7 +206,8 @@ To export the certificate, follow these steps:
   
 Installation of the certificate is covered later in the deployment procedure.  
   
-## Manage the private key setting  
+## Manage the private key setting
+
 You must give the AD FS service account permission to access the private key of the new certificate. You will need to grant this permission again when you replace the communication certificate after it expires. To grant permission, follow these steps:  
   
 1.  Click **Start**, and then click **Run**.  
@@ -231,14 +238,13 @@ You must give the AD FS service account permission to access the private key of 
   
 If you don't have the option to manage private keys, you might need to run the following command: `certutil -repairstore my *`  
   
-## Verify that AD FS is operational  
-To verify that AD FS is operational, open a browser window and go to https://blueadfs.contoso.com/federationmetadata/2007-06/federationmetadata.xml 
+## Verify that AD FS is operational
+
+To verify that AD FS is operational, open a browser window and go to `https://blueadfs.contoso.com/federationmetadata/2007-06/federationmetadata.xml`, changing the URL to match your environment.
   
 The browser window will display the federation server metadata without any formatting. If you can see the data without any SSL errors or warnings, your federation server is operational.  
   
 Next step: [Deploy Work Folders with AD FS and Web Application Proxy: Step 3, Set Up Work Folders](deploy-work-folders-adfs-step3.md)  
   
 ## See Also  
-[Work Folders Overview](Work-Folders-Overview.md)  
-  
-
+[Work Folders Overview](Work-Folders-Overview.md)
