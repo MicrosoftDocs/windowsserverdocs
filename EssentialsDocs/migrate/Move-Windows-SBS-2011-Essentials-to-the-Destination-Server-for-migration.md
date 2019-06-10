@@ -21,13 +21,13 @@ manager: dongill
 Move settings and data to the Destination Server as follows:  
   
 
-1.  [Copy data to the Destination Server](Move-Windows-SBS-2011-Essentials-settings-and-data-to-the-Destination-Server-for-Windows-Server-Essentials-migration.md#BKMK_CopyData)  
+1.  [Copy data to the Destination Server](Move-Windows-SBS-2011-Essentials-to-the-Destination-Server-for-migration.md#BKMK_CopyData)  
   
-2.  [Import Active Directory user accounts to the Windows Server Essentials Dashboard (optional)](Move-Windows-SBS-2011-Essentials-settings-and-data-to-the-Destination-Server-for-Windows-Server-Essentials-migration.md#BKMK_ImportADaccounts)  
+2.  [Import Active Directory user accounts to the Windows Server Essentials Dashboard (optional)](Move-Windows-SBS-2011-Essentials-to-the-Destination-Server-for-migration.md#BKMK_ImportADaccounts)  
   
-3.  [Configure the network](Move-Windows-SBS-2011-Essentials-settings-and-data-to-the-Destination-Server-for-Windows-Server-Essentials-migration.md#BKMK_Network)  
+3.  [Configure the network](Move-Windows-SBS-2011-Essentials-to-the-Destination-Server-for-migration.md#BKMK_Network)  
   
-4.  [Map permitted computers to user accounts](Move-Windows-SBS-2011-Essentials-settings-and-data-to-the-Destination-Server-for-Windows-Server-Essentials-migration.md#BKMK_MapPermittedComputers)  
+4.  [Map permitted computers to user accounts](Move-Windows-SBS-2011-Essentials-to-the-Destination-Server-for-migration.md#BKMK_MapPermittedComputers)  
  
 ##  <a name="BKMK_CopyData"></a> Copy data to the Destination Server  
  Before you copy data from the Source Server to the Destination Server, perform the following tasks:  
