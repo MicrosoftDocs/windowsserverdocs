@@ -18,26 +18,26 @@ manager: dongill
 
 >Applies To: Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, Windows Server 2012 Essentials
 
-Move settings and data to the Destination Server as follows: 
+Move settings and data to the Destination Server as follows:
 
-1.  [Copy data to the Destination Server (optional)](Move-Windows-Server-2008-Foundation-settings-and-data-to-the-Destination-Server-for-Windows-Server-Essentials-migration.md#BKMK_CopyData)  
+1. [Copy data to the Destination Server (optional)](#copy-data-to-the-destination-server)
+
+2. [Import Active Directory user accounts to the Windows Server Essentials Dashboard (optional)](#import-active-directory-user-accounts-to-the-windows-server-essentials-dashboard)
+
+3. [Move the DHCP Server role from the Source Server to the router](#move-the-dhcp-server-role-from-the-source-server-to-the-router)
+
+4. [Configure the network](#configure-the-network) 
+
+5. [Map permitted computers to user accounts](#map-permitted-computers-to-user-accounts)
   
-2.  [Import Active Directory user accounts to the Windows Server Essentials Dashboard (optional)](Move-Windows-Server-2008-Foundation-settings-and-data-to-the-Destination-Server-for-Windows-Server-Essentials-migration.md#BKMK_ImportADaccounts)  
-  
-3.  [Move the DHCP Server role from the Source Server to the router](Move-Windows-Server-2008-Foundation-settings-and-data-to-the-Destination-Server-for-Windows-Server-Essentials-migration.md#BKMK_MoveDHCP)  
-  
-4.  [Configure the network](Move-Windows-Server-2008-Foundation-settings-and-data-to-the-Destination-Server-for-Windows-Server-Essentials-migration.md#BKMK_Network)  
-  
-5.  [Map permitted computers to user accounts](Move-Windows-Server-2008-Foundation-settings-and-data-to-the-Destination-Server-for-Windows-Server-Essentials-migration.md#BKMK_MapPermittedComputers)  
-  
-##  <a name="BKMK_CopyData"></a> Copy data to the Destination Server (optional)  
+## Copy data to the Destination Server
  Before you copy data from the Source Server to the Destination Server, perform the following tasks:  
   
--   Review the list of shared folders on the Source Server, including permissions for each folder. Create or customize the folders on the Destination Server to match the folder structure that you are migrating from the Source Server.  
+- Review the list of shared folders on the Source Server, including permissions for each folder. Create or customize the folders on the Destination Server to match the folder structure that you are migrating from the Source Server.  
   
--   Review the size of each folder and ensure that the Destination Server has enough storage space.  
+- Review the size of each folder and ensure that the Destination Server has enough storage space.  
   
--   Make the shared folders on the Source Server Read-only for all users so no writing can take place on the drive while you are copying files to the Destination Server.  
+- Make the shared folders on the Source Server Read-only for all users so no writing can take place on the drive while you are copying files to the Destination Server.  
   
 #### To copy data from the Source Server to the Destination Server  
   
@@ -55,10 +55,10 @@ Move settings and data to the Destination Server as follows:
   
 3.  Repeat the previous step for each shared folder that you are migrating from the Source Server.  
   
-##  <a name="BKMK_ImportADaccounts"></a> Import Active Directory user accounts to the Windows Server Essentials Dashboard (optional)  
+## Import Active Directory user accounts to the Windows Server Essentials Dashboard
  By default, all user accounts created on the Source Server are automatically migrated to the Dashboard in Windows Server Essentials. However, automatic migration of an Active Directory user account will fail if all properties do not meet migration requirements. You can use the following Windows PowerShell cmdlet to import Active Directory users.  
   
-#### To import an Active Directory user account to the Windows Server Essentials Dashboard  
+#### To import an Active Directory user account to the Windows Server Essentials Dashboard
   
 1.  Log on to the Destination Server as a domain administrator.  
   
@@ -68,7 +68,7 @@ Move settings and data to the Destination Server as follows:
   
      `Import-WssUser  SamAccountName [AD username]`  
   
-##  <a name="BKMK_MoveDHCP"></a> Move the DHCP Server role from the Source Server to the router  
+## Move the DHCP Server role from the Source Server to the router
  If your Source Server is running the DHCP role, perform the following steps to move the DHCP role to the router.  
   
 #### To move the DHCP role from the Source Server to the router  
@@ -92,7 +92,7 @@ Move settings and data to the Destination Server as follows:
         > [!IMPORTANT]
         >  If you have not set up a static IP or DHCP reservations on the router for the Destination Server, and the DHCP range is not the same as the Source Server, it is possible that the router will issue a new IP address for Destination Server. If this happens, reset the port forwarding rules of the router to forward to the new IP address of the Destination Server.  
   
-##  <a name="BKMK_Network"></a> Configure the network  
+## Configure the network
  After you move the DHCP role to the router, configure the network settings on the Destination Server.  
   
 #### To configure the network  
@@ -109,7 +109,7 @@ Move settings and data to the Destination Server as follows:
   
 -   Port 443: HTTPS Web traffic  
   
-##  <a name="BKMK_MapPermittedComputers"></a> Map permitted computers to user accounts  
+## Map permitted computers to user accounts  
  In  Windows Server Essentials, a user must be explicitly assigned to a computer for it to be displayed in Remote Web Access. Each user account that is migrated from Windows Server 2008 Foundation must be mapped to one or more computers.  
   
 #### To map user accounts to computers  
@@ -129,7 +129,6 @@ Move settings and data to the Destination Server as follows:
 7.  Repeat steps 3, 4, 5, and 6 for each user account.  
   
 > [!NOTE]
->  You do not need to change the configuration of the client computer. It is configured automatically.  
-  
-> [!NOTE]
->  After you complete the migration, if you encounter an issue when you create the first new user account on the Destination Server, remove the user account that you added, and then create it again.
+> You do not need to change the configuration of the client computer. It is configured automatically.  
+>
+> After you complete the migration, if you encounter an issue when you create the first new user account on the Destination Server, remove the user account that you added, and then create it again.
