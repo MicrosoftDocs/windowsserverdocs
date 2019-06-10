@@ -24,11 +24,11 @@ Move settings and data to the Destination Server as follows:
 
 2. [Import Active Directory user accounts to the Windows Server Essentials Dashboard (optional)](#import-active-directory-user-accounts-to-the-windows-server-essentials-dashboard)
 
-3. [Remove old logon scripts (optional)](#remove-old-logon-scripts)
+3. [Move the DHCP Server role from the Source Server to the router](#move-the-dhcp-server-role-from-the-source-server-to-the-router)
 
-4. [Remove legacy Active Directory Group Policy Objects (optional)](#remove-legacy-active-directory-group-policy-objects) 
+4. [Configure the network](#configure-the-network)
 
-5. [Configure the network](#configure-the-network) 
+5. [Remove legacy Active Directory Group Policy objects (optional)](#remove-legacy-active-directory-group-policy-objects)
 
 6. [Map permitted computers to user accounts](#map-permitted-computers-to-user-accounts)
 
