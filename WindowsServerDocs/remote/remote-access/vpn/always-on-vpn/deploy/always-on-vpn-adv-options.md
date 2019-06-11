@@ -73,8 +73,8 @@ The following table lists the approximate release dates of the fixes for each ve
 
 1. Install the Windows updates as they become available.
 1. Make sure that all the VPN client and RRAS server certificates that you use have CDP entries, and that the RRAS server can reach the respective CRLs.
-1. On the RRAS server, use the **Set-VpnAuthProtocol** PowerShell cmdlet to configure the **RootCertificateNameToAccept** parameter.<br />
-   The following example lists the commands to use to do this. In the example, **CN=Contoso Root Certification Authority** represents the distinguished name of the Root Certification Authority. 
+1. On the RRAS server, use the **Set-VpnAuthProtocol** PowerShell cmdlet to configure the **RootCertificateNameToAccept** parameter.<br /><br />
+   The following example lists the commands to do this. In the example, **CN=Contoso Root Certification Authority** represents the distinguished name of the Root Certification Authority. 
    ``` powershell
    $cert1 = ( Get-ChildItem -Path cert:LocalMachine\root | Where-Object -FilterScript { $_.Subject -Like "*CN=Contoso Root Certification Authority,*" } )
    Set-VpnAuthProtocol -RootCertificateNameToAccept $cert1 -PassThru
@@ -93,7 +93,7 @@ To disable certificate revocation for these VPN connections, set **CertAuthFlags
 **How to revoke a VPN client certificate for a VPN connection that is based on an IKEv2 machine certificate**
 1. Revoke the VPN client certificate from the Certification Authority.
 1. Publish a new CRL from the Certification Authority.
-1. On the RRAS server, open an administrative Command Prompt window and then run the following commands:
+1. On the RRAS server, open an administrative Command Prompt window, and then run the following commands:
    ```
    certutil -urlcache * delete
    certutil -setreg chain\ChainCacheResyncFiletime @now
@@ -101,15 +101,14 @@ To disable certificate revocation for these VPN connections, set **CertAuthFlags
 
 **How to verify that certificate revocation for IKEv2 machine certificate-based VPN connections is working**  
 >[!Note]  
-> Before you use this procedure, make sure that you have enabled the CAPI2 operational event log.
+> Before you use this procedure, make sure that you enable the CAPI2 operational event log.
 1. Follow the previous steps to revoke a VPN client certificate.
-1. Try to connect to the VPN by using a client that has the revoked certificate.<br />
-The RRAS server should refuse the connection and display a message such as “IKE authentication credentials are unacceptable.” 
-1. On the RRAS server, open Event Viewer and navigate to **Applications and Services Logs/Microsoft/Windows/CAPI2**. 
+1. Try to connect to the VPN by using a client that has the revoked certificate. The RRAS server should refuse the connection and display a message such as “IKE authentication credentials are unacceptable.”
+1. On the RRAS server, open Event Viewer, and navigate to **Applications and Services Logs/Microsoft/Windows/CAPI2**. 
 1. Search for an event that has the following information:
    * Log Name: **Microsoft-Windows-CAPI2/Operational Microsoft-Windows-CAPI2/Operational**
    * Event ID: **41** 
-   * The event contains the following text: **subject="*Client FQDN*"** (*Client FQDN* represents the fully qualified domain name of the client that has the revoked certificate) 
+   * The event contains the following text: **subject="*Client FQDN*"** (*Client FQDN* represents the fully qualified domain name of the client that has the revoked certificate.) 
 
    The **<Result>** field of the event data should include **The certificate is revoked**. For example, see the following excerpts from an event:
    ```xml
