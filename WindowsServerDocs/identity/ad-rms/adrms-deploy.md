@@ -254,7 +254,7 @@ If your AD RMS cluster is using a Hardware Security Module instead of a Centrall
 
 13. Once logged back on, open **Server Manager** select **Tools** and then **Active Directory Rights Management**. The management window should appear and indicate that the cluster has the additional server in the cluster.
 
-14. 14.	If the AD RMS Mobile Device Extension was installed in the original AD RMS cluster, you need to also install the MDE in the updated cluster nodes. Follow the instructions in the MDE documentation to add MDE to your AD RMS cluster. 
+14. If the AD RMS Mobile Device Extension was installed in the original AD RMS cluster, you need to also install the MDE in the updated cluster nodes. Follow the instructions in the MDE documentation to add MDE to your AD RMS cluster. 
 At this point, you can repurpose all the preexisting nodes or upgrade them to Windows Server 2016 and re-join them to the AD RMS cluster using the same process outlined above. 
 
 ### Configuring Windows Server 2016 Web Application Proxy (WAP)
