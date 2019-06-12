@@ -68,6 +68,7 @@ Repositories can be configured automatically by installing the Linux package tha
 		sudo apt-get update
 
  - Ubuntu 19.04 (Disco)
+
  		curl https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
 		sudo apt-add-repository https://packages.microsoft.com/ubuntu/19.04/prod
 		sudo apt-get update
