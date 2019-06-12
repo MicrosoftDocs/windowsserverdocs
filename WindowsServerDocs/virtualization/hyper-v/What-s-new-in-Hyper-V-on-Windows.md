@@ -54,8 +54,8 @@ As you might know, we recommend using the Server Core installation option when u
 
 So, based on customer feedback, we added one more tools to the App Compatibility feature in this version: Hyper-V Manager (virtmgmt.msc).
 
-For more info, see [Server Core app compatibility feature](../get-started-19/install-fod-19.md).
- 
+For more info, see [Server Core app compatibility feature](../../get-started-19/install-fod-19.md).
+
 ## Hyper-V Manager improvements \(updated\) 
   
 -   **Alternate credentials support** - You can now use a different set of credentials in Hyper-V Manager when you connect to another Windows Server 2016 or Windows 10 remote host. You can also save these credentials to make it easier to log on again.  
