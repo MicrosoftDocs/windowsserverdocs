@@ -194,9 +194,14 @@ The following registry entries must be added in order to enable W32Time logging:
 #### MaxAllowedPhaseOffset information
 In order for W32Time to set the computer clock gradually, the offset must be less than the **MaxAllowedPhaseOffset** value and satisfy the following equation at the same time:  
 
-```  
-|CurrentTimeOffset| / (PhaseCorrectRate*UpdateInterval) < SystemClockRate / 2  
-``` 
+* Windows Server 2016 and later versions:
+   ```  
+    |CurrentTimeOffset| / (16*PhaseCorrectRate*pollIntervalInSeconds) <= SystemClockRate / 2  
+   ``` 
+* Windows Server 2012 R2 and earlier versions:
+   ```  
+   |CurrentTimeOffset| / (PhaseCorrectRate*UpdateInterval) <= SystemClockRate / 2  
+   ``` 
 The CurrentTimeOffset is measured in clock ticks, where 1ms = 10,000 clock ticks on a Windows system.  
 
 SystemClockRate and PhaseCorrectRate are also measured in clock ticks. To get the SystemClockRate, you can use the following command and convert it from seconds to clock ticks using the formula of seconds*1000\*10000:  
@@ -210,7 +215,7 @@ SystemclockRate is the rate of the clock on the system. Using 156000 seconds as 
 
 MaxAllowedPhaseOffset is also in seconds. To convert it to clock ticks, multiply MaxAllowedPhaseOffset*1000\*10000.  
 
-The following two examples show how to apply  
+The following two examples show how to apply these calculations when using Windows Server 2012 R2 or earlier.
 
 **Example 1**: Time differs by 4 minutes (For example, your time is 11:05 AM and the time sample received from a peer and believed to be correct is 11:09 AM).
   
@@ -233,11 +238,11 @@ Is CurrentTimeOffset < MaxAllowedPhaseOffset?
 AND does it satisfy the above equation? 
 
 ```
-(|CurrentTimeOffset| / (PhaseCorrectRate*UpdateInterval) < SystemClockRate / 2)  
+(|CurrentTimeOffset| / (PhaseCorrectRate*UpdateInterval) <= SystemClockRate / 2)  
 
-Is 2,400,000,000 / (30000*1) < 156000/2  
+Is 2,400,000,000 / (30000*1) <= 156000/2  
 
-Is 80,000 < 78,000  
+Is 80,000 <= 78,000  
 
 NO/FALSE  
 ```  
@@ -268,11 +273,11 @@ Is CurrentTimeOffset < MaxAllowedPhaseOffset?
 AND does it satisfy the above equation?
 
 ```
-(|CurrentTimeOffset| / (PhaseCorrectRate*UpdateInterval) < SystemClockRate / 2)  
+(|CurrentTimeOffset| / (PhaseCorrectRate*UpdateInterval) <= SystemClockRate / 2)  
 
-Is 3 mins (1,800,000,000) / (30000*1) < 156000/2  
+Is 3 mins (1,800,000,000) / (30000*1) <= 156000/2  
 
-Is 60,000 < 78,000  
+Is 60,000 <= 78,000  
 
 YES/TRUE  
 ```  
