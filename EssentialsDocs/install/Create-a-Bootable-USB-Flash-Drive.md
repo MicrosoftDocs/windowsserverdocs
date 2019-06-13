@@ -55,6 +55,8 @@ You can create a bootable USB flash drive to use to deploy  Windows Server Essen
     >  If your server platform supports Unified Extensible Firmware Interface (UEFI), you should format the USB flash drive as FAT32 rather than as NTFS. To format the partition as FAT32, type `format fs=fat32 quick`, and then click ENTER.  
   
 10. Type `active`, and then click ENTER.  
+
+(Diskpart's command "Active" does not work anymore in last Windows 10 builds. The error is always "The Selected disk is not fixed MBR disk. The Active command can only be used on dixed MBR disks". It doesn't matter, is it NTFS or FAT32. Without this, the USB disk will not boot. This worked before, but not anymore (I suspect something changed in Windows last year))
   
 11. Type `exit`, and then click ENTER.  
   
