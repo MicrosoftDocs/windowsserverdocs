@@ -28,7 +28,7 @@ The QCT Management Suite extends the functionality of Windows Admin Center with 
 
 ![QCT Extension](../../media/extend-case-study-qct/T21P_disk_mapping.png)
 
-- Easy-to-use monitoring tool for hardware event log and health status 
+- Easy-to-use monitoring tool for hardware event log and health status.
 
 ![QCT Extension](../../media/extend-case-study-qct/D52T_event_log.PNG)
 
