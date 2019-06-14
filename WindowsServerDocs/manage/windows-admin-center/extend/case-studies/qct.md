@@ -26,16 +26,16 @@ The QCT Management Suite extends the functionality of Windows Admin Center with 
 
 - **Disk mapping and LED identification for efficient service support** - QCT Management Suite wizard UI design displays the slot of each selected disk with an overview of disk profiles and LED light controls of selected disks for efficient replacement.
 
-![QCT_Extension](../../media/extend-case-study-qct/T21P_disk mapping.png)
+![QCT Extension](../../media/extend-case-study-qct/T21P_disk_mapping.png)
 
 - Easy-to-use monitoring tool for hardware event log and health status 
 
-![QCT_Extension](../../media/extend-case-study-qct/D52T_event log.PNG)
+![QCT Extension](../../media/extend-case-study-qct/D52T_event_log.PNG)
 
 - **Predictive disk management** - Evaluate the system condition with S.M.A.R.T information and unhealthy notifications which allow organizations to take action before total failure occurs.
 
 ![QCT Extension](../../media/extend-case-study-qct/T21P_SMART.PNG)
 
 Learn more about the QCT Management Suite for Windows Admin Center:
-- [QCT Management Suite webpage](https://go.qct.io/solutions/enterprise-private-cloud/qxstack-windows-server-cloud-ready-appliances/)
+- [QCT Management Suite web page](https://go.qct.io/solutions/enterprise-private-cloud/qxstack-windows-server-cloud-ready-appliances/)
 - [QCT Management Suite datasheet](https://go.qct.io/wp-content/uploads/2019/04/WAC-data-sheet_v04222019.pdf)
