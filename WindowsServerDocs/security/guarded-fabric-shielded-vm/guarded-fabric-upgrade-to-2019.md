@@ -47,7 +47,7 @@ We recommend upgrading your HGS cluster to Windows Server 2019 before you upgrad
 
 Upgrading your HGS cluster will require you to temporarily remove one node from the cluster at a time while it is upgraded. This will reduce the capacity of your cluster to respond to requests from your Hyper-V hosts and could result in slow response times or service outages for your tenants. Ensure you have sufficient capacity to handle your attestation and key release requests before upgrading an HGS server.
 
-To upgrade your HGS cluster, perform the following steps on each node of your cluster, one node at at time:
+To upgrade your HGS cluster, perform the following steps on each node of your cluster, one node at a time:
 
 1.  Remove the HGS server from your cluster by running `Clear-HgsServer` in an elevated PowerShell prompt. This cmdlet will remove the HGS replicated store, HGS websites, and node from the failover cluster.
 2.  If your HGS server is a domain controller (default configuration), you will need to run `adprep /forestprep` and `adprep /domainprep` on the first node being upgraded to prepare the domain for an OS upgrade. See the [Active Directory Domain Services upgrade documentation](https://docs.microsoft.com/windows-server/identity/ad-ds/deploy/upgrade-domain-controllers#supported-in-place-upgrade-paths) for more information.
