@@ -113,7 +113,7 @@ RegionId TotalSizeInBytes DeviceId
 
 This shows all the persistent memory region(s) not assigned to a logical persistent memory disk on the system.
 
-To see all of the persistent memory devices information in the system, including device device type, location, health and operational status, etc. you can run the following cmdlet on the local server:
+To see all of the persistent memory devices information in the system, including device type, location, health and operational status, etc. you can run the following cmdlet on the local server:
 
 ```PowerShell
 Get-PmemPhysicalDevice
