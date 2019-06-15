@@ -127,7 +127,7 @@ DeviceId DeviceType           HealthStatus OperationalStatus PhysicalLocation Fi
 20       Intel INVDIMM device Healthy      {Ok}              CPU1_DIMM_C1     102005310        126 GB                 0 GB
 ```
 
-Since we we have available unused pmem region, we can create new persistent memory disks. We can create multiple persistent memory disks using the unused regions by:
+Since we have available unused pmem region, we can create new persistent memory disks. We can create multiple persistent memory disks using the unused regions by:
 
 ```PowerShell
 Get-PmemUnusedRegion | New-PmemDisk
