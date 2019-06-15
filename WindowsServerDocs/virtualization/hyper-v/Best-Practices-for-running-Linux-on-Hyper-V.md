@@ -96,6 +96,6 @@ After resizing a VHD or VHDX, administrators should use a utility like fdisk or 
 
 * [Deploy a Hyper-V Cluster](https://technet.microsoft.com/library/jj863389.aspx)
 
-* [Create Linux Images for Azure](https://docs.microsoft.com/en-us/azure/virtual-machines/linux/create-upload-generic)
+* [Create Linux Images for Azure](https://docs.microsoft.com/azure/virtual-machines/linux/create-upload-generic)
 
-* [Optimize your Linux VM on Azure](https://docs.microsoft.com/en-us/azure/virtual-machines/linux/optimization)
+* [Optimize your Linux VM on Azure](https://docs.microsoft.com/azure/virtual-machines/linux/optimization)
