@@ -17,19 +17,26 @@ ms.technology: identity-adds
 
 **Author**: Candace Hicks, Program Manager for the Enterprise and Security Group
 
-
 ## Overview
 During a Windows Update, there are user specific processes that must happen for the update to be complete. These processes require the user to be logged in to their device. On the first login after an update has been initiated, users must wait until these user specific processes are complete before they can start using their device.
 
-## What's New?
-When a user signs in on a Windows 10 device, LSA will save the user's derived credentials in memory accessible only by lsass.exe. When Windows Update initiates an automatic reboot, these credentials will be used to configure Autologon for the user. Windows Update running as system with TCB privilege will initiate the RPC call to do this.
+## How Does it Work?
+When Windows Update initiates an automatic reboot, ARSO extracts the currently signed in user’s derived credentials and configures Autologon for the user. Windows Update running as system with TCB privilege will initiate the RPC call to do this.
 
-On rebooting, the user will automatically be signed in via the Autologon mechanism and then additionally locked to protect the user's session. The locking will be initiated via Winlogon whereas the credential management is done by LSA. Upon a successful ARSO configuration and login, the credentials are immediately wiped from memory.
+On rebooting, the user will automatically be signed in via the Autologon mechanism and then additionally locked to protect the user's session. The locking will be initiated via Winlogon whereas the credential management is done by the Local Security Authority (LSA). Upon a successful ARSO configuration and login, the credentials are immediately wiped from memory.
 
  By automatically signing on and locking the user on the console, Windows Update can complete the user specific processes before the user returns to the device. In this way, the user can immediately start using their device.
 
  ARSO treats unmanaged and managed devices differently. For unmanaged devices, device encryption is used but not required for the user to get ARSO.
- For managed devices, TPM 2.0, SecureBoot, and BitLocker are required for ARSO configuration. IT admins can override this requirement via Group Policy.
+ For managed devices, TPM 2.0, SecureBoot, and BitLocker are required for ARSO configuration. IT admins can override this requirement via Group Policy. ARSO for managed devices is currently only available for devices that are joined to Azure Active Directory.
+
+
+
+|               | Windows Update| shutdown -g -t 0  |User-initiated reboots|APIs with SHUTDOWN_ARSO / EWX_ARSO flags|
+| ------------- |:-------------:| -----:            | -----:               |-----:                                  |
+| Managed Devices|:heavy_check_mark:  | :heavy_check_mark:    |              | :heavy_check_mark:    |
+| Unmanaged Devices    | :heavy_check_mark: |:heavy_check_mark: |  :heavy_check_mark:           |:heavy_check_mark:
+
 
 > [!NOTE]
 > After a Windows Update induced reboot, the last interactive user is automatically signed on and the session is locked. This gives the ability for a user's lock screen apps to still run despite the Windows Update reboot.
@@ -180,6 +187,11 @@ An existing user session can be maintained even if disabled.  Restart for an acc
 
 ### Logon Hours and Parental Controls
 The Logon Hours and parental controls can prohibit a new user session from being created.  If a restart were to occur during this window, the user would not be permitted to login.  There is additional policy that causes lock or logout as a compliance action.  This could be problematic for many child cases where account lockdown may occur between bed time and wake-up, particularly if the maintenance window is commonly during this time.
+
+## Security Details
+### Credentials Stored
+
+### Credguard Interaction
 
 ## Additional Resources
 **Table  SEQ Table \\\* ARABIC 3: ARSO Glossary**
