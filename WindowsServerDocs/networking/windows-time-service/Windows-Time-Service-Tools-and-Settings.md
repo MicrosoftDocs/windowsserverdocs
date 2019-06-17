@@ -230,9 +230,9 @@ MaxAllowedPhaseOffset = 10min = 600 seconds = 600*1000\*10000=6000000000 clock t
 
 |currentTimeOffset| = 4mins = 4*60\*1000\*10000 = 2400000000 ticks  
 
-Is CurrentTimeOffset < MaxAllowedPhaseOffset?  
+Is CurrentTimeOffset <= MaxAllowedPhaseOffset?  
 
-2400000000 < 6000000000 = TRUE  
+2400000000 <= 6000000000 = TRUE  
 ```
 
 AND does it satisfy the above equation? 
@@ -265,9 +265,9 @@ MaxAllowedPhaseOffset = 10min = 600 seconds = 600*1000\*10000=6000000000 clock t
 
 currentTimeOffset = 3mins = 3*60\*1000\*10000 = 1800000000 clock ticks  
 
-Is CurrentTimeOffset < MaxAllowedPhaseOffset?  
+Is CurrentTimeOffset <= MaxAllowedPhaseOffset?  
 
-1800000000 < 6000000000 = TRUE  
+1800000000 <= 6000000000 = TRUE  
 ```  
 
 AND does it satisfy the above equation?
