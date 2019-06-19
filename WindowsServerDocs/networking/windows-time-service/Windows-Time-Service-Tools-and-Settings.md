@@ -194,25 +194,30 @@ The following registry entries must be added in order to enable W32Time logging:
 #### MaxAllowedPhaseOffset information
 In order for W32Time to set the computer clock gradually, the offset must be less than the **MaxAllowedPhaseOffset** value and satisfy the following equation at the same time:  
 
-```  
-|CurrentTimeOffset| / (PhaseCorrectRate*UpdateInterval) < SystemClockRate / 2  
-``` 
-The CurrentTimeOffset is measured in clock ticks, where 1ms = 10,000 clock ticks on a Windows system.  
+* Windows Server 2016 and later versions:
+   ```  
+    |CurrentTimeOffset| / (16*PhaseCorrectRate*pollIntervalInSeconds) <= SystemClockRate / 2  
+   ``` 
+* Windows Server 2012 R2 and earlier versions:
+   ```  
+   |CurrentTimeOffset| / (PhaseCorrectRate*UpdateInterval) <= SystemClockRate / 2  
+   ``` 
+The **CurrentTimeOffset** value is measured in clock ticks, where 1ms = 10,000 clock ticks on a Windows system.  
 
-SystemClockRate and PhaseCorrectRate are also measured in clock ticks. To get the SystemClockRate, you can use the following command and convert it from seconds to clock ticks using the formula of seconds*1000\*10000:  
+**SystemClockRate** and **PhaseCorrectRate** are also measured in clock ticks. To get the **SystemClockRate** value, you can use the following command and convert it from seconds to clock ticks by using the formula of seconds*1000\*10000:  
 
 ```  
 W32tm /query /status /verbose  
 ClockRate: 0.0156000s  
 ```  
 
-SystemclockRate is the rate of the clock on the system. Using 156000 seconds as an example, the SystemclockRate would be = 0.0156000 \* 1000 \* 10000 = 156000 clock ticks.  
+**SystemclockRate** is the rate of the clock on the system. Using 156000 seconds as an example, the **SystemclockRate** value would be = 0.0156000 \* 1000 \* 10000 = 156000 clock ticks.  
 
-MaxAllowedPhaseOffset is also in seconds. To convert it to clock ticks, multiply MaxAllowedPhaseOffset*1000\*10000.  
+**MaxAllowedPhaseOffset** is also in seconds. To convert it to clock ticks, multiply **MaxAllowedPhaseOffset**\*1000\*10000.  
 
-The following two examples show how to apply  
+The following examples show how to apply these calculations when you use Windows Server 2012 R2 or an earlier version.
 
-**Example 1**: Time differs by 4 minutes (For example, your time is 11:05 AM and the time sample received from a peer and believed to be correct is 11:09 AM).
+**Example 1**: Time differs by 4 minutes (for example, your time is 11:05 and the time sample that you received from a peer and believe to be correct is 11:09).
   
 ```
 phasecorrectRate = 1  
@@ -225,19 +230,19 @@ MaxAllowedPhaseOffset = 10min = 600 seconds = 600*1000\*10000=6000000000 clock t
 
 |currentTimeOffset| = 4mins = 4*60\*1000\*10000 = 2400000000 ticks  
 
-Is CurrentTimeOffset < MaxAllowedPhaseOffset?  
+Is CurrentTimeOffset <= MaxAllowedPhaseOffset?  
 
-2400000000 < 6000000000 = TRUE  
+2400000000 <= 6000000000 = TRUE  
 ```
 
 AND does it satisfy the above equation? 
 
 ```
-(|CurrentTimeOffset| / (PhaseCorrectRate*UpdateInterval) < SystemClockRate / 2)  
+(|CurrentTimeOffset| / (PhaseCorrectRate*UpdateInterval) <= SystemClockRate / 2)  
 
-Is 2,400,000,000 / (30000*1) < 156000/2  
+Is 2,400,000,000 / (30000*1) <= 156000/2  
 
-Is 80,000 < 78,000  
+Is 80,000 <= 78,000  
 
 NO/FALSE  
 ```  
@@ -245,7 +250,7 @@ NO/FALSE
 Therefore W32tm would set the clock back immediately.  
 
 > [!NOTE]  
-> In this case, if you want to set the clock back slowly, you would need to adjust the values of PhaseCorrectRate or updateInterval in the registry as well to ensure the equation results in TRUE.  
+> In this case, if you want to set the clock back slowly, you would also have to adjust the values of **PhaseCorrectRate** or **updateInterval** in the registry to make sure that the equation result is **TRUE**.  
 
 **Example 2**: Time differs by 3 minutes. 
  
@@ -260,19 +265,19 @@ MaxAllowedPhaseOffset = 10min = 600 seconds = 600*1000\*10000=6000000000 clock t
 
 currentTimeOffset = 3mins = 3*60\*1000\*10000 = 1800000000 clock ticks  
 
-Is CurrentTimeOffset < MaxAllowedPhaseOffset?  
+Is CurrentTimeOffset <= MaxAllowedPhaseOffset?  
 
-1800000000 < 6000000000 = TRUE  
+1800000000 <= 6000000000 = TRUE  
 ```  
 
 AND does it satisfy the above equation?
 
 ```
-(|CurrentTimeOffset| / (PhaseCorrectRate*UpdateInterval) < SystemClockRate / 2)  
+(|CurrentTimeOffset| / (PhaseCorrectRate*UpdateInterval) <= SystemClockRate / 2)  
 
-Is 3 mins (1,800,000,000) / (30000*1) < 156000/2  
+Is 3 mins (1,800,000,000) / (30000*1) <= 156000/2  
 
-Is 60,000 < 78,000  
+Is 60,000 <= 78,000  
 
 YES/TRUE  
 ```  
