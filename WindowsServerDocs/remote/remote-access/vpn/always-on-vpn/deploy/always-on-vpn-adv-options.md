@@ -49,6 +49,88 @@ The following are additional options for advanced features.
 |App-triggered VPN     |You can configure VPN profiles to connect automatically when certain applications or types of applications start.<p>For more information about this and other triggering options, see [VPN auto-triggered profile options](https://docs.microsoft.com/windows/access-protection/vpn/vpn-auto-trigger-profile).         |
 |VPN conditional access   |Conditional access and device compliance can require managed devices to meet standards before they can connect to the VPN. One of the advanced features for VPN conditional access allows you to restrict the VPN connections to only those where the client authentication certificate contains the ‘AAD Conditional Access’ OID of '1.3.6.1.4.1.311.87'.<p>To restrict the VPN connections, you need to:<ol><li>On the NPS server, open the **Network Policy Server** snap-in.</li><li>Expand **Policies** > **Network Policies**.</li><li>Right-click the **Virtual Private Network (VPN) Connections** Network Policy and select **Properties**.</li><li>Select the **Settings** tab.</li><li>Select **Vendor Specific** and select **Add**.</li><li>Select the **Allowed-Certificate-OID** option and then select **Add**.</li><li>Paste the AAD Conditional Access OID of **1.3.6.1.4.1.311.87** as the attribute value, and then select **OK** twice.</li><li>Select **Close** and then **Apply**.<p>Now when VPN clients attempt to connect using any certificate other than the short-lived cloud certificate, the connection will fail.</li></ol>For more information about conditional access, see [VPN and conditional access](https://docs.microsoft.com/windows/access-protection/vpn/vpn-conditional-access).   |
 
+
+---
+## Blocking VPN Clients that Use Revoked Certificates
+  
+After you install updates, the RRAS server can enforce certificate revocation for VPNs that use IKEv2 and machine certificates for authentication, such as device tunnel Always-on VPNs. This means that for such VPNs, the RRAS server can deny VPN connections to clients that try to use a revoked certificate.
+
+**Availability**
+
+The following table lists the approximate release dates of the fixes for each version of Windows.
+
+|Operating system version |Release date* |
+|---------|---------|
+|Windows Server, version 1903  |Q2, 2019  |
+|Windows Server 2019<br />Windows Server, version 1809  |Q3, 2019  |
+|Windows Server, version 1803  |Q3, 2019  |
+|Windows Server, version 1709  |Q3, 2019  |
+|Windows Server 2016, version 1607  |Q2, 2019  |
+  
+\* All release dates are listed in calendar quarters. Dates are approximate and may change without notice.
+
+**How to configure prerequisites** 
+
+1. Install the Windows updates as they become available.
+1. Make sure that all the VPN client and RRAS server certificates that you use have CDP entries, and that the RRAS server can reach the respective CRLs.
+1. On the RRAS server, use the **Set-VpnAuthProtocol** PowerShell cmdlet to configure the **RootCertificateNameToAccept** parameter.<br /><br />
+   The following example lists the commands to do this. In the example, **CN=Contoso Root Certification Authority** represents the distinguished name of the Root Certification Authority. 
+   ``` powershell
+   $cert1 = ( Get-ChildItem -Path cert:LocalMachine\root | Where-Object -FilterScript { $_.Subject -Like "*CN=Contoso Root Certification Authority,*" } )
+   Set-VpnAuthProtocol -RootCertificateNameToAccept $cert1 -PassThru
+   ```
+**How to configure the RRAS server to enforce certificate revocation for VPN connections that are based on IKEv2 machine certificates**
+
+1. In a Command Prompt window, run the following command: 
+   ```
+   reg add HKLM\SYSTEM\CurrentControlSet\Services\RemoteAccess\Parameters\Ikev2 /f /v CertAuthFlags /t REG_DWORD /d "4"
+   ```
+
+1. Restart the **Routing and Remote Access** service.
+  
+To disable certificate revocation for these VPN connections, set **CertAuthFlags = 2** or remove the **CertAuthFlags** value, and then restart the **Routing and Remote Access** service. 
+
+**How to revoke a VPN client certificate for a VPN connection that is based on an IKEv2 machine certificate**
+1. Revoke the VPN client certificate from the Certification Authority.
+1. Publish a new CRL from the Certification Authority.
+1. On the RRAS server, open an administrative Command Prompt window, and then run the following commands:
+   ```
+   certutil -urlcache * delete
+   certutil -setreg chain\ChainCacheResyncFiletime @now
+   ```
+
+**How to verify that certificate revocation for IKEv2 machine certificate-based VPN connections is working**  
+>[!Note]  
+> Before you use this procedure, make sure that you enable the CAPI2 operational event log.
+1. Follow the previous steps to revoke a VPN client certificate.
+1. Try to connect to the VPN by using a client that has the revoked certificate. The RRAS server should refuse the connection and display a message such as “IKE authentication credentials are unacceptable.”
+1. On the RRAS server, open Event Viewer, and navigate to **Applications and Services Logs/Microsoft/Windows/CAPI2**. 
+1. Search for an event that has the following information:
+   * Log Name: **Microsoft-Windows-CAPI2/Operational Microsoft-Windows-CAPI2/Operational**
+   * Event ID: **41** 
+   * The event contains the following text: **subject="*Client FQDN*"** (*Client FQDN* represents the fully qualified domain name of the client that has the revoked certificate.) 
+
+   The **<Result>** field of the event data should include **The certificate is revoked**. For example, see the following excerpts from an event:
+   ```xml
+   Log Name:      Microsoft-Windows-CAPI2/Operational Microsoft-Windows-CAPI2/Operational  
+   Source:        Microsoft-Windows-CAPI2  
+   Date:          5/20/2019 1:33:24 PM  
+   Event ID:      41  
+   ...  
+   Event Xml:
+   <Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+    <UserData>  
+     <CertVerifyRevocation>  
+	  <Certificate fileRef="C97AE73E9823E8179903E81107E089497C77A720.cer" subjectName="client01.corp.contoso.com" />  
+      <IssuerCertificate fileRef="34B1AE2BD868FE4F8BFDCA96E47C87C12BC01E3A.cer" subjectName="Contoso Root Certification Authority" />
+      ...
+      <Result value="80092010">The certificate is revoked.</Result>
+     </CertVerifyRevocation>
+    </UserData>
+   </Event>
+   ```
+
+---
 ## Additional Protection
 
 ### Trusted Platform Module (TPM) Key Attestation
