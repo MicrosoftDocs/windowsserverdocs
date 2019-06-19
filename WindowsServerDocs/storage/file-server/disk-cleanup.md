@@ -1,3 +1,4 @@
+---
 title: Using Disk Cleanup on Windows Server
 description: Learn how to use command-line options to configure the Disk Cleanup tool (Cleanmgr.exe) to automatically clean up certain files.
 ms.prod: windows-server-threshold
@@ -70,7 +71,7 @@ Follow these steps to use the Add Roles and Features Wizard to enable the Disk C
 
 1. Verify that the **Disk Cleanup** option button appears in the Properties dialog box.
 
-   ![Disk Properties dialog with Disk Cleanup option](../images/diskpropswcleanup.png)
+   ![Disk Properties dialog with Disk Cleanup option](media/diskpropswcleanup.png)
 
 ## Additional references
 
