@@ -22,7 +22,7 @@ In the latest update to AD FS, a reduction in latency is targeted through the ad
 
 When the `backgroundCacheRefreshEnabled` is set to true, AD FS will enable the background thread to run cache updates in. The frequency of fetching data from the cache can be customized to a time value by setting `cacheRefreshIntervalSecs`. The default value is set to 300 seconds when `backgroundCacheRefreshEnabled` is set to true. After the set value duration, AD FS begins refreshing it’s cache and while the update is in progress, the old cache data will continue to be used.  
 
->[NOTE!]
+>[!NOTE]
 > The cache’s data will be refreshed outside of the `cacheRefreshIntervalSecs` value if ADFS receives a notification from SQL signifying that a change has occurred in the database. This notification will trigger the cache to be refreshed. 
 
 ## Recommendations for setting the cache refresh 
@@ -42,7 +42,7 @@ The following example enables the background cache refresh and sets the cache re
   - `backgroundCacheRefreshEnabled`  - Specifies if the background cache feature is enabled. “true/false” values.
   - `cacheRefreshIntervalSecs` - Value in seconds at which ADFS will refresh the cache. AD FS will refresh the cache if there is any change in SQL. AD FS will receive a SQL notification and refresh the cache.  
  
- >[NOTE!]
+ >[!NOTE]
  > The entries are case sensitive.  
  &lt;cache cacheRefreshIntervalSecs="1800" backgroundCacheRefreshEnabled="true" /&gt; 
  Additional supported configurable values: 
@@ -77,13 +77,13 @@ Copy the newly generated CreateDB.sql and SetPermissions.sql deployment scripts 
  3. Modify the Configuration file to add the Artifact DB connection. 
  Navigate to the AD FS node’s config file, and under the section “Microsoft.IdentityServer.Service”, add an entry point to the newly configured ArtifactDB. 
 
- >[NOTE!] 
+ >[!NOTE] 
  > artifactStore and connectionString are case sensitive values. Ensure they are correctly configured. 
  &lt;artifactStore connectionString="Data Source=.\SQLInstance;Integrated Security=True;Initial Catalog=AdfsArtifactStore" /&gt; 
 
  4. Restart the AD FS service for the changes to take effect. 
  
- >[NOTE!] 
+ >[!NOTE] 
  > It is not recommended to use SQL replication or synchronization between the artifact databases. The recommendation is to set up one artifact database per datacenter. 
  
 ## Cross datacenter failover and database recovery  
@@ -109,7 +109,7 @@ It is recommended to create artifact databases on the same datacenter as the mas
 
    &lt;useractivityfarmrole masterFQDN=[FQDN of the selected primary] isMaster="false"/&gt;
  
-  >[NOTE!] 
+  >[!NOTE] 
   >Since multiple artifact databases do not synchronize data, ESL values will not be synchronized between artifact DBs.
     A user can potentially hit a different datacenter for a request, therefore making the ExtranetLockoutThreshold dependent on the number of Artifact DBs, ExtranetLockoutThreshold * Number of Artifact DBs. 
  
