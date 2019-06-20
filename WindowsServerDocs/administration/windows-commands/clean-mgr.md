@@ -12,7 +12,7 @@ ms.date: 06/17/2019
 
 # cleanmgr
 
-> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies to: Windows Server 2019, Windows Server 2016, Windows Server 2012, Windows Server 2008 R2, Windows Server (Semi-Annual Channel)
 
 Clears unnecessary files from your computer's hard disk. You can use command-line options to specify that Cleanmgr cleans up Temp files, Internet files, downloaded files, and recycle bin files. You can then schedule the task to run at a specific time by using the Scheduled Tasks tool.
 
@@ -21,13 +21,13 @@ For examples of how to use this command, see [Examples](#examples).
 ## Syntax
 
 ```
-cleanmgr [/d <driveletter>] [/sageset:n]  [/sagerun:n] [/TUNEUP:n] [/LOWDISK] [/VERYLOWDISK] [/SETUP] [/AUTOCLEAN]
+cleanmgr [/d <driveletter>] [/sageset:n]  [/sagerun:n] [/TUNEUP:n] [/LOWDISK] [/VERYLOWDISK]
 ```
 
 ## Parameters
 
-|         Parameter         |          Description                 |
-|---------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|      Parameter      |    Description     |
+| ------------------- | ------------------ |
 |  /d \<driveletter>          | Specifies the drive that you want Disk Cleanup to clean.<br>**Note:** The /d option is not utilized with /sagerun:n. |
 | /sageset:n | Displays the Disk Cleanup Settings dialog box and also creates a registry key to store the settings that you select. The `n` value, which is stored in the registry, allows you to specify tasks for Disk Cleanup to run. The `n` value can be any integer value from 0 to 65535. To have all of the options available when you use the /sageset option, specify the drive where Windows is installed.  |
 |  /sagerun:n  |  Runs the specified tasks that are assigned to the n value if you use the \sageset option. All drives on the computer are enumerated and the selected profile runs against each drive.           |
@@ -64,22 +64,22 @@ The options for the files that you can specify for Disk Cleanup by using /sagese
 
 ## Examples
 
-To specify the file options set 11 for Disk Cleanup, type: 
+To run the Disk Cleanup app so that you can use its dialog box to specify options for use later, saving the settings to the set **1**, type the following:
 
 ```
-cleanmgr /sageset:11
+cleanmgr /sageset:1
 ```
 
-To run Disk Cleanup and include the options that you specified with the cleanmgr /sageset:11 command, type:
+To run Disk Cleanup and include the options that you specified with the cleanmgr /sageset:1 command, type:
 
 ```
-cleanmgr /sagerun:11
+cleanmgr /sagerun:1
 ```
 
-To run ```cleanmgr /sageset:11``` and ```cleanmgr /sagerun:11``` together, type:
+To run ```cleanmgr /sageset:1``` and ```cleanmgr /sagerun:1``` together, type:
 
 ```
-cleanmgr /tuneup:11
+cleanmgr /tuneup:1
 ```
 
 ## Additional references
