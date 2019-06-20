@@ -13,7 +13,7 @@ ms.technology: identity-adfs
 
 
 # Fine tuning SQL and addressing latency issues with AD FS
-In an update for [AD FS 2016](https://support.microsoft.com/help/4503294/windows-10-update-kb4503294) and 2019, AD FS introduced the following improvements to reduce cross database latency.  
+In an update for [AD FS 2016](https://support.microsoft.com/help/4503294/windows-10-update-kb4503294) AD FS introduced the following improvements to reduce cross database latency. A upcoming update for AD FS 2019 will include these improvements.
 
 ## In-Memory cache update in background thread 
 In prior Always on Availability (AoA) deployments, latency existed for any “Read” operation as the master node could be located in a separate datacenter. The call between two different datacenters resulted in latency.  
