@@ -88,14 +88,14 @@ Copy the newly generated CreateDB.sql and SetPermissions.sql deployment scripts 
  
 ## Cross datacenter failover and database recovery  
 It is recommended to create artifact databases on the same datacenter as the master artifact database. If a failover occurs, there will be no increase in latency. Failover Artifact databases across datacenters is not recommended. The following details how calls for OAuth, SAML, ESL, and token replay detection function with multiple artifact databases. 
- - OAuth and SAML 
+ - **OAuth and SAML** 
 
    For OAuth and SAML artifact requests, the node will create the artifact in the artifact DB present in the configuration file. If the configuration file does not contain a artifact database connection, it will use the common artifact DB. When the next request to fetch the artifact goes to another node, the other node will make rest API to the 1st node to fetch the artifact from the artifact DB. This is required as different nodes might have different artifact databases and the nodes do not know about that. If the 1st node is down, the artifact resolution will fail. Due to this design, replicating the artifact DB across different datacenters is not necessary. If one whole datacenter is down, most likely the node which created the artifact is also down, meaning that artifact cannot be resolved anymore.  
- - SAML 
+ - **SAML** 
    
    The Artifact database referenced to in the configuration file will be used for SAML. SAML follows the same pattern as OAuth and is not recommended for cross datacenter failover.  
 
- - Extranet Lockout 
+ - **Extranet Lockout** 
 
     The Artifact database referenced to in the configuration file will be used for Extranet Lockout data. However, for the ESL feature, AD FS chooses a master which writes the data in the artifact DB. All the nodes make a REST API call to the master node to get and set the latest information about each user. If multiple artifact DB’s are in use, the admin must select a master node for each artifact DB or datacenter. 
 
@@ -104,16 +104,16 @@ It is recommended to create artifact databases on the same datacenter as the mas
     On the master add following entry. Note that all three keys are case sensitive. 
 
     &lt;useractivityfarmrole masterFQDN=[FQDN of the selected primary] isMaster="true"/&gt;
- 
-    On the other nodes add following entry:
+    
+    On the other nodes add following entry:
 
    &lt;useractivityfarmrole masterFQDN=[FQDN of the selected primary] isMaster="false"/&gt;
  
-  >[!NOTE] 
-  >Since multiple artifact databases do not synchronize data, ESL values will not be synchronized between artifact DBs.
+    >[!NOTE] 
+    >Since multiple artifact databases do not synchronize data, ESL values will not be synchronized between artifact DBs.
     A user can potentially hit a different datacenter for a request, therefore making the ExtranetLockoutThreshold dependent on the number of Artifact DBs, ExtranetLockoutThreshold * Number of Artifact DBs. 
  
-  - Token Replay Detection 
+  - **Token Replay Detection** 
     
     Token replay detection data is always called from the central Artifact database. AD FS saves the token from the Claims Provider Trust, ensuring that the same token cannot be replayed. If an attacker attempts to replay the same token, AD FS verifies if the token exists in the Artifact DB. If the token is present, the request will be rejected. The central Artifact database is used for security, since the Artifact DB data is not replicated, an attacker could send the request to another datacenter and replay a token. Creating additional read-only copies of the ArtifactDB will not prevent cross datacenter latency in this scenario, as only the central Artifact database is used.    
  
