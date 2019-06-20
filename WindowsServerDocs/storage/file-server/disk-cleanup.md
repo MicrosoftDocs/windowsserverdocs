@@ -50,7 +50,7 @@ Follow these steps to use the Add Roles and Features Wizard to install the Deskt
 
    ![Disk Properties dialog with Disk Cleanup option](media/diskpropswcleanup.png)
 
-## Manually Add Disk Cleanup tool to an earlier version of Windows Server
+## Manually add Disk Cleanup to an earlier version of Windows Server
 
 The Disk Cleanup tool (cleanmgr.exe) isn't present on Windows Server 2012 R2 or earlier unless you have the Desktop Experience feature installed.
 
