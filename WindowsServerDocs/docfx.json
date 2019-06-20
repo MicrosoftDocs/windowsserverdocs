@@ -39,10 +39,10 @@
       "feedback_product_url": "https://windowsserver.uservoice.com/forums/295047-general-feedback",
       "_op_documentIdPathDepotMapping": {
           "manage/windows-admin-center/license/": {
-          "depot_name": "	MSDN.WindowsServerDocs-pr",
-          "folder_relative_path_in_docset": "license/" 
+            "depot_name": "MSDN.WindowsServerDocs-pr",
+            "folder_relative_path_in_docset": "licensing/" 
+           }
         }
-      }
     },
     "fileMetadata": {
       "feedback_product_url": {
