@@ -5,7 +5,7 @@ ms.technology: manage
 ms.topic: article
 author: nwashburn-ms
 ms.author: niwashbu
-ms.date: 06/07/2019
+ms.date: 06/20/2019
 ms.localizationpriority: high
 ms.prod: windows-server-threshold
 ---
@@ -124,6 +124,7 @@ Admin Center to Azure</a></li>
 
 Learn about our latest released features:
 
+- Version [1906](https://aka.ms/wac1906) - added Import/Export VMs, Switch Azure accounts, connectivity settings experiment and performance improvements & profiling.
 - Version 1904.1 - Maintenance update to improve stability of gateway plugins.
 - Version [1904](https://aka.ms/wac1904) is the most recent GA release that introduces the Azure Hybrid Services tool, and brings features that were previously in preview to the GA channel.
 - Version [1903](https://aka.ms/wac1903) brings email notifications from Azure Monitor, the ability to add Server or PC connections from Active Directory, and new tools to manage Active Directory, DHCP, and DNS.
