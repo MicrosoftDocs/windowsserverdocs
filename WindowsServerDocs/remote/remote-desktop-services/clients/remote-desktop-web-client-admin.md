@@ -267,10 +267,11 @@ By default, users may choose to launch remote resources (1) in the browser or (2
  By default, the user may select either launch method. A boolean value **$true** will force the user to launch resources in the browser. A boolean value **$false** will force the user to launch resources by downloading an .rdp file to handle with a locally installed RDP client.
 
 ### Reset RDWebClientDeploymentSetting configurations to default
-To reset all deployment-level web client settings to the default configurations, run the following PowerShell cmdlet:
+To reset a deployment-level web client setting to the default configuration, run the following PowerShell cmdlet and use the -name parameter to specify the setting you want to reset:
 
    ```PowerShell
-    Reset-RDWebClientDeploymentSetting 
+    Reset-RDWebClientDeploymentSetting -Name "LaunchResourceInBrowser"
+    Reset-RDWebClientDeploymentSetting -Name "SuppressTelemetry"
    ```
 
 ## Troubleshooting
