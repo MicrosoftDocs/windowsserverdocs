@@ -127,7 +127,7 @@ Learn about our latest released features:
 - Version [1906](https://aka.ms/wac1906) - added import/export VMs, switch Azure accounts, add connections from Azure, connectivity settings experiment, performance improvements, and performance profiling tool.
 - Version 1904.1 is the most recent GA release - a maintenance update to improve stability of gateway plugins.
 - Version [1904](https://aka.ms/wac1904) was a GA release that introduced the Azure Hybrid Services tool, and brought features that were previously in preview to the GA channel.
-- Version [1903](https://aka.ms/wac1903) brings email notifications from Azure Monitor, the ability to add Server or PC connections from Active Directory, and new tools to manage Active Directory, DHCP, and DNS.
+- Version [1903](https://aka.ms/wac1903) added email notifications from Azure Monitor, the ability to add Server or PC connections from Active Directory, and new tools to manage Active Directory, DHCP, and DNS.
 - Version [1902](https://aka.ms/wac1902) added a shared connection list & improvements to software defined network (SDN) management, including new SDN tools to manage ACLs, gateway connections, and logical networks.
 - Version [1812](https://aka.ms/wac1812) added dark theme (in preview), power configuration settings, BMC info, and PowerShell support to manage [extensions](./configure/using-extensions.md#manage-extensions-with-powershell) and [connections](./use/get-started.md#use-powershell-to-import-or-export-your-connections-with-tags).
 - Version [1809.5](https://aka.ms/wac1809.5) was a GA cumulative update that included various quality and functional improvements, bug fixes throughout the platform, and a few new features in the hyper-converged infrastructure management solution.
