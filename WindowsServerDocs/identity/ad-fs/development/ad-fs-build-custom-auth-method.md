@@ -219,7 +219,7 @@ This walk-through uses Visual Studio 2012.  The project can be built using any d
          }
          }
 
-         /// Returns an array indicating the type of claim that that the adapter uses to identify the user being authenticated.
+         /// Returns an array indicating the type of claim that the adapter uses to identify the user being authenticated.
          /// Note that although the property is an array, only the first element is currently used.
          /// MUST BE ONE OF THE FOLLOWING
          /// "http://schemas.microsoft.com/ws/2008/06/identity/claims/windowsaccountname"
