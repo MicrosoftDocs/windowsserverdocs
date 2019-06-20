@@ -7,7 +7,7 @@ author: iangpgh
 ms.author: jgerend
 manager: daveba
 ms.technology: storage-spaces
-ms.date: 06/17/2019
+ms.date: 06/20/2019
 ---
 
 # Using Disk Cleanup on Windows Server
@@ -50,11 +50,11 @@ Follow these steps to use the Add Roles and Features Wizard to install the Deskt
 
    ![Disk Properties dialog with Disk Cleanup option](media/diskpropswcleanup.png)
 
-## Add Disk Cleanup tool to an earlier version of Windows Server
+## Manually Add Disk Cleanup tool to an earlier version of Windows Server
 
 The Disk Cleanup tool (cleanmgr.exe) isn't present on Windows Server 2012 R2 or earlier unless you have the Desktop Experience feature installed.
 
-To use cleanmgr.exe, copy two files that are already present on the server, cleanmgr.exe and cleanmgr.exe.mui. Use the following table to locate the files for your operating system.
+To use cleanmgr.exe, install the Desktop Experience as described earlier, or copy two files that are already present on the server, cleanmgr.exe and cleanmgr.exe.mui. Use the following table to locate the files for your operating system.
 
 | Operating System  | Architecture  | File Location  |
 | ----------------- | -------------- | --------------- |

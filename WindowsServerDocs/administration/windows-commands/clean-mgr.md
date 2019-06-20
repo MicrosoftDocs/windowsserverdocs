@@ -7,7 +7,7 @@ author: iangpgh
 ms.author: jgerend
 manager: daveba
 ms.technology: storage-spaces
-ms.date: 06/17/2019
+ms.date: 06/20/2019
 ---
 
 # cleanmgr
