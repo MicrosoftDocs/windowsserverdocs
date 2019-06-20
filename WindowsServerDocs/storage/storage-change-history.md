@@ -67,10 +67,10 @@ This topic lists new and updated topics in the [Storage](storage.md) documentati
 |---                                                         |---           |
 |[Nested resiliency](storage-spaces/nested-resiliency.md)    | New topic    |
 |[Storage Migration Service known issues](storage-migration-service/known-issues.md)   | New topic    |
-|[DFS Replication: Frequently Asked Questions (FAQ)](dfs-replication/dfsr-faq.md)|Migrated from the [Previous Versions](https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2003/) library|
-|[Migrate SYSVOL replication to DFS Replication](dfs-replication/migrate-sysvol-to-dfsr.md)|Migrated from the [Previous Versions](https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/) library|
-|[SMB: File and printer sharing ports should be open](file-server/best-practices-analyzer/smb-open-file-sharing-ports.md)|Migrated from the [Previous Versions](https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/) library|
-|[Volume Shadow Copy Service](file-server/volume-shadow-copy-service.md)|Migrated from the [Previous Versions](https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/) library|
+|[DFS Replication: Frequently Asked Questions (FAQ)](dfs-replication/dfsr-faq.md)|Migrated from the [Previous Versions](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/) library|
+|[Migrate SYSVOL replication to DFS Replication](dfs-replication/migrate-sysvol-to-dfsr.md)|Migrated from the [Previous Versions](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/) library|
+|[SMB: File and printer sharing ports should be open](file-server/best-practices-analyzer/smb-open-file-sharing-ports.md)|Migrated from the [Previous Versions](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/) library|
+|[Volume Shadow Copy Service](file-server/volume-shadow-copy-service.md)|Migrated from the [Previous Versions](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/) library|
 
 ## October 2018
 

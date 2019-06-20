@@ -70,5 +70,5 @@ Membership in the **Administrators** group, or equivalent, is the minimum requir
 
 ## Additional references
 
-[Understanding Shared Folders and the Windows Firewall](http://technet.microsoft.com/en-us/library/cc731402.aspx)(http://technet.microsoft.com/en-us/library/cc731402.aspx)
+[Understanding Shared Folders and the Windows Firewall](https://technet.microsoft.com/library/cc731402.aspx)(https://technet.microsoft.com/library/cc731402.aspx)
 
