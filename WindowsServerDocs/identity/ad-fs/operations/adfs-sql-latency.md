@@ -70,7 +70,7 @@ Prior to setting up multiple artifact database support, run an update on all the
    ```PowerShell
    PS C:\> Export-AdfsDeploymentSQLScript -DestinationFolder <script folder where scripts will be created> -ServiceAccountName <domain\serviceaccount> -DatabaseType "Artifact" 
    ```
-The generated script should be run on the SQL machine to create the required databases and give permission to AD FS SA.
+The generated script should be run on the SQL machine to create the required databases and give the AD FS service account, SQL SA permissions to those databases.
 
  2. Create the Artifact DB using the deployment script. Copy the newly generated CreateDB.sql and SetPermissions.sql deployment scripts over to the SQL server machine and execute them to create the local Artifact DB. 
  
