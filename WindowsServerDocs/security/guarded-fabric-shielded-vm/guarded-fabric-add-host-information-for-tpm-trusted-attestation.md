@@ -34,13 +34,16 @@ After the fabric administrator captures the information, add it to the HGS confi
     > You can check if an EKCert is missing by opening the XML file in an editor such as Notepad and checking for an error message indicating no EKCert was found.
     > If this is the case, and you trust that the TPM in your machine is authentic, you can use the `-Force` flag to override this safety check and add the host identifier to HGS.
 
-2. Obtain the code integrity policy that the fabric administrator created for the hosts, in binary format (*.p7b). Copy it to an HGS server. Then run the following command.
+2. Obtain the code integrity policy that the fabric administrator created for the hosts, in binary format (\*.p7b). Copy it to an HGS server. Then run the following command.
 
     For `<PolicyName>`, specify a name for the CI policy that describes the type of host it applies to. A best practice is to name it after the make/model of your machine and any special software configuration running on it.<br>For `<Path>`, specify the path and filename of the code integrity policy.
 
     ```powershell
     Add-HgsAttestationCIPolicy -Path <Path> -Name '<PolicyName>'
     ```
+    > [!NOTE]
+    > If you're using a signed code integrity policy, register an unsigned copy of the same policy with HGS.
+    > The signature on code integrity policies is used to control updates to the policy, but is not measured into the host TPM and therefore cannot be attested to by HGS.
 
 3. Obtain the TCGlog file that the fabric administrator captured from a reference host. Copy the file to an HGS server. Then run the following command. Typically, you will name the policy after the class of hardware it represents (for example, "Manufacturer Model Revision").
 
