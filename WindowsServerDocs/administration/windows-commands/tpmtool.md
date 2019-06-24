@@ -13,12 +13,12 @@ ms.author: ashleytqy
 manager: ronaldai
 ms.date: 05/07/2019
 ---
->[!IMPORTANT]
->Some information relates to prereleased product which may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here.
-
 # tpmtool
 
 This utility can be used to get information about the [Trusted Platform Module (TPM)](https://docs.microsoft.com/windows/security/information-protection/tpm/trusted-platform-module-overview).
+
+>[!IMPORTANT]
+>Some information relates to prereleased product which may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here.
 
 For examples of how to use this command, see [Examples](#tpmtool_examples).
 
@@ -31,8 +31,8 @@ tpmtool /parameter [<arguments>]
 
 |Parameter|Description|
 |---------|-----------|
-|getdeviceinformation|Displays the basic information of the TPM.|
-|gatherlogs [output directory path]|Collects TPM logs and places them in the specified directory. By default, they are placed in the current directory.|
+|getdeviceinformation|Displays the basic information of the TPM. The meaning of the information flag values can be found [here](https://docs.microsoft.com/windows/desktop/SecProv/win32-tpm-isreadyinformation#parameters).|
+|gatherlogs [output directory path]|Collects TPM logs and places them in the specified directory. If that directory does not exist, it is created. By default, they are placed in the current directory. The possible files generated are: </br>- TpmEvents.evtx</br>- TpmInformation.txt</br>- SRTMBoot.dat</br>- SRTMResume.dat</br>- DRTMBoot.dat</br>- DRTMResume.dat</br>
 |/?|Displays help at the command prompt.|
 
 ## <a name="tpmtool_examples"></a>Examples
@@ -49,3 +49,7 @@ To collects TPM logs and place them in `C:\Users\Public`, type:
 ```
 tpmtool gatherlogs C:\Users\Public
 ```
+
+## Decoding Error Codes
+
+TPM-specific error codes are documented [here](https://docs.microsoft.com/windows/desktop/com/com-error-codes-6).
