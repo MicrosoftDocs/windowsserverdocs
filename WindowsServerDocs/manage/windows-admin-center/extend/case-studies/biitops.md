@@ -1,42 +1,55 @@
 ---
-title: Windows Admin Center SDK Case Study - DataON
-description: Windows Admin Center SDK Case Study - DataON
+title: Windows Admin Center SDK Case Study - BiitOps
+description: Windows Admin Center SDK Case Study - BiitOps
 ms.technology: extend
 ms.topic: article
 author: daniellee-msft
 ms.author: jol
-ms.date: 01/11/2019
+ms.date: 06/2/2019
 ms.localizationpriority: medium
 ms.prod: windows-server-threshold
 ---
-# DataON MUST Extension
+# BiitOps Extension
 
-## Integrated monitoring and management for Microsoft hyper-converged infrastructure
+## Intuitive server and storage health management
 
-[DataON](http://www.dataonstorage.com/) is the industry-leading provider of hyper-converged infrastructure and storage systems optimized for Microsoft Windows Server environments. Exclusively focused on delivering Microsoft applications, virtualization, data protection, and hybrid cloud services, it has over 650 enterprise deployments and over 120PB of Storage Spaces Direct deployments.
+The Thomas Krenn.AG Windows Admin Center extension is designed specifically for the highly available, 2-node [S2D Micro-Cluster](https://www.thomas-krenn.com/en/products/application/software-defined-storage/s2d-micro-cluster.html) appliance. The user-friendly, graphical web interface visualizes a Micro-Cluster’s health status through a simple dashboard and allows you to drill down on storage devices, network interfaces or the entire cluster to view more details.
 
-[DataON’s MUST](http://www.dataonstorage.com/must) extension for Windows Admin Center is a prime example of the value that integrating two complementary products can deliver to customers, bringing monitoring and management and end-to-end insight into hardware and software together across an entire cluster in a unified experience.
+The extension provides intuitive access to information typically needed for first-level service and support calls, such as serial numbers, software versions, storage utilization and more. It is designed to be useful to admins who have no prior experience with Windows Server hyper-converged infrastructure.
 
-> <cite>“We’ve taken our standalone MUST visibility, monitoring, and management tool and enabled it to work within Windows Admin Center. Customers will benefit from the expanded capabilities that MUST provides, and the combination of MUST and Windows Admin Center from a single console will provide the ultimate management experience for Windows Server-based infrastructure.”</cite>
->
-> -- Howard Lo, Vice President of Sales and Marketing, DataON
+A few of the insights available are:
+- General Information about the Micro-Nodes and the Micro-Cluster
+- OS / boot device status
+- Capacity HDD and caching SSD status
+- Cluster events
+- Network status and information
 
-The MUST extension extends the functionality of Windows Admin Center by providing features such as:
-- **Historic Data Reporting** – Provides real-time and monthly dashboards of your system performance data including IOPS, latency, throughput on your cluster, storage pool, volume, and nodes.
-- **Disk Mapping** – MUST displays the device types and components in each of the nodes, providing a clear disk map of your entire node. It shows the number of disks, disk type, location and slot of each drive, and disk health status.
-- **System Alerts** – Leverages Windows Health Service faults to identify hardware failures, configuration issues, and resource saturation. It also provides a multi-level assessment of specific locations, fault descriptions, and recovery actions. You can also leverage third-party SNMP monitoring traps to alert you when you need disk or hardware replacements.
-- **SAN-like Call Home Service** – Prompted by system alerts, administrators can have automated email alerts sent to key contacts.
+Use the dashboard to determine the cluster’s health status and important system information such as serial numbers, model, OS version and utilization. Additionally, fan, NIC and overall node hardware health are displayed on the dashboard as well.
 
-![DataON Extension](../../media/extend-case-study-dataon/dataon-1.png)
-*Disk mapping in the DataON MUST extension for Windows Admin Center*
+![Thomas-Krenn Extension](../../media/extend-case-study-thomas-krenn/thomas-krenn-1.png)
 
-> <cite>“It’s great that Windows Admin Center allows for extensions such as DataON MUST so I can use both tools within the same console, and I like how seamless that integration is. Windows Admin Center and DataON MUST together really does allow us to be more efficient and saves our team a ton of time. It allows us to achieve our administrator tasks a lot quicker than what we had before."</cite>
->
-> -- Matt Roper, Facilitator of Technology Support Services, Cherokee County (GA) School District
+You can drill down into storage devices to view serial numbers, SMART-status, and capacity utilization. Boot devices also show wear out indicators, reallocated sectors and power on time, which are the best indicators of SSD health.
 
-![DataON Extension](../../media/extend-case-study-dataon/dataon-2.png)
-*Alert Services in the DataON MUST extension for Windows Admin Center*
+![Thomas-Krenn Extension](../../media/extend-case-study-thomas-krenn/thomas-krenn-2.png)
 
-> <cite>“MUST has been very valuable and was a big selling point. To us, it demonstrated a commitment from DataON to support Microsoft hyper-converged infrastructure. The inclusion of MUST with their S2D appliance is what completes the solution with Storage Spaces Direct as a viable SAN replacement.” </cite>
->
-> -- Benjamin Clements, President, Strategic Online Systems, Inc.
+The cluster status icon expands to show a summary of the cluster’s operational details.
+
+![Thomas-Krenn Extension](../../media/extend-case-study-thomas-krenn/thomas-krenn-3.png)
+
+After this Micro-Cluster’s Azure cloud witness was unavailable for a whole night, one glance is enough to identify the problem. Clicking on “Notifications” immediately lists relevant events for quick remediation. Cluster events are localized and determined by the base OS language. The extension itself supports English and German.
+
+![Thomas-Krenn Extension](../../media/extend-case-study-thomas-krenn/thomas-krenn-4.png)
+
+Network information is readily available as well.
+
+![Thomas-Krenn Extension](../../media/extend-case-study-thomas-krenn/thomas-krenn-5.png)
+
+Based on customer feedback, we’ve also implemented “Dark Mode” available in Windows Admin Center v1904. This is soothing in dark datacenters and in poorly lighted cabinets and closets. It also makes Windows Admin Center more accessible by reducing glare for admins with certain visual impairments.
+
+![Thomas-Krenn Extension](../../media/extend-case-study-thomas-krenn/thomas-krenn-6.png)
+
+Thomas-Krenn immediately realized that usability and accessibility for untrained admins would be key to a great customer experience for hyper-converged infrastructure in the small and mid-sized business market. Thomas-Krenn’s Micro-Cluster extension perfectly complements Windows Admin Center’s native HCI management capabilities by including proprietary hardware information on the dashboard and re-grouping important cluster health information in a new, human-friendly interface.
+
+During the development process it was decided to deploy Windows Admin Center 1904 in a high-availability configuration on the cluster itself, ensuring manageability even after node failures. The extension comes pre-installed, just as the entire OS.
+
+The extension was built in parallel with Windows Admin Center 1904 being developed at Microsoft. Close cooperation and continuous feedback exposed issues on both sides that were jointly resolved before the product successfully launched in April 2019. Thomas-Krenn is incredibly proud to be one of the first to fully support and implement Windows Admin Center 1904’s new features.
