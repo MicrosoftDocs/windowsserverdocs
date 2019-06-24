@@ -18,8 +18,8 @@ Review our Windows Server-related license terms.
 
 - [Windows Server 2016 Technical Preview License Terms](https://docs.microsoft.com/legal/windows-server/WinServer2016licenseterms)
 
-- [Microsoft Software License terms - MICROSOFT.WINDOWSSERVER.SYSTEMINSIGHTS](https://docs.microsoft.com/legal/windows-server/system-insights-eula)
+- [Microsoft Software License Terms - MICROSOFT.WINDOWSSERVER.SYSTEMINSIGHTS](https://docs.microsoft.com/legal/windows-server/system-insights-eula)
 
-- [Microsoft Software License terms - MICROSOFT.WINDOWSSERVER.SYSTEMINSIGHTS.CAPABILITIES](https://docs.microsoft.com/legal/windows-server/system-insights-capabilities-eula)
+- [Microsoft Software License Terms - MICROSOFT.WINDOWSSERVER.SYSTEMINSIGHTS.CAPABILITIES](https://docs.microsoft.com/legal/windows-server/system-insights-capabilities-eula)
 
 - [Windows Admin Center - License Terms](https://docs.microsoft.com/legal/windows-server/windows-admin-center/windows-admin-center-licensing)
