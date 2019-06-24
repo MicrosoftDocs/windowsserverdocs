@@ -297,3 +297,6 @@ ADFS and Web Application servers support any firewall that does not perform SSL 
 In AD FS 2016, token binding is automatically enabled and causes multiple known issues with proxy and federation scenarios which result in this error. To resolve this, run the following Powershell command and remove token binding support.
 
 `Set-AdfsProperties -IgnoreTokenBinding $true`
+
+### I have upgraded my farm from AD FS in Windows Server 2016 to AD FS in Windows Server 2019. The Farm Behavior Level for the AD FS farm has been successfully raised to 2019 but the Web Application Proxy configuration is still displayed as Windows Server 2016?
+After an upgrade to Windows Server 2019, the configuration version of the Web Application Proxy will continue to display as Windows Server 2016. The Web Application Proxy does not have new version specific features for Windows Server 2019, and if the Farm Behaviour Level has been successfully raised on AD FS, the Web Application Proxy will continue to display as Windows Server 2016 by design. 
