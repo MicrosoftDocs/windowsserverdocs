@@ -48,7 +48,7 @@
 ### [Support policy](support/index.md)
 ### [Common troubleshooting steps](support/troubleshooting.md)
 ### [Known issues](support/known-issues.md)
-
+### [Windows Admin Center license terms](../../windows-server-licensing/windows-admin-center-licensing.md)
 
 ## Extend
 ### [Overview of extensions](extend/extensibility-overview.md)
