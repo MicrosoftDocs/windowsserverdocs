@@ -13,3 +13,4 @@
 ## [Features removed or planned for replacement starting in Windows Server 2019](removed-features-19.md)
 ## [Features removed or planned for replacement starting in Windows Server, version 1903](removed-features-1903.md)
 ## [Windows Server release information](../get-started/windows-server-release-info.md)
+## [Windows Server license terms](../windows-server-licensing/windows-server-licensing.md)
