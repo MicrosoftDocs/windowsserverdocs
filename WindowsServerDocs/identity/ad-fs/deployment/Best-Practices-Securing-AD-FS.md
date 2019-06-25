@@ -31,6 +31,9 @@ The below diagram depicts the firewall ports that must be enabled between and am
 
 ![AD FS Standard topology](media/Best-Practices-Securing-AD-FS/adfssec2.png)
 
+>[!NOTE]
+> Port 808 (Windows Server 2012R2) or port 1501 (Windows Server 2016+) is the Net.TCP port AD FS uses for the local WCF endpoint to transfer configuration data to the service process and Powershell. This port can be seen by running Get-AdfsProperties | select NetTcpPort. This is a local port that will not need to be opened in the firewall but will be displayed in a port scan. 
+
 ### Azure AD Connect and Federation Servers/WAP
 This table describes the ports and protocols that are required for communication between the Azure AD Connect server and Federation/WAP servers.  
 
