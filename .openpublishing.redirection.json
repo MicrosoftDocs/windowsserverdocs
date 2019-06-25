@@ -8264,47 +8264,47 @@
     {
       "source_path": "WindowsServerDocs/manage/windows-admin-center/license/windows-pre-release-extension-eula.md",
       "redirect_url": "https://docs.microsoft.com/legal/windows-server/windows-admin-center/windows-pre-release-extension-eula",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/manage/windows-admin-center/license/license-terms-for-extensions.md",
       "redirect_url": "https://docs.microsoft.com/legal/windows-server/windows-admin-center/license-terms-for-extensions",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/manage/windows-admin-center/license/wac-prerelease-eula.md",
       "redirect_url": "https://docs.microsoft.com/legal/windows-server/windows-admin-center/wac-prerelease-eula",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/manage/windows-admin-center/license/wac-product-ga-eula.md",
       "redirect_url": "https://docs.microsoft.com/legal/windows-server/windows-admin-center/wac-product-ga-eula",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/licensing/Additional-Software.md",
       "redirect_url": "https://docs.microsoft.com/legal/windows-server/Additional-Software",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/licensing/WinServer2016expiry.md",
       "redirect_url": "https://docs.microsoft.com/legal/windows-server/WinServer2016expiry",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/licensing/WinServer2016licenseterms.md",
       "redirect_url": "https://docs.microsoft.com/legal/windows-server/WinServer2016licenseterms",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/licensing/system-insights-capabilities-eula.md",
       "redirect_url": "https://docs.microsoft.com/legal/windows-server/system-insights-capabilities-eula",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/licensing/system-insights-eula.md",
       "redirect_url": "https://docs.microsoft.com/legal/windows-server/system-insights-eula",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/identity/web-application-proxy/web-application-proxy-windows-server.md",
