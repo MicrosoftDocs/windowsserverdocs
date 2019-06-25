@@ -45,6 +45,11 @@ See the topics below to learn more about the SDK and get started:
 
 See the amazing value our partners have started to bring to the Windows Admin Center ecosystem and try these extensions out today. Learn more on [how to install extensions](../configure/using-extensions.md) from Windows Admin Center.
 
+### BiitOps
+The BiitOps Changes extension provides change tracking for hardware, software and configuration settings on your Windows Server physical/virtual machines. The BiitOps Changes extension will show precisely what is new, what has changed and what has been deleted in a single-pane-of-glass to help track issues related to compliance, reliability and security. [Learn more about the BiitOps Changes extension](case-studies/biitops.md).
+
+![BiitOps extension](../media/extensibility-overview/biitops-1.png)
+
 ### DataON
 
 The DataON MUST extension brings monitoring, management and end-to-end insight into DataON's hyper-converged infrastructure and storage systems based on Windows Server. The MUST extension adds unique value such as historical data reporting, disk mapping, system alerts and SAN-like call home service, complementing the Windows Admin Center server and hyper-converged infrastructure management capabilities, through a seamless, unified experience. [Learn more about DataON's MUST extension and their development experience](case-studies/dataon.md).
