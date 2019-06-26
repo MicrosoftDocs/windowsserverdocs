@@ -40,6 +40,7 @@
 ### [Deploy Network File System](nfs/deploy-nfs.md)
 ### [NTFS overview](file-server/ntfs-overview.md)
 ### [Volume Shadow Copy Service](file-server/volume-shadow-copy-service.md)
+### [Using Disk Cleanup](file-server/disk-cleanup.md)
 ## [File Server Resource Manager](fsrm/fsrm-overview.md)
 ### [Checklist: Apply a Quota to a Volume or Folder](fsrm/checklist-apply-quota-to-volume-or-folder.md)
 ### [Checklist: Apply a File Screen to a Volume or Folder](fsrm/checklist-apply-file-screen-to-volume-or-folder.md)
@@ -128,7 +129,9 @@
 #### [Create volumes](storage-spaces/create-volumes.md)
 #### [Nested resiliency](storage-spaces/nested-resiliency.md)
 #### [Configure quorum](../failover-clustering/manage-cluster-quorum.md)
-#### [Upgrade a Storage Spaces Direct cluster to Windows Server 2019](storage-spaces/upgrade-storage-spaces-direct-to-windows-server-2019.md)
+#### [Upgrade a Storage Spaces Direct cluster](storage-spaces/upgrade-storage-spaces-direct-to-windows-server-2019.md)
+#### [Understand and deploy persistent memory](storage-spaces/deploy-pmem.md)
+
 ### Manage
 #### [Manage with Windows Admin Center](../manage/windows-admin-center/use/manage-hyper-converged.md)
 #### [Add servers or drives](storage-spaces/add-nodes.md)
@@ -148,11 +151,14 @@
 ##### [Scripting samples](storage-spaces/performance-history-scripting.md)
 #### [Delimit the allocation of volumes](storage-spaces/delimit-volume-allocation.md)
 #### [Monitor with Azure Monitor](storage-spaces/configure-azure-monitor.md)
+
 ### Troubleshoot
 #### [Troubleshooting scenarios](storage-spaces/troubleshooting-storage-spaces.md)
 #### [Health and operational states](storage-spaces/storage-spaces-states.md)
 #### [Collect data](storage-spaces/data-collection.md)
 #### [Frequently asked questions](storage-spaces/storage-spaces-direct-faq.md)
+#### [Storage-class memory health management](storage-spaces/Storage-class-memory-health.md)
+
 ## [Work Folders](work-folders/work-folders-overview.md)
 ### [Designing a Work Folders Implementation](work-folders/plan-work-folders.md)
 ### [Deploying Work Folders](work-folders/deploy-work-folders.md)
@@ -163,6 +169,5 @@
 #### [Step 4, Set up WAP](work-folders/deploy-work-folders-adfs-step4.md)
 #### [Step 5, Set up clients](work-folders/deploy-work-folders-adfs-step5.md)
 ## [Storage QoS](storage-qos/storage-qos-overview.md)
-## [Storage-class memory health management](storage-spaces/Storage-class-memory-health.md)
 ## [Change history for Storage topics](storage-change-history.md)
 
