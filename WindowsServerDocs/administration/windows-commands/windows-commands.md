@@ -1,20 +1,16 @@
 ---
 title: Windows Commands
 description: Windows Commands 
-ms.custom: na
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: c703d07c-8227-4e86-94a6-8ef390f94cdc
-author: coreyp-at-msft
-ms.author: coreyp
+author: jasongerend
+ms.author: jgerend
 manager: dongill
-ms.date: 05/22/2018
+ms.date: 06/26/2019
 ms.prod: windows-server-threshold
 ---
-# Windows Commands
+# Windows commands
 
 All supported versions of Windows (server and client) have a set of Win32 console commands built in.
 
@@ -50,7 +46,8 @@ Y |
 Z
 
 ## Prerequisites
-The information that is contained in this PDF applies to:
+
+The information that is contained in this topic applies to:
 
 -   Windows Server 2019
 -   Windows Server (Semi-Annual Channel)
@@ -63,6 +60,7 @@ The information that is contained in this PDF applies to:
 -   Windows 8.1
 
 ### Command shell overview
+
 The Command shell was the first shell built into Windows to automate routine tasks, like user account management or nightly backups, with batch (.bat) files. With Windows Script Host you could run more sophisticated scripts in the Command shell. For more information, see [cscript](cscript.md) or [wscript](wscript.md). You can perform operations more efficiently by using scripts than you can by using the user interface. Scripts accept all Commands that are available at the command line.
 
 Windows has two command shells: The Command shell and [PowerShell](https://docs.microsoft.com/powershell/scripting/powershell-scripting?view=powershell-6). Each shell is a software program that provides direct communication between you and the operating system or application, providing an environment to automate IT operations.
@@ -84,6 +82,7 @@ For the most robust, up-to-date Windows automation, we recommend using PowerShel
 > To set the **reg_DWOrd** value, use the hexadecimal value of a control character for a particular function (for example, **0 9** is Tab and **0 08** is Backspace). User-specified settings take precedence over computer settings, and command-line options take precedence over registry settings.
 
 ## Command-line reference A-Z
+
 To find information about a specific Windows Command, in the following A-Z menu, click the letter that the Command starts with, and then click the Command name.
 
 [A](#a) |
@@ -225,6 +224,7 @@ Z)
 - [cipher](cipher.md)
 - [cleanmgr](clean-mgr.md)
 - [clip](clip.md)
+- [cleanmgr](cleanmgr.md)
 - [cls](cls.md)
 - [Cmd](Cmd.md)
 - [cmdkey](cmdkey.md)
