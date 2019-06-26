@@ -137,7 +137,7 @@ To work around this issue until the updates are complete, check KB 4093492 for a
     > [!IMPORTANT]  
     > These modifications reduce the security of your deployment. They should only be temporary, if you use them at all.
 
-For more information about working with group policy, see [Modifying a blocking GPO](rdp-error-general-troubleshooting.md/#modifying-a-blocking-gpo).
+For more information about working with group policy, see [Modifying a blocking GPO](rdp-error-general-troubleshooting.md#modifying-a-blocking-gpo).
 
 ## After you update client computers, some users need to sign in twice
 
