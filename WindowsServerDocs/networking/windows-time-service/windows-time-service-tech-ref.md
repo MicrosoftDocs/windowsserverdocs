@@ -26,7 +26,7 @@ Although originally designed to provide clock synchronization for Kerberos authe
 Time protocols communicate between two computers to exchange time information and then use that information to synchronize their clocks. With the Windows Time service time protocol, a client requests time information from a server and synchronizes its clock based on the information that is received.
   
 The Windows Time service uses NTP to help synchronize time across a network. NTP is an Internet time protocol that includes the discipline algorithms necessary for synchronizing clocks. NTP is a more accurate time protocol than the Simple Network Time Protocol (SNTP) that is used in some versions of Windows; however, W32Time continues to support SNTP to enable backward compatibility with computers running SNTP-based time services such as Windows 2000.
-<!-- maybe this should be its own topic under the Tech Ref section -->
+ maybe this should be its own topic under the Tech Ref section -->
 ## Where to find Windows Time service configuration-related information  
 This guide does **not** discuss configuring the Windows Time service. There are several different topics on Microsoft TechNet and in the Microsoft Knowledge Base that do explain procedures for configuring the Windows Time service. If you require configuration information, the following topics should help you locate the appropriate information.  
 <!-- should this be an if/then table -->
