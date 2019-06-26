@@ -6,7 +6,7 @@ ms.topic: article
 manager: dongill
 author: rpsqrd
 ms.technology: security-guarded-fabric
-ms.date: 09/11/2018
+ms.date: 06/21/2019
 ---
 
 # Install trusted TPM root certificates
@@ -30,7 +30,7 @@ If your TPM certificates are not included in the package below, contact your TPM
 
 Repeat the following steps on **every HGS server**:
 
-1.  Download the latest package from [https://tpmsec.microsoft.com/OnPremisesDHA/TrustedTPM.cab](https://tpmsec.microsoft.com/OnPremisesDHA/TrustedTPM.cab).
+1.  Download the latest package from [https://tpmsec.microsoft.com/TPMCerts/TrustedTPM.cab](https://tpmsec.microsoft.com/TPMCerts/TrustedTPM.cab).
 
 2.  Expand the cab file.
 
