@@ -1,5 +1,5 @@
 ---
-title: Remote desktop client disconnects and cannot reconnect to the same session
+title: Remote Desktop client disconnects and cannot reconnect to the same session
 description: Troubleshooting an issue in which remote desktop client disconnects and cannot reconnect to the same session.
 audience: ITPro ​
 ms.custom: na
@@ -15,12 +15,12 @@ ms.date: 06/23/2019
 ms.localizationpriority: medium
 ---
 
-# Remote desktop client disconnects and cannot reconnect to the same session
+# Remote Desktop client disconnects and cannot reconnect to the same session
 
 After remote desktop client loses its connection to the remote desktop, the client cannot immediately reconnect. The user receives error messages such as the following:
 
-  - Because of a security error, the client could not connect to the Terminal server. After making sure that you are logged on to the network, try connecting to the server again.
-  - Remote desktop disconnected. Because of a security error, the client could not connect to the remote computer. Verify that you are logged onto the network and then try connecting again.
+  - The client couldn't connect to the terminal server because of a security error. After making sure you're signed in to the network, try reconnecting to the server.
+  - Remote Desktop disconnected. Because of a security error, the client could not connect to the remote computer. Verify that you are logged onto the network and then try connecting again.
 
 At a later time, the remote desktop client reconnects to the remote desktop. However, instead of connecting the client to the original session, the RDSH server connects the client to a new session. Checking the RDSH server reveals that the original session did not enter a disconnected state, but instead remains active.
 

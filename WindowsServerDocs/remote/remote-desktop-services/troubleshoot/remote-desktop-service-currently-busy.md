@@ -32,7 +32,7 @@ A memory leak has been found on some Windows Server 2012 R2 RDSH servers. Over t
 
 > The task you are trying to do can't be completed because Remote Desktop Service is currently busy. Please try again in a few minutes. Other users should still be able to sign in.
 
-Remote desktop clients attempting to connect also become unresponsive.
+Remote Desktop clients attempting to connect also become unresponsive.
 
 To work around this issue, restart the RDSH server.
 

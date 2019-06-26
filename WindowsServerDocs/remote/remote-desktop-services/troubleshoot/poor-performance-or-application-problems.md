@@ -17,17 +17,11 @@ ms.localizationpriority: medium
 
 # User experiences poor performance or application problems
 
-This section addresses several common issues that users may experience when they use remote desktop functionality:
-
-  - [Users who connect to new virtual machines Microsoft Azure intermittently experience problems](#intermittent-problems-with-new-microsoft-azure-virtual-machines).
-  - [Users who connect to Windows 10 version 1709 remote desktops may have problems playing video](#video-playback-issues-on-windows-10-version-1709).
-  - [Users with read-only user profiles who connect to Windows 10 remote desktops cannot share their desktops.](#desktop-sharing-issues-on-windows-10)
-  - [Users connecting to Windows 10 remote desktops using clients that run on older versions of Windows 10 experience poor performance when NLA is disabled](#performance-issues-when-mixing-versions-of-windows-10-if-nla-is-disabled)
-  - [When users run multiple applications in remote desktop sessions and disconnect and reconnect frequently, they may encounter a black screen on reconnecting.](#black-screen-issue)
+This article addresses several common issues that users can experience when they use remote desktop functionality.
 
 ### Intermittent problems with new Microsoft Azure virtual machines
 
-This issue affects virtual machines that have been recently provisioned. After the user connects to the virtual machine, the remote desktop session may not load all the user’s settings correctly.
+This issue affects virtual machines that have been recently provisioned. After the user connects to the virtual machine, the remote desktop session does not load all the user’s settings correctly.
 
 To work around this issue, disconnect from the virtual machine, wait for at least 20 minutes, and then connect again.
 
@@ -44,7 +38,7 @@ This is a known issue in Windows 10, version 1709. The issue does not occur in W
 
 ### Desktop sharing issues on Windows 10
 
-This issue occurs when the user has a read-only user profile (and associated registry hive), such as in a kiosk scenario. When such a user connects to a remote computer that is running Windows 10, version 1803, they cannot share their desktop.
+This issue occurs when the user has a read-only user profile (and associated registry hive), such as in a kiosk scenario. When such a user connects to a remote computer that is running Windows 10, version 1803, they can't share their desktop.
 
 To fix this issue, apply the Windows 10 update 4340917, [July 24, 2018—KB4340917 (OS Build 17134.191)](https://support.microsoft.com/en-us/help/4340917/windows-10-update-kb4340917).
 
@@ -62,6 +56,6 @@ This issue occurs in Windows 8.0, Windows 8.1, Windows 10 RTM, and Windows Serve
 
 To resolve this issue, apply the following updates as appropriate:
 
-  - Windows 8 and Windows Server 2012: KB4103719, [May 17, 2018—KB4103719 (Preview of Monthly Rollup)](https://support.microsoft.com/en-us/help/4103719/windows-server-2012-update-kb4103719)
-  - Windows 8.1 and Windows Server 2012 R2: KB4103724, [May 17, 2018—KB4103724 (Preview of Monthly Rollup)](https://support.microsoft.com/en-us/help/4103724/windows-81-update-kb4103724) and KB 4284863, [June 21, 2018—KB4284863 (Preview of Monthly Rollup)](https://support.microsoft.com/en-us/help/4284863/windows-81-update-kb4284863)
-  - Windows 10: Fixed in KB4284860, [June 12, 2018—KB4284860 (OS Build 10240.17889)](https://support.microsoft.com/en-us/help/4284860/windows-10-update-kb4284860)
+  - Windows 8 and Windows Server 2012: KB4103719, [May 17, 2018—KB4103719 (Preview of Monthly Rollup)](https://support.microsoft.com/help/4103719/windows-server-2012-update-kb4103719)
+  - Windows 8.1 and Windows Server 2012 R2: KB4103724, [May 17, 2018—KB4103724 (Preview of Monthly Rollup)](https://support.microsoft.com/help/4103724/windows-81-update-kb4103724) and KB 4284863, [June 21, 2018—KB4284863 (Preview of Monthly Rollup)](https://support.microsoft.com/help/4284863/windows-81-update-kb4284863)
+  - Windows 10: Fixed in KB4284860, [June 12, 2018—KB4284860 (OS Build 10240.17889)](https://support.microsoft.com/help/4284860/windows-10-update-kb4284860)

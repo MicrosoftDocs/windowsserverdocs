@@ -16,12 +16,7 @@ ms.localizationpriority: medium
 ---
 # General troubleshooting steps
 
-Use these steps when a Remote Desktop client cannot connect to a remote desktop but does not provide messages or other symptoms that would help identify the cause. To resolve many of the most common causes of this kind of issue, use the following methods:
-
-- [Check the status of the RDP protocol](#check-the-status-of-the-rdp-protocol)
-- [Check the status of the RDP services](#check-the-status-of-the-rdp-services)
-- [Check that the RDP listener is functioning](#check-that-the-rdp-listener-is-functioning)
-- [Check the RDP listener port](#check-the-rdp-listener-port)
+Use these steps when a Remote Desktop client cannot connect to a remote desktop but does not provide messages or other symptoms that would help identify the cause.
 
 ## Check the status of the RDP protocol
 

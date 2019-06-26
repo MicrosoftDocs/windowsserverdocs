@@ -17,15 +17,7 @@ ms.localizationpriority: medium
 
 # User cannot authenticate or must authenticate twice
 
-There are several issues that can cause problems that affect user authentication. This section addresses the following cases:
-
-  - [A user is denied access with a "restricted type of logon" message](#access-denied-restricted-type-of-logon)
-  - [A user or application is denied access with event 16965, "A remote call to the SAM database has been denied"](#access-denied-a-remote-call-to-the-sam-database-has-been-denied)
-  - [A user cannot sign in by using a smart card](#a-user-cannot-sign-in-by-using-a-smart-card)
-  - [If the remote PC is locked, a user needs to enter a password twice](#if-the-remote-pc-is-locked-a-user-needs-to-enter-a-password-twice)
-  - [A user cannot sign in and receives “authentication error” and “CredSSP encryption oracle remediation” messages](#user-cannot-sign-in-and-receives-authentication-error-and-credssp-encryption-oracle-remediation-messages)
-  - [After you update client computers, some users need to sign in twice](#after-you-update-client-computers-some-users-need-to-sign-in-twice).
-  - [Users are denied access on a deployment that uses RemoteGuard with multiple RD Connection Brokers](#users-are-denied-access-on-a-deployment-that-uses-remote-credential-guard-with-multiple-rd-connection-brokers)
+This article addresses several issues that can cause problems that affect user authentication.
 
 ## Access denied, restricted type of logon
 
@@ -145,7 +137,7 @@ To work around this issue until the updates are complete, check KB 4093492 for a
     > [!IMPORTANT]  
     > These modifications reduce the security of your deployment. They should only be temporary, if you use them at all.
 
-For more information about working with group policy, see [Modifying a blocking GPO](#modifying-a-blocking-gpo).
+For more information about working with group policy, see [Modifying a blocking GPO](rdp-error-general-troubleshooting.md/#modifying-a-blocking-gpo).
 
 ## After you update client computers, some users need to sign in twice
 

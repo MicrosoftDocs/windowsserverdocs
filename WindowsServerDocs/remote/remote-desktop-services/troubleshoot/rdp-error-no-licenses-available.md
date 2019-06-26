@@ -26,7 +26,7 @@ Identify which kind of behavior users are seeing:
 
 Sign in to the RD Session Host as a domain administrator, and open the RD License Diagnoser. Look for messages such as the following:
 
-  - The grace period for the Remote desktop Session Host server has expired, but the RD Session Host server has not been configured with any license servers. connections to the RD Session Host server will be denied unless a license server is configured for the RD Session Host server.
+  - The grace period for the Remote Desktop Session Host server has expired, but the RD Session Host server has not been configured with any license servers. connections to the RD Session Host server will be denied unless a license server is configured for the RD Session Host server.
   - License server \<computer name\> is not available. This could be caused by network connectivity problems, the Remote Desktop Licensing service is stopped on the license server, or RD Licensing is no longer installed on the computer.
 
 These problems tend to be associated with the following user messages:
