@@ -160,6 +160,7 @@
 ### [choice](choice.md)
 ### [cipher](cipher.md)
 ### [clip](clip.md)
+### [cleanmgr](cleanmgr.md)
 ### [cls](cls.md)
 ### [Cmd](Cmd.md)
 ### [cmdkey](cmdkey.md)

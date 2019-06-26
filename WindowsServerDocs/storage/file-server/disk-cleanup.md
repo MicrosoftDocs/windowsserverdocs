@@ -18,7 +18,7 @@ The Disk Cleanup tool clears unnecessary files in a Windows Server environment. 
 
 To start the Disk Cleanup tool, either run the Cleanmgr.exe command, or select **Start**, select **Windows Administrative Tools**, and then select **Disk Cleanup**.
 
-You can also run Disk Cleanup by using the [cleanmgr Windows command](../../administration/windows-commands/clean-mgr.md) and use command-line options to specify that Disk Cleanup cleans up certain files.
+You can also run Disk Cleanup by using the [cleanmgr Windows command](../../administration/windows-commands/cleanmgr.md) and use command-line options to specify that Disk Cleanup cleans up certain files.
 
 ## Enable Disk Cleanup on an earlier version of Windows Server by installing the Desktop Experience
 
@@ -73,4 +73,4 @@ To have Disk Cleanup button appear on a disk’s Properties dialog, you will als
 
 [Free up drive space in Windows 10](https://support.microsoft.com/en-us/help/12425/windows-10-free-up-drive-space)
 
-[cleanmgr](../../administration/windows-commands/clean-mgr.md)
+[cleanmgr](../../administration/windows-commands/cleanmgr.md)
