@@ -22,7 +22,7 @@ Use these steps when a Remote Desktop client cannot connect to a remote desktop 
 
 ### Check the status of the RDP protocol on a local computer
 
-To check and change the status of the RDP protocol on a local computer, see [How to enable Remote Desktop](https://docs.microsoft.com/en-us/windows-server/remote/remote-desktop-services/clients/remote-desktop-allow-access#how-to-enable-remote-desktop).
+To check and change the status of the RDP protocol on a local computer, see [How to enable Remote Desktop](https://docs.microsoft.com/windows-server/remote/remote-desktop-services/clients/remote-desktop-allow-access#how-to-enable-remote-desktop).
 
 > [!NOTE]  
 > If the remote desktop options are not available, see [Check whether a Group Policy Object is blocking RDP](#check-whether-a-group-policy-object-gpo-is-blocking-rdp-on-a-local-computer).
@@ -30,7 +30,7 @@ To check and change the status of the RDP protocol on a local computer, see [How
 ### Check the status of the RDP protocol on a remote computer
 
 > [!IMPORTANT]  
-> Follow the steps in this section carefully. Serious problems might occur if you modify the registry incorrectly. Before you modify it, [back up the registry for restoration](https://support.microsoft.com/en-us/help/322756%22%20target=%22_self%22) in case problems occur.
+> Follow the steps in this section carefully. Serious problems might occur if you modify the registry incorrectly. Before you modify it, [back up the registry for restoration](https://support.microsoft.com/help/322756) in case problems occur.
 
 To check and change the status of the RDP protocol on a remote computer, use a network registry connection:
 
@@ -69,7 +69,7 @@ The file that this command produces (**gpresult-\<computer name\>.html**) uses t
 
 ### Modifying a blocking GPO
 
-You can modify these settings in the Group Policy Object Editor (GPE) and Group Policy Management Console (GPM). For more information about how to use Group Policy, see [Advanced Group Policy Management](https://docs.microsoft.com/en-us/microsoft-desktop-optimization-pack/agpm/).
+You can modify these settings in the Group Policy Object Editor (GPE) and Group Policy Management Console (GPM). For more information about how to use Group Policy, see [Advanced Group Policy Management](https://docs.microsoft.com/microsoft-desktop-optimization-pack/agpm/).
 
 To modify the blocking policy, use one of the following methods:
 
@@ -97,7 +97,7 @@ On either computer, if one or both services are not running, start them.
 ## Check that the RDP listener is functioning
 
 > [!IMPORTANT]  
-> Follow the steps in this section carefully. Serious problems might occur if you modify the registry incorrectly. Before you modify it, [back up the registry for restoration](https://support.microsoft.com/en-us/help/322756%22%20target=%22_self%22) in case problems occur.
+> Follow the steps in this section carefully. Serious problems might occur if you modify the registry incorrectly. Before you modify it, [back up the registry for restoration](https://support.microsoft.com/help/322756) in case problems occur.
 
 ### Check the status of the RDP listener
 
@@ -159,7 +159,7 @@ For this procedure, use a PowerShell instance that has administrative permission
 On both the local (client) computer and the remote (target) computer, the RDP listener should be listening on port 3389. No other applications should be using this port.
 
 > [!IMPORTANT]  
-> Follow the steps in this section carefully. Serious problems might occur if you modify the registry incorrectly. Before you modify it, [back up the registry for restoration](https://support.microsoft.com/en-us/help/322756%22%20target=%22_self%22) in case problems occur.
+> Follow the steps in this section carefully. Serious problems might occur if you modify the registry incorrectly. Before you modify it, [back up the registry for restoration](https://support.microsoft.com/help/322756%22%20target=%22_self%22) in case problems occur.
 
 To check or change the RDP port, use Registry Editor:
 

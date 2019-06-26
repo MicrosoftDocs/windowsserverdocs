@@ -27,8 +27,8 @@ To work around this issue, disconnect from the virtual machine, wait for at leas
 
 To resolve this issue, apply the following updates to the virtual machines, as appropriate:
 
-  - Windows 10 and Windows Server 2016: KB 4343884, [August 30, 2018—KB4343884 (OS Build 14393.2457)](https://support.microsoft.com/en-us/help/4343884/windows-10-update-kb4343884)
-  - Windows Server 2012 R2: KB 4343891, [August 30, 2018—KB4343891 (Preview of Monthly Rollup)](https://support.microsoft.com/en-us/help/4343891/windows-81-update-kb4343891)
+  - Windows 10 and Windows Server 2016: KB 4343884, [August 30, 2018—KB4343884 (OS Build 14393.2457)](https://support.microsoft.com/help/4343884/windows-10-update-kb4343884)
+  - Windows Server 2012 R2: KB 4343891, [August 30, 2018—KB4343891 (Preview of Monthly Rollup)](https://support.microsoft.com/help/4343891/windows-81-update-kb4343891)
 
 ### Video playback issues on Windows 10 version 1709
 
@@ -40,7 +40,7 @@ This is a known issue in Windows 10, version 1709. The issue does not occur in W
 
 This issue occurs when the user has a read-only user profile (and associated registry hive), such as in a kiosk scenario. When such a user connects to a remote computer that is running Windows 10, version 1803, they can't share their desktop.
 
-To fix this issue, apply the Windows 10 update 4340917, [July 24, 2018—KB4340917 (OS Build 17134.191)](https://support.microsoft.com/en-us/help/4340917/windows-10-update-kb4340917).
+To fix this issue, apply the Windows 10 update 4340917, [July 24, 2018—KB4340917 (OS Build 17134.191)](https://support.microsoft.com/help/4340917/windows-10-update-kb4340917).
 
 ### Performance issues when mixing versions of Windows 10 if NLA is disabled
 
@@ -48,7 +48,7 @@ This issue occurs when NLA is disabled, and remote desktop client computers that
 
 This occurs because, when NLA is disabled, the older client computers use a slower protocol when they connect to Windows 10, version 1803 or a later version.
 
-To resolve this issue, apply KB 4340917, [July 24, 2018—KB4340917 (OS Build 17134.191)](https://support.microsoft.com/en-us/help/4340917/windows-10-update-kb4340917).
+To resolve this issue, apply KB 4340917, [July 24, 2018—KB4340917 (OS Build 17134.191)](https://support.microsoft.com/help/4340917/windows-10-update-kb4340917).
 
 ### Black screen issue
 

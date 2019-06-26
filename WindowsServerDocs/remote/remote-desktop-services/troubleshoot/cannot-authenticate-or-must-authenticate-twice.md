@@ -55,7 +55,7 @@ This behavior results from a change to Windows. In Windows Server 2012 R2 and ea
 Starting in Windows Server 2016, RCM no longer queries the users object in AD DS. If you require RCM to query AD DS because you are using the Remote Desktop Services attributes, you must manually enable the previous RCM behavior.
 
 > [!IMPORTANT]  
-> Follow the steps in this section carefully. Serious problems might occur if you modify the registry incorrectly. Before you modify it, [back up the registry for restoration](https://support.microsoft.com/en-us/help/322756%22%20target=%22_self%22) in case problems occur.
+> Follow the steps in this section carefully. Serious problems might occur if you modify the registry incorrectly. Before you modify it, [back up the registry for restoration](https://support.microsoft.com/help/322756) in case problems occur.
 
 To enable the legacy RCM behavior on a RD Session Host server, configure the following registry entries, and then restart the **Remote Desktop Services** service:  
   - **HKEY\_LOCAL\_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows NT\\Terminal Services**
@@ -67,14 +67,11 @@ To enable the legacy RCM behavior on a RD Session Host server, configure the fol
 To enable the legacy RCM behavior on a server other than a RD Session Host server, configure these registry entries and the following additional registry entry (and then restart the service):
   - **HKEY\_LOCAL\_MACHINE\\SYSTEM\\CurrentControlSet\\Control\\Terminal Server**
 
-For more information about this behavior, see KB 3200967 [Changes to Remote Connection Manager in Windows Server](https://support.microsoft.com/en-us/help/3200967/changes-to-remote-connection-manager-in-windows-server).
+For more information about this behavior, see KB 3200967 [Changes to Remote Connection Manager in Windows Server](https://support.microsoft.com/help/3200967/changes-to-remote-connection-manager-in-windows-server).
 
 ## A user cannot sign in by using a smart card
 
-This article addresses three common circumstances in which a user cannot sign in to a remote desktop by using a smart card:  
-  - [The user cannot sign in to a branch office that uses a read-only Domain Controller (RODC)](#cannot-sign-in-with-a-smart-card-in-a-branch-office-with-a-rodc)
-  - [The user cannot sign in to a Windows Server 2008 SP2 computer that has recently been updated](#cannot-sign-in-with-a-smart-card-to-a-windows-server-2008-sp2-computer)
-  - [The user cannot stay signed in to a Windows computer that has been recently updated, and the Remote Desktop Services service becomes unresponsive (hangs)](#cannot-stay-signed-in-with-a-smart-card-and-remote-desktop-services-service-hangs)
+This section addresses three common circumstances in which a user cannot sign in to a remote desktop by using a smart card.
 
 ### Cannot sign in with a smart card in a branch office with a RODC
 
@@ -88,7 +85,7 @@ To work around this issue, consider changing your DC topology either by turning 
 
 This issue occurs when users sign in to a Windows Server 2008 SP2 computer that has been updated with KB4093227 (2018.4B). When users attempt to sign in using a smart card, they are denied access with messages such as “No valid certificates found. Check that the card is inserted correctly and fits tightly.” At the same time, the Windows Server computer records the Application event "An error occurred while retrieving a digital certificate from the inserted smart card. Invalid Signature."
 
-To resolve this issue, update the Windows Server computer with the 2018.06 B re-release of KB 4093227, [Description of the security update for the Windows Remote Desktop Protocol (RDP) denial of service vulnerability in Windows Server 2008: April 10, 2018](https://support.microsoft.com/en-us/help/4093227/security-update-for-vulnerabilities-in-windows-server-2008).
+To resolve this issue, update the Windows Server computer with the 2018.06 B re-release of KB 4093227, [Description of the security update for the Windows Remote Desktop Protocol (RDP) denial of service vulnerability in Windows Server 2008: April 10, 2018](https://support.microsoft.com/help/4093227/security-update-for-vulnerabilities-in-windows-server-2008).
 
 ### Cannot stay signed in with a smart card and Remote Desktop Services service hangs
 
@@ -98,15 +95,15 @@ To work around this issue, restart the remote computer.
 
 To resolve this issue, update the remote computer with the appropriate fix:
 
-  - Windows Server 2008 SP2: KB 4090928, [Windows leaks handles in the lsm.exe process and smart card applications may display "SCARD\_E\_NO\_SERVICE" errors](https://support.microsoft.com/en-us/help/4090928/scard-e-no-service-errors-when-windows-leaks-handles-in-the-lsm-exe)
-  - Windows Server 2012 R2: KB 4103724, [May 17, 2018—KB4103724 (Preview of Monthly Rollup)](https://support.microsoft.com/en-us/help/4103724/windows-81-update-kb4103724)
-  - Windows Server 2016 and Windows 10, version 1607: KB 4103720, [May 17, 2018—KB4103720 (OS Build 14393.2273)](https://support.microsoft.com/en-us/help/4103720/windows-10-update-kb4103720)
+  - Windows Server 2008 SP2: KB 4090928, [Windows leaks handles in the lsm.exe process and smart card applications may display "SCARD\_E\_NO\_SERVICE" errors](https://support.microsoft.com/help/4090928/scard-e-no-service-errors-when-windows-leaks-handles-in-the-lsm-exe)
+  - Windows Server 2012 R2: KB 4103724, [May 17, 2018—KB4103724 (Preview of Monthly Rollup)](https://support.microsoft.com/help/4103724/windows-81-update-kb4103724)
+  - Windows Server 2016 and Windows 10, version 1607: KB 4103720, [May 17, 2018—KB4103720 (OS Build 14393.2273)](https://support.microsoft.com/help/4103720/windows-10-update-kb4103720)
 
 ## If the remote PC is locked, a user needs to enter a password twice
 
 This issue may occur when a user attempts to connect to a remote desktop that is running Windows 10 version 1709 in a deployment in which RDP connections do not require NLA. Under these conditions, if the remote desktop has been locked, the user needs to enter their credential twice when connecting.
 
-To resolve this issue, update the Windows 10 version 1709 computer with KB 4343893, [August 30, 2018—KB4343893 (OS Build 16299.637)](https://support.microsoft.com/en-us/help/4343893/windows-10-update-kb4343893).
+To resolve this issue, update the Windows 10 version 1709 computer with KB 4343893, [August 30, 2018—KB4343893 (OS Build 16299.637)](https://support.microsoft.com/help/4343893/windows-10-update-kb4343893).
 
 ## User cannot sign in and receives “authentication error” and “CredSSP encryption oracle remediation” messages
 
@@ -124,9 +121,9 @@ The initial updates added support for a new Group Policy Object, **Encryption Or
   - **Force Updated Clients**. Client applications that use CredSSP cannot fall back to insecure versions, and services that use CredSSP will not accept unpatched clients. 
     Note: This setting should not be deployed until all remote hosts support the newest version.
 
-The May 8, 2018, update changed the default **Encryption Oracle Remediation** setting from **Vulnerable** to **Mitigated**. With this change in place, remote desktop clients that have the updates cannot connect to servers that do not have them (or updated servers that have not been restarted). For more information about the effects of the updates and the types of communication that they block, see KB 4093492, [CredSSP updates for CVE-2018-0886](https://support.microsoft.com/en-us/help/4093492/credssp-updates-for-cve-2018-0886-march-13-2018).
+The May 8, 2018, update changed the default **Encryption Oracle Remediation** setting from **Vulnerable** to **Mitigated**. With this change in place, remote desktop clients that have the updates cannot connect to servers that do not have them (or updated servers that have not been restarted). For more information about the effects of the updates and the types of communication that they block, see KB 4093492, [CredSSP updates for CVE-2018-0886](https://support.microsoft.com/help/4093492/credssp-updates-for-cve-2018-0886-march-13-2018).
 
-To resolve this issue, ensure that all systems are fully updated and restarted. For a full list of updates and more information about the vulnerabilities, see [CVE-2018-0886 | CredSSP Remote Code Execution Vulnerability](https://portal.msrc.microsoft.com/en-us/security-guidance/advisory/CVE-2018-0886).
+To resolve this issue, ensure that all systems are fully updated and restarted. For a full list of updates and more information about the vulnerabilities, see [CVE-2018-0886 | CredSSP Remote Code Execution Vulnerability](https://portal.msrc.microsoft.com/security-guidance/advisory/CVE-2018-0886).
 
 To work around this issue until the updates are complete, check KB 4093492 for allowed types of connections. If there are no feasible alternatives you may consider one of the following methods:
 
@@ -143,16 +140,16 @@ For more information about working with group policy, see [Modifying a blocking 
 
 Users on some Windows 7 or Windows 10 version 1709 sign in to a remote desktop session, and immediately see a second sign-in screen. This issue occurs if the client computers have received the following updates:
 
-  - Windows 7: KB 4103718, [May 8, 2018—KB4103718 (Monthly Rollup)](https://support.microsoft.com/en-us/help/4103718/windows-7-update-kb4103718)
-  - Windows 10 1709: KB 4103727, [May 8, 2018—KB4103727 (OS Build 16299.431)](https://support.microsoft.com/en-us/help/4103727/windows-10-update-kb4103727)
+  - Windows 7: KB 4103718, [May 8, 2018—KB4103718 (Monthly Rollup)](https://support.microsoft.com/help/4103718/windows-7-update-kb4103718)
+  - Windows 10 1709: KB 4103727, [May 8, 2018—KB4103727 (OS Build 16299.431)](https://support.microsoft.com/help/4103727/windows-10-update-kb4103727)
 
 To resolve this issue, ensure that the computers that the users want to connect to (as well as RDSH or RDVI servers) are fully updated through June, 2018. This includes the following updates:
 
-  - Windows Server 2016: KB 4284880, [June 12, 2018—KB4284880 (OS Build 14393.2312)](https://support.microsoft.com/en-us/help/4284880/windows-10-update-kb4284880)
-  - Windows Server 2012 R2: KB 4284815, [June 12, 2018—KB4284815 (Monthly Rollup)](https://support.microsoft.com/en-us/help/4284815/windows-81-update-kb4284815)
-  - Windows Server 2012: KB 4284855, [June 12, 2018—KB4284855 (Monthly Rollup)](https://support.microsoft.com/en-us/help/4284855/windows-server-2012-update-kb4284855)
-  - Windows Server 2008 R2: KB 4284826, [June 12, 2018—KB4284826 (Monthly Rollup)](https://support.microsoft.com/en-us/help/4284826/windows-7-update-kb4284826)
-  - Windows Server 2008 SP2: KB4056564, [Description of the security update for the CredSSP remote code execution vulnerability in Windows Server 2008, Windows Embedded POSReady 2009, and Windows Embedded Standard 2009: March 13, 2018](https://support.microsoft.com/en-us/help/4056564/security-update-for-vulnerabilities-in-windows-server-2008)
+  - Windows Server 2016: KB 4284880, [June 12, 2018—KB4284880 (OS Build 14393.2312)](https://support.microsoft.com/help/4284880/windows-10-update-kb4284880)
+  - Windows Server 2012 R2: KB 4284815, [June 12, 2018—KB4284815 (Monthly Rollup)](https://support.microsoft.com/help/4284815/windows-81-update-kb4284815)
+  - Windows Server 2012: KB 4284855, [June 12, 2018—KB4284855 (Monthly Rollup)](https://support.microsoft.com/help/4284855/windows-server-2012-update-kb4284855)
+  - Windows Server 2008 R2: KB 4284826, [June 12, 2018—KB4284826 (Monthly Rollup)](https://support.microsoft.com/help/4284826/windows-7-update-kb4284826)
+  - Windows Server 2008 SP2: KB4056564, [Description of the security update for the CredSSP remote code execution vulnerability in Windows Server 2008, Windows Embedded POSReady 2009, and Windows Embedded Standard 2009: March 13, 2018](https://support.microsoft.com/help/4056564/security-update-for-vulnerabilities-in-windows-server-2008)
 
 ## Users are denied access on a deployment that uses Remote Credential Guard with multiple RD Connection Brokers
 
@@ -160,4 +157,4 @@ This issue occurs in high-availability deployments that use two or more Remote D
 
 This issue occurs because Remote Credential Guard uses Kerberos for authentication, and restricts NTLM. However, in a high-availability configuration with load balancing, the RD Connection Brokers cannot support Kerberos operations.
 
-If you need to use a high-availability configuration with load-balanced RD Connection Brokers, you can work around this issue by disabling Remote Credential Guard. For more information about how to manage Windows Defender Remote Credential Guard, see [Protect Remote Desktop credentials with Windows Defender Remote Credential Guard](https://docs.microsoft.com/en-us/windows/security/identity-protection/remote-credential-guard#enable-windows-defender-remote-credential-guard).
+If you need to use a high-availability configuration with load-balanced RD Connection Brokers, you can work around this issue by disabling Remote Credential Guard. For more information about how to manage Windows Defender Remote Credential Guard, see [Protect Remote Desktop credentials with Windows Defender Remote Credential Guard](https://docs.microsoft.com/windows/security/identity-protection/remote-credential-guard#enable-windows-defender-remote-credential-guard).

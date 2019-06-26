@@ -36,7 +36,7 @@ Remote Desktop clients attempting to connect also become unresponsive.
 
 To work around this issue, restart the RDSH server.
 
-To resolve this issue, apply KB 4093114, [April 10, 2018—KB4093114 (Monthly Rollup)](file:///C:/Users/v-jesits/AppData/Local/Microsoft/Windows/INetCache/Content.Outlook/FUB8OO45/April%2010,%202018—KB4093114%20(Monthly%20Rollup)), to the RDSH servers.
+To resolve this issue, apply KB 4093114, [April 10, 2018—KB4093114 (Monthly Rollup)](https://support.microsoft.com/help/4093114/), to the RDSH servers.
 
 ## RD listener issue
 
@@ -49,8 +49,8 @@ To work around this issue, you can use the following methods:
 
 To resolve this issue, apply the following updates to the RDSH servers:
 
-  - Windows Server 2012 R2: KB 4343891, [August 30, 2018—KB4343891 (Preview of Monthly Rollup)](https://support.microsoft.com/en-us/help/4343891/windows-81-update-kb4343891)
-  - Windows Server 2016: KB 4343884, [August 30, 2018—KB4343884 (OS Build 14393.2457)](https://support.microsoft.com/en-us/help/4343884/windows-10-update-kb4343884)
+  - Windows Server 2012 R2: KB 4343891, [August 30, 2018—KB4343891 (Preview of Monthly Rollup)](https://support.microsoft.com/help/4343891/windows-81-update-kb4343891)
+  - Windows Server 2016: KB 4343884, [August 30, 2018—KB4343884 (OS Build 14393.2457)](https://support.microsoft.com/help/4343884/windows-10-update-kb4343884)
 
 ## Check the connection limit policy
 

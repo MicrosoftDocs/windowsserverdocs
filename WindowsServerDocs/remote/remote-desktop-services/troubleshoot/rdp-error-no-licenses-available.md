@@ -44,7 +44,7 @@ In this case, [refresh the X509 Certificate registry keys](#refresh-the-x509-cer
 
 ## Configure the RD Licensing service
 
-The following procedure uses Server Manager to make the configuration changes. For information about how to configure and use Server Manager, see [Server Manager](https://docs.microsoft.com/en-us/windows-server/administration/server-manager/server-manager).
+The following procedure uses Server Manager to make the configuration changes. For information about how to configure and use Server Manager, see [Server Manager](https://docs.microsoft.com/windows-server/administration/server-manager/server-manager).
 
 1. Open Server Manager, and then navigate to **Remote Desktop Services**.
 2. On **Deployment Overview**, select **Tasks**, and then select **Edit Deployment Properties**.
@@ -56,7 +56,7 @@ The following procedure uses Server Manager to make the configuration changes. F
 ## Refresh the X509 Certificate registry keys
 
 > [!IMPORTANT]  
-> Follow the steps in this section carefully. Serious problems might occur if you modify the registry incorrectly. Before you modify it, [back up the registry for restoration](https://support.microsoft.com/en-us/help/322756%22%20target=%22_self%22) in case problems occur.
+> Follow the steps in this section carefully. Serious problems might occur if you modify the registry incorrectly. Before you modify it, [back up the registry for restoration](https://support.microsoft.com/help/322756) in case problems occur.
 
 To resolve this problem, back up and then remove the X509 Certificate registry keys, restart the computer, and then reactivate the RD Licensing server. To do this, follow these steps.
 
