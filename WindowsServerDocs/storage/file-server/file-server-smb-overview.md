@@ -13,7 +13,7 @@ ms.localizationpriority: medium
 
 >Applies to: Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-This topic describes the SMB 3.0 feature in Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, and Windows Server® 2012—practical uses for the feature, the most significant new or updated functionality in this version compared to previous versions, and the hardware requirements. Windows Server 2012 introduced the 3.0.1 version of the SMB protocol, and Windows Server 2016 introduced SMB 3.1.1.
+This topic describes the SMB 3.0 feature in Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, and Windows Server® 2012—practical uses for the feature, the most significant new or updated functionality in this version compared to previous versions, and the hardware requirements. Windows Server 2012 introduced the 3.0.2 version of the SMB protocol, and Windows Server 2016 introduced SMB 3.1.1.
 
 ## Feature description
 
