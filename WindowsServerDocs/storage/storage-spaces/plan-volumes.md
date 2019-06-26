@@ -7,7 +7,7 @@ ms.manager: eldenc
 ms.technology: storage-spaces
 ms.topic: article
 author: cosmosdarwin
-ms.date: 01/10/2019
+ms.date: 06/26/2019
 ms.localizationpriority: medium
 ---
 # Planning volumes in Storage Spaces Direct
@@ -45,23 +45,27 @@ We recommend using the new [Resilient File System (ReFS)](../refs/refs-overview.
 
 If your workload requires a feature that ReFS doesn't support yet, you can use NTFS instead.
 
-   >[!TIP]
+   > [!TIP]
    > Volumes with different file systems can coexist in the same cluster.
 
 ## Choosing the resiliency type
 
 Volumes in Storage Spaces Direct provide resiliency to protect against hardware problems, such as drive or server failures, and to enable continuous availability throughout server maintenance, such as software updates.
 
-   >[!NOTE]
+   > [!NOTE]
    > Which resiliency types you can choose is independent of which types of drives you have.
 
 ### With two servers
 
-The only option for clusters with two servers is two-way mirroring. This keeps two copies of all data, one copy on the drives in each server. Its storage efficiency is 50% – to write 1 TB of data, you need at least 2 TB of physical storage capacity in the storage pool. Two-way mirroring can safely tolerate one hardware failure (drive or server) at a time.
+If you're running Windows Server 2019, you can use two-way mirroring, or you can nest resiliency types. Nested resiliency enables you to use nested two-way mirroring (essentially a four-way mirror), or nested mirror-accelerated parity. For more info, see [Nested Resiliency](nested-resiliency.md).
+
+![Nested mirror-accelerated parity](media/nested-resiliency/nested-mirror-accelerated-parity.png)
+
+The only option for clusters with two servers running Windows Server 2016 is two-way mirroring. This keeps two copies of all data, one copy on the drives in each server. Its storage efficiency is 50% – to write 1 TB of data, you need at least 2 TB of physical storage capacity in the storage pool. Two-way mirroring can safely tolerate one hardware failure (drive or server) at a time.
 
 ![two-way-mirror](media/plan-volumes/two-way-mirror.png)
 
-If you have more than two servers, we recommend using one of the following resiliency types instead.
+If you have more than two servers running Windows Server 2016, we recommend using one of the following resiliency types instead.
 
 ### With three servers
 
@@ -79,8 +83,8 @@ Dual parity provides the same fault tolerance as three-way mirroring but with be
 
 Which resiliency type to use depends on the needs of your workload. Here's a table that summarizes which workloads are a good fit for each resiliency type, as well as the performance and storage efficiency of each resiliency type.
 
-| **Resiliency type**| **Capacity efficiency**| **Speed**| **Workloads**
-|--------------------|--------------------------------|--------------------------------|--------------------------
+| **Resiliency type** | **Capacity efficiency** | **Speed** | **Workloads** |
+| ------------------- | ----------------------  | --------- | ------------- |
 | **Mirror**         | ![Storage efficiency showing 33%](media/plan-volumes/3-way-mirror-storage-efficiency.png)<br>Three-way mirror: 33% <br>Two-way-mirror: 50%     |![Performance showing 100%](media/plan-volumes/three-way-mirror-perf.png)<br> Highest performance  | Virtualized workloads<br> Databases<br>Other high performance workloads |
 | **Mirror-accelerated parity** |![Storage efficiency showing around 50%](media/plan-volumes/mirror-accelerated-parity-storage-efficiency.png)<br> Depends on proportion of mirror and parity | ![Performance showing around 20%](media/plan-volumes/mirror-accelerated-parity-perf.png)<br>Much slower than mirror, but up to twice as fast as dual-parity<br> Best for large sequential writes and reads | Archival and backup<br> Virtualized desktop infrastructure     |
 | **Dual-parity**               | ![Storage efficiency showing around 80%](media/plan-volumes/dual-parity-storage-efficiency.png)<br>4 servers: 50% <br>16 servers: up to 80% | ![Performance showing around 10%](media/plan-volumes/dual-parity-perf.png)<br>Highest I/O latency & CPU usage on writes<br> Best for large sequential writes and reads | Archival and backup<br> Virtualized desktop infrastructure  |
@@ -102,7 +106,7 @@ Workloads that write in large, sequential passes, such as archival or backup tar
 
 The resulting storage efficiency depends on the proportions you choose. See [this demo](https://www.youtube.com/watch?v=-LK2ViRGbWs&t=36m55s) for some examples.
 
-   >[!TIP]
+   > [!TIP]
    > If you observe an abrupt decrease in write performance partway through data injestion, it may indicate that the mirror portion is not large enough or that mirror-accelerated parity isn't well suited for your use case. As an example, if write performance decreases from 400 MB/s to 40 MB/s, consider expanding the mirror portion or switching to three-way mirror.
 
 ### About deployments with NVMe, SSD, and HDD
@@ -111,7 +115,7 @@ In deployments with two types of drives, the faster drives provide caching while
 
 In deployments with all three types of drives, only the fastest drives (NVMe) provide caching, leaving two types of drives (SSD and HDD) to provide capacity. For each volume, you can choose whether it resides entirely on the SSD tier, entirely on the HDD tier, or whether it spans the two.
 
-   >[!IMPORTANT]
+   > [!IMPORTANT]
    > We recommend using the SSD tier to place your most performance-sensitive workloads on all-flash.
 
 ## Choosing the size of volumes
@@ -119,10 +123,10 @@ In deployments with all three types of drives, only the fastest drives (NVMe) pr
 We recommend limiting the size of each volume to:
 
 | Windows Server 2016 | Windows Server 2019 |
-|---------------------|---------------------|
+| ------------------- | ------------------- |
 | Up to 32 TB         | Up to 64 TB         |
 
-   >[!TIP]
+   > [!TIP]
    > If you use a backup solution that relies on the Volume Shadow Copy service (VSS) and the Volsnap software provider – as is common with file server workloads - limiting the volume size to 10 TB will improve performance and reliability. Backup solutions that use the newer Hyper-V RCT API and/or ReFS block cloning and/or the native SQL backup APIs perform well up to 32 TB and beyond.
 
 ### Footprint
