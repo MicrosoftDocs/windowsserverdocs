@@ -9,6 +9,7 @@
 ### [Active Directory Server](role/active-directory-server/index.md)
 #### [Site definition considerations](role/active-directory-server/site-definition-considerations.md)
 #### [Hardware considerations](role/active-directory-server/hardware-considerations.md)
+#### [Memory usage considerations](role/active-directory-server/memory-usage-considerations.md)
 #### [LDAP considerations](role/active-directory-server/ldap-considerations.md)
 #### [Troubleshoot ADDS performance](role/active-directory-server/troubleshoot.md)
 ### [File Server](role/file-server/index.md)
