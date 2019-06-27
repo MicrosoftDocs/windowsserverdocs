@@ -27,15 +27,20 @@ ms.reviewer: deverette
 
 In this step, you configure conditional access root certificates for VPN authentication with Azure AD, which automatically creates a Cloud app called VPN Server in the tenant. To configure conditional access for VPN connectivity, you need to:
 
-1. Create a VPN certificate in the Azure portal (you can create more than one certificate).
+1. Create a VPN certificate in the Azure portal.
 2. Download the VPN certificate.
 3. Deploy the certificate to your VPN and NPS servers.
 
+> [!IMPORTANT] 
+> Once a VPN certificate is created in the Azure portal, Azure AD will start using it immediately to issue short lived certificates to the VPN client. It is critical that the VPN certificate be deployed immediately to the VPN server after it is created in Azure portal to avoid any issues with credential validation of the VPN client.
+
 When a user attempts a VPN connection, the VPN client makes a call into the Web Account Manager (WAM) on the Windows 10 client. WAM makes a call to the VPN Server cloud app. When the Conditions and Controls in the Conditional Access policy are satisfied, Azure AD issues a token in the form of a short-lived (1-hour) certificate to the WAM. The WAM places the certificate in the user's certificate store and passes off control to the VPN client.  
 
-The VPN client then sends the certificate issues by Azure AD to the VPN for credential validation.  Azure AD uses the certificate that is marked as **Primary** in the VPN connectivity blade as the Issuer. 
+The VPN client then sends the certificate issues by Azure AD to the VPN for credential validation.  
 
-In the Azure portal, you create two certificates to manage the transition when one certificate is about to expire. When you create a certificate, you choose whether it is the primary certificate, which is used during the authentication to sign the certificate for the connection.
+> [!NOTE]
+> Azure AD uses the most recently created certificate in the VPN connectivity blade as the Issuer. 
+
 
 **Procedure:**
 
@@ -61,11 +66,9 @@ In the Azure portal, you create two certificates to manage the transition when o
 
     ![Select duration and primary](../../media/Always-On-Vpn/05.png)
 
-    a. For **Select duration**, select either 1 or 2 years. You can add up to two certificates to manage transitions when the certificate is about to expire. You can choose which one is the primary (the one used during authentication to sign the certificate for connectivity).
+    a. For **Select duration**, select either 1, 2 or 3 years. 
 
-    b. For **Primary**, select **Yes**.
-
-    c. Select **Create**.
+    b. Select **Create**.
 
 ## Next steps
 
