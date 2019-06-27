@@ -18,7 +18,7 @@ This topic provides guidance for how to plan volumes in Storage Spaces Direct to
 
 ## Review: What are volumes
 
-Volumes are the datastores where you put the files your workloads need, such as VHD or VHDX files for Hyper-V virtual machines. Volumes combine the drives in the storage pool to introduce the fault tolerance, scalability, and performance benefits of Storage Spaces Direct.
+Volumes are where you put the files your workloads need, such as VHD or VHDX files for Hyper-V virtual machines. Volumes combine the drives in the storage pool to introduce the fault tolerance, scalability, and performance benefits of Storage Spaces Direct.
 
    >[!NOTE]
    > Throughout documentation for Storage Spaces Direct, we use term "volume" to refer jointly to the volume and the virtual disk under it, including functionality provided by other built-in Windows features such as Cluster Shared Volumes (CSV) and ReFS. Understanding these implementation-level distinctions is not necessary to plan and deploy Storage Spaces Direct successfully.
@@ -57,7 +57,7 @@ Volumes in Storage Spaces Direct provide resiliency to protect against hardware 
 
 ### With two servers
 
-If you're running Windows Server 2019, you can use two-way mirroring, or you can nest resiliency types. Nesting provides data resiliency between servers with two-way mirroring, then adds resiliency within a server (with two-way mirroring or mirror-accellerated parity). Nesting provides data resilience even when one server is restarting or unavailable. Because of this added data resilience, we recommend using nested resiliency on production deployments of two-server clusters running Windows Server 2019. For more info, see [Nested Resiliency](nested-resiliency.md).
+If you're running Windows Server 2019, you can use two-way mirroring, or you can nest resiliency types. Nesting provides data resiliency between servers with two-way mirroring, then adds resiliency within a server (with two-way mirroring or mirror-accelerated parity). Nesting provides data resilience even when one server is restarting or unavailable. Because of this added data resilience, we recommend using nested resiliency on production deployments of two-server clusters running Windows Server 2019. For more info, see [Nested Resiliency](nested-resiliency.md).
 
 ![Nested mirror-accelerated parity](media/nested-resiliency/nested-mirror-accelerated-parity.png)
 
@@ -69,7 +69,7 @@ If you have more than two servers running Windows Server 2016, we recommend usin
 
 ### With three servers
 
-With three servers, you should use three-way mirroring for better fault tolerance and performance. Three-way mirroring keeps three copies of all data, one copy on the drives in each server. Its storage efficiency is 33.3% – to write 1 TB of data, you need at least 3 TB of physical storage capacity in the storage pool. Three-way mirroring can safely tolerate [at least two hardware problems (drive or server) at a time](storage-spaces-fault-tolerance.md#examples). If 2 nodes become unavailable the storage pool will lose quorum, since 2/3 of the disks are not availalbe, and the virtual disks will be unaccessible. However, a node can be down and one or more disks on another node can fail and the virtual disks will remain online. For example, if you're rebooting one server when suddenly another drive or server fails, all data remains safe and continuously accessible.
+With three servers, you should use three-way mirroring for better fault tolerance and performance. Three-way mirroring keeps three copies of all data, one copy on the drives in each server. Its storage efficiency is 33.3% – to write 1 TB of data, you need at least 3 TB of physical storage capacity in the storage pool. Three-way mirroring can safely tolerate [at least two hardware problems (drive or server) at a time](storage-spaces-fault-tolerance.md#examples). If 2 nodes become unavailable the storage pool will lose quorum, since 2/3 of the disks are not available, and the virtual disks will be unaccessible. However, a node can be down and one or more disks on another node can fail and the virtual disks will remain online. For example, if you're rebooting one server when suddenly another drive or server fails, all data remains safe and continuously accessible.
 
 ![three-way-mirror](media/plan-volumes/three-way-mirror.png)
 
@@ -107,7 +107,7 @@ Workloads that write in large, sequential passes, such as archival or backup tar
 The resulting storage efficiency depends on the proportions you choose. See [this demo](https://www.youtube.com/watch?v=-LK2ViRGbWs&t=36m55s) for some examples.
 
    > [!TIP]
-   > If you observe an abrupt decrease in write performance partway through data injestion, it may indicate that the mirror portion is not large enough or that mirror-accelerated parity isn't well suited for your use case. As an example, if write performance decreases from 400 MB/s to 40 MB/s, consider expanding the mirror portion or switching to three-way mirror.
+   > If you observe an abrupt decrease in write performance partway through data ingestion, it may indicate that the mirror portion is not large enough or that mirror-accelerated parity isn't well suited for your use case. As an example, if write performance decreases from 400 MB/s to 40 MB/s, consider expanding the mirror portion or switching to three-way mirror.
 
 ### About deployments with NVMe, SSD, and HDD
 
