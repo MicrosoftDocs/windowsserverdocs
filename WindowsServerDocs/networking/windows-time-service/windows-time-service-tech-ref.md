@@ -29,8 +29,7 @@ The Windows Time service uses NTP to help synchronize time across a network. NTP
  maybe this should be its own topic under the Tech Ref section -->
 ## Where to find Windows Time service configuration-related information  
 This guide does **not** discuss configuring the Windows Time service. There are several different topics on Microsoft TechNet and in the Microsoft Knowledge Base that do explain procedures for configuring the Windows Time service. If you require configuration information, the following topics should help you locate the appropriate information.  
-<!-- should this be an if/then table -->
--   To configure the Windows Time service for the forest root primary domain controller (PDC) emulator, see:  
+-   To configure the Windows Time service for the forest root primary domain controller (PDC) emulator, see:
   
     -   [Configure the Windows Time service on the PDC emulator in the Forest Root Domain](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731191%28v=ws.10%29) 
   
