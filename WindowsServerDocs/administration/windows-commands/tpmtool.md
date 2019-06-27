@@ -42,11 +42,11 @@ To display the basic information of the TPM, type:
 ```
 tpmtool getdeviceinformation
 ```
-To collects TPM logs and place them in the current directory, type:
+To collect TPM logs and place them in the current directory, type:
 ```
 tpmtool gatherlogs
 ```
-To collects TPM logs and place them in `C:\Users\Public`, type:
+To collect TPM logs and place them in `C:\Users\Public`, type:
 ```
 tpmtool gatherlogs C:\Users\Public
 ```
