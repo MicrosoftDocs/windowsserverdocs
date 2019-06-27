@@ -160,7 +160,7 @@ To install the trusted TPM roots certificate package, you must extract it, remov
 #### Download the trusted TPM roots certificate package
 
 Before you install the certificate package, you can download the latest list of trusted TPM roots from
-[https://tpmsec.microsoft.com/OnPremisesDHA/TrustedTPM.cab](https://tpmsec.microsoft.com/OnPremisesDHA/TrustedTPM.cab).
+[https://go.microsoft.com/fwlink/?linkid=2097925](https://go.microsoft.com/fwlink/?linkid=2097925).
 
 > **Important:** Before installing the package, verify that it is digitally signed by Microsoft.
 
