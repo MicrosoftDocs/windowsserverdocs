@@ -57,15 +57,15 @@ Volumes in Storage Spaces Direct provide resiliency to protect against hardware 
 
 ### With two servers
 
-If you're running Windows Server 2019, you can use two-way mirroring, or you can nest resiliency types. Nesting provides data resiliency between servers with two-way mirroring, then adds resiliency within a server (with two-way mirroring or mirror-accelerated parity). Nesting provides data resilience even when one server is restarting or unavailable. Because of this added data resilience, we recommend using nested resiliency on production deployments of two-server clusters running Windows Server 2019. For more info, see [Nested Resiliency](nested-resiliency.md).
+With two servers in the cluster, you can use two-way mirroring. If you're running Windows Server 2019, you can also use nested resiliency.
 
-![Nested mirror-accelerated parity](media/nested-resiliency/nested-mirror-accelerated-parity.png)
-
-The only option for clusters with two servers running Windows Server 2016 is two-way mirroring. This keeps two copies of all data, one copy on the drives in each server. Its storage efficiency is 50% – to write 1 TB of data, you need at least 2 TB of physical storage capacity in the storage pool. Two-way mirroring can safely tolerate one hardware failure (drive or server) at a time.
+Two-way mirroring keeps two copies of all data, one copy on the drives in each server. Its storage efficiency is 50% – to write 1 TB of data, you need at least 2 TB of physical storage capacity in the storage pool. Two-way mirroring can safely tolerate one hardware failure at a time (one drive or server).
 
 ![two-way-mirror](media/plan-volumes/two-way-mirror.png)
 
-If you have more than two servers running Windows Server 2016, we recommend using one of the following resiliency types instead.
+Nested resiliency (available only on Windows Server 2019) provides data resiliency between servers with two-way mirroring, then adds resiliency within a server (with two-way mirroring or mirror-accelerated parity). Nesting provides data resilience even when one server is restarting or unavailable. Its storage efficiency is 25% with nested two-way mirroring and around 35-40% for nested mirror-accelerated parity. Nested resiliency can safely tolerate two hardware failures at a time (two drives, or a server and a drive on the remaining server). Because of this added data resilience, we recommend using nested resiliency on production deployments of two-server clusters, if you're running Windows Server 2019. For more info, see [Nested Resiliency](nested-resiliency.md).
+
+![Nested mirror-accelerated parity](media/nested-resiliency/nested-mirror-accelerated-parity.png)
 
 ### With three servers
 
@@ -75,7 +75,7 @@ With three servers, you should use three-way mirroring for better fault toleranc
 
 ### With four or more servers
 
-With four or more servers, you can choose for each volume whether to use three-way mirroring, dual parity (often called "erasure coding"), or mix the two.
+With four or more servers, you can choose for each volume whether to use three-way mirroring, dual parity (often called "erasure coding"), or mix the two with mirror-accelerated parity.
 
 Dual parity provides the same fault tolerance as three-way mirroring but with better storage efficiency. With four servers, its storage efficiency is 50.0% – to store 2 TB of data, you need 4 TB of physical storage capacity in the storage pool. This increases to 66.7% storage efficiency with seven servers, and continues up to 80.0% storage efficiency. The tradeoff is that parity encoding is more compute-intensive, which can limit its performance.
 
