@@ -57,7 +57,7 @@ Volumes in Storage Spaces Direct provide resiliency to protect against hardware 
 
 ### With two servers
 
-If you're running Windows Server 2019, you can use two-way mirroring, or you can nest resiliency types. Nested resiliency enables you to use nested two-way mirroring (essentially a four-way mirror), or nested mirror-accelerated parity. Nested resiliency stores essentially two copies of your data on each server, providing data resilience even when one server is restarting or unavailable. Because of this added data resilience, we recommend using nested resiliency on production deployments of two-server clusters running Windows Server 2019. For more info, see [Nested Resiliency](nested-resiliency.md).
+If you're running Windows Server 2019, you can use two-way mirroring, or you can nest resiliency types. Nesting provides data resiliency between servers with two-way mirroring, then adds resiliency within a server (with two-way mirroring or mirror-accellerated parity). Nesting provides data resilience even when one server is restarting or unavailable. Because of this added data resilience, we recommend using nested resiliency on production deployments of two-server clusters running Windows Server 2019. For more info, see [Nested Resiliency](nested-resiliency.md).
 
 ![Nested mirror-accelerated parity](media/nested-resiliency/nested-mirror-accelerated-parity.png)
 
