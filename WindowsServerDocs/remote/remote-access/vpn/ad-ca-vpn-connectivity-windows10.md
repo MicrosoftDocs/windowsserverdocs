@@ -48,7 +48,7 @@ To configure conditional access for VPN connectivity, you need to:
 3. Deploy the certificate to your VPN server.
 
 > [!IMPORTANT]
-> Once a VPN certificate is created in the Azure portal, Azure AD will start using it immediately to issue short lived certificates to the VPN client. It is critical that the VPN certificate be deployed immediately to the VPN server after it is created in Azure portal to avoid any issues with credential validation of the VPN client. 
+> Once a VPN certificate is created in the Azure portal, Azure AD will start using it immediately to issue short lived certificates to the VPN client. It is critical that the VPN certificate be deployed immediately to the VPN server to avoid any issues with credential validation of the VPN client. 
 
 ## [Step 7.3. Configure the Conditional Access policy](vpn-config-conditional-access-policy.md)
 
