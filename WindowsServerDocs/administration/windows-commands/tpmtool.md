@@ -33,7 +33,7 @@ tpmtool /parameter [<arguments>]
 |---------|-----------|
 |getdeviceinformation|Displays the basic information of the TPM. The meaning of the information flag values can be found [here](https://docs.microsoft.com/windows/desktop/SecProv/win32-tpm-isreadyinformation#parameters).|
 |gatherlogs [output directory path]|Collects TPM logs and places them in the specified directory. If that directory does not exist, it is created. By default, they are placed in the current directory. The possible files generated are: </br>- TpmEvents.evtx</br>- TpmInformation.txt</br>- SRTMBoot.dat</br>- SRTMResume.dat</br>- DRTMBoot.dat</br>- DRTMResume.dat</br>
-|drivertracing [start / stop]|Start / stop collecting driver traces. TPMTRACE.etl will be generated and placed in the current directory.|
+|drivertracing [start / stop]|Start / stop collecting TPM driver traces. The trace log, TPMTRACE.etl, will be generated and placed in the current directory.|
 |/?|Displays help at the command prompt.|
 
 ## <a name="tpmtool_examples"></a>Examples
@@ -49,6 +49,12 @@ tpmtool gatherlogs
 To collects TPM logs and place them in `C:\Users\Public`, type:
 ```
 tpmtool gatherlogs C:\Users\Public
+```
+To collect TPM driver traces, type:
+```
+tpmtool drivertracing start
+# Run scenario
+tpmtool drivertracing stop
 ```
 
 ## Decoding Error Codes
