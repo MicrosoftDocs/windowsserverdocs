@@ -21,12 +21,12 @@ When applications need to request fresh authentication from Azure AD, meaning th
 
 When this request is for a federated user, Azure AD needs to inform the IdP, like AD FS, that the request is for fresh authentication.
 
-By default, Azure AD translates `prompt=login` to `wfresh=0` and `wauth=urn:oasis:names:tc:SAML:1.0:am:password` when sending this type of authentication requests to the federated IdP.
+By default, Azure AD translates `prompt=login` to `wfresh=0` and `wauth=http://schemas.microsoft.com/ws/2008/06/identity/authenticationmethod/password` when sending this type of authentication requests to the federated IdP.
 
 These parameters mean:
 
 - `wfresh=0`: do fresh authentication
-- `wauth=urn:oasis:names:tc:SAML:1.0:am:password`: use username/password for the fresh authentication request
+- `wauth=http://schemas.microsoft.com/ws/2008/06/identity/authenticationmethod/password`: use username/password for the fresh authentication request
 
 This can cause problems with corporate intranet and multi-factor authentication scenarios in which an authentication type other than username and password, as  requested by the `wauth` parameter, is desired.  
 
@@ -68,6 +68,6 @@ Use the Azure AD PowerShell module to configure the setting.
 
 Following are the possible values of `PromptLoginBehavior` parameter and their meaning:
 
-- **TranslateToFreshPasswordAuth**: means the default Azure AD behavior of translating `prompt=login` to `wauth=urn:oasis:names:tc:SAML:1.0:am:password` and `wfresh=0`.
+- **TranslateToFreshPasswordAuth**: means the default Azure AD behavior of translating `prompt=login` to `wauth=http://schemas.microsoft.com/ws/2008/06/identity/authenticationmethod/password` and `wfresh=0`.
 - **NativeSupport**: means that the `prompt=login` parameter will be sent as is to AD FS. This is the recommended value if AD FS is in Windows Server 2012 R2 with the July 2016 update rollup or higher.
 - **Disabled**: means that only `wfresh=0` is sent to AD FS.
