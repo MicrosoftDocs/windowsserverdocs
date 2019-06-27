@@ -35,9 +35,13 @@ Repeat the following steps on **every HGS server**:
 2.  Verify the signature of the cab file to ensure its authenticity. Do not proceed if the signature is not valid.
 
     ```powershell
-Get-AuthenticodeSignature .\TrustedTpm.cab
+    Get-AuthenticodeSignature .\TrustedTpm.cab
+    ```
     
-        Directory: C:\Users\Administrator\Downloads
+    Here's some example output:
+    
+    ```
+    Directory: C:\Users\Administrator\Downloads
         
     SignerCertificate                         Status                                 Path
     -----------------                         ------                                 ----
