@@ -19,7 +19,6 @@ The Windows Time service is a component that uses a plug-in model for client and
 > [!NOTE]
 > For a quick overview of Windows Time service, take a look at this [high-level overview video](https://aka.ms/WS2016TimeVideo).
 
-<!-- Not sure what to do with the following -->
 In this topic, we discuss ... these topics as they relate to enabling accurate time: 
 
 - Improvements
