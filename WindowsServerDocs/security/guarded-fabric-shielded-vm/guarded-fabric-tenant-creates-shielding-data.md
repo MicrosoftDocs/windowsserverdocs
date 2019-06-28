@@ -191,7 +191,7 @@ Run the Shielding Data File wizard to create a shielding data (PDK) file. Here, 
 As an alternative to the Shielding Data File wizard, you can run [New-ShieldingDataFile](https://docs.microsoft.com/powershell/module/shieldedvmdatafile/new-shieldingdatafile?view=win10-ps) to create a shielding data file.
 
 All shielding data files need to be configured with the correct owner and guardian certificates to authorize your shielded VMs to be run on a guarded fabric.
-You can check if you have any guardians installed locally by running [Get-HgsGuardian](https://docs.microsoft.com/en-us/powershell/module/hgsclient/get-hgsguardian?view=win10-ps). Owner guardians have private keys while guardians for your datacenter typically do not.
+You can check if you have any guardians installed locally by running [Get-HgsGuardian](https://docs.microsoft.com/powershell/module/hgsclient/get-hgsguardian?view=win10-ps). Owner guardians have private keys while guardians for your datacenter typically do not.
 
 If you need to create an owner guardian, run the following command:
 
@@ -230,7 +230,7 @@ The disk name and signing certificate must match exactly for the version compari
 You can trust more than one template disk by providing a comma-separated list of volume ID qualifiers to the `-VolumeIDQualifier` parameter.
 Finally, if you have other files that need to accompany the answer file with the VM, use the `-OtherFile` parameter and provide a comma-separated list of file paths.
 
-See the cmdlet documentation for [New-ShieldingDataFile](https://docs.microsoft.com/en-us/powershell/module/shieldedvmdatafile/New-ShieldingDataFile?view=win10-ps) and [New-VolumeIDQualifier](https://docs.microsoft.com/en-us/powershell/module/shieldedvmdatafile/New-VolumeIDQualifier?view=win10-ps) to learn about additional ways to configure your shielding data file.
+See the cmdlet documentation for [New-ShieldingDataFile](https://docs.microsoft.com/powershell/module/shieldedvmdatafile/New-ShieldingDataFile?view=win10-ps) and [New-VolumeIDQualifier](https://docs.microsoft.com/powershell/module/shieldedvmdatafile/New-VolumeIDQualifier?view=win10-ps) to learn about additional ways to configure your shielding data file.
 
 ## See also
 

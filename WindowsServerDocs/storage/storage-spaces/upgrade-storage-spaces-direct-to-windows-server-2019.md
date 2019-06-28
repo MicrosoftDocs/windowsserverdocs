@@ -80,7 +80,7 @@ servers will be restarted sequentially during the upgrade process, the remaining
        Enable-StorageMaintenanceMode
        ```
 
-   4. Run the following cmdlet to check that that the **OperationalStatus** value is **In Maintenance Mode**:
+   4. Run the following cmdlet to check that the **OperationalStatus** value is **In Maintenance Mode**:
 
        ```PowerShell
        Get-PhysicalDisk
@@ -173,7 +173,7 @@ This option incurs no VM downtime, but you’ll need to wait for storage jobs (m
        Enable-StorageMaintenanceMode
        ```
 
-   4. Run the following cmdlet to check that that the **OperationalStatus** value is **In Maintenance Mode**:
+   4. Run the following cmdlet to check that the **OperationalStatus** value is **In Maintenance Mode**:
 
        ```PowerShell
        Get-PhysicalDisk
@@ -269,7 +269,7 @@ This option incurs VM downtime but can take less time than if you kept the VMs r
        Enable-StorageMaintenanceMode
        ```
 
-   3. Run the following cmdlet to check that that the **OperationalStatus** value is **In Maintenance Mode**:
+   3. Run the following cmdlet to check that the **OperationalStatus** value is **In Maintenance Mode**:
 
        ```PowerShell
        Get-PhysicalDisk
@@ -372,7 +372,7 @@ servers in the cluster remain running.
       Enable-StorageMaintenanceMode
       ```
 
-   4. Run the following cmdlet to check that that the
+   4. Run the following cmdlet to check that the
       **OperationalStatus** value is **In Maintenance Mode**:
 
       ```PowerShell
