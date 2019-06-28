@@ -53,6 +53,8 @@ If not configured, IP address hostnames are not attempted.
 
 If the SPN is registered in Active Directory, then authentication succeeds with Kerberos. 
 
+For more information check out the document [Configuring Kerberos for IP Addresses](configuring-kerberos-over-ip.md).
+
 ## KDC support for Key Trust account mapping
 
 Beginning with Windows Server 2016, domain controllers have support for Key Trust account mapping as well as fallback to existing AltSecID and User Principal Name (UPN) in the SAN behavior. When UseSubjectAltName is set to:

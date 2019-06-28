@@ -16,7 +16,6 @@ ms.technology: identity-adfs
 
 
 # Customize HTTP security response headers with AD FS 2019 
-Applies To: Windows Server 2019 
  
 To protect against common security vulnerabilities and provide administrators the ability to take advantage of the latest advancements in browser-based protection mechanisms, AD FS 2019 added the functionality to customize the HTTP security response headers sent by AD FS. This is accomplished through the introduction of two new cmdlets: `Get-AdfsResponseHeaders` and `Set-AdfsResponseHeaders`.  
  
@@ -39,7 +38,7 @@ Before we discuss headers, let’s look into a few scenarios creating the need f
 ## HTTP Security Response Headers 
 The response headers are included in the outgoing HTTP response sent by AD FS to a web browser. The headers can be listed using the `Get-AdfsResponseHeaders` cmdlet as shown below.  
 
-![Header response](media\customize-http-security-headers-ad-fs\header1.png)
+![Header response](media/customize-http-security-headers-ad-fs/header1.png)
 
 The `ResponseHeaders` attribute in the above screenshot identifies the security headers that will be included by AD FS in every HTTP response. The response headers will be sent only if `ResponseHeadersEnabled` is set to `True` (default value). The value can be set to `False` to prevent AD FS including any of the security headers in the HTTP response. However this is not recommended.  To do this use the following:
 
@@ -218,7 +217,7 @@ Set-AdfsResponseHeaders -SetHeaderName "TestHeader" -SetHeaderValue "TestHeaderV
 
 Once set, the new header is sent in the AD FS response (fiddler snippet below).  
  
-![Fiddler](media\customize-http-security-headers-ad-fs\header2.png)
+![Fiddler](media/customize-http-security-headers-ad-fs/header2.png)
 
 ## Web browswer compatibility
 Use the following table and links to determine which web browsers are compatible with each of the security response headers.

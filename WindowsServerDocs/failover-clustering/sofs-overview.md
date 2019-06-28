@@ -1,6 +1,6 @@
 ---
 title: Scale-Out File Server for application data overview
-description: Overview of the Scale-Out File Server feature for Windows Server 201 R2, Windows Server 2012, and Windows Server 2016.
+description: Overview of the Scale-Out File Server feature for Windows Server 201 R2 and Windows Server 2012.
 ms.prod: windows-server-threshold 
 ms.topic: article 
 author: JasonGerend 
@@ -11,7 +11,7 @@ ms.localizationpriority: medium
 ---
 # Scale-Out File Server for application data overview
 
->Applies to: Windows Server 2012 R2, Windows Server 2012, Windows Server 2016
+>Applies to: Windows Server 2012 R2, Windows Server 2012
 
 Scale-Out File Server is a feature that is designed to provide scale-out file shares that are continuously available for file-based server application storage. Scale-out file shares provides the ability to share the same folder from multiple nodes of the same cluster. This scenario focuses on how to plan for and deploy Scale-Out File Server.
 
@@ -171,25 +171,25 @@ The following table lists the capabilities in SMB 3.0, the common Windows file s
 <td>File Management</td>
 <td>Folder Redirection</td>
 <td>Yes</td>
-<td>Not recommended*</td>
+<td>Not recommended<em></td>
 </tr>
 <tr class="odd">
 <td>File Management</td>
 <td>Offline Files (client side caching)</td>
 <td>Yes</td>
-<td>Not recommended*</td>
+<td>Not recommended</em></td>
 </tr>
 <tr class="even">
 <td>File Management</td>
 <td>Roaming User Profiles</td>
 <td>Yes</td>
-<td>Not recommended*</td>
+<td>Not recommended<em></td>
 </tr>
 <tr class="odd">
 <td>File Management</td>
 <td>Home Directories</td>
 <td>Yes</td>
-<td>Not recommended*</td>
+<td>Not recommended</em></td>
 </tr>
 <tr class="even">
 <td>File Management</td>
@@ -250,13 +250,13 @@ The following table lists the features that are part of this scenario and descri
 <tbody>
 <tr class="odd">
 <td><a href="failover-clustering.md">Failover Clustering</a></td>
-<td>Failover clusters added the following features in Windows Server 2012 to support scale-Out file server: Distributed Network Name, the Scale-Out File Server resource type, Cluster Shared Volumes (CSV) 2, and the Scale-Out File Server High Availability role. For more information about these features, see <a href="https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn265972(v%3dws.11)">What's New in Failover Clustering in Windows Server 2012 [redirected]</a>.</td>
+<td>Failover clusters added the following features in Windows Server 2012 to support scale-Out file server: Distributed Network Name, the Scale-Out File Server resource type, Cluster Shared Volumes (CSV) 2, and the Scale-Out File Server High Availability role. For more information about these features, see <a href="https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn265972(v%3dws.11)">What&#39;s New in Failover Clustering in Windows Server 2012 [redirected]</a>.</td>
 </tr>
 <tr class="even">
 <td><a href="https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831795(v%3dws.11)">Server Message Block</a></td>
 <td>SMB 3.0 added the following features in Windows Server 2012 to support scale-Out File Server: SMB Transparent Failover, SMB Multichannel, and SMB Direct.<br />
 <br />
-For more information on new and changed functionality for SMB in Windows Server 2012 R2, see <a href="https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831474(v%3dws.11)">What's New in SMB in Windows Server</a>.</td>
+For more information on new and changed functionality for SMB in Windows Server 2012 R2, see <a href="https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831474(v%3dws.11)">What&#39;s New in SMB in Windows Server</a>.</td>
 </tr>
 </tbody>
 </table>

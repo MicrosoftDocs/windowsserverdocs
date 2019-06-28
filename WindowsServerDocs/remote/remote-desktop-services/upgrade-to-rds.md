@@ -17,7 +17,7 @@ notes: https://social.technet.microsoft.com/wiki/contents/articles/22069.remote-
 ---
 # Upgrading your Remote Desktop Services deployments to Windows Server 2016
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016
 
 ## Supported OS upgrades with RDS role installed
 Upgrades to Windows Server 2016 are supported only from Windows Server 2012 R2 and Windows Server 2016.

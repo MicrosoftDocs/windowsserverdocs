@@ -11,19 +11,18 @@
 ## Plan
 ### [What type of installation is right for you?](plan/installation-options.md)
 ### [User access options](plan/user-access-options.md)
-### [Azure integration options](plan/azure-integration-options.md)
 
 ## Deploy
 ### [Prepare your environment](deploy/prepare-environment.md)
 ### [Install Windows Admin Center](deploy/install.md)
 ### [High availability](deploy/high-availability.md)
 
+
 ## Configure
 ### [Windows Admin Center settings](configure/settings.md)
 ### [User access control and permissions](configure/user-access-control.md)
 ### [Using extensions](configure/using-extensions.md)
-### [Configure Azure integration](configure/azure-integration.md)
-### [Manage Azure VMs with Windows Admin Center](configure/manage-azure-vms.md)
+### [Shared connections](configure/shared-connections.md)
 
 ## Use
 ### [Get started](use/get-started.md)
@@ -31,14 +30,25 @@
 ### [Manage hyper-converged infrastructure](use/manage-hyper-converged.md)
 ### [Manage failover clusters](use/manage-failover-clusters.md)
 ### [Manage Hyper-V virtual machines](use/manage-virtual-machines.md)
-### [Configure Azure services](use/azure-services.md)
-#### [Azure Backup](use/azure-backup.md)
-#### [Azure Site Recovery](use/azure-site-recovery.md)
-#### [Azure Monitor](use/azure-monitor.md)
-#### [Azure Update Management](use/azure-update-management.md)
 ### [Logging](use/logging.md)
-### [Common troubleshooting steps](use/troubleshooting.md)
-### [Known issues](use/known-issues.md)
+
+
+## Connect to Azure
+### [Azure hybrid services](azure/index.md)
+#### [Azure Backup](azure/azure-backup.md)
+#### [Azure Site Recovery](azure/azure-site-recovery.md)
+#### [Azure File Sync](azure/azure-file-sync.md)
+#### [Azure Monitor](azure/azure-monitor.md)
+#### [Azure Update Management](azure/azure-update-management.md)
+### [Connect Windows Admin Center to Azure](azure/azure-integration.md)
+### [Deploy Windows Admin Center in Azure](azure/deploy-wac-in-azure.md)
+### [Manage Azure VMs with Windows Admin Center](azure/manage-azure-vms.md)
+
+## Support
+### [Support policy](support/index.md)
+### [Common troubleshooting steps](support/troubleshooting.md)
+### [Known issues](support/known-issues.md)
+### [Windows Admin Center license terms](../../windows-server-licensing/windows-admin-center-licensing.md)
 
 ## Extend
 ### [Overview of extensions](extend/extensibility-overview.md)
@@ -64,9 +74,14 @@
 #### [Enable the extension discovery banner](extend/guides/extension-discovery-banner.md)
 ### [Publishing extensions](extend/publish-extensions.md)
 ### Case Studies
+#### [BiitOps](extend/case-studies/biitops.md)
 #### [DataON](extend/case-studies/dataon.md)
 #### [Fujitsu](extend/case-studies/fujitsu.md)
 #### [Lenovo](extend/case-studies/lenovo.md)
 #### [NEC](extend/case-studies/nec.md)
 #### [Pure Storage](extend/case-studies/purestorage.md)
+#### [QCT](extend/case-studies/qct.md)
 #### [Squared Up](extend/case-studies/squared-up.md)
+#### [Thomas-Krenn](extend/case-studies/thomas-krenn.md)
+
+

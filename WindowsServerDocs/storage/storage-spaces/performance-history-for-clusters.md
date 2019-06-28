@@ -12,7 +12,7 @@ ms.localizationpriority: medium
 
 # Performance history for clusters
 
-> Applies To: Windows Server Insider Preview
+> Applies to: Windows Server 2019
 
 This sub-topic of [Performance history for Storage Spaces Direct](performance-history.md) describes the performance history collected for clusters.
 

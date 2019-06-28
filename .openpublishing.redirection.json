@@ -412,6 +412,21 @@
       "redirect_document_id": true
     },
     {
+      "source_path": "WindowsServerDocs/get-started/semi-annual-channel-overview.md",
+      "redirect_url": "/windows-server/get-started-19/servicing-channels-19",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/get-started/get-started-with-1709.md",
+      "redirect_url": "/windows-server/get-started-19/servicing-channels-19",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/get-started/get-started-with-1803.md",
+      "redirect_url": "/windows-server/get-started-19/servicing-channels-19",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "WindowsServerDocs/compute/Compute.md",
       "redirect_url": "/windows-server/virtualization/Compute",
       "redirect_document_id": true
@@ -8212,6 +8227,86 @@
       "redirect_document_id": true
     },
     {
+      "source_path": "EssentialsDocs/migrate/Move-Windows-SBS-2011-Essentials-settings-and-data-to-the-Destination-Server-for-Windows-Server-Essentials-migration.md",
+      "redirect_url": "/windows-server-essentials/migrate/Move-Windows-SBS-2011-Essentials-to-the-Destination-Server-for-migration",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "EssentialsDocs/migrate/Move-Windows-SBS-2003-settings-and-data-to-the-Destination-Server-for-Windows-Server-Essentials-migration.md",
+      "redirect_url": "/windows-server-essentials/migrate/Move-Windows-SBS-2003-to-the-Destination-Server-for-migration",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "EssentialsDocs/migrate/Move-Windows-SBS-2008-settings-and-data-to-the-Destination-Server-for-Windows-Server-Essentials-migration.md",
+      "redirect_url": "/windows-server-essentials/migrate/Move-Windows-SBS-2008-to-the-Destination-Server-for-migration",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "EssentialsDocs/migrate/Move-Windows-SBS-2011-Standard-settings-and-data-to-the-Destination-Server-for-Windows-Server-Essentials-migration.md",
+      "redirect_url": "/windows-server-essentials/migrate/Move-Windows-SBS-2011-Standard-to-the-Destination-Server-for-migration",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "EssentialsDocs/migrate/Move-Windows-Server-2008-Foundation-settings-and-data-to-the-Destination-Server-for-Windows-Server-Essentials-migration.md",
+      "redirect_url": "/windows-server-essentials/migrate/Move-Windows-Server-2008-Foundation-to-the-Destination-Server-for-migration",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/identity/ad-fs/deployment/Configure-Name-Resolution-for-a-Federation-Server-Proxy-in-a-DNS-Zone-That-Serves-Only-the-Perimeter-Network.md",
+      "redirect_url": "/windows-server/identity/ad-fs/deployment/Configure-Name-Resolution-for-Federation-Server-Proxy-in-DNS-Zone-Serving-Only-Perimeter-Network",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/identity/ad-fs/deployment/Configure-Name-Resolution-for-a-Federation-Server-Proxy-in-a-DNS-Zone-That-Serves-Both-the-Perimeter-Network-and-Internet-Clients.md",
+      "redirect_url": "/windows-server/identity/ad-fs/deployment/Configure-Name-Resolution-for-Federation-Server-Proxy-in-DNS-Zone-Serving-Both-Perimeter-Network-and-Internet-Clients",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/manage/windows-admin-center/license/windows-pre-release-extension-eula.md",
+      "redirect_url": "https://docs.microsoft.com/legal/windows-server/windows-admin-center/windows-pre-release-extension-eula",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/manage/windows-admin-center/license/license-terms-for-extensions.md",
+      "redirect_url": "https://docs.microsoft.com/legal/windows-server/windows-admin-center/license-terms-for-extensions",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/manage/windows-admin-center/license/wac-prerelease-eula.md",
+      "redirect_url": "https://docs.microsoft.com/legal/windows-server/windows-admin-center/wac-prerelease-eula",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/manage/windows-admin-center/license/wac-product-ga-eula.md",
+      "redirect_url": "https://docs.microsoft.com/legal/windows-server/windows-admin-center/wac-product-ga-eula",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/licensing/Additional-Software.md",
+      "redirect_url": "https://docs.microsoft.com/legal/windows-server/Additional-Software",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/licensing/WinServer2016expiry.md",
+      "redirect_url": "https://docs.microsoft.com/legal/windows-server/WinServer2016expiry",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/licensing/WinServer2016licenseterms.md",
+      "redirect_url": "https://docs.microsoft.com/legal/windows-server/WinServer2016licenseterms",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/licensing/system-insights-capabilities-eula.md",
+      "redirect_url": "https://docs.microsoft.com/legal/windows-server/system-insights-capabilities-eula",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/licensing/system-insights-eula.md",
+      "redirect_url": "https://docs.microsoft.com/legal/windows-server/system-insights-eula",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "WindowsServerDocs/identity/web-application-proxy/web-application-proxy-windows-server.md",
       "redirect_url": "/windows-server/remote/remote-access/web-application-proxy/web-application-proxy-windows-server",
       "redirect_document_id": true
@@ -8461,15 +8556,80 @@
   "redirect_url": "/windows-server/manage/windows-admin-center/overview",
   "redirect_document_id": false
 },
-    {
-      "source_path": "WindowsServerDocs/administration/kernel-soft-reboot.md",
-      "redirect_url": "/windows-server/windows-server",
-      "redirect_document_id": true
-    },
-    {
-      "source_path": "WindowsServerDocs/windows-server.md",
-      "redirect_url": "/windows-server/index",
-      "redirect_document_id": true
-    }
+{
+  "source_path": "WindowsServerDocs/azure-hybrid-services/index.md",
+  "redirect_url": "/windows-server/manage/windows-admin-center/azure/index",
+  "redirect_document_id": false
+ },
+ {
+  "source_path": "WindowsServerDocs/manage/windows-admin-center/use/azure-backup.md",
+  "redirect_url": "/windows-server/manage/windows-admin-center/azure/azure-backup",
+  "redirect_document_id": false
+ },
+ {
+  "source_path": "WindowsServerDocs/manage/windows-admin-center/use/azure-monitor.md",
+  "redirect_url": "/windows-server/manage/windows-admin-center/azure/azure-monitor",
+  "redirect_document_id": false
+ },
+ {
+  "source_path": "WindowsServerDocs/manage/windows-admin-center/use/azure-services.md",
+  "redirect_url": "/windows-server/manage/windows-admin-center/azure/index",
+  "redirect_document_id": false
+ },
+ {
+  "source_path": "WindowsServerDocs/manage/windows-admin-center/use/azure-site-recovery.md",
+  "redirect_url": "/windows-server/manage/windows-admin-center/azure/azure-site-recovery",
+  "redirect_document_id": false
+ },
+ {
+  "source_path": "WindowsServerDocs/manage/windows-admin-center/use/azure-update-management.md",
+  "redirect_url": "/windows-server/manage/windows-admin-center/azure/azure-update-management",
+  "redirect_document_id": false
+ },
+ {
+  "source_path": "WindowsServerDocs/manage/windows-admin-center/plan/azure-integration-options.md",
+  "redirect_url": "/windows-server/manage/windows-admin-center/azure/index",
+  "redirect_document_id": false
+ },
+ {
+  "source_path": "WindowsServerDocs/manage/windows-admin-center/configure/azure-integration.md",
+  "redirect_url": "/windows-server/manage/windows-admin-center/azure/azure-integration",
+  "redirect_document_id": false
+ },
+ {
+  "source_path": "WindowsServerDocs/manage/windows-admin-center/configure/manage-azure-vms.md",
+  "redirect_url": "/windows-server/manage/windows-admin-center/azure/manage-azure-vms",
+  "redirect_document_id": false
+ },
+ {
+  "source_path": "WindowsServerDocs/manage/windows-admin-center/deploy/deploy-wac-in-azure.md",
+  "redirect_url": "/windows-server/manage/windows-admin-center/azure/deploy-wac-in-azure",
+  "redirect_document_id": false
+ },
+ {
+  "source_path": "WindowsServerDocs/manage/windows-admin-center/use/troubleshooting.md",
+  "redirect_url": "/windows-server/manage/windows-admin-center/support/troubleshooting",
+  "redirect_document_id": false
+ },
+ {
+  "source_path": "WindowsServerDocs/manage/windows-admin-center/use/known-issues.md",
+  "redirect_url": "/windows-server/manage/windows-admin-center/support/known-issues",
+  "redirect_document_id": false
+ },
+{
+  "source_path": "WindowsServerDocs/administration/kernel-soft-reboot.md",
+  "redirect_url": "/windows-server/windows-server",
+  "redirect_document_id": true
+ },
+ {
+  "source_path": "WindowsServerDocs/windows-server.md",
+  "redirect_url": "/windows-server/index",
+  "redirect_document_id": true
+ },
+ {
+  "source_path": "WindowsServerDocs/azure-stack-hci/index.md",
+  "redirect_url": "https://docs.microsoft.com/azure-stack/operator/azure-stack-hci-overview",
+  "redirect_document_id": true
+ }
   ]
 }

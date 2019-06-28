@@ -11,7 +11,7 @@ ms.author: jgerend
 # Configuring cluster accounts in Active Directory
 
 
-Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2, and Windows Server 2008
+Applies To: Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2, and Windows Server 2008
 
 In Windows Server, when you create a failover cluster and configure clustered services or applications, the failover cluster wizards create the necessary Active Directory computer accounts (also called computer objects) and give them specific permissions. The wizards create a computer account for the cluster itself (this account is also called the cluster name object or CNO) and a computer account for most types of clustered services and applications, the exception being a Hyper-V virtual machine. The permissions for these accounts are set automatically by the failover cluster wizards. If the permissions are changed, they will need to be changed back to match cluster requirements. This guide describes these Active Directory accounts and permissions, provides background about why they are important, and describes steps for configuring and managing the accounts.
       
@@ -55,12 +55,12 @@ The following table describes the permissions required for these accounts.
 <tr class="even">
 <td><p>Cluster name account (computer account of the cluster itself)</p></td>
 <td><p>When the Create Cluster wizard is run, it creates the cluster name account in the default container that is used for computer accounts in the domain. By default, the cluster name account (like other computer accounts) can create up to ten computer accounts in the domain.</p>
-<p>If you create the cluster name account (cluster name object) before creating the cluster—that is, prestage the account—you must give it the <strong>Create Computer objects</strong> and <strong>Read All Properties</strong> permissions in the container that is used for computer accounts in the domain. You must also disable the account, and give <strong>Full Control</strong> of it to the account that will be used by the administrator who installs the cluster. For more information, see [Steps for prestaging the cluster name account](#steps-for-prestaging-the-cluster-name-account), later in this guide.</p></td>
+<p>If you create the cluster name account (cluster name object) before creating the cluster—that is, prestage the account—you must give it the <strong>Create Computer objects</strong> and <strong>Read All Properties</strong> permissions in the container that is used for computer accounts in the domain. You must also disable the account, and give <strong>Full Control</strong> of it to the account that will be used by the administrator who installs the cluster. For more information, see <a href="#steps-for-prestaging-the-cluster-name-account" data-raw-source="[Steps for prestaging the cluster name account](#steps-for-prestaging-the-cluster-name-account)">Steps for prestaging the cluster name account</a>, later in this guide.</p></td>
 </tr>
 <tr class="odd">
 <td><p>Computer account of a clustered service or application</p></td>
 <td><p>When the High Availability wizard is run (to create a new clustered service or application), in most cases a computer account for the clustered service or application is created in Active Directory. The cluster name account is granted the necessary permissions to control this account. The exception is a clustered Hyper-V virtual machine: no computer account is created for this.</p>
-<p>If you prestage the computer account for a clustered service or application, you must configure it with the necessary permissions. For more information, see [Steps for prestaging an account for a clustered service or application](#steps-for-prestaging-an-account-for-a-clustered-service-or-application), later in this guide.</p></td>
+<p>If you prestage the computer account for a clustered service or application, you must configure it with the necessary permissions. For more information, see <a href="#steps-for-prestaging-an-account-for-a-clustered-service-or-application" data-raw-source="[Steps for prestaging an account for a clustered service or application](#steps-for-prestaging-an-account-for-a-clustered-service-or-application)">Steps for prestaging an account for a clustered service or application</a>, later in this guide.</p></td>
 </tr>
 </tbody>
 </table>
@@ -108,7 +108,7 @@ As described in the preceding three sections, certain requirements must be met b
 
 ### Planning ahead for password resets and other account maintenance
 
-The administrators of failover clusters might sometimes need to reset the password of the cluster name account. This action requires a specific permission, the **Reset password** permission. Therefore, it is a best practice to edit the permissions of the cluster name account (by using the Active Directory Users and Computers snap-in) to give the administrators of the cluster the **Reset password** permission for the cluster name account. For more information, see [Steps for troubleshooting password problems with the cluster name account](#steps_for_troubleshooting_password_problems_with_the_cluster_name_account), later in this guide.
+The administrators of failover clusters might sometimes need to reset the password of the cluster name account. This action requires a specific permission, the **Reset password** permission. Therefore, it is a best practice to edit the permissions of the cluster name account (by using the Active Directory Users and Computers snap-in) to give the administrators of the cluster the **Reset password** permission for the cluster name account. For more information, see [Steps for troubleshooting password problems with the cluster name account](#steps-for-troubleshooting-password-problems-with-the-cluster-name-account), later in this guide.
 
 ## Steps for configuring the account for the person who installs the cluster
 
@@ -139,23 +139,23 @@ The minimum group membership required to complete the following procedure depend
 <br>
 
 
-3.  If the account that was created or obtained in step 1 is a domain administrator account, skip the rest of this procedure. Otherwise, give the account the **Create Computer objects** and **Read All Properties** permissions in the container that is used for computer accounts in the domain:
+3. If the account that was created or obtained in step 1 is a domain administrator account, skip the rest of this procedure. Otherwise, give the account the **Create Computer objects** and **Read All Properties** permissions in the container that is used for computer accounts in the domain:
     
-    1.  On a domain controller, click **Start**, click **Administrative Tools**, and then click **Active Directory Users and Computers**. If the **User Account Control** dialog box appears, confirm that the action it displays is what you want, and then click **Continue**.  
+   1.  On a domain controller, click **Start**, click **Administrative Tools**, and then click **Active Directory Users and Computers**. If the **User Account Control** dialog box appears, confirm that the action it displays is what you want, and then click **Continue**.  
           
-    2.  On the **View** menu, make sure that **Advanced Features** is selected.  
+   2.  On the **View** menu, make sure that **Advanced Features** is selected.  
           
-        When **Advanced Features** is selected, you can see the **Security** tab in the properties of accounts (objects) in **Active Directory Users and Computers**.  
+       When **Advanced Features** is selected, you can see the **Security** tab in the properties of accounts (objects) in **Active Directory Users and Computers**.  
           
-    3.  Right-click the default **Computers** container or the default container in which computer accounts are created in your domain, and then click **Properties**. **Computers** is located in <b>Active Directory Users and Computers/</b><i>domain-node</i><b>/Computers</b>.  
+   3.  Right-click the default **Computers** container or the default container in which computer accounts are created in your domain, and then click **Properties**. **Computers** is located in <b>Active Directory Users and Computers/</b><i>domain-node</i><b>/Computers</b>.  
           
-    4.  On the **Security** tab, click **Advanced**.  
+   4.  On the **Security** tab, click **Advanced**.  
           
-    5.  Click **Add**, type the name of the account that was created or obtained in step 1, and then click **OK**.  
+   5.  Click **Add**, type the name of the account that was created or obtained in step 1, and then click **OK**.  
           
-    6.  In the **Permission Entry for***container* dialog box, locate the **Create Computer objects** and **Read All Properties** permissions, and make sure that the **Allow** check box is selected for each one.  
+   6.  In the **Permission Entry for***container* dialog box, locate the **Create Computer objects** and **Read All Properties** permissions, and make sure that the **Allow** check box is selected for each one.  
           
-        ![](media/configure-ad-accounts/Cc731002.0a863ac5-2024-4f9f-8a4d-a419aff32fa0(WS.10).gif)
+       ![](media/configure-ad-accounts/Cc731002.0a863ac5-2024-4f9f-8a4d-a419aff32fa0(WS.10).gif)
 
 ## Steps for prestaging the cluster name account
 
@@ -304,9 +304,9 @@ Membership in the **Domain Admins** group, or equivalent, is the minimum require
 <br>
 
 
-9.  For the cluster name account (also known as the cluster name object or CNO), ensure that **Allow** is selected for the **Create Computer objects** and **Read All Properties** permissions.
+9. For the cluster name account (also known as the cluster name object or CNO), ensure that **Allow** is selected for the **Create Computer objects** and **Read All Properties** permissions.
     
-    ![](media/configure-ad-accounts/Cc731002.f5977c4d-a62e-4b17-81e3-8c19ddca2078(WS.10).gif)
+   ![](media/configure-ad-accounts/Cc731002.f5977c4d-a62e-4b17-81e3-8c19ddca2078(WS.10).gif)
 
 10. Click **OK** until you have returned to the **Active Directory Users and Computers** snap-in.
 
@@ -318,17 +318,17 @@ Membership in the **Domain Admins** group, or equivalent, is the minimum require
 
 14. On the **Security** tab, confirm that the cluster name account is listed among the accounts that have permissions, and select it. Confirm that the cluster name account has **Full Control** permission (the **Allow** check box is selected). If it does not, add the cluster name account to the list and give it **Full Control** permission.
     
-    ![](media/configure-ad-accounts/Cc731002.2e614376-87a6-453a-81ba-90ff7ebc3fa2(WS.10).gif)
+   ![](media/configure-ad-accounts/Cc731002.2e614376-87a6-453a-81ba-90ff7ebc3fa2(WS.10).gif)
 
 15. Repeat steps 13-14 for each clustered service and application configured in the cluster.
 
 16. Check that the domain-wide quota for creating computer objects (by default, 10) has not been reached (consulting with a domain administrator if applicable). If the previous items in this procedure have all been reviewed and corrected, and if the quota has been reached, consider increasing the quota. To change the quota:
     
-    1.  Open a command prompt as an administrator and run **ADSIEdit.msc**.  
+   1.  Open a command prompt as an administrator and run **ADSIEdit.msc**.  
           
-    2.  Right-click **ADSI Edit**, click **Connect to**, and then click **OK**. The **Default naming context** is added to the console tree.  
+   2.  Right-click **ADSI Edit**, click **Connect to**, and then click **OK**. The **Default naming context** is added to the console tree.  
           
-    3.  Double-click **Default naming context**, right-click the domain object underneath it, and then click **Properties**.  
+   3.  Double-click **Default naming context**, right-click the domain object underneath it, and then click **Properties**.  
           
-    4.  Scroll to **ms-DS-MachineAccountQuota**, select it, click **Edit**, change the value, and then click **OK**.
+   4.  Scroll to **ms-DS-MachineAccountQuota**, select it, click **Edit**, change the value, and then click **OK**.
 

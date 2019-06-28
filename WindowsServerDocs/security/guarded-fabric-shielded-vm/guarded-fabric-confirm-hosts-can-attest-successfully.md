@@ -47,13 +47,13 @@ A fabric administrator needs to confirm that Hyper-V hosts can run as guarded ho
         Get-HgsTrace -RunDiagnostics -Detailed
 
     > [!IMPORTANT]
-    > If you're using Windows Server 2019 or Windows 10, version 1809 and are using code integrity policies, `Get-HgsTrace` may return a failure for the **Code Integrity Policy Active** diagnostic.
+    > If you're using Windows Server 2019 or Windows 10, version 1809 and are using code integrity policies, `Get-HgsTrace` return a failure for the **Code Integrity Policy Active** diagnostic.
     > You can safely ignore this result when it is the only failing diagnostic.
 
 ## Next step
 
->[!div class="nextstepaction"]
-[Deploy shielded VMs](guarded-fabric-configuration-scenarios-for-shielded-vms-overview.md)
+> [!div class="nextstepaction"]
+> [Deploy shielded VMs](guarded-fabric-configuration-scenarios-for-shielded-vms-overview.md)
 
 ## See also
 

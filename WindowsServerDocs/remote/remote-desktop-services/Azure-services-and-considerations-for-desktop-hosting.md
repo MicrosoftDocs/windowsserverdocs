@@ -16,7 +16,7 @@ manager: dougkim
 ---
 # Azure services and considerations for desktop hosting
 
->Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016
 
 The following sections describe Azure Infrastructure Services.
   

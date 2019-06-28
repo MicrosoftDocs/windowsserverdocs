@@ -80,11 +80,11 @@ There are no physical distance limitations for LAN clients. As long as they are 
 ## Using additional hubs  
 Additional hubs can be used to make installation easier. There are three types of hubs that are used on a MultiPoint Services system:  
   
--   [Station hubs](#Station-hubs)  
+-   [Station hubs](#station-hubs)  
   
--   [Intermediate hubs](#Intermediate-hubs)  
+-   [Intermediate hubs](#intermediate-hubs)  
   
--   [Downstream hubs](#Downstream-hubs)  
+-   [Downstream hubs](#downstream-hubs)  
   
 ### Station hubs  
 A station hub is an external hub that has been associated with a MultiPoint Services station. As a minimum, the station hub will have a keyboard plugged-in to it. It may also have additional peripherals attached. A station hub can be a generic USB hub that conforms to the USB 2.0 or later specification. Station hubs should be externally powered if high-powered devices will plugin to them.  

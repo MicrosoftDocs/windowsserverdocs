@@ -98,11 +98,11 @@ Starting with Windows Vista and Windows Server 2008, Microsoft improved the way 
   
 To list all the available auditing subcategories, review the Advanced Audit Policy container in a Group Policy Object, or type the following at a command prompt on any computer running Windows Server 2012, Windows Server 2008 R2, or Windows Server 2008, Windows 8, Windows 7, or Windows Vista:  
   
-`auditpol /list /subcategory:\*`
+`auditpol /list /subcategory:*`
   
 To get a list of currently configured auditing subcategories on a computer running Windows Server 2012, Windows Server 2008 R2, or Windows 2008, type the following:  
   
-`auditpol /get /category:\*`
+`auditpol /get /category:*`
   
 The following screenshot shows an example of auditpol.exe listing the current audit policy.  
   

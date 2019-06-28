@@ -42,7 +42,7 @@ Each successive call using this switch replaces the previously specified usage b
 > [!IMPORTANT]
 > You must run this command from an elevated command prompt for it to complete successfully.
 
-## <a name="BKMK_examples"></a>Examples
+## Examples
 
 The following example sets the proxy usage for the NETWORK SERVICE account.
 

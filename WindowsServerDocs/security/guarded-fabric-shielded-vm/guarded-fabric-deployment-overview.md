@@ -168,5 +168,5 @@ In Windows Azure Pack, the experience is even easier than creating a regular VM 
 
 ## Next step
 
->[!div class="nextstepaction"]
-[HGS Prerequisites](guarded-fabric-prepare-for-hgs.md)
+> [!div class="nextstepaction"]
+> [HGS Prerequisites](guarded-fabric-prepare-for-hgs.md)

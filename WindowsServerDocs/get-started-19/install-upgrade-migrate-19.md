@@ -27,15 +27,17 @@ Is it time to move to a newer version of Windows Server? Depending on what you a
 If you want to move from an older version of Windows Server to Windows Server 2019 on the same hardware, you should do a **clean installation**, where you just install the newer operating system directly over the old one on the same hardware, thus deleting the previous operating system. That is the simplest way, but you will need to back up your data first and plan to reinstall your applications. There are a few things to be aware of, such as system requirements, so be sure to check the details for [Windows Server 2019](https://go.microsoft.com/fwlink/?linkid=2006124), [Windows Server 2016](https://go.microsoft.com/fwlink/?LinkID=825558), [Windows Server 2012 R2](https://technet.microsoft.com/library/dn303418), and [Windows Server 2012](https://technet.microsoft.com/library/jj134246.aspx).
 
 ## In-place Upgrade
+
 If you want to keep the same hardware and all the server roles you have set up without flattening the server, you'll want to do an  **In-place Upgrade**, by which you go from an older operating system to a newer one, keeping your settings, server roles, and data intact. For example, if your server is running Windows Server 2012 R2, you can upgrade it to Windows Server 2016 or Windows Server 2019. However, not every older operating system has a pathway to every newer one. See the following diagram for the available upgrade paths:
 
 ![Windows Server In-place Upgrade paths diagram](media/upgrade-paths.png)
 
 For step-by-step guidance on upgrading, visit the [Windows Server Upgrade Center](http://aka.ms/upgradecenter):
 
-<a href="http://aka.ms/upgradecenter"><img src="media/upgrade-center.png" alt="Screenshot of Windows Upgrade Center" title="Windows Server Upgrade Center"></a>
+[![Screenshot of Windows Server Upgrade Center](media/upgrade-center.png)](http://aka.ms/upgradecenter)
 
 ## Cluster OS Rolling Upgrade
+
 Cluster OS Rolling Upgrade enables an administrator to upgrade the operating system of the cluster nodes from Windows Server 2012 R2 and Windows Server 2016 without stopping the Hyper-V or the Scale-Out File Server workloads. This feature allows you to avoid downtime which could impact Service Level Agreements. This new feature is discussed in more detail at [Cluster operating system rolling upgrade](https://technet.microsoft.com/windows-server-docs/failover-clustering/cluster-operating-system-rolling-upgrade).
 
 ## Migration
@@ -43,7 +45,7 @@ Cluster OS Rolling Upgrade enables an administrator to upgrade the operating sys
 Windows Server migration is when you move one role or feature at a time from a source computer that is running Windows Server to another destination computer that is running Windows Server, either the same or a newer version. For these purposes, migration is defined as moving one role or feature and its data to a different computer, not upgrading the feature on the same computer. 
 
 ## License Conversion
-In some operating system releases, you can convert a particular edition of the release to another edition of the same release in a single step with a simple command and the appropriate license key. This is called **license conversion**. For example, if your server is running Windows Server 2016 Standard, you can convert it to Windows Server 2016 Datacenter. In some releases of Windows Server, you can also freely convert among OEM, volume-licensed, and retail versions with the same command and the appropriate key.
+In some operating system releases, you can convert a particular edition of the release to another edition of the same release in a single step with a simple command and the appropriate license key. This is called **license conversion**. For example, if your server is running Windows Server 2016 Standard, you can convert it to Windows Server 2016 Datacenter. Keep in mind that while you can move up from Server 2016 Standard to Server 2016 Datacenter, you are unable to reverse the process and go from Datacenter to Standard. In some releases of Windows Server, you can also freely convert among OEM, volume-licensed, and retail versions with the same command and the appropriate key.
 
 
  

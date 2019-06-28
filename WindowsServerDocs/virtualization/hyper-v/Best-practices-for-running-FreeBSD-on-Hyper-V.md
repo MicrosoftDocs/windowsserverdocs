@@ -64,11 +64,10 @@ During startup, device nodes are created as new devices are discovered. This can
    # Device                Mountpoint      FStype  Options         Dump    Pass#
    /dev/label/rootfs       /               ufs     rw              1       1
    /dev/label/swap         none            swap    sw              0       0
-
    ```
 
-4.	The system can now be rebooted. If everything went well, it will come up normally and mount will show:
-   
+4. The system can now be rebooted. If everything went well, it will come up normally and mount will show:
+
    ```
    # mount
    /dev/label/rootfs on / (ufs, local, journaled soft-updates)

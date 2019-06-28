@@ -7,13 +7,43 @@ ms.manager: dongill
 ms.technology: storage
 ms.topic: article
 author: jasongerend
-ms.date: 10/22/2019
+ms.date: 05/29/2019
 ---
 # What's new in Storage in Windows Server
 
 >Applies to: Windows Server 2019, Windows Server 2016, Windows Server (Semi-Annual Channel)
 
 This topic explains the new and changed functionality in storage in Windows Server 2019, Windows Server 2016, and Windows Server Semi-Annual Channel releases.
+
+## What's new in storage in Windows Server, version 1903
+
+This release of Windows Server adds the following changes and technologies.
+
+### Storage Migration Service now migrates local accounts, clusters, and Linux servers
+
+Storage Migration Service makes it easier to migrate servers to a newer version of Windows Server. It provides a graphical tool that inventories data on servers and then transfers the data and configuration to newer servers—all without apps or users having to change anything.
+
+When using this version of Windows Server to orchestrate migrations, we've added the following abilities:
+
+- Migrate local users and groups to the new server
+- Migrate storage from failover clusters
+- Migrate storage from a Linux server that uses Samba
+- More easily sync migrated shares into Azure by using Azure File Sync
+- Migrate to new networks such as Azure
+
+For more info about Storage Migration Service, see [Storage Migration Service overview](storage-migration-service/overview.md).
+
+### System Insights disk anomaly detection
+
+[System Insights](../manage/system-insights/overview.md) is a predictive analytics feature that locally analyzes Windows Server system data and provides insight into the functioning of the server. It comes with a number of built-in capabilities, but we've added the ability to install additional capabilities via Windows Admin Center, starting with disk anomaly detection.
+
+Disk anomaly detection is a new capability that highlights when disks are behaving *differently* than usual. While different isn't necessarily a bad thing, seeing these anomalous moments can be helpful when troubleshooting issues on your systems.
+
+This capability is also available for servers running Windows Server 2019.
+
+### Windows Admin Center enhancements
+
+A new release of Windows Admin Center is out, adding new functionality to Windows Server. For info on the latest features, see [Windows Admin Center](../manage/windows-admin-center/understand/windows-admin-center.md).
 
 ## What's new in storage in Windows Server 2019 and Windows Server, version 1809
 
@@ -35,7 +65,7 @@ There are a number of improvements to Storage Spaces Direct in Windows Server 20
 
 - **Deduplication and compression for ReFS volumes**
 
-    Store up to 10X more data on the same volume with deduplication and compression for the ReFS filesystem. (It’s [just one click](https://www.youtube.com/watch?v=PRibTacyKko&feature=youtu.be) to turn on with Windows Admin Center.) The variable-size chunk store with optional compression maximizes savings rates, while the multi-threaded post-processing architecture keeps performance impact minimal. Supports volumes up to 64 TB and files up to 1 TB each.
+    Store up to ten times more data on the same volume with deduplication and compression for the ReFS filesystem. (It’s [just one click](https://www.youtube.com/watch?v=PRibTacyKko&feature=youtu.be) to turn on with Windows Admin Center.) The variable-size chunk store with optional compression maximizes savings rates, while the multi-threaded post-processing architecture keeps performance impact minimal. Supports volumes up to 64 TB and will deduplicate the first 4 TB of each file.
 
 - **Native support for persistent memory**
 

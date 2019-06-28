@@ -14,8 +14,6 @@ ms.technology: identity-adfs
 
 # Provide Your Active Directory Users Access to the Applications and Services of Other Organizations
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
-
 This Active Directory Federation Services \(AD FS\) deployment goal builds on the goal in [Provide Your Active Directory Users Access to Your Claims-Aware Applications and Services](Provide-Your-Active-Directory-Users-Access-to-Your-Claims-Aware-Applications-and-Services.md).  
   
 When you are an administrator in the account partner organization and you have a deployment goal to provide federated access for employees to hosted resources in another organization:  

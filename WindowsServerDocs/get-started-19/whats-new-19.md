@@ -4,20 +4,32 @@ description: An overview of new features in Windows Server 2019, including Deskt
 ms.prod: windows-server-threshold
 ms.technology: server-general
 ms.topic: article
-author: coreyp-at-msft
-ms.author: coreyp
+author: jasongerend
+ms.author: jgerend
 ms.localizationpriority: high
+ms.date: 06/04/2019
 ---
-
 # What's new in Windows Server 2019
 
-This topic describes some of the new features in Windows Server 2019. Windows Server 2019 is built on the strong foundation of Windows Server 2016 and brings numerous innovations on four key themes: Hybrid Cloud, Security, Application Platform, and Hyper-Converged Infrastructure (HCI). To find out What's New in Windows Server, version 1809, see [What's New in Windows Server, version 1809](../get-started/whats-new-in-windows-server-1809.md).
+> Applies to: Windows Server 2019
+
+This topic describes some of the new features in Windows Server 2019. Windows Server 2019 is built on the strong foundation of Windows Server 2016 and brings numerous innovations on four key themes: Hybrid Cloud, Security, Application Platform, and Hyper-Converged Infrastructure (HCI).
+
+To find out what's new in Windows Server Semi-Annual Channel releases, see [What's New in Windows Server](../get-started/whats-new-in-windows-server.md).
 
 ## General
 
+### Windows Admin Center
+
+Windows Admin Center is a locally deployed, browser-based app for managing servers, clusters, hyper-converged infrastructure, and Windows 10 PCs. It comes at no additional cost beyond Windows and is ready to use in production.
+
+You can install Windows Admin Center on Windows Server 2019 as well as Windows 10 and earlier versions of Windows and Windows Server, and use it to manage servers and clusters running Windows Server 2008 R2 and later.
+
+For more info, see [Windows Admin Center](../manage/windows-admin-center/understand/windows-admin-center.md).
+
 ### Desktop experience
 
-Because Windows Server 2019 is a Long-Term Servicing Channel (LTSC) release, it includes the <b>Desktop Experience</b>. (It's not included in Windows Server, version 1709, Windows Server, version 1803, or Windows Server, version 1809, because Semi-Annual Channel \(SAC\) releases don't include the Desktop Experience by design; they are strictly Server Core and Nano Server container image releases.)
+Because Windows Server 2019 is a Long-Term Servicing Channel (LTSC) release, it includes the <b>Desktop Experience</b>. (Semi-Annual Channel \(SAC\) releases don't include the Desktop Experience by design; they are strictly Server Core and Nano Server container image releases.)
 As with Windows Server 2016, during setup of the operating system you can choose between Server Core installations or Server with Desktop Experience installations.
 
 ### System Insights
@@ -67,8 +79,6 @@ ATP's deep platform sensors and response actions expose memory and kernel level 
 -   [Exploit
     protection](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-exploit-guard/exploit-protection-exploit-guard) is a set of mitigations for vulnerability exploits (replacing EMET)that can
     be easily configured to protect your system and applications.
-
-
 
 [Windows Defender Application
 Control](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control) (also
@@ -122,7 +132,7 @@ Storage Migration Service is a new technology that makes it easier to migrate se
 
 ### Storage Spaces Direct
 
-Here's a list of what's new in Storage Spaces Direct. For details, see [What's new in Storage Spaces Direct](../storage/whats-new-in-storage.md#storage-spaces-direct).
+Here's a list of what's new in Storage Spaces Direct. For details, see [What's new in Storage Spaces Direct](../storage/whats-new-in-storage.md#storage-spaces-direct). Also see [Azure Stack HCI](https://docs.microsoft.com/azure-stack/operator/azure-stack-hci-overview) for info on acquiring validated Storage Spaces Direct systems.
 
 - **Deduplication and compression for ReFS volumes**
 - **Native support for persistent memory**
@@ -164,7 +174,7 @@ Here's a list of what's new in Failover Clustering. For details, see [What's new
 
 It is now possible to run Windows and Linux-based containers on the same container host, using the same docker daemon. This enables you to have a heterogenous container host environment while providing flexibility to application developers.
 
-### Building Support for Kubernetes
+### Built-in Support for Kubernetes
 
 Windows Server 2019 continues the improvements to compute, networking and storage from the semi-annual channel releases needed to support Kubernetes on Windows. More details are available in upcoming Kubernetes releases.
 

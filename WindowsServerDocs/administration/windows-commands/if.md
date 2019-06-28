@@ -39,19 +39,19 @@ if defined <Variable> <Command> [else <Expression>]
 
 ## Parameters
 
-|Parameter|Description|
-|---------|-----------|
-|not|Specifies that the command should be carried out only if the condition is false.|
-|errorlevel \<Number>|Specifies a true condition only if the previous program run by Cmd.exe returned an exit code equal to or greater than *Number*.|
-|\<Command>|Specifies the command that should be carried out if the preceding condition is met.|
-|\<String1>==<String2>|Specifies a true condition only if *String1* and *String2* are the same. These values can be literal strings or batch variables (for example, %1). You do not need to enclose literal strings in quotation marks.|
-|exist \<FileName>|Specifies a true condition if the specified file name exists.|
-|\<CompareOp>|Specifies a three-letter comparison operator. The following list represents valid values for *CompareOp*:</br>**EQU** Equal to</br>**NEQ** Not equal to</br>**LSS** Less than</br>**LEQ** Less than or equal to</br>**GTR** Greater than</br>**GEQ** Greater than or equal to|
-|/i|Forces string comparisons to ignore case.  You can use **/i** on the *String1***==***String2* form of **if**. These comparisons are generic, in that if both *String1* and *String2* are comprised of numeric digits only, the strings are converted to numbers and a numeric comparison is performed.|
-|cmdextversion \<Number>|Specifies a true condition only if the internal version number associated with the command extensions feature of Cmd.exe is equal to or greater than the number specified. The first version is 1. It increases by increments of one when significant enhancements are added to the command extensions. The **cmdextversion** conditional is never true when command extensions are disabled (by default, command extensions are enabled).|
-|defined \<Variable>|Specifies a true condition if *Variable* is defined.|
-|\<Expression>|Specifies a command-line command and any parameters to be passed to the command in an **else** clause.|
-|/?|Displays help at the command prompt.|
+|        Parameter        |                                                                                                                                                                                                                Description                                                                                                                                                                                                                 |
+|-------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|           not           |                                                                                                                                                                              Specifies that the command should be carried out only if the condition is false.                                                                                                                                                                              |
+|  errorlevel \<Number>   |                                                                                                                                                      Specifies a true condition only if the previous program run by Cmd.exe returned an exit code equal to or greater than *Number*.                                                                                                                                                       |
+|       \<Command>        |                                                                                                                                                                            Specifies the command that should be carried out if the preceding condition is met.                                                                                                                                                                             |
+|  \<String1>==<String2>  |                                                                                                             Specifies a true condition only if *String1* and *String2* are the same. These values can be literal strings or batch variables (for example, %1). You do not need to enclose literal strings in quotation marks.                                                                                                              |
+|    exist \<FileName>    |                                                                                                                                                                                       Specifies a true condition if the specified file name exists.                                                                                                                                                                                        |
+|      \<CompareOp>       |                                                                               Specifies a three-letter comparison operator. The following list represents valid values for *CompareOp*:</br>**EQU** Equal to</br>**NEQ** Not equal to</br>**LSS** Less than</br>**LEQ** Less than or equal to</br>**GTR** Greater than</br>**GEQ** Greater than or equal to                                                                                |
+|           /i            |                                                            Forces string comparisons to ignore case.  You can use **/i** on the <em>String1</em>**==**<em>String2</em> form of **if**. These comparisons are generic, in that if both *String1* and *String2* are comprised of numeric digits only, the strings are converted to numbers and a numeric comparison is performed.                                                            |
+| cmdextversion \<Number> | Specifies a true condition only if the internal version number associated with the command extensions feature of Cmd.exe is equal to or greater than the number specified. The first version is 1. It increases by increments of one when significant enhancements are added to the command extensions. The **cmdextversion** conditional is never true when command extensions are disabled (by default, command extensions are enabled). |
+|   defined \<Variable>   |                                                                                                                                                                                            Specifies a true condition if *Variable* is defined.                                                                                                                                                                                            |
+|      \<Expression>      |                                                                                                                                                                   Specifies a command-line command and any parameters to be passed to the command in an **else** clause.                                                                                                                                                                   |
+|           /?            |                                                                                                                                                                                                    Displays help at the command prompt.                                                                                                                                                                                                    |
 
 ## Remarks
 
@@ -90,24 +90,24 @@ echo The Product.dat file is missing.
 
 > [!NOTE]
 > These lines can be combined into a single line as follows:
-```
-IF EXIST Product.dat (del Product.dat) ELSE (echo The Product.dat file is missing.)
-```
-To echo the value of the ERRORLEVEL environment variable after running a batch file, type the following lines in the batch file:
-```
-goto answer%errorlevel%
-:answer1
-echo Program had return code 1
-:answer0
-echo Program had return code 0
-goto end
-:end
-echo Done! 
-```
-To go to the "okay" label if the value of the ERRORLEVEL environment variable is less than or equal to 1, type:
-```
-if %errorlevel% LEQ 1 goto okay
-```
+> ```
+> IF EXIST Product.dat (del Product.dat) ELSE (echo The Product.dat file is missing.)
+> ```
+> To echo the value of the ERRORLEVEL environment variable after running a batch file, type the following lines in the batch file:
+> ```
+> goto answer%errorlevel%
+> :answer1
+> echo Program had return code 1
+> :answer0
+> echo Program had return code 0
+> goto end
+> :end
+> echo Done! 
+> ```
+> To go to the "okay" label if the value of the ERRORLEVEL environment variable is less than or equal to 1, type:
+> ```
+> if %errorlevel% LEQ 1 goto okay
+> ```
 
 #### Additional references
 

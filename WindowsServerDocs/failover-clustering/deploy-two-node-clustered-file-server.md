@@ -10,7 +10,7 @@ description: This article describes creating a two-node file server cluster
 ---
 # Deploying a two-node clustered file server
 
-> Applies To: Windows Server 2019, Windows Server 2016
+> Applies to: Windows Server 2019, Windows Server 2016
 
 A failover cluster is a group of independent computers that work together to increase the availability of applications and services. The clustered servers (called nodes) are connected by physical cables and by software. If one of the cluster nodes fails, another node begins to provide service (a process known as failover). Users experience a minimum of disruptions in service.
 
@@ -22,11 +22,11 @@ Servers in a failover cluster can function in a variety of roles, including the 
 
 A failover cluster usually includes a storage unit that is physically connected to all the servers in the cluster, although any given volume in the storage is only accessed by one server at a time. The following diagram shows a two-node failover cluster connected to a storage unit.
 
-![Two Node Cluster](media\Cluster-File-Server\Cluster-FS-Overview.png)
+![Two Node Cluster](media/Cluster-File-Server/Cluster-FS-Overview.png)
 
 Storage volumes or logical unit numbers (LUNs) exposed to the nodes in a cluster must not be exposed to other servers, including servers in another cluster. The following diagram illustrates this.
 
-![LUNs in Storage](media\Cluster-File-Server\Cluster-FS-LUNs.png)
+![LUNs in Storage](media/Cluster-File-Server/Cluster-FS-LUNs.png)
 
 Note that for the maximum availability of any server, it is important to follow best practices for server management—for example, carefully managing the physical environment of the servers, testing software changes before fully implementing them, and carefully keeping track of software updates and configuration changes on all clustered servers.
 
@@ -161,7 +161,7 @@ In this step, the file server role and failover cluster feature will be installe
 
 1. Open **Server Manager** and under the **Manage** drop down, select **Add Roles and Features**.
 
-   ![Add Feature](media\Cluster-File-Server\Cluster-FS-Add-Feature.png)
+   ![Add Feature](media/Cluster-File-Server/Cluster-FS-Add-Feature.png)
 
 2. If the **Before you begin** window opens, choose **Next**.
 
@@ -171,11 +171,11 @@ In this step, the file server role and failover cluster feature will be installe
 
 5. For the Server Role, from the list of roles, open **File Services**, select **File Server**, and **Next**.
 
-   ![Add Role](media\Cluster-File-Server\Cluster-FS-Add-FS-Role-1.png)
+   ![Add Role](media/Cluster-File-Server/Cluster-FS-Add-FS-Role-1.png)
 
 6. For the Features, from the list of features, select **Failover Clustering**.  A popup dialog will show that lists the administration tools also being installed.  Keep all the selected, choose **Add Features** and **Next**.
 
-   ![Add Feature](media\Cluster-File-Server\Cluster-FS-Add-WSFC-1.png)
+   ![Add Feature](media/Cluster-File-Server/Cluster-FS-Add-WSFC-1.png)
 
 7. On the Confirmation page, select Install.
 
@@ -309,7 +309,7 @@ To configure a file server failover cluster, follow the below steps.
 
 7. For the File Server Type, select **File Server for general use** and **Next**.<br>For info about Scale-Out File Server, see [Scale-Out File Server overview](sofs-overview.md).
 
-   ![File Server Type](media\Cluster-File-Server\Cluster-FS-File-Server-Type.png)
+   ![File Server Type](media/Cluster-File-Server/Cluster-FS-File-Server-Type.png)
 
 8. In the **Client Access Point** window, input the name of the file server you will be using.  Please note that this is not the name of the cluster.  This is for the file share connectivity.  For example, if I want to connect to \\SERVER, the name inputted would be SERVER.
 

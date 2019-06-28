@@ -17,7 +17,7 @@ ms.localizationpriority: medium
 ---
 # Remote Desktop - Allow access to your PC
 
->Applies To: Windows 10, Windows 8.1, Windows Server 2012 R2, Windows Server 2016
+>Applies to: Windows 10, Windows 8.1, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2
 
 You can use Remote Desktop to connect to and control your PC from a remote device by using a [Microsoft Remote Desktop client](remote-desktop-clients.md) (available for Windows, iOS, macOS and Android). When you allow remote connections to your PC, you can use another device to connect to your PC and have access to all of your apps, files, and network resources as if you were sitting at your desk.  
 
@@ -58,7 +58,7 @@ Be aware that when you enable access to Remote Desktop, you are granting anyone 
 You should ensure that every account that has access to your PC is configured with a strong password.
 
 ## Why allow connections only with Network Level Authentication? 
- 
-If you want to restrict who can access your PC, choose to allow access only with Network Level Authentication (NLA). When you enable this option, users have to authenticate themselves to the network before they can connect to your PC. Allowing connections only from computers running Remote Desktop with NLA is a more secure authentication method that can help protect your computer from malicious users and software. To learn more about NLA and Remote Desktop, check out [Configure NLA for RDS Connections](https://technet.microsoft.com/library/cc732713(v=ws.11).aspx). 
+
+If you want to restrict who can access your PC, choose to allow access only with Network Level Authentication (NLA). When you enable this option, users have to authenticate themselves to the network before they can connect to your PC. Allowing connections only from computers running Remote Desktop with NLA is a more secure authentication method that can help protect your computer from malicious users and software. To learn more about NLA and Remote Desktop, check out [Configure NLA for RDS Connections](https://technet.microsoft.com/library/cc732713(v=ws.11).aspx).
 
 If you're remotely connecting to a PC on your home network from outside of that network, don't select this option.

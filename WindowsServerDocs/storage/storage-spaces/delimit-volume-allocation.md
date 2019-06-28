@@ -9,12 +9,12 @@ ms.date: 03/29/2018
 ---
 
 # Delimit the allocation of volumes in Storage Spaces Direct
-> Applies To: Windows Server Insider Preview, build 17093 and later
+> Applies to: Windows Server 2019
 
-Windows Server Insider Preview introduces an option to manually delimit the allocation of volumes in Storage Spaces Direct. Doing so can significantly increase fault tolerance under certain conditions, but imposes some added management considerations and complexity. This topic explains how it works and gives examples in PowerShell.
+Windows Server 2019 introduces an option to manually delimit the allocation of volumes in Storage Spaces Direct. Doing so can significantly increase fault tolerance under certain conditions, but imposes some added management considerations and complexity. This topic explains how it works and gives examples in PowerShell.
 
    > [!IMPORTANT]
-   > This feature is new in Windows Server Insider Preview, build 17093 and later. It is not available in Windows Server 2016. We invite IT pros to join the [Windows Server Insider Program](https://aka.ms/serverinsider) to give us feedback on what we can do to make Windows Server work better for your organization.
+   > This feature is new in Windows Server 2019. It is not available in Windows Server 2016. 
 
 ## Prerequisites
 

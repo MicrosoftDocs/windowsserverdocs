@@ -14,8 +14,6 @@ ms.technology: identity-adfs
 
 # Where to Place a Federation Server
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
-
 As a security best practice, place Active Directory Federation Services \(AD FS\)federation servers in front of a firewall and connect them to your corporate network to prevent exposure from the Internet. This is important because federation servers have full authorization to grant security tokens. Therefore, they should have the same protection as a domain controller. If a federation server is compromised, a malicious user has the ability to issue full access tokens to all Web applications and to federation servers that are protected by Active Directory Federation Services \(AD FS\) in all resource partner organizations.  
   
 > [!NOTE]  

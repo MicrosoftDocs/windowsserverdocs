@@ -14,7 +14,6 @@ ms.technology: identity-adfs
 
 # Create a Rule to Send LDAP Attributes as Claims
 
->Applies To: Windows Server 2016, Windows Server 2012 R2
 
 Using the Send LDAP Attributes as Claims rule template in Active Directory Federation Services \(AD FS\), you can create a rule that will select attributes from a Lightweight Directory Access Protocol \(LDAP\) attribute store, such as Active Directory, to send as claims to the relying party. For example, you can use this rule template to create a Send LDAP Attributes as Claims rule that will extract attribute values for authenticated users from the **displayName** and **telephoneNumber** Active Directory attributes and then send those values as two different outgoing claims.  
   

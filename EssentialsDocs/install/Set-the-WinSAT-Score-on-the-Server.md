@@ -25,19 +25,19 @@ You should set the WinSAT CPU score for a server that is running the  Windows Se
   
 #### To obtain the WinSAT CPU score  
   
-1.  Copy the Resources\WinServerSAT\\* in ADK media to the reference computer.  
+1. Copy the Resources\WinServerSAT\\* in ADK media to the reference computer.  
   
-2.  On the reference computer, open an elevated Command Prompt window.  
+2. On the reference computer, open an elevated Command Prompt window.  
   
-3.  If the %ProgramFiles%\Windows Server\Bin\OEM folder does not exist, type the following command and then press Enter.  
+3. If the %ProgramFiles%\Windows Server\Bin\OEM folder does not exist, type the following command and then press Enter.  
   
-     **mkdir "%ProgramFiles%\Windows Server\Bin\OEM"**  
+    **mkdir "%ProgramFiles%\Windows Server\Bin\OEM"**  
   
-4.  Type the following command and then press Enter.  
+4. Type the following command and then press Enter.  
   
-     **WinServerSAT.exe "%ProgramFiles%\Windows Server\Bin\OEM\WinServerSAT.xml"**  
+    **WinServerSAT.exe "%ProgramFiles%\Windows Server\Bin\OEM\WinServerSAT.xml"**  
   
- The following example shows the XML contents of the WinServerSAT.xml file that is created.  
+   The following example shows the XML contents of the WinServerSAT.xml file that is created.  
   
 ```  
   

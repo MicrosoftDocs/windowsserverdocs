@@ -11,14 +11,14 @@ ms.date: 05/09/2017
 ---
 # Data Deduplication Overview
 
-> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
+> Applies to: Windows Server 2019, Windows Server 2016, Windows Server (Semi-Annual Channel), 
 
 ## <a name="what-is-dedup"></a>What is Data Deduplication?
 
-Data Deduplication, often called Dedup for short, is a feature of Windows Server 2016 that can help reduce the impact of redundant data on storage costs. When enabled, Data Deduplication optimizes free space on a volume by examining the data on the volume by looking for duplicated portions on the volume. Duplicated portions of the volume's dataset are stored once and are (optionally) compressed for additional savings. Data Deduplication optimizes redundancies without compromising data fidelity or integrity. More information about how Data Deduplication works can be found in the '[How does Data Deduplication work?](understand.md#how-does-dedup-work)' section of the [Understanding Data Deduplication](understand.md) page.
+Data Deduplication, often called Dedup for short, is a feature that can help reduce the impact of redundant data on storage costs. When enabled, Data Deduplication optimizes free space on a volume by examining the data on the volume by looking for duplicated portions on the volume. Duplicated portions of the volume's dataset are stored once and are (optionally) compressed for additional savings. Data Deduplication optimizes redundancies without compromising data fidelity or integrity. More information about how Data Deduplication works can be found in the '[How does Data Deduplication work?](understand.md#how-does-dedup-work)' section of the [Understanding Data Deduplication](understand.md) page.
 
 > [!Important]  
-> [KB4025334](https://support.microsoft.com/kb/4025334) contains a roll up of fixes for Data Deduplication, including important reliability fixes, and we strongly recommend installing it when using Data Deduplication with Windows Server 2016.
+> [KB4025334](https://support.microsoft.com/kb/4025334) contains a roll up of fixes for Data Deduplication, including important reliability fixes, and we strongly recommend installing it when using Data Deduplication with Windows Server 2016 and Windows Server 2019.
 
 ## <a name="why-is-dedup-useful"></a>Why is Data Deduplication useful?
 
@@ -65,7 +65,7 @@ The space savings that you can gain from Data Deduplication depend on the datase
                     <li><b>Remote access</b>: Users can access enterprise applications from devices such as home computers, kiosks, low-powered hardware, and operating systems other than Windows.</li>
                     <li><b>Branch office access</b>: VDI deployments can provide better application performance for branch office workers who need access to centralized data stores. Data-intensive applications sometimes do not have client/server protocols that are optimized for low-speed connections.</li>
                 </ul>
-                VDI deployments are great candidates for Data Deduplication because the virtual hard disks that drive the remote desktops for users are essentially identical. Additionally, Data Deduplication can help with the so-called *VDI boot storm*, which is the drop in storage performance when many users simultaneously sign in to their desktops to start the day.
+                VDI deployments are great candidates for Data Deduplication because the virtual hard disks that drive the remote desktops for users are essentially identical. Additionally, Data Deduplication can help with the so-called <em>VDI boot storm</em>, which is the drop in storage performance when many users simultaneously sign in to their desktops to start the day.
             </td>
         </tr>
         <tr>
@@ -79,7 +79,7 @@ The space savings that you can gain from Data Deduplication depend on the datase
             <td style="text-align:center;min-width:150px;vertical-align:center;"><img src="media/overview-other.png" alt="Illustration of other workloads" /></td>
             <td style="vertical-align:top">
                 <b>Other workloads</b><br />
-                [Other workloads may also be excellent candidates for Data Deduplication](install-enable.md#enable-dedup-candidate-workloads).
+                <a href="install-enable.md#enable-dedup-candidate-workloads" data-raw-source="[Other workloads may also be excellent candidates for Data Deduplication](install-enable.md#enable-dedup-candidate-workloads)">Other workloads may also be excellent candidates for Data Deduplication</a>.
             </td>
         </tr>
     </tbody>

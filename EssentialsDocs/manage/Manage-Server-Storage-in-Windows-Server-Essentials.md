@@ -41,19 +41,19 @@ manager: dongill
 ##  <a name="BKMK_1"></a> Manage hard drives using the Dashboard  
  Windows Server Essentials allows you to manage all the hard drives that are connected to the server through the Dashboard. On the Dashboard **Storage** tab, **Hard Drives** displays all the hard drives that are available on the server for storing data and server backups. The server monitors the space available on each hard drive, and displays an alert if hard drive space becomes low. The **Hard Drives** tab displays the following information:  
   
--   The name of each hard drive  
+- The name of each hard drive  
   
--   The capacity of each hard drive  
+- The capacity of each hard drive  
   
--   The amount of used space on each hard drive  
+- The amount of used space on each hard drive  
   
--   The amount of free space on each hard drive  
+- The amount of free space on each hard drive  
   
--   The status of each hard drive; a blank status means that the hard drive is operating properly  
+- The status of each hard drive; a blank status means that the hard drive is operating properly  
   
--   The details pane, which displays all the storage stack information (for storage pool, storage space, and hard drive) if the selected hard drive is located on a Storage Space (instead of a physical disk)  
+- The details pane, which displays all the storage stack information (for storage pool, storage space, and hard drive) if the selected hard drive is located on a Storage Space (instead of a physical disk)  
   
- The following table lists the hard drive management tasks that are available in the Dashboard and their descriptions. Some of the tasks are displayed only when a hard drive is selected.  
+  The following table lists the hard drive management tasks that are available in the Dashboard and their descriptions. Some of the tasks are displayed only when a hard drive is selected.  
   
 ### Available hard drive management tasks  
   
@@ -115,7 +115,7 @@ manager: dongill
   
 2.  Format the hard drive and set it up for server backup. If you choose this option, the Set Up Server Backup Wizard is launched, and it walks you through the server backup configuration.  
   
-3.  If a storage space doesn ��t exist, use the new hard drive to create a storage space. You must have at least two hard drives to create a storage space.  
+3.  If a storage space doesn't exist, use the new hard drive to create a storage space. You must have at least two hard drives to create a storage space.  
   
 4.  If a storage space already exists, use the new hard drive to increase the capacity of a storage pool. This option is only displayed if there is an existing storage space created on the server. If you choose this option, the wizard will add this hard drive to the storage pool.  
   
@@ -133,41 +133,41 @@ manager: dongill
   
 ##### To store server folders  
   
-1.  Open the Dashboard.  
+1. Open the Dashboard.  
   
-2.  Click the **STORAGE** tab, and then click **Server Folders**.  
+2. Click the **STORAGE** tab, and then click **Server Folders**.  
   
-3.  In the **Server Folders Tasks** pane, do one of the following:  
+3. In the **Server Folders Tasks** pane, do one of the following:  
   
-    1.  To add a server folder, click **Add a folder**.  
+   1.  To add a server folder, click **Add a folder**.  
   
-    2.  To move a server folder, select the folder that you want to move to the new hard drive, and then click **Move a folder**.  
+   2.  To move a server folder, select the folder that you want to move to the new hard drive, and then click **Move a folder**.  
   
-    > [!NOTE]
-    >  If you browse to the hard drive and select it as the server folder location without creating a folder, the following error message appears: **A root directory (such as C:\\, D:\\) cannot be added as a server folder. Create a new folder or select an existing one under the root directory, and then try again**. To resolve this error, create a new folder in the newly added hard drive, and then select the new folder as the location to store server folders.  
+   > [!NOTE]
+   >  If you browse to the hard drive and select it as the server folder location without creating a folder, the following error message appears: **A root directory (such as C:\\, D:\\) cannot be added as a server folder. Create a new folder or select an existing one under the root directory, and then try again**. To resolve this error, create a new folder in the newly added hard drive, and then select the new folder as the location to store server folders.  
   
-4.  Follow the instructions to finish the wizard.  
+4. Follow the instructions to finish the wizard.  
   
- For more information about moving server folders, see [Add or move a server folder](Manage-Server-Folders-in-Windows-Server-Essentials.md#BKMK_5).  
+   For more information about moving server folders, see [Add or move a server folder](Manage-Server-Folders-in-Windows-Server-Essentials.md#BKMK_5).  
   
 ###  <a name="BKMK_4b"></a> Use the new hard drive to store server backups  
  You can use the newly added hard drive to store server backups.  
   
 ##### To store server backups  
   
-1.  Open the Dashboard.  
+1. Open the Dashboard.  
   
-2.  Click the **Devices** tab, select the server from the list pane, and then from the task pane, do one of the following:  
+2. Click the **Devices** tab, select the server from the list pane, and then from the task pane, do one of the following:  
   
-    1.  If Server Backup is not configured on the server, click **Set up Server Backup**.  
+   1. If Server Backup is not configured on the server, click **Set up Server Backup**.  
   
-    2.  If Server Backup is configured on the server, click **Customize Server Backup**.  
+   2. If Server Backup is configured on the server, click **Customize Server Backup**.  
   
-     The Set Up Server Backup Wizard appears.  
+      The Set Up Server Backup Wizard appears.  
   
-3.  In the **Select the Backup Destination** page, select the new hard drive as the backup destination.  
+3. In the **Select the Backup Destination** page, select the new hard drive as the backup destination.  
   
-4.  Follow the instructions to finish the wizard.  
+4. Follow the instructions to finish the wizard.  
   
 ###  <a name="BKMK_4c"></a> Use the new hard drive to increase storage pool capacity  
  When your storage pool capacity is low, you receive an alert stating that you can increase the storage pool capacity by adding a new hard drive to the storage pool by using the Increase Capacity of a Storage Pool Wizard.  
@@ -188,7 +188,7 @@ manager: dongill
 5.  Follow the instructions to finish the wizard.  
   
 ##  <a name="BKMK_5"></a> Storage Spaces Overview  
- Storage Spaces lets you group disks together in a storage pool. You can then use pool capacity to create storage spaces. Storage spaces are virtual drives that appear on the **Hard Drives** tab of the Dashboard. You can use storage spaces like any other drive, so it ��s easy to work with files on them. When you run low on pool capacity, you can create large storage spaces and add more drives to the storage pool. If you have two or more disks within the storage pool, you can create storage spaces with a two-way mirror that won't be affected by a drive failure ?or even the failure of two drives ?if you create a three-way mirror storage space.  
+ Storage Spaces lets you group disks together in a storage pool. You can then use pool capacity to create storage spaces. Storage spaces are virtual drives that appear on the **Hard Drives** tab of the Dashboard. You can use storage spaces like any other drive, so it's easy to work with files on them. When you run low on pool capacity, you can create large storage spaces and add more drives to the storage pool. If you have two or more disks within the storage pool, you can create storage spaces with a two-way mirror that won't be affected by a drive failure ?or even the failure of two drives ?if you create a three-way mirror storage space.  
   
  To create a storage space, all you need is one or more extra drives in addition to the drive on which Windows is installed. These drives can be internal or external hard drives, or solid state drives. You can use a variety of types of drives with Storage Spaces, including USB, SATA, and SAS drives.  
   
@@ -209,29 +209,29 @@ manager: dongill
   
 #### To create a storage space in Windows Server Essentials  
   
-1.  Add or connect all the drives that you want to group together with Storage Spaces to the server running Windows Server Essentials.  
+1. Add or connect all the drives that you want to group together with Storage Spaces to the server running Windows Server Essentials.  
   
-2.  From the Dashboard, click **Advanced: Manage Storage Spaces**.  
+2. From the Dashboard, click **Advanced: Manage Storage Spaces**.  
   
-3.  Click **Create a new pool and storage space**.  
+3. Click **Create a new pool and storage space**.  
   
-4.  Select the drives you want to add to the new storage space, and then click **Create pool**.  
+4. Select the drives you want to add to the new storage space, and then click **Create pool**.  
   
-5.  Give the drive a name and letter, and then choose a layout. **Two-way mirror**, **Three-way mirror**, and **Parity** can help protect the files in the storage space from drive failure.  
+5. Give the drive a name and letter, and then choose a layout. **Two-way mirror**, **Three-way mirror**, and **Parity** can help protect the files in the storage space from drive failure.  
   
-6.  Enter the maximum size the storage space can reach, and then click **Create storage space**.  
+6. Enter the maximum size the storage space can reach, and then click **Create storage space**.  
   
- In  Windows Server Essentials, you can create a two-way mirrored storage space by using the Create a Storage Space Wizard from the Dashboard.  
+   In  Windows Server Essentials, you can create a two-way mirrored storage space by using the Create a Storage Space Wizard from the Dashboard.  
   
 #### To create a storage space in Windows Server Essentials  
   
-1.  Add or connect all the drives that you want to group together with Storage Spaces to the server running Windows Server Essentials.  
+1. Add or connect all the drives that you want to group together with Storage Spaces to the server running Windows Server Essentials.  
   
-2.  From the Dashboard, click **Manage Storage Spaces**. The Create a Storage Space Wizard appears.  
+2. From the Dashboard, click **Manage Storage Spaces**. The Create a Storage Space Wizard appears.  
   
-3.  Follow the instructions to complete the wizard.  
+3. Follow the instructions to complete the wizard.  
   
- For information about increasing storage pool capacity, see [Use the new hard drive to increase storage pool capacity](Manage-Server-Storage-in-Windows-Server-Essentials.md#BKMK_4c).  
+   For information about increasing storage pool capacity, see [Use the new hard drive to increase storage pool capacity](Manage-Server-Storage-in-Windows-Server-Essentials.md#BKMK_4c).  
   
 ## See also  
   

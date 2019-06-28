@@ -13,8 +13,6 @@ ms.technology: identity-adfs
 ---
 # AD FS Rapid Restore Tool
 
->Applies To: Windows Server 2016, Windows Server 2012 R2
-
 ## Overview
 Today AD FS is made highly available by setting up an AD FS farm. Some organizations would like a way to have a single server AD FS deployment, eliminating the need for multiple AD FS servers and network load balancing infrastructure, while still having some assurance that service can be restored quickly if there is a problem.
 The new AD FS Rapid Restore tool provides a way to restore AD FS data without requiring a full backup and restore of the operating system or system state. You can use the new tool to export AD FS configuration either to Azure or to an on-premises location.  Then you can apply the exported data to a fresh AD FS installation, re-creating or duplicating the AD FS environment. 

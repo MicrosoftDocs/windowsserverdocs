@@ -90,7 +90,7 @@ Specifies the LUN number to add as a plex to the currently selected LUN.
 > [!CAUTION]
 > All data on the LUN being added as a plex will be deleted.
 
-**tpgroup tportal=***n*
+**tpgroup tportal=**<em>n</em>
 
 Specifies the iSCSI target portal number to add to the currently selected iSCSI target portal group.
 
@@ -737,7 +737,7 @@ Specifies the type of login to perform: **manual**, **persistent**, or **boot**.
 
 **persistent** - Automatically use the same login when the computer is restarted.
 
-**boot** - (This option is for future development and is not currently used*.*)
+**boot** - (This option is for future development and is not currently used<em>.</em>)
 
 **chap**
 

@@ -46,31 +46,31 @@ ms.date: 10/12/2016
 
 ### Windows Server 2008 R2: To manage a foreign domain in the selected instance of Active Directory Administrative Center using the current set of logon credentials
 
-1.  To open Active Directory Administrative Center, click **Start**, click **Administrative Tools**, and then click **Active Directory Administrative Center**.
+1. To open Active Directory Administrative Center, click **Start**, click **Administrative Tools**, and then click **Active Directory Administrative Center**.
 
-    > [!NOTE]
-    >  Another way to open Active Directory Administrative Center is to click **Start**, click **Run**, and then type **dsac.exe**.
+   > [!NOTE]
+   >  Another way to open Active Directory Administrative Center is to click **Start**, click **Run**, and then type **dsac.exe**.
 
-2.  To open **Add Navigation Nodes**, near the top of the Active Directory Administrative Center window, click **Add Navigation Nodes** as shown in the following illustration.
+2. To open **Add Navigation Nodes**, near the top of the Active Directory Administrative Center window, click **Add Navigation Nodes** as shown in the following illustration.
 
-     ![Screenshot showing **Add Navigation Nodes** UI](media/click_add_nav_nodes.gif)
+    ![Screenshot showing **Add Navigation Nodes** UI](media/click_add_nav_nodes.gif)
 
-    > [!NOTE]
-    >  Another way to open **Add Navigation Nodes** is to right\-click anywhere in the empty space in the Active Directory Administrative Center navigation pane, and then click **Add Navigation Nodes**.
+   > [!NOTE]
+   >  Another way to open **Add Navigation Nodes** is to right\-click anywhere in the empty space in the Active Directory Administrative Center navigation pane, and then click **Add Navigation Nodes**.
 
-3.  In **Add Navigation Nodes**, click **Connect to other domains** as shown in the following illustration.
+3. In **Add Navigation Nodes**, click **Connect to other domains** as shown in the following illustration.
 
-     ![Screenshot showing **Add Navigation Nodes** **Connect to other domains** UI](media/add_nav_nodes.gif)
+    ![Screenshot showing **Add Navigation Nodes** **Connect to other domains** UI](media/add_nav_nodes.gif)
 
-4.  In **Connect to**, type the name of the foreign domain that you want to manage \(for example, **contoso.com**\), and then click **OK**.
+4. In **Connect to**, type the name of the foreign domain that you want to manage \(for example, **contoso.com**\), and then click **OK**.
 
-5.  When you are successfully connected to the foreign domain, browse through the columns in the **Add Navigation Nodes** window, select the container or containers to add to your Active Directory Administrative Center navigation pane, and then click **OK**.
+5. When you are successfully connected to the foreign domain, browse through the columns in the **Add Navigation Nodes** window, select the container or containers to add to your Active Directory Administrative Center navigation pane, and then click **OK**.
 
- For more information about customizing the Active Directory Administrative Center navigation pane, see [Customize the Active Directory Administrative Center Navigation Pane](customize-the-active-directory-administrative-center-navigation-pane.md).
+   For more information about customizing the Active Directory Administrative Center navigation pane, see [Customize the Active Directory Administrative Center Navigation Pane](customize-the-active-directory-administrative-center-navigation-pane.md).
 
- You can also open Active Directory Administrative Center by using a set of logon credentials that is different from your current set of logon credentials. The command in the following procedure can be useful if you are logged on to the computer that is running Active Directory Administrative Center with normal user credentials, but you want to use Active Directory Administrative Center on this computer to manage your local domain as an administrator. \(This command can also be useful if you want to use Active Directory Administrative Center to remotely manage a foreign domain that is different from your local domain with a set of credentials that is different from your current set of logon credentials. However, the foreign domain must have an established trust with the local domain.\)
+   You can also open Active Directory Administrative Center by using a set of logon credentials that is different from your current set of logon credentials. The command in the following procedure can be useful if you are logged on to the computer that is running Active Directory Administrative Center with normal user credentials, but you want to use Active Directory Administrative Center on this computer to manage your local domain as an administrator. \(This command can also be useful if you want to use Active Directory Administrative Center to remotely manage a foreign domain that is different from your local domain with a set of credentials that is different from your current set of logon credentials. However, the foreign domain must have an established trust with the local domain.\)
 
- There is no minimum group membership required to complete this procedure.
+   There is no minimum group membership required to complete this procedure.
 
 ### To manage a domain using logon credentials that are different from the current set of logon credentials
 

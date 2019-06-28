@@ -11,15 +11,15 @@ ms.localizationpriority: medium
 ---
 # Cluster sets
 
-> Applies To: Windows Server Insider Preview build 17650 and later
+> Applies to: Windows Server 2019
 
-Cluster sets is the new cloud scale-out technology in this preview release that increases cluster node count in a single Software Defined Data Center (SDDC) cloud by orders of magnitude. A cluster set is a loosely-coupled grouping of multiple Failover Clusters: compute, storage or hyper-converged. Cluster sets technology enables virtual machine fluidity across member clusters within a cluster set and a unified storage namespace across the set in support of virtual machine fluidity. 
+Cluster sets is the new cloud scale-out technology in the Windows Server 2019 release that increases cluster node count in a single Software Defined Data Center (SDDC) cloud by orders of magnitude. A cluster set is a loosely-coupled grouping of multiple Failover Clusters: compute, storage or hyper-converged. Cluster sets technology enables virtual machine fluidity across member clusters within a cluster set and a unified storage namespace across the set in support of virtual machine fluidity.
 
-While preserving existing Failover Cluster management experiences on member clusters, a cluster set instance additionally offers key use cases around lifecycle management at the aggregate. This Windows Server Preview Scenario Evaluation Guide provides you the necessary background information along with step-by-step instructions to evaluate cluster sets technology using PowerShell. 
+While preserving existing Failover Cluster management experiences on member clusters, a cluster set instance additionally offers key use cases around lifecycle management at the aggregate. This Windows Server 2019 Scenario Evaluation Guide provides you the necessary background information along with step-by-step instructions to evaluate cluster sets technology using PowerShell.
 
 ## Technology introduction
 
-Cluster sets technology is developed to meet specific customer requests operating Software Defined Datacenter (SDDC) clouds at scale. Cluster sets value proposition in this Preview release may be summarized as the following:  
+Cluster sets technology is developed to meet specific customer requests operating Software Defined Datacenter (SDDC) clouds at scale. Cluster sets value proposition may be summarized as the following:  
 
 - Significantly increase the supported SDDC cloud scale for running highly available virtual machines by combining multiple smaller clusters into a single large fabric, even while keeping the software fault boundary to a single cluster
 - Manage entire Failover Cluster lifecycle including onboarding and retiring clusters, without impacting tenant virtual machine availability, via fluidly migrating virtual machines across this large fabric
@@ -29,7 +29,7 @@ Cluster sets technology is developed to meet specific customer requests operatin
 
 From a high level view, this is what cluster sets can look like.
 
-![Cluster sets solution View](media\Cluster-sets-Overview\Cluster-sets-solution-View.png)
+![Cluster sets solution View](media/Cluster-sets-Overview/Cluster-sets-solution-View.png)
 
 The following provides a quick summary of each of the elements in the above image:
 
@@ -43,7 +43,7 @@ A member cluster in a cluster set is typically a traditional hyper-converged clu
 
 **Cluster set namespace referral SOFS**
 
-A cluster set namespace referral (Cluster Set Namespace) SOFS is a Scale-Out File Server wherein each SMB Share on the Cluster Set Namespace SOFS is a referral share – of type ‘SimpleReferral’ newly introduced in this Preview release.  This referral allows Server Message Block (SMB) clients access to the target SMB share hosted on the member cluster SOFS. The cluster set namespace referral SOFS is a light-weight referral mechanism and as such, does not participate in the I/O path. The SMB referrals are cached perpetually on the each of the client nodes and the cluster sets namespace dynamically updates automatically these referrals as needed.
+A cluster set namespace referral (Cluster Set Namespace) SOFS is a Scale-Out File Server wherein each SMB Share on the Cluster Set Namespace SOFS is a referral share – of type ‘SimpleReferral’ newly introduced in Windows Server 2019. This referral allows Server Message Block (SMB) clients access to the target SMB share hosted on the member cluster SOFS. The cluster set namespace referral SOFS is a light-weight referral mechanism and as such, does not participate in the I/O path. The SMB referrals are cached perpetually on the each of the client nodes and the cluster sets namespace dynamically updates automatically these referrals as needed.
 
 **Cluster set master**
 
@@ -106,7 +106,7 @@ Once a cluster set is created, the cluster set namespace relies on an Infrastruc
 
 At the time a member cluster is added to a cluster set, the administrator specifies the name of an Infrastructure SOFS on that cluster if one already exists. If the Infrastructure SOFS does not exist, a new Infrastructure SOFS role on the new member cluster is created by this operation. If an Infrastructure SOFS role already exists on the member cluster, the Add operation implicitly renames it to the specified name as needed. Any existing singleton SMB servers, or non-Infrastructure SOFS roles on the member clusters are left unutilized by the cluster set. 
 
-At the time the cluster set is created, the administrator has the option to use an already-existing AD computer object as the namespace root on the management cluster. Cluster set creation operations create the Infrastructure SOFS cluster role on the management cluster or renames the existing Infrastructure SOFS role just as previously described for member clusters. The Infrastructure SOFS on the management cluster is used as the cluster set namespace referral (Cluster Set Namespace) SOFS. It simply means that each SMB Share on the cluster set namespace SOFS is a referral share – of type ‘SimpleReferral’ - newly introduced in this Preview release.  This referral allows SMB clients access to the target SMB share hosted on the member cluster SOFS. The cluster set namespace referral SOFS is a light-weight referral mechanism and as such, does not participate in the I/O path. The SMB referrals are cached perpetually on the each of the client nodes and the cluster sets namespace dynamically updates automatically these referrals as needed
+At the time the cluster set is created, the administrator has the option to use an already-existing AD computer object as the namespace root on the management cluster. Cluster set creation operations create the Infrastructure SOFS cluster role on the management cluster or renames the existing Infrastructure SOFS role just as previously described for member clusters. The Infrastructure SOFS on the management cluster is used as the cluster set namespace referral (Cluster Set Namespace) SOFS. It simply means that each SMB Share on the cluster set namespace SOFS is a referral share – of type ‘SimpleReferral’ - newly introduced in Windows Server 2019.  This referral allows SMB clients access to the target SMB share hosted on the member cluster SOFS. The cluster set namespace referral SOFS is a light-weight referral mechanism and as such, does not participate in the I/O path. The SMB referrals are cached perpetually on the each of the client nodes and the cluster sets namespace dynamically updates automatically these referrals as needed
 
 ## Creating a Cluster Set
 
@@ -114,7 +114,7 @@ At the time the cluster set is created, the administrator has the option to use 
 
 When creating a cluster set, you following prerequisites are recommended:
 
-1. Configure a management client running the latest Windows Server Insider release.
+1. Configure a management client running Windows Server 2019.
 2. Install the Failover Cluster tools on this management server.
 3. Create cluster members (at least two clusters with at least two Cluster Shared Volumes on each cluster)
 4. Create a management cluster (physical or guest) that straddles the member clusters.  This approach ensures that the Cluster sets management plane continues to be available despite possible member cluster failures.
@@ -252,7 +252,11 @@ Live migrating a virtual machine between different cluster set clusters is not t
 2. live migrate the virtual machine to a member node of a different cluster.
 3. add the virtual machine into the cluster as a new virtual machine role.
 
-With Cluster sets these steps are not necessary and only one command is needed.  For example, I want to move a Cluster Set virtual machine from CLUSTER1 to NODE2-CL3 on CLUSTER3.  The single command would be:
+With Cluster sets these steps are not necessary and only one command is needed.  First, you should set all networks to be available for the migration with the command:
+
+	Set-VMHost -UseAnyNetworkMigration $true
+
+For example, I want to move a Cluster Set virtual machine from CLUSTER1 to NODE2-CL3 on CLUSTER3.  The single command would be:
 
         Move-ClusterSetVM -CimSession CSMASTER -VMName CSVM1 -Node NODE2-CL3
 
@@ -321,7 +325,7 @@ For example, the command to remove the CLUSTER1 cluster from cluster sets would 
 **Question:** Can I manage my Cluster Set via System Center Virtual Machine Manager? <br>
 **Answer:** System Center Virtual Machine Manager does not currently support Cluster sets <br><br> **Question:** Can Windows Server 2012 R2 or 2016 clusters co-exist in the same cluster set? <br>
 **Question:** Can I migrate workloads off Windows Server 2012 R2 or 2016 clusters by simply having those clusters join the same Cluster Set? <br>
-**Answer:** Cluster sets is a new technology being introduced in Windows Server Preview builds, so as such, does not exist in previous releases. Down-level OS-based clusters cannot join a cluster set. However, Cluster Operating System rolling upgrades technology should provide the migration functionality that you are looking for by upgrading these clusters to Windows Server 2019.
+**Answer:** Cluster sets is a new technology being introduced in Windows Server 2019, so as such, does not exist in previous releases. Down-level OS-based clusters cannot join a cluster set. However, Cluster Operating System rolling upgrades technology should provide the migration functionality that you are looking for by upgrading these clusters to Windows Server 2019.
 
 **Question:** Can Cluster sets allow me to scale storage or compute (alone)? <br>
 **Answer:** Yes, by simply adding a Storage Space Direct or traditional Hyper-V cluster. With cluster sets, it is a straightforward change of Compute-to-Storage ratio even in a hyper-converged cluster set.
@@ -354,7 +358,7 @@ For example, the command to remove the CLUSTER1 cluster from cluster sets would 
 **Answer:** All member clusters must be in the same AD forest.
 
 **Question:** How many clusters or nodes can be part of a single cluster Set? <br>
-**Answer:** In preview, cluster sets been tested and supported up to 64 total cluster nodes. However, cluster sets architecture scales to much larger limits and is not something that is hardcoded for a limit. Please let Microsoft know if larger scale is critical to you and how you plan to use it.
+**Answer:** In Windows Server 2019, cluster sets been tested and supported up to 64 total cluster nodes. However, cluster sets architecture scales to much larger limits and is not something that is hardcoded for a limit. Please let Microsoft know if larger scale is critical to you and how you plan to use it.
 
 **Question:** Will all Storage Spaces Direct clusters in a cluster set form a single storage pool? <br>
 **Answer:** No. Storage Spaces Direct technology still operates within a single cluster and not across member clusters in a cluster set.
@@ -366,4 +370,4 @@ For example, the command to remove the CLUSTER1 cluster from cluster sets would 
 **Answer:** No. Cluster set namespace offers an overlay referral namespace within a cluster set – conceptually like Distributed File System Namespaces (DFSN). And unlike DFSN, all cluster set namespace referral metadata is auto-populated and auto-updated on all nodes without any administrator intervention, so there is almost no performance overhead in the storage access path. 
 
 **Question:** How can I backup cluster set metadata? <br>
-**Answer:** This guidance is the same as that of Failover Cluster. The System State Backup will backup the cluster state as well.  Through Windows Server Backup, you can do restores of just a node's cluster database (which should never be needed because of a bunch of self-healing logic we have) or do an authoritative restore to roll back the entire cluster database across all nodes. In the case of cluster sets, Microsoft recommends doing such an authoritative restore first on the member cluster and then the management cluster if needed. 
+**Answer:** This guidance is the same as that of Failover Cluster. The System State Backup will backup the cluster state as well.  Through Windows Server Backup, you can do restores of just a node's cluster database (which should never be needed because of a bunch of self-healing logic we have) or do an authoritative restore to roll back the entire cluster database across all nodes. In the case of cluster sets, Microsoft recommends doing such an authoritative restore first on the member cluster and then the management cluster if needed.

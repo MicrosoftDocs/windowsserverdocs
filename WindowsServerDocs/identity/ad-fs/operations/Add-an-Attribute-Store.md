@@ -14,7 +14,6 @@ ms.technology: identity-adfs
 
 # Add an Attribute Store
 
->Applies To: Windows Server 2016, Windows Server 2012 R2
 
 User accounts and computer accounts that require access to a resource that is protected by Active Directory Federation Services \(AD FS\) are stored in an attribute store, such as Active Directory Domain Services \(AD DS\). The claims issuance engine uses attribute stores to gather data that is necessary to issue claims. Data from the attribute stores is then projected as claims.  
   
@@ -30,20 +29,20 @@ Membership in **Administrators**, or equivalent, on the local computer is the mi
 
 ![add attribute store](media/Add-an-Attribute-Store/addstore1.PNG)
   
-3.  In the **Add an attribute store** dialog box, configure the following properties for the attribute store that you want to add:  
+3. In the **Add an attribute store** dialog box, configure the following properties for the attribute store that you want to add:  
   
-    -   In **Display name**, type the name that you want to use to identify the attribute store.  
+   -   In **Display name**, type the name that you want to use to identify the attribute store.  
   
-    -   In **Attribute store type**, select a supported attribute store type, either **Active Directory**, **LDAP**, or **SQL**.  
+   -   In **Attribute store type**, select a supported attribute store type, either **Active Directory**, **LDAP**, or **SQL**.  
   
-    -   In **Connection string**, if you have selected either a Lightweight Directory Access Protocol \(LDAP\) store or a Structured Query Language \(SQL\) store, enter the string that you used to establish a connection to the attribute store. For Active Directory attribute stores, no connection string is necessary; therefore, this field is disabled.  
+   -   In **Connection string**, if you have selected either a Lightweight Directory Access Protocol \(LDAP\) store or a Structured Query Language \(SQL\) store, enter the string that you used to establish a connection to the attribute store. For Active Directory attribute stores, no connection string is necessary; therefore, this field is disabled.  
   
-        > [!NOTE]  
-        > AD FS automatically creates an Active Directory attribute store, by default.  
+       > [!NOTE]  
+       > AD FS automatically creates an Active Directory attribute store, by default.  
  
 ![add attribute store](media/Add-an-Attribute-Store/addstore2.PNG) 
 
-4.  Click **OK**.  
+4. Click **OK**.  
   
 ## Additional references  
 

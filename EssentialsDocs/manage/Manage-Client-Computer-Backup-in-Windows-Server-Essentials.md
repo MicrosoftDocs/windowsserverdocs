@@ -104,7 +104,7 @@ manager: dongill
 4.  Click **Close** when backup is set up for the computer.  
   
 ### Critical system files  
- When you install the Windows operating system, the Setup program creates folders on your system drive where it places files that the system requires to start and run. Critical system files include files with .dll, .exe, .ocx, and .sys file extensions. Some of these files are True Type fonts. In addition, system state files, such as the system ��s registry, are required for the operating system to run properly.  
+ When you install the Windows operating system, the Setup program creates folders on your system drive where it places files that the system requires to start and run. Critical system files include files with .dll, .exe, .ocx, and .sys file extensions. Some of these files are True Type fonts. In addition, system state files, such as the system's registry, are required for the operating system to run properly.  
   
 ### Find the file you are looking for  
  You can restore all the folders for a computer, multiple files and folders, or a single file or folder from an existing backup.  
@@ -114,17 +114,17 @@ manager: dongill
 ### Why am I unable to select some items?  
  The check box on the selection menu of the **Select which items to back up page** can indicate different status for each folder. When the check box is:  
   
--   **Selected**, the associated folder and the folder contents are selected for backup.  
+- **Selected**, the associated folder and the folder contents are selected for backup.  
   
--   **Unselected**, the associated folder and the folder contents are excluded from backup.  
+- **Unselected**, the associated folder and the folder contents are excluded from backup.  
   
--   **Solid**, the associated folder is selected for backup, but one or more items within that folder are excluded from the backup.  
+- **Solid**, the associated folder is selected for backup, but one or more items within that folder are excluded from the backup.  
   
- If you cannot select a specific folder:  
+  If you cannot select a specific folder:  
   
--   The volume may be configured for backup, but it may be offline. This is common for removable USB drives. Volumes that are offline are shown in grey text.  
+- The volume may be configured for backup, but it may be offline. This is common for removable USB drives. Volumes that are offline are shown in grey text.  
   
--   You can only back up data from a local drive that is formatted as an NTFS file system. Drives formatted as FAT (including FAT32) or ReFS file systems do not appear in the list of drives to back up.  
+- You can only back up data from a local drive that is formatted as an NTFS file system. Drives formatted as FAT (including FAT32) or ReFS file systems do not appear in the list of drives to back up.  
   
 > [!IMPORTANT]
 >  Volume Shadow Copy Service (VSS) does not support creating a shadow copy of a virtual volume and the host volume in the same snapshot set. VSS does support creating snapshots of volumes on a virtual hard disk (VHD), if backup of the virtual volume is necessary. For more information, see [Servicing and Backing Up Virtual Hard Disks](https://go.microsoft.com/fwlink/p/?LinkId=256577).  
@@ -260,30 +260,30 @@ manager: dongill
   
 #### To disable backup for a computer  
   
-1.  Open the **Dashboard**.  
+1. Open the **Dashboard**.  
   
-2.  Click the **Devices** tab.  
+2. Click the **Devices** tab.  
   
-3.  Click the name of the computer for which you want to disable backups.  
+3. Click the name of the computer for which you want to disable backups.  
   
-4.  In the Tasks pane, click **Customize Backup for the computer**. The Customize Backup Wizard appears.  
+4. In the Tasks pane, click **Customize Backup for the computer**. The Customize Backup Wizard appears.  
   
-5.  Click **Disable backup for this computer**, and then select whether you want to keep or delete the existing backup files.  
+5. Click **Disable backup for this computer**, and then select whether you want to keep or delete the existing backup files.  
   
-6.  Click **Save changes**, and then click **Close**.  
+6. Click **Save changes**, and then click **Close**.  
   
- For information about how to enable backup for a computer after backup has been disabled, see [Set up backup for a client computer](Manage-Client-Computer-Backup-in-Windows-Server-Essentials.md#BKMK_3).  
+   For information about how to enable backup for a computer after backup has been disabled, see [Set up backup for a client computer](Manage-Client-Computer-Backup-in-Windows-Server-Essentials.md#BKMK_3).  
   
 ##  <a name="BKMK_10"></a> Run the backup Cleanup task  
  The client computer backup cleanup task is scheduled to run at 11:59 PM every Saturday after all backups are complete. The cleanup task deletes backups from the client computer backup database according to the backup retention policy. The default settings for the backup retention policy are:  
   
--   Number of days that daily backups are retained: 5 days  
+- Number of days that daily backups are retained: 5 days  
   
--   Number of weeks that the last backup of the week is retained: 4 weeks  
+- Number of weeks that the last backup of the week is retained: 4 weeks  
   
--   Number of months that the last backup of the month is retained: 6 months  
+- Number of months that the last backup of the month is retained: 6 months  
   
- For information about changing the backup retention policy, see [Change the computer backup retention policy](Manage-Client-Computer-Backup-in-Windows-Server-Essentials.md#BKMK_5).  
+  For information about changing the backup retention policy, see [Change the computer backup retention policy](Manage-Client-Computer-Backup-in-Windows-Server-Essentials.md#BKMK_5).  
   
 #### To run the client backup database cleanup task  
   

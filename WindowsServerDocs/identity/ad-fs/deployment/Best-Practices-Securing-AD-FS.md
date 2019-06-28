@@ -14,7 +14,6 @@ ms.technology: identity-adfs
 
 ## Best practices for securing Active Directory Federation Services
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 This document provides best practices for the secure planning and deployment of Active Directory Federation Services (AD FS) and Web Application Proxy.  It contains information about the default behaviors of these components and recommendations for additional security configurations for an organization with specific use cases and security requirements.
 
@@ -31,6 +30,9 @@ The below diagram depicts the firewall ports that must be enabled between and am
 >Note that port 49443 is only required if user certificate authentication is used, which is optional for Azure AD and Office 365.
 
 ![AD FS Standard topology](media/Best-Practices-Securing-AD-FS/adfssec2.png)
+
+>[!NOTE]
+> Port 808 (Windows Server 2012R2) or port 1501 (Windows Server 2016+) is the Net.TCP port AD FS uses for the local WCF endpoint to transfer configuration data to the service process and Powershell. This port can be seen by running Get-AdfsProperties | select NetTcpPort. This is a local port that will not need to be opened in the firewall but will be displayed in a port scan. 
 
 ### Azure AD Connect and Federation Servers/WAP
 This table describes the ports and protocols that are required for communication between the Azure AD Connect server and Federation/WAP servers.  

@@ -23,7 +23,7 @@ manager: dongill
 > [!NOTE]
 >  In  Windows Server Essentials and  Windows Server 2012 R2 with the  Windows Server Essentials Experience role installed, the health alerts for the server and client computers in the network are no longer displayed in the Alert Viewer, but instead can be viewed on the **Health Reports** tab of the **Home** page.  
   
- Windows Server Essentials actively monitors every computer that is connected to the server and alerts the administrator to issues related to the system ��s health, including critical updates, missing malware protection, out-of-date virus definitions on client computers, and other important issues that require action. These issues are displayed as alerts in the Alert Viewer, which can be launched from the server ��s Dashboard or the client computer ��s Launchpad in  Windows Server Essentials, or on the **Health Reports** tab in  Windows Server Essentials. By default, the alerts are refreshed every thirty minutes, but you can evaluate your network for alerts at any time by clicking **Refresh** in the Alert Viewer or on the **Health Reports** tab.  
+ Windows Server Essentials actively monitors every computer that is connected to the server and alerts the administrator to issues related to the system's health, including critical updates, missing malware protection, out-of-date virus definitions on client computers, and other important issues that require action. These issues are displayed as alerts in the Alert Viewer, which can be launched from the server's Dashboard or the client computer's Launchpad in  Windows Server Essentials, or on the **Health Reports** tab in  Windows Server Essentials. By default, the alerts are refreshed every thirty minutes, but you can evaluate your network for alerts at any time by clicking **Refresh** in the Alert Viewer or on the **Health Reports** tab.  
   
  The following topics will help you understand, view, and respond to alerts in the Alert Viewer, and also provide instructions to configure your server to receive alert notifications in email:  
   
@@ -51,7 +51,7 @@ manager: dongill
 > [!NOTE]
 >  **Windows Server Essentials:** You can download the Health Report add-in for  Windows Server Essentials from the [Microsoft Download Center](https://go.microsoft.com/fwlink/p/?LinkId=266342).  
 >   
->  **Windows Server Essentials:** By default, the Health Report add-in is integrated with  Windows Server Essentials or  Windows Server 2012 R2 with the  Windows Server Essentials Experience role installed, and the health reports are displayed on the **Health Reports** tab of the Dashboard ��s **Home** page.  
+>  **Windows Server Essentials:** By default, the Health Report add-in is integrated with  Windows Server Essentials or  Windows Server 2012 R2 with the  Windows Server Essentials Experience role installed, and the health reports are displayed on the **Health Reports** tab of the Dashboard's **Home** page.  
   
 ###  <a name="BKMK_Generate"></a> Generate a report on demand or on schedule  
  After installing the Health Report add-in and restarting the Dashboard, a new tab, **Reports** is added to the Dashboard. You can generate a health report on demand at any time by clicking the **Generate a health report** task on the **Reports** tab.  
@@ -63,21 +63,21 @@ manager: dongill
 ###  <a name="BKMK_Customize"></a> Customize the content of the report  
  The health report contains the following:  
   
--   **Critical alerts and warnings** This is consistent with the critical alerts and warnings that you see in the Alert Viewer on the Dashboard. Information alerts are not included in the health report.  
+- **Critical alerts and warnings** This is consistent with the critical alerts and warnings that you see in the Alert Viewer on the Dashboard. Information alerts are not included in the health report.  
   
--   **Critical errors in the event logs** Applications and service logs are scanned, and the errors that are logged in the last 24 hours will be presented in the **Details** section of the report.  
+- **Critical errors in the event logs** Applications and service logs are scanned, and the errors that are logged in the last 24 hours will be presented in the **Details** section of the report.  
   
--   **Server backup** The information about the last server backup is presented in the **Details** section of the report.  
+- **Server backup** The information about the last server backup is presented in the **Details** section of the report.  
   
--   **Auto-start services not running** At the time the report is generated, if an auto-start service is not running, the information about this service will be listed in the **Details** section of the report.  
+- **Auto-start services not running** At the time the report is generated, if an auto-start service is not running, the information about this service will be listed in the **Details** section of the report.  
   
--   **Updates** You can see the update status of the server and all the client computers in the **Details** section.  
+- **Updates** You can see the update status of the server and all the client computers in the **Details** section.  
   
--   **Storage** The list of drives and their capacity is presented in the **Details** section.  
+- **Storage** The list of drives and their capacity is presented in the **Details** section.  
   
- In the Health Report, first view the **Summary**, and then for those items with a red error icon or a yellow warning icon, click the **Details** link on the same row to view the details about the item.  
+  In the Health Report, first view the **Summary**, and then for those items with a red error icon or a yellow warning icon, click the **Details** link on the same row to view the details about the item.  
   
- If you are not interested in some of the data points that are included in the report by default, you can customize the content of the report by clicking **Customize health report settings** in the task pane, and then clicking the **Content** tab. Clear the check boxes for the content that you don ��t want to see in the report. For example, if you have your own server backup plan and don ��t want to see the warnings about server backups, you could exclude server backups from the report by clearing the **Server backup** check box.  
+  If you are not interested in some of the data points that are included in the report by default, you can customize the content of the report by clicking **Customize health report settings** in the task pane, and then clicking the **Content** tab. Clear the check boxes for the content that you don't want to see in the report. For example, if you have your own server backup plan and don't want to see the warnings about server backups, you could exclude server backups from the report by clearing the **Server backup** check box.  
   
 ###  <a name="BKMK_emailreport"></a> Email the report  
  Having to log on to the Dashboard to read reports is still inconvenient for some administrators, especially if they have more than one server to manage. With the email feature turned on, after a report is generated, an email will be sent to a list of specified email addresses with the content of the report. The administrator can easily view this report from any device or any client application, and ensure that the server is running at its best state.  
@@ -135,13 +135,13 @@ manager: dongill
   
 ##### To ignore an alert  
   
-1.  From the computer that is connected to the Windows Server Essentials server, open the Launchpad.  
+1. From the computer that is connected to the Windows Server Essentials server, open the Launchpad.  
   
-2.  On the Launchpad, click the any of the displayed alert icons (critical, warning, and informational). This opens the Alert Viewer.  
+2. On the Launchpad, click the any of the displayed alert icons (critical, warning, and informational). This opens the Alert Viewer.  
   
-3.  In the Alert Viewer, select the alert that you want to ignore, and then in the **Tasks** section, click **Ignore the alert**.  
+3. In the Alert Viewer, select the alert that you want to ignore, and then in the **Tasks** section, click **Ignore the alert**.  
   
- To respond to a disabled alert, you will need to first enable the alert.  
+   To respond to a disabled alert, you will need to first enable the alert.  
   
 ###  <a name="BKMK_5"></a> Enable an alert  
  You can enable an alert that you chose to ignore earlier. After the alert is enabled, you can resolve it or delete it as needed. An alert appears as disabled when marked to be ignored. When you enable an alert that you have previously disabled, it becomes active and is again included in the overall health assessment of computers.  
@@ -271,7 +271,7 @@ manager: dongill
   
 4.  In the **SMTP Settings** window, do the following:  
   
-    1.  For **From email address**, type the email address that you want use for sending the email alerts from. This email address will be displayed as the sender ��s address in the alert notification.  
+    1.  For **From email address**, type the email address that you want use for sending the email alerts from. This email address will be displayed as the sender's address in the alert notification.  
   
     2.  For **SMTP server name**, in the **From email address** text box, type the name of the SMTP server that you specified in step 4a. (Refer to Table 1 for a list of some SMTP server names).  
   
@@ -304,7 +304,7 @@ manager: dongill
  This section discusses how to configure the SMTP settings for your server so that you can receive health reports via email.  
   
 > [!NOTE]
->  By default, the Health Report add-in is integrated with  Windows Server Essentials or  Windows Server 2012 R2 with the  Windows Server Essentials Experience role installed, and the health reports are displayed on the **Health Reports** tab of the Dashboard ��s **Home** page.  
+>  By default, the Health Report add-in is integrated with  Windows Server Essentials or  Windows Server 2012 R2 with the  Windows Server Essentials Experience role installed, and the health reports are displayed on the **Health Reports** tab of the Dashboard's **Home** page.  
   
 ##### To set up email notification for health reports  
   
@@ -316,7 +316,7 @@ manager: dongill
   
 4.  In the **Schedule and Email** tab, in the **Email** section, do the following:  
   
-    1.  Click **Enable**, and type the email address that you want use for sending the health reports from. This email address will be displayed as the sender ��s address in the health reports that are emailed.  
+    1.  Click **Enable**, and type the email address that you want use for sending the health reports from. This email address will be displayed as the sender's address in the health reports that are emailed.  
   
         1.  For **SMTP server name**, type the name of the SMTP server. (Refer to Table 1 for a list of some SMTP server names).  
   

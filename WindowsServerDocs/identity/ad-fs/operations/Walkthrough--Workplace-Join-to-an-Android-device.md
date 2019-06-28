@@ -13,7 +13,6 @@ ms.technology: identity-adfs
 ---
 # Walkthrough: Workplace Join to an Android device
 
->Applies To: Windows Server 2016, Windows Server 2012 R2
 
 
 ## Join your device with Workplace Join

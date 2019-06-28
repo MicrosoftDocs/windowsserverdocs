@@ -39,16 +39,16 @@ pause
 
 ## Remarks
 
--   When you run the **pause** command, the following message appears:  
-    ```
-    Press any key to continue . . .
-    ```  
--   If you press CTRL+C to stop a batch program, the following message appears:  
-    ```
-    Terminate batch job (Y/N)?
-    ```  
-    If you press Y (for yes) in response to this message, the batch program ends and control returns to the operating system.
--   You can insert the **pause** command before a section of the batch file that you might not want to process. When **pause** suspends processing of the batch program, you can press CTRL+C and then press Y to stop the batch program.
+- When you run the **pause** command, the following message appears:  
+  ```
+  Press any key to continue . . .
+  ```  
+- If you press CTRL+C to stop a batch program, the following message appears:  
+  ```
+  Terminate batch job (Y/N)?
+  ```  
+  If you press Y (for yes) in response to this message, the batch program ends and control returns to the operating system.
+- You can insert the **pause** command before a section of the batch file that you might not want to process. When **pause** suspends processing of the batch program, you can press CTRL+C and then press Y to stop the batch program.
 
 ## <a name="BKMK_examples"></a>Examples
 

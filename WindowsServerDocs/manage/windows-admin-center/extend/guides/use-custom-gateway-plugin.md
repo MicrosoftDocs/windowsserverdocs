@@ -18,7 +18,7 @@ In this article, we will use a custom gateway plugin in a new, empty tool extens
 
 ## Prepare your environment ##
 
-If you haven't already, follow the directions in [develop a tool extension](..\develop-tool.md) to prepare your environment and create a new, empty tool extension.
+If you haven't already, follow the directions in [develop a tool extension](../develop-tool.md) to prepare your environment and create a new, empty tool extension.
 
 ## Add a module to your project ##
 
@@ -57,6 +57,9 @@ export class PluginService {
 ```
 
 Change references to ```Sample Uno``` and ```Sample%20Uno``` to your feature name as appropriate.
+
+[!WARNING]
+> It is recommended that the built in ```this.appContextService.node``` is used for calling any API that is defined in your custom gateway plugin. This will ensure that if credentials are required inside of your gateway plugin that they will be handled properly.
 
 ### Modify module.ts
 
@@ -137,4 +140,4 @@ Add the following content to the html file:
 
 ## Build and side load your extension
 
-Now you are ready to [build and side load](..\develop-tool.md#build-and-side-load-your-extension) your extension in Windows Admin Center.
+Now you are ready to [build and side load](../develop-tool.md#build-and-side-load-your-extension) your extension in Windows Admin Center.

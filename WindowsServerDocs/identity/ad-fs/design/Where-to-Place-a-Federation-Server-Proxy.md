@@ -14,8 +14,6 @@ ms.technology: identity-adfs
 
 # Where to Place a Federation Server Proxy
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
-
 You can place Active Directory Federation Services \(AD FS\)federation server proxies in a perimeter network to provide a protection layer against malicious users that may be coming from the Internet. Federation server proxies are ideal for the perimeter network environment because they do not have access to the private keys that are used to create tokens. However, federation server proxies can efficiently route incoming requests to federation servers that are authorized to produce those tokens.  
   
 It is not necessary to place a federation server proxy inside the corporate network for either the account partner or the resource partner because client computers that are connected to the corporate network can communicate directly with the federation server. In this scenario, the federation server also provides federation server proxy functionality for client computers that are coming from the corporate network.  

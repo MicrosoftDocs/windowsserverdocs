@@ -14,7 +14,7 @@ ms.technology: identity-adfs
 
 This document describes how to migrate an AD FS 2.0 or Windows Server 2012 federation server farm to a Windows Server 2012 R2 AD FS farm.  The steps can be used with AD FS farms that use either WID or SQL Server as the underlying database.  
   
--   [Migration Process Outline](prepare-migrate-ad-fs-server-r2.md#migrate-process-outline)  
+-   [Migration Process Outline](prepare-migrate-ad-fs-server-r2.md#migration-process-outline)  
   
 -   [New AD FS functionality in Windows Server 2012 R2](prepare-migrate-ad-fs-server-r2.md#new-ad-fs-functionality-in-windows-server-2012-r2)  
   
@@ -24,7 +24,8 @@ This document describes how to migrate an AD FS 2.0 or Windows Server 2012 feder
   
 -   [Other migration tasks and considerations](prepare-migrate-ad-fs-server-r2.md#other-migration-tasks-and-considerations)  
   
-##  Migration Process Outline  
+##  Migration Process Outline
+
  To complete the migration of your AD FS federation server farm to Windows Server 2012 R2, you must complete the following tasks:  
   
 1.  Export, record, and backup the following configuration data in your existing AD FS farm. For detailed instructions on how to complete these tasks, see [Migrating the AD FS Federation Server](migrate-ad-fs-fed-server-r2.md).  
@@ -39,17 +40,17 @@ The following settings are migrated with the scripts located in the \support\adf
   
 Any of the following custom settings must be migrated manually:  
   
- -   Service settings:  
+- Service settings:  
   
-     -   Non-default token signing and token decryption certificates that were issued by an enterprise or public certification authority.  
+  - Non-default token signing and token decryption certificates that were issued by an enterprise or public certification authority.  
   
-     -   The SSL server authentication certificate used by AD FS.  
+  - The SSL server authentication certificate used by AD FS.  
   
-     -   The service communications certificate used by AD FS (by default, this is the same certificate as the SSL certificate.  
+  - The service communications certificate used by AD FS (by default, this is the same certificate as the SSL certificate.  
   
-      -   Non-default values for any federation service properties, such as AutoCertificateRollover or SSO lifetime.  
+    -   Non-default values for any federation service properties, such as AutoCertificateRollover or SSO lifetime.  
   
-      -   Non-default AD FS endpoint settings and claim descriptions.  
+    -   Non-default AD FS endpoint settings and claim descriptions.  
   
 -   Custom claim rules on the Active Directory claims provider trust.  
   
@@ -57,11 +58,11 @@ Any of the following custom settings must be migrated manually:
   
 For more information, see [Migrating the AD FS Federation Server](migrate-ad-fs-fed-server-r2.md).  
   
-2.  Create a Windows Server 2012 R2 federation server farm.  
+2. Create a Windows Server 2012 R2 federation server farm.  
   
-3.  Import the original configuration data into this new Windows Server 2012 R2 AD FS farm.  
+3. Import the original configuration data into this new Windows Server 2012 R2 AD FS farm.  
   
-4.  Configure and customize the AD FS sign-in pages.  
+4. Configure and customize the AD FS sign-in pages.  
   
 ##  New AD FS functionality in Windows Server 2012 R2  
  The following AD FS functionality changes in Windows Server 2012 R2 impact a migration from AD FS 2.0 or AD FS in Windows Server 2012:  
@@ -103,27 +104,27 @@ If you have web page customization in your existing AD FS farm that you want to 
   
  For AD FS running on Windows Server 2012 R2 to function, your Active Directory domain must run either of the following:  
   
--   Windows Server 2012 R2  
+- Windows Server 2012 R2  
   
--   Windows Server 2012  
+- Windows Server 2012  
   
--   Windows Server 2008 R2  
+- Windows Server 2008 R2  
   
--   Windows Server 2008  
+- Windows Server 2008  
   
- If you plan to use a group Managed Service Account (gMSA) as the service account for AD FS, you must have at least one domain controller in your environment that is running on Windows Server 2012 or Windows Server 2012 R2 operating system.  
+  If you plan to use a group Managed Service Account (gMSA) as the service account for AD FS, you must have at least one domain controller in your environment that is running on Windows Server 2012 or Windows Server 2012 R2 operating system.  
   
- If you plan to deploy Device Registration Service (DRS) for AD Workplace Join as a part of your AD FS deployment, the AD DS schema needs to be updated to the Windows Server 2012 R2 level. There are three ways to update the schema:  
+  If you plan to deploy Device Registration Service (DRS) for AD Workplace Join as a part of your AD FS deployment, the AD DS schema needs to be updated to the Windows Server 2012 R2 level. There are three ways to update the schema:  
   
 1.  In an existing Active Directory forest, run adprep /forestprep from the \support\adprep folder of the Windows Server 2012 R2 operating system DVD on any 64-bit server that runs Windows Server 2008 or later. In this case, no additional domain controller needs to be installed, and no existing domain controllers need to be upgraded.  
   
 To run adprep/forestprep, you must be a member of the Schema Admins group, the Enterprise Admins group, and the Domain Admins group of the domain that hosts the schema master.  
   
-2.  In an existing Active Directory forest, install a domain controller that runs Windows Server 2012 R2. In this case, adprep /forestprep runs automatically as part of the domain controller installation.  
+2. In an existing Active Directory forest, install a domain controller that runs Windows Server 2012 R2. In this case, adprep /forestprep runs automatically as part of the domain controller installation.  
   
 During the domain controller installation, you may need to specify additional credentials in order to run adprep /forestprep.  
   
-3.  Create a new Active Directory forest by installing AD DS on a server that runs Windows Server 2012 R2. In this case, adprep /forestprep does not need to be run because the schema will be initially created with all the necessary containers and objects to support DRS.  
+3. Create a new Active Directory forest by installing AD DS on a server that runs Windows Server 2012 R2. In this case, adprep /forestprep does not need to be run because the schema will be initially created with all the necessary containers and objects to support DRS.  
   
 ### SQL Server support for AD FS in Windows Server 2012 R2  
  If you want to create an AD FS farm and use SQL Server to store your configuration data, you can use SQL Server 2008 and newer versions, including SQL Server 2012.  

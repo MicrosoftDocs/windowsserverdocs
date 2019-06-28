@@ -14,8 +14,6 @@ ms.author: billmath
 
 # Import a Server Authentication Certificate to the Default Web Site
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
-
 After you obtain a server authentication certificate from a certification authority \(CA\), you must manually install that certificate on the Default Web Site for each federation server or federation server proxy in a server farm.  
   
 For Web servers, you must manually install the server authentication certificate on the appropriate Web site or virtual directory where your federated application resides.  

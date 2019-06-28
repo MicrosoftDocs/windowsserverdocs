@@ -46,29 +46,29 @@ erase [/p] [/f] [/s] [/q] [/a[:]<Attributes>] <Names>
 
 > [!CAUTION]
 > If you use **del** to delete a file from your disk, you cannot retrieve it.
--   If you use **/p**, **del** displays the name of a file and sends the following message:
+> -   If you use **/p**, **del** displays the name of a file and sends the following message:
 
     `FileName, Delete (Y/N)?`
 
     To confirm the deletion, press Y. To cancel the deletion and display the next file name (that is, if you specified a group of files), press N. To stop the **del** command, press CTRL+C.
--   If you disable command extensions, **/s** displays the names of any files that were not found instead of displaying the names of files that are being deleted (that is, the behavior is reversed).
--   If you specify a folder in *Names*, all of the files in the folder are deleted. For example, the following command deletes all of the files in the \Work folder:  
-    ```
-    del \work
-    ```  
--   You can use wildcards (**&#42;** and **?**) to delete more than one file at a time. However, to avoid deleting files unintentionally, you should use wildcards cautiously with the **del** command. For example, if you type the following command:  
-    ```
-    del *.*
-    ```  
-    The **del** command displays the following prompt:
+- If you disable command extensions, **/s** displays the names of any files that were not found instead of displaying the names of files that are being deleted (that is, the behavior is reversed).
+- If you specify a folder in *Names*, all of the files in the folder are deleted. For example, the following command deletes all of the files in the \Work folder:  
+  ```
+  del \work
+  ```  
+- You can use wildcards (**&#42;** and **?**) to delete more than one file at a time. However, to avoid deleting files unintentionally, you should use wildcards cautiously with the **del** command. For example, if you type the following command:  
+  ```
+  del *.*
+  ```  
+  The **del** command displays the following prompt:
 
-    `Are you sure (Y/N)?`
+  `Are you sure (Y/N)?`
 
-    To delete all of the files in the current directory, press Y and then press ENTER. To cancel the deletion, press N and then press ENTER.
+  To delete all of the files in the current directory, press Y and then press ENTER. To cancel the deletion, press N and then press ENTER.
 
 > [!NOTE]
 > Before you use wildcard characters with the **del** command, use the same wildcard characters with the **dir** command to list all the files that will be deleted.
--   The **del** command, with different parameters, is available from the Recovery Console.
+> -   The **del** command, with different parameters, is available from the Recovery Console.
 
 ## <a name="BKMK_examples"></a>Examples
 
@@ -79,7 +79,7 @@ del c:\test\*.*
 ```
 To delete all files with the .bat file name extension from the current directory, type:
 ```
-del *.bak
+del *.bat
 ```
 To delete all read-only files in the current directory, type:
 ```

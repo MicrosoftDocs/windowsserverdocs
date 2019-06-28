@@ -1,32 +1,24 @@
 ---
 title: What's New in Windows Server 2016
-description: "What are the new features in compute, identity, management, automation, networking, security, storage."
-ms.custom: na
+description: What are the new features in compute, identity, management, automation, networking, security, storage.
 ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.suite: na
-ms.date: 01/05/2017
+ms.date: 05/21/2019
 ms.technology: server-general
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 2827f332-44d4-4785-8b13-98429087dcc7
-author: jaimeo
-ms.author: jaimeo
+author: jasongerend
+ms.author: jgerend
 manager: dongill
 ms.localizationpriority: medium
 ---
 # What's New in Windows Server 2016
 
->Applies To: Windows Server 2016
+>Applies to: Windows Server 2016
 
-<img src="media/whats-new.png" style='float:left; padding:.5em;' alt="Icon showing a newspaper">The content in this section describes what's new and changed in Windows Server&reg; 2016. The new features and changes listed here are the ones most likely to have the greatest impact as you work with this release.  
-   
-<br>
-<br>
-<br>
-<br>
-<br>
-## [Compute](../virtualization/virtualization.md)  
+![Icon showing a newspaper](media/whats-new.png) To learn about the latest features in Windows, see [What's New in Windows Server](whats-new-in-windows-server.md). The content in this section describes what's new and changed in Windows Server&reg; 2016. The new features and changes listed here are the ones most likely to have the greatest impact as you work with this release.
+
+## [Compute](../virtualization/virtualization.md)
+
 The Virtualization area includes virtualization products and features for the IT professional to design, deploy, and maintain Windows Server.  
 
 ### General  

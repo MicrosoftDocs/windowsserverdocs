@@ -26,13 +26,15 @@ changes the operating system time-out value.
 bootcfg /timeout <timeOutValue> [/s <computer> [/u <Domain\User>/p <Password>]]
 ```
 ## Parameters
-|Parameter|Description|
-|-------|--------|
-|/timeout <timeOutValue>|Specifies the timeout value in the [boot loader] section. The <timeOutValue> is the number of seconds the user has to select an operating system from the boot loader screen before NTLDR loads the default. Valid range for <timeOutValue> is 0-999. If the value is 0, then NTLDR immediately starts the default operating system without displaying the boot loader screen.|
-|/s <computer>|Specifies the name or IP address of a remote computer (do not use backslashes). The default is the local computer.|
-|/u <Domain\User>|Runs the command with the account permissions of the user specified by <User> or <Domain\User>. The default is the permissions of the current logged on user on the computer issuing the command.|
-|/p <Password>|Specifies the <Password> of the user account that is specified in the **/u** parameter.|
-|/?|Displays help at the command prompt.|
+
+|        Parameter        |                                                                                                                                                                                  Description                                                                                                                                                                                   |
+|-------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| /timeout <timeOutValue> | Specifies the timeout value in the [boot loader] section. The <timeOutValue> is the number of seconds the user has to select an operating system from the boot loader screen before NTLDR loads the default. Valid range for <timeOutValue> is 0-999. If the value is 0, then NTLDR immediately starts the default operating system without displaying the boot loader screen. |
+|      /s <computer>      |                                                                                                                               Specifies the name or IP address of a remote computer (do not use backslashes). The default is the local computer.                                                                                                                               |
+|    /u <Domain\User>     |                                                                                       Runs the command with the account permissions of the user specified by <User> or <Domain\User>. The default is the permissions of the current logged on user on the computer issuing the command.                                                                                        |
+|      /p <Password>      |                                                                                                                                            Specifies the <Password> of the user account that is specified in the **/u** parameter.                                                                                                                                             |
+|           /?            |                                                                                                                                                                      Displays help at the command prompt.                                                                                                                                                                      |
+
 ## <a name="BKMK_examples"></a>Examples
 The following examples show how you can use the **bootcfg /timeout** command:
 ```

@@ -13,7 +13,7 @@ ms.author: coreyp
 manager: jasgroce
 ---
 
-#What's New in Windows Server 2019 Essentials
+# What's New in Windows Server 2019 Essentials
 
 > Applies To: Windows Server 2019 Essentials
 
@@ -31,12 +31,6 @@ With Server Essentials Experience Role deprecation, the following features are n
 Over the years since Windows Server 2016 Essentials was released, we have been working hard on the next solution for large and small businesses alike: Microsoft 365. We highly recommend Microsoft 365 for small business customers as a replacement for all versions of Windows Server Essentials. Microsoft 365 is a modern solution for file sharing and collaboration, and includes Office 365, Windows 10, and Enterprise Mobility + Security. 
 
 Evolve your business further with [Microsoft 365 Business](https://www.microsoft.com/microsoft-365/business), which includes even more Office features, like e-mail and calendaring, file storage in the cloud, data protection, and more. Microsoft 365 Business will help your small business achieve new levels of productivity.
-
-## AAD Connect can now be installed on Windows Server 2019 Essentials
-
-Windows Server 2019 Essentials includes new support for Azure Active Directory via [AAD Connect](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnect-prerequisites). 
-=======
-Evolve your business even further with [Microsoft 365 Business](https://www.microsoft.com/en-us/microsoft-365/business), which includes even more Office features, like e-mail and calendaring, file storage in the cloud, data protection, and more. Microsoft 365 Business will help your small business achieve new levels of productivity.
 
 ## AAD Connect can now be installed on Windows Server 2019 Essentials
 

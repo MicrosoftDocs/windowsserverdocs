@@ -28,9 +28,9 @@ These topics explain important differences in PowerShell on Nano Server and also
 ## Using Windows PowerShell remoting  
 To manage Nano Server with Windows PowerShell remoting, you need to add the IP address of the Nano Server to your management computer's list of trusted hosts, add the account you are using to the Nano Server's administrators, and enable CredSSP if you plan to use that feature.  
 
- >[!NOTE]  
-    > If the target Nano Server and your management computer are in the same AD DS forest (or in forests with a trust relationship), you should not add the Nano Server to the trusted hosts list--you can connect to the Nano Server by using its fully qualified domain name, for example:
-    PS C:\> Enter-PSSession -ComputerName nanoserver.contoso.com -Credential (Get-Credential)
+> [!NOTE]
+> If the target Nano Server and your management computer are in the same AD DS forest (or in forests with a trust relationship), you should not add the Nano Server to the trusted hosts list--you can connect to the Nano Server by using its fully qualified domain name, for example:
+>     PS C:\> Enter-PSSession -ComputerName nanoserver.contoso.com -Credential (Get-Credential)
   
   
 To add the Nano Server to the list of trusted hosts, run this command at an elevated Windows PowerShell prompt:  
