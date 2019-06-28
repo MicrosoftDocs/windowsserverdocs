@@ -14,8 +14,6 @@ ms.date: 08/29/2018
 
 >Applies to: Windows Server 2019, Windows Server (Semi-Annual Channel), Windows Server 2016
 
-<!-- This comment creates a break between the Applies To above and the Important note below. -->
-
 > [!IMPORTANT]
 > Before beginning these procedures, ensure that you have installed the latest cumulative update for Windows Server 2016 or are using the latest Windows 10 [Remote Server Administration Tools](https://www.microsoft.com/en-us/download/details.aspx?id=45520). Otherwise, the procedures will not work. 
 

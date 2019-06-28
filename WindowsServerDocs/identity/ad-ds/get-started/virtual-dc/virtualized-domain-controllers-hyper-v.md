@@ -76,7 +76,6 @@ A VHD file of a virtual domain controller is equivalent to the physical hard dri
 ## RODCs
 
 One benefit of RODCs is the ability to place them at locations where physical security cannot be guaranteed, such as at branch offices. You can use Windows BitLocker Drive Encryption to protect VHD files themselves (not the file systems therein) from being compromised on the host through theft of the physical disk. 
-<!-- Removed link to Windows Server 2008 Hyper-V and BitLocker Drive Encryption (http://go.microsoft.com/fwlink/?linkid=123534). Link is dead. -->
 
 ## Performance
 
@@ -170,10 +169,8 @@ To ensure satisfactory performance, integration components (IC) were installed t
 When you monitor performance of virtual machines with Reliability and Performance Manager (Perfmon.msc), within the virtual machine the CPU information will not be entirely accurate as a result of the way the virtual CPU is scheduled on the physical processor. When you want to obtain CPU information for a virtual machine that is running on a Hyper-V server, use the Hyper-V Hypervisor Logical Processor counters in the host partition.
 
 For more information about performance tuning of both AD DS and Hyper-V, see [Performance Tuning Guidelines for Windows Server 2016](../../../../administration/performance-tuning/index.md).
-<!-- Updated to 2016 perf guidance -->
 
 Also, do not plan to use a differencing disk VHD on a virtual machine that is configured as a domain controller because the differencing disk VHD can reduce performance. To learn more about Hyper-V disk types, including differencing disks, see [New Virtual Hard Disk Wizard](http://go.microsoft.com/fwlink/?linkid=137279).
-<!-- Couldn't find an equivalent WS 2016 Hyper-V article. -->
 
 For additional information regarding AD DS in virtual hosting environments, see [Things to consider when you host Active Directory domain controllers in virtual hosting environments](https://go.microsoft.com/fwlink/?linkid=141292) in the Microsoft Knowledge Base.
 
@@ -378,8 +375,6 @@ If you do not have a system state data backup that predates the virtual machine 
 ## USN and USN Rollback
 
 This section describes replication issues that can occur as a result of an incorrect restoration of the Active Directory database with an older version of a virtual machine. For additional details about the Active Directory replication process, see [Active Directory Replication Concepts](../replication/active-directory-replication-concepts.md)
-
-<!-- Replaced this link with 2016 article: [How the Active Directory Replication Model Works](http://go.microsoft.com/fwlink/?linkid=27636) (http://go.microsoft.com/fwlink/?LinkID=27636). -->
 
 ## USNs
 
