@@ -206,7 +206,7 @@ Virtual machine configuration files use a new format that makes reading and writ
   
 ### Virtual machine configuration version \(updated\)
 
-The version represents the compatibility of the virtual machine's configuration, saved state, and snapshot files with the version of Hyper-V. Virtual machines with version 5 are compatible with Windows Server 2012 R2 and can run on both Windows Server 2012 R2 and Windows Server 2016. Virtual machines with versions introduced in Windows Server 2016 and and Windows Server 2019 won't run in Hyper-V on Windows Server 2012 R2.   
+The version represents the compatibility of the virtual machine's configuration, saved state, and snapshot files with the version of Hyper-V. Virtual machines with version 5 are compatible with Windows Server 2012 R2 and can run on both Windows Server 2012 R2 and Windows Server 2016. Virtual machines with versions introduced in Windows Server 2016 and Windows Server 2019 won't run in Hyper-V on Windows Server 2012 R2.   
   
 If you move or import a virtual machine to a server that runs Hyper-V on Windows Server 2016 or Windows Server 2019 from Windows Server 2012 R2, the virtual machine's configuration isn't automatically updated. This means you can move the virtual machine back to a server that runs Windows Server 2012 R2. But, this also means you can't use the new virtual machine features until you manually update the version of the virtual machine configuration.  
   

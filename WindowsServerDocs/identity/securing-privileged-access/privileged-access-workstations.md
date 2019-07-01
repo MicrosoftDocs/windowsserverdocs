@@ -92,7 +92,7 @@ In this configuration, daily work that does not require administrative privilege
 
 To configure this, follow the instructions in this guidance for the PAW host, add Client Hyper-V features, create a User VM, and then install a Windows 10 corporate image on the User VM.
 
-Read [Client Hyper-V](https://docs.microsoft.com/en-us/virtualization/hyper-v-on-windows/index) article for more information about this capability. Please note that the operating system in guest virtual machines will need to be licensed per [Microsoft product licensing](https://www.microsoft.com/en-us/Licensing/product-licensing/products.aspx), also described [here](https://download.microsoft.com/download/9/8/D/98D6A56C-4D79-40F4-8462-DA3ECBA2DC2C/Licensing_Windows_Desktop_OS_for_Virtual_Machines.pdf).
+Read [Client Hyper-V](https://docs.microsoft.com/virtualization/hyper-v-on-windows/index) article for more information about this capability. Please note that the operating system in guest virtual machines will need to be licensed per [Microsoft product licensing](https://www.microsoft.com/en-us/Licensing/product-licensing/products.aspx), also described [here](https://download.microsoft.com/download/9/8/D/98D6A56C-4D79-40F4-8462-DA3ECBA2DC2C/Licensing_Windows_Desktop_OS_for_Virtual_Machines.pdf).
 
 #### Simultaneous use - Adding RemoteApp, RDP, or a VDI
 
@@ -134,7 +134,7 @@ This methodology is appropriate for accounts with access to high value assets:
 * **High Sensitivity Information workers** - The approach used in a PAW can also provide protection for highly sensitive information worker tasks and personnel such as those involving pre-announcement Merger and Acquisition activity, pre-release financial reports, organizational social media presence, executive communications, unpatented trade secrets, sensitive research, or other proprietary or sensitive data. This guidance does not discuss the configuration of these information worker scenarios in depth or include this scenario in the technical instructions.
 
     > [!NOTE]
-    > Microsoft IT uses PAWs (internally referred to as "secure admin workstations", or SAWs) to manage secure access to internal high-value systems within Microsoft. This guidance has additional details below on PAW usage at Microsoft in the section "How Microsoft uses admin workstations". For more detailed information on this high value asset environment approach, please refer to the article, [Protecting high-value assets with secure admin workstations](https://msdn.microsoft.com/en-us/library/mt186538.aspx).
+    > Microsoft IT uses PAWs (internally referred to as "secure admin workstations", or SAWs) to manage secure access to internal high-value systems within Microsoft. This guidance has additional details below on PAW usage at Microsoft in the section "How Microsoft uses admin workstations". For more detailed information on this high value asset environment approach, please refer to the article, [Protecting high-value assets with secure admin workstations](https://msdn.microsoft.com/library/mt186538.aspx).
 
 This document will describe why this practice is recommended for protecting high impact privileged accounts, what these PAW solutions look like for protecting administrative privileges, and how to quickly deploy a PAW solution for domain and cloud services administration.
 
@@ -919,7 +919,7 @@ Follow the steps below to configure this phase:
 2. **Whitelist trusted applications using Windows Defender Application Control and/or AppLocker**.  By limiting the ability of untrusted or unsigned code to run on a PAW, you further reduce the likelihood of malicious activity and compromise.  Windows includes two primary options for application control:
 
    * **AppLocker**:  AppLocker helps administrators control which applications can run on a given system.  AppLocker can be centrally controlled through group policy, and applied to specific users or groups (for targeted application to users of PAWs).  For more information on AppLocker, please refer to the TechNet article [AppLocker Overview](https://technet.microsoft.com/library/hh831440.aspx).
-   * **Windows Defender Application Control**:  the new Windows Defender Application Control feature provides enhanced hardware-based application control which, unlike AppLocker, cannot be overridden on the impacted device.  Like AppLocker, Windows Defender Application Control can be controlled via group policy and targeted to specific users.  For more information on restricting application usage with Windows Defender Application Control, please refer to [Windows Defender Application Control Deployment Guide](https://docs.microsoft.com/en-gb/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control-deployment-guide).
+   * **Windows Defender Application Control**:  the new Windows Defender Application Control feature provides enhanced hardware-based application control which, unlike AppLocker, cannot be overridden on the impacted device.  Like AppLocker, Windows Defender Application Control can be controlled via group policy and targeted to specific users.  For more information on restricting application usage with Windows Defender Application Control, please refer to [Windows Defender Application Control Deployment Guide](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control-deployment-guide).
 
 3. **Use Protected Users, Authentication Policies, and Authentication Silos to further protect privileged accounts**.  The members of Protected Users are subject to additional security policies which protect the credentials stored in the local security agent (LSA) and greatly minimize the risk of credential theft and reuse.  Authentication policies and silos control how privileged users can access resources in the domain.  Collectively, these protections dramatically strengthen the account security of these privileged users.  For additional details on these features, please refer to the web article [How to Configure Protected Accounts](https://technet.microsoft.com/library/dn518179.aspx).
 
@@ -974,7 +974,7 @@ When using shielded VM-based PAWs, the [recommended GPO settings](#create-paw-co
 ### Set up the Host Guardian Service
 
 The Host Guardian Service is responsible for attesting to the identity and health of a physical PAW device.
-Only those machines which are known to HGS and running a trusted [code integrity policy](https://docs.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control) are allowed to start up shielded VMs.
+Only those machines which are known to HGS and running a trusted [code integrity policy](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control) are allowed to start up shielded VMs.
 This helps protect the shielded VMs, which run trusted workloads to manage your tiered resources, from user desktop environment threats.
 
 Since HGS is responsible for determining which devices can run PAW VMs, it is considered a Tier 0 resource.
@@ -1072,7 +1072,7 @@ Once the template disk and shielding data file are ready, you can deploy an admi
 
 [Device Guard Overview](https://technet.microsoft.com/library/dn986865(v=vs.85).aspx)
 
-[Protecting high-value assets with secure admin workstations](https://msdn.microsoft.com/en-us/library/mt186538.aspx)
+[Protecting high-value assets with secure admin workstations](https://msdn.microsoft.com/library/mt186538.aspx)
 
 [Isolated User Mode in Windows 10 with Dave Probert (Channel 9)](https://channel9.msdn.com/Blogs/Seth-Juarez/Isolated-User-Mode-in-Windows-10-with-Dave-Probert)
 

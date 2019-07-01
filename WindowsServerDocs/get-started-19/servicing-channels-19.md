@@ -33,7 +33,7 @@ Most of the features introduced in the Semi-Annual Channel will be rolled up int
 The Semi-Annual Channel is available to volume-licensed customers with [Software Assurance](https://www.microsoft.com/en-us/licensing/licensing-programs/software-assurance-default.aspx), as well as via the Azure Marketplace or other cloud/hosting service providers and loyalty programs such as Visual Studio Subscriptions.
 
 > [!Note]  
-> **The current Semi-Annual Channel release is Windows Server, version 1903**. If you want to put servers in this channel, you should install Windows Server, version 1903, which can be installed in Server Core mode or as Nano Server run in a container. In-place upgrades from from a long-term servicing channel release aren't supported because they are in **different release channels**. Semi-Annual Channel releases aren't updates – it's the next Windows Server release in the Semi-Annual Channel.
+> **The current Semi-Annual Channel release is Windows Server, version 1903**. If you want to put servers in this channel, you should install Windows Server, version 1903, which can be installed in Server Core mode or as Nano Server run in a container. In-place upgrades from a long-term servicing channel release aren't supported because they are in **different release channels**. Semi-Annual Channel releases aren't updates – it's the next Windows Server release in the Semi-Annual Channel.
 
 In this model, Windows Server releases are identified by the year and month of release: for example, in 2017, a release in the 9th month (September) would be identified as **version 1709**. Fresh releases of Windows Server in the Semi-Annual Channel will occur twice each year. The support lifecycle for each release is 18 months.
 

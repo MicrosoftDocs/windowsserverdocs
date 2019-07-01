@@ -108,7 +108,7 @@ The federation service proxy (part of the WAP) provides congestion control to pr
 3.	Change the congestion control settings from its default values to ‘<congestionControl latencyThresholdInMSec="8000" minCongestionWindowSize="64" enabled="true" />’.
 4.	Save and close the file.
 5.	Restart the AD FS service by running ‘net stop adfssrv’ and then ‘net start adfssrv’.
-For your reference, guidance on this capability can be found [here](https://msdn.microsoft.com/en-us/library/azure/dn528859.aspx ).
+For your reference, guidance on this capability can be found [here](https://msdn.microsoft.com/library/azure/dn528859.aspx ).
 
 ### Standard HTTP request checks at the proxy
 The proxy also performs the following standard checks against all traffic:

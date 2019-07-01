@@ -16,7 +16,7 @@ ms.date: 02/22/2019
 ms.localizationpriority: medium
 ---
 # Troubleshooting Remote Desktop connections
-For brief explanations of several of the most common Remote Desktop Services (RDS) issues, see [Frequently asked questions about the Remote Desktop clients](https://review.docs.microsoft.com/en-us/windows-server/remote/remote-desktop-services/clients/remote-desktop-client-faq). This article describes several more advanced approaches to troubleshooting connection problems. Many of these procedures apply whether you are troubleshooting a simple configuration, such as one physical computer connecting to another physical computer, or a more complicated configuration. Some procedures address issues that occur only in more complicated multi-user scenarios. For more information about the remote desktop components and how they work together, see [Remote Desktop Services architecture](https://docs.microsoft.com/en-us/windows-server/remote/remote-desktop-services/desktop-hosting-logical-architecture).
+For brief explanations of several of the most common Remote Desktop Services (RDS) issues, see [Frequently asked questions about the Remote Desktop clients](https://review.docs.microsoft.com/en-us/windows-server/remote/remote-desktop-services/clients/remote-desktop-client-faq). This article describes several more advanced approaches to troubleshooting connection problems. Many of these procedures apply whether you are troubleshooting a simple configuration, such as one physical computer connecting to another physical computer, or a more complicated configuration. Some procedures address issues that occur only in more complicated multi-user scenarios. For more information about the remote desktop components and how they work together, see [Remote Desktop Services architecture](https://docs.microsoft.com/windows-server/remote/remote-desktop-services/desktop-hosting-logical-architecture).
 
 > [!NOTE]  
 > Many of the procedures that are described in this article require you to access multiple computers, some of which you may have to access remotely. For more information about remote administration tools and how to configure them, see [Remote Server Administration Tools (RSAT) for Windows operating systems](https://support.microsoft.com/en-us/help/2693643/remote-server-administration-tools-rsat-for-windows-operating-systems).
@@ -33,7 +33,7 @@ In the following list, identify the type of symptom that you (or your users) are
 - [The user experiences poor performance or problems with remote applications](#user-experiences-poor-performance-or-application-problems)
 
 > [!NOTE]  
-> For a current list of RDP disconnect codes, see [ExtendedDisconnectReasonCode enumeration](https://docs.microsoft.com/en-us/windows/desktop/TermServ/extendeddisconnectreasoncode). 
+> For a current list of RDP disconnect codes, see [ExtendedDisconnectReasonCode enumeration](https://docs.microsoft.com/windows/desktop/TermServ/extendeddisconnectreasoncode). 
 
 ## No specific symptoms or messages (general troubleshooting steps)
 
@@ -48,7 +48,7 @@ Use these steps when a Remote Desktop client cannot connect to a remote desktop 
 
 #### Check the status of the RDP protocol on a local computer
 
-To check and change the status of the RDP protocol on a local computer, see [How to enable Remote Desktop](https://docs.microsoft.com/en-us/windows-server/remote/remote-desktop-services/clients/remote-desktop-allow-access#how-to-enable-remote-desktop).
+To check and change the status of the RDP protocol on a local computer, see [How to enable Remote Desktop](https://docs.microsoft.com/windows-server/remote/remote-desktop-services/clients/remote-desktop-allow-access#how-to-enable-remote-desktop).
 
 > [!NOTE]  
 > If the remote desktop options are not available, see [Check whether a Group Policy Object is blocking RDP](#check-whether-a-group-policy-object-gpo-is-blocking-rdp-on-a-local-computer).
@@ -95,7 +95,7 @@ The file that this command produces (**gpresult-\<computer name\>.html**) uses t
 
 #### Modifying a blocking GPO
 
-You can modify these settings in the Group Policy Object Editor (GPE) and Group Policy Management Console (GPM). For more information about how to use Group Policy, see [Advanced Group Policy Management](https://docs.microsoft.com/en-us/microsoft-desktop-optimization-pack/agpm/).
+You can modify these settings in the Group Policy Object Editor (GPE) and Group Policy Management Console (GPM). For more information about how to use Group Policy, see [Advanced Group Policy Management](https://docs.microsoft.com/microsoft-desktop-optimization-pack/agpm/).
 
 To modify the blocking policy, use one of the following methods:
 
@@ -284,7 +284,7 @@ In this case, [refresh the X509 Certificate registry keys](#refresh-the-x509-cer
 
 ### Configure the RD Licensing service
 
-The following procedure uses Server Manager to make the configuration changes. For information about how to configure and use Server Manager, see [Server Manager](https://docs.microsoft.com/en-us/windows-server/administration/server-manager/server-manager).
+The following procedure uses Server Manager to make the configuration changes. For information about how to configure and use Server Manager, see [Server Manager](https://docs.microsoft.com/windows-server/administration/server-manager/server-manager).
 
 1. Open Server Manager, and then navigate to **Remote Desktop Services**.
 2. On **Deployment Overview**, select **Tasks**, and then select **Edit Deployment Properties**.
@@ -466,7 +466,7 @@ This issue occurs in high-availability deployments that use two or more Remote D
 
 This issue occurs because Remote Credential Guard uses Kerberos for authentication, and restricts NTLM. However, in a high-availability configuration with load balancing, the RD Connection Brokers cannot support Kerberos operations.
 
-If you need to use a high-availability configuration with load-balanced RD Connection Brokers, you can work around this issue by disabling Remote Credential Guard. For more information about how to manage Windows Defender Remote Credential Guard, see [Protect Remote Desktop credentials with Windows Defender Remote Credential Guard](https://docs.microsoft.com/en-us/windows/security/identity-protection/remote-credential-guard#enable-windows-defender-remote-credential-guard).
+If you need to use a high-availability configuration with load-balanced RD Connection Brokers, you can work around this issue by disabling Remote Credential Guard. For more information about how to manage Windows Defender Remote Credential Guard, see [Protect Remote Desktop credentials with Windows Defender Remote Credential Guard](https://docs.microsoft.com/windows/security/identity-protection/remote-credential-guard#enable-windows-defender-remote-credential-guard).
 
 ## On connecting, user receives "Remote Desktop Service is currently busy" message
 
@@ -546,10 +546,10 @@ This issue can be caused by misconfiguration of your authentication and configur
 
 > [!NOTE]  
 >  - When communications between clients and RD Session Host servers require the highest level of encryption, use FIPS Compliant encryption.
->  - Any encryption level settings that you configure in Group Policy override the configuration that you set by using the Remote Desktop Services Configuration tool. Also, if you enable the [System cryptography: Use FIPS compliant algorithms for encryption, hashing, and signing](https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2003/cc780081\(v=ws.10\)) policy, this setting overrides the **Set client connection encryption level** policy. The system cryptography policy is in the **Computer Configuration\\Windows Settings\\Security Settings\\Local Policies\\Security Options** folder.
+>  - Any encryption level settings that you configure in Group Policy override the configuration that you set by using the Remote Desktop Services Configuration tool. Also, if you enable the [System cryptography: Use FIPS compliant algorithms for encryption, hashing, and signing](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc780081\(v=ws.10\)) policy, this setting overrides the **Set client connection encryption level** policy. The system cryptography policy is in the **Computer Configuration\\Windows Settings\\Security Settings\\Local Policies\\Security Options** folder.
 >  - When you change the encryption level, the new encryption level takes effect the next time a user logs on. If you require multiple levels of encryption on one server, install multiple network adapters and configure each adapter separately.
 >  - To verify that certificate has a corresponding private key, in Remote Desktop Services Configuration, right-click the connection for which you want to view the certificate, select **General**, select **Edit**, select the certificate that you want to view, and then select **View Certificate**. At the bottom of the **General** tab, the statement, "You have a private key that corresponds to this certificate" should appear. You can also view this information by using the Certificates snap-in.
->  - FIPS-compliant encryption (the **System cryptography: Use FIPS compliant algorithms for encryption, hashing, and signing** policy or the **FIPS Compliant** setting in Remote Desktop Server Configuration) encrypts and decrypts data sent from the client to the server and from the server to the client, with the Federal Information Processing Standard (FIPS) 140-1 encryption algorithms, using Microsoft cryptographic modules. For more information, see [FIPS 140 Validation](https://docs.microsoft.com/en-us/windows/security/threat-protection/fips-140-validation).
+>  - FIPS-compliant encryption (the **System cryptography: Use FIPS compliant algorithms for encryption, hashing, and signing** policy or the **FIPS Compliant** setting in Remote Desktop Server Configuration) encrypts and decrypts data sent from the client to the server and from the server to the client, with the Federal Information Processing Standard (FIPS) 140-1 encryption algorithms, using Microsoft cryptographic modules. For more information, see [FIPS 140 Validation](https://docs.microsoft.com/windows/security/threat-protection/fips-140-validation).
 >  - The **High** setting encrypts data sent from the client to the server and from the server to the client by using strong 128-bit encryption.
 >  - The **Client Compatible** setting encrypts data sent between the client and the server at the maximum key strength supported by the client.
 >  - The **Low** setting encrypts data sent from the client to the server using 56-bit encryption.
@@ -565,7 +565,7 @@ To work around this issue, set the network authentication setting to **User or c
  > [!NOTE]  
 > To change the network authentication settings on a single computer, you may need to use the Network and Sharing Center control panel to create a new wireless connection with the new settings.
 
-For a full description of how to configure wireless network settings using GPOs, see [Configure Wireless Network (IEEE 802.11) Policies](https://docs.microsoft.com/en-us/windows-server/networking/core-network-guide/cncg/wireless/e-wireless-access-deployment#bkmk_policies).
+For a full description of how to configure wireless network settings using GPOs, see [Configure Wireless Network (IEEE 802.11) Policies](https://docs.microsoft.com/windows-server/networking/core-network-guide/cncg/wireless/e-wireless-access-deployment#bkmk_policies).
 
 ## User experiences poor performance or application problems
 
