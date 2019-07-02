@@ -18,6 +18,8 @@ ms.localizationpriority: medium
 
 The following table includes list of supported RDP file settings that you can use with the Windows and HTML clients. An “x” in the platform column indicates that the setting is supported. However, this list is not a complete list of supported settings for the Windows and HTML5 clients. We'll continue to update this table to include more supported RDP settings for the Windows and HTML5 clients as well as the macOS, iOS, and Android clients.
 
+Please refer to [this documentation](https://go.microsoft.com/fwlink/?linkid=2098243&clcid=0x409) detailing how to use PowerShell to customize RDP properties for a host pool.
+
 | RDP setting                        | Description            | Values                 | Default value          | Windows Virtual Desktop | Windows | HTML5   |
 |------------------------------------|------------------------|------------------------|:----------------------:|:-----------------------:|:-------:|:-------:|
 | alternate full address:s:value | Specifies an alternate name or IP address of the remote computer. | Any valid name or IP address of the remote computer, such as "10.10.15.15" | | x | x | x |
