@@ -5,7 +5,7 @@ description:
 author: billmath
 ms.author: billmath
 manager: femila
-ms.date: 04/01/2019
+ms.date: 07/02/2019
 ms.topic: article
 ms.prod: windows-server-threshold
 
@@ -215,6 +215,13 @@ Every time a backup or restore is performed a log file is created. These can be 
 > When performing a restore a PostRestore_Instructions file might be created containing an overview of the additional authentication providers, attribute stores and local claims provider trusts to be installed manually before starting the AD FS service.
 
 ## Version Release History
+
+## Version 1.0.82.0
+Release: July 2019
+
+**Fixed issues:**
+- Bug fix for AD FS service account names that contain LDAP escape characters
+
 
 ### Version: 1.0.81.0
 Release: April 2019
