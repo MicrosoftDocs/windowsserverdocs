@@ -15,7 +15,7 @@ ms.date: 06/07/2019
 
 This topic describes the different installation options for Windows Admin Center, including installing on a Windows 10 PC or a Windows server for use by multiple admins. To install Windows Admin Center on a VM in Azure, see [Deploy Windows Admin Center in Azure](../azure/deploy-wac-in-azure.md).
 
-## Supported operating systems: Installation
+## Installation: Supported operating systems
 
 You can **install** Windows Admin Center on the following Windows operating systems:
 
@@ -33,11 +33,11 @@ You can **install** Windows Admin Center on the following Windows operating syst
 > [!WARNING]
 > Installing Windows Admin Center on a Domain controller is not supported. [Read more about Domain controller security best practices](https://docs.microsoft.com/windows-server/identity/ad-ds/plan/security-best-practices/securing-domain-controllers-against-attack). 
 
-> [!IMPORTANT]
-> You can't use Internet Explorer to manage Windows Admin Center - instead you need to use a [supported browser](../understand/faq.md#which-web-browsers-are-supported-by-windows-admin-center
-).  If you are installing Windows Admin Center on Windows Server, we recommend managing by connecting remotely with Windows 10 and Edge.  Alternatively, you can manage locally on Windows Server if you have installed a supported browser.
+## Installation: Supported web browsers
 
-## Supported operating systems: Management
+Microsoft Edge and Google Chrome are tested and supported on Windows 10. Other web browsers—including Internet Explorer and Firefox—are not currently part of our test matrix and are therefore not *officially* supported. These browsers may have problems running Windows Admin Center. For example, Firefox has it’s own certificate store, so you must import the `Windows Admin Center Client` certificate into Firefox to use Windows Admin Center on Windows 10. For more details, see [browser-specific known issues](../support/known-issues.md#browser-specific-issues).
+
+## Management target: Supported operating systems
 
 You can **manage** the following Windows operating systems using Windows Admin Center:
 
