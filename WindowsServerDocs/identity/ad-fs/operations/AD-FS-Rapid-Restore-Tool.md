@@ -216,7 +216,7 @@ Every time a backup or restore is performed a log file is created. These can be 
 
 ## Version Release History
 
-## Version 1.0.82.0
+### Version 1.0.82.0
 Release: July 2019
 
 **Fixed issues:**
