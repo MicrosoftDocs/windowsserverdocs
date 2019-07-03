@@ -1,6 +1,6 @@
 ---
-title: Memory usage considerations in ADDS performance tuning
-description: Memory usage considerations in Active Directory workloads
+title: Memory usage considerations in AD DS performance tuning
+description: Memory usage by the Lsass.exe process on domain controllers that are running Windows Server 2012 R2, 2016 and 2019.
 ms.prod: windows-server-threshold
 ms.technology: performance-tuning-guide
 ms.topic: article
@@ -9,10 +9,8 @@ author: Teresa-Motiv
 ms.date: 6/27/2019
 ---
 
-# Memory usage considerations in ADDS performance tuning
+# Memory usage considerations for AD DS performance tuning
 
-Memory usage by the Lsass.exe process on domain controllers that are running Windows Server 2012 R2, 2016 and 2019.
-Summary
 This article describes some Lsass.exe process basics, best practices for the configuration of the Lsass.exe process, and expectations of memory usage. This article should be used as a guide in the analysis of Lsass.exe performance and memory use on domain controllers. The information in this article may be useful if you have questions about how to tune and configure servers and domain controllers to optimize this engine.  
 
 The Lsass.exe process is responsible for management of local security authority (LSA) domain authentication and Active Directory management. This process handles authentication for both the client and the server, and it also governs the Active Directory engine. The Lsass.exe process is responsible for the following components:  
@@ -69,8 +67,10 @@ When you notice a Domain Controller has performance problems, also watch for pro
 There are built-in OS facilities that can consume significant RAM depending on the usage profile:
 
 - **File Server**. Domain Controllers are also file servers for SYSVOL and Netlogon shares, servicing group policy and scripts for policy and startup/logon scripts.
-<br />We however see customers use Domain Controllers to service other file content. The SMB file server would then consume RAM to track the active clients, but foremost, the file content would make the OS File Cache grow, and compete over RAM with the ESE Database cache.
+  We however see customers use Domain Controllers to service other file content. The SMB file server would then consume RAM to track the active clients, but foremost, the file content would make the OS File Cache grow, and compete over RAM with the ESE Database cache.  
 
-- **WMI Queries**. Monitoring solutions often make many WMI queries. The individual query may be cheap to execute, often it is the volume of calls that incurs some overhead. This includes that the solutions extract the new events logged in the various event logs Windows manages.
-<br />The event log with the most volume is typically the Security Event log. And this is also the event log that security administrators want to collect especially from Domain Controllers.
-<br />The WMI Service has a dynamic memory allocation scheme that would optimize the queries and there is the chance it is allocating a lot of memory, again competing with the ESE database cache.
+- **WMI Queries**. Monitoring solutions often make many WMI queries. The individual query may be cheap to execute, often it is the volume of calls that incurs some overhead. This includes that the solutions extract the new events logged in the various event logs Windows manages.  
+
+  The event log with the most volume is typically the Security Event log. And this is also the event log that security administrators want to collect especially from Domain Controllers.  
+
+  The WMI Service has a dynamic memory allocation scheme that would optimize the queries and there is the chance it is allocating a lot of memory, again competing with the ESE database cache.
