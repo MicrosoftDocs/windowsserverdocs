@@ -345,9 +345,8 @@ Determining the amount of IO needed for a healthy system under normal operating 
 |-|-|
 |Actual LogicalDisk(*\<NTDS Database Drive\>*)\Avg Disk sec/Transfer|.02 seconds (20 milliseconds)|
 |Target LogicalDisk(*\<NTDS Database Drive\>*)\Avg Disk sec/Transfer|.01 seconds|
-|Multiplier for Change in Available IO|0.02 &divide; 0.01 = 2|
+|Multiplier for Change in Available IO|0.02 &divide; 0.01 = 2|  
 <br />
-  
 |Value Name|Value|
 |-|-|
 |LogicalDisk(*\<NTDS Database Drive\>*)\Transfers/sec|400|
@@ -366,8 +365,7 @@ Note that the rate calculated, while accurate, will not be exact because previou
 |Data Points to Collect|Values
 |-|-|
 |Maximum Acceptable Time to Warm|10 minutes (600 seconds)
-|Database Size|2 GB|
-<br />
+|Database Size|2 GB|  
 
 |Calculation Step|Formula|Result|
 |-|-|-|
@@ -580,7 +578,7 @@ Throughout this article, it has been discussed that planning and scaling go towa
 
 **CPU –** Central Processing Unit  
 
-**Multi-Core processor* –* multiple CPUs on the same integrated circuit  
+**Multi-Core processor –** multiple CPUs on the same integrated circuit  
 
 **Multi-CPU –** multiple CPUs, not on the same integrated circuit  
 
@@ -795,7 +793,7 @@ Now, having analyzed a simple configuration, the following table demonstrates wh
 |This is the domain controller configuration after adding a second disk. The disk configuration represents the bottleneck at 800 KB/s.|Add 1 disk (Total=2)<br /><br />I/O is random<br /><br />4 KB block size<br /><br />10,000 RPM HD|200 I/Os total<br />800 KB/s total.| | | |
 |After adding 7 disks, the disk configuration still represents the bottleneck at 3200 KB/s.|**Add 7 disks (Total=8)**  <br /><br />I/O is random<br /><br />4 KB block size<br /><br />10,000 RPM HD|800 I/Os total.<br />3200 KB/s total| | | |
 |After changing I/O to sequential, the network adapter becomes the bottleneck because it is limited to 1000 IOPS.|Add 7 disks (Total=8)<br /><br />**I/O is sequential**<br /><br />4 KB block size<br /><br />10,000 RPM HD| | |2400 I/O sec can be read/written to disk, controller limited to 1000 IOPS| |
-|After replacing the network adapter with a SCSI adapter that supports 10,000 IOPS, the bottleneck returns to the disk configuration.|Add 7 disks (Total=8)<br /><br />I/O Random<br /><br />4 KB block size<br /><br />10,000 RPM HD<br /><br />**Upgrade SCSI Adapter (now supports 10,000 I/O)**|800 I/Os total.<br />3,200 KB/s total| | | |
+|After replacing the network adapter with a SCSI adapter that supports 10,000 IOPS, the bottleneck returns to the disk configuration.|Add 7 disks (Total=8)<br /><br />I/O is random<br /><br />4 KB block size<br /><br />10,000 RPM HD<br /><br />**Upgrade SCSI Adapter (now supports 10,000 I/O)**|800 I/Os total.<br />3,200 KB/s total| | | |
 |After increasing the block size to 32KB, the bus becomes the bottleneck because it only supports 20 MB/s.|Add 7 disks (Total=8)<br /><br />I/O is random<br /><br />**32KB block size**<br /><br />10,000 RPM HD| |800 I/Os total. 25,600 KB/s (25 MB/s) can be read/written to disk.<br /><br />The bus only supports 20 MB/s| | |
 |After upgrading the bus and adding more disks, the disk remains the bottleneck.|**Add 13 disks (Total=14)**<br /><br />Add second SCSI Adapter with 14 disks<br /><br />I/O is random<br /><br />4 KB block size<br /><br />10,000 RPM HD<br /><br />**Upgrade to 320 MB/s SCSI bus**|2800 I/Os<br /><br />11,200 KB/s (10.9 Mb/s)| | | |
 |After changing I/O to sequential, the disk remains the bottleneck.|Add 13 disks (Total=14)<br /><br />Add second SCSI Adapter with 14 disks<br /><br />**I/O is sequential**<br /><br />4 KB block size<br /><br />10,000 RPM HD<br /><br />Upgrade to 320 MB/s SCSI bus|8,400 I/Os<br /><br />33,600 KB\s<br /><br />(32.8 MB\s)| | | |
