@@ -407,7 +407,7 @@ In the next example, the following assumptions are made:
 - Each of the five DCs in the site has four of CPUs.
 - Total target CPU usage during business hours is 40% under normal operating conditions (“*N* + 1”) and 60% otherwise (“*N*”). During non-business hours, the target CPU usage is 80% because backup software and other maintenance are expected to consume all available resources.
 
-![CPU usage chart](media\capacity-planning-considerations-cpu-chart.png)
+![CPU usage chart](media/capacity-planning-considerations-cpu-chart.png)
 
 Analyzing the data in the chart (Processor Information(_Total)\% Processor Utility) for each of the DCs:
 
@@ -434,7 +434,7 @@ Assumptions:
 
 - Goal is to reduce footprint to as few servers as possible. Ideally, one server would carry the load and an additional server added for redundancy (*N* + 1 scenario).
 
-![Processor time chart for lsass process (over all processors)](media\capacity-planning-considerations-proc-time-chart.png)
+![Processor time chart for lsass process (over all processors)](media/capacity-planning-considerations-proc-time-chart.png)
 
 Knowledge gained from the data in the chart (Process(lsass)\\% Processor Time):
 
@@ -626,7 +626,7 @@ Where *U* k is the utilization percentage, *B* is the amount of time busy, and *
 
 Queuing theory also provides the formula: *N* = *U* k &divide; (1 &ndash; *U* k) to estimate the number of waiting items based on utilization ( *N* is the length of the queue). Charting this over all utilization intervals provides the following estimates to how long the queue to get on the processor is at any given CPU load.
 
-![Queue Length](media\capacity-planning-considerations-queue-length.png)
+![Queue Length](media/capacity-planning-considerations-queue-length.png)
 
 It is observed that after 50% CPU load, on average there is always a wait of one other item in the queue, with a noticeably rapid increase after about 70% CPU utilization.
 
@@ -709,7 +709,7 @@ To adjust estimates for different processors, it used to be safe, excluding othe
 
 The queuing theory concepts outlined in [Response Time/How the System Busyness Impacts Performance](https://social.technet.microsoft.com/wiki/contents/articles/14355.capacity-planning-for-active-directory-domain-services.aspx#BKMK_ResponseTimes) are also applicable to storage. Having a familiarity of how the operating system handles I/O is necessary to apply these concepts. In the Microsoft Windows operating system, a queue to hold the I/O requests is created for each physical disk. However, a clarification on physical disk needs to be made. Array controllers and SANs present aggregations of spindles to the operating system as single physical disks. Additionally, array controllers and SANs can aggregate multiple disks into one array set and then split this array set into multiple “partitions”, which is in turn presented to the operating system as multiple physical disks (ref. figure).
 
-![Block spindles](media\capacity-planning-considerations-block-spindles.png)  
+![Block spindles](media/capacity-planning-considerations-block-spindles.png)  
 
 In this figure the two spindles are mirrored and split into logical areas for data storage (Data 1 and Data 2). These logical areas are viewed by the operating system as separate physical disks.
 
@@ -808,7 +808,7 @@ The nature of a storage subsystem does not change dramatically when an array con
 
 In RAID 0, the data is striped across all the disks in the RAID set. This means that during a read or a write operation, a portion of the data is pulled from or pushed to each disk, increasing the amount of data that can transit the system during the same time period. Thus, in one second, on each spindle (again assuming 10,000-RPM drives), 100 I/O operations can be performed. The total amount of I/O that can be supported is N spindles times 100 I/O per second per spindle (yields 100*N I/O per second).
 
-![Logical d: drive](media\capacity-planning-considerations-logical-d-drive.png)
+![Logical d: drive](media/capacity-planning-considerations-logical-d-drive.png)
 
 In RAID 1, the data is mirrored (duplicated) across a pair of spindles for redundancy. Thus, when a read I/O operation is performed, data can be read from both of the spindles in the set. This effectively makes the I/O capacity from both disks available during a read operation. The caveat is that write operations gain no performance advantage in a RAID 1. This is because the same data needs to be written to both drives for the sake of redundancy. Though it does not take any longer, as the write of data occurs concurrently on both spindles, because both spindles are occupied duplicating the data, a write I/O operation in essence prevents two read operations from occurring. Thus, every write I/O costs two read I/O. A formula can be created from that information to determine the total number of I/O operations that are occurring: 
 
@@ -916,7 +916,7 @@ For normal operating conditions, the storage planning goal is minimize the wait 
 
 Example:
 
-![Storage latency chart](media\capacity-planning-considerations-storage-latency.png)
+![Storage latency chart](media/capacity-planning-considerations-storage-latency.png)
 
 Analyzing the chart:
 
