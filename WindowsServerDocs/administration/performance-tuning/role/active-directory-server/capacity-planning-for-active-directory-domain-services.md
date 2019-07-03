@@ -874,7 +874,7 @@ Caches are one of the components that can significantly impact the overall perfo
 
 ### SSD considerations
 
-SSDs are a completely different animal than spindle based hard disks. Yet the two key criteria remain: “How many IOPS can it handle?” and “What is the latency for those IOPS?” In comparison to spindle based Hard Disks, SSDs can handle higher volumes of IO and can have lower latencies. In general and as of this writing, while SSDs are still expensive in a cost-per-Gigabyte comparison, they are very cheap in terms of cost-per-IO and deserve significant consideration in terms of storage performance.
+SSDs are a completely different animal than spindle-based hard disks. Yet the two key criteria remain: “How many IOPS can it handle?” and “What is the latency for those IOPS?” In comparison to spindle-based hard disks, SSDs can handle higher volumes of IO and can have lower latencies. In general and as of this writing, while SSDs are still expensive in a cost-per-Gigabyte comparison, they are very cheap in terms of cost-per-IO and deserve significant consideration in terms of storage performance.
 
 Considerations:
 
