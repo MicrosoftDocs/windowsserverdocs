@@ -264,7 +264,7 @@ The database size can vary between operating system versions. DCs that run earli
 
 In a scenario where multiple Virtual Disk files are being allocated on a single volume use a fixed sized disk of at least 210% (100% of the DIT + 110% free space) the size of the DIT to ensure that there is adequate space reserved.  
 
-### Calculation summary example
+#### Calculation summary example
 
 |Data collected from evaluation phase| |
 |-|-|
@@ -613,7 +613,7 @@ As a result, specifics about more or faster processors become highly subjective 
 
 ### Response time/How the system busyness impacts performance
 
-Queuing theory is the mathematical study of waiting lines (queues). ). In queuing theory, the Utilization Law is represented by the equation:
+Queuing theory is the mathematical study of waiting lines (queues). In queuing theory, the Utilization Law is represented by the equation:
 
 *U* k = *B* &divide; *T*
 
@@ -876,7 +876,7 @@ Caches are one of the components that can significantly impact the overall perfo
 
 SSDs are a completely different animal than spindle based hard disks. Yet the two key criteria remain: “How many IOPS can it handle?” and “What is the latency for those IOPS?” In comparison to spindle based Hard Disks, SSDs can handle higher volumes of IO and can have lower latencies. In general and as of this writing, while SSDs are still expensive in a cost-per-Gigabyte comparison, they are very cheap in terms of cost-per-IO and deserve significant consideration in terms of storage performance.
 
-#### Considerations
+Considerations:
 
 - Both IOPS and latencies are very subjective to the manufacturer designs and in some cases have been observed to be poorer performing than spindle based technologies. In short, it is more important to review and validate the manufacturer specs drive by drive and not assume any generalities.
 - IOPS types can have very different numbers depending on whether it is read or write. AD DS services, in general, being predominantly read-based, will be less affected than some other application scenarios.
