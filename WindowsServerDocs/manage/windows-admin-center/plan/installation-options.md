@@ -15,6 +15,16 @@ ms.date: 06/07/2019
 
 This topic describes the different installation options for Windows Admin Center, including installing on a Windows 10 PC or a Windows server for use by multiple admins. To install Windows Admin Center on a VM in Azure, see [Deploy Windows Admin Center in Azure](../azure/deploy-wac-in-azure.md).
 
+## Installation: Types
+
+| ![img](../media/deployment-options/W10.png) | ![img](../media/deployment-options/gateway.png) | ![img](../media/deployment-options/node.png) | ![img](../media/deployment-options/HA.png) |
+| --------------------------------------------- | ------------------------------------------------- |----------------------------------------------|-------------------------------------------- |
+|                                             |                                                 |                                              |                                            |
+
+| Local Client | Gateway Server | Managed Server | Failover Cluster |
+| --- | --- | --- | --- |
+| Install on a local Windows 10 client that has connectivity to the managed servers.  Great for quick start, testing, ad-hoc or small scale scenarios. |Install on a designated gateway server and access from any client browser with connectivity to the gateway server.  Great for large-scale scenarios. | Install directly on a managed server for the purpose of managing itself or a cluster in which it's a member node.  Great for distributed scenarios. | Deploy in a failover cluster to enable high availability of the gateway service. Great for production environments to ensure resiliency of your management service. |
+
 ## Installation: Supported operating systems
 
 You can **install** Windows Admin Center on the following Windows operating systems:
@@ -60,16 +70,6 @@ You can **manage** the following Windows operating systems using Windows Admin C
 > and that the version is 5.1 or higher. 
 > 
 > If WMF is not installed, you can [download WMF 5.1](https://www.microsoft.com/en-us/download/details.aspx?id=54616).
-
-## Deployment options
-
-| ![img](../media/deployment-options/W10.png) | ![img](../media/deployment-options/gateway.png) | ![img](../media/deployment-options/node.png) | ![img](../media/deployment-options/HA.png) |
-| --------------------------------------------- | ------------------------------------------------- |----------------------------------------------|-------------------------------------------- |
-|                                             |                                                 |                                              |                                            |
-
-| Local Client | Gateway Server | Managed Server | Failover Cluster |
-| --- | --- | --- | --- |
-| Install on a local Windows 10 client that has connectivity to the managed servers.  Great for quick start, testing, ad-hoc or small scale scenarios. |Install on a designated gateway server and access from any client browser with connectivity to the gateway server.  Great for large-scale scenarios. | Install directly on a managed server for the purpose of managing itself or a cluster in which it's a member node.  Great for distributed scenarios. | Deploy in a failover cluster to enable high availability of the gateway service. Great for production environments to ensure resiliency of your management service. |
 
 ## High availability
 
