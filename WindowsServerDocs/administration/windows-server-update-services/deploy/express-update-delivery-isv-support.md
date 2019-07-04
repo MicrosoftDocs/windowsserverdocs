@@ -60,7 +60,7 @@ WSUS serves as the interface to Windows Update and manages all metadata describi
 
 #### Specify the ISV File Cache
 
-New client-side Group Policy and Mobile Device Management (MDM) settings detailed in the [**Configuration service provider reference**](https://msdn.microsoft.com/en-us/windows/hardware/commercialize/customize/mdm/configuration-service-provider-reference) define the location of the ISV file cache.
+New client-side Group Policy and Mobile Device Management (MDM) settings detailed in the [**Configuration service provider reference**](https://msdn.microsoft.com/windows/hardware/commercialize/customize/mdm/configuration-service-provider-reference) define the location of the ISV file cache.
 
 | **Name**                                              | **Description**                                                                                                                                                      |
 |-------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -87,7 +87,7 @@ The ISV file cache must be populated with files associated with the updates to b
 
 **To populate the ISV file cache:**
 
-1. Use [WSUS APIs](https://msdn.microsoft.com/en-us/library/windows/desktop/microsoft.updateservices.administration.updatefile(v=vs.85).aspx) to access the update’s file path and file name for the MU service.
+1. Use [WSUS APIs](https://msdn.microsoft.com/library/windows/desktop/microsoft.updateservices.administration.updatefile(v=vs.85).aspx) to access the update’s file path and file name for the MU service.
 
     The metadata for each update on WSUS server contains the update’s file path and file name on Microsoft Update as follows (Microsoft Update hostname in bold, followed by file path and filename): **<http://download.windowsupdate.com>**/c/msdownload/update/software/updt/2016/09/windows10.0-kb3195781-x64_0c06079bccc35cba35a48bd2b1ec46f818bd2e74.msu
 
@@ -113,7 +113,7 @@ The ISV client agent orchestrates the download and installation of approved upda
 
 5.  Once the updates have been downloaded, the ISV client agent calls the WU client to install the approved updates
 
-See [Searching, Downloading, and Installing Updates](https://msdn.microsoft.com/en-us/library/windows/desktop/aa387102(v=vs.85).aspx) for additional information about using the WU client to scan, download and install updates.
+See [Searching, Downloading, and Installing Updates](https://msdn.microsoft.com/library/windows/desktop/aa387102(v=vs.85).aspx) for additional information about using the WU client to scan, download and install updates.
 
 ### Download workflow options
 

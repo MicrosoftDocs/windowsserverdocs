@@ -5,8 +5,7 @@ keywords: privacy, GDPR
 ms.custom: na
 ms.reviewer: na
 ms.suite: na
-ms.technology: 
-  - techgroup-security
+ms.technology: techgroup-security
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.date: 09/25/2017
@@ -357,7 +356,7 @@ You can use ATA to help detect attackers attempting to compromise privileged ide
 
 - **Windows Defender Credential Guard:** https://www.youtube.com/watch?v=F-pTkesjkhI and https://docs.microsoft.com/windows/access-protection/credential-guard/credential-guard
 
-- **Control Flow Guard:** https://msdn.microsoft.com/en-us/library/windows/desktop/mt637065(v=vs.85).aspx
+- **Control Flow Guard:** https://msdn.microsoft.com/library/windows/desktop/mt637065(v=vs.85).aspx
 
 - **Security and Assurance:** https://docs.microsoft.com/windows-server/security/security-and-assurance
 

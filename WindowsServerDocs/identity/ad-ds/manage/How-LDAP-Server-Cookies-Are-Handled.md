@@ -124,7 +124,7 @@ If you are seeing event 2898 on your DC/LDAP Server, we recommend you set MaxRes
   
 If you are still seeing events 2899 with a pool of 250MB or more, you are likely having many clients with very high number of objects returned, queried in a very frequent manner. The data you can gather with the [Active Directory Data Collector Set](http://blogs.technet.com/b/askds/archive/2010/06/08/son-of-spa-ad-data-collector-sets-in-win2008-and-beyond.aspx) can help you find repetitive paged queries that keep your LDAP Servers busy. These queries will all show with a number of "Entries returned" that matches the size of the page used.  
   
-If possible, you should review the application design, and implement a different approach with a lower frequency, data volume and/or fewer client instances querying this data.In case of the applications for which you have source code access, this guide to  [creating efficient AD-Enabled Applications](https://msdn.microsoft.com/en-us/library/ms808539.aspx) can help you understand the optimal way for applications to access AD.  
+If possible, you should review the application design, and implement a different approach with a lower frequency, data volume and/or fewer client instances querying this data.In case of the applications for which you have source code access, this guide to  [creating efficient AD-Enabled Applications](https://msdn.microsoft.com/library/ms808539.aspx) can help you understand the optimal way for applications to access AD.  
   
 If the query behavior can't be changed, one approach is also adding more replicated instances of the naming contexts needed and to redistribute the clients and eventually reduce the load on the individual LDAP Servers.  
   

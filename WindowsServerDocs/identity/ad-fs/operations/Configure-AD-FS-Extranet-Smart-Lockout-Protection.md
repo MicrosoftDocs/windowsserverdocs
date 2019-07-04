@@ -232,7 +232,7 @@ This behavior can be overridden by passing the -Server parameter.
 ## Event Logging & User Activity Information for AD FS Extranet Lockout
 
 ### Connect Health
-The recommended way to monitor user account activity is through Connect Health. Connect Health generates downloadable reporting on Risky IPs and bad password attempts. Each item in the Risky IP report shows aggregated information about failed AD FS sign-in activities which exceed designated threshold. Email notifications can be set to alert administrators as soon as this occurs with customizable email settings. For additional information and setup instructions, visit the [Connect Health documentation](https://docs.microsoft.com/en-us/azure/active-directory/hybrid/how-to-connect-health-adfs).
+The recommended way to monitor user account activity is through Connect Health. Connect Health generates downloadable reporting on Risky IPs and bad password attempts. Each item in the Risky IP report shows aggregated information about failed AD FS sign-in activities which exceed designated threshold. Email notifications can be set to alert administrators as soon as this occurs with customizable email settings. For additional information and setup instructions, visit the [Connect Health documentation](https://docs.microsoft.com/azure/active-directory/hybrid/how-to-connect-health-adfs).
 
 ### AD FS Extranet Smart Lockout events.
 For Extranet Smart Lockout events to be written, ESL must be enabled in ‘log-only’ or ‘enforce’ mode and ADFS security auditing is enabled.

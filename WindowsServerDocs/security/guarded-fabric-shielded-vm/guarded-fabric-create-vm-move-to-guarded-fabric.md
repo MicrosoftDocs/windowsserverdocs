@@ -15,11 +15,6 @@ ms.date: 08/29/2018
 
 >Applies to: Windows Server 2019, Windows Server (Semi-Annual Channel), Windows Server 2016
 
-
-<!-- NOTE THAT THIS FILE HAS A "redirect_url" LINE IN THE METADATA. EVENTUALLY WE WILL PROBABLY STRIP OUT THE DETAILED METADATA AND THE CONTENT BELOW, SO IT'S PURELY A REDIRECTED TOPIC. However, as of mid-November 2016, we're still deciding. -->
-
-
-
 This topic describes the steps to create a shielded VM using only Hyper-V; that is, without Virtual Machine Manager, template disks, or a shielding data file. This is an uncommon scenario for most public cloud hosting environments, but may be useful when testing a guarded fabric or in enterprise scenarios where a VM is being moved from a departmental fabric to shared IT infrastructure and must be encrypted before migration.
 
 To understand how this topic fits in the overall process of deploying shielded VMs, see [Hosting service provider configuration steps for guarded hosts and shielded VMs](guarded-fabric-configuration-scenarios-for-shielded-vms-overview.md).

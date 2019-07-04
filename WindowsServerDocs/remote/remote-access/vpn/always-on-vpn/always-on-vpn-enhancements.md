@@ -22,7 +22,7 @@ Always On VPN has many benefits over the Windows VPN solutions of the past. The 
 
 - **Platform Integration:** Always On VPN has improved integration with the Windows operating system and third-party solutions to provide a robust platform for countless advanced connection scenarios.
 
-- **Security:** Always On VPN has new, advanced security capabilities to restrict the type of traffic, which applications can use the VPN connection, and which authentication methods you can use to initiate the connection. When the connection is active most of the time, it is especially important to secure the connection. For more details, see [VPN authentication options](https://docs.microsoft.com/en-us/windows/security/identity-protection/vpn/vpn-authentication).
+- **Security:** Always On VPN has new, advanced security capabilities to restrict the type of traffic, which applications can use the VPN connection, and which authentication methods you can use to initiate the connection. When the connection is active most of the time, it is especially important to secure the connection. For more details, see [VPN authentication options](https://docs.microsoft.com/windows/security/identity-protection/vpn/vpn-authentication).
 
 - **VPN Connectivity:** Always On VPN, with or without Device Tunnel provides auto-trigger capability. Before Always On VPN, the ability to trigger an automatic connection through either user or device authentication was not possible.  
 

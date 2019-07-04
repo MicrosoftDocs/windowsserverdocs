@@ -4,28 +4,29 @@ description: In this optional step, you can fine-tune how authorized VPN users a
 ms.prod: windows-server-threshold
 ms.technology: networking-ras
 ms.topic: article
-ms.assetid: 
+
 ms.localizationpriority: medium 
 ms.author: pashort
 author: shortpatti
-ms.date: 07/13/2018
+ms.date: 06/28/2019
 ms.reviewer: deverette
 ---
-
 # Step 7. (Optional) Conditional access for VPN connectivity using Azure AD
 
 - [**Previous:** Step 6. Configure Windows 10 Client Always On VPN Connections](always-on-vpn/deploy/vpn-deploy-client-vpn-connections.md)
 - [**Next:** Step 7.1. Configure EAP-TLS to ignore Certificate Revocation List (CRL) checking](vpn-config-eap-tls-to-ignore-crl-checking.md)
 
-In this optional step, you can fine-tune how VPN users access your resources using [Azure Active Directory (Azure AD) conditional access](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-azure-portal). With Azure AD conditional access for virtual private network (VPN) connectivity, you can help protect the VPN connections. Conditional Access is a policy-based evaluation engine that lets you create access rules for any Azure Active Directory (Azure AD) connected application. 
+In this optional step, you can fine-tune how VPN users access your resources using [Azure Active Directory (Azure AD) conditional access](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-azure-portal). With Azure AD conditional access for virtual private network (VPN) connectivity, you can help protect the VPN connections. Conditional Access is a policy-based evaluation engine that lets you create access rules for any Azure Active Directory (Azure AD) connected application.
 
 ## Prerequisites
 
 You are familiar with the following topics:
+
 - [Conditional access in Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-azure-portal)
 - [VPN and conditional access](https://docs.microsoft.com/windows/access-protection/vpn/vpn-conditional-access)
 
 To configure Azure Active Directory conditional access for VPN connectivity, you need to have the following configured:
+
 - [Server Infrastructure](always-on-vpn/deploy/vpn-deploy-server-infrastructure.md)
 - [Remote Access Server for Always On VPN](always-on-vpn/deploy/vpn-deploy-ras.md)
 - [Network Policy Server](always-on-vpn/deploy/vpn-deploy-nps.md)
@@ -43,9 +44,13 @@ An EAP-TLS client cannot connect unless the NPS server completes a revocation ch
 In this step, you configure root certificates for VPN authentication with Azure AD, which automatically creates a VPN server cloud app in the tenant.  
 
 To configure conditional access for VPN connectivity, you need to:
-1. Create a VPN certificate in the Azure portal (you can create more than one certificate).
+
+1. Create a VPN certificate in the Azure portal.
 2. Download the VPN certificate.
 3. Deploy the certificate to your VPN server.
+
+> [!IMPORTANT]
+> Once a VPN certificate is created in the Azure portal, Azure AD will start using it immediately to issue short lived certificates to the VPN client. It is critical that the VPN certificate be deployed immediately to the VPN server to avoid any issues with credential validation of the VPN client.
 
 ## [Step 7.3. Configure the Conditional Access policy](vpn-config-conditional-access-policy.md)
 
@@ -62,13 +67,14 @@ To configure the conditional access policy, you need to:
 In this step, you deploy a trusted root certificate for VPN authentication to your on-premises AD.
 
 To deploy the trusted root certificate, you need to:
+
 1. Add the downloaded certificate as a *trusted root CA for VPN authentication*.
 2. Import the root certificate to the VPN server and VPN client.
 3. Verify that the certificates are present and show as trusted.
 
 ## [Step 7.5. Create OMA-DM based VPNv2 Profiles to Windows 10 devices](vpn-create-oma-dm-based-vpnv2-profiles.md)
 
-In this step, you can create OMA-DM based VPNv2 profiles using Intune to deploy a VPN Device Configuration policy. If you want to use SCCM or PowerShell Script to create VPNv2 profiles, see [VPNv2 CSP settings](https://docs.microsoft.com/windows/client-management/mdm/vpnv2-csp) for more details. 
+In this step, you can create OMA-DM based VPNv2 profiles using Intune to deploy a VPN Device Configuration policy. If you want to use SCCM or PowerShell Script to create VPNv2 profiles, see [VPNv2 CSP settings](https://docs.microsoft.com/windows/client-management/mdm/vpnv2-csp) for more details.
 
 ## Next steps
 
@@ -76,7 +82,7 @@ In this step, you can create OMA-DM based VPNv2 profiles using Intune to deploy 
 
 ## Related topics
 
-- [Configure VPNv2 Profiles](https://docs.microsoft.com/windows/access-protection/vpn/vpn-conditional-access): The VPN client is now able to integrate with the cloud-based Conditional Access Platform to provide a device compliance option for remote clients. In this step, you configure the VPNv2 profiles with **\<DeviceCompliance> \<Enabled>true\</Enabled>**. 
+- [Configure VPNv2 Profiles](https://docs.microsoft.com/windows/access-protection/vpn/vpn-conditional-access): The VPN client is now able to integrate with the cloud-based Conditional Access Platform to provide a device compliance option for remote clients. In this step, you configure the VPNv2 profiles with **\<DeviceCompliance> \<Enabled>true\</Enabled>**.
 
 - [Enhancing remote access in Windows 10 with an automatic VPN profile](https://www.microsoft.com/itshowcase/Article/Content/894/Enhancing-remote-access-in-Windows-10-with-an-automatic-VPN-profile): Learn how Microsoft implements Conditional Access for VPN connectivity. VPN profiles contain all the information a device requires to connect to the corporate network, including the authentication methods that are supported and the VPN server that the device should connect to. Changes in Windows 10 Anniversary Update, including Conditional Access and single sign-on, made it possible for us to create our Always-On VPN connection profile. We created the connection profile for domain-joined and Microsoft Intune–managed devices using System Center Configuration Manager console.
 
