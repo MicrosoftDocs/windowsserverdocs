@@ -11,9 +11,9 @@ ms.date: 7/3/2019
 
 # Memory usage considerations for AD DS performance tuning
 
-This article describes some Lsass.exe process basics, best practices for the configuration of the Lsass.exe process, and expectations for memory usage. This article should be used as a guide in the analysis of Lsass.exe performance and memory use on domain controllers. The information in this article may be useful if you have questions about how to tune and configure servers and domain controllers to optimize this engine.  
+This article describes some basics of the Local Security Authority Subsystem Service (LSASS), best practices for the configuration of LSASS, and expectations for memory usage. This article should be used as a guide in the analysis of LSASS performance and memory use on domain controllers (DCs). The information in this article may be useful if you have questions about how to tune and configure servers and DCs to optimize this engine.  
 
-The Lsass.exe process is responsible for management of local security authority (LSA) domain authentication and Active Directory management. This process handles authentication for both the client and the server, and it also governs the Active Directory engine. The Lsass.exe process is responsible for the following components:  
+LSASS is responsible for management of local security authority (LSA) domain authentication and Active Directory management. LSASS handles authentication for both the client and the server, and it also governs the Active Directory engine. LSASS is responsible for the following components:  
 
 - Local Security Authority
 - NetLogon service
@@ -24,13 +24,13 @@ The Lsass.exe process is responsible for management of local security authority 
 - NTLM authentication protocol
 - Other authentication packages that load into LSA
 
-The AD database services (NTDSAI.DLL) are working with the Extensible Storage Engine (ESE, ESENT.DLL).
+The AD database services (NTDSAI.dll) are working with the Extensible Storage Engine (ESE, ESENT.dll).
 
-Here is a visual diagram of LSASS memory usage on a Domain Controller (DC):
+Here is a visual diagram of LSASS memory usage on a DC:
 
 ![Diagram of the components that use LSASS memory](media/domain-controller-lsass-memory-usage.png)  
 
-The amount of memory that the Lsass.exe process uses on a DC increases in accordance with Active Directory usage. When data is queried, it is cached in memory.  
+The amount of memory that LSASS uses on a DC increases in accordance with Active Directory usage. When data is queried, it is cached in memory.  
 
 LSASS process memory usage can be divided into several parts as illustrated in the above diagram.
 
