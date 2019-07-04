@@ -1,6 +1,6 @@
 ---
-title: User cannot authenticate or must authenticate twice when starting a remote desktop connection
-description: Troubleshooting an issue in which user cannot authenticate or must authenticate twice when starting a remote desktop connection.
+title: User can't authenticate or must authenticate twice when starting a remote desktop connection
+description: Troubleshooting an issue in which user can't authenticate or must authenticate twice when starting a remote desktop connection.
 audience: ITPro ​
 ms.custom: na
 ms.reviewer: rklemen; josh.bender
@@ -15,7 +15,7 @@ ms.date: 06/23/2019
 ms.localizationpriority: medium
 ---
 
-# User cannot authenticate or must authenticate twice
+# User can't authenticate or must authenticate twice
 
 This article addresses several issues that can cause problems that affect user authentication.
 
@@ -28,7 +28,7 @@ In this situation, a Windows 10 user attempting to connect to Windows 10 or Wind
 
 This issue occurs when Network Level Authentication (NLA) is required for RDP connections, and the user is not a member of the **Remote Desktop Users** group. It can also occur if the **Remote Desktop Users** group has not been assigned to the **Access this computer from the network** user right.
 
-To remedy this issue, follow one of these steps:
+To solve this issue, do one of the following things:
 
   - [Modify the user’s group membership or user rights assignment](#modify-the-users-group-membership-or-user-rights-assignment).
   - Turn off NLA (not recommended).
@@ -43,16 +43,16 @@ If the user is already a member of this group (or if multiple group members have
 1. Open Group Policy Object Editor (GPE) and connect to the local policy of the remote computer.
 2. Navigate to **Computer Configuration\\Windows Settings\\Security Settings\\Local Policies\\User Rights Assignment**, right-click **Access this computer from the network**, and then select **Properties**.
 3. Check the list of users and groups for **Remote Desktop Users** (or a parent group).
-4. If the list does not include **Remote Desktop Users** (or a parent group, such as **Everyone**) you need to add it to the list (if you have more than one or two computers in your deployment, use a group policy object).  
+4. If the list doesn't include either **Remote Desktop Users** or a parent group like **Everyone**, you must add it to the list. If you have more than one computer in your deployment, use a group policy object.  
     For example, the default membership for **Access this computer from the network** includes **Everyone**. If your deployment uses a group policy object to remove **Everyone**, you may need to restore access by updating the group policy object to add **Remote Desktop Users**.
 
 ## Access denied, A remote call to the SAM database has been denied
 
 This behavior is most likely to occur if your domain controllers are running Windows Server 2016 or later, and users attempt to connect by using a customized connection app. In particular, applications that access the user’s profile information in Active Directory will be denied access.
 
-This behavior results from a change to Windows. In Windows Server 2012 R2 and earlier versions, when a user logs on to a remote desktop, Remote Connection Manager (RCM) contacts the domain controller (DC) to query the configurations that are specific to Remote Desktop on the user object in Active Directory Domain Services (AD DS). This information is displayed in the Remote Desktop Services Profile tab of a user’s object properties in the Active Directory Users and Computers MMC snap-in.
+This behavior results from a change to Windows. In Windows Server 2012 R2 and earlier versions, when a user signs in to a remote desktop, the Remote Connection Manager (RCM) contacts the domain controller (DC) to query the configurations that are specific to Remote Desktop on the user object in Active Directory Domain Services (AD DS). This information is displayed in the Remote Desktop Services Profile tab of a user’s object properties in the Active Directory Users and Computers MMC snap-in.
 
-Starting in Windows Server 2016, RCM no longer queries the users object in AD DS. If you require RCM to query AD DS because you are using the Remote Desktop Services attributes, you must manually enable the previous RCM behavior.
+Starting in Windows Server 2016, RCM no longer queries the user's object in AD DS. If you need RCM to query AD DS because you're using Remote Desktop Services attributes, you must manually enable the query.
 
 > [!IMPORTANT]  
 > Follow the steps in this section carefully. Serious problems might occur if you modify the registry incorrectly. Before you modify it, [back up the registry for restoration](https://support.microsoft.com/help/322756) in case problems occur.
@@ -69,19 +69,25 @@ To enable the legacy RCM behavior on a server other than a RD Session Host serve
 
 For more information about this behavior, see KB 3200967 [Changes to Remote Connection Manager in Windows Server](https://support.microsoft.com/help/3200967/changes-to-remote-connection-manager-in-windows-server).
 
-## A user cannot sign in by using a smart card
+## User can't sign in using a smart card
 
-This section addresses three common circumstances in which a user cannot sign in to a remote desktop by using a smart card.
+This section addresses three common scenarios where a user can't sign in to a remote desktop using a smart card.
 
-### Cannot sign in with a smart card in a branch office with a RODC
+### Cannot sign in with a smart card in a branch office with a read-only domain controller (RODC)
 
 This issue occurs in deployments that include an RDSH server at a branch site that uses a RODC. The RDSH server is hosted in the root domain. Users at the branch site belong to a child domain, and use smart cards for authentication. The RODC is configured to cache user passwords (the RODC belongs to the **Allowed RODC Password Replication Group**). When users try to sign in to sessions on the RDSH server, they receive messages such as "The attempted logon is invalid. This is either due to a bad username or authentication information."
 
-This is a known issue in the way that the root DC and the RODC manage encryption of the user credentials. The root DC uses an encryption key to encrypts the credentials, and the RODC provides a decryption key to the client. However, the two keys do not match.
+This issue is caused by how the root DC and the RDOC manage user credential encryption. The root DC uses an encryption key to encrypt the credentials and the RODC gives the client the decryption key. When a user receives the "invalid" error, that means the two keys don't match.
 
-To work around this issue, consider changing your DC topology either by turning off password caching on the RODC or by deploying a writeable DC to the branch site. An alternative method is to move the RDSH server to the same child domain as the users. Another alternative is to allow users to sign in without smart cards. Any of these solutions may require compromises in performance or level of security.
+To work around this issue, try one of the following things:
 
-### Cannot sign in with a smart card to a Windows Server 2008 SP2 computer
+- Change your DC topology by turning off password caching on the RODC or deploy a writeable DC to teh branch site.
+- Move the RDSH server to the same child domain as the users.
+- Allow users to sign in without smart cards.
+
+Be advised that all of these solutions require compromises in either performance or security level.
+
+### User can't sign in to a Windows Server 2008 SP2 computer using a smart card
 
 This issue occurs when users sign in to a Windows Server 2008 SP2 computer that has been updated with KB4093227 (2018.4B). When users attempt to sign in using a smart card, they are denied access with messages such as “No valid certificates found. Check that the card is inserted correctly and fits tightly.” At the same time, the Windows Server computer records the Application event "An error occurred while retrieving a digital certificate from the inserted smart card. Invalid Signature."
 
@@ -99,46 +105,51 @@ To resolve this issue, update the remote computer with the appropriate fix:
   - Windows Server 2012 R2: KB 4103724, [May 17, 2018—KB4103724 (Preview of Monthly Rollup)](https://support.microsoft.com/help/4103724/windows-81-update-kb4103724)
   - Windows Server 2016 and Windows 10, version 1607: KB 4103720, [May 17, 2018—KB4103720 (OS Build 14393.2273)](https://support.microsoft.com/help/4103720/windows-10-update-kb4103720)
 
-## If the remote PC is locked, a user needs to enter a password twice
+## If the remote PC is locked, the user needs to enter a password twice
 
-This issue may occur when a user attempts to connect to a remote desktop that is running Windows 10 version 1709 in a deployment in which RDP connections do not require NLA. Under these conditions, if the remote desktop has been locked, the user needs to enter their credential twice when connecting.
+This issue may occur when a user attempts to connect to a remote desktop running Windows 10 version 1709 in a deployment in which RDP connections don't require NLA. Under these conditions, if the remote desktop has been locked, the user needs to enter their credentials twice when connecting.
 
 To resolve this issue, update the Windows 10 version 1709 computer with KB 4343893, [August 30, 2018—KB4343893 (OS Build 16299.637)](https://support.microsoft.com/help/4343893/windows-10-update-kb4343893).
 
 ## User cannot sign in and receives “authentication error” and “CredSSP encryption oracle remediation” messages
 
-When users try to sign in using any version of Windows from Windows Vista SP2 and later versions or Windows Server 2008 SP2 and later versions, they are denied access and receive messages such as the following:
+When users try to sign in using any version of Windows from Windows Vista SP2 and later versions or Windows Server 2008 SP2 and later versions, they're denied access and recieve messages like these:
 
-  - An authentication error has occurred. The function requested is not supported.
-  - This could be due to CredSSP encryption oracle remediation
+```
+An authentication error has occurred. The function requested is not supported.
+...
+This could be due to CredSSP encryption oracle remediation
+...
+```
 
 “CredSSP encryption oracle remediation” refers to a set of security updates released in March, April, and May of 2018. CredSSP is an authentication provider that processes authentication requests for other applications. The March 13, 2018, "3B" and subsequent updates addressed an exploit in which an attacker could relay user credentials to execute code on the target system.
 
-The initial updates added support for a new Group Policy Object, **Encryption Oracle Remediation**, that has the following possible settings:
+The initial updates added support for a new Group Policy Object, Encryption Oracle Remediation, that has the following possible settings:
 
-  - **Vulnerable**. Client applications that use CredSSP can fall back to insecure versions, but this behavior exposes the remote desktops to attacks. Services that use CredSSP accept clients that have not been updated.
-  - **Mitigated**. Client applications that use CredSSP cannot fall back to insecure versions, but services that use CredSSP accept clients that have not been updated.
-  - **Force Updated Clients**. Client applications that use CredSSP cannot fall back to insecure versions, and services that use CredSSP will not accept unpatched clients. 
-    Note: This setting should not be deployed until all remote hosts support the newest version.
+  - Vulnerable: Client applications that use CredSSP can fall back to insecure versions, but this behavior exposes the remote desktops to attacks. Services that use CredSSP accept clients that have not been updated.
+  - Mitigated: Client applications that use CredSSP cannot fall back to insecure versions, but services that use CredSSP accept clients that have not been updated.
+  - Force Updated Clients: Client applications that use CredSSP cannot fall back to insecure versions, and services that use CredSSP will not accept unpatched clients. 
+    > [!NOTE]
+    > This setting should not be deployed until all remote hosts support the newest version.
 
-The May 8, 2018, update changed the default **Encryption Oracle Remediation** setting from **Vulnerable** to **Mitigated**. With this change in place, remote desktop clients that have the updates cannot connect to servers that do not have them (or updated servers that have not been restarted). For more information about the effects of the updates and the types of communication that they block, see KB 4093492, [CredSSP updates for CVE-2018-0886](https://support.microsoft.com/help/4093492/credssp-updates-for-cve-2018-0886-march-13-2018).
+The May 8, 2018 update changed the default Encryption Oracle Remediation setting from Vulnerable to Mitigated. With this change in place, Remote Desktop clients that have the updates can't connect to servers that don't have them (or updated servers that have not been restarted). For more information about the CredSSP updates, see [KB 4093492](https://support.microsoft.com/help/4093492/credssp-updates-for-cve-2018-0886-march-13-2018).
 
-To resolve this issue, ensure that all systems are fully updated and restarted. For a full list of updates and more information about the vulnerabilities, see [CVE-2018-0886 | CredSSP Remote Code Execution Vulnerability](https://portal.msrc.microsoft.com/security-guidance/advisory/CVE-2018-0886).
+To resolve this issue, update and restart all systems. For a full list of updates and more information about the vulnerabilities, see [CVE-2018-0886 | CredSSP Remote Code Execution Vulnerability](https://portal.msrc.microsoft.com/security-guidance/advisory/CVE-2018-0886).
 
 To work around this issue until the updates are complete, check KB 4093492 for allowed types of connections. If there are no feasible alternatives you may consider one of the following methods:
 
-- For the affected client computers, set the **Encryption Oracle Remediation** policy back to **Vulnerable**.
+- For the affected client computers, set the Encryption Oracle Remediation policy back to **Vulnerable**.
 - Modify the following policies in the **Computer Configuration\\Administrative Templates\\Windows Components\\Remote Desktop Services\\Remote Desktop Session Host\\Security** group policy folder:  
   - **Require use of specific security layer for remote (RDP) connections**: set to **Enabled** and select **RDP**.
   - **Require user authentication for remote connections by using Network Level authentication**: set to **Disabled**.
     > [!IMPORTANT]  
-    > These modifications reduce the security of your deployment. They should only be temporary, if you use them at all.
+    > Changing these group policies reduces your deployment's security. We recommend you only use them temporarily, if at all.
 
 For more information about working with group policy, see [Modifying a blocking GPO](rdp-error-general-troubleshooting.md#modifying-a-blocking-gpo).
 
 ## After you update client computers, some users need to sign in twice
 
-Users on some Windows 7 or Windows 10 version 1709 sign in to a remote desktop session, and immediately see a second sign-in screen. This issue occurs if the client computers have received the following updates:
+When users sign in to Remote Desktop using a computer running Windows 7 or Windows 10, version 1709, they immediately see a second sign-in prompt. This issue happens if the client computer has the following updates:
 
   - Windows 7: KB 4103718, [May 8, 2018—KB4103718 (Monthly Rollup)](https://support.microsoft.com/help/4103718/windows-7-update-kb4103718)
   - Windows 10 1709: KB 4103727, [May 8, 2018—KB4103727 (OS Build 16299.431)](https://support.microsoft.com/help/4103727/windows-10-update-kb4103727)
