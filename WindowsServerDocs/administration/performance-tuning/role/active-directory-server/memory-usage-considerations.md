@@ -24,15 +24,15 @@ LSASS is responsible for management of local security authority (LSA) domain aut
 - NTLM authentication protocol
 - Other authentication packages that load into LSA
 
-The AD database services (NTDSAI.dll) work with the Extensible Storage Engine (ESE, ESENT.dll).
+The Active Directory database services (NTDSAI.dll) work with the Extensible Storage Engine (ESE, ESENT.dll).
 
 Here is a visual diagram of LSASS memory usage on a DC:
 
 ![Diagram of the components that use LSASS memory](media/domain-controller-lsass-memory-usage.png)  
 
-The amount of memory that LSASS uses on a DC increases in accordance with Active Directory usage. When data is queried, it is cached in memory.  
+The amount of memory that LSASS uses on a DC increases in accordance with Active Directory usage. When data is queried, it is cached in memory. As a result, it is normal to see LSASS using an amount of memory that is larger than the size of the Active Directory database file (NTDS.dit).
 
-As illustrated in the diagram, LSASS memory usage can be divided into several parts, including the ESE database buffer cache, the ESE version store, and others.
+As illustrated in the diagram, LSASS memory usage can be divided into several parts, including the ESE database buffer cache, the ESE version store, and others. The rest of this article provides insight into each of these parts.
 
 ## ESE database buffer cache  
 The largest variable memory usage within LSASS is the ESE database buffer cache. The size of the cache can range from less than 1 MB to the size of the entire database. Because a larger cache improves performance, the database engine for Active Directory (ESENT) attempts to keep the cache as large as possible. While the size of the cache varies with memory pressure in the computer, the maximum size of the ESE database buffer cache is *only* limited by physical RAM installed in the computer. As long as there is no other memory pressure, the cache can grow to the size of the Active Directory NTDS.dit database file. The more of the database that can be cached, the better the performance of the DC will be.  
