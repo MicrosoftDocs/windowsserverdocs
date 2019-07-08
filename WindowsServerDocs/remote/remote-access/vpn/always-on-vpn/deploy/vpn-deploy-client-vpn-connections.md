@@ -286,17 +286,17 @@ $EAPSettings= $Connection.EapConfigXmlStream.InnerXml
 [!INCLUDE [important-lower-case-true-include](../../../includes/important-lower-case-true-include.md)]
 
 ```xml
-$ProfileXML =
-'<VPNProfile>
-  <DnsSuffix>' + $DnsSuffix + '</DnsSuffix>
+$ProfileXML = @("
+<VPNProfile>
+  <DnsSuffix>$DnsSuffix</DnsSuffix>
   <NativeProfile>
-<Servers>' + $Servers + '</Servers>
+<Servers>$Servers</Servers>
 <NativeProtocolType>IKEv2</NativeProtocolType>
 <Authentication>
   <UserMethod>Eap</UserMethod>
   <Eap>
     <Configuration>
-  '+ $EAPSettings + '
+     $EAPSettings
     </Configuration>
   </Eap>
 </Authentication>
@@ -304,12 +304,13 @@ $ProfileXML =
   </NativeProfile>
   <AlwaysOn>true</AlwaysOn>
   <RememberCredentials>true</RememberCredentials>
-  <TrustedNetworkDetection>' + $TrustedNetwork + '</TrustedNetworkDetection>
+  <TrustedNetworkDetection>$TrustedNetwork</TrustedNetworkDetection>
   <DomainNameInformation>
-<DomainName>' + $DomainName + '</DomainName>
-<DnsServers>' + $DNSServers + '</DnsServers>
+<DomainName>$DomainName</DomainName>
+<DnsServers>$DNSServers</DnsServers>
 </DomainNameInformation>
-</VPNProfile>'
+</VPNProfile>
+")
 ```
 
 ### Output VPN_Profile.xml for Intune
@@ -329,14 +330,8 @@ You can use this script on the Windows 10 desktop or in System Center Configurat
 ### Define key VPN profile parameters
 
 ```xml
-$Script = '$ProfileName = ''' + $ProfileName + '''
+$Script = $ProfileName
 $ProfileNameEscaped = $ProfileName -replace ' ', '%20'
-```
-
-## Define VPN ProfileXML
-
-```xml
-$ProfileXML = ''' + $ProfileXML + '''
 ```
 
 ### Escape special characters in the profile
