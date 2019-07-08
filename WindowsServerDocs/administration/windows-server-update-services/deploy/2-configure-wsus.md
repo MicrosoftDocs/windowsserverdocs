@@ -328,13 +328,13 @@ You must consider the following limitations when you use SSL to secure a WSUS de
 
 1.  Using SSL increases the server workload. You should expect a 10 percent loss of performance because of the cost of encrypting all the metadata that is sent over the network.
 
-2.  if you use WSUS with a remote SQL Server database, the connection between the WSUS server and the database server is not secured by SSL. if the database connection must be secured, consider the following recommendations:
+2.  If you use WSUS with a remote SQL Server database, the connection between the WSUS server and the database server is not secured by SSL. If the database connection must be secured, consider the following recommendations:
 
 -   move the WSUS database to the WSUS server.
 
 -   move the remote database server and the WSUS server to a private network.
 
--   Deploy Internet Protocol security (IPsec) to help secure network traffic. For more information about IPsec, see [Creating and Using IPsec Policies](https://go.microsoft.com/fwlink/?LinkID=203841).
+-   deploy Internet Protocol security (IPsec) to help secure network traffic. For more information about IPsec, see [Creating and Using IPsec Policies](https://go.microsoft.com/fwlink/?LinkID=203841).
 
 ### Configure SSL on the WSUS server
 WSUS requires two ports for SSL: one port that uses HTTPS to send encrypted metadata, and one port that uses HTTP to send updates. When you configure WSUS to use SSL, consider the following:
