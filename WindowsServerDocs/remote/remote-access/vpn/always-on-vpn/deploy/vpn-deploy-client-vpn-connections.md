@@ -464,7 +464,7 @@ However, this does not work in System Center Configuration Manager because you c
 
 The following example script includes all of the code examples from previous sections. Ensure that you change example values to values that are appropriate for your environment.
     
-   ```XML
+   ```VPN_Profile.ps1
     $TemplateName = 'Template'
     $ProfileName = 'Contoso AlwaysOn VPN'
     $Servers = 'vpn.contoso.com'
@@ -483,17 +483,17 @@ The following example script includes all of the code examples from previous sec
     }
     $EAPSettings= $Connection.EapConfigXmlStream.InnerXml
     
-    $ProfileXML =
-    '<VPNProfile>
-      <DnsSuffix>' + $DnsSuffix + '</DnsSuffix>
+    $ProfileXML = @("
+    <VPNProfile>
+      <DnsSuffix>$DnsSuffix</DnsSuffix>
       <NativeProfile>
-    <Servers>' + $Servers + '</Servers>
+    <Servers>$Servers</Servers>
     <NativeProtocolType>IKEv2</NativeProtocolType>
     <Authentication>
       <UserMethod>Eap</UserMethod>
       <Eap>
        <Configuration>
-     '+ $EAPSettings + '
+        $EAPSettings
        </Configuration>
       </Eap>
     </Authentication>
@@ -501,19 +501,18 @@ The following example script includes all of the code examples from previous sec
       </NativeProfile>
     <AlwaysOn>true</AlwaysOn>
     <RememberCredentials>true</RememberCredentials>
-    <TrustedNetworkDetection>' + $TrustedNetwork + '</TrustedNetworkDetection>
+    <TrustedNetworkDetection>$TrustedNetwork</TrustedNetworkDetection>
       <DomainNameInformation>
-    <DomainName>' + $DomainName + '</DomainName>
-    <DnsServers>' + $DNSServers + '</DnsServers>
+    <DomainName>$DomainName</DomainName>
+    <DnsServers>$DNSServers</DnsServers>
     </DomainNameInformation>
-    </VPNProfile>'
+    </VPNProfile>
+    ")
     
     $ProfileXML | Out-File -FilePath ($env:USERPROFILE + '\desktop\VPN_Profile.xml')
     
-    $Script = '$ProfileName = ''' + $ProfileName + '''
+    $Script = $ProfileName
     $ProfileNameEscaped = $ProfileName -replace ' ', '%20'
-    
-    $ProfileXML = ''' + $ProfileXML + '''
     
     $ProfileXML = $ProfileXML -replace '<', '&lt;'
     $ProfileXML = $ProfileXML -replace '>', '&gt;'
