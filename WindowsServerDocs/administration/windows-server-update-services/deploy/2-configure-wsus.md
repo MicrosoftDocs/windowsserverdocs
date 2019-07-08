@@ -321,7 +321,7 @@ You can use the Secure Sockets Layer (SSL) protocol to help secure the WSUS depl
 > [!IMPORTANT]
 > Clients and downstream servers that are configured to use Transport Layer Security (TLS) or HTTPS must also be configured to use a fully qualified domain name (FQDN) for their upstream WSUS server.
 
-WSUS uses SSL for metadata only, not for update files. This is the same way that Microsoft Update distributes updates. Microsoft reduces the risk of sending update files over an unencrypted channel by signing each update. In addition, a hash is computed and sent together with the metadata for each update. When an update is downloaded, WSUS checks the digital signature and hash. if the update has been changed, it is not installed.
+WSUS uses SSL for metadata only, not for update files. This is the same way that Microsoft Update distributes updates. Microsoft reduces the risk of sending update files over an unencrypted channel by signing each update. In addition, a hash is computed and sent together with the metadata for each update. When an update is downloaded, WSUS checks the digital signature and hash. If the update has been changed, it is not installed.
 
 ### Limitations of WSUS SSL deployments
 You must consider the following limitations when you use SSL to secure a WSUS deployment:
