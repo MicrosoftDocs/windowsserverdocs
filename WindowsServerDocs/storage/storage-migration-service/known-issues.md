@@ -204,28 +204,28 @@ This error is expected if your Windows Server 2008 R2 computer isn't fully patch
 
 When attempting to transfer data from a source computer, some or all shares do not transfer, with summary error:
 
-  Couldn't transfer storage on any of the endpoints.
-  0x9044
+   Couldn't transfer storage on any of the endpoints.
+   0x9044
 
 Examining the SMB transfer details shows error:
 
-  Check if the source device is online - we couldn't access it.
+   Check if the source device is online - we couldn't access it.
 
 Examining the StorageMigrationService/Admin event log shows:
 
-  Couldn't transfer storage.
+   Couldn't transfer storage.
 
-  Job: Job1
-  ID:  
-  State: Failed
-  Error: 36931
-  Error Message: 
+   Job: Job1
+   ID:  
+   State: Failed
+   Error: 36931
+   Error Message: 
 
-  Guidance: Check the detailed error and make sure the transfer requirements are met. The transfer job couldn't transfer any source and destination computers. This could be because the orchestrator computer couldn't reach any source or destination computers, possibly due to a firewall rule, or missing permissions.
+   Guidance: Check the detailed error and make sure the transfer requirements are met. The transfer job couldn't transfer any source and destination computers. This could be because the orchestrator computer couldn't reach any source or destination computers, possibly due to a firewall rule, or missing permissions.
 
 Examining the StorageMigrationService-Proxy/Debug log shows:
 
-  07/02/2019-13:35:57.231 [Erro] Transfer validation failed. ErrorCode: 40961, Source endpoint is not reachable, or doesn't exist, or source credentials are invalid, or authenticated user doesn't have sufficient permissions to access it.
+   07/02/2019-13:35:57.231 [Erro] Transfer validation failed. ErrorCode: 40961, Source endpoint is not reachable, or doesn't exist, or source credentials are invalid, or authenticated user doesn't have sufficient permissions to access it.
    at Microsoft.StorageMigration.Proxy.Service.Transfer.TransferOperation.Validate()
    at Microsoft.StorageMigration.Proxy.Service.Transfer.TransferRequestHandler.ProcessRequest(FileTransferRequest fileTransferRequest, Guid operationId)    [d:\os\src\base\dms\proxy\transfer\transferproxy\TransferRequestHandler.cs::
 
