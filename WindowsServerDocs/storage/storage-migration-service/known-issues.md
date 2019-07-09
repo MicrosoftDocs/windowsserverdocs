@@ -229,7 +229,7 @@ Examining the StorageMigrationService-Proxy/Debug log shows:
    at Microsoft.StorageMigration.Proxy.Service.Transfer.TransferOperation.Validate()
    at Microsoft.StorageMigration.Proxy.Service.Transfer.TransferRequestHandler.ProcessRequest(FileTransferRequest fileTransferRequest, Guid operationId)    [d:\os\src\base\dms\proxy\transfer\transferproxy\TransferRequestHandler.cs::
 
-This error is expected if your migration account does not have at least Read access permissions to the SMB shares. To workaround this error, add a security group containing the source migration account to the SMB shares on the source computer and grant it Read, Change, or Full Control. After the migration completes, you can remove this group. A future release of Windows Server will change this behavior to no longer require explicit permissions to the source shares.
+This error is expected if your migration account does not have at least Read access permissions to the SMB shares. To workaround this error, add a security group containing the source migration account to the SMB shares on the source computer and grant it Read, Change, or Full Control. After the migration completes, you can remove this group. A future release of Windows Server may change this behavior to no longer require explicit permissions to the source shares.
 
 ## See also
 
