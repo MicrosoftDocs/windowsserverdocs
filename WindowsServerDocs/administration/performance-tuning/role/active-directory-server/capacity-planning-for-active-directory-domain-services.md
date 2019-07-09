@@ -1,3 +1,14 @@
+---
+title: Capacity planning for Active Directory Domain Services
+description: Detailed discussion of the factors to consider during capacity planning for AD DS.
+ms.prod: windows-server-threshold
+ms.technology: performance-tuning-guide
+ms.topic: article
+ms.author: v-tea; kenbrunf
+author: Teresa-Motiv
+ms.date: 7/3/2019
+---
+
 # Capacity planning for Active Directory Domain Services
 
 This topic is originally written by Ken Brumfield, Senior Premier Field Engineer at Microsoft, and provides recommendations for capacity planning for Active Directory Domain Services (AD DS).
