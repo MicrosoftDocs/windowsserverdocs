@@ -46,7 +46,6 @@ Below is the list of hotfixes and update rollups that have been released for Act
 
 |KB # |Description|Date Released
 |----- | ----- |-----
-[https://support.microsoft.com/en-us/help/4507448/windows-8-1-update-kb4507448]
 |[4507448](https://support.microsoft.com/en-us/help/4507448/windows-8-1-update-kb4507448)| This security update addresses a vulnerability in Active Directory Federation Services (AD FS) which could allow an attacker to bypass the extranet lockout policy. |July 2019|
 |[4041685](https://support.microsoft.com/kb/4041685)|Addressed an AD FS issue where MSISConext cookies in request headers can eventually overflow the headers size limit and cause failure to authenticate with HTTP status code 400 “Bad Request - Header Too Long".</br></br>Fixed a problem where ADFS can no longer ignore "prompt=login" during authentication. A "Disabled" option was added to restore scenarios where non-password authentication is used.|October 2017 Preview of Update Rollup|
 |[4019217](https://support.microsoft.com/kb/4019217)|Work Folders clients using token broker do not work when using a Server 2012 R2 AD FS Server|May 2017 Preview Update Rollup|
