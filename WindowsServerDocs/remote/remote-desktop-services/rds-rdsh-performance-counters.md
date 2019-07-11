@@ -13,12 +13,14 @@ ms.localizationpriority: medium
 ---
 # Use performance counters to diagnose app performance problems on Remote Desktop Session Hosts
 
-> Applies to: Windows Server 2019
+> Applies to: Windows Server 2019, Windows 10
 
 One of the most difficult problems to diagnose is poor application performance—the applications are running slow or don't respond. Traditionally, you start your diagnosis by collecting CPU, memory, disk input/output, and other metrics and then use tools like Windows Performance Analyzer to try to figure out what's causing the problem. Unfortunately, in most situations this data doesn't help you identify the root cause because resource consumption counters have frequent and large variations. This makes it hard to read the data and correlate it with the reported issue. To help you solve your app performance issues quickly, we've added some new performance counters (available [to download](#download-windows-server-insider-software) through the [Windows Insider Program](https://insider.windows.com)) that measure user input flows.
 
 >[!NOTE]
->The User Input Delay counter is only compatible with Windows Server 2019 and later.
+>The User Input Delay counter is only compatible with:
+> - Windows Server 2019 or later
+> - Windows 10, version 1809 or later
 
 The User Input Delay counter can help you quickly identify the root cause for bad end user RDP experiences. This counter measures how long any user input (such as mouse or keyboard usage) stays in the queue before it is picked up by a process, and the counter works in both local and remote sessions.
 
