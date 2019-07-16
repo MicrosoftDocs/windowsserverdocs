@@ -21,66 +21,36 @@ ms.technology: identity-adds
 During a Windows Update, there are user specific processes that must happen for the update to be complete. These processes require the user to be logged in to their device. On the first login after an update has been initiated, users must wait until these user specific processes are complete before they can start using their device.
 
 ## How Does it Work?
-When Windows Update initiates an automatic reboot, ARSO extracts the currently signed in user’s derived credentials and configures Autologon for the user. Windows Update running as system with TCB privilege will initiate the RPC call to do this.
+When Windows Update initiates an automatic reboot, ARSO extracts the currently logged in user’s derived credentials, persists it to disk, and configures Autologon for the user. Windows Update running as system with TCB privilege will initiate the RPC call to do this.
 
-On rebooting, the user will automatically be signed in via the Autologon mechanism and then additionally locked to protect the user's session. The locking will be initiated via Winlogon whereas the credential management is done by the Local Security Authority (LSA). Upon a successful ARSO configuration and login, the credentials are immediately wiped from memory.
+After the final Windows Update reboot, the user will automatically be logged in via the Autologon mechanism, and the user's session is rehydrated with the persisted secrets. Additionally, the device is locked to protect the user's session. The locking will be initiated via Winlogon whereas the credential management is done by the Local Security Authority (LSA). Upon a successful ARSO configuration and login, the saved credentials are immediately deleted from disk.
 
- By automatically signing on and locking the user on the console, Windows Update can complete the user specific processes before the user returns to the device. In this way, the user can immediately start using their device.
+By automatically logging in and locking the user on the console, Windows Update can complete the user specific processes before the user returns to the device. In this way, the user can immediately start using their device.
 
- ARSO treats unmanaged and managed devices differently. For unmanaged devices, device encryption is used but not required for the user to get ARSO.
- For managed devices, TPM 2.0, SecureBoot, and BitLocker are required for ARSO configuration. IT admins can override this requirement via Group Policy. ARSO for managed devices is currently only available for devices that are joined to Azure Active Directory.
+ARSO treats unmanaged and managed devices differently. For unmanaged devices, device encryption is used but not required for the user to get ARSO. For managed devices, TPM 2.0, SecureBoot, and BitLocker are required for ARSO configuration. IT admins can override this requirement via Group Policy. ARSO for managed devices is currently only available for devices that are joined to Azure Active Directory.
 
 
 
 |               | Windows Update| shutdown -g -t 0  |User-initiated reboots|APIs with SHUTDOWN_ARSO / EWX_ARSO flags|
-| ------------- |:-------------:| -----:            | -----:               |-----:                                  |
+| ------------- |:-------------:| :-----:            | :----:               |:-----:                                  |
 | Managed Devices|:heavy_check_mark:  | :heavy_check_mark:    |              | :heavy_check_mark:    |
 | Unmanaged Devices    | :heavy_check_mark: |:heavy_check_mark: |  :heavy_check_mark:           |:heavy_check_mark:
 
 
 > [!NOTE]
-> After a Windows Update induced reboot, the last interactive user is automatically signed on and the session is locked. This gives the ability for a user's lock screen apps to still run despite the Windows Update reboot.
+> After a Windows Update induced reboot, the last interactive user is automatically logged in and the session is locked. This gives the ability for a user's lock screen apps to still run despite the Windows Update reboot.
 
 ![Settings Page](media/Winlogon-Automatic-Restart-Sign-On--ARSO-/GTR_ADDS_LockScreenApp.PNG)
 
-
-
-**Quick Overview**
-
--   Windows Update requires restart
-
--   Is computer able to restart (*no apps running that would lose data*)?
-
-    -   Restart for you
-
-    -   Log back in
-
-    -   Lock machine
-
--   Enabled or disabled by Group Policy
-
-    -   Disabled in server SKUs
-
--   Why?
-
-    -   Some updates cannot finish until the user logs back in.
-
-    -   Better user experience: don't have to wait 15 minutes for updates to finish installing
-
--   How? AutoLogon
-
-    -   Stores password, uses that credential to log you in
-
-    -   Saves credential as an LSA secret in paged memory
-
-    -   If on a managed device, can only be enabled by default if the required hardware security features are enabled  
-
-## Group Policy: Sign-in last interactive user automatically after a system-initiated restart
+## Policy #1: Sign-in and lock last interactive user automatically after a restart
 In Windows 10, ARSO is disabled for Server SKUs and opt out for Client SKUs.
 
-**Policy location:** Computer Configuration > Administrative Templates > Windows Components > Windows Logon Option
+**Group policy location:** Computer Configuration > Administrative Templates > Windows Components > Windows Logon Options
 
-**Policy Name:** Sign-in and lock last interactive user automatically after a restart
+**Intune policy location:** 
+- Platform: Windows 10 and later
+- Profile type: Administrative Templates
+- Path: \Windows Components\Windows Logon Options
 
 **Supported on:** At least Windows 10 Version 1903
 
@@ -98,9 +68,7 @@ After enabling this policy, you can configure its settings through the ConfigAut
 
 If you disable this policy setting, the device does not configure automatic sign in. The user’s lock screen apps are not restarted after the system restarts.
 
-
-
-**Registry Editor**
+**Registry Editor:**
 
 |Value Name|Type|Data|
 |--------------|--------|--------|
@@ -110,19 +78,15 @@ If you disable this policy setting, the device does not configure automatic sign
 
 **Type:** DWORD
 
-**Registry Name:** DisableAutomaticRestartSignOn
-
-Value: 0 or 1
-
-0 = Enable ARSO
-
-1 = Disable ARSO
-
 ![winlogon](media/Winlogon-Automatic-Restart-Sign-On--ARSO-/GTR_ADDS_SignInPolicy.png)<br>
 
-**Policy location:** Computer Configuration > Administrative Templates > Windows Components > Windows Logon Option <br>
+## Policy #2: Configure the mode of automatically signing in and locking last interactive user after a restart or cold boot
+**Group policy location:** Computer Configuration > Administrative Templates > Windows Components > Windows Logon Options <br>
 
-**Policy Name:** Configure the mode of automatically signing in and locking last interactive user after a restart or cold boot<br>
+**Intune policy location:** 
+- Platform: Windows 10 and later
+- Profile type: Administrative Templates
+- Path: \Windows Components\Windows Logon Options
 
 **Supported on:** At least Windows 10 Version 1903<br>
 
@@ -144,17 +108,9 @@ If you disable or don’t configure this setting, automatic sign on will default
 |--------------|--------|--------|
 |AutomaticRestartSignOnConfig|DWORD|<br />0 (Enable ARSO if secure)<br> 1 (Enable ARSO always)|
 
-**Policy Registry Location:**<br>
- HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System
+**Policy Registry Location:** HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System
 
 **Type:** DWORD
-
-**Registry Name:** AutomaticRestartSignOnConfig
-
-**Value:** 0 or 1
-
-0 = Enable ARSO if secure<br>
-1 = Enable ARSO always
 
 ![winlogon](media/Winlogon-Automatic-Restart-Sign-On--ARSO-/ARSO_Policy_Setting.png)<br>
 ## Troubleshooting
@@ -190,8 +146,14 @@ The Logon Hours and parental controls can prohibit a new user session from being
 
 ## Security Details
 ### Credentials Stored
-
-### Credguard Interaction
+|          | Password hash     | Credential key   | Ticket-granting ticket|Primary refresh token |
+| ---------|:-----------------:|:----------------:|:---------------------:|:--------------------:|
+| Local account|:heavy_check_mark:|:heavy_check_mark:|                       |                       |
+|MSA account| :heavy_check_mark:  |:heavy_check_mark:|                       |              |
+|Cloud domain joined account| :heavy_check_mark: |:heavy_check_mark:| :heavy_check_mark:<br>(if hybrid)  |:heavy_check_mark:    |
+|Domain joined account| :heavy_check_mark: |:heavy_check_mark:|    :heavy_check_mark:    |:heavy_check_mark:<br>(if hybrid)  |
+### Credential Guard Interaction
+If a device has Credential Guard enabled, a user's derived secrets are encrypted with a key specific to the current boot session. Therefore, ARSO is not currently supported on devices with Credential Guard enabled.
 
 ## Additional Resources
 **Table  SEQ Table \\\* ARABIC 3: ARSO Glossary**
