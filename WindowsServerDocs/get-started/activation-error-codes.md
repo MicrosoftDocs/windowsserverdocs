@@ -46,12 +46,12 @@ When you try to use a Multiple Activation Key (MAK) or the Key Management Servic
 |[0x8007232A](#0x8007232a-dns-server-failure) |DNS server failure.  |KMS host  |
 |[0x8007232B](#0x8007232b-dns-name-does-not-exist) |DNS name does not exist. |KMS client |
 |[0x800706BA](#0x800706ba-the-rpc-server-is-unavailable) |The RPC server is unavailable. |KMS client |
-|[0x8007251D](#0x8007251d-no-records-found-for-DNS-query) |No records found for DNS query. |KMS client |
+|[0x8007251D](#0x8007251d-no-records-found-for-dns-query) |No records found for DNS query. |KMS client |
 |[0xC004F074](#0xc004f074-no-key-management-service-kms-could-be-contacted) |The Software Protection Service reported that the computer could not be activated. No Key Management Service (KMS) could be contacted. Please see the Application Event Log for additional information.  |KMS Client |
 |[0x8004FE21](#0x8004fe21-this-computer-is-not-running-genuine-windows) |This computer is not running genuine Windows.  |MAK/KMS client |
 |[0x80092328](#0x80092328-dns-name-does-not-exist) |0x80092328 DNS name does not exist.  |KMS client |
 |[0x8007007b](#0x8007007b-dns-name-does-not-exist) |0x8007007b DNS name does not exist. |KMS client |
-|[0x80070490](#0x80070490-the-product-key-you-entered-didn-t-work) |The product key you entered didn't work. Check the product key and try again, or enter a different one. |MAK |
+|[0x80070490](#0x80070490-the-product-key-you-entered-didnt-work) |The product key you entered didn't work. Check the product key and try again, or enter a different one. |MAK |
 
 ## 0xC004C001 The activation server determined the specified product key is invalid
 
