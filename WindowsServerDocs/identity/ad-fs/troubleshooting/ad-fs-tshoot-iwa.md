@@ -62,13 +62,14 @@ By default, Internet explorer will be have the following way:
 
 There are 2 main things that can prevent this from happeing.
    - Enable Integrated Windows Authentication is not checked in the properties of IE.  This located under Internet Options -> Advanced -> Security.
-![integrated](media/ad-fs-tshoot-iwa/iwa4.png)
+   
+   ![integrated](media/ad-fs-tshoot-iwa/iwa4.png)
    
    - Security zones are not configured properly
        - FQDNs are not in the intranet zone
        - AD FS URL is not in the intranet zone.
 
-![integrated](media/ad-fs-tshoot-iwa/iwa5.png)
+      ![integrated](media/ad-fs-tshoot-iwa/iwa5.png)
 ## Next Steps
 
 - [AD FS Troubleshooting](ad-fs-tshoot-overview.md)

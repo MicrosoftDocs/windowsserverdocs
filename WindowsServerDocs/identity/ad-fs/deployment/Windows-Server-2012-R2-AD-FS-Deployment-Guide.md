@@ -12,9 +12,8 @@ ms.prod: windows-server-threshold
 ms.technology: identity-adfs
 ---
 
-# Windows Server 2016 and 2012 R2 AD FS Deployment Guide
+# Windows Server AD FS Deployment Guide
 
->Applies To: Windows Server 2016, Windows Server 2012 R2
 
 You can use Active Directory Federation Services \(AD FS\) with the  Windows Server 2016 and 2012 R2  operating system to build a federated identity management solutions that extend distributed identification, authentication, and authorization services to Web\-based applications across organization and platform boundaries. By deploying AD FS, you can extend your organization’s existing identity management capabilities to the Internet.  
   

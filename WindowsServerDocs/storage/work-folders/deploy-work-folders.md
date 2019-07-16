@@ -30,22 +30,22 @@ This topic discusses the steps needed to deploy Work Folders. It assumes that yo
 ## Step 1: Obtain SSL certificates  
  Work Folders uses HTTPS to securely synchronize files between the Work Folders clients and the Work Folders server. The requirements for SSL certificates used by Work Folders are as follows:  
   
--   The certificate must be issued by a trusted certification authority. For most Work Folders implementations, a publicly trusted CA is recommended, since certificates will be used by non-domain-joined, Internet-based devices.  
+- The certificate must be issued by a trusted certification authority. For most Work Folders implementations, a publicly trusted CA is recommended, since certificates will be used by non-domain-joined, Internet-based devices.  
   
--   The certificate must be valid.  
+- The certificate must be valid.  
   
--   The private key of the certificate must be exportable (as you will need to install the certificate on multiple servers).  
+- The private key of the certificate must be exportable (as you will need to install the certificate on multiple servers).  
   
--   The subject name of the certificate must contain the public Work Folders URL used for discovering the Work Folders service from across the Internet – this must be in the format of `workfolders.`*<domain_name>*.  
+- The subject name of the certificate must contain the public Work Folders URL used for discovering the Work Folders service from across the Internet – this must be in the format of `workfolders.`*<domain_name>*.  
   
--   Subject alternative names (SANs) must be present on the certificate listing the server name for each sync server in use.
+- Subject alternative names (SANs) must be present on the certificate listing the server name for each sync server in use.
 
- The Work Folders Certificate Management [blog](https://blogs.technet.microsoft.com/filecab/2013/08/09/work-folders-certificate-management/) provides additional information on using certificates with Work Folders.
+  The Work Folders Certificate Management [blog](https://blogs.technet.microsoft.com/filecab/2013/08/09/work-folders-certificate-management/) provides additional information on using certificates with Work Folders.
   
 ## Step 2: Create DNS records  
  To allow users to sync across the Internet, you must create a Host (A) record in public DNS to allow Internet clients to resolve your Work Folders URL. This DNS record should resolve to the external interface of the reverse proxy server.  
   
- On your internal network, create a CNAME record in DNS named workfolders which resolves to the FDQN of a Work Folders server. When Work Folders clients use auto discovery, the URL used to discover the Work Folders server is https://workfolders.domain.com. If you plan to use auto discovery, the workfolders CNAME record must exist in DNS.  
+ On your internal network, create a CNAME record in DNS named workfolders which resolves to the FDQN of a Work Folders server. When Work Folders clients use auto discovery, the URL used to discover the Work Folders server is https:\//workfolders.domain.com. If you plan to use auto discovery, the workfolders CNAME record must exist in DNS.  
   
 ## Step 3: Install Work Folders on file servers  
  You can install Work Folders on a domain-joined server by using Server Manager or by using Windows PowerShell, locally or remotely across a network. This is useful if you are configuring multiple sync servers across your network.  
@@ -90,9 +90,9 @@ Add-WindowsFeature FS-SyncShareService
 
 - One group for all Work Folders administrators so that they can edit an attribute on each user object that links the user to the correct sync server (if you're going to use multiple sync servers)
 
- Groups should follow a standard naming convention and should be used only for Work Folders to avoid potential conflicts with other security requirements.
+  Groups should follow a standard naming convention and should be used only for Work Folders to avoid potential conflicts with other security requirements.
 
- To create the appropriate security groups, use the following procedure multiple times – once for each sync share, and once to optionally create a group for file server administrators.
+  To create the appropriate security groups, use the following procedure multiple times – once for each sync share, and once to optionally create a group for file server administrators.
 
 #### To create security groups for Work Folders
 
@@ -160,38 +160,38 @@ DsAcls $ADGroupPath /I:S /G ""$GroupName":RPWP;msDS-SyncServerUrl;user"
 ## Step 7: Create sync shares for user data  
  At this point, you're ready to designate a folder on the sync server to store your user's files. This folder is called a sync share, and you can use the following procedure to create one.  
   
-1.  If you don't already have an NTFS volume with free space for the sync share and the user files it will contain, create a new volume and format it with the NTFS file system.  
+1. If you don't already have an NTFS volume with free space for the sync share and the user files it will contain, create a new volume and format it with the NTFS file system.  
   
-2.  In Server Manager, click **File and Storage Services**, and then click **Work Folders**.  
+2. In Server Manager, click **File and Storage Services**, and then click **Work Folders**.  
   
-3.  A list of any existing sync shares is visible at the top of the details pane. To create a new sync share, from the **Tasks** menu choose **New Sync Share…**. The New Sync Share Wizard appears.  
+3. A list of any existing sync shares is visible at the top of the details pane. To create a new sync share, from the **Tasks** menu choose **New Sync Share…**. The New Sync Share Wizard appears.  
   
-4.  On the **Select the server and path** page, specify where to store the sync share. If you already have a file share created for this user data, you can choose that share. Alternatively you can create a new folder.  
+4. On the **Select the server and path** page, specify where to store the sync share. If you already have a file share created for this user data, you can choose that share. Alternatively you can create a new folder.  
   
-    > [!NOTE]
-    >  By default, sync shares aren't directly accessible via a file share (unless you pick an existing file share). If you want to make a sync share accessible via a file share, use the **Shares** tile of Server Manager or the [New-SmbShare](https://technet.microsoft.com/library/jj635722.aspx) cmdlet to create a file share, preferably with access-based enumeration enabled.  
+   > [!NOTE]
+   >  By default, sync shares aren't directly accessible via a file share (unless you pick an existing file share). If you want to make a sync share accessible via a file share, use the **Shares** tile of Server Manager or the [New-SmbShare](https://technet.microsoft.com/library/jj635722.aspx) cmdlet to create a file share, preferably with access-based enumeration enabled.  
   
-5.  On the **Specify the structure for user folders** page, choose a naming convention for user folders within the sync share. There are two options available:  
+5. On the **Specify the structure for user folders** page, choose a naming convention for user folders within the sync share. There are two options available:  
   
-    -   **User alias** creates user folders that don't include a domain name. If you are using a file share that is already in use with Folder Redirection or another user data solution, select this naming convention. You can optionally select the **Sync only the following subfolder** checkbox to sync only a specific subfolder, such as the Documents folder.  
+   - **User alias** creates user folders that don't include a domain name. If you are using a file share that is already in use with Folder Redirection or another user data solution, select this naming convention. You can optionally select the **Sync only the following subfolder** checkbox to sync only a specific subfolder, such as the Documents folder.  
   
-    -   **User alias@domain** creates user folders that include a domain name. If you aren't using a file share already in use with Folder Redirection or another user data solution, select this naming convention to eliminate folder naming conflicts when multiple users of the share have identical aliases (which can happen if the users belong to different domains).  
+   - <strong>User alias@domain</strong> creates user folders that include a domain name. If you aren't using a file share already in use with Folder Redirection or another user data solution, select this naming convention to eliminate folder naming conflicts when multiple users of the share have identical aliases (which can happen if the users belong to different domains).  
   
-6.  On the **Enter the sync share name** page, specify a name and a description for the sync share. This is not advertised on the network but is visible in Server Manager and Windows Powershell to help distinguish sync shares from each other.  
+6. On the **Enter the sync share name** page, specify a name and a description for the sync share. This is not advertised on the network but is visible in Server Manager and Windows Powershell to help distinguish sync shares from each other.  
   
-7.  On the **Grant sync access to groups** page, specify the group that you created that lists the users allowed to use this sync share.  
+7. On the **Grant sync access to groups** page, specify the group that you created that lists the users allowed to use this sync share.  
   
-    > [!IMPORTANT]
-    >  To improve performance and security, grant access to groups instead of individual users and be as specific as possible, avoiding generic groups such as Authenticated Users and Domain Users. Granting access to groups with large numbers of users increases the time it takes Work Folders to query AD DS. If you have a large number of users, create multiple sync shares to help disperse the load.  
+   > [!IMPORTANT]
+   >  To improve performance and security, grant access to groups instead of individual users and be as specific as possible, avoiding generic groups such as Authenticated Users and Domain Users. Granting access to groups with large numbers of users increases the time it takes Work Folders to query AD DS. If you have a large number of users, create multiple sync shares to help disperse the load.  
   
-8.  On the **Specify device policies** page, specify whether to request any security restrictions on client PCs and devices. There are two device policies that can be individually selected:  
+8. On the **Specify device policies** page, specify whether to request any security restrictions on client PCs and devices. There are two device policies that can be individually selected:  
   
-    -   **Encrypt Work Folders** Requests that Work Folders be encrypted on client PCs and devices  
+   -   **Encrypt Work Folders** Requests that Work Folders be encrypted on client PCs and devices  
   
-    -   **Automatically lock screen, and require a password** Requests that client PCs and devices automatically lock their screens after 15 minutes, require a six-character or longer password to unlock the screen, and activate a device lockout mode after 10 failed retries  
+   -   **Automatically lock screen, and require a password** Requests that client PCs and devices automatically lock their screens after 15 minutes, require a six-character or longer password to unlock the screen, and activate a device lockout mode after 10 failed retries  
   
-        > [!IMPORTANT]
-        >  To enforce password policies for Windows 7 PCs and for non-administrators on domain-joined PCs, use Group Policy password policies for the computer domains and exclude these domains from the Work Folders password policies. You can exclude domains by using the [Set-Syncshare -PasswordAutoExcludeDomain](https://technet.microsoft.com/library/dn296649\(v=wps.630\).aspx) cmdlet after creating the sync share. For information about setting Group Policy password policies, see [Password Policy](https://technet.microsoft.com/library/hh994572(v=ws.11).aspx).  
+       > [!IMPORTANT]
+       >  To enforce password policies for Windows 7 PCs and for non-administrators on domain-joined PCs, use Group Policy password policies for the computer domains and exclude these domains from the Work Folders password policies. You can exclude domains by using the [Set-Syncshare -PasswordAutoExcludeDomain](https://technet.microsoft.com/library/dn296649\(v=wps.630\).aspx) cmdlet after creating the sync share. For information about setting Group Policy password policies, see [Password Policy](https://technet.microsoft.com/library/hh994572(v=ws.11).aspx).  
   
 9. Review your selections and complete the wizard to create the sync share.
 
@@ -245,7 +245,7 @@ The example above creates a new sync share named *Share01* with the path *K:\Sha
 6.  In the **Value to add** box, type the URL of the sync server with which you want this user to sync, click **Add**, click **OK**, and then click **OK** again.  
   
     > [!NOTE]
-    >  The sync server URL is simply `https://` or `http://` (depending on whether you want to require a secure connection) followed by the fully qualified domain name of the sync server. For example, **https://sync1.contoso.com**.
+    >  The sync server URL is simply `https://` or `http://` (depending on whether you want to require a secure connection) followed by the fully qualified domain name of the sync server. For example, **https:\//sync1.contoso.com**.
 
 To populate the attribute for multiple users, use Active Directory PowerShell. Below is an example that populates the attribute for all members of the *HR Sync Share Users* group, discussed in Step 5.
   
@@ -270,15 +270,15 @@ To configure Work Folders access using Azure Active Directory Application Proxy,
 
 If you have a large number of domain-joined PCs to which you want to deploy Work Folders, you can use Group Policy to do the following client PC configuration tasks:  
   
--   Specify which sync server users should sync with  
+- Specify which sync server users should sync with  
   
--   Force Work Folders to be set up automatically, using default settings (review the Group Policy discussion in [Designing a Work Folders Implementation](plan-work-folders.md) before doing this)  
+- Force Work Folders to be set up automatically, using default settings (review the Group Policy discussion in [Designing a Work Folders Implementation](plan-work-folders.md) before doing this)  
   
- To control these settings, create a new Group Policy object (GPO) for Work Folders and then configure the following Group Policy settings as appropriate:  
+  To control these settings, create a new Group Policy object (GPO) for Work Folders and then configure the following Group Policy settings as appropriate:  
   
--   "Specify Work Folders settings" policy setting in User Configuration\Policies\Administrative Templates\Windows Components\WorkFolders  
+- "Specify Work Folders settings" policy setting in User Configuration\Policies\Administrative Templates\Windows Components\WorkFolders  
   
--   "Force automatic setup for all users" policy setting in Computer Configuration\Policies\Administrative Templates\Windows Components\WorkFolders  
+- "Force automatic setup for all users" policy setting in Computer Configuration\Policies\Administrative Templates\Windows Components\WorkFolders  
   
 > [!NOTE]
 >  These policy settings are available only when editing Group Policy from a computer running Group Policy Management on Windows 8.1, Windows Server 2012 R2 or later. Versions of Group Policy Management from earlier operating systems do not have this setting available. These policy settings do apply to Windows 7 PCs on which the [Work Folders for Windows 7](http://blogs.technet.com/b/filecab/archive/2014/04/24/work-folders-for-windows-7.aspx) app has been installed.  

@@ -12,8 +12,6 @@ ms.prod: windows-server-threshold
 ms.technology: identity-adfs
 ---
 # Change the company name on the AD FS sign-in page
-
->Applies To: Windows Server 2016, Windows Server 2012 R2
  
 To change the name of the company that is displayed on the sign\-in page, use the following Windows PowerShell cmdlet and syntax. This value is set by default by using the value from the Federation Service display name that you entered during setup.  
 

@@ -12,7 +12,7 @@ ms.author: jgerend
 
 # Setting File Server Resource Manager Options
 
-> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2
+> Applies to: Windows Server 2019, Windows Server 2016, Windows Server (Semi-Annual Channel), Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2
 
 The general File Server Resource Manager options can be set in the **File Server Resource Manager Options** dialog box. These settings are used throughout the nodes, and some of them can be modified when you work with quotas, screen files, or generate storage reports.
 

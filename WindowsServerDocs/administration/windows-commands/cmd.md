@@ -17,8 +17,6 @@ ms.date: 10/16/2017
 
 # Cmd
 
-
-
 Starts a new instance of the command interpreter, Cmd.exe. If used without parameters, **cmd** displays the version and copyright information of the operating system.
 
 ## Syntax
@@ -73,10 +71,12 @@ The following table lists valid hexadecimal digits that you can use as the value
 
 -   Using multiple commands
 
-    To use multiple commands for \<String>, separate them by the command separator **&&** and enclose them in quotation marks. For example:  
+    To use multiple commands for \<String>, separate them by the command separator **&&** and enclose them in quotation marks. For example:
+
     ```
     "<Command>&&<Command>&&<Command>"
-    ```  
+    ``` 
+ 
 -   Processing quotation marks
 
     If you specify **/c** or **/k**, **cmd** processes the remainder of *String,* and quotation marks are preserved only if all of the following conditions are met:  
@@ -99,6 +99,7 @@ The following table lists valid hexadecimal digits that you can use as the value
 
 > [!CAUTION]
 > Incorrectly editing the registry may severely damage your system. Before making changes to the registry, you should back up any valued data on the computer.
+
 -   Enabling and disabling command extensions
 
     Command extensions are enabled by default in Windows XP. You can disable them for a particular process by using **/e:off**. You can enable or disable extensions for all **cmd** command-line options on a computer or user session by setting the following **REG_DWORD** values:
@@ -109,28 +110,29 @@ The following table lists valid hexadecimal digits that you can use as the value
 
     Set the **REG_DWORD** value to either **0×1** (enabled) or **0×0** (disabled) in the registry by using Regedit.exe. User-specified settings take precedence over computer settings, and command-line options take precedence over registry settings.
 
->     [!CAUTION]
->     Incorrectly editing the registry may severely damage your system. Before making changes to the registry, you should back up any valued data on the computer.
+> [!CAUTION]
+> Incorrectly editing the registry may severely damage your system. Before making changes to the registry, you should back up any valued data on the computer.
 
     When you enable command extensions, the following commands are affected:  
-    -   **assoc**
-    -   **call**
-    -   **chdir (cd)**
-    -   **color**
-    -   **del (erase)**
-    -   **endlocal**
-    -   **for**
-    -   **ftype**
-    -   **goto**
-    -   **if**
-    -   **mkdir (md)**
-    -   **popd**
-    -   **prompt**
-    -   **pushd**
-    -   **set**
-    -   **setlocal**
-    -   **shift**
-    -   **start** (also includes changes to external command processes)
+    -  **assoc**
+    -  **call**
+    -  **chdir (cd)**
+    -  **color**
+    -  **del (erase)**
+    -  **endlocal**
+    -  **for**
+    -  **ftype**
+    -  **goto**
+    -  **if**
+    -  **mkdir (md)**
+    -  **popd**
+    -  **prompt**
+    -  **pushd**
+    -  **set**
+    -  **setlocal**
+    -  **shift**
+    -  **start** (also includes changes to external command processes)
+
 -   Enabling delayed environment variable expansion
 
     If you enable delayed environment variable expansion, you can use the exclamation point character to substitute the value of an environment variable at run time.

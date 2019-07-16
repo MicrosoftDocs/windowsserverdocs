@@ -16,7 +16,7 @@ ms.date: 02/22/2019
 ms.localizationpriority: medium
 ---
 # Troubleshooting Remote Desktop connections
-For brief explanations of several of the most common Remote Desktop Services (RDS) issues, see [Frequently asked questions about the Remote Desktop clients](https://review.docs.microsoft.com/en-us/windows-server/remote/remote-desktop-services/clients/remote-desktop-client-faq). This article describes several more advanced approaches to troubleshooting connection problems. Many of these procedures apply whether you are troubleshooting a simple configuration, such as one physical computer connecting to another physical computer, or a more complicated configuration. Some procedures address issues that occur only in more complicated multi-user scenarios. For more information about the remote desktop components and how they work together, see [Remote Desktop Services architecture](https://docs.microsoft.com/en-us/windows-server/remote/remote-desktop-services/desktop-hosting-logical-architecture).
+For brief explanations of several of the most common Remote Desktop Services (RDS) issues, see [Frequently asked questions about the Remote Desktop clients](https://review.docs.microsoft.com/en-us/windows-server/remote/remote-desktop-services/clients/remote-desktop-client-faq). This article describes several more advanced approaches to troubleshooting connection problems. Many of these procedures apply whether you are troubleshooting a simple configuration, such as one physical computer connecting to another physical computer, or a more complicated configuration. Some procedures address issues that occur only in more complicated multi-user scenarios. For more information about the remote desktop components and how they work together, see [Remote Desktop Services architecture](https://docs.microsoft.com/windows-server/remote/remote-desktop-services/desktop-hosting-logical-architecture).
 
 > [!NOTE]  
 > Many of the procedures that are described in this article require you to access multiple computers, some of which you may have to access remotely. For more information about remote administration tools and how to configure them, see [Remote Server Administration Tools (RSAT) for Windows operating systems](https://support.microsoft.com/en-us/help/2693643/remote-server-administration-tools-rsat-for-windows-operating-systems).
@@ -33,7 +33,7 @@ In the following list, identify the type of symptom that you (or your users) are
 - [The user experiences poor performance or problems with remote applications](#user-experiences-poor-performance-or-application-problems)
 
 > [!NOTE]  
-> For a current list of RDP disconnect codes, see [ExtendedDisconnectReasonCode enumeration](https://docs.microsoft.com/en-us/windows/desktop/TermServ/extendeddisconnectreasoncode). 
+> For a current list of RDP disconnect codes, see [ExtendedDisconnectReasonCode enumeration](https://docs.microsoft.com/windows/desktop/TermServ/extendeddisconnectreasoncode). 
 
 ## No specific symptoms or messages (general troubleshooting steps)
 
@@ -48,7 +48,7 @@ Use these steps when a Remote Desktop client cannot connect to a remote desktop 
 
 #### Check the status of the RDP protocol on a local computer
 
-To check and change the status of the RDP protocol on a local computer, see [How to enable Remote Desktop](https://docs.microsoft.com/en-us/windows-server/remote/remote-desktop-services/clients/remote-desktop-allow-access#how-to-enable-remote-desktop).
+To check and change the status of the RDP protocol on a local computer, see [How to enable Remote Desktop](https://docs.microsoft.com/windows-server/remote/remote-desktop-services/clients/remote-desktop-allow-access#how-to-enable-remote-desktop).
 
 > [!NOTE]  
 > If the remote desktop options are not available, see [Check whether a Group Policy Object is blocking RDP](#check-whether-a-group-policy-object-gpo-is-blocking-rdp-on-a-local-computer).
@@ -64,7 +64,7 @@ To check and change the status of the RDP protocol on a remote computer, use a n
 2. In Registry Editor, select **File**, and then select **Connect Network Registry**.
 3. In the **Select Computer** dialog box, enter the name of the remote computer, select **Check Names**, and then select **OK**.
 4. Navigate to **HKEY\_LOCAL\_MACHINE\\SYSTEM\\CurrentControlSet\\Control\\Terminal Server**.  
-   ![Registry Editor, showing the fDenyTSConnections entry](..\media\troubleshoot-remote-desktop-connections\RegEntry_fDenyTSConnections.png)
+   ![Registry Editor, showing the fDenyTSConnections entry](../media/troubleshoot-remote-desktop-connections/RegEntry_fDenyTSConnections.png)
    - If the value of the **fDenyTSConnections** key is **0**, then RDP is enabled
    - If the value of the **fDenyTSConnections** key is **1**, then RDP is disabled
 5. To enable RDP, change the value of **fDenyTSConnections** from **1** to **0**.
@@ -81,9 +81,9 @@ After this command finishes, open gpresult.html. In **Computer Configuration\\Ad
 
 - If the setting for this policy is **Enabled**, group policy is not blocking RDP connections.
 - If the setting for this policy is **Disabled**, check **Winning GPO**. This is the GPO that is blocking RDP connections.
-![An example segment of gpresult.html, in which the domain-level GPO **Block RDP** is disabling RDP.](..\media\troubleshoot-remote-desktop-connections\GPResult_RDSH_Connections_GP.png)
+  ![An example segment of gpresult.html, in which the domain-level GPO **Block RDP** is disabling RDP.](../media/troubleshoot-remote-desktop-connections/GPResult_RDSH_Connections_GP.png)
    
-  ![An example segment of gpresult.html, in which **Local Group Policy** is disabling RDP.](..\media\troubleshoot-remote-desktop-connections\GPResult_RDSH_Connections_LGP.png)
+  ![An example segment of gpresult.html, in which **Local Group Policy** is disabling RDP.](../media/troubleshoot-remote-desktop-connections/GPResult_RDSH_Connections_LGP.png)
 
 #### Check whether a GPO is blocking RDP on a remote computer
 
@@ -95,7 +95,7 @@ The file that this command produces (**gpresult-\<computer name\>.html**) uses t
 
 #### Modifying a blocking GPO
 
-You can modify these settings in the Group Policy Object Editor (GPE) and Group Policy Management Console (GPM). For more information about how to use Group Policy, see [Advanced Group Policy Management](https://docs.microsoft.com/en-us/microsoft-desktop-optimization-pack/agpm/).
+You can modify these settings in the Group Policy Object Editor (GPE) and Group Policy Management Console (GPM). For more information about how to use Group Policy, see [Advanced Group Policy Management](https://docs.microsoft.com/microsoft-desktop-optimization-pack/agpm/).
 
 To modify the blocking policy, use one of the following methods:
 
@@ -113,7 +113,7 @@ On both the local (client) computer and the remote (target) computer, the follow
 
 You can use the Services MMC snap-in to manage the services locally or remotely. You can also use PowerShell locally or remotely (if the remote computer is configured to accept remote PowerShell commands).
 
-![Remote Desktop services in the Services MMC snap-in. Do not modify the default service settings.](..\media\troubleshoot-remote-desktop-connections\RDSServiceStatus.png)
+![Remote Desktop services in the Services MMC snap-in. Do not modify the default service settings.](../media/troubleshoot-remote-desktop-connections/RDSServiceStatus.png)
 
 On either computer, if one or both services are not running, start them.
 
@@ -131,7 +131,7 @@ For this procedure, use a PowerShell instance that has administrative permission
 
 1. Open a PowerShell window. To connect to a remote computer, enter **Enter-PSSession -ComputerName \<computer name\>**.
 2. Enter **qwinsta**. 
-    ![The qwinsta command lists the processes listening on the computer’s ports.](..\media\troubleshoot-remote-desktop-connections\WPS_qwinsta.png)
+    ![The qwinsta command lists the processes listening on the computer’s ports.](../media/troubleshoot-remote-desktop-connections/WPS_qwinsta.png)
 3. If the list includes **rdp-tcp** with a status of **Listen**, the RDP listener is working. Proceed to [Check the RDP listener port](#check-the-rdp-listener-port). Otherwise, continue at step 4.
 4. Export the RDP listener configuration from a working computer.
     1. Sign in to a computer that has the same operating system version as the affected computer has, and access that computer’s registry (for example, by using Registry Editor).
@@ -167,7 +167,7 @@ For this procedure, use a PowerShell instance that has administrative permission
 
 1. If you still cannot connect, open the Certificates MMC snap-in. When you are prompted to select the certificate store to manage, select **Computer account**, and then select the affected computer.
 2. In the **Certificates** folder under **Remote Desktop**, delete the RDP self-signed certificate. 
-    ![Remote Desktop certificates in the MMC Certificates snap-in.](..\media\troubleshoot-remote-desktop-connections\MMCCert_Delete.png)
+    ![Remote Desktop certificates in the MMC Certificates snap-in.](../media/troubleshoot-remote-desktop-connections/MMCCert_Delete.png)
 3. On the affected computer, restart the Remote Desktop Services service.
 4. Refresh the Certificates snap-in.
 5. If the RDP self-signed certificate has not been re-created, [check the permissions of the MachineKeys folder](#check-the-permissions-of-the-machinekeys-folder).
@@ -193,7 +193,7 @@ To check or change the RDP port, use Registry Editor:
       - To connect to a remote computer, select **File**, and then select **Connect Network Registry**.
       - In the **Select Computer** dialog box, enter the name of the remote computer, select **Check Names**, and then select **OK**.
 2. Open the registry and navigate to **HKEY\_LOCAL\_MACHINE\\SYSTEM\\CurrentControlSet\\Control\\Terminal Server\\WinStations\\\<listener\>**. 
-    ![The PortNumber subkey for the RDP protocol.](..\media\troubleshoot-remote-desktop-connections\RegEntry_PortNumber.png)
+    ![The PortNumber subkey for the RDP protocol.](../media/troubleshoot-remote-desktop-connections/RegEntry_PortNumber.png)
 3. If **PortNumber** has a value other than **3389**, change it to **3389**. 
    > [!IMPORTANT]  
     > You can operate Remote Desktop services using another port. However, we do not recommend that you do this. Troubleshooting such a configuration is beyond the scope of this article.
@@ -210,19 +210,19 @@ For this procedure, use a PowerShell instance that has administrative permission
     cmd /c 'netstat -ano | find "3389"'  
     ```
   
-    ![The netstat command produces a list of ports and the services listening to them.](..\media\troubleshoot-remote-desktop-connections\WPS_netstat.png)
-1. Look for an entry for TCP port 3389 (or the assigned RDP port) with a status of **Listening**. 
+    ![The netstat command produces a list of ports and the services listening to them.](../media/troubleshoot-remote-desktop-connections/WPS_netstat.png)
+3. Look for an entry for TCP port 3389 (or the assigned RDP port) with a status of **Listening**. 
     > [!NOTE]  
    > The PID (Process Identifier) of the process or service using that port appears under the PID column.
-1. To determine which application is using port 3389 (or the assigned RDP port), enter the following command:  
+4. To determine which application is using port 3389 (or the assigned RDP port), enter the following command:  
    
      ```powershell  
     cmd /c 'tasklist /svc | find "<pid listening on 3389>"'  
     ```  
   
-    ![The tasklist command reports details of a specific process.](..\media\troubleshoot-remote-desktop-connections\WPS_tasklist.png)
-1. Look for an entry for the PID number that is associated with the port (from the **netstat** output). The services or processes that are associated with that PID appear on the right.
-1. If an application or service other than Remote Desktop Services (TermServ.exe) is using the port, you can resolve the conflict by using one of the following methods:
+    ![The tasklist command reports details of a specific process.](../media/troubleshoot-remote-desktop-connections/WPS_tasklist.png)
+5. Look for an entry for the PID number that is associated with the port (from the **netstat** output). The services or processes that are associated with that PID appear on the right.
+6. If an application or service other than Remote Desktop Services (TermServ.exe) is using the port, you can resolve the conflict by using one of the following methods:
       - Configure the other application or service to use a different port (recommended).
       - Uninstall the other application or service.
       - Configure RDP to use a different port, and then restart the Remote Desktop Services service (not recommended).
@@ -284,14 +284,14 @@ In this case, [refresh the X509 Certificate registry keys](#refresh-the-x509-cer
 
 ### Configure the RD Licensing service
 
-The following procedure uses Server Manager to make the configuration changes. For information about how to configure and use Server Manager, see [Server Manager](https://docs.microsoft.com/en-us/windows-server/administration/server-manager/server-manager).
+The following procedure uses Server Manager to make the configuration changes. For information about how to configure and use Server Manager, see [Server Manager](https://docs.microsoft.com/windows-server/administration/server-manager/server-manager).
 
 1. Open Server Manager, and then navigate to **Remote Desktop Services**.
 2. On **Deployment Overview**, select **Tasks**, and then select **Edit Deployment Properties**.
 3. Select **RD Licensing**, and then select the appropriate licensing mode for your deployment (**Per Device** or **Per User**).
 4. Enter the fully qualified domain name (FQDN) of your RD License server, and then select **Add**.
 5. If you have more than one RD License server, repeat step 4 for each server. 
-    ![RD License server configuration options in Server Manager.](..\media\troubleshoot-remote-desktop-connections\RDLicensing_Configure.png)
+    ![RD License server configuration options in Server Manager.](../media/troubleshoot-remote-desktop-connections/RDLicensing_Configure.png)
 
 ### Refresh the X509 Certificate registry keys
 
@@ -436,12 +436,12 @@ To resolve this issue, ensure that all systems are fully updated and restarted. 
 
 To work around this issue until the updates are complete, check KB 4093492 for allowed types of connections. If there are no feasible alternatives you may consider one of the following methods:
 
-  - For the affected client computers, set the **Encryption Oracle Remediation** policy back to **Vulnerable**.
-  - Modify the following policies in the **Computer Configuration\\Administrative Templates\\Windows Components\\Remote Desktop Services\\Remote Desktop Session Host\\Security** group policy folder:  
-      - **Require use of specific security layer for remote (RDP) connections**: set to **Enabled** and select **RDP**.
-      - **Require user authentication for remote connections by using Network Level authentication**: set to **Disabled**.
-      > [!IMPORTANT]  
-      > These modifications reduce the security of your deployment. They should only be temporary, if you use them at all.
+- For the affected client computers, set the **Encryption Oracle Remediation** policy back to **Vulnerable**.
+- Modify the following policies in the **Computer Configuration\\Administrative Templates\\Windows Components\\Remote Desktop Services\\Remote Desktop Session Host\\Security** group policy folder:  
+  - **Require use of specific security layer for remote (RDP) connections**: set to **Enabled** and select **RDP**.
+  - **Require user authentication for remote connections by using Network Level authentication**: set to **Disabled**.
+    > [!IMPORTANT]  
+    > These modifications reduce the security of your deployment. They should only be temporary, if you use them at all.
 
 For more information about working with group policy, see [Modifying a blocking GPO](#modifying-a-blocking-gpo).
 
@@ -466,7 +466,7 @@ This issue occurs in high-availability deployments that use two or more Remote D
 
 This issue occurs because Remote Credential Guard uses Kerberos for authentication, and restricts NTLM. However, in a high-availability configuration with load balancing, the RD Connection Brokers cannot support Kerberos operations.
 
-If you need to use a high-availability configuration with load-balanced RD Connection Brokers, you can work around this issue by disabling Remote Credential Guard. For more information about how to manage Windows Defender Remote Credential Guard, see [Protect Remote Desktop credentials with Windows Defender Remote Credential Guard](https://docs.microsoft.com/en-us/windows/security/identity-protection/remote-credential-guard#enable-windows-defender-remote-credential-guard).
+If you need to use a high-availability configuration with load-balanced RD Connection Brokers, you can work around this issue by disabling Remote Credential Guard. For more information about how to manage Windows Defender Remote Credential Guard, see [Protect Remote Desktop credentials with Windows Defender Remote Credential Guard](https://docs.microsoft.com/windows/security/identity-protection/remote-credential-guard#enable-windows-defender-remote-credential-guard).
 
 ## On connecting, user receives "Remote Desktop Service is currently busy" message
 
@@ -489,7 +489,7 @@ Remote desktop clients attempting to connect also become unresponsive.
 
 To work around this issue, restart the RDSH server.
 
-To resolve this issue, apply KB 4093114, [April 10, 2018—KB4093114 (Monthly Rollup)](file:///C:\\Users\\v-jesits\\AppData\\Local\\Microsoft\\Windows\\INetCache\\Content.Outlook\\FUB8OO45\\April%2010,%202018—KB4093114%20\(Monthly%20Rollup\)), to the RDSH servers.
+To resolve this issue, apply KB 4093114, [April 10, 2018—KB4093114 (Monthly Rollup)](file:///C:/Users/v-jesits/AppData/Local/Microsoft/Windows/INetCache/Content.Outlook/FUB8OO45/April%2010,%202018—KB4093114%20(Monthly%20Rollup)), to the RDSH servers.
 
 ### RD listener issue
 
@@ -546,10 +546,10 @@ This issue can be caused by misconfiguration of your authentication and configur
 
 > [!NOTE]  
 >  - When communications between clients and RD Session Host servers require the highest level of encryption, use FIPS Compliant encryption.
->  - Any encryption level settings that you configure in Group Policy override the configuration that you set by using the Remote Desktop Services Configuration tool. Also, if you enable the [System cryptography: Use FIPS compliant algorithms for encryption, hashing, and signing](https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2003/cc780081\(v=ws.10\)) policy, this setting overrides the **Set client connection encryption level** policy. The system cryptography policy is in the **Computer Configuration\\Windows Settings\\Security Settings\\Local Policies\\Security Options** folder.
+>  - Any encryption level settings that you configure in Group Policy override the configuration that you set by using the Remote Desktop Services Configuration tool. Also, if you enable the [System cryptography: Use FIPS compliant algorithms for encryption, hashing, and signing](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc780081\(v=ws.10\)) policy, this setting overrides the **Set client connection encryption level** policy. The system cryptography policy is in the **Computer Configuration\\Windows Settings\\Security Settings\\Local Policies\\Security Options** folder.
 >  - When you change the encryption level, the new encryption level takes effect the next time a user logs on. If you require multiple levels of encryption on one server, install multiple network adapters and configure each adapter separately.
 >  - To verify that certificate has a corresponding private key, in Remote Desktop Services Configuration, right-click the connection for which you want to view the certificate, select **General**, select **Edit**, select the certificate that you want to view, and then select **View Certificate**. At the bottom of the **General** tab, the statement, "You have a private key that corresponds to this certificate" should appear. You can also view this information by using the Certificates snap-in.
->  - FIPS-compliant encryption (the **System cryptography: Use FIPS compliant algorithms for encryption, hashing, and signing** policy or the **FIPS Compliant** setting in Remote Desktop Server Configuration) encrypts and decrypts data sent from the client to the server and from the server to the client, with the Federal Information Processing Standard (FIPS) 140-1 encryption algorithms, using Microsoft cryptographic modules. For more information, see [FIPS 140 Validation](https://docs.microsoft.com/en-us/windows/security/threat-protection/fips-140-validation).
+>  - FIPS-compliant encryption (the **System cryptography: Use FIPS compliant algorithms for encryption, hashing, and signing** policy or the **FIPS Compliant** setting in Remote Desktop Server Configuration) encrypts and decrypts data sent from the client to the server and from the server to the client, with the Federal Information Processing Standard (FIPS) 140-1 encryption algorithms, using Microsoft cryptographic modules. For more information, see [FIPS 140 Validation](https://docs.microsoft.com/windows/security/threat-protection/fips-140-validation).
 >  - The **High** setting encrypts data sent from the client to the server and from the server to the client by using strong 128-bit encryption.
 >  - The **Client Compatible** setting encrypts data sent between the client and the server at the maximum key strength supported by the client.
 >  - The **Low** setting encrypts data sent from the client to the server using 56-bit encryption.
@@ -565,7 +565,7 @@ To work around this issue, set the network authentication setting to **User or c
  > [!NOTE]  
 > To change the network authentication settings on a single computer, you may need to use the Network and Sharing Center control panel to create a new wireless connection with the new settings.
 
-For a full description of how to configure wireless network settings using GPOs, see [Configure Wireless Network (IEEE 802.11) Policies](https://docs.microsoft.com/en-us/windows-server/networking/core-network-guide/cncg/wireless/e-wireless-access-deployment#bkmk_policies).
+For a full description of how to configure wireless network settings using GPOs, see [Configure Wireless Network (IEEE 802.11) Policies](https://docs.microsoft.com/windows-server/networking/core-network-guide/cncg/wireless/e-wireless-access-deployment#bkmk_policies).
 
 ## User experiences poor performance or application problems
 

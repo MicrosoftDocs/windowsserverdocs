@@ -14,8 +14,6 @@ ms.technology: identity-adfs
 
 # Custom Web Themes in AD FS 
 
->Applies To: Windows Server 2016, Windows Server 2012 R2
-
 The theme that is shipped out\-of\-the\-box is called Default. You can export the default theme and use it so that you can start quickly. You can customize the appearance and behavior, which includes the layout by modifying the .css file, import and apply this new theme, and then you can use the customized appearance and behavior. Using the .css file also makes it easier to work with your web designers.  
   
 The following cmdlet creates a custom web theme, which duplicates the default web theme.  

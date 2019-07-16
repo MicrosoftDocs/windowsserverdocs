@@ -28,7 +28,7 @@ Typically, a new installation of the operating system requires an Internet capab
 |---------------------------|-------------|  
 |DHCP|On|  
 |Port forwarding|You should forward the following ports to the address of the server:<br /><br /> -   80 (For hosted configuration, only use 443)<br />-   443|  
-|UPnP support|You should enable UPnP �¢ support to provide the easiest router configuration for the customer and the best customer experience during installation.<br /><br /> **Warning:** The UPnP architecture can pose a security risk if it is left enabled.|  
+|UPnP support|You should enable UPnP �¢ support to provide the easiest router configuration for the customer and the best customer experience during installation.<br /><br /> **Warning:** The UPnP architecture can pose a security risk if it is left enabled.|  
   
  In addition to the basic router preconfiguration settings, you can complete the following tasks to provide a more integrated user experience for managing the router:  
   

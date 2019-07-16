@@ -1,17 +1,19 @@
 ---
 title: Install Windows Admin Center
-description: How to install Windows Admin Center on a Windows PC or server.
+description: How to install Windows Admin Center on a Windows PC or on a server so that multiple users can access Windows Admin Center using a web browser.
 ms.technology: manage
 ms.topic: article
 author: jwwool
 ms.author: jeffrew
-ms.date: 04/12/2019
+ms.date: 06/07/2019
 ms.localizationpriority: medium
 ms.prod: windows-server-threshold
 ---
 # Install Windows Admin Center
 
->Applies To: Windows Admin Center, Windows Admin Center Preview
+> Applies to: Windows Admin Center, Windows Admin Center Preview
+
+This topic describes how to install Windows Admin Center on a Windows PC or on a server so that multiple users can access Windows Admin Center using a web browser.
 
 > [!Tip]
 > New to Windows Admin Center?
@@ -19,7 +21,7 @@ ms.prod: windows-server-threshold
 
 ## Determine your installation type
 
-Review the [installation options](..\plan\installation-options.md) which includes the [supported operating systems](..\plan\installation-options.md#supported-operating-systems-installation). To install Windows Admin Center on a VM in Azure, see [Deploy Windows Admin Center in Azure](../azure/deploy-wac-in-azure.md).
+Review the [installation options](../plan/installation-options.md) which includes the [supported operating systems](../plan/installation-options.md#supported-operating-systems-installation). To install Windows Admin Center on a VM in Azure, see [Deploy Windows Admin Center in Azure](../azure/deploy-wac-in-azure.md).
 
 ## Install on Windows 10
 

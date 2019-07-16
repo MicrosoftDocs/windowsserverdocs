@@ -50,12 +50,12 @@ manager: dongill
   
 > [!NOTE]
 >  In the default installation of  Windows Server Essentials, the server is configured to automatically perform a defragmentation once each week. This can result in larger than normal backups if you use non-Microsoft imaging software. If it is not necessary to defragment the server on a regular basis, you can follow these steps to turn off the defragmentation schedule:  
->   
->  1.  Press the Windows key + W to open **Search**.  
-> 2.  In the Search text box, type **Defragment**.  
-> 3.  In the results section, click **Defragment and Optimize Your Drives**.  
-> 4.  In the **Optimize Drives** page, select a drive, and then click **Change settings**.  
-> 5.  In the **Optimization schedule** window, clear the **Run on a schedule (recommended)** check box, and then click **OK** to save the change.  
+> 
+> 1. Press the Windows key + W to open **Search**.  
+>    2. In the Search text box, type **Defragment**.  
+>    3. In the results section, click **Defragment and Optimize Your Drives**.  
+>    4. In the **Optimize Drives** page, select a drive, and then click **Change settings**.  
+>    5. In the **Optimization schedule** window, clear the **Run on a schedule (recommended)** check box, and then click **OK** to save the change.  
   
 ##  <a name="BKMK_2"></a> Server backup schedule  
  When you use the Set Up Server Backup Wizard or the Customize Server Backup Wizard, you can choose to back up server data at multiple times during the day. Because the wizards schedule incremental-based backups, the backups run quickly, and server performance is not significantly impacted. By default, the wizards schedule a backup to run daily at 12:00 PM and 11:00 PM. However, you can adjust the backup schedule according to the needs of your organization. You should occasionally evaluate the effectiveness of your backup plan, and change the plan as necessary.  
@@ -78,7 +78,7 @@ manager: dongill
   
 -   You should visit the website for your external storage drive manufacturer to ensure that your backup drive is supported on computers running  Windows Server Essentials.  
   
--   The drive cannot contain an Extensible Firmware Interface (EFI) system partition. If an EFI partition is present on a USB drive, it is assumed that the disk is a startup disk. If you are certain that you don „¢t need the data on the disk, you can reformat the disk and use it for backups.  
+-   The drive cannot contain an Extensible Firmware Interface (EFI) system partition. If an EFI partition is present on a USB drive, it is assumed that the disk is a startup disk. If you are certain that you don ï¿½ï¿½t need the data on the disk, you can reformat the disk and use it for backups.  
   
     > [!CAUTION]
     >  All data will be deleted when you reformat the disk.  
@@ -101,32 +101,32 @@ manager: dongill
   
 > [!NOTE]
 >  If a backup is unsuccessful because the backup drive had insufficient space, the drive letter for the backup target drive is removed from the Windows Server Essentials database, and the Dashboard does not display the drive. If you want to use the drive in future backups, you must reassign the drive letter using a native tool.  
->   
+> 
 >  **To reassign a drive letter for an existing volume**  
->   
->  1.  In Control Panel, open **Systems and Security**.  
-> 2.  Under **Administrative Tools**, click **Create and format hard disk partitions**.  
-> 3.  Right-click the drive, and click **Change Drive Letter and Paths**.  
-> 4.  Click **Add**.  
-> 5.  In the Add Drive Letter or Path dialog box, select a drive letter to assign. (You can reassign the same drive letter.) Then click **OK**.  
->   
->      The drive will appear on the Dashboard immediately.  
+> 
+> 1. In Control Panel, open **Systems and Security**.  
+>    2. Under **Administrative Tools**, click **Create and format hard disk partitions**.  
+>    3. Right-click the drive, and click **Change Drive Letter and Paths**.  
+>    4. Click **Add**.  
+>    5. In the Add Drive Letter or Path dialog box, select a drive letter to assign. (You can reassign the same drive letter.) Then click **OK**.  
+> 
+>    The drive will appear on the Dashboard immediately.  
   
 ##  <a name="BKMK_4"></a> Items to be backed up  
  You can choose to back up all the drives, files, and folders on the server, or select only individual drives, files, or folders to backup.  
   
  When you add or remove a drive, or add or remove shared files and folders, you should revisit the server backup configuration to make sure that these items are added to or removed from the backup configuration. To add or remove items for the backup, do one of the following:  
   
--   To include a data drive in the server backup, select the adjacent check box  
+- To include a data drive in the server backup, select the adjacent check box  
   
--   To exclude a data drive from the server backup, clear the adjacent check box  
+- To exclude a data drive from the server backup, clear the adjacent check box  
   
-    > [!NOTE]
-    >  If you want to exclude the **Operating System** item from the backup, you must first clear the **System Backup (recommended)** check box.  
+  > [!NOTE]
+  >  If you want to exclude the **Operating System** item from the backup, you must first clear the **System Backup (recommended)** check box.  
   
- To minimize the amount of server storage that your server backups use, you may want to exclude any folders that contain files that you do not consider valuable or particularly important.  
+  To minimize the amount of server storage that your server backups use, you may want to exclude any folders that contain files that you do not consider valuable or particularly important.  
   
- For example, you may have a folder that contains recorded television programs that uses a lot of hard drive space. You may choose not to back up these files because you normally delete them after viewing them anyway. Or you may have a folder that contains temporary files that you do not intend to keep.  
+  For example, you may have a folder that contains recorded television programs that uses a lot of hard drive space. You may choose not to back up these files because you normally delete them after viewing them anyway. Or you may have a folder that contains temporary files that you do not intend to keep.  
   
 ## See also  
   

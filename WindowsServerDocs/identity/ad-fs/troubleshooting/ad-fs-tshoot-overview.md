@@ -22,7 +22,7 @@ Before you dive into in-depth troubleshooting, there are a few things that you s
 - **DNS Configuration** - can you resolve the name of the federation service?  This should resolve to either the load balancer's IP address or the IP address of one of the AD FS servers in your farm.  For more information see [AD FS Troubleshooting - DNS](ad-fs-tshoot-dns.md).
 - **AD FS Endpoints** - can you browse to the AD FS endpoints?  By browsing to this you can determine whether or not your AD FS web server is responding to requests.  If you can get to this file, then you know that AD FS is servicing requests over 443 just fine.  For more information see [AD FS Troubleshooting - Endpoints](ad-fs-tshoot-endpoints.md).
 - **Idp-Initiated Sign On** - can you log in and authenticate via the Idp-Initiated Sign On page?  You need to ensure that this page was enabled because it is disabled by default.  Use `Set-AdfsProperties -EnableIdPInitiatedSignOn $true` to enable the page.  If you can sign in and authenticate then you know that AD FS is working in this area.  For more information see [AD FS Troubleshooting - SignOn](ad-fs-tshoot-initiatedsignon.md).
-##  Common Troubleshooting Areas
+  ##  Common Troubleshooting Areas
 
 |Name|Description|
 |-----|-----|

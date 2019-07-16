@@ -80,13 +80,13 @@ add v4tov4 listenport= {Integer | ServiceName} [[connectaddress=] {IPv4Address |
 ### Parameters
 
 
-| | |
-|-----|--------|----------|
-| **listenport**     | Specifies the IPv4 port, by port number or service name, on which to listen.                                                                                                                      | Required |
-| **connectaddress** | Specifies the IPv4 address to which to connect. Acceptable values are IP address, computer NetBIOS name, or computer DNS name. If an address is not specified, the default is the local computer. |          |
-| **connectport**    | Specifies the IPv4 port, by port number or service name, to which to connect. If **connectport** is not specified, the default is the value of **listenport** on the local computer.              |          |
-| **listenaddress**  | Specifies the IPv4 address for which to listen. Acceptable values are IP address, computer NetBIOS name, or computer DNS name. If an address is not specified, the default is the local computer. |          |
-| **protocol**       | Specifies the protocol to use.                                                                                                                                                                    |          |
+|                    |                                                                                                                                                                                                   |
+|--------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|   **listenport**   |                                                           Specifies the IPv4 port, by port number or service name, on which to listen.                                                            |
+| **connectaddress** | Specifies the IPv4 address to which to connect. Acceptable values are IP address, computer NetBIOS name, or computer DNS name. If an address is not specified, the default is the local computer. |
+|  **connectport**   |       Specifies the IPv4 port, by port number or service name, to which to connect. If **connectport** is not specified, the default is the value of **listenport** on the local computer.        |
+| **listenaddress**  | Specifies the IPv4 address for which to listen. Acceptable values are IP address, computer NetBIOS name, or computer DNS name. If an address is not specified, the default is the local computer. |
+|    **protocol**    |                                                                                  Specifies the protocol to use.                                                                                   |
 
 ## add v4tov6
 
@@ -100,13 +100,13 @@ add v4tov6 listenport= {Integer | ServiceName} [[connectaddress=] {IPv6Address |
 
 ### Parameters
 
-|   |   |
-|-----------|-------------|----------|
-| **listenport**     | Specifies the IPv4 port, by port number or service name, on which to listen.       | Required |
-| **connectaddress** | Specifies the IPv6 address to which to connect. Acceptable values are IP address, computer NetBIOS name, or computer DNS name. If an address is not specified, the default is the local computer. |          |
-| **connectport**    | Specifies the IPv6 port, by port number or service name, to which to connect. If **connectport** is not specified, the default is the value of **listenport** on the local computer.              |          |
-| **listenaddress**  | Specifies the IPv4 address on which to listen. Acceptable values are IP address, computer NetBIOS name, or computer DNS name. If an address is not specified, the default is the local computer.  |          |
-| **protocol**       | Specifies the protocol to use.                                                                                                                                                                    |          |
+|                    |                                                                                                                                                                                                   |
+|--------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|   **listenport**   |                                                           Specifies the IPv4 port, by port number or service name, on which to listen.                                                            |
+| **connectaddress** | Specifies the IPv6 address to which to connect. Acceptable values are IP address, computer NetBIOS name, or computer DNS name. If an address is not specified, the default is the local computer. |
+|  **connectport**   |       Specifies the IPv6 port, by port number or service name, to which to connect. If **connectport** is not specified, the default is the value of **listenport** on the local computer.        |
+| **listenaddress**  | Specifies the IPv4 address on which to listen. Acceptable values are IP address, computer NetBIOS name, or computer DNS name. If an address is not specified, the default is the local computer.  |
+|    **protocol**    |                                                                                  Specifies the protocol to use.                                                                                   |
 
 ## add v6tov4
 
@@ -120,13 +120,13 @@ add v6tov4 listenport= {Integer | ServiceName} [[connectaddress=] {IPv4Address |
 
 ### Parameters
 
-|   |   |
-|------------|-------------|----------|
-| **listenport**     | Specifies the IPv6 port, by port number or service name, on which to listen.              | Required |
-| **connectaddress** | Specifies the IPv4 address to which to connect. Acceptable values are IP address, computer NetBIOS name, or computer DNS name. If an address is not specified, the default is the local computer. |          |
-| **connectport**    | Specifies the IPv4 port, by port number or service name, to which to connect. If **connectport** is not specified, the default is the value of **listenport** on the local computer.              |          |
-| **listenaddress**  | Specifies the IPv6 address on which to listen. Acceptable values are IP address, computer NetBIOS name, or computer DNS name. If an address is not specified, the default is the local computer.  |          |
-| **protocol**       | Specifies the protocol to use.      |          |
+|                    |                                                                                                                                                                                                   |
+|--------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|   **listenport**   |                                                           Specifies the IPv6 port, by port number or service name, on which to listen.                                                            |
+| **connectaddress** | Specifies the IPv4 address to which to connect. Acceptable values are IP address, computer NetBIOS name, or computer DNS name. If an address is not specified, the default is the local computer. |
+|  **connectport**   |       Specifies the IPv4 port, by port number or service name, to which to connect. If **connectport** is not specified, the default is the value of **listenport** on the local computer.        |
+| **listenaddress**  | Specifies the IPv6 address on which to listen. Acceptable values are IP address, computer NetBIOS name, or computer DNS name. If an address is not specified, the default is the local computer.  |
+|    **protocol**    |                                                                                  Specifies the protocol to use.                                                                                   |
 
 ## add v6tov6
 
@@ -140,13 +140,13 @@ add v6tov6 listenport= {Integer | ServiceName} [[connectaddress=] {IPv6Address |
 
 ### Parameters
 
-|   |   |
-|-------------|------------------|----------|
-| **listenport**     | Specifies the IPv6 port, by port number or service name, on which to listen.       | Required |
-| **connectaddress** | Specifies the IPv6 address to which to connect. Acceptable values are IP address, computer NetBIOS name, or computer DNS name. If an address is not specified, the default is the local computer. |          |
-| **connectport**    | Specifies the IPv6 port, by port number or service name, to which to connect. If **connectport** is not specified, the default is the value of **listenport** on the local computer.              |          |
-| **listenaddress**  | Specifies the IPv6 address on which to listen. Acceptable values are IP address, computer NetBIOS name, or computer DNS name. If an address is not specified, the default is the local computer.  |          |
-| **protocol**       | Specifies the protocol to use.                                                                                                                                                                    |          |
+|                    |                                                                                                                                                                                                   |
+|--------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|   **listenport**   |                                                           Specifies the IPv6 port, by port number or service name, on which to listen.                                                            |
+| **connectaddress** | Specifies the IPv6 address to which to connect. Acceptable values are IP address, computer NetBIOS name, or computer DNS name. If an address is not specified, the default is the local computer. |
+|  **connectport**   |       Specifies the IPv6 port, by port number or service name, to which to connect. If **connectport** is not specified, the default is the value of **listenport** on the local computer.        |
+| **listenaddress**  | Specifies the IPv6 address on which to listen. Acceptable values are IP address, computer NetBIOS name, or computer DNS name. If an address is not specified, the default is the local computer.  |
+|    **protocol**    |                                                                                  Specifies the protocol to use.                                                                                   |
 
 ## delete v4tov4
 
@@ -160,11 +160,11 @@ delete v4tov4 listenport= {Integer | ServiceName} [[listenaddress=] {IPv4Address
 
 ### Parameters
 
-|   |   |
-|-------------------|----------------------------------------------------------------------------------------------------------|----------|
-| **listenport**    | Specifies the IPv4 port to delete.                                                                       | Required |
-| **listenaddress** | Specifies the IPv4 address to delete. If an address is not specified, the default is the local computer. |          |
-| **protocol**      | Specifies the protocol to use.                                                                           |          |
+|                   |                                                                                                          |
+|-------------------|----------------------------------------------------------------------------------------------------------|
+|  **listenport**   |                                    Specifies the IPv4 port to delete.                                    |
+| **listenaddress** | Specifies the IPv4 address to delete. If an address is not specified, the default is the local computer. |
+|   **protocol**    |                                      Specifies the protocol to use.                                      |
 
 ## delete v4tov6
 
@@ -178,11 +178,11 @@ delete v4tov6 listenport= {Integer | ServiceName} [[listenaddress=] {IPv4Address
 
 ### Parameters
 
-|   |   |
-|-------------------|----------------------------------------------------------------------------------------------------------|----------|
-| **listenport**    | Specifies the IPv4 port to delete.                                                                       | Required |
-| **listenaddress** | Specifies the IPv4 address to delete. If an address is not specified, the default is the local computer. |          |
-| **protocol**      | Specifies the protocol to use.                                                                           |          |
+|                   |                                                                                                          |
+|-------------------|----------------------------------------------------------------------------------------------------------|
+|  **listenport**   |                                    Specifies the IPv4 port to delete.                                    |
+| **listenaddress** | Specifies the IPv4 address to delete. If an address is not specified, the default is the local computer. |
+|   **protocol**    |                                      Specifies the protocol to use.                                      |
 
 ## delete v6tov4
 
@@ -196,11 +196,11 @@ delete v6tov4 listenport= {Integer | ServiceName} [[listenaddress=] {IPv6Address
 
 ### Parameters
 
-|   |   |
-|-------------------|----------------------------------------------------------------------------------------------------------|----------|
-| **listenport**    | Specifies the IPv6 port to delete.                                                                       | Required |
-| **listenaddress** | Specifies the IPv6 address to delete. If an address is not specified, the default is the local computer. |          |
-| **protocol**      | Specifies the protocol to use.                                                                           |          |
+|                   |                                                                                                          |
+|-------------------|----------------------------------------------------------------------------------------------------------|
+|  **listenport**   |                                    Specifies the IPv6 port to delete.                                    |
+| **listenaddress** | Specifies the IPv6 address to delete. If an address is not specified, the default is the local computer. |
+|   **protocol**    |                                      Specifies the protocol to use.                                      |
 
 ## delete v6tov6
 
@@ -214,11 +214,11 @@ delete v6tov6 listenport= {Integer | ServiceName} [[listenaddress=] {IPv6Address
 
 ### Parameters
 
-|   |   |
-|-------------------|----------------------------------------------------------------------------------------------------------|----------|
-| **listenport**    | Specifies the IPv6 port to delete.                                                                       | Required |
-| **listenaddress** | Specifies the IPv6 address to delete. If an address is not specified, the default is the local computer. |          |
-| **protocol**      | Specifies the protocol to use.                                                                           |          |
+|                   |                                                                                                          |
+|-------------------|----------------------------------------------------------------------------------------------------------|
+|  **listenport**   |                                    Specifies the IPv6 port to delete.                                    |
+| **listenaddress** | Specifies the IPv6 address to delete. If an address is not specified, the default is the local computer. |
+|   **protocol**    |                                      Specifies the protocol to use.                                      |
 
 ## reset
 
@@ -240,13 +240,13 @@ set v4tov4 listenport= {Integer | ServiceName} [[connectaddress=] {IPv4Address |
 
 ### Parameters
 
-|   |   |
-|--------------------|---------------------------|----------|
-| **listenport**     | Specifies the IPv4 port, by port number or service name, on which to listen.     | Required |
-| **connectaddress** | Specifies the IPv4 address to which to connect. Acceptable values are IP address, computer NetBIOS name, or computer DNS name. If an address is not specified, the default is the local computer. |          |
-| **connectport**    | Specifies the IPv4 port, by port number or service name, to which to connect. If **connectport** is not specified, the default is the value of **listenport** on the local computer.              |          |
-| **listenaddress**  | Specifies the IPv4 address for which to listen. Acceptable values are IP address, computer NetBIOS name, or computer DNS name. If an address is not specified, the default is the local computer. |          |
-| **protocol**       | Specifies the protocol to use.                                                                                                                                                                    |          |
+|                    |                                                                                                                                                                                                   |
+|--------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|   **listenport**   |                                                           Specifies the IPv4 port, by port number or service name, on which to listen.                                                            |
+| **connectaddress** | Specifies the IPv4 address to which to connect. Acceptable values are IP address, computer NetBIOS name, or computer DNS name. If an address is not specified, the default is the local computer. |
+|  **connectport**   |       Specifies the IPv4 port, by port number or service name, to which to connect. If **connectport** is not specified, the default is the value of **listenport** on the local computer.        |
+| **listenaddress**  | Specifies the IPv4 address for which to listen. Acceptable values are IP address, computer NetBIOS name, or computer DNS name. If an address is not specified, the default is the local computer. |
+|    **protocol**    |                                                                                  Specifies the protocol to use.                                                                                   |
 
 ## set v4tov6
 
@@ -260,13 +260,13 @@ set v4tov6 listenport= {Integer | ServiceName} [[connectaddress=] {IPv6Address |
 
 ### Parameters
 
-|   |   |
-|--------------------|---------------------|----------|
-| **listenport**     | Specifies the IPv4 port, by port number or service name, on which to listen.     | Required |
-| **connectaddress** | Specifies the IPv6 address to which to connect. Acceptable values are IP address, computer NetBIOS name, or computer DNS name. If an address is not specified, the default is the local computer. |          |
-| **connectport**    | Specifies the IPv6 port, by port number or service name, to which to connect. If **connectport** is not specified, the default is the value of **listenport** on the local computer.              |          |
-| **listenaddress**  | Specifies the IPv4 address on which to listen. Acceptable values are IP address, computer NetBIOS name, or computer DNS name. If an address is not specified, the default is the local computer.  |          |
-| **protocol**       | Specifies the protocol to use.                                                                                                                                                                    |          |
+|                    |                                                                                                                                                                                                   |
+|--------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|   **listenport**   |                                                           Specifies the IPv4 port, by port number or service name, on which to listen.                                                            |
+| **connectaddress** | Specifies the IPv6 address to which to connect. Acceptable values are IP address, computer NetBIOS name, or computer DNS name. If an address is not specified, the default is the local computer. |
+|  **connectport**   |       Specifies the IPv6 port, by port number or service name, to which to connect. If **connectport** is not specified, the default is the value of **listenport** on the local computer.        |
+| **listenaddress**  | Specifies the IPv4 address on which to listen. Acceptable values are IP address, computer NetBIOS name, or computer DNS name. If an address is not specified, the default is the local computer.  |
+|    **protocol**    |                                                                                  Specifies the protocol to use.                                                                                   |
 
 ## set v6tov4
 
@@ -280,13 +280,13 @@ set v6tov4 listenport= {Integer | ServiceName} [[connectaddress=] {IPv4Address |
 
 ### Parameters
 
-|   |   |
-|--------------------|----------------------|----------|
-| **listenport**     | Specifies the IPv6 port, by port number or service name, on which to listen.      | Required |
-| **connectaddress** | Specifies the IPv4 address to which to connect. Acceptable values are IP address, computer NetBIOS name, or computer DNS name. If an address is not specified, the default is the local computer. |          |
-| **connectport**    | Specifies the IPv4 port, by port number or service name, to which to connect. If **connectport** is not specified, the default is the value of **listenport** on the local computer.              |          |
-| **listenaddress**  | Specifies the IPv6 address on which to listen. Acceptable values are IP address, computer NetBIOS name, or computer DNS name. If an address is not specified, the default is the local computer.  |          |
-| **protocol**       | Specifies the protocol to use.                                                                                                                                                                    |          |
+|                    |                                                                                                                                                                                                   |
+|--------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|   **listenport**   |                                                           Specifies the IPv6 port, by port number or service name, on which to listen.                                                            |
+| **connectaddress** | Specifies the IPv4 address to which to connect. Acceptable values are IP address, computer NetBIOS name, or computer DNS name. If an address is not specified, the default is the local computer. |
+|  **connectport**   |       Specifies the IPv4 port, by port number or service name, to which to connect. If **connectport** is not specified, the default is the value of **listenport** on the local computer.        |
+| **listenaddress**  | Specifies the IPv6 address on which to listen. Acceptable values are IP address, computer NetBIOS name, or computer DNS name. If an address is not specified, the default is the local computer.  |
+|    **protocol**    |                                                                                  Specifies the protocol to use.                                                                                   |
 
 ## set v6tov6
 
@@ -300,13 +300,13 @@ set v6tov6 listenport= {Integer | ServiceName} [[connectaddress=] {IPv6Address |
 
 ### Parameters
 
-|   |   |
-|--------------------|-------------------------|----------|
-| **listenport**     | Specifies the IPv6 port, by port number or service name, on which to listen.   | Required |
-| **connectaddress** | Specifies the IPv6 address to which to connect. Acceptable values are IP address, computer NetBIOS name, or computer DNS name. If an address is not specified, the default is the local computer.  |          |
-| **connectport**    | Specifies the IPv6 port, by port number or service name, to which to connect. If **connectport** is not specified, the default is the value of **listenport** on the local computer.               |          |
-| **listenaddress**  | Specifies the IPv6 address on which to listen. Acceptable values are IP address, computer NetBIOS name, or computer DNS name. If you do not specify an address, the default is the local computer. |          |
-| **protocol**       | Specifies the protocol to use.                                                                                                                                                                     |          |
+|                    |                                                                                                                                                                                                    |
+|--------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|   **listenport**   |                                                            Specifies the IPv6 port, by port number or service name, on which to listen.                                                            |
+| **connectaddress** | Specifies the IPv6 address to which to connect. Acceptable values are IP address, computer NetBIOS name, or computer DNS name. If an address is not specified, the default is the local computer.  |
+|  **connectport**   |        Specifies the IPv6 port, by port number or service name, to which to connect. If **connectport** is not specified, the default is the value of **listenport** on the local computer.        |
+| **listenaddress**  | Specifies the IPv6 address on which to listen. Acceptable values are IP address, computer NetBIOS name, or computer DNS name. If you do not specify an address, the default is the local computer. |
+|    **protocol**    |                                                                                   Specifies the protocol to use.                                                                                   |
 
 ## show all
 

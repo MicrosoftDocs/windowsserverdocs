@@ -13,8 +13,6 @@ ms.technology: identity-adfs
 ---
 # Create a Rule to Send Group Membership as a Claim
 
->Applies To: Windows Server 2016, Windows Server 2012 R2
-
 Using the Send Group Membership as a Claim rule template in Active Directory Federation Services \(AD FS\), you can create a rule that will make it possible for you to select an Active Directory security group to send as a claim. Only a single claim will be emitted from this rule, based on the group that you select. For example, you can use this rule template to create a rule that will send a group claim with a value of Admin if the user is a member of the Domain Admins security group. This rule should be used only for users in the local Active Directory domain.  
   
 You can use the following procedure to create a claim rule with the AD FS Management snap\-in.  

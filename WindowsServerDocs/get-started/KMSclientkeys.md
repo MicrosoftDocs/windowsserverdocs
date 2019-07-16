@@ -4,23 +4,19 @@ description: Keys needed to activate Windows products from a KMS server
 ms.prod: windows-server-threshold
 ms.mktglfcycl: manage
 ms.sitesec: library
-author: jaimeo
+author: jasongerend
+ms.author: jgerend
 ms.localizationpriority: medium
-ms.date: 10/02/2018
-ms.tgt_pltfrm: na
+ms.date: 05/21/2019
 ms.topic: get-started-article
 ---
+# KMS client setup keys
 
-# KMS Client Setup Keys
+>Applies to: Windows Server 2019, Windows Server Semi-Annual Channel, Windows Server 2016, Windows 10
 
->Applies To: Windows Server 2019, Windows Server Semi-Annual Channel, Windows Server 2016, Windows 10
+Computers that are running volume licensed editions of Windows Server, Windows 10, Windows 8.1, Windows Server 2012 R2, Windows 8, Windows Server 2012, Windows 7, Windows Server 2008 R2, Windows Vista, and Windows Server 2008 are, by default, KMS clients with no additional configuration needed.
 
-Computers that are running volume licensed editions of Windows Server, Windows 10, Windows 8.1,
-Windows Server 2012 R2, Windows 8, Windows Server 2012, Windows 7, Windows
-Server 2008 R2, Windows Vista, and Windows Server 2008 are, by default, KMS
-clients with no additional configuration needed.
-
->[!NOTE]
+> [!NOTE]
 > In the tables that follow, "LTSC" stands for "Long-Term Servicing Channel," while "LTSB" refers to the "Long-Term Servicing Branch." 
 
 **To use the keys listed here (which are GVLKs), you must first have a KMS host
@@ -32,9 +28,9 @@ Windows to a KMS client, install the applicable setup key (GVLK) from the
 following tables. To install a client setup key, open an administrative command
 prompt on the client, type **slmgr /ipk \<setup key\>** and then press **Enter**.
 
-| If you want to…                                                                                                                                                                                          | …use these resources                                                                                                         |
-|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------|
-| Activate Windows outside of a volume-activation scenario (that is, you’re trying to activate a retail version of Windows), **these keys will not work**.                                                     | Use these links for retail versions of Windows:                                                                              |
+| If you want to…    | …use these resources   |
+|--------------------|------------------------|
+| Activate Windows outside of a volume-activation scenario (that is, you’re trying to activate a retail version of Windows), **these keys will not work**. | Use these links for retail versions of Windows: |
 | Fix this error that you get when you try to activate a Windows 8.1, Windows Server 2012 R2 or newer system: “Error: 0xC004F050 The Software Licensing Service reported that the product key is invalid”… | [Install this update](https://support.microsoft.com/en-us/help/3172614/july-2016-update-rollup-for-windows-8-1-and-windows-server-2012-r2) on the KMS host if it is running Windows 8.1, Windows Server 2012 R2, Windows 8, or Windows Server 2012. |
 
 -   [Get Windows 10](https://www.microsoft.com/en-us/windows/get-windows-10)
@@ -47,15 +43,14 @@ prompt on the client, type **slmgr /ipk \<setup key\>** and then press **Enter**
 >   If you are running Windows Server 2008 R2 or Windows 7, be on the lookout
 >   for an update to support using those as KMS hosts for Windows 10 clients.
 
-
 ## Windows Server Semi-Annual Channel versions
 
-### Windows Server, version 1809
-| Operating system edition       | KMS Client Setup Key          |
-|--------------------------------|-------------------------------|
-| Windows Server Datacenter | 6NMRW-2C8FM-D24W7-TQWMY-CWH2D  | 
-| Windows Server Standard | N2KJX-J94YW-TQVFB-DG9YT-724CC  |
+### Windows Server, version 1903 and Windows Server, version 1809
 
+| Operating system edition  | KMS Client Setup Key          |
+|---------------------------|-------------------------------|
+| Windows Server Datacenter | 6NMRW-2C8FM-D24W7-TQWMY-CWH2D |
+| Windows Server Standard   | N2KJX-J94YW-TQVFB-DG9YT-724CC |
 
 ### Windows Server, version 1803
 

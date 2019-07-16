@@ -5,15 +5,13 @@ description:
 author: billmath
 ms.author: billmath
 manager: femila
-ms.date: 04/01/2019
+ms.date: 07/02/2019
 ms.topic: article
 ms.prod: windows-server-threshold
 
 ms.technology: identity-adfs
 ---
 # AD FS Rapid Restore Tool
-
->Applies To: Windows Server 2016, Windows Server 2012 R2
 
 ## Overview
 Today AD FS is made highly available by setting up an AD FS farm. Some organizations would like a way to have a single server AD FS deployment, eliminating the need for multiple AD FS servers and network load balancing infrastructure, while still having some assurance that service can be restored quickly if there is a problem.
@@ -217,6 +215,13 @@ Every time a backup or restore is performed a log file is created. These can be 
 > When performing a restore a PostRestore_Instructions file might be created containing an overview of the additional authentication providers, attribute stores and local claims provider trusts to be installed manually before starting the AD FS service.
 
 ## Version Release History
+
+### Version 1.0.82.0
+Release: July 2019
+
+**Fixed issues:**
+- Bug fix for AD FS service account names that contain LDAP escape characters
+
 
 ### Version: 1.0.81.0
 Release: April 2019

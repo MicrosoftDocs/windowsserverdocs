@@ -14,8 +14,6 @@ ms.technology: identity-adfs
 
 # Service Communications Certificates
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
-
 A federation server requires the use of service communication certificates for scenarios in which WCF message security is used.  
   
 ## Service communication certificate requirements  

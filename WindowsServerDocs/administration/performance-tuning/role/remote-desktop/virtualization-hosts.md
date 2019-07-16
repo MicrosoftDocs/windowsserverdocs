@@ -18,11 +18,11 @@ Windows Server 2016 supports two types of virtual desktops, personal virtual de
 
 **In this topic:**
 
--   [General considerations](#general)
+-   [General considerations](#general-considerations)
 
--   [Performance optimizations](#perfopt)
+-   [Performance optimizations](#performance-optimizations)
 
-## <a href="" id="general"></a>General considerations
+## General considerations
 
 
 ### Storage
@@ -35,15 +35,14 @@ When appropriate, use Disk Deduplication and caching to reduce the disk read loa
 
 Introduced in Windows Server 2012 R2, Data Deduplication supports optimization of open files. In order to use virtual machines running on a deduplicated volume, the virtual machine files need to be stored on a separate host from the Hyper-V host. If Hyper-V and deduplication are running on the same machine, the two features will contend for system resources and negatively impact overall performance.
 
-The volume must also be configured to use the “Virtual Desktop Infrastructure (VDI)�? deduplication optimization type. You can configure this by using Server Manager (**File and Storage Services** -&gt; **Volumes** -&gt; **Dedup Settings**) or by using the following Windows PowerShell command:
+The volume must also be configured to use the "Virtual Desktop Infrastructure (VDI)" deduplication optimization type. You can configure this by using Server Manager (**File and Storage Services** -&gt; **Volumes** -&gt; **Dedup Settings**) or by using the following Windows PowerShell command:
 
 ``` syntax
 Enable-DedupVolume <volume> -UsageType HyperV
 ```
 
-**Note**  
-Data Deduplication optimization of open files is supported only for VDI scenarios with Hyper-V using remote storage over SMB 3.0.
-
+> [!NOTE]
+> Data Deduplication optimization of open files is supported only for VDI scenarios with Hyper-V using remote storage over SMB 3.0.
 
 ### Memory
 
@@ -171,8 +170,7 @@ The following performance counters are available on the RemoteFX server to measu
 
 In addition to the RemoteFX virtual GPU performance counters, you can also measure the GPU utilization by using Process Explorer, which shows video memory usage and the GPU utilization.
 
-## <a href="" id="perfopt"></a>Performance optimizations
-
+## Performance optimizations
 
 ### Dynamic Memory
 
@@ -216,15 +214,11 @@ Each specific service should be evaluated appropriately prior to any broad deplo
 | Home group provider                          | Consumer centric service                                                                                                                                                                                  |
 | Internet connection sharing                  | Consumer centric service                                                                                                                                                                                  |
 | Media Center extended services               | Consumer centric service                                                                                                                                                                                  |
+> [!NOTE]
+> This list is not meant to be a complete list, because any changes will affect the intended goals and scenarios. For more info, see [Hot off the presses, get it now, the Windows 8 VDI optimization script, courtesy of PFE!](http://blogs.technet.com/b/jeff_stokes/archive/2013/04/09/hot-off-the-presses-get-it-now-the-windows-8-vdi-optimization-script-courtesy-of-pfe.aspx).
 
- 
+ 
+> [!NOTE]
+> SuperFetch in Windows 8 is enabled by default. It is VDI-aware and should not be disabled. SuperFetch can further reduce memory consumption through memory page sharing, which is beneficial for VDI. Pooled virtual desktops running Windows 7, SuperFetch should be disabled, but for personal virtual desktops running Windows 7, it should be left on.
 
-**Note**  
-This list is not meant to be a complete list, because any changes will affect the intended goals and scenarios. For more info, see [Hot off the presses, get it now, the Windows 8 VDI optimization script, courtesy of PFE!](http://blogs.technet.com/b/jeff_stokes/archive/2013/04/09/hot-off-the-presses-get-it-now-the-windows-8-vdi-optimization-script-courtesy-of-pfe.aspx).
-
- 
-
-**Note**  
-SuperFetch in Windows 8 is enabled by default. It is VDI-aware and should not be disabled. SuperFetch can further reduce memory consumption through memory page sharing, which is beneficial for VDI. Pooled virtual desktops running Windows 7, SuperFetch should be disabled, but for personal virtual desktops running Windows 7, it should be left on.
-
- 
+ 

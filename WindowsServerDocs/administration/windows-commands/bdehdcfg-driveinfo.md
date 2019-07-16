@@ -24,9 +24,11 @@ Displays the drive letter, the total size, the maximum free space, and the parti
 bdehdcfg -driveinfo <DriveLetter>
 ```
 ### Parameters
-|Parameter|Description|
-|-------|--------|
-|<DriveLetter>|Specifies a drive letter followed by a colon.|
+
+|   Parameter   |                  Description                  |
+|---------------|-----------------------------------------------|
+| <DriveLetter> | Specifies a drive letter followed by a colon. |
+
 ## Remarks
 The command is informational only and makes no modifications to the drive.
 ## <a name="BKMK_Examples"></a>Example

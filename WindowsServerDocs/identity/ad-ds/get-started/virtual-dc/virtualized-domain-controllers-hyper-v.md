@@ -76,7 +76,6 @@ A VHD file of a virtual domain controller is equivalent to the physical hard dri
 ## RODCs
 
 One benefit of RODCs is the ability to place them at locations where physical security cannot be guaranteed, such as at branch offices. You can use Windows BitLocker Drive Encryption to protect VHD files themselves (not the file systems therein) from being compromised on the host through theft of the physical disk. 
-<!-- Removed link to Windows Server 2008 Hyper-V and BitLocker Drive Encryption (http://go.microsoft.com/fwlink/?linkid=123534). Link is dead. -->
 
 ## Performance
 
@@ -170,10 +169,8 @@ To ensure satisfactory performance, integration components (IC) were installed t
 When you monitor performance of virtual machines with Reliability and Performance Manager (Perfmon.msc), within the virtual machine the CPU information will not be entirely accurate as a result of the way the virtual CPU is scheduled on the physical processor. When you want to obtain CPU information for a virtual machine that is running on a Hyper-V server, use the Hyper-V Hypervisor Logical Processor counters in the host partition.
 
 For more information about performance tuning of both AD DS and Hyper-V, see [Performance Tuning Guidelines for Windows Server 2016](../../../../administration/performance-tuning/index.md).
-<!-- Updated to 2016 perf guidance -->
 
 Also, do not plan to use a differencing disk VHD on a virtual machine that is configured as a domain controller because the differencing disk VHD can reduce performance. To learn more about Hyper-V disk types, including differencing disks, see [New Virtual Hard Disk Wizard](http://go.microsoft.com/fwlink/?linkid=137279).
-<!-- Couldn't find an equivalent WS 2016 Hyper-V article. -->
 
 For additional information regarding AD DS in virtual hosting environments, see [Things to consider when you host Active Directory domain controllers in virtual hosting environments](https://go.microsoft.com/fwlink/?linkid=141292) in the Microsoft Knowledge Base.
 
@@ -185,19 +182,19 @@ There are several common virtual machine practices that you should avoid when yo
 
 Virtualization platforms, such as Hyper-V, offer a number of convenience features that make managing, maintaining, backing up, and migrating computers easier. However, the following common deployment practices and features should not be used for virtual domain controllers:
 
-   - To ensure durability of Active Directory writes, do not deploy a virtual domain controller’s database files (the Active Directory database (NTDS.DIT), logs and SYSVOL) on virtual IDE disks. Instead, create a second VHD attached to a virtual SCSI controller and ensure that the database, logs, and SYSVOL are placed on the virtual machine’s SCSI disk during domain controller installation.  
-   - Do not implement differencing disk virtual hard disks (VHDs) on a virtual machine that you are configuring as a domain controller. This makes it too easy to revert to a previous version, and it also decreases performance. For more information about VHD types, see [New Virtual Hard Disk Wizard](https://go.microsoft.com/fwlink/?linkid=137279).  
-   - Do not deploy new Active Directory domains and forests on a copy of a Windows Server operating system that was not first prepared using System Preparation tool (Sysprep). For more information about running the Sysprep, see [Sysprep (System Preparation) Overview](https://docs.microsoft.com/windows-hardware/manufacture/desktop/sysprep--system-preparation--overview)
+- To ensure durability of Active Directory writes, do not deploy a virtual domain controller’s database files (the Active Directory database (NTDS.DIT), logs and SYSVOL) on virtual IDE disks. Instead, create a second VHD attached to a virtual SCSI controller and ensure that the database, logs, and SYSVOL are placed on the virtual machine’s SCSI disk during domain controller installation.  
+- Do not implement differencing disk virtual hard disks (VHDs) on a virtual machine that you are configuring as a domain controller. This makes it too easy to revert to a previous version, and it also decreases performance. For more information about VHD types, see [New Virtual Hard Disk Wizard](https://go.microsoft.com/fwlink/?linkid=137279).  
+- Do not deploy new Active Directory domains and forests on a copy of a Windows Server operating system that was not first prepared using System Preparation tool (Sysprep). For more information about running the Sysprep, see [Sysprep (System Preparation) Overview](https://docs.microsoft.com/windows-hardware/manufacture/desktop/sysprep--system-preparation--overview)
 
-      > [!WARNING]
-      > Running Sysprep on a domain controller is not supported.
+   > [!WARNING]
+   > Running Sysprep on a domain controller is not supported.
 
-   - To help prevent a potential update sequence number (USN) rollback situation, do not use copies of a VHD file that represents an already deployed domain controller to deploy additional domain controllers. For more information about USN rollback, see [USN and USN Rollback](#usn-and-usn-rollback).
-      - Windows Server 2012 and newer allows administrators to clone domain controller images if prepared properly when they want to deploy additional domain controllers
-   - Do not use the Hyper-V Export feature to export a virtual machine that is running a domain controller.
-      - With Windows Server 2012 and newer, an export and import of a Domain Controller virtual guest is handled like a non-authoritative restore as it detects a change of the Generation ID and it is not configured for cloning.
-      - Ensure you are not using the guest that you exported anymore.
-  - You may use Hyper-V Replication to keep a second inactive copy of a Domain Controller. If you start the replicated image, you also need to perform proper cleanup, for the same reason as not using the source after exporting a DC guest image.
+- To help prevent a potential update sequence number (USN) rollback situation, do not use copies of a VHD file that represents an already deployed domain controller to deploy additional domain controllers. For more information about USN rollback, see [USN and USN Rollback](#usn-and-usn-rollback).
+   - Windows Server 2012 and newer allows administrators to clone domain controller images if prepared properly when they want to deploy additional domain controllers
+- Do not use the Hyper-V Export feature to export a virtual machine that is running a domain controller.
+  - With Windows Server 2012 and newer, an export and import of a Domain Controller virtual guest is handled like a non-authoritative restore as it detects a change of the Generation ID and it is not configured for cloning.
+  - Ensure you are not using the guest that you exported anymore.
+    - You may use Hyper-V Replication to keep a second inactive copy of a Domain Controller. If you start the replicated image, you also need to perform proper cleanup, for the same reason as not using the source after exporting a DC guest image.
 
 ## Physical-to-virtual migration
 
@@ -238,23 +235,23 @@ To disable the Hyper-V time synchronization provider, shut down the VM and clear
 
 To optimize the performance of the domain controller virtual machine and ensure durability of Active Directory writes, use the following recommendations for storing operating system, Active Directory, and VHD files:
 
-   - **Guest storage**. Store the Active Directory database file (Ntds.dit), log files, and SYSVOL files on a separate virtual disk from the operating system files. Create a second VHD attached to a virtual SCSI controller and store the database, logs, and SYSVOL on the virtual machine’s virtual SCSI disk. Virtual SCSI disks provide increased performance compared to virtual IDE and they support Forced Unit Access (FUA). FUA ensures that the operating system writes and reads data directly from the media bypassing any and all caching mechanisms.
+- **Guest storage**. Store the Active Directory database file (Ntds.dit), log files, and SYSVOL files on a separate virtual disk from the operating system files. Create a second VHD attached to a virtual SCSI controller and store the database, logs, and SYSVOL on the virtual machine’s virtual SCSI disk. Virtual SCSI disks provide increased performance compared to virtual IDE and they support Forced Unit Access (FUA). FUA ensures that the operating system writes and reads data directly from the media bypassing any and all caching mechanisms.
 
-   > [!NOTE]
-   > If you are planning to use Bitlocker for the virtual DC guest, you need to make sure the additional volumes are configured for “auto unlock”.
-   > More information about configuring auto unlock can be found in [Enable-BitLockerAutoUnlock](https://docs.microsoft.com/powershell/module/bitlocker/enable-bitlockerautounlock)
+  > [!NOTE]
+  > If you are planning to use Bitlocker for the virtual DC guest, you need to make sure the additional volumes are configured for “auto unlock”.
+  > More information about configuring auto unlock can be found in [Enable-BitLockerAutoUnlock](https://docs.microsoft.com/powershell/module/bitlocker/enable-bitlockerautounlock)
 
-   - **Host storage of VHD files**. Recommendations: Host storage recommendations address storage of VHD files. For maximum performance, do not store VHD files on a disk that is used frequently by other services or applications, such as the system disk on which the host Windows operating system is installed. Store each VHD file on a separate partition from the host operating system and any other VHD files. The ideal configuration is to store each VHD file on a separate physical drive.  
+- **Host storage of VHD files**. Recommendations: Host storage recommendations address storage of VHD files. For maximum performance, do not store VHD files on a disk that is used frequently by other services or applications, such as the system disk on which the host Windows operating system is installed. Store each VHD file on a separate partition from the host operating system and any other VHD files. The ideal configuration is to store each VHD file on a separate physical drive.  
 
-    The host physical disk system must also satisfy **at least one** of the following criteria to meet the requirements of virtualized workload data integrity:  
+  The host physical disk system must also satisfy **at least one** of the following criteria to meet the requirements of virtualized workload data integrity:  
 
-      - The system uses server-class disks (SCSI, Fibre Channel).  
-      - The system makes sure that the disks are connected to a battery-backed caching host bus adapter (HBA).  
-      - The system uses a storage controller (for example, a RAID system) as the storage device.  
-      - The system makes sure that power to the disk is protected by an uninterruptible power supply (UPS).  
-      - The system makes sure that the disk's write-caching feature is disabled.  
+   - The system uses server-class disks (SCSI, Fibre Channel).  
+   - The system makes sure that the disks are connected to a battery-backed caching host bus adapter (HBA).  
+   - The system uses a storage controller (for example, a RAID system) as the storage device.  
+   - The system makes sure that power to the disk is protected by an uninterruptible power supply (UPS).  
+   - The system makes sure that the disk's write-caching feature is disabled.  
 
-   - **Fixed VHD versus pass-through disks**. There are many ways to configure storage for virtual machines. When VHD files are used, fixed-size VHDs are more efficient than dynamic VHDs because the memory for fixed-size VHDs is allocated when they are created. Pass-through disks, which virtual machines can use to access physical storage media, are even more optimized for performance. Pass-through disks are essentially physical disks or logical unit numbers (LUNs) that are attached to a virtual machine. Pass-through disks do not support the snapshot feature. Therefore, pass-through disks are the preferred hard disk configuration, because the use of snapshots with domain controllers is not recommended.  
+- **Fixed VHD versus pass-through disks**. There are many ways to configure storage for virtual machines. When VHD files are used, fixed-size VHDs are more efficient than dynamic VHDs because the memory for fixed-size VHDs is allocated when they are created. Pass-through disks, which virtual machines can use to access physical storage media, are even more optimized for performance. Pass-through disks are essentially physical disks or logical unit numbers (LUNs) that are attached to a virtual machine. Pass-through disks do not support the snapshot feature. Therefore, pass-through disks are the preferred hard disk configuration, because the use of snapshots with domain controllers is not recommended.  
 
 To reduce the chance of corruption of Active Directory data, use virtual SCSI controllers:
 
@@ -314,11 +311,11 @@ When a domain controller virtual machine fails and an update sequence number (US
 
 Use the process in the following illustration to determine the best way to restore your virtualized domain controller.
 
-![](media\virtualized-domain-controller-architecture\Dd363553.85c97481-7b95-4705-92a7-006e48bc29d0(WS.10).gif)
+![](media/virtualized-domain-controller-architecture/Dd363553.85c97481-7b95-4705-92a7-006e48bc29d0(WS.10).gif)
 
 For RODCs, the restoration process and decisions are simpler.
 
-![](media\virtualized-domain-controller-architecture\Dd363553.4c5c5eda-df95-4c6b-84e0-d84661434e5d(WS.10).gif)
+![](media/virtualized-domain-controller-architecture/Dd363553.4c5c5eda-df95-4c6b-84e0-d84661434e5d(WS.10).gif)
 
 ## Restoring the system state backup of a virtual domain controller
 
@@ -359,17 +356,17 @@ If you do not have a system state data backup that predates the virtual machine 
 9. Right-click the **Directory Services** log, and then click **Find**. In **Find what**, type **1109**, and then click **Find Next**.
 10. You should see at least an Event ID 1109 entry. If you do not see this entry, proceed to the next step. Otherwise, double-click the entry, and then review the text confirming that the update was made to the InvocationID:
 
-   ```
-   Active Directory has been restored from backup media, or has been configured to host an application partition. 
-   The invocationID attribute for this directory server has been changed. 
-   The highest update sequence number at the time the backup was created is <time>
+    ```
+    Active Directory has been restored from backup media, or has been configured to host an application partition. 
+    The invocationID attribute for this directory server has been changed. 
+    The highest update sequence number at the time the backup was created is <time>
 
-   InvocationID attribute (old value):<Previous InvocationID value>
-   InvocationID attribute (new value):<New InvocationID value>
-   Update sequence number:<USN>
+    InvocationID attribute (old value):<Previous InvocationID value>
+    InvocationID attribute (new value):<New InvocationID value>
+    Update sequence number:<USN>
 
-   The InvocationID is changed when a directory server is restored from backup media or is configured to host a writeable application directory partition.
-   ```
+    The InvocationID is changed when a directory server is restored from backup media or is configured to host a writeable application directory partition.
+    ```
 
 11. Close Event Viewer.
 12. Use Registry Editor to verify that the value in **DSA Previous Restore Count** is equal to the previous value plus one. If this is not the correct value and you cannot find an entry for Event ID 1109 in Event Viewer, verify that the domain controller’s service packs are current. You cannot try this procedure again on the same VHD. You can try again on a copy of the VHD or a different VHD that has not been started in normal mode by starting over at step 1.
@@ -378,8 +375,6 @@ If you do not have a system state data backup that predates the virtual machine 
 ## USN and USN Rollback
 
 This section describes replication issues that can occur as a result of an incorrect restoration of the Active Directory database with an older version of a virtual machine. For additional details about the Active Directory replication process, see [Active Directory Replication Concepts](../replication/active-directory-replication-concepts.md)
-
-<!-- Replaced this link with 2016 article: [How the Active Directory Replication Model Works](http://go.microsoft.com/fwlink/?linkid=27636) (http://go.microsoft.com/fwlink/?LinkID=27636). -->
 
 ## USNs
 
@@ -412,7 +407,7 @@ When AD DS is properly restored on a domain controller, the **invocationID** is
 
 For example, assume that VDC1 and DC2 are two domain controllers in the same domain. The following figure shows the perception of DC2 about VDC1 when the invocationID value is reset in a proper restore situation.
 
-![](media\virtualized-domain-controller-architecture\Dd363553.ca71fc12-b484-47fb-991c-5a0b7f516366(WS.10).gif)
+![](media/virtualized-domain-controller-architecture/Dd363553.ca71fc12-b484-47fb-991c-5a0b7f516366(WS.10).gif)
 
 ## USN rollback
 
@@ -439,7 +434,7 @@ In Windows Server 2008 and Windows Server 2003 SP1, when a destination doma
 
 The following illustration shows the sequence of events that occurs when USN rollback is detected on VDC2, the destination domain controller that is running on a virtual machine. In this illustration, the detection of USN rollback occurs on VDC2 when a replication partner detects that VDC2 has sent an up-to-dateness USN value that was seen previously by the destination domain controller, which indicates that VDC2’s database has rolled back in time improperly.
 
-![](media\virtualized-domain-controller-architecture\\Dd363553.373b0504-43fc-40d0-9908-13fdeb7b3f14(WS.10).gif)
+![](media/virtualized-domain-controller-architecture/Dd363553.373b0504-43fc-40d0-9908-13fdeb7b3f14(WS.10).gif)
 
 If the Directory Service event log reports Event ID 2095, complete the following procedure immediately.
 
@@ -464,7 +459,7 @@ In the first circumstance, other domain controllers might replicate with either 
 
 In the second circumstance, a range of USNs applies to two different sets of changes. This can continue for extended periods without being detected. Whenever an object that is created during that time is modified, a lingering object is detected and reported as Event ID 1988 in Event Viewer. The following illustration shows how USN rollback might not be detected in such a circumstance.
 
-![](media\virtualized-domain-controller-architecture\Dd363553.63565fe0-d970-4b4e-b5f3-9c76bc77e2d4(WS.10).gif)
+![](media/virtualized-domain-controller-architecture/Dd363553.63565fe0-d970-4b4e-b5f3-9c76bc77e2d4(WS.10).gif)
 
 ## Read-only domain controllers
 

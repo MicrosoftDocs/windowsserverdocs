@@ -29,7 +29,7 @@ Cluster sets technology is developed to meet specific customer requests operatin
 
 From a high level view, this is what cluster sets can look like.
 
-![Cluster sets solution View](media\Cluster-sets-Overview\Cluster-sets-solution-View.png)
+![Cluster sets solution View](media/Cluster-sets-Overview/Cluster-sets-solution-View.png)
 
 The following provides a quick summary of each of the elements in the above image:
 
@@ -252,7 +252,11 @@ Live migrating a virtual machine between different cluster set clusters is not t
 2. live migrate the virtual machine to a member node of a different cluster.
 3. add the virtual machine into the cluster as a new virtual machine role.
 
-With Cluster sets these steps are not necessary and only one command is needed.  For example, I want to move a Cluster Set virtual machine from CLUSTER1 to NODE2-CL3 on CLUSTER3.  The single command would be:
+With Cluster sets these steps are not necessary and only one command is needed.  First, you should set all networks to be available for the migration with the command:
+
+	Set-VMHost -UseAnyNetworkMigration $true
+
+For example, I want to move a Cluster Set virtual machine from CLUSTER1 to NODE2-CL3 on CLUSTER3.  The single command would be:
 
         Move-ClusterSetVM -CimSession CSMASTER -VMName CSVM1 -Node NODE2-CL3
 

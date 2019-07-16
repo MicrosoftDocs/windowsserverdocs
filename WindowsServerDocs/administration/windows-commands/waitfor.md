@@ -32,15 +32,15 @@ waitfor [/t <Timeout>] <SignalName>
 
 ## Parameters
 
-|Parameter|Description|
-|---------|-----------|
-|/s \<Computer>|Specifies the name or IP address of a remote computer (do not use backslashes). The default is the local computer. This parameter applies to all files and folders specified in the command.|
-|/u [\<Domain>\]<User>|Runs the script using the credentials of the specified user account. By default, **waitfor** uses the current user's credentials.|
-|/p [\<Password>]|Specifies the password of the user account that is specified in the **/u** parameter.|
-|/si|Sends the specified signal across the network.|
-|/t \<Timeout>|Specifies the number of seconds to wait for a signal. By default, **waitfor** waits indefinitely.|
-|\<SignalName>|Specifies the signal that **waitfor** waits for or sends. *SignalName* is not case-sensitive.|
-|/?|Displays help at the command prompt.|
+|       Parameter       |                                                                                         Description                                                                                          |
+|-----------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|    /s \<Computer>     | Specifies the name or IP address of a remote computer (do not use backslashes). The default is the local computer. This parameter applies to all files and folders specified in the command. |
+| /u [\<Domain>\]<User> |                              Runs the script using the credentials of the specified user account. By default, **waitfor** uses the current user's credentials.                               |
+|   /p [\<Password>]    |                                                    Specifies the password of the user account that is specified in the **/u** parameter.                                                     |
+|          /si          |                                                                        Sends the specified signal across the network.                                                                        |
+|     /t \<Timeout>     |                                              Specifies the number of seconds to wait for a signal. By default, **waitfor** waits indefinitely.                                               |
+|     \<SignalName>     |                                                Specifies the signal that **waitfor** waits for or sends. *SignalName* is not case-sensitive.                                                 |
+|          /?           |                                                                             Displays help at the command prompt.                                                                             |
 
 ## Remarks
 

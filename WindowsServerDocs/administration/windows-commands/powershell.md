@@ -26,22 +26,31 @@ The **PowerShell.exe** command-line tool starts a Windows PowerShell session in 
 You can use the **PowerShell.exe** command-line tool to start a Windows PowerShell session in a Command Prompt window.
 
 - To start a Windows PowerShell session in a command prompt window, type `PowerShell`. A **PS** prefix is added to the command prompt to indicate that you are in a Windows PowerShell session.
-- To start a session with a particular execution policy, use the **ExecutionPolicy** parameter.  
+
+- To start a session with a particular execution policy, use the **ExecutionPolicy** parameter.
+
     ```
     PowerShell.exe -ExecutionPolicy Restricted
-    ```  
-- To start a Windows PowerShell session without your Windows PowerShell profiles, use the **NoProfile** parameter.  
+    ```
+
+- To start a Windows PowerShell session without your Windows PowerShell profiles, use the **NoProfile** parameter.
+
     ```
     PowerShell.exe -NoProfile
-    ```  
-- To start a session , use the **ExecutionPolicy** parameter.  
+    ```
+  
+- To start a session , use the **ExecutionPolicy** parameter.
+
     ```
     PowerShell.exe -ExecutionPolicy Restricted
-    ```  
+    ```
+  
 - To see the PowerShell.exe help file, use the following command format.  
+    
     ```
     PowerShell.exe -help, -?, /?
-    ```  
+    ```
+
 - To end a Windows PowerShell session in a Command Prompt window, type `exit`. The typical command prompt returns.
 
 For a complete list of the **PowerShell.exe** command-line parameters, see [about_PowerShell.Exe](https://go.microsoft.com/fwlink/?LinkID=113439).

@@ -31,19 +31,20 @@ mstsc.exe /migrate
 ```
 
 ## Parameters
-|Parameter|Description|
-|-------|--------|
-|<Connection File>|Specifies the name of an .rdp file for the connection.|
-|/v:<Server[:<Port>]|Specifies the remote computer and, optionally, the port number to which you want to connect.|
-|/admin|Connects you to a session for administering the server.|
-|/f|starts Remote Desktop Connection in full-screen mode.|
-|/w:<Width>|Specifies the width of the Remote Desktop window.|
-|/h:<Height>|Specifies the height of the Remote Desktop window.|
-|/public|Runs Remote Desktop in public mode. In public mode, passwords and bitmaps are not cached.|
-|/span|Matches the Remote Desktop width and height with the local virtual desktop, spanning across multiple monitors if necessary.|
-|/edit <Connection File>|Opens the specified .rdp file for editing.|
-|/migrate|Migrates legacy connection files that were created with Client Connection Manager to new .rdp connection files.|
-|/?|Displays help at the command prompt.|
+
+|        Parameter        |                                                         Description                                                         |
+|-------------------------|-----------------------------------------------------------------------------------------------------------------------------|
+|    <Connection File>    |                                   Specifies the name of an .rdp file for the connection.                                    |
+|   /v:<Server[:<Port>]   |                Specifies the remote computer and, optionally, the port number to which you want to connect.                 |
+|         /admin          |                                   Connects you to a session for administering the server.                                   |
+|           /f            |                                    starts Remote Desktop Connection in full-screen mode.                                    |
+|       /w:<Width>        |                                      Specifies the width of the Remote Desktop window.                                      |
+|       /h:<Height>       |                                     Specifies the height of the Remote Desktop window.                                      |
+|         /public         |                  Runs Remote Desktop in public mode. In public mode, passwords and bitmaps are not cached.                  |
+|          /span          | Matches the Remote Desktop width and height with the local virtual desktop, spanning across multiple monitors if necessary. |
+| /edit <Connection File> |                                         Opens the specified .rdp file for editing.                                          |
+|        /migrate         |       Migrates legacy connection files that were created with Client Connection Manager to new .rdp connection files.       |
+|           /?            |                                            Displays help at the command prompt.                                             |
 
 ## Remarks
 -   Default.rdp is stored for each user as a hidden file in the user's Documents folder. User created .rdp files are saved by default in the user's Documents folder but can be saved anywhere.
@@ -58,7 +59,7 @@ mstsc.exe /migrate
     ```
     mstsc /edit filename.rdp
     ```
-    
+
 #### additional references
 -   [Command-Line Syntax Key](command-line-syntax-key.md)
 -   [Remote Desktop Services &#40;Terminal Services&#41; Command Reference](remote-desktop-services-terminal-services-command-reference.md)

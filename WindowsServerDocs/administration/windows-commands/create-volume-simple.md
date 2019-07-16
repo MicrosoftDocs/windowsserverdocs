@@ -33,12 +33,12 @@ create volume simple [size=<n>] [disk=<n>] [align=<n>] [noerr]
   
 ## Parameters  
   
-|Parameter|Description|  
-|-------|--------|  
-|size\=<n>|The size of the volume in megabytes \(MB\). If no size is given, the new volume takes up the remaining free space on the disk.|  
-|disk\=<n>|The dynamic disk on which the volume is created. If no disk is specified, the current disk is used.|  
-|align\=<n>|Aligns all volume extents to the closest alignment boundary. Typically used with hardware RAID Logical Unit Number \(LUN\) arrays to improve performance. *n* is the number of kilobytes \(KB\) from the beginning of the disk to the closest alignment boundary.|  
-|noerr|for scripting only. When an error is encountered, DiskPart continues to process commands as if the error did not occur. Without this parameter, an error causes DiskPart to exit with an error code.|  
+| Parameter  |                                                                                                                            Description                                                                                                                            |
+|------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| size\=<n>  |                                                                  The size of the volume in megabytes \(MB\). If no size is given, the new volume takes up the remaining free space on the disk.                                                                   |
+| disk\=<n>  |                                                                                The dynamic disk on which the volume is created. If no disk is specified, the current disk is used.                                                                                |
+| align\=<n> | Aligns all volume extents to the closest alignment boundary. Typically used with hardware RAID Logical Unit Number \(LUN\) arrays to improve performance. *n* is the number of kilobytes \(KB\) from the beginning of the disk to the closest alignment boundary. |
+|   noerr    |                               for scripting only. When an error is encountered, DiskPart continues to process commands as if the error did not occur. Without this parameter, an error causes DiskPart to exit with an error code.                                |
   
 ## Remarks  
   

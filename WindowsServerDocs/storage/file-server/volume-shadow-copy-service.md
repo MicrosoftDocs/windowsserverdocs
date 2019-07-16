@@ -92,7 +92,7 @@ To create a shadow copy, the requester, writer, and provider perform the followi
 > The shadow copy creation can be aborted if the writers are kept in the freeze state for longer than 60 seconds or if the providers take longer than 10 seconds to commit the shadow copy. 
 <br>
 
-9.  The requester can retry the process (go back to step 1) or notify the administrator to retry at a later time.  
+9. The requester can retry the process (go back to step 1) or notify the administrator to retry at a later time.  
       
 10. If the shadow copy is successfully created, the Volume Shadow Copy Service returns the location information for the shadow copy to the requester. In some cases, the shadow copy can be temporarily made available as a read-write volume so that VSS and one or more applications can alter the contents of the shadow copy before the shadow copy is finished. After VSS and the applications make their alterations, the shadow copy is made read-only. This phase is called Auto-recovery, and it is used to undo any file-system or application transactions on the shadow copy volume that were not completed before the shadow copy was created.  
       
@@ -371,12 +371,12 @@ To exclude specific files from shadow copies, use the following registry key: **
 
 > [!NOTE]
 > The <STRONG>FilesNotToSnapshot</STRONG> registry key is intended to be used only by applications. Users who attempt to use it will encounter limitations such as the following: 
-<br>
-<UL>
-<LI>It cannot delete files from a shadow copy that was created on a Windows Server by using the Previous Versions feature.<BR><BR>
-<LI>It cannot delete files from shadow copies for shared folders.<BR><BR>
-<LI>It can delete files from a shadow copy that was created by using the [Diskshadow](https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/diskshadow) utility, but it cannot delete files from a shadow copy that was created by using the [Vssadmin](https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/vssadmin) utility.<BR><BR>
-<LI>Files are deleted from a shadow copy on a best-effort basis. This means that they are not guaranteed to be deleted.<BR><BR></LI></UL>
+> <br>
+> <UL>
+> <LI>It cannot delete files from a shadow copy that was created on a Windows Server by using the Previous Versions feature.<BR><BR>
+> <LI>It cannot delete files from shadow copies for shared folders.<BR><BR>
+> <LI>It can delete files from a shadow copy that was created by using the <a href="https://docs.microsoft.com/windows-server/administration/windows-commands/diskshadow" data-raw-source="[Diskshadow](https://docs.microsoft.com/windows-server/administration/windows-commands/diskshadow)">Diskshadow</a> utility, but it cannot delete files from a shadow copy that was created by using the <a href="https://docs.microsoft.com/windows-server/administration/windows-commands/vssadmin" data-raw-source="[Vssadmin](https://docs.microsoft.com/windows-server/administration/windows-commands/vssadmin)">Vssadmin</a> utility.<BR><BR>
+> <LI>Files are deleted from a shadow copy on a best-effort basis. This means that they are not guaranteed to be deleted.<BR><BR></LI></UL>
 
 
 For more information, see [Excluding Files from Shadow Copies](http://go.microsoft.com/fwlink/?linkid=180904) (http://go.microsoft.com/fwlink/?LinkId=180904) on MSDN.
