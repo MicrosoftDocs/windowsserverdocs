@@ -22,10 +22,10 @@ When you try to use a Multiple Activation Key (MAK) or the Key Management Servic
 
 |Error code |Error message |Activation type |
 |-----------|--------------|----------------|
-|[0xC004C001](#0-c004c001-the-activation-server-determined-the-specified-product-key-is-invalid) |The activation server determined the specified product key is invalid |MAK|
-|[0xC004C003](0-c004c003-the-activation-server-determined-the-specified-product-key-is-blocked) |The activation server determined the specified product key is blocked |MAK |
+|[0xC004C001](#0-c004c001) |The activation server determined the specified product key is invalid |MAK|
+|[0xC004C003](#0-c004c003-the-activation-server-determined-the-specified-product-key-is-blocked) |The activation server determined the specified product key is blocked |MAK |
 |[0xC004C008](#0-c004c008-the-activation-server-determined-that-the-specified-product-key-could-not-be-used) |The activation server determined that the specified product key could not be used. |KMS |
-|[0xC004B100](0-c004b100-the-activation-server-determined-that-the-computer-could-not-be-activated) |The activation server determined that the computer could not be activated. |MAK |
+|[0xC004B100](#0-c004b100-the-activation-server-determined-that-the-computer-could-not-be-activated) |The activation server determined that the computer could not be activated. |MAK |
 |[0xC004C020](#0-c004c020-the-activation-server-reported-that-the-multiple-activation-key-has-exceeded-its-limit) |The activation server reported that the Multiple Activation Key has exceeded its limit. |MAK |
 |[0xC004C021](#0-c004c021-the-activation-server-reported-that-the-multiple-activation-key-extension-limit-has-been-exceeded) |The activation server reported that the Multiple Activation Key extension limit has been exceeded. |MAK |
 |[0xC004F009](#0-c004f009-the-software-protection-service-reported-that-the-grace-period-expired) |The Software Protection Service reported that the grace period expired. |MAK |
@@ -53,6 +53,7 @@ When you try to use a Multiple Activation Key (MAK) or the Key Management Servic
 |[0x8007007b](#0-8007007b-dns-name-does-not-exist) |0x8007007b DNS name does not exist. |KMS client |
 |[0x80070490](#0-80070490-the-product-key-you-entered-didn-t-work) |The product key you entered didn't work. Check the product key and try again, or enter a different one. |MAK |
 
+<a name="0-c004c001">
 ## 0xC004C001 The activation server determined the specified product key is invalid
 
 Possible cause: An invalid MAK was entered.
