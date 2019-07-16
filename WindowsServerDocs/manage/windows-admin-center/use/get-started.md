@@ -72,7 +72,7 @@ After you have completed the installation of Windows Admin Center, you can add s
 > [!Note]
 > The .csv file created by [exporting your connections with PowerShell](#use-powershell-to-import-or-export-your-connections-with-tags) contains additional information beyond the server names and is not compatible with this import method.
 
-   **-- OR --**
+  **-- OR --**
 
 **Add servers by searching Active Directory**
 
