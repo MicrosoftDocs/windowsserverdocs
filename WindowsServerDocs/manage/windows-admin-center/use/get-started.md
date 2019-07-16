@@ -69,6 +69,9 @@ After you have completed the installation of Windows Admin Center, you can add s
 
  2. Click **Browse** and select a text file that contains a comma, or new line separated, list of FQDNs for the servers you want to add.
 
+  > [!Note]
+  > The .csv file created by [exporting your connections with PowerShell](#use-powershell-to-import-or-export-your-connections-with-tags) contains additional information beyond the server names and is not compatible with this import method.
+
     **-- OR --**
 
 **Add servers by searching Active Directory**
@@ -146,10 +149,6 @@ Once tags have been added to one or more server connections, you can view the ta
 ![](../media/launch/tags-8.png)
 
 ## Use PowerShell to import or export your connections (with tags)
-
-> Applies To: Windows Admin Center Preview
-
-Windows Admin Center Preview includes a PowerShell module to import or export your connection list.
 
 ```powershell
 # Load the module
