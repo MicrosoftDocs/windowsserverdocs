@@ -82,7 +82,7 @@ If you have SSDs and HDDs, the SSDs will cache for the HDDs.
    >[!NOTE]
    > Cache drives do not contribute usable storage capacity. All data stored in the cache is also stored elsewhere, or will be once it de-stages. This means the total raw storage capacity of your deployment is the sum of your capacity drives only.
 
-When all drives are of the same type, no cache is configured automatically. You have the option to manually configure higher-endurance drives to cache for lower-endurance drives of the same type – see the [Manual configuration](#manual) section to learn how.
+When all drives are of the same type, no cache is configured automatically. You have the option to manually configure higher-endurance drives to cache for lower-endurance drives of the same type – see the [Manual configuration](#manual-configuration) section to learn how.
 
    >[!TIP]
    > In all-NVMe or all-SSD deployments, especially at very small scale, having no drives "spent" on cache can improve storage efficiency meaningfully.
@@ -171,7 +171,7 @@ You may choose to use the CSV cache, or not – it's up to you. It is off by def
 
 For most deployments, manual configuration is not required. In case you do need it, see the following sections. 
 
-If you need to make changes to the cache device model after setup, edit the Health Service's Support Components Document, as described in [Health Service overview](../../failover-clustering/health-service-overview#supported-components-document.md).
+If you need to make changes to the cache device model after setup, edit the Health Service's Support Components Document, as described in [Health Service overview](../../failover-clustering/health-service-overview.md#supported-components-document).
 
 ### Specify cache drive model
 
