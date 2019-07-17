@@ -165,7 +165,7 @@ There are several other unrelated caches in the Windows software-defined storage
 
 With Storage Spaces Direct, the Storage Spaces write-back cache should not be modified from its default behavior. For example, parameters such as **-WriteCacheSize** on the **New-Volume** cmdlet should not be used.
 
-You may choose to use the CSV cache, or not – it's up to you. It is off by default in Storage Spaces Direct, but it does not conflict with the new cache described in this topic in any way. In certain scenarios it can provide valuable performance gains. For more information, see [How to Enable CSV Cache](https://blogs.msdn.microsoft.com/clustering/2013/07/19/how-to-enable-csv-cache/).
+You may choose to use the CSV cache, or not – it's up to you. It is off by default in Storage Spaces Direct, but it does not conflict with the new cache described in this topic in any way. In certain scenarios it can provide valuable performance gains. For more information, see [How to Enable CSV Cache](../../failover-clustering/failover-cluster-csvs.md#enable-the-csv-cache-for-read-intensive-workloads-optional).
 
 ## Manual configuration
 
