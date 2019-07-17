@@ -76,4 +76,4 @@ Your settings are preserved when upgrading to a new version of Windows Admin Cen
 
 ## Updating the certificate used by Windows Admin Center
 
-When you have Windows Admin Center deployed as a service, you must provide a certificate for the HTTPS. To update this certificate at a later time, re-run the installer and choose ```change```.
+When you have Windows Admin Center deployed as a service, you must provide a certificate for HTTPS. To update this certificate at a later time, re-run the installer and choose ```change```.
