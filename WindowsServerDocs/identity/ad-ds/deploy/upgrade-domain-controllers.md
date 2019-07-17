@@ -11,7 +11,7 @@ ms.technology: identity-adds
 ---
 # Upgrade Domain Controllers to Windows Server 2016
 
-Applies To: Windows Server 2016
+Applies To: Windows Server
 
 This topic provides background information about Active Directory Domain
 Services in Windows Server 2016 and explains the process for upgrading domain controllers from Windows Server 2012 or Windows Server 2012 R2.
@@ -23,14 +23,14 @@ The recommended way to upgrade a domain is to promote domain controllers that ru
 1. Verify the target server meets system requirements.
 2. Verify Application compatibility.
 3. Review Recommendations for moving to Windows Server 2016
-4. Verify security settings. For more information, see [Deprecated features and behavior changes related to AD DS in Windows Server 2016](https://docs.microsoft.com/windows-server/get-started/deprecated-features).
+4. Verify security settings. For more information, see [Deprecated features and behavior changes related  to AD DS in Windows Server 2016](../../../get-started\deprecated-features.md).
 5. Check connectivity to the target server from the computer where you plan to run the installation.
 6. Check for availability of necessary operation master roles:
    - To install the first DC that runs Windows Server 2016 in an existing domain and forest, the machine where you run the installation needs connectivity to the **schema master** in order to run adprep /forestprep and the infrastructure master in order to run adprep /domainprep.
-   - To install the first DC in a domain where the forest schema is already extended, you only need connectivity to infrastructure master.
+   - To install the first DC in a domain where the forest schema is already extended, you only need connectivity to the **infrastructure master**.
    - To install or remove a domain in an existing forest, you need connectivity to the **domain naming master**.
    - Any domain controller installation also requires connectivity to the **RID master.**
-   - If you are installing the first read-only domain controller in an existing forest, you need connectivity to the infrastructure master for each application directory partition, also known as a non-domain naming context or NDNC.
+   - If you are installing the first read-only domain controller in an existing forest, you need connectivity to the **infrastructure master** for each application directory partition, also known as a non-domain naming context or NDNC.
 
 ### Installation steps and required administrative levels
 
@@ -52,7 +52,7 @@ For additional information on new features in Windows Server 2016, see [What's n
 
 Domain controllers that run 64-bit versions of Windows Server 2012 or Windows Server 2012 R2 can be upgraded to Windows Server 2016. Only 64-bit version upgrades are supported because Windows Server 2016 only comes in a 64-bit version.
 
-|If you are running this edition|You can upgrade to these editions|
+|If you are running this edition:|You can upgrade to these editions:|
 | ----- | ----- |
 |Windows Server 2012 Standard|Windows Server 2016 Standard or Datacenter|
 |Windows Server 2012 Datacenter|Windows Server 2016 Datacenter|
@@ -81,10 +81,10 @@ Windows Server 2016 requires a Windows Server 2003 forest functional level. That
 Windows 2000 domain controllers must be removed prior to adding Windows Server 2016 domain controllers to your forest. In this case, consider the following workflow:
 
 1. Install domain controllers that run Windows Server 2003 or later. These domain controllers can be deployed on an evaluation version of Windows Server. This step also requires running adprep.exe for that operating system release as a prerequisite.
-1. Remove the Windows 2000 domain controllers. Specifically, gracefully demote or forcibly remove Windows Server 2000 domain controllers from the domain and used Active Directory Users and Computers to remove the domain controller accounts for all removed domain controllers.
-1. Raise the forest functional level to Windows Server 2003 or higher.
-1. Install domain controllers that run Windows Server 2016.
-1. Remove domain controllers that run earlier versions of Windows Server.
+2. Remove the Windows 2000 domain controllers. Specifically, gracefully demote or forcibly remove Windows Server 2000 domain controllers from the domain and used Active Directory Users and Computers to remove the domain controller accounts for all removed domain controllers.
+3. Raise the forest functional level to Windows Server 2003 or higher.
+4. Install domain controllers that run Windows Server 2016.
+5. Remove domain controllers that run earlier versions of Windows Server.
 
 ### Rolling back functional levels
 
@@ -95,7 +95,7 @@ After you set the forest functional level (FFL) to a certain value, you cannot r
 
 After you set the domain functional level to a certain value, you cannot roll back or lower the domain functional level, with the following exceptions:
 
-- when you raise the domain functional level to Windows Server 2016 and if the forest functional level is Windows Server 2012 or lower, you have the option of rolling the domain functional level back to Windows Server 2012 or Windows Server 2012 R2
+- When you raise the domain functional level to Windows Server 2016 and if the forest functional level is Windows Server 2012 or lower, you have the option of rolling the domain functional level back to Windows Server 2012 or Windows Server 2012 R2.
 
 For more information about features that are available at lower functional levels, see [Understanding Active Directory Domain Services (AD DS) Functional Levels](../active-directory-functional-levels.md).
 
@@ -125,45 +125,45 @@ The following is a simple example of upgrading the Contoso forest from Windows S
 
    ![Upgrade](media/Upgrade-Domain-Controllers-to-Windows-Server-2016/upgrade2.png)
 
-1. Sign in to the new Windows Server 2016 with a domain admin account.
-1. In **Server Manager**, under **Add Roles and Features**, install **Active Directory Domain Services** on the new Windows Server 2016. This will automatically run adprep on the 2012 R2 forest and domain.
+2. Sign in to the new Windows Server 2016 with a domain admin account.
+3. In **Server Manager**, under **Add Roles and Features**, install **Active Directory Domain Services** on the new Windows Server 2016. This will automatically run adprep on the 2012 R2 forest and domain.
 
    ![Upgrade](media/Upgrade-Domain-Controllers-to-Windows-Server-2016/upgrade3.png)
 
-1. In **Server Manager**, click the yellow triangle, and from the drop-down click **Promote the server to a domain controller**.
+4. In **Server Manager**, click the yellow triangle, and from the drop-down click **Promote the server to a domain controller**.
 
    ![Upgrade](media/Upgrade-Domain-Controllers-to-Windows-Server-2016/upgrade4.png)
 
-1. On the **Deployment Configuration** screen, select **Add a domain controller to an existing forest** and click next.
+5. On the **Deployment Configuration** screen, select **Add a domain controller to an existing forest** and click next.
 
    ![Upgrade](media/Upgrade-Domain-Controllers-to-Windows-Server-2016/upgrade5.png)
 
-1. On the **Domain Controller options** screen, enter the **Directory Services Restore Mode (DSRM)** password and click next.
-1. For the remainder of the screens click **Next**.
-1. On the **Prerequisite Check** screen, click **install**. Once the restart has completed you can sign back in.
-1. On the Windows Server 2012 R2 server, in **Server Manager**, under tools, select **Active Directory Module for Windows PowerShell**.
+6. On the **Domain Controller options** screen, enter the **Directory Services Restore Mode (DSRM)** password and click next.
+7. For the remainder of the screens click **Next**.
+8. On the **Prerequisite Check** screen, click **install**. Once the restart has completed you can sign back in.
+9. On the Windows Server 2012 R2 server, in **Server Manager**, under tools, select **Active Directory Module for Windows PowerShell**.
 
    ![Upgrade](media/Upgrade-Domain-Controllers-to-Windows-Server-2016/upgrade6.png)
 
-1. In the PowerShell windows use the Move-ADDirectoryServerOperationMasterRole to move the FSMO roles. You can type the name of each -OperationMasterRole or use numbers to specify the roles. For more information see [Move-ADDirectoryServerOperationMasterRole](https://technet.microsoft.com/library/hh852302.aspx)
+10. In the PowerShell windows use the Move-ADDirectoryServerOperationMasterRole to move the FSMO roles. You can type the name of each -OperationMasterRole or use numbers to specify the roles. For more information see [Move-ADDirectoryServerOperationMasterRole](https://technet.microsoft.com/library/hh852302.aspx)
 
-   ``` powershell
-   Move-ADDirectoryServerOperationMasterRole -Identity "DC-W2K16" -OperationMasterRole 0,1,2,3,4
-   ```
+    ``` powershell
+    Move-ADDirectoryServerOperationMasterRole -Identity "DC-W2K16" -OperationMasterRole 0,1,2,3,4
+    ```
 
-   ![Upgrade](media/Upgrade-Domain-Controllers-to-Windows-Server-2016/upgrade7.png)
+    ![Upgrade](media/Upgrade-Domain-Controllers-to-Windows-Server-2016/upgrade7.png)
 
-1. Verify the roles have been moved by going to the Windows Server 2016 server, in **Server Manager**, under **tools**, select **Active Directory Module for Windows PowerShell**. Use the `Get-ADDomain` and `Get-ADForest` cmdlets to view the FSMO role holders.
+11. Verify the roles have been moved by going to the Windows Server 2016 server, in **Server Manager**, under **tools**, select **Active Directory Module for Windows PowerShell**. Use the `Get-ADDomain` and `Get-ADForest` cmdlets to view the FSMO role holders.
 
-   ![Upgrade](media/Upgrade-Domain-Controllers-to-Windows-Server-2016/upgrade8.png)
+    ![Upgrade](media/Upgrade-Domain-Controllers-to-Windows-Server-2016/upgrade8.png)
 
-   ![Upgrade](media/Upgrade-Domain-Controllers-to-Windows-Server-2016/upgrade9.png)
+    ![Upgrade](media/Upgrade-Domain-Controllers-to-Windows-Server-2016/upgrade9.png)
 
-1. Demote and remove the Windows Server 2012 R2 domain controller. For information on demoting a dc, see [Demoting Domain Controllers and Domains](../../ad-ds/deploy/Demoting-Domain-Controllers-and-Domains--Level-200-.md)
-1. Once the server is demoted and removed you can raise the forest functional and domain functional levels to Windows Server 2016.
+12. Demote and remove the Windows Server 2012 R2 domain controller. For information on demoting a dc, see [Demoting Domain Controllers and Domains](../../ad-ds/deploy/Demoting-Domain-Controllers-and-Domains--Level-200-.md)
+13. Once the server is demoted and removed you can raise the forest functional and domain functional levels to Windows Server 2016.
 
 ## Next Steps
 
-- [What's New in Active Directory Domain Services Installation and Removal](../../ad-ds/deploy/What-s-New-in-Active-Directory-Domain-Services-Installation-and-Removal.md)  
+- [What's New in Active Directory Domain Services Installation and Removal](../../ad-ds/deploy/What-s-New-in-Active-Directory-Domain-Services-Installation-and-Removal.md)
 - [Install Active Directory Domain Services &#40;Level 100&#41;](../../ad-ds/deploy/Install-Active-Directory-Domain-Services--Level-100-.md)
 - [Windows Server 2016 Functional Levels](../../ad-ds/Windows-Server-2016-Functional-Levels.md)  
