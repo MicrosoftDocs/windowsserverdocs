@@ -329,7 +329,7 @@ You can use this script on the Windows 10 desktop or in System Center Configurat
 ### Define key VPN profile parameters
 
 ```xml
-$Script = '$ProfileName = ''' + $ProfileName + '''
+$Script = '$ProfileName = ''' + $ProfileName + ''''
 $ProfileNameEscaped = $ProfileName -replace ' ', '%20'
 ```
 
@@ -438,7 +438,7 @@ exit
 }
 
 $Message = "Script Complete"
-Write-Host "$Message"'
+Write-Host "$Message"
 ```
 
 ### Save the profile XML file
@@ -513,7 +513,7 @@ The following example script includes all of the code examples from previous sec
     $Script = '$ProfileName = ''' + $ProfileName + '''
     $ProfileNameEscaped = $ProfileName -replace ' ', '%20'
     
-    $ProfileXML = ''' + $ProfileXML + '''
+    $ProfileXML = ''' + $ProfileXML + ''''
     
     $ProfileXML = $ProfileXML -replace '<', '&lt;'
     $ProfileXML = $ProfileXML -replace '>', '&gt;'
@@ -590,7 +590,7 @@ The following example script includes all of the code examples from previous sec
     }
     
     $Message = "Script Complete"
-    Write-Host "$Message"'
+    Write-Host "$Message"
     
     $Script | Out-File -FilePath ($env:USERPROFILE + '\desktop\VPN_Profile.ps1')
     
