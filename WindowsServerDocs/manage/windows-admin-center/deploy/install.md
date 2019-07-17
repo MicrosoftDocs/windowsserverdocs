@@ -5,7 +5,7 @@ ms.technology: manage
 ms.topic: article
 author: jwwool
 ms.author: jeffrew
-ms.date: 06/07/2019
+ms.date: 07/17/2019
 ms.localizationpriority: medium
 ms.prod: windows-server-threshold
 ---
@@ -68,8 +68,12 @@ msiexec /i <WindowsAdminCenterInstallerName>.msi /qn /L*v log.txt SME_PORT=<port
 > [!WARNING]
 > Don't invoke `msiexec` from PowerShell using dot-slash relative path notation (like,  `.\<WindowsAdminCenterInstallerName>.msi`). That notation isn't supported, the installation will fail. Remove the `.\` prefix or specify the full path to the MSI.
 
-## Updating Windows Admin Center
+## Upgrading to a new version of Windows Admin Center
 
-You can update non-preview versions of Windows Admin Center by using Microsoft Update or by manually installing. 
+You can update non-preview versions of Windows Admin Center by using Microsoft Update or by manually installing.
 
 Your settings are preserved when upgrading to a new version of Windows Admin Center. We don't officially support upgrading Insider Preview versions of Windows Admin Center - we think it's better to do a clean install - but we don't block it.
+
+## Updating the certificate used by Windows Admin Center
+
+When you have Windows Admin Center deployed as a service, you must provide a certificate for the HTTPS. To update this certificate at a later time, re-run the installer and choose ```change```.
