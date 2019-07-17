@@ -25,6 +25,9 @@ The AD FS Rapid Restore tool can be used in the following scenarios:
 2. Deploy identical test and production environments
 	- Use the tool to quickly create an accurate copy of the production AD FS in a test environment, or to quickly deploy a validated test configuration to production
 
+>[!NOTE] 
+>If you are using SQL Merge Replication or Always on Availablity Groups, the Rapid Restore tool is not supported. We recommend using SQL based backups and a backup of the SSL certificate as an alternative.
+
 ## What is backed up
 The tool backs up the following AD FS configuration
 	
