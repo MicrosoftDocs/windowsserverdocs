@@ -377,7 +377,7 @@ This issue may occur if the KMS client cannot find the KMS SRV resource records 
 
 ### Resolution
 
-To work around this issue, follow the steps in [KB929826, Error message when you try to activate Windows Vista Enterprise, Windows Vista Business, Windows 7, or Windows Server 2008: "Code 0x8007232b]().  
+To work around this issue, follow the steps in [KB929712, Error message when you try to activate Windows Vista Enterprise, Windows Vista Business, Windows 7, or Windows Server 2008: "Code 0x8007232b](https://support.microsoft.com/en-us/help/929712/volume-activation-information-for-windows-vista-windows-server-2008-wi).  
 
 ## 0x8007007b DNS name does not exist
 
@@ -387,7 +387,7 @@ This issue may occur if the KMS client cannot find the KMS SRV resource records 
 
 ### Resolution
 
-To work around this issue, follow the steps in [KB929826, Error message when you try to activate Windows Vista Enterprise, Windows Vista Business, Windows 7, or Windows Server 2008: "Code 0x8007232b]().  
+To work around this issue, follow the steps in [KB929712, Error message when you try to activate Windows Vista Enterprise, Windows Vista Business, Windows 7, or Windows Server 2008: "Code 0x8007232b](https://support.microsoft.com/en-us/help/929712/volume-activation-information-for-windows-vista-windows-server-2008-wi).  
 
 ## 0x80070490 The product key you entered didn't work
 
@@ -401,4 +401,26 @@ This issue occurs because the MAK that was entered was not valid, or because of 
 ### Resolution
 
 To work around this issue and activate the computer, run **slmgr -ipk <5x5 key>** at an elevated command prompt.  
+
+## Appendix: Common troubleshooting procedures
+
+- [Method 1: Change the product key to an MAK](#method-1-change-the-product-key-to-an-mak)
+- [Method 2: Configure a KMS host server for the clients to activate against](#method-2-configure-a-kms-host-server-for-the-clients-to-activate-against)
+- [Method 3: Manually create a KMS SRV record](#method-3-manually-create-a-kms-srv-record)
+- [Method 4: Manually assign a KMS server](#method-4-manually-assign-a-kms-server)
+- [Method 5: Automatically publish KMS in multiple DNS domains](#method-5-automatically-publish-kms-in-multiple-dns-domains)
+
+### Method 1: Change the product key to an MAK
+
+
+### Method 2: Configure a KMS host server for the clients to activate against
+
+### Method 3: Manually create a KMS SRV record
+
+
+### Method 4: Manually assign a KMS server
+
+
+### Method 5: Automatically publish KMS in multiple DNS domains
+
 
