@@ -59,15 +59,15 @@ After you install updates, the RRAS server can enforce certificate revocation fo
 
 The following table lists the approximate release dates of the fixes for each version of Windows.
 
-|Operating system version |Release date* |
+|Operating system version |Release or Release date* |
 |---------|---------|
-|Windows Server, version 1903  |Q2, 2019  |
+|Windows Server, version 1903  |[KB4501375](https://support.microsoft.com/help/4501375/windows-10-update-kb4501375)  |
 |Windows Server 2019<br />Windows Server, version 1809  |Q3, 2019  |
 |Windows Server, version 1803  |Q3, 2019  |
 |Windows Server, version 1709  |Q3, 2019  |
-|Windows Server 2016, version 1607  |Q2, 2019  |
+|Windows Server 2016, version 1607  |[KB4503294](https://support.microsoft.com/help/4503294/windows-10-update-kb4503294)  |
   
-\* All release dates are listed in calendar quarters. Dates are approximate and may change without notice.
+\* All release dates are listed in calendar quarters. Dates are approximate and may change without notice. When an update is released, a link to the release replaces the release date.
 
 **How to configure prerequisites** 
 
