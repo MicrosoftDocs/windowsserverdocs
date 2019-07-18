@@ -57,7 +57,7 @@ This article provides troubleshooting information to help you respond to error m
 
 ### Possible cause
 
-An invalid MAK was entered.
+The MAK that you entered was not valid.
 
 ### Resolution
 
