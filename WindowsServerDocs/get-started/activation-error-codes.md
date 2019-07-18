@@ -412,13 +412,85 @@ To work around this issue and activate the computer, run **slmgr -ipk <5x5 key>*
 
 ### Method 1: Change the product key to an MAK
 
+If KMS activation will not be used, and if there is no KMS server, the product key should be changed to an MAK. For Microsoft Developer Network (MSDN), or for TechNet, the stock-keeping units (SKUs) that are listed below the media are generally volume licensed-media, and the product key that's provided is an MAK key.
+
+To change the product key to an MAK, follow these steps:
+
+1. Open an elevated command prompt. To do this, press the Windows logo key+X, and then right-click&nbsp;<strong class="uiterm">Command Prompt</strong>, and then select <strong>Run as administrator</strong>. If you are prompted for an administrator password or for confirmation, type the password or provide confirmation.
+2. At the command prompt, run the following command:
+   ```cmd
+    slmgr -ipk xxxxx-xxxxx-xxxxx-xxxxx-xxxxx
+   ```
+   > [!NOTE]
+   > The **xxxxx-xxxxx-xxxxx-xxxxx-xxxxx** placeholder represents your MAK product key.  
 
 ### Method 2: Configure a KMS host server for the clients to activate against
 
+KMS activation requires that a KMS host server be configured for the clients to activate against. If there are no KMS host servers configured in your environment, install and activate one by using an appropriate KMS host server key. After you configure a computer on the network to host the KMS software, publish the Domain Name System (DNS) settings.
+
+For information about the KMS host server configuration process, see [Activate using Key Managment Service](https://docs.microsoft.com/windows/deployment/volume-activation/activate-using-key-management-service-vamt).
+
+For more information about volume activation, see [Plan for volume activation](https://docs.microsoft.com/en-us/windows/deployment/volume-activation/plan-for-volume-activation-client).
+
 ### Method 3: Manually create a KMS SRV record
 
+> [!IMPORTANT]
+> Follow the steps in this section carefully. Serious problems might occur if you modify the registry incorrectly. Before you modify it, [back up the registry for restoration](https://support.microsoft.com/en-us/help/322756) in case problems occur.
 
+If your network has a KMS host computer set up, and if the client cannot locate a KMS host on the network for activation, follow these steps:
+
+1. Verify that the computer that has the KMS host installed and is activated by using a KMS key that&#39;s registered in DNS. To do this, follow these steps:  
+   1. Open an elevated command prompt. To do this, press the Windows logo key+X, and then right-click **Command Prompt**, and then select **Run as administrator**. If you are prompted for an administrator password or for confirmation, type the password or provide confirmation.
+   1. At the command prompt, run the following command:
+      ```cmd
+      nslookup -type=all _vlmcs._tcp&gt;kms.txt
+      ```
+   1. Open the KMS.txt file that the command generates. This file should contain one or more entries that resemble the following entry:
+      ```cmd
+      _vlmcs._tcp.contoso.com         SRV service location:          priority   = 0          weight   = 0         port   = 1688         svr hostname   = kms-server.contoso.com 
+      ```
+   1. If these **_vlmcs** entries are present, and if they contain the expected KMS host names, go to [Method 4: Manually assign a KMS server](#method-4-manually-assign-a-kms-server).
+1. Check the registry of the KMS host server to determine whether it is registering with DNS. By default, a KMS host server dynamically registers a DNS SRV record one time every 24 hours. To check this setting, follow these steps:
+   1. Start Registry Editor. To do this, right-click **Start**, select **Run**, type **regedit**, and then press Enter.
+   1. Locate the **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\SL** subkey, and check the value of the **DisableDnsPublishing** entry. This entry has the following possible values:
+      - **0** or undefined (default): The KMS host server registers a SRV record once every 24 hours.
+      - **1**: The KMS host server does not automatically register SRV records. If your implementation does not support dynamic updates, see [To manually create a SRV record for a KMS host](#manually-create-a-srv-record-for-a-kms-host).  
+      If the **DisableDnsPublishing** entry is missing, create it (the type is DWORD). If dynamic registration is acceptable, leave the value undefined or set it to **0**.
+
+#### To manually create a SRV record for a KMS host
+
+To manually create a&nbsp;SRV record for a KMS host that uses a Microsoft DNS server, follow these steps:
+
+1. On the DNS server, open DNS Manager. To open DNS Manager, select **Start**, select **Administrative Tools**, and then select **DNS**.
+1. Select the DNS server on which you have to create the SRV resource record.
+1. In the console tree, expand **Forward Lookup Zones**, right-click the domain, and then select **Other New Records**.
+1. Scroll down the list, select **Service Location (SRV)**, and then select **Create Record**.
+1. Type the following information:
+   - Service: **_VLMCS**
+   - Protocol: **_TCP**
+   - Port number: **1688**
+   - Host offering the service: **&lt;*FQDN of the KMS host*</em>*&gt;**
+1. When you are finished, select **OK**, and then select **Done**.
+
+To manually create a SRV record for a KMS host that uses a BIND 9.x-compliant DNS server, follow the instructions for that DNS server and provide the following information for the SRV record:
+
+- Name:&nbsp;**_vlmcs._TCP**
+- Type:&nbsp;**SRV**
+- Priority: **0**
+- Weight: **0**
+- Port: **1688**
+- Hostname: **&lt;*FQDN or A-Name of the KMS host*&gt;**
+
+> [!NOTE]
+> KMS does not use the **Priority** or **Weight** values. However, the record must include them.
+
+To configure a BIND 9.x-compatible DNS server to support KMS auto-publishing, configure the DNS server to enable resource record updates from KMS hosts. For example, add the following line to the zone definition in Named.conf or in Named.conf.local:
+
+```cmd
+allow-update { any; };
+```
 ### Method 4: Manually assign a KMS server
+
 
 
 ### Method 5: Automatically publish KMS in multiple DNS domains
