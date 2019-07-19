@@ -1,6 +1,6 @@
 ---
-title: \"Remote Desktop Service is currently busy\" error on connecting
-description: Troubleshooting the \"Remote Desktop Service is currently busy\" error when users start a remote desktop connection.
+title: "Remote Desktop Service is currently busy" error on connecting
+description: Troubleshooting the "Remote Desktop Service is currently busy" error when users start a remote desktop connection.
 audience: ITPro ​
 ms.custom: na
 ms.reviewer: rklemen; josh.bender
@@ -19,16 +19,16 @@ ms.localizationpriority: medium
 
 To determine an appropriate response to this issue, use the following steps:
 
-1. Does the Remote Desktop Services service becomes unresponsive (for example, the remote desktop client appears to “hang” at the Welcome screen).  
-      - If the service becomes unresponsive, see [RDSH server memory issue](#rdsh-server-memory-issue).
-      - If the client appears to be interacting with the service normally, continue to the next step.
-2. If one or more users disconnect their remote desktop sessions, can users connect again?  
+- Does the Remote Desktop Services service becomes unresponsive (for example, the remote desktop client appears to “hang” at the Welcome screen).  
+   - If the service becomes unresponsive, see [RDSH server memory issue](#rdsh-server-memory-issue).
+   - If the client appears to be interacting with the service normally, continue to the next step.
+- If one or more users disconnect their remote desktop sessions, can users connect again?  
    - If the service continues to deny connections no matter how many users disconnect their sessions, see [RD listener issue](#rd-listener-issue).
    - If the service begins accepting connections again after a number of users have disconnected their sessions, [check the connection limit policy](#check-the-connection-limit-policy).
 
 ## RDSH server memory issue
 
-A memory leak has been found on some Windows Server 2012 R2 RDSH servers. Over time, these servers begin to refuse both remote desktop connections and local console sign-ins with messages such as the following:
+A memory leak has been found on some Windows Server 2012 R2 RDSH servers. Over time, these servers begin to refuse both remote desktop connections and local console sign-ins with messages like the following:
 
 > The task you are trying to do can't be completed because Remote Desktop Service is currently busy. Please try again in a few minutes. Other users should still be able to sign in.
 
@@ -40,9 +40,9 @@ To resolve this issue, apply KB 4093114, [April 10, 2018—KB4093114 (Monthly Ro
 
 ## RD listener issue
 
-An issue has been noted on some RDSH servers that have been upgraded directly from Windows Server 2008 R2 to Windows Server 2012 R2 or Windows Server 2016. When a remote desktop client connects to the RDSH server, the RDSH server creates an RD listener for the user session. The affected servers keep a count of the RD listeners that increases as users connect, but never decreases.
+An issue has been noted on some RDSH servers that have been upgraded directly from Windows Server 2008 R2 to Windows Server 2012 R2 or Windows Server 2016. When a Remote Desktop client connects to the RDSH server, the RDSH server creates an RD listener for the user session. The affected servers keep a count of the RD listeners that increases as users connect, but never decreases.
 
-To work around this issue, you can use the following methods:
+You can work around this issue with the following methods:
 
   - Restart the RDSH server to reset the count of RD listeners
   - Modify the connection limit policy, setting it to a very large value. For more information about managing the connection limit policy, see [Check the connection limit policy](#check-the-connection-limit-policy).
@@ -58,18 +58,18 @@ You can set the limit on the number of simultaneous remote desktop connections a
 
 To check the current settings and identify any existing GPOs on the RDSH server, open a command prompt window as an administrator and enter the following command:
   
-```
+```cmd
 gpresult /H c:\gpresult.html
 ```
    
-After this command finishes, open gpresult.html, and in **Computer Configuration\\Administrative Templates\\Windows Components\\Remote Desktop Services\\Remote Desktop Session Host\\Connections**, find the **Limit number of connections** policy.
+After this command finishes, open **gpresult.html**. In **Computer Configuration\\Administrative Templates\\Windows Components\\Remote Desktop Services\\Remote Desktop Session Host\\Connections**, find the **Limit number of connections** policy.
 
   - If the setting for this policy is **Disabled**, then group policy is not limiting RDP connections.
   - If the setting for this policy is **Enabled**, then check **Winning GPO**. If you need to remove or change the connection limit, edit this GPO.
 
 To enforce policy changes, open a command prompt window on the affected computer, and enter the following command:
   
-```
+```cmd
 gpupdate /force
 ```
   

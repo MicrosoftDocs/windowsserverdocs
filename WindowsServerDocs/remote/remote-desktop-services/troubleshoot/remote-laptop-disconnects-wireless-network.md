@@ -17,7 +17,7 @@ ms.localizationpriority: medium
 
 # Remote laptop disconnects from wireless network
 
-This issue may occur when a remote desktop client connects to a laptop computer by using an 802.1x wireless network. Intermittently, the laptop disconnects from the wireless network and does not automatically reconnect.
+This issue may occur when a Remote Desktop client connects to a laptop computer by using an 802.1x wireless network. The laptop intermittently disconnects from the wireless network and doesn't automatically reconnect.
 
 This is a known issue that occurs when the network authentication setting for the wireless network connection is **User authentication**.
 
@@ -26,4 +26,4 @@ To work around this issue, set the network authentication setting to **User or c
  > [!NOTE]  
 > To change the network authentication settings on a single computer, you may need to use the Network and Sharing Center control panel to create a new wireless connection with the new settings.
 
-For a full description of how to configure wireless network settings using GPOs, see [Configure Wireless Network (IEEE 802.11) Policies](https://docs.microsoft.com/windows-server/networking/core-network-guide/cncg/wireless/e-wireless-access-deployment#bkmk_policies).
+For a full description of how to configure wireless network settings using GPOs, see [Configure Wireless Network (IEEE 802.11) Policies](../../../networking/core-network-guide/cncg/wireless/e-wireless-access-deployment.md#bkmk_policies).

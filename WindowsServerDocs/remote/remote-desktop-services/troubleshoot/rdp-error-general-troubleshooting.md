@@ -1,6 +1,6 @@
 ---
-title: General remote deskotp connection troubleshooting
-description: Troubleshooting \"Class not registered\" error with remote desktop connection.
+title: General Remote Desktop connection troubleshooting
+description: Troubleshooting "Class not registered" error with Remote Desktop connection.
 audience: ITPro ​
 ms.custom: na
 ms.reviewer: rklemen; josh.bender
@@ -14,9 +14,9 @@ ms.author: kaushika; rklemen; josh.bender; v-tea; delhan
 ms.date: 06/23/2019
 ms.localizationpriority: medium
 ---
-# General troubleshooting steps
+# General Remote Desktop connection troubleshooting
 
-Use these steps when a Remote Desktop client cannot connect to a remote desktop but does not provide messages or other symptoms that would help identify the cause.
+Use these steps when a Remote Desktop client can't connect to a remote desktop but doesn't provide messages or other symptoms that would help identify the cause.
 
 ## Check the status of the RDP protocol
 
@@ -30,30 +30,32 @@ To check and change the status of the RDP protocol on a local computer, see [How
 ### Check the status of the RDP protocol on a remote computer
 
 > [!IMPORTANT]  
-> Follow the steps in this section carefully. Serious problems might occur if you modify the registry incorrectly. Before you modify it, [back up the registry for restoration](https://support.microsoft.com/help/322756) in case problems occur.
+> Follow this section's instructions carefully. Serious problems can occur if the registry is modified incorrectly. Before you starty modifying the registry, [back up the registry](https://support.microsoft.com/help/322756) so you can restore it in case something goes wrong.
 
 To check and change the status of the RDP protocol on a remote computer, use a network registry connection:
 
-1. Select **Start**, select **Run**, and then enter **regedt32**.
-2. In Registry Editor, select **File**, and then select **Connect Network Registry**.
+1. First, go to the **Start** menu, then select **Run**. In the text box that appears, enter **regedt32**.
+2. In the Registry Editor, select **File**, then select **Connect Network Registry**.
 3. In the **Select Computer** dialog box, enter the name of the remote computer, select **Check Names**, and then select **OK**.
 4. Navigate to **HKEY\_LOCAL\_MACHINE\\SYSTEM\\CurrentControlSet\\Control\\Terminal Server**.  
    ![Registry Editor, showing the fDenyTSConnections entry](../media/troubleshoot-remote-desktop-connections/RegEntry_fDenyTSConnections.png)
-   - If the value of the **fDenyTSConnections** key is **0**, then RDP is enabled
-   - If the value of the **fDenyTSConnections** key is **1**, then RDP is disabled
+   - If the value of the **fDenyTSConnections** key is **0**, then RDP is enabled.
+   - If the value of the **fDenyTSConnections** key is **1**, then RDP is disabled.
 5. To enable RDP, change the value of **fDenyTSConnections** from **1** to **0**.
 
 ### Check whether a Group Policy Object (GPO) is blocking RDP on a local computer
 
-If you cannot turn on RDP in the user interface or if the value of **fDenyTSConnections** reverts to **1** after you have changed it, a GPO may be overriding the computer-level settings.
+If you can't turn on RDP in the user interface or the value of **fDenyTSConnections** reverts to **1** after you've changed it, a GPO may be overriding the computer-level settings.
 
 To check the group policy configuration on a local computer, open a Command Prompt window as an administrator, and enter the following command:
-```
+
+```cmd
 gpresult /H c:\gpresult.html
 ```
+
 After this command finishes, open gpresult.html. In **Computer Configuration\\Administrative Templates\\Windows Components\\Remote Desktop Services\\Remote Desktop Session Host\\Connections**, find the **Allow users to connect remotely by using Remote Desktop Services** policy.
 
-- If the setting for this policy is **Enabled**, group policy is not blocking RDP connections.
+- If the setting for this policy is **Enabled**, Group Policy is not blocking RDP connections.
 - If the setting for this policy is **Disabled**, check **Winning GPO**. This is the GPO that is blocking RDP connections.
   ![An example segment of gpresult.html, in which the domain-level GPO **Block RDP** is disabling RDP.](../media/troubleshoot-remote-desktop-connections/GPResult_RDSH_Connections_GP.png)
    
@@ -62,9 +64,11 @@ After this command finishes, open gpresult.html. In **Computer Configuration\\Ad
 ### Check whether a GPO is blocking RDP on a remote computer
 
 To check the Group Policy configuration on a remote computer, the command is almost the same as for a local computer:
-```
+
+```cmd
 gpresult /S <computer name> /H c:\gpresult-<computer name>.html
 ```
+
 The file that this command produces (**gpresult-\<computer name\>.html**) uses the same information format as the local computer version (**gpresult.html**) uses.
 
 ### Modifying a blocking GPO
@@ -73,10 +77,10 @@ You can modify these settings in the Group Policy Object Editor (GPE) and Group 
 
 To modify the blocking policy, use one of the following methods:
 
-- In GPE, access the appropriate level of GPO (such as local or domain), and navigate to **Computer Configuration\\Administrative Templates\\Windows Components\\Remote Desktop Services\\Remote Desktop Session Host\\Connections**\\**Allow users to connect remotely by using Remote Desktop Services**.  
-   1. Set the policy to **Enabled** or **Not Configured**.
-   2. On the affected computers, open a Command Prompt window as an administrator, and run the **gpupdate /force** command.
-- In GPM, navigate to the OU in which the blocking policy is applied to the affected computers, and delete the policy from the OU.
+- In GPE, access the appropriate level of GPO (such as local or domain), and navigate to **Computer Configuration** > **Administrative Templates** > **Windows Components** > **Remote Desktop Services** > **Remote Desktop Session Host** > **Connections** > **Allow users to connect remotely by using Remote Desktop Services**.  
+   1. Set the policy to either **Enabled** or **Not configured**.
+   2. On the affected computers, open a command prompt window as an administrator, and run the **gpupdate /force** command.
+- In GPM, navigate to the organizational unit (OU) in which the blocking policy is applied to the affected computers and delete the policy from the OU.
 
 ## Check the status of the RDP services
 
@@ -85,7 +89,7 @@ On both the local (client) computer and the remote (target) computer, the follow
 - Remote Desktop Services (TermService)
 - Remote Desktop Services UserMode Port Redirector (UmRdpService)
 
-You can use the Services MMC snap-in to manage the services locally or remotely. You can also use PowerShell locally or remotely (if the remote computer is configured to accept remote PowerShell commands).
+You can use the Services MMC snap-in to manage the services locally or remotely. You can also use PowerShell to manage the services locally or remotely (if the remote computer is configured to accept remote PowerShell cmdlets).
 
 ![Remote Desktop services in the Services MMC snap-in. Do not modify the default service settings.](../media/troubleshoot-remote-desktop-connections/RDSServiceStatus.png)
 
@@ -97,13 +101,18 @@ On either computer, if one or both services are not running, start them.
 ## Check that the RDP listener is functioning
 
 > [!IMPORTANT]  
-> Follow the steps in this section carefully. Serious problems might occur if you modify the registry incorrectly. Before you modify it, [back up the registry for restoration](https://support.microsoft.com/help/322756) in case problems occur.
+> Follow this section's instructions carefully. Serious problems can occur if the registry is modified incorrectly. Before you starty modifying the registry, [back up the registry](https://support.microsoft.com/help/322756) so you can restore it in case something goes wrong.
 
 ### Check the status of the RDP listener
 
-For this procedure, use a PowerShell instance that has administrative permissions. For a local computer, you can also use a command prompt that has administrative permissions. However, this procedure uses PowerShell because the same commands work both locally and remotely.
+For this procedure, use a PowerShell instance that has administrative permissions. For a local computer, you can also use a command prompt that has administrative permissions. However, this procedure uses PowerShell because the same cmdlets work both locally and remotely.
 
-1. Open a PowerShell window. To connect to a remote computer, enter **Enter-PSSession -ComputerName \<computer name\>**.
+1. To connect to a remote computer, run the following cmdlet:
+
+   ```powershell
+   Enter-PSSession -ComputerName <computer name>
+   ```
+
 2. Enter **qwinsta**. 
     ![The qwinsta command lists the processes listening on the computer’s ports.](../media/troubleshoot-remote-desktop-connections/WPS_qwinsta.png)
 3. If the list includes **rdp-tcp** with a status of **Listen**, the RDP listener is working. Proceed to [Check the RDP listener port](#check-the-rdp-listener-port). Otherwise, continue at step 4.
@@ -114,37 +123,39 @@ For this procedure, use a PowerShell instance that has administrative permission
     3. Export the entry to a .reg file. For example, in Registry Editor, right-click the entry, select **Export**, and then enter a filename for the exported settings.
     4. Copy the exported .reg file to the affected computer.
 5. To import the RDP listener configuration, open a PowerShell window that has administrative permissions on the affected computer (or open the PowerShell window and connect to the affected computer remotely).
-   1. To back up the existing registry entry, enter the following command:  
+   1. To back up the existing registry entry, enter the following cmdlet:  
    
       ```powershell  
       cmd /c 'reg export "HKLM\SYSTEM\CurrentControlSet\Control\Terminal Server\WinStations\RDP-tcp" C:\Rdp-tcp-backup.reg'   
       ```  
    
 
-   2. To remove the existing registry entry, enter the following commands:  
+   2. To remove the existing registry entry, enter the following cmdlets:  
    
       ```powershell  
       Remove-Item -path 'HKLM:\SYSTEM\CurrentControlSet\Control\Terminal Server\WinStations\RDP-tcp' -Recurse -Force  
       ```
    
-   3. To import the new registry entry and then restart the service, enter the following commands:  
+   3. To import the new registry entry and then restart the service, enter the following cmdlets:  
    
       ```powershell  
       cmd /c 'regedit /s c:\<filename>.reg'  
       Restart-Service TermService -Force  
-      ```   
-      where \<filename\> is the name of the exported .reg file.
-6. Test the configuration by trying the remote desktop connection again. If you still cannot connect, restart the affected computer.
-7. If you still cannot connect, [check the status of the RDP self-signed certificate](#check-the-status-of-the-rdp-self-signed-certificate).
+      ```
+      
+      Replace \<filename\> with the name of the exported .reg file.
+
+6. Test the configuration by trying the remote desktop connection again. If you still can't connect, restart the affected computer.
+7. If you still can't connect, [check the status of the RDP self-signed certificate](#check-the-status-of-the-rdp-self-signed-certificate).
 
 ### Check the status of the RDP self-signed certificate
 
-1. If you still cannot connect, open the Certificates MMC snap-in. When you are prompted to select the certificate store to manage, select **Computer account**, and then select the affected computer.
+1. If you still can't connect, open the Certificates MMC snap-in. When you are prompted to select the certificate store to manage, select **Computer account**, and then select the affected computer.
 2. In the **Certificates** folder under **Remote Desktop**, delete the RDP self-signed certificate. 
     ![Remote Desktop certificates in the MMC Certificates snap-in.](../media/troubleshoot-remote-desktop-connections/MMCCert_Delete.png)
 3. On the affected computer, restart the Remote Desktop Services service.
 4. Refresh the Certificates snap-in.
-5. If the RDP self-signed certificate has not been re-created, [check the permissions of the MachineKeys folder](#check-the-permissions-of-the-machinekeys-folder).
+5. If the RDP self-signed certificate has not been recreated, [check the permissions of the MachineKeys folder](#check-the-permissions-of-the-machinekeys-folder).
 
 ### Check the permissions of the MachineKeys folder
 
@@ -159,23 +170,23 @@ For this procedure, use a PowerShell instance that has administrative permission
 On both the local (client) computer and the remote (target) computer, the RDP listener should be listening on port 3389. No other applications should be using this port.
 
 > [!IMPORTANT]  
-> Follow the steps in this section carefully. Serious problems might occur if you modify the registry incorrectly. Before you modify it, [back up the registry for restoration](https://support.microsoft.com/help/322756%22%20target=%22_self%22) in case problems occur.
+> Follow this section's instructions carefully. Serious problems can occur if the registry is modified incorrectly. Before you starty modifying the registry, [back up the registry](https://support.microsoft.com/help/322756) so you can restore it in case something goes wrong.
 
-To check or change the RDP port, use Registry Editor:
+To check or change the RDP port, use the Registry Editor:
 
-1. Select Start, select **Run**, and then enter **regedt32**.
+1. Go to the Start menu, select **Run**, then enter **regedt32** into the text box that appears.
       - To connect to a remote computer, select **File**, and then select **Connect Network Registry**.
       - In the **Select Computer** dialog box, enter the name of the remote computer, select **Check Names**, and then select **OK**.
 2. Open the registry and navigate to **HKEY\_LOCAL\_MACHINE\\SYSTEM\\CurrentControlSet\\Control\\Terminal Server\\WinStations\\\<listener\>**. 
     ![The PortNumber subkey for the RDP protocol.](../media/troubleshoot-remote-desktop-connections/RegEntry_PortNumber.png)
 3. If **PortNumber** has a value other than **3389**, change it to **3389**. 
    > [!IMPORTANT]  
-    > You can operate Remote Desktop services using another port. However, we do not recommend that you do this. Troubleshooting such a configuration is beyond the scope of this article.
+    > You can operate Remote Desktop services using another port. However, we don't recommend you do this. This article doesn't cover how to troubleshoot that type of configuration.
 4. After you change the port number, restart the Remote Desktop Services service.
 
-### Check that another application is not trying to use the same port
+### Check that another application isn't trying to use the same port
 
-For this procedure, use a PowerShell instance that has administrative permissions. For a local computer, you can also use a command prompt that has administrative permissions. However, this procedure uses PowerShell because the same commands work locally and remotely.
+For this procedure, use a PowerShell instance that has administrative permissions. For a local computer, you can also use a command prompt that has administrative permissions. However, this procedure uses PowerShell because the same cmdlets work locally and remotely.
 
 1. Open a PowerShell window. To connect to a remote computer, enter **Enter-PSSession -ComputerName \<computer name\>**.
 2. Enter the following command:  
@@ -187,7 +198,7 @@ For this procedure, use a PowerShell instance that has administrative permission
     ![The netstat command produces a list of ports and the services listening to them.](../media/troubleshoot-remote-desktop-connections/WPS_netstat.png)
 3. Look for an entry for TCP port 3389 (or the assigned RDP port) with a status of **Listening**. 
     > [!NOTE]  
-   > The PID (Process Identifier) of the process or service using that port appears under the PID column.
+   > The process identifier (PID) for the process or service using that port appears under the PID column.
 4. To determine which application is using port 3389 (or the assigned RDP port), enter the following command:  
    
      ```powershell  
@@ -195,7 +206,7 @@ For this procedure, use a PowerShell instance that has administrative permission
     ```  
   
     ![The tasklist command reports details of a specific process.](../media/troubleshoot-remote-desktop-connections/WPS_tasklist.png)
-5. Look for an entry for the PID number that is associated with the port (from the **netstat** output). The services or processes that are associated with that PID appear on the right.
+5. Look for an entry for the PID number that is associated with the port (from the **netstat** output). The services or processes that are associated with that PID appear on the right column.
 6. If an application or service other than Remote Desktop Services (TermServ.exe) is using the port, you can resolve the conflict by using one of the following methods:
       - Configure the other application or service to use a different port (recommended).
       - Uninstall the other application or service.
@@ -205,8 +216,8 @@ For this procedure, use a PowerShell instance that has administrative permission
 
 Use the **psping** tool to test whether you can reach the affected computer by using port 3389.
 
-1. On a computer that is different from the affected computer, download **psping** from <https://live.sysinternals.com/psping.exe>.
-2. Open a Command Prompt window as an administrator, change to the directory in which you installed **psping**, and then enter the following command:  
+1. Go to a different computer that isn't affected and download **psping** from <https://live.sysinternals.com/psping.exe>.
+2. Open a command prompt window as an administrator, change to the directory in which you installed **psping**, and then enter the following command:  
    
    ```  
    psping -accepteula <computer IP>:3389  

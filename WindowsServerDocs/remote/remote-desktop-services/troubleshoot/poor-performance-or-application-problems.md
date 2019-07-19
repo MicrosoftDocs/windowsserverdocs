@@ -34,7 +34,7 @@ To resolve this issue, apply the following updates to the virtual machines, as a
 
 This issue occurs when users connect to remote computers that are running Windows 10, version 1709. When these users play video using the VMR9 (Video Mixing Renderer 9) codec, the player shows only a black window.
 
-This is a known issue in Windows 10, version 1709. The issue does not occur in Windows 10 version 1703.
+This is a known issue in Windows 10, version 1709. The issue doesn't occur in Windows 10, version 1703.
 
 ### Desktop sharing issues on Windows 10
 
@@ -44,7 +44,7 @@ To fix this issue, apply the Windows 10 update 4340917, [July 24, 2018—KB43409
 
 ### Performance issues when mixing versions of Windows 10 if NLA is disabled
 
-This issue occurs when NLA is disabled, and remote desktop client computers that run Windows 10 connect to remote desktops that run different versions of Windows 10. Users of remote desktop clients on computers that run Windows 10, version 1709 or earlier versions experience poor performance when they connect to remote desktops that run Windows 10, version 1803 or a later version.
+This issue occurs when Remote Desktop client computers running Windows 10 connect to remote desktops that run different versions of Windows 10 while NLA is disabled. Users of Remote Desktop clients on computers running Windows 10, version 1709 or earlier experience poor performance when they connect to remote desktops running Windows 10, version 1803 or later.
 
 This occurs because, when NLA is disabled, the older client computers use a slower protocol when they connect to Windows 10, version 1803 or a later version.
 
@@ -52,7 +52,7 @@ To resolve this issue, apply KB 4340917, [July 24, 2018—KB4340917 (OS Build 17
 
 ### Black screen issue
 
-This issue occurs in Windows 8.0, Windows 8.1, Windows 10 RTM, and Windows Server 2012 R2. A user launches multiple applications in a remote desktop, then disconnects from the session. Periodically, the user reconnects to the remote desktop to interact with the applications, and then disconnect again. At some point, when the user reconnects, the remote desktop session just shows a black screen. The user must end the remote desktop session from the remote computer’s console (or the RDSH server console). This action stops the applications.
+This issue occurs in Windows 8.0, Windows 8.1, Windows 10 RTM, and Windows Server 2012 R2. A user launches multiple applications in a remote desktop, then disconnects from the session. Periodically, the user reconnects to the remote desktop to interact with the applications, and then disconnects again. At some point, when the user reconnects, the remote desktop session only shows a black screen. To get the session to display properly again, the user then has to end their session from either the remote computer's console or the RDSH server console and stop their session's applications.
 
 To resolve this issue, apply the following updates as appropriate:
 
