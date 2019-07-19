@@ -138,7 +138,7 @@ You can use the following Windows PowerShell command to set the AD FS extranet l
 For reference, the public documentation of this feature is [here](https://technet.microsoft.com/library/dn486806.aspx ). 
 
 >[!NOTE]
-> In addition to enabling AD FS extranet lockout as shown above, make sure that */adfs/ls/wia*, */adfs/services/trust/2005/windowstransport*, and */adfs/services/trust/13/windowstransport* end points are disabled on the proxy (i.e. disabled from extranet) to protect AD account lockout. These endpoints are meant only to be an intranet facing endpoint that uses WIA binding on HTTPS. 
+> In addition to enabling AD FS extranet lockout as shown above, make sure that */adfs/ls/wia*, */adfs/services/trust/2005/windowstransport*, and */adfs/services/trust/13/windowstransport* endpoints are disabled on the proxy (i.e. disabled from extranet) to protect AD account lockout. These endpoints are meant only to be an intranet facing endpoint that uses WIA binding on HTTPS. Exposing them to extranet cold allow requests against these endpoints to bypass lockout protections. 
 
 ### Differentiate access policies for intranet and extranet access
 AD FS has the ability to differentiate access policies for requests that originate in the local, corporate network vs requests that come in from the internet via the proxy.  This can be done per application or globally.  For high business value applications or applications with sensitive or personally identifiable information, consider requiring multi factor authentication.  This can be done via the AD FS management snap-in.  
