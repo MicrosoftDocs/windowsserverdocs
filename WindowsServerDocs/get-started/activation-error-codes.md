@@ -454,7 +454,7 @@ If your network has a KMS host computer set up, and if the client cannot locate 
    1. Start Registry Editor. To do this, right-click **Start**, select **Run**, type **regedit**, and then press Enter.
    1. Locate the **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\SL** subkey, and check the value of the **DisableDnsPublishing** entry. This entry has the following possible values:
       - **0** or undefined (default): The KMS host server registers a SRV record once every 24 hours.
-      - **1**: The KMS host server does not automatically register SRV records. If your implementation does not support dynamic updates, see [To manually create a SRV record for a KMS host](#manually-create-a-srv-record-for-a-kms-host).  
+      - **1**: The KMS host server does not automatically register SRV records. If your implementation does not support dynamic updates, see [To manually create a SRV record for a KMS host](#to-manually-create-a-srv-record-for-a-kms-host).  
       If the **DisableDnsPublishing** entry is missing, create it (the type is DWORD). If dynamic registration is acceptable, leave the value undefined or set it to **0**.
 
 #### To manually create a SRV record for a KMS host
