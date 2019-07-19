@@ -45,7 +45,7 @@ This topic discusses the steps needed to deploy Work Folders. It assumes that yo
 ## Step 2: Create DNS records  
  To allow users to sync across the Internet, you must create a Host (A) record in public DNS to allow Internet clients to resolve your Work Folders URL. This DNS record should resolve to the external interface of the reverse proxy server.  
   
- On your internal network, create a CNAME record in DNS named workfolders which resolves to the FDQN of a Work Folders server. When Work Folders clients use auto discovery, the URL used to discover the Work Folders server is https://workfolders.domain.com. If you plan to use auto discovery, the workfolders CNAME record must exist in DNS.  
+ On your internal network, create a CNAME record in DNS named workfolders which resolves to the FDQN of a Work Folders server. When Work Folders clients use auto discovery, the URL used to discover the Work Folders server is https:\//workfolders.domain.com. If you plan to use auto discovery, the workfolders CNAME record must exist in DNS.  
   
 ## Step 3: Install Work Folders on file servers  
  You can install Work Folders on a domain-joined server by using Server Manager or by using Windows PowerShell, locally or remotely across a network. This is useful if you are configuring multiple sync servers across your network.  
@@ -245,7 +245,7 @@ The example above creates a new sync share named *Share01* with the path *K:\Sha
 6.  In the **Value to add** box, type the URL of the sync server with which you want this user to sync, click **Add**, click **OK**, and then click **OK** again.  
   
     > [!NOTE]
-    >  The sync server URL is simply `https://` or `http://` (depending on whether you want to require a secure connection) followed by the fully qualified domain name of the sync server. For example, **https://sync1.contoso.com**.
+    >  The sync server URL is simply `https://` or `http://` (depending on whether you want to require a secure connection) followed by the fully qualified domain name of the sync server. For example, **https:\//sync1.contoso.com**.
 
 To populate the attribute for multiple users, use Active Directory PowerShell. Below is an example that populates the attribute for all members of the *HR Sync Share Users* group, discussed in Step 5.
   

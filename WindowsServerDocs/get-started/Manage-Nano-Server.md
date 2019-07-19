@@ -232,7 +232,7 @@ The high-level workflow remains the same as on any Window Server installation --
 The following sections list the most common performance data collection activities along with a supported way to accomplish them on Nano Server.
 
 ### Query available event providers
-[Windows Performance Recorder](https://msdn.microsoft.com/en-us/library/hh448229.aspx) is tool to query available event providers as follows:
+[Windows Performance Recorder](https://msdn.microsoft.com/library/hh448229.aspx) is tool to query available event providers as follows:
 ```
 wpr.exe -providers
 ```
