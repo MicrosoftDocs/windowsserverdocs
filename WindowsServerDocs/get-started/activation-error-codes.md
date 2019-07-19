@@ -491,7 +491,30 @@ allow-update { any; };
 ```
 ### Method 4: Manually assign a KMS server
 
+By default, the KMS clients use the automatic discovery feature and query DNS for a list of servers that have published the _VLMCS record within the membership zone of the client. DNS returns the list of KMS hosts in a random order. The client picks a KMS host and tries to establish a session on it. If this attempt works, the client caches the server and tries to use it for the next renewal attempt. If the session setup fails, the client picks another server randomly. We highly recommend that you use the automatic discovery feature. However, you can manually assign a KMS server. To do this, open an elevated command prompt on the KMS client.
 
+1. On a KMS client, open an elevated command prompt. To do this, press the Windows logo key+X, and then right-click&nbsp;**Command Prompt**, and then select **Run as administrator**. If you are prompted for an administrator password or for confirmation, type the password or provide confirmation.
+1. Depending on your implementation, follow one of these steps:
+   - To assign a KMS host by using the FQDN of the host, run the following command:
+     ```cmd
+     cscript \windows\system32\slmgr.vbs -skms <KMS_FQDN>:<port>
+     ```
+   - To assign a KMS host by using the version 4 IP address of the host, run the following command:
+     ```cmd
+     cscript \windows\system32\slmgr.vbs -skms <IPv4Address>:<port>
+     ```
+    - To assign a KMS host by using the version 6 IP address of the host, run the following command:
+      ```cmd
+      cscript \windows\system32\slmgr.vbs -skms <IPv6Address>:<port>
+      ```
+    - To assign a KMS host by using the NETBIOS name of the host, run the following command:
+      ```cmd
+      cscript \windows\system32\slmgr.vbs -skms <NetbiosName>:<port>
+      ```
+   - To revert to automatic discovery on a KMS client, run the following command:
+     ```cmd
+     cscript \windows\system32\slmgr.vbs -ckms
+     ```
 
 ### Method 5: Automatically publish KMS in multiple DNS domains
 
