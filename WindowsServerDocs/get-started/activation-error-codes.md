@@ -11,7 +11,7 @@ ms.author: kaushika-msft; v-tea
 ms.localizationpriority: medium
 ---
 
-# Troubleshooting Activation Error Codes
+# Troubleshooting activation error codes
 
 > **Home users**  
 > This article is intended for use by support agents and IT professionals. If you're looking for more information about Windows activation error messages, see [Get help with Windows activation errors](https://support.microsoft.com/help/10738/windows-10-get-help-with-activation-errors).  

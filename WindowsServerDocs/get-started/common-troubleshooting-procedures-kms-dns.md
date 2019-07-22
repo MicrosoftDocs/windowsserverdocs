@@ -15,7 +15,7 @@ ms.localizationpriority: medium
 
 You may have to use one or more of these methods if one or more of the following conditions are true:
 
-- You use volume-licensed media&nbsp;and&nbsp;a&nbsp;Volume License generic product key to install one of the following operating systems:
+- You use volume-licensed media and a&nbsp;Volume License generic product key to install one of the following operating systems:
    - Windows Server 2019
    - Windows Server 2016
    - Windows Server 2012 R2
@@ -27,25 +27,22 @@ You may have to use one or more of these methods if one or more of the following
    - Windows 8
 - The activation wizard cannot connect to a KMS&nbsp;host computer.
 
-When you try to activate a client system, the activation wizard uses DNS to locate a corresponding computer that&#39;s running the KMS software. If the wizard queries DNS and does not find the DNS entry for the KMS host computer, the wizard reports an error. If you do not have a KMS host computer set up, you have to either set up a KMS host computer or switch to an MAK product key method to activate your volume license installation.
+When you try to activate a client system, the activation wizard uses DNS to locate a corresponding computer that&#39;s running the KMS software. If the wizard queries DNS and does not find the DNS entry for the KMS host computer, the wizard reports an error. Review the following list to find an approach that fits your circumstances:
 
-> [!NOTE]
-> If you have a KMS host computer and you still received the wizard error, the client computer could not find the correct DNS entries. Review the configuration of the KMS host computer and the KMS host DNS records.
-
-
-- [Method 1: Change the product key to an MAK](#method-1-change-the-product-key-to-an-mak)
-- [Method 2: Configure a KMS host server for the clients to activate against](#method-2-configure-a-kms-host-server-for-the-clients-to-activate-against)
-- [Method 3: Manually create a KMS SRV record](#method-3-manually-create-a-kms-srv-record)
-- [Method 4: Manually assign a KMS server](#method-4-manually-assign-a-kms-server)
-- [Method 5: Automatically publish KMS in multiple DNS domains](#method-5-automatically-publish-kms-in-multiple-dns-domains)
+- If you cannot install a KMS host or if you cannot use KMS activation, try [Method&nbsp;1: Change the product key to an MAK](#method-1-change-the-product-key-to-an-mak).
+- If you need to install and configure a KMS host, use [Method&nbsp;2: Configure a KMS host server for the clients to activate against](#method-2-configure-a-kms-host-server-for-the-clients-to-activate-against).
+- If the client cannot locate your existing KMS host, try either or both of the following methods:
+  - [Method&nbsp;3: Manually create a KMS SRV record](#method-3-manually-create-a-kms-srv-record)
+  - [Method&nbsp;4: Manually assign a KMS server](#method-4-manually-assign-a-kms-server)
+- If none of the preceding methods have resolved the problem, use [Method&nbsp;5: Automatically publish KMS in multiple DNS domains](#method-5-automatically-publish-kms-in-multiple-dns-domains) to review and configure the KMS and DNS servers.
 
 ### Method 1: Change the product key to an MAK
 
-If KMS activation will not be used, and if there is no KMS server, the product key should be changed to an MAK. For Microsoft Developer Network (MSDN), or for TechNet, the stock-keeping units (SKUs) that are listed below the media are generally volume licensed-media, and the product key that's provided is an MAK key.
+If you cannot install a KMS host or for some other reason you cannot use KMS activation, change the product key to an MAK. If you downloaded Windows images from the Microsoft Developer Network (MSDN), or from TechNet, the stock-keeping units (SKUs) that are listed below the media are generally volume licensed-media, and the product key that's provided is an MAK key.
 
 To change the product key to an MAK, follow these steps:
 
-1. Open an elevated command prompt. To do this, press the Windows logo key+X, and then right-click&nbsp;<strong class="uiterm">Command Prompt</strong>, and then select <strong>Run as administrator</strong>. If you are prompted for an administrator password or for confirmation, type the password or provide confirmation.
+1. Open an elevated command prompt. To do this, press the Windows logo key+X, and then right-click&nbsp;**Command Prompt**, and then select **Run as administrator**. If you are prompted for an administrator password or for confirmation, type the password or provide confirmation.
 2. At the command prompt, run the following command:
    ```cmd
     slmgr -ipk xxxxx-xxxxx-xxxxx-xxxxx-xxxxx
@@ -57,7 +54,7 @@ To change the product key to an MAK, follow these steps:
 
 KMS activation requires that a KMS host server be configured for the clients to activate against. If there are no KMS host servers configured in your environment, install and activate one by using an appropriate KMS host server key. After you configure a computer on the network to host the KMS software, publish the Domain Name System (DNS) settings.
 
-For information about the KMS host server configuration process, see [Activate using Key Managment Service](https://docs.microsoft.com/windows/deployment/volume-activation/activate-using-key-management-service-vamt).
+For information about the KMS host server configuration process, see [Activate using Key Management Service](https://docs.microsoft.com/windows/deployment/volume-activation/activate-using-key-management-service-vamt).
 
 For more information about volume activation, see [Plan for volume activation](https://docs.microsoft.com/en-us/windows/deployment/volume-activation/plan-for-volume-activation-client).
 
@@ -78,7 +75,7 @@ If your network has a KMS host computer set up, and if the client cannot locate 
       ```cmd
       _vlmcs._tcp.contoso.com         SRV service location:          priority   = 0          weight   = 0         port   = 1688         svr hostname   = kms-server.contoso.com 
       ```
-   1. If these **_vlmcs** entries are present, and if they contain the expected KMS host names, go to [Method 4: Manually assign a KMS server](#method-4-manually-assign-a-kms-server).
+   1. If these **_vlmcs** entries are present, and if they contain the expected KMS host names, go to [Method&nbsp;4: Manually assign a KMS server](#method-4-manually-assign-a-kms-server).
 1. Check the registry of the KMS host server to determine whether it is registering with DNS. By default, a KMS host server dynamically registers a DNS SRV record one time every 24 hours. To check this setting, follow these steps:
    1. Start Registry Editor. To do this, right-click **Start**, select **Run**, type **regedit**, and then press Enter.
    1. Locate the **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\SL** subkey, and check the value of the **DisableDnsPublishing** entry. This entry has the following possible values:
@@ -98,7 +95,7 @@ To manually create a&nbsp;SRV record for a KMS host that uses a Microsoft DNS se
    - Service: **_VLMCS**
    - Protocol: **_TCP**
    - Port number: **1688**
-   - Host offering the service: **&lt;*FQDN of the KMS host*</em>*&gt;**
+   - Host offering the service: **&lt;*FQDN of the KMS host*&gt;**
 1. When you are finished, select **OK**, and then select **Done**.
 
 To manually create a SRV record for a KMS host that uses a BIND 9.x-compliant DNS server, follow the instructions for that DNS server and provide the following information for the SRV record:
@@ -205,7 +202,7 @@ If the clients are configured to use a different DNS zone, automatically publish
    ```cmd
    cscript C:\Windows\System32\slmgr.vbs -ckms
    ```
-1. If you believe that you have an SRV record issue, you can troubleshoot it by using one of the commands that are documented in [Method 4](#method-4-manually-assign-a-kms-server) to statically specify a KMS host. The following commands can be used to determine whether this is a name resolution issue or an SRV record issue. If none of these commands resolves the problem, you may be encountering a blocked port or an inaccessible host **(see the &quot;More Information&quot; section)**. Run the following commands:
+1. If you believe that you have an SRV record issue, you can troubleshoot it by using one of the commands that are documented in [Method&nbsp;4](#method-4-manually-assign-a-kms-server) to statically specify a KMS host. The following commands can be used to determine whether this is a name resolution issue or an SRV record issue. If none of these commands resolves the problem, you may be encountering a blocked port or an inaccessible host **(see the &quot;More Information&quot; section)**. Run the following commands:
    ```cmd
    cscript \windows\system32\slmgr.vbs -skms <KMS_FQDN>:<port>
    cscript \windows\system32\slmgr.vbs -ato
