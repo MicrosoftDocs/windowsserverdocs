@@ -18,6 +18,10 @@ ms.localizationpriority: medium
 
 This article provides troubleshooting information to help you respond to error messages that you may receive when you try to use a Multiple Activation Key (MAK) or the Key Management Service (KMS) to perform Volume Activation on one or more Windows-based computers. Look for the error code in the following table, and then select the link to see more information about that error code and how to resolve it.
 
+For more information about volume activation for current and recent versions of Windows, see [Volume Activation [client]](https://docs.microsoft.com/windows/deployment/volume-activation/volume-activation-windows-10).
+
+For more information about volume activation for older versions of Windows, see KB 929712, [Volume Activation information for Windows Vista, Windows Server 2008, Windows Server 2008 R2 and Windows 7](https://support.microsoft.com/en-us/help/929712/volume-activation-information-for-windows-vista-windows-server-2008-wi).
+
 ## Summary of error codes
 
 |Error code |Error message |Activation type |
@@ -404,7 +408,7 @@ This issue occurs because the MAK that was entered was not valid, or because of 
 
 To work around this issue and activate the computer, run **slmgr -ipk <5x5 key>** at an elevated command prompt.  
 
-## Appendix: Common troubleshooting procedures
+## Appendix A: Common troubleshooting procedures
 
 - [Method 1: Change the product key to an MAK](#method-1-change-the-product-key-to-an-mak)
 - [Method 2: Configure a KMS host server for the clients to activate against](#method-2-configure-a-kms-host-server-for-the-clients-to-activate-against)
@@ -593,3 +597,25 @@ If the clients are configured to use a different DNS zone, automatically publish
    If these commands resolve the problem, this is most likely a name resolution issue.
 
 The 1688 TCP port is used for the activation communication between the KMS client and the KMS host. If the communication seems to be blocked, check the firewall configurations or anything else that may block the 1688 TCP port.
+
+## Appendix B: More information [KMS/DNS]
+
+This problem may occur if one or more of the following conditions are true:
+
+- You use volume-licensed media&nbsp;and&nbsp;a&nbsp;Volume License generic product key to install one of the following operating systems:
+   - Windows Server 2019
+   - Windows Server 2016
+   - Windows Server 2012 R2
+   - Windows Server 2012
+   - Windows Server 2008 R2
+   - Windows Server 2008
+   - Windows 10
+   - Windows 8.1
+   - Windows 8
+- The activation wizard cannot connect to a KMS&nbsp;host computer.
+
+When you try to activate a client system, the activation wizard uses DNS to locate a corresponding computer that&#39;s running the KMS software. If the wizard queries DNS and does not find the DNS entry for the KMS host computer, the wizard reports an error. If you do not have a KMS host computer set up, you have to either set up a KMS host computer or switch to an MAK product key method to activate your volume license installation.
+
+> [!NOTE]
+> If you have a KMS host computer and you still received the wizard error, the client computer could not find the correct DNS entries. Review the configuration of the KMS host computer and the KMS host DNS records.
+
