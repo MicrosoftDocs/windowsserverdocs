@@ -17,7 +17,7 @@ ms.localizationpriority: medium
 
 # On connecting, user receives "Remote Desktop Service is currently busy" message
 
-To determine an appropriate response to this issue, use the following steps:
+To determine an appropriate response to this issue, see the following:
 
 - Does the Remote Desktop Services service becomes unresponsive (for example, the remote desktop client appears to “hang” at the Welcome screen).  
    - If the service becomes unresponsive, see [RDSH server memory issue](#rdsh-server-memory-issue).
