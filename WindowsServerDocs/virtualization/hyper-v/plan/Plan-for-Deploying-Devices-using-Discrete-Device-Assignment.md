@@ -88,14 +88,14 @@ Express Endpoint -- more secure.
 ...
 ```
 
-The low MMIO space is used only by 32-bit operating systems and devices that use 32-bit addresses. In most circumstances, setting the high MMIO space of a VM will be enough since 32-bit configurations are not very common.
+The low MMIO space is used only by 32-bit operating systems and devices that use 32-bit addresses. In most circumstances, setting the high MMIO space of a VM will be enough since 32-bit configurations aren't very common.
 
 > [!IMPORTANT]
 > When assigning MMIO space to a VM, the user needs to be sure set the MMIO space to the sum of the requested MMIO space for all desired assigned devices plus an additional buffer if there are other virtual devices that require a few MB of MMIO space. Use the default MMIO values described above as the buffer for low and high MMIO (128 MB and 512 MB, respectively).
 
 If a user were to assign a single K520 GPU as in the example above, they must set the MMIO space of the VM to the value outputted by the machine profile script plus a buffer--176 MB + 512 MB. If a user were to assign three K520 GPUs, they must set the MMIO space to three times 176 MB plus a buffer, or 528 MB + 512 MB.
 
-Please see the TechCommunity blog post [Discrete Device Assignment - GPUs](https://techcommunity.microsoft.com/t5/Virtualization/Discrete-Device-Assignment-GPUs/ba-p/382266) for more details around MMIO space.
+For a more in-depth look at MMIO space, see [Discrete Device Assignment - GPUs](https://techcommunity.microsoft.com/t5/Virtualization/Discrete-Device-Assignment-GPUs/ba-p/382266) on the TechCommunity blog.
 
 ## Machine Profile Script
 In order to simplify identifying if the server is configured correctly and what devices are available to be passed through using Discrete Device Assignment, one of our engineers put together the following PowerShell script: [SurveyDDA.ps1.](https://github.com/Microsoft/Virtualization-Documentation/blob/live/hyperv-tools/DiscreteDeviceAssignment/SurveyDDA.ps1)
