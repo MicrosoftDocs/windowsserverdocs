@@ -31,12 +31,13 @@ When you try to activate a client system, the activation wizard uses DNS to loca
 
 - If you cannot install a KMS host or if you cannot use KMS activation, try [Method&nbsp;1: Change the product key to an MAK](#method-1-change-the-product-key-to-an-mak).
 - If you need to install and configure a KMS host, use [Method&nbsp;2: Configure a KMS host server for the clients to activate against](#method-2-configure-a-kms-host-server-for-the-clients-to-activate-against).
-- If the client cannot locate your existing KMS host, try either or both of the following methods:
+- If the client cannot locate your existing KMS host, try the following methods:
+  - [Narrow down DNS issues](#narrow-down-dns-issues)
   - [Method&nbsp;3: Manually create a KMS SRV record](#method-3-manually-create-a-kms-srv-record)
   - [Method&nbsp;4: Manually assign a KMS server](#method-4-manually-assign-a-kms-server)
-- If none of the preceding methods have resolved the problem, use [Method&nbsp;5: Automatically publish KMS in multiple DNS domains](#method-5-automatically-publish-kms-in-multiple-dns-domains) to review and configure the KMS and DNS servers.
+  - [Method&nbsp;5: Automatically publish KMS in multiple DNS domains](#method-5-automatically-publish-kms-in-multiple-dns-domains)
 
-### Method 1: Change the product key to an MAK
+## Method 1: Change the product key to an MAK
 
 If you cannot install a KMS host or for some other reason you cannot use KMS activation, change the product key to an MAK. If you downloaded Windows images from the Microsoft Developer Network (MSDN), or from TechNet, the stock-keeping units (SKUs) that are listed below the media are generally volume licensed-media, and the product key that's provided is an MAK key.
 
@@ -50,20 +51,38 @@ To change the product key to an MAK, follow these steps:
    > [!NOTE]
    > The **xxxxx-xxxxx-xxxxx-xxxxx-xxxxx** placeholder represents your MAK product key.  
 
-### Method 2: Configure a KMS host server for the clients to activate against
+## Method 2: Configure a KMS host server for the clients to activate against
 
 KMS activation requires that a KMS host server be configured for the clients to activate against. If there are no KMS host servers configured in your environment, install and activate one by using an appropriate KMS host server key. After you configure a computer on the network to host the KMS software, publish the Domain Name System (DNS) settings.
 
 For information about the KMS host server configuration process, see [Activate using Key Management Service](https://docs.microsoft.com/windows/deployment/volume-activation/activate-using-key-management-service-vamt).
 
-For more information about volume activation, see [Plan for volume activation](https://docs.microsoft.com/en-us/windows/deployment/volume-activation/plan-for-volume-activation-client).
+## Narrow down DNS issues
 
-### Method 3: Manually create a KMS SRV record
+You can use the following commands to determine whether this is a name resolution issue or an SRV record issue. 
+
+1. Run the following commands:
+   ```cmd
+   cscript \windows\system32\slmgr.vbs -skms <KMS_FQDN>:<port>
+   cscript \windows\system32\slmgr.vbs -ato
+   ```
+   If these commands resolve the problem, this is an SRV record issue. You can you can troubleshoot it by using one of the commands that are documented in [Method&nbsp;4](#method-4-manually-assign-a-kms-server) to statically specify a KMS host. 
+
+2. Run the following commands:
+   ```cmd
+   cscript \windows\system32\slmgr.vbs -skms <IP Address>:<port>
+   cscript \windows\system32\slmgr.vbs -ato
+   ```
+   If these commands resolve the problem, this is most likely a name resolution issue.
+
+3. If none of these commands resolves the problem, you may be encountering a blocked port or an inaccessible host. Activation communications between KMS clients and the KMS host use the 1688 TCP port. If the communication seems to be blocked, check the firewall configurations or anything else that may block port 1688.
+
+## Method 3: Manually create a KMS SRV record
 
 > [!IMPORTANT]
 > Follow the steps in this section carefully. Serious problems might occur if you modify the registry incorrectly. Before you modify it, [back up the registry for restoration](https://support.microsoft.com/en-us/help/322756) in case problems occur.
 
-If your network has a KMS host computer set up, and if the client cannot locate a KMS host on the network for activation, follow these steps:
+If your network has a KMS host computer set up, and if the client cannot locate a KMS host on the network for activation, use the following steps to verify the configuration of the KMS host and the related DNS records. Follow these steps:
 
 1. Verify that the computer that has the KMS host installed and is activated by using a KMS key that&#39;s registered in DNS. To do this, follow these steps:  
    1. Open an elevated command prompt. To do this, press the Windows logo key+X, and then right-click **Command Prompt**, and then select **Run as administrator**. If you are prompted for an administrator password or for confirmation, type the password or provide confirmation.
@@ -117,7 +136,9 @@ allow-update { any; };
 ```
 ### Method 4: Manually assign a KMS server
 
-By default, the KMS clients use the automatic discovery feature and query DNS for a list of servers that have published the _VLMCS record within the membership zone of the client. DNS returns the list of KMS hosts in a random order. The client picks a KMS host and tries to establish a session on it. If this attempt works, the client caches the server and tries to use it for the next renewal attempt. If the session setup fails, the client picks another server randomly. We highly recommend that you use the automatic discovery feature. However, you can manually assign a KMS server. To do this, open an elevated command prompt on the KMS client.
+By default, the KMS clients use the automatic discovery feature and query DNS for a list of servers that have published the _VLMCS record within the membership zone of the client. DNS returns the list of KMS hosts in a random order. The client picks a KMS host and tries to establish a session on it. If this attempt works, the client caches the server and tries to use it for the next renewal attempt. If the session setup fails, the client picks another server randomly. We highly recommend that you use the automatic discovery feature. 
+
+However, you can manually assign a KMS server. To do this, open an elevated command prompt on the KMS client.
 
 1. On a KMS client, open an elevated command prompt. To do this, press the Windows logo key+X, and then right-click&nbsp;**Command Prompt**, and then select **Run as administrator**. If you are prompted for an administrator password or for confirmation, type the password or provide confirmation.
 1. Depending on your implementation, follow one of these steps:
@@ -168,24 +189,26 @@ If the previous methods have not resolved this problem, the client may not be ab
    For the computers that have joined the domain, the DNS automatic discovery of KMS requires that the DNS zone contains the SRV resource record for the KMS host. This DNS zone is the DNS zone that corresponds to either the primary DNS suffix of the computer or to the domain of the Active Directory DNS.
   
    For workgroup computers, the DNS automatic discovery of KMS requires that the DNS zone contains the SRV resource record for the KMS host. This DNS zone is the DNS zone that corresponds to either the primary DNS suffix of the computer or to the DNS domain name that is assigned by the Dynamic Host Configuration Protocol (DHCP). This domain name is defined by the option that has the code value of 15 as defined in Request for Comments (RFC) 2132.
-1. Verify that the KMS host SRV records are registered in DNS. At an elevated command prompt, run the following command:
-   ```cmd
-   nslookup -type=all _vlmcs._tcp>kms.txt
-   ```
-1. Open the Kms.txt file that was generated in step 5. This file should contain one or more entries that resemble the following:
-   ```
-   _vlmcs._tcp.contoso.com SRV service location:
-   priority = 0
-   weight = 0
-   port = 1688 svr hostname = kms-server.contoso.com
-   ```
-   Verify the IP address, host name, and port of the KMS host.
-   > [!NOTE]
-   > If the **nslookup** command finds the KMS host, it does not mean that the DNS client can find the KMS host. If the **nslookup** command finds the KMS host, and if you still cannot activate the KMS host server, check the other settings, such as the primary DNS suffix and the search list of the DNS suffix.
-
-   The SRV records are registered in the DNS zone that corresponds to the KMS host domain membership. For example, assume that a KMS host joins the contoso.com domain. In this scenario, the KMS host registers its VLMCS._TCP SRV record under the contoso.com DNS zone. Therefore, the VLMCS._TCP.CONTOSO.COM record is created.
+1. Verify that the KMS host SRV records are registered in DNS.
+   1. At an elevated command prompt, run the following command:
+      ```cmd
+      nslookup -type=all _vlmcs._tcp>kms.txt
+      ```
+   1. Open the Kms.txt file that was generated in step 5. This file should contain one or more entries that resemble the following:
+      ```
+       _vlmcs._tcp.contoso.com SRV service location:
+       priority = 0
+       weight = 0
+       port = 1688 svr hostname = kms-server.contoso.com
+       ```
+   1. Verify the IP address, host name, and port of the KMS host.
+      > [!NOTE]
+      > If the **nslookup** command finds the KMS host, it does not mean that the DNS client can find the KMS host. If the **nslookup** command finds the KMS host, and if you still cannot activate the KMS host server, check the other settings, such as the primary DNS suffix and the search list of the DNS suffix.
 
 #### To publish KMS information in multiple DNS domains
+
+The SRV records are registered in the DNS zone that corresponds to the KMS host domain membership. For example, assume that a KMS host joins the contoso.com domain. In this scenario, the KMS host registers its VLMCS._TCP SRV record under the contoso.com DNS zone. Therefore, the VLMCS._TCP.CONTOSO.COM record is created. 
+
 If the clients are configured to use a different DNS zone, automatically publish KMS in multiple DNS domains. To do this, follow these steps:
 
 1. Start Registry Editor. To do this, right-click **Start**, select **Run**, type **regedit**, and then press Enter.
@@ -197,23 +220,9 @@ If the clients are configured to use a different DNS zone, automatically publish
    > [!NOTE]
    > For Windows Server 2008 R2, the format for **DnsDomainPublishList** differs.&nbsp;For more information, see the Volume Activation Technical Reference Guide.
 1. Use the Services administrative tool to restart the Software Licensing service. This operation creates the SRV records.
-1. Verify that by using a typical method, the KMS client can resolve the host name that is returned in the last step. When the name resolves, also verify that the IP address that is returned is accurate. If either of these verifications fails, investigate this DNS client resolver issue.
+1. Verify that by using a typical method, the KMS client can resolve the host name that is returned in the previous step. When the name resolves, also verify that the IP address that is returned is accurate. If either of these verifications fails, investigate this DNS client resolver issue.
 1. To use the KMS automatic discovery feature, run the following command at an elevated command prompt to clear any previously cached KMS host names:
    ```cmd
    cscript C:\Windows\System32\slmgr.vbs -ckms
    ```
-1. If you believe that you have an SRV record issue, you can troubleshoot it by using one of the commands that are documented in [Method&nbsp;4](#method-4-manually-assign-a-kms-server) to statically specify a KMS host. The following commands can be used to determine whether this is a name resolution issue or an SRV record issue. If none of these commands resolves the problem, you may be encountering a blocked port or an inaccessible host **(see the &quot;More Information&quot; section)**. Run the following commands:
-   ```cmd
-   cscript \windows\system32\slmgr.vbs -skms <KMS_FQDN>:<port>
-   cscript \windows\system32\slmgr.vbs -ato
-   ```
-   If these commands resolve the problem, this is an SRV record issue. To fix it, you must troubleshoot the SRV record.
 
-   If these commands do not resolve the problem, run the following commands:
-   ```cmd
-   cscript \windows\system32\slmgr.vbs -skms <IP Address>:<port>
-   cscript \windows\system32\slmgr.vbs -ato
-   ```
-   If these commands resolve the problem, this is most likely a name resolution issue.
-
-The 1688 TCP port is used for the activation communication between the KMS client and the KMS host. If the communication seems to be blocked, check the firewall configurations or anything else that may block the 1688 TCP port.
