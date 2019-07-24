@@ -141,7 +141,7 @@ You can use the following commands to determine whether this is a name resolutio
        weight = 0
        port = 1688 svr hostname = kms-server.contoso.com
        ```
-      1. If these **_vlmcs** entries are present, and if they contain the expected KMS host names, go to [Manually assign a KMS host to a KMS client](#manually-assign-a-kms-host-to-a-KMS-client).  
+      1. If these **_vlmcs** entries are present, and if they contain the expected KMS host names, go to [Manually assign a KMS host to a KMS client](#manually-assign-a-kms-host-to-a-kms-client).  
       1. Verify the IP address, host name, and port of the KMS host.
       > [!NOTE]
       > If the **nslookup** command finds the KMS host, it does not mean that the DNS client can find the KMS host. If the **nslookup** command finds the KMS host, and if you still cannot activate the KMS host server, check the other settings, such as the primary DNS suffix and the search list of the DNS suffix.
