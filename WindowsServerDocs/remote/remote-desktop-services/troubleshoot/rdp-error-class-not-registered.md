@@ -1,5 +1,5 @@
 ---
-title: "Class not registered" error
+title: Class not registered error
 description: Troubleshooting "Class not registered" error with remote desktop connection.
 audience: itpro ​
 ms.custom: na
