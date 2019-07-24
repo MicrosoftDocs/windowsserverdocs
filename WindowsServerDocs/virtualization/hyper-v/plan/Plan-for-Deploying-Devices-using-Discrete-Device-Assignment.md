@@ -66,11 +66,36 @@ The PCIe Location path is required to dismount and mount the device from the Hos
 ## MMIO Space
 Some devices, especially GPUs, require additional MMIO space to be allocated to the VM for the memory of that device to be accessible. By default, each VM starts off with 128MB of low MMIO space and 512MB of high MMIO space allocated to it. However, a device might require more MMIO space, or multiple devices may be passed through such that the combined requirements exceed these values.  Changing MMIO Space is straight forward and can be performed in PowerShell using the following commands:
 
-```
+```PowerShell
 Set-VM -LowMemoryMappedIoSpace 3Gb -VMName $vm
 Set-VM -HighMemoryMappedIoSpace 33280Mb -VMName $vm
 ```
-The easiest way to determine how much MMIO space to allocate is to use the [Machine Profile Script](#machine-profile-script).  Alternatively, you can calculate it using the Device Manager. Please see the TechNet blog post [Discrete Device Assignment - GPUs](https://blogs.technet.microsoft.com/virtualization/2015/11/23/discrete-device-assignment-gpus/) for more details.
+
+The easiest way to determine how much MMIO space to allocate is to use the [Machine Profile Script](#machine-profile-script). To download and run the machine profile script, run the following commands in a PowerShell console:
+
+```PowerShell
+curl -o SurveyDDA.ps1 https://raw.githubusercontent.com/MicrosoftDocs/Virtualization-Documentation/live/hyperv-tools/DiscreteDeviceAssignment/SurveyDDA.ps1
+.\SurveyDDA.ps1
+```
+
+For devices that are able to be assigned, the script will display the MMIO requirements of a given device like the example below:
+
+```PowerShell
+NVIDIA GRID K520
+Express Endpoint -- more secure.
+    ...
+    And it requires at least: 176 MB of MMIO gap space
+...
+```
+
+The low MMIO space is used only by 32-bit operating systems and devices that use 32-bit addresses. In most circumstances, setting the high MMIO space of a VM will be enough since 32-bit configurations aren't very common.
+
+> [!IMPORTANT]
+> When assigning MMIO space to a VM, the user needs to be sure set the MMIO space to the sum of the requested MMIO space for all desired assigned devices plus an additional buffer if there are other virtual devices that require a few MB of MMIO space. Use the default MMIO values described above as the buffer for low and high MMIO (128 MB and 512 MB, respectively).
+
+If a user were to assign a single K520 GPU as in the example above, they must set the MMIO space of the VM to the value outputted by the machine profile script plus a buffer--176 MB + 512 MB. If a user were to assign three K520 GPUs, they must set the MMIO space to three times 176 MB plus a buffer, or 528 MB + 512 MB.
+
+For a more in-depth look at MMIO space, see [Discrete Device Assignment - GPUs](https://techcommunity.microsoft.com/t5/Virtualization/Discrete-Device-Assignment-GPUs/ba-p/382266) on the TechCommunity blog.
 
 ## Machine Profile Script
 In order to simplify identifying if the server is configured correctly and what devices are available to be passed through using Discrete Device Assignment, one of our engineers put together the following PowerShell script: [SurveyDDA.ps1.](https://github.com/Microsoft/Virtualization-Documentation/blob/live/hyperv-tools/DiscreteDeviceAssignment/SurveyDDA.ps1)
