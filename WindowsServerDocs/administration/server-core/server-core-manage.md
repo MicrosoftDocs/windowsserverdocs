@@ -6,11 +6,11 @@ ms.mktglfcycl: manage
 ms.sitesec: library
 author: lizap
 ms.localizationpriority: medium
-ms.date: 10/17/2017
+ms.date: 07/23/2019
 ---
 # Manage a Server Core server
  
-> Applies to: Windows Server (Semi-Annual Channel) and Windows Server 2016
+> Applies to: Windows Server 2019, Windows Server 2016, and Windows Server (Semi-Annual Channel)
 
 You can manage a Server Core server in the following ways:
 - Using [Windows Admin Center](../../manage/windows-admin-center/overview.md)
@@ -55,7 +55,7 @@ To use an MMC snap-in to manage a Server Core server that is a domain member:
 To use an MMC snap-in to manage a Server Core server that is *not* a domain member: 
 
 1. Establish alternate credentials to use to connect to the Server Core computer by typing the following command at a command prompt on the remote computer:
-1. 
+
    ```
    cmdkey /add:<ServerName> /user:<UserName> /pass:<password>
    ```
@@ -71,19 +71,20 @@ To use an MMC snap-in to manage a Server Core server that is *not* a domain memb
 ### To configure Windows Firewall to allow MMC snap-in(s) to connect
 To allow all MMC snap-ins to connect, run the following command:
 
-```
+```PowerShell
 Enable-NetFirewallRule -DisplayGroup "Remote Administration"
 ```
 
 To allow only specific MMC snap-ins to connect, run the following:
-```
+
+```PowerShell
 Enable-NetFirewallRule -DisplayGroup "<rulegroup>"
 ```
 
 Where *rulegroup* is one of the following, depending on which snap-in you want to connect:
 
 | MMC snap-in                            | Rule group                                            |
-|----------------------------------------|-------------------------------------------------------|
+| ---------------------------------------- | ------------------------------------------------------- |
 | Event Viewer                           | Remote Event Log Management                           |
 | Services                               | Remote Service Management                             |
 | Shared Folders                         | File and Printer Sharing                              |
@@ -106,9 +107,11 @@ Where *rulegroup* is one of the following, depending on which snap-in you want t
 You can use [Remote Desktop](../../remote/remote-desktop-services/welcome-to-rds.md) to manage a Server Core server from remote computers.
 
 Before you can access Server Core, you'll need to run the following command: 
+
 ```
 cscript C:\Windows\System32\Scregedit.wsf /ar 0
 ```
+
 This enables the Remote Desktop for Administration mode to accept connections.
 
 ## Add hardware and manage drivers locally
