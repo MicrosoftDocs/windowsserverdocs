@@ -31,14 +31,14 @@ When you try to activate a client system, the activation wizard uses DNS to loca
 <a id="list">
 
 - If you cannot install a KMS host or if you cannot use KMS activation, try the [Change the product key to an MAK](#change-the-product-key-to-an-mak) procedure.
-- If you need to install and configure a KMS host, use the [Configure a KMS host server for the clients to activate against](#configure-a-kms-host-server-for-the-clients-to-activate-against) procedure.
+- If you need to install and configure a KMS host, use the [Configure a KMS host for the clients to activate against](#configure-a-kms-host-for-the-clients-to-activate-against) procedure.
 - If the client cannot locate your existing KMS host, use the following procedures to troubleshoot your routing configurations. These procedures are arranged from simpler to more complex.
   - [Verify basic IP connectivity to the DNS server](#verify-basic-ip-connectivity-to-the-dns-server)
   - [Verify the KMS host configuration](#verify-the-configuration-of-the-kms-host)  
   - [Determine the type of routing issue](#determine-the-type-of-routing-issue)
   - [Verify the DNS configuration](#verify-the-dns-configuration)
   - [Manually create a KMS SRV record](#manually-create-a-kms-srv-record)
-  - [Manually assign a KMS server to a KMS client](#manually-assign-a-kms-server-to-a-kms-client)
+  - [Manually assign a KMS host to a KMS client](#manually-assign-a-kms-host-to-a-kms-client)
   - [Configure the KMS host to publish in multiple DNS domains](#configure-the-kms-host-to-publish-in-multiple-dns-domains)
 
 ## Change the product key to an MAK
@@ -107,7 +107,7 @@ You can use the following commands to determine whether this is a name resolutio
    cscript \windows\system32\slmgr.vbs -skms <IP Address>:<port>
    cscript \windows\system32\slmgr.vbs -ato
    ```
-   If these commands resolve the problem, this is most likely a name resolution issue. For additional troubleshooting information, see the [Verify the DNS configuration](#vreify-the-dns-configuration) procedure.
+   If these commands resolve the problem, this is most likely a name resolution issue. For additional troubleshooting information, see the [Verify the DNS configuration](#verify-the-dns-configuration) procedure.
 
 3. If none of these commands resolves the problem, check the computer's firewall configuration. Activation communications between KMS clients and the KMS host use the 1688 TCP port. The firewalls on both the KMS client and the KMS host must allow communication over port 1688.
 
@@ -181,7 +181,7 @@ To configure a BIND 9.x-compatible DNS server to support KMS auto-publishing, co
 ```cmd
 allow-update { any; };
 ```
-## Manually assign a KMS server to a KMS client
+## Manually assign a KMS host to a KMS client
 
 By default, the KMS clients use the automatic discovery feature and query DNS for a list of servers that have published the _VLMCS record within the membership zone of the client. DNS returns the list of KMS hosts in a random order. The client picks a KMS host and tries to establish a session on it. If this attempt works, the client caches the server and tries to use it for the next renewal attempt. If the session setup fails, the client picks another server randomly. We highly recommend that you use the automatic discovery feature. 
 
