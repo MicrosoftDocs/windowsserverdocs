@@ -1,17 +1,17 @@
 ---
-title: "Remote Desktop Service is currently busy" error on connecting
-description: Troubleshooting the "Remote Desktop Service is currently busy" error when users start a remote desktop connection.
-audience: ITPro ​
+title: Remote Desktop Service is currently busy error on connecting
+description: Troubleshooting the Remote Desktop Service is currently busy error when users start a remote desktop connection.
+audience: itpro ​
 ms.custom: na
-ms.reviewer: rklemen; josh.bender
+ms.reviewer: rklemen
 ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: troubleshooting
 ms.assetid: 
 author: kaushika-msft
 manager: 
-ms.author: kaushika; rklemen; josh.bender; v-tea; delhan
-ms.date: 06/23/2019
+ms.author: delhan
+ms.date: 07/24/2019
 ms.localizationpriority: medium
 ---
 
