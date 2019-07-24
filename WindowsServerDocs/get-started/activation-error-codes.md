@@ -320,9 +320,9 @@ The KMS client cannot find KMS server resource records (SRV RRs) in DNS.
 
 Confirm that a KMS host has been installed and DNS publishing is enabled (default). If DNS is unavailable, point the KMS client to the KMS host by using **slmgr.vbs /skms <*kms_host_name*>**.  
 
-If you do not have a KMS host, obtain and install a MAK. Then activate the system. 
+If you do not have a KMS host, obtain and install a MAK. Then activate the system.
 
-If these approaches to don resolve the problem, troubleshoot DNS.  
+For more information about troubleshooting such DNS-related issues, see [Common troubleshooting procedures for KMS and DNS issues](common-troubleshooting-procedures-kms-dns.md).  
 
 ### 0x800706BA The RPC server is unavailable
 
@@ -332,11 +332,13 @@ Firewall settings are not configured on the KMS host, or DNS SRV records are sta
 
 #### Resolution
 
-On the KMS host, make sure that a firewall exception is enabled for the Key Management Service.
+On the KMS host, make sure that a firewall exception is enabled for the Key Management Service (TCP port 1688).
 
 Make sure that the DNS SRV records point to a valid KMS host. 
 
 Troubleshoot network connections.  
+
+For more information about troubleshooting such DNS-related issues, see [Common troubleshooting procedures for KMS and DNS issues](common-troubleshooting-procedures-kms-dns.md).  
 
 ### 0x8007251D No records found for DNS query
 
@@ -346,7 +348,7 @@ The KMS client cannot find KMS SRV records in DNS.
 
 #### Resolution
 
-Troubleshoot network connections and DNS.  
+Troubleshoot network connections and DNS. For more information about troubleshooting such DNS-related issues, see [Common troubleshooting procedures for KMS and DNS issues](common-troubleshooting-procedures-kms-dns.md).  
 
 ### 0xC004F074 No Key Management Service (KMS) could be contacted
 
@@ -361,6 +363,8 @@ All of the KMS host systems returned an error.
 #### Resolution
 
 In the Application Event Log, identify each event that has Event ID 12288 and is associated with the activation attempt. Troubleshoot the errors from these events.
+
+For more information about troubleshooting DNS-related issues, see [Common troubleshooting procedures for KMS and DNS issues](common-troubleshooting-procedures-kms-dns.md).  
 
 ### 0x8004FE21 This computer is not running genuine Windows  
 
@@ -385,7 +389,7 @@ This issue may occur if the KMS client cannot find the KMS SRV resource records 
 
 #### Resolution
 
-To work around this issue, follow the steps in [KB929712, Error message when you try to activate Windows Vista Enterprise, Windows Vista Business, Windows 7, or Windows Server 2008: "Code 0x8007232b](https://support.microsoft.com/en-us/help/929712/volume-activation-information-for-windows-vista-windows-server-2008-wi).  
+For more information about troubleshooting such DNS-related issues, see [Common troubleshooting procedures for KMS and DNS issues](common-troubleshooting-procedures-kms-dns.md).  
 
 ### 0x8007007b DNS name does not exist
 
@@ -395,7 +399,7 @@ This issue may occur if the KMS client cannot find the KMS SRV resource records 
 
 #### Resolution
 
-To work around this issue, follow the steps in [KB929712, Error message when you try to activate Windows Vista Enterprise, Windows Vista Business, Windows 7, or Windows Server 2008: "Code 0x8007232b](https://support.microsoft.com/en-us/help/929712/volume-activation-information-for-windows-vista-windows-server-2008-wi).  
+For more information about troubleshooting such DNS-related issues, see [Common troubleshooting procedures for KMS and DNS issues](common-troubleshooting-procedures-kms-dns.md).  
 
 ### 0x80070490 The product key you entered didn't work
 
@@ -409,4 +413,3 @@ This issue occurs because the MAK that was entered was not valid, or because of 
 #### Resolution
 
 To work around this issue and activate the computer, run **slmgr -ipk <5x5 key>** at an elevated command prompt.  
-
