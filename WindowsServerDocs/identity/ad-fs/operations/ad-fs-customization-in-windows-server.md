@@ -65,7 +65,7 @@ To assign a custom theme per RP use the following procedure:
   
 1. Create a new theme as a copy for the default, global theme in AD FS  
 <code>New-AdfsWebTheme -Name AppSpecificTheme -SourceName default</code>  
-2.  Export the theme for customization  
+2. Export the theme for customization  
 <code>Export-AdfsWebTheme -Name AppSpecificTheme -DirectoryPath c:\appspecifictheme</code>  
 3. Customize theme files (images, css, onload.js) - in your favorite editor or replace the file  
 4. Import customized files from the file system to AD FS (targeting the new theme)  
