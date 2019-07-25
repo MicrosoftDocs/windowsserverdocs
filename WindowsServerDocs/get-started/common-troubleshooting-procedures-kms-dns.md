@@ -27,8 +27,9 @@ You may have to use one or more of these methods if one or more of the following
    - Windows 8
 - The activation wizard cannot connect to a KMS&nbsp;host computer.
 
-When you try to activate a client system, the activation wizard uses DNS to locate a corresponding computer that&#39;s running the KMS software. If the wizard queries DNS and does not find the DNS entry for the KMS host computer, the wizard reports an error. Review the following list to find an approach that fits your circumstances:
-<a id="list">
+When you try to activate a client system, the activation wizard uses DNS to locate a corresponding computer that&#39;s running the KMS software. If the wizard queries DNS and does not find the DNS entry for the KMS host computer, the wizard reports an error.   
+
+<a id="list"></a>Review the following list to find an approach that fits your circumstances:
 
 - If you cannot install a KMS host or if you cannot use KMS activation, try the [Change the product key to an MAK](#change-the-product-key-to-an-mak) procedure.
 - If you need to install and configure a KMS host, use the [Configure a KMS host for the clients to activate against](#configure-a-kms-host-for-the-clients-to-activate-against) procedure.
@@ -55,11 +56,15 @@ To change the product key to an MAK, follow these steps:
    > [!NOTE]
    > The **xxxxx-xxxxx-xxxxx-xxxxx-xxxxx** placeholder represents your MAK product key.  
 
+[Return to the procedure list.](#list)
+
 ## Configure a KMS host for the clients to activate against
 
 KMS activation requires that a KMS host be configured for the clients to activate against. If there are no KMS hosts configured in your environment, install and activate one by using an appropriate KMS host key. After you configure a computer on the network to host the KMS software, publish the Domain Name System (DNS) settings.
 
 For information about the KMS host configuration process, see [Activate using Key Management Service](https://docs.microsoft.com/windows/deployment/volume-activation/activate-using-key-management-service-vamt) and [Install and Configure VMAT](https://docs.microsoft.com/windows/deployment/volume-activation/install-configure-vamt).
+
+[Return to the procedure list.](#list)
 
 ## Verify basic IP connectivity to the DNS server
 
