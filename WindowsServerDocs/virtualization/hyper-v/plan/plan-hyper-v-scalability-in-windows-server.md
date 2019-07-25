@@ -14,7 +14,7 @@ ms.date: 09/28/2016
 ---
 # Plan for Hyper-V scalability in Windows Server 2016
 
-> Applies To: Windows Server 2016
+> Applies To: Windows Server 2016, Windows Server 2019
   
 This article gives you details about the maximum configuration for components you can add and remove on a Hyper-V host or its virtual machines, such as virtual processors or checkpoints. As you plan your deployment, consider the maximums that apply to each virtual machine, as well as those that apply to the Hyper-V host. 
 
@@ -39,7 +39,7 @@ These maximums apply to each virtual machine. Not all components are available i
 |Virtual processors|240 for generation 2;<br>64 for generation 1;<br>320 available to the host OS (root partition)|The number of virtual processors supported by a guest operating system might be lower. For details, see the information published for the specific operating system.|
 |Virtual SCSI controllers|4|Use of virtual SCSI devices requires integration services, which are available for supported guest operating systems. For details on which operating systems are supported, see [Supported Linux and FreeBSD virtual machines](../Supported-Linux-and-FreeBSD-virtual-machines-for-Hyper-V-on-Windows.md) and [Supported Windows guest operating systems](../supported-windows-guest-operating-systems-for-hyper-v-on-windows.md).|  
 |Virtual SCSI disks|256|Each SCSI controller supports up to 64 disks, which means that each virtual machine can be configured with as many as 256 virtual SCSI disks. (4 controllers x 64 disks per controller)|  
-|Virtual network adapters|12 total:<br> - 8 Hyper-V specific network adapters<br>- 4 legacy network adapters|The Hyper-V specific network adapter provides better performance and requires a driver included in integration services. For more information, see [Plan for Hyper-V networking in Windows Server](plan-hyper-v-networking-in-windows-server.md).|  
+|Virtual network adapters|Windows Server 2016 supports 12 total:<br> - 8 Hyper-V specific network adapters<br>- 4 legacy network adapters <br> Windows Server 2019 supports 72 total: <br> - 64 Hyper-V specific network adapters<br>- 4 legacy network adapters  |The Hyper-V specific network adapter provides better performance and requires a driver included in integration services. For more information, see [Plan for Hyper-V networking in Windows Server](plan-hyper-v-networking-in-windows-server.md).|  
   
 ## Maximums for Hyper-V hosts  
 These maximums apply to each Hyper-V host.  
