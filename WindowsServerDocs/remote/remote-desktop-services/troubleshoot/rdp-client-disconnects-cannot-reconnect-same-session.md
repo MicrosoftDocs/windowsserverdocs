@@ -1,6 +1,6 @@
 ---
-title: Remote Desktop client disconnects and cannot reconnect to the same session
-description: Troubleshooting an issue in which remote desktop client disconnects and cannot reconnect to the same session.
+title: Remote Desktop client disconnects and can't reconnect to the same session
+description: Troubleshooting an issue in which remote desktop client disconnects and can't reconnect to the same session.
 audience: itpro ​
 ms.custom: na
 ms.reviewer: rklemen
@@ -15,7 +15,7 @@ ms.date: 07/24/2019
 ms.localizationpriority: medium
 ---
 
-# Remote Desktop client disconnects and cannot reconnect to the same session
+# Remote Desktop client disconnects and can't reconnect to the same session
 
 After Remote Desktop client loses its connection to the remote desktop, the client can't immediately reconnect. The user recieves one of the following error messages:
 

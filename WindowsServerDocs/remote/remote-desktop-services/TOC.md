@@ -72,7 +72,7 @@
 #### [Clients can't connect and see "No licenses available" error](troubleshoot/rdp-error-no-licenses-available.md)
 #### [User can't authenticate or must authenticate twice](troubleshoot/cannot-authenticate-or-must-authenticate-twice.md)
 #### ["Remote Desktop Service is currently busy" error on connecting](troubleshoot/remote-desktop-service-currently-busy.md)
-#### [Remote Desktop client disconnects and cannot reconnect to the same session](troubleshoot/rdp-client-disconnects-cannot-reconnect-same-session.md)
+#### [Remote Desktop client disconnects and can't reconnect to the same session](troubleshoot/rdp-client-disconnects-cannot-reconnect-same-session.md)
 #### [Remote laptop disconnects from wireless network](troubleshoot/remote-laptop-disconnects-wireless-network.md)
 #### [Poor performance or application problems during remote desktop connection](troubleshoot/poor-performance-or-application-problems.md)
 ### General information

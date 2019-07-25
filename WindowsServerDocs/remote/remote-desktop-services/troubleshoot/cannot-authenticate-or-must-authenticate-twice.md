@@ -73,7 +73,7 @@ For more information about this behavior, see KB 3200967 [Changes to Remote Conn
 
 This section addresses three common scenarios where a user can't sign in to a remote desktop using a smart card.
 
-### Cannot sign in with a smart card in a branch office with a read-only domain controller (RODC)
+### Can't sign in with a smart card in a branch office with a read-only domain controller (RODC)
 
 This issue occurs in deployments that include an RDSH server at a branch site that uses a RODC. The RDSH server is hosted in the root domain. Users at the branch site belong to a child domain, and use smart cards for authentication. The RODC is configured to cache user passwords (the RODC belongs to the **Allowed RODC Password Replication Group**). When users try to sign in to sessions on the RDSH server, they receive messages such as "The attempted logon is invalid. This is either due to a bad username or authentication information."
 
@@ -93,7 +93,7 @@ This issue occurs when users sign in to a Windows Server 2008 SP2 computer that 
 
 To resolve this issue, update the Windows Server computer with the 2018.06 B re-release of KB 4093227, [Description of the security update for the Windows Remote Desktop Protocol (RDP) denial of service vulnerability in Windows Server 2008: April 10, 2018](https://support.microsoft.com/help/4093227/security-update-for-vulnerabilities-in-windows-server-2008).
 
-### Cannot stay signed in with a smart card and Remote Desktop Services service hangs
+### Can't stay signed in with a smart card and Remote Desktop Services service hangs
 
 This issue occurs when users sign in to a Windows or Windows Server computer that has been updated with KB 4056446. At first, the user may be able to sign in to the system by using a smart card, but then receives a “SCARD\_E\_NO\_SERVICE” error message. The remote computer may become unresponsive.
 
@@ -111,7 +111,7 @@ This issue may occur when a user attempts to connect to a remote desktop running
 
 To resolve this issue, update the Windows 10 version 1709 computer with KB 4343893, [August 30, 2018—KB4343893 (OS Build 16299.637)](https://support.microsoft.com/help/4343893/windows-10-update-kb4343893).
 
-## User cannot sign in and receives “authentication error” and “CredSSP encryption oracle remediation” messages
+## User can't sign in and receives “authentication error” and “CredSSP encryption oracle remediation” messages
 
 When users try to sign in using any version of Windows from Windows Vista SP2 and later versions or Windows Server 2008 SP2 and later versions, they're denied access and recieve messages like these:
 
@@ -127,8 +127,8 @@ This could be due to CredSSP encryption oracle remediation
 The initial updates added support for a new Group Policy Object, Encryption Oracle Remediation, that has the following possible settings:
 
   - Vulnerable: Client applications that use CredSSP can fall back to insecure versions, but this behavior exposes the remote desktops to attacks. Services that use CredSSP accept clients that have not been updated.
-  - Mitigated: Client applications that use CredSSP cannot fall back to insecure versions, but services that use CredSSP accept clients that have not been updated.
-  - Force Updated Clients: Client applications that use CredSSP cannot fall back to insecure versions, and services that use CredSSP will not accept unpatched clients. 
+  - Mitigated: Client applications that use CredSSP can't fall back to insecure versions, but services that use CredSSP accept clients that have not been updated.
+  - Force Updated Clients: Client applications that use CredSSP can't fall back to insecure versions, and services that use CredSSP will not accept unpatched clients. 
     > [!NOTE]
     > This setting should not be deployed until all remote hosts support the newest version.
 
@@ -164,8 +164,8 @@ To resolve this issue, ensure that the computers that the users want to connect 
 
 ## Users are denied access on a deployment that uses Remote Credential Guard with multiple RD Connection Brokers
 
-This issue occurs in high-availability deployments that use two or more Remote Desktop Connection Brokers, if Windows Defender Remote Credential Guard is in use. Users cannot sign in to remote desktops.
+This issue occurs in high-availability deployments that use two or more Remote Desktop Connection Brokers, if Windows Defender Remote Credential Guard is in use. Users can't sign in to remote desktops.
 
-This issue occurs because Remote Credential Guard uses Kerberos for authentication, and restricts NTLM. However, in a high-availability configuration with load balancing, the RD Connection Brokers cannot support Kerberos operations.
+This issue occurs because Remote Credential Guard uses Kerberos for authentication, and restricts NTLM. However, in a high-availability configuration with load balancing, the RD Connection Brokers can't support Kerberos operations.
 
 If you need to use a high-availability configuration with load-balanced RD Connection Brokers, you can work around this issue by disabling Remote Credential Guard. For more information about how to manage Windows Defender Remote Credential Guard, see [Protect Remote Desktop credentials with Windows Defender Remote Credential Guard](https://docs.microsoft.com/windows/security/identity-protection/remote-credential-guard#enable-windows-defender-remote-credential-guard).
