@@ -1,5 +1,5 @@
 ---
-title: Remote Desktop Service is currently busy error on connecting
+title: On connecting, user receives Remote Desktop Service is currently busy message
 description: Troubleshooting the Remote Desktop Service is currently busy error when users start a remote desktop connection.
 audience: itpro ​
 ms.custom: na

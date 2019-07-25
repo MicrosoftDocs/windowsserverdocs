@@ -67,12 +67,12 @@
 ## [Additional Remote Desktop support](rds-get-support.md)
 ## [Remote Desktop clients](clients/remote-desktop-clients.md)
 ### Remote Desktop known issues
-#### [General troubleshooting steps](troubleshoot/rdp-error-general-troubleshooting.md)
-#### [Client cannot connect with the "Class not registered" error](troubleshoot/rdp-error-class-not-registered.md).
-#### [Clients cannot connect with no licenses available error](troubleshoot/rdp-error-no-licenses-available.md)
-#### [User cannot authenticate or must authenticate twice when starting a remote desktop connection](troubleshoot/cannot-authenticate-or-must-authenticate-twice.md)
+#### [General Remote Desktop connection troubleshooting](troubleshoot/rdp-error-general-troubleshooting.md)
+#### [Clients can't connect and get the "Class not registered" error](troubleshoot/rdp-error-class-not-registered.md).
+#### [Clients can't connect and see "No licenses available" error](troubleshoot/rdp-error-no-licenses-available.md)
+#### [User can't authenticate or must authenticate twice](troubleshoot/cannot-authenticate-or-must-authenticate-twice.md)
 #### ["Remote Desktop Service is currently busy" error on connecting](troubleshoot/remote-desktop-service-currently-busy.md)
-#### [Remote desktop client disconnects and cannot reconnect to the same session](troubleshoot/rdp-client-disconnects-cannot-reconnect-same-session.md)
+#### [Remote Desktop client disconnects and cannot reconnect to the same session](troubleshoot/rdp-client-disconnects-cannot-reconnect-same-session.md)
 #### [Remote laptop disconnects from wireless network](troubleshoot/remote-laptop-disconnects-wireless-network.md)
 #### [Poor performance or application problems during remote desktop connection](troubleshoot/poor-performance-or-application-problems.md)
 ### General information

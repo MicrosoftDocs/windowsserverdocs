@@ -15,7 +15,7 @@ ms.date: 07/24/2019
 ms.localizationpriority: medium
 ---
 
-# User experiences poor performance or application problems
+# Poor performance or application problems during remote desktop connection
 
 This article addresses several common issues that users can experience when they use remote desktop functionality.
 

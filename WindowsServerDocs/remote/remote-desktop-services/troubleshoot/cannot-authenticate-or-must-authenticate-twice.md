@@ -1,5 +1,5 @@
 ---
-title: User can't authenticate or must authenticate twice when starting a remote desktop connection
+title: User can't authenticate or must authenticate twice
 description: Troubleshooting an issue in which user can't authenticate or must authenticate twice when starting a remote desktop connection.
 audience: itpro ​
 ms.custom: na
