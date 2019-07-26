@@ -59,7 +59,7 @@ more [/c] [/p] [/s] [/t<N>] [+<N>] [<Files>]
     |p \<N>|Displays the next *N* lines.|
     |s \<N>|Skips the next *N* lines.|
     |?|Shows the commands that are available at the **more** prompt.|
--   When using the redirection character (**<**), you must specify a file name as the source. When using the pipe (**|**), you can use such commands as **dir**, **sort**, and **type**.
+-   When using the redirection character (**<**), you must specify a file name as the source. When using the pipe (**\|**), you can use such commands as **dir**, **sort**, and **type**.
 -   The **more** command, with different parameters, is available from the Recovery Console.
 
 ## <a name="BKMK_examples"></a>Examples
