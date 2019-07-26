@@ -129,7 +129,7 @@ The grace period expired before the system was activated. Now, the system is in 
 
 #### Resolution
 
-See the “User Experience” section. For assistance, contact the [Microsoft Licensing Activation Centers](https://www.microsoft.com/en-us/Licensing/existing-customer/activation-centers).
+For assistance, contact the [Microsoft Licensing Activation Centers](https://www.microsoft.com/en-us/Licensing/existing-customer/activation-centers).
 
 ### 0xC004F00F The Software Licensing Server reported that the hardware ID binding is beyond level of tolerance
 
@@ -352,7 +352,7 @@ Troubleshoot network connections and DNS. For more information about how to trou
 
 ### 0xC004F074 No Key Management Service (KMS) could be contacted
 
-The full text of this errormessage  resembles the following:
+The full text of this error message resembles the following:
 
 > The Software Protection Service reported that the computer could not be activated. No Key Management Service (KMS) could be contacted. Please see the Application Event Log for additional information.  
 
