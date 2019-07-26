@@ -13,7 +13,7 @@ ms.assetid: ded14f6a-d82f-4aeb-a2d8-7ec1c94dfb8f
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
-ms.date: 10/16/2017
+ms.date: 07/26/2019
 ---
 
 # more
@@ -48,17 +48,19 @@ more [/c] [/p] [/s] [/t<N>] [+<N>] [<Files>]
 
 ## Remarks
 
--   The following subcommands are accepted at the **more** prompt (`-- More --`).  
-    |Key|Action|
-    |---|------|
-    |SPACEBAR|Displays the next page.|
-    |ENTER|Displays the next line.|
-    |f|Displays the next file.|
-    |q|Quits the **more** command.|
-    |=|Shows the line number.|
-    |p \<N>|Displays the next *N* lines.|
-    |s \<N>|Skips the next *N* lines.|
-    |?|Shows the commands that are available at the **more** prompt.|
+-   The following subcommands are accepted at the **more** prompt (`-- More --`). 
+
+    | Key | Action |
+    | --- | ------ |
+    | SPACEBAR | Displays the next page. |
+    | ENTER | Displays the next line. |
+    | f | Displays the next file. |
+    | q | Quits the **more** command. |
+    | = | Shows the line number. |
+    | p \<N> | Displays the next *N* lines. |
+    | s \<N> |S kips the next *N* lines. |
+    | ? | Shows the commands that are available at the **more** prompt.| 
+    
 -   When using the redirection character (**<**), you must specify a file name as the source. When using the pipe (**\|**), you can use such commands as **dir**, **sort**, and **type**.
 -   The **more** command, with different parameters, is available from the Recovery Console.
 
