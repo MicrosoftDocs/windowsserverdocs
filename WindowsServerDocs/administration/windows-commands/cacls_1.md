@@ -57,7 +57,7 @@ cacls <filename> [/t] [/m] [/l] [/s[:sddl]] [/e] [/c] [/g user:<perm>] [/r user 
   |     (OI)(IO)      |                             Files only.                             |
 
 
-- You can use wildcards (**?** and **\\***) to specify multiple files.  
+- You can use wildcards (**?** and **\\\***) to specify multiple files.  
 - You can specify more than one user.  
 
 #### additional references  
