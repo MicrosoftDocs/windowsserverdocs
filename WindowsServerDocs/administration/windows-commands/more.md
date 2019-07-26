@@ -42,7 +42,7 @@ more [/c] [/p] [/s] [/t<N>] [+<N>] [<Files>]
 |               /s               |          Displays multiple blank lines as a single blank line.          |
 |             /t\<N>             |         Displays tabs as the number of spaces specified by *N*.         |
 |             +\<N>              |     Displays the first file beginning at the line specified by *N*.     |
-| [\<Drive>:] [<Path>]<FileName> |          Specifies the location and name of a file to display.          |
+| [\<Drive>:] [\<Path>]\<FileName> |          Specifies the location and name of a file to display.          |
 |            \<Files>            | Specifies a list of files to display. Separate file names with a space. |
 |               /?               |                  Displays help at the command prompt.                   |
 
