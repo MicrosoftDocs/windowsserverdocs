@@ -11,12 +11,21 @@ ms.topic: article
 author: lizap
 manager: dongill
 ms.author: elizapo
-ms.date: 11/06/2018
+ms.date: 03/19/2019
 ms.localizationpriority: medium
 ---
 # What's new for the Remote Desktop client on Windows?
 
 We regularly update the [Remote Desktop client for Windows](windows.md), adding new features and fixing issues. Check out the latest updates below.
+
+## Updates for version 10.1.1098
+*Published date: 03/15/2019*
+
+- You can now set a display name for user accounts so you can save the same username with different passwords.
+- It is now possible to select an existing user account when adding Remote Resources.
+- Fixed an issue where the client wasn’t terminating correctly.
+- The client now properly handles being suspended when secondary windows are open.
+- Additional bug fixes.
 
 ## Updates for version 10.1.1088
 *Published date: 11/06/2018*

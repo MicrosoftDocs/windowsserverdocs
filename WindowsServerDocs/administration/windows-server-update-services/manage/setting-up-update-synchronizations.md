@@ -55,18 +55,6 @@ Your WSUS server downloads updates based on the languages that you specify. You 
 ### Synchronizing Updates from the Microsoft Update Catalog
 for details about synchronizing updates from the Microsoft Update Catalog site, see: [WSUS and the Catalog Site](wsus-and-the-catalog-site.md).
 
-### Synchronizing Device Updates by Inventory (Inventory-based Synchronization)
-Certain product categories and classifications (e.g. Drivers) contain a very large number of updates and it is not advised to synchronize these entire categories to your WSUS server. Doing so can lead to performance issues and ongoing maintenance challenges. The WSUS inventory system collects non-identifying information from client devices and uses that inventory information to retrieve just enough update metadata from Microsoft Update. This mechanism is roughly equivalent to having WSUS search the Microsoft Update Catalog automatically, importing only the updates for devices that are detected on managed devices.
-
-Enabling this inventory feature is the only supported way to obtain certain device firmware and model-based servicing sets which are not published to the Microsoft Update Catalog.
-
-Updates synchronized in this manner are reviewed and approved just like any other update, and are also subject to the same auto-approval rules, supersedence and expiration, and any other behavior associated with traditional updates.
-
-WSUS performs server-side filtering when clients request certain Driver and Firmware updates, including updates which have been imported by Inventory. Thus, a client computer or device will receive metadata and detectoids for drivers and driver updates only for devices actually attached to that device. This behavior minimizes client scan time and reduces the data transferred between the client and the WSUS server.
-
-> [!NOTE]
-> When Inventory-based Synchronization is enabled, WSUS maintains the device inventory on a per-device basis; only a summary roll-up (de-duplicated list of IDs) is ever sent to the upstream WSUS server. Upstream WSUS servers do not receive information about which devices are associated with which computers, nor how many instances of a given device exist within your WSUS hierarchy. In general, this summary roll-up cannot be used to identify or count devices on a WSUS-managed network.
-
 ## Configuring Proxy Server Settings
 You can configure your WSUS server to use a proxy server during synchronization with an upstream server or Microsoft Update. This setting will apply only when your WSUS server runs synchronizations. By default your WSUS server will try to connect directly to the upstream server or Microsoft Update.
 
@@ -124,4 +112,5 @@ You can either synchronize your WSUS server manually or specify a time for it to
 
 2.  In the **Overview** pane, under **Synchronization Status**, click **Synchronize now**.
 
-
+> [!NOTE]
+> The synchronization is initiated by the downstream server.

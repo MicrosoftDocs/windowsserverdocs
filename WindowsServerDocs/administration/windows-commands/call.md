@@ -34,19 +34,19 @@ call [Drive:][Path]<FileName> [<BatchParameters>] [:<Label> [<Arguments>]]
 
 ## Parameters
 
-|Parameter|Description|
-|---------|-----------|
-|[\<Drive>:][<Path>]<FileName>|Specifies the location and name of the batch program that you want to call. The *FileName* parameter is required, and it must have a .bat or .cmd extension.|
-|\<BatchParameters>|Specifies any command-line information required by the batch program.|
-|:\<Label>|Specifies the label that you want a batch program control to jump to.|
-|\<Arguments>|Specifies the command-line information to be passed to the new instance of the batch program, beginning at *:Label.*|
-|/?|Displays help at the command prompt.|
+|           Parameter           |                                                                         Description                                                                          |
+|-------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| [\<Drive>:][\<Path>]<FileName> | Specifies the location and name of the batch program that you want to call. The *FileName* parameter is required, and it must have a .bat or .cmd extension. |
+|      \<BatchParameters>       |                                            Specifies any command-line information required by the batch program.                                             |
+|           :\<Label>           |                                            Specifies the label that you want a batch program control to jump to.                                             |
+|         \<Arguments>          |                     Specifies the command-line information to be passed to the new instance of the batch program, beginning at *:Label.*                     |
+|              /?               |                                                             Displays help at the command prompt.                                                             |
 
 ## Batch parameters
 
 The batch script argument references (**%0**, **%1**, ...) are listed in the following tables.
 
-**%*** in a batch script refers to all the arguments (for example, **%1**, **%2**, **%3**...)
+**%\*** in a batch script refers to all the arguments (for example, **%1**, **%2**, **%3**...)
 
 You can use the following optional syntaxes as substitutions for batch parameters (**%n**):
 
@@ -73,7 +73,7 @@ The following table shows how you can combine modifiers with the batch parameter
 |%~dp$PATH:1|Searches the directories listed in the PATH environment variable for **%1**, and then expands to the drive letter and path of the first directory found.|
 |%~ftza1|Expands **%1** to display output similar to the **dir** command.|
 
-In the above examples, **%1** and PATH can be replaced by other valid values. The **%~** syntax is terminated by a valid argument number. The **%~** modifiers cannot be used with **%\***.
+In the above examples, **%1** and PATH can be replaced by other valid values. The <strong>%~</strong> syntax is terminated by a valid argument number. The <strong>%~</strong> modifiers cannot be used with **%\\\***.
 
 ## Remarks
 

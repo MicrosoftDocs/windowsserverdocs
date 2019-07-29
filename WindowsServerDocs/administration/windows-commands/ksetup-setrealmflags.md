@@ -48,7 +48,7 @@ The realm flags specify additional features of a Kerberos realm that is not base
 |0x08|NcSupported|This realm supports name canonicalization, which allows for DNS and Realm naming standards.|
 |0x80|RC4|This realm supports RC4 encryption to enable cross-realm trust, which allows for the use of TLS.|
 
-Realm flags are stored in the registry under **HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Lsa\Kerberos\Domains\***RealmName*. This entry does not exist in the registry by default. You can use the [Ksetup:addrealmflags](ksetup-addrealmflags.md) command to populate the registry.
+Realm flags are stored in the registry under **HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Lsa\Kerberos\Domains\\**<em>RealmName</em>. This entry does not exist in the registry by default. You can use the [Ksetup:addrealmflags](ksetup-addrealmflags.md) command to populate the registry.
 
 You can see what realm flags are available and set by viewing the output of **ksetup**.
 

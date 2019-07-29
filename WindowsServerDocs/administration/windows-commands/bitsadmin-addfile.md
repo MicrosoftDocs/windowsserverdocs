@@ -17,8 +17,6 @@ ms.date: 10/16/2017
 
 # bitsadmin addfile
 
-
-
 Adds a file to the specified job.
 
 ## Syntax

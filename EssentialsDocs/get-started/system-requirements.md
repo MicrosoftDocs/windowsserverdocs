@@ -16,7 +16,7 @@ manager: dongill
 
 # System Requirements for Windows Server Essentials
 
->Applies To: Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, Windows Server 2012 Essentials 
+>Applies To: Windows Server 2019 Essentials, Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, Windows Server 2012 Essentials 
   
   Windows Server Essentials server software is a 64-bit only operating system. Table 1 defines the recommended minimum hardware requirements for  Windows Server Essentials. Table 2 defines additional hardware and software requirements for the server.  
     

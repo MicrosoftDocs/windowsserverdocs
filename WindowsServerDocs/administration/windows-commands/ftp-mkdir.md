@@ -24,9 +24,11 @@ creates a directory on the remote computer.
 mkdir <directory>  
 ```  
 ### Parameters  
-|Parameter|Description|  
-|-------|--------|  
-|<directory>|Specifies the name of the new remote directory.|  
+
+|  Parameter  |                   Description                   |
+|-------------|-------------------------------------------------|
+| <directory> | Specifies the name of the new remote directory. |
+
 ## <a name="BKMK_Examples"></a>Examples  
 create a directory called **dir1** on the remote computer.  
 ```  

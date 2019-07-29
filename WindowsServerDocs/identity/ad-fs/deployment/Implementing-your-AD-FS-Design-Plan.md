@@ -14,8 +14,6 @@ ms.author: billmath
 
 # Implementing Your AD FS Design Plan
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
-
 The following environmental conditions and requirements are important factors in the implementation of your Active Directory Federation Services \(AD FS\) design plan:  
   
 -   **Supported partners:** You usually use AD FS to work with partner organizations. To establish identity federation, determine the organizations with which you want to form a partnership. After a baseline AD FS deployment is in place, operating with partners involves adding partners, deleting partners, and updating partner information. Changes to partnerships may occur for a variety of reasons. For example, your AD FS deployment might require partnership updates if your partner changes its business significantly, your organization becomes part of a larger organization or a federation of organizations, or your organization is acquired by a different company. In any scenario in which you federate identities from multiple domains, you will need to know the domains \(partners\) that you are currently supporting and all the additional domains that represent potential partners.  

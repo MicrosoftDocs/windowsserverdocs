@@ -14,7 +14,7 @@ ms.date: 09/04/2018
 
 ## Resolve vRSS issues
 
-If you have completed all of the preparation steps and you still do not see vRSS load balancing traffic to the VM LPs, there are two possible issues.
+If you have completed all of the preparation steps and you still do not see vRSS load balancing traffic to the VM LPs, there are different possible issues.
 
 1. Before you performed preparation steps, vRSS was disabled - and now must be enabled. You can run **Set-VMNetworkAdapter** to enable vRSS for the VM.
 
@@ -42,6 +42,14 @@ If you have completed all of the preparation steps and you still do not see vRSS
    ```PowerShell
    Enable-NetAdapterRss *
    ```
+   
+   Another system-wide way to configure RSS is using netsh. Use 
+   
+    ```cmd
+   netsh int tcp show global
+   ```
+   
+   to make sure that RSS isn't disabled globally. And enable it if necessary. This setting isn't touched by *-NetAdapterRSS.
 
 3. If you find VMMQ is not enabled after you configure vRSS, verify the following settings on each adapter attached to the virtual switch:
 

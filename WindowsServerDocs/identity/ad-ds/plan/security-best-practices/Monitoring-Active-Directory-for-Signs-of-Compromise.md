@@ -11,7 +11,6 @@ ms.prod: windows-server-threshold
 
 ms.technology: identity-adds
 ---
-
 # Monitoring Active Directory for Signs of Compromise
 
 >Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
@@ -24,43 +23,33 @@ A solid event log monitoring system is a crucial part of any secure Active Direc
   
 This lack of monitoring active event logs remains a consistent weakness in many companies' security defense plans. The [2012 Verizon Data Breach report](http://www.verizonbusiness.com/resources/reports/rp_data-breach-investigations-report-2012_en_xg.pdf) found that even though 85 percent of breaches took several weeks to be noticed, 84 percent of victims had evidence of the breach in their event logs.  
   
-## Windows Audit Policy  
+## Windows Audit Policy
+
 The following are links to the Microsoft official enterprise support blog. The content of these blogs provides advice, guidance, and recommendations about auditing that will assist you in enhancing the security of your Active Directory infrastructure and are a valuable resource when designing an audit policy.  
   
--   [Global Object Access Auditing is Magic](http://blogs.technet.com/b/askds/archive/2011/03/10/global-object-access-auditing-is-magic.aspx) - describes a control mechanism called Advanced Audit Policy Configuration that was added to Windows 7 and Windows Server 2008 R2 that lets you set what types of data you wanted to audit easily and not juggle scripts and auditpol.exe.  
-  
--   [Introducing Auditing Changes in Windows 2008](http://blogs.technet.com/b/askds/archive/2007/10/19/introducing-auditing-changes-in-windows-2008.aspx) - introduces the auditing changes made in Windows Server 2008.  
-  
--   [Cool Auditing Tricks in Vista and 2008](http://blogs.technet.com/b/askds/archive/2007/11/16/cool-auditing-tricks-in-vista-and-2008.aspx) - explains interesting auditing features of Windows Vista and Windows Server 2008 that can be used for troubleshooting problems or seeing what is happening in your environment.  
-  
--   [One-Stop Shop for Auditing in Windows Server 2008 and Windows Vista](http://blogs.technet.com/b/askds/archive/2008/03/27/one-stop-shop-for-auditing-in-windows-server-2008-and-windows-vista.aspx) - contains a compilation of auditing features and information contained in Windows Server 2008 and Windows Vista.  
+* [Global Object Access Auditing is Magic](http://blogs.technet.com/b/askds/archive/2011/03/10/global-object-access-auditing-is-magic.aspx) - describes a control mechanism called Advanced Audit Policy Configuration that was added to Windows 7 and Windows Server 2008 R2 that lets you set what types of data you wanted to audit easily and not juggle scripts and auditpol.exe.  
+* [Introducing Auditing Changes in Windows 2008](http://blogs.technet.com/b/askds/archive/2007/10/19/introducing-auditing-changes-in-windows-2008.aspx) - introduces the auditing changes made in Windows Server 2008.  
+* [Cool Auditing Tricks in Vista and 2008](http://blogs.technet.com/b/askds/archive/2007/11/16/cool-auditing-tricks-in-vista-and-2008.aspx) - explains interesting auditing features of Windows Vista and Windows Server 2008 that can be used for troubleshooting problems or seeing what is happening in your environment.  
+* [One-Stop Shop for Auditing in Windows Server 2008 and Windows Vista](http://blogs.technet.com/b/askds/archive/2008/03/27/one-stop-shop-for-auditing-in-windows-server-2008-and-windows-vista.aspx) - contains a compilation of auditing features and information contained in Windows Server 2008 and Windows Vista.  
   
 The following links provide information about improvements to Windows auditing in Windows 8 and Windows Server 2012, and information about AD DS auditing in Windows Server 2008.  
   
--   [What's New in Security Auditing](https://technet.microsoft.com/library/hh849638.aspx) - provides an overview of new security auditing features in Windows 8 and Windows Server 2012.  
+* [What's New in Security Auditing](https://technet.microsoft.com/library/hh849638.aspx) - provides an overview of new security auditing features in Windows 8 and Windows Server 2012.  
+* [AD DS Auditing Step-by-Step Guide](https://technet.microsoft.com/library/a9c25483-89e2-4202-881c-ea8e02b4b2a5.aspx) - describes the new Active Directory Domain Services (AD DS) auditing feature in Windows Server 2008. It also provides procedures to implement this new feature.  
   
--   [AD DS Auditing Step-by-Step Guide](https://technet.microsoft.com/library/a9c25483-89e2-4202-881c-ea8e02b4b2a5.aspx) - describes the new Active Directory Domain Services (AD DS) auditing feature in Windows Server 2008. It also provides procedures to implement this new feature.  
-  
-### Windows Audit Categories  
+### Windows Audit Categories
+
 Prior to Windows Vista and Windows Server 2008, Windows had only nine event log audit policy categories:  
   
--   Account Logon Events  
-  
--   Account Management  
-  
--   Directory Service Access  
-  
--   Logon Events  
-  
--   Object Access  
-  
--   Policy Change  
-  
--   Privilege Use  
-  
--   Process Tracking  
-  
--   System Events  
+* Account Logon Events  
+* Account Management  
+* Directory Service Access  
+* Logon Events  
+* Object Access  
+* Policy Change  
+* Privilege Use  
+* Process Tracking  
+* System Events  
   
 These nine traditional audit categories comprise an audit policy. Each audit policy category can be enabled for Success, Failure, or Success and Failure events. Their descriptions are included in the next section.  
   
@@ -103,16 +92,17 @@ Enabling Audit Process Tracking generates a large number of events, so typically
 
 System Events is almost a generic catch-all category, registering various events that impact the computer, its system security, or the security log. It includes events for computer shutdowns and restarts, power failures, system time changes, authentication package initializations, audit log clearings, impersonation issues, and a host of other general events. In general, enabling this audit category generates a lot of "noise," but it generates enough very useful events that it is difficult to ever recommend not enabling it.  
   
-#### Advanced Audit Policies  
+#### Advanced Audit Policies
+
 Starting with Windows Vista and Windows Server 2008, Microsoft improved the way event log category selections can be made by creating subcategories under each main audit category. Subcategories allow auditing to be far more granular than it could otherwise by using the main categories. By using subcategories, you can enable only portions of a particular main category, and skip generating events for which you have no use. Each audit policy subcategory can be enabled for Success, Failure, or Success and Failure events.  
   
 To list all the available auditing subcategories, review the Advanced Audit Policy container in a Group Policy Object, or type the following at a command prompt on any computer running Windows Server 2012, Windows Server 2008 R2, or Windows Server 2008, Windows 8, Windows 7, or Windows Vista:  
   
-**auditpol /list /subcategory:\***  
+`auditpol /list /subcategory:*`
   
 To get a list of currently configured auditing subcategories on a computer running Windows Server 2012, Windows Server 2008 R2, or Windows 2008, type the following:  
   
-**auditpol /get /category:\***  
+`auditpol /get /category:*`
   
 The following screenshot shows an example of auditpol.exe listing the current audit policy.  
   
@@ -144,21 +134,14 @@ This subcategory reports the events that occur in response to credentials submit
   
 In domain environments, most account logon events are logged in the security log of the domain controllers that are authoritative for the domain accounts. However, these events can occur on other computers in the organization when local accounts are used to log on. Examples can include the following:  
   
--   Remote Desktop Services session disconnections  
-  
--   New Remote Desktop Services sessions  
-  
--   Locking and unlocking a workstation  
-  
--   Invoking a screen saver  
-  
--   Dismissing a screen saver  
-  
--   Detection of a Kerberos replay attack, in which a Kerberos request with identical information is received twice  
-  
--   Access to a wireless network granted to a user or computer account  
-  
--   Access to a wired 802.1x network granted to a user or computer account  
+* Remote Desktop Services session disconnections  
+* New Remote Desktop Services sessions  
+* Locking and unlocking a workstation  
+* Invoking a screen saver  
+* Dismissing a screen saver  
+* Detection of a Kerberos replay attack, in which a Kerberos request with identical information is received twice  
+* Access to a wireless network granted to a user or computer account  
+* Access to a wired 802.1x network granted to a user or computer account  
   
 #### Account Management  
   
@@ -327,13 +310,15 @@ For more information about the subcategory descriptions, refer to the [Microsoft
   
 Each organization should review the previous covered categories and subcategories and enable the ones which best fit their environment. Changes to audit policy should always be tested prior to deployment in a production environment.  
   
-### Configuring Windows Audit Policy  
+## Configuring Windows Audit Policy
+
 Windows audit policy can be set using group policies, auditpol.exe, APIs, or registry edits. The recommended methods for configuring audit policy for most companies are Group Policy or auditpol.exe. Setting a system's audit policy requires administrator-level account permissions or the appropriate delegated permissions.  
   
 > [!NOTE]  
 > The **Manage auditing and security log** privilege must be given to security principals (Administrators have it by default) to allow the modification of object access auditing options of individual resources, such as files, Active Directory objects, and registry keys.  
   
-#### Setting Windows Audit Policy by Using Group Policy  
+### Setting Windows Audit Policy by Using Group Policy
+
 To set audit policy using group policies, configure the appropriate audit categories located under **Computer Configuration\Windows Settings\Security Settings\Local Policies\Audit Policy** (see the following screenshot for an example from the Local Group Policy Editor (gpedit.msc)). Each audit policy category can be enabled for **Success**, **Failure**, or **Success** and Failure events.  
   
 ![monitoring AD](media/Monitoring-Active-Directory-for-Signs-of-Compromise/SAD_6.gif)  
@@ -342,52 +327,54 @@ Advanced Audit Policy can be set by using Active Directory or local group polici
   
 ![monitoring AD](media/Monitoring-Active-Directory-for-Signs-of-Compromise/SAD_7.gif)  
   
-#### Setting Windows Audit Policy Using Auditpol.exe  
+### Setting Windows Audit Policy Using Auditpol.exe
+
 Auditpol.exe (for setting Windows audit policy) was introduced in Windows Server 2008 and Windows Vista. Initially, only auditpol.exe could be used to set Advanced Audit Policy, but Group Policy can be used in Windows Server 2012, Windows Server 2008 R2, or Windows Server 2008, Windows 8, and Windows 7.  
   
 Auditpol.exe is a command-line utility. The syntax is as follows:  
   
-**auditpol /set /<Category|Subcategory>:<audit category> /<success|failure:> /<enable|disable>**  
+`auditpol /set /<Category|Subcategory>:<audit category> /<success|failure:> /<enable|disable>`
   
 Auditpol.exe syntax examples:  
   
-**auditpol /set /subcategory:"user account management" /success:enable /failure:enable**  
+`auditpol /set /subcategory:"user account management" /success:enable /failure:enable`
   
-**auditpol /set /subcategory:"logon" /success:enable /failure:enable**  
+`auditpol /set /subcategory:"logon" /success:enable /failure:enable`
   
-**auditpol /set /subcategory:"IPSEC Main Mode" /failure:enable**  
+`auditpol /set /subcategory:"IPSEC Main Mode" /failure:enable`
   
 > [!NOTE]  
 > Auditpol.exe sets Advanced Audit Policy locally. If local policy conflicts with Active Directory or local Group Policy, Group Policy settings usually prevail over auditpol.exe settings. When multiple group or local policy conflicts exist, only one policy will prevail (that is, replace). Audit policies will not merge.  
   
-#### Scripting Auditpol  
+#### Scripting Auditpol
+
 Microsoft provides a [sample script](https://support.microsoft.com/kb/921469) for administrators who want to set Advanced Audit Policy by using a script instead of manually typing in each auditpol.exe command.  
   
 **Note** Group Policy does not always accurately report the status of all enabled auditing policies, whereas auditpol.exe does. See [Getting the Effective Audit Policy in Windows 7 and Windows 2008 R2](http://blogs.technet.com/b/askds/archive/2011/03/11/getting-the-effective-audit-policy-in-windows-7-and-2008-r2.aspx) for more details.  
   
-#### Other Auditpol Commands  
+#### Other Auditpol Commands
+
 Auditpol.exe can be used to save and restore a local audit policy, and to view other auditing related commands. Here are the other **auditpol** commands.  
   
-**auditpol /clear** - Used to clear and reset local audit policies  
+`auditpol /clear` - Used to clear and reset local audit policies  
   
-**auditpol /backup /file:<filename>** - Used to back up a current local audit policy to a binary file  
+`auditpol /backup /file:<filename>` - Used to back up a current local audit policy to a binary file  
   
-**auditpol /restore /file:<filename>** - Used to import a previously saved audit policy file to a local audit policy  
+`auditpol /restore /file:<filename>` - Used to import a previously saved audit policy file to a local audit policy  
   
-**auditpol /<get/set> /option:<CrashOnAuditFail> /<enable/disable>** - If this audit policy setting is enabled, it causes the system to immediately stop (with STOP: C0000244 {Audit Failed} message) if a security audit cannot be logged for any reason. Typically, an event fails to be logged when the security audit log is full and the retention method specified for the security log is **Do Not Overwrite Events** or **Overwrite Events by Days**. Typically it is only enabled by environments that need higher assurance that the security log is logging. If enabled, administrators must closely watch security log size and rotate logs as required. It can also be set with Group Policy by modifying the security option **Audit: Shut down system immediately if unable to log security audits** (default=disabled).  
+`auditpol /<get/set> /option:<CrashOnAuditFail> /<enable/disable>` - If this audit policy setting is enabled, it causes the system to immediately stop (with STOP: C0000244 {Audit Failed} message) if a security audit cannot be logged for any reason. Typically, an event fails to be logged when the security audit log is full and the retention method specified for the security log is **Do Not Overwrite Events** or **Overwrite Events by Days**. Typically it is only enabled by environments that need higher assurance that the security log is logging. If enabled, administrators must closely watch security log size and rotate logs as required. It can also be set with Group Policy by modifying the security option **Audit: Shut down system immediately if unable to log security audits** (default=disabled).  
   
-**Auditpol /<get/set> /option:<AuditBaseObjects> /<enable/disable>** - This audit policy setting determines whether to audit the access of global system objects. If this policy is enabled, it causes system objects, such as mutexes, events, semaphores, and DOS devices to be created with a default system access control list (SACL). Most administrators consider auditing global system objects to be too "noisy," and they will only enable it if malicious hacking is suspected. Only named objects are given a SACL. If the audit object access audit policy (or Kernel Object audit subcategory) is also enabled, access to these system objects is audited. When configuring this security setting, changes will not take effect until you restart Windows. This policy can also be set with Group Policy by modifying the security option Audit the access of global system objects (default=disabled).  
+`auditpol /<get/set> /option:<AuditBaseObjects> /<enable/disable>` - This audit policy setting determines whether to audit the access of global system objects. If this policy is enabled, it causes system objects, such as mutexes, events, semaphores, and DOS devices to be created with a default system access control list (SACL). Most administrators consider auditing global system objects to be too "noisy," and they will only enable it if malicious hacking is suspected. Only named objects are given a SACL. If the audit object access audit policy (or Kernel Object audit subcategory) is also enabled, access to these system objects is audited. When configuring this security setting, changes will not take effect until you restart Windows. This policy can also be set with Group Policy by modifying the security option Audit the access of global system objects (default=disabled).  
   
-**auditpol /<get/set> /option:<AuditBaseDirectories> /<enable/disable>** - This audit policy setting specifies that named kernel objects (such as mutexes and semaphores) are to be given SACLs when they are created. AuditBaseDirectories affects container objects while AuditBaseObjects affects objects that cannot contain other objects.  
+`auditpol /<get/set> /option:<AuditBaseDirectories> /<enable/disable>` - This audit policy setting specifies that named kernel objects (such as mutexes and semaphores) are to be given SACLs when they are created. AuditBaseDirectories affects container objects while AuditBaseObjects affects objects that cannot contain other objects.  
   
-**Auditpol /<get/set> /option:<FullPrivilegeAuditing> /<enable/disable>** -  
-  
-This audit policy setting specifies whether the client generates an event when one or more of these privileges are assigned to a user security token: AssignPrimaryTokenPrivilege, AuditPrivilege, BackupPrivilege, CreateTokenPrivilege, DebugPrivilege, EnableDelegationPrivilege, ImpersonatePrivilege, LoadDriverPrivilege, RestorePrivilege, SecurityPrivilege, SystemEnvironmentPrivilege, TakeOwnershipPrivilege, and TcbPrivilege. If this option is not enabled (default=Disabled), the BackupPrivilege and RestorePrivilege privileges are not recorded. Enabling this option can make the security log extremely noisy (sometimes hundreds of events a second) during a backup operation. This policy can also be set with Group Policy by modifying the security option **Audit: Audit the use of Backup and Restore privilege**.  
+`auditpol /<get/set> /option:<FullPrivilegeAuditing> /<enable/disable>` -  This audit policy setting specifies whether the client generates an event when one or more of these privileges are assigned to a user security token: AssignPrimaryTokenPrivilege, AuditPrivilege, BackupPrivilege, CreateTokenPrivilege, DebugPrivilege, EnableDelegationPrivilege, ImpersonatePrivilege, LoadDriverPrivilege, RestorePrivilege, SecurityPrivilege, SystemEnvironmentPrivilege, TakeOwnershipPrivilege, and TcbPrivilege. If this option is not enabled (default=Disabled), the BackupPrivilege and RestorePrivilege privileges are not recorded. Enabling this option can make the security log extremely noisy (sometimes hundreds of events a second) during a backup operation. This policy can also be set with Group Policy by modifying the security option **Audit: Audit the use of Backup and Restore privilege**.  
   
 > [!NOTE]  
 > Some information provided here was taken from the Microsoft [Audit Option Type](https://msdn.microsoft.com/library/dd973862(prot.20).aspx) and the Microsoft SCM tool.  
   
-### Enforcing Traditional Auditing or Advanced Auditing  
+## Enforcing Traditional Auditing or Advanced Auditing
+
 In Windows Server 2012, Windows Server 2008 R2, Windows Server 2008, Windows 8, Windows 7, and Windows Vista, administrators can choose to enable the nine traditional categories or to use the subcategories. It's a binary choice that must be made in each Windows system. Either the main categories can be enabled or the subcategoriesit cannot be both.  
   
 To prevent the legacy traditional category policy from overwriting audit policy subcategories, you must enable the **Force audit policy subcategory settings(Windows Vista or later) to override audit policy category settings** policy setting located under **Computer Configuration\Windows Settings\Security Settings\Local Policies\Security Options**.  
@@ -396,15 +383,12 @@ We recommend that the subcategories be enabled and configured instead of the nin
   
 Auditing subcategories can be configured by using several methods, including Group Policy and the command-line program, auditpol.exe.  
   
-For more information about Windows auditing, see the following articles:  
+## Next steps
   
--   [Advanced Security Auditing in Windows 7 and Windows Server 2008 R2](https://social.technet.microsoft.com/wiki/contents/articles/advanced-security-auditing-in-windows-7-and-windows-server-2008-r2.aspx)  
+* [Advanced Security Auditing in Windows 7 and Windows Server 2008 R2](https://social.technet.microsoft.com/wiki/contents/articles/advanced-security-auditing-in-windows-7-and-windows-server-2008-r2.aspx)  
   
--   [Auditing and Compliance in Windows Server 2008](https://technet.microsoft.com/magazine/2008.03.auditing.aspx)  
+* [Auditing and Compliance in Windows Server 2008](https://technet.microsoft.com/magazine/2008.03.auditing.aspx)  
   
--   [How to use Group Policy to configure detailed security auditing settings for Windows Vista-based and Windows Server 2008-based computers in a Windows Server 2008 domain, in a Windows Server 2003 domain, or in a Windows 2000 domain](https://support.microsoft.com/kb/921469)  
+* [How to use Group Policy to configure detailed security auditing settings for Windows Vista-based and Windows Server 2008-based computers in a Windows Server 2008 domain, in a Windows Server 2003 domain, or in a Windows 2000 domain](https://support.microsoft.com/kb/921469)  
   
--   [Advanced Security Audit Policy Step-by-Step Guide](https://technet.microsoft.com/library/dd408940(WS.10).aspx)  
-  
-
-
+* [Advanced Security Audit Policy Step-by-Step Guide](https://technet.microsoft.com/library/dd408940(WS.10).aspx)  

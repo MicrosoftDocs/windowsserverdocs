@@ -10,7 +10,7 @@ ms.date: 10/17/2017
 ---
 # Patch a Server Core installation
 
-> Applies to: Windows Server (Semi-Annual Channel) and Windows Server 2016
+> Applies to: Windows Server 2019, Windows Server 2016, and Windows Server (Semi-Annual Channel)
 
 You can patch a server running Server Core installation in the following ways:
 
@@ -60,7 +60,7 @@ To force Windows Update to immediately detect and install any available updates,
 Wuauclt /detectnow 
 ```
 
-Depending on the updates that are installed, you may need to restart the computer, although the system will not notify you of this. To determine if the installation process has completed, use Task Manager to verify that the **Wuauclt** or **Trusted Installer** processes are not actively running. You can also use the methods in [View the updates installed on your Server Core server](#view-the-updates-installed-on-your-Server-Core-server) to check the list of installed updates.
+Depending on the updates that are installed, you may need to restart the computer, although the system will not notify you of this. To determine if the installation process has completed, use Task Manager to verify that the **Wuauclt** or **Trusted Installer** processes are not actively running. You can also use the methods in [View the updates installed on your Server Core server](#view-the-updates-installed-on-your-server-core-server) to check the list of installed updates.
 
 ## Patch the server with WSUS 
 

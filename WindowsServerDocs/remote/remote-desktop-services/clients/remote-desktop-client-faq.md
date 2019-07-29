@@ -17,11 +17,11 @@ ms.localizationpriority: medium
 ---
 # Frequently asked questions about the Remote Desktop clients
 
->Applies To: Windows 10, Windows 8.1, Windows Server 2012 R2, Windows Server 2016
+>Applies to: Windows 10, Windows 8.1, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2
 
 Now that you've set up the Remote Desktop client on your device (Android, Mac, iOS, or Windows), you may have questions. Here are answers to the most commonly asked questions about the Remote Desktop clients. 
 
-- [Setting up](#Setting-up)
+- [Setting up](#setting-up)
 - [Connections, gateway, and networks](#connection-gateway-and-networks)
 - [Web client](#web-client)
 - [Monitors, audio, and mouse](#monitors-audio-and-mouse)
@@ -75,18 +75,20 @@ Here are some possible solutions to common problems you might encounter when try
 - **There’s a problem with the network.** Make sure you have internet connection. 
 - **The Remote Desktop port might be blocked by a firewall.** If you're using Windows Firewall, follow these steps:
 
-   1. Open Windows Firewall. 
-   2. Click **Allow an app or feature through Windows Firewall**. 
-   3. Click **Change settings**. You might be asked for an admin password or to confirm your choice.
-   4. Under **Allowed apps and features**, select **Remote Desktop**, and then tap or click **OK**.
+  1. Open Windows Firewall. 
+  2. Click **Allow an app or feature through Windows Firewall**. 
+  3. Click **Change settings**. You might be asked for an admin password or to confirm your choice.
+  4. Under **Allowed apps and features**, select **Remote Desktop**, and then tap or click **OK**.
 
-   If you're using a different firewall, make sure the port for Remote Desktop (usually 3389) is open.
+     If you're using a different firewall, make sure the port for Remote Desktop (usually 3389) is open.
 - **Remote connections might not be set up on the remote PC.** To fix this, scroll back up to [How do I set up a PC for Remote Desktop?](#how-do-i-set-up-a-pc-for-remote-desktop) question in this topic.
 - **The remote PC might only allow PCs to connect that have Network Level Authentication set up.** 
 - **The remote PC might be turned off.** You can’t connect to a PC that's turned off, asleep, or hibernating, so make sure the settings for sleep and hibernation on the remote PC are set to **Never** (hibernation isn't available on all PCs.).
 
 ### Why can't I find or connect to my PC?
+
 Check the following:
+
 - Is the PC on and awake?
 - Did you enter the right name or IP address?
 
@@ -99,9 +101,11 @@ Check the following:
    > Windows XP Home, Windows Media Center Edition, Windows Vista Home and Windows 7 Home or Starter are not supported without 3rd party software.
 
 ### Why can't I sign in to a remote PC?
+
 If you can see the sign-in screen of the remote PC but you can't sign in, you might not have been added to the Remote Desktop Users Group or to any group with administrator rights on the remote PC. Ask your system admin to do this for you.
 
 ### Which connection methods are supported for company networks?
+
 If you want to access your office desktop from outside your company network, your company must provide you with a means of remote access. The RD Client currently supports the following:
 
 - Terminal Server Gateway or Remote Desktop Gateway
@@ -118,16 +122,18 @@ Other things to check:
 - **VPN is misconfigured.** A misconfigured VPN server can be the reason why the VPN connections never worked or stopped working after some time. Ensure testing with the iOS device's web browser or a PC or Mac on the same network if this happens.
 
 ### How can I test if VPN is working properly?
+
 Verify that VPN is enabled on your device. You can test your VPN connection by going to a webpage on your internal network or using a web service which is only available via the VPN.
 
 ### How do I configure L2TP or PPTP VPN connections?
+
 If you are using L2TP or PPTP in your VPN, make sure to set **Send all traffic** to **ON** in the VPN configuration.
 
 ## Web client
 
 ### Which browsers can I use?
 
-The web client supports Edge, Internet Explorer 11, Mozilla Firefox (v55.0 and later), Safari, and Google Chrome.
+The web client supports Microsoft Edge, Internet Explorer 11, Mozilla Firefox (v55.0 and later), Safari, and Google Chrome.
 
 ### What PCs can I use to access the web client?
 

@@ -26,7 +26,7 @@ Use the following procedure to migrate the AD FS 2.0 server to Windows Server 20
 > [!IMPORTANT]
 >  As the result of the operating system upgrade, the AD FS configuration on this server is lost and the AD FS 2.0 server role is removed. The Windows Server 2012 AD FS server role is installed instead, but it is not configured. You must manually create the original AD FS configuration and restore the remaining AD FS settings to complete the federation server migration.  
   
-3.  Create the original AD FS configuration. You can create the original AD FS configuration by using either of the following methods:  
+3. Create the original AD FS configuration. You can create the original AD FS configuration by using either of the following methods:  
   
 -   Use the **AD FS Federation Server Configuration Wizard** to create a new federation server. For more information, see [Create the First Federation Server in a Federation Server Farm](Create-the-First-Federation-Server-in-a-Federation-Server-Farm.md).  
   
@@ -49,14 +49,14 @@ As you go through the wizard, use the information you gathered while preparing t
   
 The following is an example of how to use Windows PowerShell to create the original AD FS configuration on a federation server in a single-node SQL Server farm.  Open the Windows PowerShell module and run the following command: `$fscredential = Get-Credential`. Enter the name and the password of the service account that you recorded while preparing your SQL server farm for migration. Then run the following command: `C:\PS> Add-AdfsFarmNode -ServiceAccountCredential $fscredential -SQLConnectionString "Data Source=<Data Source>;Integrated Security=True"` where `Data Source` is the data source value in the policy store connection string value in the following file: `%programfiles%\Active Directory Federation Services 2.0\Microsoft.IdentityServer.Servicehost.exe.config`.  
   
-4.  Restore the remaining AD FS service settings and trust relationships. This is a manual step during which you can use the files that you exported and the values that you collected while preparing for the AD FS migration. For detailed instructions, see Restoring the Remaining AD FS Farm Configuration.  
+4. Restore the remaining AD FS service settings and trust relationships. This is a manual step during which you can use the files that you exported and the values that you collected while preparing for the AD FS migration. For detailed instructions, see Restoring the Remaining AD FS Farm Configuration.  
   
 > [!NOTE]
 >  This step is only required if you are migrating a stand-alone federation server or a single node WID farm.  If the federation server uses a SQL Server database as the configuration store, the service settings and trust relationships are preserved in the database.  
   
-5.  Update your AD FS webpages. This is a manual step. If you backed up your customized AD FS webpages while preparing for the migration, use your backup data to overwrite the default AD FS webpages that were created by default in the **%systemdrive%\inetpub\adfs\ls** directory as a result of the AD FS configuration on Windows Server 2012.  
+5. Update your AD FS webpages. This is a manual step. If you backed up your customized AD FS webpages while preparing for the migration, use your backup data to overwrite the default AD FS webpages that were created by default in the **%systemdrive%\inetpub\adfs\ls** directory as a result of the AD FS configuration on Windows Server 2012.  
   
-6.  Restore any remaining AD FS customizations, such as custom attribute stores.  
+6. Restore any remaining AD FS customizations, such as custom attribute stores.  
   
 ## Restoring the Remaining AD FS Farm Configuration  
   

@@ -18,7 +18,7 @@ manager: dongill
 
 >Applies To: Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, Windows Server 2012 Essentials
 
-This topic provides step-by-step instructions for configuring DirectAccess in  Windows Server Essentials to enable your mobile workforce to seamlessly connect to your organization ��s network from any Internet-equipped remote location without establishing a virtual private network (VPN) connection. DirectAccess can offer mobile workers the same connectivity experience inside and outside the office from their  Windows 8.1,  Windows 8, and  Windows 7 computers.  
+This topic provides step-by-step instructions for configuring DirectAccess in  Windows Server Essentials to enable your mobile workforce to seamlessly connect to your organization's network from any Internet-equipped remote location without establishing a virtual private network (VPN) connection. DirectAccess can offer mobile workers the same connectivity experience inside and outside the office from their  Windows 8.1,  Windows 8, and  Windows 7 computers.  
   
  In  Windows Server Essentials, if the domain contains more than one  Windows Server Essentials server, DirectAccess must be configured on the domain controller.  
   
@@ -37,7 +37,7 @@ This topic provides step-by-step instructions for configuring DirectAccess in  W
   
 -   [Step 3: Prepare a certificate and DNS record for the network location server](Configure-DirectAccess-in-Windows-Server-Essentials.md#BKMK_DNS)  
   
-    -   [Step 3a: Grant full permissions to Authenticated Users for the Web server ��s certificate template](#BKMK_GrantFullPermissions)  
+    -   [Step 3a: Grant full permissions to Authenticated Users for the Web server's certificate template](#BKMK_GrantFullPermissions)  
   
     -   [Step 3b: Enroll a certificate for the network location server with a common name that is unresolvable from the external network](#BKMK_EnrollaCertificate)  
   
@@ -128,16 +128,16 @@ This topic provides step-by-step instructions for configuring DirectAccess in  W
 ##  <a name="BKMK_DNS"></a> Step 3: Prepare a certificate and DNS record for the network location server  
  To prepare a certificate and DNS record for the network location server, perform the following tasks:  
   
--   [Step 3a: Grant full permissions to Authenticated Users for the Web server ��s certificate template](#BKMK_GrantFullPermissions)  
+-   [Step 3a: Grant full permissions to Authenticated Users for the Web server's certificate template](#BKMK_GrantFullPermissions)  
   
 -   [Step 3b: Enroll a certificate for the network location server with a common name that is unresolvable from the external network](#BKMK_EnrollaCertificate)  
   
 -   [Step 3c: Add a new host on the DNS server and map it to the Windows Server Essentials server address.](#BKMK_MapNewHosttoServerAddress)  
   
-###  <a name="BKMK_GrantFullPermissions"></a> Step 3a: Grant full permissions to Authenticated Users for the Web server ��s certificate template  
- Your first task is to grant full permissions to authenticate users for the Web server ��s certificate template in the certification authority.  
+###  <a name="BKMK_GrantFullPermissions"></a> Step 3a: Grant full permissions to Authenticated Users for the Web server's certificate template  
+ Your first task is to grant full permissions to authenticate users for the Web server's certificate template in the certification authority.  
   
-####  <a name="BKMK_ToGrantFullPermissions"></a> To grant full permissions to Authenticated Users for the Web server ��s certificate template  
+####  <a name="BKMK_ToGrantFullPermissions"></a> To grant full permissions to Authenticated Users for the Web server's certificate template  
   
 1.  On the **Start** page, open **Certification Authority**.  
   
@@ -193,7 +193,7 @@ This topic provides step-by-step instructions for configuring DirectAccess in  W
   
 1.  On the Start page, open DNS Manager. To open DNS Manager, search for **dnsmgmt.msc**, and then click **dnsmgmt.msc** in the results.  
   
-2.  In the DNS Manager console tree, expand the local server, expand **Forward Lookup Zones**, right-click the zone with server ��s domain suffix, and then click **New Host (A or AAAA)**.  
+2.  In the DNS Manager console tree, expand the local server, expand **Forward Lookup Zones**, right-click the zone with server's domain suffix, and then click **New Host (A or AAAA)**.  
   
 3.  Type the name and IP address of the server (for example, DirectAccess-NLS.contoso.local) and its corresponding server address (for example, 192.168.x.x).  
   
@@ -204,16 +204,16 @@ This topic provides step-by-step instructions for configuring DirectAccess in  W
   
 #### To add a security group for client computers that use DirectAccess  
   
-1.  On the Server Manager Dashboard, click **Tools**, and then click **Active Directory Users and Computers**.  
+1. On the Server Manager Dashboard, click **Tools**, and then click **Active Directory Users and Computers**.  
   
-    > [!NOTE]
-    >  If you do not see **Active Directory Users and Computers** on the **Tools** menu, you need to install the feature. To install Active Directory Users and Groups, run the following Windows PowerShell cmdlet as an administrator: `Install-WindowsFeature RSAT-ADDS-Tools`. For more information, see [Installing or Removing the Remote Server Administration Tool Pack](https://technet.microsoft.com/library/cc730825.aspx).  
+   > [!NOTE]
+   >  If you do not see **Active Directory Users and Computers** on the **Tools** menu, you need to install the feature. To install Active Directory Users and Groups, run the following Windows PowerShell cmdlet as an administrator: `Install-WindowsFeature RSAT-ADDS-Tools`. For more information, see [Installing or Removing the Remote Server Administration Tool Pack](https://technet.microsoft.com/library/cc730825.aspx).  
   
-2.  In the console tree, expand the server, right-click **Users**, click **New**, and then click **Group**.  
+2. In the console tree, expand the server, right-click **Users**, click **New**, and then click **Group**.  
   
-3.  Enter a group name, group scope, and group type (create a security group), and then click **OK**.  
+3. Enter a group name, group scope, and group type (create a security group), and then click **OK**.  
   
- The new security group is added to the **Users** folder.  
+   The new security group is added to the **Users** folder.  
   
 #### To add computer accounts to the security group  
   
@@ -294,7 +294,7 @@ gpupdate
   
 ##### To enable  Windows 7 Enterprise computers to use DirectAccess  
   
-1.  On the server ��s Start page, open **Remote Access Management**.  
+1.  On the server's Start page, open **Remote Access Management**.  
   
 2.  In the Remote Access Management Console, click **Configuration**. Then, in the **Setup Details** pane, under **Step 2**, click **Edit**.  
   
@@ -306,11 +306,11 @@ gpupdate
   
 > [!IMPORTANT]
 >  There is a known issue for  Windows 7 Enterprise computers connecting over DirectAccess if the  Windows Server Essentials server did not come with UR1 pre-installed. To enable DirectAccess connections in that environment, you must perform these additional steps:  
->   
->  1.  Install the hotfix described in [Microsoft Knowledge Base (KB) article 2796394](https://support.microsoft.com/kb/2796394) on the Windows Server Essentials server. Then restart the server.  
-> 2.  Then install the hotfix described in [Microsoft Knowledge Base (KB) article 2615847](https://support.microsoft.com/kb/2615847) on each  Windows 7 computer.  
->   
->      This issue was resolved in  Windows Server Essentials.  
+> 
+> 1. Install the hotfix described in [Microsoft Knowledge Base (KB) article 2796394](https://support.microsoft.com/kb/2796394) on the Windows Server Essentials server. Then restart the server.  
+>    2. Then install the hotfix described in [Microsoft Knowledge Base (KB) article 2615847](https://support.microsoft.com/kb/2615847) on each  Windows 7 computer.  
+> 
+>    This issue was resolved in  Windows Server Essentials.  
   
 ###  <a name="BKMK_NLS"></a> Step 5d: Configure the network location server  
  This section provides step-by-step instructions to configure the network location server settings.  
@@ -385,14 +385,14 @@ gpupdate
  You must change the DNS64 configuration to listen to the IP-HTTPS interface by using the following Windows PowerShell command.  
   
 ```powershell  
-Set-NetDnsTransitionConfiguration  �AcceptInterface IPHTTPSInterface  
+Set-NetDnsTransitionConfiguration -AcceptInterface IPHTTPSInterface  
 ```  
   
 ##  <a name="BKMK_ExemptPort"></a> Step 9: Reserve ports for the WinNat service  
  Use the following Windows PowerShell command to reserve ports for the WinNat service. Replace "192.168.1.100" with the actual IPv4 address of your  Windows Server Essentials server.  
   
 ```powershell  
-Set-NetNatTransitionConfiguration  �IPv4AddressPortPool @("192.168.1.100, 10000-47000")  
+Set-NetNatTransitionConfiguration -IPv4AddressPortPool @("192.168.1.100, 10000-47000")  
 ```  
   
 > [!IMPORTANT]
@@ -466,8 +466,8 @@ gpupdate
 # Enable client computers running Windows 7 to use DirectAccess  
 $allcertsinroot = dir cert:\LocalMachine\root  
 $rootcert = $allcertsinroot | Where-Object{$_.Subject -like "*-CAA*"}  
-Set-DAServer  �IPSecRootCertificate $rootcert[0]  
-Set  �DAClient  �OnlyRemoteComputers Disabled -Downlevel Enabled  
+Set-DAServer -IPSecRootCertificate $rootcert[0]  
+Set -DAClient -OnlyRemoteComputers Disabled -Downlevel Enabled  
   
 #Set the appropriate security group used for DA client computers. Replace the group name below with the one you created for DA clients  
 Add-DAClient -SecurityGroupNameList $DaSecurityGroup   
@@ -496,7 +496,7 @@ XCOPY 'C:\inetpub\wwwroot' 'C:\Program Files\Windows Server\Bin\WebApps\Site\ins
 XCOPY 'C:\Program Files\Windows Server\Bin\WebApps\Site\Default.aspx' 'C:\Program Files\Windows Server\Bin\WebApps\Site\insideoutside' /Y  
   
 # Reserve ports for the WinNat service  
-Set-NetNatTransitionConfiguration  �IPv4AddressPortPool @("192.168.1.100, 10000-47000")  
+Set-NetNatTransitionConfiguration -IPv4AddressPortPool @("192.168.1.100, 10000-47000")  
   
 # Restart the WinNat service  
 Restart-Service winnat  

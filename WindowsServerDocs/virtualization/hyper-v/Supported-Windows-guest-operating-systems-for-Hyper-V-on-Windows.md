@@ -10,7 +10,7 @@ ms.topic: article
 ms.assetid: 06b35897-2192-48b7-8c2d-125c520b0786
 author: lizap
 ms.author: elizapo
-ms.date: 06/12/2017
+ms.date: 01/08/2019
 ---
 # Supported Windows guest operating systems for Hyper-V on Windows Server
 
@@ -22,7 +22,7 @@ Some operating systems have the integration services built-in. Others require th
   
 ## Supported Windows Server guest operating systems  
 
-Following are the versions of Windows Server that are supported as guest operating systems for Hyper-V in Windows Server 2016. 
+Following are the versions of Windows Server that are supported as guest operating systems for Hyper-V in Windows Server 2016 and Windows Server 2019. 
   
 |Guest operating system (server)|Maximum number of virtual processors|Integration Services|Notes|  
 |-------------------------------------|----------------------------------------|------------------------|---------|  
@@ -35,7 +35,7 @@ Following are the versions of Windows Server that are supported as guest operati
   
 ## Supported Windows client guest operating systems  
 
-Following are the versions of Windows that are supported as guest operating systems for Hyper-V in Windows Server 2016.
+Following are the versions of Windows client that are supported as guest operating systems for Hyper-V in Windows Server 2016 and Windows Server 2019.
   
 |Guest operating system (client)|Maximum number of virtual processors|Integration Services|Notes|  
 |-------------------------------------|----------------------------------------|------------------------|---------|  

@@ -29,16 +29,11 @@ This topic covers HGS prerequisites and initial steps to prepare for the HGS dep
 
 -   **Configuration permissions/privileges for the fabric (host) domain**: You will need to configure DNS forwarding between the fabric (host) domain and the HGS domain. 
     
-## Supported upgrade scenarios
+## Upgrading HGS
 
-Before you deploy a guarded fabric, make sure the servers have installed the [latest Cumulative Update](https://support.microsoft.com/help/4000825/windows-10-and-windows-server-2016-update-history). 
-If you deployed a guarded fabric before the release of the [October 27, 2016 Cumulative Update](https://support.microsoft.com/kb/3197954), the servers need to be upgraded:
-- Guarded hosts can be upgraded in-place by installing the latest Cumulative Update.
-- HGS servers need to be rebuilt, including configuring certificates and information about the hosts. 
-
-Shielded VMs that ran on a guarded host with an earlier operating system version, such as TP5, can still run after the host is upgraded to Windows Server 2016. New shielded VMs cannot be created from template disks that were prepared using the template disk wizard from a Technical Preview build.
+If you've already deployed HGS and want to upgrade its operating system, follow the [upgrade guidance](guarded-fabric-upgrade-to-2019.md) to upgrade your HGS and Hyper-V servers to the latest OS.
 
 ## Next step
 
->[!div class="nextstepaction"]
-[Obtain certificates for HGS](guarded-fabric-obtain-certs.md)
+> [!div class="nextstepaction"]
+> [Obtain certificates for HGS](guarded-fabric-obtain-certs.md)

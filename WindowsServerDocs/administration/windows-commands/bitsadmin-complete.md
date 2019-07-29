@@ -17,8 +17,6 @@ ms.date: 10/16/2017
 
 # bitsadmin complete
 
-
-
 Completes the job. The downloaded files are not available to you until you use this switch. Use this switch after the job moves to the transferred state. Otherwise, only those files that have been successfully transferred are available.
 
 ## Syntax

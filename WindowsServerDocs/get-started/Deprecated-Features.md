@@ -1,27 +1,26 @@
 ---
 title: Features Removed or Deprecated in Windows Server 2016
-description: "Features and functionalities removed or planned for removal in releases."
-ms.custom: na
+description: A list of features and functionalities in Windows Server 2016 that have either been removed from the product in the current release or are planned for potential removal in subsequent releases (deprecated). It is intended for IT professionals who are updating operating systems in a commercial environment.
 ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.suite: na
 ms.technology: server-general
-ms.tgt_pltfrm: na
 ms.topic: article
-ms.date: 05/02/2017
+ms.date: 05/21/2019
 ms.assetid: 5d10c5f9-ebac-49a0-b808-c0b1702e0437
-author: jaimeo
-ms.author: jaimeo
+author: jasongerend
+ms.author: jgerend
 manager: dougkim
 ms.localizationpriority: medium
 ---
 # Features Removed or Deprecated in  Windows Server 2016
 
->Applies To: Windows Server 2016
+>Applies to: Windows Server 2016
 
-The following is a list of features and functionalities in Windows Server 2016 that have either been removed from the product in the current release or are planned for potential removal in subsequent releases (deprecated). It is intended for IT professionals who are updating operating systems in a commercial environment. This list is subject to change in subsequent releases and may not include every deprecated feature or functionality. For more details about a particular feature or functionality and its replacement, see the documentation for that feature.  
+The following is a list of features and functionalities in Windows Server 2016 that have either been removed from the product in the current release or are planned for potential removal in subsequent releases (deprecated). It is intended for IT professionals who are updating operating systems in a commercial environment. This list is subject to change in subsequent releases and may not include every deprecated feature or functionality. For more details about a particular feature or functionality and its replacement, see the documentation for that feature.
 
-## Features removed from Windows Server 2016 
+For info on what's been removed or deprecated in newer versions, see [Features removed or planned for replacement starting Windows Server 2019](../get-started-19/removed-features-19.md).
+
+## Features removed from Windows Server 2016
+
 The following features and functionalities have been removed from this release of Windows Server 2016. Applications, code, or usage that depend on these features will not function in this release unless you employ an alternate method.  
 
 > [!NOTE]  
@@ -51,8 +50,8 @@ The **wuauclt.exe /detectnow** command has been removed and is no longer support
 
 - Run these PowerShell commands:
     ````powershell
-    $AutoUpdates = New-Object -ComObject "Microsoft.Update.AutoUpdate"`
-    $AutoUpdates.DetectNow()` 
+    $AutoUpdates = New-Object -ComObject "Microsoft.Update.AutoUpdate"
+    $AutoUpdates.DetectNow()
     ````
 
 - Alternately, use this VBScript:

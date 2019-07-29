@@ -5,7 +5,6 @@ ms.technology: manage
 ms.topic: article
 author: haley-rowland
 ms.author: harowl
-ms.date: 06/18/2018
 ms.localizationpriority: medium
 ms.prod: windows-server-threshold
 ---
@@ -18,7 +17,7 @@ ms.prod: windows-server-threshold
 
 ## Remote Server Administration Tools (RSAT)
 
-[Remote Server Administration Tools (RSAT)](https://support.microsoft.com/help/2693643/remote-server-administration-tools-rsat-for-windows-operating-systems) is a collection of GUI and PowerShell tools to manage optional roles and features in Windows Server. RSAT has many capabilities that Windows Admin Center doesn't have. We may add some of the most commonly used tools in RSAT to Windows Admin Center in the future. Any new Windows Server role or feature that requires a GUI for management will be in Windows Admin Center.
+[Remote Server Administration Tools (RSAT)](https://docs.microsoft.com/windows-server/remote/remote-server-administration-tools) is a collection of GUI and PowerShell tools to manage optional roles and features in Windows Server. RSAT has many capabilities that Windows Admin Center doesn't have. We may add some of the most commonly used tools in RSAT to Windows Admin Center in the future. Any new Windows Server role or feature that requires a GUI for management will be in Windows Admin Center.
 
 ## Intune
 
@@ -26,7 +25,7 @@ ms.prod: windows-server-threshold
 
 ## Azure Stack
 
-[Azure Stack](https://azure.microsoft.com/overview/azure-stack/) is a hybrid cloud platform that lets you deliver Azure services from your data center. Azure Stack is managed using PowerShell or the administrator portal, which is similar to the traditional Azure portal used to access and manage traditional Azure services. Windows Admin Center isn't intended to manage the Azure Stack infrastructure, but you can use it to [manage Azure IaaS virtual machines](../configure/manage-azure-vms.md) (running Windows Server 2016, Windows Server 2012 R2, or Windows Server 2012) or troubleshoot individual physical servers deployed in your Azure Stack environment.
+[Azure Stack](https://azure.microsoft.com/overview/azure-stack/) is a hybrid cloud platform that lets you deliver Azure services from your data center. Azure Stack is managed using PowerShell or the administrator portal, which is similar to the traditional Azure portal used to access and manage traditional Azure services. Windows Admin Center isn't intended to manage the Azure Stack infrastructure, but you can use it to [manage Azure IaaS virtual machines](../azure/manage-azure-vms.md) (running Windows Server 2016, Windows Server 2012 R2, or Windows Server 2012) or troubleshoot individual physical servers deployed in your Azure Stack environment.
 
 ## System Center
 

@@ -112,6 +112,24 @@ ms.localizationpriority: high
                                 </div>
                             </div>
                           </a>
+                        </li><li>
+ <a href="../administration/OpenSSH/OpenSSH_Overview.md">
+                            <div class="cardSize">
+                                <div class="cardPadding">
+                                    <div class="card">
+                                        <div class="cardImageOuter">
+                                            <div class="cardImage">
+                                                <img src="../media/i-remote.svg" alt="" />
+                                            </div>
+                                        </div>
+                                        <div class="cardText">
+                                            <h3>OpenSSH</h3><hr />
+                                            <p>OpenSSH is the open-source version of the Secure Scripting Host (SSH) tools used by administrators of Linux and other non-Windows for cross-platform management of remote systems. OpenSSH has been added to Windows and is included in Windows 10 and Windows Server 2019.  </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                          </a>
                         </li>
 </ul>
  

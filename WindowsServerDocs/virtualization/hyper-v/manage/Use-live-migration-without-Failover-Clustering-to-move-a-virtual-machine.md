@@ -22,11 +22,13 @@ To be able to do this, you'll need:
 
 - A user account that's a member of the local Hyper-V Administrators group or the Administrators group on both the source and destination computers. 
   
-- The Hyper-V role in Windows Server 2016 or Windows Server 2012 R2 installed on the source and destination servers and set up for live migrations. You can do a live migration between hosts running Windows Server 2016 and Windows Server 2012 R2 if the virtual machine is at least version 5. <br>For version upgrade instructions, see [Upgrade virtual machine version in Hyper-V on Windows 10 or Windows Server 2016](..\deploy\Upgrade-virtual-machine-version-in-Hyper-V-on-Windows-or-Windows-Server.md). For installation instructions, see [Set up hosts for live migration](../deploy/Set-up-hosts-for-live-migration-without-Failover-Clustering.md). 
-  
+- The Hyper-V role in Windows Server 2016 or Windows Server 2012 R2 installed on the source and destination servers and set up for live migrations. You can do a live migration between hosts running Windows Server 2016 and Windows Server 2012 R2 if the virtual machine is at least version 5.
+
+    For version upgrade instructions, see [Upgrade virtual machine version in Hyper-V on Windows 10 or Windows Server 2016](../deploy/Upgrade-virtual-machine-version-in-Hyper-V-on-Windows-or-Windows-Server.md). For installation instructions, see [Set up hosts for live migration](../deploy/Set-up-hosts-for-live-migration-without-Failover-Clustering.md).
+
 - The Hyper-V management tools installed on a computer running Windows Server 2016 or Windows 10, unless the tools are installed on the source or destination server and you'll run them from there.  
    
-## <a name="BKMK_Step3"></a>Use Hyper-V Manager to move a running virtual machine  
+## Use Hyper-V Manager to move a running virtual machine  
   
 1.  Open Hyper-V Manager. (From Server Manager, click **Tools** >>**Hyper-V Manager**.)  
   
@@ -70,8 +72,8 @@ Failed to establish a connection with host *computer name*: No credentials are a
 3. Check **Migrate to a computer with a different processor version**.
 4. Click **OK**.
  
- To use Windows PowerShell, use the [Set-VMProcessor](https://technet.microsoft.com/library/hh848533.aspx) cmdlet:
+   To use Windows PowerShell, use the [Set-VMProcessor](https://technet.microsoft.com/library/hh848533.aspx) cmdlet:
  
-  ```
-  PS C:\> Set-VMProcessor TestVM -CompatibilityForMigrationEnabled $true
-  ```
+   ```
+   PS C:\> Set-VMProcessor TestVM -CompatibilityForMigrationEnabled $true
+   ```

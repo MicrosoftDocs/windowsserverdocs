@@ -14,7 +14,6 @@ ms.technology: identity-adfs
 
 # Configuring intranet forms-based authentication for devices that do not support WIA
 
->Applies To: Windows Server 2016, Windows Server 2012 R2
 
 By default, Windows Integrated Authentication (WIA) is enabled in Active Directory Federation Services (AD FS) in Windows Server 2012 R2 for authentication requests that occur within the organization’s internal network (intranet) for any application that uses a browser for its authentication. For example, these can be browser-based applications that use WS-Federation or SAML protocols and rich applications that use the OAuth protocol. WIA provides end users with seamless logon to the applications without having to manually entering their credentials. However, some devices and browsers are not capable of supporting WIA and as a result authentication requests from these devices fail. Also, the experience on certain browsers that negotiate to NTLM is not desirable. The recommended approach is to fallback to forms-based authentication for such devices and browsers.
 
@@ -54,14 +53,19 @@ Also ensure that the forms based authentication is enabled for intranet.
 ## Configuring WIA for Chrome
 You can add Chrome or other user agents to the AD FS configuration that supports WIA. This enables seamless logon to applications without having to manually enter credentials when you access resources protected by AD FS. Follow the steps below to enable WIA on Chrome:
 
-Add a user agent string for Chrome in AD FS configuration
+In AD FS configuration, add a user agent string for Chrome on Windows-based platforms:
 
-    Set-AdfsProperties -WIASupportedUserAgents ((Get-ADFSProperties | Select -ExpandProperty WIASupportedUserAgents) + “Chrome”)
-    
-Confirm that the user agent string for Chrome is now set in the AD FS properties
+    Set-AdfsProperties -WIASupportedUserAgents ((Get-ADFSProperties | Select -ExpandProperty WIASupportedUserAgents) + "Mozilla/5.0 (Windows NT")
+
+And similarly for Chrome on Apple macOS, add the following user agent string to the AD FS configuration:
+
+    Set-AdfsProperties -WIASupportedUserAgents ((Get-ADFSProperties | Select -ExpandProperty WIASupportedUserAgents) + "Mozilla/5.0 (Macintosh; Intel Mac OS X")
+
+Confirm that the user agent string for Chrome is now set in the AD FS properties:
 
     Get-AdfsProperties | Select -ExpandProperty WIASupportedUserAgents
 
+(You would need a new screen shot here)
 ![configure auth](media/Configure-intranet-forms-based-authentication-for-devices-that-do-not-support-WIA/chrome1.png) 
 
 >[!NOTE]   

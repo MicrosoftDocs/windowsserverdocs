@@ -55,7 +55,7 @@ You need to thoroughly understand your workload requirements to choose an optima
 
 **PowerCfg.exe** supports a command-line option that you can use to analyze the idle energy efficiency of your server. When you run PowerCfg.exe with the **/energy** option, the tool performs a 60-second test to detect potential energy efficiency issues. The tool generates a simple HTML report in the current directory.
 
->[!Important]
+> [!Important]
 > To ensure an accurate analysis, make sure that all local apps are closed before you run **PowerCfg.exe**. 
 
 Shortened timer tick rates, drivers that lack power management support, and excessive CPU utilization are a few of the behavioral issues that are detected by the **powercfg /energy** command. This tool provides a simple way to identify and fix power management issues, potentially resulting in significant cost savings in a large datacenter.
@@ -69,7 +69,7 @@ Windows Server 2016 has three built-in power plans designed to meet different s
 | **Plan** | **Description** | **Common applicable scenarios** | **Implementation highlights** |
 |------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Balanced (recommended) | Default setting. Targets good energy efficiency with minimal performance impact. | General computing | Matches capacity to demand. Energy-saving features balance power and performance. |
-| High Performance | Increases performance at the cost of high energy consumption. Power and thermal limitations, operating expenses, and reliability considerations apply. | Low latency apps and app code that is sensitive to processor performance changes | Processors are always locked at the highest performance state (including “turbo�? frequencies). All cores are unparked. Thermal output may be significant. |
+| High Performance | Increases performance at the cost of high energy consumption. Power and thermal limitations, operating expenses, and reliability considerations apply. | Low latency apps and app code that is sensitive to processor performance changes | Processors are always locked at the highest performance state (including "turbo" frequencies). All cores are unparked. Thermal output may be significant. |
 | Power Saver | Limits performance to save energy and reduce operating cost. Not recommended without thorough testing to make sure performance is adequate. | Deployments with limited power budgets and thermal constraints | Caps processor frequency at a percentage of maximum (if supported), and enables other energy-saving features. |
 
 
@@ -77,7 +77,7 @@ These power plans exist in Windows for alternating current (AC) and direct curre
 
 For more info on power plans and power policy configurations, see [Power Policy Configuration and Deployment in Windows](https://msdn.microsoft.com/windows/hardware/gg463243.aspx).
 
->[!Note]
+> [!Note]
 > Some server manufactures have their own power management options available through the BIOS settings. If the operating system does not have control over the power management, changing the power plans in Windows will not affect system power and performance.
 
 ## Tuning processor power management parameters
@@ -92,7 +92,7 @@ Intel Turbo Boost and AMD Turbo CORE technologies are features that allow proces
 
 Turbo is enabled for High Performance power plans on all Intel and AMD processors and it is disabled for Power Saver power plans. For Balanced power plans on systems that rely on traditional P-state-based frequency management, Turbo is enabled by default only if the platform supports the EPB register.
 
->[!Note]
+> [!Note]
 > The EPB register is only supported in Intel Westmere and later processors.
 
 For Intel Nehalem and AMD processors, Turbo is disabled by default on P-state-based platforms. However, if a system supports Collaborative Processor Performance Control (CPPC), which is a new alternative mode of performance communication between the operating system and the hardware (defined in ACPI 5.0), Turbo may be engaged if the Windows operating system dynamically requests the hardware to deliver the highest possible performance levels.
@@ -101,7 +101,7 @@ To enable or disable the Turbo Boost feature, the Processor Performance Boost Mo
 
 For P-state-based control, the choices are Disabled, Enabled (Turbo is available to the hardware whenever nominal performance is requested), and Efficient (Turbo is available only if the EPB register is implemented).
 
-For CPPC-based control, the choices are Disabled, Efficient Enabled (Windows specifies the exact amount of Turbo to provide), and Aggressive (Windows asks for “maximum performance�? to enable Turbo).
+For CPPC-based control, the choices are Disabled, Efficient Enabled (Windows specifies the exact amount of Turbo to provide), and Aggressive (Windows asks for "maximum performance" to enable Turbo).
 
 In Windows Server 2016, the default value for Boost Mode is 3.
 
@@ -113,7 +113,7 @@ In Windows Server 2016, the default value for Boost Mode is 3.
 | 3 (Efficient Enabled) | Efficient | Efficient Enabled |
 | 4 (Efficient Aggressive) | Efficient | Aggressive |
 
- 
+ 
 The following commands enable Processor Performance Boost Mode on the current power plan (specify the policy by using a GUID alias):
 
 ``` syntax
@@ -121,10 +121,10 @@ Powercfg -setacvalueindex scheme_current sub_processor PERFBOOSTMODE 1
 Powercfg -setactive scheme_current
 ```
 
->[!Important] 
+> [!Important]
 > You must run the **powercfg -setactive** command to enable the new settings. You do not need to reboot the server.
 
-To set this value for power plans other than the currently selected plan, you can use aliases such as SCHEME\_MAX (Power Saver), SCHEME\_MIN (High Performance), and SCHEME\_BALANCED (Balanced) in place of SCHEME\_CURRENT. Replace “scheme current�? in the powercfg -setactive commands previously shown with the desired alias to enable that power plan.
+To set this value for power plans other than the currently selected plan, you can use aliases such as SCHEME\_MAX (Power Saver), SCHEME\_MIN (High Performance), and SCHEME\_BALANCED (Balanced) in place of SCHEME\_CURRENT. Replace "scheme current" in the powercfg -setactive commands previously shown with the desired alias to enable that power plan.
 
 For example, to adjust the Boost Mode in the Power Saver plan and make that Power Saver is the current plan, run the following commands:
 
@@ -153,7 +153,7 @@ Powercfg -setacvalueindex scheme_current sub_processor PROCTHROTTLEMAX 75
 Powercfg -setactive scheme_current
 ```
 
->[!Note]
+> [!Note]
 > Capping processor performance at a percentage of maximum requires processor support. Check the processor documentation to determine whether such support exists, or view the Performance Monitor counter **% of maximum frequency** in the **Processor** group to see if any frequency caps were applied.
 
 ## Processor performance increase and decrease of thresholds and policies
@@ -164,9 +164,9 @@ The speed at which a processor performance state increases or decreases is contr
 
 -   **Processor Performance Decrease Threshold** defines the utilization value below which a processor’s performance state will decrease. Larger values increase the rate of decrease for the performance state during idle periods.
 
--   **Processor Performance Increase Policy and Processor Performance Decrease** Policy determine which performance state should be set when a change happens. “Single�? policy means it chooses the next state. “Rocket�? means the maximum or minimal power performance state. “Ideal�? tries to find a balance between power and performance.
+-   **Processor Performance Increase Policy and Processor Performance Decrease** Policy determine which performance state should be set when a change happens. "Single" policy means it chooses the next state. "Rocket" means the maximum or minimal power performance state. "Ideal" tries to find a balance between power and performance.
 
-For example, if your server requires ultra-low latency while still wanting to benefit from low power during idle periods, you could quicken the performance state increase for any increase in load and slow the decrease when load goes down. The following commands set the increase policy to “Rocket�? for a faster state increase, and set the decrease policy to “Single�?. The increase and decrease thresholds are set to 10 and 8 respectively.
+For example, if your server requires ultra-low latency while still wanting to benefit from low power during idle periods, you could quicken the performance state increase for any increase in load and slow the decrease when load goes down. The following commands set the increase policy to "Rocket" for a faster state increase, and set the decrease policy to "Single". The increase and decrease thresholds are set to 10 and 8 respectively.
 
 ``` syntax
 Powercfg.exe -setacvalueindex scheme_current sub_processor PERFINCPOL 2

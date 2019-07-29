@@ -5,7 +5,7 @@ description:
 author: billmath
 ms.author: billmath
 manager: femila
-ms.date: 06/13/2017
+ms.date: 01/16/2019
 ms.topic: article
 ms.prod: windows-server-threshold
 
@@ -16,7 +16,6 @@ ms.technology: identity-adfs
 
 # Advanced Customization of AD FS Sign-in Pages
 
->Applies To: Windows Server 2016, Windows Server 2012 R2
   
 ## Advanced Customization of AD FS Sign\-in Pages  
 AD FS in Windows Server 2012 R2 provides built\-in support for customizing the sign\-in experience. For a majority of these scenarios, the built\-in Windows PowerShell cmdlets are all that is required.  It is recommended that you use the built\-in Windows PowerShell commands to customize standard elements for AD FS sign\-in experience whenever possible.  See [AD-FS user sign-in customization](AD-FS-user-sign-in-customization.md) for more information.  
@@ -61,9 +60,17 @@ Use the following steps when customizing the onload.js for the AD FS service.
 3.  Make the necessary modification to customize onload.js based on your need.  
   
 4.  Update the theme with the modified onload.js. Use the following cmdlet to apply the update onload.js to custom web theme:  
-  
+
+     For AD FS on Windows Server 2012 R2:  
+
     ```  
     Set-AdfsWebTheme -TargetName custom -AdditionalFileResource @{Uri=’/adfs/portal/script/onload.js’;path="c:\theme\script\onload.js"}  
+  
+    ```  
+    For AD FS on Windows Server 2016:
+
+     ```  
+    Set-AdfsWebTheme -TargetName custom -OnLoadScriptPath "c:\ADFStheme\script\onload.js"   
   
     ```  
   
@@ -95,33 +102,33 @@ if (loginMessage)
 ```  
   
 ### Example 2: accept SAM\-account name as a login format on an AD FS form\-based sign\-in page  
-The default AD FS form\-based sign\-in page supports login format of User Principal Names \(UPNs\) \(for example, **johndoe@contoso.com**\) or domain qualified sam\-account names \(**contoso\\johndoe** or **contoso.com\\johndoe**\). In case all of your users come from the same domain and they only know about sam\-account names, you may want to support the scenario where the users can sign in using them sam\-account names only. You can add the following code to onload.js to support this scenario, just replace the domain “contoso.com” in the example below with the domain that you want to use.  
+The default AD FS form\-based sign\-in page supports login format of User Principal Names \(UPNs\) \(for example, <strong>johndoe@contoso.com</strong>\) or domain qualified sam\-account names \(**contoso\\johndoe** or **contoso.com\\johndoe**\). In case all of your users come from the same domain and they only know about sam\-account names, you may want to support the scenario where the users can sign in using them sam\-account names only. You can add the following code to onload.js to support this scenario, just replace the domain “contoso.com” in the example below with the domain that you want to use.  
   
 ```  
 if (typeof Login != 'undefined'){  
-    Login.submitLoginRequest = function () {   
-    var u = new InputUtil();  
-    var e = new LoginErrors();  
-    var userName = document.getElementById(Login.userNameInput);  
-    var password = document.getElementById(Login.passwordInput);  
-    if (userName.value && !userName.value.match('[@\\\\]'))   
-    {  
-        var userNameValue = 'contoso.com\\' + userName.value;  
-        document.forms['loginForm'].UserName.value = userNameValue;  
-    }  
+    Login.submitLoginRequest = function () {   
+    var u = new InputUtil();  
+    var e = new LoginErrors();  
+    var userName = document.getElementById(Login.userNameInput);  
+    var password = document.getElementById(Login.passwordInput);  
+    if (userName.value && !userName.value.match('[@\\\\]'))   
+    {  
+        var userNameValue = 'contoso.com\\' + userName.value;  
+        document.forms['loginForm'].UserName.value = userNameValue;  
+    }  
   
-    if (!userName.value) {  
-       u.setError(userName, e.userNameFormatError);  
-       return false;  
-    }  
+    if (!userName.value) {  
+       u.setError(userName, e.userNameFormatError);  
+       return false;  
+    }  
   
-    if (!password.value)   
-    {  
-        u.setError(password, e.passwordEmpty);  
-        return false;  
-    }  
-    document.forms['loginForm'].submit();  
-    return false;  
+    if (!password.value)   
+    {  
+        u.setError(password, e.passwordEmpty);  
+        return false;  
+    }  
+    document.forms['loginForm'].submit();  
+    return false;  
 };  
 }  
   

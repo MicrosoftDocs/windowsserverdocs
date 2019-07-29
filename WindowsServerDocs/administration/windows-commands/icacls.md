@@ -17,11 +17,9 @@ ms.date: 08/21/2018
 
 # icacls
 
-
-
 Displays or modifies discretionary access control lists (DACLs) on specified files, and applies stored DACLs to files in specified directories.
 
-For examples of how to use this command, see [Examples](#BKMK_examples).
+For examples of how to use this command, see [Examples](#examples).
 
 ## Syntax
 
@@ -124,21 +122,28 @@ icacls <Directory> [/substitute <SidOld> <SidNew> [...]] [/restore <ACLfile> [/c
 
     **(NP)**: do not propagate inherit
 
-## <a name="BKMK_examples"></a>Examples
+## Examples
 
 To save the DACLs for all files in the C:\Windows directory and its subdirectories to the ACLFile file, type:
+
 ```
 icacls c:\windows\* /save aclfile /t
 ```
+
 To restore the DACLs for every file within ACLFile that exists in the C:\Windows directory and its subdirectories, type:
+
 ```
 icacls c:\windows\ /restore aclfile
 ```
+
 To grant the user User1 Delete and Write DAC permissions to a file named "Test1", type:
+
 ```
 icacls test1 /grant User1:(d,wdac)
 ```
+
 To grant the user defined by SID S-1-1-0 Delete and Write DAC permissions to a file, named "Test2", type:
+
 ```
 icacls test2 /grant *S-1-1-0:(d,wdac)
 ```

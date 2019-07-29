@@ -4,21 +4,33 @@ description: An overview of new features in Windows Server 2019, including Deskt
 ms.prod: windows-server-threshold
 ms.technology: server-general
 ms.topic: article
-author: coreyp-at-msft
-ms.author: coreyp
+author: jasongerend
+ms.author: jgerend
 ms.localizationpriority: high
+ms.date: 06/04/2019
 ---
-
 # What's new in Windows Server 2019
 
-This topic describes some of the new features in Windows Server 2019. Windows Server 2019 is built on the strong foundation of Windows Server 2016 and brings numerous innovations on four key themes: Hybrid, Security, Application Platform, and Hyper-Converged Infrastructure (HCI). To find out What's New in Windows Server, version 1809, see [What's New in Windows Server, version 1809](../get-started/whats-new-in-windows-server-1809.md).
+> Applies to: Windows Server 2019
+
+This topic describes some of the new features in Windows Server 2019. Windows Server 2019 is built on the strong foundation of Windows Server 2016 and brings numerous innovations on four key themes: Hybrid Cloud, Security, Application Platform, and Hyper-Converged Infrastructure (HCI).
+
+To find out what's new in Windows Server Semi-Annual Channel releases, see [What's New in Windows Server](../get-started/whats-new-in-windows-server.md).
 
 ## General
 
+### Windows Admin Center
+
+Windows Admin Center is a locally deployed, browser-based app for managing servers, clusters, hyper-converged infrastructure, and Windows 10 PCs. It comes at no additional cost beyond Windows and is ready to use in production.
+
+You can install Windows Admin Center on Windows Server 2019 as well as Windows 10 and earlier versions of Windows and Windows Server, and use it to manage servers and clusters running Windows Server 2008 R2 and later.
+
+For more info, see [Windows Admin Center](../manage/windows-admin-center/understand/windows-admin-center.md).
+
 ### Desktop experience
 
-The <b>Desktop Experience</b> is back in Windows Server 2019!  It is not included in Windows Server, version 1709, Windows Server, version 1803, or Windows Server, version 1809.  
-As with Windows Server 2016, during setup of the operating system it is possible to choose between Server Core installations or Server with Desktop Experience installations.
+Because Windows Server 2019 is a Long-Term Servicing Channel (LTSC) release, it includes the <b>Desktop Experience</b>. (Semi-Annual Channel \(SAC\) releases don't include the Desktop Experience by design; they are strictly Server Core and Nano Server container image releases.)
+As with Windows Server 2016, during setup of the operating system you can choose between Server Core installations or Server with Desktop Experience installations.
 
 ### System Insights
 
@@ -68,13 +80,11 @@ ATP's deep platform sensors and response actions expose memory and kernel level 
     protection](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-exploit-guard/exploit-protection-exploit-guard) is a set of mitigations for vulnerability exploits (replacing EMET)that can
     be easily configured to protect your system and applications.
 
-
-
 [Windows Defender Application
 Control](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control) (also
 known as Code Integrity (CI) policy) was released in Windows Server 2016.
 Customer feedback has suggested that it is a great concept, but hard to deploy.
-To address this, we have built default CI policies, which will allow all Windows
+To address this, we have built default CI policies, which allows all Windows
 in-box files and Microsoft applications, such as SQL Server, and block known
 executables that can bypass CI. 
 
@@ -98,7 +108,7 @@ For a complete list of what’s new in SDN see, [What’s New in SDN for Windows
 
     We've also made it easier to [troubleshoot your shielded virtual machines](https://docs.microsoft.com/windows-server/security/guarded-fabric-shielded-vm/guarded-fabric-troubleshoot-shielded-vms) by enabling support for VMConnect Enhanced Session Mode and PowerShell Direct. These tools are particularly useful if you've lost network connectivity to your VM and need to update its configuration to restore access. 
 
-    These features do not need to be configured, and they will automatically become available when a shielded VM is placed on a Hyper-V host running Windows Server version 1803 or later.
+    These features do not need to be configured, and they become available automatically when a shielded VM is placed on a Hyper-V host running Windows Server version 1803 or later.
 
 - **Linux support**
 
@@ -122,7 +132,7 @@ Storage Migration Service is a new technology that makes it easier to migrate se
 
 ### Storage Spaces Direct
 
-Here's a list of what's new in Storage Spaces Direct. For details, see [What's new in Storage Spaces Direct](../storage/whats-new-in-storage.md#storage-spaces-direct).
+Here's a list of what's new in Storage Spaces Direct. For details, see [What's new in Storage Spaces Direct](../storage/whats-new-in-storage.md#storage-spaces-direct). Also see [Azure Stack HCI](https://docs.microsoft.com/azure-stack/operator/azure-stack-hci-overview) for info on acquiring validated Storage Spaces Direct systems.
 
 - **Deduplication and compression for ReFS volumes**
 - **Native support for persistent memory**
@@ -146,7 +156,7 @@ Here's what's new in Storage Replica. For details, see [What's new in Storage Re
 
 ## Failover Clustering
 
-Here's a list of what's new in Storage Spaces Direct. For details, see [What's new in Failover Clustering](../failover-clustering/whats-new-in-failover-clustering.md).
+Here's a list of what's new in Failover Clustering. For details, see [What's new in Failover Clustering](../failover-clustering/whats-new-in-failover-clustering.md).
 
 - **Cluster sets**
 - **Azure-aware clusters**
@@ -164,13 +174,13 @@ Here's a list of what's new in Storage Spaces Direct. For details, see [What's n
 
 It is now possible to run Windows and Linux-based containers on the same container host, using the same docker daemon. This enables you to have a heterogenous container host environment while providing flexibility to application developers.
 
-### Building Support for Kubernetes
+### Built-in Support for Kubernetes
 
-Windows Server 2019 continues the improvements to compute, networking and storage from the semi-annual channel releases needed to support Kubernetes on Windows. More details will be available in upcoming Kubernetes releases.
+Windows Server 2019 continues the improvements to compute, networking and storage from the semi-annual channel releases needed to support Kubernetes on Windows. More details are available in upcoming Kubernetes releases.
 
 - [Container Networking](https://docs.microsoft.com/windows-server/networking/sdn/technologies/containers/container-networking-overview) in Windows Server 2019 greatly improves usability of Kubernetes on Windows by enhancing platform networking resiliency and support of container networking plugins.
 
-- Deployed workloads on Kubernetes will be able to use network security to protect both Linux and Windows services using embedded tooling.
+- Deployed workloads on Kubernetes are able to use network security to protect both Linux and Windows services using embedded tooling.
 
 ### Container improvements
     
@@ -197,7 +207,7 @@ It also utilizes Datagram Transport Layer Security (DTLS) on the virtual subnet 
 
 ### Network performance improvements for virtual workloads
 
-[Network performance improvements for virtual workloads](https://docs.microsoft.com/windows-server/networking/technologies/hpn/hpn-insider-preview) will maximize the network throughput to virtual machines without requiring you to constantly tune or over-provision your host. This lowers the operations and maintenance cost while increasing the available density of your hosts. These new features are:
+[Network performance improvements for virtual workloads](https://docs.microsoft.com/windows-server/networking/technologies/hpn/hpn-insider-preview) maximizes the network throughput to virtual machines without requiring you to constantly tune or over-provision your host. This lowers the operations and maintenance cost while increasing the available density of your hosts. These new features are:
 
 * Receive Segment Coalescing in the vSwitch
 
@@ -220,7 +230,7 @@ The [Windows Time Service](https://docs.microsoft.com/windows-server/networking/
 
 ### New Deployment UI and Windows Admin Center extension for SDN
 
-Now, with Windows Server 2019, it’s easy to deploy and manage through a new deployment UI and Windows Admin Center extension that will enable anyone to harness the power of SDN. 
+Now, with Windows Server 2019, it’s easy to deploy and manage through a new deployment UI and Windows Admin Center extension that enable anyone to harness the power of SDN. 
 
 ### Persistent Memory support for Hyper-V VMs
 

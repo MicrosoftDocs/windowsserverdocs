@@ -1,22 +1,26 @@
 ---
 ms.assetid: abf69b09-6528-42e0-b164-813c7c2c78e7
-title: Schema Updates
-description:
+title: Schema updates in Windows Server
+description: Schema changes made by adprep by operating system version
 author: MicrosoftGuyJFlo
 ms.author: joflore
 manager: mtillman
-ms.date: 11/27/2017
+ms.date: 11/30/2018
 ms.topic: article
 ms.prod: windows-server-threshold
 
 ms.technology: identity-adds
 ---
 
-# Schema Updates
+# Windows Server Active Directory schema updates
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies To: Windows Server
 
 This topic lists the LDF files that include the changes that Adprep.exe makes.  
+
+This is the LDF file included in Windows Server 2019:
+
+-   [Sch88.ldf](#BKMK_Sch88)
 
 These are the LDF files included in Windows Server 2016:
 
@@ -128,9 +132,70 @@ These are the LDF files included in Windows Server 2012:
   
 -   [Sch56.ldf](#BKMK_Sch56)  
 
-## Schema Updates in Windows Server 2016  
+## Schema Update in Windows Server 2019
   
-### <a name="BKMK_Sch58"></a>Sch58.ldf  
+### <a name="BKMK_Sch88"></a>Sch88.ldf
+
+```
+dn: CN=ms-DS-Preferred-Data-Location,CN=schema,CN=configuration,DC=X
+changetype: ntdsSchemaAdd
+objectClass: attributeSchema
+attributeID: 1.2.840.113556.1.4.2366
+attributeSyntax: 2.5.5.12
+adminDisplayName: ms-DS-Preferred-Data-Location
+adminDescription: ms-DS-Preferred-Data-Location
+oMSyntax: 64
+lDAPDisplayName: msDS-preferredDataLocation
+isSingleValued: TRUE
+schemaIDGUID:: 3ooM+pRMEEa6zhgO/e4hQA==
+searchFlags: 0
+showInAdvancedViewOnly: FALSE
+systemFlags: 16
+systemOnly: FALSE
+rangeLower: 1
+rangeUpper: 10
+isMemberOfPartialAttributeSet: TRUE
+
+dn:
+changetype: modify
+add: schemaUpdateNow
+schemaUpdateNow: 1
+-
+
+dn: CN=User,CN=Schema,CN=Configuration,DC=X
+changetype: ntdsSchemaModify
+add: systemMayContain
+systemMayContain: 1.2.840.113556.1.4.2366
+-
+
+dn: CN=Contact,CN=Schema,CN=Configuration,DC=X
+changetype: ntdsSchemaModify
+add: systemMayContain
+systemMayContain: 1.2.840.113556.1.4.2366
+-
+
+dn: CN=Group,CN=Schema,CN=Configuration,DC=X
+changetype: ntdsSchemaModify
+add: systemMayContain
+systemMayContain: 1.2.840.113556.1.4.2366
+-
+
+dn: CN=Schema,CN=Configuration,DC=X
+changeType: ntdsSchemaModify
+replace: objectVersion
+objectVersion: 88
+-
+
+dn:
+changetype: modify
+add: schemaUpdateNow
+schemaUpdateNow: 1
+-
+```
+
+## Schema Updates in Windows Server 2016
+  
+### <a name="BKMK_Sch58"></a>Sch58.ldf
 
 ```
 dn: CN=ms-DS-Resource-Property-List,CN=Schema,CN=Configuration,DC=X

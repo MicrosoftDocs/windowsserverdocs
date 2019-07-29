@@ -54,7 +54,7 @@ This table has more info on the elements in the diagram.
 | Azure Web App | The core of Hybrid Cloud Print solution. Provides the required web endpoints to discover printers and send print content for non-domain joined devices. |
 | BYOD device / Windows Print Server Spooler / Printer | These are as-is. No change in functionality in the deployment. |
 
-There are a couple of ways to get the instllation file for **Hybrid Cloud Print**:
+There are two ways to install **Hybrid Cloud Print**:
 - **Features on Demand** - See [Configure Features on Demand in Windows Server](https://docs.microsoft.com/windows-server/administration/server-manager/configure-features-on-demand-in-windows-server) to learn more about adding and removing role and feature files. 
 - **Windows Server 2016 Settings** - Administrators can go to **Settings** -> **Apps** -> **Manage optional features** -> **Add a feature** and search for the Features on Demand package 
 - PowerShell commands - In a PowerShell administrator window, run these commands:

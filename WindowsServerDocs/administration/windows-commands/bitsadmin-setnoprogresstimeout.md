@@ -17,9 +17,7 @@ ms.date: 10/16/2017
 
 # bitsadmin setnoprogresstimeout
 
-
-
-Sets the length of time, in seconds, that the service tries to transfer the file after a transient error occurs.
+Sets the length of time, in seconds, that BITS tries to transfer the file after the first transient error occurs.
 
 ## Syntax
 

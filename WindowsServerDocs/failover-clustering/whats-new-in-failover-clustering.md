@@ -11,9 +11,9 @@ ms.date: 10/18/2018
 ---
 # What's new in Failover Clustering
 
-> Applies to: Windows Server 2019, Windows Server 2016, Windows Server (Semi-Annual Channel)
+> Applies to: Windows Server 2019, Windows Server 2016
 
-This topic explains the new and changed functionality in Failover Clustering for Windows Server 2019, Windows Server 2016, and Windows Server Semi-Annual Channel releases.
+This topic explains the new and changed functionality in Failover Clustering for Windows Server 2019 and Windows Server 2016.
 
 ## What's new in Windows Server 2019
 
@@ -45,10 +45,10 @@ This topic explains the new and changed functionality in Failover Clustering for
 
 - **File share witness enhancements**
     We enabled the use of a file share witness in the following scenarios: 
-    - Absent or extremely poor Internet access because of a remote location, preventing the use of a cloud witness. 
-    - Lack of shared drives for a disk witness. This could be a Storage Spaces Direct hyperconverged configuration, a SQL Server Always On Availability Groups (AG), or an * Exchange Database Availability Group (DAG), none of which use shared disks. 
-    - Lack of a domain controller connection due to the cluster being behind a DMZ. 
-    - A workgroup or cross-domain cluster for which there is no Active Directory cluster name object (CNO). Find out more about these enhancements in the following post in Server & Management Blogs: Failover Cluster File Share Witness and DFS.
+  - Absent or extremely poor Internet access because of a remote location, preventing the use of a cloud witness. 
+  - Lack of shared drives for a disk witness. This could be a Storage Spaces Direct hyperconverged configuration, a SQL Server Always On Availability Groups (AG), or an * Exchange Database Availability Group (DAG), none of which use shared disks. 
+  - Lack of a domain controller connection due to the cluster being behind a DMZ. 
+  - A workgroup or cross-domain cluster for which there is no Active Directory cluster name object (CNO). Find out more about these enhancements in the following post in Server & Management Blogs: Failover Cluster File Share Witness and DFS.
     
     We now also explicitly block the use of a DFS Namespaces share as a location. Adding a file share witness to a DFS share can cause stability issues for your cluster, and this configuration has never been supported. We added logic to detect if a share uses DFS Namespaces, and if DFS Namespaces is detected, Failover Cluster Manager blocks creation of the witness and displays an error message about not being supported.
 - **Cluster hardening**
@@ -79,7 +79,7 @@ A Hyper-V or Scale-Out File Server failover cluster can now easily be upgraded w
 
 The cluster operating systems for the upgrade in phases are as follows for each node in a cluster:  
 -   The node is paused and drained of all virtual machines that are running on it. 
--   The virtual machines (or other cluster workload) are migrated to another node in the cluster. The virtual machines are migrated to another node in the cluster. 
+-   The virtual machines (or other cluster workload) are migrated to another node in the cluster. 
 -   The existing operating system is removed and a clean installation of the Windows Server 2016 operating system on the node is performed. 
 -   The node running the Windows Server 2016 operating system is added back to the cluster. 
 -   At this point, the cluster is said to be running in mixed mode, because the cluster nodes are running either  Windows Server 2012 R2 or Windows Server 2016. 
@@ -182,7 +182,7 @@ In  Windows Server 2012 R2  and previous versions, a cluster can only be created
 
 For more information, see [Workgroup and Multi-domain clusters in Windows Server 2016](http://blogs.msdn.com/b/clustering/archive/2015/08/17/10635825.aspx)  
 ### <a name="BKMK_VMLoadBalancing"></a>Virtual Machine Load Balancing  
-Virtual machine Load Balancing is a new feature in Failover Clustering that facilitates the seamless load balancing of virtual machines across the nodes in a cluster. Over-committed nodes are identified based on virtual machine Memory and CPU utilization on the node. Virtual machines are then moved (live migrated) from an over-committed node to nodes with available bandwidth (if applicable). The aggressiveness of the balancing can be tuned to ensure optimal cluster performance and utilization. Load Balancing is enabled by default in Windows Sever 2016 Technical Preview. However, Load Balancing is disabled when SCVMM Dynamic Optimization is enabled. 
+Virtual machine Load Balancing is a new feature in Failover Clustering that facilitates the seamless load balancing of virtual machines across the nodes in a cluster. Over-committed nodes are identified based on virtual machine Memory and CPU utilization on the node. Virtual machines are then moved (live migrated) from an over-committed node to nodes with available bandwidth (if applicable). The aggressiveness of the balancing can be tuned to ensure optimal cluster performance and utilization. Load Balancing is enabled by default in Windows Server 2016 Technical Preview. However, Load Balancing is disabled when SCVMM Dynamic Optimization is enabled. 
 
 ### <a name="BKMK_VMStartOrder"></a>Virtual Machine Start Order  
 Virtual machine Start Order is a new feature in Failover Clustering that introduces start order orchestration for Virtual machines (and all groups) in a cluster. Virtual machines can now be grouped into tiers, and start order dependencies can be created between different tiers. This ensures that the most important virtual machines (such as Domain Controllers or Utility virtual machines) are started first. Virtual machines are not started until the virtual machines that they have a dependency on are also started. 

@@ -6,8 +6,7 @@ ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.technology: 
-  - networking-ras
+ms.technology: networking-ras
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: e5ea9d22-a503-4ed4-96b3-0ee2ccf4fd17
@@ -145,39 +144,39 @@ If you deployed VPN on the single Remote Access server, note the following:
 ### Routing  
 In a multisite deployment symmetric routing is enforced using Teredo and IP-HTTPS. When IPv6 is deployed in the corporate network note the following:  
   
-1.  The Teredo and IP-HTTPS prefixes of each entry point must be routable across the corporate network to their associated Remote Access server.  
+1. The Teredo and IP-HTTPS prefixes of each entry point must be routable across the corporate network to their associated Remote Access server.  
   
-2.  The routes must be configured in the corporate network routing infrastructure.  
+2. The routes must be configured in the corporate network routing infrastructure.  
   
-3.  For each entry point there should be one to three routes in the internal network:  
+3. For each entry point there should be one to three routes in the internal network:  
   
-    1.  IP-HTTPS prefix-This prefix is chosen by the administrator in the Add an Entry Point wizard.  
+   1. IP-HTTPS prefix-This prefix is chosen by the administrator in the Add an Entry Point wizard.  
   
-    2.  VPN IPv6 prefix (optional). This prefix can be chosen after enabling VPN for an entry point  
+   2. VPN IPv6 prefix (optional). This prefix can be chosen after enabling VPN for an entry point  
   
-    3.  Teredo prefix (optional). This prefix is relevant only if the Remote Access server is configured with two consecutive public IPv4 addresses on the external adapter. The prefix is based on the first public IPv4 address of the address pair. For example if the external addresses are:  
+   3. Teredo prefix (optional). This prefix is relevant only if the Remote Access server is configured with two consecutive public IPv4 addresses on the external adapter. The prefix is based on the first public IPv4 address of the address pair. For example if the external addresses are:  
   
-        1.  www.xxx.yyy.zzz  
+      1. www\.xxx.yyy.zzz  
   
-        2.  www.xxx.yyy.zzz+1  
+      2. www\.xxx.yyy.zzz+1  
   
-        Then the Teredo prefix to configure is 2001:0:WWXX:YYZZ::/64, where WWXX:YYZZ is the hexadecimal representation of the IPv4 address www.xxx.yyy.zzz.  
+      Then the Teredo prefix to configure is 2001:0:WWXX:YYZZ::/64, where WWXX:YYZZ is the hexadecimal representation of the IPv4 address www\.xxx.yyy.zzz.  
   
-        Note that you can use the following script to calculate the Teredo prefix:  
+      Note that you can use the following script to calculate the Teredo prefix:  
   
-        ```  
-        $TeredoIPv4 = (Get-NetTeredoConfiguration).ServerName # Use for a Remote Access server that is already configured  
-        $TeredoIPv4 = "20.0.0.1" # Use for an IPv4 address  
+      ```  
+      $TeredoIPv4 = (Get-NetTeredoConfiguration).ServerName # Use for a Remote Access server that is already configured  
+      $TeredoIPv4 = "20.0.0.1" # Use for an IPv4 address  
   
-            [Byte[]] $TeredoServerAddressBytes = `  
-            [System.Net.IPAddress]::Parse("2001::").GetAddressBytes()[0..3] + `  
-            [System.Net.IPAddress]::Parse($TeredoIPv4).GetAddressBytes() + `  
-            [System.Net.IPAddress]::Parse("::").GetAddressBytes()[0..7]  
+          [Byte[]] $TeredoServerAddressBytes = `  
+          [System.Net.IPAddress]::Parse("2001::").GetAddressBytes()[0..3] + `  
+          [System.Net.IPAddress]::Parse($TeredoIPv4).GetAddressBytes() + `  
+          [System.Net.IPAddress]::Parse("::").GetAddressBytes()[0..7]  
   
-        Write-Host "The server's Teredo prefix is $([System.Net.IPAddress]$TeredoServerAddressBytes)/64"  
-        ```  
+      Write-Host "The server's Teredo prefix is $([System.Net.IPAddress]$TeredoServerAddressBytes)/64"  
+      ```  
   
-    4.  All of the above routes must be routed to the IPv6 address on the internal adapter of the Remote Access server (or to the internal virtual IP (VIP) address for a load balanced entry point).  
+   4. All of the above routes must be routed to the IPv6 address on the internal adapter of the Remote Access server (or to the internal virtual IP (VIP) address for a load balanced entry point).  
   
 > [!NOTE]  
 > When IPv6 is deployed in the corporate network and Remote Access server administration is performed remotely over DirectAccess, routes for the Teredo and IP-HTTPS prefixes of all other entry points must be added to each Remote Access server so that the traffic will be forwarded to the internal network.  

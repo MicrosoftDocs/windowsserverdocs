@@ -69,21 +69,21 @@ To install the certificates, follow these steps:
 ### Configure Work Folders on the client  
 To configure Work Folders on the client machine, follow these steps:  
   
-1.  On the client machine, open **Control Panel** and click **Work Folders**.  
+1. On the client machine, open **Control Panel** and click **Work Folders**.  
   
-2.  Click **Set up Work Folders**.  
+2. Click **Set up Work Folders**.  
   
-3.  On the **Enter your work email address** page, enter either the user's email address (for example, user@contoso.com) or the Work Folders URL (in the test example, https://workfolders.contoso.com), and then click **Next**.  
+3. On the **Enter your work email address** page, enter either the user's email address (for example, user@contoso.com) or the Work Folders URL (in the test example, https:\//workfolders.contoso.com), and then click **Next**.  
   
-4.  If the user is connected to the corporate network, the authentication is performed by Windows Integrated Authentication. If the user is not connected to the corporate network, the authentication is performed by ADFS (OAuth) and the user will be prompted for credentials. Enter your credentials and click **OK**.  
+4. If the user is connected to the corporate network, the authentication is performed by Windows Integrated Authentication. If the user is not connected to the corporate network, the authentication is performed by ADFS (OAuth) and the user will be prompted for credentials. Enter your credentials and click **OK**.  
   
-5.  After you have authenticated, the **Introducing Work Folders** page is displayed, where you can optionally change the Work Folders directory location. Click **Next**.  
+5. After you have authenticated, the **Introducing Work Folders** page is displayed, where you can optionally change the Work Folders directory location. Click **Next**.  
   
-6.  The **Security Policies** page lists the security policies that you set up for Work Folders. Click **Next**.  
+6. The **Security Policies** page lists the security policies that you set up for Work Folders. Click **Next**.  
   
-7.  A message is displayed stating that Work Folders has started syncing with your PC. Click **Close**.  
+7. A message is displayed stating that Work Folders has started syncing with your PC. Click **Close**.  
   
-8.  The **Manage Work Folders** page shows the amount of space available on the server, sync status, and so on. If necessary, you can re-enter your credentials here. Close the window.  
+8. The **Manage Work Folders** page shows the amount of space available on the server, sync status, and so on. If necessary, you can re-enter your credentials here. Close the window.  
   
 9. Your Work Folders folder opens automatically. You can add content to this folder to sync between your devices.  
   

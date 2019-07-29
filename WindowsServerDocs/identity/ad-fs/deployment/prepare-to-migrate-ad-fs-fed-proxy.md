@@ -30,13 +30,13 @@ To prepare to migrate an AD FS 2.0 federation server proxy to Windows Server 201
 > [!NOTE]
 >  This step is optional because this certificate is preserved during the operating system upgrade.  
   
-2.  Export AD FS 2.0 federation proxy properties to a file. You can do that by using Windows PowerShell.  
+2. Export AD FS 2.0 federation proxy properties to a file. You can do that by using Windows PowerShell.  
   
 Open Windows PowerShell and run the following command to add the AD FS cmdlets to your Windows PowerShell session: `PSH:>add-pssnapin “Microsoft.adfs.powershell”`. Then run the following command to export federation proxy properties to a file: `PSH:> Get-ADFSProxyProperties | out-file “.\proxyproperties.txt”`.  
   
-3.  Ensure you know the credentials of an account that is either an administrator of the AD FS federation server or the service account under which the AD FS federation service runs.  This information is required for the proxy trust setup.  
+3. Ensure you know the credentials of an account that is either an administrator of the AD FS federation server or the service account under which the AD FS federation service runs.  This information is required for the proxy trust setup.  
   
- Completing this step results in gathering the following information that is required to configure your AD FS federation server proxy:  
+   Completing this step results in gathering the following information that is required to configure your AD FS federation server proxy:  
   
 -   AD FS federation service name  
   

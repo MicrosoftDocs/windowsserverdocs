@@ -3,4 +3,7 @@
 ## [Storage Spaces Direct](../storage/storage-spaces/storage-spaces-direct-overview.md)
 ## [Failover Clustering](../failover-clustering/failover-clustering-overview.md)
 ## [Software Defined Networking](https://docs.microsoft.com/windows-server/networking/sdn/)
+## [Windows Admin Center](../manage/windows-admin-center/overview.md)
+## [Connect to Azure](../azure-hybrid-services/index.md)
+## [Azure Stack HCI](https://docs.microsoft.com/azure-stack/operator/azure-stack-hci-overview)
 ## [Windows Server Software-Defined (WSSD)](https://www.microsoft.com/en-us/cloud-platform/software-defined-datacenter)

@@ -14,8 +14,6 @@ ms.technology: identity-adfs
 
 # Federation Server Farm Using SQL Server
 
->Applies To: Windows Server 2016, Windows Server 2012 R2
-
 This topology for Active Directory Federation Services \(AD FS\) differs from the federation server farm using Windows Internal Database \(WID\) deployment topology in that it does not replicate the data to each federation server in the farm. Instead, all federation servers in the farm can read and write data into a common database that is stored on a server running Microsoft SQL Server that is located in the corporate network.  
   
 > [!IMPORTANT]  
@@ -123,7 +121,7 @@ Configuring an AD FS farm with AlwaysOn Availability groups requires a slight mo
   
 3.  Finally, use PowerShell to edit the AD FS properties to update the SQL connection string to use the DNS address of the AlwaysOn Availability group’s listener.  
   
-    Example PSH commands to update the SQL connection string for the AD FS policy database:  
+    Example PSH commands to update the SQL connection string for the AD FS configuration database:  
   
     ```  
     PS:\>$temp= Get-WmiObject -namespace root/ADFS -class SecurityTokenService  
@@ -132,7 +130,7 @@ Configuring an AD FS farm with AlwaysOn Availability groups requires a slight mo
   
     ```  
   
-4.  Example PSH commands to update the SQL connection string for the AD FS policy database:  
+4.  Example PSH commands to update the SQL connection string for the AD FS artifact resolution service database:  
   
     ```  
     PS:\> Set-AdfsProperties –artifactdbconnection ”Data source=<SQLCluster\SQLInstance >;Initial Catalog=AdfsArtifactStore;Integrated Security=True”  

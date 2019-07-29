@@ -9,12 +9,12 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 95ea5f7c-25c6-494b-8ffd-2a77f631ee94
 author: shirgall
-ms.author: kathydav
-ms.date: 10/03/2016
+ms.author: shirgall
+ms.date: 11/19/2018
 ---
 # Supported Ubuntu virtual machines on Hyper-V
 
->Applies To: Windows Server 2016, Hyper-V Server 2016, Windows Server 2012 R2, Hyper-V Server 2012 R2, Windows Server 2012, Hyper-V Server 2012, Windows Server 2008 R2, Windows 10, Windows 8.1, Windows 8, Windows 7.1, Windows 7
+>Applies To: Windows Server 2019, 2016, Hyper-V Server 2019, 2016, Windows Server 2012 R2, Hyper-V Server 2012 R2, Windows Server 2012, Hyper-V Server 2012, Windows Server 2008 R2, Windows 10, Windows 8.1, Windows 8, Windows 7.1, Windows 7
 
 Beginning with Ubuntu 12.04, loading the "linux-virtual" package installs a kernel suitable for use as a guest virtual machine. This package always depends on the latest minimal generic kernel image and headers used for virtual machines. While its use is optional, the linux-virtual kernel will load fewer drivers and may boot faster and have less memory overhead than a generic image.
 
@@ -30,45 +30,46 @@ The following feature distribution map indicates the features in each version. T
 
 * (*blank*) - Feature not available
 
-|**Feature**|**Windows Server operating system version**|**17.04**|**16.10**|**16.04 LTS**|**14.04 LTS**|**12.04 LTS**|
-|-|-|-|-|-|-|-|
-|**Availability**||Built-in|Built-in|Built-in|Built-in|Built-in|
-|**[Core](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_core)**|2016, 2012 R2, 2012, 2008 R2|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|
-|Windows Server 2016 Accurate Time|2016|&#10004;|&#10004;|&#10004;|||
-|**[Networking](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_Networking)**|||||||
-|Jumbo frames|2016, 2012 R2, 2012, 2008 R2|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|
-|VLAN tagging and trunking|2016, 2012 R2, 2012, 2008 R2|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|
-|Live migration|2016, 2012 R2, 2012, 2008 R2|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|
-|Static IP Injection|2016, 2012 R2, 2012|&#10004; Note 1|&#10004; Note 1|&#10004; Note 1|&#10004; Note 1|&#10004; Note 1|
-|vRSS|2016, 2012 R2|&#10004;|&#10004;|&#10004;|&#10004;||
-|TCP Segmentation and Checksum Offloads|2016, 2012 R2, 2012, 2008 R2|&#10004;|&#10004;|&#10004;|&#10004;||
-|SR-IOV|2016|&#10004;|&#10004;|&#10004;|||
-|**[Storage](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_Storage)**||||||
-|VHDX resize|2016, 2012 R2|&#10004;|&#10004;|&#10004;|&#10004;||
-|Virtual Fibre Channel|2016, 2012 R2|&#10004; Note 2|&#10004; Note 2|&#10004; Note 2|&#10004; Note 2||
-|Live virtual machine backup|2016, 2012 R2|&#10004; Note 3, 4, 6|&#10004; Note 3, 4, 6|&#10004; Note 3, 4, 5|&#10004; Note 3, 4, 5||
-|TRIM support|2016, 2012 R2|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|
-|SCSI WWN|2016, 2012 R2|&#10004;|&#10004;|&#10004;|&#10004;||
-|**[Memory](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_Memory)**||||||
-|PAE Kernel Support|2016, 2012 R2, 2012, 2008 R2|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|
-|Configuration of MMIO gap|2016, 2012 R2|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|
-|Dynamic Memory - Hot-Add|2016, 2012 R2, 2012|&#10004; Note 7, 8, 9|&#10004; Note 7, 8, 9|&#10004; Note 7, 8, 9|&#10004; Note 7, 8, 9||
-|Dynamic Memory - Ballooning|2016, 2012 R2, 2012|&#10004; Note 7, 8, 9|&#10004; Note 7, 8, 9|&#10004; Note 7, 8, 9|&#10004; Note 7, 8, 9||
-|Runtime Memory Resize|2016|&#10004;|&#10004;|&#10004;|&#10004;||
-|**[Video](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_Video)**|||||||
-|Hyper-V specific video device|2016, 2012 R2, 2012, 2008 R2|&#10004;|&#10004;|&#10004;|&#10004;||
-|**[Miscellaneous](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_Misc)**||||||
-|Key/value pair|2016, 2012 R2, 2012, 2008 R2|&#10004; Note 6, 10|&#10004; Note 6, 10|&#10004; Note 5, 10|&#10004; Note 5, 10|&#10004; Note 5, 10|
-|Non-Maskable Interrupt|2016, 2012 R2|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|
-|File copy from host to guest|2016, 2012 R2|&#10004;|&#10004;|&#10004;|&#10004;||
-|lsvmbus command|2016, 2012 R2, 2012, 2008 R2|&#10004;|&#10004;|&#10004;|&#10004;||
-|Hyper-V Sockets|2016||||||
-|PCI Passthrough/DDA|2016|&#10004;|&#10004;|&#10004;|&#10004;||
-|**[Generation 2 virtual machines](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_gen2)**||||||
-|Boot using UEFI|2016, 2012 R2|&#10004; Note 11, 12|&#10004; Note 11, 12|&#10004; Note 11, 12|&#10004; Note 11, 12||
-|Secure boot|2016|&#10004;|&#10004;|&#10004;|&#10004;||
+| **Feature**                                                                                                                                  | **Windows Server operating system version** | **19.04**             | **18.10**             | **18.04 LTS**         | **16.04 LTS**         | **14.04 LTS**         | **12.04 LTS**       |
+|----------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------|-----------------------|-----------------------|-----------------------|-----------------------|-----------------------|---------------------|
+| **Availability**                                                                                                                             |                                             | Built-in              | Built-in              | Built-in              | Built-in              | Built-in              | Built-in            |
+| **[Core](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#core)**                                                   | 2019, 2016, 2012 R2, 2012, 2008 R2          | &#10004;              | &#10004;              | &#10004;              | &#10004;              | &#10004;              | &#10004;            |
+| Windows Server 2016 Accurate Time                                                                                                            | 2019, 2016                                  | &#10004;              | &#10004;              | &#10004;              | &#10004;              |                       |                     |
+| **[Networking](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#networking)**                                       |                                             |                       |                       |                       |                       |                       |                     |
+| Jumbo frames                                                                                                                                 | 2019, 2016, 2012 R2, 2012, 2008 R2          | &#10004;              | &#10004;              | &#10004;              | &#10004;              | &#10004;              | &#10004;            |
+| VLAN tagging and trunking                                                                                                                    | 2019, 2016, 2012 R2, 2012, 2008 R2          | &#10004;              | &#10004;              | &#10004;              | &#10004;              | &#10004;              | &#10004;            |
+| Live migration                                                                                                                               | 2019, 2016, 2012 R2, 2012, 2008 R2          | &#10004;              | &#10004;              | &#10004;              | &#10004;              | &#10004;              | &#10004;            |
+| Static IP Injection                                                                                                                          | 2019, 2016, 2012 R2, 2012                   | &#10004; Note 1       | &#10004; Note 1       | &#10004; Note 1       | &#10004; Note 1       | &#10004; Note 1       | &#10004; Note 1     |
+| vRSS                                                                                                                                         | 2019, 2016, 2012 R2                         | &#10004;              | &#10004;              | &#10004;              | &#10004;              | &#10004;              |                     |
+| TCP Segmentation and Checksum Offloads                                                                                                       | 2019, 2016, 2012 R2, 2012, 2008 R2          | &#10004;              | &#10004;              | &#10004;              | &#10004;              | &#10004;              |                     |
+| SR-IOV                                                                                                                                       | 2019, 2016                                  | &#10004;              | &#10004;              | &#10004;              | &#10004;              |                       |                     |
+| **[Storage](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#storage)**                                             |                                             |                       |                       |                       |                       |                       |                     |
+| VHDX resize                                                                                                                                  | 2019, 2016, 2012 R2                         | &#10004;              | &#10004;              | &#10004;              | &#10004;              | &#10004;              |                     |
+| Virtual Fibre Channel                                                                                                                        | 2019, 2016, 2012 R2                         | &#10004; Note 2       | &#10004; Note 2       | &#10004; Note 2       | &#10004; Note 2       | &#10004; Note 2       |                     |
+| Live virtual machine backup                                                                                                                  | 2019, 2016, 2012 R2                         | &#10004; Note 3, 4, 6 | &#10004; Note 3, 4, 6 | &#10004; Note 3, 4, 5 | &#10004; Note 3, 4, 5 | &#10004; Note 3, 4, 5 |                     |
+| TRIM support                                                                                                                                 | 2019, 2016, 2012 R2                         | &#10004;              | &#10004;              | &#10004;              | &#10004;              | &#10004;              | &#10004;            |
+| SCSI WWN                                                                                                                                     | 2019, 2016, 2012 R2                         | &#10004;              | &#10004;              | &#10004;              | &#10004;              | &#10004;              |                     |
+| **[Memory](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#memory)**                                               |                                             |                       |                       |                       |                       |                       |                     |
+| PAE Kernel Support                                                                                                                           | 2019, 2016, 2012 R2, 2012, 2008 R2          | &#10004;              | &#10004;              | &#10004;              | &#10004;              | &#10004;              | &#10004;            |
+| Configuration of MMIO gap                                                                                                                    | 2019, 2016, 2012 R2                         | &#10004;              | &#10004;              | &#10004;              | &#10004;              | &#10004;              | &#10004;            |
+| Dynamic Memory - Hot-Add                                                                                                                     | 2019, 2016, 2012 R2, 2012                   | &#10004; Note 7, 8, 9 | &#10004; Note 7, 8, 9 | &#10004; Note 7, 8, 9 | &#10004; Note 7, 8, 9 | &#10004; Note 7, 8, 9 |                     |
+| Dynamic Memory - Ballooning                                                                                                                  | 2019, 2016, 2012 R2, 2012                   | &#10004; Note 7, 8, 9 | &#10004; Note 7, 8, 9 | &#10004; Note 7, 8, 9 | &#10004; Note 7, 8, 9 | &#10004; Note 7, 8, 9 |                     |
+| Runtime Memory Resize                                                                                                                        | 2019, 2016                                  | &#10004;              | &#10004;              | &#10004;              | &#10004;              | &#10004;              |                     |
+| **[Video](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#video)**                                                 |                                             |                       |                       |                       |                       |                       |                     |
+| Hyper-V specific video device                                                                                                                | 2019, 2016, 2012 R2, 2012, 2008 R2          | &#10004;              | &#10004;              | &#10004;              | &#10004;              | &#10004;              |                     |
+| **[Miscellaneous](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#miscellaneous)**                                 |                                             |                       |                       |                       |                       |                       |                     |
+| Key/value pair                                                                                                                               | 2019, 2016, 2012 R2, 2012, 2008 R2          | &#10004; Note 6, 10   | &#10004; Note 6, 10   | &#10004; Note 5, 10   | &#10004; Note 5, 10   | &#10004; Note 5, 10   | &#10004; Note 5, 10 |
+| Non-Maskable Interrupt                                                                                                                       | 2019, 2016, 2012 R2                         | &#10004;              | &#10004;              | &#10004;              | &#10004;              | &#10004;              | &#10004;            |
+| File copy from host to guest                                                                                                                 | 2019, 2016, 2012 R2                         | &#10004;              | &#10004;              | &#10004;              | &#10004;              | &#10004;              |                     |
+| lsvmbus command                                                                                                                              | 2019, 2016, 2012 R2, 2012, 2008 R2          | &#10004;              | &#10004;              | &#10004;              | &#10004;              | &#10004;              |                     |
+| Hyper-V Sockets                                                                                                                              | 2019, 2016                                  |                       |                       |                       |                       |                       |                     |
+| PCI Passthrough/DDA                                                                                                                          | 2019, 2016                                  | &#10004;              | &#10004;              | &#10004;              | &#10004;              | &#10004;              |                     |
+| **[Generation 2 virtual machines](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#generation-2-virtual-machines)** |                                             |                       |                       |                       |                       |                       |                     |
+| Boot using UEFI                                                                                                                              | 2019, 2016, 2012 R2                         | &#10004; Note 11, 12  | &#10004; Note 11, 12  | &#10004; Note 11, 12  | &#10004; Note 11, 12  | &#10004; Note 11, 12  |                     |
+| Secure boot                                                                                                                                  | 2019, 2016                                  | &#10004;              | &#10004;              | &#10004;              | &#10004;              | &#10004;              |                     |
 
-## <a name="BKMK_notes"></a>Notes
+
+## Notes
 
 1. Static IP injection may not work if **Network Manager** has been configured for a given Hyper-V-specific network adapter on the virtual machine. To ensure smooth functioning of static IP injection please ensure that Network Manager is turned off completely or has been turned off for a specific network adapter through its **ifcfg-ethX** file.
 
@@ -80,20 +81,11 @@ The following feature distribution map indicates the features in each version. T
 
 5. On long term support (LTS) releases use latest virtual Hardware Enablement (HWE) kernel for up to date Linux Integration Services.
 
-   To install the virtual HWE kernel on 16.04, run the following commands as root (or sudo):
+   To install the Azure-tuned kernel on 14.04, 16.04 and 18.04, run the following commands as root (or sudo):
 
    ```bash
    # apt-get update
-   # apt-get install linux-virtual-lts-xenial
-
-   ```
-
-   To install the virtual HWE kernel on 14.04, run the following commands as root (or sudo):
-
-   ```bash
-   # apt-get update
-   # apt-get install linux-virtual-lts-xenial
-
+   # apt-get install linux-azure
    ```
 
    12.04 does not have a separate virtual kernel. To install the generic HWE kernel on 12.04, run the following commands as root (or sudo):
@@ -101,59 +93,29 @@ The following feature distribution map indicates the features in each version. T
    ```bash
    # apt-get update
    # apt-get install linux-generic-lts-trusty
-
    ```
 
-   On Ubuntu 12.04, 14.04, and 16.04 the following Hyper-V daemons are in a separately installed package:
+   On Ubuntu 12.04 the following Hyper-V daemons are in a separately installed package:
 
    * **VSS Snapshot daemon** - This daemon is required to create live Linux virtual machine backups.
    * **KVP daemon** - This daemon allows setting and querying intrinsic and extrinsic key value pairs.
    * **fcopy daemon** - This daemon implements a file copying service between the host and guest.
-
-   To install these Hyper-V daemons on 16.04, run the following commands as root (or sudo):
-
-   ```bash
-   # apt-get install linux-tools-virtual-lts-xenial linux-cloud-tools-virtual-lts-xenial
-
-   ```
-
-   To install these Hyper-V daemons on 14.04, run the following commands as root (or sudo).
-
-   ```bash
-   # apt-get install hv-kvp-daemon-init linux-tools-virtual-lts-xenial linux-cloud-tools-virtual-lts-xenial
-
-   ```
 
    To install the KVP daemon on 12.04, run the following commands as root (or sudo).
 
    ```bash
    # apt-get install hv-kvp-daemon-init linux-tools-lts-trusty linux-cloud-tools-generic-lts-trusty
-
    ```
 
    Whenever the kernel is updated, the virtual machine must be rebooted to use it.
 
-6. On Ubuntu 17.04 and 16.10, use the latest virtual kernel to have up-to-date Hyper-V capabilities.
+6. On Ubuntu 18.10 or 19.04, use the latest virtual kernel to have up-to-date Hyper-V capabilities.
 
-   To install the virtual kernel on 17.04 and 16.10, run the following commands as root (or sudo):
+   To install the virtual kernel on 18.10 or 19.04, run the following commands as root (or sudo):
 
    ```bash
    # apt-get update
-   # apt-get install linux-image-virtual
-
-   ```
-
-   On Ubuntu 17.04 and 16.10 the following Hyper-V daemons are in a separately installed package:
-
-   * **VSS Snapshot daemon** - This daemon is required to create live Linux virtual machine backups.
-   * **KVP daemon** - This daemon allows setting and querying intrinsic and extrinsic key value pairs.
-   * **fcopy daemon** - This daemon implements a file copying service between the host and guest.
-
-   To install these Hyper-V daemons on 17.04 and 16.10, run the following commands as root (or sudo):
-
-   ```bash
-   # apt-get install linux-tools-virtual linux-cloud-tools-virtual
-
+   # apt-get install linux-azure
    ```
 
    Whenever the kernel is updated, the virtual machine must be rebooted to use it.
@@ -166,48 +128,43 @@ The following feature distribution map indicates the features in each version. T
 
    * Applications that tend to consume the entire available memory on a system are limited to consuming up to 80 percent of available RAM.
 
-9. If you are using Dynamic Memory on Windows Server 2016 or Windows Server 2012 operating systems, specify **Startup memory**, **Minimum memory**, and **Maximum memory** parameters in multiples of 128 megabytes (MB). Failure to do so can lead to Hot-Add failures, and you might not see any memory increase on a guest operating system.
+9. If you are using Dynamic Memory on Windows Server 2019, Windows Server 2016 or Windows Server 2012/2012 R2 operating systems, specify **Startup memory**, **Minimum memory**, and **Maximum memory** parameters in multiples of 128 megabytes (MB). Failure to do so can lead to Hot-Add failures, and you might not see any memory increase on a guest operating system.
 
-10. In Windows Server 2016 or Windows Server 2012 R2, the key/value pair infrastructure might not function correctly without a Linux software update. Contact your distribution vendor to obtain the software update in case you see problems with this feature.
+10. In Windows Server 2019, Windows Server 2016 or Windows Server 2012 R2, the key/value pair infrastructure might not function correctly without a Linux software update. Contact your distribution vendor to obtain the software update in case you see problems with this feature.
 
 11. On Windows Server 2012 R2, Generation 2 virtual machines have secure boot enabled by default and some Linux virtual machines will not boot unless the secure boot option is disabled. You can disable secure boot in the **Firmware** section of the settings for the virtual machine in **Hyper-V Manager** or you can disable it using Powershell:
 
-   ```Powershell
-   Set-VMFirmware -VMName "VMname" -EnableSecureBoot Off
-
-   ```
+    ```Powershell
+    Set-VMFirmware -VMName "VMname" -EnableSecureBoot Off
+    ```
 
 12. Before attempting to copy the VHD of an existing Generation 2 VHD virtual machine to create new Generation 2 virtual machines, follow these steps:
 
-   1. Log in to the existing Generation 2 virtual machine.
+    1. Log in to the existing Generation 2 virtual machine.
 
-   2. Change directory to the boot EFI directory:
+    2. Change directory to the boot EFI directory:
 
-      ```bash
-      # cd /boot/efi/EFI
+       ```bash
+       # cd /boot/efi/EFI
+       ```
 
-      ```
+    3. Copy the ubuntu directory in to a new directory named boot:
 
-   3. Copy the ubuntu directory in to a new directory named boot:
+       ```bash
+       # sudo cp -r ubuntu/ boot
+       ```
 
-      ```bash
-      # sudo cp -r ubuntu/ boot
+    4. Change directory to the newly created boot directory:
 
-      ```
+       ```bash
+       # cd boot
+       ```
 
-   4. Change directory to the newly created boot directory:
+    5. Rename the shimx64.efi file:
 
-      ```bash
-      # cd boot
-
-      ```
-
-   5. Rename the shimx64.efi file:
-
-      ```bash
-      # sudo mv shimx64.efi bootx64.efi
-
-      ```
+       ```bash
+       # sudo mv shimx64.efi bootx64.efi
+       ```
 
 ## See Also
 

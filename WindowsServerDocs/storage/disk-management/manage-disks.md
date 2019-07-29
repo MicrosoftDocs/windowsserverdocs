@@ -1,7 +1,7 @@
 ---
 title: Manage disks
 description: This article describes how to manage disks
-ms.date: 12/21/2017
+ms.date: 06/07/2019
 ms.prod: windows-server-threshold 
 ms.technology: storage 
 ms.topic: article 
@@ -11,7 +11,7 @@ ms.author: jgerend
 ---
 # Manage disks
 
-> **Applies To:** Windows 10, Windows 8.1, Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> **Applies To:** Windows 10, Windows 8.1, Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 This topic and its subtopics discuss using Disk Management to manage the disks in a computer, and includes information about initializing new disks, converting disks between different partition styles, and how Windows handles the online status of new disks.
 
@@ -24,10 +24,6 @@ In Windows, by default, all newly-discovered disks are brought online with read 
 If a disk is offline, you must bring it online before you can initialize it or create volumes on it.
 
 To bring a disk online or take it offline, right-click the disk name and then choosing the appropriate action.
-
-
-
-
 
 ## See Also
 

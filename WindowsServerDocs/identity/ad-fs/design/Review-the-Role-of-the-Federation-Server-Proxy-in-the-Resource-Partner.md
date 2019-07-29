@@ -14,8 +14,6 @@ ms.technology: identity-adfs
 
 # Review the Role of the Federation Server Proxy in the Resource Partner
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
-
 A federation server proxy in Active Directory Federation Services \(AD FS\) can function in one or more of the following roles, depending on how you configure the server to meet the needs of the resource partner organization:  
   
 -   **Account partner discovery**: An Internet client computer must identify which account partner will authenticate it. The client finds the account partner by using an account partner discovery Web form \(discoverclientrealm.aspx\), which is stored on the federation server proxy in the resource partner. If more than one account partner is configured in the AD FS Management snap\-in, a drop\-down menu appears to the client with all the available account partners that are visible to Internet client computers that access the account partner discovery Web form. You can change how the account partner discovery Web form is presented to client computers by customizing the discoverclientrealm.aspx file.  

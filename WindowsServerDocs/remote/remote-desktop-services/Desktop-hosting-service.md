@@ -15,7 +15,7 @@ manager: dougkim
 ---
 # Desktop hosting service
 
->Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016
 
 This article will tell you more about the desktop hosting service's components.
 

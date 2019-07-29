@@ -18,7 +18,7 @@ In this article, we will add an iFrame to a new, empty tool extension we have cr
 
 ## Prepare your environment ##
 
-If you haven't already, follow the directions in [develop a tool extension](..\develop-tool.md) to prepare your environment and create a new, empty tool extension.
+If you haven't already, follow the directions in [develop a tool extension](../develop-tool.md) to prepare your environment and create a new, empty tool extension.
 
 ## Add a module to your project ##
 
@@ -42,4 +42,7 @@ Add the following content to the html file:
 </div>
 ```
 
-That's it, you've added an iFrame to your extension.  Next, you can [build and side load](..\develop-tool.md#build-and-side-load-your-extension) your extension in Windows Admin Center to see the results.
+That's it, you've added an iFrame to your extension.  Next, you can [build and side load](../develop-tool.md#build-and-side-load-your-extension) your extension in Windows Admin Center to see the results.
+
+> [!Note]
+> Content Security Policy (CSP) settings could prevent some sites from rendering in an iFrame within Windows Admin Center. You can learn more about this [here](https://content-security-policy.com/). 

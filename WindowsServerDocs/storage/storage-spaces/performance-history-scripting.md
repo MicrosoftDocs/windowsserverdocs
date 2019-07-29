@@ -12,7 +12,7 @@ ms.localizationpriority: medium
 
 # Scripting with PowerShell and Storage Spaces Direct performance history
 
-> Applies To: Windows Server Insider Preview build 17692 and later
+> Applies to: Windows Server 2019
 
 In Windows Server 2019, [Storage Spaces Direct](storage-spaces-direct-overview.md) records and stores extensive [performance history](performance-history.md) for virtual machines, servers, drives, volumes, network adapters, and more. Performance history is easy to query and process in PowerShell so you can quickly go from *raw data* to *actual answers* to questions like:
 
@@ -208,7 +208,7 @@ In the screenshot below, we see the Top 10 virtual machines by storage activity:
 
 ### How it works
 
-Unlike `Get-PhysicalDisk`, the `Get-VM` cmdlet isn't cluster-aware – it only returns VMs on the local server. To query from every server in parallel, we wrap our call in `Invoke-Command (Get-ClusterNode) { ... }`. For every VM, we get the `VHD.Iops.Total`, `VHD.Iops.Read`, and `VHD.Iops.Write` measurements. By not specifying the `-TimeFrame` parameter, we get the `MostRecent` single data point for each.
+Unlike `Get-PhysicalDisk`, the `Get-VM` cmdlet isn't cluster-aware – it only returns VMs on the local server. To query from every server in parallel, we wrap our call in `Invoke-Command (Get-ClusterNode).Name { ... }`. For every VM, we get the `VHD.Iops.Total`, `VHD.Iops.Read`, and `VHD.Iops.Write` measurements. By not specifying the `-TimeFrame` parameter, we get the `MostRecent` single data point for each.
 
    > [!TIP]
    > These series reflect the sum of this VM's activity to all its VHD/VHDX files. This is an example where performance history is being automatically aggregated for us. To get the per-VHD/VHDX breakdown, you could pipe an individual `Get-VHD` into `Get-ClusterPerf` instead of the VM.
@@ -220,7 +220,7 @@ The results from every server come together as `$Output`, which we can `Sort-Obj
 Here's the script:
 
 ```
-$Output = Invoke-Command (Get-ClusterNode) {
+$Output = Invoke-Command (Get-ClusterNode).Name {
     Function Format-Iops {
         Param (
             $RawValue
@@ -250,7 +250,7 @@ $Output | Sort-Object RawIopsTotal -Descending | Select-Object -First 10 | Forma
 
 ## Sample 4: As they say, "25-gig is the new 10-gig"
 
-This sample uses the `NetAdapter.Bytes.Total` series from the `LastDay` timeframe to look for signs of network saturation, defined as >90% of theoretical maximum bandwidth. For every network adapter in the cluster, it compares the highest observed bandwidth usage in the last day to its stated link speed.
+This sample uses the `NetAdapter.Bandwidth.Total` series from the `LastDay` timeframe to look for signs of network saturation, defined as >90% of theoretical maximum bandwidth. For every network adapter in the cluster, it compares the highest observed bandwidth usage in the last day to its stated link speed.
 
 ### Screenshot
 
@@ -263,14 +263,14 @@ In the screenshot below, we see that one *Fabrikam NX-4 Pro #2* peaked in the la
 We repeat our `Invoke-Command` trick from above to `Get-NetAdapter` on every server and pipe into `Get-ClusterPerf`. Along the way, we grab two relevant properties: its `LinkSpeed` string like "10 Gbps", and its raw `Speed` integer like 10000000000. We use `Measure-Object` to obtain the average and peak from the last day (reminder: each measurement in the `LastDay` timeframe represents 5 minutes) and multiply by 8 bits per byte to get an apples-to-apples comparison.
 
    > [!NOTE]
-   > Some vendors, like Chelsio, include remote-direct memory access (RDMA) activity in their *Network Adapter* performance counters, so it's included in the `NetAdapter.Bytes.Total` series. Others, like Mellanox, may not. If your vendor doesn't, simply add the `NetAdapter.Bytes.RDMA.Total` series in your version of this script.
+   > Some vendors, like Chelsio, include remote-direct memory access (RDMA) activity in their *Network Adapter* performance counters, so it's included in the `NetAdapter.Bandwidth.Total` series. Others, like Mellanox, may not. If your vendor doesn't, simply add the `NetAdapter.Bandwidth.RDMA.Total` series in your version of this script.
 
 ### Script
 
 Here's the script:
 
 ```
-$Output = Invoke-Command (Get-ClusterNode) {
+$Output = Invoke-Command (Get-ClusterNode).Name {
 
     Function Format-BitsPerSec {
         Param (
@@ -284,8 +284,8 @@ $Output = Invoke-Command (Get-ClusterNode) {
 
     Get-NetAdapter | ForEach-Object {
 
-        $Inbound = $_ | Get-ClusterPerf -NetAdapterSeriesName "NetAdapter.Bytes.Inbound" -TimeFrame "LastDay"
-        $Outbound = $_ | Get-ClusterPerf -NetAdapterSeriesName "NetAdapter.Bytes.Outbound" -TimeFrame "LastDay"
+        $Inbound = $_ | Get-ClusterPerf -NetAdapterSeriesName "NetAdapter.Bandwidth.Inbound" -TimeFrame "LastDay"
+        $Outbound = $_ | Get-ClusterPerf -NetAdapterSeriesName "NetAdapter.Bandwidth.Outbound" -TimeFrame "LastDay"
 
         If ($Inbound -Or $Outbound) {
 
@@ -454,7 +454,7 @@ We repeat our `Invoke-Command` trick, introduced above, to `Get-VM` on every ser
 Here's the script:
 
 ```
-$Output = Invoke-Command (Get-ClusterNode) {
+$Output = Invoke-Command (Get-ClusterNode).Name {
     Function Format-Bytes {
         Param (
             $RawValue

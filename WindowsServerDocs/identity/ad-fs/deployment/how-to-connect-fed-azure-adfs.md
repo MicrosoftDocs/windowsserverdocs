@@ -13,7 +13,7 @@ ms.tgt_pltfrm: na
 ms.devlang: na
 ms.topic: get-started-article
 ms.date: 10/28/2018
-ms.component: hybrid
+ms.subservice: hybrid
 ms.author: billmath
 ms.custom: H1Hack27Feb2017
 ---
@@ -285,11 +285,6 @@ Overall, you need the following rules to efficiently secure your internal subnet
 
 ![INT access rules (inbound)](./media/how-to-connect-fed-azure-adfs/nsg_int.png)
 
-<!--
-[comment]: <> (![INT access rules (inbound)](./media/how-to-connect-fed-azure-adfs/nsgintinbound.png))
-[comment]: <> (![INT access rules (outbound)](./media/how-to-connect-fed-azure-adfs/nsgintoutbound.png))
--->
-
 **9.2. Securing the DMZ subnet**
 
 | Rule | Description | Flow |
@@ -298,11 +293,6 @@ Overall, you need the following rules to efficiently secure your internal subnet
 | DenyInternetOutbound |Anything except HTTPS to internet is blocked |Outbound |
 
 ![EXT access rules (inbound)](./media/how-to-connect-fed-azure-adfs/nsg_dmz.png)
-
-<!--
-[comment]: <> (![EXT access rules (inbound)](./media/how-to-connect-fed-azure-adfs/nsgdmzinbound.png))
-[comment]: <> (![EXT access rules (outbound)](./media/how-to-connect-fed-azure-adfs/nsgdmzoutbound.png))
--->
 
 > [!NOTE]
 > If client user certificate authentication (clientTLS authentication using X509 user certificates) is required, then AD FS requires TCP port 49443 be enabled for inbound access.
@@ -369,6 +359,5 @@ You can use an existing virtual network or create a new VNET while deploying thi
 
 ## Next steps
 * [Integrating your on-premises identities with Azure Active Directory](https://docs.microsoft.com/azure/active-directory/hybrid/whatis-hybrid-identity)
-* [Configuring and managing your AD FS using Azure AD Connect](https://docs.microsoft.com/azure/active-directory/hybrid/how-to-connect-fed-whatis.md)
+* [Configuring and managing your AD FS using Azure AD Connect](/azure/active-directory/hybrid/how-to-connect-fed-whatis)
 * [High availability cross-geographic AD FS deployment in Azure with Azure Traffic Manager](active-directory-adfs-in-azure-with-azure-traffic-manager.md)
-

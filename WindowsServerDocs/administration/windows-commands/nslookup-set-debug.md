@@ -29,11 +29,11 @@ set [no]debug
 
 ## Parameters
 
-|Parameter|Description|
-|---------|-----------|
-|**nodebug**|Turns off Debugging Mode. The default syntax is **nodebug**.|
-|**debug**|Turns on Debugging Mode.|
-|**{help | ?}**|Displays a short summary of **nslookup** subcommands.|
+|  Parameter  |                         Description                          |
+|-------------|--------------------------------------------------------------|
+| **nodebug** | Turns off Debugging Mode. The default syntax is **nodebug**. |
+|  **debug**  |                   Turns on Debugging Mode.                   |
+|  \*\*{help  |                            ?}\*\*                            |
 
 ## Remarks
 

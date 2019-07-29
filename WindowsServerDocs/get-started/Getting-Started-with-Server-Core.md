@@ -1,24 +1,22 @@
 ---
 title: Install Server Core
-description: Explains how to obtain and install a Server Core installation
-ms.custom: na
+description: How to obtain and install a Server Core installation on Windows Server 2019, Windows Server 2016, or Windows Server (Semi-Annual Channel).
 ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.suite: na
-ms.date: 10/17/2017
+ms.date: 05/21/2019
 ms.technology: server-general
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 2d22818c-fbb7-487a-bb82-81ef0a3f7ede
-author: jaimeo
-ms.author: jaimeo
+author: jasongerend
+ms.author: jgerend
 manager: dougkim
 ms.localizationpriority: medium
 ---
 # Install Server Core
-> Applies To: Windows Server (Semi-Annual Channel) and Windows Server 2016
+
+> Applies to: Windows Server 2019, Windows Server 2016, Windows Server (Semi-Annual Channel)
   
-When you install Windows Server 2016 for the first time, you have the following installation options:
+When you install Windows Server for the first time, you have the following installation options:
 
 >[!NOTE]
 > In the following list, editions without “Desktop Experience” are the Server Core installation options
@@ -28,7 +26,7 @@ When you install Windows Server 2016 for the first time, you have the following 
 -	Windows Server Datacenter
 -	Windows Server Datacenter with Desktop Experience
 
-When you install Windows Server, version 1709, you have the following installation options:
+When you install Windows Server (Semi-Annual Channel), you have the following installation options:
 
 -	Windows Server Standard 
 -	Windows Server Datacenter
@@ -45,14 +43,14 @@ With the Server Core option, the standard user interface (the Desktop Experience
 
 **Install, configure, uninstall server roles locally:** at a command prompt with Windows PowerShell.
 
-**Install, configure, uninstall server roles remotely from a Windows client computer (or server with Desktop installed:** with Server Manager, Remote Server Administration Tools (RSAT), Windows PowerShell, or Windows Admin Center.
+**Install, configure, uninstall server roles remotely from a Windows client computer (or a server with the Desktop Experience installed):** with Server Manager, Remote Server Administration Tools (RSAT), Windows PowerShell, or Windows Admin Center.
 
 >[!NOTE]
 >
 >For RSAT, you must use the Windows 10 version.
 >Microsoft Management Console is not available locally.
 
-**Server roles available:**
+**Example server roles available:**
 
 - Active Directory Certificate Services
 - Active Directory Domain Services
@@ -67,21 +65,26 @@ With the Server Core option, the standard user interface (the Desktop Experience
 - Windows Server Update Server
 - Active Directory Rights Management Server
 - Routing and Remote Access Server and the following sub-roles:
-- Remote Desktop Services Connection Broker
-- Licensing
-- Virtualization
-- Volume Activation Services
+   - Remote Desktop Services Connection Broker
+   - Licensing
+   - Virtualization
+   - Volume Activation Services
 
-## Windows Server 2016 installation
+For roles not included in Server Core, see [Roles, Role Services, and Features not in Windows Server - Server Core](../administration/server-core/server-core-removed-roles.md).
 
-To install the Server Core installation option in Windows Server 2016, see [Windows Server Installation and Upgrade](installation-and-upgrade.md).
+## Installing on Windows Server 2019 or Windows Server 2016
 
-## Windows Server, version 1709, installation
+For general installation steps and options for Windows Server (Long Term Servicing Channel), see [Windows Server Installation and Upgrade](installation-and-upgrade.md).
 
-Installation steps for Windows Server, version 1709, are the same as installing previous versions of Windows Server (from an .ISO image), with the following exceptions:
+## Installing on Windows Server (Semi-Annual Channel)
+
+Installation steps for Windows Server (Semi-Annual Channel) are the same as installing previous versions of Windows Server (from an .ISO image), with the following exceptions:
+
 - No supported upgrades from previous versions of Windows Server to Windows Server, version 1709. A fresh installation is always required.
    This means that when you run setup.exe from the desktop of a Windows computer, the setup experience does not permit the upgrade option (it is grayed out).
-- There’s no evaluation version for Windows Server, version 1709.
-- There’s no OEM or retail version. Windows Server version 1709 can only be licensed through Software Assurance or loyalty programs.
+- There’s no evaluation version for Windows Server (Semi-Annual Channel)
+- There’s no OEM or retail version. Windows Server (Semi-Annual Channel) can only be licensed through Software Assurance or loyalty programs.
 
-To get Windows Server version 1709, see [Introducing Windows Server, version 1709](get-started-with-1709.md).
+For more info about Semi-Annual Channel, see [Comparison of servicing channels](../get-started-19/servicing-channels-19.md).
+
+To see what's new in Windows Server Semi-Annual Channel, see [What's New in Windows Server](whats-new-in-windows-server.md)

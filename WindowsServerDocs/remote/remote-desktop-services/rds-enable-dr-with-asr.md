@@ -15,7 +15,7 @@ manager: dongill
 ---
 # Enable disaster recovery of RDS using Azure Site Recovery
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016
 
 To ensure that your RDS deployment is adequately configured for disaster recovery, you need to protect all of the components that make up your RDS deployment:
 
@@ -23,7 +23,7 @@ To ensure that your RDS deployment is adequately configured for disaster recover
 - SQL Server tier
 - RDS components
 - Network components
- 
+
 ## Configure Active Directory and DNS replication
 
 You need Active Directory on the disaster recovery site for your RDS deployment to work. You have two choices based on how complex your RDS deployment is:
@@ -41,9 +41,10 @@ See [Protect SQL Server using SQL Server disaster recovery and Azure Site Recove
 
 Depending on your RDS deployment type you can enable protection for different component VMs (as listed in the table below) in Azure Site Recovery. Configure the relevant Azure Site Recovery elements based on whether your VMs are deployed on Hyper-V or VMWare.
 
-| Deployment type                              | Protection steps                                                                                                                                                                                      |
-|----------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Personal virtual desktop (unmanaged)         |  1. Make sure all virtualization hosts are ready with the RDVH role installed.    </br>2. Connection Broker.  </br>3. Personal desktops. </br>4. Gold template VM. </br>5. Web Access, License server, and Gateway server |
-| Pooled virtual desktop (managed with no UPD) |  1. All virtualization hosts are ready with the RDVH role installed.  </br>2. Connection Broker.  </br>3. Gold template VM. </br>4. Web Access, License server, and Gateway server.                                  |
-| RemoteApps and Desktop Sessions (no UPD)     |  1. Session Hosts.  </br>2. Connection Broker. </br>3. Web Access, License server, and Gateway server.                                                                                                          |                                                                                                                                      |
+
+|               Deployment type                |                                                                                                     Protection steps                                                                                                     |
+|----------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|     Personal virtual desktop (unmanaged)     | 1. Make sure all virtualization hosts are ready with the RDVH role installed.    </br>2. Connection Broker.  </br>3. Personal desktops. </br>4. Gold template VM. </br>5. Web Access, License server, and Gateway server |
+| Pooled virtual desktop (managed with no UPD) |                    1. All virtualization hosts are ready with the RDVH role installed.  </br>2. Connection Broker.  </br>3. Gold template VM. </br>4. Web Access, License server, and Gateway server.                    |
+|   RemoteApps and Desktop Sessions (no UPD)   |                                                          1. Session Hosts.  </br>2. Connection Broker. </br>3. Web Access, License server, and Gateway server.                                                           |
 

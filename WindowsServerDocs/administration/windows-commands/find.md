@@ -31,16 +31,16 @@ find [/v] [/c] [/n] [/i] [/off[line]] "<String>" [[<Drive>:][<Path>]<FileName>[.
 
 ## Parameters
 
-|Parameter|Description|
-|---------|-----------|
-|/v|Displays all lines that do not contain the specified \<String>.|
-|/c|Counts the lines that contain the specified \<String>and displays the total.|
-|/n|Precedes each line with the file's line number.|
-|/i|Specifies that the search is not case-sensitive.|
-|[/off[line]]|Does not skip files that have the offline attribute set.|
-|"\<String>"|Required. Specifies the group of characters (enclosed in quotation marks) that you want to search for.|
-|[\<Drive>:][<Path>]<FileName>|Specifies the location and name of the file in which to search for the specified string.|
-|/?|Displays help at the command prompt.|
+|           Parameter           |                                              Description                                               |
+|-------------------------------|--------------------------------------------------------------------------------------------------------|
+|              /v               |                    Displays all lines that do not contain the specified \<String>.                     |
+|              /c               |              Counts the lines that contain the specified \<String>and displays the total.              |
+|              /n               |                            Precedes each line with the file's line number.                             |
+|              /i               |                            Specifies that the search is not case-sensitive.                            |
+|         [/off[line]]          |                        Does not skip files that have the offline attribute set.                        |
+|          "\<String>"          | Required. Specifies the group of characters (enclosed in quotation marks) that you want to search for. |
+| [\<Drive>:][<Path>]<FileName> |        Specifies the location and name of the file in which to search for the specified string.        |
+|              /?               |                                  Displays help at the command prompt.                                  |
 
 ## Remarks
 

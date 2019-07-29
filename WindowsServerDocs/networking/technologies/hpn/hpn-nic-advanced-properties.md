@@ -26,7 +26,7 @@ You can manage NICs and all the features via Windows PowerShell using the [NetAd
 
 2. In the **Network Control Panel** (ncpa.cpl), do the following:
 
-   a. and right-click the NIC.
+   a. Right-click the NIC.
 
    ![Network connections dialog](../../media/network-offload-and-optimization/network-connections-dialog.png)
 

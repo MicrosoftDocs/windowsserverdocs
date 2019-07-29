@@ -11,12 +11,9 @@ ms.prod: windows-server-threshold
 
 ms.technology: identity-adds
 ---
+# Appendix L: Events to Monitor
 
-# Appendix L: Events
-
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
-
-## Appendix L: Events to Monitor
+>Applies To: Windows Server
 
 The following table lists events that you should monitor in your environment, according to the recommendations provided in [Monitoring Active Directory for Signs of Compromise](../../ad-ds/plan/security-best-practices/Monitoring-Active-Directory-for-Signs-of-Compromise.md). In the following table, the "Current Windows Event ID" column lists the event ID as it is implemented in versions of Windows and Windows Server that are currently in mainstream support.  
   
@@ -172,7 +169,7 @@ A potential criticality of High means that one occurrence of the event should be
 |4707|611|Low|A trust to a domain was removed.|  
 |4709|N/A|Low|IPsec Services was started.|  
 |4710|N/A|Low|IPsec Services was disabled.|  
-|4711|N/A|Low|May contain any one of the following: PAStore Engine applied locally cached copy of Active Directory storage IPsec policy on the computer.PAStore Engine applied Active Directory storage IPsec policy on the computer.PAStore Engine applied local registry storage IPsec policy on the computer.PAStore Engine failed to apply locally cached copy of Active Directory storage IPsec policy on the computer.PAStore Engine failed to apply Active Directory storage IPsec policy on the computer.PAStore Engine failed to apply local registry storage IPsec policy on the computer.PAStore Engine failed to apply some rules of the active IPsec policy on the computer.PAStore Engine failed to load directory storage IPsec policy on the computer.PAStore Engine loaded directory storage IPsec policy on the computer.PAStore Engine failed to load local storage IPsec policy on the computer.PAStore Engine loaded local storage IPsec policy on the computer.PAStore Engine polled for changes to the active IPsec policy and detected no changes.|  
+|4711|N/A|Low|May contain any one of the following: PAStore Engine applied locally cached copy of Active Directory storage IPsec policy on the computer. PAStore Engine applied Active Directory storage IPsec policy on the computer. PAStore Engine applied local registry storage IPsec policy on the computer. PAStore Engine failed to apply locally cached copy of Active Directory storage IPsec policy on the computer. PAStore Engine failed to apply Active Directory storage IPsec policy on the computer. PAStore Engine failed to apply local registry storage IPsec policy on the computer. PAStore Engine failed to apply some rules of the active IPsec policy on the computer. PAStore Engine failed to load directory storage IPsec policy on the computer. PAStore Engine loaded directory storage IPsec policy on the computer. PAStore Engine failed to load local storage IPsec policy on the computer. PAStore Engine loaded local storage IPsec policy on the computer.PAStore Engine polled for changes to the active IPsec policy and detected no changes. |  
 |4712|N/A|Low|IPsec Services encountered a potentially serious failure.|  
 |4717|621|Low|System security access was granted to an account.|  
 |4718|622|Low|System security access was removed from an account.|  

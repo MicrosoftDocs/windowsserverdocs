@@ -7,7 +7,7 @@ ms.assetid: 915b1338-5085-481b-8904-75d29e609e93
 manager: dongill
 author: rpsqrd
 ms.technology: security-guarded-fabric
-ms.date: 08/29/2018
+ms.date: 04/01/2019
 ---
 
 # Authorize guarded hosts using TPM-based attestation
@@ -59,7 +59,7 @@ A host can only attest if all artifacts (EKPub + TPM baseline + CI Policy) use t
     > If you encounter an error when adding a TPM identifier regarding an untrusted Endorsement Key Certificate (EKCert), ensure that the [trusted TPM root certificates have been added](guarded-fabric-install-trusted-tpm-root-certificates.md) to the HGS node.
     > Additionally, some TPM vendors do not use EKCerts.
     > You can check if an EKCert is missing by opening the XML file in an editor such as Notepad and checking for an error message indicating no EKCert was found.
-    > If this is the case, and you trust that the TPM in your machine is authentic, you can use the -PolicyVersion v1 parameter beginning with Windows Server 2019, or the -Force parameter in Windows Server 2016, to add the host identifier to HGS by using v1 attestation. The CI policy and the TPM baseline need to be created by using the same attestation version.
+    > If this is the case, and you trust that the TPM in your machine is authentic, you can use the `-Force` parameter to add the host identifier to HGS. In Windows Server 2019, you need to also use the `-PolicyVersion v1` parameter when using `-Force`. This creates a policy consistent with the Windows Server 2016 behavior and will require you to use `-PolicyVersion v1` when registering the CI policy and the TPM baseline as well.
 
 ## Create and apply a code integrity policy
 
@@ -72,22 +72,21 @@ Code integrity policies can be configured to enforce the policy, blocking any so
 
 Starting with Windows Server version 1709, sample code integrity policies are included with Windows at C:\Windows\schemas\CodeIntegrity\ExamplePolicies. Two policies are recommended for Windows Server:
 
-- **AllowMicrosoft**: Allows all files signed by Microsoft. THis policy is recommended for server applications such as SQL or Exchange, or if the server is monitored by agents published by Microsoft.
+- **AllowMicrosoft**: Allows all files signed by Microsoft. This policy is recommended for server applications such as SQL or Exchange, or if the server is monitored by agents published by Microsoft.
 - **DefaultWindows_Enforced**: Allows only files that shipped in Windows and doesn't permit other applications released by Microsoft, such as Office. This policy is recommended for servers that run only built-in server roles and features such as Hyper-V. 
 
 It is recommended that you first create the CI policy in audit (logging) mode to see if it's missing anything, then enforce the policy for host production workloads. 
 
 If you use the [New-CIPolicy](https://docs.microsoft.com/powershell/module/configci/new-cipolicy?view=win10-ps) cmdlet to generate your own code integrity policy, you will need to decide the rule levels to use. 
-For Server Core, we recommend a primary level of **FilePublisher** with fallback to **Hash**. 
-This allows files with publishers to be updated without changing the CI policy. 
-Addition of new files or modifications to files without publishers (which are measured with a hash) will require you to create a new CI policy matching the new system requirements. 
-For Server with Desktop Experience, we recommend a primary level of **Publisher** with fallback to **Hash**. 
+We recommend a primary level of **Publisher** with fallback to **Hash**, which allows most digitally signed software to be updated without changing the CI policy.
+New software written by the same publisher can also be installed on the server without changing the CI policy.
+Executables that are not digitally signed will be hashed -- updates to these files will require you to create a new CI policy.
 For more information about the available CI policy rule levels, see [Deploy code integrity policies: policy rules and file rules](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-application-control/select-types-of-rules-to-create#windows-defender-application-control-policy-rules) and cmdlet help.
 
-1.  On the reference host, generate a new code integrity policy. The following commands create a policy at the **FilePublisher** level with fallback to **Hash**. It then converts the XML file to the binary file format Windows and HGS need to apply and measure the CI policy, respectively.
+1.  On the reference host, generate a new code integrity policy. The following commands create a policy at the **Publisher** level with fallback to **Hash**. It then converts the XML file to the binary file format Windows and HGS need to apply and measure the CI policy, respectively.
 
     ```powershell
-    New-CIPolicy -Level FilePublisher -Fallback Hash -FilePath 'C:\temp\HW1CodeIntegrity.xml' -UserPEs
+    New-CIPolicy -Level Publisher -Fallback Hash -FilePath 'C:\temp\HW1CodeIntegrity.xml' -UserPEs
 
     ConvertFrom-CIPolicy -XmlFilePath 'C:\temp\HW1CodeIntegrity.xml' -BinaryFilePath 'C:\temp\HW1CodeIntegrity.p7b'
     ```
@@ -99,8 +98,11 @@ For more information about the available CI policy rule levels, see [Deploy code
 
 3.  Apply the CI policy to your reference host:
 
-    1.  Copy the binary CI policy file (HW1CodeIntegrity.p7b) to the following location on your reference host (the filename must exactly match):<br>
-        **C:\\Windows\\System32\\CodeIntegrity\\SIPolicy.p7b**
+    1.  Run the following command to configure the machine to use your CI policy. You can also deploy the CI policy with [Group Policy](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-application-control/deploy-windows-defender-application-control-policies-using-group-policy) or [System Center Virtual Machine Manager](https://docs.microsoft.com/system-center/vmm/guarded-deploy-host?view=sc-vmm-2019#manage-and-deploy-code-integrity-policies-with-vmm).
+
+        ```powershell
+        Invoke-CimMethod -Namespace root/Microsoft/Windows/CI -ClassName PS_UpdateAndCompareCIPolicy -MethodName Update -Arguments @{ FilePath = "C:\temp\HW1CodeIntegrity.p7b" }
+        ```
 
     2.  Restart the host to apply the policy.
 
@@ -117,8 +119,8 @@ For more information about the available CI policy rule levels, see [Deploy code
 5.  Apply the CI policy to all of your hosts (with identical hardware and software configuration) using the following commands:
 
     ```powershell
-    Copy-Item -Path '<Path to HW1CodeIntegrity\_enforced.p7b>' -Destination 'C:\Windows\System32\CodeIntegrity\SIPolicy.p7b'
-
+    Invoke-CimMethod -Namespace root/Microsoft/Windows/CI -ClassName PS_UpdateAndCompareCIPolicy -MethodName Update -Arguments @{ FilePath = "C:\temp\HW1CodeIntegrity.p7b" }
+    
     Restart-Computer
     ```
 
@@ -167,5 +169,5 @@ A TPM baseline is required for each unique class of hardware in your datacenter 
 
 ## Next step
 
->[!div class="nextstepaction"]
-[Confirm attestation](guarded-fabric-confirm-hosts-can-attest-successfully.md)
+> [!div class="nextstepaction"]
+> [Confirm attestation](guarded-fabric-confirm-hosts-can-attest-successfully.md)

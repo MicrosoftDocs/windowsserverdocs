@@ -12,13 +12,13 @@ ms.assetid: 12efe858-6b76-4e08-9f72-b9603aceb0fc
 author: lizap
 manager: dongill
 ms.author: elizapo
-ms.date: 06/22/2018
+ms.date: 05/20/2019
 ms.localizationpriority: medium
 ---
 
 # Compare the client apps
 
->Applies To: Windows 10, Windows 8.1, Windows Server 2012 R2, Windows Server 2016
+>Applies to: Windows 10, Windows 8.1, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2
 
 We're often asked how the different Remote Desktop client apps compare to each other. Do they all do the same thing? Here are the answers to those questions.
 
@@ -30,12 +30,14 @@ If you remote into your personal desktop, there are additional redirections that
 
 ### Input redirection
 
-| Redirection | Remote Desktop<br> Connection | Universal | Android | iOS | macOS | web client |
-|-------------|-------------------------------|-----------|---------|-----|-------|------------|
-| Keyboard    | X                             | X         | X       | X   | X     | X          |
-| Mouse       | X                             | X         | X       |     | X     | X          |
-| Touch       | X                             | X         | X       | X   |       |            |
-| Other       | Pen                           |           |         |     |       |            |
+| Redirection | Remote Desktop<br> Connection | Universal | Android | iOS | macOS |          web client           |
+|-------------|-------------------------------|-----------|---------|-----|-------|-------------------------------|
+|  Keyboard   |               X               |     X     |    X    |  X  |   X   |               X               |
+|    Mouse    |               X               |     X     |    X    | X\* |   X   |               X               |
+|    Touch    |               X               |     X     |    X    |  X  |       | X (Edge and IE not supported) |
+|    Other    |              Pen              |           |         |     |       |                               |
+
+*View the [list of supported input devices for the Remote Desktop iOS Beta client](remote-desktop-ios.md#supported-input-devices).
 
 ### Port redirection   
 

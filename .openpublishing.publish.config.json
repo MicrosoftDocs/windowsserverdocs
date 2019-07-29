@@ -1,10 +1,8 @@
 {
   "build_entry_point": "op",
-  "need_generate_pdf": true,
-  "need_generate_intellisense": false,
   "docsets_to_publish": [
     {
-      "docset_name": "WindowsServerDocs-VSTS",
+      "docset_name": "WindowsServerDocs-pr",
       "build_source_folder": "WindowsServerDocs",
       "build_output_subfolder": "WindowsServerDocs-VSTS",
       "locale": "en-us",
@@ -20,7 +18,7 @@
       "version": 0
     },
     {
-      "docset_name": "EssentialsDocs-VSTS",
+      "docset_name": "WindowsServerEssentialsDocs-pr",
       "build_source_folder": "EssentialsDocs",
       "build_output_subfolder": "EssentialsDocs-VSTS",
       "locale": "en-us",

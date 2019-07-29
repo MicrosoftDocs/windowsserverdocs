@@ -17,15 +17,13 @@ ms.technology: identity-adds
 
 Active Directory replication problems can have several different sources. For example, Domain Name System (DNS) problems, networking issues, or security problems can all cause Active Directory replication to fail. 
 
-The rest of this topic explains tools and a general methodology to fix Active Directory replication errors. For a hands-on lab that demonstrates how to troubleshoot Active Directory replication problems, see [TechNet Virtual Lab: Troubleshooting Active Directory Replication Errors](https://go.microsoft.com/?linkid=9844718)
-
-The following subtopics cover symptoms, causes, and how to resolve specific replication errors:
+The rest of this topic explains tools and a general methodology to fix Active Directory replication errors. The following subtopics cover symptoms, causes, and how to resolve specific replication errors:
 
 ## Introduction and resources for troubleshooting Active Directory replication
 
 Inbound or outbound replication failure causes Active Directory objects that represent the replication topology, replication schedule, domain controllers, users, computers, passwords, security groups, group memberships, and Group Policy to be inconsistent between domain controllers. Directory inconsistency and replication failure cause either operational failures or inconsistent results, depending on the domain controller that is contacted for the operation, and can prevent the application of Group Policy and access control permissions. Active Directory Domain Services (AD DS) depends on network connectivity, name resolution, authentication and authorization, the directory database, the replication topology, and the replication engine. When the root cause of a replication problem is not immediately obvious, determining the cause among the many possible causes requires systematic elimination of probable causes.
 
-For a UI-based tool to help monitor replication and diagnose errors, see [Active Directory Replication Status Tool](https://www.microsoft.com/download/details.aspx?id=30005). There is also a [hands-on lab](https://go.microsoft.com/?linkid=9844718) that demonstrates how to use Active Directory Replication Status and other tools to troubleshoot errors.
+For a UI-based tool to help monitor replication and diagnose errors, see [Active Directory Replication Status Tool](https://www.microsoft.com/download/details.aspx?id=30005)
 
 For a comprehensive document that describes how you can use the Repadmin tool to troubleshoot Active Directory replication is available; see [Monitoring and Troubleshooting Active Directory Replication Using Repadmin](https://go.microsoft.com/fwlink/?LinkId=122830).
 
@@ -126,7 +124,7 @@ Tools:
 ### To generate a repadmin /showrepl spreadsheet for domain controllers
 
 1. Open a Command Prompt as an administrator: On the Start menu, right-click Command Prompt, and then click Run as administrator. If the User Account Control dialog box appears, provide Enterprise Admins credentials, if required, and then click Continue.
-2. At the command prompt, type the following command, and then press ENTER: `repadmin /showrepl * /csv &gt;showrepl.csv`
+2. At the command prompt, type the following command, and then press ENTER: `repadmin /showrepl * /csv > showrepl.csv`
 3. Open Excel.
 4. Click the Office button, click Open, navigate to showrepl.csv, and then click Open.
 5. Hide or delete column A as well as the Transport Type column, as follows:
@@ -173,7 +171,7 @@ The following table lists common events that might indicate problems with Active
 |1311 NTDS KCC|The replication configuration information in AD DS does not accurately reflect the physical topology of the network.|Fixing Replication Topology Problems (Event ID 1311)| 
 |1388 NTDS Replication|Strict replication consistency is not in effect, and a lingering object has been replicated to the domain controller.|Fixing Replication Lingering Object Problems (Event IDs 1388, 1988, 2042)|
 |1925 NTDS KCC|The attempt to establish a replication link for a writable directory partition failed. This event can have different causes, depending on the error.| Fixing Replication Connectivity Problems (Event ID 1925) Fixing Replication DNS Lookup Problems (Event IDs 1925, 2087, 2088)| 
-|1988 NTDS Replication|The local domain controller has attempted to replicate an object from a source domain controller that is not present on the local domain controller because it may have been deleted and already garbage-collected. Replication will not proceed for this directory partition with this partner until the situation is resolved.|Fixing Replication Lingering Object Problems (Event IDs 1388, 1988, 2042)|
+|1988 NTDS Replication|The local domain controller has attempted to replicate an object from a source domain controller that is not present on the local domain controller because it may have been deleted and already garbage-collected. Replication does not proceed for this directory partition with this partner until the situation is resolved.|Fixing Replication Lingering Object Problems (Event IDs 1388, 1988, 2042)|
 |2042 NTDS Replication|Replication has not occurred with this partner for a tombstone lifetime, and replication cannot proceed.|Fixing Replication Lingering Object Problems (Event IDs 1388, 1988, 2042)| 
 |2087 NTDS Replication|AD DS could not resolve the DNS host name of the source domain controller to an IP address, and replication failed.|Fixing Replication DNS Lookup Problems (Event IDs 1925, 2087, 2088)| 
 |2088 NTDS Replication |AD DS could not resolve the DNS host name of the source domain controller to an IP address, but replication succeeded.|Fixing Replication DNS Lookup Problems (Event IDs 1925, 2087, 2088)|

@@ -13,8 +13,6 @@ ms.technology: identity-adfs
 ---
 # Change the illustration on the AD FS sign-in page
 
->Applies To: Windows Server 2016, Windows Server 2012 R2
-
 ## Change the Illustration  
 
 

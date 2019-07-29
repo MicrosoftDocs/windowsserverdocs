@@ -52,7 +52,7 @@ It is controlled by a policy on HGS, which is disabled by default.
 To enable support for offline mode, run the following command on an HGS node:
 
 ```powershell
-Set-HgsKeyProtectionConfiguration -AllowKeyMaterialCaching
+Set-HgsKeyProtectionConfiguration -AllowKeyMaterialCaching:$true
 ```
 
 Since the cacheable key protectors are unique to each shielded VM, you will need to fully shut down (not restart) and start up your shielded VMs to obtain a cacheable key protector after this setting is enabled on HGS.

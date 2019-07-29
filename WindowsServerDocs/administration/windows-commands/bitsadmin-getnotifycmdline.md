@@ -1,6 +1,6 @@
 ---
 title: bitsadmin getnotifycmdline
-description: "Windows Commands topic for **bitsadmin getnotifycmdline** - Retrieves the command-line command that is ran when the job finishes transferring data."
+description: "Windows Commands topic for **bitsadmin getnotifycmdline** - Retrieves the command-line command that is run when the job finishes transferring data."
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -17,9 +17,9 @@ ms.date: 10/16/2017
 
 # bitsadmin getnotifycmdline
 
+Retrieves the command-line command to execute when the job finishes transferring data.
 
-
-Retrieves the command-line command that is ran when the job finishes transferring data.
+**BITS 1.2 and earlier**: Not supported.
 
 ## Syntax
 

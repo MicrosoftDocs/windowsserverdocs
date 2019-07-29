@@ -23,6 +23,10 @@
 #### [Filter, sort, and query Data in Server Manager Tiles](server-manager/filter-sort-and-query-data-in-server-manager-tiles.md)
 #### [Keyboard Shortcuts for Server Manager](server-manager/keyboard-shortcuts-for-server-manager.md)
 ### [Manage Server Core and remote systems Remote Server Administration Tools](../remote/remote-server-administration-tools.md)
+### [Manage Windows with OpenSSH](OpenSSH/OpenSSH_Overview.md)
+#### [Getting started with OpenSSH](OpenSSH/OpenSSH_Install_FirstUse.md)
+#### [Configuring Windows for OpenSSH](OpenSSH/OpenSSH_Server_Configuration.md)
+#### [Managing OpenSSH Keys](OpenSSH/OpenSSH_KeyManagement.md)
 ### [Windows Server Update Services (WSUS)](windows-server-update-services/get-started/windows-server-update-services-wsus.md)
 #### [Deploy Windows Server Update Services](windows-server-update-services/deploy/deploy-windows-server-update-services.md)
 ##### [Plan your WSUS deployment](windows-server-update-services/plan/plan-your-wsus-deployment.md)
@@ -67,13 +71,3 @@
 ## Automate Windows Server management
 ### [Windows PowerShell scripting](/powershell/scripting/powershell-scripting?view=powershell-5.1)
 ### [Windows Commands](windows-commands/windows-commands.md)
-
-
-<!--
-#### [A-Z list](windows-commands/a-z-list.md)
-#### [Command-Line Syntax Key](windows-commands/command-line-syntax-key.md)
-#### [Commands by Server Role](windows-commands/commands-by-server-role.md)
-##### [Print Command Reference](windows-commands/print-command-reference.md)
-##### [Services for Network File System Command Reference](windows-commands/services-for-network-file-system-command-reference.md)
-##### [Remote Desktop Services (Terminal Services) Command Reference](windows-commands/remote-desktop-services-terminal-services-command-reference.md)
-##### [Windows Server Backup Command Reference](windows-commands/windows-server-backup-command-reference.md) -->

@@ -15,17 +15,17 @@ ms.date: 10/16/2017
 
 >Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-After installing the WSUS server role on your server, you need to properly configure it. The following checklist summarises the steps involved in performing the initial configuration for your WSUS server.
+After installing the WSUS server role on your server, you need to properly configure it. The following checklist summarizes the steps involved in performing the initial configuration for your WSUS server.
 
 |Task|Description|
 |----|--------|
-|[2.1. Configure network connections](2-configure-wsus.md#BKM_ConfigurenetworkConnections)|Configure the cluster network by using the Network Configuration Wizard.|
-|[2.2. Configure WSUS by using the WSUS Configuration Wizard](2-configure-wsus.md#BKM_ConfigureWSUSusingConfigurationWizard)|Use the WSUS Configuration wizard to perform the base WSUS configuration.|
-|[2.3. Configure WSUS computer groups](2-configure-wsus.md#BKMK_ConfigcomputerGroups)|Create computer groups in the WSUS administration console to manage updates in your organization.|
-|[2.4. Configure client updates](2-configure-wsus.md#BKM_ConfigureClientUpdates)|Specify how and when automatic updates are applied to client computers.|
-|[2.5. Secure WSUS with the Secure Sockets Layer Protocol](2-configure-wsus.md#bkmk_2.5.ConfigSSL)|Configure Secure Sockets Layer (SSL) protocol to help protect Windows Server Update Services (WSUS).|
+|[2.1. Configure network connections](#21-configure-network-connections)|Configure the cluster network by using the Network Configuration Wizard.|
+|[2.2. Configure WSUS by using the WSUS Configuration Wizard](#22-configure-wsus-by-using-the-wsus-configuration-wizard)|Use the WSUS Configuration wizard to perform the base WSUS configuration.|
+|[2.3. Configure WSUS computer groups](#23-configure-wsus-computer-groups)|Create computer groups in the WSUS administration console to manage updates in your organization.|
+|[2.4. Configure client updates](#24-configure-client-updates)|Specify how and when automatic updates are applied to client computers.|
+|[2.5. Secure WSUS with the Secure Sockets Layer Protocol](#25-secure-wsus-with-the-secure-sockets-layer-protocol)|Configure Secure Sockets Layer (SSL) protocol to help protect Windows Server Update Services (WSUS).|
 
-## <a name="BKM_ConfigurenetworkConnections"></a>2.1. Configure network connections
+## 2.1. Configure network connections
 Before you start the configuration process, be sure that you know the answers to the following questions:
 
 1.  Is the server's firewall configured to allow clients to access the server?
@@ -48,31 +48,35 @@ When you have the answers for these questions, you can start configuring the fol
 -   **Firewall** if you identified that WSUS is behind a corporate firewall, there are some additional steps that must be done at the edge device to properly allow WSUS traffic.
 
 ### 2.1.1. Connection from the WSUS server to the Internet
-if there is a corporate firewall between WSUS and the Internet, you might have to configure that firewall to ensure WSUS can obtain updates. To obtain updates from Microsoft Update, the WSUS server uses port 443 for HTTPS protocol. Although most of corporate firewalls allow this type of traffic, there are some companies that restrict Internet access from the servers due the company's security policies. if your company restricts access, you need to obtain authorization to allow Internet access from WSUS to the following list of URLs:
+If there is a corporate firewall between WSUS and the Internet, you might have to configure that firewall to ensure WSUS can obtain updates. To obtain updates from Microsoft Update, the WSUS server uses port 443 for HTTPS protocol. Although most of corporate firewalls allow this type of traffic, there are some companies that restrict Internet access from the servers due the company's security policies. if your company restricts access, you need to obtain authorization to allow Internet access from WSUS to the following list of URLs:
 
--   http://windowsupdate.microsoft.com
+- http://windowsupdate.microsoft.com
 
--   http://*.windowsupdate.microsoft.com
+- http://*.windowsupdate.microsoft.com
 
--   https://*.windowsupdate.microsoft.com
+- https://*.windowsupdate.microsoft.com
 
--   http://*.update.microsoft.com
+- http://*.update.microsoft.com
 
--   https://*.update.microsoft.com
+- https://*.update.microsoft.com
 
--   http://*.windowsupdate.com
+- http://*.windowsupdate.com
 
--   http://download.windowsupdate.com
+- http://download.windowsupdate.com
 
--   https://download.microsoft.com
+- https://download.microsoft.com
 
--   http://*.download.windowsupdate.com
+- http://*.download.windowsupdate.com
 
--   http://wustat.windows.com
+- http://wustat.windows.com
 
--   http://ntservicepack.microsoft.com
+- http://ntservicepack.microsoft.com
 
--   http://go.microsoft.com
+- http://go.microsoft.com
+
+- http://dl.delivery.mp.microsoft.com
+
+- https://dl.delivery.mp.microsoft.com
 
 > [!IMPORTANT]
 > For a scenario in which WSUS is failing to obtain updates due firewall configurations, see [article 885819](https://support.microsoft.com/kb/885819) in the Microsoft Knowledge Base.
@@ -153,7 +157,7 @@ To add the proxy server that uses the HTTP protocol to the WSUS configuration, u
 
     2.  Click **OK**.
 
-## <a name="BKM_ConfigureWSUSusingConfigurationWizard"></a>2.2. Configure WSUS by using the WSUS Configuration Wizard
+## 2.2. Configure WSUS by using the WSUS Configuration Wizard
 This procedure assumes that you are using the WSUS Configuration Wizard, which appears the first time you launch the WSUS Management Console. Later in this topic, you will learn how to perform these configurations by using the **Options** page:
 
 #### To configure WSUS
@@ -195,7 +199,7 @@ This procedure assumes that you are using the WSUS Configuration Wizard, which a
 10. On the **Choose Languages** page, you have the option to select the languages from which WSUS will receive updates - all languages or a subset of languages. selecting a subset of languages will save disk space, but it is IMPORTANT to choose all of the languages that are needed by all the clients of this WSUS server. if you choose to get updates only for specific languages, select **Download updates only in these languages**, and then select the languages for which you want updates; otherwise, leave the default selection.
 
     > [!WARNING]
-    > if you select the option **Download updates only in these languages**, and this server has a downstream WSUS server connected to it, this option will force the downstream server to also use only the selected languages.
+    > If you select the option **Download updates only in these languages**, and this server has a downstream WSUS server connected to it, this option will force the downstream server to also use only the selected languages.
 
 11. After selecting the appropriate language options for your deployment, click **Next** to continue.
 
@@ -221,7 +225,7 @@ This procedure assumes that you are using the WSUS Configuration Wizard, which a
 
 Now that you have performed the basic WSUS configuration, read the next sections for more details about changing the settings by using WSUS Management Console.
 
-## <a name="BKMK_ConfigcomputerGroups"></a>2.3. Configure WSUS computer groups
+## 2.3. Configure WSUS computer groups
 computer groups are an IMPORTANT part of Windows Server Update Services (WSUS) deployments. Computer groups permit you to test and target updates to specific computers. There are two default computer groups: All computers and Unassigned computers. By default, when each client computer first contacts the WSUS server, the server adds that client computer to both of these groups.
 
 You can create as many custom computer groups as you need to manage updates in your organization. As a best practice, create at least one computer group to test updates before you deploy them to other computers in your organization.
@@ -240,7 +244,7 @@ Use the following procedure to create a new group and assign a computer to this 
 
 5.  In the **Set computer Group Membership** dialog box, select the test group that you created, and then click **OK**.
 
-## <a name="BKM_ConfigureClientUpdates"></a>2.4. Configure client updates
+## 2.4. Configure client updates
 WSUS Setup automatically configures IIS to distribute the latest version of Automatic Updates to each client computer that contacts the WSUS server. The best way to configure Automatic Updates depends on the network environment.
 
 -   In an environment that uses active directory directory service, you can use an existing domain-based Group Policy Object (GPO) or create a new GPO.
@@ -254,10 +258,11 @@ Use the following procedures to configure Automatic Updates for client computers
 
 -   [Step 4: Configure Group Policy Settings for Automatic Updates](4-configure-group-policy-settings-for-automatic-updates.md)
 
--   [2.3. Configure computer groups](2-configure-wsus.md#BKMK_ConfigcomputerGroups) in this topic
+-   [2.3. Configure computer groups](#23-configure-wsus-computer-groups) in this topic
 
-### <a name="BKMK_ConfigureAU"></a>Configure Automatic Updates in Group Policy
-if you have set up active directory in your network, you can configure one or multiple computers simultaneously by including them in a Group Policy Object (GPO), and then configuring that GPO with WSUS settings. We recommend that you create a new GPO that contains only WSUS settings.
+### Configure Automatic Updates in Group Policy
+
+If you have set up active directory in your network, you can configure one or multiple computers simultaneously by including them in a Group Policy Object (GPO), and then configuring that GPO with WSUS settings. We recommend that you create a new GPO that contains only WSUS settings.
 
 Link this WSUS GPO to an active directory container that is appropriate for your environment. In a simple environment, you might link a single WSUS GPO to the domain. In a more complex environment, you might link multiple WSUS GPOs to several organizational units (OUs), which will enable you to apply different WSUS policy settings to different types of computers.
 
@@ -309,28 +314,29 @@ Because waiting for detection to start can be a time-consuming process, you can 
 
 2.  type wuauclt.exe /detectnow, and then press ENTER.
 
-## <a name="bkmk_2.5.ConfigSSL"></a>2.5. Secure WSUS with the Secure Sockets Layer Protocol
+## 2.5. Secure WSUS with the Secure Sockets Layer Protocol
+
 You can use the Secure Sockets Layer (SSL) protocol to help secure the WSUS deployment. WSUS uses SSL to authenticate client computers and downstream WSUS servers to the WSUS server. WSUS also uses SSL to encrypt update metadata.
 
 > [!IMPORTANT]
 > Clients and downstream servers that are configured to use Transport Layer Security (TLS) or HTTPS must also be configured to use a fully qualified domain name (FQDN) for their upstream WSUS server.
 
-WSUS uses SSL for metadata only, not for update files. This is the same way that Microsoft Update distributes updates. Microsoft reduces the risk of sending update files over an unencrypted channel by signing each update. In addition, a hash is computed and sent together with the metadata for each update. When an update is downloaded, WSUS checks the digital signature and hash. if the update has been changed, it is not installed.
+WSUS uses SSL for metadata only, not for update files. This is the same way that Microsoft Update distributes updates. Microsoft reduces the risk of sending update files over an unencrypted channel by signing each update. In addition, a hash is computed and sent together with the metadata for each update. When an update is downloaded, WSUS checks the digital signature and hash. If the update has been changed, it is not installed.
 
-### <a name="ssllmits"></a>Limitations of WSUS SSL deployments
+### Limitations of WSUS SSL deployments
 You must consider the following limitations when you use SSL to secure a WSUS deployment:
 
 1.  Using SSL increases the server workload. You should expect a 10 percent loss of performance because of the cost of encrypting all the metadata that is sent over the network.
 
-2.  if you use WSUS with a remote SQL Server database, the connection between the WSUS server and the database server is not secured by SSL. if the database connection must be secured, consider the following recommendations:
+2.  If you use WSUS with a remote SQL Server database, the connection between the WSUS server and the database server is not secured by SSL. If the database connection must be secured, consider the following recommendations:
 
 -   move the WSUS database to the WSUS server.
 
 -   move the remote database server and the WSUS server to a private network.
 
--   Deploy Internet Protocol security (IPsec) to help secure network traffic. For more information about IPsec, see [Creating and Using IPsec Policies](https://go.microsoft.com/fwlink/?LinkID=203841).
+-   deploy Internet Protocol security (IPsec) to help secure network traffic. For more information about IPsec, see [Creating and Using IPsec Policies](https://go.microsoft.com/fwlink/?LinkID=203841).
 
-### <a name="consswsus"></a>Configure SSL on the WSUS server
+### Configure SSL on the WSUS server
 WSUS requires two ports for SSL: one port that uses HTTPS to send encrypted metadata, and one port that uses HTTP to send updates. When you configure WSUS to use SSL, consider the following:
 
 -   You cannot configure the whole WSUS website to require SSL because all traffic to the WSUS site would have to be encrypted. WSUS encrypts update metadata only. if a computer attempts to retrieve update files on the HTTPS port, the transfer will fail.
@@ -387,7 +393,7 @@ WSUS requires two ports for SSL: one port that uses HTTPS to send encrypted meta
 
     *certificateName* is the DNS name of the WSUS server.
 
-### <a name="consslclient"></a>Configure SSL on client computers
+### Configure SSL on client computers
 When you configure SSL on client computers, you should consider the following issues:
 
 -   You must include a URL for a secure port on the WSUS server. Because you cannot require SSL on the server, the only way to make sure that client computers can use a security channel is by using a URL that specifies HTTPS. if you use any port other than 443 for SSL, you must include that port in the URL also.
@@ -396,7 +402,7 @@ When you configure SSL on client computers, you should consider the following is
 
 -   The client computers must trust the certificate that you bind to the WSUS server. Depending on the type of certificate that is used, you might have to set up a service to enable the client computers to trust the certificate that is bound to the WSUS server.
 
-### <a name="consslds"></a>Configure SSL for downstream WSUS servers
+### Configure SSL for downstream WSUS servers
 The following instructions configure a downstream server to synchronize to an upstream server that uses SSL.
 
 ##### To synchronize a downstream server to an upstream server that uses SSL
@@ -415,7 +421,7 @@ The following instructions configure a downstream server to synchronize to an up
 
 7.  select the **Use SSL when synchronizing update information** check box, and then click **OK**.
 
-### <a name="addlsl"></a>additional SSL resources
+### additional SSL resources
 The steps that are required to set up a certification authority, bind the certificate to the WSUS website, and establish a trust between the client computers and the certificate are beyond the scope of this guide. For more information and for instructions about how to install certificates and set up this environment, see the following topics:
 
 -   [Suite B PKI Step-by-Step Guide](https://go.microsoft.com/fwlink/?LinkID=203858)

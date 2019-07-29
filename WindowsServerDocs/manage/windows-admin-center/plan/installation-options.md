@@ -1,31 +1,32 @@
 ---
 title: What type of installation is right for you
-description: What type of installation is right for you Windows Admin Center (Project Honolulu). Install on a failover cluster for high availability and resiliency.
+description: This topic describes the different installation options for Windows Admin Center, including installing on a Windows 10 PC or a Windows server for use by multiple admins. 
 ms.technology: manage
 ms.topic: article
 author: nwashburn-ms
 ms.author: niwashbu
-ms.date: 09/23/2018
 ms.localizationpriority: medium
 ms.prod: windows-server-threshold
+ms.date: 06/07/2019
 ---
-
 # What type of installation is right for you?
 
 >Applies To: Windows Admin Center, Windows Admin Center Preview
+
+This topic describes the different installation options for Windows Admin Center, including installing on a Windows 10 PC or a Windows server for use by multiple admins. To install Windows Admin Center on a VM in Azure, see [Deploy Windows Admin Center in Azure](../azure/deploy-wac-in-azure.md).
 
 ## Supported operating systems: Installation
 
 You can **install** Windows Admin Center on the following Windows operating systems:
 
-| **Version** | **Installation mode** |
-|-------------|-----------------------|
-|Windows 10, version 1709 or newer | Desktop mode |
-|Windows Server Semi-Annual Channel | Gateway mode |
-|Windows Server 2016 | Gateway mode |
-|Windows Server 2019 | Gateway mode |
+| **Version**  | **Installation mode** |
+| -------------| -----------------------|
+| Windows 10, version 1709 or newer | Desktop mode |
+| Windows Server Semi-Annual Channel | Gateway mode |
+| Windows Server 2016 | Gateway mode |
+| Windows Server 2019 | Gateway mode |
 
-**Desktop mode:** Connect to the Windows Admin Center gateway from the same computer on which it's installed (i.e. `https://localhost:6516`)
+**Desktop mode:** Launch from the Start Menu and connect to the Windows Admin Center gateway from the same computer on which it's installed (i.e. `https://localhost:6516`)
 
 **Gateway mode:** Connect to the Windows Admin Center gateway from a client browser on a different machine (i.e. `https://servername.contoso.com`) 
 
@@ -40,29 +41,31 @@ You can **install** Windows Admin Center on the following Windows operating syst
 
 You can **manage** the following Windows operating systems using Windows Admin Center:
 
-| Version | Manage *node* via *Server Manager* | Manage *cluster* via *Failover Cluster Manager* | Manage *HCI* via *HCI Cluster Manager*|
-|-------------------------|---------------|-----|------------------------|
+| Version | Manage *node* via *Server Manager* | Manage *cluster* via *Failover Cluster Manager* | Manage *HCI* via *HCI Cluster Manager* |
+| ------------------------- |--------------- | ----- | ------------------------ |
 | Windows 10, version 1709 or newer | Yes (via Computer Management) | N/A | N/A |
 | Windows Server Semi-Annual Channel | Yes | Yes | N/A |
 | Windows Server 2019 | Yes | Yes | Yes |
 | Windows Server 2016 | Yes | Yes | Yes, with [latest cumulative update](../use/manage-hyper-converged.md#prepare-your-windows-server-2016-cluster-for-windows-admin-center) |
+| Microsoft Hyper-V Server 2016 | Yes | Yes | N/A |
 | Windows Server 2012 R2 | Yes | Yes | N/A |
+| Microsoft Hyper-V Server 2012 R2 | Yes | Yes | N/A |
 | Windows Server 2012 | Yes | Yes | N/A |
 | Windows Server 2008 R2 | Yes, limited functionality | N/A | N/A |
 
 > [!NOTE]
 > Windows Admin Center requires PowerShell features that are not included in Windows Server 2008 R2, 2012, and 2012 R2. If you will manage these with Windows Admin Center, you will need to install Windows Management Framework (WMF) version 5.1 or higher on those servers.
-
->Type `$PSVersiontable` in PowerShell to verify that WMF is installed,
-and that the version is 5.1 or higher. 
-
->If WMF is not installed, you can [download WMF 5.1](https://www.microsoft.com/en-us/download/details.aspx?id=54616).
+> 
+> Type `$PSVersiontable` in PowerShell to verify that WMF is installed,
+> and that the version is 5.1 or higher. 
+> 
+> If WMF is not installed, you can [download WMF 5.1](https://www.microsoft.com/en-us/download/details.aspx?id=54616).
 
 ## Deployment options
 
 | ![img](../media/deployment-options/W10.png) | ![img](../media/deployment-options/gateway.png) | ![img](../media/deployment-options/node.png) | ![img](../media/deployment-options/HA.png) |
-|---|---|---|---|
-
+| --------------------------------------------- | ------------------------------------------------- |----------------------------------------------|-------------------------------------------- |
+|                                             |                                                 |                                              |                                            |
 
 | Local Client | Gateway Server | Managed Server | Failover Cluster |
 | --- | --- | --- | --- |

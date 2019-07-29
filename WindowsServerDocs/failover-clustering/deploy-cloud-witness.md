@@ -7,14 +7,14 @@ ms.author: jgerend
 ms.technology: storage-failover-clustering
 ms.topic: article
 author: JasonGerend
-ms.date: 04/25/2018
+ms.date: 01/18/2019
 description: How to use Microsoft Azure to host the witness for a Windows Server Failover Cluster in the cloud - aka how to deploy a Cloud Witness.
 ---
 # Deploy a Cloud Witness for a Failover Cluster
 
-> Applies to: Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
+> Applies to: Windows Server 2019, Windows Server 2016
 
-Cloud Witness is a new type of Failover Cluster quorum witness being introduced in Windows Server 2016. This topic provides an overview of the Cloud Witness feature, the scenarios that it supports, and instructions about how to configure a cloud witness for a Failover Cluster that is running Windows Server 2016.
+Cloud Witness is a type of Failover Cluster quorum witness that uses Microsoft Azure to provide a vote on cluster quorum. This topic provides an overview of the Cloud Witness feature, the scenarios that it supports, and instructions about how to configure a cloud witness for a Failover Cluster.
 
 ## <a name="CloudWitnessOverview"></a>Cloud Witness overview
 
@@ -129,14 +129,14 @@ Cloud Witness configuration is well-integrated within the existing Quorum Config
     **Figure 8. Select the Quorum Witness**  
 
 5. On the **Configure Cloud Witness** page, enter the following information:  
-    1. (Required parameter) Azure Storage Account Name.  
-    2. (Required parameter) Access Key corresponding to the Storage Account.  
-        1. When creating for the first time, use Primary Access Key (see figure 5)  
-        2. When rotating the Primary Access Key, use Secondary Access Key (see figure 5)  
-    3. (Optional parameter) If you intend to use a different Azure service endpoint (for example the Microsoft Azure service in China), then update the endpoint server name.  
+   1. (Required parameter) Azure Storage Account Name.  
+   2. (Required parameter) Access Key corresponding to the Storage Account.  
+       1. When creating for the first time, use Primary Access Key (see figure 5)  
+       2. When rotating the Primary Access Key, use Secondary Access Key (see figure 5)  
+   3. (Optional parameter) If you intend to use a different Azure service endpoint (for example the Microsoft Azure service in China), then update the endpoint server name.  
 
-    ![Snapshot of the Cloud Witness configuration pane in the Cluster Quorum wizard](media/Deploy-a-Cloud-Witness-for-a-Failover-Cluster/CloudWitness_10.png)  
-    **Figure 9: Configure your Cloud Witness**
+      ![Snapshot of the Cloud Witness configuration pane in the Cluster Quorum wizard](media/Deploy-a-Cloud-Witness-for-a-Failover-Cluster/CloudWitness_10.png)  
+      **Figure 9: Configure your Cloud Witness**
 
 6. Upon successful configuration of Cloud Witness, you can view the newly created witness resource in the Failover Cluster Manager snap-in (see figure 10).
 

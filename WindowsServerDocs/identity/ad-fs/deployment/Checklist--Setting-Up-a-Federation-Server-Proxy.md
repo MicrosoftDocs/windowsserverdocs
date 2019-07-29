@@ -14,8 +14,6 @@ ms.author: billmath
 
 # Checklist: Setting Up a Federation Server Proxy
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
-
 This checklist includes the deployment tasks for preparing a server running Windows Server® 2012 for the federation server proxy role in Active Directory Federation Services \(AD FS\).  
   
 > [!NOTE]  

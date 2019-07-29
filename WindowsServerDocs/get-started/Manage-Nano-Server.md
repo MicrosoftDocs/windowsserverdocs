@@ -33,9 +33,9 @@ To use any remote management tool, you will probably need to know the IP address
 ## Using Windows PowerShell remoting  
 To manage Nano Server with Windows PowerShell remoting, you need to add the IP address of the Nano Server to your management computer's list of trusted hosts, add the account you are using to the Nano Server's administrators, and enable CredSSP if you plan to use that feature.  
 
- >[!NOTE]  
-    > If the target Nano Server and your management computer are in the same AD DS forest (or in forests with a trust relationship), you should not add the Nano Server to the trusted hosts list--you can connect to the Nano Server by using its fully qualified domain name, for example:
-    PS C:\> Enter-PSSession -ComputerName nanoserver.contoso.com -Credential (Get-Credential)
+> [!NOTE]
+> If the target Nano Server and your management computer are in the same AD DS forest (or in forests with a trust relationship), you should not add the Nano Server to the trusted hosts list--you can connect to the Nano Server by using its fully qualified domain name, for example:
+>     PS C:\> Enter-PSSession -ComputerName nanoserver.contoso.com -Credential (Get-Credential)
   
   
 To add the Nano Server to the list of trusted hosts, run this command at an elevated Windows PowerShell prompt:  
@@ -46,7 +46,7 @@ To start the remote Windows PowerShell session, start an elevated local Windows 
   
   
 ```  
-$ip = "\<IP address of Nano Server>"  
+$ip = "<IP address of Nano Server>"  
 $user = "$ip\Administrator"  
 Enter-PSSession -ComputerName $ip -Credential $user  
 ```  
@@ -67,7 +67,7 @@ Start the CIM session by running these commands in a Windows PowerShell prompt:
   
 ```  
 $ip = "<IP address of the Nano Server\>"  
-$ip\Administrator  
+$user = $ip\Administrator  
 $cim = New-CimSession -Credential $user -ComputerName $ip  
 ```  
   
@@ -84,15 +84,17 @@ Get-CimInstance -CimSession $Cim -Query "SELECT * from Win32_Process WHERE name 
 ## Windows Remote Management  
 You can run programs remotely on the Nano Server with Windows Remote Management (WinRM). To use WinRM, first configure the service and set the code page with these commands at an elevated command prompt:  
   
-**winrm quickconfig**  
-  
-**winrm set winrm/config/client @{TrustedHosts="<ip address of Nano Server"}**  
-  
-**chcp 65001**  
+```
+winrm quickconfig
+winrm set winrm/config/client @{TrustedHosts="<ip address of Nano Server>"}
+chcp 65001
+```
   
 Now you can run commands remotely on the Nano Server. For example:  
-  
-**winrs -r:\<IP address of Nano Server> -u:Administrator -p:\<Nano Server administrator password> ipconfig**  
+
+```
+winrs -r:<IP address of Nano Server> -u:Administrator -p:<Nano Server administrator password> ipconfig
+```
   
 For more information about Windows Remote Management, see [Windows Remote Management (WinRM) Overview](https://technet.microsoft.com/library/dn265971.aspx).  
    
@@ -110,7 +112,7 @@ Stop-NetEventSession [-Name]
 ```  
 These cmdlets are documented in detail at [Network Event Packet Capture Cmdlets in Windows PowerShell](https://technet.microsoft.com/library/dn268520(v=wps.630).aspx)  
 
-##Installing servicing packages  
+## Installing servicing packages  
 If you want install a servicing packages, use the -ServicingPackagePath parameter (you can pass an array of paths to .cab files):  
   
 `New-NanoServerImage -DeploymentType Guest -Edition Standard -MediaPath \\Path\To\Media\en_us -BasePath .\Base -TargetPath .\NanoServer.wim -ServicingPackagePath \\path\to\kb123456.cab`  
@@ -230,7 +232,7 @@ The high-level workflow remains the same as on any Window Server installation --
 The following sections list the most common performance data collection activities along with a supported way to accomplish them on Nano Server.
 
 ### Query available event providers
-[Windows Performance Recorder](https://msdn.microsoft.com/en-us/library/hh448229.aspx) is tool to query available event providers as follows:
+[Windows Performance Recorder](https://msdn.microsoft.com/library/hh448229.aspx) is tool to query available event providers as follows:
 ```
 wpr.exe -providers
 ```

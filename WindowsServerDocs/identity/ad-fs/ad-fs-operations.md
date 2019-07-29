@@ -11,9 +11,9 @@ ms.prod: windows-server-threshold
 
 ms.technology: identity-adfs
 ---
-# AD FS 2016 Operations
+# AD FS Operations
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 This document contains a list of all of the documentation operations for AD FS for Windows Server 2016. This includes the following:  
   
@@ -45,14 +45,16 @@ This document contains a list of all of the documentation operations for AD FS f
 - [Create a Claims Provider Trust](../ad-fs/operations/Create-a-Claims-Provider-Trust.md) 
 - [Create a Non-Claims Aware Relying Party Trust](../ad-fs/operations/Create-a-Non-Claims-Aware-Relying-Party-Trust.md)
 - [Create a Relying Party Trust](../ad-fs/operations/Create-a-Relying-Party-Trust.md)
+- [Customize HTTP security response headers with AD FS 2019](../ad-fs/operations/customize-http-security-headers-ad-fs.md)
+- [Delegate AD FS Powershell Commandlet Access to Non-Admin Users](../ad-fs/operations/delegate-ad-fs-pshell-access.md)
 - [Device Authentication Controls in AD FS](../ad-fs/operations/device-authentication-controls-in-AD-FS.md) 
-- [GDPR Compliance and AD FS](../ad-fs/operations/GDPR-and-AD-FS-Compliance.md)
 - [Improved interoperability with SAML 2.0](../ad-fs/operations/Improved-interoperability-with-SAML-2.0.md)
 - [Join to Workplace from Any Device for SSO and Seamless Second Factor Authentication Across Company Applications](../ad-fs/operations/Join-to-Workplace-from-Any-Device-for-SSO-and-Seamless-Second-Factor-Authentication-Across-Company-Applications.md)
 - [Manage Risk with Additional Multi-Factor Authentication for Sensitive Applications](../ad-fs/operations/Manage-Risk-with-Additional-Multi-Factor-Authentication-for-Sensitive-Applications.md)
 - [Manage Risk with Conditional Access Control](../ad-fs/operations/Manage-Risk-with-Conditional-Access-Control.md)
 - [Managing SSL Certificates in AD FS and WAP 2016](../ad-fs/operations/Manage-SSL-Certificates-AD-FS-WAP-2016.md)
 - [Set up an AD FS lab environment](../ad-fs/operations/Set-up-an-AD-FS-lab-environment.md)
+- [SQL fine tuning and addressing latency](../ad-fs/operations/adfs-sql-latency.md) 
 - [Walkthrough Guide: Manage Risk with Additional Multi-Factor Authentication for Sensitive Applications](../ad-fs/operations/Walkthrough-Guide--Manage-Risk-with-Additional-Multi-Factor-Authentication-for-Sensitive-Applications.md)
 - [Walkthrough Guide: Manage Risk with Conditional Access Control](../ad-fs/operations/Walkthrough-Guide--Manage-Risk-with-Conditional-Access-Control.md)
 - [Walkthrough: Workplace Join with a Windows Device](../ad-fs/operations/Walkthrough--Workplace-Join-with-a-Windows-Device.md)

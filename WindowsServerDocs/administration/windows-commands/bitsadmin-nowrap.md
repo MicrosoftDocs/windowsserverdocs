@@ -17,8 +17,6 @@ ms.date: 10/16/2017
 
 # bitsadmin nowrap
 
-
-
 Truncates any line of output text extending beyond the rightmost edge of the command window.
 
 ## Syntax
@@ -29,7 +27,7 @@ bitsadmin /NoWrap
 
 ## Remarks
 
-By default, all commands, except the **Monitor** command, wrap the output. Specify the **NoWrap** command before other commands.
+By default, all switches, except the **Monitor** switch, wrap the output. Specify the **NoWrap** switch before other switches.
 
 ## <a name="BKMK_examples"></a>Examples
 

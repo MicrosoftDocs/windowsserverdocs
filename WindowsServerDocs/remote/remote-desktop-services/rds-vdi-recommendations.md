@@ -7,7 +7,7 @@ ms.reviewer: na
 ms.suite: na
 ms.technology: remote-desktop-services
 ms.author: elizapo
-ms.date: 06/12/2017
+ms.date: 12/18/2018
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 2a44dc9f-c221-4bf7-89c3-fb4c86a90f8c
@@ -16,7 +16,7 @@ manager: dougkim
 ---
 # Recommended settings for VDI desktops
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows10
+>Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows 10
 
 Microsoft Desktop Virtualization automatically detects device configurations and network conditions to get users up and running sooner by enabling the instant setup of corporate applications and desktops, and it equips IT to provide access to legacy applications during migration to Windows 10.
 
@@ -416,9 +416,9 @@ Collapse **System**, and then expand **Windows Components**. Adjust each setting
 
 At the same level as the **Internet Explorer** settings you just adjusted in the preceding table, note another level of folders ranging from **Accelerators** to **Toolbars**. In other words, you are now at Local Computer Policy > Computer Configuration > Administrative Templates > Windows Components > Internet Explorer. 
 
-Open the **Delete Browsing History** folder, double-click **Allow deleting browing history on exit**, select **Enable**, and then click **OK** to save and exit.
+Open the **Delete Browsing History** folder, double-click **Allow deleting browsing history on exit**, select **Enable**, and then click **OK** to save and exit.
 
-Use the back arrow in the upper left of Local Group Policy Editor to go back to the **Internet Explorer** level. Double-click **Advanced Settings**, and then adjust the settings in the subfolders as follows:
+Use the back arrow in the upper left of Local Group Policy Editor to go back to the **Internet Explorer** level. Double-click **Internet Settings**, double-click **Advanced Settings**, and then adjust the settings in the subfolders as follows:
 
 |Setting folder under **Advanced Settings**|Setting|Recommended value for VDI use|  
 |-------------------|-------|----------|

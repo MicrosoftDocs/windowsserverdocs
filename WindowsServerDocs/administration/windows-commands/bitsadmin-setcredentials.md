@@ -17,9 +17,9 @@ ms.date: 10/16/2017
 
 # bitsadmin setcredentials
 
-
-
 Adds credentials to a job.
+
+**BITS 1.2 and earlier**: Not supported.
 
 ## Syntax
 

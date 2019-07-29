@@ -5,14 +5,13 @@ ms.technology: manage
 ms.topic: article
 author: nwashburn-ms
 ms.author: niwashbu
-ms.date: 06/18/2018
 ms.localizationpriority: medium
 ms.prod: windows-server-threshold
+ms.date: 06/07/2019
 ---
-
 # What is Windows Admin Center?
 
->Applies To: Windows Admin Center, Windows Admin Center Preview
+> Applies to: Windows Admin Center, Windows Admin Center Preview
 
 Windows Admin Center is a new, locally-deployed, browser-based management tool set that lets you manage your Windows Servers with no Azure or cloud dependency. Windows Admin Center gives you full control over all aspects of your server infrastructure and is particularly useful for managing servers on private networks that are not connected to the Internet.
 
@@ -22,7 +21,7 @@ Windows Admin Center is the modern evolution of "in-box" management tools, like 
 
 ## How does Windows Admin Center work?
 
-Windows Admin Center runs in a web browser and manages Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2, Windows 10, and more through the **Windows Admin Center gateway** installed on Windows Server 2016 or Windows 10. The gateway manages servers by using Remote PowerShell and WMI over WinRM. The gateway is included with Windows Admin Center in a single lightweight .msi package that you can [download](https://aka.ms/windowsadmincenter).
+Windows Admin Center runs in a web browser and manages Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2, Windows 10, and more through the **Windows Admin Center gateway** installed on Windows Server or Windows 10. The gateway manages servers by using Remote PowerShell and WMI over WinRM. The gateway is included with Windows Admin Center in a single lightweight .msi package that you can [download](https://aka.ms/windowsadmincenter).
 
 The Windows Admin Center gateway, when published to DNS and given access through corresponding corporate firewalls, lets you securely connect to, and manage, your servers from anywhere with Microsoft Edge or Google Chrome.
 
@@ -38,7 +37,7 @@ Windows Admin Center is the evolution of long-standing, well known management pl
 
 [Install](../deploy/install.md) on a Windows 10 computer, and start managing in minutes, or install on a Windows 2016 server acting as a gateway to enable your entire organization to manage computers from their web browser.
 
-### **Complements existing solutions** 
+### **Complements existing solutions**
 
 Windows Admin Center works with solutions like System Center and Azure management and security, adding to their capabilities to perform detailed, single-machine management tasks.
 

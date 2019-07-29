@@ -17,9 +17,9 @@ ms.date: 10/16/2017
 
 # bitsadmin getreplydata
 
-
-
 Retrieves the server's reply data in hexadecimal format.
+
+**BITS 1.2 and earlier**: Not supported.
 
 ## Syntax
 

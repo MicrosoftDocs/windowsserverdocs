@@ -13,7 +13,6 @@ ms.technology: identity-adfs
 ---
 # AD FS Customization in Windows Server 2016
 
->Applies To: Windows Server 2016
 
 In response to feedback from organizations using AD FS, we have added additional tools to customize the user sign in experience for individual applications protected by AD FS.  
 In addition to specifying per-application web content such as description text and links, now you can specify entire web themes per application.  This includes logo, illustration, style sheets, or an entire onload.js file.  
@@ -66,7 +65,7 @@ To assign a custom theme per RP use the following procedure:
   
 1. Create a new theme as a copy for the default, global theme in AD FS  
 <code>New-AdfsWebTheme -Name AppSpecificTheme -SourceName default</code>  
-2.  Export the theme for customization  
+2. Export the theme for customization  
 <code>Export-AdfsWebTheme -Name AppSpecificTheme -DirectoryPath c:\appspecifictheme</code>  
 3. Customize theme files (images, css, onload.js) - in your favorite editor or replace the file  
 4. Import customized files from the file system to AD FS (targeting the new theme)  

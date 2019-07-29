@@ -17,9 +17,9 @@ ms.date: 10/16/2017
 
 # bitsadmin util and version
 
+Displays the version of BITS service (for example, 2.0).
 
-
-Displays the version of BITS service.
+**BITSAdmin 1.5 and earlier**: Not supported.
 
 ## Syntax
 
@@ -29,7 +29,7 @@ bitsadmin /Util /Version [/Verbose]
 
 ## Remarks
 
-The **Verbose** command performs the following:
+The **Verbose** switch performs the following:
 -   Displays the file version for each BITS related DLL
 -   Verifies the BITS Service can be started
 -   Displays BITS Group Policy values (Windows Vista only)

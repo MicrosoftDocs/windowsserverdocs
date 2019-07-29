@@ -41,25 +41,26 @@ prompt [<Text>]
 You can customize the command prompt to display any text you want, including such information as the name of the current directory, the time and date, and the Microsoft Windows version number.
 
 The following table lists the character combinations that you can include instead of, or in addition to, one or more character strings in the *Text* parameter. The list includes a brief description of the text or information that each character combination adds to your command prompt.  
-|Character|Description|
-|---------|-----------|
-|$q|= (equal sign)|
-|$$|$ (dollar sign)|
-|$t|Current time|
-|$d|Current date|
-|$p|Current drive and path|
-|$v|Windows version number|
-|$n|Current drive|
-|$g|> (greater than sign)|
-|$l|< (less than sign)|
-|$b|| (pipe)|
-|$_|ENTER-LINEFEED|
-|$e|ANSI escape code (code 27)|
-|$h|Backspace (to delete a character that has been written to the command line)|
-|$a|& (ampersand)|
-|$c|( (left parenthesis)|
-|$f|) (right parenthesis)|
-|$s|space|
+
+| Character |                                 Description                                 |
+|-----------|-----------------------------------------------------------------------------|
+|    $q     |                               = (equal sign)                                |
+|    $$     |                               $ (dollar sign)                               |
+|    $t     |                                Current time                                 |
+|    $d     |                                Current date                                 |
+|    $p     |                           Current drive and path                            |
+|    $v     |                           Windows version number                            |
+|    $n     |                                Current drive                                |
+|    $g     |                            > (greater than sign)                            |
+|    $l     |                             < (less than sign)                              |
+|    $b     |                              \| (pipe symbol)                               |
+|    $_     |                               ENTER-LINEFEED                                |
+|    $e     |                         ANSI escape code (code 27)                          |
+|    $h     | Backspace (to delete a character that has been written to the command line) |
+|    $a     |                                & (ampersand)                                |
+|    $c     |                            ( (left parenthesis)                             |
+|    $f     |                            ) (right parenthesis)                            |
+|    $s     |                                    space                                    |
 
 When command extensions are enabled (that is, the default) the **prompt** command supports the following formatting characters:  
 

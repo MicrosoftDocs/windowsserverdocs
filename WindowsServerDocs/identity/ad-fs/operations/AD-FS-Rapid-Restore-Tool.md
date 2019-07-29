@@ -5,15 +5,13 @@ description:
 author: billmath
 ms.author: billmath
 manager: femila
-ms.date: 09/19/2018
+ms.date: 07/02/2019
 ms.topic: article
 ms.prod: windows-server-threshold
 
 ms.technology: identity-adfs
 ---
 # AD FS Rapid Restore Tool
-
->Applies To: Windows Server 2016, Windows Server 2012 R2
 
 ## Overview
 Today AD FS is made highly available by setting up an AD FS farm. Some organizations would like a way to have a single server AD FS deployment, eliminating the need for multiple AD FS servers and network load balancing infrastructure, while still having some assurance that service can be restored quickly if there is a problem.
@@ -26,6 +24,9 @@ The AD FS Rapid Restore tool can be used in the following scenarios:
 	- Use the tool to create a cold standby installation of AD FS that can be quickly deployed in place of the online AD FS server
 2. Deploy identical test and production environments
 	- Use the tool to quickly create an accurate copy of the production AD FS in a test environment, or to quickly deploy a validated test configuration to production
+
+>[!NOTE] 
+>If you are using SQL Merge Replication or Always on Availablity Groups, the Rapid Restore tool is not supported. We recommend using SQL based backups and a backup of the SSL certificate as an alternative.
 
 ## What is backed up
 The tool backs up the following AD FS configuration
@@ -217,6 +218,23 @@ Every time a backup or restore is performed a log file is created. These can be 
 > When performing a restore a PostRestore_Instructions file might be created containing an overview of the additional authentication providers, attribute stores and local claims provider trusts to be installed manually before starting the AD FS service.
 
 ## Version Release History
+
+### Version 1.0.82.0
+Release: July 2019
+
+**Fixed issues:**
+- Bug fix for AD FS service account names that contain LDAP escape characters
+
+
+### Version: 1.0.81.0
+Release: April 2019
+
+**Fixed issues:**
+
+
+- Bug fixes for certificate backup and restore
+- Additional trace information to the log file
+
 
 ### Version: 1.0.75.0
 Release: August 2018

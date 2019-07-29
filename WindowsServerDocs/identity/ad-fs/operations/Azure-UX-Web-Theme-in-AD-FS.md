@@ -26,28 +26,30 @@ You can download the web theme from the following Github [location](https://gith
 To enable the new web theme use the following procedure:
 
 ### To enable the new Azure AD UX web theme in AD FS
-1.  Start PowerShell as an Administrator
-2.  Create a new web theme using PowerShell:  `New-AdfsWebTheme –Name custom –StyleSheet @{path="c:\NewTheme.css"}`
-3.  Set the new theme as the active theme using PowerShell:  `Set-AdfsWebConfig -ActiveThemeName custom`
-![PowerShell](media/Azure-UX-Web-Theme-in-AD-FS/two.png)
-4.  Test the sign-in by going to https://<AD FS name.domain>/adfs/ls/idpinitiatedsignon.htm
-![Sign-on](media/Azure-UX-Web-Theme-in-AD-FS/three.png)
+1. Start PowerShell as an Administrator
+2. Create a new web theme using PowerShell:  `New-AdfsWebTheme –Name custom –StyleSheet @{path="c:\NewTheme.css"}`
+3. Set the new theme as the active theme using PowerShell:  `Set-AdfsWebConfig -ActiveThemeName custom`
+   ![PowerShell](media/Azure-UX-Web-Theme-in-AD-FS/two.png)
+4. Test the sign-in by going to https://<AD FS name.domain>/adfs/ls/idpinitiatedsignon.htm
+   ![Sign-on](media/Azure-UX-Web-Theme-in-AD-FS/three.png)
 
->![NOTE]
->You need to ensure that idpinitiatedsignon has been enabled.  It is not enabled by default.  To enable idpinitiatedsignon use the following PowerShell command:  `Set-AdfsProperties –EnableIdpInitiatedSignonPage $True`
+> ![NOTE]
+> You need to ensure that idpinitiatedsignon has been enabled.  It is not enabled by default.  To enable idpinitiatedsignon use the following PowerShell command:  `Set-AdfsProperties –EnableIdpInitiatedSignonPage $True`
 
 ## Image Recommendations
 Enabling the centered UI enables you to use the same images for background and logo that you might already have for Azure Active Directory company branding. Generally, the same recommendations for size, ratio, and format do apply.
 
 ### Logo
+
 Description | Constraints | Recommendations
 ------- | ------- | ----------
 The logo is displayed on top of the login panel. | Transparent JPG or PNG<br>Max height: 36 px<br>Max width: 245 px | Use your organization’s logo here.<br>Use a transparent image. Don’t assume that the background will be white.<br>Do not add padding around your logo in the image or your logo will look disproportionately small.
 
 ### Background
+
 Description | Constraints | Recommendations
 ------- | ------- | ----------
-This option appears in the background of the sign-in page, is anchored to the center of the viewable space, and scales and crops to fill the browser window.	<br>On narrow screens such as mobile phones, this image is not shown.<br>A black mask with 0.55 opacity is applied over this image when the page is loaded. | JPG or PNG<br>Image dimensions: 1920x1080 px<br>File size: &lt; 300 KB | <br>Use images where there isn't a strong subject focus. The opaque sign-in form appears over the center of this image and can cover any part of the image, depending on the size of the browser window.<br>Keep the file size small to ensure quick load times.
+This option appears in the background of the sign-in page, is anchored to the center of the viewable space, and scales and crops to fill the browser window.    <br>On narrow screens such as mobile phones, this image is not shown.<br>A black mask with 0.55 opacity is applied over this image when the page is loaded. | JPG or PNG<br>Image dimensions: 1920x1080 px<br>File size: &lt; 300 KB | <br>Use images where there isn't a strong subject focus. The opaque sign-in form appears over the center of this image and can cover any part of the image, depending on the size of the browser window.<br>Keep the file size small to ensure quick load times.
 
 ## Next Steps
 - [AD FS Customization in Windows Server 2016](AD-FS-Customization-in-Windows-Server-2016.md)

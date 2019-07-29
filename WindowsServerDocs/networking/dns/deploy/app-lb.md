@@ -73,7 +73,7 @@ You can use the following Windows PowerShell commands to create zone scopes.
 
 For more information, see [Add-DnsServerZoneScope](https://docs.microsoft.com/powershell/module/dnsserver/add-dnsserverzonescope?view=win10-ps)
 
-####<a name="bkmk_records"></a>Add Records to the Zone Scopes
+#### <a name="bkmk_records"></a>Add Records to the Zone Scopes
 
 Now you must add the records representing the web server host into the zone scopes.
 
@@ -94,7 +94,7 @@ You can use the following Windows PowerShell commands to add records to the zone
 
 For more information, see [Add-DnsServerResourceRecord](https://docs.microsoft.com/powershell/module/dnsserver/add-dnsserverresourcerecord?view=win10-ps).
 
-####<a name="bkmk_policies"></a>Create the DNS Policies
+#### <a name="bkmk_policies"></a>Create the DNS Policies
 
 After you have created the partitions (zone scopes) and you have added records, you must create DNS policies that distribute the incoming queries across these scopes so that 50% of queries for contosogiftservices.com are responded to with the IP address for the Web server in the Seattle datacenter and the rest are equally distributed between the Chicago and Dallas datacenters.
 
@@ -103,7 +103,7 @@ You can use the following Windows PowerShell commands to create a DNS policy tha
 >[!NOTE]
 >In the example command below, the expression –ZoneScope "SeattleZoneScope,2; ChicagoZoneScope,1; DallasZoneScope,1" configures the DNS server with an array that includes the parameter combination \<ZoneScope\>,\<weight\>.
     
-    Add-DnsServerQueryResolutionPolicy -Name "AmericaPolicy" -Action ALLOW – -ZoneScope "SeattleZoneScope,2;ChicagoZoneScope,1;DallasZoneScope,1" -ZoneName "contosogiftservices.com"
+    Add-DnsServerQueryResolutionPolicy -Name "AmericaPolicy" -Action ALLOW -ZoneScope "SeattleZoneScope,2;ChicagoZoneScope,1;DallasZoneScope,1" -ZoneName "contosogiftservices.com"
     
 
 For more information, see [Add-DnsServerQueryResolutionPolicy](https://docs.microsoft.com/powershell/module/dnsserver/add-dnsserverqueryresolutionpolicy?view=win10-ps).  

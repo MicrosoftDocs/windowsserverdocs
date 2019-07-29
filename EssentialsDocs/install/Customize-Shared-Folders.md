@@ -20,33 +20,33 @@ manager: dongill
 
 By default, the server folders are created on the largest data partition on Disk 0. Partners can customize the location and specify additional server folders by using the following steps:  
   
-1.  Using a custom partition configuration, create the factory image, and then create a new Storage registry key before you use sysprep. During Initial Configuration (IC), the storage IC task checks for this registry key. If it exists, the default server folders are created in the C:\ServerFolders directory.  
+1. Using a custom partition configuration, create the factory image, and then create a new Storage registry key before you use sysprep. During Initial Configuration (IC), the storage IC task checks for this registry key. If it exists, the default server folders are created in the C:\ServerFolders directory.  
   
-    #### To create a new Storage registry key  
+   #### To create a new Storage registry key  
   
-    1.  On the server, move your mouse to the upper right corner of the screen, and click **Search**.  
+   1.  On the server, move your mouse to the upper right corner of the screen, and click **Search**.  
   
-    2.  In the Search box, type **regedit**, and then click the **Regedit** application.  
+   2.  In the Search box, type **regedit**, and then click the **Regedit** application.  
   
-    3.  In the navigation pane, expand **HKEY_LOCAL_MACHINE**, expand **SOFTWARE**, and then expand **Microsoft**.  
+   3.  In the navigation pane, expand **HKEY_LOCAL_MACHINE**, expand **SOFTWARE**, and then expand **Microsoft**.  
   
-    4.  Right-click **Windows Server**, click **New**, and then click **Key**.  
+   4.  Right-click **Windows Server**, click **New**, and then click **Key**.  
   
-    5.  Name the key **Storage**.  
+   5.  Name the key **Storage**.  
   
-    6.  In the navigation pane, right-click the new Storage registry key, click **New**, and then click **DWORD (32-bit) Value**.  
+   6.  In the navigation pane, right-click the new Storage registry key, click **New**, and then click **DWORD (32-bit) Value**.  
   
-    7.  Name the string **CreateFoldersOnSystem**.  
+   7.  Name the string **CreateFoldersOnSystem**.  
   
-    8.  Right-click **CreateFoldersOnSystem**, and then click **Modify**. The **Edit String** dialog box appears.  
+   8.  Right-click **CreateFoldersOnSystem**, and then click **Modify**. The **Edit String** dialog box appears.  
   
-    9. Set the value of this new key to **1**, and then click **OK**.  
+   9. Set the value of this new key to **1**, and then click **OK**.  
   
-2.  Use the PostIC.cmd script to move the folders to a different location or to create additional folders. See the following example: [Example 1: Create a custom folder and move the default folders to a new location from PostIC.cmd by using Windows PowerShell](Customize-Shared-Folders.md#BKMK_Example1).  
+2. Use the PostIC.cmd script to move the folders to a different location or to create additional folders. See the following example: [Example 1: Create a custom folder and move the default folders to a new location from PostIC.cmd by using Windows PowerShell](Customize-Shared-Folders.md#BKMK_Example1).  
   
-3.  Use the Windows Server Solutions SDK to move the folders to a different location or to create additional folders. See the following example: [Example 2: Create a custom folder and move an existing folder by using the Windows Server Solutions SDK](Customize-Shared-Folders.md#BKMK_Example2).  
+3. Use the Windows Server Solutions SDK to move the folders to a different location or to create additional folders. See the following example: [Example 2: Create a custom folder and move an existing folder by using the Windows Server Solutions SDK](Customize-Shared-Folders.md#BKMK_Example2).  
   
- Optionally, partners can leave the data folders on drive C. This allows the end user or reseller to determine the layout of the data folders on the data drives.  
+   Optionally, partners can leave the data folders on drive C. This allows the end user or reseller to determine the layout of the data folders on the data drives.  
   
 ###  <a name="BKMK_Example1"></a> Example 1: Create a custom folder and move the default folders to a new location from PostIC.cmd by using Windows PowerShell  
   
@@ -89,7 +89,7 @@ By default, the server folders are created on the largest data partition on Disk
     "%programfiles%\Windows Server\bin\WssPowershell.exe" -NoProfile -Noninteractive -command ". %windir%\setup\scripts\customizefolders.ps1;exit $LASTEXITCODE"  
     Set error_level=%ERRORLEVEL%  
   
-    REM Restore the execution policy to deafult  
+    REM Restore the execution policy to default  
     "%programfiles%\Windows Server\bin\WssPowershell.exe" "Set-ExecutionPolicy Restricted"  
     Set ERRORLEVEL=%error_level%  
     ```  

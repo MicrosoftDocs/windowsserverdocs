@@ -13,7 +13,7 @@ ms.localizationpriority:
 ---
 # Troubleshooting a Failover Cluster using Windows Error Reporting 
 
-> Applies to: Windows Server 2016, Windows Server
+> Applies to: Windows Server 2019, Windows Server 2016, Windows Server
 
 Windows Error Reporting (WER) is a flexible event-based feedback infrastructure designed to help advanced administrators or Tier 3 support gather information about the hardware and software problems that Windows can detect, report the information to Microsoft, and provide users with any available solutions. This [reference](https://docs.microsoft.com/powershell/module/windowserrorreporting/) provides descriptions and syntax for all WindowsErrorReporting cmdlets.
 
@@ -70,13 +70,6 @@ If you want to keep both the **log-level** and the **keyword-mask** at their def
 ```
 
 These event channels will be enabled on every cluster node when the cluster service starts or whenever the **EnabledEventLogs** property is changed.
-
-
-<!--
-## Collecting live dumps
-
-Windows will trigger the collection of a ``` LiveDump ``` when there are known resources that are hanging in kernel calls. ``` RHS ``` will trigger ```LiveDump``` collection if both the resource type and cluster ``` DumpPolicy ``` are set to 1. For physical disk it is set out of the box
--->
 
 ## Gathering Logs
 
@@ -162,20 +155,6 @@ Directory of c:\ProgramData\Microsoft\Windows\WER\ReportArchive
                3 Dir(s)  23,291,658,240 bytes free
 
 ```
-
-<!--
-If your report has been uploaded to Watson, a Microsoft Employee might be able to get your reports from [https://watson/](https://watson) by searching for your report ID and/or bucket ID (these can be found in Report.wer).
-
-```
-OriginalFilename=PowerShell.EXE.MUI
-Response.BucketId=f4bbb1850ee0c2c8ad7231a4f1c7aa8a
-Response.BucketTable=5
-Response.LegacyBucketId=2121812958945716874
-Response.type=4
-Response.CabId=2154498584323680636
-Response.CabGuid=1701c157-8fe6-4c22-9de6-510c23b1e97c 
-```
--->
 
 Windows Error Reporting provides many settings to customize the problem reporting experience. For further information, please refer to the Windows Error Reporting [documentation](https://msdn.microsoft.com/library/windows/desktop/bb513638(v=vs.85).aspx).
 
@@ -312,15 +291,15 @@ Here's an example of the output:
 
 Message Analyzer enables you to capture, display, and analyze protocol messaging traffic. It also lets you trace and assess system events and other messages from Windows components. You can download [Microsoft Message Analyzer from here](https://www.microsoft.com/download/details.aspx?id=44226). When you load the logs into Message Analyzer, you will see the following providers and messages from the log channels.
 
-![Loading logs into Message Analyzer](media\troubleshooting-using-WER-reports\loading-logs-into-message-analyzer.png)
+![Loading logs into Message Analyzer](media/troubleshooting-using-WER-reports/loading-logs-into-message-analyzer.png)
 
 You can also group by providers to get the following view:
 
-![Logs grouped by providers](media\troubleshooting-using-WER-reports\logs-grouped-by-providers.png)
+![Logs grouped by providers](media/troubleshooting-using-WER-reports/logs-grouped-by-providers.png)
 
 To identify why the disk failed, navigate to the events under **FailoverClustering/Diagnostic** and **FailoverClustering/DiagnosticVerbose**. Then run the following query: **EventLog.EventData["LogString"] contains "Cluster Disk 10"**.  This will give you give you the following output:
 
-![Output of running log query](media\troubleshooting-using-WER-reports\output-of-running-log-query.png)
+![Output of running log query](media/troubleshooting-using-WER-reports/output-of-running-log-query.png)
 
 
 ### Physical disk timed out
@@ -418,7 +397,7 @@ The list of services and processes that we collect in a dump is controlled by th
 
 To identify why the hang happened, open the dum files. Then run the following query: **EventLog.EventData["LogString"] contains "Cluster Disk 10"**  This will give you give you the following output:
 
-![Output of running log query 2](media\troubleshooting-using-WER-reports\output-of-running-log-query-2.png)
+![Output of running log query 2](media/troubleshooting-using-WER-reports/output-of-running-log-query-2.png)
 
 We can cross-examine this with the thread from the **memory.hdmp** file:
 

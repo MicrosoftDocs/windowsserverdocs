@@ -15,11 +15,6 @@ ms.date: 08/29/2018
 
 >Applies to: Windows Server 2019, Windows Server (Semi-Annual Channel), Windows Server 2016
 
-
-<!-- NOTE THAT THIS FILE HAS A "redirect_url" LINE IN THE METADATA. EVENTUALLY WE WILL PROBABLY STRIP OUT THE DETAILED METADATA AND THE CONTENT BELOW, SO IT'S PURELY A REDIRECTED TOPIC. However, as of mid-November 2016, we're still deciding. -->
-
-
-
 This topic describes the steps to create a shielded VM using only Hyper-V; that is, without Virtual Machine Manager, template disks, or a shielding data file. This is an uncommon scenario for most public cloud hosting environments, but may be useful when testing a guarded fabric or in enterprise scenarios where a VM is being moved from a departmental fabric to shared IT infrastructure and must be encrypted before migration.
 
 To understand how this topic fits in the overall process of deploying shielded VMs, see [Hosting service provider configuration steps for guarded hosts and shielded VMs](guarded-fabric-configuration-scenarios-for-shielded-vms-overview.md).
@@ -71,62 +66,62 @@ As part of the procedure, you will create a Key Protector that contains two impo
 
 For an illustration showing the Key Protector, which is an element in a shielding data file, see [What is shielding data and why is it necessary?](guarded-fabric-and-shielded-vms.md#what-is-shielding-data-and-why-is-it-necessary).
 
-1.  On a tenant Hyper-V host, to create a new generation 2 virtual machine, run the following command.
+1. On a tenant Hyper-V host, to create a new generation 2 virtual machine, run the following command.
 
-    For &lt;ShieldedVMname&gt;, specify a name for the VM, for example: **ShieldVM1**
+   For &lt;ShieldedVMname&gt;, specify a name for the VM, for example: **ShieldVM1**
     
-    For &lt;VHDPath&gt;, specify a location to store the VHDX of the VM, for example: **C:\\VMs\\ShieldVM1\\ShieldVM1.vhdx**
+   For &lt;VHDPath&gt;, specify a location to store the VHDX of the VM, for example: **C:\\VMs\\ShieldVM1\\ShieldVM1.vhdx**
     
-    For &lt;nnGB&gt;, specify a size for the VHDX, for example: **60GB**
+   For &lt;nnGB&gt;, specify a size for the VHDX, for example: **60GB**
 
-        New-VM -Generation 2 -Name "<ShieldedVMname>" -NewVHDPath <VHDPath>.vhdx -NewVHDSizeBytes <nnGB>
+       New-VM -Generation 2 -Name "<ShieldedVMname>" -NewVHDPath <VHDPath>.vhdx -NewVHDSizeBytes <nnGB>
 
-2.  Install a supported operating system (Windows Server 2012 or higher, Windows 8 client or higher) on the VM and enable the remote desktop connection and corresponding firewall rule. Record the VM's IP address and/or DNS name; you will need it to remotely connect to it.
+2. Install a supported operating system (Windows Server 2012 or higher, Windows 8 client or higher) on the VM and enable the remote desktop connection and corresponding firewall rule. Record the VM's IP address and/or DNS name; you will need it to remotely connect to it.
 
-3.  Use RDP to remotely connect to the VM and verify that RDP and the firewall are configured correctly. As part of the shielding process, console access to the virtual machine through Hyper-V will be disabled, so it is important to ensure you are able to remotely manage the system over the network.
+3. Use RDP to remotely connect to the VM and verify that RDP and the firewall are configured correctly. As part of the shielding process, console access to the virtual machine through Hyper-V will be disabled, so it is important to ensure you are able to remotely manage the system over the network.
 
-4.  To create a new Key Protector (described at the beginning of this section), run the following command.
+4. To create a new Key Protector (described at the beginning of this section), run the following command.
 
-    For &lt;GuardianName&gt;, use the name you specified in the previous procedure, for example: **HostingProvider1**
+   For &lt;GuardianName&gt;, use the name you specified in the previous procedure, for example: **HostingProvider1**
 
-    Include **-AllowUntrustedRoot** to allow for self-signed certificates.
+   Include **-AllowUntrustedRoot** to allow for self-signed certificates.
 
-        $Guardian = Get-HgsGuardian -Name '<GuardianName>'
+       $Guardian = Get-HgsGuardian -Name '<GuardianName>'
 
-        $Owner = New-HgsGuardian -Name 'Owner' -GenerateCertificates
+       $Owner = New-HgsGuardian -Name 'Owner' -GenerateCertificates
 
-        $KP = New-HgsKeyProtector -Owner $Owner -Guardian $Guardian -AllowUntrustedRoot
+       $KP = New-HgsKeyProtector -Owner $Owner -Guardian $Guardian -AllowUntrustedRoot
 
-    If you wish for more than one datacenter to be able to run your shielded VM (for example, a disaster recovery site and a public cloud provider), you can provide a list of guardians to the **-Guardian** parameter. For more information, see [New-HgsKeyProtector](https://docs.microsoft.com/powershell/module/hgsclient/new-hgskeyprotector?view=win10-ps.
+   If you wish for more than one datacenter to be able to run your shielded VM (for example, a disaster recovery site and a public cloud provider), you can provide a list of guardians to the **-Guardian** parameter. For more information, see [New-HgsKeyProtector](https://docs.microsoft.com/powershell/module/hgsclient/new-hgskeyprotector?view=win10-ps.
 
-5.  To enable the vTPM using the Key Protector, run the following command. For &lt;ShieldedVMname&gt;, use the same VM name used in previous steps.
+5. To enable the vTPM using the Key Protector, run the following command. For &lt;ShieldedVMname&gt;, use the same VM name used in previous steps.
 
-        $VMName="<ShieldedVMname>"
+       $VMName="<ShieldedVMname>"
 
-        Stop-VM -Name $VMName -Force
+       Stop-VM -Name $VMName -Force
 
-        Set-VMKeyProtector -VMName $VMName -KeyProtector $KP.RawData
+       Set-VMKeyProtector -VMName $VMName -KeyProtector $KP.RawData
 
-        Set-VMSecurityPolicy -VMName $VMName -Shielded $true
+       Set-VMSecurityPolicy -VMName $VMName -Shielded $true
 
-        Enable-VMTPM -VMName $VMName
+       Enable-VMTPM -VMName $VMName
 
-6.  To start the VM to verify that the key protector is working with local owner certificates, run the following command.
+6. To start the VM to verify that the key protector is working with local owner certificates, run the following command.
 
-        Start-VM -Name $VMName
+       Start-VM -Name $VMName
 
-7.  Verify that the VM has started in the Hyper-V console.
+7. Verify that the VM has started in the Hyper-V console.
 
-8.  Use RDP to remotely connect to the VM and enable BitLocker on all partitions on all VHDXs that are attached to the shielded VM.
+8. Use RDP to remotely connect to the VM and enable BitLocker on all partitions on all VHDXs that are attached to the shielded VM.
 
-    > [!IMPORTANT]
-    > Before proceeding to the next step, wait for BitLocker encryption to finish on all partitions where you enabled it.
+   > [!IMPORTANT]
+   > Before proceeding to the next step, wait for BitLocker encryption to finish on all partitions where you enabled it.
 
-9.  Shut down the VM when you are ready to move it to the guarded fabric.
+9. Shut down the VM when you are ready to move it to the guarded fabric.
 
-10.  On the tenant Hyper-V server, export the VM using the tool of your choice (Windows PowerShell or Hyper-V Manager). Then arrange for the files to be copied to a guarded host maintained by your hosting provider or enterprise datacenter.
+10. On the tenant Hyper-V server, export the VM using the tool of your choice (Windows PowerShell or Hyper-V Manager). Then arrange for the files to be copied to a guarded host maintained by your hosting provider or enterprise datacenter.
 
-11.  **For the hosting provider or enterprise datacenter**:
+11. **For the hosting provider or enterprise datacenter**:
 
     Import the shielded VM using the Hyper-V Manager or Windows PowerShell. You must import the VM configuration file from the VM owner in order to start the VM. This is because the key protector and the VM's virtual TPM are stored in the configuration file. If the VM is configured to run on the guarded fabric, it should be able to start successfully.
 

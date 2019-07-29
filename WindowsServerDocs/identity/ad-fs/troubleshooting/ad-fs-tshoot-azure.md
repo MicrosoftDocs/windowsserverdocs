@@ -20,17 +20,17 @@ Redirection occurs when you sign-in to an application such as Office 365 and you
 
 
 ### First things to check
-If redirection is not occuring there are a few things you want to check
+If redirection is not occurring there are a few things you want to check
 
    1. Make sure that your Azure AD tenant is enabled for federation by signing in to the Azure portal and checking under Azure AD Connect.
 
 ![](media/ad-fs-tshoot-azure/azure2.png)
 
-   2.  Make sure that your custom domain is verified by clicking on the domain next to Federation in the Azure portal.
-![](media/ad-fs-tshoot-azure/azure3.png)
+1. Make sure that your custom domain is verified by clicking on the domain next to Federation in the Azure portal.
+   ![](media/ad-fs-tshoot-azure/azure3.png)
 
-   3. Finally, you want to check [DNS](ad-fs-tshoot-dns.md) and make sure that your AD FS servers or WAP servers are resolving from the internet.  Verify that this resolves and that you are able to navigate to it.
-   4. You can also use the PowerShell cmdlt `Get-AzureADDomain` to get this information also.
+2. Finally, you want to check [DNS](ad-fs-tshoot-dns.md) and make sure that your AD FS servers or WAP servers are resolving from the internet.  Verify that this resolves and that you are able to navigate to it.
+3. You can also use the PowerShell cmdlt `Get-AzureADDomain` to get this information also.
 
 ![](media/ad-fs-tshoot-azure/azure6.png)
 
@@ -43,14 +43,14 @@ To enforce an authentication method, use one of the following methods:
 - For WS-Federation, use a WAUTH query string to force a preferred authentication method.
 
 - For SAML2.0, use the following:
-```
-<saml:AuthnContext>
-<saml:AuthnContextClassRef>
-urn:oasis:names:tc:SAML:2.0:ac:classes:PasswordProtectedTransport
-</saml:AuthnContextClassRef>
-</saml:AuthnContext>
-```
-When the enforced authentication method is sent with an incorrect value, or if that authentication method is not supported on AD FS or STS, you receive an error message before you are authenticated.
+  ```
+  <saml:AuthnContext>
+  <saml:AuthnContextClassRef>
+  urn:oasis:names:tc:SAML:2.0:ac:classes:PasswordProtectedTransport
+  </saml:AuthnContextClassRef>
+  </saml:AuthnContext>
+  ```
+  When the enforced authentication method is sent with an incorrect value, or if that authentication method is not supported on AD FS or STS, you receive an error message before you are authenticated.
 
 |Method of authentication wanted|wauth URI|
 |-----|-----|

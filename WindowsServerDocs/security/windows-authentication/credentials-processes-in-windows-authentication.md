@@ -319,6 +319,6 @@ Remote and wireless network authentication is another technology that uses certi
 For information about certificate-based authentication in networking, see [Network access authentication and certificates](https://technet.microsoft.com/library/cc759575(WS.10).aspx).
 
 ## <a name="BKMK_SeeAlso"></a>See also
-[Windows Authentication Concepts](https://technet.microsoft.com/library/d169018.aspx)
+[Windows Authentication Concepts](https://docs.microsoft.com/windows-server/security/windows-authentication/windows-authentication-concepts)
 
 

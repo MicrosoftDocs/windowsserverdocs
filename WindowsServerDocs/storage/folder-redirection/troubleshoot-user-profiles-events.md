@@ -11,7 +11,7 @@ ms.localizationpriority: medium
 ---
 # Troubleshoot user profiles with events
 
->Applies to: Windows 10, Windows 8, Windows 8.1, Windows Server 2012, Windows Server 2012 R2, and Windows Server 2016.
+>Applies to: Windows 10, Windows 8, Windows 8.1, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, and Windows Server (Semi-annual Channel).
 
 This topic discusses how to troubleshoot problems loading and unloading user profiles by using events and trace logs. The following sections describe how to use the three event logs that record user profile information.
 
@@ -52,7 +52,7 @@ Here's how to enable and view analytic and debug logs:
 1. In the **Actions** pane of Event Viewer, select **View**, and then select **Show Analytic and Debug Logs**.
 2. Navigate to **Applications and Services Logs**, then **Microsoft**, then **Windows**, then **User Profile Service**, and then **Diagnostic**.
 3. Select **Enable Log** and then select **Yes**. This enables the Diagnostic log, which will start logging.
-4. If you require even more detailed information, see [Step 4: Creating and decoding a trace](#step-4:-creating-and-decoding-a-trace) for more information about how to create a trace log.
+4. If you require even more detailed information, see [Step 4: Creating and decoding a trace](#step-4-creating-and-decoding-a-trace) for more information about how to create a trace log.
 5. When you are finished troubleshooting the issue, navigate to the **Diagnostic** log, select **Disable Log**, select **View** and then clear the **Show Analytic and Debug Logs** checkbox to hide analytic and debug logging.
 
 ## Step 4: Creating and decoding a trace

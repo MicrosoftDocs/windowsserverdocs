@@ -17,7 +17,7 @@ ms.localizationpriority: medium
 ---
 # Get started with Remote Desktop on Android
 
->Applies To: Windows 10, Windows 8.1, Windows Server 2012 R2, Windows Server 2016
+>Applies to: Windows 10, Windows 8.1, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2
 
 You can use the Remote Desktop client for Android to work with Windows apps and desktops directly from your Android device.
 
@@ -45,17 +45,17 @@ To create a Remote Desktop connection:
 
 1. In the Connection Center tap **+**, and then tap **Desktop**.
 2. Enter the following information for the computer you want to connect to:
-  - **PC name** – the name of the computer. This can be a Windows computer name, an Internet domain name, or an IP address. You can also append port information to the PC name (for example, **MyDesktop:3389** or **10.0.0.1:3389**).
-  - **User name** – The user name to use to access the remote PC. You can use the following formats: *user_name*, *domain\user_name*, or *user_name@domain.com*. You can also specify whether to prompt for a user name and password.
+   - **PC name** – the name of the computer. This can be a Windows computer name, an Internet domain name, or an IP address. You can also append port information to the PC name (for example, **MyDesktop:3389** or **10.0.0.1:3389**).
+   - **User name** – The user name to use to access the remote PC. You can use the following formats: *user_name*, *domain\user_name*, or <em>user_name@domain.com</em>. You can also specify whether to prompt for a user name and password.
 3. You can also set the following additional options:
-  - **Friendly name** – An easy-to-remember name for the PC you are connecting to. You can use any string, but if you do not specify a friendly name, the PC name is displayed.
-  - **Gateway** – The Remote Desktop gateway that you want to use to connect to virtual desktops, RemoteApp programs, and session-based desktops on an internal corporate network. Get the information about the gateway from your system administrator.
+   - **Friendly name** – An easy-to-remember name for the PC you are connecting to. You can use any string, but if you do not specify a friendly name, the PC name is displayed.
+   - **Gateway** – The Remote Desktop gateway that you want to use to connect to virtual desktops, RemoteApp programs, and session-based desktops on an internal corporate network. Get the information about the gateway from your system administrator.
     Need to configure a Remote Desktop Gateway?
-  - **Sound** – Select the device to use for audio during your remote session. You can choose to play sound on the local devices, the remote device, or not at all.
-  - **Customize display resolution** - Set a custom resolution for a connection by enabling this setting. When off the resolution is applied which you have defined in the global settings of the app.
-  - **Swap mouse buttons** – Use this option to swap the left mouse button functions for the right mouse button. (This is especially useful if the remote PC is configured for a left-handed user but you use a right-handed mouse.)
-  - **Connect to admin session** - Use this option to connect to a console session to administrate a Windows server.
-  - **Redirect to local storage** – Mounts your local storage as a remote file system on the remote PC.
+   - **Sound** – Select the device to use for audio during your remote session. You can choose to play sound on the local devices, the remote device, or not at all.
+   - **Customize display resolution** - Set a custom resolution for a connection by enabling this setting. When off the resolution is applied which you have defined in the global settings of the app.
+   - **Swap mouse buttons** – Use this option to swap the left mouse button functions for the right mouse button. (This is especially useful if the remote PC is configured for a left-handed user but you use a right-handed mouse.)
+   - **Connect to admin session** - Use this option to connect to a console session to administrate a Windows server.
+   - **Redirect to local storage** – Mounts your local storage as a remote file system on the remote PC.
 4. Tap **Save**.
 
 Need to edit these settings? Tap the overflow menu (**...**) next to the name of the desktop, and then tap **edit**.
@@ -109,8 +109,8 @@ To set up a new gateway:
 
 1. In the Connection Center, tap **Settings > Gateways**. Tap **+** to add a new gateway.
 2. Enter the following information:
-  - **Server name** – The name of the computer you want to use as a gateway. This can be a Windows computer name, an Internet domain name, or an IP address. You can also add port information to the server name (for example: **RDGateway:443** or **10.0.0.1:443**).
-  - **User name** - The user name and password to be used for the Remote Desktop Gateway you are connecting to. You can also select **Use desktop user account** to use the same credentials as those used for the remote desktop connection.
+   - **Server name** – The name of the computer you want to use as a gateway. This can be a Windows computer name, an Internet domain name, or an IP address. You can also add port information to the server name (for example: **RDGateway:443** or **10.0.0.1:443**).
+   - **User name** - The user name and password to be used for the Remote Desktop Gateway you are connecting to. You can also select **Use desktop user account** to use the same credentials as those used for the remote desktop connection.
 
 ## Manage your user accounts
 
@@ -147,13 +147,13 @@ You can set the following global settings in your Android client:
 - **Pinch to Zoom** - Lets you use pinch-to-zoom gestures. If the app you're using through Remote Desktop supports multi-touch (introduced in Windows 8), turn this setting **off**.
 - **Help to improve Remote Desktop** - Sends anonymous data to Microsoft. We use this data to improve the client. You can learn more about how we treat this anonymous, private data, see the [Remote Desktop Client Privacy Statement](https://www.microsoft.com/privacystatement/RemoteApp/Default.aspx). By default, this setting is **on**.
 - **Display** - There are two global settings for your display:
-   - **Orientation** - Sets the preferred orientation (landscape or portrait) for your session. 
-   >[!NOTE]
-   > If you connect to a PC running Windows 8 or an older version of Windows, the session won't scale correctly. Your best bet is to disconnect from the PC, and then reconnect in the orientation you want to use. An even better option is to upgrade the PC to at least Windows 8.1.
+  - **Orientation** - Sets the preferred orientation (landscape or portrait) for your session. 
+    >[!NOTE]
+    > If you connect to a PC running Windows 8 or an older version of Windows, the session won't scale correctly. Your best bet is to disconnect from the PC, and then reconnect in the orientation you want to use. An even better option is to upgrade the PC to at least Windows 8.1.
 
-   - **Resolution** - Sets the resolution you want to use for desktop connections globally. If you have already set a custom resolution for an individual app or connection, this setting won't change that.
-   >[!NOTE]
-   >When you change one of the display settings, they only apply to new connections from that point on. To see the change in a session you're already connected to disconnect and then connect again.
+  - **Resolution** - Sets the resolution you want to use for desktop connections globally. If you have already set a custom resolution for an individual app or connection, this setting won't change that.
+    >[!NOTE]
+    >When you change one of the display settings, they only apply to new connections from that point on. To see the change in a session you're already connected to disconnect and then connect again.
 
 ### Connection Bar
 

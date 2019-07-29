@@ -13,7 +13,7 @@ ms.technology: identity-adfs
 
 # AD FS Requirements
 
->Applies To: Windows Server 2016
+
 
 The following are the requirements for deploying AD FS:  
   
@@ -109,7 +109,7 @@ If you are using SQL Server for your AD FS configuration database, size the SQL 
   
 -   For extranet access, you must deploy the Web Application Proxy role service \- part of the Remote Access server role. 
 
--   Third party proxies must support the [MS-ADFSPIP protocol](https://msdn.microsoft.com/en-us/library/dn392811.aspx) to be supported as an AD FS proxy.  For a list of 3rd party vendors see the [FAQ](AD-FS-FAQ.md#what-third-party-proxies-are-available-for-ad-fs-that-support-ms-adfspip).
+-   Third party proxies must support the [MS-ADFSPIP protocol](https://msdn.microsoft.com/library/dn392811.aspx) to be supported as an AD FS proxy.  For a list of 3rd party vendors see the [FAQ](AD-FS-FAQ.md#what-third-party-proxies-are-available-for-ad-fs-that-support-ms-adfspip).
 
 -   AD FS 2016 requires Web Application Proxy servers on Windows Server 2016.  A downlevel proxy cannot be configured for an AD FS 2016 farm running at the 2016 farm behavior level.
   
@@ -141,6 +141,10 @@ If you are using SQL Server for your AD FS configuration database, size the SQL 
 **Service account requirements**  
   
 -   Any standard domain account can be used as a service account for AD FS. Group Managed Service accounts are also supported. The permissions required at runtime will be added automatically when you configure AD FS.
+
+-   The User Rights Assignment required for the AD service account is 'Log on as a Service'
+
+-   The User Rights Assignments required for the 'NT Service\adfssrv' and 'NT Service\drs' are 'Generate Security Audits' and 'Log on as a Service'.
 
 -   Group Managed service accounts require at least one domain controller running Windows Server 2012 or higher.  The GMSA must live under the default 'CN=Managed Service Accounts' container.  
 
@@ -186,16 +190,16 @@ The following table provides a summary of how many AD FS servers are supported i
 ## <a name="BKMK_6"></a>Browser requirements  
 When AD FS authentication is performed via a browser or browser control, your browser must comply to the following requirements:  
   
--   JavaScript must be enabled  
+- JavaScript must be enabled  
   
--   For single sign on, the client browser must be configured to allow cookies  
+- For single sign on, the client browser must be configured to allow cookies  
   
--   Server Name Indication \(SNI\) must be supported  
+- Server Name Indication \(SNI\) must be supported  
   
--   For user certificate & device certificate authentication, the browser must support SSL client certificate authentication  
+- For user certificate & device certificate authentication, the browser must support SSL client certificate authentication  
 
--   For seamless sign on using Windows Integrated Authentication, the federation service name (such as https:\/\/fs.contoso.com) must be configured in local intranet zone or trusted sites zone.
-## <a name="BKMK_7"></a>Network requirements  
+- For seamless sign on using Windows Integrated Authentication, the federation service name (such as https:\/\/fs.contoso.com) must be configured in local intranet zone or trusted sites zone.
+  ## <a name="BKMK_7"></a>Network requirements  
  
 **Firewall Requirements**  
   
@@ -205,7 +209,7 @@ In addition, if client user certificate authentication \(clientTLS authenticatio
 
 For additional information on hybrid port requirements see [Hybrid Identity Ports and Protocols](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnect-ports). 
 
-For additional information see [Best practices for securing Active Directory Federation Services](..\deployment\Best-Practices-Securing-AD-FS.md)
+For additional information see [Best practices for securing Active Directory Federation Services](../deployment/Best-Practices-Securing-AD-FS.md)
   
 **DNS Requirements**  
   

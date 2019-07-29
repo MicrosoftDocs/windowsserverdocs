@@ -60,7 +60,6 @@ ms.localizationpriority: medium
 |File and Storage Services|Storage Services|Yes|Yes|
 |Host Guardian Service| |Yes|Yes|
 |Hyper-V| |Yes|Yes; including Shielded Virtual Machines|
-|MultiPoint Services| |Yes|Yes|
 |Network Controller| |No|Yes|
 |Network Policy and Access Services| |Yes, when installed as Server with Desktop Experience|Yes, when installed as Server with Desktop Experience|
 |Print and Document Services| |Yes|Yes|
@@ -68,9 +67,12 @@ ms.localizationpriority: medium
 |Remote Desktop Services| |Yes|Yes|
 |Volume Activation Services| |Yes|Yes|
 |Web Services (IIS)| |Yes|Yes|
-|Windows Deployment Services| |Yes|Yes|
+|Windows Deployment Services| |Yes*|Yes*|
 |Windows Server Essentials Experience| |Yes|Yes|
 |Windows Server Update Services| |Yes|Yes|
+
+*WDS Transport Server is new to Server Core installations in Windows Server 2019 (also in the semi-annual channel starting with Windows Server, version 1803)
+
 
 ## Features
 
@@ -116,7 +118,7 @@ ms.localizationpriority: medium
 |SMTP Server|Yes|Yes|
 |SNMP Service|Yes|Yes|
 |Software Load Balancer|Yes|Yes|
-|Storage Replica|No|Yes|
+|Storage Replica|Yes|Yes|
 |Telnet Client|Yes|Yes|
 |TFTP Client|Yes, when installed as Server with Desktop Experience|Yes, when installed as Server with Desktop Experience|
 |VM Shielding Tools for Fabric Management|Yes|Yes|

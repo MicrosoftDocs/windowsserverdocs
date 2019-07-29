@@ -8,7 +8,7 @@ manager: dongill
 author: justinha
 ms.author: justinha
 ms.technology: security-guarded-fabric
-ms.date: 09/17/2018
+ms.date: 01/30/2019
 ---
 
 # Quick start for guarded fabric deployment
@@ -58,7 +58,7 @@ When you initialize HGS, you need to choose the mode:
 - Host key attestation, or key mode, is less secure but easier to adopt  
 - TPM-based attestation, or TPM mode, is more secure but requires more configuration and specific hardware
 
-If necessary, you can deploy in key mode using existing Hyper-V hosts that have been upgraded to Windows Server 2016 Datacenter edition, and then convert to the more secure TPM mode when supporting server hardware (including TPM 2.0) is available. 
+If necessary, you can deploy in key mode using existing Hyper-V hosts that have been upgraded to Windows Server 2019 Datacenter edition, and then convert to the more secure TPM mode when supporting server hardware (including TPM 2.0) is available. 
 
 Now that you know what the pieces are, let’s walk through an example of the deployment model.
 
@@ -70,7 +70,7 @@ Let's imagine this scenario—you have an existing Hyper-V fabric, like Contoso.
 
 ## Step 1: Deploy the Hyper-V hosts running Windows Server 2016 
 
-The Hyper-V hosts need to run Windows Server 2016 Datacenter edition. If you are upgrading hosts, you can [upgrade](https://technet.microsoft.com/windowsserver/dn527667.aspx) from Standard edition to Datacenter edition.
+The Hyper-V hosts need to run Windows Server 2016 Datacenter edition or later. If you are upgrading hosts, you can [upgrade](https://technet.microsoft.com/windowsserver/dn527667.aspx) from Standard edition to Datacenter edition.
 
 ![Upgrade Hyper-V hosts](../../security/media/Guarded-Fabric-Shielded-VM/guarded-fabric-deployment-step-one-upgrade-hyper-v.png)
 
@@ -120,9 +120,9 @@ Now you can create a shielded VM template disk and a shielding data file so shie
 
 A shielded VM template protects template disks by creating a signature of the disk at a known trustworthy point in time. 
 If the template disk is later infected by malware, its signature will differ original template which will be detected by the secure shielded VM provisioning process. 
-Shielded template disks are created by running the **Shielded Template Disk Creation Wizard** against a regular template disk. 
+Shielded template disks are created by running the **Shielded Template Disk Creation Wizard** or `Protect-TemplateDisk` against a regular template disk. 
 
-This wizard is included with the **Shielded VM Tools** feature in the [Remote Server Administration Tools for Windows 10](https://www.microsoft.com/download/details.aspx?id=45520).
+Each is included with the **Shielded VM Tools** feature in the [Remote Server Administration Tools for Windows 10](https://www.microsoft.com/download/details.aspx?id=45520).
 After you download RSAT, run this command to install the **Shielded VM Tools** feature:
 
 ```powershell
@@ -168,5 +168,5 @@ In Windows Azure Pack, the experience is even easier than creating a regular VM 
 
 ## Next step
 
->[!div class="nextstepaction"]
-[HGS Prerequisites](guarded-fabric-prepare-for-hgs.md)
+> [!div class="nextstepaction"]
+> [HGS Prerequisites](guarded-fabric-prepare-for-hgs.md)

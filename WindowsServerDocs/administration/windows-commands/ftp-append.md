@@ -24,10 +24,12 @@ appends a local file to a file on the remote computer using the current file typ
 append <LocalFile> [remoteFile]  
 ```  
 ### Parameters  
-|Parameter|Description|  
-|-------|--------|  
-|<LocalFile>|Specifies the local file to add.|  
-|[remoteFile]|Specifies the file on the remote computer to which <LocalFile> is added.|  
+
+|  Parameter   |                               Description                                |
+|--------------|--------------------------------------------------------------------------|
+| <LocalFile>  |                     Specifies the local file to add.                     |
+| [remoteFile] | Specifies the file on the remote computer to which <LocalFile> is added. |
+
 ## Remarks  
 if *remoteFile* is omitted, the *LocalFile* name is used in place of the remote file name.  
 ## <a name="BKMK_Examples"></a>Examples  

@@ -17,9 +17,7 @@ ms.date: 10/16/2017
 
 # bitsadmin getaclflags
 
-
-
-Retrieves the access control list propagations flags.
+Retrieves the access control list (ACL) propagations flags.
 
 ## Syntax
 

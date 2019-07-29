@@ -17,8 +17,6 @@ ms.date: 07/25/2018
 
 # robocopy
 
-
-
 Copies file data.
 
 ## Syntax
@@ -29,19 +27,19 @@ robocopy <Source> <Destination> [<File>[ ...]] [<Options>]
 
 ## Parameters
 
-|Parameter|Description|
-|---------|-----------|
-|\<Source>|Specifies the path to the source directory.|
-|\<Destination>|Specifies the path to the destination directory.|
-|\<File>|Specifies the file or files to be copied. You can use wildcard characters (**&#42;** or **?**), if you want. If the **File** parameter is not specified, **\*.\*** is used as the default value.|
-|\<Options>|Specifies options to be used with the **robocopy** command.|
+|   Parameter    |                                                                                            Description                                                                                             |
+|----------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|   \<Source>    |                                                                            Specifies the path to the source directory.                                                                             |
+| \<Destination> |                                                                          Specifies the path to the destination directory.                                                                          |
+|    \<File>     | Specifies the file or files to be copied. You can use wildcard characters (**&#42;** or **?**), if you want. If the **File** parameter is not specified, **\*.\\**\* is used as the default value. |
+|   \<Options>   |                                                                    Specifies options to be used with the **robocopy** command.                                                                     |
 
 ### Copy options
 
 |Option|Description|
 |------|-----------|
 |/s|Copies subdirectories. Note that this option excludes empty directories.|
-|/e|Copies subdirectories. Note that this option includes empty directories. For additional information, see [Remarks](#BKMK_remarks).|
+|/e|Copies subdirectories. Note that this option includes empty directories. For additional information, see [Remarks](#remarks).|
 |/lev:\<N>|Copies only the top *N* levels of the source directory tree.|
 |/z|Copies files in restartable mode.|
 |/b|Copies files in Backup mode.|
@@ -54,8 +52,8 @@ robocopy <Source> <Destination> [<File>[ ...]] [<Options>]
 |/nocopy|Copies no file information (useful with **/purge**).|
 |/secfix|Fixes file security on all files, even skipped ones.|
 |/timfix|Fixes file times on all files, even skipped ones.|
-|/purge|Deletes destination files and directories that no longer exist in the source. For additional information, see [Remarks](#BKMK_remarks).|
-|/mir|Mirrors a directory tree (equivalent to **/e** plus **/purge**). For additional information, see [Remarks](#BKMK_remarks).|
+|/purge|Deletes destination files and directories that no longer exist in the source. For additional information, see [Remarks](#remarks).|
+|/mir|Mirrors a directory tree (equivalent to **/e** plus **/purge**). For additional information, see [Remarks](#remarks).|
 |/mov|Moves files, and deletes them from the source after they are copied.|
 |/move|Moves files and directories, and deletes them from the source after they are copied.|
 |/a+:[RASHCNET]|Adds the specified attributes to copied files.|
@@ -69,10 +67,15 @@ robocopy <Source> <Destination> [<File>[ ...]] [<Options>]
 |/rh:hhmm-hhmm|Specifies run times when new copies may be started.|
 |/pf|Checks run times on a per-file (not per-pass) basis.|
 |/ipg:n|Specifies the inter-packet gap to free bandwidth on slow lines.|
-|/sl|Follows the symbolic link and copies the target.|
+|/sl|Don't follow symbolic links and instead create a copy of the link.|
 
 > [!IMPORTANT]
-> When using the **/SECFIX** copy option, specify the type of security information you want to copy by also using one of these additional copy options:</br>> -   **/COPYALL**</br>> -   **/COPY:O**</br>> -   **/COPY:S**</br>> -   **/COPY:U**</br>> -   **/SEC**
+> When using the **/SECFIX** copy option, specify the type of security information you want to copy by also using one of these additional copy options:
+>- **/COPYALL**
+>- **/COPY:O**
+>- **/COPY:S**
+>- **/COPY:U**
+>- **/SEC**
 
 ### File selection options
 
@@ -149,6 +152,7 @@ robocopy <Source> <Destination> [<File>[ ...]] [<Options>]
 |/if|Includes the specified files.|
 
 ### Exit (return) codes
+
 Value | Description
 -- | --
 0 | No files were copied. No failure was encountered.  No files were mismatched. The files already exist in the destination directory; therefore, the copy operation was skipped.
@@ -163,7 +167,7 @@ Value | Description
 > [!NOTE]
 > Any value greater than 8 indicates that there was at least one failure during the copy operation.
 
-### <a name="BKMK_remarks"></a>Remarks
+### Remarks
 
 -   The **/mir** option is equivalent to the **/e** plus **/purge** options with one small difference in behavior:  
     -   With the **/e** plus **/purge** options, if the destination directory exists, the destination directory security settings are not overwritten.

@@ -1,6 +1,6 @@
 ---
 title: bitsadmin peers and help
-description: "Windows Commands topic for **bitsadmin peers and help** - Displays the command-line usage for the **Peers** commands."
+description: "Windows Commands topic for **bitsadmin peers and help** - Displays the command-line usage for the **Peers** switches."
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -19,7 +19,7 @@ ms.date: 10/16/2017
 
 
 
-Displays the command-line usage for the **Peers** commands.
+Displays the command-line usage for the **Peers** switches.
 
 ## Syntax
 
@@ -29,7 +29,7 @@ Bitsadmin /Peers /Help
 
 ## <a name="BKMK_examples"></a>Examples
 
-The following command displays the command-line help for the **Peers** commands.
+The following command displays the command-line help for the **Peers** switches.
 ```
 Bitsadmin /Peers /Help
 ```

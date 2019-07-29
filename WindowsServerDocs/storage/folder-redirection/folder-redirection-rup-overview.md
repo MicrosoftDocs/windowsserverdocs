@@ -11,7 +11,7 @@ ms.localizationpriority: medium
 ---
 # Folder Redirection, Offline Files, and Roaming User Profiles overview
 
->Applies to: Windows 10, Windows 8, Windows 8.1, Windows Server 2012, Windows Server 2012 R2, Windows Server 2016
+>Applies to: Windows 10, Windows 8, Windows 8.1, Windows Server 2019, Windows Server 2016, Windows Server 2012, Windows Server 2012 R2
 
 This topic discusses the Folder Redirection, Offline Files (client-side caching or CSC), and Roaming User Profiles (sometimes known as RUP) technologies, including what’s new and where to find additional information.
 
@@ -40,11 +40,11 @@ Administrators can use Folder Redirection, Offline Files, and Roaming User Profi
 
 The following table describes some of the major changes in Folder Redirection, Offline Files, and Roaming User Profiles that are available in this release.
 
-|Feature/functionality|New or updated?|Description|
-|---|---|---|
-|Always Offline mode|New|Provides faster access to files and lower bandwidth usage by always working offline, even when connected through a high-speed network connection.|
-|Cost-aware synchronization|New|Helps users avoid high data usage costs from synchronization while using metered connections that have usage limits, or while roaming on another provider’s network.|
-|Primary Computer support|New|Enables you to limit the use of Folder Redirection, Roaming User Profiles, or both to only a user’s primary computers.|
+| Feature/functionality | New or updated? | Description |
+| --- | --- | --- |
+| Always Offline mode | New | Provides faster access to files and lower bandwidth usage by always working offline, even when connected through a high-speed network connection. |
+| Cost-aware synchronization | New | Helps users avoid high data usage costs from synchronization while using metered connections that have usage limits, or while roaming on another provider’s network. |
+| Primary Computer support | New | Enables you to limit the use of Folder Redirection, Roaming User Profiles, or both to only a user’s primary computers. |
 
 ## Always Offline mode
 
@@ -69,8 +69,8 @@ For more information, see [Enable the Always Offline Mode to Provide Faster Acce
 
 With cost-aware synchronization, Windows disables background synchronization when the user is using a metered network connection, such as a 4G mobile network, and the subscriber is near or over their bandwidth limit, or roaming on another provider’s network.
 
->[!NOTE]
->Metered network connections usually have round-trip network latencies that are slower than the default 35 millisecond latency value for transitioning to Offline (Slow Connection) mode in Windows 8, Windows Server 2012, and Windows Server 2016. Therefore, these connections usually transition to Offline (Slow Connection) mode automatically.
+> [!NOTE]
+> Metered network connections usually have round-trip network latencies that are slower than the default 35 millisecond latency value for transitioning to Offline (Slow Connection) mode in Windows 8, Windows Server 2019, Windows Server 2016, and Windows Server 2012. Therefore, these connections usually transition to Offline (Slow Connection) mode automatically.
 
 ### What value does cost-aware synchronization add?
 
@@ -117,16 +117,16 @@ Folder Redirection, Offline Files, and Roaming User Profiles require an x64-base
 To designate primary computers, your environment must meet the following requirements:
 
 - The Active Directory Domain Services (AD DS) schema must be updated to include Windows Server 2012 schema and conditions (installing a Windows Server 2012 or later domain controller automatically updates the schema). For more information about upgrading the AD DS schema, see [Upgrade Domain Controllers to Windows Server 2016](../../identity/ad-ds/deploy/upgrade-domain-controllers.md).
-- Client computers must run Windows 10, Windows 8.1, Windows 8, Windows Server 2016, Windows Server 2012 R2, or Windows Server 2012 and be joined to the Active Directory domain that you are managing.
+- Client computers must run Windows 10, Windows 8.1, Windows 8, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, or Windows Server 2012 and be joined to the Active Directory domain that you are managing.
 
 ## More information
 
 For additional related information, see the following resources.
 
-|Content type|References|
-|---|---|
-|Product evaluation|[Supporting Information Workers with Reliable File Services and Storage](<https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831495(v%3dws.11)>)<br>[What's New in Offline Files](<https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ff183315(v=ws.10)>) (Windows 7 and Windows Server 2008 R2)<br>[What's New in Offline Files for Windows Vista](<https://docs.microsoft.com/previous-versions/windows/it-pro/windows-vista/cc749449(v=ws.10)>)<br>[Changes to Offline Files in Windows Vista](<https://technet.microsoft.com/library/2007.11.offline.aspx>) (TechNet Magazine)|
-|Deployment|[Deploy Folder Redirection, Offline Files, and Roaming User Profiles](deploy-folder-redirection.md)<br>[Implementing an End-User Data Centralization Solution: Folder Redirection and Offline Files Technology Validation and Deployment](http://download.microsoft.com/download/3/0/1/3019A3DA-2F41-4F2D-BBC9-A6D24C4C68C4/Implementing%20an%20End-User%20Data%20Centralization%20Solution.docx)<br>[Managing Roaming User Data Deployment Guide](<https://docs.microsoft.com/previous-versions/windows/it-pro/windows-vista/cc766489(v=ws.10)>)<br>[Configuring New Offline Files Features for Windows 7 Computers Step-by-Step Guide](<https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ff633429(v=ws.10)>)<br>[Using Folder Redirection](<https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc753996(v=ws.11)>)<br>[Implementing Folder Redirection](<https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc737434(v=ws.10)>) (Windows Server 2003)|
-|Tools and settings|[Offline files on MSDN](https://msdn.microsoft.com/library/cc296092.aspx)<br>[Offline Files Group Policy Reference](https://msdn.microsoft.com/library/ms878937.aspx) (Windows 2000)|
-|Community resources|[File Services and Storage Forum](https://social.technet.microsoft.com/forums/windowsserver/home?forum=winserverfiles)<br>[Hey, Scripting Guy! How Can I Work with the Offline Files Feature in Windows?](<https://blogs.technet.microsoft.com/heyscriptingguy/2009/06/02/hey-scripting-guy-how-can-i-enable-and-disable-offline-files/>)<br>[Hey, Scripting Guy! How Can I Enable and Disable Offline Files?](<https://blogs.technet.microsoft.com/heyscriptingguy/2009/06/02/hey-scripting-guy-how-can-i-enable-and-disable-offline-files/>)|
-Related technologies|[Identity and Access in Windows Server](../../identity/identity-and-access.md)<br>[Storage in Windows Server](../storage.md)<br>[Remote access and server management](../../remote/index.md)|
+| Content type | References |
+| --- | --- |
+| Product evaluation | [Supporting Information Workers with Reliable File Services and Storage](<https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831495(v%3dws.11)>)<br>[What's New in Offline Files](<https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ff183315(v=ws.10)>) (Windows 7 and Windows Server 2008 R2)<br>[What's New in Offline Files for Windows Vista](<https://docs.microsoft.com/previous-versions/windows/it-pro/windows-vista/cc749449(v=ws.10)>)<br>[Changes to Offline Files in Windows Vista](<https://technet.microsoft.com/library/2007.11.offline.aspx>) (TechNet Magazine) |
+| Deployment | [Deploy Folder Redirection, Offline Files, and Roaming User Profiles](deploy-folder-redirection.md)<br>[Implementing an End-User Data Centralization Solution: Folder Redirection and Offline Files Technology Validation and Deployment](http://download.microsoft.com/download/3/0/1/3019A3DA-2F41-4F2D-BBC9-A6D24C4C68C4/Implementing%20an%20End-User%20Data%20Centralization%20Solution.docx)<br>[Managing Roaming User Data Deployment Guide](<https://docs.microsoft.com/previous-versions/windows/it-pro/windows-vista/cc766489(v=ws.10)>)<br>[Configuring New Offline Files Features for Windows 7 Computers Step-by-Step Guide](<https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ff633429(v=ws.10)>)<br>[Using Folder Redirection](<https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc753996(v=ws.11)>)<br>[Implementing Folder Redirection](<https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc737434(v=ws.10)>) (Windows Server 2003) |
+| Tools and settings | [Offline files on MSDN](https://msdn.microsoft.com/library/cc296092.aspx)<br>[Offline Files Group Policy Reference](https://msdn.microsoft.com/library/ms878937.aspx) (Windows 2000) |
+| Community resources | [File Services and Storage Forum](https://social.technet.microsoft.com/forums/windowsserver/home?forum=winserverfiles)<br>[Hey, Scripting Guy! How Can I Work with the Offline Files Feature in Windows?](<https://blogs.technet.microsoft.com/heyscriptingguy/2009/06/02/hey-scripting-guy-how-can-i-enable-and-disable-offline-files/>)<br>[Hey, Scripting Guy! How Can I Enable and Disable Offline Files?](<https://blogs.technet.microsoft.com/heyscriptingguy/2009/06/02/hey-scripting-guy-how-can-i-enable-and-disable-offline-files/>) |
+| Related technologies|[Identity and Access in Windows Server](../../identity/identity-and-access.md)<br>[Storage in Windows Server](../storage.md)<br>[Remote access and server management](../../remote/index.md) |

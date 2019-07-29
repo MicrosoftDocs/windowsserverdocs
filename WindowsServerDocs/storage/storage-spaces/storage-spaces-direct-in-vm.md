@@ -36,6 +36,8 @@ The following considerations apply when deploying Storage Spaces Direct in a vir
 
 -   2-node deployments must configure a witness (Cloud Witness or File Share Witness)
 
+-   3-node deployments can tolerate 1 node down and the loss of 1 or more disks on another node.  If 2 nodes are shutdown then the virtual disks we be offline until one of the nodes returns.  
+
 -   Configure the virtual machines to be deployed across fault domains
 
     -   Azure – Configure Availability Set
@@ -72,4 +74,6 @@ The following considerations apply when deploying Storage Spaces Direct in a vir
 
 ## See also
 
-[Additional Azure Iaas VM templates for deploying Storage Spaces Direct, videos, and step-by-step guides](https://blogs.msdn.microsoft.com/clustering/2017/02/14/deploying-an-iaas-vm-guest-clusters-in-microsoft-azure/).
+[Additional Azure Iaas VM templates for deploying Storage Spaces Direct, videos, and step-by-step guides](https://techcommunity.microsoft.com/t5/Failover-Clustering/Deploying-IaaS-VM-Guest-Clusters-in-Microsoft-Azure/ba-p/372126).
+
+[Additional Storage Spaces Direct Overview](https://docs.microsoft.com/windows-server/storage/storage-spaces/storage-spaces-direct-overview)

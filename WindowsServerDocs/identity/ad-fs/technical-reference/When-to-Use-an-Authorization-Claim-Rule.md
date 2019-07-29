@@ -12,7 +12,6 @@ ms.prod: windows-server-threshold
 ms.technology: identity-adfs
 ---
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 # When to Use an Authorization Claim Rule
 You can use this rule in Active Directory Federation Services \(AD FS\) when you need to take an incoming claim type and then apply an action that will determine whether a user will be permitted or denied access based on the value that you specify in the rule. When you use this rule, you pass through or transform claims that match the following rule logic, based on either of the options you configure in the rule:  
@@ -70,7 +69,7 @@ Different authorization rule sets exist depending on the type of permit or deny 
 For more details about how the authorization rule process fits into the claims issuance pipeline, see The Role of the Claims Issuance Engine.  
   
 ### Supported claim types  
-AD FSdefines two claim types that are used to determine whether a user is permitted or denied. These claim type Uniform Resource Identifiers \(URIs\) are as follows:  
+AD FS defines two claim types that are used to determine whether a user is permitted or denied. These claim type Uniform Resource Identifiers \(URIs\) are as follows:  
   
 1.  **Permit**: http:\/\/schemas.microsoft.com\/authorization\/claims\/permit  
   

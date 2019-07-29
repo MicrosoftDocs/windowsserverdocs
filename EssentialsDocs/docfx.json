@@ -28,14 +28,15 @@
     "overwrite": [],
     "externalReference": [],
     "globalMetadata": {
-		"_op_documentIdPathDepotMapping": {
-			"./": {
-			  "depot_name": "WS.EssentialsDocs"
-			}
-		}
-	},
+      "_op_documentIdPathDepotMapping": {
+        "./": {
+          "depot_name": "WS.EssentialsDocs"
+        }
+      }
+    },
     "fileMetadata": {},
     "template": [],
-    "dest": "window-server-docs/essentials"
+    "dest": "window-server-docs/essentials",
+    "markdownEngineName": "markdig"
   }
 }

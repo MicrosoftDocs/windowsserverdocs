@@ -19,7 +19,7 @@ ms.localizationpriority: medium
 
 Remote Desktop Services (RDS) is the platform of choice for building virtualization solutions for every end customer need, including delivering individual virtualized applications, providing secure mobile and remote desktop access, and providing end users the ability to run their applications and desktops from the cloud.
 
-![Remote Desktop Services overview](.\media\rds-overview.png)
+![Remote Desktop Services overview](./media/rds-overview.png)
 
 RDS offers deployment flexibility, cost efficiency, and extensibility—all delivered through a variety of deployment options, including Windows Server 2016 for on-premises deployments, Microsoft Azure for cloud deployments, and a robust array of partner solutions.
 

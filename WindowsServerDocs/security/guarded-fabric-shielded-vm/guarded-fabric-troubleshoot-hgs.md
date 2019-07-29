@@ -25,7 +25,7 @@ The following sections cover common problems related to certificates configured 
 ### Certificate Permissions
 
 HGS must be able to access both the public and private keys of the encryption and signing certificates added to HGS by the certificate thumbprint.
-Specifically, the group managed service accoung (gMSA) that runs the HGS service needs access to the keys.
+Specifically, the group managed service account (gMSA) that runs the HGS service needs access to the keys.
 To find the gMSA used by HGS, run the following command in an elevated PowerShell prompt on your HGS server:
 
 ```powershell
@@ -88,7 +88,7 @@ Contact your HSM manufacturer for accurate information pertaining to your specif
 HSM Brand/Series      | Suggestion
 ----------------------|-------------
 Gemalto SafeNet       | Ensure the Key Usage Property in the certificate request file is set to 0xa0, allowing the certificate to be used for signing and encryption. Additionally, you must grant the gMSA account *read* access to the private key using the local certificate manager tool (see steps above).
-Thales nShield        | Ensure each HGS node has access to the security world containing the signing and encryption keys. You do not need to configure gMSA-specific permissions.
+nCipher nShield        | Ensure each HGS node has access to the security world containing the signing and encryption keys. You do not need to configure gMSA-specific permissions.
 Utimaco CryptoServers | Ensure the Key Usage Property in the certificate request file is set to 0x13, allowing the certificate to be used for encryption, decryption, and signing.
 
 ### Certificate requests
@@ -160,7 +160,7 @@ Ensure you update your Hyper-V hosts to the same cumulative update before activa
 
 ## Endorsement Key Certificate error messages
 
-When registering a host using the [Add-HgsAttestationTpmHost](https://docs.microsoft.com/powershell/module/hgsattestation/add-hgsattestationtpmhost) cmdlet, two TPM identifiers are extracted from the provided platform identifier file: the endorsement key certficate (EKcert) and the public endorsement key (EKpub).
+When registering a host using the [Add-HgsAttestationTpmHost](https://docs.microsoft.com/powershell/module/hgsattestation/add-hgsattestationtpmhost) cmdlet, two TPM identifiers are extracted from the provided platform identifier file: the endorsement key certificate (EKcert) and the public endorsement key (EKpub).
 The EKcert identifies the manufacturer of the TPM, providing assurances that the TPM is authentic and manufactured through the normal supply chain.
 The EKpub uniquely identifies that specific TPM, and is one of the measures HGS uses to grant a host access to run shielded VMs.
 

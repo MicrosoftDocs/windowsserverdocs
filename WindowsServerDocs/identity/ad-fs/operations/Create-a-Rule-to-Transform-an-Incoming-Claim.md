@@ -16,7 +16,6 @@ ms.technology: identity-adfs
 
 # Create a Rule to Transform an Incoming Claim
 
->Applies To: Windows Server 2016, Windows Server 2012 R2
 
 By using the **Transform an Incoming Claim** rule template in Active Directory Federation Services \(AD FS\), you can select an incoming claim, change its claim type, and change its claim value. For example, you can use this rule template to create a rule that sends a role claim with the same claim value of an incoming group claim. You can also use this rule to send a group claim with a claim value of Purchasers when there is an incoming group claim with a value of Admins, or you can send only user principal name \(UPN\) claims that end with @fabrikam.  
   
@@ -129,9 +128,9 @@ Membership in **Administrators**, or equivalent, on the local computer is the mi
 >   
 > For more information about Dynamic Access Control scenarios, see [Dynamic Access Control Content Roadmap](../../solution-guides/dynamic-access-control--scenario-overview.md) or [Using AD DS Claims with AD FS](https://technet.microsoft.com/library/hh831504.aspx).  
   
-7.  Click **Finish**.  
+7. Click **Finish**.  
   
-8.  In the **Edit Claim Rules** dialog box, click **OK** to save the rule.  
+8. In the **Edit Claim Rules** dialog box, click **OK** to save the rule.  
 
 ## Additional references 
 [Configure Claim Rules](Configure-Claim-Rules.md)  

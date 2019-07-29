@@ -21,6 +21,16 @@ Using the NFS protocol, you can transfer files between computers running Windows
 
 NFS in Windows Server includes Server for NFS and Client for NFS. A computer running Windows Server can use Server for NFS to act as a NFS file server for other non-Windows client computers. Client for NFS allows a Windows-based computer running Windows Server to access files stored on a non-Windows NFS server.
 
+## Windows and Windows Server versions
+
+Windows supports multiple versions ofthe NFS client and server, depending on operating system version and family. 
+
+| Operating Systems | NFS Server Versions |NFS Client Versions|
+| ----------------- | ------------------- | ----------------- |
+| Windows 7, Windows 8.1, Windows 10 | N/A | NFSv2, NFSv3 |
+| Windows Server 2008, Windows Server 2008 R2 | NFSv2, NFSv3 | NFSv2, NFSv3 |
+| Windows Server 2012, Windows Server 2012 R2, Windows Server 2016, Windows Server 2019 | NFSv2, NFSv3, NFSv4.1  | NFSv2, NFSv3 |
+
 ## Practical applications
 
 Here are some ways you can use NFS:
@@ -35,7 +45,7 @@ New and changed functionality in Network File System includes support for the NF
 
 |Feature/functionality|New or updated|Description|
 |---|---|---|
-|[NFS version 4.1](#nfs-version-4.1)|New|Increased security, performance, and interoperability compared to NFS version 3.|
+|[NFS version 4.1](#nfs-version-41)|New|Increased security, performance, and interoperability compared to NFS version 3.|
 |[NFS infrastructure](#nfs-infrastructure)|Updated|Improves deployment and manageability, and increases security.|
 |[NFS version 3 continuous availability](#nfs-version-3-continuous-availability)|Updated|Improves continuous availability on NFS version 3 clients.|
 |[Deployment and manageability improvements](#deployment-and-manageability-improvements)|Updated|Enables you to easily deploy and manage NFS with new Windows PowerShell cmdlets and a new WMI provider.|

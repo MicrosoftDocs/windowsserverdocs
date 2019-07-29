@@ -12,7 +12,6 @@ ms.prod: windows-server-threshold
 ms.technology: identity-adfs
 ---
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 # The Role of Claims
 In the claims\-based identity model, claims play a pivotal role in the federation process, They are the key component by which the outcome of all Web\-based authentication and authorization requests are determined. This model enables organizations to securely project digital identity and entitlement rights, or *claims*, across security and enterprise boundaries in a standardized way.  
@@ -69,7 +68,7 @@ A claim type provides context for the claim value. It is usually expressed as a 
 |Group SID|The group SID of the user|http:\/\/schemas.microsoft.com\/ws\/2008\/06\/identity\/claims\/groupsid|  
 |Primary group SID|The primary group SID of the user|http:\/\/schemas.microsoft.com\/ws\/2008\/06\/identity\/claims\/primarygroupsid|  
 |Primary SID|The primary SID of the user|http:\/\/schemas.microsoft.com\/ws\/2008\/06\/identity\/claims\/primarysid|  
-|Windows account name|The domain account name of the user in the form of <domain>\\<user>|http:\/\/schemas.microsoft.com\/ws\/2008\/06\/identity\/claims\/windowsaccountname|  
+|Windows account name|The domain account name of the user in the form of \<domain\>\\\<user\>|http:\/\/schemas.microsoft.com\/ws\/2008\/06\/identity\/claims\/windowsaccountname|  
   
 ## What are claim descriptions?  
 Claim descriptions represent a list of claims types that AD FS supports and that may be published in federation metadata. The claim types mentioned in the previous table are configured as claims descriptions in the AD FS Management snap\-in.  

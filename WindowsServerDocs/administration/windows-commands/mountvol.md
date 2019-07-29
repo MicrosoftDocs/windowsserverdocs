@@ -47,7 +47,7 @@ mountvol <Drive>: /s
 |/r|Removes volume mount point directories and registry settings for volumes that are no longer in the system, preventing them from being automatically mounted and given their former volume mount point(s) when added back to the system.|
 |/n|Disables automatic mounting of new basic volumes. New volumes are not mounted automatically when added to the system.|
 |/e|Re-enables automatic mounting of new basic volumes.|
-|/s|Mounts the EFI system partition on the specified drive. Available on Itanium-based computers only.|
+|/s|Mounts the EFI system partition on the specified drive.|
 |/?|Displays help at the command prompt.|
 
 ## Remarks

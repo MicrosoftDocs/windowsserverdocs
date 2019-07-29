@@ -17,8 +17,6 @@ ms.date: 10/16/2017
 
 # bitsadmin rawreturn
 
-
-
 Returns data suitable for parsing.
 
 ## Syntax
@@ -29,9 +27,9 @@ bitsadmin /RawReturn
 
 ## Remarks
 
-Strips new line characters and formatting from the output.
+Strips newline characters and formatting from the output.
 
-Typically, you use this command in conjunction with the **Create** and **Get\*** commands to receive only the value. You must specify this command before other commands.
+Typically, you use this command in conjunction with the **Create** and **Get\\*** switches to receive only the value. You must specify this switch before other switches.
 
 ## <a name="BKMK_examples"></a>Examples
 

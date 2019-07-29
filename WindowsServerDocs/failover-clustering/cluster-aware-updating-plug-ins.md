@@ -12,7 +12,7 @@ description: How to use plug-ins to coordinate updates when using Cluster-Aware 
 ---
 # How Cluster-Aware Updating plug-ins work
 
->Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies to: Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 [Cluster-Aware Updating](cluster-aware-updating.md) (CAU) uses plug-ins to coordinate the installation of updates across nodes in a failover cluster. This topic provides information about using the built\-in CAU plug\-ins or other plug\-ins that you install for CAU.
 
@@ -42,10 +42,10 @@ By using the CAU PowerShell cmdlets that are listed in the following table, you 
   
 |Cmdlet|Description|  
 |----------|---------------|  
-|[Add-CauClusterRole](https://technet.microsoft.com/itpro/powershell/windows/cluster-aware-updating/add-cauclusterrole)|Adds the CAU clustered role that provides the self\-updating functionality to the specified cluster.|  
-|[Invoke-CauRun](https://technet.microsoft.com/itpro/powershell/windows/cluster-aware-updating/invoke-caurun)|Performs a scan of cluster nodes for applicable updates and installs those updates through an Updating Run on the specified cluster.|  
-|[Invoke-CauScan](https://technet.microsoft.com/itpro/powershell/windows/cluster-aware-updating/invoke-causcan)|Performs a scan of cluster nodes for applicable updates and returns a list of the initial set of updates that would be applied to each node in the specified cluster.|  
-|[Set-CauClusterRole](https://technet.microsoft.com/itpro/powershell/windows/cluster-aware-updating/set-cauclusterrole)|Sets configuration properties for the CAU clustered role on the specified cluster.|  
+|[Add-CauClusterRole](https://docs.microsoft.com/en-us/powershell/module/clusterawareupdating/add-cauclusterrole)|Adds the CAU clustered role that provides the self\-updating functionality to the specified cluster.|  
+|[Invoke-CauRun](https://docs.microsoft.com/en-us/powershell/module/clusterawareupdating/invoke-caurun)|Performs a scan of cluster nodes for applicable updates and installs those updates through an Updating Run on the specified cluster.|  
+|[Invoke-CauScan](https://docs.microsoft.com/en-us/powershell/module/clusterawareupdating/invoke-causcan)|Performs a scan of cluster nodes for applicable updates and returns a list of the initial set of updates that would be applied to each node in the specified cluster.|  
+|[Set-CauClusterRole](https://docs.microsoft.com/en-us/powershell/module/clusterawareupdating/set-cauclusterrole)|Sets configuration properties for the CAU clustered role on the specified cluster.|  
   
 If you do not specify a CAU plug\-in parameter by using these cmdlets, the default is the plug\-in **Microsoft.WindowsUpdatePlugin**.  
   
@@ -77,9 +77,9 @@ The plug\-ins that CAU installs \(**Microsoft.WindowsUpdatePlugin** and **Micros
   
 |Cmdlet|Description|  
 |----------|---------------|  
-|[Get-CauPlugin](https://technet.microsoft.com/itpro/powershell/windows/cluster-aware-updating/get-cauplugin)|Retrieves information about one or more software updating plug\-ins that are registered on the local computer.|  
-|[Register-CauPlugin]((https://technet.microsoft.com/itpro/powershell/windows/cluster-aware-updating/register-cauplugin))|Registers a CAU software updating plug\-in on the local computer.|  
-|[Unregister-CauPlugin](https://technet.microsoft.com/itpro/powershell/windows/cluster-aware-updating/unregister-cauplugin)|Removes a software updating plug\-in from the list of plug\-ins that can be used by CAU. **Note:** The plug\-ins that are installed with CAU \(**Microsoft.WindowsUpdatePlugin** and the **Microsoft.HotfixPlugin**\) cannot be unregistered.|  
+|[Get-CauPlugin](https://docs.microsoft.com/en-us/powershell/module/clusterawareupdating/get-cauplugin)|Retrieves information about one or more software updating plug\-ins that are registered on the local computer.|  
+|[Register-CauPlugin]((https://docs.microsoft.com/en-us/powershell/module/clusterawareupdating/register-cauplugin))|Registers a CAU software updating plug\-in on the local computer.|  
+|[Unregister-CauPlugin](https://docs.microsoft.com/en-us/powershell/module/clusterawareupdating/unregister-cauplugin)|Removes a software updating plug\-in from the list of plug\-ins that can be used by CAU. **Note:** The plug\-ins that are installed with CAU \(**Microsoft.WindowsUpdatePlugin** and the **Microsoft.HotfixPlugin**\) cannot be unregistered.|  
   
 ## <a name="BKMK_WUP"></a>Using the Microsoft.WindowsUpdatePlugin  
 
@@ -400,7 +400,7 @@ You must enable the **File Server Remote Management \(SMB\-in\)** rule in Window
   
 -   [Cluster-Aware Updating Overview](cluster-aware-updating.md)
   
--   [Cluster-Aware Updating Windows PowerShell Cmdlets](https://technet.microsoft.com/itpro/powershell/windows/cluster-aware-updating)  
+-   [Cluster-Aware Updating Windows PowerShell Cmdlets](https://docs.microsoft.com/en-us/powershell/module/clusterawareupdating)  
   
 -   [Cluster-Aware Updating Plug-in Reference](https://msdn.microsoft.com/library/hh418084.aspx)  
   

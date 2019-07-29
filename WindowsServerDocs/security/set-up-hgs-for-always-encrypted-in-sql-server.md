@@ -6,7 +6,7 @@ ms.topic: article
 manager: dongill
 author: rpsqrd
 ms.technology: security-guarded-fabric
-ms.date: 10/19/2018
+ms.date: 11/03/2018
 ---
 
 # Setting up the Host Guardian Service for Always Encrypted with secure enclaves in SQL Server 
@@ -23,7 +23,7 @@ For the rest of this topic, we'll refer to the machine hosting SQL Server as sim
 
 There are two, mutually exclusive ways for the application to attest: 
 
-- Host key attestation authorizes a host by proving it possesses a known and trusted private key. Host key attestation and either a physical or a virtual host machine running SQL Server is recommended for pre-production environments.
+- Host key attestation authorizes a host by proving it possesses a known and trusted private key. Host key attestation and either a physical host machine or a generation 2 virtual machine running SQL Server is recommended for pre-production environments.
 - TPM attestation validates hardware measurements to make sure a host runs only the correct binaries and security policies. TPM attestation and a physical host machine (not a virtual machine) running SQL Server is recommended for production environments.
 
 For more information about the Host Guardian Service and what it can measure, see [Guarded fabric and shielded VMs overview](https://docs.microsoft.com/windows-server/virtualization/guarded-fabric-shielded-vm/guarded-fabric-and-shielded-vms). 
@@ -39,8 +39,8 @@ This section covers prerequisites for HGS and host machines.
 
 - 1-3 servers to run HGS. 
 
-  >[!NOTE]
-  >Only 1 HGS server is required for a test or pre-production environment.
+  > [!NOTE]
+  > Only 1 HGS server is required for a test or pre-production environment.
 
   These servers should be carefully protected since they control which machines can run your SQL Server instances using Always Encrypted with secure enclaves. 
   It is recommended that different administrators manage the HGS cluster and that you run the HGS on physical hardware isolated from the rest of your infrastructure, or in separate virtualization fabrics or Azure subscriptions.
@@ -69,8 +69,11 @@ This section covers prerequisites for HGS and host machines.
     - Windows 10 Enterprise, version 1809  
     - Windows Server 2019 Datacenter (Semi-Annual Channel), version 1809
     - Windows Server 2019 Datacenter
-  - Physical machine (not a virtual machine)
+  - Physical machine for production, or a generation 2 virtual machine for testing (Note that Azure does not support generation 2 VMs)
   - General requirements listed in [Hardware and Software Requirements for Installing SQL Server](https://docs.microsoft.com/sql/sql-server/install/hardware-and-software-requirements-for-installing-sql-server?view=sql-server-2017).   
+
+  You can use either the [Long-Term Servicing Channel (LTSC)](https://docs.microsoft.com/windows-server/get-started/semi-annual-channel-overview#long-term-servicing-channel-ltsc) or the [Semi-Annual Channel](https://docs.microsoft.com/windows-server/get-started/semi-annual-channel-overview#semi-annual-channel). 
+  To register and download the Windows Server Insider Preview, see [Getting started with the Windows Insider Program](https://insider.windows.com/for-business-getting-started-server/).
 
 - Requirements specific to the chosen attestation mode:
   - **TPM mode** is the strongest attestation mode and will use a Trusted Platform Module (TPM) to cryptographically validate that your host machines are known to your datacenter (using a unique ID from each TPM), running trusted hardware and firmware configurations (using a TPM baseline), and running trustworthy kernel and user mode code (using Windows Defender Application Control). The following hardware is required to use TPM mode: 
@@ -109,11 +112,13 @@ Run all of the following commands in an elevated PowerShell session.
    For the HgsServiceName, specify the DNN you chose.
 
    For TPM mode:
+
    ```powershell
    Initialize-HgsAttestation -HgsServiceName 'hgs' -TrustTpm
    ```
 
    For host key mode:
+
    ```powershell
    Initialize-HgsAttestation -HgsServiceName 'hgs' -TrustHostKey 
    ```
@@ -147,13 +152,13 @@ To add nodes to the cluster, run the following commands in an elevated PowerShel
 
 By default, when you initialize the HGS server it will configure the IIS web sites for HTTP-only communications.
 
->[!NOTE]
->Configuring HTTPS using a well known and trusted HGS server certificate is required to prevent man-in-the-middle attacks and is therefore advised for production deployments.
+> [!NOTE]
+> Configuring HTTPS using a well known and trusted HGS server certificate is required to prevent man-in-the-middle attacks and is therefore advised for production deployments.
 
 [!INCLUDE [Configure HTTPS](../../includes/configure-hgs-for-https.md)] 
 
->[!NOTE]
->For Always Encrypted with secure enclaves, the SSL certificate needs to be trusted on both host machines that run SQL Server and machines that run database client applications need to contact HGS. 
+> [!NOTE]
+> For Always Encrypted with secure enclaves, the SSL certificate needs to be trusted on both host machines that run SQL Server and machines that run database client applications need to contact HGS. 
 
 ## Collect attestation info from the host machines
 
@@ -196,6 +201,7 @@ If you are using TPM mode, run the following commands in an elevated PowerShell 
    ```powershell
    Get-ComputerInfo -Property DeviceGuard* 
    ```
+
 5. Collect the TPM identifier and baseline:
 
    ```powershell 
@@ -215,6 +221,7 @@ If you are using TPM mode, run the following commands in an elevated PowerShell 
    Add-HgsAttestationTpmPolicy -Name ServerA-Baseline -Path C:\temp\TpmBaseline-ServerA.tcglog 
    Add-HgsAttestationCiPolicy -Name AllowMicrosoft-Audit -Path C:\temp\AllowMicrosoft-Audit.bin 
    ```
+
 9. Your first server is now ready to attest! 
    On the host machine, run the following command to tell it where to attest (change the DNS name to that of your HGS cluster, typically you will use the HGS Service Name combined with the HGS domain name). 
    If you receive a HostUnreachable error, ensure you can resolve and ping the DNS names of your HGS servers. 
@@ -230,9 +237,9 @@ If you are using TPM mode, run the following commands in an elevated PowerShell 
 
 ### Collecting Host Keys 
 
->[!NOTE] 
->Host key attestation is only recommended for use in test environments. 
->TPM attestation provides the strongest assurances that VBS enclaves processing your sensitive data on SQL Server are running trusted code and the machines are configured with the recommended security settings. 
+> [!NOTE] 
+> Host key attestation is only recommended for use in test environments. 
+> TPM attestation provides the strongest assurances that VBS enclaves processing your sensitive data on SQL Server are running trusted code and the machines are configured with the recommended security settings. 
 
 If you chose to set up HGS in host key attestation mode, you’ll need to generate and collect keys from each host machine and register them with the Host Guardian Service. 
 

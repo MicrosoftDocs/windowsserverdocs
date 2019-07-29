@@ -7,19 +7,16 @@ ms.manager: eldenc
 ms.technology: storage-spaces
 ms.topic: article
 author: eldenchristensen
-ms.date: 04/12/2018
+ms.date: 06/13/2019
 ms.localizationpriority: medium
 ---
-
 # Storage Spaces Direct hardware requirements
 
-> Applies to: Windows Server 2016, Windows Server Insider Preview
+> Applies to: Windows Server 2019, Windows Server 2016
 
 This topic describes minimum hardware requirements for Storage Spaces Direct.
 
-For production, Microsoft recommends these [Windows Server Software-Defined](https://microsoft.com/wssd) hardware/software offers from our partners, which include deployment tools and procedures. They are designed, assembled, and validated against our reference architecture to ensure compatibility and reliability, so you get up and running quickly. Learn more at [https://microsoft.com/wssd](https://microsoft.com/wssd).
-
-![logos of our Windows Server Software Defined partners](media/hardware-requirements/wssd-partners.png)
+For production, Microsoft recommends purchasing a validated hardware/software solution from our partners, which include deployment tools and procedures. These solutions are designed, assembled, and validated against our reference architecture to ensure compatibility and reliability, so you get up and running quickly. For Windows Server 2019 solutions, visit the [Azure Stack HCI solutions website](https://azure.microsoft.com/overview/azure-stack/hci). For Windows Server 2016 solutions, learn more at [Windows Server Software-Defined](https://microsoft.com/wssd).
 
    > [!TIP]
    > Want to evaluate Storage Spaces Direct but don't have hardware? Use Hyper-V or Azure virtual machines as described in [Using Storage Spaces Direct in guest virtual machine clusters](storage-spaces-direct-in-vm.md).
@@ -74,24 +71,27 @@ Storage Spaces Direct works with direct-attached SATA, SAS, or NVMe drives that 
 - 512n, 512e, and 4K native drives are all supported
 - Solid-state drives must provide [power-loss protection](https://blogs.technet.microsoft.com/filecab/2016/11/18/dont-do-it-consumer-ssd/)
 - Same number and types of drives in every server – see [Drive symmetry considerations](drive-symmetry-considerations.md)
+- Cache devices must be 32 GB or larger
+- When using persistent memory devices as cache devices, you must use NVMe or SSD capacity devices (you can't use HDDs)
+- NVMe driver is Microsoft's in-box or updated NVMe driver.
 - Recommended: Number of capacity drives is a whole multiple of the number of cache drives
 - Recommended: Cache drives should have high write endurance: at least 3 drive-writes-per-day (DWPD) or at least 4 terabytes written (TBW) per day – see [Understanding drive writes per day (DWPD), terabytes written (TBW), and the minimum recommended for Storage Spaces Direct](https://blogs.technet.microsoft.com/filecab/2017/08/11/understanding-dwpd-tbw/)
 
 Here's how drives can be connected for Storage Spaces Direct:
 
-1. Direct-attached SATA drives
-2. Direct-attached NVMe drives
-3. SAS host-bus adapter (HBA) with SAS drives
-4. SAS host-bus adapter (HBA) with SATA drives
-5. **NOT SUPPORTED:** RAID controller cards or SAN (Fibre Channel, iSCSI, FCoE) storage. Host-bus adapter (HBA) cards must implement simple pass-through mode.
+- Direct-attached SATA drives
+- Direct-attached NVMe drives
+- SAS host-bus adapter (HBA) with SAS drives
+- SAS host-bus adapter (HBA) with SATA drives
+- **NOT SUPPORTED:** RAID controller cards or SAN (Fibre Channel, iSCSI, FCoE) storage. Host-bus adapter (HBA) cards must implement simple pass-through mode.
 
 ![diagram of supported drive interconnects](media/hardware-requirements/drive-interconnect-support-1.png)
 
 Drives can be internal to the server, or in an external enclosure that is connected to just one server. SCSI Enclosure Services (SES) is required for slot mapping and identification. Each external enclosure must present a unique identifier (Unique ID).
 
-1. Drives internal to the server
-2. Drives in an external enclosure ("JBOD") connected to one server
-3. **NOT SUPPORTED:** Shared SAS enclosures connected to multiple servers or any form of multi-path IO (MPIO) where drives are accessible by multiple paths.
+- Drives internal to the server
+- Drives in an external enclosure ("JBOD") connected to one server
+- **NOT SUPPORTED:** Shared SAS enclosures connected to multiple servers or any form of multi-path IO (MPIO) where drives are accessible by multiple paths.
 
 ![diagram of supported drive interconnects](media/hardware-requirements/drive-interconnect-support-2.png)
 
@@ -102,8 +102,10 @@ Drives can be internal to the server, or in an external enclosure that is connec
 
 | Drive types present   | Minimum number required |
 |-----------------------|-------------------------|
+| All persistent memory (same model) | 4 persistent memory |
 | All NVMe (same model) | 4 NVMe                  |
 | All SSD (same model)  | 4 SSD                   |
+| Persistent memory + NVMe or SSD | 2 persistent memory + 4 NVMe or SSD |
 | NVMe + SSD            | 2 NVMe + 4 SSD          |
 | NVMe + HDD            | 2 NVMe + 4 HDD          |
 | SSD + HDD             | 2 SSD + 4 HDD           |
@@ -114,5 +116,7 @@ Drives can be internal to the server, or in an external enclosure that is connec
 
 ### Maximum capacity
 
-- Recommended: Maximum 100 terabytes (TB) raw storage capacity per server
-- Maximum 1 petabyte (1,000 TB) raw capacity in the storage pool
+| Maximums                | Windows Server 2019  | Windows Server 2016  |
+| ---                     | ---------            | ---------            |
+| Raw capacity per server | 100 TB               | 100 TB               |
+| Pool capacity           | 4 PB (4,000 TB)      | 1 PB                 |

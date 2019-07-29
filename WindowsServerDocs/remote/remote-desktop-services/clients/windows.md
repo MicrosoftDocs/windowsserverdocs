@@ -17,7 +17,7 @@ ms.localizationpriority: medium
 ---
 # Get started with Remote Desktop on Windows
 
->Applies To: Windows 10, Windows 8.1, Windows Server 2012 R2, Windows Server 2016
+>Applies to: Windows 10, Windows 8.1, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2
 
 You can use the Remote Desktop client for Windows to work with Windows apps and desktops remotely from a different Windows device.
 
@@ -42,20 +42,20 @@ To create a Remote Desktop connection:
 
 1. In the Connection Center tap **+ Add**, and then tap **Desktop**.
 2. Enter the following information for the computer you want to connect to:
-  - **PC name** – the name of the computer. This can be a Windows computer name, an Internet domain name, or an IP address. You can also append port information to the PC name (for example, **MyDesktop:3389** or **10.0.0.1:3389**).
-  - **User account** – The user account to use to access the remote PC. Tap **+** to add a new account or select an existing account. You can use the following formats for the username: *user_name*, *domain\user_name*, or *user_name@domain.com*. You can also specify whether to prompt for a user name and password during the connection by selecting **Ask me every time**.
+   - **PC name** – the name of the computer. This can be a Windows computer name, an Internet domain name, or an IP address. You can also append port information to the PC name (for example, **MyDesktop:3389** or **10.0.0.1:3389**).
+   - **User account** – The user account to use to access the remote PC. Tap **+** to add a new account or select an existing account. You can use the following formats for the username: *user_name*, *domain\user_name*, or <em>user_name@domain.com</em>. You can also specify whether to prompt for a user name and password during the connection by selecting **Ask me every time**.
 3. You can also set additional options by tapping on **Show more**:
-  - **Display name** – An easy-to-remember name for the PC you are connecting to. You can use any string, but if you do not specify a friendly name, the PC name is displayed.
-  - **Group** – Specify a group to make it easier to find your connections later. You can add a new group by tapping **+** or select one from the list.
-  - **Gateway** – The Remote Desktop gateway that you want to use to connect to virtual desktops, RemoteApp programs, and session-based desktops on an internal corporate network. Get the information about the gateway from your system administrator.
-  - **Connect to admin session** - Use this option to connect to a console session to administrate a Windows server.
-  - **Swap mouse buttons** – Use this option to swap the left mouse button functions for the right mouse button. (This is especially useful if the remote PC is configured for a left-handed user but you use a right-handed mouse.)
-  - **Set my remote session resolution to:** – Select the resolution you want to use in the session. **Choose for me** will set the resolution based on the size of the client.
-  - **Change the size of the display:** – When selecting a high static resolution for the session, you have the option to make items on the screen appear larger to improve readability. Note: This only applies when connecting to Windows 8.1 or above.
-  - **Update the remote session resolution on resize** – When enabled, the client will dynamically update the session resolution based on the size of the client. Note: This only applies when connecting to Windows 8.1 or above.
-  - **Clipboard** – When enabled, allows you to copy text and images to/from the remote PC.
-  - **Audio Playback** – Select the device to use for audio during your remote session. You can choose to play sound on the local devices, the remote PC, or not at all.
-  - **Audio Recording** – When enabled, allows you to use a local microphone with applications on the remote PC.
+   - **Display name** – An easy-to-remember name for the PC you are connecting to. You can use any string, but if you do not specify a friendly name, the PC name is displayed.
+   - **Group** – Specify a group to make it easier to find your connections later. You can add a new group by tapping **+** or select one from the list.
+   - **Gateway** – The Remote Desktop gateway that you want to use to connect to virtual desktops, RemoteApp programs, and session-based desktops on an internal corporate network. Get the information about the gateway from your system administrator.
+   - **Connect to admin session** - Use this option to connect to a console session to administrate a Windows server.
+   - **Swap mouse buttons** – Use this option to swap the left mouse button functions for the right mouse button. (This is especially useful if the remote PC is configured for a left-handed user but you use a right-handed mouse.)
+   - **Set my remote session resolution to:** – Select the resolution you want to use in the session. **Choose for me** will set the resolution based on the size of the client.
+   - **Change the size of the display:** – When selecting a high static resolution for the session, you have the option to make items on the screen appear larger to improve readability. Note: This only applies when connecting to Windows 8.1 or above.
+   - **Update the remote session resolution on resize** – When enabled, the client will dynamically update the session resolution based on the size of the client. Note: This only applies when connecting to Windows 8.1 or above.
+   - **Clipboard** – When enabled, allows you to copy text and images to/from the remote PC.
+   - **Audio Playback** – Select the device to use for audio during your remote session. You can choose to play sound on the local devices, the remote PC, or not at all.
+   - **Audio Recording** – When enabled, allows you to use a local microphone with applications on the remote PC.
 4. Tap **Save**.
 
 Need to edit these settings? Tap the overflow menu (**...**) next to the name of the desktop, and then tap **Edit**.
@@ -94,8 +94,8 @@ To set up a new gateway:
 1. In the Connection Center, tap **Settings**.
 2. Next to Gateway, tap **+** to add a new gateway. Note: A gateway can also be added when adding a new connection.
 3. Enter the following information:
-  - **Server name** – The name of the computer you want to use as a gateway. This can be a Windows computer name, an Internet domain name, or an IP address. You can also add port information to the server name (for example: **RDGateway:443** or **10.0.0.1:443**).
-  - **User account** - Select or add a user account to use with the Remote Desktop Gateway you are connecting to. You can also select **Use desktop user account** to use the same credentials as those used for the remote desktop connection.
+   - **Server name** – The name of the computer you want to use as a gateway. This can be a Windows computer name, an Internet domain name, or an IP address. You can also add port information to the server name (for example: **RDGateway:443** or **10.0.0.1:443**).
+   - **User account** - Select or add a user account to use with the Remote Desktop Gateway you are connecting to. You can also select **Use desktop user account** to use the same credentials as those used for the remote desktop connection.
 4. Tap **Save**.  
 
 ## Global app settings
