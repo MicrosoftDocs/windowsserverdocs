@@ -1,6 +1,6 @@
 ---
 ms.assetid: acc9101b-841c-4540-8b3c-62a53869ef7a
-title: AD FS 2016 FAQ
+title: AD FS FAQ
 description: Frequently asked questions for AD FS 2016
 author: jenfieldmsft
 ms.author:  billmath
@@ -14,7 +14,7 @@ ms.technology: identity-adfs
 
 # AD FS Frequently Asked Questions (FAQ)
 
->Applies To: Windows Server 2016
+>Applies To: Windows Server 2012 R2, Windows Server 2016, Windows Server 2019
 
 The following documentation is a home to frequently asked questions with regard to Active Directory Federation Services.  The document has been split into groups based on the type of question.
 
