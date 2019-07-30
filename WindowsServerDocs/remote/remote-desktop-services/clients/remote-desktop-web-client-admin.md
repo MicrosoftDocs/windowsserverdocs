@@ -245,7 +245,7 @@ Follow these steps if the RD Session Host server is different from the RD Broker
 * The **Subject Alternative Name (SAN)** for each certificate must be set to the machine's **Fully Qualified Domain Name (FQDN)**. The **Common Name (CN)** must match the SAN for each certificate.
 
 ## How to pre-configure settings for Remote Desktop web client users
-This section will tell you how to use PowerShell to configure settings for your Remote Desktop web client deployment. These PowerShell cmdlets control a user's ability to change settings based on your organization's security concerns or intended workflow. The following settings are all located in the **Settings** side panel of the web client. 
+This section will tell you how to use PowerShell to configure settings for your Remote Desktop web client deployment. These PowerShell cmdlets control a user's ability to change settings based on your organization's security concerns or intended workflow. The following settings are all located in the **Settings** side panel of the web client.
 
 ### Suppress telemetry
 By default, users may choose to enable or disable collection of telemetry data that is sent to Microsoft. For information about the telemetry data Microsoft collects, please refer to our Privacy Statement via the link in the **About** side panel.
@@ -270,7 +270,7 @@ By default, users may choose to launch remote resources (1) in the browser or (2
 To reset all deployment-level web client settings to the default configurations, run the following PowerShell cmdlet:
 
    ```PowerShell
-    Reset-RDWebClientDeploymentSetting 
+    Reset-RDWebClientDeploymentSetting
    ```
 
 ## Troubleshooting
@@ -310,4 +310,4 @@ The console may also be accessed directly through your browser. The console is g
 
 ## Get help with the web client
 
-If you've encountered an issue that can’t be solved by the information in this article, you can [email us](mailto:rdwbclnt@microsoft.com) to report it. You can also request or vote for new features at our [suggestion box](https://aka.ms/rdwebfbk).
+If you've encountered an issue that can’t be solved by the information in this article, you can report it on [Tech Community](https://aka.ms/wvdtc). You can also request or vote for new features at our [suggestion box](https://aka.ms/rdwebfbk).
