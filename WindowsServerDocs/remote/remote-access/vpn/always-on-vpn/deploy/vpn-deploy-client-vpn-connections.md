@@ -330,7 +330,7 @@ You can use this script on the Windows 10 desktop or in System Center Configurat
 ### Define key VPN profile parameters
 
 ```xml
-$Script = $ProfileName
+$Script = '$ProfileName = ''' + $ProfileName + ''''
 $ProfileNameEscaped = $ProfileName -replace ' ', '%20'
 ```
 
@@ -433,7 +433,7 @@ exit
 }
 
 $Message = "Script Complete"
-Write-Host "$Message"'
+Write-Host "$Message"
 ```
 
 ### Save the profile XML file

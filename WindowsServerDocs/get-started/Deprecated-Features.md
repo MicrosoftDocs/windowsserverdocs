@@ -50,8 +50,8 @@ The **wuauclt.exe /detectnow** command has been removed and is no longer support
 
 - Run these PowerShell commands:
     ````powershell
-    $AutoUpdates = New-Object -ComObject "Microsoft.Update.AutoUpdate"`
-    $AutoUpdates.DetectNow()` 
+    $AutoUpdates = New-Object -ComObject "Microsoft.Update.AutoUpdate"
+    $AutoUpdates.DetectNow()
     ````
 
 - Alternately, use this VBScript:
