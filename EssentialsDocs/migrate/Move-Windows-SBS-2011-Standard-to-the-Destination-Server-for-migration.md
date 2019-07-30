@@ -126,7 +126,7 @@ Move settings and data to the Destination Server as follows:
  
 2. Click **Start**, and then click **Server Management**. 
  
-3. In the navigation pane, click **Advanced Management**, click **Group Policy Management**, and then click **Forest:***<YourDomainName\>*. 
+3. In the navigation pane, click **Advanced Management**, click **Group Policy Management**, and then click **Forest:**_<YourDomainName\>_. 
  
 4. Click **Domains**, click *<YourDomainName\>*, and then click **Group Policy Objects**. 
  
@@ -156,7 +156,7 @@ Move settings and data to the Destination Server as follows:
  
 2. Click **Start**, and then click **Server Management**. 
  
-3. In the navigation pane, click **Features**, click **Group Policy Management**, and then click **Forest:***<YourNetworkDomainName\>* 
+3. In the navigation pane, click **Features**, click **Group Policy Management**, and then click **Forest:**_<YourNetworkDomainName\>_ 
  
 4. Click **Domains**, click *<YourNetworkDomainName\>*, and then click **WMI Filters**. 
  

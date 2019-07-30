@@ -4,7 +4,7 @@ description: Known issues and troubleshooting support for Storage Migration Serv
 author: nedpyle
 ms.author: nedpyle
 manager: siroy
-ms.date: 05/14/2019
+ms.date: 07/09/2019
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: storage
@@ -193,12 +193,43 @@ This error is expected if you have not enabled the "File and Printer Sharing (SM
 
 ## Error "Couldn't transfer storage on any of the endpoints" when transfering from Windows Server 2008 R2
 
-When attempting to transfer data from a Windows Server 2008 R2 source computer, no data trasnfers and you receieve error:  
+When attempting to transfer data from a Windows Server 2008 R2 source computer, no data transfers and you receieve error:  
 
   Couldn't transfer storage on any of the endpoints.
   0x9044
 
 This error is expected if your Windows Server 2008 R2 computer isn't fully patched with all Critical and Important updates from Windows Update. Irrespective of Storage Migration Service, we always recommend patching a Windows Server 2008 R2 computer for security purposes, as that operating system doesn't contain the security improvements of newer versions of Windows Server.
+
+## Error "Couldn't transfer storage on any of the endpoints" and "Check if the source device is online - we couldn't access it."
+
+When attempting to transfer data from a source computer, some or all shares do not transfer, with summary error:
+
+   Couldn't transfer storage on any of the endpoints.
+   0x9044
+
+Examining the SMB transfer details shows error:
+
+   Check if the source device is online - we couldn't access it.
+
+Examining the StorageMigrationService/Admin event log shows:
+
+   Couldn't transfer storage.
+
+   Job: Job1
+   ID:  
+   State: Failed
+   Error: 36931
+   Error Message: 
+
+   Guidance: Check the detailed error and make sure the transfer requirements are met. The transfer job couldn't transfer any source and destination computers. This could be because the orchestrator computer couldn't reach any source or destination computers, possibly due to a firewall rule, or missing permissions.
+
+Examining the StorageMigrationService-Proxy/Debug log shows:
+
+   07/02/2019-13:35:57.231 [Erro] Transfer validation failed. ErrorCode: 40961, Source endpoint is not reachable, or doesn't exist, or source credentials are invalid, or authenticated user doesn't have sufficient permissions to access it.
+   at Microsoft.StorageMigration.Proxy.Service.Transfer.TransferOperation.Validate()
+   at Microsoft.StorageMigration.Proxy.Service.Transfer.TransferRequestHandler.ProcessRequest(FileTransferRequest fileTransferRequest, Guid operationId)    [d:\os\src\base\dms\proxy\transfer\transferproxy\TransferRequestHandler.cs::
+
+This error is expected if your migration account does not have at least Read access permissions to the SMB shares. To workaround this error, add a security group containing the source migration account to the SMB shares on the source computer and grant it Read, Change, or Full Control. After the migration completes, you can remove this group. A future release of Windows Server may change this behavior to no longer require explicit permissions to the source shares.
 
 ## See also
 

@@ -73,14 +73,14 @@ dfsrmig [/SetGlobalState <state> | /GetGlobalState | /GetMigrationState | /creat
   ```
   This example shows typical output from the **dfsrmig /GetMigrationState** command when the local migration states on some domain controllers do not match the global migration state.
   ```
-  The following Domain Controllers are not in sync with Global state ( Prepared ):
-Domain Controller (Local Migration State)   DC type
-=========
-CONTOSO-DC2 ( start )   ReadOnly DC
-CONTOSO-DC3 ( Preparing )   Writable DC
-Migration has not yet reached a consistent state on all domain controllers
-State information might be stale due to AD latency.
-```
+    The following Domain Controllers are not in sync with Global state ( Prepared ):
+    Domain Controller (Local Migration State)   DC type
+    =========
+    CONTOSO-DC2 ( start )   ReadOnly DC
+    CONTOSO-DC3 ( Preparing )   Writable DC
+    Migration has not yet reached a consistent state on all domain controllers
+    State information might be stale due to AD latency.
+  ```
 To create the global objects and settings that DFS Replication uses in AD DS on domain controllers where those settings were not created automatically during migration or where those settings are missing, type:
 ```
 dfsrmig /createGlobalObjects
