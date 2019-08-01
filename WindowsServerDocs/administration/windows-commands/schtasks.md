@@ -446,7 +446,7 @@ schtasks /create /tn <TaskName> /tr <TaskRun> /sc weekly [/d {<MON - SUN>[,MON -
 
 #### Remarks
 
-The "day of the week" schedule is a variation of the weekly schedule. In a weekly schedule, the **/sc weekly** parameter is required. The **/mo** (modifier) parameter is optional and specifies the number of weeks between each run of the task. The default value for **/mo** is 1 (every week). The **/d** parameter, which is optional, schedules the task to run on specified days of the week, or on all days (<em>). The default is MON (Monday). The every day option (</em>*/d \***) is equivalent to scheduling a daily task.
+The "day of the week" schedule is a variation of the weekly schedule. In a weekly schedule, the **/sc weekly** parameter is required. The **/mo** (modifier) parameter is optional and specifies the number of weeks between each run of the task. The default value for **/mo** is 1 (every week). The **/d** parameter, which is optional, schedules the task to run on specified days of the week, or on all days (\*). The default is MON (Monday). The every day option (**/d \***) is equivalent to scheduling a daily task.
 
 #### Examples
 
