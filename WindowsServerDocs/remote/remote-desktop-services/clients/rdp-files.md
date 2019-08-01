@@ -59,7 +59,7 @@ To learn more about how to use PowerShell to customize RDP properties, see [Cust
 |remoteapplicationmode:i:value | Determines whether a RemoteApp connection is launched as a RemoteApp session.| - 0: Don't launch a RemoteApp session<br>- 1: Launch a RemoteApp session|1|x|x|x|
 |remoteapplicationname:s:value | Specifies the name of the RemoteApp in the client interface while starting the RemoteApp.| For example, "Excel 2016."|x|x|x|
 |remoteapplicationprogram:s:value | Specifies the alias or executable name of the RemoteApp. | For example, "EXCEL." |x|x|x|
-|screen mode id:i:value | Determines whether the remote session window appears full screen when you connect to the remote computer by using Remote Desktop Connection. |- 0: The remote session will appear in a window<br>- 1: The remote session will appear full screen|2|x|x|x|
+|screen mode id:i:value | Determines whether the remote session window appears full screen when you connect to the remote computer by using Remote Desktop Connection. |- 1: The remote session will appear in a window<br>- 2: The remote session will appear full screen|2|x|x|x|
 |smart sizing:i:value | Determines whether or not the client computer can scale the content on the remote computer to fit the window size of the client computer.|- 0: The client window display won't scale when resized<br>- 1: The client window display will scale when resized|0|x|x||
 | use multimon:i:value | Configures multiple monitor support when you connect to the remote computer by using Remote Desktop Connection.|- 0: Don't enable multiple monitor support<br>- 1: Enable multiple monitor support|0|x|x||
 | username:s:value | Specifies the name of the user account that will be used to log on to the remote computer. | Any valid username. ||x|x|x|
