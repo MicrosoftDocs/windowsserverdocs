@@ -7,7 +7,7 @@ ms.manager: eldenc
 ms.technology: storage-spaces
 ms.topic: article
 author: eldenchristensen
-ms.date: 06/13/2019
+ms.date: 08/05/2019
 ms.localizationpriority: medium
 ---
 # Storage Spaces Direct hardware requirements
