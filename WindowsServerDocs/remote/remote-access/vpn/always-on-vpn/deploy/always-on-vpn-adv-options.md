@@ -57,7 +57,7 @@ After you install updates, the RRAS server can enforce certificate revocation fo
 
 **Availability**
 
-The following table lists the approximate release dates of the fixes for each version of Windows.
+The following table lists the releases that contain the fixes for each version of Windows.
 
 |Operating system version |Release  |
 |---------|---------|
@@ -74,7 +74,7 @@ The following table lists the approximate release dates of the fixes for each ve
 1. On the RRAS server, use the **Set-VpnAuthProtocol** PowerShell cmdlet to configure the **RootCertificateNameToAccept** parameter.<br /><br />
    The following example lists the commands to do this. In the example, **CN=Contoso Root Certification Authority** represents the distinguished name of the Root Certification Authority. 
    ``` powershell
-   $cert1 = ( Get-ChildItem -Path cert:LocalMachine\root | Where-Object -FilterScript { $_.Subject -Like "*CN=Contoso Root Certification Authority,*" } )
+   $cert1 = ( Get-ChildItem -Path cert:LocalMachine\root | Where-Object -FilterScript { $_.Subject -Like "*CN=Contoso Root Certification Authority*" } )
    Set-VpnAuthProtocol -RootCertificateNameToAccept $cert1 -PassThru
    ```
 **How to configure the RRAS server to enforce certificate revocation for VPN connections that are based on IKEv2 machine certificates**
