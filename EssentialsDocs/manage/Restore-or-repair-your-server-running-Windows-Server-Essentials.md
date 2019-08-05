@@ -48,7 +48,7 @@ manager: dongill
 ###  <a name="BKMK_RestoreFromBackup"></a> Restoring the server from a backup  
  This section provides guidance on what type of backup to choose.  
   
- If a backup is available, your best choice for restoring your server is to use the manufacturer ��s installation media to restore from an external backup. The restoration will recover server settings and folders from the backup that you choose. You only need to configure settings and restore data created after the backup.  
+ If a backup is available, your best choice for restoring your server is to use the manufacturer's installation media to restore from an external backup. The restoration will recover server settings and folders from the backup that you choose. You only need to configure settings and restore data created after the backup.  
   
  When you choose to recover your server by restoring from a previous backup, you must choose the specific backup that you want restored, and you must have a valid backup file on an external hard drive that is directly connected to the server:  
   
@@ -78,7 +78,7 @@ manager: dongill
 -   If you choose to keep all your data, all data on the system volume is deleted, but the data on other volumes is retained.  
   
     > [!CAUTION]
-    >  If the disk settings do not match the default settings, all data on a disk will be deleted. If you replaced the system disk, the new disk must be larger than the original disk ��s system volume.  
+    >  If the disk settings do not match the default settings, all data on a disk will be deleted. If you replaced the system disk, the new disk must be larger than the original disk's system volume.  
     >   
     >  If the partition information for a system drive is unreadable, or if you replace the system drive, all data on the system drive will be removed, even if you choose to keep all your data.  
   
@@ -89,7 +89,7 @@ manager: dongill
   
  After a factory reset, you will need to perform the following tasks:  
   
--   **Reconfigure the server.** On the server, use the Configure Server Wizard to reenter configuration settings. To configure a remotely managed  Windows Server Essentials server from a client computer, open a web browser, and then type **http://***<YourServerName\>* in the address bar.  
+-   **Reconfigure the server.** On the server, use the Configure Server Wizard to reenter configuration settings. To configure a remotely managed  Windows Server Essentials server from a client computer, open a web browser, and then type **http://**_<YourServerName\>_ in the address bar.  
   
 -   **Reconnect client computers to the server.** If a computer was previously connected to the server, you must uninstall the  Windows Server Essentials Connector software from the computer before you connect the computer to the server again. For more information, see [Uninstall the Connector software](../use/Get-Connected-in-Windows-Server-Essentials.md#BKMK_13) and [Connect computers to the server](../use/Get-Connected-in-Windows-Server-Essentials.md#BKMK_9).  
   
@@ -212,7 +212,7 @@ manager: dongill
 >  For more information about backing up and restoring files and folders, see [Manage Backup and Restore](Manage-Backup-and-Restore-in-Windows-Server-Essentials.md).  
   
 ###  <a name="BKMK_ConfigreSharedFolders"></a> Restore shared folders on the server  
- After you restore the server ��s system drive, if shared folders are still on the data partition or were restored to the data partition, you might need to configure the shared folders again in order for the server to recognize the folders. The following procedure describes how to add shared folders that have been shared before.  
+ After you restore the server's system drive, if shared folders are still on the data partition or were restored to the data partition, you might need to configure the shared folders again in order for the server to recognize the folders. The following procedure describes how to add shared folders that have been shared before.  
   
 ##### To add an existing folder to the server shared folders  
   
