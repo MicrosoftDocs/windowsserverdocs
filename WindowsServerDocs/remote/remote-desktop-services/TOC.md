@@ -68,7 +68,7 @@
 ## [Remote Desktop clients](clients/remote-desktop-clients.md)
 ### Remote Desktop known issues
 #### [General Remote Desktop connection troubleshooting](troubleshoot/rdp-error-general-troubleshooting.md)
-#### [Clients can't connect and get the "Class not registered" error](troubleshoot/rdp-error-class-not-registered.md).
+#### [Clients can't connect and get the "Class not registered" error](troubleshoot/rdp-error-class-not-registered.md)
 #### [Clients can't connect and see "No licenses available" error](troubleshoot/rdp-error-no-licenses-available.md)
 #### [User can't authenticate or must authenticate twice](troubleshoot/cannot-authenticate-or-must-authenticate-twice.md)
 #### ["Remote Desktop Service is currently busy" error on connecting](troubleshoot/remote-desktop-service-currently-busy.md)
