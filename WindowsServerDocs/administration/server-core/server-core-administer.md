@@ -19,7 +19,7 @@ Because Server Core doesn't have a UI, you need to use Windows PowerShell cmdlet
 Use the following information to perform basic administrative tasks with Windows PowerShell cmdlets.
 
 ### Set a static IP address
-When you install a Server Core server, by default it has A DHCP address. If you need a static IP address, you can set it using the following steps.
+When you install a Server Core server, by default it has a DHCP address. If you need a static IP address, you can set it using the following steps.
 
 To view your current network configuration, use **Get-NetIPConfiguration**.
 
@@ -84,8 +84,8 @@ Run **slmgr.vbs –ipk\<productkey\>**. Then run **slmgr.vbs –ato**. If activa
 > [!NOTE]
 > You can also activate the server by phone, using a [Key Management Service (KMS) server](../../get-started/server-2016-activation.md), or remotely. To activate remotely, run the following cmdlet from a remote computer: 
 > 
-> ```powershell
-> **cscript windows\system32\slmgr.vbs <ServerName> <UserName> <password>:-ato**
+> ```
+> cscript windows\system32\slmgr.vbs <ServerName> <UserName> <password>:-ato
 > ```
  
 ### Configure Windows Firewall
