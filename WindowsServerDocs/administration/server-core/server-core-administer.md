@@ -130,7 +130,7 @@ Use the following reference information to perform administrative tasks from the
 |Task|Command| 
 |----|-------|
 |Configure your server to use a proxy server|**netsh Winhttp set proxy \<servername\>:\<port number\>** <br>**Note:** Server Core installations can't access the Internet through a proxy that requires a password to allow connections.|
-|Configure your server to bypass the proxy for Internet addresses|**netsh winttp set proxy \<servername\>:\<port number\> bypass-list="\<local\>"**| 
+|Configure your server to bypass the proxy for Internet addresses|**netsh winhttp set proxy \<servername\>:\<port number\> bypass-list="\<local\>"**| 
 |Display or modify IPSEC configuration|**netsh ipsec**| 
 |Display or modify NAP configuration|**netsh nap**| 
 |Display or modify IP to physical address translation|**arp**| 
@@ -141,7 +141,7 @@ Use the following reference information to perform administrative tasks from the
 |Display hops for network connections|**pathping**| 
 |Trace hops for network connections|**tracert**| 
 |Display the configuration of the multicast router|**mrinfo**| 
-|Enable remote administration of the firewall|**netsh advfirewall firewall set rule group=”Windows Firewall Remote Management” new enable=yes**| 
+|Enable remote administration of the firewall|**netsh advfirewall firewall set rule group="Windows Defender Firewall Remote Management" new enable=yes**| 
  
 
 ### Updates, error reporting, and feedback
