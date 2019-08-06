@@ -26,7 +26,10 @@ Following are the versions of Windows Server that are supported as guest operati
   
 |Guest operating system (server)|Maximum number of virtual processors|Integration Services|Notes|  
 |-------------------------------------|----------------------------------------|------------------------|---------|  
-|Windows Server 2019 |240 for generation 2;<br>64 for generation 1|Built-in|| 
+|Windows Server, version 1903 |240 for generation 2;<br>64 for generation 1|Built-in||
+|Windows Server, version 1809 |240 for generation 2;<br>64 for generation 1|Built-in|| 
+|Windows Server 2019 |240 for generation 2;<br>64 for generation 1|Built-in||
+|Windows Server, version 1803 |240 for generation 2;<br>64 for generation 1|Built-in|| 
 |Windows Server 2016 |240 for generation 2;<br>64 for generation 1|Built-in|| 
 |Windows Server 2012 R2 |64|Built-in||  
 |Windows Server 2012 |64|Built-in||  
