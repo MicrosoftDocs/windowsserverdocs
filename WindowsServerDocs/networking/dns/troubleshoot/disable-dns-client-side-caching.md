@@ -20,7 +20,6 @@ To stop DNS caching, run either of the following commands:
 
 ```cmd
   net stop dnscache
-  ```
 
 ```cmd
   sc servername stop dnscache
