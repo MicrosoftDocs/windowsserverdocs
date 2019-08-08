@@ -18,7 +18,7 @@ Windows contains a client-side DNS cache. The client-side DNS caching feature ma
 
 To stop DNS caching, run either of the following commands:
 
-- ```cmd
+```cmd
   net stop dnscache
   ```
 
