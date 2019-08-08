@@ -149,7 +149,7 @@ Begin the tests in the following procedure by querying a valid root server. The 
    set querytype= <resource record type>
    <FQDN>
    ```
-   >![Note]
+   > [!NOTE]
    >Resource record type is the type of resource record that you were querying for in your original query, and FQDN is the FQDN for which you were querying (terminated by a period).
  
 2. If the response includes a list of "NS" and "A" resource records for delegated servers, repeat step 1 for each server and use the IP address from the "A" resource records as the server IP address.
