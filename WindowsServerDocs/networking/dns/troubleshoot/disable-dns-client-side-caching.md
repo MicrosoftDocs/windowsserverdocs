@@ -28,7 +28,7 @@ To stop DNS caching, run either of the following commands:
 
 To disable the DNS cache permanently in Windows, use the Service Controller tool or the Services tool to set the DNS Client service startup type to **Disabled**. Note that the name of the Windows DNS Client service may also appear as "Dnscache." 
 
->![Note]
+> [!NOTE]
 >If the DNS resolver cache is deactivated, the overall performance of the client computer decreases and the network traffic for DNS queries increases. 
 
 The DNS Client service optimizes the performance of DNS name resolution by storing previously resolved names in memory. If the DNS Client service is turned off, the computer can still resolve DNS names by using the network's DNS servers. 
