@@ -79,7 +79,7 @@ If the DNS client can ping the DNS server computer, try to use the following `ns
   >![Note]
   >You must include the trailing period when you run this test.
 
-  If Windows successfully finds the FQDN but cannot find the short name, check the DNS Suffix configuration on the DNS tab of the Advanced TCP/IP Settings of the NIC. For more information, see [Configuring DNS Resolution](https://docs.microsoft.com/en-us/previous-versions/tn-archive/dd163570(v=technet.10)#configuring-dns-resolution).
+  If Windows successfully finds the FQDN but cannot find the short name, check the DNS Suffix configuration on the DNS tab of the Advanced TCP/IP Settings of the NIC. For more information, see [Configuring DNS Resolution](https://docs.microsoft.com/previous-versions/tn-archive/dd163570(v=technet.10)#configuring-dns-resolution).
 
 - ```cmd
   nslookup <DNS Server>
