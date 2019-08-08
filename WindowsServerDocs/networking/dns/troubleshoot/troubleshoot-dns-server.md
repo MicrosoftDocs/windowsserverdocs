@@ -89,7 +89,7 @@ The problem might be caused by user error when users enter data into the zone. O
 
 1. Examine the zone on the master server (the server from which this server pulls zone transfers).
 
-   >![Note]
+   > [!NOTE]
    >You can determine which server is the master server by examining the properties of the secondary zone in the DNS console.
 
    If the name is not correct on the master server, go to step 4.
