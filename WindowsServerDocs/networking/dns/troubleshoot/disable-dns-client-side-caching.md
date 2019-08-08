@@ -23,7 +23,6 @@ To stop DNS caching, run either of the following commands:
 
 ```cmd
   sc servername stop dnscache
-  ```
 
 To disable the DNS cache permanently in Windows, use the Service Controller tool or the Services tool to set the DNS Client service startup type to **Disabled**. Note that the name of the Windows DNS Client service may also appear as "Dnscache." 
 
