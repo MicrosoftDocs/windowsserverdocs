@@ -45,4 +45,4 @@ This command displays the contents of the DNS resolver cache, including the DNS 
 
 ## Next step
 
-See [How to Disable Client-Side DNS Caching in Windows](https://support.microsoft.com/en-us/kb/318803) for more information.
+See [How to Disable Client-Side DNS Caching in Windows](https://support.microsoft.com/kb/318803) for more information.
