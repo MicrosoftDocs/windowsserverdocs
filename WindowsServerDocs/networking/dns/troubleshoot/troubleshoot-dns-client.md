@@ -50,67 +50,75 @@ ping 10.0.0.1
 
 If no configured DNS server responds to a direct pinging of its IP address, this indicates that the source of the problem is more likely network connectivity between the client and the DNS servers. If this is the case, follow basic TCP/IP network troubleshooting steps to fix the problem. Keep in mind that ICMP traffic must be allowed through the firewall in order for the ping command to work.
 
-### DNS query test
+### DNS query tests
 
-If the DNS client can ping the DNS server computer, try to use the following `nslookup` commands to test whether the server can respond to DNS clients. Because nslookup does not use the client's DNS cache, name resolution will use the client's configured DNS server.
+#### Test DNS server client responses
 
-- ```cmd
-  nslookup <client>
-  ```
+If the DNS client can ping the DNS server computer, try to use the following `nslookup` commands to test whether the server can respond to DNS clients. Because nslookup doesn't use the client's DNS cache, name resolution will use the client's configured DNS server.
+
+```cmd
+nslookup <client>
+```
   
-  For example, if the client computer is named **client1**, run this command:
+For example, if the client computer is named **client1**, run this command:
   
-  ```cmd
-  nslookup client1
-  ```
+```cmd
+nslookup client1
+```
   
-  If a successful response is not returned, try to run the following command:
+If a successful response is not returned, try to run the following command:
   
-  ```cmd
-  nslookup <fqdn of client>
-  ```
+```cmd
+nslookup <fqdn of client>
+```
   
-  For example, if the FQDN is **client1.corp.contoso.com**, run this command:
+For example, if the FQDN is **client1.corp.contoso.com**, run this command:
 
-  ```cmd
-  nslookup client1.corp.contoso.com.
-  ```
+```cmd
+nslookup client1.corp.contoso.com.
+```
 
-  > [!NOTE]
-  >You must include the trailing period when you run this test.
+> [!NOTE]
+> You must include the trailing period when you run this test.
 
-  If Windows successfully finds the FQDN but cannot find the short name, check the DNS Suffix configuration on the DNS tab of the Advanced TCP/IP Settings of the NIC. For more information, see [Configuring DNS Resolution](https://docs.microsoft.com/previous-versions/tn-archive/dd163570(v=technet.10)#configuring-dns-resolution).
+#### Test the DNS server
 
-- ```cmd
-  nslookup <DNS Server>
-  ```
+If Windows successfully finds the FQDN but cannot find the short name, check the DNS Suffix configuration on the DNS tab of the Advanced TCP/IP Settings of the NIC. For more information, see [Configuring DNS Resolution](https://docs.microsoft.com/previous-versions/tn-archive/dd163570(v=technet.10)#configuring-dns-resolution).
 
-  For example, if the DNS server is named DC1, run this command:
+```cmd
+nslookup <DNS Server>
+```
 
-  ```cmd
-  nslookup dc1
-  ```
+For example, if the DNS server is named DC1, run this command:
 
-  If the previous tests were successful, this test should also be successful. If this test is not successful, verify the connectivity to the DNS server.
+```cmd
+nslookup dc1
+```
 
-- ```cmd
-  nslookup <failed internal record>
-  ```
+#### Test the failing record
 
-  For example, if the failing record was **app1.corp.contoso.com**, run this command:
+If the previous tests were successful, this test should also be successful. If this test is not successful, verify the connectivity to the DNS server.
 
-  ```cmd
-  nslookup app1.corp.contoso.com
-  ```
+```cmd
+nslookup <failed internal record>
+```
 
-- ```cmd
-  nslookup <external name>
-  ```
+For example, if the failing record was **app1.corp.contoso.com**, run this command:
 
-  For example: 
-  ```cmd
-  nslookup bing.com
-  ```
+```cmd
+nslookup app1.corp.contoso.com
+```
+
+#### Test a public Internet address
+
+```cmd
+nslookup <external name>
+```
+
+For example: 
+```cmd
+nslookup bing.com
+```
 
 If all four of these tests were successful, run `ipconfig /displaydns` and check the output for the name that failed. If you see "Name does not exist" under the failing name, a negative response was returned from a DNS server and was cached on the client. 
 
