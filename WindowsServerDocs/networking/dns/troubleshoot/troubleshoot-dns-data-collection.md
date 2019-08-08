@@ -14,7 +14,7 @@ author: Deland-Han
  
 Domain Name resolution issues can be broken down into client-side and server-side issues. In general, you should start with client-side troubleshooting unless you determine during the scoping phase that the issue is definitely occurring on the server side.
 
-- [Troubleshooting DNS clients](trobuleshoot-dns-client.md)
+- [Troubleshooting DNS clients](troubleshoot-dns-client.md)
 
 - [Troubleshooting DNS Servers](troubleshoot-dns-server.md)
  
