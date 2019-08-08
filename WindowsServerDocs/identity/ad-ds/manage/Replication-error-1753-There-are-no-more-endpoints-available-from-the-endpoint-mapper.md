@@ -11,10 +11,9 @@ ms.prod: windows-server-threshold
 
 ms.technology: identity-adds
 ---
-
 # Replication error 1753 There are no more endpoints available from the endpoint mapper
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies To: Windows Server
 
 This article describes symptoms, cause and resolution steps for Active Directory operations that fail with Win32 error 1753: "There are no more endpoints available from the endpoint mapper."
 
