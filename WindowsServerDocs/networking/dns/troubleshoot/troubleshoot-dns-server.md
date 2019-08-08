@@ -10,7 +10,7 @@ ms.date: 8/8/2019
 author: Deland-Han
 ---
 
-# Troubleshooting DNS Servers
+# Troubleshooting DNS servers
 
 This article discusses how to troubleshoot issues on DNS servers.
 
@@ -110,7 +110,7 @@ The problem might be caused by user error when users enter data into the zone. O
 
 ## Checking for recursion problems
 
-For recursion to work successfully, all DNS servers that are used in the path of a recursive query must be able to respond and forward correct data. If they cannot, a recursive query can fail for any of the following reasons:
+For recursion to work successfully, all DNS servers that are used in the path of a recursive query must be able to respond and forward correct data. If they can't, a recursive query can fail for any of the following reasons:
 
 - The query times out before it can be completed.
 
