@@ -52,7 +52,7 @@ For containers, this has an impact when running a Hyper-V container inside a vir
 
 Containers offer the ability to use the container host system drive for the container scratch space. However, the container scratch space has a life span equal to that of the container. That is, when the container is stopped, the scratch space and all associated data goes away.
 
-However, there are many scenarios in which having data persist independent of container lifetime is desired. In these cases, we support mounting data volumes from the container host into the container. For Windows Server Containers, there is neglible IO path overhead associated with mounted data volumes (near native performance). However, when mounting data volumes into Hyper-V containers, there is some IO performance degradation in that path. In addition, this impact is exaggerated when running Hyper-V containers inside of virtual machines.
+However, there are many scenarios in which having data persist independent of container lifetime is desired. In these cases, we support mounting data volumes from the container host into the container. For Windows Server Containers, there is negligible IO path overhead associated with mounted data volumes (near native performance). However, when mounting data volumes into Hyper-V containers, there is some IO performance degradation in that path. In addition, this impact is exaggerated when running Hyper-V containers inside of virtual machines.
 
 ### Scratch Space
 
