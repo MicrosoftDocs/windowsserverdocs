@@ -359,18 +359,18 @@ New-SendConnector -Name "WSE Internet SendConnector" -Usage "Internet" -AddressS
 
    - If you are performing a clean setup, run the following command:  
 
-      **ARRConfig config  -cert** *path to the certificate file* **-hostnames** *host names for Exchange Server* ****  
+      **ARRConfig config  -cert** *path to the certificate file* **-hostnames** *host names for Exchange Server*  
 
      > [!NOTE]
-     >  For example; **ARRConfig config  -cert ***c:\temp\certificate.pfx***  -hostnames ***mail.contoso.com*****  
+     >  For example; **ARRConfig config  -cert** *c:\temp\certificate.pfx* **-hostnames** *mail.contoso.com*  
      > 
      >  Replace *mail.contoso.com* with the name of your domain that is protected by the certificate.  
 
    - In you are migrating from Windows Small Business Server, run the following command:  
 
-      **ARRConfig config  -cert** *path to the certificate file* **-hostnames** *host names for Exchange Server* **-targetserver** *server name of Exchange Server* ****  
+      **ARRConfig config  -cert** *path to the certificate file* **-hostnames** *host names for Exchange Server* **-targetserver** *server name of Exchange Server*  
 
-      For example; **ARRConfig config  -cert ***c:\temp\certificate.pfx***  -hostnames ***mail.contoso.com*** -targetserver ***ExchangeSvr*****  
+      For example; **ARRConfig config  -cert** *c:\temp\certificate.pfx* **-hostnames** *mail.contoso.com* **-targetserver ** *ExchangeSvr*  
 
       Replace *mail.contoso.com* with the name of your domain. Replace *ExchangeSvr* with the name of your server that is running Exchange Server.  
 
