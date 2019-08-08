@@ -22,7 +22,7 @@ To stop DNS caching, run either of the following commands:
   net stop dnscache
   ```
 
-- ```cmd
+```cmd
   sc servername stop dnscache
   ```
 
