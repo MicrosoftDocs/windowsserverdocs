@@ -90,9 +90,12 @@ The remainder of the is document provides the steps for adding a Windows Server 
     ![upgrade](media/Upgrading-to-AD-FS-in-Windows-Server-2016/ADFS_Mixed_8.png)  
 
 8. Now on the Windows Server 2016 Server open PowerShell and run the following cmdlt:
-    >[!NOTE]
+`Test-AdfsFarmBehaviorLevelRaise`
+This commandlet tests whether the Invoke-AdfsFarmBehaviorLevelRaise cmdlet can raise the behavior level of an Active Directory Federation Services (AD FS) farm to enable the new features that are available in later versions of the Windows operating system. To test raising the behavior level of a farm that uses SQL Server as the policy database, specify the Credential parameter.
+   
+   >[!NOTE]
     > All 2012 R2 servers must be removed from the farm before running the next step.
-
+After running the Test commandlet, raise the farm behavior with the following cmdlt which raises the behavior level of an Active Directory Federation Services (AD FS) farm to enable the new features that are available in later versions of the Windows operating system.
     `Invoke-AdfsFarmBehaviorLevelRaise`  
 
     ![upgrade](media/Upgrading-to-AD-FS-in-Windows-Server-2016/ADFS_Mixed_9.png)  
