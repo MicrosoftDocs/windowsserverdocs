@@ -20,7 +20,8 @@ This requires proper attention to three separate areas:
 - Active Directory client/application tuning – ensuring that clients and applications are using Active Directory in an optimal fashion
 
 ## Start with capacity planning
-Properly deploying a sufficient number of domain controllers, in the right domain, in the right locales, and to accommodate redundancy is critical to ensuring servicing client requests in a timely fashion. This is an in-depth topic and outside of the scope of this guide. Readers are encouraged start to their Active Directory performance tuning by reading and undestanding the recommendations and guidance found in [Capacity planning for Active Directory Domain Services](capacity-planning-for-active-directory-domain-services.md).
+
+Properly deploying a sufficient number of domain controllers, in the right domain, in the right locales, and to accommodate redundancy is critical to ensuring servicing client requests in a timely fashion. This is an in-depth topic and outside of the scope of this guide. Readers are encouraged start to their Active Directory performance tuning by reading and understanding the recommendations and guidance found in [Capacity planning for Active Directory Domain Services](capacity-planning-for-active-directory-domain-services.md).
 
 >[!Important]
 > Proper configuration and sizing of Active Directory has a significant potential impact on overall system and workload performance. Readers are highly encouraged to start by reading [Capacity planning for Active Directory Domain Services](capacity-planning-for-active-directory-domain-services.md).
