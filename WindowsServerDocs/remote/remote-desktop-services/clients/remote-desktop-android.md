@@ -45,7 +45,7 @@ To create a Remote Desktop connection:
 
 1. In the Connection Center tap **+**, and then tap **Desktop**.
 2. Enter the following information for the computer you want to connect to:
-   - **PC name** – the name of the computer. This can be a Windows computer name, an Internet domain name, or an IP address. You can also append port information to the PC name (for example, **MyDesktop:3389** or **10.0.0.1:3389**). This is the only required field.
+   - **PC name** – the name of the computer. This can be a Windows computer name, an Internet domain name, or an IP address. You can also append port information to the PC name (for example, *MyDesktop:3389* or *10.0.0.1:3389*). This is the only required field.
    - **User name** – The user name to use to access the remote PC. You can use the following formats: *user_name*, *domain\user_name*, or <em>user_name@domain.com</em>. You can also choose to be prompted for a user name and password on every connection.
 3. You can also tap on **Show additional options** to provide the information below:
    - **Friendly name** – An easy-to-remember name for the PC you are connecting to. You can use any string, but if you do not specify a friendly name, the PC name is displayed.
@@ -106,9 +106,7 @@ Now you can start the remote desktop connection directly from your home screen b
 
 ## Manage general app settings
 
-To change the general app settings in your Android client:
-
-1. In the Connection Center, tap **Settings**, and then tap **General**.
+To change the general app settings tap **Settings**, and then tap **General** from the Connection Center.
 
 You can set the following general settings:
 
@@ -119,9 +117,7 @@ You can set the following general settings:
 
 ## Manage display settings
 
-To change the display settings in your Android client:
-
-1. In the Connection Center, tap **Settings**, and then tap **Display**.
+To change the display settings tap **Settings**, and then tap **Display** from the Connection Center.
 
 You can set the following display settings:
 
@@ -142,7 +138,7 @@ To set up a new gateway:
 1. In the Connection Center, tap **Settings**, and then tap **Gateways**.
 1. Tap **+** to add a new gateway.
 1. Enter the following information:
-   - **Server name** – The name of the computer you want to use as a gateway. This can be a Windows computer name, an Internet domain name, or an IP address. You can also add port information to the server name (for example: **RDGateway:443** or **10.0.0.1:443**).
+   - **Server name** – The name of the computer you want to use as a gateway. This can be a Windows computer name, an Internet domain name, or an IP address. You can also add port information to the server name (for example: *RDGateway:443* or *10.0.0.1:443*).
    - **User name** - The user name and password to be used for the Remote Desktop Gateway you are connecting to. You can also select **Use desktop user account** to use the same credentials as those used for the remote desktop connection.
 
 To delete a gateway:
@@ -192,7 +188,7 @@ The connection bar gives you access to additional navigation controls. By defaul
 
 ### Command bar
 
-Tap the connection bar to display the command bar on the right-hand side of the screen. You can switch between the mouse modes (Direct Touch and Mouse Pointer). Use the home button to return to the connection center from the command bar. Alternatively you can use the back button for the same action. Your active session will not be disconnected.
+Tap the connection bar to display the command bar on the right-hand side of the screen. You can switch between the mouse modes (Direct Touch and Mouse Pointer). Use the home button to return to the Connection Center from the command bar. Alternatively you can use the back button for the same action. Your active session will not be disconnected.
 
 ### Use direct touch gestures and mouse modes in a remote session
 
