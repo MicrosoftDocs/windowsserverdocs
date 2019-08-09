@@ -92,7 +92,7 @@
 #### [Remote Desktop URI scheme](clients/remote-desktop-uri.md)
 #### [Remote Desktop client FAQ](clients/remote-desktop-client-faq.md)
 #### [Privacy settings for managed apps and desktops](clients/remote-privacy-settings.md)
-### Remote Desktop known issues
+### Known issues
 #### [General Remote Desktop connection troubleshooting](troubleshoot/rdp-error-general-troubleshooting.md)
 #### [Clients can't connect and get the "Class not registered" error](troubleshoot/rdp-error-class-not-registered.md)
 #### [Clients can't connect and see "No licenses available" error](troubleshoot/rdp-error-no-licenses-available.md)
