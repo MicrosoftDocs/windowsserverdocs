@@ -52,9 +52,9 @@ If no configured DNS server responds to a direct pinging of its IP address, this
 
 ### DNS query tests
 
-#### Test DNS server client responses
-
 If the DNS client can ping the DNS server computer, try to use the following `nslookup` commands to test whether the server can respond to DNS clients. Because nslookup doesn't use the client's DNS cache, name resolution will use the client's configured DNS server.
+
+#### Test a client
 
 ```cmd
 nslookup <client>
@@ -81,9 +81,9 @@ nslookup client1.corp.contoso.com.
 > [!NOTE]
 > You must include the trailing period when you run this test.
 
-#### Test the DNS server
-
 If Windows successfully finds the FQDN but cannot find the short name, check the DNS Suffix configuration on the DNS tab of the Advanced TCP/IP Settings of the NIC. For more information, see [Configuring DNS Resolution](https://docs.microsoft.com/previous-versions/tn-archive/dd163570(v=technet.10)#configuring-dns-resolution).
+
+#### Test the DNS server
 
 ```cmd
 nslookup <DNS Server>
@@ -94,10 +94,9 @@ For example, if the DNS server is named DC1, run this command:
 ```cmd
 nslookup dc1
 ```
+If the previous tests were successful, this test should also be successful. If this test is not successful, verify the connectivity to the DNS server.
 
 #### Test the failing record
-
-If the previous tests were successful, this test should also be successful. If this test is not successful, verify the connectivity to the DNS server.
 
 ```cmd
 nslookup <failed internal record>
