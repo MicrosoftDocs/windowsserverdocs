@@ -474,7 +474,7 @@ schtasks /create /tn <TaskName> /tr <TaskRun> /sc monthly /mo {FIRST | SECOND | 
 
 #### Remarks
 
-In this schedule type, the **/sc monthly** parameter, the **/mo** (modifier) parameter, and the **/d** (day) parameter are required. The **/mo** (modifier) parameter specifies the week on which the task runs. The **/d** parameter specifies the day of the week. (You can specify only one day of the week for this schedule type.) This schedule also has an optional **/m** (month) parameter that lets you schedule the task for particular months or every month (<em>). The default for the **/m</em>* parameter is every month (*).
+In this schedule type, the **/sc monthly** parameter, the **/mo** (modifier) parameter, and the **/d** (day) parameter are required. The **/mo** (modifier) parameter specifies the week on which the task runs. The **/d** parameter specifies the day of the week. (You can specify only one day of the week for this schedule type.) This schedule also has an optional **/m** (month) parameter that lets you schedule the task for particular months or every month (\*). The default for the **/m** parameter is every month (\*).
 
 #### Examples
 
