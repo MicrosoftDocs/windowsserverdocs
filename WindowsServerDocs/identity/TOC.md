@@ -378,9 +378,9 @@
 ##### [Single Page Application with AD FS](ad-fs/development/Single-Page-Application-with-AD-FS.md)
 ##### [Build a native client application using OAuth public clients with AD FS](ad-fs/development/native-client-with-ad-fs.md)
 #### MSAL
-#### [Native app calling Web API](ad-fs/development/msal/adfs-msal-native-app-web-api.md) 
-#### [Web API calling Web API (On Behalf of Scenario)](ad-fs/development/msal/adfs-msal-web-api-web-api.md) 
-#### [Web app (server app) calling web APIs](ad-fs/development/msal/adfs-msal-web-app-web-api.md) 
+##### [Native app calling Web API](ad-fs/development/msal/adfs-msal-native-app-web-api.md) 
+##### [Web API calling Web API (On Behalf of Scenario)](ad-fs/development/msal/adfs-msal-web-api-web-api.md) 
+##### [Web app (server app) calling web APIs](ad-fs/development/msal/adfs-msal-web-app-web-api.md) 
 
 ### [AD FS Operations](ad-fs/AD-FS-Operations.md)
 #### [AD FS Access Control Policies](ad-fs/operations/AD-FS-Client-Access-Policies.md)
