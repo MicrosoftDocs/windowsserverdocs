@@ -365,7 +365,7 @@
 
 
 
-### [AD FS Development](ad-fs/AD-FS-Development.md)
+### [AD FS Development]
 #### [AD FS Modern Auth Concepts](ad-fs/development/adfs-modern-auth-concepts.md)
 #### ADAL
 ##### [Build a Custom Authentication Method for AD FS](ad-fs/development/ad-fs-build-custom-auth-method.md)
