@@ -367,7 +367,7 @@
 
 ### [AD FS Development](ad-fs/AD-FS-Development.md)
 
-####[ADAL]
+#### ADAL
 ##### [Build a Custom Authentication Method for AD FS](ad-fs/development/ad-fs-build-custom-auth-method.md)
 ##### [Build Plug-ins with AD FS 2019 Risk Assessment Model](ad-fs/development/ad-fs-risk-assessment-model.md)
 ##### [Custom Id Tokens in AD FS](ad-fs/development/Custom-Id-Tokens-in-AD-FS.md)
@@ -377,8 +377,7 @@
 ##### [Single log-out for OpenID Connect with AD FS](ad-fs/development/ad-fs-logout-openid-connect.md)
 ##### [Single Page Application with AD FS](ad-fs/development/Single-Page-Application-with-AD-FS.md)
 ##### [Build a native client application using OAuth public clients with AD FS](ad-fs/development/native-client-with-ad-fs.md)
-
-
+#### MSAL
 
 
 ### [AD FS Operations](ad-fs/AD-FS-Operations.md)
