@@ -112,8 +112,8 @@ This section shows how to test the sample configured above.
   5. On the Native App’s Main screen, click on Sign In.  
   ![App test](media/adfs-msal-native-app-web-api/native17.png)
 
-  > [NOTE!]  
-  > If you don’t see the native app screen, search and remove *msalcache.bin files from the folder where project repo is saved on your system. 
+> [!NOTE]  
+> If you don’t see the native app screen, search and remove *msalcache.bin files from the folder where project repo is saved on your system. 
 
   6. You will be re-directed to the AD FS sign-in page. Go ahead and sign in. 
   ![App test](media/adfs-msal-native-app-web-api/native18.png)
