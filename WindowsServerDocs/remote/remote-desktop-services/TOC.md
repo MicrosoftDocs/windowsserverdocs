@@ -66,9 +66,9 @@
 
 ## Access your Remote Desktop resources
 ### [Available Remote Desktop clients](clients/remote-desktop-clients.md)
-### Windows clients
+### Windows Store client
 #### [Get started](clients/windows.md)
-#### [What's new in the Windows client?](clients/windows-whatsnew.md)
+#### [What's new in the Windows Store client?](clients/windows-whatsnew.md)
 ### Android client
 #### [Get started](clients/remote-desktop-android.md)
 #### [What's new in the Android client?](clients/android-whatsnew.md)
