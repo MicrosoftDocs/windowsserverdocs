@@ -5,8 +5,8 @@ ms.assetid: 51a1ee61-3ffe-4f65-b8de-ff21903e1e74
 ms.prod: windows-server-threshold
 ms.technology: networking-ras
 ms.topic: article
-ms.date: 11/05/2018
-ms.author: pashort
+ms.date: 07/24/19
+ms.author: pashort, v-tea
 author: shortpatti
 ms.localizationpriority: medium 
 ms.reviewer: deverette
@@ -19,7 +19,7 @@ ms.reviewer: deverette
 - [**Previous:** Learn about the Always On VPN technology](../always-on-vpn-technology-overview.md)
 - [**Next:** Start planning the Always On VPN deployment](always-on-vpn-deploy-planning.md)
 
-Beyond the deployment scenarios provided, you can add other advanced VPN features to improve the security and availability of your VPN connection. For example, such components can help ensure that the connecting client is healthy before allowing a connection.
+Beyond the deployment scenarios that are provided, you can add other advanced VPN features to improve the security and availability of your VPN connection. For example, the VPN server can use these features to help make sure that the connecting client is healthy before it allows a connection.
 
 ## High Availability
 
@@ -27,7 +27,7 @@ The following are additional options for high availability.
 
 |Option  |Description  |
 |---------|---------|
-|Server resilience and load balancing     |In environments that require high availability or support large numbers of requests, you can increase the performance and resiliency of Remote Access by using load balancing between multiple servers that are running Network Policy Server (NPS) and enabling Remote Access server clustering.<p>Related documents:<ul><li>[NPS Proxy Server Load Balancing](../../../../../networking/technologies/nps/nps-manage-proxy-lb.md)</li><li>[Deploy Remote Access in a Cluster](https://docs.microsoft.com/windows-server/remote/remote-access/ras/cluster/deploy-remote-access-in-cluster)</li></ul>        |
+|Server resilience and load balancing     |In environments that require high availability or that support large numbers of requests, you can increase the performance and resiliency of Remote Access by using load balancing between multiple servers that are running Network Policy Server (NPS) and enabling Remote Access server clustering.<p>Related documents:<ul><li>[NPS Proxy Server Load Balancing](../../../../../networking/technologies/nps/nps-manage-proxy-lb.md)</li><li>[Deploy Remote Access in a Cluster](https://docs.microsoft.com/windows-server/remote/remote-access/ras/cluster/deploy-remote-access-in-cluster)</li></ul>        |
 |Geographic site resilience     |For IP-based geolocation, you can use Global Traffic Manager with DNS in Windows Server 2016. For more robust geographic load balancing, you can use Global Server Load Balancing solutions, such as Microsoft Azure Traffic Manager.<p>Related documents:<ul><li>[Overview of Traffic Manager](https://docs.microsoft.com/azure/traffic-manager/traffic-manager-overview)</li><li>[Microsoft Azure Traffic Manager](https://azure.microsoft.com/services/traffic-manager)</li></ul>         |
 
 ## Advanced Authentication
@@ -36,7 +36,7 @@ The following are additional options for authentication.
 
 |Option  |Description  |
 |---------|---------|
-|Windows Hello for Business     |In Windows 10, Windows Hello for Business replaces passwords with strong two-factor authentication on PCs and mobile devices. This authentication consists of a new type of user credential that is tied to a device and uses a biometric or Personal Identification Number (PIN).<p>The Windows 10 VPN client is compatible with Windows Hello for Business. After the user logs in with a gesture, the VPN connection uses the Windows Hello for Business certificate for certificate-based authentication.<p>Related documents:<ul><li>[Windows Hello for Business](https://docs.microsoft.com/windows/access-protection/hello-for-business/hello-identity-verification)</li><li>Technical Case Study: [Enabling Remote Access with Windows Hello for Business in Windows 10](https://msdn.microsoft.com/library/mt728163.aspx)</li></ul>         |
+|Windows Hello for Business     |In Windows 10, Windows Hello for Business replaces passwords by providing strong two-factor authentication on PCs and mobile devices. This authentication consists of a new type of user credential that is tied to a device and uses a biometric or Personal Identification Number (PIN).<p>The Windows 10 VPN client is compatible with Windows Hello for Business. After the user logs in by using a gesture, the VPN connection uses the Windows Hello for Business certificate for certificate-based authentication.<p>Related documents:<ul><li>[Windows Hello for Business](https://docs.microsoft.com/windows/access-protection/hello-for-business/hello-identity-verification)</li><li>Technical Case Study: [Enabling Remote Access with Windows Hello for Business in Windows 10](https://msdn.microsoft.com/library/mt728163.aspx)</li></ul>         |
 |Azure Multifactor Authentication (MFA)     |Azure MFA has cloud and on-premises versions that you can integrate with the Windows VPN authentication mechanism.<p>For more information about how this mechanism works, see [Integrate RADIUS authentication with Azure Multi-Factor Authentication Server](https://docs.microsoft.com/azure/multi-factor-authentication/multi-factor-authentication-get-started-server-radius).         |
 
 ## Advanced VPN Features
@@ -45,9 +45,9 @@ The following are additional options for advanced features.
 
 |Option  |Description  |
 |---------|---------|
-|Traffic filtering     |If you need to enforce which applications VPN clients can access, you can enable VPN Traffic Filters.<p>For more information, see [VPN security features](https://docs.microsoft.com/windows/access-protection/vpn/vpn-security-features).         |
+|Traffic filtering     |If you have to enforce the choice of which applications VPN clients can access, you can enable VPN Traffic Filters.<p>For more information, see [VPN security features](https://docs.microsoft.com/windows/access-protection/vpn/vpn-security-features).         |
 |App-triggered VPN     |You can configure VPN profiles to connect automatically when certain applications or types of applications start.<p>For more information about this and other triggering options, see [VPN auto-triggered profile options](https://docs.microsoft.com/windows/access-protection/vpn/vpn-auto-trigger-profile).         |
-|VPN conditional access   |Conditional access and device compliance can require managed devices to meet standards before they can connect to the VPN. One of the advanced features for VPN conditional access allows you to restrict the VPN connections to only those where the client authentication certificate contains the ‘AAD Conditional Access’ OID of '1.3.6.1.4.1.311.87'.<p>To restrict the VPN connections, you need to:<ol><li>On the NPS server, open the **Network Policy Server** snap-in.</li><li>Expand **Policies** > **Network Policies**.</li><li>Right-click the **Virtual Private Network (VPN) Connections** Network Policy and select **Properties**.</li><li>Select the **Settings** tab.</li><li>Select **Vendor Specific** and select **Add**.</li><li>Select the **Allowed-Certificate-OID** option and then select **Add**.</li><li>Paste the AAD Conditional Access OID of **1.3.6.1.4.1.311.87** as the attribute value, and then select **OK** twice.</li><li>Select **Close** and then **Apply**.<p>Now when VPN clients attempt to connect using any certificate other than the short-lived cloud certificate, the connection will fail.</li></ol>For more information about conditional access, see [VPN and conditional access](https://docs.microsoft.com/windows/access-protection/vpn/vpn-conditional-access).   |
+|VPN conditional access   |Conditional access and device compliance can require managed devices to meet standards before they can connect to the VPN. One of the advanced features for VPN conditional access allows you to restrict the VPN connections to only those on which the client authentication certificate contains the "AAD Conditional Access" OID of **1.3.6.1.4.1.311.87**.<p>To restrict the VPN connections, you have to do the following:<ol><li>On the NPS server, open the **Network Policy Server** snap-in.</li><li>Expand **Policies** > **Network Policies**.</li><li>Right-click the **Virtual Private Network (VPN) Connections** Network Policy and select **Properties**.</li><li>Select the **Settings** tab.</li><li>Select **Vendor Specific**, and then select **Add**.</li><li>Select the **Allowed-Certificate-OID** option, and then select **Add**.</li><li>Paste the AAD Conditional Access OID of **1.3.6.1.4.1.311.87** as the attribute value, and then select **OK** two times.</li><li>Select **Close**, and then select **Apply**.<p>After you follow these steps, when VPN clients try to connect by using any certificate other than the short-lived cloud certificate, the connection fails.</li></ol>For more information about conditional access, see [VPN and conditional access](https://docs.microsoft.com/windows/access-protection/vpn/vpn-conditional-access).   |
 
 
 ---
@@ -57,17 +57,15 @@ After you install updates, the RRAS server can enforce certificate revocation fo
 
 **Availability**
 
-The following table lists the approximate release dates of the fixes for each version of Windows.
+The following table lists the releases that contain the fixes for each version of Windows.
 
-|Operating system version |Release or Release date* |
+|Operating system version |Release  |
 |---------|---------|
-|Windows Server, version 1903  |[KB4501375](https://support.microsoft.com/help/4501375/windows-10-update-kb4501375)  |
-|Windows Server 2019<br />Windows Server, version 1809  |Q3, 2019  |
-|Windows Server, version 1803  |Q3, 2019  |
-|Windows Server, version 1709  |Q3, 2019  |
-|Windows Server 2016, version 1607  |[KB4503294](https://support.microsoft.com/help/4503294/windows-10-update-kb4503294)  |
-  
-\* All release dates are listed in calendar quarters. Dates are approximate and may change without notice. When an update is released, a link to the release replaces the release date.
+|Windows Server, version 1903  |[KB4501375](https://support.microsoft.com/help/4501375/windows-10-update-kb4501375) |
+|Windows Server 2019<br />Windows Server, version 1809  |[KB4505658](https://support.microsoft.com/help/4505658/windows-10-update-kb4505658)  |
+|Windows Server, version 1803  |[KB4507466](https://support.microsoft.com/help/4507466/windows-10-update-kb4507466)  |
+|Windows Server, version 1709  |[KB4507465](https://support.microsoft.com/help/4507465/windows-10-update-kb4507465)  |
+|Windows Server 2016, version 1607  |[KB4503294](https://support.microsoft.com/help/4503294/windows-10-update-kb4503294) |
 
 **How to configure prerequisites** 
 
@@ -76,7 +74,7 @@ The following table lists the approximate release dates of the fixes for each ve
 1. On the RRAS server, use the **Set-VpnAuthProtocol** PowerShell cmdlet to configure the **RootCertificateNameToAccept** parameter.<br /><br />
    The following example lists the commands to do this. In the example, **CN=Contoso Root Certification Authority** represents the distinguished name of the Root Certification Authority. 
    ``` powershell
-   $cert1 = ( Get-ChildItem -Path cert:LocalMachine\root | Where-Object -FilterScript { $_.Subject -Like "*CN=Contoso Root Certification Authority,*" } )
+   $cert1 = ( Get-ChildItem -Path cert:LocalMachine\root | Where-Object -FilterScript { $_.Subject -Like "*CN=Contoso Root Certification Authority*" } )
    Set-VpnAuthProtocol -RootCertificateNameToAccept $cert1 -PassThru
    ```
 **How to configure the RRAS server to enforce certificate revocation for VPN connections that are based on IKEv2 machine certificates**
@@ -135,13 +133,13 @@ To disable certificate revocation for these VPN connections, set **CertAuthFlags
 
 ### Trusted Platform Module (TPM) Key Attestation
 
-A user certificate with a TPM-attested key provides higher security assurance, backed up by non-exportability, anti-hammering, and isolation of keys provided by the TPM.
+A user certificate that has a TPM-attested key provides higher security assurance, backed up by non-exportability, anti-hammering, and isolation of keys provided by the TPM.
 
 For more information about TPM key attestation in Windows 10, see [TPM Key Attestation](https://docs.microsoft.com/windows-server/identity/ad-ds/manage/component-updates/tpm-key-attestation).
 
 ## Next step
 
-[Start planning the Always On VPN deployment](always-on-vpn-deploy-planning.md): Before you install the Remote Access server role on the computer you're planning on using as a VPN server, perform the following tasks. After proper planning, you can deploy Always On VPN, and optionally configure conditional access for VPN connectivity using Azure AD.  
+[Start planning the Always On VPN deployment](always-on-vpn-deploy-planning.md): Before you install the Remote Access server role on the computer that you plan to use as a VPN server, do the following tasks. After appropriate planning, you can deploy Always On VPN, and optionally configure conditional access for VPN connectivity using Azure AD.  
 
 ## Related topics
 - [NPS Proxy Server Load Balancing](../../../../../networking/technologies/nps/nps-manage-proxy-lb.md): Remote Authentication Dial-In User Service (RADIUS) clients, which are network access servers such as virtual private network (VPN) servers and wireless access points, create connection requests and send them to RADIUS servers such as NPS. In some cases, an NPS server might receive too many connection requests at one time, resulting in degraded performance or an overload.
