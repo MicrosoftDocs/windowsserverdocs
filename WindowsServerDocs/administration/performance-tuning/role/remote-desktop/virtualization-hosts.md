@@ -64,51 +64,51 @@ When you plan server capacity for an RD Virtualization Host server, the number 
 
 We recommend enabling hyper-threading, but be sure to calculate the oversubscription ratio based on the number of physical cores and not the number of logical processors. This ensures the expected level of performance on a per CPU basis.
 
-### Virtual GPU
+### RemoteFX 3D Video Adapter (vGPU)
 
-Microsoft RemoteFX for RD Virtualization Host delivers a rich graphics experience for Virtual Desktop Infrastructure (VDI) through host-side remoting, a render-capture-encode pipeline, a highly efficient GPU-based encode, throttling based on client activity, and a DirectX-enabled virtual GPU. RemoteFX for RD Virtualization Host upgrades the virtual GPU from DirectX9 to DirectX11. It also improves the user experience by supporting more monitors at higher resolutions.
+With Windows Server 2016,  Microsoft RemoteFX for RD Virtualization Host delivers a rich graphics experience for Virtual Desktop Infrastructure (VDI) through host-side remoting, a render-capture-encode pipeline, a highly efficient GPU-based encode, throttling based on client activity, and a DirectX-enabled vGPU. RemoteFX for RD Virtualization Host upgrades the vGPU to support DirectX11. It also improves the user experience by supporting more monitors at higher resolutions.
 
-The RemoteFX DirectX11 experience is available without a hardware GPU, through a software-emulated driver. Although this software GPU provides a good experience, the RemoteFX virtual graphics processing unit (VGPU) adds a hardware accelerated experience to virtual desktops.
+The RemoteFX DirectX11 experience is available without a hardware GPU, through a software-emulated driver. Although this software GPU provides a good experience, the RemoteFX 3D Video Adapter (vGPU) adds a hardware accelerated experience to virtual desktops.
 
-To take advantage of the RemoteFX VGPU experience on a server running Windows Server 2016, you need a GPU driver (such as DirectX11.1 or WDDM 1.2) on the host server. For more information about GPU offerings to use with RemoteFX for RD Virtualization Host, contact your GPU provider.
+To take advantage of the RemoteFX 3D Video Adapter (vGPU) experience on a server running Windows Server 2016, you need a GPU driver (such as DirectX11.1 or WDDM 1.2) on the host server. For more information about GPU offerings to use with RemoteFX for RD Virtualization Host, contact your GPU provider.
 
-If you use the RemoteFX virtual GPU in your VDI deployment, the deployment capacity will vary based on usage scenarios and hardware configuration. When you plan your deployment, consider the following:
+If you use the RemoteFX vGPU in your VDI deployment, the deployment capacity will vary based on usage scenarios and hardware configuration. When you plan your deployment, consider the following:
 
--   Number of GPUs on your system
+- Number of GPUs on your system
 
--   Video memory capacity on the GPUs
+- Video memory capacity on the GPUs
 
--   Processor and hardware resources on your system
+- Processor and hardware resources on your system
 
-### RemoteFX server system memory
+### RemoteFX host system memory
 
-For every virtual desktop enabled with a virtual GPU, RemoteFX uses system memory in the guest operating system and in the RemoteFX-enabled server. The hypervisor guarantees the availability of system memory for a guest operating system. On the server, each virtual GPU-enabled virtual desktop needs to advertise its system memory requirement to the hypervisor. When the virtual GPU-enabled virtual desktop is starting, the hypervisor reserves additional system memory in the RemoteFX-enabled server for the VGPU-enabled virtual desktop.
+For every virtual desktop enabled with a vGPU, RemoteFX uses system memory in the guest operating system and in the host server. The hypervisor guarantees the availability of system memory for a guest operating system. On the host, each vGPU-enabled virtual desktop needs to advertise its system memory requirement to the hypervisor. When the vGPU-enabled virtual desktop is starting, the hypervisor reserves additional system memory in the host.
 
-The memory requirement for the RemoteFX-enabled server is dynamic because the amount of memory consumed on the RemoteFX-enabled server is dependent on the number of monitors that are associated with the VGPU-enabled virtual desktops and the maximum resolution for those monitors.
+The memory requirement for the RemoteFX-enabled server is dynamic because the amount of memory consumed on the RemoteFX-enabled server is dependent on the number of monitors that are associated with the vGPU-enabled virtual desktops and the maximum resolution for those monitors.
 
-### RemoteFX server GPU video memory
+### RemoteFX host GPU video memory
 
-Every virtual GPU-enabled virtual desktop uses the video memory in the GPU hardware on the host server to render the desktop. In addition to rendering, the video memory is used by a codec to compress the rendered screen. The amount of memory needed is directly based on the amount of monitors that are provisioned to the virtual machine.
+Every vGPU-enabled virtual desktop uses the video memory in the GPU hardware on the host server to render the desktop. In addition to rendering, the video memory is used by a codec to compress the rendered screen. The amount of memory needed is directly based on the amount of monitors that are provisioned to the virtual machine.
 
 The video memory that is reserved varies based on the number of monitors and the system screen resolution. Some users may require a higher screen resolution for specific tasks. There is greater scalability with lower resolution settings if all other settings remain constant.
 
-### RemoteFX processor
+### RemoteFX host CPU
 
-The hypervisor schedules the RemoteFX-enabled server and the virtual GPU-enabled virtual desktops on the CPU. Unlike the system memory, there isn't information that is related to additional resources that RemoteFX needs to share with the hypervisor. The additional CPU overhead that RemoteFX brings into the virtual GPU-enabled virtual desktop is related to running the virtual GPU driver and a user-mode Remote Desktop Protocol stack.
+The hypervisor schedules the host and the vGPU-enabled virtual desktops on the CPU. Unlike the system memory, there isn’t information that is related to additional resources that RemoteFX needs to share with the hypervisor. The additional CPU overhead that RemoteFX brings into the vGPU-enabled virtual desktop is related to running the vGPU driver and a user-mode Remote Desktop Protocol stack.
 
-On the RemoteFX-enabled server, the overhead is increased, because the system runs an additional process (rdvgm.exe) per virtual GPU-enabled virtual desktop. This process uses the graphics device driver to run commands on the GPU. The codec also uses the CPUs for compressing the screen data that needs to be sent back to the client.
+On the RemoteFX-enabled host, the overhead is increased, because the system runs an additional process (rdvgm.exe) per vGPU-enabled virtual desktop. This process uses the graphics device driver to run commands on the GPU. The codec also uses the CPUs for compressing the screen data that needs to be sent back to the client.
 
-More virtual processors mean a better user experience. We recommend allocating at least two virtual CPUs per virtual GPU-enabled virtual desktop. We also recommend using the x64 architecture for virtual GPU-enabled virtual desktops because the performance on x64 virtual machines is better compared to x86 virtual machines.
+More virtual processors mean a better user experience. We recommend allocating at least two virtual CPUs per vGPU-enabled virtual desktop. We also recommend using the x64 architecture for vGPU-enabled virtual desktops because the performance on x64 virtual machines is better compared to x86 virtual machines.
 
 ### RemoteFX GPU processing power
 
-For every virtual GPU-enabled virtual desktop, there is a corresponding DirectX process running on the RemoteFX-enabled server. This process replays all the graphics commands that it receives from the RemoteFX virtual desktop onto the physical GPU. For the physical GPU, it is equivalent to simultaneously running multiple DirectX applications.
+For every vGPU-enabled virtual desktop, there is a corresponding DirectX process running on the host server. This process replays all the graphics commands that it receives from the RemoteFX virtual desktop onto the physical GPU. For the physical GPU, it is equivalent to simultaneously running multiple DirectX applications.
 
 Typically, graphics devices and drivers are tuned to run a few applications on the desktop. RemoteFX stretches the GPUs to be used in a unique manner. To measure how the GPU is performing on a RemoteFX server, performance counters have been added to measure the GPU response to RemoteFX requests.
 
 Usually when a GPU resource is low on resources, Read and Write operations to the GPU take a long time to complete. By using performance counters, administrators can take preventative action, eliminating the possibility of any downtime for their end users.
 
-The following performance counters are available on the RemoteFX server to measure the virtual GPU performance:
+The following performance counters are available on the RemoteFX server to measure the vGPU performance:
 
 **RemoteFX graphics**
 
@@ -168,7 +168,7 @@ The following performance counters are available on the RemoteFX server to measu
 
 -   **Resources: TDR timeouts per GPU engine** Count of TDR timeouts that have occurred per GPU engine on the virtual machine
 
-In addition to the RemoteFX virtual GPU performance counters, you can also measure the GPU utilization by using Process Explorer, which shows video memory usage and the GPU utilization.
+In addition to the RemoteFX vGPU performance counters, you can also measure the GPU utilization by using Process Explorer, which shows video memory usage and the GPU utilization.
 
 ## Performance optimizations
 

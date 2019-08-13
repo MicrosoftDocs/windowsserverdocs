@@ -23,7 +23,7 @@ You have a range of options when it comes to enabling graphics rendering in Remo
 In Windows Server 2016, you have two graphics virtualization technologies available with Hyper-V that let you leverage the GPU hardware:
 
 - [Discrete Device Assignment (DDA)](#discrete-device-assignment) - For the highest performance using one or more GPUs dedicated to a VM providing native GPU driver support inside the VM. The density is low because it is limited by the number of physical GPUs available in the server. 
-- [Remote FX vGPU](#remotefx-vgpu) - For knowledge worker and high-burst GPU scenarios where multiple VMs leverage one or more GPUs through para-virtualization. This solution provides higher user density per server.
+- [RemoteFX 3D Video Adapter (vGPU)](#remotefx-vgpu) - For knowledge worker and high-burst GPU scenarios where multiple VMs leverage one or more GPUs through para-virtualization. This solution provides higher user density per server.
 
 The following illustration shows the graphics virtualization options in Windows Server 2016.
 
@@ -34,12 +34,12 @@ Discrete Device Assignment (DDA) is a hardware pass-through solution that provid
 
 For more information about DDA, check out [Plan for deploying Discrete Device Assignment](../../virtualization/hyper-v/plan/plan-for-deploying-devices-using-discrete-device-assignment.md).
 
-## RemoteFX vGPU 
-RemoteFX vGPU is a graphics virtualization technology that allows the processing power of a GPU to be split across various guest operating systems to enable knowledge worker scenarios (see first graphic above). Advancements in Windows Server 2016 allow further enhancements for GPU burst scenarios, for example for designer applications and data visualization. Other feature improvements include:
+## RemoteFX 3D Video Adapter (vGPU) 
+RemoteFX 3D Video Adapter (vGPU) is a graphics virtualization technology that allows the processing power of a GPU to be split across various guest operating systems to enable knowledge worker scenarios (see first graphic above). Advancements in Windows Server 2016 allow further enhancements for GPU burst scenarios, for example for designer applications and data visualization. Other feature improvements include:
 
 - Support for Generation 2 guest VMs, Windows Server 2016 guest VMs, and Windows Client Hyper-V host.
   >[!NOTE] 
-  > Remote Desktop Session Host is not supported on a Windows Server 2016 guest VM; only 1 session can be hosted per Windows Server 2016 guest VM.
+  > Remote Desktop Session Host role is not supported on a vGPU-enabled Windows Server 2016 guest VM; only single session can be hosted per vGPU-enabled Windows Server 2016 guest VM.
 
 - Improved application compatibility and stability.
 - VM Connect Enhanced Session Mode, allowing USB and clipboard redirection through VM Connect to a VM that is enabled for RemoteFX vGPU.
@@ -50,7 +50,7 @@ For more information, check out [Set up and configure RemoteFX vGPU for Remote D
 
 Key considerations on which virtualization technology might depend on the hardware specifications or application requirements in your environment. Here is a brief table regarding DDA and RemoteFX vGPU capabilities:
 
-| Feature               | RemoteFX vGPU                                                                       | Discrete Device Assignment                                             |
+| Feature               | RemoteFX 3D Video Adapter (vGPU)                                                                       | Discrete Device Assignment                                             |
 |-----------------------|-------------------------------------------------------------------------------------|------------------------------------------------------------------------|
 | Device GPU assignment | Para-virtualized (many VMs to one or more GPUs)                                     | 1 or more GPU to 1 VM                                                  |
 | Scale                 | Best scale / 1 GPU to many VMs                                                      | Low scale / 1 or more GPUs to 1 VM                                     |
@@ -65,4 +65,4 @@ Key considerations on which virtualization technology might depend on the hardwa
 | GPU hardware          | Enterprise GPUs (such as Nvidia Quadro/GRID or AMD FirePro)                         | Enterprise GPUs (such as Nvidia Quadro/GRID or AMD FirePro)            |
 | Server hardware       | No special requirements                                                             | Modern server, exposes IOMMU to OS (usually SR-IOV compliant hardware) |
 
-A general rule of thumb is to use DDA for the best application compatibility since the virtual machine will have direct access to the GPU. If your applications or workloads do not have as strict GPU requirements and you want to server a wider base of users, RemoteFX vGPU might work best for you.
+A general rule of thumb is to use DDA for the best application compatibility since the virtual machine will have direct access to the GPU. If your applications or workloads do not have as strict GPU requirements and you want to server a wider base of users, RemoteFX 3D Video Adapter (vGPU) might work best for you.
