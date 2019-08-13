@@ -1,6 +1,6 @@
 ### YamlMime:Hub
 
-title: Windows Server Documentation 
+title: Windows Server documentation 
 summary: Windows Server is the platform for building an infrastructure of connected applications, networks, and web services, from the workgroup to the data center.
 
 metadata: 
@@ -182,10 +182,10 @@ additionalContent:
     - items:
       - title: Windows Server 2012 R2 and Windows Server 2012
         summary: Technical content for IT professionals administering Windows Server 2012 R2 and Windows Server 2012.
-        url: https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd349801(v=ws.10)
+        url: https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh801901(v=ws.11)
       - title: Windows Server 2008 R2 and Windows Server 2008
         summary: Technical content for IT professionals administering Windows Server 2008 R2 and Windows Server 2008.
-        url: https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh801901(v=ws.11)
+        url: https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd349801(v=ws.10)
       - title: Windows Server 2008 Developer Story
         summary: Content for developers and other technology experts and managers interested in exploring some of the new and extended features in Windows Server 2008.
         url: https://docs.microsoft.com/previous-versions/windows/server-2008/bb852234(v=msdn.10)
