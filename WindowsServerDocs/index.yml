@@ -42,7 +42,7 @@ highlightedContent:
 
 conceptualContent: 
   items: 
-    - title: Identity and Access 
+    - title: Identity and access 
       links: 
         - url: /windows-server/identity/ad-ds/ad-ds-getting-started
           itemType: overview
@@ -55,7 +55,7 @@ conceptualContent:
           text: Securing privileged access
       footerLink: 
         url: /windows-server/identity/identity-and-access
-        text: See More
+        text: See more
 
     - title: Failover Clustering 
       links: 
@@ -70,7 +70,7 @@ conceptualContent:
           text: Cluster-Aware Updating overview
       footerLink: 
         url: /windows-server/failover-clustering/failover-clustering-overview
-        text: See More
+        text: See more
 
     - title: Management 
       links: 
@@ -85,7 +85,7 @@ conceptualContent:
           text: Performance tuning guidelines for Windows Server 2016
       footerLink: 
         url: /windows-server/administration/manage-windows-server
-        text: See More
+        text: See more
 
     - title: Networking 
       links: 
@@ -100,7 +100,7 @@ conceptualContent:
           text: Network controller
       footerLink: 
         url: /windows-server/networking/networking
-        text: See More
+        text: See more
 
     - title: Remote 
       links: 
@@ -115,28 +115,28 @@ conceptualContent:
           text: Remote Desktop - Allow access to your PC
       footerLink: 
         url: /windows-server/remote/index
-        text: See More
+        text: See more
 
-    - title: Security and Assurance 
+    - title: Security and assurance 
       links: 
         - url: /windows-server/security/windows-authentication/windows-authentication-overview
           itemType: overview
           text: Windows Authentication overview
         - url: /windows-server/security/group-managed-service-accounts/getting-started-with-group-managed-service-accounts
           itemType: how-to-guide
-          text: Getting started with group managed service accounts
+          text: Getting started with group-managed service accounts
         - url: /windows-server/security/windows-authentication/credentials-processes-in-windows-authentication
           itemType: overview
           text: Credentials processes in Windows Authentication
       footerLink: 
         url: /windows-server/security/security-and-assurance
-        text: See More
+        text: See more
 
     - title: Storage 
       links: 
         - url: /windows-server/storage/whats-new-in-storage
           itemType: whats-new
-          text: What's new in Storage
+          text: What's new in storage
         - url: /windows-server/storage/disk-management/overview-of-disk-management
           itemType: overview
           text: Disk management overview
@@ -145,22 +145,22 @@ conceptualContent:
           text: Understanding cluster and pool quorum
       footerLink: 
         url: /windows-server/storage/storage
-        text: See More
+        text: See more
 
-    - title: Troubleshooting 
+    - title: Troubleshoot 
       links: 
         - url: /windows-server/manage/windows-admin-center/support/troubleshooting
           itemType: how-to-guide
-          text: Troubleshooting Windows Admin Center
+          text: Troubleshoot Windows Admin Center
         - url: /windows-server/failover-clustering/troubleshooting-using-wer-reports
           itemType: how-to-guide
-          text: Troubleshooting failover clustering using Windows Error Reporting
+          text: Troubleshoot failover clustering using Windows Error Reporting
         - url: /windows-server/storage/disk-management/troubleshooting-disk-management
           itemType: how-to-guide
-          text: Troubleshooting Disk Management
+          text: Troubleshoot disk management
       footerLink: 
         url: /windows-server/troubleshoot/windows-server-support-solutions
-        text: See More
+        text: See more
 
     - title: Virtualization 
       links: 
@@ -175,7 +175,7 @@ conceptualContent:
           text: Hyper-V Virtual Switch overview
       footerLink: 
         url: /windows-server/virtualization/virtualization
-        text: See More  
+        text: See more  
 
 additionalContent:
   sections:
