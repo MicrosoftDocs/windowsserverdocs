@@ -44,6 +44,53 @@ ipconfig /displaydns
 
 This command displays the contents of the DNS resolver cache, including the DNS resource records that are preloaded from the Hosts file and any recently queried names that were resolved by the system. After some time, the resolver discards the record from the cache. The time period is specified by the **Time to Live (TTL)** value that is associated with the DNS resource record. You can also flush the cache manually. After you flush the cache, the computer must query DNS servers again for any DNS resource records that were previously resolved by the computer. To delete the entries in the DNS resolver cache, run `ipconfig /flushdns` at a command prompt.
 
-## Next step
+## Using the registry to control the caching time
 
-See [How to Disable Client-Side DNS Caching in Windows](https://support.microsoft.com/kb/318803) for more information.
+> [!IMPORTANT]  
+> Follow the steps in this section carefully. Serious problems might occur if you modify the registry incorrectly. Before you modify it, [back up the registry for restoration](https://support.microsoft.com/help/322756) in case problems occur.
+
+The length of time for which a positive or negative response is cached depends on the values of entries in the following registry key:
+
+**HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\DNSCache\Parameters**
+
+The TTL for positive responses is the lesser of the following values: 
+
+- The number of seconds specified in the query response the resolver received
+
+- The value of the **MaxCacheTtl** registry setting.
+
+>[!Note]
+>- The default TTL for positive responses is 86,400 seconds (1 day).
+>- The TTL for negative responses is the number of seconds specified in the MaxNegativeCacheTtl registry setting.
+>- The default TTL for negative responses is 900 seconds (15 minutes).
+If you do not want negative responses to be cached, set the MaxNegativeCacheTtl registry setting to 0.
+
+To set the caching time on a client computer:
+
+1. Start Registry Editor (Regedit.exe).
+
+2. Locate and then click the following key in the registry:
+
+   **HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Dnscache\Parameters**
+
+3. On the Edit menu, point to New, click DWORD Value, and then add the following registry values:
+
+   - Value name: MaxCacheTtl
+
+     Data type: REG_DWORD
+
+     Value data: Default value 86400 seconds. 
+     
+     If you lower the Maximum TTL value in the client's DNS cache to 1 second, this gives the appearance that the client-side DNS cache has been disabled.    
+
+   - Value name: MaxNegativeCacheTtl
+
+     Data type: REG_DWORD
+
+     Value data: Default value 900 seconds. 
+     
+     Set the value to 0 if you do not want negative responses to be cached.
+
+4. Type the value that you want to use, and then click OK.
+
+5. Quit Registry Editor.
