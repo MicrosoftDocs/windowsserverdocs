@@ -1,6 +1,6 @@
 ---
 ms.assetid: 8a64545b-16bd-4c13-a664-cdf4c6ff6ea0
-title: AD FS Scenarios for Developers
+title: AD FS Modern Auth Flows and App Scenarios
 description:
 author: billmath
 ms.author: billmath
@@ -12,28 +12,28 @@ ms.prod: windows-server-threshold
 ms.technology: identity-adfs
 ---
 
-# AD FS Scenarios for Developers
+# AD FS Modern Auth Flows and App Scenarios
+Applies to AD FS 2016 and later
 
-
-|Detailed scenario walkthrough using samples|OAuth 2.0 Flow/Grant|Client Type|
-|-----|-----|-----|
-|Single-page app</br> &bull; [Sample using ADAL](../development/Single-Page-Application-with-AD-FS.md)|[Implicit](#implicit-grant-flow)|Public| 
-|Web App that signs in users</br>&bull; Sample using OWIN|[Authorization Code](#authorization-code-grant-flow)|Public, Confidential|  
-|Native App calls Web API</br>&bull; [Sample using MSAL](../development/msal/adfs-msal-native-app-web-api.md)</br>&bull; Sample using ADAL|[Authorization Code](#authorization-code-grant-flow)|Public|   
-|Native App calls Web API with Custom claims</br>&bull;Sample using MSAL</br>&bull; Sample using ADAL|[Authorization Code](#authorization-code-grant-flow)|Public| 
-|Web App calls Web API</br>&bull; [Sample using MSAL](../development/msal/adfs-msal-web-app-web-api.md)</br>&bull; [Sample using ADAL](../development/enabling-oauth-confidential-clients-with-ad-fs.md)|[Authorization Code](#authorization-code-grant-flow)|Confidential| 
-|Web API calls another web API on behalf of (OBO) the user</br>&bull; [Sample using MSAL](../development/msal/adfs-msal-web-api-web-api.md)</br>&bull; [Sample using ADAL](../development/ad-fs-on-behalf-of-authentication-in-windows-server.md)|[On-behalf-of](#on-behalf-of-flow)|Web app acts as Confidential| 
-|Daemon App calls Web API|[Client credentials](#client-credentials-grant-flow)|Confidential| 
-|Web App calls Web API using user creds|[Resource owner password credentials](#resource-owner-password-credentials-grant-flow-(not-recommended))|Public, Confidential| 
-|Browserless App calls Web API|Device code|Public, Confidential| 
+|Scenario|Scenario walkthrough using samples|OAuth 2.0 Flow/Grant|Client Type|
+|-----|-----|-----|-----|
+|Single-page app</br> | &bull; [Sample using ADAL](../development/Single-Page-Application-with-AD-FS.md)|[Implicit](#implicit-grant-flow)|Public| 
+|Web App that signs in users</br> | &bull; [Sample using OWIN](../development/enabling-openid-connect-with-ad-fs.md)|[Authorization Code](#authorization-code-grant-flow)|Public, Confidential|  
+|Native App calls Web API</br>|&bull; [Sample using MSAL](../development/msal/adfs-msal-native-app-web-api.md)</br>&bull; [Sample using ADAL](../development/native-client-with-ad-fs)|[Authorization Code](#authorization-code-grant-flow)|Public|   
+|Web App calls Web API</br>|&bull; [Sample using MSAL](../development/msal/adfs-msal-web-app-web-api.md)</br>&bull; [Sample using ADAL](../development/enabling-oauth-confidential-clients-with-ad-fs.md)|[Authorization Code](#authorization-code-grant-flow)|Confidential| 
+|Web API calls another web API on behalf of (OBO) the user</br>|&bull; [Sample using MSAL](../development/msal/adfs-msal-web-api-web-api.md)</br>&bull; [Sample using ADAL](../development/ad-fs-on-behalf-of-authentication-in-windows-server.md)|[On-behalf-of](#on-behalf-of-flow)|Web app acts as Confidential| 
+|Daemon App calls Web API||[Client credentials](#client-credentials-grant-flow)|Confidential| 
+|Web App calls Web API using user creds||[Resource owner password credentials](#resource-owner-password-credentials-grant-flow-(not-recommended))|Public, Confidential| 
+|Browserless App calls Web API||[Device code](#device-code-flow)|Public, Confidential| 
 
 ## Implicit grant flow 
  
 For single page applications (AngularJS, Ember.js, React.js, and so on), AD FS supports the OAuth 2.0 Implicit Grant flow. The implicit flow is described in the [OAuth 2.0 Specification](https://tools.ietf.org/html/rfc6749#section-4.2). Its primary benefit is that it allows the app to get tokens from AD FS without performing a backend server credential exchange. This allows the app to sign in the user, maintain session, and get tokens to other web APIs all within the client JavaScript code. There are a few important security considerations to take into account when using the implicit flow specifically around [client](https://tools.ietf.org/html/rfc6749#section-10.3) and [user impersonation](https://tools.ietf.org/html/rfc6749#section-10.3).  
  
-If you want to use the implicit flow and AD FS to add authentication to your JavaScript app, we recommend you use the open-source JavaScript library, [msal.js](https://github.com/AzureAD/microsoft-authentication-library-for-js). However, if you prefer not to use a library in your single-page app and send protocol messages yourself, follow the general steps below.  
+If you want to use the implicit flow and AD FS to add authentication to your JavaScript app, follow the general steps below.  
   
 ### Protocol diagram
+
 The following diagram shows what the entire implicit sign-in flow looks like and the sections that follow describe each step in more detail.  
 
 ![Implicit sign-in](media/adfs-scenarios-for-developers/implicit.png)
@@ -58,16 +58,16 @@ client_id=6731de76-14a6-49ae-97bc-6eba6914391e
 |Parameter|Required/Optional|Description| 
 |-----|-----|-----|
 |client_id|required|The Application (client) ID that the AD FS assigned to your app.| 
-|response_type|required|Must include id_token for OpenID Connect sign-in. It may also include the response_type token. Using token here will allow your app to receive an access token immediately from the authorize endpoint without having to make a second request to the authorize endpoint. If you use the token response_type, the scope parameter must contain a scope indicating which resource to issue the token for.| 
+|response_type|required|Must include `id_token` for OpenID Connect sign-in. It may also include the response_type `token`. Using token here will allow your app to receive an access token immediately from the authorize endpoint without having to make a second request to the token endpoint.| 
 |redirect_uri|required|The redirect_uri of your app, where authentication responses can be sent and received by your app. It must exactly match one of the redirect_uris you configured in AD FS.| 
-|Sscope|optional|A space-separated list of scopes. For OpenID Connect, it must include the scope openid, which translates to the "Sign you in" permission in the consent UI. Scope should have the format include the resourceID\Scope if the request targets a particular resource. Resource can also be passed as a separate query parameter.|
-|resource|optional|The url of your Web API.</br>Note – If using MSAL client library, then resource parameter is not sent. Instead the resource url is sent as a part of the scope parameter: scope = [resource url]//[scope values e.g., openid]</br>If resource is not passed here or in scope ADFS will use a default resource urn:microsoft:userinfo whoses polices like MFA, Issuance or authorization policy can’t be configured.| 
-|response_mode|optional| Specifies the method that should be used to send the resulting token back to your app. Defaults to fragment if the request includes an id_token or\and token.| 
+|scope|optional|A space-separated list of scopes. For OpenID Connect, it must include the scope `openid`.|
+|resource|optional|The url of your Web API.</br>Note – If using MSAL client library, then resource parameter is not sent. Instead the resource url is sent as a part of the scope parameter: `scope = [resource url]//[scope values e.g., openid]`</br>If resource is not passed here or in scope ADFS will use a default resource urn:microsoft:userinfo. userinfo resource polices such as MFA, Issuance or authorization policy, can’t be customized.| 
+|response_mode|optional| Specifies the method that should be used to send the resulting token back to your app. Defaults to `fragment`.| 
 |state|optional|A value included in the request that will also be returned in the token response. It can be a string of any content that you wish. A randomly generated unique value is typically used for preventing cross-site request forgery attacks. The state is also used to encode information about the user's state in the app before the authentication request occurred, such as the page or view they were on.| 
 |nonce|optional|A value included in the request, generated by the app, that will be included in the resulting id_token as a claim. The app can then verify this value to mitigate token replay attacks. The value is typically a randomized, unique string that can be used to identify the origin of the request. Only required when an id_token is requested.| 
-|prompt|optional|Indicates the type of user interaction that is required. The only valid values at this time are 'login', 'none', 'select_account', and 'consent'. prompt=login will force the user to enter their credentials on that request, negating single-sign on. prompt=none is the opposite - it will ensure that the user isn't presented with any interactive prompt whatsoever. If the request can't be completed silently via single-sign on, the Microsoft identity platform endpoint will return an error. prompt=select_account sends the user to an account picker where all of the accounts remembered in the session will appear. prompt=consent will trigger the OAuth consent dialog after the user signs in, asking the user to grant permissions to the app.| 
+|prompt|optional|Indicates the type of user interaction that is required. The only valid values at this time are `'login'`, `'none'`, and `'select_account'`. `prompt=login` will force the user to enter their credentials on that request, negating single-sign on. prompt=none is the opposite - it will ensure that the user isn't presented with any interactive prompt whatsoever. If the request can't be completed silently via single-sign on, AD FS will return an error. `prompt=select_account` sends the user to an account picker where all of the accounts remembered in the session will appear.| 
 |login_hint|optional|Can be used to pre-fill the username/email address field of the sign in page for the user, if you know their username ahead of time. Often apps will use this parameter during re-authentication, having already extracted the username from a previous sign-in using the preferred_username claim.| 
-|domain_hint|optional|If included, it will skip the email-based discovery process that user goes through on the sign in page, leading to a slightly more streamlined user experience.| 
+|domain_hint|optional|If included, it will skip the domain-based discovery process that user goes through on the sign in page, leading to a slightly more streamlined user experience.| 
 
 At this point, the user will be asked to enter their credentials and complete the authentication. Once the user authenticates, the AD FS authorize endpoint will return a response to your app at the indicated redirect_uri, using the method specified in the response_mode parameter.  
  
@@ -90,11 +90,11 @@ access_token=eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsIng1dCI6Ik5HVEZEstZnl0aEV...
 
 |Parameter|Description| 
 |-----|-----|
-|access_token|Included if response_type includes token.|
-|token_type|Included if response_type includes token. Will always be Bearer.| 
-|expires_in| Included if response_type includes token. Indicates the number of seconds the token is valid, for caching purposes.| 
-|scope|Included if response_type includes token. Indicates the scope(s) for which the access_token will be valid.|  
-|id_token|A signed JSON Web Token (JWT). The app can decode the segments of this token to request information about the user who signed in. The app can cache the values and display them, but it shouldn't rely on them for any authorization or security boundaries.</br>Note: Only provided if openid scope was requested.| 
+|access_token|Included if response_type includes `token`.|
+|token_type|Included if response_type includes `token`. Will always be Bearer.| 
+|expires_in| Included if response_type includes `token`. Indicates the number of seconds the token is valid, for caching purposes.| 
+|scope| Indicates the scope(s) for which the access_token will be valid. Should include `openid` if response_type includes id_token.|  
+|id_token|A signed JSON Web Token (JWT). The app can decode the segments of this token to request information about the user who signed in. The app can cache the values and display them, but it shouldn't rely on them for any authorization or security boundaries.</br>Note: Only provided if `openid` scope was requested.| 
 |state|If a state parameter is included in the request, the same value should appear in the response. The app should verify that the state values in the request and response are identical.|
 
 ### Refresh tokens 
@@ -130,21 +130,19 @@ client_id=6731de76-14a6-49ae-97bc-6eba6914391e
 |Parameter|Required/Optional|Description|
 |-----|-----|-----| 
 |client_id|required|The Application (client) ID that the AD FS assigned to your app.|  
-|response_type|required Must include code for the authorization code flow.| 
-|redirect_uri|required|The redirect_uri of your app, where authentication responses can be sent and received by your app. It must exactly match one of the redirect_uris you registered in the AD FS for the client.|  
-|resource|requiredoptional|The url of your Web API.</br>Note – If using MSAL client library, then resource parameter is not sent. Instead the resource url is sent as a part of the scope parameter: scope = [resource url]//[scope values e.g., openid]</br>If resource is not passed here or in scope ADFS will use a default resource urn:microsoft:userinfo whoses polices like MFA, Issuance or authorization policy can’t be configured.| 
-|scope|optional|A space-separated list of scopes that you want the user to consent to. For the /authorize leg of the request, this can cover multiple resources, allowing your app to get consent for multiple web APIs you want to call.For e.g., to get ID token along with access token openid should be included as the scope value.|
-|response_mode|recommendedoptional|Specifies the method that should be used to send the resulting token back to your app. Can be one of the following: </br>- query </br>- fragment </br>- form_post</br>query provides the code as a query string parameter on your redirect URI. If you're requesting the code, you can use query, fragment, or form_post. form_post executes a POST containing the code to your redirect URI.|
+|response_type|required| Must include code for the authorization code flow.| 
+|redirect_uri|required|The `redirect_uri` of your app, where authentication responses can be sent and received by your app. It must exactly match one of the redirect_uris you registered in the AD FS for the client.|  
+|resource|required|The url of your Web API.</br>Note – If using MSAL client library, then resource parameter is not sent. Instead the resource url is sent as a part of the scope parameter: `scope = [resource url]//[scope values e.g., openid]`</br>If resource is not passed here or in scope ADFS will use a default resource urn:microsoft:userinfo. userinfo resource polices such as MFA, Issuance or authorization policy, can’t be customized.| 
+|scope|optional|For the /authorize leg of the request, include openid as the scope value if you want to get ID token along with access token.|
+|response_mode|optional|Specifies the method that should be used to send the resulting token back to your app. Can be one of the following: </br>- query </br>- fragment </br>- form_post</br>`query` provides the code as a query string parameter on your redirect URI. If you're requesting the code, you can use query, fragment, or form_post. `form_post` executes a POST containing the code to your redirect URI.|
 |state|optional|A value included in the request that will also be returned in the token response. It can be a string of any content that you wish. A randomly generated unique value is typically used for preventing cross-site request forgery attacks. The value can also encode information about the user's state in the app before the authentication request occurred, such as the page or view they were on.|
-|prompt|optional|Indicates the type of user interaction that is required. The only valid values at this time are login, none, and consent.</br>- prompt=login will force the user to enter their credentials on that request, negating single-sign on. </br>- prompt=none is the opposite - it will ensure that the user isn't presented with any interactive prompt whatsoever. If the request can't be completed silently via single-sign on, AD FS will return an interaction_required error.</br>- prompt=consent will trigger the OAuth consent dialog after the user signs in, asking the user to grant permissions to the app.|
+|prompt|optional|Indicates the type of user interaction that is required. The only valid values at this time are login, and none.</br>- `prompt=login` will force the user to enter their credentials on that request, negating single-sign on. </br>- `prompt=none` is the opposite - it will ensure that the user isn't presented with any interactive prompt whatsoever. If the request can't be completed silently via single-sign on, AD FS will return an interaction_required error.|
 |login_hint|optional|Can be used to pre-fill the username/email address field of the sign-in page for the user, if you know their username ahead of time. Often apps will use this parameter during re-authentication, having already extracted the username from a previous sign-in using the preferred_username claim.|
-|domain_hint|optional|If included, it will skip the email-based discovery process that user goes through on the sign in page, leading to a slightly more streamlined user experience.|
-|code_challenge_method|optional|The method used to encode the code_verifier for the code_challenge parameter. Can be one of the following values: </br>- plain </br>- S256 </br>If excluded, code_challenge is assumed to be plaintext if code_challenge is included. AD FS supports both plain and S256. For more information, see the PKCE RFC.|
+|domain_hint|optional|If included, it will skip the domain-based discovery process that user goes through on the sign in page, leading to a slightly more streamlined user experience.|
+|code_challenge_method|optional|The method used to encode the code_verifier for the code_challenge parameter. Can be one of the following values: </br>- plain </br>- S256 </br>If excluded, code_challenge is assumed to be plaintext if code_challenge is included. AD FS supports both plain and S256. For more information, see the [PKCE RFC](https://tools.ietf.org/html/rfc7636).|
 |code_challenge|optional| Used to secure authorization code grants via Proof Key for Code Exchange (PKCE) from a native client. Required if code_challenge_method is included. For more information, see the [PKCE RFC](https://tools.ietf.org/html/rfc7636)|
 
-At this point, the user will be asked to enter their credentials and complete the authentication. AD FS will also ensure that the user has consented to the permissions indicated in the scope query parameter. If the user has not consented to any of those permissions, it will ask the user to consent to the required permissions.  
- 
-Once the user authenticates and grants consent, the AD FS will return a response to your app at the indicated redirect_uri, using the method specified in the response_mode parameter.  
+At this point, the user will be asked to enter their credentials and complete the authentication. Once the user authenticates, the AD FS will return a response to your app at the indicated redirect_uri, using the method specified in the response_mode parameter.  
  
 ### Successful response 
  
@@ -159,18 +157,18 @@ code=AwABAAAAvPM1KaPlrEqdFSBzjqfTGBCmLdgfSTLEMPGYuNHSUYBrq...
 
 |Parameter|Description|
 |-----|-----|
-|code|The authorization_code that the app requested. The app can use the authorization code to request an access token for the target resource. Authorization_codes are short lived, typically they expire after about 10 minutes.|
+|code|The `authorization_code` that the app requested. The app can use the authorization code to request an access token for the target resource. Authorization_codes are short lived, typically they expire after about 10 minutes.|
 |state|If a state parameter is included in the request, the same value should appear in the response. The app should verify that the state values in the request and response are identical.|
 
 ### Request an access token 
  
-Now that you've acquired an authorization_code and have been granted permission by the user, you can redeem the code for an access_token to the desired resource. Do this by sending a POST request to the /token endpoint:  
+Now that you've acquired an `authorization_code` and have been granted permission by the user, you can redeem the code for an `access_token` to the desired resource. Do this by sending a POST request to the /token endpoint:  
  
 ```
 // Line breaks for legibility only 
  
 POST /adfs/oauth2/token HTTP/1.1 
-Host: https://fs.contoso.com/ 
+Host: https://adfs.contoso.com/ 
 Content-Type: application/x-www-form-urlencoded 
  
 client_id=6731de76-14a6-49ae-97bc-6eba6914391e 
@@ -185,11 +183,11 @@ client_id=6731de76-14a6-49ae-97bc-6eba6914391e
 |Parameter|Required/optional|Description|
 |-----|-----|-----| 
 |client_id|required|The Application (client) ID that the AD FS assigned to your app.| 
-|grant_type|required|Must be authorization_code for the authorization code flow.| 
-|scope|optional|A space-separated list of scopes. The scopes requested in this leg must be equivalent to or a subset of the scopes requested in the first leg. The scopes must all be from a single resource, along with OIDC scopes (profile, openid, email).|  
-|resource|required|The url of your Web API.</br>Note – If using MSAL client library, then resource parameter is not sent. Instead the resource url is sent as a part of the scope parameter: scope = [resource url]//[scope values e.g., openid]| 
-|code|required|The authorization_code that you acquired in the first leg of the flow.| 
-|redirect_uri|required|The same redirect_uri value that was used to acquire the authorization_code.| 
+|grant_type|required|Must be `authorization_code` for the authorization code flow.| 
+|scope|optional|A space-separated list of scopes. The scopes requested in this leg must be equivalent to or a subset of the scopes requested in the first leg. |  
+|resource|required|The url of your Web API.</br>Note – If using MSAL client library, then resource parameter is not sent. Instead the resource url is sent as a part of the scope parameter: `scope = [resource url]//[scope values e.g., openid]`| 
+|code|required|The `authorization_code` that you acquired in the first leg of the flow.| 
+|redirect_uri|required|The same `redirect_uri` value that was used to acquire the `authorization_code`.| 
 |client_secret|required for web apps|The application secret that you created during app registration in AD FS. You shouldn't use the application secret in a native app because client_secrets can't be reliably stored on devices. It's required for web apps and web APIs, which have the ability to store the client_secret securely on the server side. The client secret must be URL-encoded before being sent. These apps can also use a key based authentication by signing a JWT and adding that as client_assertion parameter.| 
 |code_verifier|optional|The same code_verifier that was used to obtain the authorization_code. Required if PKCE was used in the authorization code grant request. For more information, see the [PKCE RFC](https://tools.ietf.org/html/rfc7636).| 
 
@@ -212,10 +210,10 @@ A successful token response will look like:
 
 |Parameter|Description| 
 |-----|-----|
-|access_token|The requested access token. The app can use this token to authenticate to the secured resource, such as a web API.| 
-|token_type|Indicates the token type value. The only type that AD FS supports is Bearer|
+|access_token|The requested access token. The app can use this token to authenticate to the secured resource (Web API).| 
+|token_type|Indicates the token type value. The only type that AD FS supports is Bearer.|
 |expires_in|How long the access token is valid (in seconds).||scope|The scopes that the access_token is valid for.| 
-|refresh_token|An OAuth 2.0 refresh token. The app can use this token acquire additional access tokens after the current access token expires. Refresh_tokens are long-lived, and can be used to retain access to resources for extended periods of time. For more detail on refreshing an access token, refer below.</br>Note: Only provided if offline_access scope was requested.| 
+|refresh_token|An OAuth 2.0 refresh token. The app can use this token acquire additional access tokens after the current access token expires. Refresh_tokens are long-lived, and can be used to retain access to resources for extended periods of time. </br>Note: Only provided if offline_access scope was requested.| 
 |refresh_token_expires_in|How long the refresh token is valid (in seconds).| 
 |id_token|A JSON Web Token (JWT). The app can decode the segments of this token to request information about the user who signed in. The app can cache the values and display them, but it should not rely on them for any authorization or security boundaries.</br>Note: Only provided if openid scope was requested.|
 
@@ -229,7 +227,7 @@ Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsIng1dCI6Ik5HVEZ2ZEstZn
 
 ### Refresh the access token 
  
-Access_tokens are short lived, and you must refresh them after they expire to continue accessing resources. You can do so by submitting another POST request to the /token endpoint, this time providing the refresh_token instead of the code. Refresh tokens are valid for all permissions that your client has already received consent for. 
+Access_tokens are short lived, and you must refresh them after they expire to continue accessing resources. You can do so by submitting another POST request to the `/token` endpoint, this time providing the refresh_token instead of the code. Refresh tokens are valid for all permissions that your client has already received access token for. 
  
 Refresh tokens do not have specified lifetimes. Typically, the lifetimes of refresh tokens are relatively long. However, in some cases, refresh tokens expire, are revoked, or lack sufficient privileges for the desired action. Your application needs to expect and handle errors returned by the token issuance endpoint correctly.  
  
@@ -243,7 +241,6 @@ Host: https://adfs.contoso.com
 Content-Type: application/x-www-form-urlencoded 
  
 client_id=6731de76-14a6-49ae-97bc-6eba6914391e 
-&scope=https%3A%2F%2Fgraph.microsoft.com%2Fuser.read 
 &refresh_token=OAAABAAAAiL9Kn2Z27UubvWFPbm0gLWQJVzCTE9UkP3pSx1aXxUjq... 
 &grant_type=refresh_token 
 &client_secret=JqQX2PNo9bpM0uEihUPzyrh      // NOTE: Only required for confidential clients (web apps)  
@@ -253,7 +250,7 @@ client_id=6731de76-14a6-49ae-97bc-6eba6914391e
 |Parameter|Required/Optional|Description| 
 |-----|-----|-----|
 |client_id|required|The Application (client) ID that the AD FS assigned to your app.| 
-|grant_type|required|Must be refresh_token for this leg of the authorization code flow.| 
+|grant_type|required|Must be `refresh_token` for this leg of the authorization code flow.| 
 |scope|optional|A space-separated list of scopes. The scopes requested in this leg must be equivalent to or a subset of the scopes requested in the original authorization_code request leg.|  
 |refresh_token|required|The refresh_token that you acquired in the second leg of the flow.| 
 |client_secret|required for web apps| The application secret that you created in the app registration portal for your app. It should not be used in a native app, because client_secrets can't be reliably stored on devices. It's required for web apps and web APIs, which have the ability to store the client_secret securely on the server side. These apps can also use a key based authentication by signing a JWT and adding that as client_assertion parameter.|
@@ -266,7 +263,6 @@ A successful token response will look like:
     "access_token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsIng1dCI6Ik5HVEZ2ZEstZnl0aEV1Q...", 
     "token_type": "Bearer", 
     "expires_in": 3599, 
-    "scope": "https%3A%2F%2Fgraph.microsoft.com%2Fuser.read", 
     "refresh_token": "AwABAAAAvPM1KaPlrEqdFSBzjqfTGAMxZGUTdM0t4B4...", 
     "refresh_token_expires_in": 3599, 
     "id_token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJub25lIn0.eyJhdWQiOiIyZDRkMTFhMi1mODE0LTQ2YTctOD...", 
@@ -277,7 +273,7 @@ A successful token response will look like:
 |access_token|The requested access token. The app can use this token to authenticate to the secured resource, such as a web API.| 
 |token_type|Indicates the token type value. The only type that AD FS supports is Bearer|
 |expires_in|How long the access token is valid (in seconds).||scope|The scopes that the access_token is valid for.| 
-|refresh_token|An OAuth 2.0 refresh token. The app can use this token acquire additional access tokens after the current access token expires. Refresh_tokens are long-lived, and can be used to retain access to resources for extended periods of time. For more detail on refreshing an access token, refer below.</br>Note: Only provided if offline_access scope was requested.| 
+|refresh_token|An OAuth 2.0 refresh token. The app can use this token acquire additional access tokens after the current access token expires. Refresh_tokens are long-lived, and can be used to retain access to resources for extended periods of time. </br>Note: Only provided if offline_access scope was requested.| 
 |refresh_token_expires_in|How long the refresh token is valid (in seconds).| 
 |id_token|A JSON Web Token (JWT). The app can decode the segments of this token to request information about the user who signed in. The app can cache the values and display them, but it should not rely on them for any authorization or security boundaries.</br>Note: Only provided if openid scope was requested.|
 
