@@ -11,17 +11,16 @@ ms.technology: identity-adfs
 ---
 
 # AD FS Modern Authentication Concepts 
- 
+Applies to AD FS 2016 and later
  
 ## Modern Authentication Actors 
 
 |Actor| Description|
-|-----|-----| 
+|-----|-----|
 |End User|This is the security principal (users, applications, services and groups) who needs to access the resource.|  
-|Client|This is your app, identified by its client ID. The client is usually the party that the end user interacts with, and it requests tokens from the authorization server.|  
-|Authorization Server / Identity Provider (IdP)| This is your AD FS server. It is responsible for verifying the identity of security principals (users, applications, services and groups) that exist in an organization’s directory, and issues security tokens (bearer access token, ID token, refresh token) upon successful authentication of those security principals.| 
-Resource Server / Resource Provider / Relying Party| 
-This is where the resource or data resides. It trusts the Authorization Server to securely authenticate and authorize the Client and uses Bearer access tokens to ensure that access to a resource (Web API) can be granted.| 
+|Client|This is your web application, identified by its client ID. The client is usually the party that the end user interacts with, and it requests tokens from the authorization server.
+|Authorization Server / Identity Provider (IdP)| This is your AD FS server. It is responsible for verifying the identity of security principals that exist in an organization’s directory. It issues security tokens (bearer access token, ID token, refresh token) upon successful authentication of those security principals.
+|Resource Server / Resource Provider / Relying Party| This is where the resource or data resides. It trusts the Authorization Server to securely authenticate and authorize the Client and uses Bearer access tokens to ensure that access to a resource can be granted.
 
 Following diagram provides the most basic relationship between the actors:
 
@@ -34,11 +33,11 @@ Following diagram provides the most basic relationship between the actors:
 |-----|-----|-----|
 |Native application|Sometimes called a **public client**, this is intended to be a client app that runs on a pc or device and with which the user interacts.|Requests tokens from the authorization server (AD FS) for user access to resources. Sends HTTP requests to protected resources, using the tokens as HTTP headers.| 
 |Server application (Web app)|A web application that runs on a server and is generally accessible to users via a browser. Because it is capable of maintaining its own client 'secret' or credential, it is sometimes called a **confidential client**. |Requests tokens from the authorization server (AD FS) for user access to resources. Before requesting token, client (Web App) needs to authenticate using its secret. | 
-|Web API|The end resource the user is accessing. Think of these as the new representation of "relying parties".|Consumes tokens obtained by clients| 
+|Web API|The end resource the user is accessing. Think of these as the new representation of "relying parties".|Consumes bearer access tokens obtained by the clients| 
 
 ## Application Group 
  
-Every OAuth client or resource configured with AD FS needs to be associated with an application group. The clients in an application group can be configured to access the resources in the same group. An application group can contain multiple clients (Native App/Server App) and resources (Web API).  
+Every OAuth client (native or web app) or resource (web api) configured with AD FS needs to be associated with an application group. The clients in an application group can be configured to access the resources in the same group. An application group can contain multiple clients and resources.  
 
 ## Security Tokens 
  
@@ -69,33 +68,44 @@ Security tokens (access and ID tokens) issued by AD FS contain claims, or assert
 - Determine the subject's authorization 
 The claims present in any given security token are dependent upon the type of token, the type of credential used to authenticate the user, and the application configuration.  
  
-## Issuance Transform Rules 
- 
-Transform rules specify the claims that are sent to the Web API as a part of the security tokens. AD FS provides following 5 types of claim rule templates to create claim rules.  
+## High level AD FS authentication flow 
 
- 1. **Send LDAP Attributes as Claims**: Using the Send LDAP Attributes as Claims rule template in Active Directory Federation Services (AD FS), you can create a rule that will select attributes from a Lightweight Directory Access Protocol (LDAP) attribute store, such as Active Directory, to send as claims to the relying party. For example, you can use this rule template to create a Send LDAP Attributes as Claims rule that will extract attribute values for authenticated users from the displayName and telephoneNumber Active Directory attributes and then send those values as two different outgoing claims. For more details visit [Create a Rule to Send LDAP Attributes as Claims](../operations/create-a-rule-to-send-ldap-attributes-as-claims.md).  
- 
- 2. **Send Group Membership as a Claim**: Using the Send Group Membership as a Claim rule template in Active Directory Federation Services (AD FS), you can create a rule that will make it possible for you to select an Active Directory security group to send as a claim. Only a single claim will be emitted from this rule, based on the group that you select. For example, you can use this rule template to create a rule that will send a group claim with a value of Admin if the user is a member of the Domain Admins security group. This rule should be used only for users in the local Active Directory domain. For more details visit [Create a Rule to Send Group Membership as a Claim](../operations/create-a-rule-to-send-group-membership-as-a-claim.md).  
- 
- 3. **Transform an Incoming Claim**: By using the Transform an Incoming Claim rule template in Active Directory Federation Services (AD FS), you can select an incoming claim, change its claim type, and change its claim value. For example, you can use this rule template to create a rule that sends a role claim with the same claim value of an incoming group claim. You can also use this rule to send a group claim with a claim value of Purchasers when there is an incoming group claim with a value of Admins, or you can send only user principal name (UPN) claims that end with @fabrikam. For more details visit [Create a Rule to Transform an Incoming Claim](../operations/create-a-rule-to-transform-an-incoming-claim.md).  
- 
- 4. **Pass through or Filter an Incoming Claim**: Using the Pass Through or Filter an Incoming Claim rule template you can pass through all incoming claims with a selected claim type. You can also filter the values of incoming claims with a selected claim type. For example, you can use this rule template to create a rule that will send all the incoming group claims. You can also use this rule to send only UPN claims that end with “@fabricam”. Multiple claims with the same claim type may be emitted from this rule. Sources of incoming claims vary based on the rules being edited. For more details visit [Create a Rule to Pass Through or Filter an Incoming Claim](../operations/create-a-rule-to-pass-through-or-filter-an-incoming-claim.md).  
- 
- 5. **Send Claims Using a Custom Rule**: By using the Send Claims Using a Custom Rule template in Active Directory Federation Services (AD FS), you can create custom claim rules for situation in which a standard rule template does not satisfy the requirements of your organization. Custom claim rules are written in the claim rule language and must then be copied into the Custom rule text box before they can be used in a rule set. For information about constructing the syntax for an advanced rule, see [The Role of the Claim Rule Language](../technical-reference/the-role-of-the-claim-rule-language.md). For more details visit [Create a Rule to Send Claims Using a Custom Rule](../operations/create-a-rule-to-send-claims-using-a-custom-rule.md).  
+![AD FS Authentication Flow](media/adfs-modern-auth-concepts/adfsauthflow.png)
 
-## Access Control Policy 
+
+ 1. AD FS receives auth request from the client.  
  
-In Windows Server 2016 or later, you can use an Access Control Policy to create rules that will give targeted users access to a resource (Web API). In Windows Server 2012 R2, using the Permit All Users rule template in AD FS, you can create an authorization rule that will give targeted users access to resource (Web API). For more details visit [Create a Rule to Permit All Users](../operations/create-a-rule-to-permit-all-users.md).  
+ 2.	AD FS validates the client ID in the auth request with the client ID obtained during client and resource registration in AD FS. If using confidential client, then AD FS also validates the client secret provided in the auth request. AD FS also validate the redirect uri of the Client. 
  
+ 3.	AD FS identifies the resource which the client wants to access through the resource parameter passed in the auth request. If using MSAL client library, then resource parameter is not sent. Instead the resource url is sent as a part of the scope parameter: *scope = [resource url]//[scope values e.g., openid]*. 
+
+    If resource is not passed using resource or scope parameter, ADFS will use a default resource urn:microsoft:userinfo whose polices (e.g.,MFA, Issuance or authorization policy) can’t be configured. 
+ 
+ 4.	Next AD FS validates whether client has the permissions to access the resource. AD FS also validates whether the scopes passed in the auth request matches the scopes configured while registering the resource. If the client doesn’t have the permissions or the right scopes are not sent in the auth request the auth flow is terminated.   
+ 
+ 5.	Once permissions and scopes are validated, AD FS authenticates the user using the configured [authentication method](../operations/configure-authentication-policies.md).   
+
+ 6.	If [additional authentication method](../operations/configure-additional-authentication-methods-for-ad-fs.md) is required as per the resource policy or the global auth policy, AD FS triggers the additional authentication. 
+
+ 7. AD FS uses [Azure MFA](../operations/configure-ad-fs-and-azure-mfa.md) or [3rd party MFA](../operations/additional-authentication-methods-ad-fs.md) to perform authentication.   
+ 
+ 8.	Once user is authenticated, AD FS applies the [claim rules](../deployment/configuring-claim-rules.md) (determines the claims sent to resource as a part of the security tokens) and [access control polices](../operations/ad-fs-client-access-policies.md) (determines that user has met the required conditions to access the resource).   
+
+ 9.	Next, AD FS generates the Access and Refresh Tokens.. 
+
+ 10. AD FS also generates the ID token. 
+ 
+ 11. If the scope = allatclaims is included in the auth request, [ID token is customized](custom-id-tokens-in-ad-fs.md) to include claims in the access token based on the defined claim rules. 
+    
+ 12. Once the required tokens are generated and customized, AD FS responds to the client including the tokens. Only if the auth request includes scope = openid, ID token is included in the response. Client can always obtain the ID token post authentication using the token endpoint. 
+
 ## Types of libraries 
   
 Two types of libraries are used with AD FS: 
-    - **Client libraries**: Native clients and server apps use client libraries to acquire access tokens for calling a resource such as a Web API. Microsoft Authentication Library (MSAL) is the latest and recommended client library when using AD FS 2019. Active Directory Authentication Library (ADAL) is recommended for AD FS 2016.  
-    - **Server middleware libraries**: Web apps use server middleware libraries for user sign in. Web APIs use server middleware libraries to validate tokens that are sent by native clients or by other servers. OWIN (Open Web Interface for .NET) is the recommended middleware library. 
+- **Client libraries**: Native clients and server apps use client libraries to acquire access tokens for calling a resource such as a Web API. Microsoft Authentication Library (MSAL) is the latest and recommended client library when using AD FS 2019. Active Directory Authentication Library (ADAL) is recommended for AD FS 2016.  
+
+- **Server middleware libraries**: Web apps use server middleware libraries for user sign in. Web APIs use server middleware libraries to validate tokens that are sent by native clients or by other servers. OWIN (Open Web Interface for .NET) is the recommended middleware library. 
  
- 
-## Userinfo endpoint 
- 
-Userinfo endpoint is the default endpoint access request is redirected to if the request doesn’t include resource parameter i.e. the resource (Web API) is not specified in the request by the client. The ADFS userinfo endpoint always returns the subject claim as specified in the OpenID standards. The endpoint cannot be customized to provide additional claims.   
+
  
  
