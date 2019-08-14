@@ -77,7 +77,7 @@ In an outsourced dial-up scenario in which an Internet service provider \(ISP\) 
 
 - Replace:
 
-**To replace <em>user@example.microsoft.com</em> with *example.microsoft.com\user***
+**To replace <em>user@example.microsoft.com</em> with _example.microsoft.com\user_**
 
 - Find:`(.*)@(.*)`
 
@@ -85,7 +85,7 @@ In an outsourced dial-up scenario in which an Internet service provider \(ISP\) 
 
 
 
-**To replace *domain\user* with *specific_domain\user***
+**To replace *domain\user* with _specific_domain\user_**
 
 - Find:`(.*)\\(.*)`
 
