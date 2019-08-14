@@ -18,9 +18,9 @@ This collection contains detailed information to help you determine if you're re
 
 If you're looking for info about Windows Server 2016, see [Get started with Windows Server 2016](../get-started/server-basics.md). For even earlier versions, see our [Windows previous versions library](https://docs.microsoft.com/previous-versions/windows/).
 
-|       |       |
-|   -   |   -   |
-| ![What's New?](./media/whats-new.png) | [**What's new?**](whats-new-19.md)<br>Find out what's new in Windows Server 2019.|
+|       | 
+|   -   | 
+| [**What's new?**](whats-new-19.md)<br>Find out what's new in Windows Server 2019. |
 
 |       |        |        |
 |   -   |   -    |   -    |
