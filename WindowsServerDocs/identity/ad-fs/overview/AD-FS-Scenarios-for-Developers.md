@@ -172,10 +172,8 @@ Host: https://adfs.contoso.com/
 Content-Type: application/x-www-form-urlencoded 
  
 client_id=6731de76-14a6-49ae-97bc-6eba6914391e 
-&scope=openid 
 &code=OAAABAAAAiL9Kn2Z27UubvWFPbm0gLWQJVzCTE9UkP3pSx1aXxUjq3n8b2JRLk4OxVXr... 
 &redirect_uri=http%3A%2F%2Flocalhost%2Fmyapp%2F 
-&resource=https://webapi.com/ 
 &grant_type=authorization_code 
 &client_secret=JqQX2PNo9bpM0uEihUPzyrh    // NOTE: Only required for confidential clients (web apps)  
 ```
@@ -184,8 +182,6 @@ client_id=6731de76-14a6-49ae-97bc-6eba6914391e
 |-----|-----|-----| 
 |client_id|required|The Application (client) ID that the AD FS assigned to your app.| 
 |grant_type|required|Must be `authorization_code` for the authorization code flow.| 
-|scope|optional|A space-separated list of scopes. The scopes requested in this leg must be equivalent to or a subset of the scopes requested in the first leg. |  
-|resource|required|The url of your Web API.</br>Note – If using MSAL client library, then resource parameter is not sent. Instead the resource url is sent as a part of the scope parameter: `scope = [resource url]//[scope values e.g., openid]`</br>If resource is not passed here or in scope ADFS will use a default resource urn:microsoft:userinfo. userinfo resource polices such as MFA, Issuance or authorization policy, can’t be customized.| 
 |code|required|The `authorization_code` that you acquired in the first leg of the flow.| 
 |redirect_uri|required|The same `redirect_uri` value that was used to acquire the `authorization_code`.| 
 |client_secret|required for web apps|The application secret that you created during app registration in AD FS. You shouldn't use the application secret in a native app because client_secrets can't be reliably stored on devices. It's required for web apps and web APIs, which have the ability to store the client_secret securely on the server side. The client secret must be URL-encoded before being sent. These apps can also use a key based authentication by signing a JWT and adding that as client_assertion parameter.| 
@@ -200,7 +196,6 @@ A successful token response will look like:
     "access_token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsIng1dCI6Ik5HVEZ2ZEstZnl0aEV1Q...", 
     "token_type": "Bearer", 
     "expires_in": 3599, 
-    "scope": "openid", 
     "refresh_token": "AwABAAAAvPM1KaPlrEqdFSBzjqfTGAMxZGUTdM0t4B4...", 
     "refresh_token_expires_in": 28800, 
     "id_token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJub25lIn0.eyJhdWQiOiIyZDRkMTFhMi1mODE0LTQ2YTctOD...", 
@@ -213,7 +208,6 @@ A successful token response will look like:
 |access_token|The requested access token. The app can use this token to authenticate to the secured resource (Web API).| 
 |token_type|Indicates the token type value. The only type that AD FS supports is Bearer.
 |expires_in|How long the access token is valid (in seconds).
-|scope|The scopes that the access_token is valid for.| 
 |refresh_token|An OAuth 2.0 refresh token. The app can use this token acquire additional access tokens after the current access token expires. Refresh_tokens are long-lived, and can be used to retain access to resources for extended periods of time.| 
 |refresh_token_expires_in|How long the refresh token is valid (in seconds).| 
 |id_token|A JSON Web Token (JWT). The app can decode the segments of this token to request information about the user who signed in. The app can cache the values and display them, but it should not rely on them for any authorization or security boundaries.|
