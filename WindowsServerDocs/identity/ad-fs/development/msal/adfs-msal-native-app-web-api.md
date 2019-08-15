@@ -17,7 +17,8 @@ ms.technology: identity-adfs
  
 Learn how to build a native app signing-in users authenticated by AD FS 2019 and acquiring tokens using [MSAL library](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/wiki)  to call web APIs.  
  
-Before reading this article, you should be familiar with the [AD FS concepts](../adfs-modern-auth-concepts.md)
+Before reading this article, you should be familiar with the [AD FS concepts](../adfs-modern-auth-concepts.md) and [Authorization code grant flow](../../overview/ad-fs-scenarios-for-developers?branch=pr-en-us-333#authorization-code-grant-flow
+)
  
 ## Overview 
  
@@ -27,7 +28,7 @@ In this flow you add authentication to your Native App (public client), which ca
 
 For applications running in intranet, there's another possibility. These applications can acquire a token silently by using MSAL’s [AcquireTokenSilent](https://docs.microsoft.com/en-us/dotnet/api/microsoft.identity.client.iclientapplicationbase.acquiretokensilent?view=azure-dotnet#Microsoft_Identity_Client_IClientApplicationBase_AcquireTokenSilent_System_Collections_Generic_IEnumerable_System_String__Microsoft_Identity_Client_IAccount_) token acquisition method.  
  
-To better understand how to configure a Native App in ADFS to acquire access token interactively, let’s use a sample Native App calling a Web API available [here]() and walkthrough the app registration and code configuration steps.  
+To better understand how to configure a Native App in ADFS to acquire access token interactively, let’s use a sample Native App calling a Web API available [here](https://github.com/microsoft/adfs-sample-msal-dotnet-native-to-webapi) and walkthrough the app registration and code configuration steps.  
  
 
 ## Pre-requisites 
@@ -92,7 +93,7 @@ This section shows how to register the Native App as a public client and Web API
 ## Code Configuration 
 This section shows how to configure a Native App to sign-in user and retrieve token to call the Web API 
 
-1. Download the sample from [here]()  
+1. Download the sample from [here](https://github.com/microsoft/adfs-sample-msal-dotnet-native-to-webapi) 
 
 2. Open the sample using Visual Studio 
 
