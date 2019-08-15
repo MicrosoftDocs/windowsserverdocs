@@ -4,7 +4,7 @@ description: Storage Migration Service makes it easier to migrate servers to a n
 author: jasongerend
 ms.author: jgerend
 manager: elizapo
-ms.date: 05/21/2019
+ms.date: 08/15/2019
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: storage
@@ -52,7 +52,7 @@ To use Storage Migration Service, you need the following:
 
 We strongly recommend that the orchestrator and destination computers have at least two cores or two vCPUs, and at least 2 GB of memory. Inventory and transfer operations are significantly faster with more processors and memory.
 
-### Security requirements
+### Security requirements, the Storage Migration Service proxy service, and firewall ports
 
 - A migration account that is an administrator on the source computers and the orchestrator computer.
 - A migration account that is an administrator on the destination computers and the orchestrator computer.
@@ -64,7 +64,9 @@ We strongly recommend that the orchestrator and destination computers have at le
   - Windows Management Instrumentation (WMI-In)
   
   > [!TIP]
-  > Installing the Storage Migration Service Proxy service on a Windows Server 2019 computer automatically opens the necessary firewall ports on that computer.
+  > Installing the Storage Migration Service Proxy service on a Windows Server 2019 computer automatically opens the necessary firewall ports on that computer. To do so, connect to the destination server in Windows Admin Center and then go to **Server Manager** (in Windows Admin Center) > **Roles and features**, select **Storage Migration Service Proxy**, and then select **Install**.
+
+
 - If the computers belong to an Active Directory Domain Services domain, they should all belong to the same forest. The destination server must also be in the same domain as the source server if you want to transfer the source's domain name to the destination when cutting over. Cutover technically works across domains, but the fully-qualified domain name of the destination will be different from the source...
 
 ### Requirements for source servers

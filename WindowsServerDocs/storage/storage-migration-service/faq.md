@@ -4,7 +4,7 @@ description: Frequently asked questions about Storage Migration Service, such as
 author: nedpyle
 ms.author: nedpyle
 manager: siroy
-ms.date: 06/04/2019
+ms.date: 08/16/2019
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: storage
@@ -65,38 +65,17 @@ Storage Migration Service migrates all flags, settings, and security of SMB shar
     - Special
     - Temporary
 
-## <a name="move-db"></a> Can I move the Storage Migration Service database?
+## <a name="consolidate-servers"></a> Can I consolidate multiple servers into one server?
 
-The Storage Migration Service uses an extensible storage engine (ESE) database that is installed by default in the hidden c:\programdata\microsoft\storagemigrationservice folder. This database will grow as jobs are added and transfers are completed, and can consume significant drive space after migrating millions of files if you do not delete jobs. If the database needs to move, perform the following steps:
-
-1. Stop the "Storage Migration Service" service on the orchestrator computer.
-2. Take ownership of the `%programdata%/Microsoft/StorageMigrationService` folder
-3. Add your user account to have full control over that share and all of its files and subfolders.
-4. Move the folder to another drive on the orchestrator computer.
-5. Set the following registry REG_SZ value:
-
-    HKEY_Local_Machine\Software\Microsoft\SMS
-    DatabasePath = *path to the new database folder on a different volume*
-. 
-6. Ensure that SYSTEM has full control to all files and subfolders of that folder
-7. Remove your own accounts permissions.
-8. Start the "Storage Migration Service" service.
+The Storage Migration Service version shipped in Windows Server 2019 doesn't support consolidating multiple servers into one server. An example of consolidation would be migrating three separate source servers - which may have the same share names and local file paths - onto a single new server that virtualized those paths and shares to prevent any overlap or collision, then answered all three previous servers names and IP address. We may add this functionality in a future version of the Storage Migration Service. 
 
 ## <a name="non-windows"></a> Can I migrate from sources other than Windows Server?
 
-The Storage Migration Service version shipped in Windows Server 2019 supports migrating from Windows Server 2003 and later operating systems. It cannot currently migrate from Linux, Samba, NetApp, EMC, or other SAN and NAS storage devices. We plan to allow this in a future version of Storage Migration Service, starting with Linux Samba support.
+The Storage Migration Service version shipped in Windows Server 2019 supports migrating from Windows Server 2003 and later operating systems. You can also migrate storage from a Linux server or device that uses Samba; to do so, run Storage Migration Service on a server running Windows Server, version 1903 or later.
 
 ## <a name="previous-versions"></a> Can I migrate previous file versions?
 
 The Storage Migration Service version shipped in Windows Server 2019 doesn't support migrating Previous Versions (made with the volume shadow copy service) of files. Only the current version will migrate. 
-
-## <a name="ntfs-refs"></a> Can I migrate from NTFS to REFS?
-
-The Storage Migration Service version shipped in Windows Server 2019 doesn't support migrating from the NTFS to REFS file systems. You can migrate from NTFS to NTFS and REFS to ReFS. This is by design, due to the many differences in functionality, metadata, and other aspects that ReFS doesn't duplicate from NTFS. ReFS is intended as an application workload file system, not a general file system. For more information, see [Resilient File System (ReFS) overview](../refs/refs-overview.md)
-
-## <a name="consolidate-servers"></a> Can I consolidate multiple servers into one server?
-
-The Storage Migration Service version shipped in Windows Server 2019 doesn't support consolidating multiple servers into one server. An example of consolidation would be migrating three separate source servers - which may have the same share names and local file paths - onto a single new server that virtualized those paths and shares to prevent any overlap or collision, then answered all three previous servers names and IP address. We may add this functionality in a future version of the Storage Migration Service.  
 
 ## <a name="optimize"></a> Optimizing inventory and transfer performance
 
@@ -133,6 +112,27 @@ The Storage Migration Service contains a multi-threaded read and copy engine cal
 - **Use faster storage.** While it may be difficult to upgrade the source computer storage speed, you should ensure the destination storage is at least as fast at write IO performance as the source is at read IO performance in order to ensure there is no unnecessary  bottleneck in transfers. If the destination is a VM, ensure that, at least for the purposes of migration, it runs in the fastest storage layer of your hypervisor hosts, such as on the flash tier or with Storage Spaces Direct HCI clusters utilizing mirrored all-flash or hybrid spaces. When the SMS migration is complete the VM can be live migrated to a slower tier or host.
 
 - **Update antivirus.** Always ensure your source and destination are running the latest patched version of antivirus software to ensure minimal performance overhead. As a test, you can *temporarily* exclude scanning of folders you're inventorying or migrating on the source and destination servers. If your transfer performance is improved, contact your antivirus software vendor for instructions or for an updated version of the antivirus software or an explanation of expected performance degradation.
+
+## <a name="ntfs-refs"></a> Can I migrate from NTFS to REFS?
+
+The Storage Migration Service version shipped in Windows Server 2019 doesn't support migrating from the NTFS to REFS file systems. You can migrate from NTFS to NTFS and REFS to ReFS. This is by design, due to the many differences in functionality, metadata, and other aspects that ReFS doesn't duplicate from NTFS. ReFS is intended as an application workload file system, not a general file system. For more information, see [Resilient File System (ReFS) overview](../refs/refs-overview.md) 
+
+## <a name="move-db"></a> Can I move the Storage Migration Service database?
+
+The Storage Migration Service uses an extensible storage engine (ESE) database that is installed by default in the hidden c:\programdata\microsoft\storagemigrationservice folder. This database will grow as jobs are added and transfers are completed, and can consume significant drive space after migrating millions of files if you do not delete jobs. If the database needs to move, perform the following steps:
+
+1. Stop the "Storage Migration Service" service on the orchestrator computer.
+2. Take ownership of the `%programdata%/Microsoft/StorageMigrationService` folder
+3. Add your user account to have full control over that share and all of its files and subfolders.
+4. Move the folder to another drive on the orchestrator computer.
+5. Set the following registry REG_SZ value:
+
+    HKEY_Local_Machine\Software\Microsoft\SMS
+    DatabasePath = *path to the new database folder on a different volume*
+. 
+6. Ensure that SYSTEM has full control to all files and subfolders of that folder
+7. Remove your own accounts permissions.
+8. Start the "Storage Migration Service" service.
 
 ## <a name="give-feedback"></a> What are my options to give feedback, file bugs, or get support?
 
