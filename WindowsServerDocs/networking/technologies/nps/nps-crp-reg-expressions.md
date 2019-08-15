@@ -85,7 +85,7 @@ In an outsourced dial-up scenario in which an Internet service provider \(ISP\) 
 
 
 
-**To replace *domain\user* with _specific_domain\user_**
+**To replace _domain\user_ with _specific_domain\user_**
 
 - Find:`(.*)\\(.*)`
 
