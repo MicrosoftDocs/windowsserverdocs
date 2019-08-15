@@ -12,7 +12,7 @@ ms.technology: identity-adfs
 
 
 
-# Scenario: Native app calling Web API 
+# Scenario: Native App calling Web API 
 >Applies To: AD FS 2019 and later 
  
 Learn how to build a native app signing-in users authenticated by AD FS 2019 and acquiring tokens using [MSAL library](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/wiki)  to call web APIs.  
@@ -24,11 +24,10 @@ Before reading this article, you should be familiar with the [AD FS concepts](..
  
  ![Overview](media/adfs-msal-native-app-web-api/native1.png)
 
-In this flow you add authentication to your Native App (public client), which can therefore sign in users and calls a Web API. To call a Web API from a native app that signs in users, use MSAL's [AcquireTokenInteractive](https://docs.microsoft.com/en-us/dotnet/api/microsoft.identity.client.ipublicclientapplication.acquiretokeninteractive?view=azure-dotnet#Microsoft_Identity_Client_IPublicClientApplication_AcquireTokenInteractive_System_Collections_Generic_IEnumerable_System_String__) token acquisition method. To enable this interaction, MSAL leverages a web browser.  
+In this flow you add authentication to your Native App (public client), which can therefore sign in users and calls a Web API. To call a Web API from a Native App that signs in users, you can use MSAL's [AcquireTokenInteractive](https://docs.microsoft.com/en-us/dotnet/api/microsoft.identity.client.ipublicclientapplication.acquiretokeninteractive?view=azure-dotnet#Microsoft_Identity_Client_IPublicClientApplication_AcquireTokenInteractive_System_Collections_Generic_IEnumerable_System_String__) token acquisition method. To enable this interaction, MSAL leverages a web browser. 
 
-For applications running in intranet, there's another possibility. These applications can acquire a token silently by using MSAL’s [AcquireTokenSilent](https://docs.microsoft.com/en-us/dotnet/api/microsoft.identity.client.iclientapplicationbase.acquiretokensilent?view=azure-dotnet#Microsoft_Identity_Client_IClientApplicationBase_AcquireTokenSilent_System_Collections_Generic_IEnumerable_System_String__Microsoft_Identity_Client_IAccount_) token acquisition method.  
  
-To better understand how to configure a Native App in ADFS to acquire access token interactively, let’s use a sample Native App calling a Web API available [here](https://github.com/microsoft/adfs-sample-msal-dotnet-native-to-webapi) and walkthrough the app registration and code configuration steps.  
+To better understand how to configure a Native App in ADFS to acquire access token interactively, let’s use a sample available [here](https://github.com/microsoft/adfs-sample-msal-dotnet-native-to-webapi) and walkthrough the app registration and code configuration steps.  
  
 
 ## Pre-requisites 
