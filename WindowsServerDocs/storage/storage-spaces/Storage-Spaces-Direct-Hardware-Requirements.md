@@ -7,7 +7,7 @@ ms.manager: eldenc
 ms.technology: storage-spaces
 ms.topic: article
 author: eldenchristensen
-ms.date: 08/01/2019
+ms.date: 08/05/2019
 ms.localizationpriority: medium
 ---
 # Storage Spaces Direct hardware requirements
@@ -54,14 +54,21 @@ In addition, the following requirements apply:
 
 ## Networking
 
-Minimum (for small scale 2-3 node)
-- 10 Gbps network interface
-- Direct-connect (switchless) is supported with 2-nodes
+Storage Spaces Direct requires a reliable high bandwidth, low latency network connection between each node.  
 
-Recommended (for high performance, at scale, or deployments of 4+ nodes)
+Minimum interconnect for small scale 2-3 node
+- 10 Gbps network interface card (NIC), or faster
+- Two or more network connections from each node recommended for redundancy and performance
+
+Recommended interconnect for high performance, at scale, or deployments of 4+ 
 - NICs that are remote-direct memory access (RDMA) capable, iWARP (recommended) or RoCE
-- Two or more NICs for redundancy and performance
-- 25 Gbps network interface or higher
+- Two or more network connections from each node recommended for redundancy and performance
+- 25 Gbps NIC or faster
+
+Switched or switchless node interconnects
+- Switched: Network switches must be properly configured to handle the bandwidth and networking type.  If using RDMA that implements the RoCE protocol, network device and switch configuration is even more important. 
+- Switchless: Nodes can be interconnected using direct connections, avoiding using a switch.  It is required that every node have a direct connection with every other node of the cluster.
+
 
 ## Drives
 
