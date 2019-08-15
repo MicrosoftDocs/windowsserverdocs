@@ -1,6 +1,6 @@
 ---
 ms.assetid: 8a64545b-16bd-4c13-a664-cdf4c6ff6ea0
-title: AD FS Modern Auth Flows and App Scenarios
+title: AD FS Modern Auth Flows and App Scenarios 
 description:
 author: billmath
 ms.author: billmath
@@ -8,18 +8,18 @@ manager: femila
 ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server-threshold
-
 ms.technology: identity-adfs
 ---
 
 # AD FS Modern Auth Flows and App Scenarios
 Applies to AD FS 2016 and later
 
+
 |Scenario|Scenario walkthrough using samples|OAuth 2.0 Flow/Grant|Client Type|
 |-----|-----|-----|-----|
 |Single-page app</br> | &bull; [Sample using ADAL](../development/Single-Page-Application-with-AD-FS.md)|[Implicit](#implicit-grant-flow)|Public| 
 |Web App that signs in users</br> | &bull; [Sample using OWIN](../development/enabling-openid-connect-with-ad-fs.md)|[Authorization Code](#authorization-code-grant-flow)|Public, Confidential|  
-|Native App calls Web API</br>|&bull; [Sample using MSAL](../development/msal/adfs-msal-native-app-web-api.md)</br>&bull; [Sample using ADAL](../development/native-client-with-ad-fs)|[Authorization Code](#authorization-code-grant-flow)|Public|   
+|Native App calls Web API</br>|&bull; [Sample using MSAL](../development/msal/adfs-msal-native-app-web-api.md)</br>&bull; [Sample using ADAL](../development/native-client-with-ad-fs.md)|[Authorization Code](#authorization-code-grant-flow)|Public|   
 |Web App calls Web API</br>|&bull; [Sample using MSAL](../development/msal/adfs-msal-web-app-web-api.md)</br>&bull; [Sample using ADAL](../development/enabling-oauth-confidential-clients-with-ad-fs.md)|[Authorization Code](#authorization-code-grant-flow)|Confidential| 
 |Web API calls another web API on behalf of (OBO) the user</br>|&bull; [Sample using MSAL](../development/msal/adfs-msal-web-api-web-api.md)</br>&bull; [Sample using ADAL](../development/ad-fs-on-behalf-of-authentication-in-windows-server.md)|[On-behalf-of](#on-behalf-of-flow)|Web app acts as Confidential| 
 |Daemon App calls Web API||[Client credentials](#client-credentials-grant-flow)|Confidential| 

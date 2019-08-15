@@ -204,7 +204,7 @@
 
 ### [AD FS Overview](ad-fs/AD-FS-Overview.md)
 #### [What's new in Active Directory Federation Services](ad-fs/overview/whats-new-active-directory-federation-services-windows-server.md)
-#### [AD FS Scenarios for Developers](ad-fs/overview/AD-FS-Scenarios-for-Developers.md)
+
 #### [AD FS 2016 Requirements](ad-fs/overview/AD-FS-Requirements.md)
 
 ### [AD FS Design](ad-fs/AD-FS-Design.md)
@@ -367,6 +367,8 @@
 
 ### AD FS Development
 #### [AD FS Modern Auth Concepts](ad-fs/development/adfs-modern-auth-concepts.md)
+#### [AD FS Modern Auth Flows and App Scenarios ](ad-fs/overview/AD-FS-Scenarios-for-Developers.md)
+
 #### [Build a Custom Authentication Method for AD FS](ad-fs/development/ad-fs-build-custom-auth-method.md)
 #### [Build Plug-ins with AD FS 2019 Risk Assessment Model](ad-fs/development/ad-fs-risk-assessment-model.md)
 #### [Single log-out for OpenID Connect with AD FS](ad-fs/development/ad-fs-logout-openid-connect.md)
