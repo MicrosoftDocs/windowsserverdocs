@@ -1,6 +1,6 @@
 ---
 ms.assetid: 8a64545b-16bd-4c13-a664-cdf4c6ff6ea0
-title: AD FS Scenarios for Developers
+title: AD FS Modern Auth Flows and App Scenarios 
 description:
 author: billmath
 ms.author: billmath
@@ -12,7 +12,7 @@ ms.prod: windows-server-threshold
 ms.technology: identity-adfs
 ---
 
-# AD FS Scenarios for Developers
+# AD FS Modern Auth Flows and App Scenarios 
 
 
 |Detailed scenario walkthrough using samples|OAuth 2.0 Flow/Grant|Client Type|
