@@ -50,15 +50,15 @@ To work around this issue, install the Storage Migration Service on a Windows Se
 
 We have fixed this in a later release of Windows Server. Please open a support case via [Microsoft Support](https://support.microsoft.com) to request a backport of this fix be created.
 
-## Storage Migration Service isn't included in Windows Server 2019 Evaluation edition
+## Storage Migration Service isn't included in Windows Server 2019 Evaluation or Windows Server 2019 Essentials edition
 
-When using Windows Admin Center to connect to a [Windows Server 2019 Evaluation release](https://www.microsoft.com/evalcenter/evaluate-windows-server-2019) there isn't an option to manage the Storage Migration Service. Storage Migration Service also isn't included in Roles and Features.
+When using Windows Admin Center to connect to a [Windows Server 2019 Evaluation release](https://www.microsoft.com/evalcenter/evaluate-windows-server-2019) or Windows Server 2019 Essentials edition, there isn't an option to manage the Storage Migration Service. Storage Migration Service also isn't included in Roles and Features.
 
-This issue is caused by a servicing issue in the Evaluation media of Windows Server 2019. 
+This issue is caused by a servicing issue in the Evaluation media of Windows Server 2019. The Windows Server 2019 Essentials edition is also built from this same branch. 
 
-To work around this issue, install a retail, MSDN, OEM, or Volume License version of Windows Server 2019 and don't activate it. Without activation, all editions of Windows Server operate in evaluation mode for 180 days. 
+To work around this issue for evaluation, install a retail, MSDN, OEM, or Volume License version of Windows Server 2019 and don't activate it. Without activation, all editions of Windows Server operate in evaluation mode for 180 days. 
 
-We have fixed this issue in a later release of Windows Server 2019.  
+We have fixed this issue in a later release of Windows Server.  
 
 ## Storage Migration Service times out downloading the transfer error CSV
 
