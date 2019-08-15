@@ -125,5 +125,5 @@ Drives can be internal to the server, or in an external enclosure that is connec
 
 | Maximums                | Windows Server 2019  | Windows Server 2016  |
 | ---                     | ---------            | ---------            |
-| Raw capacity per server | 100 TB               | 100 TB               |
+| Raw capacity per server | 400 TB               | 100 TB               |
 | Pool capacity           | 4 PB (4,000 TB)      | 1 PB                 |
