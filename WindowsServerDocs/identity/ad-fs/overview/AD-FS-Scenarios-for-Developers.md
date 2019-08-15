@@ -19,7 +19,7 @@ Applies to AD FS 2016 and later
 |-----|-----|-----|-----|
 |Single-page app</br> | &bull; [Sample using ADAL](../development/Single-Page-Application-with-AD-FS.md)|[Implicit](#implicit-grant-flow)|Public| 
 |Web App that signs in users</br> | &bull; [Sample using OWIN](../development/enabling-openid-connect-with-ad-fs.md)|[Authorization Code](#authorization-code-grant-flow)|Public, Confidential|  
-|Native App calls Web API</br>|&bull; [Sample using MSAL](../development/msal/adfs-msal-native-app-web-api.md)</br>&bull; [Sample using ADAL](../development/native-client-with-ad-fs)|[Authorization Code](#authorization-code-grant-flow)|Public|   
+|Native App calls Web API</br>|&bull; [Sample using MSAL](../development/msal/adfs-msal-native-app-web-api.md)</br>&bull; [Sample using ADAL](../development/native-client-with-ad-fs.md)|[Authorization Code](#authorization-code-grant-flow)|Public|   
 |Web App calls Web API</br>|&bull; [Sample using MSAL](../development/msal/adfs-msal-web-app-web-api.md)</br>&bull; [Sample using ADAL](../development/enabling-oauth-confidential-clients-with-ad-fs.md)|[Authorization Code](#authorization-code-grant-flow)|Confidential| 
 |Web API calls another web API on behalf of (OBO) the user</br>|&bull; [Sample using MSAL](../development/msal/adfs-msal-web-api-web-api.md)</br>&bull; [Sample using ADAL](../development/ad-fs-on-behalf-of-authentication-in-windows-server.md)|[On-behalf-of](#on-behalf-of-flow)|Web app acts as Confidential| 
 |Daemon App calls Web API||[Client credentials](#client-credentials-grant-flow)|Confidential| 
