@@ -1,10 +1,6 @@
 ---
 ms.assetid: 8a64545b-16bd-4c13-a664-cdf4c6ff6ea0
-<<<<<<< HEAD
 title: AD FS Modern Auth Flows and App Scenarios 
-=======
-title: AD FS Modern Auth Flows and App Scenarios
->>>>>>> 5a021f3d22465be45b25045b37195c3179d3f39e
 description:
 author: billmath
 ms.author: billmath
@@ -12,16 +8,12 @@ manager: femila
 ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server-threshold
-
 ms.technology: identity-adfs
 ---
 
-<<<<<<< HEAD
-# AD FS Modern Auth Flows and App Scenarios 
-=======
 # AD FS Modern Auth Flows and App Scenarios
 Applies to AD FS 2016 and later
->>>>>>> 5a021f3d22465be45b25045b37195c3179d3f39e
+
 
 |Scenario|Scenario walkthrough using samples|OAuth 2.0 Flow/Grant|Client Type|
 |-----|-----|-----|-----|
