@@ -23,7 +23,7 @@ Applies to AD FS 2016 and later
 |Web App calls Web API</br>|&bull; [Sample using MSAL](../development/msal/adfs-msal-web-app-web-api.md)</br>&bull; [Sample using ADAL](../development/enabling-oauth-confidential-clients-with-ad-fs.md)|[Authorization Code](#authorization-code-grant-flow)|Confidential| 
 |Web API calls another web API on behalf of (OBO) the user</br>|&bull; [Sample using MSAL](../development/msal/adfs-msal-web-api-web-api.md)</br>&bull; [Sample using ADAL](../development/ad-fs-on-behalf-of-authentication-in-windows-server.md)|[On-behalf-of](#on-behalf-of-flow)|Web app acts as Confidential| 
 |Daemon App calls Web API||[Client credentials](#client-credentials-grant-flow)|Confidential| 
-|Web App calls Web API using user creds||[Resource owner password credentials](#resource-owner-password-credentials-grant-flow-(not-recommended))|Public, Confidential| 
+|Web App calls Web API using user creds||[Resource owner password credentials](#resource-owner-password-credentials-grant-flow-not-recommended)|Public, Confidential| 
 |Browserless App calls Web API||[Device code](#device-code-flow)|Public, Confidential| 
 
 ## Implicit grant flow 
