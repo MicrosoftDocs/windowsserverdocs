@@ -116,7 +116,7 @@ This section shows how to register the Native App as a public client and Web API
 
   29. Click OK on WebApiToWebApi – Web API Properties screen
 
-  30. On WebApiToWebApi Properties screen, select select WebApiToWebApi – Web API 2 and click Edit… 
+  30. On WebApiToWebApi Properties screen, select select WebApiToWebApi – Web API 2 and click Edit…</br> 
   ![App Reg](media/adfs-msal-web-api-web-api/webapi22.png)
 
   31. On WebApiToWebApi – Web API 2 Properties screen, select Issuance Transform Rules tab and click Add Rule… 
