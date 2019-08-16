@@ -21,10 +21,8 @@ ms.localizationpriority: medium
 
 This topic addresses the minimum system requirements to run Windows Server&reg; 2016 or Windows Server, version 1709.
 
-
-> [!Note]  
+> [!NOTE]  
 > In this release, clean installations are recommended.  
->   
 
 > [!NOTE]  
 > If at the time of installation, you choose to install with the Server Core option, you should be aware that no GUI components are installed at all and you will not be able to install or uninstall them with Server Manager. If you need GUI features, be sure to choose the "Server with Desktop Experience" option when you install Windows Server 2016. For more information, see [Install Nano Server](Getting-Started-with-Nano-Server.md)  
@@ -92,8 +90,6 @@ Network adapters used with this release should include these features:
 
 A network adapter that supports network debugging (KDNet) is useful, but not a minimum requirement.   
 
-
-
 ## Other requirements  
 Computers running this release also must have the following:  
 
@@ -111,13 +107,13 @@ The following items are not strictly required, but are necessary for certain fea
 
 -   Internet access (fees may apply)  
 
->[!NOTE]  
+> [!NOTE]  
 > A Trusted Platform Module (TPM) chip is not strictly required to install this release, though it is necessary in order to use certain features such as BitLocker Drive Encryption. If your computer uses TPM, it must meet these requirements:  
 >  
->- Hardware-based TPMs must implement version 2.0 of the TPM specification.  
->- TPMs that implement version 2.0 must have an EK certificate that is either pre-provisioned to the TPM by the hardware vendor or be capable of being retrieved by the device during the first boot.  
->- TPMs that implement version 2.0 must ship with SHA-256 PCR banks and implement PCRs 0 through 23 for SHA-256. It is acceptable to ship TPMs with a single switchable PCR bank that can be used for both SHA-1 and SHA-256 measurements.  
->- A UEFI option to turn off the TPM is not a requirement.  
+> - Hardware-based TPMs must implement version 2.0 of the TPM specification.  
+> - TPMs that implement version 2.0 must have an EK certificate that is either pre-provisioned to the TPM by the hardware vendor or be capable of being retrieved by the device during the first boot.  
+> - TPMs that implement version 2.0 must ship with SHA-256 PCR banks and implement PCRs 0 through 23 for SHA-256. It is acceptable to ship TPMs with a single switchable PCR bank that can be used for both SHA-1 and SHA-256 measurements.  
+> - A UEFI option to turn off the TPM is not a requirement.  
 
 ## Installation of Nano Server  
 For detailed steps to install Windows Server 2016 as a Nano Server, see [Install Nano Server](Getting-Started-with-Nano-Server.md).

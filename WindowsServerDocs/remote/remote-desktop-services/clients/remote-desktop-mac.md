@@ -21,7 +21,7 @@ ms.localizationpriority: medium
 
 You can use the Remote Desktop client for Mac to work with Windows apps, resources, and desktops from your Mac computer. Use the following information to get started - and check out the [FAQ](remote-desktop-client-faq.md) if you have questions.
 
->[!Note]
+>[!NOTE]
 > - Curious about the new releases for the macOS client? Check out [What's new for Remote Desktop on Mac?](mac-whatsnew.md)
 > - The Mac client runs on computers running macOS 10.10 and newer.
 > - The information in this article applies primarily to the full version of the Mac client - the version available in the Mac AppStore. Test-drive new features by downloading our preview app here:  [beta client release notes](https://go.microsoft.com/fwlink/?LinkID=619698&clcid=0x409).
@@ -29,7 +29,7 @@ You can use the Remote Desktop client for Mac to work with Windows apps, resourc
 ## Get the Remote Desktop client
 Follow these steps to get started with Remote Desktop on your Mac:
 
-1. Download the Microsoft Remote Desktop client from the [Mac App Store](https://itunes.apple.com/us/app/microsoft-remote-desktop/id1295203466?mt=12).
+1. Download the Microsoft Remote Desktop client from the [Mac App Store](https://itunes.apple.com/app/microsoft-remote-desktop/id1295203466?mt=12).
 2. [Set up your PC to accept remote connections](remote-desktop-client-faq.md#how-do-i-set-up-a-pc-for-remote-desktop). (If you skip this step, you can't connect to your PC.)
 3. Add a Remote Desktop connection or a remote resource. You use a connection to connect directly to a Windows PC and a remote resource to use a RemoteApp program, session-based desktop, or a virtual desktop published on-premises using RemoteApp and Desktop Connections. This feature is typically available in corporate environments.
 
@@ -76,7 +76,7 @@ You can export a remote desktop connection definition and use it on a  different
 
 Use the following steps to import a remote desktop .RDP file.
 
-1. In the menu bar, click **File > Import**.
+1. In the menu bar, click **File** > **Import**.
 2. Browse to the .RDP file.
 3. Click **Open**.
 

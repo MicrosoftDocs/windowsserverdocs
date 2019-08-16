@@ -111,4 +111,4 @@ You can run the following commands in the Diskpart command interpreter:
 
 [Command-Line Syntax Key](command-line-syntax-key.md)
 
-[Storage Cmdlets in Windows PowerShell](https://docs.microsoft.com/en-us/powershell/module/storage/)
+[Storage Cmdlets in Windows PowerShell](https://docs.microsoft.com/powershell/module/storage/)

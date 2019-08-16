@@ -421,6 +421,7 @@
 #### [Plan Device-based Conditional Access on-Premises](ad-fs/deployment/Plan-Device-based-Conditional-Access-on-Premises.md)
 
 #### [Set up an AD FS lab environment](ad-fs/operations/Set-up-an-AD-FS-lab-environment.md)
+#### [SQL fine tuning and addressing latency](ad-fs/operations/adfs-sql-latency.md)
 #### [Walkthrough Guide: Manage Risk with additional Multi-Factor Authentication for Sensitive Applications](ad-fs/operations/Walkthrough-Guide--Manage-Risk-with-additional-Multi-Factor-Authentication-for-Sensitive-Applications.md)
 #### [Walkthrough Guide: Manage Risk with Conditional Access Control](ad-fs/operations/Walkthrough-Guide--Manage-Risk-with-Conditional-Access-Control.md)
 #### [Walkthrough: Workplace Join with a Windows Device](ad-fs/operations/Walkthrough--Workplace-Join-with-a-Windows-Device.md)
@@ -461,6 +462,10 @@
 #### [Device registration Technical Reference](ad-fs/technical-reference/device-registration-technical-reference.md)
 #### [AD FS Password Attack Protection](ad-fs/technical-reference/ad-fs-password-protection.md)
 ### [AD FS 2016 FAQ](ad-fs/overview/AD-FS-FAQ.md)
+
+## Active Directory Rights Management Service
+### [Upgrading AD RMS to Windows Server 2016](ad-rms/adrms-deploy.md)
+
 
 ## [Securing Privileged Access](securing-privileged-access/securing-privileged-access.md)
 ### [Privileged Access Workstations](securing-privileged-access/privileged-access-workstations.md)

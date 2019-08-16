@@ -27,7 +27,7 @@ Before you install Windows Server or add the Hyper-V role, make sure that:
 
 If you want to install only the management tools, such as Hyper-V Manager, see [Remotely manage Hyper-V hosts with Hyper-V Manager](../Manage/Remotely-manage-Hyper-V-hosts.md).
   
-## <a name="BKMK_SERV"></a>Install Hyper-V by using Server Manager  
+## Install Hyper-V by using Server Manager  
   
 1. In **Server Manager**, on the **Manage** menu, click **Add Roles and Features**.  
   
@@ -47,7 +47,7 @@ If you want to install only the management tools, such as Hyper-V Manager, see [
   
 9. When installation is finished, verify that Hyper-V installed correctly. Open the **All Servers** page in Server Manager and select a server on which you installed Hyper-V. Check the **Roles and Features** tile on the page for the selected server.  
   
-## <a name="BKMK_PWRSH"></a>Install Hyper-V by using the Install-WindowsFeature cmdlet  
+## Install Hyper-V by using the Install-WindowsFeature cmdlet  
   
 1. On the Windows desktop, click the Start button and type any part of the name **Windows PowerShell**.  
   

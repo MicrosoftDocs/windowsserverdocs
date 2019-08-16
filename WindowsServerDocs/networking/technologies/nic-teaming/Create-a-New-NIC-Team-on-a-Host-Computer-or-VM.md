@@ -6,8 +6,7 @@ ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.technology: 
-  - networking-nict
+ms.technology: networking-nict
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: a4caaa86-5799-4580-8775-03ee213784a3
@@ -38,11 +37,8 @@ The physical switch, Hyper-V Virtual Switch, local area network (LAN), and NIC T
 
 -   If you are configuring a NIC Team in a VM, you must select a **Teaming mode** of _Switch Independent_ and a **Load balancing mode** of _Address Hash_. 
 
-
-
 ## Step 1. Configure the physical and virtual network  
 In this procedure, you create two external Hyper-V Virtual Switches, connect a VM to the switches, and then configure the VM connections to the switches.  
-
 
 ### Prerequisites
 
@@ -52,11 +48,11 @@ You must have membership in **Administrators**, or equivalent.
 
 1.  On the Hyper-V host, open Hyper-V Manager, and under Actions, click **Virtual Switch Manager**.  
 
-    ![Virtual Switch Manager](../../media/Create-a-New-NIC-Team-in-a-VM/nict_hv.jpg)  
+   ![Virtual Switch Manager](../../media/Create-a-New-NIC-Team-in-a-VM/nict_hv.jpg)  
 
 2.  In Virtual Switch Manager, make sure **External** is selected, and then click **Create Virtual Switch**.  
 
-    ![Create Virtual Switch](../../media/Create-a-New-NIC-Team-in-a-VM/nict_hv_02.jpg)  
+   ![Create Virtual Switch](../../media/Create-a-New-NIC-Team-in-a-VM/nict_hv_02.jpg)  
 
 3.  In Virtual Switch Properties, type a **Name** for the virtual switch, and add **Notes** as needed.  
 
@@ -66,13 +62,15 @@ You must have membership in **Administrators**, or equivalent.
 
 6.  Create a second external virtual switch by repeating the previous steps. Connect the second external switch to a different network adapter.  
 
-7.  In Hyper-V Manager, under **Virtual Machines**, right-click the VM that you want to configure, and then click **Settings**.<p>The VM **Settings** dialog box opens.  
+7.  In Hyper-V Manager, under **Virtual Machines**, right-click the VM that you want to configure, and then click **Settings**.  
+
+   The VM **Settings** dialog box opens.
 
 8.  Ensure that the VM is not started. If it is started, perform a shutdown before configuring the VM.  
 
 8.  In **Hardware**, click **Network Adapter**.  
 
-    ![Network Adapter](../../media/Create-a-New-NIC-Team-in-a-VM/nict_hvs_01.jpg)  
+   ![Network Adapter](../../media/Create-a-New-NIC-Team-in-a-VM/nict_hvs_01.jpg)  
 
 9. In **Network Adapter** properties, select one of the virtual switches that you created in previous steps, and then click **Apply**.  
 
@@ -99,15 +97,17 @@ You must have membership in **Administrators**, or equivalent.
 
     ![Add a network adapter to a team](../../media/Create-a-New-NIC-Team-in-a-VM/nict_hvs_05.jpg)  
 
-13. To add a second network adapter, in Hyper-V Manager, in **Virtual Machines**, right-click the same VM, and then click **Settings**.<p>The VM **Settings** dialog box opens.  
+13. To add a second network adapter, in Hyper-V Manager, in **Virtual Machines**, right-click the same VM, and then click **Settings**.  
+
+    The VM **Settings** dialog box opens.
 
 14. In **Add Hardware**, click **Network Adapter**, and then click **Add**.  
 
-    ![Add a network adapter](../../media/Create-a-New-NIC-Team-in-a-VM/nict_hvs_06.jpg)  
+   ![Add a network adapter](../../media/Create-a-New-NIC-Team-in-a-VM/nict_hvs_06.jpg)  
 
 15. In **Network Adapter** properties, select the second virtual switch that you created in previous steps, and then click **Apply**.  
 
-    ![Apply a virtual switch](../../media/Create-a-New-NIC-Team-in-a-VM/nict_hvs_07.jpg)  
+   ![Apply a virtual switch](../../media/Create-a-New-NIC-Team-in-a-VM/nict_hvs_07.jpg)  
 
 16. In **Hardware**, click to expand the plus sign (+) next to **Network Adapter**. 
 
@@ -143,11 +143,17 @@ You must have membership in **Administrators**, or equivalent.
 
 1. In Server Manager, click **Local Server**.  
 
-2. In the **Properties** pane, in the first column, locate **NIC Teaming**, and then click the **Disabled** link.<p>The **NIC Teaming** dialog box opens.<p>![NIC Teaming dialog box](../../media/Create-a-New-NIC-Team/nict_02_nicteaming.jpg)  
+2. In the **Properties** pane, in the first column, locate **NIC Teaming**, and then click the **Disabled** link.  
+
+   The **NIC Teaming** dialog box opens.
+
+   ![NIC Teaming dialog box](../../media/Create-a-New-NIC-Team/nict_02_nicteaming.jpg)
 
 3. In **Adapters and Interfaces**, select the one or more network adapters that you want to add to a NIC Team.  
 
-4. Click **TASKS**, and click **Add to New Team**.<p>The **New team** dialog box opens and displays network adapters and team members.  
+4. Click **TASKS**, and click **Add to New Team**.  
+
+   The **New team** dialog box opens and displays network adapters and team members.
 
 5. In **Team name**, type a name for the new NIC Team, and then click **Additional properties**.  
 
@@ -180,7 +186,11 @@ You must have membership in **Administrators**, or equivalent.
    > [!TIP]  
    > If you are configuring a NIC Team in a virtual machine (VM), you must select a **Teaming mode** of _Switch Independent_ and a **Load balancing mode** of _Address Hash_.  
 
-7. If you want to configure the primary team interface name or assign a VLAN number to the NIC Team, click the link to the right of **Primary team interface**.<p>The **New team interface** dialog box opens.<p>![New team interface](../../media/Create-a-New-NIC-Team/nict_newteaminterface.jpg)  
+7. If you want to configure the primary team interface name or assign a VLAN number to the NIC Team, click the link to the right of **Primary team interface**.  
+
+    The **New team interface** dialog box opens.
+
+    ![New team interface](../../media/Create-a-New-NIC-Team/nict_newteaminterface.jpg)
 
 8. Depending on your requirements, do one of the following:  
 
@@ -193,6 +203,7 @@ You must have membership in **Administrators**, or equivalent.
 _**Congratulations!**_  You've created a new NIC Team on a host computer or VM.
 
 ## Related topics
+
 - [NIC Teaming](NIC-Teaming.md): In this topic, we give you an overview of Network Interface Card (NIC) Teaming in Windows Server 2016. NIC Teaming allows you to group between one and 32 physical Ethernet network adapters into one or more software-based virtual network adapters. These virtual network adapters provide fast performance and fault tolerance in the event of a network adapter failure.   
 
 - [NIC Teaming MAC address use and management](NIC-Teaming-MAC-Address-Use-and-Management.md): When you configure a NIC Team with switch independent mode and either address hash or dynamic load distribution, the team uses the media access control (MAC) address of the primary NIC Team member on outbound traffic. The primary NIC Team member is a network adapter selected by the operating system from the initial set of team members.

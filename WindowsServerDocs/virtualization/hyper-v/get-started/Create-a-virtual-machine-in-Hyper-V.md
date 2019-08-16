@@ -18,7 +18,7 @@ ms.date: 10/04/2016
 
 Learn how to create a virtual machine by using Hyper-V Manager and Windows PowerShell and what options you have when you create a virtual machine in Hyper-V Manager.  
 
-## <a name="BKMK_HyperVManager"></a>Create a virtual machine by using Hyper-V Manager  
+## Create a virtual machine by using Hyper-V Manager  
 
 1.  Open **Hyper-V Manager**.  
 
@@ -26,7 +26,7 @@ Learn how to create a virtual machine by using Hyper-V Manager and Windows Power
 
 3.  From the **New Virtual Machine Wizard**, click **Next**.  
 
-4.  Make the appropriate choices for your virtual machine on each of the pages. For more information, see [New virtual machine options and defaults in Hyper-V Manager](#BKMK_Options) later in this topic.  
+4.  Make the appropriate choices for your virtual machine on each of the pages. For more information, see [New virtual machine options and defaults in Hyper-V Manager](#options-in-hyper-v-manager-new-virtual-machine-wizard) later in this topic.  
 
 5.  After verifying your choices in the **Summary** page, click **Finish**.  
 
@@ -34,7 +34,7 @@ Learn how to create a virtual machine by using Hyper-V Manager and Windows Power
 
 7.  In the Virtual Machine Connection window, select **Action** > **Start**.  
 
-## <a name="BKMK_PowerShell"></a>Create a virtual machine by using Windows PowerShell  
+## Create a virtual machine by using Windows PowerShell  
 
 1. On the Windows desktop, click the Start button and type any part of the name **Windows PowerShell**.  
 
@@ -49,7 +49,7 @@ Learn how to create a virtual machine by using Hyper-V Manager and Windows Power
 4. Use the [New-VM](https://technet.microsoft.com/library/hh848537.aspx) cmdlet to create the  virtual machine.  See the following examples.  
 
    > [!NOTE]  
-   > If you may move this virtual machine to a Hyper-V host that runs Windows Server 2012 R2, use the -Version parameter with  [New-VM](https://technet.microsoft.com/library/hh848537.aspx) to set the virtual machine configuration  version to 5. The default virtual machine configuration version for Windows Server 2016 isn't supported by  Windows Server 2012 R2  or earlier versions. You can't change the virtual machine configuration version after the virtual machine is created. For more information, see [Supported virtual machine configuration versions](../deploy/Upgrade-virtual-machine-version-in-Hyper-V-on-Windows-or-Windows-Server.md#BKMK_SupportedConfigVersions).  
+   > If you may move this virtual machine to a Hyper-V host that runs Windows Server 2012 R2, use the -Version parameter with  [New-VM](https://technet.microsoft.com/library/hh848537.aspx) to set the virtual machine configuration  version to 5. The default virtual machine configuration version for Windows Server 2016 isn't supported by  Windows Server 2012 R2  or earlier versions. You can't change the virtual machine configuration version after the virtual machine is created. For more information, see [Supported virtual machine configuration versions](../deploy/Upgrade-virtual-machine-version-in-Hyper-V-on-Windows-or-Windows-Server.md#supported-virtual-machine-configuration-versions).  
 
    - **Existing virtual hard disk** - To create a virtual machine with an existing virtual hard disk, you can use the following command where,  
      - **-Name** is the name that you provide for the virtual machine that you're creating.  
@@ -98,7 +98,7 @@ Learn how to create a virtual machine by using Hyper-V Manager and Windows Power
    VMConnect.exe  
    ```  
 
-## <a name="BKMK_Options"></a>Options in Hyper-V Manager New Virtual Machine Wizard  
+## Options in Hyper-V Manager New Virtual Machine Wizard  
 The following table lists the options you can pick when you create a virtual machine in Hyper-V Manager and the defaults for each.  
 
 |Page|Default for Windows Server 2016 and Windows 10|Other options|  
@@ -115,7 +115,7 @@ The following table lists the options you can pick when you create a virtual mac
 
 - [New-VM](https://technet.microsoft.com/library/hh848537.aspx)  
 
-- [Supported virtual machine configuration versions](../deploy/Upgrade-virtual-machine-version-in-Hyper-V-on-Windows-or-Windows-Server.md#BKMK_SupportedConfigVersions)  
+- [Supported virtual machine configuration versions](../deploy/Upgrade-virtual-machine-version-in-Hyper-V-on-Windows-or-Windows-Server.md#supported-virtual-machine-configuration-versions)  
 
 -   [Should I create a generation 1 or 2 virtual machine in Hyper-V?](../plan/Should-I-create-a-generation-1-or-2-virtual-machine-in-Hyper-V.md)  
 

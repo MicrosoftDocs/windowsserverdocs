@@ -1,7 +1,7 @@
 ---
 title: Troubleshooting Disk Management
 description: This article describes how to troubleshoot Disk Management issues
-ms.date: 12/22/2017
+ms.date: 06/07/2019
 ms.prod: windows-server-threshold 
 ms.technology: storage 
 ms.topic: article 
@@ -11,7 +11,7 @@ ms.author: jgerend
 ---
 # Troubleshooting Disk Management
 
-> **Applies To:** Windows 10, Windows 8.1, Windows 7, Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> **Applies To:** Windows 10, Windows 8.1, Windows 7, Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 This topic lists a few common issues you may encounter when using Disk Management.
 
@@ -50,6 +50,7 @@ There are a bunch of reasons a disk might be missing or fail to initialize, with
     Press and hold (or right-click) the Start button, then select Device Manager from the context menu. Look for any devices with an exclamation point next to it or other issues, double-click the device and then read its status.
 
     Here's a list of [Error codes in Device Manager](https://support.microsoft.com/help/310123/error-codes-in-device-manager-in-windows), but one approach that sometimes works is to right-click the problematic device, select **Uninstall device**, and then **Action** > **Scan for hardware changes**.
+
     ![Device Manager showing an unknown USB device](media/device-manager.PNG)
 8. Plug the disk into a different PC.
     
@@ -173,10 +174,8 @@ When the volume status is **Healthy (At Risk)**, an underlying disk's status is 
 2. To manage disks on remote computers that do support VDS, you must configure the Windows Defender Firewall on both the local computer (on which you are running Disk Management) and the remote computer.
 3. On the local computer, configure Windows Defender Firewall to enable the Remote Volume Management Exception.
 
-
 > [!NOTE]
 > The Remote Volume Management Exception includes exceptions for Vds.exe, Vdsldr.exe, and TCP port 135.
 
-
- > [!NOTE]
- > Remote connections in workgroups are not supported. Both the local computer and the remote computer must be members of a domain.
+> [!NOTE]
+> Remote connections in workgroups are not supported. Both the local computer and the remote computer must be members of a domain.

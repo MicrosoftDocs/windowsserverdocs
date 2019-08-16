@@ -15,11 +15,11 @@ author: shortpatti
 
 You can use this topic for a brief overview of DHCP in Windows Server 2016.
 
->[!NOTE]
->In addition to this topic, the following DHCP documentation is available.
+> [!NOTE]
+> In addition to this topic, the following DHCP documentation is available.
 >
->- [What's New in DHCP](What-s-New-in-DHCP.md)
->- [Deploy DHCP Using Windows PowerShell](dhcp-deploy-wps.md)
+> - [What's New in DHCP](What-s-New-in-DHCP.md)
+> - [Deploy DHCP Using Windows PowerShell](dhcp-deploy-wps.md)
 
 Dynamic Host Configuration Protocol (DHCP) is a client/server protocol that automatically provides an Internet Protocol (IP) host with its IP address and other related configuration information such as the subnet mask and default gateway. RFCs 2131 and 2132 define DHCP as an Internet Engineering Task Force (IETF) standard based on Bootstrap Protocol (BOOTP), a protocol with which DHCP shares many implementation details. DHCP allows hosts to obtain required TCP/IP configuration information from a DHCP server.
 

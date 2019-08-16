@@ -6,7 +6,7 @@ ms.topic: article
 author: JasonGerend 
 ms.author: jgerend 
 ms.technology: storage-failover-clustering 
-ms.date: 01/18/2019
+ms.date: 06/07/2019
 ms.localizationpriority: medium
 ---
 # Configure and manage quorum
@@ -25,20 +25,19 @@ The quorum model in Windows Server is flexible. If you need to modify the quorum
 
 The following table lists the three quorum configuration options that are available in the Configure Cluster Quorum Wizard.
 
-|Option  |Description  |
-|---------|---------|
-|Use typical settings     |  The cluster automatically assigns a vote to each node and dynamically manages the node votes. If it is suitable for your cluster, and there is cluster shared storage available, the cluster selects a disk witness. This option is recommended in most cases, because the cluster software automatically chooses a quorum and witness configuration that provides the highest availability for your cluster.       |
-|Add or change the quorum witness     |   You can add, change, or remove a witness resource. You can configure a file share or disk witness. The cluster automatically assigns a vote to each node and dynamically manages the node votes.      |
-|Advanced quorum configuration and witness selection     | You should select this option only when you have application-specific or site-specific requirements for configuring the quorum. You can modify the quorum witness, add or remove node votes, and choose whether the cluster dynamically manages node votes. By default, votes are assigned to all nodes, and the node votes are dynamically managed.        |
+| Option  |Description  |
+| --------- | ---------|
+| Use typical settings     |  The cluster automatically assigns a vote to each node and dynamically manages the node votes. If it is suitable for your cluster, and there is cluster shared storage available, the cluster selects a disk witness. This option is recommended in most cases, because the cluster software automatically chooses a quorum and witness configuration that provides the highest availability for your cluster.       |
+| Add or change the quorum witness     |   You can add, change, or remove a witness resource. You can configure a file share or disk witness. The cluster automatically assigns a vote to each node and dynamically manages the node votes.      |
+| Advanced quorum configuration and witness selection     | You should select this option only when you have application-specific or site-specific requirements for configuring the quorum. You can modify the quorum witness, add or remove node votes, and choose whether the cluster dynamically manages node votes. By default, votes are assigned to all nodes, and the node votes are dynamically managed.        |
 
 Depending on the quorum configuration option that you choose and your specific settings, the cluster will be configured in one of the following quorum modes:
 
-
-|Mode  |Description  |
-|---------|---------|
-|Node majority (no witness)     |   Only nodes have votes. No quorum witness is configured. The cluster quorum is the majority of voting nodes in the active cluster membership.      |
-|Node majority with witness (disk or file share)     |   Nodes have votes. In addition, a quorum witness has a vote. The cluster quorum is the majority of voting nodes in the active cluster membership plus a witness vote. A quorum witness can be a designated disk witness or a designated file share witness. 
-|No majority (disk witness only)     | No nodes have votes. Only a disk witness has a vote. <br>The cluster quorum is determined by the state of the disk witness. Generally, this mode is not recommended, and it should not be selected because it creates a single point of failure for the cluster.       |
+| Mode  | Description  |
+| --------- | ---------|
+| Node majority (no witness)     |   Only nodes have votes. No quorum witness is configured. The cluster quorum is the majority of voting nodes in the active cluster membership.      |
+| Node majority with witness (disk or file share)     |   Nodes have votes. In addition, a quorum witness has a vote. The cluster quorum is the majority of voting nodes in the active cluster membership plus a witness vote. A quorum witness can be a designated disk witness or a designated file share witness. 
+| No majority (disk witness only)     | No nodes have votes. Only a disk witness has a vote. <br>The cluster quorum is determined by the state of the disk witness. Generally, this mode is not recommended, and it should not be selected because it creates a single point of failure for the cluster.       |
 
 The following subsections will give you more information about advanced quorum configuration settings.
 
@@ -50,12 +49,11 @@ A disk witness is usually recommended if all nodes can see the disk. A file shar
 
 The following table provides additional information and considerations about the quorum witness types.
 
-
-|Witness type  |Description  |Requirements and recommendations  |
-|---------|---------|---------|
-|Disk witness     |  <ul><li> Dedicated LUN that stores a copy of the cluster database</li><li> Most useful for clusters with shared (not replicated) storage</li>       |  <ul><li>Size of LUN must be at least 512 MB</li><li> Must be dedicated to cluster use and not assigned to a clustered role</li><li> Must be included in clustered storage and pass storage validation tests</li><li> Cannot be a disk that is a Cluster Shared Volume (CSV)</li><li> Basic disk with a single volume</li><li> Does not need to have a drive letter</li><li> Can be formatted with NTFS or ReFS</li><li> Can be optionally configured with hardware RAID for fault tolerance</li><li> Should be excluded from backups and antivirus scanning</li><li> A Disk witness isn't supported with Storage Spaces Direct</li>|
-|File share witness     | <ul><li>SMB file share that is configured on a file server running Windows Server</li><li> Does not store a copy of the cluster database</li><li> Maintains cluster information only in a witness.log file</li><li> Most useful for multisite clusters with replicated storage </li>       |  <ul><li>Must have a minimum of 5 MB of free space</li><li> Must be dedicated to the single cluster and not used to store user or application data</li><li> Must have write permissions enabled for the computer object for the cluster name</li></ul><br>The following are additional considerations for a file server that hosts the file share witness:<ul><li>A single file server can be configured with file share witnesses for multiple clusters.</li><li> The file server must be on a site that is separate from the cluster workload. This allows equal opportunity for any cluster site to survive if site-to-site network communication is lost. If the file server is on the same site, that site becomes the primary site, and it is the only site that can reach the file share.</li><li> The file server can run on a virtual machine if the virtual machine is not hosted on the same cluster that uses the file share witness.</li><li> For high availability, the file server can be configured on a separate failover cluster. </li>      |
-|Cloud witness     |  <ul><li>A witness file stored in Azure blob storage</li><li> Recommended when all servers in the cluster have a reliable Internet connection.</li>      |  See [Deploy a cloud witness](https://docs.microsoft.com/windows-server/failover-clustering/deploy-cloud-witness).       |
+| Witness type  | Description  | Requirements and recommendations  |
+| ---------    |---------        |---------                        |
+| Disk witness     |  <ul><li> Dedicated LUN that stores a copy of the cluster database</li><li> Most useful for clusters with shared (not replicated) storage</li>       |  <ul><li>Size of LUN must be at least 512 MB</li><li> Must be dedicated to cluster use and not assigned to a clustered role</li><li> Must be included in clustered storage and pass storage validation tests</li><li> Cannot be a disk that is a Cluster Shared Volume (CSV)</li><li> Basic disk with a single volume</li><li> Does not need to have a drive letter</li><li> Can be formatted with NTFS or ReFS</li><li> Can be optionally configured with hardware RAID for fault tolerance</li><li> Should be excluded from backups and antivirus scanning</li><li> A Disk witness isn't supported with Storage Spaces Direct</li>|
+| File share witness     | <ul><li>SMB file share that is configured on a file server running Windows Server</li><li> Does not store a copy of the cluster database</li><li> Maintains cluster information only in a witness.log file</li><li> Most useful for multisite clusters with replicated storage </li>       |  <ul><li>Must have a minimum of 5 MB of free space</li><li> Must be dedicated to the single cluster and not used to store user or application data</li><li> Must have write permissions enabled for the computer object for the cluster name</li></ul><br>The following are additional considerations for a file server that hosts the file share witness:<ul><li>A single file server can be configured with file share witnesses for multiple clusters.</li><li> The file server must be on a site that is separate from the cluster workload. This allows equal opportunity for any cluster site to survive if site-to-site network communication is lost. If the file server is on the same site, that site becomes the primary site, and it is the only site that can reach the file share.</li><li> The file server can run on a virtual machine if the virtual machine is not hosted on the same cluster that uses the file share witness.</li><li> For high availability, the file server can be configured on a separate failover cluster. </li>      |
+| Cloud witness     |  <ul><li>A witness file stored in Azure blob storage</li><li> Recommended when all servers in the cluster have a reliable Internet connection.</li>      |  See [Deploy a cloud witness](https://docs.microsoft.com/windows-server/failover-clustering/deploy-cloud-witness).       |
 
 ### Node vote assignment
 
@@ -63,7 +61,7 @@ As an advanced quorum configuration option, you can choose to assign or remove q
 
 You might want to remove votes from nodes in certain disaster recovery configurations. For example, in a multisite cluster, you could remove votes from the nodes in a backup site so that those nodes do not affect quorum calculations. This configuration is recommended only for manual failover across sites. For more information, see [Quorum considerations for disaster recovery configurations](#quorum-considerations-for-disaster-recovery-configurations) later in this topic.
 
-The configured vote of a node can be verified by looking up the **NodeWeight** common property of the cluster node by using the [Get-ClusterNode](http://technet.microsoft.com/library/hh847268.aspx)Windows PowerShell cmdlet. A value of 0 indicates that the node does not have a quorum vote configured. A value of 1 indicates that the quorum vote of the node is assigned, and it is managed by the cluster. For more information about management of node votes, see [Dynamic quorum management](#dynamic-quorum-management) later in this topic.
+The configured vote of a node can be verified by looking up the **NodeWeight** common property of the cluster node by using the [Get-ClusterNode](https://technet.microsoft.com/library/hh847268.aspx)Windows PowerShell cmdlet. A value of 0 indicates that the node does not have a quorum vote configured. A value of 1 indicates that the quorum vote of the node is assigned, and it is managed by the cluster. For more information about management of node votes, see [Dynamic quorum management](#dynamic-quorum-management) later in this topic.
 
 The vote assignment for all cluster nodes can be verified by using the **Validate Cluster Quorum** validation test.
 
@@ -108,15 +106,15 @@ For more information about validating a failover cluster, see [Validate Hardware
 
 You can configure the cluster quorum settings by using Failover Cluster Manager or the Failover Clusters Windows PowerShell cmdlets.
 
->[!IMPORTANT]
->It is usually best to use the quorum configuration that is recommended by the Configure Cluster Quorum Wizard. We recommend customizing the quorum configuration only if you have determined that the change is appropriate for your cluster. For more information, see [General recommendations for quorum configuration](#general-recommendations-for-quorum-configuration) in this topic.
+> [!IMPORTANT]
+> It is usually best to use the quorum configuration that is recommended by the Configure Cluster Quorum Wizard. We recommend customizing the quorum configuration only if you have determined that the change is appropriate for your cluster. For more information, see [General recommendations for quorum configuration](#general-recommendations-for-quorum-configuration) in this topic.
 
 ### Configure the cluster quorum settings
 
 Membership in the local **Administrators** group on each clustered server, or equivalent, is the minimum permissions required to complete this procedure. Also, the account you use must be a domain user account.
 
->[!NOTE]
->You can change the cluster quorum configuration without stopping the cluster or taking cluster resources offline.
+> [!NOTE]
+> You can change the cluster quorum configuration without stopping the cluster or taking cluster resources offline.
 
 ### Change the quorum configuration in a failover cluster by using Failover Cluster Manager
 
@@ -129,8 +127,8 @@ Membership in the local **Administrators** group on each clustered server, or eq
 
       1. On the **Select Quorum Witness** page, select an option to configure a disk witness or a file share witness. The wizard indicates the witness selection options that are recommended for your cluster.
 
-          >[!NOTE]
-          >You can also select **Do not configure a quorum witness** and then complete the wizard. If you have an even number of voting nodes in your cluster, this may not be a recommended configuration.
+          > [!NOTE]
+          > You can also select **Do not configure a quorum witness** and then complete the wizard. If you have an even number of voting nodes in your cluster, this may not be a recommended configuration.
 
       2. If you select the option to configure a disk witness, on the **Configure Storage Witness** page, select the storage volume that you want to assign as the disk witness, and then complete the wizard.
       3. If you select the option to configure a file share witness, on the **Configure File Share Witness** page, type or browse to a file share that will be used as the witness resource, and then complete the wizard.
@@ -139,14 +137,14 @@ Membership in the local **Administrators** group on each clustered server, or eq
 
       1. On the **Select Voting Configuration** page, select an option to assign votes to nodes. By default, all nodes are assigned a vote. However, for certain scenarios, you can assign votes only to a subset of the nodes.
 
-          >[!NOTE]
-          >You can also select **No Nodes**. This is generally not recommended, because it does not allow nodes to participate in quorum voting, and it requires configuring a disk witness. This disk witness becomes the single point of failure for the cluster.
+          > [!NOTE]
+          > You can also select **No Nodes**. This is generally not recommended, because it does not allow nodes to participate in quorum voting, and it requires configuring a disk witness. This disk witness becomes the single point of failure for the cluster.
 
       2. On the **Configure Quorum Management** page, you can enable or disable the **Allow cluster to dynamically manage the assignment of node votes** option. Selecting this option generally increases the availability of the cluster. By default the option is enabled, and it is strongly recommended to not disable this option. This option allows the cluster to continue running in failure scenarios that are not possible when this option is disabled.
       3. On the **Select Quorum Witness** page, select an option to configure a disk witness or a file share witness. The wizard indicates the witness selection options that are recommended for your cluster.
 
-          >[!NOTE]
-          >You can also select **Do not configure a quorum witness**, and then complete the wizard. If you have an even number of voting nodes in your cluster, this may not be a recommended configuration.
+          > [!NOTE]
+          > You can also select **Do not configure a quorum witness**, and then complete the wizard. If you have an even number of voting nodes in your cluster, this may not be a recommended configuration.
 
       4. If you select the option to configure a disk witness, on the **Configure Storage Witness** page, select the storage volume that you want to assign as the disk witness, and then complete the wizard.
       5. If you select the option to configure a file share witness, on the **Configure File Share Witness** page, type or browse to a file share that will be used as the witness resource, and then complete the wizard.
@@ -155,8 +153,8 @@ Membership in the local **Administrators** group on each clustered server, or eq
 
 After the wizard runs and the **Summary** page appears, if you want to view a report of the tasks that the wizard performed, select **View Report**. The most recent report will remain in the <em>systemroot</em>**\\Cluster\\Reports** folder with the name **QuorumConfiguration.mht**.
 
->[!NOTE]
->After you configure the cluster quorum, we recommend that you run the **Validate Quorum Configuration** test to verify the updated quorum settings.
+> [!NOTE]
+> After you configure the cluster quorum, we recommend that you run the **Validate Quorum Configuration** test to verify the updated quorum settings.
 
 ### Windows PowerShell equivalent commands
 
@@ -202,7 +200,7 @@ The following example enables the **DynamicQuorum** property of the cluster *CON
 
 A cluster that does not have enough quorum votes will not start. As a first step, you should always confirm the cluster quorum configuration and investigate why the cluster no longer has quorum. This might happen if you have nodes that stopped responding, or if the primary site is not reachable in a multisite cluster. After you identify the root cause for the cluster failure, you can use the recovery steps described in this section.
 
->[!NOTE]
+> [!NOTE]
 > * If the Cluster service stops because quorum is lost, Event ID 1177 appears in the system log.
 > * It is always necessary to investigate why the cluster quorum was lost.
 > * It is always preferable to bring a node or quorum witness to a healthy state (join the cluster) rather than starting the cluster without quorum.
@@ -215,10 +213,10 @@ Forcing a cluster to start when it does not have quorum may be especially useful
 
 When a cluster is started in **ForceQuorum** mode, and after it regains sufficient quorum votes, the cluster automatically leaves the forced state, and it behaves normally. Hence, it is not necessary to start the cluster again normally. If the cluster loses a node and it loses quorum, it goes offline again because it is no longer in the forced state. To bring it back online when it does not have quorum requires forcing the cluster to start without quorum.
 
->[!IMPORTANT]
->* After a cluster is force started, the administrator is in full control of the cluster.
->* The cluster uses the cluster configuration on the node where the cluster is force started, and replicates it to all other nodes that are available.
->* If you force the cluster to start without quorum, all quorum configuration settings are ignored while the cluster remains in **ForceQuorum** mode. This includes specific node vote assignments and dynamic quorum management settings.
+> [!IMPORTANT]
+> * After a cluster is force started, the administrator is in full control of the cluster.
+> * The cluster uses the cluster configuration on the node where the cluster is force started, and replicates it to all other nodes that are available.
+> * If you force the cluster to start without quorum, all quorum configuration settings are ignored while the cluster remains in **ForceQuorum** mode. This includes specific node vote assignments and dynamic quorum management settings.
 
 ### Prevent quorum on remaining cluster nodes
 
@@ -226,8 +224,8 @@ After you have force started the cluster on a node, it is necessary to start any
 
 This becomes necessary when you need to recover your cluster in some multisite disaster recovery scenarios after you have force started the cluster on your backup site, *SiteB*. To join the force started cluster in *SiteB*, the nodes in your primary site, *SiteA*, need to be started with the quorum prevented.
 
->[!IMPORTANT]
->After a cluster is force started on a node, we recommend that you always start the remaining nodes with the quorum prevented.
+> [!IMPORTANT]
+> After a cluster is force started on a node, we recommend that you always start the remaining nodes with the quorum prevented.
 
 Here's how to recover the cluster with Failover Cluster Manager:
 
@@ -236,8 +234,8 @@ Here's how to recover the cluster with Failover Cluster Manager:
 
     Failover Cluster Manager force starts the cluster on all nodes that are reachable. The cluster uses the current cluster configuration when starting.
 
->[!NOTE]
->* To force the cluster to start on a specific node that contains a cluster configuration that you want to use, you must use the Windows PowerShell cmdlets or equivalent command-line tools as presented after this procedure. 
+> [!NOTE]
+> * To force the cluster to start on a specific node that contains a cluster configuration that you want to use, you must use the Windows PowerShell cmdlets or equivalent command-line tools as presented after this procedure. 
 > * If you use Failover Cluster Manager to connect to a cluster that is force started, and you use the **Start Cluster Service** action to start a node, the node is automatically started with the setting that prevents quorum.
 
 #### Windows PowerShell equivalent commands (Start-Clusternode)
@@ -276,14 +274,13 @@ In this configuration, the cluster consists of two or more sites that can host c
 
 The following table summarizes considerations and recommendations for this configuration.
 
-
-|Item  |Description  |
-|---------|---------|
-|Number of node votes per site     | Should be equal       |
-|Node vote assignment     |  Node votes should not be removed because all nodes are equally important       |
-|Dynamic quorum management     |   Should be enabled      |
-|Witness configuration     |  File share witness is recommended, configured in a site that is separate from the cluster sites       |
-|Workloads     |  Workloads can be configured on any of the sites       |
+| Item  | Description  |
+| ---------| ---------|
+| Number of node votes per site     | Should be equal       |
+| Node vote assignment     |  Node votes should not be removed because all nodes are equally important       |
+| Dynamic quorum management     |   Should be enabled      |
+| Witness configuration     |  File share witness is recommended, configured in a site that is separate from the cluster sites       |
+| Workloads     |  Workloads can be configured on any of the sites       |
 
 #### Additional considerations for automatic failover
 
@@ -295,13 +292,12 @@ In this configuration, the cluster consists of a primary site, *SiteA*, and a ba
 
 The following table summarizes considerations and recommendations for this configuration.
 
-
-|Item  |Description  |
-|---------|---------|
-|Number of node votes per site     |  <ul><li> Node votes should not be removed from nodes at the primary site, **SiteA**</li><li>Node votes should be removed from nodes at the backup site, **SiteB**</li><li>If a long-term outage occurs at **SiteA**, votes must be assigned to nodes at **SiteB** to enable a quorum majority at that site as part of recovery</li>       |
-|Dynamic quorum management     |  Should be enabled       |
-|Witness configuration     |  <ul><li>Configure a witness if there is an even number of nodes at **SiteA**</li><li>If a witness is needed, configure either a file share witness or a disk witness that is accessible only to nodes in **SiteA** (sometimes called an asymmetric disk witness)</li>       |
-|Workloads     |  Use preferred owners to keep workloads running on nodes at **SiteA**       |
+| Item   |Description  |
+| ---------| ---------|
+| Number of node votes per site     |  <ul><li> Node votes should not be removed from nodes at the primary site, **SiteA**</li><li>Node votes should be removed from nodes at the backup site, **SiteB**</li><li>If a long-term outage occurs at **SiteA**, votes must be assigned to nodes at **SiteB** to enable a quorum majority at that site as part of recovery</li>       |
+| Dynamic quorum management     |  Should be enabled       |
+| Witness configuration     |  <ul><li>Configure a witness if there is an even number of nodes at **SiteA**</li><li>If a witness is needed, configure either a file share witness or a disk witness that is accessible only to nodes in **SiteA** (sometimes called an asymmetric disk witness)</li>       |
+| Workloads     |  Use preferred owners to keep workloads running on nodes at **SiteA**       |
 
 #### Additional considerations for manual failover
 

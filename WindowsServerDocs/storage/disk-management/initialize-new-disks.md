@@ -1,7 +1,7 @@
 ---
 title: Initialize new disks
 description: How to initialize new disks with Disk Management, getting them ready to use. Also includes links to troubleshooting issues.
-ms.date: 10/24/2018
+ms.date: 06/07/2019
 ms.prod: windows-server-threshold 
 ms.technology: storage 
 ms.topic: article 
@@ -11,7 +11,7 @@ ms.author: jgerend
 ---
 # Initialize new disks
 
-> **Applies To:** Windows 10, Windows 8.1, Windows 7, Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> **Applies To:** Windows 10, Windows 8.1, Windows 7, Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 If you add a brand new disk to your PC and it doesn't show up in File Explorer, you might need to [add a drive letter](change-a-drive-letter.md), or initialize it before using it. You can only initialize a drive that's not yet formatted. Initializing a disk erases everything on it and prepares it for use by Windows, after which you can format it and then store files on it.
 

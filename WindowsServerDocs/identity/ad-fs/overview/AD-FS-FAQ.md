@@ -133,9 +133,9 @@ With AD FS on Server 2019, you can now pass the resource value embedded in the s
 AD FS in Server 2019 supports Proof Key for Code Exchange (PKCE) for OAuth Authorization Code Grant flow
 
 ### What permitted scopes are supported by AD FS?
-- aza - If using [OAuth 2.0 Protocol Extensions for Broker Clients](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-oapxbc/2f7d8875-0383-4058-956d-2fb216b44706) and if the scope parameter contains the scope "aza", the server issues a new primary refresh token and sets it in the refresh_token field of the response, as well as setting the refresh_token_expires_in field to the lifetime of the new primary refresh token if one is enforced.
+- aza - If using [OAuth 2.0 Protocol Extensions for Broker Clients](https://docs.microsoft.com/openspecs/windows_protocols/ms-oapxbc/2f7d8875-0383-4058-956d-2fb216b44706) and if the scope parameter contains the scope "aza", the server issues a new primary refresh token and sets it in the refresh_token field of the response, as well as setting the refresh_token_expires_in field to the lifetime of the new primary refresh token if one is enforced.
 - openid - Allows application to request use of the OpenID Connect authorization protocol.
-- logon_cert - The logon_cert scope allows an application to request logon certificates, which can be used to interactively logon authenticated users. The AD FS server omits the access_token parameter from the response and instead provides a base64-encoded CMS certificate chain or a CMC full PKI response. More details available [here](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-oapx/32ce8878-7d33-4c02-818b-6c9164cc731e). 
+- logon_cert - The logon_cert scope allows an application to request logon certificates, which can be used to interactively logon authenticated users. The AD FS server omits the access_token parameter from the response and instead provides a base64-encoded CMS certificate chain or a CMC full PKI response. More details available [here](https://docs.microsoft.com/openspecs/windows_protocols/ms-oapx/32ce8878-7d33-4c02-818b-6c9164cc731e). 
 - user_impersonation - The user_impersonation scope is necessary to successfully request an on-behalf-of access token from AD FS. For details on how to use this scope refer [Build a multi-tiered application using On-Behalf-Of (OBO) using OAuth with AD FS 2016](../../ad-fs/development/ad-fs-on-behalf-of-authentication-in-windows-server.md).
 - vpn_cert - The vpn_cert scope allows an application to request VPN certificates, which can be used to establish VPN connections using EAP-TLS authentication. This is not supported anymore.
 - email - Allows application to request email claim for the signed in user. This is not supported anymore. 
@@ -172,7 +172,7 @@ To change the AD FS service account, follow the instructions using the AD FS too
 
 For information on how to configure browsers see [Configure browsers to use Windows Integrated Authentication (WIA) with AD FS](../operations/Configure-AD-FS-Browser-WIA.md).
 
-### Can I trun off BrowserSsoEnabled?
+### Can I turn off BrowserSsoEnabled?
 If you don't have Access control policies based on device on ADFS or Windows Hello for Business Certificate enrollment using ADFS; you can turn off BrowserSsoEnabled. BrowserSsoEnabled allows ADFS to collect a PRT(Primary Refresh Token) from client which contains device information. Without that device authentication of ADFS will not work on Windows 10 devices.
 
 ### How long are AD FS tokens valid?
@@ -297,3 +297,6 @@ ADFS and Web Application servers support any firewall that does not perform SSL 
 In AD FS 2016, token binding is automatically enabled and causes multiple known issues with proxy and federation scenarios which result in this error. To resolve this, run the following Powershell command and remove token binding support.
 
 `Set-AdfsProperties -IgnoreTokenBinding $true`
+
+### I have upgraded my farm from AD FS in Windows Server 2016 to AD FS in Windows Server 2019. The Farm Behavior Level for the AD FS farm has been successfully raised to 2019 but the Web Application Proxy configuration is still displayed as Windows Server 2016?
+After an upgrade to Windows Server 2019, the configuration version of the Web Application Proxy will continue to display as Windows Server 2016. The Web Application Proxy does not have new version specific features for Windows Server 2019, and if the Farm Behaviour Level has been successfully raised on AD FS, the Web Application Proxy will continue to display as Windows Server 2016 by design. 

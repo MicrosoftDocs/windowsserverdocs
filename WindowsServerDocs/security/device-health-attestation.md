@@ -4,8 +4,7 @@ H1: na
 ms.custom: na
 ms.reviewer: na
 ms.suite: na
-ms.technology: 
-  - techgroup-security
+ms.technology: techgroup-security
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 8e7b77a4-1c6a-4c21-8844-0df89b63f68d
@@ -93,7 +92,7 @@ When DHA is running in EKCert validation mode, it relies on an enterprise manage
 
 Microsoft publishes aggregated packages of trusted Roots and intermediate CA's for approved TPM manufacturers (as they become available) in a publicly accessible archive in .cab archive. You need to download the feed, validate its integrity, and install it on the server running Device Health Attestation.
 
-An example archive is [https://tpmsec.microsoft.com/OnPremisesDHA/TrustedTPM.cab](https://tpmsec.microsoft.com/OnPremisesDHA/TrustedTPM.cab).
+An example archive is [https://go.microsoft.com/fwlink/?linkid=2097925](https://go.microsoft.com/fwlink/?linkid=2097925).
 
 #### AIKCert validation mode
 
@@ -161,7 +160,7 @@ To install the trusted TPM roots certificate package, you must extract it, remov
 #### Download the trusted TPM roots certificate package
 
 Before you install the certificate package, you can download the latest list of trusted TPM roots from
-[https://tpmsec.microsoft.com/OnPremisesDHA/TrustedTPM.cab](https://tpmsec.microsoft.com/OnPremisesDHA/TrustedTPM.cab).
+[https://go.microsoft.com/fwlink/?linkid=2097925](https://go.microsoft.com/fwlink/?linkid=2097925).
 
 > **Important:** Before installing the package, verify that it is digitally signed by Microsoft.
 
