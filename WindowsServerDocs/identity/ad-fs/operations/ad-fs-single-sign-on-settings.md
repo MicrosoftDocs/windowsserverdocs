@@ -50,8 +50,8 @@ Enable/disable persistent SSO | ```` Set-AdfsProperties –EnablePersistentSso <
 
 
 ## AD FS 2016 - Single Sign-On and authenticated devices
-AD FS 2016 changes the PSSO when requestor is authenticating from a registered device increasing to max 90 Days but requiring an authenticvation within a 14 days period (device usage window).
-After providing credentials for the first time, by default users with registered devices get single Sign-On  for a maximum period of 90 days, provided they use the device to access AD FS resources at least once every 14 days.  If they wait 15 days after providing credentials, users will be prompted for credentials again.  
+AD FS 2016 changes the PSSO when requestor is authenticating from a registered device increasing to max 90 Days but requiring an authentication within a 14 days period (device usage window).
+After providing credentials for the first time, by default users with registered devices get single Sign-On for a maximum period of 90 days, provided they use the device to access AD FS resources at least once every 14 days.  If they wait 15 days after providing credentials, users will be prompted for credentials again.  
 
 Persistent SSO is enabled by default. If it is disabled, no PSSO cookie will be written.|  
 

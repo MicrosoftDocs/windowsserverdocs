@@ -14,7 +14,7 @@ ms.date: 05/21/2019
 
 This topic describes some of the new features in Windows Server, version 1903, which is a Semi-Annual Channel release. These features include enhancements for running and managing containers, tools for working in Server Core installations, and the ability to migrate storage from Linux devices.
 
-To instead find out what's new in the latest Long-Term Servicing Channel (LTSC) release of Windows Server, see see [What's New in Windows Server 2019](../get-started-19/whats-new-19.md). Also see [What's new in Windows 10, version 1903 IT Pro content](https://docs.microsoft.com/windows/whats-new/whats-new-windows-10-version-1903).
+To instead find out what's new in the latest Long-Term Servicing Channel (LTSC) release of Windows Server, see [What's New in Windows Server 2019](../get-started-19/whats-new-19.md). Also see [What's new in Windows 10, version 1903 IT Pro content](https://docs.microsoft.com/windows/whats-new/whats-new-windows-10-version-1903).
 
 The system requirements for this release are the same as for Windows Server 2019—see [System requirements](../get-started-19/sys-reqs-19.md) for more info. To see what's been removed recently, see [Features Removed or Planned for Replacement starting with Windows Server, version 1903](../get-started-19/removed-features-1903.md)
 

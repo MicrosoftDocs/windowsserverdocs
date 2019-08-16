@@ -302,7 +302,7 @@ Note how, just like Server Manager, **Install-ADDSDomainController** reminds you
   
 ![Install a replica](media/Install-a-Replica-Windows-Server-2012-Domain-Controller-in-an-Existing-Domain--Level-200-/ADDS_PSUpgradeProgress.png)  
   
-To configure a domain controller remotely using Windows PowerShell, wrap the **install-adddomaincontroller** cmdlet *inside* of the **invoke-command** cmdlet. This requires using the curly braces.  
+To configure a domain controller remotely using Windows PowerShell, wrap the **install-addsdomaincontroller** cmdlet *inside* of the **invoke-command** cmdlet. This requires using the curly braces.  
   
 ```  
 invoke-command {install-addsdomaincontroller "domainname <domain> -credential (get-credential)} -computername <dc name>  

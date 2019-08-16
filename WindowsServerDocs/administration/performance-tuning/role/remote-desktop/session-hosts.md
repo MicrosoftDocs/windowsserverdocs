@@ -16,13 +16,13 @@ This topic discusses how to select Remote Desktop Session Host (RD Session Host)
 
 **In this topic:**
 
--   [Selecting the proper hardware for performance](#hw)
+-   [Selecting the proper hardware for performance](#selecting-the-proper-hardware-for-performance)
 
--   [Tuning applications for Remote Desktop Session Host](#apps)
+-   [Tuning applications for Remote Desktop Session Host](#tuning-applications-for-remote-desktop-session-host)
 
--   [Remote Desktop Session Host tuning parameters](#host)
+-   [Remote Desktop Session Host tuning parameters](#remote-desktop-session-host-tuning-parameters)
 
-## <a href="" id="hw"></a>Selecting the proper hardware for performance
+## Selecting the proper hardware for performance
 
 
 For an RD Session Host server deployment, the choice of hardware is governed by the application set and how users use them. The key factors that affect the number of users and their experience are CPU, memory, disk, and graphics. This section contains additional guidelines that are specific to RD Session Host servers and is mostly related to the multi-user environment of RD Session Host servers.
@@ -67,7 +67,7 @@ Network usage for an RD Session Host server includes two main categories:
 
     The volume and profile of network traffic is specific to each deployment.
 
-## <a href="" id="apps"></a>Tuning applications for Remote Desktop Session Host
+## Tuning applications for Remote Desktop Session Host
 
 
 Most of the CPU usage on an RD Session Host server is driven by apps. Desktop apps are usually optimized toward responsiveness with the goal of minimizing how long it takes an application to respond to a user request. However in a server environment, it is equally important to minimize the total amount of CPU usage that is needed to complete an action to avoid adversely affecting other sessions.
@@ -106,7 +106,7 @@ For memory consumption, you should consider the following:
 
     When possible, apply similar techniques to other similar execution engines.
 
-## <a href="" id="host"></a>Remote Desktop Session Host tuning parameters
+## Remote Desktop Session Host tuning parameters
 
 
 ### Page file

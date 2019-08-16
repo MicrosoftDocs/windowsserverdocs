@@ -36,7 +36,6 @@ No configuration is required to realize this feature.  These event logs are enab
 
 The following section outlines the events logged for use in traceability scenarios.
 
-<!-- use tabs like the group policies -->
 # [257](#tab/257)
 This event is logged when the Windows Time Service (W32Time) is started and logs information about the current time, current tick count, runtime configuration, time providers, and current clock rate.
 

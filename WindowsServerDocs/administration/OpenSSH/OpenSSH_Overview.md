@@ -29,5 +29,5 @@ Documentation in this section focuses on how OpenSSH is used on Windows, includi
 Additional detailed documentation for common OpenSSH features is available online at [OpenSSH.com](https://www.openssh.com/manual.html). 
 
 The master [OpenSSH open source project](https://www.openssh.com) is managed by developers at the OpenBSD Project. 
-The Microsoft fork of this project is in [Github](https://github.com/PowerShell/openssh-portable).
-Feedback on Windows OpenSSH is welcomed and can be provided by creating Github issues in our [OpenSSH Github repo](https://github.com/PowerShell/openssh-portable). 
+The Microsoft fork of this project is in [GitHub](https://github.com/PowerShell/openssh-portable).
+Feedback on Windows OpenSSH is welcomed and can be provided by creating GitHub issues in our [OpenSSH GitHub repo](https://github.com/PowerShell/openssh-portable). 

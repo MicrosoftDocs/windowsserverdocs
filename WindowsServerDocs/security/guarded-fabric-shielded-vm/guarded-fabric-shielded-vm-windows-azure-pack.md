@@ -18,8 +18,6 @@ If your hosting service provider supports it, you can use Windows Azure Pack to 
 
 Complete the following steps:
 
-<!-- When we have a link to the topic about how tenants subscribe, add that link as an indented item just under step 1 below. -->
-
 1. Subscribe to one or more plans offered in Windows Azure Pack.
 
 2. Create a shielded VM by using Windows Azure Pack.

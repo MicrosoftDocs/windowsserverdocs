@@ -7,7 +7,7 @@ ms.topic: article
 author: JasonGerend
 manager: brianlic
 ms.author: jgerend
-ms.date: 03/25/2019
+ms.date: 06/25/2019
 description: New and updated topics in the on-premises storage documentation for Windows Server for IT Pros.
 ---
 # Change history for storage topics in Windows Server
@@ -16,7 +16,14 @@ description: New and updated topics in the on-premises storage documentation for
 
 This topic lists new and updated topics in the [Storage](storage.md) documentation for Windows Server.
 
-> If you're looking for update history for Windows Server, see [Windows 10 and Windows Server 2016 update history](https://support.microsoft.com/help/4000825/windows-10-and-windows-server-2016-update-history).
+> If you're looking for update history for Windows Server, see [Windows 10 and Windows Server 2019 update history](https://support.microsoft.com/help/4464619) or [Windows Server 2016 update history](https://support.microsoft.com/help/4000825/windows-10-and-windows-server-2016-update-history).
+
+## June 2019
+
+| New or changed topic                                        | Description |
+| ---                                                         | ---           |
+| [Disk cleanup](file-server/disk-cleanup.md)                                              | New (Migrated from the [Previous Versions](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc770278(v%3dws.11)))
+| [Storage Migration Service FAQ](storage-migration-service/faq.md#consolidate-servers) | Added performance optimization info. |
 
 ## May 2019
 
@@ -30,9 +37,10 @@ This topic lists new and updated topics in the [Storage](storage.md) documentati
 
 |New or changed topic                                        |Description|
 |---                                                         |---           |
-|[Monitor with Azure Monitor](storage-spaces/configure-azure-monitor.md)| New|
-|[Upgrade a Storage Spaces Direct cluster to Windows Server 2019](storage-spaces/upgrade-storage-spaces-direct-to-windows-server-2019.md)| New        |
-|[DFS Replication](dfs-replication/dfsr-overview.md)        | Migrated from the [Previous Versions](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc770278(v%3dws.11)) library|
+| [Monitor with Azure Monitor](storage-spaces/configure-azure-monitor.md) | New |
+| [Understand and deploy persistent memory](storage-spaces/deploy-pmem.md) | New |
+| [Upgrade a Storage Spaces Direct cluster to Windows Server 2019](storage-spaces/upgrade-storage-spaces-direct-to-windows-server-2019.md)| New        |
+| [DFS Replication](dfs-replication/dfsr-overview.md)        | Migrated from the [Previous Versions](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc770278(v%3dws.11)) library|
 
 ## February 2019
 
@@ -61,10 +69,10 @@ This topic lists new and updated topics in the [Storage](storage.md) documentati
 |---                                                         |---           |
 |[Nested resiliency](storage-spaces/nested-resiliency.md)    | New topic    |
 |[Storage Migration Service known issues](storage-migration-service/known-issues.md)   | New topic    |
-|[DFS Replication: Frequently Asked Questions (FAQ)](dfs-replication/dfsr-faq.md)|Migrated from the [Previous Versions](https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2003/) library|
-|[Migrate SYSVOL replication to DFS Replication](dfs-replication/migrate-sysvol-to-dfsr.md)|Migrated from the [Previous Versions](https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/) library|
-|[SMB: File and printer sharing ports should be open](file-server/best-practices-analyzer/smb-open-file-sharing-ports.md)|Migrated from the [Previous Versions](https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/) library|
-|[Volume Shadow Copy Service](file-server/volume-shadow-copy-service.md)|Migrated from the [Previous Versions](https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/) library|
+|[DFS Replication: Frequently Asked Questions (FAQ)](dfs-replication/dfsr-faq.md)|Migrated from the [Previous Versions](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/) library|
+|[Migrate SYSVOL replication to DFS Replication](dfs-replication/migrate-sysvol-to-dfsr.md)|Migrated from the [Previous Versions](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/) library|
+|[SMB: File and printer sharing ports should be open](file-server/best-practices-analyzer/smb-open-file-sharing-ports.md)|Migrated from the [Previous Versions](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/) library|
+|[Volume Shadow Copy Service](file-server/volume-shadow-copy-service.md)|Migrated from the [Previous Versions](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/) library|
 
 ## October 2018
 

@@ -252,7 +252,11 @@ Live migrating a virtual machine between different cluster set clusters is not t
 2. live migrate the virtual machine to a member node of a different cluster.
 3. add the virtual machine into the cluster as a new virtual machine role.
 
-With Cluster sets these steps are not necessary and only one command is needed.  For example, I want to move a Cluster Set virtual machine from CLUSTER1 to NODE2-CL3 on CLUSTER3.  The single command would be:
+With Cluster sets these steps are not necessary and only one command is needed.  First, you should set all networks to be available for the migration with the command:
+
+	Set-VMHost -UseAnyNetworkMigration $true
+
+For example, I want to move a Cluster Set virtual machine from CLUSTER1 to NODE2-CL3 on CLUSTER3.  The single command would be:
 
         Move-ClusterSetVM -CimSession CSMASTER -VMName CSVM1 -Node NODE2-CL3
 

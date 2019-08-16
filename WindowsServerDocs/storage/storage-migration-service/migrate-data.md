@@ -30,7 +30,7 @@ Before you get started, install Storage Migration Service and make sure that the
     - Windows Management Instrumentation (WMI-In)
 
    > [!NOTE]
-   > If you're using third party firewalls, the inbound port ranges to open are TCP/445 (SMB) , TCP/135 (RPC/DCOM endpoint mapper), and TCP 1025-65535 (RPC/DCOM ephemeral ports).
+   > If you're using third party firewalls, the inbound port ranges to open are TCP/445 (SMB) , TCP/135 (RPC/DCOM endpoint mapper), and TCP 1025-65535 (RPC/DCOM ephemeral ports). The Storage Migration service ports are TCP/28940 (Orchestrator) and TCP/28941 (Proxy).
 
 1. If you're using an orchestrator server to manage the migration and you want to download events or a log of what data you transfer, check that the File and Printer Sharing (SMB-In) firewall rule is enabled on that server as well.
 
