@@ -19,7 +19,7 @@ Every station that connects to a MultiPoint Services system, including the compu
 
 If you are using station virtual desktops instead of physical stations, you must install a CAL for each station virtual desktop.  
   
-1.  Purchase a client license for each station that is connected to your MultiPoint Services computer or server. For more information about purchasing CALs, visit the documentation for Remote Desktop licensing. <!--@Liza: add link to RDS licensing here-->
+1.  Purchase a client license for each station that is connected to your MultiPoint Services computer or server. For more information about purchasing CALs, visit the documentation for Remote Desktop licensing. 
 
 2.  From the **Start** screen, open **MultiPoint Manager**.  
   

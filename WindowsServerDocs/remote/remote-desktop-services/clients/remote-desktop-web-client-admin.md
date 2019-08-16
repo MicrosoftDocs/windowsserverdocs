@@ -245,7 +245,7 @@ Follow these steps if the RD Session Host server is different from the RD Broker
 * The **Subject Alternative Name (SAN)** for each certificate must be set to the machine's **Fully Qualified Domain Name (FQDN)**. The **Common Name (CN)** must match the SAN for each certificate.
 
 ## How to pre-configure settings for Remote Desktop web client users
-This section will tell you how to use PowerShell to configure settings for your Remote Desktop web client deployment. These PowerShell cmdlets control a user's ability to change settings based on your organization's security concerns or intended workflow. The following settings are all located in the **Settings** side panel of the web client. 
+This section will tell you how to use PowerShell to configure settings for your Remote Desktop web client deployment. These PowerShell cmdlets control a user's ability to change settings based on your organization's security concerns or intended workflow. The following settings are all located in the **Settings** side panel of the web client.
 
 ### Suppress telemetry
 By default, users may choose to enable or disable collection of telemetry data that is sent to Microsoft. For information about the telemetry data Microsoft collects, please refer to our Privacy Statement via the link in the **About** side panel.
@@ -253,7 +253,7 @@ By default, users may choose to enable or disable collection of telemetry data t
 As an administrator, you can choose to suppress telemetry collection for your deployment using the following PowerShell cmdlet:
 
    ```PowerShell
-    Set-RDWebClientDeploymentSetting -SuppressTelemetry $true
+    Set-RDWebClientDeploymentSetting -Name "SuppressTelemetry" $true
    ```
 
 By default, the user may select to enable or disable telemetry. A boolean value **$false** will match the default client behavior. A boolean value **$true** disables telemetry and restricts the user from enabling telemetry.
@@ -262,15 +262,17 @@ By default, the user may select to enable or disable telemetry. A boolean value 
 By default, users may choose to launch remote resources (1) in the browser or (2) by downloading an .rdp file to handle with another client installed on their machine. As an administrator, you can choose to restrict the remote resource launch method for your deployment with the following Powershell command:
 
    ```PowerShell
-    Set-RDWebClientDeploymentSetting -LaunchResourceInBrowser ($true|$false)
+    Set-RDWebClientDeploymentSetting -Name "LaunchResourceInBrowser" ($true|$false)
    ```
  By default, the user may select either launch method. A boolean value **$true** will force the user to launch resources in the browser. A boolean value **$false** will force the user to launch resources by downloading an .rdp file to handle with a locally installed RDP client.
 
 ### Reset RDWebClientDeploymentSetting configurations to default
-To reset all deployment-level web client settings to the default configurations, run the following PowerShell cmdlet:
+
+To reset a deployment-level web client setting to the default configuration, run the following PowerShell cmdlet and use the -name parameter to specify the setting you want to reset:
 
    ```PowerShell
-    Reset-RDWebClientDeploymentSetting 
+    Reset-RDWebClientDeploymentSetting -Name "LaunchResourceInBrowser"
+    Reset-RDWebClientDeploymentSetting -Name "SuppressTelemetry"
    ```
 
 ## Troubleshooting
@@ -310,4 +312,4 @@ The console may also be accessed directly through your browser. The console is g
 
 ## Get help with the web client
 
-If you've encountered an issue that can’t be solved by the information in this article, you can [email us](mailto:rdwbclnt@microsoft.com) to report it. You can also request or vote for new features at our [suggestion box](https://aka.ms/rdwebfbk).
+If you've encountered an issue that can’t be solved by the information in this article, you can report it on [Tech Community](https://aka.ms/wvdtc). You can also request or vote for new features at our [suggestion box](https://remotedesktop.uservoice.com/forums/911494-remote-desktop-web-client).

@@ -108,9 +108,9 @@ The following feature distribution map indicates the features in each version. T
 
    Whenever the kernel is updated, the virtual machine must be rebooted to use it.
 
-6. On Ubuntu 18.10, use the latest virtual kernel to have up-to-date Hyper-V capabilities.
+6. On Ubuntu 18.10 or 19.04, use the latest virtual kernel to have up-to-date Hyper-V capabilities.
 
-   To install the virtual kernel on 18.10, run the following commands as root (or sudo):
+   To install the virtual kernel on 18.10 or 19.04, run the following commands as root (or sudo):
 
    ```bash
    # apt-get update

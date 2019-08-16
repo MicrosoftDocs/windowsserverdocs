@@ -287,9 +287,9 @@ manager: dongill
 ###  <a name="BKMK_Prefixes"></a> Choose a domain name prefix  
  A domain name consists of hierarchical labels.  
   
- **The top-level domain extension** is the right-most label in the domain name. For example, in www.contoso.com, com is the top-level domain name extension.  
+ **The top-level domain extension** is the right-most label in the domain name. For example, in www\.contoso.com, com is the top-level domain name extension.  
   
- **The second-level domain name** is the label next to the top-level domain name extension. The second-level domain name is often created based on the company name, products, or services. For example, in www.contoso.com, contoso is the second-level domain name and was chosen for the company name Contoso Pharmaceuticals. The second-level domain is sometimes referred to as the hostname, which has an IP address associated with it.  
+ **The second-level domain name** is the label next to the top-level domain name extension. The second-level domain name is often created based on the company name, products, or services. For example, in www\.contoso.com, contoso is the second-level domain name and was chosen for the company name Contoso Pharmaceuticals. The second-level domain is sometimes referred to as the hostname, which has an IP address associated with it.  
   
  **The domain name prefix** identifies a subdomain. The subdomain name can be used to identify services, devices, or regions. For example, Contoso Pharmaceuticals wants to allow remote users to log on to Remote Web Access, but does not want the website to be available to the public, so they create a subdomain that allows only users with appropriate permissions to access the website. Contoso Pharmaceuticals sets up remote.contoso.com as the subdomain, and remote is the domain name prefix.  
   

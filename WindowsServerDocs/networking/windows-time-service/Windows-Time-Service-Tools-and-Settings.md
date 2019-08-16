@@ -119,7 +119,7 @@ All versions include Windows 7, Windows 8, Windows 10, Windows Server 2008 , and
 |          Registry Entry          | Version |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
 |----------------------------------|---------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | AllowNonstandardModeCombinations |   All   |                                                                                                                                                                                                                                                                                                                                                                                                              Entry indicates that non-standard mode combinations are allowed in synchronization between peers. The default value for domain members is 1. The default value for stand-alone clients and servers is 1.                                                                                                                                                                                                                                                                                                                                                                                                              |
-|            NtpServer             |   All   | Entry specifies a space-delimited list of peers from which a computer obtains time stamps, consisting of one or more DNS names or IP addresses per line. Each DNS name or IP address listed must be unique. Computers connected to a domain must synchronize with a more reliable time source, such as the official U.S. time clock.  <ul><li>0x01 SpecialInterval </li><li>0x02 UseAsFallbackOnly</li><li>0x04 SymmetricActive - For more information about this mode, see [Windows Time Server: 3.3 Modes of Operation](https://go.microsoft.com/fwlink/?LinkId=208012).</li><li>0x08 Client</li></ul><br />There is no default value for this registry entry on domain members. The default value on stand-alone clients and servers is time.windows.com,0x1.<br /><br />Note: For more information on available NTP Servers, see [Microsoft Knowledge Base article 262680 - A list of the Simple Network Time Protocol (SNTP) time servers that are available on the Internet](https://go.microsoft.com/fwlink/?LinkId=186067) |
+|            NtpServer             |   All   | Entry specifies a space-delimited list of peers from which a computer obtains time stamps, consisting of one or more DNS names or IP addresses per line. Each DNS name or IP address listed must be unique. Computers connected to a domain must synchronize with a more reliable time source, such as the official U.S. time clock.  <ul><li>0x01 SpecialInterval </li><li>0x02 UseAsFallbackOnly</li><li>0x04 SymmetricActive - For more information about this mode, see [Windows Time Server: 3.3 Modes of Operation](https://go.microsoft.com/fwlink/?LinkId=208012).</li><li>0x08 Client</li></ul><br />There is no default value for this registry entry on domain members. The default value on stand-alone clients and servers is time.windows.com,0x1.<br /><br />Note: For more information on available NTP Servers, see [Microsoft Knowledge Base article 262680 - A list of the Simple Network Time Protocol (SNTP) time servers that are available on the Internet](https://support.microsoft.com/help/262680/a-list-of-the-simple-network-time-protocol-sntp-time-servers-that-are) |
 |            ServiceDll            |   All   |                                                                                                                                                                                                                                                                                                                                                              Entry is maintained by W32Time. It contains reserved data that is used by the Windows operating system, and any changes to this setting can cause unpredictable results. The default location for this DLL on both domain members and stand-alone clients and servers is %windir%\System32\W32Time.dll.                                                                                                                                                                                                                                                                                                                                                               |
 |           ServiceMain            |   All   |                                                                                                                                                                                                                                                                                                                                                       Entry is maintained by W32Time. It contains reserved data that is used by the Windows operating system, and any changes to this setting can cause unpredictable results. The default value on domain members is SvchostEntry_W32Time. The default value on stand-alone clients and servers is SvchostEntry_W32Time.  "                                                                                                                                                                                                                                                                                                                                                       |
 |               Type               |   All   |                                                                                                                                                                                                                                  Entry indicates which peers to accept synchronization from:  <ul><li>**NoSync**. The time service does not synchronize with other sources.</li><li>**NTP.** The time service synchronizes from the servers specified in the **NtpServer**. registry entry.</li><li>**NT5DS**. The time service synchronizes from the domain hierarchy.  </li><li>**AllSync**. The time service uses all the available synchronization mechanisms.  </li></ul>The default value on domain members is **NT5DS**. The default value on stand-alone clients and servers is **NTP**.                                                                                                                                                                                                                                   |
@@ -194,25 +194,30 @@ The following registry entries must be added in order to enable W32Time logging:
 #### MaxAllowedPhaseOffset information
 In order for W32Time to set the computer clock gradually, the offset must be less than the **MaxAllowedPhaseOffset** value and satisfy the following equation at the same time:  
 
-```  
-|CurrentTimeOffset| / (PhaseCorrectRate*UpdateInterval) < SystemClockRate / 2  
-``` 
-The CurrentTimeOffset is measured in clock ticks, where 1ms = 10,000 clock ticks on a Windows system.  
+* Windows Server 2016 and later versions:
+   ```  
+    |CurrentTimeOffset| / (16*PhaseCorrectRate*pollIntervalInSeconds) <= SystemClockRate / 2  
+   ``` 
+* Windows Server 2012 R2 and earlier versions:
+   ```  
+   |CurrentTimeOffset| / (PhaseCorrectRate*UpdateInterval) <= SystemClockRate / 2  
+   ``` 
+The **CurrentTimeOffset** value is measured in clock ticks, where 1ms = 10,000 clock ticks on a Windows system.  
 
-SystemClockRate and PhaseCorrectRate are also measured in clock ticks. To get the SystemClockRate, you can use the following command and convert it from seconds to clock ticks using the formula of seconds*1000\*10000:  
+**SystemClockRate** and **PhaseCorrectRate** are also measured in clock ticks. To get the **SystemClockRate** value, you can use the following command and convert it from seconds to clock ticks by using the formula of seconds*1000\*10000:  
 
 ```  
 W32tm /query /status /verbose  
 ClockRate: 0.0156000s  
 ```  
 
-SystemclockRate is the rate of the clock on the system. Using 156000 seconds as an example, the SystemclockRate would be = 0.0156000 \* 1000 \* 10000 = 156000 clock ticks.  
+**SystemclockRate** is the rate of the clock on the system. Using 156000 seconds as an example, the **SystemclockRate** value would be = 0.0156000 \* 1000 \* 10000 = 156000 clock ticks.  
 
-MaxAllowedPhaseOffset is also in seconds. To convert it to clock ticks, multiply MaxAllowedPhaseOffset*1000\*10000.  
+**MaxAllowedPhaseOffset** is also in seconds. To convert it to clock ticks, multiply **MaxAllowedPhaseOffset**\*1000\*10000.  
 
-The following two examples show how to apply  
+The following examples show how to apply these calculations when you use Windows Server 2012 R2 or an earlier version.
 
-**Example 1**: Time differs by 4 minutes (For example, your time is 11:05 AM and the time sample received from a peer and believed to be correct is 11:09 AM).
+**Example 1**: Time differs by 4 minutes (for example, your time is 11:05 and the time sample that you received from a peer and believe to be correct is 11:09).
   
 ```
 phasecorrectRate = 1  
@@ -225,19 +230,19 @@ MaxAllowedPhaseOffset = 10min = 600 seconds = 600*1000\*10000=6000000000 clock t
 
 |currentTimeOffset| = 4mins = 4*60\*1000\*10000 = 2400000000 ticks  
 
-Is CurrentTimeOffset < MaxAllowedPhaseOffset?  
+Is CurrentTimeOffset <= MaxAllowedPhaseOffset?  
 
-2400000000 < 6000000000 = TRUE  
+2400000000 <= 6000000000 = TRUE  
 ```
 
 AND does it satisfy the above equation? 
 
 ```
-(|CurrentTimeOffset| / (PhaseCorrectRate*UpdateInterval) < SystemClockRate / 2)  
+(|CurrentTimeOffset| / (PhaseCorrectRate*UpdateInterval) <= SystemClockRate / 2)  
 
-Is 2,400,000,000 / (30000*1) < 156000/2  
+Is 2,400,000,000 / (30000*1) <= 156000/2  
 
-Is 80,000 < 78,000  
+Is 80,000 <= 78,000  
 
 NO/FALSE  
 ```  
@@ -245,7 +250,7 @@ NO/FALSE
 Therefore W32tm would set the clock back immediately.  
 
 > [!NOTE]  
-> In this case, if you want to set the clock back slowly, you would need to adjust the values of PhaseCorrectRate or updateInterval in the registry as well to ensure the equation results in TRUE.  
+> In this case, if you want to set the clock back slowly, you would also have to adjust the values of **PhaseCorrectRate** or **updateInterval** in the registry to make sure that the equation result is **TRUE**.  
 
 **Example 2**: Time differs by 3 minutes. 
  
@@ -260,19 +265,19 @@ MaxAllowedPhaseOffset = 10min = 600 seconds = 600*1000\*10000=6000000000 clock t
 
 currentTimeOffset = 3mins = 3*60\*1000\*10000 = 1800000000 clock ticks  
 
-Is CurrentTimeOffset < MaxAllowedPhaseOffset?  
+Is CurrentTimeOffset <= MaxAllowedPhaseOffset?  
 
-1800000000 < 6000000000 = TRUE  
+1800000000 <= 6000000000 = TRUE  
 ```  
 
 AND does it satisfy the above equation?
 
 ```
-(|CurrentTimeOffset| / (PhaseCorrectRate*UpdateInterval) < SystemClockRate / 2)  
+(|CurrentTimeOffset| / (PhaseCorrectRate*UpdateInterval) <= SystemClockRate / 2)  
 
-Is 3 mins (1,800,000,000) / (30000*1) < 156000/2  
+Is 3 mins (1,800,000,000) / (30000*1) <= 156000/2  
 
-Is 60,000 < 78,000  
+Is 60,000 <= 78,000  
 
 YES/TRUE  
 ```  

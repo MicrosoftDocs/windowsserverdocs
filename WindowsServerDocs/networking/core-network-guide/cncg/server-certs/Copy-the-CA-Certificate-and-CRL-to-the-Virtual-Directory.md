@@ -24,6 +24,8 @@ To perform this procedure you must be a member of **Domain Admins**.
   
     - Type `certutil -crl`, and then press ENTER.  
 
+    - To copy the CA1 certificate to the file share on your Web server, type `copy C:\Windows\system32\certsrv\certenroll\*.crt \\WEB1\pki`, and then press ENTER.  
+    
     - To copy the certificate revocation lists to the file share on your Web server, type `copy C:\Windows\system32\certsrv\certenroll\*.crl \\WEB1\pki`, and then press ENTER.  
   
 2.  To verify that your CDP and AIA extension locations are correctly configured, type `pkiview.msc`, and then press ENTER. The pkiview Enterprise PKI MMC opens.  

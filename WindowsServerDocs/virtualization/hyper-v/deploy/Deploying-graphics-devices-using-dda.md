@@ -34,7 +34,7 @@ Set-VM -Name VMName -AutomaticStopAction TurnOff
 
 ### Some Additional VM preparation is required for Graphics Devices
 
-Some hardware performs better if the VM in configured in a certain way.  For details on whether or not you need the following configurations for your hardware, please reach out to the hardware vendor. Additional details can be found on [Plan for Deploying Devices using Discrete Device Assignment](../plan/Plan-for-Deploying-Devices-using-Discrete-Device-Assignment.md) and on this [blog post.](https://blogs.technet.microsoft.com/virtualization/2015/11/23/discrete-device-assignment-gpus/)
+Some hardware performs better if the VM in configured in a certain way.  For details on whether or not you need the following configurations for your hardware, please reach out to the hardware vendor. Additional details can be found on [Plan for Deploying Devices using Discrete Device Assignment](../plan/Plan-for-Deploying-Devices-using-Discrete-Device-Assignment.md) and on this [blog post.](https://techcommunity.microsoft.com/t5/Virtualization/Discrete-Device-Assignment-GPUs/ba-p/382266)
 
 1. Enable Write-Combining on the CPU
    ```
@@ -48,7 +48,8 @@ Some hardware performs better if the VM in configured in a certain way.  For det
    ```
    Set-VM -HighMemoryMappedIoSpace 33280Mb -VMName VMName
    ```
-   Note, the MMIO space values above are reasonable values to set for experimenting with a single GPU.  If after starting the VM, the device is reporting an error relating to not enough resources, you'll likely need to modify these values.  Also, if you're assigning multiple GPUs, you'll need to increase these values as well.
+   > [!TIP] 
+   > The MMIO space values above are reasonable values to set for experimenting with a single GPU.  If after starting the VM, the device is reporting an error relating to not enough resources, you'll likely need to modify these values. Consult [Plan for Deploying Devices using Discrete Device Assignment](../plan/Plan-for-Deploying-Devices-using-Discrete-Device-Assignment.md) to learn how to precisely calculate MMIO requirements.
 
 ## Dismount the Device from the Host Partition
 ### Optional - Install the Partitioning Driver

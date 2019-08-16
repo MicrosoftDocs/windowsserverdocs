@@ -198,6 +198,9 @@ You also add a group containing VPN servers and another group containing NPS ser
 
 In this procedure, you configure a custom client-server authentication template. This template is required because you want to improve the certificate’s overall security by selecting upgraded compatibility levels and choosing the Microsoft Platform Crypto Provider. This last change lets you use the TPM on the client computers to secure the certificate. For an overview of the TPM, see [Trusted Platform Module Technology Overview](https://docs.microsoft.com/windows/device-security/tpm/trusted-platform-module-overview).
 
+>[!IMPORTANT] 
+>Microsoft Platform Crypto Provider" requires a TPM chip, in the case that you are running a VM and you get the following error: "Can not find a valid CSP in the local machine" when trying to manually enroll the certificate you need to check "Microsoft Software Key Storage Provider" and have it second in order after "Microsoft Platform Crypto Provider" in the Cryptography tab in certificate properties.
+
 **Procedure:**
 
 1. On the CA, open Certification Authority.
@@ -319,11 +322,22 @@ Domain-joined VPN servers
 
 10. Close the Certificate Templates console.
 
-11. In the navigation pane of the Certification Authority snap-in, right-click **Certificate Templates**, select **New** and then select **Certificate Template to Issue**.
+11. In the navigation pane of the Certification Authority snap-in, right-click **Certificate Templates**, click **New** and then click **Certificate Template to Issue**.
 
-12. Select the name you chose in step 4 above, and click **OK**.
+12. Restart the Certificate Authority services.(*)
 
-13. Close the Certification Authority snap-in.
+13. In the navigation pane of the Certification Authority snap-in, right-click **Certificate Templates**, select **New** and then select **Certificate Template to Issue**.
+
+14. Select the name you chose in step 4 above, and click **OK**.
+
+15. Close the Certification Authority snap-in.
+
+* **You can stop/start the CA service by running the following command in CMD:**
+
+```
+Net Stop "certsvc"
+Net Start "certsvc"
+```
 
 ## Create the NPS Server Authentication template
 

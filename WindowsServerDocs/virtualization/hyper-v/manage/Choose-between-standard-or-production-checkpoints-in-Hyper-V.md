@@ -42,7 +42,7 @@ Starting with Windows Server 2016 and Windows 10, you can choose between standar
 
 ## See also  
   
--   [Production checkpoints](../What-s-new-in-Hyper-V-on-Windows.md#BKMK_check)  
+-   [Production checkpoints](../What-s-new-in-Hyper-V-on-Windows.md#production-checkpoints-new)  
   
 -   [Enable or disable checkpoints](Enable-or-disable-checkpoints-in-Hyper-V.md)  
   

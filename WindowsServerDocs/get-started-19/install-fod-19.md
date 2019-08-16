@@ -160,7 +160,7 @@ The App Compatibility FOD can only be installed on Server Core. Don't attempt to
    Mount-DiskImage -ImagePath Path_To_Windows_Server_ISO
    ```
 
-3. Copy the the contents of the Windows Server ISO file to a local folder (for example, *C:\SetupFiles\WindowsServer*).
+3. Copy the contents of the Windows Server ISO file to a local folder (for example, *C:\SetupFiles\WindowsServer*).
 
 4. Get the image name you want to modify within the Install.wim file by using the following command.<br>
 Use the `$install_wim_path` variable to enter the path to the Install.wim file, located inside the \Sources folder of the ISO file.
