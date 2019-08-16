@@ -11,7 +11,7 @@ ms.date: 12/18/2018
 ---
 # Administer a Server Core server
 
->Applies To: Windows Server (Semi-Annual Channel) and Windows Server 2016
+>Applies to: Windows Server 2019, Windows Server 2016, and Windows Server (Semi-Annual Channel)
 
 Because Server Core doesn't have a UI, you need to use Windows PowerShell cmdlets, command line tools, or remote tools to perform basic administration tasks. The following sections outline the PowerShell cmdlets and commands used for basic tasks. You can also use [Windows Admin Center](../../manage/windows-admin-center/overview.md), a unified management portal currently in public preview, to administer your installation. 
 
@@ -19,7 +19,7 @@ Because Server Core doesn't have a UI, you need to use Windows PowerShell cmdlet
 Use the following information to perform basic administrative tasks with Windows PowerShell cmdlets.
 
 ### Set a static IP address
-When you install a Server Core server, by default it has A DHCP address. If you need a static IP address, you can set it using the following steps.
+When you install a Server Core server, by default it has a DHCP address. If you need a static IP address, you can set it using the following steps.
 
 To view your current network configuration, use **Get-NetIPConfiguration**.
 
@@ -84,8 +84,8 @@ Run **slmgr.vbs –ipk\<productkey\>**. Then run **slmgr.vbs –ato**. If activa
 > [!NOTE]
 > You can also activate the server by phone, using a [Key Management Service (KMS) server](../../get-started/server-2016-activation.md), or remotely. To activate remotely, run the following cmdlet from a remote computer: 
 > 
-> ```powershell
-> **cscript windows\system32\slmgr.vbs <ServerName> <UserName> <password>:-ato**
+> ```
+> cscript windows\system32\slmgr.vbs <ServerName> <UserName> <password>:-ato
 > ```
  
 ### Configure Windows Firewall
@@ -130,7 +130,7 @@ Use the following reference information to perform administrative tasks from the
 |Task|Command| 
 |----|-------|
 |Configure your server to use a proxy server|**netsh Winhttp set proxy \<servername\>:\<port number\>** <br>**Note:** Server Core installations can't access the Internet through a proxy that requires a password to allow connections.|
-|Configure your server to bypass the proxy for Internet addresses|**netsh winttp set proxy \<servername\>:\<port number\> bypass-list="\<local\>"**| 
+|Configure your server to bypass the proxy for Internet addresses|**netsh winhttp set proxy \<servername\>:\<port number\> bypass-list="\<local\>"**| 
 |Display or modify IPSEC configuration|**netsh ipsec**| 
 |Display or modify NAP configuration|**netsh nap**| 
 |Display or modify IP to physical address translation|**arp**| 
@@ -141,7 +141,7 @@ Use the following reference information to perform administrative tasks from the
 |Display hops for network connections|**pathping**| 
 |Trace hops for network connections|**tracert**| 
 |Display the configuration of the multicast router|**mrinfo**| 
-|Enable remote administration of the firewall|**netsh advfirewall firewall set rule group=”Windows Firewall Remote Management” new enable=yes**| 
+|Enable remote administration of the firewall|**netsh advfirewall firewall set rule group="Windows Defender Firewall Remote Management" new enable=yes**| 
  
 
 ### Updates, error reporting, and feedback

@@ -178,7 +178,15 @@ To fix this issue, follow these steps:
    ```powershell
    Get-ClusterResource -Name "VdiskName" | Set-ClusterParameter DiskRunChkDsk 0 
    ```
-5. Add the affected Virtual Disks back to CSV.    
+
+5. Take the disk(s) offline and then online again to have the DiskRecoveryAction take effect:
+
+   ```powershell
+   Stop-ClusterResource "VdiskName"
+   Start-ClusterResource "VdiskName"
+   ``` 
+
+6. Add the affected Virtual Disks back to CSV.    
 
    ```powershell
    Add-ClusterSharedVolume -name "VdiskName"

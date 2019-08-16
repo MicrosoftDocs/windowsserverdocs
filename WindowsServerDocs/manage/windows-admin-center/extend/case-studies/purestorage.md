@@ -47,4 +47,4 @@ Since releasing our Technical Preview, the customer feedback collected so far ha
 
 Additional resources:
 - [Pure Storage extension announcement blog post](https://blog.purestorage.com/tech-preview-of-the-pure-storage-extension-for-windows-admin-center/)
-- [PureReport](https://itunes.apple.com/us/podcast/windows-admin-center-extension-from-pure-storage/id1392639991?i=1000424316130&mt=2) podcast
+- [PureReport](https://itunes.apple.com/podcast/windows-admin-center-extension-from-pure-storage/id1392639991?i=1000424316130&mt=2) podcast

@@ -71,13 +71,6 @@ If you want to keep both the **log-level** and the **keyword-mask** at their def
 
 These event channels will be enabled on every cluster node when the cluster service starts or whenever the **EnabledEventLogs** property is changed.
 
-
-<!--
-## Collecting live dumps
-
-Windows will trigger the collection of a ``` LiveDump ``` when there are known resources that are hanging in kernel calls. ``` RHS ``` will trigger ```LiveDump``` collection if both the resource type and cluster ``` DumpPolicy ``` are set to 1. For physical disk it is set out of the box
--->
-
 ## Gathering Logs
 
 After you have enabled event channels, you can use the **DumpLogQuery** to gather logs. The public resource type property **DumpLogQuery** is a mutistring value. Each string is an [XPATH query as described here](https://msdn.microsoft.com/library/windows/desktop/dd996910(v=vs.85).aspx).
@@ -162,20 +155,6 @@ Directory of c:\ProgramData\Microsoft\Windows\WER\ReportArchive
                3 Dir(s)  23,291,658,240 bytes free
 
 ```
-
-<!--
-If your report has been uploaded to Watson, a Microsoft Employee might be able to get your reports from [https://watson/](https://watson) by searching for your report ID and/or bucket ID (these can be found in Report.wer).
-
-```
-OriginalFilename=PowerShell.EXE.MUI
-Response.BucketId=f4bbb1850ee0c2c8ad7231a4f1c7aa8a
-Response.BucketTable=5
-Response.LegacyBucketId=2121812958945716874
-Response.type=4
-Response.CabId=2154498584323680636
-Response.CabGuid=1701c157-8fe6-4c22-9de6-510c23b1e97c 
-```
--->
 
 Windows Error Reporting provides many settings to customize the problem reporting experience. For further information, please refer to the Windows Error Reporting [documentation](https://msdn.microsoft.com/library/windows/desktop/bb513638(v=vs.85).aspx).
 

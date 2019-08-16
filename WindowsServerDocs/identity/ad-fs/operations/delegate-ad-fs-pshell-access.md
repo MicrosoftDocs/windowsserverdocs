@@ -60,7 +60,7 @@ If the farm is not using delegated administration, grant the gMSA account admin 
  
 ### Create the JEA Role File 
  
-Create the JEA role in a notepad file. Instructions to create the role is provided on [JEA role capabilities](https://docs.microsoft.com/powershell/jea/role-capabilities). 
+On the AD FS server, create the JEA role in a notepad file. Instructions to create the role is provided on [JEA role capabilities](https://docs.microsoft.com/powershell/jea/role-capabilities). 
  
 The commandlets delegated in this example are `Reset-AdfsAccountLockout, Get-ADFSAccountActivity, and Set-ADFSAccountActivity`. 
 
@@ -113,4 +113,6 @@ To use the delegated commands:
 ```powershell
 Enter-pssession -ComputerName server01.contoso.com -ConfigurationName "AccountActivityAdministration" -Credential <User Using JEA> 
 Get-AdfsAccountActivity <User> 
+
+
 ```

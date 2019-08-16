@@ -7,7 +7,7 @@ ms.topic: article
 author: JasonGerend
 manager: brianlic
 ms.author: jgerend
-ms.date: 06/04/2019
+ms.date: 06/25/2019
 description: New and updated topics in the on-premises storage documentation for Windows Server for IT Pros.
 ---
 # Change history for storage topics in Windows Server
@@ -20,8 +20,9 @@ This topic lists new and updated topics in the [Storage](storage.md) documentati
 
 ## June 2019
 
-| New or changed topic                                        | Description|
+| New or changed topic                                        | Description |
 | ---                                                         | ---           |
+| [Disk cleanup](file-server/disk-cleanup.md)                                              | New (Migrated from the [Previous Versions](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc770278(v%3dws.11)))
 | [Storage Migration Service FAQ](storage-migration-service/faq.md#consolidate-servers) | Added performance optimization info. |
 
 ## May 2019
@@ -36,9 +37,10 @@ This topic lists new and updated topics in the [Storage](storage.md) documentati
 
 |New or changed topic                                        |Description|
 |---                                                         |---           |
-|[Monitor with Azure Monitor](storage-spaces/configure-azure-monitor.md)| New|
-|[Upgrade a Storage Spaces Direct cluster to Windows Server 2019](storage-spaces/upgrade-storage-spaces-direct-to-windows-server-2019.md)| New        |
-|[DFS Replication](dfs-replication/dfsr-overview.md)        | Migrated from the [Previous Versions](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc770278(v%3dws.11)) library|
+| [Monitor with Azure Monitor](storage-spaces/configure-azure-monitor.md) | New |
+| [Understand and deploy persistent memory](storage-spaces/deploy-pmem.md) | New |
+| [Upgrade a Storage Spaces Direct cluster to Windows Server 2019](storage-spaces/upgrade-storage-spaces-direct-to-windows-server-2019.md)| New        |
+| [DFS Replication](dfs-replication/dfsr-overview.md)        | Migrated from the [Previous Versions](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc770278(v%3dws.11)) library|
 
 ## February 2019
 

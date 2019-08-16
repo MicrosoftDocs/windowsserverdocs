@@ -7,7 +7,7 @@ ms.manager: eldenc
 ms.technology: storage-spaces
 ms.topic: article
 author: eldenchristensen
-ms.date: 06/13/2019
+ms.date: 08/05/2019
 ms.localizationpriority: medium
 ---
 # Storage Spaces Direct hardware requirements
@@ -54,14 +54,21 @@ In addition, the following requirements apply:
 
 ## Networking
 
-Minimum (for small scale 2-3 node)
-- 10 Gbps network interface
-- Direct-connect (switchless) is supported with 2-nodes
+Storage Spaces Direct requires a reliable high bandwidth, low latency network connection between each node.  
 
-Recommended (for high performance, at scale, or deployments of 4+ nodes)
+Minimum interconnect for small scale 2-3 node
+- 10 Gbps network interface card (NIC), or faster
+- Two or more network connections from each node recommended for redundancy and performance
+
+Recommended interconnect for high performance, at scale, or deployments of 4+ 
 - NICs that are remote-direct memory access (RDMA) capable, iWARP (recommended) or RoCE
-- Two or more NICs for redundancy and performance
-- 25 Gbps network interface or higher
+- Two or more network connections from each node recommended for redundancy and performance
+- 25 Gbps NIC or faster
+
+Switched or switchless node interconnects
+- Switched: Network switches must be properly configured to handle the bandwidth and networking type.  If using RDMA that implements the RoCE protocol, network device and switch configuration is even more important. 
+- Switchless: Nodes can be interconnected using direct connections, avoiding using a switch.  It is required that every node have a direct connection with every other node of the cluster.
+
 
 ## Drives
 
@@ -73,7 +80,7 @@ Storage Spaces Direct works with direct-attached SATA, SAS, or NVMe drives that 
 - Same number and types of drives in every server – see [Drive symmetry considerations](drive-symmetry-considerations.md)
 - Cache devices must be 32 GB or larger
 - When using persistent memory devices as cache devices, you must use NVMe or SSD capacity devices (you can't use HDDs)
-- NVMe driver is Microsoft's in-box or updated NVMe driver.
+- NVMe driver is the Microsoft-provided one included in Windows. (stornvme.sys)
 - Recommended: Number of capacity drives is a whole multiple of the number of cache drives
 - Recommended: Cache drives should have high write endurance: at least 3 drive-writes-per-day (DWPD) or at least 4 terabytes written (TBW) per day – see [Understanding drive writes per day (DWPD), terabytes written (TBW), and the minimum recommended for Storage Spaces Direct](https://blogs.technet.microsoft.com/filecab/2017/08/11/understanding-dwpd-tbw/)
 
@@ -118,5 +125,5 @@ Drives can be internal to the server, or in an external enclosure that is connec
 
 | Maximums                | Windows Server 2019  | Windows Server 2016  |
 | ---                     | ---------            | ---------            |
-| Raw capacity per server | 100 TB               | 100 TB               |
+| Raw capacity per server | 400 TB               | 100 TB               |
 | Pool capacity           | 4 PB (4,000 TB)      | 1 PB                 |

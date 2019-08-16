@@ -92,7 +92,6 @@ This can happen if your default PowerShell module path has been modified or remo
 
 ## I get the message: "Cant connect securely to this page. This might be because the site uses outdated or unsafe TLS security settings.
 
-<!--REF: https://docs.microsoft.com/iis/get-started/whats-new-in-iis-10/http2-on-iis#when-is-http2-not-supported -->
 Your machine is restricted to HTTP/2 connections. Windows Admin Center uses integrated Windows authentication, which is not supported in HTTP/2. Add the following two registry values under the ```HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Http\Parameters``` key on **the machine running the browser** to remove the HTTP/2 restriction:
 
 ```
