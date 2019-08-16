@@ -80,6 +80,15 @@ The source server must run one of the following operating systems:
 - Windows Server 2008
 - Windows Server 2003 R2
 - Windows Server 2003
+- Windows Small Business Server 2003 R2
+- Windows Small Business Server 2008
+- Windows Small Business Server 2011
+- Windows Server 2012 Essentials
+- Windows Server 2012 R2 Essentials
+- Windows Server 2016 Essentials
+- Windows Server 2019 Essentials
+
+Note: Windows Small Business Server and Windows Server Essentials are domain controllers. Storage Migration Service can't yet cut over from domain controllers, but can inventory and transfer files from them.   
 
 If the orchestrator is running Windows Server, version 1903 or later, you can migrate the following additional source types:
 
