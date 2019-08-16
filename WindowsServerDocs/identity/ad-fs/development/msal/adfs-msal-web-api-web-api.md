@@ -171,41 +171,51 @@ This section shows how to configure a Web API to call another Web API
             ![App Reg](media/adfs-msal-web-api-web-api/webapi25.png)
 
   4. Open the Web.config file under ToDoListService. Modify the following: 
-   - ida:Audience - enter the Client Identifier value from #12 in App Registration in AD FS section above
-   - ida:ClientId - enter the Client Identifier value from #12 in App Registration in AD FS section above. 
-   - Ida: ClientSecret - enter the shared secret copied from #13 in App Registration in AD FS section above.
-   - ida:RedirectUri - enter the RedirectUri value from #12 in App Registration in AD FS section above. 
-   - ida: AdfsMetadataEndpoint - enter https://[your AD FS hostname]/federationmetadata/2007-06/federationmetadata.xml 
-   - ida:OBOWebAPIBase - enter the Identifier value from #19 in App Registration in AD FS section above. 
-   - ida:Authority - enter https://[your AD FS hostname]/adfs 
-  ![App Reg](media/adfs-msal-web-api-web-api/webapi26.png) 
+       - ida:Audience - enter the Client Identifier value from #12 in App Registration in AD FS section above
+       - ida:ClientId - enter the Client Identifier value from #12 in App Registration in AD FS section above. 
+       - Ida: ClientSecret - enter the shared secret copied from #13 in App Registration in AD FS section above.
+       - ida:RedirectUri - enter the RedirectUri value from #12 in App Registration in AD FS section above. 
+       - ida: AdfsMetadataEndpoint - enter https://[your AD FS hostname]/federationmetadata/2007-06/federationmetadata.xml 
+       - ida:OBOWebAPIBase - enter the Identifier value from #19 in App Registration in AD FS section above. 
+       - ida:Authority - enter https://[your AD FS hostname]/adfs 
+  
+          ![App Reg](media/adfs-msal-web-api-web-api/webapi26.png) 
 
  5. Open the Web.config file under WebAPIOBO. Modify the following: 
-   - ida: AdfsMetadataEndpoint - enter https://[your AD FS hostname]/federationmetadata/2007-06/federationmetadata.xml 
-   - ida:Audience - enter the Client Identifier value from #12 in App Registration in AD FS section above 
- ![App Reg](media/adfs-msal-web-api-web-api/webapi27.png)
+       - ida: AdfsMetadataEndpoint - enter https://[your AD FS hostname]/federationmetadata/2007-06/federationmetadata.xml 
+       - ida:Audience - enter the Client Identifier value from #12 in App Registration in AD FS section above 
+ 
+          ![App Reg](media/adfs-msal-web-api-web-api/webapi27.png)
  
 ## Test the sample 
+
 This section shows how to test the sample configured above. 
+
 Once the code changes are made rebuild the solution 
  
-  1. On Visual Studio, right click on solution and select Set StartUp Projects… 
-  ![App Reg](media/adfs-msal-web-api-web-api/webapi28.png)
+  1. On Visual Studio, right click on solution and select **Set StartUp Projects…** 
+      
+      ![App Reg](media/adfs-msal-web-api-web-api/webapi28.png)
 
-  2. On the Properties pages make sure Action is set to Start for each of the Projects, except TodoListSPA.  
-  ![App Reg](media/adfs-msal-web-api-web-api/webapi29.png)
+  2. On the Properties pages make sure **Action** is set to **Start** for each of the Projects, except TodoListSPA.  
+  
+      ![App Reg](media/adfs-msal-web-api-web-api/webapi29.png)
   
   3. At the top of Visual Studio, click the green arrow.  
-  ![App Reg](media/adfs-msal-web-api-web-api/webapi30.png)
+  
+      ![App Reg](media/adfs-msal-web-api-web-api/webapi30.png)
 
-  4. On the Native App’s Main Screen, click on Sign In. 
-  ![App Reg](media/adfs-msal-web-api-web-api/webapi31.png)
+  4. On the Native App’s Main Screen, click on **Sign In**. 
+  
+      ![App Reg](media/adfs-msal-web-api-web-api/webapi31.png)
 
   5. You will be re-directed to the AD FS sign-in page. Go ahead and sign in. 
-  ![App Reg](media/adfs-msal-web-api-web-api/webapi32.png)
+  
+      ![App Reg](media/adfs-msal-web-api-web-api/webapi32.png)
 
-  6. Once signed-in, enter text Web Api to Web Api Call in the Create a To Do item. Click Add item.  This will call the Web API (To Do List Service) which then calls Web API 2 (WebAPIOBO) and adds the item in the cache.  
- ![App Reg](media/adfs-msal-web-api-web-api/webapi33.png)
+  6. Once signed-in, enter text Web Api to Web Api Call in the **Create a To Do item**. Click **Add item**.  This will call the Web API (To Do List Service) which then calls Web API 2 (WebAPIOBO) and adds the item in the cache.  
+ 
+      ![App Reg](media/adfs-msal-web-api-web-api/webapi33.png)
  
  
  
