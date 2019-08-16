@@ -1,4 +1,4 @@
-    ---
+---
 title: MultiPoint Stations
 description: Learn about stations in MultiPoint Services, including the different options for users
 ms.custom: na
@@ -14,6 +14,7 @@ author: evaseydl
 manager: scottman
 ms.author: evas
 ---
+
 # MultiPoint  Stations
 In a MultiPoint Services system environment, *stations* are the user endpoints for connecting to the computer running MultiPoint Services. Each station provides the user with an independent Windows 10 experience. The following station types are supported:  
   

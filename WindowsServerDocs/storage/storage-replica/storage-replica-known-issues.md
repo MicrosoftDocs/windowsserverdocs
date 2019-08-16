@@ -149,14 +149,14 @@ If you attempt to resize a replicated volume on the source server without settin
     PS C:\> Resize-Partition -DriveLetter I -Size 8GB
     Resize-Partition : Failed
 
-Activity ID: {87aebbd6-4f47-4621-8aa4-5328dfa6c3be}
+    Activity ID: {87aebbd6-4f47-4621-8aa4-5328dfa6c3be}
     At line:1 char:1
     + Resize-Partition -DriveLetter I -Size 8GB
     + ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
         + CategoryInfo          : NotSpecified: (StorageWMI:ROOT/Microsoft/.../MSFT_Partition) [Resize-Partition], CimException
         + FullyQualifiedErrorId : StorageWMI 4,Resize-Partition
 
-Storage Replica Event log error 10307:
+    Storage Replica Event log error 10307:
 
     Attempted to resize a partition that is protected by Storage Replica .
 

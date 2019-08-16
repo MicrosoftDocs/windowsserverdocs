@@ -50,33 +50,33 @@ When you have the answers for these questions, you can start configuring the fol
 ### 2.1.1. Connection from the WSUS server to the Internet
 If there is a corporate firewall between WSUS and the Internet, you might have to configure that firewall to ensure WSUS can obtain updates. To obtain updates from Microsoft Update, the WSUS server uses port 443 for HTTPS protocol. Although most of corporate firewalls allow this type of traffic, there are some companies that restrict Internet access from the servers due the company's security policies. if your company restricts access, you need to obtain authorization to allow Internet access from WSUS to the following list of URLs:
 
-- http://windowsupdate.microsoft.com
+- http\://windowsupdate.microsoft.com
 
-- http://*.windowsupdate.microsoft.com
+- http\://\*.windowsupdate.microsoft.com
 
-- https://*.windowsupdate.microsoft.com
+- https\://\*.windowsupdate.microsoft.com
 
-- http://*.update.microsoft.com
+- http\://\*.update.microsoft.com
 
-- https://*.update.microsoft.com
+- https\://\*.update.microsoft.com
 
-- http://*.windowsupdate.com
+- http\://\*.windowsupdate.com
 
-- http://download.windowsupdate.com
+- http\://download.windowsupdate.com
 
-- https://download.microsoft.com
+- https\://download.microsoft.com
 
-- http://*.download.windowsupdate.com
+- http\://\*.download.windowsupdate.com
 
-- http://wustat.windows.com
+- http\://wustat.windows.com
 
-- http://ntservicepack.microsoft.com
+- http\://ntservicepack.microsoft.com
 
-- http://go.microsoft.com
+- http\://go.microsoft.com
 
-- http://dl.delivery.mp.microsoft.com
+- http\://dl.delivery.mp.microsoft.com
 
-- https://dl.delivery.mp.microsoft.com
+- https\://dl.delivery.mp.microsoft.com
 
 > [!IMPORTANT]
 > For a scenario in which WSUS is failing to obtain updates due firewall configurations, see [article 885819](https://support.microsoft.com/kb/885819) in the Microsoft Knowledge Base.
@@ -321,20 +321,20 @@ You can use the Secure Sockets Layer (SSL) protocol to help secure the WSUS depl
 > [!IMPORTANT]
 > Clients and downstream servers that are configured to use Transport Layer Security (TLS) or HTTPS must also be configured to use a fully qualified domain name (FQDN) for their upstream WSUS server.
 
-WSUS uses SSL for metadata only, not for update files. This is the same way that Microsoft Update distributes updates. Microsoft reduces the risk of sending update files over an unencrypted channel by signing each update. In addition, a hash is computed and sent together with the metadata for each update. When an update is downloaded, WSUS checks the digital signature and hash. if the update has been changed, it is not installed.
+WSUS uses SSL for metadata only, not for update files. This is the same way that Microsoft Update distributes updates. Microsoft reduces the risk of sending update files over an unencrypted channel by signing each update. In addition, a hash is computed and sent together with the metadata for each update. When an update is downloaded, WSUS checks the digital signature and hash. If the update has been changed, it is not installed.
 
 ### Limitations of WSUS SSL deployments
 You must consider the following limitations when you use SSL to secure a WSUS deployment:
 
 1.  Using SSL increases the server workload. You should expect a 10 percent loss of performance because of the cost of encrypting all the metadata that is sent over the network.
 
-2.  if you use WSUS with a remote SQL Server database, the connection between the WSUS server and the database server is not secured by SSL. if the database connection must be secured, consider the following recommendations:
+2.  If you use WSUS with a remote SQL Server database, the connection between the WSUS server and the database server is not secured by SSL. If the database connection must be secured, consider the following recommendations:
 
 -   move the WSUS database to the WSUS server.
 
 -   move the remote database server and the WSUS server to a private network.
 
--   Deploy Internet Protocol security (IPsec) to help secure network traffic. For more information about IPsec, see [Creating and Using IPsec Policies](https://go.microsoft.com/fwlink/?LinkID=203841).
+-   deploy Internet Protocol security (IPsec) to help secure network traffic. For more information about IPsec, see [Creating and Using IPsec Policies](https://go.microsoft.com/fwlink/?LinkID=203841).
 
 ### Configure SSL on the WSUS server
 WSUS requires two ports for SSL: one port that uses HTTPS to send encrypted metadata, and one port that uses HTTP to send updates. When you configure WSUS to use SSL, consider the following:
@@ -383,11 +383,11 @@ WSUS requires two ports for SSL: one port that uses HTTPS to send encrypted meta
 
 2.  Go to **start**, type **CMD**, right-click **Command prompt**, and then click **Run as administrator**.
 
-3.  Navigate to the *%ProgramFiles%***\Update Services\Tools\\** folder.
+3.  Navigate to the _%ProgramFiles%_**\\Update Services\\Tools\\** folder.
 
 4.  In the Command prompt window, type the following command:
 
-    **Wsusutil configuressl***certificateName*
+    **Wsusutil configuressl**_certificateName_
 
     where:
 
