@@ -1,5 +1,5 @@
 ---
-Title: Virtualizing Domain Controllers using Hyper-V
+title: Virtualizing Domain Controllers using Hyper-V
 description: Considerations to make when virtualizing Windows Server Active Directory Domain Controllers in Hyper-V
 author: MicrosoftGuyJFlo
 ms.author: joflore
