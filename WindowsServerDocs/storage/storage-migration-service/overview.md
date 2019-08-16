@@ -88,7 +88,7 @@ The source server must run one of the following operating systems:
 - Windows Server 2016 Essentials
 - Windows Server 2019 Essentials
 
-Note: Windows Small Business Server and Windows Server Essentials are domain controllers. SMS does not currently support cutover of domain controllers, but will be able to perform inventory and transfer.   
+Note: Windows Small Business Server and Windows Server Essentials are domain controllers. Storage Migration Service can't yet cut over from domain controllers, but can inventory and transfer files from them.   
 
 If the orchestrator is running Windows Server, version 1903 or later, you can migrate the following additional source types:
 
