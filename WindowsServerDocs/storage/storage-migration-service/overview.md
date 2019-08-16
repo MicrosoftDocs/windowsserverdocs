@@ -1,10 +1,10 @@
 ---
-Title: Storage Migration Service overview
+title: Storage Migration Service overview
 description: Storage Migration Service makes it easier to migrate servers to a newer version of Windows Server. It provides a graphical tool that inventories data on servers and then transfers the data and configuration to newer servers—all without apps or users having to change anything.
 author: jasongerend
 ms.author: jgerend
 manager: elizapo
-ms.date: 08/15/2019
+ms.date: 08/16/2019
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: storage
