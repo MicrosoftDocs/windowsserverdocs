@@ -104,7 +104,7 @@ The Group Policy Objects (GPOs) are updated for Windows Server Essentials. They 
 
 2. Click **Start**, and then click **Server Management**. 
 
-3. In the navigation pane, click **Advanced Management**, click **Group Policy Management**, and then click **Forest:***<YourDomainName\>*. 
+3. In the navigation pane, click **Advanced Management**, click **Group Policy Management**, and then click **Forest:**_<YourDomainName\>_. 
 
 4. Click **Domains**, click *<YourDomainName\>*, and then click **Group Policy Objects**. 
 
@@ -146,7 +146,7 @@ We recommend you configure the password policy in Windows Server Essentials to e
 
 2. Click **Start**, and then click **Server Management**.
 
-3. In the navigation pane, click **Advanced Management**, click **Group Policy Management**, and then click **Forest:***<YourNetworkDomainName\>*
+3. In the navigation pane, click **Advanced Management**, click **Group Policy Management**, and then click **Forest:**_<YourNetworkDomainName\>_
 
 4. Click **Domains**, click *<YourNetworkDomainName\>*, and then click **WMI Filters**.
 
