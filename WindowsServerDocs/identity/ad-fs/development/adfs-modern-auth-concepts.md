@@ -105,7 +105,43 @@ Two types of libraries are used with AD FS:
 - **Client libraries**: Native clients and server apps use client libraries to acquire access tokens for calling a resource such as a Web API. Microsoft Authentication Library (MSAL) is the latest and recommended client library when using AD FS 2019. Active Directory Authentication Library (ADAL) is recommended for AD FS 2016.  
 
 - **Server middleware libraries**: Web apps use server middleware libraries for user sign in. Web APIs use server middleware libraries to validate tokens that are sent by native clients or by other servers. OWIN (Open Web Interface for .NET) is the recommended middleware library. 
- 
 
+## Customize ID Token (additional claims in ID Token)
  
- 
+In certain scenarios it is possible that the Web app (client) needs additional claims in an ID token to help in the functionality. This can be achieved by using one of the following options. 
+
+**Option 1:** Should be used when using a public client and web app does not have a resource that it is trying to access. The option requires 
+1.	response_mode set as form_post 
+2.	Relying party identifier (Web API identifier) is same as client identifier
+
+![AD FS Customize Token Option 1](media/adfs-modern-auth-concepts/option1.png)
+
+**Option 2:** Should be used when web app has a resource that it is trying to access and needs to pass additional claims through ID token. Both public and confidential clients can be used. The option requires 
+1.	response_mode set as form_post 
+2.	KB4019472 is installed on your AD FS servers 
+3.	Scope allatclaims assigned to the client – RP pair. You can assign the scope by using the Grant-ADFSApplicationPermission PowerShell cmdlet as indicated in the example below: 
+
+    ``` powershell
+    Grant-AdfsApplicationPermission -ClientRoleIdentifier "https://my/privateclient" -ServerRoleIdentifier "https://rp/fedpassive" -ScopeNames "allatclaims","openid"
+    ```
+
+![AD FS Customize Token Option 2](media/adfs-modern-auth-concepts/option2.png)
+
+To better understand how to configure a Web App in ADFS to acquire customized ID token see [Customize claims to be emitted in id_token when using OpenID Connect or OAuth with AD FS 2016 or later](Custom-Id-Tokens-in-AD-FS.md).
+
+## Single log-out
+
+Single logout results in ending all the client sessions using the session id. AD FS 2016 and later supports single log-out for OpenID Connect/OAuth. For more details see [Single log-out for OpenID Connect with AD FS](ad-fs-logout-openid-connect.md).
+
+
+## AD FS Endpoints
+
+|AD FS Endpoint|Description|
+|-----|-----|
+|/authorize|AD FS returns an authorization code which can be used to obtain the access token|
+|/token|AD FS returns an access token which can be used to access the resource (Web API)|
+|/userinfo|AD FS returns claims about the authenticated user|
+|/devicecode|AD FS returns the device code and user code|
+|/logout|AD FS logs out the user|
+|/keys|AD FS public keys used to sign responses|
+|/.well-known/openid-configuration|AD FS returns OAuth/OpenID Connect metadata|
