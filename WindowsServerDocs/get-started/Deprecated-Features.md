@@ -17,7 +17,8 @@ ms.localizationpriority: medium
 
 The following is a list of features and functionalities in Windows Server 2016 that have either been removed from the product in the current release or are planned for potential removal in subsequent releases (deprecated). It is intended for IT professionals who are updating operating systems in a commercial environment. This list is subject to change in subsequent releases and may not include every deprecated feature or functionality. For more details about a particular feature or functionality and its replacement, see the documentation for that feature.
 
-For info on what's been removed or deprecated in newer versions, see [Features removed or planned for replacement starting Windows Server 2019](../get-started-19/removed-features-19.md).
+> [!TIP]
+> For info on what's been removed or deprecated in newer versions, see [Features removed or planned for replacement in Windows Server](features-removed-in-windows-server.md).
 
 ## Features removed from Windows Server 2016
 

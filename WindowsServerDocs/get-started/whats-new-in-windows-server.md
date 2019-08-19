@@ -33,3 +33,4 @@ Windows Server Semi-Annual Channel releases deliver new operating system capabil
 
 - [Release Notes: Important issues in Windows Server 2019](../get-started-19/rel-notes-19.md)
 - [Release Notes: Important Issues in Windows Server 2016](Windows-Server-2016-GA-Release-Notes.md)
+- [Features removed or planned for replacement in Windows Server](features-removed-in-windows-server.md)
