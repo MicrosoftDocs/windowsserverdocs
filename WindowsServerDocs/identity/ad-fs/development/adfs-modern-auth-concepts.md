@@ -119,7 +119,7 @@ In certain scenarios it is possible that the Web app (client) needs additional c
 **Option 2:** Should be used when web app has a resource that it is trying to access and needs to pass additional claims through ID token. Both public and confidential clients can be used. The option requires 
 1.	response_mode set as form_post 
 2.	KB4019472 is installed on your AD FS servers 
-3.	Scope allatclaims assigned to the client – RP pair. You can assign the scope by using the Grant-ADFSApplicationPermission PowerShell cmdlet as indicated in the example below: 
+3.	Scope allatclaims assigned to the client – RP pair. You can assign the scope by using the Grant-ADFSApplicationPermission (Use Set-AdfsApplicationPermission if already granted once) PowerShell cmdlet as indicated in the example below: 
 
     ``` powershell
     Grant-AdfsApplicationPermission -ClientRoleIdentifier "https://my/privateclient" -ServerRoleIdentifier "https://rp/fedpassive" -ScopeNames "allatclaims","openid"
