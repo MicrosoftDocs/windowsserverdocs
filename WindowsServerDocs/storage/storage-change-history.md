@@ -7,7 +7,7 @@ ms.topic: article
 author: JasonGerend
 manager: brianlic
 ms.author: jgerend
-ms.date: 06/25/2019
+ms.date: 08/19/2019
 description: New and updated topics in the on-premises storage documentation for Windows Server for IT Pros.
 ---
 # Change history for storage topics in Windows Server
@@ -18,12 +18,18 @@ This topic lists new and updated topics in the [Storage](storage.md) documentati
 
 > If you're looking for update history for Windows Server, see [Windows 10 and Windows Server 2019 update history](https://support.microsoft.com/help/4464619) or [Windows Server 2016 update history](https://support.microsoft.com/help/4000825/windows-10-and-windows-server-2016-update-history).
 
+## August 2019
+
+| New or changed topic                                        | Description |
+| ---                                                         | ---           |
+| [Storage Migration Service FAQ](storage-migration-service/faq.md) | Updated to reflect new support for Linux sources. |
+
 ## June 2019
 
 | New or changed topic                                        | Description |
 | ---                                                         | ---           |
 | [Disk cleanup](file-server/disk-cleanup.md)                                              | New (Migrated from the [Previous Versions](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc770278(v%3dws.11)))
-| [Storage Migration Service FAQ](storage-migration-service/faq.md#consolidate-servers) | Added performance optimization info. |
+| [Storage Migration Service FAQ](storage-migration-service/faq.md#can-i-consolidate-multiple-servers-into-one-server) | Added performance optimization info. |
 
 ## May 2019
 
