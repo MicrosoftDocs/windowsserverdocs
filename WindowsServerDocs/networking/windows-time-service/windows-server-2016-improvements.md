@@ -1,4 +1,14 @@
-
+---
+title: Windows Server 2016 Improvements
+description: Windows Server 2016 has improved the algorithms it uses to correct time and condition the local clock to synchronize with UTC. 
+author: shortpatti
+ms.author: dacuo
+manager: dougkim
+ms.date: 10/17/2018
+ms.topic: article
+ms.prod: windows-server-threshold
+ms.technology: networking
+---
 
 ## Windows Server 2016 Improvements
 ### Windows Time Service and NTP
