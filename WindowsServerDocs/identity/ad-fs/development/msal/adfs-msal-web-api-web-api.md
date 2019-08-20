@@ -21,7 +21,7 @@ Before reading this article, you should be familiar with the [AD FS concepts](..
 
 
 - A client (Web App) - not represented on the diagram below - calls a protected Web API and provides a JWT bearer token in its "Authorization" Http header. 
-- The protected Web API validates the token and uses the MSAL [AcquireTokenOnBehalfOf](https://docs.microsoft.com/en-us/dotnet/api/microsoft.identity.client.confidentialclientapplication.acquiretokenonbehalfof?view=azure-dotnet) method to request (from AD FS) another token so that it can, itself, call a second web API (named the downstream web API) on behalf of the user. 
+- The protected Web API validates the token and uses the MSAL [AcquireTokenOnBehalfOf](https://docs.microsoft.com/en-us/dotnet/api/microsoft.identitymodel.clients.activedirectory.authenticationcontext.acquiretokenasync?view=azure-dotnet#Microsoft_IdentityModel_Clients_ActiveDirectory_AuthenticationContext_AcquireTokenAsync_System_String_Microsoft_IdentityModel_Clients_ActiveDirectory_ClientCredential_Microsoft_IdentityModel_Clients_ActiveDirectory_UserAssertion_) method to request (from AD FS) another token so that it can, itself, call a second web API (named the downstream web API) on behalf of the user. 
 - The protected web API uses this token to call a downstream API. It can also call AcquireTokenSilentlater to request tokens for other downstream APIs (but still on behalf of the same user). AcquireTokenSilent refreshes the token when needed.  
  
      ![overview](media/adfs-msal-web-api-web-api/webapi1.png)
@@ -131,9 +131,8 @@ This section shows how to register the Native App as a public client and Web API
   
       ![App Reg](media/adfs-msal-web-api-web-api/webapi20.png)
 
-  28. Enter **PassAllClaims** in **Claim rule name:** field and following claim rule in Custom rule: field and click Finish.  
-  x:[] 
-  => issue(claim=x); 
+  28. Enter **PassAllClaims** in **Claim rule name:** field and **x:[] => issue(claim=x);** claim rule in Custom rule: field and click Finish.  
+   
 ![App Reg](media/adfs-msal-web-api-web-api/webapi21.png)
 
   29. Click OK on WebApiToWebApi – Web API Properties screen
@@ -209,6 +208,9 @@ Once the code changes are made rebuild the solution
   
       ![App Reg](media/adfs-msal-web-api-web-api/webapi31.png)
 
+  > [!NOTE]  
+  > If you don’t see the native app screen, search and remove *msalcache.bin files from the folder where project repo is saved on your system. 
+  
   5. You will be re-directed to the AD FS sign-in page. Go ahead and sign in. 
   
       ![App Reg](media/adfs-msal-web-api-web-api/webapi32.png)
