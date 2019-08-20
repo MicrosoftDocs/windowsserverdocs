@@ -21,6 +21,8 @@ There are some Server versions that need additional preparation before they are 
 - [Microsoft Hyper-V Server 2016](#prepare-microsoft-hyper-v-server-2016)
 - [Microsoft Hyper-V Server 2012 R2](#prepare-microsoft-hyper-v-server-2012-r2)
 
+There are also some scenarios where [port configuration on the target server](#port-configuration-on-the-target-server) may need to be modified before managing with Windows Admin Center.
+
 ## Prepare Windows Server 2012 and 2012 R2
 
 ### Install WMF version 5.1 or higher
@@ -140,6 +142,10 @@ To enable Hyper-V Module for PowerShell features:
 ![](../media/prepare-environment/7ab0999602b7083733525bd0c1ba2747.png)
 
 Microsoft Hyper-V Server 2012 R2 is now ready for management with Windows Admin Center.
+
+## Port configuration on the target server
+
+In some management scenarios, Windows Admin Center will invoke an operation that copies files from the Windows Admin Center gateway to the target server using SMB.  For these operations to succeed, the firewall on the target server needs to be configured to allow inbound connections on port 445.
 
 > [!Tip]
 > Ready to install Windows Admin Center? [Download now](https://docs.microsoft.com/windows-server/manage/windows-admin-center/understand/windows-admin-center#download-now)
