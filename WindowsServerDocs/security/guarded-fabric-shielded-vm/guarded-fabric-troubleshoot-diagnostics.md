@@ -151,9 +151,9 @@ Steps to performing a manual diagnosis are as follows:
 
 1. Request that each host administrator run `Get-HgsTrace` specifying a known `-Path` and the list of diagnostics you intend to run against the resulting traces.  For example:
 
- ```PowerShell
- Get-HgsTrace -Path C:\Traces -Diagnostic Networking,BestPractices
- ```
+   ```PowerShell
+   Get-HgsTrace -Path C:\Traces -Diagnostic Networking,BestPractices
+   ```
 2. Request that each host administrator package the resulting traces folder and send it to you.  This process can be driven over e-mail, via file shares, or any other mechanism based on the operating policies and procedures established by your organization.
 
 3. Merge all received traces into a single folder, with no other contents or folders.
@@ -176,9 +176,9 @@ Steps to performing a manual diagnosis are as follows:
 
 4. Execute diagnostics, providing the path to the assembled trace folder on the `-Path` parameter and specifying the `-RunDiagnostics` switch as well as those diagnostics for which you asked your administrators to collect traces.  Diagnostics will assume it cannot access the hosts found inside the path and will therefore attempt to use only the pre-collected traces.  If any traces are missing or damaged, diagnostics will fail only the affected tests and proceed normally.  For example:
 
- ```PowerShell
- Get-HgsTrace -RunDiagnostics -Diagnostic Networking,BestPractices -Path ".\FabricTraces"
- ```
+   ```PowerShell
+   Get-HgsTrace -RunDiagnostics -Diagnostic Networking,BestPractices -Path ".\FabricTraces"
+   ```
 
 ### Mixing Saved Traces with Additional Targets
 

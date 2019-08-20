@@ -24,11 +24,11 @@ If you are using virtual machines for any of the Remote Desktop Services servers
   
   
 1.  Add all the servers you're going to use for Remote Desktop Services to Server Manager:  
-    1.  In Server Manager click **Manage > Add Servers**.  
+    1.  In Server Manager, click **Manage** > **Add Servers**.  
     2.  Click **Find Now**.  
     3.  Click each server in the deployment (for example, Contoso-Cb1, Contoso-WebGw1, and Contoso-Sh1) and click **OK**.  
 2.  Create a session-based deployment to deploy the Remote Desktop Services components:  
-    1.  In Server Manager, click **Manage > Add Roles and Features**.  
+    1.  In Server Manager, click **Manage** > **Add Roles and Features**.  
     2.  Click **Remote Desktop Services installation**, **Standard Deployment**, and **Session-based desktop deployment**.  
     3.  Select the appropriate servers for the RD Connection Broker server, RD Web Access server, and RD Session Host server (for example, Contoso-Cb1, Contoso-WebGw1, and Contoso-SH1, respectively).  
     4.  Select **Restart the destination server automatically if required**, and then click **Deploy**.  

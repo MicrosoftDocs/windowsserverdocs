@@ -14,7 +14,6 @@ ms.technology: identity-adfs
 
 # Add Privacy Link 
 
->Applies To: Windows Server 2016, Windows Server 2012 R2
 
 To add the privacy link that is displayed on the sign\-in page, use the following Windows PowerShell cmdlet and syntax.  
 

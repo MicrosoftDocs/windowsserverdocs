@@ -1,28 +1,27 @@
 ---
-title: Build a single page web application using OAuth and ADAL.JS with AD FS 2016
+title: Build a single page web application using OAuth and ADAL.JS with AD FS 2016 or later
 description: A walkthrough which provides instructions for authenticating against AD FS using ADAL for JavaScript securing an AngularJS based single page application
 author: billmath
 ms.author: billmath
 manager: mtillman
-ms.date: 06/12/2018
+ms.date: 06/13/2018
 ms.topic: article
 ms.prod: windows-server-threshold
 
 ms.technology: active-directory-federation-services
 ---
 
-# Build a single page web application using OAuth and ADAL.JS with AD FS 2016
-
->Applies To: Windows Server 2016
+# Build a single page web application using OAuth and ADAL.JS with AD FS 2016 or later
 
 This walkthrough provides instruction for authenticating against AD FS using ADAL for JavaScript securing an AngularJS based single page application, implemented with an ASP.NET Web API backend.
 
 In this scenario, when the user signs in, the JavaScript front end uses [Active Directory Authentication Library for JavaScript (ADAL.JS)](https://github.com/AzureAD/azure-activedirectory-library-for-js) and the implicit authorization grant to obtain an ID token (id_token) from Azure AD. The token is cached and the client attaches it to the request as the bearer token when making calls to its Web API back end, which is secured using the OWIN middleware.
 
->WARNING: The example that you can build here is for educational purposes only. These instructions are for the simplest, most minimal implementation possible to expose the required elements of the model. The example may not include all aspects of error handling and other relate functionality.
+>[!IMPORTANT]
+>The example that you can build here is for educational purposes only. These instructions are for the simplest, most minimal implementation possible to expose the required elements of the model. The example may not include all aspects of error handling and other relate functionality.
 
 >[!NOTE]
->This walkthrough is applicable **only** to AD FS Server 2016 and higher 
+>This walkthrough is applicable **only** to AD FS Server 2016 and later 
 
 ## Overview
 In this sample we will be creating an authentication flow where a single page application client will be authenticating against AD FS to secure access to the WebAPI resources on the backend. Below is the overall authentication flow
@@ -48,7 +47,7 @@ You can, if you want, use only two machines. One for DC/AD FS and the other for 
 
 How to setup the domain controller and AD FS is beyond the scope of this article. For additional deployment information see:
 
-- [AD DS Deployment](../../ad-ds/deploy/AD-DS-Deployment.md) 
+- [AD DS Deployment](../../ad-ds/deploy/AD-DS-Deployment.md)
 - [AD FS Deployment](../AD-FS-Deployment.md)
 
 
@@ -77,15 +76,18 @@ The key files containing authentication logic are the following:
 In the sample, the WebAPI is configured to listen at https://localhost:44326/. The application group **Web browser accessing a web application** can be used for configuring implicit grant flow application.
 
 1. Open the AD FS management console and click on **Add Application Group**. In the **Add Application Group Wizard** enter the name of the application, description and select the **Web browser accessing a web application** template from the **Client-Server applications** section as shown below
-    <br>![Create new application group](media/Single-Page-Application-with-AD-FS/appgroup_step1.png)
+
+    ![Create new application group](media/Single-Page-Application-with-AD-FS/appgroup_step1.png)
 
 2. On the next page **Native application**, provide the application client identifier and redirect URI as shown below
-    <br>![Create new application group](media/Single-Page-Application-with-AD-FS/appgroup_step2.png)
+
+    ![Create new application group](media/Single-Page-Application-with-AD-FS/appgroup_step2.png)
 
 3. On the next page **Apply Access Control Policy** leave the permissions as *Permit everyone*
 
 4. The summary page should look similar to below
-    <br>![Create new application group](media/Single-Page-Application-with-AD-FS/appgroup_step3.png)
+
+    ![Create new application group](media/Single-Page-Application-with-AD-FS/appgroup_step3.png)
 
 5. Click on **Next** to complete the addition of the application group and close the wizard.
 
@@ -104,14 +106,14 @@ Open the **app.js** file and change the **adalProvider.init** definition to:
         $httpProvider
         );
 
-|Configuration|Description
-|--------|--------
-|instance|Your STS URL, e.g. https://fs.contoso.com/
-|tenant|Keep it as 'adfs'
-|clientID|This is the client ID you specified while configuring the public client for your single page application
+|Configuration|Description|
+|--------|--------|
+|instance|Your STS URL, e.g. https://fs.contoso.com/|
+|tenant|Keep it as 'adfs'|
+|clientID|This is the client ID you specified while configuring the public client for your single page application|
 
 ## Configure WebAPI to use AD FS
-Open the **Startup.Auth.cs** file in the sample and add the following at the beginning: 
+Open the **Startup.Auth.cs** file in the sample and add the following at the beginning:
 
 	using System.IdentityModel.Tokens;
 
@@ -138,11 +140,11 @@ and add:
     }
     );
 
-|Parameter|Description
-|--------|--------
-|ValidAudience|This configures the value of 'audience' that will be checked against in the token
-|ValidIssuer|This configures the value of 'issuer that will be checked against in the token
-|MetadataEndpoint|This points to the metadata information of your STS
+|Parameter|Description|
+|--------|--------|
+|ValidAudience|This configures the value of 'audience' that will be checked against in the token|
+|ValidIssuer|This configures the value of 'issuer that will be checked against in the token|
+|MetadataEndpoint|This points to the metadata information of your STS|
 
 ## Add application configuration for AD FS
 Change the appsettings as below:
@@ -156,7 +158,7 @@ Change the appsettings as below:
 ## Running the solution
 Clean the solution, rebuild the solution and run it. If you want to see detailed traces, launch Fiddler and enable HTTPS decryption.
 
-The browser will load the SPA and you will be presented with the following screen:
+The browser (use Chrome browser) will load the SPA and you will be presented with the following screen:
 
 ![Register the client](media/Single-Page-Application-with-AD-FS/singleapp3.PNG)
 

@@ -28,5 +28,5 @@ The HGS cluster must already be [set up by the HGS administrator](/WindowsServer
 
 ## Next step
 
->[!div class="nextstepaction"]
-[Configure HGS DNS and a one-way trust](guarded-fabric-configure-dns-forwarding-and-trust.md)
+> [!div class="nextstepaction"]
+> [Configure HGS DNS and a one-way trust](guarded-fabric-configure-dns-forwarding-and-trust.md)

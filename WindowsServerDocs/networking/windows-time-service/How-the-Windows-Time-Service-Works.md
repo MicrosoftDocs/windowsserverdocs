@@ -17,13 +17,13 @@ ms.technology: networking
 
 **In this section**  
   
--   [Windows Time Service Architecture](#w2k3tr_times_how_rrfo)  
+-   [Windows Time Service Architecture](#windows-time-service-architecture)  
   
--   [Windows Time Service Time Protocols](#w2k3tr_times_how_ekoc)  
+-   [Windows Time Service Time Protocols](#windows-time-service-time-protocols)  
   
--   [Windows Time Service Processes and Interactions](#w2k3tr_times_how_izcr)  
+-   [Windows Time Service Processes and Interactions](#windows-time-service-processes-and-interactions)  
   
--   [Network Ports Used by Windows Time Service](#w2k3tr_times_how_ydum)  
+-   [Network Ports Used by Windows Time Service](#network-ports-used-by-windows-time-service)  
   
 > [!NOTE]  
 > This topic explains only how the Windows Time service (W32Time) works. For information about how to configure Windows Time service, see [Configuring Systems for High Accuracy](configuring-systems-for-high-accuracy.md).
@@ -52,7 +52,7 @@ The degree to which a computer's time is accurate is called a stratum. The most 
   
 When the W32Time Manager receives time samples, it uses special algorithms in NTP to determine which of the time samples is the most appropriate for use. The time service also uses another set of algorithms to determine which of the configured time sources is the most accurate. When the time service has determined which time sample is best, based on the above criteria, it adjusts the local clock rate to allow it to converge toward the correct time. If the time difference between the local clock and the selected accurate time sample (also called the time skew) is too large to correct by adjusting the local clock rate, the time service sets the local clock to the correct time. This adjustment of clock rate or direct clock time change is known as clock discipline.  
   
-## <a name="w2k3tr_times_how_rrfo"></a>Windows Time Service Architecture  
+## Windows Time Service Architecture  
 The Windows Time service consists of the following components:  
   
 -   Service Control Manager  
@@ -83,7 +83,7 @@ The time synchronization process involves the following steps:
   
 If a computer has been designated as a time server, it can send the time on to any computer requesting time synchronization at any point in this process.  
   
-## <a name="w2k3tr_times_how_ekoc"></a>Windows Time Service Time Protocols  
+## Windows Time Service Time Protocols  
 
 Time protocols determine how closely two computers' clocks are synchronized. A time protocol is responsible for determining the best available time information and converging the clocks to ensure that a consistent time is maintained on separate systems.  
   
@@ -139,7 +139,7 @@ The Windows Time service can interoperate with computers running Windows NT 4.0 
   
 Windows NT 4.0 uses a simpler mechanism for time synchronization than the Windows Time service uses. Therefore, to ensure accurate time synchronization across your network, it is recommended that you upgrade any Windows NT 4.0 domain controllers to Windows 2000 or Windows Server 2003.  
   
-## <a name="w2k3tr_times_how_izcr"></a>Windows Time Service Processes and Interactions  
+## Windows Time Service Processes and Interactions  
 
 The Windows Time service is designed to synchronize the clocks of computers on a network. The network time synchronization process, also called time convergence, occurs throughout a network as each computer accesses time from a more accurate time server. Time convergence involves a process by which an authoritative server provides the current time to client computers in the form of NTP packets. The information provided within a packet indicates whether an adjustment needs to be made to the computer's current clock time so that it is synchronized with the more accurate server.  
   
@@ -247,7 +247,7 @@ The only time servers that are trusted by clients even if they have not synchron
 ### Disabling the Windows Time Service  
 The Windows Time service (W32Time) can be completely disabled. If you choose to implement a third-party time synchronization product that uses NTP, you must disable the Windows Time service. This is because all NTP servers need access to User Datagram Protocol (UDP) port 123, and as long as the Windows Time service is running on the Windows Server 2003 operating system, port 123 remains reserved by Windows Time.  
   
-## <a name="w2k3tr_times_how_ydum"></a>Network Ports Used by Windows Time Service  
+## Network Ports Used by Windows Time Service  
 The Windows Time service communicates on a network to identify reliable time sources, obtain time information, and provide time information to other computers. It performs this communication as defined by the NTP and SNTP RFCs.  
   
 **Port Assignments for the Windows Time Service**  

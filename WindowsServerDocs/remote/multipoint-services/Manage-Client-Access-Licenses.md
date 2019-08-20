@@ -19,7 +19,7 @@ Every station that connects to a MultiPoint Services system, including the compu
 
 If you are using station virtual desktops instead of physical stations, you must install a CAL for each station virtual desktop.  
   
-1.  Purchase a client license for each station that is connected to your MultiPoint Services computer or server. For more information about purchasing CALs, visit the documentation for Remote Desktop licensing. <!--@Liza: add link to RDS licensing here-->
+1.  Purchase a client license for each station that is connected to your MultiPoint Services computer or server. For more information about purchasing CALs, visit the documentation for Remote Desktop licensing. 
 
 2.  From the **Start** screen, open **MultiPoint Manager**.  
   
@@ -34,15 +34,15 @@ period being expired. Follow these steps to set the licensing mode:
 2. In the left pane, navigate to **Local Computer Policy->Computer Configuration->Administrative Templates->Windows Components->Remote Desktop Services->Remote Desktop Session Host->Licensing**.
 
 3. In the right pane, right click **Use the specified Remote Desktop license servers** and select **Edit**:
-  - In the group policy editor dialog, select **Enabled**
-  - Enter the local computer name in the **License servers to use** field.
-  - Select **OK**
+   - In the group policy editor dialog, select **Enabled**
+   - Enter the local computer name in the **License servers to use** field.
+   - Select **OK**
   
 4. In the right pane, right click **Set the Remote Desktop licensing mode** and select **Edit**
- - In the group policy editor dialog, select **Enabled**
- - Set the **Licensing mode** to Per Device/Per User
- - Select **OK** 
+   - In the group policy editor dialog, select **Enabled**
+   - Set the **Licensing mode** to Per Device/Per User
+   - Select **OK** 
 
-  
+  
 ## See Also  
 [Manage System Tasks Using MultiPoint Manager](Manage-System-Tasks-Using-MultiPoint-Manager.md)

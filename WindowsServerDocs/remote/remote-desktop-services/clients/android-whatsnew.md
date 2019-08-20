@@ -11,12 +11,21 @@ ms.topic: article
 author: lizap
 manager: dongill
 ms.author: elizapo
-ms.date: 05/06/2019
+ms.date: 06/05/2019
 ms.localizationpriority: medium
 ---
 # What's new for the Remote Desktop client on Android?
 
 We regularly update the [Remote Desktop client for Android](remote-desktop-android.md), adding new features and fixing issues. Check out the latest updates below.
+
+## Updates for version 8.1.71
+
+*Published date: 06/05/2019*
+
+- Removed support for Android versions 4.0.3 and 4.0.4.
+- Fixed an issue where remote resources of the same name didn't show correctly.
+- Updated the app icon.
+- Minor bug fixes and improvements.
 
 ## Updates for version 8.1.70
 

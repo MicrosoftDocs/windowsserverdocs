@@ -14,8 +14,6 @@ ms.technology: identity-adfs
 
 # Name Resolution Requirements for Federation Servers
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
-
 When client computers on the corporate network attempt to access an application or Web service that is protected by Active Directory Federation Services \(AD FS\), they must first authenticate to a federation server. One way to authenticate is to have the corporate network clients access a local federation server through Windows Integrated Authentication.  
   
 ## Configure corporate DNS  

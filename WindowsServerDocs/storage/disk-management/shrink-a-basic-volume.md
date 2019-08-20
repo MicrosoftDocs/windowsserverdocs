@@ -1,7 +1,7 @@
 ---
 title: Shrink a basic volume
 description: This article describes how to shrink a basic volume
-ms.date: 10/12/2017
+ms.date: 06/07/2019
 ms.prod: windows-server-threshold 
 ms.technology: storage 
 ms.topic: article 
@@ -9,12 +9,11 @@ author: JasonGerend
 manager: brianlic 
 ms.author: jgerend 
 ---
-
 # Shrink a basic volume
 
-> **Applies To:** Windows 10, Windows 8.1, Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> **Applies To:** Windows 10, Windows 8.1, Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-You can decrease the space used by primary partitions and logical drives by shrinking them into adjacent, contiguous space on the same disk. For example, if you discover that you need an additional partition but do not have additional disks, you can shrink the existing partition from the end of the volume to create new unallocated space that can then be used for a new partition. The shrink operation can be blocked by the presence of certain file types. For more information, see [Additional Considerations](#addcon) 
+You can decrease the space used by primary partitions and logical drives by shrinking them into adjacent, contiguous space on the same disk. For example, if you discover that you need an additional partition but do not have additional disks, you can shrink the existing partition from the end of the volume to create new unallocated space that can then be used for a new partition. The shrink operation can be blocked by the presence of certain file types. For more information, see [Additional considerations](#additional-considerations) 
 
 When you shrink a partition, any ordinary files are automatically relocated on the disk to create the new unallocated space. There is no need to reformat the disk to shrink the partition.
 
@@ -23,13 +22,9 @@ When you shrink a partition, any ordinary files are automatically relocated on t
 
 ## Shrinking a basic volume
 
--   [Using the Windows interface](#BKMK_WINUI)
--   [Using a command line](#BKMK_CMD)
-
 > [!NOTE]
 > You must be a member of the **Backup Operators** or **Administrators** group, at minimum, to complete these steps.
 
-<a id="BKMK_WINUI"></a>
 #### To shrink a basic volume using the Windows interface
 
 1.  In Disk Manager, right-click the basic volume you want to shrink.
@@ -38,12 +33,10 @@ When you shrink a partition, any ordinary files are automatically relocated on t
 
 3.  Follow the on-screen instructions.
 
-<br />
 
 > [!NOTE]
 > You can only shrink basic volumes that have no file system or that use the NTFS file system.
 
-<a id="BKMK_CMD"></a>
 #### To shrink a basic volume using a command line
 
 1.  Open a command prompt and type `diskpart`.
@@ -54,17 +47,13 @@ When you shrink a partition, any ordinary files are automatically relocated on t
 
 4.  At the **DISKPART** prompt, type `shrink [desired=<desiredsize>] [minimum=<minimumsize>]`. Shrinks the selected volume to *desiredsize* in megabytes (MB) if possible, or to *minimumsize* if *desiredsize* is too large.
 
-<br />
-
-| Value | Description|
-|---|---|
-| <p>**list volume**</p> | <p>Displays a list of basic and dynamic volumes on all disks.</p>|
-| <p>**select volume**</p> | <p>Selects the specified volume, where <em>volumenumber</em> is the volume number, and gives it focus. If no volume is specified, the **select** command lists the current volume with focus. You can specify the volume by number, drive letter, or mount point path. On a basic disk, selecting a volume also gives the corresponding partition focus.</p> |
-| <p>**shrink**</p> | <p>Shrinks the volume with focus to create unallocated space. No data loss occurs. If the partition includes unmovable files (such as the page file or the shadow copy storage area), the volume will shrink to the point where the unmovable files are located. |
-| <p>**desired=** <em>desiredsize</em></p> | <p>The amount of space, in megabytes, to recover to the current partition.</p> |
-| <p>**minimum=** <em>minimumsize</em></p> | <p>The minimum amount of space, in megabytes, to recover to the current partition. If you do not specify a desired or minimum size, the command will reclaim the maximum amount of space possible.</p> 
-
-<a id="addcon"></a>
+| Value             | Description |
+| ---               | ----------- |
+| **list volume** | Displays a list of basic and dynamic volumes on all disks. |
+| **select volume** | Selects the specified volume, where <em>volumenumber</em> is the volume number, and gives it focus. If no volume is specified, the **select** command lists the current volume with focus. You can specify the volume by number, drive letter, or mount point path. On a basic disk, selecting a volume also gives the corresponding partition focus. |
+| **shrink** | Shrinks the volume with focus to create unallocated space. No data loss occurs. If the partition includes unmovable files (such as the page file or the shadow copy storage area), the volume will shrink to the point where the unmovable files are located. |
+| **desired=** <em>desiredsize</em> | The amount of space, in megabytes, to recover to the current partition. |
+| **minimum=** <em>minimumsize</em> | The minimum amount of space, in megabytes, to recover to the current partition. If you do not specify a desired or minimum size, the command will reclaim the maximum amount of space possible. |
 
 ## Additional considerations
 

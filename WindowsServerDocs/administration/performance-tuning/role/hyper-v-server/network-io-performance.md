@@ -17,8 +17,8 @@ Server 2016 contains several improvements and new functionality to optimize netw
 
 Live Migration lets you to transparently move running virtual machines from one node of a failover cluster to another node in the same cluster without a dropped network connection or perceived downtime.
 
-**Note**  
-Failover Clustering requires shared storage for the cluster nodes.
+> [!NOTE]
+> Failover Clustering requires shared storage for the cluster nodes.
 
 The process of moving a running virtual machine can be divided into two major phases. The first phase copies the memory of the virtual machine from the current host to the new host. The second phase transfers the virtual machine state from the current host to the new host. The durations of both phases is greatly determined by the speed at which data can be transferred from the current host to the new host.
 

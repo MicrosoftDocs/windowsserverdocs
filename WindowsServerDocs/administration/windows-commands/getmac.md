@@ -24,15 +24,17 @@ Returns the media access control (MAC) address and list of network protocols ass
 getmac[.exe][/s <computer> [/u <Domain\<User> [/p <Password>]]][/fo {TABLE | list | CSV}][/nh][/v]
 ```
 ### Parameters
-|Parameter|Description|
-|-------|--------|
-|/s <computer>|Specifies the name or IP address of a remote computer (do not use backslashes). The default is the local computer.|
-|/u <Domain>\\<User>|Runs the command with the account permissions of the user specified by User or Domain\User. The default is the permissions of the current logged on user on the computer issuing the command.|
-|/p <Password>|Specifies the password of the user account that is specified in the **/u** parameter.|
-|/fo { TABLE &#124; list&#124; CSV}|Specifies the format to use for the query output. Valid values are **TABLE**, **list**, and **CSV**. The default format for output is **TABLE**.|
-|/nh|Suppresses column header in output. Valid when the **/fo** parameter is set to **TABLE** or **CSV**.|
-|/v|Specifies that the output display verbose information.|
-|/?||
+
+|             Parameter              |                                                                                          Description                                                                                          |
+|------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|           /s <computer>            |                                      Specifies the name or IP address of a remote computer (do not use backslashes). The default is the local computer.                                       |
+|        /u <Domain>\\<User>         | Runs the command with the account permissions of the user specified by User or Domain\User. The default is the permissions of the current logged on user on the computer issuing the command. |
+|           /p <Password>            |                                                     Specifies the password of the user account that is specified in the **/u** parameter.                                                     |
+| /fo { TABLE &#124; list&#124; CSV} |                       Specifies the format to use for the query output. Valid values are **TABLE**, **list**, and **CSV**. The default format for output is **TABLE**.                        |
+|                /nh                 |                                             Suppresses column header in output. Valid when the **/fo** parameter is set to **TABLE** or **CSV**.                                              |
+|                 /v                 |                                                                    Specifies that the output display verbose information.                                                                     |
+|                 /?                 |                                                                                                                                                                                               |
+
 ## Remarks
 **getmac** can be useful either when you want to enter the MAC address into a network analyzer or when you need to know what protocols are currently in use on each network adapter in a computer.
 ## <a name="BKMK_Examples"></a>Examples

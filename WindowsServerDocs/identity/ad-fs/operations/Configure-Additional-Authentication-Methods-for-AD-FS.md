@@ -5,7 +5,7 @@ description:
 author: billmath
 ms.author: billmath
 manager: femila
-ms.date: 10/04/2018
+ms.date: 07/26/2019
 ms.topic: article
 ms.prod: windows-server-threshold
 
@@ -13,8 +13,6 @@ ms.technology: identity-adfs
 ---
 
 # Configure Additional Authentication Methods for AD FS
-
->Applies To: Windows Server 2016, Windows Server 2012 R2
 
 In order to enable multi-factor authentication (MFA), you must select at least one additional authentication method. By default, in Active Directory Federation Services (AD FS) in Windows Server 2012 R2, you can select Certificate Authentication (in other words, smart card-based authentication) as an additional authentication method.
 
@@ -32,6 +30,7 @@ Below is an alphabetical list of Microsoft and third-party providers with MFA of
 |-|-|-| 
 |aPersona|aPersona Adaptive Multi-Factor Authentication for Microsoft ADFS SSO|[aPersona ASM ADFS Adapter](https://www.apersona.com/adfs)|
 |Duo Security|Duo MFA Adapter for AD FS|[Duo Authentication for AD FS](https://duo.com/docs/adfs)|
+|Futurae|Futurae Authentication Suite for AD FS|[Futurae Strong Authentication](https://futurae.com)|
 |Gemalto|Gemalto Identity & Security Services|[http://www.gemalto.com/identity](http://www.gemalto.com/identity)|
 |inWebo Technologies|inWebo Enterprise Authentication service|[inWebo Enterprise Authentication](http://www.inwebo.com)|
 |Login People|Login People MFA API connector for AD FS 2012 R2 (public beta)|[https://www.loginpeople.com](https://www.loginpeople.com)|

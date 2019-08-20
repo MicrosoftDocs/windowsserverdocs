@@ -14,9 +14,6 @@ ms.technology: identity-adfs
 
 # Create a Rule to Send an AD FS 1.x Compatible Claim
 
->Applies To: Windows Server 2016, Windows Server 2012 R2
-
-
 In situations in which you are using Active Directory Federation Services \(AD FS\) to issue claims that will be received by federation servers running AD FS 1.0 \(Windows Server 2003 R2\) or AD FS 1.1 \(Windows Server 2008 or Windows Server 2008 R2\), you must do the following:  
   
 -   Create a rule that will send a Name ID claim type with a format of UPN, Email, or Common Name.  
@@ -41,9 +38,6 @@ Depending on the needs of your organization, use one of the following procedures
   
 > [!NOTE]  
 > For this rule to work as expected, make sure that the relying party trust or claims provider trust where you are creating this rule has been configured to use the **AD FS 1.0 and 1.1 profile**. 
-
-
-
 
 ## To create a rule to issue an AD FS 1.*x* Name ID claim using the Pass Through or Filter an Incoming Claim rule template on a Relying Party Trust in Windows Server 2016 
 
@@ -124,11 +118,10 @@ Depending on the needs of your organization, use one of the following procedures
     -   **Pass through only claim values that match a specific email suffix value**  
   
     -   **Pass through only claim values that start with a specific value**  
-![create rule](media/Create-a-Rule-to-Send-an-AD-FS-1x-Compatible-Claim/adfs3.PNG)   
+![create rule](media/Create-a-Rule-to-Send-an-AD-FS-1x-Compatible-Claim/adfs3.PNG)
 
 10. Click **Finish**, and then click **OK** to save the rule.  
 
-  
 
 ## To create a rule to transform an incoming claim on a Relying Party Trust in Windows Server 2016 
 
@@ -138,13 +131,13 @@ Depending on the needs of your organization, use one of the following procedures
 ![create rule](media/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim/claimrule9.PNG)  
   
 3.  Right\-click the selected trust, and then click **Edit Claim Issuance Policy**.
-![create rule](media/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim/claimrule10.PNG)   
+![create rule](media/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim/claimrule10.PNG)
   
 4.  In the **Edit Claim Issuance Policy** dialog box, under **Issuance Transform Rules** click **Add Rule** to start the rule wizard. 
-![create rule](media/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim/claimrule11.PNG)    
+![create rule](media/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim/claimrule11.PNG)
 
 5.  On the **Select Rule Template** page, under **Claim rule template**, select **Transform an Incoming Claim** from the list, and then click **Next**.  
-![create rule](media/Create-a-Rule-to-Transform-an-Incoming-Claim/transform3.PNG)      
+![create rule](media/Create-a-Rule-to-Transform-an-Incoming-Claim/transform3.PNG)
 
 6.  On the **Configure Rule** page, type a claim rule name.  
   
@@ -167,7 +160,7 @@ Depending on the needs of your organization, use one of the following procedures
     -   **Replace an incoming claim value with a different outgoing claim value**  
   
     -   **Replace incoming e\-mail suffix claims with a new e\-mail suffix**  
-![create rule](media/Create-a-Rule-to-Send-an-AD-FS-1x-Compatible-Claim/adfs4.PNG)    
+![create rule](media/Create-a-Rule-to-Send-an-AD-FS-1x-Compatible-Claim/adfs4.PNG)
 
 11. Click **Finish**, and then click **OK** to save the rule.  
 
@@ -272,7 +265,7 @@ Depending on the needs of your organization, use one of the following procedures
     -   **Pass through only claim values that match a specific email suffix value**  
   
     -   **Pass through only claim values that start with a specific value**  
-![create rule](media/\Create-a-Rule-to-Send-an-AD-FS-1x-Compatible-Claim/adfs1.PNG)   
+![create rule](media/Create-a-Rule-to-Send-an-AD-FS-1x-Compatible-Claim/adfs1.PNG)
 
 10. Click **Finish**, and then click **OK** to save the rule.  
 

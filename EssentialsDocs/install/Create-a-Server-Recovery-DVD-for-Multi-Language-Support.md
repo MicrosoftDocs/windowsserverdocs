@@ -25,20 +25,20 @@ manager: dongill
   
  There are two phases of setup: the Windows Preinstallation Environment (Windows PE) and the initial configuration. By default, the language selection page in initial configuration will not be displayed.  
   
--   For an OEM remotely administered installation or an OEM preinstallation scenario, you need to add a registry key using following command to display the language selection page in initial configuration.  
+- For an OEM remotely administered installation or an OEM preinstallation scenario, you need to add a registry key using following command to display the language selection page in initial configuration.  
   
-    ```  
-    %systemroot%\system32\reg.exe add "HKLM\Software\microsoft\windows server\setup" /v ShowPreinstallPages /t REG_SZ /d true /f  
-    ```  
+  ```  
+  %systemroot%\system32\reg.exe add "HKLM\Software\microsoft\windows server\setup" /v ShowPreinstallPages /t REG_SZ /d true /f  
+  ```  
   
-    > [!IMPORTANT]
-    >  When OEMs create an image in the lab, they must choose **English** as the language during the Windows PE phase of setup.  
+  > [!IMPORTANT]
+  >  When OEMs create an image in the lab, they must choose **English** as the language during the Windows PE phase of setup.  
   
--   For a Reseller Option Kit (ROK) scenario, customers receive a DVD, and perhaps, some hardware. The customer should able to select the language during Windows PE setup, and the language selection page is no longer displayed during initial configuration.  
+- For a Reseller Option Kit (ROK) scenario, customers receive a DVD, and perhaps, some hardware. The customer should able to select the language during Windows PE setup, and the language selection page is no longer displayed during initial configuration.  
   
- You may choose to ship a single dual-layer DVD that contains multiple languages.  
+  You may choose to ship a single dual-layer DVD that contains multiple languages.  
   
- This section describes how to add language support to Windows Setup. The primary tool for customizing Windows PE 3.0 is Deployment Image Servicing and Management (DISM), a command-line tool. This solution enables the following scenarios:  
+  This section describes how to add language support to Windows Setup. The primary tool for customizing Windows PE 3.0 is Deployment Image Servicing and Management (DISM), a command-line tool. This solution enables the following scenarios:  
   
 1.  Creating multilingual installations  
   

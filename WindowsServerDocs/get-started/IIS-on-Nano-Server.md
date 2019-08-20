@@ -71,12 +71,12 @@ For offline installation, add the package with the -Packages parameter of New-Na
 If you have an existing VHD file, you can install IIS offline with DISM.exe by mounting the VHD, and then using the **Add-Package** option.   
 The following example steps assume that you are running from the directory specified by BasePath option, which was created after running New-NanoServerImage.  
 
-1.	mkdir mountdir
-2.	.\Tools\dism.exe /Mount-Image /ImageFile:.\NanoServer.vhd /Index:1 /MountDir:.\mountdir
-3.	.\Tools\dism.exe /Add-Package /PackagePath:.\packages\Microsoft-NanoServer-IIS-Package.cab /Image:.\mountdir
-4.	.\Tools\dism.exe /Add-Package /PackagePath:.\packages\en-us\Microsoft-NanoServer-IIS-Package_en-us.cab /Image:.\mountdir
-5.	.\Tools\dism.exe /Unmount-Image /MountDir:.\MountDir /Commit
- 
+1.  mkdir mountdir
+2.  .\Tools\dism.exe /Mount-Image /ImageFile:.\NanoServer.vhd /Index:1 /MountDir:.\mountdir
+3.  .\Tools\dism.exe /Add-Package /PackagePath:.\packages\Microsoft-NanoServer-IIS-Package.cab /Image:.\mountdir
+4.  .\Tools\dism.exe /Add-Package /PackagePath:.\packages\en-us\Microsoft-NanoServer-IIS-Package_en-us.cab /Image:.\mountdir
+5.  .\Tools\dism.exe /Unmount-Image /MountDir:.\MountDir /Commit
+
 
 > [!NOTE]  
 > Note that Step 4 adds the language pack--this example installs EN-US.  
@@ -93,7 +93,7 @@ Though offline installation of the server role is recommended, you might need to
 
 
 ```  
-   
+
     <unattend xmlns="urn:schemas-microsoft-com:unattend">  
     <servicing>  
         <package action="install">  
@@ -112,20 +112,20 @@ Though offline installation of the server role is recommended, you might need to
 
 
 
-3.  In the new XML file you created (or copied), edit C:\packages to the directory you copied the content of Packages to.  
+3. In the new XML file you created (or copied), edit C:\packages to the directory you copied the content of Packages to.  
 
-4.  Switch to the directory with the newly created XML file and run  
+4. Switch to the directory with the newly created XML file and run  
 
-    **dism /online /apply-unattend:.\unattend.xml**  
+   **dism /online /apply-unattend:.\unattend.xml**  
 
 
-5.  Confirm that the IIS package and its associated language pack is installed correctly by running:  
+5. Confirm that the IIS package and its associated language pack is installed correctly by running:  
 
-    **dism /online /get-packages**  
+   **dism /online /get-packages**  
 
-    You should see "Package Identity : Microsoft-NanoServer-IIS-Package~31bf3856ad364e35~amd64~~10.0.14393.1000" listed twice, once for Release Type : Language Pack and once for Release Type : Feature Pack.  
+   You should see "Package Identity : Microsoft-NanoServer-IIS-Package~31bf3856ad364e35~amd64~~10.0.14393.1000" listed twice, once for Release Type : Language Pack and once for Release Type : Feature Pack.  
 
-6.  Start the W3SVC service either with **net start w3svc** or by restarting the Nano Server.  
+6. Start the W3SVC service either with **net start w3svc** or by restarting the Nano Server.  
 
 ## Starting IIS  
 Once IIS is installed and running, it is ready to serve web requests. Verify that IIS is running by browsing the default IIS web page at http://\<IP address of Nano Server>. On a physical computer, you can determine the IP address by using the Recovery Console. On a virtual machine, you can get the IP address by using a Windows PowerShell prompt and running:  
@@ -146,7 +146,7 @@ Each feature of IIS exists as a set of configuration elements. For example, the 
 |`<windowsAuthentication>`|`<windowsAuthentication enabled="false" authPersistNonNTLM\="true"><providers><add value="Negotiate" /><add value="NTLM" /><br /></providers><br /></windowsAuthentication>`|  
 
 The full set of IIS sub-features are included in Appendix 1 of this topic and their corresponding configuration elements is included in Appendix 2 of this topic.  
- 
+
 
 ### Example: installing Windows authentication  
 
@@ -375,11 +375,12 @@ The `StaticFile \<handlers>` entry might already be present; if so, just add "St
 ### Security  
 **Request filtering**  
 
-|Section|Configuration elements|  
-|----------------|--------------------------|  
-|`<globalModules>`|`<add name="RequestFilteringModule" image="%windir%\System32\inetsrv\modrqflt.dll" />`|  
-|`<modules>`|`<add name="RequestFilteringModule" lockItem="true" />`|  
-|`<requestFiltering>|`<requestFiltering><br />    <fileExtensions allowUnlisted="true" applyToWebDAV="true" /><br />    <verbs allowUnlisted="true" applyToWebDAV="true" /><br />    <hiddenSegments applyToWebDAV="true"><br />        <add segment="web.config" /><br />    </hiddenSegments><br /></requestFiltering>`|  
+
+|       Section        |                                                                                                                                        Configuration elements                                                                                                                                        |
+|----------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|  `<globalModules>`   |                                                                                                        `<add name="RequestFilteringModule" image="%windir%\System32\inetsrv\modrqflt.dll" />`                                                                                                        |
+|     `<modules>`      |                                                                                                                       `<add name="RequestFilteringModule" lockItem="true" />`                                                                                                                        |
+| \`<requestFiltering> | `<requestFiltering><br />    <fileExtensions allowUnlisted="true" applyToWebDAV="true" /><br />    <verbs allowUnlisted="true" applyToWebDAV="true" /><br />    <hiddenSegments applyToWebDAV="true"><br />        <add segment="web.config" /><br />    </hiddenSegments><br /></requestFiltering>` |
 
 **Basic authentication**  
 
@@ -407,11 +408,12 @@ The `StaticFile \<handlers>` entry might already be present; if so, just add "St
 
 **IIS client certificate mapping authentication**  
 
-|Section|Configuration elements|  
-|----------------|--------------------------|   
-|`<globalModules>`|`<add name="CertificateMappingAuthenticationModule" image="%windir%\System32\inetsrv\authcert.dll" />`|  
-|`<modules>`|`<add name="CertificateMappingAuthenticationModule" lockItem="true" `/>`|  
-|`<clientCertificateMappingAuthentication>`|`<clientCertificateMappingAuthentication enabled="false" />`|  
+
+|                  Section                   |                                         Configuration elements                                         |
+|--------------------------------------------|--------------------------------------------------------------------------------------------------------|
+|             `<globalModules>`              | `<add name="CertificateMappingAuthenticationModule" image="%windir%\System32\inetsrv\authcert.dll" />` |
+|                `<modules>`                 |               `<add name="CertificateMappingAuthenticationModule" lockItem="true" `/>\`                |
+| `<clientCertificateMappingAuthentication>` |                      `<clientCertificateMappingAuthentication enabled="false" />`                      |
 
 **IP and domain restrictions**  
 

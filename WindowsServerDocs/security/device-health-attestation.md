@@ -4,8 +4,7 @@ H1: na
 ms.custom: na
 ms.reviewer: na
 ms.suite: na
-ms.technology: 
-  - techgroup-security
+ms.technology: techgroup-security
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 8e7b77a4-1c6a-4c21-8844-0df89b63f68d
@@ -52,15 +51,15 @@ The DHA service integrates with MDM solutions and provides the following:
 Here's an example that shows how you can use DHA to help raise the security protection bar for your organization's assets.
 
 1. You create a policy that checks the following boot configuration/attributes:
-  - Secure Boot
-  - BitLocker
-  - ELAM
+   - Secure Boot
+   - BitLocker
+   - ELAM
 2. The MDM solution enforces this policy and triggers a corrective action based on the DHA report data.  For example, it could verify the following:
-  - Secure Boot was enabled, the device loaded trusted code that is authentic, and the Windows boot loader was not tampered with.
-  - Trusted Boot successfully verified the digital signature of the Windows kernel and the components that were loaded while the device started.
-  - Measured Boot created a TPM-protected audit trail that could be verified remotely.
-  - BitLocker was enabled and that it protected the data when the device was turned off.
-  - ELAM was enabled at early boot stages and is monitoring the runtime.
+   - Secure Boot was enabled, the device loaded trusted code that is authentic, and the Windows boot loader was not tampered with.
+   - Trusted Boot successfully verified the digital signature of the Windows kernel and the components that were loaded while the device started.
+   - Measured Boot created a TPM-protected audit trail that could be verified remotely.
+   - BitLocker was enabled and that it protected the data when the device was turned off.
+   - ELAM was enabled at early boot stages and is monitoring the runtime.
   
 #### DHA cloud service
 

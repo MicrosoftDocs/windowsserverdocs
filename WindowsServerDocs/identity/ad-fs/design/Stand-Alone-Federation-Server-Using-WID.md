@@ -14,8 +14,6 @@ ms.technology: identity-adfs
 
 # Stand-Alone Federation Server Using WID
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
-
 A stand\-alone federation server in Active Directory Federation Services \(AD FS\) consists of a single server that hosts a Federation Service configured to use the Windows Internal Database \(WID\). This AD FS topology is for test labs. We do not recommend it for production environments because it has a limit of only one federation server, and it cannot be used to scale up to more servers.  
   
 If you want to add additional federation servers to your test lab, you must rebuild the Federation Service from scratch by deploying any of the other topologies mentioned later in this section. Therefore, we recommend that you use this topology for a test lab or a proof\-of\-concept environment in your private testing network in which a single federation server is adequate, as shown in the following illustration.  

@@ -63,15 +63,15 @@ Depending on your scenario, use one of the following procedures to perform a ful
    ![Server Restore](media/AD-Forest-Recovery-Perform-a-Full-Recovery/restore8.png)
 8. Type the UNC path to the backup share location (for example, \\\server1\backups) and click **OK**. You can also type the IP address of the target server, such as \\\192.168.1.3\backups. 
    ![Server Restore](media/AD-Forest-Recovery-Perform-a-Full-Recovery/restore9.png)
-10. Type credentials necessary to access the share and click OK. 
-11. Now **Select the date and time of system image to restore** and click **Next**.
-12. You will now be given an option to:
-   - Format and repartition disks
-   - Install drivers
-   - De-selecting the **Advanced** features of automatically restarting and checking for disk errors. These are enabled by default.
-13. Click **Next**.
-14. Click **Finish**. You will be prompted asking if you are sure you want to continue. Click **Yes**.  
-15. Once this completes perform an authoritative restore of SYSVOL, as described in [AD Forest Recovery - Performing an authoritative synchronization of DFSR-replicated SYSVOL](AD-Forest-Recovery-Authoritative-Recovery-SYSVOL.md).
+9. Type credentials necessary to access the share and click OK. 
+10. Now **Select the date and time of system image to restore** and click **Next**.
+11. You will now be given an option to:
+    - Format and repartition disks
+    - Install drivers
+    - De-selecting the **Advanced** features of automatically restarting and checking for disk errors. These are enabled by default.
+12. Click **Next**.
+13. Click **Finish**. You will be prompted asking if you are sure you want to continue. Click **Yes**.  
+14. Once this completes perform an authoritative restore of SYSVOL, as described in [AD Forest Recovery - Performing an authoritative synchronization of DFSR-replicated SYSVOL](AD-Forest-Recovery-Authoritative-Recovery-SYSVOL.md).
 
 ## Enabling the network adapter for a network backup
 

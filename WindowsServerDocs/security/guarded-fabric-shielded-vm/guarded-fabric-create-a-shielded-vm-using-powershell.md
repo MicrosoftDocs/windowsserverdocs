@@ -52,15 +52,15 @@ In addition, you will need an unattended installation answer file (unattend.xml 
 Run the following cmdlets on a machine with the Remote Server Administration Tools for Shielded VMs installed.
 If you are creating a PDK for a Linux VM, you must do this on a server running Windows Server, version 1709 or later.
 
- 
+ 
 ```powershell
 # Create owner certificate, don't lose this!
 # The certificate is stored at Cert:\LocalMachine\Shielded VM Local Certificates
 $Owner = New-HgsGuardian –Name 'Owner' –GenerateCertificates
- 
+ 
 # Import the HGS guardian for each fabric you want to run your shielded VM
 $Guardian = Import-HgsGuardian -Path C:\HGSGuardian.xml -Name 'TestFabric'
- 
+ 
 # Create the PDK file
 # The "Policy" parameter describes whether the admin can see the VM's console or not
 # Use "EncryptionSupported" if you are testing out shielded VMs and want to debug any issues during the specialization process
@@ -111,5 +111,5 @@ The shielded VM can now be live migrated within the cluster.
 
 ## Next step
 
->[!div class="nextstepaction"]
-[Deploy a shielded using VMM](guarded-fabric-tenant-deploys-shielded-vm-using-vmm.md)
+> [!div class="nextstepaction"]
+> [Deploy a shielded using VMM](guarded-fabric-tenant-deploys-shielded-vm-using-vmm.md)

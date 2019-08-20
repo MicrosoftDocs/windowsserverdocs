@@ -15,12 +15,12 @@ ms.localizationpriority: medium
 
 >Applies To: Windows Server 2016
 
->[!TIP]
+> [!TIP]
 > Looking for information about older versions of Windows Server? Check out our other [Windows Server libraries](/previous-versions/windows/) on docs.microsoft.com. You can also [search this site](https://docs.microsoft.com/search/index?search=Windows+Server&dataSource=previousVersions) for specific information.
 
-<img src="../media/landing-icons/getstarted.png" style='float:left; padding:.5em;' alt="Icon showing a box with a checkmark"> This collection contains detailed information to help you determine if you're ready to move to Windows Server 2016. Once you've checked the system requirements, upgrade options, and other information about moving to Windows Server 2016, you're ready to go back to the main [Windows Server 2016](Windows-Server-2016.md) hub and start down the path to installing the best edition and installation option for your needs. 
+![Icon showing a box with a checkmark](../media/landing-icons/getstarted.png) This collection contains detailed information to help you determine if you're ready to move to Windows Server 2016. Once you've checked the system requirements, upgrade options, and other information about moving to Windows Server 2016, you're ready to go back to the main [Windows Server 2016](Windows-Server-2016.md) hub and start down the path to installing the best edition and installation option for your needs. 
 
->[!Note]
+> [!Note]
 > To download Windows Server 2016, see [Windows Server Evaluations](https://www.microsoft.com/evalcenter/evaluate-windows-server-2016).
 
 

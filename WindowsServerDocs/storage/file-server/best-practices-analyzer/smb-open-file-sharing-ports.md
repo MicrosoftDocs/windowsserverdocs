@@ -1,5 +1,5 @@
 ﻿---
-Title: 'SMB: File and printer sharing ports should be open'
+title: 'SMB: File and printer sharing ports should be open'
 TOCTitle: 'SMB: File and printer sharing ports should be open'
 ms.date: 07/02/2012
 ms.prod: windows-server-threshold
@@ -70,5 +70,5 @@ Membership in the **Administrators** group, or equivalent, is the minimum requir
 
 ## Additional references
 
-[Understanding Shared Folders and the Windows Firewall](http://technet.microsoft.com/en-us/library/cc731402.aspx)(http://technet.microsoft.com/en-us/library/cc731402.aspx)
+[Understanding Shared Folders and the Windows Firewall](https://technet.microsoft.com/library/cc731402.aspx)(https://technet.microsoft.com/library/cc731402.aspx)
 

@@ -200,13 +200,13 @@ Software Inventory Logging is not intended to be a mission critical component. I
   
 #### To delete data logged by Software Inventory Logging  
   
-1.  In PowerShell, stop Software Inventory Logging with the **[Stop-SilLogging](https://technet.microsoft.com/library/dn283394.aspx)** command.  
+1. In PowerShell, stop Software Inventory Logging with the **[Stop-SilLogging](https://technet.microsoft.com/library/dn283394.aspx)** command.  
   
-2.  Open Windows Explorer.  
+2. Open Windows Explorer.  
   
-3.  Go to **\Windows\System32\Logfiles\SIL\**  
+3. Go to **\Windows\System32\Logfiles\SIL\\**  
   
-4.  Delete all files in the folder.  
+4. Delete all files in the folder.  
   
 ## <a name="BKMK_Step5"></a>Backing up and restoring data logged by Software Inventory Logging  
 Software Inventory Logging will temporarily store hourly collections of data if forwards over the network are failing. The log files are stored in the \Windows\System32\LogFiles\SIL\ directory. Backups of this Software Inventory Logging data can be made with your regularly scheduled server backups.  

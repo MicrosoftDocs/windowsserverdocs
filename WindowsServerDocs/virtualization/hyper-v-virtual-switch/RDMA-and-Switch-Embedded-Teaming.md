@@ -114,7 +114,7 @@ Verify RDMA capabilities; ensure that the capabilities are non-zero:
     Get-NetAdapterRdma | fl *
 
 
-## <a name="bkmk_sswitchembedded"></a>Switch Embedded Teaming (SET)  
+## Switch Embedded Teaming (SET)  
 
 This section provides an overview of Switch Embedded Teaming (SET) in  Windows Server 2016, and contains the following sections.
 

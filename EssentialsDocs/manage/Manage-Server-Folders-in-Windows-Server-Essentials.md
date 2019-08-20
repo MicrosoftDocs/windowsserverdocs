@@ -39,23 +39,23 @@ manager: dongill
 ##  <a name="BKMK_2"></a> Manage server folders using the Dashboard  
  Windows Server Essentials makes it possible to perform common administrative tasks by using the Dashboard. The **Server Folders** page of the Dashboard provides the following:  
   
--   A list of server folders, which displays:  
+- A list of server folders, which displays:  
   
-    -   The name of the folder  
+  -   The name of the folder  
   
-    -   A description of the folder  
+  -   A description of the folder  
   
-    -   The location of the folder  
+  -   The location of the folder  
   
-    -   The amount of free space that is available at the folder location  
+  -   The amount of free space that is available at the folder location  
   
-    -   Brief status information about any tasks that are being performed on the folder; the **Status** field is blank if the folder is healthy, and if no tasks are running  
+  -   Brief status information about any tasks that are being performed on the folder; the **Status** field is blank if the folder is healthy, and if no tasks are running  
   
--   A details pane that may provide additional information about a selected folder  
+- A details pane that may provide additional information about a selected folder  
   
--   A tasks pane that includes a set of folder-related administrative tasks  
+- A tasks pane that includes a set of folder-related administrative tasks  
   
- The following table describes the various server folder tasks that are available on the Windows Server Essentials Dashboard. Most of the tasks are folder-specific, and they are only visible when you select a folder in the list.  
+  The following table describes the various server folder tasks that are available on the Windows Server Essentials Dashboard. Most of the tasks are folder-specific, and they are only visible when you select a folder in the list.  
   
 ### Server folder tasks on the Dashboard  
   
@@ -74,13 +74,13 @@ manager: dongill
   
  Using server folders to store your files enables you to:  
   
--   Back up the server folder by using Server Backup and Restore to help protect against total server failure.  
+- Back up the server folder by using Server Backup and Restore to help protect against total server failure.  
   
--   Access files that are stored on the server folder from any location by using an Internet Browser via Remote Web Access, or via the My Server apps for Windows Phone and Windows 8.  
+- Access files that are stored on the server folder from any location by using an Internet Browser via Remote Web Access, or via the My Server apps for Windows Phone and Windows 8.  
   
--   Access the new server folder from any client computer.  
+- Access the new server folder from any client computer.  
   
- You can manage access to any server folders on the server by using the tasks on the **Server Folders** tab of the Dashboard. The following table lists the server folders that are created by default when you install Windows Server Essentials or turn on media streaming on your server.  
+  You can manage access to any server folders on the server by using the tasks on the **Server Folders** tab of the Dashboard. The following table lists the server folders that are created by default when you install Windows Server Essentials or turn on media streaming on your server.  
   
 |Server Folder Name|Description|  
 |------------------------|-----------------|  
@@ -185,43 +185,43 @@ manager: dongill
   
  You can **move a server folder** that is located on the primary server running Windows Server Essentials and is displayed on the **Server Folders** tab of the Dashboard to another hard drive when needed by using the Move a Folder Wizard. You can move a server folder to another hard drive location address if:  
   
--   The data hard drive no longer has enough space to store data.  
+- The data hard drive no longer has enough space to store data.  
   
--   You want to change the default storage location. For a faster move, consider moving the server folder while it does not include any data.  
+- You want to change the default storage location. For a faster move, consider moving the server folder while it does not include any data.  
   
--   You want to remove the existing hard drive without losing the server folders that are located on it.  
+- You want to remove the existing hard drive without losing the server folders that are located on it.  
   
- Before moving the folder, ensure the following:  
+  Before moving the folder, ensure the following:  
   
--   Ensure that you have backed up your server.  
+- Ensure that you have backed up your server.  
   
--   Ensure that all client backups are stopped and not in progress if you plan on moving the Client Computer Backup folder. While moving the Client Computer Backup folder, the server will be unable to back up any client computers until the folder move is completed.  
+- Ensure that all client backups are stopped and not in progress if you plan on moving the Client Computer Backup folder. While moving the Client Computer Backup folder, the server will be unable to back up any client computers until the folder move is completed.  
   
--   Ensure that the server is not performing any critical system operations. It is recommended that you complete any updates or backups that are in progress before you start a folder move or the process may take longer to complete.  
+- Ensure that the server is not performing any critical system operations. It is recommended that you complete any updates or backups that are in progress before you start a folder move or the process may take longer to complete.  
   
--   None of the files in the folder to be moved are in use. You will be unable to access the server folder while it is being moved.  
+- None of the files in the folder to be moved are in use. You will be unable to access the server folder while it is being moved.  
   
- Moving a folder from NTFS to ReFS is not supported if the files in the server folders implement the following technologies:  
+  Moving a folder from NTFS to ReFS is not supported if the files in the server folders implement the following technologies:  
   
--   Alternate Data Streams  
+- Alternate Data Streams  
   
--   Object IDs  
+- Object IDs  
   
--   Short names (8.3 names)  
+- Short names (8.3 names)  
   
--   Compression  
+- Compression  
   
--   EFS encryption  
+- EFS encryption  
   
--   Transactional NTFS, TxF (introduced with Windows Vista)  
+- Transactional NTFS, TxF (introduced with Windows Vista)  
   
--   Sparse files  
+- Sparse files  
   
--   Hard links  
+- Hard links  
   
--   Extended Attributes  
+- Extended Attributes  
   
--   Quotas  
+- Quotas  
   
 ###  <a name="BKMK_6"></a> Where to add or move a server folder  
  Typically, you should add or move server folders onto hard drives that have the maximum amount of free space. If possible, avoid adding or moving a shared folder to the system drive (such as C:) as it may take away the necessary drive space that is required for the operating system and its updates. Also, avoid adding or moving server folders to an external hard drive because they can be easily disconnected, and as a result, you may not be able to access your files. Instead, we recommend that you create the folder on an internal drive.  
@@ -251,17 +251,17 @@ manager: dongill
   
 ##### To add a server folder  
   
-1.  Open the Dashboard.  
+1. Open the Dashboard.  
   
-2.  Click **STORAGE**, and then click **Server Folders**.  
+2. Click **STORAGE**, and then click **Server Folders**.  
   
-3.  In **Server Folder Tasks**, click **Add a folder**. This launches the Add a Folder Wizard.  
+3. In **Server Folder Tasks**, click **Add a folder**. This launches the Add a Folder Wizard.  
   
-4.  Follow the instructions to complete the wizard.  
+4. Follow the instructions to complete the wizard.  
   
-    > [!NOTE]
-    >  -   If you browse for a specific folder by using the Browse button to specify the server folder location, the folder that you have navigated to is added as a server folder.  
-    > -   You can define which server folders can be accessed via Remote Web Access. For more information, see [Manage access to server folders](Manage-Server-Folders-in-Windows-Server-Essentials.md#BKMK_1).  
+   > [!NOTE]
+   > - If you browse for a specific folder by using the Browse button to specify the server folder location, the folder that you have navigated to is added as a server folder.  
+   >   -   You can define which server folders can be accessed via Remote Web Access. For more information, see [Manage access to server folders](Manage-Server-Folders-in-Windows-Server-Essentials.md#BKMK_1).  
   
 ##### To move a server folder  
   
@@ -291,13 +291,13 @@ manager: dongill
 ##  <a name="BKMK_Shadow"></a> Understand shadow copies  
  With server Shadow Copies, users can view shared files and folders as they existed at points of time in the past. Accessing previous versions of files, or shadow copies, is useful because users can:  
   
-1.  **Recover files that were accidentally deleted**. If you accidentally delete a file, you can open a previous version and copy it to a safe location.  
+1. **Recover files that were accidentally deleted**. If you accidentally delete a file, you can open a previous version and copy it to a safe location.  
   
-2.  **Recover from accidentally overwriting a file**. If you accidentally overwrite a file, you can recover a previous version of the file. (The number of versions depends on how many snapshots you have created.)  
+2. **Recover from accidentally overwriting a file**. If you accidentally overwrite a file, you can recover a previous version of the file. (The number of versions depends on how many snapshots you have created.)  
   
-3.  **Compare versions of a file while working**. You can use previous versions when you want to check what has changed between versions of a file.  
+3. **Compare versions of a file while working**. You can use previous versions when you want to check what has changed between versions of a file.  
   
- To use Shadow Copies, from a client computer, right-click a server shared folder and select **Restore Previous Version**.  
+   To use Shadow Copies, from a client computer, right-click a server shared folder and select **Restore Previous Version**.  
   
 ## See also  
   

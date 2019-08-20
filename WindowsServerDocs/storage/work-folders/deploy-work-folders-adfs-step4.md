@@ -26,7 +26,7 @@ This topic describes the fourth step in deploying Work Folders with Active Direc
 -   [Deploy Work Folders with AD FS and Web Application Proxy: Step 5, Set Up Clients](deploy-work-folders-adfs-step5.md)  
 
 > [!NOTE]
->   The instructions covered in this section are for a Server 2016 environment. If you're using Windows Server 2012 R2, follow the [Windows Server 2012 R2 instructions](https://technet.microsoft.com/library/dn747208(v=ws.11).aspx).
+>   The instructions covered in this section are for a Windows Server 2019 or Windows Server 2016 environment. If you're using Windows Server 2012 R2, follow the [Windows Server 2012 R2 instructions](https://technet.microsoft.com/library/dn747208(v=ws.11).aspx).
 
 To set up Web Application Proxy for use with Work Folders, use the following procedures.  
   
@@ -102,47 +102,47 @@ To configure Web Application Proxy, follow these steps:
 ## Publish the Work Folders web application  
 The next step is to publish a web application that will make Work Folders available to clients. To publish the Work Folders web application, follow these steps:  
   
-1.  Open **Server Manager**, and on the **Tools** menu, click **Remote Access Management** to open the Remote Access Management Console.  
+1. Open **Server Manager**, and on the **Tools** menu, click **Remote Access Management** to open the Remote Access Management Console.  
   
-2.  Under **Configuration**, click **Web Application Proxy**.  
+2. Under **Configuration**, click **Web Application Proxy**.  
   
-3.  Under **Tasks**, click **Publish**. The Publish New Application Wizard opens.  
+3. Under **Tasks**, click **Publish**. The Publish New Application Wizard opens.  
   
-4.  On the Welcome page, click **Next**.  
+4. On the Welcome page, click **Next**.  
   
-5.  On the **Preauthentication** page, select **Active Directory Federation Services (AD FS)**, and click **Next**.  
+5. On the **Preauthentication** page, select **Active Directory Federation Services (AD FS)**, and click **Next**.  
   
-6.  On the **Support Clients** page, select **OAuth2**, and click **Next**.
+6. On the **Support Clients** page, select **OAuth2**, and click **Next**.
 
-7.  On the **Relying Party** page, select **Work Folders**, and then click **Next**. This list is published to the Web Application Proxy from AD FS.  
+7. On the **Relying Party** page, select **Work Folders**, and then click **Next**. This list is published to the Web Application Proxy from AD FS.  
   
-8.  On the **Publishing Settings** page, enter the following and then click **Next**:  
+8. On the **Publishing Settings** page, enter the following and then click **Next**:  
   
-    -   The name you want to use for the web application  
+   -   The name you want to use for the web application  
   
-    -   The external URL for Work Folders  
+   -   The external URL for Work Folders  
   
-    -   The name of the Work Folders certificate  
+   -   The name of the Work Folders certificate  
   
-    -   The back-end URL for Work Folders  
+   -   The back-end URL for Work Folders  
   
-    By default, the wizard makes the back-end URL the same as the external URL.  
+   By default, the wizard makes the back-end URL the same as the external URL.  
   
-    For the test example, use these values:  
+   For the test example, use these values:  
   
-    Name: **WorkFolders**  
+   Name: **WorkFolders**  
   
-    External URL: **https://workfolders.contoso.com**  
+   External URL: **https://workfolders.contoso.com**  
   
-    External certificate: **The Work Folders certificate that you installed earlier**  
+   External certificate: **The Work Folders certificate that you installed earlier**  
   
-    Backend server URL: **https://workfolders.contoso.com**  
+   Backend server URL: **https://workfolders.contoso.com**  
   
-9.  The confirmation page shows the Windows PowerShell command that will execute to publish the application. Click **Publish**.  
+9. The confirmation page shows the Windows PowerShell command that will execute to publish the application. Click **Publish**.  
   
 10. On the **Results** page, you should see the application was published successfully.
-   >[!NOTE]
-   > If you have multiple Work Folders servers, you need to publish a Work Folders web application for each Work Folders server (repeat steps 1-10).  
+    >[!NOTE]
+    > If you have multiple Work Folders servers, you need to publish a Work Folders web application for each Work Folders server (repeat steps 1-10).  
   
 Next step: [Deploy Work Folders with AD FS and Web Application Proxy: Step 5, Set Up Clients](deploy-work-folders-adfs-step5.md)  
   

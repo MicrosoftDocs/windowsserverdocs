@@ -34,21 +34,22 @@ Set-VM -Name VMName -AutomaticStopAction TurnOff
 
 ### Some Additional VM preparation is required for Graphics Devices
 
-Some hardware performs better if the VM in configured in a certain way.  For details on whether or not you need the following configurations for your hardware, please reach out to the hardware vendor. Additional details can be found on [Plan for Deploying Devices using Discrete Device Assignment](../plan/Plan-for-Deploying-Devices-using-Discrete-Device-Assignment.md) and on this [blog post.](https://blogs.technet.microsoft.com/virtualization/2015/11/23/discrete-device-assignment-gpus/)
+Some hardware performs better if the VM in configured in a certain way.  For details on whether or not you need the following configurations for your hardware, please reach out to the hardware vendor. Additional details can be found on [Plan for Deploying Devices using Discrete Device Assignment](../plan/Plan-for-Deploying-Devices-using-Discrete-Device-Assignment.md) and on this [blog post.](https://techcommunity.microsoft.com/t5/Virtualization/Discrete-Device-Assignment-GPUs/ba-p/382266)
 
-1.	Enable Write-Combining on the CPU
-```
-Set-VM -GuestControlledCacheTypes $true -VMName VMName
-```
-2.	Configure the 32 bit MMIO space
-```
-Set-VM -LowMemoryMappedIoSpace 3Gb -VMName VMName
-```
-3.	Configure greater than 32 bit MMIO space
-```
-Set-VM -HighMemoryMappedIoSpace 33280Mb -VMName VMName
-```
-Note, the MMIO space values above are reasonable values to set for experimenting with a single GPU.  If after starting the VM, the device is reporting an error relating to not enough resources, you'll likely need to modify these values.  Also, if you're assigning multiple GPUs, you'll need to increase these values as well.
+1. Enable Write-Combining on the CPU
+   ```
+   Set-VM -GuestControlledCacheTypes $true -VMName VMName
+   ```
+2. Configure the 32 bit MMIO space
+   ```
+   Set-VM -LowMemoryMappedIoSpace 3Gb -VMName VMName
+   ```
+3. Configure greater than 32 bit MMIO space
+   ```
+   Set-VM -HighMemoryMappedIoSpace 33280Mb -VMName VMName
+   ```
+   > [!TIP] 
+   > The MMIO space values above are reasonable values to set for experimenting with a single GPU.  If after starting the VM, the device is reporting an error relating to not enough resources, you'll likely need to modify these values. Consult [Plan for Deploying Devices using Discrete Device Assignment](../plan/Plan-for-Deploying-Devices-using-Discrete-Device-Assignment.md) to learn how to precisely calculate MMIO requirements.
 
 ## Dismount the Device from the Host Partition
 ### Optional - Install the Partitioning Driver
@@ -63,14 +64,14 @@ Using Device Manager or PowerShell, ensure the device is “disabled.”
 
 ### Dismount the Device
 Depending on if the vendor provided a mitigation driver, you’ll either need to use the “-force” option or not.
-- 	If a Mitigation Driver was installed
-```
-Dismount-VMHostAssignableDevice -LocationPath $locationPath
-```
-- 	If a Mitigation Driver was not installed
-```
-Dismount-VMHostAssignableDevice -force -LocationPath $locationPath
-```
+- If a Mitigation Driver was installed
+  ```
+  Dismount-VMHostAssignableDevice -LocationPath $locationPath
+  ```
+- If a Mitigation Driver was not installed
+  ```
+  Dismount-VMHostAssignableDevice -force -LocationPath $locationPath
+  ```
 
 ## Assigning the Device to the Guest VM
 The final step is to tell Hyper-V that a VM should have access to the device.  In addition to the location path found above, you'll need to know the name of the vm.

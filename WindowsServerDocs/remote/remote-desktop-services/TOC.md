@@ -66,12 +66,21 @@
 
 ## [Additional Remote Desktop support](rds-get-support.md)
 ## [Remote Desktop clients](clients/remote-desktop-clients.md)
+### Remote Desktop known issues
+#### [General Remote Desktop connection troubleshooting](troubleshoot/rdp-error-general-troubleshooting.md)
+#### [Clients can't connect and get the "Class not registered" error](troubleshoot/rdp-error-class-not-registered.md)
+#### [Clients can't connect and see "No licenses available" error](troubleshoot/rdp-error-no-licenses-available.md)
+#### [User can't authenticate or must authenticate twice](troubleshoot/cannot-authenticate-or-must-authenticate-twice.md)
+#### ["Remote Desktop Service is currently busy" error on connecting](troubleshoot/remote-desktop-service-currently-busy.md)
+#### [Remote Desktop client disconnects and can't reconnect to the same session](troubleshoot/rdp-client-disconnects-cannot-reconnect-same-session.md)
+#### [Remote laptop disconnects from wireless network](troubleshoot/remote-laptop-disconnects-wireless-network.md)
+#### [Poor performance or application problems during remote desktop connection](troubleshoot/poor-performance-or-application-problems.md)
 ### General information
 #### [Which client works best for you?](clients/remote-desktop-app-compare.md)
+#### [Remote Desktop RDP file settings](clients/rdp-files.md)
 #### [Remote Desktop URI scheme](clients/remote-desktop-uri.md)
 #### [Remote Desktop client FAQ](clients/remote-desktop-client-faq.md)
 #### [Privacy settings for managed apps and desktops](clients/remote-privacy-settings.md)
-#### [Troubleshooting Remote Desktop Connections](clients/troubleshoot-remote-desktop-connections.md)
 ### Remote Desktop client for Windows
 #### [Get started](clients/windows.md)
 #### [What's new in the Windows client?](clients/windows-whatsnew.md)

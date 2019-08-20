@@ -12,7 +12,6 @@ ms.prod: windows-server-threshold
 ms.technology: identity-adfs
 ---
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 # When to Use a Send LDAP Attributes as Claims Rule
 You can use this rule in Active Directory Federation Services \(AD FS\) when you want to issue outgoing claims that contain actual Lightweight Directory Access Protocol \(LDAP\) attribute values that exist in an attribute store and then associate a claim type with each of the LDAP attributes. For more information about attribute stores, see [The Role of Attribute Stores](The-Role-of-Attribute-Stores.md).  

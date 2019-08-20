@@ -33,21 +33,21 @@ In this scenario, you'll perform the following steps:
   
 #### To enable resource properties  
   
-1.  In Hyper-V Manager, connect to server ID_AD_DC1. Sign in to the server by using Contoso\Administrator with the password **pass@word1**.  
+1. In Hyper-V Manager, connect to server ID_AD_DC1. Sign in to the server by using Contoso\Administrator with the password <strong>pass@word1</strong>.  
   
-2.  Open Active Directory Administrative Center, and click **Tree View**.  
+2. Open Active Directory Administrative Center, and click **Tree View**.  
   
-3.  Expand **DYNAMIC ACCESS CONTROL**, and select **Resource Properties**.  
+3. Expand **DYNAMIC ACCESS CONTROL**, and select **Resource Properties**.  
   
-4.  Scroll down to the **Impact** property in the **Display name** column. Right-click **Impact**, and then click **Enable**.  
+4. Scroll down to the **Impact** property in the **Display name** column. Right-click **Impact**, and then click **Enable**.  
   
-5.  Scroll down to the **Personally Identifiable Information** property in the **Display name** column. Right-click **Personally Identifiable Information**, and then click **Enable**.  
+5. Scroll down to the **Personally Identifiable Information** property in the **Display name** column. Right-click **Personally Identifiable Information**, and then click **Enable**.  
   
-6.  To publish the resource properties in the **Global Resource List**, in the left pane, click **Resource Property Lists**, and then double-click **Global Resource Property List**.  
+6. To publish the resource properties in the **Global Resource List**, in the left pane, click **Resource Property Lists**, and then double-click **Global Resource Property List**.  
   
-7.  Click **Add**, and then scroll down to and click **Impact** to add it to the list. Do the same for **Personally Identifiable Information**. Click **OK** twice to finish.  
+7. Click **Add**, and then scroll down to and click **Impact** to add it to the list. Do the same for **Personally Identifiable Information**. Click **OK** twice to finish.  
   
-![solution guides](media/Deploy-Encryption-of-Office-Files--Demonstration-Steps-/PowerShellLogoSmall.gif)****Windows PowerShell equivalent commands****  
+![solution guides](media/Deploy-Encryption-of-Office-Files--Demonstration-Steps-/PowerShellLogoSmall.gif)***<em>Windows PowerShell equivalent commands</em>***  
   
 The following Windows PowerShell cmdlet or cmdlets perform the same function as the preceding procedure. Enter each cmdlet on a single line, even though they may appear word-wrapped across several lines here because of formatting constraints.  
   
@@ -63,21 +63,21 @@ You will also create a **High PII** rule. This rule searches the content of docu
   
 #### To create the high-impact classification rule  
   
-1.  In Hyper-V Manager, connect to server ID_AD_FILE1. Sign in to the server by using Contoso\Administrator with the password **pass@word1**.  
+1. In Hyper-V Manager, connect to server ID_AD_FILE1. Sign in to the server by using Contoso\Administrator with the password <strong>pass@word1</strong>.  
   
-2.  You need to refresh the Global Resource Properties from Active Directory. Open Windows PowerShell and type: `Update-FSRMClassificationPropertyDefinition`, and then press ENTER. Close Windows PowerShell.  
+2. You need to refresh the Global Resource Properties from Active Directory. Open Windows PowerShell and type: `Update-FSRMClassificationPropertyDefinition`, and then press ENTER. Close Windows PowerShell.  
   
-3.  Open File Server Resource Manager. To open File Server Resource Manager, click **Start**, type **file server resource manager**, and then click **File Server Resource Manager**.  
+3. Open File Server Resource Manager. To open File Server Resource Manager, click **Start**, type **file server resource manager**, and then click **File Server Resource Manager**.  
   
-4.  In the left pane of File Server Resource Manager, expand **Classification Management**, and then select **Classification Rules**.  
+4. In the left pane of File Server Resource Manager, expand **Classification Management**, and then select **Classification Rules**.  
   
-5.  In the **Actions** pane, click **Configure Classification Schedule**. On the **Automatic Classification** tab, select **Enable fixed schedule**, select a **Day of the week**, and then select the **Allow continuous classification for new files** check box. Click **OK**.  
+5. In the **Actions** pane, click **Configure Classification Schedule**. On the **Automatic Classification** tab, select **Enable fixed schedule**, select a **Day of the week**, and then select the **Allow continuous classification for new files** check box. Click **OK**.  
   
-6.  In the **Actions** pane, click **Create Classification Rule**. This opens the **Create Classification Rule** dialog box.  
+6. In the **Actions** pane, click **Create Classification Rule**. This opens the **Create Classification Rule** dialog box.  
   
-7.  In the **Rule name** box, type **High Business Impact**.  
+7. In the **Rule name** box, type **High Business Impact**.  
   
-8.  In the **Description** box, type **Determines if the document has a high business impact based on the presence of the string "Contoso Confidential"**  
+8. In the **Description** box, type **Determines if the document has a high business impact based on the presence of the string "Contoso Confidential"**  
   
 9. On the **Scope** tab, click **Set Folder Management Properties**, select **Folder Usage**, click **Add**, then click **Browse**, browse to D:\Finance Documents as the path, click **OK**, and then choose a property value named **Group Files** and click **Close**. Once management properties are set, on the **Rule Scope** tab select **Group Files**.  
   
@@ -91,7 +91,7 @@ You will also create a **High PII** rule. This rule searches the content of docu
   
 14. Click the **Evaluation Type** tab.  Click **Re-evaluate existing property values**, click **Overwrite**the existing value, and then click **OK** to finish.  
   
-![solution guides](media/Deploy-Encryption-of-Office-Files--Demonstration-Steps-/PowerShellLogoSmall.gif)****Windows PowerShell equivalent commands****  
+![solution guides](media/Deploy-Encryption-of-Office-Files--Demonstration-Steps-/PowerShellLogoSmall.gif)***<em>Windows PowerShell equivalent commands</em>***  
   
 The following Windows PowerShell cmdlet or cmdlets perform the same function as the preceding procedure. Enter each cmdlet on a single line, even though they may appear word-wrapped across several lines here because of formatting constraints.  
   
@@ -105,21 +105,21 @@ New-FSRMClassificationRule -Name "High Business Impact" -Property "Impact_MS" -D
   
 #### To create the high-PII classification rule  
   
-1.  In Hyper-V Manager, connect to server ID_AD_FILE1. Sign in to the server by using Contoso\Administrator with the password **pass@word1**.  
+1. In Hyper-V Manager, connect to server ID_AD_FILE1. Sign in to the server by using Contoso\Administrator with the password <strong>pass@word1</strong>.  
   
-2.  On the desktop, open the folder named **Regular Expressions**, and then open the text document named **RegEx-SSN**. Highlight and copy the following regular expression string:  **^(?!000)([0-7]\d{2}|7([0-7]\d|7[012]))([ -]?)(?!00)\d\d\3(?!0000)\d{4}$**. This string will be used later in this step so keep it on your clipboard.  
+2. On the desktop, open the folder named **Regular Expressions**, and then open the text document named **RegEx-SSN**. Highlight and copy the following regular expression string:  **^(?!000)([0-7]\d{2}|7([0-7]\d|7[012]))([ -]?)(?!00)\d\d\3(?!0000)\d{4}$**. This string will be used later in this step so keep it on your clipboard.  
   
-3.  Open File Server Resource Manager. To open File Server Resource Manager, click **Start**, type **file server resource manager**, and then click **File Server Resource Manager**.  
+3. Open File Server Resource Manager. To open File Server Resource Manager, click **Start**, type **file server resource manager**, and then click **File Server Resource Manager**.  
   
-4.  In the left pane of File Server Resource Manager, expand **Classification Management**, and then select **Classification Rules**.  
+4. In the left pane of File Server Resource Manager, expand **Classification Management**, and then select **Classification Rules**.  
   
-5.  In the **Actions** pane, click **Configure Classification Schedule**. On the **Automatic Classification** tab, select **Enable fixed schedule**, select a **Day of the week**, and then select the **Allow continuous classification for new files** check box. Click OK.  
+5. In the **Actions** pane, click **Configure Classification Schedule**. On the **Automatic Classification** tab, select **Enable fixed schedule**, select a **Day of the week**, and then select the **Allow continuous classification for new files** check box. Click OK.  
   
-6.  In the **Rule name** box, type **High PII**. In the **Description** box, type **Determines if the document has a high PII based on the presence of a Social Security Number.**  
+6. In the **Rule name** box, type **High PII**. In the **Description** box, type **Determines if the document has a high PII based on the presence of a Social Security Number.**  
   
-7.  Click the **Scope** tab, select the **Group Files** check box.  
+7. Click the **Scope** tab, select the **Group Files** check box.  
   
-8.  Click the **Classification** tab.  Under **Choose a method to assign the property to files**, select **Content Classifier** from the drop-down list.  
+8. Click the **Classification** tab.  Under **Choose a method to assign the property to files**, select **Content Classifier** from the drop-down list.  
   
 9. Under **Choose a property to assign to files**, select **Personally Identifiable Information** from the drop-down list.  
   
@@ -133,7 +133,7 @@ New-FSRMClassificationRule -Name "High Business Impact" -Property "Impact_MS" -D
   
 12. Click the **Evaluation Type** tab.  Select **Re-evaluate existing property values**, **Overwrite**the existing value, and then click **OK** to finish.  
   
-![solution guides](media/Deploy-Encryption-of-Office-Files--Demonstration-Steps-/PowerShellLogoSmall.gif)****Windows PowerShell equivalent commands****  
+![solution guides](media/Deploy-Encryption-of-Office-Files--Demonstration-Steps-/PowerShellLogoSmall.gif)***<em>Windows PowerShell equivalent commands</em>***  
   
 The following Windows PowerShell cmdlet or cmdlets perform the same function as the preceding procedure. Enter each cmdlet on a single line, even though they may appear word-wrapped across several lines here because of formatting constraints.  
   
@@ -152,25 +152,25 @@ Now that you've created rules to automatically classify documents based on conte
   
 #### To protect documents with AD RMS  
   
-1.  In Hyper-V Manager, connect to server ID_AD_FILE1. Sign in to the server by using Contoso\Administrator with the password **pass@word1**.  
+1. In Hyper-V Manager, connect to server ID_AD_FILE1. Sign in to the server by using Contoso\Administrator with the password <strong>pass@word1</strong>.  
   
-2.  Open File Server Resource Manager. To open File Server Resource Manager, click **Start**, type **file server resource manager**, and then click **File Server Resource Manager**.  
+2. Open File Server Resource Manager. To open File Server Resource Manager, click **Start**, type **file server resource manager**, and then click **File Server Resource Manager**.  
   
-3.  In the left pane, select **File Management Tasks**. In the **Actions** pane, select **Create File Management Task**.  
+3. In the left pane, select **File Management Tasks**. In the **Actions** pane, select **Create File Management Task**.  
   
-4.  In the **Task name:** field, type **High PII**. In the **Description** field, type **Automatic RMS protection for high PII documents**.  
+4. In the **Task name:** field, type **High PII**. In the **Description** field, type **Automatic RMS protection for high PII documents**.  
   
-5.  Click the **Scope** tab, select the **Group Files** check box.  
+5. Click the **Scope** tab, select the **Group Files** check box.  
   
-6.  Click the **Action** tab. Under **Type**, select **RMS Encryption**. Click **Browse** to select a template, and then select the **Contoso Finance Admin Only** template.  
+6. Click the **Action** tab. Under **Type**, select **RMS Encryption**. Click **Browse** to select a template, and then select the **Contoso Finance Admin Only** template.  
   
-7.  Click the **Condition** tab, and then click **Add**. Under **Property**, select **Personally Identifiable Information**. Under **Operator**, select **Equal**. Under **Value**, select **High**. Click **OK**.  
+7. Click the **Condition** tab, and then click **Add**. Under **Property**, select **Personally Identifiable Information**. Under **Operator**, select **Equal**. Under **Value**, select **High**. Click **OK**.  
   
-8.  Click the **Schedule** tab. In the **Schedule** section, click **Weekly**, and then select **Sunday**. Running the task once-a-week will ensure that you catch any documents that may have been missed due to a service outage or other disruptive event.  
+8. Click the **Schedule** tab. In the **Schedule** section, click **Weekly**, and then select **Sunday**. Running the task once-a-week will ensure that you catch any documents that may have been missed due to a service outage or other disruptive event.  
   
 9. In the **Continuous operation** section, select **Run task continuously on new files**, and then click **OK**. You should now have a file management task named High PII.  
   
-![solution guides](media/Deploy-Encryption-of-Office-Files--Demonstration-Steps-/PowerShellLogoSmall.gif)****Windows PowerShell equivalent commands****  
+![solution guides](media/Deploy-Encryption-of-Office-Files--Demonstration-Steps-/PowerShellLogoSmall.gif)***<em>Windows PowerShell equivalent commands</em>***  
   
 The following Windows PowerShell cmdlet or cmdlets perform the same function as the preceding procedure. Enter each cmdlet on a single line, even though they may appear word-wrapped across several lines here because of formatting constraints.  
   
@@ -187,21 +187,21 @@ It's time to take a look at your new automatic classification and AD RMS protect
   
 #### To view the results  
   
-1.  In Hyper-V Manager, connect to server ID_AD_FILE1. Sign in to the server by using Contoso\Administrator with the password **pass@word1**.  
+1. In Hyper-V Manager, connect to server ID_AD_FILE1. Sign in to the server by using Contoso\Administrator with the password <strong>pass@word1</strong>.  
   
-2.  In Windows Explorer, navigate to D:\Finance Documents.  
+2. In Windows Explorer, navigate to D:\Finance Documents.  
   
-3.  Right-click the Finance Memo document and click **Properties**.Click the **Classification** tab, and notice that the Impact property currently has no value. Click **Cancel**.  
+3. Right-click the Finance Memo document and click **Properties**.Click the **Classification** tab, and notice that the Impact property currently has no value. Click **Cancel**.  
   
-4.  Right-click the **Request for Approval to Hire document**, and then select **Properties**.  
+4. Right-click the **Request for Approval to Hire document**, and then select **Properties**.  
   
-5.  Click the **Classification** tab, and notice that **the Personally Identifiable Information property** currently has no value. Click **Cancel**.  
+5. Click the **Classification** tab, and notice that **the Personally Identifiable Information property** currently has no value. Click **Cancel**.  
   
-6.  Switch to CLIENT1. Sign off any user who is signed in, and then sign in as Contoso\MReid with the password **pass@word1**.  
+6. Switch to CLIENT1. Sign off any user who is signed in, and then sign in as Contoso\MReid with the password <strong>pass@word1</strong>.  
   
-7.  From the Desktop, open the **Finance Documents** shared folder.  
+7. From the Desktop, open the **Finance Documents** shared folder.  
   
-8.  Open the **Finance Memo** document. Near the bottom of the document, you will see the word **Confidential**. Modify it to read: **Contoso Confidential**. Save the document and close it.  
+8. Open the **Finance Memo** document. Near the bottom of the document, you will see the word **Confidential**. Modify it to read: **Contoso Confidential**. Save the document and close it.  
   
 9. Open the **Request for Approval to Hire** document. In the **Social Security#:** section, type: 777-77-7777. Save the document and close it.  
   

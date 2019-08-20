@@ -64,8 +64,8 @@ PS:\>Set-AdfsRelyingPartyTrust -DeviceAuthenticationMethod ClientTLS
 ``` powershell
 PS:\>Set-AdfsGlobalAuthenticationPolicy –DeviceAuthenticationMethod All
 ```
->[!NOTE]
->The default device authentication method is `SignedToken`.  Other values are **PKeyAuth,****ClientTLS,** and **All**.
+> [!NOTE]
+> The default device authentication method is `SignedToken`.  Other values are **PKeyAuth,**<strong>ClientTLS,</strong> and **All**.
 
 The meanings of the `DeviceAuthenticationMethod` values have changed slightly since AD FS 2016 was released.  See the table below for the meaning of each value, depending on the update level:
 

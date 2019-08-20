@@ -47,17 +47,17 @@ After you have completed the installation of Windows Admin Center, you can add s
 
  **Add a single server or a cluster as a managed node**
 
- 1. Click **+ Add** under **All Connections**.
+1. Click **+ Add** under **All Connections**.
 
-    ![](../media/launch/addserver0.png)
+   ![](../media/launch/addserver0.png)
 
- 2. Choose to add a Server, Failover Cluster or Hyper-Converged Cluster connection:
+2. Choose to add a Server, Failover Cluster or Hyper-Converged Cluster connection:
     
-    ![](../media/launch/addserver1.png)
+   ![](../media/launch/addserver1.png)
 
- 3. Type the name of the server or cluster to manage and click **Submit**. The server or cluster will be added to your connection list on the overview page.
+3. Type the name of the server or cluster to manage and click **Submit**. The server or cluster will be added to your connection list on the overview page.
 
-    ![](../media/launch/addserver2.png)
+   ![](../media/launch/addserver2.png)
 
    **-- OR --**
 
@@ -69,7 +69,10 @@ After you have completed the installation of Windows Admin Center, you can add s
 
  2. Click **Browse** and select a text file that contains a comma, or new line separated, list of FQDNs for the servers you want to add.
 
-    **-- OR --**
+> [!Note]
+> The .csv file created by [exporting your connections with PowerShell](#use-powershell-to-import-or-export-your-connections-with-tags) contains additional information beyond the server names and is not compatible with this import method.
+
+  **-- OR --**
 
 **Add servers by searching Active Directory**
 
@@ -91,7 +94,7 @@ You can use your current Windows credentials to authenticate with the managed no
 
 **Single sign-on when deployed as a Service on Windows Server**
 
-If you have installed Windows Admin Center on Windows Server, additional configuration is required for single sign-on.  [Configure your environment for delegation](..\configure\user-access-control.md)
+If you have installed Windows Admin Center on Windows Server, additional configuration is required for single sign-on.  [Configure your environment for delegation](../configure/user-access-control.md)
 
 **-- OR --**
 
@@ -111,7 +114,7 @@ specific browser session. If you reload your browser, you must re-enter your
 
 **Local Administrator Password Solution (LAPS)**
 
-If your environment uses [LAPS](https://technet.microsoft.com/mt227395.aspx), you can use LAPS credentials to authenticate with the managed node. **If you use this scenario, please** [provide feedback](http://aka.ms/WACFeedback).
+If your environment uses [LAPS](https://technet.microsoft.com/mt227395.aspx), and you have Windows Admin Center installed on your Windows 10 PC, you can use LAPS credentials to authenticate with the managed node. **If you use this scenario, please** [provide feedback](http://aka.ms/WACFeedback).
 
 ## Using tags to organize your connections
 
@@ -146,10 +149,6 @@ Once tags have been added to one or more server connections, you can view the ta
 ![](../media/launch/tags-8.png)
 
 ## Use PowerShell to import or export your connections (with tags)
-
-> Applies To: Windows Admin Center Preview
-
-Windows Admin Center Preview includes a PowerShell module to import or export your connection list.
 
 ```powershell
 # Load the module

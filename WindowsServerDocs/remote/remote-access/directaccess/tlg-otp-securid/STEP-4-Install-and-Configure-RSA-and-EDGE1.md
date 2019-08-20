@@ -6,8 +6,7 @@ ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.technology: 
-  - networking-da
+ms.technology: networking-da
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: d46ede6f-1a21-414d-b8c3-6b5c87344b9d
@@ -288,23 +287,23 @@ Use this procedure to configure EDGE1 to perform RSA authentication.
   
 #### Configure the RSA Authentication Agent  
   
-1.  On EDGE1 open Windows Explorer and create the folder C:\RSA Files. Browse to the RSA ACE Installation media.  
+1. On EDGE1 open Windows Explorer and create the folder C:\RSA Files. Browse to the RSA ACE Installation media.  
   
-2.  Copy the files agent_nsload.exe, AM_Config.zip and EDGE1_NodeSecret.zip from the RSA media to C:\RSA Files.  
+2. Copy the files agent_nsload.exe, AM_Config.zip and EDGE1_NodeSecret.zip from the RSA media to C:\RSA Files.  
   
-3.  Extract the contents of both zip files to the following locations:  
+3. Extract the contents of both zip files to the following locations:  
   
-    1.  C:\Windows\system32\  
+   1.  C:\Windows\system32\  
   
-    2.  C:\Windows\SysWOW64\  
+   2.  C:\Windows\SysWOW64\  
   
-4.  Copy agent_nsload.exe to C:\Windows\SysWOW64\\.  
+4. Copy agent_nsload.exe to C:\Windows\SysWOW64\\.  
   
-5.  Open an elevated command prompt and navigate to C:\Windows\SysWOW64.  
+5. Open an elevated command prompt and navigate to C:\Windows\SysWOW64.  
   
-6.  Type **agent_nsload.exe -f nodesecret.rec -p <password>** where <password> is the strong password that you created during the initial RSA configuration. Press Enter.  
+6. Type **agent_nsload.exe -f nodesecret.rec -p <password>** where <password> is the strong password that you created during the initial RSA configuration. Press Enter.  
   
-7.  Copy C:\Windows\SysWOW64\securid to C:\Windows\System32.  
+7. Copy C:\Windows\SysWOW64\securid to C:\Windows\System32.  
   
 ## <a name="configOTP"></a>Configure EDGE1 to support OTP authentication  
 Use this procedure to configure OTP for DirectAccess, and verify the configuration.  

@@ -38,14 +38,14 @@ To export the AD FS configuration data, perform the following tasks:
 >   
 >  Exporting the SSL certificate is optional because this certificate is stored in the local computer Personal certificates store and is preserved in the operating system upgrade.  
   
-2.  Record the configuration of the AD FS Service communications, token-decrypting and token-signing certificates.  To view all the certificates that are used, open Windows PowerShell and run the following command to add the AD FS cmdlets to your Windows PowerShell session: `PSH:>add-pssnapin “Microsoft.adfs.powershell”`. Then run the following command to create a list of all certificates in use in a file `PSH:>Get-ADFSCertificate | Out-File “.\certificates.txt”`  
+2. Record the configuration of the AD FS Service communications, token-decrypting and token-signing certificates.  To view all the certificates that are used, open Windows PowerShell and run the following command to add the AD FS cmdlets to your Windows PowerShell session: `PSH:>add-pssnapin “Microsoft.adfs.powershell”`. Then run the following command to create a list of all certificates in use in a file `PSH:>Get-ADFSCertificate | Out-File “.\certificates.txt”`  
   
 > [!NOTE]
 >  Optionally, you can also export any token-signing, token-encryption, or service-communications certificates and keys that are not internally generated, in addition to all self-signed certificates. You can view all the certificates that are in use on your server by using Windows PowerShell. Open Windows PowerShell and run the following command to add the AD FS cmdlets to your Windows PowerShell session: `PSH:>add-pssnapin “Microsoft.adfs.powershell`. Then run the following command to view all certificates that are in use on your server `PSH:>Get-ADFSCertificate`. The output of this command includes StoreLocation and StoreName values that specify the store location of each certificate. You can then use the guidance in [Export the Private Key Portion of a Server Authentication Certificate](Export-the-Private-Key-Portion-of-a-Server-Authentication-Certificate.md) to export each certificate and its private key to a .pfx file.  
 >   
 >  Exporting these certificates is optional because all external certificates are preserved during the operating system upgrade.  
   
-3.  Export AD FS 2.0 federation service properties, such as the federation service name, federation service display name, and federation server identifier to a file.  
+3. Export AD FS 2.0 federation service properties, such as the federation service name, federation service display name, and federation server identifier to a file.  
   
 To export federation service properties, open Windows PowerShell and run the following command to add the AD FS cmdlets to your Windows PowerShell session: `PSH:>add-pssnapin “Microsoft.adfs.powershell”`. Then run the following command to export federation service properties: `PSH:> Get-ADFSProperties | Out-File “.\properties.txt”`.  
   
@@ -58,7 +58,7 @@ The output file will contain the following important configuration values:
 |Identifier|Federation Service identifier|  
 |DisplayName|Federation Service display name|  
   
-4.  Back up the application configuration file. Among other settings, this file contains the policy database connection string.  
+4. Back up the application configuration file. Among other settings, this file contains the policy database connection string.  
   
 To back up the application configuration file, you must manually copy the `%programfiles%\Active Directory Federation Services 2.0\Microsoft.IdentityServer.Servicehost.exe.config` file to a secure location on a backup server.  
   
@@ -67,18 +67,18 @@ To back up the application configuration file, you must manually copy the `%prog
 >   
 >  The following is an example of a WID connection string: `“Data Source=\\.\pipe\mssql$microsoft##ssee\sql\query;Initial Catalog=AdfsConfiguration;Integrated Security=True"`. The following is an example of a SQL Server connection string: `"Data Source=databasehostname;Integrated Security=True"`.  
   
-5.  Record the identity of the AD FS 2.0 federation service account and the password of this account.  
+5. Record the identity of the AD FS 2.0 federation service account and the password of this account.  
   
 To find the identity value, examine the **Log On As** column of **AD FS 2.0 Windows Service** in the **Services** console and manually record this value.  
   
 > [!NOTE]
 >  For a stand-alone federation service, the built-in NETWORK SERVICE account is used.  In this case, you do not need to have a password.  
   
-6.  Export the list of enabled AD FS endpoints to a file.  
+6. Export the list of enabled AD FS endpoints to a file.  
   
 To do this, open Windows PowerShell and run the following command to add the AD FS cmdlets to your Windows PowerShell session: `PSH:>add-pssnapin “Microsoft.adfs.powershell”`. Then run the following command to export the list of enabled AD FS endpoints to a file: `PSH:> Get-ADFSEndpoint | Out-File “.\endpoints.txt”`.  
   
-7.  Export any custom claim descriptions to a file.  
+7. Export any custom claim descriptions to a file.  
   
 To do this, open Windows PowerShell and run the following command to add the AD FS cmdlets to your Windows PowerShell session: `PSH:>add-pssnapin “Microsoft.adfs.powershell”`. Then run the following command to export any custom claim descriptions to a file: `Get-ADFSClaimDescription | Out-File “.\claimtypes.txt”`.  
   

@@ -23,43 +23,43 @@ When you generate reports on demand, the reports are saved in a default location
 
 ## To generate Reports immediately
 
-1.  Click the **Storage Reports Management** node.
+1. Click the **Storage Reports Management** node.
 
-2.  Right-click **Storage Reports Management**, and then click **Generate Reports Now** (or select **Generate Reports Now** from the **Actions** pane). This opens the **Storage Reports Task Properties** dialog box.
+2. Right-click **Storage Reports Management**, and then click **Generate Reports Now** (or select **Generate Reports Now** from the **Actions** pane). This opens the **Storage Reports Task Properties** dialog box.
 
-3.  To select volumes or folders on which to generate reports:
+3. To select volumes or folders on which to generate reports:
 
-    -   Under **Scope**, click **Add**.
-    -   Browse to the volume or folder on which you want to generate the reports, select it, and then click **OK** to add the path to the list.
-    -   Add as many volumes or folders as you want to include in the reports. (To remove a volume or folder, click the path and then click **Remove**).
+   -   Under **Scope**, click **Add**.
+   -   Browse to the volume or folder on which you want to generate the reports, select it, and then click **OK** to add the path to the list.
+   -   Add as many volumes or folders as you want to include in the reports. (To remove a volume or folder, click the path and then click **Remove**).
 
-4.  To specify which reports to generate:
+4. To specify which reports to generate:
 
-     -   Under **Report data**, select each report that you want to include.
+    -   Under **Report data**, select each report that you want to include.
 
-    To edit the parameters of a report:
+   To edit the parameters of a report:
 
-    -   Click the report label, and then click **Edit Parameters**.
-    -   In the **Report Parameters** dialog box, edit the parameters as needed, and then click **OK**.
-    -  To see a list of parameters for all the selected reports, click **Review Selected Reports** and then click **Close**.
+   -   Click the report label, and then click **Edit Parameters**.
+   -   In the **Report Parameters** dialog box, edit the parameters as needed, and then click **OK**.
+   -  To see a list of parameters for all the selected reports, click **Review Selected Reports** and then click **Close**.
  
-5.  To specify the formats for saving the reports:
+5. To specify the formats for saving the reports:
 
-    -  Under **Report formats**, select one or more formats for the scheduled reports. By default, reports are generated in Dynamic HTML (DHTML). You can also select HTML, XML, CSV, and text formats. The reports are saved to the default location for on-demand reports.
+   -  Under **Report formats**, select one or more formats for the scheduled reports. By default, reports are generated in Dynamic HTML (DHTML). You can also select HTML, XML, CSV, and text formats. The reports are saved to the default location for on-demand reports.
 
-6.  To deliver copies of the reports to administrators by e-mail:
+6. To deliver copies of the reports to administrators by e-mail:
 
-    -  On the **Delivery** tab, select the **Send reports to the following administrators** check box, and then enter the names of the administrative accounts that will receive reports. 
-    - Use the format *account@domain*, and use semicolons to separate multiple accounts.
+   - On the **Delivery** tab, select the **Send reports to the following administrators** check box, and then enter the names of the administrative accounts that will receive reports. 
+   - Use the format <em>account@domain</em>, and use semicolons to separate multiple accounts.
 
-7.  To gather the data and generate the reports, click **OK**. This opens the **Generate Storage Reports** dialog box.
+7. To gather the data and generate the reports, click **OK**. This opens the **Generate Storage Reports** dialog box.
 
-8.  Select how you want to generate the on-demand reports:
+8. Select how you want to generate the on-demand reports:
 
-    -   If you want to view the reports immediately after they are generated, click **Wait for reports to be generated and then display them**. Each report opens in its own window.
-    -   To view the reports later, click **Generate reports in the background**.
+   -   If you want to view the reports immediately after they are generated, click **Wait for reports to be generated and then display them**. Each report opens in its own window.
+   -   To view the reports later, click **Generate reports in the background**.
 
-    Both options save the reports, and if you enabled delivery by e-mail, send the reports to administrators in the formats that you selected.
+   Both options save the reports, and if you enabled delivery by e-mail, send the reports to administrators in the formats that you selected.
 
 ## See also
 

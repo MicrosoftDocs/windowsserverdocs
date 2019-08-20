@@ -14,7 +14,6 @@ ms.technology: identity-adfs
 
 # Using AD DS Claims with AD FS
   
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
   
 You can enable richer access control for federated applications by using Active Directory Domain Services \(AD DS\)\-issued user and device claims together with Active Directory Federation Services \(AD FS\).  
   

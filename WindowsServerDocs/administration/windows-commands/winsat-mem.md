@@ -50,10 +50,10 @@ winsat mem <parameters>
 
 ## <a name="BKMK_examples"></a>Examples
 
--   The following example runs the assessment for a minimum of 4 seconds and no longer than 12 seconds, using a 32MB buffer size and saving the results in XML format to the file **memtest.xml**.  
-    ```
-    winsat mem -mint 4.0 -maxt 12.0 -buffersize 32MB -xml memtest.xml
-    ```
+- The following example runs the assessment for a minimum of 4 seconds and no longer than 12 seconds, using a 32MB buffer size and saving the results in XML format to the file **memtest.xml**.  
+  ```
+  winsat mem -mint 4.0 -maxt 12.0 -buffersize 32MB -xml memtest.xml
+  ```
 
 ## Remarks
 
