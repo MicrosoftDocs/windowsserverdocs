@@ -133,7 +133,7 @@ This section shows how to register the Native App as a public client and Web API
 
   28. Enter **PassAllClaims** in **Claim rule name:** field and **x:[] => issue(claim=x);** claim rule in Custom rule: field and click Finish.  
    
-![App Reg](media/adfs-msal-web-api-web-api/webapi21.png)
+  ![App Reg](media/adfs-msal-web-api-web-api/webapi21.png)
 
   29. Click OK on WebApiToWebApi – Web API Properties screen
 
