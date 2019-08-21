@@ -144,7 +144,7 @@ Microsoft Hyper-V Server 2012 R2 is now ready for management with Windows Admin 
 
 ## Port configuration on the target server
 
-In some management scenarios, Windows Admin Center will invoke an operation that copies files from the Windows Admin Center gateway to the target server using SMB.  For these operations to succeed, the firewall on the target server needs to be configured to allow inbound connections on port 445.
+Windows Admin Center uses the SMB file sharing protocol for some file copying tasks, such as when importing a certificate on a remote server. For these file copy operations to succeed, the firewall on the remote server must allow inbound connections on port 445.  You can use the Firewall tool in Windows Admin Center to verify the incoming rule for ‘File Server Remote Management (SMB-In)’ is set to allow access on this port.
 
 > [!Tip]
 > Ready to install Windows Admin Center? [Download now](https://docs.microsoft.com/windows-server/manage/windows-admin-center/understand/windows-admin-center#download-now)
