@@ -366,7 +366,7 @@
 
 
 ### AD FS Development
-#### [AD FS Modern Auth Concepts](ad-fs/development/adfs-modern-auth-concepts.md)
+#### [AD FS Modern Auth Concepts](ad-fs/development/ad-fs-openid-connect-oauth-concepts.md)
 #### [AD FS Modern Auth Flows and App Scenarios ](ad-fs/overview/AD-FS-Scenarios-for-Developers.md)
 
 #### [Build a Custom Authentication Method for AD FS](ad-fs/development/ad-fs-build-custom-auth-method.md)
