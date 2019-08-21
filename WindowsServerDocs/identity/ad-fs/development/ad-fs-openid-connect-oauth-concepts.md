@@ -1,5 +1,5 @@
 ---
-title: AD FS Modern Authentication Concepts  
+title: AD FS OpenID Connect/OAuth Concepts  
 description: Learn about AD FS modern authentication concepts.
 author: billmath
 ms.author: billmath
@@ -10,7 +10,7 @@ ms.prod: windows-server-threshold
 ms.technology: identity-adfs
 ---
 
-# AD FS Modern Authentication Concepts 
+# AD FS OpenID Connect/OAuth Concepts
 Applies to AD FS 2016 and later
  
 ## Modern Authentication Actors 
