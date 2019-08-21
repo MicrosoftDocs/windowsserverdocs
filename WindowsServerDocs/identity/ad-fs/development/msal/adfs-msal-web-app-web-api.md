@@ -16,8 +16,7 @@ ms.technology: identity-adfs
  
 Learn how to build a web app signing-in users authenticated by AD FS 2019 and acquiring tokens using [MSAL library](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/wiki) to call web APIs.  
  
-Before reading this article, you should be familiar with the [AD FS concepts](../ad-fs-openid-connect-oauth-concepts.md) and [Authorization code grant flow](../../overview/ad-fs-scenarios-for-developers?branch=pr-en-us-333#authorization-code-grant-flow
-)
+Before reading this article, you should be familiar with the [AD FS concepts](../ad-fs-openid-connect-oauth-concepts.md) and [Authorization code grant flow](../../overview/ad-fs-scenarios-for-developers.md#authorization-code-grant-flow)
  
 ## Overview 
  
