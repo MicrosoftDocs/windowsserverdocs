@@ -1,6 +1,6 @@
 ---
 ms.assetid: 8a64545b-16bd-4c13-a664-cdf4c6ff6ea0
-title: AD FS Modern Auth Flows and App Scenarios 
+title: AD FS OpenID Connect/OAuth flows and Application Scenarios
 description:
 author: billmath
 ms.author: billmath
@@ -11,7 +11,7 @@ ms.prod: windows-server-threshold
 ms.technology: identity-adfs
 ---
 
-# AD FS Modern Auth Flows and App Scenarios
+# AD FS OpenID Connect/OAuth flows and Application Scenarios
 Applies to AD FS 2016 and later
 
 

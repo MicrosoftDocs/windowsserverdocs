@@ -15,7 +15,7 @@ ms.technology: identity-adfs
  
 Learn how to build a Web API calling another Web API On Behalf Of the user.  
  
-Before reading this article, you should be familiar with the [AD FS concepts](../ad-fs-openid-connect-oauth-concepts.md) and [On-Behalf_Of flow](../../overview/ad-fs-scenarios-for-developers.md#on-behalf-of-flow)
+Before reading this article, you should be familiar with the [AD FS concepts](../ad-fs-openid-connect-oauth-concepts.md) and [On-Behalf_Of flow](../../overview/ad-fs-openid-connect-oauth-flows-scenarios.md#on-behalf-of-flow)
 
 ## Overview 
 
@@ -219,6 +219,6 @@ Once the code changes are made rebuild the solution
       ![App Reg](media/adfs-msal-web-api-web-api/webapi33.png)
  
  ## Next Steps
-[AD FS OpenID Connect/OAuth flows and Application Scenarios](../../overview/ad-fs-scenarios-for-developers.md)
+[AD FS OpenID Connect/OAuth flows and Application Scenarios](../../overview/ad-fs-openid-connect-oauth-flows-scenarios.md)
  
  
