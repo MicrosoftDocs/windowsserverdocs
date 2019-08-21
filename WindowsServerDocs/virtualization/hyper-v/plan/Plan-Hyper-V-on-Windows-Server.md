@@ -22,5 +22,5 @@ Use these resources to help you plan your Hyper-V deployment.
 - [Hyper-V security in Windows Server](plan-hyper-v-security-in-windows-server.md)
 - [Networking in Windows Server](plan-hyper-v-networking-in-windows-server.md) 
 - [Should I create a generation 1 or 2 virtual machine?](Should-I-create-a-generation-1-or-2-virtual-machine-in-Hyper-V.md)
-- [Plan for GPU acceleration](plan-for-gpu-acceleration-in-windows-server.md)
+- [Plan for GPU acceleration in Windows Server](plan-for-gpu-acceleration-in-windows-server.md)
 - [Plan for deploying devices using Discrete Device Assignment](plan-for-deploying-devices-using-discrete-device-assignment.md)
