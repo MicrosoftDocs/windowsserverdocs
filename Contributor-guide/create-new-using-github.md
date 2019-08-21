@@ -137,7 +137,9 @@ Before you can start to work on your content, you must create a new branch in yo
 
 3. From the **Explorer** pane, select your new file.
 
-4. Add your text to the page, and then select **File** > **Save**.
+4. Add your text to the page. If you're creating a new article, make sure you [Add the required metadata tags to your Windows Server-related article](metadata-requirements-for-articles.md).
+
+5. Select **File** > **Save**.
 
 ### Preview your text
 
