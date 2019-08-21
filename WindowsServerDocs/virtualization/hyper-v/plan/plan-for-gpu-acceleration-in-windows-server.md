@@ -48,8 +48,8 @@ For more information, see these topics:
 
 ## RemoteFX vGPU
 
->[!NOTE]
-RemoteFX vGPU is not supported in Windows Server 2019. It is still fully supported in Windows Server 2016.
+> [!NOTE]
+> RemoteFX vGPU is not supported in Windows Server 2019. It is still fully supported in Windows Server 2016.
 
 RemoteFX vGPU is a graphics virtualization technology that allows a single physical GPU to be shared among multiple virtual machines. In a RemoteFX vGPU deployment, virtualized workloads run on Microsoft's RemoteFX 3D adapter, which coordinates GPU processing requests between the host and guests. RemoteFX vGPU is most suitable for knowledge worker and high-burst workloads where dedicated GPU resources are not required. RemoteFX vGPU can only provide GPU acceleration to Windows VMs.
 
