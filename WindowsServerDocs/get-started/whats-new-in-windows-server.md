@@ -2,7 +2,7 @@
 title: What's New in Windows Server
 description: "What are the new features in compute, identity, management, automation, networking, security, storage."
 ms.prod: windows-server
-ms.date: 06/03/2019
+ms.date: 08/22/2019
 ms.technology: server-general
 ms.topic: article
 author: jasongerend
@@ -11,7 +11,7 @@ ms.localizationpriority: medium
 ---
 # What's new in Windows Server
 
->Applies To: Windows Server 2019, Windows Server 2016, Windows Server (Semi-Annual Channel)
+> Applies to: Windows Server 2019, Windows Server 2016, Windows Server (Semi-Annual Channel)
 
 You can find the new features for each of these Windows Server releases.  
 
@@ -33,4 +33,4 @@ Windows Server Semi-Annual Channel releases deliver new operating system capabil
 
 - [Release Notes: Important issues in Windows Server 2019](../get-started-19/rel-notes-19.md)
 - [Release Notes: Important Issues in Windows Server 2016](Windows-Server-2016-GA-Release-Notes.md)
-- [Features removed or planned for replacement in Windows Server](features-removed-in-windows-server.md)
+- [Features removed or planned for replacement in Windows Server](../get-started-19/removed-features.md)

@@ -22,12 +22,12 @@ Long-Term Servicing Channel (LTSC) releases:
 
 Semi-Annual Channel releases:
 
-- [Features removed or planned for replacement starting with Windows Server, version 1903](../get-started-19/removed-features-1903.md)
+- [Features removed or planned for replacement starting with Windows Server, version 1903](removed-features-1903.md)
 - [Features removed or planned for replacement starting with Windows Server, version 1803](../get-started/windows-server-1803-removed-features.md)
 - [Features removed or planned for replacement starting with Windows Server, version 1709](../get-started/Removed-Features-1709.md) (Out of support as of April 9, 2019)
 
-Windows Server Semi-Annual Channel releases deliver new operating system capabilities at a faster pace. A new release comes out every six months and is supported for 18 months. Check [Windows Server release information](windows-server-release-info.md) and [Lifecycle Support Page](https://support.microsoft.com/lifecycle) for support dates and always use the latest release if possible.
+Windows Server Semi-Annual Channel releases deliver new operating system capabilities at a faster pace. A new release comes out every six months and is supported for 18 months. Check [Windows Server release information](../get-started/windows-server-release-info.md) and [Lifecycle Support Page](https://support.microsoft.com/lifecycle) for support dates and always use the latest release if possible.
 
 ## See also
 
-- [What's new in Windows Server](whats-new-in-windows-server.md)
+- [What's new in Windows Server](../get-started/whats-new-in-windows-server.md)
