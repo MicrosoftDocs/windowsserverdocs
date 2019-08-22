@@ -5,7 +5,7 @@ ms.technology: manage
 ms.topic: article
 author: nwashburn-ms
 ms.author: niwashbu
-ms.date: 06/20/2019
+ms.date: 08/22/2019
 ms.localizationpriority: high
 ms.prod: windows-server-threshold
 ---
@@ -124,6 +124,7 @@ Admin Center to Azure</a></li>
 
 Learn about our latest released features:
 
+- Version [1908](https://aka.ms/wac1908) - includes visual updates, Packetmon, FlowLog Audit, Azure monitor onboarding for clusters, and support for WinRM over HTTPS (port 5986.)
 - Version [1907](https://aka.ms/wac1907) - added Azure cost estimate links and made improvements to import/export and tagging of virtual machines.
 - Version [1906](https://aka.ms/wac1906) - added import/export VMs, switch Azure accounts, add connections from Azure, connectivity settings experiment, performance improvements, and performance profiling tool.
 - Version 1904.1 is the most recent GA release - a maintenance update to improve stability of gateway plugins.
