@@ -9,6 +9,7 @@ ms.topic: article
 author: chrishuybregts
 ms.author: chrihu
 ms.assetid: 67a01889-fa36-4bc6-841d-363d76df6a66
+ms.date: 08/21/2019
 ---
 # Deploy graphics devices using Discrete Device Assignment
 
@@ -93,7 +94,7 @@ Mount-VMHostAssignableDevice -LocationPath $locationPath
 ```
 You can then re-enable the device in device manager and the host operating system will be able to interact with the device again.
 
-## Examples
+## Example
 
 ### Mounting a GPU to a VM
 In this example we use PowerShell to configure a VM named “ddatest1” to take the first GPU available by the manufacturer NVIDIA and assign it into the VM.  
@@ -125,3 +126,13 @@ Dismount-VMHostAssignableDevice -force -LocationPath $locationPath
 #Assign the device to the guest VM.
 Add-VMAssignableDevice -LocationPath $locationPath -VMName $vm
 ```
+
+## Troubleshooting
+
+If you've passed a GPU into a VM but Remote Desktop or an application isn't recognizing the GPU, check for the following common issues:
+
+- Ensure the GPU vendor's latest, supported driver is installed and is not reporting an error by checking the device state in the Device Manager.
+- Ensure that device has enough MMIO space allocated for it within the VM. (See [MMIO Space](Plan-for-Deploying-Devices-using-Discrete-Device-Assignment.md#mmio-space).)
+- Ensure you're using a GPU that the vendor supports being used in this configuration. For example, some vendors prevent their consumer cards from working when passed through to a VM.
+- Ensure the application being run supports running inside a VM, and that both the GPU and its associated drivers are supported by the application. Some applications have allow-lists of GPUs and environments.
+- If you're using the Remote Desktop Session Host role or Windows Multipoint Services on the guest, you will need to ensure that a specific Group Policy entry is set to allow use of the default GPU. Using a Group Policy Object applied to the guest (or the Local Group Policy Editor on the guest), navigate to the following Group Policy item: **Computer Configuration** / **Administrator Templates** / **Windows Components** / **Remote Desktop Services** / **Remote Desktop Session Host** / **Remote Session Environment** / **Use the hardware default graphics adapter for all Remote Desktop Services sessions**. Set this value to Enabled, then reboot the VM once the policy has been applied.
