@@ -1,17 +1,12 @@
 ---
-title: "Use the My Server App to Connect to Windows Server Essentials"
-description: "Describes how to use Windows Server Essentials"
-ms.custom: na
+title: Use the My Server App to Connect to Windows Server Essentials
+description: Describes how to use Windows Server Essentials
 ms.date: 10/03/2016
 ms.prod: windows-server-2016-essentials
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 4e40b57f-6917-43ef-92e0-030baa9d2b99
-9author: nnamuhcs
-ms.author: coreyp
-manager: dongill
+author: nnamuhcs
+ms.author: daveba
 ---
 
 # Use the My Server App to Connect to Windows Server Essentials
