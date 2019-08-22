@@ -17,7 +17,7 @@ Each release of Windows Server adds new features and functionality; we also occa
 
 > [!TIP]
 > - You can get early access to Windows Server builds by joining the [Windows Insider program](https://insider.windows.com) - this is a great way to test feature changes.
-> - Have questions about other releases? Check out the information for [Windows Server 2016](deprecated-features.md), and [Windows Server, version 1709](removed-features-1709.md).
+> - Have questions about other releases? Check out [Features removed or planned for replacement in Windows Server](features-removed-in-windows-server.md).
 
 **The list is subject to change and might not include every affected feature or functionality.** 
 
