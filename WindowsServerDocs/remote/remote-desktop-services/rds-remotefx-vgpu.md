@@ -1,6 +1,6 @@
 ---
-title: RDS - RemoteFX vGPU setup and configuration
-description: Planning information to configure RemoteFX vGPU graphics virtualization.
+title: RDS - RemoteFX 3D Video Adapter (vGPU) setup and configuration
+description: Planning information to configure RemoteFX 3D Video Adapter (vGPU) graphics virtualization.
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -14,19 +14,19 @@ ms.assetid: 0263fa6b-2185-4cc3-99ef-3588e2f4ada5
 author: lizap
 manager: scottman
 ---
-# Set up and configure RemoteFX vGPU for Remote Desktop Services
+# Set up and configure RemoteFX 3D Video Adapter (vGPU) for Remote Desktop Services
 
 
 The vGPU feature of RemoteFX makes it possible for multiple virtual machines to share a physical graphics adapter. The virtual machines are able to offload rendering of graphic information from the processor to the dedicated graphics adapter. This will decrease the CPU load and improve the scalability for graphic intense workloads that run in the VDI virtual machines. 
 
-## RemoteFX vGPU requirements
+## RemoteFX 3D Video Adapter (vGPU) requirements
 
-Requirements for host systems: 
+Requirements for host systems:
 
-- Windows Server 2016 or Windows 10
-- DX 11.0 compatible GPU with WDDM 1.2 compatible driver 
-- Windows Server RD Virtualization Host role enabled (enables Hyper-V Role) 
-- Server with a CPU that supports SLAT (Second Level Address Translation) 
+- Windows Server 2016
+- DX 11.0 compatible GPU with WDDM 1.2 compatible driver
+- Windows Server RD Virtualization Host role enabled (enables Hyper-V Role)
+- Server with a CPU that supports SLAT (Second Level Address Translation)
 
 Guest VM requirements:
 
@@ -36,24 +36,17 @@ Additional considerations for guest VMs:
 
 - OpenGL and OpenCL functionality is only available in Windows 10 or Windows Server 2016.  
 - DirectX 11.0 is only available with Windows 8 or newer guest VMs. 
-- Remote Desktop Session Host is only supported with RemoteFX vGPU if it is running as a [personal session desktop](rds-personal-session-desktops.md).
+- Remote Desktop Session Host is only supported with RemoteFX 3D Video Adapter (vGPU) if it is running as a [personal session desktop](rds-personal-session-desktops.md).
 
 For guest VMS, make sure to review [VDI deployment - supported guest OSs](rds-supported-config.md#vdi-deployment--supported-guest-oss).
 
-## Install RemoteFX vGPU
+## Install RemoteFX 3D Video Adapter (vGPU)
 
 Use the following steps to install and configure RemoteFX on the host for Windows Server 2016 and Windows 10:
 
 1. Install the operating system.
 2. Install the latest Windows 10/Windows Server 2016 GPU drivers available from the graphics card vendor site.
-3. Install RemoteFX vGPU on the Windows 10/Windows Server 2016 host:
-   1. On a Windows 10 host, enable the Hyper-V feature in the Control Panel (go to Control Panel/Programs and Features/Turn Windows Features on or off):
-
-      ![Windows Features window to enable the Hyper-V feature](media/rds-hyperv-settings.png)
-
-   2. On a Windows Server 2016 host, install the Remote Desktop Virtualization Host (RDVH) role.
-   
-
+3. Install the Remote Desktop Virtualization Host (RDVH) role.
 4. Now, create and configure a guest VM:
    1. Create a VM with Windows 10 Enterprise or Windows Server 2016.
    2. Add the RemoteFX 3D graphics adapter. See [Configure the RemoteFX vGPU 3D adapter](#configure-the-remotefx-vgpu-3d-adapter) for information on how to do that with either Hyper-V Manager or PowerShell cmdlets. 
@@ -65,8 +58,8 @@ RemoteFX vGPU will use all GPUs when there are more than one available. However,
    3. Select the GPU that you don't want to use, and then clear **Use this GPU with RemoteFX**.
 
 
-### Configure the RemoteFX vGPU 3D adapter
-You can use either the Hyper-V Manager UI or PowerShell cmdlets to configure the RemoteFX vGPU 3D graphics adapter. 
+### Configure the RemoteFX 3D Video Adapter (vGPU) adapter
+You can use either the Hyper-V Manager UI or PowerShell cmdlets to configure the RemoteFX 3D Video Adapter (vGPU). 
 
 #### Through Hyper-V Manager:
 
