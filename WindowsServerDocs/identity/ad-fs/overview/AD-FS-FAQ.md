@@ -71,7 +71,7 @@ AD FS supports multiple multi-forest configuration and relies on the underlying 
 ## Design
 
 ### What third party multi-factor authentication providers are available for AD FS?
-AD FS provides an extensibility mechanism for 3rd party MFA providers to integrate. There is no set certification program for this. It is assumed that the vendor has performed the necessary validations prior to release. 
+AD FS provides an extensible mechanism for 3rd party MFA providers to integrate. There is no set certification program for this. It is assumed that the vendor has performed the necessary validations prior to release. 
 
 ### Are third party proxies supported with AD FS?
 Yes, third party proxies can be placed in front of the Web Application Proxy, but any third party proxy must support the [MS-ADFSPIP protocol](https://msdn.microsoft.com/library/dn392811.aspx) to be used in place of the Web Application Proxy.
