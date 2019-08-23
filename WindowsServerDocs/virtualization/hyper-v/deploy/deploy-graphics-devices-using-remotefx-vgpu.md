@@ -97,7 +97,34 @@ For details see [Get-VMRemoteFXPhysicalVideoAdapter](https://technet.microsoft.c
 
 ## Monitor performance
 
-The performance and scale of a RemoteFX vGPU-enabled service are determined by a variety of factors such as total GPU memory, amount of system memory and memory speed, number of CPU cores and CPU clock frequency, storage speed, and NUMA implementation. For detailed information about performance counters you can use to monitor RemoteFX vGPU behavior, refer to the following articles:
+The performance and scale of a RemoteFX vGPU-enabled service are determined by a variety of factors such as number of GPUs on your system, total GPU memory, amount of system memory and memory speed, number of CPU cores and CPU clock frequency, storage speed, and NUMA implementation.
 
-- [Performance Tuning Remote Desktop Virtualization Hosts](../../../administration/performance-tuning/role/remote-desktop/virtualization-hosts.md)
+### Host system memory
+
+For every VM enabled with a vGPU, RemoteFX uses system memory both in the guest operating system and in the host server. The hypervisor guarantees the availability of system memory for a guest operating system. On the host, each vGPU-enabled virtual desktop needs to advertise its system memory requirement to the hypervisor. When the vGPU-enabled virtual desktop is starting, the hypervisor reserves additional system memory in the host.
+
+The memory requirement for the RemoteFX-enabled server is dynamic because the amount of memory consumed on the RemoteFX-enabled server is dependent on the number of monitors that are associated with the vGPU-enabled virtual desktops and the maximum resolution for those monitors.
+
+### Host GPU video memory
+
+Every vGPU-enabled virtual desktop uses the video memory in the GPU hardware on the host server to render the desktop. In addition to rendering, the video memory is used by a codec to compress the rendered screen. The amount of memory needed is directly based on the amount of monitors that are provisioned to the virtual machine.
+The video memory that is reserved varies based on the number of monitors and the system screen resolution. Some users may require a higher screen resolution for specific tasks. There is greater scalability with lower resolution settings if all other settings remain constant.
+
+### Host CPU
+
+The hypervisor schedules the host and VMs on the CPU. On the RemoteFX-enabled host the overhead is increased, because the system runs an additional process (rdvgm.exe) per vGPU-enabled virtual desktop. This process uses the graphics device driver to run commands on the GPU. The codec also uses the CPUs for compressing the screen data that needs to be sent back to the client.
+
+More virtual processors mean a better user experience. We recommend allocating at least two virtual CPUs per vGPU-enabled virtual desktop. We also recommend using the x64 architecture for vGPU-enabled virtual desktops because the performance on x64 virtual machines is better compared to x86 virtual machines.
+
+### GPU processing power
+
+For every vGPU-enabled virtual desktop, there is a corresponding DirectX process running on the host server. This process replays all the graphics commands that it receives from the RemoteFX virtual desktop onto the physical GPU. For the physical GPU, it is equivalent to simultaneously running multiple DirectX applications.
+
+Typically, graphics devices and drivers are tuned to run a few applications on the desktop. RemoteFX stretches the GPUs to be used in a unique manner. To measure how the GPU is performing on a RemoteFX server, performance counters have been added to measure the GPU response to RemoteFX requests.
+
+Usually when a GPU resource is low on resources, Read and Write operations to the GPU take a long time to complete. By using performance counters, administrators can take preventative action, eliminating the possibility of any downtime for their end users.
+
+
+For detailed information about performance counters you can use to monitor RemoteFX vGPU behavior, refer to the following articles:
+
 - [Diagnose graphics performance issues in Remote Desktop](https://docs.microsoft.com/en-us/azure/virtual-desktop/remotefx-graphics-performance-counters)
