@@ -1,15 +1,11 @@
 ---
 title: Beginning your General Data Protection Regulation (GDPR) journey for Windows Server 2016
 description: Use this article to understand what GDPR is and about the products Microsoft provides to help you get started towards compliance.
-keywords: privacy, GDPR
-ms.custom: na
-ms.reviewer: na
-ms.suite: na
 ms.technology: techgroup-security
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.date: 09/25/2017
 ms.author: nirb
+author: nirb-ms
 ---
 
 # Beginning your General Data Protection Regulation (GDPR) journey for Windows Server 
