@@ -125,9 +125,9 @@ Task Scheduler lets you examine the list of tasks that are scheduled for differe
 
 Notification icons on the desktop can have fairly expensive refreshing mechanisms. You should disable any notifications by removing the component that registers them from the startup list or by changing the configuration on apps and system components to disable them. You can use **Customize Notifications Icons** to examine the list of notifications that are available on the server.
 
-### RemoteFX data compression
+### Remote Desktop Protocol data compression
 
-Microsoft RemoteFX compression can be configured by using Group Policy under **Computer Configuration &gt; Administrative Templates &gt; Windows Components &gt; Remote Desktop Services &gt; Remote Desktop Session Host &gt; Remote Session Environment &gt; Configure compression for RemoteFX data**. Three values are possible:
+Remote Desktop Protocol compression can be configured by using Group Policy under **Computer Configuration &gt; Administrative Templates &gt; Windows Components &gt; Remote Desktop Services &gt; Remote Desktop Session Host &gt; Remote Session Environment &gt; Configure compression for RemoteFX data**. Three values are possible:
 
 -   **Optimized to use less memory** Consumes the least amount of memory per session but has the lowest compression ratio and therefore the highest bandwidth consumption.
 
@@ -135,7 +135,7 @@ Microsoft RemoteFX compression can be configured by using Group Policy under **C
 
 -   **Optimized to use less network bandwidth** Further reduces network bandwidth usage at a cost of approximately 2 MB per session. If you want to use this setting, you should assess the maximum number of sessions and test to that level with this setting before you place the server in production.
 
-You can also choose to not use a RemoteFX compression algorithm. Choosing to not use a RemoteFX compression algorithm will use more network bandwidth, and it is only recommended if you are using a hardware device that is designed to optimize network traffic. Even if you choose not to use a RemoteFX compression algorithm, some graphics data will be compressed.
+You can also choose to not use a RDP compression algorithm. Choosing to not use compression algorithm will use more network bandwidth, and it is only recommended if you are using a hardware device that is designed to optimize network traffic. Even if you choose not to use a compression algorithm, some graphics data will be compressed.
 
 ### Device redirection
 
