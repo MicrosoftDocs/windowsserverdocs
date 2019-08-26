@@ -59,7 +59,7 @@ To validate this automatically, please use the [AD FS Diagnostic Analyzer tool](
 AD FS does not enable certificate authentication by default. Refer to the beginning of this document on how to enable certificate authentication. 
 
 ### Check if Certificate Authentication is enabled in the AD FS authentication policy
-AD FS does user certificate authentication by default on port 49443 with the same host name as AD FS (e.g. `adfs.contoso.com`). You can also configure AD FS to use port 443 (default HTTPS port) using the alternate SSL binding. However, the URL used in this configuration is `certauth.<adfs-farm-name>` (e.g. `certauth.contoso.com`). See [this link](https://docs.microsoft.com/en-us/windows-server/identity/ad-fs/operations/ad-fs-support-for-alternate-hostname-binding-for-certificate-authentication) for more information. 
+AD FS does user certificate authentication by default on port 49443 with the same host name as AD FS (e.g. `adfs.contoso.com`). You can also configure AD FS to use port 443 (default HTTPS port) using the alternate SSL binding. However, the URL used in this configuration is `certauth.<adfs-farm-name>` (e.g. `certauth.contoso.com`). See [this link](ad-fs-support-for-alternate-hostname-binding-for-certificate-authentication.md) for more information. 
 The most common case of network connectivity is that a firewall has been incorrectly configured and blocks or interferes user certificate authentication traffic. Usually, you will see a blank screen or a 500 server error when this issue occurs. 
 1)	Note the hostname and port that you have configured in AD FS
 2)	Ensure that any firewall in front of AD FS or Web Application Proxy (WAP) is configured to allow the `hostname:port` combination for your AD FS farm. You will have to refer to your network engineer to perform this step. 
@@ -95,14 +95,14 @@ You may notice that some devices are working correctly but other devices are not
 ### Check if the TLS version is compatible between AD FS/WAP servers and the client device
 In rare cases, a client device (typically mobile devices) are updated to only support a higher version of TLS (say 1.3) or you may have the reverse problem where AD FS/WAP servers were updated to only use a higher TLS version and the client device does not support it. 
 You can use online SSL tools to check your AD FS/WAP servers and see if it is compatible with the device. 
-For more information on how to control the TLS versions, see [this link](https://docs.microsoft.com/en-us/windows-server/identity/ad-fs/operations/manage-ssl-protocols-in-ad-fs).
+For more information on how to control the TLS versions, see [this link](manage-ssl-protocols-in-ad-fs.md).
 
 ### Check if Azure AD PromptLoginBehavior is configured correctly on your federated domain settings
 Many Office 365 applications send prompt=login to Azure AD. Azure AD, by default, converts it to a fresh password login to AD FS. As a result, even if you have configured certificate authentication in AD FS, your end users will only see a password login. 
 1)	Get the federated domain settings using the ‘Get-MsolDomainFederationSettings’ command let
 2)	Ensure that PromptLoginBehavior parameter is set to one of ‘Disabled’ or ‘NativeSupport’
 
-For more information see [this link](https://docs.microsoft.com/en-us/windows-server/identity/ad-fs/operations/ad-fs-prompt-login). 
+For more information see [this link](ad-fs-prompt-login.md). 
 
 ### Additional Troubleshooting
 These are rare occurrences
