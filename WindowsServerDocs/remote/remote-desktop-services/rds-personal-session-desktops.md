@@ -94,6 +94,3 @@ The **Export-RDPersonalPersonalDesktopAssignment** cmdlet exports the current as
 
 
 All new cmdlets support the common parameters: -Verbose, -Debug, -ErrorAction, -ErrorVariable, -OutBuffer, and -OutVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/p/?LinkID=113216).
-
-## Hardware accelerated graphics
-Windows Server 2016 extends the RemoteFX 3D Video Adapter (vGPU)  technology to support OpenGL and supports single-user Windows Server 2016 guest VMs. You can combine personal session desktops with the new vGPU capabilities to provide support for hosted applications that require accelerated graphics. Alternatively, you can combine personal session desktops with the new Discrete Device Assignment (DDA) capability to also provide support for hosted applications that require accelerated graphics.
