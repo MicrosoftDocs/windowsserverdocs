@@ -21,7 +21,7 @@ This document contains a list of all of the documentation overviews for AD FS fo
   
 * [What's New in AD FS for Windows Server 2019](../ad-fs/overview/whats-new-active-directory-federation-services-windows-server.md)  
   
-* [AD FS Scenarios for Developers](../ad-fs/overview/AD-FS-Scenarios-for-Developers.md) 
+* [AD FS OpenID Connect/OAuth flows and Application Scenarios](../ad-fs/overview/ad-fs-openid-connect-oauth-flows-scenarios.md) 
 
 * [AD FS Requirements](../ad-fs/overview/AD-FS-2016-Requirements.md)
 
