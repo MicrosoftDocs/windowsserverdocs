@@ -1,5 +1,5 @@
 ---
-Title: DFS Replication overview
+title: DFS Replication overview
 ms.date: 03/08/2019
 ms.prod: windows-server-threshold
 ms.technology: storage

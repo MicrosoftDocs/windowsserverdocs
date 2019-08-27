@@ -1,6 +1,8 @@
 ---
 title: Configuring Kerberos for IP Address
-description: "Kerberos support for IP-based SPNs"
+description: Kerberos support for IP-based SPNs
+author: daveba
+ms.author: daveba
 ---
 
 # Kerberos clients allow IPv4 and IPv6 address hostnames in Service Principal Names (SPNs)

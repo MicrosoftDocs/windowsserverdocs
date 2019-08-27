@@ -37,7 +37,7 @@ AD FS includes its own dedicated performance counters to help you monitor the pe
   
 7. When you are prompted to add registry keys to monitor, click **Next**.  
   
-8. When you are prompted to specify the location to save the performance data, you can accept the default location \(**%systemdrive%\\PerfLogs\\Admin\\***<data\_collector\_set>*, and then click **Next**.  
+8. When you are prompted to specify the location to save the performance data, you can accept the default location \(**%systemdrive%\\PerfLogs\\Admin\\**_<data\_collector\_set>_, and then click **Next**.  
   
 9. When you are prompted to create the data collector set, select **Save and close**, and then click **Finish**.  
   

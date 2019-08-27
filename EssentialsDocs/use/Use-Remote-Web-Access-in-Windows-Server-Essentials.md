@@ -55,7 +55,7 @@ manager: dongill
   
 ##### To log on to Remote Web Access from a network computer  
   
-1.  Open a Web browser, type **https://***<YourServerName\>***/remote** in the address bar, and then press Enter.  
+1.  Open a Web browser, type **https://**_<YourServerName\>_**/remote** in the address bar, and then press Enter.  
   
     > [!NOTE]
     >  Make sure that you include the s in https.  
@@ -64,7 +64,7 @@ manager: dongill
   
 ##### To log on to Remote Web Access from a remote computer  
   
-1.  Open a Web browser, type **https://***<YourDomainName\>***/remote** in the address bar, and then press Enter.  
+1.  Open a Web browser, type **https://**_<YourDomainName\>_**/remote** in the address bar, and then press Enter.  
   
     > [!NOTE]
     >  You can get your domain name information from your network administrator. Make sure that you include the s in https.  
@@ -309,13 +309,13 @@ manager: dongill
   
 ##### To log on to Remote Web Access from a mobile device  
   
-1.  Open a Web browser and type **https://***<YourDomainName\>***/remote** in the address bar.  Make sure that you include the s in https.  
+1.  Open a Web browser and type **https://**_<YourDomainName\>_**/remote** in the address bar.  Make sure that you include the s in https.  
   
 2.  On the  Remote Web Access logon page, type your user name and password in the text boxes, and then click the arrow. You are logged on to the mobile version of Remote Web Access.  
   
 ##### To switch to the desktop version of Remote Web Access  
   
-1.  Open a Web browser and type **https://***<YourDomainName\>***/remote** in the address bar.  Make sure that you include the s in https.  
+1.  Open a Web browser and type **https://**_<YourDomainName\>_**/remote** in the address bar.  Make sure that you include the s in https.  
   
 2.  On the  Remote Web Access logon page, type your user name and password in the text boxes, click **View desktop version**, and then click the arrow. You are logged on to the desktop version of Remote Web Access.  
   
@@ -323,7 +323,7 @@ manager: dongill
   
 1. Log off.  
   
-2. Open a Web browser and type **https://***<YourDomainName\>***/remote/m** in the address bar. Make sure that you include the s in https.  
+2. Open a Web browser and type **https://**_<YourDomainName\>_**/remote/m** in the address bar. Make sure that you include the s in https.  
   
 3. The mobile version of  Remote Web Access is displayed. On the  Remote Web Access logon page, type your user name and password in the text boxes, and then click the arrow. You are logged on to the mobile version of  Remote Web Access.  
   
