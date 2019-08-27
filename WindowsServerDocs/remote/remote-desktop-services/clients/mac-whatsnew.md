@@ -11,7 +11,7 @@ ms.topic: article
 author: lizap
 manager: dongill
 ms.author: elizapo
-ms.date: 04/29/2019
+ms.date: 08/27/2019
 ms.localizationpriority: medium
 ---
 # What's new for the Remote Desktop client on macOS?
@@ -20,6 +20,24 @@ We regularly update the [Remote Desktop client for macOS](remote-desktop-mac.md)
 
 If you encounter any issues, you can always contact us via **Help > Report an Issue**.
 
+## Updates for version 10.3.0
+*Published date: 8/27/19*
+
+It's been a few weeks since we last updated, but we've been hard at work during that time. Version 10.3.0 brings some new features and lots of under-the-hood fixes.
+
+ - Camera redirection is now possible when connecting to Windows 10 1809, Windows Server 2019 and later.
+ - On Mojave and Catalina we've added a new dialog that requests your permission to use the microphone and camera for device redirection.
+ - The feed subscription flow has been rewritten to be simpler and faster.
+ - Clipboard redirection now includes the Rich Text Format (RTF).
+ - When entering your password you have the option to reveal it with a "Show password" checkbox.
+ - Addressed scenarios where the session window was jumping between monitors.
+ - The Connection Center displays high resolution remote app icons (when available).
+ - CMD+A maps to CTRL+A when Mac clipboard shortcuts are being used.
+ - CMD+R now refreshes all of your subscribed feeds.
+ - Added new secondary click options to expand or collapse all groups or feeds in the Connection Center.
+ - Added a new secondary click option to change the icon size in the Feeds tab of the Connection Center.
+ - A new simplified and cleaner app icon.
+
 ## Updates for version 10.2.13
 *Published date: 5/8/2019*
 
@@ -27,7 +45,7 @@ If you encounter any issues, you can always contact us via **Help > Report an Is
 - Added a privacy notice to the "Add Feed" dialog.
 
 ## Updates for version 10.2.12
-*Published date: 4/16/2019* 
+*Published date: 4/16/2019*
 
 - Resolved random disconnects (with error code 0x904) that took place when connecting via an RD Gateway.
 - Fixed a bug that caused the resolutions list in application preferences to be empty after installation.
@@ -94,7 +112,7 @@ If you encounter any issues, you can always contact us via **Help > Report an Is
 - Better handling of full-screen remote apps by intelligently hiding the menu bar and dock.
 - Fixed scenarios where remote apps remained hidden after being launched.
 - Addressed slow rendering updates when using "Fit to Window" with hardware acceleration disabled.
-- Handled database creation errors caused by incorrect permissions when the client starts up. 
+- Handled database creation errors caused by incorrect permissions when the client starts up.
 - Fixed an issue where the client was consistently crashing at launch and not starting for some users.
 - Fixed a scenario where connections were incorrectly imported as full-screen from Remote Desktop 8.
 
@@ -179,7 +197,7 @@ If you encounter any issues, you can always contact us via **Help > Report an Is
 - The Connection Center, Preferences, and About windows now respond to CMD+M.
 - You can now start discovering feeds by pressing ENTER on the **Adding Remote Resources** page.
 - Fixed an issue where a new remote resources feed showed up empty in the Connection Center until after you refreshed.
- 
+
 ## Updates for version 10.1.6
 *Published date: 03/26/2018*
 
