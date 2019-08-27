@@ -8,7 +8,7 @@ ms.date: 11/05/2018
 
 # RPC context handles for HCN
 
->Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019
 
 
 ## HCN_Network
