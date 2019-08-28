@@ -11,7 +11,7 @@ ms.author: jgerend
 manager: dougkim
 ms.localizationpriority: medium
 ---
-# Migrating Roles and Features in Windows Server
+# Migrating roles and features in Windows Server
 
 > Applies to: Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
@@ -21,17 +21,16 @@ The migration guides support migrations of specified roles and features from one
 
 ## Before you begin
 
-Before you begin migrating roles and features, verify that both source and destination servers are running the most current service packs that are available for their operating systems.
-An e-book of Windows Server 2012 R2 and Windows Server 2012 migration guides is now available. For more information, and to download the e-book, see the [E-Book Gallery for Microsoft Technologies](https://social.technet.microsoft.com/wiki/contents/articles/11608.e-book-gallery-for-microsoft-technologies.aspx#MigrateRoles). 
+Before you begin migrating roles and features, verify that both source and destination servers are running the most current service packs that are available for their operating systems. 
 
 > [!NOTE]
 > Whenever you migrate or upgrade to any version of Windows Server, you should review and understand the [support lifecycle policy](https://support.microsoft.com/lifecycle) and timeframe for that version and plan accordingly. You can [search for the lifecycle information](https://support.microsoft.com/lifecycle) for the particular Windows Server release that you are interested in.
 
-## Windows Server 2019 migration
+## Windows Server 2019
 
 To migrate file servers and storage to Windows Server 2019 or Windows Server 2016, we recommend using [Storage Migration Service](../storage/storage-migration-service/overview.md). To migrate other roles, refer to the guidance for Windows Server 2016 and Windows Server 2012 R2.
 
-## Windows Server 2016 migration guides
+## Windows Server 2016
 
 Here are the migration guides for Windows Server 2016. Note that in many cases you can also use the Windows Server 2012 R2 migration guides.
 
@@ -42,7 +41,7 @@ Here are the migration guides for Windows Server 2016. Note that in many cases y
 
 To migrate file servers to Windows Server 2019 or Windows Server 2016, we recommend using [Storage Migration Service](../storage/storage-migration-service/overview.md).
 
-## Windows Server 2012 R2 migration guides
+## Windows Server 2012 R2
 
 Follow the steps in these guides to migrate roles and features from servers that are running Windows Server 2003, Windows Server 2008, Windows Server 2008 R2, Windows Server 2012, or Windows Server 2012 R2 to Windows Server 2012 R2. Windows Server Migration Tools in Windows Server 2012 R2 supports cross-subnet migrations.
 
@@ -58,7 +57,9 @@ Follow the steps in these guides to migrate roles and features from servers that
 - [Migrate Cluster Roles to Windows Server 2012 R2](https://technet.microsoft.com/library/dn530779.aspx)
 - [Migrate DHCP Server to Windows Server 2012 R2](https://technet.microsoft.com/library/dn495425.aspx)
 
-## Windows Server 2012 migration guides
+An e-book of Windows Server 2012 R2 and Windows Server 2012 migration guides is now available. For more information, and to download the e-book, see the [E-Book Gallery for Microsoft Technologies](https://social.technet.microsoft.com/wiki/contents/articles/11608.e-book-gallery-for-microsoft-technologies.aspx#MigrateRoles).
+
+## Windows Server 2012
 
 Follow the steps in these guides to migrate roles and features from servers that are running Windows Server 2003, Windows Server 2008, Windows Server 2008 R2, or Windows Server 2012 to Windows Server 2012. Windows Server Migration Tools in Windows Server 2012 supports cross-subnet migrations.
 
@@ -77,7 +78,7 @@ Follow the steps in these guides to migrate roles and features from servers that
 
 For additional migration resources, visit [Migrate Roles and Features to Windows Server 2012](https://technet.microsoft.com/library/jj134039).
 
-## Windows Server 2008 R2 migration guides
+## Windows Server 2008 R2
 
 Follow the steps in these guides to migrate roles and features from servers that are running Windows Server 2003, Windows Server 2008, or Windows Server 2008 R2 to Windows Server 2008 R2. Windows Server Migration Tools in Windows Server 2008 R2 does not support cross-subnet migrations.
 
