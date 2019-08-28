@@ -31,7 +31,7 @@ Use the following information to get started. Be sure to check out the [FAQ](rem
 The iOS Beta client available today through Apple TestFlight supports connections to Windows Virtual Desktop resources.
 
 ### Download the Remote Desktop iOS Beta client from Apple TestFlight
-Follow these steps to get started with the Remote Desktop Beta client on your iOS device.
+Here's how to set up the Remote Desktop Beta client on your iOS device:
 
 1. Install the [Apple TestFlight](https://apps.apple.com/us/app/testflight/id899247664) app on your iOS device.
 2. On your iOS device, open a browser and navigate to [aka.ms/rdiosbeta](https://aka.ms/rdiosbeta).
@@ -41,35 +41,35 @@ Follow these steps to get started with the Remote Desktop Beta client on your iO
 ### Add a connection to a PC
 To create a remote connection to a PC:
 
-1. In the Connection Center tap **+**, and then tap **Add PC**.
-2. Enter the **PC name** - The name of the remote PC. This can be a Windows computer name, an Internet domain name, or an IP address. You can also append port information to the PC name (for example, **MyDesktop:3389** or **10.0.0.1:3389**).
-3. Select the **User Account** you will use to access the remote PC.
-   - **Ask Every Time** - You will be prompted to enter credentials for the remote PC every time you connect.
-   - **Add User Account** - You may also save a user account to use frequently without reentering your credentials. Follow [these instructions](#manage-your-user-accounts) to manage your user accounts.
-4. You can also set this optional parameters:
-   - **Friendly name** – An easy-to-remember name for the PC you are connecting to. You can use any string, but if you do not specify a friendly name, the PC name is displayed.
-   - **Admin Mode** - Connect to an administrator session on the remote PC.
-   - **Swap Mouse Buttons** - For left-handed users, switch the commands sent by right and left mouse gestures.
-   - **Gateway** – The Remote Desktop gateway that you want to use to connect to a computer from an external network. Get the information about the gateway from your system administrator.
-   - **Sound** – Select the device to use for audio during your remote session. You can choose to play sound on the local device, the remote device, or not at all.
-   - **Microphone** - Enable microphone redirection. Microphone redirection is disabled by default.
-   - **Camera** - Enable camera redirection. Camera redirection is disabled by default.
-   - **Clipboard** - Enable clipboard redirection. Clipboard redirection is enabled by default.
-   - **Storage** - Enable local storage redirection. Local storage redirection is disabled by default.
+1. In the Connection Center, tap **+**, and then tap **Add PC**.
+2. Enter the name of the remote PC into **PC Name**. This can be a Windows computer name, an Internet domain name, or an IP address. You can also append port information to the PC name (for example, **MyDesktop:3389** or **10.0.0.1:3389**).
+3. Select the **User Account** you'll use to access the remote PC.
+   - Select **Ask Every Time** for the client to ask for your credentials every time you connect to the remote PC.
+   - Select **Add User Account** to save an account that you use frequently so you don't have to enter credentials every time you sign in. Follow [these instructions](#manage-your-user-accounts) to manage your user accounts.
+4. You can also set the following optional parameters:
+   - In **Friendly Name**, you can enter an easier-to-remember name for the PC you're connecting to.
+   - **Admin Mode** lets you connect to an admin session on the remote PC.
+   - **Swap Mouse Buttons** switches the commands sent by right and left mouse gestures. Ideal for left-handed users.
+   - The **Gateway** is the Remote Desktop gateway you'll use to connect to a computer from an external network. Contact your system administrator for more information.
+   - **Sound** selects the device your remote session uses for audio. You can choose to play sound on your local device, the remote device, or not at all.
+   - **Microphone** enables microphone redirection. This setting is disabled by default.
+   - **Camera** enables camera redirection. This setting is disabled by default.
+   - **Clipboard** enables clipboard redirection. This setting is enabled by default.
+   - **Storage** enables local storage redirection. This setting is disabled by default.
 5. Select **Save** to add the remote PC connection.
 
 ### Add remote resources
-Remote resources are RemoteApp programs, session-based desktops, and virtual desktops published to you by an admin. The iOS client supports resources published from **Remote Desktop Services** and **Windows Virtual Desktop** deployments. To add remote resources:
+Remote resources are RemoteApp programs, session-based desktops, and virtual desktops published by your admin. The iOS client supports resources published from **Remote Desktop Services** and **Windows Virtual Desktop** deployments. To add remote resources:
 
 1. In the Connection Center tap **+**, and then tap **Add Workspace**.
 2. Enter the **Feed URL**. This can be a URL or email address:
-   - **URL** - The URL of the RD Web Access server provided to you by your admin. If accessing resources from Windows Virtual Desktop, you can use `https://rdweb.wvd.microsoft.com`.
-   - **Email** - You can also enter your email address in this field – this tells the client to search for an RD Web Access server associated with your email address if it was configured by your admin.
+   - The **URL** is the RD Web Access server's URL, provided to you by your admin. If accessing resources from Windows Virtual Desktop, you can use `https://rdweb.wvd.microsoft.com`.
+   - If you plan to use **Email**, enter your email address in this field. This tells the client to search for an RD Web Access server associated with your email address if it was configured by your admin.
 3. Tap **Next**.
 4. Provide your sign in information when prompted. This can vary based on the deployment and can include:
-   - **User name** - The user name that has permission to access the resources.
-   - **Password** - The password associated with the user name.
-   - **Additional factor** - You may be prompted for an additional factor of authentication if configured by your admin.
+   - **User name**, the user name that has permission to access the resources.
+   - **Password**, the password associated with the user name.
+   - **Additional factor**, which you may be prompted for if authentication was configured that way by your admin.
 5. Tap **Save**.
 
 The remote resources will be displayed in the Connection Center.
@@ -142,10 +142,10 @@ A Remote Desktop Gateway (RD Gateway) lets you connect to a remote computer on a
 
 To set up a new gateway:
 
-1. In the Connection Center, tap **Settings > Gateways**.
+1. In the Connection Center, tap **Settings** > **Gateways**.
 2. Tap **Add Remote Desktop gateway**.
 3. Enter the following information:
-   - **Server name** – The name of the computer you want to use as a gateway. This can be a Windows computer name, an Internet domain name, or an IP address. You can also add port information to the server name (for example: **RDGateway:443** or **10.0.0.1:443**).
+   - **Server name** – The name of the computer you want to use as a gateway. This can be a Windows computer name, an Internet domain name, or an IP address. You can also add port information to the server name (for example, **RDGateway:443** or **10.0.0.1:443**).
    - **User name** - The user name and password to be used for the Remote Desktop gateway you are connecting to. You can also select **Use connection credentials** to use the same user name and password as those used for the remote desktop connection.
 
 ## Navigate the Remote Desktop session
