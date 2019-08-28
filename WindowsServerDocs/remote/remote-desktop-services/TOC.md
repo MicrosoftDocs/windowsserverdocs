@@ -67,20 +67,20 @@
 ## Access your Remote Desktop resources
 ### [Available Remote Desktop clients](clients/remote-desktop-clients.md)
 ### Windows Store client
-#### [Get started](clients/windows.md)
-#### [What's new in the Windows Store client?](clients/windows-whatsnew.md)
+#### [Get started with the Windows Store client](clients/windows.md)
+#### [What's new in the Windows Store client](clients/windows-whatsnew.md)
 ### Android client
-#### [Get started](clients/remote-desktop-android.md)
-#### [What's new in the Android client?](clients/android-whatsnew.md)
+#### [Get started with the Android client](clients/remote-desktop-android.md)
+#### [What's new in the Android client](clients/android-whatsnew.md)
 ### iOS client
-#### [Get started](clients/remote-desktop-ios.md)
-#### [What's new in the iOS client?](clients/ios-whatsnew.md)
+#### [Get started with the iOS client](clients/remote-desktop-ios.md)
+#### [What's new in the iOS client](clients/ios-whatsnew.md)
 ### macOS client
-#### [Get started](clients/remote-desktop-mac.md)
-#### [What's new in the MacOS client?](clients/mac-whatsnew.md)
+#### [Get started with the macOS client](clients/remote-desktop-mac.md)
+#### [What's new in the macOS client](clients/mac-whatsnew.md)
 ### Web client
-#### [Get started](clients/remote-desktop-web-client.md)
-#### [What's new in the web client?](clients/web-client-whatsnew.md)
+#### [Get started with the web client](clients/remote-desktop-web-client.md)
+#### [What's new in the web client](clients/web-client-whatsnew.md)
 ### Setting up your PC for Remote Desktop
 #### [Supported PCs](clients/remote-desktop-supported-config.md)
 #### [Grant Remote Desktop access to your PC](clients/remote-desktop-allow-access.md)

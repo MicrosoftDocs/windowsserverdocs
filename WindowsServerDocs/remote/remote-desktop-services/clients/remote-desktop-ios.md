@@ -1,5 +1,5 @@
 ---
-title: Get started with Remote Desktop on iOS
+title: Get started with the iOS client
 description: Learn how to set up the Remote Desktop client for iOS
 ms.custom: na
 ms.prod: windows-server-threshold
@@ -15,7 +15,7 @@ ms.author: elizapo
 date: 01/13/2017
 ms.localizationpriority: medium
 ---
-# Get started with Remote Desktop on iOS
+# Get started with the iOS client
 
 >Applies to: Windows 10, Windows 8.1, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2
 
@@ -30,6 +30,7 @@ Use the following information to get started. Be sure to check out the [FAQ](rem
 ## Get the Remote Desktop client and start using it
 
 ### Download the Remote Desktop client from the iOS store
+
 Follow these steps to get started with Remote Desktop on your iOS device:
 
 1. Download the Microsoft Remote Desktop client from [iTunes](https://itunes.apple.com/us/app/microsoft-remote-desktop/id714464092?mt=8).
@@ -37,15 +38,17 @@ Follow these steps to get started with Remote Desktop on your iOS device:
 3. Add a [Remote Desktop connection](#add-a-remote-desktop-connection) or a [remote resource](#add-a-remote-resource). You use a connection to connect to a directly to a Windows PC and a remote resource to use a RemoteApp program, session-based desktop, or a virtual desktop published on-premises using RemoteApp and Desktop Connections. This feature is typically available in corporate environments.
 
 ### Download the Remote Desktop iOS Beta client
+
 On your iOS device, follow [these instructions](https://aka.ms/rdiosbeta) to download the Remote Desktop iOS Beta client.
 
 ### Add a Remote Desktop connection
 
-To create a remote desktop connection: 
+To create a remote desktop connection:
+
 1. In the Connection Center tap **+**, and then tap **Add PC or Server**.
 2. Enter the following information for the remote desktop connection:
    - **PC name** – the name of the computer. This can be a Windows computer name, an Internet domain name, or an IP address. You can also append port information to the PC name (for example, **MyDesktop:3389** or **10.0.0.1:3389**).
-   - **User name** – The user name to use to access the remote PC. You can use the following formats: *user_name*, *domain\user_name*, or <em>user_name@domain.com</em>. You can also specify whether to prompt for a user name and password.
+   - **User name** – The user name to use to access the remote PC. You can use the following formats: *user_name*, *domain\user_name*, or `user_name@domain.com`. You can also specify whether to prompt for a user name and password.
 3. You can also set the following additional options:
    - **Friendly name (optional)** – An easy-to-remember name for the PC you are connecting to. You can use any string, but if you do not specify a friendly name, the PC name is displayed.
    - **Gateway (optional)** – The Remote Desktop gateway that you want to use to connect to virtual desktops, RemoteApp programs, and session-based desktops on an internal corporate network. Get the information about the gateway from your system administrator.
@@ -54,9 +57,10 @@ To create a remote desktop connection:
    - **Admin Mode** - Connect to an administration session on a server running Windows Server 2003 or later.
 4. Tap **Save**.
 
-Need to edit these settings? Press and hold the desktop you want to edit, and then tap the settings icon. 
+Need to edit these settings? Press and hold the desktop you want to edit, and then tap the settings icon.
 
 ### Add a remote resource
+
 Remote resources are RemoteApp programs, session-based desktops, and virtual desktops published using RemoteApp and Desktop Connections.
 
 - The URL displays the link to the RD Web Access server that gives you access to RemoteApp and Desktop Connections.
@@ -64,7 +68,7 @@ Remote resources are RemoteApp programs, session-based desktops, and virtual des
 
 To add a remote resource:
 
-1. On the Connection Center screen, tap **+**, and then tap **Add Remote Resources**. 
+1. On the Connection Center screen, tap **+**, and then tap **Add Remote Resources**.
 2. Enter information for the remote resource:
    - **Feed URL** - The URL of the RD Web Access server. You can also enter your corporate email account in this field – this tells the client to search for the RD Web Access Server associated with your email address.
    - **User name** - The user name to use for the RD Web Access server you are connecting to.
