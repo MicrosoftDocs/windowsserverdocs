@@ -1,5 +1,5 @@
 ---
-title: What's new for Remote Desktop on Mac?
+title: What's new in the macOS client
 description: Learn about recent changes to the Remote Desktop client for Mac
 ms.custom: na
 ms.prod: windows-server-threshold
@@ -14,7 +14,7 @@ ms.author: elizapo
 ms.date: 08/27/2019
 ms.localizationpriority: medium
 ---
-# What's new for the Remote Desktop client on macOS?
+# What's new in the macOS client
 
 We regularly update the [Remote Desktop client for macOS](remote-desktop-mac.md), adding new features and fixing issues. Check out the latest updates below.
 
@@ -39,12 +39,14 @@ It's been a few weeks since we last updated, but we've been hard at work during 
  - A new simplified and cleaner app icon.
 
 ## Updates for version 10.2.13
+
 *Published date: 5/8/2019*
 
 - Fixed a hang that occurred when connecting via an RD Gateway.
 - Added a privacy notice to the "Add Feed" dialog.
 
 ## Updates for version 10.2.12
+
 *Published date: 4/16/2019*
 
 - Resolved random disconnects (with error code 0x904) that took place when connecting via an RD Gateway.
@@ -53,17 +55,20 @@ It's been a few weeks since we last updated, but we've been hard at work during 
 - Addressed an ADAL authentication prompt loop when connecting to Windows Virtual Desktop deployments.
 
 ## Updates for version 10.2.10
+
 *Published date: 3/30/2019*
 
 - In this release we addressed instability caused by the recent macOS 10.14.4 update. We also fixed mispaints that appeared when decoding AVC codec data encoded by a server using NVIDIA hardware.
 
 ## Updates for version 10.2.9
+
 *Published date: 3/6/2019*
 
 - In this release we fixed an RD gateway connectivity issue that can occur when server redirection takes place.
 - We also addressed an RD gateway regression caused by the 10.2.8 update.
 
 ## Updates for version 10.2.8
+
 *Published date: 3/1/2019*
 
 - Resolved connectivity issues that surfaced when using an RD Gateway.
@@ -73,11 +78,13 @@ It's been a few weeks since we last updated, but we've been hard at work during 
 - Fixed a bug that caused the Connection Center to needlessly scroll when launching a connection.
 
 ## Updates for version 10.2.7
+
 *Published date: 2/6/2019*
 
 - In this release we addressed graphics mispaints (caused by a server encoding bug) that appeared when using AVC444 mode.
 
 ## Updates for version 10.2.6
+
 *Published date: 1/28/2019*
 
 - Added support for the AVC (420 and 444) codec, available when connecting to current versions of Windows 10.
@@ -91,6 +98,7 @@ It's been a few weeks since we last updated, but we've been hard at work during 
 >There is a bug in macOS 10.14.0 and 10.14.1 that can cause the ".com.microsoft.rdc.application-data_SUPPORT/_EXTERNAL_DATA" folder (nested deep inside the ~/Library folder) to consume a large amount of disk space. To resolve this issue, delete the folder content and upgrade to macOS 10.14.2. Note that a side-effect of deleting the folder contents is that snapshot images assigned to bookmarks will be deleted. These images will be regenerated when reconnecting to the remote PC.
 
 ## Updates for version 10.2.4
+
 *Published date: 12/18/2018*
 
 - Added dark mode support for macOS Mojave 10.14.
@@ -102,6 +110,7 @@ It's been a few weeks since we last updated, but we've been hard at work during 
 - Improved mouse-based scrolling for small scroll deltas.
 
 ## Updates for version 10.2.3
+
 *Published date: 11/06/2018*
 
 - Added support for the "remoteapplicationcmdline" RDP file setting for remote app scenarios.
@@ -117,6 +126,7 @@ It's been a few weeks since we last updated, but we've been hard at work during 
 - Fixed a scenario where connections were incorrectly imported as full-screen from Remote Desktop 8.
 
 ## Updates for version 10.2.2
+
 *Published date: 10/09/2018*
 
 - A brand new Connection Center that supports drag and drop, manual arrangement of desktops, resizable columns in list view mode, column-based sorting, and simpler group management.
@@ -145,12 +155,14 @@ It's been a few weeks since we last updated, but we've been hard at work during 
 - Fixed an issue that prevented downloading feed resources that have spaces in the URL.
 
 ## Updates for version 10.2.1
+
 *Published date: 08/06/2018*
 
 - Enabled connectivity to Azure Active Directory (AAD) joined PCs. To connect to an AAD joined PC, your username must be in one of the following formats: “AzureAD\user” or “AzureAD\user@domain”.
 - Addressed some bugs affecting the usage of smart cards in a remote session.
 
 ## Updates for version 10.2.0
+
 *Published date: 07/24/2018*
 
 - Incorporated updates for GDPR compliance.
@@ -179,6 +191,7 @@ It's been a few weeks since we last updated, but we've been hard at work during 
 - Fixed some alignment issues in the Connection Center when running on Mojave.
 
 ## Updates for version 10.1.8
+
 *Published date: 05/04/2018*
 
 - Added support for changing the remote resolution by resizing the session window!
@@ -186,6 +199,7 @@ It's been a few weeks since we last updated, but we've been hard at work during 
 - Resolved the 0x207 error that could occur when connecting to servers not patched with the CredSSP encryption oracle remediation update (CVE-2018-0886).
 
 ## Updates for version 10.1.7
+
 *Published date: 04/05/2018*
 
 - Made security fixes to incorporate CredSSP encryption oracle remediation updates as described in CVE-2018-0886.
@@ -199,6 +213,7 @@ It's been a few weeks since we last updated, but we've been hard at work during 
 - Fixed an issue where a new remote resources feed showed up empty in the Connection Center until after you refreshed.
 
 ## Updates for version 10.1.6
+
 *Published date: 03/26/2018*
 
 - Fixed an issue where RemoteApp windows would reorder themselves.
