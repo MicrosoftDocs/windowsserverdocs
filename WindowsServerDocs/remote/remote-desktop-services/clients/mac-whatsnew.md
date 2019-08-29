@@ -32,8 +32,8 @@ It's been a few weeks since we last updated, but we've been hard at work during 
  - When entering your password you have the option to reveal it with a "Show password" checkbox.
  - Addressed scenarios where the session window was jumping between monitors.
  - The Connection Center displays high resolution remote app icons (when available).
- - CMD+A maps to CTRL+A when Mac clipboard shortcuts are being used.
- - CMD+R now refreshes all of your subscribed feeds.
+ - Cmd+A maps to Ctrl+A when Mac clipboard shortcuts are being used.
+ - Cmd+R now refreshes all of your subscribed feeds.
  - Added new secondary click options to expand or collapse all groups or feeds in the Connection Center.
  - Added a new secondary click option to change the icon size in the Feeds tab of the Connection Center.
  - A new simplified and cleaner app icon.
