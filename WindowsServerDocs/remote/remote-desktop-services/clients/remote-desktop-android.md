@@ -1,5 +1,5 @@
 ---
-title: Get started with Remote Desktop on Android
+title: Get started with the Android client
 description: Basic set up steps for the Remote Desktop client for Android.
 ms.custom: na
 ms.prod: windows-server-threshold
@@ -12,10 +12,10 @@ ms.assetid: 64f038e1-40ec-4c67-938b-72edea49e5d8
 author: lizap
 manager: dongill
 ms.author: elizapo
-ms.date: 07/24/2018
+ms.date: 08/27/2019
 ms.localizationpriority: medium
 ---
-# Get started with Remote Desktop on Android
+# Get started with the Android client
 
 >Applies to: Windows 10, Windows 8.1, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2
 

@@ -1,5 +1,5 @@
 ---
-title: Get started with Remote Desktop on Mac
+title: Get started with the macOS client
 description: Learn how to set up the Remote Desktop client for Mac
 ms.custom: na
 ms.prod: windows-server-threshold
@@ -12,10 +12,10 @@ ms.assetid: 7afc65f8-3158-49c9-9d48-4dab1c69afba
 author: lizap
 manager: dongill
 ms.author: elizapo
-ms.date: 10/09/2018
+ms.date: 08/27/2019
 ms.localizationpriority: medium
 ---
-# Get started with Remote Desktop on Mac
+# Get started with the macOS client
 
 >Applies To: Windows 10, Windows 8.1, Windows Server 2012 R2, Windows Server 2016
 
