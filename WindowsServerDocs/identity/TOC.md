@@ -366,8 +366,8 @@
 
 
 ### AD FS Development
-#### [AD FS Modern Auth Concepts](ad-fs/development/ad-fs-openid-connect-oauth-concepts.md)
-#### [AD FS Modern Auth Flows and App Scenarios ](ad-fs/overview/ad-fs-openid-connect-oauth-flows-scenarios.md)
+#### [AD FS OpenID Connect/OAuth Concepts](ad-fs/development/ad-fs-openid-connect-oauth-concepts.md)
+#### [AD FS OpenID Connect/OAuth flows and Application Scenarios](ad-fs/overview/ad-fs-openid-connect-oauth-flows-scenarios.md)
 
 #### [Build a Custom Authentication Method for AD FS](ad-fs/development/ad-fs-build-custom-auth-method.md)
 #### [Build Plug-ins with AD FS 2019 Risk Assessment Model](ad-fs/development/ad-fs-risk-assessment-model.md)

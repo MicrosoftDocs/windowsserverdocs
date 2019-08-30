@@ -4,7 +4,7 @@ description: The following is a list of features and functionalities in Windows 
 ms.prod: windows-server-threshold
 ms.technology: server-general
 ms.topic: article
-ms.date: 06/11/2019
+ms.date: 08/22/2019
 author: jasongerend
 ms.author: jgerend
 manager: daveba
@@ -15,7 +15,7 @@ manager: daveba
 
 The following is a list of features and functionalities in Windows Server, version 1903 that have either been removed from the product in that release or are starting to be considered for potential replacement in subsequent releases. It is intended for IT professionals who are updating operating systems in a commercial environment. **This list is subject to change in subsequent releases and might not include every affected feature or functionality.**
 
-Also see [Features removed or planned for replacement starting Windows Server 2019](removed-features-19.md).
+Also see [Features removed or planned for replacement in Windows Server](removed-features.md).
 
 ## Features we’re no longer developing
 
