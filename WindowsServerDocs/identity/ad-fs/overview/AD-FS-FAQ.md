@@ -1,7 +1,7 @@
 ---
 ms.assetid: acc9101b-841c-4540-8b3c-62a53869ef7a
-title: AD FS 2016 FAQ
-description: Frequently asked questions for AD FS 2016
+title: AD FS FAQ
+description: Frequently asked questions for AD FS 
 author: billmath
 ms.author:  billmath
 manager: mtillman
@@ -23,7 +23,7 @@ The following documentation is a home to frequently asked questions with regard 
 You can upgrade AD FS using one of the following:
 
 
-- Windows Server 2012 R2 AD FS to Windows Server 2016 AD FS
+- Windows Server 2012 R2 AD FS to Windows Server 2016 AD FS or higher. Note that the methodology is the same if you are upgrading from Windows Server 2016 AD FS to Windows Server 2019 AD FS. 
 	- [Upgrading to AD FS in Windows Server 2016 using a WID database](../deployment/Upgrading-to-AD-FS-in-Windows-Server-2016.md)
 	- [Upgrading to AD FS in Windows Server 2016 using a SQL database](../deployment/Upgrading-to-AD-FS-in-Windows-Server-2016-SQL.md)
 - Windows Server 2012 AD FS to Windows Server 2012 R2 AD FS
@@ -71,24 +71,17 @@ AD FS supports multiple multi-forest configuration and relies on the underlying 
 ## Design
 
 ### What third party multi-factor authentication providers are available for AD FS?
-Below is a list of third party providers we are aware of.  There may always be providers available that we do not know about and we will update the list as we learn about them.
+AD FS provides an extensible mechanism for 3rd party MFA providers to integrate. There is no set certification program for this. It is assumed that the vendor has performed the necessary validations prior to release. 
 
-- [Gemalto Identity & Security Services](http://www.gemalto.com/identity)
-- [inWebo Enterprise Authentication service](http://www.inwebo.com/)
-- [Login People MFA API connector](https://www.loginpeople.com)
-- [RSA SecurID Authentication Agent for Microsoft Active Directory Federation Services](http://www.emc.com/security/rsa-securid/rsa-authentication-agents/microsoft-ad-fs.htm)
-- [SafeNet Authentication Service (SAS) Agent for AD FS](http://www.safenet-inc.com/resources/integration-guide/data-protection/Safenet_Authentication_Service/SafeNet_Authentication_Service__AD_FS_Agent_Configuration_Guide/?langtype=1033)
-- [Swisscom Mobile ID Authentication Service](http://swisscom.ch/mid)
-- [Symantec Validation and ID Protection Service (VIP)](http://www.symantec.com/vip-authentication-service)
+The list of vendors that have notified Microsoft are published at [MFA providers for AD FS](../operations/Configure-Additional-Authentication-Methods-for-AD-FS.md).  There may always be providers available that we do not know about and we will update the list as we learn about them.
 
 ### Are third party proxies supported with AD FS?
 Yes, third party proxies can be placed in front of the Web Application Proxy, but any third party proxy must support the [MS-ADFSPIP protocol](https://msdn.microsoft.com/library/dn392811.aspx) to be used in place of the Web Application Proxy.
 
-### What third party proxies are available for AD FS that support MS-ADFSPIP?
-
 Below is a list of third party providers we are aware of.  There may always be providers available that we do not know about and we will update the list as we learn about them.
 
 - [F5 Access Policy Manager](https://support.f5.com/kb/en-us/products/big-ip_apm/manuals/product/apm-third-party-integration-13-1-0/12.html#guid-1ee8fbb3-1b33-4982-8bb3-05ae6868d9ee)
+
 
 ### Where is the capacity planning sizing spreadsheet for AD FS 2016?
 The AD FS 2016 version of the spreadsheet can be downloaded [here](http://adfsdocs.blob.core.windows.net/adfs/ADFSCapacity2016.xlsx).
@@ -162,8 +155,12 @@ Use the following guidance with regard to the proxy SSL certificate and the AD F
 - If the AD FS property "ExtendedProtectionTokenCheck" is enabled (the default setting in AD FS), the proxy SSL certificate must be the same (use the same key) as the federation server SSL certificate
 - Otherwise, the proxy SSL certificate can have a different key from the AD FS SSL certificate, but must meet the same [requirements](../overview/AD-FS-2016-Requirements.md)
 
-### How can I configure prompt=login behavior for AD FS?
-For information on how to configure prompt=login, see [Active Directory Federation Services prompt=login parameter support](../operations/AD-FS-Prompt-Login.md).
+### Why do I only see a password login on AD FS and not my other authentication methods that I have configured? 
+AD FS only shows a single authentication method in the login screen when the application explicitly requires a specific authentication URI that maps to a configured and enabled authentication method. This is conveyed in the 'wauth' parameter for WS-Federation requests and the 'RequestedAuthnCtxRef' parameter in a SAML protocol request. As a result, only the requested authentication method is displayed (e.g. password login).
+
+When AD FS is used with Azure AD, it is common for applications to send the prompt=login parameter to Azure AD. Azure AD by default translates this to requesting a fresh password based login to AD FS. This is the most common reason to see a password login on AD FS inside your network or not see an option to login with your certificate. This can be easily remedied by making a change to the federated domain settings in Azure AD. 
+
+For information on how to configure this, see [Active Directory Federation Services prompt=login parameter support](../operations/AD-FS-Prompt-Login.md).
 
 ### How can I change the AD FS service account?
 To change the AD FS service account, follow the instructions using the AD FS toolbox [Service Account Powershell Module](https://github.com/Microsoft/adfsToolbox/tree/master/serviceAccountModule).
@@ -210,14 +207,18 @@ All AD FS endpoints for web authentication traffic are opened exclusively over H
 
 Therefore, implementing HSTS on an AD FS server is not required because it can never be downgraded.  For compliance purposes, AD FS servers meet these requirements because they can never use HTTP and all cookies are marked secure.
 
+Additionally, AD FS 2016 (with the most up to date patches) and AD FS 2019 support emitting the HSTS header. To configure this please see [Customize HTTP security response headers with AD FS](../operations/customize-http-security-headers-ad-fs.md)
+
 ### X-ms-forwarded-client-ip does not contain the IP of the client but contains IP of the firewall in front of the proxy. Where can I get the right IP of the client?
 It is not recommended to do SSL termination before WAP. In case SSL termination is done in front of the WAP, the X-ms-forwarded-client-ip will contain the IP of the network device in front of WAP. Below is a brief description of the various IP related claims that are supported by AD FS:
  - x-ms-client-ip : Network IP of device which connected to the STS.  In the case of an extranet request this always contains the IP of the WAP.
  - x-ms-forwarded-client-ip : Multi-valued claim which will contain any values forwarded to ADFS by Exchange Online plus the IP address of the device which connected to the WAP.
  - Userip: For extranet requests this claim will contain the value of x-ms-forwarded-client-ip.  For intranet requests, this claim will contain the same value as x-ms-client-ip.
 
+ Additionally, in AD FS 2016 (with the most up to date patches) and higher versions also support capturing the x-forwarded-for header. Any load balancer or network device that does not forward at layer 3 (IP is preserved) should add the incoming client IP to the industry standard x-forwarded-for header. 
+
 ### I am trying to get additional claims on the user info endpoint, but its only returning subject. How can I get additional claims?
-The ADFS userinfo endpoint always returns the subject claim as specified in the OpenID standards. AD FS does not provide additional claims requested via the UserInfo endpoint. If you need additional claims in ID token, refer to [Custom ID Tokens in AD FS](../development/custom-id-tokens-in-ad-fs.md).
+The AD FS userinfo endpoint always returns the subject claim as specified in the OpenID standards. AD FS does not provide additional claims requested via the UserInfo endpoint. If you need additional claims in ID token, refer to [Custom ID Tokens in AD FS](../development/custom-id-tokens-in-ad-fs.md).
 
 ### Why do I see a lot of 1021 errors on my AD FS servers?
 This event is logged usually for an invalid resource access on AD FS for resource 00000003-0000-0000-c000-000000000000. This error is caused by an erroneous behavior of the client where it tries to get an access token for the Azure AD Graph service. Since the resource is not present on AD FS, this results in event ID 1021 on the AD FS servers. It’s safe to ignore any warnings or errors for resource 00000003-0000-0000-c000-000000000000 on AD FS.
@@ -260,6 +261,8 @@ A refresh token is not issued if the token issued by IdP has a validty of less t
 By default the RP token encryption is set to AES256 and it cannot be changed to any other value.
 
 ### On a mixed-mode farm, I get error when trying to set the new SSL certificate using Set-AdfsSslCertificate -Thumbprint. How can I update the SSL certificate in a mixed mode AD FS farm?
+Mixed mode AD FS farms are meant to be a transitionary state. It is recommended during your planning to either roll over the SSL certificate prior to the upgrade process or complete the process and increase the farm behaviour level prior to updating the SSL certificate. In the event that this was not done, the below instructions provide the ability to update the SSL certificate. 
+
 On WAP servers you can still use Set-WebApplicationProxySslCertificate. On the ADFS servers, you need to use netsh. Follow the steps as given below:
 
 1. Select subset of ADFS 2016 servers for maintenance (e.g. remove from load balancer)

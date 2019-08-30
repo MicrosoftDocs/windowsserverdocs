@@ -20,6 +20,8 @@ There are some Server versions that need additional preparation before they are 
 - [Microsoft Hyper-V Server 2016](#prepare-microsoft-hyper-v-server-2016)
 - [Microsoft Hyper-V Server 2012 R2](#prepare-microsoft-hyper-v-server-2012-r2)
 
+There are also some scenarios where [port configuration on the target server](#port-configuration-on-the-target-server) may need to be modified before managing with Windows Admin Center.
+
 ## Prepare Windows Server 2012 and 2012 R2
 
 ### Install WMF version 5.1 or higher
@@ -139,6 +141,10 @@ To enable Hyper-V Module for PowerShell features:
 ![Screenshot of Roles and Features showing Hyper-V remote server administration tools selected](../media/prepare-environment/7ab0999602b7083733525bd0c1ba2747.png)
 
 Microsoft Hyper-V Server 2012 R2 is now ready for management with Windows Admin Center.
+
+## Port configuration on the target server
+
+Windows Admin Center uses the SMB file sharing protocol for some file copying tasks, such as when importing a certificate on a remote server. For these file copy operations to succeed, the firewall on the remote server must allow inbound connections on port 445.  You can use the Firewall tool in Windows Admin Center to verify the incoming rule for ‘File Server Remote Management (SMB-In)’ is set to allow access on this port.
 
 > [!Tip]
 > Ready to install Windows Admin Center? [Download now](https://docs.microsoft.com/windows-server/manage/windows-admin-center/understand/windows-admin-center#download-now)
