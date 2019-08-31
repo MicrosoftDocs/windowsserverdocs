@@ -44,7 +44,7 @@ Ensure that [.NET Framework 4.5.2 or later](https://docs.microsoft.com/dotnet/fr
 Type `$PSVersiontable` in PowerShell to verify that WMF is installed,
 and that the version is 5.1 or higher.
 
-If it is not installed, you can [download and install WMF 5.1](https://docs.microsoft.com/powershell/wmf/5.1/install-configure).
+If it is not installed, you can [download and install WMF 5.1](https://docs.microsoft.com/powershell/wmf/setup/install-configure).
 
 Run `Enable-PSRemoting –force` in a PowerShell console to enable Powershell remote connection. 
 
