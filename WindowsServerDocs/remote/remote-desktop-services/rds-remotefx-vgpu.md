@@ -49,7 +49,7 @@ Use the following steps to install and configure RemoteFX on the host for Window
 3. Install the Remote Desktop Virtualization Host (RDVH) role.
 4. Now, create and configure a guest VM:
    1. Create a VM with Windows 10 Enterprise or Windows Server 2016.
-   2. Add the RemoteFX 3D graphics adapter. See [Configure the RemoteFX vGPU 3D adapter](#configure-the-remotefx-vgpu-3d-adapter) for information on how to do that with either Hyper-V Manager or PowerShell cmdlets. 
+   2. Add the RemoteFX 3D graphics adapter. See [Configure the RemoteFX 3D Video Adapter (vGPU)](#configure-the-remotefx-3d-video-adapter-vgpu) for information on how to do that with either Hyper-V Manager or PowerShell cmdlets. 
 
 RemoteFX vGPU will use all GPUs when there are more than one available. However, in certain cases you might want to limit which GPUs are used by RemoteFX. In the Hyper-V environment, you control this by specifically selecting which GPUs should *not* be used by RemoteFX. Use the following steps: 
 
@@ -58,7 +58,7 @@ RemoteFX vGPU will use all GPUs when there are more than one available. However,
    3. Select the GPU that you don’t want to use, and then clear **Use this GPU with RemoteFX**.
 
 
-### Configure the RemoteFX 3D Video Adapter (vGPU) adapter
+### Configure the RemoteFX 3D Video Adapter (vGPU)
 You can use either the Hyper-V Manager UI or PowerShell cmdlets to configure the RemoteFX 3D Video Adapter (vGPU). 
 
 #### Through Hyper-V Manager:
