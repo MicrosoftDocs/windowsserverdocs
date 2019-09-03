@@ -1,17 +1,12 @@
 ---
-title: "Manage Office 365 in Windows Server Essentials"
-description: "Describes how to use Windows Server Essentials"
-ms.custom: na
+title: Manage Office 365 in Windows Server Essentials
+description: Describes how to use Windows Server Essentials
 ms.date: 10/03/2016
 ms.prod: windows-server-2016-essentials
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 3f8485e4-e10f-4f38-8a5e-d5227abd0d84
-0author: nnamuhcs
-ms.author: coreyp
-manager: dongill
+author: nnamuhcs
+ms.author: daveba
 ---
 
 # Manage Office 365 in Windows Server Essentials
