@@ -12,36 +12,36 @@ ms.date: 08/21/2019
 
 # Deploy graphics devices using RemoteFX vGPU
 
->Applies To: Windows Server 2016, Microsoft Hyper-V Server 2016
+> Applies to: Windows Server 2016, Microsoft Hyper-V Server 2016
 
-The vGPU feature of RemoteFX makes it possible for multiple virtual machines to share a physical GPU. Rendering and compute resources are shared dynamically among virtual machines, making RemoteFX vGPU appropriate for high-burst workloads where dedicated GPU resources are not required. For example, in a VDI service, RemoteFX vGPU can be used to offload app rendering costs to the GPU, with the effect of decreasing CPU load and improving service scalability.
+The vGPU feature for RemoteFX makes it possible for multiple virtual machines to share a physical GPU. Rendering and compute resources are shared dynamically among virtual machines, making RemoteFX vGPU appropriate for high-burst workloads where dedicated GPU resources are not required. For example, in a VDI service, RemoteFX vGPU can be used to offload app rendering costs to the GPU, with the effect of decreasing CPU load and improving service scalability.
 
 ## RemoteFX vGPU requirements
 
 Host system requirements:
 
 - Windows Server 2016
-- DirectX 11.0 compatible GPU with WDDM 1.2 compatible driver
-- CPU with SLAT (Second Level Address Translation) support
+- A DirectX 11.0-compatible GPU with a WDDM 1.2-compatible driver
+- A CPU with Second Level Address Translation (SLAT) support
 
 Guest VM requirements:
 
-- Supported guest OS. See [Support for GPU Acceleration with Hyper-V](../../../remote/remote-desktop-services/rds-supported-config.md#support-for-gpu-acceleration-with-hyper-v).
+- Supported guest OS. For more information, see [Support for GPU Acceleration with Hyper-V](../../../remote/remote-desktop-services/rds-supported-config.md#support-for-gpu-acceleration-with-hyper-v).
 
 Additional considerations for guest VMs:
 
 - OpenGL and OpenCL functionality is only available in guests running Windows 10 or Windows Server 2016.  
-- DirectX 11.0 is only available in guests running Windows 8 or newer.
+- DirectX 11.0 is only available for guests running Windows 8 or later.
 
 ## Enable RemoteFX vGPU
 
-Use the following steps to configure RemoteFX vGPU on your Windows Server 2016 host:
+To configure RemoteFX vGPU on your Windows Server 2016 host:
 
 1. Install the graphics drivers recommended by your GPU vendor for Windows Server 2016.
-2. Create a VM running a guest OS supported by RemoteFX vGPU. See [Support for GPU Acceleration with Hyper-V](../../../remote/remote-desktop-services/rds-supported-config.md#support-for-gpu-acceleration-with-hyper-v).
-3. Add the RemoteFX 3D graphics adapter to the VM. See [Configure the RemoteFX vGPU 3D adapter](#configure-the-remotefx-vgpu-3d-adapter) below.
+2. Create a VM running a guest OS supported by RemoteFX vGPU. To learn more, see [Support for GPU Acceleration with Hyper-V](../../../remote/remote-desktop-services/rds-supported-config.md#support-for-gpu-acceleration-with-hyper-v).
+3. Add the RemoteFX 3D graphics adapter to the VM. To learn more, see [Configure the RemoteFX vGPU 3D adapter](#configure-the-remotefx-vgpu-3d-adapter).
 
-By default, RemoteFX vGPU will use all available and supported GPUs. Use the following steps to limit which GPUs are used by RemoteFX vGPU:
+By default, RemoteFX vGPU will use all available and supported GPUs. To limit which GPUs the RemoteFX vGPU uses, follow these steps:
 
 1. Navigate to the Hyper-V settings in Hyper-V Manager.
 2. Click **Physical GPUs** in Hyper-V Settings.
