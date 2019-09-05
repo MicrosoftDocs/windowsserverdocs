@@ -18,7 +18,7 @@ This article introduces the graphics virtualization capabilities available in Wi
 
 ## When to use GPU acceleration
 
-GPU acceleration offers a variety of benefits. Consider the specific needs of your own workload when determining whether GPU acceleration might benefit it:
+Depending on your workload, you may want to consider GPU acceleration. Here's what you should consider before choosing GPU acceleration:
 
 - **App and desktop remoting (VDI/DaaS) workloads**: If you're building an app or desktop remoting service with Windows Server, consider the catalogue of apps you expect your users to run. Some types of apps, such as CAD/CAM apps, simulation apps, games, and rendering/visualization apps, rely heavily on 3D rendering to deliver smooth and responsive interactivity. Most customers consider GPUs a necessity for a reasonable user experience with these kinds of apps.
 - **Remote rendering, encoding, and visualization workloads**: These graphics-oriented workloads tend to rely heavily on a GPU's specialized capabilities, such as efficient 3D rendering and frame encoding/decoding, in order to achieve cost-effectiveness and throughput goals. For this kind of workload, a single GPU-enabled VM may be able to match the throughput of many CPU-only VMs.
@@ -26,7 +26,7 @@ GPU acceleration offers a variety of benefits. Consider the specific needs of yo
 
 ## GPU virtualization in Windows Server
 
-GPU virtualization technologies enable GPU acceleration in a virtualized environment, typically within virtual machines. If your workload is virtualized with Hyper-V, then you'll need to employ graphics virtualization in order to provide GPU acceleration from the physical GPU to your virtualized apps or services. (On the other hand, if your workload runs directly on physical Windows Server hosts, then you have no need for graphics virtualization; your apps and services already have access to the GPU capabilities and APIs natively supported in Windows Server.)
+GPU virtualization technologies enable GPU acceleration in a virtualized environment, typically within virtual machines. If your workload is virtualized with Hyper-V, then you'll need to employ graphics virtualization in order to provide GPU acceleration from the physical GPU to your virtualized apps or services. However, if your workload runs directly on physical Windows Server hosts, then you have no need for graphics virtualization; your apps and services already have access to the GPU capabilities and APIs natively supported in Windows Server.
 
 The following graphics virtualization technologies are available to Hyper-V VMs in Windows Server:
 
@@ -49,7 +49,7 @@ For more information, see these topics:
 ## RemoteFX vGPU
 
 > [!NOTE]
-> RemoteFX vGPU is not supported in Windows Server 2019. It is still fully supported in Windows Server 2016.
+> RemoteFX vGPU is fully supported in Windows Server 2016 but isn't supported in Windows Server 2019.
 
 RemoteFX vGPU is a graphics virtualization technology that allows a single physical GPU to be shared among multiple virtual machines. In a RemoteFX vGPU deployment, virtualized workloads run on Microsoft's RemoteFX 3D adapter, which coordinates GPU processing requests between the host and guests. RemoteFX vGPU is most suitable for knowledge worker and high-burst workloads where dedicated GPU resources are not required. RemoteFX vGPU can only provide GPU acceleration to Windows VMs.
 

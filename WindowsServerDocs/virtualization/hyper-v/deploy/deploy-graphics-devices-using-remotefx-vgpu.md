@@ -44,7 +44,7 @@ To configure RemoteFX vGPU on your Windows Server 2016 host:
 By default, RemoteFX vGPU will use all available and supported GPUs. To limit which GPUs the RemoteFX vGPU uses, follow these steps:
 
 1. Navigate to the Hyper-V settings in Hyper-V Manager.
-2. Click **Physical GPUs** in Hyper-V Settings.
+2. Select **Physical GPUs** in Hyper-V Settings.
 3. Select the GPU that you don't want to use, and then clear **Use this GPU with RemoteFX**.
 
 ### Configure the RemoteFX vGPU 3D adapter
@@ -53,47 +53,25 @@ You can use either the Hyper-V Manager UI or PowerShell cmdlets to configure the
 
 #### Configure RemoteFX vGPU with Hyper-V Manager
 
-1. Stop the VM, if it is running.
-2. In Hyper-V Manager, navigate to **VM Settings**, and then click **Add Hardware**.
-3. Select **RemoteFX 3D Graphics Adapter**, and click **Add**.
+1. Stop the VM if it's currently running.
+2. Open Hyper-V Manager, navigate to **VM Settings**, then select **Add Hardware**.
+3. Select **RemoteFX 3D Graphics Adapter**, then select **Add**.
 4. Set the maximum number of monitors, maximum monitor resolution, and dedicated video memory, or leave the default values.
 
    > [!NOTE]
    > - Setting higher values for any of these options will impact your service scale, so you should only set what is necessary.
-   >
-   > - When you need to use 1GB of dedicated VRAM, use a 64-bit guest VM instead of 32-bit (x86) for best results.
+   > - When you need to use 1 GB of dedicated VRAM, use a 64-bit guest VM instead of 32-bit (x86) for best results.
 
-5. Click **OK** to finish the configuration.
+5. Select **OK** to finish the configuration.
 
 #### Configure RemoteFX vGPU with PowerShell cmdlets
 
-Run the following cmdlets to add, review, and configure the adapter:
+Use the following PowerShell cmdlets to add, review, and configure the adapter:
 
-```powershell
-Add-VMRemoteFx3dVideoAdapter [-CimSession <CimSession[]>] [-ComputerName <String[]>] [-Credential <PSCredential[]>] [-VMName] <String[]> [-Passthru] [-WhatIf] [-Confirm] [<CommonParameters>]
-```
-
-For details see [Add-VMRemoteFx3dVideoAdapter](https://technet.microsoft.com/itpro/powershell/windows/hyper-v/add-vmremotefx3dvideoadapter).
-
-```powershell
-Get-VMRemoteFx3dVideoAdapter [-CimSession <CimSession[]>] [-ComputerName <String[]>]  [-Credential <PSCredential[]>] [-VMName] <String[]> [<CommonParameters>]
-```
-
-For details see [Get-VMRemoteFx3dVideoAdapter](https://technet.microsoft.com/itpro/powershell/windows/hyper-v/get-vmremotefx3dvideoadapter)
-
-```powershell
-Set-VMRemoteFx3dVideoAdapter [-CimSession <CimSession[]>] [-ComputerName <String[]>] [-Credential <PSCredential[]>] [-VMName] <String[]> [[-MonitorCount] <Byte>] [[-MaximumResolution] <String>] [[-VRAMSizeBytes] <UInt64>] [-Passthru] [-WhatIf] [-Confirm] [<CommonParameters>]
-```
-
-For details see [Set-VMRemoteFx3dVideoAdapter](https://technet.microsoft.com/itpro/powershell/windows/hyper-v/set-vmremotefx3dvideoadapter).
-
-Run the following cmdlet to review the physical GPUs:
-
-```powershell
-Get-VMRemoteFXPhysicalVideoAdapter [-ComputerName <String[]>] [-Credential <PSCredential[]>] [[-Name] <String[]>] [<CommonParameters>]  
-```
-
-For details see [Get-VMRemoteFXPhysicalVideoAdapter](https://technet.microsoft.com/itpro/powershell/windows/hyper-v/get-vmremotefxphysicalvideoadapter).
+- [Add-VMRemoteFx3dVideoAdapter](https://docs.microsoft.com/powershell/module/hyper-v/add-vmremotefx3dvideoadapter?view=win10-ps)
+- [Get-VMRemoteFx3dVideoAdapter](https://docs.microsoft.com/powershell/module/hyper-v/get-vmremotefx3dvideoadapter?view=win10-ps)
+- [Set-VMRemoteFx3dVideoAdapter](https://docs.microsoft.com/powershell/module/hyper-v/set-vmremotefx3dvideoadapter?view=win10-ps)
+- [Get-VMRemoteFXPhysicalVideoAdapter](https://docs.microsoft.com/powershell/module/hyper-v/get-vmremotefxphysicalvideoadapter?view=win10-ps)
 
 ## Monitor performance
 
@@ -101,30 +79,26 @@ The performance and scale of a RemoteFX vGPU-enabled service are determined by a
 
 ### Host system memory
 
-For every VM enabled with a vGPU, RemoteFX uses system memory both in the guest operating system and in the host server. The hypervisor guarantees the availability of system memory for a guest operating system. On the host, each vGPU-enabled virtual desktop needs to advertise its system memory requirement to the hypervisor. When the vGPU-enabled virtual desktop is starting, the hypervisor reserves additional system memory in the host.
+For every VM enabled with a vGPU, RemoteFX uses system memory both in the guest operating system and in the host server. The hypervisor guarantees the availability of system memory for a guest operating system. On the host, each vGPU-enabled virtual desktop needs to advertise its system memory requirement to the hypervisor. When the vGPU-enabled virtual desktop starts, the hypervisor reserves additional system memory in the host.
 
 The memory requirement for the RemoteFX-enabled server is dynamic because the amount of memory consumed on the RemoteFX-enabled server is dependent on the number of monitors that are associated with the vGPU-enabled virtual desktops and the maximum resolution for those monitors.
 
 ### Host GPU video memory
 
-Every vGPU-enabled virtual desktop uses the video memory in the GPU hardware on the host server to render the desktop. In addition to rendering, the video memory is used by a codec to compress the rendered screen. The amount of memory needed is directly based on the amount of monitors that are provisioned to the virtual machine.
-The video memory that is reserved varies based on the number of monitors and the system screen resolution. Some users may require a higher screen resolution for specific tasks. There is greater scalability with lower resolution settings if all other settings remain constant.
+Every vGPU-enabled virtual desktop uses the GPU hardware video memory on the host server to render the desktop. In addition, a codec uses the video memory to compress the rendered screen. The amount of memory needed for rendering and compression is directly based on the number of monitors provisioned to the virtual machine. The amount of reserved video memory varies based on the system screen resolution and how many monitors there are. Some users require a higher screen resolution for specific tasks, but there's greater scalability with lower resolution settings if all other settings remain constant.
 
 ### Host CPU
 
-The hypervisor schedules the host and VMs on the CPU. On the RemoteFX-enabled host the overhead is increased, because the system runs an additional process (rdvgm.exe) per vGPU-enabled virtual desktop. This process uses the graphics device driver to run commands on the GPU. The codec also uses the CPUs for compressing the screen data that needs to be sent back to the client.
+The hypervisor schedules the host and VMs on the CPU. The overhead is increased on a RemoteFX-enabled host because the system runs an additional process (rdvgm.exe) per vGPU-enabled virtual desktop. This process uses the graphics device driver to run commands on the GPU. The codec also uses the CPU to compress screen data that needs to be sent back to the client.
 
 More virtual processors mean a better user experience. We recommend allocating at least two virtual CPUs per vGPU-enabled virtual desktop. We also recommend using the x64 architecture for vGPU-enabled virtual desktops because the performance on x64 virtual machines is better compared to x86 virtual machines.
 
 ### GPU processing power
 
-For every vGPU-enabled virtual desktop, there is a corresponding DirectX process running on the host server. This process replays all the graphics commands that it receives from the RemoteFX virtual desktop onto the physical GPU. For the physical GPU, it is equivalent to simultaneously running multiple DirectX applications.
+Every vGPU-enabled virtual desktop has a corresponding DirectX process that runs on the host server. This process replays all graphics commands it receives from the RemoteFX virtual desktop onto the physical GPU. This is like running multiple DirectX applications at the same time on the same physical GPU.
 
-Typically, graphics devices and drivers are tuned to run a few applications on the desktop. RemoteFX stretches the GPUs to be used in a unique manner. To measure how the GPU is performing on a RemoteFX server, performance counters have been added to measure the GPU response to RemoteFX requests.
+Usually, graphics devices and drivers are tuned to run only a few applications on the desktop at a time, but RemoteFX stretches the GPUs to go even further. vGPUs come with performance counters that measure the GPU response to RemoteFX requests and help you make sure the GPUs aren't stretched too far.
 
-Usually when a GPU resource is low on resources, Read and Write operations to the GPU take a long time to complete. By using performance counters, administrators can take preventative action, eliminating the possibility of any downtime for their end users.
+When a GPU is low on resources, read and write operations take a long time to complete. Administrators can use performance counters to know when to adjust resources and prevent downtime for users.
 
-
-For detailed information about performance counters you can use to monitor RemoteFX vGPU behavior, refer to the following articles:
-
-- [Diagnose graphics performance issues in Remote Desktop](https://docs.microsoft.com/en-us/azure/virtual-desktop/remotefx-graphics-performance-counters)
+Learn more about performance counters for monitoring RemoteFX vGPU behavior at [Diagnose graphics performance issues in Remote Desktop](https://docs.microsoft.com/azure/virtual-desktop/remotefx-graphics-performance-counters).
