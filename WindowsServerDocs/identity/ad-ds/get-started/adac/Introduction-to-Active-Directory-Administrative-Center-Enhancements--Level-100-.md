@@ -279,7 +279,7 @@ Set-ADDomainMode -Identity contoso.com -DomainMode 3
 
 #### <a name="bkmk2_test_fgpp"></a>Step 2: Create test users, group, and organizational unit
 
-To create the test users and group need for this step, follow the procedures located here: [Step 3: Create test users, group and organizational unit](../../../ad-ds/get-started/adac/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-.md#bkmk_create_test_env) (you do not need to create the OU to demonstrate fine-grained password policy).
+To create the test users and group needed for this step, follow the procedures located here: [Step 3: Create test users, group and organizational unit](../../../ad-ds/get-started/adac/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-.md#bkmk_create_test_env) (you do not need to create the OU to demonstrate fine-grained password policy).
 
 #### <a name="bkmk_create_fgpp"></a>Step 3: Create a new fine-grained password policy
 
