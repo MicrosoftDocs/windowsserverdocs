@@ -25,4 +25,4 @@ It is recommended to load test the deployment with both stress tests and simulat
 
 ## GPU Workload
 
-There are also options for users who want to use graphic intensive applications, such as CAD CAM software, that require GPU resources. In addition, users can also enjoy a premium desktop experience
+There are also options for users who want to use graphic intensive applications, such as CAD CAM software, that require GPU resources.
