@@ -24,8 +24,8 @@ You can use the Remote Desktop client for Windows to work with Windows apps and 
 Use the following information to get started. Be sure to check out the [FAQ](remote-desktop-client-faq.md) if you have any questions.
 
 > [!NOTE]
-> - Curious about the new releases for the Windows client? Check out [What's new for Remote Desktop on Windows?](windows-whatsnew.md)
-> - You can run the client on any version of Windows 10.
+> - Curious about the new releases for the Windows Store client? Check out [What's new in the Windows Store client](windows-whatsnew.md)
+> - You can run the client on any supported version of Windows 10.
 
 ## Get the RD client and start using it
 

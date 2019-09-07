@@ -16,7 +16,7 @@ ms.localizationpriority: medium
 ---
 # What's new in the Windows Store client
 
-We regularly update the [Remote Desktop client for Windows](windows.md), adding new features and fixing issues. Check out the latest updates below.
+We regularly update the [Windows Store client](windows.md), adding new features and fixing issues. Check out the latest updates below.
 
 ## Updates for version 10.1.1098
 
