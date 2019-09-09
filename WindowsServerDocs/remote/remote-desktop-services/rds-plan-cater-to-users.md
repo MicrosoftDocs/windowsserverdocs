@@ -20,7 +20,7 @@ manager: scottman
 
 Remote Desktop Services supports different types of workloads. Scale your deployment depending on the expected need of each type of user.
 
-## Type of Users
+## Types of Users
 
 ### Knowledge User
 
