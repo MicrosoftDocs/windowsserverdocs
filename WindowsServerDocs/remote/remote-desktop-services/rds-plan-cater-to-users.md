@@ -18,11 +18,20 @@ manager: scottman
 
 >Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016
 
-Scale your deployment depending on the expected need of each type of user.
-For example, users may carry out data entry on lightweight apps, manipulate large datasets with productivity apps like Office, or work with heavy-duty engineering or graphics apps.
+Remote Desktop Services supports different types of workloads. Scale your deployment depending on the expected need of each type of user.
 
-It is recommended to load test the deployment with both stress tests and simulation of real-life usage. Vary the load size to avoid surprises! Ensure that responsiveness meets user requirements, and that the entire system is resilient. Create load tests with simulation tools, like LoginVSI, that check your deployment’s ability to meet the users’ needs.     
+## Knowledge User
 
-## GPU Workload
+Knowledge users use lightweight applications that may include task such as managing large datasets with productivity apps. These applications can include Word, Excel and Outlook and Internet Explorer.
 
-There are also options for users who want to use graphic intensive applications, such as CAD CAM software, that require GPU resources.
+## Knowledge User Plus
+
+Knowledge user plus uses lightweight browser and productivity applications as well as tasks with multimedia content and software development.
+
+## Power User
+
+Power Users use engineering specific and/or graphics application such as CAD and Adobe Photoshop. There are GPU options for these users who require graphic intensive workloads including video rendering, 3D design, and simulations.
+
+## Test Workload
+
+It is recommended to load test the deployment with both stress tests and simulation of real-life usage. Vary the load size to avoid surprises! Ensure that responsiveness meets user requirements, and that the entire system is resilient. Create load tests with simulation tools, like LoginVSI, that check your deployment’s ability to meet the users’ needs.
