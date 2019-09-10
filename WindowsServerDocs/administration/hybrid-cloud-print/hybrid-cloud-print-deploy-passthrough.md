@@ -176,7 +176,7 @@ This guide outlines five (5) installation steps:
        - External URL: Configure as appropriate for your organization
        - Preauthentication Method: Passthrough
 
-     >   Note: If you don’t find all the settings above, add the proxy with the settings available and then select the application proxy you just created and go to the **Application proxy** tab and add all the above information.
+     >   Note: If you don't find all the settings above, add the proxy with the settings available and then select the application proxy you just created and go to the **Application proxy** tab and add all the above information.
 
 4. Repeat 3, above, for the Enterprise Cloud Print Service and provide the Internal URL to your Enterprise Cloud Print Service
 

@@ -14,7 +14,7 @@ ms.prod: windows-server-threshold
 
 >Applies To: Windows Admin Center, Windows Admin Center Preview
 
-Let’s get started developing extensions with the Windows Admin Center SDK!  In this document, we’ll cover the process to get your environment up and running to build and test an extension for Windows Admin Center.
+Let's get started developing extensions with the Windows Admin Center SDK!  In this document, we'll cover the process to get your environment up and running to build and test an extension for Windows Admin Center.
 
 > [!NOTE]
 > New to the Windows Admin Center SDK?  Learn more about [Extensions for Windows Admin Center](extensibility-overview.md)

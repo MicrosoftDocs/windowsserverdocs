@@ -14,7 +14,7 @@ ms.prod: windows-server-threshold
 
 >Applies To: Windows Admin Center, Windows Admin Center Preview
 
-Let’s go more in-depth into the Windows Admin Center Extensions SDK - let's talk about adding PowerShell commands to your extension.
+Let's go more in-depth into the Windows Admin Center Extensions SDK - let's talk about adding PowerShell commands to your extension.
 
 ## PowerShell in TypeScript ##
 
@@ -148,7 +148,7 @@ return this.appContextService.workItem.submit('{!TargetNode}', workItem);
 >[!NOTE] 
 > For progress to be shown, Write-Progress must be included in the script that you have written. For example:
 > ``` ps1
->  Write-Progress -Activity ‘The script is almost done!’ -percentComplete 95
+>  Write-Progress -Activity ‘The script is almost done!' -percentComplete 95
 >```
 
 #### WorkItem Options ####

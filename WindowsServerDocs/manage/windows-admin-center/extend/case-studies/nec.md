@@ -19,7 +19,7 @@ The NEC ESMPRO extension requires installing the NEC ESMPRO Manager as it retrie
 
 ![NEC Extension](../../media/extend-case-study-nec/nec-1.png)
 
-The NEC ESMPRO extension has two tabs, the 'System Overview' tab and the 'System Health' tab. In the System Overview tab, you can easily view the system’s basic information.
+The NEC ESMPRO extension has two tabs, the 'System Overview' tab and the 'System Health' tab. In the System Overview tab, you can easily view the system's basic information.
 
 ![NEC Extension](../../media/extend-case-study-nec/nec-2.png)
 

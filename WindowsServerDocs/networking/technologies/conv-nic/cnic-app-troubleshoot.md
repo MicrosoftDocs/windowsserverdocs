@@ -61,7 +61,7 @@ As an additional step to verify your RDMA configuration, run the following Windo
 
 ### Get-SmbClientNetworkInterface expected results
 
-The host vNIC should appear as RDMA capable from SMB’s perspective as well.
+The host vNIC should appear as RDMA capable from SMB's perspective as well.
 
 ![Network adapter properties](../../media/Converged-NIC/CNIC-Troubleshooting/cnic-tshoot-03.jpg)
 
@@ -106,7 +106,7 @@ You can use the following Windows PowerShell command to verify that the remote n
 
 ### Get-SmbMultiChannelConnection expected results
 
-Remote node’s IP address is shown as RDMA capable.
+Remote node's IP address is shown as RDMA capable.
 
 ![RDMA capable remote node IP address](../../media/Converged-NIC/CNIC-Troubleshooting/cnic-tshoot-05.jpg)
 

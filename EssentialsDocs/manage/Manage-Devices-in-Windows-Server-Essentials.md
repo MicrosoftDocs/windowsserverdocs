@@ -137,7 +137,7 @@ manager: dongill
 7.  Click **Finish** to implement the Group Policy settings.  
   
 ##  <a name="BKMK_7"></a> Connect to a network computer by using a Remote Desktop session  
- To remotely access your Windows Server Essentials network computer when you are away from your office, use your Web browser to log on to your organization ��s Remote Web Access website, and on the **Computers** tab, click the name of the computer.  
+ To remotely access your Windows Server Essentials network computer when you are away from your office, use your Web browser to log on to your organization's Remote Web Access website, and on the **Computers** tab, click the name of the computer.  
   
  The **Status** column shows you if you can connect to a computer on your network, and can contain the following values:  
   

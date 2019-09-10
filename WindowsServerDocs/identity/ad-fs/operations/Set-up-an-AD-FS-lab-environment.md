@@ -265,7 +265,7 @@ You must complete the following steps to set up a web server with this sample cl
         Foreach (claim claim in claimsIdentity.Claims)  
         {  
            //Before showing the claims validate that this is an expected claim  
-           //If it is not in the expected claims list then don’t show it  
+           //If it is not in the expected claims list then don't show it  
            //if (ExpectedClaims.Contains( claim.ClaimType ) )  
            // {  
               writeClaim( claim, table );  

@@ -87,9 +87,9 @@ The ISV file cache must be populated with files associated with the updates to b
 
 **To populate the ISV file cache:**
 
-1. Use [WSUS APIs](https://msdn.microsoft.com/library/windows/desktop/microsoft.updateservices.administration.updatefile(v=vs.85).aspx) to access the update’s file path and file name for the MU service.
+1. Use [WSUS APIs](https://msdn.microsoft.com/library/windows/desktop/microsoft.updateservices.administration.updatefile(v=vs.85).aspx) to access the update's file path and file name for the MU service.
 
-    The metadata for each update on WSUS server contains the update’s file path and file name on Microsoft Update as follows (Microsoft Update hostname in bold, followed by file path and filename): **<http://download.windowsupdate.com>**/c/msdownload/update/software/updt/2016/09/windows10.0-kb3195781-x64_0c06079bccc35cba35a48bd2b1ec46f818bd2e74.msu
+    The metadata for each update on WSUS server contains the update's file path and file name on Microsoft Update as follows (Microsoft Update hostname in bold, followed by file path and filename): **<http://download.windowsupdate.com>**/c/msdownload/update/software/updt/2016/09/windows10.0-kb3195781-x64_0c06079bccc35cba35a48bd2b1ec46f818bd2e74.msu
 
 2. Download files from Microsoft Update and store them in the ISV file cache using one of these two methods: 
 
@@ -130,11 +130,11 @@ Following are two illustrations of download workflow options from an ISV file ca
 
   - **Express version** -- containing the deltas needed to patch the existing binaries on the device. 
 
-    Both the full-file version and the Express version are referenced in the update’s metadata, which has been downloaded to the client as part of the Scan phase. 
+    Both the full-file version and the Express version are referenced in the update's metadata, which has been downloaded to the client as part of the Scan phase. 
 
     **Express download works as follows:**
 
-    The WU client will try to download Express first, and under certain situations fall back to full-file if needed (for example, if going through a proxy that doesn’t support byte range requests).
+    The WU client will try to download Express first, and under certain situations fall back to full-file if needed (for example, if going through a proxy that doesn't support byte range requests).
 
   1. When the WU client initiates an Express download, **the WU client first downloads a stub**, which is part of the Express package.
 
