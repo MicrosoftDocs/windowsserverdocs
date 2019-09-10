@@ -27,8 +27,8 @@ You can use the Remote Desktop client for Windows Desktop to access Windows apps
 ## Install the client
 
 You can install the client from the following locations:
-[Windows 64-bit](https://go.microsoft.com/fwlink/?linkid=2068602)
-Windows 32-bit (Coming soon)
+[Windows 64-bit](https://go.microsoft.com/fwlink/?linkid=2068602)<br>
+Windows 32-bit (Coming soon)<br>
 Windows on ARM (Coming soon)
 
 The client can be installed for the current user which does not require administrative right or can be installed by an admin so all users on the device can access it.
