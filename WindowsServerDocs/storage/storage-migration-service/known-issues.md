@@ -246,7 +246,7 @@ As a workaround, move the destination File Server resource back to the original 
 As an alternative workaround:
 
 1. Install the Storage Migration Service Proxy feature on all nodes in a cluster.
-2. Run the following SMS PowerShell command on the Orchestrator computer: 
+2. Run the following Storage Migration Service PowerShell command on the orchestrator computer: 
 
  Register-SMSProxy -ComputerName *destination server* -Force
 
