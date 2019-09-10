@@ -231,6 +231,52 @@ Examining the StorageMigrationService-Proxy/Debug log shows:
 
 This error is expected if your migration account does not have at least Read access permissions to the SMB shares. To workaround this error, add a security group containing the source migration account to the SMB shares on the source computer and grant it Read, Change, or Full Control. After the migration completes, you can remove this group. A future release of Windows Server may change this behavior to no longer require explicit permissions to the source shares.
 
+## Error 0x80005000 when running inventory
+
+After installing [KB4512534](https://support.microsoft.com/en-us/help/4512534/windows-10-update-kb4512534) and attempting to run inventory, inventory fails with errors:
+
+  EXCEPTION FROM HRESULT: 0x80005000
+  
+  Log Name:      Microsoft-Windows-StorageMigrationService/Admin
+  Source:        Microsoft-Windows-StorageMigrationService
+  Date:          9/9/2019 5:21:42 PM
+  Event ID:      2503
+  Task Category: None
+  Level:         Error
+  Keywords:      
+  User:          NETWORK SERVICE
+  Computer:      FS02.TailwindTraders.net
+  Description:
+  Couldn't inventory the computers.
+  Job: foo2
+  ID: 20ac3f75-4945-41d1-9a79-d11dbb57798b
+  State: Failed
+  Error: 36934
+  Error Message: Inventory failed for all devices
+  Guidance: Check the detailed error and make sure the inventory requirements are met. The job couldn't inventory any of the specified source computers. This could be because the orchestrator computer couldn't reach it over the network, possibly due to a firewall rule or missing permissions.
+  
+  Log Name:      Microsoft-Windows-StorageMigrationService/Admin
+  Source:        Microsoft-Windows-StorageMigrationService
+  Date:          9/9/2019 5:21:42 PM
+  Event ID:      2509
+  Task Category: None
+  Level:         Error
+  Keywords:      
+  User:          NETWORK SERVICE
+  Computer:      FS02.TailwindTraders.net
+  Description:
+  Couldn't inventory a computer.
+  Job: foo2
+  Computer: FS01.TailwindTraders.net
+  State: Failed
+  Error: -2147463168
+  Error Message: 
+  Guidance: Check the detailed error and make sure the inventory requirements are met. The inventory couldn't determine any aspects of the specified source computer. This could be because of missing permissions or privileges on the source or a blocked firewall port.
+  
+This error is caused by a code defect in SMS when you provide migration credentials in the form of a User Principal Name (UPN), such as 'meghan@contoso.com'. The SMS orchestrator service fails to parse this format correctly, which leads to a failure in a domain lookup that was added for cluster migration support in KB4512534 and 19H1.
+
+To workaround this issue, provide credentials in the domain\user format, such as 'Contoso\Meghan'. We play to fix this issue in a later update to Storage Migration Service or release of Windows Server. 
+
 ## See also
 
 - [Storage Migration Service overview](overview.md)
