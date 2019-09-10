@@ -54,7 +54,7 @@ The following articles provide technical information and best practices for Micr
 These articles provide guidelines and information about tools for troubleshooting volume activation issues.
 
 - [Guidelines for troubleshooting the Key Management Service (KMS)](activation-troubleshoot-kms-general.md)
-- [Slmgr.vbs options](activation-slmgr-vbs-options.md)
+- [Slmgr.vbs options for obtaining volume activation information](activation-slmgr-vbs-options.md)
 - [Example: Troubleshooting ADBA clients that do not activate](activation-troubleshoot-adba-clients.md)
 
 The following articles provide guidance for addressing more specific activation issues:

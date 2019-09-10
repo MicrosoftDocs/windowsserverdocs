@@ -1,7 +1,7 @@
 ﻿---
-title: Slmgr.vbs options for volume activation
+title: Slmgr.vbs options for obtaining volume activation information
 TOCTitle: Slmgr.vbs Options
-ms.date: 09/03/2019
+ms.date: 09/10/2019
 ms.technology: server-general
 ms.topic: article
 author: Teresa-Motiv
@@ -14,7 +14,7 @@ appliesto:
 - Windows 8.1
 ---
 
-# Slmgr.vbs options for volume activation
+# Slmgr.vbs options for obtaining volume activation information
 
 The following describes the syntax of the Slmgr.vbs script, and the tables in this article describe each command-line option.
 
