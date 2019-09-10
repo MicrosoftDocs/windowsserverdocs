@@ -94,7 +94,7 @@ The Remote Desktop applications support pinning connections to your home screen 
 2. Tap **widgets**.
 3. Swipe through the widgets and look for the Remote Desktop icon with the description, “Pin Remote Desktop.”
 4. Tap and hold that Remote Desktop widget and move it to the home screen.
-5. When you release the icon, you’ll see the saved remote desktops. Choose the connection that you want to save to your home screen.
+5. When you release the icon, you'll see the saved remote desktops. Choose the connection that you want to save to your home screen.
 
 Now you can start the remote desktop connection directly from your home screen by tapping it.
 
@@ -137,7 +137,7 @@ When you start a remote desktop connection, there are tools available that you c
 ### Start a Remote Desktop connection
 
 1. Tap the Remote Desktop connection to start the session. 
-2. If you are asked to verify the certificate for the remote desktop, tap **Connect**. You can also select **Don’t ask me again for connections to this computer** to always accept the certificate.
+2. If you are asked to verify the certificate for the remote desktop, tap **Connect**. You can also select **Don't ask me again for connections to this computer** to always accept the certificate.
 
 ### Manage global app settings
 

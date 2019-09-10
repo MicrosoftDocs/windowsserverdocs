@@ -28,13 +28,13 @@ The following image shows a rough representation of user input flow from client 
 
 ![Remote Desktop - User input flows from the users Remote Desktop client to the application](./media/rds-user-input.png)
 
-The User Input Delay counter measures the max delta (within an interval of time) between the input being queued and when it’s picked up by the app in a [traditional message loop](https://msdn.microsoft.com/library/windows/desktop/ms644927.aspx#loop), as shown in the following flow chart:
+The User Input Delay counter measures the max delta (within an interval of time) between the input being queued and when it's picked up by the app in a [traditional message loop](https://msdn.microsoft.com/library/windows/desktop/ms644927.aspx#loop), as shown in the following flow chart:
 
 ![Remote Desktop - User input Delay performance counter flow](./media/rds-user-input-delay.png)
 
 One important detail of this counter is that it reports the maximum user input delay within a configurable interval. This is the longest time it takes for an input to reach the application, which can impact the speed of important and visible actions like typing.
 
-For example, in the following table, the user input delay would be reported as 1,000 ms within this interval. The counter reports the slowest user input delay in the interval because the user’s perception of "slow" is determined by the slowest input time (the maximum) they experience, not the average speed of all total inputs.
+For example, in the following table, the user input delay would be reported as 1,000 ms within this interval. The counter reports the slowest user input delay in the interval because the user's perception of "slow" is determined by the slowest input time (the maximum) they experience, not the average speed of all total inputs.
 
 |Number| 0 | 1 | 2 |
 |------|---|---|---|
@@ -72,7 +72,7 @@ The counter starts reporting user input delay as soon as you add it. Note that t
 
 ![Remote Desktop - An example of activity for the User Input Delay per process in the Performance Monitor](./media/rds-sample-user-input-delay-perfmon.png)
 
-Next, let’s look at the **User Input Delay per Session**. There are instances for each session ID, and their counters show the user input delay of any process within the specified session. In addition, there are two instances called "Max" (the maximum user input delay across all sessions) and "Average" (the average acorss all sessions).
+Next, let's look at the **User Input Delay per Session**. There are instances for each session ID, and their counters show the user input delay of any process within the specified session. In addition, there are two instances called "Max" (the maximum user input delay across all sessions) and "Average" (the average acorss all sessions).
 
 This table shows a visual example of these instances. (You can get the same information in Perfmon by switching to the Report graph type.)
 
@@ -99,7 +99,7 @@ Here's how to read the graph's lines:
 - The green line is the maximum user input delay across all sessions.
 - The blue line (displayed as black in this graph) represents average user input delay across all sessions.
 
-You’ll notice that there's a correlation between CPU spikes and user input delay—as the CPU gets more usage, the user input delay increases. Also, as more users get added to the system, CPU usage gets closer to 100%, leading to more frequent user input delay spikes. While this counter is very useful in cases where the server runs out of resources, you can also use it to track user input delay related to a specific application.
+You'll notice that there's a correlation between CPU spikes and user input delay—as the CPU gets more usage, the user input delay increases. Also, as more users get added to the system, CPU usage gets closer to 100%, leading to more frequent user input delay spikes. While this counter is very useful in cases where the server runs out of resources, you can also use it to track user input delay related to a specific application.
 
 ## Configuration Options
 
@@ -118,7 +118,7 @@ To fix this, you can set the following registry key to match the interval (in mi
 >[!NOTE]
 >If you're using Windows 10, version 1809 or later or Windows Server 2019 or later, you don't need to set LagCounterInterval to fix the performance counter.
 
-We’ve also added a couple of keys you might find helpful under the same registry key:
+We've also added a couple of keys you might find helpful under the same registry key:
 
 **LagCounterImageNameFirst** — set this key to `DWORD 1` (default value 0 or key does not exist). This changes the counter names to "Image Name <SessionID:ProcessId>." For example, "explorer <1:7964>." This is useful if you want to sort by image name.
 
