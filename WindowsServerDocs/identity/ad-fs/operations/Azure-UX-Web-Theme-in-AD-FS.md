@@ -43,7 +43,7 @@ Enabling the centered UI enables you to use the same images for background and l
 
 Description | Constraints | Recommendations
 ------- | ------- | ----------
-The logo is displayed on top of the login panel. | Transparent JPG or PNG<br>Max height: 36 px<br>Max width: 245 px | Use your organization’s logo here.<br>Use a transparent image. Don’t assume that the background will be white.<br>Do not add padding around your logo in the image or your logo will look disproportionately small.
+The logo is displayed on top of the login panel. | Transparent JPG or PNG<br>Max height: 36 px<br>Max width: 245 px | Use your organization's logo here.<br>Use a transparent image. Don't assume that the background will be white.<br>Do not add padding around your logo in the image or your logo will look disproportionately small.
 
 ### Background
 

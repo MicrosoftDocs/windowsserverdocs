@@ -64,7 +64,7 @@ Create the JEA role in a notepad file. Instructions to create the role is provid
  
 The commandlets delegated in this example are `Reset-AdfsAccountLockout, Get-ADFSAccountActivity, and Set-ADFSAccountActivity`. 
 
-Sample JEA role delegating access of ‘Reset-ADFSAccountLockout’, ‘Get-ADFSAccountActivity’, and ‘Set-ADFSAccountActivity’ commandlets:
+Sample JEA role delegating access of ‘Reset-ADFSAccountLockout', ‘Get-ADFSAccountActivity', and ‘Set-ADFSAccountActivity' commandlets:
 
 ```powershell
 @{
