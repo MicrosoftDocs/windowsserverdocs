@@ -21,7 +21,7 @@ The following list describes common issues that can occur during KMS activations
 - [Should I back up KMS host information?](#should-i-back-up-kms-host-information)
 - [Is the KMS client computer activated?](#is-the-kms-client-computer-activated)
 - [The KMS client computer will not activate](#the-kms-client-computer-will-not-activate).
-- [Error 0xC004F035](#error-0c004f035).
+- [Error 0xC004F035](#error-0xc004f035).
 - [What does this error code mean?](#what-does-this-error-code-mean).
 - [Clients are not adding to the KMS count](#clients-are-not-adding-to-the-kms-count).
 - [KMS hosts are unable to create SRV records](#kms-hosts-are-unable-to-create-srv-records).

@@ -33,7 +33,7 @@ The results show that we have two Activation Objects: one for Server 2012 R2, an
 
 Knowing that the **slmgr** command is my friend for license activation, I continued with different options. I tried the **/dlv** switch, which will display detailed license information. This looked fine to me, I was running the Standard version of Windows Server 2016, there’s an Activation ID, an Installation ID, a validation URL, even a partial Product Key.
 
-![](./media/Capture13.jpg)
+![](./media/ActivationTroubleshoot2b.jpg.jpg)
 
 Does anyone see what I missed at this point? We’ll come back to it after my other troubleshooting steps but suffice it to say the answer is in this screenshot.
 

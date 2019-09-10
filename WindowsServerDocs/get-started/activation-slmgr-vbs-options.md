@@ -4,7 +4,7 @@ TOCTitle: Slmgr.vbs Options
 ms.date: 09/03/2019
 ms.technology: server-general
 ms.topic: article
-author: v-tea
+author: Teresa-Motiv
 ms.author: v-tea
 manager: kausika
 ms.localizationpriority: medium
