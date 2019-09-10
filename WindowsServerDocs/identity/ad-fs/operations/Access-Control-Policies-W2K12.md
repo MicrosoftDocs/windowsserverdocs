@@ -31,6 +31,9 @@ AD FS endpoints required for Windows 10 Domain Join and sign on
 - [federation service name]/adfs/services/trust/2005/certificatemixed
 - [federation service name]/adfs/services/trust/13/certificatemixed
 
+>**Important**:
+>/adfs/services/trust/2005/windowstransport and /adfs/services/trust/13/windowstransport endpoints should only be enabled for intranet access as they are meant to be intranet facing endpoints that use WIA binding on HTTPS. Exposing them to extranet could allow requests against these endpoints to bypass lockout protections. These endpoints should be disabled on the proxy (i.e. disabled from extranet) to protect AD account lockout. 
+
 To resolve, update any policies that deny based on the endpoint claim to allow exception for the endpoints above.
 
 For example, the rule below:

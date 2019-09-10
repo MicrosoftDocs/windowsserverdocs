@@ -126,4 +126,4 @@ New-NfsShare -name nfs1 -Path C:\shares\nfsfolder
 ```
 
 ### Known issue
-NFS version 4.1 allows the file names to be created or copied using illegal characters. If you attempt to open the files with vi editor, it shows as being corrupt. You cannot save the file from vi, rename, move it or change permissions. Avoid using illigal characters.
+NFS version 4.1 allows the file names to be created or copied using illegal characters. If you attempt to open the files with vi editor, it shows as being corrupt. You cannot save the file from vi, rename, move it or change permissions. Avoid using illegal characters.

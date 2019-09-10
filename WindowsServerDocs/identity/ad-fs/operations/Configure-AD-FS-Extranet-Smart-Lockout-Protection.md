@@ -267,14 +267,19 @@ A: The typical goal of the brute force attack scenario is to guess a password an
 **If my user has never signed in successfully from an IP and then tries with wrong password a few times will they be able to login once they finally type their password correctly?** 
 
 A: If a user submits multiple bad passwords (i.e. legitimately mis-typing) and on the following attempt gets the password correct, then the user will immediately succeed to sign in.  This will clear the bad password count and add that IP to the FamiliarIPs list.  However, if they go above the threshold of failed logins from the unknown location, they will enter into lockout state and they will require to wait past the observation window and sign-in with a valid password or require admin intervention to reset their account.  
+ 
+**Does ESL work on intranet too?**
 
-**Does ESL work on intranet too?**  
-A: If the clients connect directly to the ADFS servers and not via Web Application Proxy servers then the ESL behavior will not apply. 
+A: If the clients connect directly to the ADFS servers and not via Web Application Proxy servers then the ESL behavior will not apply.  
 
 **I am seeing Microsoft IP addresses in the Client IP field. Does ESL block EXO proxied brute force attacks?**  
 
 A: ESL will work well to prevent Exchange Online or other legacy authentication brute force attack scenarios. A legacy authentication has an “Activity ID” of 00000000-0000-0000-0000-000000000000. In these attacks, the bad actor is taking advantage of Exchange Online basic authentication (also known as legacy authentication) so that the client IP address appears as a Microsoft one. The Exchange online servers in the cloud proxy the authentication verification on behalf of the Outlook client. In these scenarios, the IP address of the malicious submitter will be in the x-ms-forwarded-client-ip and the Microsoft Exchange Online server IP will be in the x-ms-client-ip value.
 Extranet Smart Lockout checks network IPs, forwarded IPs, the x-forwarded-client-IP, and the x-ms-client-ip value. If the request is successful, all the IPs are added to the familiar list. If a request comes in and any of the presented IPs are not in the familiar list then the request will be marked as unfamiliar. The familiar user will be able to sign in successfully while requests from the unfamiliar locations will be blocked.  
+
+**Q: Can I estimate the size of the ADFSArtifactStore before enabling ESL?
+
+A: With ESL enabled, AD FS tracks the account activity and known locations for users in the ADFSArtifactStore database. This database scales in size relative to the number of users and known locations tracked. When planning to enable ESL, you can estimate the size for the ADFSArtifactStore database to grow at a rate of up to 1GB per 100,000 users. If the AD FS farm is using the Windows Internal Database (WID), the default location for the database files is C:\Windows\WID\Data\. To prevent filling this drive, ensure you have a minimum of 5GB of free storage before enabling ESL. In addition to disk storage, plan for total process memory to grow after enabling ESL by up to an additional 1GB of RAM for user populations of 500,000 or less.
 
 
 ## Additional references  
