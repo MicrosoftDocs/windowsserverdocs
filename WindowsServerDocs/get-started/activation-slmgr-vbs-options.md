@@ -16,26 +16,31 @@ appliesto:
 
 # Slmgr.vbs options for volume activation
 
-Because of WMI changes in Windows 7 and Windows Server 2008 R2, the Slmgr.vbs script is not intended to work across platforms. Using Slmgr.vbs to manage a Windows 7 or Windows Server 2008 R2 system from the Windows Vista® operating system is not supported. Attempting to manage an older system from Windows 7 or Windows Server 2008 R2 will generate a specific version mismatch error. For example, running **cscript slmgr.vbs \<vista\_machine\_name\> /dlv** produces the following output:
-
-> Microsoft (R) Windows Script Host Version 5.8
-> Copyright (C) Microsoft Corporation. All rights reserved.
->  
-> The remote machine does not support this version of SLMgr.vbs
-
-To manage remote clients, use the Volume Activation Management Tool (VAMT) version 1.2 or later, or create custom WMI scripts that are aware of the differences between platforms. For more information about WMI properties and methods for Volume Activation, see [WMI Properties and Methods for Volume Activation](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn502536(v=ws.11)).
-
-The following describes the syntax of the Slmgr.vbs script, and Table 2 describes each command-line option:
+The following describes the syntax of the Slmgr.vbs script, and the tables in this article describe each command-line option.
 
 ```cmd
 slmgr.vbs [<ComputerName> [<User> <Password>]] [<Options>]
 ```
 
 > [!NOTE]
-> For support of other software using Volume Activation, see the documents specifically written for those applications.
+> In this article, square brackets \[] enclose optional arguments, and angle brackets \<> enclose placeholders. When you type these statements, omit the brackets and replace the placeholders with corresponding values.
 
+> [!NOTE]
+> For information about other software products that use volume activation, see the documents specifically written for those applications.
 
-## General Slmgr.vbs command-line options
+## Using Slmgr on remote computers
+
+To manage remote clients, use the Volume Activation Management Tool (VAMT) version 1.2 or later, or create custom WMI scripts that are aware of the differences between platforms. For more information about WMI properties and methods for Volume Activation, see [WMI Properties and Methods for Volume Activation](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn502536(v=ws.11)).
+
+> [!IMPORTANT]
+> Because of WMI changes in Windows 7 and Windows Server 2008 R2, the Slmgr.vbs script is not intended to work across platforms. Using Slmgr.vbs to manage a Windows 7 or Windows Server 2008 R2 system from the Windows Vista® operating system is not supported. Attempting to manage an older system from Windows 7 or Windows Server 2008 R2 will generate a specific version mismatch error. For example, running **cscript slmgr.vbs \<vista\_machine\_name\> /dlv** produces the following output:
+>  
+>> Microsoft (R) Windows Script Host Version 5.8
+>> Copyright (C) Microsoft Corporation. All rights reserved.
+>>  
+>> The remote machine does not support this version of SLMgr.vbs
+
+## General Slmgr.vbs options
 
 |Option |Description |
 | - | - |
