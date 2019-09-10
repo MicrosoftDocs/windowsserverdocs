@@ -47,7 +47,7 @@ All secondary nodes will contact the master node on each fresh login through Por
 - **ExtranetObservationWindow**: This value determines the duration that username and password requests from unknown locations are locked out. When the window has passed, ADFS will start to perform username and password authentication from unknown locations again.
 - **ExtranetLockoutRequirePDC**: When enabled, extranet lockout requires a primary domain controller (PDC). When disabled, extranet lockout will fallback to another domain controller in case the PDC is unavailable.  
 - **ExtranetLockoutMode**: Controls log only vs enforced mode of Extranet Smart Lockout
-    - **ADFSSmartLockoutLogOnly**: Extranet Smart Lockout is enabled, but AD FS will only write admin and audit events, but will not reject authentication requests. This mode is intended to initially be enabled for FamiliarLocation to be populated before ‘ADFSSmartLockoutEnforce’ is enabled.
+    - **ADFSSmartLockoutLogOnly**: Extranet Smart Lockout is enabled, but AD FS will only write admin and audit events, but will not reject authentication requests. This mode is intended to initially be enabled for FamiliarLocation to be populated before ‘ADFSSmartLockoutEnforce' is enabled.
     - **ADFSSmartLockoutEnforce**: Full support for blocking unfamiliar authentication requests when thresholds are reached.
 
 IPv4 and IPv6 addresses are supported.
@@ -56,19 +56,19 @@ IPv4 and IPv6 addresses are supported.
 - **Pre-Auth Check**: During an authentication request, ESL checks all presented IPs. These IPs will be a combination of network IP, forwarded IP, and the optional x-forwarded-for IP. In the audit logs, these IPs are listed in the <IpAddress> field in the order of x-ms-forwarded-client-ip, x-forwarded-for, x-ms-proxy-client-ip.
 
   Based on these IPs, ADFS determines if the request is from a familiar or unfamiliar location and then checks if the respective badPwdCount is less than the set threshold limit OR if the last **failed** attempt is happened longer than the observation window time frame. If one of these conditions is true, ADFS allows this transaction for further processing and credential validation. If both conditions are false, the account is already in a locked out state until the observation window passes. After the observation window passes, the user is allowed one attempt to authenticate. Note that in 2019, ADFS will check against the appropriate threshold limit based on if the IP address matches a familiar location or not.
-- **Successful Login**: If the log-in succeeds, then the IPs from the request are added to the user’s familiar location IP list.  
+- **Successful Login**: If the log-in succeeds, then the IPs from the request are added to the user's familiar location IP list.  
 - **Failed Login**: If the log-in fails the badPwdCount is increased. The user will go into a lockout state if the attacker sends more bad passwords to the system than the threshold allows. (badPwdCount > ExtranetLockoutThreshold)  
 
 ![configuration](media/configure-ad-fs-extranet-smart-lockout-protection/esl2.png)
 
-The “UnknownLockout” value will equal to true when the account is locked out. This means that the user’s badPwdCount is over than the threshold i.e. someone attempted more passwords than were allowed by the system. In this state, there are 2 ways that a valid user can login.
+The “UnknownLockout” value will equal to true when the account is locked out. This means that the user's badPwdCount is over than the threshold i.e. someone attempted more passwords than were allowed by the system. In this state, there are 2 ways that a valid user can login.
 - The user must wait for the ObservationWindow time to elapse or
-- In order to reset the Lockout state, reset the badPwdCount back to zero with ‘Reset-ADFSAccountLockout’.
+- In order to reset the Lockout state, reset the badPwdCount back to zero with ‘Reset-ADFSAccountLockout'.
 
 If no resets occur, the account will be allowed a single password attempt against AD for each observation window. The account will return to the locked out state after that attempt and the observation window will restart. The badPwdCount value will only reset automatically after a successful password login.
 
-### Log-Only mode versus ‘Enforce’ mode
-The AccountActivity table is populated both during ‘Log-Only’ mode and ‘Enforce’ mode. If ‘Log-Only’ mode is bypassed and ESL is moved directly into ‘Enforce’ mode without the recommended waiting period, the familiar IPs of the users will not be known to ADFS. In this case, ESL would behave like ‘ADBadPasswordCounter’, potentially blocking legitimate user traffic if the user account is under an active brute force attack. If the ‘Log-Only’ mode is bypassed and the user enters a locked out state with “UnknownLockout” = TRUE and attempts to sign in with a good password from an IP that is not in the “familiar” IP list, then they will not be able to sign in. Log-Only mode is recommended for 3-7 days to avoid this scenario. If accounts are actively under attack, a minimum of 24 hours of ‘Log-Only’ mode is necessary to prevent lockouts to legitimate users.  
+### Log-Only mode versus ‘Enforce' mode
+The AccountActivity table is populated both during ‘Log-Only' mode and ‘Enforce' mode. If ‘Log-Only' mode is bypassed and ESL is moved directly into ‘Enforce' mode without the recommended waiting period, the familiar IPs of the users will not be known to ADFS. In this case, ESL would behave like ‘ADBadPasswordCounter', potentially blocking legitimate user traffic if the user account is under an active brute force attack. If the ‘Log-Only' mode is bypassed and the user enters a locked out state with “UnknownLockout” = TRUE and attempts to sign in with a good password from an IP that is not in the “familiar” IP list, then they will not be able to sign in. Log-Only mode is recommended for 3-7 days to avoid this scenario. If accounts are actively under attack, a minimum of 24 hours of ‘Log-Only' mode is necessary to prevent lockouts to legitimate users.  
 
 ## Extranet Smart Lockout Configuration  
 
@@ -91,7 +91,7 @@ The AccountActivity table is populated both during ‘Log-Only’ mode and ‘En
    >[!NOTE]
    >The $cred placeholder is an account that has AD FS administrator permissions. This should provide the write permissions to create the table.
 
-   The commands above may fail due to lack of sufficient permission because your AD FS farm is using SQL Server, and the credential provided above does not have admin permission on your SQL server. In this case, you can configure database permissions manually in SQL Server Database by running the following command when you’re connected to the AdfsArtifactStore database.
+   The commands above may fail due to lack of sufficient permission because your AD FS farm is using SQL Server, and the credential provided above does not have admin permission on your SQL server. In this case, you can configure database permissions manually in SQL Server Database by running the following command when you're connected to the AdfsArtifactStore database.
     ```  
     # when prompted with “Are you sure you want to perform this action?”, enter Y.
 
@@ -171,7 +171,7 @@ Set the lockout behavior to log only by running the following commandlet.
 
 Log only mode is intended to be a temporary state so that the system can learn login behavior prior to introducing lockout enforcement with the smart lockout behavior. The recommended duration for log-only mode is 3-7 days. If accounts are actively under attack, log-only mode must be run for a minimum of 24 hours.
 
-On AD FS 2016, if 2012R2 ‘Extranet Soft Lockout’ behavior is enabled prior to enabling Extranet Smart Lockout, Log-Only mode will disable the ‘Extranet Soft Lockout’ behavior. AD FS Smart Lockout will not lock out users in Log-Only mode. However, on-premises AD may lock out the user based on the AD configuration. Please review AD Lockout policies to learn how on-prem AD can lockout users.
+On AD FS 2016, if 2012R2 ‘Extranet Soft Lockout' behavior is enabled prior to enabling Extranet Smart Lockout, Log-Only mode will disable the ‘Extranet Soft Lockout' behavior. AD FS Smart Lockout will not lock out users in Log-Only mode. However, on-premises AD may lock out the user based on the AD configuration. Please review AD Lockout policies to learn how on-prem AD can lockout users.
 
 On AD FS 2019, an additional advantage is to be able to enable log-only mode for smart lockout while continuing to enforce the previous soft lockout behavior using the below Powershell.
 
@@ -235,7 +235,7 @@ This behavior can be overridden by passing the -Server parameter.
 The recommended way to monitor user account activity is through Connect Health. Connect Health generates downloadable reporting on Risky IPs and bad password attempts. Each item in the Risky IP report shows aggregated information about failed AD FS sign-in activities which exceed designated threshold. Email notifications can be set to alert administrators as soon as this occurs with customizable email settings. For additional information and setup instructions, visit the [Connect Health documentation](https://docs.microsoft.com/azure/active-directory/hybrid/how-to-connect-health-adfs).
 
 ### AD FS Extranet Smart Lockout events.
-For Extranet Smart Lockout events to be written, ESL must be enabled in ‘log-only’ or ‘enforce’ mode and ADFS security auditing is enabled.
+For Extranet Smart Lockout events to be written, ESL must be enabled in ‘log-only' or ‘enforce' mode and ADFS security auditing is enabled.
 AD FS will write extranet lockout events to the security audit log:
 - When a user is locked out (reaches the lockout threshold for unsuccessful login attempts)
 - When AD FS receives a login attempt for a user who is already in lockout state
@@ -258,11 +258,11 @@ While in log only mode, you can check the security audit log for lockout events.
 
 **Will an ADFS farm using Extranet Smart Lockout in enforce mode ever see malicious user lockouts?** 
 
-A: If ADFS Smart Lockout is set to ‘enforce’ mode then you will never see the legitimate user’s account locked out by brute force or denial of service. The only way a malicious account lockout can prevent a user sign in is if the bad actor has the user password or can send requests from a known good (familiar) IP address for that user. 
+A: If ADFS Smart Lockout is set to ‘enforce' mode then you will never see the legitimate user's account locked out by brute force or denial of service. The only way a malicious account lockout can prevent a user sign in is if the bad actor has the user password or can send requests from a known good (familiar) IP address for that user. 
 
 **What happens ESL is enabled and the bad actor has a user password?** 
 
-A: The typical goal of the brute force attack scenario is to guess a password and successfully sign in.  If a user is phished or if a password is guessed then the ESL feature will not block the access since the sign in will meet “successful” criteria of correct password plus new IP. The bad actors IP would then appear as a “familiar” one. The best mitigation in this scenario is to clear the user’s activity in ADFS and to require Multi Factor Authentication for the users. We strongly recommend installing AAD Password Protection that ensures guessable passwords do not get into the system.
+A: The typical goal of the brute force attack scenario is to guess a password and successfully sign in.  If a user is phished or if a password is guessed then the ESL feature will not block the access since the sign in will meet “successful” criteria of correct password plus new IP. The bad actors IP would then appear as a “familiar” one. The best mitigation in this scenario is to clear the user's activity in ADFS and to require Multi Factor Authentication for the users. We strongly recommend installing AAD Password Protection that ensures guessable passwords do not get into the system.
 
 **If my user has never signed in successfully from an IP and then tries with wrong password a few times will they be able to login once they finally type their password correctly?** 
 

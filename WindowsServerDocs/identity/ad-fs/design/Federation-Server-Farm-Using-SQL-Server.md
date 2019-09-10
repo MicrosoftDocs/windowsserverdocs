@@ -119,7 +119,7 @@ Configuring an AD FS farm with AlwaysOn Availability groups requires a slight mo
   
 2.  Once the AD FS databases have been created, assign them to AlwaysOn Availability groups and create the common TCPIP listener using SQL Server tools and process at [Creation and Configuration of Availability Groups \(SQL Server\)](https://technet.microsoft.com/library/ff878265.aspx).  
   
-3.  Finally, use PowerShell to edit the AD FS properties to update the SQL connection string to use the DNS address of the AlwaysOn Availability group’s listener.  
+3.  Finally, use PowerShell to edit the AD FS properties to update the SQL connection string to use the DNS address of the AlwaysOn Availability group's listener.  
   
     Example PSH commands to update the SQL connection string for the AD FS configuration database:  
   

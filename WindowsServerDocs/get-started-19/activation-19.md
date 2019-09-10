@@ -52,7 +52,7 @@ KMS can activate physical and virtual computers, but to qualify for KMS activati
 
 KMS hosts count the most recent connections. When a client or server contacts the KMS host, the host adds the machine ID to its count and then returns the current count value in its response. The client or server will activate if the count is high enough. Clients will activate if the count is 25 or higher. Servers and volume editions of Microsoft Office products will activate if the count is five or greater. The KMS only counts unique connections from the past 30 days, and only stores the 50 most recent contacts.
 
-KMS activations are valid for 180 days, a period known as the activation validity interval. KMS clients must renew their activation by connecting to the KMS host at least once every 180 days to stay activated. By default, KMS client computers attempt to renew their activation every seven days. After a client’s activation is renewed, the activation validity interval begins again.
+KMS activations are valid for 180 days, a period known as the activation validity interval. KMS clients must renew their activation by connecting to the KMS host at least once every 180 days to stay activated. By default, KMS client computers attempt to renew their activation every seven days. After a client's activation is renewed, the activation validity interval begins again.
 
 # Addressing KMS functional requirements
 
@@ -60,7 +60,7 @@ KMS activation requires TCP/IP connectivity. KMS hosts and clients are configure
 
 After the first KMS host is activated, the KMS key that is used on the first host can be used to activate up to five more KMS hosts on your network. After a KMS host is activated, administrators can reactivate the same host up to nine times with the same key.
 
-If your organization needs more than six KMS hosts, you should request additional activations for your organization’s KMS key—for example, if you have ten physical locations under one volume licensing agreement and you want each location to have a local KMS host.
+If your organization needs more than six KMS hosts, you should request additional activations for your organization's KMS key—for example, if you have ten physical locations under one volume licensing agreement and you want each location to have a local KMS host.
 
 > [!NOTE] 
 > To request this exception, contact your Activation Call Center. For more information, see [Microsoft Volume Licensing](https://go.microsoft.com/fwlink/?LinkID=73076).
