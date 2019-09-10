@@ -2,7 +2,7 @@
 title: Troubleshooting common MAK activation issues
 description: 
 ms.topic: troubleshooting
-ms.date: 09/03/2019
+ms.date: 09/10/2019
 ms.technology: server-general
 ms.topic: article
 ms.assetid: 
@@ -14,7 +14,7 @@ ms.localizationpriority: medium
 
 # Troubleshooting common MAK activation issues
 
-The following list describes common issues that can occur during MAK activations, linked to guidance for addressing the issue.
+The following list describes common issues that can occur during Multiple Activation Key (MAK) activations, linked to guidance for addressing the issue.
 
 <a id="list"></a>
 
@@ -25,13 +25,13 @@ The following list describes common issues that can occur during MAK activations
 
 ## How can I tell if my computer is activated?
 
-Look for “Windows is activated” in the Control Panel System item. Alternatively, run Slmgr.vbs with the **/dli** command-line option.
+On the computer, open the **System** control panel and look for **Windows is activated**. Alternatively, run Slmgr.vbs with the **/dli** command-line option.
 
 [Back to list](#list)
 
 ## The computer will not activate over the internet
 
-Ensure that the required ports are open in the firewall. For a list of ports, see the [Volume Activation Deployment Guide](http://go.microsoft.com/fwlink/?linkid=150083).
+Make sure that the required ports are open in the firewall. For a list of ports, see the [Volume Activation Deployment Guide](http://go.microsoft.com/fwlink/?linkid=150083).
 
 [Back to list](#list)
 
@@ -49,6 +49,6 @@ If Slmgr.vbs returns a hexadecimal error code, determine the corresponding error
 slui.exe 0x2a 0x <ErrorCode>
 ```
 
-For more information about specific error codes and how to address them, see [Solutions to common activation errors](activation-error-codes.md).
+For more information about specific error codes and how to address them, see [Resolving common activation error codes](activation-error-codes.md).
 
 [Back to list](#list)

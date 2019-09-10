@@ -14,7 +14,7 @@ ms.localizationpriority: medium
 
 # Troubleshooting common KMS activation issues
 
-The following list describes common issues that can occur during KMS activations, linked to guidance for addressing the issues.
+The following list describes common issues that can occur during Key Management Service (KMS) activations, linked to guidance for addressing the issues.
 
 <a id="list"></a>
 
@@ -94,7 +94,7 @@ For example, if event ID 12293 contains error code 0x8007267C, you can display a
 slui.exe 0x2a 0x8007267C
 ```
 
-For more information about specific error codes and how to address them, see [Solutions to common activation errors](activation-error-codes.md).
+For more information about specific error codes and how to address them, see [Resolving common activation error codes](activation-error-codes.md).
 
 [Back to list](#list)
 
