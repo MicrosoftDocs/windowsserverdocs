@@ -6,14 +6,17 @@ ms.technology: server-general
 ms.topic: upgrade
 author: RobHindman
 ms.author: robhind
-ms.date: 08/22/2019
+ms.date: 09/10/2019
 ---
 
 # Overview about Windows Server upgrades
 
 The process of upgrading to a newer version of Windows Server can vary greatly depending on which operating system you are starting with and the pathway you take. We use the following terms to distinguish among different actions, any of which could be involved in a new Windows Server deployment.
 
-- **Upgrade.** Also known as an "in-place upgrade". You move from an older version of the operating system to a newer version, while staying on the same hardware. **This is the method we will be covering in this section.**
+- **Upgrade.** Also known as an "in-place upgrade". You move from an older version of the operating system to a newer version, while staying on the same physical hardware. **This is the method we will be covering in this section.**
+
+    >[!Important]
+    >In-place upgrades might also be supported by public or private cloud companies; however, you must check with your cloud provider for the details. Additionally, you'll be unable to perform an in-place upgrade on any Windows Server that's configured to **Boot from VHD**.
 
 - **Installation.** Also known as a "clean installation". You move from an older version of the operating system to a newer version, deleting the older operating system.
 
@@ -31,6 +34,24 @@ However, we realize that's not always possible. You can use the following diagra
 
 ![Available in-place upgrade paths](media/upgrade-paths.png)
 
-Windows Server can be typically be upgraded through at least one, and sometimes even two, versions. For example, Windows Server 2012 R2 and Windows Server 2016 can be upgraded in-place to Windows Server 2019.
+Windows Server can be typically be upgraded through at least one, and sometimes even two, versions. For example, Windows Server 2012 R2 and Windows Server 2016 can both be upgraded in-place to Windows Server 2019.
 
 You can also upgrade from an evaluation version of the operating system to a retail version, from an older retail version to a newer version, or, in some cases, from a volume-licensed edition of the operating system to an ordinary retail edition. For more information about upgrade options other than in-place upgrade, see [Upgrade and conversion options for Windows Server](get-started/supported-upgrade-paths.md).
+
+## Before you begin your in-place upgrade
+
+Before you start your Windows Server upgrade, you must collect some information from your machines.
+
+### To collect your info
+
+1. Open a command prompt, go to `c:\Windows\system32`, and then type **systeminfo.exe**.
+
+2. Copy and paste the resulting system information, locally.
+
+3. Type **ipconfig /all** into the command prompt, and then copy and paste the resulting configuration information, locally.
+
+4. Open the Registry Editor, go to the HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\WindowsNT\CurrentVersion hive, and copy and paste the information, locally.
+
+    The **CurrentVersion** hive gives you the exact version (BuildLabEx) and edition (EditionID) for your Windows Server.
+
+After you've collected all of your Windows Server-related information, we highly recommend that you backup your operating system, apps, and virtual machines. You must also Shut down, Quick migrate, or Live migrate any Virtual Machines currently running on the server. You can't have any Virtual Machines running during the in-place upgrade.
