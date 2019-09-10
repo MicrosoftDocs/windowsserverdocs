@@ -86,6 +86,7 @@ The Storage Migration Service contains a multi-threaded read and copy engine cal
 - **Alter default transfer threads.** The Storage Migration Service Proxy service copies 8 files simultaneously in a given job. You can increase the number of simultaneous copy threads by adjusting the following registry REG_DWORD value name in decimal on every node running the SMS Proxy:
 
     HKEY_Local_Machine\Software\Microsoft\SMSProxy
+    
     FileTransferThreadCount
 
    The valid range is 1 to 128 in Windows Server 2019. After changing you must restart the Storage Migration Service Proxy service on all computers participating in a migration. Use caution with this setting; setting it higher may require additional cores, storage performance, and network bandwidth. Setting it too high may lead to reduced performance compared to default settings. The ability to heuristically change thread settings based on CPU, memory, network, and storage is planned for a later version of SMS.
