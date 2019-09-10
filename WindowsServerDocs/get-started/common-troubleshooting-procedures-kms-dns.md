@@ -1,8 +1,8 @@
 ---
-title: Common troubleshooting procedures for KMS and DNS issues
+title: Guidelines for troubleshooting DNS-related activation issues
 description: 
 ms.topic: troubleshooting
-ms.date: 07/22/2019
+ms.date: 09/10/2019
 ms.technology: server-general
 ms.topic: article
 ms.assetid: 
@@ -11,7 +11,7 @@ ms.author: v-tea
 ms.localizationpriority: medium
 ---
 
-# Common troubleshooting procedures for KMS and DNS issues
+# Guidelines for troubleshooting DNS-related activation issues
 
 You may have to use some of these methods if one or more of the following conditions are true:
 

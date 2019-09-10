@@ -51,6 +51,17 @@ The following articles provide technical information and best practices for Micr
 
 ## Resources for troubleshooting activation issues
 
-These articles will walk you through the resources you need to troubleshoot Activation issue.
+These articles provide guidelines and information about tools for troubleshooting volume activation issues.
 
-- 
+- [Guidelines for troubleshooting the Key Management Service (KMS)](activation-troubleshoot-kms-general.md)
+- [Slmgr.vbs options](activation-slmgr-vbs-options.md)
+- [Example: Troubleshooting ADBA clients that do not activate](activation-troubleshoot-adba-clients.md)
+
+The following articles provide guidance for addressing more specific activation issues:
+
+[Resolving common activation error codes](activation-error-codes.md)
+[Resolving common KMS activation issues](activation-troubleshoot-KMS-issues.md)
+[Resolving common MAK activation issues](activation-troubleshoot-MAK-issues.md)
+[Guidelines for troubleshooting DNS-related activation issues](common-troubleshooting-procedures-kms-dns.md)
+[How to rebuild the Tokens.dat file](activation-rebuild-tokens-dat-file.md)
+

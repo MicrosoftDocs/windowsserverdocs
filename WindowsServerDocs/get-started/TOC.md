@@ -27,11 +27,11 @@
 ### [Troubleshooting Windows volume activation](activation-troubleshooting-guide.md)
 ### [Guidelines for troubleshooting the Key Management Service (KMS)](activation-troubleshoot-kms-general.md)
 ### [Slmgr.vbs options](activation-slmgr-vbs-options.md)
-### Solutions to common activation errors
-#### [Solutions to common activation errors](activation-error-codes.md)
-#### [Troubleshooting common KMS activation issues](activation-troubleshoot-KMS-issues.md)
-#### [Troubleshooting common MAK activation issues](activation-troubleshoot-MAK-issues.md)
-#### [Common troubleshooting procedures for KMS and DNS issues](common-troubleshooting-procedures-kms-dns.md)
+### Solutions to common activation issues
+#### [Resolving common activation error codes](activation-error-codes.md)
+#### [Resolving common KMS activation issues](activation-troubleshoot-KMS-issues.md)
+#### [Resolving common MAK activation issues](activation-troubleshoot-MAK-issues.md)
+#### [Guidelines for troubleshooting DNS-related activation issues](common-troubleshooting-procedures-kms-dns.md)
 #### [How to rebuild the Tokens.dat file](activation-rebuild-tokens-dat-file.md)
 ### [Example: Troubleshooting ADBA clients that do not activate](activation-troubleshoot-adba-clients.md)
 ## [Install Nano Server](Getting-started-with-Nano-Server.md)
