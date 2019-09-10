@@ -200,7 +200,7 @@ In this procedure, you configure NPS as a RADIUS server on your organization net
 
 10. In Specify Encryption Settings, select **Next**. Do not make any changes.
 
-    These settings apply only to Microsoft Point-to-Point Encryption (MPPE) connections, which this scenario doesn’t support.
+    These settings apply only to Microsoft Point-to-Point Encryption (MPPE) connections, which this scenario doesn't support.
 
 11. In Specify a Realm Name, select **Next**.
 

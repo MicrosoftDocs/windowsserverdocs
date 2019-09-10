@@ -80,7 +80,7 @@ Storage Spaces Direct works with direct-attached SATA, SAS, or NVMe drives that 
 - Same number and types of drives in every server – see [Drive symmetry considerations](drive-symmetry-considerations.md)
 - Cache devices must be 32 GB or larger
 - When using persistent memory devices as cache devices, you must use NVMe or SSD capacity devices (you can't use HDDs)
-- NVMe driver is Microsoft's in-box or updated NVMe driver.
+- NVMe driver is the Microsoft-provided one included in Windows. (stornvme.sys)
 - Recommended: Number of capacity drives is a whole multiple of the number of cache drives
 - Recommended: Cache drives should have high write endurance: at least 3 drive-writes-per-day (DWPD) or at least 4 terabytes written (TBW) per day – see [Understanding drive writes per day (DWPD), terabytes written (TBW), and the minimum recommended for Storage Spaces Direct](https://blogs.technet.microsoft.com/filecab/2017/08/11/understanding-dwpd-tbw/)
 
@@ -125,5 +125,5 @@ Drives can be internal to the server, or in an external enclosure that is connec
 
 | Maximums                | Windows Server 2019  | Windows Server 2016  |
 | ---                     | ---------            | ---------            |
-| Raw capacity per server | 100 TB               | 100 TB               |
+| Raw capacity per server | 400 TB               | 100 TB               |
 | Pool capacity           | 4 PB (4,000 TB)      | 1 PB                 |

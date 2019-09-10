@@ -15,7 +15,7 @@ ms.author: elizapo
 ms.date: 08/04/2016
 ---
 # Suspend and Leave User Session Active
-You can disconnect or suspend users from the MultiPoint Services system when you do not want to end the users’ sessions. A user can also disconnect the session, rather than you disconnecting the session for them. While a user session is suspended, the session remains active in the MultiPoint Services system’s computer memory until the computer is shut down or restarted. At that time, all suspended sessions are ended and any unsaved work is lost.  
+You can disconnect or suspend users from the MultiPoint Services system when you do not want to end the users' sessions. A user can also disconnect the session, rather than you disconnecting the session for them. While a user session is suspended, the session remains active in the MultiPoint Services system's computer memory until the computer is shut down or restarted. At that time, all suspended sessions are ended and any unsaved work is lost.  
   
 1.  Open MultiPoint Manager in station mode, and then click the **Stations** tab.  
   

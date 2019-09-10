@@ -56,7 +56,7 @@ Use the links in this topic to learn more about the concepts that were discussed
 
 ## Virtualization Server Tuning Resources
 
--   [What’s New in Hyper-V in Windows Server 2016](https://technet.microsoft.com/windows-server-docs/compute/hyper-v/what-s-new-in-hyper-v-on-windows)
+-   [What's New in Hyper-V in Windows Server 2016](https://technet.microsoft.com/windows-server-docs/compute/hyper-v/what-s-new-in-hyper-v-on-windows)
 
 -   [Hyper-V Dynamic Memory Configuration Guide](https://technet.microsoft.com/library/ff817651.aspx)
 
@@ -108,7 +108,7 @@ Use the links in this topic to learn more about the concepts that were discussed
 
 Use the performance tuning guidelines to improve performance for older versions of Windows Server.
 
-Here’s a list of performance tuning guidelines for previous versions of Windows Server:
+Here's a list of performance tuning guidelines for previous versions of Windows Server:
 
 -   [Performance Tuning Guidelines for Windows Server 2012 R2](https://www.microsoft.com/download/details.aspx?id=51960)
 

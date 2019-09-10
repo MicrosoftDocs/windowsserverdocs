@@ -72,7 +72,7 @@ You can use AD DS groups to grant access to a set of users that need to use the 
 Now that you've created the users and groups in Active Directory, you can add some granularity regarding who has access to the Remote Desktop collections in your deployment.
 
 1. Connect to the server running the Remote Desktop Connection Broker (RD Connection Broker) role, following the steps described earlier.
-2. Add the other Remote Desktop servers to the RD Connection Broker’s pool of managed servers:
+2. Add the other Remote Desktop servers to the RD Connection Broker's pool of managed servers:
    1. In Server Manager click **Manage > Add Servers**.
    2. Click **Find Now**.
    3. Click each server in your deployment that is running a Remote Desktop Services role, and then click **OK**.

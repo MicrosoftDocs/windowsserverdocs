@@ -22,7 +22,7 @@ AD FS supports several types of Single Sign-On experiences:
   
      Session SSO cookies are written for the authenticated user which eliminates further prompts when the user switches applications during a particular session. However, if a particular session ends, the user will be prompted for their credentials again.  
   
-     AD FS will set session SSO cookies by default if users’ devices are not registered. If the browser session has ended and is restarted, this session cookie is deleted and is not valid any more.  
+     AD FS will set session SSO cookies by default if users' devices are not registered. If the browser session has ended and is restarted, this session cookie is deleted and is not valid any more.  
   
 -   **Persistent SSO**  
   

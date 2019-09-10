@@ -655,7 +655,7 @@ Specifies the load balance policy. If the type is not specified, then the **path
 
 **paths**
 
-Specifies whether a path is **primary** or has a particular \<weight>. Any paths not specified are implicitly set as backup. Any paths listed must be one of the currently selected LUN’s paths.
+Specifies whether a path is **primary** or has a particular \<weight>. Any paths not specified are implicitly set as backup. Any paths listed must be one of the currently selected LUN's paths.
 
 ### <a name="BKMK_19"></a>list
 
@@ -1125,7 +1125,7 @@ Specifies that the hosts specified must be added to the existing list of hosts t
 
 **WWN=**
 
-Specifies a list of hexadecimal numbers representing world-wide names from which the LUN or hosts should be made accessible. To mask/unmask to a specific set of hosts in a Fibre Channel subsystem, you can type a semicolon-separated list of WWN’s for the ports on the host machines of interest.
+Specifies a list of hexadecimal numbers representing world-wide names from which the LUN or hosts should be made accessible. To mask/unmask to a specific set of hosts in a Fibre Channel subsystem, you can type a semicolon-separated list of WWN's for the ports on the host machines of interest.
 
 **initiator=**
 

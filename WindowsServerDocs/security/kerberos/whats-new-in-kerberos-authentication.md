@@ -1,5 +1,5 @@
 ---
-title: What’s New in Kerberos Authentication
+title: What's New in Kerberos Authentication
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.topic: article
