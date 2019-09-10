@@ -18,7 +18,7 @@ ms.date: 10/16/2017
 
 >Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-changes the default server to the specified Domain Name System (DNS) domain.
+Changes the default server to the specified Domain Name System (DNS) domain.
 ## Syntax
 ```
 lserver <DNSDomain> 
