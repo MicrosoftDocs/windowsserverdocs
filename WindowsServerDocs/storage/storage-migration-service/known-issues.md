@@ -239,7 +239,7 @@ When attempting to transfer data against a clustered File Server, you receieve e
    0x9006
    ServiceError0x9006,Microsoft.StorageMigration.Commands.UnregisterSmsProxyCommand
 
-This error is expect if the File Server resource moved from its original Windows Server 2019 cluster owner node to a new node and the SMS Proxy feature was not installed on that node.
+This error is expected if the File Server resource moved from its original Windows Server 2019 cluster owner node to a new node and the Storage Migration Service Proxy feature wasn't installed on that node.
 
 As a workaround, move the destination File Server resource back to the original owner cluster node that was in use when you first configured transfer pairings.
 
