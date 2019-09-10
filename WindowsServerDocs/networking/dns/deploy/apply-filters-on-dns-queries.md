@@ -70,7 +70,7 @@ Add-DnsServerQueryResolutionPolicy -Name "BlockListPolicyMalicious06" -Action IG
 `
 
 ## <a name="bkmk_block3"></a>Block a type of query
-You might need to block name resolution for certain types of queries on your servers. For example, you can block the ‘ANY’ query, which can be used maliciously to create amplification attacks.
+You might need to block name resolution for certain types of queries on your servers. For example, you can block the ‘ANY' query, which can be used maliciously to create amplification attacks.
 
 `
 Add-DnsServerQueryResolutionPolicy -Name "BlockListPolicyQType" -Action IGNORE -QType "EQ,ANY" -PassThru

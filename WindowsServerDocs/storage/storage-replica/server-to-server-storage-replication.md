@@ -50,7 +50,7 @@ To use Storage Replica and Windows Admin Center together, you need the following
 | One PC                     | Windows 10                                                  | Windows Admin Center |
 
 > [!NOTE]
-> Right now you can’t use Windows Admin Center on a server to manage Storage Replica.
+> Right now you can't use Windows Admin Center on a server to manage Storage Replica.
 
 ## Terms  
 This walkthrough uses the following environment as an example:  
@@ -200,7 +200,7 @@ If you're using Windows Admin Center to manage Storage Replica, use the followin
     **Figure 3: Creating a new partnership**
 
 > [!NOTE]
-> Removing the partnership from Storage Replica in Windows Admin Center doesn’t remove the replication group name.
+> Removing the partnership from Storage Replica in Windows Admin Center doesn't remove the replication group name.
 
 ### Using Windows PowerShell
 

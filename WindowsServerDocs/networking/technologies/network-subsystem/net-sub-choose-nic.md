@@ -72,9 +72,9 @@ The following cmdlets allow you to see and modify RSS parameters per network ada
 
 You can use the **–Profile** parameter of the Set-NetAdapterRss cmdlet to specify which logical processors are assigned to which network adapter. Available values for this parameter are:
 
-- **Closest**. Logical processor numbers that are near the network adapter’s base RSS processor are preferred. With this profile, the operating system might rebalance logical processors dynamically based on load.
+- **Closest**. Logical processor numbers that are near the network adapter's base RSS processor are preferred. With this profile, the operating system might rebalance logical processors dynamically based on load.
   
-- **ClosestStatic**. Logical processor numbers near the network adapter’s base RSS processor are preferred. With this profile, the operating system does not rebalance logical processors dynamically based on load.
+- **ClosestStatic**. Logical processor numbers near the network adapter's base RSS processor are preferred. With this profile, the operating system does not rebalance logical processors dynamically based on load.
   
 - **NUMA**. Logical processor numbers are generally selected on different NUMA nodes to distribute the load. With this profile, the operating system might rebalance logical processors dynamically based on load.
   
