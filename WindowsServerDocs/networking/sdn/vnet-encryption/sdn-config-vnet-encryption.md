@@ -1,6 +1,6 @@
 ---
 title: Configure Encryption for a Virtual Network
-description: Virtual network encryption allows encryption of virtual network traffic between virtual machines that communicate with each other within subnets marked as ‘Encryption Enabled.’
+description: Virtual network encryption allows encryption of virtual network traffic between virtual machines that communicate with each other within subnets marked as ‘Encryption Enabled.'
 manager: brianlic
 ms.prod: windows-server-threshold
 ms.technology: networking-hv-switch
@@ -14,7 +14,7 @@ ms.date: 08/08/2018
 
 >Applies to: Windows Server
 
-Virtual network encryption allows for encryption of virtual network traffic between VMs that communicate with each other within subnets marked as ‘Encryption Enabled.’ It also utilizes Datagram Transport Layer Security (DTLS) on the virtual subnet to encrypt packets. DTLS protects against eavesdropping, tampering, and forgery by anyone with access to the physical network.
+Virtual network encryption allows for encryption of virtual network traffic between VMs that communicate with each other within subnets marked as ‘Encryption Enabled.' It also utilizes Datagram Transport Layer Security (DTLS) on the virtual subnet to encrypt packets. DTLS protects against eavesdropping, tampering, and forgery by anyone with access to the physical network.
 
 Virtual network encryption requires:
 - Encryption certificates installed on each of the SDN-enabled Hyper-V hosts.
@@ -237,7 +237,7 @@ This step assumes you have already created a virtual network name "My Network" a
     New-NetworkControllerVirtualNetwork -ConnectionUri $uri -ResourceId $vnet.ResourceId -Properties $vnet.Properties -force
 
 
-_**Congratulations!**_ You’re done once you complete these steps. 
+_**Congratulations!**_ You're done once you complete these steps. 
 
 
 ## Next steps

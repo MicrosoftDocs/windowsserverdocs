@@ -69,7 +69,7 @@ Jumbo frames is a NIC and network feature that allows an application to send fra
 
 There were no changes to jumbo frame support in Windows Server 2012 R2.
 
-In Windows Server 2016 there is a new offload: MTU_for_HNV. This new offload works with Jumbo Frame settings to ensure encapsulated traffic doesn’t require segmentation between the host and the adjacent switch. This new feature of the SDN stack has the NIC automatically calculate what MTU to advertise and what MTU to use on the wire. These values for MTU are different if any HNV offload is in use. (In the feature compatibility table, Table 1, MTU_for_HNV would have the same interactions as the HNVv2 offloads have since it is directly related to the HNVv2 offloads.)
+In Windows Server 2016 there is a new offload: MTU_for_HNV. This new offload works with Jumbo Frame settings to ensure encapsulated traffic doesn't require segmentation between the host and the adjacent switch. This new feature of the SDN stack has the NIC automatically calculate what MTU to advertise and what MTU to use on the wire. These values for MTU are different if any HNV offload is in use. (In the feature compatibility table, Table 1, MTU_for_HNV would have the same interactions as the HNVv2 offloads have since it is directly related to the HNVv2 offloads.)
 
 ### Large Send Offload (LSO)
 

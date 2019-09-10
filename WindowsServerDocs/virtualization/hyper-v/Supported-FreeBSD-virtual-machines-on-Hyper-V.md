@@ -71,7 +71,7 @@ The following feature distribution map indicates the features in each version. T
 
 2. The virtual DVD drive may not be recognized when BIS drivers are loaded on FreeBSD 8.x and 9.x unless you enable the legacy ATA driver through the following command.
     ```sh
-    # echo ‘hw.ata.disk_enable=1’ >> /boot/loader.conf
+    # echo ‘hw.ata.disk_enable=1' >> /boot/loader.conf
     # shutdown -r now
     ```
 

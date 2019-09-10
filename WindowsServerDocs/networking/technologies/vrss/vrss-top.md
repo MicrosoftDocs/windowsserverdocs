@@ -73,7 +73,7 @@ Because of this, Anthony decides to add processors to the VM for use by vRSS.  H
 
 Sandra, a network administrator, is setting up a single high-performance VM on one of her systems to act as a software load balancer. She has assigned all available logical processors to this single VM.
 
-After installing Windows Server, she uses vRSS to get parallel network traffic processing on multiple logical processors in the VM. Because Windows Server enables vRSS, Sandra doesn’t have to make any configuration changes.
+After installing Windows Server, she uses vRSS to get parallel network traffic processing on multiple logical processors in the VM. Because Windows Server enables vRSS, Sandra doesn't have to make any configuration changes.
 
 
 ## Related topics
