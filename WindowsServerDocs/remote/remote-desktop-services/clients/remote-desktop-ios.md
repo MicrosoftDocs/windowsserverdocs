@@ -157,7 +157,7 @@ When you start a remote desktop session, there are tools available that you can 
 ### Start a Remote Desktop Connection
 
 1. Tap the remote desktop connection to start the remote desktop session.
-2. If you are asked to verify the certificate for the remote desktop, tap **Accept**. You can choose to always accept by sliding the  **Don’t ask me again for connections to this computer** toggle to **ON**.
+2. If you are asked to verify the certificate for the remote desktop, tap **Accept**. You can choose to always accept by sliding the  **Don't ask me again for connections to this computer** toggle to **ON**.
 
 ### Connection Bar
 

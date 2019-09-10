@@ -114,10 +114,10 @@ For this procedure, use a PowerShell instance that has administrative permission
    ```
 
 2. Enter **qwinsta**. 
-    ![The qwinsta command lists the processes listening on the computer’s ports.](../media/troubleshoot-remote-desktop-connections/WPS_qwinsta.png)
+    ![The qwinsta command lists the processes listening on the computer's ports.](../media/troubleshoot-remote-desktop-connections/WPS_qwinsta.png)
 3. If the list includes **rdp-tcp** with a status of **Listen**, the RDP listener is working. Proceed to [Check the RDP listener port](#check-the-rdp-listener-port). Otherwise, continue at step 4.
 4. Export the RDP listener configuration from a working computer.
-    1. Sign in to a computer that has the same operating system version as the affected computer has, and access that computer’s registry (for example, by using Registry Editor).
+    1. Sign in to a computer that has the same operating system version as the affected computer has, and access that computer's registry (for example, by using Registry Editor).
     2. Navigate to the following registry entry:  
         **HKEY\_LOCAL\_MACHINE\\SYSTEM\\CurrentControlSet\\Control\\Terminal Server\\WinStations\\RDP-Tcp**
     3. Export the entry to a .reg file. For example, in Registry Editor, right-click the entry, select **Export**, and then enter a filename for the exported settings.

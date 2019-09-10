@@ -27,7 +27,7 @@ This AD FS claim represents a “best attempt” at ascertaining the IP address 
 - A single IP address - The IP address of the client that is directly connected to Exchange Online
 
 	>![Note] 
-	>The IP address of a client on the corporate network will appear as the external interface IP address of the organization’s outbound proxy or gateway.
+	>The IP address of a client on the corporate network will appear as the external interface IP address of the organization's outbound proxy or gateway.
 
 - One or more IP addresses
   - If Exchange Online cannot determine the IP address of the connecting client, it will set the value based on the value of the x-forwarded-for header, a non-standard header that can be included in HTTP based requests and is supported by many clients, load balancers, and proxies on the market.

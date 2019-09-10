@@ -82,8 +82,8 @@ Installation steps for Windows Server (Semi-Annual Channel) are the same as inst
 
 - No supported upgrades from previous versions of Windows Server to Windows Server, version 1709. A fresh installation is always required.
    This means that when you run setup.exe from the desktop of a Windows computer, the setup experience does not permit the upgrade option (it is grayed out).
-- There’s no evaluation version for Windows Server (Semi-Annual Channel)
-- There’s no OEM or retail version. Windows Server (Semi-Annual Channel) can only be licensed through Software Assurance or loyalty programs.
+- There's no evaluation version for Windows Server (Semi-Annual Channel)
+- There's no OEM or retail version. Windows Server (Semi-Annual Channel) can only be licensed through Software Assurance or loyalty programs.
 
 For more info about Semi-Annual Channel, see [Comparison of servicing channels](../get-started-19/servicing-channels-19.md).
 

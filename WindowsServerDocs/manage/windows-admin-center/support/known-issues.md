@@ -93,7 +93,7 @@ The previously disclosed incompatibility issue of the Lenovo XClarity Integrator
 
 Windows Admin Center is not tested with Mozilla Firefox, but most functionality should work.
 
-- Windows 10 Installation: Mozilla Firefox has it’s own certificate store, so you must import the ```Windows Admin Center Client``` certificate into Firefox to use Windows Admin Center on Windows 10.
+- Windows 10 Installation: Mozilla Firefox has it's own certificate store, so you must import the ```Windows Admin Center Client``` certificate into Firefox to use Windows Admin Center on Windows 10.
 
 ## WebSocket compatibility when using a proxy service
 
@@ -189,7 +189,7 @@ If it is not installed, you can [download and install WMF 5.1](https://www.micro
 
 ### Storage
 
-- Fetching Quota information may fail without an error notification (there will still be an error in the browser’s console) [18962274]
+- Fetching Quota information may fail without an error notification (there will still be an error in the browser's console) [18962274]
 
 - Down-level: DVD/CD/Floppy drives do not appear as volumes on down-level.
 
@@ -202,10 +202,10 @@ If it is not installed, you can [download and install WMF 5.1](https://www.micro
 - After installing updates, install status may be cached and require a browser refresh.
 
 - You may encounter the error: "Keyset does not exist" when attempting to set up Azure Update management. In this case, please try the following remediation steps on the managed node -
-    1. Stop ‘Cryptographic Services’ service.
+    1. Stop ‘Cryptographic Services' service.
     2. Change folder options to show hidden files (if required).
     3. Got to “%allusersprofile%\Microsoft\Crypto\RSA\S-1-5-18” folder and delete all its contents.
-    4. Restart ‘Cryptographic Services’ service.
+    4. Restart ‘Cryptographic Services' service.
     5. Repeat setting up Update Management with Windows Admin Center
 
 ### Virtual Machines

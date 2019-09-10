@@ -39,7 +39,7 @@ Network Controller supports the following three modes of authentication between 
 
 1. **Kerberos**. Use Kerberos authentication when joining both the management client and all Network Controller cluster nodes to an Active Directory domain. The Active Directory domain must have domain accounts used for authentication.
 
-2. **X509**. Use X509 for certificate\-based authentication for management clients not joined to an Active Directory domain. You must enroll certificates to all Network Controller cluster nodes and management clients. Also, all nodes and management clients must trust each others’ certificates.
+2. **X509**. Use X509 for certificate\-based authentication for management clients not joined to an Active Directory domain. You must enroll certificates to all Network Controller cluster nodes and management clients. Also, all nodes and management clients must trust each others' certificates.
 
 3. **None**. Use None for testing purposes in a test environment and, therefore, not recommended for use in a production environment. When you choose this mode, there is no authentication performed between nodes and management clients.
 

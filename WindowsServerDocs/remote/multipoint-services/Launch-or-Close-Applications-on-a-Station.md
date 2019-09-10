@@ -15,7 +15,7 @@ ms.author: elizapo
 ms.date: 08/04/2016
 ---
 # Launch or Close Applications on a Station
-As a MultiPoint Dashboard User, you can open or close an application on a user’s desktop, selected desktops, or all desktops.  
+As a MultiPoint Dashboard User, you can open or close an application on a user's desktop, selected desktops, or all desktops.  
   
 ## Launch an application on a user station  
   

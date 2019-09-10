@@ -234,7 +234,7 @@ The policies described in this article should always be used with another authen
 -   A single IP address: The IP address of the client that is directly connected to Exchange Online  
 
 > [!NOTE]
-> - The IP address of a client on the corporate network will appear as the external interface IP address of the organization’s outbound proxy or gateway.  
+> - The IP address of a client on the corporate network will appear as the external interface IP address of the organization's outbound proxy or gateway.  
 >   -   Clients that are connected to the corporate network by a VPN or by Microsoft DirectAccess (DA) may appear as internal corporate clients or as external clients depending upon the configuration of VPN or DA.  
 
 -   One or more IP addresses: When Exchange Online cannot determine the IP address of the connecting client, it will set the value based on the value of the x-forwarded-for header, a non-standard header that can be included in HTTP-based requests and is supported by many clients, load balancers, and proxies on the market.  
@@ -274,7 +274,7 @@ The policies described in this article should always be used with another authen
 
   -   &#124;2[0-5]) Matches addresses ending in 20-25  
 
-- Note that the parentheses must be correctly positioned, so that you don’t start matching other portions of IP addresses.  
+- Note that the parentheses must be correctly positioned, so that you don't start matching other portions of IP addresses.  
 
 - With the 192 block matched, we can write a similar expression for the 10 block: \b10\\.0\\.0\\.([1-9]&#124;1[0-4])\b  
 
@@ -283,7 +283,7 @@ The policies described in this article should always be used with another authen
 ### Testing the Expression  
  Regex expressions can become quite tricky, so we highly recommend using a regex verification tool. If you do an internet search for “online regex expression builder”, you will find several good online utilities that will allow you to try out your expressions against sample data.  
 
- When testing the expression, it’s important that you understand what to expect to have to match. The Exchange online system may send many IP addresses, separated by commas. The expressions provided above will work for this. However, it’s important to think about this when testing your regex expressions. For example, one might use the following sample input to verify the examples above:  
+ When testing the expression, it's important that you understand what to expect to have to match. The Exchange online system may send many IP addresses, separated by commas. The expressions provided above will work for this. However, it's important to think about this when testing your regex expressions. For example, one might use the following sample input to verify the examples above:  
 
  192.168.1.1, 192.168.1.2, 192.169.1.1. 192.168.12.1, 192.168.1.10, 192.168.1.25, 192.168.1.26, 192.168.1.30, 1192.168.1.20  
 
@@ -300,7 +300,7 @@ The policies described in this article should always be used with another authen
 -   A single IP address - The IP address of the client that is directly connected to Exchange Online  
 
 > [!NOTE]
->  The IP address of a client on the corporate network will appear as the external interface IP address of the organization’s outbound proxy or gateway.  
+>  The IP address of a client on the corporate network will appear as the external interface IP address of the organization's outbound proxy or gateway.  
 
 -   One or more IP addresses  
 

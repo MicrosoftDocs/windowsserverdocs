@@ -30,7 +30,7 @@ The following illustration shows the graphics virtualization options in Windows 
 ![Graphics virtualization options in Windows Server 2016 with RDS - shows the three technologies available and how they differ on scale and performance](media/rds-graphics-virtualization.png)
 
 ## Discrete Device Assignment
-Discrete Device Assignment (DDA) is a hardware pass-through solution that provides the best performance, given that the VM has full access to the GPU using the native driver. Your VM user can access the full capabilities of their device as well the device’s native driver. This means the features and capabilities of running the device in a VM mirror running the same device on bare metal.
+Discrete Device Assignment (DDA) is a hardware pass-through solution that provides the best performance, given that the VM has full access to the GPU using the native driver. Your VM user can access the full capabilities of their device as well the device's native driver. This means the features and capabilities of running the device in a VM mirror running the same device on bare metal.
 
 For more information about DDA, check out [Plan for deploying Discrete Device Assignment](../../virtualization/hyper-v/plan/plan-for-deploying-devices-using-discrete-device-assignment.md).
 
