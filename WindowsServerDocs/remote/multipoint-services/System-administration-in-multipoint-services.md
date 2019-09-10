@@ -15,7 +15,7 @@ manager: scottman
 ms.author: evas
 ---
 # System administration in MultiPoint Services
-Before you start using your MultiPoint Services system, it’s a good idea to do some basic system administration.  
+Before you start using your MultiPoint Services system, it's a good idea to do some basic system administration.  
   
 Use the following information:
 

@@ -54,7 +54,7 @@ Use the following list to thoroughly test that LSA protection is enabled before 
 #### Limitations introduced with enabled LSA protection
 
 If LSA protection is enabled, you cannot debug a custom LSA plugin.
-You can’t attach a debugger to LSASS when it’s a protected process.
+You can't attach a debugger to LSASS when it's a protected process.
 In general, there is no supported way to debug a running protected process.
 
 ## How to identify LSA plug-ins and drivers that fail to run as a protected process

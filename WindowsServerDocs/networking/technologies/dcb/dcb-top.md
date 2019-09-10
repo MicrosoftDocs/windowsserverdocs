@@ -41,7 +41,7 @@ standards
 
 The DCBX protocol allows you to configure DCB on a switch, which can then automatically configure an end device, such as a computer running Windows Server 2016.
 
-If you prefer to manage DCB from a switch, you don’t need to install DCB as a feature in Windows Server 2016, however this approach includes some limitations.
+If you prefer to manage DCB from a switch, you don't need to install DCB as a feature in Windows Server 2016, however this approach includes some limitations.
 
 Because DCBX can only inform the host network adapter of ETS class sizes and PFC enablement, however, Windows Server hosts usually require that DCB is installed so that traffic is mapped to ETS classes.
 

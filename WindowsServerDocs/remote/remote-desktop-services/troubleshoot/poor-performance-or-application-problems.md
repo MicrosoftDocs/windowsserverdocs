@@ -21,7 +21,7 @@ This article addresses several common issues that users can experience when they
 
 ### Intermittent problems with new Microsoft Azure virtual machines
 
-This issue affects virtual machines that have been recently provisioned. After the user connects to the virtual machine, the remote desktop session does not load all the user’s settings correctly.
+This issue affects virtual machines that have been recently provisioned. After the user connects to the virtual machine, the remote desktop session does not load all the user's settings correctly.
 
 To work around this issue, disconnect from the virtual machine, wait for at least 20 minutes, and then connect again.
 

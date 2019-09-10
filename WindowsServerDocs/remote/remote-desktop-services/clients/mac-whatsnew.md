@@ -168,7 +168,7 @@ It's been a few weeks since we last updated, but we've been hard at work during 
 - Incorporated updates for GDPR compliance.
 - MicrosoftAccount\username@domain is now accepted as a valid username.
 - Clipboard sharing has been rewritten to be faster and support more formats.
-- Copy and pasting text, images or files between sessions now bypasses the local machine’s clipboard.
+- Copy and pasting text, images or files between sessions now bypasses the local machine's clipboard.
 - You can now connect via an RD Gateway server with an untrusted certificate (if you accept the warning prompts).
 - Metal hardware acceleration is now used (where supported) to speed up rendering and optimize battery usage.
 - When using Metal hardware acceleration we try to work some magic to make the session graphics appear sharper.

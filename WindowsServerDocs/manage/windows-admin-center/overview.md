@@ -13,7 +13,7 @@ ms.prod: windows-server-threshold
 
 > Applies to: Windows Admin Center, Windows Admin Center Preview
 
-**Windows Admin Center** (formerly codenamed **Project Honolulu**) is an evolution of Windows Server in-box management tools; it’s a single pane of glass that consolidates all aspects of local and remote server management. As a locally deployed, browser-based management experience, an Internet connection and Azure aren’t required. Windows Admin Center gives you full control of all aspects of your deployment, including private networks that aren’t Internet-connected.
+**Windows Admin Center** (formerly codenamed **Project Honolulu**) is an evolution of Windows Server in-box management tools; it's a single pane of glass that consolidates all aspects of local and remote server management. As a locally deployed, browser-based management experience, an Internet connection and Azure aren't required. Windows Admin Center gives you full control of all aspects of your deployment, including private networks that aren't Internet-connected.
 
 ## Introduction
 

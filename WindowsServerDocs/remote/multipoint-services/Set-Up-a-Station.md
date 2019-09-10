@@ -51,7 +51,7 @@ The procedures in this section describe how to connect MultiPoint Services stati
   
 6.  Turn on the computer.  
   
-7.  MultiPoint Services starts. Follow the instructions that appear on the new station’s video monitor to associate the devices to the new station.  
+7.  MultiPoint Services starts. Follow the instructions that appear on the new station's video monitor to associate the devices to the new station.  
   
 ### To set up a station with a multifunction hub  
   
@@ -73,7 +73,7 @@ The procedures in this section describe how to connect MultiPoint Services stati
   
 6.  Turn on the computer.  
   
-7.  MultiPoint Services starts. If prompted, follow the instructions that appear on the new station’s video monitor to *associate* the devices to the new station.  
+7.  MultiPoint Services starts. If prompted, follow the instructions that appear on the new station's video monitor to *associate* the devices to the new station.  
   
 ## See Also  
 [End a User Session](End-a-User-Session.md)  

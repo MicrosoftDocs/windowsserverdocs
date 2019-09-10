@@ -71,7 +71,7 @@ Update-SmbMultichannelConnection
 
 For configuring network constraints on a stretch cluster:  
 
-    Set-SRNetworkConstraint -SourceComputerName sr-srv01 -SourceRGName group1 -SourceNWInterface "Cluster Network 1","Cluster Network 2" -DestinationComputerName sr-srv03 -DestinationRGName group2 -DestinationNWInterface "Cluster Network 1","Cluster Network 2"  
+    Set-SRNetworkConstraint -SourceComputerName sr-cluster01 -SourceRGName group1 -SourceNWInterface "Cluster Network 1","Cluster Network 2" -DestinationComputerName sr-cluster02 -DestinationRGName group2 -DestinationNWInterface "Cluster Network 1","Cluster Network 2"
 
 ## <a name="FAQ4"></a> Can I configure one-to-many replication or transitive (A to B to C) replication?  
 No, Storage Replica supports only one to one replication of a server, cluster, or stretch cluster node. This may change in a later release. You can of course configure replication between various servers of a specific volume pair, in either direction. For instance, Server 1 can replicate its D volume to server 2, and its E volume from Server 3.
@@ -184,8 +184,8 @@ Note: The Test-SRTopology cmdlet requires ICMPv4/ICMPv6, but not for replication
 ## <a name="FAQ15.5"></a>What are the log volume best practices?
 The optimal size of the log varies widely per environment and workload, and is determined by how much write IO your workload performs. 
 
-1.	A larger or smaller log doesn’t make you any faster or slower
-2.	A larger or smaller log doesn’t have any bearing on a 10GB data volume versus a 10TB data volume, for instance
+1.	A larger or smaller log doesn't make you any faster or slower
+2.	A larger or smaller log doesn't have any bearing on a 10GB data volume versus a 10TB data volume, for instance
 
 A larger log simply collects and retains more write IOs before they are wrapped out. This allows an interruption in service between the source and destination computer – such as a network outage or the destination being offline - to go longer. If the log can hold 10 hours of writes, and the network goes down for 2 hours, when the network returns the source can simply play the delta of unsynced changes back to the destination very fast and you are protected again very quickly. If the log holds 10 hours and the outage is 2 days, the source now has to play back from a different log called the bitmap – and will likely be slower to get back into sync. Once in sync it returns to using the log.
 
@@ -214,7 +214,7 @@ Storage Replica also has a server-to-self mode, where you point replication to t
 
 Yes, Data Deduplcation is supported with Storage Replica. Enable Data Deduplication on a volume on the source server, and during replication the destination server receives a deduplicated copy of the volume.
 
-While you should *install* Data Deduplication on both the source and destination servers (see [Installing and enabling Data Deduplication](../data-deduplication/install-enable.md)), it’s important not to *enable* Data Deduplication on the destination server. Storage Replica allows writes only on the source server. Because Data Deduplication makes writes to the volume, it should run only on the source server. 
+While you should *install* Data Deduplication on both the source and destination servers (see [Installing and enabling Data Deduplication](../data-deduplication/install-enable.md)), it's important not to *enable* Data Deduplication on the destination server. Storage Replica allows writes only on the source server. Because Data Deduplication makes writes to the volume, it should run only on the source server. 
 
 ## <a name="FAQ19"></a> Can I replicate between Windows Server 2019 and Windows Server 2016?
 
