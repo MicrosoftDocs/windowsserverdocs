@@ -92,7 +92,7 @@ The source server must run one of the following operating systems:
 
 Note: Windows Small Business Server and Windows Server Essentials are domain controllers. Storage Migration Service can't yet cut over from domain controllers, but can inventory and transfer files from them.   
 
-If the orchestrator is running Windows Server, version 1903 or later or have installed [KB4512534](https://support.microsoft.com/en-us/help/4512534/windows-10-update-kb4512534), you can migrate the following additional source types:
+If the orchestrator is running Windows Server, version 1903 or later or have installed [KB4512534](https://support.microsoft.com/help/4512534/windows-10-update-kb4512534), you can migrate the following additional source types:
 
 - Failover clusters
 - Linux servers that use Samba. We've tested the following:
