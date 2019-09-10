@@ -15,7 +15,7 @@ ms.author: billmath
 # Configure Performance Monitoring
   
 ## <a name="bkmk_ConfigurePerfMon"></a>  
-AD FS includes its own dedicated performance counters to help you monitor the performance of both federation servers and federation server proxy computers. To use Performance Monitor to monitor the performance of your AD FS servers, it’s useful to create a new data collector set and add the AD FS counters to that view. The following procedure describes how to configure performance monitoring for AD FS.  
+AD FS includes its own dedicated performance counters to help you monitor the performance of both federation servers and federation server proxy computers. To use Performance Monitor to monitor the performance of your AD FS servers, it's useful to create a new data collector set and add the AD FS counters to that view. The following procedure describes how to configure performance monitoring for AD FS.  
   
 #### To configure performance monitoring for AD FS using Performance Monitor  
   

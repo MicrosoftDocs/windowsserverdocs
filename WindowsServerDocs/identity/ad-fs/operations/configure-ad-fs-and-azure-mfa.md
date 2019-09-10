@@ -277,7 +277,7 @@ Here is a simple example, you may want to extend:
 6. Import the onload.js file into your custom theme by typing the following Windows PowerShell command:
     
     ``` PowerShell
-    Set-AdfsWebTheme -TargetName ProofUp -AdditionalFileResource @{Uri=’/adfs/portal/script/onload.js’;path="c:\theme\script\onload.js"}
+    Set-AdfsWebTheme -TargetName ProofUp -AdditionalFileResource @{Uri='/adfs/portal/script/onload.js';path="c:\theme\script\onload.js"}
     ```
 7. Finally, apply the custom AD FS Web Theme by typing the following Windows PowerShell command:
     

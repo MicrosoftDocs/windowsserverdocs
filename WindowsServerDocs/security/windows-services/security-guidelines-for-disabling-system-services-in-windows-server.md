@@ -23,12 +23,12 @@ However, some enterprise customers may prefer a more security-focused balance fo
 The guidance is only for Windows Server 2016 with Desktop Experience (unless used as a desktop replacement for end users). Beginning with Windows Server 2019, these guidelines are configured by default. Each service on the system is categorized as follows:
 
 -   **Should Disable:** A security-focused enterprise will most likely prefer to disable this service and forego its functionality (see additional details below).
-- **OK to Disable:** This service provides functionality that is useful to some but not all enterprises, and security-focused enterprises that don’t use it can safely disable it.
+- **OK to Disable:** This service provides functionality that is useful to some but not all enterprises, and security-focused enterprises that don't use it can safely disable it.
 - **Do Not Disable:** Disabling this service will impact essential functionality or prevent specific roles or features from functioning correctly. Therefore it should not be disabled.
 -  **(No guidance):** The impact of disabling these services has not been fully evaluated. Therefore, the default configuration of these services should not be changed.
 
 
-Customers can configure their Windows PCs and servers to disable selected services using the Security Templates in their Group Policies or using PowerShell automation. In some cases, the guidance includes specific Group Policy settings that disable the service’s functionality directly, as an alternative to disabling the service itself.
+Customers can configure their Windows PCs and servers to disable selected services using the Security Templates in their Group Policies or using PowerShell automation. In some cases, the guidance includes specific Group Policy settings that disable the service's functionality directly, as an alternative to disabling the service itself.
 
 Microsoft recommends that customers disable the following services and their respective scheduled tasks on Windows Server 2016 with Desktop Experience:
 

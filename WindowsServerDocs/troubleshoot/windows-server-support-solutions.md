@@ -100,7 +100,7 @@ These are the top Microsoft Support solutions for the most common issues experie
 <hr> 
                         <a href="https://technet.microsoft.com/library/dd772723(v=ws.10).aspx">Active Directory and Active Directory Domain Services Port Requirements</a>
 <hr>
-                        <p> <a href="http://blogs.msmvps.com/acefekay/2011/11/01/active-directory-firewall-ports-let-s-try-to-make-this-simple/">Active Directory Firewall Ports – Let’s Try To Make This Simple</a></p>
+                        <p> <a href="http://blogs.msmvps.com/acefekay/2011/11/01/active-directory-firewall-ports-let-s-try-to-make-this-simple/">Active Directory Firewall Ports – Let's Try To Make This Simple</a></p>
 <hr>
                         <p><a href="https://technet.microsoft.com/library/ff728623(v=exchg.150).aspx">Exchange Server support for Windows Server 2016</a></p>
 <hr>

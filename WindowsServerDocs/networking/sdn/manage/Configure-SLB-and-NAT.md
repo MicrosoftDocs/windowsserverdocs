@@ -132,7 +132,7 @@ In this example, you create a load balancer object with a public VIP and two VMs
 
 ## Example: Use SLB for outbound NAT
 
-In this example, you configure SLB with a back-end pool for providing outbound NAT capability for a VM on a virtual network’s private address space to reach outbound to the internet. 
+In this example, you configure SLB with a back-end pool for providing outbound NAT capability for a VM on a virtual network's private address space to reach outbound to the internet. 
 
 1. Create the load balancer properties, front-end IP, and back-end pool.
 

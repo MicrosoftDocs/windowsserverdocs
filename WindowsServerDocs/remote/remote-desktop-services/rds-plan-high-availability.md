@@ -18,7 +18,7 @@ manager: dongill
 
 >Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016
 
-Failures and throttling are unavoidable in large-scale systems. It’s simple to set up Remote Desktop infrastructure roles to support high availability and allow end users to connect seamlessly, every time.
+Failures and throttling are unavoidable in large-scale systems. It's simple to set up Remote Desktop infrastructure roles to support high availability and allow end users to connect seamlessly, every time.
 
 In Remote Desktop Services, the following items represent the Remote Desktop infrastructure roles, with their respective guidance to establish high availability:
 - [Remote Desktop Connection Broker](Deploy-a-Remote-Desktop-Connection-Broker-cluster.md)

@@ -144,12 +144,12 @@ In the copy-on-write method, when a change to the original volume occurs (but be
 </tr>
 <tr class="even">
 <td><p>T1</p></td>
-<td><p>Data changed in cache: 3 to 3’</p></td>
+<td><p>Data changed in cache: 3 to 3'</p></td>
 <td><p>Shadow copy created (differences only): 3</p></td>
 </tr>
 <tr class="odd">
 <td><p>T2</p></td>
-<td><p>Original data overwritten: 1 2 3’ 4 5</p></td>
+<td><p>Original data overwritten: 1 2 3' 4 5</p></td>
 <td><p>Differences and index stored on shadow copy: 3</p></td>
 </tr>
 </tbody>
@@ -185,13 +185,13 @@ In the redirect-on-write method, whenever the original volume receives a change 
 </tr>
 <tr class="even">
 <td><p>T1</p></td>
-<td><p>Data changed in cache: 3 to 3’</p></td>
-<td><p>Shadow copy created (differences only): 3’</p></td>
+<td><p>Data changed in cache: 3 to 3'</p></td>
+<td><p>Shadow copy created (differences only): 3'</p></td>
 </tr>
 <tr class="odd">
 <td><p>T2</p></td>
 <td><p>Original data unchanged: 1 2 3 4 5</p></td>
-<td><p>Differences and index stored on shadow copy: 3’</p></td>
+<td><p>Differences and index stored on shadow copy: 3'</p></td>
 </tr>
 </tbody>
 </table>

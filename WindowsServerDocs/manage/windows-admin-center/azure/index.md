@@ -16,7 +16,7 @@ ms.date: 05/31/2019
 You can extend on-premises deployments of Windows Server to the cloud by using Azure hybrid services. These cloud services provide an array of useful functions, including the following:
 
 - Protect virtual machines and use cloud-based backup and disaster recovery (HA/DR) with Azure Site Recovery. 
-- Track what’s happening across your applications, network and infrastructure with the help of advanced analytics and machine learning in Azure Monitor. 
+- Track what's happening across your applications, network and infrastructure with the help of advanced analytics and machine learning in Azure Monitor. 
 - Simplify network connectivity to Azure with Azure Network Adapter.
 - Keep virtual machines up to date with Azure Update Management.
 
@@ -53,11 +53,11 @@ This is the complete list of Azure services that provide functionality to stand-
 Sync files on this server with Azure file shares. Keep all your files local or use cloud tiering and cache only the most frequently used files on the server, tiering cold data to the cloud. Data in the cloud can be backed up, eliminating the need to worry about on-premises server backup. Additionally, multi-site-sync can keep a set of files in sync across multiple servers.
 
 - **Add an layer of security to Windows Admin Center by adding [Azure Active Directory (Azure AD)](https://azure.microsoft.com/services/active-directory/) authentication**  
-You can add an additional layer of security to Windows Admin Center by requiring users to authenticate using Azure Active Directory (Azure AD) identities to access the gateway. Azure AD authentication also lets you take advantage of Azure AD’s security features like conditional access and multi-factor authentication.  
+You can add an additional layer of security to Windows Admin Center by requiring users to authenticate using Azure Active Directory (Azure AD) identities to access the gateway. Azure AD authentication also lets you take advantage of Azure AD's security features like conditional access and multi-factor authentication.  
 For more info, see [Configure Azure AD authentication for Windows Admin Center.](../configure/user-access-control.md#azure-active-directory)  
 
 - **Protect your Hyper-V virtual machines with [Azure Site Recovery](https://docs.microsoft.com/azure/site-recovery/site-recovery-overview)**  
-You can replicate workloads running on VMs so that your business-critical infrastructure is protected in case of a disaster. Windows Admin Center streamlines setup and the process of replicating your virtual machines on your Hyper-V servers or clusters, making it easier to bolster the resiliency of your environment with Azure Site Recovery’s disaster recovery service.  
+You can replicate workloads running on VMs so that your business-critical infrastructure is protected in case of a disaster. Windows Admin Center streamlines setup and the process of replicating your virtual machines on your Hyper-V servers or clusters, making it easier to bolster the resiliency of your environment with Azure Site Recovery's disaster recovery service.  
 For more info, see [Protect your VMs with Azure Site Recovery and Windows Admin Center](azure-site-recovery.md).
 
 - **Back up your Windows servers with [Azure Backup](https://docs.microsoft.com/azure/backup/backup-overview)**  

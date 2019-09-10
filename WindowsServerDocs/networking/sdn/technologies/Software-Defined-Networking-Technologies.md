@@ -73,7 +73,7 @@ In addition,  you can use Windows PowerShell commands to enable Data Center Brid
 
 ## [Border Gateway Protocol (BGP)](../../../remote/remote-access/bgp/Border-Gateway-Protocol-BGP.md)
   
-Border Gateway Protocol (BGP) is a dynamic routing protocol that automatically learns routes between sites that use site-to-site VPN connections. Therefore, BGP reduces manual configuration of routers.   When you configure RAS Gateway, BGP lets you manage the routing of network traffic between your tenants’ VM networks and remote sites.  
+Border Gateway Protocol (BGP) is a dynamic routing protocol that automatically learns routes between sites that use site-to-site VPN connections. Therefore, BGP reduces manual configuration of routers.   When you configure RAS Gateway, BGP lets you manage the routing of network traffic between your tenants' VM networks and remote sites.  
   
 ## [Software Load Balancing (SLB) for SDN](network-function-virtualization/software-load-balancing-for-sdn.md)
 Cloud Service Providers (CSPs) and Enterprises that deploy SDN can use Software Load Balancing (SLB) to evenly distribute tenant and tenant customer network traffic among virtual network resources. The Windows Server SLB enables multiple servers to host the same workload, providing high availability and scalability. 

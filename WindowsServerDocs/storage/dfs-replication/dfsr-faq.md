@@ -200,7 +200,7 @@ To upgrade or replace a DFS Replication member, see this blog post on the Ask th
 
 ### Is DFS Replication suitable for replicating roaming profiles?
 
-Yes. Certain scenarios are supported when replicating roaming user profiles. For information about the supported scenarios, see [Microsoft’s Support Statement Around Replicated User Profile Data](http://go.microsoft.com/fwlink/?linkid=201282) (http://go.microsoft.com/fwlink/?LinkId=201282).
+Yes. Certain scenarios are supported when replicating roaming user profiles. For information about the supported scenarios, see [Microsoft's Support Statement Around Replicated User Profile Data](http://go.microsoft.com/fwlink/?linkid=201282) (http://go.microsoft.com/fwlink/?LinkId=201282).
 
 ### Is there a file character limit or limit to the folder depth?
 
