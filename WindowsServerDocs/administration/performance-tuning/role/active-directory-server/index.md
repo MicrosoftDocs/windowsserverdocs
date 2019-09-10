@@ -33,7 +33,7 @@ Massive improvements in both Active Directory and client performance optimizatio
 - Better performance
 - Better logging and tools to troubleshoot
 
-However, we realize that this takes time and many environments are running in a scenario where 100% adoption of the most current platform is impossible. Some improvements have been added to older versions of the platform and we’ll continue to add more.
+However, we realize that this takes time and many environments are running in a scenario where 100% adoption of the most current platform is impossible. Some improvements have been added to older versions of the platform and we'll continue to add more.
 
 We encourage you to stay up to date on the latest news, guidance and best practices for managing ADDS by following our team blog, ["Ask the Directory Services Team"](https://techcommunity.microsoft.com/t5/Ask-the-Directory-Services-Team/bg-p/AskDS).
 
