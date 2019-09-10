@@ -55,7 +55,7 @@ For more information about stations, see [MultiPoint Stations](multipoint-servic
         > Users should not attach mice and keyboards directly to the USB ports of the computer. Doing so is likely to cause the incorrect association of multiple keyboards and mice to the same station, or to no station at all.  
   
         > [!NOTE]  
-        > The host audio device on the system’s motherboard is only available while MultiPoint Services is in console mode. To ensure uninterrupted audio for a station that uses an external USB hub, you must use a USB audio device plugged into the hub.  
+        > The host audio device on the system's motherboard is only available while MultiPoint Services is in console mode. To ensure uninterrupted audio for a station that uses an external USB hub, you must use a USB audio device plugged into the hub.  
   
 ## To connect the computer to the LAN  
   

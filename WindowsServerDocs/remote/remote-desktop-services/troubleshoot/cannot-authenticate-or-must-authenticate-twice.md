@@ -30,11 +30,11 @@ This issue occurs when Network Level Authentication (NLA) is required for RDP co
 
 To solve this issue, do one of the following things:
 
-  - [Modify the user’s group membership or user rights assignment](#modify-the-users-group-membership-or-user-rights-assignment).
+  - [Modify the user's group membership or user rights assignment](#modify-the-users-group-membership-or-user-rights-assignment).
   - Turn off NLA (not recommended).
   - Use remote desktop clients other than Windows 10. For example, Windows 7 clients do not have this issue.
 
-### Modify the user’s group membership or user rights assignment
+### Modify the user's group membership or user rights assignment
 
 If this issue affects a single user, the most straightforward solution to this issue is to add the user to the **Remote Desktop Users** group.
 
@@ -48,9 +48,9 @@ If the user is already a member of this group (or if multiple group members have
 
 ## Access denied, A remote call to the SAM database has been denied
 
-This behavior is most likely to occur if your domain controllers are running Windows Server 2016 or later, and users attempt to connect by using a customized connection app. In particular, applications that access the user’s profile information in Active Directory will be denied access.
+This behavior is most likely to occur if your domain controllers are running Windows Server 2016 or later, and users attempt to connect by using a customized connection app. In particular, applications that access the user's profile information in Active Directory will be denied access.
 
-This behavior results from a change to Windows. In Windows Server 2012 R2 and earlier versions, when a user signs in to a remote desktop, the Remote Connection Manager (RCM) contacts the domain controller (DC) to query the configurations that are specific to Remote Desktop on the user object in Active Directory Domain Services (AD DS). This information is displayed in the Remote Desktop Services Profile tab of a user’s object properties in the Active Directory Users and Computers MMC snap-in.
+This behavior results from a change to Windows. In Windows Server 2012 R2 and earlier versions, when a user signs in to a remote desktop, the Remote Connection Manager (RCM) contacts the domain controller (DC) to query the configurations that are specific to Remote Desktop on the user object in Active Directory Domain Services (AD DS). This information is displayed in the Remote Desktop Services Profile tab of a user's object properties in the Active Directory Users and Computers MMC snap-in.
 
 Starting in Windows Server 2016, RCM no longer queries the user's object in AD DS. If you need RCM to query AD DS because you're using Remote Desktop Services attributes, you must manually enable the query.
 

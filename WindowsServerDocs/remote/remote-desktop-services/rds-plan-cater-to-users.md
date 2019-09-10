@@ -21,4 +21,4 @@ manager: scottman
 Scale your deployment depending on the expected need of each type of user.
 For example, users may carry out data entry on lightweight apps, manipulate large datasets with productivity apps like Office, or work with heavy-duty engineering or graphics apps.
 
-It is recommended to load test the deployment with both stress tests and simulation of real-life usage. Vary the load size to avoid surprises! Ensure that responsiveness meets user requirements, and that the entire system is resilient. Create load tests with simulation tools, like LoginVSI, that check your deployment’s ability to meet the users’ needs. 
+It is recommended to load test the deployment with both stress tests and simulation of real-life usage. Vary the load size to avoid surprises! Ensure that responsiveness meets user requirements, and that the entire system is resilient. Create load tests with simulation tools, like LoginVSI, that check your deployment's ability to meet the users' needs. 

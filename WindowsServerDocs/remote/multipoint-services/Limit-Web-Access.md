@@ -40,7 +40,7 @@ In addition to monitoring user activities on individual desktops, you, as an adm
   
 2. To add an allowed site, click **Allow only these sites**, type the allowed web address, and then click **Add**.  
   
-   To add a site you do not want users to visit, click **Disallow only these sites**, type the web address you don’t want users to visit, and then click **Add**.  
+   To add a site you do not want users to visit, click **Disallow only these sites**, type the web address you don't want users to visit, and then click **Add**.  
   
    > [!NOTE]
    > For example, entering "Contoso.com" allows or blocks sites that are relative to www.contoso.com (for example, www.newpage.contoso.com). Entering "Contoso" will either allow or limit all Contoso-related sites (including contoso.com, contoso.uk, and so forth).  

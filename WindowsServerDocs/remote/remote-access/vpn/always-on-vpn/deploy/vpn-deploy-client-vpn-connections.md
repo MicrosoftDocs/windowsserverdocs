@@ -104,7 +104,7 @@ Instead of describing how to create the XML markup from scratch, you use Setting
 
 ### Record NPS certificate settings
 
-Before creating the template, take note the hostname or fully qualified domain name (FQDN) of the NPS server from the server’s certificate and the name of the CA that issued the certificate.
+Before creating the template, take note the hostname or fully qualified domain name (FQDN) of the NPS server from the server's certificate and the name of the CA that issued the certificate.
 
 **Procedure:**
 
@@ -120,7 +120,7 @@ Before creating the template, take note the hostname or fully qualified domain n
 
 6. Record the values for **Certificate issued to** and **Issuer**.
 
-    You use these values in the upcoming VPN template configuration. For example, if the server’s FQDN is nps01.corp.contoso.com and the hostname is NPS01, the certificate name is based upon the FQDN or DNS name of the server—for example, nps01.corp.contoso.com.
+    You use these values in the upcoming VPN template configuration. For example, if the server's FQDN is nps01.corp.contoso.com and the hostname is NPS01, the certificate name is based upon the FQDN or DNS name of the server—for example, nps01.corp.contoso.com.
 
 7. Cancel the Edit Protected EAP Properties dialog box.
 
@@ -135,7 +135,7 @@ Before creating the template, take note the hostname or fully qualified domain n
 
 Now that you have the necessary information configure the template VPN profile on a domain-joined client computer. The type of user account you use (that is, standard user or administrator) for this part of the process does not matter.
 
-However, if you haven’t restarted the computer since configuring certificate autoenrollment, do so before configuring the template VPN connection to ensure you have a usable certificate enrolled on it.
+However, if you haven't restarted the computer since configuring certificate autoenrollment, do so before configuring the template VPN connection to ensure you have a usable certificate enrolled on it.
 
 >[!NOTE]
 >There is no way to manually add any advanced properties of VPN, such as NRPT rules, Always On, Trusted network detection, etc. In the next step, you create a test VPN connection to verify the configuration of the VPN server and that you can establish a VPN connection to the server.
@@ -173,9 +173,9 @@ However, if you haven’t restarted the computer since configuring certificate a
     >[!NOTE]
     >The server name you type must match the name in the certificate. You recovered this name earlier in this section. If the name does not match, the connection will fail, stating that “The connection was prevented because of a policy configured on your RAS/VPN server.”
 
-    b.  Under Trusted Root Certification Authorities, select the root CA that issued the NPS server’s certificate (for example, contoso-CA).
+    b.  Under Trusted Root Certification Authorities, select the root CA that issued the NPS server's certificate (for example, contoso-CA).
 
-    c.  In Notifications before connecting, click **Don’t ask user to authorize new servers or trusted CAs**.
+    c.  In Notifications before connecting, click **Don't ask user to authorize new servers or trusted CAs**.
 
     d.  In Select Authentication Method, click **Smart Card or other certificate**, and click **Configure**. The Smart Card or other Certificate Properties dialog opens.
 
@@ -183,9 +183,9 @@ However, if you haven’t restarted the computer since configuring certificate a
 
     f.  In the Connect to these servers box, enter the name of the NPS server you retrieved from the NPS server authentication settings in the previous steps.
 
-    g.  Under Trusted Root Certification Authorities, select the root CA that issued the NPS server’s certificate.
+    g.  Under Trusted Root Certification Authorities, select the root CA that issued the NPS server's certificate.
 
-    h.  Select the **Don’t prompt user to authorize new servers or trusted certification authorities** check box.
+    h.  Select the **Don't prompt user to authorize new servers or trusted certification authorities** check box.
 
     i.  Click **OK** to close the Smart Card or other Certificate Properties dialog box.
 
@@ -454,13 +454,13 @@ Write-Host "$Message"
 
 Most examples use the Set-WmiInstance Windows PowerShell cmdlet to insert ProfileXML into a new instance of the MDM_VPNv2_01 WMI class. 
 
-However, this does not work in System Center Configuration Manager because you cannot run the package in the end users’ context. Therefore, this script uses the Common Information Model to create a WMI session in the user’s context, and then it creates a new instance of the MDM_VPNv2_01 WMI class in that session. This WMI class uses the WMI-to-CSP bridge to configure the VPNv2 CSP. Therefore, by adding the class instance, you configure the CSP. 
+However, this does not work in System Center Configuration Manager because you cannot run the package in the end users' context. Therefore, this script uses the Common Information Model to create a WMI session in the user's context, and then it creates a new instance of the MDM_VPNv2_01 WMI class in that session. This WMI class uses the WMI-to-CSP bridge to configure the VPNv2 CSP. Therefore, by adding the class instance, you configure the CSP. 
 
 >[!IMPORTANT]
 >WMI-to-CSP bridge requires local admin rights, by design. To deploy per user VPN profiles you should be using SCCM or MDM.
 
 >[!NOTE]
->The script VPN_Profile.ps1 uses the current user’s SID to identify the user’s context. Because no SID is available in a Remote Desktop session, the script does not work in a Remote Desktop session. Likewise, it does not work in a Hyper-V enhanced session. If you’re testing a Remote Access Always On VPN in virtual machines, disable enhanced session on your client VMs before running this script.
+>The script VPN_Profile.ps1 uses the current user's SID to identify the user's context. Because no SID is available in a Remote Desktop session, the script does not work in a Remote Desktop session. Likewise, it does not work in a Hyper-V enhanced session. If you're testing a Remote Access Always On VPN in virtual machines, disable enhanced session on your client VMs before running this script.
 
 The following example script includes all of the code examples from previous sections. Ensure that you change example values to values that are appropriate for your environment.
     
@@ -600,7 +600,7 @@ The following example script includes all of the code examples from previous sec
 
 ## Configure the VPN client by using Windows PowerShell
 
-To configure the VPNv2 CSP on a Windows 10 client computer, run the VPN_Profile.ps1 Windows PowerShell script that you created in the [Create the profile XML](#create-the-profile-xml) section. Open Windows PowerShell as an Administrator; otherwise, you’ll receive an error saying, _Access denied_.
+To configure the VPNv2 CSP on a Windows 10 client computer, run the VPN_Profile.ps1 Windows PowerShell script that you created in the [Create the profile XML](#create-the-profile-xml) section. Open Windows PowerShell as an Administrator; otherwise, you'll receive an error saying, _Access denied_.
 
 After running VPN_Profile.ps1 to configure the VPN profile, you can verify at any time that it was successful by running the following command in the Windows PowerShell ISE:
 
@@ -711,11 +711,11 @@ To use System Center Configuration Manager to deploy a Remote Access Always On V
 
 4.  On the Membership Rules page, complete the following steps:
 
-	a.  In **Membership rules**, click **Add Rule**, and click **Direct Rule**. In this example, you’re adding individual users to the user collection. However, you might use a query rule to add users to this collection dynamically for a larger-scale deployment.
+	a.  In **Membership rules**, click **Add Rule**, and click **Direct Rule**. In this example, you're adding individual users to the user collection. However, you might use a query rule to add users to this collection dynamically for a larger-scale deployment.
 
 	b.  On the **Welcome** page, click **Next**.
 
-	c.  On the Search for Resources page, in **Value**, type the name of the user you want to add. The resource name includes the user’s domain. To include results based on a partial match, insert the **%** character at either end of your search criterion. For example, to find all users containing the string “lori,” type **%lori%**. Click **Next**.
+	c.  On the Search for Resources page, in **Value**, type the name of the user you want to add. The resource name includes the user's domain. To include results based on a partial match, insert the **%** character at either end of your search criterion. For example, to find all users containing the string “lori,” type **%lori%**. Click **Next**.
 
 	d.  On the Select Resources page, select the users you want to add to the group, and click **Next**.
 
@@ -835,7 +835,7 @@ With the package and program created, you need to deploy it to the **VPN Users**
 With the ProfileXML configuration script deployed, sign in to a Windows 10 client computer with the user account you selected when you built the user collection. Verify the configuration of the VPN client.
 
 >[!NOTE]
->The script VPN_Profile.ps1 does not work in a Remote Desktop session. Likewise, it does not work in a Hyper-V enhanced session. If you’re testing a Remote Access Always On VPN in virtual machines, disable enhanced session on your client VMs before continuing.
+>The script VPN_Profile.ps1 does not work in a Remote Desktop session. Likewise, it does not work in a Hyper-V enhanced session. If you're testing a Remote Access Always On VPN in virtual machines, disable enhanced session on your client VMs before continuing.
 
 ### Verify the configuration of the VPN client
 

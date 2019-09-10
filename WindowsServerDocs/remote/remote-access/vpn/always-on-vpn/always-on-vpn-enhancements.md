@@ -18,7 +18,7 @@ ms.localizationpriority: medium
 - [**Previous:** Learn about the Always On VPN features](../vpn-map-da.md)
 - [**Next:** Learn about the Always On VPN technology](always-on-vpn-technology-overview.md)
 
-Always On VPN has many benefits over the Windows VPN solutions of the past. The following key improvements align Always On VPN with Microsoft’s cloud-first, mobile-first vision:
+Always On VPN has many benefits over the Windows VPN solutions of the past. The following key improvements align Always On VPN with Microsoft's cloud-first, mobile-first vision:
 
 - **Platform Integration:** Always On VPN has improved integration with the Windows operating system and third-party solutions to provide a robust platform for countless advanced connection scenarios.
 

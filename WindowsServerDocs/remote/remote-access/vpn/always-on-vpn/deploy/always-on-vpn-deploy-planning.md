@@ -39,7 +39,7 @@ You must do the following on the computer used as a VPN server:
 IKEv2 is a VPN tunneling protocol described in [Internet Engineering Task Force Request for Comments 7296](https://datatracker.ietf.org/doc/rfc7296/). The primary advantage of IKEv2 is that it tolerates interruptions in the underlying network connection. For example, if a temporary loss in connection or if a user moves a client computer from one network to another, when reestablishing the network connection IKEv2 restores the VPN connection automatically — without user intervention.
 
 >[!TIP]
->You can configure the Remote Access VPN server to support IKEv2 connections while also disabling unused protocols, which reduces the server’s security footprint. 
+>You can configure the Remote Access VPN server to support IKEv2 connections while also disabling unused protocols, which reduces the server's security footprint. 
 
 ## Plan IP Addresses for Remote Clients
 
