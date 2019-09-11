@@ -116,7 +116,7 @@ The destination server must run one of the following operating systems:
 The following new features are available when running the Storage Migration Server orchestrator on Windows Server, version 1903 or an earlier version of Windows Server with [KB4512534](https://support.microsoft.com/help/4512534/windows-10-update-kb4512534) installed:
 
 - Migrate local users and groups to the new server
-- Migrate storage from failover clusters, migrate to failover clusters, and migrate between standalone and failover clusters
+- Migrate storage from failover clusters, migrate to failover clusters, and migrate between standalone servers and failover clusters
 - Migrate storage from a Linux server that uses Samba
 - More easily sync migrated shares into Azure by using Azure File Sync
 - Migrate to new networks such as Azure
