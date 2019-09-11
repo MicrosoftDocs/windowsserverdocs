@@ -26,7 +26,7 @@ For more information about volume activation for older versions of Windows, seeÂ
 
 ## Summary of error codes
 
-|Error code |Error message |Activation type |
+|Error code |Error message |Activation&nbsp;type|
 |-----------|--------------|----------------|
 |[0x8004FE21](#0x8004fe21-this-computer-is-not-running-genuine-windows) |This computer is not running genuine Windows.  |MAK<br />KMS client |
 |[0x80070005](#0x80070005-access-denied) |Access denied. The requested action requires elevated privileges. |MAK<br />KMS client<br />KMS host |
