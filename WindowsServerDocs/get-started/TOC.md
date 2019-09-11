@@ -25,7 +25,7 @@
 ### [KMS Client Setup Keys](KMSclientkeys.md)
 ## Troubleshooting Windows volume activation
 ### [Troubleshooting Windows volume activation](activation-troubleshooting-guide.md)
-### [Guidelines for troubleshooting the Key Management Service (KMS)](activation-troubleshoot-kms-general.md)
+### [Guidelines for troubleshooting KMS](activation-troubleshoot-kms-general.md)
 ### [Slmgr.vbs options](activation-slmgr-vbs-options.md)
 ### Solutions to common activation issues
 #### [Resolving common activation error codes](activation-error-codes.md)
