@@ -113,7 +113,7 @@ The destination server must run one of the following operating systems:
 
 ## What's new in Storage Migration Service
 
-Windows Server, version 1903 and [KB4512534](https://support.microsoft.com/en-us/help/4512534/windows-10-update-kb4512534) add the following new features, when run on the orchestrator server:
+The following new features are available when running the Storage Migration Server orchestrator on Windows Server, version 1903 or an earlier version of Windows Server with [KB4512534](https://support.microsoft.com/help/4512534/windows-10-update-kb4512534) installed:
 
 - Migrate local users and groups to the new server
 - Migrate storage from failover clusters, migrate to failover clusters, and migrate between standalone and failover clusters
