@@ -99,6 +99,14 @@ For more information about hardware validation tests, see [Validate Hardware for
 
 ## Create the failover cluster
 
+  >[!NOTE]
+  > Windows Server 2019 Build 17733 and up introduces the ["Distributed Network Name"](https://blogs.windows.com/windowsexperience/2018/08/14/announcing-windows-server-2019-insider-preview-build-17733/#W0YAxO8BfwBRbkzG.97) feature, which is installed by default when using the Failover Cluster Manager snap-in. The new associated cluster cmdlet **ManagementPointNetworkType** accepts the following values: 
+1.Singleton: Use the traditional method of DHCP or static IP address.
+1.Distributed: Use a Distributed Network Name using node IP addresses.( The default setting when using the cluster manager GUI)
+1.Automatic: Use detection. If running in Azure, use Distributed; if running on-premises, use Singleton (traditional Method).
+Sample command:  `New-Cluster –Name MyCluster –Node Server1, Server2 –StaticAddress 192.168.1.12 -NoStorage -ManagementPointNetworkType Singleton`
+
+
 To complete this step, make sure that the user account that you log on as meets the requirements that are outlined in the [Verify the prerequisites](#verify-the-prerequisites) section of this topic.
 
 1. Start Server Manager.
