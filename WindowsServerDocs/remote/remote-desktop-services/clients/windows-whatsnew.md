@@ -24,7 +24,7 @@ We regularly update the [Windows Store client](windows.md), adding new features 
 
 - You can now set a display name for user accounts so you can save the same username with different passwords.
 - It is now possible to select an existing user account when adding Remote Resources.
-- Fixed an issue where the client wasn’t terminating correctly.
+- Fixed an issue where the client wasn't terminating correctly.
 - The client now properly handles being suspended when secondary windows are open.
 - Additional bug fixes.
 

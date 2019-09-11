@@ -32,7 +32,7 @@ We enhanced platform capabilities to support Azure container services and non-Mi
 
 ## DirectX hardware acceleration in containers
 
-We’re enabling support for hardware acceleration of DirectX APIs in Windows containers tp support scenarios such as Machine Learning (ML) inferencing using local graphical processing unit (GPU) hardware. For more info, see [Bringing GPU acceleration to Windows containers](https://techcommunity.microsoft.com/t5/Containers/Bringing-GPU-acceleration-to-Windows-containers/ba-p/393939).
+We're enabling support for hardware acceleration of DirectX APIs in Windows containers tp support scenarios such as Machine Learning (ML) inferencing using local graphical processing unit (GPU) hardware. For more info, see [Bringing GPU acceleration to Windows containers](https://techcommunity.microsoft.com/t5/Containers/Bringing-GPU-acceleration-to-Windows-containers/ba-p/393939).
 
 ## Updated container identity and group managed service account documentation
 
@@ -91,7 +91,7 @@ This functionality requires the server to be using the Server Core installation 
 
 Windows Server includes Microsoft Defender Advanced Thread Protection (for more info, see [Windows Defender Antivirus on Windows Server](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-antivirus/windows-defender-antivirus-on-windows-server-2016)). This release includes the following improvements:
 
-- [Attack surface area reduction](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-atp/overview-attack-surface-reduction) – IT admins can configure devices with advanced web protection that enables them to define allow and deny lists for specific URL’s and IP addresses.
+- [Attack surface area reduction](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-atp/overview-attack-surface-reduction) – IT admins can configure devices with advanced web protection that enables them to define allow and deny lists for specific URL's and IP addresses.
 - [Next generation protection](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-antivirus/windows-defender-antivirus-in-windows-10) – Controls have been extended to protection from ransomware, credential misuse, and attacks that are transmitted through removable storage.
     - Integrity enforcement capabilities – Enable remote runtime attestation.
     - Tamper-proofing capabilities – Uses virtualization-based security to isolate critical ATP security capabilities away from the OS and attackers.

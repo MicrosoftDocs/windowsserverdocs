@@ -138,7 +138,7 @@ AD FS in Server 2019 supports Proof Key for Code Exchange (PKCE) for OAuth Autho
 ## Operations
 
 ### How do I replace the SSL certificate for AD FS?
-The AD FS SSL certificate is not the same as the AD FS Service communications certificate found in the AD FS Management snap-in.  To change the AD FS SSL certificate, you’ll need to use PowerShell. Follow the guidance in the article below:
+The AD FS SSL certificate is not the same as the AD FS Service communications certificate found in the AD FS Management snap-in.  To change the AD FS SSL certificate, you'll need to use PowerShell. Follow the guidance in the article below:
 
 [Managing SSL Certificates in AD FS and WAP 2016](../operations/Manage-SSL-Certificates-AD-FS-WAP-2016.md)
 
@@ -174,7 +174,7 @@ If you don't have Access control policies based on device on ADFS or Windows Hel
 
 ### How long are AD FS tokens valid?
 
-Often this question means ‘how long do users get single sign on (SSO) without having to enter new credentials, and how can I as an admin control that?’  This behavior, and the configuration settings that control it, are described in the article [AD FS Single Sign-On Settings](https://technet.microsoft.com/windows-server-docs/identity/ad-fs/operations/ad-fs-2016-single-sign-on-settings).
+Often this question means ‘how long do users get single sign on (SSO) without having to enter new credentials, and how can I as an admin control that?'  This behavior, and the configuration settings that control it, are described in the article [AD FS Single Sign-On Settings](https://technet.microsoft.com/windows-server-docs/identity/ad-fs/operations/ad-fs-2016-single-sign-on-settings).
 
 The default lifetimes of the various cookies and tokens are listed below (as well as the parameters that govern the lifetimes):
 
@@ -221,7 +221,7 @@ It is not recommended to do SSL termination before WAP. In case SSL termination 
 The AD FS userinfo endpoint always returns the subject claim as specified in the OpenID standards. AD FS does not provide additional claims requested via the UserInfo endpoint. If you need additional claims in ID token, refer to [Custom ID Tokens in AD FS](../development/custom-id-tokens-in-ad-fs.md).
 
 ### Why do I see a lot of 1021 errors on my AD FS servers?
-This event is logged usually for an invalid resource access on AD FS for resource 00000003-0000-0000-c000-000000000000. This error is caused by an erroneous behavior of the client where it tries to get an access token for the Azure AD Graph service. Since the resource is not present on AD FS, this results in event ID 1021 on the AD FS servers. It’s safe to ignore any warnings or errors for resource 00000003-0000-0000-c000-000000000000 on AD FS.
+This event is logged usually for an invalid resource access on AD FS for resource 00000003-0000-0000-c000-000000000000. This error is caused by an erroneous behavior of the client where it tries to get an access token for the Azure AD Graph service. Since the resource is not present on AD FS, this results in event ID 1021 on the AD FS servers. It's safe to ignore any warnings or errors for resource 00000003-0000-0000-c000-000000000000 on AD FS.
 
 ### Why am I seeing a warning for failure to add the AD FS service account to the Enterprise Key Admins group?
 This group is only created when a Windows 2016 Domain Controller with the FSMO PDC role exists in the Domain. To resolve the error, you can create the Group manually and follow the below to give the required permission after adding the service account as member of the group.
@@ -238,15 +238,15 @@ This group is only created when a Windows 2016 Domain Controller with the FSMO P
 
 Federated users may experience authentication to Azure AD for apps that use the Android ADAL library failing. The app will get an **AuthenticationException** when it tries to show the login page. In chrome the AD FS login page might be called out as unsafe.
 
-Android - across all versions and all devices - does not support downloading additional certificates from the **authorityInformationAccess** field of the certificate. This is true of the Chrome browser as well. Any Server Authentication certificate that’s missing intermediate certificates will result in this error if the entire certificate chain is not passed from AD FS.
+Android - across all versions and all devices - does not support downloading additional certificates from the **authorityInformationAccess** field of the certificate. This is true of the Chrome browser as well. Any Server Authentication certificate that's missing intermediate certificates will result in this error if the entire certificate chain is not passed from AD FS.
 
 A proper solution to this problem is to configure the AD FS and WAP servers to send the necessary intermediate certificates along with the SSL certificate.
 
-When exporting the SSL certificate, from one machine, to be imported to the computer’s personal store, of the AD FS and WAP server(s), make sure to export the Private key and select **Personal Information Exchange - PKCS #12**.
+When exporting the SSL certificate, from one machine, to be imported to the computer's personal store, of the AD FS and WAP server(s), make sure to export the Private key and select **Personal Information Exchange - PKCS #12**.
 
 It is important that the check box to **Include all certificates in the certificate path if possible** is checked, as well as **Export all extended properties**.  
 
-Run certlm.msc on the Windows servers and import the *.PFX into the Computer’s Personal Certificate store. This will cause the server to pass the entire certificate chain to the ADAL library.
+Run certlm.msc on the Windows servers and import the *.PFX into the Computer's Personal Certificate store. This will cause the server to pass the entire certificate chain to the ADAL library.
 
 >[!NOTE]
 > The certificate store of Network Load Balancers should also be updated to include the entire certificate chain if present

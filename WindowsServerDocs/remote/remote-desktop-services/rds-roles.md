@@ -68,7 +68,7 @@ For more information, see the following articles:
 
 ## Remote Desktop Web Access
 
-Remote Desktop Web Access (RD Web Access) lets users access desktops and applications through a web portal and launches them through the device’s native Microsoft Remote Desktop client application. You can use the web portal to publish Windows desktops and applications to Windows and non-Windows client devices, and you can also selectively publish desktops or apps to specific users or groups.
+Remote Desktop Web Access (RD Web Access) lets users access desktops and applications through a web portal and launches them through the device's native Microsoft Remote Desktop client application. You can use the web portal to publish Windows desktops and applications to Windows and non-Windows client devices, and you can also selectively publish desktops or apps to specific users or groups.
 
 RD Web Access needs Internet Information Services (IIS) to work properly. A Hypertext Transfer Protocol Secure (HTTPS) connection provides an encrypted communications channel between the clients and the RD Web server. The RD Web Access virtual machine must be accessible through a public IP address that allows inbound TCP connections to port 443 to allow the tenant's users to connect from the internet using the HTTPS communications transport protocol.
 

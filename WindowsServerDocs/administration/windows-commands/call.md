@@ -36,7 +36,7 @@ call [Drive:][Path]<FileName> [<BatchParameters>] [:<Label> [<Arguments>]]
 
 |           Parameter           |                                                                         Description                                                                          |
 |-------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [\<Drive>:][<Path>]<FileName> | Specifies the location and name of the batch program that you want to call. The *FileName* parameter is required, and it must have a .bat or .cmd extension. |
+| [\<Drive>:][\<Path>]<FileName> | Specifies the location and name of the batch program that you want to call. The *FileName* parameter is required, and it must have a .bat or .cmd extension. |
 |      \<BatchParameters>       |                                            Specifies any command-line information required by the batch program.                                             |
 |           :\<Label>           |                                            Specifies the label that you want a batch program control to jump to.                                             |
 |         \<Arguments>          |                     Specifies the command-line information to be passed to the new instance of the batch program, beginning at *:Label.*                     |

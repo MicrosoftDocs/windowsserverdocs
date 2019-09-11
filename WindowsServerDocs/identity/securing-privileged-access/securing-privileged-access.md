@@ -106,7 +106,7 @@ Phase 2 builds on the work done in phase 1 and is designed to be completed in ap
 
 ### 1. Require Windows Hello for Business and MFA
 
-Administrators can benefit from the ease of use associated with Windows Hello for Business. Admins can replace their complex passwords with strong two-factor authentication on their PCs. An attacker must have both the device and the biometric info or PIN, it’s much more difficult to gain access without the employee’s knowledge. More details about Windows Hello for Business and the path to roll out can be found in the article [Windows Hello for Business Overview](/windows/security/identity-protection/hello-for-business/hello-overview)
+Administrators can benefit from the ease of use associated with Windows Hello for Business. Admins can replace their complex passwords with strong two-factor authentication on their PCs. An attacker must have both the device and the biometric info or PIN, it's much more difficult to gain access without the employee's knowledge. More details about Windows Hello for Business and the path to roll out can be found in the article [Windows Hello for Business Overview](/windows/security/identity-protection/hello-for-business/hello-overview)
 
 Enable multi-factor authentication (MFA) for your administrator accounts in Azure AD using Azure MFA. At minimum enable the [baseline protection conditional access policy](/azure/active-directory/conditional-access/baseline-protection#require-mfa-for-admins) more information about Azure Multi-Factor Authentication can be found in the article [Deploy cloud-based Azure Multi-Factor Authentication](/azure/active-directory/authentication/howto-mfa-getstarted)
 

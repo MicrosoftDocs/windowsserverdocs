@@ -43,7 +43,7 @@ Before you can start to work on your content, you must first change to the windo
     >[!Note]
     >We highly recommend naming your branch something obvious and unique so you can find it again later.
 
-    After the commands finish, you’ll be in your new branch and ready to edit your file.
+    After the commands finish, you'll be in your new branch and ready to edit your file.
 
 #### To locate your article and make your edits
 
@@ -104,7 +104,7 @@ After you've completed your updates, you must get approval from your writer (all
 
     A member of the _windowsservercontent_ alias will review your changes or add comments about things that must be changed before merging can happen.
 
-3. Type **#sign-off** into the comments so that the reviewers know you’re handing off for both review and publishing. The **#sign-off** comment:
+3. Type **#sign-off** into the comments so that the reviewers know you're handing off for both review and publishing. The **#sign-off** comment:
 
     - Updates the label for your pull request from **do-not-merge** to **ready-to merge**.
 
@@ -115,7 +115,7 @@ After you've completed your updates, you must get approval from your writer (all
     >[!Important]
     >After you add the #sign-off comment, a member of the windowsservercontent team will review the text and push it to master so it will go out with the next scheduled publish to live (10:30am and 3:30pm weekdays).
     >
-    >If you don’t add #sign-off as a final comment to your PR, your content will remain in the queue without being pushed to Master and ultimately to Live.
+    >If you don't add #sign-off as a final comment to your PR, your content will remain in the queue without being pushed to Master and ultimately to Live.
 
 ## Related information
 

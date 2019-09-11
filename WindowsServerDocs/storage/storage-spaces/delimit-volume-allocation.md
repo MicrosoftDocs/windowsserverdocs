@@ -208,7 +208,7 @@ Conversely, in the extreme case that more than half of servers or drives in the 
 
 If three or more failures occur at once but at least half of servers and drives are still up, volumes with delimited allocation may stay online and accessible, depending on which servers have failures. Let's run the numbers to determine the precise odds.
 
-For simplicity, assume volumes are independently and identically distributed (IID) according to the best practices above, and that enough unique combinations are available for every volume’s allocation to be unique. The probability that any given volume survives is also the expected fraction of overall storage that survives by linearity of expectation. 
+For simplicity, assume volumes are independently and identically distributed (IID) according to the best practices above, and that enough unique combinations are available for every volume's allocation to be unique. The probability that any given volume survives is also the expected fraction of overall storage that survives by linearity of expectation. 
 
 Given **N** servers of which **F** have failures, a volume allocated to **3** of them goes offline if-and-only-if all **3** are among the **F** with failures. There are **(N choose F)** ways for **F** failures to occur, of which **(F choose 3)** result in the volume going offline and becoming inaccessible. The probability can be expressed as:
 

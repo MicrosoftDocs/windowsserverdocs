@@ -149,7 +149,7 @@ When you start a remote desktop connection, there are tools available that you c
 
 1. Tap the Remote Desktop connection to start the session.
 2. If you haven't saved credentials for the connection, you will be prompted to provide a **Username** and **Password**.
-3. If you are asked to verify the certificate for the remote desktop, review the information and ensure this is a PC you trust before tapping **Connect**. You can also select **Don’t ask about this certificate again** to always accept this certificate.
+3. If you are asked to verify the certificate for the remote desktop, review the information and ensure this is a PC you trust before tapping **Connect**. You can also select **Don't ask about this certificate again** to always accept this certificate.
 
 ### Connection Bar
 

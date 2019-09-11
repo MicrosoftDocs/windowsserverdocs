@@ -36,7 +36,7 @@ sections:
 
   - type: markdown
 
-    text: Get ready to deploy Remote Access as a single tenant VPN RAS Gateway for point-to-site VPN connections, using any of the four scenarios mentioned below, for remote client computers that are running Windows 10.  If you currently use DirectAccess we recommend that you investigate the Always On VPN functionality carefully to determine if it addresses all of your remote access needs before migrating form DirectAccess to Always On VPN.  
+    text: Get ready to deploy Remote Access as a single tenant VPN RAS Gateway for point-to-site VPN connections, using any of the four scenarios mentioned below, for remote client computers that are running Windows 10.  If you currently use DirectAccess we recommend that you investigate the Always On VPN functionality carefully to determine if it addresses all of your remote access needs before migrating from DirectAccess to Always On VPN.  
 
 - items:
 

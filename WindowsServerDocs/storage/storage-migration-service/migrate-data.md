@@ -59,7 +59,7 @@ In this step you transfer data after specifying where to put it on the destinati
 4. Add a destination server and mappings for any more source servers, and then select **Next**.
 5. Optionally adjust the transfer settings, and then select **Next**.
 6. Select **Validate** and then select **Next**.
-7. Select **Start transfer** to start transferring data.<br>The first time you transfer, we'll move any existing files in a destination to a backup folder. On subsequent transfers, by default we'll refresh the destination without backing it up first. <br>Also, Storage Migration Service is smart enough to deal with overlapping shares—we won’t copy the same folders twice in the same job.
+7. Select **Start transfer** to start transferring data.<br>The first time you transfer, we'll move any existing files in a destination to a backup folder. On subsequent transfers, by default we'll refresh the destination without backing it up first. <br>Also, Storage Migration Service is smart enough to deal with overlapping shares—we won't copy the same folders twice in the same job.
 8. After the transfer completes, check out the destination server to make sure everything transferred properly. Select **Error log only** if you want to download a log of any files that didn't transfer.
 
    > [!NOTE]
