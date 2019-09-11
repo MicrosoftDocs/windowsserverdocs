@@ -250,7 +250,6 @@ As an alternative workaround:
 
  Register-SMSProxy -ComputerName *destination server* -Force
 
-A future release of Windows Server may change this behavior to ensure that when all cluster nodes contain the Storage Migration Service proxy, Storage Migration Service proxy registration will be shared between all nodes.
 
 ## See also
 
