@@ -45,8 +45,8 @@ Migration is a three-step process:
 
 To use Storage Migration Service, you need the following:
 
-- A **source server** to migrate files and data from
-- A **destination server** running Windows Server 2019 to migrate to—Windows Server 2016 and Windows Server 2012 R2 work as well but are around 50% slower
+- A **source server** or **failover cluster** to migrate files and data from
+- A **destination server** running Windows Server 2019 (clustered or standalone) to migrate to. Windows Server 2016 and Windows Server 2012 R2 work as well but are around 50% slower
 - An **orchestrator server** running Windows Server 2019 to manage the migration  <br>If you're migrating only a few servers and one of the servers is running Windows Server 2019, you can use that as the orchestrator. If you're migrating more servers, we recommend using a separate orchestrator server.
 - A **PC or server running [Windows Admin Center](../../manage/windows-admin-center/understand/windows-admin-center.md)** to run the Storage Migration Service user interface, unless you prefer using PowerShell to manage the migration. The Windows Admin Center and Windows Server 2019 version must both be at least version 1809.
 
@@ -92,7 +92,7 @@ The source server must run one of the following operating systems:
 
 Note: Windows Small Business Server and Windows Server Essentials are domain controllers. Storage Migration Service can't yet cut over from domain controllers, but can inventory and transfer files from them.   
 
-If the orchestrator is running Windows Server, version 1903 or later, you can migrate the following additional source types:
+You can migrate the following additional source types if the orchestrator is running Windows Server, version 1903 or later, or if the orchestrator is running an earlier version of Windows Server with [KB4512534](https://support.microsoft.com/help/4512534/windows-10-update-kb4512534) installed:
 
 - Failover clusters
 - Linux servers that use Samba. We've tested the following:
@@ -109,14 +109,14 @@ The destination server must run one of the following operating systems:
 - Windows Server 2012 R2
 
 > [!TIP]
-> Destination servers running Windows Server 2019 or Windows Server, Semi-Annual Channel version 1809 or later have double the transfer performance of earlier versions of Windows Server. This performance boost is due to the inclusion of a built-in Storage Migration Service proxy service, which also opens the necessary firewall ports if they're not already open.
+> Destination servers running Windows Server 2019 or Windows Server, Semi-Annual Channel or later have double the transfer performance of earlier versions of Windows Server. This performance boost is due to the inclusion of a built-in Storage Migration Service proxy service, which also opens the necessary firewall ports if they're not already open.
 
 ## What's new in Storage Migration Service
 
-Windows Server, version 1903 adds the following new features, when run on the orchestrator server:
+The following new features are available when running the Storage Migration Server orchestrator on Windows Server, version 1903 or later, or an earlier version of Windows Server with [KB4512534](https://support.microsoft.com/help/4512534/windows-10-update-kb4512534) installed:
 
 - Migrate local users and groups to the new server
-- Migrate storage from failover clusters
+- Migrate storage from failover clusters, migrate to failover clusters, and migrate between standalone servers and failover clusters
 - Migrate storage from a Linux server that uses Samba
 - More easily sync migrated shares into Azure by using Azure File Sync
 - Migrate to new networks such as Azure
