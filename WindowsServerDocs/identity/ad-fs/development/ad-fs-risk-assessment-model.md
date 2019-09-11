@@ -31,7 +31,7 @@ The model allows to plug-in code at any of three stages of AD FS authentication 
 
 3.	**Post-Authentication** – Enables building plug-in to assess risk after user has provided credentials and AD FS has performed authentication. At this stage, in addition to the request context, security context, and protocol context, you also have information on the authentication result (Success or Failure). The plug-in can evaluate the risk score based on the available information and pass the risk score to claim and policy rules for further evaluation. 
 
-To better understand how to build a risk assessment plug-in and run it in line with AD FS process, let’s build a sample plug-in that blocks the requests coming from certain **extranet** IPs identified as risky, register the plug-in with AD FS and finally test the functionality. 
+To better understand how to build a risk assessment plug-in and run it in line with AD FS process, let's build a sample plug-in that blocks the requests coming from certain **extranet** IPs identified as risky, register the plug-in with AD FS and finally test the functionality. 
 
 >[!NOTE]
 >This walkthrough is only to show you how you can create a sample plug-in. By no means is the solution we are creating an enterprise ready solution.  
@@ -144,7 +144,7 @@ We need to register the dll in AD FS by using the `Register-AdfsThreatDetectionM
 
 6. Restart the AD FS service after registering the dll
 
-That’s it, the dll is now registered with AD FS and ready for use!
+That's it, the dll is now registered with AD FS and ready for use!
 
  >[!NOTE]
  > If any changes are made to the plugin and the project is rebuilt, then the updated dll needs to be registered again. Before registering, you will need to unregister the current dll using the following command:</br></br>
@@ -184,14 +184,14 @@ That’s it, the dll is now registered with AD FS and ready for use!
 5. Authentication is blocked as shown below.</br>
    ![model](media/ad-fs-risk-assessment-model/risk16.png)
  
-Now that we know how to build and register the plug-in, let’s walkthrough the plug-in code to understand the implementation using the new interfaces and classes introduced with the model. 
+Now that we know how to build and register the plug-in, let's walkthrough the plug-in code to understand the implementation using the new interfaces and classes introduced with the model. 
 
 ## Plug-in code walkthrough
 
 Open the project `ThreatDetectionModule.sln` using Visual Studio and then open the main file **UserRiskAnalyzer.cs** from the **Solutions Explorer** on the right of the screen</br>
 ![model](media/ad-fs-risk-assessment-model/risk17.png)
  
-The file contains the main class UserRiskAnalyzer which implements the abstract class [ThreatDetectionModule](https://docs.microsoft.com/dotnet/api/microsoft.identityserver.public.threatdetectionframework.threatdetectionmodule?view=adfs-2019) and interface [IRequestReceivedThreatDetectionModule](https://docs.microsoft.com/dotnet/api/microsoft.identityserver.public.threatdetectionframework.irequestreceivedthreatdetectionmodule?view=adfs-2019) to read the IP from the request context, compare the obtained IP with the IPs loaded from AD FS DB, and block request if there is an IP match. Let’s go over these types in more detail
+The file contains the main class UserRiskAnalyzer which implements the abstract class [ThreatDetectionModule](https://docs.microsoft.com/dotnet/api/microsoft.identityserver.public.threatdetectionframework.threatdetectionmodule?view=adfs-2019) and interface [IRequestReceivedThreatDetectionModule](https://docs.microsoft.com/dotnet/api/microsoft.identityserver.public.threatdetectionframework.irequestreceivedthreatdetectionmodule?view=adfs-2019) to read the IP from the request context, compare the obtained IP with the IPs loaded from AD FS DB, and block request if there is an IP match. Let's go over these types in more detail
 
 ### ThreatDetectionModule abstract class
 
@@ -313,5 +313,5 @@ The method returns the [Risk Score](https://docs.microsoft.com/dotnet/api/micros
 **Can adding these plug-ins increase AD FS authentication process latency?**</br>
 **A:** Latency impact will be determined by the time taken to execute the risk assessment logic you implement. We recommend evaluating the latency impact before deploying the plug-in in production enviroment. 
 
-**Why can’t AD FS suggest the list of risky IPs, users, etc?**</br>
+**Why can't AD FS suggest the list of risky IPs, users, etc?**</br>
 **A:** Though not currently available, we are working on building the intelligence to suggest risky IPs, users, etc. in the Pluggable Risk Assessment Model. We will share the launch dates soon. 

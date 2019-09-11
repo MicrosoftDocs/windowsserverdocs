@@ -33,9 +33,9 @@ Any storage system that provides fault tolerance necessarily makes distributed c
 
 ![13.7m IOPS record screenshot](media/deploy-pmem/iops-record.png)
 
-If you watch the video closely, you'll notice thatwhat’s even more jaw-dropping is the latency: even at over 13.7 M IOPS, the filesystem in Windows is reporting latency that’s consistently less than 40 µs! (That’s the symbol for microseconds, one-millionth of a second.) This is an order of magnitude faster than what typical all-flash vendors proudly advertise today.
+If you watch the video closely, you'll notice thatwhat's even more jaw-dropping is the latency: even at over 13.7 M IOPS, the filesystem in Windows is reporting latency that's consistently less than 40 µs! (That's the symbol for microseconds, one-millionth of a second.) This is an order of magnitude faster than what typical all-flash vendors proudly advertise today.
 
-Together, Storage Spaces Direct in Windows Server 2019 and Intel® Optane™ DC persistent memory deliver breakthrough performance. This industry-leading HCI benchmark of over 13.7M IOPS, with predictable and extremely low latency, is more than double our previous industry-leading benchmark of 6.7M IOPS. What’s more, this time we needed just 12 server nodes, 25% fewer than two years ago.
+Together, Storage Spaces Direct in Windows Server 2019 and Intel® Optane™ DC persistent memory deliver breakthrough performance. This industry-leading HCI benchmark of over 13.7M IOPS, with predictable and extremely low latency, is more than double our previous industry-leading benchmark of 6.7M IOPS. What's more, this time we needed just 12 server nodes, 25% fewer than two years ago.
 
 ![IOPS gains](media/deploy-pmem/iops-gains.png)
 

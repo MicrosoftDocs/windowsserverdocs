@@ -20,10 +20,10 @@ In prior Always on Availability (AoA) deployments, latency existed for any “Re
 
 In the latest update to AD FS, a reduction in latency is targeted through the addition of a background thread to refresh the AD FS configuration cache and a setting to set the refresh time period. The time spent for a database lookup is significantly reduced in the request thread, as the database cache updates are moved into the background thread.  
 
-When the `backgroundCacheRefreshEnabled` is set to true, AD FS will enable the background thread to run cache updates. The frequency of fetching data from the cache can be customized to a time value by setting `cacheRefreshIntervalSecs`. The default value is set to 300 seconds when `backgroundCacheRefreshEnabled` is set to true. After the set value duration, AD FS begins refreshing it’s cache and while the update is in progress, the old cache data will continue to be used.  
+When the `backgroundCacheRefreshEnabled` is set to true, AD FS will enable the background thread to run cache updates. The frequency of fetching data from the cache can be customized to a time value by setting `cacheRefreshIntervalSecs`. The default value is set to 300 seconds when `backgroundCacheRefreshEnabled` is set to true. After the set value duration, AD FS begins refreshing it's cache and while the update is in progress, the old cache data will continue to be used.  
 
 >[!NOTE]
-> The cache’s data will be refreshed outside of the `cacheRefreshIntervalSecs` value if ADFS receives a notification from SQL signifying that a change has occurred in the database. This notification will trigger the cache to be refreshed. 
+> The cache's data will be refreshed outside of the `cacheRefreshIntervalSecs` value if ADFS receives a notification from SQL signifying that a change has occurred in the database. This notification will trigger the cache to be refreshed. 
 
 ### Recommendations for setting the cache refresh 
 The default value for the cache refresh is **five minutes**. It is recommended to set it to **1 hour** to reduce an unnecessary data refresh by AD FS because the cache data will be refreshed if any SQL changes occur.  
@@ -57,7 +57,7 @@ Additional supported configurable values:
 ## Multiple artifact DB support across datacenters 
 For prior configurations of multiple datacenters, AD FS has only supported a single Artifact database, causing cross center datacenter latency during retrieval calls.  
 
-To reduce cross datacenter latency, an AD FS administrator can now deploy multiple artifact DB instances and then modify an AD FS node’s configuration file to point to different artifact DB instances. The artifact database connection string can be provided in the configuration file allowing a per-node Artifact DB. If the connection string is not present within the configuration file, the node will fall back to the previous design to use the artifact database which is present in the configuration DB.  
+To reduce cross datacenter latency, an AD FS administrator can now deploy multiple artifact DB instances and then modify an AD FS node's configuration file to point to different artifact DB instances. The artifact database connection string can be provided in the configuration file allowing a per-node Artifact DB. If the connection string is not present within the configuration file, the node will fall back to the previous design to use the artifact database which is present in the configuration DB.  
 Hybrid environments are also supported with this configuration.  
 
 ### Requirements: 
@@ -75,7 +75,7 @@ The generated script should be run on the SQL machine to create the required dat
  2. Create the Artifact DB using the deployment script. Copy the newly generated CreateDB.sql and SetPermissions.sql deployment scripts over to the SQL server machine and execute them to create the local Artifact DB. 
  
  3. Modify the Configuration file to add the Artifact DB connection. 
- Navigate to the AD FS node’s config file, and under the section “Microsoft.IdentityServer.Service”, add an entry point to the newly configured ArtifactDB. 
+ Navigate to the AD FS node's config file, and under the section “Microsoft.IdentityServer.Service”, add an entry point to the newly configured ArtifactDB. 
 
  >[!NOTE] 
  > artifactStore and connectionString are case sensitive values. Ensure they are correctly configured. 
@@ -98,9 +98,9 @@ It is recommended to create failover artifact databases on the same datacenter a
 
  - **Extranet Lockout** 
 
-    The Artifact database referenced to in the configuration file will be used for Extranet Lockout data. However, for the ESL feature, AD FS chooses a master which writes the data in the artifact DB. All the nodes make a REST API call to the master node to get and set the latest information about each user. If multiple artifact DB’s are in use, the admin must select a master node for each artifact DB or datacenter. 
+    The Artifact database referenced to in the configuration file will be used for Extranet Lockout data. However, for the ESL feature, AD FS chooses a master which writes the data in the artifact DB. All the nodes make a REST API call to the master node to get and set the latest information about each user. If multiple artifact DB's are in use, the admin must select a master node for each artifact DB or datacenter. 
 
-    To select one node to be the ESL master, navigate to the ADFS node’s config file, and under the section “Microsoft.IdentityServer.Service”, add the following:       
+    To select one node to be the ESL master, navigate to the ADFS node's config file, and under the section “Microsoft.IdentityServer.Service”, add the following:       
     
     On the master add following entry. Note that all three keys are case sensitive. 
 

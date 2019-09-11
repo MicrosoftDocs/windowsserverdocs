@@ -50,7 +50,7 @@ To apply the custom web theme to AD FS, use the following cmdlet.
 To add JavaScript to AD FS, use the following cmdlet.  
   
  
-    Set-AdfsWebTheme -TargetName custom -AdditionalFileResource @{Uri=’ /adfs/portal/script/onload.js’;path="D:\inetpub\adfsassets\script\onload.js"}  
+    Set-AdfsWebTheme -TargetName custom -AdditionalFileResource @{Uri=' /adfs/portal/script/onload.js';path="D:\inetpub\adfsassets\script\onload.js"}  
 
 
 ## Additional references 

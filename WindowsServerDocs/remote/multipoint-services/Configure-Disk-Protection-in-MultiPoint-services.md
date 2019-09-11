@@ -50,7 +50,7 @@ If Windows is configured to automatically install Windows Updates, Disk Protecti
   
 3.  Select the **Run Windows Update** check box.  
   
-4.  If your organization runs its own update script, select the **Run the following program** check box, and specify the location of your organization’s update script.  
+4.  If your organization runs its own update script, select the **Run the following program** check box, and specify the location of your organization's update script.  
   
 5.  Select a maximum time to allow updates to run.  
   
