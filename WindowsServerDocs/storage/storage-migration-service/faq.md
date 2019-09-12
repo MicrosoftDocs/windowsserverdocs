@@ -83,12 +83,13 @@ The Storage Migration Service contains a multi-threaded read and copy engine cal
 
 - **Use Windows Server 2019 for the destination operating system.** Windows Server 2019 contains the Storage Migration Service Proxy service. When you install this feature and migrate to Windows Server 2019 destinations, all transfers operate as direct line of sight between source and destination. This service runs on the orchestrator during transfer if the destination computers are Windows Server 2012 R2 or Windows Server 2016, which means the transfers double-hop and will be much slower. If there are multiple jobs running with Windows Server 2012 R2 or Windows Server 2016 destinations, the orchestrator will become a bottleneck. 
 
-- **Alter default transfer threads.** The Storage Migration Service Proxy service copies 8 files simultaneously in a given job. You can increase the number of simultaneous copy threads by adjusting the following registry REG_DWORD value name in decimal on every node running the SMS Proxy:
+- **Alter default transfer threads.** The Storage Migration Service Proxy service copies 8 files simultaneously in a given job. You can increase the number of simultaneous copy threads by adjusting the following registry REG_DWORD value name in decimal on every node running the Storage Migration Service Proxy:
 
     HKEY_Local_Machine\Software\Microsoft\SMSProxy
+    
     FileTransferThreadCount
 
-   The valid range is 1 to 128 in Windows Server 2019. After changing you must restart the Storage Migration Service Proxy service on all computers participating in a migration. Use caution with this setting; setting it higher may require additional cores, storage performance, and network bandwidth. Setting it too high may lead to reduced performance compared to default settings. The ability to heuristically change thread settings based on CPU, memory, network, and storage is planned for a later version of SMS.
+   The valid range is 1 to 128 in Windows Server 2019. After changing you must restart the Storage Migration Service Proxy service on all computers participating in a migration. Use caution with this setting; setting it higher may require additional cores, storage performance, and network bandwidth. Setting it too high may lead to reduced performance compared to default settings.
 
 - **Add cores and memory.**  We strongly recommend that the source, orchestrator, and destination computers have at least two processor cores or two vCPUs, and more can significantly aid inventory and transfer performance, especially when combined with FileTransferThreadCount (above). When transferring files that are larger than the usual Office formats (gigabytes or greater) transfer performance will benefit from more memory than the default 2GB minimum.
 
