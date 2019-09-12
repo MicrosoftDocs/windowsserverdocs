@@ -63,7 +63,7 @@ In this step you transfer data after specifying where to put it on the destinati
 2. On the **Add a destination device and mappings** page, the first source server is listed. Type the name of the server to which you want to migrate and then select **Scan device**.
 
    > [!NOTE]
-   > If you chose to migrate to a Failover Cluster, provide the name of the clustered File Server resource.
+   > If you chose to migrate to a failover cluster, provide the name of the clustered file server resource.
 
 3. Map the source volumes to destination volumes, clear the **Include** checkbox for any shares you don't want to transfer (including any administrative shares located in the Windows system folder), and then select **Next**.
    ![Screenshot showing a source server and its volumes and shares and where they'll be transferred to on the destination](media/migrate/transfer.png)
