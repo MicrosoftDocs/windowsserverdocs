@@ -47,7 +47,7 @@ In this step, you specify what servers to migrate and then scan them to collect 
 3. Select **Add a device**, type a source server name, and then select **OK**. <br>Repeat this for any other servers you want to inventory.
 
    > [!NOTE]
-   > If you chose to migrate from a Failover Cluster, provide the name of the clustered file server resource.
+   > If you chose to migrate from a failover cluster, provide the name of the clustered file server resource.
 
 4. Select **Start scan**.<br>The page updates to shows when the scan is complete.
     ![Screenshot showing a server ready to be scanned](media/migrate/inventory.png)
