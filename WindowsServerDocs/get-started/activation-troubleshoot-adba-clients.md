@@ -13,7 +13,7 @@ ms.localizationpriority: medium
 # Example: Troubleshooting Active Directory Based Activation (ADBA) clients that do not activate
 
 > [!NOTE]
-> This article was originally published as a Technet blog on March 26, 2018.
+> This article was originally published as a TechNet blog on March 26, 2018.
 
 Hello everyone! My name is Mike Kammer, and I have been a Platforms PFE with Microsoft for just over two years now. I recently helped a customer with deploying Windows Server 2016 in their environment. We took this opportunity to also migrate their activation methodology from a KMS Server to [Active Directory Based Activation](https://docs.microsoft.com/en-us/previous-versions/windows/hh852637(v=win.10)).
 
