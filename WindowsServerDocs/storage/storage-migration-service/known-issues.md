@@ -275,7 +275,7 @@ After installing [KB4512534](https://support.microsoft.com/en-us/help/4512534/wi
   
 This error is caused by a code defect in Storage Migration Service when you provide migration credentials in the form of a User Principal Name (UPN), such as 'meghan@contoso.com'. The Storage Migration Service orchestrator service fails to parse this format correctly, which leads to a failure in a domain lookup that was added for cluster migration support in KB4512534 and 19H1.
 
-To workaround this issue, provide credentials in the domain\user format, such as 'Contoso\Meghan'. We play to fix this issue in a later update to Storage Migration Service or release of Windows Server. 
+To workaround this issue, provide credentials in the domain\user format, such as 'Contoso\Meghan'.
 
 ## Error "ServiceError0x9006" or "The proxy isn't currently available." when migrating to a Windows Server Failover Cluster
 
