@@ -25,8 +25,10 @@ Ha Ha! Just kidding! Nothing is ever that easy. Truthfully, the set up and confi
 
 I went to one of my problem servers, opened a command prompt, and checked my output from the **slmgr /ao-list** command. The **/ao-list** switch displays all activation objects in Active Directory.
 
+[!div class="mx-imgBorder"]
 ![Image that shows the slmgr command](./media/032618_1700_Troubleshoo1.png)
 
+[!div class="mx-imgBorder"]
 ![Image that shows the results of the slmgr command](./media/032618_1700_Troubleshoo2.png)
 
 The results show that we have two Activation Objects: one for Server 2012 R2, and our newly created KMS AD Activation (** LAB) which is our Windows Server 2016 license. This confirms our Active Directory is correctly configured to activate Windows KMS Clients
@@ -61,16 +63,19 @@ I then looked at the Application Event Log on one of the trouble servers. I find
 
 While looking up this code, I found an article that says my error code means that the file name, directory name, or volume label syntax is incorrect. Reading through the methods described in the article, it didn’t seem that any of them fit my situation. When I ran the **nslookup -type=all _vlmcs._tcp** command, I found the existing KMS server (still lots of Windows 7 and Server 2008 machines in the environment, so it was necessary to keep it around), but also the five domain controllers as well. This indicated that it was not a DNS problem and my issues were elsewhere.
 
+[!div class="mx-imgBorder"]
 ![Image that shows the results of the nslookup command](./media/032618_1700_Troubleshoo8.png)
 
 So I know DNS is fine. Active Directory is properly configured as a KMS activation source. My physical server has been activated properly. Could this be an issue with just VMs? As an interesting side note at this point, my customer informs me that someone in a different department has decided to build more than a dozen virtual Windows Server 2016 machines as well. So now I assume I’ve got another dozen servers to deal with that won’t be activating. But no! Those servers activated just fine.
 
 Well, I headed back to my **slmgr** command to figure out how to get these monsters activated. This time I’m going to use the **/ipk** switch, which will allow me to install a product key. I went to [this site](https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/jj612867(v=ws.11)) to get the appropriate keys for my Standard version of Windows Server 2016. Some of my servers are Datacenter, but I need to fix this one first.
 
+[!div class="mx-imgBorder"]
 ![Image that shows the list of KMS client setup keys](./media/032618_1700_Troubleshoo9.png)
 
 I used the **/ipk** switch to install a product key, choosing the Windows Server 2016 Standard key.
 
+[!div class="mx-imgBorder"]
 ![Image that shows the slmgr /ipk command and its results](./media/032618_1700_Troubleshoo10.png)
 
 From here on out I only captured results from my Datacenter experiences, but they were the same. I used the **/ato** switch to force the activation. We get the awesome message that the product has been activated successfully!
@@ -85,6 +90,7 @@ Now, what had gone wrong? Why did I have to remove the installed key and add tho
 
 When I ran the first **/dlv** switch, in the description was the key. The description was Windows® Operating System, RETAIL Channel. I had looked at that and thought that RETAIL Channel meant that it had been purchased and was a valid key.
 
+[!div class="mx-imgBorder"]
 ![Image showing the results of the slmgr /dlv, with the channel information highlighted](./media/032618_1700_Troubleshoo13.png)
 
 When we look at the output of the **/dlv** switch from a properly activated server, notice the description now states VOLUME_KMSCLIENT channel. This lets us know that it is indeed a volume license.
