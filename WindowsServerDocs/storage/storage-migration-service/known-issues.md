@@ -273,7 +273,7 @@ After installing [KB4512534](https://support.microsoft.com/en-us/help/4512534/wi
   Error Message: 
   Guidance: Check the detailed error and make sure the inventory requirements are met. The inventory couldn't determine any aspects of the specified source computer. This could be because of missing permissions or privileges on the source or a blocked firewall port.
   
-This error is caused by a code defect in SMS when you provide migration credentials in the form of a User Principal Name (UPN), such as 'meghan@contoso.com'. The SMS orchestrator service fails to parse this format correctly, which leads to a failure in a domain lookup that was added for cluster migration support in KB4512534 and 19H1.
+This error is caused by a code defect in Storage Migration Service when you provide migration credentials in the form of a User Principal Name (UPN), such as 'meghan@contoso.com'. The Storage Migration Service orchestrator service fails to parse this format correctly, which leads to a failure in a domain lookup that was added for cluster migration support in KB4512534 and 19H1.
 
 To workaround this issue, provide credentials in the domain\user format, such as 'Contoso\Meghan'. We play to fix this issue in a later update to Storage Migration Service or release of Windows Server. 
 
