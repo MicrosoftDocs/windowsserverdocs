@@ -1,5 +1,5 @@
 ---
-title: What's new for Remote Desktop web client?
+title: What's new in the web client
 description: Learn about recent changes to the Remote Desktop web client
 ms.custom: na
 ms.prod: windows-server-threshold
@@ -11,10 +11,10 @@ ms.topic: article
 author: lizap
 manager: dongill
 ms.author: elizapo
-ms.date: 05/20/2019
+ms.date: 08/27/2019
 ms.localizationpriority: medium
 ---
-# What's new for the Remote Desktop web client?
+# What's new in the web client
 
 We regularly update the [Remote Desktop web client](remote-desktop-web-client.md), adding new features and fixing issues. Check out the latest updates below.
 

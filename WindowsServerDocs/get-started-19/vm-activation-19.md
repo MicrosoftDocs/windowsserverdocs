@@ -36,7 +36,7 @@ Server datacenter managers can use AVMA to do the following:
 
 There are no product keys to manage and no stickers on the servers to read. The virtual machine is activated and continues to work even when it is migrated across an array of virtualization servers.
 
-Service Provider License Agreement (SPLA) partners and other hosting providers do not have to share product keys with tenants or access a tenant’s virtual machine to activate it. Virtual machine activation is transparent to the tenant when AVMA is used. Hosting providers can use the server logs to verify license compliance and to track client usage history.
+Service Provider License Agreement (SPLA) partners and other hosting providers do not have to share product keys with tenants or access a tenant's virtual machine to activate it. Virtual machine activation is transparent to the tenant when AVMA is used. Hosting providers can use the server logs to verify license compliance and to track client usage history.
 
 ## System requirements
 

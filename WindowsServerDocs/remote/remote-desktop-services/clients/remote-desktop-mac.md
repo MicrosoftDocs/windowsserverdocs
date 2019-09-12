@@ -1,5 +1,5 @@
 ---
-title: Get started with Remote Desktop on Mac
+title: Get started with the macOS client
 description: Learn how to set up the Remote Desktop client for Mac
 ms.custom: na
 ms.prod: windows-server-threshold
@@ -12,10 +12,10 @@ ms.assetid: 7afc65f8-3158-49c9-9d48-4dab1c69afba
 author: lizap
 manager: dongill
 ms.author: elizapo
-ms.date: 10/09/2018
+ms.date: 08/27/2019
 ms.localizationpriority: medium
 ---
-# Get started with Remote Desktop on Mac
+# Get started with the macOS client
 
 >Applies To: Windows 10, Windows 8.1, Windows Server 2012 R2, Windows Server 2016
 
@@ -29,7 +29,7 @@ You can use the Remote Desktop client for Mac to work with Windows apps, resourc
 ## Get the Remote Desktop client
 Follow these steps to get started with Remote Desktop on your Mac:
 
-1. Download the Microsoft Remote Desktop client from the [Mac App Store](https://itunes.apple.com/us/app/microsoft-remote-desktop/id1295203466?mt=12).
+1. Download the Microsoft Remote Desktop client from the [Mac App Store](https://itunes.apple.com/app/microsoft-remote-desktop/id1295203466?mt=12).
 2. [Set up your PC to accept remote connections](remote-desktop-client-faq.md#how-do-i-set-up-a-pc-for-remote-desktop). (If you skip this step, you can't connect to your PC.)
 3. Add a Remote Desktop connection or a remote resource. You use a connection to connect directly to a Windows PC and a remote resource to use a RemoteApp program, session-based desktop, or a virtual desktop published on-premises using RemoteApp and Desktop Connections. This feature is typically available in corporate environments.
 

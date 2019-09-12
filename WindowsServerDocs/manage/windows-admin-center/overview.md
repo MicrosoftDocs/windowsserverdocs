@@ -5,7 +5,7 @@ ms.technology: manage
 ms.topic: article
 author: nwashburn-ms
 ms.author: niwashbu
-ms.date: 06/20/2019
+ms.date: 08/22/2019
 ms.localizationpriority: high
 ms.prod: windows-server-threshold
 ---
@@ -13,7 +13,7 @@ ms.prod: windows-server-threshold
 
 > Applies to: Windows Admin Center, Windows Admin Center Preview
 
-**Windows Admin Center** (formerly codenamed **Project Honolulu**) is an evolution of Windows Server in-box management tools; it’s a single pane of glass that consolidates all aspects of local and remote server management. As a locally deployed, browser-based management experience, an Internet connection and Azure aren’t required. Windows Admin Center gives you full control of all aspects of your deployment, including private networks that aren’t Internet-connected.
+**Windows Admin Center** (formerly codenamed **Project Honolulu**) is an evolution of Windows Server in-box management tools; it's a single pane of glass that consolidates all aspects of local and remote server management. As a locally deployed, browser-based management experience, an Internet connection and Azure aren't required. Windows Admin Center gives you full control of all aspects of your deployment, including private networks that aren't Internet-connected.
 
 ## Introduction
 
@@ -124,6 +124,7 @@ Admin Center to Azure</a></li>
 
 Learn about our latest released features:
 
+- Version [1908](https://aka.ms/wac1908) - includes visual updates, Packetmon, FlowLog Audit, Azure Monitor onboarding for clusters, and support for WinRM over HTTPS (port 5986.)
 - Version [1907](https://aka.ms/wac1907) - added Azure cost estimate links and made improvements to import/export and tagging of virtual machines.
 - Version [1906](https://aka.ms/wac1906) - added import/export VMs, switch Azure accounts, add connections from Azure, connectivity settings experiment, performance improvements, and performance profiling tool.
 - Version 1904.1 is the most recent GA release - a maintenance update to improve stability of gateway plugins.

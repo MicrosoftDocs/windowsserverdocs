@@ -57,7 +57,7 @@ If you add more than one direct video-connected station to your MultiPoint Servi
   
 ## To find out which direct video-connected station is the primary station  
   
-1.  Turn on all monitors that are connected directly to the computer’s display adapters (video cards).  
+1.  Turn on all monitors that are connected directly to the computer's display adapters (video cards).  
   
 2.  Start (or restart) the MultiPoint Services computer, and see which monitor displays the startup screens. That station is the primary station.  
   

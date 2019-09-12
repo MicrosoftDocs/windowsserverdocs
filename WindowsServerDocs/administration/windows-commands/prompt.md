@@ -53,7 +53,7 @@ The following table lists the character combinations that you can include instea
 |    $n     |                                Current drive                                |
 |    $g     |                            > (greater than sign)                            |
 |    $l     |                             < (less than sign)                              |
-|    $b     |                                                                             |
+|    $b     |                              \| (pipe symbol)                               |
 |    $_     |                               ENTER-LINEFEED                                |
 |    $e     |                         ANSI escape code (code 27)                          |
 |    $h     | Backspace (to delete a character that has been written to the command line) |

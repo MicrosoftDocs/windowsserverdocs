@@ -1,5 +1,5 @@
 ---
-title: Get started with Remote Desktop on Android
+title: Get started with the Android client
 description: Basic set up steps for the Remote Desktop client for Android.
 ms.custom: na
 ms.prod: windows-server-threshold
@@ -12,10 +12,10 @@ ms.assetid: 64f038e1-40ec-4c67-938b-72edea49e5d8
 author: lizap
 manager: dongill
 ms.author: elizapo
-ms.date: 08/09/2019
+ms.date: 08/27/2019
 ms.localizationpriority: medium
 ---
-# Get started with Remote Desktop on Android
+# Get started with the Android client
 
 >Applies to: Android 4.1 and newer
 
@@ -97,7 +97,7 @@ The Remote Desktop client supports pinning connections to your home screen by us
 2. Tap **widgets**.
 3. Swipe through the widgets and look for the Remote Desktop icon with the description, “Pin Remote Desktop.”
 4. Tap and hold that Remote Desktop widget and move it to the home screen.
-5. When you release the icon, you’ll see the saved remote desktops. Choose the connection that you want to save to your home screen.
+5. When you release the icon, you'll see the saved remote desktops. Choose the connection that you want to save to your home screen.
 
 Now you can start the remote desktop connection directly from your home screen by tapping it.
 
