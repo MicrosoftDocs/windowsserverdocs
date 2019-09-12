@@ -35,7 +35,7 @@ Here's how to set up the Remote Desktop client on your Android device:
 
 1. Download the Microsoft Remote Desktop client from [Google Play](https://play.google.com/store/apps/details?id=com.microsoft.rdc.android).
 2. Launch **RD client** from your list of apps.
-3. Continue by adding a [Remote Desktop connection](#add-a-remote-desktop-connection) or a [remote resource](#add-a-remote-resource). You use a connection to connect directly to a Windows PC and a remote resource to access apps and desktops published to you by an admin.
+3. Continue by adding a [Remote Desktop connection](#add-a-remote-desktop-connection) or [remote resources](#add-remote-resources). You use a connection to connect directly to a Windows PC and remote resources to access apps and desktops published to you by an admin.
 
 > [!NOTE]
 > If you would like to flight new features earlier, we recommend downloading our [Microsoft Remote Desktop Beta](https://play.google.com/store/apps/details?id=com.microsoft.rdc.android.beta) client from the Google Play store.
