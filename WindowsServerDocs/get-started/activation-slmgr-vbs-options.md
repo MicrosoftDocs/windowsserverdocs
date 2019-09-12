@@ -6,7 +6,7 @@ ms.technology: server-general
 ms.topic: article
 author: Teresa-Motiv
 ms.author: v-tea
-manager: kausika
+manager: dcscontentpm
 ms.localizationpriority: medium
 appliesto:
 - Windows Server 2012 R2

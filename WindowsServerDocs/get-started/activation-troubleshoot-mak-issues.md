@@ -8,7 +8,7 @@ ms.topic: article
 ms.assetid: 
 author: Teresa-Motiv
 ms.author: v-tea
-manager: kausika
+manager: dcscontentpm
 ms.localizationpriority: medium
 ---
 

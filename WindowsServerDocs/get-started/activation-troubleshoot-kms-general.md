@@ -6,7 +6,7 @@ ms.date: 9/4/2019
 ms.technology: server-general
 author: Teresa-Motiv
 ms.author: v-tea
-manager: kaushika
+manager: dcscontentpm
 ms.localizationpriority: medium
 ---
 
