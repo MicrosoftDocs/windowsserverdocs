@@ -83,7 +83,7 @@ To work around this issue:
 3. On the orchestrator computer, start Regedit.exe
 4. Locate and then click the following registry subkey: 
 
-   `HKEY_LOCAL_MACHINE\\Software\\Microsoft\\SMSPowershell`
+   `HKEY_LOCAL_MACHINE\Software\Microsoft\SMSPowershell`
 
 5. On the Edit menu, point to New, and then click DWORD Value. 
 6. Type "WcfOperationTimeoutInMinutes" for the name of the DWORD, and then press ENTER.
