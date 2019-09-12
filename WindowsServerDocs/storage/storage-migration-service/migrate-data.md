@@ -93,7 +93,7 @@ In this step you cut over from the source servers to the destination servers, mo
 2. On the **Cut over to the new servers** > **Enter credentials** page, select **Next** to use the credentials you typed previously.
 
     > [!NOTE]
-   > If your destination is a failover cluster File Server resource, you may receive an additional domain unjoin and join credential prompt. 
+   > If your destination is a clustered file server, you might need to provide credentials with permissions to remove the cluster from the domain and then add it back with the new name. 
 
 3. On the **Configure cutover** page, specify which network adapters to take over each source device's settings. This moves the IP address from the source to the destination as part of the cutover. You have the option to skip all network migrations or certain interfaces. You must always specify DHCP or a new static IP address for the source interfaces if you are cutting over the server.
 4. Specify what IP address to use for the source server after cutover moves its address to the destination. You can use DHCP or a static address. If using a static address, the new subnet must be the same as the old subnet or cutover will fail.
