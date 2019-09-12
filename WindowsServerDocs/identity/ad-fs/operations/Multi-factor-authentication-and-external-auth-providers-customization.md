@@ -29,7 +29,7 @@ The following is an example of the sign\-in user interface, which is highlighted
   
 Before you write a new custom authentication method, we recommend that you study the AD FS theme and style definitions to understand the content authoring requirements.  
   
--   A custom authentication method only authors an HTML segment on the AD FS sign\-in page and not the full page. You should use AD FS’s style definition to get the consistent appearance and behavior.  
+-   A custom authentication method only authors an HTML segment on the AD FS sign\-in page and not the full page. You should use AD FS's style definition to get the consistent appearance and behavior.  
   
 ![AD FS and MFA](media/AD-FS-user-sign-in-customization/ADFS_Blue_Custom9.png)  
   

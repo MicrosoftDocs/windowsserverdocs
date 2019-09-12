@@ -44,7 +44,7 @@ The Edge Firewall separates the External Perimeter Network from the Public Inter
 
 Your Edge Firewall must allow and forward specific ports to your VPN server. If you use Network Address Translation (NAT) on your edge firewall, you might need to enable port forwarding for User Datagram Protocol (UDP) ports 500 and 4500. Forward these ports to the IP address that is assigned to the external interface of your VPN server.
 
-If you’re routing traffic inbound and performing NAT at or behind the VPN server, then you must open your firewall rules to allow UDP ports 500 and 4500 inbound to the external IP address applied to the public interface on the VPN server.
+If you're routing traffic inbound and performing NAT at or behind the VPN server, then you must open your firewall rules to allow UDP ports 500 and 4500 inbound to the external IP address applied to the public interface on the VPN server.
 
 In either case, if your firewall supports deep packet inspection and you have difficulty establishing client connections, you should attempt to relax or disable deep packet inspection for IKE sessions.
 

@@ -121,7 +121,7 @@ Two files need changes in this project – Web.config and Startup.Auth.cs. Web.C
 
 **Web.config**
 
-* Comment the key **ida:Tenant** as we don’t need it
+* Comment the key **ida:Tenant** as we don't need it
 * Add the key for **ida:Authority** with value indicating the FQDN of the federation service, example, https://fs.contoso.com/adfs/
 * Modify key **ida:Audience** with the value of the Web API identifier that you specified in the **Configure Web API** page during Add Application Group in AD FS.
 * Add key **ida:AdfsMetadataEndpoint** with value corresponding to the federation metadata URL of the AD FS service, for ex: https://fs.contoso.com/federationmetadata/2007-06/federationmetadata.xml

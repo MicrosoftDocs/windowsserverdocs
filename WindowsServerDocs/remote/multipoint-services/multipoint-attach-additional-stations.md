@@ -25,7 +25,7 @@ MultiPoint services supports three types of station:
   
 -   RDP-over-LAN connected stations  
   
-The classifications are based on a station’s hardware and the type of connection that it uses. You can mix and match connection types for your stations. The only requirement is that the primary station (which you installed earlier) must be a direct-video-connected station. For more information about station setups, see [MultiPoint Stations](MultiPoint-services-Stations.md).  
+The classifications are based on a station's hardware and the type of connection that it uses. You can mix and match connection types for your stations. The only requirement is that the primary station (which you installed earlier) must be a direct-video-connected station. For more information about station setups, see [MultiPoint Stations](MultiPoint-services-Stations.md).  
   
 For instructions that explain how to set up each type of station, see the following:  
   

@@ -142,7 +142,7 @@ If you are configuring a NIC Team in a VM, you must select a **Teaming mode** of
   
   
 ## SR-IOV-Capable Network Adapters  
-A NIC team in or under the Hyper-V host cannot protect SR-IOV traffic because it doesn’t go through the Hyper-V Switch.  With the VM NIC Teaming option, you can configure two external Hyper-V Virtual Switches, each connected to its own SR-IOV-capable NIC.  
+A NIC team in or under the Hyper-V host cannot protect SR-IOV traffic because it doesn't go through the Hyper-V Switch.  With the VM NIC Teaming option, you can configure two external Hyper-V Virtual Switches, each connected to its own SR-IOV-capable NIC.  
   
 ![NIC Teaming with SR-IOV-Capable Network Adapters](../../media/NIC-Teaming-in-Virtual-Machines--VMs-/nict_in_vm.jpg)  
   

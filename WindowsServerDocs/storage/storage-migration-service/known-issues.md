@@ -277,6 +277,27 @@ This error is caused by a code defect in Storage Migration Service when you prov
 
 To workaround this issue, provide credentials in the domain\user format, such as 'Contoso\Meghan'. We play to fix this issue in a later update to Storage Migration Service or release of Windows Server. 
 
+## Error "ServiceError0x9006" or "The proxy isn't currently available." when migrating to a Windows Server Failover Cluster
+
+When attempting to transfer data against a clustered File Server, you receieve errors such as: 
+
+   Make sure the proxy service is installed and running, and then try again. The proxy isn't currently available.
+   0x9006
+   ServiceError0x9006,Microsoft.StorageMigration.Commands.UnregisterSmsProxyCommand
+
+This error is expected if the File Server resource moved from its original Windows Server 2019 cluster owner node to a new node and the Storage Migration Service Proxy feature wasn't installed on that node.
+
+As a workaround, move the destination File Server resource back to the original owner cluster node that was in use when you first configured transfer pairings.
+
+As an alternative workaround:
+
+1. Install the Storage Migration Service Proxy feature on all nodes in a cluster.
+2. Run the following Storage Migration Service PowerShell command on the orchestrator computer: 
+
+   ```PowerShell
+   Register-SMSProxy -ComputerName *destination server* -Force
+   ```
+
 ## See also
 
 - [Storage Migration Service overview](overview.md)

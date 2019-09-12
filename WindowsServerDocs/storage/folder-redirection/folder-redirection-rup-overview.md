@@ -13,7 +13,7 @@ ms.localizationpriority: medium
 
 >Applies to: Windows 10, Windows 8, Windows 8.1, Windows Server 2019, Windows Server 2016, Windows Server 2012, Windows Server 2012 R2
 
-This topic discusses the Folder Redirection, Offline Files (client-side caching or CSC), and Roaming User Profiles (sometimes known as RUP) technologies, including what’s new and where to find additional information.
+This topic discusses the Folder Redirection, Offline Files (client-side caching or CSC), and Roaming User Profiles (sometimes known as RUP) technologies, including what's new and where to find additional information.
 
 ## Technology description
 
@@ -25,7 +25,7 @@ Folder Redirection and Offline Files are used together to redirect the path of l
   - The server is unavailable
   - The network connection is slower than a configurable threshold
   - The user manually switches to Offline Mode by using the **Work offline** button in Windows Explorer
-- **Roaming User Profiles** redirects user profiles to a file share so that users receive the same operating system and application settings on multiple computers. When a user signs in to a computer by using an account that is set up with a file share as the profile path, the user’s profile is downloaded to the local computer and merged with the local profile (if present). When the user signs out of the computer, the local copy of their profile, including any changes, is merged with the server copy of the profile. Typically, a network administrator enables Roaming User Profiles on domain accounts.
+- **Roaming User Profiles** redirects user profiles to a file share so that users receive the same operating system and application settings on multiple computers. When a user signs in to a computer by using an account that is set up with a file share as the profile path, the user's profile is downloaded to the local computer and merged with the local profile (if present). When the user signs out of the computer, the local copy of their profile, including any changes, is merged with the server copy of the profile. Typically, a network administrator enables Roaming User Profiles on domain accounts.
 
 ## Practical applications
 
@@ -43,8 +43,8 @@ The following table describes some of the major changes in Folder Redirection, O
 | Feature/functionality | New or updated? | Description |
 | --- | --- | --- |
 | Always Offline mode | New | Provides faster access to files and lower bandwidth usage by always working offline, even when connected through a high-speed network connection. |
-| Cost-aware synchronization | New | Helps users avoid high data usage costs from synchronization while using metered connections that have usage limits, or while roaming on another provider’s network. |
-| Primary Computer support | New | Enables you to limit the use of Folder Redirection, Roaming User Profiles, or both to only a user’s primary computers. |
+| Cost-aware synchronization | New | Helps users avoid high data usage costs from synchronization while using metered connections that have usage limits, or while roaming on another provider's network. |
+| Primary Computer support | New | Enables you to limit the use of Folder Redirection, Roaming User Profiles, or both to only a user's primary computers. |
 
 ## Always Offline mode
 
@@ -67,14 +67,14 @@ For more information, see [Enable the Always Offline Mode to Provide Faster Acce
 
 ## Cost-aware synchronization
 
-With cost-aware synchronization, Windows disables background synchronization when the user is using a metered network connection, such as a 4G mobile network, and the subscriber is near or over their bandwidth limit, or roaming on another provider’s network.
+With cost-aware synchronization, Windows disables background synchronization when the user is using a metered network connection, such as a 4G mobile network, and the subscriber is near or over their bandwidth limit, or roaming on another provider's network.
 
 > [!NOTE]
 > Metered network connections usually have round-trip network latencies that are slower than the default 35 millisecond latency value for transitioning to Offline (Slow Connection) mode in Windows 8, Windows Server 2019, Windows Server 2016, and Windows Server 2012. Therefore, these connections usually transition to Offline (Slow Connection) mode automatically.
 
 ### What value does cost-aware synchronization add?
 
-Cost-aware synchronization helps users avoid unexpectedly high data usage costs while using metered connections that have usage limits, or while roaming on another provider’s network.
+Cost-aware synchronization helps users avoid unexpectedly high data usage costs while using metered connections that have usage limits, or while roaming on another provider's network.
 
 ### How has cost-aware synchronization changed things?
 
@@ -92,19 +92,19 @@ You can now designate a set of computers, known as primary computers, for each d
 
 There are four major benefits to designating primary computers for users:
 
-- The administrator can specify which computers users can use to access their redirected data and settings. For example, the administrator can choose to roam user data and settings between a user’s desktop and laptop, and to not roam the information when that user logs on to any other computer, such as a conference room computer.
-- Designating primary computers reduces the security and privacy risk of leaving residual personal or corporate data on computers where the user has logged on. For example, a general manager who logs on to an employee’s computer for temporary access does not leave behind any personal or corporate data.
+- The administrator can specify which computers users can use to access their redirected data and settings. For example, the administrator can choose to roam user data and settings between a user's desktop and laptop, and to not roam the information when that user logs on to any other computer, such as a conference room computer.
+- Designating primary computers reduces the security and privacy risk of leaving residual personal or corporate data on computers where the user has logged on. For example, a general manager who logs on to an employee's computer for temporary access does not leave behind any personal or corporate data.
 - Primary computers enable the administrator to mitigate the risk of an improperly configured or otherwise corrupt profile, which could result from roaming between differently configured systems, such as between x86-based and x64-based computers.
-- The amount of time required for a user’s first sign-in on a non-primary computer, such as a server, is faster because the user’s roaming user profile and/or redirected folders are not downloaded. Sign-out times are also reduced, because changes to the user profile do not need to be uploaded to the file share.
+- The amount of time required for a user's first sign-in on a non-primary computer, such as a server, is faster because the user's roaming user profile and/or redirected folders are not downloaded. Sign-out times are also reduced, because changes to the user profile do not need to be uploaded to the file share.
 
 ### How have primary computers changed things?
 
 To limit downloading private user data to primary computers, the Folder Redirection and Roaming User Profiles technologies perform the following logic checks when a user signs in to a computer:
 
-1. The Windows operating system checks the new Group Policy settings (**Download roaming profiles on primary computers only** and **Redirect folders on primary computers only**) to determine if the **msDS-Primary-Computer** attribute in Active Directory Domain Services (AD DS) should influence the decision to roam the user’s profile or apply Folder Redirection.
+1. The Windows operating system checks the new Group Policy settings (**Download roaming profiles on primary computers only** and **Redirect folders on primary computers only**) to determine if the **msDS-Primary-Computer** attribute in Active Directory Domain Services (AD DS) should influence the decision to roam the user's profile or apply Folder Redirection.
 2. If the policy setting enables primary computer support, Windows verifies that the AD DS schema supports the **msDS-Primary-Computer** attribute. If it does, Windows determines if the computer that the user is logging on to is designated as a primary computer for the user as follows:
-    1. If the computer is one of the user’s primary computers, Windows applies the Roaming User Profiles and Folder Redirection settings.
-    2. If the computer is not one of the user’s primary computers, Windows loads the user’s cached local profile, if present, or it creates a new local profile. Windows also removes any existing redirected folders according to the removal action that was specified by the previously applied Group Policy setting, which is retained in the local Folder Redirection configuration.
+    1. If the computer is one of the user's primary computers, Windows applies the Roaming User Profiles and Folder Redirection settings.
+    2. If the computer is not one of the user's primary computers, Windows loads the user's cached local profile, if present, or it creates a new local profile. Windows also removes any existing redirected folders according to the removal action that was specified by the previously applied Group Policy setting, which is retained in the local Folder Redirection configuration.
 
 For more information, see [Deploy Primary Computers for Folder Redirection and Roaming User Profiles](deploy-primary-computers.md)
 

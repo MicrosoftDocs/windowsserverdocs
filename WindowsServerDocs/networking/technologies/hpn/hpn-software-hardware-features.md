@@ -59,7 +59,7 @@ For more information, see [Data Center Bridging (DCB)](https://docs.microsoft.co
 IPsec task offload is a NIC feature that enables the operating system to use the processor on the NIC for the IPsec encryption work.
 
 >[!IMPORTANT] 
->IPsec Task Offload is a legacy technology that is not supported by most network adapters, and where it does exist, it’s disabled by default.
+>IPsec Task Offload is a legacy technology that is not supported by most network adapters, and where it does exist, it's disabled by default.
 
 ## Private virtual Local Area Network (PVLAN). 
 
@@ -83,7 +83,7 @@ For more details, see [Receive Side Scaling (RSS)](https://docs.microsoft.com/wi
 
 SR-IOV allows VM traffic to move directly from the NIC to the VM without passing through the Hyper-V host. SR-IOV is an incredible improvement in performance for a VM but lacks the ability for the host to manage that pipe. Only use SR-IOV when the workload is well-behaved, trusted, and generally the only VM in the host.
 
-Traffic that uses SR-IOV bypasses the Hyper-V switch, which means that any policies, for example, ACLs, or bandwidth management won’t be applied. SR-IOV traffic also can’t be passed through any network virtualization capability, so NV-GRE or VxLAN encapsulation can’t be applied. Only use SR-IOV for well-trusted workloads in specific situations. Additionally, you cannot use the host policies, bandwidth management, and virtualization technologies.
+Traffic that uses SR-IOV bypasses the Hyper-V switch, which means that any policies, for example, ACLs, or bandwidth management won't be applied. SR-IOV traffic also can't be passed through any network virtualization capability, so NV-GRE or VxLAN encapsulation can't be applied. Only use SR-IOV for well-trusted workloads in specific situations. Additionally, you cannot use the host policies, bandwidth management, and virtualization technologies.
 
 In the future, two technologies would allow SR-IOV: Generic Flow Tables (GFT) and Hardware QoS Offload (bandwidth management in the NIC) – once the NICs in our ecosystem support them. The combination of these two technologies would make SR-IOV useful for all VMs, would allow policies, virtualization, and bandwidth management rules to be applied, and could result in great leaps forward in the general application of SR-IOV.
 

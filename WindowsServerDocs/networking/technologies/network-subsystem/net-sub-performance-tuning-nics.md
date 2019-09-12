@@ -139,7 +139,7 @@ All of these settings had the following registry location:
 The Windows Filtering Platform (WFP) that was introduced in Windows Vista and Windows Server 2008 provides APIs to non-Microsoft independent software vendors (ISVs) to create packet processing filters. Examples include firewall and antivirus software.
 
 >[!NOTE]
->A poorly written WFP filter can significantly decrease a server’s networking performance. For more information, see [Porting Packet-Processing Drivers and Apps to WFP](https://msdn.microsoft.com/windows/hardware/gg463267.aspx) in the Windows Dev Center.
+>A poorly written WFP filter can significantly decrease a server's networking performance. For more information, see [Porting Packet-Processing Drivers and Apps to WFP](https://msdn.microsoft.com/windows/hardware/gg463267.aspx) in the Windows Dev Center.
 
 
 For links to all topics in this guide, see [Network Subsystem Performance Tuning](net-sub-performance-top.md).
