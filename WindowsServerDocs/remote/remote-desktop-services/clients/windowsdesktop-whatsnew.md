@@ -18,14 +18,14 @@ ms.localizationpriority: medium
 
 We regularly update the [Windows Desktop client](windowsdesktop.md), adding new features and fixing issues. Here's where you'll find the latest updates.
 
-## Client versions
+## Latest client versions
 
-The client can be configured to use different versions for Release or Insider customers. The Release version is the default configuration.
+The client can be configured for different [user groups](windowsdesktop-admin.md#configuring-the-user-group). The current version available to users in each group is available in the table below:
 
-|Customer |Version  |
-|---------|---------|
-|Release  |1.2.246  |
-|Insider  |1.2.246  |
+|User group |Version  |
+|-----------|---------|
+|Public     |1.2.246  |
+|Insider    |1.2.246  |
 
 ## Updates for version 1.2.246
 
