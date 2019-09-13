@@ -11,7 +11,7 @@ ms.topic: article
 author: heidilohr
 manager: daveba
 ms.author: helohr
-ms.date: 09/10/2019
+ms.date: 09/13/2019
 ms.localizationpriority: medium
 ---
 # What's new in the Windows Desktop client
@@ -31,7 +31,7 @@ The client can be configured to use different versions for Release or Insider cu
 
 *Date published: 08/28/2019*
 
-- Improved the fallback languages for localized version. (ex: FR-CA will properly display in French instead of English.)
+- Improved the fallback languages for localized version. (For example, FR-CA will properly display in French instead of English.)
 - When removing a subscription, the client now properly removes the saved credentials from Credential Manager.
 - The client update process is now unattended once started and the client will relaunch once completed.
 - The client can now be used on Windows 10 in S mode.
