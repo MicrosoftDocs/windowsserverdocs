@@ -24,15 +24,19 @@ Remote Desktop Services supports different types of workloads. Scale your deploy
 
 ### Knowledge User
 
-Knowledge user uses lightweight productivity applications that include tasks such as data entry and dataset management. These applications include Word, Excel and Outlook and Internet Explorer.
+Knowledge user uses lightweight productivity applications that include tasks such as data entry and dataset management. These applications include Word, Excel and Outlook and Edge.
 
-### Knowledge User Plus
+### Professional User
 
-Knowledge user plus uses browser and productivity applications that can support more intensive workloads. These tasks include software development and multimedia content.
+Professional user uses browser and productivity applications that can support more intensive workloads. These tasks include software development and multimedia content.
 
 ### Power User
 
 Power user uses engineering specific and graphics application such as CAD and Adobe Photoshop. There are GPU options that support graphic intensive workloads including video rendering, 3D design, and simulations.
+
+For more information on graphics acceleration usage, check out [Choose your graphics rendering technology](rds-graphics-virtualization).
+
+For more information on the available GPU VM sizes, check out [GPU optimized virtual machines sizes](https://docs.microsoft.com/en-us/azure/virtual-machines/windows/sizes-gpu).
 
 ## Test Workload
 
