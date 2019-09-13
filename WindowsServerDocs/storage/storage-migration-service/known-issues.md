@@ -83,7 +83,7 @@ To work around this issue:
 3. On the orchestrator computer, start Regedit.exe
 4. Locate and then click the following registry subkey: 
 
-   `HKEY_LOCAL_MACHINE\\Software\\Microsoft\\SMSPowershell`
+   `HKEY_LOCAL_MACHINE\Software\Microsoft\SMSPowershell`
 
 5. On the Edit menu, point to New, and then click DWORD Value. 
 6. Type "WcfOperationTimeoutInMinutes" for the name of the DWORD, and then press ENTER.
@@ -230,6 +230,73 @@ Examining the StorageMigrationService-Proxy/Debug log shows:
    at Microsoft.StorageMigration.Proxy.Service.Transfer.TransferRequestHandler.ProcessRequest(FileTransferRequest fileTransferRequest, Guid operationId)    [d:\os\src\base\dms\proxy\transfer\transferproxy\TransferRequestHandler.cs::
 
 This error is expected if your migration account does not have at least Read access permissions to the SMB shares. To workaround this error, add a security group containing the source migration account to the SMB shares on the source computer and grant it Read, Change, or Full Control. After the migration completes, you can remove this group. A future release of Windows Server may change this behavior to no longer require explicit permissions to the source shares.
+
+## Error 0x80005000 when running inventory
+
+After installing [KB4512534](https://support.microsoft.com/en-us/help/4512534/windows-10-update-kb4512534) and attempting to run inventory, inventory fails with errors:
+
+  EXCEPTION FROM HRESULT: 0x80005000
+  
+  Log Name:      Microsoft-Windows-StorageMigrationService/Admin
+  Source:        Microsoft-Windows-StorageMigrationService
+  Date:          9/9/2019 5:21:42 PM
+  Event ID:      2503
+  Task Category: None
+  Level:         Error
+  Keywords:      
+  User:          NETWORK SERVICE
+  Computer:      FS02.TailwindTraders.net
+  Description:
+  Couldn't inventory the computers.
+  Job: foo2
+  ID: 20ac3f75-4945-41d1-9a79-d11dbb57798b
+  State: Failed
+  Error: 36934
+  Error Message: Inventory failed for all devices
+  Guidance: Check the detailed error and make sure the inventory requirements are met. The job couldn't inventory any of the specified source computers. This could be because the orchestrator computer couldn't reach it over the network, possibly due to a firewall rule or missing permissions.
+  
+  Log Name:      Microsoft-Windows-StorageMigrationService/Admin
+  Source:        Microsoft-Windows-StorageMigrationService
+  Date:          9/9/2019 5:21:42 PM
+  Event ID:      2509
+  Task Category: None
+  Level:         Error
+  Keywords:      
+  User:          NETWORK SERVICE
+  Computer:      FS02.TailwindTraders.net
+  Description:
+  Couldn't inventory a computer.
+  Job: foo2
+  Computer: FS01.TailwindTraders.net
+  State: Failed
+  Error: -2147463168
+  Error Message: 
+  Guidance: Check the detailed error and make sure the inventory requirements are met. The inventory couldn't determine any aspects of the specified source computer. This could be because of missing permissions or privileges on the source or a blocked firewall port.
+  
+This error is caused by a code defect in Storage Migration Service when you provide migration credentials in the form of a User Principal Name (UPN), such as 'meghan@contoso.com'. The Storage Migration Service orchestrator service fails to parse this format correctly, which leads to a failure in a domain lookup that was added for cluster migration support in KB4512534 and 19H1.
+
+To workaround this issue, provide credentials in the domain\user format, such as 'Contoso\Meghan'.
+
+## Error "ServiceError0x9006" or "The proxy isn't currently available." when migrating to a Windows Server Failover Cluster
+
+When attempting to transfer data against a clustered File Server, you receieve errors such as: 
+
+   Make sure the proxy service is installed and running, and then try again. The proxy isn't currently available.
+   0x9006
+   ServiceError0x9006,Microsoft.StorageMigration.Commands.UnregisterSmsProxyCommand
+
+This error is expected if the File Server resource moved from its original Windows Server 2019 cluster owner node to a new node and the Storage Migration Service Proxy feature wasn't installed on that node.
+
+As a workaround, move the destination File Server resource back to the original owner cluster node that was in use when you first configured transfer pairings.
+
+As an alternative workaround:
+
+1. Install the Storage Migration Service Proxy feature on all nodes in a cluster.
+2. Run the following Storage Migration Service PowerShell command on the orchestrator computer: 
+
+   ```PowerShell
+   Register-SMSProxy -ComputerName *destination server* -Force
+   ```
 
 ## See also
 
