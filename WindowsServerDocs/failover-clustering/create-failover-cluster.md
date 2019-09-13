@@ -99,14 +99,6 @@ For more information about hardware validation tests, see [Validate Hardware for
 
 ## Create the failover cluster
 
-  >[!NOTE]
-  > Windows Server 2019 Build 17733 and up introduces the ["Distributed Network Name"](https://blogs.windows.com/windowsexperience/2018/08/14/announcing-windows-server-2019-insider-preview-build-17733/#W0YAxO8BfwBRbkzG.97) feature, which is installed by default when using the Failover Cluster Manager snap-in. The new associated cluster cmdlet **ManagementPointNetworkType** accepts the following values: 
-1.Singleton: Use the traditional method of DHCP or static IP address.
-1.Distributed: Use a Distributed Network Name using node IP addresses.( The default setting when using the cluster manager GUI)
-1.Automatic: Use detection. If running in Azure, use Distributed; if running on-premises, use Singleton (traditional Method).
-Sample command:  `New-Cluster –Name MyCluster –Node Server1, Server2 –StaticAddress 192.168.1.12 -NoStorage -ManagementPointNetworkType Singleton`
-
-
 To complete this step, make sure that the user account that you log on as meets the requirements that are outlined in the [Verify the prerequisites](#verify-the-prerequisites) section of this topic.
 
 1. Start Server Manager.
@@ -128,6 +120,10 @@ To complete this step, make sure that the user account that you log on as meets 
           - To specify a different location for the CNO, you can enter the distinguished name of an OU in the **Cluster Name** box. For example: *CN=ClusterName, OU=Clusters, DC=Contoso, DC=com*.
           - If a domain administrator has prestaged the CNO in a different OU than where the cluster nodes reside, specify the distinguished name that the domain administrator provides.
     2. If the server does not have a network adapter that is configured to use DHCP, you must configure one or more static IP addresses for the failover cluster. Select the check box next to each network that you want to use for cluster management. Select the **Address** field next to a selected network, and then enter the IP address that you want to assign to the cluster. This IP address (or addresses) will be associated with the cluster name in Domain Name System (DNS).
+    
+      >[!NOTE]
+      > If you're using Windows Server 2019, you have the option to use a distributed network name for the cluster. A distributed network name uses the IP addresses of the member servers instead of requiring a dedicated IP address for the cluster. By default, Windows uses a distributed network name if it detects that you're creating the cluster in Azure (so you don't have to create an internal load balancer for the cluster), or a normal static or IP address if you're running on-premises. For more info, see [Distributed Network Name](https://blogs.windows.com/windowsexperience/2018/08/14/announcing-windows-server-2019-insider-preview-build-17733/#W0YAxO8BfwBRbkzG.97).
+    
     3. When you are finished, select **Next**.
 8. On the **Confirmation** page, review the settings. By default, the **Add all eligible storage to the cluster** check box is selected. Clear this check box if you want to do either of the following:
     
