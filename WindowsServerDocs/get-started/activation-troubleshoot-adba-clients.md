@@ -25,7 +25,6 @@ Ha Ha! Just kidding! Nothing is ever that easy. Truthfully, the set up and confi
 
 I went to one of my problem servers, opened a command prompt, and checked my output from the **slmgr /ao-list** command. The **/ao-list** switch displays all activation objects in Active Directory.
 
-[!div class="mx-imgBorder"]
 ![Image that shows the slmgr command](./media/032618_1700_Troubleshoo1.png)
 
 ![Image that shows the results of the slmgr command](./media/032618_1700_Troubleshoo2.png)
