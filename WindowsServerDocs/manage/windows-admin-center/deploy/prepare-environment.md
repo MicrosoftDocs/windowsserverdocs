@@ -31,7 +31,7 @@ Windows Admin Center requires PowerShell features that are not included by defau
 Type `$PSVersiontable` in PowerShell to verify that WMF is installed,
 and that the version is 5.1 or higher.
 
-If it is not installed, you can [download and install WMF 5.1](https://docs.microsoft.com/powershell/wmf/5.1/install-configure).
+If it is not installed, you can [download and install WMF 5.1](https://docs.microsoft.com/powershell/wmf/setup/install-configure).
 
 ## Prepare Windows Server 2008 R2
 
@@ -111,7 +111,7 @@ Windows Admin Center requires PowerShell features that are not included by defau
 Type `$PSVersiontable` in PowerShell to verify that WMF is installed,
 and that the version is 5.1 or higher. 
 
-If it is not installed, you can [download WMF 5.1](https://docs.microsoft.com/powershell/wmf/5.1/install-configure).
+If it is not installed, you can [download WMF 5.1](https://docs.microsoft.com/powershell/wmf/setup/install-configure).
 
 ### Step 2: Enable Remote Management
 
