@@ -22,7 +22,7 @@ The process of upgrading to a newer version of Windows Server can vary greatly d
 
 - **Migration.** You move from an older version of the operating system to a newer version of the operating system by transferring to a different set of hardware or virtual machine.
 
-- **Cluster OS Rolling Upgrade.** You upgrade the operating system of your cluster nodes without stopping the Hyper-V or the Scale-Out File Server workloads. This feature allows you to avoid downtime which could impact Service Level Agreements. For more information, see [Cluster operating system rolling upgrade](failover-clustering/cluster-operating-system-rolling-upgrade.md)
+- **Cluster OS Rolling Upgrade.** You upgrade the operating system of your cluster nodes without stopping the Hyper-V or the Scale-Out File Server workloads. This feature allows you to avoid downtime which could impact Service Level Agreements. For more information, see [Cluster operating system rolling upgrade](../failover-clustering/cluster-operating-system-rolling-upgrade.md)
 
 - **License conversion.** Convert a particular edition of the release to another edition of the same release in a single step with a simple command and the appropriate license key. We call this "license conversion". For example, if your server is running Windows Server 2016 Standard, you can convert it to Windows Server 2016 Datacenter.
 
@@ -36,7 +36,7 @@ However, we realize that's not always possible. You can use the following diagra
 
 Windows Server can be typically be upgraded through at least one, and sometimes even two, versions. For example, Windows Server 2012 R2 and Windows Server 2016 can both be upgraded in-place to Windows Server 2019.
 
-You can also upgrade from an evaluation version of the operating system to a retail version, from an older retail version to a newer version, or, in some cases, from a volume-licensed edition of the operating system to an ordinary retail edition. For more information about upgrade options other than in-place upgrade, see [Upgrade and conversion options for Windows Server](get-started/supported-upgrade-paths.md).
+You can also upgrade from an evaluation version of the operating system to a retail version, from an older retail version to a newer version, or, in some cases, from a volume-licensed edition of the operating system to an ordinary retail edition. For more information about upgrade options other than in-place upgrade, see [Upgrade and conversion options for Windows Server](../get-started/supported-upgrade-paths.md).
 
 ## Before you begin your in-place upgrade
 
