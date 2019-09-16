@@ -1,5 +1,5 @@
 ---
-title: Additional information on the Windows Desktop client
+title: Windows Desktop client for admins
 description: Information on the Windows Desktop client primarily useful to admins.
 ms.custom: na
 ms.prod: windows-server-threshold
@@ -11,58 +11,66 @@ ms.topic: article
 author: heidilohr
 manager: daveba
 ms.author: helohr
-ms.date: 09/15/2019
+ms.date: 09/16/2019
 ms.localizationpriority: medium
 ---
-# Additional information on the Windows Desktop client
+# Windows Desktop client for admins
 
 >Applies to: Windows 10 and Windows 7
 
-This page contains additional information for the Windows Desktop client. This may be primarily useful to admins managing the client. For basic usage of the client, refer to [Get started with the Windows Desktop client](windowsdesktop.md).
+This topic has additional information about the Windows Desktop client that admins will find useful. For basic usage information, see [Get started with the Windows Desktop client](windowsdesktop.md).
 
 ## Installation options
 
-While users can install the client directly after downloading it, you may want to deploy the client to multiple devices through other means like group policies or System Center Configuration Manager. This generally means running the installer silently using a command line. Use the following commands to deploy the client per-device or per-user.
+Although your users can install the client directly after downloading it, if you're deploying to multiple devices, you may want to also deploy the client to them through other means. Deploying using group policies or the System Center Configuration Manager lets you run the installer silently using a command line. Run the following commands to deploy the client per-device or per-user.
 
-**Per-device installation**
-msiexec.exe /i `<path to the MSI>` /qn ALLUSERS=1
+### Per-device installation
 
-**Per-user installation**
+```code
+msiexec.exe /I <path to the MSI> /qn ALLUSERS=1
+```
+
+### Per-user installation
+
+```code
 msiexec.exe /i `<path to the MSI>` /qn ALLUSERS=2 MSIINSTALLPERUSER=1
+```
 
 ## Configuration options
 
 This section describes the new configuration options for this client.
 
-### Configuring the update notifications
+### Configure update notifications
 
-By default, the client shows a notification when there is a new update available. If you are managing client updates for a group of users or simply do not want to see the notifications, you can turn them off by setting the following registry information:<br>
-**Key:** HKLM\Software\Microsoft\MSRDC\Policies<br>
-**Type:** REG_DWORD<br>
-**Name:** AutomaticUpdates<br>
-**Data:** 0 = Disable notifications. 1 = Show notifications.
+By default, the client notifies you whenever there's an update. To turn notifications off, set the following registry information:
 
-### Configuring the user group
+- **Key:** HKLM\Software\Microsoft\MSRDC\Policies
+- **Type:** REG_DWORD
+- **Name:** AutomaticUpdates
+- **Data:** 0 = Disable notifications. 1 = Show notifications.
 
-You can configure the client for one of two user groups which determines when the client receives updates.
+### Configure user groups
+
+You can configure the client for one of the following types of user groups, which determines when the client receives updates.
 
 #### Insider group
 
-This group is for early validation and is primarily targeted for admins and their selected users to detect any issues that might impact their specific configuration before the client is released to the Public group.
+The Insider group is for early validation, and consists of admins and their selected users. The Insider group serves as a test run to detect any issues in the update that can impact performance before it's released to the Public group.
 
 > [!NOTE]
-> It is recommended that each customer have some users in the Insider group to minimize risk and catch issues early.
+> We recommend each organization have some users in the Insider group to test updates and catch issues early.
 
-In general, on the second Tuesday of each month, a new version of the client is released to the Insider group for early validation before moving to the Public group two weeks later. Users who joined the Insider group will receive an update notification automatically when it is available. The changes to the client will be available for review soon after it's released at [What's new with the Windows Desktop client](windowsdesktop-whatsnew.md).
+In the Insider group, a new version of the client is released to the users on the second Tuesday of each month for early validation. If the update doesn't have issues, it gets released to the Public group two weeks later. Users in the Insider group will receive update notifications automatically whenever updates are ready. You can find more detailed information about changes to the client at [What's new with the Windows Desktop client](windowsdesktop-whatsnew.md).
 
-To configure the client for the Insider group, set the following registry information:<br>
-**Key:** HKLM\Software\Microsoft\MSRDC\Policies<br>
-**Type:** REG_SZ<br>
-**Name:** ReleaseRing<br>
-**Data:** insider
+To configure the client for the Insider group, set the following registry information:
+
+- **Key:** HKLM\Software\Microsoft\MSRDC\Policies
+- **Type:** REG_SZ
+- **Name:** ReleaseRing
+- **Data:** insider
 
 #### Public group
 
-This group is for all users to use for their daily usage and is the most stable version. No special configuration is needed.
+This group is for all users and is the most stable version. You don't need to do anything to configure this group.
 
-In general, on the fourth Tuesday of each month, the latest Insider version is promoted to the Public group. This version is then available to all users who will receive an update notification if enabled.
+The Public group receives the version of the client that was tested by the Insider group every fourth Tuesday of each month. All users in the Public group will receive an update notification if that setting is enabled.
