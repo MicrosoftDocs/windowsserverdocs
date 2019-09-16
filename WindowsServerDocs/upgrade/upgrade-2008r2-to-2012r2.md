@@ -69,7 +69,7 @@ After you've collected all of your Windows Server-related information, we highly
 
     The in-place upgrade starts, showing you the **Upgrading Windows** screen with its progress. After the upgrade finishes, your server will restart.
 
-## After upgrade completes
+## After your upgrade is done
 
 After your upgrade completes, you must make sure the upgrade to Windows Server 2012 R2 was successful.
 
@@ -83,7 +83,7 @@ If you think something might have gone wrong during your upgrade, copy and zip t
 
 ## Next steps
 
-You can perform one more upgrade to go from Windows Server 2012 R2 to Windows Server 2019. For detailed instructions, see [Upgrade Windows Server 2012 R2 to Windows Server 2019](upgrade-2012r2-2019.md).
+You can perform one more upgrade to go from Windows Server 2012 R2 to Windows Server 2019. For detailed instructions, see [Upgrade Windows Server 2012 R2 to Windows Server 2019](upgrade-2012r2-to-2019.md).
 
 ## Related articles
 

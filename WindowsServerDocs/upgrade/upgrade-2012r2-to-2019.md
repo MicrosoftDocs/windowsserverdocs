@@ -69,7 +69,7 @@ After you've collected all of your Windows Server-related information, we highly
 
     ![Screen showing your upgrade progress](media/upgrade-2012r2-2019/upgrading-windows-with-progress.png)
 
-## After upgrade completes
+## After your upgrade is done
 
 After your upgrade completes, you must make sure the upgrade to Windows Server 2019 was successful.
 
