@@ -11,21 +11,21 @@ ms.topic: article
 author: heidilohr
 manager: daveba
 ms.author: helohr
-ms.date: 09/13/2019
+ms.date: 09/16/2019
 ms.localizationpriority: medium
 ---
 # What's new in the Windows Desktop client
 
-We regularly update the [Windows Desktop client](windowsdesktop.md), adding new features and fixing issues. Here's where you'll find the latest updates.
+You can find more detailed information about the Windows Desktop client at [Get started with the Windows Desktop client](windowsdesktop.md). You'll find the latest updates to client below.
 
-## Client versions
+## Latest client versions
 
-The client can be configured to use different versions for Release or Insider customers. The Release version is the default configuration.
+The client can be configured for different [user groups](windowsdesktop-admin.md#configure-user-groups). The following table lists the current versions available for each user group:
 
-|Customer |Version  |
-|---------|---------|
-|Release  |1.2.246  |
-|Insider  |1.2.246  |
+|User group |Version  |
+|-----------|---------|
+|Public     |1.2.246  |
+|Insider    |1.2.246  |
 
 ## Updates for version 1.2.246
 
