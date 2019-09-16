@@ -12,7 +12,7 @@ ms.assetid: 64f038e1-40ec-4c67-938b-72edea49e5d8
 author: heidilohr
 manager: daveba
 ms.author: helohr
-ms.date: 09/15/2019
+ms.date: 09/16/2019
 ms.localizationpriority: medium
 ---
 # Get started with the Android client
@@ -213,11 +213,11 @@ The client uses standard touch gestures. You can also use touch gestures to repl
 
 | Mouse mode    | Mouse action         | Gesture                                                                 |
 |---------------|----------------------|-------------------------------------------------------------------------|
-| Direct touch  | Left click           | Tap with one finger                                                     |
-| Direct touch  | Right click          | Tap with one finger and hold, then release                              |
+| Direct touch  | Left-click           | Tap with one finger                                                     |
+| Direct touch  | Right-click          | Tap with one finger and hold, then release                              |
 | Mouse pointer | Zoom                 | Use two fingers and pinch to zoom in or move fingers apart to zoom out. |
-| Mouse pointer | Left click           | Tap with one finger                                                     |
-| Mouse pointer | Left click and drag  | Double-tap and hold with one finger, then drag                          |
-| Mouse pointer | Right click          | Tap with two fingers                                                    |
-| Mouse pointer | Right click and drag | Double-tap and hold with two fingers, then drag                         |
+| Mouse pointer | Left-click           | Tap with one finger                                                     |
+| Mouse pointer | Left-click and drag  | Double-tap and hold with one finger, then drag                          |
+| Mouse pointer | Right-click          | Tap with two fingers                                                    |
+| Mouse pointer | Right-click and drag | Double-tap and hold with two fingers, then drag                         |
 | Mouse pointer | Mouse wheel          | Tap and hold with two fingers, then drag up or down                     |
