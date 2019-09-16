@@ -26,13 +26,13 @@ Although your users can install the client directly after downloading it, if you
 
 ### Per-device installation
 
-```code
+```
 msiexec.exe /I <path to the MSI> /qn ALLUSERS=1
 ```
 
 ### Per-user installation
 
-```code
+```
 msiexec.exe /i `<path to the MSI>` /qn ALLUSERS=2 MSIINSTALLPERUSER=1
 ```
 
