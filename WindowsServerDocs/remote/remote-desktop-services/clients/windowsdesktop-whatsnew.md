@@ -20,7 +20,7 @@ You can find more detailed information about the Windows Desktop client at [Get 
 
 ## Latest client versions
 
-The client can be configured for different [user groups](windowsdesktop-admin.md#configuring-the-user-group). The following table lists the current versions available for each user group:
+The client can be configured for different [user groups](windowsdesktop-admin.md#configure-user-groups). The following table lists the current versions available for each user group:
 
 |User group |Version  |
 |-----------|---------|
