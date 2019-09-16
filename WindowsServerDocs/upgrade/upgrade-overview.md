@@ -40,18 +40,16 @@ You can also upgrade from an evaluation version of the operating system to a ret
 
 ## Before you begin your in-place upgrade
 
-Before you start your Windows Server upgrade, you must collect some information from your machines.
+Before you start your Windows Server upgrade, we recommend that you collect some information from your devices, for diagnostic and troubleshooting purposes. Because this information is intended for use only if your upgrade fails, you must make sure that you store the information somewhere that you can get to it off of your device.
 
 ### To collect your info
 
 1. Open a command prompt, go to `c:\Windows\system32`, and then type **systeminfo.exe**.
 
-2. Copy and paste the resulting system information, locally.
+2. Copy, paste, and store the resulting system information somewhere off of your device.
 
-3. Type **ipconfig /all** into the command prompt, and then copy and paste the resulting configuration information, locally.
+3. Type **ipconfig /all** into the command prompt, and then copy and paste the resulting configuration information into the same location as above.
 
-4. Open the Registry Editor, go to the HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\WindowsNT\CurrentVersion hive, and copy and paste the information, locally.
+4. Open the Registry Editor, go to the HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\WindowsNT\CurrentVersion hive, and then copy and paste the Windows Server **BuildLabEx** (version) and **EditionID** (edition) into the same location as above.
 
-    The **CurrentVersion** hive gives you the exact version (BuildLabEx) and edition (EditionID) for your Windows Server.
-
-After you've collected all of your Windows Server-related information, we highly recommend that you backup your operating system, apps, and virtual machines. You must also Shut down, Quick migrate, or Live migrate any Virtual Machines currently running on the server. You can't have any Virtual Machines running during the in-place upgrade.
+After you've collected all of your Windows Server-related information, we highly recommend that you backup your operating system, apps, and virtual machines. You must also **Shut down**, **Quick migrate**, or **Live migrate** any virtual machines currently running on the server. You can't have any virtual machines running during the in-place upgrade.
