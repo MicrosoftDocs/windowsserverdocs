@@ -96,8 +96,12 @@ You can migrate the following additional source types if the orchestrator is run
 
 - Failover clusters
 - Linux servers that use Samba. We've tested the following:
-    - RedHat Enterprise Linux 7.6, CentOS 7, Debian 8, Ubuntu 16.04 and 12.04.5, SUSE Linux Enterprise Server (SLES) 11 SP4
-    - Samba 4.x, 3.6.x
+    - CentOS 7
+    - Debian GNU/Linux 8
+    - RedHat Enterprise Linux 7.6
+    - SUSE Linux Enterprise Server (SLES) 11 SP4
+    - Ubuntu 16.04 LTS and 12.04.5 LTS
+    - Samba 4.8, 4.7, 4.3, 4.2, and 3.6
 
 ### Requirements for destination servers
 
