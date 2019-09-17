@@ -34,7 +34,7 @@ Professional user uses browser and productivity applications that can support mo
 
 Power user uses engineering specific and graphics application such as CAD and Adobe Photoshop. There are GPU options that support graphic intensive workloads including video rendering, 3D design, and simulations.
 
-For more information on graphics acceleration usage, check out [Choose your graphics rendering technology](rds-graphics-virtualization).
+For more information on graphics acceleration usage, check out [Choose your graphics rendering technology](rds-graphics-virtualization.md).
 
 For more information on the available GPU VM sizes, check out [GPU optimized virtual machines sizes](https://docs.microsoft.com/en-us/azure/virtual-machines/windows/sizes-gpu).
 
