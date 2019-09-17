@@ -42,7 +42,7 @@ highlightedContent:
 
 conceptualContent: 
   items: 
-- title: Upgrade Windows Server 
+    - title: Upgrade Windows Server 
       links: 
         - url: /windows-server/upgrade/upgrade-2008r2-to-2012r2
           itemType: how-to-guide
