@@ -37,19 +37,3 @@ However, we realize that's not always possible. You can use the following diagra
 Windows Server can be typically be upgraded through at least one, and sometimes even two, versions. For example, Windows Server 2012 R2 and Windows Server 2016 can both be upgraded in-place to Windows Server 2019.
 
 You can also upgrade from an evaluation version of the operating system to a retail version, from an older retail version to a newer version, or, in some cases, from a volume-licensed edition of the operating system to an ordinary retail edition. For more information about upgrade options other than in-place upgrade, see [Upgrade and conversion options for Windows Server](../get-started/supported-upgrade-paths.md).
-
-## Before you begin your in-place upgrade
-
-Before you start your Windows Server upgrade, we recommend that you collect some information from your devices, for diagnostic and troubleshooting purposes. Because this information is intended for use only if your upgrade fails, you must make sure that you store the information somewhere that you can get to it off of your device.
-
-### To collect your info
-
-1. Open a command prompt, go to `c:\Windows\system32`, and then type **systeminfo.exe**.
-
-2. Copy, paste, and store the resulting system information somewhere off of your device.
-
-3. Type **ipconfig /all** into the command prompt, and then copy and paste the resulting configuration information into the same location as above.
-
-4. Open the Registry Editor, go to the HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\WindowsNT\CurrentVersion hive, and then copy and paste the Windows Server **BuildLabEx** (version) and **EditionID** (edition) into the same location as above.
-
-After you've collected all of your Windows Server-related information, we highly recommend that you backup your operating system, apps, and virtual machines. You must also **Shut down**, **Quick migrate**, or **Live migrate** any virtual machines currently running on the server. You can't have any virtual machines running during the in-place upgrade.

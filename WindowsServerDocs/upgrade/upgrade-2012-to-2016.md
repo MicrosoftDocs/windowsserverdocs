@@ -35,39 +35,39 @@ After you've collected all of your Windows Server-related information, we highly
 
 2. Locate the Windows Server 2016 Setup media, and then select **setup.exe**.
 
-    ![Windows Explorer showing the setup.exe file](media/upgrade-2012-to-2016/setup-2016.png)
+    ![Windows Explorer showing the setup.exe file](media/upgrade-2012-2016/setup-2016.png)
 
 3. Select **Yes** to start the setup process.
 
-    ![User Account Control asking for permission to start setup](media/upgrade-2012-to-2016/start-setup-uac-box.png)
+    ![User Account Control asking for permission to start setup](media/upgrade-2012-2016/start-setup-uac-box.png)
 
 4. On the Windows Server 2016 screen, select **Install now**.
 
 5. For internet-connected devices, select **Download and install updates (recommended)**.
 
-    ![Screen to choose to go online to get important Windows updates](media/upgrade-2012-to-2016/imp-updates-win-setup.png)
+    ![Screen to choose to go online to get important Windows updates](media/upgrade-2012-2016/imp-updates-win-setup.png)
 
 6. Setup checks your device configuration, you must wait for it to finish, and then select **Next**.
 
 7. Depending on the distribution channel that you received Windows Server media from (Retail, Volume License, OEM, ODM, etc.) and the license for the server, you may be prompted to enter a licensing key to proceed.
 
-    ![Screen where you can enter your product key](media/upgrade-2012-to-2016/enter-product-key.png)
+    ![Screen where you can enter your product key](media/upgrade-2012-2016/enter-product-key.png)
 
 8. Select the Windows Server 2016 edition you want to install, and then select **Next**.
 
-    ![Screen to choose which Windows Server 2016 edition to install](media/upgrade-2012-to-2016/select-os-edition.png)
+    ![Screen to choose which Windows Server 2016 edition to install](media/upgrade-2012-2016/select-os-edition.png)
 
 9. Select **Accept** to accept the terms of your licensing agreement, based on your distribution channel (such as, Retail, Volume License, OEM, ODM, and so on).
 
-    ![Screen to accept your license agreement](media/upgrade-2012-to-2016/license-terms.png)
+    ![Screen to accept your license agreement](media/upgrade-2012-2016/license-terms.png)
 
 10. Select **Keep personal files and apps** to choose to do an in-place upgrade, and then select **Next**.
 
-    ![Screen to choose your installation type](media/upgrade-2012-to-2016/choose-install-upgrade.png)
+    ![Screen to choose your installation type](media/upgrade-2012-2016/choose-install-upgrade.png)
 
 11. If you see a page that tells you upgrade isn't recommended, you can ignore it and select **Confirm**. It was put in place to prompt for clean installations, but it isn't necessary.
 
-    ![Screen showing the Confirm button to make sure you want to do the upgrade](media/upgrade-2012-to-2016/confirm-upgrade-process.png)
+    ![Screen showing the Confirm button to make sure you want to do the upgrade](media/upgrade-2012-2016/confirm-upgrade-process.png)
 
 12. Setup will tell you to remove Microsoft Endpoint Protection using **Add/Remove programs**.
 
@@ -75,11 +75,11 @@ After you've collected all of your Windows Server-related information, we highly
 
 13. After Setup analyzes your device, it will prompt you to proceed with your upgrade by selecting **Install**.
 
-    ![Screen showing you're ready to start the upgrade](media/upgrade-2012-to-2016/ready-to-install.png)
+    ![Screen showing you're ready to start the upgrade](media/upgrade-2012-2016/ready-to-install.png)
 
     The in-place upgrade starts, showing you the **Upgrading Windows** screen with its progress. After the upgrade finishes, your server will restart.
 
-    ![Screen showing your upgrade progress](media/upgrade-2012-to-2016/upgrading-windows-with-progress.png)
+    ![Screen showing your upgrade progress](media/upgrade-2012-2016/upgrading-windows-with-progress.png)
 
 ## After your upgrade is done
 

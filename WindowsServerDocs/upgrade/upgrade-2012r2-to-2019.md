@@ -31,7 +31,7 @@ After you've collected all of your Windows Server-related information, we highly
 
 ## To perform the upgrade
 
-1. Make sure the **BuildLabEx** value says you're running Windows Server 2019.
+1. Make sure the **BuildLabEx** value says you're running Windows Server 2012 R2.
 
 2. Locate the Windows Server 2019 Setup media, and then select **setup.exe**.
 
@@ -47,7 +47,7 @@ After you've collected all of your Windows Server-related information, we highly
 
 5. Setup checks your device configuration, you must wait for it to finish, and then select **Next**.
 
-6. Depending on the distribution channel that you received Windows Server media from (Retail, Volume License, OEM, ODM, etc.) and the license for the server, you may be prompted to enter a licensing key to proceed.
+6. Depending on the distribution channel that you received Windows Server media from (Retail, Volume License, OEM, ODM, etc.) and the license for the server, you may be prompted to enter a licensing key to continue.
 
 7. Select the Windows Server 2019 edition you want to install, and then select **Next**.
 
