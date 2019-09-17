@@ -57,11 +57,15 @@ After you've collected all of your Windows Server-related information, we highly
 
     ![Screen to accept your license agreement](media/upgrade-2012r2-2019/license-terms.png)
 
-9. Select **Keep personal files and apps** to choose to do an in-place upgrade, and then select **Next**.
+9. Setup will recommend that you remove Microsoft Endpoint Protection using **Add/Remove programs**.
+
+    This feature isn't compatible with Windows Server 2019.
+
+10. Select **Keep personal files and apps** to choose to do an in-place upgrade, and then select **Next**.
 
     ![Screen to choose your installation type](media/upgrade-2012r2-2019/choose-install-upgrade.png)
 
-10. After Setup analyzes your device, it will prompt you to proceed with your upgrade by selecting **Install**.
+11. After Setup analyzes your device, it will prompt you to proceed with your upgrade by selecting **Install**.
 
     ![Screen showing you're ready to start the upgrade](media/upgrade-2012r2-2019/ready-to-install.png)
 
