@@ -116,7 +116,7 @@ The minimum group membership required to complete the following procedure depend
 
 #### To configure the account for the person who installs the cluster
 
-1.  Create or obtain a domain account for the person who installs the cluster. This account can be a domain user account or an **Account Operators** account. If you use a standard user account, you'll have to give it a couple extra permissions, later in this procedure.
+1.  Create or obtain a domain account for the person who installs the cluster. This account can be a domain user account or an **Account Operators** account. If you use a standard user account, you'll have to give it some extra permissions later in this procedure.
 
 2.  If the account that was created or obtained in step 1 isn't automatically included in the local **Administrators** group on computers in the domain, add the account to the local **Administrators** group on the servers that will be nodes in the failover cluster:
     
