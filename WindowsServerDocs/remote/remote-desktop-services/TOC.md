@@ -68,6 +68,7 @@
 ### [Available Remote Desktop clients](clients/remote-desktop-clients.md)
 ### Windows Desktop client
 #### [Get started with the Windows Desktop client](clients/windowsdesktop.md)
+#### [Windows Desktop client for admins](clients/windowsdesktop-admin.md)
 #### [What's new in the Windows Desktop client](clients/windowsdesktop-whatsnew.md)
 ### Windows Store client
 #### [Get started with the Windows Store client](clients/windows.md)
