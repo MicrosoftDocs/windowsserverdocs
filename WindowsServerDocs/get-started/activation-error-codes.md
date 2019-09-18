@@ -1,8 +1,8 @@
 ---
-title: Resolving common activation error codes
+title: Resolve Windows activation error codes
 description: Learn how to troubleshoot activation error codes
 ms.topic: troubleshooting
-ms.date: 9/10/2019
+ms.date: 9/18/2019
 ms.technology: server-general
 ms.topic: article
 ms.assetid: 
@@ -11,7 +11,7 @@ ms.author: kaushika-msft; v-tea
 ms.localizationpriority: medium
 ---
 
-# Resolving common activation error codes
+# Resolve Windows activation error codes
 
 > **Home users**  
 > This article is intended for use by support agents and IT professionals. If you're looking for more information about Windows activation error messages, see [Get help with Windows activation errors](https://support.microsoft.com/help/10738/windows-10-get-help-with-activation-errors).  
