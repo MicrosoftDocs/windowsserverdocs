@@ -95,7 +95,7 @@ If you are using Azure infrastructure, you can create an external Azure load bal
     5.  Select the appropriate **Subscription**, **Resource Group**, and **Location**.
     6.  Click **Create**.  
 2. Create a [probe](https://azure.microsoft.com/documentation/articles/load-balancer-custom-probe-overview/) to monitor which servers are alive:  
-    1.  In the Azure portal, select **Browse > Load Balancers**, and then choose the load balancer that you created in the previous step.
+    1.  In the Azure portal, select **Browse** > **Load Balancers**, and then choose the load balancer that you created in the previous step.
     2.  Select **All settings** > **Probes** > **Add**.  
     3.  Enter a name, for example, **HTTPS**, for the probe. Select **TCP** as the **Protocol**, and enter **443** for the **Port**, then click **OK**.   
 3.  Create the HTTPS and UDP load balancing rules:  
