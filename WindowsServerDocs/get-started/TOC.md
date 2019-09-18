@@ -29,8 +29,8 @@
 ### [Slmgr.vbs options](activation-slmgr-vbs-options.md)
 ### Solutions to common activation issues
 #### [Resolve Windows activation error codes](activation-error-codes.md)
-#### [KMS activation&mdash;known issues](activation-troubleshoot-KMS-issues.md)
-#### [MAK activation&mdash;known issues](activation-troubleshoot-MAK-issues.md)
+#### [KMS activation--known issues](activation-troubleshoot-KMS-issues.md)
+#### [MAK activation--known issues](activation-troubleshoot-MAK-issues.md)
 #### [Guidelines for troubleshooting DNS-related activation issues](common-troubleshooting-procedures-kms-dns.md)
 #### [Rebuild the Tokens.dat file](activation-rebuild-tokens-dat-file.md)
 ### [Example: Troubleshooting ADBA clients that do not activate](activation-troubleshoot-adba-clients.md)
