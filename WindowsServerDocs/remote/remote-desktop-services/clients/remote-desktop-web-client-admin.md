@@ -259,6 +259,9 @@ As an administrator, you can choose to suppress telemetry collection for your de
 By default, the user may select to enable or disable telemetry. A boolean value **$false** will match the default client behavior. A boolean value **$true** disables telemetry and restricts the user from enabling telemetry.
 
 ### Remote resource launch method
+
+> This setting only works with the RDS web client today. This will be supported by the Windows Virtual Desktop web client in a future release.
+
 By default, users may choose to launch remote resources (1) in the browser or (2) by downloading an .rdp file to handle with another client installed on their machine. As an administrator, you can choose to restrict the remote resource launch method for your deployment with the following Powershell command:
 
    ```PowerShell
