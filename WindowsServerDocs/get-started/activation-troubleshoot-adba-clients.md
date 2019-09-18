@@ -25,8 +25,10 @@ Ha Ha! Just kidding! Nothing is ever that easy. Truthfully, the set up and confi
 
 I went to one of my problem servers, opened a command prompt, and checked my output from the **slmgr /ao-list** command. The **/ao-list** switch displays all activation objects in Active Directory.
 
+[!div class="mx-imgborder"]
 ![Image that shows the slmgr command](./media/032618_1700_Troubleshoo1.png)
 
+[!div class="mx-imgborder"]
 ![Image that shows the results of the slmgr command](./media/032618_1700_Troubleshoo2.png)
 
 The results show that we have two Activation Objects: one for Server 2012 R2, and our newly created KMS AD Activation (** LAB) which is our Windows Server 2016 license. This confirms our Active Directory is correctly configured to activate Windows KMS Clients
