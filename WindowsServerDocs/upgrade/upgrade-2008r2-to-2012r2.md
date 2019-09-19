@@ -13,6 +13,8 @@ ms.date: 09/16/2019
 
 If you want to keep the same hardware and all the server roles you've already set up without flattening the server, you'll want to do an in-place upgrade. An in-place upgrade allows you to go from an older operating system to a newer one, while keeping your settings, server roles, and data intact. This article helps you to move from Windows Server 2008 R2 to Windows Server 2012 R2.
 
+To upgrade to Windows Server 2019, use this topic first to upgrade to Windows Server 2012 R2, and then [upgrade from Windows Server 2012 R2 to Windows Server 2019](upgrade-2012r2-to-2019.md).
+
 ## Before you begin your in-place upgrade
 
 Before you start your Windows Server upgrade, we recommend that you collect some information from your devices, for diagnostic and troubleshooting purposes. Because this information is intended for use only if your upgrade fails, you must make sure that you store the information somewhere that you can get to it off of your device.
