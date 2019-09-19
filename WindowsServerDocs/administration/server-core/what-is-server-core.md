@@ -75,9 +75,11 @@ The following table shows which applications are available *locally* on Server C
 | Mstsc.exe                          | not available   | available                      |
 | Remote Desktop Services            | available       | available                      |
 | Hyper-V Manager                    | not available  | available                      |
-
+| WordPad <sup>1</sup>               | not available  | available                      |
 
 For more information about what *is* included in Server Core, see [Roles, Role Services, and Features included in Windows Server - Server Core](server-core-roles-and-services.md). And for information about what *is not* included in Server Core, see [Roles, Role Services, and Features not included in Server Core](server-core-removed-roles.md)
+
+<sup>1</sup> To read .rtf  files locally stored on Server Core SKU, users can copy to a different Windows computer where WordPad is present.
 
 ## Get started using Server Core
 Use the following information to install, configure, and manage the Server Core installation option of Windows Server.
