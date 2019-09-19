@@ -1728,7 +1728,7 @@ The following tables offer Microsoft guidance on disabling system services on Wi
 ## Sensor Service
 | | |
 |---|---|
-|   <strong>Service description</strong> |   A service for sensors that manages different sensors&#39; functionality. Manages Simple Device Orientation (SDO) and History for sensors. Loads the SDO sensor that reports device orientation changes.  If this service is stopped or disabled, the SDO sensor will not be loaded and so auto-rotation will not occur. History collection from Sensors will also be stopped.
+|   <strong>Service description</strong> |   A service for sensors that manages the functionality of different sensors. Manages Simple Device Orientation (SDO) and History for sensors. Loads the SDO sensor that reports device orientation changes.  If this service is stopped or disabled, the SDO sensor will not be loaded and so auto-rotation will not occur. History collection from Sensors will also be stopped.
 |   <strong>Service name</strong>    |   SensorService
 |   <strong>Installation</strong>    |   Only with Desktop Experience
 |   <strong>StartType</strong>   |   Manual
