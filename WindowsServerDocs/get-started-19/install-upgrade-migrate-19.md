@@ -27,9 +27,7 @@ The simplest way to install Windows Server is to perform a clean installation, w
 
 If you want to keep the same hardware and all the server roles you have set up without flattening the server, you'll want to do an  **In-place Upgrade**, by which you go from an older operating system to a newer one, keeping your settings, server roles, and data intact. For example, if your server is running Windows Server 2012 R2, you can upgrade it to Windows Server 2016 or Windows Server 2019. However, not every older operating system has a pathway to every newer one. 
 
-For step-by-step guidance on upgrading, visit the [Windows Server Upgrade Center](http://aka.ms/upgradecenter):
-
-[![Screenshot of Windows Server Upgrade Center](media/upgrade-center.png)](http://aka.ms/upgradecenter)
+For step-by-step guidance on upgrading, review the [Windows Server upgrade content](../upgrade/upgrade-overview.md).
 
 ## Cluster OS rolling upgrade
 
