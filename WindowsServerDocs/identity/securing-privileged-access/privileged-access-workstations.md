@@ -536,7 +536,7 @@ In this section, we will configure group policies to prevent privileged administ
      > [!NOTE]
      > This Group was created earlier in Phase 1.
 
-   - In Computer Configuration\Policies\Windows Settings\Security Settings\Local Policies\User Rights Assignment\Deny log on as a service,  select **Define these policy settings** and add the Tier 0 and Tier 1 groups:
+   * In Computer Configuration\Policies\Windows Settings\Security Settings\Local Policies\User Rights Assignment\Deny log on as a service,  select **Define these policy settings** and add the Tier 0 and Tier 1 groups:
      ```
      Enterprise Admins
      Domain Admins
