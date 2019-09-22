@@ -507,7 +507,7 @@ In this section, you will create a new "PAW Configuration - User" GPO which prov
 In this section, we will configure group policies to prevent privileged administrative accounts from logging onto lower tier hosts.
 
 1. Create the new **Restrict Workstation Logon** GPO - this setting will restrict Tier 0 and Tier 1 administrator accounts from logging onto standard workstations.  This GPO should be linked to the "Workstations" top-level OU and have the following settings:
-   - In Computer Configuration\Policies\Windows Settings\Security Settings\Local Policies\User Rights Assignment\Deny log on as a batch job, select **Define these policy settings** and add the Tier 0 and Tier 1 groups:
+   * In Computer Configuration\Policies\Windows Settings\Security Settings\Local Policies\User Rights Assignment\Deny log on as a batch job, select **Define these policy settings** and add the Tier 0 and Tier 1 groups:
      ```
      Enterprise Admins
      Domain Admins
@@ -566,7 +566,7 @@ In this section, we will configure group policies to prevent privileged administ
      > Note: This Group was created earlier in Phase 1
 
 2. Create the new **Restrict Server Logon** GPO - this setting will restrict Tier 0 administrator accounts from logging onto Tier 1 servers.  This GPO should be linked to the "Tier 1 Servers" top-level OU and have the following settings:
-   - In Computer Configuration\Policies\Windows Settings\Security Settings\Local Policies\User Rights Assignment\Deny log on as a batch job, select **Define these policy settings** and add the Tier 0 groups:
+   * In Computer Configuration\Policies\Windows Settings\Security Settings\Local Policies\User Rights Assignment\Deny log on as a batch job, select **Define these policy settings** and add the Tier 0 groups:
      ```
      Enterprise Admins
      Domain Admins
@@ -590,7 +590,7 @@ In this section, we will configure group policies to prevent privileged administ
      > [!NOTE]
      > Any custom created groups with effective Tier 0 access, see Tier 0 equivalency for more details.
 
-   - In Computer Configuration\Policies\Windows Settings\Security Settings\Local Policies\User Rights Assignment\Deny log on as a service, select **Define these policy settings** and add the Tier 0 groups:
+   * In Computer Configuration\Policies\Windows Settings\Security Settings\Local Policies\User Rights Assignment\Deny log on as a service, select **Define these policy settings** and add the Tier 0 groups:
      ```
      Enterprise Admins
      Domain Admins
