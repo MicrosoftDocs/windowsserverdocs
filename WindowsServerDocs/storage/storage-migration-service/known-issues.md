@@ -303,7 +303,7 @@ As an alternative workaround:
    ```
 ## Error "Dll was not found" when running inventory from a cluster node
 
-When attempting to run inventory with the SMS orchestrator installed on a Windows Server 2019 failover cluster node and targeting a Windows Server failover cluster general use file server source, you receive error
+When attempting to run inventory with the Storage Migration Service orchestrator installed on a Windows Server 2019 failover cluster node and targeting a Windows Server failover cluster general use file server source, you receive the following error:
 
    Dll not found
    
