@@ -306,7 +306,6 @@ As an alternative workaround:
 When attempting to run inventory with the Storage Migration Service orchestrator installed on a Windows Server 2019 failover cluster node and targeting a Windows Server failover cluster general use file server source, you receive the following error:
 
     DLL not found
-   
     [Error] Failed device discovery stage VolumeInfo with error: (0x80131524) Unable to load DLL 'Microsoft.FailoverClusters.FrameworkSupport.dll': The specified module could not be found. (Exception from HRESULT: 0x8007007E)   
 
 To workaround this issue, install the "Failover Cluster Management Tools" (RSAT-Clustering-Mgmt) on the server running the Storage Migration Service orchestrator. 
