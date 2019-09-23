@@ -51,7 +51,7 @@
 ##### [Live Migration Overview](hyper-v/manage/Live-migration-overview.md) 
 ##### [Set up hosts for live migration](hyper-v/deploy/Set-up-hosts-for-live-migration-without-Failover-Clustering.md) 
 ##### [Use live migration without Failover Clustering](hyper-v/manage/Use-live-migration-without-Failover-Clustering-to-move-a-virtual-machine.md)
-#### [Enable Intel Performance Monitoring Hardware](Performance-Monitoring-Hardware.md)
+#### [Enable Intel Performance Monitoring Hardware](hyper-v/manage/Performance-Monitoring-Hardware.md)
 
 ### [Hyper-V Performance Tuning](../administration/performance-tuning/role/hyper-v-server/index.md)
 ## [Hyper-V Virtual Switch](hyper-v-virtual-switch/Hyper-V-Virtual-Switch.md)
