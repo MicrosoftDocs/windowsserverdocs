@@ -28,5 +28,5 @@ Use the resources in this section to help you manage Hyper-V on Windows Server:
 - [Manage Integration Services](Manage-Hyper-V-integration-services.md)
 - [Manage Windows VMs with PowerShell Direct](Manage-Windows-virtual-machines-with-powershell-direct.md)
 - [Set up Hyper-V Replica](Set-up-Hyper-V-Replica.md) 
+- [Enable Intel Performance Monitoring Hardware](Performance-Monitoring-Hardware.md)
 - [Move VMs with live migration](Live-migration-overview.md)
-- [Enabling Intel Performance Monitoring Hardware](Performance-Monitoring-Hardware.md)
