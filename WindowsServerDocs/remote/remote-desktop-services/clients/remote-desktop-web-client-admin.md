@@ -4,7 +4,7 @@ description: Describes how an admin can set up the Remote Desktop web client.
 ms.prod: windows-server-threshold
 ms.technology: remote-desktop-services
 ms.author: helohr
-ms.date: 11/2/2018
+ms.date: 09/19/2019
 ms.topic: article
 author: Heidilohr
 ms.localizationpriority: medium
@@ -78,7 +78,7 @@ To install the web client for the first time, follow these steps:
     Make sure you can access the web client at the web client URL with your server name, formatted as <https://server_FQDN/RDWeb/webclient/index.html>. It's important to use the server name that matches the RD Web Access public certificate in the URL (typically the server FQDN).
 
     >[!NOTE]
-    >When running the **Publish-RDWebClientPackage** cmdlet, you may see a warning that says per-device CALs are not supported, even if your deployment is configured for per-user CALs. If your deployment uses per-user CALs, you can ignore this warning. We display it to make sure you’re aware of the configuration limitation.
+    >When running the **Publish-RDWebClientPackage** cmdlet, you may see a warning that says per-device CALs are not supported, even if your deployment is configured for per-user CALs. If your deployment uses per-user CALs, you can ignore this warning. We display it to make sure you're aware of the configuration limitation.
 8. When you're ready for users to access the web client, just send them the web client URL you created.
 
 >[!NOTE]
@@ -259,6 +259,10 @@ As an administrator, you can choose to suppress telemetry collection for your de
 By default, the user may select to enable or disable telemetry. A boolean value **$false** will match the default client behavior. A boolean value **$true** disables telemetry and restricts the user from enabling telemetry.
 
 ### Remote resource launch method
+
+>[!NOTE]
+>This setting currently only works with the RDS web client, not the Windows Virtual Desktop web client.
+
 By default, users may choose to launch remote resources (1) in the browser or (2) by downloading an .rdp file to handle with another client installed on their machine. As an administrator, you can choose to restrict the remote resource launch method for your deployment with the following Powershell command:
 
    ```PowerShell
@@ -267,9 +271,10 @@ By default, users may choose to launch remote resources (1) in the browser or (2
  By default, the user may select either launch method. A boolean value **$true** will force the user to launch resources in the browser. A boolean value **$false** will force the user to launch resources by downloading an .rdp file to handle with a locally installed RDP client.
 
 ### Reset RDWebClientDeploymentSetting configurations to default
-To reset a deployment-level web client setting to the default configuration, run the following PowerShell cmdlet and use the --Name parameter to specify the setting you want to reset:
-  
-  ```PowerShell
+
+To reset a deployment-level web client setting to the default configuration, run the following PowerShell cmdlet and use the -name parameter to specify the setting you want to reset:
+
+   ```PowerShell
     Reset-RDWebClientDeploymentSetting -Name "LaunchResourceInBrowser"
     Reset-RDWebClientDeploymentSetting -Name "SuppressTelemetry"
    ```
@@ -311,4 +316,4 @@ The console may also be accessed directly through your browser. The console is g
 
 ## Get help with the web client
 
-If you've encountered an issue that can’t be solved by the information in this article, you can report it on [Tech Community](https://aka.ms/wvdtc). You can also request or vote for new features at our [suggestion box](https://remotedesktop.uservoice.com/forums/911494-remote-desktop-web-client).
+If you've encountered an issue that can't be solved by the information in this article, you can report it on [Tech Community](https://aka.ms/wvdtc). You can also request or vote for new features at our [suggestion box](https://remotedesktop.uservoice.com/forums/911494-remote-desktop-web-client).

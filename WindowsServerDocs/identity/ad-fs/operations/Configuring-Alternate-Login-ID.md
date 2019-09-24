@@ -18,7 +18,7 @@ ms.technology: identity-adfs
 In most scenarios, users use their UPN (User Principal Names) to login to their accounts. However, in some environments due to corporate policies or on-premises line-of-business application dependencies, the users may be using some other form of sign-in. 
 
 >[!NOTE]
->Microsoft’s recommended best practices are to match UPN to primary SMTP address. This article addresses the small percentage of customers that cannot remediate UPN’s to match.
+>Microsoft's recommended best practices are to match UPN to primary SMTP address. This article addresses the small percentage of customers that cannot remediate UPN's to match.
 
 For example, they can be using their email-id for sign-in and that can be different from their UPN. This is particularly a common occurrence in scenarios where their UPN is non-routable. Consider a user Jane Doe with UPN jdoe@contoso.local and email address jdoe@contoso.com. Jane might not be even aware of the UPN as she has always used her email id for signing-in. Use of any other sign-in method instead of UPN constitutes alternate ID. For more information on how the UPN is created see, [Azure AD UserPrincipalName population](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnect-userprincipalname).
 
@@ -27,7 +27,7 @@ Active Directory Federation Services (AD FS) enables federated applications usin
 ## Alternate id in Azure AD
 An organization may have to use alternate ID in the following scenarios:
 1. The on-premises domain name is non-routable, ex. Contoso.local and as a result the default user principal name is non-routable (jdoe@contoso.local). Existing UPN cannot be changed due to local application dependencies or company policies. Azure AD and Office 365 require all domain suffixes associated with Azure AD directory to be fully internet routable. 
-2. The on-premises UPN is not same as the user’s email address and to sign-in to Office 365, users use email address and UPN cannot be used due to organizational constraints.
+2. The on-premises UPN is not same as the user's email address and to sign-in to Office 365, users use email address and UPN cannot be used due to organizational constraints.
    In the above-mentioned scenarios, alternate ID with AD FS enables users to sign-in to Azure AD without modifying your on-premises UPNs. 
 
 ## End-User Experience with Alternate Login ID

@@ -15,13 +15,13 @@ manager: dongill
 ms.author: elizapo
 ---
 # View User Connection Status
-Use the **Stations** tab to determine the status of a standard or other administrative user’s connection to a MultiPoint Services station.  
+Use the **Stations** tab to determine the status of a standard or other administrative user's connection to a MultiPoint Services station.  
   
 Status values include the following:  
   
 -   **Logged on**: A user session that is active on a station  
   
--   **Suspended**: A user session that is suspended, but is still active on the computer. The user’s desktop session is preserved until the user logs on again  
+-   **Suspended**: A user session that is suspended, but is still active on the computer. The user's desktop session is preserved until the user logs on again  
   
 -   **Logged off**: A user who is logged off is not displayed on the **Stations** tab  
   

@@ -20,7 +20,8 @@ This requires proper attention to three separate areas:
 - Active Directory client/application tuning – ensuring that clients and applications are using Active Directory in an optimal fashion
 
 ## Start with capacity planning
-Properly deploying a sufficient number of domain controllers, in the right domain, in the right locales, and to accommodate redundancy is critical to ensuring servicing client requests in a timely fashion. This is an in-depth topic and outside of the scope of this guide. Readers readers are encouraged start to their Active Directory performance tuning by reading and undestanding the recommendations and guidance found in [Capacity planning for Active Directory Domain Services](capacity-planning-for-active-directory-domain-services.md).
+
+Properly deploying a sufficient number of domain controllers, in the right domain, in the right locales, and to accommodate redundancy is critical to ensuring servicing client requests in a timely fashion. This is an in-depth topic and outside of the scope of this guide. Readers are encouraged start to their Active Directory performance tuning by reading and understanding the recommendations and guidance found in [Capacity planning for Active Directory Domain Services](capacity-planning-for-active-directory-domain-services.md).
 
 >[!Important]
 > Proper configuration and sizing of Active Directory has a significant potential impact on overall system and workload performance. Readers are highly encouraged to start by reading [Capacity planning for Active Directory Domain Services](capacity-planning-for-active-directory-domain-services.md).
@@ -33,7 +34,7 @@ Massive improvements in both Active Directory and client performance optimizatio
 - Better performance
 - Better logging and tools to troubleshoot
 
-However, we realize that this takes time and many environments are running in a scenario where 100% adoption of the most current platform is impossible. Some improvements have been added to older versions of the platform and we’ll continue to add more.
+However, we realize that this takes time and many environments are running in a scenario where 100% adoption of the most current platform is impossible. Some improvements have been added to older versions of the platform and we'll continue to add more.
 
 We encourage you to stay up to date on the latest news, guidance and best practices for managing ADDS by following our team blog, ["Ask the Directory Services Team"](https://techcommunity.microsoft.com/t5/Ask-the-Directory-Services-Team/bg-p/AskDS).
 

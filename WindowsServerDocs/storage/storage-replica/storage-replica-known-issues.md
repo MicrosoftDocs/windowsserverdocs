@@ -430,9 +430,9 @@ This is an expected behavior. To recover the data or access the drive, you need 
 
 ## Issue unlocking the Data drive on secondary server after breaking the Storage Replica partnership
 
-After Disabling the SR Partnership and removing the Storage Replica, it is expected if you are unable to unlock the Secondary Server’s Data drive with its respective password or key. 
+After Disabling the SR Partnership and removing the Storage Replica, it is expected if you are unable to unlock the Secondary Server's Data drive with its respective password or key. 
 
-You need to use Key or Password of Primary Server’s Data drive to unlock the Secondary Server’s data drive.
+You need to use Key or Password of Primary Server's Data drive to unlock the Secondary Server's data drive.
 
 ## Test Failover doesn't mount when using asynchronous replication
 

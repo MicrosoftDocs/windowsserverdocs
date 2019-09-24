@@ -1,5 +1,5 @@
 ﻿---
-Title: Deploying Roaming User Profiles
+title: Deploying Roaming User Profiles
 TOCTitle: Deploying Roaming User Profiles
 ms.prod: windows-server-threshold
 ms.technology: storage
@@ -58,7 +58,7 @@ If you decide to use Roaming User Profiles across multiple versions of Windows, 
 - Use Folder Redirection to store user files such as documents and pictures outside of user profiles. This enables the same files to be available to users across operating system versions. It also keeps profiles small and sign-ins quick.
 - Allocate sufficient storage for Roaming User Profiles. If you support two operating system versions, profiles will double in number (and thus total space consumed) because a separate profile is maintained for each operating system version.
 - Don't use Roaming User Profiles across computers running Windows Vista/Windows Server 2008 and Windows 7/Windows Server 2008 R2. Roaming between these operating system versions isn't supported due to incompatibilities in their profile versions.
-- Inform your users that changes made on one operating system version won’t roam to another operating system version.
+- Inform your users that changes made on one operating system version won't roam to another operating system version.
 - When moving your environment to a version of Windows that uses a different profile version (such as from Windows 10 to Windows 10, version 1607—see [Appendix B: Profile version reference information](#appendix-b-profile-version-reference-information) for a list), users receive a new, empty roaming user profile. You can minimize the impact of getting a new profile by using Folder Redirection to redirect common folders. There isn't a supported method of migrating roaming user profiles from one profile version to another.
 
 ## Step 1: Enable the use of separate profile versions
@@ -67,7 +67,7 @@ If you are deploying Roaming User Profiles on computers running Windows 8.1, Win
 
 To make these changes, use the following procedure.
 
-1. Download and install the appropriate software update on all computers on which you’re going to use roaming, mandatory, super-mandatory, or domain default profiles:
+1. Download and install the appropriate software update on all computers on which you're going to use roaming, mandatory, super-mandatory, or domain default profiles:
 
     - Windows 8.1, or Windows Server 2012 R2: install the software update described in article [2887595](http://support.microsoft.com/kb/2887595) in the Microsoft Knowledge Base (when released).
     - Windows 8 or Windows Server 2012: install the software update described in article [2887239](http://support.microsoft.com/kb/2887239) in the Microsoft Knowledge Base.
@@ -175,7 +175,7 @@ Here's how to set up Roaming User Profiles on user accounts:
 
 1. In Active Directory Administration Center, navigate to the **Users** container (or OU) in the appropriate domain.
 2. Select all users to which you want to assign a roaming user profile, right-click the users and then select **Properties**.
-3. In the **Profile** section, select the **Profile path:** checkbox and then enter the path to the file share where you want to store the user’s roaming user profile, followed by `%username%` (which is automatically replaced with the user name the first time the user signs in). For example:
+3. In the **Profile** section, select the **Profile path:** checkbox and then enter the path to the file share where you want to store the user's roaming user profile, followed by `%username%` (which is automatically replaced with the user name the first time the user signs in). For example:
     
     `\\fs1.corp.contoso.com\User Profiles$\%username%`
     
@@ -204,9 +204,9 @@ Here's how to set up Roaming User Profiles on computers:
 4. In the Group Policy Management Editor window, navigate to **Computer Configuration**, then **Policies**, then **Administrative Templates**, then **System**, and then **User Profiles**.
 5. Right-click **Set roaming profile path for all users logging onto this computer** and then select **Edit**.
     > [!TIP]
-    > A user's home folder, if configured, is the default folder used by some programs such as Windows PowerShell. You can configure an alternative local or network location on a per-user basis by using the **Home folder** section of the user account properties in AD DS. To configure the home folder location for all users of a computer running Windows 8.1, Windows 8, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, or Windows Server 2012 in a virtual desktop environment, enable the **Set user home folder** policy setting, and then specify the file share and drive letter to map (or specify a local folder). Do not use environment variables or ellipses. The user’s alias is appended to the end of the path specified during user sign on.
+    > A user's home folder, if configured, is the default folder used by some programs such as Windows PowerShell. You can configure an alternative local or network location on a per-user basis by using the **Home folder** section of the user account properties in AD DS. To configure the home folder location for all users of a computer running Windows 8.1, Windows 8, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, or Windows Server 2012 in a virtual desktop environment, enable the **Set user home folder** policy setting, and then specify the file share and drive letter to map (or specify a local folder). Do not use environment variables or ellipses. The user's alias is appended to the end of the path specified during user sign on.
 6. In the **Properties** dialog box, select **Enabled**
-7. In the **Users logging onto this computer should use this roaming profile path** box, enter the path to the file share where you want to store the user’s roaming user profile, followed by `%username%` (which is automatically replaced with the user name the first time the user signs in). For example:
+7. In the **Users logging onto this computer should use this roaming profile path** box, enter the path to the file share where you want to store the user's roaming user profile, followed by `%username%` (which is automatically replaced with the user name the first time the user signs in). For example:
 
     `\\fs1.corp.contoso.com\User Profiles$\%username%`
 
@@ -322,7 +322,7 @@ Here are some ways to work around Start menu layouts getting reset after an in-p
      > [!NOTE] 
      > Importing a StartLayout modifies the Default User profile. All user profiles created after the import has occurred will get the imported Start-Layout.
  
-- IT Admins can opt to manage Start’s Layout with Group Policy. Using Group Policy provides a centralized management solution to apply a standardized Start Layout to users. There are 2 modes to modes to using Group Policy for Start management. Full Lockdown and Partial Lockdown. The full lockdown scenario prevents the user from making any changes to Start’s layout. The partial lockdown scenario allows user to make changes to a specific area of Start. For more info, see [Customize and export Start layout](https://docs.microsoft.com/windows/configuration/customize-and-export-start-layout).
+- IT Admins can opt to manage Start's Layout with Group Policy. Using Group Policy provides a centralized management solution to apply a standardized Start Layout to users. There are 2 modes to modes to using Group Policy for Start management. Full Lockdown and Partial Lockdown. The full lockdown scenario prevents the user from making any changes to Start's layout. The partial lockdown scenario allows user to make changes to a specific area of Start. For more info, see [Customize and export Start layout](https://docs.microsoft.com/windows/configuration/customize-and-export-start-layout).
         
    > [!NOTE]
    > User made changes in the partial lockdown scenario will still be lost during upgrade.
@@ -345,7 +345,7 @@ The following table summarizes some of the most important changes to this topic.
 | December 5th, 2016 | Added info explaining a Start menu settings roaming issue. | Customer feedback. |
 | July 6th, 2016 | Added Windows 10 profile version suffixes in [Appendix B: Profile version reference information](#appendix-b-profile-version-reference-information). Also removed Windows XP and Windows Server 2003 from the list of supported operating systems. | Updates for the new versions of Windows, and removed info about versions of Windows that are no longer supported. |
 | July 7th, 2015 | Added requirement and step to disable continuous availability when using a clustered file server. | Clustered file shares have better performance for small writes (which are typical with roaming user profiles) when continuous availability is disabled. |
-| March 19th, 2014 | Capitalized profile version suffixes (.V2, .V3, .V4) in [Appendix B: Profile version reference information](#appendix-b-profile-version-reference-information). | Although Windows is case insensitive, if you use NFS with the file share, it’s important to have the correct (uppercase) capitalization for the profile suffix. |
+| March 19th, 2014 | Capitalized profile version suffixes (.V2, .V3, .V4) in [Appendix B: Profile version reference information](#appendix-b-profile-version-reference-information). | Although Windows is case insensitive, if you use NFS with the file share, it's important to have the correct (uppercase) capitalization for the profile suffix. |
 | October 9th, 2013 | Revised for Windows Server 2012 R2 and Windows 8.1, clarified a few things, and added the [Considerations when using Roaming User Profiles on multiple versions of Windows](#considerations-when-using-roaming-user-profiles-on-multiple-versions-of-windows) and [Appendix B: Profile version reference information](#appendix-b-profile-version-reference-information) sections. | Updates for new version; customer feedback. |
 
 ## More information
@@ -353,6 +353,6 @@ The following table summarizes some of the most important changes to this topic.
 - [Deploy Folder Redirection, Offline Files, and Roaming User Profiles](deploy-folder-redirection.md)
 - [Deploy Primary Computers for Folder Redirection and Roaming User Profiles](deploy-primary-computers.md)
 - [Implementing User State Management](<https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc784645(v=ws.10)>)
-- [Microsoft’s Support Statement Around Replicated User Profile Data](https://blogs.technet.microsoft.com/askds/2010/09/01/microsofts-support-statement-around-replicated-user-profile-data/)
+- [Microsoft's Support Statement Around Replicated User Profile Data](https://blogs.technet.microsoft.com/askds/2010/09/01/microsofts-support-statement-around-replicated-user-profile-data/)
 - [Sideload Apps with DISM](<https://docs.microsoft.com/previous-versions/windows/it-pro/windows-8.1-and-8/hh852635(v=win.10)>)
 - [Troubleshooting packaging, deployment, and query of Windows Runtime-based apps](https://msdn.microsoft.com/library/windows/desktop/hh973484.aspx)

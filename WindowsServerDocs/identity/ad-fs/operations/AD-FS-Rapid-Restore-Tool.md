@@ -76,7 +76,7 @@ Parameter Sets
 "FileSystem" indicates that the user wants to store it in a folder locally or in the network
 "Azure" indicates the user wants to store it in the Azure Storage Container
 When the user performs the backup, they select the backup location, either the File System or in the cloud. 
-For Azure to be used, Azure Storage Credentials should be passed to the cmdlet. The storage credentials contains the account name and key. In addition to this, a container name must also be passed in. If the container doesn’t exist, it is created during the backup. 
+For Azure to be used, Azure Storage Credentials should be passed to the cmdlet. The storage credentials contains the account name and key. In addition to this, a container name must also be passed in. If the container doesn't exist, it is created during the backup. 
 For the file system to be used, a storage path must be given. In that directory, a new directory will be created for each backup. Each directory created will contain the backed up files. 
 
 - **EncryptionPassword &lt;string&gt;** - The password that is going to be used to encrypt all the backed up files before storing it
@@ -265,7 +265,7 @@ Release: July 2018
 
 **Fixed issues:**
 
-   - Bug fix: handle service account passwords that have special characters in them (ie, ‘&’)
+   - Bug fix: handle service account passwords that have special characters in them (ie, ‘&')
    - Bug fix: restoration fails because Microsoft.IdentityServer.Servicehost.exe.config is being used by another process
 
 

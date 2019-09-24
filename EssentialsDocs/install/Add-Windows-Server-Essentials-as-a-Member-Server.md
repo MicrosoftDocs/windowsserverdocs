@@ -60,7 +60,7 @@ This topic applies to a server running Windows Server 2012 R2 Standard, Windows 
   
 6. Restart the server to apply the changes.  
   
-   After you have joined the server to your primary server ��s domain, you can continue to configure Windows Server Essentials by running the Configure Windows Server Essentials Wizard from Server Manager.  
+   After you have joined the server to your primary server's domain, you can continue to configure Windows Server Essentials by running the Configure Windows Server Essentials Wizard from Server Manager.  
   
 #### To configure Windows Server Essentials Experience on a member server  
   

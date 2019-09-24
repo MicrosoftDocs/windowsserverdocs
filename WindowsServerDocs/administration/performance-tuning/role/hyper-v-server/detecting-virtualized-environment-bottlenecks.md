@@ -93,7 +93,7 @@ If the **Physical NIC Bytes/sec** counter is greater than or equal to 90% of cap
 
 If the **Hyper-V Virtual Network Adapter Bytes/sec** counter is greater than or equal to 250 MBps, you should add additional teamed network adapters in the virtual machine, enable vRSS, and use SR-IOV.
 
-If your workloads can’t meet their network latency, enable SR-IOV to present physical network adapter resources to the virtual machine.
+If your workloads can't meet their network latency, enable SR-IOV to present physical network adapter resources to the virtual machine.
 
 ## Storage bottlenecks
 

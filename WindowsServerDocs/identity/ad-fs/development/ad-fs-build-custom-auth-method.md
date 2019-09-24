@@ -268,7 +268,7 @@ This walk-through uses Visual Studio 2012.  The project can be built using any d
      }
 ~~~
 
-12. Note the ‘todo’ for the **Resources.FormPageHtml** element above. 
+12. Note the ‘todo' for the **Resources.FormPageHtml** element above. 
 
    You can fix it in a minute, but first let's add the final required return statements, based on the newly implemented types, to your initial MyAdapter class.  To do this, add the items in *Italic* below to your existing IAuthenticationAdapter implementation:
 
@@ -437,7 +437,7 @@ Once the above pre-requisites are met, open a Windows PowerShell command window 
 
 3.  In the center pane, under **Multi-Factor Authentication**, click the **Edit** link to the right of **Global Settings**.
 
-4.  Under **Select additional authentication methods** at the bottom of the page, check the box for your provider’s AdminName. Click **Apply**.
+4.  Under **Select additional authentication methods** at the bottom of the page, check the box for your provider's AdminName. Click **Apply**.
 
 5.  To provide a “trigger” to invoke MFA using your adapter, under **Locations** check both **Extranet** and **Intranet**, for example. Click **OK**. (To configure triggers per relying party, see “Create the authentication policy using Windows PowerShell” below.)
 
@@ -502,7 +502,7 @@ You now have a working implementation of the interface and you have the knowledg
 
 But wait – your example adapter will never successfully authenticate\!  This is because nothing in your code returns null for TryEndAuthentication.
 
-By completing the procedures above, you created a basic adapter implementation and added it to an AD FS server.  You can get the MFA forms page, but you cannot yet authenticated because you have not yet put the correct logic in your TryEndAuthentication implementation.  So let’s add that.
+By completing the procedures above, you created a basic adapter implementation and added it to an AD FS server.  You can get the MFA forms page, but you cannot yet authenticated because you have not yet put the correct logic in your TryEndAuthentication implementation.  So let's add that.
 
 Recall your TryEndAuthentication implementation:
 
@@ -514,7 +514,7 @@ Recall your TryEndAuthentication implementation:
 
      }
 
-Let’s update it so it doesn’t always return MyPresentationForm().  For this you can create one simple utility method within your class:
+Let's update it so it doesn't always return MyPresentationForm().  For this you can create one simple utility method within your class:
 
     static bool ValidateProofData(IProofData proofData, IAuthenticationContext authContext)
      {
@@ -612,7 +612,7 @@ Make sure you paste the updated .dll locally first. `C:\>.\gacutil.exe /if .\MFA
 
 3.  Under **Multi-Factor Authentication**, click the **Edit** link to the right of **Global Settings**.
 
-4.  Under **Select additional authentication methods**, check the box for your provider’s AdminName. Click **Apply**.
+4.  Under **Select additional authentication methods**, check the box for your provider's AdminName. Click **Apply**.
 
 5.  To provide a “trigger” to invoke MFA using your adapter, under Locations check both **Extranet** and **Intranet**, for example. Click **OK**.
 
