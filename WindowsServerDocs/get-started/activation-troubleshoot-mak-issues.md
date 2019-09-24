@@ -2,7 +2,7 @@
 title: MAK activation known issues
 description: Describes common issues that may occur during the MAK activation process, and provides resolutions and guidance
 ms.topic: troubleshooting
-ms.date: 09/18/2019
+ms.date: 09/24/2019
 ms.technology: server-general
 ms.topic: article
 ms.assetid: 
@@ -37,7 +37,7 @@ Make sure that the required ports are open in the firewall. For a list of ports,
 
 ## Internet and telephone activation fail
 
-Contact a local Microsoft Activation Center. For the telephone numbers of Microsoft Activation Centers worldwide, go to [Microsoft Licensing Activation Centers worldwide telephone numbers](https://www.microsoft.com/en-us/Licensing/existing-customer/activation-centers). Make sure to provide the Volume License agreement information and proof of purchase when you call.
+Contact a local Microsoft Activation Center. For the telephone numbers of Microsoft Activation Centers worldwide, go to [Microsoft Licensing Activation Centers worldwide telephone numbers](https://www.microsoft.com/Licensing/existing-customer/activation-centers). Make sure to provide the Volume License agreement information and proof of purchase when you call.
 
 [Back to list](#list)
 
