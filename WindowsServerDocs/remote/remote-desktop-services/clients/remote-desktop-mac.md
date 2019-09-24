@@ -154,7 +154,7 @@ Mac keyboard layouts differ from the Windows keyboard layouts.
 - The function keys can be activated in the session by pressing additionally the FN key (e.g.: FN + F1).
 - The Alt key to the right of the space bar on the Mac keyboard equals the Alt Gr/right Alt key in Windows.
 
-By default, the remote session will use the same keyboard locale as the OS you're running the client on. (If your Mac is running an en-us OS, that will be used for the remote sessions as well. If the OS keyboard locale is not used, check the keyboard setting on the remote PC and changing the setting manually. See the [Remote Desktop Client FAQ](remote-desktop-client-faq.md) for more information about keyboards and locales.
+By default, the remote session will use the same keyboard locale as the OS you're running the client on. (If your Mac is running an en-us OS, that will be used for the remote sessions as well.) If the OS keyboard locale is not used, check the keyboard setting on the remote PC and change it manually. See the [Remote Desktop Client FAQ](remote-desktop-client-faq.md) for more information about keyboards and locales.
 
 
 ## Support for Remote Desktop gateway pluggable authentication and authorization
