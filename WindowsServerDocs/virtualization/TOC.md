@@ -34,6 +34,7 @@
 #### [Upgrade virtual machine version](hyper-v/deploy/Upgrade-virtual-machine-version-in-Hyper-V-on-Windows-or-Windows-Server.md)
 #### [Deploy graphics devices using DDA](hyper-v/deploy/deploying-graphics-devices-using-dda.md)
 #### [Deploy storage devices using DDA](hyper-v/deploy/deploying-storage-devices-using-dda.md)
+
 ### [Manage](hyper-v/manage/Manage-Hyper-V-on-Windows-Server.md)
 #### [Configuring Persistent Memory Devices for Hyper-V VMs](hyper-v/manage/persistent-memory-cmdlets.md)
 #### [Choose between standard or production checkpoints](hyper-v/manage/Choose-between-standard-or-production-checkpoints-in-Hyper-V.md)
@@ -46,11 +47,14 @@
 #### [About Hyper-V scheduler type selection](hyper-v/manage/about-hyper-v-scheduler-type-selection.md)
 #### [Manage Integration Services](hyper-v/manage/Manage-Hyper-V-integration-services.md)
 #### [Manage Windows VMs with PowerShell Direct](hyper-v/manage/Manage-Windows-virtual-machines-with-powershell-direct.md)
-#### [Set up Hyper-V Replica](hyper-v/manage/Set-up-Hyper-V-Replica.md) 
-#### [Move VMs with live migration](hyper-v/manage/Live-migration-overview.md) 
-##### [Live Migration Overview](hyper-v/manage/Live-migration-overview.md) 
+#### [Set up Hyper-V Replica](hyper-v/manage/Set-up-Hyper-V-Replica.md)
+#### [Enable Intel Performance Monitoring Hardware](hyper-v/manage/Performance-Monitoring-Hardware.md)
+#### [Move VMs with live migration](hyper-v/manage/Live-migration-overview.md)
+##### [Live Migration Overview](hyper-v/manage/Live-migration-overview.md)
 ##### [Set up hosts for live migration](hyper-v/deploy/Set-up-hosts-for-live-migration-without-Failover-Clustering.md) 
-##### [Use live migration without Failover Clustering](hyper-v/manage/Use-live-migration-without-Failover-Clustering-to-move-a-virtual-machine.md) 
+##### [Use live migration without Failover Clustering](hyper-v/manage/Use-live-migration-without-Failover-Clustering-to-move-a-virtual-machine.md)
+
+
 ### [Hyper-V Performance Tuning](../administration/performance-tuning/role/hyper-v-server/index.md)
 ## [Hyper-V Virtual Switch](hyper-v-virtual-switch/Hyper-V-Virtual-Switch.md)
 ### [Remote Direct Memory Access (RDMA) and Switch Embedded Teaming (SET)](hyper-v-virtual-switch/rdMA-and-Switch-Embedded-Teaming.md)
