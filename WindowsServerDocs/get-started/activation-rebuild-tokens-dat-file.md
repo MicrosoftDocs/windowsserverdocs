@@ -18,11 +18,21 @@ When you troubleshoot Windows activation issues, you may have to rebuild the Tok
 
 To rebuild the Tokens.dat file, follow these steps:
 
-1. Open an elevated command prompt:
-   1. Swipe in from the right edge of the screen, and then tap **Search**. Or, if you are using a mouse, point to the lower-right corner of the screen, and then click **Search**.
-   1. In the search box, type **cmd**.
+1. Open an elevated Command Prompt window:  
+   **For Windows 10**
+
+   1. Open the **Start** menu, and enter **cmd**.
+   1. In the search results, right-click **Command Prompt**, and the select **Run as administrator**.  
+
+   **For Windows 8.1**
+   1. Swipe in from the right edge of the screen, and then tap **Search**. Or, if you are using a mouse, point to the lower-right corner of the screen, and then select **Search**.
+   1, In the search box, enter **cmd**.
    1. Swipe across or right-click the displayed **Command Prompt** icon.
    1. Tap or click **Run as administrator**.
+
+   **For Windows 7**
+   1. Open the **Start** menu, and enter **cmd**.
+   1. In the search results, right-click **cmd.exe**, and the select **Run as administrator**.
 
 1. Enter the list of commands that is appropriate for your operating system.  
 
@@ -65,6 +75,6 @@ After you rebuild the Tokens.dat file, you must reinstall your product key by us
 
   > [!IMPORTANT]
   > Do not use the **/upk** switch to uninstall a product key. To install a product key over an existing product key, use the **/ipk** switch.
-- Right-click **My Computer**, click **Properties**, and then click **Change product key**.
+- Right-click **My Computer**, select **Properties**, and then select **Change product key**.
 
 For more information about KMS client setup keys, see [KMS client setup keys](kmsclientkeys.md).

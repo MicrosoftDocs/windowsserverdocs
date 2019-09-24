@@ -1,8 +1,8 @@
 ---
 title: Troubleshooting ADBA clients
-description: 
+description: Walks through a troubleshooting process for a Windows activation issue
 ms.topic: troubleshooting
-ms.date: 09/18/2019
+ms.date: 09/24/2019
 ms.technology: server-general
 author: Teresa-Motiv
 ms.author: v-tea
@@ -37,7 +37,7 @@ Knowing that the **slmgr** command is my friend for license activation, I contin
 
 Does anyone see what I missed at this point? We’ll come back to it after my other troubleshooting steps but suffice it to say the answer is in this screenshot.
 
-My thinking now is that for some reason the key is borked, so I use the **/upk** switch, which uninstalls the current key. While this was effective in removing the key, it is generally not the best way to do it. Should the server get rebooted before getting a new key it may leave the server in a bad state. I found that using the **/ipk** switch (which I do later in my troubleshooting) overwrites the existing key and is a much safer route to take. Learn from my missteps!
+My thinking now is that for some reason the key is broken, so I use the **/upk** switch, which uninstalls the current key. While this was effective in removing the key, it is generally not the best way to do it. Should the server get rebooted before getting a new key it may leave the server in a bad state. I found that using the **/ipk** switch (which I do later in my troubleshooting) overwrites the existing key and is a much safer route to take. Learn from my missteps!
 
 ![Image that shows the slmgr /upk command and its result](./media/032618_1700_Troubleshoo3.png)
 
@@ -77,7 +77,7 @@ From here on out I only captured results from my Datacenter experiences, but the
 
 ![Image that shows the slmgr /ato command and its result](./media/032618_1700_Troubleshoo11.png)
 
-Using the **/dlv** switch again we can see that now we have been activated by Active Directory.
+Using the **/dlv** switch again, we can see that now we have been activated by Active Directory.
 
 ![Image that shows the slmgr /dlv command and its result](./media/032618_1700_Troubleshoo12.png)
 

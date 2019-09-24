@@ -1,6 +1,6 @@
 ---
 title: MAK activation known issues
-description: 
+description: Describes common issues that may occur during the MAK activation process, and provides resolutions and guidance
 ms.topic: troubleshooting
 ms.date: 09/18/2019
 ms.technology: server-general
@@ -18,18 +18,18 @@ The following list describes common issues that can occur during Multiple Activa
 
 <a id="list"></a>
 
-- [How can I tell if my computer is activated?](#how-can-i-tell-if-my-computer-is-activated)
-- [The computer will not activate over the internet](#the-computer-will-not-activate-over-the-internet).
+- [How can I tell whether my computer is activated?](#how-can-i-tell-whether-my-computer-is-activated)
+- [The computer does not activate over the internet](#the-computer-does-not-activate-over-the-internet).
 - [Internet and telephone activation fail](#internet-and-telephone-activation-fail).
 - [**Slmgr.vbs /ato** returns an error code](#slmgrvbs-ato-returns-an-error-code).
 
-## How can I tell if my computer is activated?
+## How can I tell whether my computer is activated?
 
-On the computer, open the **System** control panel and look for **Windows is activated**. Alternatively, run Slmgr.vbs with the **/dli** command-line option.
+On the computer, open the **System** control panel and look for **Windows is activated**. Alternatively, run Slmgr.vbs and use the **/dli** command-line option.
 
 [Back to list](#list)
 
-## The computer will not activate over the internet
+## The computer does not activate over the internet
 
 Make sure that the required ports are open in the firewall. For a list of ports, see the [Volume Activation Deployment Guide](http://go.microsoft.com/fwlink/?linkid=150083).
 
@@ -37,7 +37,7 @@ Make sure that the required ports are open in the firewall. For a list of ports,
 
 ## Internet and telephone activation fail
 
-Contact a local Microsoft Activation Center. For phone numbers of Microsoft Activation Centers worldwide, go to [Microsoft Licensing Activation Centers worldwide telephone numbers](https://www.microsoft.com/en-us/Licensing/existing-customer/activation-centers). Be sure to provide the Volume License agreement information and proof of purchase when calling.
+Contact a local Microsoft Activation Center. For the telephone numbers of Microsoft Activation Centers worldwide, go to [Microsoft Licensing Activation Centers worldwide telephone numbers](https://www.microsoft.com/en-us/Licensing/existing-customer/activation-centers). Make sure to provide the Volume License agreement information and proof of purchase when you call.
 
 [Back to list](#list)
 
