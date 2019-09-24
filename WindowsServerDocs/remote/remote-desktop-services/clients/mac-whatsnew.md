@@ -183,7 +183,7 @@ It's been a few weeks since we last updated, but we've been hard at work during 
 - Added support for RD endpoint certificates that contain elliptic-curve asymmetric keys.
 - Fixed a bug that was preventing the download of managed resources in some scenarios.
 - Addressed a clipping issue with the pinned connection center.
-- Fixed the checkboxes in the Display property sheet to work better together.
+- Fixed the checkboxes in the Display tab of the Add a Desktop window to work better together.
 - Aspect ratio locking is now disabled when dynamic display change is in effect.
 - Addressed compatibility issues with F5 infrastructure.
 - Updated handling of blank passwords to ensure the correct messages are shown at connect-time.
