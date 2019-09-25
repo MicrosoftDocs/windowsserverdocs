@@ -35,6 +35,17 @@ You can install the client for the current user, which doesn't require admin rig
 
 Once installed, the client can be launched from the Start menu by searching for **Remote Desktop**.
 
+## Update the client
+
+Unless disabled by an admin, you'll be notified when a new version of the client is available. This notification may be shown either directly in the Connection Center or in the Windows Action Center. Select the notification to start the update process.
+
+You can also manually search for new updates for the client:
+
+1. From the Connection Center, tap the overflow menu (**...**) on the command bar at the top of the client.
+2. Select **About** from the drop-down menu.
+3. Tap **Check for updates**.
+4. If there's an update available, tap **Install update** to update the client.
+
 ## Feeds
 
 Get the list of managed resources you can access, such as apps and desktops, by subscribing to the feed your admin provided you. When you subscribe, the resources become available on your local PC. The Windows Desktop client currently supports resources published from Windows Virtual Desktop.
@@ -78,16 +89,26 @@ This section will teach you how to unsubscribe from a feed. You can unsubscribe 
 2. Select **Unsubscribe** from the drop-down menu.
 3. Review the dialog box and select **Continue**.
 
-## Update the client
+## Managed desktops
 
-Unless disabled by an admin, you'll be notified when a new version of the client is available. This notification may be shown either directly in the Connection Center or in the Windows Action Center. Select the notification to start the update process.
+Workspaces can contain multiple managed resources, including desktops. When accessing a managed desktop, you have access to all the apps installed by your admin.
 
-You can also manually search for new updates for the client:
+### Desktop settings
 
-1. From the Connection Center, tap the overflow menu (**...**) on the command bar at the top of the client.
-2. Select **About** from the drop-down menu.
-3. Tap **Check for updates**.
-4. If there's an update available, tap **Install update** to update the client.
+You can configure some of the settings for desktop resources to ensure the experience meets your needs. To access the list of available settings:
+
+1. From the Connection Center, right-click on a desktop resource.
+2. Select **Settings** from the drop-down menu.
+3. The Settings panel appears on the right side of the client, showing the name of the desktop.
+
+The client will use the settings configured by your admin unless you turn off the **Use default settings** option. Doing so allows you to configure the following options:
+
+- **Use all monitors** switches the desktop session between using all of the local monitors or only one monitor.
+- **Start in full screen** determines whether the session will launch in full screen or in windowed mode. This setting is automatically enabled when using all monitors.
+- **Update the resolution on resize** changes the behavior when you resize the session in windowed mode. If enabled, the resolution of the remote desktop will be updated to match the size of the local window, reducing the need for scrollbars. If disabled, the session will retain the resolution specified in **Resolution** for its entire duration. This setting is automatically enabled when using all monitors.
+- **Resolution** lets you specify the resolution of the remote desktop. The session will retain this resolution for its entire duration. This setting is automatically disabled if the resolution is set to update on resize.
+- **Change the size of the text and apps** specifies the size of the content of the session. This setting only applies when connecting to Windows 8.1 and later or Windows Server 2012 R2 and later. This setting is automatically disabled if the resolution is set to update on resize.
+- **Fit session to window** determines how the session is displayed when the resolution of the remote desktop differs from the size of the local window. When enabled, the session content will be resized to fit inside the window while preserving the aspect ratio of the session. When disabled, scrollbars or black areas will be shown when the resolution and window size don't match.
 
 ## Providing feedback
 
