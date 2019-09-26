@@ -11,7 +11,7 @@ ms.topic: article
 author: heidilohr
 manager: daveba
 ms.author: helohr
-ms.date: 09/16/2019
+ms.date: 09/24/2019
 ms.localizationpriority: medium
 ---
 # What's new in the Windows Desktop client
@@ -24,8 +24,15 @@ The client can be configured for different [user groups](windowsdesktop-admin.md
 
 |User group |Version  |
 |-----------|---------|
-|Public     |1.2.246  |
-|Insider    |1.2.246  |
+|Public     |1.2.247  |
+|Insider    |1.2.247  |
+
+## Updates for version 1.2.247
+
+*Date published: 09/17/2019*
+
+- Fixed a crash that happened when authenticating during a connection.
+- Fixed a crash that happened when closing the client.
 
 ## Updates for version 1.2.246
 
