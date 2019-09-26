@@ -52,7 +52,6 @@ TpmError                  | The host could not complete its last attestation att
 UnauthorizedHost          | The host did not pass attestation becuase it was not authorized to run shielded VMs. Ensure the host belongs to a security group trusted by HGS to run shielded VMs.
 Unknown                   | The host has not attempted to attest with HGS yet.
 
-
 When **AttestationStatus** is reported as **InsecureHostConfiguration**, one or more reasons will be populated in the **AttestationSubStatus** field.
 The table below explains the possible values for AttestationSubStatus and tips on how to resolve the problem.
 
@@ -80,12 +79,12 @@ This is due to a default behavior in .NET 4.6 where the system default TLS versi
 
 To work around this behavior, run the following two commands to configure .NET to use the system default TLS versions for all .NET apps.
 
-```
+```cmd
 reg add HKLM\SOFTWARE\Microsoft\.NETFramework\v4.0.30319 /v SystemDefaultTlsVersions /t REG_DWORD /d 1 /f /reg:64
 reg add HKLM\SOFTWARE\Microsoft\.NETFramework\v4.0.30319 /v SystemDefaultTlsVersions /t REG_DWORD /d 1 /f /reg:32
 ```
 
 > [!WARNING]
-> The system default TLS versions setting will affect all .NET apps on your machine. Be sure to test the registry keys in an insolated environment before deploying them to your production machines.
+> The system default TLS versions setting will affect all .NET apps on your machine. Be sure to test the registry keys in an isolated environment before deploying them to your production machines.
 
 For more information about .NET 4.6 and TLS 1.0, see [Solving the TLS 1.0 Problem, 2nd Edition](https://docs.microsoft.com/en-us/security/solving-tls1-problem).
