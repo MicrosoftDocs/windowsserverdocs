@@ -7,7 +7,7 @@ ms.assetid: 7485796b-b840-4678-9b33-89e9710fbbc7
 manager: dongill
 author: rpsqrd
 ms.technology: security-guarded-fabric
-ms.date: 02/05/2019
+ms.date: 09/25/2019
 ---
 
 # Confirm guarded hosts can attest 
@@ -19,7 +19,9 @@ A fabric administrator needs to confirm that Hyper-V hosts can run as guarded ho
 
 1.  If you have not already installed the Hyper-V role and Host Guardian Hyper-V Support feature, install them with the following command:
 
-        Install-WindowsFeature Hyper-V, HostGuardian -IncludeManagementTools -Restart
+    ```powershell
+    Install-WindowsFeature Hyper-V, HostGuardian -IncludeManagementTools -Restart
+    ```
 
 2.  Make sure the Hyper-V host can resolve the HGS DNS name and has network connectivity to reach port 80 (or 443 if you set up HTTPS) on the HGS server.
 
@@ -37,14 +39,19 @@ A fabric administrator needs to confirm that Hyper-V hosts can run as guarded ho
     > - If the HGS administrator [enabled HTTPS on the HGS server](guarded-fabric-configure-hgs-https.md), begin the URLs with `https://`.
     > - If the HGS administrator enabled HTTPS on the HGS server and used a self-signed certificate, you will need to import the certificate into the Trusted Root Certificate Authorities store on every host. To do this, run the following command on each host:<br>
         `Import-Certificate -FilePath "C:\temp\HttpsCertificate.cer" -CertStoreLocation Cert:\LocalMachine\Root`
+    > - If you've configured HGS Client to use HTTPS and have disabled TLS 1.0 systemwide, see our [modern TLS guidance](guarded-fabric-troubleshoot-hosts.md#Modern-TLS)
     
 3.  To initiate an attestation attempt on the host and view the attestation status, run the following command:
 
-        Get-HgsClientConfiguration
+    ```powershell
+    Get-HgsClientConfiguration
+    ```
 
     The output of the command indicates whether the host passed attestation and is now guarded. If `IsHostGuarded` does not return **True**, you can run the HGS diagnostics tool, [Get-HgsTrace](https://technet.microsoft.com/library/mt718831.aspx), to investigate. To run diagnostics, enter the following command in an elevated Windows PowerShell prompt on the host:
 
-        Get-HgsTrace -RunDiagnostics -Detailed
+    ```powershell
+    Get-HgsTrace -RunDiagnostics -Detailed
+    ```
 
     > [!IMPORTANT]
     > If you're using Windows Server 2019 or Windows 10, version 1809 and are using code integrity policies, `Get-HgsTrace` return a failure for the **Code Integrity Policy Active** diagnostic.
