@@ -2,7 +2,7 @@
 title: auditpol
 description: "Windows Commands topic for **auditpol** - Displays information about and performs functions to manipulate audit policies."
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands

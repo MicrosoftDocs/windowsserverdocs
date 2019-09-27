@@ -6,7 +6,7 @@ manager: mtillman
 ms.reviewer: andandyMSFT
 ms.date: 11/15/2018
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: identity-adfs
 ms.author: billmath
 ---

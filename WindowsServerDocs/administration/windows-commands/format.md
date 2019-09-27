@@ -1,6 +1,6 @@
 ---
 title: Format
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 manager: dongill
 ms.author: JGerend
 ms.technology: storage

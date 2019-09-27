@@ -2,7 +2,7 @@
 title: Create a Standard User Account
 ms.custom: na
 description: Create a basic user account for MultiPoint Services
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: multipoint-services
 ms.reviewer: na
 ms.suite: na

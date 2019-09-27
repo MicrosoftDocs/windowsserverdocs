@@ -1,6 +1,6 @@
 ---
 title: Resilient File System (ReFS) overview
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.author: gawatu
 ms.manager: mchad
 ms.technology: storage-file-systems

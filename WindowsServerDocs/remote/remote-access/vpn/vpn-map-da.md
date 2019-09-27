@@ -1,7 +1,7 @@
 ---
 title: Always On VPN features 
 description: In this topic, you learn about the features and functionality of Always On VPN. 
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: networking
 ms.topic: article
 ms.localizationpriority: medium 

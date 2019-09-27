@@ -1,7 +1,7 @@
 ---
 title: Get started with Windows Server Update Services (WSUS)
 description: "Windows Server Update Service (WSUS) topic - An overview of the Server role and its practical applications"
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-wsus

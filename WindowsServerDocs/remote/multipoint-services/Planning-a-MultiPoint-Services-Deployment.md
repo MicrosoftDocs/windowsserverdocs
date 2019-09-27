@@ -3,7 +3,7 @@ title: Planning a MultiPoint Services Deployment
 description: Navigational topic for information for planning your MultiPoint Services deployment
 ms.custom: na
 ms.date: 07/22/2016
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: multipoint-services
 ms.reviewer: na
 ms.suite: na

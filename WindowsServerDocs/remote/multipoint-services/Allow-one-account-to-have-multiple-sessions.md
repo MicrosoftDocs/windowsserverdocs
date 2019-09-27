@@ -2,7 +2,7 @@
 title: Allow one account to have multiple sessions
 description: Let a user access multiple systems at the same time.
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: multipoint-services
 ms.reviewer: na
 ms.suite: na

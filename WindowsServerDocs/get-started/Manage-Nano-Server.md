@@ -1,7 +1,7 @@
 ---
 title: Manage Nano Server
 description: "updates, servicing packages, networking tracing, performance monitoring"
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.service: na
 manager: DonGill
 ms.technology: server-nano

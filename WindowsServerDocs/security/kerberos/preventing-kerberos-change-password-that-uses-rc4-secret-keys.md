@@ -1,7 +1,7 @@
 ---
 title: Preventing Kerberos change password that use RC4 secret keys
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.topic: article
 ms.assetid: de207d55-aa3d-4c16-bd3b-496db43663a4
 manager: alanth

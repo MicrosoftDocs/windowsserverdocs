@@ -2,7 +2,7 @@
 title: Shrink a basic volume
 description: This article describes how to shrink a basic volume
 ms.date: 06/07/2019
-ms.prod: windows-server-threshold 
+ms.prod: windows-server 
 ms.technology: storage 
 ms.topic: article 
 author: JasonGerend 

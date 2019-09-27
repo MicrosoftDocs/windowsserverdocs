@@ -1,7 +1,7 @@
 ---
 title: Verify the HGS configuration
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.topic: article
 ms.assetid: 8f01df37-f18e-4386-ae73-ecf84feaa9df
 manager: dongill

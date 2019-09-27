@@ -1,7 +1,7 @@
 ---
 title: Updates Operations
 description: "Windows Server Update Service (WSUS) topic - How to manage updates, including the approval process"
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-wsus

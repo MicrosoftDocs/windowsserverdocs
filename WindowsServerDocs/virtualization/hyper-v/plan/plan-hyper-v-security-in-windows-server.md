@@ -1,7 +1,7 @@
 ---
 title: Plan for Hyper-V security in Windows Server
 description: "Provides a lists of security considerations for Hyper-v hosts and virtual machines"
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.service: na
 ms.suite: na
 ms.technology: compute-hyper-v

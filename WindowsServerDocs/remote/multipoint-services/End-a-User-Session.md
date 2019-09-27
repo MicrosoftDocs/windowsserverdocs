@@ -2,7 +2,7 @@
 title: End a User Session
 description: Learn when and how to manually end a user's session in MultiPoint Services
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: multipoint-services
 ms.reviewer: na
 ms.suite: na

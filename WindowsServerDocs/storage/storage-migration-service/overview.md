@@ -6,7 +6,7 @@ ms.author: jgerend
 manager: elizapo
 ms.date: 08/16/2019
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: storage
 ---
 # Storage Migration Service overview

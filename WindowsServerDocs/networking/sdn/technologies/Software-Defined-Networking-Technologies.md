@@ -2,7 +2,7 @@
 title: SDN Technologies
 description: The topics in this section provide overview and technical information about the Software Defined Networking technologies that are included in Windows Server 2016.
 manager: dougkim
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.service: virtual-network
 ms.technology: networking-sdn
 ms.topic: article

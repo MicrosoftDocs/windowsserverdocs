@@ -1,7 +1,7 @@
 ---
 title: Performance Tuning Remote Desktop Gateways
 description: Performance tuning recommendations for Remote Desktop Gateways
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: performance-tuning-guide
 ms.topic: article
 ms.author: HammadBu; VladmiS

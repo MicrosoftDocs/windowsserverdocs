@@ -1,6 +1,6 @@
 ---
 title: DFS Namespaces overview
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.author: jgerend
 ms.manager: daveba
 ms.technology: storage

@@ -1,7 +1,7 @@
 ---
 title: Plan Your WSUS Deployment
 description: "Windows Server Update Service (WSUS) topic - An overview of the deployment planning process with links to the related topics"
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.technology: manage-wsus
 ms.topic: article

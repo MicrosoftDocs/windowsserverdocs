@@ -2,7 +2,7 @@
 ms.assetid: 2f4b6641-0ec2-4b1c-85fb-a1f1d16685c8
 title: Cluster-Aware Updating advanced options and updating run profiles
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 manager: dongill
 ms.author: jgerend
 author: JasonGerend

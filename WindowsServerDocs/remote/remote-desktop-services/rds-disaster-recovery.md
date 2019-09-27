@@ -2,7 +2,7 @@
 title: Protect your RDS deployment - Disaster recovery
 description: Learn about your disaster recovery options for Remote Desktop Services
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: remote-desktop-services

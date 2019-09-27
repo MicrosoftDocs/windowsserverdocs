@@ -2,7 +2,7 @@
 title: What's new in the Android client
 description: Learn about recent changes to the Remote Desktop client for Android
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: remote-desktop-services
