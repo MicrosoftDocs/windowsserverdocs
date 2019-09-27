@@ -1,7 +1,7 @@
 ---
 title: Troubleshooting the Host Guardian Service
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.topic: article
 ms.assetid: 424b8090-0692-49a6-9dc4-3c0e77d74b80
 manager: dongill

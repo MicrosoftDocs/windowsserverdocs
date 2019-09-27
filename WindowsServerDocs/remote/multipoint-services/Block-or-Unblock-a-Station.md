@@ -2,7 +2,7 @@
 title: Block or Unblock a Station
 ms.custom: na
 description: Learn how to stop a user or group from accessing a MultiPoint Services system. 
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: multipoint-services
 ms.reviewer: na
 ms.suite: na

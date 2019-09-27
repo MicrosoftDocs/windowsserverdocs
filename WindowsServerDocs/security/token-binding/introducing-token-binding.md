@@ -1,7 +1,7 @@
 ---
 title: Introducing Token Binding
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.topic: article
 ms.assetid: 4623a48c-cefd-4a27-9173-2af58ac212f2
 manager: alanth

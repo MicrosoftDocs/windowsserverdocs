@@ -6,7 +6,7 @@ ms.author: nedpyle
 manager: siroy
 ms.date: 08/19/2019
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: storage
 ---
 # Storage Migration Service frequently asked questions (FAQ)

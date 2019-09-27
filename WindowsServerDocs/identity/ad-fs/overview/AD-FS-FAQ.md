@@ -8,7 +8,7 @@ manager: mtillman
 ms.date: 04/17/2019
 ms.topic: article
 ms.custom: it-pro
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: identity-adfs
 ---
 

@@ -2,7 +2,7 @@
 title: Windows Server 2019 Activation
 description: "How to activate Windows Server 2019"
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: server-general

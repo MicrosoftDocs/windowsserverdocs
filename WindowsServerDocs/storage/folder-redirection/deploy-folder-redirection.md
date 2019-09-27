@@ -1,7 +1,7 @@
 ---
 title: Deploy Folder Redirection with Offline Files
 description: How to use Windows Server to deploy Folder Redirection with Offline Files to Windows client computers.
-ms.prod: windows-server-threshold 
+ms.prod: windows-server 
 ms.topic: article 
 author: JasonGerend 
 ms.author: jgerend 

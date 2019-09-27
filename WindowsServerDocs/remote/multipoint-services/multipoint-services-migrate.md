@@ -3,7 +3,7 @@ title: Migrate to MultiPoint Services in Windows Server 2016
 description: Learn how to migrate from a previous version of MultiPoint Services  
 ms.custom: na
 ms.date: 07/29/2016
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: multipoint-services
 ms.reviewer: na
 ms.suite: na

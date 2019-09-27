@@ -1,6 +1,6 @@
 ---
 title: Nested resiliency for Storage Spaces Direct
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.author: jgerend
 ms.manager: dansimp
 ms.technology: storagespaces

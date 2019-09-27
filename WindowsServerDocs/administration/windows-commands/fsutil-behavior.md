@@ -1,6 +1,6 @@
 ---
 title: Fsutil behavior
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 manager: dmoss
 ms.author: toklima
 author: toklima

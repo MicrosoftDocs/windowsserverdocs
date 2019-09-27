@@ -2,7 +2,7 @@
 title: File Server Resource Manager Command-Line Tools
 description: This article describes Windows Server 2016 command-line tools
 ms.date: 7/7/2017
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: storage
 ms.topic: article
 author: JasonGerend

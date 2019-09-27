@@ -2,7 +2,7 @@
 title: Manage users in your RDS collection
 description: Learn how to manage users in Remote Desktop Services.
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: remote-desktop-services

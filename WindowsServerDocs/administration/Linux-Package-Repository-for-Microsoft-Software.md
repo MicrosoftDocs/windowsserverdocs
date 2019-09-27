@@ -2,7 +2,7 @@
 title: Linux Software Repository for Microsoft Products
 description: This document describes how to use and install Linux software packages for Microsoft products.
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.service: na
 manager: szark
 ms.technology: compute

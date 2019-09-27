@@ -1,6 +1,6 @@
 ---
 title: Cluster Sets
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.manager: eldenc
 ms.technology: storage-spaces
 ms.topic: article

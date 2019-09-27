@@ -2,7 +2,7 @@
 title: Remote Desktop Services - Connect from any device
 description: Learn about the different ways users can connect to Remote Desktop.
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: remote-desktop-services

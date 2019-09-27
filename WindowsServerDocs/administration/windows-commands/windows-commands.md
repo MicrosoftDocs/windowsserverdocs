@@ -8,7 +8,7 @@ author: jasongerend
 ms.author: jgerend
 manager: dongill
 ms.date: 06/26/2019
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ---
 # Windows commands
 

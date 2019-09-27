@@ -2,7 +2,7 @@
 title: Change a drive letter
 description: How to change or assign a drive letter in Windows by using Disk Management.
 ms.date: 10/24/2018
-ms.prod: windows-server-threshold 
+ms.prod: windows-server 
 ms.technology: storage 
 ms.topic: article 
 author: JasonGerend 

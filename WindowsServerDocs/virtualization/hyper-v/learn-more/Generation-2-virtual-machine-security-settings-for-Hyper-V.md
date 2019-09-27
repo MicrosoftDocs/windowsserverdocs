@@ -1,7 +1,7 @@
 ---
 title: Generation 2 virtual machine security settings for Hyper-V
 description: "Describes the security settings available in Hyper-V Manager for generation 2 virtual machines"
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.service: na
 manager: dongill
 ms.technology: compute-hyper-v

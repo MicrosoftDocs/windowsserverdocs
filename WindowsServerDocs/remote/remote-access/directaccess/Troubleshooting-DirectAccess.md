@@ -3,7 +3,7 @@ title: Troubleshooting DirectAccess
 description: This topic provides information about troubleshooting DirectAccess deployments in Windows Server 2016.
 manager: brianlic
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: networking-da

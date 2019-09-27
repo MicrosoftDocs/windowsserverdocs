@@ -1,7 +1,7 @@
 ---
 title: 'Configuring cluster accounts in Active Directory'
 ms.date: 11/12/2012
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: storage-failover-clustering
 author: JasonGerend
 manager: elizapo

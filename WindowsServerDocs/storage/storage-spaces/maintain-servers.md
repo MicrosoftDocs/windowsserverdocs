@@ -1,6 +1,6 @@
 ---
 title: Taking a Storage Spaces Direct server offline for maintenance
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.author: eldenc
 ms.manager: eldenc
 ms.technology: storage-spaces

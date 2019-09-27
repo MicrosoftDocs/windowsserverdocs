@@ -1,7 +1,7 @@
 ---
 title: Servicing Channels
 description: "Explanation of Windows Server service channels: LTSC and SAC"
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: server-general
 ms.topic: article
 author: jasongerend

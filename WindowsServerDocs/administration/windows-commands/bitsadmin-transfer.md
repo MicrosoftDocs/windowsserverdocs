@@ -2,7 +2,7 @@
 title: bitsadmin Transfer
 description: "Windows Commands topic for **bitsadmin Transfer** - Transfers one or more files."
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands

@@ -2,7 +2,7 @@
 title: Security guidelines for system services in Windows Server 2016
 description: Security guidelines for disabling services in Windows Server 2016 with Desktop Experience
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: techgroup-security
 ms.tgt_pltfrm: na
 ms.topic: article

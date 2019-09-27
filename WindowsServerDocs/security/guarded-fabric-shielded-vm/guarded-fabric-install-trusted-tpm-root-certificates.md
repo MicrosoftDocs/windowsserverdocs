@@ -1,7 +1,7 @@
 ---
 title: Install trusted TPM root certificates
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.topic: article
 manager: dongill
 author: rpsqrd

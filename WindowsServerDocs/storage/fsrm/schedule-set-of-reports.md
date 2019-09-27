@@ -2,7 +2,7 @@
 title: Schedule a Set of Reports
 description: This article describes how to generate a set of reports on a regular schedule
 ms.date: 7/7/2017
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: storage
 ms.topic: article
 author: JasonGerend

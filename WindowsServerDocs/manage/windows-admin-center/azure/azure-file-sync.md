@@ -7,7 +7,7 @@ author: fauhse
 ms.author: fauhse
 ms.date: 04/12/2019
 ms.localizationpriority: medium
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ---
 # Sync your file server with the cloud by using Azure File Sync
 

@@ -2,7 +2,7 @@
 title: robocopy
 description: Learn how to use the robocopy command in Windows and Windows Server to copy files
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands

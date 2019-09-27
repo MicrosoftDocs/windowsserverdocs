@@ -3,7 +3,7 @@ title: auditpol set
 description: "Windows Commands topic for **auditpol set** - 
 Sets the per-user audit policy, system audit policy, or auditing options."
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands

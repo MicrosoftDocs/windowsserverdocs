@@ -1,7 +1,7 @@
 ---
 title: Hyper-V Configuration
 description: Hyper-V configuration considerations for performance tuning
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: performance-tuning-guide
 ms.topic: article
 ms.author: Asmahi; SandySp; JoPoulso

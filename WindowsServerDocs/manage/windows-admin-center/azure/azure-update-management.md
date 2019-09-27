@@ -7,7 +7,7 @@ author: haley-rowland
 ms.author: harowl
 ms.date: 07/17/2018
 ms.localizationpriority: low
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ---
 # Use Windows Admin Center to manage operating system updates with Azure Update Management
 

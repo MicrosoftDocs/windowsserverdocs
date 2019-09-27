@@ -2,7 +2,7 @@
 title: Advanced Features of Always On VPN
 description: 'Beyond the deployment scenario provided in this deployment, you can add other advanced VPN features to improve the security and availability of your VPN connection.'
 ms.assetid: 51a1ee61-3ffe-4f65-b8de-ff21903e1e74
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: networking-ras
 ms.topic: article
 ms.date: 07/24/19

@@ -2,7 +2,7 @@
 title: bootcfg copy
 description: "Windows Commands topic for **bootcfg copy** - Makes a copy of an existing boot entry, to which you can add command-line options."
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
