@@ -110,9 +110,9 @@ The client will use the settings configured by your admin unless you turn off th
 - **Change the size of the text and apps** specifies the size of the content of the session. This setting only applies when connecting to Windows 8.1 and later or Windows Server 2012 R2 and later. This setting is automatically disabled if the resolution is set to update on resize.
 - **Fit session to window** determines how the session is displayed when the resolution of the remote desktop differs from the size of the local window. When enabled, the session content will be resized to fit inside the window while preserving the aspect ratio of the session. When disabled, scrollbars or black areas will be shown when the resolution and window size don't match.
 
-## Providing feedback
+## Provide feedback
 
-Have a feature suggestion or want to report an issue? Tell us using the [Feedback Hub](feedback-hub://?tabid=2&contextid=883) which can also be accessed from the client:
+Have a feature suggestion or want to report an issue? Tell us using the [Feedback Hub](feedback-hub://?tabid=2&contextid=883). You can also access the Feedback Hub through your client:
 
 1. From the Connection Center, tap the overflow menu (**...**) on the command bar at the top of the client.
 2. Select **Feedback** from the drop-down menu to open the Feedback Hub.
