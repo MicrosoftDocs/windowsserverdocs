@@ -7,7 +7,7 @@ ms.author: billmath
 manager: mtillman
 ms.date: 04/24/2018
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: identity-adfs
 ---
 # User privacy and AD FS

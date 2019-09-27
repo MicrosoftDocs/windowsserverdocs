@@ -1,7 +1,7 @@
 ---
 title: Create a virtual switch for Hyper-V virtual machines
 description: "Gives instructions on creating a virtual switch using Hyper-V Manager or Windows PowerShell"
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.service: na
 manager: dongill
 ms.technology: compute-hyper-v

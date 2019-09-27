@@ -1,7 +1,7 @@
 ---
 title: Enable Intel Performance Monitoring Hardware in a Hyper-V Virtual Machine
 description: "How to enable Intel's Performance Monitoring Hardware in a Hyper-V Machine. Also touches on how enabling performance monitoring hardware effects live migration."
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: ifufondu
 author: ifeomaufondu-ms
 ms.author: ifufondu

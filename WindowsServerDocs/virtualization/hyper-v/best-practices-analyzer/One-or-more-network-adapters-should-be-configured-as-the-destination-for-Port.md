@@ -1,7 +1,7 @@
 ---
 title: One or more network adapters should be configured as the destination for Port Mirroring
 description: "Online version of the text for this Best Practices Analyzer rule."
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.service: na
 manager: dongill
 ms.technology: compute-hyper-v

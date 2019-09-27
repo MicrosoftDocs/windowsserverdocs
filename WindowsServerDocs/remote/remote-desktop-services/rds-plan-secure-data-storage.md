@@ -2,7 +2,7 @@
 title: Remote Desktop Services - Secure data storage
 description: Planning information for securely storing data by using user profile disks (UPDs) in RDS.
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: remote-desktop-services

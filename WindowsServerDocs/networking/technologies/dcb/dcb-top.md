@@ -1,7 +1,7 @@
 ---
 title: Data Center Bridging (DCB)
 description: You can use this topic for introductory information about Data Center Bridging in Windows Server 2016.
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: networking
 ms.topic: article
 ms.assetid: da58f312-bd3b-4bb6-98ca-6177869dd6ad

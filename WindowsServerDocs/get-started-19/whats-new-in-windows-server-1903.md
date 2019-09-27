@@ -1,7 +1,7 @@
 ---
 title: What's New in Windows Server, version 1903
 description: This topic describes some of the new features in Windows Server, version 1903, which is a Semi-Annual Channel release. 
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: server-general
 ms.topic: article
 author: jasongerend

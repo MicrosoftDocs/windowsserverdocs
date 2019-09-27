@@ -1,7 +1,7 @@
 ---
 ms.assetid: 835fc6f1-cc84-4189-b29a-dde90792469e
 title: Fsutil hardlink
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 manager: dmoss
 ms.author: toklima
 author: toklima

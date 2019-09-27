@@ -1,7 +1,7 @@
 ---
 title: Resynchronization of replication should be scheduled for off-peak hours
 description: "Online version of the text for this Best Practices Analyzer rule."
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.service: na
 manager: dongill
 ms.technology: compute-hyper-v

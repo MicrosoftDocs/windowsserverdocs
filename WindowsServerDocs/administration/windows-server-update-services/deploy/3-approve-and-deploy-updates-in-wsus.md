@@ -1,7 +1,7 @@
 ---
 title: Step 3 - Approve and Deploy Updates in WSUS
 description: "Windows Server Update Service (WSUS) topic - Approve and Deploy Updates in WSUS is step three in a four step process for deploying WSUS"
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.technology: manage-wsus
 ms.topic: article

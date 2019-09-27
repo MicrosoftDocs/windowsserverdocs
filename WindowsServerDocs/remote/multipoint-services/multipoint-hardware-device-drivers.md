@@ -2,7 +2,7 @@
 title: Collect hardware and device drivers needed for the installation
 description: Information about drivers you need to install for MultiPoint Services
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: multipoint-services
 ms.reviewer: na
 ms.suite: na

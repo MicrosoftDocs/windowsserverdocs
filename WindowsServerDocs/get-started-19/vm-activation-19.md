@@ -3,7 +3,7 @@ title: Automatic virtual machine activation
 TOCTitle: Automatic VM Activation
 description: How to activate VMs in Windows Server 2019, Windows Server 2016, and Windows Server 2012 R2
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: server-general

@@ -3,7 +3,7 @@ title: MultiPoint Stations
 description: Learn about stations in MultiPoint Services, including the different options for users
 ms.custom: na
 ms.date: 07/22/2016
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: multipoint-services
 ms.reviewer: na
 ms.suite: na

@@ -7,7 +7,7 @@ author: shortpatti
 ms.author: pashort
 ms.date: 09/12/2018
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: networking
 ---
 

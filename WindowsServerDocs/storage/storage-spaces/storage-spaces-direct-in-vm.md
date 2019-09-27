@@ -1,6 +1,6 @@
 ---
 title: Using Storage Spaces Direct in a virtual machine
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.author: eldenc
 ms.manager: eldenc
 ms.technology: storage-spaces

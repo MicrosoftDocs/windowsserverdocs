@@ -1,7 +1,7 @@
 ---
 title: Hyper-V Architecture
 description: Hyper-v architecture condsiderations for performance tuning
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: performance-tuning-guide
 ms.topic: article
 ms.author: Asmahi; SandySp; JoPoulso

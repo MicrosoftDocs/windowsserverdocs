@@ -1,7 +1,7 @@
 ---
 title: Feature Descriptions for Linux and FreeBSD virtual machines on Hyper-V
 description: "Describes features that affect core components such as networking, storage, memory when using Linux and FreeBSD on a virtual machine"
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.service: na
 manager: dongill
 ms.technology: compute-hyper-v

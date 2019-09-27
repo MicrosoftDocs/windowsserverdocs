@@ -3,7 +3,7 @@ title: bitsadmin util and enableanalyticchannel
 description: "Windows Commands topic for **bitsadmin util and enableanalyticchannel** - 
 Enables or disables the BITS client analytic channel."
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands

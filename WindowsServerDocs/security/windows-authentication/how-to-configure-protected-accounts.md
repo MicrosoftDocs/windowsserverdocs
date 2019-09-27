@@ -1,7 +1,7 @@
 ---
 title: How to Configure Protected Accounts
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.service: na
 ms.suite: na

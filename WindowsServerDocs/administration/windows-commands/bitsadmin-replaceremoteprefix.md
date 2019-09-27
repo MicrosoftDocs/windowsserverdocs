@@ -2,7 +2,7 @@
 title: bitsadmin replaceremoteprefix
 description: "Windows Commands topic for **bitsadmin replaceremoteprefix** - All files in the job whose remote URL begins with *OldPrefix* are changed to use *NewPrefix*."
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands

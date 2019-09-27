@@ -1,7 +1,7 @@
 ---
 title: Configure virtual machines running Windows Vista with 1 or 2 virtual processors
 description: "Online version of the text for this Best Practices Analyzer rule."
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.service: na
 manager: dongill
 ms.technology: compute-hyper-v

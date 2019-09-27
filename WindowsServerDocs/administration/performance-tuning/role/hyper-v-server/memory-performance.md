@@ -1,7 +1,7 @@
 ---
 title: Hyper-V Memory Performance
 description: Memory considerations in performance tuning Hyper-V
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: performance-tuning-guide
 ms.topic: article
 ms.author: Asmahi; SandySp; JoPoulso

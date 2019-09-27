@@ -2,7 +2,7 @@
 title: Add printers
 description: Add a printer for your MultiPoint Services users.
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: multipoint-services
 ms.reviewer: na
 ms.suite: na

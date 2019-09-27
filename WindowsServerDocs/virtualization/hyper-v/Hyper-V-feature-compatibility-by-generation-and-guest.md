@@ -1,7 +1,7 @@
 ---
 title: Hyper-V feature compatibility by generation and guest
 description: "Lists the generations and operating systems that are compatible with key Hyper-V features"
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.service: na
 manager: dongill
 ms.technology: compute-hyper-v

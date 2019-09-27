@@ -2,7 +2,7 @@
 title: Configure a Server Core installation of Windows Server with Sconfig.cmd
 description: "Explains how to use Sconfig.cmd" 
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.date: 10/17/2017

@@ -1,6 +1,6 @@
 ---
 title: Deploy Work Folders with AD FS and Web Application Proxy - Step 3, Set Up Work Folders
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: storage-work-folders
 ms.topic: article
 manager: klaasl

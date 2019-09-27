@@ -2,7 +2,7 @@
 title: Get started with Remote Desktop Services
 description: Provides information to get you started using RDS in Windows Server 2016.
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: remote-desktop-services
