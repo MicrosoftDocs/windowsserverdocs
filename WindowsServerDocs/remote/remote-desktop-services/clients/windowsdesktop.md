@@ -2,7 +2,7 @@
 title: Get started with the Windows Desktop client
 description: Basic information about the Windows Desktop client.
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: remote-desktop-services

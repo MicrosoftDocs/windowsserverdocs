@@ -2,7 +2,7 @@
 title: bitsadmin peercaching and help
 description: "Windows Commands topic for **bitsadmin peercaching and help** - Displays the command-line usage for the **PeerCaching** switches."
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands

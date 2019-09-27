@@ -1,6 +1,6 @@
 ---
 title: Deploy a File Share Witness in Windows Server 2019
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.manager: eldenc
 ms.technology: failover-clustering
 ms.topic: article

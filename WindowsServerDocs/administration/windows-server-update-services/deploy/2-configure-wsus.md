@@ -1,7 +1,7 @@
 ---
 title: Step 2 - Configure WSUS
 description: "Windows Server Update Service (WSUS) topic - Configure WSUS is step two in a four step process for deploying WSUS"
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.technology: manage-wsus
 ms.topic: article

@@ -2,7 +2,7 @@
 title: Windows Server 2019 and Microsoft Server application compatibility
 description: "Compatibility table for Windows Server 2019 and Microsoft server applications"
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: server-general

@@ -2,7 +2,7 @@
 title: Log off or Disconnect User Sessions
 description: Learn how to manually log off a user
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: multipoint-services
 ms.reviewer: na
 ms.suite: na

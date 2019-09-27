@@ -1,7 +1,7 @@
 ---
 title: Deploy Always On VPN
 description: This topic provides detailed instructions for deploying Always On VPN in Windows Server 2016.
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: networking-ras
 ms.topic: article
 ms.assetid: ad748de2-d175-47bf-b05f-707dc48692cf

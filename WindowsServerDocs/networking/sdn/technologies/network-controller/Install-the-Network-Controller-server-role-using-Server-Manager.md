@@ -2,7 +2,7 @@
 title: Install the Network Controller Server Role Using Server Manager
 description: This topic provides instructions on how to install the Network Controller server role by using Server Manager in Windows Server 2016. 
 manager: brianlic
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: networking-sdn
 ms.tgt_pltfrm: na
 ms.topic: get-started-article

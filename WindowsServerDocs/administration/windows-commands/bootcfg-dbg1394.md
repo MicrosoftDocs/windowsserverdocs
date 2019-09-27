@@ -2,7 +2,7 @@
 title: bootcfg dbg1394
 description: "Windows Commands topic for **bootcfg dbg1394** - Configures 1394 port debugging for a specified operating system entry"
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands

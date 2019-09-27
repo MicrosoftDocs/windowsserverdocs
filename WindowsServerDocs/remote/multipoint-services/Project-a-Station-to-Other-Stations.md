@@ -2,7 +2,7 @@
 title: Project a Station to Other Stations
 description: Learn how to share a desktop from one system to another in MultiPoint Services
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: multipoint-services
 ms.reviewer: na
 ms.suite: na

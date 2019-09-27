@@ -2,7 +2,7 @@
 title: Windows Server supported networking scenarios
 description: This topic provides information about new supported Networking scenarios in Windows Server 2016 and later
 manager: brianlic
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: networking
 ms.topic: article
 ms.date: 

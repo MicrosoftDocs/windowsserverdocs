@@ -2,7 +2,7 @@
 title: tasklist
 description: Learn how to display a list of the processes running on the local or remote computer.
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands

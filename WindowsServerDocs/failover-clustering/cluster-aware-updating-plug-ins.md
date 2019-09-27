@@ -2,7 +2,7 @@
 ms.assetid: d44d4430-41e2-483a-9685-92610cdef32a
 title: How Cluster-Aware Updating plug-ins work
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 manager: dongill
 ms.author: jgerend
 author: JasonGerend

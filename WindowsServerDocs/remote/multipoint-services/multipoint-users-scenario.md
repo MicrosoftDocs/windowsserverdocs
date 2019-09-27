@@ -2,7 +2,7 @@
 title: MultiPoint Services user accounts 
 description: Learn about user accounts in MultiPoint Services, especially which kind to use for different scenarios
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: multipoint-services
 ms.reviewer: na
 ms.suite: na

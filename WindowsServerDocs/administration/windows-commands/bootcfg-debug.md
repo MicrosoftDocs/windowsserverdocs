@@ -3,7 +3,7 @@ title: bootcfg debug
 description: "Windows Commands topic for **bootcfg debug** - 
 adds or changes the debug settings for a specified operating system entry."
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands

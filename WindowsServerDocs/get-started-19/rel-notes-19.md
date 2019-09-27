@@ -1,7 +1,7 @@
 ---
 title: Release Notes - Important issues in Windows Server 2019
 description: "Summarizes critical issues requiring workarounds to avoid crashes, hanging, installation failure and data loss"
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: server-general
 ms.topic: article
 ms.assetid: 134aab85-664f-4d55-87ef-9e5fd098371f

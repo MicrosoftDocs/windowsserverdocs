@@ -2,7 +2,7 @@
 title: Manage Multiple, remote Servers with Server Manager
 description: "Server Manager"
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-server-manager

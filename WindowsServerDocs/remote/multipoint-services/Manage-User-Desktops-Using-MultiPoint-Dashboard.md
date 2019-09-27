@@ -2,7 +2,7 @@
 title: Manage User Desktops Using MultiPoint Dashboard
 description: Provides an overview of the MultiPoint Dashboard
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: multipoint-services
 ms.reviewer: na
 ms.suite: na

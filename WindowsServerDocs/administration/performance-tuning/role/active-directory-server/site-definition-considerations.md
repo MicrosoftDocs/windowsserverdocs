@@ -1,7 +1,7 @@
 ---
 title: Site definition and domain controller placement in ADDS performance tuning
 description: Site definition and domain controller placement considerations in Active Directory performance tuning.
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: performance-tuning-guide
 ms.topic: article
 ms.author: TimWi; ChrisRob; HerbertM; KenBrumf;  MLeary; ShawnRab

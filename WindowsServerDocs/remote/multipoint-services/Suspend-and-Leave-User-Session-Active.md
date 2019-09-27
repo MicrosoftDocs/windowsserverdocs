@@ -2,7 +2,7 @@
 title: Suspend and Leave User Session Active
 description: Learn how to suspend a user from a MultiPoint session without disconnecting them
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: multipoint-services
 ms.reviewer: na
 ms.suite: na

@@ -2,7 +2,7 @@
 title: bitsadmin list
 description: "Windows Commands topic for **bitsadmin list** - lists the transfer jobs owned by the current user."
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands

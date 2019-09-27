@@ -6,7 +6,7 @@ ms.author: jiwool
 manager: senthilr
 ms.date: 01/26/2017
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: compute-hyper-v
 ms.assetid: 444e1496-9e5a-41cf-bfbc-306e2ed8e00a
 audience: IT Pros

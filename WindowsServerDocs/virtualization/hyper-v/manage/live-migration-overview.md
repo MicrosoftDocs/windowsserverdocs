@@ -1,7 +1,7 @@
 ---
 title: Live Migration Overview
 description: "Gives overview of live migration functionality in Windows Server 2016."
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.service: na
 ms.technology: compute-hyper-v
 ms.tgt_pltfrm: na

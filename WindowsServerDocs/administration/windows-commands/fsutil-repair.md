@@ -1,7 +1,7 @@
 ---
 ms.assetid: 62d77150-1d9e-4069-ab4a-299f33024912
 title: Fsutil repair
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 manager: dmoss
 ms.author: toklima
 author: toklima

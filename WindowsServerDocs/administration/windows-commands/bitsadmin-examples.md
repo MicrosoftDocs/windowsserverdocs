@@ -2,7 +2,7 @@
 title: bitsadmin examples
 description: "The following examples show how to use the bitsadmin tool to perform the most common tasks."
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands

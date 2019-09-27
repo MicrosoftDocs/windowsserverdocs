@@ -1,7 +1,7 @@
 ---
 title: Windows Server release information
 description: Release information about Windows Server 
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: server-general
 ms.tgt_pltfrm: na
 ms.topic: article

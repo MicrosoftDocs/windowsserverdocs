@@ -1,7 +1,7 @@
 ---
 ms.assetid: 693ab895-9d0c-47c1-9f52-df5cd287842a
 title: Fsutil objectid
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 manager: dmoss
 ms.author: toklima
 author: toklima

@@ -2,7 +2,7 @@
 title: Attach additional stations to your MultiPoint server
 description: Add more stations to your MultiPoint Services deployment
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: multipoint-services
 ms.reviewer: na
 ms.suite: na

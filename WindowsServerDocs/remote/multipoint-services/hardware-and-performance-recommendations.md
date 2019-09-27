@@ -3,7 +3,7 @@ title: Hardware Requirements and Performance Recommendations
 description: Provides hardware and performance requirements and recommendations for MultiPoint Services
 ms.custom: na
 ms.date: 07/22/2016
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: multipoint-services
 ms.reviewer: na
 ms.suite: na

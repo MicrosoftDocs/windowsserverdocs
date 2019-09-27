@@ -3,7 +3,7 @@ title: bitsadmin peercaching and setconfigurationflags
 description: "Windows Commands topic for **bitsadmin peercaching and setconfigurationflags** - 
 Sets the configuration flags that determine if the computer can serve content to peers and can download content from peers."
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands

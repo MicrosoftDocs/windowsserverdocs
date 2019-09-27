@@ -2,7 +2,7 @@
 ms.assetid: 9a06cd41-426f-4cb9-89cf-f5be730e0b79
 title: What&#39;s new in Active Directory Domain Services 
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.service: 
 ms.suite: na

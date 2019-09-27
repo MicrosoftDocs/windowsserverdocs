@@ -1,7 +1,7 @@
 ---
 title: KMS client setup keys
 description: Keys needed to activate Windows products from a KMS server
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.mktglfcycl: manage
 ms.sitesec: library
 author: jasongerend

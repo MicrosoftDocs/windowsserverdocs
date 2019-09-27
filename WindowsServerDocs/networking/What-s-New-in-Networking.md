@@ -1,7 +1,7 @@
 ---
 title: What's new in networking
 description: This topic provides overview information about new features and technologies for Networking in Windows Server 2016
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: networking
 ms.topic: get-started-article
 ms.assetid: 08fb7563-d319-48a9-b181-ca0ca3032c18

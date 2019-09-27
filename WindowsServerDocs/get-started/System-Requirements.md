@@ -2,7 +2,7 @@
 title: System Requirements
 description: "What are the minimum requirements for storage, CPU, network, memory, RAM in a clean installation of each installation option." 
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.date: 10/17/2017

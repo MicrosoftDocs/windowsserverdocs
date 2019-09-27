@@ -7,7 +7,7 @@ author: daniellee-msft
 ms.author: jol
 ms.date: 09/17/2018
 ms.localizationpriority: medium
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ---
 # Extensions for Windows Admin Center
 

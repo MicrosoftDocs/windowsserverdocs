@@ -1,7 +1,7 @@
 ﻿---
 title: 'Migrate SYSVOL replication to DFS Replication'
 ms.date: 07/02/2012
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: storage
 author: JasonGerend
 manager: elizapo

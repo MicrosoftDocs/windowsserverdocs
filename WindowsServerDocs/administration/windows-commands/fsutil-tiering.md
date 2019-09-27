@@ -1,7 +1,7 @@
 ---
 ms.assetid: e5f55f3e-8d2a-4526-8d67-36a539126c22
 title: Fsutil tiering
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 manager: dmoss
 ms.author: toklima
 author: toklima

@@ -3,7 +3,7 @@ title: auditpol get
 description: "Windows Commands topic for **auditpol get** - 
 Retrieves the system policy, per-user policy, auditing options, and audit security descriptor object."
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands

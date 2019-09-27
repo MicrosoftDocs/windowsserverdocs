@@ -7,7 +7,7 @@ author: haley-rowland
 ms.author: harowl
 ms.date: 08/22/2019
 ms.localizationpriority: high
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ---
 # Hello, Windows Admin Center!
 

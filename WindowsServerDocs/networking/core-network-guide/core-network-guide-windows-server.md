@@ -2,7 +2,7 @@
 title: Core network guidance for Windows Server
 description: This topic provides an overview of the Core Network Guide, which allows you to plan and deploy the core components required for a fully functioning network and a new Active Directory domain in a new forest with Windows Server 2016
 manager: brianlic
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: networking
 ms.topic: article
 ms.date: 

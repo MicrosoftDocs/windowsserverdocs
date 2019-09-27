@@ -1,7 +1,7 @@
 ---
 title: Running WSUS Replica mode
 description: "Windows Server Update Service (WSUS) topic - How to configure Replica mode "
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-wsus

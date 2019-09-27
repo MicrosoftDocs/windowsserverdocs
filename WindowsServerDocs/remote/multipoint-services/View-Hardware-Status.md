@@ -2,7 +2,7 @@
 title: View Hardware Status
 description: Learn how to view hardware information in MultiPoint Services
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: multipoint-services
 ms.reviewer: na
 ms.suite: na
