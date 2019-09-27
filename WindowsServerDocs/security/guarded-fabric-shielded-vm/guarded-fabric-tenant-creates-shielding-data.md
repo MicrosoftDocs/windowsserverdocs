@@ -70,31 +70,31 @@ When creating an unattend.xml file for shielded VMs, keep in mind the following 
 
 - The only substitution strings supported in shielded VM unattend files are the following:
 
-        | Replaceable Element | Substitution String |
-        |-----------|-----------|
-        | ComputerName        | @ComputerName@      |
-        | TimeZone            | @TimeZone@          |
-        | ProductKey          | @ProductKey@        |
-        | IPAddr4-1           | @IP4Addr-1@         |
-        | IPAddr6-1           | @IP6Addr-1@         |
-        | MACAddr-1           | @MACAddr-1@         |
-        | Prefix-1-1          | @Prefix-1-1@        |
-        | NextHop-1-1         | @NextHop-1-1@       |
-        | Prefix-1-2          | @Prefix-1-2@        |
-        | NextHop-1-2         | @NextHop-1-2@       |
+    | Replaceable Element | Substitution String |
+    |-----------|-----------|
+    | ComputerName        | @ComputerName@      |
+    | TimeZone            | @TimeZone@          |
+    | ProductKey          | @ProductKey@        |
+    | IPAddr4-1           | @IP4Addr-1@         |
+    | IPAddr6-1           | @IP6Addr-1@         |
+    | MACAddr-1           | @MACAddr-1@         |
+    | Prefix-1-1          | @Prefix-1-1@        |
+    | NextHop-1-1         | @NextHop-1-1@       |
+    | Prefix-1-2          | @Prefix-1-2@        |
+    | NextHop-1-2         | @NextHop-1-2@       |
 
-        If you have more than one NIC, you can add multiple substitution strings for the IP configuration by incrementing the first digit. For example, to set the IPv4 address, subnet, and gateway for 2 NICs, you would use the following substitution strings:
+    If you have more than one NIC, you can add multiple substitution strings for the IP configuration by incrementing the first digit. For example, to set the IPv4 address, subnet, and gateway for 2 NICs, you would use the following substitution strings:
 
-        | Substitution String | Example substitution |
-        |---------------------|----------------------|
-        | @IP4Addr-1@         | 192.168.1.10         |
-        | @MACAddr-1@         | Ethernet             |
-        | @Prefix-1-1@        | 192.168.1.0/24       |
-        | @NextHop-1-1@       | 192.168.1.254        |
-        | @IP4Addr-2@         | 10.0.20.30           |
-        | @MACAddr-2@         | Ethernet 2           |
-        | @Prefix-2-1@        | 10.0.20.0/24         |
-        | @NextHop-2-1@       | 10.0.20.1            |
+    | Substitution String | Example substitution |
+    |---------------------|----------------------|
+    | @IP4Addr-1@         | 192.168.1.10         |
+    | @MACAddr-1@         | Ethernet             |
+    | @Prefix-1-1@        | 192.168.1.0/24       |
+    | @NextHop-1-1@       | 192.168.1.254        |
+    | @IP4Addr-2@         | 10.0.20.30           |
+    | @MACAddr-2@         | Ethernet 2           |
+    | @Prefix-2-1@        | 10.0.20.0/24         |
+    | @NextHop-2-1@       | 10.0.20.1            |
 
 When using substitution strings, it is important to ensure that the strings will be populated during the VM provisioning process. If a string such as @ProductKey@ is not supplied at deployment time, leaving the &lt;ProductKey&gt; node in the unattend file blank, the specialization process will fail and you will be unable to connect to your VM.
 
@@ -116,19 +116,19 @@ There are two ways to acquire the VSC of a template disk:
 
 1. The hoster (or tenant, if the tenant has access to VMM) uses the VMM PowerShell cmdlets to save the VSC and gives it to the tenant. This can be performed on any machine with the VMM console installed and configured to manage the hosting fabric's VMM environment. The PowerShell cmdlets to save the VSC are:
 
-        ```powershell
-        $disk = Get-SCVirtualHardDisk -Name "templateDisk.vhdx"
-    
-        $vsc = Get-SCVolumeSignatureCatalog -VirtualHardDisk $disk
-    
-        $vsc.WriteToFile(".\templateDisk.vsc")
-        ```
+    ```powershell
+    $disk = Get-SCVirtualHardDisk -Name "templateDisk.vhdx"
+
+    $vsc = Get-SCVolumeSignatureCatalog -VirtualHardDisk $disk
+
+    $vsc.WriteToFile(".\templateDisk.vsc")
+    ```
 
 2. The tenant has access to the template disk file. This may be the case if the tenant creates a template disk to uploaded to a hosting service provider or if the tenant can download the hoster's template disk. In this case, without VMM in the picture, the tenant would run the following cmdlet (installed with the Shielded VM Tools feature, part of Remote Server Administration Tools):
 
-        ```powershell
-        Save-VolumeSignatureCatalog -TemplateDiskPath templateDisk.vhdx -VolumeSignatureCatalogPath templateDisk.vsc
-        ```
+    ```powershell
+    Save-VolumeSignatureCatalog -TemplateDiskPath templateDisk.vhdx -VolumeSignatureCatalogPath templateDisk.vsc
+    ```
 
 ## Select trusted fabrics
 
@@ -140,17 +140,16 @@ You or your hosting service provider can obtain the guardian metadata from HGS b
 
 - Obtain the guardian metadata directly from HGS by running the following Windows PowerShell command, or browsing to the website and saving the XML file that is displayed:
 
-        ```powershell
-        Invoke-WebRequest 'http://hgs.bastion.local/KeyProtection/service/metadata/2014-07/metadata.xml' -OutFile .\RelecloudGuardian.xml
-        ```
+    ```powershell
+    Invoke-WebRequest 'http://hgs.bastion.local/KeyProtection/service/metadata/2014-07/metadata.xml' -OutFile .\RelecloudGuardian.xml
+    ```
 
 - Obtain the guardian metadata from VMM using the VMM PowerShell cmdlets:
 
-        ```powershell
-        $relecloudmetadata = Get-SCGuardianConfiguration
-
-        $relecloudmetadata.InnerXml | Out-File .\RelecloudGuardian.xml -Encoding UTF8
-        ```
+    ```powershell
+    $relecloudmetadata = Get-SCGuardianConfiguration
+    $relecloudmetadata.InnerXml | Out-File .\RelecloudGuardian.xml -Encoding UTF8
+    ```
 
 Obtain the guardian metadata files for each guarded fabric you wish to authorize your shielded VMs to run on before continuing.
 
@@ -160,9 +159,9 @@ Run the Shielding Data File wizard to create a shielding data (PDK) file. Here, 
 
 1. Install **Remote Server Administration Tools &gt; Feature Administration Tools &gt; Shielded VM Tools** on your machine using Server Manager or the following Windows PowerShell command:
 
-        ```powershell
-        Install-WindowsFeature RSAT-Shielded-VM-Tools
-        ```
+    ```powershell
+    Install-WindowsFeature RSAT-Shielded-VM-Tools
+    ```
 
 2. Open the Shielding Data File Wizard from the Administrator Tools section on your Start menu or by running the following executable **C:\\Windows\\System32\\ShieldingDataFileWizard.exe**.
 
@@ -176,7 +175,7 @@ Run the Shielding Data File wizard to create a shielding data (PDK) file. Here, 
 
     ![Shielding Data File Wizard, file selection](../media/Guarded-Fabric-Shielded-VM/guarded-host-shielding-data-wizard-01.png)
 
-       Additionally, you must choose whether VMs created using this shielding data file will be truly shielded or configured in "encryption supported" mode. For more information about these two options, see [What are the types of virtual machines that a guarded fabric can run?](guarded-fabric-and-shielded-vms.md#what-are-the-types-of-virtual-machines-that-a-guarded-fabric-can-run).
+    Additionally, you must choose whether VMs created using this shielding data file will be truly shielded or configured in "encryption supported" mode. For more information about these two options, see [What are the types of virtual machines that a guarded fabric can run?](guarded-fabric-and-shielded-vms.md#what-are-the-types-of-virtual-machines-that-a-guarded-fabric-can-run).
 
     > [!IMPORTANT]
     > Pay careful attention to the next step as it defines the owner of your shielded VMs and which fabrics your shielded VMs will be authorized to run on.<br>Possession of **owner guardian** is required in order to later change an existing shielded VM from **Shielded** to **Encryption Supported** or vice-versa.
@@ -212,9 +211,9 @@ You can check if you have any guardians installed locally by running [Get-HgsGua
 
 If you need to create an owner guardian, run the following command:
 
-    ```powershell
-    New-HgsGuardian -Name "Owner" -GenerateCertificates
-    ```
+```powershell
+New-HgsGuardian -Name "Owner" -GenerateCertificates
+```
 
 This command creates a pair of signing and encryption certificates in the local machine's certificate store under the "Shielded VM Local Certificates" folder.
 You will need the owner certificates and their corresponding private keys to unshield a virtual machine, so ensure these certificates are backed up and protected from theft.
@@ -222,9 +221,9 @@ An attacker with access to the owner certificates can use them to start up your 
 
 If you need to import guardian information from a guarded fabric where you want to run your virtual machine (your primary datacenter, backup datacenters, etc.), run the following command for each [metadata file retrieved from your guarded fabrics](#select-trusted-fabrics).
 
-    ```powershell
-    Import-HgsGuardian -Name 'EAST-US Datacenter' -Path '.\EastUSGuardian.xml'
-    ```
+```powershell
+Import-HgsGuardian -Name 'EAST-US Datacenter' -Path '.\EastUSGuardian.xml'
+```
 
 > [!TIP]
 > If you used self-signed certificates or the certificates registered with HGS are expired, you may need to use the `-AllowUntrustedRoot` and/or `-AllowExpired` flags with the Import-HgsGuardian command to bypass the security checks.
@@ -235,10 +234,10 @@ Use `-Policy Shielded` for a fully shielded VM or `-Policy EncryptionSupported` 
 
 Once everything is ready, run the following command to create your shielding data file:
 
-    ```powershell
-    $viq = New-VolumeIDQualifier -VolumeSignatureCatalogFilePath 'C:\temp\marketing-ws2016.vsc' -VersionRule Equals
-    New-ShieldingDataFile -ShieldingDataFilePath "C:\temp\Marketing-LBI.pdk" -Policy EncryptionSupported -Owner 'Owner' -Guardian 'EAST-US Datacenter' -VolumeIDQualifier $viq -AnswerFile 'C:\temp\marketing-ws2016-answerfile.xml'
-    ```
+```powershell
+$viq = New-VolumeIDQualifier -VolumeSignatureCatalogFilePath 'C:\temp\marketing-ws2016.vsc' -VersionRule Equals
+New-ShieldingDataFile -ShieldingDataFilePath "C:\temp\Marketing-LBI.pdk" -Policy EncryptionSupported -Owner 'Owner' -Guardian 'EAST-US Datacenter' -VolumeIDQualifier $viq -AnswerFile 'C:\temp\marketing-ws2016-answerfile.xml'
+```
 
 > [!TIP]
 > If you are using a custom RDP certificate, SSH keys, or other files that need to be included with your shielding data file, use the `-OtherFile` parameter to include them. You can provide a comma separated list of file paths, like `-OtherFile "C:\source\myRDPCert.pfx", "C:\source\RDPCertificateConfig.ps1"`
