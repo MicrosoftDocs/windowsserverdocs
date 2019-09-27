@@ -1,7 +1,7 @@
 ---
 title: NPS Proxy Server Load Balancing
 description: You can use this topic to learn about Windows Server 2016 and Windows 10 VPN features and functionality.
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: networking
 ms.topic: article
 ms.assetid: 528280e6-b47e-489f-b310-b257d434aa0d

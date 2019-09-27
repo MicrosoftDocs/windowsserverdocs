@@ -1,7 +1,7 @@
 ---
 ms.assetid: fb95c8ee-a418-4520-a12a-7754ae947c3c
 title: Fsutil reparsepoint
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 manager: dmoss
 ms.author: toklima
 author: toklima

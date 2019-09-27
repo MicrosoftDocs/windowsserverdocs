@@ -1,7 +1,7 @@
 ﻿---
 title: Vssadmin delete shadows
 description: A description of the vssadmin delete shadows command.
-ms.prod: windows-server-threshold 
+ms.prod: windows-server 
 ms.topic: article 
 author: JasonGerend 
 ms.author: jgerend 

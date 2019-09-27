@@ -2,7 +2,7 @@
 title: autochk
 description: "Windows Commands topic for **autochk** - Runs when the computer is started and prior to Windows Server starting to verify the logical integrity of a file system."
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands

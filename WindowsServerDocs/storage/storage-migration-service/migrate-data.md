@@ -6,7 +6,7 @@ ms.author: jgerend
 manager: elizapo
 ms.date: 02/13/2019
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: storage
 ---
 # Use Storage Migration Service to migrate a server

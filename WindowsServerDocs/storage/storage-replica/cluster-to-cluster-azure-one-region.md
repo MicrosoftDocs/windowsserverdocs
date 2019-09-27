@@ -6,7 +6,7 @@ author: arduppal
 ms.author: arduppal
 ms.date: 04/26/2019
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: storage-replica
 manager: mchad
 ---

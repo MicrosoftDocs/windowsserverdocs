@@ -1,7 +1,7 @@
 ---
 title: Install the Hyper-V role on Windows Server
 description: "Gives instructions for installing Hyper-V using Server Manager or Windows PowerShell"
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.service: na
 manager: dongill
 ms.technology: compute-hyper-v

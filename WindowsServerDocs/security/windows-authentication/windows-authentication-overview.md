@@ -2,7 +2,7 @@
 title: Windows Authentication Overview
 description: "Windows Server Security"
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: security-windows-auth

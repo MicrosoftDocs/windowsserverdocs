@@ -2,7 +2,7 @@
 title: Understanding the desktop hosting environment
 description: Overview of an RDS deployhment using Azure IaaS.
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: remote-desktop-services

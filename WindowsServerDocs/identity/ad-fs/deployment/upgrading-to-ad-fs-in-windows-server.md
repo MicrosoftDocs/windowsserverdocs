@@ -6,7 +6,7 @@ author: billmath
 manager: femila
 ms.date: 04/09/2018
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: identity-adfs
 ms.author: billmath
 ---

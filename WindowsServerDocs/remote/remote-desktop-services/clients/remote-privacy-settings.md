@@ -2,7 +2,7 @@
 title: Privacy settings for managed apps and desktops
 description: Information about privacy settings of the remote system when using managed apps and desktops.
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: remote-desktop-services

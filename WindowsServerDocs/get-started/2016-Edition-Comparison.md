@@ -2,7 +2,7 @@
 title: Windows Server 2016 Products and Editions
 description: "Explains differences in the Standard and Datacenter editions" 
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.date: 01/03/2017

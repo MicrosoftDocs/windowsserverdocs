@@ -1,7 +1,7 @@
 ---
 ms.assetid: faad34aa-4ba1-4129-bc1f-08088399e2fa
 title: Fsutil usn
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 manager: dmoss
 ms.author: toklima
 author: toklima

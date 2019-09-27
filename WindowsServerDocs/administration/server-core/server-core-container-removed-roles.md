@@ -1,7 +1,7 @@
 ---
 title: Roles, Role Services, and Features not in Server Core containers - Windows Server, version 1803
 description: Learn about the roles and features we removed from the Server Core container image for Windows Server.
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.mktglfcycl: manage
 ms.sitesec: library
 author: lizap

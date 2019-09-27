@@ -1,7 +1,7 @@
 ---
 title: Detecting bottlenecks in a virtualized environment
 description: How to detect and resolve potential Hyper-v performance bottlenecks
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: performance-tuning-guide
 ms.topic: article
 ms.author: Asmahi; SandySp; JoPoulso

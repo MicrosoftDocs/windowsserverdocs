@@ -2,7 +2,7 @@
 title: RDS - Which graphics virtualization technology is right for you?
 description: Planning information to help you choose the right graphics virtualization option for your RDS deployment.
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: remote-desktop-services

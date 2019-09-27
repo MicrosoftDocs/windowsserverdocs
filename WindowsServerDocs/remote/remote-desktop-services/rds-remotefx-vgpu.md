@@ -2,7 +2,7 @@
 title: RDS - RemoteFX vGPU setup and configuration
 description: Planning information to configure RemoteFX vGPU graphics virtualization.
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: remote-desktop-services

@@ -3,7 +3,7 @@ title: Set the date, time, and time zone
 description: Learn how to set the date, time, and time zone in MultiPoint Services
 ms.custom: na
 ms.date: 07/22/2016
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: multipoint-services
 ms.reviewer: na
 ms.suite: na

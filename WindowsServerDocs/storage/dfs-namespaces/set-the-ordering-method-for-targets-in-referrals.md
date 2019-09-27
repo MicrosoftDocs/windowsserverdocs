@@ -2,7 +2,7 @@
 title: Set the Ordering Method for Targets in Referrals
 description: This article describes how to set the ordering method for targets in referrals.
 ms.date: 6/5/2017
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: storage
 ms.topic: article
 author: JasonGerend

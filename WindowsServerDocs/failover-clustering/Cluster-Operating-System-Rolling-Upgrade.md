@@ -1,6 +1,6 @@
 ---
 title: Cluster Operating System Rolling Upgrade
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: storage-failover-clustering
 ms.topic: get-started-article
 ms.assetid: 6e102c1f-df26-4eaa-bc7a-d0d55d3b82d5

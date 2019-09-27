@@ -2,7 +2,7 @@
 title: Block or Unblock USB Storage
 ms.custom: na
 description: Learn how to prevent users from using USB storage on MultiPoint stations 
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: multipoint-services
 ms.reviewer: na
 ms.suite: na

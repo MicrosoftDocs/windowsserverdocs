@@ -1,7 +1,7 @@
 ---
 title: Supported CentOS and Red Hat Enterprise Linux virtual machines on Hyper-V
 description: "Lists the versions of Linux integration services for supported CentOS and Red Hat Enterprise distributions"
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.service: na
 ms.technology: compute-hyper-v
 ms.tgt_pltfrm: na

@@ -1,7 +1,7 @@
 ---
 title: The Hyper-V Virtual Machine Management service should be configured to start automatically
 description: "Gives instructions to resolve the issue reported by this Best Practices Analyzer rule."
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.service: na
 manager: dongill
 ms.technology: compute-hyper-v

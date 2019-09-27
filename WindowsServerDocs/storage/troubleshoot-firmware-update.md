@@ -1,7 +1,7 @@
 ---
 ms.assetid: 13210461-1e92-48a1-91a2-c251957ba256
 title: Troubleshooting drive firmware updates	
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.author: toklima
 ms.manager: masriniv
 ms.technology: storage

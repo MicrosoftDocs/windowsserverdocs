@@ -5,7 +5,7 @@ author: kgremban
 manager: femila
 ms.date: 07/13/2016
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.assetid: a2fef55d-747b-4e20-8f21-5f8807e7ef87
 ms.technology: web-app-proxy
 ---

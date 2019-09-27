@@ -2,7 +2,7 @@
 title: Microsoft Server Activation
 description: "How to activate Windows Server 2016."
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.date: 09/19/2018

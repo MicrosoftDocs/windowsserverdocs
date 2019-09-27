@@ -2,7 +2,7 @@
 title: Windows Internet Name Service (WINS)
 description: This topic provides information about decommissioning WINS and using DNS for name resolution services on your network.
 manager: brianlic
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: networking
 ms.topic: article
 ms.assetid: 32eabe7d-1130-4001-a79a-8ddb31993e5b

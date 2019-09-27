@@ -3,7 +3,7 @@ title: Switch Embedded Teaming for SDN
 description: You can use this topic for a brief overview of Switch Embedded Teaming in Windows Server 2016.
 manager: brianlic
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: networking-sdn

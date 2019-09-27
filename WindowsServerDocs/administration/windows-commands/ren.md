@@ -2,7 +2,7 @@
 title: ren
 description: Learn how to rename a file or directory with the ren command.
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands

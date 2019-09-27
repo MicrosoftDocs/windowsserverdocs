@@ -2,7 +2,7 @@
 title: License your RDS deployment with client access licenses (CALs)
 description: Overview of client licensing in Remote Desktop Services.
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: remote-desktop-services

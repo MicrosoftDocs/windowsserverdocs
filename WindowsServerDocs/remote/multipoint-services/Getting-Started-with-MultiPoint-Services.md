@@ -2,7 +2,7 @@
 title: Getting Started with MultiPoint Services
 description: Introduces MultiPoint Services and gets you started using it.
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: multipoint-services
 ms.reviewer: na
 ms.suite: na
