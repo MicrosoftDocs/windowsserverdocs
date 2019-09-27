@@ -87,4 +87,4 @@ reg add HKLM\SOFTWARE\Microsoft\.NETFramework\v4.0.30319 /v SystemDefaultTlsVers
 > [!WARNING]
 > The system default TLS versions setting will affect all .NET apps on your machine. Be sure to test the registry keys in an isolated environment before deploying them to your production machines.
 
-For more information about .NET 4.6 and TLS 1.0, see [Solving the TLS 1.0 Problem, 2nd Edition](https://docs.microsoft.com/en-us/security/solving-tls1-problem).
+For more information about .NET 4.6 and TLS 1.0, see [Solving the TLS 1.0 Problem, 2nd Edition](https://docs.microsoft.com/security/solving-tls1-problem).
