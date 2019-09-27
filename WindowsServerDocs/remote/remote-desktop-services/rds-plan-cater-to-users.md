@@ -36,7 +36,7 @@ Power user uses engineering and graphics application such as CAD and Adobe Photo
 
 For more information on graphics acceleration usage, check out [Choose your graphics rendering technology](rds-graphics-virtualization.md).
 
-For deployments on Azure, there are also graphics acceleration options on Azure. For more information on the available GPU VM sizes, check out [GPU optimized virtual machines sizes](https://docs.microsoft.com/en-us/azure/virtual-machines/windows/sizes-gpu).
+There are also graphics acceleration deployment options on Azure. For more information on the available GPU VM sizes, check out [GPU optimized virtual machines sizes](https://docs.microsoft.com/en-us/azure/virtual-machines/windows/sizes-gpu).
 
 ## Test Workload
 
