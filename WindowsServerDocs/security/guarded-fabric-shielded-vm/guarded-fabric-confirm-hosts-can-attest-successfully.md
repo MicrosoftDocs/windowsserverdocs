@@ -39,7 +39,7 @@ A fabric administrator needs to confirm that Hyper-V hosts can run as guarded ho
     >**Notes**
     > - If the HGS administrator [enabled HTTPS on the HGS server](guarded-fabric-configure-hgs-https.md), begin the URLs with `https://`.
     > - If the HGS administrator enabled HTTPS on the HGS server and used a self-signed certificate, you will need to import the certificate into the Trusted Root Certificate Authorities store on every host. To do this, run the following command on each host:
-     ```PowerShell
+      ```PowerShell
      Import-Certificate -FilePath "C:\temp\HttpsCertificate.cer" -CertStoreLocation Cert:\LocalMachine\Root
      ```
     > - If you've configured HGS Client to use HTTPS and have disabled TLS 1.0 systemwide, see our [modern TLS guidance](guarded-fabric-troubleshoot-hosts.md#modern-tls)
