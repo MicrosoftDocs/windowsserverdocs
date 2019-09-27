@@ -1,5 +1,5 @@
 ---
-ms.date:  01/07/2019
+ms.date:  09/27/2019
 ms.topic: conceptual
 keywords:  OpenSSH, SSH, SSHD, install, setup
 contributor:  maertendMSFT
