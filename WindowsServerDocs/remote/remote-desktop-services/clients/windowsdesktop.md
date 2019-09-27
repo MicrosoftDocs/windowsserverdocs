@@ -33,11 +33,11 @@ You can currently download the client for Windows 64-bit. We'll update this list
 
 You can install the client for the current user, which doesn't require admin rights, or your admin can install and configure the client so that all users on the device can access it.
 
-Once installed, the client can be launched from the Start menu by searching for **Remote Desktop**.
+After you've installed the client, you can launch it from the Start menu by searching for **Remote Desktop**.
 
 ## Update the client
 
-Unless disabled by an admin, you'll be notified when a new version of the client is available. This notification may be shown either directly in the Connection Center or in the Windows Action Center. Select the notification to start the update process.
+You'll be notified whenever a new version of the client is available as long as your admin hasn't disabled notifications. The notification will appear in either the Connection Center or the Windows Action Center. To update your client, just select the notification.
 
 You can also manually search for new updates for the client:
 
@@ -99,13 +99,13 @@ You can configure some of the settings for desktop resources to ensure the exper
 
 1. From the Connection Center, right-click on a desktop resource.
 2. Select **Settings** from the drop-down menu.
-3. The Settings panel appears on the right side of the client, showing the name of the desktop.
+3. The Settings panel appears on the right side of the client displaying the name of the desktop.
 
 The client will use the settings configured by your admin unless you turn off the **Use default settings** option. Doing so allows you to configure the following options:
 
-- **Use all monitors** switches the desktop session between using all the local monitors and only one monitor.
-- **Start in full screen** determines whether the session will launch in full screen or in windowed mode. This setting is automatically enabled when using all monitors.
-- **Update the resolution on resize** changes the behavior when you resize the session in windowed mode. If enabled, the resolution of the remote desktop will be updated to match the size of the local window, reducing the need for scrollbars. If disabled, the session will retain the resolution specified in **Resolution** for its entire duration. This setting is automatically enabled when using all monitors.
+- **Use all monitors** switches the desktop session between using all available local monitors and only one monitor.
+- **Start in full screen** determines whether the session will launch in full-screen or windowed mode. This setting is automatically enabled when using all monitors.
+- **Update the resolution on resize** changes the behavior when you resize the session in windowed mode. If enabled, the resolution of the remote desktop will update to match the size of the local window. If disabled, the session will retain the resolution specified in **Resolution** for its entire duration. This setting is automatically enabled when using all monitors.
 - **Resolution** lets you specify the resolution of the remote desktop. The session will retain this resolution for its entire duration. This setting is automatically disabled if the resolution is set to update on resize.
 - **Change the size of the text and apps** specifies the size of the content of the session. This setting only applies when connecting to Windows 8.1 and later or Windows Server 2012 R2 and later. This setting is automatically disabled if the resolution is set to update on resize.
 - **Fit session to window** determines how the session is displayed when the resolution of the remote desktop differs from the size of the local window. When enabled, the session content will be resized to fit inside the window while preserving the aspect ratio of the session. When disabled, scrollbars or black areas will be shown when the resolution and window size don't match.
