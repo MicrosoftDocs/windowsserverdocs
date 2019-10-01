@@ -1,6 +1,6 @@
 ---
 title: Stretch Cluster Replication Using Shared Storage
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 manager: eldenc
 ms.author: nedpyle
 ms.technology: storage-replica

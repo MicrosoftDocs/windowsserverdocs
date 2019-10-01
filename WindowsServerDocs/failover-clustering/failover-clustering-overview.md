@@ -1,7 +1,7 @@
 ---
 ms.assetid: c9844427-27cf-4d76-b5bb-e06368b092f7
 title: Failover Clustering  
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 layout: LandingPage  
 ms.topic: landing-page
 ms.manager: dongill

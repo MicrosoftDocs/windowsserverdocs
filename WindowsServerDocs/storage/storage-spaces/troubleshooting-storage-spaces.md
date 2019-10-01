@@ -2,7 +2,7 @@
 title: Storage Spaces Direct troubleshooting
 description: Learn how to troubleshoot your Storage Spaces Direct deployment.
 keywords: Storage Spaces
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.author: 
 ms.technology: storage-spaces
 ms.topic: article

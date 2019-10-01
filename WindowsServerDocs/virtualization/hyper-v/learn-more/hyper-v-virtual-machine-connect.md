@@ -2,7 +2,7 @@
 title: Hyper-V Virtual Machine Connection
 description: "Describes Virtual Machine Connection, which provides remote access to a virtual machine. Includes details on how to do common tasks, such as send Ctrl-Alt-Delete to the virtual machine."
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 manager: dongill

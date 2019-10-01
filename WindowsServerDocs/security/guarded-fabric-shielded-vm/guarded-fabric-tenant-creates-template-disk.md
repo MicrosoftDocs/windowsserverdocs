@@ -1,7 +1,7 @@
 ---
 title: Shielded VMs for tenants - Creating a template disk - optional
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.topic: article
 ms.assetid: c1992f8b-6f88-4dbc-b4a5-08368bba2787
 manager: dongill

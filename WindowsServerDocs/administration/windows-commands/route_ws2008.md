@@ -2,7 +2,7 @@
 title: route_ws2008
 description: Learn how to modify and display entries in the local IP routing table.
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands

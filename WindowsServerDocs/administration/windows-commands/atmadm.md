@@ -2,7 +2,7 @@
 title: atmadm
 description: "Windows Commands topic for **atmadm** - Monitors connections and addresses that are registered by the atM call Manager on an asynchronous transfer mode (atM) network."
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands

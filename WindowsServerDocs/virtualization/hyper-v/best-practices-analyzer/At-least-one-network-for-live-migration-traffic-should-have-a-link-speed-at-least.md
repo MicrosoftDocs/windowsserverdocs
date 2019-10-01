@@ -1,7 +1,7 @@
 ---
 title: At least one network for live migration traffic should have a link speed of at least 1 Gbps
 description: "Online version of the text for this Best Practices Analyzer rule."
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.service: na
 manager: dongill
 ms.technology: compute-hyper-v

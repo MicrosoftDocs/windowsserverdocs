@@ -7,7 +7,7 @@ author: haley-rowland
 ms.author: harowl
 ms.date: 08/22/2019
 ms.localizationpriority: high
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ---
 # Hello, Windows Admin Center!
 
@@ -19,7 +19,7 @@ Windows Admin Center is a locally deployed, browser-based app for managing serve
 
 [Which version is right for me?](faq.md#what-is-windows-admin-center-preview-which-version-is-right-for-me)
 
-[Windows Admin Center **Preview** 1908](https://www.microsoft.com/en-us/software-download/windowsinsiderpreviewserver) - Includes the latest feature updates.
+[Windows Admin Center **Preview** 1909](https://www.microsoft.com/en-us/software-download/windowsinsiderpreviewserver) - Includes the latest feature updates.
 
 [Windows Admin Center (version 1904.1)](https://aka.ms/WACDownload) - Broadly validated & generally available.
 

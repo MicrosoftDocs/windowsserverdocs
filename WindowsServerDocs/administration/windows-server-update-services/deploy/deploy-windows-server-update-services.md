@@ -1,7 +1,7 @@
 ---
 title: Deploy Windows Server Update Services
 description: "Windows Server Update Service (WSUS) topic - An overview of the deployment process with links to the four steps to accomplish it"
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.technology: manage-wsus
 ms.topic: get-started-article

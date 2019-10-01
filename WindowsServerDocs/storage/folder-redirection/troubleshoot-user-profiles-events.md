@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot user profiles with events
 description: How to troubleshoot problems loading and unloading user profiles by using events and trace logs.
-ms.prod: windows-server-threshold 
+ms.prod: windows-server 
 ms.topic: article 
 author: JasonGerend 
 ms.author: jgerend 

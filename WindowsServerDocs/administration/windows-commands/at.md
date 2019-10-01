@@ -2,7 +2,7 @@
 title: at
 description: "Windows Commands topic for **at** - Schedules commands and programs to run on a computer at a specified time and date."
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands

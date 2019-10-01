@@ -2,7 +2,7 @@
 title: Remote Desktop clients URI scheme
 description: Learn about the Uniform Resource Identifier scheme for Remote Desktop clients
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: remote-desktop-services

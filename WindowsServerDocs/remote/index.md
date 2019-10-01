@@ -1,7 +1,7 @@
 ---
 title: Remote
 description: Guidance on leveraging remote access and server administration 
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 layout: LandingPage
 ms.technology: manage-rsat
 ms.topic: landing-page

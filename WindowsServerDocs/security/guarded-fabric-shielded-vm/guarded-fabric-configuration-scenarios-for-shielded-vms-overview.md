@@ -1,7 +1,7 @@
 ---
 title: Deploy shielded VMs
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.topic: article
 ms.assetid: 5d1a06c9-24e1-4e14-9c9a-efb2adbfeddd
 manager: dongill

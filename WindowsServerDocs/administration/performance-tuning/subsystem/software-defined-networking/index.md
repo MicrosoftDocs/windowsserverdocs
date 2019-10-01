@@ -1,7 +1,7 @@
 ---
 title: Performance Tuning Software Defined Networks  
 description: Software Defined Network (SDN) performance tuning guidelines
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: performance-tuning-guide
 ms.topic: article
 ms.author: grcusanz; AnPaul

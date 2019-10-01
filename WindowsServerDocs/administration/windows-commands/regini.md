@@ -2,7 +2,7 @@
 title: regini
 description: Learn how to modify the registry from the command prompt or by using a script.
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands

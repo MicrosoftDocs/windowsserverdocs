@@ -1,7 +1,7 @@
 ---
 title: Features removed or planned for replacement starting with Windows Server, version 1903
 description: The following is a list of features and functionalities in Windows Server, version 1903 that have either been removed from the product in that release or are starting to be considered for potential replacement in subsequent releases. It is intended for IT professionals who are updating operating systems in a commercial environment.
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: server-general
 ms.topic: article
 ms.date: 08/22/2019

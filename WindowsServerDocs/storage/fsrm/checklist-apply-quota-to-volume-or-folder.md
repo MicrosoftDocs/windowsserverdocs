@@ -2,7 +2,7 @@
 title: Apply a quota to a volume or folder
 description: This article describes how to apply a storage quota to a volume or folder 
 ms.date: 7/7/2017
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: storage
 ms.topic: article
 author: JasonGerend

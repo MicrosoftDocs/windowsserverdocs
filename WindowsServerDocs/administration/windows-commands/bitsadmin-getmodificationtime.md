@@ -2,7 +2,7 @@
 title: bitsadmin getmodificationtime
 description: "Windows Commands topic for **bitsadmin getmodificationtime** - Retrieves the last time the job was modified or data was successfully transferred."
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands

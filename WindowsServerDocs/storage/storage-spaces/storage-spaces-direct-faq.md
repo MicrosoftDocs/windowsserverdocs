@@ -2,7 +2,7 @@
 title: Storage Spaces Direct - Frequently asked questions
 description: Learn how about Storage Spaces Direct
 keywords: Storage Spaces
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.author: kaushik
 ms.technology: storage-spaces
 ms.topic: article

@@ -7,7 +7,7 @@ author: haley-rowland
 ms.author: harowl
 ms.date: 07/17/2018
 ms.localizationpriority: low
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ---
 # Protect your Hyper-V Virtual Machines with Azure Site Recovery and Windows Admin Center
 

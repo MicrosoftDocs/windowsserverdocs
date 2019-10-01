@@ -2,7 +2,7 @@
 title: Get started with the Windows Store client
 description: Basic set up steps for the Remote Desktop client for Windows Store.
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: remote-desktop-services

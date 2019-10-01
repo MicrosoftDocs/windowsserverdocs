@@ -2,7 +2,7 @@
 title: break
 description: "Windows Commands topic for **break** - breaks the mirrored volume with focus into two simple volumes."
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands

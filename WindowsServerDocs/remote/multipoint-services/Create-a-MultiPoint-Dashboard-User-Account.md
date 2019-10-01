@@ -2,7 +2,7 @@
 title: Create a MultiPoint Dashboard User Account
 ms.custom: na
 description: Create an account to use with the dashboard
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: multipoint-services
 ms.reviewer: na
 ms.suite: na

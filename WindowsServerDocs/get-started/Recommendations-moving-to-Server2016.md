@@ -2,7 +2,7 @@
 title: Recommendations for moving to Windows Server 2016
 description: "Recommendations for moving to Windows Server 2016."
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.date: 10/18/2016

@@ -1,7 +1,7 @@
 ---
 title: Use at least SMB protocol version 3.0 configured for continuous availability on file shares that store files for virtual machines
 description: "Online version of the text for this Best Practices Analyzer rule."
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.service: na
 manager: dongill
 ms.technology: compute-hyper-v

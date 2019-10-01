@@ -1,7 +1,7 @@
 ---
 title: Manage vRSS
 description: In this topic, you use the Windows PowerShell commands to manage vRSS in virtual machines (VMs) and on Hyper-V hosts.
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: networking
 ms.topic: article
 ms.assetid: 0fe5bfc3-591f-4a19-b98a-0668d4c9f93a

@@ -2,7 +2,7 @@
 title: path
 description: Learn how to set the PATH environment variable.
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands

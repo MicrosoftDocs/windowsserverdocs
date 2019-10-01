@@ -2,7 +2,7 @@
 title: Upgrade and Conversion Options for Windows Server 2016
 description: "Explains all supported upgrade paths to Windows Server 2016."
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.date: 01/18/2017

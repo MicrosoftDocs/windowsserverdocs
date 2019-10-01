@@ -1,7 +1,7 @@
 ---
 title: Windows Server Software-Defined Datacenter
 description: "Windows Server SDDC Overview"
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: SDDC

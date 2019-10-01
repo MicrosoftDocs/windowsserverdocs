@@ -2,7 +2,7 @@
 title: Remote Desktop clients FAQ
 description: Frequently asked questions about the Remote Desktop clients
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: remote-desktop-services

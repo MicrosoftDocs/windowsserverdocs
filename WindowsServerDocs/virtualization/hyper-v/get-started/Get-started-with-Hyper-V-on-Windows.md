@@ -1,7 +1,7 @@
 ---
 title: Get started with Hyper-V on Windows Server
 description: "Gives links to articles on getting started with Hyper-V"
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.service: na
 manager: dongill
 ms.technology: compute-hyper-v

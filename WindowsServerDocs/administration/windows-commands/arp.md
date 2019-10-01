@@ -2,7 +2,7 @@
 title: arp
 description: "Windows Commands topic for **arp** - Displays and modifies entries in the address Resolution Protocol (arp) cache used to store IP addresses and their resolved physical addresses."
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands

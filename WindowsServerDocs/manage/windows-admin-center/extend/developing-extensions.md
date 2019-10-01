@@ -7,7 +7,7 @@ author: nwashburn-ms
 ms.author: niwashbu
 ms.date: 09/19/2018
 ms.localizationpriority: medium
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ---
 
 # Develop an extension for Windows Admin Center

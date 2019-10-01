@@ -1,7 +1,7 @@
 ---
 title: Configure the Order of Network Interfaces
 description: This topic is part of the Network Subsystem Performance Tuning guide for Windows Server 2016.
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: networking
 ms.topic: article
 ms.assetid: 3266328c-ca82-40d2-90ca-854b7088ccaa

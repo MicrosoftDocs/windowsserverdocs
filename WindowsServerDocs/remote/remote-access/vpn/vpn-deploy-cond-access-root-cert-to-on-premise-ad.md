@@ -2,7 +2,7 @@
 title: Deploy Conditional Access root certificates to on-premises AD
 description: ''
 services: active-directory
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: networking-ras
 ms.workload: identity
 ms.topic: article

@@ -1,6 +1,6 @@
 ---
 title: Cluster to cluster Storage Replication
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 manager: siroy
 ms.author: nedpyle
 ms.technology: storage-replica

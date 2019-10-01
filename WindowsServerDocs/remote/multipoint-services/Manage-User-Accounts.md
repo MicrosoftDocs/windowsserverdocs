@@ -2,7 +2,7 @@
 title: Manage User Accounts
 description: Navigational overview for managing MultiPoint Services user accounts
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: multipoint-services
 ms.reviewer: na
 ms.suite: na

@@ -7,7 +7,7 @@ author: haley-rowland
 ms.author: harowl
 ms.date: 09/19/2018
 ms.localizationpriority: medium
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ---
 
 # Configuring Azure integration
