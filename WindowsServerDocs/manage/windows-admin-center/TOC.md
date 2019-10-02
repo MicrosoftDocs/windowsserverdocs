@@ -64,7 +64,7 @@
 #### [Use a custom gateway plugin in your tool extension](extend/guides/use-custom-gateway-plugin.md)
 #### [Create a connection provider](extend/guides/create-connection-provider.md)
 #### [Modify root navigation behavior](extend/guides/modify-root-navigation.md)
-#### [Cluster connection type changes in Windows Admin Center v1909](cluster-connection-change-wac-1909.md)
+#### [Cluster connection type changes in Windows Admin Center v1909](extend/guides/cluster-connection-change-wac-1909.md)
 #### [Control your tool's visibility](extend/guides/dynamic-tool-display.md)
 #### [Strings and localization](extend/guides/strings-localization.md)
 #### [UI text and design style guide](extend/guides/ui-text-style-guide.md)
