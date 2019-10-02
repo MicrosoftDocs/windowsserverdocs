@@ -80,7 +80,7 @@ In Windows Admin Center 1909 and above, the two solutionIds and connectionTypes 
 This is the only cluster-related solutionIds and connectionTypes type supported from now on. If your tool is only defined with this solutionIds and connectionTypes type, it will be loaded for any failover cluster connection, regardless of whether it is an HCI cluster or not. If you would like to limit your tool to only be available for HCI clusters or non-HCI clusters, you will need to additionally use the new inventory properties described in the following section.
 
 ## manifest.json – inventory properties
-When connecting to a server or cluster, Windows Admin Center will query a set of inventory properties that you can use to build conditions to determine when your tool should be available or not (See the “Inventory properties” section in the ![Control your tool’s visibility](dynamic-tool-display.md) document for more info). In Windows Admin Center v1909, we have added two new properties to this list that can be used to determine whether a cluster is a hyper-converged cluster or not. 
+When connecting to a server or cluster, Windows Admin Center will query a set of inventory properties that you can use to build conditions to determine when your tool should be available or not (See the “Inventory properties” section in the [Control your tool’s visibility](dynamic-tool-display.md) document for more info). In Windows Admin Center v1909, we have added two new properties to this list that can be used to determine whether a cluster is a hyper-converged cluster or not. 
 
 ### isS2dEnabled
 Technically, a hyper-converged cluster is defined as a failover cluster with Storage Spaces Direct (S2D) enabled. If you want your tool to be only available for hyper-converged clusters, i.e., when S2D is enabled, add the following inventory condition:
@@ -129,7 +129,7 @@ Additionally, if you are dependent on the SDDC Management cluster resource and u
 ```
 
 ## Backward compatibility to support previous versions of Windows Admin Center
-To ensure that your extension continues to work with older versions of Windows Admin Center such as the v1904 GA release, the previous solutionIds and connectionTypes definition can be used together with the new definition. See the example below for displaying your tool only for HCI clusters in all versions of Windows Admin Center. This is for previous versions of Windows Admin Center and this is for v1909.
+To ensure that your extension continues to work with older versions of Windows Admin Center such as the v1904 GA release, the previous solutionIds and connectionTypes definition can be used together with the new definition. See the example below for displaying your tool only for HCI clusters in all versions of Windows Admin Center.
 ``` json
     "requirements": [
     {
