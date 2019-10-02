@@ -253,7 +253,7 @@ If old disks geometry(sector size) is different from new disks geometry(sector s
 5. Setup a replication partnership between the new source disk and new destination disk on the same server (this will do a block copy of all data from new source to new destination disk)
     1. When the sync is finished remove this replication partnership
 6. Ship the new destination disks to the destination site.
-7. After the new disk reaches the destination
+7. After the new destination disks reaches the destination
     1. Remove the old disks from the relevant servers
     2. Add the new disks to the server
     3. Update your applications if required 
