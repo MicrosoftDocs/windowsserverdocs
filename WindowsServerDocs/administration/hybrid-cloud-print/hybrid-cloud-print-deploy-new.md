@@ -160,34 +160,145 @@ This guide outlines five (5) installation steps:
 
     - Click **Save** to finish
 
-### Step 3 - Install Azure Application Proxy (AAP) with Passthrough Authentication
-1. Login to your Azure AD (AAD) tenant management portal
-    - In the AAD menu list, select "Application proxy"
-    - Click "Enable application proxy" at the top of the screen
-    - Download the "Application Proxy Connector" to a domain joined Windows Server machine that will act as the Web Application Proxy (WAP).
-2. On the WAP machine, login as an Administrator and install the "Application Proxy Connector"
-    - During installation, give the application proxy connector the credentials to your Azure tenet that you want to enable AAP on
-    - Make sure the WAP machine is domain joined to your on-premises Active Directory
-3. Go back to the AAD tenant management portal and add the application proxies
-   - Go to the **Enterprise applications** tab
-   - Click **New application**
-   - Select **On-premises application** and fill in the fields
-       - Name: Any name you wish
-       - Internal URL: This is the internal URL to the Mopria Discovery Cloud Service which your WAP machine can access
-       - External URL: Configure as appropriate for your organization
-       - Preauthentication Method: Passthrough
+### Step 3 - Install roles and Hybrid Cloud Print package on the Print Server
 
-     >   Note: If you don't find all the settings above, add the proxy with the settings available and then select the application proxy you just created and go to the **Application proxy** tab and add all the above information.
+1. Make sure the Print Server has all the available Windows Update installed. Note: Server 2019 must be patched to build 17763.165 or above
+    - Install the following server roles:
+        - Print Server role
+        - Internet Information Service (IIS)
+    - See [Install roles, role services, and features by using the add Roles and Features Wizard](https://docs.microsoft.com/windows-server/administration/server-manager/install-or-uninstall-roles-role-services-or-features#BKMK_installarfw) for details on how to install server roles
 
-4. Repeat 3, above, for the Enterprise Cloud Print Service and provide the Internal URL to your Enterprise Cloud Print Service
+    ![Print Server Roles](../media/hybrid-cloud-print/PrintServer-Roles.png)
 
-    >   Note: The https://&lt;services-machine-endpoint&gt;/mcs URL mentioned below should be the External URL you setup for your Mopria Cloud Service and/or Enterprise Cloud Print Service.
+2. Install the Hybrid Cloud Print PowerShell modules
+    - Run the following commands from an elevated PowerShell command prompt
 
+            `find-module -Name "PublishCloudPrinter"` to confirm that the machine can reach the PowerShell Gallery (PSGallery)
+
+            `install-module -Name "PublishCloudPrinter"`
+            > NOTE: You may see a messaging stating that 'PSGallery' is an untrusted repository.  Enter 'y' to continue with the installation.
+
+    ![Print Server Publish Cloud Printer](../media/hybrid-cloud-print/PrintServer-PublishCloudPrinter.png)
+
+3. Install the Hybrid Cloud Print solution
+    - In the same elevated PowerShell command prompt, change directory to the one below (quotation marks needed):
+
+            `"C:\Program Files\WindowsPowerShell\Modules\PublishCloudPrinter\1.0.0.0"`
+
+    - Run
+
+            `.\CloudPrintDeploy.ps1 -AzureTenant <Azure Active Directory domain name> -AzureTenantGuid <Azure Active Directory ID>`
+
+    - Refer to the screenshot below to find the Azure Active Directory domain name
+
+    ![Print Server How to Get AAD Domain Name](../media/hybrid-cloud-print/PrintServer-GetAADDomainName.png)
+
+    - Refer to the screenshot below to find the Azure Active Directory ID
+
+    ![Print Server Cloud Print Deploy](../media/hybrid-cloud-print/PrintServer-GetAADId.png)
+
+    - The output of the CloudPrintDeploy script looks like this:
+
+    ![Print Server Cloud Print Deploy](../media/hybrid-cloud-print/PrintServer-CloudPrintDeploy.png)
+
+    - Check the log file to see if there is any error:
+    `C:\Program Files\WindowsPowerShell\Modules\PublishCloudPrinter\1.0.0.0>notepad CloudPrintDeploy.log`
+
+4. Open RegitEdit in an elevated command prompt. Go to Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\CloudPrint\EnterpriseCloudPrintService
+    - Make sure AzureAudience is set to the Application ID URI of Enterprise Cloud Print app
+    - Make sure AzureTenant is set to the Azure AD domain name
+
+    ![Print Server ECP Registry Keys](../media/hybrid-cloud-print/PrintServer-RegEdit-ECP.png)
+
+5. Go to Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\CloudPrint\MopriaDiscoveryService
+    - Make sure AzureAudience is the Application ID URI of Mopria Discovery Service app
+    - Make sure AzureTenant is the Azure AD domain name
+    - Make sure URL is the Application ID URI of Mopria Discovery Service app
+
+    ![Print Server Mopria Registry Keys](../media/hybrid-cloud-print/PrintServer-RegEdit-Mopria.png)
+
+6. Run iisreset in an elevate Powershell command prompt. This will ensure any registry change made in the previous step takes effect.
+
+7. Configure the IIS endpoints to support SSL
+    - The SSL certificate can be a self-signed cert or one issued from a trusted Certificate Authority (CA)
+    - If using self-signed cert, make sure the cert is imported to the client machine(s)
+    - If you register your domain with 3rd party provider, you will need to configure the IIS endpoints with SSL certificate. See this [guide](https://www.sslsupportdesk.com/microsoft-server-2016-iis-10-10-5-ssl-installation/) for detail.
+
+8. Install SQLite package
+   - Open an elevated PowerShell command prompt
+   - Run the following command to download System.Data.SQLite nuget packages
+
+            `Register-PackageSource -Name nuget.org -ProviderName NuGet -Location https://www.nuget.org/api/v2/ -Trusted -Force`
+
+   - Run the following command to install the packages
+
+            `Install-Package system.data.sqlite [-requiredversion x.x.x.x] -providername nuget`
+
+   > NOTE: It is recommended to download and install the latest version by leaving out the "-requiredversion" option.
+
+    ![Print Server Mopria Registry Keys](../media/hybrid-cloud-print/PrintServer-InstallSQLite.png)
+
+9. Copy the SQLite dlls to the MopriaCloudService Webapp bin folder (C:\inetpub\wwwroot\MopriaCloudService\bin). 
+    - Create a .ps1 file containing the following PowerShell script. 
+    - Change to the $version variable to the SQLite version installed in previous step.
+    - Run the .ps1 file in an elevated PowerShell command prompt
+
+    ```powershell
+    ...
+    $source = "\Program Files\PackageManagement\NuGet\Packages"
+    $core = "System.Data.SQLite.Core"
+    $linq = "System.Data.SQLite.Linq"
+    $ef6 = "System.Data.SQLite.EF6"
+    $version = "x.x.x.x"
+    $target = "C:\inetpub\wwwroot\MopriaCloudService\bin"
+
+    xcopy /y "$source\$core.$version\lib\net46\System.Data.SQLite.dll" "$target\"
+    xcopy /y "$source\$core.$version\build\net46\x86\SQLite.Interop.dll" "$target\x86\"
+    xcopy /y "$source\$core.$version\build\net46\x64\SQLite.Interop.dll" "$target\x64\"
+    xcopy /y "$source\$linq.$version\lib\net46\System.Data.SQLite.Linq.dll" "$target\"
+    xcopy /y "$source\$ef6.$version\lib\net46\System.Data.SQLite.EF6.dll" "$target\"
+    ...
+    ```
+
+10. Update the c:\inetpub\wwwroot\MopriaCloudService\web.config file to include the SQLite version x.x.x.x in the following `<runtime>/<assemblyBinding>` sections:
+
+    ```xml
+    ...
+    <dependentAssembly>
+    assemblyIdentity name="System.Data.SQLite" culture="neutral" publicKeyToken="db937bc2d44ff139" /
+    <bindingRedirect oldVersion="0.0.0.0-x.x.x.x" newVersion="x.x.x.x" />
+    </dependentAssembly>
+    <dependentAssembly>
+    <assemblyIdentity name="System.Data.SQLite.Core" culture="neutral" publicKeyToken="db937bc2d44ff139" />
+    <bindingRedirect oldVersion="0.0.0.0-x.x.x.x" newVersion="x.x.x.x" />
+    </dependentAssembly>
+    <dependentAssembly>
+    <assemblyIdentity name="System.Data.SQLite.EF6" culture="neutral" publicKeyToken="db937bc2d44ff139" />
+    <bindingRedirect oldVersion="0.0.0.0-x.x.x.x" newVersion="x.x.x.x" />
+    </dependentAssembly>
+    <dependentAssembly>
+    <assemblyIdentity name="System.Data.SQLite.Linq" culture="neutral" publicKeyToken="db937bc2d44ff139" />
+    <bindingRedirect oldVersion="0.0.0.0-x.x.x.x" newVersion="x.x.x.x" />
+    </dependentAssembly>
+    ...
+    ```
+
+11. Create the SQLite database
+    - Download and install the SQLite Tools binaries from `https://www.sqlite.org/`
+    - Go to `c:\inetpub\wwwroot\MopriaCloudService\Database` directory
+    - Execute the following command to create the database in this directory:
+
+            `sqlite3.exe MopriaDeviceDb.db ".read MopriaSQLiteDb.sql"`
+
+    - From File Explorer, open up the MopriaDeviceDb.db file properties to add Users/Groups which are allowed to publish to Mopria database in the Security tab
+
+    ![Print Server Mopria Registry Keys](../media/hybrid-cloud-print/PrintServer-SQLiteDB.png)
 
 ### Step 4 - Configure the required MDM policies
+
 - Login to your MDM provider
 - Find the Enterprise Cloud Print policy group and configure the policies following the guidelines below:
-  - CloudPrintOAuthAuthority = https://login.microsoftonline.com/\<Azure AD Directory ID\>
+  - CloudPrintOAuthAuthority = `https://login.microsoftonline.com/\<Azure AD Directory ID\>`
   - CloudPrintOAuthClientId = "Application ID" value of the Native Web App that you registered in Azure AD management portal
   - CloudPrinterDiscoveryEndPoint = External URL of the Mopria Discovery Service Azure Application Proxy created in Step 3.3 (must be exactly the same but without the trailing /)
   - MopriaDiscoveryResourceId = The "App ID URI" of the Web app / API for the discovery endpoint registered in Step 2.8.  You can find this under the Settings -> Properties of the app
