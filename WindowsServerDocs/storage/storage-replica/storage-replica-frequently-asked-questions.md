@@ -225,7 +225,7 @@ However, to get the improved replication performance of Windows Server 2019, all
 ## <a name="FAQ17"></a> How do I report an issue with Storage Replica or this guide?  
 For technical assistance with Storage Replica, you can post at [the Microsoft TechNet forums](https://social.technet.microsoft.com/Forums/windowsserver/en-US/home?forum=WinServerPreview). You can also email srfeed@microsoft.com for questions on Storage Replica or issues with this documentation. The <https://windowsserver.uservoice.com> site is preferred for design change requests, as it allows your fellow customers to provide support and feedback for your ideas.
 
-## <a name="FAQ20"></a> How to replace the old disks currently replicating using SR with new disks?
+## <a name="FAQ20"></a> How do I replace disks currently replicating with Storage Replica?
 All the suggested steps will incur downtime.
 
 If all the old disks and new disks are of same geometry (same sector size):
