@@ -16,7 +16,6 @@ ms.localizationpriority: medium
 
 The following list describes common issues that can occur during Key Management Service (KMS) activations, linked to guidance for addressing the issues.
 
-<a id="list"></a>
 
 - [Should I back up KMS host information?](#should-i-back-up-kms-host-information)
 - [Is the KMS client computer activated?](#is-the-kms-client-computer-activated)
