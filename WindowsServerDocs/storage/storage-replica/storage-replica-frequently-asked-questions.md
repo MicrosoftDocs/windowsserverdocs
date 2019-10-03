@@ -225,39 +225,7 @@ However, to get the improved replication performance of Windows Server 2019, all
 ## <a name="FAQ17"></a> How do I report an issue with Storage Replica or this guide?  
 For technical assistance with Storage Replica, you can post at [the Microsoft TechNet forums](https://social.technet.microsoft.com/Forums/windowsserver/en-US/home?forum=WinServerPreview). You can also email srfeed@microsoft.com for questions on Storage Replica or issues with this documentation. The <https://windowsserver.uservoice.com> site is preferred for design change requests, as it allows your fellow customers to provide support and feedback for your ideas.
 
-## <a name="FAQ20"></a> How do I replace disks currently replicating with Storage Replica?
-Note that the following procedure involves downtime for your replication partnership.
 
-If all the old disks and new disks are of same geometry (same sector size):
-1. Remove the partnership
-2. If changing disks on the source server
-    1. Add new disks to the server
-    2. Setup a replication partnership between the old disks and new disks on the same server (this will do a block copy of all data from old to new disks)
-    3. When the sync is finished remove this replication partnership
-3. If changing disks on the destination server
-    1. Add new disks to the server
-    2. Setup a replication partnership between the old disks and new disks on the same server (this will do a block copy of all data from old to new disks)
-    3. When the sync is finished remove this replication partnership
-4. Incur downtime:
-    1. Remove the old disks from the relevant servers
-    2. Update applications to use the new volumes on the new disks.
-5. Setup a new replication partnership between the source and destination using the seeded sync option.
-
-If the old disks' geometry (sector size) is different from the new disks' geometry, use the following procedure. The assumption here is that the new disks are added to both the source and the destination, and all the new disks have the same geometry.
-1. Remove the partnership
-2. Add new disks to the source server
-3. Copy data from old source disks to new source disks
-4. Incur downtime:
-    1. Remove the old source disks from the relevant servers
-    2. Update applications to use the new volumes on the new source disks.
-5. Setup a replication partnership between the new source disk and new destination disk on the same server (this will do a block copy of all data from new source to new destination disk)
-    1. When the sync is finished remove this replication partnership
-6. Ship the new destination disks to the destination site.
-7. After the new destination disks reaches the destination
-    1. Remove the old disks from the relevant servers
-    2. Add the new disks to the server
-    3. Update your applications if required 
-8. Setup a new replication partnership between the source and destination using the seeded sync option.
 
 ## Related Topics  
 - [Storage Replica Overview](storage-replica-overview.md) 
