@@ -1,6 +1,6 @@
 ---
 title: Health Service reports
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 manager: eldenc
 ms.author: cosdar
 ms.technology: storage-health-service

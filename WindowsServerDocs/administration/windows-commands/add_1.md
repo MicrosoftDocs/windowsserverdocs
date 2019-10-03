@@ -2,7 +2,7 @@
 title: add
 description: "Windows Commands topic for **add_1** - adds volumes to the set of volumes that are to be shadow copied, or adds aliases to the alias environment."
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands

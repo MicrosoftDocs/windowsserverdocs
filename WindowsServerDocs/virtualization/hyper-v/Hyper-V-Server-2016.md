@@ -1,7 +1,7 @@
 ---
 title: Microsoft Hyper-V Server 2016
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: compute-hyper-v

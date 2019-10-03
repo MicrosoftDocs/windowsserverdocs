@@ -1,6 +1,6 @@
 ---
 title: Cross Domain Cluster Migration in Windows Server 2016/2019
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.manager: eldenc
 ms.technology: failover-clustering
 ms.topic: article

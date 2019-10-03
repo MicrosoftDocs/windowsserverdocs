@@ -2,7 +2,7 @@
 title: Windows Desktop client for admins
 description: Information on the Windows Desktop client primarily useful to admins.
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: remote-desktop-services

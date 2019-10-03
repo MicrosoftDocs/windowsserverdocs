@@ -1,7 +1,7 @@
 ---
 title: Add host information for Admin-trusted attestation
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.topic: article
 ms.assetid: 87089ebc-b953-4aa3-96b5-966cf91acb02
 manager: dongill

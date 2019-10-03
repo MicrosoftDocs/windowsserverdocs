@@ -2,7 +2,7 @@
 title: Switch Between Modes
 description: Learn how to switch between station and console mode in MultiPoint Services
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: multipoint-services
 ms.reviewer: na
 ms.suite: na

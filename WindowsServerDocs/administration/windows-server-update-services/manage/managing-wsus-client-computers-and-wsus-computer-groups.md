@@ -2,7 +2,7 @@
 title: Managing WSUS Client computers and WSUS computer Groups
 description: "Windows Server Update Service (WSUS) topic - How to manage client computers and groups"
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-wsus

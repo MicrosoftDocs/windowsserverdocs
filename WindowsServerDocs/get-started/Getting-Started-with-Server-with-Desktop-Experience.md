@@ -2,7 +2,7 @@
 title: Install Server with Desktop Experience
 description: "Explains how to obtain and install a Server with Desktop Experience installation " 
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.date: 01/18/2017

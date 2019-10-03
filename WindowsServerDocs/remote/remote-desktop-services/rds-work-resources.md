@@ -1,7 +1,7 @@
 ---
 title: Customize the RDS title “Work Resources” using PowerShell on Windows Server
 description: Provides description of how to change workspace name from default in Windows Server.
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: remote-desktop-services
 ms.author: helohr
 ms.date: 10/26/2017  

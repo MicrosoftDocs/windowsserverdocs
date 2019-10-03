@@ -2,7 +2,7 @@
 title: Manage User Access Logging
 description: Describes how to manage User Access Logging
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: manage-user-access-logging
 ms.reviewer: na
 ms.suite: na

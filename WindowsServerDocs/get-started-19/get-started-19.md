@@ -1,7 +1,7 @@
 ---
 title: Get Started
 description: "Detailed info about Windows Server 2019 and getting ready to deploy, upgrade, or migrate."
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 manager: jasgroce
 ms.technology: get-started
 layout: LandingPage

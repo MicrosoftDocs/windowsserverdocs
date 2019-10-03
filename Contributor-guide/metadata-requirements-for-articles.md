@@ -44,7 +44,7 @@ ms.date: Date of change (MM/DD/YYYY)
 ---
 title: What is Windows Admin Center?
 description: Learn about the Windows Admin Center, a locally-deployed, browser-based management tool set that lets you manage your Windows Servers with no Azure or cloud dependency.
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: alainch
 author: danielle-github
 ms.author: danielle

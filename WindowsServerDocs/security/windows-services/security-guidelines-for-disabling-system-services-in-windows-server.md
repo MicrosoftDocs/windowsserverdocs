@@ -2,7 +2,7 @@
 title: Security guidelines for system services in Windows Server 2016
 description: Security guidelines for disabling services in Windows Server 2016 with Desktop Experience
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: techgroup-security
 ms.tgt_pltfrm: na
 ms.topic: article
@@ -1724,13 +1724,20 @@ The following tables offer Microsoft guidance on disabling system services on Wi
 |   **Comments**    |   
 |||         
 
-<br /><br/>
-## Sensor Service<br/>| | |<br/>|---|---|<br/>|   <strong>Service description</strong> |   A service for sensors that manages different sensors&#39; functionality. Manages Simple Device Orientation (SDO) and History for sensors. Loads the SDO sensor that reports device orientation changes.  If this service is stopped or disabled, the SDO sensor will not be loaded and so auto-rotation will not occur. History collection from Sensors will also be stopped.
-|   <strong>Service name</strong>    |   SensorService
-|   <strong>Installation</strong>    |   Only with Desktop Experience
-|   <strong>StartType</strong>   |   Manual
-|   <strong>Recommendation</strong>  |   OK to disable
-|   <strong>Comments</strong>    |<br/>|||<br/>
+<br />
+
+## Sensor Service
+
+| | |
+|---|---|
+|   **Service description** |   A service for sensors that manages different sensors&#39; functionality. Manages Simple Device Orientation (SDO) and History for sensors. Loads the SDO sensor that reports device orientation changes.  If this service is stopped or disabled, the SDO sensor will not be loaded and so auto-rotation will not occur. History collection from Sensors will also be stopped.
+|   **Service name**    |   SensorService
+|   **Installation**    |   Only with Desktop Experience
+|   **StartType**   |   Manual
+|   **Recommendation**  |   OK to disable
+|   **Comments**    |
+|||
+  
 <br />          
 
 ## Server           

@@ -2,7 +2,7 @@
 title: Set up a Station for Automatic Logon
 description: Learn how to configure automatic logon for MultiPoint Services stations
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: multipoint-services
 ms.reviewer: na
 ms.suite: na

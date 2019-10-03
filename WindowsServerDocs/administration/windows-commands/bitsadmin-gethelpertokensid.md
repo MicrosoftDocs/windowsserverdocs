@@ -2,7 +2,7 @@
 title: bitsadmin gethelpertokensid
 description: "Windows Commands topic for **bitsadmin gethelpertokensid** - Returns the SID of a BITS transfer job's helper token, if one is set."
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands

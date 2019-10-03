@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot Cache and Memory Manager Performance Issues
 description: Troubleshoot Cache and Memory Manager Performance Issues on Windows Server 16
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: performance-tuning-guide
 ms.topic: article
 ms.author: Pavel; ATales

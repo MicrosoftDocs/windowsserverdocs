@@ -1,7 +1,7 @@
 ---
 title: Best practices for running FreeBSD on Hyper-V
 description: "Provides recommendations for running FreeBSD on virtual machines"
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.service: na
 manager: dongill
 ms.technology: compute-hyper-v

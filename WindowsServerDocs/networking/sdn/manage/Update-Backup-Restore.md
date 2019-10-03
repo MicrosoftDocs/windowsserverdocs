@@ -2,7 +2,7 @@
 title: Upgrade, backup, and restore SDN infrastructure
 description: In this topic, you learn how to update, backup and restore an SDN infrastructure. 
 manager: dougkim
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: networking-sdn
 ms.topic: article
 ms.assetid: e9a8f2fd-48fe-4a90-9250-f6b32488b7a4

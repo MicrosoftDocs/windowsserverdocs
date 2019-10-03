@@ -2,7 +2,7 @@
 title: add volume
 description: "Windows Commands topic for **add volume** - adds volumes to the shadow copy Set, which is the set of volumes to be shadow copied."
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands

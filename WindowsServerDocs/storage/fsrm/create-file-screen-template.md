@@ -2,7 +2,7 @@
 title: Create a File Screen Template
 description: This article describes how to create a file screen template
 ms.date: 7/7/2017
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: storage
 ms.topic: article
 author: JasonGerend

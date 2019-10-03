@@ -1,6 +1,6 @@
 ---
 title: Manage Different Domains in Active Directory Administrative Center
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 description: "Windows Server Security"
 ms.custom: na
 ms.reviewer: na

@@ -1,7 +1,7 @@
 ---
 title: Shielded VMs  for tenants - Deploying a shielded VM by using Windows Azure Pack
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.topic: article
 ms.assetid: 095315e4-c4a7-4b80-91d8-528119b62c4c
 manager: dongill

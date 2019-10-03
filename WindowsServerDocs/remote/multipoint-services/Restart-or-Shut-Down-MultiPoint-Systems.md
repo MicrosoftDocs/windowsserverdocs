@@ -2,7 +2,7 @@
 title: Restart or Shut Down MultiPoint Systems
 description: Learn how to shut down or restart one or more systems
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: multipoint-services
 ms.reviewer: na
 ms.suite: na

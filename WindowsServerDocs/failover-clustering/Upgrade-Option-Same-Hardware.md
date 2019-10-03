@@ -1,6 +1,6 @@
 ---
 title: Upgrading Failover Clusters Using the Same Hardware
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.manager: eldenc
 ms.technology: failover-clustering
 ms.topic: article

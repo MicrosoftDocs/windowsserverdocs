@@ -2,7 +2,7 @@
 title: bdehdcfg quiet
 description: Windows Commands topic for bdehdcfg quiet - Tells bdehdcfg to not display all actions and errors.
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands

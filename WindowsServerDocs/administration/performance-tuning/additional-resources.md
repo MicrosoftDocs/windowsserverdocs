@@ -1,7 +1,7 @@
 ---
 title: Additional server performance tuning resources
 description: Additional server performance tuning resources
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: performance-tuning-guide
 ms.topic: article
 ms.author: phstee

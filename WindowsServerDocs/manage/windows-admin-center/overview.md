@@ -7,7 +7,7 @@ author: nwashburn-ms
 ms.author: niwashbu
 ms.date: 09/18/2019
 ms.localizationpriority: high
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ---
 # Windows Admin Center
 
