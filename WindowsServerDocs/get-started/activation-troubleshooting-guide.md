@@ -60,7 +60,7 @@ The following articles provide guidelines and information about tools for troubl
 The following articles provide guidance for addressing more specific activation issues:
 
 - [Resolving common activation error codes](activation-error-codes.md)
-- [Resolving common KMS activation issues](activation-troubleshoot-KMS-issues.md)
-- [Resolving common MAK activation issues](activation-troubleshoot-MAK-issues.md)
+- [KMS activation: known issues](activation-troubleshoot-KMS-issues.md)
+- [MAK activation: known issues](activation-troubleshoot-MAK-issues.md)
 - [Guidelines for troubleshooting DNS-related activation issues](common-troubleshooting-procedures-kms-dns.md)
 - [How to rebuild the Tokens.dat file](activation-rebuild-tokens-dat-file.md)
