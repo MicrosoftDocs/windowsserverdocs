@@ -238,7 +238,7 @@ If all the old disks and new disks are of same geometry (same sector size):
     1. Add new disks to the server
     2. Setup a replication partnership between the old disks and new disks on the same server (this will do a block copy of all data from old to new disks)
     3. When the sync is finished remove this replication partnership
-4. Incur downtime :
+4. Incur downtime:
     1. Remove the old disks from the relevant servers
     2. Update applications to use the new volumes on the new disks.
 5. Setup a new replication partnership between the source and destination using the seeded sync option.
