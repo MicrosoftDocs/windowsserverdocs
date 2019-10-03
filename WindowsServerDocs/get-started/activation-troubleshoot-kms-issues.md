@@ -25,7 +25,6 @@ The following list describes common issues that can occur during Key Management 
 - [KMS hosts are unable to create SRV records](#kms-hosts-are-unable-to-create-srv-records).
 - [Only the first KMS host is able to create SRV records](#only-the-first-kms-host-is-able-to-create-srv-records).
 - [I installed a KMS key on the KMS client](#i-installed-a-kms-key-on-the-kms-client).
-- [A KMS host failed](#a-kms-host-failed).
 
 > [!NOTE]
 > If you suspect that your issue is related to DNS, see [Common troubleshooting procedures for KMS and DNS issues](common-troubleshooting-procedures-kms-dns.md).
