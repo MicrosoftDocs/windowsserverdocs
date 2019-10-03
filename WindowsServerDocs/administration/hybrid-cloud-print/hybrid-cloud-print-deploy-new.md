@@ -151,10 +151,9 @@ This guide outlines five (5) installation steps:
     ![AAD Redirect URI 1](../media/hybrid-cloud-print/AAD-AppRegistration-Native-Overview.png)
 
     - Go to **Authentication**. Change the **TYPE** dropdown box to `Public...`, and enter two redirect URIs using the format below, where `<NativeClientAppID>` is from the previous step:
+        `ms-appx-web://Microsoft.AAD.BrokerPlugin/<NativeClientAppID>`
 
-            `ms-appx-web://Microsoft.AAD.BrokerPlugin/<NativeClientAppID>`
-
-            `web://Microsoft.AAD.BrokerPlugin/S-1-15-2-3784861210-599250757-1266852909-3189164077-45880155-1246692841-283550366`
+        `web://Microsoft.AAD.BrokerPlugin/S-1-15-2-3784861210-599250757-1266852909-3189164077-45880155-1246692841-283550366`
 
     ![AAD Redirect URI 2](../media/hybrid-cloud-print/AAD-AppRegistration-Native-Authentication.png)
 
@@ -173,21 +172,22 @@ This guide outlines five (5) installation steps:
 2. Install the Hybrid Cloud Print PowerShell modules
     - Run the following commands from an elevated PowerShell command prompt
 
-            `find-module -Name "PublishCloudPrinter"` to confirm that the machine can reach the PowerShell Gallery (PSGallery)
+        `find-module -Name "PublishCloudPrinter"` to confirm that the machine can reach the PowerShell Gallery (PSGallery)
 
-            `install-module -Name "PublishCloudPrinter"`
-            > NOTE: You may see a messaging stating that 'PSGallery' is an untrusted repository.  Enter 'y' to continue with the installation.
+        `install-module -Name "PublishCloudPrinter"`
+
+    > NOTE: You may see a messaging stating that 'PSGallery' is an untrusted repository.  Enter 'y' to continue with the installation.
 
     ![Print Server Publish Cloud Printer](../media/hybrid-cloud-print/PrintServer-PublishCloudPrinter.png)
 
 3. Install the Hybrid Cloud Print solution
     - In the same elevated PowerShell command prompt, change directory to the one below (quotation marks needed):
 
-            `"C:\Program Files\WindowsPowerShell\Modules\PublishCloudPrinter\1.0.0.0"`
+        `"C:\Program Files\WindowsPowerShell\Modules\PublishCloudPrinter\1.0.0.0"`
 
     - Run
 
-            `.\CloudPrintDeploy.ps1 -AzureTenant <Azure Active Directory domain name> -AzureTenantGuid <Azure Active Directory ID>`
+        `.\CloudPrintDeploy.ps1 -AzureTenant <Azure Active Directory domain name> -AzureTenantGuid <Azure Active Directory ID>`
 
     - Refer to the screenshot below to find the Azure Active Directory domain name
 
@@ -228,11 +228,11 @@ This guide outlines five (5) installation steps:
    - Open an elevated PowerShell command prompt
    - Run the following command to download System.Data.SQLite nuget packages
 
-            `Register-PackageSource -Name nuget.org -ProviderName NuGet -Location https://www.nuget.org/api/v2/ -Trusted -Force`
+        `Register-PackageSource -Name nuget.org -ProviderName NuGet -Location https://www.nuget.org/api/v2/ -Trusted -Force`
 
    - Run the following command to install the packages
 
-            `Install-Package system.data.sqlite [-requiredversion x.x.x.x] -providername nuget`
+        `Install-Package system.data.sqlite [-requiredversion x.x.x.x] -providername nuget`
 
    > NOTE: It is recommended to download and install the latest version by leaving out the "-requiredversion" option.
 
@@ -288,7 +288,7 @@ This guide outlines five (5) installation steps:
     - Go to `c:\inetpub\wwwroot\MopriaCloudService\Database` directory
     - Execute the following command to create the database in this directory:
 
-            `sqlite3.exe MopriaDeviceDb.db ".read MopriaSQLiteDb.sql"`
+        `sqlite3.exe MopriaDeviceDb.db ".read MopriaSQLiteDb.sql"`
 
     - From File Explorer, open up the MopriaDeviceDb.db file properties to add Users/Groups which are allowed to publish to Mopria database in the Security tab
 
