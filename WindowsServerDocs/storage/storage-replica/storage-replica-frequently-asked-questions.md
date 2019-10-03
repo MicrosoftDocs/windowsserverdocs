@@ -247,7 +247,7 @@ If the old disks' geometry (sector size) is different from the new disks' geomet
 1. Remove the partnership
 2. Add new disks to the source server
 3. Copy data from old source disks to new source disks
-4. Incur downtime :
+4. Incur downtime:
     1. Remove the old source disks from the relevant servers
     2. Update applications to use the new volumes on the new source disks.
 5. Setup a replication partnership between the new source disk and new destination disk on the same server (this will do a block copy of all data from new source to new destination disk)
