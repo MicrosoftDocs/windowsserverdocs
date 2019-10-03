@@ -43,7 +43,6 @@ To rebuild the Tokens.dat file, follow these steps:
    ren tokens.dat tokens.bar
    net start sppsvc
    cscript.exe %windir%\system32\slmgr.vbs /rilc
-   
    ```
    For Windows 8.1, Windows Server 2012 and Windows Server 2012 R2, enter the following commands in sequence:
    ```cmd
