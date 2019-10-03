@@ -316,7 +316,7 @@ When attempting to run inventory with the Storage Migration Service orchestrator
 
     There are no more endpoints available from the endpoint mapper  
 
-To workaround this issue, temporarily uninstall the KB4512534 cumulative update (and any that superceded it) from the SMS orchestrator computer. When the migration is complete, reinstall the latest cumulative update.  
+To workaround this issue, temporarily uninstall the KB4512534 cumulative update (and any that superceded it) from the Storage Migration Service orchestrator computer. When the migration is complete, reinstall the latest cumulative update.  
 
 ## See also
 
