@@ -243,7 +243,7 @@ If all the old disks and new disks are of same geometry (same sector size):
     2. Update applications to use the new volumes on the new disks.
 5. Setup a new replication partnership between the source and destination using the seeded sync option.
 
-If old disks geometry(sector size) is different from new disks geometry(sector size). The assumption here is that new disks are added to both source and destination, and all the new disks have same geometry(sector size)
+If the old disks' geometry (sector size) is different from the new disks' geometry, use the following procedure. The assumption here is that the new disks are added to both the source and the destination, and all the new disks have the same geometry.
 1. Remove the partnership
 2. Add new disks to the source server
 3. Copy data from old source disks to new source disks
