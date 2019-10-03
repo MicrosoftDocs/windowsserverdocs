@@ -310,6 +310,13 @@ When attempting to run inventory with the Storage Migration Service orchestrator
 
 To workaround this issue, install the "Failover Cluster Management Tools" (RSAT-Clustering-Mgmt) on the server running the Storage Migration Service orchestrator. 
 
+## Error "There are no more endpoints available from the endpoint mapper" when running inventory against a Windows Server 2003 source computer
+
+When attempting to run inventory with the Storage Migration Service orchestrator server patched with the [KB4512534](https://support.microsoft.com/en-us/help/4512534/windows-10-update-kb4512534) cumulative update or later, you receive the following error:
+
+    There are no more endpoints available from the endpoint mapper  
+
+To workaround this issue, temporarily uninstall the KB4512534 cumulative update (and any that superceded it) from the SMS orchestrator computer. When the migration is complete, reinstall the latest cumulative update.  
 
 ## See also
 
