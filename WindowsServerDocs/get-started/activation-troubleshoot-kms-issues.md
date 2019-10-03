@@ -2,7 +2,7 @@
 title: KMS activation known issues
 description: Describes common issues that may occur during the KMS activation process, and provides resolutions and guidance
 ms.topic: troubleshooting
-ms.date: 09/24/2019
+ms.date: 10/3/2019
 ms.technology: server-general
 ms.topic: article
 ms.assetid: 
@@ -12,19 +12,9 @@ manager: dcscontentpm
 ms.localizationpriority: medium
 ---
 
-# KMS activation&mdash;known issues
+# KMS activation: known issues
 
-The following list describes common issues that can occur during Key Management Service (KMS) activations, linked to guidance for addressing the issues.
-
-
-- [Should I back up KMS host information?](#should-i-back-up-kms-host-information)
-- [Is the KMS client computer activated?](#is-the-kms-client-computer-activated)
-- [The KMS client computer does not activate](#the-kms-client-computer-does-not-activate).
-- [What does this error code mean?](#what-does-this-error-code-mean).
-- [Clients are not adding to the KMS count](#clients-are-not-adding-to-the-kms-count).
-- [KMS hosts are unable to create SRV records](#kms-hosts-are-unable-to-create-srv-records).
-- [Only the first KMS host is able to create SRV records](#only-the-first-kms-host-is-able-to-create-srv-records).
-- [I installed a KMS key on the KMS client](#i-installed-a-kms-key-on-the-kms-client).
+This article describes common questions and issues that can arisse during Key Management Service (KMS) activations, and provides guidance for addressing the issues.
 
 > [!NOTE]
 > If you suspect that your issue is related to DNS, see [Common troubleshooting procedures for KMS and DNS issues](common-troubleshooting-procedures-kms-dns.md).
@@ -35,13 +25,9 @@ Backup is not required for KMS hosts. However, if you use a tool to routinely cl
 
 If you use System Center Operations Manager, the System Center Data Warehouse database stores event log data for reporting, therefore you do not have to back up the event logs separately.
 
-[Back to list](#list)
-
 ## Is the KMS client computer activated?
 
 On the KMS client computer, open the **System** control panel, and look for the **Windows is activated** message. Alternatively, run Slmgr.vbs and use the the **/dli** command-line option.
-
-[Back to list](#list)
 
 ## The KMS client computer does not activate
 
@@ -60,8 +46,6 @@ On the KMS host computer, look in the KMS event log for event ID 12290. Check th
 - Did the KMS host log a request from the client computer? Verify that the name of the KMS client computer is listed. Verify that the client and KMS host can communicate. Did the client receive the response?
 - If no event is logged from the KMS client, the request did not reach the KMS host or the KMS host was unable to process it. Make sure that routers do not block traffic using TCP port 1688 (if the default port is used) and that stateful traffic to the KMS client is allowed.
 
-[Back to list](#list)
-
 ## What does this error code mean?
 
 Except for KMS events that have event ID 12290, Windows logs all activation events to the Application event log under the event provider name Microsoft-Windows-Security-SPP. Windows logs KMS events to the Key Management Service log in the Applications and Services folder. IT pros can run Slui.exe to display a description of most activation-related error codes. The general syntax for this command is as follows:
@@ -78,36 +62,24 @@ slui.exe 0x2a 0x8007267C
 
 For more information about specific error codes and how to address them, see [Resolving common activation error codes](activation-error-codes.md).
 
-[Back to list](#list)
-
 ## Clients are not adding to the KMS count
 
 To reset the client computer ID (CMID) and other product-activation information, run **sysprep /generalize** or **slmgr /rearm**. Otherwise, each client computer looks identical, and the KMS host does not count them as separate KMS clients.
-
-[Back to list](#list)
 
 ## KMS hosts are unable to create SRV records
 
 Domain Name System (DNS) may restrict Write access or may not support dynamic DNS (DDNS). In this case, give the KMS host Write access to the DNS database, or create the service (SRV) resource record (RR) manually. For more information about KMS and DNS issues, see [Common troubleshooting procedures for KMS and DNS issues](common-troubleshooting-procedures-kms-dns.md).
 
-[Back to list](#list)
-
 ## Only the first KMS host is able to create SRV records
 
 If the organization has more than one KMS host, the other hosts might not able to update the SRV RR unless the SRV default permissions are changed. For more information about KMS and DNS issues, see [Common troubleshooting procedures for KMS and DNS issues](common-troubleshooting-procedures-kms-dns.md).
 
-[Back to list](#list)
-
 ## I installed a KMS key on the KMS client
 
 KMS keys should be installed only on KMS hosts, not on KMS clients. Run **slmgr.vbs -ipk &lt;SetupKey&gt;**. For tables of keys that you can use to configure the computer as a KMS client, see [KMS client setup keys](KMSclientkeys.md). These keys are publicly known and are edition-specific. Remember to delete any unnecessary SRV RRs from DNS, and then restart the computers.
-
-[Back to list](#list)
 
 ## A KMS host failed
 
 If a KMS host fails, you must install a KMS host key on a new host and then activate the host. Make sure that the new KMS host has an SRV RR in the DNS database. If you install the new KMS host using the same computer name and IP address as the failed KMS host, the new KMS host can use the DNS SRV record of the failed host. If the new host has a different computer name, you can manually remove the DNS SRV RR of the failed host or (if scavenging is enabled in DNS) let DNS automatically remove it. If the network is using DDNS, the new KMS host automatically creates a new SRV RR on the DNS server. The new KMS host then starts collecting client renewal requests and begins activating clients as soon as the KMS activation threshold is met.
 
 If your KMS clients use auto-discovery, they automatically select another KMS host if the original KMS host does not respond to renewal requests. If the clients do not use auto-discovery, you must manually update the KMS client computers that were assigned to the failed KMS host by running **slmgr.vbs /skms**. To avoid this scenario, configure the KMS clients to use auto-discovery. For more information, see the [Volume Activation Deployment Guide](http://go.microsoft.com/fwlink/?linkid=150083).
-
-[Back to list](#list)
