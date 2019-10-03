@@ -26,7 +26,7 @@ To rebuild the Tokens.dat file, follow these steps:
 
    **For Windows 8.1**
    1. Swipe in from the right edge of the screen, and then tap **Search**. Or, if you are using a mouse, point to the lower-right corner of the screen, and then select **Search**.
-   1, In the search box, enter **cmd**.
+   2. In the search box, enter **cmd**.
    1. Swipe across or right-click the displayed **Command Prompt** icon.
    1. Tap or click **Run as administrator**.
 
