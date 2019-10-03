@@ -215,7 +215,7 @@ The client uses standard touch gestures. You can also use touch gestures to repl
 |---------------|----------------------|-------------------------------------------------------------------------|
 | Direct touch  | Left-click           | Tap with one finger                                                     |
 | Direct touch  | Right-click          | Tap with one finger and hold, then release                              |
-| Mouse pointer | Zoom                 | Use two fingers and pinch to zoom in or move fingers apart to zoom out. |
+| Mouse pointer | Zoom                 | Use two fingers and pinch to zoom out or move fingers apart to zoom in. |
 | Mouse pointer | Left-click           | Tap with one finger                                                     |
 | Mouse pointer | Left-click and drag  | Double-tap and hold with one finger, then drag                          |
 | Mouse pointer | Right-click          | Tap with two fingers                                                    |
