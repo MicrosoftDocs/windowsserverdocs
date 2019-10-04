@@ -141,7 +141,6 @@ ms.localizationpriority: medium
 |Features available generally|Windows Server 2019 Standard|Windows Server 2019 Datacenter|  
 |-------------------|----------|---------------------------|  
 |Best Practices Analyzer|Yes|Yes|
-|Constrained Storage Replica|Yes, (1 Partnership and 1 Resource Group with Single 2TB volume)| Yes, <strong>unlimited</strong> |
 |Direct Access|Yes|Yes|
 |Dynamic Memory (in virtualization)|Yes|Yes|
 |Hot Add/Replace RAM|Yes|Yes|
@@ -155,7 +154,7 @@ ms.localizationpriority: medium
 |SMB Direct and SMB over RDMA|Yes|Yes|
 |Software-defined Networking|No| <strong>Yes</strong> |
 |Storage Migration  Service|Yes|Yes|
-| Storage Replica         | Yes, one volume up to 2 TB    | Yes, <strong>no volume number or size limits</strong> |
+| Storage Replica         | Yes, (1 partnership and 1 resource group with a single 2TB volume)    | Yes, <strong>unlimited</strong> |
 |Storage Spaces|Yes|Yes|
 |Storage Spaces Direct|No| <strong>Yes</strong> |
 |Volume Activation Services|Yes|Yes|
@@ -163,5 +162,5 @@ ms.localizationpriority: medium
 |Windows Server Update Services|Yes|Yes|
 |Windows System Resource Manager|Yes|Yes|
 |Server license logging|Yes|Yes|
-|Inherited activation|As guest if hosted on Datacenter|Can be host or guest|
+|Inherited activation|As guest if hosted on Datacenter| <strong>Can be a host or a guest</strong> |
 |Work Folders|Yes|Yes|
