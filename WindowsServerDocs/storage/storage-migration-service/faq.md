@@ -28,7 +28,7 @@ The Storage Migration Service doesn't allow migrating between Active Directory d
 
 ## Are clusters supported as sources or destinations?
 
-The Storage Migration Service supports migrating from and to clusters after installation of cumulative update [KB4513534](https://support.microsoft.com/en-us/help/4512534/windows-10-update-kb4512534) or subsequent updates. This includes migrating from a source cluster to a destination cluster as well as migating from a standalone source server to a destination cluster for device consolidation purposes. 
+The Storage Migration Service supports migrating from and to clusters after installation of cumulative update [KB4513534](https://support.microsoft.com/help/4512534/windows-10-update-kb4512534) or subsequent updates. This includes migrating from a source cluster to a destination cluster as well as migrating from a standalone source server to a destination cluster for device consolidation purposes. 
 
 ## Do local groups and local users migrate?
 
