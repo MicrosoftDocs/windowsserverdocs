@@ -24,19 +24,19 @@ Storage Migration Service won't transfer files or folders that we know could int
 
 ## Are domain migrations supported?
 
-Storage Migration Service doesn't allow migrating between Active Directory domains. Migrations between servers will always join the destination server to the same domain. You can use migration credentials from different domains in the Active Directory forest. The Storage Migration Service does support migrating between workgroups.  
+The Storage Migration Service doesn't allow migrating between Active Directory domains. Migrations between servers will always join the destination server to the same domain. You can use migration credentials from different domains in the Active Directory forest. The Storage Migration Service does support migrating between workgroups.  
 
 ## Are clusters supported as sources or destinations?
 
-Storage Migration Service doesn't currently migrate between Clusters in Windows Server 2019. We plan to add cluster support in a future release of the Storage Migration Service.
+The Storage Migration Service supports migrating from and to clusters after installation of cumulative update [KB4513534](https://support.microsoft.com/en-us/help/4512534/windows-10-update-kb4512534) or subsequent updates. This includes migrating from a source cluster to a destination cluster as well as migating from a standalone source server to a destination cluster for device consolidation purposes. 
 
 ## Do local groups and local users migrate?
 
-Storage Migration Service doesn't currently migrate local users or local groups in Windows Server 2019. We plan to add local user and local group migration support in a future release of the Storage Migration Service.
+The Storage Migration Service supports migrating local users and groups after installation of cumulative update [KB4513534](https://support.microsoft.com/en-us/help/4512534/windows-10-update-kb4512534) or subsequent updates. 
 
 ## Is domain controller migration supported?
 
-Storage Migration Service doesn't currently migrate domain controllers in Windows Server 2019. As a workaround, as long as you have more than one domain controller in the Active Directory domain, demote the domain controller before migrating it, then promote the destination after cut over completes. We plan to add domain controller migration support in a future release of the Storage Migration Service.
+the Storage Migration Service doesn't currently migrate domain controllers in Windows Server 2019. As a workaround, as long as you have more than one domain controller in the Active Directory domain, demote the domain controller before migrating it, then promote the destination after cut over completes. We plan to add domain controller migration support in a future release of the Storage Migration Service.
 
 ## What attributes are migrated by the Storage Migration Service?
 
@@ -67,11 +67,11 @@ Storage Migration Service migrates all flags, settings, and security of SMB shar
 
 ## Can I consolidate multiple servers into one server?
 
-The Storage Migration Service version shipped in Windows Server 2019 doesn't support consolidating multiple servers into one server. An example of consolidation would be migrating three separate source servers - which may have the same share names and local file paths - onto a single new server that virtualized those paths and shares to prevent any overlap or collision, then answered all three previous servers names and IP address. We may add this functionality in a future version of the Storage Migration Service. 
+The Storage Migration Service version shipped in Windows Server 2019 doesn't support consolidating multiple servers into one server. An example of consolidation would be migrating three separate source servers - which may have the same share names and local file paths - onto a single new server that virtualized those paths and shares to prevent any overlap or collision, then answered all three previous servers names and IP address. You can migrate standalone servers onto multiple file server resources on a single cluster, however. 
 
 ## Can I migrate from sources other than Windows Server?
 
-The Storage Migration Service version shipped in Windows Server 2019 supports migrating from Windows Server 2003 and later operating systems. You can also migrate storage from a Linux server or device that uses Samba; to do so, run Storage Migration Service on a server running Windows Server, version 1903 or later.
+The Storage Migration Service supports migrating from Samba Linux servers after installation of cumulative update [KB4513534](https://support.microsoft.com/en-us/help/4512534/windows-10-update-kb4512534) or subsequent updates. See the requirements for a list of supported Samba versions and Linux distros.
 
 ## Can I migrate previous file versions?
 
