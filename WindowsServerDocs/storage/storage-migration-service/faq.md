@@ -36,7 +36,7 @@ The Storage Migration Service supports migrating local users and groups after in
 
 ## Is domain controller migration supported?
 
-the Storage Migration Service doesn't currently migrate domain controllers in Windows Server 2019. As a workaround, as long as you have more than one domain controller in the Active Directory domain, demote the domain controller before migrating it, then promote the destination after cut over completes. We plan to add domain controller migration support in a future release of the Storage Migration Service.
+The Storage Migration Service doesn't currently migrate domain controllers in Windows Server 2019. As a workaround, as long as you have more than one domain controller in the Active Directory domain, demote the domain controller before migrating it, then promote the destination after cut over completes.
 
 ## What attributes are migrated by the Storage Migration Service?
 
