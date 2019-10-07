@@ -202,7 +202,7 @@ $scanResults = Invoke-CimMethod -InputObject $sess -MethodName ScanForUpdates -A
 **Note:**  
 These commands list what is installed, but do not specifically quote "installed" in the output. If you need output including that, such as for a report, you can run  
 ```PowerShell
-Get-WindowsPackage --Online
+Get-WindowsPackage -Online
 ```
 
 ### Using WSUS  
