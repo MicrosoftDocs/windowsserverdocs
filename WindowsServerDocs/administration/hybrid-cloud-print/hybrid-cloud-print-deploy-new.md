@@ -32,13 +32,17 @@ There are a number of subscriptions, services, and computers you'll need to acqu
 
   See [Microsoft Intune](https://www.microsoft.com/en-us/cloud-platform/microsoft-intune), for a trial subscription to Intune.
 
-- Windows Server running Active Directory
+- A Windows Server running Active Directory
 
   See [Step-By-Step: Setting up Active Directory in Windows Server 2016](https://blogs.technet.microsoft.com/canitpro/2017/02/22/step-by-step-setting-up-active-directory-in-windows-server-2016/), for help setting up Active Directory.
 
-- Domain joined Windows Server 2016 running as Print Server
+- A domain-joined Windows Server 2016 running as Print Server
 
-- A separate domain joined Windows Server machine running as Connector Server
+- A separate domain-joined Windows Server machine running as Connector Server
+
+  For more information, see [Understand Azure AD Application Proxy connectors](https://docs.microsoft.com/en-us/azure/active-directory/manage-apps/application-proxy-connectors)
+
+- A Windows 10 Fall Creator Update or later machine for publishing printers
 
 - Public facing domain name
 
