@@ -318,6 +318,28 @@ When attempting to run inventory with the Storage Migration Service orchestrator
 
 To workaround this issue, temporarily uninstall the KB4512534 cumulative update (and any that superceded it) from the Storage Migration Service orchestrator computer. When the migration is complete, reinstall the latest cumulative update.  
 
+Note, under some circumstances, uninstalling KB4512534 or its superseding updates may cause the SMS service to no longer start. To resolve this issue, you can backup and delete the SMS database:
+
+1.	Open an elevated cmd prompt, where you are a member of Administrators on the SMS orchestrator server, and run:
+
+`TAKEOWN /d /a /r /f c:\ProgramData\Microsoft\StorageMigrationService
+
+MD c:\ProgramData\Microsoft\StorageMigrationService\backup
+
+ICACLS c:\ProgramData\Microsoft\StorageMigrationService\* /grant Administrators:(GA)
+
+XCOPY c:\ProgramData\Microsoft\StorageMigrationService\* .\backup\*
+
+DEL c:\ProgramData\Microsoft\StorageMigrationService\* /q
+
+ICACLS c:\ProgramData\Microsoft\StorageMigrationService  /GRANT networkservice:F /T /C
+
+ICACLS c:\ProgramData\Microsoft\StorageMigrationService /GRANT networkservice:(GA)F /T /C`
+
+4.	Start the Storage Migration Service service, which will create a new database.
+
+
+
 ## See also
 
 - [Storage Migration Service overview](overview.md)
