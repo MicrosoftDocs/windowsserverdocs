@@ -117,7 +117,7 @@ Three cmdlets are available for configuring live migration on non-clustered host
 
 Each line represents a separate command.
 
-```
+```PowerShell
 PS C:\> Enable-VMMigration
 
 PS C:\> Set-VMMigrationNetwork 192.168.10.1
@@ -127,7 +127,7 @@ PS C:\> Set-VMHost -VirtualMachineMigrationAuthenticationType Kerberos
 
 Set-VMHost also lets you choose a performance option (and many other host settings). For example, to choose SMB but leave the authentication protocol set to the default of CredSSP, type:
 
-```
+```PowerShell
 PS C:\> Set-VMHost -VirtualMachineMigrationPerformanceOption SMB
 ```
 
