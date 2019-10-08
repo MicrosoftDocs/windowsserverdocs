@@ -26,7 +26,7 @@ Displays information about processes that are running on a Remote Desktop Sessio
 ## Remarks
 This command is the same as the **query process** command.
 
-## See also
+## Additional references
 [query process](query-process.md)  
 [Command-Line Syntax Key](command-line-syntax-key.md)  
 [Remote Desktop Services &#40;Terminal Services&#41; Command Reference](remote-desktop-services-terminal-services-command-reference.md)  
