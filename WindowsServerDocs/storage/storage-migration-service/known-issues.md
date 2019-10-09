@@ -334,7 +334,6 @@ DEL c:\ProgramData\Microsoft\StorageMigrationService\* /q
 ICACLS c:\ProgramData\Microsoft\StorageMigrationService  /GRANT networkservice:F /T /C
 
 ICACLS c:\ProgramData\Microsoft\StorageMigrationService /GRANT networkservice:(GA)F /T /C`
-
 4.	Start the Storage Migration Service service, which will create a new database.
 
 
