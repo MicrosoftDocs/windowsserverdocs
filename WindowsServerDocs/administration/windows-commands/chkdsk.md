@@ -33,8 +33,8 @@ chkdsk [<Volume>[[<Path>]<FileName>]] [/f] [/v] [/r] [/x] [/i] [/c] [/l[:<Size>]
 
 ## Parameters
 
-|      Parameter      |                  Description                                    |
-|---------------------|--------------------------------------------------------------------------|
+|      Parameter       |                  Description                                    |
+| -------------------- | ------------------------------------------------------------------------ |
 |      \<Volume>      | Specifies the drive letter (followed by a colon), mount point, or volume name.  |
 | [\<Path>]<FileName> | Use with file allocation table (FAT) and FAT32 only. Specifies the location and name of a file or set of files that you want **chkdsk** to check for fragmentation. You can use the **?** and **&#42;** wildcard characters to specify multiple files. |
 |         /f          | Fixes errors on the disk. The disk must be locked. If **chkdsk** cannot lock the drive, a message appears that asks you if you want to check the drive the next time you restart the computer. |
