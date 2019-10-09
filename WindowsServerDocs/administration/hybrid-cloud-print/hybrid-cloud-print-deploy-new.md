@@ -40,7 +40,7 @@ There are a number of subscriptions, services, and computers you'll need to acqu
 
 - A separate domain-joined Windows Server machine running as Connector Server
 
-  For more information, see [Understand Azure AD Application Proxy connectors](https://docs.microsoft.com/en-us/azure/active-directory/manage-apps/application-proxy-connectors)
+  See [Understand Azure AD Application Proxy connectors](https://docs.microsoft.com/en-us/azure/active-directory/manage-apps/application-proxy-connectors) for more information.
 
 - A Windows 10 Fall Creator Update or later machine for publishing printers
 
@@ -155,9 +155,10 @@ This guide outlines five (5) installation steps:
     ![AAD Redirect URI 1](../media/hybrid-cloud-print/AAD-AppRegistration-Native-Overview.png)
 
     - Go to **Authentication**. Change the **TYPE** dropdown box to `Public...`, and enter two redirect URIs using the format below, where `<NativeClientAppID>` is from the previous step:
+
         `ms-appx-web://Microsoft.AAD.BrokerPlugin/<NativeClientAppID>`
 
-        `web://Microsoft.AAD.BrokerPlugin/S-1-15-2-3784861210-599250757-1266852909-3189164077-45880155-1246692841-283550366`
+        `ms-appx-web://Microsoft.AAD.BrokerPlugin/S-1-15-2-3784861210-599250757-1266852909-3189164077-45880155-1246692841-283550366`
 
     ![AAD Redirect URI 2](../media/hybrid-cloud-print/AAD-AppRegistration-Native-Authentication.png)
 
