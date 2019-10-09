@@ -320,7 +320,7 @@ To workaround this issue, temporarily uninstall the KB4512534 cumulative update 
 
 Note, under some circumstances, uninstalling KB4512534 or its superseding updates may cause Storage Migration Service to no longer start. To resolve this issue, you can backup and delete the Storage Migration Service database:
 
-1.	Open an elevated cmd prompt, where you are a member of Administrators on the SMS orchestrator server, and run:
+1.	Open an elevated cmd prompt, where you are a member of Administrators on the Storage Migration Service orchestrator server, and run:
 
 `TAKEOWN /d /a /r /f c:\ProgramData\Microsoft\StorageMigrationService
 
