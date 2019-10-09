@@ -322,7 +322,6 @@ Note, under some circumstances, uninstalling KB4512534 or its superseding update
 
 1.	Open an elevated cmd prompt, where you are a member of Administrators on the Storage Migration Service orchestrator server, and run:
 
-`TAKEOWN /d /a /r /f c:\ProgramData\Microsoft\StorageMigrationService
 
 MD c:\ProgramData\Microsoft\StorageMigrationService\backup
 
