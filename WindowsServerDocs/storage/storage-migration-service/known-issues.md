@@ -318,7 +318,7 @@ When attempting to run inventory with the Storage Migration Service orchestrator
 
 To workaround this issue, temporarily uninstall the KB4512534 cumulative update (and any that superceded it) from the Storage Migration Service orchestrator computer. When the migration is complete, reinstall the latest cumulative update.  
 
-Note, under some circumstances, uninstalling KB4512534 or its superseding updates may cause the SMS service to no longer start. To resolve this issue, you can backup and delete the SMS database:
+Note, under some circumstances, uninstalling KB4512534 or its superseding updates may cause Storage Migration Service to no longer start. To resolve this issue, you can backup and delete the Storage Migration Service database:
 
 1.	Open an elevated cmd prompt, where you are a member of Administrators on the SMS orchestrator server, and run:
 
