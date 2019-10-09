@@ -4,7 +4,7 @@ description: Known issues and troubleshooting support for Storage Migration Serv
 author: nedpyle
 ms.author: nedpyle
 manager: siroy
-ms.date: 07/09/2019
+ms.date: 10/09/2019
 ms.topic: article
 ms.prod: windows-server
 ms.technology: storage
@@ -322,18 +322,20 @@ Note, under some circumstances, uninstalling KB4512534 or its superseding update
 
 1.	Open an elevated cmd prompt, where you are a member of Administrators on the Storage Migration Service orchestrator server, and run:
 
+   ```
+   MD c:\ProgramData\Microsoft\StorageMigrationService\backup
 
-MD c:\ProgramData\Microsoft\StorageMigrationService\backup
+   ICACLS c:\ProgramData\Microsoft\StorageMigrationService\* /grant Administrators:(GA)
 
-ICACLS c:\ProgramData\Microsoft\StorageMigrationService\* /grant Administrators:(GA)
+   XCOPY c:\ProgramData\Microsoft\StorageMigrationService\* .\backup\*
 
-XCOPY c:\ProgramData\Microsoft\StorageMigrationService\* .\backup\*
+   DEL c:\ProgramData\Microsoft\StorageMigrationService\* /q
 
-DEL c:\ProgramData\Microsoft\StorageMigrationService\* /q
+   ICACLS c:\ProgramData\Microsoft\StorageMigrationService  /GRANT networkservice:F /T /C
 
-ICACLS c:\ProgramData\Microsoft\StorageMigrationService  /GRANT networkservice:F /T /C
-
-ICACLS c:\ProgramData\Microsoft\StorageMigrationService /GRANT networkservice:(GA)F /T /C`
+   ICACLS c:\ProgramData\Microsoft\StorageMigrationService /GRANT networkservice:(GA)F /T /C
+   ```
+   
 4.	Start the Storage Migration Service service, which will create a new database.
 
 
