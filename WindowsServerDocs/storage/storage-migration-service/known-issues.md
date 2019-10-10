@@ -4,7 +4,7 @@ description: Known issues and troubleshooting support for Storage Migration Serv
 author: nedpyle
 ms.author: nedpyle
 manager: siroy
-ms.date: 07/09/2019
+ms.date: 10/09/2019
 ms.topic: article
 ms.prod: windows-server
 ms.technology: storage
@@ -317,6 +317,28 @@ When attempting to run inventory with the Storage Migration Service orchestrator
     There are no more endpoints available from the endpoint mapper  
 
 To workaround this issue, temporarily uninstall the KB4512534 cumulative update (and any that superceded it) from the Storage Migration Service orchestrator computer. When the migration is complete, reinstall the latest cumulative update.  
+
+Note, under some circumstances, uninstalling KB4512534 or its superseding updates may cause Storage Migration Service to no longer start. To resolve this issue, you can backup and delete the Storage Migration Service database:
+
+1.	Open an elevated cmd prompt, where you are a member of Administrators on the Storage Migration Service orchestrator server, and run:
+
+     ```
+     MD c:\ProgramData\Microsoft\StorageMigrationService\backup
+
+     ICACLS c:\ProgramData\Microsoft\StorageMigrationService\* /grant Administrators:(GA)
+
+     XCOPY c:\ProgramData\Microsoft\StorageMigrationService\* .\backup\*
+
+     DEL c:\ProgramData\Microsoft\StorageMigrationService\* /q
+
+     ICACLS c:\ProgramData\Microsoft\StorageMigrationService  /GRANT networkservice:F /T /C
+
+     ICACLS c:\ProgramData\Microsoft\StorageMigrationService /GRANT networkservice:(GA)F /T /C
+     ```
+   
+2.	Start the Storage Migration Service service, which will create a new database.
+
+
 
 ## See also
 
