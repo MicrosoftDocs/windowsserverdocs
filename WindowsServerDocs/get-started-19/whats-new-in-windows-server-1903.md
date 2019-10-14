@@ -1,6 +1,6 @@
 ---
-title: What's New in Windows Server, version 1903
-description: This topic describes some of the new features in Windows Server, version 1903, which is a Semi-Annual Channel release. 
+title: What's New in Windows Server, version 1903 and 1909
+description: This topic describes some of the new features in Windows Server, version 1903 and version 1909, which are Semi-Annual Channel releases. 
 ms.prod: windows-server
 ms.technology: server-general
 ms.topic: article
@@ -8,11 +8,13 @@ author: jasongerend
 ms.author: jgerend
 ms.date: 05/21/2019
 ---
-# What's new in Windows Server, version 1903
+# What's new in Windows Server, version 1903 and 1909
 
 >Applies to: Windows Server (Semi-Annual Channel)
 
-This topic describes some of the new features in Windows Server, version 1903, which is a Semi-Annual Channel release. These features include enhancements for running and managing containers, tools for working in Server Core installations, and the ability to migrate storage from Linux devices.
+This topic describes some of the new features in Windows Server, version 1903 and version 1909, which are Semi-Annual Channel releases. These features include enhancements for running and managing containers, tools for working in Server Core installations, and the ability to migrate storage from Linux devices.
+
+Windows Server, version 1909 is release of Windows Server, version 1903 that includes subsequently released cumulative updates. Like other Semi-Annual Channel releases, it’s supported for 18 months from its first availability. For more info on the support dates of Semi-Annual Channel releases, see [Windows Server release info](../get-started/windows-server-release-info).
 
 To instead find out what's new in the latest Long-Term Servicing Channel (LTSC) release of Windows Server, see [What's New in Windows Server 2019](../get-started-19/whats-new-19.md). Also see [What's new in Windows 10, version 1903 IT Pro content](https://docs.microsoft.com/windows/whats-new/whats-new-windows-10-version-1903).
 
