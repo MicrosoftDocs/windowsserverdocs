@@ -4,7 +4,7 @@ description: The following is a list of features and functionalities in Windows 
 ms.prod: windows-server
 ms.technology: server-general
 ms.topic: article
-ms.date: 08/22/2019
+ms.date: 10/15/2019
 author: jasongerend
 ms.author: jgerend
 manager: daveba
