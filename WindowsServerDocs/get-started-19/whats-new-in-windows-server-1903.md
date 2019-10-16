@@ -12,6 +12,8 @@ ms.date: 10/15/2019
 
 >Applies to: Windows Server (Semi-Annual Channel)
 
+To learn about the latest features in Windows, see [What's New in Windows Server](whats-new-in-windows-server.md).
+
 This topic describes some of the new features in Windows Server, version 1903 and version 1909, which are Semi-Annual Channel releases. These features include enhancements for running and managing containers, tools for working in Server Core installations, and the ability to migrate storage from Linux devices.
 
 Windows Server, version 1909 is release of Windows Server, version 1903 that includes subsequently released cumulative updates. Like other Semi-Annual Channel releases, it’s supported for 18 months from its first availability. For more info on the support dates of Semi-Annual Channel releases, see [Windows Server release info](../get-started/windows-server-release-info.md).
