@@ -7,7 +7,7 @@ ms.sitesec: library
 author: jasongerend
 ms.author: jgerend
 ms.localizationpriority: medium
-ms.date: 05/21/2019
+ms.date: 11/12/2019
 ms.topic: get-started-article
 ---
 # KMS client setup keys
