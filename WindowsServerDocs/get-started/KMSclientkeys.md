@@ -45,7 +45,7 @@ prompt on the client, type **slmgr /ipk \<setup key\>** and then press **Enter**
 
 ## Windows Server Semi-Annual Channel versions
 
-### Windows Server, version 1903 and Windows Server, version 1809
+### Windows Server, version 1909, version 1903, and version 1809
 
 | Operating system edition  | KMS Client Setup Key          |
 |---------------------------|-------------------------------|
