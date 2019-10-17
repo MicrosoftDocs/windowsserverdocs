@@ -112,7 +112,7 @@ Some additional information about this section:
 
 -   Quotes must surround URLs with spaces.
 
--   If no URLs are specified – that is, if the **[CRLDistributionPoint]** section exists in the file but is empty – the Authority Information Access extension is omitted from the root CA certificate. This is usually preferable when setting up a root CA. Windows does not perform revocation checking on a root CA certificate, so the CDP extension is superfluous in a root CA certificate.
+-   If no URLs are specified – that is, if the **[CRLDistributionPoint]** section exists in the file but is empty – the CRL Distribution Point extension is omitted from the root CA certificate. This is usually preferable when setting up a root CA. Windows does not perform revocation checking on a root CA certificate, so the CDP extension is superfluous in a root CA certificate.
 
 -    CA can publish to FILE UNC, for example, to a share that represents the folder of a website where a client retrieves via HTTP.
 
@@ -138,7 +138,7 @@ Some additional notes on the authority information access section:
 
 -   URLs with spaces must be surrounded by quotes.
 
--   If no URLs are specified – that is, if the **[AuthorityInformationAccess]** section exists in the file but is empty – the CRL Distribution Point extension is omitted from the root CA certificate. Again, this would be the preferred setting in the case of a root CA certificate as there is no authority higher than a root CA that would need to be referenced by a link to its certificate.
+-   If no URLs are specified – that is, if the **[AuthorityInformationAccess]** section exists in the file but is empty – the Authority Information Access extension is omitted from the root CA certificate. Again, this would be the preferred setting in the case of a root CA certificate as there is no authority higher than a root CA that would need to be referenced by a link to its certificate.
 
 ### certsrv_Server
 
