@@ -2,7 +2,7 @@
 title: doskey
 description: "Windows Commands topic for **** - "
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -39,10 +39,11 @@ doskey [/reinstall] [/listsize=<Size>] [/macros:[all | <ExeName>] [/history] [/i
 |      /macros:all       |                                                                                                        Displays **doskey** macros for all executables.                                                                                                         |
 |   /macros:\<ExeName>   |                                                                                             Displays **doskey** macros for the executable specified by *ExeName*.                                                                                              |
 |        /history        |                                    Displays all commands that are stored in memory. You can use the redirection symbol (**>**) with **/history** to redirect the list to a file. You can abbreviate **/history** as **/h**.                                    |
-|        [/insert        |                                                                                                                          /overstrike]                                                                                                                          |
+| /insert | Specifies that new text you type is inserted in old text. |
+| /overstrike | Specifies that new text overwrites old text. |
 |  /exename=\<ExeName>   |                                                                                        Specifies the program (that is, executable) in which the **doskey** macro runs.                                                                                         |
 | /macrofile=\<FileName> |                                                                                              Specifies a file that contains the macros that you want to install.                                                                                               |
-| \<MacroName>=[<Text>]  | Creates a macro that carries out the commands specified by *Text*. *MacroName* specifies the name you want to assign to the macro. *Text* specifies the commands you want to record. If *Text* is left blank, *MacroName* is cleared of any assigned commands. |
+| \<MacroName>=[\<Text>]  | Creates a macro that carries out the commands specified by *Text*. *MacroName* specifies the name you want to assign to the macro. *Text* specifies the commands you want to record. If *Text* is left blank, *MacroName* is cleared of any assigned commands. |
 |           /?           |                                                                                                              Displays help at the command prompt.                                                                                                              |
 
 ## Remarks

@@ -7,7 +7,7 @@ author: billmath
 manager: mtillman
 ms.date: 01/28/2019
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: identity-adfs
 ---
 # Configure Azure MFA as authentication provider with AD FS
@@ -277,7 +277,7 @@ Here is a simple example, you may want to extend:
 6. Import the onload.js file into your custom theme by typing the following Windows PowerShell command:
     
     ``` PowerShell
-    Set-AdfsWebTheme -TargetName ProofUp -AdditionalFileResource @{Uri=’/adfs/portal/script/onload.js’;path="c:\theme\script\onload.js"}
+    Set-AdfsWebTheme -TargetName ProofUp -AdditionalFileResource @{Uri='/adfs/portal/script/onload.js';path="c:\theme\script\onload.js"}
     ```
 7. Finally, apply the custom AD FS Web Theme by typing the following Windows PowerShell command:
     

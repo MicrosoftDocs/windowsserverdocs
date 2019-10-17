@@ -7,7 +7,7 @@ author: nwashburn-ms
 ms.author: niwashbu
 ms.date: 06/06/2019
 ms.localizationpriority: medium
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ---
 # Create a connection provider for a solution extension
 
@@ -30,11 +30,11 @@ To create your own custom Connection Provider, follow these steps:
 
 ## Add Connection Provider details to manifest.json
 
-Now we’ll walk through what you need to know to define a Connection Provider in your project’s ```manifest.json``` file.
+Now we'll walk through what you need to know to define a Connection Provider in your project's ```manifest.json``` file.
 
 ### Create entry in manifest.json
 
-The ```manifest.json``` file is located in the \src folder and contains, among other things, definitions of entry points into your project. Types of entry points include Tools, Solutions, and Connection Providers. We’ll be defining a Connection Provider.
+The ```manifest.json``` file is located in the \src folder and contains, among other things, definitions of entry points into your project. Types of entry points include Tools, Solutions, and Connection Providers. We'll be defining a Connection Provider.
 
 A sample of a Connection Provider entry in manifest.json is below:
 
@@ -72,7 +72,7 @@ An entry point of type "connnectionProvider" indicates to the Windows Admin Cent
 | entryPointType | This is a required property. There are three valid values: "tool", "solution", and "connectionProvider". | 
 | name | Identifies the Connection Provider within the scope of a Solution. This value must be unique inside a full Windows Admin Center instance (not just a Solution). |
 | path | Represents the URL path for the "Add Connection" UI, if it will be configured by the Solution. This value must map to a route that is configured in app-routing.module.ts file. When the Solution entry point is configured to use the connections rootNavigationBehavior, this route will load the module that is used by the Shell to display the Add Connection UI. More information available in the section on rootNavigationBehavior. |
-| displayName | The value entered here is displayed on the right hand side of the shell, below the black Windows Admin Center bar when a user loads a Solution’s connections page. |
+| displayName | The value entered here is displayed on the right hand side of the shell, below the black Windows Admin Center bar when a user loads a Solution's connections page. |
 | icon | Represents the icon used in the Solutions drop down menu to represent the Solution. |
 | description | Enter a short description of the entry point. |
 | connectionType | Represents the connection type that the provider will load. The value entered here will also be used in the Solution entry point to specify that the Solution can load those connections. The value entered here will also be used in Tool entry point(s) to indicate that the Tool is compatible with this type. This value entered here will also be used in the connection object that is submitted to the RPC call on the "Add window", in the application layer implementation step. |
@@ -200,7 +200,7 @@ For example, if you add the value below, any time that "defaultConnection_test" 
 
 ## Implement Connection Provider in application layer
 
-Now we’re going to implement the Connection Provider in the application layer, by creating a TypeScript Class that implements OnInit. The class has the following functions:
+Now we're going to implement the Connection Provider in the application layer, by creating a TypeScript Class that implements OnInit. The class has the following functions:
 
 | Function | Description |
 | -------- | ----------- |

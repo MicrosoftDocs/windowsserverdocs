@@ -6,7 +6,7 @@ ms.author: billmath
 manager: mtillman
 ms.date: 02/22/2018
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: anandy
 ms.technology: identity-adfs
 ---
@@ -17,7 +17,7 @@ ms.technology: identity-adfs
 The article [here](native-client-with-ad-fs.md) shows how to build an app that uses AD FS for OpenID Connect sign on. However, by default there are only a fixed set of claims available in the id_token. AD FS 2016 and later releases have the capability to customize the id_token in OpenID Connect scenarios.
 
 ## When are custom ID token used?
-In certain scenarios it is possible that the client application does not have a resource that it is trying to access. Therefore, it doesn’t really need an access token. In such cases, the client application essentially needs only an ID token but with some additional claims to help in the functionality.
+In certain scenarios it is possible that the client application does not have a resource that it is trying to access. Therefore, it doesn't really need an access token. In such cases, the client application essentially needs only an ID token but with some additional claims to help in the functionality.
 
 ## What are the restrictions on getting custom claims in ID token?
 

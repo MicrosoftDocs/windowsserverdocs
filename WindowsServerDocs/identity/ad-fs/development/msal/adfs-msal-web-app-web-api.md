@@ -6,7 +6,7 @@ ms.author: billmath
 manager: daveba
 ms.date: 08/09/2019
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: identity-adfs
 ---
 
@@ -22,7 +22,7 @@ Before reading this article, you should be familiar with the [AD FS concepts](..
  
 ![Overview of web app calling web api](media/adfs-msal-web-app-web-api/webapp1.png)
 
-In this flow you add authentication to your Web App (Server App), which can therefore sign in users and calls a web API. From the Web App, to call the Web API, use MSAL’s [AcquireTokenByAuthorizationCode](https://docs.microsoft.com/en-us/dotnet/api/microsoft.identity.client.acquiretokenbyauthorizationcodeparameterbuilder?view=azure-dotnet) token acquisition method. You'll use the Authorization code flow, storing the acquired token in the token cache. Then the controller will acquire tokens silently from the cache when needed. MSAL refreshes the token if needed. 
+In this flow you add authentication to your Web App (Server App), which can therefore sign in users and calls a web API. From the Web App, to call the Web API, use MSAL's [AcquireTokenByAuthorizationCode](https://docs.microsoft.com/en-us/dotnet/api/microsoft.identity.client.acquiretokenbyauthorizationcodeparameterbuilder?view=azure-dotnet) token acquisition method. You'll use the Authorization code flow, storing the acquired token in the token cache. Then the controller will acquire tokens silently from the cache when needed. MSAL refreshes the token if needed. 
 
 Web Apps that calls Web APIs: 
 
@@ -30,7 +30,7 @@ Web Apps that calls Web APIs:
 - are confidential client applications. 
 - that's why they've registered a secret (application shared secret, certificate or AD account) with AD FS. This secret is passed-in during the call to AD FS to get a token.  
 
-To better understand how to register a Web App in ADFS and to configure it to acquire tokens to call a Web API, let’s use a sample available [here](https://github.com/microsoft/adfs-sample-msal-dotnet-webapp-to-webapi) and walkthrough the app registration and code configuration steps.  
+To better understand how to register a Web App in ADFS and to configure it to acquire tokens to call a Web API, let's use a sample available [here](https://github.com/microsoft/adfs-sample-msal-dotnet-webapp-to-webapi) and walkthrough the app registration and code configuration steps.  
 
  
 ## Pre-requisites 

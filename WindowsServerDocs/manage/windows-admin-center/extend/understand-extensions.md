@@ -7,13 +7,13 @@ author: daniellee-msft
 ms.author: jol
 ms.date: 06/18/2018
 ms.localizationpriority: medium
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ---
 # Understanding Windows Admin Center Extensions
 
 >Applies To: Windows Admin Center, Windows Admin Center Preview
 
-In case you’re not yet familiar with how Windows Admin Center works, let’s start with the high-level architecture. Windows Admin Center is comprised of two main components:
+In case you're not yet familiar with how Windows Admin Center works, let's start with the high-level architecture. Windows Admin Center is comprised of two main components:
 
 - Lightweight **web service** that serves Windows Admin Center UI web pages to web browser requests.
 - **Gateway component** that listens for REST API requests from the web pages and relays WMI calls or PowerShell scripts to be executed on a target server or cluster.
@@ -46,4 +46,4 @@ The gateway service exposes REST APIs for the UI to call and relays commands and
 
 ## Next steps
 
-Depending on what capabilities you want to build in Windows Admin Center, [building a tool extension](develop-tool.md) for an existing server or cluster solution may be sufficient, and is the easiest first step into building extensions. However, if your feature is for managing a device, service or something completely new, rather than a server or cluster, you should consider [building a solution extension](develop-solution.md) with one or more tools. And finally, if you need to communicate with the target through a protocol other than WMI or PowerShell, you’ll need to [build a gateway plugin](develop-gateway-plugin.md). [Continue reading on](developing-extensions.md) to learn how to set up your development environment and start writing your first extension.
+Depending on what capabilities you want to build in Windows Admin Center, [building a tool extension](develop-tool.md) for an existing server or cluster solution may be sufficient, and is the easiest first step into building extensions. However, if your feature is for managing a device, service or something completely new, rather than a server or cluster, you should consider [building a solution extension](develop-solution.md) with one or more tools. And finally, if you need to communicate with the target through a protocol other than WMI or PowerShell, you'll need to [build a gateway plugin](develop-gateway-plugin.md). [Continue reading on](developing-extensions.md) to learn how to set up your development environment and start writing your first extension.

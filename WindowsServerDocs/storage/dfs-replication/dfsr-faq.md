@@ -1,7 +1,7 @@
 ﻿---
 title: 'DFS Replication: Frequently Asked Questions (FAQ)'
 ms.date: 06/18/2014
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: storage
 author: JasonGerend
 manager: elizapo
@@ -200,7 +200,7 @@ To upgrade or replace a DFS Replication member, see this blog post on the Ask th
 
 ### Is DFS Replication suitable for replicating roaming profiles?
 
-Yes. Certain scenarios are supported when replicating roaming user profiles. For information about the supported scenarios, see [Microsoft’s Support Statement Around Replicated User Profile Data](http://go.microsoft.com/fwlink/?linkid=201282) (http://go.microsoft.com/fwlink/?LinkId=201282).
+Yes. Certain scenarios are supported when replicating roaming user profiles. For information about the supported scenarios, see [Microsoft's Support Statement Around Replicated User Profile Data](http://go.microsoft.com/fwlink/?linkid=201282) (http://go.microsoft.com/fwlink/?LinkId=201282).
 
 ### Is there a file character limit or limit to the folder depth?
 
@@ -212,7 +212,7 @@ No. Replication groups can span across domains within a single forest but not ac
 
 ### What are the supported limits of DFS Replication?
 
-The following list provides a set of scalability guidelines that have been tested by Microsoft on Windows Server 2012 R2:
+The following list provides a set of scalability guidelines that have been tested by Microsoft and apply to Windows Server 2012 R2, Windows Server 2016, and Windows Server 2019
 
   - Size of all replicated files on a server: 100 terabytes.  
       
@@ -223,7 +223,7 @@ The following list provides a set of scalability guidelines that have been teste
 
 
 > [!IMPORTANT]
-> When creating replication groups with a large number or size of files we recommend exporting a database clone and using pre-seeding techniques to minimize the duration of initial replication. For more information, see <A href="http://blogs.technet.com/b/filecab/archive/2013/08/21/dfs-replication-initial-sync-in-windows-server-2012-r2-attack-of-the-clones.aspx">DFS Replication Initial Sync in Windows Server 2012 R2: Attack of the Clones</A>. 
+> When creating replication groups with a large number or size of files we recommend exporting a database clone and using pre-seeding techniques to minimize the duration of initial replication. For more information, see [DFS Replication Initial Sync in Windows Server 2012 R2: Attack of the Clones](https://techcommunity.microsoft.com/t5/Storage-at-Microsoft/DFS-Replication-Initial-Sync-in-Windows-Server-2012-R2-Attack-of/ba-p/424877). 
 <br>
 
 

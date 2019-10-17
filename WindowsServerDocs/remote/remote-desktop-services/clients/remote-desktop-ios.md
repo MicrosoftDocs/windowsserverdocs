@@ -2,7 +2,7 @@
 title: Get started with the iOS client
 description: Learn how to set up the Remote Desktop client for iOS
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: remote-desktop-services
@@ -80,7 +80,7 @@ The remote resources will be displayed in the Connection Center.
 
 Follow these steps to get started with Remote Desktop on your iOS device:
 
-1. Download the Microsoft Remote Desktop client from [iTunes](https://itunes.apple.com/us/app/microsoft-remote-desktop/id714464092?mt=8).
+1. Download the Microsoft Remote Desktop client from [iTunes](https://itunes.apple.com/app/microsoft-remote-desktop/id714464092?mt=8).
 2. [Set up your PC to accept remote connections](remote-desktop-client-faq.md#how-do-i-set-up-a-pc-for-remote-desktop).
 3. Add a [Remote Desktop connection](#add-a-remote-desktop-connection) or a [remote resource](#add-a-remote-resource). You use a connection to connect to a directly to a Windows PC and a remote resource to use a RemoteApp program, session-based desktop, or a virtual desktop published on-premises using RemoteApp and Desktop Connections. This feature is typically available in corporate environments.
 
@@ -157,7 +157,7 @@ When you start a remote desktop session, there are tools available that you can 
 ### Start a Remote Desktop Connection
 
 1. Tap the remote desktop connection to start the remote desktop session.
-2. If you are asked to verify the certificate for the remote desktop, tap **Accept**. You can choose to always accept by sliding the  **Don’t ask me again for connections to this computer** toggle to **ON**.
+2. If you are asked to verify the certificate for the remote desktop, tap **Accept**. You can choose to always accept by sliding the  **Don't ask me again for connections to this computer** toggle to **ON**.
 
 ### Connection Bar
 

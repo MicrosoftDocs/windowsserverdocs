@@ -1,7 +1,7 @@
 ---
 ms.assetid: 6c6ff819-f349-4aea-b0be-1f637f631736
 title: Fsutil wim
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 manager: dmoss
 ms.author: toklima
 author: toklima

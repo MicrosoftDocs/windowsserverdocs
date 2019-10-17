@@ -2,7 +2,7 @@
 title: Privacy and Security Considerations
 description: Provides privacy and security insights about MultiPoint Services
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: multipoint-services
 ms.reviewer: na
 ms.suite: na

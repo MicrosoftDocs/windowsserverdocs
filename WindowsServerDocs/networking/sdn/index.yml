@@ -138,7 +138,7 @@ sections:
       
       title: Deploy an SDN infrastructure 
 
-    - href: \windows-server\networking\sdn\plan\Plan-a-Software-Defined-Network-Infrastructure
+    - href: \windows-server\networking\sdn\manage\manage-sdn
 
       html: <p> </p>
 

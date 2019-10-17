@@ -1,7 +1,7 @@
 ---
 ms.assetid: 21225c11-7c72-4ea2-96bd-e63d4beb3be5
 title: Fsutil quota
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 manager: dmoss
 ms.author: toklima
 author: toklima

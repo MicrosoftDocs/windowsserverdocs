@@ -7,7 +7,7 @@
 ## [System requirements](sys-reqs-19.md)
 ## [Windows Server 2019 activation](activation-19.md)
 ## [Windows Server 2019 VM activation](vm-activation-19.md)
-## [Troubleshooting activation error codes](../get-started/activation-error-codes.md)
+## [Troubleshooting Windows volume activation](../get-started/activation-troubleshooting-guide.md)
 ## [Windows Server 2019 and Microsoft Server Application Compatibility](app-compat-19.md)
 ## [Server Core App Compatibility Feature on Demand (FOD)](install-fod-19.md)
 ## [Standard | Datacenter Editions comparison](editions-comparison-19.md)

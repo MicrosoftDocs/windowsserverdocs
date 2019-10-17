@@ -7,7 +7,7 @@ ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 
 ms.technology: identity-adfs
 ---
@@ -21,11 +21,11 @@ For more information about how claims are generated, see [The Role of Claims](Th
 ## How attribute stores fit in with your AD FS deployment goals  
 The location of the user attribute store and the location from which users authenticate determine how you design AD FS to support the user identities. Depending on where the attribute store is located and where users will access the application \(in an intranet or on the Internet\), you can use one of the following deployment goals:  
   
--   [Provide Your Active Directory Users Access to Your Claims-Aware Applications and Services](https://technet.microsoft.com/library/dd807071.aspx)—In this goal, users in your organization access an AD FS–secured application or service \(either your own application or service or a partner’s application or service\) when the users are logged on to Active Directory in the corporate intranet.  
+-   [Provide Your Active Directory Users Access to Your Claims-Aware Applications and Services](https://technet.microsoft.com/library/dd807071.aspx)—In this goal, users in your organization access an AD FS–secured application or service \(either your own application or service or a partner's application or service\) when the users are logged on to Active Directory in the corporate intranet.  
   
--   [Provide Your Active Directory Users Access to the Applications and Services of Other Organizations](https://technet.microsoft.com/library/dd807123.aspx)—In this goal, users in your organization access an AD FS–secured application or service \(either your own application or service or a partner’s application or service\) when the users are logged on to an attribute store in the corporate intranet and when they log on remotely from the Internet.  
+-   [Provide Your Active Directory Users Access to the Applications and Services of Other Organizations](https://technet.microsoft.com/library/dd807123.aspx)—In this goal, users in your organization access an AD FS–secured application or service \(either your own application or service or a partner's application or service\) when the users are logged on to an attribute store in the corporate intranet and when they log on remotely from the Internet.  
   
--   [Provide Users in Another Organization Access to Your Claims-Aware Applications and Services](https://technet.microsoft.com/library/dd807099.aspx)—In this goal, user accounts in another organization that are located in an attribute store on that organization’s corporate intranet must access an AD FS–secured application in your organization. This goal also works when consumer\-based user accounts that are located in an attribute store in your organization’s perimeter network must be provided with access to an AD FS–secured application in your organization.  
+-   [Provide Users in Another Organization Access to Your Claims-Aware Applications and Services](https://technet.microsoft.com/library/dd807099.aspx)—In this goal, user accounts in another organization that are located in an attribute store on that organization's corporate intranet must access an AD FS–secured application in your organization. This goal also works when consumer\-based user accounts that are located in an attribute store in your organization's perimeter network must be provided with access to an AD FS–secured application in your organization.  
   
 Depending on attribute store placement and other requirements of your organization, you can combine several of these deployment goals to complete the design of your AD FS deployment.  
   

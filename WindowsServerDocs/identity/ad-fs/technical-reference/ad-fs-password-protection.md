@@ -6,7 +6,7 @@ manager: mtillman
 ms.reviewer: andandyMSFT
 ms.date: 11/15/2018
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: identity-adfs
 ms.author: billmath
 ---
@@ -41,7 +41,7 @@ In a password spray attack, these bad actors will try the most common passwords 
 
 This attack pattern evades most detection techniques because from the vantage point of an individual user or company, the attack just looks like an isolated failed login.
 
-For attackers, it’s a numbers game: they know that there are some passwords out there that are very common.  The attacker will get a few successes for every thousand accounts attacked, and that’s enough to be effective. They use the accounts to get data from emails, harvest contact info, and send phishing links or just expand the password spray target group. The attackers don’t care much about who those initial targets are—just that they have some success that they can leverage.
+For attackers, it's a numbers game: they know that there are some passwords out there that are very common.  The attacker will get a few successes for every thousand accounts attacked, and that's enough to be effective. They use the accounts to get data from emails, harvest contact info, and send phishing links or just expand the password spray target group. The attackers don't care much about who those initial targets are—just that they have some success that they can leverage.
 
 But by taking a few steps to configure the AD FS and network correctly, AD FS endpoints can be secured against these type of attacks. This article covers 3 areas that need to be configured properly to help secure against these attacks.
 
@@ -69,13 +69,13 @@ But by taking a few steps to configure the AD FS and network correctly, AD FS en
 
         a. Licensing is not for all users and requires 25 licenses/ADFS/WAP server which may be easy for a customer.
 
-        b. You can now investigate IP’s that are generating large # of failed logins
+        b. You can now investigate IP's that are generating large # of failed logins
 
         c. This will require you to enable auditing on your ADFS servers.
 
 3.  Block suspicious IP's.  This potentially blocks DOS attacks.
 
-    a. If on 2016, use the [*Extranet Banned IP addresses*](../../ad-fs/operations/configure-ad-fs-banned-ip.md) feature to block any requests from IP’s flagged by #3 (or manual analysis).
+    a. If on 2016, use the [*Extranet Banned IP addresses*](../../ad-fs/operations/configure-ad-fs-banned-ip.md) feature to block any requests from IP's flagged by #3 (or manual analysis).
 
     b. If you are on AD FS 2012 R2 or lower, block the IP address directly at Exchange Online and optionally on your firewall.
 
@@ -97,7 +97,7 @@ But by taking a few steps to configure the AD FS and network correctly, AD FS en
 
    a.  If you have Azure AD premium, use [Azure AD Conditional Access policies](https://docs.microsoft.com/azure/active-directory/conditional-access/overview) to control this.  This is better than implementing the rules at AD FS.  This is because modern client apps are enforced on a more frequent basis.  This occurs, at Azure AD, when requesting a new access token (typically every hour) using a refresh token.  
 
-   b.  If you don’t have Azure AD premium or have additional apps on AD FS that you allow internet based access, implement MFA (Can be Azure MFA as well on AD FS 2016) and do a [global MFA policy](../../ad-fs/operations/configure-authentication-policies.md#to-configure-multi-factor-authentication-globally) for all extranet access.
+   b.  If you don't have Azure AD premium or have additional apps on AD FS that you allow internet based access, implement MFA (Can be Azure MFA as well on AD FS 2016) and do a [global MFA policy](../../ad-fs/operations/configure-authentication-policies.md#to-configure-multi-factor-authentication-globally) for all extranet access.
 
 ## Level 3: Move to password less for extranet access
 
@@ -112,7 +112,7 @@ But by taking a few steps to configure the AD FS and network correctly, AD FS en
 If the AD FS environment is under active attack, the following steps should be implemented at the earliest:
 
  - Disable U/P endpoint in ADFS and require everyone to VPN to get access or be inside your network. This requires you to have step **Level 2 #1a** completed. Otherwise, all internal Outlook requests will still be routed via the cloud via EXO proxy auth.
- - If the attack is only coming via EXO, you can disable basic authentication for Exchange protocols (POP, IMAP, SMTP, EWS, etc) using Authentication Policies, these protocols and authentication methods are being used on the vast majority of these attacks. Additionally, Client Access Rules in EXO and per-mailbox protocol enablement are evaluated post-authentication and won’t help on mitigating the attacks. 
+ - If the attack is only coming via EXO, you can disable basic authentication for Exchange protocols (POP, IMAP, SMTP, EWS, etc) using Authentication Policies, these protocols and authentication methods are being used on the vast majority of these attacks. Additionally, Client Access Rules in EXO and per-mailbox protocol enablement are evaluated post-authentication and won't help on mitigating the attacks. 
  - Selectively offer extranet access using Level 3 #1-3.
 
 ## Next steps

@@ -2,7 +2,7 @@
 title: bitsadmin help
 description: "Windows Commands topic for **bitsadmin help** - Displays the command-line usage."
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands

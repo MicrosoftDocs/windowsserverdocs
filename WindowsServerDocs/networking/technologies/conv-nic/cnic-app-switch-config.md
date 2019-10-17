@@ -1,7 +1,7 @@
 ---
 title: Physical switch configuration for Converged NIC
 description: In this topic, we provide you with guidelines for configuring your physical switches. 
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: networking
 ms.topic: article
 ms.assetid: 6d53c797-fb67-4b9e-9066-1c9a8b76d2aa

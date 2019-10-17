@@ -3,7 +3,7 @@ title: System administration in MultiPoint Services
 description: Navigational topic for administration information for MultiPoint Services
 ms.custom: na
 ms.date: 07/22/2016
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: multipoint-services
 ms.reviewer: na
 ms.suite: na
@@ -15,7 +15,7 @@ manager: scottman
 ms.author: evas
 ---
 # System administration in MultiPoint Services
-Before you start using your MultiPoint Services system, it’s a good idea to do some basic system administration.  
+Before you start using your MultiPoint Services system, it's a good idea to do some basic system administration.  
   
 Use the following information:
 

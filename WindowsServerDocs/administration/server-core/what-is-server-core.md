@@ -1,7 +1,7 @@
 ---
 title: What is Server Core?
 description: Learn about the Server Core installation option in Windows Server
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.mktglfcycl: manage
 ms.sitesec: library
 author: lizap

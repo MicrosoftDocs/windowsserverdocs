@@ -2,7 +2,7 @@
 title: RDS - RemoteFX 3D Video Adapter (vGPU) setup and configuration
 description: Planning information to configure RemoteFX 3D Video Adapter (vGPU) graphics virtualization.
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: remote-desktop-services
@@ -55,7 +55,7 @@ RemoteFX vGPU will use all GPUs when there are more than one available. However,
 
    1. Navigate to the Hyper-V settings in Hyper-V Manager.
    2. Click **Physical GPUs** in Hyper-V Settings.
-   3. Select the GPU that you don’t want to use, and then clear **Use this GPU with RemoteFX**.
+   3. Select the GPU that you don't want to use, and then clear **Use this GPU with RemoteFX**.
 
 
 ### Configure the RemoteFX 3D Video Adapter (vGPU)
@@ -107,7 +107,7 @@ For details see [Get-VMRemoteFXPhysicalVideoAdapter](https://technet.microsoft.c
 
 ## Monitor performance
 
-The performance and scale of a VDI system are determined by a variety of factors such as GPU’s total memory, amount of system memory and memory speed, number of CPU cores and CPU clock frequency, storage speed, and NUMA implementation.
+The performance and scale of a VDI system are determined by a variety of factors such as GPU's total memory, amount of system memory and memory speed, number of CPU cores and CPU clock frequency, storage speed, and NUMA implementation.
 
 Remote vGPU support in RDS includes the following performance counters, which you can view in Performance Monitor (perfmon.exe) to gather information about frame rate throughput.
 

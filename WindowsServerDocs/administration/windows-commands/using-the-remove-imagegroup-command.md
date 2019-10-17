@@ -2,7 +2,7 @@
 title: Using the remove-ImageGroup Command
 description: "Windows Commands topic for **** - "
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -35,8 +35,8 @@ wdsutil /remove-ImageGroumediaGroup:ImageGroup1
 wdsutil /verbose /remove-ImageGroumediaGroup:"My Image Group" /Server:MyWDSServer 
 ```
 #### additional references
-[Command-Line Syntax Key](command-line-syntax-key.md)
-[Using the add-ImageGroup Command](using-the-add-imagegroup-command.md)
-[Using the get-AllImageGroups Command](using-the-get-allimagegroups-command.md)
-[Using the get-ImageGroup Command](using-the-get-imagegroup-command.md)
-[Subcommand: set-ImageGroup](subcommand-set-imagegroup.md)
+[Command-Line Syntax Key](command-line-syntax-key.md)  
+[Using the add-ImageGroup Command](using-the-add-imagegroup-command.md)  
+[Using the get-AllImageGroups Command](using-the-get-allimagegroups-command.md)  
+[Using the get-ImageGroup Command](using-the-get-imagegroup-command.md)  
+[Subcommand: set-ImageGroup](subcommand-set-imagegroup.md)  

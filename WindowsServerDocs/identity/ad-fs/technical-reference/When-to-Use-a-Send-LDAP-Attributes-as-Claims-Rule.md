@@ -7,7 +7,7 @@ ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 
 ms.technology: identity-adfs
 ---
@@ -42,7 +42,7 @@ When you use the Send LDAP Attributes as Claims rule template, you can select at
   
 By using this template, you can add multiple attributes, which will be sent as multiple claims, from a single rule. For example, you can use this rule template to create a rule that will look up attribute values for authenticated users from the **company** and **department** Active Directory attributes and then send these values as two different outgoing claims.  
   
-You can also use this rule to send all the user’s group memberships. If you want to send only individual group memberships, use the Send Group Membership as a Claim rule template. For more information, see [When to Use a Send Group Membership as a Claim Rule](When-to-Use-a-Send-Group-Membership-as-a-Claim-Rule.md).  
+You can also use this rule to send all the user's group memberships. If you want to send only individual group memberships, use the Send Group Membership as a Claim rule template. For more information, see [When to Use a Send Group Membership as a Claim Rule](When-to-Use-a-Send-Group-Membership-as-a-Claim-Rule.md).  
   
 ## How to create this rule  
 You can create this rule by using either the claim rule language or by using the Send LDAP Attributes as Claims rule template in the AD FS Management snap\-in. This rule template provides the following configuration options:  
@@ -63,7 +63,7 @@ The following examples are provided to help you understand some of the various w
 ### Example: How to query an AD LDS attribute store and return a specified value  
 Parameters must be separated by a semicolon. The first parameter is the LDAP filter. Subsequent parameters are the attributes to return on any matching objects.  
   
-The following example shows how to look up a user by the **sAMAccountName** attribute and issue an e\-mail address claim, using the value of the user’s mail attribute:  
+The following example shows how to look up a user by the **sAMAccountName** attribute and issue an e\-mail address claim, using the value of the user's mail attribute:  
   
 ```  
 c:[Type == "https://schemas.microsoft.com/ws/2008/06/identity/claims/windowsaccountname", Issuer == "AD AUTHORITY"]  
@@ -71,14 +71,14 @@ c:[Type == "https://schemas.microsoft.com/ws/2008/06/identity/claims/windowsacco
   
 ```  
   
-The following example shows how to look up a user by the **mail** attribute and issue Title and Display Name claims, using the values of the user’s **title** and **displayname** attributes:  
+The following example shows how to look up a user by the **mail** attribute and issue Title and Display Name claims, using the values of the user's **title** and **displayname** attributes:  
   
 ```  
 c:[Type == " http://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddress ", Issuer == "AD AUTHORITY"]  
 => issue(store = "AD LDS ", types = ("http://schemas.xmlsoap.org/ws/2005/05/identity/claims/title","http://schemas.xmlsoap.org/ws/2005/05/identity/claims/displayname"), query = "mail={0};title;displayname", param = c.Value);  
 ```  
   
-The following example shows how to look up a user by mail and title and then issue a Display Name claim using the user’s **displayname** attribute:  
+The following example shows how to look up a user by mail and title and then issue a Display Name claim using the user's **displayname** attribute:  
   
 ```  
 c1:[Type == " http://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddress"] && c2:[Type == "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/title"]  
@@ -86,7 +86,7 @@ c1:[Type == " http://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddress
 ```  
   
 ### Example: How to query an Active Directory attribute store and return a specified value  
-The Active Directory query must include the user’s name \(with the domain name\) as the final parameter so that the Active Directory attribute store can query the correct domain. Otherwise, the same syntax is supported.  
+The Active Directory query must include the user's name \(with the domain name\) as the final parameter so that the Active Directory attribute store can query the correct domain. Otherwise, the same syntax is supported.  
   
 The following example shows how to look up a user by the **sAMAccountName** attribute in his or her domain and then return the **mail** attribute:  
   
@@ -121,7 +121,7 @@ The previous query is made up of the following three parts:
 ### Example: How to use two custom rules to extract the manager e\-mail from an attribute in Active Directory  
 The following two custom rules, when used together in the order shown below, query Active Directory for the **manager** attribute of the user account \(Rule 1\) and then use that attribute to query the user account of the manager for the **mail** attribute \(Rule 2\). Finally, the **mail** attribute is issued as a “ManagerEmail” claim. In summary, Rule 1 queries Active Directory and passes the result of the query to Rule 2, which then extracts the manager e\-mail values.  
   
-For example, when these rules finish running, a claim is issued that contains the manager’s e\-mail address for a user in the corp.fabrikam.com domain.  
+For example, when these rules finish running, a claim is issued that contains the manager's e\-mail address for a user in the corp.fabrikam.com domain.  
   
 **Rule 1**  
   
@@ -142,7 +142,7 @@ param = regexreplace(c1.Value, ".*DC=(?<domain>.+),DC=corp,DC=fabrikam,DC=com", 
 ```  
   
 > [!NOTE]  
-> These rules work only if the user’s manager is in the same domain as the user \(corp.fabrikam.com in this example\).  
+> These rules work only if the user's manager is in the same domain as the user \(corp.fabrikam.com in this example\).  
   
 ## Additional references  
 [Create a Rule to Send LDAP Attributes as Claims](https://technet.microsoft.com/library/dd807115.aspx)  

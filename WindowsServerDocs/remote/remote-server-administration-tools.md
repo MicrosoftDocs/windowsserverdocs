@@ -2,7 +2,7 @@
 title: Remote Server Administration Tools
 description: "Top level topic for Remote Server Administration Tools"
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-rsat

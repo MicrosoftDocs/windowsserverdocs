@@ -1,7 +1,7 @@
 ---
 title: Server-to-server storage replication
 description: How to set up and use Storage Replica for server-to-server replication in Windows Server, including Windows Admin Center and PowerShell.
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 manager: siroy
 ms.author: nedpyle
 ms.technology: storage-replica
@@ -50,7 +50,7 @@ To use Storage Replica and Windows Admin Center together, you need the following
 | One PC                     | Windows 10                                                  | Windows Admin Center |
 
 > [!NOTE]
-> Right now you can’t use Windows Admin Center on a server to manage Storage Replica.
+> Right now you can't use Windows Admin Center on a server to manage Storage Replica.
 
 ## Terms  
 This walkthrough uses the following environment as an example:  
@@ -176,7 +176,7 @@ If you're using Windows Admin Center to manage Storage Replica, use the followin
     > [!IMPORTANT]
       > When using a test server with no write IO load on the specified source volume during the evaluation period, consider adding a workload or it will not generate a useful report. You should test with production-like workloads in order to see real numbers and recommended log sizes. Alternatively, simply copy some files into the source volume during the test or download and run  [DISKSPD](https://gallery.technet.microsoft.com/DiskSpd-a-robust-storage-6cd2f223) to generate write IOs. For instance, a sample with a low write IO workload for ten minutes to the D: volume:  
       >
-      > `Diskspd.exe -c1g -d600 -W5 -C5 -b8k -t2 -o2 -r -w5 -i100 d:\test` 
+      > `Diskspd.exe -c1g -d600 -W5 -C5 -b8k -t2 -o2 -r -w5 -i100 -j100 d:\test` 
 
 10. Examine the **TestSrTopologyReport.html** report shown in Figure 2 to ensure that you meet the Storage Replica requirements.  
 
@@ -200,7 +200,7 @@ If you're using Windows Admin Center to manage Storage Replica, use the followin
     **Figure 3: Creating a new partnership**
 
 > [!NOTE]
-> Removing the partnership from Storage Replica in Windows Admin Center doesn’t remove the replication group name.
+> Removing the partnership from Storage Replica in Windows Admin Center doesn't remove the replication group name.
 
 ### Using Windows PowerShell
 

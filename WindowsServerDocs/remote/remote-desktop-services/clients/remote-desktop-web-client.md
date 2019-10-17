@@ -1,7 +1,7 @@
 ---
 title: Get started with the web client
 description: Describes how to sign in to the Remote Desktop web client.
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: remote-desktop-services
 ms.author: helohr
 ms.date: 08/27/2019
@@ -55,4 +55,4 @@ The web client currently supports copying and pasting text only. Files can't be 
 
 ## Get help with the web client
 
-If you've encountered an issue that can’t be solved by the information in this article, you can get help with the web client by emailing the address on the web client's About page.
+If you've encountered an issue that can't be solved by the information in this article, you can get help with the web client by emailing the address on the web client's About page.

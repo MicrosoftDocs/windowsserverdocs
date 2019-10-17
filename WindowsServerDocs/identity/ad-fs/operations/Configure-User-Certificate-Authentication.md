@@ -7,7 +7,7 @@ ms.author: billmath
 manager: samueld
 ms.date: 01/18/2018
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: identity-adfs
 ---
 # Configuring AD FS for user certificate authentication
@@ -48,7 +48,7 @@ For more information on configuring this for Chrome, please refer to this [link]
 This document focuses on trouble shooting common issues when AD FS is configured for certificate authentication for users. 
 
 ### Check if Certificate Trusted issuers is configured properly in all the AD FS/WAP servers
-*Common Symptom: HTTP 204 “No content from https://certuath.adfs.contoso.com”*
+*Common Symptom: HTTP 204 “No content from https\://certuath.adfs.contoso.com”*
 
 AD FS uses the underlying windows operation system to prove possession of the user certificate and ensure that it matches a trusted issuer by doing certificate trust chain validation. To match the trusted issuer, you will need to ensure that all root and intermediate authorities are configured as trusted issuers in the local computer certification authorities store. 
 To validate this automatically, please use the [AD FS Diagnostic Analyzer tool](https://adfshelp.microsoft.com/DiagnosticsAnalyzer/Analyze). The tool queries all the servers and ensures that the right certificates are provisioned correctly. 
@@ -72,24 +72,24 @@ Every AD FS and WAP server will need to reach the CRL endpoint to validate if th
 2)	On each AD FS/WAP server ensure that the CRL endpoints are reachable via the protocol used (typically HTTPS or HTTP)
 3)	For advanced validation, [enable CAPI2 event logging](https://blogs.msdn.microsoft.com/benjaminperkins/2013/09/30/enable-capi2-event-logging-to-troubleshoot-pki-and-ssl-certificate-issues/) on each AD FS/WAP server
 4) Check for Event ID 41 (Verify Revocation) in the CAPI2 operational logs
-5) Check for `‘\<Result value="80092013"\>The revocation function was unable to check revocation because the revocation server was offline.\</Result\>’`
+5) Check for `‘\<Result value="80092013"\>The revocation function was unable to check revocation because the revocation server was offline.\</Result\>'`
 
 ***Tip***: You can target a single AD FS or WAP server for easier troubleshooting by configuring DNS resolution (HOSTS file on Windows) to point to a specific server. This allows you to enable tracing targeting a server. 
 
 ### Check if this is a Server Name Indication (SNI) issue
 AD FS requires the client device (or browsers) and the load balancers to support SNI. Some client devices (usually older versions of Android) may not support SNI. Additionally, load balancers may not support SNI or have not been configured for SNI. In these instances you are likely to see user certification failures. 
 1)	Work with your network engineer to ensure that the Load Balancer for AD FS/WAP supports SNI
-2)	In the event that SNI can’t be supported AD FS has a work around by following the below steps
+2)	In the event that SNI can't be supported AD FS has a work around by following the below steps
     *	Open an elevated command prompt window on the primary AD FS server
     *   Type in ```Netsh http show sslcert```
-    *   Copy the ‘application GUID’ and ‘certificate hash’ of the federation service
+    *   Copy the ‘application GUID' and ‘certificate hash' of the federation service
     *   Type in `netsh http add sslcert ipport=0.0.0.0:{your_certauth_port} certhash={your_certhash} appid={your_applicaitonGUID}`
 
 ### Check if the client device has been provisioned with the certificate correctly
 You may notice that some devices are working correctly but other devices are not. In this case, it is usually a result of the user certificate not being provisioned correctly on the client device. Follow the steps below. 
 1)	If the issue is specific to an Android device, the most common issue is that the certificate chain is not fully trusted on the Android device.  Refer to your MDM vendor to ensure that the certificate has been provisioned correctly and the entire chain is fully trusted on the Android device. 
 2)	If the issue is specific to a Windows device, check if the certificate is provisioned correctly by checking the Windows Cert Store for the logged in user (not system/computer).
-3)	Export the client user certificate to .cer file and run the command ‘certutil -f -urlfetch -verify certificatefilename.cer’
+3)	Export the client user certificate to .cer file and run the command ‘certutil -f -urlfetch -verify certificatefilename.cer'
 
 
 ### Check if the TLS version is compatible between AD FS/WAP servers and the client device
@@ -99,14 +99,14 @@ For more information on how to control the TLS versions, see [this link](manage-
 
 ### Check if Azure AD PromptLoginBehavior is configured correctly on your federated domain settings
 Many Office 365 applications send prompt=login to Azure AD. Azure AD, by default, converts it to a fresh password login to AD FS. As a result, even if you have configured certificate authentication in AD FS, your end users will only see a password login. 
-1)	Get the federated domain settings using the ‘Get-MsolDomainFederationSettings’ command let
-2)	Ensure that PromptLoginBehavior parameter is set to one of ‘Disabled’ or ‘NativeSupport’
+1)	Get the federated domain settings using the ‘Get-MsolDomainFederationSettings' command let
+2)	Ensure that PromptLoginBehavior parameter is set to one of ‘Disabled' or ‘NativeSupport'
 
 For more information see [this link](ad-fs-prompt-login.md). 
 
 ### Additional Troubleshooting
 These are rare occurrences
-1)	If your CRL lists are very long, it may hit a time out when attempting to download. In that case you need to update the ‘MaxFieldLength’ and ‘MaxRequestByte’ as per https://support.microsoft.com/en-us/help/820129/http-sys-registry-settings-for-windows
+1)	If your CRL lists are very long, it may hit a time out when attempting to download. In that case you need to update the ‘MaxFieldLength' and ‘MaxRequestByte' as per https://support.microsoft.com/en-us/help/820129/http-sys-registry-settings-for-windows
 
 
 

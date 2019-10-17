@@ -1,9 +1,9 @@
 ---
 title: Add a Virtual Gateway to a Tenant Virtual Network
-description: Learn how to use Windows PowerShell cmdlets and scripts to provide site-to-site connectivity for your tenant’s virtual networks. 
+description: Learn how to use Windows PowerShell cmdlets and scripts to provide site-to-site connectivity for your tenant's virtual networks. 
 manager: dougkim
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: networking-sdn
@@ -18,7 +18,7 @@ ms.date: 08/23/2018
 
 >Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016 
 
-Learn how to use Windows PowerShell cmdlets and scripts to provide site-to-site connectivity for your tenant’s virtual networks. In this topic, you add tenant virtual gateways to instances of RAS gateway that are members of gateways pools, using Network Controller. RAS gateway supports up to one hundred tenants, depending on the bandwidth used by each tenant. Network Controller automatically determines the best RAS Gateway to use when you deploy a new virtual gateway for your tenants.  
+Learn how to use Windows PowerShell cmdlets and scripts to provide site-to-site connectivity for your tenant's virtual networks. In this topic, you add tenant virtual gateways to instances of RAS gateway that are members of gateways pools, using Network Controller. RAS gateway supports up to one hundred tenants, depending on the bandwidth used by each tenant. Network Controller automatically determines the best RAS Gateway to use when you deploy a new virtual gateway for your tenants.  
 
 Each virtual gateway corresponds to a particular tenant and consists of one or more network connections (site-to-site VPN tunnels) and, optionally, Border Gateway Protocol (BGP) connections. When you provide site-to-site connectivity, your customers can connect their tenant virtual network to an external network, such as a tenant enterprise network, a service provider network, or the Internet.
 

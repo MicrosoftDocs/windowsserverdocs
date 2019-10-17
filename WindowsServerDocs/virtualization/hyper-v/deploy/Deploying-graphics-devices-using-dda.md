@@ -1,7 +1,7 @@
 ---
 title: Deploy graphics devices using Discrete Device Assignment
 description: Learn how to use DDA to deploy graphics devices in Windows Server
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.service: na
 ms.technology: hyper-v
 ms.tgt_pltfrm: na
@@ -53,17 +53,17 @@ Some hardware performs better if the VM in configured in a certain way.  For det
 
 ## Dismount the Device from the Host Partition
 ### Optional - Install the Partitioning Driver
-Discrete Device Assignment provide hardware venders the ability to provide a security mitigation driver with their devices.  Note that this driver is not the same as the device driver that will be installed in the guest VM.  It’s up to the hardware vendor’s discretion to provide this driver, however, if they do provide it, please install it prior to dismounting the device from the host partition.  Please reach out to the hardware vendor for more information on if they have a mitigation driver
+Discrete Device Assignment provide hardware venders the ability to provide a security mitigation driver with their devices.  Note that this driver is not the same as the device driver that will be installed in the guest VM.  It's up to the hardware vendor's discretion to provide this driver, however, if they do provide it, please install it prior to dismounting the device from the host partition.  Please reach out to the hardware vendor for more information on if they have a mitigation driver
 > If no Partitioning driver is provided, during dismount you must use the `-force` option to bypass the security warning. Please read more about the security implications of doing this on [Plan for Deploying Devices using Discrete Device Assignment](../plan/Plan-for-Deploying-Devices-using-Discrete-Device-Assignment.md).
 
-### Locating the Device’s Location Path
+### Locating the Device's Location Path
 The PCI Location path is required to dismount and mount the device from the Host.  An example location path looks like the following: `"PCIROOT(20)#PCI(0300)#PCI(0000)#PCI(0800)#PCI(0000)"`.  More details on located the Location Path can be found here: [Plan for Deploying Devices using Discrete Device Assignment](../plan/Plan-for-Deploying-Devices-using-Discrete-Device-Assignment.md).
 
 ### Disable the Device
 Using Device Manager or PowerShell, ensure the device is “disabled.”  
 
 ### Dismount the Device
-Depending on if the vendor provided a mitigation driver, you’ll either need to use the “-force” option or not.
+Depending on if the vendor provided a mitigation driver, you'll either need to use the “-force” option or not.
 - If a Mitigation Driver was installed
   ```
   Dismount-VMHostAssignableDevice -LocationPath $locationPath
@@ -80,8 +80,8 @@ The final step is to tell Hyper-V that a VM should have access to the device.  I
 Add-VMAssignableDevice -LocationPath $locationPath -VMName VMName
 ```
 
-## What’s Next
-After a device is successfully mounted in a VM, you’re now able to start that VM and interact with the device as you normally would if you were running on a bare metal system.  This means that you’re now able to install the Hardware Vendor’s drivers in the VM and applications will be able to see that hardware present.  You can verify this by opening device manager in the Guest VM and seeing that the hardware now shows up.
+## What's Next
+After a device is successfully mounted in a VM, you're now able to start that VM and interact with the device as you normally would if you were running on a bare metal system.  This means that you're now able to install the Hardware Vendor's drivers in the VM and applications will be able to see that hardware present.  You can verify this by opening device manager in the Guest VM and seeing that the hardware now shows up.
 
 ## Removing a Device and Returning it to the Host
 If you want to return he device back to its original state, you will need to stop the VM and issue the following:

@@ -4,14 +4,18 @@ description: Known issues and troubleshooting support for Storage Migration Serv
 author: nedpyle
 ms.author: nedpyle
 manager: siroy
-ms.date: 07/09/2019
+ms.date: 10/09/2019
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: storage
 ---
 # Storage Migration Service known issues
 
 This topic contains answers to known issues when using [Storage Migration Service](overview.md) to migrate servers.
+
+Storage Migration Service is released in two parts: the service in Windows Server, and the user interface in Windows Admin Center. The service is available in Windows Server, Long-Term Servicing Channel, as well as Windows Server, Semi-Annual Channel; while Windows Admin Center is available as a separate download. We also periodically include changes in cumulative updates for Windows Server, released via Windows Update. 
+
+For example, Windows Server, version 1903 includes new features and fixes for Storage Migration Service, which are also available for Windows Server 2019 and Windows Server, version 1809 by installing [KB4512534](https://support.microsoft.com/help/4512534/windows-10-update-kb4512534).
 
 ## <a name="collecting-logs"></a> How to collect log files when working with Microsoft Support
 
@@ -83,7 +87,7 @@ To work around this issue:
 3. On the orchestrator computer, start Regedit.exe
 4. Locate and then click the following registry subkey: 
 
-   `HKEY_LOCAL_MACHINE\\Software\\Microsoft\\SMSPowershell`
+   `HKEY_LOCAL_MACHINE\Software\Microsoft\SMSPowershell`
 
 5. On the Edit menu, point to New, and then click DWORD Value. 
 6. Type "WcfOperationTimeoutInMinutes" for the name of the DWORD, and then press ENTER.
@@ -103,7 +107,7 @@ This behavior is by design, to prevent connectivity issues after migration from 
 
 To workaround this issue, perform a migration to a computer on the same network. Then move that computer to a new network and reassign its IP information. For instance, if migrating to Azure IaaS, first migrate to a local VM, then use Azure Migrate to shift the VM to Azure.  
 
-We have fixed this issue in a later release of Windows Admin Center. We'll now allow you to specify migrations that don't alter the destination server's network settings. The updated extension will be listed here when released. 
+We have fixed this issue in a later release of Windows Admin Center. We now allow you to specify migrations that don't alter the destination server's network settings. The updated extension will be listed here when released. 
 
 ## Validation warnings for destination proxy and credential administrative privileges
 
@@ -114,7 +118,7 @@ When validating a transfer job, you see the following warnings:
  > **The destination proxy is registered.**
  > Warning: The destination proxy wasn't found.
 
-If you have not installed the Storage Migration Service Proxy service on the Windows Server 2019 destination computer, or the destinaton computer is Windows Server 2016 or Windows Server 2012 R2, this behavior is by design. We recommend migrating to a Windows Server 2019 computer with the proxy installed for significantly improved transfer performance.  
+If you have not installed the Storage Migration Service Proxy service on the Windows Server 2019 destination computer, or the destination computer is Windows Server 2016 or Windows Server 2012 R2, this behavior is by design. We recommend migrating to a Windows Server 2019 computer with the proxy installed for significantly improved transfer performance.  
 
 ## Certain files do not inventory or transfer, error 5 "Access is denied"
 
@@ -131,7 +135,7 @@ When inventorying or transferring files from source to destination computers, fi
   Computer:      srv1.contoso.com
   Description:
 
-  02/26/2019-09:00:04.860 [Erro] Transfer error for \\srv1.contoso.com\public\indy.png: (5) Access is denied.
+  02/26/2019-09:00:04.860 [Error] Transfer error for \\srv1.contoso.com\public\indy.png: (5) Access is denied.
   Stack Trace:
    at Microsoft.StorageMigration.Proxy.Service.Transfer.FileDirUtils.OpenFile(String fileName, DesiredAccess desiredAccess, ShareMode shareMode, CreationDisposition creationDisposition, FlagsAndAttributes flagsAndAttributes)
    at Microsoft.StorageMigration.Proxy.Service.Transfer.FileDirUtils.GetTargetFile(String path)
@@ -147,7 +151,7 @@ To resolve this issue, install [Windows Update April 2, 2019—KB4490481 (OS Bui
 
 ## DFSR hashes mismatch when using Storage Migration Service to preseed data
 
-When using the Storage Migration Service to transfer files to a new destination, then configuring the DFS Replication (DFSR) to replicate that data with an existing DFSR server through presseded replication or DFSR database cloning, all files experiemce a hash mismatch and are re-replicated. The data streams, security streams, sizes, and attributes all appear to be perfectly matched after using SMS to transfer them. Examing the files with ICACLS or the DFSR Database cloning debug log reveals:
+When using the Storage Migration Service to transfer files to a new destination, then configuring the DFS Replication (DFSR) to replicate that data with an existing DFSR server through preseeded replication or DFSR database cloning, all files experiemce a hash mismatch and are re-replicated. The data streams, security streams, sizes, and attributes all appear to be perfectly matched after using SMS to transfer them. Examining the files with ICACLS or the DFSR Database cloning debug log reveals:
 
 Source file:
 
@@ -191,9 +195,9 @@ When attempting to download the transfer or error logs at the end of a transfer 
 
 This error is expected if you have not enabled the "File and Printer Sharing (SMB-In)" firewall rule on the orchestrator server. Windows Admin Center file downloads require port TCP/445 (SMB) on connected computers.  
 
-## Error "Couldn't transfer storage on any of the endpoints" when transfering from Windows Server 2008 R2
+## Error "Couldn't transfer storage on any of the endpoints" when transferring from Windows Server 2008 R2
 
-When attempting to transfer data from a Windows Server 2008 R2 source computer, no data transfers and you receieve error:  
+When attempting to transfer data from a Windows Server 2008 R2 source computer, no data transfers and you receive error:  
 
   Couldn't transfer storage on any of the endpoints.
   0x9044
@@ -225,11 +229,116 @@ Examining the StorageMigrationService/Admin event log shows:
 
 Examining the StorageMigrationService-Proxy/Debug log shows:
 
-   07/02/2019-13:35:57.231 [Erro] Transfer validation failed. ErrorCode: 40961, Source endpoint is not reachable, or doesn't exist, or source credentials are invalid, or authenticated user doesn't have sufficient permissions to access it.
+   07/02/2019-13:35:57.231 [Error] Transfer validation failed. ErrorCode: 40961, Source endpoint is not reachable, or doesn't exist, or source credentials are invalid, or authenticated user doesn't have sufficient permissions to access it.
    at Microsoft.StorageMigration.Proxy.Service.Transfer.TransferOperation.Validate()
    at Microsoft.StorageMigration.Proxy.Service.Transfer.TransferRequestHandler.ProcessRequest(FileTransferRequest fileTransferRequest, Guid operationId)    [d:\os\src\base\dms\proxy\transfer\transferproxy\TransferRequestHandler.cs::
 
-This error is expected if your migration account does not have at least Read access permissions to the SMB shares. To workaround this error, add a security group containing the source migration account to the SMB shares on the source computer and grant it Read, Change, or Full Control. After the migration completes, you can remove this group. A future release of Windows Server may change this behavior to no longer require explicit permissions to the source shares.
+This error is expected if your migration account does not have at least Read access permissions to the SMB shares. To workaround this error, add a security group containing the source migration account to the SMB shares on the source computer and grant it Read, Change, or Full Control. After the migration completes, you can remove this group.
+
+## Error 0x80005000 when running inventory
+
+After installing [KB4512534](https://support.microsoft.com/en-us/help/4512534/windows-10-update-kb4512534) and attempting to run inventory, inventory fails with errors:
+
+  EXCEPTION FROM HRESULT: 0x80005000
+  
+  Log Name:      Microsoft-Windows-StorageMigrationService/Admin
+  Source:        Microsoft-Windows-StorageMigrationService
+  Date:          9/9/2019 5:21:42 PM
+  Event ID:      2503
+  Task Category: None
+  Level:         Error
+  Keywords:      
+  User:          NETWORK SERVICE
+  Computer:      FS02.TailwindTraders.net
+  Description:
+  Couldn't inventory the computers.
+  Job: foo2
+  ID: 20ac3f75-4945-41d1-9a79-d11dbb57798b
+  State: Failed
+  Error: 36934
+  Error Message: Inventory failed for all devices
+  Guidance: Check the detailed error and make sure the inventory requirements are met. The job couldn't inventory any of the specified source computers. This could be because the orchestrator computer couldn't reach it over the network, possibly due to a firewall rule or missing permissions.
+  
+  Log Name:      Microsoft-Windows-StorageMigrationService/Admin
+  Source:        Microsoft-Windows-StorageMigrationService
+  Date:          9/9/2019 5:21:42 PM
+  Event ID:      2509
+  Task Category: None
+  Level:         Error
+  Keywords:      
+  User:          NETWORK SERVICE
+  Computer:      FS02.TailwindTraders.net
+  Description:
+  Couldn't inventory a computer.
+  Job: foo2
+  Computer: FS01.TailwindTraders.net
+  State: Failed
+  Error: -2147463168
+  Error Message: 
+  Guidance: Check the detailed error and make sure the inventory requirements are met. The inventory couldn't determine any aspects of the specified source computer. This could be because of missing permissions or privileges on the source or a blocked firewall port.
+  
+This error is caused by a code defect in Storage Migration Service when you provide migration credentials in the form of a User Principal Name (UPN), such as 'meghan@contoso.com'. The Storage Migration Service orchestrator service fails to parse this format correctly, which leads to a failure in a domain lookup that was added for cluster migration support in KB4512534 and 19H1.
+
+To workaround this issue, provide credentials in the domain\user format, such as 'Contoso\Meghan'.
+
+## Error "ServiceError0x9006" or "The proxy isn't currently available." when migrating to a Windows Server failover cluster
+
+When attempting to transfer data against a clustered File Server, you receive errors such as: 
+
+   Make sure the proxy service is installed and running, and then try again. The proxy isn't currently available.
+   0x9006
+   ServiceError0x9006,Microsoft.StorageMigration.Commands.UnregisterSmsProxyCommand
+
+This error is expected if the File Server resource moved from its original Windows Server 2019 cluster owner node to a new node and the Storage Migration Service Proxy feature wasn't installed on that node.
+
+As a workaround, move the destination File Server resource back to the original owner cluster node that was in use when you first configured transfer pairings.
+
+As an alternative workaround:
+
+1. Install the Storage Migration Service Proxy feature on all nodes in a cluster.
+2. Run the following Storage Migration Service PowerShell command on the orchestrator computer: 
+
+   ```PowerShell
+   Register-SMSProxy -ComputerName *destination server* -Force
+   ```
+## Error "Dll was not found" when running inventory from a cluster node
+
+When attempting to run inventory with the Storage Migration Service orchestrator installed on a Windows Server 2019 failover cluster node and targeting a Windows Server failover cluster general use file server source, you receive the following error:
+
+    DLL not found
+    [Error] Failed device discovery stage VolumeInfo with error: (0x80131524) Unable to load DLL 'Microsoft.FailoverClusters.FrameworkSupport.dll': The specified module could not be found. (Exception from HRESULT: 0x8007007E)   
+
+To workaround this issue, install the "Failover Cluster Management Tools" (RSAT-Clustering-Mgmt) on the server running the Storage Migration Service orchestrator. 
+
+## Error "There are no more endpoints available from the endpoint mapper" when running inventory against a Windows Server 2003 source computer
+
+When attempting to run inventory with the Storage Migration Service orchestrator server patched with the [KB4512534](https://support.microsoft.com/help/4512534/windows-10-update-kb4512534) cumulative update or later, you receive the following error:
+
+    There are no more endpoints available from the endpoint mapper  
+
+To workaround this issue, temporarily uninstall the KB4512534 cumulative update (and any that superceded it) from the Storage Migration Service orchestrator computer. When the migration is complete, reinstall the latest cumulative update.  
+
+Note, under some circumstances, uninstalling KB4512534 or its superseding updates may cause Storage Migration Service to no longer start. To resolve this issue, you can backup and delete the Storage Migration Service database:
+
+1.	Open an elevated cmd prompt, where you are a member of Administrators on the Storage Migration Service orchestrator server, and run:
+
+     ```
+     MD c:\ProgramData\Microsoft\StorageMigrationService\backup
+
+     ICACLS c:\ProgramData\Microsoft\StorageMigrationService\* /grant Administrators:(GA)
+
+     XCOPY c:\ProgramData\Microsoft\StorageMigrationService\* .\backup\*
+
+     DEL c:\ProgramData\Microsoft\StorageMigrationService\* /q
+
+     ICACLS c:\ProgramData\Microsoft\StorageMigrationService  /GRANT networkservice:F /T /C
+
+     ICACLS c:\ProgramData\Microsoft\StorageMigrationService /GRANT networkservice:(GA)F /T /C
+     ```
+   
+2.	Start the Storage Migration Service service, which will create a new database.
+
+
 
 ## See also
 

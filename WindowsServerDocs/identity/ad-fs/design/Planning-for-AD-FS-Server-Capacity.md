@@ -7,7 +7,7 @@ ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 
 ms.technology: identity-adfs
 ---
@@ -23,7 +23,7 @@ Capacity planning for Active Directory Federation Services \(AD FS\) is the pr
   
 This section describes deployment guidelines for both the federation server and federation server proxy roles and is based on lab testing that was performed by the AD FS product team at Microsoft. The purpose of this content is to help you:  
   
--   Closely estimate the hardware needs for your organization’s specific AD FS deployment, such as the number of AD FS servers.  
+-   Closely estimate the hardware needs for your organization's specific AD FS deployment, such as the number of AD FS servers.  
   
 -   Accurately project the expected peak usage for sign\-in requests, plan for growth, and ensure that your AD FS deployment is capable of handling that expected peak usage.  
   
@@ -68,7 +68,7 @@ This section describes the configuration environment that the AD FS product team
 -   Gigabit Network  
   
 > [!NOTE]  
-> Although 16 GB’s of RAM was used on the federation server during testing, a more moderate memory size, such as 4 GB’s of RAM per federation server can be used for most AD FS deployments. The recommendations that are provided in this AD FS Capacity Planning content along with the results provided by the AD FS Capacity Planning Spreadsheet are based on assumptions that each federation server will use approximately 4GB’s of RAM for most AD FS production environments.  
+> Although 16 GB's of RAM was used on the federation server during testing, a more moderate memory size, such as 4 GB's of RAM per federation server can be used for most AD FS deployments. The recommendations that are provided in this AD FS Capacity Planning content along with the results provided by the AD FS Capacity Planning Spreadsheet are based on assumptions that each federation server will use approximately 4GB's of RAM for most AD FS production environments.  
   
 The product team used the following configuration to gather performance and scalability data for the federation server proxy testing:  
   

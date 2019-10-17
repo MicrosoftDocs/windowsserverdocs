@@ -6,7 +6,7 @@ ms.author: robhind
 manager: eldenc
 ms.date: 03/06/2019
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: storage-spaces
 ---
 # Upgrade a Storage Spaces Direct cluster to Windows Server 2019
@@ -14,13 +14,13 @@ ms.technology: storage-spaces
 This topic describes how to upgrade a Storage Spaces Direct cluster to Windows Server 2019. There are four approaches to upgrading a Storage Spaces Direct
 cluster from Windows Server 2016 to Windows Server 2019, using the [cluster OS rolling upgrade process](../../failover-clustering/Cluster-Operating-System-Rolling-Upgrade.md) —two that involve keeping the VMs running, and two that involve stopping all VMs. Each approach has different strengths and weaknesses, so select that one that best suits the needs of your organization:
 
-- **In-place upgrade while VMs are running** on each server in the cluster—this option incurs no VM downtime, but you’ll need to wait for storage jobs (mirror repair) to complete after each server is upgraded.
+- **In-place upgrade while VMs are running** on each server in the cluster—this option incurs no VM downtime, but you'll need to wait for storage jobs (mirror repair) to complete after each server is upgraded.
 
-- **Clean-OS installation while VMs are running** on each server in the cluster—this option incurs no VM downtime, but you’ll need to wait for storage jobs (mirror repair) to complete after each server is upgraded, and you’ll have to set up each server and all its apps and roles again.
+- **Clean-OS installation while VMs are running** on each server in the cluster—this option incurs no VM downtime, but you'll need to wait for storage jobs (mirror repair) to complete after each server is upgraded, and you'll have to set up each server and all its apps and roles again.
 
-- **In-place upgrade while VMs are stopped** on each server in the cluster—this option incurs VM downtime, but you don’t need to wait for storage jobs (mirror repair), so it’s faster.
+- **In-place upgrade while VMs are stopped** on each server in the cluster—this option incurs VM downtime, but you don't need to wait for storage jobs (mirror repair), so it's faster.
 
-- **Clean-OS install while VMs are stopped** on each server in the cluster—This option incurs VM downtime, but you don’t need to wait for storage jobs (mirror repair) so it’s faster.
+- **Clean-OS install while VMs are stopped** on each server in the cluster—This option incurs VM downtime, but you don't need to wait for storage jobs (mirror repair) so it's faster.
 
 ## Prerequisites and limitations
 
@@ -36,9 +36,9 @@ There are some limitations with the upgrade process to be aware of:
 
 - When upgrading a cluster with ReFS volumes, there are a few limitations:
 
-- Upgrading is fully supported on ReFS volumes, however, upgraded volumes won’t benefit from ReFS enhancements in Windows Server 2019. These benefits, such as increased performance for mirror-accelerated parity, require a newly-created Windows Server 2019 ReFS volume. In other words, you’d have to create new volumes using the `New-Volume` cmdlet or Server Manager. Here are the some of the ReFS enhancements new volumes would get:
+- Upgrading is fully supported on ReFS volumes, however, upgraded volumes won't benefit from ReFS enhancements in Windows Server 2019. These benefits, such as increased performance for mirror-accelerated parity, require a newly-created Windows Server 2019 ReFS volume. In other words, you'd have to create new volumes using the `New-Volume` cmdlet or Server Manager. Here are the some of the ReFS enhancements new volumes would get:
 
-    - **MAP log-bypass**: a performance improvement in ReFS that only applies to clustered (Storage Spaces Direct) systems and doesn’t apply to stand-alone storage pools.
+    - **MAP log-bypass**: a performance improvement in ReFS that only applies to clustered (Storage Spaces Direct) systems and doesn't apply to stand-alone storage pools.
 
     - **Compaction** efficiency improvements in Windows Server 2019 that are specific to multi-resilient volumes.
 
@@ -50,12 +50,12 @@ Because of the known issues above, some customers may consider building a new Wi
 
 ## Performing an in-place upgrade while VMs are running
 
-This option incurs no VM downtime, but you’ll need to wait for storage jobs (mirror repair) to complete after each server is upgraded. Although individual
+This option incurs no VM downtime, but you'll need to wait for storage jobs (mirror repair) to complete after each server is upgraded. Although individual
 servers will be restarted sequentially during the upgrade process, the remaining servers in the cluster, as well as all VMs, will remain running.
 
 1. Check that all the servers in the cluster have installed the latest Windows updates. For more info, see [Windows 10 and Windows Server 2016 update history](https://support.microsoft.com/help/4000825/windows-10-windows-server-2016-update-history). At a minimum, install Microsoft Knowledge Base [article 4487006](https://support.microsoft.com/help/4487006/windows-10-update-kb4487006) (Feb 19th, 2019). The build number (see `ver` command) should be 14393.2828 or higher.
 
-2. If you’re using Software Defined Networking with SET switches, open an elevated PowerShell session and run the following command to disable VM live    migration verification checks on all VMs on the cluster:
+2. If you're using Software Defined Networking with SET switches, open an elevated PowerShell session and run the following command to disable VM live    migration verification checks on all VMs on the cluster:
 
    ```PowerShell
    Get-ClusterResourceType -Cluster {clusterName} -Name "Virtual Machine" |
@@ -64,9 +64,9 @@ servers will be restarted sequentially during the upgrade process, the remaining
 
 3. Perform the following steps on one cluster server at a time:
 
-   1. Use Hyper-V VM live migration to move running VMs off the server you’re about to upgrade.
+   1. Use Hyper-V VM live migration to move running VMs off the server you're about to upgrade.
 
-   2. Pause the cluster server using the following PowerShell command—note that some internal groups are hidden. We recommend this step to be cautious — if you didn’t already live migrate VMs off the server this cmdlet will do that for you, so you could skip the previous step if you prefer.
+   2. Pause the cluster server using the following PowerShell command—note that some internal groups are hidden. We recommend this step to be cautious — if you didn't already live migrate VMs off the server this cmdlet will do that for you, so you could skip the previous step if you prefer.
 
         ```PowerShell
        Suspend-ClusterNode -Drain
@@ -131,7 +131,7 @@ servers will be restarted sequentially during the upgrade process, the remaining
 
 7. Optionally upgrade VM configuration levels by stopping each VM, using the `Update-VMVersion` cmdlet, and then starting the VMs again.
 
-8. If you’re using Software Defined Networking with SET switches and disabled VM live migration checks as instructed to above, use the following cmdlet to re-enable VM Live verification checks:
+8. If you're using Software Defined Networking with SET switches and disabled VM live migration checks as instructed to above, use the following cmdlet to re-enable VM Live verification checks:
 
    ```PowerShell
    Get-ClusterResourceType -Cluster {clusterName} -Name "Virtual Machine" |
@@ -144,11 +144,11 @@ servers will be restarted sequentially during the upgrade process, the remaining
 
 ## Performing a clean OS installation while VMs are running
 
-This option incurs no VM downtime, but you’ll need to wait for storage jobs (mirror repair) to complete after each server is upgraded. Although individual servers will be restarted sequentially during the upgrade process, the remaining servers in the cluster, as well as all VMs, will remain running.
+This option incurs no VM downtime, but you'll need to wait for storage jobs (mirror repair) to complete after each server is upgraded. Although individual servers will be restarted sequentially during the upgrade process, the remaining servers in the cluster, as well as all VMs, will remain running.
 
 1. Check that all the servers in the cluster are running the latest updates. For more info, see [Windows 10 and Windows Server 2016 update history](https://support.microsoft.com/help/4000825/windows-10-windows-server-2016-update-history). At a minimum, install Microsoft Knowledge Base [article 4487006](https://support.microsoft.com/help/4487006/windows-10-update-kb4487006) (Feb 19th, 2019). The build number (see `ver` command) should be 14393.2828 or higher.
 
-2. If you’re using Software Defined Networking with SET switches, open an elevated PowerShell session and run the following command to disable VM live   migration verification checks on all VMs on the cluster:
+2. If you're using Software Defined Networking with SET switches, open an elevated PowerShell session and run the following command to disable VM live   migration verification checks on all VMs on the cluster:
 
    ```PowerShell
    Get-ClusterResourceType -Cluster {clusterName} -Name "Virtual Machine" |
@@ -157,9 +157,9 @@ This option incurs no VM downtime, but you’ll need to wait for storage jobs (m
 
 3. Perform the following steps on one cluster server at a time:
 
-   1. Use Hyper-V VM live migration to move running VMs off the server you’re about to upgrade.
+   1. Use Hyper-V VM live migration to move running VMs off the server you're about to upgrade.
 
-   2. Pause the cluster server using the following PowerShell command—note that some internal groups are hidden. We recommend this step to be cautious — if you didn’t already live migrate VMs off the server this cmdlet will do that for you, so you could skip the previous step if you prefer.
+   2. Pause the cluster server using the following PowerShell command—note that some internal groups are hidden. We recommend this step to be cautious — if you didn't already live migrate VMs off the server this cmdlet will do that for you, so you could skip the previous step if you prefer.
 
         ```PowerShell
        Suspend-ClusterNode -Drain
@@ -185,7 +185,7 @@ This option incurs no VM downtime, but you’ll need to wait for storage jobs (m
        Remove-ClusterNode <ServerName>
        ```
 
-   4. Perform a clean installation of Windows Server 2019 on the server: format the system drive, run **setup.exe** and use the “Nothing” option. You’ll have to configure the server identity, roles, features, and applications after setup completes and the server restarts.
+   4. Perform a clean installation of Windows Server 2019 on the server: format the system drive, run **setup.exe** and use the “Nothing” option. You'll have to configure the server identity, roles, features, and applications after setup completes and the server restarts.
 
    5. Install the Hyper-V role and Failover-Clustering feature on the server (you can use the `Install-WindowsFeature` cmdlet).
 
@@ -233,7 +233,7 @@ This option incurs no VM downtime, but you’ll need to wait for storage jobs (m
 
 7. Optionally upgrade VM configuration levels by stopping each VM and using the `Update-VMVersion` cmdlet, and then starting the VMs again.
 
-8. If you’re using Software Defined Networking with SET switches and disabled VM live migration checks as instructed to above, use the following cmdlet to
+8. If you're using Software Defined Networking with SET switches and disabled VM live migration checks as instructed to above, use the following cmdlet to
    re-enable VM Live verification checks:
 
    ```PowerShell
@@ -247,7 +247,7 @@ This option incurs no VM downtime, but you’ll need to wait for storage jobs (m
 
 ## Performing an in-place upgrade while VMs are stopped
 
-This option incurs VM downtime but can take less time than if you kept the VMs running during the upgrade because you don’t need to wait for storage jobs (mirror repair) to complete after each server is upgraded. Although individual servers will be restarted sequentially during the upgrade process, the remaining servers in the cluster remain running.
+This option incurs VM downtime but can take less time than if you kept the VMs running during the upgrade because you don't need to wait for storage jobs (mirror repair) to complete after each server is upgraded. Although individual servers will be restarted sequentially during the upgrade process, the remaining servers in the cluster remain running.
 
 1. Check that all the servers in the cluster are running the latest updates. For more info, see [Windows 10 and Windows Server 2016 update history](https://support.microsoft.com/help/4000825/windows-10-windows-server-2016-update-history). At a minimum, install Microsoft Knowledge Base [article 4487006](https://support.microsoft.com/help/4487006/windows-10-update-kb4487006) (Feb 19th, 2019). The build number (see `ver` command) should be 14393.2828 or higher.
 
@@ -325,7 +325,7 @@ This option incurs VM downtime but can take less time than if you kept the VMs r
    Update-StoragePool
    ```
 
-7. Start the VMs on the cluster and check that they’re working properly.
+7. Start the VMs on the cluster and check that they're working properly.
 
 8. Optionally upgrade VM configuration levels by stopping each VM and using the
    `Update-VMVersion` cmdlet, and then starting the VMs again.
@@ -339,7 +339,7 @@ This option incurs VM downtime but can take less time than if you kept the VMs r
 ## Performing a clean OS installation while VMs are stopped
 
 This option incurs VM downtime but can take less time than if you kept the VMs
-running during the upgrade because you don’t need to wait for storage jobs
+running during the upgrade because you don't need to wait for storage jobs
 (mirror repair) to complete after each server is upgraded. Although individual
 servers will be restarted sequentially during the upgrade process, the remaining
 servers in the cluster remain running.
@@ -388,7 +388,7 @@ servers in the cluster remain running.
 
    6. Perform a clean installation of Windows Server 2019 on the server: format
       the system drive, run **setup.exe** and use the “Nothing” option.  
-      You’ll have to configure the server identity, roles, features, and
+      You'll have to configure the server identity, roles, features, and
       applications after setup completes and the server restarts.
 
    7. Install the Hyper-V role and Failover-Clustering feature on the server (you
@@ -444,7 +444,7 @@ servers in the cluster remain running.
    Update-StoragePool
    ```
 
-7. Start the VMs on the cluster and check that they’re working properly.
+7. Start the VMs on the cluster and check that they're working properly.
 
 8. Optionally upgrade VM configuration levels by stopping each VM and using the
    `Update-VMVersion` cmdlet, and then starting the VMs again.

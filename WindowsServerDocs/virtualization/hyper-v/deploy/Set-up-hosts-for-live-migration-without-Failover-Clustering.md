@@ -1,7 +1,7 @@
 ---
 title: Set up hosts for live migration without Failover Clustering
 description: "Gives instructions for setting up live migration in a non-clustered environment"
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.service: na
 manager: dongill
 ms.technology: compute-hyper-v

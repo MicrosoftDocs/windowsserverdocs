@@ -1,7 +1,7 @@
 ---
 title: Deploy Windows Server Hybrid Cloud Print
 description: "How to set up Microsoft Hybrid Cloud Print"
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: Windows Server 2016
@@ -186,7 +186,7 @@ This guide outlines five (5) installation steps:
        - External URL: Configure as appropriate for your organization
        - Preauthentication Method: Azure Active Directory
 
-     >   Note: If you don’t find all the settings above, add the proxy with the settings available and then select the application proxy you just created and go to the **Application proxy** tab and add all the above information.
+     >   Note: If you don't find all the settings above, add the proxy with the settings available and then select the application proxy you just created and go to the **Application proxy** tab and add all the above information.
 
    - Once created, go back to **Enterprise applications** -> **All applications**, select the new application you just created
    - Go to **Single sign-on**, make sure the "Single Sign-on Mode" is set to "Integrated Windows Authentication"

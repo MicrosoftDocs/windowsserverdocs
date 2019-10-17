@@ -1,7 +1,7 @@
 ---
 title: Setting up the Host Guardian Service for Always Encrypted in SQL Server
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.topic: article
 manager: dongill
 author: rpsqrd
@@ -123,7 +123,7 @@ Run all of the following commands in an elevated PowerShell session.
    Initialize-HgsAttestation -HgsServiceName 'hgs' -TrustHostKey 
    ```
 
-5. Ensure the host machines that run SQL Server will be able to resolve the DNS names of your new HGS domain members by setting up a forwarder from your corporate DNS servers to the new HGS domain controller. If you’re using Windows Server DNS, you can set up a conditional forwarder by running the following commands in an elevated PowerShell console on a DNS server in your organization. Substitute the names and addresses in the Windows PowerShell syntax below as needed for your environment. After you add more HGS nodes, run this command again to add them as master servers.
+5. Ensure the host machines that run SQL Server will be able to resolve the DNS names of your new HGS domain members by setting up a forwarder from your corporate DNS servers to the new HGS domain controller. If you're using Windows Server DNS, you can set up a conditional forwarder by running the following commands in an elevated PowerShell console on a DNS server in your organization. Substitute the names and addresses in the Windows PowerShell syntax below as needed for your environment. After you add more HGS nodes, run this command again to add them as master servers.
 
    ```powershell
    Add-DnsServerConditionalForwarderZone -Name <HGS domain name> -ReplicationScope "Forest" -MasterServers <IP addresses of HGS servers>
@@ -135,7 +135,7 @@ To add nodes to the cluster, run the following commands in an elevated PowerShel
 
 1. [!INCLUDE [Install the HGS server role](../../includes/guarded-fabric-install-hgs-server-role.md)]
 
-2. Set the DNS client resolver to point to your primary HGS server so that it can resolve your HGS domain name. If you’re using Server with Desktop Experience, you can do this in the Network and Sharing Center. On Server Core, you can use the **sconfig.exe** tool, option 8, or **Set-DnsClientServerAddress** to set the DNS address. 
+2. Set the DNS client resolver to point to your primary HGS server so that it can resolve your HGS domain name. If you're using Server with Desktop Experience, you can do this in the Network and Sharing Center. On Server Core, you can use the **sconfig.exe** tool, option 8, or **Set-DnsClientServerAddress** to set the DNS address. 
 
 3. Next, we will promote this server to a domain controller. You will need Domain Admin credentials to complete this task and will be prompted to enter a Directory Services Repair Mode password after running the command. 
 
@@ -166,7 +166,7 @@ Once HGS is set up, it needs to be configured with attestation information from 
 
 ### Collect TPM attestation artifacts 
 
-If you are using TPM mode, run the following commands in an elevated PowerShell session on each host machine to install support for attestation and collect the information you’ll need to register with the Host Guardian Service. 
+If you are using TPM mode, run the following commands in an elevated PowerShell session on each host machine to install support for attestation and collect the information you'll need to register with the Host Guardian Service. 
 
 1. To install the HGS client on your host machine, install the Guarded Host feature, which will also install Hyper-V. 
    While you will not be running VMs on this machine, the hypervisor is required to enable the Virtualization-Based Security features that isolate VBS enclaves.
@@ -210,10 +210,10 @@ If you are using TPM mode, run the following commands in an elevated PowerShell 
    ```
    
 6. Copy the xml, tcglog, and bin files from C:\artifacts to your HGS server.
-7. If this is the first TPM host you’re adding to the HGS server, you will need to install the Trusted TPM Root Certificates on each HGS server. 
+7. If this is the first TPM host you're adding to the HGS server, you will need to install the Trusted TPM Root Certificates on each HGS server. 
    Follow the [guidance on the HGS documentation](https://docs.microsoft.com/windows-server/virtualization/guarded-fabric-shielded-vm/guarded-fabric-install-trusted-tpm-root-certificates) to complete this step.
 8. On the HGS server, authorize this host to pass attestation. 
-   The scripts below assume the 3 files were copied to C:\temp on the HGS server and that your server’s computer name is “ServerA”. 
+   The scripts below assume the 3 files were copied to C:\temp on the HGS server and that your server's computer name is “ServerA”. 
    Adjust the paths and names to match your own environment. 
 
    ```powershell
@@ -241,7 +241,7 @@ If you are using TPM mode, run the following commands in an elevated PowerShell 
 > Host key attestation is only recommended for use in test environments. 
 > TPM attestation provides the strongest assurances that VBS enclaves processing your sensitive data on SQL Server are running trusted code and the machines are configured with the recommended security settings. 
 
-If you chose to set up HGS in host key attestation mode, you’ll need to generate and collect keys from each host machine and register them with the Host Guardian Service. 
+If you chose to set up HGS in host key attestation mode, you'll need to generate and collect keys from each host machine and register them with the Host Guardian Service. 
 
 1. To get the HGS client installed on your host machine, install the Guarded Host feature, which will also install Hyper-V. 
    While you will not be running VMs on this machine, the hypervisor is required to enable the virtualization-based security features that isolate the VBS enclaves that run Always Encrypted queries. 
@@ -260,7 +260,7 @@ If you chose to set up HGS in host key attestation mode, you’ll need to genera
    ```
    
    Alternatively, you can specify a thumbprint if you want to use your own certificate. 
-   This can be useful if you want to share a certificate across multiple machines, or use a certificate bound to a TPM or an HSM. Here’s an example of creating a TPM-bound certificate (which prevents it from having the private key stolen and used on another machine and requires only a TPM 1.2):
+   This can be useful if you want to share a certificate across multiple machines, or use a certificate bound to a TPM or an HSM. Here's an example of creating a TPM-bound certificate (which prevents it from having the private key stolen and used on another machine and requires only a TPM 1.2):
 
    ```powershell
    $tpmBoundCert = New-SelfSignedCertificate -Subject “Host Key Attestation ($env:computername)” -Provider “Microsoft Platform Crypto Provider”

@@ -2,7 +2,7 @@
 title: print Command Reference
 description: "Windows Commands topic for **** - "
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -22,7 +22,7 @@ The following is a list of print command-line tools.
 
 |                         Command                          |                                                                Description                                                                 |
 |----------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------|
-|                       [lpq]lpq.md)                       |                           Displays the status of a print queue on a computer running Line printer Daemon (LPD).                            |
+|                       [lpq](lpq.md)                       |                           Displays the status of a print queue on a computer running Line printer Daemon (LPD).                            |
 |                      [lpr](lpr.md)                       |      Sends a file to a computer or printer sharing device running the Line printer Daemon (LPD) service in preparation for printing.       |
 |                [Net print](net-print.md)                 | Displays information about a specified printer queue, displays information about a specified print job, or controls a specified print job. |
 |                    [print](print.md)                     |                                                      Sends a text file to a printer.                                                       |

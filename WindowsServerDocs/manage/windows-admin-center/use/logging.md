@@ -7,7 +7,7 @@ author: haley-rowland
 ms.author: harowl
 ms.date: 06/18/2018
 ms.localizationpriority: medium
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ---
 
 # Use event logging in Windows Admin Center to gain insight into management activities and track gateway usage

@@ -6,7 +6,7 @@ ms.author: billmath
 manager: femila
 ms.date: 07/10/2017
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: identity-adfs
 ---
 
@@ -123,7 +123,7 @@ Get-ADFSClaimDescription | Out-File “.\claimtypes.txt”`.
 > 
 >   **-Force** – specifies to not prompt for user confirmation.  
 > 
->   **-CertificatePassword <SecureString\>** - specifies a password for exporting AD FS certificates’ private keys. If not specified, the script will prompt for a password if an AD FS certificate with private key needs to be exported.  
+>   **-CertificatePassword <SecureString\>** - specifies a password for exporting AD FS certificates' private keys. If not specified, the script will prompt for a password if an AD FS certificate with private key needs to be exported.  
 > 
 >   **Inputs**: None  
 > 
@@ -210,7 +210,7 @@ import-federationconfiguration.ps1
 > 
 >   **-Force** – specifies to not prompt for user confirmation.  
 > 
->   **-CertificatePassword <SecureString\>** - specifies a password for importing AD FS certificates’ private keys. If not specified, the script will prompt for a password if an AD FS certificate with private key needs to be imported.  
+>   **-CertificatePassword <SecureString\>** - specifies a password for importing AD FS certificates' private keys. If not specified, the script will prompt for a password if an AD FS certificate with private key needs to be imported.  
 > 
 >   **Inputs:** string - this command takes the import folder path as input. You can pipe Export-FederationConfiguration to this command.  
 > 

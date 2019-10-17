@@ -2,7 +2,7 @@
 title: Getting Started with MultiPoint Services
 description: Introduces MultiPoint Services and gets you started using it.
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: multipoint-services
 ms.reviewer: na
 ms.suite: na
@@ -36,7 +36,7 @@ The tabs are as follows:
   
 -   **Home tab:** Switch modes to perform administrative tasks, add or remove MultiPoint servers, restart or shut down the computer, enable disk protection, add client access licenses, remap stations, and get help or support. For more information, see the [Manage System Tasks Using MultiPoint Manager](Manage-System-Tasks-Using-MultiPoint-Manager.md) topic.  
   
--   **Stations tab:** View users’ *desktop* status and *end* or *suspend* user sessions. For more information, see the [Manage User Stations](Manage-User-Stations.md) topic.  
+-   **Stations tab:** View users' *desktop* status and *end* or *suspend* user sessions. For more information, see the [Manage User Stations](Manage-User-Stations.md) topic.  
   
 -   **Users tab:** Create and manage *standard user accounts* and *administrative user accounts*. For more information, see the [Manage User Accounts](Manage-User-Accounts.md) topic.  
   
@@ -73,11 +73,11 @@ As you begin to use MultiPoint Services daily, there is information about how to
   
 -   Users can also save documents to a public folder that is accessible to all users on the MultiPoint Services system.  
   
--   It is important for MultiPoint Services users to know that administrative users have access to all files and documents on the system, even if they are stored privately in a user’s personal folder.  
+-   It is important for MultiPoint Services users to know that administrative users have access to all files and documents on the system, even if they are stored privately in a user's personal folder.  
   
 For more information about how to save and manage private and public content, see the [Manage User Files](Manage-User-Files.md) topic.  
   
-**Information about a user’s MultiPoint Services session:**  
+**Information about a user's MultiPoint Services session:**  
   
 -   Each user has a user name and password, and a unique desktop *session* on the MultiPoint Services system.  
   
@@ -85,7 +85,7 @@ For more information about how to save and manage private and public content, se
   
 -   Users can disconnect from one station and log back on to their session on a different station without losing their work. For more information, see the [Suspend and Leave User Session Active](Suspend-and-Leave-User-Session-Active.md) topic.  
   
--   A standard user’s session (or all user sessions) can be disconnected or logged off by the administrative user through MultiPoint Manager. For more information, see the [Manage User Desktops](manage-user-desktops-using-multipoint-dashboard.md) topic.  
+-   A standard user's session (or all user sessions) can be disconnected or logged off by the administrative user through MultiPoint Manager. For more information, see the [Manage User Desktops](manage-user-desktops-using-multipoint-dashboard.md) topic.  
   
 -   If a user forgets a password, you can reset the password from the **Users** tab, which uses standard Windows user account management functionality. For more information, see the [Update or Delete a User Account](Update-or-Delete-a-User-Account.md) topic.  
   

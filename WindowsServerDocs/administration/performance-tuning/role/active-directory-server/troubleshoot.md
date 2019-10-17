@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot Active Directory Domain Services performance
 description: Troubleshooting guidance in Active Directory performance tuning.
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: performance-tuning-guide
 ms.topic: article
 ms.author: TimWi; ChrisRob; HerbertM; KenBrumf;  MLeary; ShawnRab

@@ -2,7 +2,7 @@
 title: Configure virtual network peering
 description: Configuring the virtual network peering involves creating two virtual networks that get peered.
 manager: dougkim
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: networking-hv-switch
 ms.topic: get-started-article
 ms.assetid: 
@@ -31,7 +31,7 @@ In this procedure, you use Windows PowerShell to create two virtual networks, ea
 
 ## Step 1. Create the first virtual network
 
-In this step, you use Windows PowerShell find the HNV provider logical network to create the first virtual network with one subnet. The following example script creates Contoso’s virtual network with one subnet.
+In this step, you use Windows PowerShell find the HNV provider logical network to create the first virtual network with one subnet. The following example script creates Contoso's virtual network with one subnet.
 
 ``` PowerShell
 #Find the HNV Provider Logical Network  
@@ -63,7 +63,7 @@ New-NetworkControllerVirtualNetwork -ResourceId "Contoso_VNet1" -ConnectionUri $
 
 ## Step 2. Create the second virtual network
 
-In this step, you create a second virtual network with one subnet. The following example script creates Woodgrove’s virtual network with one subnet.
+In this step, you create a second virtual network with one subnet. The following example script creates Woodgrove's virtual network with one subnet.
 
 ``` PowerShell
 
@@ -128,10 +128,10 @@ $peeringProperties.allowVirtualnetworkAccess = $true
 # Indicates whether forwarded traffic will be allowed across the vnets
 $peeringProperties.allowForwardedTraffic = $true 
 
-# Indicates whether the peer virtual network can access this virtual network’s gateway
+# Indicates whether the peer virtual network can access this virtual network's gateway
 $peeringProperties.allowGatewayTransit = $false 
 
-# Indicates whether this virtual network will use peer virtual network’s gateway
+# Indicates whether this virtual network will use peer virtual network's gateway
 $peeringProperties.useRemoteGateways =$false 
 
 New-NetworkControllerVirtualNetworkPeering -ConnectionUri $uri -VirtualNetworkId “Woodgrove_vnet1” -ResourceId “WoodgrovetoContoso” -Properties $peeringProperties 

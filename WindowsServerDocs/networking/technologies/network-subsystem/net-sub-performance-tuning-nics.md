@@ -1,7 +1,7 @@
 ---
 title: Performance Tuning Network Adapters
 description: This topic is part of the Network Subsystem Performance Tuning guide for Windows Server 2016.
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: networking
 ms.topic: article
 ms.assetid: 0b9b0f80-415c-4f5e-8377-c09b51d9c5dd
@@ -139,7 +139,7 @@ All of these settings had the following registry location:
 The Windows Filtering Platform (WFP) that was introduced in Windows Vista and Windows Server 2008 provides APIs to non-Microsoft independent software vendors (ISVs) to create packet processing filters. Examples include firewall and antivirus software.
 
 >[!NOTE]
->A poorly written WFP filter can significantly decrease a server’s networking performance. For more information, see [Porting Packet-Processing Drivers and Apps to WFP](https://msdn.microsoft.com/windows/hardware/gg463267.aspx) in the Windows Dev Center.
+>A poorly written WFP filter can significantly decrease a server's networking performance. For more information, see [Porting Packet-Processing Drivers and Apps to WFP](https://msdn.microsoft.com/windows/hardware/gg463267.aspx) in the Windows Dev Center.
 
 
 For links to all topics in this guide, see [Network Subsystem Performance Tuning](net-sub-performance-top.md).

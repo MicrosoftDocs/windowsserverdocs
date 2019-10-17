@@ -6,7 +6,7 @@ ms.author: billmath
 manager: daveba
 ms.date: 08/09/2019
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: identity-adfs
 ---
 
@@ -19,7 +19,7 @@ Applies to AD FS 2016 and later
 |-----|-----|
 |End User|This is the security principal (users, applications, services and groups) who needs to access the resource.|  
 |Client|This is your web application, identified by its client ID. The client is usually the party that the end user interacts with, and it requests tokens from the authorization server.
-|Authorization Server / Identity Provider (IdP)| This is your AD FS server. It is responsible for verifying the identity of security principals that exist in an organization’s directory. It issues security tokens (bearer access token, ID token, refresh token) upon successful authentication of those security principals.
+|Authorization Server / Identity Provider (IdP)| This is your AD FS server. It is responsible for verifying the identity of security principals that exist in an organization's directory. It issues security tokens (bearer access token, ID token, refresh token) upon successful authentication of those security principals.
 |Resource Server / Resource Provider / Relying Party| This is where the resource or data resides. It trusts the Authorization Server to securely authenticate and authorize the Client and uses Bearer access tokens to ensure that access to a resource can be granted.
 
 Following diagram provides the most basic relationship between the actors:
@@ -79,9 +79,9 @@ The claims present in any given security token are dependent upon the type of to
  
  3.	AD FS identifies the resource which the client wants to access through the resource parameter passed in the auth request. If using MSAL client library, then resource parameter is not sent. Instead the resource url is sent as a part of the scope parameter: *scope = [resource url]//[scope values e.g., openid]*. 
 
-    If resource is not passed using resource or scope parameter, ADFS will use a default resource urn:microsoft:userinfo whose polices (e.g.,MFA, Issuance or authorization policy) can’t be configured. 
+    If resource is not passed using resource or scope parameter, ADFS will use a default resource urn:microsoft:userinfo whose polices (e.g.,MFA, Issuance or authorization policy) can't be configured. 
  
- 4.	Next AD FS validates whether client has the permissions to access the resource. AD FS also validates whether the scopes passed in the auth request matches the scopes configured while registering the resource. If the client doesn’t have the permissions or the right scopes are not sent in the auth request the auth flow is terminated.   
+ 4.	Next AD FS validates whether client has the permissions to access the resource. AD FS also validates whether the scopes passed in the auth request matches the scopes configured while registering the resource. If the client doesn't have the permissions or the right scopes are not sent in the auth request the auth flow is terminated.   
  
  5.	Once permissions and scopes are validated, AD FS authenticates the user using the configured [authentication method](../operations/configure-authentication-policies.md).   
 

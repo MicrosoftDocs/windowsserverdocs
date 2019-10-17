@@ -7,7 +7,7 @@ ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 
 ms.technology: identity-adfs
 ---
@@ -22,7 +22,7 @@ In Windows Server® 2012, the Dynamic Access Control feature enables organizatio
   
 For more information about Dynamic Access Control, see [Dynamic Access Control Content Roadmap](../../solution-guides/Dynamic-Access-Control--Scenario-Overview.md#BKMK_APP).  
   
-### What’s New in AD FS?  
+### What's New in AD FS?  
 As an extension to the Dynamic Access Control scenario, AD FS in  Windows Server 2012  can now:  
   
 -   Access computer account attributes in addition to user account attributes from within AD DS. In previous versions of AD FS, the Federation Service could not access computer account attributes at all from AD DS.  
@@ -40,7 +40,7 @@ These AD DS issued claims can be inserted into Kerberos authentication tickets a
   
     -   Forest trusts that would otherwise be used for controlling access to Business\-to\-Business \(B2B\) \/ Internet accessible applications and resources.  
   
--   Organizations can now prevent unauthorized access to network resources from client computers based on whether a specific computer account attribute value stored in AD DS \(for example, a computer’s DNS name\) matches the access control policy of the resource \(for example, a file server that has been ACLd with claims\) or the relying party policy \(for example, a claims\-aware Web application\). This can help administrators to set finer access control policies for resources or applications that are:  
+-   Organizations can now prevent unauthorized access to network resources from client computers based on whether a specific computer account attribute value stored in AD DS \(for example, a computer's DNS name\) matches the access control policy of the resource \(for example, a file server that has been ACLd with claims\) or the relying party policy \(for example, a claims\-aware Web application\). This can help administrators to set finer access control policies for resources or applications that are:  
   
     -   Only accessible via Windows Integrated authentication.  
   
@@ -54,7 +54,7 @@ There are two differentiating factors that are important to understand about cla
 -   AD FS can only issue claims that are encapsulated in SAML tokens, not Kerberos tickets. For more information about how AD FS issues claims, see [The Role of the Claims Engine](../../ad-fs/technical-reference/The-Role-of-the-Claims-Engine.md).  
   
 ## How AD DS Issued Claims Work with AD FS  
-AD DS issued claims can be used with AD FS to access both user and device claims directly from the user’s authentication context, rather than making a separate LDAP call to Active Directory. The following illustration and corresponding steps discusses how this process works in more detail to enable claims\-based access control for the Dynamic Access Control scenario.  
+AD DS issued claims can be used with AD FS to access both user and device claims directly from the user's authentication context, rather than making a separate LDAP call to Active Directory. The following illustration and corresponding steps discusses how this process works in more detail to enable claims\-based access control for the Dynamic Access Control scenario.  
   
 ![using claims](media/UsingADDSClaimswithADFS.gif)  
   

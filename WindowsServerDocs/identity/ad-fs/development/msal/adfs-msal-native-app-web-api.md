@@ -6,7 +6,7 @@ ms.author: billmath
 manager: daveba
 ms.date: 08/09/2019
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: identity-adfs
 ---
 
@@ -26,7 +26,7 @@ Before reading this article, you should be familiar with the [AD FS concepts](..
 In this flow you add authentication to your Native App (public client), which can therefore sign in users and calls a Web API. To call a Web API from a Native App that signs in users, you can use MSAL's [AcquireTokenInteractive](https://docs.microsoft.com/en-us/dotnet/api/microsoft.identity.client.ipublicclientapplication.acquiretokeninteractive?view=azure-dotnet#Microsoft_Identity_Client_IPublicClientApplication_AcquireTokenInteractive_System_Collections_Generic_IEnumerable_System_String__) token acquisition method. To enable this interaction, MSAL leverages a web browser. 
 
  
-To better understand how to configure a Native App in ADFS to acquire access token interactively, let’s use a sample available [here](https://github.com/microsoft/adfs-sample-msal-dotnet-native-to-webapi) and walkthrough the app registration and code configuration steps.  
+To better understand how to configure a Native App in ADFS to acquire access token interactively, let's use a sample available [here](https://github.com/microsoft/adfs-sample-msal-dotnet-native-to-webapi) and walkthrough the app registration and code configuration steps.  
  
 
 ## Pre-requisites 
@@ -128,11 +128,11 @@ This section shows how to test the sample configured above.
  
      ![App test](media/adfs-msal-native-app-web-api/native16.png)
 
-  5. On the Native App’s Main screen, click on **Sign In**.  
+  5. On the Native App's Main screen, click on **Sign In**.  
   
      ![App test](media/adfs-msal-native-app-web-api/native17.png)
 
-    If you don’t see the native app screen, search and remove *msalcache.bin files from the folder where project repo is saved on your system. 
+    If you don't see the native app screen, search and remove *msalcache.bin files from the folder where project repo is saved on your system. 
 
   6. You will be re-directed to the AD FS sign-in page. Go ahead and sign in. 
   

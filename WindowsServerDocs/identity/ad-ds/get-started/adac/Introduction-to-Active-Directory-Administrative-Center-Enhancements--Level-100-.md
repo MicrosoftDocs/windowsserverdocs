@@ -7,7 +7,7 @@ author: MicrosoftGuyJFlo
 manager: mtillman
 ms.date: 08/07/2018
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 
 ms.technology: identity-adds
 ---
@@ -234,7 +234,7 @@ In Windows Server 2012 and newer, fine-grained password policy management is mad
 
 If you plan to use fine-grained password policies in Windows Server 2012, consider the following:
 
-- Fine-grained password policies apply only global security groups and user objects (or inetOrgPerson objects if they are used instead of user objects). By default, only members of the Domain Admins group can set fine-grained password policies. However, you can also delegate the ability to set these policies to other users. The domain functional level must be Windows Server 2008 or higher.
+- Fine-grained password policies apply only to global security groups and user objects (or inetOrgPerson objects if they are used instead of user objects). By default, only members of the Domain Admins group can set fine-grained password policies. However, you can also delegate the ability to set these policies to other users. The domain functional level must be Windows Server 2008 or higher.
 
 - You must use the Windows Server 2012 or newer version of Active Directory Administrative Center to administer fine-grained password policies through a graphical user interface.
 
@@ -279,7 +279,7 @@ Set-ADDomainMode -Identity contoso.com -DomainMode 3
 
 #### <a name="bkmk2_test_fgpp"></a>Step 2: Create test users, group, and organizational unit
 
-To create the test users and group need for this step, follow the procedures located here: [Step 3: Create test users, group and organizational unit](../../../ad-ds/get-started/adac/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-.md#bkmk_create_test_env) (you do not need to create the OU to demonstrate fine-grained password policy).
+To create the test users and group needed for this step, follow the procedures located here: [Step 3: Create test users, group and organizational unit](../../../ad-ds/get-started/adac/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-.md#bkmk_create_test_env) (you do not need to create the OU to demonstrate fine-grained password policy).
 
 #### <a name="bkmk_create_fgpp"></a>Step 3: Create a new fine-grained password policy
 

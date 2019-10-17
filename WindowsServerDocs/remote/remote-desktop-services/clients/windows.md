@@ -2,7 +2,7 @@
 title: Get started with the Windows Store client
 description: Basic set up steps for the Remote Desktop client for Windows Store.
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: remote-desktop-services
@@ -24,8 +24,8 @@ You can use the Remote Desktop client for Windows to work with Windows apps and 
 Use the following information to get started. Be sure to check out the [FAQ](remote-desktop-client-faq.md) if you have any questions.
 
 > [!NOTE]
-> - Curious about the new releases for the Windows client? Check out [What's new for Remote Desktop on Windows?](windows-whatsnew.md)
-> - You can run the client on any version of Windows 10.
+> - Curious about the new releases for the Windows Store client? Check out [What's new in the Windows Store client](windows-whatsnew.md)
+> - You can run the client on any supported version of Windows 10.
 
 ## Get the RD client and start using it
 
@@ -149,7 +149,7 @@ When you start a remote desktop connection, there are tools available that you c
 
 1. Tap the Remote Desktop connection to start the session.
 2. If you haven't saved credentials for the connection, you will be prompted to provide a **Username** and **Password**.
-3. If you are asked to verify the certificate for the remote desktop, review the information and ensure this is a PC you trust before tapping **Connect**. You can also select **Don’t ask about this certificate again** to always accept this certificate.
+3. If you are asked to verify the certificate for the remote desktop, review the information and ensure this is a PC you trust before tapping **Connect**. You can also select **Don't ask about this certificate again** to always accept this certificate.
 
 ### Connection Bar
 

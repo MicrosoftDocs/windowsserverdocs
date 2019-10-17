@@ -7,7 +7,7 @@ ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 
 ms.technology: identity-adfs
 ---
@@ -43,16 +43,16 @@ When you use the Permit All Users rule template, all users will have access to t
 Users who are permitted access to the relying party from the Federation Service may still be denied service by the relying party.  
   
 ## Permit access to users with this incoming claim  
-When you use the Permit or Deny Users Based on an Incoming Claim rule template to create a rule and set the condition to permit, you can permit specific user’s access to the relying party based on the type and value of an incoming claim. For example, you can use this rule template to create a rule that will permit only those users that have a group claim with a value of Domain Admins. If one rule permits a user to access the relying party, and another rule denies the user access to the relying party, the deny result overrides the permit result and the user is denied access.  
+When you use the Permit or Deny Users Based on an Incoming Claim rule template to create a rule and set the condition to permit, you can permit specific user's access to the relying party based on the type and value of an incoming claim. For example, you can use this rule template to create a rule that will permit only those users that have a group claim with a value of Domain Admins. If one rule permits a user to access the relying party, and another rule denies the user access to the relying party, the deny result overrides the permit result and the user is denied access.  
   
 Users who are permitted to access the relying party from the Federation Service may still be denied service by the relying party. If you want to permit all users to access the relying party, use the Permit All Users rule template.  
   
 ## Deny access to users with this incoming claim  
-When you use the Permit or Deny Users Based on an Incoming Claim rule template to create a rule and set the condition to deny, you can deny user’s access to the relying party based on the type and value of an incoming claim. For example, you can use this rule template to create a rule that will deny all users that have a group claim with a value of Domain Users.  
+When you use the Permit or Deny Users Based on an Incoming Claim rule template to create a rule and set the condition to deny, you can deny user's access to the relying party based on the type and value of an incoming claim. For example, you can use this rule template to create a rule that will deny all users that have a group claim with a value of Domain Users.  
   
 If you want to use the deny condition yet also enable access to the relying party for specific users, you must later explicitly add authorization rules with the permit condition to enable those users access to the relying party.  
   
-If a user is denied access when the claims issuance engine processes the rule set, further rules processing shuts down, and AD FS returns an “Access denied” error to the user’s request.  
+If a user is denied access when the claims issuance engine processes the rule set, further rules processing shuts down, and AD FS returns an “Access denied” error to the user's request.  
   
 ## Authorizing users  
 In AD FS, authorization rules are used to issue a permit or deny claim that will determine whether a user or a group of users \(depending on the claim type used\) will be allowed to access Web\-based resources in a given relying party or not. Authorization rules can only be set on relying party trusts.  
@@ -94,7 +94,7 @@ For more instructions on how to create this template, see [Create a Rule to Perm
 If a claim should be sent only when the claim value matches a custom pattern, you must use a custom rule. For more information, see [When to Use a Custom Claim Rule](When-to-Use-a-Custom-Claim-Rule.md).  
   
 ### Example of how to create an authorization rule based on multiple claims  
-When using the claim rule language syntax to authorize claims, a claim can also be issued based on the presence of multiple claims in the user’s original claims. The following rule issues an authorization claim only if the user is a member of the group Editors and has authenticated using Windows authentication:  
+When using the claim rule language syntax to authorize claims, a claim can also be issued based on the presence of multiple claims in the user's original claims. The following rule issues an authorization claim only if the user is a member of the group Editors and has authenticated using Windows authentication:  
   
 ```  
 [type == "https://schemas.microsoft.com/ws/2008/06/identity/claims/authenticationmethod",   
@@ -110,11 +110,11 @@ Before a Federation Service can use a federation server proxy to redirect client
   
 -   An Active Directory domain account that is a member of the local Administrators group on all federation servers in a federation server farm  
   
-When you want to specify which user or users can create a proxy trust for a given Federation Service, you can use any of the following delegation methods. This list of methods is in priority order, based on the AD FS product team’s recommendations of the most secure and least problematic methods of delegation. It is necessary to use only one of these methods, depending on the needs of your organization:  
+When you want to specify which user or users can create a proxy trust for a given Federation Service, you can use any of the following delegation methods. This list of methods is in priority order, based on the AD FS product team's recommendations of the most secure and least problematic methods of delegation. It is necessary to use only one of these methods, depending on the needs of your organization:  
   
 1.  Create a domain security group in Active Directory \(for example, FSProxyTrustCreators\), add this group to the local Administrators group on each of the federation servers in the farm, and then add only the user accounts to which you want to delegate this right to the new group. This is the preferred method.  
   
-2.  Add the user’s domain account to the administrator group on each of the federation servers in the farm.  
+2.  Add the user's domain account to the administrator group on each of the federation servers in the farm.  
   
 3.  If for some reason you cannot use either of these methods, you can also create an authorization rule for this purpose. Although it is not recommended—because of possible complications that may occur if this rule is not written correctly—you can use a custom authorization rule to delegate which Active Directory domain user accounts can also create or even remove the trusts between all the federation server proxies that are associated with a given Federation Service.  
   

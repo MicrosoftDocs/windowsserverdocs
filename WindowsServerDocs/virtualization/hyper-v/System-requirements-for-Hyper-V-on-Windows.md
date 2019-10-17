@@ -1,7 +1,7 @@
 ---
 title: System requirements for Hyper-V on Windows Server
 description: "Lists the hardware and firmware requirements for Hyper-V in Windows Server"
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.service: na
 manager: dongill
 ms.technology: compute-hyper-v

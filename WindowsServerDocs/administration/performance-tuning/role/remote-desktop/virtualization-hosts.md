@@ -1,7 +1,7 @@
 ---
 title: Performance Tuning Remote Desktop Virtualization Hosts
 description: Performance Tuning for Remote Desktop Virtualization Hosts
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: performance-tuning-guide
 ms.topic: article
 ms.author: HammadBu; VladmiS; denisgun
@@ -52,7 +52,7 @@ Server memory usage is driven by three main factors:
 
 - Memory allocated to each virtual machine
 
-For a typical knowledge worker workload, guest virtual machines running x86 Window 8 or Windows 8.1 should be given ~512 MB of memory as the baseline. However, Dynamic Memory will likely increase the guest virtual machine’s memory to about 800 MB, depending on the workload. For x64, we see about 800 MB starting, increasing to 1024 MB.
+For a typical knowledge worker workload, guest virtual machines running x86 Window 8 or Windows 8.1 should be given ~512 MB of memory as the baseline. However, Dynamic Memory will likely increase the guest virtual machine's memory to about 800 MB, depending on the workload. For x64, we see about 800 MB starting, increasing to 1024 MB.
 
 Therefore, it is important to provide enough server memory to satisfy the memory that is required by the expected number of guest virtual machines, plus allow a sufficient amount of memory for the server.
 
@@ -61,6 +61,7 @@ Therefore, it is important to provide enough server memory to satisfy the memory
 When you plan server capacity for an RD Virtualization Host server, the number of virtual machines per physical core will depend on the nature of the workload. As a starting point, it is reasonable to plan 12 virtual machines per physical core, and then run the appropriate scenarios to validate performance and density. Higher density may be achievable depending on the specifics of the workload.
 
 We recommend enabling hyper-threading, but be sure to calculate the oversubscription ratio based on the number of physical cores and not the number of logical processors. This ensures the expected level of performance on a per CPU basis.
+
 
 ## Performance optimizations
 
@@ -88,7 +89,7 @@ Failover Clustering in Windows Server 2012 and above provides caching on Cluste
 
 By default, pooled virtual desktops are rolled back to the pristine state after a user signs out, so any changes made to the Windows operating system since the last user sign-in are abandoned.
 
-Although it’s possible to disable the rollback, it is still a temporary condition because typically a pooled virtual desktop collection is re-created due to various updates to the virtual desktop template.
+Although it's possible to disable the rollback, it is still a temporary condition because typically a pooled virtual desktop collection is re-created due to various updates to the virtual desktop template.
 
 It makes sense to turn off Windows features and services that depend on persistent state. Additionally, it makes sense to turn off services that are primarily for non-enterprise scenarios.
 

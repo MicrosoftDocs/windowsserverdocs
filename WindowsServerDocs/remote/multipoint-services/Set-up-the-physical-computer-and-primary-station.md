@@ -3,7 +3,7 @@ title: Set up the physical computer and primary station
 description: Learn how to set up your first system, the primary station, in MultiPoint Services
 ms.custom: na
 ms.date: 07/22/2016
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: multipoint-services
 ms.reviewer: na
 ms.suite: na
@@ -55,7 +55,7 @@ For more information about stations, see [MultiPoint Stations](multipoint-servic
         > Users should not attach mice and keyboards directly to the USB ports of the computer. Doing so is likely to cause the incorrect association of multiple keyboards and mice to the same station, or to no station at all.  
   
         > [!NOTE]  
-        > The host audio device on the system’s motherboard is only available while MultiPoint Services is in console mode. To ensure uninterrupted audio for a station that uses an external USB hub, you must use a USB audio device plugged into the hub.  
+        > The host audio device on the system's motherboard is only available while MultiPoint Services is in console mode. To ensure uninterrupted audio for a station that uses an external USB hub, you must use a USB audio device plugged into the hub.  
   
 ## To connect the computer to the LAN  
   

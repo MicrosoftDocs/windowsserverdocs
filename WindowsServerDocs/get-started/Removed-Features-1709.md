@@ -1,7 +1,7 @@
 ---
 title: Features removed or planned for replacement starting with Windows Server (version 1709)
 description: "Features and functionalities removed or planned for removal in releases."
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: server-general
 ms.topic: article
 ms.date: 08/22/2019

@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot Always On VPN
 description: This topic provides instructions for verifying and troubleshooting Always On VPN deployment in Windows Server 2016.
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: networking-ras
 ms.topic: article
 ms.assetid: 4d08164e-3cc8-44e5-a319-9671e1ac294a
@@ -36,7 +36,7 @@ You can troubleshoot connection issues in several ways. For client-side issues a
 
 - **Make sure:**
 
-    - IKE ports (UDP ports 500 and 4500) aren’t blocked.
+    - IKE ports (UDP ports 500 and 4500) aren't blocked.
 
     - The correct certificates for IKE are present on both the client and the server.
 
@@ -56,7 +56,7 @@ You can troubleshoot connection issues in several ways. For client-side issues a
 
     - The typical cause of this error is that the NPS has specified an authentication condition that the client cannot meet. For example, the NPS may specify the use of a certificate to secure the PEAP connection, but the client is attempting to use EAP-MSCHAPv2.
 
-    - Event log 20276 is logged to the event viewer when the RRAS-based VPN server authentication protocol setting doesn’t match that of the VPN client computer.
+    - Event log 20276 is logged to the event viewer when the RRAS-based VPN server authentication protocol setting doesn't match that of the VPN client computer.
 
 - **Possible solution.** Ensure that your client configuration matches the conditions that are specified on the NPS server.
 
@@ -74,15 +74,15 @@ You can troubleshoot connection issues in several ways. For client-side issues a
 
 - **Possible causes.** This error typically occurs in one of the following cases:
 
-    - The machine certificate used for IKEv2 validation on the RAS server doesn’t have **Server Authentication** under **Enhanced Key Usage**.
+    - The machine certificate used for IKEv2 validation on the RAS server doesn't have **Server Authentication** under **Enhanced Key Usage**.
 
     - The machine certificate on the RAS server has expired.
 
-    - The root certificate to validate the RAS server certificate isn’t present on the client computer.
+    - The root certificate to validate the RAS server certificate isn't present on the client computer.
 
-    - The VPN server name used on the client computer doesn’t match the **subjectName** of the server certificate.
+    - The VPN server name used on the client computer doesn't match the **subjectName** of the server certificate.
 
-- **Possible solution.** Verify that the server certificate includes **Server Authentication** under **Enhanced Key Usage**. Verify that the server certificate is still valid. Verify that the CA used is listed under **Trusted Root Certification Authorities** on the RRAS server. Verify that the VPN client connects by using the FQDN of the VPN server as presented on the VPN server’s certificate.
+- **Possible solution.** Verify that the server certificate includes **Server Authentication** under **Enhanced Key Usage**. Verify that the server certificate is still valid. Verify that the CA used is listed under **Trusted Root Certification Authorities** on the RRAS server. Verify that the VPN client connects by using the FQDN of the VPN server as presented on the VPN server's certificate.
 
 ### Error code: 0x80070040
 
@@ -114,7 +114,7 @@ Look for events from source RasClient. All error messages return the error code 
 
 NPS creates and stores the NPS accounting logs. By default, these are stored in %SYSTEMROOT%\\System32\\Logfiles\\ in a file named IN*XXXX*.txt, where *XXXX* is the date the file was created.
 
-By default, these logs are in comma-separated values format, but they don’t include a heading row. The heading row is:
+By default, these logs are in comma-separated values format, but they don't include a heading row. The heading row is:
 
 ```
 ComputerName,ServiceName,Record-Date,Record-Time,Packet-Type,User-Name,Fully-Qualified-Distinguished-Name,Called-Station-ID,Calling-Station-ID,Callback-Number,Framed-IP-Address,NAS-Identifier,NAS-IP-Address,NAS-Port,Client-Vendor,Client-IP-Address,Client-Friendly-Name,Event-Timestamp,Port-Limit,NAS-Port-Type,Connect-Info,Framed-Protocol,Service-Type,Authentication-Type,Policy-Name,Reason-Code,Class,Session-Timeout,Idle-Timeout,Termination-Action,EAP-Friendly-Name,Acct-Status-Type,Acct-Delay-Time,Acct-Input-Octets,Acct-Output-Octets,Acct-Session-Id,Acct-Authentic,Acct-Session-Time,Acct-Input-Packets,Acct-Output-Packets,Acct-Terminate-Cause,Acct-Multi-Ssn-ID,Acct-Link-Count,Acct-Interim-Interval,Tunnel-Type,Tunnel-Medium-Type,Tunnel-Client-Endpt,Tunnel-Server-Endpt,Acct-Tunnel-Conn,Tunnel-Pvt-Group-ID,Tunnel-Assignment-ID,Tunnel-Preference,MS-Acct-Auth-Type,MS-Acct-EAP-Type,MS-RAS-Version,MS-RAS-Vendor,MS-CHAP-Error,MS-CHAP-Domain,MS-MPPE-Encryption-Types,MS-MPPE-Encryption-Policy,Proxy-Policy-Name,Provider-Type,Provider-Name,Remote-Server-Address,MS-RAS-Client-Name,MS-RAS-Client-Version
@@ -146,7 +146,7 @@ A small misconfiguration can cause the client connection to fail and can be chal
 
 4. Do you have the internal and external NICs on the VPN server configured correctly? Are they in different subnets? Does the external NIC connect to the correct interface on your firewall?
 
-5. Are UDP 500 and 4500 ports open from the client to the VPN server’s external interface? Check the client firewall, server firewall, and any hardware firewalls. IPSEC uses UDP port 500, so make sure that you do not have IPEC disabled or blocked anywhere.
+5. Are UDP 500 and 4500 ports open from the client to the VPN server's external interface? Check the client firewall, server firewall, and any hardware firewalls. IPSEC uses UDP port 500, so make sure that you do not have IPEC disabled or blocked anywhere.
 
 6. Is certificate validation failing? Verify the NPS server has a Server Authentication certificate that can service IKE requests. Make sure that you have the correct VPN server IP specified as an NPS client. Make sure that you are authenticating with PEAP, and the Protected EAP properties should only allow authentication with a certificate. You can check the NPS event logs for authentication failures. For more details, see [Install and Configure the NPS Server](vpn-deploy-nps.md)
 

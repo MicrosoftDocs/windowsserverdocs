@@ -6,7 +6,7 @@ author: jasongerend
 ms.author: jgerend
 ms.date: 10/17/2018
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: storage-spaces
 manager: brianlic
 ---

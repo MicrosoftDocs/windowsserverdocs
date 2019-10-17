@@ -1,7 +1,7 @@
 ---
 title: Performance Tuning Windows Server Containers
 description: Performance tuning recommendations for containers on Windows Server 16
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: performance-tuning-guide
 ms.topic: landing-page
 ms.author: DavSo; Ericam; YaShi
@@ -40,7 +40,7 @@ Container start up time is a key metric in many of the scenarios that containers
 Microsoft ships a base image for both Nano Server and Server Core. The base image which ships for Server Core has been optimized by removing the start-up time overhead associated with first logon (OOBE). This is not the case with Nano Server base image. However, this cost can be removed from Nano Server based images by committing at least one layer to the container image. Subsequent container starts from the image will not incur the first logon cost.
 ### Scratch Space Location
 
-Containers, by default, use a temporary scratch space on the container host’s system drive media for storage during the lifetime of the running container. This serves as the container’s system drive, and as such many of the writes and reads done in container operation follow this path. For host systems where the system drive exists on spinning disk magnetic media (HDDs) but faster storage media is available (faster HDDs or SSDs), it is possible to move the container scratch space to a different drive. This is achieved by using the dockerd –g command. This command is global, and will affect all containers running on the system.
+Containers, by default, use a temporary scratch space on the container host's system drive media for storage during the lifetime of the running container. This serves as the container's system drive, and as such many of the writes and reads done in container operation follow this path. For host systems where the system drive exists on spinning disk magnetic media (HDDs) but faster storage media is available (faster HDDs or SSDs), it is possible to move the container scratch space to a different drive. This is achieved by using the dockerd –g command. This command is global, and will affect all containers running on the system.
 
 ### Nested Hyper-V Containers
 Hyper-V for Windows Server 2016 introduces nested hypervisor support. That is, it is now possible to run a virtual machine from within a virtual machine. This opens up many useful scenarios but also exaggerates some performance impact that the hypervisor incurs, as there are two level of hypervisors running above the physical host.

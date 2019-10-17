@@ -3,7 +3,7 @@ title: Show All Stations
 description: Learn how to view all stations in MultiPoint Services
 ms.custom: na
 ms.date: 07/07/2016
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: multipoint-services
 ms.reviewer: na
 ms.suite: na

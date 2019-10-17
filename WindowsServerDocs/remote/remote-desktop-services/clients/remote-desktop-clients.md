@@ -2,7 +2,7 @@
 title: Remote Desktop clients
 description: Learn about the different Remote Desktop clients available for all your devices
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: remote-desktop-services
@@ -29,8 +29,8 @@ The following client apps are available:
 |----------|-----------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------|
 | Windows  | [Windows 10 client in the Microsoft Store](https://go.microsoft.com/fwlink/?LinkID=616709)                      | [Getting started with Remote Desktop client on Windows](windows.md)                |
 | Android  | [Android client in Google Play](https://play.google.com/store/apps/details?id=com.microsoft.rdc.android)        | [Getting started with Remote Desktop client on Android](remote-desktop-android.md) |
-| iOS      | [iOS client in the iTunes store](https://itunes.apple.com/us/app/microsoft-remote-desktop/id714464092?mt=8)     | [Getting started with Remote Desktop client on iOS](remote-desktop-ios.md)         |
-| macOS    | [macOS client in the iTunes store](https://itunes.apple.com/us/app/microsoft-remote-desktop/id1295203466?mt=12) | [Getting started with Remote Desktop client on Mac](remote-desktop-mac.md)         |
+| iOS      | [iOS client in the iTunes store](https://itunes.apple.com/app/microsoft-remote-desktop/id714464092?mt=8)     | [Getting started with Remote Desktop client on iOS](remote-desktop-ios.md)         |
+| macOS    | [macOS client in the iTunes store](https://itunes.apple.com/app/microsoft-remote-desktop/id1295203466?mt=12) | [Getting started with Remote Desktop client on Mac](remote-desktop-mac.md)         |
 
 ## Configuring the remote PC
 

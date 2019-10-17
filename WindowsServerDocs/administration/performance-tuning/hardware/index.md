@@ -1,7 +1,7 @@
 ---
 title: Server Hardware Performance Considerations
 description: Server hardware performance considerations for Windows Server 2016
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: performance-tuning-guide
 ms.topic: landing-page
 ms.author: phstee
@@ -11,7 +11,7 @@ ms.date: 01/08/2018
 
 # Server Hardware Performance Considerations
 
-The following section lists important items that you should consider when you choose server hardware. Following these guidelines can help remove performance bottlenecks that might impede the server’s performance.
+The following section lists important items that you should consider when you choose server hardware. Following these guidelines can help remove performance bottlenecks that might impede the server's performance.
 
 ## Processor Recommendations
 
@@ -41,7 +41,7 @@ Choose large L2 or L3 processor caches. On newer architectures, such as Haswell 
 Increase the RAM to match your memory needs.
 When your computer runs low on memory and it needs more immediately, Windows uses hard disk space to supplement system RAM through a procedure called paging. Too much paging degrades the overall system performance.
 You can optimize paging by using the following guidelines for page file placement:
-- Isolate the page file on its own storage device, or at least make sure it doesn’t share the same storage devices as other frequently accessed files. For example, place the page file and operating system files on separate physical disk drives.
+- Isolate the page file on its own storage device, or at least make sure it doesn't share the same storage devices as other frequently accessed files. For example, place the page file and operating system files on separate physical disk drives.
 
 - Place the page file on a drive that is not fault-tolerant. If the disk fails, a system crash is likely to occur. If you place the page file on a fault-tolerant drive, remember that fault-tolerant systems are often slower to write data because they write data to multiple locations.
 

@@ -1,7 +1,7 @@
 ---
 title: Performance Tuning Remote Desktop Gateways
 description: Performance tuning recommendations for Remote Desktop Gateways
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: performance-tuning-guide
 ms.topic: article
 ms.author: HammadBu; VladmiS
@@ -14,9 +14,9 @@ ms.date: 10/16/2017
 > [!NOTE]
 > In Windows 8+ and Windows Server 2012 R2+, Remote Desktop Gateway (RD Gateway) supports TCP, UDP, and the legacy RPC transports. Most of the following data is regarding the legacy RPC transport. If the legacy RPC transport is not being used, this section is not applicable.
 
-This topic describes the performance-related parameters that help improve the performance of a customer deployment and the tunings that rely on the customer’s network usage patterns.
+This topic describes the performance-related parameters that help improve the performance of a customer deployment and the tunings that rely on the customer's network usage patterns.
 
-At its core, RD Gateway performs many packet forwarding operations between Remote Desktop Connection instances and the RD Session Host server instances within the customer’s network.
+At its core, RD Gateway performs many packet forwarding operations between Remote Desktop Connection instances and the RD Session Host server instances within the customer's network.
 
 > [!NOTE]
 > The following parameters apply to RPC transport only.

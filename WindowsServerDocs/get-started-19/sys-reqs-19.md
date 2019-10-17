@@ -1,22 +1,18 @@
 --- 
 title: Windows Server 2019 System Requirements
 description: "Minimum requirements for storage, CPU, network, memory, RAM in a clean installation of Windows Server 2019." 
-ms.custom: na
-ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.suite: na
+ms.prod: windows-server
 ms.technology: server-general
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 4a8b42d7-9fe5-4efe-9ea1-ace2131f860e
-author: coreyp-at-msft
-ms.author: coreyp
+author: jasongerend
+ms.author: jgerend
 manager: jasgroce
 ms.localizationpriority: medium
 ---
 # System Requirements
 
->Applies To: Windows Server 2019 
+> Applies to: Windows Server 2019
 
 This topic outlines the minimum system requirements to run Windows Server&reg; 2019.
 
@@ -42,7 +38,8 @@ Processor performance depends not only on the clock frequency of the processor, 
 
 [Coreinfo](https://technet.microsoft.com/sysinternals/cc835722.aspx) is a tool you can use to confirm which of these capabilities your CPU has.
 
-## RAM  
+## RAM
+
 The following are the estimated RAM requirements for this product:  
 
 **Minimum**:  
@@ -54,7 +51,7 @@ The following are the estimated RAM requirements for this product:
 >   
 > To avoid this, do one of the following:  
 >   
-> -   Allocate more than 800 MB RAM to the virtual machine you intend to install this release on. Once Setup has completed, you can change the allocation to as little as 512 MB RAM, depending on the actual server configuration.  
+> -   Allocate more than 800 MB RAM to the virtual machine you intend to install this release on. Once Setup has completed, you can change the allocation to as little as 512 MB RAM, depending on the actual server configuration. If you've modified the boot image for Setup with addition languages and updates, you may need to allocate more than 800 MB RAM in order to complete the installation  
 > -   Interrupt the boot process of this release on the virtual machine with SHIFT+F10. In the command prompt that opens, use Diskpart.exe to create and format an installation partition. Run **Wpeutil createpagefile /path=C:\pf.sys** (assuming the installation partition you created was C:). Close the command prompt and proceed with Setup.  
 
 ## Storage controller and disk space requirements  

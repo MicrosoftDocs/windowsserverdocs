@@ -6,7 +6,7 @@ ms.author: billmath
 manager: femila
 ms.date: 07/10/2017
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: identity-adfs
 ---
 
@@ -71,7 +71,7 @@ For more information, see [Migrating the AD FS Federation Server](migrate-ad-fs-
    - AD FS in Windows Server 2012 R2 is self-hosted and does not require IIS installation. Make sure you note the following as a result of this change:  
    -   SSL certificate management for both federation servers and proxy computers in your AD FS farm must now be performed via Windows PowerShell.  
   
-**Changes to AD FS sign-in pages’ settings and customizations**  
+**Changes to AD FS sign-in pages' settings and customizations**  
 -   In AD FS in Windows Server 2012 R2, there are several changes intended to improve the sign-in experience for both administrators and users. The IIS-hosted web pages that existed in the previous version of AD FS are now removed. The look and feel of the AD FS sign-in web pages are self-hosted in AD FS and can now be customized to tailor the user experience. The changes include:  
 	-   Customizing the AD FS sign-in experience, including the customization of the company name, logo, illustration, and sign-in description.  
     -   Customizing the error messages.  

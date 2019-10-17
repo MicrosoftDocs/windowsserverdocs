@@ -2,7 +2,7 @@
 title: Windows Server technical content for IT Administrators - Windows Server
 description: Get Windows Server technical articles for current and previous releases plus product evaluations for IT Professionals.  
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: server-general

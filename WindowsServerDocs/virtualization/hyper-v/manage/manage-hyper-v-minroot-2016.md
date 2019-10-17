@@ -20,7 +20,7 @@ For details about hardware for Hyper-V hosts, see [Windows 10 Hyper-V System Req
 
 ## Background
 
-Before setting controls for Hyper-V host CPU resources, it’s helpful to review the basics of the Hyper-V architecture.  
+Before setting controls for Hyper-V host CPU resources, it's helpful to review the basics of the Hyper-V architecture.  
 You can find a general summary in the [Hyper-V Architecture](https://docs.microsoft.com/windows-server/administration/performance-tuning/role/hyper-v-server/architecture) section.
 These are important concepts for this article:
 
@@ -28,7 +28,7 @@ These are important concepts for this article:
 
 * The root partition is itself a virtual machine partition, although it has unique properties and much greater privileges than guest virtual machines.  The root partition provides the management services that control all guest virtual machines, provides virtual device support for guests, and manages all device I/O for guest virtual machines.  Microsoft strongly recommends not running any application workloads in a host partition.
 
-* Each virtual processor (VP) of the root partition is mapped 1:1 to an underlying logical processor (LP).  A host VP will always run on the same underlying LP – there is no migration of the root partition’s VPs.  
+* Each virtual processor (VP) of the root partition is mapped 1:1 to an underlying logical processor (LP).  A host VP will always run on the same underlying LP – there is no migration of the root partition's VPs.  
 
 * By default, the LPs on which host VPs run can also run guest VPs.
 
@@ -56,11 +56,11 @@ The system must be rebooted, and the new number of root processors will persist 
 
 If there are multiple NUMA nodes, each node will get `n/NumaNodeCount` processors.
 
-Note that with multiple NUMA nodes, you must ensure the VM’s topology is such that there are enough free LPs (i.e., LPs without root VPs) on each NUMA node to run the corresponding VM’s NUMA node VPs.
+Note that with multiple NUMA nodes, you must ensure the VM's topology is such that there are enough free LPs (i.e., LPs without root VPs) on each NUMA node to run the corresponding VM's NUMA node VPs.
 
 ## Verifying the Minroot Configuration
 
-You can verify the host’s minroot configuration using Task Manager, as shown below.
+You can verify the host's minroot configuration using Task Manager, as shown below.
 
 ![](./media/minroot-taskman.png)
 

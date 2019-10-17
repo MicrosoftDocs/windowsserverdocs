@@ -2,7 +2,7 @@
 title: regini
 description: Learn how to modify the registry from the command prompt or by using a script.
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -34,7 +34,7 @@ regini [-m \\machinename | -h hivefile hiveroot][-i n] [-o outputWidth][-b] text
 |-m \<\\\\ComputerName>|Specifies the remote computer name with a registry that is to be modified. Use the format **\\\\ComputerName**.|
 |---------------------|-|
 |-h \<hivefile hiveroot>|Specifies the local registry hive to modify. You must specify the name of the hive file and the root of the hive in the format **hivefile hiveroot**.|
-|-i \<n>|Specifies the level of indentation to use to indicate the tree structure of registry keys in the command output. The **Regdmp.exe** tool (which gets a registry key’s current permissions in binary format) uses indentation in multiples of four, so the default value is **4**.|
+|-i \<n>|Specifies the level of indentation to use to indicate the tree structure of registry keys in the command output. The **Regdmp.exe** tool (which gets a registry key's current permissions in binary format) uses indentation in multiples of four, so the default value is **4**.|
 |-o \<outputwidth>|Specifies the width of the command output, in characters. If the output will appear in the command window, the default value is the width of the window. If the output is directed to a file, the default value is **240** characters.|
 |-b|Specifies that **Regini.exe** output is backward compatible with previous versions of **Regini.exe**. See the Remarks section for details.|
 |textfiles|Specifies the name of one or more text files that contain registry data. Any number of ANSI or Unicode text files can be listed.|

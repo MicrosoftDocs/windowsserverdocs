@@ -3,7 +3,7 @@ title: Hardware Requirements and Performance Recommendations
 description: Provides hardware and performance requirements and recommendations for MultiPoint Services
 ms.custom: na
 ms.date: 07/22/2016
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: multipoint-services
 ms.reviewer: na
 ms.suite: na
@@ -23,7 +23,7 @@ The performance of your MultiPoint Services system will be directly affected by 
 ### Applications and Internet content  
 Because MultiPoint Services is a shared resource computing solution, the type and number of applications that are running on the stations can impact the performance of your MultiPoint Services system. It is important to consider the types of programs that are used regularly when you are planning your system. For example, a graphics-intensive application requires a more powerful computer than an application such as a word processor. Overloading the computer with graphics-intensive applications will likely cause lag problems throughout the entire system.  
   
-The type of content that is accessed by applications also affects the system’s performance. If multiple stations are using web browsers to access multimedia content, such as full-motion video, fewer stations can be connected before adversely affecting the system performance. Conversely, if the multiple stations are using web browsers to access static web content, more stations can be connected without a significant effect on performance.  
+The type of content that is accessed by applications also affects the system's performance. If multiple stations are using web browsers to access multimedia content, such as full-motion video, fewer stations can be connected before adversely affecting the system performance. Conversely, if the multiple stations are using web browsers to access static web content, more stations can be connected without a significant effect on performance.  
   
 ### Hardware recommendations  
 To achieve good performance with your MultiPoint Services system under various loads, use the guidelines in the following table when you are planning and testing your system. These are the basic requirements forMultiPoint Services . The actual configuration sizing depends on your system configuration, the workload you are running, and the hardware capability. You should always validate by testing your applications and hardware.  

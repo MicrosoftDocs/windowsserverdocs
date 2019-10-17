@@ -1,7 +1,7 @@
 ---
 title: Deploy Folder Redirection with Offline Files
 description: How to use Windows Server to deploy Folder Redirection with Offline Files to Windows client computers.
-ms.prod: windows-server-threshold 
+ms.prod: windows-server 
 ms.topic: article 
 author: JasonGerend 
 ms.author: jgerend 
@@ -37,7 +37,7 @@ Folder Redirection has the following software requirements:
 - A file server must be available to host redirected folders.
     - If the file share uses DFS Namespaces, the DFS folders (links) must have a single target to prevent users from making conflicting edits on different servers.
     - If the file share uses DFS Replication to replicate the contents with another server, users must be able to access only the source server to prevent users from making conflicting edits on different servers.
-    - When using a clustered file share, disable continuous availability on the file share to avoid performance issues with Folder Redirection and Offline Files. Additionally, Offline Files might not transition to offline mode for 3-6 minutes after a user loses access to a continuously available file share, which could frustrate users who aren’t yet using the Always Offline mode of Offline Files.
+    - When using a clustered file share, disable continuous availability on the file share to avoid performance issues with Folder Redirection and Offline Files. Additionally, Offline Files might not transition to offline mode for 3-6 minutes after a user loses access to a continuously available file share, which could frustrate users who aren't yet using the Always Offline mode of Offline Files.
 
 > [!NOTE]
 > Some newer features in Folder Redirection have additional client computer and Active Directory schema requirements. For more info, see [Deploy primary computers](deploy-primary-computers.md), [Disable Offline Files on folders](disable-offline-files-on-folders.md), [Enable Always Offline mode](enable-always-offline.md), and [Enable optimized folder moving](enable-optimized-moving.md).
@@ -130,7 +130,7 @@ Here's how to configure Folder Redirection in Group Policy:
 1. In Group Policy Management, right-click the GPO you created (for example, **Folder Redirection Settings**), and then select **Edit**.
 2. In the Group Policy Management Editor window, navigate to **User Configuration**, then **Policies**, then **Windows Settings**, and then **Folder Redirection**.
 3. Right-click a folder that you want to redirect (for example, **Documents**), and then select **Properties**.
-4. In the **Properties** dialog box, from the **Setting** box, select **Basic - Redirect everyone’s folder to the same location**.
+4. In the **Properties** dialog box, from the **Setting** box, select **Basic - Redirect everyone's folder to the same location**.
 
     > [!NOTE]
     > To apply Folder Redirection to client computers running Windows XP or Windows Server 2003, select the **Settings** tab and select the **Also apply redirection policy to Windows 2000, Windows 2000 Server, Windows XP, and Windows Server 2003 operating systems** checkbox.
@@ -193,6 +193,6 @@ The following table summarizes some of the most important changes to this topic.
 * [Folder Redirection, Offline Files, and Roaming User Profiles](folder-redirection-rup-overview.md)
 * [Deploy Primary Computers for Folder Redirection and Roaming User Profiles](deploy-primary-computers.md)
 * [Enable Advanced Offline Files Functionality](enable-always-offline.md)
-* [Microsoft’s Support Statement Around Replicated User Profile Data](https://blogs.technet.microsoft.com/askds/2010/09/01/microsofts-support-statement-around-replicated-user-profile-data/)
+* [Microsoft's Support Statement Around Replicated User Profile Data](https://blogs.technet.microsoft.com/askds/2010/09/01/microsofts-support-statement-around-replicated-user-profile-data/)
 * [Sideload Apps with DISM](<https://docs.microsoft.com/previous-versions/windows/it-pro/windows-8.1-and-8/hh852635(v=win.10)>)
 * [Troubleshooting packaging, deployment, and query of Windows Runtime-based apps](https://msdn.microsoft.com/library/windows/desktop/hh973484.aspx)
