@@ -196,7 +196,6 @@ You may not want to issue any certificates immediately after a CA has been insta
 
 **EnableKeyCounting** configures the CA to increment a counter every time the CA's signing key is used. Do not enable this setting unless you have a Hardware Security Module (HSM) and associated cryptographic service provider (CSP) that supports key counting. Neither the Microsoft Strong CSP nor the Microsoft Software Key Storage Provider (KSP) support key counting.
 
-
 ## Create the CAPolicy.inf file
 
 Before you install AD CS, you configure the CAPolicy.inf file with specific settings for your deployment.
