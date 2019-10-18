@@ -11,7 +11,7 @@ ms.topic: article
 author: heidilohr
 manager: daveba
 ms.author: helohr
-ms.date: 10/17/2019
+ms.date: 10/18/2019
 ms.localizationpriority: medium
 ---
 # What's new in the web client
