@@ -151,7 +151,13 @@ This guide outlines five (5) installation steps:
 
     ![AAD App Proxy 4](../media/hybrid-cloud-print/AAD-AppRegistration-Mopria-Overview.png)
 
-6. Configure redirect URI in the native app
+6. Assign users to applications
+    - Go to **Azure Active Directory** > **Enterprise applications** > **All applications**. Search for the Mopria Discovery Service and click on it
+    - Click on **Users and groups** and assign users
+    - Alternatively, click on **Properties**. Change **User assignment required?** to **No**
+    - Repeat for Enterprise Cloud Print service
+
+7. Configure redirect URI in the native app
     - Go to **Azure Active Directory** > **App registrations**. Click on the native app. Go to **Overview** and copy the **Application (client) ID**
 
     ![AAD Redirect URI 1](../media/hybrid-cloud-print/AAD-AppRegistration-Native-Overview.png)
@@ -298,7 +304,7 @@ This guide outlines five (5) installation steps:
         `sqlite3.exe MopriaDeviceDb.db ".read MopriaSQLiteDb.sql"`
 
     - From File Explorer, open up the MopriaDeviceDb.db file properties to add users or groups which are allowed to publish to Mopria database in the Security tab. The users or groups must exist in on-premises Active Directory, and synchronized with Azure AD.
-    - If the solution is deployed to a non-routable domain (e.g. *mydomain*.local), the Azure AD domain (e.g. *domainname*.onmicrosoft.com, or one purchased from third-party vendor) needs to be added to as a UPN suffix to on-premises Active Directory. This is so the exact same user who will be publishing printer (e.g. admin@*domainname*.onmicrosoft.com) can be added in the security setting of the database file. See [Prepare a non-routable domain for directory synchronization](https://docs.microsoft.com/en-us/office365/enterprise/prepare-a-non-routable-domain-for-directory-synchronization)
+    - If the solution is deployed to a non-routable domain (e.g. *mydomain*.local), the Azure AD domain (e.g. *domainname*.onmicrosoft.com, or one purchased from third-party vendor) needs to be added as a UPN suffix to on-premises Active Directory. This is so the exact same user who will be publishing printers (e.g. admin@*domainname*.onmicrosoft.com) can be added in the security setting of the database file. See [Prepare a non-routable domain for directory synchronization](https://docs.microsoft.com/en-us/office365/enterprise/prepare-a-non-routable-domain-for-directory-synchronization)
 
     ![Print Server Mopria Registry Keys](../media/hybrid-cloud-print/PrintServer-SQLiteDB.png)
 
@@ -346,20 +352,21 @@ This guide outlines five (5) installation steps:
 2. Share the printer through the Printer Properties UI
 3. Select the desired set of users to grant access
 4. Save the changes and close out the printer properties window
-5. From a Windows 10 Fall Creator Update or later machine, open an elevated Windows PowerShell command prompt
-   1. Run the following commands
-      - `find-module -Name "PublishCloudPrinter"` to confirm that the machine can reach the PowerShell Gallery (PSGallery)
-      - `install-module -Name "PublishCloudPrinter"`
+5. Prepare a Windows 10 Fall Creator Update or later machine. Join the machine to Azure AD, and login as a user who is synchronized with on-premises Active Directory and has administrator right to the Print Server machine.
+6. From the Windows 10 machine, open an elevated Windows PowerShell command prompt
+    - Run the following commands
+        - `find-module -Name "PublishCloudPrinter"` to confirm that the machine can reach the PowerShell Gallery (PSGallery)
+        - `install-module -Name "PublishCloudPrinter"`
 
         >   NOTE: You may see a messaging stating that 'PSGallery' is an untrusted repository.  Enter 'y' to continue with the installation.
 
-      - Publish-CloudPrinter
+        - `Publish-CloudPrinter`
         - Printer = The shared printer name that was defined
         - Manufacturer = Printer manufacturer
         - Model = Printer model
         - OrgLocation = A JSON string specifying the printer location,
             e.g.:
-            `{"attrs": [{"category":"country", "vs":"USA", "depth":0}, {"category":"organization", "vs":"Microsoft", "depth":1}, {"category":"site", "vs":"Redmond, WA", "depth":2}, {"category":"building", "vs":"Building 1", "depth":3}, {"category":"floor_number", "vn":1, "depth":4}, {"category":"room_name", "vs":"1111", "depth":5}]}`
+            `{"attrs": [{"category":"country", "vs":"USA", "depth":0}, {"category":"organization", "vs":"Microsoft", "depth":1}, {"category":"site", "vs":"Redmond, WA", "depth":2}, {"category":"building", "vs":"Building 1", "depth":3}, {"category":"floor_number", "vs":1, "depth":4}, {"category":"room_name", "vs":"1111", "depth":5}]}`
         - Sddl = SDDL string representing permissions for the printer. This can be obtained by modifying the Printer Properties Security tab appropriately and then running the following command in a command prompt:
             `(Get-Printer PrinterName -full).PermissionSDDL`
             e.g. "G:DUD:(A;OICI;FA;;;WD)"
@@ -376,9 +383,10 @@ This guide outlines five (5) installation steps:
         **Publish-CloudPrinter** PowerShell command syntax: <br>
         Publish-CloudPrinter -Printer \<string\> -Manufacturer \<string\> -Model \<string\> -OrgLocation \<string\> -Sddl \<string\> -DiscoveryEndpoint \<string\> -PrintServerEndpoint \<string\> -AzureClientId \<string\> -AzureTenantGuid \<string\> [-DiscoveryResourceId \<string\>] <br>
         Sample command:
-        `publish-cloudprinter -Printer EcpPrintTest -Manufacturer Microsoft -Model FilePrinterEcp -OrgLocation '{"attrs": [{"category":"country", "vs":"USA", "depth":0}, {"category":"organization", "vs":"MyCompany", "depth":1}, {"category":"site", "vs":"MyCity, State", "depth":2}, {"category":"building", "vs":"Building 1", "depth":3}, {"category":"floor_name", "vn":1, "depth":4}, {"category":"room_name", "vs":"1111", "depth":5}]}' -Sddl "O:BAG:DUD:(A;OICI;FA;;;WD)" -DiscoveryEndpoint https://<services-machine-endpoint>/mcs -PrintServerEndpoint https://<services-machine-endpoint>/ecp -AzureClientId <Native Web App ID> -AzureTenantGuid <Azure AD Directory ID> -DiscoveryResourceId <Proxied Mopria Discovery Cloud Service App ID>`
+        `publish-CloudPrinter -Printer EcpPrintTest -Manufacturer Microsoft -Model FilePrinterEcp -OrgLocation '{"attrs": [{"category":"country", "vs":"USA", "depth":0}, {"category":"organization", "vs":"MyCompany", "depth":1}, {"category":"site", "vs":"MyCity, State", "depth":2}, {"category":"building", "vs":"Building 1", "depth":3}, {"category":"floor_name", "vs":1, "depth":4}, {"category":"room_name", "vs":"1111", "depth":5}]}' -Sddl "O:BAG:DUD:(A;OICI;FA;;;WD)" -DiscoveryEndpoint https://<services-machine-endpoint>/mcs -PrintServerEndpoint https://<services-machine-endpoint>/ecp -AzureClientId <Native Web App ID> -AzureTenantGuid <Azure AD Directory ID> -DiscoveryResourceId <Proxied Mopria Discovery Cloud Service App ID>`
 
-    2. 
+    - Use the following command to verify that the printer is published
+        Publish-CloudPrinter -Query -DiscoveryEndpoint \<string\> -AzureClientId \<string\> -AzureTenantGuid \<string\> [-DiscoveryResourceId \<string\>]
 
 
 ## Verifing the deployment
