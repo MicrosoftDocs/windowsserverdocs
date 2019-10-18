@@ -135,7 +135,7 @@ Remote Desktop Protocol compression can be configured by using Group Policy unde
 
 -   **Optimized to use less network bandwidth** Further reduces network bandwidth usage at a cost of approximately 2 MB per session. If you want to use this setting, you should assess the maximum number of sessions and test to that level with this setting before you place the server in production.
 
-You can also choose to not use a RDP compression algorithm. Choosing to not use compression algorithm will use more network bandwidth, and it is only recommended if you are using a hardware device that is designed to optimize network traffic. Even if you choose not to use a compression algorithm, some graphics data will be compressed.
+You can also choose to not use a Remote Desktop Protocol compression algorithm, so we only recommend using it with a hardware device designed to optimize network traffic. Even if you choose not to use a compression algorithm, some graphics data will be compressed.
 
 ### Device redirection
 
