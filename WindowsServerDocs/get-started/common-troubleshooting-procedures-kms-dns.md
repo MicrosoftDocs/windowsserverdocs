@@ -62,7 +62,7 @@ To change the product key to an MAK, follow these steps:
 
 KMS activation requires that a KMS host be configured for the clients to activate against. If there are no KMS hosts configured in your environment, install and activate one by using an appropriate KMS host key. After you configure a computer on the network to host the KMS software, publish the Domain Name System (DNS) settings.
 
-For information about the KMS host configuration process, see [Activate using Key Management Service](https://docs.microsoft.com/windows/deployment/volume-activation/activate-using-key-management-service-vamt) and [Install and Configure VMAT](https://docs.microsoft.com/windows/deployment/volume-activation/install-configure-vamt).
+For information about the KMS host configuration process, see [Activate using Key Management Service](https://docs.microsoft.com/windows/deployment/volume-activation/activate-using-key-management-service-vamt) and [Install and Configure VAMT](https://docs.microsoft.com/windows/deployment/volume-activation/install-configure-vamt).
 
 [Return to the procedure list.](#list)
 
