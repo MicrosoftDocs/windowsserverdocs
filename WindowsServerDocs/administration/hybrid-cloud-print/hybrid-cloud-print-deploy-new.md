@@ -312,11 +312,11 @@ This guide outlines five (5) installation steps:
 
 - Login to your MDM provider
 - Find the Enterprise Cloud Print policy group and configure the policies following the guidelines below:
-  - CloudPrintOAuthAuthority = `https://login.microsoftonline.com/\<Azure AD Directory ID\>`
+  - CloudPrintOAuthAuthority = `https://login.microsoftonline.com/\<Azure AD Directory ID\>`. The directory ID can be found under Azure Active Directory > Properties
   - CloudPrintOAuthClientId = "Application ID" value of the Native Web App that you registered in Azure AD management portal
-  - CloudPrinterDiscoveryEndPoint = External URL of the Mopria Discovery Service Azure Application Proxy created in Step 3.3 (must be exactly the same but without the trailing /)
-  - MopriaDiscoveryResourceId = The "App ID URI" of the Web app / API for the discovery endpoint registered in Step 2.8.  You can find this under the Settings -> Properties of the app
-  - CloudPrintResourceId = The "App ID URI" of the Web app / API for the print endpoint registered in Step 2.8. You can find this under the Settings -> Properties of the app
+  - CloudPrinterDiscoveryEndPoint = External URL of the Mopria Discovery Service app (must be exactly the same but without the trailing /)
+  - MopriaDiscoveryResourceId = The "App ID URI" of the Mopria Discovery Service app.  You can find this under Azure Active Directory > App registrations > Select the Mopria Discovery Service app > Overview
+  - CloudPrintResourceId = The "App ID URI" of the Enterprise Cloud Print app. You can find this under Azure Active Directory > App registrations > Select the Enterprise Cloud Print app > Overview
   - DiscoveryMaxPrinterLimit = \<a positive integer\>
 
 >   Note: If you are using Microsoft Intune service, you can find these settings under the "Cloud Printer" category.
@@ -352,7 +352,7 @@ This guide outlines five (5) installation steps:
 2. Share the printer through the Printer Properties UI
 3. Select the desired set of users to grant access
 4. Save the changes and close out the printer properties window
-5. Prepare a Windows 10 Fall Creator Update or later machine. Join the machine to Azure AD, and login as a user who is synchronized with on-premises Active Directory and has administrator right to the Print Server machine.
+5. Prepare a Windows 10 Fall Creator Update or later machine. Join the machine to Azure AD, and login as a user who is synchronized with on-premises Active Directory and has been given proper permission to the MopriaDeviceDb.db file.
 6. From the Windows 10 machine, open an elevated Windows PowerShell command prompt
     - Run the following commands
         - `find-module -Name "PublishCloudPrinter"` to confirm that the machine can reach the PowerShell Gallery (PSGallery)
