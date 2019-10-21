@@ -8,7 +8,7 @@ author: jasongerend
 ms.author: jgerend
 ms.date: 10/15/2019
 ---
-# What's new in Windows Server, version 1903 and 1909
+# What's new in Windows Server, versions 1903 and 1909
 
 >Applies to: Windows Server (Semi-Annual Channel)
 
