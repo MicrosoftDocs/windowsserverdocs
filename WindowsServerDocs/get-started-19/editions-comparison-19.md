@@ -149,7 +149,6 @@ ms.localizationpriority: medium
 |Network Load Balancing|Yes|Yes|
 |Windows PowerShell|Yes|Yes|
 |Server Core installation option|Yes|Yes|
-|Nano Server installation option|Yes|Yes|
 |Server Manager|Yes|Yes|
 |SMB Direct and SMB over RDMA|Yes|Yes|
 |Software-defined Networking|No| <strong>Yes</strong> |
