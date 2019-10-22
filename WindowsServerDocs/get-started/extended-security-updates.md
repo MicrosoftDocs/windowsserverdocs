@@ -1,6 +1,6 @@
 ---
 title: Windows Server 2008 and 2008 R2 Extended Security Updates
-description: Learn how to use Extended Security Updates (ESU) for Windows Server 2008 and 2008 R2 in Azure after the end of their support lifecycle.
+description: Learn how to use Extended Security Updates (ESU) for Windows Server 2008 and 2008 R2 after the end of their support lifecycle.
 ms.prod: windows-server
 ms.technology: server-general
 ms.mktglfcycl: manage
@@ -10,7 +10,7 @@ ms.topic: get-started-article
 ms.localizationpriority: high
 ---
 
-# How to use Windows Server 2008 and 2008 R2 Extended Security Updates (ESU) in Azure
+# How to use Windows Server 2008 and 2008 R2 Extended Security Updates (ESU)
 
 >Applies To: Windows Server 2008 / 2008 R2
 
@@ -35,18 +35,20 @@ Extended Security Updates (ESUs) for Windows Server include security updates and
 
 For more information, see the [Extended Security Updates frequently asked questions](https://www.microsoft.com/cloud-platform/extended-security-updates).
 
-## How to register for Extended Security Updates
+## Register for Extended Security Updates
 
-Please follow the steps below to register for ESUs on Azure Portal:
+To use ESUs, you create a Multiple Activation Key (MAK) and apply it to Windows Server 2008 and 2008 R2 computers. This MAK lets the Windows Update servers know that you can continue to receive security updates.
+
+To register for ESUs and create a MAK, complete the following steps in the Azure Portal:
 
 1. Sign in to the [Azure portal](https://portal.azure.com/).
 1. In the search box at the top of the Azure Portal, search for and select **Extended Security Updates**.
 
     -- INSERT IMAGE --
 
-    If you haven't created a Windows Server Registry, chose to **+ Create** an Extended Security Updates resource first. Otherwise, select your resource from the list.
+    If you haven't use ESUs before, chose to **+ Create** an Extended Security Updates resource first. Otherwise, select your resource from the list.
 
-1. Under **View and create Multiple Activation Keys**, select **View keys**. To create your first key, select **Create key**.
+1. Under **View and create Multiple Activation Keys**, select **View keys**. To create your first Multiple Activation Key, select **Create key**.
 
     -- INSERT IMAGE --
 
@@ -74,8 +76,10 @@ Please follow the steps below to register for ESUs on Azure Portal:
 
     When ready, select **Create** to deploy the new resource.
 
-Extended Security Updates registration is now available for use with your computers.
+Extended Security Updates registration is now available for use with your computers. The MAK created should be applied to Windows Server 2008 and 2008 R2 computers that you wish to remain eligible for security updates.
 
-## How to download and apply Extended Security Updates
+## Download and apply Extended Security Updates
 
-Delivery, download and application of Extended Security Updates for Windows Server is no different than existing deployment processes. The updates are only for *Security*, and are released every Patch Tuesday. You can install the updates using whatever tools and processes already in place. The only difference is that the system must be unlocked using the key generated in the previous section for the updates to install.
+Delivery, download and application of Extended Security Updates for Windows Server is no different than existing deployment processes. The updates are only for *Security*, and are released every Patch Tuesday.
+
+You can install the updates using whatever tools and processes already in place. The only difference is that the system must be unlocked using the key generated in the previous section for the updates to install.
