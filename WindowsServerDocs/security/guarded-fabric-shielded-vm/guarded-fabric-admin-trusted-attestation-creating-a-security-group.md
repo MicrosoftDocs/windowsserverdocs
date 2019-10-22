@@ -1,7 +1,7 @@
 ---
 title: Create a security group for guarded hosts and register the group with HGS
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.topic: article
 ms.assetid: a12c8494-388c-4523-8d70-df9400bbc2c0
 manager: dongill

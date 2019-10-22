@@ -3,7 +3,7 @@ title: Set up a direct-video-connected station in MultiPoint Services
 description: Learn how to create a direct-video-connected station in MultiPoint Services
 ms.custom: na
 ms.date: 07/22/2016
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: multipoint-services
 ms.reviewer: na
 ms.suite: na
@@ -57,7 +57,7 @@ If you add more than one direct video-connected station to your MultiPoint Servi
   
 ## To find out which direct video-connected station is the primary station  
   
-1.  Turn on all monitors that are connected directly to the computer’s display adapters (video cards).  
+1.  Turn on all monitors that are connected directly to the computer's display adapters (video cards).  
   
 2.  Start (or restart) the MultiPoint Services computer, and see which monitor displays the startup screens. That station is the primary station.  
   

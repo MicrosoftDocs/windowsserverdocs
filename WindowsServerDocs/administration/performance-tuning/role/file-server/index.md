@@ -1,7 +1,7 @@
 ---
 title: Performance tuning for file servers
 description: Performance tuning for file servers running Windows Server
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: performance-tuning-guide
 ms.topic: article
 author: phstee

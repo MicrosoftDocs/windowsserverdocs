@@ -1,6 +1,6 @@
 ---
 title: Deploy Storage Spaces Direct
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 manager: eldenc
 ms.author: stevenek
 ms.technology: storage-spaces

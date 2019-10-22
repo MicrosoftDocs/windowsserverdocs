@@ -7,14 +7,14 @@ author: haley-rowland
 ms.author: harowl
 ms.date: 04/12/2018
 ms.localizationpriority: medium
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ---
 
 # Windows Admin Center Settings
 
 > Applies To: Windows Admin Center
 
-Windows Admin Center settings consist of user-level and gateway-level settings. A change to a user-level setting only affects the current user’s profile, while a change to a gateway-level setting affects all users on that Windows Admin Center gateway.
+Windows Admin Center settings consist of user-level and gateway-level settings. A change to a user-level setting only affects the current user's profile, while a change to a gateway-level setting affects all users on that Windows Admin Center gateway.
 
 ## User settings
 

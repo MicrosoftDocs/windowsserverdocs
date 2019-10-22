@@ -2,7 +2,7 @@
 title: Create virtual machines for Remote Desktop
 description: Create VMs to host Remote Desktop components in the cloud.
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: remote-desktop-services

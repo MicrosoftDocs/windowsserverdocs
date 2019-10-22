@@ -2,7 +2,7 @@
 title: Scale out your RDS deployment by adding an RD Session Host farm
 description: Add a second RD Session Host to yur RDS environment.
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: remote-desktop-services

@@ -2,7 +2,7 @@
 title: Add high availability to the RD Web and Gateway web front
 description: Provides steps for installing the RD Web and Gateway servers in an RDS deployment.
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: remote-desktop-services
@@ -90,12 +90,13 @@ If you are using Azure infrastructure, you can create an external Azure load bal
 1.  Create an Azure Load Balancer:  
     1.  In the Azure portal click **Browse > Load balancers > Add**.  
     2.  Enter a name, for example **WebGwLB**.  
-    3.  Select **Public** for the **Scheme**, **Public IP address**, and a **Public IP address**. You can select an existing Public IP address or create a new one. 
-    4.  Select the appropriate **Subscription**, **Resource Group**, and **Location**.
-    5.  Click **Create**.  
+    3.  Select **Public** for the **Scheme**.
+    4.  Under **Public IP address**, select **Choose a public IP address**, and then pick an existing public IP address or create a new one.
+    5.  Select the appropriate **Subscription**, **Resource Group**, and **Location**.
+    6.  Click **Create**.  
 2. Create a [probe](https://azure.microsoft.com/documentation/articles/load-balancer-custom-probe-overview/) to monitor which servers are alive:  
-    1.  In the Azure portal click **Browse > Load Balancers**., the load balancer you just created, e.g. WebGwLB, and Settings  
-    2.  Click **Probes > Add**.  
+    1.  In the Azure portal, select **Browse** > **Load Balancers**, and then choose the load balancer that you created in the previous step.
+    2.  Select **All settings** > **Probes** > **Add**.  
     3.  Enter a name, for example, **HTTPS**, for the probe. Select **TCP** as the **Protocol**, and enter **443** for the **Port**, then click **OK**.   
 3.  Create the HTTPS and UDP load balancing rules:  
     1.  In **Settings**, click **Load balancing rules**.  

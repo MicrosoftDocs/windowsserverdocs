@@ -1,7 +1,7 @@
 ---
 title: What's New in Windows Server, version 1709
 description: "What are the new features in compute, identity, management, automation, networking, security, storage."
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: server-general
 ms.topic: article
 author: coreyp-at-msft
@@ -38,7 +38,7 @@ For more information, see [Comparison of servicing channels](https://docs.micros
 
 ## Application containers and micro-services
 
-- The Server Core container image has been further optimized for lift-and-shift scenarios where you can migrate existing code bases or applications into containers with minimal changes, and it’s also 60% smaller. 
+- The Server Core container image has been further optimized for lift-and-shift scenarios where you can migrate existing code bases or applications into containers with minimal changes, and it's also 60% smaller. 
 - The Nano Server container image is nearly 80% smaller.
     - In the Windows Server Semi-Annual Channel, Nano Server as a container base OS image is decreased from 390 MB to 80 MB.
 - Linux containers with Hyper-V isolation 
@@ -64,9 +64,9 @@ For more information about containers, see [Container Networking Overview](https
 
 **Virtualized Persistent Memory (vPMEM)** is enabled by creating a VHD file (.vhdpmem) on a direct access volume on a host, adding a vPMEM Controller to a VM, and adding the created device (.vhdpmem) to a VM. Using vhdpmem files on direct access volumes on a host to back vPMEM enables allocation flexibility and leverages a familiar management model for adding disks to VMs.
 
-**Container storage – persistent data volumes on cluster shared volumes (CSV)**. In Windows Server, version 1709 as well as Windows Server 2016 with the latest updates, we’ve added support for containers to access persistent data volumes located on CSVs, including CSVs on Storage Spaces Direct. This gives the application container persistent access to the volume no matter which cluster node the container instance is running on. For more info, see [Container Storage Support with Cluster Shared Volumes (CSV), Storage Spaces Direct (S2D), SMB Global Mapping](https://blogs.msdn.microsoft.com/clustering/2017/08/10/container-storage-support-with-cluster-shared-volumes-csv-storage-spaces-direct-s2d-smb-global-mapping/).
+**Container storage – persistent data volumes on cluster shared volumes (CSV)**. In Windows Server, version 1709 as well as Windows Server 2016 with the latest updates, we've added support for containers to access persistent data volumes located on CSVs, including CSVs on Storage Spaces Direct. This gives the application container persistent access to the volume no matter which cluster node the container instance is running on. For more info, see [Container Storage Support with Cluster Shared Volumes (CSV), Storage Spaces Direct (S2D), SMB Global Mapping](https://blogs.msdn.microsoft.com/clustering/2017/08/10/container-storage-support-with-cluster-shared-volumes-csv-storage-spaces-direct-s2d-smb-global-mapping/).
 
-**Container storage – persistent data volumes with SMB global mapping**. In Windows Server, version 1709 we’ve added support for mapping an SMB file share to a drive letter inside a container – this is called SMB global mapping. This mapped drive is then accessible to all users on the local server so that container I/O on the data volume can go through the mounted drive to the underlying file share. For more info, see [Container Storage Support with Cluster Shared Volumes (CSV), Storage Spaces Direct (S2D), SMB Global Mapping](https://blogs.msdn.microsoft.com/clustering/2017/08/10/container-storage-support-with-cluster-shared-volumes-csv-storage-spaces-direct-s2d-smb-global-mapping/).
+**Container storage – persistent data volumes with SMB global mapping**. In Windows Server, version 1709 we've added support for mapping an SMB file share to a drive letter inside a container – this is called SMB global mapping. This mapped drive is then accessible to all users on the local server so that container I/O on the data volume can go through the mounted drive to the underlying file share. For more info, see [Container Storage Support with Cluster Shared Volumes (CSV), Storage Spaces Direct (S2D), SMB Global Mapping](https://blogs.msdn.microsoft.com/clustering/2017/08/10/container-storage-support-with-cluster-shared-volumes-csv-storage-spaces-direct-s2d-smb-global-mapping/).
 
 **Virtual machine configuration file format (updated)**. An additional file (.vmgs) has been added for virtual machines with a configuration version of 8.2 and higher. VMGS stands for VM guest state and is a new internal file which includes device state that was previously part of the VM runtime state file.
 
@@ -107,7 +107,7 @@ An issue, known as “SMBLoris”, which could result in denial of service, has 
 
 ## Networking
 
-**Docker's Routing Mesh** is supported. Ingress routing mesh is part of [swarm mode](https://docs.docker.com/engine/swarm/), Docker’s built-in orchestration solution for containers. For more information, see [Docker's routing mesh available with Windows Server version 1709](https://blogs.technet.microsoft.com/virtualization/2017/09/26/dockers-ingress-routing-mesh-available-with-windows-server-version-1709/).
+**Docker's Routing Mesh** is supported. Ingress routing mesh is part of [swarm mode](https://docs.docker.com/engine/swarm/), Docker's built-in orchestration solution for containers. For more information, see [Docker's routing mesh available with Windows Server version 1709](https://blogs.technet.microsoft.com/virtualization/2017/09/26/dockers-ingress-routing-mesh-available-with-windows-server-version-1709/).
 
 **New features for Docker** are available. For more information, see [Exciting new things for Docker with Windows Server 1709](https://blog.docker.com/2017/09/docker-windows-server-1709/).
 

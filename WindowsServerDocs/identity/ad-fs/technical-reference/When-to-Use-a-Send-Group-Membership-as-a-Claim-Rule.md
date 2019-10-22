@@ -7,7 +7,7 @@ ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 
 ms.technology: identity-adfs
 ---
@@ -17,7 +17,7 @@ You can use this rule in Active Directory Federation Services \(AD FS\) when y
   
 |Rule option|Rule logic|  
 |---------------|--------------|  
-|Outgoing claim value|If a user’s group membership is equal to the *specified group* and outgoing claim type equals *specified claim type*, then replace the existing group name value with the *specified outgoing claim value* and issue the claim.|  
+|Outgoing claim value|If a user's group membership is equal to the *specified group* and outgoing claim type equals *specified claim type*, then replace the existing group name value with the *specified outgoing claim value* and issue the claim.|  
   
 The following sections provide a basic introduction to claim rules. They also provide details about when to use the Send Group Membership as a Claim rule.  
   
@@ -37,7 +37,7 @@ For more detailed information about claim rules and claim rule sets, see [The Ro
 ## Outgoing claim value  
 Using the Send Group Membership as a Claim rule template, you can issue a claim that is contingent on whether a user is a member of a group that you specify.  
   
-In other words, this rule template issues a claim only when the user has the group security ID \(SID\) that matches the Active Directory group that the administrator specifies. All users who authenticate against Active Directory Domain Services \(AD DS\) will have incoming group SID claims for each group that they belong to. By default, the acceptance transform rules in the Active Directory Claims Provider Trust pass through these group SID claims. Using these group SIDs as a basis for issuing claims is much faster than looking up the user’s groups in AD DS.  
+In other words, this rule template issues a claim only when the user has the group security ID \(SID\) that matches the Active Directory group that the administrator specifies. All users who authenticate against Active Directory Domain Services \(AD DS\) will have incoming group SID claims for each group that they belong to. By default, the acceptance transform rules in the Active Directory Claims Provider Trust pass through these group SID claims. Using these group SIDs as a basis for issuing claims is much faster than looking up the user's groups in AD DS.  
   
 When you use this rule, only a single claim is sent, based on the Active Directory group that you select. For example, you can use this rule template to create a rule that will send a group claim with a value of "Admin" if the user is a member of the Domain Admins security group.  
   
@@ -49,7 +49,7 @@ You create this rule using either the claim rule language or by using the Send L
   
 -   Specify a claim rule name  
   
--   Select a user’s group using object picker  
+-   Select a user's group using object picker  
   
 -   Select an outgoing claim type  
   
@@ -62,7 +62,7 @@ For more information about how to create this rule, see [Create a Rule to Send G
 ## Using the claim rule language  
 If you want to issue claims based on an incoming SID other than a group SID, use the Transform an Incoming Claim rule template. If the administrator wants to retrieve the names for all the groups that the user is a member of, use the Send LDAP Attributes as Claims rule template instead with the **tokenGroups** attribute.  
   
-### Example: How to issue group claims based on the user’s group membership  
+### Example: How to issue group claims based on the user's group membership  
 The following rule issues group claims for a user based on an incoming group SID:  
   
 ```  

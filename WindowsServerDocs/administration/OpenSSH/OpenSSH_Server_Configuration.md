@@ -8,7 +8,7 @@ author: maertendMSFT
 title: OpenSSH Server Configuration for Windows
 ---
 
-# OpenSSH Server Configuration for Windows 10 1809 and Server 2019#
+# OpenSSH Server Configuration for Windows 10 1809 and Server 2019
 
 This topic covers the Windows-specific configuration for OpenSSH Server (sshd). 
 

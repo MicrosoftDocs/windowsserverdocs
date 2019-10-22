@@ -7,7 +7,7 @@ manager: daveba
 ms.reviewer: akgoel23
 ms.date: 02/19/2019
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: identity-adfs
 ---
 
@@ -18,14 +18,17 @@ ms.technology: identity-adfs
 # Customize HTTP security response headers with AD FS 2019 
  
 To protect against common security vulnerabilities and provide administrators the ability to take advantage of the latest advancements in browser-based protection mechanisms, AD FS 2019 added the functionality to customize the HTTP security response headers sent by AD FS. This is accomplished through the introduction of two new cmdlets: `Get-AdfsResponseHeaders` and `Set-AdfsResponseHeaders`.  
- 
+
+>[!NOTE]
+>The functionality to customize the HTTP security response headers (except CORS Headers) using cmdlets: `Get-AdfsResponseHeaders` and `Set-AdfsResponseHeaders` was backported to AD FS 2016. You can add the functionality to your AD FS 2016 by installing [KB4493473](https://support.microsoft.com/en-us/help/4493473/windows-10-update-kb4493473) and [KB4507459](https://support.microsoft.com/en-us/help/4507459/windows-10-update-kb4507459). 
+
 In this document we will discuss commonly used security response headers to demonstrate how to customize headers sent by AD FS 2019.   
  
 >[!NOTE]
 >The document assumes that AD FS 2019 has been installed.  
 
  
-Before we discuss headers, let’s look into a few scenarios creating the need for admins to customize security headers 
+Before we discuss headers, let's look into a few scenarios creating the need for admins to customize security headers 
  
 ## Scenarios 
 1. Administrator has enabled [**HTTP Strict-Transport-Security (HSTS)**](#http-strict-transport-security-hsts) (forces all connections over HTTPS encryption) to protect the users who might access the web app using HTTP from a public wifi access point that might be hacked. She would like to further strengthen security by enabling HSTS for subdomains.  
@@ -76,7 +79,7 @@ Set-AdfsResponseHeaders -RemoveHeaders "Strict-Transport-Security"
 ### X-Frame-Options 
 AD FS by default does not allow external applications to use iFrames when performing interactive logins. This is done to prevent certain style of phishing attacks. Note that non-interactive logins can be performed via iFrame due to prior session level security that has been established.  
  
-However, in certain rare cases you may trust a specific application that requires iFrame capable interactive AD FS login page. The ‘X-Frame-Options’ header is used for this purpose.  
+However, in certain rare cases you may trust a specific application that requires iFrame capable interactive AD FS login page. The ‘X-Frame-Options' header is used for this purpose.  
  
 This HTTP security response header is used to communicate to the browser whether it can render a page in a &lt;frame&gt;/&lt;iframe&gt;. The header can be set to one of the following values: 
  
@@ -131,7 +134,7 @@ Set-AdfsResponseHeaders -RemoveHeaders "X-XSS-Protection"
 ### Cross Origin Resource Sharing (CORS) headers 
 Web browser security prevents a web page from making cross-origin requests initiated from within scripts. However, sometimes you might want to access resources in other origins (domains). CORS is a W3C standard that allows a server to relax the same-origin policy. Using CORS, a server can explicitly allow some cross-origin requests while rejecting others.  
  
-To better understand CORS request, let’s walkthrough a scenario where a single page application (SPA) needs to call a web API with a different domain. Further, let’s consider that both SPA and API are configured on ADFS 2019 and AD FS has CORS enabled i.e. AD FS can identify CORS headers in the HTTP request, validate header values, and include appropriate CORS headers in the response (details on how to enable and configure CORS on AD FS 2019 in CORS Customization section below). Sample flow: 
+To better understand CORS request, let's walkthrough a scenario where a single page application (SPA) needs to call a web API with a different domain. Further, let's consider that both SPA and API are configured on ADFS 2019 and AD FS has CORS enabled i.e. AD FS can identify CORS headers in the HTTP request, validate header values, and include appropriate CORS headers in the response (details on how to enable and configure CORS on AD FS 2019 in CORS Customization section below). Sample flow: 
 
 1. User accesses SPA through client browser and is redirected to AD FS auth endpoint for authentication. Since SPA is configured for implicit grant flow, request returns an Access + ID token to the browser after successful authentication.  
 2. After user authentication, the front-end JavaScript included in SPA makes a request to access the web API. The request is redirected to AD FS with following headers
@@ -170,12 +173,12 @@ Set-AdfsResponseHeaders -CORSTrustedOrigins https://example1.com,https://example
 > Admins can allow CORS requests from any origin by including "*" in the list of trusted origins, although this approach is not recommended due to security vulnerabilities and a warning message is provided if they choose to. 
 
 ### Content Security Policy (CSP) 
-This HTTP security response header is used to prevent cross-site scripting, clickjacking and other data injection attacks by preventing browsers from inadvertently executing malicious content. Browsers that don’t support CSP simply ignores the CSP response headers.  
+This HTTP security response header is used to prevent cross-site scripting, clickjacking and other data injection attacks by preventing browsers from inadvertently executing malicious content. Browsers that don't support CSP simply ignores the CSP response headers.  
  
 #### CSP Customization 
 Customization of CSP header involves modifying the security policy that defines the resources browser is allowed to load for the web page. The default security policy is  
  
-`Content-Security-Policy: default-src ‘self’ ‘unsafe-inline’ ‘’unsafe-eval’; img-src ‘self’ data:;` 
+`Content-Security-Policy: default-src ‘self' ‘unsafe-inline' ‘'unsafe-eval'; img-src ‘self' data:;` 
  
 The **default-src** directive is used to modify [-src directives](https://developer.mozilla.org/docs/Web/HTTP/Headers/Content-Security-Policy/default-src) without listing each directive explicitly. For instance, in the example below the policy 1 is same as the policy 2.  
 
@@ -186,25 +189,25 @@ Set-AdfsResponseHeaders -SetHeaderName "Content-Security-Policy" -SetHeaderValue
  
 Policy 2
 ```PowerShell 
-Set-AdfsResponseHeaders -SetHeaderName "Content-Security-Policy" -SetHeaderValue "script-src ‘self’; img-src ‘self’; font-src 'self';  
+Set-AdfsResponseHeaders -SetHeaderName "Content-Security-Policy" -SetHeaderValue "script-src ‘self'; img-src ‘self'; font-src 'self';  
 frame-src 'self'; manifest-src 'self'; media-src 'self';" 
 ```
 
-If a directive is explicitly listed, the specified value overrides the value given for default-src. In the example below, the img-src will take the value as ‘*’ (allowing images to be loaded from any origin) while other -src directives will take the value as ‘self’ (restricting to same origin as the web page).  
+If a directive is explicitly listed, the specified value overrides the value given for default-src. In the example below, the img-src will take the value as ‘*' (allowing images to be loaded from any origin) while other -src directives will take the value as ‘self' (restricting to same origin as the web page).  
 
 ```PowerShell
-Set-AdfsResponseHeaders -SetHeaderName "Content-Security-Policy" -SetHeaderValue "default-src ‘self’; img-src *" 
+Set-AdfsResponseHeaders -SetHeaderName "Content-Security-Policy" -SetHeaderValue "default-src ‘self'; img-src *" 
 ```
 Following sources can be defined for the default-src policy 
  
-- ‘self’ – specifying this restricts the origin of the content to load to the origin of the web page 
-- ‘unsafe-inline’ – specifying this in the policy allows the use of inline JavaScript and CSS 
-- ‘unsafe-eval’ – specifying this in the policy allows the use of text to JavaScript mechanisms like eval 
-- ‘none’ – specifying this restricts the content from any origin to load 
+- ‘self' – specifying this restricts the origin of the content to load to the origin of the web page 
+- ‘unsafe-inline' – specifying this in the policy allows the use of inline JavaScript and CSS 
+- ‘unsafe-eval' – specifying this in the policy allows the use of text to JavaScript mechanisms like eval 
+- ‘none' – specifying this restricts the content from any origin to load 
 - data: - specifying data: URIs allows content creators to embed small files inline in documents. Usage not recommended.  
  
 >[!NOTE]
->AD FS uses JavaScript in the authentication process and therefore enables JavaScript by including ‘unsafe-inline’ and ‘unsafe-eval’ sources in default policy.  
+>AD FS uses JavaScript in the authentication process and therefore enables JavaScript by including ‘unsafe-inline' and ‘unsafe-eval' sources in default policy.  
 
 ### Custom Headers 
 In addition to the above listed security response headers (HSTS, CSP, X-Frame-Options, X-XSS-Protection and CORS), AD FS 2019 provides the ability to Set new headers.  

@@ -2,7 +2,7 @@
 title: Block or Unblock a Station
 ms.custom: na
 description: Learn how to stop a user or group from accessing a MultiPoint Services system. 
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: multipoint-services
 ms.reviewer: na
 ms.suite: na
@@ -15,7 +15,7 @@ ms.author: elizapo
 ms.date: 08/04/2016
 ---
 # Block or Unblock a Station
-You can block a user or users from the MultiPoint Services system if you need to get their attention. While users are blocked, their sessions remains active in the MultiPoint Services system’s computer memory until the stations are unblocked. You can customize a message to be displayed for a blocked user.  
+You can block a user or users from the MultiPoint Services system if you need to get their attention. While users are blocked, their sessions remains active in the MultiPoint Services system's computer memory until the stations are unblocked. You can customize a message to be displayed for a blocked user.  
   
 ## To block a station  
   
@@ -30,7 +30,7 @@ You can block a user or users from the MultiPoint Services system if you need to
 2.  On the Blocking tab, click **Unblock**, and then click **Unblock Selected Desktop(s)**.  
    
 ## Create a message to display for blocked users  
-Before you block a user, you may want to create a message to display on the user’s monitor when they are blocked. For example, “Please turn your attention to the speaker.” **Station blocked** is the default text if you do not create your own message.  
+Before you block a user, you may want to create a message to display on the user's monitor when they are blocked. For example, “Please turn your attention to the speaker.” **Station blocked** is the default text if you do not create your own message.  
    
 1.  Click the **Block** drop-down menu, and then click **Set Message**. The **Set Message for Blocked Users** page opens.  
   

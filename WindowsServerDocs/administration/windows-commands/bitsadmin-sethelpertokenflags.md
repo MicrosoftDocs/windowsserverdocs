@@ -2,7 +2,7 @@
 title: bitsadmin sethelpertokenflags
 description: "Windows Commands topic for **bitsadmin sethelpertokenflags** - Sets the usage flags for a helper token that is associated with a BITS transfer job."
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands

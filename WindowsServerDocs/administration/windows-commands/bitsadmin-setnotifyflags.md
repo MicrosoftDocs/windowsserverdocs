@@ -2,7 +2,7 @@
 title: bitsadmin setnotifyflags
 description: "Windows Commands topic for **bitsadmin setnotifyflags** - Sets the event notification flags for the specified job."
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands

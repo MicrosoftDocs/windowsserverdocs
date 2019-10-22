@@ -7,7 +7,7 @@ author: saurabhsensharma
 ms.author: saurse
 ms.date: 03/25/2019
 ms.localizationpriority: low
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ---
 
 # Backup your Windows Servers from Windows Admin Center with Azure Backup

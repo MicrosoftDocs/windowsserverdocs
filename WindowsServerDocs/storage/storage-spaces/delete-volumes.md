@@ -1,7 +1,7 @@
 ---
 title: Deleting volumes in Storage Spaces Direct
 description: How to delete volumes in Storage Spaces Direct using Windows Admin Center.
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: cosmosdarwin
 author: iangpgh
 ms.author: jgerend

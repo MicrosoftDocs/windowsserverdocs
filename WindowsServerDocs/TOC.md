@@ -1,5 +1,6 @@
 # [Windows Server](windows-server.md)
 ## [Windows Server Software-Defined Datacenter (SDDC)](sddc.md)
+## [Upgrade Windows Server](upgrade/upgrade-overview.md)
 ## [Get Started](get-started/Server-Basics.md)
 ## [Manage Windows Server](administration/manage-windows-server.md)
 ## [Connect to Azure](azure-hybrid-services/index.md)

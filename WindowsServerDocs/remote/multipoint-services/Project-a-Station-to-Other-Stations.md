@@ -2,7 +2,7 @@
 title: Project a Station to Other Stations
 description: Learn how to share a desktop from one system to another in MultiPoint Services
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: multipoint-services
 ms.reviewer: na
 ms.suite: na
@@ -15,9 +15,9 @@ ms.author: elizapo
 ms.date: 08/04/2016
 ---
 # Project a Station to Other Stations
-As a MultiPoint Dashboard User, you can project your desktop to a single user’s station or all users’ (non-administrator) stations. This feature is useful when you want to demonstrate a task to a user or set of users.  
+As a MultiPoint Dashboard User, you can project your desktop to a single user's station or all users' (non-administrator) stations. This feature is useful when you want to demonstrate a task to a user or set of users.  
   
-## To project your desktop to a standard user’s station  
+## To project your desktop to a standard user's station  
   
 1.  In MultiPoint Dashboard, click the thumbnail image of the desktop to which you want to project your station.  
 2.  On the **Home** tab, click **Your Desktop**, and then click **Project Your Desktop to Selected Desktop(s)**.  

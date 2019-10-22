@@ -2,7 +2,7 @@
 title: Connect to a Remote Computer
 description: This article describes how to connect to a remote computer to manage storage resources from File Server Resource Manager
 ms.date: 7/7/2017
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: storage
 ms.topic: article
 author: JasonGerend

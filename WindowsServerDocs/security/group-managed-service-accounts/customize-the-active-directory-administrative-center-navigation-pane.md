@@ -1,6 +1,6 @@
 ---
 title: Customize the Active Directory Administrative Center Navigation Pane
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 description: "Windows Server Security"
 ms.custom: na
 ms.reviewer: na

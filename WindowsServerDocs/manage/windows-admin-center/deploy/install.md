@@ -7,7 +7,7 @@ author: jwwool
 ms.author: jeffrew
 ms.date: 07/17/2019
 ms.localizationpriority: medium
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ---
 # Install Windows Admin Center
 

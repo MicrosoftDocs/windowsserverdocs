@@ -2,7 +2,7 @@
 title: RDS - Run and tune
 description: Provides management information for Remote Desktop Services.
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: remote-desktop-services
@@ -18,7 +18,7 @@ manager: scottman
 
 Tuning your deployment takes time and requires instrumentation and monitoring. Use the processes below to refine your Remote Desktop deployment, keep it running and enable scaling out (and in) as needed. 
 
-It’s a good practice to continually assess the metrics and balance against running costs.
+It's a good practice to continually assess the metrics and balance against running costs.
 
 ## Management and monitoring
 
@@ -41,4 +41,4 @@ Maintaining a running, highly scaled application involves repeating operations o
 
 ## Load testing: Avoid surprises
 
-Load test the deployment with both stress tests and simulation of real-life usage. Vary the load size to avoid surprises! Ensure that responsiveness meets user requirements, and that the entire system is resilient. Create load tests with simulation tools, like LoginVSI, that check your deployment’s ability to meet the users’ needs. 
+Load test the deployment with both stress tests and simulation of real-life usage. Vary the load size to avoid surprises! Ensure that responsiveness meets user requirements, and that the entire system is resilient. Create load tests with simulation tools, like LoginVSI, that check your deployment's ability to meet the users' needs. 

@@ -1,16 +1,12 @@
 ---
 title: Features removed or planned for replacement starting with Windows Server (version 1709)
 description: "Features and functionalities removed or planned for removal in releases."
-ms.custom: na
-ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.suite: na
+ms.prod: windows-server
 ms.technology: server-general
-ms.tgt_pltfrm: na
 ms.topic: article
-ms.date: 06/05/2018
-author: jaimeo
-ms.author: jaimeo
+ms.date: 08/22/2019
+author: jasongerend
+ms.author: jgerend
 manager: dougkim
 ms.localizationpriority: medium
 ---
@@ -20,7 +16,12 @@ ms.localizationpriority: medium
 
 The following is a list of features and functionalities in Windows Server, version 1709 that have either been removed from the product in that release or are starting to be considered for potential replacement in subsequent releases. It is intended for IT professionals who are updating operating systems in a commercial environment. **This list is subject to change in subsequent releases and might not include every affected feature or functionality.** 
 
+> [!TIP]
+> - You can get early access to Windows Server builds by joining the [Windows Insider program](https://insider.windows.com) - this is a great way to test feature changes.
+> - Have questions about other releases? Check out [Features removed or planned for replacement in Windows Server](../get-started-19/removed-features.md).
+
 ## Features removed from Windows Server, version 1709
+
 Windows Server, version 1709 contains the same features present in Windows Server 2016. However, this release does offer different installation options than Windows Server 2016 does:
 
 - As a Semi-Annual Channel release, Windows Server, version 1709 offers only the Server Core installation option. For details, see [Comparison of servicing channels](../get-started-19/servicing-channels-19.md).

@@ -3,7 +3,7 @@ title: Glossary
 description: Defines words, terms, and concepts in MultiPoint Services
 ms.custom: na
 ms.date: 07/22/2016
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: multipoint-services
 ms.reviewer: na
 ms.suite: na
@@ -16,10 +16,10 @@ ms.author: evas
 ---
 # Glossary
 **associate a station**  
-To specify which monitor is used with which station and peripheral devices, such as a keyboard and mouse. For direct video connected stations, this is done by pressing a specified key on the station’s keyboard when prompted to do so. For USB zero client connected stations, this typically happens automatically.  
+To specify which monitor is used with which station and peripheral devices, such as a keyboard and mouse. For direct video connected stations, this is done by pressing a specified key on the station's keyboard when prompted to do so. For USB zero client connected stations, this typically happens automatically.  
   
 **bus-powered hub**  
-A hub that draws all of its power from the computer’s USB interface. Bus-powered hubs do not need separate power connections. However, many devices do not work with this type of hub because they require more power than this type of hub provides.  
+A hub that draws all of its power from the computer's USB interface. Bus-powered hubs do not need separate power connections. However, many devices do not work with this type of hub because they require more power than this type of hub provides.  
   
 **console mode**  
 One of the two modes MultiPoint services can start. When the system is in console mode, no stations are available for use. Instead, all of the monitors are treated as a single extended desktop for the console session of the computer system. Console mode is typically used to install, update, or configure software, which cannot be done when the computer is in station mode. See also: *station mode*.  
@@ -55,13 +55,13 @@ A collection of hardware and software that consists of one computer that has Win
 A section of space on a physical disk that functions as if it is a separate disk.  
   
 **primary station**  
-The station that is the first to start up when MultiPoint Services is started. The primary station can be used by an administrator to access startup menus and settings. When it is not being used by the administrator, it can be used as a normal station (it does not have to be reserved exclusively for administration). The primary station’s monitor must always be connected directly to a video output on the computer that is running MultiPoint Services. See also: station.  
+The station that is the first to start up when MultiPoint Services is started. The primary station can be used by an administrator to access startup menus and settings. When it is not being used by the administrator, it can be used as a normal station (it does not have to be reserved exclusively for administration). The primary station's monitor must always be connected directly to a video output on the computer that is running MultiPoint Services. See also: station.  
   
 **RDP-over-LAN-connected station**  
 A station that is a thin client, traditional desktop, or laptop computer that connects to MultiPoint services by using Remote Desktop Protocol (RDP) through the local area network (LAN).  
   
 **root hub**  
-A USB hub that is built-in to the host controller on a computer’s motherboard.  
+A USB hub that is built-in to the host controller on a computer's motherboard.  
   
 **split screen**  
 A station where a single monitor can be used to display two independent user desktops. Two sets of hubs, keyboards, and mice are associated with a single monitor. One set is associated with the left side of the monitor, and the other set is associated with the right side of the monitor.  

@@ -2,7 +2,7 @@
 title: Delegate Management Permissions for DFS Namespaces
 description: This article describes how to delegate management permissions for DFS namespaces, and which groups can execute namespace tasks by default
 ms.date: 6/5/2017
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: storage
 ms.topic: article
 author: JasonGerend

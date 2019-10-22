@@ -1,7 +1,7 @@
 ---
 title: Deploy your Remote Desktop environment
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 description: Basic steps to deploy a Remote Desktop environment.
 ms.reviewer: na
 ms.suite: na
@@ -40,7 +40,7 @@ If you are using virtual machines for any of the Remote Desktop Services servers
 4.  Activate the RD License Server and add it to the License Servers group:  
     1.  In Server Manager, click **Tools > Terminal Services > Remote Desktop Licensing Manager**.  
     2.  In RD Licensing Manager, select the server, and then click **Action > Activate Server**.  
-    3.  Accept the default values in the Activate Server Wizard accepting defaults until you reach the **Company information** page. Then, enter your company information.  
+    3.  Accept the default values in the Activate Server Wizard. Continue accepting default values until you reach the **Company information** page. Then, enter your company information.  
     4.  Accept the defaults for the remaining pages until the final page. Clear **Start Install Licenses Wizard now**, and then click **Finish**.  
     5.  Click **Action > Review Configuration > Add to Group > OK**. Enter credentials for a user in the AAD DC Administrators group, and register as SCP. This step might not work if you are using Azure AD Domain Services, but you can ignore any warnings or errors.  
 5.  Add the RD Gateway server and certificate name:  

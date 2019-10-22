@@ -63,9 +63,39 @@
 ### [Customize the RDS title “Work Resources” using PowerShell on Windows Server](rds-work-resources.md)
 ### [Diagnose app performance issues with performance counters](rds-rdsh-performance-counters.md)
 
-## [Additional Remote Desktop support](rds-get-support.md)
-## [Remote Desktop clients](clients/remote-desktop-clients.md)
-### Remote Desktop known issues
+## Access your Remote Desktop resources
+### [Available Remote Desktop clients](clients/remote-desktop-clients.md)
+### Windows Desktop client
+#### [Get started with the Windows Desktop client](clients/windowsdesktop.md)
+#### [Windows Desktop client for admins](clients/windowsdesktop-admin.md)
+#### [What's new in the Windows Desktop client](clients/windowsdesktop-whatsnew.md)
+### Windows Store client
+#### [Get started with the Windows Store client](clients/windows.md)
+#### [What's new in the Windows Store client](clients/windows-whatsnew.md)
+### Android client
+#### [Get started with the Android client](clients/remote-desktop-android.md)
+#### [What's new in the Android client](clients/android-whatsnew.md)
+### iOS client
+#### [Get started with the iOS client](clients/remote-desktop-ios.md)
+#### [What's new in the iOS client](clients/ios-whatsnew.md)
+### macOS client
+#### [Get started with the macOS client](clients/remote-desktop-mac.md)
+#### [What's new in the macOS client](clients/mac-whatsnew.md)
+### Web client
+#### [Get started with the web client](clients/remote-desktop-web-client.md)
+#### [What's new in the web client](clients/web-client-whatsnew.md)
+### Setting up your PC for Remote Desktop
+#### [Supported PCs](clients/remote-desktop-supported-config.md)
+#### [Grant Remote Desktop access to your PC](clients/remote-desktop-allow-access.md)
+#### [Grant access to your PC from outside your network](clients/remote-desktop-allow-outside-access.md)
+#### [Change the RD listening port on your PC](clients/change-listening-port.md)
+### Advanced information
+#### [Which client works best for you?](clients/remote-desktop-app-compare.md)
+#### [Remote Desktop RDP file settings](clients/rdp-files.md)
+#### [Remote Desktop URI scheme](clients/remote-desktop-uri.md)
+#### [Remote Desktop client FAQ](clients/remote-desktop-client-faq.md)
+#### [Privacy settings for managed apps and desktops](clients/remote-privacy-settings.md)
+### Known issues
 #### [General Remote Desktop connection troubleshooting](troubleshoot/rdp-error-general-troubleshooting.md)
 #### [Clients can't connect and get the "Class not registered" error](troubleshoot/rdp-error-class-not-registered.md)
 #### [Clients can't connect and see "No licenses available" error](troubleshoot/rdp-error-no-licenses-available.md)
@@ -74,29 +104,5 @@
 #### [Remote Desktop client disconnects and can't reconnect to the same session](troubleshoot/rdp-client-disconnects-cannot-reconnect-same-session.md)
 #### [Remote laptop disconnects from wireless network](troubleshoot/remote-laptop-disconnects-wireless-network.md)
 #### [Poor performance or application problems during remote desktop connection](troubleshoot/poor-performance-or-application-problems.md)
-### General information
-#### [Which client works best for you?](clients/remote-desktop-app-compare.md)
-#### [Remote Desktop RDP file settings](clients/rdp-files.md)
-#### [Remote Desktop URI scheme](clients/remote-desktop-uri.md)
-#### [Remote Desktop client FAQ](clients/remote-desktop-client-faq.md)
-#### [Privacy settings for managed apps and desktops](clients/remote-privacy-settings.md)
-### Remote Desktop client for Windows
-#### [Get started](clients/windows.md)
-#### [What's new in the Windows client?](clients/windows-whatsnew.md)
-### Remote Desktop client for Android
-#### [Get started](clients/remote-desktop-android.md)
-#### [What's new in the Android client?](clients/android-whatsnew.md)
-### Remote Desktop client for iOS
-#### [Get started](clients/remote-desktop-ios.md)
-#### [What's new in the iOS client?](clients/ios-whatsnew.md)
-### Remote Desktop client for Mac
-#### [Get started](clients/remote-desktop-mac.md)
-#### [What's new in the MacOS client?](clients/mac-whatsnew.md)
-### Remote Desktop web client
-#### [Access the Remote Desktop web client](clients/remote-desktop-web-client.md)
-#### [What's new in the web client?](clients/web-client-whatsnew.md)
-### Setting up your PC for Remote Desktop
-#### [Supported PCs](clients/remote-desktop-supported-config.md)
-#### [Grant Remote Desktop access to your PC](clients/remote-desktop-allow-access.md)
-#### [Grant access to your PC from outside your network](clients/remote-desktop-allow-outside-access.md)
-#### [Change the RD listening port on your PC](clients/change-listening-port.md)
+
+## [Additional resources](rds-get-support.md)

@@ -2,7 +2,7 @@
 title: 'SMB: File and printer sharing ports should be open'
 TOCTitle: 'SMB: File and printer sharing ports should be open'
 ms.date: 07/02/2012
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: storage
 author: JasonGerend
 manager: elizapo

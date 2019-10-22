@@ -1,7 +1,7 @@
 ﻿---
 title: Use Robocopy to preseed files for DFS Replication
 description: How to use Robocopy.exe to preseed files for DFS Replication.
-ms.prod: windows-server-threshold 
+ms.prod: windows-server 
 ms.topic: article 
 author: JasonGerend 
 ms.author: jgerend 
@@ -105,7 +105,7 @@ After you minimize locks on the files that will be replicated, you can preseed t
     |MT:64|Copies 64 files simultaneously.|
     |/xd DfsrPrivate|Excludes the DfsrPrivate folder.|
     |/tee|Writes status output to the console window, as well as to the log file.|
-    |/log \<log file path>|Specifies the log file to write. Overwrites the file’s existing contents. (To append the entries to the existing log file, use `/log+ <log file path>`.)|
+    |/log \<log file path>|Specifies the log file to write. Overwrites the file's existing contents. (To append the entries to the existing log file, use `/log+ <log file path>`.)|
     |/v|Produces verbose output that includes skipped files.|
     
     For example, the following command replicates files from the source replicated folder, E:\\RF01, to data drive D on the destination server:

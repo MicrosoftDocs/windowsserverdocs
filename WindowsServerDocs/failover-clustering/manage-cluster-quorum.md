@@ -1,7 +1,7 @@
 ---
 title: Configure and manage the quorum in a failover cluster
 description: Detailed info on how to manage the cluster quorum in a Windows Server failover cluster. 
-ms.prod: windows-server-threshold 
+ms.prod: windows-server 
 ms.topic: article 
 author: JasonGerend 
 ms.author: jgerend 

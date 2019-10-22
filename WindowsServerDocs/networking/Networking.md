@@ -1,7 +1,7 @@
 ---
 title: Networking
 description: This topic provides an overview of the Software Defined Networking and Network Platform technologies that are available in Windows Server 2016.
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 layout: LandingPage
 ms.technology: networking
 ms.topic: landing-page
@@ -21,7 +21,7 @@ ms.localizationpriority: medium
 
 Networking is a foundational part of the Software Defined Datacenter \(SDDC\) platform, and Windows Server 2016 provides new and improved Software Defined Networking \(SDN\) technologies to help you move to a fully realized SDDC solution for your organization.
 
-When you manage networks as a software defined resource, you can describe an application’s infrastructure requirements one time, and then choose where the application runs - on premises or in the cloud. 
+When you manage networks as a software defined resource, you can describe an application's infrastructure requirements one time, and then choose where the application runs - on premises or in the cloud. 
 
 This consistency means that your applications are now easier to scale, and you can seamlessly run applications - anywhere - with equal confidence about security, performance, quality of service, and availability.
 
@@ -62,7 +62,6 @@ This consistency means that your applications are now easier to scale, and you c
                                         </div>
                                         <div class="cardText">
                                         <h3><a href="https://docs.microsoft.com/windows-server/networking/sdn/">Software Defined Networking (SDN)</a><hr /></h3>You can use this topic to learn about the SDN technologies that are provided in Windows Server, System Center, and Microsoft Azure.</p>
-                        
                                         <p><b>Note:</b> For Hyper-V hosts and virtual machines (VMs) that run SDN infrastructure servers, such as Network Controller and Software Load Balancing nodes, you must install Windows Server Datacenter edition. For Hyper-V hosts that contain only tenant workload VMs that are connected to SDN-controlled networks, you can run Windows Server Standard edition.</p>                                        </div>
                                     </div>
                                 </div>
@@ -352,7 +351,6 @@ This consistency means that your applications are now easier to scale, and you c
                                         <div class="cardText">
                                         <h3><a href="technologies/hpn/hpn-top.md">High-Performance Networking</a><hr /></h3>
                                         <p>Network offload and optimization technologies in Windows Server 2016 include Software Only (SO) features and technologies, Software and Hardware (SH) integrated features and technologies, and Hardware Only (HO) features and technologies.</p>
-
                                         <p>The following offload and optimization technology documentation is also available:<p>
                                         <hr />
                                         <a href="technologies/conv-nic/cnic-top.md">High-Performance Networking</a><hr />
@@ -491,7 +489,6 @@ This consistency means that your applications are now easier to scale, and you c
                                         <h3><a href="../remote/remote-access/remote-access.md">Remote Access</a><hr /></h3>
                                         <p>
                                         You can use Remote Access technologies, such as DirectAccess and Virtual Private Networking (VPN) to provide remote workers with connectivity to internal network resources. In addition, you can use Remote Access for local area network (LAN) routing, and for Web Application Proxy. which provides reverse proxy functionality for web applications inside your corporate network to allow users on any device to access them from outside the corporate network.</p>
-
                                         <p>For more information about Web Application Proxy, which is a role service of the Remote Access server role, see <a href="https://docs.microsoft.com/windows-server/remote/remote-access/web-application-proxy/web-application-proxy-windows-server">Web Application Proxy in Windows Server 2016</a></p>
                     </div>
                 </div>
@@ -513,7 +510,7 @@ This consistency means that your applications are now easier to scale, and you c
                                         <p>
                                         Windows Container Networking allows you to create and manage networks for connecting container endpoints on both Windows 10 and Windows Server hosts by using standard industry tools and workflows. Windows container networks support multiple topologies, including private, flat-L2, and routed-L3.</p>
 
-                                        <p>Also supported are overlays that you can create locally on the host by using Docker, Kubernetes, or Windows PowerShell through plugins that communicate with the Windows Host Networking Service (HNS). You can create and manage multi-node cluster networks through higher level orchestration systems by communicating through a local agent to each node’s HNS.</p>
+                                        <p>Also supported are overlays that you can create locally on the host by using Docker, Kubernetes, or Windows PowerShell through plugins that communicate with the Windows Host Networking Service (HNS). You can create and manage multi-node cluster networks through higher level orchestration systems by communicating through a local agent to each node's HNS.</p>
                     </div>
                 </div>
             </div>
@@ -533,11 +530,8 @@ This consistency means that your applications are now easier to scale, and you c
                                         <h3><a href="../remote/remote-access/vpn/vpn-top.md">Virtual Private Networking (VPN)</a><hr /></h3>
                                         <p>
                                         DirectAccess and VPN is a role service of the Remote Accessserver role.</p>
-
                                         <p>When you install Remote Access as a VPN server, you can use Virtual Private Networking (VPN) to provide your remote employees with connections to your organization network across the Internet - while also maintaining information privacy with encrypted connections.</p>
-
                                        <p> With Windows Server Remote Access VPN - and Windows 10 client computers - you can deploy Always On VPN. Always On VPN gives you the ability to manage remote VPN clients that are always connected, while also providing convenience for remote workers, who no longer need to manually connect to and disconnect from VPN to your organization network.</p>
-
                                        <p>For more information, see <a href="https://docs.microsoft.com/windows-server/remote/remote-access/vpn/always-on-vpn/deploy/always-on-vpn-deploy">Remote Access Always On VPN Deployment Guide for Windows Server 2016 and Windows 10</a></p>
                     </div>
                 </div>

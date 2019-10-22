@@ -1,6 +1,6 @@
 ---
 title: Storage Spaces overview
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.author: jgerend
 ms.manager: dougkim
 ms.technology: storage-file-systems

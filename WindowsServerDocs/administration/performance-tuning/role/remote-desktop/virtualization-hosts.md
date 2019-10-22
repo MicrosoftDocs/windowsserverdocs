@@ -1,7 +1,7 @@
 ---
 title: Performance Tuning Remote Desktop Virtualization Hosts
 description: Performance Tuning for Remote Desktop Virtualization Hosts
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: performance-tuning-guide
 ms.topic: article
 ms.author: HammadBu; VladmiS
@@ -54,7 +54,7 @@ Server memory usage is driven by three main factors:
 
 -   Memory allocated to each virtual machine
 
-For a typical knowledge worker workload, guest virtual machines running x86 Window 8 or Windows 8.1 should be given ~512 MB of memory as the baseline. However, Dynamic Memory will likely increase the guest virtual machine’s memory to about 800 MB, depending on the workload. For x64, we see about 800 MB starting, increasing to 1024 MB.
+For a typical knowledge worker workload, guest virtual machines running x86 Window 8 or Windows 8.1 should be given ~512 MB of memory as the baseline. However, Dynamic Memory will likely increase the guest virtual machine's memory to about 800 MB, depending on the workload. For x64, we see about 800 MB starting, increasing to 1024 MB.
 
 Therefore, it is important to provide enough server memory to satisfy the memory that is required by the expected number of guest virtual machines, plus allow a sufficient amount of memory for the server.
 
@@ -94,7 +94,7 @@ The video memory that is reserved varies based on the number of monitors and the
 
 ### RemoteFX processor
 
-The hypervisor schedules the RemoteFX-enabled server and the virtual GPU-enabled virtual desktops on the CPU. Unlike the system memory, there isn’t information that is related to additional resources that RemoteFX needs to share with the hypervisor. The additional CPU overhead that RemoteFX brings into the virtual GPU-enabled virtual desktop is related to running the virtual GPU driver and a user-mode Remote Desktop Protocol stack.
+The hypervisor schedules the RemoteFX-enabled server and the virtual GPU-enabled virtual desktops on the CPU. Unlike the system memory, there isn't information that is related to additional resources that RemoteFX needs to share with the hypervisor. The additional CPU overhead that RemoteFX brings into the virtual GPU-enabled virtual desktop is related to running the virtual GPU driver and a user-mode Remote Desktop Protocol stack.
 
 On the RemoteFX-enabled server, the overhead is increased, because the system runs an additional process (rdvgm.exe) per virtual GPU-enabled virtual desktop. This process uses the graphics device driver to run commands on the GPU. The codec also uses the CPUs for compressing the screen data that needs to be sent back to the client.
 
@@ -196,7 +196,7 @@ Failover Clustering in Windows Server 2012 and above provides caching on Cluste
 
 By default, pooled virtual desktops are rolled back to the pristine state after a user signs out, so any changes made to the Windows operating system since the last user sign-in are abandoned.
 
-Although it’s possible to disable the rollback, it is still a temporary condition because typically a pooled virtual desktop collection is re-created due to various updates to the virtual desktop template.
+Although it's possible to disable the rollback, it is still a temporary condition because typically a pooled virtual desktop collection is re-created due to various updates to the virtual desktop template.
 
 It makes sense to turn off Windows features and services that depend on persistent state. Additionally, it makes sense to turn off services that are primarily for non-enterprise scenarios.
 

@@ -2,7 +2,7 @@
 title: attrib
 description: "Windows Commands topic for **attrib** - Displays, sets, or removes attributes assigned to files or directories."
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands

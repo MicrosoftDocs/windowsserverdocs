@@ -7,14 +7,14 @@ ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 
 ms.technology: identity-adfs
 ---
 
 # Review the Role of the Federation Server Proxy in the Account Partner
 
-The primary role of the federation server proxy in the perimeter network of the account partner organization in Active Directory Federation Services \(AD FS\) is to collect authentication credentials from a client computer that logs on over the Internet and to pass those credentials to the federation server, which is located inside the corporate network of the account partner organization. The account for the client computer is stored in the account partner’s attribute store.  
+The primary role of the federation server proxy in the perimeter network of the account partner organization in Active Directory Federation Services \(AD FS\) is to collect authentication credentials from a client computer that logs on over the Internet and to pass those credentials to the federation server, which is located inside the corporate network of the account partner organization. The account for the client computer is stored in the account partner's attribute store.  
   
 A federation server proxy can also function in one or more of the following roles, depending on how you configure it to meet the needs of the account partner organization:  
   

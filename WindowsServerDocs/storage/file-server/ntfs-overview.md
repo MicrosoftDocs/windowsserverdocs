@@ -1,7 +1,7 @@
 ﻿---
 title: NTFS overview
 description: An explanation of what NTFS is.
-ms.prod: windows-server-threshold 
+ms.prod: windows-server 
 ms.topic: article 
 author: JasonGerend 
 ms.author: jgerend 
@@ -42,7 +42,7 @@ NTFS continuously monitors and corrects transient corruption issues in the backg
   |64 KB (maximum size)|256 TB|256 TB|
 
 >[!IMPORTANT]
->Services and apps might impose additional limits on file and volume sizes. For example, the volume size limit is 64 TB if you’re using the Previous Versions feature or a backup app that makes use of Volume Shadow Copy Service (VSS) snapshots (and you’re not using a SAN or RAID enclosure). However, you might need to use smaller volume sizes depending on your workload and the performance of your storage.
+>Services and apps might impose additional limits on file and volume sizes. For example, the volume size limit is 64 TB if you're using the Previous Versions feature or a backup app that makes use of Volume Shadow Copy Service (VSS) snapshots (and you're not using a SAN or RAID enclosure). However, you might need to use smaller volume sizes depending on your workload and the performance of your storage.
 
 ### Formatting requirements for large files
 

@@ -2,7 +2,7 @@
 title: Common MultiPoint Services Usage Scenarios
 description: Learn about common uses for MultiPoint Services
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: multipoint-services
 ms.reviewer: na
 ms.suite: na
@@ -20,10 +20,10 @@ MultiPoint Services delivers individual user desktops with the most important el
 - Give each user a personal computing experience and private folders without needing a separate computer for each person.  
 - Manage multiple MultiPoint systems in a computer lab, classroom, training center, or small business environment.  
 - Install a program once, and access it from any station.  
-- Monitor each user’s desktop activity.  
-- Block screens with a customizable message to get the group’s attention.  
+- Monitor each user's desktop activity.  
+- Block screens with a customizable message to get the group's attention.  
 - Restrict the group to only accessing one or more websites.  
 - Project your screen to the other screens to demonstrate a particular task.  
 - Communicate privately with a standard user who is asking for help.  
-- Take control of a user’s session to demonstrate a task.  
+- Take control of a user's session to demonstrate a task.  
 - Do all of the above-listed items for a user who is using a traditional PC, laptop, or any other mobile device. 

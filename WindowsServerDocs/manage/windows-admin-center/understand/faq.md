@@ -7,7 +7,7 @@ author: nwashburn-ms
 ms.author: niwashbu
 ms.localizationpriority: medium
 ms.date: 06/07/2019
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ---
 # Windows Admin Center Frequently Asked Questions
 
@@ -21,13 +21,13 @@ Windows Admin Center is a lightweight, browser-based GUI platform and toolset fo
 
 ## Can I use Windows Admin Center in production environments?
 
-Yes. Windows Admin Center is generally available and ready for broad usage and production deployments. The current platform capabilities and core tools meet Microsoft’s standard release criteria and our quality bar for usability, reliability, performance, accessibility, security, and adoption.
+Yes. Windows Admin Center is generally available and ready for broad usage and production deployments. The current platform capabilities and core tools meet Microsoft's standard release criteria and our quality bar for usability, reliability, performance, accessibility, security, and adoption.
 
 [!INCLUDE [support-policy](../includes/support-policy.md)]
 
 ## How much does it cost to use Windows Admin Center?
 
-Windows Admin Center has no additional cost beyond Windows. You can use Windows Admin Center (available as a separate download) with valid licenses of Windows Server or Windows 10 at no additional cost - it’s licensed under a Windows Supplemental EULA.
+Windows Admin Center has no additional cost beyond Windows. You can use Windows Admin Center (available as a separate download) with valid licenses of Windows Server or Windows 10 at no additional cost - it's licensed under a Windows Supplemental EULA.
 
 ## What versions of Windows Server can I manage with Windows Admin Center?
 
@@ -80,7 +80,7 @@ Yes! the [Showscript feature](../use/get-started.md#view-powershell-scripts-used
 
 ## Are there any plans for Windows Admin Center to manage Windows Server 2008 R2 or earlier?
 
-Windows Admin Center now supports **limited** functionality to manage Windows Server 2008 R2. Windows Admin Center relies on PowerShell capabilities and platform technologies that don’t exist in Windows Server 2008 R2 and earlier, making full support infeasible. Windows Server 2008/2008 R2 are approaching end of support in January 2020 so Microsoft recommends customers [move to Azure or upgrade to the latest version of Windows Server](https://www.microsoft.com/en-us/cloud-platform/windows-server-2008).
+Windows Admin Center now supports **limited** functionality to manage Windows Server 2008 R2. Windows Admin Center relies on PowerShell capabilities and platform technologies that don't exist in Windows Server 2008 R2 and earlier, making full support infeasible. Windows Server 2008/2008 R2 are approaching end of support in January 2020 so Microsoft recommends customers [move to Azure or upgrade to the latest version of Windows Server](https://www.microsoft.com/en-us/cloud-platform/windows-server-2008).
 
 ## Are there any plans for Windows Admin Center to manage Linux connections?
 

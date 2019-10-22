@@ -1,6 +1,6 @@
 ---
 title: Stretch Cluster Replication Using Shared Storage
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 manager: eldenc
 ms.author: nedpyle
 ms.technology: storage-replica
@@ -236,7 +236,7 @@ You will now create a normal failover cluster. After configuration, validation, 
    > [!NOTE]
    >  You should expect storage errors from cluster validation, due to the use of asymmetric storage.  
 
-2. Create the Hyper-V compute cluster (you must specify your own static IP address the cluster will use). Ensure that the cluster name is 15 characters or fewer.  If the nodes reside in different subnets, than an IP Address for the additional site must be created using the “OR” dependency. More information can be found at [Configuring IP Addresses and Dependencies for Multi-Subnet Clusters – Part III](https://techcommunity.microsoft.com/t5/Failover-Clustering/Configuring-IP-Addresses-and-Dependencies-for-Multi-Subnet/ba-p/371698).
+2. Create the File Server for General Use storage cluster (you must specify your own static IP address the cluster will use). Ensure that the cluster name is 15 characters or fewer.  If the nodes reside in different subnets, than an IP Address for the additional site must be created using the “OR” dependency. More information can be found at [Configuring IP Addresses and Dependencies for Multi-Subnet Clusters – Part III](https://techcommunity.microsoft.com/t5/Failover-Clustering/Configuring-IP-Addresses-and-Dependencies-for-Multi-Subnet/ba-p/371698).
    ```PowerShell  
    New-Cluster -Name SR-SRVCLUS -Node SR-SRV01, SR-SRV02, SR-SRV03, SR-SRV04 -StaticAddress <your IP here>  
    Add-ClusterResource -Name NewIPAddress -ResourceType “IP Address” -Group “Cluster Group”

@@ -1,7 +1,7 @@
 ---
 title: Plan for Hyper-V networking in Windows Server
 description: "Describes what's needed for basic networking in Hyper-V and gives links to instructions"
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.service: na
 manager: dongill
 ms.technology: compute-hyper-v

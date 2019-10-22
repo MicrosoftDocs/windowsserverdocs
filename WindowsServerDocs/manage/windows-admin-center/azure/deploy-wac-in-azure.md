@@ -7,7 +7,7 @@ author: jwwool
 ms.author: jeffrew
 ms.date: 04/12/2019
 ms.localizationpriority: medium
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ---
 
 # Deploy Windows Admin Center in Azure
@@ -139,7 +139,7 @@ $newNSG = Add-AzNetworkSecurityRuleConfig -NetworkSecurityGroup $nsg -Name ssl-r
 Set-AzNetworkSecurityGroup -NetworkSecurityGroup $newNSG
 ```
 
-### Requirements for managed Azure VM’s
+### Requirements for managed Azure VM's
 
 Port 5985 (WinRM over HTTP) must be open and have an active listener.
 You can use the code below in Azure Cloud Shell to update the managed nodes. ```$ResourceGroupName``` and ```$Name``` use the same variables as the deployment script, but you will need to use the ```$Credential``` specific to the VM you are managing.

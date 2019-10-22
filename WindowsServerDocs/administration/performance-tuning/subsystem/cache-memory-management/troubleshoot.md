@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot Cache and Memory Manager Performance Issues
 description: Troubleshoot Cache and Memory Manager Performance Issues on Windows Server 16
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: performance-tuning-guide
 ms.topic: article
 ms.author: Pavel; ATales
@@ -38,7 +38,7 @@ The problem used to be mitigated by *DynCache* tool. In Windows Server 2012+, t
 
 This problem is indicated by very high number of active Mapped file pages in RAMMAP output. This usually indicates that some application on the server is opening a lot of large files using [CreateFile](https://msdn.microsoft.com/library/windows/desktop/aa363858.aspx) API with FILE\_FLAG\_RANDOM\_ACCESS flag set.
 
-This issue is described in detail in KB article [2549369](https://support.microsoft.com/default.aspx?scid=kb;en-US;2549369). FILE\_FLAG\_RANDOM\_ACCESS flag is a hint for Cache Manager to keep mapped views of the file in memory as long as possible (until Memory Manager doesn’t signal low memory condition). At the same time, this flag instructs Cache Manager to disable prefetching of file data.
+This issue is described in detail in KB article [2549369](https://support.microsoft.com/default.aspx?scid=kb;en-US;2549369). FILE\_FLAG\_RANDOM\_ACCESS flag is a hint for Cache Manager to keep mapped views of the file in memory as long as possible (until Memory Manager doesn't signal low memory condition). At the same time, this flag instructs Cache Manager to disable prefetching of file data.
 
 This situation has been mitigated to some extent by working set trimming improvements in Windows Server 2012+, but the issue itself needs to be primarily addressed by the application vendor by not using FILE\_FLAG\_RANDOM\_ACCESS. An alternative solution for the app vendor might be to use low memory priority when accessing the files. This can be achieved using the [SetThreadInformation](https://msdn.microsoft.com/library/windows/desktop/hh448390.aspx) API. Pages that are accessed at low memory priority are removed from the working set more aggressively.
 

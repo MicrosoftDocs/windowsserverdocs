@@ -3,7 +3,7 @@ title: Configure Quality of Service (QoS) for a tenant VM network adapter
 description: When you configure QoS for a tenant VM network adapter, you have a choice between Data Center Bridging \(DCB\)or Software Defined Networking \(SDN\) QoS.
 manager: dougkim
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: networking-sdn
@@ -35,7 +35,7 @@ Apply all SDN QoS settings through the Port settings of the Network Interface pr
 |portFlowLimit| The maximum number of flows allowed to execute for the port. A value of blank or zero \(0\) means there is no limit. |
 |vmqWeight| The relative weight describes the affinity of the virtual network adapter to use virtual machine queue (VMQ). The range of value is 0 through 100.<p>Allowed values:<ul><li>0 – Disables the VMQ on the virtual network adapter.</li><li>1-100 – Enables the VMQ on the virtual network adapter.</li></ul>|
 |iovWeight| The relative weight sets the affinity of the virtual network adapter to the assigned single-root I/O virtualization \(SR-IOV\) virtual function. <p>Allowed values:<ul><li>0 – Disables SR-IOV on the virtual network adapter.</li><li>1-100 – Enables SR-IOV on the virtual network adapter.</li></ul>|
-|iovInterruptModeration|<p>Allowed values:<ul><li>default – The physical network adapter vendor’s setting determines the value.</li><li>adaptive - </li><li>off </li><li>low</li><li>medium</li><li>high</li></ul><p>If you choose **default**, the physical network adapter vendor’s setting determines the value.  If you choose, **adaptive**, the runtime traffic pattern determins the interrupt moderation rate.|
+|iovInterruptModeration|<p>Allowed values:<ul><li>default – The physical network adapter vendor's setting determines the value.</li><li>adaptive - </li><li>off </li><li>low</li><li>medium</li><li>high</li></ul><p>If you choose **default**, the physical network adapter vendor's setting determines the value.  If you choose, **adaptive**, the runtime traffic pattern determins the interrupt moderation rate.|
 |iovQueuePairsRequested| The number of hardware queue pairs allocated to an SR-IOV virtual function. If receive-side scaling \(RSS\) is required, and if the physical network adapter that binds to the virtual switch supports RSS on SR-IOV virtual functions, then more than one queue pair is required. <p>Allowed values: 1 to 4294967295.|
 |QosSettings| Configure the following Qos settings,all of which are optional: <ul><li>**outboundReservedValue** - If outboundReservedMode is "absolute" then the value indicates the bandwidth, in Mbps, guaranteed to the virtual port for transmission (egress). If outboundReservedMode is "weight" then the value indicates the weighted portion of the bandwidth guaranteed.</li><li>**outboundMaximumMbps** - Indicates the maximum permitted send-side bandwidth, in Mbps, for the virtual port (egress).</li><li>**InboundMaximumMbps** - Indicates the maximum permitted receive-side bandwidth for the virtual port (ingress) in Mbps.</li></ul> |
 

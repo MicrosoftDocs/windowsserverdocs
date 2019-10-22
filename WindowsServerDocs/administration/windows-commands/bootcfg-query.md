@@ -2,7 +2,7 @@
 title: bootcfg query
 description: "Windows Commands topic for **bootcfg query** - Queries and displays the [boot loader] and [operating systems] section entries from Boot.ini."
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands

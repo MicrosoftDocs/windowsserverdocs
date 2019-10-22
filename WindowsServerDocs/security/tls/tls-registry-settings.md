@@ -2,7 +2,7 @@
 title: Transport Layer Security (TLS) registry settings
 description: "Windows Server Security"
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: security-tls-ssl
@@ -134,7 +134,7 @@ See [Configuring TLS Cipher Suite Order](manage-tls.md#configuring-tls-cipher-su
 ## IssuerCacheSize
 
 This entry controls the size of the issuer cache, and it is used with issuer mapping. 
-The Schannel SSP attempts to map all of the issuers in the client’s certificate chain—not only the direct issuer of the client certificate. 
+The Schannel SSP attempts to map all of the issuers in the client's certificate chain—not only the direct issuer of the client certificate. 
 When the issuers do not map to an account, which is the typical case, the server might attempt to map the same issuer name repeatedly, hundreds of times per second. 
 
 To prevent this, the server has a negative cache, so if an issuer name does not map to an account, it is added to the cache and the Schannel SSP will not attempt to map the issuer name again until the cache entry expires. 
@@ -149,7 +149,7 @@ Registry path: HKLM SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL
 ## IssuerCacheTime
 
 This entry controls the length of the cache timeout interval in milliseconds. 
-The Schannel SSP attempts to map all of the issuers in the client’s certificate chain—not only the direct issuer of the client certificate. 
+The Schannel SSP attempts to map all of the issuers in the client's certificate chain—not only the direct issuer of the client certificate. 
 In the case where the issuers do not map to an account, which is the typical case, the server might attempt to map the same issuer name repeatedly, hundreds of times per second.
 
 To prevent this, the server has a negative cache, so if an issuer name does not map to an account, it is added to the cache and the Schannel SSP will not attempt to map the issuer name again until the cache entry expires. 
@@ -260,7 +260,7 @@ For example, when Internet Explorer receives a request for client authentication
 If the server did not send a list, Internet Explorer displays all of the client certificates that are installed on the client. 
 
 This behavior might be desirable. 
-For example, when PKI environments include cross certificates, the client and server certificates will not have the same root CA; therefore, Internet Explorer cannot chose a certificate that chains up to one of the server’s CAs. 
+For example, when PKI environments include cross certificates, the client and server certificates will not have the same root CA; therefore, Internet Explorer cannot chose a certificate that chains up to one of the server's CAs. 
 By configuring the server to not send a trusted issuer list, Internet Explorer will send all its certificates.
 
 This entry does not exist in the registry by default.

@@ -1,7 +1,7 @@
 ---
 title: Converged NIC in a Teamed NIC configuration (datacenter)
 description: In this topic, we provide you with instructions to deploy Converged NIC in a Teamed NIC configuration with Switch Embedded Teaming (SET).
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: networking
 ms.topic: article
 ms.assetid: f01546f8-c495-4055-8492-8806eee99862
@@ -312,7 +312,7 @@ The following image shows two Hyper-V hosts with two network adapters each that 
    >[!IMPORTANT]
    >It's not uncommon for a **Test-NetConnection** or ping failure to occur immediately after you perform **Restart-NetAdapter**.  So wait for the network adapter to fully initialize, and then try again.
    >
-   >If the VLAN 101 connections work, but the VLAN 102 connections don’t, the problem might be that the switch needs to be configured to allow port traffic on the desired VLAN. You can check for this by temporarily setting the failing adapters to VLAN 101, and repeating the connectivity test.
+   >If the VLAN 101 connections work, but the VLAN 102 connections don't, the problem might be that the switch needs to be configured to allow port traffic on the desired VLAN. You can check for this by temporarily setting the failing adapters to VLAN 101, and repeating the connectivity test.
 
 
    The following image shows your Hyper-V hosts after successfully configuring VLANs.
@@ -802,7 +802,7 @@ The following image shows Hyper-V Host 1 with a vSwitch.
 
 In this step, you remove the ACCESS VLAN setting from the physical NIC and to set the VLANID using the vSwitch.
 
-You must remove the ACCESS VLAN setting to prevent both auto-tagging the egress traffic with the incorrect VLAN ID and from filtering ingress traffic which doesn’t match the ACCESS VLAN ID.
+You must remove the ACCESS VLAN setting to prevent both auto-tagging the egress traffic with the incorrect VLAN ID and from filtering ingress traffic which doesn't match the ACCESS VLAN ID.
 
 1. Remove the setting.
 
@@ -952,7 +952,7 @@ The TEST-40G-1 and TEST-40G-2 physical adapters still have an ACCESS VLAN of 101
 
 
 
-1. Remove the ACCESS VLAN setting from the physical NIC to prevent it from both auto-tagging the egress traffic with the incorrect VLAN ID and to prevent it from filtering ingress traffic that doesn’t match the ACCESS VLAN ID.
+1. Remove the ACCESS VLAN setting from the physical NIC to prevent it from both auto-tagging the egress traffic with the incorrect VLAN ID and to prevent it from filtering ingress traffic that doesn't match the ACCESS VLAN ID.
 
    ```PowerShell    
    New-NetIPAddress -InterfaceAlias "vEthernet (SMB1)" -IPAddress 192.168.2.111 -PrefixLength 24

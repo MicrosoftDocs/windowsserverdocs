@@ -1,6 +1,6 @@
 ---
 title: Upgrading Failover Clusters Using the Same Hardware
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.manager: eldenc
 ms.technology: failover-clustering
 ms.topic: article
@@ -22,7 +22,7 @@ This guide describes the steps for upgrading the cluster nodes to Windows Server
 
 Upgrading the operating system on an existing failover cluster is only supported when going from Windows Server 2016 to Windows 2019.  If the failover cluster is running an earlier version, such as Windows Server 2012 R2 and earlier, upgrading while the cluster services are running will not allow joining nodes together.  If using the same hardware, steps can be taken to get it to the newer version.  
 
-Before any upgrade of your failover cluster, please consult the [Windows Upgrade Center](https://www.microsoft.com/upgradecenter).  When you upgrade a Windows Server in-place, you move from an existing operating system release to a more recent release while staying on the same hardware. Windows Server can be upgraded in-place at least one, and sometimes two versions forward. For example, Windows Server 2012 R2 and Windows Server 2016 can be upgraded in-place to Windows Server 2019.  Also keep in mind that the [Cluster Migration Wizard](https://blogs.msdn.microsoft.com/clustering/2012/06/25/how-to-move-highly-available-clustered-vms-to-windows-server-2012-with-the-cluster-migration-wizard/) can be used but is only supported up to two versions back. The following graphic shows the upgrade paths for Windows Server. Downward pointing arrows represent the supported upgrade path moving from earlier versions up to Windows Server 2019.
+Before any upgrade of your failover cluster, please consult the [Windows Server upgrade content](../upgrade/upgrade-overview.md).  When you upgrade a Windows Server in-place, you move from an existing operating system release to a more recent release while staying on the same hardware. Windows Server can be upgraded in-place at least one, and sometimes two versions forward. For example, Windows Server 2012 R2 and Windows Server 2016 can be upgraded in-place to Windows Server 2019.  Also keep in mind that the [Cluster Migration Wizard](https://blogs.msdn.microsoft.com/clustering/2012/06/25/how-to-move-highly-available-clustered-vms-to-windows-server-2012-with-the-cluster-migration-wizard/) can be used but is only supported up to two versions back. The following graphic shows the upgrade paths for Windows Server. Downward pointing arrows represent the supported upgrade path moving from earlier versions up to Windows Server 2019.
 
 ![In-place Upgrade Diagram](media/In-Place-Upgrade/In-Place-Upgrade-1.png)
 

@@ -1,7 +1,7 @@
 ---
 title: Configure the Server Infrastructure
 description: In this step, you install and configure the server-side components necessary to support the VPN. The server-side components include configuring PKI to distribute the certificates used by users, the VPN server, and the NPS server.  
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: networking-ras
 ms.topic: article
 ms.assetid: 
@@ -149,7 +149,7 @@ This group serves two purposes:
 
 - It defines which users the NPS authorizes for VPN access.
 
-By using a custom group, if you ever want to revoke a user’s VPN access, you can remove that user from the group.
+By using a custom group, if you ever want to revoke a user's VPN access, you can remove that user from the group.
 
 You also add a group containing VPN servers and another group containing NPS servers. You use these groups to restrict certificate requests to their members.
 
@@ -196,7 +196,10 @@ You also add a group containing VPN servers and another group containing NPS ser
 
 ## Create the User Authentication template
 
-In this procedure, you configure a custom client-server authentication template. This template is required because you want to improve the certificate’s overall security by selecting upgraded compatibility levels and choosing the Microsoft Platform Crypto Provider. This last change lets you use the TPM on the client computers to secure the certificate. For an overview of the TPM, see [Trusted Platform Module Technology Overview](https://docs.microsoft.com/windows/device-security/tpm/trusted-platform-module-overview).
+In this procedure, you configure a custom client-server authentication template. This template is required because you want to improve the certificate's overall security by selecting upgraded compatibility levels and choosing the Microsoft Platform Crypto Provider. This last change lets you use the TPM on the client computers to secure the certificate. For an overview of the TPM, see [Trusted Platform Module Technology Overview](https://docs.microsoft.com/windows/device-security/tpm/trusted-platform-module-overview).
+
+>[!IMPORTANT] 
+>Microsoft Platform Crypto Provider" requires a TPM chip, in the case that you are running a VM and you get the following error: "Can not find a valid CSP in the local machine" when trying to manually enroll the certificate you need to check "Microsoft Software Key Storage Provider" and have it second in order after "Microsoft Platform Crypto Provider" in the Cryptography tab in certificate properties.
 
 **Procedure:**
 
@@ -250,7 +253,7 @@ In this procedure, you configure a custom client-server authentication template.
 
    3. Select the **Microsoft Platform Crypto Provider** check box.
 
-9. On the **Subject Name** tab, if you don’t have an email address listed on all user accounts, clear the **Include e-mail name in subject name** and **E-mail name** check boxes.
+9. On the **Subject Name** tab, if you don't have an email address listed on all user accounts, clear the **Include e-mail name in subject name** and **E-mail name** check boxes.
 
 10. Select **OK** to save the VPN User Authentication certificate template.
 
@@ -319,11 +322,22 @@ Domain-joined VPN servers
 
 10. Close the Certificate Templates console.
 
-11. In the navigation pane of the Certification Authority snap-in, right-click **Certificate Templates**, select **New** and then select **Certificate Template to Issue**.
+11. In the navigation pane of the Certification Authority snap-in, right-click **Certificate Templates**, click **New** and then click **Certificate Template to Issue**.
 
-12. Select the name you chose in step 4 above, and click **OK**.
+12. Restart the Certificate Authority services.(*)
 
-13. Close the Certification Authority snap-in.
+13. In the navigation pane of the Certification Authority snap-in, right-click **Certificate Templates**, select **New** and then select **Certificate Template to Issue**.
+
+14. Select the name you chose in step 4 above, and click **OK**.
+
+15. Close the Certification Authority snap-in.
+
+* **You can stop/start the CA service by running the following command in CMD:**
+
+```
+Net Stop "certsvc"
+Net Start "certsvc"
+```
 
 ## Create the NPS Server Authentication template
 
@@ -365,7 +379,7 @@ You will configure this certificate for autoenrollment.
 
 ## Enroll and validate the user certificate
 
-Because you’re using Group Policy to autoenroll user certificates, you need only update the policy, and Windows 10 will automatically enroll the user account for the correct certificate. You can then validate the certificate in the Certificates console.
+Because you're using Group Policy to autoenroll user certificates, you need only update the policy, and Windows 10 will automatically enroll the user account for the correct certificate. You can then validate the certificate in the Certificates console.
 
 **Procedure:**
 
@@ -379,20 +393,20 @@ Because you’re using Group Policy to autoenroll user certificates, you need on
 
 5. Right-click the certificate that has your current domain username, and then select **Open**.
 
-6. On the **General** tab, confirm that the date listed under **Valid from** is today’s date. If it isn’t, you might have selected the wrong certificate.
+6. On the **General** tab, confirm that the date listed under **Valid from** is today's date. If it isn't, you might have selected the wrong certificate.
 
 7. Select **OK**, and close the Certificates snap-in.
 
 ## Enroll and validate the server certificates
 
-Unlike the user certificate, you must manually enroll the VPN server’s certificate. After you’ve enrolled it, validate it by using the same process you used for the user certificate. Like the user certificate, the NPS server automatically enrolls its authentication certificate, so all you need to do is validate it.
+Unlike the user certificate, you must manually enroll the VPN server's certificate. After you've enrolled it, validate it by using the same process you used for the user certificate. Like the user certificate, the NPS server automatically enrolls its authentication certificate, so all you need to do is validate it.
 
 >[!NOTE]
 >You might need to restart the VPN and NPS servers to allow them to update their group memberships before you can complete these steps.
 
 ### Enroll and validate the VPN server certificate
 
-1. On the VPN server’s Start menu, type **certlm.msc**, and press Enter.
+1. On the VPN server's Start menu, type **certlm.msc**, and press Enter.
 
 2. Right-click **Personal**, select **All Tasks** and then select **Request New Certificate** to start the Certificate Enrollment Wizard.
 
@@ -424,9 +438,9 @@ Unlike the user certificate, you must manually enroll the VPN server’s certifi
     
     Your listed certificates appear in the details pane.
 
-10. Right-click the certificate that has your VPN server’s name, and then select **Open**.
+10. Right-click the certificate that has your VPN server's name, and then select **Open**.
 
-11. On the **General** tab, confirm that the date listed under **Valid from** is today’s date. If it isn’t, you might have selected the incorrect certificate.
+11. On the **General** tab, confirm that the date listed under **Valid from** is today's date. If it isn't, you might have selected the incorrect certificate.
 
 12. On the **Details** tab, select **Enhanced Key Usage**, and verify that **IP security IKE intermediate** and **Server Authentication** display in the list.
 
@@ -438,15 +452,15 @@ Unlike the user certificate, you must manually enroll the VPN server’s certifi
 
 1. Restart the NPS server.
 
-2. On the NPS server’s Start menu, type **certlm.msc**, and press Enter.
+2. On the NPS server's Start menu, type **certlm.msc**, and press Enter.
 
 3. In the Certificates snap-in, under **Personal**, select **Certificates**.
 
     Your listed certificates appear in the details pane.
 
-4. Right-click the certificate that has your NPS server’s name, and then select **Open**.
+4. Right-click the certificate that has your NPS server's name, and then select **Open**.
 
-5. On the **General** tab, confirm that the date listed under **Valid from** is today’s date. If it isn’t, you might have selected the incorrect certificate.
+5. On the **General** tab, confirm that the date listed under **Valid from** is today's date. If it isn't, you might have selected the incorrect certificate.
 
 6. Select **OK** to close the certificate.
 

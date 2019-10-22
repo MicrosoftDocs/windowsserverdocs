@@ -1,7 +1,7 @@
 ---
 title: Plan for deploying devices using Discrete Device Assignment
 description: Learn about how DDA works in Windows Server
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.service: na
 ms.technology: hyper-v
 ms.tgt_pltfrm: na

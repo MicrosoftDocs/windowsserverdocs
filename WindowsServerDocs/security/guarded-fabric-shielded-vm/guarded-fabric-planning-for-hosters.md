@@ -1,7 +1,7 @@
 ---
 title: Guarded Fabric and Shielded VM Planning Guide for Hosters
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.topic: article
 ms.assetid: 854defc8-99f8-4573-82c0-f484e0785859
 manager: dongill
@@ -37,7 +37,7 @@ How you implement the Host Guardian Service and guarded Hyper-V hosts will depen
     In this mode, the fabric admin is solely responsible for ensuring the health of the Hyper-V hosts. 
     Since HGS plays no part in deciding what is or is not allowed to run, malware and debuggers will function as designed. 
     
-    However, debuggers that attempt to attach directly to a process (such as WinDbg.exe) are blocked for shielded VMs because the VM’s worker process (VMWP.exe) is a protected process light (PPL). 
+    However, debuggers that attempt to attach directly to a process (such as WinDbg.exe) are blocked for shielded VMs because the VM's worker process (VMWP.exe) is a protected process light (PPL). 
     Alternative debugging techniques, such as those used by LiveKd.exe, are not blocked. 
     Unlike shielded VMs, the worker process for encryption supported VMs does not run as a PPL so traditional debuggers like WinDbg.exe will continue to function normally.
 

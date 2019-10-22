@@ -2,7 +2,7 @@
 title: Work with Video Devices
 description: Learn how video monitors and projectors work with stations in MultiPoint Services
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: multipoint-services
 ms.reviewer: na
 ms.suite: na
@@ -37,13 +37,13 @@ You can connect a video projector to your MultiPoint Services system when you wa
   
     ![Image of a projector connected to computer](./media/WMSVideoProjectorConnection.gif)  
   
--   Obtain a video splitter device to connect both a projector and monitor to the station’s video port.  
+-   Obtain a video splitter device to connect both a projector and monitor to the station's video port.  
   
     MultiPoint Services will display the same image on both display devices. When not projecting, you can turn the projector off and use just the video monitor.  
   
 When using either option, note the following:  
   
--   Connecting a video display may require that you *associate the station* again so that MultiPoint Services can correctly recognize the new display. Follow the instructions that appear on the station’s video display device.  
+-   Connecting a video display may require that you *associate the station* again so that MultiPoint Services can correctly recognize the new display. Follow the instructions that appear on the station's video display device.  
   
 -   You may need to obtain adapter or converter devices to convert between DVI and VGA plugs.  
   
@@ -51,7 +51,7 @@ When using either option, note the following:
   
 -   When using both a projector and a monitor via a “Y” splitter cable, MultiPoint Services adjusts the screen resolution of both devices to the lowest maximum resolution of either device—most typically the projector.  
   
--   MultiPoint Services does not support extending a single station’s display across multiple monitors.  
+-   MultiPoint Services does not support extending a single station's display across multiple monitors.  
   
 ## See Also  
 [Manage Station Hardware](Manage-Station-Hardware.md)  

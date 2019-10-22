@@ -5,7 +5,7 @@ ms.topic: reference
 author: eross-msft
 ms.author: lizross
 ms.date: 06/11/2019
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ---
 
 # Windows Server - License Terms

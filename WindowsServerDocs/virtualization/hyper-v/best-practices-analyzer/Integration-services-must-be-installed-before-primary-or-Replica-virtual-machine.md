@@ -1,7 +1,7 @@
 ---
 title: Integration services must be installed before primary or Replica virtual machines can use an alternate IP address after a failover
 description: "Online version of the text for this Best Practices Analyzer rule, with links to more information."
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.service: na
 manager: dongill
 ms.technology: compute-hyper-v

@@ -6,7 +6,7 @@ ms.topic: article
 author: nwashburn-ms
 ms.author: niwashbu
 ms.localizationpriority: medium
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.date: 06/07/2019
 ---
 # What type of installation is right for you?
@@ -15,29 +15,37 @@ ms.date: 06/07/2019
 
 This topic describes the different installation options for Windows Admin Center, including installing on a Windows 10 PC or a Windows server for use by multiple admins. To install Windows Admin Center on a VM in Azure, see [Deploy Windows Admin Center in Azure](../azure/deploy-wac-in-azure.md).
 
-## Supported operating systems: Installation
+## Installation: Types
+
+| Local client                                | Gateway server                                  | Managed server                               | Failover cluster                           |
+|---------------------------------------------|-------------------------------------------------|----------------------------------------------|--------------------------------------------|
+| ![img](../media/deployment-options/W10.PNG) | ![img](../media/deployment-options/gateway.PNG) | ![img](../media/deployment-options/node.PNG) | ![img](../media/deployment-options/HA.png) |
+| Install on a local Windows 10 client that has connectivity to the managed servers.  Great for quick start, testing, ad-hoc or small scale scenarios. |Install on a designated gateway server and access from any client browser with connectivity to the gateway server.  Great for large-scale scenarios. | Install directly on a managed server for the purpose of managing itself or a cluster in which it's a member node.  Great for distributed scenarios. | Deploy in a failover cluster to enable high availability of the gateway service. Great for production environments to ensure resiliency of your management service. |
+
+## Installation: Supported operating systems
 
 You can **install** Windows Admin Center on the following Windows operating systems:
 
-| **Version**  | **Installation mode** |
-| -------------| -----------------------|
-| Windows 10, version 1709 or newer | Desktop mode |
-| Windows Server Semi-Annual Channel | Gateway mode |
-| Windows Server 2016 | Gateway mode |
-| Windows Server 2019 | Gateway mode |
+| **Platform**                       | **Installation mode** |
+| -----------------------------------| --------------------- |
+| Windows 10, version 1709 or newer  | Local client |
+| Windows Server Semi-Annual Channel | Gateway sever, managed server, failover cluster |
+| Windows Server 2016                | Gateway sever, managed server, failover cluster |
+| Windows Server 2019                | Gateway sever, managed server, failover cluster |
 
-**Desktop mode:** Launch from the Start Menu and connect to the Windows Admin Center gateway from the same computer on which it's installed (i.e. `https://localhost:6516`)
+To operating Windows Admin Center:
 
-**Gateway mode:** Connect to the Windows Admin Center gateway from a client browser on a different machine (i.e. `https://servername.contoso.com`) 
+- **In local client scenario:** Launch the Windows Admin Center gateway from the Start menu and connect to it from a client web browser by accessing `https://localhost:6516`.
+- **In other scenarios:** Connect to the Windows Admin Center gateway on a different machine from a client browser via its URL, e.g., `https://servername.contoso.com`
 
 > [!WARNING]
 > Installing Windows Admin Center on a Domain controller is not supported. [Read more about Domain controller security best practices](https://docs.microsoft.com/windows-server/identity/ad-ds/plan/security-best-practices/securing-domain-controllers-against-attack). 
 
-> [!IMPORTANT]
-> You can't use Internet Explorer to manage Windows Admin Center - instead you need to use a [supported browser](../understand/faq.md#which-web-browsers-are-supported-by-windows-admin-center
-).  If you are installing Windows Admin Center on Windows Server, we recommend managing by connecting remotely with Windows 10 and Edge.  Alternatively, you can manage locally on Windows Server if you have installed a supported browser.
+## Installation: Supported web browsers
 
-## Supported operating systems: Management
+Microsoft Edge and Google Chrome are tested and supported on Windows 10. Other web browsers—including Internet Explorer and Firefox—are not currently part of our test matrix and are therefore not *officially* supported. These browsers may have problems running Windows Admin Center. For example, Firefox has it’s own certificate store, so you must import the `Windows Admin Center Client` certificate into Firefox to use Windows Admin Center on Windows 10. For more details, see [browser-specific known issues](../support/known-issues.md#browser-specific-issues).
+
+## Management target: Supported operating systems
 
 You can **manage** the following Windows operating systems using Windows Admin Center:
 
@@ -60,16 +68,6 @@ You can **manage** the following Windows operating systems using Windows Admin C
 > and that the version is 5.1 or higher. 
 > 
 > If WMF is not installed, you can [download WMF 5.1](https://www.microsoft.com/en-us/download/details.aspx?id=54616).
-
-## Deployment options
-
-| ![img](../media/deployment-options/W10.png) | ![img](../media/deployment-options/gateway.png) | ![img](../media/deployment-options/node.png) | ![img](../media/deployment-options/HA.png) |
-| --------------------------------------------- | ------------------------------------------------- |----------------------------------------------|-------------------------------------------- |
-|                                             |                                                 |                                              |                                            |
-
-| Local Client | Gateway Server | Managed Server | Failover Cluster |
-| --- | --- | --- | --- |
-| Install on a local Windows 10 client that has connectivity to the managed servers.  Great for quick start, testing, ad-hoc or small scale scenarios. |Install on a designated gateway server and access from any client browser with connectivity to the gateway server.  Great for large-scale scenarios. | Install directly on a managed server for the purpose of managing itself or a cluster in which it's a member node.  Great for distributed scenarios. | Deploy in a failover cluster to enable high availability of the gateway service. Great for production environments to ensure resiliency of your management service. |
 
 ## High availability
 

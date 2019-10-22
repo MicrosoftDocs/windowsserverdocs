@@ -2,7 +2,7 @@
 title: Manage User Access Logging
 description: Describes how to manage User Access Logging
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: manage-user-access-logging
 ms.reviewer: na
 ms.suite: na
@@ -159,7 +159,7 @@ PS C:\Windows\system32>Gwmi -Namespace "root\AccessLogging" -query "SELECT * FRO
   
 This will return a verbose listing of all unique client devices, by IP address, that have made requests of the server in that date range.  
   
-‘ActivityCount’ for each unique client is limited to 65,535 per day. Also, calling into WMI from PowerShell is only required when you query by date.  All other UAL cmdlet parameters can be used within PS queries as expected, as in the following example:  
+‘ActivityCount' for each unique client is limited to 65,535 per day. Also, calling into WMI from PowerShell is only required when you query by date.  All other UAL cmdlet parameters can be used within PS queries as expected, as in the following example:  
   
 ```  
 PS C:\Windows\system32> Get-UalDeviceAccess -IPAddress "10.36.206.112"  
@@ -176,9 +176,9 @@ PSComputerName
   
 ```  
   
-UAL retains up to two years’ worth of history. To allow retrieval of UAL data by an administrator when the service is running, UAL makes a copy of the active database file, current.mdb, to a file named *GUID.mdb* every 24 hours for the WMI provider’s use.  
+UAL retains up to two years' worth of history. To allow retrieval of UAL data by an administrator when the service is running, UAL makes a copy of the active database file, current.mdb, to a file named *GUID.mdb* every 24 hours for the WMI provider's use.  
   
-On the first day of the year, UAL will create a new *GUID.mdb*. The old *GUID.mdb* is retained as an archive for the provider’s use.  After two years, the original *GUID.mdb* will be overwritten.  
+On the first day of the year, UAL will create a new *GUID.mdb*. The old *GUID.mdb* is retained as an archive for the provider's use.  After two years, the original *GUID.mdb* will be overwritten.  
   
 > [!IMPORTANT]  
 > The following procedure should be performed only by an advanced user and would commonly be used by a developer testing their own instrumentation of UAL application programming interfaces...  
@@ -218,9 +218,9 @@ This section describes what an administrator can expect when UAL is used on a se
   
 The maximum number of accesses that can be recorded with UAL is 65,535 per day.  UAL is not recommended for use on servers that are connected directly to the Internet, such as web servers that are connected directly to the Internet, or in scenarios where extremely high performance is the primary function of the server (such as in HPC workload environments). UAL is primarily intended for small, medium, and enterprise intranet scenarios where high volume is expected, but not as high as many deployment that serve Internet-facing traffic volume on a regular basis.  
   
-**UAL in Memory**: Because UAL uses the Extensible Storage Engine (ESE), UAL’s memory requirements will increase over time (or by quantity of client requests). But memory will be relinquished as the system requires it to minimize impact on system performance.  
+**UAL in Memory**: Because UAL uses the Extensible Storage Engine (ESE), UAL's memory requirements will increase over time (or by quantity of client requests). But memory will be relinquished as the system requires it to minimize impact on system performance.  
   
-**UAL on Disk**: UAL’s hard disk requirements are approximately as shown below:  
+**UAL on Disk**: UAL's hard disk requirements are approximately as shown below:  
   
 -   0 unique client records: 22M  
   
@@ -231,7 +231,7 @@ The maximum number of accesses that can be recorded with UAL is 65,535 per day.�
 -   1,000,000 unique client records: 729M  
   
 ## Recovering from a corrupt state  
-This section discusses UAL’s use of the Extensible Storage Engine (ESE) at a high level and what an administrator can do if UAL data is corrupted or unrecoverable.  
+This section discusses UAL's use of the Extensible Storage Engine (ESE) at a high level and what an administrator can do if UAL data is corrupted or unrecoverable.  
   
 UAL uses ESE to optimize use of system resources and for its resistance to corruption.  For more information about the benefits of ESE, see [Extensible Storage Engine](https://msdn.microsoft.com/library/windows/desktop/gg269259(v=exchg.10).aspx) on MSDN.  
   
@@ -253,7 +253,7 @@ Reg add HKLM\Software\Microsoft\Windows\CurrentVersion\SyncShareSrv /v EnableWor
   
 After the regkey is added, you must restart the SyncShareSvc service on the server, to enable logging.  
   
-After logging is enabled, 2 informational events get logged to the Windows Logs\Application channel each time a client connects to the server. For Work Folders, each user may have one or more client devices that connect to the server and check for data updates every 10 minutes. If the server is experiencing 1000 users, each with 2 devices the application logs will overwrite every 70 minutes, making troubleshooting unrelated issues difficult. To avoid this, you can disable the User Access Logging service temporarily, or increase the size of the server’s Windows Logs\Application channel.  
+After logging is enabled, 2 informational events get logged to the Windows Logs\Application channel each time a client connects to the server. For Work Folders, each user may have one or more client devices that connect to the server and check for data updates every 10 minutes. If the server is experiencing 1000 users, each with 2 devices the application logs will overwrite every 70 minutes, making troubleshooting unrelated issues difficult. To avoid this, you can disable the User Access Logging service temporarily, or increase the size of the server's Windows Logs\Application channel.  
   
 ## <a name="BKMK_Links"></a>See also  
 

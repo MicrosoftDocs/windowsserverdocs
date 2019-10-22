@@ -2,7 +2,7 @@
 title: Enable or Disable Disk Protection
 description: Learn how to use disk protection with MultiPoint Services
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: multipoint-services
 ms.reviewer: na
 ms.suite: na
@@ -14,7 +14,7 @@ manager: dongill
 ms.author: elizapo
 ---
 # Enable or Disable Disk Protection
-The Disk Protection feature allows you to reset your MultiPoint Services system to a specified state each time you restart the system. Using Disk Protection, users can temporarily make changes to the MultiPoint Services system, and then those changes are discarded when the server is restarted. Examples of changes that will be discarded when the server is restarted include personalizing a user’s profile, saving files, changing settings, or installing applications.  
+The Disk Protection feature allows you to reset your MultiPoint Services system to a specified state each time you restart the system. Using Disk Protection, users can temporarily make changes to the MultiPoint Services system, and then those changes are discarded when the server is restarted. Examples of changes that will be discarded when the server is restarted include personalizing a user's profile, saving files, changing settings, or installing applications.  
   
 ## Enable Disk Protection  
   

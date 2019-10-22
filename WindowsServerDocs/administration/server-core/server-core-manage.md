@@ -1,7 +1,7 @@
 ---
 title: Manage Server Core
 description: Learn how to manage a Server Core installation of Windows Server
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.mktglfcycl: manage
 ms.sitesec: library
 author: lizap

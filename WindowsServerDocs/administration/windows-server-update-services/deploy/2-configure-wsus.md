@@ -1,7 +1,7 @@
 ---
 title: Step 2 - Configure WSUS
 description: "Windows Server Update Service (WSUS) topic - Configure WSUS is step two in a four step process for deploying WSUS"
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.technology: manage-wsus
 ms.topic: article
@@ -321,20 +321,20 @@ You can use the Secure Sockets Layer (SSL) protocol to help secure the WSUS depl
 > [!IMPORTANT]
 > Clients and downstream servers that are configured to use Transport Layer Security (TLS) or HTTPS must also be configured to use a fully qualified domain name (FQDN) for their upstream WSUS server.
 
-WSUS uses SSL for metadata only, not for update files. This is the same way that Microsoft Update distributes updates. Microsoft reduces the risk of sending update files over an unencrypted channel by signing each update. In addition, a hash is computed and sent together with the metadata for each update. When an update is downloaded, WSUS checks the digital signature and hash. if the update has been changed, it is not installed.
+WSUS uses SSL for metadata only, not for update files. This is the same way that Microsoft Update distributes updates. Microsoft reduces the risk of sending update files over an unencrypted channel by signing each update. In addition, a hash is computed and sent together with the metadata for each update. When an update is downloaded, WSUS checks the digital signature and hash. If the update has been changed, it is not installed.
 
 ### Limitations of WSUS SSL deployments
 You must consider the following limitations when you use SSL to secure a WSUS deployment:
 
 1.  Using SSL increases the server workload. You should expect a 10 percent loss of performance because of the cost of encrypting all the metadata that is sent over the network.
 
-2.  if you use WSUS with a remote SQL Server database, the connection between the WSUS server and the database server is not secured by SSL. if the database connection must be secured, consider the following recommendations:
+2.  If you use WSUS with a remote SQL Server database, the connection between the WSUS server and the database server is not secured by SSL. If the database connection must be secured, consider the following recommendations:
 
 -   move the WSUS database to the WSUS server.
 
 -   move the remote database server and the WSUS server to a private network.
 
--   Deploy Internet Protocol security (IPsec) to help secure network traffic. For more information about IPsec, see [Creating and Using IPsec Policies](https://go.microsoft.com/fwlink/?LinkID=203841).
+-   deploy Internet Protocol security (IPsec) to help secure network traffic. For more information about IPsec, see [Creating and Using IPsec Policies](https://go.microsoft.com/fwlink/?LinkID=203841).
 
 ### Configure SSL on the WSUS server
 WSUS requires two ports for SSL: one port that uses HTTPS to send encrypted metadata, and one port that uses HTTP to send updates. When you configure WSUS to use SSL, consider the following:

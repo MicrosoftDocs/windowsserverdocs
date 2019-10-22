@@ -2,7 +2,7 @@
 title: Create a File Expiration Task
 description: This article describes the process of creating a file management task for files about to expire
 ms.date: 7/7/2017
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: storage
 ms.topic: article
 author: JasonGerend

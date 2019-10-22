@@ -2,7 +2,7 @@
 title: Create a Remote Desktop Services collection
 description: Learn how to add and RDSH and RemoteApp programs to your RDS deployment.
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: remote-desktop-services
@@ -22,7 +22,7 @@ Use the following steps to create a Remote Desktop Services session collection. 
 
 Before you create a collection, you need to decide what kind of collection you need: pooled desktop sessions or personal desktop sessions. 
 
-- **Use pooled desktop sessions for session-based virtualization**: Leverage the compute power of Windows Server to provide a cost-effective multi-session environment to drive your users’ everyday workloads
+- **Use pooled desktop sessions for session-based virtualization**: Leverage the compute power of Windows Server to provide a cost-effective multi-session environment to drive your users' everyday workloads
 - **Use personal desktop sessions for to create a virtual desktop infrastructure (VDI)**: Leverage Windows client to provide the high performance, app compatibility, and familiarity that your users have come to expect of their Windows desktop experience.
  
 With a pooled session, multiple users access a shared pool of resources, while with a personal desktop session, users are assigned their own desktop from within the pool. The pooled session provides lower overall cost, while personal sessions enable users to customize their desktop experience.

@@ -1,7 +1,7 @@
 ---
 title: Hyper-V Configuration
 description: Hyper-V configuration considerations for performance tuning
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: performance-tuning-guide
 ms.topic: article
 ms.author: Asmahi; SandySp; JoPoulso
@@ -35,9 +35,9 @@ The hardware considerations for servers running Hyper-V generally resemble those
 
 As a core technology, virtualization is a powerful tool useful in increasing server workload density, reducing the number of required physical servers in your datacenter, increasing operational efficiency and reducing power consumption costs. Power management is critical for cost management. 
 
-In an ideal datacenter environment, power consumption is managed by consolidating work onto machines until they’re mostly busy and then turning off idle machines. If this approach is not practical, administrators can leverage power plans on the physical hosts to ensure they do not consume more power than necessary. 
+In an ideal datacenter environment, power consumption is managed by consolidating work onto machines until they're mostly busy and then turning off idle machines. If this approach is not practical, administrators can leverage power plans on the physical hosts to ensure they do not consume more power than necessary. 
 
-Server power management techniques come with a cost, particularly as tenant workloads are not trusted to dictate policy about the hoster’s physical infrastructure. The host layer software is left to infer how to maximize throughput while minimizing power consumption. In mostly-idle machines, this can cause the physical infrastructure to conclude that moderate power draw is appropriate, resulting in individual tenant workloads running more slowly than they might otherwise.
+Server power management techniques come with a cost, particularly as tenant workloads are not trusted to dictate policy about the hoster's physical infrastructure. The host layer software is left to infer how to maximize throughput while minimizing power consumption. In mostly-idle machines, this can cause the physical infrastructure to conclude that moderate power draw is appropriate, resulting in individual tenant workloads running more slowly than they might otherwise.
 
 Windows Server uses virtualization in a wide variety of scenarios. From a lightly loaded IIS Server to a moderately busy SQL Server, to a cloud host with Hyper-V running hundreds of virtual machines per server. Each of these scenarios may have unique hardware, software, and performance requirements. By default, Windows Server uses and recommends the **Balanced** power plan which enables power conservation by scaling the processor performance based on CPU utilization.
 

@@ -1,7 +1,7 @@
 ---
 title: Memory usage considerations in AD DS performance tuning
 description: Memory usage by the Lsass.exe process on domain controllers that are running Windows Server 2012 R2, 2016 and 2019.
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: performance-tuning-guide
 ms.topic: article
 ms.author: v-tea; lindakup

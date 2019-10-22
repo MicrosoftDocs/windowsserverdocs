@@ -1,7 +1,7 @@
 ---
 title: Updating Nano Server
 description: " "
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.service: na
 manager: DonGill
 ms.technology: server-nano

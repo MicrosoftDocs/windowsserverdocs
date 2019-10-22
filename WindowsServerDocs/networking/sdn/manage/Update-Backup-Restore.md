@@ -2,7 +2,7 @@
 title: Upgrade, backup, and restore SDN infrastructure
 description: In this topic, you learn how to update, backup and restore an SDN infrastructure. 
 manager: dougkim
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: networking-sdn
 ms.topic: article
 ms.assetid: e9a8f2fd-48fe-4a90-9250-f6b32488b7a4
@@ -44,7 +44,7 @@ When you update each component, you can use any of the standard methods for inst
 
 5. Install updates on each SLB Mux VM one at a time to ensure continuous availability of the load balancer infrastructure.
 
-6. Update Hyper-V hosts and RAS gateways, starting with the hosts that contain the RAS gateways that are in **Standby** mode.<p>RAS gateway VMs can’t be migrated live without losing tenant connections. During the update cycle, you must be careful to minimize the number of times tenant connections failover to a new RAS gateway. By coordinating the update of hosts and RAS gateways, each tenant fails over once, at most.
+6. Update Hyper-V hosts and RAS gateways, starting with the hosts that contain the RAS gateways that are in **Standby** mode.<p>RAS gateway VMs can't be migrated live without losing tenant connections. During the update cycle, you must be careful to minimize the number of times tenant connections failover to a new RAS gateway. By coordinating the update of hosts and RAS gateways, each tenant fails over once, at most.
 
     a. Evacuate the host of VMs that are capable of live migration.<p>RAS gateway VMs should remain on the host.
 

@@ -2,7 +2,7 @@
 title: Overview of Disk Management
 description: Disk Management is a system utility in Windows that enables you to perform advanced storage tasks, such as initializing a new drive, extending volumes, shrinking partitions, and changing drive letters.
 ms.date: 06/07/2019
-ms.prod: windows-server-threshold 
+ms.prod: windows-server 
 ms.technology: storage 
 ms.topic: article 
 author: JasonGerend 

@@ -1,7 +1,7 @@
 ---
 title: Remotely manage Hyper-V hosts
 description: "Describes version compatibility between Hyper-V hosts and Hyper-V Manager and how to connect to remote hosts in different environments, including cross-domain and standalone."
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.service: na
 manager: dongill
 ms.technology: compute-hyper-v

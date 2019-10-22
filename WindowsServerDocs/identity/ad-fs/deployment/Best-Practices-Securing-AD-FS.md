@@ -7,7 +7,7 @@ ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 
 ms.technology: identity-adfs
 ---
@@ -105,15 +105,15 @@ The federation service proxy (part of the WAP) provides congestion control to pr
 #### To verify the settings, you can do the following:
 1.	On your Web Application Proxy computer, start an elevated command window.
 2.	Navigate to the ADFS directory, at %WINDIR%\adfs\config.
-3.	Change the congestion control settings from its default values to ‘<congestionControl latencyThresholdInMSec="8000" minCongestionWindowSize="64" enabled="true" />’.
+3.	Change the congestion control settings from its default values to ‘<congestionControl latencyThresholdInMSec="8000" minCongestionWindowSize="64" enabled="true" />'.
 4.	Save and close the file.
-5.	Restart the AD FS service by running ‘net stop adfssrv’ and then ‘net start adfssrv’.
+5.	Restart the AD FS service by running ‘net stop adfssrv' and then ‘net start adfssrv'.
 For your reference, guidance on this capability can be found [here](https://msdn.microsoft.com/library/azure/dn528859.aspx ).
 
 ### Standard HTTP request checks at the proxy
 The proxy also performs the following standard checks against all traffic:
 
-- The FS-P itself authenticates to AD FS via a short lived certificate.  In a scenario of suspected compromise of dmz servers, AD FS can “revoke proxy trust” so that it no longer trusts any incoming requests from potentially compromised proxies. Revoking the proxy trust revokes each proxy’s own certificate so that it cannot successfully authenticate for any purpose to the AD FS server
+- The FS-P itself authenticates to AD FS via a short lived certificate.  In a scenario of suspected compromise of dmz servers, AD FS can “revoke proxy trust” so that it no longer trusts any incoming requests from potentially compromised proxies. Revoking the proxy trust revokes each proxy's own certificate so that it cannot successfully authenticate for any purpose to the AD FS server
 - The FS-P terminates all connections and creates a new HTTP connection to the AD FS service on the internal network. This provides a session-level buffer between external devices and the AD FS service. The external device never connects directly to the AD FS service.
 - The FS-P performs HTTP request validation that specifically filters out HTTP headers that are not required by AD FS service.
 
