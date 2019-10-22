@@ -38,7 +38,7 @@ Additional considerations for guest VMs:
 - DirectX 11.0 is only available with Windows 8 or newer guest VMs. 
 - Remote Desktop Session Host is only supported with RemoteFX 3D Video Adapter (vGPU) if it is running as a [personal session desktop](rds-personal-session-desktops.md).
 
-For guest VMS, make sure to review [VDI deployment - supported guest OSs](rds-supported-config.md#vdi-deployment--supported-guest-oss).
+For guest VMS, make sure to review [VDI deployment - supported guest OSes](rds-supported-config.md#vdi-deployment--supported-guest-oses).
 
 ## Install RemoteFX 3D Video Adapter (vGPU)
 
