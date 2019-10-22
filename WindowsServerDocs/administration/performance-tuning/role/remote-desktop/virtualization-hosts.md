@@ -11,15 +11,9 @@ ms.date: 08/23/2019
 
 # Performance Tuning Remote Desktop Virtualization Hosts
 
-Remote Desktop Virtualization Host (RD Virtualization Host) is a role service that supports Virtual Desktop Infrastructure (VDI) scenarios and lets multiple concurrent users run Windows-based applications in virtual machines that are hosted on a server running Windows Server and Hyper-V.
+Remote Desktop Virtualization Host (RD Virtualization Host) is a role service that supports Virtual Desktop Infrastructure (VDI) scenarios and lets multiple users run Windows-based applications in virtual machines hosted on a server running Windows Server and Hyper-V.
 
-Windows Server supports two types of virtual desktops, personal virtual desktops and pooled virtual desktops.
-
-**In this topic:**
-
--[General considerations](#general-considerations)
-
--[Performance optimizations](#performance-optimizations)
+Windows Server supports two types of virtual desktops: personal virtual desktops and pooled virtual desktops.
 
 ## General considerations
 

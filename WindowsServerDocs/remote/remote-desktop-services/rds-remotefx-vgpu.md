@@ -24,9 +24,9 @@ The vGPU feature of RemoteFX makes it possible for multiple virtual machines to 
 Requirements for host systems:
 
 - Windows Server 2016
-- DX 11.0 compatible GPU with WDDM 1.2 compatible driver
-- Windows Server RD Virtualization Host role enabled (enables Hyper-V Role)
-- Server with a CPU that supports SLAT (Second Level Address Translation)
+- DX 11.0-compatible GPU with WDDM 1.2-compatible driver
+- Windows Server RD Virtualization Host role enabled
+- Server with a CPU that supports Second Level Address Translation (SLAT)
 
 Guest VM requirements:
 
@@ -42,7 +42,7 @@ For guest VMS, make sure to review [VDI deployment - supported guest OSs](rds-su
 
 ## Install RemoteFX 3D Video Adapter (vGPU)
 
-Use the following steps to install and configure RemoteFX on the host for Windows Server 2016 and Windows 10:
+Follow these steps to install and configure RemoteFX on the host for Windows Server 2016 and Windows 10:
 
 1. Install the operating system.
 2. Install the latest Windows 10/Windows Server 2016 GPU drivers available from the graphics card vendor site.
