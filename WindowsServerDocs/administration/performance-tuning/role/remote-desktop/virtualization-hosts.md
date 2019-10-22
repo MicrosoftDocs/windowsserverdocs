@@ -6,7 +6,7 @@ ms.technology: performance-tuning-guide
 ms.topic: article
 ms.author: HammadBu; VladmiS; denisgun
 author: phstee
-ms.date: 08/23/2019
+ms.date: 10/22/2019
 ---
 
 # Performance Tuning Remote Desktop Virtualization Hosts

@@ -7,7 +7,7 @@ ms.localizationpriority: medium
 ms.sitesec: library
 author: jasongerend
 ms.author: jgerend
-ms.date: 08/22/2019
+ms.date: 10/22/2019
 ---
 # Features removed or planned for replacement starting with Windows Server, version 1803
 

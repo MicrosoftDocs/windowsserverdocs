@@ -10,7 +10,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 author: lizap
 ms.author: elizapo
-ms.date: 09/16/2016
+ms.date: 10/22/2019
 manager: dongill
 ---
 # Use personal session desktops with Remote Desktop Services
