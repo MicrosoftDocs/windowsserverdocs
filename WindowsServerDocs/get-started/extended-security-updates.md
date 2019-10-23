@@ -21,9 +21,11 @@ End of support also means the end of security updates. This scenario can cause s
 If you can't upgrade all your servers by the end of support lifecycle deadline, the following options help protect applications and data during the upgrade transition:
 
 * Migrate existing Windows Server 2008 and 2008 R2 workloads as-is to Azure Virtual Machines (VMs).
-    * This migration to Azure automatically provides an additional three years of Extended Security Updates. There's no additional charge for ESU on top of Azure VM's cost.
-* Purchase an Extended Security Update subscription for your servers and remain protected until you're ready to upgrade to a newer Windows Server version.
-    * These Extended Security Updates are provided for up to three years after the end of support lifecycle date.
+    * This migration to Azure automatically provides an additional three years of Extended Security Updates (ESU). There's no additional charge for ESU on top of Azure VM's cost, and there's no additional configuration required.
+* Purchase an ESU subscription for your servers and remain protected until you're ready to upgrade to a newer Windows Server version.
+    * These ESUs are provided for up to three years after the end of support lifecycle date.
+
+After the three year period of extended updates, there's no option for computers to receive additional updates.
 
 ## What are Extended Security Updates for Windows Server?
 
@@ -37,12 +39,15 @@ For more information, see the [Extended Security Updates frequently asked questi
 
 ## Register for Extended Security Updates
 
-To use ESUs, you create a Multiple Activation Key (MAK) and apply it to Windows Server 2008 and 2008 R2 computers. This MAK lets the Windows Update servers know that you can continue to receive security updates.
+To use ESUs, you create a Multiple Activation Key (MAK) and apply it to Windows Server 2008 and 2008 R2 computers. This MAK lets the Windows Update servers know that you can continue to receive security updates. You register for ESUs and manage MAKs using the Azure portal, even if you only use on-premises computers.
 
-To register for ESUs and create a MAK, complete the following steps in the Azure Portal:
+> [!NOTE]
+> If you run Windows Server 2008 / 2008 R2 VMs in Azure, you don't need to perform the following steps. Azure VMs are automatically enabled for ESU. You don't need to create an ESU resource and MAK, and there's no additional charge for using ESUs with Azure VMs.
+
+To register non-Azure VMs for ESUs and create a MAK, complete the following steps in the Azure Portal:
 
 1. Sign in to the [Azure portal](https://portal.azure.com/).
-1. In the search box at the top of the Azure Portal, search for and select **Extended Security Updates**.
+1. In the search box at the top of the Azure portal, search for and select **Extended Security Updates**.
 
     -- INSERT IMAGE --
 
@@ -52,7 +57,10 @@ To register for ESUs and create a MAK, complete the following steps in the Azure
 
     -- INSERT IMAGE --
 
-1. Select your subscription, resource group, and location to create the key.
+    > [!NOTE]
+    > You need an Azure subscription associated with your account to create the ESU resource and MAK. If you don't have an Azure subscription associated with your account, sign in with a different user account or create an Azure subscription using the guided steps shown in the portal.
+
+1. In the window to create an ESU resource, select your Azure subscription, a resource group, and location to create the key.
 
     Under **Key details**, enter the following information:
 
@@ -68,18 +76,20 @@ To register for ESUs and create a MAK, complete the following steps in the Azure
 
     When ready, select **Review + create**.
 
-1. If the validation passed, you are presented with a screen that summarizes the choices for the new registry resource. The Azure [Terms of Use](https://azure.microsoft.com/support/legal/) and [Privacy Policy](https://privacy.microsoft.com/privacystatement) are available.
+1. After successful validation, a summary of your choices for the new registry resource is shown. If needed, correct any validation errors or update your configuration choice. The Azure [Terms of Use](https://azure.microsoft.com/support/legal/) and [Privacy Policy](https://privacy.microsoft.com/privacystatement) are available.
 
     Check the box to confirm that you have eligible computers and the key is only to be used within your organization:
 
     ![Confirm that the key will only be used by your organization](media/extended-security-updates/confirm-key-usage.png)
 
-    When ready, select **Create** to deploy the new resource.
+    When ready, select **Create** to generate the MAK.
 
 Extended Security Updates registration is now available for use with your computers. The MAK created should be applied to Windows Server 2008 and 2008 R2 computers that you wish to remain eligible for security updates.
 
 ## Download and apply Extended Security Updates
 
-Delivery, download and application of Extended Security Updates for Windows Server is no different than existing deployment processes. The updates are only for *Security*, and are released every Patch Tuesday.
+Delivery, download and application of Extended Security Updates for Windows Server is no different than existing deployment processes. The updates provided through ESU are only for *Security*, and are released every Patch Tuesday.
 
-You can install the updates using whatever tools and processes already in place. The only difference is that the system must be unlocked using the key generated in the previous section for the updates to install.
+You can install the updates using whatever tools and processes already in place. The only difference is that the system must be registered using the MAK generated in the previous section for the updates to download and install.
+
+For Azure VMs, the process of enabling the computer for ESUs is automatically completed for you. Updates should download and install without additional configuration.
