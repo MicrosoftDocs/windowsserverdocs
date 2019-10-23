@@ -56,7 +56,7 @@ RemoteFX vGPU is a graphics virtualization technology that allows a single physi
 For more information, see these topics:
 
 - [Deploy graphics devices using RemoteFX vGPU](../deploy/deploy-graphics-devices-using-remotefx-vgpu.md)
-- [Support for GPU Acceleration with Hyper-V](../../../remote/remote-desktop-services/rds-supported-config.md#support-for-gpu-acceleration-with-hyper-v)
+- [RemoteFX 3D Video Adapter (vGPU) support](../../../remote/remote-desktop-services/rds-supported-config.md#remotefx-3d-video-adapter-vGPU-support)
 
 ## Comparing DDA and RemoteFX vGPU
 
