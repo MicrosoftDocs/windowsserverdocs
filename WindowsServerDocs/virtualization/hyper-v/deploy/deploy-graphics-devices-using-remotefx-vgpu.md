@@ -26,7 +26,7 @@ Host system requirements:
 
 Guest VM requirements:
 
-- Supported guest OS. For more information, see [RemoteFX 3D Video Adapter (vGPU) support](../../../remote/remote-desktop-services/rds-supported-config.md#remotefx-3d-video-adapter-vGPU-support).
+- Supported guest OS. For more information, see [RemoteFX 3D Video Adapter (vGPU) support](../../../remote/remote-desktop-services/rds-supported-config.md#remotefx-3d-video-adapter-vgpu-support).
 
 Additional considerations for guest VMs:
 
@@ -38,7 +38,7 @@ Additional considerations for guest VMs:
 To configure RemoteFX vGPU on your Windows Server 2016 host:
 
 1. Install the graphics drivers recommended by your GPU vendor for Windows Server 2016.
-2. Create a VM running a guest OS supported by RemoteFX vGPU. To learn more, see [RemoteFX 3D Video Adapter (vGPU) support](../../../remote/remote-desktop-services/rds-supported-config.md#remotefx-3d-video-adapter-vGPU-support).
+2. Create a VM running a guest OS supported by RemoteFX vGPU. To learn more, see [RemoteFX 3D Video Adapter (vGPU) support](../../../remote/remote-desktop-services/rds-supported-config.md#remotefx-3d-video-adapter-vgpu-support).
 3. Add the RemoteFX 3D graphics adapter to the VM. To learn more, see [Configure the RemoteFX vGPU 3D adapter](#configure-the-remotefx-vgpu-3d-adapter).
 
 By default, RemoteFX vGPU will use all available and supported GPUs. To limit which GPUs the RemoteFX vGPU uses, follow these steps:
