@@ -20,24 +20,24 @@ manager: scottman
 
 Remote Desktop Services supports different types of workloads. Scale your deployment depending on the expected need of each type of user.
 
-## Types of Users
+## Types of users
 
-### Knowledge User
+### Knowledge user
 
-Knowledge user uses lightweight productivity applications that include tasks such as data entry and dataset management. These applications include Word, Excel and Outlook and Edge.
+Knowledge users use lightweight productivity applications like Microsoft Word, Excel, Outlook, and the Microsoft Edge browser.
 
-### Professional User
+### Professional user
 
-Professional user uses browser and productivity applications that can support more intensive workloads. These tasks include software development and multimedia content.
+Professional users use internet browsers and productivity applications in addition to supporting more intensive workloads like developing software and creating multimedia content.
 
-### Power User
+### Power user
 
-Power user uses engineering and graphics application such as CAD and Adobe Photoshop. GPUs are often a good choice for users that require graphics intensive support such as video rendering, 3D design, and simulations.
+Power users use engineering and graphics applications like computer-aided design (CAD) and Adobe Photoshop. GPUs are often a good choice for users who regularly use graphics-intensive programs for video rendering, 3D design, and simulations.
 
-For more information on graphics acceleration usage, check out [Choose your graphics rendering technology](rds-graphics-virtualization.md).
+To learn more about graphics acceleration, check out [Choose your graphics rendering technology](rds-graphics-virtualization.md).
 
-There are also graphics acceleration deployment options on Azure. For more information on the available GPU VM sizes, check out [GPU optimized virtual machines sizes](https://docs.microsoft.com/en-us/azure/virtual-machines/windows/sizes-gpu).
+Azure has other graphics acceleration deployment options and multiple available GPU VM sizes. Learn about these at [GPU optimized virtual machines sizes](https://docs.microsoft.com/azure/virtual-machines/windows/sizes-gpu).
 
-## Test Workload
+## Test workload
 
-It is recommended to load test the deployment with both stress tests and simulation of real-life usage. Vary the load size to avoid surprises! Ensure that responsiveness meets user requirements, and that the entire system is resilient. Create load tests with simulation tools, like LoginVSI, that check your deployment’s ability to meet the users’ needs.
+We recommend you load test deployments with both stress tests and real-life usage simulations. You can use simulation tools like LoginVSI to load test your deployment. Make sure the system is responsive and resilient enough to meet user needs, and remember to vary the load size to avoid surprises.
