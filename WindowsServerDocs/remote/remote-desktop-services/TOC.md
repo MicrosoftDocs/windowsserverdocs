@@ -12,7 +12,7 @@
 ### [High availability](rds-plan-high-availability.md)
 ### [Multifactor Authentication](rds-plan-mfa.md)
 ### [Secure data storage](rds-plan-secure-data-storage.md)
-### [Choose your graphics rendering technology](rds-graphics-virtualization.md)
+### [GPU acceleration](rds-graphics-virtualization.md)
 ### [Connect from any device](rds-plan-connect-from-any-device.md)
 ### [Choose how you pay](rds-plan-choose-how-you-pay.md)
 ### [Office 2016 in RDS and VDI deployments](https://docs.microsoft.com/deployoffice/rds-office-vdi-rdsh)
@@ -56,7 +56,6 @@
 ##### [Create your disaster recovery plan](rds-disaster-recovery-plan.md)
 
 ## [Run and tune](rds-run-and-tune.md)
-### [Set up and configure RemoteFX vGPU for Remote Desktop Services](rds-remotefx-vgpu.md)
 ### [Manage personal desktop session collections](rds-manage-personal-collection.md)
 ### [Recommended configuration for VDI desktops](rds-vdi-recommendations.md)
 ### [Optimizing Windows 10, version 1803, for a Virtual Desktop Infrastructure (VDI) role](rds-vdi-recommendations-1803.md)
