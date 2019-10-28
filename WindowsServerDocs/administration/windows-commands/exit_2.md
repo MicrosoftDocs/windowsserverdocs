@@ -19,8 +19,8 @@ ms.date: 10/16/2017
 
 >Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-exits the Cmd.exe program (the command interpreter) or the current batch script.  
-for examples of how to use this command, see [Examples](#BKMK_examples).  
+Exits the Cmd.exe program (the command interpreter) or the current batch script.  
+For examples of how to use this command, see [Examples](#BKMK_examples).  
 ## Syntax  
 ```  
 exit [/b] [<exitCode>]  
