@@ -29,7 +29,7 @@ exit [/b] [<exitCode>]
 
 | Parameter  |                                                                                         Description                                                                                          |
 |------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|     /b     |                                      exits the current batch script instead of exiting Cmd.exe. If executed from outside a batch script, exits Cmd.exe.                                      |
+|     /b     |                                      Exits the current batch script instead of exiting Cmd.exe. If executed from outside a batch script, exits Cmd.exe.                                      |
 | <exitCode> | Specifies a numeric number. If **/b** is specified, the ERRORLEVEL environment variable is set to that number. If you are quitting **Cmd.exe**, the process exit code is set to that number. |
 |     /?     |                                                                             Displays help at the command prompt.                                                                             |
 
