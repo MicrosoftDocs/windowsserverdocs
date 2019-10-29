@@ -312,7 +312,7 @@ See also
 
 [Windows PKI Documentation Reference and Library](https://social.technet.microsoft.com/wiki/contents/articles/987.windows-pki-documentation-reference-and-library.aspx)
 
-[Windows PKI Blog](http://blogs.technet.com/b/pki/)
+[Windows PKI Blog](https://blogs.technet.com/b/pki/)
 
 [How to configure Kerberos Constrained Delegation (S4U2Proxy or Kerberos Only) on a custom service account for Web Enrollment proxy pages](https://support.microsoft.com/help/4494313/configuring-web-enrollment-proxy-for-s4u2proxy-constrained-delegation)
 
