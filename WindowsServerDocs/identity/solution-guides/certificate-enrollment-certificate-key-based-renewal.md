@@ -1,7 +1,7 @@
 ---
 title: Configuring Certificate Enrollment Web Service for certificate key-based renewal on a custom port
 description:
-author: Jitha-afk
+author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 ms.date: 11/1/2019
@@ -315,7 +315,3 @@ See also
 [Windows PKI Blog](https://blogs.technet.com/b/pki/)
 
 [How to configure Kerberos Constrained Delegation (S4U2Proxy or Kerberos Only) on a custom service account for Web Enrollment proxy pages](https://support.microsoft.com/help/4494313/configuring-web-enrollment-proxy-for-s4u2proxy-constrained-delegation)
-
-
-
-
