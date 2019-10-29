@@ -11,7 +11,7 @@ ms.prod: windows-server
 
 # Configuring Certificate Enrollment Web Service for certificate key-based renewal on a custom port
 
-[comment]: <Author(s): Jitesh Thakur, Meera Mohideen, Ankit Tyagi.>  
+<!-- <Author(s): Jitesh Thakur, Meera Mohideen, Ankit Tyagi.-->  
 
 ## Summary
 
