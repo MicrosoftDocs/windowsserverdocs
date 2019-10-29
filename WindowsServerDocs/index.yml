@@ -33,8 +33,8 @@ highlightedContent:
     - title: Get started with Windows Server 2016 
       itemType: how-to-guide
       url: /windows-server/get-started/server-basics
-    - title: Windows Server 2008 and 2008 R2 Extended Security Updates
-      itemType: overview
+    - title: Use Windows Server 2008 and 2008 R2 Extended Security Updates
+      itemType: how-to-guide
       url: /windows-server/get-started/extended-security-updates
     - title: Windows Insider Program for Server
       itemType: overview 
