@@ -21,17 +21,6 @@ If you encounter an issue not described on this page, please [let us know](https
 
 - Using port below 1024 is not supported. In service mode, you may optionally configure port 80 to redirect to your specified port.
 
-- If the Windows Update service (wuauserv) is stopped and disabled, the installer will fail. [19100629]
-
-### Upgrade
-
-- When upgrading Windows Admin Center in service mode from a previous version, if you use msiexec in quiet mode, you may encounter an issue where the inbound firewall rule for Windows Admin Center port is deleted.
-  - To recreate the rule, perform the following command from an elevated PowerShell console, replacing \<port> with the port configured for Windows Admin Center (default 443.)
-
-    ```powershell
-    New-NetFirewallRule -DisplayName "SmeInboundOpenException" -Description "Windows Admin Center inbound port exception" -LocalPort <port> -RemoteAddress Any -Protocol TCP
-    ```
-
 ## General
 
 - If you have Windows Admin Center installed as a gateway on **Windows Server 2016** under heavy use, the service may crash with an error in the event log that contains ```Faulting application name: sme.exe``` and ```Faulting module name: WsmSvc.dll```. This is due to a bug that has been fixed in Windows Server 2019. The patch for Windows Server 2016 was included the February 2019 cumulative update, [KB4480977](https://www.catalog.update.microsoft.com/Search.aspx?q=4480977).
@@ -47,14 +36,6 @@ If you encounter an issue not described on this page, please [let us know](https
 
 - If you leave the tool open and idle for a long period of time, you may get several **Error: The runspace state is not valid for this operation** errors. If this occurs, refresh your browser. If you encounter this, [send us feedback](https://aka.ms/WACfeedback).
 
-- You may encounter a **500 Error** when refreshing pages with very long URLs. [12443710]
-
-- In some tools, your browser's spell checker may mark certain field values as misspelled. [12425477]
-
-- In some tools, command buttons may not reflect state changes immediately after being clicked, and the tool UI may not automatically reflect changes to certain properties. You can click **Refresh** to retrieve the latest state from the target server. [11445790]
-
-- Tag filtering on connection list - if you select connections using the multiselect checkboxes, then filter your connection list by tags, the original selection persists so any action you select will apply to all the previously selected machines. [18099259]
-
 - There may be minor variance between version numbers of OSS running in Windows Admin Center modules, and what is listed within the 3rd Party Software Notice.
 
 ### Extension Manager
@@ -66,13 +47,7 @@ If you encounter an issue not described on this page, please [let us know](https
 
 ### Microsoft Edge
 
-- In some cases, you may encounter long loading times when using Microsoft Edge to access a Windows Admin Center gateway over the Internet. This can occur on Azure VMs where the Windows Admin Center gateway is using a self-signed certificate. [13819912]
-
-- When using Azure Active Directory as your identity provider and Windows Admin Center is configured with a self-signed or otherwise untrusted certificate, you cannot complete the AAD authentication in Microsoft Edge.  [15968377]
-
 - If you have Windows Admin Center deployed as a service and you are using Microsoft Edge as your browser, connecting your gateway to Azure may fail after spawning a new browser window. Try to work around this issue by adding https://login.microsoftonline.com, https://login.live.com, and the URL of your gateway as trusted sites and allowed sites for pop-up blocker settings on your client side browser. For more guidance on fixing this in the [troubleshooting guide](troubleshooting.md#azure-features-dont-work-properly-in-edge). [17990376]
-
-- If you have Windows Admin Center installed in desktop mode, the browser tab in Microsoft Edge won't display the favicon. [17665801]
 
 ### Google Chrome
 
@@ -80,7 +55,7 @@ If you encounter an issue not described on this page, please [let us know](https
 
 - Chrome may pop-up multiple credential prompts, especially during the add connection experience in a **workgroup** (non-domain) environment.
 
-- If you have Windows Admin Center deployed as a service, popups from the gateway URL need to be enabled for any Azure integration functionality to work. These services include Azure Network Adapter, Azure Update Management and Azure Site Recovery.
+- If you have Windows Admin Center deployed as a service, popups from the gateway URL need to be enabled for any Azure integration functionality to work.
 
 ### Mozilla Firefox
 
@@ -112,23 +87,15 @@ If it is not installed, you can [download and install WMF 5.1](https://www.micro
 
 ## Server Manager solution
 
-### Server Settings
-
-- If you modify a setting, then try to navigate away without saving, the page will warn you about the unsaved changes, but continue to navigate away. You may end up in a state where the settings tab that is selected does not match the content of the page. [19905798] [19905787]
-
 ### Certificates
 
 - Cannot import .PFX Encrypted Certificate in to current user store. [11818622]
-
-### Devices
-
-- When navigating through the table with your keyboard, the selection may jump to the top of the table group. [16646059]
 
 ### Events
 
 - Events is effected by [websocket compatibility when using a proxy service.](#websocket-compatibility-when-using-a-proxy-service)
 
-- You may get an error that references “packet size” when exporting large log files. [16630279]
+- You may get an error that references “packet size” when exporting large log files.
 
   - To resolve this, use the following command in an elevated command prompt on the gateway machine: ```winrm set winrm/config @{MaxEnvelopeSizekb="8192"}```
 
@@ -182,8 +149,6 @@ If it is not installed, you can [download and install WMF 5.1](https://www.micro
 
 ### Storage
 
-- Fetching Quota information may fail without an error notification (there will still be an error in the browser's console) [18962274]
-
 - Down-level: DVD/CD/Floppy drives do not appear as volumes on down-level.
 
 - Down-level: Some properties in Volumes and Disks are not available down-level so they appear unknown or blank in details panel.
@@ -217,7 +182,7 @@ If it is not installed, you can [download and install WMF 5.1](https://www.micro
 
 The Computer Management solution contains a subset of the tools from the Server Manager solution, so the same known issues apply, as well as the following Computer Management solution specific issues:
 
-- If you use a Microsoft Account ([MSA](https://account.microsoft.com/account/)) or if you use Azure Active Directory (AAD) to log on to you Windows 10 machine, you must specify "manage-as" credentials to manage your local machine [16568455]
+- If you use a Microsoft Account ([MSA](https://account.microsoft.com/account/)) or if you use Azure Active Directory (AAD) to log on to you Windows 10 machine, you must use "manage-as" to provide credentials for a local administrator account [16568455]
 
 - When you try to manage the localhost, you will be prompted to elevate the gateway process. If you click **no** in the User Account Control popup that follows, Windows Admin Center won't be able to display it again. In this case, exit the gateway process by right-clicking the Windows Admin Center icon in the system tray and choosing exit, then relaunch Windows Admin Center from the Start Menu.
 
