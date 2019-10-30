@@ -13,7 +13,7 @@ ms.date: 06/07/2019
 
 > Applies to: Windows Admin Center, Windows Admin Center Preview
 
-If you encounter an issue not described on this page, please [let us know](http://aka.ms/WACfeedback).
+If you encounter an issue not described on this page, please [let us know](https://aka.ms/WACfeedback).
 
 ## Installer
 
@@ -45,7 +45,7 @@ If you encounter an issue not described on this page, please [let us know](http:
   2. Delete the **Server Management Experience** folder under **C:\Windows\ServiceProfiles\NetworkService\AppData\Roaming\Microsoft**
   3. Reinstall Windows Admin Center
 
-- If you leave the tool open and idle for a long period of time, you may get several **Error: The runspace state is not valid for this operation** errors. If this occurs, refresh your browser. If you encounter this, [send us feedback](http://aka.ms/WACfeedback).
+- If you leave the tool open and idle for a long period of time, you may get several **Error: The runspace state is not valid for this operation** errors. If this occurs, refresh your browser. If you encounter this, [send us feedback](https://aka.ms/WACfeedback).
 
 - You may encounter a **500 Error** when refreshing pages with very long URLs. [12443710]
 
