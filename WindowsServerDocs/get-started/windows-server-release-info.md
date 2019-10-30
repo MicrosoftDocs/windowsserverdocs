@@ -24,7 +24,6 @@ The Semi-Annual Channel provides opportunity for customers who are innovating qu
 | Windows Server, version 1903 (Semi-Annual Channel) (Datacenter Core, Standard Core) | 1903  | 18362.30.190401-1528 | 5/21/2019 | 12/08/2020 | Review note |
 |Windows Server 2019 (Long-Term Servicing Channel) (Datacenter, Essentials, Standard)|1809|17763.107.1010129-1455|11/13/2018|01/09/2024|01/09/2029|
 |Windows Server, version 1809 (Semi-Annual Channel) (Datacenter Core, Standard Core)|1809|17763.107.1010129-1455|11/13/2018|5/12/2020|Review note|
-| Windows Server, version 1803 (Semi-Annual Channel) (Datacenter, Standard)| 1803 |17134.1.180410-1804 |04/30/2018| 11/12/2019|Review note|
 | Windows Server 2016 (Long-Term Servicing Channel)| 1607 | 14393.0 | 10/15/2016 |01/11/2022| 01/11/2027|
 
 > [!NOTE]
