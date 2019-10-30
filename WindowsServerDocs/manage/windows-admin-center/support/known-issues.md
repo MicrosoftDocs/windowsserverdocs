@@ -13,14 +13,7 @@ ms.date: 06/07/2019
 
 > Applies to: Windows Admin Center, Windows Admin Center Preview
 
-If you encounter an issue not described on this page, please [let us know](http://aka.ms/WACfeedback).
-
-## Lenovo XClarity Integrator
-
-The previously disclosed incompatibility issue of the Lenovo XClarity Integrator extension and Windows Admin Center version 1904 is now resolved with Windows Admin Center version 1904.1. We highly recommend that you update to the latest supported version of Windows Admin Center.
-
-- Lenovo XClarity Integrator extension version 1.1 is fully compatible with Windows Admin Center 1904.1. We highly recommend that you update to the latest version of Windows Admin Center and the Lenovo extension.
-- For any reason, if you need to continue using Windows Admin Center 1809.5 for the time being, you may use XClarity Integrator 1.0.4 which will also be available in the Windows Admin Center Extension Feed until Windows Admin Center 1809.5 is no longer supported based on our [support policy](../support/index.md).
+If you encounter an issue not described on this page, please [let us know](https://aka.ms/WACfeedback).
 
 ## Installer
 
@@ -52,7 +45,7 @@ The previously disclosed incompatibility issue of the Lenovo XClarity Integrator
   2. Delete the **Server Management Experience** folder under **C:\Windows\ServiceProfiles\NetworkService\AppData\Roaming\Microsoft**
   3. Reinstall Windows Admin Center
 
-- If you leave the tool open and idle for a long period of time, you may get several **Error: The runspace state is not valid for this operation** errors. If this occurs, refresh your browser. If you encounter this, [send us feedback](http://aka.ms/WACfeedback).
+- If you leave the tool open and idle for a long period of time, you may get several **Error: The runspace state is not valid for this operation** errors. If this occurs, refresh your browser. If you encounter this, [send us feedback](https://aka.ms/WACfeedback).
 
 - You may encounter a **500 Error** when refreshing pages with very long URLs. [12443710]
 
@@ -159,6 +152,8 @@ If it is not installed, you can [download and install WMF 5.1](https://www.micro
 
 ### Remote Desktop
 
+- When Windows Admin Center is deployed as a service, the Remote Desktop tool may fail to load after updating the Windows Admin Center service to a new version. To work around this issue, clear your browser cache.   [23824194]
+
 - The Remote Desktop tool may fail to connect when managing Windows Server 2012. [20258278]
 
 - When using the Remote Desktop to connect to a machine that is not Domain joined, you must enter your account in the ```MACHINENAME\USERNAME``` format.
@@ -176,8 +171,6 @@ If it is not installed, you can [download and install WMF 5.1](https://www.micro
   - Function keys
   - Windows Key
   - PrtScn
-
-- Remote App – After enabling the Remote App tool from Remote Desktop settings, the tool may not appear in the tool list when managing a Server with Desktop Experience. [18906904]
 
 ### Roles and Features
 
