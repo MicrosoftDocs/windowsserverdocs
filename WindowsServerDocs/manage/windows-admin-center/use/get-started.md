@@ -51,9 +51,9 @@ After you have completed the installation of Windows Admin Center, you can add s
 
    ![](../media/launch/addserver0.png)
 
-2. Choose to add a Server, Failover Cluster or Hyper-Converged Cluster connection:
+2. Choose to add a Server, Cluster, Windows PC, or Azure VM:
     
-   ![](../media/launch/addserver1.png)
+   ![](../media/launch/ChooseConnectionType.png)
 
 3. Type the name of the server or cluster to manage and click **Submit**. The server or cluster will be added to your connection list on the overview page.
 
