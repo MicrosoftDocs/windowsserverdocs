@@ -15,13 +15,6 @@ ms.date: 06/07/2019
 
 If you encounter an issue not described on this page, please [let us know](http://aka.ms/WACfeedback).
 
-## Lenovo XClarity Integrator
-
-The previously disclosed incompatibility issue of the Lenovo XClarity Integrator extension and Windows Admin Center version 1904 is now resolved with Windows Admin Center version 1904.1. We highly recommend that you update to the latest supported version of Windows Admin Center.
-
-- Lenovo XClarity Integrator extension version 1.1 is fully compatible with Windows Admin Center 1904.1. We highly recommend that you update to the latest version of Windows Admin Center and the Lenovo extension.
-- For any reason, if you need to continue using Windows Admin Center 1809.5 for the time being, you may use XClarity Integrator 1.0.4 which will also be available in the Windows Admin Center Extension Feed until Windows Admin Center 1809.5 is no longer supported based on our [support policy](../support/index.md).
-
 ## Installer
 
 - When installing Windows Admin Center using your own certificate, be mindful that if you copy the thumbprint from the certificate manager MMC tool, [it will contain an invalid character at the beginning.](https://support.microsoft.com/help/2023835/certificate-thumbprint-displayed-in-mmc-certificate-snap-in-has-extra) As a workaround, type the first character of the thumbprint, and copy/paste the rest.
@@ -159,6 +152,8 @@ If it is not installed, you can [download and install WMF 5.1](https://www.micro
 
 ### Remote Desktop
 
+- When Windows Admin Center is deployed as a service, the Remote Desktop tool may fail to load after updating the Windows Admin Center service to a new version. To work around this issue, clear your browser cache.   [23824194]
+
 - The Remote Desktop tool may fail to connect when managing Windows Server 2012. [20258278]
 
 - When using the Remote Desktop to connect to a machine that is not Domain joined, you must enter your account in the ```MACHINENAME\USERNAME``` format.
@@ -176,8 +171,6 @@ If it is not installed, you can [download and install WMF 5.1](https://www.micro
   - Function keys
   - Windows Key
   - PrtScn
-
-- Remote App – After enabling the Remote App tool from Remote Desktop settings, the tool may not appear in the tool list when managing a Server with Desktop Experience. [18906904]
 
 ### Roles and Features
 

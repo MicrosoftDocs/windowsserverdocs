@@ -124,11 +124,12 @@ Admin Center to Azure</a></li>
 
 Learn about our latest released features:
 
+- Version [1910](https://aka.ms/wac1910) is the most recent GA release - introduces Azure Bridge for Servers, 
 - Version [1909](https://aka.ms/wac1909) introduces the Azure VM specific connection type and unifies the connection types for traditional failover clusters and HCI clusters.
 - Version [1908](https://aka.ms/wac1908) added visual updates, Packetmon, FlowLog Audit, Azure Monitor onboarding for clusters, and support for WinRM over HTTPS (port 5986.)
 - Version [1907](https://aka.ms/wac1907) added Azure cost estimate links and made improvements to import/export and tagging of virtual machines.
 - Version [1906](https://aka.ms/wac1906) added import/export VMs, switch Azure accounts, add connections from Azure, connectivity settings experiment, performance improvements, and performance profiling tool.
-- Version 1904.1 is the most recent GA release - a maintenance update to improve stability of gateway plugins.
+- Version 1904.1 was a maintenance update to improve stability of gateway plugins.
 - Version [1904](https://aka.ms/wac1904) was a GA release that introduced the Azure Hybrid Services tool, and brought features that were previously in preview to the GA channel.
 - Version [1903](https://aka.ms/wac1903) added email notifications from Azure Monitor, the ability to add Server or PC connections from Active Directory, and new tools to manage Active Directory, DHCP, and DNS.
 - Version [1902](https://aka.ms/wac1902) added a shared connection list & improvements to software defined network (SDN) management, including new SDN tools to manage ACLs, gateway connections, and logical networks.
