@@ -25,7 +25,25 @@ The client can be configured for different [user groups](windowsdesktop-admin.md
 |User group |Version  |
 |-----------|---------|
 |Public     |1.2.247  |
-|Insider    |1.2.247  |
+|Insider    |1.2.428  |
+
+## Updates for version 1.2.428
+
+*Date published: 10/31/2019*
+
+- A preview of the 32-bit and ARM64 versions of the client are now available!
+- The state of the connection bar, i.e. its position, size and pinned state, is now remembered across sessions.
+- The gateway information and connection status dialogs have been updated.
+- Addressed an issue that caused two credentials prompt simultaneously during connection when the AAD token is expired.
+- On Windows 7, users are now properly prompted for credentials if they had saved credentials when the server disallows it.
+- Ensured the AAD prompt appears in foreground of the connection when reconnecting.
+- Items pinned to the taskbar are now updated during a feed refresh.
+- Improved scrolling on the connection center when using touch.
+- Removed the empty line from the resolution drop-down menu.
+- Removed unnecessary entries in Windows Credential Manager.
+- Desktop sessions are now properly sized when exiting full screen.
+- Ensured the RemoteApp disconnected dialog is shown in the foreground after sleep/resume.
+- Addressed accessibility issues like keyboard navigation.
 
 ## Updates for version 1.2.247
 
