@@ -20,7 +20,7 @@
 ##### [Claims Transformation Rules Language](solution-guides/Claims-Transformation-Rules-Language.md)
 #### [Appendix A: Dynamic Access Control Glossary](solution-guides/appendix-A--Dynamic-Access-Control-Glossary.md)
 #### [Appendix B: Setting Up the Test Environment](solution-guides/appendix-B--Setting-Up-the-Test-Environment.md)
-
+### [Configuring Certificate Enrollment Web Service for certificate key-based renewal on a custom port](solution-guides/certificate-enrollment-certificate-key-based-renewal.md)
 
 ## [Active Directory Domain Services](ad-ds/active-directory-Domain-Services.md)
 
