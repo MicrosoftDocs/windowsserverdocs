@@ -32,17 +32,17 @@ The client can be configured for different [user groups](windowsdesktop-admin.md
 *Date published: 10/31/2019*
 
 - A preview of the 32-bit and ARM64 versions of the client are now available!
-- The state of the connection bar, i.e. its position, size and pinned state, is now remembered across sessions.
-- The gateway information and connection status dialogs have been updated.
-- Addressed an issue that caused two credentials prompt simultaneously during connection when the AAD token is expired.
+- The client now saves any changes you make to the connection bar (such as its position, size, and pinned state) and applies those changes across sessions.
+- Updated gateway information and connection status dialogs.
+- Addressed an issue that caused two credentials to prompt at the same time while trying to connect after the Azure Active Directory token expired.
 - On Windows 7, users are now properly prompted for credentials if they had saved credentials when the server disallows it.
-- Ensured the AAD prompt appears in foreground of the connection when reconnecting.
+- The Azure Active Directory prompt now appears in front of the connection window when reconnecting.
 - Items pinned to the taskbar are now updated during a feed refresh.
-- Improved scrolling on the connection center when using touch.
+- Improved scrolling on the Connection Center when using touch.
 - Removed the empty line from the resolution drop-down menu.
 - Removed unnecessary entries in Windows Credential Manager.
 - Desktop sessions are now properly sized when exiting full screen.
-- Ensured the RemoteApp disconnected dialog is shown in the foreground after sleep/resume.
+- The RemoteApp disconnection dialog now appears in the foreground when you resume your session after entering sleep mode.
 - Addressed accessibility issues like keyboard navigation.
 
 ## Updates for version 1.2.247

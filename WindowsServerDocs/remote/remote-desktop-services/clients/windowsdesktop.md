@@ -35,7 +35,7 @@ Choose the client that matches your version of Windows:
 
 You can install the client for the current user, which doesn't require admin rights, or your admin can install and configure the client so that all users on the device can access it.
 
-Once installed, the client can be launched from the Start menu by searching for **Remote Desktop**.
+Once you've installed the client, you can launch it from the Start menu by searching for **Remote Desktop**.
 
 ## Update the client
 
