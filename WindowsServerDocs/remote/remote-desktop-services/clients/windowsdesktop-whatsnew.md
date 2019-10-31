@@ -11,7 +11,7 @@ ms.topic: article
 author: heidilohr
 manager: daveba
 ms.author: helohr
-ms.date: 09/24/2019
+ms.date: 10/01/2019
 ms.localizationpriority: medium
 ---
 # What's new in the Windows Desktop client
