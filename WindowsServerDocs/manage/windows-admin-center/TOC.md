@@ -16,6 +16,7 @@
 ### [Prepare your environment](deploy/prepare-environment.md)
 ### [Install Windows Admin Center](deploy/install.md)
 ### [High availability](deploy/high-availability.md)
+### [Deploy hyperconverged infrastructure](deploy/deploy-hyperconverged-infrastructure.md)
 
 
 ## Configure
