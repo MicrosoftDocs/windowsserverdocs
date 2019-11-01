@@ -16,7 +16,6 @@
 ### [Prepare your environment](deploy/prepare-environment.md)
 ### [Install Windows Admin Center](deploy/install.md)
 ### [High availability](deploy/high-availability.md)
-### [Deploy hyperconverged infrastructure](deploy/deploy-hyperconverged-infrastructure.md)
 
 
 ## Configure
@@ -28,6 +27,7 @@
 ## Use
 ### [Get started](use/get-started.md)
 ### [Manage servers](use/manage-servers.md)
+### [Deploy hyperconverged infrastructure](use/deploy-hyperconverged-infrastructure.md)
 ### [Manage hyper-converged infrastructure](use/manage-hyper-converged.md)
 ### [Manage failover clusters](use/manage-failover-clusters.md)
 ### [Manage Hyper-V virtual machines](use/manage-virtual-machines.md)
