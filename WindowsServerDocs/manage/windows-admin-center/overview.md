@@ -62,7 +62,6 @@ You can get Windows Admin Center up and running in your environment in minutes:
             <li><a href="deploy/prepare-environment.md">Prepare your environment</a>
             <li><a href="deploy/install.md">Install Windows Admin Center</a>
             <li><a href="deploy/high-availability.md">Enable high availability</a>
-            <li><a href="deploy/deploy-hyperconverged-infrastructure.md">Deploy hyperconverged infrastructure</a>
          </ul>
         </td>
         <td style="vertical-align: top;">
@@ -81,6 +80,7 @@ You can get Windows Admin Center up and running in your environment in minutes:
             <ul>
             <li><a href="use/get-started.md">Launch & add connections</a>
             <li><a href="use/manage-servers.md">Manage servers</a>
+            <li><a href="use/deploy-hyperconverged-infrastructure.md">Deploy hyperconverged infrastructure</a>
             <li><a href="use/manage-hyper-converged.md">Manage hyper-converged infrastructure</a>
             <li><a href="use/manage-failover-clusters.md">Manage failover clusters</a>
             <li><a href="use/manage-virtual-machines.md">Manage virtual machines</a>
