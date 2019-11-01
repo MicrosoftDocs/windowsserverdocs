@@ -25,7 +25,7 @@ Windows PowerShell and netsh command references are at the following locations. 
   
 -   [Netsh Commands for BranchCache in Windows Server 2008 R2](https://technet.microsoft.com/library/dd979561(v=ws.10))  
   
--   [BranchCache Cmdlets in Windows PowerShell](https://technet.microsoft.com/library/hh848392.aspx) for  Windows Server 2012 .  
+-   [BranchCache Cmdlets in Windows PowerShell](https://docs.microsoft.com/en-us/powershell/module/branchcache/?view=winserver2012r2-ps) for  Windows Server 2012 .  
   
 > [!TIP]  
 > To view a list of Windows PowerShell commands for BranchCache at the Windows PowerShell prompt, type `Get-Command -Module BranchCache` at the Windows PowerShell prompt, and then press ENTER.  
