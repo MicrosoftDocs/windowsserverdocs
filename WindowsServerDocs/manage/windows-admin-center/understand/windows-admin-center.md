@@ -17,9 +17,8 @@ Windows Admin Center is a locally deployed, browser-based app for managing serve
 
 ## Download now
 
-[Which version is right for me?](faq.md#what-is-windows-admin-center-preview-which-version-is-right-for-me)
-
-[Windows Admin Center (version 1910)](https://aka.ms/WACDownload) - Broadly validated & generally available.
+Visit the Microsoft Eval Center to download [Windows Admin Center](https://www.microsoft.com/en-us/evalcenter/evaluate-windows-admin-center) now.
+Don’t be confused by the location on “Eval Center.” This is where you can get the generally available version.
 
 [What's new?](../overview.md#release-history)
 
