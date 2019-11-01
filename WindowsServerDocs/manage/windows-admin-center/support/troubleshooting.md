@@ -14,7 +14,7 @@ ms.date: 06/07/2019
 > Applies to: Windows Admin Center, Windows Admin Center Preview
 
 > [!Important]
-> This guide will help you diagnose and resolve issues that are preventing you from using Windows Admin Center. If you are having an issue with a specific tool, please check to see if you are experiencing a [known issue.](http://aka.ms/wacknownissues)
+> This guide will help you diagnose and resolve issues that are preventing you from using Windows Admin Center. If you are having an issue with a specific tool, please check to see if you are experiencing a [known issue.](https://aka.ms/wacknownissues)
 
 ## Installer fails with message: **_The Module 'Microsoft.PowerShell.LocalAccounts' could not be loaded._**
 
