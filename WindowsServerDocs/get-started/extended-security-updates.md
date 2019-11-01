@@ -53,7 +53,7 @@ To register non-Azure VMs for ESUs and create a MAK, complete the following step
 
     If you haven't use ESUs before, chose to **+ Create** an Extended Security Updates resource first. Otherwise, select your resource from the list.
 
-1. Under **Register for Extended Service Updates**, select **Get started**.
+1. Under **Register for Extended Service Updates**, select **Get key**.
 
     ![Get started with Extended Security Updates in the Azure portal](media/extended-security-updates/get-started-with-esu.png)
 
@@ -64,9 +64,9 @@ To register non-Azure VMs for ESUs and create a MAK, complete the following step
     > [!NOTE]
     > You need an Azure subscription associated with your account to create the ESU resource and MAK. If you don't have an Azure subscription associated with your account, sign in with a different user account or create an Azure subscription using the guided steps shown in the portal.
 
-1. In the window to create an ESU resource, select your Azure subscription, a resource group, and location to create the key.
+1. Under **Azure details**, select your Azure subscription, a resource group, and location for your key.
 
-    Under **Key details**, enter the following information:
+    Under **Registration details**, enter the following information:
 
     | Setting             | Value |
     |---------------------|-------|
