@@ -316,8 +316,8 @@ Set-DnsClientServerAddress -InterfaceAlias "Ethernet" -ServerAddresses 10.0.0.2
 
 For more information about these commands, see the following topics.
 
-- [New-NetIPAddress](https://technet.microsoft.com/itpro/powershell/windows/tcpip/new-netipaddress)
-- [Set-DnsClientServerAddress](https://technet.microsoft.com/itpro/powershell/windows/dns-client/set-dnsclientserveraddress)
+- [New-NetIPAddress](https://docs.microsoft.com/en-us/powershell/module/nettcpip/New-NetIPAddress)
+- [Set-DnsClientServerAddress](https://docs.microsoft.com/en-us/powershell/module/dnsclient/Set-DnsClientServerAddress)
 
 **Rename the computer**
 
@@ -361,7 +361,7 @@ Install-WindowsFeature DHCP -IncludeManagementTools
 
 For more information about this command, see the following topic.
 
-- [Install-WindowsFeature](https://technet.microsoft.com/itpro/powershell/windows/server-manager/install-windowsfeature)
+- [Install-WindowsFeature](https://docs.microsoft.com/en-us/powershell/module/Microsoft.Windows.ServerManager.Migration/Install-WindowsFeature)
 
 ### Create DHCP security groups
 
@@ -416,8 +416,8 @@ IPAddress	DnsName
 
 For more information about these commands, see the following topics.
 
-- [Add-DhcpServerInDC](https://technet.microsoft.com/itpro/powershell/windows/dhcp-server/add-dhcpserverindc)
-- [Get-DhcpServerInDC](https://technet.microsoft.com/itpro/powershell/windows/dhcp-server/get-dhcpserverindc)
+- [Add-DhcpServerInDC](https://docs.microsoft.com/en-us/powershell/module/dhcpserver/add-dhcpserverindc?view=win10-ps)
+- [Get-DhcpServerInDC](https://docs.microsoft.com/en-us/powershell/module/dhcpserver/get-dhcpserverindc)
 
 ### Notify Server Manager that post\-install DHCP configuration is complete \(Optional\)
 
@@ -450,8 +450,8 @@ Set-DhcpServerDnsCredential -Credential $Credential -ComputerName "DHCP1.corp.co
 
 For more information about these commands, see the following topics.
 
-- [Set-DhcpServerv4DnsSetting](https://technet.microsoft.com/itpro/powershell/windows/dhcp-server/set-dhcpserverv4dnssetting)
-- [Set-DhcpServerDnsCredential](https://technet.microsoft.com/itpro/powershell/windows/dhcp-server/set-dhcpserverdnscredential)
+- [Set-DhcpServerv4DnsSetting](https://docs.microsoft.com/en-us/powershell/module/dhcpserver/set-dhcpserverv4dnssetting)
+- [Set-DhcpServerDnsCredential](https://docs.microsoft.com/en-us/powershell/module/dhcpserver/set-dhcpserverdnscredential)
 
 ### Configure the Corpnet Scope
 
@@ -466,9 +466,9 @@ Set-DhcpServerv4OptionValue -DnsDomain corp.contoso.com -DnsServer 10.0.0.2
 
 For more information about these commands, see the following topics.
 
-- [Add-DhcpServerv4Scope](https://technet.microsoft.com/itpro/powershell/windows/dhcp-server/add-dhcpserverv4scope)
-- [Add-DhcpServerv4ExclusionRange](https://technet.microsoft.com/itpro/powershell/windows/dhcp-server/add-dhcpserverv4exclusionrange)
-- [Set-DhcpServerv4OptionValue](https://technet.microsoft.com/itpro/powershell/windows/dhcp-server/set-dhcpserverv4optionvalue)
+- [Add-DhcpServerv4Scope](https://docs.microsoft.com/en-us/powershell/module/dhcpserver/add-dhcpserverv4scope)
+- [Add-DhcpServerv4ExclusionRange](https://docs.microsoft.com/en-us/powershell/module/dhcpserver/add-dhcpserverv4exclusionrange)
+- [Set-DhcpServerv4OptionValue](https://docs.microsoft.com/en-us/powershell/module/dhcpserver/set-dhcpserverv4optionvalue)
 
 ### Configure the Corpnet2 Scope \(Optional\)
 
@@ -493,7 +493,7 @@ If the client does not receive an IP address from your DHCP server, perform the 
 
 1. Ensure that the Ethernet cable is plugged into both the computer and the Ethernet switch, hub,  or router.
 2. If you plugged the client computer into a network segment that is separated from the DHCP server by a router, ensure that the router is configured to forward DHCP messages.
-3. Ensure that the DHCP server is authorized in Active Directory by running the following command to retrieve the list of authorized DHCP servers from Active Directory. [Get-DhcpServerInDC](https://technet.microsoft.com/itpro/powershell/windows/dhcp-server/get-dhcpserverindc).
+3. Ensure that the DHCP server is authorized in Active Directory by running the following command to retrieve the list of authorized DHCP servers from Active Directory. [Get-DhcpServerInDC](https://docs.microsoft.com/en-us/powershell/module/dhcpserver/get-dhcpserverindc).
 4. Ensure that your scopes are activated by opening the DHCP console \(Server Manager, **Tools**, **DHCP**\), expanding the server tree to review scopes, then right\-clicking each scope. If the resulting menu includes the selection **Activate**, click **Activate**. \(If the scope is already activated, the menu selection reads **Deactivate**.\)
 
 ## <a name="bkmk_dhcpwps"></a>Windows PowerShell Commands for DHCP
@@ -503,14 +503,14 @@ The following reference provides command descriptions and syntax for all DHCP Se
 >[!NOTE]
 >You can not use Windows Server 2016 commands in Windows Server 2012 R2.
 
-- [DhcpServer Module](https://technet.microsoft.com/itpro/powershell/windows/dhcp-server/index)
+- [DhcpServer Module](https://docs.microsoft.com/en-us/powershell/module/dhcpserver/?view=win10-ps)
 
 The following reference provides command descriptions and syntax for all DHCP Server Windows PowerShell commands for Windows Server 2012 R2. The topic lists commands in alphabetical order based on the verb at the beginning of the commands, such as **Get** or **Set**.
 
 >[!NOTE]
 >You can use Windows Server 2012 R2 commands in Windows Server 2016.
 
-- [DHCP Server Cmdlets in Windows PowerShell](https://technet.microsoft.com/library/jj590751.aspx)
+- [DHCP Server Cmdlets in Windows PowerShell](https://docs.microsoft.com/en-us/powershell/module/dhcpserver/?view=winserver2012r2-ps)
 
 ## <a name="bkmk_list"></a>List of Windows PowerShell Commands in this guide
 
