@@ -512,7 +512,7 @@ In this section, we will configure group policies to prevent privileged administ
      Enterprise Admins
      Domain Admins
      Schema Admins
-     DOMAIN\Administrators
+     BUILTIN\Administrators
      Account Operators
      Backup Operators
      Print Operators
@@ -541,7 +541,7 @@ In this section, we will configure group policies to prevent privileged administ
      Enterprise Admins
      Domain Admins
      Schema Admins
-     DOMAIN\Administrators
+     BUILTIN\Administrators
      Account Operators
      Backup Operators
      Print Operators
@@ -571,7 +571,7 @@ In this section, we will configure group policies to prevent privileged administ
      Enterprise Admins
      Domain Admins
      Schema Admins
-     DOMAIN\Administrators
+     BUILTIN\Administrators
      Account Operators
      Backup Operators
      Print Operators
@@ -595,7 +595,7 @@ In this section, we will configure group policies to prevent privileged administ
      Enterprise Admins
      Domain Admins
      Schema Admins
-     DOMAIN\Administrators
+     BUILTIN\Administrators
      Account Operators
      Backup Operators
      Print Operators
@@ -619,7 +619,7 @@ In this section, we will configure group policies to prevent privileged administ
      Enterprise Admins
      Domain Admins
      Schema Admins
-     DOMAIN\Administrators
+     BUILTIN\Administrators
      Account Operators
      Backup Operators
      Print Operators
