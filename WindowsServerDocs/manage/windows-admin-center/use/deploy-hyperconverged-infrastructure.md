@@ -31,7 +31,7 @@ Follow the instructions to [download and install](https://docs.microsoft.com/win
 
 ### 3. Install the Cluster Creation extension
 
-The cluster creation workflow is delivered and updated through the Windows Admin Center extension feed. This is so we can address your feedback and make improvements more rapidly during the Preview phase. In the future, it will be included in the main installer.
+The cluster creation workflow is delivered and updated through the Windows Admin Center extension feed. This is so we can address your feedback and make improvements more rapidly during the Preview phase.
 
 To install the extension, launch Windows Admin Center and then:
 
