@@ -137,7 +137,7 @@ There are two versions of Windows Admin Center available for download:
 
 ### Windows Admin Center
 
-* For IT admins who are not able to update frequently or who want more validation time for the releases they use in production, this version is for you. Our current generally available (GA) release is Windows Admin Center 1904.
+* For IT admins who are not able to update frequently or who want more validation time for the releases they use in production, this version is for you. Our current generally available (GA) release is Windows Admin Center 1910.
 * [!INCLUDE [support-policy](../includes/support-policy.md)]
 * To get the latest release, [download here](https://aka.ms/WACDownload).
 
