@@ -51,7 +51,7 @@ After you have completed the installation of Windows Admin Center, you can add s
 
    ![](../media/launch/addserver0.png)
 
-2. Choose to add a Server, Cluster, Windows PC, or Azure VM:
+2. Choose to add a server, cluster, Windows PC, or an Azure VM:
     
    ![](../media/launch/ChooseConnectionType.png)
 
