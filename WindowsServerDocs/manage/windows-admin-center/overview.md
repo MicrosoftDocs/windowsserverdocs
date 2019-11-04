@@ -19,9 +19,9 @@ ms.prod: windows-server
 
 >[!VIDEO https://www.youtube.com/embed/PcQj6ZklmK0]
 
-![Windows Admin Center Infographic](media/WAC1809Poster_thumb.PNG)
+![Windows Admin Center Infographic](media/WAC1910Poster_thumb.PNG)
 
-[Download the PDF](https://github.com/MicrosoftDocs/windowsserverdocs/raw/master/WindowsServerDocs/manage/windows-admin-center/media/WindowsAdminCenter1809Poster.pdf)
+[Download the PDF](https://github.com/MicrosoftDocs/windowsserverdocs/raw/master/WindowsServerDocs/manage/windows-admin-center/media/WindowsAdminCenter1910Poster.pdf)
 
 ## Quick start
 
@@ -80,6 +80,7 @@ You can get Windows Admin Center up and running in your environment in minutes:
             <ul>
             <li><a href="use/get-started.md">Launch & add connections</a>
             <li><a href="use/manage-servers.md">Manage servers</a>
+            <li><a href="use/deploy-hyperconverged-infrastructure.md">Deploy hyperconverged infrastructure</a>
             <li><a href="use/manage-hyper-converged.md">Manage hyper-converged infrastructure</a>
             <li><a href="use/manage-failover-clusters.md">Manage failover clusters</a>
             <li><a href="use/manage-virtual-machines.md">Manage virtual machines</a>
@@ -124,11 +125,12 @@ Admin Center to Azure</a></li>
 
 Learn about our latest released features:
 
+- Version [1910](https://aka.ms/wac1910) is the most recent GA release - it introduces several new Azure hybrid services and brings features that were previously in preview to the GA channel.
 - Version [1909](https://aka.ms/wac1909) introduces the Azure VM specific connection type and unifies the connection types for traditional failover clusters and HCI clusters.
 - Version [1908](https://aka.ms/wac1908) added visual updates, Packetmon, FlowLog Audit, Azure Monitor onboarding for clusters, and support for WinRM over HTTPS (port 5986.)
 - Version [1907](https://aka.ms/wac1907) added Azure cost estimate links and made improvements to import/export and tagging of virtual machines.
 - Version [1906](https://aka.ms/wac1906) added import/export VMs, switch Azure accounts, add connections from Azure, connectivity settings experiment, performance improvements, and performance profiling tool.
-- Version 1904.1 is the most recent GA release - a maintenance update to improve stability of gateway plugins.
+- Version 1904.1 was a maintenance update to improve stability of gateway plugins.
 - Version [1904](https://aka.ms/wac1904) was a GA release that introduced the Azure Hybrid Services tool, and brought features that were previously in preview to the GA channel.
 - Version [1903](https://aka.ms/wac1903) added email notifications from Azure Monitor, the ability to add Server or PC connections from Active Directory, and new tools to manage Active Directory, DHCP, and DNS.
 - Version [1902](https://aka.ms/wac1902) added a shared connection list & improvements to software defined network (SDN) management, including new SDN tools to manage ACLs, gateway connections, and logical networks.
