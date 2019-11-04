@@ -51,9 +51,9 @@ After you have completed the installation of Windows Admin Center, you can add s
 
    ![](../media/launch/addserver0.png)
 
-2. Choose to add a Server, Failover Cluster or Hyper-Converged Cluster connection:
+2. Choose to add a server, cluster, Windows PC, or an Azure VM:
     
-   ![](../media/launch/addserver1.png)
+   ![](../media/launch/ChooseConnectionType.png)
 
 3. Type the name of the server or cluster to manage and click **Submit**. The server or cluster will be added to your connection list on the overview page.
 
@@ -114,7 +114,7 @@ specific browser session. If you reload your browser, you must re-enter your
 
 **Local Administrator Password Solution (LAPS)**
 
-If your environment uses [LAPS](https://technet.microsoft.com/mt227395.aspx), and you have Windows Admin Center installed on your Windows 10 PC, you can use LAPS credentials to authenticate with the managed node. **If you use this scenario, please** [provide feedback](http://aka.ms/WACFeedback).
+If your environment uses [LAPS](https://technet.microsoft.com/mt227395.aspx), and you have Windows Admin Center installed on your Windows 10 PC, you can use LAPS credentials to authenticate with the managed node. **If you use this scenario, please** [provide feedback](https://aka.ms/WACFeedback).
 
 ## Using tags to organize your connections
 
