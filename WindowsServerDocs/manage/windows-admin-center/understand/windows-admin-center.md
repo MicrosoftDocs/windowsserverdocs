@@ -17,7 +17,7 @@ Windows Admin Center is a locally deployed, browser-based app for managing serve
 
 ## Download now
 
-Visit the Microsoft Eval Center to download [Windows Admin Center](https://www.microsoft.com/en-us/evalcenter/evaluate-windows-admin-center) now.
+Visit the Microsoft Eval Center to download [Windows Admin Center](https://www.microsoft.com/evalcenter/evaluate-windows-admin-center) now.
 
 Don’t be confused by the location on “Eval Center.” This is where you can get the generally available version.
 
