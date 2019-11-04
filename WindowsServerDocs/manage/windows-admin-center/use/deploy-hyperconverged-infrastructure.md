@@ -2,6 +2,9 @@
 title: Deploy hyperconverged infrastructure with Windows Admin Center
 ms.topic: article
 author: cosmosdarwin
+ms.author: cosdar
+ms.prod: windows-server
+ms.technology: manage
 ms.date: 11/04/2019
 ---
 
