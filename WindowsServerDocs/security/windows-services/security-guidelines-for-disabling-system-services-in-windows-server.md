@@ -12,7 +12,7 @@ author: nirb
 ms.author: nirb
 ---
 
-## Guidance on disabling system services on Windows Server 2016 with Desktop Experience
+# Guidance on disabling system services on Windows Server 2016 with Desktop Experience
 
 Applies to: Windows Server 2016
 
