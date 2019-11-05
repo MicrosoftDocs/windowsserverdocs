@@ -1724,7 +1724,6 @@ The following tables offer Microsoft guidance on disabling system services on Wi
 |   **Comments**    |   
 |||         
 
-
 ## Sensor Service
 
 | | |
@@ -1736,8 +1735,6 @@ The following tables offer Microsoft guidance on disabling system services on Wi
 |   **Recommendation**  |   OK to disable
 |   **Comments**    |
 |||
-
-
 
 ## Server           
 
