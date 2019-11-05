@@ -63,7 +63,7 @@ For all system services listed in this document, the two tables that follow offe
 |---|---|
 |**Service description**|   The service's description, from sc.exe qdescription.|
 |**Name** |Key (internal) name of the service|
-|**Installation** |Always installed: Service is on Server Core and Server with Desktop Experience  
+|**Installation** |Always installed: Service is on Server Core and Server with Desktop Experience  Only with Desktop Experience: Service is on Windows Server 2016 with Desktop Experience, but is ***not*** on Server Core |
 |**StartType**  |Service start type on Windows Server 2016|
 |**Recommendation** |Microsoft recommendation/advice about disabling this service on Windows Server 2016 in a typical, well-managed enterprise deployment and where the server is not being used as an end-user desktop replacement.|
 |**Comments** |Additional explanation|
@@ -1726,6 +1726,7 @@ The following tables offer Microsoft guidance on disabling system services on Wi
 
 
 ## Sensor Service
+
 | | |
 |---|---|
 |   **Service description** |   A service for sensors that manages the functionality of different sensors. Manages Simple Device Orientation (SDO) and History for sensors. Loads the SDO sensor that reports device orientation changes.  If this service is stopped or disabled, the SDO sensor will not be loaded and so auto-rotation will not occur. History collection from Sensors will also be stopped.
