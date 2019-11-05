@@ -25,7 +25,7 @@ Before you start your Windows Server upgrade, we recommend that you collect some
 
 3. Type **ipconfig /all** into the command prompt, and then copy and paste the resulting configuration information into the same location as above.
 
-4. Open the Registry Editor, go to the HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\WindowsNT\CurrentVersion hive, and then copy and paste the Windows Server **BuildLabEx** (version) and **EditionID** (edition) into the same location as above.
+4. Open the Registry Editor, go to the `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion` key, and then copy and paste the Windows Server **BuildLabEx** (version) and **EditionID** (edition) into the same location as above.
 
 After you've collected all of your Windows Server-related information, we highly recommend that you backup your operating system, apps, and virtual machines. You must also **Shut down**, **Quick migrate**, or **Live migrate** any virtual machines currently running on the server. You can't have any virtual machines running during the in-place upgrade.
 
@@ -75,7 +75,7 @@ After your upgrade completes, you must make sure the upgrade to Windows Server 2
 
 ### To make sure your upgrade was successful
 
-1. Open the Registry Editor, go to the HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\WindowsNT\CurrentVersion hive, and view the **ProductName**. You should see your edition of Windows Server 2019, for example **Windows Server 2019 Datacenter**.
+1. Open the Registry Editor, go to the `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion` key, and view the **ProductName**. You should see your edition of Windows Server 2019, for example **Windows Server 2019 Datacenter**.
 
 2. Make sure all of your applications are running and that your client connections to the applications are successful.
 

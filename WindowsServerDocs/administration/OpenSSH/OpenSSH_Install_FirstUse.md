@@ -1,5 +1,5 @@
 ---
-ms.date:  01/07/2019
+ms.date:  09/27/2019
 ms.topic: conceptual
 keywords:  OpenSSH, SSH, SSHD, install, setup
 contributor:  maertendMSFT
@@ -92,7 +92,9 @@ Start-Service sshd
 Set-Service -Name sshd -StartupType 'Automatic'
 # Confirm the Firewall rule is configured. It should be created automatically by setup. 
 Get-NetFirewallRule -Name *ssh*
-# There should be a firewall rule named "OpenSSH-Server-In-TCP", which should be enabled 
+# There should be a firewall rule named "OpenSSH-Server-In-TCP", which should be enabled
+# If the firewall does not exist, create one
+New-NetFirewallRule -Name sshd -DisplayName 'OpenSSH Server (sshd)' -Enabled True -Direction Inbound -Protocol TCP -Action Allow -LocalPort 22
 ```
 
 ## Initial use of SSH

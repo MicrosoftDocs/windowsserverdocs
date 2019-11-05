@@ -95,10 +95,17 @@ ReFS compaction addresses these performance issues by freeing up space in mirror
 
 ReFS maintains performance counters to help evaluate the performance of mirror-accelerated parity. 
 - As described above in the Write to Parity section, ReFS will write directly to parity when it can't find free space in mirror. Generally, this occurs when the mirrored tier fills up faster than ReFS can rotate data to parity. In other words, ReFS rotation is not able to keep up with the ingestion rate. The performance counters below identify when ReFS writes directly to parity:
+
   ```
+  # Windows Server 2016
   ReFS\Data allocations slow tier/sec
   ReFS\Metadata allocations slow tier/sec
+
+  # Windows Server 2019
+  ReFS\Allocation of Data Clusters on Slow Tier/sec
+  ReFS\Allocation of Metadata Clusters on Slow Tier/sec
   ```
+
 - If these counters are non-zero, this indicates ReFS is not rotating data fast enough out of mirror. To help alleviate this, one can either change the rotation aggressiveness or increase the size of the mirrored tier.
 
 ### Rotation aggressiveness
