@@ -42,7 +42,7 @@ Scheduled tasks:
 
 (You can also access the information on all services detailed in this article by viewing the attached Microsoft Excel spreadsheet: [Guidance on Disabling System Services on Windows Server 2016 with Desktop Experience](https://msdnshared.blob.core.windows.net/media/2017/05/Service-management-WS2016.xlsx))
 
-<br />
+
 
 ### Disabling services not installed by default
 
@@ -52,10 +52,10 @@ Microsoft recommends against applying policies to disable services that are not 
 -  A baseline or benchmark that disables a non-default Windows service (for example, W3SVC) will give some auditors the mistaken impression that the technology (for example, IIS) is inherently insecure and should never be used.
 -  If the feature (and service) is never installed, this just adds unnecessary bulk to the baseline and to verification work.
 
-<br />
+
 For all system services listed in this document, the two tables that follow offer an explanation of columns and Microsoft recommendations for enabling and disabling system services in Windows Server 2016 with Desktop Experience: 
 
-<br />
+
 
 ### Explanation of columns
 
@@ -63,12 +63,12 @@ For all system services listed in this document, the two tables that follow offe
 |---|---|
 |**Service description**|   The service's description, from sc.exe qdescription.|
 |**Name** |Key (internal) name of the service|
-|**Installation** |Always installed: Service is on Server Core and Server with Desktop Experience  <br /> Only with Desktop Experience: Service is on Windows Server 2016 with Desktop Experience, but is ***not*** on Server Core |
+|**Installation** |Always installed: Service is on Server Core and Server with Desktop Experience  
 |**StartType**  |Service start type on Windows Server 2016|
 |**Recommendation** |Microsoft recommendation/advice about disabling this service on Windows Server 2016 in a typical, well-managed enterprise deployment and where the server is not being used as an end-user desktop replacement.|
 |**Comments** |Additional explanation|
 
-<br />
+
 
 ### Explanation of Microsoft recommendations
 
@@ -79,11 +79,11 @@ For all system services listed in this document, the two tables that follow offe
 |**Already disabled**|  This service is disabled by default; no need to enforce with policy|
 |**Should be disabled** |This service should never be enabled on a well-managed enterprise system.|
 
-<br />
+
 
 The following tables offer Microsoft guidance on disabling system services on Windows Server 2016 with Desktop Experience:
 
-<br />
+
 
 ##  ActiveX Installer (AxInstSV)
 
@@ -97,7 +97,7 @@ The following tables offer Microsoft guidance on disabling system services on Wi
 |   **Comments**    |   OK to disable if feature not needed |
 
 
-<br />
+
 
 ## AllJoyn Router Service   
 
@@ -111,7 +111,7 @@ The following tables offer Microsoft guidance on disabling system services on Wi
 |   **Comments**    |       |
 | | |
 
-<br />
+
 
 ## App Readiness
 
@@ -125,7 +125,7 @@ The following tables offer Microsoft guidance on disabling system services on Wi
 **Comments**    |   
 | | |
 
-<br />
+
 
 ##  Application Identity
 
@@ -139,7 +139,7 @@ The following tables offer Microsoft guidance on disabling system services on Wi
 **Comments**    |   
 |||     
 
-<br />
+
 
 ##  Application Information 
 
@@ -153,7 +153,7 @@ The following tables offer Microsoft guidance on disabling system services on Wi
 |   **Comments**    |   Supports UAC same-desktop elevation
 |||     
 
-<br />
+
 
 ##  Application Layer Gateway Service       
 
@@ -167,7 +167,7 @@ The following tables offer Microsoft guidance on disabling system services on Wi
 |   **Comments**    |   
 |||     
 
-<br />
+
 
 ##  Application Management      
 
@@ -181,7 +181,7 @@ The following tables offer Microsoft guidance on disabling system services on Wi
 |   **Comments**    |   
 |||         
 
-<br />          
+
 
 ##  AppX Deployment Service (AppXSVC)       
 
@@ -195,7 +195,7 @@ The following tables offer Microsoft guidance on disabling system services on Wi
 |   **Comments**    |   
 |||         
 
-<br />          
+
 
 ## Auto Time Zone Updater           
 
@@ -209,7 +209,7 @@ The following tables offer Microsoft guidance on disabling system services on Wi
 |   **Comments**    |   
 |||         
 
-<br />          
+
 
 ## Background Intelligent Transfer Service          
 
@@ -223,7 +223,7 @@ The following tables offer Microsoft guidance on disabling system services on Wi
 |   **Comments**    |   
 |||         
 
-<br />          
+
 
 
 ## Background Tasks Infrastructure Service      
@@ -238,7 +238,7 @@ The following tables offer Microsoft guidance on disabling system services on Wi
 |   **Comments**    |   
 |||         
 
-<br />          
+
 
 ## Base Filtering Engine            
 
@@ -252,7 +252,7 @@ The following tables offer Microsoft guidance on disabling system services on Wi
 |   **Comments**    |   
 |||         
 
-<br />          
+
 
 ## Bluetooth Support Service            
 
@@ -266,7 +266,7 @@ The following tables offer Microsoft guidance on disabling system services on Wi
 |   **Comments**    |   OK to disable if not used. Another disabling mechanism: https://technet.microsoft.com/library/dd252791.aspx
 |||         
 
-<br />          
+
 
 
 ## CDPUserSvc           
@@ -281,7 +281,7 @@ The following tables offer Microsoft guidance on disabling system services on Wi
 |   **Comments**    |   User service template
 |||         
 
-<br />          
+
 
 
 ##  Certificate Propagation     
@@ -296,7 +296,7 @@ The following tables offer Microsoft guidance on disabling system services on Wi
 |   **Comments**    |   
 |||         
 
-<br />          
+
 
 ##  Client License Service (ClipSVC)        
 
@@ -310,7 +310,7 @@ The following tables offer Microsoft guidance on disabling system services on Wi
 |   **Comments**    |   
 |||         
 
-<br />          
+
 
 ## CNG Key Isolation
 
@@ -324,7 +324,7 @@ The following tables offer Microsoft guidance on disabling system services on Wi
 |   **Comments**    |   
 |||         
 
-<br />          
+
 
 ##  COM+ Event System       
 
@@ -338,7 +338,7 @@ The following tables offer Microsoft guidance on disabling system services on Wi
 |   **Comments**    |   
 |||         
 
-<br />          
+
 
 ##  COM+ System Application     
 
@@ -352,7 +352,7 @@ The following tables offer Microsoft guidance on disabling system services on Wi
 |   **Comments**    |   
 |||         
 
-<br />          
+
 
 ##  Computer Browser        
 
@@ -366,7 +366,7 @@ The following tables offer Microsoft guidance on disabling system services on Wi
 |   **Comments**    |   
 |||         
 
-<br />          
+
 
 ## Connected Devices Platform Service       
 
@@ -380,7 +380,7 @@ The following tables offer Microsoft guidance on disabling system services on Wi
 |   **Comments**    |   
 |||         
 
-<br />          
+
 
 ## Connected User Experiences and Telemetry     
 
@@ -394,7 +394,7 @@ The following tables offer Microsoft guidance on disabling system services on Wi
 |   **Comments**    |   
 |||         
 
-<br />          
+
 
 ##  Contact Data        
 
@@ -408,7 +408,7 @@ The following tables offer Microsoft guidance on disabling system services on Wi
 |   **Comments**    |   User service template
 |||         
 
-<br />          
+
 
 ## CoreMessaging            
 
@@ -422,7 +422,7 @@ The following tables offer Microsoft guidance on disabling system services on Wi
 |   **Comments**    |   
 |||         
 
-<br />          
+
 
 ## Credential Manager           
 
@@ -436,7 +436,7 @@ The following tables offer Microsoft guidance on disabling system services on Wi
 |   **Comments**    |   
 |||         
 
-<br />          
+
 
 ## Cryptographic Services           
 
@@ -450,7 +450,7 @@ The following tables offer Microsoft guidance on disabling system services on Wi
 |   **Comments**    |   
 |||         
 
-<br />          
+
 
 ## Data Sharing Service         
 
@@ -464,7 +464,7 @@ The following tables offer Microsoft guidance on disabling system services on Wi
 |   **Comments**    |   
 |||         
 
-<br />          
+
 
 ## DataCollectionPublishingService          
 
@@ -478,7 +478,7 @@ The following tables offer Microsoft guidance on disabling system services on Wi
 |   **Comments**    |   
 |||         
 
-<br />          
+
 
 ## DCOM Server Process Launcher         
 
@@ -492,7 +492,7 @@ The following tables offer Microsoft guidance on disabling system services on Wi
 |   **Comments**    |   
 |||         
 
-<br />
+
 
 ##  Device Association Service      
 
@@ -506,7 +506,7 @@ The following tables offer Microsoft guidance on disabling system services on Wi
 |   **Comments**    |   
 |||         
 
-<br />
+
 
 ##  Device Install Service
 
@@ -520,7 +520,7 @@ The following tables offer Microsoft guidance on disabling system services on Wi
 |   **Comments**    |
 |||
 
-<br />          
+
 
 ##  Device Management Enrollment Service        
 
@@ -534,7 +534,7 @@ The following tables offer Microsoft guidance on disabling system services on Wi
 |   **Comments**    |   
 |||         
 
-<br />          
+
 
 ## Device Setup Manager         
 
@@ -548,7 +548,7 @@ The following tables offer Microsoft guidance on disabling system services on Wi
 |   **Comments**    |   
 |||         
 
-<br />          
+
 
 ## DevQuery Background Discovery Broker         
 
@@ -562,7 +562,7 @@ The following tables offer Microsoft guidance on disabling system services on Wi
 |   **Comments**    |   
 |||         
 
-<br />          
+
 
 ## DHCP Client          
 
@@ -576,7 +576,7 @@ The following tables offer Microsoft guidance on disabling system services on Wi
 |   **Comments**    |   
 |||         
 
-<br />          
+
 
 ## Diagnostic Policy Service            
 
@@ -590,7 +590,7 @@ The following tables offer Microsoft guidance on disabling system services on Wi
 |   **Comments**    |   
 |||         
 
-<br />          
+
 
 ##  Diagnostic Service Host     
 
@@ -604,7 +604,7 @@ The following tables offer Microsoft guidance on disabling system services on Wi
 |   **Comments**    |   
 |||         
 
-<br />          
+
 
 ## Diagnostic System Host           
 
@@ -618,7 +618,7 @@ The following tables offer Microsoft guidance on disabling system services on Wi
 |   **Comments**    |   
 |||         
 
-<br />          
+
 
 ##  Distributed Link Tracking Client            
 
@@ -632,7 +632,7 @@ The following tables offer Microsoft guidance on disabling system services on Wi
 |   **Comments**    |   
 |||         
 
-<br />          
+
 
 ##  Distributed Transaction Coordinator     
 
@@ -646,7 +646,7 @@ The following tables offer Microsoft guidance on disabling system services on Wi
 |   **Comments**    |   
 |||         
 
-<br />  
+
 
 ##  dmwappushsvc        
 
@@ -660,7 +660,7 @@ The following tables offer Microsoft guidance on disabling system services on Wi
 |   **Comments**    |   Service required on client devices for Intune, MDM and similar management technologies, and for Unified Write Filter. Not needed for Server.
 |||         
 
-<br />      
+
 
 ##  DNS Client      
 
@@ -674,7 +674,7 @@ The following tables offer Microsoft guidance on disabling system services on Wi
 |   **Comments**    |   
 |||         
 
-<br />          
+
 
 ##  Downloaded Maps Manager     
 
@@ -688,7 +688,7 @@ The following tables offer Microsoft guidance on disabling system services on Wi
 |   **Comments**    |   Disabling breaks apps that rely on the service; OK to disable if apps not relying on it
 |||         
 
-<br />          
+
 
 ## Embedded Mode            
 
@@ -702,7 +702,7 @@ The following tables offer Microsoft guidance on disabling system services on Wi
 |   **Comments**    |   
 |||         
 
-<br />          
+
 
 ## Encrypting File System (EFS)
 
@@ -716,7 +716,7 @@ The following tables offer Microsoft guidance on disabling system services on Wi
 |   **Comments**   |
 |||                 
 
-<br />  
+
 
 ## Enterprise App Management Service            
 
@@ -730,7 +730,7 @@ The following tables offer Microsoft guidance on disabling system services on Wi
 |   **Comments**    |   
 |||         
 
-<br />          
+
 
 ## Extensible Authentication Protocol           
 
@@ -744,7 +744,7 @@ The following tables offer Microsoft guidance on disabling system services on Wi
 |   **Comments**    |   
 |||         
 
-<br />          
+
 
 ## Function Discovery Provider Host         
 
@@ -758,7 +758,7 @@ The following tables offer Microsoft guidance on disabling system services on Wi
 |   **Comments**    |   
 |||         
 
-<br />          
+
 
 ## Function Discovery Resource Publication      
 
@@ -772,7 +772,7 @@ The following tables offer Microsoft guidance on disabling system services on Wi
 |   **Comments**    |   
 |||         
 
-<br />          
+
 
 ## Geolocation Service          
 
@@ -786,7 +786,7 @@ The following tables offer Microsoft guidance on disabling system services on Wi
 |   **Comments**    |   Disabling breaks apps that rely on the service; OK to disable if apps not relying on it
 |||         
 
-<br />          
+
 
 ##  Group Policy Client     
 
@@ -800,7 +800,7 @@ The following tables offer Microsoft guidance on disabling system services on Wi
 |   **Comments**    |   
 |||         
 
-<br />          
+
 
 
 ## Human Interface Device Service           
@@ -815,7 +815,7 @@ The following tables offer Microsoft guidance on disabling system services on Wi
 |   **Comments**    |   
 |||         
 
-<br />          
+
 
 ##  HV Host Service     
 
@@ -829,7 +829,7 @@ The following tables offer Microsoft guidance on disabling system services on Wi
 |   **Comments**    |   Performance enhancers for guest VMs. Not used today except for explicitly populated VMs, but will be used in Application Guard
 |||         
 
-<br />          
+
 
 ## Hyper-V Data Exchange Service        
 
@@ -843,7 +843,7 @@ The following tables offer Microsoft guidance on disabling system services on Wi
 |   **Comments**    |   See HvHost
 |||         
 
-<br />      
+
 
 ## Hyper-V Guest Service Interface          
 
@@ -857,7 +857,7 @@ The following tables offer Microsoft guidance on disabling system services on Wi
 |   **Comments**    |   See HvHost
 |||         
 
-<br />  
+
 
 ## Hyper-V Guest Shutdown Service           
 
@@ -871,7 +871,7 @@ The following tables offer Microsoft guidance on disabling system services on Wi
 |   **Comments**    |   See HvHost
 |||         
 
-<br />
+
 
 ## Hyper-V Heartbeat Service
 | | |
@@ -884,7 +884,7 @@ The following tables offer Microsoft guidance on disabling system services on Wi
 |   **Comments**    |   See HvHost
 |||
 
-<br />          
+
 
 ## Hyper-V PowerShell Direct Service            
 
@@ -898,7 +898,7 @@ The following tables offer Microsoft guidance on disabling system services on Wi
 |   **Comments**    |   See HvHost
 |||         
 
-<br />          
+
 
 ## Hyper-V Remote Desktop Virtualization Service            
 
@@ -912,7 +912,7 @@ The following tables offer Microsoft guidance on disabling system services on Wi
 |   **Comments**    |   See HvHost
 |||         
 
-<br />          
+
 
 ## Hyper-V Time Synchronization Service         
 
@@ -926,7 +926,7 @@ The following tables offer Microsoft guidance on disabling system services on Wi
 |   **Comments**    |   See HvHost
 |||         
 
-<br />          
+
 
 ## Hyper-V Volume Shadow Copy Requestor         
 
@@ -940,7 +940,7 @@ The following tables offer Microsoft guidance on disabling system services on Wi
 |   **Comments**    |   See HvHost
 |||         
 
-<br />          
+
 
 ## IKE and AuthIP IPsec Keying Modules          
 
@@ -954,7 +954,7 @@ The following tables offer Microsoft guidance on disabling system services on Wi
 |   **Comments**    |    
 |||         
 
-<br />          
+
 
 ## Interactive Services Detection           
 
@@ -968,7 +968,7 @@ The following tables offer Microsoft guidance on disabling system services on Wi
 |   **Comments**    |   
 |||         
 
-<br />  
+
 
 ## Internet Connection Sharing (ICS)            
 
@@ -982,7 +982,7 @@ The following tables offer Microsoft guidance on disabling system services on Wi
 |   **Comments**    |   Required for clients used as WiFi hotspots, and also on both ends of Miracast projection. ICS can be blocked with GPO setting, "Prohibit use of Internet Connection Sharing on your DNS domain network"
 |||         
 
-<br />          
+
 
 ## IP Helper            
 
@@ -996,7 +996,7 @@ The following tables offer Microsoft guidance on disabling system services on Wi
 |   **Comments**    |   
 |||         
 
-<br />          
+
 
 
 ##  IPsec Policy Agent      
@@ -1011,7 +1011,7 @@ The following tables offer Microsoft guidance on disabling system services on Wi
 |   **Comments**    |   
 |||         
 
-<br />
+
 
 ##  KDC Proxy Server service (KPS)      
 
@@ -1025,7 +1025,7 @@ The following tables offer Microsoft guidance on disabling system services on Wi
 |   **Comments**    |   
 |||         
 
-<br />          
+
 
 ## KtmRm for Distributed Transaction Coordinator            
 
@@ -1039,7 +1039,7 @@ The following tables offer Microsoft guidance on disabling system services on Wi
 |   **Comments**    |   
 |||         
 
-<br />
+
 
 ##  Link-Layer Topology Discovery Mapper        
 
@@ -1053,7 +1053,7 @@ The following tables offer Microsoft guidance on disabling system services on Wi
 |   **Comments**    |   OK to disable if no dependencies on Network Map
 |||         
 
-<br />
+
 
 ## Local Session Manager                    
 
@@ -1067,7 +1067,7 @@ The following tables offer Microsoft guidance on disabling system services on Wi
 |   **Comments**    |   
 |||                 
 
-<br />                  
+
 
 ## Microsoft (R) Diagnostics Hub Standard Collector         
 
@@ -1081,7 +1081,7 @@ The following tables offer Microsoft guidance on disabling system services on Wi
 |   **Comments**    |   
 |||         
 
-<br />
+
 
 ## Microsoft Account Sign-in Assistant
 | | |
@@ -1094,7 +1094,7 @@ The following tables offer Microsoft guidance on disabling system services on Wi
 |   **Comments**    |   Microsoft Accounts are N/A on Windows Server
 |||
 
-<br />          
+
 
 ##  Microsoft App-V Client      
 
@@ -1108,7 +1108,7 @@ The following tables offer Microsoft guidance on disabling system services on Wi
 |   **Comments**    |   
 |||         
 
-<br />          
+
 
 ## Microsoft iSCSI Initiator Service            
 
@@ -1122,7 +1122,7 @@ The following tables offer Microsoft guidance on disabling system services on Wi
 |   **Comments**    |   Our diagnostic data indicates this is used on client as well as server. No benefit to disabling this.
 |||         
 
-<br />          
+
 
 ## Microsoft Passport           
 
@@ -1136,7 +1136,7 @@ The following tables offer Microsoft guidance on disabling system services on Wi
 |   **Comments**    |   Needed for PIN/Hello logons, which aren't supported on Server
 |||         
 
-<br />          
+
 
 ## Microsoft Passport Container         
 
@@ -1150,7 +1150,7 @@ The following tables offer Microsoft guidance on disabling system services on Wi
 |   **Comments**    |   
 |||         
 
-<br />          
+
 
 ## Microsoft Software Shadow Copy Provider          
 
@@ -1164,7 +1164,7 @@ The following tables offer Microsoft guidance on disabling system services on Wi
 |   **Comments**    |   
 |||         
 
-<br />          
+
 
 ## Microsoft Storage Spaces SMP         
 
@@ -1178,7 +1178,7 @@ The following tables offer Microsoft guidance on disabling system services on Wi
 |   **Comments**    |   Storage management APIs fail without this service. Example: "Get-WmiObject -class MSFT_Disk -Namespace Root\Microsoft\Windows\Storage".
 |||         
 
-<br />          
+
 
 ## Net.Tcp Port Sharing Service         
 
@@ -1192,7 +1192,7 @@ The following tables offer Microsoft guidance on disabling system services on Wi
 |   **Comments**    |   
 |||         
 
-<br />          
+
 
 ## Netlogon         
 
@@ -1206,7 +1206,7 @@ The following tables offer Microsoft guidance on disabling system services on Wi
 |   **Comments**    |   
 |||         
 
-<br />          
+
 
 ## Network Connection Broker            
 
@@ -1220,7 +1220,7 @@ The following tables offer Microsoft guidance on disabling system services on Wi
 |   **Comments**    |   
 |||         
 
-<br />          
+
 
 ##  Network Connections         
 
@@ -1234,7 +1234,7 @@ The following tables offer Microsoft guidance on disabling system services on Wi
 |   **Comments**    |   
 |||         
 
-<br />          
+
 
 ##  Network Connectivity Assistant      
 
@@ -1248,7 +1248,7 @@ The following tables offer Microsoft guidance on disabling system services on Wi
 |   **Comments**    |   
 |||         
 
-<br />  
+
 
 ##  Network List Service        
 
@@ -1262,7 +1262,7 @@ The following tables offer Microsoft guidance on disabling system services on Wi
 |   **Comments**    |   
 |||         
 
-<br />          
+
 
 ## Network Location Awareness           
 
@@ -1276,7 +1276,7 @@ The following tables offer Microsoft guidance on disabling system services on Wi
 |   **Comments**    |   
 |||         
 
-<br />          
+
 
 ##  Network Setup Service       
 
@@ -1290,7 +1290,7 @@ The following tables offer Microsoft guidance on disabling system services on Wi
 |   **Comments**    |   
 |||         
 
-<br />          
+
 
 ## Network Store Interface Service      
 
@@ -1304,7 +1304,7 @@ The following tables offer Microsoft guidance on disabling system services on Wi
 |   **Comments**    |   
 |||         
 
-<br />          
+
 
 ## Offline Files            
 
@@ -1318,7 +1318,7 @@ The following tables offer Microsoft guidance on disabling system services on Wi
 |   **Comments**    |   
 |||         
 
-<br />          
+
 
 ## Optimize drives          
 
@@ -1332,7 +1332,7 @@ The following tables offer Microsoft guidance on disabling system services on Wi
 |   **Comments**    |   
 |||         
 
-<br />
+
 
 ## Performance Counter DLL Host         
 
@@ -1346,7 +1346,7 @@ The following tables offer Microsoft guidance on disabling system services on Wi
 |   **Comments**    |   
 |||         
 
-<br />          
+
 
 ## Performance Logs & Alerts            
 
@@ -1360,7 +1360,7 @@ The following tables offer Microsoft guidance on disabling system services on Wi
 |   **Comments**    |   
 |||         
 
-<br />          
+
 
 ##  Phone Service       
 
@@ -1374,7 +1374,7 @@ The following tables offer Microsoft guidance on disabling system services on Wi
 |   **Comments**    |   Used by modern VoIP apps
 |||         
 
-<br />          
+
 
 ##      Plug and Play       
 
@@ -1388,7 +1388,7 @@ The following tables offer Microsoft guidance on disabling system services on Wi
 |   **Comments**    |   
 |||         
 
-<br />          
+
 
 ## Portable Device Enumerator Service           
 
@@ -1402,7 +1402,7 @@ The following tables offer Microsoft guidance on disabling system services on Wi
 |   **Comments**    |   
 |||         
 
-<br />          
+
 
 ## Power            
 
@@ -1416,7 +1416,7 @@ The following tables offer Microsoft guidance on disabling system services on Wi
 |   **Comments**    |   
 |||         
 
-<br />          
+
 
 ## Print Spooler            
 
@@ -1430,7 +1430,7 @@ The following tables offer Microsoft guidance on disabling system services on Wi
 |   **Comments**    |   On a domain controller, the installation of the DC role adds a thread to the spooler service that is responsible for performing print pruning – removing the stale print queue objects from the Active Directory.  If the spooler service is not running on at least one DC in each site, then the AD has no means to remove old queues that no longer exist. https://blogs.technet.microsoft.com/askperf/2008/11/18/disabling-unnecessary-services-a-word-to-the-wise/
 |||         
 
-<br />          
+
 
 ##  Printer Extensions and Notifications        
 
@@ -1444,7 +1444,7 @@ The following tables offer Microsoft guidance on disabling system services on Wi
 |   **Comments**    |   
 |||         
 
-<br />          
+
 
 ##  Problem Reports and Solutions Control Panel Support     
 
@@ -1458,7 +1458,7 @@ The following tables offer Microsoft guidance on disabling system services on Wi
 |   **Comments**    |   
 |||         
 
-<br />          
+
 
 ##  Program Compatibility Assistant Service     
 
@@ -1472,7 +1472,7 @@ The following tables offer Microsoft guidance on disabling system services on Wi
 |   **Comments**    |   
 |||         
 
-<br />          
+
 
 ##  Quality Windows Audio Video Experience      
 
@@ -1486,7 +1486,7 @@ The following tables offer Microsoft guidance on disabling system services on Wi
 |   **Comments**    |   Client-side QoS service
 |||         
 
-<br />          
+
 
 ##      Radio Management Service        
 
@@ -1500,7 +1500,7 @@ The following tables offer Microsoft guidance on disabling system services on Wi
 |   **Comments**    |   
 |||         
 
-<br />          
+
 
 ## Remote Access Auto Connection Manager            
 
@@ -1514,7 +1514,7 @@ The following tables offer Microsoft guidance on disabling system services on Wi
 |   **Comments**    |   
 |||         
 
-<br />          
+
 
 ## Remote Access Connection Manager         
 
@@ -1528,7 +1528,7 @@ The following tables offer Microsoft guidance on disabling system services on Wi
 |   **Comments**    |   
 |||         
 
-<br />          
+
 
 ## Remote Desktop Configuration         
 
@@ -1542,7 +1542,7 @@ The following tables offer Microsoft guidance on disabling system services on Wi
 |   **Comments**    |   
 |||         
 
-<br />          
+
 
 ## Remote Desktop Services          
 
@@ -1556,7 +1556,7 @@ The following tables offer Microsoft guidance on disabling system services on Wi
 |   **Comments**    |   
 |||         
 
-<br />          
+
 
 ##  Remote Desktop Services UserMode Port Redirector        
 
@@ -1570,7 +1570,7 @@ The following tables offer Microsoft guidance on disabling system services on Wi
 |   **Comments**    |   Supports redirections on the server side of the connection.
 |||         
 
-<br />          
+
 
 ## Remote Procedure Call (RPC)          
 
@@ -1584,7 +1584,7 @@ The following tables offer Microsoft guidance on disabling system services on Wi
 |   **Comments**    |   
 |||         
 
-<br />          
+
 
 ##  Remote Procedure Call (RPC) Locator             
 
@@ -1598,7 +1598,7 @@ The following tables offer Microsoft guidance on disabling system services on Wi
 |   **Comments**    |       |
 |||             
 
-<br />              
+
 
 ## Remote Registry          
 
@@ -1612,7 +1612,7 @@ The following tables offer Microsoft guidance on disabling system services on Wi
 |   **Comments**    |   
 |||         
 
-<br />          
+
 
 ##  Resultant Set of Policy Provider            
 
@@ -1626,7 +1626,7 @@ The following tables offer Microsoft guidance on disabling system services on Wi
 |   **Comments**    |   
 |||         
 
-<br />          
+
 
 ## Routing and Remote Access            
 
@@ -1640,7 +1640,7 @@ The following tables offer Microsoft guidance on disabling system services on Wi
 |   **Comments**    |   Already disabled
 |||         
 
-<br />          
+
 
 ## RPC Endpoint Mapper          
 
@@ -1654,7 +1654,7 @@ The following tables offer Microsoft guidance on disabling system services on Wi
 |   **Comments**    |   
 |||         
 
-<br />          
+
 
 ##  Secondary Logon     
 
@@ -1668,7 +1668,7 @@ The following tables offer Microsoft guidance on disabling system services on Wi
 |   **Comments**    |   
 |||         
 
-<br />          
+
 
 ##  Secure Socket Tunneling Protocol Service            
 
@@ -1682,7 +1682,7 @@ The following tables offer Microsoft guidance on disabling system services on Wi
 |   **Comments**    |   Disabling breaks RRAS   |
 |||             
 
-<br />              
+
 
 ## Security Accounts Manager            
 
@@ -1696,7 +1696,7 @@ The following tables offer Microsoft guidance on disabling system services on Wi
 |   **Comments**    |   
 |||         
 
-<br />          
+
 
 ## Sensor Data Service  
 
@@ -1710,7 +1710,7 @@ The following tables offer Microsoft guidance on disabling system services on Wi
 |   **Comments**    |   
 |||         
 
-<br />  
+
 
 ## Sensor Monitoring Service            
 
@@ -1724,16 +1724,16 @@ The following tables offer Microsoft guidance on disabling system services on Wi
 |   **Comments**    |   
 |||         
 
-<br /><br/>
+
 ## Sensor Service
 | | |
 |---|---|
-|   <strong>Service description</strong> |   A service for sensors that manages the functionality of different sensors. Manages Simple Device Orientation (SDO) and History for sensors. Loads the SDO sensor that reports device orientation changes.  If this service is stopped or disabled, the SDO sensor will not be loaded and so auto-rotation will not occur. History collection from Sensors will also be stopped.
-|   <strong>Service name</strong>    |   SensorService
-|   <strong>Installation</strong>    |   Only with Desktop Experience
-|   <strong>StartType</strong>   |   Manual
-|   <strong>Recommendation</strong>  |   OK to disable
-|   <strong>Comments</strong>    |
+|   **Service description** |   A service for sensors that manages the functionality of different sensors. Manages Simple Device Orientation (SDO) and History for sensors. Loads the SDO sensor that reports device orientation changes.  If this service is stopped or disabled, the SDO sensor will not be loaded and so auto-rotation will not occur. History collection from Sensors will also be stopped.
+|   **Service name**    |   SensorService
+|   **Installation**    |   Only with Desktop Experience
+|   **StartType**   |   Manual
+|   **Recommendation**  |   OK to disable
+|   **Comments**    |
 |||
 
 
@@ -1750,7 +1750,7 @@ The following tables offer Microsoft guidance on disabling system services on Wi
 |   **Comments**    |   Needed for remote management, IPC$, SMB file sharing
 |||         
 
-<br />          
+
 
 ## Shell Hardware Detection             
 
@@ -1764,7 +1764,7 @@ The following tables offer Microsoft guidance on disabling system services on Wi
 |   **Comments**    |   
 |||         
 
-<br />          
+
 
 ## Smart Card           
 
@@ -1778,7 +1778,7 @@ The following tables offer Microsoft guidance on disabling system services on Wi
 |   **Comments**    |   
 |||         
 
-<br />          
+
 
 ## Smart Card Device Enumeration Service                    
 
@@ -1792,7 +1792,7 @@ The following tables offer Microsoft guidance on disabling system services on Wi
 |   **Comments**    |   Needed almost exclusively for WinRT apps    |
 |||             
 
-<br />              
+
 
 ## Smart Card Removal Policy        
 
@@ -1806,7 +1806,7 @@ The following tables offer Microsoft guidance on disabling system services on Wi
 |   **Comments**    |   
 |||         
 
-<br />          
+
 
 ## SNMP Trap            
 
@@ -1820,7 +1820,7 @@ The following tables offer Microsoft guidance on disabling system services on Wi
 |   **Comments**    |   
 |||         
 
-<br />          
+
 
 ##  Software Protection             
 
@@ -1834,7 +1834,7 @@ The following tables offer Microsoft guidance on disabling system services on Wi
 |   **Comments**    |   
 |||         
 
-<br />          
+
 
 ## Special Administration Console Helper        
 
@@ -1848,7 +1848,7 @@ The following tables offer Microsoft guidance on disabling system services on Wi
 |   **Comments**    |   
 |||         
 
-<br />          
+
 
 ## Spot Verifier            
 
@@ -1862,7 +1862,7 @@ The following tables offer Microsoft guidance on disabling system services on Wi
 |   **Comments**    |   
 |||         
 
-<br />          
+
 
 ## SSDP Discovery           
 
@@ -1876,7 +1876,7 @@ The following tables offer Microsoft guidance on disabling system services on Wi
 |   **Comments**    |   
 |||         
 
-<br />          
+
 
 ## State Repository Service         
 
@@ -1890,7 +1890,7 @@ The following tables offer Microsoft guidance on disabling system services on Wi
 |   **Comments**    |   
 |||         
 
-<br />          
+
 
 ##  Still Image Acquisition Events
 
@@ -1904,7 +1904,7 @@ The following tables offer Microsoft guidance on disabling system services on Wi
 |   **Comments**    |   
 |||         
 
-<br />  
+
 
 ## Storage Service          
 
@@ -1918,7 +1918,7 @@ The following tables offer Microsoft guidance on disabling system services on Wi
 |   **Comments**    |   
 |||         
 
-<br />          
+
 
 ##  Storage Tiers Management        
 
@@ -1932,7 +1932,7 @@ The following tables offer Microsoft guidance on disabling system services on Wi
 |   **Comments**    |   
 |||         
 
-<br />          
+
 
 ##  Superfetch          
 
@@ -1946,7 +1946,7 @@ The following tables offer Microsoft guidance on disabling system services on Wi
 |   **Comments**    |   
 |||         
 
-<br />          
+
 
 ## Sync Host            
 
@@ -1960,7 +1960,7 @@ The following tables offer Microsoft guidance on disabling system services on Wi
 |   **Comments**    |   User service template
 |||         
 
-<br />          
+
 
 ## System Event Notification Service            
 
@@ -1974,7 +1974,7 @@ The following tables offer Microsoft guidance on disabling system services on Wi
 |   **Comments**    |   
 |||         
 
-<br />          
+
 
 ## System Events Broker             
 
@@ -1988,7 +1988,7 @@ The following tables offer Microsoft guidance on disabling system services on Wi
 |   **Comments**    |   In spite of the fact that its description implies it is only for WinRT apps, it's needed for task scheduler, broker infrastructure service, and other internal components.
 |||         
 
-<br />          
+
 
 ## Task Scheduler           
 
@@ -2002,7 +2002,7 @@ The following tables offer Microsoft guidance on disabling system services on Wi
 |   **Comments**    |   
 |||         
 
-<br />          
+
 
 ## TCP/IP NetBIOS Helper            
 
@@ -2016,7 +2016,7 @@ The following tables offer Microsoft guidance on disabling system services on Wi
 |   **Comments**    |   
 |||         
 
-<br />          
+
 
 ##  Telephony           
 
@@ -2030,7 +2030,7 @@ The following tables offer Microsoft guidance on disabling system services on Wi
 |   **Comments**    |   Disabling breaks RRAS
 |||         
 
-<br />          
+
 
 ## Themes           
 
@@ -2044,7 +2044,7 @@ The following tables offer Microsoft guidance on disabling system services on Wi
 |   **Comments**    |   Can't set accessibility themes when this service is disabled
 |||         
 
-<br />  
+
 
 ## Tile Data model server           
 
@@ -2058,7 +2058,7 @@ The following tables offer Microsoft guidance on disabling system services on Wi
 |   **Comments**    |   Start menu breaks if this service is disabled
 |||         
 
-<br />          
+
 
 ##  Time Broker     
 
@@ -2072,7 +2072,7 @@ The following tables offer Microsoft guidance on disabling system services on Wi
 |   **Comments**    |   In spite of the fact that its description implies it is only for WinRT apps, it's needed for task scheduler, broker infrastructure service, and other internal components.
 |||         
 
-<br />          
+
 
 ## Touch Keyboard and Handwriting Panel Service         
 
@@ -2086,7 +2086,7 @@ The following tables offer Microsoft guidance on disabling system services on Wi
 |   **Comments**    |   
 |||         
 
-<br />          
+
 
 ## Update Orchestrator Service for Windows Update           
 
@@ -2100,7 +2100,7 @@ The following tables offer Microsoft guidance on disabling system services on Wi
 |   **Comments**    |   Service description was missing in v1607; Windows Update (incl. WSUS) depends on this service.
 |||         
 
-<br />          
+
 
 ## UPnP Device Host         
 
@@ -2114,7 +2114,7 @@ The following tables offer Microsoft guidance on disabling system services on Wi
 |   **Comments**    |   
 |||         
 
-<br />          
+
 
 ## User Access Logging Service          
 
@@ -2128,7 +2128,7 @@ The following tables offer Microsoft guidance on disabling system services on Wi
 |   **Comments**    |   
 |||         
 
-<br />          
+
 
 ##  User Data Access        
 
@@ -2142,7 +2142,7 @@ The following tables offer Microsoft guidance on disabling system services on Wi
 |   **Comments**    |   User service template
 |||         
 
-<br />          
+
 
 ## User Data Storage            
 
@@ -2156,7 +2156,7 @@ The following tables offer Microsoft guidance on disabling system services on Wi
 |   **Comments**    |   User service template
 |||         
 
-<br />          
+
 
 ## User Experience Virtualization Service           
 
@@ -2170,7 +2170,7 @@ The following tables offer Microsoft guidance on disabling system services on Wi
 |   **Comments**    |   
 |||         
 
-<br />          
+
 
 ##  User Manager        
 
@@ -2184,7 +2184,7 @@ The following tables offer Microsoft guidance on disabling system services on Wi
 |   **Comments**    |   
 |||         
 
-<br />          
+
 
 ## User Profile Service         
 
@@ -2198,7 +2198,7 @@ The following tables offer Microsoft guidance on disabling system services on Wi
 |   **Comments**    |   
 |||         
 
-<br />          
+
 
 ## Virtual Disk             
 
@@ -2212,7 +2212,7 @@ The following tables offer Microsoft guidance on disabling system services on Wi
 |   **Comments**    |   
 |||         
 
-<br />          
+
 
 ## Volume Shadow Copy           
 
@@ -2226,7 +2226,7 @@ The following tables offer Microsoft guidance on disabling system services on Wi
 |   **Comments**    |   
 |||         
 
-<br />          
+
 
 ##  WalletService           
 
@@ -2240,7 +2240,7 @@ The following tables offer Microsoft guidance on disabling system services on Wi
 |   **Comments**    |   
 |||         
 
-<br />          
+
 
 ## Windows Audio            
 
@@ -2254,7 +2254,7 @@ The following tables offer Microsoft guidance on disabling system services on Wi
 |   **Comments**    |   
 |||         
 
-<br />          
+
 
 ## Windows Audio Endpoint Builder           
 
@@ -2268,7 +2268,7 @@ The following tables offer Microsoft guidance on disabling system services on Wi
 |   **Comments**    |   
 |||         
 
-<br />          
+
 
 ## Windows Biometric Service            
 
@@ -2282,7 +2282,7 @@ The following tables offer Microsoft guidance on disabling system services on Wi
 |   **Comments**    |   
 |||         
 
-<br />          
+
 
 ##  Windows Camera Frame Server         
 
@@ -2296,7 +2296,7 @@ The following tables offer Microsoft guidance on disabling system services on Wi
 |   **Comments**    |   
 |||         
 
-<br />          
+
 
 ## Windows Connection Manager           
 
@@ -2310,7 +2310,7 @@ The following tables offer Microsoft guidance on disabling system services on Wi
 |   **Comments**    |   
 |||         
 
-<br />          
+
 
 ## Windows Defender Network Inspection Service          
 
@@ -2324,7 +2324,7 @@ The following tables offer Microsoft guidance on disabling system services on Wi
 |   **Comments**    |   
 |||         
 
-<br />          
+
 
 ## Windows Defender Service         
 
@@ -2338,7 +2338,7 @@ The following tables offer Microsoft guidance on disabling system services on Wi
 |   **Comments**    |   
 |||         
 
-<br />          
+
 
 ## Windows Driver Foundation - User-mode Driver Framework           
 
@@ -2352,7 +2352,7 @@ The following tables offer Microsoft guidance on disabling system services on Wi
 |   **Comments**    |   
 |||         
 
-<br />          
+
 
 ## Windows Encryption Provider Host Service     
 
@@ -2366,7 +2366,7 @@ The following tables offer Microsoft guidance on disabling system services on Wi
 |   **Comments**    |   
 |||         
 
-<br />          
+
 
 ## Windows Error Reporting Service          
 
@@ -2380,7 +2380,7 @@ The following tables offer Microsoft guidance on disabling system services on Wi
 |   **Comments**    |   Collects and sends crash/hang data used by both MS and third party ISVs/IHVs. The data is used to diagnose crash-inducing bugs, which may include security bugs. Also needed for Corporate Error Reporting
 |||         
 
-<br />          
+
 
 ## Windows Event Collector          
 
@@ -2394,7 +2394,7 @@ The following tables offer Microsoft guidance on disabling system services on Wi
 |   **Comments**    |   Collects ETW events (including security events) for manageability, diagnostics.  Lots of features and third-party tools rely on it, including security audit tools
 |||         
 
-<br />          
+
 
 ## Windows Event Log            
 
@@ -2408,7 +2408,7 @@ The following tables offer Microsoft guidance on disabling system services on Wi
 |   **Comments**    |   
 |||         
 
-<br />          
+
 
 ## Windows Firewall         
 
@@ -2422,7 +2422,7 @@ The following tables offer Microsoft guidance on disabling system services on Wi
 |   **Comments**    |   
 |||         
 
-<br />          
+
 
 ##  Windows Font Cache Service      
 
@@ -2436,7 +2436,7 @@ The following tables offer Microsoft guidance on disabling system services on Wi
 |   **Comments**    |   
 |||         
 
-<br />          
+
 
 ## Windows Image Acquisition (WIA)          
 
@@ -2450,7 +2450,7 @@ The following tables offer Microsoft guidance on disabling system services on Wi
 |   **Comments**    |   
 |||         
 
-<br />          
+
 
 ##  Windows Insider Service     
 
@@ -2464,7 +2464,7 @@ The following tables offer Microsoft guidance on disabling system services on Wi
 |   **Comments**    |   Server doesn't support flighting, so it's a no-op on Server. Feature can be disabled via GP as well.
 |||         
 
-<br />          
+
 
 ##  Windows Installer       
 
@@ -2478,7 +2478,7 @@ The following tables offer Microsoft guidance on disabling system services on Wi
 |   **Comments**    |   
 |||         
 
-<br />          
+
 
 ## Windows License Manager Service          
 
@@ -2492,7 +2492,7 @@ The following tables offer Microsoft guidance on disabling system services on Wi
 |   **Comments**    |   
 |||         
 
-<br />          
+
 
 ## Windows Management Instrumentation       
 
@@ -2506,7 +2506,7 @@ The following tables offer Microsoft guidance on disabling system services on Wi
 |   **Comments**    |   
 |||         
 
-<br />          
+
 
 ##  Windows Mobile Hotspot Service          
 
@@ -2520,7 +2520,7 @@ The following tables offer Microsoft guidance on disabling system services on Wi
 |   **Comments**    |   
 |||         
 
-<br />          
+
 
 ## Windows Modules Installer        
 
@@ -2534,7 +2534,7 @@ The following tables offer Microsoft guidance on disabling system services on Wi
 |   **Comments**    |   
 |||         
 
-<br />          
+
 
 ## Windows Push Notifications System Service            
 
@@ -2548,7 +2548,7 @@ The following tables offer Microsoft guidance on disabling system services on Wi
 |   **Comments**    |   Needed for live tiles and other features
 |||         
 
-<br />      
+
 
 ## Windows Push Notifications User Service          
 
@@ -2562,7 +2562,7 @@ The following tables offer Microsoft guidance on disabling system services on Wi
 |   **Comments**    |   User service template
 |||         
 
-<br />
+
 
 ## Windows Remote Management (WS-Management)
 | | |
@@ -2575,7 +2575,7 @@ The following tables offer Microsoft guidance on disabling system services on Wi
 |   **Comments**    |   Needed for remote management
 |||
 
-<br />          
+
 
 ##  Windows Search      
 
@@ -2589,7 +2589,7 @@ The following tables offer Microsoft guidance on disabling system services on Wi
 |   **Comments**    |   
 |||         
 
-<br />          
+
 
 ##  Windows Time        
 
@@ -2603,7 +2603,7 @@ The following tables offer Microsoft guidance on disabling system services on Wi
 |   **Comments**    |   
 |||         
 
-<br />          
+
 
 ## Windows Update           
 
@@ -2617,7 +2617,7 @@ The following tables offer Microsoft guidance on disabling system services on Wi
 |   **Comments**    |   
 |||         
 
-<br />          
+
 
 ## WinHTTP Web Proxy Auto-Discovery Service         
 
@@ -2631,7 +2631,7 @@ The following tables offer Microsoft guidance on disabling system services on Wi
 |   **Comments**    |   Anything that uses the network stack can have a functional dependency on this service. Many organizations rely on this to configure their internal networks' HTTP proxy routing.  Without it, internally-originating HTTP connections to the Internet will all fail.
 |||         
 
-<br />          
+
 
 ## Wired AutoConfig         
 
@@ -2645,7 +2645,7 @@ The following tables offer Microsoft guidance on disabling system services on Wi
 |   **Comments**    |   
 |||         
 
-<br />          
+
 
 ## WMI Performance Adapter          
 
@@ -2659,7 +2659,7 @@ The following tables offer Microsoft guidance on disabling system services on Wi
 |   **Comments**    |   
 |||         
 
-<br />          
+
 
 ## Workstation          
 
@@ -2673,7 +2673,7 @@ The following tables offer Microsoft guidance on disabling system services on Wi
 |   **Comments**    |   
 |||         
 
-<br />
+
 
 ## Xbox Live Auth Manager           
 
@@ -2687,7 +2687,7 @@ The following tables offer Microsoft guidance on disabling system services on Wi
 |   **Comments**    |   
 |||         
 
-<br />          
+
 
 ## Xbox Live Game Save          
 
@@ -2701,6 +2701,6 @@ The following tables offer Microsoft guidance on disabling system services on Wi
 |   **Comments**    |   This service syncs save data for Xbox Live save enabled games.  If this service is stopped, game save data will not upload to or download from Xbox Live.
 |||         
 
-<br /> 
-<br /> 
+
+
 
