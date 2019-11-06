@@ -35,6 +35,6 @@ Check out the following topics to learn more about planning:
 
 You may have heard us talk about a new “modern infrastructure” for Remote Desktop. Maybe you've heard us use the phrase “RDmi.” The phrase you need to know is “Windows Virtual Desktop." Learn more at our [Windows Virtual Desktop documentation page](https://docs.microsoft.com/azure/virtual-desktop/).
 
-![Windows Virtual Desktop poster](.media/wvd-poster-download.png)
+![Windows Virtual Desktop poster](./media/wvd-poster-download.png)
 
 You can get a copy of the poster by right-clicking the image and saving it to your local system.
