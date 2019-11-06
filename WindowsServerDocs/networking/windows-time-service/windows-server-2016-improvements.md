@@ -186,7 +186,7 @@ TIMESERV is another related Domain Services Flag which indicates whether a machi
 
 If you want to configure a DC as a GTIMESERV, this can be configured manually using the following command.  In this case the DC is using another machine(s) as the master clock.  This could be an appliance or dedicated machine.
 
-	w32tm /config /manualpeerlist:”master_clock1,0x8 master_clock2,0x8” /syncfromflags:manual /reliable:yes /update
+	w32tm /config /manualpeerlist:"master_clock1,0x8 master_clock2,0x8" /syncfromflags:manual /reliable:yes /update
 
 > [!NOTE]
 > For more information, see [Configure the Windows Time Service](https://technet.microsoft.com/library/cc731191.aspx)

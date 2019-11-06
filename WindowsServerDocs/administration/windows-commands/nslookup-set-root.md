@@ -18,7 +18,7 @@ ms.date: 10/16/2017
 
 >Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-changes the name of the root server used for queries.
+Changes the name of the root server used for queries.
 ## Syntax
 ```
 set root=<RootServer>
