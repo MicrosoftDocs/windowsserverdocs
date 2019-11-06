@@ -11,7 +11,7 @@ ms.topic: article
 ms.assetid: da522a18-c33f-468e-b9d6-3ad7d3cfba26
 author: spatnaik
 ms.author: spatnaik
-ms.date: 09/23/2016
+ms.date: 11/06/2019
 manager: scottman
 ---
 # Remote Desktop Services - Cater to different kinds of users
@@ -26,13 +26,19 @@ Remote Desktop Services supports different types of workloads. Scale your deploy
 
 Knowledge users use lightweight productivity applications like Microsoft Word, Excel, Outlook, and the Microsoft Edge browser.
 
+For knowledge users, we recommend no more than four users per virtual CPU (vCPU).
+
 ### Professional user
 
 Professional users use internet browsers and productivity applications in addition to supporting more intensive workloads like developing software and creating multimedia content.
 
+For professional users, we recommend no more than two users per vCPU.
+
 ### Power user
 
 Power users use engineering and graphics applications like computer-aided design (CAD) and Adobe Photoshop. GPUs are often a good choice for users who regularly use graphics-intensive programs for video rendering, 3D design, and simulations.
+
+For power users, we recommend no more than one user per vCPU.
 
 To learn more about graphics acceleration, check out [Choose your graphics rendering technology](rds-graphics-virtualization.md).
 
@@ -40,4 +46,4 @@ Azure has other graphics acceleration deployment options and multiple available 
 
 ## Test workload
 
-We recommend you load test deployments with both stress tests and real-life usage simulations. You can use simulation tools like LoginVSI to load test your deployment. Make sure the system is responsive and resilient enough to meet user needs, and remember to vary the load size to avoid surprises.
+We recommend you load test deployments with both stress tests and real-life usage simulations. You can use simulation tools to load test your deployment. Make sure the system is responsive and resilient enough to meet user needs, and remember to vary the load size to avoid surprises.
