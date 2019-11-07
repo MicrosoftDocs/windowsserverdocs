@@ -129,7 +129,7 @@ The registry (KVP) on the virtualization server provides real-time tracking data
 
   - RDP addresses
 
-For more information about how to get this information, see [Hyper-V Script: Looking at KVP GuestIntrinsicExchangeItems](http://blogs.msdn.com/b/virtual_pc_guy/archive/2008/11/18/hyper-v-script-looking-at-kvp-guestintrinsicexchangeitems.aspx).
+For more information about how to get this information, see [Hyper-V Script: Looking at KVP GuestIntrinsicExchangeItems](https://blogs.msdn.com/b/virtual_pc_guy/archive/2008/11/18/hyper-v-script-looking-at-kvp-guestintrinsicexchangeitems.aspx).
 
 
 > [!NOTE]
