@@ -83,7 +83,7 @@ The following AVMA keys can be used for Windows Server 2019.
 |Standard|	TNK62-RXVTB-4P47B-2D623-4GF74|
 |Essentials|	2CTP7-NHT64-BP62M-FV6GG-HFV28|
  
-The following AVMA keys can be used for Windows Server, version 1809.
+The following AVMA keys can be used for Windows Server, versions 1809 and 1909.
 
 |Edition|	AVMA key|
 |-|-|
