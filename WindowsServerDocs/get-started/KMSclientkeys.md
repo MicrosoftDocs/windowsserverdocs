@@ -7,7 +7,7 @@ ms.sitesec: library
 author: jasongerend
 ms.author: jgerend
 ms.localizationpriority: medium
-ms.date: 05/21/2019
+ms.date: 11/12/2019
 ms.topic: get-started-article
 ---
 # KMS client setup keys
@@ -45,26 +45,12 @@ prompt on the client, type **slmgr /ipk \<setup key\>** and then press **Enter**
 
 ## Windows Server Semi-Annual Channel versions
 
-### Windows Server, version 1903 and Windows Server, version 1809
+### Windows Server, version 1909, version 1903, and version 1809
 
 | Operating system edition  | KMS Client Setup Key          |
 |---------------------------|-------------------------------|
 | Windows Server Datacenter | 6NMRW-2C8FM-D24W7-TQWMY-CWH2D |
 | Windows Server Standard   | N2KJX-J94YW-TQVFB-DG9YT-724CC |
-
-### Windows Server, version 1803
-
-| Operating system edition       | KMS Client Setup Key          |
-|--------------------------------|-------------------------------|
-| Windows Server Datacenter | 2HXDN-KRXHB-GPYC7-YCKFJ-7FVDG  | 
-| Windows Server Standard   | PTXN8-JFHJM-4WC78-MPCBR-9W4KR  |
-
-### Windows Server, version 1709
-
-| Operating system edition       | KMS Client Setup Key          |
-|--------------------------------|-------------------------------|
-| Windows Server Datacenter | 6Y6KB-N82V8-D8CQV-23MJW-BWTG6  | 
-| Windows Server Standard   | DPCNP-XQFKJ-BJF7R-FRC8D-GF6G4  |
 
 ## Windows Server LTSC/LTSB versions
 
@@ -126,6 +112,21 @@ See the [Windows lifecycle fact sheet](https://support.microsoft.com/en-us/help/
 | Windows 10 Enterprise 2015 LTSB N | 2F77B-TNFGY-69QQF-B8YKP-D69TJ |
 
 ## Earlier versions of Windows Server
+
+### Windows Server, version 1803
+
+| Operating system edition       | KMS Client Setup Key          |
+|--------------------------------|-------------------------------|
+| Windows Server Datacenter | 2HXDN-KRXHB-GPYC7-YCKFJ-7FVDG  | 
+| Windows Server Standard   | PTXN8-JFHJM-4WC78-MPCBR-9W4KR  |
+
+### Windows Server, version 1709
+
+| Operating system edition       | KMS Client Setup Key          |
+|--------------------------------|-------------------------------|
+| Windows Server Datacenter | 6Y6KB-N82V8-D8CQV-23MJW-BWTG6  | 
+| Windows Server Standard   | DPCNP-XQFKJ-BJF7R-FRC8D-GF6G4  |
+
 ### Windows Server 2012 R2
 
 | Operating system edition               | KMS Client Setup Key          |
