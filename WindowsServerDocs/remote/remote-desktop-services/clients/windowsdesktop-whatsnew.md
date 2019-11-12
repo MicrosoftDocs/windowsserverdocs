@@ -11,7 +11,7 @@ ms.topic: article
 author: heidilohr
 manager: daveba
 ms.author: helohr
-ms.date: 10/31/2019
+ms.date: 11/12/2019
 ms.localizationpriority: medium
 ---
 # What's new in the Windows Desktop client
@@ -24,14 +24,14 @@ The client can be configured for different [user groups](windowsdesktop-admin.md
 
 |User group |Version  |
 |-----------|---------|
-|Public     |1.2.247  |
-|Insider    |1.2.428  |
+|Public     |1.2.431  |
+|Insider    |1.2.431  |
 
-## Updates for version 1.2.428
+## Updates for version 1.2.431
 
-*Date published: 10/31/2019*
+*Date published: 11/12/2019*
 
-- A preview of the 32-bit and ARM64 versions of the client are now available!
+- The 32-bit and ARM64 versions of the client are now available!
 - The client now saves any changes you make to the connection bar (such as its position, size, and pinned state) and applies those changes across sessions.
 - Updated gateway information and connection status dialogs.
 - Addressed an issue that caused two credentials to prompt at the same time while trying to connect after the Azure Active Directory token expired.
