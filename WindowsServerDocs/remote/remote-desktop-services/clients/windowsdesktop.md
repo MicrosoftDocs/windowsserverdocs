@@ -11,7 +11,7 @@ ms.topic: article
 author: heidilohr
 manager: daveba
 ms.author: helohr
-ms.date: 10/31/2019
+ms.date: 11/12/2019
 ms.localizationpriority: medium
 ---
 # Get started with the Windows Desktop client
@@ -30,8 +30,8 @@ You can use the Remote Desktop client for Windows Desktop to access Windows apps
 Choose the client that matches your version of Windows:
 
 - [Windows 64-bit](https://go.microsoft.com/fwlink/?linkid=2068602)
-- [Windows 32-bit Preview](https://go.microsoft.com/fwlink/?linkid=2098960)
-- [Windows ARM64 Preview](https://go.microsoft.com/fwlink/?linkid=2098961)
+- [Windows 32-bit](https://go.microsoft.com/fwlink/?linkid=2098960)
+- [Windows ARM64](https://go.microsoft.com/fwlink/?linkid=2098961)
 
 You can install the client for the current user, which doesn't require admin rights, or your admin can install and configure the client so that all users on the device can access it.
 
