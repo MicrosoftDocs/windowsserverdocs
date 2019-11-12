@@ -11,11 +11,12 @@ ms.prod: windows-server
 
 # Configuring Certificate Enrollment Web Service for certificate key-based renewal on a custom port
 
-<!-- <Author(s): Jitesh Thakur, Meera Mohideen, Ankit Tyagi.-->  
+> Authors: Jitesh Thakur, Meera Mohideen, Technical Advisors with the Windows Group.
+Ankit Tyagi Support Engineer with the Windows Group
 
 ## Summary
 
-This article provides step-by-step instructions to implement the Certificate Enrollment Web Service (or Certificate Enrollment Policy (CEP) / Certificate Enrollment Service (CES)) on a custom port other than 443 for certificate key-based renewal to take advantage of the automatic renewal feature of CEP and CES.
+This article provides step-by-step instructions to implement the Certificate Enrollment Policy Web Service (CEP) and Certificate Enrollment Web Service (CES) on a custom port other than 443 for certificate key-based renewal to take advantage of the automatic renewal feature of CEP and CES.
 
 This article also explains how CEP and CES works and provides setup guidelines.
 
@@ -130,7 +131,7 @@ This command installs the Certificate Enrollment Web Service (CES) to use the ce
 After a successful installation, you expect to see the following display in the Internet Information Services (IIS) Manager console.
 ![IIS manager](media/certificate-enrollment-certificate-key-based-renewal-4.png) 
 
-Under **Default Web Site**, select **KeyBasedRenewal_ADPolicyProvider_CEP_Certificate**, and then open **Application Settings**. Note the **ID** and the **URI**.
+Under **Default Web Site**, select **ADPolicyProvider_CEP_UsernamePassword**, and then open **Application Settings**. Note the **ID** and the **URI**.
 
 You can add a **Friendly Name** for management.
 
@@ -172,7 +173,7 @@ After a successful installation, you expect to see the following display in the 
 Select **KeyBasedRenewal_ADPolicyProvider_CEP_Certificate** under **Default Web Site** and open **Application Settings**. Take a note of the **ID** and the **URI**. You can add a **Friendly Name** for management.
 
 > [!Note]
-> If the instance is installed on a new server and the ID is different and incase the ID is different, make sure that the ID is the same one that is used in the CEPCES01 instance. You can copy and paste the value directly.
+> If the instance is installed on a new server double check the ID to make sure that the ID is the same one that was generated in the CEPCES01 instance. You can copy and paste the value directly if it is different.
 
 #### Complete Certificate Enrollment Web Services configuration
 
@@ -181,6 +182,9 @@ To be able to enroll the certificate on behalf of the functionality of CEP and C
 ##### Step 1: Create a computer account of the workgroup computer in Active Directory
 
 This account will be used for authentication towards key-based renewal and the “Publish to Active Directory” option on the certificate template.
+
+> [!Note]
+> You do not have to domain join the client machine. This account comes into picture while doing certificate based authentication in KBR for dsmapper service.
 
 ![New Object](media/certificate-enrollment-certificate-key-based-renewal-6.png) 
  
@@ -194,7 +198,7 @@ Set-ADUser -Identity cepcessvc -Add @{'msDS-AllowedToDelegateTo'=@('HOST/CA1.con
 ```
 
 > [!Note]
-> In this command, <cepcessvc> is the service account, and <CA1.contoso.com >is the Certification Authority.
+> In this command, \<cepcessvc\> is the service account, and <CA1.contoso.com >is the Certification Authority.
 
 > [!Important]
 > We are not enabling the RENEWALONBEHALOF flag on the CA in this configuration because we are using constrained delegation to do the same job for us. This lets us to avoid adding the permission for the service account to the CA’s security.
@@ -208,19 +212,21 @@ Set-ADUser -Identity cepcessvc -Add @{'msDS-AllowedToDelegateTo'=@('HOST/CA1.con
 3. Change the default port setting from 443 to your custom port. The example screenshot shows a port setting of 49999.
    ![Change port](media/certificate-enrollment-certificate-key-based-renewal-7.png) 
 
-##### Step 4: Edit the CA enrollment services Object
+##### Step 4: Edit the CA enrollment services Object on Active Directory
 
 1. On a domain controller, open adsiedit.msc.
 
-2. Connect to the Configuration partition, and navigate to your CA enrollment services object:
+2. [Connect to the Configuration partition](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/ff730188(v=ws.10)), and navigate to your CA enrollment services object:
    
    CN=ENTCA,CN=Enrollment Services,CN=Public Key Services,CN=Services,CN=Configuration,DC=contoso,DC=com
 
-3. Edit the object, and change the msPKI-Enrollment-Servers attribute by using the custom port with your CEP and CES server URIs that were found in the application settings. For example:
+3. Right click and edit the CA Object. Change the **msPKI-Enrollment-Servers** attribute by using the custom port with your CEP and CES server URIs that were found in the application settings. For example:
 
+   ```
    140https://cepces.contoso.com:49999/ENTCA_CES_UsernamePassword/service.svc/CES0   
    181https://cepces.contoso.com:49999/ENTCA_CES_Certificate/service.svc/CES1
-
+   ```
+   
    ![ADSI Edit](media/certificate-enrollment-certificate-key-based-renewal-8.png) 
 
 #### Configure the client computer
@@ -265,9 +271,9 @@ On the client computer, set up the Enrollment policies and Auto-Enrollment polic
 
 ## Testing the setup
 
-To make sure that Auto-Renewal is working, verify that manual renewal works by using the same key. You should not be prompted to enter the username and password.  Also, you should be prompted to select a certificate” when you enroll. This is expected.
+To make sure that Auto-Renewal is working, verify that manual renewal works by renewing the certificate with the same key using mmc. Also, you should be prompted to select a certificate while renewing. You can choose the certificate we enrolled earlier. The prompt is expected.
 
-Open the computer personal certificate store, and add the “archived certificates” view. To do this, use either of the following methods.
+Open the computer personal certificate store, and add the “archived certificates” view. To do this, add the local computer account snap-in to mmc.exe, highlight **Certificates (Local Computer)** by clicking on it, click **view** from the **action tab** at the right or the top of mmc, click **view options**, select **Archived certificates**, and then click **OK**.
 
 ### Method 1 
 
@@ -281,11 +287,11 @@ certreq -machine -q -enroll -cert <thumbprint> renew
 
 ### Method 2
 
-Advance the time setting in multiples of 8 for when the certificate validity will expire.
+Advance the time and date on the client machine into the renewal time of the certificate template.
 
-For example, the example certificate was issued at 4:00 on 18th day of the month, expires at 4:00 on the 20th, and has a 2-day validity setting and an 8-hour renewal setting. The Auto-Enrollment engine is triggered on restart at an approximately 8-hour interval.
+For example, the certificate template has a 2-day validity setting and an 8-hour renewal setting configured. The example certificate was issued at 4:00 A.M. on 18th day of the month, expires at 4:00 A.M. on the 20th. The Auto-Enrollment engine is triggered on restart and at every 8-hour interval (approximately).
 
-Therefore, if you advance the time to 8:10 P.M. on the 19th , running **Certutil -pulse** (to trigger the AE engine) enrolls the certificate for you.
+Therefore, if you advance the time to 8:10 P.M. on the 19th since our renewal window was set to 8-hour on the template, running Certutil -pulse (to trigger the AE engine) enrolls the certificate for you.
 
 ![command](media/certificate-enrollment-certificate-key-based-renewal-15.png)
  
