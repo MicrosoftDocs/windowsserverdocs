@@ -8,6 +8,7 @@ author: iainfoulds
 ms.author: iainfou
 ms.topic: get-started-article
 ms.localizationpriority: high
+ms.date: 11/18/2019
 ---
 
 # How to use Windows Server 2008 and 2008 R2 Extended Security Updates (ESU)
