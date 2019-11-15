@@ -42,7 +42,7 @@ To resolve, use or upgrade to Windows Server 2019 build 1809 or later.
 
 When running cutover validation, you receive error "Fail: Access is denied for the token filter policy on destination computer." This occurs even if you provided correct local administrator credentials for both the source and destination computers.
 
-This issue was fixed in the [KB4512534](https://support.microsoft.com/en-us/help/4512534/windows-10-update-kb4512534) update. 
+This issue was fixed in the [KB4512534](https://support.microsoft.com/help/4512534/windows-10-update-kb4512534) update. 
 
 ## Storage Migration Service isn't included in Windows Server 2019 Evaluation or Windows Server 2019 Essentials edition
 
@@ -163,7 +163,7 @@ DFSR Debug Log:
   FileSizeHigh:0 
   Attributes:32 
 
-This issue is fixed by the [KB4512534](https://support.microsoft.com/en-us/help/4512534/windows-10-update-kb4512534) update
+This issue is fixed by the [KB4512534](https://support.microsoft.com/help/4512534/windows-10-update-kb4512534) update
 
 ## Error "Couldn't transfer storage on any of the endpoints" when transferring from Windows Server 2008 R2
 
@@ -207,7 +207,7 @@ This error is expected if your migration account does not have at least Read acc
 
 ## Error 0x80005000 when running inventory
 
-After installing [KB4512534](https://support.microsoft.com/en-us/help/4512534/windows-10-update-kb4512534) and attempting to run inventory, inventory fails with errors:
+After installing [KB4512534](https://support.microsoft.com/help/4512534/windows-10-update-kb4512534) and attempting to run inventory, inventory fails with errors:
 
   EXCEPTION FROM HRESULT: 0x80005000
   
@@ -359,11 +359,11 @@ Examinining the source computer shows that the original IP address fails to chan
 
 This issue does not happen if you selected "Use DHCP" on the Windows Admin Center "configure cutover" screen, only if you specify a new static IP address, subnet, and gateway. 
 
-This issue is caused by a regression in the [KB4512534](https://support.microsoft.com/en-us/help/4512534/windows-10-update-kb4512534) update. There are currently two workarounds for this issue:
+This issue is caused by a regression in the [KB4512534](https://support.microsoft.com/help/4512534/windows-10-update-kb4512534) update. There are currently two workarounds for this issue:
 
-  - Prior to cut over: instead of setting a new static IP address on cutover, select "Use DHCP" and ensure that a DHCP scope covers that subnet. SMS will configure the source omputer to use DHCP on source computer interfaces and cut over will proceed normally. 
+  - Prior to cut over: instead of setting a new static IP address on cutover, select "Use DHCP" and ensure that a DHCP scope covers that subnet. SMS will configure the source computer to use DHCP on source computer interfaces and cut over will proceed normally. 
   
-  - If cutover is already stuck: logon to the source computer and enable DHCP on its network interfaces, after ensuring that a DHCP scope covers that subnet. When the source computer acquires a DHCP-provided IP address, SMS will proceed with the cut over normally.
+  - If cut over is already stuck: logon to the source computer and enable DHCP on its network interfaces, after ensuring that a DHCP scope covers that subnet. When the source computer acquires a DHCP-provided IP address, SMS will proceed with the cut over normally.
   
 In both workarounds, after cut over completes, you can then set a static IP address on the old source computer as you see fit and stop using DHCP.   
 
