@@ -20,8 +20,7 @@ Persistent Memory (or PMem) is a new type of memory technology that delivers a u
 
 ## Background
 
-PMem is a type of non-volatile DRAM (NVDIMM) that has the speed of DRAM, but retains its memory content through power cycles (the memory contents remain even when system power goes down in the event of an unexpected power loss, user initiated shutdown, system crash, etc.). Because of this, resuming from where you left off is significantly faster, since the content of your RAM doesn't need to be reloaded. Another unique characteristic is that PMem is byte addressable, which means you can also use it as storage (which is why you may hear PMem being referred to as storage-class memory).
-
+PMem is a type of non-volatile RAM (NVDIMM) that retains its content through power cycles. Memory contents remain even when system power goes down in the event of an unexpected power loss, user initiated shutdown, system crash, etc. This unique characteristic means you can also use PMem as storage - which is why you may hear PMem being referred to as "storage-class memory".
 
 To see some of these benefits, let's look at the this demo from Microsoft Ignite 2018:
 
@@ -51,13 +50,13 @@ The table below has the full performance numbers:
 
 ### Supported Hardware
 
-The table below shows supported persistent memory hardware for Windows Server 2019 and Windows Server 2016. Note that Intel Optane specifically supports both memory mode and app-direct mode. Windows Server 2019 supports mixed-mode operations.
+The table below shows supported persistent memory hardware for Windows Server 2019 and Windows Server 2016. Note that Intel Optane supports both Memory (i.e. volatile) and App Direct (i.e persistent) modes.
 
 | Persistent Memory Technology                                      | Windows Server 2016 | Windows Server 2019 |
 |-------------------------------------------------------------------|--------------------------|--------------------------|
-| **NVDIMM-N** in App-Direct Mode                                       | Supported                | Supported                |
-| **Intel Optane™ DC Persistent Memory** in App-Direct Mode             | Not Supported            | Supported                |
-| **Intel Optane™ DC Persistent Memory** in Two-Level-Memory Mode (2LM) | Not Supported            | Supported                |
+| **NVDIMM-N** in persistent mode                                  | Supported                | Supported                |
+| **Intel Optane™ DC Persistent Memory** in App Direct Mode             | Not Supported            | Supported                |
+| **Intel Optane™ DC Persistent Memory** in Memory Mode | Supported            | Supported                |
 
 Now, let's dive into how you configure persistent memory.
 
@@ -65,7 +64,7 @@ Now, let's dive into how you configure persistent memory.
 
 ### Understanding interleave sets
 
-Recall that the NVDIMM-N resides in a standard DIMM (memory) slot, placing data closer to the processor (thus, reducing the latency and fetching better performance). To build on this, an interleave set is when two or more NVDIMMs create an N-Way interleave set to provide stripes read/write operations for increased throughput. The most common setups are 2-Way or 4-Way interleaving.
+Recall that a NVDIMM resides in a standard DIMM (memory) slot, placing data closer to the processor (thus, reducing the latency and fetching better performance). To build on this, an interleave set is when two or more NVDIMMs create an N-Way interleave set to provide stripes read/write operations for increased throughput. The most common setups are 2-Way or 4-Way interleaving.
 
 Interleaved sets can often be created in a platform's BIOS to make multiple persistent memory devices appear as a single logical disk to Windows Server. Each persistent memory logical disk contains an interleaved set of physical devices by running:
 
