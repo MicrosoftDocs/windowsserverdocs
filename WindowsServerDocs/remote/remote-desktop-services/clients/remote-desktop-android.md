@@ -19,15 +19,15 @@ ms.localizationpriority: medium
 
 >Applies to: Android 4.1 and later
 
-You can use the Remote Desktop client for Android to work with Windows apps and desktops directly from your Android device or Chromebook that supports the Google Play Store.
+You can use the Remote Desktop client for Android to work with Windows apps and desktops directly from your Android device or a Chromebook that supports the Google Play Store.
 
 Use the following information to get started. Be sure to check out the [FAQ](remote-desktop-client-faq.md) if you have any questions.
 
 > [!NOTE]
-> - Curious about the new releases for the Android client? Check out [What's new for the Android client](android-whatsnew.md)
+> - Curious about the new releases for the Android client? Check out [What's new for the Android client](android-whatsnew.md).
 > - The Android client supports devices running Android 4.1 and later, as well as Chromebooks with ChromeOS 53 and later. Learn more about Android applications on Chrome [here](https://sites.google.com/a/chromium.org/dev/chromium-os/chrome-os-systems-supporting-android-apps).
 
-## Get the Remote Desktop client and start using it
+## Get and set up the Remote Desktop client
 
 ### Download the Remote Desktop client from the Google Play store
 
@@ -38,7 +38,7 @@ Here's how to set up the Remote Desktop client on your Android device:
 3. Add a [Remote Desktop connection](#add-a-remote-desktop-connection) or [remote resources](#add-remote-resources). You use a connection to connect directly to a Windows PC and remote resources to access apps and desktops published to you by an admin.
 
 > [!NOTE]
-> If you would like to flight new features earlier, we recommend downloading our [Microsoft Remote Desktop Beta](https://play.google.com/store/apps/details?id=com.microsoft.rdc.android.beta) client from the Google Play store.
+> If you want to test new features before they're released, we recommend downloading our [Microsoft Remote Desktop Beta](https://play.google.com/store/apps/details?id=com.microsoft.rdc.android.beta) client from the Google Play store.
 
 ### Add a Remote Desktop connection
 
