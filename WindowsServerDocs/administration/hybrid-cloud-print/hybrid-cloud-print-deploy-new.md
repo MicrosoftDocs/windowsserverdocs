@@ -405,7 +405,7 @@ This guide outlines five (5) installation steps:
         - Sddl = SDDL string representing permissions for the printer.
             - Log on to the Print Server as an administrator, and then run the following PowerShell command against the printer that you want to publish:
             `(Get-Printer PrinterName -full).PermissionSDDL`
-            - Add **`O:BA`** as prefix to the result from the command prompt command above before setting the value as the SDDL setting. Example: if the string returned by the previous command is "G:DUD:(A;OICI;FA;;;WD)", then SDDL = "O:BAG:DUD:(A;OICI;FA;;;WD)"
+            - Add **O:BA** as prefix to the result from the command prompt command above before setting the value as the SDDL setting. Example: if the string returned by the previous command is "G:DUD:(A;OICI;FA;;;WD)", then SDDL = "O:BAG:DUD:(A;OICI;FA;;;WD)"
         - DiscoveryEndpoint = Application ID URI of the Mopria Discovery Service app, without the trailing "/"
         - PrintServerEndpoint = Application ID URI of the Enterprise Cloud Print app, without the trailing "/"
         - AzureClientId = Application ID of the registered Native Web App value
@@ -417,6 +417,7 @@ This guide outlines five (5) installation steps:
         `Publish-CloudPrinter -Printer \<string\> -Manufacturer \<string\> -Model \<string\> -OrgLocation \<string\> -Sddl \<string\> -DiscoveryEndpoint \<string\> -PrintServerEndpoint \<string\> -AzureClientId \<string\> -AzureTenantGuid \<string\> [-DiscoveryResourceId \<string\>]`
 
         Sample command:
+
         `publish-CloudPrinter -Printer EcpPrintTest -Manufacturer Microsoft -Model FilePrinterEcp -OrgLocation '{"attrs": [{"category":"country", "vs":"USA", "depth":0}, {"category":"organization", "vs":"MyCompany", "depth":1}, {"category":"site", "vs":"MyCity, State", "depth":2}, {"category":"building", "vs":"Building 1", "depth":3}, {"category":"floor_name", "vs":1, "depth":4}, {"category":"room_name", "vs":"1111", "depth":5}]}' -Sddl "O:BAG:DUD:(A;OICI;FA;;;WD)" -DiscoveryEndpoint https://mopriadiscoveryservice-contoso.msappproxy.net/mcs -PrintServerEndpoint https://enterprisecloudprint-contoso.msappproxy.net/ecp -AzureClientId "dbe4feeb-cb69-40fc-91aa-73272f6d8fe1" -AzureTenantGuid "8de6a14a-5a23-4c1c-9ae4-1481ce356034" -DiscoveryResourceId "https://mopriadiscoveryservice-contoso.msappproxy.net/mcs/"`
 
     - Use the following command to verify that the printer is published
@@ -426,10 +427,11 @@ This guide outlines five (5) installation steps:
 ## Verify the deployment
 
 On an Azure AD joined device that has the MDM policies configured:
-- Open a web browser and to go to https://&lt;services-machine-endpoint&gt;/mcs/services
+- Open a web browser and to go to https://mopriadiscoveryservice-\<tenant-name\>.msappproxy.net/mcs/services
 - You should see the JSON text describing the set of functionality of this endpoint
 - Go to **Settings** > **Devices** > **Printers & scanners**
-    - You should see a "Search for cloud printers" link
+    - Click on **Add printer or scanner**
+    - You should see a "Search for cloud printers" (or "Search for printers in my organization" on more recent Windows 10 machine) link
     - Click on the link
     - Click the “Please select a search location” link
         - You should see the device location hierarchy
