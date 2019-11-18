@@ -391,39 +391,36 @@ This guide outlines five (5) installation steps:
         - `find-module -Name "PublishCloudPrinter"` to confirm that the machine can reach the PowerShell Gallery (PSGallery)
         - `install-module -Name "PublishCloudPrinter"`
 
-        > NOTE: You may see a messaging stating that 'PSGallery' is an untrusted repository.  Enter 'y' to continue with the installation.
+            > NOTE: You may see a messaging stating that 'PSGallery' is an untrusted repository.  Enter 'y' to continue with the installation.
 
         - `Publish-CloudPrinter`
         - Printer = The shared printer name. This name must match exactly the share name shown in the printer properties' Sharing tab.
         - Manufacturer = Printer manufacturer
         - Model = Printer model
         - OrgLocation = A JSON string specifying the printer location,
-            e.g.:
+            e.g.
+
             `{"attrs": [{"category":"country", "vs":"USA", "depth":0}, {"category":"organization", "vs":"Microsoft", "depth":1}, {"category":"site", "vs":"Redmond, WA", "depth":2}, {"category":"building", "vs":"Building 1", "depth":3}, {"category":"floor_number", "vs":1, "depth":4}, {"category":"room_name", "vs":"1111", "depth":5}]}`
-        - Sddl = SDDL string representing permissions for the printer. This can be obtained by modifying the Printer Properties Security tab appropriately and then running the following command in a command prompt:
+
+        - Sddl = SDDL string representing permissions for the printer.
+            - Log on to the Print Server as an administrator, and then run the following PowerShell command against the printer that you want to publish:
             `(Get-Printer PrinterName -full).PermissionSDDL`
-            e.g. "G:DUD:(A;OICI;FA;;;WD)"
-
-        > NOTE: You will need to add **`O:BA`** as prefix to the result from the command prompt command above before setting the value as the SDDL setting.  Example: SDDL = `O:BAG:DUD:(A;OICI;FA;;;WD)`
-
+            - Add **`O:BA`** as prefix to the result from the command prompt command above before setting the value as the SDDL setting. Example: if the string returned by the previous command is "G:DUD:(A;OICI;FA;;;WD)", then SDDL = "O:BAG:DUD:(A;OICI;FA;;;WD)"
         - DiscoveryEndpoint = Application ID URI of the Mopria Discovery Service app, without the trailing "/"
-
         - PrintServerEndpoint = Application ID URI of the Enterprise Cloud Print app, without the trailing "/"
-
         - AzureClientId = Application ID of the registered Native Web App value
-
         - AzureTenantGuid = Directory ID of your Azure AD tenant
-
         - DiscoveryResourceId = [Optional] Application ID URI of the Mopria Discovery Service app
 
-        > NOTE: You can enter all of the required parameter values in the command line as well.
-        **Publish-CloudPrinter** PowerShell command syntax:
-        Publish-CloudPrinter -Printer \<string\> -Manufacturer \<string\> -Model \<string\> -OrgLocation \<string\> -Sddl \<string\> -DiscoveryEndpoint \<string\> -PrintServerEndpoint \<string\> -AzureClientId \<string\> -AzureTenantGuid \<string\> [-DiscoveryResourceId \<string\>]
+    - You can enter all of the required parameter values in the command line as well. The syntax is:
+
+        `Publish-CloudPrinter -Printer \<string\> -Manufacturer \<string\> -Model \<string\> -OrgLocation \<string\> -Sddl \<string\> -DiscoveryEndpoint \<string\> -PrintServerEndpoint \<string\> -AzureClientId \<string\> -AzureTenantGuid \<string\> [-DiscoveryResourceId \<string\>]`
 
         Sample command:
         `publish-CloudPrinter -Printer EcpPrintTest -Manufacturer Microsoft -Model FilePrinterEcp -OrgLocation '{"attrs": [{"category":"country", "vs":"USA", "depth":0}, {"category":"organization", "vs":"MyCompany", "depth":1}, {"category":"site", "vs":"MyCity, State", "depth":2}, {"category":"building", "vs":"Building 1", "depth":3}, {"category":"floor_name", "vs":1, "depth":4}, {"category":"room_name", "vs":"1111", "depth":5}]}' -Sddl "O:BAG:DUD:(A;OICI;FA;;;WD)" -DiscoveryEndpoint https://mopriadiscoveryservice-contoso.msappproxy.net/mcs -PrintServerEndpoint https://enterprisecloudprint-contoso.msappproxy.net/ecp -AzureClientId "dbe4feeb-cb69-40fc-91aa-73272f6d8fe1" -AzureTenantGuid "8de6a14a-5a23-4c1c-9ae4-1481ce356034" -DiscoveryResourceId "https://mopriadiscoveryservice-contoso.msappproxy.net/mcs/"`
 
     - Use the following command to verify that the printer is published
+
         `Publish-CloudPrinter -Query -DiscoveryEndpoint \<string\> -AzureClientId \<string\> -AzureTenantGuid \<string\> [-DiscoveryResourceId \<string\>]`
 
 ## Verify the deployment
