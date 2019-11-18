@@ -98,7 +98,7 @@ It's been a few weeks since we last updated, but we've been hard at work during 
 - Cmd+R now refreshes all of your subscribed feeds.
 - Added new secondary click options to expand or collapse all groups or feeds in the Connection Center.
 - Added a new secondary click option to change the icon size in the Feeds tab of the Connection Center.
-- A new simplified and cleaner app icon.
+- A new, simplified, and clean app icon.
 
 ## Updates for version 10.2.13
 
