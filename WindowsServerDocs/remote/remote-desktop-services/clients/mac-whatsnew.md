@@ -11,7 +11,7 @@ ms.topic: article
 author: heidilohr
 manager: daveba
 ms.author: helohr
-ms.date: 11/16/2019
+ms.date: 11/18/2019
 ms.localizationpriority: medium
 ---
 # What's new in the macOS client
@@ -22,7 +22,7 @@ If you encounter any issues, you can always contact us via **Help** > **Report a
 
 ## Updates for version 10.3.4
 
-*Date published: 11/16/19*
+*Date published: 11/18/19*
 
 We've been hard at work listening to your feedback and have put together a collection of bug fixes and feature updates.
 
@@ -41,7 +41,7 @@ We've been hard at work listening to your feedback and have put together a colle
 
 ## Updates for version 10.3.3
 
-*Date published: 11/16/19*
+*Date published: 11/18/19*
 
 We've put together a feature update and fixed bugs for the 10.3.3 release.
 
@@ -66,13 +66,13 @@ Next, the bug fixes:
 
 ## Updates for version 10.3.2
 
-*Date published: 11/16/19*
+*Date published: 11/18/19*
 
 In this release, we fixed a bug that made the display low resolution while connecting to a session
 
 ## Updates for version 10.3.1
 
-*Date published: 11/16/19*
+*Date published: 11/18/19*
 
 We've put together some fixes to address regressions that managed to sneak into the 10.3.0 release.
 
