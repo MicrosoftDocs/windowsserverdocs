@@ -11,7 +11,7 @@ ms.topic: article
 author: heidilohr
 manager: daveba
 ms.author: helohr
-ms.date: 11/12/2019
+ms.date: 11/18/2019
 ms.localizationpriority: medium
 ---
 # Get started with the Windows Desktop client
