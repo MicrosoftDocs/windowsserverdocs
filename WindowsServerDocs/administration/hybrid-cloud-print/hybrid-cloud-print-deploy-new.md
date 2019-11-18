@@ -62,13 +62,15 @@ This guide outlines five (5) installation steps:
 
 1. On the on-premise Windows Server machine running Active Directory, download and install the Azure AD Connect software. See [Getting started with Azure AD Connect using express settings](https://docs.microsoft.com/en-us/azure/active-directory/hybrid/how-to-connect-install-express)
 
-### Step 2 - Register and configure Azure web applications
+### Step 2 - Install Application Proxy
 
 1. Install Application Proxy on the Connector Server
     - For installation instruction, see [Tutorial: Add an on-premises application for remote access through Application Proxy in Azure Active Directory](https://docs.microsoft.com/en-us/azure/active-directory/manage-apps/application-proxy-add-on-premises-application)
     - A dedicated connector group is recommended if the organization has complex network topology. See [Publish applications on separate networks and locations using connector groups](https://docs.microsoft.com/en-us/azure/active-directory/manage-apps/application-proxy-connector-groups)
 
-2. Login to Azure portal to register web apps
+### Step 3 - Register and configure Azure web applications
+
+1. Login to Azure portal to register web apps
     - Under Azure Active Directory, go to **App registrations** > **New registration**
 
     ![AAD App Registration 1](../media/hybrid-cloud-print/AAD-AppRegistration.png)
@@ -83,7 +85,7 @@ This guide outlines five (5) installation steps:
 
     ![AAD App Registration 3](../media/hybrid-cloud-print/AAD-AppRegistration-AllApps.png)
 
-3. Expose API
+2. Expose API
     - While still in the App registrations blade, click on the Mopria Discovery Service app, select **Expose an API**, then click on **Set** next to Application ID URI
 
     ![AAD Expose API 1](../media/hybrid-cloud-print/AAD-AppRegistration-Mopria-ExposeAPI.png)
@@ -104,7 +106,7 @@ This guide outlines five (5) installation steps:
 
     ![AAD Expose API 5](../media/hybrid-cloud-print/AAD-AppRegistration-ECP-ExposeAPI-ScopeName.png)
 
-4. Add API permission
+3. Add API permission
     - Return to App registrations blade. Click on the native app and select API permissions. Click on **Add a permission**
 
     ![AAD API Permission 1](../media/hybrid-cloud-print/AAD-AppRegistration-APIPermission.png)
@@ -133,7 +135,7 @@ This guide outlines five (5) installation steps:
 
     ![AAD API Permission 7](../media/hybrid-cloud-print/AAD-AppRegistration-APIPermission-Verify.png)
 
-5. Configure URL in Enterprise applications
+4. Configure URL in Enterprise applications
     - Go to **Azure Active Directory** > **Enterprise applications** > **All applications**. Search for the Mopria Discovery Service and click on it
 
     ![AAD App Proxy 1](../media/hybrid-cloud-print/AAD-EnterpriseApp-AllApps.png)
@@ -150,13 +152,13 @@ This guide outlines five (5) installation steps:
 
     ![AAD App Proxy 4](../media/hybrid-cloud-print/AAD-AppRegistration-Mopria-Overview.png)
 
-6. Assign users to applications
+5. Assign users to applications
     - Go to **Azure Active Directory** > **Enterprise applications** > **All applications**. Search for the Mopria Discovery Service and click on it
     - Click on **Users and groups** and assign users
     - Alternatively, click on **Properties**. Change **User assignment required?** to **No**
     - Repeat for Enterprise Cloud Print service
 
-7. Configure redirect URI in the native app
+6. Configure redirect URI in the native app
     - Go to **Azure Active Directory** > **App registrations**. Click on the native app. Go to **Overview** and copy the **Application (client) ID**
 
     ![AAD Redirect URI 1](../media/hybrid-cloud-print/AAD-AppRegistration-Native-Overview.png)
@@ -171,7 +173,7 @@ This guide outlines five (5) installation steps:
 
     - Click **Save** to finish
 
-### Step 3 - Install roles and Hybrid Cloud Print package on the Print Server
+### Step 4 - Install roles and Hybrid Cloud Print package on the Print Server
 
 1. Make sure the Print Server has all the available Windows Update installed. Note: Server 2019 must be patched to build 17763.165 or above
     - Install the following server roles:
@@ -339,7 +341,7 @@ This guide outlines five (5) installation steps:
     - Repeat for EntperiseCloudPrint app
     ![AAD Single Sign-On IWA](../media/hybrid-cloud-print/AAD-SingleSignOn-IWA.png)
 
-### Step 4 - Configure the required MDM policies
+### Step 5 - Configure the required MDM policies
 
 1. Login to your MDM provider
 2. Find the Enterprise Cloud Print policy group and configure the policies following the guidelines below:
@@ -377,7 +379,7 @@ This guide outlines five (5) installation steps:
     - `DiscoveryMaxPrinterLimit = ./Vendor/MSFT/Policy/Config/EnterpriseCloudPrint/DiscoveryMaxPrinterLimit`
         - Value = \<a positive integer\>
 
-### Step 5 - Publish desired shared printers
+### Step 6 - Publish desired shared printers
 
 1. Install desired printer on the Print Server
 2. Share the printer through the Printer Properties UI
@@ -389,7 +391,7 @@ This guide outlines five (5) installation steps:
         - `find-module -Name "PublishCloudPrinter"` to confirm that the machine can reach the PowerShell Gallery (PSGallery)
         - `install-module -Name "PublishCloudPrinter"`
 
-        >   NOTE: You may see a messaging stating that 'PSGallery' is an untrusted repository.  Enter 'y' to continue with the installation.
+        > NOTE: You may see a messaging stating that 'PSGallery' is an untrusted repository.  Enter 'y' to continue with the installation.
 
         - `Publish-CloudPrinter`
         - Printer = The shared printer name. This name must match exactly the share name shown in the printer properties' Sharing tab.
@@ -402,22 +404,27 @@ This guide outlines five (5) installation steps:
             `(Get-Printer PrinterName -full).PermissionSDDL`
             e.g. "G:DUD:(A;OICI;FA;;;WD)"
 
-          > NOTE: You will need to add **`O:BA`** as prefix to the result from the command prompt command above before setting the value as the SDDL setting.  Example: SDDL = `O:BAG:DUD:(A;OICI;FA;;;WD)`
+        > NOTE: You will need to add **`O:BA`** as prefix to the result from the command prompt command above before setting the value as the SDDL setting.  Example: SDDL = `O:BAG:DUD:(A;OICI;FA;;;WD)`
 
-        - DiscoveryEndpoint = https://&lt;services-machine-endpoint&gt;/mcs
-        - PrintServerEndpoint = https://&lt;services-machine-endpoint&gt;/ecp
-        - AzureClientId = Application ID of the registered Native Web App value from above
+        - DiscoveryEndpoint = Application ID URI of the Mopria Discovery Service app, without the trailing "/"
+
+        - PrintServerEndpoint = Application ID URI of the Enterprise Cloud Print app, without the trailing "/"
+
+        - AzureClientId = Application ID of the registered Native Web App value
+
         - AzureTenantGuid = Directory ID of your Azure AD tenant
-        - DiscoveryResourceId = [Optional] Application ID of the proxied Mopria Discovery Cloud Service
 
-        > NOTE: You can enter all of the required parameter values in the command line as well.<br>
-        **Publish-CloudPrinter** PowerShell command syntax: <br>
-        Publish-CloudPrinter -Printer \<string\> -Manufacturer \<string\> -Model \<string\> -OrgLocation \<string\> -Sddl \<string\> -DiscoveryEndpoint \<string\> -PrintServerEndpoint \<string\> -AzureClientId \<string\> -AzureTenantGuid \<string\> [-DiscoveryResourceId \<string\>] <br>
+        - DiscoveryResourceId = [Optional] Application ID URI of the Mopria Discovery Service app
+
+        > NOTE: You can enter all of the required parameter values in the command line as well.
+        **Publish-CloudPrinter** PowerShell command syntax:
+        Publish-CloudPrinter -Printer \<string\> -Manufacturer \<string\> -Model \<string\> -OrgLocation \<string\> -Sddl \<string\> -DiscoveryEndpoint \<string\> -PrintServerEndpoint \<string\> -AzureClientId \<string\> -AzureTenantGuid \<string\> [-DiscoveryResourceId \<string\>]
+
         Sample command:
-        `publish-CloudPrinter -Printer EcpPrintTest -Manufacturer Microsoft -Model FilePrinterEcp -OrgLocation '{"attrs": [{"category":"country", "vs":"USA", "depth":0}, {"category":"organization", "vs":"MyCompany", "depth":1}, {"category":"site", "vs":"MyCity, State", "depth":2}, {"category":"building", "vs":"Building 1", "depth":3}, {"category":"floor_name", "vs":1, "depth":4}, {"category":"room_name", "vs":"1111", "depth":5}]}' -Sddl "O:BAG:DUD:(A;OICI;FA;;;WD)" -DiscoveryEndpoint https://<services-machine-endpoint>/mcs -PrintServerEndpoint https://<services-machine-endpoint>/ecp -AzureClientId <Native Web App ID> -AzureTenantGuid <Azure AD Directory ID> -DiscoveryResourceId <Proxied Mopria Discovery Cloud Service App ID>`
+        `publish-CloudPrinter -Printer EcpPrintTest -Manufacturer Microsoft -Model FilePrinterEcp -OrgLocation '{"attrs": [{"category":"country", "vs":"USA", "depth":0}, {"category":"organization", "vs":"MyCompany", "depth":1}, {"category":"site", "vs":"MyCity, State", "depth":2}, {"category":"building", "vs":"Building 1", "depth":3}, {"category":"floor_name", "vs":1, "depth":4}, {"category":"room_name", "vs":"1111", "depth":5}]}' -Sddl "O:BAG:DUD:(A;OICI;FA;;;WD)" -DiscoveryEndpoint https://mopriadiscoveryservice-contoso.msappproxy.net/mcs -PrintServerEndpoint https://enterprisecloudprint-contoso.msappproxy.net/ecp -AzureClientId "dbe4feeb-cb69-40fc-91aa-73272f6d8fe1" -AzureTenantGuid "8de6a14a-5a23-4c1c-9ae4-1481ce356034" -DiscoveryResourceId "https://mopriadiscoveryservice-contoso.msappproxy.net/mcs/"`
 
     - Use the following command to verify that the printer is published
-        Publish-CloudPrinter -Query -DiscoveryEndpoint \<string\> -AzureClientId \<string\> -AzureTenantGuid \<string\> [-DiscoveryResourceId \<string\>]
+        `Publish-CloudPrinter -Query -DiscoveryEndpoint \<string\> -AzureClientId \<string\> -AzureTenantGuid \<string\> [-DiscoveryResourceId \<string\>]`
 
 ## Verify the deployment
 
