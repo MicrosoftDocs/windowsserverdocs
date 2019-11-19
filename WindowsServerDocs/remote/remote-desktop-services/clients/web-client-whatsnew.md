@@ -11,7 +11,7 @@ ms.topic: article
 author: heidilohr
 manager: daveba
 ms.author: helohr
-ms.date: 10/18/2019
+ms.date: 11/15/2019
 ms.localizationpriority: medium
 ---
 # What's new in the web client
@@ -20,6 +20,14 @@ We regularly update the [Remote Desktop web client](remote-desktop-web-client.md
 
 > [!NOTE]
 > We've changed the versioning system for the web client. Starting with version 1.0.18.0, all web client release versions will contain numbers (in the format of "W.X.Y.Z"). Release numbers for the Remote Desktop web client will always end with a 0 (for example, W.X.Y.0). Each Windows Virtual Desktop web client release will change the last digit until the next Remote Desktop web client release (for example, 1.0.18.1).
+
+## Updates for version 1.0.21.0
+*Date published: 11/15/2019*
+
+- Added support for using an Input Method Editor (IME) in the remote session to input complex characters.
+- Fixed a regression where users could not copy and paste into the remote session on macOS devices.
+- Fixed a regression where local Windows Key was sent to the remote session on Firefox.
+- Added link to RDWeb password change when enabled by your administrator.
 
 ## Updates for version 1.0.20.0
 *Date published: 10/18/2019*
