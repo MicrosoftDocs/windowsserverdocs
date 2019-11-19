@@ -25,14 +25,14 @@ The client can be configured for different [user groups](windowsdesktop-admin.md
 |User group |Version  |
 |-----------|---------|
 |Public     |1.2.431  |
-|Insider    |1.2.523  |
+|Insider    |1.2.524  |
 
-## Updates for version 1.2.523
+## Updates for version 1.2.524
 
 *Date published: 11/19/2019*
 
-- You can now access this What's new information directly from the overflow menu (...) on the command bar at the top of the client.
-- The ability to report feedback about the client is now available on the command bar at the top of the client.
+- You can now access information about updates directly from the more options button on the command bar at the top of the client.
+- You can now report feedback from the command bar of the client.
 
 ## Updates for version 1.2.431
 
