@@ -355,7 +355,7 @@ When attempting to run cut over of a source computer, having set the source comp
 
     Guidance: Confirm that the Netlogon service on the computer is reachable through RPC and that the credentials provided are correct.
 
-Examinining the source computer shows that the original IP address fails to change. 
+Examining the source computer shows that the original IP address fails to change. 
 
 This issue does not happen if you selected "Use DHCP" on the Windows Admin Center "configure cutover" screen, only if you specify a new static IP address, subnet, and gateway. 
 
@@ -366,11 +366,6 @@ This issue is caused by a regression in the [KB4512534](https://support.microsof
   - If cut over is already stuck: logon to the source computer and enable DHCP on its network interfaces, after ensuring that a DHCP scope covers that subnet. When the source computer acquires a DHCP-provided IP address, SMS will proceed with the cut over normally.
   
 In both workarounds, after cut over completes, you can then set a static IP address on the old source computer as you see fit and stop using DHCP.   
-
-## Error "Dll was not found" when running inventory from a cluster node
-
-When attempting to run inventory with the Storage Migration Service orchestrator installed on a Windows Server 2019 failover cluster node and targeting a Windows Server failover cluster general use file server source, you receive the following error:
-
 
 ## See also
 
