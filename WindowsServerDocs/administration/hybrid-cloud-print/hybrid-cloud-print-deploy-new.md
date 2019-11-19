@@ -32,13 +32,13 @@ There are a number of subscriptions, services, and computers you'll need to acqu
 
   See [Microsoft Intune](https://www.microsoft.com/en-us/cloud-platform/microsoft-intune), for a trial subscription to Intune.
 
-- A Windows Server running Active Directory
+- Windows Server 2016 or later running Active Directory
 
   See [Step-By-Step: Setting up Active Directory in Windows Server 2016](https://blogs.technet.microsoft.com/canitpro/2017/02/22/step-by-step-setting-up-active-directory-in-windows-server-2016/), for help setting up Active Directory.
 
-- A domain-joined Windows Server 2016 running as Print Server
+- Domain-joined Windows Server 2016 or later running as Print Server
 
-- A separate domain-joined Windows Server machine running as Connector Server
+- Domain-joined Windows Server 2016 or later running as Connector Server, separate from Print Server
 
   See [Understand Azure AD Application Proxy connectors](https://docs.microsoft.com/en-us/azure/active-directory/manage-apps/application-proxy-connectors) for more information.
 
@@ -167,7 +167,7 @@ The steps below are for a typical Hybrid Cloud Print deployment.
 
     - Click **Save** to finish
 
-### Step 4 - Install roles and Hybrid Cloud Print package on the Print Server
+### Step 4 - Setup the Print Server
 
 1. Make sure the Print Server has all the available Windows Update installed. Note: Server 2019 must be patched to build 17763.165 or above
     - Install the following server roles:
