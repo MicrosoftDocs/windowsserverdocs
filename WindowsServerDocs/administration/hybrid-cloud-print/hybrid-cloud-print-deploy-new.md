@@ -50,25 +50,19 @@ There are a number of subscriptions, services, and computers you'll need to acqu
 
 ## Deployment steps
 
-This guide outlines five (5) installation steps:
+The steps below are for a typical Hybrid Cloud Print deployment.
 
-- Step 1: Install Azure AD Connect to sync between Azure AD and on-premises AD
-- Step 2: Register and configure Azure web applications
-- Step 3: Install roles and Hybrid Cloud Print package on the Print Server
-- Step 4: Configure the required MDM policies
-- Step 5: Publish shared printers
+### Step 1 - Install Azure AD Connect
 
-### Step 1 - Install Azure AD Connect to sync between Azure AD and on-premises AD
-
-1. On the on-premise Windows Server machine running Active Directory, download and install the Azure AD Connect software. See [Getting started with Azure AD Connect using express settings](https://docs.microsoft.com/en-us/azure/active-directory/hybrid/how-to-connect-install-express)
+1. Azure AD connect synchronizes Azure AD to on-premises AD. On the Windows Server machine with Active Directory, download and install the Azure AD Connect software. See [Getting started with Azure AD Connect using express settings](https://docs.microsoft.com/en-us/azure/active-directory/hybrid/how-to-connect-install-express)
 
 ### Step 2 - Install Application Proxy
 
-1. Install Application Proxy on the Connector Server
+1. Application proxy allows users in your organization to access on-premise applications from the cloud. Install Application Proxy on the Connector Server
     - For installation instruction, see [Tutorial: Add an on-premises application for remote access through Application Proxy in Azure Active Directory](https://docs.microsoft.com/en-us/azure/active-directory/manage-apps/application-proxy-add-on-premises-application)
     - A dedicated connector group is recommended if the organization has complex network topology. See [Publish applications on separate networks and locations using connector groups](https://docs.microsoft.com/en-us/azure/active-directory/manage-apps/application-proxy-connector-groups)
 
-### Step 3 - Register and configure Azure web applications
+### Step 3 - Register and configure applications
 
 1. Login to Azure portal to register web apps
     - Under Azure Active Directory, go to **App registrations** > **New registration**
@@ -309,7 +303,7 @@ This guide outlines five (5) installation steps:
 
     ![Print Server Mopria Registry Keys](../media/hybrid-cloud-print/PrintServer-SQLiteDB.png)
 
-### Optional - Configure pre-authentication with Azure AD
+### Step 5 \[Optional\] - Configure pre-authentication with Azure AD
 
 1. Review the document [Kerberos Constrained Delegation for single sign-on to your apps with Application Proxy](https://docs.microsoft.com/en-us/azure/active-directory/manage-apps/application-proxy-configure-single-sign-on-with-kcd)
 
@@ -341,15 +335,15 @@ This guide outlines five (5) installation steps:
     - Repeat for EntperiseCloudPrint app
     ![AAD Single Sign-On IWA](../media/hybrid-cloud-print/AAD-SingleSignOn-IWA.png)
 
-### Step 5 - Configure the required MDM policies
+### Step 6 - Configure the required MDM policies
 
 1. Login to your MDM provider
 2. Find the Enterprise Cloud Print policy group and configure the policies following the guidelines below:
   - CloudPrintOAuthAuthority = `https://login.microsoftonline.com/<Azure AD Directory ID>`. The directory ID can be found under Azure Active Directory > Properties
   - CloudPrintOAuthClientId = "Application \(client\) ID" value of the native app. You can find this under Azure Active Directory > App registrations > Select the native app > Overview
   - CloudPrinterDiscoveryEndPoint = External URL of the Mopria Discovery Service app. You can find this under Azure Active Directory > Enterprise applications > Select the Mopria Discovery Service app > Application proxy. **It must be exactly the same but without the trailing "/"**
-  - MopriaDiscoveryResourceId = The "Application ID URI" of the Mopria Discovery Service app. You can find this under Azure Active Directory > App registrations > Select the Mopria Discovery Service app > Overview
-  - CloudPrintResourceId = The "Application ID URI" of the Enterprise Cloud Print app. You can find this under Azure Active Directory > App registrations > Select the Enterprise Cloud Print app > Overview
+  - MopriaDiscoveryResourceId = The Application ID URI of the Mopria Discovery Service app. You can find this under Azure Active Directory > App registrations > Select the Mopria Discovery Service app > Overview
+  - CloudPrintResourceId = The Application ID URI of the Enterprise Cloud Print app. You can find this under Azure Active Directory > App registrations > Select the Enterprise Cloud Print app > Overview
   - DiscoveryMaxPrinterLimit = \<a positive integer\>
 
 > Note: If you are using Microsoft Intune service, you can find these settings under the "Cloud Printer" category.
@@ -373,13 +367,13 @@ This guide outlines five (5) installation steps:
     - `CloudPrinterDiscoveryEndPoint = ./Vendor/MSFT/Policy/Config/EnterpriseCloudPrint/CloudPrinterDiscoveryEndPoint`
         - Value = External URL of the Mopria Discovery Service app (must be exactly the same but without the trailing /)
     - `MopriaDiscoveryResourceId = ./Vendor/MSFT/Policy/Config/EnterpriseCloudPrint/MopriaDiscoveryResourceId`
-        - Value = The "Application ID URI" of the Mopria Discovery Service app.  You can find this under the Settings -> Properties of the app
+        - Value = The Application ID URI of the Mopria Discovery Service app
     - `CloudPrintResourceId = ./Vendor/MSFT/Policy/Config/EnterpriseCloudPrint/CloudPrintResourceId`
-        - Value = The "Application ID URI" of the Enterprise Cloud Print app. You can find this under the Settings -> Properties of the app
+        - Value = The Application ID URI of the Enterprise Cloud Print app
     - `DiscoveryMaxPrinterLimit = ./Vendor/MSFT/Policy/Config/EnterpriseCloudPrint/DiscoveryMaxPrinterLimit`
         - Value = \<a positive integer\>
 
-### Step 6 - Publish desired shared printers
+### Step 6 - Publish the shared printer
 
 1. Install desired printer on the Print Server
 2. Share the printer through the Printer Properties UI
@@ -406,11 +400,11 @@ This guide outlines five (5) installation steps:
             - Log on to the Print Server as an administrator, and then run the following PowerShell command against the printer that you want to publish:
             `(Get-Printer PrinterName -full).PermissionSDDL`
             - Add **O:BA** as prefix to the result from the command prompt command above before setting the value as the SDDL setting. Example: if the string returned by the previous command is "G:DUD:(A;OICI;FA;;;WD)", then SDDL = "O:BAG:DUD:(A;OICI;FA;;;WD)"
-        - DiscoveryEndpoint = Application ID URI of the Mopria Discovery Service app, without the trailing "/"
-        - PrintServerEndpoint = Application ID URI of the Enterprise Cloud Print app, without the trailing "/"
+        - DiscoveryEndpoint = Log in to Azure portal and then get the string from Enterprise applications > Mopria Discovery Service app > Application proxy > External URL. Omit the trailing "/"
+        - PrintServerEndpoint = Log in to Azure portal and then get the string from Enterprise applications > Enterprise Cloud Print app > Application proxy > External URL. Omit the trailing "/"
         - AzureClientId = Application ID of the registered Native Web App value
         - AzureTenantGuid = Directory ID of your Azure AD tenant
-        - DiscoveryResourceId = [Optional] Application ID URI of the Mopria Discovery Service app
+        - DiscoveryResourceId \[Optional\] = Application ID URI of the Mopria Discovery Service app
 
     - You can enter all of the required parameter values in the command line as well. The syntax is:
 
@@ -424,7 +418,7 @@ This guide outlines five (5) installation steps:
 
         `Publish-CloudPrinter -Query -DiscoveryEndpoint \<string\> -AzureClientId \<string\> -AzureTenantGuid \<string\> [-DiscoveryResourceId \<string\>]`
 
-## Verify the deployment
+## Step 7 - Verify the deployment
 
 On an Azure AD joined device that has the MDM policies configured:
 - Open a web browser and to go to https://mopriadiscoveryservice-\<tenant-name\>.msappproxy.net/mcs/services
@@ -440,4 +434,3 @@ On an Azure AD joined device that has the MDM policies configured:
     - After successful printer installation, print to the printer from your favorite app
 
 >   Note: If using the “EcpPrintTest” printer, you can find the output file in the Print Server machine under “C:\\ECPTestOutput\\EcpTestPrint.xps” location.
-
