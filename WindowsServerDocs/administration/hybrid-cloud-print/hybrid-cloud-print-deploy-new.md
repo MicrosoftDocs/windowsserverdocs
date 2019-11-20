@@ -418,7 +418,7 @@ The steps below are for a typical Hybrid Cloud Print deployment.
 
         `Publish-CloudPrinter -Query -DiscoveryEndpoint \<string\> -AzureClientId \<string\> -AzureTenantGuid \<string\> [-DiscoveryResourceId \<string\>]`
 
-## Step 7 - Verify the deployment
+## Verify the deployment
 
 On an Azure AD joined device that has the MDM policies configured:
 - Open a web browser and to go to https://mopriadiscoveryservice-\<tenant-name\>.msappproxy.net/mcs/services
@@ -433,4 +433,15 @@ On an Azure AD joined device that has the MDM policies configured:
     - Select printer and click **Add device** button
     - After successful printer installation, print to the printer from your favorite app
 
->   Note: If using the “EcpPrintTest” printer, you can find the output file in the Print Server machine under “C:\\ECPTestOutput\\EcpTestPrint.xps” location.
+> Note: If using the “EcpPrintTest” printer, you can find the output file in the Print Server machine under “C:\\ECPTestOutput\\EcpTestPrint.xps” location.
+
+## Troubleshooting
+
+There are various log that can help troubleshoot failures
+- Windows 10 Client
+    - Use **Feedback Hub** to add a new feedback. Click on **Start** and type "Feedback Hub". Under category, select **Problem**, **Devices and Drivers**, **Print**. In the section for adding more details, click on the **Start recording** button before printing, retry the print job that failed, and then go back to click on the **Stop Recording** button. Click on **Submit** to submit your feedback.
+    - Use **Event Viewer** to see log of Azure AD operations. Click on **Start** and type "Event Viewer". Navigate to Applications and Services Logs > Microsoft > Windows > AAD > Operation.
+- Connector Server
+    - Use **Event Viewer** to see log of Application Proxy. Click on **Start** and type "Event Viewer". Navigate to Applications and Services Logs > Microsoft > AadApplicationProxy > Connector > Admin.
+- Print Server
+    - Logs for Mopria Discovery Service app and Enterprise Cloud Print app can be found at C:\inetpub\logs\LogFiles\W3SVC1
