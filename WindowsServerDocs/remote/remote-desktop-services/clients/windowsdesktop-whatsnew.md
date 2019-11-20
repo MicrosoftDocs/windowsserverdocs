@@ -11,7 +11,7 @@ ms.topic: article
 author: heidilohr
 manager: daveba
 ms.author: helohr
-ms.date: 11/12/2019
+ms.date: 11/20/2019
 ms.localizationpriority: medium
 ---
 # What's new in the Windows Desktop client
@@ -25,7 +25,14 @@ The client can be configured for different [user groups](windowsdesktop-admin.md
 |User group |Version  |
 |-----------|---------|
 |Public     |1.2.431  |
-|Insider    |1.2.431  |
+|Insider    |1.2.524  |
+
+## Updates for version 1.2.524
+
+*Date published: 11/20/2019*
+
+- You can now access information about updates directly from the more options button on the command bar at the top of the client.
+- You can now report feedback from the command bar of the client.
 
 ## Updates for version 1.2.431
 
