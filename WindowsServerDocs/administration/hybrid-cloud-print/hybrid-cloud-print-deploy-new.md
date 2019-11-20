@@ -437,11 +437,17 @@ On an Azure AD joined device that has the MDM policies configured:
 
 ## Troubleshooting
 
-There are various log that can help troubleshoot failures
+There are various logs that can help troubleshoot failures
 - Windows 10 Client
-    - Use **Feedback Hub** to add a new feedback. Click on **Start** and type "Feedback Hub". Under category, select **Problem**, **Devices and Drivers**, **Print**. In the section for adding more details, click on the **Start recording** button before printing, retry the print job that failed, and then go back to click on the **Stop Recording** button. Click on **Submit** to submit your feedback.
-    - Use **Event Viewer** to see log of Azure AD operations. Click on **Start** and type "Event Viewer". Navigate to Applications and Services Logs > Microsoft > Windows > AAD > Operation.
+    - Use Feedback Hub to add a new feedback
+        - Click on **Start** and type "Feedback Hub"
+        - Under category, select **Problem**, **Devices and Drivers**, **Print**
+        - In the section for adding more details, click on the **Start recording** button
+        - Retry the print job that failed
+        - Go back to Feedback Hub abd click on the **Stop Recording** button
+        - Click on **Submit** to submit your feedback
+    - Use Event Viewer to see log of Azure AD operations. Click on **Start** and type "Event Viewer". Navigate to Applications and Services Logs > Microsoft > Windows > AAD > Operation
 - Connector Server
-    - Use **Event Viewer** to see log of Application Proxy. Click on **Start** and type "Event Viewer". Navigate to Applications and Services Logs > Microsoft > AadApplicationProxy > Connector > Admin.
+    - Use Event Viewer to see log of Application Proxy. Click on **Start** and type "Event Viewer". Navigate to Applications and Services Logs > Microsoft > AadApplicationProxy > Connector > Admin
 - Print Server
     - Logs for Mopria Discovery Service app and Enterprise Cloud Print app can be found at C:\inetpub\logs\LogFiles\W3SVC1
