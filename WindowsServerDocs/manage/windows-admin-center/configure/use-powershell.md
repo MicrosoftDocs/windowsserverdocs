@@ -14,10 +14,6 @@ ms.prod: windows-server
 
 If you have a large organization with multiple Windows Admin Center gateways, you may want to use automation to configure those gateways. Using PowerShell, you can programatically configure the connection lists and extensions.
 
-> [!NOTE]
-> Modifying the shared connections or extensions is limited to gateway administrators - any user can use PowerShell to modify their personal connection list.
-
-
 ## Use PowerShell to import or export your connections (with tags)
 
 [!INCLUDE [ps-connections](../includes/ps-connections.md)]

@@ -30,3 +30,6 @@ Uninstall-Extension "https://wac.contoso.com" "msft.sme.containers"
 # Update-Extension
 Update-Extension "https://wac.contoso.com" "msft.sme.containers"
 ```
+
+> [!NOTE]
+> You must be gateway administrator to modify Windows Admin Center extensions with PowerShell.
