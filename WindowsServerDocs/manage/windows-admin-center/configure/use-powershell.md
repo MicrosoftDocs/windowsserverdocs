@@ -28,5 +28,5 @@ If you have a large organization with multiple Windows Admin Center gateways, yo
 
 ### See also
 
-* [Deploy a highly available Windows Admin Center gateway on a cluster](../deploy/high-availability)
+* [Deploy a highly available Windows Admin Center gateway on a cluster](../deploy/high-availability.md)
 * [Deploy a Windows Admin Center gateway in Azure using Cloud Shell](../azure/deploy-wac-in-azure.md)
