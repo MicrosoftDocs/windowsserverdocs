@@ -76,6 +76,8 @@ $feedUrlBase = "https://aka.ms/sme-extension-feed"
 
 ## Manage extensions with PowerShell
 
+Windows Admin Center Preview includes a PowerShell module to manage your gateway extensions.
+
 [!INCLUDE [ps-extensions](../includes/ps-extensions.md)]
 
 ### [Learn more about building an extension with the Windows Admin Center SDK](../extend/extensibility-overview.md).
