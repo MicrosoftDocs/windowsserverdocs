@@ -150,16 +150,7 @@ Once tags have been added to one or more server connections, you can view the ta
 
 ## Use PowerShell to import or export your connections (with tags)
 
-```powershell
-# Load the module
-Import-Module "$env:ProgramFiles\windows admin center\PowerShell\Modules\ConnectionTools"
-# Available cmdlets: Export-Connection, Import-Connection
-
-# Export connections (including tags) to .csv files
-Export-Connection "https://wac.contoso.com" -fileName "WAC-connections.csv"
-# Import connections (including tags) from .csv files
-Import-Connection "https://wac.contoso.com" -fileName "WAC-connections.csv"
-```
+[!INCLUDE [ps-connections](../includes/ps-connections.md)]
 
 ### CSV file format for importing connections
 
