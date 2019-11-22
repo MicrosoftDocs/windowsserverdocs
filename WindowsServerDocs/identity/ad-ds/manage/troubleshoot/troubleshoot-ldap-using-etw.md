@@ -1,6 +1,6 @@
 ---
 title: Using ETW to troubleshoot LDAP connections
-description: 
+description: How to turn on and use ETW to trace LDAP connections between AD DS domain controllers.
 audience: Admin
 ms.custom:
 - CI ID 110964
