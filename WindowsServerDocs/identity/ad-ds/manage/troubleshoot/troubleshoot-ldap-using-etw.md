@@ -30,7 +30,7 @@ The underlying complexity of the [LDAP provider](https://docs.microsoft.com/wind
 
    **HKEY\_LOCAL\_MACHINE\\System\\CurrentControlSet\\Services\\ldap\\Tracing\\*ProcessName***
 
-   ***ProcessName*** is the full name of the process that you want to trace, including its extension (for example, "Svchost.exe").
+   In this subkey, *ProcessName* is the full name of the process that you want to trace, including its extension (for example, "Svchost.exe").
 
 1. **Optional**. Under this subkey, create a new entry that has the name **PID** and a DWORD value. To use this entry, set the value to a process ID.  
 
