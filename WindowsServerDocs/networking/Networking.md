@@ -241,7 +241,7 @@ This consistency means that your applications are now easier to scale, and you c
                                             </div>
                                         </div>
                                         <div class="cardText">
-                                        <h3><a href="dns/dns-top.md">Domain Name System (DNS)&quot;&gt;</a><hr /></h3>
+                                        <h3><a href="dns/dns-top.md">Domain Name System (DNS)</a><hr /></h3>
                                         <p>Domain Name System (DNS) is one of the industry-standard suite of protocols that comprise TCP/IP, and together the DNS Client and DNS Server provide computer name-to-IP address mapping name resolution services to computers and users.</p>
                     </div>
                 </div>
@@ -351,11 +351,10 @@ This consistency means that your applications are now easier to scale, and you c
                                         <div class="cardText">
                                         <h3><a href="technologies/hpn/hpn-top.md">High-Performance Networking</a><hr /></h3>
                                         <p>Network offload and optimization technologies in Windows Server 2016 include Software Only (SO) features and technologies, Software and Hardware (SH) integrated features and technologies, and Hardware Only (HO) features and technologies.</p>
-                                        <p>The following offload and optimization technology documentation is also available:<p>
-                                        <hr />
-                                        <a href="technologies/conv-nic/cnic-top.md">High-Performance Networking</a><hr />
-                                        <a href="technologies/dcb/dcb-top.md">Data Center Bridging (DCB)</a><hr />
-                                        <a href="technologies/vrss/vrss-top.md">Virtual Receive Side Scaling (vRSS)</a>
+                                        <p>The following offload and optimization technology documentation is also available:<br>
+                                        <a href="technologies/conv-nic/cnic-top.md">Converged Network Interface Card (NIC)</a><br>
+                                        <a href="technologies/dcb/dcb-top.md">Data Center Bridging (DCB)</a><br>
+                                        <a href="technologies/vrss/vrss-top.md">Virtual Receive Side Scaling (vRSS)</a></p>
                     </div>
                 </div>
             </div>
@@ -509,7 +508,6 @@ This consistency means that your applications are now easier to scale, and you c
                                         <h3><a href="https://docs.microsoft.com/virtualization/windowscontainers/container-networking/architecture">Windows Container Networking</a><hr /></h3>
                                         <p>
                                         Windows Container Networking allows you to create and manage networks for connecting container endpoints on both Windows 10 and Windows Server hosts by using standard industry tools and workflows. Windows container networks support multiple topologies, including private, flat-L2, and routed-L3.</p>
-
                                         <p>Also supported are overlays that you can create locally on the host by using Docker, Kubernetes, or Windows PowerShell through plugins that communicate with the Windows Host Networking Service (HNS). You can create and manage multi-node cluster networks through higher level orchestration systems by communicating through a local agent to each node's HNS.</p>
                     </div>
                 </div>
