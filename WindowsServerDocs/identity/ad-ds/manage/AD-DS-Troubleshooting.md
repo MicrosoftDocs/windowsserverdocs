@@ -16,9 +16,9 @@ ms.technology: identity-adds
 
 >Applies To: Windows Server 2016, Windows Server 2012 R2
 
-This section includes troubleshooting recommendations and procedures for diagnosing and fixing problems that may occur during Active Directory replication.
+This section includes troubleshooting recommendations and procedures for diagnosing and fixing problems that may occur during Active Directory replication. This content focuses on how to respond to Directory Service event log messages and how to use messages that tools such as Repadmin.exe and Dcdiag.exe tools might report.
 
-This content focuses primarily on responses to Directory Service event log messages and tool-based error messages that might be reported by the Repadmin.exe and Dcdiag.exe tools. These tools are available on all domain controllers that run Windows Server 2012 R2 or later versions. For more information about using these tools to troubleshoot problems, see the following articles.
+Repadmin.exe and Dcdiag.exe are available on all domain controllers that run Windows Server 2012 R2 or later versions. For more information about using these tools to troubleshoot problems, see the following articles.
 
 - [Configuring a Computer for Troubleshooting Active Directory](../manage/troubleshoot/Configuring-a-Computer-for-Troubleshooting.md)
 - [Troubleshooting Active Directory Replication Problems](../manage/troubleshoot/Troubleshooting-Active-Directory-Replication-Problems.md)
