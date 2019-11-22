@@ -1,14 +1,16 @@
 ---
 ms.assetid: fd3bc84a-48eb-4f00-9dc2-846bf2c2668b
 title: AD DS Troubleshooting
-description:
+description: Overview of the troubleshooting section for AD DS
 ms.author: joflore
 author: MicrosoftGuyJFlo
-manager: mtillman
-ms.date: 08/07/2018
+manager: dcscontentpm
+ms.date: 11/22/2019
 ms.topic: article
 ms.prod: windows-server
-
+audience: Admin
+ms.custom:
+- CSSTroubleshoot 
 ms.technology: identity-adds
 ---
 
@@ -16,7 +18,7 @@ ms.technology: identity-adds
 
 >Applies To: Windows Server 2016, Windows Server 2012 R2
 
-This section includes troubleshooting recommendations and procedures for diagnosing and fixing problems that may occur during Active Directory replication. This content focuses on how to respond to Directory Service event log messages and how to use messages that tools such as Repadmin.exe and Dcdiag.exe tools might report.
+This section includes troubleshooting recommendations and procedures for diagnosing and fixing problems that may occur during Active Directory replication. It focuses on how to respond to Directory Service event log messages and how to interpret messages that tools such as Repadmin.exe and Dcdiag.exe tools might report.
 
 Repadmin.exe and Dcdiag.exe are available on all domain controllers that run Windows Server 2012 R2 or later versions. For more information about using these tools to troubleshoot problems, see the following articles.
 
