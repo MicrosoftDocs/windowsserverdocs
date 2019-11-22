@@ -138,4 +138,4 @@ Consider an application, App1.exe, that sets passwords for user accounts. Suppos
     tracerpt.exe .\ldap.etl -o -report
     ```
 
-   In this command, **tracerpt.exe** is a [trace consumer](http://go.microsoft.com/fwlink/p/?linkid=83876) tool.
+   In this command, **tracerpt.exe** is a [trace consumer](https://go.microsoft.com/fwlink/p/?linkid=83876) tool.
