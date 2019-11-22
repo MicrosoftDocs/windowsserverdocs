@@ -1,5 +1,5 @@
 ---
-title: Event Tracing in LDAP Applications
+title: Using ETW to troubleshoot LDAP connections
 description: 
 audience: Admin
 ms.custom:
@@ -15,16 +15,16 @@ keywords:
 audience: Admin
 ms.author: v-tea
 ms.topic: article
-ms.date: 11/18/2019
+ms.date: 11/22/2019
 ---
 
-# Event Tracing in LDAP Applications
+# Using ETW to troubleshoot LDAP connections
 
 Event Tracing for Windows ([ETW](https://docs.microsoft.com/windows/win32/etw/event-tracing-portal)) for applications that use [Lightweight Directory Access Protocol](https://docs.microsoft.com/previous-versions/windows/desktop/ldap/lightweight-directory-access-protocol-ldap-api). Certain areas of the LDAP Provider have an underlying implementation that is complex or that involves a sequence of steps that makes diagnosis of problems in these areas more difficult. ETW can be a valuable troubleshooting tool.
 
-## How to turn on Event Tracing and start a trace
+## How to turn on ETW and start a trace
 
-**To turn on LDAP client tracing**
+**To turn on ETW**
 
 1. Open Registry Editor and create the following registry subkey:
 
@@ -62,7 +62,7 @@ Event Tracing for Windows ([ETW](https://docs.microsoft.com/windows/win32/etw/ev
 
    In this command, \<*SessionName*> is the same name as was used in the **tracelog.exe -start** command.
 
-**To turn off Event Tracing**
+**To turn off ETW**
 
 - In Registry Editor, delete the **HKEY\_LOCAL\_MACHINE\\System\\CurrentControlSet\\Services\\ldap\\Tracing\\*ProcessName*** subkey.
 
