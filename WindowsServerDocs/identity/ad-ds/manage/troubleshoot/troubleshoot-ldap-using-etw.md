@@ -66,7 +66,6 @@ Event Tracing for Windows ([ETW](https://docs.microsoft.com/windows/win32/etw/ev
 
 - In Registry Editor, delete the **HKEY\_LOCAL\_MACHINE\\System\\CurrentControlSet\\Services\\ldap\\Tracing\\*ProcessName*** subkey.
 
-
 ## Values for trace flags
 
 To use a flag, substitute the flag value for the <*TraceFlags*> placeholder in the arguments of the **tracelog.exe -start** command.
