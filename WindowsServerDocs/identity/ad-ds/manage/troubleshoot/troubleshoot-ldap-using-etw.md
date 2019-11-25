@@ -20,7 +20,7 @@ ms.date: 11/22/2019
 
 # Using ETW to troubleshoot LDAP connections
 
-Event Tracing for Windows ([ETW](https://docs.microsoft.com/windows/win32/etw/event-tracing-portal)) can be a valuable troubleshooting tool for Active Directory Domain Services (AD DS). ETW can trace the Lightweight Directory Access Protocol ([LDAP](https://docs.microsoft.com/previous-versions/windows/desktop/ldap/lightweight-directory-access-protocol-ldap-api)) communications between Windows clients and LDAP servers, including AD DS domain controllers.
+Event Tracing for Windows ([ETW](https://docs.microsoft.com/windows/win32/etw/event-tracing-portal)) can be a valuable troubleshooting tool for Active Directory Domain Services (AD DS). You can use ETW to trace the Lightweight Directory Access Protocol ([LDAP](https://docs.microsoft.com/previous-versions/windows/desktop/ldap/lightweight-directory-access-protocol-ldap-api)) communications between Windows clients and LDAP servers, including AD DS domain controllers.
 
 ## How to turn on ETW and start a trace
 
@@ -120,7 +120,7 @@ Consider an application, App1.exe, that sets passwords for user accounts. Suppos
    tracelog.exe -start ldaptrace -guid \#099614a5-5dd7-4788-8bc9-e29f43db28fc -f .\ldap.etl -flag 0x80000
    ```
 
-   After this command has started, **DEBUG\_BIND** tracing messages will be written to .\\ldap.etl.
+   After this command has started, **DEBUG\_BIND** makes sure that ETW writes tracing messages to .\\ldap.etl.
 
 1. Start App1.exe and reproduce the unexpected error.
 
