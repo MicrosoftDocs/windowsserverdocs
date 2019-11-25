@@ -16,7 +16,7 @@ ms.technology: identity-adds
 
 # AD DS Troubleshooting
 
->Applies To: Windows Server 2016, Windows Server 2012 R2
+>Applies To: Windows Server 2019, Windows Server 2016, Windows Server 2012 R2
 
 This section includes troubleshooting recommendations and procedures for diagnosing and fixing problems that may occur during Active Directory replication. It focuses on how to respond to Directory Service event log messages and how to interpret messages that tools such as Repadmin.exe and Dcdiag.exe tools might report.
 
