@@ -20,8 +20,8 @@ Users can run different types of workloads on the virtual machines managed by Re
 The following table describes each workload. "Example users" are the types of users that might find each workload most helpful. "Example apps" are the kinds of apps that work best for each workload.
 
 | Workload type | Example users | Example apps |
-|---|---|---|
-|Light|Users doing basic data entry tasks|Database entry applications, command-line interfaces|
-|Medium|Consultants and market researchers|Database entry applications, command-line interfaces, Microsoft Word, static web pages|
-|Heavy|Software engineers, content creators|Database entry applications, command-line interfaces, Microsoft Word, static web pages, Microsoft Outlook, Microsoft PowerPoint, dynamic web pages|
-|Power|Graphic designers, 3D model makers, machine learning researchers|Database entry applications, command-line interfaces, Microsoft Word, static web pages, Microsoft Outlook, Microsoft PowerPoint, dynamic web pages, Adobe Photoshop, Adobe Illustrator, computer-aided design (CAD), computer-aided manufacturing (CAM)|
+| --- | --- | --- |
+| Light | Users doing basic data entry tasks | Database entry applications, command-line interfaces |
+| Medium | Consultants and market researchers | Database entry applications, command-line interfaces, Microsoft Word, static web pages |
+| Heavy | Software engineers, content creators | Database entry applications, command-line interfaces, Microsoft Word, static web pages, Microsoft Outlook, Microsoft PowerPoint, dynamic web pages |
+| Power | Graphic designers, 3D model makers, machine learning researchers | Database entry applications, command-line interfaces, Microsoft Word, static web pages, Microsoft Outlook, Microsoft PowerPoint, dynamic web pages, Adobe Photoshop, Adobe Illustrator, computer-aided design (CAD), computer-aided manufacturing (CAM) |
