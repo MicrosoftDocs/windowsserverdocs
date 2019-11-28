@@ -9,7 +9,7 @@
 ### [Build anywhere](rds-plan-build-anywhere.md)
 ### [Cater to different kinds of users](rds-plan-cater-to-users.md)
 ### [Remote Desktop workloads](remote-desktop-workloads.md)
-### [Virtual machine recommendations for remote sessions](virtual-machine-recs.md)
+### [Virtual machine sizing](virtual-machine-recs.md)
 ### [Access from anywhere](rds-plan-access-from-anywhere.md)
 ### [High availability](rds-plan-high-availability.md)
 ### [Multifactor Authentication](rds-plan-mfa.md)

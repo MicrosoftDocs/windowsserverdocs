@@ -1,5 +1,5 @@
 ---
-title: Virtual machine sizing recommendations
+title: Virtual machine sizing
 description: Size recommendations for each workload type.
 ms.custom: na
 ms.prod: windows-server
@@ -13,7 +13,7 @@ ms.topic: article
 author: Heidilohr
 manager: daveba
 ---
-# Virtual machine sizing recommendations
+# Virtual machine sizing guidance
 
 Whether you're running your virtual machine on Remote Desktop Services or Windows Virtual Desktop, different types of workloads require different session host virtual machine (VM) configurations. For the best possible experience, scale your deployment depending on your users' needs.
 
@@ -21,7 +21,7 @@ Whether you're running your virtual machine on Remote Desktop Services or Window
 
 The following table lists the maximum suggested number of users per virtual central processing unit (vCPU) and the minimum VM configuration for each workload. These recommendations are based on [Remote Desktop workloads](remote-desktop-workloads.md).
 
-|Workload type|Maximum users per vCPU|vCPU/RAM/OS storage minimum|Example Azure instances|User storage minimum|
+|Workload type|Maximum users per vCPU|vCPU/RAM/OS storage minimum|Example Azure instances|Profile container storage minimum|
 |---|---|---|---|---|
 |Light|6|2 vCPUs, 8 GB RAM, 16 GB storage|D2s_v3, F2s_v2|30 GB|
 |Medium|4|4 vCPUs, 16 GB RAM, 32 GB storage|D4s_v3, F4s_v2|30 GB|
@@ -30,7 +30,7 @@ The following table lists the maximum suggested number of users per virtual cent
 
 ## Single-session recommendations
 
-For VM sizing recommendations for single-session scenarios, we recommend at least two physical CPU cores per VM (typically four vCPUs when hyperthreading). If you need more specific VM sizing recommendations for single-session scenarios, ask the software vendors specific to your workload. VM sizing for single-session VMs will likely align with physical device guidelines.
+For VM sizing recommendations for single-session scenarios, we recommend at least two physical CPU cores per VM (typically four vCPUs with hyperthreading). If you need more specific VM sizing recommendations for single-session scenarios, ask the software vendors specific to your workload. VM sizing for single-session VMs will likely align with physical device guidelines.
 
 ## General virtual machine recommendations
 
