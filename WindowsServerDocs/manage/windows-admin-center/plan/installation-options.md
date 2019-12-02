@@ -11,8 +11,6 @@ ms.date: 12/02/2019
 ---
 # What type of installation is right for you?
 
->Applies To: Windows Admin Center, Windows Admin Center Preview
-
 This topic describes the different installation options for Windows Admin Center, including installing on a Windows 10 PC or a Windows server for use by multiple admins. To install Windows Admin Center on a VM in Azure, see [Deploy Windows Admin Center in Azure](../azure/deploy-wac-in-azure.md).
 
 ## Installation: Types
@@ -21,7 +19,7 @@ This topic describes the different installation options for Windows Admin Center
 
 | Local client                                | Gateway server                                  | Managed server                               | Failover cluster                           |
 |---------------------------------------------|-------------------------------------------------|----------------------------------------------|--------------------------------------------|
-| [Install](../deploy/install.md) on a local Windows 10 client that has connectivity to the managed servers.  Great for quick start, testing, ad-hoc or small scale scenarios. |[Install](../deploy/install.md) on a designated gateway server and access from any client browser with connectivity to the gateway server.  Great for large-scale scenarios. | [Install](../deploy/install.md) directly on a managed server for the purpose of managing itself or a cluster in which it's a member node.  Great for distributed scenarios. | [Deploy in a failover cluster](../deploy/high-availability.md) to enable high availability of the gateway service. Great for production environments to ensure resiliency of your management service. |
+| [Install](../deploy/install.md) on a local Windows 10 client that has connectivity to the managed servers.  Great for quick start, testing, ad-hoc or small scale scenarios. |[Install](../deploy/install.md) on a designated gateway server and access from any client browser with connectivity to the gateway server.  Great for large-scale scenarios. | [Install](../deploy/install.md) directly on a managed server for the purpose of managing itself or a cluster in which it's a member node.  Great for distributed scenarios. | [Deploy] in a failover cluster(#high-availability) to enable high availability of the gateway service. Great for production environments to ensure resiliency of your management service. |
 
 ## Installation: Supported operating systems
 
@@ -52,7 +50,7 @@ You can **manage** the following Windows operating systems using Windows Admin C
 
 | Version | Manage *node* via *Server Manager* | Manage via *Cluster Manager* |
 | ------------------------- |--------------- | ----- |
-| In-Support version of Windows 10 | Yes (via Computer Management) | N/A |
+| Windows 10 | Yes (via Computer Management) | N/A |
 | Windows Server Semi-Annual Channel | Yes | Yes |
 | Windows Server 2019 | Yes | Yes |
 | Windows Server 2016 | Yes | Yes, with [latest cumulative update](../use/manage-hyper-converged.md#prepare-your-windows-server-2016-cluster-for-windows-admin-center) |
