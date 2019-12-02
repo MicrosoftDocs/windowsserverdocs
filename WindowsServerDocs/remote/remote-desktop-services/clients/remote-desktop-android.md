@@ -12,7 +12,7 @@ ms.assetid: 64f038e1-40ec-4c67-938b-72edea49e5d8
 author: heidilohr
 manager: daveba
 ms.author: helohr
-ms.date: 09/16/2019
+ms.date: 12/02/2019
 ms.localizationpriority: medium
 ---
 # Get started with the Android client
