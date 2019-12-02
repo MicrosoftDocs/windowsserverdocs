@@ -5,7 +5,7 @@ ms.technology: manage
 ms.topic: article
 author: nwashburn-ms
 ms.author: niwashbu
-ms.date: 03/07/2019
+ms.date: 11/21/2019
 ms.localizationpriority: medium
 ms.prod: windows-server
 ---
@@ -57,6 +57,8 @@ The following tools are available for server connections:
 | [Installed Apps](#installed-apps) | View and remove installed apps |
 | [Local Users and Groups](#local-users-and-groups) | View and modify local users and groups |
 | [Network](#network) | View and modify network devices |
+| [Packet monitoring](https://aka.ms/wac1908) | Monitor network packets |
+| [Performance monitor](https://aka.ms/perfmon-blog) | View performance counters and reports |
 | [PowerShell](#powershell) | Interact with server via PowerShell |
 | [Processes](#processes) | View and modify running processes |
 | [Registry](#registry) | View and modify registry entries |
