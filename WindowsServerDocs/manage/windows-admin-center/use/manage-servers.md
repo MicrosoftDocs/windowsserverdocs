@@ -450,7 +450,7 @@ Use **Storage Replica** to manage server-to-server storage replication.
 ## System Insights
 
 **System Insights** introduces predictive analytics natively in Windows Server to help give you increased insight into the functioning of your server.
-[Get an overview of System Insights](http://aka.ms/systeminsights)
+[Get an overview of System Insights](https://aka.ms/systeminsights)
 
 >[!NOTE]
 >System Insights requires Windows Server 2019.

@@ -17,9 +17,10 @@ This topic describes the different installation options for Windows Admin Center
 
 ## Installation: Types
 
+![img](../media/deployment-options/install-options.PNG)
+
 | Local client                                | Gateway server                                  | Managed server                               | Failover cluster                           |
 |---------------------------------------------|-------------------------------------------------|----------------------------------------------|--------------------------------------------|
-| ![img](../media/deployment-options/W10.PNG) | ![img](../media/deployment-options/gateway.PNG) | ![img](../media/deployment-options/node.PNG) | ![img](../media/deployment-options/HA.png) |
 | Install on a local Windows 10 client that has connectivity to the managed servers.  Great for quick start, testing, ad-hoc or small scale scenarios. |Install on a designated gateway server and access from any client browser with connectivity to the gateway server.  Great for large-scale scenarios. | Install directly on a managed server for the purpose of managing itself or a cluster in which it's a member node.  Great for distributed scenarios. | Deploy in a failover cluster to enable high availability of the gateway service. Great for production environments to ensure resiliency of your management service. |
 
 ## Installation: Supported operating systems
