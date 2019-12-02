@@ -7,7 +7,7 @@ author: nwashburn-ms
 ms.author: niwashbu
 ms.localizationpriority: medium
 ms.prod: windows-server
-ms.date: 06/07/2019
+ms.date: 12/02/2019
 ---
 # What type of installation is right for you?
 
@@ -21,7 +21,7 @@ This topic describes the different installation options for Windows Admin Center
 
 | Local client                                | Gateway server                                  | Managed server                               | Failover cluster                           |
 |---------------------------------------------|-------------------------------------------------|----------------------------------------------|--------------------------------------------|
-| Install on a local Windows 10 client that has connectivity to the managed servers.  Great for quick start, testing, ad-hoc or small scale scenarios. |Install on a designated gateway server and access from any client browser with connectivity to the gateway server.  Great for large-scale scenarios. | Install directly on a managed server for the purpose of managing itself or a cluster in which it's a member node.  Great for distributed scenarios. | Deploy in a failover cluster to enable high availability of the gateway service. Great for production environments to ensure resiliency of your management service. |
+| [Install](../deploy/install.md) on a local Windows 10 client that has connectivity to the managed servers.  Great for quick start, testing, ad-hoc or small scale scenarios. |[Install](../deploy/install.md) on a designated gateway server and access from any client browser with connectivity to the gateway server.  Great for large-scale scenarios. | [Install](../deploy/install.md) directly on a managed server for the purpose of managing itself or a cluster in which it's a member node.  Great for distributed scenarios. | [Deploy in a failover cluster](../deploy/high-availability.md) to enable high availability of the gateway service. Great for production environments to ensure resiliency of your management service. |
 
 ## Installation: Supported operating systems
 
@@ -29,7 +29,7 @@ You can **install** Windows Admin Center on the following Windows operating syst
 
 | **Platform**                       | **Installation mode** |
 | -----------------------------------| --------------------- |
-| Windows 10, version 1709 or newer  | Local client |
+| Windows 10                         | Local client |
 | Windows Server Semi-Annual Channel | Gateway sever, managed server, failover cluster |
 | Windows Server 2016                | Gateway sever, managed server, failover cluster |
 | Windows Server 2019                | Gateway sever, managed server, failover cluster |
@@ -40,7 +40,7 @@ To operating Windows Admin Center:
 - **In other scenarios:** Connect to the Windows Admin Center gateway on a different machine from a client browser via its URL, e.g., `https://servername.contoso.com`
 
 > [!WARNING]
-> Installing Windows Admin Center on a Domain controller is not supported. [Read more about Domain controller security best practices](https://docs.microsoft.com/windows-server/identity/ad-ds/plan/security-best-practices/securing-domain-controllers-against-attack). 
+> Installing Windows Admin Center on a Domain controller is not supported. [Read more about domain controller security best practices](https://docs.microsoft.com/windows-server/identity/ad-ds/plan/security-best-practices/securing-domain-controllers-against-attack).
 
 ## Installation: Supported web browsers
 
