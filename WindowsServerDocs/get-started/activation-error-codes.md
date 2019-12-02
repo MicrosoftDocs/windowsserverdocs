@@ -18,11 +18,19 @@ ms.localizationpriority: medium
 
 This article provides troubleshooting information to help you respond to error messages that you may receive when you try to use a Multiple Activation Key (MAK) or the Key Management Service (KMS) to perform Volume Activation on one or more Windows-based computers. Look for the error code in the following table, and then select the link to see more information about that error code and how to resolve it.
 
-For more information about volume activation, see [Plan for volume activation](https://docs.microsoft.com/en-us/windows/deployment/volume-activation/plan-for-volume-activation-client).
+For more information about volume activation, see [Plan for volume activation](https://docs.microsoft.com/windows/deployment/volume-activation/plan-for-volume-activation-client).
 
 For more information about volume activation for current and recent versions of Windows, see [Volume Activation [client]](https://docs.microsoft.com/windows/deployment/volume-activation/volume-activation-windows-10).
 
 For more information about volume activation for older versions of Windows, see KB 929712, [Volume Activation information for Windows Vista, Windows Server 2008, Windows Server 2008 R2 and Windows 7](https://support.microsoft.com/en-us/help/929712/volume-activation-information-for-windows-vista-windows-server-2008-wi).
+
+## Diagnostic tool
+
+Microsoft Support and Recovery Assistant (SaRA) simplifies Windows KMS Activation troubleshooting. Download the diagnostic tool from [here](https://aka.ms/SaRA-WindowsActivation).
+
+This tool will try to activate Windows. If it returns an activation error code, the tool will display targeted solutions for known error codes.
+
+The following error codes are supported: 0xC004F038, 0xC004F039, 0xC004F041, 0xC004F074, 0xC004C008.
 
 ## Summary of error codes
 
