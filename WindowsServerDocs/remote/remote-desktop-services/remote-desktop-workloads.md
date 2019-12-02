@@ -25,3 +25,5 @@ The following table describes each workload. "Example users" are the types of us
 | Medium | Consultants and market researchers | Database entry applications, command-line interfaces, Microsoft Word, static web pages |
 | Heavy | Software engineers, content creators | Database entry applications, command-line interfaces, Microsoft Word, static web pages, Microsoft Outlook, Microsoft PowerPoint, dynamic web pages |
 | Power | Graphic designers, 3D model makers, machine learning researchers | Database entry applications, command-line interfaces, Microsoft Word, static web pages, Microsoft Outlook, Microsoft PowerPoint, dynamic web pages, Adobe Photoshop, Adobe Illustrator, computer-aided design (CAD), computer-aided manufacturing (CAM) |
+
+For information about sizing recommendations, see [Virtual machine sizing guidance](virtual-machine-recs.md).
