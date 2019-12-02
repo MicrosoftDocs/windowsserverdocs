@@ -141,7 +141,7 @@ After completing these steps, whenever a private key is needed for authenticatio
 
 ## Deploying the public key
 
-To use the user key that was created above, the public key needs to be placed on the server into a text file called *authorized_keys* under users\username\ssh. 
+To use the user key that was created above, the public key needs to be placed on the server into a text file called *authorized_keys* under users\username\.ssh\. 
 The OpenSSH tools include scp, which is a secure file-transfer utility, to help with this.
 
 To move the contents of your public key (~\.ssh\id_ed25519.pub) into a text file called authorized_keys in ~\.ssh\ on your server/host.
