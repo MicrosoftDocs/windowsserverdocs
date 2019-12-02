@@ -27,7 +27,7 @@ Use the following information to get started. Be sure to check out the [FAQ](rem
 > - Curious about the new releases for the Android client? Check out [What's new for the Android client](android-whatsnew.md).
 > - The Android client supports devices running Android 4.1 and later, as well as Chromebooks with ChromeOS 53 and later. Learn more about Android applications on Chrome [here](https://sites.google.com/a/chromium.org/dev/chromium-os/chrome-os-systems-supporting-android-apps).
 
-## Get and set up the Remote Desktop client
+## Set up the Remote Desktop client for Android
 
 ### Download the Remote Desktop client from the Google Play store
 
@@ -115,7 +115,7 @@ You can set the following general settings:
 - **Show desktop previews** lets you see a preview of a desktop in the Connection Center before you connect to it. This setting is enabled by default.
 - **Pinch to zoom remote session** lets you use pinch-to-zoom gestures. If the app you're using through Remote Desktop supports multi-touch (introduced in Windows 8), disable this feature.
 - Enable **Use scancode input when available** if your remote app doesn't respond properly to keyboard input sent as scancode. Input is sent as unicode when disabled.
-- **Help improve Remote Desktop** sends anonymous data about how you use Remote Desktop for Android to Microsoft. We use this data to improve the client. To learn more about our privacy and what kinds of data we collect, see the [Microsoft Privacy Statement](https://privacy.microsoft.com/privacystatement). This setting is enabled by default.
+- **Help improve Remote Desktop** sends anonymous data about how you use Remote Desktop for Android to Microsoft. We use this data to improve the client. To learn more about our privacy policy and what kinds of data we collect, see the [Microsoft Privacy Statement](https://privacy.microsoft.com/privacystatement). This setting is enabled by default.
 
 ## Manage display settings
 
@@ -126,18 +126,18 @@ You can set the following display settings:
 - **Orientation** sets the preferred orientation (landscape or portrait) for your session.
   
   >[!NOTE]
-  > If you connect to a PC running Windows 8 or earlier, the session won't scale correctly if the orientation of the device changes. To fix this, disconnect from the PC, then reconnect in the orientation you want to use. You can also fix this by using a PC with Windows 10.
+  > If you connect to a PC running Windows 8 or earlier, the session won't scale correctly if the orientation of the device changes. To make the client scale correctly, disconnect from the PC, then reconnect in the orientation you want to use. You can also ensure correct scaling by using a PC with Windows 10 instead.
 
 - **Resolution** sets the remote resolution you want to use for desktop connections globally. If you have already set a custom resolution for an individual connection, this setting won't change that.
   
   >[!NOTE]
-  >When you change one of the display settings, they only apply to new connections you make after the you changed the setting. To apply the changes to the session you're currently connected to, refresh your session by disconnecting and reconnecting.
+  >When you change the display settings, the changes only apply to new connections you make after the you changed the setting. To apply your changes to the session you're currently connected to, refresh your session by disconnecting and reconnecting.
 
 ## Manage your RD Gateways
 
 A Remote Desktop Gateway (RD Gateway) lets you connect to a remote computer on a private network from anywhere on the Internet. You can create and manage your gateways using the Remote Desktop client.
 
-To set up a new gateway:
+To set up a new RD Gateway:
 
 1. In the Connection Center, tap **Settings**, and then tap **Gateways**.
 2. Tap **+** to add a new gateway.
@@ -147,7 +147,7 @@ To set up a new gateway:
      - Select **Use desktop user account** to use the same credentials that you specified for the remote PC.
      - Select **Add user account** to save an account that you use frequently so you don't have to enter credentials every time you sign in. For more information, see [Manage your user accounts](#manage-your-user-accounts).
 
-To delete a gateway:
+To delete an RD Gateway:
 
 1. In the Connection Center, tap **Settings**, and then tap **Gateways**.
 2. Tap and hold a gateway in the list to select it. You can select multiple gateways at once.
