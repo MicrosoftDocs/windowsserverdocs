@@ -49,17 +49,17 @@ Microsoft Edge and Google Chrome are tested and supported on Windows 10. Other w
 
 You can **manage** the following Windows operating systems using Windows Admin Center:
 
-| Version | Manage *node* via *Server Manager* | Manage *cluster* via *Failover Cluster Manager* | Manage *HCI* via *HCI Cluster Manager* |
-| ------------------------- |--------------- | ----- | ------------------------ |
-| Windows 10, version 1709 or newer | Yes (via Computer Management) | N/A | N/A |
-| Windows Server Semi-Annual Channel | Yes | Yes | N/A |
-| Windows Server 2019 | Yes | Yes | Yes |
-| Windows Server 2016 | Yes | Yes | Yes, with [latest cumulative update](../use/manage-hyper-converged.md#prepare-your-windows-server-2016-cluster-for-windows-admin-center) |
-| Microsoft Hyper-V Server 2016 | Yes | Yes | N/A |
-| Windows Server 2012 R2 | Yes | Yes | N/A |
-| Microsoft Hyper-V Server 2012 R2 | Yes | Yes | N/A |
-| Windows Server 2012 | Yes | Yes | N/A |
-| Windows Server 2008 R2 | Yes, limited functionality | N/A | N/A |
+| Version | Manage *node* via *Server Manager* | Manage via *Cluster Manager* |
+| ------------------------- |--------------- | ----- |
+| In-Support version of Windows 10 | Yes (via Computer Management) | N/A |
+| Windows Server Semi-Annual Channel | Yes | Yes |
+| Windows Server 2019 | Yes | Yes |
+| Windows Server 2016 | Yes | Yes, with [latest cumulative update](../use/manage-hyper-converged.md#prepare-your-windows-server-2016-cluster-for-windows-admin-center) |
+| Microsoft Hyper-V Server 2016 | Yes | Yes |
+| Windows Server 2012 R2 | Yes | Yes |
+| Microsoft Hyper-V Server 2012 R2 | Yes | Yes |
+| Windows Server 2012 | Yes | Yes |
+| Windows Server 2008 R2 | Yes, limited functionality | N/A |
 
 > [!NOTE]
 > Windows Admin Center requires PowerShell features that are not included in Windows Server 2008 R2, 2012, and 2012 R2. If you will manage these with Windows Admin Center, you will need to install Windows Management Framework (WMF) version 5.1 or higher on those servers.
