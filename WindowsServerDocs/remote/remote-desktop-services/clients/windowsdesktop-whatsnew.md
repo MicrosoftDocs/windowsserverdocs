@@ -11,7 +11,7 @@ ms.topic: article
 author: heidilohr
 manager: daveba
 ms.author: helohr
-ms.date: 12/03/2019
+ms.date: 12/04/2019
 ms.localizationpriority: medium
 ---
 # What's new in the Windows Desktop client
@@ -24,14 +24,14 @@ The client can be configured for different [user groups](windowsdesktop-admin.md
 
 |User group |Version  |
 |-----------|---------|
-|Public     |1.2.534  |
-|Insider    |1.2.534  |
+|Public     |1.2.535  |
+|Insider    |1.2.535  |
 
-## Updates for version 1.2.534
+## Updates for version 1.2.535
 
-*Date published: 12/03/2019*
+*Date published: 12/04/2019*
 
-Download: [Windows 64-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4jzBB), [Windows 32-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4jwWh), [Windows ARM64](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4jp8X)
+Download: [Windows 64-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4k7jH), [Windows 32-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4k7jL), [Windows ARM64](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4k27O)
 
 - You can now access information about updates directly from the more options button on the command bar at the top of the client.
 - You can now report feedback from the command bar of the client.
