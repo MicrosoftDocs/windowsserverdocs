@@ -11,7 +11,7 @@ ms.topic: article
 author: heidilohr
 manager: daveba
 ms.author: helohr
-ms.date: 11/20/2019
+ms.date: 12/04/2019
 ms.localizationpriority: medium
 ---
 # What's new in the Windows Desktop client
@@ -24,17 +24,21 @@ The client can be configured for different [user groups](windowsdesktop-admin.md
 
 |User group |Version  |
 |-----------|---------|
-|Public     |1.2.431  |
-|Insider    |1.2.524  |
+|Public     |1.2.535  |
+|Insider    |1.2.535  |
 
-## Updates for version 1.2.524
+## Updates for version 1.2.535
 
-*Date published: 11/20/2019*
+*Date published: 12/04/2019*
 
-Download: [Windows 64-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4e7Nj), [Windows 32-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4dZCo), [Windows ARM64](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4dX1s)
+Download: [Windows 64-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4k7jH), [Windows 32-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4k7jL), [Windows ARM64](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4k27O)
 
 - You can now access information about updates directly from the more options button on the command bar at the top of the client.
 - You can now report feedback from the command bar of the client.
+- The Feedback option is now only shown if the Feedback Hub is available.
+- Ensured the update notification is not shown when notifications are disabled through policy.
+- Fixed an issue that prevented some RDP files from launching.
+- Fixed a crash on startup of the client caused by corruption of some persistent settings.
 
 ## Updates for version 1.2.431
 
