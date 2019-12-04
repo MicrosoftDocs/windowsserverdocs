@@ -247,7 +247,7 @@ This consistency means that your applications are now easier to scale, and you c
             </div>
         </div>
     </li>
-    <hr />
+   <hr />
     <li>
         <div class="cardSize">
             <div class="cardPadding">
@@ -258,7 +258,7 @@ This consistency means that your applications are now easier to scale, and you c
                         </div>
                     </div>
                     <div class="cardText">
-                        <h3><a href="dns/dns-top.md">Domain Name System (DNS)&quot;&gt;</a></h3>
+                        <h3><a href="dns/dns-top.md">Domain Name System (DNS)</a></h3>
                         <hr />
                         <p>Domain Name System (DNS) is one of the industry-standard suite of protocols that comprise TCP/IP, and together the DNS Client and DNS Server provide computer name-to-IP address mapping name resolution services to computers and users.</p>
                     </div>
@@ -377,7 +377,7 @@ This consistency means that your applications are now easier to scale, and you c
                         <p>Network offload and optimization technologies in Windows Server 2016 include Software Only (SO) features and technologies, Software and Hardware (SH) integrated features and technologies, and Hardware Only (HO) features and technologies.</p>
                         <p>The following offload and optimization technology documentation is also available:<p>
                         <hr />
-                        <a href="technologies/conv-nic/cnic-top.md">High-Performance Networking</a>
+                        <a href="technologies/conv-nic/cnic-top.md">Converged Network Interface Card (NIC)</a>
                         <hr />
                         <a href="technologies/dcb/dcb-top.md">Data Center Bridging (DCB)</a>
                         <hr />
