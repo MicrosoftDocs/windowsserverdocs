@@ -67,7 +67,7 @@ This section contains advanced troubleshooting topics and links to help you reso
 ## Troubleshoot DirectAccess
 - [Troubleshooting DirectAccess](https://docs.microsoft.com/windows-server/remote/remote-access/directaccess/troubleshooting-directaccess)
 
-## Troubleshoot Disk  Management
+## Troubleshoot Disk Management
 - [Troubleshooting Disk Management](https://docs.microsoft.com/windows-server/storage/disk-management/troubleshooting-disk-management)
 
 ## Troubleshoot DNS
