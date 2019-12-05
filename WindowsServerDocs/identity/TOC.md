@@ -197,6 +197,7 @@
 
 ### [AD DS Troubleshooting](ad-ds/manage/AD-DS-Troubleshooting.md)
 #### [Configuring a computer for Troubleshooting](ad-ds/manage/troubleshoot/Configuring-a-computer-for-Troubleshooting.md)
+#### [Using ETW to troubleshoot LDAP connections](ad-ds/manage/troubleshoot/troubleshoot-ldap-using-etw.md)
 #### [Troubleshooting Active Directory Replication Problems](ad-ds/manage/troubleshoot/Troubleshooting-active-directory-Replication-Problems.md)
 ##### [Additional Resources](additional-Resources_12.md)
 
