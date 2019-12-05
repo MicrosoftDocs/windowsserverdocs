@@ -6,12 +6,12 @@ ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: remote-desktop-services
-ms.author: elizapo
-ms.date: 05/05/2017
+ms.author: helohr
+ms.date: 12/05/2019
 ms.tgt_pltfrm: na
 ms.topic: article
-author: lizap
-manager: dongill
+author: Heidilohr
+manager: daveba
 ---
 # Network guidance
 
@@ -22,14 +22,14 @@ When using a remote Windows session, your network’s available bandwidth greatl
 
 ## Applications
 
-The following table lists the minimum recommended bandwidths for a smooth user experience. 
+The following table lists the minimum recommended bandwidths for a smooth user experience.
 
 | Workload type   | Recommended bandwidth |
 |-----------------|-----------------------|
-| Light           | 1.5&nbsp;Mbps         |
-| Medium          | 3&nbsp;Mbps           |
-| Heavy           | 5&nbsp;Mbps           |
-| Power           | 15&nbsp;Mbps          |
+| Light           | 1.5 Mbps              |
+| Medium          | 3 Mbps                |
+| Heavy           | 5 Mbps                |
+| Power           | 15 Mbps               |
 
 >[!NOTE]
 >These recommendations apply regardless of how many sessions you're hosting on your virtual machines (VMs).
