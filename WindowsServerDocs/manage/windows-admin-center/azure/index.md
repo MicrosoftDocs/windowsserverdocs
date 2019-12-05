@@ -136,13 +136,18 @@ These are the Azure services that provide functionality to clusters as a whole:
 
 ## Other Azure-integrated abilities of Windows Admin Center
 
-- **Add Azure VM connections [Windows Admin Center](manage-azure-vms.md)**  
+- **[Add Azure VM connections](manage-azure-vms.md) in Windows Admin Center**  
 You can use Windows Admin Center to manage your Azure VMs as well as on-premises machines. By configuring your Windows Admin Center gateway to connect to your Azure VNet, you can manage virtual machines in Azure using the consistent, simplified tools that Windows Admin Center provides.  
 For more info, see [Configure Windows Admin Center to manage VMs in Azure](manage-azure-vms.md).
 
 - **Add an layer of security to Windows Admin Center by adding [Azure Active Directory (Azure AD)](https://azure.microsoft.com/services/active-directory/) authentication**  
 You can add an additional layer of security to Windows Admin Center by requiring users to authenticate using Azure Active Directory (Azure AD) identities to access the gateway. Azure AD authentication also lets you take advantage of Azure AD’s security features like conditional access and multi-factor authentication.  
-For more info, see [Configure Azure AD authentication for Windows Admin Center.](../configure/user-access-control.md#azure-active-directory)  
+For more info, see [Configure Azure AD authentication for Windows Admin Center](../configure/user-access-control.md#azure-active-directory).  
+
+- **Manage Azure resources directly through [Azure Cloud Shell](https://docs.microsoft.com/azure/cloud-shell/overview) embedded in Windows Admin Center**  
+Leverage Azure Cloud Shell to get a Bash or PowerShell experience within Windows Admin Center to give you easy access to Azure management tasks.  
+For more info, see [Overview of Azure Cloud Shell](https://docs.microsoft.com/azure/cloud-shell/overview).
+
 
 ## See also
 

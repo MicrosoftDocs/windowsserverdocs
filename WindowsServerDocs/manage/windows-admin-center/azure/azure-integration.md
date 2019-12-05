@@ -31,3 +31,19 @@ The Azure AD app created is used for all points of Azure integration in Windows 
     - User.Read
 - Azure Service Management
     - user_impersonation
+
+### Manual Azure AD app configuration
+
+If you wish to configure an Azure AD app manually, rather than using the Azure AD app created automatically by Windows Admin Center during the gateway registration process, you must do the following.
+
+1. Grant the Azure AD app the required API permissions listed above. You can do so by navigating to your Azure AD app in the Azure portal. Go to the Azure portal > **Azure Active Directory** > **App registrations** > select your Azure AD app you wish to use. Then to to the **API permissions** tab and add the API permissions listed above.
+2. Add the Windows Admin Center gateway URL to the reply URLs (also known as the redirect URIs). Navigate to your Azure AD app, then go to **Manifest**. Find the "replyUrlsWithType" key in the manifest. Within the key, add an object containing two keys: "url" and "type". The key "url" should have a value of the Windows Admin Center gateway URL, appending a wildcard at the end. The key "type" key should have a value of "Web". For example:
+
+    ```json
+    "replyUrlsWithType": [
+            {
+                    "url": "http://localhost:6516/*",
+                    "type": "Web"
+            }
+    ],
+    ```
