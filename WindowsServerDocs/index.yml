@@ -177,7 +177,7 @@ conceptualContent:
           itemType: how-to-guide
           text: Troubleshoot disk management
       footerLink: 
-        url: /windows-server/troubleshoot/windows-server-support-solutions
+        url: /windows-server/troubleshoot/windows-server-troubleshooting
         text: See more
 
     - title: Virtualization 
