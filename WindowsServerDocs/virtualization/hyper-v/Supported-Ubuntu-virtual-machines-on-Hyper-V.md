@@ -1,7 +1,7 @@
 ---
 title: Supported Ubuntu virtual machines on Hyper-V
 description: "Lists the Linux integration services and features included in each version"
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.service: na
 manager: dongill
 ms.technology: compute-hyper-v
@@ -10,7 +10,7 @@ ms.topic: article
 ms.assetid: 95ea5f7c-25c6-494b-8ffd-2a77f631ee94
 author: shirgall
 ms.author: shirgall
-ms.date: 11/19/2018
+ms.date: 06/13/2019
 ---
 # Supported Ubuntu virtual machines on Hyper-V
 
@@ -30,12 +30,12 @@ The following feature distribution map indicates the features in each version. T
 
 * (*blank*) - Feature not available
 
-|**Feature**|**Windows Server operating system version**|**18.10**|**18.04 LTS**|**16.04 LTS**|**14.04 LTS**|**12.04 LTS**|
+|**Feature**|**Windows Server operating system version**|**18.10 / 19.04**|**18.04 LTS**|**16.04 LTS**|**14.04 LTS**|**12.04 LTS**|
 |-|-|-|-|-|-|-|
 |**Availability**||Built-in|Built-in|Built-in|Built-in|Built-in|
-|**[Core](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_core)**|2019, 2016, 2012 R2, 2012, 2008 R2|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|
+|**[Core](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#core)**|2019, 2016, 2012 R2, 2012, 2008 R2|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|
 |Windows Server 2016 Accurate Time|2019, 2016|&#10004;|&#10004;|&#10004;|||
-|**[Networking](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_Networking)**|||||||
+|**[Networking](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#networking)**|||||||
 |Jumbo frames|2019, 2016, 2012 R2, 2012, 2008 R2|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|
 |VLAN tagging and trunking|2019, 2016, 2012 R2, 2012, 2008 R2|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|
 |Live migration|2019, 2016, 2012 R2, 2012, 2008 R2|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|
@@ -43,32 +43,32 @@ The following feature distribution map indicates the features in each version. T
 |vRSS|2019, 2016, 2012 R2|&#10004;|&#10004;|&#10004;|&#10004;||
 |TCP Segmentation and Checksum Offloads|2019, 2016, 2012 R2, 2012, 2008 R2|&#10004;|&#10004;|&#10004;|&#10004;||
 |SR-IOV|2019, 2016|&#10004;|&#10004;|&#10004;|||
-|**[Storage](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_Storage)**||||||
+|**[Storage](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#storage)**||||||
 |VHDX resize|2019, 2016, 2012 R2|&#10004;|&#10004;|&#10004;|&#10004;||
 |Virtual Fibre Channel|2019, 2016, 2012 R2|&#10004; Note 2|&#10004; Note 2|&#10004; Note 2|&#10004; Note 2||
 |Live virtual machine backup|2019, 2016, 2012 R2|&#10004; Note 3, 4, 6|&#10004; Note 3, 4, 5|&#10004; Note 3, 4, 5|&#10004; Note 3, 4, 5||
 |TRIM support|2019, 2016, 2012 R2|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|
 |SCSI WWN|2019, 2016, 2012 R2|&#10004;|&#10004;|&#10004;|&#10004;||
-|**[Memory](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_Memory)**||||||
+|**[Memory](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#memory)**||||||
 |PAE Kernel Support|2019, 2016, 2012 R2, 2012, 2008 R2|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|
 |Configuration of MMIO gap|2019, 2016, 2012 R2|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|
 |Dynamic Memory - Hot-Add|2019, 2016, 2012 R2, 2012|&#10004; Note 7, 8, 9|&#10004; Note 7, 8, 9|&#10004; Note 7, 8, 9|&#10004; Note 7, 8, 9||
 |Dynamic Memory - Ballooning|2019, 2016, 2012 R2, 2012|&#10004; Note 7, 8, 9|&#10004; Note 7, 8, 9|&#10004; Note 7, 8, 9|&#10004; Note 7, 8, 9||
 |Runtime Memory Resize|2019, 2016|&#10004;|&#10004;|&#10004;|&#10004;||
-|**[Video](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_Video)**|||||||
+|**[Video](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#video)**|||||||
 |Hyper-V specific video device|2019, 2016, 2012 R2, 2012, 2008 R2|&#10004;|&#10004;|&#10004;|&#10004;||
-|**[Miscellaneous](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_Misc)**||||||
+|**[Miscellaneous](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#miscellaneous)**||||||
 |Key/value pair|2019, 2016, 2012 R2, 2012, 2008 R2|&#10004; Note 6, 10|&#10004; Note 5, 10|&#10004; Note 5, 10|&#10004; Note 5, 10|&#10004; Note 5, 10|
 |Non-Maskable Interrupt|2019, 2016, 2012 R2|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|
 |File copy from host to guest|2019, 2016, 2012 R2|&#10004;|&#10004;|&#10004;|&#10004;||
 |lsvmbus command|2019, 2016, 2012 R2, 2012, 2008 R2|&#10004;|&#10004;|&#10004;|&#10004;||
 |Hyper-V Sockets|2019, 2016||||||
 |PCI Passthrough/DDA|2019, 2016|&#10004;|&#10004;|&#10004;|&#10004;||
-|**[Generation 2 virtual machines](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_gen2)**||||||
+|**[Generation 2 virtual machines](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#generation-2-virtual-machines)**||||||
 |Boot using UEFI|2019, 2016, 2012 R2|&#10004; Note 11, 12|&#10004; Note 11, 12|&#10004; Note 11, 12|&#10004; Note 11, 12||
 |Secure boot|2019, 2016|&#10004;|&#10004;|&#10004;|&#10004;||
 
-## <a name="BKMK_notes"></a>Notes
+## Notes
 
 1. Static IP injection may not work if **Network Manager** has been configured for a given Hyper-V-specific network adapter on the virtual machine. To ensure smooth functioning of static IP injection please ensure that Network Manager is turned off completely or has been turned off for a specific network adapter through its **ifcfg-ethX** file.
 
@@ -85,7 +85,6 @@ The following feature distribution map indicates the features in each version. T
    ```bash
    # apt-get update
    # apt-get install linux-azure
-
    ```
 
    12.04 does not have a separate virtual kernel. To install the generic HWE kernel on 12.04, run the following commands as root (or sudo):
@@ -93,7 +92,6 @@ The following feature distribution map indicates the features in each version. T
    ```bash
    # apt-get update
    # apt-get install linux-generic-lts-trusty
-
    ```
 
    On Ubuntu 12.04 the following Hyper-V daemons are in a separately installed package:
@@ -106,19 +104,17 @@ The following feature distribution map indicates the features in each version. T
 
    ```bash
    # apt-get install hv-kvp-daemon-init linux-tools-lts-trusty linux-cloud-tools-generic-lts-trusty
-
    ```
 
    Whenever the kernel is updated, the virtual machine must be rebooted to use it.
 
-6. On Ubuntu 18.10, use the latest virtual kernel to have up-to-date Hyper-V capabilities.
+6. On Ubuntu 18.10 or 19.04, use the latest virtual kernel to have up-to-date Hyper-V capabilities.
 
-   To install the virtual kernel on 18.10, run the following commands as root (or sudo):
+   To install the virtual kernel on 18.10 or 19.04, run the following commands as root (or sudo):
 
    ```bash
    # apt-get update
    # apt-get install linux-azure
-
    ```
 
    Whenever the kernel is updated, the virtual machine must be rebooted to use it.
@@ -137,42 +133,37 @@ The following feature distribution map indicates the features in each version. T
 
 11. On Windows Server 2012 R2, Generation 2 virtual machines have secure boot enabled by default and some Linux virtual machines will not boot unless the secure boot option is disabled. You can disable secure boot in the **Firmware** section of the settings for the virtual machine in **Hyper-V Manager** or you can disable it using Powershell:
 
-   ```Powershell
-   Set-VMFirmware -VMName "VMname" -EnableSecureBoot Off
-
-   ```
+    ```Powershell
+    Set-VMFirmware -VMName "VMname" -EnableSecureBoot Off
+    ```
 
 12. Before attempting to copy the VHD of an existing Generation 2 VHD virtual machine to create new Generation 2 virtual machines, follow these steps:
 
-   1. Log in to the existing Generation 2 virtual machine.
+    1. Log in to the existing Generation 2 virtual machine.
 
-   2. Change directory to the boot EFI directory:
+    2. Change directory to the boot EFI directory:
 
-      ```bash
-      # cd /boot/efi/EFI
+       ```bash
+       # cd /boot/efi/EFI
+       ```
 
-      ```
+    3. Copy the ubuntu directory in to a new directory named boot:
 
-   3. Copy the ubuntu directory in to a new directory named boot:
+       ```bash
+       # sudo cp -r ubuntu/ boot
+       ```
 
-      ```bash
-      # sudo cp -r ubuntu/ boot
+    4. Change directory to the newly created boot directory:
 
-      ```
+       ```bash
+       # cd boot
+       ```
 
-   4. Change directory to the newly created boot directory:
+    5. Rename the shimx64.efi file:
 
-      ```bash
-      # cd boot
-
-      ```
-
-   5. Rename the shimx64.efi file:
-
-      ```bash
-      # sudo mv shimx64.efi bootx64.efi
-
-      ```
+       ```bash
+       # sudo mv shimx64.efi bootx64.efi
+       ```
 
 ## See Also
 

@@ -2,7 +2,7 @@
 title: Kerberos Constrained Delegation Overview
 description: "Windows Server Security"
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: security-kerberos
@@ -80,4 +80,4 @@ To configure a resource service to allow a front-end service access on the behal
 ## <a name="BKMK_SOFT"></a>Software requirements
 Resource-based constrained delegation can only be configured on a domain controller running  Windows Server 2012 R2 and Windows Server 2012, but can be applied within a mixed-mode forest.
 
-You must apply the following hotfix to all domain controllers running  Windows Server 2012 in user account domains on the referral path between the front-end and back-end domains that are running operating systems earlier than Windows Server:  Resource-based constrained delegation KDC_ERR_POLICY failure in environments that have Windows Server 2008 R2-based domain controllers.
+You must apply the following hotfix to all domain controllers running  Windows Server 2012 in user account domains on the referral path between the front-end and back-end domains that are running operating systems earlier than Windows Server:  Resource-based constrained delegation KDC_ERR_POLICY failure in environments that have Windows Server 2008 R2-based domain controllers (https://support.microsoft.com/en-gb/help/2665790/resource-based-constrained-delegation-kdc-err-policy-failure-in-enviro).

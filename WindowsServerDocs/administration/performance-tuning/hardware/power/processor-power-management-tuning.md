@@ -1,7 +1,7 @@
 ---
 title: Processor Power Management (PPM) Tuning for the Windows Server Balanced Power Plan
 description: Processor Power Management (PPM) Tuning for the Windows Server Balanced Power Plan
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: performance-tuning-guide
 ms.topic: article
 ms.author:  Qizha;TristanB
@@ -15,7 +15,7 @@ Starting with Windows Server 2008, Windows Server provides three power plans: **
 
 If you run a server system that has dramatically different workload characteristics or performance and power requirements than these workloads, you might want to consider tuning the default power settings (i.e., create a custom power plan). One source of useful tuning information is the [Server Hardware Power Considerations](../power.md). Alternately, you may decide that the **High Performance** power plan is the right choice for your environment, recognizing that you will likely take a significant energy hit in exchange for some level of increased responsiveness.
 
->[!Important]
+> [!IMPORTANT]
 > You should leverage the power policies that are included with Windows Server unless you have a specific need to create a custom one and have a very good understanding that your results will vary depending on the characteristics of your workload.
 
 ## Windows Processor Power Tuning Methodology
@@ -29,7 +29,7 @@ The tuning in each power policy is data driven by the following five workloads:
 
 -   **IIS Web Server workload**
 
-    A Microsoft internal benchmark called Web Fundamentals is used to optimize the energy efficiency of platforms running IIS Web Server. The setup contains a web server and multiple clients that simulate the web access traffic. The distribution of dynamic, static hot (in-memory), and static cold (disk access required) web pages is based on statistical studies of production servers. To push the server’s CPU cores to full utilization (one end of the tested spectrum), the setup needs sufficiently fast network and disk resources.
+    A Microsoft internal benchmark called Web Fundamentals is used to optimize the energy efficiency of platforms running IIS Web Server. The setup contains a web server and multiple clients that simulate the web access traffic. The distribution of dynamic, static hot (in-memory), and static cold (disk access required) web pages is based on statistical studies of production servers. To push the server's CPU cores to full utilization (one end of the tested spectrum), the setup needs sufficiently fast network and disk resources.
 
 -   **SQL Server Database workload**
 
@@ -41,7 +41,7 @@ The tuning in each power policy is data driven by the following five workloads:
 
 -   **SPECpower – JAVA workload**
 
-    [SPECpower\_ssj2008](http://spec.org/power_ssj2008/) is the first industry-standard SPEC benchmark that jointly evaluates power and performance characteristics. It is a server-side Java workload with varying CPU load levels. It doesn’t require many disk or network resources, but it has certain requirements for memory bandwidth. Almost all of the CPU activity is performed in user-mode; kernel-mode activity does not have much impact on the benchmarks’ power and performance characteristics except for the power management decisions.
+    [SPECpower\_ssj2008](http://spec.org/power_ssj2008/) is the first industry-standard SPEC benchmark that jointly evaluates power and performance characteristics. It is a server-side Java workload with varying CPU load levels. It doesn't require many disk or network resources, but it has certain requirements for memory bandwidth. Almost all of the CPU activity is performed in user-mode; kernel-mode activity does not have much impact on the benchmarks' power and performance characteristics except for the power management decisions.
 
 -   **Application Server workload**
 
@@ -55,7 +55,7 @@ For each release of Windows, the most current production servers are used in the
 
 Given that most servers are sold with 1 to 4 processor sockets, and since scale-up servers are less likely to have energy efficiency as a primary concern, the power plan optimization tests are primarily run on 2-socket and 4-socket systems. The amount of RAM, disk, and network resources for each test are chosen to allow each system to run all the way up to its full capacity, while taking into account the cost restrictions that would normally be in place for real-world server environments, such as keeping the configurations reasonable.
 
->[!Important]
+> [!IMPORTANT]
 > Even though the system can run at its peak load, we typically optimize for lower load levels, since servers that consistently run at their peak load levels would be well-advised to use the **High Performance** power plan unless energy efficiency is a high priority.
 
 ### Metrics
@@ -66,9 +66,9 @@ Therefore, the PPM tuning analysis also uses throughput as its performance metri
 
 ![power efficiency formula](../../media/serverperf-ppm-formula.jpg)
 
-Running the CPU cores at lower frequencies reduces energy consumption. However, lower frequencies typically decrease throughput and increase response time. For the **Balanced** power plan, there is an intentional tradeoff of responsiveness and power efficiency. The SAP workload tests, as well as the response time SLAs on the other workloads, make sure that the response time increase doesn’t exceed certain threshold (5% as an example) for these specific workloads.
+Running the CPU cores at lower frequencies reduces energy consumption. However, lower frequencies typically decrease throughput and increase response time. For the **Balanced** power plan, there is an intentional tradeoff of responsiveness and power efficiency. The SAP workload tests, as well as the response time SLAs on the other workloads, make sure that the response time increase doesn't exceed certain threshold (5% as an example) for these specific workloads.
 
->[!Note]
+> [!NOTE]
 > If the workload uses response time as the performance metric, the system should either switch to the **High Performance** power plan or change **Balanced** power plan as suggested in [Recommended Balanced Power Plan Parameters for Quick Response Time](recommended-balanced-plan-parameters.md).
 
 ### Tuning results
@@ -108,7 +108,7 @@ If your workload is "real time" (e.g., susceptible to glitching or other visible
 
 You should know your workloads and design the experiment parameter sets for tuning. For example, if frequencies of the CPU cores need to be ramped very fast (perhaps you have a bursty workload with significant idle periods, but you need very quick responsiveness when a new transaction comes along), then the processor performance increase policy might need to be set to "rocket" (which, as the name implies, shoots the CPU core frequency to its maximum value rather than stepping it up over a period of time).
 
-If your workload is very bursty, the PPM check interval can be reduced to make the CPU frequency start stepping up sooner after a burst arrives. If your workload doesn’t have high thread concurrency, then core parking can be enabled to force the workload to execute on a smaller number of cores, which could also potentially improve processor cache hit ratios.
+If your workload is very bursty, the PPM check interval can be reduced to make the CPU frequency start stepping up sooner after a burst arrives. If your workload doesn't have high thread concurrency, then core parking can be enabled to force the workload to execute on a smaller number of cores, which could also potentially improve processor cache hit ratios.
 
 If you just want to increase CPU frequencies at medium utilization levels (i.e., not light workload levels), then processor performance increase/decrease thresholds can be adjusted to not react until certain levels of activity are observed.
 

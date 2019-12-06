@@ -7,13 +7,11 @@ ms.author: billmath
 manager: femila
 ms.date: 03/08/2017
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 
 ms.technology: identity-adfs
 ---
 # Changing the company logo on the AD FS sign-in page
-
->Applies To: Windows Server 2016, Windows Server 2012 R2
 
 #### Change company logo  
 To change the logo of the company that is displayed on the sign\-in page, use the following PowerShell Windows PowerShell cmdlet and syntax.  

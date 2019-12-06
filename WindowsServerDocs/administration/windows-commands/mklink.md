@@ -2,7 +2,7 @@
 title: mklink
 description: "Windows Commands topic for **** - "
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -39,9 +39,14 @@ mklink [[/d] | [/h] | [/j]] <Link> <Target>
 
 ## <a name="BKMK_examples"></a>Examples
 
-To create a symbolic link named MyDocs from the root directory to the \Users\User1\Documents directory, type:
+The following example demonstrates the creation and removal of a symbolic link named MyFolder and MyFile.file from the root directory to the \Users\User1\Documents directory and a example.file located within the directory:
 ```
-mklink /d \MyDocs \Users\User1\Documents
+mklink /d \MyFolder \Users\User1\Documents
+mklink /h \MyFile.file \User1\Documents\example.file
+rd \MyFolder
+del \MyFile.file
 ```
 ## Additional references
--   [New-Item](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.management/new-item?view=powershell-6)
+-   [New-Item](https://docs.microsoft.com/powershell/module/microsoft.powershell.management/new-item?view=powershell-6)
+-   [del](https://docs.microsoft.com/windows-server/administration/windows-commands/del)
+-   [rmdir](https://docs.microsoft.com/windows-server/administration/windows-commands/rd)

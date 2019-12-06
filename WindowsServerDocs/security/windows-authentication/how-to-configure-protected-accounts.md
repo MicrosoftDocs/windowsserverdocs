@@ -1,7 +1,7 @@
 ---
 title: How to Configure Protected Accounts
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.service: na
 ms.suite: na
@@ -19,11 +19,11 @@ ms.date: 10/12/2016
 
 Through Pass-the-hash (PtH) attacks, an attacker can authenticate to a remote server or service by using the underlying NTLM hash of a user's password (or other credential derivatives). Microsoft has previously [published guidance](https://www.microsoft.com/download/details.aspx?id=36036) to mitigate pass-the-hash attacks.  Windows Server 2012 R2  includes new features to help mitigate such attacks further. For more information about other security features that help protect against credential theft, see [Credentials Protection and Management](https://technet.microsoft.com/library/dn408190.aspx). This topic explains how to configure the following new features:  
   
--   [Protected Users](how-to-configure-protected-accounts.md#BKMK_AddtoProtectedUsers)  
+-   [Protected Users](#protected-users)  
   
--   [Authentication policies](how-to-configure-protected-accounts.md#BKMK_CreateAuthNPolicies)  
+-   [Authentication policies](#authentication-policies)  
   
--   [Authentication policy silos](how-to-configure-protected-accounts.md#BKMK_CreateAuthNPolicySilos)  
+-   [Authentication policy silos](#authentication-policy-silos)  
   
 There are additional mitigations built in to Windows 8.1 and Windows Server 2012 R2 to help protect against credential theft, which are covered in the following topics:  
   
@@ -31,7 +31,7 @@ There are additional mitigations built in to Windows 8.1 and Windows Server 2012
   
 -   [LSA Protection](https://technet.microsoft.com/library/dn408187)  
   
-## <a name="BKMK_AddtoProtectedUsers"></a>Protected Users  
+## Protected Users  
 Protected Users is a new global security group to which you can add new or existing users. Windows 8.1 devices and  Windows Server 2012 R2  hosts have special behavior with members of this group to provide better protection against credential theft. For a member of the group, a Windows 8.1 device or a  Windows Server 2012 R2  host does not cache credentials that are not supported for Protected Users. Members of this group have no additional protection if they are logged on to a device that runs a version of Windows earlier than Windows 8.1.  
   
 Members of the Protected Users group who are signed-on to Windows 8.1 devices and  Windows Server 2012 R2  hosts can *no longer* use:  
@@ -56,7 +56,7 @@ If the domain functional level is  Windows Server 2012 R2 , members of the group
   
 -   Renew user tickets (TGTs) beyond the initial 4-hour lifetime  
   
-To add users to the group, you can use [UI tools](https://technet.microsoft.com/library/cc753515.aspx) such as Active Directory Administrative Center (ADAC) or Active Directory Users and Computers, or a command-line tool such as [Dsmod group](https://technet.microsoft.com/library/cc732423.aspx), or the Windows PowerShell[Add-ADGroupMember](https://technet.microsoft.com/library/ee617210.aspx) cmdlet. Accounts for services and computers *should not* be members of the Protected Users group. Membership for those accounts provides no local protections because the password or certificate is always available on the host.  
+To add users to the group, you can use [UI tools](https://technet.microsoft.com/library/cc753515.aspx) such as Active Directory Administrative Center (ADAC) or Active Directory Users and Computers, or a command-line tool such as [Dsmod group](https://technet.microsoft.com/library/cc732423.aspx), or the Windows PowerShell [Add-ADGroupMember](https://technet.microsoft.com/library/ee617210.aspx) cmdlet. Accounts for services and computers *should not* be members of the Protected Users group. Membership for those accounts provides no local protections because the password or certificate is always available on the host.  
   
 > [!WARNING]  
 > The authentication restrictions have no workaround, which means that members of highly privileged groups such as the Enterprise Admins group or the Domain Admins group are subject to the same restrictions as other members of the Protected Users group. If all members of such groups are added to the Protected Users group, it is possible for all of those accounts to be locked out. You should never add all highly privileged accounts to the Protected Users group until you have thoroughly tested the potential impact.  
@@ -69,14 +69,14 @@ Members of the Protected Users group must be able to authenticate by using Kerbe
   
 -   **Change password** for each user before adding the account to the Protected Users group or ensure that the password was changed recently on a domain controller that runs  Windows Server 2008  or later.  
   
-### <a name="BKMK_Prereq"></a>Requirements for using protected accounts  
+### Requirements for using protected accounts  
 Protected accounts have the following deployment requirements:  
   
 -   To provide client-side restrictions for Protected Users, hosts must run Windows 8.1 or  Windows Server 2012 R2 . A user only has to sign-on with an account that is a member of a Protected Users group. In this case, the Protected Users group can be created by [transferring the primary domain controller (PDC) emulator role](https://technet.microsoft.com/library/cc816944(v=ws.10).aspx) to a domain controller that runs  Windows Server 2012 R2 . After that group object is replicated to other domain controllers, the PDC emulator role can be hosted on a domain controller that runs an earlier version of Windows Server.  
   
 -   To provide domain controller-side restrictions for Protected Users, that is to restrict usage of NTLM authentication, and other restrictions, the domain functional level must be  Windows Server 2012 R2 . For more information about functional levels, see [Understanding Active Directory Domain Services (AD DS) Functional Levels](../../identity/ad-ds/active-directory-functional-levels.md).  
   
-### <a name="BKMK_TrubleshootingEvents"></a>Troubleshoot events related to Protected Users  
+### Troubleshoot events related to Protected Users  
 This section covers new logs to help troubleshoot events that are related to Protected Users and how Protected Users can impact changes to troubleshoot either ticket-granting tickets (TGT) expiration or delegation issues.  
   
 #### New logs for Protected Users  
@@ -100,13 +100,13 @@ Previously, if a technology that uses Kerberos delegation was failing, the clien
   
 ![Screenshot showing where to check **Account is sensitive and cannot be delegated** UI element](../media/how-to-configure-protected-accounts/ADDS_ProtectAcct_TshootDelegation.gif)  
   
-### <a name="BKMK_AuditAuthNattempts"></a>Audit authentication attempts  
-To audit authentication attempts explicitly for the members of the **Protected Users** group, you can continue to collect security log audit events or collect the data in the new operational administrative logs. For more information about these events, see [Authentication Policies and Authentication Policy Silos](https://technet.microsoft.com/library/dn486813.aspx)  
+### Audit authentication attempts  
+To audit authentication attempts explicitly for the members of the **Protected Users** group, you can continue to collect security log audit events or collect the data in the new operational administrative logs. For more information about these events, see [Authentication Policies and Authentication Policy Silos](https://technet.microsoft.com/library/dn486813.aspx).  
   
-### <a name="BKMK_ProvidePUdcProtections"></a>Provide DC-side protections for services and computers  
+### Provide DC-side protections for services and computers  
 Accounts for services and computers cannot be members of **Protected Users**. This section explains which domain controller-based protections can be offered for these accounts:  
   
--   Reject NTLM authentication: Only configurable via [NTLM block policies](https://technet.microsoft.com/library/jj865674(v=ws.10).aspx)  
+-   Reject NTLM authentication: Only configurable via [NTLM block policies](https://technet.microsoft.com/library/jj865674(v=ws.10).aspx).  
   
 -   Reject Data Encryption Standard (DES) in Kerberos pre-authentication:  Windows Server 2012 R2  domain controllers do not accept DES for computer accounts unless they are configured for DES only because every version of Windows released with Kerberos also supports RC4.  
   
@@ -121,7 +121,7 @@ Accounts for services and computers cannot be members of **Protected Users**. Th
   
     ![Screenshot showing where to restrict an account](../media/how-to-configure-protected-accounts/ADDS_ProtectAcct_TshootDelegation.gif)  
   
-## <a name="BKMK_CreateAuthNPolicies"></a>Authentication policies  
+## Authentication policies  
 Authentication Policies is a new container in AD DS that contains authentication policy objects. Authentication policies can specify settings that help mitigate exposure to credential theft, such as restricting TGT lifetime for accounts or adding other claims-related conditions.  
   
 In  Windows Server 2012 , Dynamic Access Control introduced an Active Directory forest-scope object class called Central Access Policy to provide an easy way to configure file servers across an organization. In  Windows Server 2012 R2 , a new object class called Authentication Policy (objectClass msDS-AuthNPolicies) can be used to apply authentication configuration to account classes in  Windows Server 2012 R2  domains. Active Directory account classes are:  
@@ -149,7 +149,7 @@ The TGS exchange is where the account's TGT is used to create an authenticator t
   
 The AP exchange occurs as typically as data inside the application protocol and is not impacted by authentication policies.  
   
-For more detailed information, see [How the Kerberos Version 5 Authentication Protocol Works](https://technet.microsoft.com/library/cc772815(v=WS.10.aspx.  
+For more detailed information, see [How the Kerberos Version 5 Authentication Protocol Works](https://technet.microsoft.com/library/cc772815(v=WS.10.aspx)).  
   
 ### Overview  
 Authentication policies complement Protected Users by providing a way to apply configurable restrictions to accounts and by providing restrictions for accounts for services and computers. Authentication policies are enforced during either the AS exchange or the TGS exchange.  
@@ -166,7 +166,7 @@ You can restrict service ticket requests through a ticket-granting service (TGS)
   
 -   Access control conditions which must be met by the client (user, service, computer) or device from which the TGS exchange is coming  
   
-### <a name="BKMK_ReqForAuthnPolicies"></a>Requirements for using authentication policies  
+### Requirements for using authentication policies  
   
 |Policy|Requirements|  
 |-----|--------|  
@@ -323,7 +323,7 @@ Using either Group Policy or Local Group Policy Editor, enable **Kerberos client
   
 ![Screenshot showing how to use Group Policy or Local Group Policy Editor to enable **Kerberos client support for claims, compound authentication and Kerberos armoring**](../media/how-to-configure-protected-accounts/ADDS_ProtectAcct_KerbClientDACSupport.gif)  
   
-### <a name="BKMK_TroubleshootAuthnPolicies"></a>Troubleshoot Authentication Policies  
+### Troubleshoot Authentication Policies  
   
 #### Determine the accounts that are directly assigned an Authentication Policy  
 The accounts section in the Authentication Policy shows the accounts that have directly applied the policy.  
@@ -333,7 +333,7 @@ The accounts section in the Authentication Policy shows the accounts that have d
 #### Use the Authentication Policy Failures - Domain Controller administrative log  
 A new **Authentication Policy Failures - Domain Controller** administrative log under **Applications and Services Logs** > **Microsoft** > **Windows** > **Authentication** has been created to make it easier to discover failures due to Authentication Policies. The log is disabled by default. To enable it, right-click the log name and click **Enable Log**. The new events are very similar in content to the existing Kerberos TGT and service ticket auditing events. For more information about these events, see [Authentication Policies and Authentication Policy Silos](https://technet.microsoft.com/library/dn486813.aspx).  
   
-### <a name="BKMK_ManageAuthnPoliciesUsingPSH"></a>Manage authentication policies by using Windows PowerShell  
+### Manage authentication policies by using Windows PowerShell  
 This command creates an authentication policy named **TestAuthenticationPolicy**. The **UserAllowedToAuthenticateFrom** parameter specifies the devices from which users can authenticate by an SDDL string in the file named someFile.txt.  
   
 ```  
@@ -365,7 +365,7 @@ This command uses the **Get-ADAuthenticationPolicy** cmdlet with the **Filter** 
 PS C:\> Get-ADAuthenticationPolicy -Filter 'Enforce -eq $false' | Remove-ADAuthenticationPolicy  
 ```  
   
-## <a name="BKMK_CreateAuthNPolicySilos"></a>Authentication policy silos  
+## Authentication policy silos  
 Authentication Policy Silos is a new container (objectClass msDS-AuthNPolicySilos) in AD DS for user, computer, and service accounts. They help protect high-value accounts. While all organizations need to protect members of Enterprise Admins, Domain Admins and Schema Admins groups because those accounts could be used by an attacker to access anything in the forest, other accounts may also need protection.  
   
 Some organizations isolate workloads by creating accounts that are unique to them and by applying Group Policy settings to limit local and remote interactive logon and administrative privileges. Authentication policy silos complement this work by creating a way to define a relationship between User, Computer and managed Service accounts. Accounts can only belong to one silo. You can configure authentication policy for each type of account in order to control:  
@@ -423,7 +423,7 @@ You can create an authentication policy silo by using Active Directory Administr
   
     ![In **Display name**, type a name for the silo. In **Permitted Accounts**, click **Add**, type the names of the accounts, and then click **OK**](../media/how-to-configure-protected-accounts/ADDS_ProtectAcct_NewAuthNPolicySiloDisplayName.gif)  
   
-### <a name="BKMK_ManageAuthnSilosUsingPSH"></a>Manage authentication policy silos by using Windows PowerShell  
+### Manage authentication policy silos by using Windows PowerShell  
 This command creates an authentication policy silo object and enforces it.  
   
 ```  

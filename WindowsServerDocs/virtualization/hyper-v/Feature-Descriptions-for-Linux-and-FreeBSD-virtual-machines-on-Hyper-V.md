@@ -1,7 +1,7 @@
 ---
 title: Feature Descriptions for Linux and FreeBSD virtual machines on Hyper-V
 description: "Describes features that affect core components such as networking, storage, memory when using Linux and FreeBSD on a virtual machine"
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.service: na
 manager: dongill
 ms.technology: compute-hyper-v
@@ -18,7 +18,7 @@ ms.date: 10/03/2016
 
 This article describes features available in components such as core, networking, storage, and memory when using Linux and FreeBSD on a virtual machine.
 
-## <a name="BKMK_core"></a>Core
+## Core
 
 |**Feature**|**Description**|
 |-|-|
@@ -31,7 +31,7 @@ This article describes features available in components such as core, networking
 |Hyper-V specific Storage device|This feature grants high-performance access to storage devices that are attached to a virtual machine.|
 |Hyper-V specific Network device|This feature grants high-performance access to network adapters that are attached to a virtual machine.|
 
-## <a name="BKMK_Networking"></a>Networking
+## Networking
 
 |**Feature**|**Description**|
 |-|-|
@@ -44,7 +44,7 @@ This article describes features available in components such as core, networking
 |Large Receive Offload (LRO)|Increases inbound throughput of high-bandwidth connections by aggregating multiple packets into a larger buffer, decreasing CPU overhead.|
 |SR-IOV|Single Root I/O devices use DDA to allow guests access to portions of specific NIC cards allowing for reduced latency and increased throughput. SR-IOV requires up to date physical function (PF) drivers on the host and virtual function (VF) drivers on the guest.|
 
-## <a name="BKMK_Storage"></a>Storage
+## Storage
 
 |**Feature**|**Description**|
 |-|-|
@@ -54,7 +54,7 @@ This article describes features available in components such as core, networking
 |TRIM support|TRIM hints notify the drive that certain sectors that were previously allocated are no longer required by the app and can be purged. This process is typically used when an app makes large space allocations via a file and then self-manages the allocations to the file, for example, to virtual hard disk files.|
 |SCSI WWN|The storvsc driver extracts World Wide Name (WWN) information from the port and node of devices attached to the virtual machine and creates the appropriate sysfs files. |
 
-## <a name="BKMK_Memory"></a>Memory
+## Memory
 
 |**Feature**|**Description**|
 |-|-|
@@ -64,13 +64,13 @@ This article describes features available in components such as core, networking
 |Dynamic Memory - Ballooning|The host can dynamically increase or decrease the amount of memory available to a virtual machine while it is in operation. Before provisioning, the Administrator enables Dynamic Memory in the Virtual Machine Settings panel and specify the Startup Memory, Minimum Memory, and Maximum Memory for the virtual machine. When the virtual machine is in operation Dynamic Memory cannot be disabled and only the Minimum and Maximum settings can be changed. (It is a best practice to specify these memory sizes as multiples of 128MB.)<br /><br />When the virtual machine is first started available memory is equal to the **Startup Memory**. As Memory Demand increases due to application workloads Hyper-V may dynamically allocate more memory to the virtual machine via the Hot-Add mechanism (above). As Memory Demand decreases Hyper-V may automatically deprovision memory from the virtual machine via the Balloon mechanism. Hyper-V will not deprovision memory below the **Minimum Memory** parameter.<br /><br />The Memory tab of Hyper-V manager will display the amount of memory assigned to the virtual machine, but memory statistics within the virtual machine will show the highest amount of memory allocated.<br /><br />For more information, see [Hyper-V Dynamic Memory Overview](https://technet.microsoft.com/library/hh831766.aspx).<br /><br />|
 |Runtime Memory Resize|An administrator can set the amount of memory available to a virtual machine while it is in operation, either increasing memory ("Hot Add") or decreasing it ("Hot Remove"). Memory is returned to Hyper-V via the balloon driver (see "Dynamic Memory - Ballooning"). The balloon driver maintains a minimum amount of free memory after ballooning, called the "floor", so assigned memory cannot be reduced below the current demand plus this floor amount. The Memory tab of Hyper-V manager will display the amount of memory assigned to the virtual machine, but memory statistics within the virtual machine will show the highest amount of memory allocated. (It is a best practice to specify memory values as multiples of 128MB.)|
 
-## <a name="BKMK_Video"></a>Video
+## Video
 
 |**Feature**|**Description**|
 |-|-|
 |Hyper-V-specific video device|This feature provides high-performance graphics and superior resolution for virtual machines. This device does not provide Enhanced Session Mode or RemoteFX capabilities.|
 
-## <a name="BKMK_Misc"></a>Miscellaneous
+## Miscellaneous
 
 |**Feature**|**Description**|
 |-|-|
@@ -81,7 +81,7 @@ This article describes features available in components such as core, networking
 |Hyper-V Sockets|This is an additional communication channel between the host and guest operating system. To load and use the Hyper-V Sockets kernel module, see [Make your own integration services](https://msdn.microsoft.com/virtualization/hyperv_on_windows/develop/make_mgmt_service).|
 |PCI Passthrough/DDA|With Windows Server 2016 administrators can pass through PCI Express devices via the Discrete Device Assignment mechanism. Common devices are network cards, graphics cards, and special storage devices. The virtual machine will require the appropriate driver to use the exposed hardware. The hardware must be assigned to the virtual machine for it to be used.<br /><br />For more information, see [Discrete Device Assignment - Description and Background](https://blogs.technet.microsoft.com/virtualization/2015/11/19/discrete-device-assignment-description-and-background/).<br /><br />DDA is a pre-requisite for SR-IOV networking. Virtual ports will need to be assigned to the virtual machine and the virtual machine must use the correct Virtual Function (VF) drivers for device multiplexing.|
 
-## <a name="BKMK_gen2"></a>Generation 2 virtual machines
+## Generation 2 virtual machines
 
 |**Feature**|**Description**|
 |-|-|

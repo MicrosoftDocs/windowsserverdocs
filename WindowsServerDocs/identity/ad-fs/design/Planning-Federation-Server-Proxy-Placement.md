@@ -7,14 +7,12 @@ ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 
 ms.technology: identity-adfs
 ---
 
 # Planning Federation Server Proxy Placement
-
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 After you gather all the information that you will use to design your Active Directory Federation Services \(AD FS\) infrastructure and after you plan your federation server and Web server strategy, you can plan when and where to place federation server proxies in your new design. The information in the following topics can help you determine when and where to place a federation server proxy and whether to configure it for the account partner role or the resource partner role:  
   

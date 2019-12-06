@@ -6,12 +6,12 @@ ms.topic: article
 author: nwashburn-ms
 ms.author: niwashbu
 ms.localizationpriority: medium
-ms.prod: windows-server-threshold
+ms.prod: windows-server
+ms.date: 06/07/2019
 ---
-
 # What is Windows Admin Center?
 
->Applies To: Windows Admin Center, Windows Admin Center Preview
+> Applies to: Windows Admin Center, Windows Admin Center Preview
 
 Windows Admin Center is a new, locally-deployed, browser-based management tool set that lets you manage your Windows Servers with no Azure or cloud dependency. Windows Admin Center gives you full control over all aspects of your server infrastructure and is particularly useful for managing servers on private networks that are not connected to the Internet.
 

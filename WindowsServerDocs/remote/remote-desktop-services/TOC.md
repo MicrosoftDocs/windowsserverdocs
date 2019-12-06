@@ -12,7 +12,7 @@
 ### [High availability](rds-plan-high-availability.md)
 ### [Multifactor Authentication](rds-plan-mfa.md)
 ### [Secure data storage](rds-plan-secure-data-storage.md)
-### [Choose your graphics rendering technology](rds-graphics-virtualization.md)
+### [GPU acceleration](rds-graphics-virtualization.md)
 ### [Connect from any device](rds-plan-connect-from-any-device.md)
 ### [Choose how you pay](rds-plan-choose-how-you-pay.md)
 ### [Office 2016 in RDS and VDI deployments](https://docs.microsoft.com/deployoffice/rds-office-vdi-rdsh)
@@ -56,7 +56,6 @@
 ##### [Create your disaster recovery plan](rds-disaster-recovery-plan.md)
 
 ## [Run and tune](rds-run-and-tune.md)
-### [Set up and configure RemoteFX vGPU for Remote Desktop Services](rds-remotefx-vgpu.md)
 ### [Manage personal desktop session collections](rds-manage-personal-collection.md)
 ### [Recommended configuration for VDI desktops](rds-vdi-recommendations.md)
 ### [Optimizing Windows 10, version 1803, for a Virtual Desktop Infrastructure (VDI) role](rds-vdi-recommendations-1803.md)
@@ -64,31 +63,46 @@
 ### [Customize the RDS title “Work Resources” using PowerShell on Windows Server](rds-work-resources.md)
 ### [Diagnose app performance issues with performance counters](rds-rdsh-performance-counters.md)
 
-## [Additional Remote Desktop support](rds-get-support.md)
-## [Remote Desktop clients](clients/remote-desktop-clients.md)
-### General information
-#### [Which client works best for you?](clients/remote-desktop-app-compare.md)
-#### [Remote Desktop URI scheme](clients/remote-desktop-uri.md)
-#### [Remote Desktop client FAQ](clients/remote-desktop-client-faq.md)
-#### [Privacy settings for managed apps and desktops](clients/remote-privacy-settings.md)
-#### [Troubleshooting Remote Desktop Connections](clients/troubleshoot-remote-desktop-connections.md)
-### Remote Desktop client for Windows
-#### [Get started](clients/windows.md)
-#### [What's new in the Windows client?](clients/windows-whatsnew.md)
-### Remote Desktop client for Android
-#### [Get started](clients/remote-desktop-android.md)
-#### [What's new in the Android client?](clients/android-whatsnew.md)
-### Remote Desktop client for iOS
-#### [Get started](clients/remote-desktop-ios.md)
-#### [What's new in the iOS client?](clients/ios-whatsnew.md)
-### Remote Desktop client for Mac
-#### [Get started](clients/remote-desktop-mac.md)
-#### [What's new in the MacOS client?](clients/mac-whatsnew.md)
-### Remote Desktop web client
-#### [Access the Remote Desktop web client](clients/remote-desktop-web-client.md)
-#### [What's new in the web client?](clients/web-client-whatsnew.md)
+## Access your Remote Desktop resources
+### [Available Remote Desktop clients](clients/remote-desktop-clients.md)
+### Windows Desktop client
+#### [Get started with the Windows Desktop client](clients/windowsdesktop.md)
+#### [Windows Desktop client for admins](clients/windowsdesktop-admin.md)
+#### [What's new in the Windows Desktop client](clients/windowsdesktop-whatsnew.md)
+### Windows Store client
+#### [Get started with the Windows Store client](clients/windows.md)
+#### [What's new in the Windows Store client](clients/windows-whatsnew.md)
+### Android client
+#### [Get started with the Android client](clients/remote-desktop-android.md)
+#### [What's new in the Android client](clients/android-whatsnew.md)
+### iOS client
+#### [Get started with the iOS client](clients/remote-desktop-ios.md)
+#### [What's new in the iOS client](clients/ios-whatsnew.md)
+### macOS client
+#### [Get started with the macOS client](clients/remote-desktop-mac.md)
+#### [What's new in the macOS client](clients/mac-whatsnew.md)
+### Web client
+#### [Get started with the web client](clients/remote-desktop-web-client.md)
+#### [What's new in the web client](clients/web-client-whatsnew.md)
 ### Setting up your PC for Remote Desktop
 #### [Supported PCs](clients/remote-desktop-supported-config.md)
 #### [Grant Remote Desktop access to your PC](clients/remote-desktop-allow-access.md)
 #### [Grant access to your PC from outside your network](clients/remote-desktop-allow-outside-access.md)
 #### [Change the RD listening port on your PC](clients/change-listening-port.md)
+### Advanced information
+#### [Which client works best for you?](clients/remote-desktop-app-compare.md)
+#### [Remote Desktop RDP file settings](clients/rdp-files.md)
+#### [Remote Desktop URI scheme](clients/remote-desktop-uri.md)
+#### [Remote Desktop client FAQ](clients/remote-desktop-client-faq.md)
+#### [Privacy settings for managed apps and desktops](clients/remote-privacy-settings.md)
+### Known issues
+#### [General Remote Desktop connection troubleshooting](troubleshoot/rdp-error-general-troubleshooting.md)
+#### [Clients can't connect and get the "Class not registered" error](troubleshoot/rdp-error-class-not-registered.md)
+#### [Clients can't connect and see "No licenses available" error](troubleshoot/rdp-error-no-licenses-available.md)
+#### [User can't authenticate or must authenticate twice](troubleshoot/cannot-authenticate-or-must-authenticate-twice.md)
+#### ["Remote Desktop Service is currently busy" error on connecting](troubleshoot/remote-desktop-service-currently-busy.md)
+#### [Remote Desktop client disconnects and can't reconnect to the same session](troubleshoot/rdp-client-disconnects-cannot-reconnect-same-session.md)
+#### [Remote laptop disconnects from wireless network](troubleshoot/remote-laptop-disconnects-wireless-network.md)
+#### [Poor performance or application problems during remote desktop connection](troubleshoot/poor-performance-or-application-problems.md)
+
+## [Additional resources](rds-get-support.md)

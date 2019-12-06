@@ -7,7 +7,7 @@ author: nwashburn-ms
 ms.author: niwashbu
 ms.date: 03/07/2019
 ms.localizationpriority: medium
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ---
 # Manage Servers with Windows Admin Center
 
@@ -228,7 +228,6 @@ The following features are supported in Files:
 - Rename a file or folder
 - Extract a zip file
 - View file or folder properties
-- Manage File Server Resource Manager [quotas](https://docs.microsoft.com/windows-server/storage/fsrm/quota-management)
 - Add, edit, or remove file shares
 - Modify user and group permissions on file shares
 
@@ -429,6 +428,7 @@ The following features are supported in Storage:
 - Edit volume properties
 - Delete a volume
 - Install Quota Management
+- Manage File Server Resource Manager Quotas [Storage->Create/Update Quota](https://docs.microsoft.com/windows-server/storage/fsrm/quota-management)
 
 [**View feedback and proposed features for Storage**](https://windowsserver.uservoice.com/forums/295071/filters/top?category_id=319162&query=%5BStorage%5D)
 

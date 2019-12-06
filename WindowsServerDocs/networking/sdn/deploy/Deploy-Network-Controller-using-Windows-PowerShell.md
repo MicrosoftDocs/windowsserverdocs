@@ -3,7 +3,7 @@ title: Deploy Network Controller using Windows PowerShell
 description: This topic provides instructions on using Windows PowerShell to deploy Network Controller on one or more computers or virtual machines (VMs) that are running Windows Server 2016.
 manager: dougkim
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: networking-sdn

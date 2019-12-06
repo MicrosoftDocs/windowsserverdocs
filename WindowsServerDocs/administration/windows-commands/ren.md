@@ -2,7 +2,7 @@
 title: ren
 description: Learn how to rename a file or directory with the ren command.
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -38,13 +38,13 @@ rename [<Drive>:][<Path>]<FileName1> <FileName2>
 
 ## Remarks
 
--   You cannot specify a new drive or path when renaming files.
--   You cannot use the **ren** command to rename files across drives or to move files to a different directory.
--   You can use wildcard characters (**&#42;** and **?**) in either *FileName* parameter. Characters that are represented by wildcard characters in *FileName2* will be identical to the corresponding characters in *FileName1*.
--   *FileName2* must be a unique file name. If *FileName2* matches an existing file name, **ren** displays the following message:  
-    ```
-    Duplicate file name or file not found
-    ```
+- You cannot specify a new drive or path when renaming files.
+- You cannot use the **ren** command to rename files across drives or to move files to a different directory.
+- You can use wildcard characters (**&#42;** and **?**) in either *FileName* parameter. Characters that are represented by wildcard characters in *FileName2* will be identical to the corresponding characters in *FileName1*.
+- *FileName2* must be a unique file name. If *FileName2* matches an existing file name, **ren** displays the following message:  
+  ```
+  Duplicate file name or file not found
+  ```
 
 ## <a name="BKMK_examples"></a>Examples
 

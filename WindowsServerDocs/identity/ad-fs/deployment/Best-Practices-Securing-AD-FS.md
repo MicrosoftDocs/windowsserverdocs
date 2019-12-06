@@ -7,14 +7,13 @@ ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 
 ms.technology: identity-adfs
 ---
 
 ## Best practices for securing Active Directory Federation Services
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 This document provides best practices for the secure planning and deployment of Active Directory Federation Services (AD FS) and Web Application Proxy.  It contains information about the default behaviors of these components and recommendations for additional security configurations for an organization with specific use cases and security requirements.
 
@@ -31,6 +30,9 @@ The below diagram depicts the firewall ports that must be enabled between and am
 >Note that port 49443 is only required if user certificate authentication is used, which is optional for Azure AD and Office 365.
 
 ![AD FS Standard topology](media/Best-Practices-Securing-AD-FS/adfssec2.png)
+
+>[!NOTE]
+> Port 808 (Windows Server 2012R2) or port 1501 (Windows Server 2016+) is the Net.TCP port AD FS uses for the local WCF endpoint to transfer configuration data to the service process and Powershell. This port can be seen by running Get-AdfsProperties | select NetTcpPort. This is a local port that will not need to be opened in the firewall but will be displayed in a port scan. 
 
 ### Azure AD Connect and Federation Servers/WAP
 This table describes the ports and protocols that are required for communication between the Azure AD Connect server and Federation/WAP servers.  
@@ -103,15 +105,15 @@ The federation service proxy (part of the WAP) provides congestion control to pr
 #### To verify the settings, you can do the following:
 1.	On your Web Application Proxy computer, start an elevated command window.
 2.	Navigate to the ADFS directory, at %WINDIR%\adfs\config.
-3.	Change the congestion control settings from its default values to ‘<congestionControl latencyThresholdInMSec="8000" minCongestionWindowSize="64" enabled="true" />’.
+3.	Change the congestion control settings from its default values to ‘<congestionControl latencyThresholdInMSec="8000" minCongestionWindowSize="64" enabled="true" />'.
 4.	Save and close the file.
-5.	Restart the AD FS service by running ‘net stop adfssrv’ and then ‘net start adfssrv’.
-For your reference, guidance on this capability can be found [here](https://msdn.microsoft.com/en-us/library/azure/dn528859.aspx ).
+5.	Restart the AD FS service by running ‘net stop adfssrv' and then ‘net start adfssrv'.
+For your reference, guidance on this capability can be found [here](https://msdn.microsoft.com/library/azure/dn528859.aspx ).
 
 ### Standard HTTP request checks at the proxy
 The proxy also performs the following standard checks against all traffic:
 
-- The FS-P itself authenticates to AD FS via a short lived certificate.  In a scenario of suspected compromise of dmz servers, AD FS can “revoke proxy trust” so that it no longer trusts any incoming requests from potentially compromised proxies. Revoking the proxy trust revokes each proxy’s own certificate so that it cannot successfully authenticate for any purpose to the AD FS server
+- The FS-P itself authenticates to AD FS via a short lived certificate.  In a scenario of suspected compromise of dmz servers, AD FS can “revoke proxy trust” so that it no longer trusts any incoming requests from potentially compromised proxies. Revoking the proxy trust revokes each proxy's own certificate so that it cannot successfully authenticate for any purpose to the AD FS server
 - The FS-P terminates all connections and creates a new HTTP connection to the AD FS service on the internal network. This provides a session-level buffer between external devices and the AD FS service. The external device never connects directly to the AD FS service.
 - The FS-P performs HTTP request validation that specifically filters out HTTP headers that are not required by AD FS service.
 
@@ -135,6 +137,13 @@ You can use the following Windows PowerShell command to set the AD FS extranet l
 
 For reference, the public documentation of this feature is [here](https://technet.microsoft.com/library/dn486806.aspx ). 
 
+### Disable WS-Trust Windows endpoints on the proxy i.e. from extranet
+
+WS-Trust Windows endpoints (*/adfs/services/trust/2005/windowstransport* and */adfs/services/trust/13/windowstransport*) are meant only to be intranet facing endpoints that use WIA binding on HTTPS. Exposing them to extranet could allow requests against these endpoints to bypass lockout protections. These endpoints should be disabled on the proxy (i.e. disabled from extranet) to protect AD account lockout by using following PowerShell commands. There is no known end user impact by disabling these endpoints on the proxy.
+
+    PS:\>Set-AdfsEndpoint -TargetAddressPath /adfs/services/trust/2005/windowstransport -Proxy $false
+    PS:\>Set-AdfsEndpoint -TargetAddressPath /adfs/services/trust/13/windowstransport -Proxy $false
+    
 ### Differentiate access policies for intranet and extranet access
 AD FS has the ability to differentiate access policies for requests that originate in the local, corporate network vs requests that come in from the internet via the proxy.  This can be done per application or globally.  For high business value applications or applications with sensitive or personally identifiable information, consider requiring multi factor authentication.  This can be done via the AD FS management snap-in.  
 

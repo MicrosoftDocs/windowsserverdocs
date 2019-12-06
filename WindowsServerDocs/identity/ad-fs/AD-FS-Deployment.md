@@ -7,13 +7,12 @@ ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 
 ms.technology: identity-adfs
 ---
-# AD FS 2016 Deployment
+# AD FS Deployment
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 This document contains a list of all of the documentation for deploying AD FS for Windows Server 2016. This includes the following:
   

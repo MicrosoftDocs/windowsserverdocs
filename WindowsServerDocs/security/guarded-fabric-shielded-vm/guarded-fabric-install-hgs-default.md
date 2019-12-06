@@ -1,7 +1,7 @@
 ---
 title: Install HGS in a new forest 
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.topic: article
 manager: dongill
 author: rpsqrd
@@ -31,7 +31,7 @@ Run the following commands in an elevated PowerShell session to add the HGS serv
 
 ## Next step
 
->[!div class="nextstepaction"]
-[Initialize HGS](guarded-fabric-initialize-hgs.md)
+> [!div class="nextstepaction"]
+> [Initialize HGS](guarded-fabric-initialize-hgs.md)
 
 

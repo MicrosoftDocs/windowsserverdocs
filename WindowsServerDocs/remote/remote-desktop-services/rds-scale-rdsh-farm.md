@@ -2,7 +2,7 @@
 title: Scale out your RDS deployment by adding an RD Session Host farm
 description: Add a second RD Session Host to yur RDS environment.
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: remote-desktop-services
@@ -33,8 +33,8 @@ Use the following steps to add another RD Sesssion Host to your deployment:
    3. Enter the domain administrator credentials. 
    4. Restart the server or vm.
 4. Add the new RD Session Host to the farm:
->[!NOTE] 
-> Step 1, creating a public IP address for the RDMS virtual machine, is only necessary if you are using a vm for the RDMS and if it does not already have an IP address assigned.
+   >[!NOTE] 
+   > Step 1, creating a public IP address for the RDMS virtual machine, is only necessary if you are using a vm for the RDMS and if it does not already have an IP address assigned.
    
    1. Create a public IP address for the virtual machine running Remote Desktop Management Services (RDMS). The RDMS virtual machine will typically be the virtual machine running the first instance of the RD Connection Broker role.  
        1. In the Azure portal, click **Browse > Resource groups**, click the resource group for the deployment and then click the RDMS virtual machine (for example, Contoso-Cb1).  

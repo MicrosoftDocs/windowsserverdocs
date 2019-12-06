@@ -2,7 +2,7 @@
 ms.assetid: d11acbc2-40c6-4ab2-9514-2bc3ad81499a
 title: What's New in Data Deduplication
 ms.technology: storage-deduplication
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.topic: article
 author: wmgries
 manager: klaasl
@@ -19,7 +19,7 @@ Data Deduplication has the following enhancements in Windows Server 2019:
 
 | Functionality | New or updated | Description |
 |---------------|----------------|-------------|
-| ReFS support  | New            | Store up to 10X more data on the same volume with deduplication and compression for the ReFS filesystem. (It’s [just one click](https://www.youtube.com/watch?v=PRibTacyKko&feature=youtu.be) to turn on with Windows Admin Center.) The variable-size chunk store with optional compression maximizes savings rates, while the multi-threaded post-processing architecture keeps performance impact minimal. Supports volumes up to 64 TB and will deduplicate the first 4 TB of each file.|
+| ReFS support  | New            | Store up to 10X more data on the same volume with deduplication and compression for the ReFS filesystem. (It's [just one click](https://www.youtube.com/watch?v=PRibTacyKko&feature=youtu.be) to turn on with Windows Admin Center.) The variable-size chunk store with optional compression maximizes savings rates, while the multi-threaded post-processing architecture keeps performance impact minimal. Supports volumes up to 64 TB and will deduplicate the first 4 TB of each file.|
 
 Data Deduplication has the following enhancements starting in Windows Server 2016:
 

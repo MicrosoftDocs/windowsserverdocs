@@ -2,7 +2,7 @@
 title: bitsadmin rawreturn
 description: "Windows Commands topic for **bitsadmin rawreturn** - Returns data suitable for parsing."
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -29,7 +29,7 @@ bitsadmin /RawReturn
 
 Strips newline characters and formatting from the output.
 
-Typically, you use this command in conjunction with the **Create** and **Get\*** switches to receive only the value. You must specify this switch before other switches.
+Typically, you use this command in conjunction with the **Create** and **Get\\*** switches to receive only the value. You must specify this switch before other switches.
 
 ## <a name="BKMK_examples"></a>Examples
 

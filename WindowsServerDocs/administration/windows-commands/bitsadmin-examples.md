@@ -2,7 +2,7 @@
 title: bitsadmin examples
 description: "The following examples show how to use the bitsadmin tool to perform the most common tasks."
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -23,7 +23,7 @@ The following examples show how to use the `bitsadmin` tool to perform the most 
 
 The **/transfer** switch is a shortcut for performing the tasks listed below. This switch creates the job, adds the files to the job, activates the job in the transfer queue, and completes the job. BITSAdmin continues to show progress information in the MS-DOS window until the transfer completes or an error occurs.
 
-**bitsadmin /transfer myDownloadJob /download /priority normal https://downloadsrv/10mb.zip c:\\10mb.zip**
+**bitsadmin /transfer myDownloadJob /download /priority normal `https://downloadsrv/10mb.zip c:\\10mb.zip`**
 
 ## Create a download job
 

@@ -7,12 +7,12 @@ author: haley-rowland
 ms.author: harowl
 ms.date: 03/28/2019
 ms.localizationpriority: medium
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ---
 
 # Configure shared connections for all users of the Windows Admin Center gateway
 
-> Applies To: Windows Admin Center Preview
+> Applies To: Windows Admin Center Preview, Windows Admin Center
 
 With the ability to configure shared connections, gateway administrators can configure the connections list once for all users of a given Windows Admin Center gateway. 
 

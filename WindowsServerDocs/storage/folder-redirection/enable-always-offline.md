@@ -1,7 +1,7 @@
 ---
 title: Enable Always Offline mode for faster access to files
 description: How to use the Always Offline mode of Offline Files to provide faster access to cached files and redirected folders.
-ms.prod: windows-server-threshold 
+ms.prod: windows-server 
 ms.topic: article 
 author: JasonGerend 
 ms.author: jgerend 

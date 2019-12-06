@@ -1,7 +1,7 @@
 ---
 title: Supported SUSE virtual machines on Hyper-V
 description: "Lists the Linux integration services and features included in each version"
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.service: na
 manager: dongill
 ms.technology: compute-hyper-v
@@ -33,9 +33,9 @@ SLES12+ is 64-bit only.
 |**Feature**|**Windows Server operating system version**|**SLES 15**|**SLES 12 SP3/SP4**|**SLES 12 SP2**|**SLES 12 SP1**|**SLES 11 SP4**|**SLES 11 SP3**|
 |-|-|-|-|-|-|-|-|
 |**Availability**||Built-in|Built-in|Built-in|Built-in|Built-in|Built-in|
-|**[Core](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_core)**|2019, 2016, 2012 R2, 2012, 2008 R2|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|
+|**[Core](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#core)**|2019, 2016, 2012 R2, 2012, 2008 R2|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|
 |Windows Server 2016 Accurate Time|2019, 2016|&#10004;|&#10004;|&#10004;||||
-|**[Networking](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_Networking)**||||||||
+|**[Networking](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#networking)**||||||||
 |Jumbo frames|2019, 2016, 2012 R2, 2012, 2008 R2|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|
 |VLAN tagging and trunking|2019, 2016, 2012 R2, 2012, 2008 R2|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|
 |Live migration|2019, 2016, 2012 R2, 2012, 2008 R2|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|
@@ -43,28 +43,28 @@ SLES12+ is 64-bit only.
 |vRSS|2019, 2016, 2012 R2|&#10004;|&#10004;|&#10004;|&#10004;|||
 |TCP Segmentation and Checksum Offloads|2019, 2016, 2012 R2, 2012, 2008 R2|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;||
 |SR-IOV|2019, 2016|&#10004;|&#10004;|&#10004;||||
-|**[Storage](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_Storage)**||||||||
+|**[Storage](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#storage)**||||||||
 |VHDX resize|2019, 2016, 2012 R2|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|
 |Virtual Fibre Channel|2019, 2016, 2012 R2|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|
 |Live virtual machine backup|2019, 2016, 2012 R2|&#10004; Note 2, 3, 8|&#10004; Note 2, 3, 8|&#10004; Note 2, 3, 8|&#10004; Note 2, 3, 8|&#10004; Note 2, 3, 8|&#10004; Note 2, 3, 8|
 |TRIM support|2019, 2016, 2012 R2|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;||
 |SCSI WWN|2019, 2016, 2012 R2|&#10004;|&#10004;|&#10004;||||
-|**[Memory](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_Memory)**||||||||
+|**[Memory](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#memory)**||||||||
 |PAE Kernel Support|2019, 2016, 2012 R2, 2012, 2008 R2|N/A|N/A|N/A|N/A|&#10004;|&#10004;|
 |Configuration of MMIO gap|2019, 2016, 2012 R2|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|
 |Dynamic Memory - Hot-Add|2019, 2016, 2012 R2, 2012|&#10004; Note 5, 6|&#10004; Note 5, 6|&#10004; Note 5, 6|&#10004; Note 5, 6|&#10004; Note 4, 5, 6|&#10004; Note 4, 5, 6|
 |Dynamic Memory - Ballooning|2019, 2016, 2012 R2, 2012|&#10004; Note 5, 6|&#10004; Note 5, 6|&#10004; Note 5, 6|&#10004; Note 5, 6|&#10004; Note 4, 5, 6|&#10004; Note 4, 5, 6|
 |Runtime Memory Resize|2019, 2016|&#10004; Note 5, 6|&#10004; Note 5, 6|&#10004; Note 5, 6||||
-|**[Video](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_Video)**||||||||
+|**[Video](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#video)**||||||||
 |Hyper-V-specific video device|2019, 2016, 2012 R2, 2012, 2008 R2|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|
-|**[Miscellaneous](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_Misc)**||||||||
+|**[Miscellaneous](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#miscellaneous)**||||||||
 |Key/value pair|2019, 2016, 2012 R2, 2012, 2008 R2|&#10004;|&#10004;|&#10004;|&#10004;|&#10004; Note 7|&#10004; Note 7|
 |Non-Maskable Interrupt|2019, 2016, 2012 R2|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|
 |File copy from host to guest|2019, 2016, 2012 R2|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;||
 |lsvmbus command|2019, 2016, 2012 R2, 2012, 2008 R2|&#10004;|&#10004;|&#10004;||||
 |Hyper-V Sockets|2019, 2016|&#10004;|&#10004;|||||
 |PCI Passthrough/DDA|2019, 2016|&#10004;|&#10004;|&#10004;|&#10004;|||
-|**[Generation 2 virtual machines](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_gen2)**||||||||
+|**[Generation 2 virtual machines](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#generation-2-virtual-machines)**||||||||
 |Boot using UEFI|2019, 2016, 2012 R2|&#10004; Note 9|&#10004; Note 9|&#10004; Note 9|&#10004; Note 9|&#10004; Note 9||
 |Secure boot|2019, 2016|&#10004;|&#10004;|&#10004;|&#10004;|||
 

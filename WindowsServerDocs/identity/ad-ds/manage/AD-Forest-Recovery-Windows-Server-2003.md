@@ -6,7 +6,7 @@ ms.author: joflore
 manager: mtillman
 ms.date: 07/07/2017
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.assetid: 5a291f65-794e-4fc3-996e-094c5845a383
 ms.technology: identity-adds
 ---
@@ -106,10 +106,10 @@ If the DC that you restored from backup is running Windows Server 2003, you can 
 
 10. Type the following command, and then press ENTER:  
 
-   **net start netlogon**
+    **net start netlogon**
 
-   > [!NOTE]
-   > Net Logon will register the DC Locator resource records in DNS for this DC. If you are installing the DNS Server service on a server in the child domain, this DC will not be able to register its records immediately. This is because it is currently isolated as part of the recovery process, and its primary DNS server is the forest root DNS server. Configure this computer with the same IP address as it had before the disaster to avoid DC service lookup failures.
+    > [!NOTE]
+    > Net Logon will register the DC Locator resource records in DNS for this DC. If you are installing the DNS Server service on a server in the child domain, this DC will not be able to register its records immediately. This is because it is currently isolated as part of the recovery process, and its primary DNS server is the forest root DNS server. Configure this computer with the same IP address as it had before the disaster to avoid DC service lookup failures.
 
 ## Next Steps
 

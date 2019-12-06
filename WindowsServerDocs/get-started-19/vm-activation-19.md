@@ -3,7 +3,7 @@ title: Automatic virtual machine activation
 TOCTitle: Automatic VM Activation
 description: How to activate VMs in Windows Server 2019, Windows Server 2016, and Windows Server 2012 R2
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: server-general
@@ -36,7 +36,7 @@ Server datacenter managers can use AVMA to do the following:
 
 There are no product keys to manage and no stickers on the servers to read. The virtual machine is activated and continues to work even when it is migrated across an array of virtualization servers.
 
-Service Provider License Agreement (SPLA) partners and other hosting providers do not have to share product keys with tenants or access a tenant’s virtual machine to activate it. Virtual machine activation is transparent to the tenant when AVMA is used. Hosting providers can use the server logs to verify license compliance and to track client usage history.
+Service Provider License Agreement (SPLA) partners and other hosting providers do not have to share product keys with tenants or access a tenant's virtual machine to activate it. Virtual machine activation is transparent to the tenant when AVMA is used. Hosting providers can use the server logs to verify license compliance and to track client usage history.
 
 ## System requirements
 
@@ -83,7 +83,7 @@ The following AVMA keys can be used for Windows Server 2019.
 |Standard|	TNK62-RXVTB-4P47B-2D623-4GF74|
 |Essentials|	2CTP7-NHT64-BP62M-FV6GG-HFV28|
  
-The following AVMA keys can be used for Windows Server, version 1809.
+The following AVMA keys can be used for Windows Server, versions 1909, 1903, and 1809.
 
 |Edition|	AVMA key|
 |-|-|
@@ -129,7 +129,7 @@ The registry (KVP) on the virtualization server provides real-time tracking data
 
   - RDP addresses
 
-For more information about how to get this information, see [Hyper-V Script: Looking at KVP GuestIntrinsicExchangeItems](http://blogs.msdn.com/b/virtual_pc_guy/archive/2008/11/18/hyper-v-script-looking-at-kvp-guestintrinsicexchangeitems.aspx).
+For more information about how to get this information, see [Hyper-V Script: Looking at KVP GuestIntrinsicExchangeItems](https://blogs.msdn.com/b/virtual_pc_guy/archive/2008/11/18/hyper-v-script-looking-at-kvp-guestintrinsicexchangeitems.aspx).
 
 
 > [!NOTE]

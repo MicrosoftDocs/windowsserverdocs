@@ -1,6 +1,6 @@
 ---
 title: File Server Resource Manager (FSRM) overview
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.author: jgerend
 ms.manager: brianlic
 ms.technology: storage
@@ -41,7 +41,7 @@ The features included with File Server Resource Manager can be configured and ma
   
 -   Expire any file that has not been modified in the last 10 years.  
   
--   Create a 200 megabyte quota for each user’s home directory and notify them when they are using 180 megabytes.  
+-   Create a 200 megabyte quota for each user's home directory and notify them when they are using 180 megabytes.  
   
 -   Do not allow any music files to be stored in personal shared folders.  
   

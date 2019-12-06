@@ -1,7 +1,7 @@
 ---
 title: Ensure that the virtual function driver operates correctly when a virtual machine is configured to use SR-IOV
 description: "Online version of the text for this Best Practices Analyzer rule."
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.service: na
 manager: dongill
 ms.technology: compute-hyper-v

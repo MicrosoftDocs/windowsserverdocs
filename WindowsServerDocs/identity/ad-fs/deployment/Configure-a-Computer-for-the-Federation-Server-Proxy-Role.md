@@ -6,15 +6,13 @@ author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 
 ms.technology: identity-adfs
 ms.author: billmath
 ---
 
 # Configure a Computer for the Federation Server Proxy Role
-
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 After you configure a computer with the required certificates and have installed the Federation Service Proxy role service, you are ready to configure the computer to become a federation server proxy. You can use the following procedure so that the computer acts in the federation server proxy role.  
   

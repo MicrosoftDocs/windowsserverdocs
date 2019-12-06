@@ -1,7 +1,7 @@
 ---
 ms.assetid: 385a2a7c-d6bd-4f11-9c18-fca0413f9e97
 title: Fsutil dirty
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 manager: dmoss
 ms.author: toklima
 author: toklima
@@ -25,11 +25,11 @@ fsutil dirty {query | set} <VolumePath>
 
 ## Parameters
 
-|Parameter|Description|
-|-------------|---------------|
-|query|Queries the specified volume's dirty bit.|
-|set|Sets the specified volume's dirty bit.|
-|\<VolumePath>|Specifies the drive name followed by a colon or GUID in the following format: **Volume{***GUID***}**.|
+|   Parameter   |                                                 Description                                                  |
+|---------------|--------------------------------------------------------------------------------------------------------------|
+|     query     |                                  Queries the specified volume's dirty bit.                                   |
+|      set      |                                    Sets the specified volume's dirty bit.                                    |
+| \<VolumePath> | Specifies the drive name followed by a colon or GUID in the following format: **Volume{**<em>GUID</em>**}**. |
 
 ## Remarks
 

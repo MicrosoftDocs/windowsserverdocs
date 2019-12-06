@@ -8,11 +8,21 @@ ms.date: 05/02/2019
 
 # Create new Windows Server articles using GitHub and Visual Studio Code
 
-As a Microsoft employee, you can follow these instructions to create and set up your GitHub account and tools, fork and clone the windowsserverdocs-pr repo, set up your remote branch, create a new article, and create a new pull request for approval and publishing.
+There are two separate locations where we keep Windows Server technical content. One of the locations is public (windowsserverdocs) while the other is private (windowsserverdocs-pr). Who you are determines which location you contribute to:
+
+- **I'm a Microsoft employee.** As a Microsoft employee, you have options, based on what you're trying to do:
+
+    - **Create a brand-new article.** To create a brand-new article, you must create and set up your GitHub account and tools, fork and clone the windowsserverdocs-pr repo, set up your remote branch, create the article, and finally create a new pull request for approval and publishing. For these instructions, continue reading this article.
+
+    - **Make large changes to an existing article.** To make substantial changes to an existing article, you can follow the instructions in the [Edit an existing Windows Server article using GitHub and Visual Studio Code](edit-existing-using-github.md) article.
+
+    - **Make minor changes to an existing article.** To make minor changes to an existing article, you can follow the instructions in the [Update existing Windows Server articles using a web browser and GitHub](github-browser-updates.md) article.
+
+- **I'm not a Microsoft employee.** As a non-Microsoft employee, you must contribute to the public location. For information about how to do that, see the [Contributing to Windows Server technical documentation](https://github.com/MicrosoftDocs/windowsserverdocs/blob/master/CONTRIBUTING.md) article.
 
 ## Prerequisites
 
-Before you can start working in the repo, you must create and set up your GitHub account, set up two-factor verification, and install and configure all the necessary tools. If you’ve already done this, you can skip down to the [Fork the repository section](#fork-the-repository) of this article.
+Before you can start working in the repo, you must create and set up your GitHub account, set up two-factor verification, and install and configure all the necessary tools. If you've already done this, you can skip down to the [Fork the repository section](#fork-the-repository) of this article.
 
 1. [Create a GitHub account and profile](https://review.docs.microsoft.com/help/contribute/contribute-get-started-setup-github?branch=master#create-a-github-account-and-set-up-your-profile)
 
@@ -30,7 +40,7 @@ Before you can start working in the repo, you must create and set up your GitHub
 
 ## Set up your own version of the repo
 
-After you’ve created and set up your GitHub account and tools, you can create a personal version of your repo. This is where you will create your branches and make all your changes.
+After you've created and set up your GitHub account and tools, you can create a personal version of your repo. This is where you will create your branches and make all your changes.
 
 ### Fork the repository
 
@@ -58,7 +68,7 @@ You need to clone the repo get a local copy of the repo on to your local device.
 
 2. Select **Generate new token**, give your token a meaningful and unique name, select all the available scopes, and then select **Generate token**.
 
-3. Copy the token and put it somewhere safe. You’ll need this for the rest of the process and after you leave the page, you won’t be able to get back to it.
+3. Copy the token and put it somewhere safe. You'll need this for the rest of the process and after you leave the page, you won't be able to get back to it.
 
 4. Open a Git Bash command and change directories to where you want to store your repo. We recommend using, `C:\users\<your_name>\GitHub`.
 
@@ -90,7 +100,7 @@ You need to clone the repo get a local copy of the repo on to your local device.
     upstream https://github.com/MicrosoftDocs/windowsserverdocs-pr.git (push)
     ```
 
-    If your remote output doesn’t look like this, you can try again by first running `git remote remove upstream`.
+    If your remote output doesn't look like this, you can try again by first running `git remote remove upstream`.
 
 ## Create a branch and a new article
 
@@ -115,7 +125,7 @@ Before you can start to work on your content, you must create a new branch in yo
     >[!Note]
     >We highly recommend naming your branch something obvious and unique so you can find it again later.
 
-    After the commands finish, you’ll be in your new branch and ready to create your new file. You only need to change into the windowsserverdocs-pr repo once per instance of your Git Bash. If you close Git Bash, you will need to change directories again after you open it.
+    After the commands finish, you'll be in your new branch and ready to create your new file. You only need to change into the windowsserverdocs-pr repo once per instance of your Git Bash. If you close Git Bash, you will need to change directories again after you open it.
 
 #### To create a new file in your branch
 
@@ -127,7 +137,9 @@ Before you can start to work on your content, you must create a new branch in yo
 
 3. From the **Explorer** pane, select your new file.
 
-4. Add your text to the page, and then select **File** > **Save**.
+4. Add your text to the page. If you're creating a new article, make sure you [Add the required metadata tags to your Windows Server-related article](metadata-requirements-for-articles.md).
+
+5. Select **File** > **Save**.
 
 ### Preview your text
 
@@ -180,7 +192,7 @@ After you've completed your article, you must get approval from your writer (all
 
     A member of the _windowsservercontent_ alias will review your changes or add comments about things that must be changed before merging can happen.
 
-3. Type **#sign-off** into the comments so that the reviewers know you’re handing off for both review and publishing. The **#sign-off** comment:
+3. Type **#sign-off** into the comments so that the reviewers know you're handing off for both review and publishing. The **#sign-off** comment:
 
     - Updates the label for your pull request from **do-not-merge** to **ready-to merge**.
 
@@ -191,7 +203,7 @@ After you've completed your article, you must get approval from your writer (all
     >[!Important]
     >After you add the #sign-off comment, a member of the windowsservercontent team will review the text and push it to master so it will go out with the next scheduled publish to live (10:30am and 3:30pm weekdays).
     >
-    >If you don’t add #sign-off as a final comment to your PR, your content will remain in the queue without being pushed to Master and ultimately to Live.
+    >If you don't add #sign-off as a final comment to your PR, your content will remain in the queue without being pushed to Master and ultimately to Live.
 
 ## Related information
 
@@ -199,14 +211,16 @@ For more information about GitHub and the markdown language, see:
 
 ### Git concepts
 
-* https://guides.github.com/introduction/git-handbook/ 
+- [GitHub Guides-Git Handbook Intro](https://guides.github.com/introduction/git-handbook/)
 
-* https://guides.github.com/activities/forking/
+- [GitHub Guides-Forking projects](https://guides.github.com/activities/forking/)
 
-* https://guides.github.com/introduction/flow/
+- [GitHub Guides-Understanding the GitHub flow](https://guides.github.com/introduction/flow/)
 
-* https://learngitbranching.js.org/ (Great for visual learners!)
+- [Learn Git Branching](https://learngitbranching.js.org/ (Great for visual learners!))
 
 ### Markdown
 
-* https://www.markdowntutorial.com/
+- [Our internal markdown guidance](https://review.docs.microsoft.com/help/contribute/markdown-reference?branch=master)
+
+- [External, GitHub tutorial](https://www.markdowntutorial.com/)

@@ -8,7 +8,7 @@ ms.date: 11/05/2018
 
 # HCN JSON document schemas
 
->Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019
 
 ## HCN schema
 
@@ -131,11 +131,12 @@ ms.date: 11/05/2018
     "Type" : "PortMapping",
     "Protocol" : <enum>,
          // AsString; Values: 
-         // "TCP" (0),
-         // "UDP" (1),
-         // "ICMPv4" (2),
-         // "ICMPv6" (3),
-         // "IGMP" (4),
+         // "Unknown" (0),
+         // "ICMPv4" (1),
+         // "IGMP" (2),
+         // "TCP" (6),
+         // "UDP" (17),
+         // "ICMPv6" (58)
     "InternalPort" : <uint16>,
     "ExternalPort" : <uint16>,
 }
@@ -163,11 +164,12 @@ ms.date: 11/05/2018
         "Type" : "PortMapping",
         "Protocol" : <enum>,
              // AsString; Values: 
-             // "TCP" (0),
-             // "UDP" (1),
-             // "ICMPv4" (2),
-             // "ICMPv6" (3),
-             // "IGMP" (4),
+             // "Unknown" (0),
+             // "ICMPv4" (1),
+             // "IGMP" (2),
+             // "TCP" (6),
+             // "UDP" (17),
+             // "ICMPv6" (58)
         "InternalPort" : <uint16>,
         "ExternalPort" : <uint16>,
     } ],

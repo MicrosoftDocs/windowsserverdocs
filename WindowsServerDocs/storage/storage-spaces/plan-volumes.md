@@ -1,13 +1,13 @@
 ---
 ms.assetid: 342173ca-4e10-44f4-b2c9-02a6c26f7a4a
 title: Planning volumes in Storage Spaces Direct
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.author: cosdar
 ms.manager: eldenc
 ms.technology: storage-spaces
 ms.topic: article
 author: cosmosdarwin
-ms.date: 01/10/2019
+ms.date: 06/28/2019
 ms.localizationpriority: medium
 ---
 # Planning volumes in Storage Spaces Direct
@@ -18,14 +18,14 @@ This topic provides guidance for how to plan volumes in Storage Spaces Direct to
 
 ## Review: What are volumes
 
-Volumes are the datastores where you put the files your workloads need, such as VHD or VHDX files for Hyper-V virtual machines. Volumes combine the drives in the storage pool to introduce the fault tolerance, scalability, and performance benefits of Storage Spaces Direct.
+Volumes are where you put the files your workloads need, such as VHD or VHDX files for Hyper-V virtual machines. Volumes combine the drives in the storage pool to introduce the fault tolerance, scalability, and performance benefits of Storage Spaces Direct.
 
    >[!NOTE]
    > Throughout documentation for Storage Spaces Direct, we use term "volume" to refer jointly to the volume and the virtual disk under it, including functionality provided by other built-in Windows features such as Cluster Shared Volumes (CSV) and ReFS. Understanding these implementation-level distinctions is not necessary to plan and deploy Storage Spaces Direct successfully.
 
 ![what-are-volumes](media/plan-volumes/what-are-volumes.png)
 
-All volumes are accessible by all servers in the cluster at the same time. Once created, they show up at **C:\ClusterStorage\** on all servers.
+All volumes are accessible by all servers in the cluster at the same time. Once created, they show up at **C:\ClusterStorage\\** on all servers.
 
 ![csv-folder-screenshot](media/plan-volumes/csv-folder-screenshot.png)
 
@@ -45,45 +45,49 @@ We recommend using the new [Resilient File System (ReFS)](../refs/refs-overview.
 
 If your workload requires a feature that ReFS doesn't support yet, you can use NTFS instead.
 
-   >[!TIP]
+   > [!TIP]
    > Volumes with different file systems can coexist in the same cluster.
 
 ## Choosing the resiliency type
 
 Volumes in Storage Spaces Direct provide resiliency to protect against hardware problems, such as drive or server failures, and to enable continuous availability throughout server maintenance, such as software updates.
 
-   >[!NOTE]
+   > [!NOTE]
    > Which resiliency types you can choose is independent of which types of drives you have.
 
 ### With two servers
 
-The only option for clusters with two servers is two-way mirroring. This keeps two copies of all data, one copy on the drives in each server. Its storage efficiency is 50% – to write 1 TB of data, you need at least 2 TB of physical storage capacity in the storage pool. Two-way mirroring can safely tolerate one hardware failure (drive or server) at a time.
+With two servers in the cluster, you can use two-way mirroring. If you're running Windows Server 2019, you can also use nested resiliency.
+
+Two-way mirroring keeps two copies of all data, one copy on the drives in each server. Its storage efficiency is 50%—to write 1 TB of data, you need at least 2 TB of physical storage capacity in the storage pool. Two-way mirroring can safely tolerate one hardware failure at a time (one server or drive).
 
 ![two-way-mirror](media/plan-volumes/two-way-mirror.png)
 
-If you have more than two servers, we recommend using one of the following resiliency types instead.
+Nested resiliency (available only on Windows Server 2019) provides data resiliency between servers with two-way mirroring, then adds resiliency within a server with two-way mirroring or mirror-accelerated parity. Nesting provides data resilience even when one server is restarting or unavailable. Its storage efficiency is 25% with nested two-way mirroring and around 35-40% for nested mirror-accelerated parity. Nested resiliency can safely tolerate two hardware failures at a time (two drives, or a server and a drive on the remaining server). Because of this added data resilience, we recommend using nested resiliency on production deployments of two-server clusters, if you're running Windows Server 2019. For more info, see [Nested resiliency](nested-resiliency.md).
+
+![Nested mirror-accelerated parity](media/nested-resiliency/nested-mirror-accelerated-parity.png)
 
 ### With three servers
 
-With three servers, you should use three-way mirroring for better fault tolerance and performance. Three-way mirroring keeps three copies of all data, one copy on the drives in each server. Its storage efficiency is 33.3% – to write 1 TB of data, you need at least 3 TB of physical storage capacity in the storage pool. Three-way mirroring can safely tolerate [at least two hardware problems (drive or server) at a time](storage-spaces-fault-tolerance.md#examples). If 2 nodes become unavailable the storage pool will lose quorum, since 2/3 of the disks are not availalbe, and the virtual disks will be unaccessible. However, a node can be down and one or more disks on another node can fail and the virtual disks will remain online. For example, if you're rebooting one server when suddenly another drive or server fails, all data remains safe and continuously accessible.
+With three servers, you should use three-way mirroring for better fault tolerance and performance. Three-way mirroring keeps three copies of all data, one copy on the drives in each server. Its storage efficiency is 33.3% – to write 1 TB of data, you need at least 3 TB of physical storage capacity in the storage pool. Three-way mirroring can safely tolerate [at least two hardware problems (drive or server) at a time](storage-spaces-fault-tolerance.md#examples). If 2 nodes become unavailable the storage pool will lose quorum, since 2/3 of the disks are not available, and the virtual disks will be unaccessible. However, a node can be down and one or more disks on another node can fail and the virtual disks will remain online. For example, if you're rebooting one server when suddenly another drive or server fails, all data remains safe and continuously accessible.
 
 ![three-way-mirror](media/plan-volumes/three-way-mirror.png)
 
 ### With four or more servers
 
-With four or more servers, you can choose for each volume whether to use three-way mirroring, dual parity (often called "erasure coding"), or mix the two.
+With four or more servers, you can choose for each volume whether to use three-way mirroring, dual parity (often called "erasure coding"), or mix the two with mirror-accelerated parity.
 
-Dual parity provides the same fault tolerance as three-way mirroring but with better storage efficiency. With four servers, its storage efficiency is 50.0% – to store 2 TB of data, you need 4 TB of physical storage capacity in the storage pool. This increases to 66.7% storage efficiency with seven servers, and continues up to 80.0% storage efficiency. The tradeoff is that parity encoding is more compute-intensive, which can limit its performance.
+Dual parity provides the same fault tolerance as three-way mirroring but with better storage efficiency. With four servers, its storage efficiency is 50.0%—to store 2 TB of data, you need 4 TB of physical storage capacity in the storage pool. This increases to 66.7% storage efficiency with seven servers, and continues up to 80.0% storage efficiency. The tradeoff is that parity encoding is more compute-intensive, which can limit its performance.
 
 ![dual-parity](media/plan-volumes/dual-parity.png)
 
 Which resiliency type to use depends on the needs of your workload. Here's a table that summarizes which workloads are a good fit for each resiliency type, as well as the performance and storage efficiency of each resiliency type.
 
-| **Resiliency type**| **Capacity efficiency**| **Speed**| **Workloads**
-|--------------------|--------------------------------|--------------------------------|--------------------------
-| **Mirror**         | ![Storage efficiency showing 33%](media\plan-volumes\3-way-mirror-storage-efficiency.png)<br>Three-way mirror: 33% <br>Two-way-mirror: 50%     |![Performance showing 100%](media\plan-volumes\three-way-mirror-perf.png)<br> Highest performance  | Virtualized workloads<br> Databases<br>Other high performance workloads |
-| **Mirror-accelerated parity** |![Storage efficiency showing around 50%](media\plan-volumes\mirror-accelerated-parity-storage-efficiency.png)<br> Depends on proportion of mirror and parity | ![Performance showing around 20%](media\plan-volumes\mirror-accelerated-parity-perf.png)<br>Much slower than mirror, but up to twice as fast as dual-parity<br> Best for large sequential writes and reads | Archival and backup<br> Virtualized desktop infrastructure     |
-| **Dual-parity**               | ![Storage efficiency showing around 80%](media\plan-volumes\dual-parity-storage-efficiency.png)<br>4 servers: 50% <br>16 servers: up to 80% | ![Performance showing around 10%](media\plan-volumes\dual-parity-perf.png)<br>Highest I/O latency & CPU usage on writes<br> Best for large sequential writes and reads | Archival and backup<br> Virtualized desktop infrastructure  |
+| Resiliency type | Capacity efficiency | Speed | Workloads |
+| ------------------- | ----------------------  | --------- | ------------- |
+| **Mirror**         | ![Storage efficiency showing 33%](media/plan-volumes/3-way-mirror-storage-efficiency.png)<br>Three-way mirror: 33% <br>Two-way-mirror: 50%     |![Performance showing 100%](media/plan-volumes/three-way-mirror-perf.png)<br> Highest performance  | Virtualized workloads<br> Databases<br>Other high performance workloads |
+| **Mirror-accelerated parity** |![Storage efficiency showing around 50%](media/plan-volumes/mirror-accelerated-parity-storage-efficiency.png)<br> Depends on proportion of mirror and parity | ![Performance showing around 20%](media/plan-volumes/mirror-accelerated-parity-perf.png)<br>Much slower than mirror, but up to twice as fast as dual-parity<br> Best for large sequential writes and reads | Archival and backup<br> Virtualized desktop infrastructure     |
+| **Dual-parity**               | ![Storage efficiency showing around 80%](media/plan-volumes/dual-parity-storage-efficiency.png)<br>4 servers: 50% <br>16 servers: up to 80% | ![Performance showing around 10%](media/plan-volumes/dual-parity-perf.png)<br>Highest I/O latency & CPU usage on writes<br> Best for large sequential writes and reads | Archival and backup<br> Virtualized desktop infrastructure  |
 
 #### When performance matters most
 
@@ -102,8 +106,8 @@ Workloads that write in large, sequential passes, such as archival or backup tar
 
 The resulting storage efficiency depends on the proportions you choose. See [this demo](https://www.youtube.com/watch?v=-LK2ViRGbWs&t=36m55s) for some examples.
 
-   >[!TIP]
-   > If you observe an abrupt decrease in write performance partway through data injestion, it may indicate that the mirror portion is not large enough or that mirror-accelerated parity isn't well suited for your use case. As an example, if write performance decreases from 400 MB/s to 40 MB/s, consider expanding the mirror portion or switching to three-way mirror.
+   > [!TIP]
+   > If you observe an abrupt decrease in write performance partway through data ingestion, it may indicate that the mirror portion is not large enough or that mirror-accelerated parity isn't well suited for your use case. As an example, if write performance decreases from 400 MB/s to 40 MB/s, consider expanding the mirror portion or switching to three-way mirror.
 
 ### About deployments with NVMe, SSD, and HDD
 
@@ -111,7 +115,7 @@ In deployments with two types of drives, the faster drives provide caching while
 
 In deployments with all three types of drives, only the fastest drives (NVMe) provide caching, leaving two types of drives (SSD and HDD) to provide capacity. For each volume, you can choose whether it resides entirely on the SSD tier, entirely on the HDD tier, or whether it spans the two.
 
-   >[!IMPORTANT]
+   > [!IMPORTANT]
    > We recommend using the SSD tier to place your most performance-sensitive workloads on all-flash.
 
 ## Choosing the size of volumes
@@ -119,11 +123,11 @@ In deployments with all three types of drives, only the fastest drives (NVMe) pr
 We recommend limiting the size of each volume to:
 
 | Windows Server 2016 | Windows Server 2019 |
-|---------------------|---------------------|
+| ------------------- | ------------------- |
 | Up to 32 TB         | Up to 64 TB         |
 
-   >[!TIP]
-   > If you use a backup solution that relies on the Volume Shadow Copy service (VSS) and the Volsnap software provider – as is common with file server workloads - limiting the volume size to 10 TB will improve performance and reliability. Backup solutions that use the newer Hyper-V RCT API and/or ReFS block cloning and/or the native SQL backup APIs perform well up to 32 TB and beyond.
+   > [!TIP]
+   > If you use a backup solution that relies on the Volume Shadow Copy service (VSS) and the Volsnap software provider—as is common with file server workloads—limiting the volume size to 10 TB will improve performance and reliability. Backup solutions that use the newer Hyper-V RCT API and/or ReFS block cloning and/or the native SQL backup APIs perform well up to 32 TB and beyond.
 
 ### Footprint
 

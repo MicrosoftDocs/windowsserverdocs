@@ -7,7 +7,7 @@ author: haley-rowland
 ms.author: harowl
 ms.date: 09/07/2018
 ms.localizationpriority: medium
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ---
 
 # Manage Azure IaaS virtual machines with Windows Admin Center
@@ -27,22 +27,22 @@ If your target VMs (the VMs you want to manage with Windows Admin Center) have p
 - You must enable WinRM access to your target VM by running the following in PowerShell or the Command Prompt on the target VM: `winrm quickconfig`
 - If you haven't domain-joined the Azure VM, the VM behaves like a server in workgroup, so you'll need to make sure you account for [using Windows Admin Center in a workgroup](../support/troubleshooting.md#using-windows-admin-center-in-a-workgroup).
 - You must also enable inbound connections to port 5985 for WinRM over HTTP in order for Windows Admin Center to manage the target VM:
-   1. Run the following PowerShell script on the target VM to enable inbound connections to port 5985 on the guest OS:   
-`Set-NetFirewallRule -Name WINRM-HTTP-In-TCP-PUBLIC -RemoteAddress Any`
+  1. Run the following PowerShell script on the target VM to enable inbound connections to port 5985 on the guest OS:   
+     `Set-NetFirewallRule -Name WINRM-HTTP-In-TCP-PUBLIC -RemoteAddress Any`
 
-   2. You must also open the port in Azure networking:
+  2. You must also open the port in Azure networking:
 
-    - Select your Azure VM, select **Networking**, then **Add inbound port rule**. 
-    - Ensure **Basic** is selected at the top of the **Add inbound security rule** pane.
-    - In the **Port ranges** field, enter **5985**.
+     - Select your Azure VM, select **Networking**, then **Add inbound port rule**. 
+     - Ensure **Basic** is selected at the top of the **Add inbound security rule** pane.
+     - In the **Port ranges** field, enter **5985**.
     
-    If your Windows Admin Center gateway has a static IP, you can select to allow only inbound WinRM access from your Windows Admin Center gateway for added security.
-    To do this, select **Advanced** at the top of the **Add inbound security rule** pane.
+     If your Windows Admin Center gateway has a static IP, you can select to allow only inbound WinRM access from your Windows Admin Center gateway for added security.
+     To do this, select **Advanced** at the top of the **Add inbound security rule** pane.
 
-    For **Source**, select **IP Addresses**, then enter the Source IP address corresponding to your Windows Admin Center gateway.
+     For **Source**, select **IP Addresses**, then enter the Source IP address corresponding to your Windows Admin Center gateway.
 
-    - For **Protocol** select **TCP**.
-    - The rest can be left as default.
+     - For **Protocol** select **TCP**.
+     - The rest can be left as default.
 
 > [!NOTE]
 > You must create a custom port rule. The WinRM port rule provided by Azure networking uses port 5986 (over HTTPS) instead of 5985 (over HTTP). 

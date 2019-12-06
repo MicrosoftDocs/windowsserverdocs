@@ -7,14 +7,12 @@ ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 
 ms.technology: identity-adfs
 ---
 
 # Create a Claims Provider Trust
-
->Applies To: Windows Server 2016, Windows Server 2012 R2
 
 To add a new claims provider trust by using the AD FS Management snap\-in and manually configure the settings, perform the following procedure on a resource partner federation server in the resource partner organization.  
   
@@ -55,7 +53,7 @@ Membership in **Administrators**, or equivalent, on the local computer is the mi
 To add a new claims provider trust, using the AD FS Management snap-in, by automatically importing configuration data about the partner from federation metadata that the partner has published to a local network or to the Internet, perform the following procedure on a federation server in the resource partner organization.
 
 >[!NOTE]
->Though it has long been common practice to use certificates with unqualified host names such as https://myserver, these certificates have no security value and can enable an attacker to impersonate a Federation Service that is publishing federation metadata. Therefore, when querying federation metadata, you should only use a fully qualified domain name such as https://myserver.contoso.com.
+>Though it has long been common practice to use certificates with unqualified host names such as https:\//myserver, these certificates have no security value and can enable an attacker to impersonate a Federation Service that is publishing federation metadata. Therefore, when querying federation metadata, you should only use a fully qualified domain name such as `https://myserver.contoso.com`.
 
 1.  In Server Manager, click **Tools**, and then select **AD FS Management**.  
   

@@ -2,7 +2,7 @@
 title: What's New in Windows Server
 description: "What are the new features in compute, identity, management, automation, networking, security, storage."
 ms.prod: windows-server
-ms.date: 04/10/2019
+ms.date: 08/22/2019
 ms.technology: server-general
 ms.topic: article
 author: jasongerend
@@ -11,7 +11,7 @@ ms.localizationpriority: medium
 ---
 # What's new in Windows Server
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016
+> Applies to: Windows Server 2019, Windows Server 2016, Windows Server (Semi-Annual Channel)
 
 You can find the new features for each of these Windows Server releases.  
 
@@ -22,11 +22,15 @@ Long-Term Servicing Channel (LTSC) releases:
 
 Semi-Annual Channel releases:
 
+- [What's New in Windows Server, versions 1903 and 1909](../get-started-19/whats-new-in-windows-server-1903-1909.md)
 - [What's New in Windows Server, version 1809](whats-new-in-windows-server-1809.md)
-- [What's New in Windows Server, version 1803](whats-new-in-windows-server-1803.md)
-- [What's New in Windows Server, version 1709](whats-new-in-windows-server-1709.md)
+- [What's New in Windows Server, version 1803](whats-new-in-windows-server-1803.md) (Out of support as of November 12, 2019)
+- [What's New in Windows Server, version 1709](whats-new-in-windows-server-1709.md) (Out of support as of April 9, 2019)
+
+Windows Server Semi-Annual Channel releases deliver new operating system capabilities at a faster pace. A new release comes out every six months and is supported for 18 months. Check [Windows Server release information](windows-server-release-info.md) and [Lifecycle Support Page](https://support.microsoft.com/lifecycle) for support dates and always use the latest release if possible.
 
 ## See also
 
 - [Release Notes: Important issues in Windows Server 2019](../get-started-19/rel-notes-19.md)
 - [Release Notes: Important Issues in Windows Server 2016](Windows-Server-2016-GA-Release-Notes.md)
+- [Features removed or planned for replacement in Windows Server](../get-started-19/removed-features.md)

@@ -3,11 +3,10 @@ title: Step 2 Plan Cluster Servers
 description: This topic is part of the guide Deploy Remote Access in a Cluster in Windows Server 2016.
 manager: brianlic
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
-ms.technology: 
-  - networking-ras
+ms.technology: networking-ras
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 673c5bfb-b590-4932-8e54-ca0a466d90cc

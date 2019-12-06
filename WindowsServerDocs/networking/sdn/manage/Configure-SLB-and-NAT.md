@@ -3,7 +3,7 @@ title: Configure the Software Load Balancer for Load Balancing and Network Addre
 description: This topic is part of the Software Defined Networking guide on how to Manage Tenant Workloads and Virtual Networks in Windows Server 2016.
 manager: dougkim
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: networking-sdn
@@ -103,22 +103,22 @@ In this example, you create a load balancer object with a public VIP and two VMs
     $LoadBalancerProperties.Probes += $Probe
    ```
 
-5.  Define a load balancing rule to send traffic that arrives at the front-end IP to the back-end IP.  In this example, the back-end pool receives TCP traffic to port 80.<p>Use the following example to define a load balancing rule:
+5. Define a load balancing rule to send traffic that arrives at the front-end IP to the back-end IP.  In this example, the back-end pool receives TCP traffic to port 80.<p>Use the following example to define a load balancing rule:
 
    ```PowerShell
-    $Rule = new-object Microsoft.Windows.NetworkController.LoadBalancingRule
-    $Rule.ResourceId = "webserver1"
+   $Rule = new-object Microsoft.Windows.NetworkController.LoadBalancingRule
+   $Rule.ResourceId = "webserver1"
 
-    $Rule.Properties = new-object Microsoft.Windows.NetworkController.LoadBalancingRuleProperties
-    $Rule.Properties.FrontEndIPConfigurations += $FrontEndIPConfig
-    $Rule.Properties.backendaddresspool = $BackEndAddressPool 
-    $Rule.Properties.protocol = "TCP"
-    $Rule.Properties.FrontEndPort = 80
-    $Rule.Properties.BackEndPort = 80
-    $Rule.Properties.IdleTimeoutInMinutes = 4
-    $Rule.Properties.Probe = $Probe
+   $Rule.Properties = new-object Microsoft.Windows.NetworkController.LoadBalancingRuleProperties
+   $Rule.Properties.FrontEndIPConfigurations += $FrontEndIPConfig
+   $Rule.Properties.backendaddresspool = $BackEndAddressPool 
+   $Rule.Properties.protocol = "TCP"
+   $Rule.Properties.FrontEndPort = 80
+   $Rule.Properties.BackEndPort = 80
+   $Rule.Properties.IdleTimeoutInMinutes = 4
+   $Rule.Properties.Probe = $Probe
 
-    $LoadBalancerProperties.loadbalancingRules += $Rule
+   $LoadBalancerProperties.loadbalancingRules += $Rule
    ```
 
 6. Add the load balancer configuration to Network Controller.<p>Use the following example to add the load balancer configuration to Network Controller:
@@ -132,7 +132,7 @@ In this example, you create a load balancer object with a public VIP and two VMs
 
 ## Example: Use SLB for outbound NAT
 
-In this example, you configure SLB with a back-end pool for providing outbound NAT capability for a VM on a virtual network’s private address space to reach outbound to the internet. 
+In this example, you configure SLB with a back-end pool for providing outbound NAT capability for a VM on a virtual network's private address space to reach outbound to the internet. 
 
 1. Create the load balancer properties, front-end IP, and back-end pool.
 
@@ -199,7 +199,7 @@ You can also repeat this process on a single network interface to add it to mult
    ```PowerShell
    $lbresourceid = "LB2"
    $lb = get-networkcontrollerloadbalancer -connectionuri $uri -resourceID $LBResourceId -PassInnerException
-  ```
+   ```
 
 2. Get the network interface and add the backendaddress pool to the loadbalancerbackendaddresspools array.
 
@@ -274,17 +274,17 @@ This example repeats the same action as the previous example, but it automatical
     PreviousIpConfiguration  :
    ```
  
-1. Assign the PublicIPAddress to a network interface.
+3. Assign the PublicIPAddress to a network interface.
 
    ```PowerShell
    $nic = get-networkcontrollernetworkinterface  -connectionuri $uri -resourceid 6daca142-7d94-0000-1111-c38c0141be06
    $nic.properties.IpConfigurations[0].Properties.PublicIPAddress = $publicIP
    New-NetworkControllerNetworkInterface -ConnectionUri $uri -ResourceId $nic.ResourceId -Properties $nic.properties -PassInnerException
    ```
-## Example: Remove a PublicIP address that is being used for forwarding traffic and return it to the VIP pool
-This example removes the PublicIPAddress resource that was created by the previous examples.  Once the PublicIPAddress is removed, the reference to the PublicIPAddress will automatically be removed from the network interface, the traffic will stop being forwarded, and the IP address will be returned to the Public VIP pool for re-use.  
+   ## Example: Remove a PublicIP address that is being used for forwarding traffic and return it to the VIP pool
+   This example removes the PublicIPAddress resource that was created by the previous examples.  Once the PublicIPAddress is removed, the reference to the PublicIPAddress will automatically be removed from the network interface, the traffic will stop being forwarded, and the IP address will be returned to the Public VIP pool for re-use.  
 
-1. Remove the PublicIP
+4. Remove the PublicIP
 
    ```PowerShell
    Remove-NetworkControllerPublicIPAddress -ConnectionURI $uri -ResourceId "MyPIP"

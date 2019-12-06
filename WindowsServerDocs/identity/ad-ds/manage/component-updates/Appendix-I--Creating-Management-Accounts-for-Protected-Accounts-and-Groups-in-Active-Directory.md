@@ -7,7 +7,7 @@ ms.author: joflore
 manager: mtillman
 ms.date: 05/31/2017
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 
 ms.technology: identity-adds
 ---
@@ -145,35 +145,35 @@ To create the management accounts, perform the following steps:
   
 10. On the **Object** tab, select **Protect object from accidental deletion**. This will not only prevent the object from being deleted (even by authorized users), but will prevent it from being moved to a different OU in your AD DS hierarchy, unless the check box is first cleared by a user with permission to change the attribute.  
 
-   ![creating management accounts](media/Appendix-I--Creating-Management-Accounts-for-Protected-Accounts-and-Groups-in-Active-Directory/SAD_125.png)  
+    ![creating management accounts](media/Appendix-I--Creating-Management-Accounts-for-Protected-Accounts-and-Groups-in-Active-Directory/SAD_125.png)  
 
 11. Click the **Remote control** tab.  
 
 12. Clear the **Enable remote control** flag. It should never be necessary for support staff to connect to this account's sessions to implement fixes.  
 
-   ![creating management accounts](media/Appendix-I--Creating-Management-Accounts-for-Protected-Accounts-and-Groups-in-Active-Directory/SAD_126.png)  
+    ![creating management accounts](media/Appendix-I--Creating-Management-Accounts-for-Protected-Accounts-and-Groups-in-Active-Directory/SAD_126.png)  
 
-   > [!NOTE]  
-   > Every object in Active Directory should have a designated IT owner and a designated business owner, as described in [Planning for Compromise](../../../ad-ds/plan/security-best-practices/Planning-for-Compromise.md). If you are tracking ownership of AD DS objects in Active Directory (as opposed to an external database), you should enter appropriate ownership information in this object's properties.  
-   >
-   > In this case, the business owner is most likely an IT division, andthere is no prohibition on business owners also being IT owners. The point of establishing ownership of objects is to allow you to identify contacts when changes need to be made to the objects, perhaps years from their initial creation.  
+    > [!NOTE]  
+    > Every object in Active Directory should have a designated IT owner and a designated business owner, as described in [Planning for Compromise](../../../ad-ds/plan/security-best-practices/Planning-for-Compromise.md). If you are tracking ownership of AD DS objects in Active Directory (as opposed to an external database), you should enter appropriate ownership information in this object's properties.  
+    >
+    > In this case, the business owner is most likely an IT division, andthere is no prohibition on business owners also being IT owners. The point of establishing ownership of objects is to allow you to identify contacts when changes need to be made to the objects, perhaps years from their initial creation.  
 
 13. Click on the **Organization** tab.  
 
 14. Enter any information that is required in your AD DS object standards.  
 
-   ![creating management accounts](media/Appendix-I--Creating-Management-Accounts-for-Protected-Accounts-and-Groups-in-Active-Directory/SAD_127.png)  
+    ![creating management accounts](media/Appendix-I--Creating-Management-Accounts-for-Protected-Accounts-and-Groups-in-Active-Directory/SAD_127.png)  
 
 15. Click on the **Dial-in** tab.  
 
 16. In the **Network Access Permission** field, select **Deny access**.This account should never need to connect over a remote connection.  
 
-   ![creating management accounts](media/Appendix-I--Creating-Management-Accounts-for-Protected-Accounts-and-Groups-in-Active-Directory/SAD_128.png)  
+    ![creating management accounts](media/Appendix-I--Creating-Management-Accounts-for-Protected-Accounts-and-Groups-in-Active-Directory/SAD_128.png)  
 
-   > [!NOTE]  
-   > It is unlikely that this account will be used to log on to read-only domain controllers (RODCs) in your environment. However, should circumstance ever require the account to log on to an RODC, you should add this account to the Denied RODC Password Replication Group so that its password is not cached on the RODC.  
-   >
-   > Although the account's password should be reset after each use and the account should be disabled, implementing this setting does not have a deleterious effect on the account, and it might help in situations in which an administrator forgets to reset the account's password and disable it.  
+    > [!NOTE]  
+    > It is unlikely that this account will be used to log on to read-only domain controllers (RODCs) in your environment. However, should circumstance ever require the account to log on to an RODC, you should add this account to the Denied RODC Password Replication Group so that its password is not cached on the RODC.  
+    >
+    > Although the account's password should be reset after each use and the account should be disabled, implementing this setting does not have a deleterious effect on the account, and it might help in situations in which an administrator forgets to reset the account's password and disable it.  
 
 17. Click the **Member Of** tab.  
 
@@ -183,42 +183,42 @@ To create the management accounts, perform the following steps:
 
 20. Click **OK**.  
 
-   ![creating management accounts](media/Appendix-I--Creating-Management-Accounts-for-Protected-Accounts-and-Groups-in-Active-Directory/SAD_129.png)  
+    ![creating management accounts](media/Appendix-I--Creating-Management-Accounts-for-Protected-Accounts-and-Groups-in-Active-Directory/SAD_129.png)  
 
 21. Click the **Security** tab and click **Advanced**.  
 
 22. In the **Advanced Security Settings** dialog box, click **Disable inheritance** and copy the inherited permissions as explicit permissions, and click **Add**.  
 
-   ![creating management accounts](media/Appendix-I--Creating-Management-Accounts-for-Protected-Accounts-and-Groups-in-Active-Directory/SAD_130.png)  
+    ![creating management accounts](media/Appendix-I--Creating-Management-Accounts-for-Protected-Accounts-and-Groups-in-Active-Directory/SAD_130.png)  
 
 23. In the **Permission Entry for [Account]** dialog box, click **Select a principal** and add the group you created in the previous procedure. Scroll to the bottom of the dialog box and click **Clear all** to remove all default permissions.  
 
-   ![creating management accounts](media/Appendix-I--Creating-Management-Accounts-for-Protected-Accounts-and-Groups-in-Active-Directory/SAD_131.png)  
+    ![creating management accounts](media/Appendix-I--Creating-Management-Accounts-for-Protected-Accounts-and-Groups-in-Active-Directory/SAD_131.png)  
 
 24. Scroll to the top of the **Permission Entry** dialog box. Ensure that the **Type** drop-down list is set to **Allow**, and in the **Applies to** drop-down list, select **This object only**.  
 
 25. In the **Permissions** field, select **Read all properties**, **Read permissions**, and **Reset password**.  
 
-   ![creating management accounts](media/Appendix-I--Creating-Management-Accounts-for-Protected-Accounts-and-Groups-in-Active-Directory/SAD_132.png)  
+    ![creating management accounts](media/Appendix-I--Creating-Management-Accounts-for-Protected-Accounts-and-Groups-in-Active-Directory/SAD_132.png)  
 
 26. In the **Properties** field, select **Read userAccountControl** and **Write userAccountControl**.  
 
 27. Click **OK**, **OK** again in the **Advanced Security Settings** dialog box.  
 
-   ![creating management accounts](media/Appendix-I--Creating-Management-Accounts-for-Protected-Accounts-and-Groups-in-Active-Directory/SAD_133.png)  
+    ![creating management accounts](media/Appendix-I--Creating-Management-Accounts-for-Protected-Accounts-and-Groups-in-Active-Directory/SAD_133.png)  
 
-   > [!NOTE]  
-   > The **userAccountControl** attribute controls multiple account configuration options. You cannot grant permission to change only some of the configuration options when you grant write permission to the attribute.  
+    > [!NOTE]  
+    > The **userAccountControl** attribute controls multiple account configuration options. You cannot grant permission to change only some of the configuration options when you grant write permission to the attribute.  
 
 28. In the **Group or user names** field of the **Security** tab, remove any groups that should not be permitted to access or manage the account. Do not remove any groups that have been configured with Deny ACEs, such as the Everyone group and the SELF computed account (that ACE was set when the **user cannot change password** flag was enabled during creation of the account. Also do not remove the group you just added, the SYSTEM account, or groups such as EA, DA, BA, or the Windows Authorization Access Group.  
 
-   ![creating management accounts](media/Appendix-I--Creating-Management-Accounts-for-Protected-Accounts-and-Groups-in-Active-Directory/SAD_134.png)  
+    ![creating management accounts](media/Appendix-I--Creating-Management-Accounts-for-Protected-Accounts-and-Groups-in-Active-Directory/SAD_134.png)  
 
 29. Click **Advanced** and verify that the Advanced Security Settings dialog box looks similar to the following screenshot.  
 
 30. Click **OK**, and **OK** again to close the account's property dialog box.  
 
-   ![creating management accounts](media/Appendix-I--Creating-Management-Accounts-for-Protected-Accounts-and-Groups-in-Active-Directory/SAD_135.png)  
+    ![creating management accounts](media/Appendix-I--Creating-Management-Accounts-for-Protected-Accounts-and-Groups-in-Active-Directory/SAD_135.png)  
 
 31. Setup of the first management account is now complete. You will test the account in a later procedure.  
 
@@ -246,56 +246,56 @@ As discussed in [Appendix C: Protected Accounts and Groups in Active Directory](
   
 In this case, you will be granting the newly created management accounts to allow them to read and write the members attribute on group objects. However, the AdminSDHolder object is not a group object and group attributes are not exposed in the graphical ACL editor. It is for this reason that you will implement the permissions changes via the Dsacls command-line utility. To grant the (disabled) management accounts permissions to modify the membership of protected groups, perform the following steps:  
   
-1.  Log on to a domain controller, preferably the domain controller holding the PDC Emulator (PDCE) role, with the credentials of a user account that has been made a member of the DA group in the domain.  
+1. Log on to a domain controller, preferably the domain controller holding the PDC Emulator (PDCE) role, with the credentials of a user account that has been made a member of the DA group in the domain.  
   
-    ![creating management accounts](media/Appendix-I--Creating-Management-Accounts-for-Protected-Accounts-and-Groups-in-Active-Directory/SAD_136.png)  
+   ![creating management accounts](media/Appendix-I--Creating-Management-Accounts-for-Protected-Accounts-and-Groups-in-Active-Directory/SAD_136.png)  
   
-2.  Open an elevated command prompt by right-clicking **Command Prompt** and click **Run as administrator**.  
+2. Open an elevated command prompt by right-clicking **Command Prompt** and click **Run as administrator**.  
   
-    ![creating management accounts](media/Appendix-I--Creating-Management-Accounts-for-Protected-Accounts-and-Groups-in-Active-Directory/SAD_137.gif)  
+   ![creating management accounts](media/Appendix-I--Creating-Management-Accounts-for-Protected-Accounts-and-Groups-in-Active-Directory/SAD_137.gif)  
   
-3.  When prompted to approve the elevation, click **Yes**.  
+3. When prompted to approve the elevation, click **Yes**.  
   
-    ![creating management accounts](media/Appendix-I--Creating-Management-Accounts-for-Protected-Accounts-and-Groups-in-Active-Directory/SAD_138.gif)  
+   ![creating management accounts](media/Appendix-I--Creating-Management-Accounts-for-Protected-Accounts-and-Groups-in-Active-Directory/SAD_138.gif)  
   
-    > [!NOTE]  
-    > For more information about elevation and user account control (UAC) in Windows, see [UAC Processes and Interactions](https://technet.microsoft.com/library/dd835561(v=WS.10).aspx) on the TechNet website.  
+   > [!NOTE]  
+   > For more information about elevation and user account control (UAC) in Windows, see [UAC Processes and Interactions](https://technet.microsoft.com/library/dd835561(v=WS.10).aspx) on the TechNet website.  
   
-4.  At the Command Prompt, type (substituting your domain-specific information) **Dsacls [distinguished name of the AdminSDHolder object in your domain] /G [management account UPN]:RPWP;member**.  
+4. At the Command Prompt, type (substituting your domain-specific information) **Dsacls [distinguished name of the AdminSDHolder object in your domain] /G [management account UPN]:RPWP;member**.  
   
-    ![creating management accounts](media/Appendix-I--Creating-Management-Accounts-for-Protected-Accounts-and-Groups-in-Active-Directory/SAD_139.gif)  
+   ![creating management accounts](media/Appendix-I--Creating-Management-Accounts-for-Protected-Accounts-and-Groups-in-Active-Directory/SAD_139.gif)  
   
-    The previous command (which is not case-sensitive) works as follows:  
+   The previous command (which is not case-sensitive) works as follows:  
   
-    -   Dsacls sets or displays ACEs on directory objects  
+   - Dsacls sets or displays ACEs on directory objects  
   
-    -   CN=AdminSDHolder,CN=System,DC=TailSpinToys,DC=msft identifies the object to be modified  
+   - CN=AdminSDHolder,CN=System,DC=TailSpinToys,DC=msft identifies the object to be modified  
   
-    -   /G indicates that a grant ACE is being configured  
+   - /G indicates that a grant ACE is being configured  
   
-    -   PIM001@tailspintoys.msft is the User Principal Name (UPN) of the security principal to which the ACEs will be granted  
+   - PIM001@tailspintoys.msft is the User Principal Name (UPN) of the security principal to which the ACEs will be granted  
   
-    -   RPWP grants read property and write property permissions  
+   - RPWP grants read property and write property permissions  
   
-    -   Member is the name of the property (attribute) on which the permissions will be set  
+   - Member is the name of the property (attribute) on which the permissions will be set  
   
-    For more information about use of **Dsacls**, type Dsacls without any parameters at a command prompt.  
+   For more information about use of **Dsacls**, type Dsacls without any parameters at a command prompt.  
   
-    If you have created multiple management accounts for the domain, you should run the Dsacls command for each account. When you have completed the ACL configuration on the AdminSDHolder object, you should force SDProp to run, or wait until its scheduled run completes. For information about forcing SDProp to run, see "Running SDProp Manually" in [Appendix C: Protected Accounts and Groups in Active Directory](../../../ad-ds/plan/security-best-practices/Appendix-C--Protected-Accounts-and-Groups-in-Active-Directory.md).  
+   If you have created multiple management accounts for the domain, you should run the Dsacls command for each account. When you have completed the ACL configuration on the AdminSDHolder object, you should force SDProp to run, or wait until its scheduled run completes. For information about forcing SDProp to run, see "Running SDProp Manually" in [Appendix C: Protected Accounts and Groups in Active Directory](../../../ad-ds/plan/security-best-practices/Appendix-C--Protected-Accounts-and-Groups-in-Active-Directory.md).  
   
-    When SDProp has run, you can verify that the changes you made to the AdminSDHolder object have been applied to protected groups in the domain. You cannot verify this by viewing the ACL on the AdminSDHolder object for the reasons previously described, but you can verify that the permissions have been applied by viewing the ACLs on protected groups.  
+   When SDProp has run, you can verify that the changes you made to the AdminSDHolder object have been applied to protected groups in the domain. You cannot verify this by viewing the ACL on the AdminSDHolder object for the reasons previously described, but you can verify that the permissions have been applied by viewing the ACLs on protected groups.  
   
-5.  In **Active Directory Users and Computers**, verify that you have enabled **Advanced Features**. To do so, click **View**, locate the **Domain Admins** group, right-click the group and click **Properties**.  
+5. In **Active Directory Users and Computers**, verify that you have enabled **Advanced Features**. To do so, click **View**, locate the **Domain Admins** group, right-click the group and click **Properties**.  
   
-6.  Click the **Security** tab and click **Advanced** to open the **Advanced Security Settings for Domain Admins** dialog box.  
+6. Click the **Security** tab and click **Advanced** to open the **Advanced Security Settings for Domain Admins** dialog box.  
   
-    ![creating management accounts](media/Appendix-I--Creating-Management-Accounts-for-Protected-Accounts-and-Groups-in-Active-Directory/SAD_140.gif)  
+   ![creating management accounts](media/Appendix-I--Creating-Management-Accounts-for-Protected-Accounts-and-Groups-in-Active-Directory/SAD_140.gif)  
   
-7.  Select **Allow ACE for the management account** and click **Edit**. Verify that the account has been granted only **Read Members** and **Write Members** permissions on the DA group, and click **OK**.  
+7. Select **Allow ACE for the management account** and click **Edit**. Verify that the account has been granted only **Read Members** and **Write Members** permissions on the DA group, and click **OK**.  
   
-8.  Click **OK** in the **Advanced Security Settings** dialog box, and click **OK** again to close the property dialog box for the DA group.  
+8. Click **OK** in the **Advanced Security Settings** dialog box, and click **OK** again to close the property dialog box for the DA group.  
   
-    ![creating management accounts](media/Appendix-I--Creating-Management-Accounts-for-Protected-Accounts-and-Groups-in-Active-Directory/SAD_141.gif)  
+   ![creating management accounts](media/Appendix-I--Creating-Management-Accounts-for-Protected-Accounts-and-Groups-in-Active-Directory/SAD_141.gif)  
   
 9. You can repeat the previous steps for other protected groups in the domain; the permissions should be the same for all protected groups. You have now completed creation and configuration of the management accounts for the protected groups in this domain.  
   

@@ -2,7 +2,7 @@
 title: prnjobs
 description: Learn how to manage print jobs from the command line.
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -27,17 +27,18 @@ cscript Prnjobs {-z | -m | -x | -l | -?} [-s <ServerName>]
 ```
 
 ## Parameters
-|Parameter|Description|
-|-------|--------|
-|-z|pauses the print job specified with the **-j** parameter.|
-|-m|Resumes the print job specified with the **-j** parameter.|
-|-x|Cancels the print job specified with the **-j** parameter.|
-|-l|lists all the print jobs in a print queue.|
-|-s \<ServerName>|Specifies the name of the remote computer that hosts the printer that you want to manage. If you do not specify a computer, the local computer is used.|
-|-p \<printerName>|Specifies the name of the printer that you want to manage. Required.|
-|-j \<JobID>|Specifies (by ID number) the print job you want to cancel.|
-|-u \<UserName> -w <Password>|Specifies an account with permissions to connect to the computer that hosts the printer that you want to manage. All members of the target computer's local Administrators group have these permissions, but the permissions can also be granted to other users. If you do not specify an account, you must be logged on under an account with these permissions for the command to work.|
-|/?|Displays help at the command prompt.|
+
+|          Parameter           |                                                                                                                                                                                        Description                                                                                                                                                                                        |
+|------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|              -z              |                                                                                                                                                                 pauses the print job specified with the **-j** parameter.                                                                                                                                                                 |
+|              -m              |                                                                                                                                                                Resumes the print job specified with the **-j** parameter.                                                                                                                                                                 |
+|              -x              |                                                                                                                                                                Cancels the print job specified with the **-j** parameter.                                                                                                                                                                 |
+|              -l              |                                                                                                                                                                        lists all the print jobs in a print queue.                                                                                                                                                                         |
+|       -s \<ServerName>       |                                                                                                                  Specifies the name of the remote computer that hosts the printer that you want to manage. If you do not specify a computer, the local computer is used.                                                                                                                  |
+|      -p \<printerName>       |                                                                                                                                                           Specifies the name of the printer that you want to manage. Required.                                                                                                                                                            |
+|         -j \<JobID>          |                                                                                                                                                                Specifies (by ID number) the print job you want to cancel.                                                                                                                                                                 |
+| -u \<UserName> -w <Password> | Specifies an account with permissions to connect to the computer that hosts the printer that you want to manage. All members of the target computer's local Administrators group have these permissions, but the permissions can also be granted to other users. If you do not specify an account, you must be logged on under an account with these permissions for the command to work. |
+|              /?              |                                                                                                                                                                           Displays help at the command prompt.                                                                                                                                                                            |
 
 ## Remarks
 -   The **prnjobs** command is a Visual Basic script located in the %WINdir%\System32\printing_Admin_Scripts\\<language> directory. To use this command, at a command prompt, type **cscript** followed by the full path to the prnjobs file, or change directories to the appropriate folder. For example:

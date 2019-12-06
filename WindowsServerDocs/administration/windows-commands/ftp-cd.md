@@ -2,7 +2,7 @@
 title: ftp cd
 description: "Windows Commands topic for ftp cd"
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -24,9 +24,11 @@ changes the working directory on the remote computer.
 cd <remotedirectory>  
 ```  
 ### Parameters  
-|Parameter|Description|  
-|-------|--------|  
-|<remotedirectory>|Specifies the directory on the remote computer to which you want to change.|  
+
+|     Parameter     |                                 Description                                 |
+|-------------------|-----------------------------------------------------------------------------|
+| <remotedirectory> | Specifies the directory on the remote computer to which you want to change. |
+
 ## <a name="BKMK_Examples"></a>Examples  
 change the directory on the remote computer to **Docs**.  
 ```  

@@ -7,14 +7,12 @@ ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 
 ms.technology: identity-adfs
 ---
 
 # Review the Role of the Federation Server Proxy in the Resource Partner
-
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 A federation server proxy in Active Directory Federation Services \(AD FS\) can function in one or more of the following roles, depending on how you configure the server to meet the needs of the resource partner organization:  
   

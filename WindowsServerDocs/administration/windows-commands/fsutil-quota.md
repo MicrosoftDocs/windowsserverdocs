@@ -1,7 +1,7 @@
 ---
 ms.assetid: 21225c11-7c72-4ea2-96bd-e63d4beb3be5
 title: Fsutil quota
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 manager: dmoss
 ms.author: toklima
 author: toklima
@@ -30,18 +30,18 @@ fsutil quota [violations]
 
 ## Parameters
 
-|Parameter|Description|
-|-------------|---------------|
-|disable|Disables quota tracking and enforcement on the specified volume.|
-|enforce|Enforces quota usage on the specified volume.|
-|modify|Modifies an existing disk quota or creates a new quota.|
-|query|Lists existing disk quotas.|
-|track|Tracks disk usage on the specified volume.|
-|violations|Searches the system and application logs and displays a message to indicate that quota violations have been detected or that a user has reached a quota threshold or quota limit.|
-|\<VolumePath>|Required. Specifies the drive name followed by a colon or the GUID in the format **Volume{***GUID***}**.|
-|\<Threshold>|Sets the limit (in bytes) at which warnings are issued. This parameter is required for the **fsutil quota modify** command.|
-|\<Limit>|Sets the maximum allowed disk usage (in bytes). This parameter is required for the **fsutil quota modify** command.|
-|\<UserName>|Specifies the domain or user name. This parameter is required for the **fsutil quota modify** command.|
+|   Parameter   |                                                                                    Description                                                                                    |
+|---------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|    disable    |                                                         Disables quota tracking and enforcement on the specified volume.                                                          |
+|    enforce    |                                                                   Enforces quota usage on the specified volume.                                                                   |
+|    modify     |                                                              Modifies an existing disk quota or creates a new quota.                                                              |
+|     query     |                                                                            Lists existing disk quotas.                                                                            |
+|     track     |                                                                    Tracks disk usage on the specified volume.                                                                     |
+|  violations   | Searches the system and application logs and displays a message to indicate that quota violations have been detected or that a user has reached a quota threshold or quota limit. |
+| \<VolumePath> |                                  Required. Specifies the drive name followed by a colon or the GUID in the format **Volume{**<em>GUID</em>**}**.                                  |
+| \<Threshold>  |                            Sets the limit (in bytes) at which warnings are issued. This parameter is required for the **fsutil quota modify** command.                            |
+|   \<Limit>    |                                Sets the maximum allowed disk usage (in bytes). This parameter is required for the **fsutil quota modify** command.                                |
+|  \<UserName>  |                                      Specifies the domain or user name. This parameter is required for the **fsutil quota modify** command.                                       |
 
 ## Remarks
 

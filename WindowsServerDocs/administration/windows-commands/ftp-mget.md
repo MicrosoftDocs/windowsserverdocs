@@ -2,7 +2,7 @@
 title: ftp mget
 description: "Windows Commands topic for **** - "
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -24,9 +24,11 @@ Copies remote files to the local computer using the current file transfer type.
 mget <remoteFile>[ ]  
 ```  
 ### Parameters  
-|Parameter|Description|  
-|-------|--------|  
-|<remoteFile>|Specifies the remote files to copy to the local computer.|  
+
+|  Parameter   |                        Description                        |
+|--------------|-----------------------------------------------------------|
+| <remoteFile> | Specifies the remote files to copy to the local computer. |
+
 ## <a name="BKMK_Examples"></a>Examples  
 copy remote files **a.exe** and **b.exe** to the local computer using the current file transfer type.  
 ```  

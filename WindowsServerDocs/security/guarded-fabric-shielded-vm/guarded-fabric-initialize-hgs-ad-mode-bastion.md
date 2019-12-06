@@ -1,7 +1,7 @@
 ---
 title: Initialize the HGS cluster using AD mode in a bastion forest 
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.topic: article
 manager: dongill
 author: rpsqrd
@@ -42,6 +42,6 @@ If you are using certificates installed on the local machine (such as HSM-backed
 
 ## Next step
 
->[!div class="nextstepaction"]
-[Configure fabric DNS](guarded-fabric-configuring-fabric-dns-ad.md)
+> [!div class="nextstepaction"]
+> [Configure fabric DNS](guarded-fabric-configuring-fabric-dns-ad.md)
 

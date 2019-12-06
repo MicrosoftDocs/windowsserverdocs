@@ -22,10 +22,12 @@
 ### [Windows Admin Center settings](configure/settings.md)
 ### [User access control and permissions](configure/user-access-control.md)
 ### [Using extensions](configure/using-extensions.md)
+### [Shared connections](configure/shared-connections.md)
 
 ## Use
 ### [Get started](use/get-started.md)
 ### [Manage servers](use/manage-servers.md)
+### [Deploy hyperconverged infrastructure](use/deploy-hyperconverged-infrastructure.md)
 ### [Manage hyper-converged infrastructure](use/manage-hyper-converged.md)
 ### [Manage failover clusters](use/manage-failover-clusters.md)
 ### [Manage Hyper-V virtual machines](use/manage-virtual-machines.md)
@@ -47,7 +49,7 @@
 ### [Support policy](support/index.md)
 ### [Common troubleshooting steps](support/troubleshooting.md)
 ### [Known issues](support/known-issues.md)
-
+### [Windows Admin Center license terms](../../windows-server-licensing/windows-admin-center-licensing.md)
 
 ## Extend
 ### [Overview of extensions](extend/extensibility-overview.md)
@@ -64,6 +66,7 @@
 #### [Use a custom gateway plugin in your tool extension](extend/guides/use-custom-gateway-plugin.md)
 #### [Create a connection provider](extend/guides/create-connection-provider.md)
 #### [Modify root navigation behavior](extend/guides/modify-root-navigation.md)
+#### [Cluster connection type changes in Windows Admin Center v1909](extend/guides/cluster-connection-change-wac-1909.md)
 #### [Control your tool's visibility](extend/guides/dynamic-tool-display.md)
 #### [Strings and localization](extend/guides/strings-localization.md)
 #### [UI text and design style guide](extend/guides/ui-text-style-guide.md)
@@ -73,11 +76,14 @@
 #### [Enable the extension discovery banner](extend/guides/extension-discovery-banner.md)
 ### [Publishing extensions](extend/publish-extensions.md)
 ### Case Studies
+#### [BiitOps](extend/case-studies/biitops.md)
 #### [DataON](extend/case-studies/dataon.md)
 #### [Fujitsu](extend/case-studies/fujitsu.md)
 #### [Lenovo](extend/case-studies/lenovo.md)
 #### [NEC](extend/case-studies/nec.md)
 #### [Pure Storage](extend/case-studies/purestorage.md)
+#### [QCT](extend/case-studies/qct.md)
 #### [Squared Up](extend/case-studies/squared-up.md)
+#### [Thomas-Krenn](extend/case-studies/thomas-krenn.md)
 
 

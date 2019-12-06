@@ -2,7 +2,7 @@
 title: bitsadmin wrap
 description: "Windows Commands topic for **bitsadmin wrap** - Wraps any line of output text extending beyond the rightmost edge of the command window to the next line."
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands

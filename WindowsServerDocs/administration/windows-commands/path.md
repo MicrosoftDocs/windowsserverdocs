@@ -2,7 +2,7 @@
 title: path
 description: Learn how to set the PATH environment variable.
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -32,12 +32,12 @@ path ;
 
 ## Parameters
 
-|Parameter|Description|
-|---------|-----------|
-|[\<Drive>:]<Path>|Specifies the drive and directory to set in the command path.|
-|;|Separates directories in the command path. If used without other parameters, **;** clears the existing command paths from the PATH environment variable and directs Cmd.exe to search only in the current directory.|
-|%PATH%|Appends the command path to the existing set of directories listed in the PATH environment variable.|
-|/?|Displays help at the command prompt.|
+|     Parameter     |                                                                                                     Description                                                                                                      |
+|-------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| [\<Drive>:]<Path> |                                                                            Specifies the drive and directory to set in the command path.                                                                             |
+|         ;         | Separates directories in the command path. If used without other parameters, **;** clears the existing command paths from the PATH environment variable and directs Cmd.exe to search only in the current directory. |
+|      %PATH%       |                                                         Appends the command path to the existing set of directories listed in the PATH environment variable.                                                         |
+|        /?         |                                                                                         Displays help at the command prompt.                                                                                         |
 
 ## Remarks
 

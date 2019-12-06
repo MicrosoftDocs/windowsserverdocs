@@ -1,7 +1,7 @@
 ---
 title: QoS Policy Scenarios
 description: This topic provides Quality of Service (QoS) Policy scenarios, which demonstrate how to use Group Policy to prioritize the network traffic of specific applications and services in Windows Server 2016.
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: networking
 ms.topic: article
 ms.assetid: c4306f06-a117-4f65-b78b-9fd0d1133f95
@@ -127,7 +127,7 @@ In Windows Server 2016, Policy-based QoS includes the feature URL-based Policies
 
 Many Enterprise applications are developed for and hosted on Internet Information Services \(IIS\) web servers, and the Web apps are accessed from browsers on client computers.
 
-In this scenario, assume that you manage a set of IIS servers that host training videos for all your organization’s employees. Your objective is to ensure that the traffic from these video servers won’t overwhelm your network, and ensure that video traffic is differentiated from voice and data traffic on the network. 
+In this scenario, assume that you manage a set of IIS servers that host training videos for all your organization's employees. Your objective is to ensure that the traffic from these video servers won't overwhelm your network, and ensure that video traffic is differentiated from voice and data traffic on the network. 
 
 The task is similar to the task in Scenario 1. You will design and configure the traffic management settings, such as the DSCP value for the video traffic, and the throttling rate the same as you would for the line-of-business applications. But when specifying the traffic, instead of providing the application name, you only enter the URL to which your HTTP server application will respond: for example, https://hrweb/training.
   
@@ -184,7 +184,7 @@ In the case of hostname, a hostname with more dotted elements (more depth) has a
   
 - library (depth = 1)
   
- **video.internal.training.hr.mycompany.com** has the highest priority, and **selfguide.training.mycompany.com** has the next highest priority. **Training** and **library** share the same lowest priority.  
+  **video.internal.training.hr.mycompany.com** has the highest priority, and **selfguide.training.mycompany.com** has the next highest priority. **Training** and **library** share the same lowest priority.  
   
 ####  <a name="bkmk_QoS_UrlPort"></a> 3. URL port
 
@@ -210,7 +210,7 @@ A user may also choose to specify a destination IP address in a URL-based policy
 
 A Quintuple policy is specified by protocol ID, source IP address, source port, destination IP address, and destination port. A Quintuple policy always has a higher precedence than any URL-based policy. 
 
-If a Quintuple policy is already applied for a user, a new URL-based policy will not cause conflicts on any of that user’s client computers.
+If a Quintuple policy is already applied for a user, a new URL-based policy will not cause conflicts on any of that user's client computers.
 
 For the next topic in this guide, see [Manage QoS Policy](qos-policy-manage.md).
 

@@ -7,14 +7,12 @@ ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 
 ms.technology: identity-adfs
 ---
 
 # Plan Your AD FS Deployment Topology
-
->Applies To: Windows Server 2016, Windows Server 2012 R2
 
 The first step in planning a deployment of Active Directory Federation Services \(AD FS\) is to determine the right deployment topology to meet the needs of your organization.  
   

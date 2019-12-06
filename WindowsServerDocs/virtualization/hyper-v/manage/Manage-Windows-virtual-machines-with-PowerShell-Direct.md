@@ -1,7 +1,7 @@
 ---
 title: Manage Windows virtual machines with PowerShell Direct
 description: "Gives instructions for using PowerShell Direct to manage virtual machines without relying on a network or remote connection to them."
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.service: na
 manager: dongill
 ms.technology: compute-hyper-v

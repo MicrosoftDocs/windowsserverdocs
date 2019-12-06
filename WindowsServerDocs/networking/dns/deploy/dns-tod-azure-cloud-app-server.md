@@ -2,7 +2,7 @@
 title: DNS Responses Based on Time of Day with an Azure Cloud App Server
 description: This topic is part of the DNS Policy Scenario Guide for Windows Server 2016
 manager: brianlic
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: networking-dns
 ms.topic: article
 ms.assetid: 4846b548-8fbc-4a7f-af13-09e834acdec0
@@ -17,10 +17,10 @@ You can use this topic to learn how to distribute application traffic across dif
 
 This scenario is useful in situations where you want to direct traffic in one time zone to alternate application servers, such as Web servers that are hosted on Microsoft Azure, that are located in another time zone. This allows you to load balance traffic across application instances during peak time periods when your primary servers are overloaded with traffic. 
 
->[!NOTE]
->To learn how to use DNS policy for intelligent DNS responses without using Azure, see [Use DNS Policy for Intelligent DNS Responses Based on the Time of Day](Scenario--Use-DNS-Policy-for-Intelligent-DNS-Responses-Based-on-the-Time-of-Day.md). 
+> [!NOTE]
+> To learn how to use DNS policy for intelligent DNS responses without using Azure, see [Use DNS Policy for Intelligent DNS Responses Based on the Time of Day](Scenario--Use-DNS-Policy-for-Intelligent-DNS-Responses-Based-on-the-Time-of-Day.md). 
 
-## <a name="bkmk_azureexample"></a>Example of Intelligent DNS Responses Based on the Time of Day with Azure Cloud App Server
+## Example of Intelligent DNS Responses Based on the Time of Day with Azure Cloud App Server
 
 Following is an example of how you can use DNS policy to balance application traffic based on the time of day.
 
@@ -38,8 +38,8 @@ To ensure that contosogiftservices.com customers get a responsive experience fro
 
 Contoso Gift Services gets a public IP address from Azure for the VM (192.68.31.44) and develops the automation to deploy the Web Server every day on Azure between 5-10 PM, allowing for a one hour contingency period.
 
->[!NOTE]
->For more information about Azure VMs, see [Virtual Machines documentation](https://azure.microsoft.com/documentation/services/virtual-machines/) 
+> [!NOTE]
+> For more information about Azure VMs, see [Virtual Machines documentation](https://azure.microsoft.com/documentation/services/virtual-machines/) 
 
 The DNS servers are configured with zone scopes and DNS policies so that between 5-9 PM every day, 30% of queries are sent to the instance of the Web server that is running in Azure.
 
@@ -47,7 +47,7 @@ The following illustration depicts this scenario.
 
 ![DNS Policy for time of day responses](../../media/DNS-Policy-Tod2/dns_policy_tod2.jpg)  
 
-## <a name="bkmk_azurehow"></a>How Intelligent DNS Responses Based on Time of Day with Azure App Server Works
+## How Intelligent DNS Responses Based on Time of Day with Azure App Server Works
  
 This article demonstrates how to configure the DNS server to answer DNS queries with two different application server IP addresses - one web server is in Seattle and the other is in an Azure datacenter.
 
@@ -57,29 +57,29 @@ At all other times of day, the normal query processing takes place and responses
 
 The TTL of 10 minutes on the Azure record ensures that the record is expired from the LDNS cache before the VM is removed from Azure. One of the benefits of such scaling is that you can keep your DNS data on-premises, and keep scaling out to Azure as demand requires.
 
-## <a name="bkmk_azureconfigure"></a>How to Configure DNS Policy for Intelligent DNS Responses Based on Time of Day with Azure App Server
+## How to Configure DNS Policy for Intelligent DNS Responses Based on Time of Day with Azure App Server
+
 To configure DNS policy for time of day application load balancing based query responses, you must perform the following steps.
 
+- [Create the Zone Scopes](#create-the-zone-scopes)
+- [Add Records to the Zone Scopes](#add-records-to-the-zone-scopes)
+- [Create the DNS Policies](#create-the-dns-policies)
 
-- [Create the Zone Scopes](#bkmk_zscopes)
-- [Add Records to the Zone Scopes](#bkmk_records)
-- [Create the DNS Policies](#bkmk_policies)
-
-
->[!NOTE]
->You must perform these steps on the DNS server that is authoritative for the zone you want to configure. Membership in DnsAdmins, or equivalent, is required to perform the following procedures. 
+> [!NOTE]
+> You must perform these steps on the DNS server that is authoritative for the zone you want to configure. Membership in DnsAdmins, or equivalent, is required to perform the following procedures. 
 
 The following sections provide detailed configuration instructions.
 
->[!IMPORTANT]
->The following sections include example Windows PowerShell commands that contain example values for many parameters. Ensure that you replace example values in these commands with values that are appropriate for your deployment before you run these commands. 
+> [!IMPORTANT]
+> The following sections include example Windows PowerShell commands that contain example values for many parameters. Ensure that you replace example values in these commands with values that are appropriate for your deployment before you run these commands. 
 
 
-### <a name="bkmk_zscopes"></a>Create the Zone Scopes
+### Create the Zone Scopes
+
 A zone scope is a unique instance of the zone. A DNS zone can have multiple zone scopes, with each zone scope containing its own set of DNS records. The same record can be present in multiple scopes, with different IP addresses or the same IP addresses. 
 
->[!NOTE]
->By default, a zone scope exists on the DNS zones. This zone scope has the same name as the zone, and legacy DNS operations work on this scope. 
+> [!NOTE]
+> By default, a zone scope exists on the DNS zones. This zone scope has the same name as the zone, and legacy DNS operations work on this scope. 
 
 You can use the following example command to create a zone scope to host the Azure records.
 
@@ -89,7 +89,7 @@ Add-DnsServerZoneScope -ZoneName "contosogiftservices.com" -Name "AzureZoneScope
 
 For more information, see [Add-DnsServerZoneScope](https://docs.microsoft.com/powershell/module/dnsserver/add-dnsserverzonescope?view=win10-ps)
 
-### <a name="bkmk_records"></a>Add Records to the Zone Scopes
+### Add Records to the Zone Scopes
 The next step is to add the records representing the Web server host into the zone scopes. 
 
 In AzureZoneScope, the record www.contosogiftservices.com is added with IP address 192.68.31.44, which is located in the Azure public cloud. 
@@ -108,7 +108,7 @@ Add-DnsServerResourceRecord -ZoneName "contosogiftservices.com" -A -Name "www" -
 
 For more information, see [Add-DnsServerResourceRecord](https://docs.microsoft.com/powershell/module/dnsserver/add-dnsserverresourcerecord?view=win10-ps).  
 
-### <a name="bkmk_policies"></a>Create the DNS Policies 
+### Create the DNS Policies 
 After the zone scopes are created, you can create DNS policies that distribute the incoming queries across these scopes so that the following occurs.
 
 1. From 6 PM to 9 PM daily, 30% of clients receive the IP address of the Web server in the Azure datacenter in the DNS response, while 70% of clients receive the IP address of the Seattle on-premises Web server.

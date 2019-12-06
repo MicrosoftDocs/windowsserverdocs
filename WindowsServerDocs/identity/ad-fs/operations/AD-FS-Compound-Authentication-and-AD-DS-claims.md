@@ -6,14 +6,14 @@ ms.author: billmath
 manager: femila
 ms.date: 09/07/2017
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: identity-adfs
 ---
 # Compound authentication and AD DS claims in AD FS
 Windows Server 2012 enhances Kerberos authentication by introducing compound authentication.  Compound authentication enables a Kerberos Ticket-Granting Service (TGS) request to include two identities: 
 
 - the identity of the user
-- the identity of the user’s device.  
+- the identity of the user's device.  
 
 Windows accomplishes compound authentication by extending [Kerberos Flexible Authentication Secure Tunneling (FAST), or Kerberos armoring](https://technet.microsoft.com/library/hh831747.aspx). 
 
@@ -81,21 +81,21 @@ Set-AdfsGlobalAuthenticationPolicy -PrimaryIntranetAuthenticationProvider 'Windo
 >In a SQL based farm, the PowerShell command may be executed on any AD FS server that is a member of the farm.
 
 ### Step 5:  Add the claim description to AD FS
-1.	Add the following Claim Description to the farm. This Claim Description is not present by default in ADFS 2012 R2 and needs to be manually added.
-2.  In AD FS Management, under **Service**, right-click **Claim description** and select **Add claim description**
-3.  Enter the following information in the claim description
-	- Display Name: 'Windows device group' 
-	- Claim Description: 'https://schemas.microsoft.com/ws/2008/06/identity/claims/windowsdevicegroup' `
+1. Add the following Claim Description to the farm. This Claim Description is not present by default in ADFS 2012 R2 and needs to be manually added.
+2. In AD FS Management, under **Service**, right-click **Claim description** and select **Add claim description**
+3. Enter the following information in the claim description
+   - Display Name: 'Windows device group' 
+   - Claim Description: '<https://schemas.microsoft.com/ws/2008/06/identity/claims/windowsdevicegroup>' `
 4. Place a check in both boxes.
 5. Click **OK**.
 
 ![Claim Description](media/AD-FS-Compound-Authentication-and-AD-DS-claims/gpmc6.png)
 
 6. Using PowerShell you can use the **Add-AdfsClaimDescription** cmdlet.
-``` powershell
-Add-AdfsClaimDescription -Name 'Windows device group' -ClaimType 'https://schemas.microsoft.com/ws/2008/06/identity/claims/windowsdevicegroup' `
--ShortName 'windowsdevicegroup' -IsAccepted $true -IsOffered $true -IsRequired $false -Notes 'The windows group SID of the device' 
-```
+   ``` powershell
+   Add-AdfsClaimDescription -Name 'Windows device group' -ClaimType 'https://schemas.microsoft.com/ws/2008/06/identity/claims/windowsdevicegroup' `
+   -ShortName 'windowsdevicegroup' -IsAccepted $true -IsOffered $true -IsRequired $false -Notes 'The windows group SID of the device' 
+   ```
 
 
 >[!NOTE]
@@ -112,10 +112,10 @@ Add-AdfsClaimDescription -Name 'Windows device group' -ClaimType 'https://schema
 ``` powershell
 Set-ADServiceAccount -Identity “ADFS Service Account” -CompoundIdentitySupported:$true 
 ```
-2.  Restart the ADFS Service.
+2. Restart the ADFS Service.
 
 >[!NOTE]
->Once ‘CompoundIdentitySupported’ is set to true, installation of the same gMSA on new Servers (2012R2/2016) fails with the following error – 
+>Once ‘CompoundIdentitySupported' is set to true, installation of the same gMSA on new Servers (2012R2/2016) fails with the following error – 
 **Install-ADServiceAccount : Cannot install service account. Error Message: 'The provided context did not match the target.'**.
 >
 >**Solution**: Temporarily set CompoundIdentitySupported to $false. This step causes ADFS to stop issuing WindowsDeviceGroup claims. 
@@ -125,7 +125,7 @@ Disabling CompoundIdentitySupported and then reenabling does not need ADFS servi
 
 ### Step 7: Update the AD FS Claims Provider Trust for Active Directory
 
-1. Update the AD FS Claims Provider Trust for Active Directory to include the following ‘Pass-through’ Claim rule for ‘WindowsDeviceGroup’ Claim.
+1. Update the AD FS Claims Provider Trust for Active Directory to include the following ‘Pass-through' Claim rule for ‘WindowsDeviceGroup' Claim.
 2.  In **AD FS Management**, click **Claims Provider Trusts** and in the right pane, righ-click **Active Directory** and select **Edit Claim Rules**.
 3.  On the **Edit Claim Rules for Active Director** click **Add Rule**.
 4.  On the **Add Transform Claim Rule Wizard** select **Pass Through or Filter an Incoming Claim** and click **Next**.
@@ -133,16 +133,16 @@ Disabling CompoundIdentitySupported and then reenabling does not need ADFS servi
 6.  Click **Finish**.  Click **Apply** and **Ok**. 
 ![Claim Description](media/AD-FS-Compound-Authentication-and-AD-DS-claims/gpmc7.png)
 
-### Step 8: On the Relying Party where the ‘WindowsDeviceGroup’ claims are expected, add a similar ‘Pass-through’ Or ‘Transform’ claim rule.
-2.  In **AD FS Management**, click **Relying Party Trusts** and in the right pane, righ-click your RP and select **Edit Claim Rules**.
-3.  On the **Issuance Transform Rules** click **Add Rule**.
-4.  On the **Add Transform Claim Rule Wizard** select **Pass Through or Filter an Incoming Claim** and click **Next**.
-5.  Add a display name and select **Windows device group** from the **Incoming claim type** drop-down.
-6.  Click **Finish**.  Click **Apply** and **Ok**.
-![Claim Description](media/AD-FS-Compound-Authentication-and-AD-DS-claims/gpmc8.png)
+### Step 8: On the Relying Party where the ‘WindowsDeviceGroup' claims are expected, add a similar ‘Pass-through' Or ‘Transform' claim rule.
+2. In **AD FS Management**, click **Relying Party Trusts** and in the right pane, righ-click your RP and select **Edit Claim Rules**.
+3. On the **Issuance Transform Rules** click **Add Rule**.
+4. On the **Add Transform Claim Rule Wizard** select **Pass Through or Filter an Incoming Claim** and click **Next**.
+5. Add a display name and select **Windows device group** from the **Incoming claim type** drop-down.
+6. Click **Finish**.  Click **Apply** and **Ok**.
+   ![Claim Description](media/AD-FS-Compound-Authentication-and-AD-DS-claims/gpmc8.png)
 
 
-##Steps for configuring AD FS in Windows Server 2016
+## Steps for configuring AD FS in Windows Server 2016
 The following will detail the steps for configuring compound authentication on AD FS for Windows Server 2016.
 
 ### Step 1:  Enable KDC support for claims, compound authentication, and Kerberos armoring on the Default Domain Controller Policy
@@ -186,10 +186,10 @@ Set-AdfsGlobalAuthenticationPolicy -PrimaryIntranetAuthenticationProvider 'Windo
 ``` powershell
 Set-ADServiceAccount -Identity “ADFS Service Account” -CompoundIdentitySupported:$true 
 ```
-2.  Restart the ADFS Service.
+2. Restart the ADFS Service.
 
 >[!NOTE]
->Once ‘CompoundIdentitySupported’ is set to true, installation of the same gMSA on new Servers (2012R2/2016) fails with the following error – 
+>Once ‘CompoundIdentitySupported' is set to true, installation of the same gMSA on new Servers (2012R2/2016) fails with the following error – 
 **Install-ADServiceAccount : Cannot install service account. Error Message: 'The provided context did not match the target.'**.
 >
 >**Solution**: Temporarily set CompoundIdentitySupported to $false. This step causes ADFS to stop issuing WindowsDeviceGroup claims. 
@@ -199,7 +199,7 @@ Disabling CompoundIdentitySupported and then reenabling does not need ADFS servi
 
 ### Step 5: Update the AD FS Claims Provider Trust for Active Directory
 
-1. Update the AD FS Claims Provider Trust for Active Directory to include the following ‘Pass-through’ Claim rule for ‘WindowsDeviceGroup’ Claim.
+1. Update the AD FS Claims Provider Trust for Active Directory to include the following ‘Pass-through' Claim rule for ‘WindowsDeviceGroup' Claim.
 2.  In **AD FS Management**, click **Claims Provider Trusts** and in the right pane, righ-click **Active Directory** and select **Edit Claim Rules**.
 3.  On the **Edit Claim Rules for Active Director** click **Add Rule**.
 4.  On the **Add Transform Claim Rule Wizard** select **Pass Through or Filter an Incoming Claim** and click **Next**.
@@ -207,15 +207,15 @@ Disabling CompoundIdentitySupported and then reenabling does not need ADFS servi
 6.  Click **Finish**.  Click **Apply** and **Ok**. 
 
 
-### Step 6: On the Relying Party where the ‘WindowsDeviceGroup’ claims are expected, add a similar ‘Pass-through’ Or ‘Transform’ claim rule.
-2.  In **AD FS Management**, click **Relying Party Trusts** and in the right pane, righ-click your RP and select **Edit Claim Rules**.
-3.  On the **Issuance Transform Rules** click **Add Rule**.
-4.  On the **Add Transform Claim Rule Wizard** select **Pass Through or Filter an Incoming Claim** and click **Next**.
-5.  Add a display name and select **Windows device group** from the **Incoming claim type** drop-down.
-6.  Click **Finish**.  Click **Apply** and **Ok**.
+### Step 6: On the Relying Party where the ‘WindowsDeviceGroup' claims are expected, add a similar ‘Pass-through' Or ‘Transform' claim rule.
+2. In **AD FS Management**, click **Relying Party Trusts** and in the right pane, righ-click your RP and select **Edit Claim Rules**.
+3. On the **Issuance Transform Rules** click **Add Rule**.
+4. On the **Add Transform Claim Rule Wizard** select **Pass Through or Filter an Incoming Claim** and click **Next**.
+5. Add a display name and select **Windows device group** from the **Incoming claim type** drop-down.
+6. Click **Finish**.  Click **Apply** and **Ok**.
 
 ## Validation
-To validate the release of ‘WindowsDeviceGroup’ claims, create a test Claims Aware Application using .Net 4.6. With WIF SDK 4.0.
+To validate the release of ‘WindowsDeviceGroup' claims, create a test Claims Aware Application using .Net 4.6. With WIF SDK 4.0.
 Configure the Application as a Relying Party in ADFS and update it with Claim Rule as specified in steps above.
 When authenticating to the Application using Windows Integrated Authentication provider of ADFS, the following claims are casted.
 ![Validation](media/AD-FS-Compound-Authentication-and-AD-DS-claims/gpmc9.png)

@@ -3,7 +3,7 @@ title: Collect diagnostic data with Storage Spaces Direct
 description: Understanding Storage Spaces Direct Data Collection Tools, with specific examples of how to run and use them.
 keywords: Storage Spaces,Data Collection,Troubleshooting,event channels,Get-SDDCDiagnosticInfo
 ms.assetid: 
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.author: adagashe
 ms.technology: storage-spaces
 ms.topic: article
@@ -17,15 +17,7 @@ ms.localizationpriority:
 
 There are various diagnostic tools that can be used to collect the data needed to troubleshoot Storage Spaces Direct and Failover Cluster. In this article, we will focus on **Get-SDDCDiagnosticInfo** - a one touch tool that will gather all relevant information to help you diagnose your cluster.
 
-<!-- The health summary report is a great start to understanding the status of your system to start diagnosing an issue. -->
-
 Given that the logs and other information that **Get-SDDCDiagnosticInfo** are dense, the information on troubleshooting presented below will be helpful for troubleshooting advanced issues that have been escalated and that may require data to be sent to Microsoft for triaging.
-
-<!--
-## Collecting live dumps
-
-Windows will trigger the collection of a ``` LiveDump ``` when there are known resources that are hanging in kernel calls. ``` RHS ``` will trigger ```LiveDump``` collection if both the resource type and cluster ``` DumpPolicy ``` are set to 1. For physical disk it is set out of the box
--->
 
 ## Installing Get-SDDCDiagnosticInfo
 
@@ -179,60 +171,6 @@ This report is being continually updated to include more useful information. For
 ### Logs and XML files
 
 The script runs various log gathering scripts and saves the output as xml files. We collect cluster and health logs, system information (MSInfo32), unfiltered event logs (failover clustering, dis diagnostics, hyper-v, storage spaces, and more), and storage diagnostics information (operational logs). For the latest information on what information is collected, see the [GitHub README (what we collect)](https://github.com/PowerShell/PrivateCloud.DiagnosticInfo/blob/master/README.md#what-does-the-cmdlet-output-include).
-
-<!--
-## Enabling event channels
-
-When Windows Server is installed, many event channels are enabled by default. But sometimes when diagnosing an issue, we want to be able to enable some of these event channels since it will help in triaging and diagnosing system issues.
-
-You could enable additional event channels on each server node in your cluster as needed; however, this approach presents two problems:
-
-1. You need to remember to enable the same event channels on every new server node that you add to your cluster.
-2. When diagnosing, it can be tedious to enable specific event channels, reproduce the error, and repeat this process until you root cause.
-
-To avoid these issues, you can enable event channels on cluster startup. The list of enabled event channels on your cluster can be configured using the public property **EnabledEventLogs**. By default, the following event channels are enabled:
-
-```powershell
-PS C:\Windows\system32> (get-cluster).EnabledEventLogs
-```
-
-Here's an example of the output:
-```
-Microsoft-Windows-Hyper-V-VmSwitch-Diagnostic,4,0xFFFFFFFD
-Microsoft-Windows-SMBDirect/Debug,4
-Microsoft-Windows-SMBServer/Analytic
-Microsoft-Windows-Kernel-LiveDump/Analytic
-```
-
-The **EnabledEventLogs** property is a multistring, where each string is in the form: **channel-name, log-level, keyword-mask**. The **keyword-mask** can be a hexadecimal (prefix 0x), octal (prefix 0), or decimal number (no prefix) number that each event contains (so you can filter by it). For instance, to add a new event channel to the list and to configure both **log-level** and **keyword-mask** you can run:
-
-```powershell
-(get-cluster).EnabledEventLogs += "Microsoft-Windows-WinINet/Analytic,2,321"
-```
-
-If you want to set the **log-level** but keep the **keyword-mask** at its default value, you can use either of the following commands:
-
-```powershell
-(get-cluster).EnabledEventLogs += "Microsoft-Windows-WinINet/Analytic,2"
-(get-cluster).EnabledEventLogs += "Microsoft-Windows-WinINet/Analytic,2,"
-```
-
-If you want to keep the **log-level** at its default value, but set the **keyword-mask** you can run the following command:
-
-```powershell
-(get-cluster).EnabledEventLogs += "Microsoft-Windows-WinINet/Analytic,,0xf1"
-```
-
-If you want to keep both the **log-level** and the **keyword-mask** at their default values, you can run any of the following commands:
-
-```powershell
-(get-cluster).EnabledEventLogs += "Microsoft-Windows-WinINet/Analytic"
-(get-cluster).EnabledEventLogs += "Microsoft-Windows-WinINet/Analytic,"
-(get-cluster).EnabledEventLogs += "Microsoft-Windows-WinINet/Analytic,,"
-```
-
-These event channels will be enabled on every cluster node when the cluster service starts or whenever the **EnabledEventLogs** property is changed.
--->
 
 ## How to consume the XML files from Get-PCStorageDiagnosticInfo
 You can consume the data from the XML files provided in data collected by the **Get-PCStorageDiagnosticInfo** cmdlet. These files have information about the virtual disks, physical disks, basic cluster info and other PowerShell related outputs. 

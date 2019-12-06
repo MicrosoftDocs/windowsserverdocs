@@ -7,7 +7,7 @@ author: jasongerend
 ms.author: jgerend
 ms.date: 10/17/2018
 ms.localizationpriority: medium
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ---
 
 # Windows Admin Center UI text and design style guide
@@ -48,13 +48,13 @@ Use colons in UI text when a label is on the same line as the text it labels and
 
 ## Confirmation messages
 
-Confirmation dialogs are useful when continuing might have unexpected results, such as data loss. They should contain scannable, useful info with a clear outcome, especially for events that can’t be reversed. 
+Confirmation dialogs are useful when continuing might have unexpected results, such as data loss. They should contain scannable, useful info with a clear outcome, especially for events that can't be reversed. 
 
-- Make sure a confirmation is necessary. If there’s no new info to offer (for example, “Are you sure?”) then a confirmation message may not be necessary.  
+- Make sure a confirmation is necessary. If there's no new info to offer (for example, “Are you sure?”) then a confirmation message may not be necessary.  
 - Verify that the customer wants to proceed with the action.
-- Make sure the main instruction (heading) and explanatory text (body) aren’t redundant.
-- In the heading, define the possible outcomes as a question or a statement about what will happen next. For example, “Erase all data on this drive? or “You’re about to erase all your data”.
-- Add details in the body. If there’s a variable, such as the name of the item you’re about change, include it here.
+- Make sure the main instruction (heading) and explanatory text (body) aren't redundant.
+- In the heading, define the possible outcomes as a question or a statement about what will happen next. For example, “Erase all data on this drive? or “You're about to erase all your data”.
+- Add details in the body. If there's a variable, such as the name of the item you're about change, include it here.
 - Include a simple question (either in the header or in the body) that frames a clear choice between two action buttons.
 - For a complex choice, use Yes/No buttons, which encourage careful reading. For a simpler choice, use buttons that are specific to the action, such as Delete all or Cancel.
 
@@ -71,8 +71,8 @@ Here are some tips from our Windows style guide:
 ### 1. Be helpful
 
 - Avoid marketing style and language.
-- When you demo or suggest something, make sure the end result is clear; just showing the customer how to do something isn’t effective if they don’t know why they are doing it.
-- Don’t present tips if the customer doesn’t need them.
+- When you demo or suggest something, make sure the end result is clear; just showing the customer how to do something isn't effective if they don't know why they are doing it.
+- Don't present tips if the customer doesn't need them.
 
 ### 2. Show, don't tell
 
@@ -82,7 +82,7 @@ Keep your text simple as possible (think small animations or videos).
 
 - Limit pop-ups and tips to 4 per usage session combined—including system notifications and shell notifications.
 - Make sure the timing of pop-ups is helpful.
-- Don’t prevent the customer from doing something.
+- Don't prevent the customer from doing something.
 - Make sure pop-ups are easily dismissed.
 
 ### 4. Keep it contextual
@@ -90,7 +90,7 @@ Keep your text simple as possible (think small animations or videos).
 - Teaching moments are most effective when presented at the right time.
 - If you create tutorials or slideshows, keep the info concrete.
 - No marketing “fluff”—focus on specific tips and tricks.
-- Provide a way for customers to return to the tutorial later, if relevant (people often don’t retain info the first time, but setup instructions might only be relevant once).
+- Provide a way for customers to return to the tutorial later, if relevant (people often don't retain info the first time, but setup instructions might only be relevant once).
 - Empty-state messaging is a natural place for learning and/or delight—keep it simple and informative.
 
 ### 5. Minimize painful setup
@@ -194,12 +194,12 @@ Null state occurs when customer data or content is absent from an app or feature
 
 ### Guidelines
 
- - If possible, use null state situations as an opportunity to educate people about how to use the feature (for example, how to add music, where to find pictures, etc.)  
-- If you have a title in your UI, explain the action to take to “fix” the null state (for example, “Add some music”) 
-- Have fun with the text. This space can be an opportunity to provide delight since it will probably not be seen several times. 
-- Avoid “It’s lonely in here.” This is sad and has been overused. 
-- Avoid questions like “Haven’t connected your printer?” Okay to use once, but this format tends to get overused, and questions put extra burden/pressure on the customer. It can also feel condescending. 
-- Variety in null state text is a good thing. 
+- If possible, use null state situations as an opportunity to educate people about how to use the feature (for example, how to add music, where to find pictures, etc.)  
+  - If you have a title in your UI, explain the action to take to “fix” the null state (for example, “Add some music”) 
+  - Have fun with the text. This space can be an opportunity to provide delight since it will probably not be seen several times. 
+  - Avoid “It's lonely in here.” This is sad and has been overused. 
+  - Avoid questions like “Haven't connected your printer?” Okay to use once, but this format tends to get overused, and questions put extra burden/pressure on the customer. It can also feel condescending. 
+  - Variety in null state text is a good thing. 
 
 ### Examples
 

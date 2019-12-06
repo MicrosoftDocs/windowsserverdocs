@@ -2,7 +2,7 @@
 title: nslookup set class
 description: "Windows Commands topic for **** - "
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -29,10 +29,10 @@ set class=<Class>
 
 ## Parameters
 
-|Parameter|Description|
-|---------|-----------|
-|\<Class>|The default class is IN. The following lists the valid values for this command.</br>- IN: Specifies the Internet class.</br>- CHAOS: Specifies the Chaos class.</br>- HESIOD: Specifies the MIT Athena Hesiod class.</br>- ANY: Specifies any of the previously listed wildcards.|
-|{help | ?}|Displays a short summary of **nslookup** subcommands.|
+| Parameter |                                                                                                                                    Description                                                                                                                                    |
+|-----------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| \<Class>  | The default class is IN. The following lists the valid values for this command.</br>- IN: Specifies the Internet class.</br>- CHAOS: Specifies the Chaos class.</br>- HESIOD: Specifies the MIT Athena Hesiod class.</br>- ANY: Specifies any of the previously listed wildcards. |
+|   {help   |                                                                                                                                        ?}                                                                                                                                         |
 
 #### Additional references
 

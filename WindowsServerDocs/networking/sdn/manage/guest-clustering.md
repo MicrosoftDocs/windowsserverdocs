@@ -3,7 +3,7 @@ title: Guest clustering in a virtual network
 description: Virtual machines connected to a virtual network are only permitted to use the IP addresses that Network Controller has assigned to communicate on the network.  Clustering technologies that require a floating IP address, such as Microsoft Failover Clustering, require some extra steps to function correctly.
 manager: dougkim
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: networking-sdn
@@ -138,7 +138,7 @@ You can use the following steps to configure a failover cluster.
    Import-module failoverclusters
 
    $ClusterName = "MyCluster"
-   
+   
    $ClusterNetworkName = "Cluster Network 1"
    $IPResourceName =  
    $ILBIP = “192.168.2.100” 

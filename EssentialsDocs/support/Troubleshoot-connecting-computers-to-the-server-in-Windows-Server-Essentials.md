@@ -174,17 +174,17 @@ manager: dongill
   
 #### To change the date and time on the client computer  
   
-1.  On the Start page of the client computer, open **Control Panel**.  
+1. On the Start page of the client computer, open **Control Panel**.  
   
-2.  In Control Panel, click **Clock, Language, and Region**, and then click **Date and Time**.  
+2. In Control Panel, click **Clock, Language, and Region**, and then click **Date and Time**.  
   
-3.  Click **Change date and time**, set the date and time to the correct date and time, and then click **OK**.  
+3. Click **Change date and time**, set the date and time to the correct date and time, and then click **OK**.  
   
-4.  Click **OK**, and then close Control Panel.  
+4. Click **OK**, and then close Control Panel.  
   
-5.  Try again to connect the client computer to the server. For instructions, see Connect computers to the server.  
+5. Try again to connect the client computer to the server. For instructions, see Connect computers to the server.  
   
- If you still cannot connect the client computer to the server, make sure that the date and time on the server are correct. If the date and time are not correct, change them.  
+   If you still cannot connect the client computer to the server, make sure that the date and time on the server are correct. If the date and time are not correct, change them.  
   
 #### To change the date and time on the server  
   

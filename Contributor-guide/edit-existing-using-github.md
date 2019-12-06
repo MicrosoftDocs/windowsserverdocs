@@ -8,12 +8,17 @@ ms.date: 05/06/2019
 
 # Edit an existing Windows Server article using GitHub and Visual Studio Code
 
-As a Microsoft employee, you can follow these instructions to edit an existing article and to create a new pull request for approval and publishing.
+There are two separate locations where we keep Windows Server technical content. One of the locations is public (windowsserverdocs) while the other is private (windowsserverdocs-pr). Who you are determines which location you contribute to:
 
-You must still create a new branch for edits, but you don’t have to create a new .md file. Instead, you can just open Visual Studio Code and browse to the location of the folder or file. After you find the file you want to update, make your changes, preview your text, and then commit your changes.
+- **I'm a Microsoft employee.** As a Microsoft employee, you have options, based on what you're trying to do:
 
->[!Note]
->For information about how to create and set up your GitHub account, set up two-factor verification, and install and configure all the necessary tools, along with how to set up your own version of the repo, see the [Create new Windows Server articles using GitHub and Visual Studio Code](create-new-using-github.md) article.
+    - **Create a brand-new article.** To create a brand-new article, you must create and set up your GitHub account and tools, fork and clone the windowsserverdocs-pr repo, set up your remote branch, create the article, and finally create a new pull request for approval and publishing. For these instructions, you can follow the instructions in the [Create new Windows Server articles using GitHub and Visual Studio Code](create-new-using-github.md) article.
+
+    - **Make large changes to an existing article.** To make substantial changes to an existing article, you can follow the instructions in this article.
+
+    - **Make minor changes to an existing article.** To make minor changes to an existing article, you can follow the instructions in the [Update existing Windows Server articles using a web browser and GitHub](github-browser-updates.md) article.
+
+- **I'm not a Microsoft employee.** As a non-Microsoft employee, you must contribute to the public location. For information about how to do that, see the [Contributing to Windows Server technical documentation](https://github.com/MicrosoftDocs/windowsserverdocs/blob/master/CONTRIBUTING.md) article.
 
 ## Switch your repo and create a new branch
 
@@ -38,7 +43,7 @@ Before you can start to work on your content, you must first change to the windo
     >[!Note]
     >We highly recommend naming your branch something obvious and unique so you can find it again later.
 
-    After the commands finish, you’ll be in your new branch and ready to edit your file.
+    After the commands finish, you'll be in your new branch and ready to edit your file.
 
 #### To locate your article and make your edits
 
@@ -99,7 +104,7 @@ After you've completed your updates, you must get approval from your writer (all
 
     A member of the _windowsservercontent_ alias will review your changes or add comments about things that must be changed before merging can happen.
 
-3. Type **#sign-off** into the comments so that the reviewers know you’re handing off for both review and publishing. The **#sign-off** comment:
+3. Type **#sign-off** into the comments so that the reviewers know you're handing off for both review and publishing. The **#sign-off** comment:
 
     - Updates the label for your pull request from **do-not-merge** to **ready-to merge**.
 
@@ -110,7 +115,7 @@ After you've completed your updates, you must get approval from your writer (all
     >[!Important]
     >After you add the #sign-off comment, a member of the windowsservercontent team will review the text and push it to master so it will go out with the next scheduled publish to live (10:30am and 3:30pm weekdays).
     >
-    >If you don’t add #sign-off as a final comment to your PR, your content will remain in the queue without being pushed to Master and ultimately to Live.
+    >If you don't add #sign-off as a final comment to your PR, your content will remain in the queue without being pushed to Master and ultimately to Live.
 
 ## Related information
 
@@ -118,14 +123,16 @@ For more information about GitHub and the markdown language, see:
 
 ### Git concepts
 
-* https://guides.github.com/introduction/git-handbook/ 
+- [GitHub Guides-Git Handbook Intro](https://guides.github.com/introduction/git-handbook/)
 
-* https://guides.github.com/activities/forking/
+- [GitHub Guides-Forking projects](https://guides.github.com/activities/forking/)
 
-* https://guides.github.com/introduction/flow/
+- [GitHub Guides-Understanding the GitHub flow](https://guides.github.com/introduction/flow/)
 
-* https://learngitbranching.js.org/ (Great for visual learners!)
+- [Learn Git Branching](https://learngitbranching.js.org/ (Great for visual learners!))
 
 ### Markdown
 
-* https://www.markdowntutorial.com/
+- [Our internal markdown guidance](https://review.docs.microsoft.com/help/contribute/markdown-reference?branch=master)
+
+- [External, GitHub tutorial](https://www.markdowntutorial.com/)

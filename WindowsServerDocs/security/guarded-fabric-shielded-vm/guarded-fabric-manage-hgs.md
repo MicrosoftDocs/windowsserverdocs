@@ -1,7 +1,7 @@
 ---
 title: Managing the Host Guardian Service
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.topic: article
 ms.assetid: eecb002e-6ae5-4075-9a83-2bbcee2a891c
 manager: dongill
@@ -217,7 +217,7 @@ The backed up HGS server state will not include the name of your HGS cluster, an
 These settings are important for consistency but not critical to get your HGS cluster back online after a disaster.
 
 To capture the name of the HGS service, run `Get-HgsServer` and note the flat name in the Attestation and Key Protection URLs.
-For example, if the Attestation URL is "http://hgs.contoso.com/Attestation", "hgs" is the HGS service name.
+For example, if the Attestation URL is "<http://hgs.contoso.com/Attestation>", "hgs" is the HGS service name.
 
 The Active Directory domain used by HGS should be managed like any other Active Directory domain.
 When restoring HGS after a disaster, you will not necessarily need to recreate the exact objects that are present in the current domain.
@@ -703,10 +703,10 @@ For each shielded VM, perform the following steps:
 10. Copy the updated KP back to the hosting fabric
 11. Apply the KP to the original VM:
 
-    ```powershell
-    $updatedKP = Get-Content -Path .\updatedVM001.kp
-    Set-VMKeyProtector -VMName VM001 -KeyProtector $updatedKP
-    ```
+   ```powershell
+   $updatedKP = Get-Content -Path .\updatedVM001.kp
+   Set-VMKeyProtector -VMName VM001 -KeyProtector $updatedKP
+   ```
 12.	Finally, start the VM and ensure it runs successfully.
 
 > [!NOTE]
@@ -719,10 +719,10 @@ Once all VMs have been updated to authorize the new guardian keys, you can disab
 
 14. Disable each certificate by running the following commands:  
 
-    ```powershell
-    Set-HgsKeyProtectionCertificate -CertificateType Signing -Thumbprint <Thumbprint> -IsEnabled $false
-    Set-HgsKeyProtectionCertificate -CertificateType Encryption -Thumbprint <Thumbprint> -IsEnabled $false
-    ```
+   ```powershell
+   Set-HgsKeyProtectionCertificate -CertificateType Signing -Thumbprint <Thumbprint> -IsEnabled $false
+   Set-HgsKeyProtectionCertificate -CertificateType Encryption -Thumbprint <Thumbprint> -IsEnabled $false
+   ```
 
 15. After ensuring VMs are still able to start with the certificates disabled, remove the certificates from HGS by running the following commands:
 

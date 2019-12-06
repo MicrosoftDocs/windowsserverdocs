@@ -2,7 +2,7 @@
 title: Recommended configuration for VDI desktops
 description: Recommended settings and configuration to minimize overhead for Windows 10 1607 (10.0.1393) desktops used as VDI images
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: remote-desktop-services
@@ -106,7 +106,7 @@ This setting is only applicable if the Maps app is installed. Its default value 
 |Setting|Default value|Recommended value for VDI use|  
 |-------------------|----------|--------------|
 |When I sign in|	Use the appropriate mode for my hardware|	Use desktop mode|
-|When this device automatically switches mode on or off|	Always ask me before switching|	Don’t ask me and don’t switch|
+|When this device automatically switches mode on or off|	Always ask me before switching|	Don't ask me and don't switch|
 |Hide app icons on the taskbar in tablet mode|	On|	Off|
 
 
@@ -192,7 +192,7 @@ The default value for "Let apps control radios" is **On**; for VDI use the recom
 
 #### Other devices
 
-The default value for "Let your apps automatically share and sync info with wireless devices that don’t explicitly pair with your PC, tablet, or phone" is **On**; for VDI use the recommended value is **Off**.
+The default value for "Let your apps automatically share and sync info with wireless devices that don't explicitly pair with your PC, tablet, or phone" is **On**; for VDI use the recommended value is **Off**.
 
 #### Feedback and diagnostics
 
@@ -392,7 +392,7 @@ Collapse **System**, and then expand **Windows Components**. Adjust each setting
 ||Allow edge swipe|		Disabled|
 ||Disable help tips|		Enabled|
 |File Explorer|||
-||Do not show the ‘new application installed’ notification|		Enabled|
+||Do not show the ‘new application installed' notification|		Enabled|
 |Game Explorer|||
 ||Turn off downloading of game information|		Enabled|
 ||Turn off game updates|		Enabled|
@@ -459,7 +459,7 @@ Using the left pane, enter each of the following settings subfolders and adjust 
 ||Allow Cortana above lock screen|		Disabled|
 ||Allow search and Cortana to use location|		Disabled|
 ||Do not allow web search|		Enabled|
-||Don’t search the web or display web results in Search|		Enabled|
+||Don't search the web or display web results in Search|		Enabled|
 ||Prevent adding UNC locations to index from Control Panel|		Enabled|
 ||Prevent indexing files in offline files cache|		Enabled|
 |**Store**|||

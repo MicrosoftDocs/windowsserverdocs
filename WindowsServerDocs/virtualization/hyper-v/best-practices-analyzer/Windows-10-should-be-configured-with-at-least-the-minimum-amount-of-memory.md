@@ -1,7 +1,7 @@
 ---
 title: Windows 10 should be configured with at least the minimum amount of memory
 description: "Gives instructions to resolve the issue reported by this Best Practices Analyzer rule."
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.service: na
 manager: dongill
 ms.technology: compute-hyper-v

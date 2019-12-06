@@ -6,15 +6,13 @@ author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 
 ms.technology: identity-adfs
 ms.author: billmath
 ---
 
 # Import a Server Authentication Certificate to the Default Web Site
-
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 After you obtain a server authentication certificate from a certification authority \(CA\), you must manually install that certificate on the Default Web Site for each federation server or federation server proxy in a server farm.  
   

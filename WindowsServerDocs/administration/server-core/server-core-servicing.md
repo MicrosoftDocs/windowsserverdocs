@@ -1,7 +1,7 @@
 ---
 title: Patching Server Core
 description: Learn how to update a Server Core installation of Windows Server
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.mktglfcycl: manage
 ms.sitesec: library
 author: lizap
@@ -10,7 +10,7 @@ ms.date: 10/17/2017
 ---
 # Patch a Server Core installation
 
-> Applies to: Windows Server (Semi-Annual Channel) and Windows Server 2016
+> Applies to: Windows Server 2019, Windows Server 2016, and Windows Server (Semi-Annual Channel)
 
 You can patch a server running Server Core installation in the following ways:
 
@@ -33,14 +33,14 @@ Use the following steps to patch the server automatically with Windows Update:
 
 1. Verify the current Windows Update setting:
    ```
-   %systemroot%\system32\Cscript scregedit.wsf /AU /v 
+   %systemroot%\system32\Cscript %systemroot%\system32\scregedit.wsf /AU /v 
    ```
 
 2. To enable automatic updates:
 
    ```
    Net stop wuauserv 
-   %systemroot%\system32\Cscript scregedit.wsf /AU 4 
+   %systemroot%\system32\Cscript %systemroot%\system32\scregedit.wsf /AU 4 
    Net start wuauserv
    ```  
 
@@ -48,7 +48,7 @@ Use the following steps to patch the server automatically with Windows Update:
 
    ```
    Net stop wuauserv 
-   %systemroot%\system32\Cscript scregedit.wsf /AU 1 
+   %systemroot%\system32\Cscript %systemroot%\system32\scregedit.wsf /AU 1 
    Net start wuauserv 
    ```
 

@@ -7,14 +7,12 @@ ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 
 ms.technology: identity-adfs
 ---
 
 # Federation Server Farm Using WID
-
->Applies To: Windows Server 2016, Windows Server 2012 R2
 
 The default topology for Active Directory Federation Services \(AD FS\) is a federation server farm, using the Windows Internal Database \(WID\). In this topology, AD FS uses WID as the store for the AD FS configuration database for all federation servers that are joined to that farm. The farm replicates and maintains the Federation Service data in the configuration database across each server in the farm. AD FS in Windows Server 2012 R2 enables organizations with 100 or fewer relying party trusts to configure federation server farms using WID with up to 30 servers.  
   

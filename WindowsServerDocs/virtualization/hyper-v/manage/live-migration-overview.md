@@ -1,7 +1,7 @@
 ---
 title: Live Migration Overview
 description: "Gives overview of live migration functionality in Windows Server 2016."
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.service: na
 ms.technology: compute-hyper-v
 ms.tgt_pltfrm: na
@@ -18,11 +18,11 @@ Live migration is a Hyper-V feature in Windows Server.  It allows you to transpa
 
 ## Related Technologies and Documentation
 
-Live migration is often used in conjunction with a few related technologies like Failover Clustering and System Center Virtual Machine Manager.  If you’re using Live Migration via these technologies, here are pointers to their latest documentation:
+Live migration is often used in conjunction with a few related technologies like Failover Clustering and System Center Virtual Machine Manager.  If you're using Live Migration via these technologies, here are pointers to their latest documentation:
 * [Failover Clustering](../../../failover-clustering/failover-clustering-overview.md) (Windows Server 2016) 
 * [System Center Virtual Machine Manager](https://docs.microsoft.com/system-center/vmm/) (System Center 2016) 
 
-If you’re using older versions of Windows Server, or need details on features introduced in older versions of Windows Server, here are pointers to historical documentation: 
+If you're using older versions of Windows Server, or need details on features introduced in older versions of Windows Server, here are pointers to historical documentation: 
 * [Live Migration](https://technet.microsoft.com/library/ee815293(v=ws.10).aspx) (Windows Server 2008 R2)  
 * [Live Migration](https://technet.microsoft.com/library/hh831435(v=ws.11).aspx) (Windows Server 2012 R2) 
 * [Failover Clustering](https://technet.microsoft.com/library/hh831579(v=ws.11).aspx) (Windows Server 2012 R2)

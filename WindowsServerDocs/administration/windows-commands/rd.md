@@ -2,7 +2,7 @@
 title: rd
 description: "Windows Commands topic for **** - "
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -32,12 +32,12 @@ rmdir [<Drive>:]<Path> [/s [/q]]
 
 ## Parameters
 
-|Parameter|Description|
-|---------|-----------|
-|[\<Drive>:]<Path>|Specifies the location and the name of the directory that you want to delete. *Path* is required.|
-|/s|Deletes a directory tree (the specified directory and all its subdirectories, including all files).|
-|/q|Specifies quiet mode. Does not prompt for confirmation when deleting a directory tree. (Note that **/q** works only if **/s** is specified.)|
-|/?|Displays help at the command prompt.|
+|     Parameter     |                                                                 Description                                                                  |
+|-------------------|----------------------------------------------------------------------------------------------------------------------------------------------|
+| [\<Drive>:]<Path> |                      Specifies the location and the name of the directory that you want to delete. *Path* is required.                       |
+|        /s         |                     Deletes a directory tree (the specified directory and all its subdirectories, including all files).                      |
+|        /q         | Specifies quiet mode. Does not prompt for confirmation when deleting a directory tree. (Note that **/q** works only if **/s** is specified.) |
+|        /?         |                                                     Displays help at the command prompt.                                                     |
 
 ## Remarks
 

@@ -1,7 +1,7 @@
 ---
 title: Networking
 description: This topic provides an overview of the Software Defined Networking and Network Platform technologies that are available in Windows Server 2016.
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 layout: LandingPage
 ms.technology: networking
 ms.topic: landing-page
@@ -21,7 +21,7 @@ ms.localizationpriority: medium
 
 Networking is a foundational part of the Software Defined Datacenter \(SDDC\) platform, and Windows Server 2016 provides new and improved Software Defined Networking \(SDN\) technologies to help you move to a fully realized SDDC solution for your organization.
 
-When you manage networks as a software defined resource, you can describe an application’s infrastructure requirements one time, and then choose where the application runs - on premises or in the cloud. 
+When you manage networks as a software defined resource, you can describe an application's infrastructure requirements one time, and then choose where the application runs - on premises or in the cloud. 
 
 This consistency means that your applications are now easier to scale, and you can seamlessly run applications - anywhere - with equal confidence about security, performance, quality of service, and availability.
 
@@ -38,7 +38,7 @@ This consistency means that your applications are now easier to scale, and you c
                                             </div>
                                         </div>
                                         <div class="cardText">
-                                        <h2><a href="../networking/What-s-New-in-Networking.md">What's new in Networking</a></h2>
+                                        <h2><a href="../networking/What-s-New-in-Networking.md">What&#39;s new in Networking</a></h2>
                                         </div>
                                     </div>
                                 </div>
@@ -62,8 +62,7 @@ This consistency means that your applications are now easier to scale, and you c
                                         </div>
                                         <div class="cardText">
                                         <h3><a href="https://docs.microsoft.com/windows-server/networking/sdn/">Software Defined Networking (SDN)</a><hr /></h3>You can use this topic to learn about the SDN technologies that are provided in Windows Server, System Center, and Microsoft Azure.</p>
-                        
-                                        <p><b>Note:</b> For Hyper-V hosts and virtual machines \(VMs\) that run SDN infrastructure servers, such as Network Controller and Software Load Balancing nodes, you must install Windows Server Datacenter edition. For Hyper-V hosts that contain only tenant workload VMs that are connected to SDN\-controlled networks, you can run Windows Server Standard edition.</p>                                        </div>
+                                        <p><b>Note:</b> For Hyper-V hosts and virtual machines (VMs) that run SDN infrastructure servers, such as Network Controller and Software Load Balancing nodes, you must install Windows Server Datacenter edition. For Hyper-V hosts that contain only tenant workload VMs that are connected to SDN-controlled networks, you can run Windows Server Standard edition.</p>                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -114,7 +113,7 @@ This consistency means that your applications are now easier to scale, and you c
                                             </div>
                                         </div>
                                         <div class="cardText">
-                                        <h3><a href="sdn/technologies/network-function-virtualization/software-load-balancing-for-sdn.md">Software Load Balancing &#40;SLB&#41; for SDN</a><hr /></h3>Cloud Service Providers \(CSPs\) and Enterprises that are deploying Software Defined Networking (SDN) in Windows Server 2016 can use Software Load Balancing \(SLB\) to evenly distribute tenant and tenant customer network traffic among virtual network resources. The Windows Server SLB enables multiple servers to host the same workload, providing high availability and scalability.</p>                                        </div>
+                                        <h3><a href="sdn/technologies/network-function-virtualization/software-load-balancing-for-sdn.md">Software Load Balancing &#40;SLB&#41; for SDN</a><hr /></h3>Cloud Service Providers (CSPs) and Enterprises that are deploying Software Defined Networking (SDN) in Windows Server 2016 can use Software Load Balancing (SLB) to evenly distribute tenant and tenant customer network traffic among virtual network resources. The Windows Server SLB enables multiple servers to host the same workload, providing high availability and scalability.</p>                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -131,7 +130,7 @@ This consistency means that your applications are now easier to scale, and you c
                                             </div>
                                         </div>
                                         <div class="cardText">
-                                        <h3><a href="sdn/technologies/network-function-virtualization/RAS-Gateway-for-SDN.md">RAS Gateway for SDN</a><hr /></h3>RAS Gateway, which is a software-based, multitenant, Border Gateway Protocol \(BGP\) capable router in Windows Server 2016, is designed for Cloud Service Providers \(CSPs\) and Enterprises that host multiple tenant virtual networks using Hyper-V Network Virtualization.</p>                                        </div>
+                                        <h3><a href="sdn/technologies/network-function-virtualization/RAS-Gateway-for-SDN.md">RAS Gateway for SDN</a><hr /></h3>RAS Gateway, which is a software-based, multitenant, Border Gateway Protocol (BGP) capable router in Windows Server 2016, is designed for Cloud Service Providers (CSPs) and Enterprises that host multiple tenant virtual networks using Hyper-V Network Virtualization.</p>                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -148,7 +147,7 @@ This consistency means that your applications are now easier to scale, and you c
                                             </div>
                                         </div>
                                         <div class="cardText">
-                                        <h3><a href="sdn/technologies/network-function-virtualization/Network-Function-Virtualization.md">Network Function Virtualization</a><hr /></h3>In software defined datacenters, network functions that are being performed by hardware appliances \(such as load balancers, firewalls, routers, switches, and so on\) are increasingly being virtualized as virtual appliances. This "network function virtualization" is a natural progression of server virtualization and network virtualization.</p>                                        </div>
+                                        <h3><a href="sdn/technologies/network-function-virtualization/Network-Function-Virtualization.md">Network Function Virtualization</a><hr /></h3>In software defined datacenters, network functions that are being performed by hardware appliances (such as load balancers, firewalls, routers, switches, and so on) are increasingly being virtualized as virtual appliances. This &quot;network function virtualization&quot; is a natural progression of server virtualization and network virtualization.</p>                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -189,7 +188,7 @@ This consistency means that your applications are now easier to scale, and you c
                                         </div>
                                         <div class="cardText">
                                         <h3><a href="branchcache/BranchCache.md">BranchCache</a><hr /></h3>
-                                        <p>BranchCache is a wide area network \(WAN\) bandwidth optimization technology. To optimize WAN bandwidth when users access content on remote servers, BranchCache fetches content from your main office or hosted cloud content servers and caches the content at branch office locations, allowing client computers at branch offices to access the content locally rather than over the WAN.</p>
+                                        <p>BranchCache is a wide area network (WAN) bandwidth optimization technology. To optimize WAN bandwidth when users access content on remote servers, BranchCache fetches content from your main office or hosted cloud content servers and caches the content at branch office locations, allowing client computers at branch offices to access the content locally rather than over the WAN.</p>
                     </div>
                 </div>
             </div>
@@ -242,8 +241,8 @@ This consistency means that your applications are now easier to scale, and you c
                                             </div>
                                         </div>
                                         <div class="cardText">
-                                        <h3><a href="dns/dns-top.md">Domain Name System (DNS)"></a><hr /></h3>
-                                        <p>Domain Name System \(DNS\) is one of the industry-standard suite of protocols that comprise TCP/IP, and together the DNS Client and DNS Server provide computer name-to-IP address mapping name resolution services to computers and users.</p>
+                                        <h3><a href="dns/dns-top.md">Domain Name System (DNS)&quot;&gt;</a><hr /></h3>
+                                        <p>Domain Name System (DNS) is one of the industry-standard suite of protocols that comprise TCP/IP, and together the DNS Client and DNS Server provide computer name-to-IP address mapping name resolution services to computers and users.</p>
                     </div>
                 </div>
             </div>
@@ -261,7 +260,7 @@ This consistency means that your applications are now easier to scale, and you c
                                         </div>
                                         <div class="cardText">
                                         <h3><a href="technologies/dhcp/dhcp-top.md">Dynamic Host Configuration Protocol &#40;DHCP&#41;</a><hr /></h3>
-                                        <p>Dynamic Host Configuration Protocol \(DHCP\) is a client/server protocol that automatically provides an Internet Protocol \(IP\) host with its IP address and other related configuration information, such as the subnet mask and default gateway.</p>
+                                        <p>Dynamic Host Configuration Protocol (DHCP) is a client/server protocol that automatically provides an Internet Protocol (IP) host with its IP address and other related configuration information, such as the subnet mask and default gateway.</p>
                     </div>
                 </div>
             </div>
@@ -279,7 +278,7 @@ This consistency means that your applications are now easier to scale, and you c
                                         </div>
                                         <div class="cardText">
                                         <h3><a href="sdn/technologies/hyper-v-network-virtualization/Hyper-V-Network-Virtualization.md">Hyper-V Network Virtualization</a><hr /></h3>
-                                        <p>Hyper-V Network Virtualization \(HNV\) enables virtualization of customer networks on top of a shared physical network infrastructure.</p>
+                                        <p>Hyper-V Network Virtualization (HNV) enables virtualization of customer networks on top of a shared physical network infrastructure.</p>
                     </div>
                 </div>
             </div>
@@ -315,7 +314,7 @@ This consistency means that your applications are now easier to scale, and you c
                                         </div>
                                         <div class="cardText">
                                         <h3><a href="technologies/ipam/ipam-top.md">IP Address Management &#40;IPAM&#41;</a><hr /></h3>
-                                        <p>IP Address Management \(IPAM\) is an integrated suite of tools to enable end-to-end planning, deploying, managing and monitoring of your IP address infrastructure, with a rich user experience. IPAM automatically discovers IP address infrastructure servers and Domain Name System \(DNS\) servers on your network and enables you to manage them from a central interface. </p>
+                                        <p>IP Address Management (IPAM) is an integrated suite of tools to enable end-to-end planning, deploying, managing and monitoring of your IP address infrastructure, with a rich user experience. IPAM automatically discovers IP address infrastructure servers and Domain Name System (DNS) servers on your network and enables you to manage them from a central interface. </p>
                     </div>
                 </div>
             </div>
@@ -333,7 +332,7 @@ This consistency means that your applications are now easier to scale, and you c
                                         </div>
                                         <div class="cardText">
                                         <h3><a href="technologies/Network-Load-Balancing.md">Network Load Balancing</a><hr /></h3>
-                                        <p>Network Load Balancing \(NLB\) distributes traffic across several servers using the TCP/IP networking protocol. For non-SDN deployments, NLB ensures that stateless applications, such as Web servers running Internet Information Services \(IIS\), are scalable by adding more servers as the load increases.</p>
+                                        <p>Network Load Balancing (NLB) distributes traffic across several servers using the TCP/IP networking protocol. For non-SDN deployments, NLB ensures that stateless applications, such as Web servers running Internet Information Services (IIS), are scalable by adding more servers as the load increases.</p>
                     </div>
                 </div>
             </div>
@@ -352,7 +351,6 @@ This consistency means that your applications are now easier to scale, and you c
                                         <div class="cardText">
                                         <h3><a href="technologies/hpn/hpn-top.md">High-Performance Networking</a><hr /></h3>
                                         <p>Network offload and optimization technologies in Windows Server 2016 include Software Only (SO) features and technologies, Software and Hardware (SH) integrated features and technologies, and Hardware Only (HO) features and technologies.</p>
-
                                         <p>The following offload and optimization technology documentation is also available:<p>
                                         <hr />
                                         <a href="technologies/conv-nic/cnic-top.md">High-Performance Networking</a><hr />
@@ -395,7 +393,7 @@ This consistency means that your applications are now easier to scale, and you c
                                         <div class="cardText">
                                         <h3><a href="technologies/netsh/netsh.md">Network Shell (Netsh)</a><hr /></h3>
                                         <p>
-                                        You can use the Network Shell \(netsh\) networking utility to manage networking technologies in Windows Server 2016 and Windows 10.</p>
+                                        You can use the Network Shell (netsh) networking utility to manage networking technologies in Windows Server 2016 and Windows 10.</p>
                     </div>
                 </div>
             </div>
@@ -414,7 +412,7 @@ This consistency means that your applications are now easier to scale, and you c
                                         <div class="cardText">
                                         <h3><a href="technologies/network-subsystem/net-sub-performance-top.md">Network Subsystem Performance Tuning</a><hr /></h3>
                                         <p>
-                                        This topic provides information about choosing the right network adapter for your server workload, ordering network interfaces, network related performance counters, and performance tuning network adapters and related networking technologies, such as Receive Side Scaling \(RSS\), Receive Side Coalescing \(RSC\), and others.</p>
+                                        This topic provides information about choosing the right network adapter for your server workload, ordering network interfaces, network related performance counters, and performance tuning network adapters and related networking technologies, such as Receive Side Scaling (RSS), Receive Side Coalescing (RSC), and others.</p>
                     </div>
                 </div>
             </div>
@@ -490,8 +488,7 @@ This consistency means that your applications are now easier to scale, and you c
                                         <div class="cardText">
                                         <h3><a href="../remote/remote-access/remote-access.md">Remote Access</a><hr /></h3>
                                         <p>
-                                        You can use Remote Access technologies, such as DirectAccess and Virtual Private Networking \(VPN\) to provide remote workers with connectivity to internal network resources. In addition, you can use Remote Access for local area network \(LAN\) routing, and for Web Application Proxy. which provides reverse proxy functionality for web applications inside your corporate network to allow users on any device to access them from outside the corporate network.</p>
-
+                                        You can use Remote Access technologies, such as DirectAccess and Virtual Private Networking (VPN) to provide remote workers with connectivity to internal network resources. In addition, you can use Remote Access for local area network (LAN) routing, and for Web Application Proxy. which provides reverse proxy functionality for web applications inside your corporate network to allow users on any device to access them from outside the corporate network.</p>
                                         <p>For more information about Web Application Proxy, which is a role service of the Remote Access server role, see <a href="https://docs.microsoft.com/windows-server/remote/remote-access/web-application-proxy/web-application-proxy-windows-server">Web Application Proxy in Windows Server 2016</a></p>
                     </div>
                 </div>
@@ -513,7 +510,7 @@ This consistency means that your applications are now easier to scale, and you c
                                         <p>
                                         Windows Container Networking allows you to create and manage networks for connecting container endpoints on both Windows 10 and Windows Server hosts by using standard industry tools and workflows. Windows container networks support multiple topologies, including private, flat-L2, and routed-L3.</p>
 
-                                        <p>Also supported are overlays that you can create locally on the host by using Docker, Kubernetes, or Windows PowerShell through plugins that communicate with the Windows Host Networking Service \(HNS\). You can create and manage multi\-node cluster networks through higher level orchestration systems by communicating through a local agent to each node’s HNS.</p>
+                                        <p>Also supported are overlays that you can create locally on the host by using Docker, Kubernetes, or Windows PowerShell through plugins that communicate with the Windows Host Networking Service (HNS). You can create and manage multi-node cluster networks through higher level orchestration systems by communicating through a local agent to each node's HNS.</p>
                     </div>
                 </div>
             </div>
@@ -533,11 +530,8 @@ This consistency means that your applications are now easier to scale, and you c
                                         <h3><a href="../remote/remote-access/vpn/vpn-top.md">Virtual Private Networking (VPN)</a><hr /></h3>
                                         <p>
                                         DirectAccess and VPN is a role service of the Remote Accessserver role.</p>
-
-                                        <p>When you install Remote Access as a VPN server, you can use Virtual Private Networking \(VPN\) to provide your remote employees with connections to your organization network across the Internet - while also maintaining information privacy with encrypted connections.</p>
-
+                                        <p>When you install Remote Access as a VPN server, you can use Virtual Private Networking (VPN) to provide your remote employees with connections to your organization network across the Internet - while also maintaining information privacy with encrypted connections.</p>
                                        <p> With Windows Server Remote Access VPN - and Windows 10 client computers - you can deploy Always On VPN. Always On VPN gives you the ability to manage remote VPN clients that are always connected, while also providing convenience for remote workers, who no longer need to manually connect to and disconnect from VPN to your organization network.</p>
-
                                        <p>For more information, see <a href="https://docs.microsoft.com/windows-server/remote/remote-access/vpn/always-on-vpn/deploy/always-on-vpn-deploy">Remote Access Always On VPN Deployment Guide for Windows Server 2016 and Windows 10</a></p>
                     </div>
                 </div>

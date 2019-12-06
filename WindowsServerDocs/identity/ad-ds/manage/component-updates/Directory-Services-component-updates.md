@@ -7,7 +7,7 @@ ms.author: joflore
 manager: mtillman
 ms.date: 05/31/2017
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 
 ms.technology: identity-adds
 ---
@@ -157,12 +157,12 @@ You use the -DomainMode parameter with the Install-ADDSForest or Install-ADDSDom
 ### Overview  
 The LDAP query optimizer algorithm was reevaluated and further optimized.  The result is the performance improvement in LDAP search efficiency and LDAP search time of complex queries.  
   
-> [!NOTE]  
-> **From the Developer:**improvements in the performance of searches through improvements in the mapping from LDAP query to ESE query.  LDAP filters beyond a certain level of complexity prevent optimized index selection, resulting in drastically decreased performance (1000x or more). This change alters the way in which we select indices for LDAP queries to avoid this problem.  
-  
-> [!NOTE]  
+> [!NOTE]
+> <strong>From the Developer:</strong>improvements in the performance of searches through improvements in the mapping from LDAP query to ESE query.  LDAP filters beyond a certain level of complexity prevent optimized index selection, resulting in drastically decreased performance (1000x or more). This change alters the way in which we select indices for LDAP queries to avoid this problem.  
+> 
+> [!NOTE]
 > A complete overhaul of the LDAP query optimizer algorithm, resulting in:  
->   
+> 
 > -   Faster search times  
 > -   Efficiency gains allow DCs to do more  
 > -   Less support calls regarding AD Performance issues  

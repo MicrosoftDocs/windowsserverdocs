@@ -2,7 +2,7 @@
 title: Linux Software Repository for Microsoft Products
 description: This document describes how to use and install Linux software packages for Microsoft products.
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.service: na
 manager: szark
 ms.technology: compute
@@ -17,14 +17,14 @@ ms.date: 10/16/2017
 ## Overview
 Microsoft builds and supports a variety of software products for Linux systems and makes them available via standard APT and YUM package repositories. This document describes how to configure the repository on your Linux system, so that you can then install/upgrade Microsoft's Linux software using your distribution's standard package management tools.
 
-Microsoft’s Linux Software Repository is comprised of multiple sub-repositories:
+Microsoft's Linux Software Repository is comprised of multiple sub-repositories:
 
  - prod – The Production sub-repository is designated for packages intended for use in production. These packages are commercially supported by Microsoft under the terms of the applicable support agreement or program that you have with Microsoft.
 
  - mssql-server - These repositories contain packages for Microsoft SQL Server on Linux - See also: [SQL Server on Linux](https://www.microsoft.com/en-us/sql-server/sql-server-vnext-including-Linux).
 
->[!Note]
-Packages in the Linux software repositories are subject to the license terms located in the packages. Please read the license terms prior to using the package. Your installation and use of the package constitutes your acceptance of these terms. If you do not agree with the license terms, do not use the package.
+> [!Note]
+> Packages in the Linux software repositories are subject to the license terms located in the packages. Please read the license terms prior to using the package. Your installation and use of the package constitutes your acceptance of these terms. If you do not agree with the license terms, do not use the package.
 
 
 ## Configuring the repositories
@@ -45,22 +45,33 @@ Repositories can be configured automatically by installing the Linux package tha
 
  - Ubuntu 14.04 (Trusty)
 
-		wget https://packages.microsoft.com/config/ubuntu/14.04/packages-microsoft-prod.deb
-		sudo dpkg -i packages-microsoft-prod.deb
+		curl https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
+		sudo apt-add-repository https://packages.microsoft.com/ubuntu/14.04/prod
 		sudo apt-get update
 
  - Ubuntu 16.04 (Xenial)
 
-		wget https://packages.microsoft.com/config/ubuntu/16.04/packages-microsoft-prod.deb
-		sudo dpkg -i packages-microsoft-prod.deb
+		curl https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
+		sudo apt-add-repository https://packages.microsoft.com/ubuntu/16.04/prod
 		sudo apt-get update
 
- - Ubuntu 16.10 (Yakkety)
+ - Ubuntu 18.04 (Bionic)
 
-		wget https://packages.microsoft.com/config/ubuntu/16.10/packages-microsoft-prod.deb
-		sudo dpkg -i packages-microsoft-prod.deb
+ 		curl https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
+		sudo apt-add-repository https://packages.microsoft.com/ubuntu/18.04/prod
 		sudo apt-get update
 
+ - Ubuntu 18.10 (Cosmic)
+
+ 		curl https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
+		sudo apt-add-repository https://packages.microsoft.com/ubuntu/18.10/prod
+		sudo apt-get update
+
+ - Ubuntu 19.04 (Disco)
+
+ 		curl https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
+		sudo apt-add-repository https://packages.microsoft.com/ubuntu/19.04/prod
+		sudo apt-get update
 
 ### SUSE Linux Enterprise 12
 

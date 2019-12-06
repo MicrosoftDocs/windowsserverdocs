@@ -7,12 +7,11 @@ ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 
 ms.technology: identity-adfs
 ---
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 # When to Use a Custom Claim Rule
 You write a custom claim rule in Active Directory Federation Services \(AD FS\) using the claim rule language, which is the framework that the claims issuance engine uses to programmatically generate, transform, pass through, and filter claims. By using a custom rule, you can create rules with more complex logic than a standard rule template. Consider using a custom rule when you want to:  
@@ -67,7 +66,7 @@ For more information about how to use the claim rule language, see [The Role of 
   
 ## Using the claim rule language  
   
-### Example: How to combine first and last names based on a user’s name attribute values  
+### Example: How to combine first and last names based on a user's name attribute values  
 The following rule syntax combines first and last names from attribute values in a given attribute store. The policy engine forms a cartesian product of the matches for each condition. For example, the output for first name {“Frank”, “Alan”} and last names {“Miller”, “Shen”} is {“Frank Miller”, “Frank Shen”, “Alan Miller”, “Alan Shen”}:  
   
 ```  

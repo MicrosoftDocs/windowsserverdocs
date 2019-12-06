@@ -2,7 +2,7 @@
 title: Realm Names
 description: This topic provides an overview of using realm names in Network Policy Server connection request processing in Windows Server 2016.
 manager: brianlic
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: networking
 ms.topic: article
 ms.assetid: d011eaad-f72a-4a83-8099-8589c4ee8994
@@ -23,7 +23,7 @@ In another example, if the User-Name RADIUS attribute contains the user name use
 
 - **Example\user1**. In this example, the realm name **Example** is a prefix; and it is also the name of an Active Directory&reg; Domain Services \(AD DS\) domain.
 
-- **user1@example.com**. In this example, the realm name **example.com** is a suffix; and it is either a DNS domain name or the name of an AD DS domain.
+- <strong>user1@example.com</strong>. In this example, the realm name **example.com** is a suffix; and it is either a DNS domain name or the name of an AD DS domain.
 
 You can use realm names configured in connection request policies while designing and deploying your RADIUS infrastructure to ensure that connection requests are routed from RADIUS clients, also called network access servers, to RADIUS servers that can authenticate and authorize the connection request.
 

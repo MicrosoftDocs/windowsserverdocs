@@ -2,7 +2,7 @@
 title: Storage Spaces Direct - Frequently asked questions
 description: Learn how about Storage Spaces Direct
 keywords: Storage Spaces
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.author: kaushik
 ms.technology: storage-spaces
 ms.topic: article
@@ -20,7 +20,7 @@ Yes, you can get both a performance and capacity tier in a 2-node or 3-node Stor
  
 ## Refs file system provides real-time tiaring with Storage Spaces Direct. Does REFS provides the same functionality with shared storage spaces in 2016?
 
-No, you won’t get real-time tiering with shared storage spaces with 2016. This is only for Storage Spaces Direct. 
+No, you won't get real-time tiering with shared storage spaces with 2016. This is only for Storage Spaces Direct. 
  
 ## Can I use an NTFS file system with Storage Spaces Direct?
   

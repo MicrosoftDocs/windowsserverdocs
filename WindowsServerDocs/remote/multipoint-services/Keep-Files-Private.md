@@ -2,7 +2,7 @@
 title: Keep Files Private
 description: Learn how to protect certain files from users within MultiPoint Services
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: multipoint-services
 ms.reviewer: na
 ms.suite: na

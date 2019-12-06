@@ -1,11 +1,12 @@
 ---
 title: What's New in Windows Server, version 1809
 description: "New features in Windows Server, version 1809"
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: server-general
 ms.topic: article
-author: coreyp-at-msft
-ms.author: coreyp
+author: jasongerend
+ms.author: jgerend
+ms.date: 05/21/2019
 ms.localizationpriority: high
 ---
 
@@ -13,7 +14,7 @@ ms.localizationpriority: high
 
 >Applies To: Windows Server (Semi-Annual Channel)
 
-This topic describes some of the new features in Windows Server, version 1809. To find out What's New in Windows Server 2019, see [What's New in Windows Server 2019](../get-started-19/whats-new-19.md).
+To learn about the latest features in Windows, see [What's New in Windows Server](whats-new-in-windows-server.md). This topic describes some of the new features in Windows Server, version 1809.
 
 ## Container networking with Kubernetes
 

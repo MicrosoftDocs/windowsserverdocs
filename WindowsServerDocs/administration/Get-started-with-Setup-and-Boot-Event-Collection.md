@@ -1,7 +1,7 @@
 ---
 title: Get started with Setup and Boot Event Collection
 description: "Setting up Setup and Boot Event Collection collectors and targets"
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.service: na
 manager: DonGill
 ms.technology: server-sbec
@@ -329,23 +329,23 @@ At the debug level, it might be useful to write the log into a file rather than 
       
  **A suggested approach to troubleshooting the Collector:**  
    
- 1. First of all, verify that the collector has received the connection from the target (it will create the file only when the target starts sending the messages) with   
-```  
-Get-SbecForwarding  
-```  
-If it returns that there is a connection from this target then the problem might be in the autologger settings. If it returns nothing, the problem is with the KDNET connection to start with. To diagnose KDNET connection problems, try checking the connection from both ends (that is, from the collector and from the target).  
+1. First of all, verify that the collector has received the connection from the target (it will create the file only when the target starts sending the messages) with   
+   ```  
+   Get-SbecForwarding  
+   ```  
+   If it returns that there is a connection from this target then the problem might be in the autologger settings. If it returns nothing, the problem is with the KDNET connection to start with. To diagnose KDNET connection problems, try checking the connection from both ends (that is, from the collector and from the target).  
   
 2. To see extended diagnostics from the Collector, add this to the \<collector> element of the configuration file:  
-\<collector ... minlog="verbose">  
-This will enable messages about every received packet.  
+   \<collector ... minlog="verbose">  
+   This will enable messages about every received packet.  
 3. Check whether any packets are received at all. Optionally, you might want to write the log in verbose mode directly to a file rather than through ETW. To do this, add this to the \<collector> element of the configuration file:  
-\<collector ... minlog="verbose" log="c:\ProgramData\Microsoft\BootEventCollector\Logs\log.txt">  
+   \<collector ... minlog="verbose" log="c:\ProgramData\Microsoft\BootEventCollector\Logs\log.txt">  
       
 4. Check the event logs for any messages about the received packets. Check whether any packets are received at all. If the packets are received but incorrect, check event messages for details.  
 5. From the target side, KDNET writes some diagnostic information into the registry. Look in   
-**HKLM\SYSTEM\CurrentControlSet\Services\kdnet** for messages.  
-  KdInitStatus (DWORD) will = 0 on success and show an error code on error  
-  KdInitErrorString = explanation of the error (also contains informational messages if no error)  
+   **HKLM\SYSTEM\CurrentControlSet\Services\kdnet** for messages.  
+   KdInitStatus (DWORD) will = 0 on success and show an error code on error  
+   KdInitErrorString = explanation of the error (also contains informational messages if no error)  
   
 6. Run Ipconfig.exe on the target and check for the device name it reports. If KDNET loaded properly, the device name should be  something like "kdnic" instead of the original vendor's card name.  
 7. Check whether DHCP is configured for the target. KDNET absolutely requires DHCP.  

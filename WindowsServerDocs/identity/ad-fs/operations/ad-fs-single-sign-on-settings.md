@@ -7,12 +7,10 @@ ms.author: billmath
 manager: femila
 ms.date: 08/17/2017
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: identity-adfs
 ---
 # AD FS Single Sign-On Settings
-
->Applies To: Windows Server 2016, Windows Server 2012 R2
 
 Single Sign-On (SSO) allows users to authenticate once and access multiple resources without being prompted for additional credentials.  This article describes the default AD FS behavior for SSO, as well as the configuration settings that allow you to customize this behavior.  
 
@@ -24,7 +22,7 @@ AD FS supports several types of Single Sign-On experiences:
   
      Session SSO cookies are written for the authenticated user which eliminates further prompts when the user switches applications during a particular session. However, if a particular session ends, the user will be prompted for their credentials again.  
   
-     AD FS will set session SSO cookies by default if users’ devices are not registered. If the browser session has ended and is restarted, this session cookie is deleted and is not valid any more.  
+     AD FS will set session SSO cookies by default if users' devices are not registered. If the browser session has ended and is restarted, this session cookie is deleted and is not valid any more.  
   
 -   **Persistent SSO**  
   
@@ -52,8 +50,8 @@ Enable/disable persistent SSO | ```` Set-AdfsProperties –EnablePersistentSso <
 
 
 ## AD FS 2016 - Single Sign-On and authenticated devices
-AD FS 2016 changes the PSSO when requestor is authenticating from a registered device increasing to max 90 Days but requiring an authenticvation within a 14 days period (device usage window).
-After providing credentials for the first time, by default users with registered devices get single Sign-On  for a maximum period of 90 days, provided they use the device to access AD FS resources at least once every 14 days.  If they wait 15 days after providing credentials, users will be prompted for credentials again.  
+AD FS 2016 changes the PSSO when requestor is authenticating from a registered device increasing to max 90 Days but requiring an authentication within a 14 days period (device usage window).
+After providing credentials for the first time, by default users with registered devices get single Sign-On for a maximum period of 90 days, provided they use the device to access AD FS resources at least once every 14 days.  If they wait 15 days after providing credentials, users will be prompted for credentials again.  
 
 Persistent SSO is enabled by default. If it is disabled, no PSSO cookie will be written.|  
 
@@ -99,23 +97,23 @@ It's important to note that, while providing relatively long periods of single s
 ## PSSO revocation  
  To protect security, AD FS will reject any persistent SSO cookie previously issued when the following conditions are met. This will require the user to provide their credentials in order to authenticate with AD FS again. 
   
--   User changes password  
+- User changes password  
   
--   Persistent SSO setting is disabled in AD FS  
+- Persistent SSO setting is disabled in AD FS  
   
--   Device is disabled by the administrator in lost or stolen case  
+- Device is disabled by the administrator in lost or stolen case  
   
--   AD FS receives a persistent SSO cookie which is issued for a registered user but the user or the device is not registered anymore  
+- AD FS receives a persistent SSO cookie which is issued for a registered user but the user or the device is not registered anymore  
   
--   AD FS receives a persistent SSO cookie for a registered user but the user re-registered  
+- AD FS receives a persistent SSO cookie for a registered user but the user re-registered  
   
--   AD FS receives a persistent SSO cookie which is issued as a result of “keep me signed in” but “keep me signed in” setting is disabled in AD FS  
+- AD FS receives a persistent SSO cookie which is issued as a result of “keep me signed in” but “keep me signed in” setting is disabled in AD FS  
   
--   AD FS receives a persistent SSO cookie which is issued for a registered user but device certificate is missing or altered during authentication  
+- AD FS receives a persistent SSO cookie which is issued for a registered user but device certificate is missing or altered during authentication  
   
--   AD FS administrator has set a cutoff time for persistent SSO. When this is configured, AD FS will reject any persistent SSO cookie issued before this time  
+- AD FS administrator has set a cutoff time for persistent SSO. When this is configured, AD FS will reject any persistent SSO cookie issued before this time  
   
- To set the cutoff time, run the following PowerShell cmdlet:  
+  To set the cutoff time, run the following PowerShell cmdlet:  
   
 
 ``` powershell
@@ -159,7 +157,7 @@ To Summarize:
     <th>YES</th>
   </tr>
  <tr align="center">
-    <td>SSO=>set Refresh Token=></td>
+    <td>SSO=&gt;set Refresh Token=&gt;</td>
     <td>8 Hrs</td>
     <td>N/A</td>
     <td>N/A</td>
@@ -170,7 +168,7 @@ To Summarize:
   </tr>
 
  <tr align="center">
-    <td>PSSO=>set Refresh Token=></td>
+    <td>PSSO=&gt;set Refresh Token=&gt;</td>
     <td>N/A</td>
     <td>24 Hrs</td>
     <td>7 Days</td>

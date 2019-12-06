@@ -7,18 +7,18 @@ ms.author: joflore
 manager: mtillman
 ms.date: 05/31/2017
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 
 ms.technology: identity-adds
 ---
 
 # CA Backup and Restore Windows PowerShell cmdlets
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
->
-**Author**: Justin Turner, Senior Support Escalation Engineer with the Windows group  
-  
-> [!NOTE]  
+> Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> 
+> **Author**: Justin Turner, Senior Support Escalation Engineer with the Windows group  
+> 
+> [!NOTE]
 > This content is written by a Microsoft customer support engineer, and is intended for experienced administrators and systems architects who are looking for deeper technical explanations of features and solutions in Windows Server 2012 R2 than topics on TechNet usually provide. However, it has not undergone the same editing passes, so some of the language may seem less polished than what is typically found on TechNet.  
   
 ## Overview  

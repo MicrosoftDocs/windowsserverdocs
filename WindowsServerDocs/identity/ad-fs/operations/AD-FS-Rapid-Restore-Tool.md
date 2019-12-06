@@ -5,15 +5,13 @@ description:
 author: billmath
 ms.author: billmath
 manager: femila
-ms.date: 04/01/2019
+ms.date: 07/02/2019
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 
 ms.technology: identity-adfs
 ---
 # AD FS Rapid Restore Tool
-
->Applies To: Windows Server 2016, Windows Server 2012 R2
 
 ## Overview
 Today AD FS is made highly available by setting up an AD FS farm. Some organizations would like a way to have a single server AD FS deployment, eliminating the need for multiple AD FS servers and network load balancing infrastructure, while still having some assurance that service can be restored quickly if there is a problem.
@@ -26,6 +24,9 @@ The AD FS Rapid Restore tool can be used in the following scenarios:
 	- Use the tool to create a cold standby installation of AD FS that can be quickly deployed in place of the online AD FS server
 2. Deploy identical test and production environments
 	- Use the tool to quickly create an accurate copy of the production AD FS in a test environment, or to quickly deploy a validated test configuration to production
+
+>[!NOTE] 
+>If you are using SQL Merge Replication or Always on Availablity Groups, the Rapid Restore tool is not supported. We recommend using SQL based backups and a backup of the SSL certificate as an alternative.
 
 ## What is backed up
 The tool backs up the following AD FS configuration
@@ -75,7 +76,7 @@ Parameter Sets
 "FileSystem" indicates that the user wants to store it in a folder locally or in the network
 "Azure" indicates the user wants to store it in the Azure Storage Container
 When the user performs the backup, they select the backup location, either the File System or in the cloud. 
-For Azure to be used, Azure Storage Credentials should be passed to the cmdlet. The storage credentials contains the account name and key. In addition to this, a container name must also be passed in. If the container doesn’t exist, it is created during the backup. 
+For Azure to be used, Azure Storage Credentials should be passed to the cmdlet. The storage credentials contains the account name and key. In addition to this, a container name must also be passed in. If the container doesn't exist, it is created during the backup. 
 For the file system to be used, a storage path must be given. In that directory, a new directory will be created for each backup. Each directory created will contain the backed up files. 
 
 - **EncryptionPassword &lt;string&gt;** - The password that is going to be used to encrypt all the backed up files before storing it
@@ -218,6 +219,13 @@ Every time a backup or restore is performed a log file is created. These can be 
 
 ## Version Release History
 
+### Version 1.0.82.0
+Release: July 2019
+
+**Fixed issues:**
+- Bug fix for AD FS service account names that contain LDAP escape characters
+
+
 ### Version: 1.0.81.0
 Release: April 2019
 
@@ -257,7 +265,7 @@ Release: July 2018
 
 **Fixed issues:**
 
-   - Bug fix: handle service account passwords that have special characters in them (ie, ‘&’)
+   - Bug fix: handle service account passwords that have special characters in them (ie, ‘&')
    - Bug fix: restoration fails because Microsoft.IdentityServer.Servicehost.exe.config is being used by another process
 
 

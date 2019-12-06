@@ -7,12 +7,11 @@ ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 
 ms.technology: identity-adfs
 ---
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 # The Role of Claims
 In the claims\-based identity model, claims play a pivotal role in the federation process, They are the key component by which the outcome of all Web\-based authentication and authorization requests are determined. This model enables organizations to securely project digital identity and entitlement rights, or *claims*, across security and enterprise boundaries in a standardized way.  

@@ -1,7 +1,7 @@
 ---
 title: Converged Network Interface Card (NIC) configuration guidance
 description: Converged network interface card (NIC) allows you to expose RDMA through a host-partition virtual NIC (vNIC) so that the host partition services can access Remote Direct Memory Access (RDMA) on the same NICs that the Hyper-V guests are using for TCP/IP traffic.
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: networking
 ms.topic: article
 ms.assetid: d7642338-9b33-4dce-8100-8b2c38d7127a

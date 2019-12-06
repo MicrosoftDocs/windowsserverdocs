@@ -1,7 +1,7 @@
 ---
 title: Deploy Windows Server Hybrid Cloud Print - Passthrough Auth
 description: "How to set up Microsoft Hybrid Cloud Print with passthrough authentication"
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: Windows Server 2016
@@ -70,62 +70,62 @@ This guide outlines five (5) installation steps:
 ### Step 2 - Install Hybrid Cloud Print package on the Print Server
 
 1. Install the Hybrid Cloud Print PowerShell modules
-    -  Run the following commands from an elevated PowerShell command prompt
-        - `find-module -Name "PublishCloudPrinter"` to confirm that the machine can reach the PowerShell Gallery (PSGallery)
-        - `install-module -Name "PublishCloudPrinter"`
+   - Run the following commands from an elevated PowerShell command prompt
+      - `find-module -Name "PublishCloudPrinter"` to confirm that the machine can reach the PowerShell Gallery (PSGallery)
+      - `install-module -Name "PublishCloudPrinter"`
 
-    > NOTE: You may see a messaging stating that 'PSGallery' is an untrusted repository.  Enter 'y' to continue with the installation.
+     > NOTE: You may see a messaging stating that 'PSGallery' is an untrusted repository.  Enter 'y' to continue with the installation.
 
 2. Install the Hybrid Cloud Print solution
     - In the same elevated PowerShell command prompt, change directory to `C:\Program Files\WindowsPowerShell\Modules\PublishCloudPrinter\1.0.0.0`
     - Run <br>
         `CloudPrintDeploy.ps1 -AzureTenant <Domain name used by Azure AD Connect> -AzureTenantGuid <Azure AD Directory ID>`
-3.  Configure the 2 IIS endpoints to support SSL
-    -   The SSL certificate can be a self-signed cert or one issued from some trusted Certificate Authority (CA)
-    -  If using self-signed cert, make sure the cert is imported to the client machine(s)
-4.  Install SQLite package
-    - Open an elevated PowerShell command prompt
-    - Run the following command to download System.Data.SQLite nuget packages <br>
-        `Register-PackageSource -Name nuget.org -ProviderName NuGet -Location https://www.nuget.org/api/v2/ -Trusted -Force`
-    - Run the following command to install the packages<br>
-    `Install-Package system.data.sqlite [-requiredversion x.x.x.x] -providername nuget`
+3. Configure the 2 IIS endpoints to support SSL
+   -   The SSL certificate can be a self-signed cert or one issued from some trusted Certificate Authority (CA)
+   -  If using self-signed cert, make sure the cert is imported to the client machine(s)
+4. Install SQLite package
+   - Open an elevated PowerShell command prompt
+   - Run the following command to download System.Data.SQLite nuget packages <br>
+       `Register-PackageSource -Name nuget.org -ProviderName NuGet -Location https://www.nuget.org/api/v2/ -Trusted -Force`
+   - Run the following command to install the packages<br>
+   `Install-Package system.data.sqlite [-requiredversion x.x.x.x] -providername nuget`
 
-    > NOTE: It is recommended to download and install the latest version by leaving out the "-requiredversion" option.
+   > NOTE: It is recommended to download and install the latest version by leaving out the "-requiredversion" option.
 
-5.  Copy the SQLite dlls to the MopriaCloudService Webapp \<bin\> folder (**C:\\inetpub\\wwwroot\\MopriaCloudService\\bin**): <br>
-    - The SQLite binaries should be at “\\Program Files\\PackageManagement\\NuGet\\Packages”
+5. Copy the SQLite dlls to the MopriaCloudService Webapp \<bin\> folder (**C:\\inetpub\\wwwroot\\MopriaCloudService\\bin**): <br>
+   - The SQLite binaries should be at “\\Program Files\\PackageManagement\\NuGet\\Packages”
 
-            \\System.Data.SQLite.**Core**.x.x.x.x\\lib\\net46\\System.Data.SQLite.dll
-            --\> \<bin\>\\System.Data.SQLite.dll  
-            \\System.Data.SQLite.**Core**.x.x.x.x\\build\\net46\\x86\\SQLite.Interop.dll
-            --\> \<bin\>\\**x86**\\SQLite.Interop.dll  
-            \\System.Data.SQLite.**Core**.x.x.x.x\\build\\net46\\x64\\SQLite.Interop.dll
-            --\> \<bin\>\\**x64**\\SQLite.Interop.dll
-            \\System.Data.SQLite.**Linq**.x.x.x.x\\lib\\net46\\System.Data.SQLite.Linq.dll
-            --\> \<bin\>\\System.Data.SQLite.Linq.dll  
-            \\System.Data.SQLite.**EF6**.x.x.x.x\\lib\\net46\\System.Data.SQLite.EF6.dll
-            --\> \<bin\>\\System.Data.SQLite.EF6.dll
+           \\System.Data.SQLite.**Core**.x.x.x.x\\lib\\net46\\System.Data.SQLite.dll
+           --\> \<bin\>\\System.Data.SQLite.dll  
+           \\System.Data.SQLite.**Core**.x.x.x.x\\build\\net46\\x86\\SQLite.Interop.dll
+           --\> \<bin\>\\**x86**\\SQLite.Interop.dll  
+           \\System.Data.SQLite.**Core**.x.x.x.x\\build\\net46\\x64\\SQLite.Interop.dll
+           --\> \<bin\>\\**x64**\\SQLite.Interop.dll
+           \\System.Data.SQLite.**Linq**.x.x.x.x\\lib\\net46\\System.Data.SQLite.Linq.dll
+           --\> \<bin\>\\System.Data.SQLite.Linq.dll  
+           \\System.Data.SQLite.**EF6**.x.x.x.x\\lib\\net46\\System.Data.SQLite.EF6.dll
+           --\> \<bin\>\\System.Data.SQLite.EF6.dll
 
-    > NOTE: x.x.x.x is the SQLite version installed above.
+   > NOTE: x.x.x.x is the SQLite version installed above.
 
-6.  Update the `c:\inetpub\wwwroot\MopriaCloudService\web.config` file to include the SQLite version x.x.x.x in the following \<runtime\>/\<assemblyBinding\> sections:
+6. Update the `c:\inetpub\wwwroot\MopriaCloudService\web.config` file to include the SQLite version x.x.x.x in the following \<runtime\>/\<assemblyBinding\> sections:
 
-        <dependentAssembly>
-        assemblyIdentity name="System.Data.SQLite" culture="neutral" publicKeyToken="db937bc2d44ff139" /
-        <bindingRedirect oldVersion="0.0.0.0-x.x.x.x" newVersion="x.x.x.x" />
-        </dependentAssembly>
-        <dependentAssembly>
-        <assemblyIdentity name="System.Data.SQLite.Core" culture="neutral" publicKeyToken="db937bc2d44ff139" />
-        <bindingRedirect oldVersion="0.0.0.0-x.x.x.x" newVersion="x.x.x.x" />
-        </dependentAssembly>
-        <dependentAssembly>
-        <assemblyIdentity name="System.Data.SQLite.EF6" culture="neutral" publicKeyToken="db937bc2d44ff139" />
-        <bindingRedirect oldVersion="0.0.0.0-x.x.x.x" newVersion="x.x.x.x" />
-        </dependentAssembly>
-        <dependentAssembly>
-        <assemblyIdentity name="System.Data.SQLite.Linq" culture="neutral" publicKeyToken="db937bc2d44ff139" />
-        <bindingRedirect oldVersion="0.0.0.0-x.x.x.x" newVersion="x.x.x.x" />
-        </dependentAssembly>
+       <dependentAssembly>
+       assemblyIdentity name="System.Data.SQLite" culture="neutral" publicKeyToken="db937bc2d44ff139" /
+       <bindingRedirect oldVersion="0.0.0.0-x.x.x.x" newVersion="x.x.x.x" />
+       </dependentAssembly>
+       <dependentAssembly>
+       <assemblyIdentity name="System.Data.SQLite.Core" culture="neutral" publicKeyToken="db937bc2d44ff139" />
+       <bindingRedirect oldVersion="0.0.0.0-x.x.x.x" newVersion="x.x.x.x" />
+       </dependentAssembly>
+       <dependentAssembly>
+       <assemblyIdentity name="System.Data.SQLite.EF6" culture="neutral" publicKeyToken="db937bc2d44ff139" />
+       <bindingRedirect oldVersion="0.0.0.0-x.x.x.x" newVersion="x.x.x.x" />
+       </dependentAssembly>
+       <dependentAssembly>
+       <assemblyIdentity name="System.Data.SQLite.Linq" culture="neutral" publicKeyToken="db937bc2d44ff139" />
+       <bindingRedirect oldVersion="0.0.0.0-x.x.x.x" newVersion="x.x.x.x" />
+       </dependentAssembly>
 
 7. Create the SQLite database:
     -  Download and install the SQLite Tools binaries from <https://www.sqlite.org/>
@@ -135,29 +135,29 @@ This guide outlines five (5) installation steps:
     -  From File Explorer, open up the MopriaDeviceDb.db file properties to add Users/Groups which are allowed to publish to Mopria database in the Security tab
         - Recommend only adding the required Admin user group.
 8. Register the 2 web app with Azure AD to support OAuth2 authentication
-    -   Login as the Global Admin to the Azure AD tenant management portal
-        1. Go "App registrations" tab to add print endpoint
-            -   Add application, select "New application registration"
-            -   Provide an appropriate name and select "Web app / API"
-            -   Sign-on URL = "http://MicrosoftEnterpriseCloudPrint/CloudPrint"
-        2.  Repeat for the discovery endpoint
-            -   Sign-on URL = "http://MopriaDiscoveryService/CloudPrint"
-        3.  Repeat for the native client application
-            -   When providing the app name, make sure you select "Native Client Application" as the "Application type"
-            -   Redirect URI = "https://\<services-machine-endpoint\>/RedirectUrl"
-        4.  Go into the Native Client App "Settings"
-            -   Copy the "Application ID" value to be used for later setup steps
-            -   Select "Required permissions"
-                1.  Click "Add"
-                2.  Click "Select an API"
-                3.  Search for the print endpoint and the discovery endpoint by the name you defined when creating the app endpoint
-                4.  Add the 2 endpoints
-                5.  Make sure the "Delegated Permissions" option for each app endpoint is enabled
-                6.  Make sure you click the "Done" button at the bottom
-                7.  Click "Grant Permissions", once both endpoints have been added.  Select "Yes" when prompted to approve request.
-            -   Go to “REDIRECT URIS” and add the following redirect URIs to the list:
-                `ms-appx-web://Microsoft.AAD.BrokerPlugin/\<NativeClientAppID\>`
-                `ms-appx-web://Microsoft.AAD.BrokerPlugin/S-1-15-2-3784861210-599250757-1266852909-3189164077-45880155-1246692841-283550366`
+   - Login as the Global Admin to the Azure AD tenant management portal
+     1. Go "App registrations" tab to add print endpoint
+        - Add application, select "New application registration"
+        - Provide an appropriate name and select "Web app / API"
+        - Sign-on URL = "<http://MicrosoftEnterpriseCloudPrint/CloudPrint>"
+     2. Repeat for the discovery endpoint
+        - Sign-on URL = "<http://MopriaDiscoveryService/CloudPrint>"
+     3. Repeat for the native client application
+        -   When providing the app name, make sure you select "Native Client Application" as the "Application type"
+        -   Redirect URI = "https://\<services-machine-endpoint\>/RedirectUrl"
+     4. Go into the Native Client App "Settings"
+        -   Copy the "Application ID" value to be used for later setup steps
+        -   Select "Required permissions"
+            1.  Click "Add"
+            2.  Click "Select an API"
+            3.  Search for the print endpoint and the discovery endpoint by the name you defined when creating the app endpoint
+            4.  Add the 2 endpoints
+            5.  Make sure the "Delegated Permissions" option for each app endpoint is enabled
+            6.  Make sure you click the "Done" button at the bottom
+            7.  Click "Grant Permissions", once both endpoints have been added.  Select "Yes" when prompted to approve request.
+        -   Go to “REDIRECT URIS” and add the following redirect URIs to the list:
+            `ms-appx-web://Microsoft.AAD.BrokerPlugin/\<NativeClientAppID\>`
+            `ms-appx-web://Microsoft.AAD.BrokerPlugin/S-1-15-2-3784861210-599250757-1266852909-3189164077-45880155-1246692841-283550366`
 
 ### Step 3 - Install Azure Application Proxy (AAP) with Passthrough Authentication
 1. Login to your Azure AD (AAD) tenant management portal
@@ -168,15 +168,15 @@ This guide outlines five (5) installation steps:
     - During installation, give the application proxy connector the credentials to your Azure tenet that you want to enable AAP on
     - Make sure the WAP machine is domain joined to your on-premises Active Directory
 3. Go back to the AAD tenant management portal and add the application proxies
-    - Go to the **Enterprise applications** tab
-    - Click **New application**
-    - Select **On-premises application** and fill in the fields
-        - Name: Any name you wish
-        - Internal URL: This is the internal URL to the Mopria Discovery Cloud Service which your WAP machine can access
-        - External URL: Configure as appropriate for your organization
-        - Preauthentication Method: Passthrough
+   - Go to the **Enterprise applications** tab
+   - Click **New application**
+   - Select **On-premises application** and fill in the fields
+       - Name: Any name you wish
+       - Internal URL: This is the internal URL to the Mopria Discovery Cloud Service which your WAP machine can access
+       - External URL: Configure as appropriate for your organization
+       - Preauthentication Method: Passthrough
 
-    >   Note: If you don’t find all the settings above, add the proxy with the settings available and then select the application proxy you just created and go to the **Application proxy** tab and add all the above information.
+     >   Note: If you don't find all the settings above, add the proxy with the settings available and then select the application proxy you just created and go to the **Application proxy** tab and add all the above information.
 
 4. Repeat 3, above, for the Enterprise Cloud Print Service and provide the Internal URL to your Enterprise Cloud Print Service
 
@@ -186,12 +186,12 @@ This guide outlines five (5) installation steps:
 ### Step 4 - Configure the required MDM policies
 - Login to your MDM provider
 - Find the Enterprise Cloud Print policy group and configure the policies following the guidelines below:
-    - CloudPrintOAuthAuthority = https://login.microsoftonline.com/\<Azure AD Directory ID\>
-    - CloudPrintOAuthClientId = "Application ID" value of the Native Web App that you registered in Azure AD management portal
-    - CloudPrinterDiscoveryEndPoint = External URL of the Mopria Discovery Service Azure Application Proxy created in Step 3.3 (must be exactly the same but without the trailing /)
-    - MopriaDiscoveryResourceId = The "App ID URI" of the Web app / API for the discovery endpoint registered in Step 2.8.  You can find this under the Settings -> Properties of the app
-    - CloudPrintResourceId = The "App ID URI" of the Web app / API for the print endpoint registered in Step 2.8. You can find this under the Settings -> Properties of the app
-    - DiscoveryMaxPrinterLimit = \<a positive integer\>
+  - CloudPrintOAuthAuthority = https://login.microsoftonline.com/\<Azure AD Directory ID\>
+  - CloudPrintOAuthClientId = "Application ID" value of the Native Web App that you registered in Azure AD management portal
+  - CloudPrinterDiscoveryEndPoint = External URL of the Mopria Discovery Service Azure Application Proxy created in Step 3.3 (must be exactly the same but without the trailing /)
+  - MopriaDiscoveryResourceId = The "App ID URI" of the Web app / API for the discovery endpoint registered in Step 2.8.  You can find this under the Settings -> Properties of the app
+  - CloudPrintResourceId = The "App ID URI" of the Web app / API for the print endpoint registered in Step 2.8. You can find this under the Settings -> Properties of the app
+  - DiscoveryMaxPrinterLimit = \<a positive integer\>
 
 >   Note: If you are using Microsoft Intune service, you can find these settings under the "Cloud Printer" category.
 
@@ -227,36 +227,36 @@ This guide outlines five (5) installation steps:
 3. Select the desired set of users to grant access
 4. Save the changes and close out the printer properties window
 5. From a Windows 10 Fall Creator Update machine, open an elevated Windows PowerShell command prompt
-    1. Run the following commands
-        - `find-module -Name "PublishCloudPrinter"` to confirm that the machine can reach the PowerShell Gallery (PSGallery)
-        - `install-module -Name "PublishCloudPrinter"`
+   1. Run the following commands
+      - `find-module -Name "PublishCloudPrinter"` to confirm that the machine can reach the PowerShell Gallery (PSGallery)
+      - `install-module -Name "PublishCloudPrinter"`
 
         >   NOTE: You may see a messaging stating that 'PSGallery' is an untrusted repository.  Enter 'y' to continue with the installation.
 
-        - Publish-CloudPrinter
-            - Printer = The shared printer name that was defined
-            - Manufacturer = Printer manufacturer
-            - Model = Printer model
-            - OrgLocation = A JSON string specifying the printer location,
-                e.g.:
-                `{"attrs": [{"category":"country", "vs":"USA", "depth":0}, {"category":"organization", "vs":"Microsoft", "depth":1}, {"category":"site", "vs":"Redmond, WA", "depth":2}, {"category":"building", "vs":"Building 1", "depth":3}, {"category":"floor\_number", "vn":1, "depth":4}, {"category":"room\_name", "vs":"1111", "depth":5}]}`
-            - Sddl = SDDL string representing permissions for the printer. This can be obtained by modifying the Printer Properties Security tab appropriately and then running the following command in a command prompt:
-                `(Get-Printer PrinterName -full).PermissionSDDL`
-                e.g. "G:DUD:(A;OICI;FA;;;WD)"
+      - Publish-CloudPrinter
+        - Printer = The shared printer name that was defined
+        - Manufacturer = Printer manufacturer
+        - Model = Printer model
+        - OrgLocation = A JSON string specifying the printer location,
+            e.g.:
+            `{"attrs": [{"category":"country", "vs":"USA", "depth":0}, {"category":"organization", "vs":"Microsoft", "depth":1}, {"category":"site", "vs":"Redmond, WA", "depth":2}, {"category":"building", "vs":"Building 1", "depth":3}, {"category":"floor\_number", "vn":1, "depth":4}, {"category":"room\_name", "vs":"1111", "depth":5}]}`
+        - Sddl = SDDL string representing permissions for the printer. This can be obtained by modifying the Printer Properties Security tab appropriately and then running the following command in a command prompt:
+            `(Get-Printer PrinterName -full).PermissionSDDL`
+            e.g. "G:DUD:(A;OICI;FA;;;WD)"
 
-            > NOTE: You will need to add **`O:BA`** as prefix to the result from the command prompt command above before setting the value as the SDDL setting.  Example: SDDL = `O:BAG:DUD:(A;OICI;FA;;;WD)`
+          > NOTE: You will need to add **`O:BA`** as prefix to the result from the command prompt command above before setting the value as the SDDL setting.  Example: SDDL = `O:BAG:DUD:(A;OICI;FA;;;WD)`
 
-            - DiscoveryEndpoint = https://&lt;services-machine-endpoint&gt;/mcs
-            - PrintServerEndpoint = https://&lt;services-machine-endpoint&gt;/ecp
-            - AzureClientId = Application ID of the registered Native Web App value from above
-            - AzureTenantGuid = Directory ID of your Azure AD tenant
-            - DiscoveryResourceId = [Optional] Application ID of the proxied Mopria Discovery Cloud Service
+        - DiscoveryEndpoint = https://&lt;services-machine-endpoint&gt;/mcs
+        - PrintServerEndpoint = https://&lt;services-machine-endpoint&gt;/ecp
+        - AzureClientId = Application ID of the registered Native Web App value from above
+        - AzureTenantGuid = Directory ID of your Azure AD tenant
+        - DiscoveryResourceId = [Optional] Application ID of the proxied Mopria Discovery Cloud Service
 
         > NOTE: You can enter all of the required parameter values in the command line as well.<br>
-**Publish-CloudPrinter** PowerShell command syntax: <br>
-Publish-CloudPrinter -Printer \<string\> -Manufacturer \<string\> -Model \<string\> -OrgLocation \<string\> -Sddl \<string\> -DiscoveryEndpoint \<string\> -PrintServerEndpoint \<string\> -AzureClientId \<string\> -AzureTenantGuid \<string\> [-DiscoveryResourceId \<string\>] <br>
-Sample command:
-`publish-cloudprinter -Printer EcpPrintTest -Manufacturer Microsoft -Model FilePrinterEcp -OrgLocation '{"attrs": [{"category":"country", "vs":"USA", "depth":0}, {"category":"organization", "vs":"MyCompany", "depth":1}, {"category":"site", "vs":"MyCity, State", "depth":2}, {"category":"building", "vs":"Building 1", "depth":3}, {"category":"floor\_number", "vn":1, "depth":4}, {"category":"room\_name", "vs":"1111", "depth":5}]}' -Sddl "O:BAG:DUD:(A;OICI;FA;;;WD)" -DiscoveryEndpoint https://<services-machine-endpoint>/mcs -PrintServerEndpoint https://<services-machine-endpoint>/ecp -AzureClientId <Native Web App ID> -AzureTenantGuid <Azure AD Directory ID> -DiscoveryResourceId <Proxied Mopria Discovery Cloud Service App ID>`
+        **Publish-CloudPrinter** PowerShell command syntax: <br>
+        Publish-CloudPrinter -Printer \<string\> -Manufacturer \<string\> -Model \<string\> -OrgLocation \<string\> -Sddl \<string\> -DiscoveryEndpoint \<string\> -PrintServerEndpoint \<string\> -AzureClientId \<string\> -AzureTenantGuid \<string\> [-DiscoveryResourceId \<string\>] <br>
+        Sample command:
+        `publish-cloudprinter -Printer EcpPrintTest -Manufacturer Microsoft -Model FilePrinterEcp -OrgLocation '{"attrs": [{"category":"country", "vs":"USA", "depth":0}, {"category":"organization", "vs":"MyCompany", "depth":1}, {"category":"site", "vs":"MyCity, State", "depth":2}, {"category":"building", "vs":"Building 1", "depth":3}, {"category":"floor\_number", "vn":1, "depth":4}, {"category":"room\_name", "vs":"1111", "depth":5}]}' -Sddl "O:BAG:DUD:(A;OICI;FA;;;WD)" -DiscoveryEndpoint https://<services-machine-endpoint>/mcs -PrintServerEndpoint https://<services-machine-endpoint>/ecp -AzureClientId <Native Web App ID> -AzureTenantGuid <Azure AD Directory ID> -DiscoveryResourceId <Proxied Mopria Discovery Cloud Service App ID>`
 
 
 ## Verifing the deployment

@@ -1,7 +1,7 @@
 ---
 title: Shielded VMs - Hosting service provider sets up Windows Azure Pack
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.topic: article
 ms.assetid: d528c689-58b0-425c-9740-25e2553ed689
 manager: dongill
@@ -72,37 +72,37 @@ Before you use Windows Azure Pack, you should already have it installed and conf
 
 In order to allow tenants to create VMs in WAP, you must first create a hosting plan to which tenants can subscribe. Plans define the allowed VM clouds, templates, networks, and billing entities for your tenants.
 
-1.  On the lower pane of the portal, click **+NEW** &gt; **PLAN** &gt; **CREATE PLAN**.
+1. On the lower pane of the portal, click **+NEW** &gt; **PLAN** &gt; **CREATE PLAN**.
 
-2.  In the first step of the wizard, choose a name for your Plan. This is the name your tenants will see when subscribing.
+2. In the first step of the wizard, choose a name for your Plan. This is the name your tenants will see when subscribing.
 
-3.  In the second step, select **VIRTUAL MACHINE CLOUDS** as one of the services to offer in the plan.
+3. In the second step, select **VIRTUAL MACHINE CLOUDS** as one of the services to offer in the plan.
 
-4.  Skip the step about selecting any add-ons for the plan.
+4. Skip the step about selecting any add-ons for the plan.
 
-5.  Click **OK** (check mark) to create the plan. Although this creates the plan, it is not yet in a configured state.
+5. Click **OK** (check mark) to create the plan. Although this creates the plan, it is not yet in a configured state.
 
-    ![Plans in Windows Azure Pack](../media/Guarded-Fabric-Shielded-VM/guarded-host-azure-pack-02-create-plan.png)
+   ![Plans in Windows Azure Pack](../media/Guarded-Fabric-Shielded-VM/guarded-host-azure-pack-02-create-plan.png)
 
-6.  To begin configuring the Plan, click its name.
+6. To begin configuring the Plan, click its name.
 
-7.  On the next page, under **plan services**, click **Virtual Machine Clouds**. This opens the page where you can configure quotas for this plan.
+7. On the next page, under **plan services**, click **Virtual Machine Clouds**. This opens the page where you can configure quotas for this plan.
 
-8.  Under **basic**, select the VMM Management Server and Virtual Machine Cloud you wish to offer to your tenants. Clouds that can offer shielded VMs will be displayed with **(shielding supported)** next to their name.
+8. Under **basic**, select the VMM Management Server and Virtual Machine Cloud you wish to offer to your tenants. Clouds that can offer shielded VMs will be displayed with **(shielding supported)** next to their name.
 
-9.  Select the quotas you want to apply in this Plan. (For example, limits on CPU core and RAM usage). Make sure to leave the **Allow Virtual Machines To Be Shielded** checkbox selected.
+9. Select the quotas you want to apply in this Plan. (For example, limits on CPU core and RAM usage). Make sure to leave the **Allow Virtual Machines To Be Shielded** checkbox selected.
 
-    ![Settings for virtual machine clouds in Windows Azure Pack](../media/Guarded-Fabric-Shielded-VM/guarded-host-azure-pack-03-virtual-machine-clouds.png)
+   ![Settings for virtual machine clouds in Windows Azure Pack](../media/Guarded-Fabric-Shielded-VM/guarded-host-azure-pack-03-virtual-machine-clouds.png)
     
-10.  Scroll down to the section titled **templates**, and then select one or more templates to offer to your tenants. You can offer both shielded and unshielded templates to tenants, but a shielded template must be offered to give tenants end-to-end assurances about the integrity of the VM and their secrets.
+10. Scroll down to the section titled **templates**, and then select one or more templates to offer to your tenants. You can offer both shielded and unshielded templates to tenants, but a shielded template must be offered to give tenants end-to-end assurances about the integrity of the VM and their secrets.
 
-11.  In the **networks** section, add one or more networks for your tenants.
+11. In the **networks** section, add one or more networks for your tenants.
 
-12.  After setting any other settings or quotas for the Plan, click **Save** at the bottom.
+12. After setting any other settings or quotas for the Plan, click **Save** at the bottom.
 
-13.  At the top left of the screen, click on the arrow to take you back to the **Plan** page.
+13. At the top left of the screen, click on the arrow to take you back to the **Plan** page.
 
-14.  At the bottom of the screen, change the Plan from being **Private** to **Public** so that tenants can subscribe to the Plan.
+14. At the bottom of the screen, change the Plan from being **Private** to **Public** so that tenants can subscribe to the Plan.
 
     ![Change access for a plan in Windows Azure Pack](../media/Guarded-Fabric-Shielded-VM/guarded-host-azure-pack-04-change-access.png)
 

@@ -1,6 +1,6 @@
 ---
 title: Stretch Cluster Replication Using Shared Storage
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 manager: eldenc
 ms.author: nedpyle
 ms.technology: storage-replica
@@ -137,80 +137,80 @@ You will now create a normal failover cluster. After configuration, validation, 
 
 #### Graphical method  
 
-1.  Run **cluadmin.msc**.  
+1. Run **cluadmin.msc**.  
 
-2.  Validate the proposed cluster and analyze the results to ensure you can continue.  
+2. Validate the proposed cluster and analyze the results to ensure you can continue.  
 
-    > [!NOTE]  
-    > You should expect storage errors from cluster validation, due to the use of asymmetric storage.  
+   > [!NOTE]  
+   > You should expect storage errors from cluster validation, due to the use of asymmetric storage.  
 
-3.  Create the Hyper-V compute cluster. Ensure that the cluster name is 15 characters or fewer. The example used below is SR-SRVCLUS. If the nodes are going to reside in different subnets, you must create an IP Address for the Cluster Name for each subnet and use the “OR” dependency.  More information can be found at [Configuring IP Addresses and Dependencies for Multi-Subnet Clusters – Part III](https://techcommunity.microsoft.com/t5/Failover-Clustering/Configuring-IP-Addresses-and-Dependencies-for-Multi-Subnet/ba-p/371698).  
+3. Create the Hyper-V compute cluster. Ensure that the cluster name is 15 characters or fewer. The example used below is SR-SRVCLUS. If the nodes are going to reside in different subnets, you must create an IP Address for the Cluster Name for each subnet and use the “OR” dependency.  More information can be found at [Configuring IP Addresses and Dependencies for Multi-Subnet Clusters – Part III](https://techcommunity.microsoft.com/t5/Failover-Clustering/Configuring-IP-Addresses-and-Dependencies-for-Multi-Subnet/ba-p/371698).  
 
-4.  Configure a File Share Witness or Cloud Witness to provide quorum in the event of site loss.  
+4. Configure a File Share Witness or Cloud Witness to provide quorum in the event of site loss.  
 
-    > [!NOTE]  
-    > WIndows Server now includes an option for Cloud (Azure)-based Witness. You can choose this quorum option instead of the file share witness.  
+   > [!NOTE]  
+   > WIndows Server now includes an option for Cloud (Azure)-based Witness. You can choose this quorum option instead of the file share witness.  
 
-    > [!WARNING]  
-    > For more information about quorum configuration, see the [Configure and Manage the Quorum in a Windows Server 2012 Failover Cluster guide's Witness Configuration](https://technet.microsoft.com/library/jj612870.aspx). For more information on the `Set-ClusterQuorum` cmdlet, see [Set-ClusterQuorum](https://docs.microsoft.com/powershell/module/failoverclusters/set-clusterquorum).  
+   > [!WARNING]  
+   > For more information about quorum configuration, see the [Configure and Manage the Quorum in a Windows Server 2012 Failover Cluster guide's Witness Configuration](https://technet.microsoft.com/library/jj612870.aspx). For more information on the `Set-ClusterQuorum` cmdlet, see [Set-ClusterQuorum](https://docs.microsoft.com/powershell/module/failoverclusters/set-clusterquorum).  
 
-5.  Review [Network Recommendations for a Hyper-V Cluster in Windows Server 2012](https://technet.microsoft.com/library/dn550728.aspx) and ensure that you have optimally configured cluster networking.  
+5. Review [Network Recommendations for a Hyper-V Cluster in Windows Server 2012](https://technet.microsoft.com/library/dn550728.aspx) and ensure that you have optimally configured cluster networking.  
 
-6.  Add one disk in the Redmond site to the cluster CSV. To do so, right click a source disk in the **Disks** node of the **Storage** section, and then click **Add to Cluster Shared Volumes**.  
+6. Add one disk in the Redmond site to the cluster CSV. To do so, right click a source disk in the **Disks** node of the **Storage** section, and then click **Add to Cluster Shared Volumes**.  
 
-7.  Using the [Deploy a Hyper-V Cluster](https://technet.microsoft.com/library/jj863389.aspx) guide, follow steps 7-10 within **Redmond** site to create a test virtual machine only to ensure the cluster is working normally within the two nodes sharing the storage in the first test site.  
+7. Using the [Deploy a Hyper-V Cluster](https://technet.microsoft.com/library/jj863389.aspx) guide, follow steps 7-10 within **Redmond** site to create a test virtual machine only to ensure the cluster is working normally within the two nodes sharing the storage in the first test site.  
 
-8.  If you're creating a two-node stretch cluster, you must add all storage before continuing. To do so, open a PowerShell session with administrative permissions on the cluster nodes, and run the following command: `Get-ClusterAvailableDisk -All | Add-ClusterDisk`.
+8. If you're creating a two-node stretch cluster, you must add all storage before continuing. To do so, open a PowerShell session with administrative permissions on the cluster nodes, and run the following command: `Get-ClusterAvailableDisk -All | Add-ClusterDisk`.
 
-    This is by-design behavior in Windows Server 2016.
+   This is by-design behavior in Windows Server 2016.
 
 9. Start Windows PowerShell and use the `Test-SRTopology` cmdlet to determine if you meet all the Storage Replica requirements.  
 
     For example, to validate two of the proposed stretch cluster nodes that each have a **D:** and **E:** volume and run the test for 30 minutes:
-    1. Move all available storage to **SR-SRV01**.
-    2. Click **Create Empty Role** in the **Roles** section of Failover Cluster Manager.
-    3. Add the online storage to that empty role named **New Role**.
-    4. Move all available storage to **SR-SRV03**.
-    5. Click **Create Empty Role** in the **Roles** section of Failover Cluster Manager.
-    6. Move the empty **New Role (2)** to **SR-SRV03**.
-    7. Add the online storage to that empty role named **New Role (2)**.
-    8. Now you have mounted all your storage with drive letters, and can evaluate the cluster with `Test-SRTopology`.
+   1. Move all available storage to **SR-SRV01**.
+   2. Click **Create Empty Role** in the **Roles** section of Failover Cluster Manager.
+   3. Add the online storage to that empty role named **New Role**.
+   4. Move all available storage to **SR-SRV03**.
+   5. Click **Create Empty Role** in the **Roles** section of Failover Cluster Manager.
+   6. Move the empty **New Role (2)** to **SR-SRV03**.
+   7. Add the online storage to that empty role named **New Role (2)**.
+   8. Now you have mounted all your storage with drive letters, and can evaluate the cluster with `Test-SRTopology`.
 
-        For example:
+       For example:
 
-            MD c:\temp  
+           MD c:\temp  
 
-            Test-SRTopology -SourceComputerName SR-SRV01 -SourceVolumeName D: -SourceLogVolumeName E: -DestinationComputerName SR-SRV03 -DestinationVolumeName D: -DestinationLogVolumeName E: -DurationInMinutes 30 -ResultPath c:\temp        
+           Test-SRTopology -SourceComputerName SR-SRV01 -SourceVolumeName D: -SourceLogVolumeName E: -DestinationComputerName SR-SRV03 -DestinationVolumeName D: -DestinationLogVolumeName E: -DurationInMinutes 30 -ResultPath c:\temp        
 
       > [!IMPORTANT]
       > When using a test server with no write IO load on the specified source volume during the evaluation period, consider adding a workload or it Test-SRTopology will not generate a useful report. You should test with production-like workloads in order to see real numbers and recommended log sizes. Alternatively, simply copy some files into the source volume during the test or download and run DISKSPD to generate write IOs. For instance, a sample with a low write IO workload for ten minutes to the D: volume:   
-        `Diskspd.exe -c1g -d600 -W5 -C5 -b4k -t2 -o2 -r -w5 -i100 d:\test.dat`  
+       `Diskspd.exe -c1g -d600 -W5 -C5 -b4k -t2 -o2 -r -w5 -i100 d:\test.dat`  
 
 10. Examine the **TestSrTopologyReport-< date >.html** report to ensure you meet the Storage Replica requirements and note the initial sync time prediction and log recommendations.  
 
       ![Screen showing the replication report](./media/Stretch-Cluster-Replication-Using-Shared-Storage/SRTestSRTopologyReport.png)
 
-11.    Return the disks to Available Storage and remove the temporary empty roles.
+11. Return the disks to Available Storage and remove the temporary empty roles.
 
-12.  Once satisfied, remove the test virtual machine. Add any real test virtual machines needed for further evaluation to a proposed source node.  
+12. Once satisfied, remove the test virtual machine. Add any real test virtual machines needed for further evaluation to a proposed source node.  
 
 13. Configure stretch cluster site awareness so that servers **SR-SRV01** and **SR-SRV02** are in site **Redmond**, **SR-SRV03** and **SR-SRV04** are in site **Bellevue**, and **Redmond** is preferred for node ownership of the source storage and VMs:  
 
-   ```PowerShell
-   New-ClusterFaultDomain -Name Seattle -Type Site -Description "Primary" -Location "Seattle Datacenter"  
+    ```PowerShell
+    New-ClusterFaultDomain -Name Seattle -Type Site -Description "Primary" -Location "Seattle Datacenter"  
    
-   New-ClusterFaultDomain -Name Bellevue -Type Site -Description "Secondary" -Location "Bellevue Datacenter"  
+    New-ClusterFaultDomain -Name Bellevue -Type Site -Description "Secondary" -Location "Bellevue Datacenter"  
    
-   Set-ClusterFaultDomain -Name sr-srv01 -Parent Seattle  
-   Set-ClusterFaultDomain -Name sr-srv02 -Parent Seattle  
-   Set-ClusterFaultDomain -Name sr-srv03 -Parent Bellevue  
-   Set-ClusterFaultDomain -Name sr-srv04 -Parent Bellevue  
+    Set-ClusterFaultDomain -Name sr-srv01 -Parent Seattle  
+    Set-ClusterFaultDomain -Name sr-srv02 -Parent Seattle  
+    Set-ClusterFaultDomain -Name sr-srv03 -Parent Bellevue  
+    Set-ClusterFaultDomain -Name sr-srv04 -Parent Bellevue  
 
-   (Get-Cluster).PreferredSite="Seattle"
-   ```
+    (Get-Cluster).PreferredSite="Seattle"
+    ```
 
-   > [!NOTE]
-   > There is no option to configure site awareness using Failover Cluster Manager in Windows Server 2016.  
+    > [!NOTE]
+    > There is no option to configure site awareness using Failover Cluster Manager in Windows Server 2016.  
 
 14. **(Optional)** Configure cluster networking and Active Directory for faster DNS site failover. You can utilize Hyper-V software defined networking, stretched VLANs, network abstraction devices, lowered DNS TTL, and other common techniques.
 
@@ -227,61 +227,61 @@ You will now create a normal failover cluster. After configuration, validation, 
 
 #### Windows PowerShell method  
 
-1.  Test the proposed cluster and analyze the results to ensure you can continue:  
+1. Test the proposed cluster and analyze the results to ensure you can continue:  
 
-    ```PowerShell  
-    Test-Cluster SR-SRV01, SR-SRV02, SR-SRV03, SR-SRV04  
-    ```  
+   ```PowerShell  
+   Test-Cluster SR-SRV01, SR-SRV02, SR-SRV03, SR-SRV04  
+   ```  
 
-    > [!NOTE]
-    >  You should expect storage errors from cluster validation, due to the use of asymmetric storage.  
+   > [!NOTE]
+   >  You should expect storage errors from cluster validation, due to the use of asymmetric storage.  
 
-2.  Create the Hyper-V compute cluster (you must specify your own static IP address the cluster will use). Ensure that the cluster name is 15 characters or fewer.  If the nodes reside in different subnets, than an IP Address for the additional site must be created using the “OR” dependency. More information can be found at [Configuring IP Addresses and Dependencies for Multi-Subnet Clusters – Part III](https://techcommunity.microsoft.com/t5/Failover-Clustering/Configuring-IP-Addresses-and-Dependencies-for-Multi-Subnet/ba-p/371698).
-```PowerShell  
-New-Cluster -Name SR-SRVCLUS -Node SR-SRV01, SR-SRV02, SR-SRV03, SR-SRV04 -StaticAddress <your IP here>  
-Add-ClusterResource -Name NewIPAddress -ResourceType “IP Address” -Group “Cluster Group”
-Set-ClusterResourceDependency -Resource “Cluster Name” -Dependency “[Cluster IP Address] or [NewIPAddress]”
-```  
+2. Create the File Server for General Use storage cluster (you must specify your own static IP address the cluster will use). Ensure that the cluster name is 15 characters or fewer.  If the nodes reside in different subnets, than an IP Address for the additional site must be created using the “OR” dependency. More information can be found at [Configuring IP Addresses and Dependencies for Multi-Subnet Clusters – Part III](https://techcommunity.microsoft.com/t5/Failover-Clustering/Configuring-IP-Addresses-and-Dependencies-for-Multi-Subnet/ba-p/371698).
+   ```PowerShell  
+   New-Cluster -Name SR-SRVCLUS -Node SR-SRV01, SR-SRV02, SR-SRV03, SR-SRV04 -StaticAddress <your IP here>  
+   Add-ClusterResource -Name NewIPAddress -ResourceType “IP Address” -Group “Cluster Group”
+   Set-ClusterResourceDependency -Resource “Cluster Name” -Dependency “[Cluster IP Address] or [NewIPAddress]”
+   ```  
 
-3.  Configure a File Share Witness or Cloud (Azure) witness in the cluster that points to a share hosted on the domain controller or some other independent server. For example:  
+3. Configure a File Share Witness or Cloud (Azure) witness in the cluster that points to a share hosted on the domain controller or some other independent server. For example:  
 
-    ```PowerShell  
-    Set-ClusterQuorum -FileShareWitness \\someserver\someshare  
-    ```  
+   ```PowerShell  
+   Set-ClusterQuorum -FileShareWitness \\someserver\someshare  
+   ```  
 
-    > [!NOTE]
-    > WIndows Server now includes an option for Cloud (Azure)-based Witness. You can choose this quorum option instead of the file share witness.  
+   > [!NOTE]
+   > WIndows Server now includes an option for Cloud (Azure)-based Witness. You can choose this quorum option instead of the file share witness.  
     
-    For more information about quorum configuration, see the [Configure and Manage the Quorum in a Windows Server 2012 Failover Cluster guide's Witness Configuration](https://technet.microsoft.com/library/jj612870.aspx). For more information on the `Set-ClusterQuorum` cmdlet, see [Set-ClusterQuorum](https://docs.microsoft.com/powershell/module/failoverclusters/set-clusterquorum).  
+   For more information about quorum configuration, see the [Configure and Manage the Quorum in a Windows Server 2012 Failover Cluster guide's Witness Configuration](https://technet.microsoft.com/library/jj612870.aspx). For more information on the `Set-ClusterQuorum` cmdlet, see [Set-ClusterQuorum](https://docs.microsoft.com/powershell/module/failoverclusters/set-clusterquorum).  
 
-4.  Review [Network Recommendations for a Hyper-V Cluster in Windows Server 2012](https://technet.microsoft.com/library/dn550728.aspx) and ensure that you have optimally configured cluster networking.  
+4. Review [Network Recommendations for a Hyper-V Cluster in Windows Server 2012](https://technet.microsoft.com/library/dn550728.aspx) and ensure that you have optimally configured cluster networking.  
 
-5.  If you're creating a two-node stretch cluster, you must add all storage before continuing. To do so, open a PowerShell session with administrative permissions on the cluster nodes, and run the following command: `Get-ClusterAvailableDisk -All | Add-ClusterDisk`.
+5. If you're creating a two-node stretch cluster, you must add all storage before continuing. To do so, open a PowerShell session with administrative permissions on the cluster nodes, and run the following command: `Get-ClusterAvailableDisk -All | Add-ClusterDisk`.
 
-    This is by-design behavior in Windows Server 2016.
+   This is by-design behavior in Windows Server 2016.
 
-6.  Using the [Deploy a Hyper-V Cluster](https://technet.microsoft.com/library/jj863389.aspx) guide, follow steps 7-10 within **Redmond** site to create a test virtual machine only to ensure the cluster is working normally within the two nodes sharing the storage in the first test site.  
+6. Using the [Deploy a Hyper-V Cluster](https://technet.microsoft.com/library/jj863389.aspx) guide, follow steps 7-10 within **Redmond** site to create a test virtual machine only to ensure the cluster is working normally within the two nodes sharing the storage in the first test site.  
 
-7.  Once satisfied, remove the test VM. Add any real test virtual machines needed for further evaluation to a proposed source node.  
+7. Once satisfied, remove the test VM. Add any real test virtual machines needed for further evaluation to a proposed source node.  
 
-8.  Configure stretch cluster site awareness so that servers **SR-SRV01** and **SR-SRV02** are in site **Redmond**, **SR-SRV03** and **SR-SRV04** are in site **Bellevue**, and **Redmond** is preferred for node ownership of the source storage and virtual machines:  
+8. Configure stretch cluster site awareness so that servers **SR-SRV01** and **SR-SRV02** are in site **Redmond**, **SR-SRV03** and **SR-SRV04** are in site **Bellevue**, and **Redmond** is preferred for node ownership of the source storage and virtual machines:  
 
-    ```PowerShell  
-    New-ClusterFaultDomain -Name Seattle -Type Site -Description "Primary" -Location "Seattle Datacenter"  
+   ```PowerShell  
+   New-ClusterFaultDomain -Name Seattle -Type Site -Description "Primary" -Location "Seattle Datacenter"  
 
-    New-ClusterFaultDomain -Name Bellevue -Type Site -Description "Secondary" -Location "Bellevue Datacenter"  
+   New-ClusterFaultDomain -Name Bellevue -Type Site -Description "Secondary" -Location "Bellevue Datacenter"  
 
-    Set-ClusterFaultDomain -Name sr-srv01 -Parent Seattle  
-    Set-ClusterFaultDomain -Name sr-srv02 -Parent Seattle  
-    Set-ClusterFaultDomain -Name sr-srv03 -Parent Bellevue  
-    Set-ClusterFaultDomain -Name sr-srv04 -Parent Bellevue  
+   Set-ClusterFaultDomain -Name sr-srv01 -Parent Seattle  
+   Set-ClusterFaultDomain -Name sr-srv02 -Parent Seattle  
+   Set-ClusterFaultDomain -Name sr-srv03 -Parent Bellevue  
+   Set-ClusterFaultDomain -Name sr-srv04 -Parent Bellevue  
 
-    (Get-Cluster).PreferredSite="Seattle"  
-    ```  
+   (Get-Cluster).PreferredSite="Seattle"  
+   ```  
 
-9.  **(Optional)** Configure cluster networking and Active Directory for faster DNS site failover. You can utilize Hyper-V software defined networking, stretched VLANs, network abstraction devices, lowered DNS TTL, and other common techniques.  
+9. **(Optional)** Configure cluster networking and Active Directory for faster DNS site failover. You can utilize Hyper-V software defined networking, stretched VLANs, network abstraction devices, lowered DNS TTL, and other common techniques.  
 
-    For more information, review the Microsoft Ignite session: [Stretching Failover Clusters and Using Storage Replica in Windows Server vNext](http://channel9.msdn.com/Events/Ignite/2015/BRK3487) and [Enable Change Notifications between Sites - How and Why](http://blogs.technet.com/b/qzaidi/archive/2010/09/23/enable-change-notifications-between-sites-how-and-why.aspx).  
+   For more information, review the Microsoft Ignite session: [Stretching Failover Clusters and Using Storage Replica in Windows Server vNext](http://channel9.msdn.com/Events/Ignite/2015/BRK3487) and [Enable Change Notifications between Sites - How and Why](http://blogs.technet.com/b/qzaidi/archive/2010/09/23/enable-change-notifications-between-sites-how-and-why.aspx).  
 
 10. **(Optional)** Configure VM resiliency so that guests do not pause for long periods during node failures. Instead, they failover to the new replication source storage within 10 seconds.  
 
@@ -303,44 +303,44 @@ You will now create a normal failover cluster. After configuration, validation, 
 
 #### Graphical method  
 
-1.  Run cluadmin.msc.  
+1. Run cluadmin.msc.  
 
-2.  Validate the proposed cluster and analyze the results to ensure you can continue.  
-    >[!NOTE]
-    >You should expect storage errors from cluster validation, due to the use of asymmetric storage.   
+2. Validate the proposed cluster and analyze the results to ensure you can continue.  
+   >[!NOTE]
+   >You should expect storage errors from cluster validation, due to the use of asymmetric storage.   
 3. Create the File Server for General Use storage cluster. Ensure that the cluster name is 15 characters or fewer. The example used below is SR-SRVCLUS.  If the nodes are going to reside in different subnets, you must create an IP Address for the Cluster Name for each subnet and use the “OR” dependency.  More information can be found at [Configuring IP Addresses and Dependencies for Multi-Subnet Clusters – Part III](https://techcommunity.microsoft.com/t5/Failover-Clustering/Configuring-IP-Addresses-and-Dependencies-for-Multi-Subnet/ba-p/371698).  
 
-4.  Configure a File Share Witness or Cloud Witness to provide quorum in the event of site loss.  
-    >[!NOTE]
-    > WIndows Server now includes an option for Cloud (Azure)-based Witness. You can choose this quorum option instead of the file share witness.                                                                                                                                                                             
-    >[!NOTE]
-    >  For more information about quorum configuration, see the [Configure and Manage the Quorum in a Windows Server 2012 Failover Cluster guide's Witness Configuration](https://technet.microsoft.com/library/jj612870.aspx). For more information on the Set-ClusterQuorum cmdlet, see [Set-ClusterQuorum](https://docs.microsoft.com/powershell/module/failoverclusters/set-clusterquorum). 
+4. Configure a File Share Witness or Cloud Witness to provide quorum in the event of site loss.  
+   >[!NOTE]
+   > WIndows Server now includes an option for Cloud (Azure)-based Witness. You can choose this quorum option instead of the file share witness.                                                                                                                                                                             
+   >[!NOTE]
+   >  For more information about quorum configuration, see the [Configure and Manage the Quorum in a Windows Server 2012 Failover Cluster guide's Witness Configuration](https://technet.microsoft.com/library/jj612870.aspx). For more information on the Set-ClusterQuorum cmdlet, see [Set-ClusterQuorum](https://docs.microsoft.com/powershell/module/failoverclusters/set-clusterquorum). 
 
-5.  If you're creating a two-node stretch cluster, you must add all storage before continuing. To do so, open a PowerShell session with administrative permissions on the cluster nodes, and run the following command: `Get-ClusterAvailableDisk -All | Add-ClusterDisk`.
+5. If you're creating a two-node stretch cluster, you must add all storage before continuing. To do so, open a PowerShell session with administrative permissions on the cluster nodes, and run the following command: `Get-ClusterAvailableDisk -All | Add-ClusterDisk`.
 
-    This is by-design behavior in Windows Server 2016.
+   This is by-design behavior in Windows Server 2016.
 
 6. Ensure that you have optimally configured cluster networking.  
     >[!NOTE]
     > The File Server role must be installed on all nodes prior to continuing to the next step.   |  
 
-7.  Under **Roles**, click **Configure Role**. Review **Before you Begin** and click **Next**.  
+7. Under **Roles**, click **Configure Role**. Review **Before you Begin** and click **Next**.  
 
-8.  Select **File Server** and click **Next**.  
+8. Select **File Server** and click **Next**.  
 
-9.  Leave **File Server for general use** selected and click **Next**.  
+9. Leave **File Server for general use** selected and click **Next**.  
 
-10.  Provide a **Client Access Point** name (15 characters or fewer) and click **Next**.  
+10. Provide a **Client Access Point** name (15 characters or fewer) and click **Next**.  
 
-11.  Select a disk to be your data volume and click **Next**.  
+11. Select a disk to be your data volume and click **Next**.  
 
-12.  Review your settings and click **Next**. Click **Finish**.  
+12. Review your settings and click **Next**. Click **Finish**.  
 
-13.  Right click your new File Server role and click **Add File Share**. Proceed through the wizard to configure shares.  
+13. Right click your new File Server role and click **Add File Share**. Proceed through the wizard to configure shares.  
 
-14.  Optional: Add another File Server role that uses the other storage in this site.  
+14. Optional: Add another File Server role that uses the other storage in this site.  
 
-15.  Configure stretch cluster site awareness so that servers SR-SRV01 and SR-SRV02 are in site Redmond, SR-SRV03 and SR-SRV04 are in site Bellevue, and Redmond is preferred for node ownership of the source storage and VMs:  
+15. Configure stretch cluster site awareness so that servers SR-SRV01 and SR-SRV02 are in site Redmond, SR-SRV03 and SR-SRV04 are in site Bellevue, and Redmond is preferred for node ownership of the source storage and VMs:  
 
     ```PowerShell  
     New-ClusterFaultDomain -Name Seattle -Type Site -Description "Primary" -Location "Seattle Datacenter"  
@@ -355,10 +355,10 @@ You will now create a normal failover cluster. After configuration, validation, 
     (Get-Cluster).PreferredSite="Seattle"  
     ```  
 
-       >[!NOTE]
-       > There is no option to configure site awareness using Failover Cluster Manager in Windows Server 2016.  
+      >[!NOTE]
+      > There is no option to configure site awareness using Failover Cluster Manager in Windows Server 2016.  
 
-16.  (Optional) Configure cluster networking and Active Directory for faster DNS site failover. You can utilize stretched VLANs, network abstraction devices, lowered DNS TTL, and other common techniques.  
+16. (Optional) Configure cluster networking and Active Directory for faster DNS site failover. You can utilize stretched VLANs, network abstraction devices, lowered DNS TTL, and other common techniques.  
 
 For more information, review the Microsoft Ignite session [Stretching Failover Clusters and Using Storage Replica in Windows Server vNext](http://channel9.msdn.com/events/ignite/2015/brk3487) and the blog post [Enable Change Notifications between Sites - How and Why](http://blogs.technet.com/b/qzaidi/archive/2010/09/23/enable-change-notifications-between-sites-how-and-why.aspx).    
 

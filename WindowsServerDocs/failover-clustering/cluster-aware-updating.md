@@ -1,7 +1,7 @@
 ---
 title: Cluster-Aware Updating overview
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.topic: article
 ms.manager: dongill
 author: JasonGerend

@@ -1,8 +1,8 @@
 ---
 title: Egress metering in virtual network
-description: A fundamental aspect of cloud networking monetization is network bandwidth egress. For example - outbound Data transfers In Microsoft Azure business model. Outbound data is charged based on the total amount of data moving out of the Azure datacenters via the Internet in a given billing cycle.
+description: A fundamental aspect of cloud networking monetization is network bandwidth egress. For example - outbound Data transfers In Microsoft Azure business model. Outbound data is charged based on the total amount of data moving out of the Azure datacenters via the Internet in a given billing cycle.
 manager: dougkim
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: networking-hv-switch
 ms.topic: get-started-article
 ms.assetid: 
@@ -16,7 +16,7 @@ ms.date: 10/02/2018
 >Applies to: Windows Server 2019
 
 
-A fundamental aspect of cloud networking monetization is being able to bill by network bandwidth utilization. Outbound data is charged based on the total amount of data moving out of the data center via the Internet in a given billing cycle.
+A fundamental aspect of cloud networking monetization is being able to bill by network bandwidth utilization. Outbound data is charged based on the total amount of data moving out of the data center via the Internet in a given billing cycle.
 
 Egress metering for SDN network traffic in Windows Server 2019 enables the ability to offer usage meters for outbound data transfers. Network traffic that leaves each virtual network, but remains within the data center can by tracked separately so it  can be excluded from billing calculations. Packets bound for destination IP addresses that are not included in one of the unbilled address ranges are tracked as billed outbound data transfers.
 
@@ -56,7 +56,7 @@ You can manage the set of IP subnet prefixes to exclude from billed egress meter
     $vnet = Get-NetworkControllerVirtualNetwork -ConnectionUri $uri -ResourceID "VNet1"
     $vnet.Properties.UnbilledAddressRanges = "10.10.2.0/24,10.10.3.0/24"
     ```
-    
+
     >[!TIP]
     >If adding multiple IP subnets, use a comma between each of the IP subnets.  Do not include any spaces before or after the comma.
 
@@ -67,43 +67,43 @@ You can manage the set of IP subnet prefixes to exclude from billed egress meter
     ```
 
     Your output will look similar to this:
-    ```
-    Confirm
-    Performing the operation 'New-NetworkControllerVirtualNetwork' on entities of type
-    'Microsoft.Windows.NetworkController.VirtualNetwork' via
-    'https://sdn.contoso.com/networking/v3/virtualNetworks/VNet1'. Are you sure you want to continue?
-    [Y] Yes  [N] No  [S] Suspend  [?] Help (default is "Y"): y
-    
-    
-    Tags             :
-    ResourceRef      : /virtualNetworks/VNet1
-    InstanceId       : 29654b0b-9091-4bed-ab01-e172225dc02d
-    Etag             : W/"6970d0a3-3444-41d7-bbe4-36327968d853"
-    ResourceMetadata :
-    ResourceId       : VNet1
-    Properties       : Microsoft.Windows.NetworkController.VirtualNetworkProperties
-    ```
+      ```
+         Confirm
+         Performing the operation 'New-NetworkControllerVirtualNetwork' on entities of type
+         'Microsoft.Windows.NetworkController.VirtualNetwork' via
+         'https://sdn.contoso.com/networking/v3/virtualNetworks/VNet1'. Are you sure you want to continue?
+         [Y] Yes  [N] No  [S] Suspend  [?] Help (default is "Y"): y
 
 
-3.  Check the Virtual Network to see the configured **UnbilledAddressRanges**.
+         Tags             :
+         ResourceRef      : /virtualNetworks/VNet1
+         InstanceId       : 29654b0b-9091-4bed-ab01-e172225dc02d
+         Etag             : W/"6970d0a3-3444-41d7-bbe4-36327968d853"
+         ResourceMetadata :
+         ResourceId       : VNet1
+         Properties       : Microsoft.Windows.NetworkController.VirtualNetworkProperties
+      ```
 
-    ```PowerShell
-    (Get-NetworkControllerVirtualNetwork -ConnectionUri $uri -ResourceID "VNet1").properties
-    ```
 
-    Your output will now look similar to this:
-    ```
-    AddressSpace           : Microsoft.Windows.NetworkController.AddressSpace
-    DhcpOptions            :
-    UnbilledAddressRanges  : 10.10.2.0/24,192.168.2.0/24
-    ConfigurationState     :
-    ProvisioningState      : Succeeded
-    Subnets                : {21e71701-9f59-4ee5-b798-2a9d8c2762f0, 5f4758ef-9f96-40ca-a389-35c414e996cc,
-                         29fe67b8-6f7b-486c-973b-8b9b987ec8b3}
-    VirtualNetworkPeerings :
-    EncryptionCredential   :
-    LogicalNetwork         : Microsoft.Windows.NetworkController.LogicalNetwork
-    ```
+3. Check the Virtual Network to see the configured **UnbilledAddressRanges**.
+
+   ```PowerShell
+   (Get-NetworkControllerVirtualNetwork -ConnectionUri $uri -ResourceID "VNet1").properties
+   ```
+
+   Your output will now look similar to this:
+   ```
+   AddressSpace           : Microsoft.Windows.NetworkController.AddressSpace
+   DhcpOptions            :
+   UnbilledAddressRanges  : 10.10.2.0/24,192.168.2.0/24
+   ConfigurationState     :
+   ProvisioningState      : Succeeded
+   Subnets                : {21e71701-9f59-4ee5-b798-2a9d8c2762f0, 5f4758ef-9f96-40ca-a389-35c414e996cc,
+                        29fe67b8-6f7b-486c-973b-8b9b987ec8b3}
+   VirtualNetworkPeerings :
+   EncryptionCredential   :
+   LogicalNetwork         : Microsoft.Windows.NetworkController.LogicalNetwork
+   ```
 
 ## Check the billed the unbilled egress usage of a virtual network
 
@@ -129,6 +129,6 @@ AddressPrefix BilledEgressBytes UnbilledEgressBytes
 10.0.2.0/24           781733019                   0
 10.0.4.0/24                   0                   0
 ```
-    
+
 
 ---

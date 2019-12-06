@@ -2,7 +2,7 @@
 title: Network Load Balancing
 description: In this topic, we provide you with an overview of the Network Load Balancing \(NLB\) feature in Windows Server 2016. You can use NLB to manage two or more servers as a single virtual cluster. NLB enhances the availability and scalability of Internet server applications such as those used on web, FTP, firewall, proxy, virtual private network \(VPN\), and other mission\-critical servers. 
 manager: dougkim
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: networking-nlb
 ms.topic: article
 ms.assetid: 244a4b48-06e5-4796-8750-a50e4f88ac72
@@ -16,8 +16,8 @@ ms.date: 09/13/2018
 
 In this topic, we provide you with an overview of the Network Load Balancing \(NLB\) feature in Windows Server 2016. You can use NLB to manage two or more servers as a single virtual cluster. NLB enhances the availability and scalability of Internet server applications such as those used on web, FTP, firewall, proxy, virtual private network \(VPN\), and other mission\-critical servers.  
 
->[!NOTE]
->Windows Server 2016 includes a new Azure-inspired Software Load Balancer \(SLB\) as a component of the Software Defined Networking \(SDN\) infrastructure. Use SLB instead of NLB if you are using SDN, are using non-Windows workloads, need outbound network address translation \(NAT\), or need Layer 3 \(L3\) or non-TCP based load balancing. You can continue to use NLB with Windows Server 2016 for non-SDN deployments. For more information about SLB, see [Software Load Balancing (SLB) for SDN](../sdn/technologies/network-function-virtualization/Software-Load-Balancing--SLB--for-SDN.md).
+> [!NOTE]
+> Windows Server 2016 includes a new Azure-inspired Software Load Balancer \(SLB\) as a component of the Software Defined Networking \(SDN\) infrastructure. Use SLB instead of NLB if you are using SDN, are using non-Windows workloads, need outbound network address translation \(NAT\), or need Layer 3 \(L3\) or non-TCP based load balancing. You can continue to use NLB with Windows Server 2016 for non-SDN deployments. For more information about SLB, see [Software Load Balancing (SLB) for SDN](../sdn/technologies/network-function-virtualization/Software-Load-Balancing--SLB--for-SDN.md).
 
 The Network Load Balancing \(NLB\) feature distributes traffic across several servers by using the TCP\/IP networking protocol. By combining two or more computers that are running applications into a single virtual cluster, NLB provides reliability and performance for web servers and other mission\-critical servers.  
   

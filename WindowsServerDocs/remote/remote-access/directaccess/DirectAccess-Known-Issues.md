@@ -3,11 +3,10 @@ title: DirectAccess Known Issues
 description: This topic provides a link to Microsoft Technical Support documents for DirectAccess in Windows Server 2016.
 manager: brianlic
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
-ms.technology: 
-  - networking-da
+ms.technology: networking-da
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 3511a91f-1d5d-45a0-97f2-3fc0d6f079b4

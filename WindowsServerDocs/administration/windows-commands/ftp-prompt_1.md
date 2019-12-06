@@ -2,7 +2,7 @@
 title: ftp prompt_1
 description: "Windows Commands topic for **** - "
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -26,12 +26,12 @@ prompt
 ### Parameters  
 none  
 ## Remarks  
--   By default, **prompt** is on.  
--   **ftp** prompts during multiple file transfers to allow you to selectively retrieve or store files.  **Mget** and **mput** transfer all files if **prompt** is off.  
-## <a name="BKMK_Examples"></a>Examples  
-Toggle prompt mode on and off.  
-```  
-prompt  
-```  
-## additional references  
--   [Command-Line Syntax Key](command-line-syntax-key.md)  
+- By default, **prompt** is on.  
+- **ftp** prompts during multiple file transfers to allow you to selectively retrieve or store files.  **Mget** and **mput** transfer all files if **prompt** is off.  
+  ## <a name="BKMK_Examples"></a>Examples  
+  Toggle prompt mode on and off.  
+  ```  
+  prompt  
+  ```  
+  ## additional references  
+- [Command-Line Syntax Key](command-line-syntax-key.md)  

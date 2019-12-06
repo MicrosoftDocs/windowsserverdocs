@@ -6,7 +6,7 @@ author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 
 ms.technology: identity-adfs
 ms.author: billmath
@@ -14,7 +14,6 @@ ms.author: billmath
 
 # Add a Token-Signing Certificate
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Federation servers in Active Directory Federation Services \(AD FS\) require token\-signing certificates to prevent attackers from altering or counterfeiting security tokens in an attempt to gain unauthorized access to federated resources. Every token\-signing certificate contains cryptographic private keys and public keys that are used to digitally sign \(by means of the private key\) a security token. Later, after these keys are received by a partner federation server, they validate the authenticity \(by means of the public key\) of the encrypted security token.  
   

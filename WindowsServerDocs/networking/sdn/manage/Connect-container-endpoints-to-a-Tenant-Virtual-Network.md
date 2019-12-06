@@ -3,7 +3,7 @@ title: Connect container endpoints to a tenant virtual network
 description: In this topic, we show you how to connect container endpoints to an existing tenant virtual network created through SDN. You use the l2bridge (and optionally l2tunnel) network driver available with the Windows libnetwork plugin for Docker to create a container network on the tenant VM.
 manager: ravirao
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: networking-sdn
@@ -29,9 +29,11 @@ Network policy (ACLs, encapsulation, and QoS) for these container endpoints are 
 
 The difference between the *l2bridge* and *l2tunnel* drivers are:
 
-| l2bridge | l2tunnel |
-| --- | --- |
-|Container endpoints that reside on: <ul><li>The same container host virtual machine and on the same subnet have all network traffic bridged within the Hyper-V virtual switch. </li><li>Different container host VMs or on different subnets have their traffic forwarded to the physical Hyper-V host. </li></ul>Network policy does not get enforced since network traffic between containers on the same host and in the same subnet do not flow to the physical host. Network policy applies only to cross-host or cross-subnet container network traffic. | *ALL* network traffic between two container endpoints is forwarded to the physical Hyper-V host regardless of host or subnet. Network policy applies to both cross-subnet and cross-host network traffic. |
+
+|                                                                                                                                                                                                                                                                            l2bridge                                                                                                                                                                                                                                                                            |                                                                                                 l2tunnel                                                                                                  |
+|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Container endpoints that reside on: <ul><li>The same container host virtual machine and on the same subnet have all network traffic bridged within the Hyper-V virtual switch. </li><li>Different container host VMs or on different subnets have their traffic forwarded to the physical Hyper-V host. </li></ul>Network policy does not get enforced since network traffic between containers on the same host and in the same subnet do not flow to the physical host. Network policy applies only to cross-host or cross-subnet container network traffic. | *ALL* network traffic between two container endpoints is forwarded to the physical Hyper-V host regardless of host or subnet. Network policy applies to both cross-subnet and cross-host network traffic. |
+
 ---
 
 >[!NOTE]
@@ -58,7 +60,7 @@ The difference between the *l2bridge* and *l2tunnel* drivers are:
 [2. Enable the network proxy on the host to allocate CA IP Addresses for container endpoints (Hyper-V Host)](#2-enable-the-network-proxy)
 [3. Install the private cloud plug-in to assign CA IP addresses to container endpoints (Container Host VM)](#3-install-the-private-cloud-plug-in)
 [4. Create an *l2bridge* or *l2tunnel* network using docker (Container Host VM)](#4-create-an-l2bridge-container-network)
- 
+
 >[!NOTE]
 >Multiple IP configurations is not supported on VM NIC resources created through System Center Virtual Machine Manager. It is recommended for these deployments types that you create the VM NIC resource out of band using Network Controller PowerShell.
 
@@ -96,10 +98,10 @@ foreach ($i in 1..10)
         $resourceid += "0$i"
         $ipstr = "192.168.1.10$i"
     }
-    
+
     $newipconfig.ResourceId = $resourceid
     $props.PrivateIPAddress = $ipstr    
-    
+
     $props.PrivateIPAllocationMethod = "Static"
     $props.Subnet = new-object Microsoft.Windows.NetworkController.Subnet
     $props.Subnet.ResourceRef = $vmsubnet.ResourceRef

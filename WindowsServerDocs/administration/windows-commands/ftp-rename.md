@@ -2,7 +2,7 @@
 title: ftp rename
 description: "Windows Commands topic for **** - "
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -24,10 +24,12 @@ renames remote files.
 rename <FileName> <NewFileName>  
 ```  
 ### Parameters  
-|Parameter|Description|  
-|-------|--------|  
-|<FileName>|Specifies the file that you want to rename.|  
-|<NewFileName>|Specifies the new file name.|  
+
+|   Parameter   |                 Description                 |
+|---------------|---------------------------------------------|
+|  <FileName>   | Specifies the file that you want to rename. |
+| <NewFileName> |        Specifies the new file name.         |
+
 ## <a name="BKMK_Examples"></a>Examples  
 rename the remote file **example.txt** to **example1.txt**  
 ```  

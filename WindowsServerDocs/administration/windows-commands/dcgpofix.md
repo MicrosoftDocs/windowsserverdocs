@@ -2,7 +2,7 @@
 title: dcgpofix
 description: "Windows Commands topic for **** - "
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -29,11 +29,11 @@ DCGPOFix [/ignoreschema] [/target: {Domain | DC | Both}] [/?]
 
 ### Parameters
 
-|Parameter|Description|
-|---------|-----------|
-|/ignoreschema|Ignores the version of the Active Directory® schema mc</br>when you run this command. Otherwise, the command only works on the same schema version as the Windows version in which the command was shipped.|
-|/target {Domain | DC | Both}|Specifies which GPO to restore. You can restore the Default Domain Policy GPO, the Default Domain Controllers GPO, or both.|
-|/?|Displays Help at the command prompt.|
+|    Parameter    |                                                                                                 Description                                                                                                 |
+|-----------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|  /ignoreschema  | Ignores the version of the Active Directory® schema mc</br>when you run this command. Otherwise, the command only works on the same schema version as the Windows version in which the command was shipped. |
+| /target {Domain |                                                                                                     DC                                                                                                      |
+|       /?        |                                                                                    Displays Help at the command prompt.                                                                                     |
 
 ## Remarks
 

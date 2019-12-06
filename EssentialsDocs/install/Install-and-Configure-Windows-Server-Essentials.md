@@ -48,32 +48,32 @@ manager: dongill
   
 ##### To install the operating system  
   
-1.  Connect your computer to your network with a network cable.  
+1. Connect your computer to your network with a network cable.  
   
-    > [!IMPORTANT]
-    >  Do not disconnect your computer from the network during installation. Doing so may cause the installation to fail.  
+   > [!IMPORTANT]
+   >  Do not disconnect your computer from the network during installation. Doing so may cause the installation to fail.  
   
-2.  Turn on your computer, and then insert the  Windows Server Essentials DVD into the DVD drive.  
+2. Turn on your computer, and then insert the  Windows Server Essentials DVD into the DVD drive.  
   
-     If you are performing an unattended installation, connect the removable media (such as a floppy disk or a USB flash drive) that contains your answer files. Depending on the contents of your answer files, you may not see some or any of the following installation screens.  
+    If you are performing an unattended installation, connect the removable media (such as a floppy disk or a USB flash drive) that contains your answer files. Depending on the contents of your answer files, you may not see some or any of the following installation screens.  
   
-3.  Restart your computer. When the message **Press any key to boot from CD or DVD** appears, press any key.  
+3. Restart your computer. When the message **Press any key to boot from CD or DVD** appears, press any key.  
   
-    > [!NOTE]
-    >  If your computer does not start from the DVD, ensure that the CD-ROM drive is listed first in the BIOS boot sequence. For more information about the BIOS boot sequence, see the documentation from the computer manufacturer.  
+   > [!NOTE]
+   >  If your computer does not start from the DVD, ensure that the CD-ROM drive is listed first in the BIOS boot sequence. For more information about the BIOS boot sequence, see the documentation from the computer manufacturer.  
   
-4.  Select the **Language** that you want to install, **Time and currency format**, and **Keyboard or input method**, and then click **Next**.  
+4. Select the **Language** that you want to install, **Time and currency format**, and **Keyboard or input method**, and then click **Next**.  
   
-5.  Click **Install now**.  
+5. Click **Install now**.  
   
-6.  In **Enter the product key**, type the product key.  
+6. In **Enter the product key**, type the product key.  
   
-7.  Read the **License terms**. If you accept them, select the **I accept the license terms** check box, and then click **Next**.  
+7. Read the **License terms**. If you accept them, select the **I accept the license terms** check box, and then click **Next**.  
   
-    > [!NOTE]
-    >  If you do not choose to accept the license terms, the installation does not continue.  
+   > [!NOTE]
+   >  If you do not choose to accept the license terms, the installation does not continue.  
   
-8.  In **Which type of installation do you want?**, click **Custom: Install Windows only (advanced)**  
+8. In **Which type of installation do you want?**, click **Custom: Install Windows only (advanced)**  
   
 9. In **Where do you want to install Windows?**, select the hard drive where you want to install the Windows operating system. Verify that all of your internal hard drives are available for installation.  
   
@@ -97,15 +97,15 @@ manager: dongill
         > [!IMPORTANT]
         >  You cannot move the operating system to a different partition after you finish this step.  
   
- During the installation, temporary files are copied to an installation folder on your computer, which takes about 30 minutes. After the  Windows Server Essentials operating system is installed, your computer restarts. Now, you are ready to configure the  Windows Server Essentials operating system.  
+   During the installation, temporary files are copied to an installation folder on your computer, which takes about 30 minutes. After the  Windows Server Essentials operating system is installed, your computer restarts. Now, you are ready to configure the  Windows Server Essentials operating system.  
   
 ###  <a name="BKMK_Step2Configure"></a> Step 2: Configure the Windows Server Essentials operating system  
   
 > [!IMPORTANT]
 >  If you are migrating from a previous version of Windows Small Business Server to  Windows Server Essentials, you must follow a different process. For information about migration installations, see the following:  
->   
->  -   [Migrate from Windows SBS 2003](../migrate/Migrate-Windows-Small-Business-Server-2003-to-Windows-Server-Essentials.md)  
-> -   [Migrate from Windows SBS 2008](../migrate/Migrate-Windows-Small-Business-Server-2008-to-Windows-Server-Essentials.md)  
+> 
+> - [Migrate from Windows SBS 2003](../migrate/Migrate-Windows-Small-Business-Server-2003-to-Windows-Server-Essentials.md)  
+>   -   [Migrate from Windows SBS 2008](../migrate/Migrate-Windows-Small-Business-Server-2008-to-Windows-Server-Essentials.md)  
   
  During this phase of the installation, you are prompted to answer a few questions about your organization. This information is used to configure the operating system.  
   

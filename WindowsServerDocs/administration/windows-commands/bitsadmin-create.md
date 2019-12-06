@@ -2,7 +2,7 @@
 title: bitsadmin create
 description: "Windows Commands topic for **bitsadmin create** - creates a transfer job with the given display name."
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands

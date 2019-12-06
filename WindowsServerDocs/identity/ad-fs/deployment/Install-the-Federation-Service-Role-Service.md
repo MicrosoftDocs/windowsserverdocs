@@ -6,15 +6,13 @@ author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 
 ms.technology: identity-adfs
 ms.author: billmath
 ---
 
 # Install the Federation Service Role Service
-
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Now that you have properly configured a computer with the prerequisite applications and certificates, you are ready to install the Federation Service role service of Active Directory Federation Services \(AD FS\). When you install the Federation Service on a computer, that computer becomes a federation server.  
   

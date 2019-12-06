@@ -22,39 +22,39 @@ manager: dongill
  
  Windows Server Essentials and Windows Server 2012 R2 Standard with the Windows Server Essentials Experience role enabled include an administrative dashboard, which simplifies the tasks that you perform to manage your Windows Server Essentials network and server. By using the Windows Server Essentials Dashboard, you can:  
   
--   Finish setting up your server  
+- Finish setting up your server  
   
--   Access and perform common administrative tasks  
+- Access and perform common administrative tasks  
   
--   View server alerts and take action on them  
+- View server alerts and take action on them  
   
--   Set up and change server settings  
+- Set up and change server settings  
   
--   Access or search for Help topics on the web  
+- Access or search for Help topics on the web  
   
--   Access Community resources on the web  
+- Access Community resources on the web  
   
--   Manage user accounts  
+- Manage user accounts  
   
--   Manage devices and backups  
+- Manage devices and backups  
   
--   Manage access and settings for server folders and hard drives  
+- Manage access and settings for server folders and hard drives  
   
--   View and manage add-in applications  
+- View and manage add-in applications  
   
--   Integrate with Microsoft online services  
+- Integrate with Microsoft online services  
   
- This topic includes:  
+  This topic includes:  
   
--   [Basic features of the Dashboard](#BKMK_Design)  
+- [Basic features of the Dashboard](#BKMK_Design)  
   
--   [Features of the Dashboard Home page](#BKMK_Home)  
+- [Features of the Dashboard Home page](#BKMK_Home)  
   
--   [Administrative sections of the Dashboard](#BKMK_Features)  
+- [Administrative sections of the Dashboard](#BKMK_Features)  
   
--   [Access the Windows Server Essentials Dashboard](#BKMK_AccessDb)  
+- [Access the Windows Server Essentials Dashboard](#BKMK_AccessDb)  
   
--   [Use the Safe mode](#BKMK_UseSafeMode)  
+- [Use the Safe mode](#BKMK_UseSafeMode)  
   
 ##  <a name="BKMK_Design"></a> Basic features of the Dashboard  
  The Windows Server Essentials Dashboard helps you to quickly access the key information and management features of your server. The Dashboard includes several sections. The table that follows describes the sections.  

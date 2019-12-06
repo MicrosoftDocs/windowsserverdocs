@@ -2,7 +2,7 @@
 title: ftp mkdir
 description: "Windows Commands topic for **** - "
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -24,9 +24,11 @@ creates a directory on the remote computer.
 mkdir <directory>  
 ```  
 ### Parameters  
-|Parameter|Description|  
-|-------|--------|  
-|<directory>|Specifies the name of the new remote directory.|  
+
+|  Parameter  |                   Description                   |
+|-------------|-------------------------------------------------|
+| <directory> | Specifies the name of the new remote directory. |
+
 ## <a name="BKMK_Examples"></a>Examples  
 create a directory called **dir1** on the remote computer.  
 ```  

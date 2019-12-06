@@ -2,7 +2,7 @@
 title: Use personal session desktops with Remote Desktop Services
 description: Learn how to share personalized, assigned desktops through RDS.
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: remote-desktop-services
@@ -10,7 +10,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 author: lizap
 ms.author: elizapo
-ms.date: 09/16/2016
+ms.date: 10/22/2019
 manager: dongill
 ---
 # Use personal session desktops with Remote Desktop Services
@@ -94,6 +94,3 @@ The **Export-RDPersonalPersonalDesktopAssignment** cmdlet exports the current as
 
 
 All new cmdlets support the common parameters: -Verbose, -Debug, -ErrorAction, -ErrorVariable, -OutBuffer, and -OutVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/p/?LinkID=113216).
-
-## Hardware accelerated graphics
-Windows Server 2016 extends the RemoteFX 3D Graphics adapter (vGPU) technology to support OpenGL and supports single-user Windows Server 2016 guest VMs. You can combine personal session desktops with the new vGPU capabilities to provide support for hosted applications that require accelerated graphics. Alternatively, you can combine personal session desktops with the new Discrete Device Assignment (DDA) capability to also provide support for hosted applications that require accelerated graphics.

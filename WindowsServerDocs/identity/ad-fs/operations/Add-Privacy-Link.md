@@ -7,14 +7,13 @@ ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 
 ms.technology: identity-adfs
 ---
 
 # Add Privacy Link 
 
->Applies To: Windows Server 2016, Windows Server 2012 R2
 
 To add the privacy link that is displayed on the sign\-in page, use the following Windows PowerShell cmdlet and syntax.  
 

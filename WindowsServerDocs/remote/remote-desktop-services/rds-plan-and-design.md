@@ -2,7 +2,7 @@
 title: RDS - Run and tune
 description: Planning information to help you design your RD deployment.
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: remote-desktop-services
@@ -27,7 +27,7 @@ Use the following information to plan and design your deployment:
 - [High availability](rds-plan-high-availability.md)
 - [MultiFactor Authentication](rds-plan-mfa.md)
 - [Secure data storage](rds-plan-secure-data-storage.md)
-- [Enable high-end graphics rendering](rds-graphics-virtualization.md)
+- [GPU acceleration](rds-graphics-virtualization.md)
 - [Connect from any device](rds-plan-connect-from-any-device.md)
 - [Choose how you pay](rds-plan-choose-how-you-pay.md)
 

@@ -6,8 +6,8 @@ ms.topic: article
 author: jasongerend
 ms.author: jgerend
 ms.localizationpriority: medium
-ms.prod: windows-server-threshold
-ms.date: 04/12/2019
+ms.prod: windows-server
+ms.date: 05/31/2019
 ---
 # Connecting Windows Server to Azure hybrid services
 
@@ -52,7 +52,7 @@ You can back up your Windows servers to Azure, helping to protect you from accid
 For more info, see [Back up your servers with Azure Backup](azure-backup.md).
 
 - **Protect your Hyper-V virtual machines with [Azure Site Recovery](https://docs.microsoft.com/azure/site-recovery/site-recovery-overview)**  
-You can replicate workloads running on VMs so that your business-critical infrastructure is protected in case of a disaster. Windows Admin Center streamlines setup and the process of replicating your virtual machines on your Hyper-V servers or clusters, making it easier to bolster the resiliency of your environment with Azure Site Recovery’s disaster recovery service.  
+You can replicate workloads running on VMs so that your business-critical infrastructure is protected in case of a disaster. Windows Admin Center streamlines setup and the process of replicating your virtual machines on your Hyper-V servers or clusters, making it easier to bolster the resiliency of your environment with Azure Site Recovery's disaster recovery service.  
 For more info, see [Protect your VMs with Azure Site Recovery and Windows Admin Center](azure-site-recovery.md).
 
 - **Use synchronous or asynchronous block-based replication to a VM in Azure using [Storage Replica](https://docs.microsoft.com/windows-server/storage/storage-replica/storage-replica-overview)**  

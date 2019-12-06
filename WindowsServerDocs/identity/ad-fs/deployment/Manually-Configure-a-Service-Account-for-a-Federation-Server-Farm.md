@@ -6,15 +6,13 @@ author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 
 ms.technology: identity-adfs
 ms.author: billmath
 ---
 
 # Manually Configure a Service Account for a Federation Server Farm
-
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 If you intend to configure a federation server farm environment in Active Directory Federation Services \(AD FS\), you must create and configure a dedicated service account in Active Directory Domain Services \(AD DS\) where the farm will reside. You then configure each federation server in the farm to use this account. You must complete the following tasks in your organization when you want to allow client computers on the corporate network to authenticate to any of the federation servers in an AD FS farm using Windows Integrated Authentication.  
 

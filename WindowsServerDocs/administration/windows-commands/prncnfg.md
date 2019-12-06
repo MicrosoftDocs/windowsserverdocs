@@ -2,7 +2,7 @@
 title: prncnfg
 description: Learn how to configure a printer using the prncfg command.
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands

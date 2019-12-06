@@ -2,7 +2,7 @@
 title: Get Started with User Access Logging
 desctription: Describes the User Access Logging feature and how to start using it.
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: manage-user-access-logging
 ms.reviewer: na
 ms.suite: na
@@ -92,7 +92,7 @@ The following table describes key functions of UAL and their potential value.
   
 |Functionality|Value|  
 |-----------------|---------|  
-|Collect and aggregate client request event data in near real-time.|Up to three years of data can be saved. **Important:** Administrators need to enforce compliance of the data collected and data retention periods with the organization’s privacy policy and local regulations.|  
+|Collect and aggregate client request event data in near real-time.|Up to three years of data can be saved. **Important:** Administrators need to enforce compliance of the data collected and data retention periods with the organization's privacy policy and local regulations.|  
 |Query UAL by using WMI or Windows PowerShell interfaces to retrieve client request data on a local or remote server.|UAL enables a single view of ongoing usage data. Server and enterprise administrators can retrieve this data and coordinate with business administrators to optimize use of their volume software licenses.|  
 |Enabled by default.|Server administrators do not need to configure or otherwise set up this feature for all core functionality to be available and working.|  
   

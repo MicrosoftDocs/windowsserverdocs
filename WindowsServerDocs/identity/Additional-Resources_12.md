@@ -2,7 +2,7 @@
 ms.assetid: 20dff664-2370-469b-96a8-df1acf7c7f12
 title: Additional Resources
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.service: 
 ms.suite: na
@@ -40,4 +40,4 @@ For information about Active Directory known issues and best practices, see the 
 For general information about how to manage and configure Active Directory Domain Services (AD DS) and how it works, see the following resources:
 
 - [Administering Active Directory Operations](https://go.microsoft.com/fwlink/?LinkId=128798)
-- [Active Directory Collection](<https://go.microsoft.com/fwlink/?LinkId=34157)
+- [Active Directory Collection](https://go.microsoft.com/fwlink/?LinkId=34157)

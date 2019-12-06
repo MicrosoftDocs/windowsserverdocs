@@ -7,14 +7,14 @@ ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 
 ms.technology: identity-adfs
 ---
 
-# AD FS Design Guide in Windows Server 2012
+# AD FS Design Guide in Windows Server 
 
->Applies To: Windows Server 2012
+
   
 > [!NOTE]  
 > For information about how to deploy AD FS in  Windows Server 2012 R2 , see [Windows Server 2012 R2 AD FS Deployment Guide](../../ad-fs/deployment/Windows-Server-2012-R2-AD-FS-Deployment-Guide.md).  

@@ -3,11 +3,10 @@ title: Step 2 Plan the Remote Access Deployment
 description: This topic is part of the guide Manage DirectAccess Clients Remotely in Windows Server 2016.
 manager: brianlic
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
-ms.technology: 
-  - networking-ras
+ms.technology: networking-ras
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: cc9f02b9-8ddd-4cae-b397-a832996144dd
@@ -25,11 +24,11 @@ After you plan for the infrastructure that you intend to use to set up your sing
   
 |Task|Description|  
 |----|--------|  
-|[Plan a client deployment strategy](#bkmk_21client)|Decide which managed computers will be configured as DirectAccess clients.|  
-|[Plan a Remote Access server deployment strategy](#bkmk_22server)|Plan how to deploy the Remote Access server.|  
-|[Plan the infrastructure servers' configurations](#bkmk_23Infservers)|Plan the infrastructure servers in your Remote Access deployment, including the DirectAccess network location server, DNS servers, and DirectAccess management servers.|  
+|[Plan a client deployment strategy](#plan-a-client-deployment-strategy)|Decide which managed computers will be configured as DirectAccess clients.|  
+|[Plan a Remote Access server deployment strategy](#plan-a-remote-access-server-deployment-strategy)|Plan how to deploy the Remote Access server.|  
+|[Plan the infrastructure servers' configurations](#plan-the-infrastructure-servers-configurations)|Plan the infrastructure servers in your Remote Access deployment, including the DirectAccess network location server, DNS servers, and DirectAccess management servers.|  
   
-## <a name="bkmk_21client"></a>Plan a client deployment strategy  
+## Plan a client deployment strategy  
 There are three decisions to make when you are planning your client deployment:  
   
 1.  Will DirectAccess be available to mobile computers only, or to every computer in a specified security group?  
@@ -50,7 +49,7 @@ There are three decisions to make when you are planning your client deployment:
   
     -   **Connectivity verifiers**  
   
-        A default web probe is created that clients use to validate connectivity to the internal network. The default name is https://directaccess-WebProbeHost.<domain_name>. The name should be registered manually in DNS. You can create other connectivity verifiers that use other web addresses over HTTP or PING. For each connectivity verifier, a DNS entry must exist.  
+        A default web probe is created that clients use to validate connectivity to the internal network. The default name is `https://directaccess-WebProbeHost.<domain_name>`. The name should be registered manually in DNS. You can create other connectivity verifiers that use other web addresses over HTTP or PING. For each connectivity verifier, a DNS entry must exist.  
   
     -   **Help Desk email address**  
   
@@ -64,7 +63,7 @@ There are three decisions to make when you are planning your client deployment:
   
         Clients require a means of resolving names locally. If you allow DirectAccess clients to use local name resolution, end users can use local DNS servers to resolve names. When end users choose to use local DNS servers for name resolution, DirectAccess does not send resolution requests for single label names to the internal corporate DNS server. It uses local name resolution instead (by using the Link-Local Multicast Name Resolution (LLMNR) and NetBios over TCP/IP protocols).  
   
-## <a name="bkmk_22server"></a>Plan a Remote Access server deployment strategy  
+## Plan a Remote Access server deployment strategy  
 Decisions that you need to make when you are planning to deploy your Remote Access server include:  
   
 -   **Network topology**  
@@ -104,7 +103,7 @@ Decisions that you need to make when you are planning to deploy your Remote Acce
   
     Before you configure Remote Access, decide if you are going to provide VPN access to remote clients. You should provide VPN access if you have client computers in your organization that do not support DirectAccess connectivity (for example, they are unmanaged or they run an operating system for which DirectAccess is not supported). The Remote Access Server Setup Wizard allows you to configure how IP addresses are assigned (by using DHCP or from a static address pool) and how VPN clients are authenticated (by using Active Directory or a RADIUS server).  
   
-## <a name="bkmk_23Infservers"></a>Plan the infrastructure servers' configurations  
+## Plan the infrastructure servers' configurations  
 Remote Access requires three types of infrastructure servers:  
   
 -   **Network location server**  
@@ -113,7 +112,7 @@ Remote Access requires three types of infrastructure servers:
   
 -   **Management servers** 
   
-## <a name="BKMK_Links"></a>See also  
+## See also  
   
 -   [Step 1: Plan the Remote Access Infrastructure](Step-1-Plan-the-Remote-Access-Infrastructure.md)  
   

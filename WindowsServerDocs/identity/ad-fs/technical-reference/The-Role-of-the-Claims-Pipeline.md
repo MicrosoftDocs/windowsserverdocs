@@ -7,12 +7,11 @@ ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 
 ms.technology: identity-adfs
 ---
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 # The Role of the Claims Pipeline
 The claims pipeline in Active Directory Federation Services \(AD FS\) represents the path that claims must follow through the Federation Service before they can be issued. The Federation Service manages the entire end\-to\-end process of flowing claims through the various stages of the claims pipeline, which also includes the processing of claim rules by the claim rule engine.  
@@ -34,7 +33,7 @@ All three stages above perform claims rules processing but use a different set o
   
 Claims are token\-agnostic but are transmitted over the network encapsulated in security tokens. The claim rules operate over claims regardless of the format of the incoming or outgoing security token.  
   
-Claims rules contain the administrator\-defined logic by which the claims engine will accept the incoming claims, authorize claims based on the requester’s identity and issue claims that are needed by a relying party. Ultimately, it is the claims engine that determines what claims will go into the security token that will be issued after the claim has been flowed through the claims pipeline.  
+Claims rules contain the administrator\-defined logic by which the claims engine will accept the incoming claims, authorize claims based on the requester's identity and issue claims that are needed by a relying party. Ultimately, it is the claims engine that determines what claims will go into the security token that will be issued after the claim has been flowed through the claims pipeline.  
   
 As shown in the following illustration, the claims pipeline is responsible for the entire end\-to\-end process of flowing a claim through the various pipeline stages in order to end up with an issued claim that will be sent over a relying party trust. The outgoing claim in the illustration represents the issued claim.  
   

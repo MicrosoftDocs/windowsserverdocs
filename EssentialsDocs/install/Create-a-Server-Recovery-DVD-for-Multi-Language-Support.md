@@ -1,17 +1,12 @@
 ---
-title: "Create a Server Recovery DVD for Multi-Language Support"
-description: "Describes how to use Windows Server Essentials"
-ms.custom: na
+title: Create a Server Recovery DVD for Multi-Language Support
+description: Describes how to use Windows Server Essentials
 ms.date: 10/03/2016
 ms.prod: windows-server-2016-essentials
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: c7da0f6c-9732-4784-9c28-7dad72c4071d
-4author: nnamuhcs
-ms.author: coreyp
-manager: dongill
+author: daveba
+ms.author: daveba
 ---
 
 # Create a Server Recovery DVD for Multi-Language Support
@@ -25,20 +20,20 @@ manager: dongill
   
  There are two phases of setup: the Windows Preinstallation Environment (Windows PE) and the initial configuration. By default, the language selection page in initial configuration will not be displayed.  
   
--   For an OEM remotely administered installation or an OEM preinstallation scenario, you need to add a registry key using following command to display the language selection page in initial configuration.  
+- For an OEM remotely administered installation or an OEM preinstallation scenario, you need to add a registry key using following command to display the language selection page in initial configuration.  
   
-    ```  
-    %systemroot%\system32\reg.exe add "HKLM\Software\microsoft\windows server\setup" /v ShowPreinstallPages /t REG_SZ /d true /f  
-    ```  
+  ```  
+  %systemroot%\system32\reg.exe add "HKLM\Software\microsoft\windows server\setup" /v ShowPreinstallPages /t REG_SZ /d true /f  
+  ```  
   
-    > [!IMPORTANT]
-    >  When OEMs create an image in the lab, they must choose **English** as the language during the Windows PE phase of setup.  
+  > [!IMPORTANT]
+  >  When OEMs create an image in the lab, they must choose **English** as the language during the Windows PE phase of setup.  
   
--   For a Reseller Option Kit (ROK) scenario, customers receive a DVD, and perhaps, some hardware. The customer should able to select the language during Windows PE setup, and the language selection page is no longer displayed during initial configuration.  
+- For a Reseller Option Kit (ROK) scenario, customers receive a DVD, and perhaps, some hardware. The customer should able to select the language during Windows PE setup, and the language selection page is no longer displayed during initial configuration.  
   
- You may choose to ship a single dual-layer DVD that contains multiple languages.  
+  You may choose to ship a single dual-layer DVD that contains multiple languages.  
   
- This section describes how to add language support to Windows Setup. The primary tool for customizing Windows PE 3.0 is Deployment Image Servicing and Management (DISM), a command-line tool. This solution enables the following scenarios:  
+  This section describes how to add language support to Windows Setup. The primary tool for customizing Windows PE 3.0 is Deployment Image Servicing and Management (DISM), a command-line tool. This solution enables the following scenarios:  
   
 1.  Creating multilingual installations  
   

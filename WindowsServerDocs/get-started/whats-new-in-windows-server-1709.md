@@ -1,20 +1,23 @@
 ---
 title: What's New in Windows Server, version 1709
 description: "What are the new features in compute, identity, management, automation, networking, security, storage."
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: server-general
 ms.topic: article
 author: coreyp-at-msft
 ms.author: coreyp
 ms.localizationpriority: medium
+ms.date: 06/03/2019
 ---
-
 # What's New in Windows Server version 1709
 
 >Applies To: Windows Server (Semi-Annual Channel)
 
-<img src="../media/landing-icons/new.png" style='float:left; padding:.5em;' alt="Icon showing a newspaper">&nbsp;The content in this section describes what's new and changed in Windows Server, version 1709. The new features and changes listed here are the ones most likely to have the greatest impact as you work with this release. Also see [Windows Server, version 1709](https://blogs.technet.microsoft.com/windowsserver/2017/08/24/sneak-peek-1-windows-server-version-1709/).
-   
+<img src="../media/landing-icons/new.png" style='float:left; padding:.5em;' alt="Icon showing a newspaper">&nbsp;To learn about the latest features in Windows, see [What's New in Windows Server](whats-new-in-windows-server.md). The content in this section describes what's new and changed in Windows Server, version 1709. The new features and changes listed here are the ones most likely to have the greatest impact as you work with this release. Also see [Windows Server, version 1709](https://blogs.technet.microsoft.com/windowsserver/2017/08/24/sneak-peek-1-windows-server-version-1709/).
+
+> [!IMPORTANT]
+> Windows Server, version 1709 is out of support as of April 9, 2019.
+
 
 ## New cadence of releases
 
@@ -31,11 +34,11 @@ Release channels are summarized in the following table.
 | Availability  | Software Assurance or Azure (cloud hosted)  | All channels |
 | Naming convention  | Windows Server, version YYMM  | Windows Server YYYY |
 
-For more information, see [Windows Server Semi-annual Channel Overview](https://docs.microsoft.com/windows-server/get-started/semi-annual-channel-overview).
+For more information, see [Comparison of servicing channels](https://docs.microsoft.com/windows-server/get-started/semi-annual-channel-overview).
 
 ## Application containers and micro-services
 
-- The Server Core container image has been further optimized for lift-and-shift scenarios where you can migrate existing code bases or applications into containers with minimal changes, and it’s also 60% smaller. 
+- The Server Core container image has been further optimized for lift-and-shift scenarios where you can migrate existing code bases or applications into containers with minimal changes, and it's also 60% smaller. 
 - The Nano Server container image is nearly 80% smaller.
     - In the Windows Server Semi-Annual Channel, Nano Server as a container base OS image is decreased from 390 MB to 80 MB.
 - Linux containers with Hyper-V isolation 
@@ -61,9 +64,9 @@ For more information about containers, see [Container Networking Overview](https
 
 **Virtualized Persistent Memory (vPMEM)** is enabled by creating a VHD file (.vhdpmem) on a direct access volume on a host, adding a vPMEM Controller to a VM, and adding the created device (.vhdpmem) to a VM. Using vhdpmem files on direct access volumes on a host to back vPMEM enables allocation flexibility and leverages a familiar management model for adding disks to VMs.
 
-**Container storage – persistent data volumes on cluster shared volumes (CSV)**. In Windows Server, version 1709 as well as Windows Server 2016 with the latest updates, we’ve added support for containers to access persistent data volumes located on CSVs, including CSVs on Storage Spaces Direct. This gives the application container persistent access to the volume no matter which cluster node the container instance is running on. For more info, see [Container Storage Support with Cluster Shared Volumes (CSV), Storage Spaces Direct (S2D), SMB Global Mapping](https://blogs.msdn.microsoft.com/clustering/2017/08/10/container-storage-support-with-cluster-shared-volumes-csv-storage-spaces-direct-s2d-smb-global-mapping/).
+**Container storage – persistent data volumes on cluster shared volumes (CSV)**. In Windows Server, version 1709 as well as Windows Server 2016 with the latest updates, we've added support for containers to access persistent data volumes located on CSVs, including CSVs on Storage Spaces Direct. This gives the application container persistent access to the volume no matter which cluster node the container instance is running on. For more info, see [Container Storage Support with Cluster Shared Volumes (CSV), Storage Spaces Direct (S2D), SMB Global Mapping](https://blogs.msdn.microsoft.com/clustering/2017/08/10/container-storage-support-with-cluster-shared-volumes-csv-storage-spaces-direct-s2d-smb-global-mapping/).
 
-**Container storage – persistent data volumes with SMB global mapping**. In Windows Server, version 1709 we’ve added support for mapping an SMB file share to a drive letter inside a container – this is called SMB global mapping. This mapped drive is then accessible to all users on the local server so that container I/O on the data volume can go through the mounted drive to the underlying file share. For more info, see [Container Storage Support with Cluster Shared Volumes (CSV), Storage Spaces Direct (S2D), SMB Global Mapping](https://blogs.msdn.microsoft.com/clustering/2017/08/10/container-storage-support-with-cluster-shared-volumes-csv-storage-spaces-direct-s2d-smb-global-mapping/).
+**Container storage – persistent data volumes with SMB global mapping**. In Windows Server, version 1709 we've added support for mapping an SMB file share to a drive letter inside a container – this is called SMB global mapping. This mapped drive is then accessible to all users on the local server so that container I/O on the data volume can go through the mounted drive to the underlying file share. For more info, see [Container Storage Support with Cluster Shared Volumes (CSV), Storage Spaces Direct (S2D), SMB Global Mapping](https://blogs.msdn.microsoft.com/clustering/2017/08/10/container-storage-support-with-cluster-shared-volumes-csv-storage-spaces-direct-s2d-smb-global-mapping/).
 
 **Virtual machine configuration file format (updated)**. An additional file (.vmgs) has been added for virtual machines with a configuration version of 8.2 and higher. VMGS stands for VM guest state and is a new internal file which includes device state that was previously part of the VM runtime state file.
 
@@ -104,7 +107,7 @@ An issue, known as “SMBLoris”, which could result in denial of service, has 
 
 ## Networking
 
-**Docker's Routing Mesh** is supported. Ingress routing mesh is part of [swarm mode](https://docs.docker.com/engine/swarm/), Docker’s built-in orchestration solution for containers. For more information, see [Docker's routing mesh available with Windows Server version 1709](https://blogs.technet.microsoft.com/virtualization/2017/09/26/dockers-ingress-routing-mesh-available-with-windows-server-version-1709/).
+**Docker's Routing Mesh** is supported. Ingress routing mesh is part of [swarm mode](https://docs.docker.com/engine/swarm/), Docker's built-in orchestration solution for containers. For more information, see [Docker's routing mesh available with Windows Server version 1709](https://blogs.technet.microsoft.com/virtualization/2017/09/26/dockers-ingress-routing-mesh-available-with-windows-server-version-1709/).
 
 **New features for Docker** are available. For more information, see [Exciting new things for Docker with Windows Server 1709](https://blog.docker.com/2017/09/docker-windows-server-1709/).
 
@@ -119,23 +122,23 @@ An issue, known as “SMBLoris”, which could result in denial of service, has 
     netsh int tcp set supplemental template=internet congestionprovider=compound
     ```
 
-- **Receive Window Autotuning**: TCP autotuning logic computes the “receive window” parameter of a TCP connection.  High speed and/or long delay connections need this algorithm to achieve good performance characteristics.  In this release, the algorithm is modified to use a step function to converge on the maximum receive window value for a given connection.
+- **Receive Window Autotuning**: TCP autotuning logic computes the “receive window” parameter of a TCP connection.  High speed and/or long delay connections need this algorithm to achieve good performance characteristics.  In this release, the algorithm is modified to use a step function to converge on the maximum receive window value for a given connection.
 - **TCP stats API**: A new API is introduced called SIO_TCP_INFO.  SIO_TCP_INFO allows developers to query rich information on individual TCP connections using a socket option.
 - **IPv6**: There are multiple improvements in IPv6 in this release.
-    - **RFC 6106** support: RFC 6106 which allows for DNS configuration through router advertisements (RAs). You can use the following command to enable or disable RFC 6106 support:
+  - **RFC 6106** support: RFC 6106 which allows for DNS configuration through router advertisements (RAs). You can use the following command to enable or disable RFC 6106 support:
 
     ```
     netsh int ipv6 set interface <ifindex> rabaseddnsconfig=<enabled | disabled>
     ```
 
-    - **Flow Labels**: Beginning with the Creators Update, outbound TCP and UDP packets over IPv6 have this field set to a hash of the 5-tuple (Src IP, Dst IP, Src Port, Dst Port).  This will make IPv6 only datacenters doing load balancing or flow classification more efficient. To enable flowlabels:
+  - **Flow Labels**: Beginning with the Creators Update, outbound TCP and UDP packets over IPv6 have this field set to a hash of the 5-tuple (Src IP, Dst IP, Src Port, Dst Port).  This will make IPv6 only datacenters doing load balancing or flow classification more efficient. To enable flowlabels:
 
     ```
     netsh int ipv6 set flowlabel=[disabled|enabled] (enabled by default)
     netsh int ipv6 set global flowlabel=<enabled | disabled>
     ```
 
-    - **ISATAP and 6to4**: As a step towards future deprecation, the Creators Update will have these technologies disabled by default.
+  - **ISATAP and 6to4**: As a step towards future deprecation, the Creators Update will have these technologies disabled by default.
 - **Dead Gateway Detection (DGD)**: The DGD algorithm automatically transitions connections over to another gateway when the current gateway is unreachable. In this release, the algorithm is improved to periodically re-probe the network environment.
 - [Test-NetConnection](https://technet.microsoft.com/itpro/powershell/windows/nettcpip/test-netconnection) is a built-in cmdlet in Windows PowerShell that performs a variety of network diagnostics.  In this release we have enhanced the cmdlet to provide detailed information about both route selection as well as source address selection.
 

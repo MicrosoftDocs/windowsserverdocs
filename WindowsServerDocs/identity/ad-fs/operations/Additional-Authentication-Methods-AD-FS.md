@@ -6,13 +6,12 @@ ms.author: billmath
 manager: mtillman
 ms.date: 09/19/2018
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: identity-adfs
 ---
 
-# Configure 3rd party authenticaiton providers as primary authentication in AD FS 2019
+# Configure 3rd party authentication providers as primary authentication in AD FS 2019
 
->Applies To: Windows Server 2019
 
 Organizations are experiencing attacks that attempt to brute force, compromise, or otherwise lock out user accounts by sending password based authentication requests.  To help protect organizations from compromise, AD FS has introduced capabilities such as extranet “smart” lockout and IP address based blocking.  
 
@@ -48,11 +47,11 @@ Once an external provider is enabled for extranet, intranet, or both, it becomes
 
 ## Pre-requisites
 Before configuring external authentication providers as primary, ensure you have the following pre-requisites in place
-- The AD FS farm behavior level (FBL) has been raised to ‘4’ (this value translates to AD FS 2019)
+- The AD FS farm behavior level (FBL) has been raised to ‘4' (this value translates to AD FS 2019)
     - This is the default FBL value for new AD FS 2019 farms
     - For AD FS farms based on Windows Server 2012 R2 or 2016, the FBL can be raised using the PowerShell commandlet Invoke-AdfsFarmBehaviorLevelRaise.  For more details on upgrading an AD FS farm, see the farm upgrade article for SQL farms or WID farms 
     - You can check the FBL value using the cmdlet Get-AdfsFarmInformation
-- The AD FS 2019 farm is configured to use the new 2019 ‘paginated’ user facing pages
+- The AD FS 2019 farm is configured to use the new 2019 ‘paginated' user facing pages
     - This is the default behavior for new AD FS 2019 farms
     - For AD FS farms upgraded from Windows Server 2012 R2 or 2016, the paginated flows are enabled automatically when external authentication as primary (the feature described in this document) is enabled as described below.
 

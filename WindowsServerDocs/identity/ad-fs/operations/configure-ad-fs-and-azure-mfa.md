@@ -7,12 +7,10 @@ author: billmath
 manager: mtillman
 ms.date: 01/28/2019
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: identity-adfs
 ---
 # Configure Azure MFA as authentication provider with AD FS
-
->Applies To: Windows Server 2016, Windows Server 2019
 
 If your organization is federated with Azure AD, you can use Azure Multi-Factor Authentication to secure AD FS resources, both on-premises and in the cloud. Azure MFA enables you to eliminate passwords and provide a more secure way to authenticate.  Starting with Windows Server 2016, you can now configure Azure MFA for primary authentication or use it as an additional authentication provider. 
   
@@ -63,17 +61,14 @@ As described above, any AD FS user who has not yet registered (configured MFA ve
 The following pre-requisites are required when using Azure MFA for authentication with AD FS:  
   
 - An [Azure subscription with Azure Active Directory](https://azure.microsoft.com/pricing/free-trial/).  
-- [Azure Multi-Factor Authentication](https://azure.microsoft.com/documentation/articles/multi-factor-authentication/)  
-- Web app proxy is able to communicate with the following over ports 80 and 443:
-
-	- https://adnotifications.windowsazure.com
-	- https://login.microsoftonline.com
+- [Azure Multi-Factor Authentication](https://azure.microsoft.com/documentation/articles/multi-factor-authentication/) 
 
 
 > [!NOTE]
 > Azure AD and Azure MFA are included in Azure AD Premium and the Enterprise Mobility Suite (EMS).  If you have either of these you do not need individual subscriptions.
+
 - A Windows Server 2016 AD FS on-premises environment.  
-   - The server needs to be able to communicate with the following URLs over ports 80 and 443.
+   - The server needs to be able to communicate with the following URLs over port 443.
       - https://adnotifications.windowsazure.com
       - https://login.microsoftonline.com
 - Your on-premises environment is [federated with Azure AD.](https://azure.microsoft.com/documentation/articles/active-directory-aadconnect-get-started-custom/#configuring-federation-with-ad-fs)  
@@ -282,7 +277,7 @@ Here is a simple example, you may want to extend:
 6. Import the onload.js file into your custom theme by typing the following Windows PowerShell command:
     
     ``` PowerShell
-    Set-AdfsWebTheme -TargetName ProofUp -AdditionalFileResource @{Uri=’/adfs/portal/script/onload.js’;path="c:\theme\script\onload.js"}
+    Set-AdfsWebTheme -TargetName ProofUp -AdditionalFileResource @{Uri='/adfs/portal/script/onload.js';path="c:\theme\script\onload.js"}
     ```
 7. Finally, apply the custom AD FS Web Theme by typing the following Windows PowerShell command:
     

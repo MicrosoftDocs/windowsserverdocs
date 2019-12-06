@@ -2,7 +2,7 @@
 title: autochk
 description: "Windows Commands topic for **autochk** - Runs when the computer is started and prior to Windows Server starting to verify the logical integrity of a file system."
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -30,8 +30,8 @@ Runs when the computer is started and prior to Windows Server® 2008 R2 starting
 
 > -   [!WARNING]
 >     The **Autochk** command-line tool cannot be directly run from the command-line. Instead, use the **Chkntfs** command-line tool to configure the way you want **Autochk** to run at startup.
--   You can use **Chkntfs** with the **/x** parameter to prevent **Autochk** from running on a specific volume or multiple volumes.
--   Use the **Chkntfs.exe** command-line tool with the **/t** parameter to change the Autochk delay from 0 seconds to up to 3 days (259,200 seconds). However, a long delay means that the computer does not start until the time elapses or until you press a key to cancel **Autochk**.
+> -   You can use **Chkntfs** with the **/x** parameter to prevent **Autochk** from running on a specific volume or multiple volumes.
+> -   Use the **Chkntfs.exe** command-line tool with the **/t** parameter to change the Autochk delay from 0 seconds to up to 3 days (259,200 seconds). However, a long delay means that the computer does not start until the time elapses or until you press a key to cancel **Autochk**.
 
 #### Additional references
 

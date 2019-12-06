@@ -7,7 +7,7 @@ author: haley-rowland
 ms.author: harowl
 ms.date: 07/17/2018
 ms.localizationpriority: low
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ---
 # Protect your Hyper-V Virtual Machines with Azure Site Recovery and Windows Admin Center
 
@@ -46,13 +46,13 @@ Completing setup for the replication component alone is sufficient to protect yo
 5. Sign into your Azure Account.
 6. Enter the required information:
 
- - **Subscription:** The Azure subscription you want to use for replication of VMs on this host.
- - **Location:** The Azure region where the ASR resources should be created.
- - **Storage Account:** The storage account where replicated VM workloads on this host will be saved.
- - **Vault:** Choose a name for the Azure Site Recovery vault for protected VMs on this host.
+   - **Subscription:** The Azure subscription you want to use for replication of VMs on this host.
+   - **Location:** The Azure region where the ASR resources should be created.
+   - **Storage Account:** The storage account where replicated VM workloads on this host will be saved.
+   - **Vault:** Choose a name for the Azure Site Recovery vault for protected VMs on this host.
 
-7.  Select **Setup ASR**.
-8.  Wait until you see the notification: **Site Recovery Setting Completed**.
+7. Select **Setup ASR**.
+8. Wait until you see the notification: **Site Recovery Setting Completed**.
  
 This could take up to 10 minutes. You can watch the progress by going to **Notifications** (the bell icon at the top right).
 

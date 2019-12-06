@@ -2,7 +2,7 @@
 title: ftp user
 description: "Windows Commands topic for **** - "
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -24,11 +24,13 @@ Specifies a user to the remote computer.
 user <UserName> [<Password>] [<Account>]  
 ```  
 ### Parameters  
-|Parameter|Description|  
-|-------|--------|  
-|<UserName>|Specifies a user name with which to log on to the remote computer.|  
-|[<Password>]|Specifies the password for *UserName*. If a password is not specified but is required,  **ftp** prompts for the password.|  
-|[<Account>]|Specifies an account with which to log on to the remote computer. If an *Account* is not specified but is required,  **ftp** prompts for the account.|  
+
+|  Parameter   |                                                                      Description                                                                      |
+|--------------|-------------------------------------------------------------------------------------------------------------------------------------------------------|
+|  <UserName>  |                                          Specifies a user name with which to log on to the remote computer.                                           |
+| [<Password>] |               Specifies the password for *UserName*. If a password is not specified but is required,  **ftp** prompts for the password.               |
+| [<Account>]  | Specifies an account with which to log on to the remote computer. If an *Account* is not specified but is required,  **ftp** prompts for the account. |
+
 ## <a name="BKMK_Examples"></a>Examples  
 Specify User1 with the password Password1.  
 ```  

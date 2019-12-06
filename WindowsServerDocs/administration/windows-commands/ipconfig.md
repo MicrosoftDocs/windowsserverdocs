@@ -2,7 +2,7 @@
 title: ipconfig
 description: "Windows Commands topic for **** - "
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -46,9 +46,9 @@ ipconfig [/allcompartments] [/all] [/renew [<Adapter>]] [/release [<Adapter>]] [
 
 ## Remarks
 
--   This command is most useful on computers that are configured to obtain an IP address automatically. This enables users to determine which TCP/IP configuration values have been configured by DHCP, Automatic Private IP Addressing (APIPA), or an alternate configuration.
--   If the name you supply for *Adapter* contains any spaces, use quotation marks around the adapter name (example: **"***Adapter Name***"**).
--   For adapter names, **ipconfig** supports the use of the asterisk (*) wildcard character to specify either adapters with names that begin with a specified string or adapters with names that contain a specified string. For example, **Local\*** matches all adapters that start with the string Local and **\*Con\*** matches all adapters that contain the string Con.
+- This command is most useful on computers that are configured to obtain an IP address automatically. This enables users to determine which TCP/IP configuration values have been configured by DHCP, Automatic Private IP Addressing (APIPA), or an alternate configuration.
+- If the name you supply for *Adapter* contains any spaces, use quotation marks around the adapter name (example: **"**<em>Adapter Name</em>**"**).
+- For adapter names, **ipconfig** supports the use of the asterisk (\*) wildcard character to specify either adapters with names that begin with a specified string or adapters with names that contain a specified string. For example, **Local\*** matches all adapters that start with the string Local and **\*Con\*** matches all adapters that contain the string Con.
 
 ## Examples
 

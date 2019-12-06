@@ -5,16 +5,16 @@ ms.technology: manage
 ms.topic: article
 author: nwashburn-ms
 ms.author: niwashbu
-ms.date: 06/18/2018
+ms.date: 05/09/2019
 ms.localizationpriority: medium
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ---
 
 # Using PowerShell in your extension #
 
 >Applies To: Windows Admin Center, Windows Admin Center Preview
 
-Let’s go more in-depth into the Windows Admin Center Extensions SDK - let's talk about adding PowerShell commands to your extension.
+Let's go more in-depth into the Windows Admin Center Extensions SDK - let's talk about adding PowerShell commands to your extension.
 
 ## PowerShell in TypeScript ##
 
@@ -23,10 +23,10 @@ The gulp build process has a generate step that will take any ```{!ScriptName}.p
 >[!NOTE] 
 > Don't manually update the ```powershell-scripts.ts``` nor the ```strings.ts``` files. Any change you make will be overwritten on the next generate.
 
-## Running a Powerhell Script ##
+## Running a PowerShell Script ##
 Any scripts that you want to run on a node can be placed in ```\src\resources\scripts\{!ScriptName}.ps1```. 
 >[!IMPORTANT] 
-> Any changes make in a ```{!ScriptName}.ps1``` file will not be reflected in your project unless a generate 
+> Any changes make in a ```{!ScriptName}.ps1``` file will not be reflected in your project until ```gulp generate``` has been run.
 
 The API works by first creating a PowerShell session on the nodes you are targeting, creating the PowerShell script with any parameters that need to be passed in, and then running the script on the sessions that were created.
 
@@ -148,7 +148,7 @@ return this.appContextService.workItem.submit('{!TargetNode}', workItem);
 >[!NOTE] 
 > For progress to be shown, Write-Progress must be included in the script that you have written. For example:
 > ``` ps1
->  Write-Progress -Activity ‘The script is almost done!’ -percentComplete 95
+>  Write-Progress -Activity ‘The script is almost done!' -percentComplete 95
 >```
 
 #### WorkItem Options ####
@@ -161,7 +161,7 @@ return this.appContextService.workItem.submit('{!TargetNode}', workItem);
 | query() | Query for an existing work item by id
 | find() | Find and existing work item by the TargetNodeName, ModuleName, or typeId.
 
-### PowerShell Batch APIs###
+### PowerShell Batch APIs ###
 If you need to run the same script on multiple nodes, then a batch PowerShell session can be used. For example:
 ```ts
 const batchSession = this.appContextService.powerShell.createBatchSession(

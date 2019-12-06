@@ -1,21 +1,22 @@
 # Contributing to Windows Server technical documentation
 
-Thank you for your interest in the Windows Server technical documentation! We appreciate your feedback, edits, and additions to our docs.
-This page covers the basic steps for editing our technical documentation from our public repo, as an external contributor.
+Thank you for your interest in the Windows Server technical documentation! We appreciate your feedback, edits, and additions to our docs. There are two separate locations where we keep Windows Server technical content. One of the locations is public (windowsserverdocs) while the other is private (windowsserverdocs-pr). Who you are determines which location you contribute to:
+
+- **I'm not a Microsoft employee.** As a non-Microsoft employee, you must contribute to the public location. For information about how to do that, continue reading this article.
+
+- **I'm a Microsoft employee.** As a Microsoft employee, you have options, based on what you're trying to do:
+
+    - **Create a brand-new article.** To create a brand-new article, you must create and set up your GitHub account and tools, fork and clone the windowsserverdocs-pr repo, set up your remote branch, create the article, and finally create a new pull request for approval and publishing. For these instructions, see the [Create new Windows Server articles using GitHub and Visual Studio Code](https://github.com/MicrosoftDocs/windowsserverdocs/blob/master/Contributor-guide/create-new-using-github.md) article.
+
+    - **Make large changes to an existing article.** To make substantial changes to an existing article, you can follow the instructions in the [Edit an existing Windows Server article using GitHub and Visual Studio Code](https://github.com/MicrosoftDocs/windowsserverdocs/blob/master/Contributor-guide/edit-existing-using-github.md) article.
+
+    - **Make minor changes to an existing article.** To make minor changes to an existing article, you can follow the instructions in the [Update existing Windows Server articles using a web browser and GitHub](https://github.com/MicrosoftDocs/windowsserverdocs/blob/master/Contributor-guide/github-browser-updates.md) article.
 
 ## Sign a CLA
 
 All contributors who are ***not*** a Microsoft employee must [sign a Microsoft Contribution Licensing Agreement (CLA)](https://cla.microsoft.com/) before editing any Microsoft repositories. 
 If you've already edited within Microsoft repositories in the past, congratulations!
 You've already completed this step.
-
-## Public vs. private repo contributions
-
-There are two separate locations where we keep Windows Server technical content. One of the locations is public (windowsserverdocs) while the other is private (windowsserverdocs-pr). Who you are determines which location you contribute to:
-
-- **I'm a Microsoft employee.** As a Microsoft employee, you must contribute to the private location. For information about how to do that, see the articles in the [Contributor Guide](./Contributor-guide/create-new-using-github.md).
-
-- **I'm not a Microsoft employee.** As a non-Microsoft employee, you must contribute to the public location. For information about how to do that, continue reading this article.
 
 ## Editing topics
 

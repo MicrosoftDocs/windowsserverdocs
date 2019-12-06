@@ -2,7 +2,7 @@
 title: Windows Server 2019 and Microsoft Server application compatibility
 description: "Compatibility table for Windows Server 2019 and Microsoft server applications"
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: server-general
@@ -21,6 +21,7 @@ ms.localizationpriority: medium
 This table lists Microsoft server applications that support installation and functionality on Window Server 2019. This information is for quick reference and is not intended to replace the individual product specifications, requirements, announcements, or general communications of each individual server application. Refer to official documentation for each product to fully understand compatibility and options.
 
 If you are a software vendor partner looking for more information on Windows Server compatibility with non-Microsoft applications, visit the [Commercial App Certification portal](https://commercialappcertification.microsoft.com/).
+
 | **Product**                                                  | **Supported on Server Core**             |   | **Supported on Server with Desktop Experience** | **Released?** |   | **Product Web Link**                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
 |--------------------------------------------------------------|------------------------------------------|---|-------------------------------------------------|---------------|---|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Exchange Server 2019                                         | Yes                                      |   | Yes                                             | Yes           |   | [Exchange Server system requirements](https://docs.microsoft.com/Exchange/plan-and-deploy/system-requirements?view=exchserver-2019)                                                                        |

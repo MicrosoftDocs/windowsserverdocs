@@ -7,7 +7,7 @@ author: nwashburn-ms
 ms.author: niwashbu
 ms.date: 09/18/2018
 ms.localizationpriority: medium
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ---
 
 # Install extension payload on a managed node
@@ -19,6 +19,7 @@ ms.prod: windows-server-threshold
 > To follow this guide, you will need build 1.2.1904.02001 or higher. To check your build number open Windows Admin Center and click the question mark in the top right.
 
 If you haven't already, create a [tool extension](../develop-tool.md) for Windows Admin Center. After you have completed this make note of the values used when creating an extension:
+
 | Value | Explanation | Example |
 | ----- | ----------- | ------- |
 | ```{!Company Name}``` | Your company name (with spaces) | ```Contoso``` |
@@ -133,7 +134,7 @@ The last step is building a NuGet package with the files we have added and then 
 Follow the [Publishing Extensions](../publish-extensions.md) guide if you have not created an extension package before. 
 > [!IMPORTANT]
 > In your .nuspec file for this extension, it is important that the ```<id>``` value matches the name in your project's ```manifest.json``` and the ```<version>``` matches what was added to ```\src\app\default.component.ts```. Also add an entry under ```<files>```: 
-
+> 
 > ```<file src="Node\**\*.*" target="Node" />```.
 
 ``` xml

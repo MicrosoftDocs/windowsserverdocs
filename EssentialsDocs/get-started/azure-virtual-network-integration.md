@@ -14,7 +14,7 @@ ms.author: coreyp
 manager: dongill
 ---
 
-#Azure Virtual network integration
+# Azure Virtual network integration
 
 >Applies To: Windows Server 2016 Essentials
 

@@ -2,7 +2,7 @@
 title: Geo-redundant RDS data centers in Azure
 description: Learn how to create an RDS deployment that uses multiple data centers to provide high availability across geographic locations.
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: remote-desktop-services
@@ -38,7 +38,7 @@ In comparison, here is the architecture for a deployment that uses multiple Azur
 
 ![An RDS deployment that uses multiple Azure regions](media/rds-ha-multi-region.png)
 
-The entire RDS deployment is replicated in a second Azure region to create a geo-redundant deployment. This architecture uses an active-passive model, where only one RDS deployment is running at a time. A VNet-to-VNet connection lets the two environments communicate with each other. The RDS deployments are based on a single Active Directory forest/domain, and the AD servers replicate across the two deployments, meaning users can sign into either deployment using the same credentials. User settings and data stored in User Profile Disks (UPD) are stored on a two-node cluster Storage Spaces Direct (S2D) scale-out file server (SOFS). A second identical S2D cluster is deployed in the second (passive) region, and Storage Replica is used to replicate the user profiles from the active to passive deployment. Azure Traffic Manager is used to automatically direct end users to whichever deployment is currently active - from the end user perspective, they access the deployment using a single URL and are not aware of which region they end up using.
+The entire RDS deployment is replicated in a second Azure region to create a geo-redundant deployment. This architecture uses an active-passive model, where only one RDS deployment is running at a time. A VNet-to-VNet connection lets the two environments communicate with each other. The RDS deployments are based on a single Active Directory forest/domain, and the AD servers replicate across the two deployments, meaning users can sign into either deployment using the same credentials. User settings and data stored in User Profile Disks (UPD) are stored on a two-node cluster Storage Spaces Direct scale-out file server (SOFS). A second identical Storage Spaces Direct cluster is deployed in the second (passive) region, and Storage Replica is used to replicate the user profiles from the active to passive deployment. Azure Traffic Manager is used to automatically direct end users to whichever deployment is currently active - from the end user perspective, they access the deployment using a single URL and are not aware of which region they end up using.
 
 
 You *could* create a non-highly available RDS deployment in each region, but if even a single VM is restarted in one region, a failover would occur, increasing the likelihood of failovers occurring with associated performance impacts.
@@ -68,8 +68,8 @@ Create the following resources in Azure to create a geo-redundant multi-data cen
 
    > [!NOTE]
    > You can provision storage manually (instead of using the PowerShell script and template): 
-   >1. Deploy a [2-node S2D SOFS](rds-storage-spaces-direct-deployment.md) in RG A to store your user profile disks (UPDs).
-   >2. Deploy a second, identical S2D SOFS in RG B - make sure to use the same amount of storage in each cluster.
+   >1. Deploy a [two-node Storage Spaces Direct SOFS](rds-storage-spaces-direct-deployment.md) in RG A to store your user profile disks (UPDs).
+   >2. Deploy a second, identical Storage Spaces Direct SOFS in RG B - make sure to use the same amount of storage in each cluster.
    >3. Set up [Storage Replica with asynchronous replication](../../storage/storage-replica/cluster-to-cluster-storage-replication.md) between the two.
 
 ### Enable UPDs
@@ -79,7 +79,7 @@ Want to learn more about managing replication? Check out [Cluster to cluster Sto
 
 To enable UPDs on both deployments, do the following:
 
-1. Run the [Set-RDSessionCollectionConfiguration cmdlet](https://technet.microsoft.com/itpro/powershell/windows/remote-desktop/set-rdsessioncollectionconfiguration) to enable the user profile disks for the primary (active) deployment - provide a path to the file share on the source volume (which you created in Step 7 in the deployment steps).
+1. Run the [Set-RDSessionCollectionConfiguration cmdlet](https://docs.microsoft.com/powershell/module/remotedesktop/set-rdsessioncollectionconfiguration) to enable the user profile disks for the primary (active) deployment - provide a path to the file share on the source volume (which you created in Step 7 in the deployment steps).
 2. Reverse the Storage Replica direction so that the destination volume becomes the source volume (this mounts the volume and makes it accessible by the secondary deployment). You can run **Set-SRPartnership** cmdlet to do this. For example:
 
    ```powershell
@@ -99,10 +99,10 @@ Create an [Azure Traffic Manager](/azure/traffic-manager/traffic-manager-overvie
 
 Note that Traffic Manager requires endpoints to return 200 OK in response to a GET request in order to be marked as "healthy." The publicIP object created from the RDS templates will function, but do not add a path addendum. Instead, you can give end users the Traffic Manager URL with “/RDWeb” appended, for example: ```http://deployment.trafficmanager.net/RDWeb```
 
-By deploying Azure Traffic Manager with the Priority routing method, you prevent end users from accessing the passive deployment while the active deployment is functional. If end users access the passive deployment and the Storage Replica direction hasn't been switched for failover, the user sign-in hangs as the deployment tries and fails to access the file share on the passive S2D cluster - eventually the deployment will give up and give the user a temporary profile.  
+By deploying Azure Traffic Manager with the Priority routing method, you prevent end users from accessing the passive deployment while the active deployment is functional. If end users access the passive deployment and the Storage Replica direction hasn't been switched for failover, the user sign-in hangs as the deployment tries and fails to access the file share on the passive Storage Spaces Direct cluster - eventually the deployment will give up and give the user a temporary profile.  
 
 ### Deallocate VMs to save resources 
-After you configure both deployments, you can optionally shut down and deallocate the secondary RDS infrastructure and RDSH VMs to save cost on these VMs. The S2D SOFS and AD server VMs must always stay running in the secondary/passive deployment to enable user account and profile synchronization.  
+After you configure both deployments, you can optionally shut down and deallocate the secondary RDS infrastructure and RDSH VMs to save cost on these VMs. The Storage Spaces Direct SOFS and AD server VMs must always stay running in the secondary/passive deployment to enable user account and profile synchronization.  
 
 When a failover occurs, you'll need to start the deallocated VMs. This deployment configuration has the advantage of being lower cost, but at the expense of fail-over time. If a catastrophic failure occurs in the active deployment, you'll have to manually start the passive deployment, or you'll need an automation script to detect the failure and start the passive deployment automatically. In either case, it may take several minutes to get the passive deployment running and available for users to sign in, resulting in some downtime for the service. This downtime depends on the amount of time it takes to start the RDS infrastructure and RDSH VMs (typically 2-4 minutes, if the VMs are started in parallel rather than serially), and the time to bring the passive cluster online (which depends on the size of the cluster, typically 2-4 minutes for a 2-node cluster with 2 disks per node). 
 
@@ -113,11 +113,11 @@ The Active Directory servers in each deployment are replicas within the same For
 Provide a [per-user RD CAL](rds-client-access-license.md) for each named user that is authorized to access the geo-redundant deployment. Distribute the per user CALs evenly across the two RD License Servers in the active deployment. Then, duplicate these CALs to the two RD License Servers in the passive deployment. Because the CALs are duplicated between the active and passive deployment, at any given time only one deployment can be active with users connecting; otherwise, you violate the license agreement.  
 
 ### Image Management 
-As you update your RDSH images to provide software updates or new applications, you'll need to separately update the RDSH collections in each deployment to maintain a common user experience across both deployments. You can use the [Update RDSH collection template](https://azure.microsoft.com/resources/templates/rds-update-rdsh-collection/), but note that the passive deployment’s RDS infrastructure and RDSH VMs must be running to run the template. 
+As you update your RDSH images to provide software updates or new applications, you'll need to separately update the RDSH collections in each deployment to maintain a common user experience across both deployments. You can use the [Update RDSH collection template](https://azure.microsoft.com/resources/templates/rds-update-rdsh-collection/), but note that the passive deployment's RDS infrastructure and RDSH VMs must be running to run the template. 
 
 ## Failover
 
-In the case of the Active-Passive deployment, failover requires you to start the VMs of the secondary deployment. You can do this manually or with an automation script. In the case of a catastrophic failover of the S2D SOFS, change the Storage Replica partnership direction, so that the destination volume becomes the source volume. For example:
+In the case of the Active-Passive deployment, failover requires you to start the VMs of the secondary deployment. You can do this manually or with an automation script. In the case of a catastrophic failover of the Storage Spaces Direct SOFS, change the Storage Replica partnership direction, so that the destination volume becomes the source volume. For example:
 
    ```powershell
    Set-SRPartnership -NewSourceComputerName "cluster-b-s2d-c" -SourceRGName "cluster-b-s2d-c" -DestinationComputerName "cluster-a-s2d-c" -DestinationRGName "cluster-a-s2d-c"

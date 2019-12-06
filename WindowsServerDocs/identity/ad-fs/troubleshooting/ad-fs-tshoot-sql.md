@@ -6,7 +6,7 @@ ms.author: billmath
 manager: mtillman
 ms.date: 01/12/2017
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: identity-adfs
 ---
 
@@ -41,7 +41,7 @@ A Universal Data Link file or UDL file is basically a text file that contains th
 ## Use SQL Server Management Studio to test connectivity
 You can also [download](https://go.microsoft.com/fwlink/?linkid=864329) and install SSMS to test database connectivity.
 
-###To test connectivity with SSMS
+### To test connectivity with SSMS
 1. Download and install SQL Server Management Studio.
 ![Install](media/ad-fs-tshoot-sql/sql5.png)
 1. Open SSMS, enter the Server Name.  The data source from above.

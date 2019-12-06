@@ -7,14 +7,12 @@ ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 
 ms.technology: identity-adfs
 ---
 
 # When to Create a Federation Server
-
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 When you create a federation serverin Active Directory Federation Services \(AD FS\), you provide a means by which your organization can:  
   

@@ -1,6 +1,6 @@
 ---
-Title: DiskPart commands
-ms.prod: windows-server-threshold
+title: DiskPart commands
+ms.prod: windows-server
 ms.technology: storage
 author: JasonGerend
 manager: elizapo
@@ -8,7 +8,6 @@ ms.author: jgerend
 ---
 
 # DiskPart commands
-
 
 Applies To: Windows 10, Windows 8.1, Windows 8, Windows 7, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, and Windows Server 2008 R2, Windows Server 2008
 
@@ -26,11 +25,8 @@ To start the DiskPart command interpreter, at the command prompt type:
 
 `diskpart`
 
-
 > [!IMPORTANT]
-> Membership in the local <STRONG>Administrators</STRONG> group, or equivalent, is the minimum required to run DiskPart. 
-<br>
-
+> Membership in the local **Administrators** group, or equivalent, is the minimum required to run DiskPart. 
 
 You can run the following commands in the Diskpart command interpreter:
 
@@ -115,5 +111,4 @@ You can run the following commands in the Diskpart command interpreter:
 
 [Command-Line Syntax Key](command-line-syntax-key.md)
 
-[Storage Cmdlets in Windows PowerShell](https://docs.microsoft.com/en-us/powershell/module/storage/)
-
+[Storage Cmdlets in Windows PowerShell](https://docs.microsoft.com/powershell/module/storage/)

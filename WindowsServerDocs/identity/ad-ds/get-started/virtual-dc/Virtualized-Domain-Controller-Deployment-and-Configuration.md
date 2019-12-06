@@ -7,7 +7,7 @@ ms.author: joflore
 manager: mtillman
 ms.date: 05/31/2017
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 
 ms.technology: identity-adds
 ---
@@ -149,7 +149,7 @@ Before you attempt to clone a DC, you must validate that the domain controller h
     >   
     > Because this RPC method is new, your network analysis software requires updated parsers to include fields for the new Opnum 28 in the existing UUID E3514235-4B06-11D1-AB04-00C04FC2DCD2. Otherwise, you cannot parse this traffic.  
     >   
-    > For more information, see [4.1.29 IDL_DRSAddCloneDC (Opnum 28)](https://msdn.microsoft.com/en-us/library/hh554213(v=prot.13).aspx).  
+    > For more information, see [4.1.29 IDL_DRSAddCloneDC (Opnum 28)](https://msdn.microsoft.com/library/hh554213(v=prot.13).aspx).  
   
 ***This also means when using non-fully routed networks, virtualized domain controller cloning requires network segments with access to the PDCE***. It is acceptable to move a cloned domain controller to a different network after cloning - just like a physical domain controller - as long as you are careful to update the AD DS logical site information.  
   
@@ -640,11 +640,11 @@ For example:
   
 ![Virtualized DC Deployment](media/Virtualized-Domain-Controller-Deployment-and-Configuration/ADDS_VDC_PSGetVMSnap.png)  
   
-> [!WARNING]  
+> [!WARNING]
 > Ensure that, when importing the computer, static MAC addresses were not assigned to the source domain controller. If a source computer with a static MAC is cloned, those copied computers will not correctly send or receive any network traffic. Set a new unique static or dynamic MAC address if this is the case. You can see if a VM uses static MAC addresses with the command:  
->   
+> 
 > **Get-VM -VMName**   
->  ***test-vm* | Get-VMNetworkAdapter | fl \***  
+>  ***test-vm* | Get-VMNetworkAdapter | fl \\***  
   
 ### Step 9 - Clone the New Virtual Machine  
 Optionally, before you begin cloning, restart the offline clone source domain controller. Ensure that the PDC emulator is online, regardless.  

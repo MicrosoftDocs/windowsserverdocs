@@ -2,7 +2,7 @@
 title: Security and Assurance
 description: "An overview of Security in Windows Server 2016"
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: techgroup-security
 ms.tgt_pltfrm: na
 ms.topic: article
@@ -105,7 +105,7 @@ Control Flow Guard provides built-in protection against some classes of memory c
 ### [Windows Defender](https://technet.microsoft.com/windows-server-docs/security/windows-defender/windows-defender-overview-windows-server)
 Windows Defender provides active detection capabilities to block known malware. Windows Defender is turned on by default and is optimized to support the various server roles in Windows Server.
 
-##Detecting and Responding to Threats
+## Detecting and Responding to Threats
 ### [Security Threat Analysis Using Microsoft Operations Management Suite](https://channel9.msdn.com/events/ignite/2015/brk3464)
 This Ignite presentation discusses how you can use Operational Insights to perform security threat analysis.
 

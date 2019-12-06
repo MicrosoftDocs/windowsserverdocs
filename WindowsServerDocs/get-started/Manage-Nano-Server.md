@@ -1,7 +1,7 @@
 ---
 title: Manage Nano Server
 description: "updates, servicing packages, networking tracing, performance monitoring"
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.service: na
 manager: DonGill
 ms.technology: server-nano
@@ -33,9 +33,9 @@ To use any remote management tool, you will probably need to know the IP address
 ## Using Windows PowerShell remoting  
 To manage Nano Server with Windows PowerShell remoting, you need to add the IP address of the Nano Server to your management computer's list of trusted hosts, add the account you are using to the Nano Server's administrators, and enable CredSSP if you plan to use that feature.  
 
- >[!NOTE]  
-    > If the target Nano Server and your management computer are in the same AD DS forest (or in forests with a trust relationship), you should not add the Nano Server to the trusted hosts list--you can connect to the Nano Server by using its fully qualified domain name, for example:
-    PS C:\> Enter-PSSession -ComputerName nanoserver.contoso.com -Credential (Get-Credential)
+> [!NOTE]
+> If the target Nano Server and your management computer are in the same AD DS forest (or in forests with a trust relationship), you should not add the Nano Server to the trusted hosts list--you can connect to the Nano Server by using its fully qualified domain name, for example:
+>     PS C:\> Enter-PSSession -ComputerName nanoserver.contoso.com -Credential (Get-Credential)
   
   
 To add the Nano Server to the list of trusted hosts, run this command at an elevated Windows PowerShell prompt:  
@@ -112,7 +112,7 @@ Stop-NetEventSession [-Name]
 ```  
 These cmdlets are documented in detail at [Network Event Packet Capture Cmdlets in Windows PowerShell](https://technet.microsoft.com/library/dn268520(v=wps.630).aspx)  
 
-##Installing servicing packages  
+## Installing servicing packages  
 If you want install a servicing packages, use the -ServicingPackagePath parameter (you can pass an array of paths to .cab files):  
   
 `New-NanoServerImage -DeploymentType Guest -Edition Standard -MediaPath \\Path\To\Media\en_us -BasePath .\Base -TargetPath .\NanoServer.wim -ServicingPackagePath \\path\to\kb123456.cab`  
@@ -201,9 +201,9 @@ $scanResults = Invoke-CimMethod -InputObject $sess -MethodName ScanForUpdates -A
 
 **Note:**  
 These commands list what is installed, but do not specifically quote "installed" in the output. If you need output including that, such as for a report, you can run  
-```  
-Get-WindowsPackage--Online  
-```  
+```PowerShell
+Get-WindowsPackage -Online
+```
 
 ### Using WSUS  
 ---  
@@ -232,7 +232,7 @@ The high-level workflow remains the same as on any Window Server installation --
 The following sections list the most common performance data collection activities along with a supported way to accomplish them on Nano Server.
 
 ### Query available event providers
-[Windows Performance Recorder](https://msdn.microsoft.com/en-us/library/hh448229.aspx) is tool to query available event providers as follows:
+[Windows Performance Recorder](https://msdn.microsoft.com/library/hh448229.aspx) is tool to query available event providers as follows:
 ```
 wpr.exe -providers
 ```

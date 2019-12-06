@@ -7,14 +7,12 @@ ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 
 ms.technology: identity-adfs
 ---
 
 # Configure Corporate DNS for the Federation Service and DRS
-
->Applies To: Windows Server 2016, Windows Server 2012 R2
   
 ## Step 6: Add a Host \(A\) and Alias \(CNAME\) Resource Record to Corporate DNS for the Federation Service and DRS  
 You must add the following resource records to corporate Domain Name System \(DNS\) for your federation service and Device Registration Service that you configured in previous steps.  

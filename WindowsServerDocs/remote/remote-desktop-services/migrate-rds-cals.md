@@ -2,7 +2,7 @@
 title: Migrate your Remote Desktop Services Client Access Licenses (RDS CALs)
 description: This article describes how to migrate your Remote Desktop Services Client Access Licenses to new Windows Server 2016 license servers.
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 msreviewer:
 nams.suite:
 nams.technology: remote-desktop-services
@@ -64,19 +64,19 @@ There are three mechanisms to migrate licenses to the destination license server
 
 ### Using a web browser
 1. On the **Obtain Client License Key Pack** page, click the hyperlink to connect to the Remote Desktop Services Licensing Web site.
-If you are running Remote Desktop Licensing Manager on a computer that does not have Internet connectivity, note the address for the Remote Desktop Services Licensing Web site, and then connect to the Web site from a computer that has Internet connectivity. 
+   If you are running Remote Desktop Licensing Manager on a computer that does not have Internet connectivity, note the address for the Remote Desktop Services Licensing Web site, and then connect to the Web site from a computer that has Internet connectivity. 
 2. On the Remote Desktop Services Licensing Web page, under **Select Option**, select **Manage CALs**, and then click **Next**.
 3. Provide the following required information, then click **Next**:
     - **Target License Server ID**: A 35-digit number, in groups of 5 numerals, which is displayed on the **Obtain Client License Key Pack** page in the Manage RDS CALs Wizard.
     - **Reason for recovery**: Choose the reason for migrating the RDS CALs.
     - **License Program**: Choose the program through which you purchased your RDS CALs.
 4. Provide the following required information, then click **Next**:
-    - Last name or surname
-    - First name or given name
-    - Company name
-    - Country/region
+   - Last name or surname
+   - First name or given name
+   - Company name
+   - Country/region
 
-    You can also provide the optional information requested, such as company address, e-mail address, and phone number. In the organizational unit field, you can describe the unit within your organization that this license server serves.
+     You can also provide the optional information requested, such as company address, e-mail address, and phone number. In the organizational unit field, you can describe the unit within your organization that this license server serves.
 
 5. The License Program that you selected on the previous page determines what information you need to provide on the next page. In most cases, you must provide either a license code or an agreement number. Consult the documentation provided when you purchased your RDS CALs. In addition, you need to specify which type of RDS CAL and the quantity that you want to migrate to the license server.
 6. After you have entered the required information, click **Next**.

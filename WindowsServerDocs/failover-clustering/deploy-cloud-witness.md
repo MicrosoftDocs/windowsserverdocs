@@ -1,7 +1,7 @@
 ---
 ms.assetid: 0cd1ac70-532c-416d-9de6-6f920a300a45
 title: Deploy a cloud witness for a Failover Cluster
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 manager: eldenc
 ms.author: jgerend
 ms.technology: storage-failover-clustering
@@ -129,14 +129,14 @@ Cloud Witness configuration is well-integrated within the existing Quorum Config
     **Figure 8. Select the Quorum Witness**  
 
 5. On the **Configure Cloud Witness** page, enter the following information:  
-    1. (Required parameter) Azure Storage Account Name.  
-    2. (Required parameter) Access Key corresponding to the Storage Account.  
-        1. When creating for the first time, use Primary Access Key (see figure 5)  
-        2. When rotating the Primary Access Key, use Secondary Access Key (see figure 5)  
-    3. (Optional parameter) If you intend to use a different Azure service endpoint (for example the Microsoft Azure service in China), then update the endpoint server name.  
+   1. (Required parameter) Azure Storage Account Name.  
+   2. (Required parameter) Access Key corresponding to the Storage Account.  
+       1. When creating for the first time, use Primary Access Key (see figure 5)  
+       2. When rotating the Primary Access Key, use Secondary Access Key (see figure 5)  
+   3. (Optional parameter) If you intend to use a different Azure service endpoint (for example the Microsoft Azure service in China), then update the endpoint server name.  
 
-    ![Snapshot of the Cloud Witness configuration pane in the Cluster Quorum wizard](media/Deploy-a-Cloud-Witness-for-a-Failover-Cluster/CloudWitness_10.png)  
-    **Figure 9: Configure your Cloud Witness**
+      ![Snapshot of the Cloud Witness configuration pane in the Cluster Quorum wizard](media/Deploy-a-Cloud-Witness-for-a-Failover-Cluster/CloudWitness_10.png)  
+      **Figure 9: Configure your Cloud Witness**
 
 6. Upon successful configuration of Cloud Witness, you can view the newly created witness resource in the Failover Cluster Manager snap-in (see figure 10).
 

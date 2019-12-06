@@ -2,7 +2,7 @@
 title: Using the get-DriverPackage Command
 description: "Windows Commands topic for **** - "
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -29,12 +29,12 @@ WDSUTIL /Get-DriverPackage [/Server:<Server name>] {/DriverPackage:<Package Name
 
 ## Parameters
 
-|Parameter|Description|
-|---------|-----------|
-|[/Server:\<Server name>]|Specifies the name of the server. This can be the NetBIOS name or the FQDN. If no server name is specified, the local server is used.|
-|[/DriverPackage:\<Name>]|Specifies the name of the driver package to show.|
-|[/PackageId:\<ID>]|Specifies the Windows Deployment Services ID of the driver package to show. You must specify the ID if the driver package cannot be uniquely identified by name.|
-|[/Show: {Drivers | Files | All}]|Indicates what information to display (if specified). If **/Show** is not specified, the default is to return only the driver package metadata. **Drivers** displays all drivers in the package. **Files** displays the list of files in the package. **All** displays drivers, files, and metadata.|
+|        Parameter         |                                                                           Description                                                                            |
+|--------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| [/Server:\<Server name>] |              Specifies the name of the server. This can be the NetBIOS name or the FQDN. If no server name is specified, the local server is used.               |
+| [/DriverPackage:\<Name>] |                                                        Specifies the name of the driver package to show.                                                         |
+|    [/PackageId:\<ID>]    | Specifies the Windows Deployment Services ID of the driver package to show. You must specify the ID if the driver package cannot be uniquely identified by name. |
+|     [/Show: {Drivers     |                                                                              Files                                                                               |
 
 ## <a name="BKMK_examples"></a>Examples
 

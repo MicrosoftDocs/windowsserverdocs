@@ -2,7 +2,7 @@
 title: wecutil
 description: "Windows Commands topic for **** - "
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -90,32 +90,32 @@ wecutil  [{es | enum-subscription}]
 > [!IMPORTANT]
 > If you receive the message, “The RPC server is unavailable? when you try to run wecutil, you need to start the Windows Event Collector service (wecsvc). To start wecsvc, at an elevated command prompt type net start wecsvc.
 
--   The following example shows the contents of a configuration file:  
-    ```
-    <Subscription xmlns="https://schemas.microsoft.com/2006/03/windows/events/subscription">
-    <Uri>https://schemas.microsoft.com/wbem/wsman/1/windows/EventLog</Uri>
-    <!-- Use Normal (default), Custom, MinLatency, MinBandwidth -->
-    <ConfigurationMode>Normal</ConfigurationMode>
-    <Description>Forward Sample Subscription</Description>
-    <SubscriptionId>SampleSubscription</SubscriptionId>
-    <Query><![CDATA[
-    <QueryList>
-    <Query Path="Application">
-    <Select>*</Select>
-    </Query>
-    </QueryList>
-    ]]></Query>
-    <EventSources>
-    <EventSource Enabled="true">
-    <Address>mySource.myDomain.com</Address>
-    <UserName>myUserName</UserName>
-    <Password>*</Password>
-    </EventSource>
-    </EventSources>
-    <CredentialsType>Default</CredentialsType>
-    <Locale Language="EN-US"></Locale>
-    </Subscription>
-    ```
+- The following example shows the contents of a configuration file:  
+  ```
+  <Subscription xmlns="https://schemas.microsoft.com/2006/03/windows/events/subscription">
+  <Uri>https://schemas.microsoft.com/wbem/wsman/1/windows/EventLog</Uri>
+  <!-- Use Normal (default), Custom, MinLatency, MinBandwidth -->
+  <ConfigurationMode>Normal</ConfigurationMode>
+  <Description>Forward Sample Subscription</Description>
+  <SubscriptionId>SampleSubscription</SubscriptionId>
+  <Query><![CDATA[
+  <QueryList>
+  <Query Path="Application">
+  <Select>*</Select>
+  </Query>
+  </QueryList>
+  ]]></Query>
+  <EventSources>
+  <EventSource Enabled="true">
+  <Address>mySource.myDomain.com</Address>
+  <UserName>myUserName</UserName>
+  <Password>*</Password>
+  </EventSource>
+  </EventSources>
+  <CredentialsType>Default</CredentialsType>
+  <Locale Language="EN-US"></Locale>
+  </Subscription>
+  ```
 
 ## <a name="BKMK_examples"></a>Examples
 

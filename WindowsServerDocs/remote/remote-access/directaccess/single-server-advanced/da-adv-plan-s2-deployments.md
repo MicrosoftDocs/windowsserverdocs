@@ -3,11 +3,10 @@ title: Step 2 Plan Advanced DirectAccess Deployments
 description: This topic is part of the guide Deploy a Single DirectAccess Server with Advanced Settings for Windows Server 2016
 manager: brianlic
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
-ms.technology: 
-  - networking-da
+ms.technology: networking-da
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 3bba28d4-23e2-449f-8319-7d2190f68d56
@@ -16,19 +15,19 @@ author: shortpatti
 ---
 # Step 2 Plan Advanced DirectAccess Deployments
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 After you plan the DirectAccess infrastructure, the next step in deploying advanced DirectAccess on a single server with IPv4 and IPv6 is to plan the settings for the Remote Access Setup Wizard.  
   
 |Task|Description|  
 |----|--------|  
-|[2.1 Plan for client deployment](#bkmk_21client)|Plan how to allow client computers to connect by using DirectAccess. Decide which managed computers will be configured as DirectAccess clients, and plan to deploy the Network Connectivity Assistant or DirectAccess Connectivity Assistant on client computers.|  
-|[2.2 Plan for DirectAccess server deployment](#bkmk_22server)|Plan how to deploy the DirectAccess server.|  
-|[2.3 Plan infrastructure servers](#bkmk_23Infservers)|Plan the infrastructure servers for your DirectAccess deployment, including the DirectAccess network location server, Domain Name System (DNS) servers, and DirectAccess management servers.|  
-|[2.4 Plan application servers](#bkmk_AppServers)|Plan for IPv4 and IPv6 application servers, and optionally consider whether end-to-end authentication between DirectAccess client computers and internal application servers is required.|  
-|[2.5 Plan DirectAccess and third-party VPN clients](#bkmk_DAandVPN)|When deploying DirectAccess with third-party VPN clients, it might be necessary to set a registry value to enable a seamless coexistence of the two remote access solutions.|  
+|[2.1 Plan for client deployment](#21-plan-for-client-deployment)|Plan how to allow client computers to connect by using DirectAccess. Decide which managed computers will be configured as DirectAccess clients, and plan to deploy the Network Connectivity Assistant or DirectAccess Connectivity Assistant on client computers.|  
+|[2.2 Plan for DirectAccess server deployment](#22-plan-for-directaccess-server-deployment)|Plan how to deploy the DirectAccess server.|  
+|[2.3 Plan infrastructure servers](#23-plan-infrastructure-servers)|Plan the infrastructure servers for your DirectAccess deployment, including the DirectAccess network location server, Domain Name System (DNS) servers, and DirectAccess management servers.|  
+|[2.4 Plan application servers](#24-plan-application-servers)|Plan for IPv4 and IPv6 application servers, and optionally consider whether end-to-end authentication between DirectAccess client computers and internal application servers is required.|  
+|[2.5 Plan DirectAccess and third-party VPN clients](#25-plan-directaccess-and-third-party-vpn-clients)|When deploying DirectAccess with third-party VPN clients, it might be necessary to set a registry value to enable a seamless coexistence of the two remote access solutions.|  
   
-## <a name="bkmk_21client"></a>2.1 Plan for client deployment  
+## 2.1 Plan for client deployment  
 There are three decisions to make when you are planning your client deployment:  
   
 1.  Will DirectAccess be available to mobile computers only, or to any computer?  
@@ -37,7 +36,7 @@ There are three decisions to make when you are planning your client deployment:
   
 2.  What security groups will contain the DirectAccess client computers?  
   
-    DirectAccess client settings are contained in the DirectAccess client GPO. The GPO is applied to computers that are part of the security groups that you specify in the DirectAccess Client Setup Wizard. You can specify that security groups be contained in any supported domain. For more information, see section [1.7 Plan Active Directory Domain Services](da-adv-plan-s1-infrastructure.md#bkmk_16AD).  
+    DirectAccess client settings are contained in the DirectAccess client GPO. The GPO is applied to computers that are part of the security groups that you specify in the DirectAccess Client Setup Wizard. You can specify that security groups be contained in any supported domain. For more information, see section [1.7 Plan Active Directory Domain Services](da-adv-plan-s1-infrastructure.md#17-plan-active-directory-domain-services).  
   
     Before you configure DirectAccess, you should create the security groups. You can add computers to the security group after you complete the DirectAccess deployment, but if you add client computers that reside in a different domain than the security group, the client GPO will not be applied to those clients. For example, if you created SG1 in domain A for DirectAccess clients, and later add clients from domain B to this group, the client GPO will not be applied to clients from domain B. To avoid this issue, create a new client security group for each domain that contains DirectAccess client computers. Alternatively, if you do not want to create a new security group, run the Windows PowerShell cmdlet **Add-DAClient** with the name of the new GPO for the new domain.  
   
@@ -65,7 +64,7 @@ There are three decisions to make when you are planning your client deployment:
   
         Clients require a way to resolve names locally. If you allow DirectAccess clients to use local name resolution, end users can use local DNS servers to resolve names. When end users select to use local DNS servers for name resolutions, DirectAccess does not send resolution requests for single label names to the internal corporate DNS server. It uses local name resolution instead (by using the Link-Local Multicast Name Resolution (LLMNR) and NetBIOS over TCP/IP protocols).  
   
-## <a name="bkmk_22server"></a>2.2 Plan for DirectAccess server deployment  
+## 2.2 Plan for DirectAccess server deployment  
 Consider the following decisions when you are planning to deploy your DirectAccess server:  
   
 -   **Network topology**  
@@ -76,7 +75,7 @@ Consider the following decisions when you are planning to deploy your DirectAcce
   
     -   **One network adapter**. In this configuration, the DirectAccess server is installed behind an edge device such as a firewall or a router. The network adapter is connected to the internal network.  
   
-    For more information about selecting the topology for your deployment, see [1.1 Plan network topology and settings](da-adv-plan-s1-infrastructure.md#bkmk_11Networksvrtopsettings).  
+    For more information about selecting the topology for your deployment, see [1.1 Plan network topology and settings](da-adv-plan-s1-infrastructure.md#11-plan-network-topology-and-settings).  
   
 -   **ConnectTo address**  
   
@@ -92,7 +91,7 @@ Consider the following decisions when you are planning to deploy your DirectAcce
   
 -   **IPv6 prefixes**  
   
-    If the Remote Access Server Setup Wizard detects that IPv6 has been deployed on the network adapters, it automatically populates IPv6 prefixes for the internal network, an IPv6 prefix to assign to DirectAccess client computers, and an IPv6 prefix to assign to VPN client computers. If the automatically generated prefixes are not correct for your native IPv6 infrastructure, you must manually change them. For more information, see [1.1 Plan network topology and settings](da-adv-plan-s1-infrastructure.md#bkmk_11Networksvrtopsettings).  
+    If the Remote Access Server Setup Wizard detects that IPv6 has been deployed on the network adapters, it automatically populates IPv6 prefixes for the internal network, an IPv6 prefix to assign to DirectAccess client computers, and an IPv6 prefix to assign to VPN client computers. If the automatically generated prefixes are not correct for your native IPv6 infrastructure, you must manually change them. For more information, see [1.1 Plan network topology and settings](da-adv-plan-s1-infrastructure.md#11-plan-network-topology-and-settings).  
   
 -   **Authentication**  
   
@@ -100,7 +99,7 @@ Consider the following decisions when you are planning to deploy your DirectAcce
   
     -   **User authentication**. You can enable users to authenticate with Active Directory credentials or with two-factor authentication. For more information about authenticating with two-factor authentication, see [Deploy Remote Access with OTP authentication](https://technet.microsoft.com/library/hh831379.aspx).  
   
-    -   **Computer authentication**. You can configure computer authentication to use certificates or to use the DirectAccess server as a Kerberos proxy on behalf of the client. For more information, see [1.3 Plan certificate requirements](da-adv-plan-s1-infrastructure.md#bkmk_12CAsandCerts).  
+    -   **Computer authentication**. You can configure computer authentication to use certificates or to use the DirectAccess server as a Kerberos proxy on behalf of the client. For more information, see [1.3 Plan certificate requirements](da-adv-plan-s1-infrastructure.md#13-plan-certificate-requirements).  
   
     -   **Windows 7 clients**. By default, client computers that are running  Windows 7 cannot connect to a  Windows Server 2012 R2 or  Windows Server 2012 DirectAccess deployment. If you have clients in your organization that are running  Windows 7, and they require remote access to internal resources, you can allow them to connect. Any client computers that you want to allow to access internal resources must be a member of a security group that you specify in the DirectAccess Client Setup Wizard.  
   
@@ -111,16 +110,16 @@ Consider the following decisions when you are planning to deploy your DirectAcce
   
     Before you configure DirectAccess, decide whether you are going to provide VPN access to non-DirectAccess capable remote clients. You should provide VPN access if you have client computers in your organization that do not support DirectAccess connectivity (because they are unmanaged or because they run an operating system for which DirectAccess is not supported). The Remote Access Server Setup Wizard allows you to configure how IP addresses are assigned (by using DHCP or from a static address pool) and how VPN clients are authenticated - by using Active Directory or a Remote Authentication Dial-Up Service (RADIUS) server.  
   
-## <a name="bkmk_23Infservers"></a>2.3 Plan infrastructure servers  
+## 2.3 Plan infrastructure servers  
 DirectAccess requires three types of infrastructure servers:  
   
--   **DNS servers**. For more information, see [1.4 Plan DNS requirements](da-adv-plan-s1-infrastructure.md#bkmk_14Dns)  
+-   **DNS servers**. For more information, see [1.4 Plan DNS requirements](da-adv-plan-s1-infrastructure.md#14-plan-dns-requirements)  
   
--   **Network location server**. For more information, see [1.5 Plan the network location server](da-adv-plan-s1-infrastructure.md#bkmk_14NLS)  
+-   **Network location server**. For more information, see [1.5 Plan the network location server](da-adv-plan-s1-infrastructure.md#15-plan-the-network-location-server)  
   
--   **Management servers**. For more information, see [1.6 Plan management servers](da-adv-plan-s1-infrastructure.md#bkmk_15mgmtservers)  
+-   **Management servers**. For more information, see [1.6 Plan management servers](da-adv-plan-s1-infrastructure.md#16-plan-management-servers)  
   
-## <a name="bkmk_AppServers"></a>2.4 Plan application servers  
+## 2.4 Plan application servers  
 Application servers are the servers on the corporate network that are accessible by client computers over a DirectAccess connection. Application servers are identified by adding them into a security group. The application server GPO is then applied to servers in that group.  
   
 > [!NOTE]  
@@ -130,7 +129,7 @@ You can optionally require end-to-end authentication and encryption between Dire
   
 By default, when you extend authentication to application servers, the data payload is encrypted between the DirectAccess client and the application server. You can choose to not encrypt traffic, and use authentication only. However, this is less secure than using authentication and encryption, and it is supported only for application servers running the  Windows Server 2008 R2 , or  Windows Server 2012  operating systems.  
   
-## <a name="bkmk_DAandVPN"></a>2.5 Plan DirectAccess and third-party VPN clients  
+## 2.5 Plan DirectAccess and third-party VPN clients  
 Some third-party VPN clients do not create connections in the Network Connections folder. This can cause DirectAccess to determine that it has no intranet connectivity when the VPN connection is established and connectivity to the intranet exists. This occurs when third-party VPN clients register their interfaces by defining them as Network Device Interface Specification (NDIS) endpoint types. You can enable coexistence with these types of VPN clients by setting the following registry value to 1 on DirectAccess clients:  
   
 **HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\services\NlaSvc\Parameters\ShowDomainEndpointInterfaces (REG_DWORD)**  
@@ -143,7 +142,7 @@ If the VPN connection lists its default gateway as empty or all zeros (0.0.0.0),
   
 **HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\services\NlaSvc\Parameters\Internet\ EnableNoGatewayLocationDetection (REG_DWORD)**  
   
-## <a name="BKMK_Links"></a>Previous step  
+## Previous step  
   
 -   [Step 1: Plan the DirectAccess Infrastructure](da-adv-plan-s1-infrastructure.md)  
   

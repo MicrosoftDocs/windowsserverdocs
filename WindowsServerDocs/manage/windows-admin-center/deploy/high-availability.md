@@ -6,7 +6,7 @@ ms.topic: article
 author: jwwool
 ms.author: jeffrew
 ms.localizationpriority: medium
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ---
 
 # Deploy Windows Admin Center with high availability
@@ -69,7 +69,7 @@ When a new version of Windows Admin Center is released, simply run the ```Instal
 
 ### Update the certificate used by Windows Admin Center
 
-You can update the certificate used by a HA deployment of Windows Admin Center at any time by providing the new certificate's .pfx file and and password.
+You can update the certificate used by a HA deployment of Windows Admin Center at any time by providing the new certificate's .pfx file and password.
 
 ```powershell
 $certPassword = Read-Host -AsSecureString

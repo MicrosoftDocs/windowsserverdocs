@@ -1,7 +1,7 @@
 ---
 ms.assetid: fb95c8ee-a418-4520-a12a-7754ae947c3c
 title: Fsutil reparsepoint
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 manager: dmoss
 ms.author: toklima
 author: toklima
@@ -26,11 +26,11 @@ fsutil reparsepoint [delete] <FileName>
 
 ## Parameters
 
-|Parameter|Description|
-|-------------|---------------|
-|query|Retrieves the reparse point data that is associated with the file or directory identified by the specified handle.|
-|delete|Deletes a reparse point from the file or directory that is identified by the specified handle, but does not delete the file or directory.|
-|<FileName>|Specifies the full path to the file including the file name and extension, for example C:\documents\filename.txt.|
+| Parameter  |                                                                Description                                                                |
+|------------|-------------------------------------------------------------------------------------------------------------------------------------------|
+|   query    |            Retrieves the reparse point data that is associated with the file or directory identified by the specified handle.             |
+|   delete   | Deletes a reparse point from the file or directory that is identified by the specified handle, but does not delete the file or directory. |
+| <FileName> |             Specifies the full path to the file including the file name and extension, for example C:\documents\filename.txt.             |
 
 ## Remarks
 

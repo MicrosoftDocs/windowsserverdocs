@@ -1,7 +1,7 @@
 ---
 title: TLS (Schannel SSP)
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.topic: article
 ms.assetid: ebd3c40c-b4c0-4f6d-a00c-f90eda4691df
 manager: alanth
@@ -130,10 +130,10 @@ The TLS 1.2 RFC also requires that the server Certificate message honor "signatu
 
 In practice, some third-party TLS clients do not comply with the TLS 1.2 RFC and fail to include all the signature and hash algorithm pairs they are willing to accept in the "signature_algorithms" extension, or omit the extension altogether (the latter indicates to the server that the client only supports SHA1 with RSA, DSA or ECDSA).
 
-A TLS server often only has one certificate configured per endpoint, which means the server can’t always supply a certificate that meets the client’s requirements.
+A TLS server often only has one certificate configured per endpoint, which means the server can't always supply a certificate that meets the client's requirements.
 
 Prior to Windows 10 and Windows Server 2016, the Windows TLS stack strictly adhered to the TLS 1.2 RFC requirements, resulting in connection failures with RFC non-compliant TLS clients and interoperability issues. 
-In Windows 10 and Windows Server 2016, the constraints are relaxed and the server can send a certificate that does not comply with TLS 1.2 RFC, if that’s the server’s only option. 
+In Windows 10 and Windows Server 2016, the constraints are relaxed and the server can send a certificate that does not comply with TLS 1.2 RFC, if that's the server's only option. 
 The client may then continue or terminate the handshake.
 
 When validating server and client certificates, the Windows TLS stack strictly complies with the TLS 1.2 RFC and only allows the negotiated signature and hash algorithms in the server and client certificates.

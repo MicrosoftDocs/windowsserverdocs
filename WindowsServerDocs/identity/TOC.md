@@ -20,7 +20,7 @@
 ##### [Claims Transformation Rules Language](solution-guides/Claims-Transformation-Rules-Language.md)
 #### [Appendix A: Dynamic Access Control Glossary](solution-guides/appendix-A--Dynamic-Access-Control-Glossary.md)
 #### [Appendix B: Setting Up the Test Environment](solution-guides/appendix-B--Setting-Up-the-Test-Environment.md)
-
+### [Configuring Certificate Enrollment Web Service for certificate key-based renewal on a custom port](solution-guides/certificate-enrollment-certificate-key-based-renewal.md)
 
 ## [Active Directory Domain Services](ad-ds/active-directory-Domain-Services.md)
 
@@ -204,7 +204,7 @@
 
 ### [AD FS Overview](ad-fs/AD-FS-Overview.md)
 #### [What's new in Active Directory Federation Services](ad-fs/overview/whats-new-active-directory-federation-services-windows-server.md)
-#### [AD FS Scenarios for Developers](ad-fs/overview/AD-FS-Scenarios-for-Developers.md)
+
 #### [AD FS 2016 Requirements](ad-fs/overview/AD-FS-Requirements.md)
 
 ### [AD FS Design](ad-fs/AD-FS-Design.md)
@@ -365,17 +365,25 @@
 
 
 
-### [AD FS Development](ad-fs/AD-FS-Development.md)
+### AD FS Development
+#### [AD FS OpenID Connect/OAuth Concepts](ad-fs/development/ad-fs-openid-connect-oauth-concepts.md)
+#### [AD FS OpenID Connect/OAuth flows and Application Scenarios](ad-fs/overview/ad-fs-openid-connect-oauth-flows-scenarios.md)
 
+#### [Build a Custom Authentication Method for AD FS](ad-fs/development/ad-fs-build-custom-auth-method.md)
 #### [Build Plug-ins with AD FS 2019 Risk Assessment Model](ad-fs/development/ad-fs-risk-assessment-model.md)
-#### [Custom Id Tokens in AD FS](ad-fs/development/Custom-Id-Tokens-in-AD-FS.md)
-#### [AD FS On-behalf-of Authentication in Windows Server 2016](ad-fs/development/AD-FS-On-behalf-of-Authentication-in-Windows-Server.md)
-#### [Enabling OpenId Connect with AD FS 2016](ad-fs/development/Enabling-OpenId-Connect-with-AD-FS.md)
-#### [Enabling Oauth Confidential Clients with AD FS 2016](ad-fs/development/Enabling-Oauth-Confidential-Clients-with-AD-FS.md)
 #### [Single log-out for OpenID Connect with AD FS](ad-fs/development/ad-fs-logout-openid-connect.md)
-#### [Single Page Application with AD FS](ad-fs/development/Single-Page-Application-with-AD-FS.md)
-#### [Build a native client application using OAuth public clients with AD FS](ad-fs/development/native-client-with-ad-fs.md)
+#### ADAL
 
+##### [Custom Id Tokens in AD FS](ad-fs/development/Custom-Id-Tokens-in-AD-FS.md)
+##### [AD FS On-behalf-of Authentication in Windows Server 2016](ad-fs/development/AD-FS-On-behalf-of-Authentication-in-Windows-Server.md)
+##### [Enabling OpenId Connect with AD FS 2016](ad-fs/development/Enabling-OpenId-Connect-with-AD-FS.md)
+##### [Enabling Oauth Confidential Clients with AD FS 2016](ad-fs/development/Enabling-Oauth-Confidential-Clients-with-AD-FS.md)
+##### [Single Page Application with AD FS](ad-fs/development/Single-Page-Application-with-AD-FS.md)
+##### [Build a native client application using OAuth public clients with AD FS](ad-fs/development/native-client-with-ad-fs.md)
+#### MSAL
+##### [Native app calling Web API](ad-fs/development/msal/adfs-msal-native-app-web-api.md) 
+##### [Web API calling Web API (On Behalf of Scenario)](ad-fs/development/msal/adfs-msal-web-api-web-api.md) 
+##### [Web app (server app) calling web APIs](ad-fs/development/msal/adfs-msal-web-app-web-api.md) 
 
 ### [AD FS Operations](ad-fs/AD-FS-Operations.md)
 #### [AD FS Access Control Policies](ad-fs/operations/AD-FS-Client-Access-Policies.md)
@@ -420,6 +428,7 @@
 #### [Plan Device-based Conditional Access on-Premises](ad-fs/deployment/Plan-Device-based-Conditional-Access-on-Premises.md)
 
 #### [Set up an AD FS lab environment](ad-fs/operations/Set-up-an-AD-FS-lab-environment.md)
+#### [SQL fine tuning and addressing latency](ad-fs/operations/adfs-sql-latency.md)
 #### [Walkthrough Guide: Manage Risk with additional Multi-Factor Authentication for Sensitive Applications](ad-fs/operations/Walkthrough-Guide--Manage-Risk-with-additional-Multi-Factor-Authentication-for-Sensitive-Applications.md)
 #### [Walkthrough Guide: Manage Risk with Conditional Access Control](ad-fs/operations/Walkthrough-Guide--Manage-Risk-with-Conditional-Access-Control.md)
 #### [Walkthrough: Workplace Join with a Windows Device](ad-fs/operations/Walkthrough--Workplace-Join-with-a-Windows-Device.md)
@@ -460,6 +469,10 @@
 #### [Device registration Technical Reference](ad-fs/technical-reference/device-registration-technical-reference.md)
 #### [AD FS Password Attack Protection](ad-fs/technical-reference/ad-fs-password-protection.md)
 ### [AD FS 2016 FAQ](ad-fs/overview/AD-FS-FAQ.md)
+
+## Active Directory Rights Management Service
+### [Upgrading AD RMS to Windows Server 2016](ad-rms/adrms-deploy.md)
+
 
 ## [Securing Privileged Access](securing-privileged-access/securing-privileged-access.md)
 ### [Privileged Access Workstations](securing-privileged-access/privileged-access-workstations.md)

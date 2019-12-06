@@ -1,7 +1,7 @@
 ---
 title: System requirements for Hyper-V on Windows Server
 description: "Lists the hardware and firmware requirements for Hyper-V in Windows Server"
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.service: na
 manager: dongill
 ms.technology: compute-hyper-v
@@ -38,7 +38,7 @@ Regardless of the Hyper-V features you want to use, you'll need:
 
   - Hardware-enforced Data Execution Prevention (DEP) must be available and enabled. For Intel systems, this is the XD bit (execute disable bit). For AMD systems, this is the NX bit (no execute bit).
 
-## <a name="bkmk_CheckReq"></a>How to check for Hyper-V requirements
+## How to check for Hyper-V requirements
 
 Open Windows PowerShell or a command prompt and type:
 

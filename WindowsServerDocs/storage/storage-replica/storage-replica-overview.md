@@ -1,6 +1,6 @@
 ---
 title: Storage Replica Overview
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 manager: siroy
 ms.author: nedpyle
 ms.technology: storage-replica
@@ -79,31 +79,31 @@ You can deploy Storage Replica in a stretch cluster, between cluster-to-cluster,
 
 Storage Replica includes the following features:  
 
-|Feature|Details|  
-|-----------|-----------|  
-|Type|Host-based|  
-|Synchronous|Yes|  
-|Asynchronous|Yes|  
-|Storage hardware agnostic|Yes|  
-|Replication unit|Volume (Partition)|  
-|Windows Server stretch cluster creation|Yes|  
-|Server to server replication|Yes|  
-|Cluster to cluster replication|Yes|  
-|Transport|SMB3|  
-|Network|TCP/IP or RDMA|
-|Network constraint support|Yes|  
-|RDMA*|iWARP, InfiniBand, RoCE v2|  
-|Replication network port firewall requirements|Single IANA port (TCP 445 or 5445)|  
-|Multipath/Multichannel|Yes (SMB3)|  
-|Kerberos support|Yes (SMB3)|  
-|Over the wire encryption and signing|Yes (SMB3)|  
-|Per-volume failovers allowed|Yes|
-|Thin-provisioned storage support|Yes|
-|Management UI in-box|PowerShell, Failover Cluster Manager|  
+| Feature | Details |
+| ----------- | ----------- |  
+| Type | Host-based |
+| Synchronous | Yes |
+| Asynchronous | Yes |
+| Storage hardware agnostic | Yes |
+| Replication unit | Volume (Partition) |
+| Windows Server stretch cluster creation | Yes |
+| Server to server replication | Yes |
+| Cluster to cluster replication | Yes |
+| Transport | SMB3 |
+| Network | TCP/IP or RDMA |
+| Network constraint support | Yes |
+| RDMA* | iWARP, InfiniBand, RoCE v2 |
+| Replication network port firewall requirements | Single IANA port (TCP 445 or 5445) |
+| Multipath/Multichannel | Yes (SMB3) |
+| Kerberos support | Yes (SMB3) |
+| Over the wire encryption and signing|Yes (SMB3) |
+| Per-volume failovers allowed | Yes |
+| Thin-provisioned storage support | Yes |
+| Management UI in-box | PowerShell, Failover Cluster Manager |
 
 *May require additional long haul equipment and cabling.  
 
-## <a name="BKMK_SR3"></a> Storage Replica prerequisites  
+## <a name="BKMK_SR3"></a> Storage Replica prerequisites
 
 * Active Directory Domain Services forest.
 * Storage Spaces with SAS JBODs, Storage Spaces Direct, fibre channel SAN, shared VHDX, iSCSI Target, or local SAS/SCSI/SATA storage. SSD or faster recommended for replication log drives. Microsoft recommends that the log storage be faster than the data storage. Log volumes must never be used for other workloads.
@@ -116,33 +116,37 @@ Storage Replica includes the following features:
   * Storage Replica replicates a single volume instead of an unlimited number of volumes.
   * Volumes can have a size of up to 2 TB instead of an unlimited size.
 
-##  <a name="BKMK_SR4"> </a> Background  
+##  <a name="BKMK_SR4"> </a> Background
+
 This section includes information about high-level industry terms, synchronous and asynchronous replication, and key behaviors.
 
-### High-level industry terms  
+### High-level industry terms
+
 Disaster Recovery (DR) refers to a contingency plan for recovering from site catastrophes so that the business continues to operate. Data DR means multiple copies of production data in a separate physical location. For example, a stretch cluster, where half the nodes are in one site and half are in another. Disaster Preparedness (DP) refers to a contingency plan for preemptively moving workloads to a different location prior to an oncoming disaster, such as a hurricane.  
 
 Service level agreements (SLAs) define the availability of a business' applications and their tolerance of down time and data loss during planned and unplanned outages. Recovery Time Objective (RTO) defines how long the business can tolerate total inaccessibility of data. Recovery Point Objective (RPO) defines how much data the business can afford to lose.  
 
-### Synchronous replication  
+### Synchronous replication
+
 Synchronous replication guarantees that the application writes data to two locations at once before completion of the IO. This replication is more suitable for mission critical data, as it requires network and storage investments, as well as a risk of degraded application performance.  
 
 When application writes occur on the source data copy, the originating storage does not acknowledge the IO immediately. Instead, those data changes replicate to the remote destination copy and return an acknowledgement. Only then does the application receive the IO acknowledgment. This ensures constant synchronization of the remote site with the source site, in effect extending storage IOs across the network. In the event of a source site failure, applications can failover to the remote site and resume their operations with assurance of zero data loss.  
 
-|Mode|Diagram|Steps|  
-|--------|-----------|---------|  
-|**Synchronous**<br /><br />Zero Data Loss<br /><br />RPO|![Diagram showing how Storage Replica writes data in synchronous replication](./media/Storage-Replica-Overview/Storage_SR_SynchronousV2.png)|1.  Application writes data<br />2.  Log data is written and the data is replicated to the remote site<br />3.  Log data is written at the remote site<br />4.  Acknowledgement from the remote site<br />5.  Application write acknowledged<br /><br />t & t1 : Data flushed to the volume, logs always write through|  
+| Mode | Diagram | Steps |
+| -------- | ----------- | --------- |
+| **Synchronous**<br /><br />Zero Data Loss<br /><br />RPO | ![Diagram showing how Storage Replica writes data in synchronous replication](./media/Storage-Replica-Overview/Storage_SR_SynchronousV2.png) | 1.  Application writes data<br />2.  Log data is written and the data is replicated to the remote site<br />3.  Log data is written at the remote site<br />4.  Acknowledgement from the remote site<br />5.  Application write acknowledged<br /><br />t & t1 : Data flushed to the volume, logs always write through |
 
-### Asynchronous replication  
+### Asynchronous replication
+
 Contrarily, asynchronous replication means that when the application writes data, that data replicates to the remote site without immediate acknowledgment guarantees. This mode allows faster response time to the application as well as a DR solution that works geographically.  
 
 When the application writes data, the replication engine captures the write and immediately acknowledges to the application. The captured data then replicates to the remote location. The remote node processes the copy of the data and lazily acknowledges back to the source copy. Since replication performance is no longer in the application IO path, the remote site's responsiveness and distance are less important factors. There is risk of data loss if the source data is lost and the destination copy of the data was still in buffer without leaving the source.  
 
 With its higher than zero RPO, asynchronous replication is less suitable for HA solutions like Failover Clusters, as they are designed for continuous operation with redundancy and no loss of data.  
 
-|Mode|Diagram|Steps|  
-|--------|-----------|---------|  
-|**Asynchronous**<br /><br />Near zero data loss<br /><br />(depends on multiple factors)<br /><br />RPO|![Diagram showing how Storage Replica writes data in asynchronous replication](./media/Storage-Replica-Overview/Storage_SR_AsynchronousV2.png)|1.  Application writes data<br />2.  Log data written<br />3.  Application write acknowledged<br />4.  Data replicated to the remote site<br />5.  Log data written at the remote site<br />6.  Acknowledgement from the remote site<br /><br />t & t1 : Data flushed to the volume, logs always write through|  
+| Mode | Diagram | Steps |
+| -------- | ----------- | --------- |
+| **Asynchronous**<br /><br />Near zero data loss<br /><br />(depends on multiple factors)<br /><br />RPO | ![Diagram showing how Storage Replica writes data in asynchronous replication](./media/Storage-Replica-Overview/Storage_SR_AsynchronousV2.png)|1.  Application writes data<br />2.  Log data written<br />3.  Application write acknowledged<br />4.  Data replicated to the remote site<br />5.  Log data written at the remote site<br />6.  Acknowledgement from the remote site<br /><br />t & t1 : Data flushed to the volume, logs always write through |
 
 ### Key evaluation points and behaviors  
 
@@ -150,7 +154,7 @@ With its higher than zero RPO, asynchronous replication is less suitable for HA 
 
 -   The destination volume is not accessible while replicating in Windows Server 2016. When you configure replication, the destination volume dismounts, making it inaccessible to any reads or writes by users. Its driver letter may be visible in typical interfaces like File Explorer, but an application cannot access the volume itself. Block-level replication technologies are incompatible with allowing access to the destination target's mounted file system in a volume; NTFS and ReFS do not support users writing data to the volume while blocks change underneath them. 
 
-In Windows Server 2019 (and Windows Server, version 1709) the **Test-Failover** cmdlet was added. This now supports temporarily mounting a read-write snapshot of the destination volume for backups, testing, etc. See https://aka.ms/srfaq for more info.
+The **Test-Failover** cmdlet debuted in Windows Server, version 1709, and was also included in Windows Server 2019. This now supports temporarily mounting a read-write snapshot of the destination volume for backups, testing, etc. See https://aka.ms/srfaq for more info.
 
 -   The Microsoft implementation of asynchronous replication is different than most. Most industry implementations of asynchronous replication rely on snapshot-based replication, where periodic differential transfers move to the other node and merge. Storage Replica asynchronous replication operates just like synchronous replication, except that it removes the requirement for a serialized synchronous acknowledgment from the destination. This means that Storage Replica theoretically has a lower RPO as it continuously replicates. However, this also means it relies on internal application consistency guarantees rather than using snapshots to force consistency in application files. Storage Replica guarantees crash consistency in all replication modes  
 
@@ -179,6 +183,7 @@ This guide frequently uses the following terms:
 For a list of new features in Storage Replica in Windows Server 2019, see [What's new in storage](../whats-new-in-storage.md#storage-replica2019)
 
 ## See also
+
 - [Stretch Cluster Replication Using Shared Storage](stretch-cluster-replication-using-shared-storage.md)  
 - [Server to Server Storage Replication](server-to-server-storage-replication.md)  
 - [Cluster to Cluster Storage Replication](cluster-to-cluster-storage-replication.md)  

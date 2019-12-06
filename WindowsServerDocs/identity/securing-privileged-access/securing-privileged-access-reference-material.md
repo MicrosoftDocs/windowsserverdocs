@@ -2,7 +2,7 @@
 title: Securing Privileged Access Reference Material
 description: Operational security controls for Windows Server Active Directory Domains 
 
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.topic: article
 ms.assetid: 22ee9a77-4872-4c54-82d9-98fc73a378c0
 ms.date: 02/14/2019
@@ -327,11 +327,11 @@ Administrators who support remote systems and users must follow these guidelines
 Ensure that the following practices are applied for this scenario:
 
 - **Remote server support** - When remotely accessing a server, Tier 0 administrators must follow these guidelines:
-   - **Primary (tool)** - Remote tools that use network logons (type 3). For more information, see [Administrative Tools and Logon Types](http://aka.ms/admintoolsecurity).
-   - **Primary (interactive)** - Use RDP RestrictedAdmin or a Standard RDP Session from an admin workstation with a domain account
+  - **Primary (tool)** - Remote tools that use network logons (type 3). For more information, see [Administrative Tools and Logon Types](http://aka.ms/admintoolsecurity).
+  - **Primary (interactive)** - Use RDP RestrictedAdmin or a Standard RDP Session from an admin workstation with a domain account
 
-   > [!NOTE]
-   > If you have a Tier 0 privilege management solution, add "that uses permissions obtained just-in-time from a privileged access management solution."
+    > [!NOTE]
+    > If you have a Tier 0 privilege management solution, add "that uses permissions obtained just-in-time from a privileged access management solution."
 
 - **Physical server support** - When physically present at a server console or at a virtual machine console (Hyper-V or VMWare tools), these accounts have no specific administrative tool usage restrictions, only the general restrictions from standard user tasks like email and browsing the open internet.
 
@@ -433,10 +433,10 @@ For all use of emergency access accounts:
 - Only authorized domain admins can access the emergency access accounts with domain admin privileges.
 - The emergency access accounts can be used only on domain controllers and other Tier 0 hosts.
 - This account should be used only to:
-   - Perform troubleshooting and correction of technical issues that are preventing the use of the correct administrative accounts.
-   - Perform rare tasks, such as:
-      - Schema administration
-      - Forest-wide tasks that require enterprise administrative privileges
+  - Perform troubleshooting and correction of technical issues that are preventing the use of the correct administrative accounts.
+  - Perform rare tasks, such as:
+    - Schema administration
+    - Forest-wide tasks that require enterprise administrative privileges
 
       > [!NOTE]
       > Topology management including Active Directory site and subnet management is delegated to limit the use of these privileges.
@@ -552,7 +552,7 @@ Organizations should control and monitor membership in all of the Tier 0 groups 
 - Server Operators
 - Domain Controllers
 - Read-only Domain Controllers
-- Group Policy Creators Owners
+- Group Policy Creator Owners
 - Cryptographic Operators
 - Distributed COM Users
 - Other Delegated Groups - Custom groups that may be created by your organization to manage directory operations that may also have effective Tier 0 access.

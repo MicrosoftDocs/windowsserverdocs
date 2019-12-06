@@ -1,7 +1,7 @@
 ﻿---
 title: Deploy Storage Spaces on a stand-alone server
 description: Describes how to deploy Storage Spaces on a stand-alone Windows Server 2012-based server.
-ms.prod: windows-server-threshold 
+ms.prod: windows-server 
 ms.topic: article 
 author: JasonGerend 
 ms.author: jgerend 
@@ -144,16 +144,16 @@ Next, you must create one or more virtual disks from the storage pool. When you 
 
 8. On the **Specify the provisioning type** page, select one of the following options, then select **Next**.
     
-      - **Thin**
+   - **Thin**
         
-        With thin provisioning, space is allocated on an as-needed basis. This optimizes the usage of available storage. However, because this enables you to over-allocate storage, you must carefully monitor how much disk space is available.
+     With thin provisioning, space is allocated on an as-needed basis. This optimizes the usage of available storage. However, because this enables you to over-allocate storage, you must carefully monitor how much disk space is available.
     
-      - **Fixed**
+   - **Fixed**
         
-        With fixed provisioning, the storage capacity is allocated immediately, at the time a virtual disk is created. Therefore, fixed provisioning uses space from the storage pool that is equal to the virtual disk size.
+     With fixed provisioning, the storage capacity is allocated immediately, at the time a virtual disk is created. Therefore, fixed provisioning uses space from the storage pool that is equal to the virtual disk size.
     
-    >[!TIP]
-    >With Storage Spaces, you can create both thin- and fixed-provisioned virtual disks in the same storage pool. For example, you could use a thin-provisioned virtual disk to host a database and a fixed-provisioned virtual disk to host the associated log files.
+     >[!TIP]
+     >With Storage Spaces, you can create both thin- and fixed-provisioned virtual disks in the same storage pool. For example, you could use a thin-provisioned virtual disk to host a database and a fixed-provisioned virtual disk to host the associated log files.
 
 9. On the **Specify the size of the virtual disk** page, do the following:
     

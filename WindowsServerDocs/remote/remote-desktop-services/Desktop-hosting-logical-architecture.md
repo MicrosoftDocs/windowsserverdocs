@@ -2,7 +2,7 @@
 title: Remote Desktop Services architecture
 description: Architecture diagrams for RDS
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: remote-desktop-services
@@ -43,7 +43,7 @@ Though the standard RDS deployment architectures fit most scenarios, Azure conti
 
 ### RDS deployment with Azure AD Domain Services
 
-The two standard architecture diagrams above are based on a traditional Active Directory (AD) deployed on a Windows Server VM. However, if you don’t have a traditional AD and only have an Azure AD tenant—through services like Office365—but still want to leverage RDS, you can use [Azure AD Domain Services](https://docs.microsoft.com/azure/active-directory-domain-services/active-directory-ds-overview) to create a fully managed domain in your Azure IaaS environment that uses the same users that exist in your Azure AD tenant. This removes the complexity of manually syncing users and managing more virtual machines. Azure AD Domain Services can work in either deployment: basic or highly available.
+The two standard architecture diagrams above are based on a traditional Active Directory (AD) deployed on a Windows Server VM. However, if you don't have a traditional AD and only have an Azure AD tenant—through services like Office365—but still want to leverage RDS, you can use [Azure AD Domain Services](https://docs.microsoft.com/azure/active-directory-domain-services/active-directory-ds-overview) to create a fully managed domain in your Azure IaaS environment that uses the same users that exist in your Azure AD tenant. This removes the complexity of manually syncing users and managing more virtual machines. Azure AD Domain Services can work in either deployment: basic or highly available.
 
 ![Azure AD and RDS deployment](./media/aadds-rds.png)
 

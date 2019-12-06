@@ -7,12 +7,11 @@ ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: identity-adfs
 ---
 # AD FS Technical Reference
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 - [AD FS and certificate KeySpec property information](../ad-fs/technical-reference/AD-FS-and-KeySpec-Property.md)
 - [Auditing Enhancements to AD FS in Windows Server](../ad-fs/technical-reference/auditing-enhancements-to-ad-fs-in-windows-server.md)

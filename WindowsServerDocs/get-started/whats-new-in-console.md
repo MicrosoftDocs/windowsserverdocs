@@ -2,7 +2,7 @@
 title: What's New in the Windows Console in Windows Server 2016
 description: "Lists the important new features in the Windows Server 2016 console."
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: server-general
 ms.reviewer: na
 ms.suite: na

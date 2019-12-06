@@ -2,7 +2,7 @@
 title: Contact the Datacenter and Cloud Networking Team
 description: This page is designed to inform customers on the best methods for reaching the SDN team in various contexts.
 manager: brianlic
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: networking-sdn
 ms.topic: article
 ms.assetid: f9945c55-c2d0-448f-86dd-8c734e1b2987
@@ -31,8 +31,8 @@ Go [here](https://github.com/Microsoft/SDN/issues) to submit issues to the SDN t
 Our [Container Networking documentation](https://docs.microsoft.com/virtualization/windowscontainers/manage-containers/container-networking) can be found on [Microsoft Docs (docs.microsoft.com)](https://docs.microsoft.com/), which has **built-in commenting functionality**. To leave or to reply to a comment on Microsoft Docs just sign in, scroll down to the bottom of the Microsoft Docs page that you wish to reference, then make and submit your comment there.
 
 > [Microsoft Docs](https://docs.microsoft.com/) is Microsoft's new unified documentation site. While most of our team's [SDN documentation](https://technet.microsoft.com/windows-server-docs/networking/sdn/software-defined-networking) remains on TechNet, our [Container Networking documentation](https://docs.microsoft.com/virtualization/windowscontainers/manage-containers/container-networking) is now on Microsoft Docs.
-
->*In general, If you run into a topic on Microsoft Docs that sparks a question or leaves you wanting more, just leave a comment on that page to share your feedback with the Microsoft team that can help.*
+> 
+> *In general, If you run into a topic on Microsoft Docs that sparks a question or leaves you wanting more, just leave a comment on that page to share your feedback with the Microsoft team that can help.*
 
 ## Container-Specific Forums
 Feel free to use any avenue on this page to provide feedback related to containers and container networking. However, if you're looking for Microsoft's primary forums for the container community specifically, refer to the following:

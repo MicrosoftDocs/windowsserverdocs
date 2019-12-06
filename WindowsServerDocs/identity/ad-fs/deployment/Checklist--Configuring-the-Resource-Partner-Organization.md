@@ -6,15 +6,13 @@ author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 
 ms.technology: identity-adfs
 ms.author: billmath
 ---
 
 # Checklist: Configuring the Resource Partner Organization
-
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 The resource partner organization contains the Web servers hosting the Web\-based applications that will be accessed by users in the account partner. Administrators in this organization must use the AD FS Management snap\-in to create claims provider trusts to represent their trust relationships with account partner organizations. In turn, the account partner administrator must create relying party trusts for each account partner organization that they want to trust.  
   

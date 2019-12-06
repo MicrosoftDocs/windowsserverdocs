@@ -2,7 +2,7 @@
 title: rpcinfo
 description: Learn how to list the programs on a remote computer.
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
