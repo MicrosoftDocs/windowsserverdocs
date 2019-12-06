@@ -21,7 +21,7 @@ manager: dongill
 When you run the Log Collector, you may encounter one of the following errors. To resolve an issue, follow the guidance provided for the associated error.  
   
 > [!NOTE]
->  In this document, the computers on your network, other than your server, are called network computers.?  
+> In this document, the computers on your network, other than your server, are called network computers.
   
 ###  <a name="BKMK_TheDestinationFolderIsNotValid"></a> The destination folder is not valid  
  **Cause:** The folder where you are attempting to copy the log files may not exist or may not have enough space to hold the files.  
@@ -36,7 +36,7 @@ When you run the Log Collector, you may encounter one of the following errors. T
 ###  <a name="BKMK_CannotCollectLogFiles"></a> Cannot collect log files for the computer  
  **Cause:** The Log Collector may not be installed on the computer because the computer did not successfully connect to the server using Connect Computer to the Server wizard.  
   
- **Solution:** For information about how to resolve issues regarding connections to your server, see [Troubleshoot connecting computers to the server](https://go.microsoft.com/fwlink/p/?LinkID=241492)? (https://go.microsoft.com/fwlink/p/?LinkID=241492) at the Microsoft website.  
+ **Solution:** For information about how to resolve issues regarding connections to your server, see [Troubleshoot connecting computers to the server](https://go.microsoft.com/fwlink/p/?LinkID=241492).  
   
  If you are still unable to connect the computer to the server, then you can copy the log files manually to a USB flash drive as follows:  
   
