@@ -1,6 +1,5 @@
 # [Security and Assurance](security-and-assurance.md)
 ## [Beginning your General Data Protection Regulation (GDPR) journey for Windows Server 2016](gdpr/gdpr-winserver-whitepaper.md)
-## [Set up HGS for Always Encrypted in SQL Server](set-up-hgs-for-always-encrypted-in-sql-server.md)
 ## [Set up HGS for a guarded fabric and shielded VMs](guarded-fabric-shielded-vm/guarded-fabric-and-shielded-vms-top-node.md)
 ### [Overview](guarded-fabric-shielded-vm/guarded-fabric-and-shielded-vms.md)
 ### [Plan](guarded-fabric-shielded-vm/guarded-fabric-plan-overview.md)
