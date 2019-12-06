@@ -71,6 +71,7 @@ You can get Windows Admin Center up and running in your environment in minutes:
             <li><a href="configure/user-access-control.md">User access control and permissions</a>
             <li><a href="configure/shared-connections.md">Shared connections</a>
             <li><a href="configure/using-extensions.md">Extensions</a>
+            <li><a href="configure/use-powershell.md">Automate with PowerShell</a>
             </ul>
         </td>
     </tr>
