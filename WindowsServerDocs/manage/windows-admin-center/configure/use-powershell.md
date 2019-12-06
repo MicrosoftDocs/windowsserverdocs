@@ -1,5 +1,5 @@
 ---
-title: Use PowerShell to Manage Windows Admin Center Settings and Configuration 
+title: Use PowerShell to manage Windows Admin Center settings
 description: Learn how to use PowerShell to Manage Windows Admin Center Settings and Configuration 
 ms.technology: manage
 ms.topic: article
@@ -10,9 +10,9 @@ ms.localizationpriority: medium
 ms.prod: windows-server
 ---
 
-# Use PowerShell to Manage Windows Admin Center Settings and Configuration
+# Use PowerShell to manage Windows Admin Center settings
 
-If you have a large organization with multiple Windows Admin Center gateways, you may want to use automation to configure those gateways. Using PowerShell, you can programatically configure the connection lists and extensions.
+If you have a large organization with multiple Windows Admin Center servers, you can use PowerShell to configure the list of connections and extensions on multiple servers at a time.
 
 ## Use PowerShell to import or export your connections (with tags)
 
