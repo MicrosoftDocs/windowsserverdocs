@@ -77,7 +77,7 @@ For more info, see [Use Storage Migration Service to migrate a server](https://d
 From the *All Connections* page within Windows Admin Center, go to **Add** and select **Create new** under **Azure VM**. You can even domain-join your Azure VM and configure storage from within this step-by-step creation tool.
 
 - **Leverage Azure to achieve quorum on your failover cluster with [Cloud Witness](https://docs.microsoft.com/windows-server/failover-clustering/deploy-cloud-witness)**  
-Instead of investing in additional hardware to achieve quorum on a 2-node cluster, you can use an Azure storage account to serve as the cluster witness for your failover cluster, or Azure Stack HCI cluster.  
+Instead of investing in additional hardware to achieve quorum on a 2-node cluster, you can use an Azure storage account to serve as the cluster witness for your Azure Stack HCI cluster or other failover cluster.  
 For more info, see [Deploy a Cloud Witness for a Failover Cluster](https://docs.microsoft.com/windows-server/failover-clustering/deploy-cloud-witness).  
 
 ### Simplify network connectivity between your on-premises and Azure networks
