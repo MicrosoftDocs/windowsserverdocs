@@ -21,7 +21,7 @@ Using Azure hybrid services within Windows Admin Center, you can:
 - [Extend on-premises capacity with storage and compute in Azure, and simplify network connectivity to Azure](#extend-on-premises-capacity-with-azure).
 - [Centralize monitoring, governance, configuration, and security across your applications, network, and infrastructure with the help of cloud-intelligent Azure management services](#centrally-manage-your-hybrid-environment-from-azure).  
 
-While you can set up most Azure hybrid services using the Azure portal, a download, and manual configuration, many are integrated directly into Windows Admin Center to provide a simplified setup experience and a server-centric view of the services. Windows Admin Center also provides convenient intelligent hyperlinks to the Azure portal to see connected Azure resources as well as a centralized view of your hybrid environment.
+While you can set up most Azure hybrid services by downloading an app and doing some manual configuration, many are integrated directly into Windows Admin Center to provide a simplified setup experience and a server-centric view of the services. Windows Admin Center also provides convenient intelligent hyperlinks to the Azure portal to see connected Azure resources as well as a centralized view of your hybrid environment.
 
 ## Discover integrated services in the Azure hybrid services tool
 
