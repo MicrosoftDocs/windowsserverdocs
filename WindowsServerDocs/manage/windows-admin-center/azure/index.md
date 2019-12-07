@@ -83,7 +83,7 @@ For more info, see [Deploy a Cloud Witness for a Failover Cluster](https://docs.
 ### Simplify network connectivity between your on-premises and Azure networks
 
 - **Connect your on-premises servers to an Azure Virtual Network with [Azure Network Adapter](https://aka.ms/WACNetworkAdapter)**  
-Let Windows Admin Center simplify the setup of a point-to-site VPN from an on-premises server into an Azure virtual network.  
+Let Windows Admin Center simplify setting up a point-to-site VPN from an on-premises server into an Azure virtual network.  
 
 - **Make Azure VMs look like your on-premises network with [Azure Extended Network](https://go.microsoft.com/fwlink/?linkid=2109517&clcid=0x409)**  
 Windows Admin Center can set up a site-to-site VPN and extend your on-premises IP addresses into your Azure vNet to let you more easily migrate workloads into Azure without breaking dependencies on IP addresses.
