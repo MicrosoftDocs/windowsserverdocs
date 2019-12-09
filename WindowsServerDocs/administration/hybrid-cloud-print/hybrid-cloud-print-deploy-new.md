@@ -18,7 +18,7 @@ ms.date: 3/15/2018
 
 >Applies To: Windows Server 2016
 
-This topic, for IT administrators, describes the end-to-end deployment of the Microsoft Hybrid Cloud Print solution. This solution layers on top of existing Windows Server(s) running as Print Server, and enables Azure Active Directory (Azure AD) joined, and MDM managed, devices to discover and print to organization managed printers.
+This topic, for IT administrators, describes the end-to-end deployment of the Microsoft Hybrid Cloud Print (HCP) solution. This solution layers on top of existing Windows Server(s) running as Print Server, and enables Azure Active Directory (Azure AD) joined, and MDM managed, devices to discover and print to organization managed printers.
 
 ## Pre-requisites
 
@@ -32,13 +32,13 @@ There are a number of subscriptions, services, and computers you'll need to acqu
 
   See [Microsoft Intune](https://www.microsoft.com/en-us/cloud-platform/microsoft-intune), for a trial subscription to Intune.
 
-- Windows Server 2016 or later running Active Directory
+- Windows Server 2016 or later machine running Active Directory
 
   See [Step-By-Step: Setting up Active Directory in Windows Server 2016](https://blogs.technet.microsoft.com/canitpro/2017/02/22/step-by-step-setting-up-active-directory-in-windows-server-2016/), for help setting up Active Directory.
 
-- Domain-joined Windows Server 2016 or later running as Print Server
+- A dedicated, domain-joined Windows Server 2016 or later machine running as Print Server
 
-- Domain-joined Windows Server 2016 or later running as Connector Server, separate from Print Server
+- A dedicated, domain-joined Windows Server 2016 or later machine running as Connector Server
 
   See [Understand Azure AD Application Proxy connectors](https://docs.microsoft.com/en-us/azure/active-directory/manage-apps/application-proxy-connectors) for more information.
 
@@ -64,6 +64,8 @@ The steps below are for a typical Hybrid Cloud Print deployment.
 
 ### Step 3 - Register and configure applications
 
+To enable authenticated communication with the HCP services, we need to create 3 applications: 2 Web applications to represent the two HCP services, and 1 Native application to communicate with those services.
+
 1. Login to Azure portal to register web apps
     - Under Azure Active Directory, go to **App registrations** > **New registration**
 
@@ -75,12 +77,12 @@ The steps below are for a typical Hybrid Cloud Print deployment.
 
     - Repeat for Enterprise Cloud Print service
     - Repeat for native app
-    - The three applications should be displayed under App registrations
+    - The three applications should be displayed under **App registrations**
 
     ![AAD App Registration 3](../media/hybrid-cloud-print/AAD-AppRegistration-AllApps.png)
 
-2. Expose API
-    - While still in the App registrations blade, click on the Mopria Discovery Service app, select **Expose an API**, then click on **Set** next to Application ID URI
+2. Expose API for the 2 Web applications
+    - While still in the **App registrations** blade, click on the Mopria Discovery Service app, select **Expose an API**, then click on **Set** next to Application ID URI
 
     ![AAD Expose API 1](../media/hybrid-cloud-print/AAD-AppRegistration-Mopria-ExposeAPI.png)
 
@@ -100,7 +102,7 @@ The steps below are for a typical Hybrid Cloud Print deployment.
 
     ![AAD Expose API 5](../media/hybrid-cloud-print/AAD-AppRegistration-ECP-ExposeAPI-ScopeName.png)
 
-3. Add API permission
+3. Add API permissions
     - Return to App registrations blade. Click on the native app and select API permissions. Click on **Add a permission**
 
     ![AAD API Permission 1](../media/hybrid-cloud-print/AAD-AppRegistration-APIPermission.png)
@@ -129,12 +131,12 @@ The steps below are for a typical Hybrid Cloud Print deployment.
 
     ![AAD API Permission 7](../media/hybrid-cloud-print/AAD-AppRegistration-APIPermission-Verify.png)
 
-4. Configure URL in Enterprise applications
+4. Configure Application Proxy for the Web applications
     - Go to **Azure Active Directory** > **Enterprise applications** > **All applications**. Search for the Mopria Discovery Service and click on it
 
     ![AAD App Proxy 1](../media/hybrid-cloud-print/AAD-EnterpriseApp-AllApps.png)
 
-    - Click on **Application proxy**. Enter internal Url using the format `https://<fully qualified domain name of the Print Server>/msc/`. Click on **Save** to finish
+    - Click on **Application proxy**. Enter internal Url using the format `https://<fully qualified domain name of the Print Server>/mcs/`. Click on **Save** to finish
 
     ![AAD App Proxy 2](../media/hybrid-cloud-print/AAD-EnterpriseApp-Mopria-AppProxy.png)
 
@@ -142,14 +144,13 @@ The steps below are for a typical Hybrid Cloud Print deployment.
 
     ![AAD App Proxy 3](../media/hybrid-cloud-print/AAD-EnterpriseApp-ECP-AppProxy.png)
 
-    - Go to **Azure Active Directory** > **App registrations**. Click on the Mopria Discovery Service. Under **Overview**, note that the Application ID URI has been changed from the default to one that contains `msappproxy` in its name. The URI will be used during Print Server setup, in client MDM policy, and for publishing printer
+    - Go to **Azure Active Directory** > **App registrations**. Click on the Mopria Discovery Service. Under **Overview**, note that the Application ID URI has been changed from the default to the external URL under **Application proxy**. The URI will be used during Print Server setup, in client MDM policy, and for publishing printer
 
     ![AAD App Proxy 4](../media/hybrid-cloud-print/AAD-AppRegistration-Mopria-Overview.png)
 
 5. Assign users to applications
     - Go to **Azure Active Directory** > **Enterprise applications** > **All applications**. Search for the Mopria Discovery Service and click on it
-    - Click on **Users and groups** and assign users
-    - Alternatively, click on **Properties**. Change **User assignment required?** to **No**
+    - Either click on **Users and groups** and assign users, or click on **Properties** and change **User assignment required?** to **No**
     - Repeat for Enterprise Cloud Print service
 
 6. Configure redirect URI in the native app
@@ -225,11 +226,11 @@ The steps below are for a typical Hybrid Cloud Print deployment.
 
     ![Print Server Mopria Registry Keys](../media/hybrid-cloud-print/PrintServer-RegEdit-Mopria.png)
 
-6. Run iisreset in an elevate Powershell command prompt. This will ensure any registry change made in the previous step takes effect.
+6. Run **iisreset** in an elevate Powershell command prompt. This will ensure any registry change made in the previous step takes effect.
 
 7. Configure the IIS endpoints to support SSL
     - The SSL certificate can be a self-signed cert or one issued from a trusted Certificate Authority (CA)
-    - If using self-signed cert, make sure the cert is imported to the client machine(s)
+    - If using self-signed cert, **make sure the cert is imported to the client machine(s)**
     - If you register your domain with 3rd party provider, you will need to configure the IIS endpoints with SSL certificate. See this [guide](https://www.sslsupportdesk.com/microsoft-server-2016-iis-10-10-5-ssl-installation/) for detail.
 
 8. Install SQLite package
@@ -248,7 +249,7 @@ The steps below are for a typical Hybrid Cloud Print deployment.
 
 9. Copy the SQLite dlls to the MopriaCloudService Webapp bin folder (C:\inetpub\wwwroot\MopriaCloudService\bin)
     - Create a .ps1 file containing the following PowerShell script
-    - Change to the $version variable to the SQLite version installed in previous step
+    - Change the $version variable to the SQLite version installed in previous step
     - Run the .ps1 file in an elevated PowerShell command prompt
 
     ```powershell
@@ -268,7 +269,7 @@ The steps below are for a typical Hybrid Cloud Print deployment.
     ...
     ```
 
-10. Update the c:\inetpub\wwwroot\MopriaCloudService\web.config file to include the SQLite version x.x.x.x in the following `<runtime>/<assemblyBinding>` sections:
+10. Update the c:\inetpub\wwwroot\MopriaCloudService\web.config file to include the SQLite version x.x.x.x in the following `<runtime>/<assemblyBinding>` sections. This is the same version used in the previous step
 
     ```xml
     ...
@@ -339,12 +340,12 @@ The steps below are for a typical Hybrid Cloud Print deployment.
 
 1. Login to your MDM provider
 2. Find the Enterprise Cloud Print policy group and configure the policies following the guidelines below:
-  - CloudPrintOAuthAuthority = `https://login.microsoftonline.com/<Azure AD Directory ID>`. The directory ID can be found under Azure Active Directory > Properties
-  - CloudPrintOAuthClientId = "Application \(client\) ID" value of the native app. You can find this under Azure Active Directory > App registrations > Select the native app > Overview
-  - CloudPrinterDiscoveryEndPoint = External URL of the Mopria Discovery Service app. You can find this under Azure Active Directory > Enterprise applications > Select the Mopria Discovery Service app > Application proxy. **It must be exactly the same but without the trailing "/"**
-  - MopriaDiscoveryResourceId = The Application ID URI of the Mopria Discovery Service app. You can find this under Azure Active Directory > App registrations > Select the Mopria Discovery Service app > Overview
-  - CloudPrintResourceId = The Application ID URI of the Enterprise Cloud Print app. You can find this under Azure Active Directory > App registrations > Select the Enterprise Cloud Print app > Overview
-  - DiscoveryMaxPrinterLimit = \<a positive integer\>
+    - CloudPrintOAuthAuthority = `https://login.microsoftonline.com/<Azure AD Directory ID>`. The directory ID can be found under Azure Active Directory > Properties
+    - CloudPrintOAuthClientId = "Application \(client\) ID" value of the native app. You can find this under Azure Active Directory > App registrations > Select the native app > Overview
+    - CloudPrinterDiscoveryEndPoint = External URL of the Mopria Discovery Service app. You can find this under Azure Active Directory > Enterprise applications > Select the Mopria Discovery Service app > Application proxy. **It must be exactly the same but without the trailing "/"**
+    - MopriaDiscoveryResourceId = The Application ID URI of the Mopria Discovery Service app. You can find this under Azure Active Directory > App registrations > Select the Mopria Discovery Service app > Overview. **It must be exactly the same but with the trailing "/"**
+    - CloudPrintResourceId = The Application ID URI of the Enterprise Cloud Print app. You can find this under Azure Active Directory > App registrations > Select the Enterprise Cloud Print app > Overview. **It must be exactly the same but with the trailing "/"**
+    - DiscoveryMaxPrinterLimit = \<a positive integer\>
 
 > Note: If you are using Microsoft Intune service, you can find these settings under the "Cloud Printer" category.
 
@@ -359,21 +360,21 @@ The steps below are for a typical Hybrid Cloud Print deployment.
 
 > Note: If the Cloud Print policy group is not available, but the MDM provider supports OMA-URI settings, then you can set the same policies.  Please refer to [this](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-enterprisecloudprint#enterprisecloudprint-cloudprintoauthauthority) for additional info.
 
-- Values for OMA-URI
-    - `CloudPrintOAuthAuthority = ./Vendor/MSFT/Policy/Config/EnterpriseCloudPrint/CloudPrintOAuthAuthority`
-        - Value = `https://login.microsoftonline.com/`\<Azure AD Directory ID\>
-    - `CloudPrintOAuthClientId = ./Vendor/MSFT/Policy/Config/EnterpriseCloudPrint/CloudPrintOAuthClientId`
-        - Value = \<Azure AD Native App's Application ID\>
-    - `CloudPrinterDiscoveryEndPoint = ./Vendor/MSFT/Policy/Config/EnterpriseCloudPrint/CloudPrinterDiscoveryEndPoint`
-        - Value = External URL of the Mopria Discovery Service app (must be exactly the same but without the trailing /)
-    - `MopriaDiscoveryResourceId = ./Vendor/MSFT/Policy/Config/EnterpriseCloudPrint/MopriaDiscoveryResourceId`
-        - Value = The Application ID URI of the Mopria Discovery Service app
-    - `CloudPrintResourceId = ./Vendor/MSFT/Policy/Config/EnterpriseCloudPrint/CloudPrintResourceId`
-        - Value = The Application ID URI of the Enterprise Cloud Print app
-    - `DiscoveryMaxPrinterLimit = ./Vendor/MSFT/Policy/Config/EnterpriseCloudPrint/DiscoveryMaxPrinterLimit`
-        - Value = \<a positive integer\>
-
-### Step 6 - Publish the shared printer
+    - Values for OMA-URI
+        - `CloudPrintOAuthAuthority = ./Vendor/MSFT/Policy/Config/EnterpriseCloudPrint/CloudPrintOAuthAuthority`
+            - Value = `https://login.microsoftonline.com/`\<Azure AD Directory ID\>
+        - `CloudPrintOAuthClientId = ./Vendor/MSFT/Policy/Config/EnterpriseCloudPrint/CloudPrintOAuthClientId`
+            - Value = \<Azure AD Native App's Application ID\>
+        - `CloudPrinterDiscoveryEndPoint = ./Vendor/MSFT/Policy/Config/EnterpriseCloudPrint/CloudPrinterDiscoveryEndPoint`
+            - Value = External URL of the Mopria Discovery Service app (must be exactly the same but without the trailing /)
+        - `MopriaDiscoveryResourceId = ./Vendor/MSFT/Policy/Config/EnterpriseCloudPrint/MopriaDiscoveryResourceId`
+            - Value = The Application ID URI of the Mopria Discovery Service app
+        - `CloudPrintResourceId = ./Vendor/MSFT/Policy/Config/EnterpriseCloudPrint/CloudPrintResourceId`
+            - Value = The Application ID URI of the Enterprise Cloud Print app
+        - `DiscoveryMaxPrinterLimit = ./Vendor/MSFT/Policy/Config/EnterpriseCloudPrint/DiscoveryMaxPrinterLimit`
+            - Value = \<a positive integer\>
+    
+### Step 7 - Publish the shared printer
 
 1. Install desired printer on the Print Server
 2. Share the printer through the Printer Properties UI
@@ -404,7 +405,7 @@ The steps below are for a typical Hybrid Cloud Print deployment.
         - PrintServerEndpoint = Log in to Azure portal and then get the string from Enterprise applications > Enterprise Cloud Print app > Application proxy > External URL. Omit the trailing "/"
         - AzureClientId = Application ID of the registered Native Web App value
         - AzureTenantGuid = Directory ID of your Azure AD tenant
-        - DiscoveryResourceId \[Optional\] = Application ID URI of the Mopria Discovery Service app
+        - DiscoveryResourceId = Application ID URI of the Mopria Discovery Service app
 
     - You can enter all of the required parameter values in the command line as well. The syntax is:
 
@@ -444,7 +445,7 @@ There are various logs that can help troubleshoot failures
         - Under category, select **Problem**, **Devices and Drivers**, **Print**
         - In the section for adding more details, click on the **Start recording** button
         - Retry the print job that failed
-        - Go back to Feedback Hub abd click on the **Stop Recording** button
+        - Go back to Feedback Hub and click on the **Stop Recording** button
         - Click on **Submit** to submit your feedback
     - Use Event Viewer to see log of Azure AD operations. Click on **Start** and type "Event Viewer". Navigate to Applications and Services Logs > Microsoft > Windows > AAD > Operation
 - Connector Server
