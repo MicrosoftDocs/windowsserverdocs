@@ -161,7 +161,7 @@ Membership in **Domain Admins**, **Account Operators** or ability to create msDS
     |ManagedPasswordIntervalInDays|Password change interval in days (default is 30 days if not provided)|90|
     |PrincipalsAllowedToRetrieveManagedPassword|The computer accounts of the member hosts or the security group that the member hosts are a member of|ITFarmHosts|
     |SamAccountName|NetBIOS name for the service if not same as Name|ITFarm1|
-    |ServicePrincipalNames|Service Principal Names (SPNs) for the service|http/ITFarm1.contoso.com/contoso.com, http/ITFarm1.contoso.com/contoso, http/ITFarm1/contoso.com, http/ITFarm1/contoso, MSSSQLSvc/ITFarm1.contoso.com:1433, MSSQLSvc/ITFarm1.contoso.com:INST01|
+    |ServicePrincipalNames|Service Principal Names (SPNs) for the service|http/ITFarm1.contoso.com/contoso.com, http/ITFarm1.contoso.com/contoso, http/ITFarm1/contoso.com, http/ITFarm1/contoso, MSSQLSvc/ITFarm1.contoso.com:1433, MSSQLSvc/ITFarm1.contoso.com:INST01|
 
     > [!IMPORTANT]
     > The password change interval can only be set during creation. If you need to change the interval, you must create a new gMSA and set it at creation time.
