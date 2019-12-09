@@ -367,6 +367,13 @@ This issue is caused by a regression in the [KB4512534](https://support.microsof
   
 In both workarounds, after cut over completes, you can then set a static IP address on the old source computer as you see fit and stop using DHCP.   
 
+## Slower than expected re-transfer performance
+
+After completing a transfer, then running a subsequent re-transfer of the same data, you may not see much improvement in transfer time even when little data has changed in the meantime on the source server.
+
+This is expected behavior when transferring a very large number of files and nested folders. The size of the data isn't relevant. We first made improvements to this behavior in [KB4512534](https://support.microsoft.com/help/4512534/windows-10-update-kb4512534) and are continuing to optimize transfer performance. To tune performance further, review [Optimizing Inventory and Transfer Performance](https://docs.microsoft.com/windows-server/storage/storage-migration-service/faq#optimizing-inventory-and-transfer-performance).
+
+
 ## See also
 
 - [Storage Migration Service overview](overview.md)
