@@ -7,7 +7,7 @@ ms.reviewer: na
 ms.suite: na
 ms.technology: remote-desktop-services
 ms.author: helohr
-ms.date: 12/05/2019
+ms.date: 12/10/2019
 ms.tgt_pltfrm: na
 ms.topic: article
 author: Heidilohr
@@ -22,7 +22,7 @@ When using a remote Windows session, your network’s available bandwidth greatl
 
 ## Applications
 
-The following table lists the minimum recommended bandwidths for a smooth user experience.
+The following table lists the minimum recommended bandwidths for a smooth user experience. These recommendations are based on [Remote Desktop workloads](remote-desktop-workloads.md).
 
 | Workload type   | Recommended bandwidth |
 |-----------------|-----------------------|
