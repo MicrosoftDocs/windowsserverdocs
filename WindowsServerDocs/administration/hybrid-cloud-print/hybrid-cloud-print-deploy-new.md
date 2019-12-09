@@ -76,7 +76,7 @@ To enable authenticated communication with the HCP services, we need to create 3
     ![AAD App Registration 2](../media/hybrid-cloud-print/AAD-AppRegistration-Mopria.png)
 
     - Repeat for Enterprise Cloud Print service
-    - Repeat for native app
+    - Repeat for Native app
     - The three applications should be displayed under **App registrations**
 
     ![AAD App Registration 3](../media/hybrid-cloud-print/AAD-AppRegistration-AllApps.png)
@@ -103,7 +103,7 @@ To enable authenticated communication with the HCP services, we need to create 3
     ![AAD Expose API 5](../media/hybrid-cloud-print/AAD-AppRegistration-ECP-ExposeAPI-ScopeName.png)
 
 3. Add API permissions
-    - Return to App registrations blade. Click on the native app and select API permissions. Click on **Add a permission**
+    - Return to App registrations blade. Click on the Native app and select API permissions. Click on **Add a permission**
 
     ![AAD API Permission 1](../media/hybrid-cloud-print/AAD-AppRegistration-APIPermission.png)
 
@@ -153,8 +153,8 @@ To enable authenticated communication with the HCP services, we need to create 3
     - Either click on **Users and groups** and assign users, or click on **Properties** and change **User assignment required?** to **No**
     - Repeat for Enterprise Cloud Print service
 
-6. Configure redirect URI in the native app
-    - Go to **Azure Active Directory** > **App registrations**. Click on the native app. Go to **Overview** and copy the **Application (client) ID**
+6. Configure redirect URI in the Native app
+    - Go to **Azure Active Directory** > **App registrations**. Click on the Native app. Go to **Overview** and copy the **Application (client) ID**
 
     ![AAD Redirect URI 1](../media/hybrid-cloud-print/AAD-AppRegistration-Native-Overview.png)
 
@@ -341,10 +341,10 @@ To enable authenticated communication with the HCP services, we need to create 3
 1. Login to your MDM provider
 2. Find the Enterprise Cloud Print policy group and configure the policies following the guidelines below:
     - CloudPrintOAuthAuthority = `https://login.microsoftonline.com/<Azure AD Directory ID>`. The directory ID can be found under Azure Active Directory > Properties
-    - CloudPrintOAuthClientId = "Application \(client\) ID" value of the native app. You can find this under Azure Active Directory > App registrations > Select the native app > Overview
+    - CloudPrintOAuthClientId = "Application \(client\) ID" value of the Native app. You can find this under Azure Active Directory > App registrations > Select the Native app > Overview
     - CloudPrinterDiscoveryEndPoint = External URL of the Mopria Discovery Service app. You can find this under Azure Active Directory > Enterprise applications > Select the Mopria Discovery Service app > Application proxy. **It must be exactly the same but without the trailing "/"**
-    - MopriaDiscoveryResourceId = The Application ID URI of the Mopria Discovery Service app. You can find this under Azure Active Directory > App registrations > Select the Mopria Discovery Service app > Overview. **It must be exactly the same but with the trailing "/"**
-    - CloudPrintResourceId = The Application ID URI of the Enterprise Cloud Print app. You can find this under Azure Active Directory > App registrations > Select the Enterprise Cloud Print app > Overview. **It must be exactly the same but with the trailing "/"**
+    - MopriaDiscoveryResourceId = The Application ID URI of the Mopria Discovery Service app. You can find this under Azure Active Directory > App registrations > Select the Mopria Discovery Service app > Overview. **It must be exactly the same with the trailing "/"**
+    - CloudPrintResourceId = The Application ID URI of the Enterprise Cloud Print app. You can find this under Azure Active Directory > App registrations > Select the Enterprise Cloud Print app > Overview. **It must be exactly the same with the trailing "/"**
     - DiscoveryMaxPrinterLimit = \<a positive integer\>
 
 > Note: If you are using Microsoft Intune service, you can find these settings under the "Cloud Printer" category.
@@ -353,7 +353,7 @@ To enable authenticated communication with the HCP services, we need to create 3
 |----------------------------------------|-------------------------------|
 |Printer discovery URL                   |CloudPrinterDiscoveryEndpoint  |
 |Printer access authority URL            |CloudPrintOAuthAuthority       |
-|Azure native client app GUID            |CloudPrintOAuthClientId        |
+|Azure Native client app GUID            |CloudPrintOAuthClientId        |
 |Print service resource URI              |CloudPrintResourceId           |
 |Maximum printers to query(Mobile only)  |DiscoveryMaxPrinterLimit       |
 |Printer discovery service resource URI  |MopriaDiscoveryResourceId      |
@@ -403,7 +403,7 @@ To enable authenticated communication with the HCP services, we need to create 3
             - Add **O:BA** as prefix to the result from the command prompt command above before setting the value as the SDDL setting. Example: if the string returned by the previous command is "G:DUD:(A;OICI;FA;;;WD)", then SDDL = "O:BAG:DUD:(A;OICI;FA;;;WD)"
         - DiscoveryEndpoint = Log in to Azure portal and then get the string from Enterprise applications > Mopria Discovery Service app > Application proxy > External URL. Omit the trailing "/"
         - PrintServerEndpoint = Log in to Azure portal and then get the string from Enterprise applications > Enterprise Cloud Print app > Application proxy > External URL. Omit the trailing "/"
-        - AzureClientId = Application ID of the registered Native Web App value
+        - AzureClientId = Application ID of the registered Native app value
         - AzureTenantGuid = Directory ID of your Azure AD tenant
         - DiscoveryResourceId = Application ID URI of the Mopria Discovery Service app
 
