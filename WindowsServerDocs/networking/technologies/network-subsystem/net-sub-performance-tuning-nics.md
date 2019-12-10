@@ -142,7 +142,7 @@ You can use either netsh commands or Windows Powershell cmdlets to review or mod
 > Unlike in versions of Windows that pre-date Windows 10 or Windows Server 2019, you can no longer use the registry to configure the TCP receive window size. For more information about the deprecated settings, see [Deprecated TCP parameters](#deprecated-tcp-parameters).
 
 > [!NOTE]  
-> For detailed information about the available auto-tuning levels, see [Auto-tuning levels](#auto-tuning-levels).
+> For detailed information about the available autotuning levels, see [Autotuning levels](#autotuning-levels).
 
 **To use netsh to review or modify the autotuning level**
 
