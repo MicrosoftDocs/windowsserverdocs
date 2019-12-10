@@ -104,36 +104,266 @@ If you need to achieve the lowest latency, you should request a BIOS version fro
 
  You can performance tune TCP using the following items.
 
-###  <a name="bkmk_tcp_params"></a>  TCP Receive Window Auto-Tuning
+###  <a name="bkmk_tcp_params"></a>  ### TCP receive window auto-tuning
 
-Prior to Windows Server 2008, the network stack used a fixed-size receive-side window (65,535 bytes) that limited the overall potential throughput for connections. One of the most significant changes to the TCP stack is TCP receive window auto-tuning. 
+In Windows Vista, Windows Server 2008, and later versions of Windows, the Windows network stack uses a feature that is named *TCP receive window auto-tuning level* to negotiate the TCP receive window size. This feature can negotiate a defined receive window size for every TCP communication during the TCP Handshake. 
 
-You can calculate the total throughput of a single connection when you use a fixed size TCP receive window as:
+In earlier versions of Windows, the Windows network stack used a fixed-size receive window (65,535 bytes) that limited the overall potential throughput for connections. The total achievable throughput of TCP connections could limit network usage scenarios. TCP receive window auto-tuning enables these scenarios to fully use the network.
 
-**Total achievable throughput in bytes = TCP receive window size in bytes \* (1 / connection latency in seconds)**
+For a TCP receive window that has a particular size, you can use the following equation to calculate the total throughput of a single connection.
 
-For example, the total achievable throughput is only 51 Mbps on a connection with 10 ms latency \(a reasonable value for a large corporate network infrastructure\). 
+> *Total achievable throughput in bytes* = *TCP receive window size in bytes* \* (1 / *connection latency in seconds*)
 
-With auto-tuning, however, the receive-side window is adjustable, and it can grow to meet the demands of the sender. It is possible for a connection to achieve a full line rate of a 1 Gbps connection. Network usage scenarios that might have been limited in the past by the total achievable throughput of TCP connections can now fully use the network.
+For example, on a connection that has a latency of 10 ms, the total achievable throughput is only 51 Mbps. This value is reasonable for a large corporate network infrastructure. However, by using auto-tuning to adjust the receive window, the connection can achieve the full line rate of a 1 Gbps connection.  
+
+Some applications define the size of the TCP receive window. If the application does not define the receive window size, the link speed determines the size as follows:
+
+- Less than 1 megabit per second (Mbps): 8 kilobytes (KB)
+- 1 Mbps to 100 Mbps: 17 KB
+- 100 Mbps to 10 gigabits per second (Gbps): 64 KB
+- 10 Gbps or faster: 128 KB
+
+For example, on a computer that has a 1 Gbps network adapter installed, the window size should be 64 KB.
+
+This feature also makes full use of other features to improve network performance. These features include the rest of the TCP options that are defined in [RFC 1323](https://tools.ietf.org/html/rfc1323). By using these features, Windows-based computers can negotiate TCP receive window sizes that are smaller but are scaled at a defined value, depending on the configuration. This behavior the sizes easier to handle for networking devices.
+
+> [!NOTE]  
+> You may experience an issue in which the network device is not compliant with the **TCP window scale option**, as defined in [RFC 1323](https://tools.ietf.org/html/rfc1323) and, therefore, doesn't support the scale factor. In such cases, refer to this [KB 934430, Network connectivity fails when you try to use Windows Vista behind a firewall device](https://support.microsoft.com/help/934430/network-connectivity-fails-when-you-try-to-use-windows-vista-behind-a) or contact the Support team for your network device vendor.  
+
+#### Review and configure TCP receive window auto-tuning level
+
+You can use either netsh commands or Windows Powershell cmdlets to review or modify the TCP receive window auto-tuning level.
+
+> [!NOTE]  
+> Unlike in versions of Windows that pre-date Windows 10 or Windows Server 2019, you can no longer use the registry to configure the TCP receive window size. For more information about the deprecated settings, see [Deprecated TCP parameters](#deprecated-tcp-parameters).
+
+> [!NOTE]  
+> For detailed information about the available auto-tuning levels, see [Auto-tuning levels](#auto-tuning-levels).
+
+**To use netsh to review or modify the auto-tuning level**
+
+To review the current settings, open a Command Prompt window and run the following command.
+
+```cmd
+netsh interface tcp show global
+```
+
+The output of this command should resemble the following:
+
+```
+Querying active state...
+
+TCP Global Parameters  
+-----
+Receive-Side Scaling State : enabled
+Chimney Offload State : disabled
+Receive Window Auto-Tuning Level : normal
+Add-On Congestion Control Provider : default
+ECN Capability : disabled
+RFC 1323 Timestamps : disabled
+Initial RTO : 3000
+Receive Segment Coalescing State : enabled
+Non Sack Rtt Resiliency : disabled
+Max SYN Retransmissions : 2
+Fast Open : enabled
+Fast Open Fallback : enabled
+Pacing Profile : off
+```
+
+To modify the setting, run the following command at the command prompt:
+
+```cmd
+netsh interface tcp set global autotuninglevel=<Value>
+```
+
+> [!NOTE]  
+> In the preceding command, \<*Value*> represents the new value for the auto tuning level.
+
+For more information about this command, see [Netsh commands for Interface Transmission Control Protocol](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731258(v=ws.10)).
+
+**To use Powershell to review or modify the auto-tuning level**
+
+To review the current settings, open a PowerShell window and run the following cmdlet.
+
+```ps
+Get-NetTCPSetting | Select SettingName,AutoTuningLevelLocal
+```
+
+The output of this cmdlet should resemble the following.
+
+```
+SettingName           AutoTuningLevelLocal
+-----------          --------------------
+Automatic
+InternetCustom       Normal
+DatacenterCustom     Normal
+Compat               Normal
+Datacenter           Normal
+Internet             Normal
+```
+
+To modify the setting, run the following cmdlet at the PowerShell command prompt.
+
+```ps
+Set-NetTCPSetting -AutoTuningLevelLocal <Value>
+```
+
+> [!NOTE]  
+> In the preceding command, \<*Value*> represents the new value for the auto tuning level.
+
+For more information about these cmdlets, see the following articles:
+
+- [Get-NetTCPSetting](https://docs.microsoft.com/powershell/module/nettcpip/get-nettcpsetting?view=win10-ps)
+- [Set-NetTCPSetting](https://docs.microsoft.com/powershell/module/nettcpip/set-nettcpsetting?view=win10-ps)
+
+#### Auto-tuning levels
+
+You can set receive window auto-tuning to any of five levels. The default level is **Normal**. The following table describes the levels.
+
+|Level |Hexadecimal value |Comments |
+| --- | --- | --- |
+|Normal (default) |0x8 (scale factor of 8) |Set the TCP receive window to grow to accommodate almost all scenarios. |
+|Disabled |No scale factor available |Set the TCP receive window at its default value. |
+|Restricted |0x4 (scale factor of 4) |Set the TCP receive window to grow beyond its default value, but limit such growth in some scenarios. |
+|Highly Restricted |0x2 (scale factor of 2) |Set the TCP receive window to grow beyond its default value, but do so very conservatively. |
+|Experimental |0xE (scale factor of 14) |Set the TCP receive window to grow to accommodate extreme scenarios. |
+
+If you use an application to capture network packets, the application should report data that resembles the following for different window auto-tuning level settings.
+
+- Auto-tuning level: **Normal (default state)**
+
+   ```
+   Frame: Number = 492, Captured Frame Length = 66, MediaType = ETHERNET
+   + Ethernet: Etype = Internet IP (IPv4),DestinationAddress:[D8-FE-E3-65-F3-FD],SourceAddress:[C8-5B-76-7D-FA-7F]
+   + Ipv4: Src = 192.169.0.5, Dest = 192.169.0.4, Next Protocol = TCP, Packet ID = 2667, Total IP Length = 52
+   - Tcp: [Bad CheckSum]Flags=......S., SrcPort=60975, DstPort=Microsoft-DS(445), PayloadLen=0, Seq=4075590425, Ack=0, Win=64240 ( Negotiating scale factor 0x8 ) = 64240
+   SrcPort: 60975
+   DstPort: Microsoft-DS(445)
+   SequenceNumber: 4075590425 (0xF2EC9319)
+   AcknowledgementNumber: 0 (0x0)
+   + DataOffset: 128 (0x80)
+   + Flags: ......S. ---------------------------------------------------------> SYN Flag set
+   Window: 64240 ( Negotiating scale factor 0x8 ) = 64240 ---------> TCP Receive Window set as 64K as per NIC Link bitrate. Note it shows the 0x8 Scale Factor.
+   Checksum: 0x8182, Bad
+   UrgentPointer: 0 (0x0)
+   - TCPOptions:
+   + MaxSegmentSize: 1
+   + NoOption:
+   + WindowsScaleFactor: ShiftCount: 8 -----------------------------> Scale factor, defined by AutoTuningLevel
+   + NoOption:
+   + NoOption:
+   + SACKPermitted:
+   ```
+
+- Auto-tuning level: **Disabled**
+
+   ```
+   Frame: Number = 353, Captured Frame Length = 62, MediaType = ETHERNET
+   + Ethernet: Etype = Internet IP (IPv4),DestinationAddress:[D8-FE-E3-65-F3-FD],SourceAddress:[C8-5B-76-7D-FA-7F]
+   + Ipv4: Src = 192.169.0.5, Dest = 192.169.0.4, Next Protocol = TCP, Packet ID = 2576, Total IP Length = 48
+   - Tcp: [Bad CheckSum]Flags=......S., SrcPort=60956, DstPort=Microsoft-DS(445), PayloadLen=0, Seq=2315885330, Ack=0, Win=64240 ( ) = 64240
+   SrcPort: 60956
+   DstPort: Microsoft-DS(445)
+   SequenceNumber: 2315885330 (0x8A099B12)
+   AcknowledgementNumber: 0 (0x0)
+   + DataOffset: 112 (0x70)
+   + Flags: ......S. ---------------------------------------------------------> SYN Flag set
+   Window: 64240 ( ) = 64240 ----------------------------------------> TCP Receive Window set as 64K as per NIC Link bitrate. Note there is no Scale Factor defined. In this case, Scale factor is not being sent as a TCP Option, so it will not be used by Windows.
+   Checksum: 0x817E, Bad
+   UrgentPointer: 0 (0x0)
+   - TCPOptions:
+   + MaxSegmentSize: 1
+   + NoOption:
+   + NoOption:
+   + SACKPermitted:
+   ```
+
+- Auto-tuning level: **Restricted**
+
+   ```
+   Frame: Number = 3, Captured Frame Length = 66, MediaType = ETHERNET
+   + Ethernet: Etype = Internet IP (IPv4),DestinationAddress:[D8-FE-E3-65-F3-FD],SourceAddress:[C8-5B-76-7D-FA-7F]
+   + Ipv4: Src = 192.169.0.5, Dest = 192.169.0.4, Next Protocol = TCP, Packet ID = 2319, Total IP Length = 52
+   - Tcp: [Bad CheckSum]Flags=......S., SrcPort=60890, DstPort=Microsoft-DS(445), PayloadLen=0, Seq=1966088568, Ack=0, Win=64240 ( Negotiating scale factor 0x4 ) = 64240
+   SrcPort: 60890
+   DstPort: Microsoft-DS(445)
+   SequenceNumber: 1966088568 (0x75302178)
+   AcknowledgementNumber: 0 (0x0)
+   + DataOffset: 128 (0x80)
+   + Flags: ......S. ---------------------------------------------------------> SYN Flag set
+   Window: 64240 ( Negotiating scale factor 0x4 ) = 64240 ---------> TCP Receive Window set as 64K as per NIC Link bitrate. Note it shows the 0x4 Scale Factor.
+   Checksum: 0x8182, Bad
+   UrgentPointer: 0 (0x0)
+   - TCPOptions:
+   + MaxSegmentSize: 1
+   + NoOption:
+   + WindowsScaleFactor: ShiftCount: 4 -------------------------------> Scale factor, defined by AutoTuningLevel.
+   + NoOption:
+   + NoOption:
+   + SACKPermitted:
+   ```
+
+- Auto-tuning level: **Highly restricted**
+
+   ```
+   Frame: Number = 115, Captured Frame Length = 66, MediaType = ETHERNET
+   + Ethernet: Etype = Internet IP (IPv4),DestinationAddress:[D8-FE-E3-65-F3-FD],SourceAddress:[C8-5B-76-7D-FA-7F]
+   + Ipv4: Src = 192.169.0.5, Dest = 192.169.0.4, Next Protocol = TCP, Packet ID = 2388, Total IP Length = 52
+   - Tcp: [Bad CheckSum]Flags=......S., SrcPort=60903, DstPort=Microsoft-DS(445), PayloadLen=0, Seq=1463725706, Ack=0, Win=64240 ( Negotiating scale factor 0x2 ) = 64240
+   SrcPort: 60903
+   DstPort: Microsoft-DS(445)
+   SequenceNumber: 1463725706 (0x573EAE8A)
+   AcknowledgementNumber: 0 (0x0)
+   + DataOffset: 128 (0x80)
+   + Flags: ......S. ---------------------------------------------------------> SYN Flag set
+   Window: 64240 ( Negotiating scale factor 0x2 ) = 64240 ---------> TCP Receive Window set as 64K as per NIC Link bitrate. Note it shows the 0x2 Scale Factor.
+   Checksum: 0x8182, Bad
+   UrgentPointer: 0 (0x0)
+   - TCPOptions:
+   + MaxSegmentSize: 1
+   + NoOption:
+   + WindowsScaleFactor: ShiftCount: 2 ------------------------------> Scale factor, defined by AutoTuningLevel
+   + NoOption:
+   + NoOption:
+   + SACKPermitted:
+   ```
+
+- Auto-tuning level: **Experimental**
+
+   ```
+   Frame: Number = 238, Captured Frame Length = 66, MediaType = ETHERNET
+   + Ethernet: Etype = Internet IP (IPv4),DestinationAddress:[D8-FE-E3-65-F3-FD],SourceAddress:[C8-5B-76-7D-FA-7F]
+   + Ipv4: Src = 192.169.0.5, Dest = 192.169.0.4, Next Protocol = TCP, Packet ID = 2490, Total IP Length = 52
+   - Tcp: [Bad CheckSum]Flags=......S., SrcPort=60933, DstPort=Microsoft-DS(445), PayloadLen=0, Seq=2095111365, Ack=0, Win=64240 ( Negotiating scale factor 0xe ) = 64240
+   SrcPort: 60933
+   DstPort: Microsoft-DS(445)
+   SequenceNumber: 2095111365 (0x7CE0DCC5)
+   AcknowledgementNumber: 0 (0x0)
+   + DataOffset: 128 (0x80)
+   + Flags: ......S. ---------------------------------------------------------> SYN Flag set
+   Window: 64240 ( Negotiating scale factor 0xe ) = 64240 ---------> TCP Receive Window set as 64K as per NIC Link bitrate. Note it shows the 0xe Scale Factor.
+   Checksum: 0x8182, Bad
+   UrgentPointer: 0 (0x0)
+   - TCPOptions:
+   + MaxSegmentSize: 1
+   + NoOption:
+   + WindowsScaleFactor: ShiftCount: 14 -----------------------------> Scale factor, defined by AutoTuningLevel
+   + NoOption:
+   + NoOption:
+   + SACKPermitted:
+   ```
 
 #### Deprecated TCP parameters
 
-The following registry settings from Windows Server 2003 are no longer supported, and are ignored in later versions.
+The following registry settings from Windows Server 2003 are no longer supported, and are ignored in later versions.
 
 All of these settings had the following registry location:
 
-    ```  
-    HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\Tcpip\Parameters  
-    ```  
+> **HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\Tcpip\Parameters**  
 
-- TcpWindowSize
-
-- NumTcbTablePartitions  
-
-- MaxHashTableSize  
-
-
-
+- **TcpWindowSize**
+- **NumTcbTablePartitions**  
+- **MaxHashTableSize**  
 ###  <a name="bkmk_wfp"></a> Windows Filtering Platform
 
 The Windows Filtering Platform (WFP) that was introduced in Windows Vista and Windows Server 2008 provides APIs to non-Microsoft independent software vendors (ISVs) to create packet processing filters. Examples include firewall and antivirus software.
