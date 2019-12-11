@@ -242,3 +242,4 @@ Below is an example of the email that you will be send by Azure Monitor:
 
 - [Storage Spaces Direct overview](storage-spaces-direct-overview.md)
 - For more detailed information, read the [Azure Monitor documentation](https://docs.microsoft.com/azure/azure-monitor/learn/tutorial-viewdata).
+- Read this for an overview on how to [connect to other Azure hybrid services](../../manage/windows-admin-center/azure/index.md).
