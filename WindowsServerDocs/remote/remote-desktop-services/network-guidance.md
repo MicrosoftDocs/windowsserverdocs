@@ -18,11 +18,11 @@ manager: daveba
 When using a remote Windows session, your network’s available bandwidth greatly impacts the quality of your experience. Different applications and display resolutions require different network configurations, so it’s important to make sure your network is configured to meet your needs.
 
 >[!NOTE]
->The following recommendations apply to networks with less than 0.1% loss, as defined in [Remote Desktop workloads](remote-desktop-workloads.md).
+>The following recommendations apply to networks with less than 0.1% loss.
 
 ## Applications
 
-The following table lists the minimum recommended bandwidths for a smooth user experience. For more information about workload types, see [Remote Desktop workloads](remote-desktop-workloads.md).
+The following table lists the minimum recommended bandwidths for a smooth user experience. These recommendations are based on the guidelines in [Remote Desktop workloads](remote-desktop-workloads.md).
 
 | Workload type   | Recommended bandwidth |
 |-----------------|-----------------------|
