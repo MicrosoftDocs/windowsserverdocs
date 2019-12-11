@@ -35,7 +35,15 @@ All data collected by Azure Monitor fits into one of two fundamental types: metr
 
 We will have more details below on how to configure these alerts.
 
-## Configuring Health Service
+## Onboarding your cluster using Windows Admin Center
+
+Using Windows Admin Center, you can onboard your cluster to Azure Monitor.
+
+![Gif of onboarding cluster to Azure Monitor"](media/configure-azure-monitor/onboarding.gif)
+
+During this onboarding flow, the steps below are happening under the hood. We detail how to configure them in detail in case you want to manually setup your cluster. 
+
+### Configuring Health Service
 
 The first thing that you need to do is configure your cluster. As you may know, the [Health Service](../../failover-clustering/health-service-overview.md) improves the day-to-day monitoring and operational experience for clusters running Storage Spaces Direct. 
 
@@ -54,7 +62,7 @@ get-storagesubsystem clus* | Set-StorageHealthSetting -Name "Platform.ETW.MasTyp
 
 When you run the cmdlet above to set the Health Settings, you cause the events we want to begin being written to the *Microsoft-Windows-Health/Operational* event channel.
 
-## Configuring Log Analytics
+### Configuring Log Analytics
 
 Now that you have setup the proper logging on your cluster, the next step is to properly configure log analytics.
 
@@ -64,11 +72,11 @@ To understand the supported configuration, review [supported Windows operating s
 
 If you don't have an Azure subscription, create a [free account](https://azure.microsoft.com/free/?WT.mc_id=A261C142F) before you begin.
 
-### Login in to Azure Portal
+#### Login in to Azure Portal
 
 Log in to the Azure portal at [https://portal.azure.com](https://azure.microsoft.com/free/?WT.mc_id=A261C142F).
 
-### Create a workspace
+#### Create a workspace
 
 For more details on the steps listed below, see the [Azure Monitor documentation](https://docs.microsoft.com/azure/azure-monitor/learn/quick-collect-windows-computer).
 
@@ -88,7 +96,7 @@ For more details on the steps listed below, see the [Azure Monitor documentation
 
 While the information is verified and the workspace is created, you can track its progress under **Notifications** from the menu. 
 
-### Obtain workspace ID and key
+#### Obtain workspace ID and key
 Before installing the Microsoft Monitoring Agent for Windows, you need the workspace ID and key for your Log Analytics workspace.  This information is required by the setup wizard to properly configure the agent and ensure it can successfully communicate with Log Analytics.  
 
 1. In the Azure portal, click **All services** found in the upper left-hand corner. In the list of resources, type **Log Analytics**. As you begin typing, the list filters based on your input. Select **Log Analytics**.
@@ -97,7 +105,7 @@ Before installing the Microsoft Monitoring Agent for Windows, you need the works
 4. Select **Connected Sources**, and then select **Windows Servers**.   
 5. The value to the right of **Workspace ID** and **Primary Key**. Save both temporarily - copy and paste both into your favorite editor for the time being.   
 
-## Installing the agent on Windows
+### Installing the agent on Windows
 The following steps install and configure the Microsoft Monitoring Agent. **Be sure to install this agent on each server in your cluster and indicate that you want the agent to run at Windows Startup.**
 
 1. On the **Windows Servers** page, select the appropriate **Download Windows Agent** version to download depending on the processor architecture of the Windows operating system.
@@ -119,7 +127,30 @@ When complete, the **Microsoft Monitoring Agent** appears in **Control Panel**. 
 
 To understand the supported configuration, review [supported Windows operating systems](https://docs.microsoft.com/azure/azure-monitor/platform/log-analytics-agent#supported-windows-operating-systems) and [network firewall configuration](https://docs.microsoft.com/azure/azure-monitor/platform/log-analytics-agent#network-firewall-requirements).
 
-## Collecting event and performance data
+## Setting up alerts using Windows Admin Center
+
+In Windows Admin Center, you can configure default alerts that will apply to all servers in your Log Analytics workspace. 
+
+![Gif of setting up alerts"](media/configure-azure-monitor/setup1.gif)
+
+These are the alerts and their default conditions that you can opt into:
+
+| Alert Name                | Default Condition                                  |
+|---------------------------|----------------------------------------------------|
+| CPU utilization           | Over 85% for 10 minutes                            |
+| Disk capacity utilization | Over 85% for 10 minutes                            |
+| Memory utilization        | Available memory less than 100 MB for 10 minutes   |
+| Heartbeat                 | Fewer than 2 beats for 5 minutes                   |
+| System critical error     | Any critical alert in the cluster system event log |
+| Health service alert      | Any health service fault on the cluster            |
+
+Once you configure the alerts in Windows Admin Center, you can see the alerts in your log analytics workspace in Azure.
+
+![Gif of setting up alerts"](media/configure-azure-monitor/setup2.gif)
+
+During this onboarding flow, the steps below are happening under the hood. We detail how to configure them in detail in case you want to manually setup your cluster. 
+
+### Collecting event and performance data
 
 Log Analytics can collect events from the Windows event log and performance counters that you specify for longer term analysis and reporting, and take action when a particular condition is detected.  Follow these steps to configure collection of events from the Windows event log, and several common performance counters to start with.  
 
@@ -197,9 +228,13 @@ Now, let's walk through an example for creating an alert.
 10. Click **OK** to complete the action group. 
 11. Click **Create alert rule** to complete the alert rule. It starts running immediately.<br><br> ![Complete creating new alert rule](media/configure-azure-monitor/alert-rule-01.png)<br> 
 
-### Test alerts
+## See alerts
 
-For reference, this is what an example alert looks like:
+For reference, this is what an example alert looks like in Azure.
+
+![Gif of alert in Azure"](media/configure-azure-monitor/alert.gif)
+
+Below is an example of the email that you will be send by Azure Monitor:
 
 ![Alert email example](media/configure-azure-monitor/warning.png)
 
