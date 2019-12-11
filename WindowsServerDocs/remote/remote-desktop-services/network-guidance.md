@@ -7,7 +7,7 @@ ms.reviewer: na
 ms.suite: na
 ms.technology: remote-desktop-services
 ms.author: helohr
-ms.date: 12/10/2019
+ms.date: 12/11/2019
 ms.tgt_pltfrm: na
 ms.topic: article
 author: Heidilohr
