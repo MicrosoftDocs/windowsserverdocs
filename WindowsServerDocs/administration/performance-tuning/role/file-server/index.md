@@ -101,6 +101,14 @@ The following REG\_DWORD registry settings can affect the performance of client 
      > To resolve this issue, install Windows 10, version 1809 or a later version.
      >  
      > To work around this issue, set **DirectoryCacheLifetime** to **0**.
+     >  
+     > This issue affects the following editions of Windows 10:  
+     > - Windows 10 Enterprise, version 1803
+     > - Windows 10 Pro for Workstations, version 1803
+     > - Windows 10 Pro Education, version 1803
+     > - Windows 10 Professional, version 1803
+     > - Windows 10 Education, version 1803
+     > - Windows 10 Home, version 1803
    
 -   **DirectoryCacheEntrySizeMax**
 
