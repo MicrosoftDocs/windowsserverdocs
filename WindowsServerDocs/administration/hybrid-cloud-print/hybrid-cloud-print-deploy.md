@@ -359,18 +359,18 @@ To enable authenticated communication with the HCP services, we need to create 3
 > Note: If the Cloud Print policy group is not available, but the MDM provider supports OMA-URI settings, then you can set the same policies.  Please refer to [this](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-enterprisecloudprint#enterprisecloudprint-cloudprintoauthauthority) for additional info.
 
     - Values for OMA-URI
-        - `CloudPrintOAuthAuthority = ./Vendor/MSFT/Policy/Config/EnterpriseCloudPrint/CloudPrintOAuthAuthority`
-            - Value = `https://login.microsoftonline.com/`\<Azure AD Directory ID\>
-        - `CloudPrintOAuthClientId = ./Vendor/MSFT/Policy/Config/EnterpriseCloudPrint/CloudPrintOAuthClientId`
-            - Value = \<Azure AD Native App's Application ID\>
-        - `CloudPrinterDiscoveryEndPoint = ./Vendor/MSFT/Policy/Config/EnterpriseCloudPrint/CloudPrinterDiscoveryEndPoint`
-            - Value = External URL of the Mopria Discovery Service app (must be exactly the same but without the trailing /)
-        - `MopriaDiscoveryResourceId = ./Vendor/MSFT/Policy/Config/EnterpriseCloudPrint/MopriaDiscoveryResourceId`
+        - CloudPrintOAuthAuthority = ./Vendor/MSFT/Policy/Config/EnterpriseCloudPrint/CloudPrintOAuthAuthority
+            - Value = https://login.microsoftonline.com/<Azure AD Directory ID>
+        - CloudPrintOAuthClientId = ./Vendor/MSFT/Policy/Config/EnterpriseCloudPrint/CloudPrintOAuthClientId
+            - Value = <Azure AD Native App's Application ID>
+        - CloudPrinterDiscoveryEndPoint = ./Vendor/MSFT/Policy/Config/EnterpriseCloudPrint/CloudPrinterDiscoveryEndPoint
+            - Value = External URL of the Mopria Discovery Service app (must be exactly the same but without the trailing "/")
+        - MopriaDiscoveryResourceId = ./Vendor/MSFT/Policy/Config/EnterpriseCloudPrint/MopriaDiscoveryResourceId
             - Value = The Application ID URI of the Mopria Discovery Service app
-        - `CloudPrintResourceId = ./Vendor/MSFT/Policy/Config/EnterpriseCloudPrint/CloudPrintResourceId`
+        - CloudPrintResourceId = ./Vendor/MSFT/Policy/Config/EnterpriseCloudPrint/CloudPrintResourceId
             - Value = The Application ID URI of the Enterprise Cloud Print app
-        - `DiscoveryMaxPrinterLimit = ./Vendor/MSFT/Policy/Config/EnterpriseCloudPrint/DiscoveryMaxPrinterLimit`
-            - Value = \<a positive integer\>
+        - DiscoveryMaxPrinterLimit = ./Vendor/MSFT/Policy/Config/EnterpriseCloudPrint/DiscoveryMaxPrinterLimit
+            - Value = A positive integer
     
 ### Step 7 - Publish the shared printer
 
@@ -410,7 +410,7 @@ To enable authenticated communication with the HCP services, we need to create 3
 
     - You can enter all of the required parameter values in the command line as well. The syntax is:
 
-        `Publish-CloudPrinter -Printer \<string\> -Manufacturer \<string\> -Model \<string\> -OrgLocation \<string\> -Sddl \<string\> -DiscoveryEndpoint \<string\> -PrintServerEndpoint \<string\> -AzureClientId \<string\> -AzureTenantGuid \<string\> [-DiscoveryResourceId \<string\>]`
+        `Publish-CloudPrinter -Printer <string> -Manufacturer <string> -Model <string> -OrgLocation <string> -Sddl <string> -DiscoveryEndpoint <string> -PrintServerEndpoint <string> -AzureClientId <string> -AzureTenantGuid <string> -DiscoveryResourceId <string>`
 
         Sample command:
 
@@ -418,7 +418,7 @@ To enable authenticated communication with the HCP services, we need to create 3
 
     - Use the following command to verify that the printer is published.
 
-        `Publish-CloudPrinter -Query -DiscoveryEndpoint \<string\> -AzureClientId \<string\> -AzureTenantGuid \<string\> -DiscoveryResourceId \<string\>`
+        `Publish-CloudPrinter -Query -DiscoveryEndpoint <string> -AzureClientId <string> -AzureTenantGuid <string> -DiscoveryResourceId <string>`
 
         Sample command:
 
@@ -427,11 +427,11 @@ To enable authenticated communication with the HCP services, we need to create 3
 ## Verify the deployment
 
 On an Azure AD joined device that has the MDM policies configured:
-- Open a web browser and to go to https://mopriadiscoveryservice-\<tenant-name\>.msappproxy.net/mcs/services.
+- Open a web browser and to go to https://mopriadiscoveryservice-*tenant-name*.msappproxy.net/mcs/services.
 - You should see the JSON text describing the set of functionality of this endpoint.
 - Go to **Settings** > **Devices** > **Printers & scanners**.
     - Click on **Add printer or scanner**.
-    - You should see a "Search for cloud printers" (or "Search for printers in my organization" on more recent Windows 10 machine) link.
+    - You should see a "Search for cloud printers" (or "Search for printers in my organization" on a more recent Windows 10 machine) link.
     - Click on the link.
     - Click the “Please select a search location” link.
         - You should see the device location hierarchy.
