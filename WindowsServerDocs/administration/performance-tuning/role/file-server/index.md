@@ -92,10 +92,16 @@ The following REG\_DWORD registry settings can affect the performance of client 
 
     The default is 10 seconds. This is the directory cache timeout.
 
-    > [!NOTE]
+    > [!NOTE]  
     > This parameter controls caching of directory metadata in the absence of directory leases.
      
-
+     > [!NOTE]  
+     > A known issue in Windows 10, version 1803, affects the ability of Windows 10 to cache large directories. After you upgrade a computer to Windows 10, version 1803, you access a network share that contains thousands of files and folders, and you open a document that is located on that share. During both of these operations, you experience significant delays.
+     >  
+     > To resolve this issue, install Windows 10, version 1809 or a later version.
+     >  
+     > To work around this issue, set **DirectoryCacheLifetime** to **0**.
+   
 -   **DirectoryCacheEntrySizeMax**
 
     ```
