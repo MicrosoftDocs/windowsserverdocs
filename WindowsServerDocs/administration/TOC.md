@@ -2,8 +2,7 @@
 ## [Use Windows Admin Center to manage your environment (New!)](../manage/windows-admin-center/overview.md)
 ## Manage Windows Server systems and environments
 ### [Manage Windows Server Hybrid Cloud Print](hybrid-cloud-print/hybrid-cloud-print-overview.md)
-#### [Deploy Windows Server Hybrid Cloud Print with Pre-Authentication](hybrid-cloud-print/hybrid-cloud-print-deploy.md)
-#### [Deploy Windows Server Hybrid Cloud Print with Passthrough Auth](hybrid-cloud-print/hybrid-cloud-print-deploy-passthrough.md)
+#### [Deploy Windows Server Hybrid Cloud Print](hybrid-cloud-print/hybrid-cloud-print-deploy.md)
 ### [What is the Server Core installation option?](server-core/what-is-server-core.md)
 #### [What's included in the Server Core installation option?](server-core/server-core-roles-and-services.md)
 #### [Basic administration tasks in Server Core](server-core/server-core-administer.md)
