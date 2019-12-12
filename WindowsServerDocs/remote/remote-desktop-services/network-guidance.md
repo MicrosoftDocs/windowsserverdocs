@@ -7,7 +7,7 @@ ms.reviewer: na
 ms.suite: na
 ms.technology: remote-desktop-services
 ms.author: helohr
-ms.date: 12/11/2019
+ms.date: 12/12/2019
 ms.tgt_pltfrm: na
 ms.topic: article
 author: Heidilohr
@@ -18,7 +18,7 @@ manager: daveba
 When using a remote Windows session, your network’s available bandwidth greatly impacts the quality of your experience. Different applications and display resolutions require different network configurations, so it’s important to make sure your network is configured to meet your needs.
 
 >[!NOTE]
->The following recommendations apply to networks with less than 0.1% loss.
+>The following recommendations apply to networks with less than 0.1% loss. These recommendations apply regardless of how many sessions you're hosting on your virtual machines (VMs).
 
 ## Applications
 
@@ -30,9 +30,6 @@ The following table lists the minimum recommended bandwidths for a smooth user e
 | Medium          | 3 Mbps                |
 | Heavy           | 5 Mbps                |
 | Power           | 15 Mbps               |
-
->[!NOTE]
->These recommendations apply regardless of how many sessions you're hosting on your virtual machines (VMs).
 
 Keep in mind that the stress put on your network depends on both your app workload's output frame rate and your display resolution. If either the frame rate or display resolution increases, the bandwidth requirement will also rise. For example, a light workload with a high-resolution display requires more available bandwidth than a light workload with regular or low resolution.
 
@@ -54,9 +51,6 @@ Different display resolutions require different available bandwidths. The follow
 | About 1280 × 720 px                      | 3 Mbps                |
 | About 1920 × 1080 px                     | 5 Mbps                |
 | About 3840 × 2160 px (4K)                | 15 Mbps               |
-
->[!NOTE]
->These recommendations apply regardless of how many sessions you're hosting on your virtual machines (VMs).
 
 ## Additional resources
 
