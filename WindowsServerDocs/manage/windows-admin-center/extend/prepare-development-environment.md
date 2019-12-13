@@ -7,7 +7,7 @@ author: nwashburn-ms
 ms.author: niwashbu
 ms.localizationpriority: medium
 ms.date: 09/18/2018
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ---
 
 # Prepare your development environment

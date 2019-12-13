@@ -1,7 +1,7 @@
 ---
 title: Manage QoS Policy
 description: This topic provides instructions on how to create and manage Quality of Service (QoS) Policy in Windows Server 2016.
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: networking
 ms.topic: article
 ms.assetid: 04fdfa54-6600-43d4-8945-35f75e15275a
@@ -85,7 +85,7 @@ In the second page of the QoS Policy wizard you can apply the policy to all appl
 
 - **All applications** specifies that the traffic management settings on the first page of the QoS Policy wizard apply to all applications.
 
-- **Only applications with this executable name** specifies that the traffic management settings on the first page of the QoS Policy wizard are for a specific application. The executable file name and must end with the .exe file name extension.
+- **Only applications with this executable name** specifies that the traffic management settings on the first page of the QoS Policy wizard are for a specific application. The executable file name must end with the .exe file name extension.
 
 - **Only HTTP server applications responding to requests for this URL** specifies that the traffic management settings on the first page of the QoS Policy wizard apply to certain HTTP server applications only.
 

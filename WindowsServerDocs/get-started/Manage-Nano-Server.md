@@ -1,7 +1,7 @@
 ---
 title: Manage Nano Server
 description: "updates, servicing packages, networking tracing, performance monitoring"
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.service: na
 manager: DonGill
 ms.technology: server-nano
@@ -201,9 +201,9 @@ $scanResults = Invoke-CimMethod -InputObject $sess -MethodName ScanForUpdates -A
 
 **Note:**  
 These commands list what is installed, but do not specifically quote "installed" in the output. If you need output including that, such as for a report, you can run  
-```  
-Get-WindowsPackage--Online  
-```  
+```PowerShell
+Get-WindowsPackage -Online
+```
 
 ### Using WSUS  
 ---  

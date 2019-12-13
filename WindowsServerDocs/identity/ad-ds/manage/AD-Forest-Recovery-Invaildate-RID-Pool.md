@@ -6,7 +6,7 @@ author: MicrosoftGuyJFlo
 manager: mtillman
 ms.date: 08/09/2018
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.assetid: 2f5f84df-bd85-4ca4-bdd3-835bd1d45c11
 ms.technology: identity-adds
 ---

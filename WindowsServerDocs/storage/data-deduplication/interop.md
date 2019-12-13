@@ -2,7 +2,7 @@
 ms.assetid: 60fca6b2-f1c0-451f-858f-2f6ab350d220
 title: Data Deduplication interoperability
 ms.technology: storage-deduplication
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.topic: article
 author: wmgries
 manager: klaasl

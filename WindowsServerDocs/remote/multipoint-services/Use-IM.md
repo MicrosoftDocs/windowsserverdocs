@@ -2,7 +2,7 @@
 title: Use IM
 description: Learn how to use instant messaging in MultiPoint Services
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: multipoint-services
 ms.reviewer: na
 ms.suite: na

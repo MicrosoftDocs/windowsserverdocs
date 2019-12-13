@@ -2,7 +2,7 @@
 ms.assetid: 0b3587b2-219f-43d8-88b4-1254eaa8b910
 title: Web Application Proxy in Windows Server
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.service: 
 ms.suite: na

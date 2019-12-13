@@ -2,7 +2,7 @@
 title: Create OMA-DM based VPNv2 Profiles to Windows 10 devices
 description: 'You can use one of two methods to create OMA-DM based VPNv2 profiles. '
 services: active-directory
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: networking-ras
 documentationcenter: ''
 ms.assetid: 

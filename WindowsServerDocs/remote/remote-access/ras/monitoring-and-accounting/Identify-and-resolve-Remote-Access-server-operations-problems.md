@@ -3,7 +3,7 @@ title: Identify and resolve Remote Access server operations problems
 description: This topic is part of the guide for Remote Access Monitoring and Accounting in Windows Server 2016.
 manager: brianlic
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: networking-ras
@@ -70,7 +70,7 @@ Turning off the IP Helper service will cause a serious error on the Remote Acces
   
     **Resolution**  
   
-    1.  To ensure that the service is running, type **Get-Service iphlpsc** at a Windows PowerShell prompt.  
+    1.  To ensure that the service is running, type **Get-Service iphlpsvc** at a Windows PowerShell prompt.  
   
     2.  To enable the service, type **Start-Service iphlpsvc** from an elevated Windows PowerShell prompt.  
   
@@ -89,9 +89,6 @@ To restore the IP Helper service on your Remote Access server, you can follow th
   
 The following Windows PowerShell cmdlet or cmdlets perform the same function as the preceding procedure. Enter each cmdlet on a single line, even though they may appear word-wrapped across several lines here because of formatting constraints.  
   
-```  
+```PowerShell
 PS> Get-RemoteAccessHealth | Where-Object {$_.Component -eq "IP-HTTPS"} | Format-List -Property *  
-```  
-  
-
-
+```

@@ -2,7 +2,7 @@
 title: Features removed or planned for removal in Windows Server 2019
 description: Learn about the Features and functionalities removed or planned for removal starting with Windows Server 2019.
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: server-general
@@ -11,7 +11,7 @@ ms.topic: article
 author: jasongerend
 ms.author: jgerend
 manager: jasgro
-ms.date: 08/22/2019
+ms.date: 10/22/2019
 ms.localizationpriority: medium
 ---
 # Features removed or planned for replacement starting Windows Server 2019
@@ -35,6 +35,7 @@ We're removing the following features and functionalities from the installed pro
 | Business Scanning, also called Distributed Scan Management (DSM)|We're removing this secure scanning and scanner management capability - there are no devices that support this feature. |
 | Print components - now optional component for Server Core installations|In previous releases of Windows Server, the print components were *disabled* by default in the Server Core installation option. We changed that in Windows Server 2016, enabling them by default. In Windows Server 2019, those print components are once again disabled by default for Server Core. If you need to enable the print components, you can do so by running the **Install-WindowsFeature Print-Server** cmdlet. |
 | [Remote Desktop Connection Broker and Remote Desktop Virtualization Host](../remote/remote-desktop-services/desktop-hosting-service.md) in a Server Core installation|Most Remote Desktop Services deployments have these roles co-located with the Remote Desktop Session Host (RDSH), which requires Server with Desktop Experience; to be consistent with RDSH we're changing these roles to also require Server with Desktop Experience. These RDS roles are no longer available for use in a [Server Core installation](../administration/server-core/what-is-server-core.md). If you need to [deploy these roles as part of your Remote Desktop infrastructure](../remote/remote-desktop-services/rds-deploy-infrastructure.md), you can [install them on Windows Server with Desktop Experience](../get-started/getting-started-with-server-with-desktop-experience.md). <br/><br/>These roles are also included in the Desktop Experience installation option of Windows Server 2019. |
+| [RemoteFX 3D Video Adapter (vGPU)](../remote/remote-desktop-services/rds-remotefx-vgpu.md)|We're developing new graphics acceleration options for virtualized environments. You can also use [Discrete Device Assignment (DDA)](../virtualization/hyper-v/plan/plan-for-deploying-devices-using-discrete-device-assignment.md) as an alternative. |
 
 ## Features we're no longer developing
 

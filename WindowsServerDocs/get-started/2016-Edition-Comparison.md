@@ -1,17 +1,13 @@
 ---
 title: Windows Server 2016 Products and Editions
-description: "Explains differences in the Standard and Datacenter editions" 
-ms.custom: na
-ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.suite: na
-ms.date: 01/03/2017
+description: "Explains differences in the Windows Server Standard and Windows Server Datacenter editions" 
+ms.prod: windows-server
+ms.date: 10/04/2019
 ms.technology: server-general
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: c5ca3bfe-7ced-49f6-a932-80cab33f419e
-author: jaimeo
-ms.author: jaimeo
+author: jasongerend
+ms.author: jgerend
 manager: dongill
 ms.localizationpriority: medium
 ---
@@ -20,59 +16,61 @@ ms.localizationpriority: medium
 > Applies To: Windows Server 2016
   
 ## Locks and Limits
-|Locks and Limits|Windows Server 2016 Standard|Windows Server 2016 Datacenter|  
-|-------------------|----------|---------------------------|  
-|Maximum number of users|Based on CALs|Based on CALs|
-|Maximum SMB connections|16777216|16777216|
-|Maximum RRAS connections|unlimited|unlimited|
-|Maximum IAS connections|2147483647|2147483647|
-|Maximum RDS connections|65535|65535|
-|Maximum number of 64-bit sockets|64|64|
-|Maximum number of cores|unlimited|unlimited|
-|Maximum RAM|24 TB|24 TB|
-|Can be used as virtualization guest|Yes; 2 virtual machines, plus one Hyper-V host per license|Yes; unlimited virtual machines, plus one Hyper-V host per license|
-|Server can join a domain|yes|yes|
-|Edge network protection/firewall|no|no|
-|DirectAccess|yes|yes|
-|DLNA codecs and web media streaming|Yes, if installed as Server with Desktop Experience|Yes, if installed as Server with Desktop Experience|
+
+| Locks and Limits | Windows Server 2016 Standard | Windows Server 2016 Datacenter |
+| ------------------- |---------- | --------------------------- |  
+| Maximum number of users | Based on CALs   | Based on CALs     |
+| Maximum SMB connections | 16,777,216      | 16,777,216          |
+| Maximum RRAS connections| unlimited       | unlimited         |
+| Maximum IAS connections | 2,147,483,647   | 2,147,483,647        |
+| Maximum RDS connections | 65535           | 65535             |
+| Maximum number of 64-bit sockets | 64     | 64                |
+| Maximum number of cores | unlimited       | unlimited      |
+| Maximum RAM             | 24 TB           | 24 TB             |
+| Can be used as virtualization guest | Yes; 2 virtual machines, plus one Hyper-V host per license | Yes; <strong>unlimited virtual machines</strong>, plus one Hyper-V host per license |
+| Server can join a domain | yes            | yes                |
+| Edge network protection/firewall | no     | no                 |
+| DirectAccess            | yes             | yes                |
+| DLNA codecs and web media streaming | Yes, if installed as Server with Desktop Experience | Yes, if installed as Server with Desktop Experience |
 
 ## Server roles
-|Windows Server roles available|Role services|Windows Server 2016 Standard|Windows Server 2016 Datacenter|  
-|-------------------|----------|----------|---------------------------|  
-|Active Directory Certificate Services| |Yes|Yes|
-|Active Directory Domain Services| |Yes|Yes|
-|Active Directory Federation Services| |Yes|Yes|
-|AD Lightweight Directory Services| |Yes|Yes|
-|AD Rights Management Services| |Yes|Yes|
-|Device Health Attestation| |Yes|Yes|
-|DHCP Server| |Yes|Yes|
-|DNS Server| |Yes|Yes|
-|Fax Server| |Yes|Yes|
-|File and Storage Services|File Server|Yes|Yes|
-|File and Storage Services|BranchCache for Network Files|Yes|Yes|
-|File and Storage Services|Data Deduplication|Yes|Yes|
-|File and Storage Services|DFS Namespaces|Yes|Yes|
-|File and Storage Services|DFS Replication|Yes|Yes|
-|File and Storage Services|File Server Resource Manager|Yes|Yes|
-|File and Storage Services|File Server VSS Agent Service|Yes|Yes|
-|File and Storage Services|iSCSI Target Server|Yes|Yes|
-|File and Storage Services|iSCSI Target Storage Provider|Yes|Yes|
-|File and Storage Services|Server for NFS|Yes|Yes|
-|File and Storage Services|Work Folders|Yes|Yes|
-|File and Storage Services|Storage Services|Yes|Yes|
-|Host Guardian Service| |Yes|Yes|
-|Hyper-V| |Yes|Yes; including Shielded Virtual Machines|
-|MultiPoint Services| |Yes|Yes|
-|Network Controller| |No|Yes|
-|Network Policy and Access Services| |Yes, when installed as Server with Desktop Experience|Yes, when installed as Server with Desktop Experience|
-|Print and Document Services| |Yes|Yes|
-|Remote Access| |Yes|Yes|
-|Remote Desktop Services| |Yes|Yes|
-|Volume Activation Services| |Yes|Yes|
-|Web Services (IIS)| |Yes|Yes|
-|Windows Deployment Services| |Yes, when installed as Server with Desktop Experience|Yes, when installed as Server with Desktop Experience|
-|Windows Server Essentials Experience| |Yes|Yes|
-|Windows Server Update Services| |Yes|Yes|
+
+| Windows Server roles available     | Role services | Windows Server 2016 Standard | Windows Server 2016 Datacenter |  
+| -------------------                | ----------    | ----------                   | ---------------------------    |  
+| Active Directory Certificate Services|              | Yes                          | Yes                            |
+| Active Directory Domain Services    |               | Yes                          | Yes                            |
+| Active Directory Federation Services|               | Yes                          | Yes                            |
+| AD Lightweight Directory Services| |Yes|Yes|
+| AD Rights Management Services| |Yes|Yes|
+| Device Health Attestation| |Yes|Yes|
+| DHCP Server| |Yes|Yes|
+| DNS Server| |Yes|Yes|
+| Fax Server| |Yes|Yes|
+| File and Storage Services|File Server|Yes|Yes|
+| File and Storage Services|BranchCache for Network Files|Yes|Yes|
+| File and Storage Services|Data Deduplication|Yes|Yes|
+| File and Storage Services|DFS Namespaces|Yes|Yes|
+| File and Storage Services|DFS Replication|Yes|Yes|
+| File and Storage Services|File Server Resource Manager|Yes|Yes|
+| File and Storage Services|File Server VSS Agent Service|Yes|Yes|
+| File and Storage Services|iSCSI Target Server|Yes|Yes|
+| File and Storage Services|iSCSI Target Storage Provider|Yes|Yes|
+| File and Storage Services|Server for NFS|Yes|Yes|
+| File and Storage Services|Work Folders|Yes|Yes|
+| File and Storage Services|Storage Services|Yes|Yes|
+| Host Guardian Service| |Yes|Yes|
+| Hyper-V| |Yes|Yes; <strong>including Shielded Virtual Machines</strong>|
+| MultiPoint Services| |Yes|Yes|
+| Network Controller| |No| <strong>Yes</strong> |
+| Network Policy and Access Services| |Yes, when installed as Server with Desktop Experience|Yes, when installed as Server with Desktop Experience|
+| Print and Document Services| |Yes|Yes|
+| Remote Access| |Yes|Yes|
+| Remote Desktop Services| |Yes|Yes|
+| Volume Activation Services| |Yes|Yes|
+| Web Services (IIS)| |Yes|Yes|
+| Windows Deployment Services| |Yes, when installed as Server with Desktop Experience|Yes, when installed as Server with Desktop Experience|
+| Windows Server Essentials Experience| |Yes|Yes|
+| Windows Server Update Services| |Yes|Yes|
 
 ## Features
 
@@ -91,7 +89,7 @@ ms.localizationpriority: medium
 |Enhanced Storage|Yes|Yes|
 |Failover Clustering|Yes|Yes|
 |Group Policy Management|Yes|Yes|
-|Host Guardian Hyper-V Support|No|Yes|
+|Host Guardian Hyper-V Support|No|<strong>Yes</strong> |
 |I/O Quality of Service|Yes|Yes|
 |IIS Hostable Web Core|Yes|Yes|
 |Internet Printing Client|Yes, when installed as Server with Desktop Experience|Yes, when installed as Server with Desktop Experience|
@@ -117,7 +115,7 @@ ms.localizationpriority: medium
 |SMB Bandwidth Limit|Yes|Yes|
 |SMTP Server|Yes|Yes|
 |SNMP Service|Yes|Yes|
-|Software Load Balancer|No|Yes|
+|Software Load Balancer|No| <strong>Yes</strong> |
 |Storage Replica|No|Yes|
 |Telnet Client|Yes|Yes|
 |TFTP Client|Yes, when installed as Server with Desktop Experience|Yes, when installed as Server with Desktop Experience|
@@ -154,15 +152,15 @@ ms.localizationpriority: medium
 |Nano Server installation option|Yes|Yes|
 |Server Manager|Yes|Yes|
 |SMB Direct and SMB over RDMA|Yes|Yes|
-|Software-defined Networking|No|Yes|
-|Storage Management Service|Yes|Yes|
+| Software-defined Networking | No | <strong>Yes</strong> |
+|Storage Replica | No | <strong>Yes</strong> |
 |Storage Spaces|Yes|Yes|
-|Storage Spaces Direct|No|Yes|
+|Storage Spaces Direct|No| <strong>Yes</strong> |
 |Volume Activation Services|Yes|Yes|
 |VSS (Volume Shadow Copy Service) integration|Yes|Yes|
 |Windows Server Update Services|Yes|Yes|
 |Windows System Resource Manager|Yes|Yes|
 |Server license logging|Yes|Yes|
-|Inherited activation|As guest if hosted on Datacenter|Can be host or guest|
-|Work folders|Yes|Yes|
+|Inherited activation|As guest if hosted on Datacenter| <strong>Can be host or guest</strong> |
+|Work Folders|Yes|Yes|
 

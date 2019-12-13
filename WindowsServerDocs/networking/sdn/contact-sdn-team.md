@@ -2,7 +2,7 @@
 title: Contact the Datacenter and Cloud Networking Team
 description: This page is designed to inform customers on the best methods for reaching the SDN team in various contexts.
 manager: brianlic
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: networking-sdn
 ms.topic: article
 ms.assetid: f9945c55-c2d0-448f-86dd-8c734e1b2987

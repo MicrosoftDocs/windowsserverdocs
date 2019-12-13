@@ -2,7 +2,7 @@
 title: Remote RADIUS Server Groups
 description: This topic provides an overview of Network Policy Server Remote RADIUS Server Groups in Windows Server 2016.
 manager: brianlic
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: networking
 ms.topic: article
 ms.assetid: d81678a7-be21-48f2-9b3f-5a75d6aef013

@@ -2,7 +2,7 @@
 title: Geo-redundant RDS data centers in Azure
 description: Learn how to create an RDS deployment that uses multiple data centers to provide high availability across geographic locations.
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: remote-desktop-services

@@ -2,7 +2,7 @@
 title: DNS Policies Overview
 description: This topic is part of the DNS Policy Scenario Guide for Windows Server 2016
 manager: brianlic
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: networking-dns
 ms.topic: article
 ms.assetid: 566bc270-81c7-48c3-a904-3cba942ad463

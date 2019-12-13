@@ -1,7 +1,7 @@
 ---
 title: Deploy Windows Server Hybrid Cloud Print
 description: "How to set up Microsoft Hybrid Cloud Print"
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: Windows Server 2016

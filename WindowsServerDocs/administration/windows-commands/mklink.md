@@ -2,7 +2,7 @@
 title: mklink
 description: "Windows Commands topic for **** - "
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -39,7 +39,7 @@ mklink [[/d] | [/h] | [/j]] <Link> <Target>
 
 ## <a name="BKMK_examples"></a>Examples
 
-The follwing example demonstrates the creation and removal of a symbolic link named MyFolder and MyFile.file from the root directory to the \Users\User1\Documents directory and a example.file located within the directory:
+The following example demonstrates the creation and removal of a symbolic link named MyFolder and MyFile.file from the root directory to the \Users\User1\Documents directory and a example.file located within the directory:
 ```
 mklink /d \MyFolder \Users\User1\Documents
 mklink /h \MyFile.file \User1\Documents\example.file

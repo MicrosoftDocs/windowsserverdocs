@@ -6,8 +6,8 @@ ms.topic: article
 author: nwashburn-ms
 ms.author: niwashbu
 ms.localizationpriority: medium
-ms.date: 06/07/2019
-ms.prod: windows-server-threshold
+ms.date: 12/02/2019
+ms.prod: windows-server
 ---
 # Windows Admin Center Frequently Asked Questions
 
@@ -88,7 +88,7 @@ We are investigating due to customer demand, but there is currently no locked pl
 
 ## Which web browsers are supported by Windows Admin Center?
 
-The latest versions of Microsoft Edge (Windows 10, version 1709 or later) and Google Chrome browsers are tested and supported on Windows 10. [View browser specific known issues](../support/known-issues.md#browser-specific-issues). Other modern web browsers or other platforms are not currently part of our test matrix and are therefore not *officially* supported.
+The latest versions of Microsoft Edge (Windows 10, version 1709 or later), Google Chrome, and [Microsoft Edge Insider](https://microsoftedgeinsider.com) are tested and supported on Windows 10. [View browser specific known issues](../support/known-issues.md#browser-specific-issues). Other modern web browsers or other platforms are not currently part of our test matrix and are therefore not *officially* supported.
 
 ## How does Windows Admin Center handle security?
 
@@ -137,7 +137,7 @@ There are two versions of Windows Admin Center available for download:
 
 ### Windows Admin Center
 
-* For IT admins who are not able to update frequently or who want more validation time for the releases they use in production, this version is for you. Our current generally available (GA) release is Windows Admin Center 1904.
+* For IT admins who are not able to update frequently or who want more validation time for the releases they use in production, this version is for you. Our current generally available (GA) release is Windows Admin Center 1910.
 * [!INCLUDE [support-policy](../includes/support-policy.md)]
 * To get the latest release, [download here](https://aka.ms/WACDownload).
 

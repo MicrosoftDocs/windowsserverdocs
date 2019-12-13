@@ -1,7 +1,7 @@
 ---
 title: Initialize the HGS cluster using AD mode in a new dedicated forest (default)
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.topic: article
 manager: dongill
 author: rpsqrd

@@ -7,7 +7,7 @@ author: nwashburn-ms
 ms.author: niwashbu
 ms.date: 06/06/2019
 ms.localizationpriority: medium
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ---
 # Create a connection provider for a solution extension
 

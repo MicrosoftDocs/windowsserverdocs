@@ -7,7 +7,7 @@ author: jasongerend
 ms.author: jgerend
 ms.date: 10/17/2018
 ms.localizationpriority: medium
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ---
 
 # Windows Admin Center UI text and design style guide

@@ -2,7 +2,7 @@
 title: tracerpt
 description: "Windows Commands topic for **** - "
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -37,8 +37,8 @@ tracerpt <[-l] <value [value [...]]>|-rt <session_name [session_name [...]]>> [o
 |                   -?                   |                                                         Displays context sensitive help.                                                          |
 |          -config \<filename>           |                                                 Load a settings file containing command options.                                                  |
 |                   -y                   |                                                  Answer yes to all questions without prompting.                                                   |
-|                -f \<XML                |                                                                       HTML>                                                                       |
-|               -of \<CSV                |                                                                       EVTX                                                                        |
+|            -f \<XML\|HTML>             |                                                                  Report format.                                                                   |
+|         -of \<CSV\|EVTX\|XML>          |                                                         Dump format, the default is XML.                                                          |
 |            -df \<filename>             |                                            Create a Microsoft-specific counting/reporting schema file.                                            |
 |            -int \<filename>            |                                            Dump the interpreted event structure to the specified file.                                            |
 |                  -rts                  |                        Report raw timestamp in the event trace header. Can only be used with -o, not -report or -summary.                         |

@@ -8,7 +8,7 @@ manager: mtillman
 ms.date: 04/17/2019
 ms.topic: article
 ms.custom: it-pro
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: identity-adfs
 ---
 
@@ -66,6 +66,8 @@ AD FS supports multiple multi-forest configuration and relies on the underlying 
 - In the event of a one way forest trust such as a DMZ forest containing partner identities, we recommend deploying ADFS in the corp forest and treating the DMZ forest as another local claims provider trust connected via LDAP. In this case Windows Integrated auth will not work for the DMZ forest users and they will be required to perform Password auth as that is the only supported mechanism for LDAP. In the event you cannot pursue this option, you would need to set up another ADFS in the DMZ forest and add that as Claims Provider Trust in the ADFS in the corp forest. Users will need to do Home realm discovery but both Windows Integrated auth and Password auth will work. Please make appropriate changes in the issuance rules in ADFS in DMZ forest as ADFS in the corp forest will not be able to get extra user information about the user from the DMZ forest.
 - While domain level trusts are supported and can work, we highly recommend you moving to a forest level trust model. Additionally, you would need to ensure that UPN routing and NETBIOS name resolution of names need to work accurately.
 
+>[!NOTE]  
+>If elective authentication is used with a 2-way trust configuration, ensure the caller user is granted the "allow to authenticate" permission on the target service account. 
 
 
 ## Design

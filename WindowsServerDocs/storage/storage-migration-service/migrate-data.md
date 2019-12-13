@@ -6,7 +6,7 @@ ms.author: jgerend
 manager: elizapo
 ms.date: 02/13/2019
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: storage
 ---
 # Use Storage Migration Service to migrate a server
@@ -17,7 +17,7 @@ This topic discusses how to migrate a server, including its files and configurat
 
 Before you get started, install Storage Migration Service and make sure that the necessary firewall ports are open.
 
-1. Check the [Storage Migration Service requirements](overview.md#requirements) and install [Windows Admin Center](../../manage/windows-admin-center/understand/windows-admin-center.md) on your PC or a management server if you haven't already.
+1. Check the [Storage Migration Service requirements](overview.md#requirements) and install [Windows Admin Center](../../manage/windows-admin-center/understand/windows-admin-center.md) on your PC or a management server if you haven't already. If migrating domain-joined source computers, you must install and run the Storage Migration Service on a server joined to the same domain or forest as the source computers.
 2. In Windows Admin Center, connect to the orchestrator server running Windows Server 2019. <br>This is the server that you'll install Storage Migration Service on and use to manage the migration. If you're migrating only one server, you can use the destination server as long as it's running Windows Server 2019. We recommend you use a separate orchestration server for any multi-server migrations.
 1. Go to **Server Manager** (in Windows Admin Center) > **Storage Migration Service** and select **Install** to install Storage Migration Service and its required components (shown in Figure 1).
     ![Screenshot of the Storage Migration Service page showing the Install button](media/migrate/install.png)
@@ -53,7 +53,7 @@ In this step, you specify what servers to migrate and then scan them to collect 
 In this step you transfer data after specifying where to put it on the destination servers.
 
 1. On the **Transfer data** > **Enter credentials** page, type admin credentials that work on the destination servers you want to migrate to, and then select **Next**.
-2. On the **Add a destination device and mappings** page, the first source server is listed. Type the name of the server or clustered file server to which you want to migrate and then select **Scan device**.
+2. On the **Add a destination device and mappings** page, the first source server is listed. Type the name of the server or clustered file server to which you want to migrate and then select **Scan device**. If migrating from a domain-joined source computer, the destination server must be joined to the same domain.
 3. Map the source volumes to destination volumes, clear the **Include** checkbox for any shares you don't want to transfer (including any administrative shares located in the Windows system folder), and then select **Next**.
    ![Screenshot showing a source server and its volumes and shares and where they'll be transferred to on the destination](media/migrate/transfer.png)
     **Figure 3: A source server and where its storage will be transferred to**

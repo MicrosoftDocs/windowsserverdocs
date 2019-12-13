@@ -3,7 +3,7 @@ title: Configure a Multi-Forest Deployment
 description: This topic is part of the guide Deploy Remote Access in a Multi-Forest Environment in Windows Server 2016.
 manager: brianlic
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: networking-ras

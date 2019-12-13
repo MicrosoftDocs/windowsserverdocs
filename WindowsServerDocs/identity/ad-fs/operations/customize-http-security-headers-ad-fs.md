@@ -7,7 +7,7 @@ manager: daveba
 ms.reviewer: akgoel23
 ms.date: 02/19/2019
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: identity-adfs
 ---
 
@@ -52,7 +52,7 @@ Set-AdfsResponseHeaders -EnableResponseHeaders $false
 ### HTTP Strict-Transport-Security (HSTS) 
 HSTS is a web security policy mechanism which helps mitigate protocol downgrade attacks and cookie hijacking for services that have both HTTP and HTTPS endpoints. It allows web servers to declare that web browsers (or other complying user agents) should only interact with it using HTTPS and never via the HTTP protocol.  
  
-All AD FS endpoints for web authentication traffic are opened exclusively over HTTPS. As a result, AD FS effectively mitigates the threats that HTTP Strict Transport Security policy mechanism provides (by default there is no downgrade to HTTP since there are no listeners in HTTP). The header can be customized by setting the following parameters 
+All AD FS endpoints for web authentication traffic are opened exclusively over HTTPS. As a result, AD FS effectively mitigates the threats that HTTP Strict Transport Security policy mechanism provides (by default there is no downgrade to HTTP since there are no listeners in HTTP). The header can be customized by setting the following parameters:
  
 - **max-age=&lt;expire-time&gt;** – The expiry time (in seconds) specifies how long the site should only be accessed using HTTPS. Default and recommended value is 31536000 seconds (1 year).  
 - **includeSubDomains** – This is an optional parameter. If specified, the HSTS rule applies to all subdomains as well.  
@@ -106,7 +106,7 @@ Set-AdfsResponseHeaders -RemoveHeaders "X-Frame-Options"
 ```
 
 ### X-XSS-Protection 
-This HTTP security response header is used to stop web pages from loading when cross-site scripting (XSS) attacks are detected by browsers. This is referred as XSS filtering. The header can be set to one of the following values 
+This HTTP security response header is used to stop web pages from loading when cross-site scripting (XSS) attacks are detected by browsers. This is referred as XSS filtering. The header can be set to one of the following values:
  
 - **0** – Disables XSS filtering. Not recommended.  
 - **1** – Enables XSS filtering. If XSS attack is detected, browser will sanitize the page.   
@@ -137,7 +137,7 @@ Web browser security prevents a web page from making cross-origin requests initi
 To better understand CORS request, let's walkthrough a scenario where a single page application (SPA) needs to call a web API with a different domain. Further, let's consider that both SPA and API are configured on ADFS 2019 and AD FS has CORS enabled i.e. AD FS can identify CORS headers in the HTTP request, validate header values, and include appropriate CORS headers in the response (details on how to enable and configure CORS on AD FS 2019 in CORS Customization section below). Sample flow: 
 
 1. User accesses SPA through client browser and is redirected to AD FS auth endpoint for authentication. Since SPA is configured for implicit grant flow, request returns an Access + ID token to the browser after successful authentication.  
-2. After user authentication, the front-end JavaScript included in SPA makes a request to access the web API. The request is redirected to AD FS with following headers
+2. After user authentication, the front-end JavaScript included in SPA makes a request to access the web API. The request is redirected to AD FS with following headers:
     - Options – describes the communication options for the target resource 
     - Origin – includes the origin of the web API
     - Access-Control-Request-Method – identifies the HTTP method (eg, DELETE) to be used when actual request is made 
@@ -145,11 +145,11 @@ To better understand CORS request, let's walkthrough a scenario where a single p
     
    >[!NOTE]
    >CORS request resembles a standard HTTP request, however, the presence of an origin header signals the incoming request is CORS related. 
-3. AD FS verifies that the web API origin included in the header is listed in the trusted origins configured in AD FS (details on how to modify trusted origins in CORS Customization section below). AD FS then responds with following headers.  
+3. AD FS verifies that the web API origin included in the header is listed in the trusted origins configured in AD FS (details on how to modify trusted origins in CORS Customization section below). AD FS then responds with following headers:  
     - Access-Control-Allow-Origin – value same as in the Origin header 
     - Access-Control-Allow-Method – value same as in the Access-Control-Request-Method header 
     - Access-Control-Allow-Headers - value same as in the Access-Control-Request-Headers header 
-4. Browser sends the actual request including the following headers 
+4. Browser sends the actual request including the following headers:
     - HTTP method (eg, DELETE) 
     - Origin – includes the origin of the web API 
     - All headers included in the Access-Control-Allow-Headers response header 
@@ -198,7 +198,7 @@ If a directive is explicitly listed, the specified value overrides the value giv
 ```PowerShell
 Set-AdfsResponseHeaders -SetHeaderName "Content-Security-Policy" -SetHeaderValue "default-src ‘self'; img-src *" 
 ```
-Following sources can be defined for the default-src policy 
+The following sources can be defined for the default-src policy:
  
 - ‘self' – specifying this restricts the origin of the content to load to the origin of the web page 
 - ‘unsafe-inline' – specifying this in the policy allows the use of inline JavaScript and CSS 
@@ -222,7 +222,7 @@ Once set, the new header is sent in the AD FS response (fiddler snippet below).
  
 ![Fiddler](media/customize-http-security-headers-ad-fs/header2.png)
 
-## Web browswer compatibility
+## Web browser compatibility
 Use the following table and links to determine which web browsers are compatible with each of the security response headers.
 
 |HTTP Security Response Headers|Browser Compatibility|
@@ -235,5 +235,5 @@ Use the following table and links to determine which web browsers are compatible
 
 ## Next
 
-- [Use AD FS Help troublehshooting guides](https://aka.ms/adfshelp/troubleshooting )
+- [Use AD FS Help troubleshooting guides](https://aka.ms/adfshelp/troubleshooting )
 - [AD FS Troubleshooting](../../ad-fs/troubleshooting/ad-fs-tshoot-overview.md)

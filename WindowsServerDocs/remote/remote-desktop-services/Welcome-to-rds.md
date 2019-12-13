@@ -2,7 +2,7 @@
 title: Welcome to Remote Desktop Services in Windows Server 2016
 description: Provides an overview of Remote Desktop Services
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: remote-desktop-services
@@ -25,7 +25,7 @@ RDS offers deployment flexibility, cost efficiency, and extensibility—all deli
 
 Depending on your environment and preferences, you can set up the RDS solution for session-based virtualization, as a virtual desktop infrastructure (VDI), or as a combination of the two:
 
-- **Session-based virtualization**: Leverage the compute power of Windows Server to provide a cost-effective multi-session environment to drive your users' everyday workloads
+- **Session-based virtualization**: Leverage the compute power of Windows Server to provide a cost-effective multi-session environment to drive your users' everyday workloads.
 - **VDI**: Leverage Windows client to provide the high performance, app compatibility, and familiarity that your users have come to expect of their Windows desktop experience.
 
 Within these virtualization environments, you have additional flexibility in what you publish to your users:

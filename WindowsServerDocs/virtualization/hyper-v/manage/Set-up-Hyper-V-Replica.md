@@ -2,7 +2,7 @@
 title: Set up Hyper-V Replica
 ms.technology: compute-hyper-v
 description: "Gives instructions for setting up Replica, testing failover, and doing a first replication."
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.service: na
 manager: dongill
 ms.topic: article

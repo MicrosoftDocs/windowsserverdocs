@@ -2,7 +2,7 @@
 title: nslookup set type
 description: "Windows Commands topic for **** - "
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -18,7 +18,7 @@ ms.date: 10/16/2017
 
 >Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-changes the resource record type for the query.
+Changes the resource record type for the query.
 ## Syntax
 ```
 set type=<ResourceRecordtype>
@@ -48,10 +48,10 @@ Specifies a DNS resource record type. The default resource record type is A. The
 |  WKS  |                                         Describes a well-known service.                                         |
 | {help |                                                       ?}                                                        |
 
-Displays a short summary of <strong>nslookup</strong> subcommands
+Displays a short summary of <strong>nslookup</strong> subcommands.
 ## Remarks
 - The <strong>set type</strong> command performs the same function as the <strong>set querytype</strong> command.
-- for more information about resource record types, see Request for Comment (Rfc) 1035.
+- For more information about resource record types, see Request for Comment (Rfc) 1035.
   ## additional references
   <a href="command-line-syntax-key.md" data-raw-source="[Command-Line Syntax Key](command-line-syntax-key.md)">Command-Line Syntax Key</a>
   <a href="nslookup-set-querytype.md" data-raw-source="[nslookup set querytype](nslookup-set-querytype.md)">nslookup set querytype</a>

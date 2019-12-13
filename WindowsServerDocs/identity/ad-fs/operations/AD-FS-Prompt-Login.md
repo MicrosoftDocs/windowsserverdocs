@@ -7,7 +7,7 @@ manager: femila
 ms.date: 06/27/2017
 ms.topic: article
 ms.custom: it-pro
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: identity-adfs
 ---
 

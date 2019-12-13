@@ -1,7 +1,7 @@
 ---
 title: Performance Tuning Active Directory Servers
 description: Performance Tuning for Active Directory Servers
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: performance-tuning-guide
 ms.topic: landing-page
 ms.author: TimWi; ChrisRob; HerbertM; KenBrumf;  MLeary; ShawnRab; v-tea

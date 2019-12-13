@@ -2,7 +2,7 @@
 title: Remote Desktop clients FAQ
 description: Frequently asked questions about the Remote Desktop clients
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: remote-desktop-services
@@ -160,7 +160,7 @@ To use two or more screens, do the following:
 2. Enable **Use all monitors** and **Full screen**.
 
 ### Is bi-directional sound supported?
-Sound upstream (from client to server, for microphones) is not supported by the Remote Desktop Client.
+Bi-directional sound can be configured in the Windows client on a per-connection basis. The relevant settings can be accessed in the **Remote audio** section of the **Local Resources** options tab.
 
 ### What can I do if the sound won't play?
 Sign out of the session (don't just disconnect, sign all the way out), and then sign in again.

@@ -1,6 +1,6 @@
 ---
 title: File Server Resource Manager (FSRM) overview
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.author: jgerend
 ms.manager: brianlic
 ms.technology: storage

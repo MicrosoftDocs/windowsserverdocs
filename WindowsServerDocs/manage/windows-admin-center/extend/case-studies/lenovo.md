@@ -7,7 +7,7 @@ author: daniellee-msft
 ms.author: jol
 ms.date: 1/7/2019
 ms.localizationpriority: medium
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ---
 # Lenovo XClarity Integrator Extension
 

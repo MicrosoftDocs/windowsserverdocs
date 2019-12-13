@@ -2,7 +2,7 @@
 title: Wireless Access Deployment
 description: This topic is part of the Windows Server 2016 Networking guide "Deploy Password-Based 802.1X Authenticated Wireless Access"
 manager: brianlic
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: networking
 ms.topic: article
 ms.assetid: 4b66f517-b17d-408c-828f-a3793086bc1f
@@ -115,7 +115,7 @@ Membership in **Domain Admins**, or equivalent, is the minimum required to perfo
 
 6. Click **OK**.
 
-If you need more than one security group for wireless users, repeat these steps to create additional wireless users groups. Later you can create individual network policies in NPS to apply different conditions and contstraints to each group, providing them with different access permissions and connectivity rules.
+If you need more than one security group for wireless users, repeat these steps to create additional wireless users groups. Later you can create individual network policies in NPS to apply different conditions and constraints to each group, providing them with different access permissions and connectivity rules.
 
 ### <a name="bkmk_addusers"></a> Add Users to the Wireless Users Security Group
 

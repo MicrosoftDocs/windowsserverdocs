@@ -1,17 +1,18 @@
 ---
 title: Troubleshooting the Host Guardian Service
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.topic: article
 ms.assetid: 424b8090-0692-49a6-9dc4-3c0e77d74b80
 manager: dongill
 author: rpsqrd
 ms.technology: security-guarded-fabric
+ms.date: 09/25/2019
 ---
 
 # Troubleshooting the Host Guardian Service
 
-> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
+> Applies to: Windows Server 2019, Windows Server (Semi-Annual Channel), Windows Server 2016
 
 This topic describes resolutions to common problems encountered when deploying or operating a Host Guardian Service (HGS) server in a guarded fabric.
 If you are unsure of the nature of your problem, first try running the [guarded fabric diagnostics](guarded-fabric-troubleshoot-diagnostics.md) on your HGS servers and Hyper-V hosts to narrow down the potential causes.
@@ -75,6 +76,7 @@ $cert.Acl = $cert.Acl | Add-AccessRule $gMSA Read Allow
 
 If your certificate's private keys are backed by a hardware security module (HSM) or a custom key storage provider (KSP), the permission model will depend on your specific software vendor.
 For the best results, consult your vendor's documentation or support site for information on how private key permissions are handled for your specific device/software.
+In all cases, the gMSA used by HGS requires *read* permissions on the encryption, signing, and communications certificate private keys so that it can perform signing and encryption operations.
 
 Some hardware security modules do not support granting specific user accounts access to a private key; rather, they allow the computer account access to all keys in a specific key set.
 For such devices, it is usually sufficient to give the computer access to your keys and HGS will be able to leverage that connection.
@@ -88,7 +90,7 @@ Contact your HSM manufacturer for accurate information pertaining to your specif
 HSM Brand/Series      | Suggestion
 ----------------------|-------------
 Gemalto SafeNet       | Ensure the Key Usage Property in the certificate request file is set to 0xa0, allowing the certificate to be used for signing and encryption. Additionally, you must grant the gMSA account *read* access to the private key using the local certificate manager tool (see steps above).
-nCipher nShield        | Ensure each HGS node has access to the security world containing the signing and encryption keys. You do not need to configure gMSA-specific permissions.
+nCipher nShield        | Ensure each HGS node has access to the security world containing the signing and encryption keys. You may additionally need to grant the gMSA *read* access to the private key using the local certificate manager (see steps above).
 Utimaco CryptoServers | Ensure the Key Usage Property in the certificate request file is set to 0x13, allowing the certificate to be used for encryption, decryption, and signing.
 
 ### Certificate requests

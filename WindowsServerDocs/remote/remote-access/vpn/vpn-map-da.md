@@ -1,7 +1,7 @@
 ---
 title: Always On VPN features 
 description: In this topic, you learn about the features and functionality of Always On VPN. 
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: networking
 ms.topic: article
 ms.localizationpriority: medium 
@@ -20,8 +20,8 @@ author: shortpatti
 
 In this topic, you learn about the features and functionalities of Always On VPN.  The following table is not an exhaustive list, however, it does include some of the most common features and functionalities used in remote access solutions. 
 
->[!TIP]
->If you currently use DirectAccess, we recommend that you investigate the Always On VPN functionality carefully to determine if it addresses all of your remote access needs before migrating form DirectAccess to Always On VPN.  
+> [!TIP]
+> If you currently use DirectAccess, we recommend that you investigate the Always On VPN functionality carefully to determine if it addresses all of your remote access needs before migrating from DirectAccess to Always On VPN.  
 
 |                                                   Functional area                                                   |                                                                                                                                                                                                                                                                                                                                                                                                                                                     Always On VPN                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
 |---------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|

@@ -2,7 +2,7 @@
 title: Software Inventory Logging Aggregator
 description: Describes how to install and manage Software Inventory Logging Aggregator
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: manage-software-inventory-logging
 ms.reviewer: na
 ms.suite: na

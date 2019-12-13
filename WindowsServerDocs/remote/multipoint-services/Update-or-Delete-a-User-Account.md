@@ -3,7 +3,7 @@ title: Update or Delete a User Account
 description: Learn how to update or delete a user in MultiPoint Services
 ms.custom: na
 ms.date: 07/11/2016
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: multipoint-services
 ms.reviewer: na
 ms.suite: na

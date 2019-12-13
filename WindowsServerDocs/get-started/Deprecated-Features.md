@@ -1,7 +1,7 @@
 ---
 title: Features Removed or Deprecated in Windows Server 2016
 description: A list of features and functionalities in Windows Server 2016 that have either been removed from the product in the current release or are planned for potential removal in subsequent releases (deprecated). It is intended for IT professionals who are updating operating systems in a commercial environment.
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: server-general
 ms.topic: article
 ms.date: 08/22/2019
@@ -73,7 +73,7 @@ The following features and functionalities are deprecated starting with this rel
 
 -   **Scregedit.exe** is deprecated. If you have scripts that depend on Scregedit.exe, adjust them to use Reg.exe or Windows PowerShell methods.  
 
--   **Sconfig.exe** is deprecated. Use Windows PowerShell instead.  
+-   **Sconfig.exe** is deprecated. Use [Sconfig.cmd](https://docs.microsoft.com/windows-server/get-started/sconfig-on-ws2016) instead. 
 
 ### NetCfg custom APIs
 

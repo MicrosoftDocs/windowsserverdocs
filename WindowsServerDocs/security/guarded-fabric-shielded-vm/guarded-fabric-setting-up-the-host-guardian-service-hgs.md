@@ -1,7 +1,7 @@
 ---
 title: Deploy the Host Guardian Service
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.topic: article
 ms.assetid: 0bd96e2a-1612-4bbf-8c23-7602020f4eec
 manager: dongill

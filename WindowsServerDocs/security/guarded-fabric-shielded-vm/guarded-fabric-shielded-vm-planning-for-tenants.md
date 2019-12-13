@@ -1,7 +1,7 @@
 ---
 title: Guarded Fabric and Shielded VM Planning Guide for Hosters
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.topic: article
 ms.assetid: 392af37f-a02d-4d40-a25d-384211cbbfdd
 manager: dongill

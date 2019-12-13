@@ -2,7 +2,7 @@
 title: Tenant on-premises components
 description: Describes the on-premises components in your RDS deployment.
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: remote-desktop-services
@@ -24,7 +24,6 @@ The following information describes the on-premises components that make up the 
 To access the hosted desktops and applications, the users must use Remote Desktop clients that support Remote Desktop Protocol (RDP) 7.1 or higher. In particular, the client must support Remote Desktop Gateway and Remote Desktop Connection Broker. To deliver applications to the local desktop, the client must also support the RemoteApp feature. To achieve highest gateway scale, the client must support the pure HTTP transport connections to RD Gateway.  
   
 Additional information:  
-[RemoteFX Enabled Devices](https://social.technet.microsoft.com/wiki/contents/articles/14534.remotefx-enabled-devices.aspx)  
 [What's new in Windows Server 2012 R2 Remote Desktop Gateway](https://blogs.technet.microsoft.com/enterprisemobility/2013/03/14/whats-new-in-windows-server-2012-remote-desktop-gateway/#transport)  
 [Microsoft Remote Desktop Clients](https://technet.microsoft.com/library/dn473009.aspx)  
 [Remote Desktop app for Windows in Microsoft Store](https://apps.microsoft.com/windows/app/remote-desktop/051f560e-5e9b-4dad-8b2e-fa5e0b05a480)  

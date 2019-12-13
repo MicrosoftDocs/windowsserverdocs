@@ -7,7 +7,7 @@ ms.author: joflore
 manager: mtillman
 ms.date: 05/31/2017
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 
 ms.technology: identity-adds
 ---
@@ -41,7 +41,7 @@ Active Directory also includes:
  This section provides links to core Active Directory concepts:
  
 * [Active Directory Structure and Storage Technologies](https://technet.microsoft.com/library/cc759186(v=ws.10).aspx)
-* [Domains Controller Roles](https://technet.microsoft.com/library/cc786438(v=ws.10).aspx) 
+* [Domain Controller Roles](https://technet.microsoft.com/library/cc786438(v=ws.10).aspx) 
 * [Active Directory Schema](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc771796(v=ws.10))
 * [Understanding Trusts](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc771568(v=ws.10)) 
 * [Active Directory Replication Technologies](https://technet.microsoft.com/library/cc786438(v=ws.10).aspx) 

@@ -1,7 +1,7 @@
 ---
 title: Install Server Core
 description: How to obtain and install a Server Core installation on Windows Server 2019, Windows Server 2016, or Windows Server (Semi-Annual Channel).
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.date: 05/21/2019
 ms.technology: server-general
 ms.tgt_pltfrm: na

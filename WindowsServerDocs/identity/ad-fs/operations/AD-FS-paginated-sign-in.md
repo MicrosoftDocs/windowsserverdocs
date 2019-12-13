@@ -6,7 +6,7 @@ ms.author: billmath
 manager: mtillman
 ms.date: 09/19/2018
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: identity-adfs
 ---
 # AD FS paginated sign-in

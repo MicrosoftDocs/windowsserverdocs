@@ -1,19 +1,19 @@
 ---
 title: Storage Migration Service overview
-description: Storage Migration Service makes it easier to migrate servers to a newer version of Windows Server. It provides a graphical tool that inventories data on servers and then transfers the data and configuration to newer servers—all without apps or users having to change anything.
+description: Storage Migration Service makes it easier to migrate storage to Windows Server or to Azure. It provides a graphical tool that inventories data on Windows and Linux servers and then transfers the data to newer servers or to Azure virtual machines. Storage Migration Service also provides the option to transfer the identity of a server to the destination server so that apps and users can access their data without changing links or paths.
 author: jasongerend
 ms.author: jgerend
 manager: elizapo
-ms.date: 08/16/2019
+ms.date: 10/25/2019
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: storage
 ---
 # Storage Migration Service overview
 
 >Applies to: Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server (Semi-Annual Channel)
 
-Storage Migration Service makes it easier to migrate servers to a newer version of Windows Server. It provides a graphical tool that inventories data on servers and then transfers the data and configuration to newer servers—all without apps or users having to change anything.
+Storage Migration Service makes it easier to migrate storage to Windows Server or to Azure. It provides a graphical tool that inventories data on Windows and Linux servers and then transfers the data to newer servers or to Azure virtual machines. Storage Migration Service also provides the option to transfer the identity of a server to the destination server so that apps and users can access their data without changing links or paths.
 
 This topic discusses why you'd want to use Storage Migration Service, how the migration process works, and what the requirements are for source and destination servers.
 
@@ -89,12 +89,17 @@ The source server must run one of the following operating systems:
 - Windows Server 2012 R2 Essentials
 - Windows Server 2016 Essentials
 - Windows Server 2019 Essentials
+- Windows Storage Server 2008
+- Windows Storage Server 2008 R2
+- Windows Storage Server 2012
+- Windows Storage Server 2012 R2
+- Windows Storage Server 2016
 
 Note: Windows Small Business Server and Windows Server Essentials are domain controllers. Storage Migration Service can't yet cut over from domain controllers, but can inventory and transfer files from them.   
 
 You can migrate the following additional source types if the orchestrator is running Windows Server, version 1903 or later, or if the orchestrator is running an earlier version of Windows Server with [KB4512534](https://support.microsoft.com/help/4512534/windows-10-update-kb4512534) installed:
 
-- Failover clusters
+- Failover clusters running Windows Server 2012, Windows Server 2012 R2, Windows Server 2016, Windows Server 2019
 - Linux servers that use Samba. We've tested the following:
     - CentOS 7
     - Debian GNU/Linux 8

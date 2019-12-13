@@ -2,12 +2,12 @@
 title: RDS - Run and tune
 description: Planning information to help you design your RD deployment.
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: remote-desktop-services
 ms.author: spatnaik
-ms.date: 09/23/2016  
+ms.date: 12/06/2019
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 047b08be-7f91-4194-a641-5b6941b92515
@@ -22,12 +22,12 @@ Designing for optimal performance and scale-out is key. Use the scenarios below 
 Use the following information to plan and design your deployment:
 
 - [Build anywhere](rds-plan-build-anywhere.md)
-- [Cater to different kinds of users](rds-plan-cater-to-users.md)
+- [Network guidance](network-guidance.md)
 - [Access from anywhere](rds-plan-access-from-anywhere.md)
 - [High availability](rds-plan-high-availability.md)
 - [MultiFactor Authentication](rds-plan-mfa.md)
 - [Secure data storage](rds-plan-secure-data-storage.md)
-- [Enable high-end graphics rendering](rds-graphics-virtualization.md)
+- [GPU acceleration](rds-graphics-virtualization.md)
 - [Connect from any device](rds-plan-connect-from-any-device.md)
 - [Choose how you pay](rds-plan-choose-how-you-pay.md)
 

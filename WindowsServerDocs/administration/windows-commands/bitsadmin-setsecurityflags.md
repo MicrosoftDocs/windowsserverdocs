@@ -2,7 +2,7 @@
 title: bitsadmin setsecurityflags
 description: "Windows Commands topic for **bitsadmin setsecurityflags** - Sets flags for HTTP that determine if BITS should check the certificate revocation list, ignore certain certificate errors, and define the policy to use when a server redirects the HTTP request."
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands

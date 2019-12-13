@@ -4,7 +4,7 @@ description: This topic is part of the guide Deploy Server Certificates for 802.
 manager: brianlic
 ms.topic: article
 ms.assetid: bd80a018-5a30-47c3-89fc-aacb9f5ad298
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: networking
 ms.author: pashort
 author: shortpatti

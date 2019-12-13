@@ -1,7 +1,7 @@
 ---
 title: Upload a Windows Server 2008/2008 R2 specialized image to Azure
 description: Windows Server 2008 and 2008 R2 are approaching end of service. Learn how to lift and shift to Azure by hosting Windows Server in the cloud.
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.mktglfcycl: manage
 ms.sitesec: library
 author: mikeblodge

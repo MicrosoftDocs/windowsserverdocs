@@ -2,7 +2,7 @@
 title: Network Controller
 description: This topic provides an overview of Network Controller in Windows Server 2016.
 manager: brianlic
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: networking-sdn
 ms.topic: article
 ms.assetid: 31f3fa4e-cd25-4bf3-89e9-a01a6cec7893

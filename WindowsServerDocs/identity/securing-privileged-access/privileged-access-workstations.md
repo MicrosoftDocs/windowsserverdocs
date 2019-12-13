@@ -2,7 +2,7 @@
 title: Why Privileged Access Workstations can help secure your organization
 description: How PAW can increase your organization's security posture
 
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.topic: article
 ms.assetid: 93589778-3907-4410-8ed5-e7b6db406513
 ms.date: 03/13/2019
@@ -508,124 +508,135 @@ In this section, we will configure group policies to prevent privileged administ
 
 1. Create the new **Restrict Workstation Logon** GPO - this setting will restrict Tier 0 and Tier 1 administrator accounts from logging onto standard workstations.  This GPO should be linked to the "Workstations" top-level OU and have the following settings:
    * In Computer Configuration\Policies\Windows Settings\Security Settings\Local Policies\User Rights Assignment\Deny log on as a batch job, select **Define these policy settings** and add the Tier 0 and Tier 1 groups:
-         Enterprise Admins
-         Domain Admins
-         Schema Admins
-         DOMAIN\Administrators
-         Account Operators
-         Backup Operators
-         Print Operators
-         Server Operators
-         Domain Controllers
-         Read-Only Domain Controllers
-         Group Policy Creators Owners
-         Cryptographic Operators
+     ```
+     Enterprise Admins
+     Domain Admins
+     Schema Admins
+     BUILTIN\Administrators
+     Account Operators
+     Backup Operators
+     Print Operators
+     Server Operators
+     Domain Controllers
+     Read-Only Domain Controllers
+     Group Policy Creators Owners
+     Cryptographic Operators
+     ```
 
-         > [!NOTE]
-         > Built-in Tier 0 Groups, see Tier 0 equivalency for more details.
+     > [!NOTE]
+     > Built-in Tier 0 Groups, see Tier 0 equivalency for more details.
 
          Other Delegated Groups
 
-         > [!NOTE]
-         > Any custom created groups with effective Tier 0 access, see Tier 0 equivalency for more details.
+     > [!NOTE]
+     > Any custom created groups with effective Tier 0 access, see Tier 0 equivalency for more details.
 
          Tier 1 Admins
 
-         > [!NOTE]
-         > This Group was created earlier in Phase 1.
+     > [!NOTE]
+     > This Group was created earlier in Phase 1.
 
    * In Computer Configuration\Policies\Windows Settings\Security Settings\Local Policies\User Rights Assignment\Deny log on as a service,  select **Define these policy settings** and add the Tier 0 and Tier 1 groups:
-         Enterprise Admins
-         Domain Admins
-         Schema Admins
-         DOMAIN\Administrators
-         Account Operators
-         Backup Operators
-         Print Operators
-         Server Operators
-         Domain Controllers
-         Read-Only Domain Controllers
-         Group Policy Creators Owners
-         Cryptographic Operators
+     ```
+     Enterprise Admins
+     Domain Admins
+     Schema Admins
+     BUILTIN\Administrators
+     Account Operators
+     Backup Operators
+     Print Operators
+     Server Operators
+     Domain Controllers
+     Read-Only Domain Controllers
+     Group Policy Creators Owners
+     Cryptographic Operators
+     ```
 
-         > [!NOTE]
-         > Note: Built-in Tier 0 Groups, see Tier 0 equivalency for more details.
+     > [!NOTE]
+     > Note: Built-in Tier 0 Groups, see Tier 0 equivalency for more details.
 
          Other Delegated Groups
 
-         > [!NOTE]
-         > Note: Any custom created groups with effective Tier 0 access, see Tier 0 equivalency for more details.
+     > [!NOTE]
+     > Note: Any custom created groups with effective Tier 0 access, see Tier 0 equivalency for more details.
 
          Tier 1 Admins
 
-         > [!NOTE]
-         > Note: This Group was created earlier in Phase 1
+     > [!NOTE]
+     > Note: This Group was created earlier in Phase 1
 
 2. Create the new **Restrict Server Logon** GPO - this setting will restrict Tier 0 administrator accounts from logging onto Tier 1 servers.  This GPO should be linked to the "Tier 1 Servers" top-level OU and have the following settings:
    * In Computer Configuration\Policies\Windows Settings\Security Settings\Local Policies\User Rights Assignment\Deny log on as a batch job, select **Define these policy settings** and add the Tier 0 groups:
-         Enterprise Admins
-         Domain Admins
-         Schema Admins
-         DOMAIN\Administrators
-         Account Operators
-         Backup Operators
-         Print Operators
-         Server Operators
-         Domain Controllers
-         Read-Only Domain Controllers
-         Group Policy Creators Owners
-         Cryptographic Operators
+     ```
+     Enterprise Admins
+     Domain Admins
+     Schema Admins
+     BUILTIN\Administrators
+     Account Operators
+     Backup Operators
+     Print Operators
+     Server Operators
+     Domain Controllers
+     Read-Only Domain Controllers
+     Group Policy Creators Owners
+     Cryptographic Operators
+     ```
 
-         > [!NOTE]
-         > Built-in Tier 0 Groups, see Tier 0 equivalency for more details.
+     > [!NOTE]
+     > Built-in Tier 0 Groups, see Tier 0 equivalency for more details.
 
          Other Delegated Groups
 
-         > [!NOTE]
-         > Any custom created groups with effective Tier 0 access, see Tier 0 equivalency for more details.
+     > [!NOTE]
+     > Any custom created groups with effective Tier 0 access, see Tier 0 equivalency for more details.
 
    * In Computer Configuration\Policies\Windows Settings\Security Settings\Local Policies\User Rights Assignment\Deny log on as a service, select **Define these policy settings** and add the Tier 0 groups:
-         Enterprise Admins
-         Domain Admins
-         Schema Admins
-         DOMAIN\Administrators
-         Account Operators
-         Backup Operators
-         Print Operators
-         Server Operators
-         Domain Controllers
-         Read-Only Domain Controllers
-         Group Policy Creators Owners
-         Cryptographic Operators
+     ```
+     Enterprise Admins
+     Domain Admins
+     Schema Admins
+     BUILTIN\Administrators
+     Account Operators
+     Backup Operators
+     Print Operators
+     Server Operators
+     Domain Controllers
+     Read-Only Domain Controllers
+     Group Policy Creators Owners
+     Cryptographic Operators
+     ```
 
-         > [!NOTE]
-         > Built-in Tier 0 Groups, see Tier 0 equivalency for more details.
+     > [!NOTE]
+     > Built-in Tier 0 Groups, see Tier 0 equivalency for more details.
 
          Other Delegated Groups
 
-         > [!NOTE]
-         > Any custom created groups with effective Tier 0 access, see Tier 0 equivalency for more details.
+     > [!NOTE]
+     > Any custom created groups with effective Tier 0 access, see Tier 0 equivalency for more details.
 
    * In Computer Configuration\Policies\Windows Settings\Security Settings\Local Policies\User Rights Assignment\Deny log on locally, select **Define these policy settings** and add the Tier 0 groups:
-         Enterprise Admins
-         Domain Admins
-         Schema Admins
-         Account Operators
-         Backup Operators
-         Print Operators
-         Server Operators
-         Domain Controllers
-         Read-Only Domain Controllers
-         Group Policy Creators Owners
-         Cryptographic Operators
+     ```
+     Enterprise Admins
+     Domain Admins
+     Schema Admins
+     BUILTIN\Administrators
+     Account Operators
+     Backup Operators
+     Print Operators
+     Server Operators
+     Domain Controllers
+     Read-Only Domain Controllers
+     Group Policy Creators Owners
+     Cryptographic Operators
+     ```
 
-         > [!NOTE]
-         > Note: Built-in Tier 0 Groups, see Tier 0 equivalency for more details.
+     > [!NOTE]
+     > Note: Built-in Tier 0 Groups, see Tier 0 equivalency for more details.
 
          Other Delegated Groups
 
-         > [!NOTE]
-         > Note: Any custom created groups with effective Tier 0 access, see Tier 0 equivalency for more details.
+     > [!NOTE]
+     > Note: Any custom created groups with effective Tier 0 access, see Tier 0 equivalency for more details.
 
 #### Deploy your PAW(s)
 

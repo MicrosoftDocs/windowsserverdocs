@@ -2,7 +2,7 @@
 title: Authentication Policies and Authentication Policy Silos
 description: "Windows Server Security"
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: security-credential-protection

@@ -1,27 +1,30 @@
 ---
 ms.assetid: fd3bc84a-48eb-4f00-9dc2-846bf2c2668b
 title: AD DS Troubleshooting
-description:
+description: Overview of the troubleshooting section for AD DS
 ms.author: joflore
 author: MicrosoftGuyJFlo
-manager: mtillman
-ms.date: 08/07/2018
+manager: dcscontentpm
+ms.date: 11/22/2019
 ms.topic: article
-ms.prod: windows-server-threshold
-
+ms.prod: windows-server
+audience: Admin
+ms.custom:
+- CSSTroubleshoot 
 ms.technology: identity-adds
 ---
 
 # AD DS Troubleshooting
 
->Applies To: Windows Server 2016, Windows Server 2012 R2
+>Applies To: Windows Server 2019, Windows Server 2016, Windows Server 2012 R2
 
-This section includes troubleshooting recommendations and procedures for diagnosing and fixing problems that may occur with Active Directory replication.
+This section includes troubleshooting recommendations and procedures for diagnosing and fixing problems that may occur during Active Directory replication. It focuses on how to respond to Directory Service event log entries and how to interpret messages that tools such as Repadmin.exe and Dcdiag.exe might report.
 
-This content focuses primarily on responses to Directory Service event log messages and tool-based error messages that might be reported by the Repadmin.exe and Dcdiag.exe tools. These tools are available on all domain controllers that are running Windows Server 2016 or 2012 R2. You can also install Remote Server Administration Tools (RSAT) on a member server that is running Windows 10.
+Repadmin.exe and Dcdiag.exe are available on all domain controllers that run Windows Server 2012 R2 or later versions. For more information about how to use these tools to troubleshoot problems, see the following articles.
 
-For information about installing RSAT, see the article [Remote Server Administration Tools](https://docs.microsoft.com/windows-server/remote/remote-server-administration-tools).
+- [Configuring a Computer for Troubleshooting Active Directory](../manage/troubleshoot/Configuring-a-Computer-for-Troubleshooting.md)
+- [Troubleshooting Active Directory Replication Problems](../manage/troubleshoot/Troubleshooting-Active-Directory-Replication-Problems.md)
 
-[Configuring a Computer for Troubleshooting Active Directory](../manage/troubleshoot/Configuring-a-Computer-for-Troubleshooting.md)
+Another useful technology is Event Tracing for Windows (ETW). You can use ETW to troubleshoot LDAP communications among the domain controllers. For more information, see [Using ETW to troubleshoot LDAP connections](../manage/troubleshoot/troubleshoot-ldap-using-etw.md).
 
-[Troubleshooting Active Directory Replication Problems](../manage/troubleshoot/Troubleshooting-Active-Directory-Replication-Problems.md)
+You can also install Remote Server Administration Tools (RSAT) on a member server that is running Windows 10. For information about how to install RSAT, see [Remote Server Administration Tools](https://docs.microsoft.com/windows-server/remote/remote-server-administration-tools).

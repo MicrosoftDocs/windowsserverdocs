@@ -1,8 +1,8 @@
 ---
-title: Common troubleshooting procedures for KMS and DNS issues
+title: Guidelines for troubleshooting DNS-related activation issues
 description: 
 ms.topic: troubleshooting
-ms.date: 07/22/2019
+ms.date: 09/10/2019
 ms.technology: server-general
 ms.topic: article
 ms.assetid: 
@@ -11,7 +11,7 @@ ms.author: v-tea
 ms.localizationpriority: medium
 ---
 
-# Common troubleshooting procedures for KMS and DNS issues
+# Guidelines for troubleshooting DNS-related activation issues
 
 You may have to use some of these methods if one or more of the following conditions are true:
 
@@ -62,7 +62,7 @@ To change the product key to an MAK, follow these steps:
 
 KMS activation requires that a KMS host be configured for the clients to activate against. If there are no KMS hosts configured in your environment, install and activate one by using an appropriate KMS host key. After you configure a computer on the network to host the KMS software, publish the Domain Name System (DNS) settings.
 
-For information about the KMS host configuration process, see [Activate using Key Management Service](https://docs.microsoft.com/windows/deployment/volume-activation/activate-using-key-management-service-vamt) and [Install and Configure VMAT](https://docs.microsoft.com/windows/deployment/volume-activation/install-configure-vamt).
+For information about the KMS host configuration process, see [Activate using Key Management Service](https://docs.microsoft.com/windows/deployment/volume-activation/activate-using-key-management-service-vamt) and [Install and Configure VAMT](https://docs.microsoft.com/windows/deployment/volume-activation/install-configure-vamt).
 
 [Return to the procedure list.](#list)
 

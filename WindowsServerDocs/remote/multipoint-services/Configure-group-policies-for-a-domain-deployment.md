@@ -3,7 +3,7 @@ title: Configure group policies for a domain deployment
 description: Learn how to set up group policies in MultiPoint Services
 ms.custom: na
 ms.date: 07/22/2016
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: multipoint-services
 ms.reviewer: na
 ms.suite: na

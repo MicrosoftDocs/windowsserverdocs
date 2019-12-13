@@ -6,7 +6,7 @@ ms.author: joflore
 manager: mtillman
 ms.date: 07/07/2017
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.assetid: 5a291f65-794e-4fc3-996e-094c5845a383
 ms.technology: identity-adds
 ---

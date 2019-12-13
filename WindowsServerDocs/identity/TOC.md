@@ -20,7 +20,7 @@
 ##### [Claims Transformation Rules Language](solution-guides/Claims-Transformation-Rules-Language.md)
 #### [Appendix A: Dynamic Access Control Glossary](solution-guides/appendix-A--Dynamic-Access-Control-Glossary.md)
 #### [Appendix B: Setting Up the Test Environment](solution-guides/appendix-B--Setting-Up-the-Test-Environment.md)
-
+### [Configuring Certificate Enrollment Web Service for certificate key-based renewal on a custom port](solution-guides/certificate-enrollment-certificate-key-based-renewal.md)
 
 ## [Active Directory Domain Services](ad-ds/active-directory-Domain-Services.md)
 
@@ -197,6 +197,7 @@
 
 ### [AD DS Troubleshooting](ad-ds/manage/AD-DS-Troubleshooting.md)
 #### [Configuring a computer for Troubleshooting](ad-ds/manage/troubleshoot/Configuring-a-computer-for-Troubleshooting.md)
+#### [Using ETW to troubleshoot LDAP connections](ad-ds/manage/troubleshoot/troubleshoot-ldap-using-etw.md)
 #### [Troubleshooting Active Directory Replication Problems](ad-ds/manage/troubleshoot/Troubleshooting-active-directory-Replication-Problems.md)
 ##### [Additional Resources](additional-Resources_12.md)
 

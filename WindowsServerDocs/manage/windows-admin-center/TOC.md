@@ -23,10 +23,12 @@
 ### [User access control and permissions](configure/user-access-control.md)
 ### [Using extensions](configure/using-extensions.md)
 ### [Shared connections](configure/shared-connections.md)
+### [Automate with PowerShell](configure/use-powershell.md)
 
 ## Use
 ### [Get started](use/get-started.md)
 ### [Manage servers](use/manage-servers.md)
+### [Deploy hyperconverged infrastructure](use/deploy-hyperconverged-infrastructure.md)
 ### [Manage hyper-converged infrastructure](use/manage-hyper-converged.md)
 ### [Manage failover clusters](use/manage-failover-clusters.md)
 ### [Manage Hyper-V virtual machines](use/manage-virtual-machines.md)
@@ -65,6 +67,7 @@
 #### [Use a custom gateway plugin in your tool extension](extend/guides/use-custom-gateway-plugin.md)
 #### [Create a connection provider](extend/guides/create-connection-provider.md)
 #### [Modify root navigation behavior](extend/guides/modify-root-navigation.md)
+#### [Cluster connection type changes in Windows Admin Center v1909](extend/guides/cluster-connection-change-wac-1909.md)
 #### [Control your tool's visibility](extend/guides/dynamic-tool-display.md)
 #### [Strings and localization](extend/guides/strings-localization.md)
 #### [UI text and design style guide](extend/guides/ui-text-style-guide.md)

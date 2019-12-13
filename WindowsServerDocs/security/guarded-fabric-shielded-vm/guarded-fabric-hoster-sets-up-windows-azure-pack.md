@@ -1,7 +1,7 @@
 ---
 title: Shielded VMs - Hosting service provider sets up Windows Azure Pack
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.topic: article
 ms.assetid: d528c689-58b0-425c-9740-25e2553ed689
 manager: dongill

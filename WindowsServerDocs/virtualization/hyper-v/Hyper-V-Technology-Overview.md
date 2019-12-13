@@ -1,7 +1,7 @@
 ---
 title: Hyper-V Technology Overview
 description: "Describes what Hyper-V is, how to get it, key features, and common uses."
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.service: na
 manager: dongill
 ms.technology: compute-hyper-v

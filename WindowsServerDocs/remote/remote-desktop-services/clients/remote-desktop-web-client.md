@@ -1,7 +1,7 @@
 ---
 title: Get started with the web client
 description: Describes how to sign in to the Remote Desktop web client.
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: remote-desktop-services
 ms.author: helohr
 ms.date: 08/27/2019
@@ -52,6 +52,10 @@ Follow these steps to print from the web client:
 ## Copy and paste from the Remote Desktop web client
 
 The web client currently supports copying and pasting text only. Files can't be copied or pasted to and from the web client. Additionally, you can only use **Ctrl+C** and **Ctrl+V** to copy and paste text.
+
+## Use an Input Method Editor (IME) in the remote session
+
+To use an Input Method Editor to enter complex characters in the remote session, select the gear icon in the navigation bar to open the **Settings** side panel and set the **Enable Input Method Editor** switch to **On**. You must have an Input Method Editor installed and enabled in the remote session. 
 
 ## Get help with the web client
 
