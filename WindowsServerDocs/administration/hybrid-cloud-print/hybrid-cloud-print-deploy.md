@@ -30,7 +30,7 @@ There are a number of subscriptions, services, and computers you'll need to acqu
 
 - MDM service, such as Intune.
 
-  See [Microsoft Intune](https://www.microsoft.com/en-us/cloud-platform/microsoft-intune) for a trial subscription to Intune.
+  See [Microsoft Intune](https://www.microsoft.com/cloud-platform/microsoft-intune) for a trial subscription to Intune.
 
 - Windows Server 2016 or later machine running Active Directory.
 
@@ -40,13 +40,13 @@ There are a number of subscriptions, services, and computers you'll need to acqu
 
 - A dedicated, domain-joined Windows Server 2016 or later machine running as Connector Server.
 
-  See [Understand Azure AD Application Proxy connectors](https://docs.microsoft.com/en-us/azure/active-directory/manage-apps/application-proxy-connectors) for more information.
+  See [Understand Azure AD Application Proxy connectors](https://docs.microsoft.com/azure/active-directory/manage-apps/application-proxy-connectors) for more information.
 
 - A Windows 10 Fall Creator Update or later machine for publishing printers.
 
 - Public facing domain name.
 
-  You can use the domain name created for you by Azure (*domainname*.onmicrosoft.com), or purchase your own domain name. See [Add your custom domain name using the Azure Active Directory portal](https://docs.microsoft.com/en-us/azure/active-directory/fundamentals/add-custom-domain).
+  You can use the domain name created for you by Azure (*domainname*.onmicrosoft.com), or purchase your own domain name. See [Add your custom domain name using the Azure Active Directory portal](https://docs.microsoft.com/azure/active-directory/fundamentals/add-custom-domain).
 
 ## Deployment steps
 
@@ -54,13 +54,13 @@ The steps below are for a typical Hybrid Cloud Print deployment.
 
 ### Step 1 - Install Azure AD Connect
 
-1. Azure AD connect synchronizes Azure AD to on-premises AD. On the Windows Server machine with Active Directory, download and install the Azure AD Connect software with express settings. See [Getting started with Azure AD Connect using express settings](https://docs.microsoft.com/en-us/azure/active-directory/hybrid/how-to-connect-install-express).
+1. Azure AD connect synchronizes Azure AD to on-premises AD. On the Windows Server machine with Active Directory, download and install the Azure AD Connect software with express settings. See [Getting started with Azure AD Connect using express settings](https://docs.microsoft.com/azure/active-directory/hybrid/how-to-connect-install-express).
 
 ### Step 2 - Install Application Proxy
 
 1. Application proxy allows users in your organization to access on-premise applications from the cloud. Install Application Proxy on the Connector Server.
-    - For installation instruction, see [Tutorial: Add an on-premises application for remote access through Application Proxy in Azure Active Directory](https://docs.microsoft.com/en-us/azure/active-directory/manage-apps/application-proxy-add-on-premises-application).
-    - A dedicated connector group is recommended if the organization has complex network topology. See [Publish applications on separate networks and locations using connector groups](https://docs.microsoft.com/en-us/azure/active-directory/manage-apps/application-proxy-connector-groups).
+    - For installation instruction, see [Tutorial: Add an on-premises application for remote access through Application Proxy in Azure Active Directory](https://docs.microsoft.com/azure/active-directory/manage-apps/application-proxy-add-on-premises-application).
+    - A dedicated connector group is recommended if the organization has complex network topology. See [Publish applications on separate networks and locations using connector groups](https://docs.microsoft.com/azure/active-directory/manage-apps/application-proxy-connector-groups).
 
 ### Step 3 - Register and configure applications
 
@@ -298,13 +298,13 @@ To enable authenticated communication with the HCP services, we need to create 3
         `sqlite3.exe MopriaDeviceDb.db ".read MopriaSQLiteDb.sql"`
 
     - From File Explorer, open up the MopriaDeviceDb.db file properties to add users or groups which are allowed to publish to Mopria database in the Security tab. The users or groups must exist in on-premises Active Directory, and synchronized with Azure AD.
-    - If the solution is deployed to a non-routable domain (e.g. *mydomain*.local), the Azure AD domain (e.g. *domainname*.onmicrosoft.com, or one purchased from third-party vendor) needs to be added as a UPN suffix to on-premises Active Directory. This is so the exact same user who will be publishing printers (e.g. admin@*domainname*.onmicrosoft.com) can be added in the security setting of the database file. See [Prepare a non-routable domain for directory synchronization](https://docs.microsoft.com/en-us/office365/enterprise/prepare-a-non-routable-domain-for-directory-synchronization).
+    - If the solution is deployed to a non-routable domain (e.g. *mydomain*.local), the Azure AD domain (e.g. *domainname*.onmicrosoft.com, or one purchased from third-party vendor) needs to be added as a UPN suffix to on-premises Active Directory. This is so the exact same user who will be publishing printers (e.g. admin@*domainname*.onmicrosoft.com) can be added in the security setting of the database file. See [Prepare a non-routable domain for directory synchronization](https://docs.microsoft.com/office365/enterprise/prepare-a-non-routable-domain-for-directory-synchronization).
 
     ![Print Server Mopria Registry Keys](../media/hybrid-cloud-print/PrintServer-SQLiteDB.png)
 
 ### Step 5 \[Optional\] - Configure pre-authentication with Azure AD
 
-1. Review the document [Kerberos Constrained Delegation for single sign-on to your apps with Application Proxy](https://docs.microsoft.com/en-us/azure/active-directory/manage-apps/application-proxy-configure-single-sign-on-with-kcd).
+1. Review the document [Kerberos Constrained Delegation for single sign-on to your apps with Application Proxy](https://docs.microsoft.com/azure/active-directory/manage-apps/application-proxy-configure-single-sign-on-with-kcd).
 
 2. Configure on-premises Active Directory.
     - On the Active Directory machine, open Server Manager and go to **Tools** > **Active Directory Users and Computers**.
