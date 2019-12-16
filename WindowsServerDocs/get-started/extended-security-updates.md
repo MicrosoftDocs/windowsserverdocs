@@ -54,11 +54,11 @@ To register non-Azure VMs for extended security updates and create a key, comple
 
     If you haven't use extended security updates before, chose to **+ Create** an extended security updates resource first. Otherwise, select your resource from the list.
 
-1. Under **Register for Extended Service Updates**, select **Get key**.
+1. Under **Register for Extended Service Updates**, select **Get started**.
 
     ![Get started with Extended Security Updates in the Azure portal](media/extended-security-updates/get-started-with-esu.png)
 
-1. To create your first key, select **Create key**.
+1. To create your first key, select **Get key**.
 
     ![Choose to create a key in the Azure portal](media/extended-security-updates/get-key.png)
 
