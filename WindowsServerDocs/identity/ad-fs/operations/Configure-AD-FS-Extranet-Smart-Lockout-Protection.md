@@ -205,6 +205,10 @@ This behavior can be overridden by passing the -Server parameter.
 - Get-ADFSAccountActivity -UserPrincipalName
 
   Read the current account activity for a user account. The cmdlet always automatically connects to the farm master by using the Account Activity REST endpoint. Therefore, all data should always be consistent.
+  
+  **This cmdlet can not be used during log-only mode.**
+  
+  Error: Get-AdfsAccountActivity : PS0357: Error connecting to the Account Activity store.  Either ExtranetLockoutMode is not set to ADFSSmartLockout or ExtranetLockout is not enabled.
 
 `Get-ADFSAccountActivity user@contoso.com`
 
