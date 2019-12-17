@@ -1,36 +1,34 @@
-## Microsoft Open Source Code of Conduct
+# Windows Server Documentation
 
-This project has adopted the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/).
-For more information see the [Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/) or contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with any additional questions or comments.
+Welcome to the open source documentation of Microsoft Windows Server. Contributing to open source is more than just providing updates, it's also letting us know when there is an issue.
 
-# WindowsServerDocs-pr
+## Public vs. private repo contributions
 
-This repo is actively managed and includes the source for three content sets published to the TechNet technical library:
+There are two separate locations where we keep Windows Server technical content. One of the locations is public (windowsserverdocs) while the other is private (windowsserverdocs-pr). Who you are determines which location you contribute to:
 
--  [Windows Server 2016](https://technet.microsoft.com/windows-server-docs/get-started/windows-server-2016)
--  [Essentials Server 2016](https://docs.microsoft.com/windows-server-essentials/get-started/what-s-new)
--  [Microsoft Hyper-V Server 2016](https://docs.microsoft.com/windows-server/virtualization/hyper-v/hyper-v-server-2016)
+- **I'm not a Microsoft employee.** As a non-Microsoft employee, you must contribute to the public location. For information about how to do that, see the [Contributing to Windows Server technical documentation](https://github.com/MicrosoftDocs/windowsserverdocs/blob/master/CONTRIBUTING.md) article.
 
-Writers and engineering partners share responsibility for technical accuracy, within specific technology areas. **The writer for an assigned area reviews and approves all pull requests to add, update, or delete articles or art.** For Windows Server content, these writers are: 
+- **I'm a Microsoft employee.** As a Microsoft employee, you have options, based on what you're trying to do:
 
-Windows Server Area|Owner|Github Alias
----|---|---
-Windows Server Software-Defined Datacenter (SDDC) |Corey Plett|coreyp-at-msft
-Get Started |Corey Plett|coreyp-at-msft
-Manage Windows Server |Corey Plett|coreyp-at-msft
-Failover Clustering |Jason Gerend|JasonGerend
-Identity and Access |Corey Plett|coreyp-at-msft
-Networking |Patti Short | shortpatti
-Remote  |Heidi Lohr|heidilohr
-Security and Assurance |Corey Plett|coreyp-at-msft
-Storage |Jason Gerend|JasonGerend
-Virtualization |Corey Plett|coreyp-at-msft
-Troubleshooting |Corey Plett|coreyp-at-msft
+    - **Create a brand-new article.** To create a brand-new article, you must create and set up your GitHub account and tools, fork and clone the windowsserverdocs-pr repo, set up your remote branch, create the article, and finally create a new pull request for approval and publishing. For these instructions, see the [Create new Windows Server articles using GitHub and Visual Studio Code](https://github.com/MicrosoftDocs/windowsserverdocs/blob/master/Contributor-guide/create-new-using-github.md) article.
 
-Corey Plett is also the approver for Essentials Server and Microsoft Hyper-V.
+    - **Make large changes to an existing article.** To make substantial changes to an existing article, you can follow the instructions in the [Edit an existing Windows Server article using GitHub and Visual Studio Code](https://github.com/MicrosoftDocs/windowsserverdocs/blob/master/Contributor-guide/edit-existing-using-github.md) article.
 
-To make a small update, simply edit the file and submit a pull request. For substantive changes, new articles, and deletions, consult with the area owner before spending any significant time. It's the writer's responsibility to manage their area as a content set within the larger content portfolio. This helps us avoid duplication, identify content gaps, and consider how the various articles fit together.
+    - **Make minor changes to an existing article.** To make minor changes to an existing article, you can follow the instructions in the [Update existing Windows Server articles using a web browser and GitHub](https://github.com/MicrosoftDocs/windowsserverdocs/blob/master/Contributor-guide/github-browser-updates.md) article.
 
-Info on how to add or update content, minimum quality standards, formatting help and more is available in the [Contributor's Guide](./Contributor-guide/Contributor-index.md), in this repo.
+## WindowsServerDocs-pr (private) and windowsserverdocs (public)
 
+These repos are actively managed and includes the source for Windows Server content published to [docs.microsoft.com](https://docs.microsoft.com):
 
+- [Windows Server home page](https://docs.microsoft.com/windows-server/)
+- [Windows Server 2019](https://docs.microsoft.com/windows-server/get-started-19/get-started-19)
+- [Windows Server 2016](https://docs.microsoft.com/windows-server/get-started/server-basics)
+- [Essentials Server 2016 and Essentials Server 2019](https://docs.microsoft.com/windows-server-essentials/get-started/get-started)
+
+## License
+
+Please refer to [LICENSE](https://github.com/MicrosoftDocs/windowsserverdocs-pr/blob/master/LICENSE), [LICENSE-CODE](https://github.com/MicrosoftDocs/windowsserverdocs-pr/blob/master/LICENSE-CODE) and [ThirdPartyNotices](https://github.com/MicrosoftDocs/windowsserverdocs-pr/blob/master/ThirdPartyNotices) for all Licensing information.
+
+## Code of Conduct
+
+This project has adopted the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/). For more information see the [Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/) or contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with any additional questions or comments.

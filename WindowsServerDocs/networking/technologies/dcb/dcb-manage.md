@@ -1,7 +1,7 @@
 ---
 title: Manage Data Center Bridging (DCB)
 description: This topic provides you with instructions on how to use Windows PowerShell commands to manage Data Center Bridging in Windows Server 2016.
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: networking
 ms.topic: article
 ms.assetid: 1575cc7c-62a7-4add-8f78-e5d93effe93f
@@ -36,14 +36,14 @@ the system level is not applied on network adapters until you do the following.
 2. Enable DCB on the network adapters. See [Enable and Display DCB Settings on  Network Adapters](#bkmk_enabledcb).
 
 >[!NOTE]
->If you want to configure DCB from a switch through DCBX, see [DCBX settings](#BKMK_DCBX_Settings)
+>If you want to configure DCB from a switch through DCBX, see [DCBX settings](#dcb-configuration-on-network-adapters).
 
 The DCBX Willing bit is described in the DCB specification. If the Willing bit on a device is set to true, the device is willing to accept configurations from a remote device through DCBX. If the Willing bit on a device is set to false, the device will reject all configuration attempts from remote devices and enforce only the local configurations.
 
 If DCB is not installed in Windows Server 2016 the value of the Willing bit is irrelevant as far as the operating system is concerned because the operating system has no local settings apply to network adapters. After DCB is installed, the default value of the Willing bit is true. This design allows network adapters to keep whatever configurations they may have received from their
 remote peers.
 
-If a network adapter doesn’t support DCBX, it will never receive configurations from a remote device. It does receive configurations from the operating system, but only after the DCBX Willing bit is set to false.
+If a network adapter doesn't support DCBX, it will never receive configurations from a remote device. It does receive configurations from the operating system, but only after the DCBX Willing bit is set to false.
 
 ## Set the Willing bit
 
@@ -321,7 +321,7 @@ In addition to –SMB, other default filters include –iSCSI (matching TCP port
 
 NetworkDirect is an abstract layer we create on top of any RDMA implementation on a network adapter. –NetworkDirect must be followed by a Network Direct port.
 
-In addition to the default filters, you can classify traffic by application’s executable name (as in the first example below), or by IP address, port, or protocol (as shown in the second example):
+In addition to the default filters, you can classify traffic by application's executable name (as in the first example below), or by IP address, port, or protocol (as shown in the second example):
 
 **By executable name**
 

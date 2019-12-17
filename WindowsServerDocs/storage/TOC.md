@@ -27,9 +27,9 @@
 #### [Optimize Namespace Polling](dfs-namespaces/optimize-namespace-polling.md)
 #### [Enable Access-based Enumeration on a Namespace](dfs-namespaces/enable-access-based-enumeration-on-a-namespace.md)
 #### [Using Inherited Permissions with Access-based Enumeration](dfs-namespaces/using-inherited-permissions-with-access-based-enumeration.md)
-## DFS Replication
+## [DFS Replication](dfs-replication/dfsr-overview.md)
 ### [Migrate SYSVOL replication to DFS Replication](dfs-replication/migrate-sysvol-to-dfsr.md)
-### [Use robocopy to preseed files for DFS replication](dfs-replication/preseed-dfsr-with-robocopy.md)
+### [Use robocopy to preseed files for DFS Replication](dfs-replication/preseed-dfsr-with-robocopy.md)
 ### [DFS Replication: Frequently Asked Questions (FAQ)](dfs-replication/dfsr-faq.md)
 ## [Disk Management](disk-management/overview-of-disk-management.md)
 ## [File Server and SMB](file-server/file-server-smb-overview.md)
@@ -40,6 +40,7 @@
 ### [Deploy Network File System](nfs/deploy-nfs.md)
 ### [NTFS overview](file-server/ntfs-overview.md)
 ### [Volume Shadow Copy Service](file-server/volume-shadow-copy-service.md)
+### [Using Disk Cleanup](file-server/disk-cleanup.md)
 ## [File Server Resource Manager](fsrm/fsrm-overview.md)
 ### [Checklist: Apply a Quota to a Volume or Folder](fsrm/checklist-apply-quota-to-volume-or-folder.md)
 ### [Checklist: Apply a File Screen to a Volume or Folder](fsrm/checklist-apply-file-screen-to-volume-or-folder.md)
@@ -56,7 +57,7 @@
 #### [Edit Auto Apply Quota Properties](fsrm/edit-auto-apply-quota-properties.md)
 ### [File screening Management](fsrm/file-screening-management.md)
 #### [Define File Groups for Screening](fsrm/define-file-groups-for-screening.md)
-#### [Create a File Screen ](fsrm/create-file-screen.md)
+#### [Create a File Screen](fsrm/create-file-screen.md)
 #### [Create a File Screen Exception](fsrm/create-file-screen-exception.md)
 #### [Create a File Screen Template](fsrm/create-file-screen-template.md)
 #### [Edit File Screen Template Properties](fsrm/edit-file-screen-template-properties.md)
@@ -113,6 +114,7 @@
 #### [Understand the cache](storage-spaces/understand-the-cache.md)
 #### [Fault tolerance and storage efficiency](storage-spaces/Storage-Spaces-Fault-Tolerance.md)
 #### [Drive symmetry considerations](storage-spaces/drive-symmetry-considerations.md)
+#### [Understand and monitor storage resync](storage-spaces/understand-storage-resync.md)
 #### [Cluster and pool quorum](storage-spaces/understand-quorum.md)
 #### [Cluster sets](storage-spaces/cluster-sets.md)
 ### Plan
@@ -127,6 +129,9 @@
 #### [Create volumes](storage-spaces/create-volumes.md)
 #### [Nested resiliency](storage-spaces/nested-resiliency.md)
 #### [Configure quorum](../failover-clustering/manage-cluster-quorum.md)
+#### [Upgrade a Storage Spaces Direct cluster](storage-spaces/upgrade-storage-spaces-direct-to-windows-server-2019.md)
+#### [Understand and deploy persistent memory](storage-spaces/deploy-pmem.md)
+
 ### Manage
 #### [Manage with Windows Admin Center](../manage/windows-admin-center/use/manage-hyper-converged.md)
 #### [Add servers or drives](storage-spaces/add-nodes.md)
@@ -134,13 +139,7 @@
 #### [Remove servers](storage-spaces/remove-servers.md)
 #### [Update drive firmware](update-firmware.md)
 #### [Extend volumes](storage-spaces/resize-volumes.md)
-### Troubleshoot
-#### [Troubleshooting scenarios](storage-spaces/troubleshooting-storage-spaces.md)
-#### [Health and operational states](storage-spaces/storage-spaces-states.md)
-#### [Collect data](storage-spaces/data-collection.md)
-#### [Frequently asked questions](storage-spaces/storage-spaces-direct-faq.md)
-### Insider Preview
-#### [Cluster sets](storage-spaces/cluster-sets.md)
+#### [Delete volumes](storage-spaces/delete-volumes.md)
 #### [Performance history](storage-spaces/performance-history.md)
 ##### [Drives](storage-spaces/performance-history-for-drives.md)
 ##### [Network adapters](storage-spaces/performance-history-for-network-adapters.md)
@@ -151,6 +150,15 @@
 ##### [Clusters](storage-spaces/performance-history-for-clusters.md)
 ##### [Scripting samples](storage-spaces/performance-history-scripting.md)
 #### [Delimit the allocation of volumes](storage-spaces/delimit-volume-allocation.md)
+#### [Monitor with Azure Monitor](storage-spaces/configure-azure-monitor.md)
+
+### Troubleshoot
+#### [Troubleshooting scenarios](storage-spaces/troubleshooting-storage-spaces.md)
+#### [Health and operational states](storage-spaces/storage-spaces-states.md)
+#### [Collect data](storage-spaces/data-collection.md)
+#### [Frequently asked questions](storage-spaces/storage-spaces-direct-faq.md)
+#### [Storage-class memory health management](storage-spaces/Storage-class-memory-health.md)
+
 ## [Work Folders](work-folders/work-folders-overview.md)
 ### [Designing a Work Folders Implementation](work-folders/plan-work-folders.md)
 ### [Deploying Work Folders](work-folders/deploy-work-folders.md)
@@ -161,6 +169,5 @@
 #### [Step 4, Set up WAP](work-folders/deploy-work-folders-adfs-step4.md)
 #### [Step 5, Set up clients](work-folders/deploy-work-folders-adfs-step5.md)
 ## [Storage QoS](storage-qos/storage-qos-overview.md)
-## [Storage-class memory health management](storage-spaces/Storage-class-memory-health.md)
 ## [Change history for Storage topics](storage-change-history.md)
 

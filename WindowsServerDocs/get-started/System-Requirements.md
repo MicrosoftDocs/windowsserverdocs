@@ -2,7 +2,7 @@
 title: System Requirements
 description: "What are the minimum requirements for storage, CPU, network, memory, RAM in a clean installation of each installation option." 
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.date: 10/17/2017
@@ -21,10 +21,8 @@ ms.localizationpriority: medium
 
 This topic addresses the minimum system requirements to run Windows Server&reg; 2016 or Windows Server, version 1709.
 
-
-> [!Note]  
+> [!NOTE]  
 > In this release, clean installations are recommended.  
->   
 
 > [!NOTE]  
 > If at the time of installation, you choose to install with the Server Core option, you should be aware that no GUI components are installed at all and you will not be able to install or uninstall them with Server Manager. If you need GUI features, be sure to choose the "Server with Desktop Experience" option when you install Windows Server 2016. For more information, see [Install Nano Server](Getting-Started-with-Nano-Server.md)  
@@ -73,13 +71,13 @@ The following are the estimated **minimum** disk space requirements for the syst
 
 **Minimum**: 32 GB  
 
-   > [!NOTE]  
-    > Be aware that 32 GB should be considered an *absolute minimum* value for successful installation. This minimum should allow you to install Windows Server 2016 in Server Core mode, with the Web Services (IIS) server role. A server in Server Core mode is about 4 GB smaller than the same server in Server with a GUI mode. 
-    >   
-    > The system partition will need extra space for any of the following circumstances:  
-    >   
-    > -   If you install the system over a network.  
-    > -   Computers with more than 16 GB of RAM will require more disk space for paging, hibernation, and dump files.  
+> [!NOTE]
+> Be aware that 32 GB should be considered an *absolute minimum* value for successful installation. This minimum should allow you to install Windows Server 2016 in Server Core mode, with the Web Services (IIS) server role. A server in Server Core mode is about 4 GB smaller than the same server in Server with a GUI mode. 
+> 
+> The system partition will need extra space for any of the following circumstances:  
+> 
+> -   If you install the system over a network.  
+> -   Computers with more than 16 GB of RAM will require more disk space for paging, hibernation, and dump files.  
 
 ## Network adapter requirements  
 
@@ -91,8 +89,6 @@ Network adapters used with this release should include these features:
 - Supports Pre-boot Execution Environment (PXE).  
 
 A network adapter that supports network debugging (KDNet) is useful, but not a minimum requirement.   
-
-
 
 ## Other requirements  
 Computers running this release also must have the following:  
@@ -111,13 +107,13 @@ The following items are not strictly required, but are necessary for certain fea
 
 -   Internet access (fees may apply)  
 
->[!NOTE]  
+> [!NOTE]  
 > A Trusted Platform Module (TPM) chip is not strictly required to install this release, though it is necessary in order to use certain features such as BitLocker Drive Encryption. If your computer uses TPM, it must meet these requirements:  
 >  
->- Hardware-based TPMs must implement version 2.0 of the TPM specification.  
->- TPMs that implement version 2.0 must have an EK certificate that is either pre-provisioned to the TPM by the hardware vendor or be capable of being retrieved by the device during the first boot.  
->- TPMs that implement version 2.0 must ship with SHA-256 PCR banks and implement PCRs 0 through 23 for SHA-256. It is acceptable to ship TPMs with a single switchable PCR bank that can be used for both SHA-1 and SHA-256 measurements.  
->- A UEFI option to turn off the TPM is not a requirement.  
+> - Hardware-based TPMs must implement version 2.0 of the TPM specification.  
+> - TPMs that implement version 2.0 must have an EK certificate that is either pre-provisioned to the TPM by the hardware vendor or be capable of being retrieved by the device during the first boot.  
+> - TPMs that implement version 2.0 must ship with SHA-256 PCR banks and implement PCRs 0 through 23 for SHA-256. It is acceptable to ship TPMs with a single switchable PCR bank that can be used for both SHA-1 and SHA-256 measurements.  
+> - A UEFI option to turn off the TPM is not a requirement.  
 
 ## Installation of Nano Server  
 For detailed steps to install Windows Server 2016 as a Nano Server, see [Install Nano Server](Getting-Started-with-Nano-Server.md).
@@ -125,5 +121,5 @@ For detailed steps to install Windows Server 2016 as a Nano Server, see [Install
 ## Additional Resources
 - [Windows Processor Requirements](https://docs.microsoft.com/windows-hardware/design/minimum/windows-processor-requirements)
 - [Comparison of Standard and Datacenter editions of Windows Server 2016](https://docs.microsoft.com/windows-server/get-started/2016-edition-comparison)
-- [Windows 10 System Requirements ](https://www.microsoft.com/windows/windows-10-specifications#system-specifications)
+- [Windows 10 System Requirements](https://www.microsoft.com/windows/windows-10-specifications#system-specifications)
 - [Download the Windows Server 2016 licensing datasheet](http://download.microsoft.com/download/7/2/9/7290EA05-DC56-4BED-9400-138C5701F174/WS2016LicensingDatasheet.pdf)

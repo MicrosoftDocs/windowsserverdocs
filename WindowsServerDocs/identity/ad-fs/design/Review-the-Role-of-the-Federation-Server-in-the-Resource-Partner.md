@@ -7,14 +7,12 @@ ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 
 ms.technology: identity-adfs
 ---
     
 # Review the Role of the Federation Server in the Resource Partner
-
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 The federation server in the resource partner organization intercepts incoming security tokens that are sent by an account federation server, validates and signs them, and then issues its own security tokens that are destined for the Web\-based application.  
   

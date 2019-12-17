@@ -3,11 +3,10 @@ title: Step 1 Configure Advanced DirectAccess Infrastructure
 description: This topic is part of the guide Deploy a Single DirectAccess Server with Advanced Settings for Windows Server 2016
 manager: brianlic
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
-ms.technology: 
-  - networking-da
+ms.technology: networking-da
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 43abc30a-300d-4752-b845-10a6b9f32244
@@ -258,7 +257,7 @@ You must manually configure a DNS entry for the network location server website 
   
 5.  In the **DNS** dialog box, click **OK**, and then click **Done**.  
   
-![Windows PowerShell](../../../media/Step-1-Configuring-DirectAccess-Infrastructure/PowerShellLogoSmall.gif)****Windows PowerShell equivalent commands****  
+![Windows PowerShell](../../../media/Step-1-Configuring-DirectAccess-Infrastructure/PowerShellLogoSmall.gif)***<em>Windows PowerShell equivalent commands</em>***  
   
 The following Windows PowerShell cmdlet or cmdlets perform the same function as the preceding procedure. Enter each cmdlet on a single line, even though they may appear word-wrapped across several lines here because of formatting constraints.  
   
@@ -330,7 +329,7 @@ The DirectAccess server and all DirectAccess client computers must be joined to 
   
 10. When you are prompted to restart the computer, click **Restart Now**.  
   
-![Windows PowerShell](../../../media/Step-1-Configuring-DirectAccess-Infrastructure/PowerShellLogoSmall.gif)****Windows PowerShell equivalent commands****  
+![Windows PowerShell](../../../media/Step-1-Configuring-DirectAccess-Infrastructure/PowerShellLogoSmall.gif)***<em>Windows PowerShell equivalent commands</em>***  
   
 The following Windows PowerShell cmdlet or cmdlets perform the same function as the preceding procedure. Enter each cmdlet on a single line, even though they may appear word-wrapped across several lines here because of formatting constraints.  
   
@@ -419,7 +418,7 @@ After the Remote Access administrator completes any changes to the Remote Access
   
     10. On the **Scanning Backup** page, click **Next**, and then click **Finish**.  
   
-![Windows PowerShell](../../../media/Step-1-Configuring-DirectAccess-Infrastructure/PowerShellLogoSmall.gif)****Windows PowerShell equivalent commands****  
+![Windows PowerShell](../../../media/Step-1-Configuring-DirectAccess-Infrastructure/PowerShellLogoSmall.gif)***<em>Windows PowerShell equivalent commands</em>***  
   
 The following Windows PowerShell cmdlet or cmdlets perform the same function as the preceding procedure. Enter each cmdlet on a single line, even though they may appear word-wrapped across several lines here because of formatting constraints.  
   

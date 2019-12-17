@@ -2,7 +2,7 @@
 title: Transport Layer Security (TLS) registry settings
 description: "Windows Server Security"
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: security-tls-ssl
@@ -11,23 +11,23 @@ ms.topic: article
 author: justinha
 ms.author: justinha
 manager: brianlic-msft
-ms.date: 10/19/2018
+ms.date: 02/28/2019
 ---
 
 # Transport Layer Security (TLS) registry settings
 
->Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows 10
+>Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows 10
 
 This reference topic for the IT professional contains supported registry setting information for the Windows implementation of the Transport Layer Security (TLS) protocol and the Secure Sockets Layer (SSL) protocol through the Schannel Security Support Provider (SSP). 
 The registry subkeys and entries covered in this topic help you administer and troubleshoot the Schannel SSP, specifically the TLS and SSL protocols. 
 
->[!Caution]
->This information is provided as a reference to use when you are troubleshooting or verifying that the required settings are applied. 
->We recommend that you do not directly edit the registry unless there is no other alternative.
->Modifications to the registry are not validated by the Registry Editor or by the Windows operating system before they are applied. 
->As a result, incorrect values can be stored, and this can result in unrecoverable errors in the system. 
->When possible, instead of editing the registry directly, use Group Policy or other Windows tools such as the Microsoft Management Console (MMC) to accomplish tasks. 
->If you must edit the registry, use extreme caution. 
+> [!CAUTION]
+> This information is provided as a reference to use when you are troubleshooting or verifying that the required settings are applied.
+> We recommend that you do not directly edit the registry unless there is no other alternative.
+> Modifications to the registry are not validated by the Registry Editor or by the Windows operating system before they are applied.
+> As a result, incorrect values can be stored, and this can result in unrecoverable errors in the system.
+> When possible, instead of editing the registry directly, use Group Policy or other Windows tools such as the Microsoft Management Console (MMC) to accomplish tasks.
+> If you must edit the registry, use extreme caution.
 
 ## CertificateMappingMethods 
 
@@ -60,7 +60,7 @@ TLS/SSL ciphers should be controlled by configuring the cipher suite order. For 
 
 For information about default cipher suites order that are used by the Schannel SSP, see [Cipher Suites in TLS/SSL (Schannel SSP)](https://msdn.microsoft.com/library/windows/desktop/aa374757.aspx). 
 
-##CipherSuites
+## CipherSuites
 
 Configuring TLS/SSL cipher suites should be done using group policy, MDM or PowerShell, see [Configuring TLS Cipher Suite Order](manage-tls.md#configuring-tls-cipher-suite-order) for details.
 
@@ -112,8 +112,8 @@ To disable, set the DWORD value to 0:
 
 "EnableOcspStaplingForSni"=dword:00000000
 
->[!NOTE] 
->Enabling this registry key has a potential performance impact.
+> [!NOTE] 
+> Enabling this registry key has a potential performance impact.
 
 ## FIPSAlgorithmPolicy
 
@@ -134,7 +134,7 @@ See [Configuring TLS Cipher Suite Order](manage-tls.md#configuring-tls-cipher-su
 ## IssuerCacheSize
 
 This entry controls the size of the issuer cache, and it is used with issuer mapping. 
-The Schannel SSP attempts to map all of the issuers in the client’s certificate chain—not only the direct issuer of the client certificate. 
+The Schannel SSP attempts to map all of the issuers in the client's certificate chain—not only the direct issuer of the client certificate. 
 When the issuers do not map to an account, which is the typical case, the server might attempt to map the same issuer name repeatedly, hundreds of times per second. 
 
 To prevent this, the server has a negative cache, so if an issuer name does not map to an account, it is added to the cache and the Schannel SSP will not attempt to map the issuer name again until the cache entry expires. 
@@ -149,7 +149,7 @@ Registry path: HKLM SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL
 ## IssuerCacheTime
 
 This entry controls the length of the cache timeout interval in milliseconds. 
-The Schannel SSP attempts to map all of the issuers in the client’s certificate chain—not only the direct issuer of the client certificate. 
+The Schannel SSP attempts to map all of the issuers in the client's certificate chain—not only the direct issuer of the client certificate. 
 In the case where the issuers do not map to an account, which is the typical case, the server might attempt to map the same issuer name repeatedly, hundreds of times per second.
 
 To prevent this, the server has a negative cache, so if an issuer name does not map to an account, it is added to the cache and the Schannel SSP will not attempt to map the issuer name again until the cache entry expires. 
@@ -260,7 +260,7 @@ For example, when Internet Explorer receives a request for client authentication
 If the server did not send a list, Internet Explorer displays all of the client certificates that are installed on the client. 
 
 This behavior might be desirable. 
-For example, when PKI environments include cross certificates, the client and server certificates will not have the same root CA; therefore, Internet Explorer cannot chose a certificate that chains up to one of the server’s CAs. 
+For example, when PKI environments include cross certificates, the client and server certificates will not have the same root CA; therefore, Internet Explorer cannot chose a certificate that chains up to one of the server's CAs. 
 By configuring the server to not send a trusted issuer list, Internet Explorer will send all its certificates.
 
 This entry does not exist in the registry by default.
@@ -314,7 +314,7 @@ To disable SSL 2.0 for client or server, change the DWORD value to 0.
 If an SSPI app requests to use SSL 2.0, it will be denied. 
 
 To disable SSL 2.0 by default, create a **DisabledByDefault** entry and change the DWORD value to 1. 
-If an SSPI app explcitly requests to use SSL 2.0, it will be negotiated. 
+If an SSPI app explcitly requests to use SSL 2.0, it may be negotiated. 
 
 The following example shows SSL 2.0 disabled in the registry:
 
@@ -345,7 +345,7 @@ To disable SSL 3.0 for client or server, change the DWORD value to 0.
 If an SSPI app requests to use SSL 3.0, it will be denied. 
 
 To disable SSL 3.0 by default, create a **DisabledByDefault** entry and change the DWORD value to 1. 
-If an SSPI app explicitly requests to use SSL 3.0, it will be negotiated. 
+If an SSPI app explicitly requests to use SSL 3.0, it may be negotiated. 
 
 The following example shows SSL 3.0 disabled in the registry:
 
@@ -374,7 +374,7 @@ To disable TLS 1.0 for client or server, change the DWORD value to 0.
 If an SSPI app requests to use TLS 1.0, it will be denied. 
 
 To disable TLS 1.0 by default, create a **DisabledByDefault** entry and change the DWORD value to 1. 
-If an SSPI app explicitly requests to use TLS 1.0, it will be negotiated. 
+If an SSPI app explicitly requests to use TLS 1.0, it may be negotiated. 
 
 The following example shows TLS 1.0 disabled in the registry:
 
@@ -385,10 +385,6 @@ The following example shows TLS 1.0 disabled in the registry:
 This subkey controls the use of TLS 1.1.
 
 For TLS 1.1 default settings, see [Protocols in the TLS/SSL (Schannel SSP)](https://msdn.microsoft.com/library/windows/desktop/mt808159.aspx).
-
->[!Note] 
->For TLS 1.1 to be enabled and negotiated on servers that run Windows Server 2008 R2, you MUST create the **DisabledByDefault** entry in the appropriate subkey (Client, Server) and set it to "0". 
->The entry will not be seen in the registry and it is set to "1" by default.
 
 Registry path: HKLM SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols
 
@@ -407,7 +403,7 @@ To disable TLS 1.1 for client or server, change the DWORD value to 0.
 If an SSPI app requests to use TLS 1.1, it will be denied. 
 
 To disable TLS 1.1 by default, create a **DisabledByDefault** entry and change the DWORD value to 1. 
-If an SSPI app explicitly requests to use TLS 1.1, it will be negotiated. 
+If an SSPI app explicitly requests to use TLS 1.1, it may be negotiated. 
 
 The following example shows TLS 1.1 disabled in the registry:
 
@@ -418,10 +414,6 @@ The following example shows TLS 1.1 disabled in the registry:
 This subkey controls the use of TLS 1.2.
 
 For TLS 1.2 default settings, see [Protocols in the TLS/SSL (Schannel SSP)](https://msdn.microsoft.com/library/windows/desktop/mt808159.aspx).
-
->[!Note] 
->For TLS 1.2 to be enabled and negotiated on servers that run Windows Server 2008 R2, you MUST create the **DisabledByDefault** entry in the appropriate subkey (Client, Server) and set it to "0". 
->The entry will not be seen in the registry and it is set to "1" by default.
 
 Registry path: HKLM SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols
 
@@ -440,7 +432,7 @@ To disable TLS 1.2 for client or server, change the DWORD value to 0.
 If an SSPI app requests to use TLS 1.2, it will be denied. 
 
 To disable TLS 1.2 by default, create a **DisabledByDefault** entry and change the DWORD value to 1. 
-If an SSPI app explicitly requests to use TLS 1.2, it will be negotiated. 
+If an SSPI app explicitly requests to use TLS 1.2, it may be negotiated. 
 
 The following example shows TLS 1.2 disabled in the registry:
 
@@ -469,7 +461,7 @@ To disable DTLS 1.0 for client or server, change the DWORD value to 0.
 If an SSPI app requests to use DTLS 1.0, it will be denied. 
 
 To disable DTLS 1.0 by default, create a **DisabledByDefault** entry and change the DWORD value to 1. 
-If an SSPI app explicitly requests to use DTLS 1.0, it will be negotiated. 
+If an SSPI app explicitly requests to use DTLS 1.0, it may be negotiated. 
 
 The following example shows DTLS 1.0 disabled in the registry:
 
@@ -499,7 +491,7 @@ To disable DTLS 1.2 for client or server, change the DWORD value to 0.
 If an SSPI app requests to use DTLS 1.0, it will be denied. 
 
 To disable DTLS 1.2 by default, create a **DisabledByDefault** entry and change the DWORD value to 1. 
-If an SSPI app explicitly requests to use DTLS 1.2, it will be negotiated. 
+If an SSPI app explicitly requests to use DTLS 1.2, it may be negotiated. 
 
 The following example shows DTLS 1.1 disabled in the registry:
 

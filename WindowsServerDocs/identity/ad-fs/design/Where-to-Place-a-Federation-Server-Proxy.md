@@ -7,14 +7,12 @@ ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 
 ms.technology: identity-adfs
 ---
 
 # Where to Place a Federation Server Proxy
-
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 You can place Active Directory Federation Services \(AD FS\)federation server proxies in a perimeter network to provide a protection layer against malicious users that may be coming from the Internet. Federation server proxies are ideal for the perimeter network environment because they do not have access to the private keys that are used to create tokens. However, federation server proxies can efficiently route incoming requests to federation servers that are authorized to produce those tokens.  
   
@@ -32,7 +30,7 @@ In addition, the Internet\-facing firewall server, such as a computer running Mi
   
 Server publishing rules determine how server publishing works—essentially, filtering all incoming and outgoing requests through the ISA Server computer. Server publishing rules map incoming client requests to the appropriate servers behind the ISA Server computer. For information about how to configure ISA Server to publish a server, see [Create a Secure Web Publishing Rule](https://go.microsoft.com/fwlink/?LinkId=75182).  
   
-In the federated world of AD FS, these client requests are typically made to a specific URL, for example, a federation server identifier URL such as http://fs.fabrikam.com. Because these client requests come in from the Internet, the Internet\-facing firewall server must be configured to publish the federation server identifier URL for each federation server proxy that is deployed in the perimeter network.  
+In the federated world of AD FS, these client requests are typically made to a specific URL, for example, a federation server identifier URL such as http:\//fs.fabrikam.com. Because these client requests come in from the Internet, the Internet\-facing firewall server must be configured to publish the federation server identifier URL for each federation server proxy that is deployed in the perimeter network.  
   
 ### Configuring ISA Server to allow SSL  
 To facilitate secure AD FS communications, you must configure ISA Server to allow Secure Sockets Layer \(SSL\) communications between the following:  

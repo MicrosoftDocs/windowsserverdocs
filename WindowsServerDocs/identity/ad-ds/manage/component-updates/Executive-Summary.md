@@ -7,7 +7,7 @@ ms.author: joflore
 manager: mtillman
 ms.date: 05/08/2018
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 
 ms.technology: identity-adds
 ---
@@ -156,7 +156,7 @@ This section contains recommendations that will help organizations prepare for a
   
         -   **Classify all Active Directory Data** - Business owners should provide classification for data in Active Directory. Within the data classification model, classification for the following Active Directory data should be included:  
   
-            -   **Systems** - Classify server populations, their operating system their role, the applications running on them, and the IT and business owners of record.  
+            -   **Systems** - Classify server populations, their operating system, their role, the applications running on them, and the IT and business owners of record.  
   
             -   **Applications** - Classify applications by functionality, user base, and their operating system.  
   

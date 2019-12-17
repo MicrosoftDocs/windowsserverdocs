@@ -7,14 +7,12 @@ ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 
 ms.technology: identity-adfs
 ---
 
 # Identifying Your AD FS Deployment Goals
-
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Correctly identifying your Active Directory Federation Services \(AD FS\) deployment goals is essential for the success of your AD FS design project. Depending on the size of your organization and the level of involvement that you want to provide for the information technology \(IT\) staff in any partner organizations, form a project team that can clearly articulate real\-world deployment issues in a vision statement. Make sure that the members of this team understand the direction in which your deployment project must move in order to reach your AD FS deployment goals.  
   

@@ -1,7 +1,7 @@
 ---
 title: Managing the Host Guardian Service
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.topic: article
 ms.assetid: eecb002e-6ae5-4075-9a83-2bbcee2a891c
 manager: dongill
@@ -217,7 +217,7 @@ The backed up HGS server state will not include the name of your HGS cluster, an
 These settings are important for consistency but not critical to get your HGS cluster back online after a disaster.
 
 To capture the name of the HGS service, run `Get-HgsServer` and note the flat name in the Attestation and Key Protection URLs.
-For example, if the Attestation URL is "http://hgs.contoso.com/Attestation", "hgs" is the HGS service name.
+For example, if the Attestation URL is "<http://hgs.contoso.com/Attestation>", "hgs" is the HGS service name.
 
 The Active Directory domain used by HGS should be managed like any other Active Directory domain.
 When restoring HGS after a disaster, you will not necessarily need to recreate the exact objects that are present in the current domain.
@@ -504,6 +504,10 @@ On the host that failed attestation, run the following command to get a detailed
 Get-HgsTrace -RunDiagnostics -Detailed
 ```
 
+> [!IMPORTANT]
+> If you're using Windows Server 2019 or Windows 10, version 1809 and are using code integrity policies, `Get-HgsTrace` may return a failure for the **Code Integrity Policy Active** diagnostic.
+> You can safely ignore this result when it is the only failing diagnostic.
+
 ### Review attestation policies
 To review the current state of the policies configured on HGS, run the following commands on any HGS node:
 
@@ -676,7 +680,7 @@ See the section on [adding new keys](#adding-new-keys) for detailed information 
 
     ```powershell
     Set-HgsKeyProtectionCertificate -CertificateType Signing -Thumbprint <Thumbprint> -IsPrimary
-    Set-HgsKeyProtectionCertificate -CertificateType Signing -Thumbprint <Thumbprint> -IsPrimary
+    Set-HgsKeyProtectionCertificate -CertificateType Encryption -Thumbprint <Thumbprint> -IsPrimary
     ```
 
 At this point, shielding data created with metadata obtained from the HGS node will use the new certificates, but existing VMs will continue to work because the older certificates are still there.
@@ -699,10 +703,10 @@ For each shielded VM, perform the following steps:
 10. Copy the updated KP back to the hosting fabric
 11. Apply the KP to the original VM:
 
-    ```powershell
-    $updatedKP = Get-Content -Path .\updatedVM001.kp
-    Set-VMKeyProtector -VMName VM001 -KeyProtector $updatedKP
-    ```
+   ```powershell
+   $updatedKP = Get-Content -Path .\updatedVM001.kp
+   Set-VMKeyProtector -VMName VM001 -KeyProtector $updatedKP
+   ```
 12.	Finally, start the VM and ensure it runs successfully.
 
 > [!NOTE]
@@ -710,9 +714,22 @@ For each shielded VM, perform the following steps:
 > To return to the last known good key protector, run `Set-VMKeyProtector -RestoreLastKnownGoodKeyProtector`
 
 Once all VMs have been updated to authorize the new guardian keys, you can disable and remove the old keys.
+
 13. Get the thumbprints of the old certificates from `Get-HgsKeyProtectionCertificate -IsPrimary $false`
-14. Disable each certificate by replacing the certificate type and thumbprint in the following command: `Set-HgsKeyProtectionCertificate -CertificateType Encryption -Thumbprint <Thumbprint> -IsEnabled $false`
-15. After ensuring VMs are still able to start with the certificates disabled, remove the certificates from HGS with `Remove-HgsKeyProtectionCertificate -CertificateType Encryption -Thumbprint <Thumbprint>`
+
+14. Disable each certificate by running the following commands:  
+
+   ```powershell
+   Set-HgsKeyProtectionCertificate -CertificateType Signing -Thumbprint <Thumbprint> -IsEnabled $false
+   Set-HgsKeyProtectionCertificate -CertificateType Encryption -Thumbprint <Thumbprint> -IsEnabled $false
+   ```
+
+15. After ensuring VMs are still able to start with the certificates disabled, remove the certificates from HGS by running the following commands:
+
+   ```powershell
+   Remove-HgsKeyProtectionCertificate -CertificateType Signing -Thumbprint <Thumbprint>`
+   Remove-HgsKeyProtectionCertificate -CertificateType Encryption -Thumbprint <Thumbprint>`
+   ```
 
 > [!IMPORTANT]
 > VM backups will contain old key protector information that allow the old certificates to be used to start up the VM.

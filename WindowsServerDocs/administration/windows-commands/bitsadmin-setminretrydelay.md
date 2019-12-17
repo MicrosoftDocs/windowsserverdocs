@@ -2,7 +2,7 @@
 title: bitsadmin setminretrydelay
 description: "Windows Commands topic for **** - "
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -17,9 +17,7 @@ ms.date: 10/16/2017
 
 # bitsadmin setminretrydelay
 
-
-
-Sets the length of time, in seconds, that the service waits after encountering a transient error before retrying to transfer the file.
+Sets the minimum length of time, in seconds, that BITS waits after encountering a transient error before trying to transfer the file.
 
 ## Syntax
 

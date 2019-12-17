@@ -6,14 +6,14 @@ ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.assetid: 08724d45-9be4-4c56-a5f1-2cf40864e136
 ms.technology: identity-adfs
 ---
 
 # Multi-factor authentication and external authentication providers customization 
 
->Applies To: Windows Server 2016, Windows Server 2012 R2
+
 
 In AD FS, the support for multifactor authentication is provided out\-of\-the\-box. For example, you can configure AD FS to use built\-in Certificate Authentication as the second factor authentication. You can also use external authentication providers. This approach can enable AD FS to integrate with additional services, such as Azure Multi-factor Authentication, or you can develop your own provider. See [Solution Guide: Manage Risk with Multi\-factor Access Control](https://technet.microsoft.com/library/dn280937.aspx) for more information about how to register external authentication provider by using AD FS.  
   
@@ -29,7 +29,7 @@ The following is an example of the sign\-in user interface, which is highlighted
   
 Before you write a new custom authentication method, we recommend that you study the AD FS theme and style definitions to understand the content authoring requirements.  
   
--   A custom authentication method only authors an HTML segment on the AD FS sign\-in page and not the full page. You should use AD FS’s style definition to get the consistent appearance and behavior.  
+-   A custom authentication method only authors an HTML segment on the AD FS sign\-in page and not the full page. You should use AD FS's style definition to get the consistent appearance and behavior.  
   
 ![AD FS and MFA](media/AD-FS-user-sign-in-customization/ADFS_Blue_Custom9.png)  
   

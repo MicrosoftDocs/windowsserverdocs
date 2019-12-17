@@ -9,12 +9,12 @@ ms.date: 03/29/2018
 ---
 
 # Delimit the allocation of volumes in Storage Spaces Direct
-> Applies To: Windows Server Insider Preview, build 17093 and later
+> Applies to: Windows Server 2019
 
-Windows Server Insider Preview introduces an option to manually delimit the allocation of volumes in Storage Spaces Direct. Doing so can significantly increase fault tolerance under certain conditions, but imposes some added management considerations and complexity. This topic explains how it works and gives examples in PowerShell.
+Windows Server 2019 introduces an option to manually delimit the allocation of volumes in Storage Spaces Direct. Doing so can significantly increase fault tolerance under certain conditions, but imposes some added management considerations and complexity. This topic explains how it works and gives examples in PowerShell.
 
    > [!IMPORTANT]
-   > This feature is new in Windows Server Insider Preview, build 17093 and later. It is not available in Windows Server 2016. We invite IT pros to join the [Windows Server Insider Program](https://aka.ms/serverinsider) to give us feedback on what we can do to make Windows Server work better for your organization.
+   > This feature is new in Windows Server 2019. It is not available in Windows Server 2016. 
 
 ## Prerequisites
 
@@ -208,7 +208,7 @@ Conversely, in the extreme case that more than half of servers or drives in the 
 
 If three or more failures occur at once but at least half of servers and drives are still up, volumes with delimited allocation may stay online and accessible, depending on which servers have failures. Let's run the numbers to determine the precise odds.
 
-For simplicity, assume volumes are independently and identically distributed (IID) according to the best practices above, and that enough unique combinations are available for every volume’s allocation to be unique. The probability that any given volume survives is also the expected fraction of overall storage that survives by linearity of expectation. 
+For simplicity, assume volumes are independently and identically distributed (IID) according to the best practices above, and that enough unique combinations are available for every volume's allocation to be unique. The probability that any given volume survives is also the expected fraction of overall storage that survives by linearity of expectation. 
 
 Given **N** servers of which **F** have failures, a volume allocated to **3** of them goes offline if-and-only-if all **3** are among the **F** with failures. There are **(N choose F)** ways for **F** failures to occur, of which **(F choose 3)** result in the volume going offline and becoming inaccessible. The probability can be expressed as:
 

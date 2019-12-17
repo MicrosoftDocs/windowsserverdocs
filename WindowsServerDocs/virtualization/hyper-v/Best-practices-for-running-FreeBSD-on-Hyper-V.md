@@ -1,7 +1,7 @@
 ---
 title: Best practices for running FreeBSD on Hyper-V
 description: "Provides recommendations for running FreeBSD on virtual machines"
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.service: na
 manager: dongill
 ms.technology: compute-hyper-v
@@ -14,7 +14,7 @@ ms.date: 01/09/2017
 ---
 # Best practices for running FreeBSD on Hyper-V
 
->Applies To: Windows Server 2016, Hyper-V Server 2016, Windows Server 2012 R2, Hyper-V Server 2012 R2, Windows Server 2012, Hyper-V Server 2012, Windows Server 2008 R2, Windows 10, Windows 8.1, Windows 8, Windows 7.1, Windows 7
+>Applies To: Windows Server 2019, Windows Server 2016, Hyper-V Server 2016, Windows Server 2012 R2, Hyper-V Server 2012 R2, Windows Server 2012, Hyper-V Server 2012, Windows Server 2008 R2, Windows 10, Windows 8.1, Windows 8, Windows 7.1, Windows 7
 
 This topic contains a list of recommendations for running FreeBSD as a guest operating system on a Hyper-V virtual machine.
 
@@ -64,11 +64,10 @@ During startup, device nodes are created as new devices are discovered. This can
    # Device                Mountpoint      FStype  Options         Dump    Pass#
    /dev/label/rootfs       /               ufs     rw              1       1
    /dev/label/swap         none            swap    sw              0       0
-
    ```
 
-4.	The system can now be rebooted. If everything went well, it will come up normally and mount will show:
-   
+4. The system can now be rebooted. If everything went well, it will come up normally and mount will show:
+
    ```
    # mount
    /dev/label/rootfs on / (ufs, local, journaled soft-updates)

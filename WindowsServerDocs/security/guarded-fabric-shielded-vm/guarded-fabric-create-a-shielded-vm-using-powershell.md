@@ -1,12 +1,12 @@
 ---
 title: Create a shielded VM using PowerShell
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.topic: article
 manager: dongill
 author: rpsqrd
 ms.technology: security-guarded-fabric
-ms.date: 08/29/2018
+ms.date: 09/25/2019
 ---
 
 # Create a shielded VM using PowerShell
@@ -52,15 +52,15 @@ In addition, you will need an unattended installation answer file (unattend.xml 
 Run the following cmdlets on a machine with the Remote Server Administration Tools for Shielded VMs installed.
 If you are creating a PDK for a Linux VM, you must do this on a server running Windows Server, version 1709 or later.
 
- 
+ 
 ```powershell
 # Create owner certificate, don't lose this!
 # The certificate is stored at Cert:\LocalMachine\Shielded VM Local Certificates
 $Owner = New-HgsGuardian –Name 'Owner' –GenerateCertificates
- 
+ 
 # Import the HGS guardian for each fabric you want to run your shielded VM
 $Guardian = Import-HgsGuardian -Path C:\HGSGuardian.xml -Name 'TestFabric'
- 
+ 
 # Create the PDK file
 # The "Policy" parameter describes whether the admin can see the VM's console or not
 # Use "EncryptionSupported" if you are testing out shielded VMs and want to debug any issues during the specialization process
@@ -88,6 +88,19 @@ Once the module is installed, you're ready to provision your shielded VM.
 New-ShieldedVM -Name 'MyShieldedVM' -TemplateDiskPath 'C:\temp\MyTemplateDisk.vhdx' -ShieldingDataFilePath 'C:\temp\Contoso.pdk' -Wait
 ```
 
+If your shielding data answer file includes specialization values, you can provide the replacement values to New-ShieldedVM. In this example, the answer file is configured with placeholder values for a static IPv4 address.
+
+```powershell
+$specializationValues = @{
+    "@IP4Addr-1@" = "192.168.1.10"
+    "@MacAddr-1@" = "Ethernet"
+    "@Prefix-1-1@" = "192.168.1.0/24"
+    "@NextHop-1-1@" = "192.168.1.254"
+}
+New-ShieldedVM -Name 'MyStaticIPVM' -TemplateDiskPath 'C:\temp\MyTemplateDisk.vhdx' -ShieldingDataFilePath 'C:\temp\Contoso.pdk' -SpecializationValues $specializationValues -Wait
+
+```
+
 If your template disk contains a Linux-based OS, include the `-Linux` flag when running the command:
 
 ```powershell
@@ -111,5 +124,5 @@ The shielded VM can now be live migrated within the cluster.
 
 ## Next step
 
->[!div class="nextstepaction"]
-[Deploy a shielded using VMM](guarded-fabric-tenant-deploys-shielded-vm-using-vmm.md)
+> [!div class="nextstepaction"]
+> [Deploy a shielded using VMM](guarded-fabric-tenant-deploys-shielded-vm-using-vmm.md)

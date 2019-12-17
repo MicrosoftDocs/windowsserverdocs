@@ -3,11 +3,10 @@ title: Step 2 Configure the Multisite Infrastructure
 description: This topic is part of the guide Deploy Multiple Remote Access Servers in a Multisite Deployment in Windows Server 2016.
 manager: brianlic
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
-ms.technology: 
-  - networking-ras
+ms.technology: networking-ras
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: faec70ac-88c0-4b0a-85c7-f0fe21e28257
@@ -55,7 +54,7 @@ For more information, see [Adding a Site to the Forest](https://technet.microsof
   
 8.  Close Active Directory Sites and Services.  
   
-![Windows PowerShell](../../../../media/Step-2-Configure-the-Multisite-Infrastructure/PowerShellLogoSmall.gif)****Windows PowerShell equivalent commands****  
+![Windows PowerShell](../../../../media/Step-2-Configure-the-Multisite-Infrastructure/PowerShellLogoSmall.gif)***<em>Windows PowerShell equivalent commands</em>***  
   
 The following Windows PowerShell cmdlet or cmdlets perform the same function as the preceding procedure. Enter each cmdlet on a single line, even though they may appear word-wrapped across several lines here because of formatting constraints.  
   
@@ -164,7 +163,7 @@ A multisite deployment requires an additional security group for  Windows 7  cli
   
 8.  Repeat this procedure to create a security group for every entry point as required.  
   
-![Windows PowerShell](../../../../media/Step-2-Configure-the-Multisite-Infrastructure/PowerShellLogoSmall.gif)****Windows PowerShell equivalent commands****  
+![Windows PowerShell](../../../../media/Step-2-Configure-the-Multisite-Infrastructure/PowerShellLogoSmall.gif)***<em>Windows PowerShell equivalent commands</em>***  
   
 The following Windows PowerShell cmdlet or cmdlets perform the same function as the preceding procedure. Enter each cmdlet on a single line, even though they may appear word-wrapped across several lines here because of formatting constraints.  
   
@@ -295,7 +294,7 @@ Domain controller association information is stored both in the registry of the 
     ![Windows PowerShell](../../../../media/Step-2-Configure-the-Multisite-Infrastructure/DCAssocFinal.png)  
   
 ### <a name="ConfigDistOptimization"></a>Optimization of configuration distribution  
-When making configuration changes, the changes are applied only after the server GPOs propagate to the Remote Access servers. To reduce the configuration distribution time, Remote Access automatically selects a writable domain controller which is  HYPERLINK "https://technet.microsoft.com/library/cc978016.aspx" closest to the Remote Access server when creating its server GPO.  
+When making configuration changes, the changes are applied only after the server GPOs propagate to the Remote Access servers. To reduce the configuration distribution time, Remote Access automatically selects a writable domain controller which is  HYPERLINK "<https://technet.microsoft.com/library/cc978016.aspx>" closest to the Remote Access server when creating its server GPO.  
   
 In some scenarios, it may be required to manually modify the domain controller that manages a server GPO in order to optimize configuration distribution time:  
   

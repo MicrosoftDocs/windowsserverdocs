@@ -2,7 +2,7 @@
 title: Use DNS Policy for Application Load Balancing With Geo-Location Awareness
 description: This topic is part of the DNS Policy Scenario Guide for Windows Server 2016
 manager: brianlic
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: networking-dns
 ms.topic: article
 ms.assetid: b6e679c6-4398-496c-88bc-115099f3a819
@@ -40,7 +40,7 @@ The following sections show you how to configure DNS policy for application load
 >[!IMPORTANT]
 >The following sections include example Windows PowerShell commands that contain example values for many parameters. Ensure that you replace example values in these commands with values that are appropriate for your deployment before you run these commands.
 
-###<a name="bkmk_clientsubnets"></a>Create the DNS Client Subnets
+### <a name="bkmk_clientsubnets"></a>Create the DNS Client Subnets
 
 You must first identify the subnets or IP address space of the North America and Europe regions.
 
@@ -56,7 +56,7 @@ You can use the following Windows PowerShell commands to create DNS Client Subne
     
 For more information, see [Add-DnsServerClientSubnet](https://docs.microsoft.com/powershell/module/dnsserver/add-dnsserverclientsubnet?view=win10-ps).
 
-###<a name="bkmk_zscopes2"></a>Create the Zone Scopes
+### <a name="bkmk_zscopes2"></a>Create the Zone Scopes
 
 After the client subnets are in place, you must partition the zone contosogiftservices.com into different zone scopes, each for a datacenter.
 
@@ -80,7 +80,7 @@ You can use the following Windows PowerShell commands to create zone scopes.
 
 For more information, see [Add-DnsServerZoneScope](https://docs.microsoft.com/powershell/module/dnsserver/add-dnsserverzonescope?view=win10-ps)
 
-###<a name="bkmk_records2"></a>Add Records to the Zone Scopes
+### <a name="bkmk_records2"></a>Add Records to the Zone Scopes
 
 Now you must add the records representing the web server host into the zone scopes.
 
@@ -93,7 +93,7 @@ The records for the America datacenters were added in the previous scenario. You
 
 For more information, see [Add-DnsServerResourceRecord](https://docs.microsoft.com/powershell/module/dnsserver/add-dnsserverresourcerecord?view=win10-ps).
 
-###<a name="bkmk_policies2"></a>Create the DNS Policies
+### <a name="bkmk_policies2"></a>Create the DNS Policies
 
 After you have created the partitions (zone scopes) and you have added records, you must create DNS policies that distribute the incoming queries across these scopes.
 

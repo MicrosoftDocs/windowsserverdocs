@@ -7,14 +7,12 @@ ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 
 ms.technology: identity-adfs
 ---
 
 # Prepare Client Computers in the Account Partner
-
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 The easiest way for an administrator in an account partner organization to prepare client computers for access to Active Directory Federation Services \(AD FS\) federated applications is to use Group Policy. Group Policy provides a convenient way for you to push specific certificates and settings that are required for federation to all the client computers that will be used to access federated applications.  
   

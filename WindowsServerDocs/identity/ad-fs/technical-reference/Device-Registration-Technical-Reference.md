@@ -7,12 +7,11 @@ ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 
 ms.technology: identity-adfs
 ---
 
->Applies To: Windows Server 2016, Windows Server 2012 R2
 
 # Device Registration Technical Reference
 The Device Registration Service \(DRS\) is a new Windows service that is included with the Active Directory Federation Service Role on Windows Server 2012 R2.  The DRS must be installed and configured on all of the federation servers in your AD FS farm.  For information on deploying DRS, see [Configure a federation server with Device Registration Service](https://technet.microsoft.com/library/dn486831.aspx).  

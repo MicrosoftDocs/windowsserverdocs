@@ -1,7 +1,7 @@
 ---
 title: Netsh Commands for Hypertext Transfer Protocol (HTTP)
 description: Use netsh http to query and configure HTTP.sys settings and parameters.
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: networking
 ms.topic: article
 ms.assetid: 
@@ -50,9 +50,11 @@ add iplisten [ ipaddress= ] IPAddress
 ```
 
 **Parameters**
-| | | |
-|---|---|---|
+
+|               |                                                                                                                                                                                                                          |          |
+|---------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------|
 | **ipaddress** | The IPv4 or IPv6 address to be added to the IP listen list. The IP listen list is used to scope the list of addresses to which the HTTP service binds. "0.0.0.0" means any IPv4 address and "::" means any IPv6 address. | Required |
+
 ---
 
 **Examples**
@@ -78,21 +80,23 @@ add sslcert [ ipport= ] IPAddress:port [ certhash= ] CertHash [ appid= ] GUID [ 
 
 **Parameters**
 
-| | | |
-|---|---|---|
-| **ipport**                                   | Specifies the IP address and port for the binding. A colon character (:) is used as a delimiter between the IP address and the port number.                                              | Required |
-| **certhash**                                 | Specifies the SHA hash of the certificate. This hash is 20 bytes long and is specified as a hexadecimal string.                                                                          | Required |
-| **appid**                                    | Specifies the GUID to identify the owning application.                                                                                                                                   | Required |
-| **certstorename**                            | Specifies the store name for the certificate. Defaults to MY. Certificate must be stored in the local machine context.                                                                   | Optional |
-| **verifyclientcertrevocation**               | Specifies the Turns on/off verification of revocation of client certificates.                                                                                                            | Optional |
-| **verifyrevocationwithcachedclientcertonly** | Specifies whether the usage of only cached client certificate for revocation checking is enabled or disabled.                                                                            | Optional |
-| **usagecheck**                               | Specifies whether the usage check is enabled or disabled. Default is enabled.                                                                                                            | Optional |
-| **revocationfreshnesstime**                  | Specifies the time interval, in seconds, to check for an updated certificate revocation list (CRL). If this value is zero, then the new CRL is updated only if the previous one expires. | Optional |
-| **urlretrievaltimeout**                      | Specifies the timeout interval (in milliseconds) after the attempt to retrieve the certificate revocation list for the remote URL.                                                       | Optional |
-| **sslctlidentifier**                         | Specifies the list of the certificate issuers that can be trusted. This list can be a subset of the certificate issuers that are trusted by the computer.                                | Optional |
-| **sslctlstorename**                          | Specifies the certificate store name under LOCAL_MACHINE where SslCtlIdentifier is stored.                                                                                               | Optional |
-| **dsmapperusage**                            | Specifies whether DS mappers is enabled or disabled. Default is disabled.                                                                                                                | Optional |
-| **clientcertnegotiation**                    | Specifies whether the negotiation of certificate is enabled or disabled. Default is disabled.                                                                                            | Optional |
+
+|                                              |                                                                                                                                                                                          |          |
+|----------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------|
+|                  **ipport**                  |                       Specifies the IP address and port for the binding. A colon character (:) is used as a delimiter between the IP address and the port number.                        | Required |
+|                 **certhash**                 |                                     Specifies the SHA hash of the certificate. This hash is 20 bytes long and is specified as a hexadecimal string.                                      | Required |
+|                  **appid**                   |                                                                  Specifies the GUID to identify the owning application.                                                                  | Required |
+|              **certstorename**               |                                  Specifies the store name for the certificate. Defaults to MY. Certificate must be stored in the local machine context.                                  | Optional |
+|        **verifyclientcertrevocation**        |                                                      Specifies the Turns on/off verification of revocation of client certificates.                                                       | Optional |
+| **verifyrevocationwithcachedclientcertonly** |                                      Specifies whether the usage of only cached client certificate for revocation checking is enabled or disabled.                                       | Optional |
+|                **usagecheck**                |                                                      Specifies whether the usage check is enabled or disabled. Default is enabled.                                                       | Optional |
+|         **revocationfreshnesstime**          | Specifies the time interval, in seconds, to check for an updated certificate revocation list (CRL). If this value is zero, then the new CRL is updated only if the previous one expires. | Optional |
+|           **urlretrievaltimeout**            |                            Specifies the timeout interval (in milliseconds) after the attempt to retrieve the certificate revocation list for the remote URL.                            | Optional |
+|             **sslctlidentifier**             |                Specifies the list of the certificate issuers that can be trusted. This list can be a subset of the certificate issuers that are trusted by the computer.                 | Optional |
+|             **sslctlstorename**              |                                                Specifies the certificate store name under LOCAL_MACHINE where SslCtlIdentifier is stored.                                                | Optional |
+|              **dsmapperusage**               |                                                        Specifies whether DS mappers is enabled or disabled. Default is disabled.                                                         | Optional |
+|          **clientcertnegotiation**           |                                              Specifies whether the negotiation of certificate is enabled or disabled. Default is disabled.                                               | Optional |
+
 ---
 
 **Examples**
@@ -115,10 +119,12 @@ add timeout [ timeouttype= ] IdleConnectionTimeout | HeaderWaitTimeout [ value=]
 ```
 
 **Parameters**
-| | |
-|---|---|
-| **timeouttype** | Type of timeout for setting.                                                                        |
-| **value**       | Value of the timeout (in seconds). If the value is in hexadecimal notation, then add the prefix 0x. |
+
+|                 |                                                                                                     |
+|-----------------|-----------------------------------------------------------------------------------------------------|
+| **timeouttype** |                                    Type of timeout for setting.                                     |
+|    **value**    | Value of the timeout (in seconds). If the value is in hexadecimal notation, then add the prefix 0x. |
+
 ---
 
 **Examples**
@@ -144,23 +150,25 @@ add urlacl [ url= ] URL [ [user=] User [ [ listen= ] yes | no [ delegate= ] yes 
 ```
 
 **Parameters**
-| | | |
-|---|---|---|
-| **url**       | Specifies the fully qualified Uniform Resource Locator (URL).                                                                                    | Required |
-| **user**      | Specifies the user or user-group name                                                                                                            | Required |
-| **listen**    | Specifies one of the following values: yes: Allow the user to register URLs. This is the default value. no: Deny the user from registering URLs. | Optional |
-| **delegate**  | Specifies one of the following values: yes: Allow the user to delegate URLs no: Deny the user from delegating URLs. This is the default value.   | Optional |
-| **sddl**      | Specifies an SDDL string that describes the DACL.                                                                                                | Optional |
+
+|              |                                                                                                                                                  |          |
+|--------------|--------------------------------------------------------------------------------------------------------------------------------------------------|----------|
+|   **url**    |                                          Specifies the fully qualified Uniform Resource Locator (URL).                                           | Required |
+|   **user**   |                                                      Specifies the user or user-group name                                                       | Required |
+|  **listen**  | Specifies one of the following values: yes: Allow the user to register URLs. This is the default value. no: Deny the user from registering URLs. | Optional |
+| **delegate** |  Specifies one of the following values: yes: Allow the user to delegate URLs no: Deny the user from delegating URLs. This is the default value.  | Optional |
+|   **sddl**   |                                                Specifies an SDDL string that describes the DACL.                                                 | Optional |
+
 ---
 
 **Examples**
 
 Following are four examples of the **add urlacl** command.
 
--   add urlacl url=https://+:80/MyUri user=DOMAIN\\user
--   add urlacl url=https://www.contoso.com:80/MyUri user=DOMAIN\\user listen=yes
--   add urlacl url=https://www.contoso.com:80/MyUri user=DOMAIN\\user delegate=no
--   add urlacl url=https://+:80/MyUri sddl=...
+- add urlacl url=https://+:80/MyUri user=DOMAIN\\user
+- add urlacl url=<https://www.contoso.com:80/MyUri> user=DOMAIN\\user listen=yes
+- add urlacl url=<https://www.contoso.com:80/MyUri> user=DOMAIN\\user delegate=no
+- add urlacl url=https://+:80/MyUri sddl=...
 
 ---
 
@@ -176,18 +184,20 @@ delete cache [ [ url= ] URL [ [recursive= ] yes | no ]
 ```
 
 **Parameters**
-| | | |
-|---|---|---|
-| **url**       | Specifies the fully qualified Uniform Resource Locator (URL) that you want to delete.                                        | Optional |
+
+|               |                                                                                                                              |          |
+|---------------|------------------------------------------------------------------------------------------------------------------------------|----------|
+|    **url**    |                    Specifies the fully qualified Uniform Resource Locator (URL) that you want to delete.                     | Optional |
 | **recursive** | Specifies whether all entries under the url cache get removed. **yes**: remove all entries **no**: do not remove all entries | Optional |
+
 ---
 
 **Examples**
 
 Following are two examples of the **delete cache** command.
 
--   delete cache url=https://www.contoso.com:80/myresource/ recursive=yes
--   delete cache
+- delete cache url=<https://www.contoso.com:80/myresource/> recursive=yes
+- delete cache
 
 ---
 
@@ -203,9 +213,11 @@ delete iplisten [ ipaddress= ] IPAddress
 ```
 
 **Parameters**
-| | | |
-|---|---|---|
+
+|               |                                                                                                                                                                                                                                                                     |          |
+|---------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------|
 | **ipaddress** | The IPv4 or IPv6 address to be deleted from the IP listen list. The IP listen list is used to scope the list of addresses to which the HTTP service binds. "0.0.0.0" means any IPv4 address and "::" means any IPv6 address. This does not include the port number. | Required |
+
 ---
 
 
@@ -233,9 +245,11 @@ delete sslcert [ ipport= ] IPAddress:port
 ```
 
 **Parameters**
-| | | |
-|---|---|---|
+
+|            |                                                                                                                                                                                          |          |
+|------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------|
 | **ipport** | Specifies the IPv4 or IPv6 address and port for which the SSL certificate bindings get deleted. A colon character (:) is used as a delimiter between the IP address and the port number. | Required |
+
 ---
 
 
@@ -260,9 +274,11 @@ delete timeout [ timeouttype= ] idleconnectiontimeout | headerwaittimeout
 ```
 
 **Parameters**
-| | | |
-|---|---|---|
+
+|                 |                                        |          |
+|-----------------|----------------------------------------|----------|
 | **timeouttype** | Specifies the type of timeout setting. | Required |
+
 ---
 
 
@@ -286,9 +302,11 @@ delete urlacl [ url= ] URL
 ```
 
 **Parameters**
-| | | |
-|---|---|---|
+
+|         |                                                                                       |          |
+|---------|---------------------------------------------------------------------------------------|----------|
 | **url** | Specifies the fully qualified Uniform Resource Locator (URL) that you want to delete. | Required |
+
 ---
 
 
@@ -296,8 +314,8 @@ delete urlacl [ url= ] URL
 
 Following are two examples of the **delete urlacl** command.
 
--   delete urlacl url=https://+:80/MyUri
--   delete urlacl url=https://www.contoso.com:80/MyUri
+- delete urlacl url=https://+:80/MyUri
+- delete urlacl url=<https://www.contoso.com:80/MyUri>
 
 ---
 
@@ -326,9 +344,11 @@ show cachestate [ [url= ] URL]
 ```
 
 **Parameters**
-| | | |
-|---|---|---|
+
+|         |                                                                                                                                                    |          |
+|---------|----------------------------------------------------------------------------------------------------------------------------------------------------|----------|
 | **url** | Specifies the fully qualified URL that you want to display. If not specified, display all URLs. The URL could also be a prefix to registered URLs. | Optional |
+
 ---
 
 
@@ -336,8 +356,8 @@ show cachestate [ [url= ] URL]
 
 Following are two examples of the **show cachestate** command:
 
--   show cachestate url=https://www.contoso.com:80/myresource
--   show cachestate
+- show cachestate url=<https://www.contoso.com:80/myresource>
+- show cachestate
 
 ---
 
@@ -365,10 +385,12 @@ show servicestate [ [ view= ] session | requestq ] [ [ verbose= ] yes | no ]
 ```
 
 **Parameters**
-| | | |
-|---|---|---|
-| **View**    | Specifies whether to view a snapshot of the HTTP service state based on the server session or on the request queues. | Optional |
-| **Verbose** | Specifies whether to display verbose information that also shows property information.                               | Optional |
+
+|             |                                                                                                                      |          |
+|-------------|----------------------------------------------------------------------------------------------------------------------|----------|
+|  **View**   | Specifies whether to view a snapshot of the HTTP service state based on the server session or on the request queues. | Optional |
+| **Verbose** |                Specifies whether to display verbose information that also shows property information.                | Optional |
+
 ---
 
 **Examples**
@@ -392,9 +414,11 @@ show sslcert [ ipport= ] IPAddress:port
 ```
 
 **Parameters**
-| | | |
-|---|---|---|
+
+|            |                                                                                                                                                                                                                                                |          |
+|------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------|
 | **ipport** | Specifies the IPv4 or IPv6 address and port for which the SSL certificate bindings display. A colon character (:) is used as a delimiter between the IP address and the port number. If you do not specify ipport, all bindings are displayed. | Required |
+
 ---
 
 
@@ -433,9 +457,11 @@ show urlacl [ [url= ] URL]
 ```
 
 **Parameters**
-| | | |
-|---|---|---|
+
+|         |                                                                                                |          |
+|---------|------------------------------------------------------------------------------------------------|----------|
 | **url** | Specifies the fully qualified URL that you want to display. If not specfied, display all URLs. | Optional |
+
 ---
 
 
@@ -443,8 +469,8 @@ show urlacl [ [url= ] URL]
 
 Following are three examples of the **show urlacl** command.
 
--   show urlacl url=https://+:80/MyUri
--   show urlacl url=https://www.contoso.com:80/MyUri
--   show urlacl
+- show urlacl url=https://+:80/MyUri
+- show urlacl url=<https://www.contoso.com:80/MyUri>
+- show urlacl
 
 ---

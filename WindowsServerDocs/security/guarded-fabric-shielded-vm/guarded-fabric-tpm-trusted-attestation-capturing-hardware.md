@@ -1,13 +1,13 @@
 ---
 title: Capture TPM-mode information required by HGS
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.topic: article
 ms.assetid: 915b1338-5085-481b-8904-75d29e609e93
 manager: dongill
 author: rpsqrd
 ms.technology: security-guarded-fabric
-ms.date: 12/10/2018
+ms.date: 04/01/2019
 ---
 
 # Authorize guarded hosts using TPM-based attestation
@@ -59,7 +59,7 @@ A host can only attest if all artifacts (EKPub + TPM baseline + CI Policy) use t
     > If you encounter an error when adding a TPM identifier regarding an untrusted Endorsement Key Certificate (EKCert), ensure that the [trusted TPM root certificates have been added](guarded-fabric-install-trusted-tpm-root-certificates.md) to the HGS node.
     > Additionally, some TPM vendors do not use EKCerts.
     > You can check if an EKCert is missing by opening the XML file in an editor such as Notepad and checking for an error message indicating no EKCert was found.
-    > If this is the case, and you trust that the TPM in your machine is authentic, you can use the -PolicyVersion v1 parameter beginning with Windows Server 2019, or the -Force parameter in Windows Server 2016, to add the host identifier to HGS by using v1 attestation. The CI policy and the TPM baseline need to be created by using the same attestation version.
+    > If this is the case, and you trust that the TPM in your machine is authentic, you can use the `-Force` parameter to add the host identifier to HGS. In Windows Server 2019, you need to also use the `-PolicyVersion v1` parameter when using `-Force`. This creates a policy consistent with the Windows Server 2016 behavior and will require you to use `-PolicyVersion v1` when registering the CI policy and the TPM baseline as well.
 
 ## Create and apply a code integrity policy
 
@@ -98,8 +98,11 @@ For more information about the available CI policy rule levels, see [Deploy code
 
 3.  Apply the CI policy to your reference host:
 
-    1.  Copy the binary CI policy file (HW1CodeIntegrity.p7b) to the following location on your reference host (the filename must exactly match):<br>
-        **C:\\Windows\\System32\\CodeIntegrity\\SIPolicy.p7b**
+    1.  Run the following command to configure the machine to use your CI policy. You can also deploy the CI policy with [Group Policy](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-application-control/deploy-windows-defender-application-control-policies-using-group-policy) or [System Center Virtual Machine Manager](https://docs.microsoft.com/system-center/vmm/guarded-deploy-host?view=sc-vmm-2019#manage-and-deploy-code-integrity-policies-with-vmm).
+
+        ```powershell
+        Invoke-CimMethod -Namespace root/Microsoft/Windows/CI -ClassName PS_UpdateAndCompareCIPolicy -MethodName Update -Arguments @{ FilePath = "C:\temp\HW1CodeIntegrity.p7b" }
+        ```
 
     2.  Restart the host to apply the policy.
 
@@ -116,8 +119,8 @@ For more information about the available CI policy rule levels, see [Deploy code
 5.  Apply the CI policy to all of your hosts (with identical hardware and software configuration) using the following commands:
 
     ```powershell
-    Copy-Item -Path '<Path to HW1CodeIntegrity\_enforced.p7b>' -Destination 'C:\Windows\System32\CodeIntegrity\SIPolicy.p7b'
-
+    Invoke-CimMethod -Namespace root/Microsoft/Windows/CI -ClassName PS_UpdateAndCompareCIPolicy -MethodName Update -Arguments @{ FilePath = "C:\temp\HW1CodeIntegrity.p7b" }
+    
     Restart-Computer
     ```
 
@@ -166,5 +169,5 @@ A TPM baseline is required for each unique class of hardware in your datacenter 
 
 ## Next step
 
->[!div class="nextstepaction"]
-[Confirm attestation](guarded-fabric-confirm-hosts-can-attest-successfully.md)
+> [!div class="nextstepaction"]
+> [Confirm attestation](guarded-fabric-confirm-hosts-can-attest-successfully.md)

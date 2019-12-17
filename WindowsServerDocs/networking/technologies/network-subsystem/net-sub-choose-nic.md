@@ -1,7 +1,7 @@
 ---
 title: Choosing a Network Adapter
 description: This topic is part of the Network Subsystem Performance Tuning guide for Windows Server 2016.
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: networking
 ms.topic: article
 ms.assetid: a6615411-83d9-495f-8a6a-1ebc8b12f164
@@ -72,9 +72,9 @@ The following cmdlets allow you to see and modify RSS parameters per network ada
 
 You can use the **–Profile** parameter of the Set-NetAdapterRss cmdlet to specify which logical processors are assigned to which network adapter. Available values for this parameter are:
 
-- **Closest**. Logical processor numbers that are near the network adapter’s base RSS processor are preferred. With this profile, the operating system might rebalance logical processors dynamically based on load.
+- **Closest**. Logical processor numbers that are near the network adapter's base RSS processor are preferred. With this profile, the operating system might rebalance logical processors dynamically based on load.
   
-- **ClosestStatic**. Logical processor numbers near the network adapter’s base RSS processor are preferred. With this profile, the operating system does not rebalance logical processors dynamically based on load.
+- **ClosestStatic**. Logical processor numbers near the network adapter's base RSS processor are preferred. With this profile, the operating system does not rebalance logical processors dynamically based on load.
   
 - **NUMA**. Logical processor numbers are generally selected on different NUMA nodes to distribute the load. With this profile, the operating system might rebalance logical processors dynamically based on load.
   

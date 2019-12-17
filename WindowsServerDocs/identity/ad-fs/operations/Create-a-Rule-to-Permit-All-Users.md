@@ -7,14 +7,12 @@ ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 
 ms.technology: identity-adfs
 ---
 
 # Create a Rule to Permit All Users
-
->Applies To: Windows Server 2016, Windows Server 2012 R2
 
 In Windows Server 2016, you can use an **Access Control Policy** to create a rule that will give all users access to a relying party.  In Windows Server 2012 R2, using the **Permit All Users** rule template in Active Directory Federation Services \(AD FS\), you can create an authorization rule that will give all users access to the relying party. 
 

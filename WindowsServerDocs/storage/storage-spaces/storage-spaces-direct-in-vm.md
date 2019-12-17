@@ -1,6 +1,6 @@
 ---
 title: Using Storage Spaces Direct in a virtual machine
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.author: eldenc
 ms.manager: eldenc
 ms.technology: storage-spaces
@@ -74,7 +74,6 @@ The following considerations apply when deploying Storage Spaces Direct in a vir
 
 ## See also
 
-[Additional Azure Iaas VM templates for deploying Storage Spaces Direct, videos, and step-by-step guides](https://blogs.msdn.microsoft.com/clustering/2017/02/14/deploying-an-iaas-vm-guest-clusters-in-microsoft-azure/).
+[Additional Azure Iaas VM templates for deploying Storage Spaces Direct, videos, and step-by-step guides](https://techcommunity.microsoft.com/t5/Failover-Clustering/Deploying-IaaS-VM-Guest-Clusters-in-Microsoft-Azure/ba-p/372126).
 
-[Additional Storage Spaces Direct Overview]
-(https://docs.microsoft.com/en-us/windows-server/storage/storage-spaces/storage-spaces-direct-overview)
+[Additional Storage Spaces Direct Overview](https://docs.microsoft.com/windows-server/storage/storage-spaces/storage-spaces-direct-overview)

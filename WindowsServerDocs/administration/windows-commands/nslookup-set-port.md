@@ -2,7 +2,7 @@
 title: nslookup set port
 description: "Windows Commands topic for **** - "
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -29,10 +29,10 @@ set port=<Port>
 
 ## Parameters
 
-|Parameter|Description|
-|---------|-----------|
-|\<Port>|Specifies the new value for the default TCP/UDP DNS name server port. The default port is 53.|
-|{help | ?}|Displays a short summary of **nslookup** subcommands.|
+| Parameter |                                          Description                                          |
+|-----------|-----------------------------------------------------------------------------------------------|
+|  \<Port>  | Specifies the new value for the default TCP/UDP DNS name server port. The default port is 53. |
+|   {help   |                                              ?}                                               |
 
 #### Additional references
 

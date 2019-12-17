@@ -2,7 +2,7 @@
 title: Troubleshoot the Windows Server Software Defined Networking Stack
 description: This Windows Server guide examines the common Software Defined Networking (SDN) errors and failure scenarios and outlines a troubleshooting workflow that leverages the available diagnostic tools.
 manager: ravirao
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: networking-sdn
 ms.topic: article
 ms.assetid: 9be83ed2-9e62-49e8-88e7-f52d3449aac5
@@ -29,17 +29,17 @@ Most errors can be classified into a small set of classes:
 * **Error in policy application**  
      Policy from Network Controller was not delivered to a Hyper-V Host, significantly delayed and / or not up to date on all Hyper-V hosts (for example, after a Live Migration).  
 * **Configuration drift or software bug**  
- Data-path issues resulting in dropped packets.  
+  Data-path issues resulting in dropped packets.  
 
 * **External error related to NIC hardware / drivers or the underlay network fabric**  
- Misbehaving task offloads (such as VMQ) or underlay network fabric misconfigured (such as MTU)   
+  Misbehaving task offloads (such as VMQ) or underlay network fabric misconfigured (such as MTU)   
 
- This troubleshooting guide examines each of these error categories and recommends best practices and diagnostic tools available to identify and fix the error.  
+  This troubleshooting guide examines each of these error categories and recommends best practices and diagnostic tools available to identify and fix the error.  
 
 ## Diagnostic tools  
 
 Before discussing the troubleshooting workflows for each of these type of errors, let's examine the diagnostic tools available.   
-  
+
 To use the Network Controller (control-path) diagnostic tools, you must first install the RSAT-NetworkController feature and import the ``NetworkControllerDiagnostics`` module:  
 
 ```  
@@ -48,7 +48,7 @@ Import-Module NetworkControllerDiagnostics
 ```  
 
 To use the HNV Diagnostics (data-path) diagnostic tools, you must import the ``HNVDiagnostics`` module:
-  
+
 ```  
 # Assumes RSAT-NetworkController feature has already been installed
 Import-Module hnvdiagnostics   
@@ -58,12 +58,12 @@ Import-Module hnvdiagnostics
 These cmdlets are documented on TechNet in the [Network Controller Diagnostics Cmdlet Topic](https://docs.microsoft.com/powershell/module/networkcontrollerdiagnostics/). They help identify problems with network policy consistency in the control-path between Network Controller nodes and between the Network Controller and the NC Host Agents running on the Hyper-V hosts.
 
  The _Debug-ServiceFabricNodeStatus_ and _Get-NetworkControllerReplica_ cmdlets must be run from one of the Network Controller node virtual machines. All other NC Diagnostic cmdlets can be run from any host which has connectivity to the Network Controller and is in either in the Network Controller Management security group (Kerberos) or has access to the X.509 certificate for managing the Network Controller. 
-   
+
 ### Hyper-V host diagnostics  
 These cmdlets are documented on TechNet in the [Hyper-V Network Virtualization (HNV) Diagnostics Cmdlet Topic](https://docs.microsoft.com/powershell/module/hnvdiagnostics/). They help identify problems in the data-path between tenant virtual machines (East/West) and ingress traffic through an SLB VIP (North/South). 
 
 The _Debug-VirtualMachineQueueOperation_, _Get-CustomerRoute_, _Get-PACAMapping_, _Get-ProviderAddress_, _Get-VMNetworkAdapterPortId_, _Get-VMSwitchExternalPortId_, and _Test-EncapOverheadSettings_ are all local tests which can be run from any Hyper-V host. The other cmdlets invoke data-path tests through the Network Controller and therefore need access to the Network Controller as descried above.
- 
+
 ### GitHub
 The [Microsoft/SDN GitHub Repo](https://github.com/microsoft/sdn) has a number of sample scripts and workflows which build on top of these in-box cmdlets. In particular, diagnostic scripts can be found in the [Diagnostics](https://github.com/Microsoft/sdn/diagnostics) folder. Please help us contribute to these scripts by submitting Pull Requests.
 
@@ -93,7 +93,6 @@ Fetching ResourceType:     networkInterfaces
 Fetching ResourceType:     virtualGateways
 Fetching ResourceType:     loadbalancerMuxes
 Fetching ResourceType:     Gateways
-
 ```
 
 A sample Configuration State message is shown below:
@@ -117,7 +116,7 @@ Message:          Host is not Connected.
 
 The table below shows the list of error codes, messages, and follow-up actions to take based on the configuration state observed.
 
-  
+
 | **Code**| **Message**| **Action**|  
 |--------|-----------|----------|  
 | Unknown| Unknown error| |  
@@ -211,7 +210,7 @@ ReplicaStatus : Ready
 
 ```
 Check that the Replica Status is Ready for each service.
- 
+
 #### Check for corresponding HostIDs and certificates between network controller and each Hyper-V Host 
 On a Hyper-V Host, run the following commands to check that the HostID corresponds to the Instance Id of a server resource on the Network Controller
 
@@ -271,7 +270,7 @@ You can also check the following parameters of each cert to make sure the subjec
 
 *Remediation*
 If multiple certificates have the same subject name on the Hyper-V host, the Network Controller Host Agent will randomly choose one to present to the Network Controller. This may not match the thumbprint of the server resource known to the Network Controller. In this case, delete one of the certificates with the same subject name on the Hyper-V host and then re-start the Network Controller Host Agent service. If a connection can still not be made, delete the other certificate with the same subject name on the Hyper-V Host and delete the corresponding server resource in VMM. Then, re-create the server resource in VMM which will generate a new X.509 certificate and install it on the Hyper-V host.
-  
+
 
 #### Check the SLB Configuration State
 The SLB Configuration State can be determined as part of the output to the Debug-NetworkController cmdlet. This cmdlet will also output the current set of Network Controller resources in JSON files, all IP configurations from each Hyper-V host (server) and local network policy from Host Agent database tables. 
@@ -304,7 +303,7 @@ This JSON file can be broken down into the following sections:
    * Mux Routes - This section will list one value for each SLB Mux deployed containing all of the Route Advertisements for that particular mux.
  * Tenant
    * VipConsolidatedState - This section will list the connectivity state for each Tenant VIP including advertised route prefix, Hyper-V Host and DIP endpoints.
-    
+
 > [!NOTE]
 > SLB State can be ascertained directly by using the [DumpSlbRestState](https://github.com/Microsoft/SDN/blob/master/Diagnostics/DumpSlbRestState.ps1) script available on the [Microsoft SDN GitHub repository](https://github.com/microsoft/sdn). 
 
@@ -486,9 +485,8 @@ ComputerName         : SA18N30-2
 IsDeleted            : False
 
 <snip> ...
-
 ```
- 
+
 #### Check MTU and Jumbo Frame support on HNV Provider Logical Network
 
 Another common problem in the HNV Provider logical network is that the physical network ports and/or Ethernet card do not have a large enough MTU configured to handle the overhead from VXLAN (or NVGRE) encapsulation. 
@@ -527,7 +525,6 @@ Physical Nic  <NIC> Ethernet Adapter #2 can support SDN traffic. Encapoverhead v
 Cannot send jumbo packets to the destination. Physical switch ports may not be configured to support jumbo packets.
 
 # TODO: Success Results aftering updating MTU on physical switch ports
-
 ```
 
 *Remediation*
@@ -550,7 +547,6 @@ CA IP Address CA MAC Address    Virtual Subnet ID PA IP Address
 10.254.254.1  40-1D-D8-B7-1C-06              4115 10.10.182.66
 192.168.1.1   40-1D-D8-B7-1C-06              4114 10.10.182.66
 192.168.1.4   00-1D-D8-B7-1C-05              4114 10.10.182.66
-
 ```
 >[!NOTE]
 > If the CA-PA mappings you expect are not output for a given tenant VM, please check the VM NIC and IP Configuration resources on the Network Controller using the _Get-NetworkControllerNetworkInterface_ cmdlet. Also, check the established connections between the NC Host Agent and Network Controller nodes.
@@ -603,10 +599,10 @@ PA Routing Information:
 
     Local PA IP: 10.10.182.66
     Remote PA IP: 10.10.182.65
- 
+
  <snip> ...
 
-4.  [Tenant] Check that there is no distributed firewall policies specified on the virtual subnet or VM network interfaces which would block traffic.    
+4. [Tenant] Check that there is no distributed firewall policies specified on the virtual subnet or VM network interfaces which would block traffic.    
 
 Query the Network Controller REST API found in demo environment at sa18n30nc in the sa18.nttest.microsoft.com domain.
 
@@ -627,7 +623,7 @@ Query the Network Controller REST API found in demo environment at sa18n30nc in 
 The following sections provide information on advanced diagnostics, logging, and tracing.
 
 ### Network controller centralized logging 
- 
+
 The Network Controller can automatically collect debugger logs and store them in a centralized location. Log collection can be enabled when you deploy the Network Controller for the first time or any time later. The logs are collected from the Network Controller, and network elements managed by Network Controller: host machines, software load balancers (SLB) and gateway machines. 
 
 These logs include debug logs for the Network Controller cluster, the Network Controller application, gateway logs, SLB, virtual networking and the distributed firewall. Whenever a new host/SLB/gateway is added to the Network Controller, logging is started on those machines. 
@@ -691,7 +687,7 @@ If a user has run the _Debug-NetworkController_ cmdlet, additional logs will be 
 4.  Validate the *SlbMuxPerfCounters* and *SLBMUX* counters in PerfMon on the SLB Mux VM
 5.  Check configuration state and VIP ranges in Software Load Balancer Manager Resource  
     1.  Get-NetworkControllerLoadBalancerConfiguration -ConnectionUri <https://<FQDN or IP>| convertto-json -depth 8 (check VIP ranges in IP Pools and ensure SLBM self-VIP (*LoadBalanacerManagerIPAddress*) and any tenant-facing VIPs are within these ranges)  
-	    1. Get-NetworkControllerIpPool -NetworkId "<Public/Private VIP Logical Network Resource ID>" -SubnetId "<Public/Private VIP Logical Subnet Resource ID>" -ResourceId "<IP Pool Resource Id>" -ConnectionUri $uri |convertto-json -depth 8 
+        1. Get-NetworkControllerIpPool -NetworkId "<Public/Private VIP Logical Network Resource ID>" -SubnetId "<Public/Private VIP Logical Subnet Resource ID>" -ResourceId "<IP Pool Resource Id>" -ConnectionUri $uri |convertto-json -depth 8 
     2.  Debug-NetworkControllerConfigurationState -  
 
 If any of the checks above fail, the tenant SLB state will also be in a failure mode.  

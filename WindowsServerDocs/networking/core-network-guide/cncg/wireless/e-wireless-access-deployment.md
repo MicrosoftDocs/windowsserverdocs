@@ -2,7 +2,7 @@
 title: Wireless Access Deployment
 description: This topic is part of the Windows Server 2016 Networking guide "Deploy Password-Based 802.1X Authenticated Wireless Access"
 manager: brianlic
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: networking
 ms.topic: article
 ms.assetid: 4b66f517-b17d-408c-828f-a3793086bc1f
@@ -42,7 +42,7 @@ When you deploy multiple wireless APs at a single geographical site, you must co
 
 You can use the following guidelines to assist you in choosing channel frequencies that do not conflict with other wireless networks at the geographical location of your wireless network.
 
-- If there are other organizations that have offices in close proximity or in the same building as your organization, identify whether there are any wireless networks owned by those organizations. Find out both the placement and the assigned channel frequencies of their wireless AP’s, because you need to assign different channel frequencies to your AP’s and you need to determine the best location to install your AP’s.
+- If there are other organizations that have offices in close proximity or in the same building as your organization, identify whether there are any wireless networks owned by those organizations. Find out both the placement and the assigned channel frequencies of their wireless AP's, because you need to assign different channel frequencies to your AP's and you need to determine the best location to install your AP's.
 
 - Identify overlapping wireless signals on adjacent floors within your own organization. After identifying overlapping coverage areas outside and within your organization, assign channel frequencies for your wireless APs, ensuring that any two wireless APs with overlapping coverage are assigned different channel frequencies.
 
@@ -115,7 +115,7 @@ Membership in **Domain Admins**, or equivalent, is the minimum required to perfo
 
 6. Click **OK**.
 
-If you need more than one security group for wireless users, repeat these steps to create additional wireless users groups. Later you can create individual network policies in NPS to apply different conditions and contstraints to each group, providing them with different access permissions and connectivity rules.
+If you need more than one security group for wireless users, repeat these steps to create additional wireless users groups. Later you can create individual network policies in NPS to apply different conditions and constraints to each group, providing them with different access permissions and connectivity rules.
 
 ### <a name="bkmk_addusers"></a> Add Users to the Wireless Users Security Group
 
@@ -276,7 +276,7 @@ Membership in **Domain Admins**, or equivalent, is the minimum required to compl
 
 12. In **Select a network authentication method**, select **Protected EAP \(PEAP\)**, and then click **Properties**. The **Protected EAP Properties** dialog box opens.
 
-13. In **Protected EAP Properties**, confirm that **Verify the server’s identity by validating the certificate** is selected.
+13. In **Protected EAP Properties**, confirm that **Verify the server's identity by validating the certificate** is selected.
 
 14. In **Trusted Root Certification Authorities**, select the trusted root certification authority \(CA\) that issued the server certificate to your NPS.
 
@@ -293,9 +293,9 @@ Membership in **Domain Admins**, or equivalent, is the minimum required to compl
 
 19. To specify that user identity is masked in phase one of authentication, select **Enable Identity Privacy**, and in the textbox, type an anonymous identity name, or leave the textbox blank.
 
-    >[!NOTES]
-    >- The NPS policy for 802.1X Wireless must be created by using NPS **Connection Request Policy**. If the NPS policy is created by using NPS **Network Policy**, then identity privacy will not work.
-    >- EAP identity privacy is provided by certain EAP methods where an empty or an anonymous identity \(different from the actual identity\) is sent in response to the EAP identity request. PEAP sends the identity twice during the authentication. In the first phase, the identity is sent in plain text and this identity is used for routing purposes, not for client authentication. The real identity—used for authentication—is sent during the second phase of the authentication, within the secure tunnel that is established in the first phase. If **Enable Identity Privacy** checkbox is selected, the username is replaced with the entry specified in the textbox. For example, assume **Enable Identity Privacy** is selected and the identity privacy alias **anonymous** is specified in the textbox. For a user with a real identity alias **jdoe@example.com**, the identity sent in first phase of authentication will be changed to **anonymous@example.com**. The realm portion of the 1st phase identity is not modified as it is used for routing purposes.  
+    > [!NOTES]
+    > - The NPS policy for 802.1X Wireless must be created by using NPS **Connection Request Policy**. If the NPS policy is created by using NPS **Network Policy**, then identity privacy will not work.
+    > - EAP identity privacy is provided by certain EAP methods where an empty or an anonymous identity \(different from the actual identity\) is sent in response to the EAP identity request. PEAP sends the identity twice during the authentication. In the first phase, the identity is sent in plain text and this identity is used for routing purposes, not for client authentication. The real identity—used for authentication—is sent during the second phase of the authentication, within the secure tunnel that is established in the first phase. If **Enable Identity Privacy** checkbox is selected, the username is replaced with the entry specified in the textbox. For example, assume **Enable Identity Privacy** is selected and the identity privacy alias **anonymous** is specified in the textbox. For a user with a real identity alias <strong>jdoe@example.com</strong>, the identity sent in first phase of authentication will be changed to <strong>anonymous@example.com</strong>. The realm portion of the 1st phase identity is not modified as it is used for routing purposes.  
 
 20. Click **OK** to close the **Protected EAP Properties** dialog box.
 21. Click **OK** to close the **Security** tab.
@@ -436,7 +436,7 @@ Membership in **Domain Admins**, or equivalent, is the minimum required to compl
     -   To automatically generate a shared secret, select the **Generate** check box, and then click the **Generate** button. Save the generated shared secret, and then use that value to configure the NAS so that it can communicate with the NPS.  
 
         >[!IMPORTANT]
-        >The RADIUS shared secret that you enter for your virtual AP’s in NPS must exactly match the RADIUS shared secret that is configured on your actual wireless AP’s. If you use the NPS option to generate a RADIUS shared secret, then you must configure the matching actual wireless AP with the RADIUS shared secret that was generated by NPS.
+        >The RADIUS shared secret that you enter for your virtual AP's in NPS must exactly match the RADIUS shared secret that is configured on your actual wireless AP's. If you use the NPS option to generate a RADIUS shared secret, then you must configure the matching actual wireless AP with the RADIUS shared secret that was generated by NPS.
 
 7. In **New RADIUS Client**, on the **Advanced** tab, in **Vendor name**, specify the NAS manufacturer name. If you are not sure of the NAS manufacturer name, select **RADIUS standard**.
 

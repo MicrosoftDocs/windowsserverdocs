@@ -7,14 +7,12 @@ ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 
 ms.technology: identity-adfs
 ---
 
 # Name Resolution Requirements for Federation Server Proxies
-
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 When client computers on the Internet attempt to access an application that is secured by Active Directory Federation Services \(AD FS\), they must first authenticate to the federation server. In most cases, the federation server is usually not directly accessible from the Internet. Therefore, Internet client computers must be redirected to the federation server proxy instead. You can accomplish successful redirection by adding the appropriate Domain Name System \(DNS\) records to your DNS zone or zones that face the Internet.  
   

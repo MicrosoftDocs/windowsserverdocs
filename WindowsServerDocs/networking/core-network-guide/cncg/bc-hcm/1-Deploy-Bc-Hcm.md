@@ -2,7 +2,7 @@
 title: Deploy BranchCache Hosted Cache Mode
 description: This guide provides instructions on deploying BranchCache in hosted cache mode on computers running Windows Server 2016 and Windows 10
 manager: brianlic
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: networking-bc
 ms.topic: article
 ms.assetid: 4235231c-4732-4ea9-9330-2a8c8a616d39
@@ -57,8 +57,8 @@ This is a companion guide to the Windows Server 2016 Core Network Guide. To depl
 	- Windows 8.1 Enterprise
 	- Windows 8 Enterprise
 
->[!NOTE]
->In the following operating systems, BranchCache does not support HTTP and SMB functionality, but does support BranchCache BITS functionality.
+> [!NOTE]
+> In the following operating systems, BranchCache does not support HTTP and SMB functionality, but does support BranchCache BITS functionality.
 >     - Windows 10 Pro, BITS support only
 >     - Windows 8.1 Pro, BITS support only
 >     - Windows 8 Pro, BITS support only

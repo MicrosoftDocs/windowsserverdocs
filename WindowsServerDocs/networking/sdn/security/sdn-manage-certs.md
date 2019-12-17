@@ -2,7 +2,7 @@
 title: Manage certificates for Software Defined Networking
 description: You can use this topic to learn how to manage certificates for Network Controller Northbound and Southbound communications when you deploy Software Defined Networking (SDN) in Windows Server 2016 Datacenter.
 manager: dougkim
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: networking-sdn
 ms.topic: article
 ms.assetid: c4e2f6c7-0364-4bf8-bb66-9af59c0bbd74
@@ -49,7 +49,7 @@ When you create self\-signed certificates, you can use the following guidelines.
 
 - You can use the IP address of the Network Controller REST Endpoint for the DnsName parameter - but this is not recommended because it requires that the Network Controller nodes are all located within a single management subnet \(e.g. on a single rack\)
 - For multiple node NC deployments, the DNS name that you specify will become the FQDN of the Network Controller Cluster \(DNS Host A records are automatically created.\) 
-- For single node Network Controller deployments, the DNS name can be the Network Controller’s host name followed by the full domain name.
+- For single node Network Controller deployments, the DNS name can be the Network Controller's host name followed by the full domain name.
 
 #### Multiple node
 
@@ -124,12 +124,12 @@ You can use the Certificates snap-in to request certificates. You can request an
 
 1. Open the Certificates snap-in for a computer.
 2. In the console tree, click **Certificates \(Local Computer\)**. Select the **Personal** certificate store.
-3. On the **Action** menu, point to** All Tasks**, and then click **Request New Certificate** to start the Certificate Enrollment wizard. Click **Next**.
+3. On the **Action** menu, point to** All Tasks<strong>, and then click **Request New Certificate</strong> to start the Certificate Enrollment wizard. Click **Next**.
 4. Select the **Configured by your administrator** Certificate Enrollment Policy and click **Next**.
 5. Select the **Active Directory Enrollment Policy** \(based on the CA template that you configured in the previous section\).
 6. Expand the **Details** section and configure the following items.
-	1. Ensure that **Key usage** includes both **Digital Signature **and **Key encipherment**.
-	2. Ensure that **Application policies** includes both **Server Authentication** \(1.3.6.1.5.5.7.3.1\) and **Client Authentication** \(1.3.6.1.5.5.7.3.2\).
+   1. Ensure that **Key usage** includes both <strong>Digital Signature **and **Key encipherment</strong>.
+   2. Ensure that **Application policies** includes both **Server Authentication** \(1.3.6.1.5.5.7.3.1\) and **Client Authentication** \(1.3.6.1.5.5.7.3.2\).
 7. Click **Properties**.
 8. On the **Subject** tab, in **Subject name**, in **Type**, select **Common name**. In Value, specify **Network Controller REST Endpoint**.
 9. Click **Apply**, and then click **OK**.
@@ -185,7 +185,7 @@ For mutual authentication, the Hyper-V host must also have a certificate to comm
 
 You can enroll the certificate from a Certification Authority \(CA\). If a CA based certificate is not found on the host machine, SCVMM creates a self-signed certificate and provisions it on the host machine.
 
-Network Controller and the Hyper-V host certificates must be trusted by each other. The Hyper-V host certificate’s root certificate must be present in the Network Controller Trusted Root Certification Authorities store for the Local Computer, and vice versa. 
+Network Controller and the Hyper-V host certificates must be trusted by each other. The Hyper-V host certificate's root certificate must be present in the Network Controller Trusted Root Certification Authorities store for the Local Computer, and vice versa. 
 
 When you're using self\-signed certificates, SCVMM ensures that the required certificates are present in the Trusted Root Certification Authorities store for the Local Computer. 
 
@@ -218,7 +218,7 @@ For mutual authentication, you must also have a certificate on the SLB MUX devic
 >[!IMPORTANT]
 >On the host and SLB nodes, it is critical that the Trusted Root Certification Authorities certificate store does not include any certificate where “Issued to” is not the same as “Issued by”. If this occurs, communication between Network Controller and the southbound device fails.
 
-Network Controller and the SLB MUX certificates must be trusted by each other \(the SLB MUX certificate’s root certificate must be present in the Network Controller machine Trusted Root Certification Authorities store and vice versa\). When you're using self\-signed certificates, SCVMM ensures that the required certificates are present in the in the Trusted Root Certification Authorities store for the Local Computer.
+Network Controller and the SLB MUX certificates must be trusted by each other \(the SLB MUX certificate's root certificate must be present in the Network Controller machine Trusted Root Certification Authorities store and vice versa\). When you're using self\-signed certificates, SCVMM ensures that the required certificates are present in the in the Trusted Root Certification Authorities store for the Local Computer.
 
 
 

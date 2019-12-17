@@ -2,7 +2,7 @@
 title: Launch or Close Applications on a Station
 description: Learn how to work with applications in MultiPoint Services
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: multipoint-services
 ms.reviewer: na
 ms.suite: na
@@ -15,7 +15,7 @@ ms.author: elizapo
 ms.date: 08/04/2016
 ---
 # Launch or Close Applications on a Station
-As a MultiPoint Dashboard User, you can open or close an application on a user’s desktop, selected desktops, or all desktops.  
+As a MultiPoint Dashboard User, you can open or close an application on a user's desktop, selected desktops, or all desktops.  
   
 ## Launch an application on a user station  
   

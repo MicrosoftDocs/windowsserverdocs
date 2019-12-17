@@ -2,7 +2,7 @@
 ms.assetid: acc0803b-fa05-4fc3-b94d-2916abf4fdbd
 title: Understanding Data Deduplication
 ms.technology: storage-deduplication
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.topic: article
 author: wmgries
 manager: klaasl
@@ -11,7 +11,7 @@ ms.date: 09/15/2016
 ---
 # Understanding Data Deduplication
 
-> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
+> Applies to:  Windows Server 2019, Windows Server 2016, Windows Server (Semi-Annual Channel)
 
 This document describes how [Data Deduplication](overview.md) works.
 

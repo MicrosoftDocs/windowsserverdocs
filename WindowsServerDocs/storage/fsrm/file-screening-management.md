@@ -2,7 +2,7 @@
 title: File Screening Management
 description: This article describes how to create file screens, generate notifications, define file screening templates, and create file screening exceptions
 ms.date: 7/7/2017
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: storage
 ms.topic: article
 author: JasonGerend
@@ -12,7 +12,7 @@ ms.author: jgerend
 
 # File Screening Management
 
-> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2
+> Applies to: Windows Server 2019, Windows Server 2016, Windows Server (Semi-Annual Channel), Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2
 
 On the **File Screening Management** node of the File Server Resource Manager MMC snap-in, you can perform the following tasks:
 

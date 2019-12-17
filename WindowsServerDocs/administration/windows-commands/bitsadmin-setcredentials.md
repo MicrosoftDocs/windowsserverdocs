@@ -2,7 +2,7 @@
 title: bitsadmin setcredentials
 description: "Windows Commands topic for **bitsadmin setcredentials** - adds credentials to a job."
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -17,9 +17,9 @@ ms.date: 10/16/2017
 
 # bitsadmin setcredentials
 
-
-
 Adds credentials to a job.
+
+**BITS 1.2 and earlier**: Not supported.
 
 ## Syntax
 

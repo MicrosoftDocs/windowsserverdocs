@@ -1,12 +1,12 @@
 ---
 title: Nested resiliency for Storage Spaces Direct
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.author: jgerend
 ms.manager: dansimp
 ms.technology: storagespaces
 ms.topic: article
 author: cosmosdarwin
-ms.date: 11/06/2018
+ms.date: 03/15/2019
 ---
 
 # Nested resiliency for Storage Spaces Direct
@@ -109,7 +109,7 @@ Then, create new volumes using the `New-Volume` cmdlet.
 To use nested two-way mirror, reference the `NestedMirror` tier template and specify the size. For example:
 
 ```PowerShell
-New-Volume -FriendlyName Volume01 -StorageTierFriendlyNames NestedMirror -StorageTierSizes 500GB
+New-Volume -StoragePoolFriendlyName S2D* -FriendlyName Volume01 -StorageTierFriendlyNames NestedMirror -StorageTierSizes 500GB
 ```
 
 #### Nested mirror-accelerated parity
@@ -117,7 +117,7 @@ New-Volume -FriendlyName Volume01 -StorageTierFriendlyNames NestedMirror -Storag
 To use nested mirror-accelerated parity, reference both the `NestedMirror` and `NestedParity` tier templates and specify two sizes, one for each part of the volume (mirror first, parity second). For example, to create one 500 GB volume that's 20% nested two-way mirror and 80% nested parity, run:
 
 ```PowerShell
-New-Volume -FriendlyName Volume02 -StorageTierFriendlyNames NestedMirror, NestedParity -StorageTierSizes 100GB, 400GB
+New-Volume -StoragePoolFriendlyName S2D* -FriendlyName Volume02 -StorageTierFriendlyNames NestedMirror, NestedParity -StorageTierSizes 100GB, 400GB
 ```
 
 ### Step 3: Continue in Windows Admin Center
@@ -130,7 +130,7 @@ Volumes that use nested resiliency appear in [Windows Admin Center](https://docs
 
 With its default settings, nested resiliency protects against the loss of multiple capacity drives at the same time, or one server and one capacity drive at the same time. To extend this protection to [cache drives](understand-the-cache.md) has an additional consideration: because cache drives often provide read *and write* caching for *multiple* capacity drives, the only way to ensure you can tolerate the loss of a cache drive when the other server is down is to simply not cache writes, but that impacts performance.
 
-To address this scenario, Storage Spaces Direct offers the option to automatically disable write caching when one server in a two-server cluster is down, and then re-enable write caching once the server is back up. To allow routine restarts without performance impact, write caching isn't disabled until the server has been down for 30 minutes.
+To address this scenario, Storage Spaces Direct offers the option to automatically disable write caching when one server in a two-server cluster is down, and then re-enable write caching once the server is back up. To allow routine restarts without performance impact, write caching isn't disabled until the server has been down for 30 minutes. Once write caching is disabled, the contents of the write cache is written to capacity devices. After this, the server can tolerate a failed cache device in the online server, though reads from the cache might be delayed or fail if a cache device fails.
 
 To set this behavior (optional), launch PowerShell as Administrator and run:
 
@@ -138,13 +138,13 @@ To set this behavior (optional), launch PowerShell as Administrator and run:
 Get-StorageSubSystem Cluster* | Set-StorageHealthSetting -Name "System.Storage.NestedResiliency.DisableWriteCacheOnNodeDown.Enabled" -Value "True"
 ```
 
-Once set to `True`, the cache behavior is:
+Once set to **True**, the cache behavior is:
 
 | Situation                       | Cache behavior                           | Can tolerate cache drive loss? |
 |---------------------------------|------------------------------------------|--------------------------------|
 | Both servers up                 | Cache reads and writes, full performance | Yes                            |
 | Server down, first 30 minutes   | Cache reads and writes, full performance | No (temporarily)               |
-| After first 30 minutes          | Cache reads only, performance impacted   | Yes                            |
+| After first 30 minutes          | Cache reads only, performance impacted   | Yes (after the cache has been written to capacity drives)                           |
 
 ## Frequently asked questions
 

@@ -2,7 +2,7 @@
 title: bitsadmin complete
 description: "Windows Commands topic for **bitsadmin complete** - completes the job. The downloaded files are not available to you until you use this switch."
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -16,8 +16,6 @@ ms.date: 10/16/2017
 ---
 
 # bitsadmin complete
-
-
 
 Completes the job. The downloaded files are not available to you until you use this switch. Use this switch after the job moves to the transferred state. Otherwise, only those files that have been successfully transferred are available.
 

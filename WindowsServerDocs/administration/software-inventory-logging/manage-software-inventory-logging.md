@@ -2,7 +2,7 @@
 title: Manage Software Inventory Logging
 description: Describes how to manage Software Inventory Logging
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: manage-software-inventory-logging
 ms.reviewer: na
 ms.suite: na
@@ -16,7 +16,7 @@ ms.date: 10/16/2017
 ---
 # Manage Software Inventory Logging
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2
 
 This document describes how to manage Software Inventory Logging, a feature that helps datacenter administrators easily log Microsoft software asset management data for their deployments over time. This document describes how to manage Software Inventory Logging. Before using Software Inventory Logging with Windows Server 2012 R2, make sure that Windows Update [KB 3000850](https://support.microsoft.com/kb/3000850) and [KB 3060681](https://support.microsoft.com/kb/3060681) are installed on each system needing to be inventoried. No Wndows Updates are required for Windows Server 2016. This feature runs locally on each server to be inventoried. It does not collect data from remote servers.  
 
@@ -115,7 +115,7 @@ Software Inventory Logging daily collection and forward over the network must be
 ## Configuring Software Inventory Logging  
 There are three steps to configuring Software Inventory Logging to forward data to an aggregation server over time:  
   
-1.  Use **Set-SilLogging –TargetUri** to specify the web address of your aggregation server (must start with “https://�?).  
+1.  Use **Set-SilLogging –TargetUri** to specify the web address of your aggregation server (must start with "https://").  
   
 2.  Use **Set-SilLogging –CertificateThumbprint** to specify the thumbprint hash of your valid SSL certificate to be used to authenticate the data transmissions to your aggregation server (your aggregation server will need to be configured to accept hash).  
   
@@ -200,13 +200,13 @@ Software Inventory Logging is not intended to be a mission critical component. I
   
 #### To delete data logged by Software Inventory Logging  
   
-1.  In PowerShell, stop Software Inventory Logging with the **[Stop-SilLogging](https://technet.microsoft.com/library/dn283394.aspx)** command.  
+1. In PowerShell, stop Software Inventory Logging with the **[Stop-SilLogging](https://technet.microsoft.com/library/dn283394.aspx)** command.  
   
-2.  Open Windows Explorer.  
+2. Open Windows Explorer.  
   
-3.  Go to **\Windows\System32\Logfiles\SIL\**  
+3. Go to **\Windows\System32\Logfiles\SIL\\**  
   
-4.  Delete all files in the folder.  
+4. Delete all files in the folder.  
   
 ## <a name="BKMK_Step5"></a>Backing up and restoring data logged by Software Inventory Logging  
 Software Inventory Logging will temporarily store hourly collections of data if forwards over the network are failing. The log files are stored in the \Windows\System32\LogFiles\SIL\ directory. Backups of this Software Inventory Logging data can be made with your regularly scheduled server backups.  
@@ -215,10 +215,10 @@ Software Inventory Logging will temporarily store hourly collections of data if 
 > If for any reason a repair installation or upgrade of the operating system is necessary, any log files stored locally will be lost.  If this data is critical for operations, it is recommended to be backed up prior to new operating system installation. After repair or upgrade, simply restore to the same location.  
   
 > [!NOTE]  
-> If for any reason managing the retention duration of data logged locally by SIL becomes important, this can be configured by changing the registry value here: \HKEY_LOCAL_MACHINE\\SOFTWARE\Microsoft\Windows\SoftwareInventoryLogging. The default is ‘30’ for 30 days.  
+> If for any reason managing the retention duration of data logged locally by SIL becomes important, this can be configured by changing the registry value here: \HKEY_LOCAL_MACHINE\\SOFTWARE\Microsoft\Windows\SoftwareInventoryLogging. The default is ‘30' for 30 days.  
   
 ## <a name="BKMK_Step6"></a>Reading data logged and published by Software Inventory Logging  
-Data logged by SIL, but stored locally (if the forward to the target URI fails), or data that is successfully forwarded to the target aggregation server, is stored in a binary file (for each day’s data). To display this data in PowerShell, use the [Import-BinaryMiLog](https://technet.microsoft.com/library/dn262592.aspx) cmdlet.  
+Data logged by SIL, but stored locally (if the forward to the target URI fails), or data that is successfully forwarded to the target aggregation server, is stored in a binary file (for each day's data). To display this data in PowerShell, use the [Import-BinaryMiLog](https://technet.microsoft.com/library/dn262592.aspx) cmdlet.  
   
 ## <a name="BKMK_Step7"></a>Software Inventory Logging Security  
 Administrative privileges on the local server are required to successfully retrieve data from Software Inventory Logging WMI and PowerShell APIs.  
@@ -231,12 +231,12 @@ Any data stored locally on a Windows Server (only occurs if the feature is start
   
 -   When using [Set-SilLogging](https://technet.microsoft.com/library/dn283387.aspx) -TimeOfDay to set the time SIL logging runs, you must specify a date and time. The calendar date will be set and logging will not occur until the date is reached, in local system time.  
   
--   When using [Get-SilSoftware](https://technet.microsoft.com/library/dn283397.aspx), or [Get-SilWindowsUpdate](https://technet.microsoft.com/library/dn283393.aspx), “InstallDate�? will always show 12:00:00AM, a meaningless value.  
+-   When using [Get-SilSoftware](https://technet.microsoft.com/library/dn283397.aspx), or [Get-SilWindowsUpdate](https://technet.microsoft.com/library/dn283393.aspx), "InstallDate" will always show 12:00:00AM, a meaningless value.  
   
--   When using [Get-SilUalAccess](https://technet.microsoft.com/library/dn283389.aspx), “SampleDate�? will always show 11:59:00PM, a meaningless value.  Date is the pertinent data for these cmdlet queries.  
+-   When using [Get-SilUalAccess](https://technet.microsoft.com/library/dn283389.aspx), "SampleDate" will always show 11:59:00PM, a meaningless value.  Date is the pertinent data for these cmdlet queries.  
   
 ## <a name="BKMK_Step10"></a>Enabling and Configuring Software Inventory Logging in a Mounted Virtual Hard Disk  
-Software Inventory Logging also supports configuration and enablement on offline virtual machines. The practical uses for this are intended to cover both ‘gold image’ setup for wide deployment across data centers, as well as configuring end user images going from a premises to a cloud deployment.  
+Software Inventory Logging also supports configuration and enablement on offline virtual machines. The practical uses for this are intended to cover both ‘gold image' setup for wide deployment across data centers, as well as configuring end user images going from a premises to a cloud deployment.  
   
 To support these uses, Software Inventory Logging has registry entries associated with each configurable option.  These registry values can be found under \HKEY_LOCAL_MACHINE\\SOFTWARE\Microsoft\Windows\SoftwareInventoryLogging.  
   

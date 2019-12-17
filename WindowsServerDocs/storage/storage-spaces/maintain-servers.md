@@ -1,6 +1,6 @@
 ---
 title: Taking a Storage Spaces Direct server offline for maintenance
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.author: eldenc
 ms.manager: eldenc
 ms.technology: storage-spaces
@@ -169,7 +169,7 @@ Use the following steps to path your Storage Spaces Direct system quickly. It in
 2. Take the virtual disks offline.
 3. Stop the cluster to take the storage pool offline. Run the  **Stop-Cluster** cmdlet or use Failover Cluster Manager to stop the cluster.
 4. Set the cluster service to **Disabled** in Services.msc on each node. This prevents the cluster service from starting up while being patched.
-5. Apply the Dec 2017 Cumulative Update (KB 4053579) to all nodes. (You can update all nodes at the same time, no need to wait since the cluster is down).  
+5. Apply the Windows Server Cumulative Update and any required Servicing Stack Updates to all nodes. (You can update all nodes at the same time, no need to wait since the cluster is down).  
 6. Restart the nodes, and ensure everything looks good.
 7. Set the cluster service back to **Automatic** on each node.
 8. Start the cluster. Run the **Start-Cluster** cmdlet or use Failover Cluster Manager. 

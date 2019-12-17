@@ -7,13 +7,13 @@ ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 
 ms.technology: identity-adfs
 ---
 # AD FS 2016 Design Guide
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 The AD FS design guide is a comprehensive guide for designing AD FS deployments.  This guide is made up of the following:
 

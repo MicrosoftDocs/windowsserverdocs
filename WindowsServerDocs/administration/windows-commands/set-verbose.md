@@ -2,7 +2,7 @@
 title: Set verbose
 description: "Windows Commands topic for **** - "
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -29,9 +29,9 @@ set verbose {on | off}
 
 ## Parameters
 
-|Parameter|Description|
-|---------|-----------|
-|{on | off}|Turns verbose mode on or off.|
+| Parameter | Description |
+|-----------|-------------|
+|    {on    |    off}     |
 
 ## Remarks
 

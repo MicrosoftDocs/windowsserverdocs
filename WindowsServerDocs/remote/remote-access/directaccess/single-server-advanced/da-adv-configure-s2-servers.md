@@ -3,11 +3,10 @@ title: Step 2 Configure Advanced DirectAccess Servers
 description: This topic is part of the guide Deploy a Single DirectAccess Server with Advanced Settings for Windows Server 2016
 manager: brianlic
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
-ms.technology: 
-  - networking-da
+ms.technology: networking-da
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 35afec8e-39a4-463b-839a-3c300ab01174
@@ -51,7 +50,7 @@ To deploy Remote Access, you must install the Remote Access role on a server in 
   
 6.  On the **Installation progress** page, verify that the installation was successful, and then click **Close**.  
   
-![Installation progress success](../../../media/Step-2-Configuring-DirectAccess-Servers/PowerShellLogoSmall.gif)****Windows PowerShell equivalent commands****  
+![Installation progress success](../../../media/Step-2-Configuring-DirectAccess-Servers/PowerShellLogoSmall.gif)***<em>Windows PowerShell equivalent commands</em>***  
   
 The following Windows PowerShell cmdlet or cmdlets perform the same function as the preceding procedure. Enter each cmdlet on a single line, even though they may appear word-wrapped across several lines here because of formatting constraints.  
   

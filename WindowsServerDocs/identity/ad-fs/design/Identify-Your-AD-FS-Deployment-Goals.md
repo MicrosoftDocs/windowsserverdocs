@@ -7,14 +7,12 @@ ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 
 ms.technology: identity-adfs
 ---
 
 # Identify Your AD FS Deployment Goals
-
->Applies To: Windows Server 2016, Windows Server 2012 R2
 
 Correctly identifying your Active Directory Federation Services \(AD FS\) deployment goals is essential for the success of your AD FS design project. Prioritize and, possibly, combine your deployment goals so that you can design and deploy AD FS by using an iterative approach. You can take advantage of existing, documented, and predefined AD FS deployment goals that are relevant to the AD FS designs and develop a working solution for your situation.  
   
@@ -30,7 +28,7 @@ Prior versions of AD FS were most commonly deployed to achieve the following:
   
 In addition to these, AD FS in Windows Server® 2012 R2 adds functionality that can help you achieve the following:  
   
--   Device workplace join for SSO and seamless second factor authentication. This enables organizations to allow access from user’s personal devices and manage the risk when providing this access.  
+-   Device workplace join for SSO and seamless second factor authentication. This enables organizations to allow access from user's personal devices and manage the risk when providing this access.  
   
 -   Managing risk with multi\-factor access control. AD FS provides a rich level of authorization that controls who has access to what applications. This can be based on user attributes \(UPN, email, security group membership, authentication strength, etc.\), device attributes \(whether the device is workplace joined\) or request attributes \(network location, IP address, or user agent\).  
   
@@ -53,7 +51,7 @@ Managing risk is an important aspect of governance and compliance in every IT or
   
 -   Flexible controls based on network location to govern how a user authenticates to access an AD FS\-secured application.  
   
--   Flexible policy to determine if a user needs to perform multi\-factor authentication based on the user’s data, device data, and network location.  
+-   Flexible policy to determine if a user needs to perform multi\-factor authentication based on the user's data, device data, and network location.  
   
 -   Per\-application control to ignore SSO and force the user to provide credentials every time they access a sensitive application.  
   
@@ -78,7 +76,7 @@ The following are new AD FS capabilities in Windows Server® 2012 R2 that enable
   
 -   Customization of web themes.  
   
--   Home Realm Discovery \(HRD\) based on organizational suffix of the user for enhanced privacy of a company’s partners.  
+-   Home Realm Discovery \(HRD\) based on organizational suffix of the user for enhanced privacy of a company's partners.  
   
 -   HRD filtering on a per\-application basis to automatically pick a realm based on the application.  
   

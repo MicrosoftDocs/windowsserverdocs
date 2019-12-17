@@ -2,7 +2,7 @@
 title: bitsadmin getowner
 description: "Windows Commands topic for **bitsadmin getowner** - Retrieves the owner of the specified job."
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -17,9 +17,7 @@ ms.date: 10/16/2017
 
 # bitsadmin getowner
 
-
-
-Retrieves the owner of the specified job.
+Displays the display name or GUID of the owner of the specified job.
 
 ## Syntax
 

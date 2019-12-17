@@ -1,7 +1,7 @@
 ---
 title: Performance Tuning Software Defined Networks  
 description: Software Defined Network (SDN) performance tuning guidelines
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: performance-tuning-guide
 ms.topic: article
 ms.author: grcusanz; AnPaul
@@ -25,7 +25,7 @@ To ensure virtual machine traffic is prioritized effectively and fairly, it is r
 
 ## Hyper-V Host Networking
 
-The guidance provided in the [Hyper-V network I/O performance](#netio) section of the    [Performance Tuning for Hyper-V Servers](../../role/remote-desktop/session-hosts.md) guide is applicable when SDN is used, however this section covers additional guidelines that must be followed to ensure the best performance when using SDN.
+The guidance provided in the Hyper-V network I/O performance section of the [Performance Tuning for Hyper-V Servers](../../role/remote-desktop/session-hosts.md) guide is applicable when SDN is used, however this section covers additional guidelines that must be followed to ensure the best performance when using SDN.
 
 ### Physical Network Adapter (NIC) Teaming
 

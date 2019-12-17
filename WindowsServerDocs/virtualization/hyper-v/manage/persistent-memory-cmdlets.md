@@ -1,7 +1,7 @@
 ---
 title: Cmdlets for configuring persistent memory devices for Hyper-V VMs
 description: "How to configure persistent memory devices for Hyper-V VMs"
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.service: na
 manager: jasgroce
 ms.technology: compute-hyper-v

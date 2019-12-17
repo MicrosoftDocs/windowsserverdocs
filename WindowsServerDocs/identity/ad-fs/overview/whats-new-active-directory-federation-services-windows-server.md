@@ -4,25 +4,23 @@ title: What's new in Active Directory Federation Services for Windows Server 201
 description:
 author: billmath
 ms.author: billmath
-manager: femila
-ms.date: 09/20/2018
+manager: daveba
+ms.date: 04/23/2019
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 
 ms.technology: identity-adfs
 ---
 # What's new in Active Directory Federation Services
 
 
->Applies To: Windows Server 2019, Windows Server 2016
-
 ## What's new in Active Directory Federation Services for Windows Server 2019
 
 ### Protected Logins
 The following is a brief summary of updates to protected logins available in AD FS 2019:
-- **External Auth Providers as Primary** - Customers can now use 3rd party authentication products as the first factor and not expose passwords as the first factor. In the cases where an externa auth provider can prove 2 factors it can claim MFA. 
+- **External Auth Providers as Primary** - Customers can now use 3rd party authentication products as the first factor and not expose passwords as the first factor. In the cases where an external auth provider can prove 2 factors it can claim MFA. 
 - **Password Authentication as additional Authentication** - Customers have a fully supported inbox option to use password only for the additional factor after a password less option is used as the first factor. This improves the customer experience from ADFS 2016 where customers had to download a github adapter which is supported as is. 
-- **Pluggable Threat Module Framework** - Customers can now build their own plug in modules to block certain types of requests during pre-authentication stage. This makes it easier for customers to use cloud intelligence such as Identity protection to block logins for risky users or risky transactions.
+- **Pluggable Risk Assessment Module** - Customers can now build their own plug in modules to block certain types of requests during pre-authentication stage. This makes it easier for customers to use cloud intelligence such as Identity protection to block logins for risky users or risky transactions.  For more information see [ Build Plug-ins with AD FS 2019 Risk Assessment Model](../../ad-fs/development/ad-fs-risk-assessment-model.md) 
 - **ESL improvements** - Improves on the ESL QFE in 2016 by adding the following capabilities
     - Enables customers to be in audit mode while being protected by 'classic' extranet lockout functionality available since ADFS 2012R2. Currently 2016 customers would have no protection while in audit mode. 
     - Enables independent lockout threshold for familiar locations. This makes it possible for multiple instances of apps running with a common service account to roll over passwords with the least amount of impact. 
@@ -34,6 +32,8 @@ The following additional security improvements are available in AD FS 2019:
      - HSTS: This conveys that ADFS endpoints can only be used on HTTPS endpoints for a compliant browser to enforce
      - x-frame-options: Allows ADFS admins to allow specific relying parties to embed iFrames for ADFS interactive login pages. This should be used with care and only on HTTPS hosts. 
      - Future header: Additional future headers can be configured as well. 
+
+For more information see [Customize HTTP security response headers with AD FS 2019](../../ad-fs/operations/customize-http-security-headers-ad-fs.md) 
 
 ### Authentication/Policy capabilities
 The following authentication/policy capabilities are in AD FS 2019:
@@ -169,7 +169,7 @@ For more information about using Microsoft Windows Hello for Business in your or
 ### Modern Authentication
 AD FS 2016 supports the latest modern protocols that provide a better user experience for Windows 10 as well as the latest iOS and Android devices and apps.  
 
-For more information see [AD FS Scenarios for Developers](../../ad-fs/overview/AD-FS-Scenarios-for-Developers.md)  
+For more information see [AD FS Scenarios for Developers](../../ad-fs/overview/ad-fs-openid-connect-oauth-flows-scenarios.md)  
 
 
 ### Configure access control policies without having to know claim rules language  

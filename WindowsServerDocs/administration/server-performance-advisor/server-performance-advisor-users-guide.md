@@ -7,7 +7,7 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: manage
 ---
 # Server Performance Advisor User's Guide
@@ -298,7 +298,7 @@ The following controls are also available on the console:
 
 Before you start the performance analysis, select the data collection duration. Although collecting more data helps provide a more accurate image of the server performance situation, it also generates a larger number of logs, and it could have more potential impact on the server. Choose the proper data collection duration based on your specific need. Each advisor pack defines a minimum valid duration. The data collection duration that you choose must be longer than the minimum duration of the selected advisor packs.
 
-To run performance analysis on target servers, select the servers that you want to run performance analysis against, and click **Run analysis ** A dialog box appears and asks you to select the advisor packs to be run on the servers. The selected advisor packs run simultaneously. The reports that are generated are based on the performance data that is collected during the same time period.
+To run performance analysis on target servers, select the servers that you want to run performance analysis against, and click **Run analysis** A dialog box appears and asks you to select the advisor packs to be run on the servers. The selected advisor packs run simultaneously. The reports that are generated are based on the performance data that is collected during the same time period.
 
 **Note**
 if you select a server that has a recurring performance analysis running, the **remove Recurrence** button allows you to cancel the recurring data collection. SPA does not allow multiple data collection sessions at the same time on the same computer.

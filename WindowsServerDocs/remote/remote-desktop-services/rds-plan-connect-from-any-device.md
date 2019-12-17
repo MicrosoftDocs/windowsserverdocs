@@ -2,7 +2,7 @@
 title: Remote Desktop Services - Connect from any device
 description: Learn about the different ways users can connect to Remote Desktop.
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: remote-desktop-services
@@ -16,7 +16,7 @@ manager: scottman
 ---
 # Remote Desktop Services - Connect from any device
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016
 
 Access corporate resources from any Windows, Apple, or Android computer, tablet, or phone. Enable users to easily see their available desktops and applications from any device through RD Web Feed.
 

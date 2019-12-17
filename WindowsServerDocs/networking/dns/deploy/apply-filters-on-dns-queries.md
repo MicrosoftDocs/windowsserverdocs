@@ -2,7 +2,7 @@
 title: Use DNS Policy for Applying Filters on DNS Queries
 description: This topic is part of the DNS Policy Scenario Guide for Windows Server 2016
 manager: brianlic
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: networking-dns
 ms.topic: article
 ms.assetid: b86beeac-b0bb-4373-b462-ad6fa6cbedfa
@@ -39,7 +39,7 @@ The following examples show you how to create filters for DNS policy that either
 >[!NOTE]
 >The example commands in this topic use the Windows PowerShell command **Add-DnsServerQueryResolutionPolicy**. For more information, see [Add-DnsServerQueryResolutionPolicy](https://docs.microsoft.com/powershell/module/dnsserver/add-dnsserverqueryresolutionpolicy?view=win10-ps). 
 
-##<a name="bkmk_block1"></a>Block queries from a domain
+## <a name="bkmk_block1"></a>Block queries from a domain
 
 In some circumstances you might want to block DNS name resolution for domains that you have identified as malicious, or for domains that do not comply with the usage guidelines of your organization. You can accomplish blocking queries for domains by using DNS policy.
 
@@ -54,7 +54,7 @@ Add-DnsServerQueryResolutionPolicy -Name "BlockListPolicy" -Action IGNORE -FQDN 
 >[!NOTE]
 >When you configure the **Action** parameter with the value **IGNORE**, the DNS server is configured to drop queries with no response at all. This causes the DNS client in the malicious domain to time out.
 
-##<a name="bkmk_block2"></a>Block queries from a subnet
+## <a name="bkmk_block2"></a>Block queries from a subnet
 With this example, you can block queries from a subnet if it is found to be infected by some malware and is trying to contact malicious sites using your DNS server. 
 
 `
@@ -69,14 +69,14 @@ The following example demonstrates how you can use the subnet criteria in combin
 Add-DnsServerQueryResolutionPolicy -Name "BlockListPolicyMalicious06" -Action IGNORE -ClientSubnet  "EQ,MaliciousSubnet06" –FQDN “EQ,*.contosomalicious.com” -PassThru
 `
 
-##<a name="bkmk_block3"></a>Block a type of query
-You might need to block name resolution for certain types of queries on your servers. For example, you can block the ‘ANY’ query, which can be used maliciously to create amplification attacks.
+## <a name="bkmk_block3"></a>Block a type of query
+You might need to block name resolution for certain types of queries on your servers. For example, you can block the 'ANY' query, which can be used maliciously to create amplification attacks.
 
 `
 Add-DnsServerQueryResolutionPolicy -Name "BlockListPolicyQType" -Action IGNORE -QType "EQ,ANY" -PassThru
 `
 
-##<a name="bkmk_allow1"></a>Allow queries only from a domain
+## <a name="bkmk_allow1"></a>Allow queries only from a domain
 You can not only use DNS policy to block queries, you can use them to automatically approve queries from specific domains or subnets. When you configure Allow Lists, the DNS server only processes queries from allowed domains, while blocking all other queries from other domains.
 
 The following example command allows only computers and devices in the contoso.com and child domains to query the DNS server.
@@ -85,7 +85,7 @@ The following example command allows only computers and devices in the contoso.c
 Add-DnsServerQueryResolutionPolicy -Name "AllowListPolicyDomain" -Action IGNORE -FQDN "NE,*.contoso.com" -PassThru 
 `
 
-##<a name="bkmk_allow2"></a>Allow queries only from a subnet
+## <a name="bkmk_allow2"></a>Allow queries only from a subnet
 You can also create Allow Lists for IP subnets, so that all queries not originating from these subnets are ignored.
 
 `
@@ -95,7 +95,7 @@ Add-DnsServerClientSubnet -Name "AllowedSubnet06" -IPv4Subnet 172.0.33.0/24 -Pas
 Add-DnsServerQueryResolutionPolicy -Name "AllowListPolicySubnet” -Action IGNORE -ClientSubnet  "NE, AllowedSubnet06" -PassThru
 `
 
-##<a name="bkmk_allow3"></a>Allow only certain QTypes
+## <a name="bkmk_allow3"></a>Allow only certain QTypes
 You can apply Allow Lists to QTYPEs. 
 
 For example, if you have external customers querying DNS server interface 164.8.1.1, only certain QTYPEs are allowed to be queried, while there are other QTYPEs like SRV or TXT records which are used by internal servers for name resolution or for monitoring purposes.

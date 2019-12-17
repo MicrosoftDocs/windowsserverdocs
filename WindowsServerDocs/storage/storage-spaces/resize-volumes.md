@@ -1,22 +1,37 @@
 ---
 title: Extending volumes in Storage Spaces Direct
-ms.assetid: fa48f8f7-44e7-4a0b-b32d-d127eff470f0
-ms.prod: windows-server-threshold
-ms.author: cosmosdarwin
-ms.manager: eldenc
-ms.technology: storage-spaces
-ms.topic: article
+description: How to resize volumes in Storage Spaces Direct using Windows Admin Center and PowerShell.
+ms.prod: windows-server
+ms.reviewer: cosmosdarwin
 author: cosmosdarwin
-ms.date: 01/23/2017
-ms.localizationpriority: medium
+ms.author: cosdar
+manager: eldenc
+ms.technology: storage-spaces
+ms.date: 05/07/2019
 ---
 
 # Extending volumes in Storage Spaces Direct
 > Applies to: Windows Server 2019, Windows Server 2016
 
-This topic provides instructions for resizing volumes in [Storage Spaces Direct](storage-spaces-direct-overview.md).
+This topic provides instructions for resizing volumes on a [Storage Spaces Direct](storage-spaces-direct-overview.md) cluster by using Windows Admin Center.
 
-## Prerequisites
+Watch a quick video on how to resize a volume.
+
+> [!VIDEO https://www.youtube-nocookie.com/embed/hqyBzipBoTI]
+
+## Extending volumes using Windows Admin Center
+
+1. In Windows Admin Center, connect to a Storage Spaces Direct cluster, and then select **Volumes** from the **Tools** pane.
+2. On the Volumes page, select the **Inventory** tab, and then select the volume that you want to resize.
+
+    On the volume detail page, the storage capacity for the volume is indicated. You can also open the volumes detail page directly from the Dashboard. On the Dashboard, in the Alerts pane, select the alert, which notifies you if a volume is running low on storage capacity, and then select **Go To Volume**.
+
+4. At the top of the volumes detail page, select **Resize**.
+5. Enter a new larger size, and then select **Resize**.
+
+    On the volumes detail page, the larger storage capacity for the volume is indicated, and the alert on the Dashboard is cleared.
+
+## Extending volumes using PowerShell
 
 ### Capacity in the storage pool
 
@@ -44,7 +59,7 @@ For example, here's how to get from a virtual disk up to its volume:
 Get-VirtualDisk <FriendlyName> | Get-Disk | Get-Partition | Get-Volume 
 ```
 
-## Step 1 – Resize the virtual disk
+### Step 1 – Resize the virtual disk
 
 The virtual disk may use storage tiers, or not, depending on how it was created.
 
@@ -56,7 +71,7 @@ Get-VirtualDisk <FriendlyName> | Get-StorageTier
 
 If the cmdlet returns nothing, the virtual disk doesn't use storage tiers.
 
-### No storage tiers
+#### No storage tiers
 
 If the virtual disk has no storage tiers, you can resize it directly using the **Resize-VirtualDisk** cmdlet.
 
@@ -70,7 +85,7 @@ When you resize the **VirtualDisk**, the **Disk** follows automatically and is r
 
 ![Resize-VirtualDisk](media/resize-volumes/Resize-VirtualDisk.gif)
 
-### With storage tiers
+#### With storage tiers
 
 If the virtual disk uses storage tiers, you can resize each tier separately using the **Resize-StorageTier** cmdlet.
 
@@ -93,7 +108,7 @@ When you resize the **StorageTier**(s), the **VirtualDisk** and **Disk** follow 
 
 ![Resize-StorageTier](media/resize-volumes/Resize-StorageTier.gif)
 
-## Step 2 – Resize the partition
+### Step 2 – Resize the partition
 
 Next, resize the partition using the **Resize-Partition** cmdlet. The virtual disk is expected to have two partitions: the first is Reserved and should not be modified; the one you need to resize has **PartitionNumber = 2** and **Type = Basic**.
 
@@ -124,3 +139,4 @@ That's it!
 - [Storage Spaces Direct in Windows Server 2016](storage-spaces-direct-overview.md)
 - [Planning volumes in Storage Spaces Direct](plan-volumes.md)
 - [Creating volumes in Storage Spaces Direct](create-volumes.md)
+- [Deleting volumes in Storage Spaces Direct](delete-volumes.md)

@@ -1,7 +1,7 @@
 ---
 title: Site definition and domain controller placement in ADDS performance tuning
 description: Site definition and domain controller placement considerations in Active Directory performance tuning.
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: performance-tuning-guide
 ms.topic: article
 ms.author: TimWi; ChrisRob; HerbertM; KenBrumf;  MLeary; ShawnRab
@@ -59,12 +59,11 @@ Cross domain trust scenarios are an area that has been consistently a pain point
 
     -   Use DnsAvoidRegisterRecords to eliminate poorly performing or high-latency domain controllers, such as those in satellite sites, from advertising to the generic locators. For more info, see [How to optimize the location of a domain controller or global catalog that resides outside of a client's site](https://support.microsoft.com/kb/306602).
 
-        **Note**  
-        There is a practical limit of about 50 to the number of domain controllers the client can consume. These should be the most site-optimal and highest capacity domain controllers.
+        > [!NOTE]
+        > There is a practical limit of about 50 to the number of domain controllers the client can consume. These should be the most site-optimal and highest capacity domain controllers.
 
-         
-
-    -   Consider placing domain controllers from trusted and trusting domains in the same physical location.
+    
+    -  Consider placing domain controllers from trusted and trusting domains in the same physical location.
 
 For all trust scenarios, credentials are routed according to the domain specified in the authentication requests. This is also true for queries to the LookupAccountName and LsaLookupNames (as well as others, these are just the most commonly used) APIs. When the domain parameters for these APIs are passed a NULL value, the domain controller will attempt to find the account name specified in every trusted domain available.
 

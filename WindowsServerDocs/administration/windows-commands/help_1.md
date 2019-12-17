@@ -2,7 +2,7 @@
 title: help
 description: "Windows Commands topic for **** - "
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -30,9 +30,9 @@ help [<command>]
   
 ## Parameters  
   
-|Parameter|Description|  
-|-------|--------|  
-|<command>|Specifies the command for which to display detailed help information.|  
+| Parameter |                              Description                              |
+|-----------|-----------------------------------------------------------------------|
+| <command> | Specifies the command for which to display detailed help information. |
   
 ## Remarks  
   

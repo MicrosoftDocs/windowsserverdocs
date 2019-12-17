@@ -1,7 +1,7 @@
 ---
 title: NIC advanced properties
 description: You can manage NICs and all the features via Windows PowerShell or the Network Control Panel.
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: networking
 ms.topic: article
 ms.assetid: 0cafb1cc-5798-42f5-89b6-3ffe7ac024ba
@@ -26,7 +26,7 @@ You can manage NICs and all the features via Windows PowerShell using the [NetAd
 
 2. In the **Network Control Panel** (ncpa.cpl), do the following:
 
-   a. and right-click the NIC.
+   a. Right-click the NIC.
 
    ![Network connections dialog](../../media/network-offload-and-optimization/network-connections-dialog.png)
 

@@ -1,7 +1,7 @@
 ---
 title: WSUS Messages and Troubleshooting Tips
 description: "Windows Server Update Service (WSUS) topic - Troubleshoot using WSUS messages"
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-wsus
@@ -42,16 +42,16 @@ The most common reasons are:
 
 ## Message ID 6703 - WSUS Synchronization Failed
 > Message: The request failed with HTTP status 503: Service Unavailable.
-
+> 
 > Source: Microsoft.UpdateServices.Administration.AdminProxy.createUpdateServer.
 
 When you attempt to open Update Services on the WSUS server you receive the following error:
 
 > Error: Connection Error
-
+> 
 > An error occurred trying to connect to the WSUS server. This error can happen for a number of reasons. Please contact your network administrator if the problem persists. Click the reset Server Node to connect to the server again.
 
-In addition to the above, attempts to access the URL for the WSUS Administration website (i.e., http://CM12CAS:8530) fails with the error:
+In addition to the above, attempts to access the URL for the WSUS Administration website (i.e., `http://CM12CAS:8530`) fails with the error:
 
 > HTTP Error 503. The service is unavailable
 
@@ -82,8 +82,8 @@ To resolve this problem, grant System Administrator permissions to a user accoun
 
 - **SQL Service:** Every service except for the selfupdate service requires that the SQL service is running. If any of the log files indicate SQL connection problems, check the SQL service first. To access the SQL service, click **Start**, point to **Administrative Tools**, click **Services**, and then look for one of the following:
     
-    -   **MSSQLSERver** (if you are using WMSDE or MSDE, or if you are using SQL Server and are using the default instance name for the instance name)
+  - **MSSQLSERver** (if you are using WMSDE or MSDE, or if you are using SQL Server and are using the default instance name for the instance name)
     
-    -   **MSSQL$WSUS** (if you are using a SQL Server database and have named your database instance "WSUS")
+  - **MSSQL$WSUS** (if you are using a SQL Server database and have named your database instance "WSUS")
     
     Right-click the service, and then click **Start** if the service is not running, or **Restart** to refresh the service if it is running.

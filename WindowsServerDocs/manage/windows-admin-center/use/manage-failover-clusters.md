@@ -7,7 +7,7 @@ author: daniellee-msft
 ms.author: jol
 ms.date: 06/18/2018
 ms.localizationpriority: medium
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ---
 # Manage Failover Clusters with Windows Admin Center
 
@@ -49,7 +49,7 @@ The following tools are available for failover cluster connections:
 | Networks | View networks in the cluster |
 | Nodes | View and manage cluster nodes |
 | Roles | Manage cluster roles or create an empty role |
-| Updates | Manage Cluster-Aware Updates |
+| Updates | Manage Cluster-Aware Updates (requires [CredSSP](../understand/faq.md#does-windows-admin-center-use-credssp)) |
 | [Virtual Machines](manage-virtual-machines.md) | View and manage virtual machines |
 | Virtual Switches | View and manage virtual switches |
 

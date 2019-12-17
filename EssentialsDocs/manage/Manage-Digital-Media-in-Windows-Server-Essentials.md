@@ -80,25 +80,25 @@ The following topics discuss the media streaming features of your server, and ex
   
  When you turn the media server on, content that you share in the media libraries will be available for play on devices on your network that are capable of receiving streaming media from your server. You can stream most types of digital media files. Some of the more common types of files that you can stream include:  
   
--   Windows Media formats (.asf, .wma, .wmv, .wm)  
+- Windows Media formats (.asf, .wma, .wmv, .wm)  
   
--   Audio Visual Interleave (.avi)  
+- Audio Visual Interleave (.avi)  
   
--   Moving Pictures Experts Group (.mpeg, .mpg, .mp3)  
+- Moving Pictures Experts Group (.mpeg, .mpg, .mp3)  
   
--   Audio for Windows (.wav)  
+- Audio for Windows (.wav)  
   
--   CD Audio Track (.cda)  
+- CD Audio Track (.cda)  
   
- To play a file, simply locate a song, video, or picture in a shared folder, double-click the file, and the content will stream from the server to your computer and play. For information about how to find and play the digital media files that are stored on the server, see [Play Digital Media](../use/Play-Digital-Media-in-Windows-Server-Essentials.md).  
+  To play a file, simply locate a song, video, or picture in a shared folder, double-click the file, and the content will stream from the server to your computer and play. For information about how to find and play the digital media files that are stored on the server, see [Play Digital Media](../use/Play-Digital-Media-in-Windows-Server-Essentials.md).  
   
- To stream your media, you need the following hardware:  
+  To stream your media, you need the following hardware:  
   
--   A wired or wireless private network  
+- A wired or wireless private network  
   
--   Either another computer on your network or a device known as a digital media receiver (sometimes called a networked digital media player). Digital media receivers are hardware devices connected to your wired or wireless network that you can control by using your computer ?even if your computer is in another room.  
+- Either another computer on your network or a device known as a digital media receiver (sometimes called a networked digital media player). Digital media receivers are hardware devices connected to your wired or wireless network that you can control by using your computer ?even if your computer is in another room.  
   
- For more information, see [Turn media streaming on or off](Manage-Digital-Media-in-Windows-Server-Essentials.md#BKMK_4).  
+  For more information, see [Turn media streaming on or off](Manage-Digital-Media-in-Windows-Server-Essentials.md#BKMK_4).  
   
 ##  <a name="BKMK_4"></a> Turn media streaming on or off  
  You can share music, videos, and pictures from  Windows Server Essentials by streaming files to any supported digital media receiver (DMR) such as computers, mobile phones, televisions, digital media receivers, extenders for Windows Media Center (including Xbox 360), and other personal electronic devices.  
@@ -110,21 +110,21 @@ The following topics discuss the media streaming features of your server, and ex
   
 ####  <a name="BKMK_2.5"></a> To turn media streaming on or off  
   
-1.  Open the  Windows Server Essentials Dashboard.  
+1. Open the  Windows Server Essentials Dashboard.  
   
-2.  Click **Settings**, click **Media**, and then do one of the following:  
+2. Click **Settings**, click **Media**, and then do one of the following:  
   
-    -   Click **Turn on** to start sharing all of the files that are stored in the Media Library of the server.  
+   -   Click **Turn on** to start sharing all of the files that are stored in the Media Library of the server.  
   
-    -   Click **Turn off** to stop sharing all of the files that are stored in the Media Library of the server.  
+   -   Click **Turn off** to stop sharing all of the files that are stored in the Media Library of the server.  
   
-3.  If you want share additional folders in the Media Library, click **Customize**, and then select **Yes** for each shared folder that you want to include in the Media Library.  
+3. If you want share additional folders in the Media Library, click **Customize**, and then select **Yes** for each shared folder that you want to include in the Media Library.  
   
-4.  Click **OK** to save your changes.  
+4. Click **OK** to save your changes.  
   
- For information about the digital media types supported by Windows Media Player, see [File types supported by Windows Media Player](https://support.microsoft.com/kb/316992).  
+   For information about the digital media types supported by Windows Media Player, see [File types supported by Windows Media Player](https://support.microsoft.com/kb/316992).  
   
- For more information, see [Allow or restrict access to a media library on the server](Manage-Digital-Media-in-Windows-Server-Essentials.md#BKMK_6).  
+   For more information, see [Allow or restrict access to a media library on the server](Manage-Digital-Media-in-Windows-Server-Essentials.md#BKMK_6).  
   
 ##  <a name="BKMK_5"></a> Add digital media files to the server  
  The server administrator can add digital media to shared folders in the media library by accessing the server directly, or by using the  Remote Web Access site to sign in to the Dashboard. Other users can add media files to the server by using the **Shared Folders** connection on the Launchpad, by using the  Remote Web Access site, or by using the My Server app for Windows Phone. For information about playing media, see [Play Digital Media](../use/Play-Digital-Media-in-Windows-Server-Essentials.md).  
@@ -146,7 +146,7 @@ The following topics discuss the media streaming features of your server, and ex
   
 ##  <a name="BKMK_6"></a> Allow or restrict access to a media library on the server  
   
--   When you turn on media sharing, it creates four predefined folders: Music, Pictures, Videos, and Recorded TV. If any of these folders preexists on the server, the existing folder is reused as a shared folder for media sharing. All the existing folder ��s media content and user permissions are preserved, and they are shared with all network users.  
+-   When you turn on media sharing, it creates four predefined folders: Music, Pictures, Videos, and Recorded TV. If any of these folders preexists on the server, the existing folder is reused as a shared folder for media sharing. All the existing folder's media content and user permissions are preserved, and they are shared with all network users.  
   
 -   Before you turn on Media Library Sharing for a shared folder, you should know that Media Library Sharing bypasses any type of user-account access that you set for the shared folder. For example, let's say that you turn on Media Library Sharing for the **Photos** shared folder, and you set the **Photos** shared folder to **No Access** for a user account named Bobby. Bobby can still stream any digital media from the **Videos** shared folder to any supported digital media player or DMR. If you have digital media that you do not want to stream in this manner, store the files in a folder that does not have Media Library Sharing turned on.  
   
@@ -199,21 +199,21 @@ The following topics discuss the media streaming features of your server, and ex
   
  The format and bit rate chosen for transcoding is highly dependent on the performance of the server processor. The processor performance is identified as part of the Windows Experience Index. To determine the performance score of your server, do one of the following:  
   
--   On a network computer running Windows 7 or Windows 8 that has the same processor as your server, go to the **Control Panel**, click **Performance Information and Tools**, and then review the information on the **Rate and improve your computer ��s performance** page.  
+- On a network computer running Windows 7 or Windows 8 that has the same processor as your server, go to the **Control Panel**, click **Performance Information and Tools**, and then review the information on the **Rate and improve your computer's performance** page.  
   
--   Contact the manufacturer of the processor.  
+- Contact the manufacturer of the processor.  
   
- For the best user experience, choose a video streaming resolution quality that is appropriate for your server processor. The server will automatically adjust the bit rate to one of these settings:  
+  For the best user experience, choose a video streaming resolution quality that is appropriate for your server processor. The server will automatically adjust the bit rate to one of these settings:  
   
--   **Low** if the processor score is less than 3.6.  
+- **Low** if the processor score is less than 3.6.  
   
--   **Medium** if the processor score is greater than 3.6 and less than 4.2.  
+- **Medium** if the processor score is greater than 3.6 and less than 4.2.  
   
--   **High** if the processor score is greater than 4.2 and less than 6.0.  
+- **High** if the processor score is greater than 4.2 and less than 6.0.  
   
--   **Best** if the processor score is greater than 6.0.  
+- **Best** if the processor score is greater than 6.0.  
   
- If you choose a video streaming resolution that requires more processing power than your server has, you may experience buffers and stops while streaming media from the server.  
+  If you choose a video streaming resolution that requires more processing power than your server has, you may experience buffers and stops while streaming media from the server.  
   
 > [!NOTE]
 >  To stream high-definition video through Remote Web Access, you need a processor with a score of at least 6.0.  

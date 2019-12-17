@@ -160,7 +160,7 @@ manager: dongill
   
  This can happen if the date and time on the connected computer are not synchronized with the date and time on the server.  Windows Server Essentials and  Windows Server Essentials use the time synchronization service to synchronize the date and time of computers running in a  Windows Server Essentials or  Windows Server Essentials network. Synchronized time is critical because the default authentication protocol uses server time as part of the authentication process. For example, if the clock on a client computer is not synchronized to the correct date and time,  Windows Server Essentials or  Windows Server Essentials authentication might falsely interpret a logon request as an intrusion attempt and deny access to the user.  
   
- This can happen if the server ��s free memory is less than 5 percent.  
+ This can happen if the server's free memory is less than 5 percent.  
   
  This can happen if you already have a VPN connection to the Windows Essentials Server and you try to configure the Connector software off-premise by using a domain address.  
   
@@ -174,17 +174,17 @@ manager: dongill
   
 #### To change the date and time on the client computer  
   
-1.  On the Start page of the client computer, open **Control Panel**.  
+1. On the Start page of the client computer, open **Control Panel**.  
   
-2.  In Control Panel, click **Clock, Language, and Region**, and then click **Date and Time**.  
+2. In Control Panel, click **Clock, Language, and Region**, and then click **Date and Time**.  
   
-3.  Click **Change date and time**, set the date and time to the correct date and time, and then click **OK**.  
+3. Click **Change date and time**, set the date and time to the correct date and time, and then click **OK**.  
   
-4.  Click **OK**, and then close Control Panel.  
+4. Click **OK**, and then close Control Panel.  
   
-5.  Try again to connect the client computer to the server. For instructions, see Connect computers to the server.  
+5. Try again to connect the client computer to the server. For instructions, see Connect computers to the server.  
   
- If you still cannot connect the client computer to the server, make sure that the date and time on the server are correct. If the date and time are not correct, change them.  
+   If you still cannot connect the client computer to the server, make sure that the date and time on the server are correct. If the date and time are not correct, change them.  
   
 #### To change the date and time on the server  
   

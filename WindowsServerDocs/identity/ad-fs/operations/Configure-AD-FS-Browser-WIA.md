@@ -7,14 +7,14 @@ manager: femila
 ms.date: 05/31/2017
 ms.topic: article
 ms.custom: it-pro
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: identity-adfs
 ---
 
 
 # Configure browsers to use Windows Integrated Authentication (WIA) with AD FS
 
-By default, Windows Integrated Authentication (WIA) is enabled in Active Directory Federation Services (AD FS) in Windows Server 2012 R2 for authentication requests that occur within the organization’s internal network (intranet) for any application that uses a browser for its authentication.
+By default, Windows Integrated Authentication (WIA) is enabled in Active Directory Federation Services (AD FS) in Windows Server 2012 R2 for authentication requests that occur within the organization's internal network (intranet) for any application that uses a browser for its authentication.
 
 AD FS 2016 now has an improved default setting that enables the Edge browser to do WIA while not also (incorrectly) catching Windows Phone as well:
 
@@ -32,7 +32,7 @@ The **WIASupportedUserAgents** defines the user agents which support WIA. AD FS 
 You can view the current settings using the following PowerShell example:
 
 ```powershell
-    $strings = Get-AdfsProperties | select -ExpandProperty WiaSupportedUserAgents
+    Get-AdfsProperties | select -ExpandProperty WiaSupportedUserAgents
 ```
 
 ![WIA Support](../operations/media/Configure-AD-FS-Browser-WIA/wiasupport.png)

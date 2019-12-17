@@ -2,7 +2,7 @@
 title: Network Policy Server Best Practices
 description: This topic provides best practices for deploying and managing Network Policy Server in Windows Server 2016.
 manager: brianlic
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: networking
 ms.topic: article
 ms.assetid: 90e544bd-e826-4093-8c3b-6a6fc2dfd1d6
@@ -26,7 +26,7 @@ There are two types of accounting, or logging, in NPS:
 
 - Event logging for NPS. You can use event logging to record NPS events in the system and security event logs. This is used primarily for auditing and troubleshooting connection attempts.
 
-- Logging user authentication and accounting requests. You can log user authentication and accounting requests to log files in text format or database format, or you can log to a stored procedure in a SQL Server 2000 database. Request logging is used primarily for connection analysis and billing purposes, and is also useful as a security investigation tool, providing you with a method of tracking down the activity an attacker.
+- Logging user authentication and accounting requests. You can log user authentication and accounting requests to log files in text format or database format, or you can log to a stored procedure in a SQL Server 2000 database. Request logging is used primarily for connection analysis and billing purposes, and is also useful as a security investigation tool, providing you with a method of tracking down the activity of an attacker.
 
 To make the most effective use of NPS logging:
 
@@ -52,6 +52,9 @@ Following are the best practices for authentication.
 
 - Use certificate-based authentication methods such as Protected Extensible Authentication Protocol \(PEAP\) and Extensible Authentication Protocol \(EAP\) for strong authentication. Do not use password-only authentication methods because they are vulnerable to a variety of attacks and are not secure. For secure wireless authentication, using PEAP\-MS\-CHAP v2 is recommended, because the NPS proves its identity to wireless clients by using a server certificate, while users prove their identity with their user name and password.  For more information about using NPS in your wireless deployment, see [Deploy Password-Based 802.1X Authenticated Wireless Access](https://technet.microsoft.com/windows-server-docs/networking/core-network-guide/cncg/wireless/a-deploy-8021x-wireless-access).
 - Deploy your own certification authority \(CA\) with Active Directory&reg; Certificate Services \(AD CS\) when you use strong certificate-based authentication methods, such as PEAP and EAP, that require the use of a server certificate on NPSs. You can also use your CA to enroll computer certificates and user certificates. For more information on deploying server certificates to NPS and Remote Access servers, see [Deploy Server Certificates for 802.1X Wired and Wireless Deployments](https://technet.microsoft.com/windows-server-docs/networking/core-network-guide/cncg/server-certs/deploy-server-certificates-for-802.1x-wired-and-wireless-deployments).
+
+> [!IMPORTANT]
+> Network Policy Server (NPS) does not support the use of the Extended ASCII characters within passwords.
 
 ## Client computer configuration
 

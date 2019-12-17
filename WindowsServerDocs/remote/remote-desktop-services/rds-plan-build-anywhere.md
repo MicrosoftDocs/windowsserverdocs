@@ -2,7 +2,7 @@
 title: Remote Desktop Services - Build anywhere
 description: Planning information to help you determine where to host your RDS deployment.
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: remote-desktop-services
@@ -17,7 +17,7 @@ manager: dongill
 ---
 # Remote Desktop Services - Build anywhere
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016
 
 Deploy on-premises, in the cloud, or a hybrid of the two. Modify your deployment as your business needs change.
 

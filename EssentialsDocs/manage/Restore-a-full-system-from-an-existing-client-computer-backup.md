@@ -123,11 +123,11 @@ manager: dongill
   
 > [!NOTE]
 >   Windows Server Essentials does not support the following restore scenarios:  
->   
->  -   Restoring a Master Boot Record (MBR) disk to a Unified Extensible Firmware Interface (UEFI) �based computer.  
-> -   Restoring a UEFI/GPT backup to a BIOS system.  
->   
->  If you restore data in either of these scenarios, you will not be able to boot the system. In addition, you might not be able to use hard drives that are larger than two terabytes in size.  
+> 
+> - Restoring a Master Boot Record (MBR) disk to a Unified Extensible Firmware Interface (UEFI)-based computer.  
+>   -   Restoring a UEFI/GPT backup to a BIOS system.  
+> 
+>   If you restore data in either of these scenarios, you will not be able to boot the system. In addition, you might not be able to use hard drives that are larger than two terabytes in size.  
   
  **Prerequisites:**  
   
@@ -144,46 +144,46 @@ manager: dongill
   
 #### To use the Full System Restore Wizard  
   
-1.  Do one of the following:  
+1. Do one of the following:  
   
-    -   Windows Server Essentials: Turn on the client computer that you want to restore, insert the restore media, and then turn the computer off.  
+   -   Windows Server Essentials: Turn on the client computer that you want to restore, insert the restore media, and then turn the computer off.  
   
-         Turn the computer on again, and during Power On Self Test (POST), press the appropriate function key (F-key) to access the Boot Device Menu, and then select the CD/DVD drive. The Windows Boot Manager starts.  
+        Turn the computer on again, and during Power On Self Test (POST), press the appropriate function key (F-key) to access the Boot Device Menu, and then select the CD/DVD drive. The Windows Boot Manager starts.  
   
-    -   Windows Server Essentials: If you are using the client restore service, restart the computer using the **Boot from network** option. Otherwise, start the computer using the USB key.  
+   -   Windows Server Essentials: If you are using the client restore service, restart the computer using the **Boot from network** option. Otherwise, start the computer using the USB key.  
   
-         Turn the computer on again, and during Power On Self Test (POST), press the appropriate function key (F-key) to access the Boot Device Menu, and then select **Boot from network** (or you can choose to boot from the USB key). The Windows Boot Manager starts.  
+        Turn the computer on again, and during Power On Self Test (POST), press the appropriate function key (F-key) to access the Boot Device Menu, and then select **Boot from network** (or you can choose to boot from the USB key). The Windows Boot Manager starts.  
   
-    > [!NOTE]
-    >  Check the documentation from your computer manufacturer to determine which function key accesses the Boot Device Menu.  
+   > [!NOTE]
+   >  Check the documentation from your computer manufacturer to determine which function key accesses the Boot Device Menu.  
   
-2.  The computer restore media contains 32-bit (x86) and 64-bit (x64) boot options. In the Windows Boot Manager, choose **Full System Restore (x86)** or **Full System Restore (x64)**. If the computer hardware drivers are 32-bit, choose x86; if they are 64-bit, choose x64. Windows files are loaded, and the Full System Restore Wizard performs a check to make sure that all hardware drivers are available.  
+2. The computer restore media contains 32-bit (x86) and 64-bit (x64) boot options. In the Windows Boot Manager, choose **Full System Restore (x86)** or **Full System Restore (x64)**. If the computer hardware drivers are 32-bit, choose x86; if they are 64-bit, choose x64. Windows files are loaded, and the Full System Restore Wizard performs a check to make sure that all hardware drivers are available.  
   
-3.  In the **Full System Restore Wizard** window, choose your preferred language, and then click the arrow.  
+3. In the **Full System Restore Wizard** window, choose your preferred language, and then click the arrow.  
   
-4.  Choose the appropriate **Time and currency format**, and the **Keyboard or input method** for this computer. Click **Continue**.  
+4. Choose the appropriate **Time and currency format**, and the **Keyboard or input method** for this computer. Click **Continue**.  
   
-5.  If drivers are missing, the message The restore process cannot verify the drivers is displayed. Click **Close**, and then on the Welcome dialog box click **Load drivers**.  
+5. If drivers are missing, the message The restore process cannot verify the drivers is displayed. Click **Close**, and then on the Welcome dialog box click **Load drivers**.  
   
-    1.  On the **Detect Hardware** dialog box, click **Install drivers**.  
+   1.  On the **Detect Hardware** dialog box, click **Install drivers**.  
   
-    2.  Insert the USB flash drive that contains the hardware drivers, and then on the **Install Drivers** dialog box, click **Scan**.  
+   2.  Insert the USB flash drive that contains the hardware drivers, and then on the **Install Drivers** dialog box, click **Scan**.  
   
-    3.  On the **Install Drivers** dialog box, click **OK** when the drivers are found.  
+   3.  On the **Install Drivers** dialog box, click **OK** when the drivers are found.  
   
-    4.  On the **Detect Hardware** dialog box, click **Continue**.  
+   4.  On the **Detect Hardware** dialog box, click **Continue**.  
   
-6.  If all drivers were found in the initial check or when all critical drivers are installed, on the **Full System Restore** window, click **Continue**.  
+6. If all drivers were found in the initial check or when all critical drivers are installed, on the **Full System Restore** window, click **Continue**.  
   
-7.  On the **Welcome to the Full System Restore Wizard** page, click **Next**.  
+7. On the **Welcome to the Full System Restore Wizard** page, click **Next**.  
   
-8.  The wizard searches for your server.  
+8. The wizard searches for your server.  
   
-    1.  If the wizard cannot locate your server, you are given the option to search again, or to enter the IP address of the server.  
+   1.  If the wizard cannot locate your server, you are given the option to search again, or to enter the IP address of the server.  
   
-    2.  If multiple servers were detected, you are asked to select one.  
+   2.  If multiple servers were detected, you are asked to select one.  
   
-    3.  If your server is located, the **Log on to <YourServerName\>** page is displayed.  
+   3.  If your server is located, the **Log on to <YourServerName\>** page is displayed.  
   
 9. On the **Log on to <YourServerName\>** page, type *<AdministratorAccountName\>* in the **User name** text box, and the administrator account password in the **Password** text box, and then click **Next**.  
   
@@ -218,46 +218,46 @@ manager: dongill
     > [!NOTE]
     >  This page is displayed if there are multiple hard drives on the backup source computer, or if the restore destination drive has less storage space than the backup source drive.  
   
-    1.  The wizard attempts to match the source and destination volumes. You should verify that the default mapping is correct.  
+    1. The wizard attempts to match the source and destination volumes. You should verify that the default mapping is correct.  
   
-        1.  To deselect a volume, click the list menu arrow for that volume, and then click **None**.  
+       1.  To deselect a volume, click the list menu arrow for that volume, and then click **None**.  
   
-        2.  When you finish selecting the volumes, click **Next**.  
+       2.  When you finish selecting the volumes, click **Next**.  
   
-    2.  If the source volume and the destination volume are the same size, or if the source size is smaller than the destination, a green arrow appears between the two. If there is a volume size mismatch (where the source volume is bigger than the destination volume), a red X appears between the source and the destination.  
+    2. If the source volume and the destination volume are the same size, or if the source size is smaller than the destination, a green arrow appears between the two. If there is a volume size mismatch (where the source volume is bigger than the destination volume), a red X appears between the source and the destination.  
   
-        > [!NOTE]
-        >  A red X can also appear if:  
-        >   
-        >  -   The disk sector size of the source volume does not match the disk sector size of the destination volume. This can occur if you replace the physical disk with a disk that has a different sector size, or if you configure Storage Spaces (which may have a different sector size than that of the physical disk).  
-        > -   You reach the cluster number limitation. To restore the source volume to the destination volume, you must format the destination volume with the same cluster size as the source volume. If the destination volume is too large, and if the cluster size is too small, you can reach cluster number limitation.  
+       > [!NOTE]
+       >  A red X can also appear if:  
+       > 
+       > - The disk sector size of the source volume does not match the disk sector size of the destination volume. This can occur if you replace the physical disk with a disk that has a different sector size, or if you configure Storage Spaces (which may have a different sector size than that of the physical disk).  
+       >   -   You reach the cluster number limitation. To restore the source volume to the destination volume, you must format the destination volume with the same cluster size as the source volume. If the destination volume is too large, and if the cluster size is too small, you can reach cluster number limitation.  
   
-        1.  Click **Run Disk Manager (advanced)**, and create a new volume that is the same size as the system reserved volume.  
+       1. Click **Run Disk Manager (advanced)**, and create a new volume that is the same size as the system reserved volume.  
   
-            > [!NOTE]
-            >  If a client computer is Unified Extensible Firmware Interface (UEFI) �based, you must use the **diskpart** tool to initialize the system disk. To do this, open a command window (press Ctrl+Alt+Shift for 5 seconds in the WinPE environment), run **diskpart.exe**, and then run the following diskpart commands:  
-            >   
-            >  1.  **DISKPART>  list disk**  
-            > 2.  **DISKPART> select disk #** *<disk\>*  
-            > 3.  **DISKPART> clean**  
-            > 4.  **DISKPART> convert gpt**  
-            > 5.  **DISKPART> create partition efi size=** *100* (where *100* is an example partition size in MB, should be the same as the original partition)  
-            > 6.  **DISKPART> create partition msr size=** *128* (where *128* is an example partition size in MB, should be the same as the original partition)  
-            > 7.  **DISKPART> exit**  
+          > [!NOTE]
+          >  If a client computer is Unified Extensible Firmware Interface (UEFI)-based, you must use the **diskpart** tool to initialize the system disk. To do this, open a command window (press Ctrl+Alt+Shift for 5 seconds in the WinPE environment), run **diskpart.exe**, and then run the following diskpart commands:  
+          > 
+          > 1. **DISKPART>  list disk**  
+          >    2. **DISKPART> select disk #** *<disk\>*  
+          >    3. **DISKPART> clean**  
+          >    4. **DISKPART> convert gpt**  
+          >    5. **DISKPART> create partition efi size=** *100* (where *100* is an example partition size in MB, should be the same as the original partition)  
+          >    6. **DISKPART> create partition msr size=** *128* (where *128* is an example partition size in MB, should be the same as the original partition)  
+          >    7. **DISKPART> exit**  
   
-        2.  *(Optional)* Select the option **Do Not Assign a Drive Letter or Drive Path**.  
+       2. *(Optional)* Select the option **Do Not Assign a Drive Letter or Drive Path**.  
   
-        3.  Format the volume as **NTFS**.  
+       3. Format the volume as **NTFS**.  
   
-        4.  When formatting is complete, right-click the new system volume, and then click **Mark Partition as Active**.  
+       4. When formatting is complete, right-click the new system volume, and then click **Mark Partition as Active**.  
   
-        5.  If you require additional volumes to correspond with other volumes in the backup, repeat steps *ii* through *iv* to create and activate the volumes, and then close **Disk Management**.  
+       5. If you require additional volumes to correspond with other volumes in the backup, repeat steps *ii* through *iv* to create and activate the volumes, and then close **Disk Management**.  
   
-        6.  On the **Select the volumes to restore** page, map the system reserved volume of the backup source to the volume of the same size that you created in step *v*.  
+       6. On the **Select the volumes to restore** page, map the system reserved volume of the backup source to the volume of the same size that you created in step *v*.  
   
-        7.  Map all other source volumes to the corresponding destination volumes.  
+       7. Map all other source volumes to the corresponding destination volumes.  
   
-        8.  Click **Next** to continue with the restore.  
+       8. Click **Next** to continue with the restore.  
   
 16. On the **Confirm volumes to restore** page, review the mapping, and then click **Next**. If you need to make any changes, click **Back**, and then repeat step 14.  
   
@@ -269,30 +269,30 @@ manager: dongill
     >  If BitLocker Drive Encryption was enabled on the computer before the restore, you must enable BitLocker manually after the computer restarts.  
   
 ##  <a name="BKMK_FindDrivers"></a> Where can I find the drivers for my hardware?  
- Depending on the new or restored computer hardware, the restore media may not include all of the storage and network adapter drivers that are needed when you restart your restored computer. You must determine which drivers are missing, locate those drivers on existing media or on the manufacturer ��s website, copy them to a flash drive, and then copy them from the flash drive to the new or restored computer when you run the Full System Restore Wizard.  
+ Depending on the new or restored computer hardware, the restore media may not include all of the storage and network adapter drivers that are needed when you restart your restored computer. You must determine which drivers are missing, locate those drivers on existing media or on the manufacturer's website, copy them to a flash drive, and then copy them from the flash drive to the new or restored computer when you run the Full System Restore Wizard.  
   
  When a computer is backed up, the drivers for the computer are saved in the backup. If your recovery media does not include all of the drivers that you need, you can open a backup for that computer, and then copy the drivers to a USB flash drive.  
   
 #### To copy drivers from a backup to a USB flash drive  
   
-1.  On another computer, open the Dashboard.  
+1. On another computer, open the Dashboard.  
   
-2.  Click **Devices**, and then click the computer for which you need drivers.  
+2. Click **Devices**, and then click the computer for which you need drivers.  
   
-3.  Click **Restore files or folders for the computer**. The Restore Files or Folders Wizard opens.  
+3. Click **Restore files or folders for the computer**. The Restore Files or Folders Wizard opens.  
   
-4.  Click the most recent successful backup, and then click **Next**.  
+4. Click the most recent successful backup, and then click **Next**.  
   
-5.  Click a volume to open, and then click **Next**. A window opens that lists the files and folders in the backup.  
+5. Click a volume to open, and then click **Next**. A window opens that lists the files and folders in the backup.  
   
-6.  Insert your USB flash drive in a USB connector on the computer, and then copy the Drivers for Full System Restore folder to your USB flash drive.  
+6. Insert your USB flash drive in a USB connector on the computer, and then copy the Drivers for Full System Restore folder to your USB flash drive.  
   
-    > [!NOTE]
-    >  You may need to click **Up one level** until you reach the root of the system volume.  
+   > [!NOTE]
+   >  You may need to click **Up one level** until you reach the root of the system volume.  
   
-7.  Remove the flash drive, and then insert it into the computer that you are restoring.  
+7. Remove the flash drive, and then insert it into the computer that you are restoring.  
   
- You can use the USB flash drive to install the drivers for your computer when you restore it. The Restore Files or Folders Wizard looks for additional drivers on this USB flash drive while using the Full System Restore Wizard. The drivers that you are most likely to need are the network adapter driver and storage device drivers.  
+   You can use the USB flash drive to install the drivers for your computer when you restore it. The Restore Files or Folders Wizard looks for additional drivers on this USB flash drive while using the Full System Restore Wizard. The drivers that you are most likely to need are the network adapter driver and storage device drivers.  
   
 ## See also  
   

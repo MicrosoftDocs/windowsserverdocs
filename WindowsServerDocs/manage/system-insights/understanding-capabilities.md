@@ -77,7 +77,7 @@ Each capability analyzes daily data to forecast future usage. CPU, networking, a
  CPU capacity forecasting                | % Processor Time  | Maximum 2-hour average per day   
  Networking capacity forecasting         | Bytes Total/sec         | Maximum 2-hour average per day  
 
-When evaluating the filtering logic above, it’s important to note that each capability seeks to inform administrators when future usage will meaningfully exceed the available capacity – even though CPU momentarily hit 100% utilization, CPU usage may not have caused meaningful performance degradation or resource contention. For CPU and networking, then, there should be sustained high usage rather than momentary spikes. Averaging CPU and networking usage throughout the whole day, however, would lose important usage information, as a few hours of high CPU or networking usage could meaningfully impact the performance of your critical workloads. The maximum 2-hour average during each day avoids these extremes and still produces meaningful data for each capability to analyze.
+When evaluating the filtering logic above, it's important to note that each capability seeks to inform administrators when future usage will meaningfully exceed the available capacity – even though CPU momentarily hit 100% utilization, CPU usage may not have caused meaningful performance degradation or resource contention. For CPU and networking, then, there should be sustained high usage rather than momentary spikes. Averaging CPU and networking usage throughout the whole day, however, would lose important usage information, as a few hours of high CPU or networking usage could meaningfully impact the performance of your critical workloads. The maximum 2-hour average during each day avoids these extremes and still produces meaningful data for each capability to analyze.
 
 For volume and total storage usage, however, storage usage can't exceed the available capacity, even momentarily, so the maximum daily usage is used for these capabilities. 
 
@@ -87,7 +87,7 @@ All System Insights capabilities must output a status associated with each predi
 - **Warning**: The forecast exceeds the available capacity in the next 30 days. 
 - **Critical**: The forecast exceeds the available capacity in the next 7 days. 
 - **Error**: The capability ran into an unexpected error. 
-- **None**: There isn’t enough data to make a prediction. This could be due to a lack of data or because no data has been reported recently.
+- **None**: There isn't enough data to make a prediction. This could be due to a lack of data or because no data has been reported recently.
 
 >[!NOTE]
 >If a capability forecasts on multiple instances - such as multiple volumes or network adapters - the status reflects the most severe status across all instances. Individual statuses for each volume or network adapter are visible in Windows Admin Center or within the data contained in the output of each capability. For instructions on how to parse the JSON output of the default capabilities, visit [this blog](https://aka.ms/systeminsights-mitigationscripts). 

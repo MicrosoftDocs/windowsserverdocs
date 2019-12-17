@@ -1,7 +1,7 @@
 ---
 title: Upgrade Windows Server 2008 and Windows Server 2008 R2
 description: Windows Server 2008 and 2008 R2 are approaching end of service. Learn how to upgrade on-premises or rehost to Azure.
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.mktglfcycl: manage
 ms.sitesec: library
 author: mikeblodge
@@ -28,7 +28,7 @@ If you are running Windows Server 2003, you will need to [upgrade to Windows Ser
 
 
 ## Migrate to Azure
-You can migrate your on-premises Windows Server 2008 and Windows Server 2008 R2 servers to Azure, where you can continue to run them on virtual machines. In Azure you’ll stay compliant, become more secure, and add cloud innovation to your work. The benefits of migrating to Azure include:
+You can migrate your on-premises Windows Server 2008 and Windows Server 2008 R2 servers to Azure, where you can continue to run them on virtual machines. In Azure you'll stay compliant, become more secure, and add cloud innovation to your work. The benefits of migrating to Azure include:
 
 - Security updates in Azure.
 - Get three more years of Windows Server 2008 R2 or 2008 critical and important security updates, included at no additional charge. 
@@ -37,12 +37,11 @@ You can migrate your on-premises Windows Server 2008 and Windows Server 2008 R2 
 - By migrating SQL Server to Azure Managed Instances or VMs, you get three more years of Windows Server 2008 R2 or 2008 critical security updates, included at no additional charge. 
 - Leverage existing SQL Server and Windows Server licenses for cloud savings unique to Azure.
 
-<a href="uploading-specialized-WS08-image-to-azure.md"><img src="media/WS08-image-banner-small.png"></a>
+[![Start migrating to Azure with a specialized image](./media/WS08-image-banner-small.png)](uploading-specialized-WS08-image-to-azure.md)
 
 To get started migrating, see [Upload a Windows Server 2008/2008 R2 specialized image to Azure](uploading-specialized-WS08-image-to-azure.md).
 
 To help you understand how to analyze existing IT resources, assess what you have, and identify the benefits of moving specific services and applications to the cloud or keeping workloads on-premises and upgrading to the latest version of Windows Server, see [Migration Guide for Windows Server](https://go.microsoft.com/fwlink/?linkid=872689).
-
 
 ## Upgrade SQL Server 2008/2008 R2 in parallel with your Windows Servers
 

@@ -1,7 +1,7 @@
 ---
 title: About dump encryption
 description: "Describes how to encrypt dump files and troubleshoot encryption."
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 manager: dongill
 ms.topic: article
 author: larsiwer
@@ -37,7 +37,7 @@ To simplify configuration, a [sample script](https://github.com/Microsoft/Virtua
 
 # Decrypting encrypted dumps
 To decrypt an existing encrypted dump file, you need to download and install the Debugging Tools for Windows. This tool set contains KernelDumpDecrypt.exe which can be used to decrypt an encrypted dump file.
-If the certificate including the private key is present in the current user’s certificate store, the dump file can be decrypted by calling
+If the certificate including the private key is present in the current user's certificate store, the dump file can be decrypted by calling
 
 ```
     KernelDumpDecrypt.exe memory.dmp memory_decr.dmp

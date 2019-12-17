@@ -2,7 +2,7 @@
 title: Track your Remote Desktop Services client access licenses (RDS CALs)
 description: Learn how to track CALs across your RDS deployment.
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: remote-desktop-services
@@ -16,7 +16,7 @@ manager: dongill
 ---
 # Track your Remote Desktop Services client access licenses (RDS CALs)
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016
 
 You can use the Remote Desktop Licensing Manager tool to create reports to track the RDS Per User CALs that have been issued by a Remote Desktop license server.
 

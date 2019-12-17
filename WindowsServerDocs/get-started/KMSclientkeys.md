@@ -1,30 +1,26 @@
 ---
 title: KMS client setup keys
 description: Keys needed to activate Windows products from a KMS server
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.mktglfcycl: manage
 ms.sitesec: library
-author: jaimeo
+author: jasongerend
+ms.author: jgerend
 ms.localizationpriority: medium
-ms.date: 10/02/2018
-ms.tgt_pltfrm: na
+ms.date: 11/12/2019
 ms.topic: get-started-article
 ---
+# KMS client setup keys
 
-# KMS Client Setup Keys
+>Applies to: Windows Server 2019, Windows Server Semi-Annual Channel, Windows Server 2016, Windows 10
 
->Applies To: Windows Server 2019, Windows Server Semi-Annual Channel, Windows Server 2016, Windows 10
+Computers that are running volume licensed editions of Windows Server, Windows 10, Windows 8.1, Windows Server 2012 R2, Windows 8, Windows Server 2012, Windows 7, Windows Server 2008 R2, Windows Vista, and Windows Server 2008 are, by default, KMS clients with no additional configuration needed.
 
-Computers that are running volume licensed editions of Windows Server, Windows 10, Windows 8.1,
-Windows Server 2012 R2, Windows 8, Windows Server 2012, Windows 7, Windows
-Server 2008 R2, Windows Vista, and Windows Server 2008 are, by default, KMS
-clients with no additional configuration needed.
-
->[!NOTE]
+> [!NOTE]
 > In the tables that follow, "LTSC" stands for "Long-Term Servicing Channel," while "LTSB" refers to the "Long-Term Servicing Branch." 
 
 **To use the keys listed here (which are GVLKs), you must first have a KMS host
-running in your deployment.** If you haven’t already configured a KMS host, see
+running in your deployment.** If you haven't already configured a KMS host, see
 [Deploy KMS Activation](https://technet.microsoft.com/library/dn502531(v=ws.11).aspx) for steps to set one up.
 
 If you are converting a computer from a KMS host, MAK, or retail edition of
@@ -32,9 +28,9 @@ Windows to a KMS client, install the applicable setup key (GVLK) from the
 following tables. To install a client setup key, open an administrative command
 prompt on the client, type **slmgr /ipk \<setup key\>** and then press **Enter**.
 
-| If you want to…                                                                                                                                                                                          | …use these resources                                                                                                         |
-|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------|
-| Activate Windows outside of a volume-activation scenario (that is, you’re trying to activate a retail version of Windows), **these keys will not work**.                                                     | Use these links for retail versions of Windows:                                                                              |
+| If you want to…    | …use these resources   |
+|--------------------|------------------------|
+| Activate Windows outside of a volume-activation scenario (that is, you're trying to activate a retail version of Windows), **these keys will not work**. | Use these links for retail versions of Windows: |
 | Fix this error that you get when you try to activate a Windows 8.1, Windows Server 2012 R2 or newer system: “Error: 0xC004F050 The Software Licensing Service reported that the product key is invalid”… | [Install this update](https://support.microsoft.com/en-us/help/3172614/july-2016-update-rollup-for-windows-8-1-and-windows-server-2012-r2) on the KMS host if it is running Windows 8.1, Windows Server 2012 R2, Windows 8, or Windows Server 2012. |
 
 -   [Get Windows 10](https://www.microsoft.com/en-us/windows/get-windows-10)
@@ -47,29 +43,14 @@ prompt on the client, type **slmgr /ipk \<setup key\>** and then press **Enter**
 >   If you are running Windows Server 2008 R2 or Windows 7, be on the lookout
 >   for an update to support using those as KMS hosts for Windows 10 clients.
 
-
 ## Windows Server Semi-Annual Channel versions
 
-### Windows Server, version 1809
-| Operating system edition       | KMS Client Setup Key          |
-|--------------------------------|-------------------------------|
-| Windows Server Datacenter | 6NMRW-2C8FM-D24W7-TQWMY-CWH2D  | 
-| Windows Server Standard | N2KJX-J94YW-TQVFB-DG9YT-724CC  |
+### Windows Server, version 1909, version 1903, and version 1809
 
-
-### Windows Server, version 1803
-
-| Operating system edition       | KMS Client Setup Key          |
-|--------------------------------|-------------------------------|
-| Windows Server Datacenter | 2HXDN-KRXHB-GPYC7-YCKFJ-7FVDG  | 
-| Windows Server Standard   | PTXN8-JFHJM-4WC78-MPCBR-9W4KR  |
-
-### Windows Server, version 1709
-
-| Operating system edition       | KMS Client Setup Key          |
-|--------------------------------|-------------------------------|
-| Windows Server Datacenter | 6Y6KB-N82V8-D8CQV-23MJW-BWTG6  | 
-| Windows Server Standard   | DPCNP-XQFKJ-BJF7R-FRC8D-GF6G4  |
+| Operating system edition  | KMS Client Setup Key          |
+|---------------------------|-------------------------------|
+| Windows Server Datacenter | 6NMRW-2C8FM-D24W7-TQWMY-CWH2D |
+| Windows Server Standard   | N2KJX-J94YW-TQVFB-DG9YT-724CC |
 
 ## Windows Server LTSC/LTSB versions
 
@@ -96,8 +77,8 @@ See the [Windows lifecycle fact sheet](https://support.microsoft.com/en-us/help/
 |-----------------------------------|-------------------------------|
 |Windows 10 Pro|W269N-WFGWX-YVC9B-4J6C9-T83GX|
 |Windows 10 Pro N|MH37W-N47XK-V7XM9-C7227-GCQG9|
-|Windows 10 Pro Workstations|NRG8B-VKK3Q-CXVCJ-9G2XF-6Q84J|
-|Windows 10 Pro Workstations N|9FNHH-K3HBT-3W4TD-6383H-6XYWF|
+|Windows 10 Pro for Workstations|NRG8B-VKK3Q-CXVCJ-9G2XF-6Q84J|
+|Windows 10 Pro for Workstations N|9FNHH-K3HBT-3W4TD-6383H-6XYWF|
 |Windows 10 Pro Education|6TP4R-GNPTD-KYYHQ-7B7DP-J447Y|
 |Windows 10 Pro Education N|YVWGF-BXNMC-HTQYQ-CPQ99-66QFC|
 |Windows 10 Education|NW6C2-QMPVW-D7KKK-3GKT6-VCFB2|
@@ -131,6 +112,21 @@ See the [Windows lifecycle fact sheet](https://support.microsoft.com/en-us/help/
 | Windows 10 Enterprise 2015 LTSB N | 2F77B-TNFGY-69QQF-B8YKP-D69TJ |
 
 ## Earlier versions of Windows Server
+
+### Windows Server, version 1803
+
+| Operating system edition       | KMS Client Setup Key          |
+|--------------------------------|-------------------------------|
+| Windows Server Datacenter | 2HXDN-KRXHB-GPYC7-YCKFJ-7FVDG  | 
+| Windows Server Standard   | PTXN8-JFHJM-4WC78-MPCBR-9W4KR  |
+
+### Windows Server, version 1709
+
+| Operating system edition       | KMS Client Setup Key          |
+|--------------------------------|-------------------------------|
+| Windows Server Datacenter | 6Y6KB-N82V8-D8CQV-23MJW-BWTG6  | 
+| Windows Server Standard   | DPCNP-XQFKJ-BJF7R-FRC8D-GF6G4  |
+
 ### Windows Server 2012 R2
 
 | Operating system edition               | KMS Client Setup Key          |

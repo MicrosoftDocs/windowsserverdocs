@@ -2,7 +2,7 @@
 title: bitsadmin getreplyprogress
 description: "Windows Commands topic for **bitsadmin getreplyprogress** - Retrieves the size and progress of the server reply."
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -17,9 +17,9 @@ ms.date: 10/16/2017
 
 # bitsadmin getreplyprogress
 
-
-
 Retrieves the size and progress of the server reply.
+
+**BITS 1.2 and earlier**: Not supported.
 
 ## Syntax
 

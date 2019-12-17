@@ -2,7 +2,7 @@
 title: bitsadmin setnotifyflags
 description: "Windows Commands topic for **bitsadmin setnotifyflags** - Sets the event notification flags for the specified job."
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -16,8 +16,6 @@ ms.date: 10/16/2017
 ---
 
 # bitsadmin setnotifyflags
-
-
 
 Sets the event notification flags for the specified job.
 
@@ -36,7 +34,7 @@ bitsadmin /SetNotifyFlags <Job> <NotifyFlags>
 
 ## Remarks
 
-The **NotfiyFlags** parameter can contain one or more of the following notification flags.
+The **NotifyFlags** parameter can contain one or more of the following notification flags.
 
 |-----|-----|
 |1|Generate an event when all files in the job have been transferred.|

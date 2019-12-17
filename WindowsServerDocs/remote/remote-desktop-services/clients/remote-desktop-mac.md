@@ -1,8 +1,8 @@
 ---
-title: Get started with Remote Desktop on Mac
+title: Get started with the macOS client
 description: Learn how to set up the Remote Desktop client for Mac
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: remote-desktop-services
@@ -12,16 +12,16 @@ ms.assetid: 7afc65f8-3158-49c9-9d48-4dab1c69afba
 author: lizap
 manager: dongill
 ms.author: elizapo
-ms.date: 10/09/2018
+ms.date: 08/27/2019
 ms.localizationpriority: medium
 ---
-# Get started with Remote Desktop on Mac
+# Get started with the macOS client
 
 >Applies To: Windows 10, Windows 8.1, Windows Server 2012 R2, Windows Server 2016
 
 You can use the Remote Desktop client for Mac to work with Windows apps, resources, and desktops from your Mac computer. Use the following information to get started - and check out the [FAQ](remote-desktop-client-faq.md) if you have questions.
 
->[!Note]
+>[!NOTE]
 > - Curious about the new releases for the macOS client? Check out [What's new for Remote Desktop on Mac?](mac-whatsnew.md)
 > - The Mac client runs on computers running macOS 10.10 and newer.
 > - The information in this article applies primarily to the full version of the Mac client - the version available in the Mac AppStore. Test-drive new features by downloading our preview app here:  [beta client release notes](https://go.microsoft.com/fwlink/?LinkID=619698&clcid=0x409).
@@ -29,7 +29,7 @@ You can use the Remote Desktop client for Mac to work with Windows apps, resourc
 ## Get the Remote Desktop client
 Follow these steps to get started with Remote Desktop on your Mac:
 
-1. Download the Microsoft Remote Desktop client from the [Mac App Store](https://itunes.apple.com/us/app/microsoft-remote-desktop/id1295203466?mt=12).
+1. Download the Microsoft Remote Desktop client from the [Mac App Store](https://itunes.apple.com/app/microsoft-remote-desktop/id1295203466?mt=12).
 2. [Set up your PC to accept remote connections](remote-desktop-client-faq.md#how-do-i-set-up-a-pc-for-remote-desktop). (If you skip this step, you can't connect to your PC.)
 3. Add a Remote Desktop connection or a remote resource. You use a connection to connect directly to a Windows PC and a remote resource to use a RemoteApp program, session-based desktop, or a virtual desktop published on-premises using RemoteApp and Desktop Connections. This feature is typically available in corporate environments.
 
@@ -47,11 +47,11 @@ To create a remote desktop connection:
       - This can be a Windows computer name (found in the **System** settings), a domain name, or an IP address.
       - You can also add port information to the end of this name, like *MyDesktop:3389*.
    - **User Account** - Add the user account you use to access the remote PC.
-      - For Active Directory (AD) joined computers or local accounts, use one of these formats: *user_name*, *domain\user_name*, or *user_name@domain.com*.
-      - For Azure Active Directory (AAD) joined computers, use one of these formats: *AzureAD\user_name* or *AzureAD\user_name@domain.com*.
-      - You can also choose whether to require a password.
-      - When managing multiple user accounts with the same user name, set a friendly name to differentiate the accounts.
-      - Manage your saved user accounts in the preferences of the app. 
+     - For Active Directory (AD) joined computers or local accounts, use one of these formats: *user_name*, *domain\user_name*, or <em>user_name@domain.com</em>.
+     - For Azure Active Directory (AAD) joined computers, use one of these formats: *AzureAD\user_name* or <em>AzureAD\user_name@domain.com</em>.
+     - You can also choose whether to require a password.
+     - When managing multiple user accounts with the same user name, set a friendly name to differentiate the accounts.
+     - Manage your saved user accounts in the preferences of the app. 
 
 3. You can also set these optional settings for the connection:
    - Set a friendly name 
@@ -76,7 +76,7 @@ You can export a remote desktop connection definition and use it on a  different
 
 Use the following steps to import a remote desktop .RDP file.
 
-1. In the menu bar, click **File > Import**.
+1. In the menu bar, click **File** > **Import**.
 2. Browse to the .RDP file.
 3. Click **Open**.
 
@@ -107,8 +107,8 @@ To set up a new gateway in preferences:
 
 1. In the Connection Center, click **Preferences > Gateways**. 
 2. Click the **+** button at the bottom of the table Enter the following information:
-  - **Server name** – The name of the computer you want to use as a gateway. This can be a Windows computer name, an Internet domain name, or an IP address. You can also add port information to the server name (for example: **RDGateway:443** or **10.0.0.1:443**).
-  - **User name** - The user name and password to be used for the Remote Desktop gateway you are connecting to. You can also select **Use connection credentials** to use the same user name and password as those used for the remote desktop connection.
+   - **Server name** – The name of the computer you want to use as a gateway. This can be a Windows computer name, an Internet domain name, or an IP address. You can also add port information to the server name (for example: **RDGateway:443** or **10.0.0.1:443**).
+   - **User name** - The user name and password to be used for the Remote Desktop gateway you are connecting to. You can also select **Use connection credentials** to use the same user name and password as those used for the remote desktop connection.
 
 
 ## Manage your user accounts
@@ -154,7 +154,7 @@ Mac keyboard layouts differ from the Windows keyboard layouts.
 - The function keys can be activated in the session by pressing additionally the FN key (e.g.: FN + F1).
 - The Alt key to the right of the space bar on the Mac keyboard equals the Alt Gr/right Alt key in Windows.
 
-By default, the remote session will use the same keyboard locale as the OS you're running the client on. (If your Mac is running an en-us OS, that will be used for the remote sessions as well. If the OS keyboard locale is not used, check the keyboard setting on the remote PC and changing the setting manually. See the [Remote Desktop Client FAQ](remote-desktop-client-faq.md) for more information about keyboards and locales.
+By default, the remote session will use the same keyboard locale as the OS you're running the client on. (If your Mac is running an en-us OS, that will be used for the remote sessions as well.) If the OS keyboard locale is not used, check the keyboard setting on the remote PC and change it manually. See the [Remote Desktop Client FAQ](remote-desktop-client-faq.md) for more information about keyboards and locales.
 
 
 ## Support for Remote Desktop gateway pluggable authentication and authorization

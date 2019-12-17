@@ -1,7 +1,7 @@
 ---
 title: Initialize the HGS cluster using TPM mode in a new dedicated forest (default)
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.topic: article
 manager: dongill
 author: rpsqrd
@@ -40,6 +40,6 @@ ms.date: 08/29/2018
 
 ## Next step
 
->[!div class="nextstepaction"]
-[Install TPM root certs](guarded-fabric-install-trusted-tpm-root-certificates.md)
+> [!div class="nextstepaction"]
+> [Install TPM root certs](guarded-fabric-install-trusted-tpm-root-certificates.md)
   

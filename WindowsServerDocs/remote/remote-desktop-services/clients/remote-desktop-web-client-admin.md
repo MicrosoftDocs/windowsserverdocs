@@ -1,10 +1,10 @@
 ---
 title: Set up the Remote Desktop web client for your users
 description: Describes how an admin can set up the Remote Desktop web client.
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: remote-desktop-services
 ms.author: helohr
-ms.date: 11/2/2018
+ms.date: 09/19/2019
 ms.topic: article
 author: Heidilohr
 ms.localizationpriority: medium
@@ -78,7 +78,7 @@ To install the web client for the first time, follow these steps:
     Make sure you can access the web client at the web client URL with your server name, formatted as <https://server_FQDN/RDWeb/webclient/index.html>. It's important to use the server name that matches the RD Web Access public certificate in the URL (typically the server FQDN).
 
     >[!NOTE]
-    >When running the **Publish-RDWebClientPackage** cmdlet, you may see a warning that says per-device CALs are not supported, even if your deployment is configured for per-user CALs. If your deployment uses per-user CALs, you can ignore this warning. We display it to make sure you’re aware of the configuration limitation.
+    >When running the **Publish-RDWebClientPackage** cmdlet, you may see a warning that says per-device CALs are not supported, even if your deployment is configured for per-user CALs. If your deployment uses per-user CALs, you can ignore this warning. We display it to make sure you're aware of the configuration limitation.
 8. When you're ready for users to access the web client, just send them the web client URL you created.
 
 >[!NOTE]
@@ -174,6 +174,111 @@ Follow the instructions under [How to publish the Remote Desktop web client](rem
     Install-RDWebClientPackage -Source "C:\WebClient\rdwebclient-1.0.1.zip"
     ```
 
+## Connecting to RD Broker without RD Gateway in Windows Server 2019
+This section describes how to enable a web client connection to an RD Broker without an RD Gateway in Windows Server 2019.
+
+### Setting up the RD Broker server
+
+#### Follow these steps if there is no certificate bound to the RD Broker server
+
+1. Open **Server Manager** > **Remote Desktop Services**.
+
+2. In **Deployment Overview** section, select the **Tasks** dropdown menu.
+
+3. Select **Edit Deployment Properties**, a new window titled **Deployment Properties** will open.
+
+4. In the **Deployment Properties** window, select **Certificates** in the left menu.
+
+5. In the list of Certificate Levels, select **RD Connection Broker - Enable Single Sign On**. You have two options: (1) create a new certificate or (2) an existing certificate.
+
+#### Follow these steps if there is a certificate previously bound to the RD Broker server
+
+1. Open the certificate bound to the Broker and copy the **Thumbprint** value.
+
+2. To bind this certificate to the secure port 3392, open an elevated PowerShell window and run the following command, replacing **"< thumbprint >"** with the value copied from the previous step:
+
+    ```PowerShell
+    netsh http add sslcert ipport=0.0.0.0:3392 certhash="<thumbprint>" certstorename="Remote Desktop" appid="{00000000-0000-0000-0000-000000000000}"
+    ```
+
+    > [!NOTE]
+    > To check if the certificate has been bound correctly, run the following command:
+    >
+    > ```PowerShell
+    > netsh http show sslcert
+    > ```
+    >
+    > In the list of SSL Certificate bindings, ensure that the correct certificate is bound to port 3392.
+
+3. Open the Windows Registry (regedit) and nagivate to ```HKLM\SYSTEM\CurrentControlSet\Control\Terminal Server\WinStations\RDP-Tcp``` and locate the key **WebSocketURI**. The value must be set to <strong>https://+:3392/rdp/</strong>.
+
+### Setting up the RD Session Host
+Follow these steps if the RD Session Host server is different from the RD Broker server:
+
+1. Create a certificate for the RD Session Host machine, open it and copy the **Thumbprint** value.
+
+2. To bind this certificate to the secure port 3392, open an elevated PowerShell window and run the following command, replacing **"< thumbprint >"** with the value copied from the previous step:
+
+    ```PowerShell
+    netsh http add sslcert ipport=0.0.0.0:3392 certhash="<thumbprint>" appid="{00000000-0000-0000-0000-000000000000}"
+    ```
+
+    > [!NOTE]
+    > To check if the certificate has been bound correctly, run the following command:
+    >
+    > ```PowerShell
+    > netsh http show sslcert
+    > ```
+    >
+    > In the list of SSL Certificate bindings, ensure that the correct certificate is bound to port 3392.
+
+3. Open the Windows Registry (regedit) and nagivate to ```HKLM\SYSTEM\CurrentControlSet\Control\Terminal Server\WinStations\RDP-Tcp``` and locate the key **WebSocketURI**. The value must be set to <https://+:3392/rdp/>.
+
+### General Observations
+
+* Ensure that both the RD Session Host and RD Broker server are running Windows Server 2019.
+
+* Ensure that public trusted certificates are configured for both the RD Session Host and RD Broker server.
+    > [!NOTE]
+    > If both the RD Session Host and the RD Broker server share the same machine, set the RD Broker server certificate only. If the RD Session Host and RD Broker server use different machines, both must be configured with unique certificates.
+
+* The **Subject Alternative Name (SAN)** for each certificate must be set to the machine's **Fully Qualified Domain Name (FQDN)**. The **Common Name (CN)** must match the SAN for each certificate.
+
+## How to pre-configure settings for Remote Desktop web client users
+This section will tell you how to use PowerShell to configure settings for your Remote Desktop web client deployment. These PowerShell cmdlets control a user's ability to change settings based on your organization's security concerns or intended workflow. The following settings are all located in the **Settings** side panel of the web client.
+
+### Suppress telemetry
+By default, users may choose to enable or disable collection of telemetry data that is sent to Microsoft. For information about the telemetry data Microsoft collects, please refer to our Privacy Statement via the link in the **About** side panel.
+
+As an administrator, you can choose to suppress telemetry collection for your deployment using the following PowerShell cmdlet:
+
+   ```PowerShell
+    Set-RDWebClientDeploymentSetting -Name "SuppressTelemetry" $true
+   ```
+
+By default, the user may select to enable or disable telemetry. A boolean value **$false** will match the default client behavior. A boolean value **$true** disables telemetry and restricts the user from enabling telemetry.
+
+### Remote resource launch method
+
+>[!NOTE]
+>This setting currently only works with the RDS web client, not the Windows Virtual Desktop web client.
+
+By default, users may choose to launch remote resources (1) in the browser or (2) by downloading an .rdp file to handle with another client installed on their machine. As an administrator, you can choose to restrict the remote resource launch method for your deployment with the following Powershell command:
+
+   ```PowerShell
+    Set-RDWebClientDeploymentSetting -Name "LaunchResourceInBrowser" ($true|$false)
+   ```
+ By default, the user may select either launch method. A boolean value **$true** will force the user to launch resources in the browser. A boolean value **$false** will force the user to launch resources by downloading an .rdp file to handle with a locally installed RDP client.
+
+### Reset RDWebClientDeploymentSetting configurations to default
+
+To reset a deployment-level web client setting to the default configuration, run the following PowerShell cmdlet and use the -name parameter to specify the setting you want to reset:
+
+   ```PowerShell
+    Reset-RDWebClientDeploymentSetting -Name "LaunchResourceInBrowser"
+    Reset-RDWebClientDeploymentSetting -Name "SuppressTelemetry"
+   ```
+
 ## Troubleshooting
 
 If a user reports any of the following issues when opening the web client for the first time, the following sections will tell you what to do to fix them.
@@ -199,8 +304,16 @@ Import-RDWebClientBrokerCert <certificate file path>
 
 ### Diagnose issues with the console log
 
-If you can't solve the issue based on the troubleshooting instructions in this article, you can try to diagnose the source of the problem yourself by watching the console log in the browser. The console is generally located under the developer tools. For example, you can access the log in Edge by pressing the **F12** key, or by selecting the ellipsis, then navigating to **More tools** > **Developer Tools**.
+If you can't solve the issue based on the troubleshooting instructions in this article, you can try to diagnose the source of the problem yourself by watching the console log in the browser. The web client provides a method for recording the browser console log activity while using the web client to help diagnose issues.
+
+* Select the ellipsis in the upper-right corner and navigate to the **About** page in the dropdown menu.
+* Under **Capture support information** select the **Start recording** button.
+* Perform the operation(s) in the web client that produced the issue you are trying to diagnose.
+* Navigate to the **About** page and select **Stop recording**.
+* Your browser will automatically download a .txt file titled **RD Console Logs.txt**. This file will contain the full console log activity generated while reproducing the target issue.
+
+The console may also be accessed directly through your browser. The console is generally located under the developer tools. For example, you can access the log in Microsoft Edge by pressing the **F12** key, or by selecting the ellipsis, then navigating to **More tools** > **Developer Tools**.
 
 ## Get help with the web client
 
-If you've encountered an issue that can’t be solved by the information in this article, you can [email us](mailto:rdwbclnt@microsoft.com) to report it. You can also request or vote for new features at our [suggestion box](https://aka.ms/rdwebfbk).
+If you've encountered an issue that can't be solved by the information in this article, you can report it on [Tech Community](https://aka.ms/wvdtc). You can also request or vote for new features at our [suggestion box](https://remotedesktop.uservoice.com/forums/911494-remote-desktop-web-client).

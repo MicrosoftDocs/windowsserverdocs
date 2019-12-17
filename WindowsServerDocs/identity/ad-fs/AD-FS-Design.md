@@ -7,13 +7,12 @@ ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: identity-adfs
 ---
 
 # AD FS Design
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
   
 -   [AD FS Design Guide](../ad-fs/design/AD-FS-Design-Guide.md)

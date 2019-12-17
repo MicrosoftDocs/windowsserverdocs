@@ -7,7 +7,7 @@ ms.author: joflore
 manager: mtillman
 ms.date: 05/31/2017
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 
 ms.technology: identity-adds
 ---
@@ -26,7 +26,7 @@ For the Administrators group in each domain in the forest:
 
 1.  Remove all members from the Administrators group, with the possible exception of the built-in Administrator account for the domain, provided it has been secured as described in [Appendix D: Securing Built-In Administrator Accounts in Active Directory](../../../ad-ds/plan/security-best-practices/Appendix-D--Securing-Built-In-Administrator-Accounts-in-Active-Directory.md).  
 
-2.  In GPOs linked to OUs containing member servers and workstations in each domain, the DA group should be added to the following user rights in **Computer Configuration\Policies\Windows Settings\Security Settings\Local Policies\ User Rights Assignment**:  
+2.  In GPOs linked to OUs containing member servers and workstations in each domain, the BA group should be added to the following user rights in **Computer Configuration\Policies\Windows Settings\Security Settings\Local Policies\ User Rights Assignment**:  
 
     -   Deny access to this computer from the network  
 

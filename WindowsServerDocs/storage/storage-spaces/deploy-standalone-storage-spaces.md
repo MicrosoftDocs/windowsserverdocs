@@ -1,7 +1,7 @@
 ﻿---
 title: Deploy Storage Spaces on a stand-alone server
 description: Describes how to deploy Storage Spaces on a stand-alone Windows Server 2012-based server.
-ms.prod: windows-server-threshold 
+ms.prod: windows-server 
 ms.topic: article 
 author: JasonGerend 
 ms.author: jgerend 
@@ -42,7 +42,7 @@ To use Storage Spaces on a stand-alone Windows Server 2012−based server, make 
 
 |Area|Requirement|Notes|
 |---|---|---|
-|Disk bus types|- Serial Attached SCSI (SAS)<br>- Serial Advanced Technology Attachment (SATA)|You can also use USB drives. However, it's not optimal to use USB drives in a server environment.<br><br>Storage Spaces does not support iSCSI and Fibre Channel controllers.|
+|Disk bus types|- Serial Attached SCSI (SAS)<br>- Serial Advanced Technology Attachment (SATA)<br>- iSCSI and Fibre Channel Controllers. |You can also use USB drives. However, it's not optimal to use USB drives in a server environment.<br>Storage Spaces is supported on iSCSI and Fibre Channel (FC) controllers as long as the virtual disks created on top of them are non-resilient (Simple with any number of columns).<br>|
 |Disk configuration|- Physical disks must be at least 4 GB<br>- Disks must be blank and not formatted. Do not create volumes.||
 |HBA considerations|- Simple host bus adapters (HBAs) that do not support RAID functionality are recommended<br>- If RAID-capable, HBAs must be in non-RAID mode with all RAID functionality disabled<br>- Adapters must not abstract the physical disks, cache data, or obscure any attached devices. This includes enclosure services that are provided by attached just-a-bunch-of-disks (JBOD) devices. |Storage Spaces is compatible only with HBAs where you can completely disable all RAID functionality.|
 |JBOD enclosures|- JBOD enclosures are optional<br>- Recommended to use Storage Spaces certified enclosures listed on the Windows Server Catalog<br>- If you're using a JBOD enclosure, verify with your storage vendor that the enclosure supports Storage Spaces to ensure full functionality<br>- To determine whether the JBOD enclosure supports enclosure and slot identification, run the following Windows PowerShell cmdlet:<br><br>`Get-PhysicalDisk \| ? {$_.BusType –eq "SAS"} \| fc`<br><br>If the **EnclosureNumber** and **SlotNumber** fields contain values, then the enclosure supports these features.||
@@ -144,16 +144,16 @@ Next, you must create one or more virtual disks from the storage pool. When you 
 
 8. On the **Specify the provisioning type** page, select one of the following options, then select **Next**.
     
-      - **Thin**
+   - **Thin**
         
-        With thin provisioning, space is allocated on an as-needed basis. This optimizes the usage of available storage. However, because this enables you to over-allocate storage, you must carefully monitor how much disk space is available.
+     With thin provisioning, space is allocated on an as-needed basis. This optimizes the usage of available storage. However, because this enables you to over-allocate storage, you must carefully monitor how much disk space is available.
     
-      - **Fixed**
+   - **Fixed**
         
-        With fixed provisioning, the storage capacity is allocated immediately, at the time a virtual disk is created. Therefore, fixed provisioning uses space from the storage pool that is equal to the virtual disk size.
+     With fixed provisioning, the storage capacity is allocated immediately, at the time a virtual disk is created. Therefore, fixed provisioning uses space from the storage pool that is equal to the virtual disk size.
     
-    >[!TIP]
-    >With Storage Spaces, you can create both thin- and fixed-provisioned virtual disks in the same storage pool. For example, you could use a thin-provisioned virtual disk to host a database and a fixed-provisioned virtual disk to host the associated log files.
+     >[!TIP]
+     >With Storage Spaces, you can create both thin- and fixed-provisioned virtual disks in the same storage pool. For example, you could use a thin-provisioned virtual disk to host a database and a fixed-provisioned virtual disk to host the associated log files.
 
 9. On the **Specify the size of the virtual disk** page, do the following:
     

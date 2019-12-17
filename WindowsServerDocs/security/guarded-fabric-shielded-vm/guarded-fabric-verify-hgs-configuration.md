@@ -1,7 +1,7 @@
 ---
 title: Verify the HGS configuration
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.topic: article
 ms.assetid: 8f01df37-f18e-4386-ae73-ecf84feaa9df
 manager: dongill
@@ -25,14 +25,10 @@ Because the HGS configuration does not yet contain information about the hosts t
 
 [!INCLUDE [Guarded fabric diagnostics tool](../../../includes/guarded-fabric-diagnostics-tool.md)] 
 
-<!-- When a link is available for an updated troubleshooting guide, add a sentence like the following and create a link to the troubleshooting guide:
-If failures did occur, please review the remediation steps provided or see the Troubleshooting Guide.
--->
-
 Run the diagnostics on each node in your HGS cluster.
 
 ## Next step
 
->[!div class="nextstepaction"]
-[Deploy guarded hosts](guarded-fabric-configure-hgs-with-authorized-hyper-v-hosts.md)
+> [!div class="nextstepaction"]
+> [Deploy guarded hosts](guarded-fabric-configure-hgs-with-authorized-hyper-v-hosts.md)
 

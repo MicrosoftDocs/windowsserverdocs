@@ -2,7 +2,7 @@
 title: bitsadmin setcustomheaders
 description: "Windows Commands topic for **bitsadmin setcustomheaders** - add a custom HTTP header to a GET request."
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -36,7 +36,7 @@ bitsadmin /SetCustomHeaders <Job> <Header1> <Header2> <. . .>
 
 ## Remarks
 
--   This command is used to add a custom HTTP header to a GET request sent to an HTTP server.
+-   This switch is used to add a custom HTTP header to a GET request sent to an HTTP server.
 
 ## <a name="BKMK_examples"></a>Examples
 

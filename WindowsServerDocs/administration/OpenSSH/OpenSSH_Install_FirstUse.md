@@ -1,8 +1,9 @@
 ---
-ms.date:  08/13/2018
+ms.date:  09/27/2019
 ms.topic: conceptual
 keywords:  OpenSSH, SSH, SSHD, install, setup
-contributor:  keithb
+contributor:  maertendMSFT
+author: maertendMSFT
 title:  Installation of OpenSSH For Windows
 ---
 
@@ -71,23 +72,14 @@ In the list of installed features, select the OpenSSH Client or OpenSSH Server c
 To uninstall OpenSSH using PowerShell, use one of the following commands:
 
 ```powershell
-# Install the OpenSSH Client
-Remove-WindowsCapability -Name OpenSSH.Client~~~~0.0.1.0
+# Uninstall the OpenSSH Client
+Remove-WindowsCapability -Online -Name OpenSSH.Client~~~~0.0.1.0
 
-# Install the OpenSSH Server
-Remove-WindowsCapability -Name OpenSSH.Server~~~~0.0.1.0
+# Uninstall the OpenSSH Server
+Remove-WindowsCapability -Online -Name OpenSSH.Server~~~~0.0.1.0
 ```
 
 A Windows restart may be required after removing OpenSSH, if the service is in use at the time it was uninstalled.
-
-
-## Upgrading From "RS4"
-
-Users who installed the beta version of OpenSSH in Windows RS4 should consider the making following updates. 
-
-_Change the default location for administrator keys_
-* What is the reason for each activity?
-* Are there any other changes (e.g.: authorized key file location)
 
 
 ## Initial Configuration of SSH Server
@@ -99,8 +91,10 @@ Start-Service sshd
 # OPTIONAL but recommended:
 Set-Service -Name sshd -StartupType 'Automatic'
 # Confirm the Firewall rule is configured. It should be created automatically by setup. 
-Get-NetFirewallRule –Name *ssh*
-# There should be a firewall rule named "OpenSSH-Server-In-TCP", which should be enabled 
+Get-NetFirewallRule -Name *ssh*
+# There should be a firewall rule named "OpenSSH-Server-In-TCP", which should be enabled
+# If the firewall does not exist, create one
+New-NetFirewallRule -Name sshd -DisplayName 'OpenSSH Server (sshd)' -Enabled True -Direction Inbound -Protocol TCP -Action Allow -LocalPort 22
 ```
 
 ## Initial use of SSH
@@ -121,7 +115,7 @@ Are you sure you want to continue connecting (yes/no)?
 ```
 
 The answer must be either “yes” or “no”. 
-Answering Yes will add that server to the local system’s list of known ssh hosts.
+Answering Yes will add that server to the local system's list of known ssh hosts.
 
 You will be prompted for the password at this point. As a security precaution, your password will not be displayed as you type. 
 

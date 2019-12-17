@@ -6,14 +6,14 @@ ms.author: billmath
 manager: mtillman
 ms.date: 01/03/2017
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: identity-adfs
 ---
 
 # AD FS Troubleshooting - Idp-Initiated Sign On
 The AD FS sign-on page can be used to test whether or not authentication is working.  This is done by navigating to the page and signing in.  Also, we can use the sign-in page to verify that all SAML 2.0 relying parties are listed.
 
-## Enable the Idp-Intiated Sign on page
+## Enable the Idp-Initiated Sign on page
 By default, AD FS in Windows 2016 does not have the sign on page enabled.  In order to enable it you can use the PowerShell command Set-AdfsProperties.  Use the following procedure to enable the page:
 
 1.  Open Windows PowerShell

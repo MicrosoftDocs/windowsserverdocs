@@ -2,7 +2,7 @@
 title: nslookup set search
 description: "Windows Commands topic for **** - "
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -29,11 +29,11 @@ set [no]search
 
 ## Parameters
 
-|Parameter|Description|
-|---------|-----------|
-|**nosearch**|Stops appending the Domain Name System (DNS) domain names in the DNS domain search list to the request.|
-|**search**|Appends the Domain Name System (DNS) domain names in the DNS domain search list to the request until an answer is received. The default syntax is **search**.|
-|{help | ?}|Displays a short summary of **nslookup** subcommands.|
+|  Parameter   |                                                                          Description                                                                          |
+|--------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **nosearch** |                            Stops appending the Domain Name System (DNS) domain names in the DNS domain search list to the request.                            |
+|  **search**  | Appends the Domain Name System (DNS) domain names in the DNS domain search list to the request until an answer is received. The default syntax is **search**. |
+|    {help     |                                                                              ?}                                                                               |
 
 #### Additional references
 

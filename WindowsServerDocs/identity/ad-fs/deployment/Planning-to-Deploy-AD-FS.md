@@ -6,15 +6,13 @@ author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 
 ms.technology: identity-adfs
 ms.author: billmath
 ---
 
 # Planning to Deploy AD FS
-
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 
 After you collect information about your environment and you decide on an Active Directory Federation Services \(AD FS\) design by following the guidance in the [AD FS Design Guide in Windows Server 2012](https://technet.microsoft.com/library/dd807036.aspx), you can begin to plan the deployment of your organization's AD FS design. With the completed design and the information in this topic, you can determine which tasks to perform to deploy AD FS in your organization.  

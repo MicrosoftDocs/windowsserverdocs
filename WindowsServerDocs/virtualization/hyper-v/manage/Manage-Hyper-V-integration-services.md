@@ -7,7 +7,7 @@ ms.author: kathydav
 manager: dongill
 ms.date: 12/20/2016
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.service: na
 ms.assetid: 9cafd6cb-dbbe-4b91-b26c-dee1c18fd8c2
 ---
@@ -20,8 +20,8 @@ Hyper-V Integration Services enhance virtual machine performance and provide con
 
 For details about each integration service, see [Hyper-V Integration Services](https://docs.microsoft.com/virtualization/hyper-v-on-windows/reference/integration-services).
 
->[!IMPORTANT]
->Each service you want to use must be enabled in both the host and guest in order to function. All integration services except "Hyper-V Guest Service Interface" are on by default on Windows guest operating systems. The services can be turned on and off individually. The next sections show you how.
+> [!IMPORTANT]
+> Each service you want to use must be enabled in both the host and guest in order to function. All integration services except "Hyper-V Guest Service Interface" are on by default on Windows guest operating systems. The services can be turned on and off individually. The next sections show you how.
 
 ## Turn an integration service on or off using Hyper-V Manager
 
@@ -42,6 +42,7 @@ The following examples demonstrate turning the guest file copy integration servi
     ``` PowerShell
     Get-VMIntegrationService -VMName "DemoVM"
     ```
+
 1. The output should look like this:
 
     ``` PowerShell
@@ -79,12 +80,13 @@ Some features may not work correctly or at all if the guest's integration servic
 ```
 REG QUERY "HKLM\Software\Microsoft\Virtual Machine\Auto" /v IntegrationServicesVersion
 ```
+
 Earlier guest operating systems will not have all available services. For example, Windows Server 2008 R2 guests cannot have the "Hyper-V Guest Service Interface".
 
 ## Start and stop an integration service from a Windows Guest
 In order for an integration service to be fully functional, its corresponding service must be running within the guest in addition to being enabled on the host. In Windows guests, each integration service is listed as a standard Windows service. You can use the Services applet in Control Panel or PowerShell to stop and start these services.
 
->[!IMPORTANT]
+> [!IMPORTANT]
 > Stopping an integration service may severely affect the host's ability to manage your virtual machine. To work correctly, each integration service you want to use must be enabled on both the host and guest.
 > As a best practice, you should only control integration services from Hyper-V using the instructions above. The matching service in the guest operating system will stop or start automatically when you change its status in Hyper-V.
 > If you start a service in the guest operating system but it is disabled in Hyper-V, the service will stop. If you stop a service in the guest operating system that is enabled in Hyper-V, Hyper-V will eventually start it again. If you disable the service in the guest, Hyper-V will be unable to start it.
@@ -99,7 +101,6 @@ In order for an integration service to be fully functional, its corresponding se
 
 1. Right-click the service you want start or stop. Click the desired action.
 
-
 ### Use Windows PowerShell to start or stop an integration service within a Windows guest
 
 1. To get a list of integration services, run:
@@ -107,6 +108,7 @@ In order for an integration service to be fully functional, its corresponding se
     ```
     Get-Service -Name vm*
     ```
+
 1.  The output should look similar to this:
 
     ```PowerShell
@@ -132,13 +134,13 @@ In order for an integration service to be fully functional, its corresponding se
 
 Linux integration services are generally provided through the Linux kernel. The Linux integration services driver is named **hv_utils**.
 
-1.  To find out if **hv_utils** is loaded, use this command:
+1. To find out if **hv_utils** is loaded, use this command:
 
-    ``` BASH
-    lsmod | grep hv_utils
-    ``` 
+   ``` BASH
+   lsmod | grep hv_utils
+   ``` 
   
-1. The output should look similar to this:  
+2. The output should look similar to this:  
   
     ``` BASH
     Module                  Size   Used by
@@ -146,13 +148,13 @@ Linux integration services are generally provided through the Linux kernel. The 
     hv_vmbus               61440   8 hv_balloon,hyperv_keyboard,hv_netvsc,hid_hyperv,hv_utils,hyperv_fb,hv_storvsc
     ```
 
-1. To find out if the required daemons are running, use this command.
+3. To find out if the required daemons are running, use this command.
   
     ``` BASH
     ps -ef | grep hv
     ```
   
-1. The output should look similar to this: 
+4. The output should look similar to this: 
   
     ```BASH
     root       236     2  0 Jul11 ?        00:00:00 [hv_vmbus_con]
@@ -165,13 +167,13 @@ Linux integration services are generally provided through the Linux kernel. The 
     scooley  43774 43755  0 21:20 pts/0    00:00:00 grep --color=auto hv          
     ```
 
-1. To see what daemons are available, run:
+5. To see what daemons are available, run:
 
     ``` BASH
     compgen -c hv_
     ```
   
-1. The output should look similar to this:
+6. The output should look similar to this:
   
     ``` BASH
     hv_vss_daemon
@@ -182,10 +184,10 @@ Linux integration services are generally provided through the Linux kernel. The 
     hv_fcopy_daemon     
     ```
   
- Integration service daemons that might be listed include the following. If any are missing, they might not be supported on your system or they might not be installed. Find details, see [Supported Linux and FreeBSD virtual machines for Hyper-V on Windows](https://technet.microsoft.com/library/dn531030.aspx).  
-  - **hv_vss_daemon**: This daemon is required to create live Linux virtual machine backups.
-  - **hv_kvp_daemon**: This daemon allows setting and querying intrinsic and extrinsic key value pairs.
-  - **hv_fcopy_daemon**: This daemon implements a file copying service between the host and guest.  
+   Integration service daemons that might be listed include the following. If any are missing, they might not be supported on your system or they might not be installed. Find details, see [Supported Linux and FreeBSD virtual machines for Hyper-V on Windows](https://technet.microsoft.com/library/dn531030.aspx).  
+   - **hv_vss_daemon**: This daemon is required to create live Linux virtual machine backups.
+   - **hv_kvp_daemon**: This daemon allows setting and querying intrinsic and extrinsic key value pairs.
+   - **hv_fcopy_daemon**: This daemon implements a file copying service between the host and guest.  
 
 ### Examples
 

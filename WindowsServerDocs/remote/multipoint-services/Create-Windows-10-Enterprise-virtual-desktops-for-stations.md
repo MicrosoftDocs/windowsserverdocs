@@ -3,7 +3,7 @@ title: Create Windows 10 Enterprise virtual desktops for stations
 description: Learn how to create Windows Server 2016 desktops for station
 ms.custom: na
 ms.date: 07/22/2016
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: multipoint-services
 ms.reviewer: na
 ms.suite: na
@@ -38,13 +38,13 @@ To prepare to create station virtual desktops, ensure that your MultiPoint Servi
 ## Procedures  
 Use the following procedures to:  
   
--   [Create a template for virtual desktops](#a-namebkmkcreateatemplateacreate-a-template-for-virtual-desktops)  
+-   [Create a template for virtual desktops](#create-a-template-for-virtual-desktops)  
   
--   [Create virtual desktops from the template](#BKMK_CreateVirtualDesktopsfromTemplate)  
+-   [Create virtual desktops from the template](#create-virtual-machine-desktops-from-the-template)  
   
--   [Copy an existing virtual desktop template](#BKMK_CopyExiistingVirtualDesktopTemplate)  
+-   [Copy an existing virtual desktop template](#copy-an-existing-virtual-desktop-template)  
   
-### <a name="BKMK_CreateaTemplate"></a>Create a template for virtual desktops  
+### Create a template for virtual desktops  
 Before you can create a template for your virtual desktops, you must enable the Virtual Desktop feature in MultiPoint Server.  
   
 ##### To enable the Virtual Desktop feature  
@@ -92,20 +92,20 @@ Your next step is to configure the template with the software and setting that y
 4.  Select the template that you want to customize, click **Customize template**, and then click **OK**.  
   
     > [!NOTE]  
-    > Only the templates that have not been used to create virtual desktop stations are available. If you want to update a template that is already in use, you must make a copy of the template by using the **Import template** task, described later, in [Copy an existing virtual desktop template](#BKMK_CopyExiistingVirtualDesktopTemplate).  
+    > Only the templates that have not been used to create virtual desktop stations are available. If you want to update a template that is already in use, you must make a copy of the template by using the **Import template** task, described later, in [Copy an existing virtual desktop template](#copy-an-existing-virtual-desktop-template).  
   
     The template opens in a Hyper-V **VM Connect** window, and auto-logon is performed using the built-in Administrator account.  
   
-5.  At this point you can install applications and software updates, change settings, and update the administrator profile. All changes made to the template’s built-in administrator profile will be copied to the default user profile in the virtual desktop stations that are created from the template.  
+5.  At this point you can install applications and software updates, change settings, and update the administrator profile. All changes made to the template's built-in administrator profile will be copied to the default user profile in the virtual desktop stations that are created from the template.  
   
     If you are connecting your stations over a domain, we recommend that you create a local user account and add it to the local Administrators group during customization.  
   
     > [!NOTE]  
     > If the system restarts while a template is being customized, auto-logon using the built-in Administrator account might fail after the system restarts. To get around this problem, manually log on using the local Administrator account that you created, change the password of the built-in Administrator account, log off, and then log back on using the built-in Administrator account and the new password. (You will need to delete the profile that was created when you logged on using the local Administrator account.)  
   
-6.  After you finish configuring your system, double-click the **CompleteCustomization** shortcut on the administrator’s desktop to run Sysprep and then shut down the template. During customization, the Sysprep tool removes all unique system information to prepare the Windows installation to be imaged.  
+6.  After you finish configuring your system, double-click the **CompleteCustomization** shortcut on the administrator's desktop to run Sysprep and then shut down the template. During customization, the Sysprep tool removes all unique system information to prepare the Windows installation to be imaged.  
   
-### <a name="BKMK_CreateVirtualDesktopsfromTemplate"></a>Create virtual machine desktops from the template  
+### Create virtual machine desktops from the template  
 With your virtual desktop template configured the way you want your desktops to be, you are ready to begin creating virtual desktops. A virtual desktop will be created for each station that is attached to the MultiPoint Server computer. The next time a user logs on to a station, they will see the virtual desktop instead of the session-based desktop that was displayed before.  
   
 > [!NOTE]  
@@ -135,7 +135,7 @@ When the task completes, each local station will connect to a virtual machine-ba
 > [!NOTE]  
 > If a user account is logged on to any of the local stations, you will need to log out of the session to get the station to connect to one of the newly created station virtual desktops.  
   
-### <a name="BKMK_CopyExiistingVirtualDesktopTemplate"></a>Copy an existing virtual desktop template  
+### Copy an existing virtual desktop template  
 Use the following procedure to create a copy of an existing virtual desktop template that you can customize and use. This can be useful in the following situations:  
   
 -   To copy a master template from a network share onto a MultiPoint Server host computer so that virtual desktop stations can be created from the master template.  

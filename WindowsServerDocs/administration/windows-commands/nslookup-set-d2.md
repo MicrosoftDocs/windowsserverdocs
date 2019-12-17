@@ -2,7 +2,7 @@
 title: nslookup set d2
 description: "Windows Commands topic for **** - "
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -29,11 +29,11 @@ set [no]d2
 
 ## Parameters
 
-|Parameter|Description|
-|---------|-----------|
-|**nod2**|Turns off exhaustive Debugging Mode. The default syntax is **nod2**.|
-|**d2**|Turns on exhaustive Debugging Mode.|
-|{help | ?}|Displays a short summary of **nslookup** subcommands.|
+| Parameter |                             Description                              |
+|-----------|----------------------------------------------------------------------|
+| **nod2**  | Turns off exhaustive Debugging Mode. The default syntax is **nod2**. |
+|  **d2**   |                 Turns on exhaustive Debugging Mode.                  |
+|   {help   |                                  ?}                                  |
 
 #### Additional references
 

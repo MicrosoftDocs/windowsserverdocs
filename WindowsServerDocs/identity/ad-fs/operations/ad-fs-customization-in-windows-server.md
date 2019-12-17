@@ -7,13 +7,12 @@ ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 
 ms.technology: identity-adfs
 ---
 # AD FS Customization in Windows Server 2016
 
->Applies To: Windows Server 2016
 
 In response to feedback from organizations using AD FS, we have added additional tools to customize the user sign in experience for individual applications protected by AD FS.  
 In addition to specifying per-application web content such as description text and links, now you can specify entire web themes per application.  This includes logo, illustration, style sheets, or an entire onload.js file.  
@@ -65,14 +64,14 @@ For custom themes refer to [Customizing the AD FS Sign-in Pages](https://technet
 To assign a custom theme per RP use the following procedure:  
   
 1. Create a new theme as a copy for the default, global theme in AD FS  
-<code>New-AdfsWebTheme -Name AppSpecificTheme -SourceName default</code>  
-2.  Export the theme for customization  
-<code>Export-AdfsWebTheme -Name AppSpecificTheme -DirectoryPath c:\appspecifictheme</code>  
+`New-AdfsWebTheme -Name AppSpecificTheme -SourceName default`  
+2. Export the theme for customization  
+`Export-AdfsWebTheme -Name AppSpecificTheme -DirectoryPath c:\appspecifictheme`  
 3. Customize theme files (images, css, onload.js) - in your favorite editor or replace the file  
 4. Import customized files from the file system to AD FS (targeting the new theme)  
-<code>Set-AdfsWebTheme -TargetName AppSpecificTheme -AdditionalFileResource @{Uri='/adfs/portal/script/onload.js';Path="c:\appspecifictheme\script\onload.js"}</code>  
+`Set-AdfsWebTheme -TargetName AppSpecificTheme -AdditionalFileResource @{Uri='/adfs/portal/script/onload.js';Path="c:\appspecifictheme\script\onload.js"}`  
 5. Apply the new, customized theme to the specific RP (or RP's)  
-<code>Set-AdfsRelyingPartyWebTheme -TargetRelyingPartyName urn:app1 -SourceWebThemeName AppSpecificTheme</code>  
+`Set-AdfsRelyingPartyWebTheme -TargetRelyingPartyName urn:app1 -SourceWebThemeName AppSpecificTheme`  
   
 ## Home Realm Discovery  
 For home realm dicovery customization see [Customizing the AD FS Sign-in Pages](https://technet.microsoft.com/library/dn280950.aspx).  

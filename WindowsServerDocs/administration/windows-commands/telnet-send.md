@@ -2,7 +2,7 @@
 title: telnet send
 description: "Windows Commands topic for **** - "
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -24,16 +24,18 @@ Sends telnet commands to the telnet server.
 sen[d] {ao | ayt | brk | esc | ip | synch | <string>} [?]  
 ```  
 ### Parameters  
-|Parameter|Description|  
-|-------|--------|  
-|ao|Sends the telnet command  Abort Output.|  
-|ayt|Sends the telnet command  Are You There.|  
-|brk|Sends the telnet command  brk.|  
-|esc|Sends the current telnet escape character.|  
-|ip|Sends the telnet command  Interrupt Process.|  
-|synch|Sends the telnet command  synch.|  
-|<string>|Sends whatever string you type to the telnet server.|  
-|?|Displays help associated with this command.|  
+
+| Parameter |                     Description                      |
+|-----------|------------------------------------------------------|
+|    ao     |       Sends the telnet command  Abort Output.        |
+|    ayt    |       Sends the telnet command  Are You There.       |
+|    brk    |            Sends the telnet command  brk.            |
+|    esc    |      Sends the current telnet escape character.      |
+|    ip     |     Sends the telnet command  Interrupt Process.     |
+|   synch   |           Sends the telnet command  synch.           |
+| <string>  | Sends whatever string you type to the telnet server. |
+|     ?     |     Displays help associated with this command.      |
+
 ## <a name="BKMK_Examples"></a>Examples  
 Send  Are you there to the telnet server.  
 ```  

@@ -7,13 +7,12 @@ ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 
 ms.technology: identity-adfs
 ---
 # Add sign\-in page description
 
->Applies To: Windows Server 2016, Windows Server 2012 R2
 
 ## To Add sign\-in page description  
 To add a sign\-in page description to the sign\-in page, use the following Windows PowerShell cmdlet and syntax.  

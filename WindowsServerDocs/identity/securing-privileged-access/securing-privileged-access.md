@@ -1,210 +1,170 @@
 ---
-title: Securing Privileged Access
-description: "Windows Server Security"
-ms.custom: na
-ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
-ms.topic: article
+title: Securing privileged access
+description: Phased approach to securing privileged access
+
+ms.prod: windows-server
+ms.topic: conceptual
 ms.assetid: f5dec0c2-06fe-4c91-9bdc-67cc6a3ede60
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
-ms.date: 10/12/2016
+ms.date: 02/25/2019
+
+ms.author: joflore
+author: MicrosoftGuyJFlo
+manager: daveba
+ms.reviewer: mas
 ---
-# Securing Privileged Access
+# Securing privileged access
 
->Applies To: Windows Server 2016
+>Applies To: Windows Server
 
-Securing privileged access is a critical first step to establishing security assurances for business assets in a modern organization. The security of most or all business assets in an organization depends on the integrity of the privileged accounts that administer and manage IT systems. Cyber-attackers are targeting these accounts and other elements of privileged access to rapidly gain access to targeted data and systems using credential theft attacks like [Pass-the-Hash and Pass-the-Ticket](https://www.microsoft.com/pth).
+Securing privileged access is a critical first step to establishing security assurances for business assets in a modern organization. The security of most or all business assets in an IT organization depends on the integrity of the privileged accounts used to administer, manage, and develop. Cyber-attackers often target these accounts and other elements of privileged access to gain access to data and systems using credential theft attacks like [Pass-the-Hash and Pass-the-Ticket](https://www.microsoft.com/pth).
 
-Protecting administrative access against determined adversaries requires you to take a complete and thoughtful approach to isolate these systems from risks. This figure depicts the three stages of recommendations for separating and protecting administration in this roadmap:
+Protecting privileged access against determined adversaries requires you to take a complete and thoughtful approach to isolate these systems from risks.
 
-![Diagram of the three stages of recommendations for separating and protecting administration in this roadmap](../media/securing-privileged-access/PAW_LP_Fig1.JPG)
+## What are privileged accounts?
 
-Roadmap Objectives:
+Before we talk about how to secure them lets define privileged accounts.
 
--   **2-4 week plan**: quickly mitigate the most frequently used attack techniques
+Privileged Accounts like administrators of Active Directory Domain Services have direct or indirect access to most or all assets in an IT organization, making a compromise of these accounts a significant business risk.
 
--   **1-3 month plan**: build visibility and control of admin activity
+## Why securing privileged access is important?
 
--   **6+ month plan**: continue building defenses to a more proactive security posture
+Cyber-attackers focus on privileged access to systems like Active Directory (AD) to rapidly gain access to all of an organizations targeted data. Traditional security approaches have focused on the network and firewalls as the primary security perimeter, but the effectiveness of network security has been significantly diminished by two trends:
+
+* Organizations are hosting data and resources outside the traditional network boundary on mobile enterprise PCs, devices like mobile phones and tablets, cloud services, and bring your own devices (BYOD)
+* Adversaries have demonstrated a consistent and ongoing ability to obtain access on workstations inside the network boundary through phishing and other web and email attacks.
+
+These factors necessitate building a modern security perimeter out of authentication and authorization identity controls in addition to the traditional network perimeter strategy. A security perimeter here is defined as a consistent set of controls between assets and the threats to them. Privileged accounts are effectively in control of this new security perimeter so it's critical to protect privileged access.
+
+![Diagram showing an organization's identity layer](../media/securing-privileged-access/PAW_LP_Fig2.JPG)
+
+An attacker that gains control of an administrative account can use those privileges to increase their impact in the target organization as depicted below:
+
+![Diagram showing how an adversary that gains control of an administrative account can use those privileges to pursue their gain at the expense of the target organization](../media/securing-privileged-access/PAW_LP_Fig3.JPG)
+
+The illustration below depicts two paths:
+
+* A "blue" path where a standard user account is used for non-privileged access to resources like email and web browsing and day to day work are completed.
+
+   > [!NOTE]
+   > Blue path items described later on indicate broad environmental protections that extend beyond the administrative accounts.
+
+* A "red" path where privileged access occurs on a hardened device to reduce the risk of phishing and other web and email attacks.
+
+![Diagram showing the separate "path" for administration that the roadmap establishes to isolate privileged access tasks from high risk standard user tasks like web browsing and accessing email](../media/securing-privileged-access/PAW_LP_Fig4.JPG)
+
+## Securing privileged access roadmap
+
+The roadmap is designed to maximize the use of Microsoft technologies that you already have deployed, take advantage of cloud technologies to enhance security, and integrate any 3rd party security tools you may already have deployed.
+
+The roadmap of Microsoft recommendations is broken into 3 phases:
+
+* [Phase 1: First 30 days]()
+   * Quick wins with meaningful positive impact.
+* [Phase 2: 90 days]()
+   * Significant incremental improvements.
+* [Phase 3: Ongoing]()
+   * Security improvement and sustainment.
+
+The roadmap is prioritized to schedule the most effective and the quickest implementations first based on our experiences with these attacks and solution implementation. 
 
 Microsoft recommends you follow this roadmap to secure privileged access against determined adversaries. You may adjust this roadmap to accommodate your existing capabilities and specific requirements in your organizations.
 
 > [!NOTE]
-> Securing privileged access requires a broad range of elements including technical components (host defenses, account protections, identity management, etc.) as well as changes to process, and administrative practices and knowledge.
+> Securing privileged access requires a broad range of elements including technical components (host defenses, account protections, identity management, etc.) as well as changes to process, and administrative practices and knowledge. The timelines for the roadmap are approximate and are based on our experience with customer implementations. The duration will vary in your organization depending on the complexity of your environment and your change management processes.
 
-## Why is Securing Privileged Access important?
-In most organizations, the security of most or all business assets depends on the integrity of the privileged accounts that administer and manage IT systems. Cyber-attackers are focusing on privileged access to systems like Active Directory to rapidly gain access to all of an organizations targeted data.
+## Phase 1: Quick wins with minimal operational complexity
 
-Traditional security approaches have focused on using the ingress and egress points of an organizations network as the primary security perimeter, but the effectiveness of network security has been significantly diminished by two trends:
+Phase 1 of the roadmap is focused on quickly mitigating the most frequently used attack techniques of credential theft and abuse. Phase 1 is designed to be implemented in approximately 30 days and is depicted in this diagram:
 
--   Organizations are hosting data and resources outside the traditional network boundary on mobile enterprise PCs, devices like mobile phones and tablets, cloud services, and BYOD devices
+![Phase 1 diagram: 1. Separate admin and user account, 2. Just in Time local admin passwords, 3. Admin workstation stage 1, 4. Identity attack detection](../media/securing-privileged-access/PAW_LP_Fig6.JPG)
 
--   Adversaries have demonstrated a consistent and ongoing ability to obtain access on workstations inside the network boundary through phishing and other web and email attacks.
+### 1. Separate accounts
 
-The natural replacement for the network security perimeter in a complex modern enterprise is the authentication and authorization controls in an organization's identity layer. Privileged administrative accounts are effectively in control of this new "security perimeter" so it's critical to protect privileged access:
+To help separate internet risks (phishing attacks, web browsing) from privileged access accounts, create a dedicated account for all personnel with privileged access. Administrators should not be browsing the web, checking their email, and doing day to day productivity tasks with highly privileged accounts. More information on this can be found in the section [Separate administrative accounts](securing-privileged-access-reference-material.md#separate-administrative-accounts) of the reference document.
 
-![Diagram showing an organization's identity layer](../media/securing-privileged-access/PAW_LP_Fig2.JPG)
+Follow the guidance in the article [Manage emergency access accounts in Azure AD](/azure/active-directory/users-groups-roles/directory-emergency-access) to create at least two emergency access accounts, with permanently assigned administrator rights, in both your on-premises AD and Azure AD environments. These accounts are only for use when traditional administrator accounts are unable to perform a required task such as in a the case of a disaster.
 
-An adversary that gains control of an administrative account can use those privileges to pursue their gain at the expense of the target organization as depicted below:
+### 2. Just in time local admin passwords
 
-![Diagram showing how an adversary that gains control of an administrative account can use those privileges to pursue their gain at the expense of the target organization](../media/securing-privileged-access/PAW_LP_Fig3.JPG)
+To mitigate the risk of an adversary stealing a local administrator account password hash from the local SAM database and abusing it to attack other computers, organizations should ensure every machine has a unique local administrator password. The Local Administrator Password Solution (LAPS) tool can configure unique random passwords on each workstation and server store them in Active Directory (AD) protected by an ACL. Only eligible authorized users can read or request the reset of these local administrator account passwords. You can obtain the LAPS for use on workstations and servers from [the Microsoft Download Center](http://Aka.ms/LAPS).
 
-For more information on the types of attacks that commonly lead to attackers in control of administrative accounts, please visit the [Pass The Hash web site](https://www.microsoft.com/pth) for informative white papers, videos and more.
+Additional guidance for operating an environment with LAPS and PAWs can be found in the section [Operational standards based on clean source principle](securing-privileged-access-reference-material.md#operational-standards-based-on-clean-source-principle).
 
-This figure depicts the separate "channel" for administration that the roadmap establishes to isolate privileged access tasks from high risk standard user tasks like web browsing and accessing email.
+### 3. Administrative workstations
 
-![Diagram showing the separate "channel" for administration that the roadmap establishes to isolate privileged access tasks from high risk standard user tasks like web browsing and accessing email](../media/securing-privileged-access/PAW_LP_Fig4.JPG)
+As an initial security measure for those users with Azure Active Directory and traditional on-premises Active Directory administrative privileges, ensure they are using Windows 10 devices configured with the [Standards for a highly secure Windows 10 device](/windows-hardware/design/device-experiences/oem-highly-secure). Privileged administrator accounts should not be a members of the local administrator group of the administrative workstations.  Privilege elevation via User Access Control (UAC) can be utilized when configuration changes to the workstations is required.  Additionally, the Windows 10 Security Baseline should be applied to the workstations to further harden the device.
 
-Because the adversary can gain control of privileged access using a variety of methods, mitigating this risk requires a holistic and detailed technical approach as outlined in this roadmap. The roadmap will isolate and harden the elements in your environment that enable privileged access by building mitigations in each area of the defense column in this figure:
+### 4. Identity attack detection
 
-![Table showing attack and defense columns](../media/securing-privileged-access/PAW_LP_Fig5.JPG)
+[Azure Advanced Threat Protection (ATP)](/azure-advanced-threat-protection/what-is-atp) is a cloud-based security solution that identifies, detects, and helps you investigate advanced threats, compromised identities, and malicious insider actions directed at your on-premises Active Directory environment.
 
-## Security privileged access roadmap
-The roadmap is designed to maximize the use of technologies that you already have deployed, take advantage of key current and upcoming security technologies, and integrate any 3rd party security tools you may already have deployed.
+## Phase 2: Significant incremental improvements
 
-The roadmap of Microsoft recommendations is broken into 3 stages:
+Phase 2 builds on the work done in phase 1 and is designed to be completed in approximately 90 days. The steps of this stage are depicted in this diagram:
 
--   2-4 week plan - Quickly mitigate the most frequently used attack techniques
+![Phase 2 diagram: 1. Windows Hello for Business / MFA, 2. PAW rollout, 3. Just in Time Privileges, 4. Credential Guard, 5. Leaked credentials, 6. Lateral movement vulnerability detection](../media/securing-privileged-access/PAW_LP_Fig7.JPG)
 
--   1-3 month plan - Build visibility and control of admin activity
+### 1. Require Windows Hello for Business and MFA
 
--   6+ month plan - Continue building defenses to a more proactive security posture
+Administrators can benefit from the ease of use associated with Windows Hello for Business. Admins can replace their complex passwords with strong two-factor authentication on their PCs. An attacker must have both the device and the biometric info or PIN, it's much more difficult to gain access without the employee's knowledge. More details about Windows Hello for Business and the path to roll out can be found in the article [Windows Hello for Business Overview](/windows/security/identity-protection/hello-for-business/hello-overview)
 
-Each stage of the roadmap is designed to raise the cost and difficulty for adversaries to attack privileged access for your on-premises and cloud assets. The roadmap is prioritized to schedule the most effective and the quickest implementations first based on our experiences with these attacks and solution implementation.
+Enable multi-factor authentication (MFA) for your administrator accounts in Azure AD using Azure MFA. At minimum enable the [baseline protection conditional access policy](/azure/active-directory/conditional-access/baseline-protection#require-mfa-for-admins) more information about Azure Multi-Factor Authentication can be found in the article [Deploy cloud-based Azure Multi-Factor Authentication](/azure/active-directory/authentication/howto-mfa-getstarted)
 
-> [!NOTE]
-> The timelines for the roadmap are approximate and are based on our experience with customer implementations. The duration will vary in your organization depending on the complexity of your environment and your change management processes.
+### 2. Deploy PAW to all privileged identity access account holders
 
-### Security Privileged Access Roadmap: Stage 1
-Stage 1 of the roadmap is focused on quickly mitigating the most frequently used attack techniques of credential theft and abuse. Stage 1 is designed to be implemented in approximately 2-4 weeks and is depicted in this diagram:
+Continuing the process of separating privileged accounts from threats found in email, web browsing, and other non-administrative tasks, you should implement dedicated Privileged Access Workstations (PAW) for all personnel with privileged access to your organization's information systems. Additional guidance for PAW deployment can be found in the article [Privileged Access Workstations](privileged-access-workstations.md#paw-phased-implementation).
 
-![Figure showing that stage 1 is designed to be implemented in approximately 2-4 weeks](../media/securing-privileged-access/PAW_LP_Fig6.JPG)
+### 3. Just in time privileges
 
-Stage 1 of the Security Privileged Access roadmap includes these components:
+To lower the exposure time of privileges and increase visibility into their use, provide privileges just in time (JIT) using an appropriate solution such as the ones below or other third-party solutions:
 
-**1. Separate Admin account for admin tasks**
+* For Active Directory Domain Services (AD DS), use Microsoft Identity Manager (MIM)'s [Privileged Access Manager (PAM)](/microsoft-identity-manager/pam/privileged-identity-management-for-active-directory-domain-services) capability.
+* For Azure Active Directory, use [Azure AD Privileged Identity Management (PIM)](/azure/active-directory/privileged-identity-management/pim-deployment-plan) capability.
 
-To help separate internet risks (phishing attacks, web browsing) from administrative privileges, create a dedicated account for all personnel with administrative privileges. Additional guidance on this is included in the PAW instructions published [here](http://Aka.ms/CyberPAW).
+### 4. Enable Windows Defender Credential Guard
 
-**2. Privileged Access Workstations (PAWs) Phase 1: Active Directory admins**
+Enabling Credential Guard helps to protect NTLM password hashes, Kerberos Ticket Granting Tickets, and credentials stored by applications as domain credentials. This capability helps to prevent credential theft attacks, such as Pass-the-Hash or Pass-The-Ticket by increasing the difficulty of pivoting in the environment using stolen credentials. Information on how Credential Guard works and how to deploy can be found in the article [Protect derived domain credentials with Windows Defender Credential Guard](/windows/security/identity-protection/credential-guard/credential-guard).
 
-To help separate internet risks (phishing attacks, web browsing) from domain administrative privileges, create dedicated privileged access workstations (PAWs) for personnel with AD administrative privileges. This is the first step of a PAW program and is Phase 1 of the guidance published [here](http://Aka.ms/CyberPAW).
+### 5. Leaked credentials reporting
 
-**3. Unique Local Admin Passwords for Workstations**
+"Every day, Microsoft analyzes over 6.5 trillion signals in order to identify emerging threats and protect customers" - [Microsoft By the Numbers](https://news.microsoft.com/bythenumbers/cyber-attacks)
 
-**4. Unique Local Admin Passwords for Servers**
+Enable Microsoft Azure AD Identity Protection to report on users with leaked credentials so that you can remediate them. [Azure AD Identity Protection](/azure/active-directory/identity-protection/index) can be leveraged to help your organization protect cloud and hybrid environments from threats.
 
-To mitigate the risk of an adversary stealing a local administrator account password hash from the local SAM database and abusing it to attack other computers, you should use the LAPS tool to configure unique random passwords on each workstation and server and register those passwords in Active Directory. You can obtain the Local Administrator Password Solution for use on workstations and servers [here](http://Aka.ms/LAPS).
+### 6. Azure ATP Lateral Movement Paths
 
-Additional guidance for operating an environment with LAPS and PAWs can be found [here](http://aka.ms/securitystandards).
+Ensure privileged access account holders are using their PAW for administration only so that a compromised non-privileged accounts cannot gain access to a privileged account via credential theft attacks, such as Pass-the-Hash or Pass-The-Ticket. [Azure ATP Lateral Movement Paths (LMPs)](/azure-advanced-threat-protection/use-case-lateral-movement-path) provides easy to understand reporting to identify where privileged accounts may be open to compromise.
 
-### Security Privileged Access Roadmap: Stage 2
-Stage 2 builds on the mitigations from Stage 1 and is designed to be implemented in approximately 1-3 months. The steps of this stage are depicted in this diagram:
+## Phase 3: Security improvement and sustainment
 
-![Diagram showing the steps of stage 2](../media/securing-privileged-access/PAW_LP_Fig7.JPG)
+Phase 3 of the roadmap builds on the steps taken in Phases 1 and 2 to strengthen your security posture. Phase 3 is depicted visually in this diagram:
 
-**1. PAW Phases 2 and 3: all admins and additional hardening**
+![Phase 3: 1. Review RBAC, 2. Reduce attack surfaces, 3. Integrate logs with SEIM, 4. Leaked credentials automation](../media/securing-privileged-access/PAW_LP_Fig8.JPG)
 
-To separate internet risks from all privileged administrative accounts, continue with the PAW you started in stage 1 and implement dedicated workstations for all personnel with privileged access. This maps to Phase 2 and 3 of the guidance published [here](http://Aka.ms/CyberPAW).
+These capabilities will build on the steps from previous phases and move your defenses into a more proactive posture. This phase has no specific timeline and may take longer to implement based on your individual organization.
 
-**2. Time-bound privileges (no permanent administrators)**
+### 1. Review role-based access control
 
-To lower the exposure time of privileges and increase visibility into their use, provide privileges just in time (JIT) using an appropriate solution such as the ones below:
+Using the three tiered model outlined in the article [Active Directory administrative tier model](securing-privileged-access-reference-material.md), review and ensure lower tier administrators do not have administrative access to higher tier resources (Group memberships, ACLs on user accounts, etc...).
 
--   For Active Directory Domain Services (AD DS), use Microsoft Identity Manager (MIM)'s [Privileged Access Manager (PAM)](https://technet.microsoft.com/library/mt150258.aspx) capability.
+### 2. Reduce attack surfaces
 
--   For Azure Active Directory, use [Azure AD Privileged Identity Management (PIM)](http://aka.ms/AzurePIM) capability.
+Harden your identity workloads including Domains, Domain Controllers, ADFS, and Azure AD Connect as compromising one of these systems could result in compromise of other systems in your organization. The articles [Reducing the Active Directory Attack Surface](../ad-ds/plan/security-best-practices/reducing-the-active-directory-attack-surface.md) and [Five steps to securing your identity infrastructure](/azure/security/azure-ad-secure-steps) provide guidance for securing your on-premises and hybrid identity environments.
 
-**3. Multi-factor for time-bound elevation**
+### 3. Integrate logs with SIEM
 
-To increase the assurance level of administrator authentication, you should require multi-factor authentication before granting privileges.
-This can be accomplished with MIM PAM and Azure AD PIM using Azure Multi-factor authentication (MFA).
+Integrating logging into a centralized SIEM tool can help your organization to analyze, detect, and respond to security events. The articles [Monitoring Active Directory for Signs of Compromise](../ad-ds/plan/security-best-practices/monitoring-active-directory-for-signs-of-compromise.md) and [Appendix L: Events to Monitor](../ad-ds/plan/appendix-l--events-to-monitor.md) provide guidance on events that should be monitored in your environment.
 
-**4. Just Enough Admin (JEA) for DC Maintenance**
+This is part of the beyond plan because aggregating, creating, and tuning alerts in a security information and event management (SIEM)  requires skilled analysts (unlike Azure ATP in the 30 day plan which includes out of the box alerting)
 
-To reduce the quantity of accounts with domain administration privileges and associated risk exposure, use the Just Enough Administration (JEA) feature in PowerShell to perform common maintenance operations on domain controllers. The JEA technology allows specific users to perform specific administrative tasks on servers (like Domain Controllers) without giving them administrator rights. Download this guidance from [TechNet](http://aka.ms/JEA).
+### 4. Leaked credentials - Force password reset
 
-**5. Lower attack surface of Domain and DCs**
-
-To reduce opportunities for adversaries to take control of a forest, you should reduce the pathways an attacker can take to gain control of Domain Controllers or objects in control of the domain. Follow guidance to reduce this risk published [here](http://aka.ms/HardenAD).
-
-**6. Attack Detection**
-
-To get visibility into active credential theft and identity attacks so that you can respond quickly to events and contain damage, deploy and configure [Microsoft Advanced Threat Analytics (ATA)](https://www.microsoft.com/ata).
-
-Prior to installing ATA, you should ensure you have a process in place to handle a major security incident that ATA may detect.
-
--   For more information on setting up an incident response process, see [Responding to IT Security Incidents](https://aka.ms/irr) and the "Respond to suspicious activity" and "Recover from a breach" sections of [Mitigating Pass-the-Hash and Other Credential Theft](https://www.microsoft.com/pth), version 2.
-
--   For more information on engaging Microsoft services to assist with preparing your IR process for ATA generated events and deploying ATA, contact your Microsoft representative by accessing [this page](https://www.microsoft.com/en-us/microsoftservices/campaigns/cybersecurity-protection.aspx).
-
--   Access [this page](https://www.microsoft.com/en-us/microsoftservices/campaigns/cybersecurity-protection.aspx) for more information on engaging Microsoft services to assist with investigating and recovering from an incident.
-
--   To Implement ATA, follow the deployment guide available [here](http://aka.ms/ata).
-
-### Security Privileged Access Roadmap: Stage 3
-Stage 3 of the roadmap builds on the mitigations from Stages 1 and 2 to strengthen and add mitigations across the spectrum. Stage 3 is depicted visually in this diagram:
-
-![Diagram showing stage 3](../media/securing-privileged-access/PAW_LP_Fig8.JPG)
-
-These capabilities will build on the mitigations from previous phases and move your defenses into a more proactive posture.
-
-**1. Modernize Roles and Delegation Model**
-
-To reduce security risk, you should redesign all aspects of your roles and delegation model to be compliant with the rules of the tier model, accommodate cloud service administrative roles, and incorporate administrator usability as a key tenet. This model should leverage the JIT and JEA capabilities deployed in the earlier stages as well as task automation technology to achieve these goals.
-
-**2. Smartcard or Passport Authentication for all admins**
-
-To increase the assurance level and usability of administrator authentication, you should require strong authentication for all administrative accounts hosted in Azure Active Directory and in your Windows Server Active Directory (including accounts federated to a cloud service).
-
-**3. Admin Forest for Active Directory administrators**
-
-To provide the strongest protection for Active Directory administrators, set up an environment that has no security dependencies on your production Active Directory and is isolated from attacks from all but the most trusted systems in your production environment. For more information on the ESAE architecture visit [this page](http://aka.ms/esae).
-
-**4. Windows Defender Device Guard for DCs (Server 2016)**
-
-To limit the risk of unauthorized programs on your domain controllers from adversary attack operations and inadvertent administrative errors, configure Windows Defender Device Guard virtualization-based security for kernel (also known as Hypervisor Code Integrity, HVCI) and Windows Defender Application Control policies (also known as Configurable Code Integrity, Configurable CI) for applications to only allow authorized executables to run on the machine. For more information on Windows Defender Device Guard visit [this page](https://docs.microsoft.com/windows/security/threat-protection/device-guard/introduction-to-device-guard-virtualization-based-security-and-windows-defender-application-control).
-
-**5. Shielded VMs for virtual DCs (Server 2016 Hyper-V Fabric)**
-
-To protect virtualized domain controllers from attack vectors that exploit a virtual machine's inherent loss of physical security, use this new Server 2016 Hyper-V capability to help prevent the theft of Active Directory secrets from Virtual DCs. Using this solution, you can encrypt Generation 2 VMs to protect the VM data against inspection, theft, and tampering by storage and network administrators as well as harden the access to the VM against Hyper-V host administrators attacks. For more information on Shielded VMs visit [this page](https://docs.microsoft.com/windows-server/virtualization/guarded-fabric-shielded-vm/guarded-fabric-and-shielded-vms).
+Continue to enhance your security posture by enabling Azure AD Identity Protection to automatically force password resets when passwords are suspected of compromise. The guidance found in the article [Use risk events to trigger Multi-Factor Authentication and password changes](/azure/active-directory/authentication/tutorial-risk-based-sspr-mfa) explains how to enable this using a conditional access policy.
 
 ## Am I done?
-Completing this roadmap will gain you strong privileged access protections for the attacks that are currently known and available to adversaries today. Unfortunately, security threats will constantly evolve and shift, so we recommend you view security as an ongoing process focused on raising the cost and reducing the success rate of adversaries targeting your environment.
 
-Securing privileged access is a critical first step to establishing security assurances for business assets in a modern organization, but it is not the only part of a complete security program that would include elements like policy, operations, information security, servers, applications, PCs, devices, cloud fabric, and other components provide the security assurances you require.
+The short answer is no.
 
-For more information on building a complete security roadmap, see the "Customer responsibilities and roadmap" section of the Microsoft Cloud Security for Enterprise Architects document available [here](http://aka.ms/securecustomer).
+The bad guys never stop, so neither can you. This roadmap can help your organization protect against currently known threats as attackers will constantly evolve and shift. We recommend you view security as an ongoing process focused on raising the cost and reducing the success rate of adversaries targeting your environment.
 
-For more information on engaging Microsoft services to assist with any of these topics, contact your Microsoft representative or visit [this page](https://www.microsoft.com/en-us/microsoftservices/campaigns/cybersecurity-protection.aspx).
-
-### Related topics
-[Taste of Premier: How to Mitigate Pass-the-Hash and Other Forms of Credential Theft](https://channel9.msdn.com/Blogs/Taste-of-Premier/Taste-of-Premier-How-to-Mitigate-Pass-the-Hash-and-Other-Forms-of-Credential-Theft)
-
-[Microsoft Advanced Threat Analytics](http://aka.ms/ata)
-
-[Protect derived domain credentials with Credential Guard](https://technet.microsoft.com/library/mt483740%28v=vs.85%29.aspx)
-
-[Device Guard Overview](https://technet.microsoft.com/library/dn986865(v=vs.85).aspx)
-
-[Protecting high-value assets with secure admin workstations](https://msdn.microsoft.com/en-us/library/mt186538.aspx)
-
-[Isolated User Mode in Windows 10 with Dave Probert (Channel 9)](https://channel9.msdn.com/Blogs/Seth-Juarez/Isolated-User-Mode-in-Windows-10-with-Dave-Probert)
-
-[Isolated User Mode Processes and Features in Windows 10 with Logan Gabriel (Channel 9)](http://channel9.msdn.com/Blogs/Seth-Juarez/Isolated-User-Mode-Processes-and-Features-in-Windows-10-with-Logan-Gabriel)
-
-[More on Processes and Features in Windows 10 Isolated User Mode with Dave Probert (Channel 9)](https://channel9.msdn.com/Blogs/Seth-Juarez/More-on-Processes-and-Features-in-Windows-10-Isolated-User-Mode-with-Dave-Probert)
-
-[Mitigating Credential Theft using the Windows 10 Isolated User Mode (Channel 9)](https://channel9.msdn.com/Blogs/Seth-Juarez/Mitigating-Credential-Theft-using-the-Windows-10-Isolated-User-Mode)
-
-[Enabling Strict KDC Validation in Windows Kerberos](https://www.microsoft.com/en-us/download/details.aspx?id=6382)
-
-[What's New in Kerberos Authentication for Windows Server 2012](https://technet.microsoft.com/library/hh831747.aspx)
-
-[Authentication Mechanism Assurance for AD DS in Windows Server 2008 R2 Step-by-Step Guide](https://technet.microsoft.com/library/dd378897(v=ws.10).aspx)
-
-[Trusted Platform Module](https://docs.microsoft.com/windows/device-security/tpm/trusted-platform-module-overview)
+While it is not the only part of your organization's security program securing privileged access is a critical component of your security strategy.

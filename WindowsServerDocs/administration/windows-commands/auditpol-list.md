@@ -3,7 +3,7 @@ title: auditpol list
 description: "Windows Commands topic for **auditpol list** - 
 lists audit policy categories and/or subcategories, or lists users for whom a per-user audit policy is defined."
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands

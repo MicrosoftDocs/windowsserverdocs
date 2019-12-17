@@ -2,7 +2,7 @@
 title: convert gpt
 description: "Windows Commands topic for **** - "
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -39,8 +39,8 @@ convert gpt [noerr]
 
 > [!IMPORTANT]
 > The disk must be empty to convert it into a GPT disk. Back up your data, and then delete all partitions or volumes before converting the disk.
--   The required minimum disk size for conversion to GPT is 128 megabytes.
--   A basic MBR disk must be selected for this operation to succeed. Use the **select disk** command to select a basic disk and shift the focus to it.
+> -   The required minimum disk size for conversion to GPT is 128 megabytes.
+> -   A basic MBR disk must be selected for this operation to succeed. Use the **select disk** command to select a basic disk and shift the focus to it.
 
 ## <a name="BKMK_examples"></a>Examples
 

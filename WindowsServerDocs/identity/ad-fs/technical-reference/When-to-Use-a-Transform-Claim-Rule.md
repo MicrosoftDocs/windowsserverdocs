@@ -7,12 +7,11 @@ ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 
 ms.technology: identity-adfs
 ---
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 # When to Use a Transform Claim Rule
 You can use this rule in Active Directory Federation Services \(AD FS\) when you need to map an incoming claim type to an outgoing claim type and then apply an action that will determine what output should occur based on the values that originated in the incoming claim. When you use this rule, you pass through or transform claims that match the following rule logic, based on either of the options that you configure in the rule, as described in the following table.  

@@ -1,7 +1,7 @@
 ---
 title: Review HGS prerequisites
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.topic: article
 ms.assetid: f4b4d1a8-bf6d-4881-9150-ddeca8b48038
 manager: dongill
@@ -35,5 +35,5 @@ If you've already deployed HGS and want to upgrade its operating system, follow 
 
 ## Next step
 
->[!div class="nextstepaction"]
-[Obtain certificates for HGS](guarded-fabric-obtain-certs.md)
+> [!div class="nextstepaction"]
+> [Obtain certificates for HGS](guarded-fabric-obtain-certs.md)

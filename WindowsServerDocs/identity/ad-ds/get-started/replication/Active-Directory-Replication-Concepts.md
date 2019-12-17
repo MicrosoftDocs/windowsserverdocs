@@ -7,7 +7,7 @@ ms.author: joflore
 manager: mtillman
 ms.date: 05/31/2017
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 
 ms.technology: identity-adds
 ---
@@ -43,7 +43,7 @@ A connection object is an Active Directory object that represents a replication 
   
 The connection object is a child of the NTDS Settings object on the destination server. For replication to occur between two domain controllers, the server object of one must have a connection object that represents inbound replication from the other. All replication connections for a domain controller are stored as connection objects under the NTDS Settings object. The connection object identifies the replication source server, contains a replication schedule, and specifies a replication transport.  
   
-The Knowledge Consistency Checker (KCC) creates connection objects automatically, but they can also be created manually. Connection objects created by the KCC appear in the Active Directory Sites and Services snap-in as **<automatically generated>** and are considered adequate under normal operating conditions. Connection objects created by an administrator are manually created connection objects. A manually created connection object is identified by the name assigned by the administrator when it was created. When you modify an **<automatically generated>** connection object, you convert it into an administratively modified connection object and the object appears in the form of a GUID. The KCC does not make changes to manual or modified connection objects.  
+The Knowledge Consistency Checker (KCC) creates connection objects automatically, but they can also be created manually. Connection objects created by the KCC appear in the Active Directory Sites and Services snap-in as **<automatically generated>** and are considered adequate under normal operating conditions. Connection objects created by an administrator are manually created connection objects. A manually created connection object is identified by the name assigned by the administrator when it was created. When you modify a **<automatically generated>** connection object, you convert it into an administratively modified connection object and the object appears in the form of a GUID. The KCC does not make changes to manual or modified connection objects.  
   
 ## <a name="BKMK_2"></a>KCC  
 The KCC is a built-in process that runs on all domain controllers and generates replication topology for the Active Directory forest. The KCC creates separate replication topologies depending on whether replication is occurring within a site (intrasite) or between sites (intersite). The KCC also dynamically adjusts the topology to accommodate the addition of new domain controllers, the removal of existing domain controllers, the movement of domain controllers to and from sites, changing costs and schedules, and domain controllers that are temporarily unavailable or in an error state.  
@@ -62,7 +62,7 @@ However, one administrative challenge highlighted by the hub-spoke topology on p
   
 For Windows Server 2003 domain controllers, you can rebalance the workload by using a tool such as Adlb.exe from the Windows Server 2003 Branch Office Deployment Guide ([https://go.microsoft.com/fwlink/?LinkID=28523](https://go.microsoft.com/fwlink/?LinkID=28523)).  
   
-For  Windows Server 2008  RODCs, normal functioning of the KCC provides some rebalancing, which eliminates the need to use an additional tool such as Adlb.exe. The new functionality is enabled by default. You can disable it by adding the following registry key set on the RODC:  
+For  Windows Server 2008  RODCs, the normal functioning of the KCC provides some rebalancing, which eliminates the need to use an additional tool such as Adlb.exe. The new functionality is enabled by default. You can disable it by adding the following registry key set on the RODC:  
   
 **HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\NTDS\Parameters**  
   
@@ -101,7 +101,7 @@ A site link bridge creates a logical connection between two site links, providin
 The cost of each site link is added, creating a summed cost for the resulting path. The site link bridge would be used if the interim site does not contain a domain controller hosting the directory partition and a lower cost link does not exist. If the interim site contained a domain controller that hosts the directory partition, two disconnected sites would set up replication connections to the interim domain controller and not use the bridge.  
   
 ## <a name="BKMK_8"></a>Site link transitivity  
-By default all site links are transitive, or "bridged." When site links are bridged and the schedules overlap, the KCC creates replication connections that determine domain controller replication partners between sites, where the sites are not directly connected by site links but are connected transitively through a set of common sites. This means that you can connect any site to any other site through a combination of site links.  
+By default, all site links are transitive, or "bridged." When site links are bridged and the schedules overlap, the KCC creates replication connections that determine domain controller replication partners between sites, where the sites are not directly connected by site links but are connected transitively through a set of common sites. This means that you can connect any site to any other site through a combination of site links.  
   
 In general, for a fully routed network, you do not need to create any site link bridges unless you want to control the flow of replication changes. If your network is not fully routed, site link bridges should be created to avoid impossible replication attempts. All site links for a specific transport implicitly belong to a single site link bridge for that transport. The default bridging for site links occurs automatically, and no Active Directory object represents that bridge. The **Bridge all site links** setting, found in the properties of both the IP and Simple Mail Transfer Protocol (SMTP) intersite transport containers, implements automatic site link bridging.  
   

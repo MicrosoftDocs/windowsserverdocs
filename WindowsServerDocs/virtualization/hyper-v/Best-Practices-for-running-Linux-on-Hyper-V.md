@@ -1,7 +1,7 @@
 ---
 title: Best Practices for running Linux on Hyper-V
 description: "Provides recommendations for running Linux on a virtual machine"
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.service: na
 manager: dongill
 ms.technology: compute-hyper-v
@@ -10,11 +10,11 @@ ms.topic: article
 ms.assetid: a08648eb-eea0-4e2b-87fb-52bfe8953491
 author: shirgall
 ms.author: kathydav
-ms.date: 10/17/2016
+ms.date: 3/1/2019
 ---
 # Best Practices for running Linux on Hyper-V
 
->Applies To: Windows Server 2016, Hyper-V Server 2016, Windows Server 2012 R2, Hyper-V Server 2012 R2, Windows Server 2012, Hyper-V Server 2012, Windows Server 2008 R2, Windows 10, Windows 8.1, Windows 8, Windows 7.1, Windows 7
+>Applies To: Windows Server 2019, Windows Server 2016, Hyper-V Server 2016, Windows Server 2012 R2, Hyper-V Server 2012 R2, Windows Server 2012, Hyper-V Server 2012, Windows Server 2008 R2, Windows 10, Windows 8.1, Windows 8, Windows 7.1, Windows 7
 
 This topic contains a list of recommendations for running Linux virtual machine on Hyper-V.
 
@@ -74,9 +74,9 @@ Configure and use the virtual Ethernet adapter, which is a Hyper-V-specific netw
 
 The Linux kernel has four different I/O schedulers to reorder requests with different algorithms. NOOP is a first-in first-out queue that passes the schedule decision to be made by the hypervisor. It is recommended to use NOOP as the scheduler when running Linux virtual machine on Hyper-V. To change the scheduler for a specific device, in the boot loader's configuration (/etc/grub.conf, for example), add **elevator=noop** to the kernel parameters, and then restart.
 
-## Add "numa=off" if the Linux virtual machine has more than 7 virtual processors or more than 30 GB RAM
+## NUMA
 
-Linux virtual machines configured to use more than 7 virtual processors should add **numa=off** to the GRUB boot.cfg to work around a known issue in the 2.6.x Linux kernels. Linux virtual machines configured to use more than 30 GB RAM should also add **numa=off** to the GRUB boot.cfg.
+Linux kernel versions earlier than 2.6.37 don't support NUMA on Hyper-V with larger VM sizes. This issue primarily impacts older distributions using the upstream Red Hat 2.6.32 kernel, and was fixed in Red Hat Enterprise Linux (RHEL) 6.6 (kernel-2.6.32-504). Systems running custom kernels older than 2.6.37, or RHEL-based kernels older than 2.6.32-504 must set the boot parameter `numa=off` on the kernel command line in grub.conf. For more information, see [Red Hat KB 436883](https://access.redhat.com/solutions/436883).
 
 ## Reserve more memory for kdump
 
@@ -95,3 +95,7 @@ After resizing a VHD or VHDX, administrators should use a utility like fdisk or 
 * [Best practices for running FreeBSD on Hyper-V](Best-practices-for-running-FreeBSD-on-Hyper-V.md)
 
 * [Deploy a Hyper-V Cluster](https://technet.microsoft.com/library/jj863389.aspx)
+
+* [Create Linux Images for Azure](https://docs.microsoft.com/azure/virtual-machines/linux/create-upload-generic)
+
+* [Optimize your Linux VM on Azure](https://docs.microsoft.com/azure/virtual-machines/linux/optimization)

@@ -2,7 +2,7 @@
 title: Core network components
 description: This guide provides instructions on how to plan and deploy the core components required for a fully functioning network and a new Active Directory domain in a new forest with Windows Server 2016
 manager: brianlic
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: networking
 ms.topic: article
 ms.assetid: b3cd60f7-d380-4712-9a78-0a8f551e1121
@@ -555,11 +555,11 @@ Membership in **Administrators** is the minimum required to perform this procedu
 
 When installation has successfully completed, the following message is displayed in Windows PowerShell.
 
-    
-    Success Restart Needed 	Exit Code  	Feature Result
-    ------- -------------- 	---------  	--------------
-    True	No 				Success		{Active Directory Domain Services, Group P...
-    
+
+    Success Restart Needed  Exit Code   Feature Result
+    ------- --------------  ---------   --------------
+    True    No              Success     {Active Directory Domain Services, Group P...
+
 
 - In Windows PowerShell, type the following command, replacing the text **corp.contoso.com** with your domain name, and then press ENTER:
 
@@ -569,19 +569,21 @@ Install-ADDSForest -DomainName "corp.contoso.com"
 
 - During the installation and configuration process, which is visible at the top of the Windows PowerShell window, the following prompt appears. After it appears, type a password and then press ENTER.
 
-	**SafeModeAdministratorPassword:**
+    **SafeModeAdministratorPassword:**
 
 - After you type a password and press ENTER, the following confirmation prompt appears. Type the same password and then press ENTER.
 
-	**Confirm SafeModeAdministratorPassword:**
+    **Confirm SafeModeAdministratorPassword:**
 
 - When the following prompt appears, type the letter **Y** and then press ENTER.
 
-    
-    The target server will be configured as a domain controller and restarted when this operation is complete.
-    Do you want to continue with this operation?
-    [Y] Yes  [A] Yes to All  [N] No  [L] No to All  [S] Suspend  [?] Help (default is "Y"):
-    
+
+~~~
+The target server will be configured as a domain controller and restarted when this operation is complete.
+Do you want to continue with this operation?
+[Y] Yes  [A] Yes to All  [N] No  [L] No to All  [S] Suspend  [?] Help (default is "Y"):
+~~~
+
 - If you want to, you can read the warning messages that are displayed during normal, successful installation of AD DS and DNS. These messages are normal and are not an indication of install failure.
 
 - After installation succeeds, a message appears stating that you are about to be logged off of the computer so that the computer can restart. If you click **Close**, you are immediately logged off the computer, and the computer restarts. If you do not click **Close**, the computer restarts after a default period of time.

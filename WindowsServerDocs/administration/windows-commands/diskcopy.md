@@ -2,7 +2,7 @@
 title: diskcopy
 description: "Windows Commands topic for **** - "
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -79,7 +79,7 @@ diskcopy [<Drive1>: [<Drive2>:]] [/v]
 
 > [!NOTE]
 > You cannot use **xcopy** to copy a startup disk.
--   Understanding **diskcopy** exit codes
+> -   Understanding **diskcopy** exit codes
 
     The following table explains each exit code.  
     |Exit code|Description|

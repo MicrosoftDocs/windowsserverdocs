@@ -2,7 +2,7 @@
 title: Use DNS Policy for Split-Brain DNS Deployment
 description: This topic is part of the DNS Policy Scenario Guide for Windows Server 2016
 manager: brianlic
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: networking-dns
 ms.topic: article
 ms.assetid: a255a4a5-c1a0-4edc-b41a-211bae397e3c
@@ -27,7 +27,7 @@ This topic contains the following sections.
 - [Example of DNS Split-Brain Deployment](#bkmk_sbexample)
 - [Example of DNS Selective Recursion Control](#bkmk_recursion)
 
-##<a name="bkmk_sbexample"></a>Example of DNS Split-Brain Deployment
+## <a name="bkmk_sbexample"></a>Example of DNS Split-Brain Deployment
 Following is an example of how you can use DNS policy to accomplish the previously described scenario of split-brain DNS.
 
 This section contains the following topics.
@@ -51,7 +51,7 @@ The following illustration depicts this scenario.
 ![Split-Brain DNS Deployment](../../media/DNS-Split-Brain/Dns-Split-Brain-01.jpg)  
 
 
-##<a name="bkmk_sbhow"></a>How DNS Split-Brain Deployment Works
+## <a name="bkmk_sbhow"></a>How DNS Split-Brain Deployment Works
 
 When the DNS server is configured with the required DNS policies, each name resolution request is evaluated against the policies on the DNS server.
 
@@ -61,7 +61,7 @@ If the server interface upon which the query is received matches any of the poli
 
 So, in our example, the DNS queries for www.career.contoso.com  that are received on the private IP (10.0.0.56) receive a DNS response that contains an internal IP address; and the DNS queries that are received on the public network interface receive a DNS response that contains the public IP address in the default zone scope (this is the same as normal query resolution).  
 
-##<a name="bkmk_sbconfigure"></a>How to Configure DNS Split-Brain Deployment
+## <a name="bkmk_sbconfigure"></a>How to Configure DNS Split-Brain Deployment
 To configure DNS Split-Brain Deployment by using DNS Policy, you must use the following steps.
 
 - [Create the Zone Scopes](#bkmk_zscopes)  
@@ -73,12 +73,12 @@ The following sections provide detailed configuration instructions.
 >[!IMPORTANT]
 >The following sections include example Windows PowerShell commands that contain example values for many parameters. Ensure that you replace example values in these commands with values that are appropriate for your deployment before you run these commands. 
 
-###<a name="bkmk_zscopes"></a>Create the Zone Scopes
+### <a name="bkmk_zscopes"></a>Create the Zone Scopes
 
 A zone scope is a unique instance of the zone. A DNS zone can have multiple zone scopes, with each zone scope containing its own set of DNS records. The same record can be present in multiple scopes, with different IP addresses or the same IP addresses. 
 
->[!NOTE]
->By default, a zone scope exists on the DNS zones. This zone scope has the same name as the zone, and legacy DNS operations work on this scope. This default zone scope will host the external version of www.career.contoso.com.
+> [!NOTE]
+> By default, a zone scope exists on the DNS zones. This zone scope has the same name as the zone, and legacy DNS operations work on this scope. This default zone scope will host the external version of www.career.contoso.com.
 
 You can use the following example command to partition the zone scope contoso.com to create an internal zone scope. The internal zone scope will be used to keep the internal version of www.career.contoso.com.
 
@@ -86,11 +86,11 @@ You can use the following example command to partition the zone scope contoso.co
 
 For more information, see [Add-DnsServerZoneScope](https://docs.microsoft.com/powershell/module/dnsserver/add-dnsserverzonescope?view=win10-ps)
 
-###<a name="bkmk_records"></a>Add Records to the Zone Scopes
+### <a name="bkmk_records"></a>Add Records to the Zone Scopes
 
 The next step is to add the records representing the Web server host into the two zone scopes - internal and default (for external clients). 
 
-In the internal zone scope, the record **www.career.contoso.com** is added with the IP address 10.0.0.39, which is a private IP; and in the default zone scope the same record, **www.career.contoso.com**, is added with the IP address 65.55.39.10.
+In the internal zone scope, the record <strong>www.career.contoso.com</strong> is added with the IP address 10.0.0.39, which is a private IP; and in the default zone scope the same record, <strong>www.career.contoso.com</strong>, is added with the IP address 65.55.39.10.
 
 No **–ZoneScope** parameter is provided in the following example commands when the record is being added to the default zone scope. This is similar to adding records to a vanilla zone.
 
@@ -103,7 +103,7 @@ Add-DnsServerResourceRecord -ZoneName "contoso.com" -A -Name "www.career" -IPv4A
 
 For more information, see [Add-DnsServerResourceRecord](https://docs.microsoft.com/powershell/module/dnsserver/add-dnsserverresourcerecord?view=win10-ps).
 
-###<a name="bkmk_policies"></a>Create the DNS Policies
+### <a name="bkmk_policies"></a>Create the DNS Policies
 
 After you have identified the server interfaces for the external network and internal network and you have created the zone scopes, you must create DNS policies that connect the internal and external zone scopes.
 

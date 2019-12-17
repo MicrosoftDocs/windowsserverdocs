@@ -7,14 +7,13 @@ ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 
 ms.technology: identity-adfs
 ---
 
 # Provide Users in Another Organization Access to Your Claims-Aware Applications and Services
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 When you are an administrator in the resource partner organization in Active Directory Federation Services \(AD FS\) and you have a deployment goal to provide federated access for users in another organization \(the account partner organization\) to a claims\-aware application or a Web\-based service that is located in your organization \(the resource partner organization\):  
   

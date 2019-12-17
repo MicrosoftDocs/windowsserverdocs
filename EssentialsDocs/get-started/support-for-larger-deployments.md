@@ -14,7 +14,7 @@ ms.author: coreyp
 manager: dongill
 ---
 
-#Support for larger deployments
+# Support for larger deployments
 
 >Applies To: Windows Server 2016 Essentials
 
@@ -29,7 +29,7 @@ Windows Server Essentials now supports larger deployments with:
 - ability to specify a designated domain controller
 - support for up to 500 users and 500 devices
 
-##Support for multiple domains
+## Support for multiple domains
 
 Windows server 2012 R2 Essentials supports only one domain per server, which is required, and the Essentials server must be the root of the forest. While a domain and forest are still required, the Windows Server 2016 Essentials Experience role can now be deployed on Windows Server 2016 Standard or Datacenter to support multiple domains.
 
@@ -37,7 +37,7 @@ Windows server 2012 R2 Essentials supports only one domain per server, which is 
 
  Windows Server Essentials 2012 R2 blocks any services that leverage Azure Active Directory, such as Office 365, where more than one domain controller is deployed. The reason is that account and password synchronization between the local domain controllers and Azure Active Directory can lead to account credentials with passwords that are out of sync. This limitation has been removed in Windows Server 2016 Essentials.
 
-##Ability to specify a designated domain controller
+## Ability to specify a designated domain controller
 
 You can now choose a designated domain controller which will improve retrieval times for Active Directory domain objects, as well as coordinate synchronization of account change across other domain controllers in the domain.
 
@@ -45,7 +45,7 @@ Your default designated Domain Controller will be the same server that is runnin
 
 ![A screenshot showing the Settings control panel in the foreground and the Windows Server Essentials dashboard in the background. The Designated Domain Controller page of the Settings control panel is currently selected.](media/larger-deployments-1.PNG)
 
-##Support for 500 users and 500 devices
+## Support for 500 users and 500 devices
 -------------------------------------
 
 The maximum number of supported users and devices in  Windows Server 2012 R2 Essentials is 25 and 50, respectively. With the introduction of the Windows Server Essentials Experience server role, that limit was increased to 100 users and 200 devices.

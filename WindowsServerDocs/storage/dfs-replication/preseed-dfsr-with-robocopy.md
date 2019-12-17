@@ -1,7 +1,7 @@
 ﻿---
 title: Use Robocopy to preseed files for DFS Replication
 description: How to use Robocopy.exe to preseed files for DFS Replication.
-ms.prod: windows-server-threshold 
+ms.prod: windows-server 
 ms.topic: article 
 author: JasonGerend 
 ms.author: jgerend 
@@ -22,9 +22,9 @@ The Robocopy (Robust File Copy) command-line utility is included with Windows Se
 
 To use Robocopy to preseed files for DFS Replication, follow these steps:
 
-1. [Download and install the latest version of Robocopy.](#step-1:-download-and-install-the-latest-version-of-robocopy)
-2. [Stabilize files that will be replicated.](#step-2:-stabilize-files-that-will-be-replicated)
-3. [Copy the replicated files to the destination server.](#step-3:-copy-the-replicated-files-to-the-destination-server)
+1. [Download and install the latest version of Robocopy.](#step-1-download-and-install-the-latest-version-of-robocopy)
+2. [Stabilize files that will be replicated.](#step-2-stabilize-files-that-will-be-replicated)
+3. [Copy the replicated files to the destination server.](#step-3-copy-the-replicated-files-to-the-destination-server)
 
 ## Prerequisites
 
@@ -32,7 +32,7 @@ Because preseeding does not directly involve DFS Replication, you only need to 
 
 - You need an account that's a member of the local Administrators group on both the source and destination servers.
 
-- Install the most recent version of Robocopy on the server that you will use to copy the files—either the source server or the destination server; you will need to install the most recent version for the operating system version. For instructions, see [Step 2: Stabilize files that will be replicated](#step-2:-stabilize-files-that-will-be-replicated). Unless you are preseeding files from a server running Windows Server 2003 R2, you can run Robocopy on either the source or destination server. The destination server, which typically has the more recent operating system version, gives you access to the most recent version of Robocopy.
+- Install the most recent version of Robocopy on the server that you will use to copy the files—either the source server or the destination server; you will need to install the most recent version for the operating system version. For instructions, see [Step 2: Stabilize files that will be replicated](#step-2-stabilize-files-that-will-be-replicated). Unless you are preseeding files from a server running Windows Server 2003 R2, you can run Robocopy on either the source or destination server. The destination server, which typically has the more recent operating system version, gives you access to the most recent version of Robocopy.
 
 - Ensure that sufficient storage space is available on the destination drive. Do not create a folder on the path that you plan to copy to: Robocopy must create the root folder.
     
@@ -99,13 +99,13 @@ After you minimize locks on the files that will be replicated, you can preseed t
     |"\<destination replicated folder path\>"|Specifies the path to the folder that will store the preseeded files.<br><br>The destination folder must not already exist on the destination server. To get matching file hashes, Robocopy must create the root folder when it preseeds the files.|
     |/e|Copies subdirectories and their files, as well as empty subdirectories.|
     |/b|Copies files in Backup mode.|
-    |/copyal|Copies all file information, including data, attributes, time stamps, the NTFS access control list (ACL), owner information, and auditing information.|
+    |/copyall|Copies all file information, including data, attributes, time stamps, the NTFS access control list (ACL), owner information, and auditing information.|
     |/r:6|Retries the operation six times when an error occurs.|
     |/w:5|Waits 5 seconds between retries.|
     |MT:64|Copies 64 files simultaneously.|
     |/xd DfsrPrivate|Excludes the DfsrPrivate folder.|
     |/tee|Writes status output to the console window, as well as to the log file.|
-    |/log \<log file path>|Specifies the log file to write. Overwrites the file’s existing contents. (To append the entries to the existing log file, use `/log+ <log file path>`.)|
+    |/log \<log file path>|Specifies the log file to write. Overwrites the file's existing contents. (To append the entries to the existing log file, use `/log+ <log file path>`.)|
     |/v|Produces verbose output that includes skipped files.|
     
     For example, the following command replicates files from the source replicated folder, E:\\RF01, to data drive D on the destination server:

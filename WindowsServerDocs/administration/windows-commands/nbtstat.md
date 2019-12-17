@@ -2,7 +2,7 @@
 title: nbtstat
 description: "Windows Commands topic for **** - "
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -28,19 +28,19 @@ nbtstat [/a <remoteName>] [/A <IPaddress>] [/c] [/n] [/r] [/R] [/RR] [/s] [/S] [
 
 ### Parameters
 
-|Parameter|Description|
-|-------|--------|
-|/a <remoteName>|Displays the NetBIOS name table of a remote computer, where *remoteName* is the NetBIOS computer name of the remote computer. The NetBIOS name table is the list of NetBIOS names that corresponds to NetBIOS applications running on that computer.|
-|/A <IPaddress>|Displays the NetBIOS name table of a remote computer, specified by the IP address (in dotted decimal notation) of the remote computer.|
-|/c|Displays the contents of the NetBIOS name cache, the table of NetBIOS names and their resolved IP addresses.|
-|/n|Displays the NetBIOS name table of the local computer. The status of **registered** indicates that the name is registered either by broadcast or with a WINS server.|
-|/r|Displays NetBIOS name resolution statistics. On a computer running Windows XP or Windows Server 2003 that is configured to use WINS, this parameter returns the number of names that have been resolved and registered using broadcast and WINS.|
-|/R|Purges the contents of the NetBIOS name cache and then reloads the #PRE-tagged entries from the **Lmhosts** file.|
-|/RR|Releases and then refreshes NetBIOS names for the local computer that is registered with WINS servers.|
-|/s|Displays NetBIOS client and server sessions, attempting to convert the destination IP address to a name.|
-|/S|Displays NetBIOS client and server sessions, listing the remote computers by destination IP address only.|
-|<Interval>|Redisplays selected statistics, pausing the number of seconds specified in *Interval* between each display. Press CTRL+C to stop redisplaying statistics. If this parameter is omitted, **nbtstat** prints the current configuration information only once.|
-|/?|Displays help at the command prompt.|
+|    Parameter    |                                                                                                                         Description                                                                                                                         |
+|-----------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| /a <remoteName> |    Displays the NetBIOS name table of a remote computer, where *remoteName* is the NetBIOS computer name of the remote computer. The NetBIOS name table is the list of NetBIOS names that corresponds to NetBIOS applications running on that computer.     |
+| /A <IPaddress>  |                                                           Displays the NetBIOS name table of a remote computer, specified by the IP address (in dotted decimal notation) of the remote computer.                                                            |
+|       /c        |                                                                        Displays the contents of the NetBIOS name cache, the table of NetBIOS names and their resolved IP addresses.                                                                         |
+|       /n        |                                            Displays the NetBIOS name table of the local computer. The status of **registered** indicates that the name is registered either by broadcast or with a WINS server.                                             |
+|       /r        |      Displays NetBIOS name resolution statistics. On a computer running Windows XP or Windows Server 2003 that is configured to use WINS, this parameter returns the number of names that have been resolved and registered using broadcast and WINS.       |
+|       /R        |                                                                      Purges the contents of the NetBIOS name cache and then reloads the #PRE-tagged entries from the **Lmhosts** file.                                                                      |
+|       /RR       |                                                                           Releases and then refreshes NetBIOS names for the local computer that is registered with WINS servers.                                                                            |
+|       /s        |                                                                          Displays NetBIOS client and server sessions, attempting to convert the destination IP address to a name.                                                                           |
+|       /S        |                                                                          Displays NetBIOS client and server sessions, listing the remote computers by destination IP address only.                                                                          |
+|   <Interval>    | Redisplays selected statistics, pausing the number of seconds specified in *Interval* between each display. Press CTRL+C to stop redisplaying statistics. If this parameter is omitted, **nbtstat** prints the current configuration information only once. |
+|       /?        |                                                                                                            Displays help at the command prompt.                                                                                                             |
 
 ## Remarks
 

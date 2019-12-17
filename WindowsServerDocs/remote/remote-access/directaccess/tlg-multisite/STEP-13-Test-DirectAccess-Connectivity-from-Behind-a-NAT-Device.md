@@ -3,11 +3,10 @@ title: STEP 13 Test DirectAccess Connectivity from Behind a NAT Device
 description: This topic is part of the Test Lab Guide - Demonstrate a DirectAccess Multisite Deployment for Windows Server 2016
 manager: brianlic
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
-ms.technology: 
-  - networking-da
+ms.technology: networking-da
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 796825c3-5e3e-4745-a921-25ab90b95ede
@@ -33,55 +32,55 @@ Before performing these tests, unplug CLIENT1 and CLIENT2 from the Internet swit
   
 ## <a name="TeredoCLIENT1"></a>Test Teredo connectivity  
   
-1.  On CLIENT1, open an elevated Windows PowerShell window.  
+1. On CLIENT1, open an elevated Windows PowerShell window.  
   
-2.  Enable the Teredo adapter, type **netsh interface teredo set state enterpriseclient**, and then press ENTER.  
+2. Enable the Teredo adapter, type **netsh interface teredo set state enterpriseclient**, and then press ENTER.  
   
-3.  In the Windows PowerShell window, type **ipconfig /all** and press ENTER.  
+3. In the Windows PowerShell window, type **ipconfig /all** and press ENTER.  
   
-4.  Examine the output of the ipconfig command.  
+4. Examine the output of the ipconfig command.  
   
-    This computer is now connected to the Internet from behind a NAT device and is assigned a private IPv4 address. When the DirectAccess client is behind a NAT device and assigned a private IPv4 address, the preferred IPv6 transition technology is Teredo. If you look at the output of the ipconfig command, you should see a section for Tunnel adapter Teredo Tunneling Pseudo-Interface and then a description Microsoft Teredo Tunneling Adapter, with an IP address that starts with 2001:0 consistent with being a Teredo address. You should see the default gateway listed for the Teredo tunnel adapter as '::'.  
+   This computer is now connected to the Internet from behind a NAT device and is assigned a private IPv4 address. When the DirectAccess client is behind a NAT device and assigned a private IPv4 address, the preferred IPv6 transition technology is Teredo. If you look at the output of the ipconfig command, you should see a section for Tunnel adapter Teredo Tunneling Pseudo-Interface and then a description Microsoft Teredo Tunneling Adapter, with an IP address that starts with 2001:0 consistent with being a Teredo address. You should see the default gateway listed for the Teredo tunnel adapter as '::'.  
   
-5.  In the Windows PowerShell window, type **ipconfig /flushdns** and press ENTER.  
+5. In the Windows PowerShell window, type **ipconfig /flushdns** and press ENTER.  
   
-    This will flush name resolution entries that may still exist in the client DNS cache from when the client computer was connected to the Internet.  
+   This will flush name resolution entries that may still exist in the client DNS cache from when the client computer was connected to the Internet.  
   
-6.  In the Windows PowerShell window, type **ping app1** and press ENTER. You should see replies from the IPv6 address of APP1, 2001:db8:1::3.  
+6. In the Windows PowerShell window, type **ping app1** and press ENTER. You should see replies from the IPv6 address of APP1, 2001:db8:1::3.  
   
-7.  In the Windows PowerShell window, type **ping app2** and press ENTER. You should see replies from the NAT64 address assigned by EDGE1 to APP2, which in this case is fd**c9:9f4e:eb1b**:7777::a00:4. Note that the bold values will vary due to how the address is generated.  
+7. In the Windows PowerShell window, type **ping app2** and press ENTER. You should see replies from the NAT64 address assigned by EDGE1 to APP2, which in this case is fd**c9:9f4e:eb1b**:7777::a00:4. Note that the bold values will vary due to how the address is generated.  
   
-8.  In the Windows PowerShell window, type **ping 2-app1** and press ENTER. You should see replies from the IPv6 address of 2-APP1, 2001:db8:2::3.  
+8. In the Windows PowerShell window, type **ping 2-app1** and press ENTER. You should see replies from the IPv6 address of 2-APP1, 2001:db8:2::3.  
   
 9. Open Internet Explorer, in the Internet Explorer address bar, enter **https://2-app1/** and press ENTER. You will see the default IIS website on 2-APP1.  
   
 10. In the Internet Explorer address bar, enter **https://app2/** and press ENTER. You will see the default website on APP2.  
   
-11. On the **Start** screen, type**\\\App2\Files**, and then press ENTER. Double-click the New Text Document file. This demonstrates that you were able to connect to an IPv4 only server using SMB to obtain a resource on an IPv4 only host.  
+11. On the **Start** screen, type<strong>\\\App2\Files</strong>, and then press ENTER. Double-click the New Text Document file. This demonstrates that you were able to connect to an IPv4 only server using SMB to obtain a resource on an IPv4 only host.  
   
 12. Repeat this procedure on CLIENT2.  
   
 ## <a name="IPHTTPS_CLIENT1"></a>Test IP-HTTPS connectivity  
   
-1.  On CLIENT1, open an elevated Windows PowerShell window, and type **netsh interface teredo set state disabled** and press ENTER. This disables Teredo on the client computer and enables the client computer to configure itself to use IP-HTTPS. An **Ok** response appears when the command completes.  
+1. On CLIENT1, open an elevated Windows PowerShell window, and type **netsh interface teredo set state disabled** and press ENTER. This disables Teredo on the client computer and enables the client computer to configure itself to use IP-HTTPS. An **Ok** response appears when the command completes.  
   
-2.  In the Windows PowerShell window, type **ipconfig /all** and press ENTER.  
+2. In the Windows PowerShell window, type **ipconfig /all** and press ENTER.  
   
-3.  Examine the output of the ipconfig command. This computer is now connected to the Internet from behind a NAT device and is assigned a private IPv4 address. Teredo is disabled and the DirectAccess client falls back to IP-HTTPS. When you look at the output of the ipconfig command, you see a section for Tunnel adapter iphttpsinterface with an IP address that starts with 2001:db8:1:1000 or 2001:db8:2:2000 consistent with this being an IP-HTTPS address based on the prefixes that were configured when setting up DirectAccess. You will not see a default gateway listed for the IPHTTPSInterface tunnel adapter.  
+3. Examine the output of the ipconfig command. This computer is now connected to the Internet from behind a NAT device and is assigned a private IPv4 address. Teredo is disabled and the DirectAccess client falls back to IP-HTTPS. When you look at the output of the ipconfig command, you see a section for Tunnel adapter iphttpsinterface with an IP address that starts with 2001:db8:1:1000 or 2001:db8:2:2000 consistent with this being an IP-HTTPS address based on the prefixes that were configured when setting up DirectAccess. You will not see a default gateway listed for the IPHTTPSInterface tunnel adapter.  
   
-4.  In the Windows PowerShell window, type **ipconfig /flushdns** and press ENTER. This will flush name resolution entries that may still exist in the client DNS cache from when the client computer was connected to the corpnet.  
+4. In the Windows PowerShell window, type **ipconfig /flushdns** and press ENTER. This will flush name resolution entries that may still exist in the client DNS cache from when the client computer was connected to the corpnet.  
   
-5.  In the Windows PowerShell window, type **ping app1** and press ENTER. You should see replies from the IPv6 address of APP1, 2001:db8:1::3.  
+5. In the Windows PowerShell window, type **ping app1** and press ENTER. You should see replies from the IPv6 address of APP1, 2001:db8:1::3.  
   
-6.  In the Windows PowerShell window, type **ping app2** and press ENTER. You should see replies from the NAT64 address assigned by EDGE1 to APP2, which in this case is fd**c9:9f4e:eb1b**:7777::a00:4. Note that the bold values will vary due to how the address is generated.  
+6. In the Windows PowerShell window, type **ping app2** and press ENTER. You should see replies from the NAT64 address assigned by EDGE1 to APP2, which in this case is fd**c9:9f4e:eb1b**:7777::a00:4. Note that the bold values will vary due to how the address is generated.  
   
-7.  In the Windows PowerShell window, type **ping 2-app1** and press ENTER. You should see replies from the IPv6 address of 2-APP1, 2001:db8:2::3.  
+7. In the Windows PowerShell window, type **ping 2-app1** and press ENTER. You should see replies from the IPv6 address of 2-APP1, 2001:db8:2::3.  
   
-8.  Open Internet Explorer, in the Internet Explorer address bar, enter **https://2-app1/** and press ENTER. You will see the default IIS website on 2-APP1.  
+8. Open Internet Explorer, in the Internet Explorer address bar, enter **https://2-app1/** and press ENTER. You will see the default IIS website on 2-APP1.  
   
 9. In the Internet Explorer address bar, enter **https://app2/** and press ENTER. You will see the default website on APP2.  
   
-10. On the **Start** screen, type**\\\App2\Files**, and then press ENTER. Double-click the New Text Document file. This demonstrates that you were able to connect to an IPv4 only server using SMB to obtain a resource on an IPv4 only host.  
+10. On the **Start** screen, type<strong>\\\App2\Files</strong>, and then press ENTER. Double-click the New Text Document file. This demonstrates that you were able to connect to an IPv4 only server using SMB to obtain a resource on an IPv4 only host.  
   
 11. Repeat this procedure on CLIENT2.  
   

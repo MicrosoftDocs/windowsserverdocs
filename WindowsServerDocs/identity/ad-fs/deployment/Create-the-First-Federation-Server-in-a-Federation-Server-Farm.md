@@ -6,15 +6,13 @@ author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 
 ms.technology: identity-adfs
 ms.author: billmath
 ---
 
 # Create the First Federation Server in a Federation Server Farm
-
- >Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 After you install the Federation Service role service and configure the required certificates on a computer, you are ready to configure the computer to become a federation server. You can use the following procedure to set up the computer to become the first federation server in a new federation server farm using the AD FS Federation Server Configuration Wizard.  
   

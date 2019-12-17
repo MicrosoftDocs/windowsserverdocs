@@ -1,7 +1,7 @@
 ---
 title: Supported Windows guest operating systems for Hyper-V on Windows Server
 description: Lists the Windows operating systems supported for use as a guest in a virtual machine. Also gives links to similar articles for previous versions of Hyper-V.
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.service: na
 manager: dongill
 ms.technology: compute-hyper-v
@@ -10,7 +10,7 @@ ms.topic: article
 ms.assetid: 06b35897-2192-48b7-8c2d-125c520b0786
 author: lizap
 ms.author: elizapo
-ms.date: 06/12/2017
+ms.date: 01/08/2019
 ---
 # Supported Windows guest operating systems for Hyper-V on Windows Server
 
@@ -22,11 +22,15 @@ Some operating systems have the integration services built-in. Others require th
   
 ## Supported Windows Server guest operating systems  
 
-Following are the versions of Windows Server that are supported as guest operating systems for Hyper-V in Windows Server 2016. 
+Following are the versions of Windows Server that are supported as guest operating systems for Hyper-V in Windows Server 2016 and Windows Server 2019. 
   
 |Guest operating system (server)|Maximum number of virtual processors|Integration Services|Notes|  
-|-------------------------------------|----------------------------------------|------------------------|---------|  
-|Windows Server 2019 |240 for generation 2;<br>64 for generation 1|Built-in|| 
+|-------------------------------------|----------------------------------------|------------------------|---------| 
+|Windows Server, version 1909 |240 for generation 2;<br>64 for generation 1|Built-in|Greater than 240 virtual processor support requires Windows Server, version 1903 or later guest operating systems.| 
+|Windows Server, version 1903 |240 for generation 2;<br>64 for generation 1|Built-in||
+|Windows Server, version 1809 |240 for generation 2;<br>64 for generation 1|Built-in|| 
+|Windows Server 2019 |240 for generation 2;<br>64 for generation 1|Built-in||
+|Windows Server, version 1803 |240 for generation 2;<br>64 for generation 1|Built-in|| 
 |Windows Server 2016 |240 for generation 2;<br>64 for generation 1|Built-in|| 
 |Windows Server 2012 R2 |64|Built-in||  
 |Windows Server 2012 |64|Built-in||  
@@ -35,7 +39,7 @@ Following are the versions of Windows Server that are supported as guest operati
   
 ## Supported Windows client guest operating systems  
 
-Following are the versions of Windows that are supported as guest operating systems for Hyper-V in Windows Server 2016.
+Following are the versions of Windows client that are supported as guest operating systems for Hyper-V in Windows Server 2016 and Windows Server 2019.
   
 |Guest operating system (client)|Maximum number of virtual processors|Integration Services|Notes|  
 |-------------------------------------|----------------------------------------|------------------------|---------|  

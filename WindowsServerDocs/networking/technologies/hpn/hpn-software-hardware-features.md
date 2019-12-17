@@ -1,7 +1,7 @@
 ---
 title: Software and hardware (SH) integrated features and technologies
 description: These features have both software and hardware components. The software is intimately tied to hardware capabilities that are required for the feature to work. Examples of these include VMMQ, VMQ, Send-side IPv4 Checksum Offload, and RSS.
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: networking
 ms.topic: article
 ms.assetid: 0cafb1cc-5798-42f5-89b6-3ffe7ac024ba
@@ -46,11 +46,12 @@ For more information, see [Data Center Bridging (DCB)](https://docs.microsoft.co
 
 ## Hyper-V Network Virtualization
 
-| | |
-|---|---|
-| **v1 (HNVv1)**             | Introduced in Windows Server 2012, Hyper-V Network Virtualization (HNV) enables virtualization of customer networks on top of a shared, physical network infrastructure. With minimal changes necessary on the physical network fabric, HNV gives service providers the agility to deploy and migrate tenant workloads anywhere across the three clouds: the service provider cloud, the private cloud, or the Microsoft Azure public cloud.                                         |
+|                            |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+|----------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|       **v1 (HNVv1)**       |                     Introduced in Windows Server 2012, Hyper-V Network Virtualization (HNV) enables virtualization of customer networks on top of a shared, physical network infrastructure. With minimal changes necessary on the physical network fabric, HNV gives service providers the agility to deploy and migrate tenant workloads anywhere across the three clouds: the service provider cloud, the private cloud, or the Microsoft Azure public cloud.                     |
 | **v2 NVGRE (HNVv2 NVGRE)** | In Windows Server 2016 and System Center Virtual Machine Manager, Microsoft provides an end-to-end network virtualization solution that includes RAS Gateway, Software Load Balancing, Network Controller, and more. For more information, see [Hyper-V Network Virtualization Overview in Windows Server 2016](https://technet.microsoft.com/windows-server-docs/networking/sdn/technologies/hyper-v-network-virtualization/hyperv-network-virtualization-overview-windows-server). |
-| **v2 VxLAN (HNVv2 VxLAN)** | In Windows Server 2016, is part of the SDN-extension, which you manage through the Network Controller.    |
+| **v2 VxLAN (HNVv2 VxLAN)** |                                                                                                                                                                                        In Windows Server 2016, is part of the SDN-extension, which you manage through the Network Controller.                                                                                                                                                                                        |
+
 ---
 
 ## IPsec Task Offload (IPsecTO) 
@@ -58,7 +59,7 @@ For more information, see [Data Center Bridging (DCB)](https://docs.microsoft.co
 IPsec task offload is a NIC feature that enables the operating system to use the processor on the NIC for the IPsec encryption work.
 
 >[!IMPORTANT] 
->IPsec Task Offload is a legacy technology that is not supported by most network adapters, and where it does exist, it’s disabled by default.
+>IPsec Task Offload is a legacy technology that is not supported by most network adapters, and where it does exist, it's disabled by default.
 
 ## Private virtual Local Area Network (PVLAN). 
 
@@ -82,7 +83,7 @@ For more details, see [Receive Side Scaling (RSS)](https://docs.microsoft.com/wi
 
 SR-IOV allows VM traffic to move directly from the NIC to the VM without passing through the Hyper-V host. SR-IOV is an incredible improvement in performance for a VM but lacks the ability for the host to manage that pipe. Only use SR-IOV when the workload is well-behaved, trusted, and generally the only VM in the host.
 
-Traffic that uses SR-IOV bypasses the Hyper-V switch, which means that any policies, for example, ACLs, or bandwidth management won’t be applied. SR-IOV traffic also can’t be passed through any network virtualization capability, so NV-GRE or VxLAN encapsulation can’t be applied. Only use SR-IOV for well-trusted workloads in specific situations. Additionally, you cannot use the host policies, bandwidth management, and virtualization technologies.
+Traffic that uses SR-IOV bypasses the Hyper-V switch, which means that any policies, for example, ACLs, or bandwidth management won't be applied. SR-IOV traffic also can't be passed through any network virtualization capability, so NV-GRE or VxLAN encapsulation can't be applied. Only use SR-IOV for well-trusted workloads in specific situations. Additionally, you cannot use the host policies, bandwidth management, and virtualization technologies.
 
 In the future, two technologies would allow SR-IOV: Generic Flow Tables (GFT) and Hardware QoS Offload (bandwidth management in the NIC) – once the NICs in our ecosystem support them. The combination of these two technologies would make SR-IOV useful for all VMs, would allow policies, virtualization, and bandwidth management rules to be applied, and could result in great leaps forward in the general application of SR-IOV.
 

@@ -1,6 +1,6 @@
 ---
 title: File Server Resource Manager (FSRM) overview
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.author: jgerend
 ms.manager: brianlic
 ms.technology: storage
@@ -11,7 +11,7 @@ description: File Server Resource Manager (FSRM) is a tool that enables you to m
 ---
 # File Server Resource Manager (FSRM) overview
 
-> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2
+> Applies to: Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2, Windows Server (Semi-Annual Channel), 
 
 File Server Resource Manager (FSRM) is a role service in Windows Server that enables you to manage and classify data stored on file servers. You can use File Server Resource Manager to automatically classify files, perform tasks based on these classifications, set quotas on folders, and create reports monitoring storage usage.
 
@@ -41,7 +41,7 @@ The features included with File Server Resource Manager can be configured and ma
   
 -   Expire any file that has not been modified in the last 10 years.  
   
--   Create a 200 megabyte quota for each user’s home directory and notify them when they are using 180 megabytes.  
+-   Create a 200 megabyte quota for each user's home directory and notify them when they are using 180 megabytes.  
   
 -   Do not allow any music files to be stored in personal shared folders.  
   

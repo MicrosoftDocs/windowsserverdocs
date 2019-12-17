@@ -7,7 +7,7 @@ ms.author: pashort
 manager: dougkim
 ms.date: 05/08/2018
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: networking
 ---
 
@@ -35,17 +35,3 @@ The windows time provider plugin model is [documented on TechNet](https://msdn.m
 An addendum referenced by the Windows 2016 Accurate Time article can be downloaded [here](https://windocs.blob.core.windows.net/windocs/WindowsTimeSyncAccuracy_Addendum.pdf)
 
 For a quick overview of Windows Time service, take a look at this [high-level overview video](https://aka.ms/WS2016TimeVideo).
-
-<!-- In this guide
-In this guide:
-Windows Accurate Time
-High Accuracy
-Support Boundary
-Configuration for High Accuracy
-Traceability for Compliance
-Best Practices
-Technical Reference
-How the Windows Time Service Works
-Windows Time Service Tools and Settings
--->
-

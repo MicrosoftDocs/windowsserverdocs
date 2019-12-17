@@ -2,7 +2,7 @@
 title: pathping
 description: "Learn how to get network latency and loss information using the pathping command."
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands

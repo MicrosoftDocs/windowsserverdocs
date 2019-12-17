@@ -1,19 +1,49 @@
 ---
 ms.assetid: 0f2a7f7b-aca8-4e5d-ad67-4258e88bc52f
 title: What's new in storage in Windows Server
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.author: jgerend
 ms.manager: dongill
 ms.technology: storage
 ms.topic: article
 author: jasongerend
-ms.date: 10/22/2019
+ms.date: 05/29/2019
 ---
 # What's new in Storage in Windows Server
 
 >Applies to: Windows Server 2019, Windows Server 2016, Windows Server (Semi-Annual Channel)
 
 This topic explains the new and changed functionality in storage in Windows Server 2019, Windows Server 2016, and Windows Server Semi-Annual Channel releases.
+
+## What's new in storage in Windows Server, version 1903
+
+This release of Windows Server adds the following changes and technologies.
+
+### Storage Migration Service now migrates local accounts, clusters, and Linux servers
+
+Storage Migration Service makes it easier to migrate servers to a newer version of Windows Server. It provides a graphical tool that inventories data on servers and then transfers the data and configuration to newer servers—all without apps or users having to change anything.
+
+When using this version of Windows Server to orchestrate migrations, we've added the following abilities:
+
+- Migrate local users and groups to the new server
+- Migrate storage from failover clusters
+- Migrate storage from a Linux server that uses Samba
+- More easily sync migrated shares into Azure by using Azure File Sync
+- Migrate to new networks such as Azure
+
+For more info about Storage Migration Service, see [Storage Migration Service overview](storage-migration-service/overview.md).
+
+### System Insights disk anomaly detection
+
+[System Insights](../manage/system-insights/overview.md) is a predictive analytics feature that locally analyzes Windows Server system data and provides insight into the functioning of the server. It comes with a number of built-in capabilities, but we've added the ability to install additional capabilities via Windows Admin Center, starting with disk anomaly detection.
+
+Disk anomaly detection is a new capability that highlights when disks are behaving *differently* than usual. While different isn't necessarily a bad thing, seeing these anomalous moments can be helpful when troubleshooting issues on your systems.
+
+This capability is also available for servers running Windows Server 2019.
+
+### Windows Admin Center enhancements
+
+A new release of Windows Admin Center is out, adding new functionality to Windows Server. For info on the latest features, see [Windows Admin Center](../manage/windows-admin-center/understand/windows-admin-center.md).
 
 ## What's new in storage in Windows Server 2019 and Windows Server, version 1809
 
@@ -35,7 +65,7 @@ There are a number of improvements to Storage Spaces Direct in Windows Server 20
 
 - **Deduplication and compression for ReFS volumes**
 
-    Store up to 10X more data on the same volume with deduplication and compression for the ReFS filesystem. (It’s [just one click](https://www.youtube.com/watch?v=PRibTacyKko&feature=youtu.be) to turn on with Windows Admin Center.) The variable-size chunk store with optional compression maximizes savings rates, while the multi-threaded post-processing architecture keeps performance impact minimal. Supports volumes up to 64 TB and files up to 1 TB each.
+    Store up to ten times more data on the same volume with deduplication and compression for the ReFS filesystem. (It's [just one click](https://www.youtube.com/watch?v=PRibTacyKko&feature=youtu.be) to turn on with Windows Admin Center.) The variable-size chunk store with optional compression maximizes savings rates, while the multi-threaded post-processing architecture keeps performance impact minimal. Supports volumes up to 64 TB and will deduplicate the first 4 TB of each file.
 
 - **Native support for persistent memory**
 
@@ -55,7 +85,7 @@ There are a number of improvements to Storage Spaces Direct in Windows Server 20
 
 - **Performance history**
 
-    Get effortless visibility into resource utilization and performance with [built-in history](storage-spaces/performance-history.md). Over 50 essential counters spanning compute, memory, network, and storage are automatically collected and stored on the cluster for up to one year. Best of all, there’s nothing to install, configure, or start – it just works. Visualize in Windows Admin Center or query and process in PowerShell.
+    Get effortless visibility into resource utilization and performance with [built-in history](storage-spaces/performance-history.md). Over 50 essential counters spanning compute, memory, network, and storage are automatically collected and stored on the cluster for up to one year. Best of all, there's nothing to install, configure, or start – it just works. Visualize in Windows Admin Center or query and process in PowerShell.
 
 - **Scale up to 4 PB per cluster**
 
@@ -63,11 +93,11 @@ There are a number of improvements to Storage Spaces Direct in Windows Server 20
 
 - **Mirror-accelerated parity is 2X faster**
 
-    With mirror-accelerated parity you can create Storage Spaces Direct volumes that are part mirror and part parity, like mixing RAID-1 and RAID-5/6 to get the best of both. (It’s [easier than you think](https://www.youtube.com/watch?v=R72QHudqWpE) in Windows Admin Center.) In Windows Server 2019, the performance of mirror-accelerated parity is more than doubled relative to Windows Server 2016 thanks to optimizations.
+    With mirror-accelerated parity you can create Storage Spaces Direct volumes that are part mirror and part parity, like mixing RAID-1 and RAID-5/6 to get the best of both. (It's [easier than you think](https://www.youtube.com/watch?v=R72QHudqWpE) in Windows Admin Center.) In Windows Server 2019, the performance of mirror-accelerated parity is more than doubled relative to Windows Server 2016 thanks to optimizations.
 
 - **Drive latency outlier detection**
 
-    Easily identify drives with abnormal latency with proactive monitoring and built-in outlier detection, inspired by Microsoft Azure’s long-standing and successful approach. Whether it’s average latency or something more subtle like 99th percentile latency that stands out, slow drives are automatically labeled in PowerShell and Windows Admin Center with ‘Abnormal Latency’ status.
+    Easily identify drives with abnormal latency with proactive monitoring and built-in outlier detection, inspired by Microsoft Azure's long-standing and successful approach. Whether it's average latency or something more subtle like 99th percentile latency that stands out, slow drives are automatically labeled in PowerShell and Windows Admin Center with ‘Abnormal Latency' status.
 
 - **Manually delimit the allocation of volumes to increase fault tolerance**
 

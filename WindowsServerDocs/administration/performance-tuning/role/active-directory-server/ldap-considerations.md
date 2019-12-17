@@ -1,7 +1,7 @@
 ---
 title: LDAP considerations in ADDS performance tuning
 description: LDAP considerations in Active Directory workloads
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: performance-tuning-guide
 ms.topic: article
 ms.author: TimWi; ChrisRob; HerbertM; KenBrumf;  MLeary; ShawnRab
@@ -11,7 +11,7 @@ ms.date: 10/16/2017
 
 # LDAP considerations in ADDS performance tuning
 
->[!Important]
+> [!IMPORTANT]
 > The following is a summary of the key recommendations and considerations to optimize server hardware for Active Directory workloads covered in greater depth in the [Capacity Planning for Active Directory Domain Services](https://go.microsoft.com/fwlink/?LinkId=324566) article. Readers are highly encouraged to review [Capacity Planning for Active Directory Domain Services](https://go.microsoft.com/fwlink/?LinkId=324566) for a greater technical understanding and implications of these recommendations.
 
 ## Verify LDAP queries
@@ -40,15 +40,14 @@ Indexing attributes is useful when searching for objects that have the attribute
 
 -   A query is taking a long time and is not completing in an acceptable timeframe to the client due to lack of covering indices.
 
--   Large volumes of queries with high durations are causing consumption and exhaustion of ATQ LDAP Threads. Monitor the following performance counters:
+- Large volumes of queries with high durations are causing consumption and exhaustion of ATQ LDAP Threads. Monitor the following performance counters:
 
-    -   **NTDS\\Request Latency** – This is subject to how long the request takes to process. Active Directory times out requests after 120 seconds (default), however, the majority should run much faster and extremely long running queries should get hidden in the overall numbers. Look for changes in this baseline, rather than absolute thresholds.
+    - **NTDS\\Request Latency** – This is subject to how long the request takes to process. Active Directory times out requests after 120 seconds (default), however, the majority should run much faster and extremely long running queries should get hidden in the overall numbers. Look for changes in this baseline, rather than absolute thresholds.
 
-        **Note**  
-        High values here can also be indicators of delays in “proxying�? requests to other domains and CRL checks.
+        > [!NOTE]
+        > High values here can also be indicators of delays in "proxying" requests to other domains and CRL checks.
 
-
-    -   **NTDS\\Estimated Queue Delay** – This should ideally be near 0 for optimal performance as this means that requests spend no time waiting to be serviced.
+    - **NTDS\\Estimated Queue Delay** – This should ideally be near 0 for optimal performance as this means that requests spend no time waiting to be serviced.
 
 These scenarios can be detected using one or more of the following approaches:
 
@@ -60,7 +59,7 @@ These scenarios can be detected using one or more of the following approaches:
 
 -   [Microsoft Server Performance Advisor](../../../server-performance-advisor/microsoft-server-performance-advisor.md) Active Directory Advisor Pack
 
--   Searches using any filter besides “(objectClass=\*)�? that use the Ancestors Index.
+-   Searches using any filter besides "(objectClass=\*)" that use the Ancestors Index.
 
 ### Other index considerations
 
@@ -94,8 +93,8 @@ For more info, see the following:
 
 -   [Indexed Attributes](https://msdn.microsoft.com/library/windows/desktop/ms677112.aspx)
 
-
 ## See also
+
 - [Performance tuning Active Directory Servers](index.md)
 - [Hardware considerations](hardware-considerations.md)
 - [Proper placement of domain controllers and site considerations](site-definition-considerations.md)

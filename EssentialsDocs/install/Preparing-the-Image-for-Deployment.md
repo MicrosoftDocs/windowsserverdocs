@@ -118,7 +118,7 @@ A typical tool for preparing an image is sysprep.exe. Running this tool generali
     ```  
   
     > [!IMPORTANT]
-    >  You can also add the unattend.xml under %systemdrive% instead of as a parameter of sysprep. If the file is located under c:\ it will covered by user ��s settings, but if used as a parameter of sysprep, it will not be covered by user ��s settings. The unattend.xml under %systemdrive% will be deleted each time the server restarts. Hence, ensure that after you create unattend.xml under %systemdrive%, the server is not restarted.  
+    >  You can also add the unattend.xml under %systemdrive% instead of as a parameter of sysprep. If the file is located under c:\ it will covered by user's settings, but if used as a parameter of sysprep, it will not be covered by user's settings. The unattend.xml under %systemdrive% will be deleted each time the server restarts. Hence, ensure that after you create unattend.xml under %systemdrive%, the server is not restarted.  
   
 10. Run the following command to add the registry key to skip Windows OOBE key page.  
   

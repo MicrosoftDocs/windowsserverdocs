@@ -7,12 +7,11 @@ ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 
 ms.technology: identity-adfs
 ---
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 # The Role of Claim Rules
 The overall function of the Federation Service in Active Directory Federation Services \(AD FS\) is to issue a token that contains a set of claims. The decision regarding what claims AD FS accepts and then issues is governed by claim rules.  
@@ -35,7 +34,7 @@ Claim rules provide the following benefits:
 ### How claim rules are processed  
 Claim rules are processed through the claims pipeline using the *claims engine*. The claims engine is a logical component of the Federation Service that examines the set of incoming claims presented by a user, and will then, depending on the logic in each rule, produce an output set of claims.  
   
-Together, the claims rule engine and the set of claim rules associated with a given federated trust determine whether incoming claims should be passed through as they are, filtered to meet a specific condition’s criteria or transformed into an entirely new set of claims before they are issued as outgoing claims by your Federation Service.  
+Together, the claims rule engine and the set of claim rules associated with a given federated trust determine whether incoming claims should be passed through as they are, filtered to meet a specific condition's criteria or transformed into an entirely new set of claims before they are issued as outgoing claims by your Federation Service.  
   
 For more information about this process, see [The Role of the Claims Engine](The-Role-of-the-Claims-Engine.md).  
   

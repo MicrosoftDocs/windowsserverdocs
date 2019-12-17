@@ -2,11 +2,11 @@
 title: Install the Web Server WEB1
 description: This topic is part of the guide Deploy Server Certificates for 802.1X Wired and Wireless Deployments
 manager: brianlic
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: networking
 ms.topic: article
 ms.assetid: f51c9e38-98bb-49c1-9d39-427d07021499
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: networking
 ms.author: pashort
 author: shortpatti
@@ -36,8 +36,8 @@ To complete this procedure, you must be a member of the **Administrators** group
 **Note**   
 The **Before You Begin** page of the Add Roles and Features Wizard is not displayed if you have previously run the Add Roles and Features Wizard and you selected **Skip this page by default** at that time.  
 
-3.  On the **Installation Type** page, click **Next**.  
-4.  On the **Server selection** page, click **Next**.  
-5.  On the **Server roles** page, select **Web Server (IIS)**, and then click **Next**.  
-6.  Click **Next** until you have accepted all of the default web server settings, and then click **Install**.  
-7.  Verify that all installations were successful, and then click **Close**.
+3. On the **Installation Type** page, click **Next**.  
+4. On the **Server selection** page, click **Next**.  
+5. On the **Server roles** page, select **Web Server (IIS)**, and then click **Next**.  
+6. Click **Next** until you have accepted all of the default web server settings, and then click **Install**.  
+7. Verify that all installations were successful, and then click **Close**.

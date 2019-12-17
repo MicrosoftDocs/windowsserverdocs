@@ -2,7 +2,7 @@
 title: ksetup:removerealm
 description: "Windows Commands topic for **** - "
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -41,7 +41,7 @@ You cannot remove the default realm name from the domain controller because this
 
 ## <a name="BKMK_Examples"></a>Examples
 
-Mistakenly set the realm name by misspelling â€œ.COMâ€? on the local computer to CORP.CONTOSO.CON
+Mistakenly set the realm name by misspelling ".COM" on the local computer to CORP.CONTOSO.CON
 ```
 ksetup /setrealm CORP.CONTOSO.CON
 ```

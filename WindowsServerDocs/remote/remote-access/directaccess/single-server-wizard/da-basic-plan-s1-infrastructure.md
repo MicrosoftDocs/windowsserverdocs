@@ -3,18 +3,17 @@ title: Step 1 Plan the Basic DirectAccess Infrastructure
 description: This topic is part of the guide Deploy a Single DirectAccess Server Using the Getting Started Wizard for Windows Server 2016
 manager: brianlic
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
-ms.technology: 
-  - networking-da
+ms.technology: networking-da
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 
 ms.author: pashort
 author: shortpatti
 ---
-#Step 1 Plan the Basic DirectAccess Infrastructure
+# Step 1 Plan the Basic DirectAccess Infrastructure
 The first step for a basic DirectAccess deployment on a single server is to perform planning for the infrastructure required for the deployment. This topic describes the infrastructure planning steps:  
   
 |Task|Description|  

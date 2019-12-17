@@ -2,7 +2,7 @@
 title: Hyper-V Virtual Switch
 description: This topic provides an overview of Hyper-V Virtual Switch in Windows Server 2016. 
 manager: brianlic
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: networking-hv-switch
 ms.topic: article
 ms.assetid: 398440ac-5988-41ce-b91e-eab343a255d3

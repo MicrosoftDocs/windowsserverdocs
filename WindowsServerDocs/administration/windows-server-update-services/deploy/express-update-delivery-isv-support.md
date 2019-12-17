@@ -1,7 +1,7 @@
 ---
 title: Express update delivery ISV support
 description: "Windows Server Update Service (WSUS) topic - How Independent Software Vendors (ISV) can configure Express update delivery using WSUS"
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-wsus
@@ -12,7 +12,7 @@ ms.author: coreyp
 manager: lizapo
 ms.date: 10/16/2017
 ---
-#Express update delivery ISV support
+# Express update delivery ISV support
 
 >Applies To: Windows 10, Windows Server 2016
 
@@ -32,7 +32,7 @@ Since version 7, Windows has been able to reduce the size of Windows Update down
 
 -  **Enterprise devices managed using [Windows Update for Business](https://technet.microsoft.com/itpro/windows/manage/waas-manage-updates-wufb)** also get the benefit of Express update delivery support without any change in configuration.
 
-##How ISVs can take advantage of Express
+## How ISVs can take advantage of Express
 
 ISVs can use WSUS and the WU client to support Express update delivery. Microsoft recommends the following three steps, each discussed in more detail in the sections below:
 
@@ -58,9 +58,9 @@ WSUS serves as the interface to Windows Update and manages all metadata describi
 
 ### <a name="BKMK_2"></a>Step 2: Specify and Populate the ISV File Cache 
 
-####Specify the ISV File Cache
+#### Specify the ISV File Cache
 
-New client-side Group Policy and Mobile Device Management (MDM) settings detailed in the [**Configuration service provider reference**](https://msdn.microsoft.com/en-us/windows/hardware/commercialize/customize/mdm/configuration-service-provider-reference) define the location of the ISV file cache.
+New client-side Group Policy and Mobile Device Management (MDM) settings detailed in the [**Configuration service provider reference**](https://msdn.microsoft.com/windows/hardware/commercialize/customize/mdm/configuration-service-provider-reference) define the location of the ISV file cache.
 
 | **Name**                                              | **Description**                                                                                                                                                      |
 |-------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -76,10 +76,10 @@ There are two options when setting up the alternate download location for the IS
  
     This approach configures the WU client to make download requests to localhost. This allows the ISV client agent to handle these requests and route as appropriate to fulfill the download request.
 
->[!IMPORTANT]
->The ISV file cache requires the following:                                                          
-                                                                                                                                   >- The server must be HTTP 1.1 compliant per the RFC: <http://www.w3.org/Protocols/rfc2616/rfc2616.html>                                                                                                                                                                
-                                                                                                                                   >Specifically, the web server needs to support                                                                                                                                                                                                                                       [**HEAD**](http://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html) and [**GET**](http://www.w3.org/Protocols/rfc2616/rfc2616-sec9.htm) requests<br>                                                                                                                                                                                                                                                                                                  - Partial Range requests<br>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   - Keep-alive<br>                                                                                                                                                                                                                                                                                                                                                                                                                            - Do not use “Transfer-Encoding:chunked�?                                                                                                 
+> [!IMPORTANT]
+> The ISV file cache requires the following:                                                          
+> - The server must be HTTP 1.1 compliant per the RFC: <http://www.w3.org/Protocols/rfc2616/rfc2616.html>                                                                                                                                                                
+> Specifically, the web server needs to support                                                                                                                                                                                                                                       [**HEAD**](http://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html) and [**GET**](http://www.w3.org/Protocols/rfc2616/rfc2616-sec9.htm) requests<br>                                                                                                                                                                                                                                                                                                  - Partial Range requests<br>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   - Keep-alive<br>                                                                                                                                                                                                                                                                                                                                                                                                                            - Do not use "Transfer-Encoding:chunked"                                                                                                 
 
 #### Populate the ISV File Cache
 
@@ -87,17 +87,17 @@ The ISV file cache must be populated with files associated with the updates to b
 
 **To populate the ISV file cache:**
 
-1. Use [WSUS APIs](https://msdn.microsoft.com/en-us/library/windows/desktop/microsoft.updateservices.administration.updatefile(v=vs.85).aspx) to access the update’s file path and file name for the MU service.
+1. Use [WSUS APIs](https://msdn.microsoft.com/library/windows/desktop/microsoft.updateservices.administration.updatefile(v=vs.85).aspx) to access the update's file path and file name for the MU service.
 
-    The metadata for each update on WSUS server contains the update’s file path and file name on Microsoft Update as follows (Microsoft Update hostname in bold, followed by file path and filename): **http://download.windowsupdate.com**/c/msdownload/update/software/updt/2016/09/windows10.0-kb3195781-x64_0c06079bccc35cba35a48bd2b1ec46f818bd2e74.msu
+    The metadata for each update on WSUS server contains the update's file path and file name on Microsoft Update as follows (Microsoft Update hostname in bold, followed by file path and filename): **<http://download.windowsupdate.com>**/c/msdownload/update/software/updt/2016/09/windows10.0-kb3195781-x64_0c06079bccc35cba35a48bd2b1ec46f818bd2e74.msu
 
 2. Download files from Microsoft Update and store them in the ISV file cache using one of these two methods: 
 
- - Store files using the **same folder path as on the MU service**
+   - Store files using the **same folder path as on the MU service**
 
- - Store files using an **ISV-defined folder path**
+   - Store files using an **ISV-defined folder path**
 
-    Have HTTP server (or localhost) redirect **HTTP GET** requests, which reference the MU folder path and file name, to the ISV file location.
+     Have HTTP server (or localhost) redirect **HTTP GET** requests, which reference the MU folder path and file name, to the ISV file location.
 
 ### <a name="BKMK_3"></a>Step 3: Set up an ISV client agent to direct WU client operations
 
@@ -113,7 +113,7 @@ The ISV client agent orchestrates the download and installation of approved upda
 
 5.  Once the updates have been downloaded, the ISV client agent calls the WU client to install the approved updates
 
-See [Searching, Downloading, and Installing Updates](https://msdn.microsoft.com/en-us/library/windows/desktop/aa387102(v=vs.85).aspx) for additional information about using the WU client to scan, download and install updates.
+See [Searching, Downloading, and Installing Updates](https://msdn.microsoft.com/library/windows/desktop/aa387102(v=vs.85).aspx) for additional information about using the WU client to scan, download and install updates.
 
 ### Download workflow options
 
@@ -126,15 +126,15 @@ Following are two illustrations of download workflow options from an ISV file ca
 
 - For OS updates that support Express, there are two versions of the file payload stored on the service:
 
- - **Full-file version** -- essentially replacing the local versions of the update binaries
+  - **Full-file version** -- essentially replacing the local versions of the update binaries
 
- - **Express version** -- containing the deltas needed to patch the existing binaries on the device. 
+  - **Express version** -- containing the deltas needed to patch the existing binaries on the device. 
 
-   Both the full-file version and the Express version are referenced in the update’s metadata, which has been downloaded to the client as part of the Scan phase. 
+    Both the full-file version and the Express version are referenced in the update's metadata, which has been downloaded to the client as part of the Scan phase. 
 
-   **Express download works as follows:**
+    **Express download works as follows:**
 
-   The WU client will try to download Express first, and under certain situations fall back to full-file if needed (for example, if going through a proxy that doesn’t support byte range requests).
+    The WU client will try to download Express first, and under certain situations fall back to full-file if needed (for example, if going through a proxy that doesn't support byte range requests).
 
   1. When the WU client initiates an Express download, **the WU client first downloads a stub**, which is part of the Express package.
 

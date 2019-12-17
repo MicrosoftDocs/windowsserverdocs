@@ -3,11 +3,10 @@ title: Step 1 Plan the Advanced DirectAccess Infrastructure
 description: This topic is part of the guide Deploy a Single DirectAccess Server with Advanced Settings for Windows Server 2016
 manager: brianlic
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
-ms.technology: 
-  - networking-da
+ms.technology: networking-da
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: aa3174f3-42af-4511-ac2d-d8968b66da87
@@ -16,75 +15,78 @@ author: shortpatti
 ---
 # Step 1 Plan the Advanced DirectAccess Infrastructure
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 The first step of planning for an advanced DirectAccess deployment on a single server is to plan the infrastructure that is required for the deployment. This topic describes the infrastructure planning steps. These planning tasks do not need to be completed in a specific order.  
   
-|Task|Description|  
+|Task|Description|
 |----|--------|  
-|[1.1 Plan network topology and settings](#bkmk_11Networksvrtopsettings)|Decide where to place the DirectAccess server (at the edge, or behind a Network Address Translation (NAT) device or firewall), and plan IP addressing, routing, and force tunneling.|  
-|[1.2 Plan firewall requirements](#bkmk_ConfigFirewalls)|Plan for allowing DirectAccess traffic through edge firewalls.|  
-|[1.3 Plan certificate requirements](#bkmk_12CAsandCerts)|Decide whether you want to use Kerberos or certificates for client authentication, and plan your website certificates. IP-HTTPS is a transition protocol that is used by DirectAccess clients to tunnel IPv6 traffic over IPv4 networks. Decide whether to authenticate to the IP-HTTPS server by using a certificate that is issued by a certification authority (CA), or by using a self-signed certificate that is issued automatically by the DirectAccess server.|  
-|[1.4 Plan DNS requirements](#bkmk_14Dns)|Plan Domain Name System (DNS) settings for the DirectAccess server, infrastructure servers, local name resolution options, and client connectivity.|  
-|[1.5 Plan the network location server](#bkmk_14NLS)|The network location server is used by DirectAccess clients to determine whether they are located on the internal network. Decide where to place the network location server website in your organization (on the DirectAccess server or an alternate server), and plan the certificate requirements if the network location server is located on the DirectAccess server.|  
-|[1.6 Plan management servers](#bkmk_15mgmtservers)|You can remotely manage DirectAccess client computers that are located outside the corporate network on the Internet. Plan for management servers (such as update servers) that are used during remote client management.|  
-|[1.7 Plan Active Directory Domain Services](#bkmk_16AD)|Plan for your domain controllers, your Active Directory requirements, client authentication, and multiple domains.|  
-|[1.8 Plan Group Policy Objects](#bkmk_17GPOs)|Decide what GPOs are required in your organization and how to create or edit the GPOs.|  
+|[1.1 Plan network topology and settings](#11-plan-network-topology-and-settings)|Decide where to place the DirectAccess server (at the edge, or behind a Network Address Translation (NAT) device or firewall), and plan IP addressing, routing, and force tunneling.|  
+|[1.2 Plan firewall requirements](#12-plan-firewall-requirements)|Plan for allowing DirectAccess traffic through edge firewalls.|  
+|[1.3 Plan certificate requirements](#13-plan-certificate-requirements)|Decide whether you want to use Kerberos or certificates for client authentication, and plan your website certificates. IP-HTTPS is a transition protocol that is used by DirectAccess clients to tunnel IPv6 traffic over IPv4 networks. Decide whether to authenticate to the IP-HTTPS server by using a certificate that is issued by a certification authority (CA), or by using a self-signed certificate that is issued automatically by the DirectAccess server.|  
+|[1.4 Plan DNS requirements](#14-plan-dns-requirements)|Plan Domain Name System (DNS) settings for the DirectAccess server, infrastructure servers, local name resolution options, and client connectivity.|  
+|[1.5 Plan the network location server](#15-plan-the-network-location-server)|The network location server is used by DirectAccess clients to determine whether they are located on the internal network. Decide where to place the network location server website in your organization (on the DirectAccess server or an alternate server), and plan the certificate requirements if the network location server is located on the DirectAccess server.|  
+|[1.6 Plan management servers](#16-plan-management-servers)|You can remotely manage DirectAccess client computers that are located outside the corporate network on the Internet. Plan for management servers (such as update servers) that are used during remote client management.|  
+|[1.7 Plan Active Directory Domain Services](#17-plan-active-directory-domain-services)|Plan for your domain controllers, your Active Directory requirements, client authentication, and multiple domains.|  
+|[1.8 Plan Group Policy Objects](#18-plan-group-policy-objects)|Decide what GPOs are required in your organization and how to create or edit the GPOs.|  
   
-## <a name="bkmk_11Networksvrtopsettings"></a>1.1 Plan network topology and settings  
+## 1.1 Plan network topology and settings
+
 This section explains how to plan for your network, including:  
   
--   [1.1.1 Plan network adapters and IP addressing](#BKMK_NA)  
+- [1.1.1 Plan network adapters and IP addressing](#111-plan-network-adapters-and-ip-addressing)  
   
--   [1.1.2 Plan IPv6 intranet connectivity](#bkmk_intranet)  
+- [1.1.2 Plan IPv6 intranet connectivity](#112-plan-ipv6-intranet-connectivity)  
   
--   [1.1.3 Plan for force tunneling](#bkmk_force)  
+- [1.1.3 Plan for force tunneling](#113-plan-for-force-tunneling)  
   
-### <a name="BKMK_NA"></a>1.1.1 Plan network adapters and IP addressing  
+### 1.1.1 Plan network adapters and IP addressing  
   
-1.  Identify the network adapter topology you want to use. DirectAccess can be set up by using either of the following topologies:  
+1. Identify the network adapter topology you want to use. DirectAccess can be set up by using either of the following topologies:  
   
-    -   **Two network adapters**. The DirectAccess server can be installed at the edge with one network adapter that is connected to the Internet and the other to the internal network, or it can be installed behind a NAT, firewall, or router device, with one network adapter connected to a perimeter network and the other to the internal network.  
+    - **Two network adapters**. The DirectAccess server can be installed at the edge with one network adapter that is connected to the Internet and the other to the internal network, or it can be installed behind a NAT, firewall, or router device, with one network adapter connected to a perimeter network and the other to the internal network.  
   
-    -   **One network adapter**. The DirectAccess server is installed behind a NAT device, and the single network adapter is connected to the internal network.  
+    - **One network adapter**. The DirectAccess server is installed behind a NAT device, and the single network adapter is connected to the internal network.  
   
-2.  Identify your IP addressing requirements:  
+2. Identify your IP addressing requirements:  
   
     DirectAccess uses IPv6 with IPsec to create a secure connection between DirectAccess client computers and the internal corporate network. However, DirectAccess does not necessarily require connectivity to the IPv6 Internet or native IPv6 support on internal networks. Instead, it automatically configures and uses IPv6 transition technologies to tunnel IPv6 traffic across the IPv4 Internet (by using 6to4, Teredo, or IP-HTTPS) and across your IPv4-only intranet (by using NAT64 or ISATAP). For an overview of these transition technologies, see the following resources:  
   
-    -   [IPv6 Transition Technologies](https://technet.microsoft.com/library/bb726951.aspx)  
+    - [IPv6 Transition Technologies](https://technet.microsoft.com/library/bb726951.aspx)  
   
-    -   [IP-HTTPS Tunneling Protocol Specification](https://msdn.microsoft.com/library/dd358571(PROT.10).aspx)  
+    - [IP-HTTPS Tunneling Protocol Specification](https://msdn.microsoft.com/library/dd358571(PROT.10).aspx)  
   
-3.  Configure required adapters and addresses according to the following table. For deployments that use a single network adapter and are set up behind a NAT device, configure your IP addresses by using only the **Internal network adapter** column.  
+3. Configure required adapters and addresses according to the following table. For deployments that use a single network adapter and are set up behind a NAT device, configure your IP addresses by using only the **Internal network adapter** column.  
   
     ||External network adapter|Internal network adapter|Routing requirements|  
     |-|--------------|--------------|------------|  
-    |IPv4 Internet and IPv4 intranet|Configure two static consecutive public IPv4 addresses with the appropriate subnet masks (required for Teredo only).<br /><br />Also configure the default gateway IPv4 address of your Internet firewall or local Internet service provider (ISP) router. **Note:** The DirectAccess server requires two consecutive public IPv4 addresses so that it can act as a Teredo server and Windows-based clients can use the DirectAccess server to detect the type of NAT device that they are behind.|Configure the following:<br /><br />-   An IPv4 intranet address with the appropriate subnet mask.<br />-   The connection-specific DNS suffix of your intranet namespace. A DNS server should also be configured on the internal interface. **Caution:** Do not configure a default gateway on any intranet interfaces.|To configure the DirectAccess server to reach all subnets on the internal IPv4 network, do the following:<br /><br />-   List the IPv4 address spaces for all the locations on your intranet.<br />-   Use the **route add -p** or the**netsh interface ipv4 add route** command to add the IPv4 address spaces as static routes in the IPv4 routing table of the DirectAccess server.|  
-    |IPv6 Internet and IPv6 intranet|Configure the following:<br /><br />-   Use the address configuration that is provided by your ISP.<br />-   Use the **Route Print** command to ensure that a default IPv6 route exists, and it is pointing to the ISP router in the IPv6 routing table.<br />-   Determine whether the ISP and intranet routers are using the default router preferences described in RFC 4191, and using a higher default preference than your local intranet routers.<br />    If both of these are true, no other configuration for the default route is required. The higher preference for the ISP router ensures that the active default IPv6 route of the DirectAccess server points to the IPv6 Internet.<br /><br />Because the DirectAccess server is an IPv6 router, if you have a native IPv6 infrastructure, the Internet interface can also reach the domain controllers on the intranet. In this case, add packet filters to the domain controller in the perimeter network that prevent connectivity to the IPv6 address of the Internet-facing interface of the DirectAccess server.|Configure the following:<br /><br />-   If you are not using the default preference levels, you can configure your intranet interfaces by using the following command**netsh interface ipv6 set InterfaceIndex ignoredefaultroutes=enabled**.<br />    This command ensures that additional default routes that point to intranet routers will not be added to the IPv6 routing table. You can obtain the interface index of your intranet interfaces by using the following command: **netsh interface ipv6 show interface**.|If you have an IPv6 intranet, to configure the DirectAccess server to reach all of the IPv6 locations, do the following:<br /><br />-   List the IPv6 address spaces for all the locations on your intranet.<br />-   Use the **netsh interface ipv6 add route** command to add the IPv6 address spaces as static routes in the IPv6 routing table of the DirectAccess server.|  
-    |IPv4 Internet and IPv6 intranet|The DirectAccess server forwards default IPv6 route traffic through the Microsoft 6to4 adapter to a 6to4 relay on the IPv4 Internet. You can configure a DirectAccess server for the IPv4 address of the Microsoft 6to4 adapter by using the following command:  **netsh interface ipv6 6to4 set relay name=<ipaddress> state=enabled**.|||  
+    |IPv4 Internet and IPv4 intranet|Configure two static consecutive public IPv4 addresses with the appropriate subnet masks (required for Teredo only).<br/><br/>Also configure the default gateway IPv4 address of your Internet firewall or local Internet service provider (ISP) router. **Note:** The DirectAccess server requires two consecutive public IPv4 addresses so that it can act as a Teredo server and Windows-based clients can use the DirectAccess server to detect the type of NAT device that they are behind.|Configure the following:<br/><br/>-   An IPv4 intranet address with the appropriate subnet mask.<br/>-   The connection-specific DNS suffix of your intranet namespace. A DNS server should also be configured on the internal interface. **Caution:** Do not configure a default gateway on any intranet interfaces.|To configure the DirectAccess server to reach all subnets on the internal IPv4 network, do the following:<br/><br/>-   List the IPv4 address spaces for all the locations on your intranet.<br/>-   Use the **route add -p** or the**netsh interface ipv4 add route** command to add the IPv4 address spaces as static routes in the IPv4 routing table of the DirectAccess server.|  
+    |IPv6 Internet and IPv6 intranet|Configure the following:<br/><br/>-   Use the address configuration that is provided by your ISP.<br/>-   Use the **Route Print** command to ensure that a default IPv6 route exists, and it is pointing to the ISP router in the IPv6 routing table.<br/>-   Determine whether the ISP and intranet routers are using the default router preferences described in RFC 4191, and using a higher default preference than your local intranet routers.<br/>    If both of these are true, no other configuration for the default route is required. The higher preference for the ISP router ensures that the active default IPv6 route of the DirectAccess server points to the IPv6 Internet.<br/><br/>Because the DirectAccess server is an IPv6 router, if you have a native IPv6 infrastructure, the Internet interface can also reach the domain controllers on the intranet. In this case, add packet filters to the domain controller in the perimeter network that prevent connectivity to the IPv6 address of the Internet-facing interface of the DirectAccess server.|Configure the following:<br/><br/>-   If you are not using the default preference levels, you can configure your intranet interfaces by using the following command**netsh interface ipv6 set InterfaceIndex ignoredefaultroutes=enabled**.<br/>    This command ensures that additional default routes that point to intranet routers will not be added to the IPv6 routing table. You can obtain the interface index of your intranet interfaces by using the following command: **netsh interface ipv6 show interface**.|If you have an IPv6 intranet, to configure the DirectAccess server to reach all of the IPv6 locations, do the following:<br/><br/>-   List the IPv6 address spaces for all the locations on your intranet.<br/>-   Use the **netsh interface ipv6 add route** command to add the IPv6 address spaces as static routes in the IPv6 routing table of the DirectAccess server.|  
+    |IPv4 Internet and IPv6 intranet|The DirectAccess server forwards default IPv6 route traffic through the Microsoft 6to4 adapter to a 6to4 relay on the IPv4 Internet. You can configure a DirectAccess server for the IPv4 address of the Microsoft 6to4 adapter by using the following command:  `netsh interface ipv6 6to4 set relay name=<ipaddress> state=enabled`.|||  
   
     > [!NOTE]  
-    > -   If the DirectAccess client has been assigned a public IPv4 address, it will use the 6to4 transition technology to connect to the intranet. If it is assigned a private IPv4 address, it will use Teredo. If the DirectAccess client cannot connect to the DirectAccess server with 6to4 or Teredo, it will use IP-HTTPS.  
-    > -   To use Teredo, you must configure two consecutive IP addresses on the external facing network adapter.  
-    > -   You cannot use Teredo if the DirectAccess server has only one network adapter.  
-    > -   Native IPv6 client computers can connect to the DirectAccess server over native IPv6, and no transition technology is required.  
+    > - If the DirectAccess client has been assigned a public IPv4 address, it will use the 6to4 transition technology to connect to the intranet. If it is assigned a private IPv4 address, it will use Teredo. If the DirectAccess client cannot connect to the DirectAccess server with 6to4 or Teredo, it will use IP-HTTPS.  
+    > - To use Teredo, you must configure two consecutive IP addresses on the external facing network adapter.  
+    > - You cannot use Teredo if the DirectAccess server has only one network adapter.  
+    > - Native IPv6 client computers can connect to the DirectAccess server over native IPv6, and no transition technology is required.  
   
-### <a name="bkmk_intranet"></a>1.1.2 Plan IPv6 intranet connectivity  
+### 1.1.2 Plan IPv6 intranet connectivity
+
 To manage remote DirectAccess clients, IPv6 is required. IPv6 allows DirectAccess management servers to connect to DirectAccess clients that are located on the Internet for the purpose of remote management.  
   
 > [!NOTE]  
-> -   Using IPv6 on your network is not required to support connections that are initiated by DirectAccess client computers to IPv4 resources on your organization network. NAT64/DNS64 is used for this purpose.  
-> -   If you are not managing remote DirectAccess clients, you do not need to deploy IPv6.  
-> -   Intra-Site Automatic Tunnel Addressing Protocol (ISATAP) is not supported in DirectAccess deployments.  
-> -   When you use IPv6, you can enable IPv6 host (AAAA) resource record queries for DNS64 by using the following Windows PowerShell command:   **Set-NetDnsTransitionConfiguration -OnlySendAQuery $false**.  
+> - Using IPv6 on your network is not required to support connections that are initiated by DirectAccess client computers to IPv4 resources on your organization network. NAT64/DNS64 is used for this purpose.  
+> - If you are not managing remote DirectAccess clients, you do not need to deploy IPv6.  
+> - Intra-Site Automatic Tunnel Addressing Protocol (ISATAP) is not supported in DirectAccess deployments.  
+> - When you use IPv6, you can enable IPv6 host (AAAA) resource record queries for DNS64 by using the following Windows PowerShell command:   **Set-NetDnsTransitionConfiguration -OnlySendAQuery $false**.  
   
-### <a name="bkmk_force"></a>1.1.3 Plan for force tunneling  
+### 1.1.3 Plan for force tunneling
+
 With IPv6 and the Name Resolution Policy Table (NRPT), by default, DirectAccess clients separate their intranet and Internet traffic as follows:  
   
--   DNS name queries for intranet fully qualified domain names (FQDNs) and all intranet traffic is exchanged over the tunnels that are created with the DirectAccess server or directly with intranet servers. Intranet traffic from DirectAccess clients is IPv6 traffic.  
+- DNS name queries for intranet fully qualified domain names (FQDNs) and all intranet traffic is exchanged over the tunnels that are created with the DirectAccess server or directly with intranet servers. Intranet traffic from DirectAccess clients is IPv6 traffic.  
   
--   DNS name queries for FQDNs that correspond to exemption rules or do not match the intranet namespace, and all traffic to Internet servers, is exchanged over the physical interface that is connected to the Internet. Internet traffic from DirectAccess clients is typically IPv4 traffic.  
+- DNS name queries for FQDNs that correspond to exemption rules or do not match the intranet namespace, and all traffic to Internet servers, is exchanged over the physical interface that is connected to the Internet. Internet traffic from DirectAccess clients is typically IPv4 traffic.  
   
 In contrast, by default, some remote access virtual private network (VPN) implementations, including the VPN client, send all intranet and Internet traffic over the remote access VPN connection. Internet-bound traffic is routed by the VPN server to intranet IPv4 web proxy servers for access to IPv4 Internet resources. It is possible to separate the intranet and Internet traffic for remote access VPN clients by using split tunneling. This involves configuring the Internet Protocol (IP) routing table on VPN clients so that traffic to intranet locations is sent over the VPN connection, and traffic to all other locations is sent by using the physical interface that is connected to the Internet.  
   
@@ -95,28 +97,29 @@ You can configure DirectAccess clients to send all of their traffic through the 
   
 Enabling force tunneling has the following consequences:  
   
--   DirectAccess clients use only Internet Protocol over Secure Hypertext Transfer Protocol (IP-HTTPS) to obtain IPv6 connectivity to the DirectAccess server over the IPv4 Internet.  
+- DirectAccess clients use only Internet Protocol over Secure Hypertext Transfer Protocol (IP-HTTPS) to obtain IPv6 connectivity to the DirectAccess server over the IPv4 Internet.  
   
--   The only locations that a DirectAccess client can reach by default with IPv4 traffic are those on its local subnet. All other traffic that is sent by applications and services running on the DirectAccess client is IPv6 traffic, which is sent over the DirectAccess connection. Therefore, IPv4-only applications on the DirectAccess client cannot be used to reach Internet resources, except those on the local subnet.  
+- The only locations that a DirectAccess client can reach by default with IPv4 traffic are those on its local subnet. All other traffic that is sent by applications and services running on the DirectAccess client is IPv6 traffic, which is sent over the DirectAccess connection. Therefore, IPv4-only applications on the DirectAccess client cannot be used to reach Internet resources, except those on the local subnet.  
   
 > [!IMPORTANT]  
 > For force tunneling through DNS64 and NAT64, IPv6 Internet connectivity must be implemented. One way to achieve this is by making the IP-HTTPS prefix globally routable, so that ipv6.msftncsi.com will be reachable over IPv6, and the response from the Internet server to the IP-HTTPS clients is able to return through the DirectAccess server.  
->   
+>
 > Because this is not feasible in most cases, the best option is to create virtual NCSI servers inside the corporate network as follows:  
->   
-> 1.  Add an NRPT entry for ipv6.msftncsi.com and resolve it against DNS64 to an internal website (this can be IPv4 website).  
-> 2.  Add an NRPT entry for dns.msftncsi.com and resolve it against a corporate DNS server to return the IPv6 host (AAAA) resource record fd3e:4f5a:5b81::1. (Using DNS64 to only send host (A) resource record queries for this FQDN may not work because it is configured in IPv4 only deployments, so you should configure it to resolve against corporate DNS directly.)  
+>
+> 1. Add an NRPT entry for ipv6.msftncsi.com and resolve it against DNS64 to an internal website (this can be IPv4 website).  
+> 2. Add an NRPT entry for dns.msftncsi.com and resolve it against a corporate DNS server to return the IPv6 host (AAAA) resource record fd3e:4f5a:5b81::1. (Using DNS64 to only send host (A) resource record queries for this FQDN may not work because it is configured in IPv4 only deployments, so you should configure it to resolve against corporate DNS directly.)  
   
-## <a name="bkmk_ConfigFirewalls"></a>1.2 Plan firewall requirements  
+## 1.2 Plan firewall requirements
+
 If the DirectAccess server is behind an edge firewall, the following exceptions are required for Remote Access traffic when the DirectAccess server is on the IPv4 Internet:  
   
--   Teredo traffic-User Datagram Protocol (UDP) destination port 3544 inbound, and UDP source port 3544 outbound.  
+- Teredo traffic-User Datagram Protocol (UDP) destination port 3544 inbound, and UDP source port 3544 outbound.  
   
--   6to4 traffic-IP Protocol 41 inbound and outbound.  
+- 6to4 traffic-IP Protocol 41 inbound and outbound.  
   
--   IP-HTTPS-Transmission Control Protocol (TCP) destination port 443, and TCP source port 443 outbound.  
+- IP-HTTPS-Transmission Control Protocol (TCP) destination port 443, and TCP source port 443 outbound.  
   
--   If you are deploying Remote Access with a single network adapter, and installing the network location server on the DirectAccess server, TCP port 62000 should also be exempted.  
+- If you are deploying Remote Access with a single network adapter, and installing the network location server on the DirectAccess server, TCP port 62000 should also be exempted.  
   
     > [!NOTE]  
     > This exemption is on the DirectAccess server, and all other exemptions are on the edge firewall.  
@@ -125,34 +128,35 @@ For Teredo and 6to4 traffic, these exceptions should be applied for both of the 
   
 The following exceptions are required for Remote Access traffic when the DirectAccess server is on the IPv6 Internet:  
   
--   IP Protocol ID 50  
+- IP Protocol ID 50  
   
--   UDP destination port 500 inbound, and UDP source port 500 outbound  
+- UDP destination port 500 inbound, and UDP source port 500 outbound  
   
--   ICMPv6 traffic inbound and outbound (when using Teredo only)  
+- ICMPv6 traffic inbound and outbound (when using Teredo only)  
   
 When you use additional firewalls, apply the following internal network firewall exceptions for Remote Access traffic:  
   
--   ISATAP-Protocol 41 inbound and outbound  
+- ISATAP-Protocol 41 inbound and outbound  
   
--   TCP/UDP for all IPv4 and IPv6 traffic  
+- TCP/UDP for all IPv4 and IPv6 traffic  
   
--   ICMP for all IPv4 and IPv6 traffic (when using Teredo only)  
+- ICMP for all IPv4 and IPv6 traffic (when using Teredo only)  
   
-## <a name="bkmk_12CAsandCerts"></a>1.3 Plan certificate requirements  
+## 1.3 Plan certificate requirements
+
 There are three scenarios that require certificates when you deploy a single DirectAccess server:  
   
--   [1.3.1 Plan computer certificates for IPsec authentication](#BKMK_compcert)  
+- [1.3.1 Plan computer certificates for IPsec authentication](#131-plan-computer-certificates-for-ipsec-authentication)  
   
     Certificate requirements for IPsec include a computer certificate that is used by DirectAccess client computers when they establish the IPsec connection between the client and the DirectAccess server, and a computer certificate that is used by DirectAccess servers to establish IPsec connections with DirectAccess clients.  
   
     For DirectAccess in  Windows Server 2012  the use of these IPsec certificates is not mandatory. As an alternative the DirectAccess server can act as a Kerberos proxy to perform IPsec authentication without requiring certificates. If Kerberos protocol is used, it works over SSL, and the Kerberos proxy uses the certificate that is configured for IP-HTTPS for this purpose. Some enterprise scenarios (including multisite deployment and one-time password (OTP) client authentication) require the use of certificate authentication, and not the Kerberos protocol.  
   
--   [1.3.2 Plan certificates for IP-HTTPS](#bkmk_iph)  
+-   [1.3.2 Plan certificates for IP-HTTPS](#132-plan-certificates-for-ip-https)  
   
     When you configure Remote Access, the DirectAccess server is automatically configured to act as the IP-HTTPS listener. The IP-HTTPS site requires a website certificate, and client computers must be able to contact the certificate revocation list (CRL) site for the certificate.  
   
--   [1.3.3 Plan website certificates for the network location server](#bkmk_webnlc)  
+-   [1.3.3 Plan website certificates for the network location server](#133-plan-website-certificates-for-the-network-location-server)  
   
     The network location server is a website that is used to detect whether client computers are located in the corporate network. The network location server requires a website certificate. DirectAccess clients must be able to contact the CRL site for the certificate.  
   
@@ -160,11 +164,11 @@ The certification authority (CA) requirements for each scenario are summarized i
   
 |IPsec authentication|IP-HTTPS server|Network location server|  
 |------------|----------|--------------|  
-|An internal CA is required to issue computer certificates to the DirectAccess server and clients for IPsec authentication when you don't use the Kerberos proxy for authentication|Internal CA:<br /><br />You can use an internal CA to issue the IP-HTTPS certificate; however, you must make sure that the CRL distribution point is available externally.|Internal CA:<br /><br />You can use an internal CA to issue the network location server website certificate. Make sure that the CRL distribution point has high availability from the internal network.|  
-||Self-signed certificate:<br /><br />You can use a self-signed certificate for the IP-HTTPS server; however, you must make sure that the CRL distribution point is available externally.<br /><br />A self-signed certificate cannot be used in multisite deployments.|Self-signed certificate:<br /><br />You can use a self-signed certificate for the network location server website.<br /><br />A self-signed certificate cannot be used in multisite deployments.|  
-||**Recommended**<br /><br />Public CA:<br /><br />It is recommended to use a public CA to issue the IP-HTTPS certificate. This ensures that the CRL distribution point is available externally.|  
+|An internal CA is required to issue computer certificates to the DirectAccess server and clients for IPsec authentication when you don't use the Kerberos proxy for authentication|Internal CA:<br/><br/>You can use an internal CA to issue the IP-HTTPS certificate; however, you must make sure that the CRL distribution point is available externally.|Internal CA:<br/><br/>You can use an internal CA to issue the network location server website certificate. Make sure that the CRL distribution point has high availability from the internal network.|  
+||Self-signed certificate:<br/><br/>You can use a self-signed certificate for the IP-HTTPS server; however, you must make sure that the CRL distribution point is available externally.<br/><br/>A self-signed certificate cannot be used in multisite deployments.|Self-signed certificate:<br/><br/>You can use a self-signed certificate for the network location server website.<br/><br/>A self-signed certificate cannot be used in multisite deployments.|  
+||**Recommended**<br/><br/>Public CA:<br/><br/>It is recommended to use a public CA to issue the IP-HTTPS certificate. This ensures that the CRL distribution point is available externally.|  
   
-### <a name="BKMK_compcert"></a>1.3.1 Plan computer certificates for IPsec authentication  
+### 1.3.1 Plan computer certificates for IPsec authentication  
 If you are using certificate-based IPsec authentication, the DirectAccess server and clients are required to obtain a computer certificate. The simplest way to install the certificates is to configure Group Policy-based automatic enrollment for computer certificates. This ensures that all domain members obtain a certificate from an enterprise CA. If you do not have an enterprise CA set up in your organization, see [Active Directory Certificate Services](https://technet.microsoft.com/library/cc770357.aspx).  
   
 This certificate has the following requirements:  
@@ -173,7 +177,7 @@ This certificate has the following requirements:
   
 -   The client certificate and the server certificate should chain to the same root certificate. This root certificate must be selected in the DirectAccess configuration settings.  
   
-### <a name="bkmk_iph"></a>1.3.2 Plan certificates for IP-HTTPS  
+### 1.3.2 Plan certificates for IP-HTTPS  
 The   DirectAccess server acts as an IP-HTTPS listener, and you must manually install an HTTPS website certificate on the server. Consider the following when you are planning:  
   
 -   Using a public CA is recommended, so that certificate revocation lists (CRLs) are readily available.  
@@ -278,7 +282,7 @@ To use IP-HTTPS on a non-standard port, perform the following steps on the domai
   
 To complete the manual process for using an IP-HTTPS non-standard port, run **gpupdate /force** on the client computers and the DirectAccess server.  
   
-### <a name="bkmk_webnlc"></a>1.3.3 Plan website certificates for the network location server  
+### 1.3.3 Plan website certificates for the network location server  
 When you plan for the network location server website, consider the following:  
   
 -   In the **Subject** field, specify the IP address of the intranet interface of the network location server or the FQDN of the network location URL.  
@@ -292,12 +296,12 @@ When you plan for the network location server website, consider the following:
     > [!NOTE]  
     > Ensure that the certificates for IP-HTTPS and the network location server have a **Subject Name**. If the certificate does not have a **Subject Name**, but it has an **Alternative Name**, it will not be accepted by the Remote Access Wizard.  
   
-## <a name="bkmk_14Dns"></a>1.4 Plan DNS requirements  
+## 1.4 Plan DNS requirements  
 This section explains  the DNS requirements for DirectAccess client requests and infrastructure servers in a Remote Access deployment. It includes the following subsections:  
   
--   [1.4.1 Plan for DNS server requirements](#bkmk_dnsserverrequirements)  
+-   [1.4.1 Plan for DNS server requirements](#141-plan-for-dns-server-requirements)  
   
--   [1.4.2 Plan for local name resolution](#bkmk_dnslocalname)  
+-   [1.4.2 Plan for local name resolution](#142-plan-for-local-name-resolution)  
   
 **DirectAccess client requests**  
   
@@ -307,7 +311,7 @@ DNS is used to resolve requests from DirectAccess client computers that are not 
   
 -   If the connection does not succeed, clients are assumed to be located on the Internet, and DirectAccess clients will use the name resolution policy table (NRPT) to determine which DNS server to use when resolving name requests.  
   
-You can specify that clients use DirectAccess DNS64 to resolve names, or an alternative internal DNS server. When performing name resolution, the NRPT is used by DirectAccess clients to identify how to handle a request. Clients request an FQDN or single-label name such as https://internal. If a single-label name is requested, a DNS suffix is appended to make an FQDN. If the DNS query matches an entry in the NRPT, and DNS64 or a DNS server on the internal network is specified for the entry, the query is sent for name resolution using the specified server. If a match exists, but no DNS server is specified, this indicates an exemption rule, and normal name resolution is applied.  
+You can specify that clients use DirectAccess DNS64 to resolve names, or an alternative internal DNS server. When performing name resolution, the NRPT is used by DirectAccess clients to identify how to handle a request. Clients request an FQDN or single-label name such as <https://internal>. If a single-label name is requested, a DNS suffix is appended to make an FQDN. If the DNS query matches an entry in the NRPT, and DNS64 or a DNS server on the internal network is specified for the entry, the query is sent for name resolution using the specified server. If a match exists, but no DNS server is specified, this indicates an exemption rule, and normal name resolution is applied.  
   
 > [!NOTE]  
 > Note that when a new suffix is added to the NRPT in the Remote Access Management Console, the default DNS servers for the suffix can be automatically discovered by clicking **Detect**.  
@@ -326,7 +330,7 @@ Auto detection works as follows:
   
     -   A DNS suffix rule for the root domain or the domain name of the DirectAccess server, and the IPv6 addresses that correspond to the DNS64 address. In IPv6-only corporate networks, the intranet DNS servers are configured on the DirectAccess server. For example, if the DirectAccess server is a member of the corp.contoso.com domain, a rule is created for the corp.contoso.com DNS suffix.  
   
-    -   An exemption rule for the FQDN of the network location server. For example, if the network location server URL is https://nls.corp.contoso.com, an exemption rule is created for the FQDN nls.corp.contoso.com.  
+    -   An exemption rule for the FQDN of the network location server. For example, if the network location server URL is <https://nls.corp.contoso.com>, an exemption rule is created for the FQDN nls.corp.contoso.com.  
   
 -   **IP-HTTPS server**  
   
@@ -355,7 +359,7 @@ Auto detection works as follows:
   
     You can create additional connectivity verifiers by using other web addresses over HTTP or by using **ping**. For each connectivity verifier, a DNS entry must exist.  
   
-### <a name="bkmk_dnsserverrequirements"></a>1.4.1 Plan for DNS server requirements  
+### 1.4.1 Plan for DNS server requirements  
 Following are the requirements for DNS when you deploy DirectAccess.  
   
 -   For DirectAccess clients, you must use a DNS server that is running  Windows Server 2012 R2 ,  Windows Server 2012 ,  Windows Server 2008 R2 ,  Windows Server 2008 , or any other DNS server that supports IPv6.  
@@ -365,9 +369,9 @@ Following are the requirements for DNS when you deploy DirectAccess.
   
 -   Use a DNS server that supports dynamic updates. You can use DNS servers that do not support dynamic updates, but you must manually update entries on these servers.  
   
--   The FQDN for your Internet-accessible CRL distribution points must be resolvable by using Internet DNS servers. For example, if URL https://crl.contoso.com/crld/corp-DC1-CA.crl is in the **CRL Distribution Points** field of the IP-HTTPS certificate of the DirectAccess server, you must ensure that the FQDN crld.contoso.com is resolvable by using Internet DNS servers.  
+-   The FQDN for your Internet-accessible CRL distribution points must be resolvable by using Internet DNS servers. For example, if URL <https://crl.contoso.com/crld/corp-DC1-CA.crl> is in the **CRL Distribution Points** field of the IP-HTTPS certificate of the DirectAccess server, you must ensure that the FQDN crld.contoso.com is resolvable by using Internet DNS servers.  
   
-### <a name="bkmk_dnslocalname"></a>1.4.2 Plan for local name resolution  
+### 1.4.2 Plan for local name resolution  
 When you plan for local name resolution, consider the following issues:  
   
 **NRPT**  
@@ -386,7 +390,7 @@ You may need to create additional NRPT rules in the following cases:
   
 **Single label names**  
   
-Single label names, such as https://paycheck, are sometimes used for intranet servers. If a single label name is requested, and a DNS suffix search list is configured, the DNS suffixes in the list will be appended to the single label name. For example, when a user on a computer that is a member of the corp.contoso.com domain types https://paycheck in the web browser, the FQDN that is constructed as the name is paycheck.corp.contoso.com. By default the appended suffix is based on the primary DNS suffix of the client computer.  
+Single label names, such as <https://paycheck>, are sometimes used for intranet servers. If a single label name is requested, and a DNS suffix search list is configured, the DNS suffixes in the list will be appended to the single label name. For example, when a user on a computer that is a member of the corp.contoso.com domain types <https://paycheck> in the web browser, the FQDN that is constructed as the name is paycheck.corp.contoso.com. By default the appended suffix is based on the primary DNS suffix of the client computer.  
   
 > [!NOTE]  
 > In a disjoint name space scenario (where one or more domain computers has a DNS suffix that does not match the Active Directory domain to which the computers belong), you should ensure that the search list is customized to include all the required suffixes. By default, the Remote Access Wizard will configure the Active Directory DNS name as the primary DNS suffix on the client. Make sure to add the DNS suffix that is used by clients for name resolution.  
@@ -419,7 +423,7 @@ Local name resolution is typically needed for peer-to-peer connectivity when the
   
 -   **Use local name resolution for any kind of DNS resolution error (least secure)**. This is the least secure option because the names of intranet network servers can be leaked to the local subnet through local name resolution.  
   
-## <a name="bkmk_14NLS"></a>1.5 Plan the network location server  
+## 1.5 Plan the network location server  
 The network location server is a website that is used to detect whether DirectAccess clients are located in the corporate network. Clients in the corporate network do not use DirectAccess to reach internal resources, but instead, they connect directly.  
   
 The network location server website can be hosted on the DirectAccess server or on another server in your organization. If you host the network location server on the DirectAccess server, the website is created automatically when you install the Remote Access server role. If you host the network location server on another server in your organization running a Windows operating system, you must make sure that Internet Information Services (IIS) is installed on that server, and that the website is created. DirectAccess does not configure settings on a remote network location server.  
@@ -450,7 +454,7 @@ When you are obtaining the website certificate to use for the network location s
 ### 1.5.2 Plan DNS for the network location server  
 DirectAccess clients attempt to reach the network location server to determine if they are on the internal network. Clients on the internal network must be able to resolve the name of the network location server, but they must be prevented from resolving the name when they are located on the Internet. To ensure that this occurs, by default, the FQDN of the network location server is added as an exemption rule to the NRPT.  
   
-## <a name="bkmk_15mgmtservers"></a>1.6 Plan management servers  
+## 1.6 Plan management servers  
 DirectAccess clients initiate communications with management servers that provide services such as Windows Update and antivirus updates. DirectAccess clients also use the Kerberos protocol to contact domain controllers to authenticate before they access the internal network. During remote management of DirectAccess clients, management servers communicate with client computers to perform management functions such as software or hardware inventory assessments. Remote Access can automatically discover some management servers, including:  
   
 -   Domain controllers-Auto-discovery of domain controllers is performed for all domains in the same forest as the DirectAccess server and client computers.  
@@ -465,12 +469,12 @@ Domain controllers and System Center Configuration Manager servers are automatic
   
 -   Management servers that initiate connections to DirectAccess clients must fully support IPv6, by means of a native IPv6 address or by using one that is assigned by ISATAP.  
   
-## <a name="bkmk_16AD"></a>1.7 Plan Active Directory Domain Services  
+## 1.7 Plan Active Directory Domain Services  
 This section explains how DirectAccess uses Active Directory Domain Services (AD DS), and it includes the following subsections:  
   
--   [1.7.1 Plan client authentication](#bkmk_clientauth)  
+-   [1.7.1 Plan client authentication](#171-plan-client-authentication)  
   
--   [1.7.2 Plan multiple domains](#bkmk_multiple)  
+-   [1.7.2 Plan multiple domains](#172-plan-multiple-domains)  
   
 DirectAccess uses AD DS and Active Directory Group policy objects (GPOs) as follows:  
   
@@ -512,7 +516,7 @@ When you plan AD DS for a DirectAccess deployment, consider the following requir
 > -   The DirectAccess server cannot be a domain controller.  
 > -   The AD DS domain controller that is used for DirectAccess must not be reachable from the external Internet adapter of the DirectAccess server (that is, the adapter must not be in the domain profile of Windows Firewall).  
   
-### <a name="bkmk_clientauth"></a>1.7.1 Plan client authentication  
+### 1.7.1 Plan client authentication  
 DirectAccess allows you to choose between using certificates for IPsec computer authentication or using a built-in Kerberos proxy that authenticates by using user names and passwords.  
   
 When choosing to use Ad DS credentials for authentication, DirectAccess uses one security tunnel that uses Computer Kerberos for the first authentication and User Kerberos for the second authentication. When using this mode for authentication, DirectAccess uses a single security tunnel that provides access to the DNS server, the domain controller, and to other servers on the internal network.  
@@ -529,7 +533,7 @@ When DirectAccess is choosing to allow access to clients running  Windows 7  or 
   
 -   The intranet tunnel uses computer certificate credentials for the first authentication and User Kerberos for the second authentication.  
   
-### <a name="bkmk_multiple"></a>1.7.2 Plan multiple domains  
+### 1.7.2 Plan multiple domains  
 The management servers list should include domain controllers from all domains that contain security groups that include DirectAccess client computers. It should contain all domains that contain user accounts that might use computers that are configured as DirectAccess clients. This ensures that users who are not located in the same domain as the client computer they are using are authenticated with a domain controller in the user domain. This is done automatically if domains are in the same forest.  
   
 > [!NOTE]  
@@ -537,20 +541,20 @@ The management servers list should include domain controllers from all domains t
   
 Where possible, common domain name suffixes should be added to the Name Resolution Policy Table (NRPT) during the Remote Access deployment. For example, if you have two domains, domain1.corp.contoso.com and domain2.corp.contoso.com, instead of adding two entries into the NRPT, you can add a common DNS suffix entry, where the domain name suffix is corp.contoso.com. This happens automatically for domains in the same root, but domains that are not in the same root must be added manually.  
   
-If Windows Internet Name Service (WINS) is deployed in a multiple domain environment, you must deploy a WINS forward lookup zone in DNS. For more information, see **Single label names** in the [1.4.2 Plan for local name resolution](#bkmk_dnslocalname) section earlier in this document.  
+If Windows Internet Name Service (WINS) is deployed in a multiple domain environment, you must deploy a WINS forward lookup zone in DNS. For more information, see **Single label names** in the [1.4.2 Plan for local name resolution](#142-plan-for-local-name-resolution) section earlier in this document.  
   
-## <a name="bkmk_17GPOs"></a>1.8 Plan Group Policy Objects  
+## 1.8 Plan Group Policy Objects  
 This section explains the role of Group Policy Objects (GPOs) in your Remote Access infrastructure, and it includes the following subsections:  
   
--   [1.8.1 Configure automatically created GPOs](#bkmk_autoGPO)  
+-   [1.8.1 Configure automatically created GPOs](#181-configure-automatically-created-gpos)  
   
--   [1.8.2 Configure manually created GPOs](#bkmk_manualGPO)  
+-   [1.8.2 Configure manually created GPOs](#182-configure-manually-created-gpos)  
   
--   [1.8.3 Manage GPOs in a multi-domain controller environment](#bkmk_multiDC)  
+-   [1.8.3 Manage GPOs in a multi-domain controller environment](#183-manage-gpos-in-a-multi-domain-controller-environment)  
   
--   [1.8.4 Manage Remote Access GPOs with limited permissions](#bkmk_manageGPO)  
+-   [1.8.4 Manage Remote Access GPOs with limited permissions](#184-manage-remote-access-gpos-with-limited-permissions)  
   
--   [1.8.5 Recover from a deleted GPO](#bkmk_delGPO)  
+-   [1.8.5 Recover from a deleted GPO](#185-recover-from-a-deleted-gpo)  
   
 DirectAccess settings that are configured when you configure Remote Access are collected into GPOs. The following types of GPOs are populated with DirectAccess settings, and they are distributed as follows:  
   
@@ -582,7 +586,7 @@ Whether you are using automatically or manually configured GPOs, you need to add
   
 If the correct permissions (which are listed in the following sections) for linking GPOs do not exist, a warning is issued. The Remote Access operation will continue but linking will not occur. If this warning is issued, links will not be created automatically, even when the permissions are added later. Instead the administrator needs to create the links manually.  
   
-### <a name="bkmk_autoGPO"></a>1.8.1 Configure automatically created GPOs  
+### 1.8.1 Configure automatically created GPOs  
 Consider the following when you use automatically-created GPOs.  
   
 Automatically created GPOs are applied according to the location and link target parameter, as follows:  
@@ -605,7 +609,7 @@ In addition, the following permissions are needed:
   
 -   We recommend that the Remote Access administrator has GPO Read permissions for each required domain. This enables Remote Access to verify that GPOs with duplicate names do not exist when creating GPOs.  
   
-### <a name="bkmk_manualGPO"></a>1.8.2 Configure manually created GPOs  
+### 1.8.2 Configure manually created GPOs  
 Consider the following when using manually created GPOs:  
   
 -   The GPOs should exist before running the Remote Access Setup Wizard.  
@@ -614,7 +618,7 @@ Consider the following when using manually created GPOs:
   
 -   A search is made in the entire domain for a link to the GPO. If the GPO is not linked in the domain, a link is automatically created in the domain root. If the required permissions to create the link are not available, a warning is issued.  
   
-### <a name="bkmk_multiDC"></a>1.8.3 Manage GPOs in a multi-domain controller environment  
+### 1.8.3 Manage GPOs in a multi-domain controller environment  
 Each GPO is managed by a specific domain controller, as follows:  
   
 -   The server GPO is managed by one of the domain controllers in the Active Directory site that is associated with the server. If domain controllers in that site are Read-only, the server GPO is managed by the Write-enabled domain controller that is closest to the DirectAccess server.  
@@ -639,13 +643,13 @@ Alternatively, you can change the default setting by using the **Change Domain C
   
 -   To do this in Windows PowerShell, specify the **DomainController** parameter for the **Open-NetGPO** cmdlet. For example, to enable the private and public profiles in Windows Firewall on a GPO named domain1\DA_Server_GPO _Europe by using a domain controller named europe-dc.corp.contoso.com, enter the following:  
   
-    ```  
+    ```powershell
     $gpoSession = Open-NetGPO -PolicyStore "domain1\DA_Server_GPO _Europe" -DomainController "europe-dc.corp.contoso.com"  
     Set-NetFirewallProfile -GpoSession $gpoSession -Name @("Private","Public") -Enabled True  
     Save-NetGPO -GpoSession $gpoSession  
     ```  
   
-### <a name="bkmk_manageGPO"></a>1.8.4 Manage Remote Access GPOs with limited permissions  
+### 1.8.4 Manage Remote Access GPOs with limited permissions  
 To manage a Remote Access deployment, the Remote Access administrator requires full GPO permissions (Read, Edit, Delete, and Modify security permissions) on the GPOs that are used in the deployment. This is because the Remote Access Management console and the Remote Access PowerShell modules read the configuration from and write it to the Remote Access GPOs (that is, client, server, and application server GPOs).  
   
 In many organizations, the domain administrator who is in charge of GPO operations is not the same person as the Remote Access administrator who is in charge of the Remote Access configuration. These organizations may have policies that restrict the Remote Access administrator from having full permissions on GPOs in the domain. The domain administrator may be also required to review the policy configuration before applying it to any computer in the domain.  
@@ -662,10 +666,10 @@ The following diagram shows this configuration.
   
 ![Manage Remote Access GPOs](../../../media/Step-1-Plan-the-DirectAccess-Infrastructure/DA_Plan_Advanced_Step1_GPOS.png)  
   
-### <a name="bkmk_delGPO"></a>1.8.5 Recover from a deleted GPO  
+### 1.8.5 Recover from a deleted GPO  
 If a client, DirectAccess server, or application server GPO has been deleted accidentally and there is no backup available, you must remove the configuration settings and reconfigure them. If a backup is available, you can restore the GPO from the backup.  
   
-The Remote Access Management console will display the following error message: **GPO <GPO name> cannot be found**. To remove the configuration settings, take the following steps:  
+The Remote Access Management console will display the following error message: **GPO (GPO name) cannot be found**. To remove the configuration settings, take the following steps:  
   
 1.  Run the Windows PowerShell cmdlet **Uninstall-remoteaccess**.  
   
@@ -673,7 +677,7 @@ The Remote Access Management console will display the following error message: *
   
 3.  You will see an error message that the GPO is not found. Click **Remove configuration settings**. After completion, the server will be restored to an unconfigured state.  
   
-## <a name="BKMK_Links"></a>Next step  
+## Next steps  
   
 -   [Step 2: Plan DirectAccess Deployments](da-adv-plan-s2-deployments.md)  
   

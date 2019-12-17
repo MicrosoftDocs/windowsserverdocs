@@ -6,14 +6,12 @@ author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 
 ms.technology: identity-adfs
 ms.author: billmath
 ---
 # Interoperating with AD FS 1.x
-
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 For interoperability between Active Directory Federation Services \(AD FS\) in Windows Server® 2012 and AD FS 1.*x*, complete one or more of the following tasks, depending on the needs of your organization:  
   

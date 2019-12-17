@@ -3,7 +3,7 @@ title: Create Security Policies with Extended Port Access Control Lists
 description: This topic provides information about extended port Access Control Lists (ACLs) in Windows Server 2016. 
 manager: brianlic
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: networking-hv-switch

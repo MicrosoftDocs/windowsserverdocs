@@ -7,14 +7,12 @@ ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 
 ms.technology: identity-adfs
 ---
 
 # Review the Role of the Federation Server in the Account Partner
-
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 A federation server in Active Directory Federation Services \(AD FS\) functions as a security token issuer. A federation server generates claims based on account values that reside in a local attribute store and packages them into security tokens so that users can seamlessly access Web\-browser\-based applications \(using single sign\-on \(SSO\)\) that are hosted in a resource partner organization.  
   

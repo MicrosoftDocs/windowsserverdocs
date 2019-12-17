@@ -31,13 +31,13 @@ This topic provides troubleshooting for issues encountered while monitoring the 
   
  **Cause** This error might occur due to any of the following issues in the settings for alert notifications:  
   
--   An incorrect SMTP server name or port number.  
+- An incorrect SMTP server name or port number.  
   
--   It was incorrectly specified that the SMTP server requires a Single Sockets Layer (SSL) connection.  
+- It was incorrectly specified that the SMTP server requires a Single Sockets Layer (SSL) connection.  
   
--   The SMTP server requires authentication, and incorrect credentials were entered.  
+- The SMTP server requires authentication, and incorrect credentials were entered.  
   
- **Solutions** Correct any errors in your email notification settings.  
+  **Solutions** Correct any errors in your email notification settings.  
   
 ##### To identify issues in your email notification settings  
   
@@ -48,7 +48,7 @@ This topic provides troubleshooting for issues encountered while monitoring the 
      %ProgramData%\Microsoft\Windows Server\Logs\SharedServiceHost-AlertServiceConfig.log  
   
     > [!TIP]
-    >  To see the ProgramData folder, you must have hidden items displayed. If you don ��t see the ProgramData folder, on the ribbon ��s **View** tab, in the **Show/hide** group, select the **Hidden items** text box.  
+    >  To see the ProgramData folder, you must have hidden items displayed. If you don't see the ProgramData folder, on the ribbon's **View** tab, in the **Show/hide** group, select the **Hidden items** text box.  
   
 ##### To update your email notification setup for alerts  
   

@@ -2,7 +2,7 @@
 title: select volume
 description: "Windows Commands topic for **** - "
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -30,10 +30,10 @@ select volume={<n>|<d>}
   
 ## Parameters  
   
-|Parameter|Description|  
-|-------|--------|  
-|<n>|The number of the volume to receive the focus. You can view the numbers for all volumes on the disk currently selected by using the **list volume** command in DiskPart.|  
-|<d>|The drive letter or mount point path of the volume to receive the focus.|  
+| Parameter |                                                                               Description                                                                                |
+|-----------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|    <n>    | The number of the volume to receive the focus. You can view the numbers for all volumes on the disk currently selected by using the **list volume** command in DiskPart. |
+|    <d>    |                                                 The drive letter or mount point path of the volume to receive the focus.                                                 |
   
 ## Remarks  
   

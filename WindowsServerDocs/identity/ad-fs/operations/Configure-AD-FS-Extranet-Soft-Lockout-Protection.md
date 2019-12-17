@@ -5,16 +5,14 @@ description:
 author: billmath
 ms.author: billmath
 manager: femila
-ms.date: 09/08/2017
+ms.date: 02/01/2019
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 
 ms.technology: identity-adfs
 ---
 
 # Configure AD FS Extranet Lockout Protection
-
->Applies To: Windows Server 2012 R2
 
 In AD FS on Windows Server 2012 R2, we introduced a security feature called Extranet Lockout.  With this feature, AD FS will "stop" authenticating the "malicious" user account from outside for a period of time.  This prevents your user accounts from being locked out in Active Directory.  In addition to protecting your users from an AD account lockout, AD FS extranet lockout also protects against brute force password guessing attacks
 
@@ -90,9 +88,9 @@ There is a known issue where the AD user account cannot authenticate with AD FS 
 
 
 ## Additional references  
-[Best practices for securing Active Directory Federation Services](../../ad-fs/deployment/best-practices-securing-ad-fs.md)
-
-[Set-AdfsProperties](https://technet.microsoft.com/itpro/powershell/windows/adfs/set-adfsproperties)
+- [Best practices for securing Active Directory Federation Services](../../ad-fs/deployment/best-practices-securing-ad-fs.md)
+- [Delegate AD FS Powershell Commandlet Access to Non-Admin Users](delegate-ad-fs-pshell-access.md)
+- [Set-AdfsProperties](https://technet.microsoft.com/itpro/powershell/windows/adfs/set-adfsproperties)
 
 [AD FS Operations](../../ad-fs/AD-FS-2016-Operations.md)
 
