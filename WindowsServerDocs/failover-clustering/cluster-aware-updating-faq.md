@@ -51,7 +51,7 @@ Yes. CAU supports the following updating modes, both of which allow updates to b
 ## Can I schedule updates to apply during a backup?  
 Yes. CAU doesn't impose any constraints in this regard. However, performing software updates on a server \(with the associated potential restarts\) while a server backup is in progress is not an IT best practice. Be aware that CAU relies only on clustering APIs to determine resource failovers and failbacks; thus, CAU is unaware of the server backup status.  
   
-## Can CAU work with System Center Configuration Manager?  
+## Can CAU work with Configuration Manager?  
 CAU is a tool that coordinates software updates on a cluster node, and Configuration Manager also performs server software updates. It's important to configure these tools so that they don't have overlapping coverage of the same servers in any datacenter deployment, including using different Windows Server Update Services servers. This ensures that the objective behind using CAU is not inadvertently defeated, because Configuration Manager\-driven updating doesn't incorporate cluster awareness.  
   
 ## Do I need administrative credentials to run CAU?  

@@ -44,7 +44,7 @@ Because Nano Server is optimized as a lightweight operating system for running â
 - Group Policy is not supported. However, you can use [Desired State Configuration](https://msdn.microsoft.com/powershell/dsc/nanoDsc) to apply settings at scale.
 - Nano Server cannot be configured to use a proxy server to access the internet.
 - NIC Teaming (specifically, load balancing and failover, or LBFO) is not supported. Switch-embedded teaming (SET) is supported instead.
-- System Center Configuration Manager and System Center Data Protection Manager are not supported.
+- Microsoft Endpoint Configuration Manager and System Center Data Protection Manager are not supported.
 - Best Practices Analyzer (BPA) cmdlets and BPA integration with Server Manager are not supported.
 - Nano Server does not support virtual host bus adapters (HBAs).
 - Nano Server does not need to be activated with a product key. When functioning as a Hyper-V host, Nano Server does not support [Automatic Virtual Machine Activation](https://technet.microsoft.com/library/dn303421%28v=ws.11%29.aspx) (AVMA). Virtual machines running on a Nano Server host can be activated using [Key Management Service](https://technet.microsoft.com/library/jj612867(v=ws.11).aspx) (KMS) with a generic volume license key or using [Active Directory-based activation](https://technet.microsoft.com/library/dn502534(v=ws.11).aspx).

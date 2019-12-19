@@ -314,7 +314,7 @@ The following table lists the location of Roaming User Profiles on various versi
 
 Here are some ways to work around Start menu layouts getting reset after an in-place upgrade:
 
-- If only one user ever uses the device and the IT Admin uses a managed OS deployment strategy such as SCCM they can do the following:
+- If only one user ever uses the device and the IT Admin uses a managed OS deployment strategy such as Configuration Manager they can do the following:
     
   1. Export the Start menu layout with Export-Startlayout before the upgrade 
   2. Import the Start menu layout with Import-StartLayout after OOBE but before the user signs in  

@@ -155,9 +155,9 @@ Although they are not listed in the Server Manager console **Tools** menu, Windo
 
 ### **Issue**: RSAT FOD installation fails with error code 0x800f0954
 
-> **Impact**: RSAT FODs on Windows 10 1809 (October 2018 Update) in WSUS/SCCM environments
+> **Impact**: RSAT FODs on Windows 10 1809 (October 2018 Update) in WSUS/Configuration Manager environments
 > 
-> **Resolution**: To install FODs on a domain-joined PC which receives updates through WSUS or SCCM, you will need to change a Group Policy setting to enable downloading FODs directly from Windows Update or a local share. For more details and instructions on how to change that setting, see [How to make Features on Demand and language packs available when you're using WSUS/SCCM](https://docs.microsoft.com/windows/deployment/update/fod-and-lang-packs).
+> **Resolution**: To install FODs on a domain-joined PC which receives updates through WSUS or Configuration Manager, you will need to change a Group Policy setting to enable downloading FODs directly from Windows Update or a local share. For more details and instructions on how to change that setting, see [How to make Features on Demand and language packs available when you're using WSUS/SCCM](https://docs.microsoft.com/windows/deployment/update/fod-and-lang-packs).
 
 ---
 

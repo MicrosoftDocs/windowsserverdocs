@@ -91,7 +91,7 @@ For a client computer to be provisioned to use DirectAccess, it must belong to t
 4.  In the **Select Groups** dialog box, select the security groups that contain your DirectAccess client computers.  
   
     > [!NOTE]  
-    > If the security group is located in a different forest than the Remote Access server, after you complete the Remote Access Setup Wizard, click **Refresh Management Servers** in the **Tasks** pane to discover the domain controllers and System Center Configuration Manager servers in the new forest.  
+    > If the security group is located in a different forest than the Remote Access server, after you complete the Remote Access Setup Wizard, click **Refresh Management Servers** in the **Tasks** pane to discover the domain controllers and Configuration Manager servers in the new forest.  
   
 5.  Select the **Enable DirectAccess for mobile computers only** check box to allow only mobile computers to access the internal network, if required.  
   
@@ -159,10 +159,10 @@ To configure the infrastructure servers in a Remote Access deployment, you must 
   
 4.  On the **DNS Suffix Search List** page, the Remote Access server automatically detects any domain suffixes in the deployment. Use the **Add** and **Remove** buttons to add and remove domain suffixes from the list of domain suffixes to use. To add a new domain suffix, in **New Suffix**, enter the suffix, and then click **Add**. Click **Next**.  
   
-5.  On the **Management** page, add any management servers that are not detected automatically, and then click **Next**. Remote Access automatically adds domain controllers and System Center Configuration Manager servers.  
+5.  On the **Management** page, add any management servers that are not detected automatically, and then click **Next**. Remote Access automatically adds domain controllers and Configuration Manager servers.  
   
     > [!NOTE]  
-    > Although the servers are added automatically, they don't appear in the list. After you apply the configuration the first time, the System Center Configuration Manager servers appear in the list.  
+    > Although the servers are added automatically, they don't appear in the list. After you apply the configuration the first time, the Configuration Manager servers appear in the list.  
   
 6.  Click **Finish**.  
   

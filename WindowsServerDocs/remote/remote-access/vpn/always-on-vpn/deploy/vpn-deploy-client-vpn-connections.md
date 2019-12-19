@@ -20,7 +20,7 @@ ms.reviewer: deverette
 
 In this step, you'll learn about the ProfileXML options and schema, and configure the Windows 10 client computers to communicate with that infrastructure with a VPN connection.
 
-You can configure the Always On VPN client through PowerShell, SCCM, or Intune. All three require an XML VPN profile to configure the appropriate VPN settings. Automating PowerShell enrollment for organizations without SCCM or Intune is possible.
+You can configure the Always On VPN client through PowerShell, Configuration Manager, or Intune. All three require an XML VPN profile to configure the appropriate VPN settings. Automating PowerShell enrollment for organizations without Configuration Manager or Intune is possible.
 
 >[!NOTE]
 >Group Policy does not include administrative templates to configure the Windows 10 Remote Access Always On VPN client.  However, you can use logon scripts.
@@ -29,11 +29,11 @@ You can configure the Always On VPN client through PowerShell, SCCM, or Intune. 
 
 ProfileXML is a URI node within the VPNv2 CSP. Rather than configuring each VPNv2 CSP node individually—such as triggers, route lists, and authentication protocols—use this node to configure a Windows 10 VPN client by delivering all the settings as a single XML block to a single CSP node. The ProfileXML schema matches the schema of the VPNv2 CSP nodes almost identically, but some terms are slightly different.
 
-You use ProfileXML in all the delivery methods this deployment describes, including Windows PowerShell, System Center Configuration Manager, and Intune. There are two ways to configure the ProfileXML VPNv2 CSP node in this deployment:
+You use ProfileXML in all the delivery methods this deployment describes, including Windows PowerShell, Microsoft Endpoint Configuration Manager, and Intune. There are two ways to configure the ProfileXML VPNv2 CSP node in this deployment:
 
 - **OMA-DM**. One way is to use an MDM provider using OMA-DM, as discussed earlier in the section [VPNv2 CSP nodes](../always-on-vpn-technology-overview.md#vpnv2-csp-nodes). Using this method, you can easily insert the VPN profile configuration XML markup into the ProfileXML CSP node when using Intune.
 
-- **Windows Management Instrumentation (WMI)-to-CSP bridge**. The second method of configuring the ProfileXML CSP node is to use the WMI-to-CSP bridge—a WMI class called **MDM_VPNv2_01**—that can access the VPNv2 CSP and the ProfileXML node. When you create a new instance of that WMI  class, WMI uses the CSP to create the VPN profile when using Windows PowerShell and System Center Configuration Manager.
+- **Windows Management Instrumentation (WMI)-to-CSP bridge**. The second method of configuring the ProfileXML CSP node is to use the WMI-to-CSP bridge—a WMI class called **MDM_VPNv2_01**—that can access the VPNv2 CSP and the ProfileXML node. When you create a new instance of that WMI  class, WMI uses the CSP to create the VPN profile when using Windows PowerShell and Configuration Manager.
 
 Even though these configuration methods differ, both require a properly formatted XML VPN profile. To use the ProfileXML VPNv2 CSP setting, you construct XML by using the ProfileXML schema to configure the tags necessary for the simple deployment scenario. For more information, see [ProfileXML XSD](https://msdn.microsoft.com/windows/hardware/commercialize/customize/mdm/vpnv2-profile-xsd).
 
@@ -208,7 +208,7 @@ The Windows PowerShell script in Listing 1 creates two files on the desktop, bot
 
 - **VPN_Profile.xml.** This file contains the XML markup required to configure the ProfileXML node in the VPNv2 CSP. Use this file with OMA-DM–compatible MDM services, such as Intune.
 
-- **VPN_Profile.ps1.** This file is a Windows PowerShell script that you can run on client computers to configure the ProfileXML node in the VPNv2 CSP. You can also configure the CSP by deploying this script through System Center Configuration Manager. You cannot run this script in a Remote Desktop session, including a Hyper-V enhanced session.
+- **VPN_Profile.ps1.** This file is a Windows PowerShell script that you can run on client computers to configure the ProfileXML node in the VPNv2 CSP. You can also configure the CSP by deploying this script through Configuration Manager. You cannot run this script in a Remote Desktop session, including a Hyper-V enhanced session.
 
 >[!IMPORTANT]
 >The example commands below require Windows 10 Build 1607 or later.
@@ -227,7 +227,7 @@ This section explains the example code that you can use to gain an understanding
 
 After you assemble a script from this example code and run the script, the script generates two files: VPN_Profile.xml and VPN_Profile.ps1. Use VPN_Profile.xml to configure ProfileXML in OMA-DM compliant MDM services, such as Microsoft Intune.
 
-Use the **VPN_Profile.ps1** script in Windows PowerShell or System Center Configuration Manager to configure ProfileXML on the Windows 10 desktop.
+Use the **VPN_Profile.ps1** script in Windows PowerShell or Microsoft Endpoint Configuration Manager to configure ProfileXML on the Windows 10 desktop.
 
 >[!NOTE]
 >To view the full example script, see the section [MakeProfile.ps1 Full Script](#makeprofileps1-full-script).
@@ -321,11 +321,11 @@ You can use the following example command to save the profile XML file:
 $ProfileXML | Out-File -FilePath ($env:USERPROFILE + '\desktop\VPN_Profile.xml')
 ```
 
-### Output VPN_Profile.ps1 for the desktop and System Center Configuration Manager
+### Output VPN_Profile.ps1 for the desktop and Configuration Manager
 
 The following example code configures an AlwaysOn IKEv2 VPN Connection by using the ProfileXML node in the VPNv2 CSP.
 
-You can use this script on the Windows 10 desktop or in System Center Configuration Manager.
+You can use this script on the Windows 10 desktop or in Configuration Manager.
 
 ### Define key VPN profile parameters
 
@@ -449,10 +449,10 @@ Write-Host "$Message"
 
 Most examples use the Set-WmiInstance Windows PowerShell cmdlet to insert ProfileXML into a new instance of the MDM_VPNv2_01 WMI class. 
 
-However, this does not work in System Center Configuration Manager because you cannot run the package in the end users' context. Therefore, this script uses the Common Information Model to create a WMI session in the user's context, and then it creates a new instance of the MDM_VPNv2_01 WMI class in that session. This WMI class uses the WMI-to-CSP bridge to configure the VPNv2 CSP. Therefore, by adding the class instance, you configure the CSP. 
+However, this does not work in Configuration Manager because you cannot run the package in the end users' context. Therefore, this script uses the Common Information Model to create a WMI session in the user's context, and then it creates a new instance of the MDM_VPNv2_01 WMI class in that session. This WMI class uses the WMI-to-CSP bridge to configure the VPNv2 CSP. Therefore, by adding the class instance, you configure the CSP. 
 
 >[!IMPORTANT]
->WMI-to-CSP bridge requires local admin rights, by design. To deploy per user VPN profiles you should be using SCCM or MDM.
+>WMI-to-CSP bridge requires local admin rights, by design. To deploy per user VPN profiles you should be using Configuration Manager or MDM.
 
 >[!NOTE]
 >The script VPN_Profile.ps1 uses the current user's SID to identify the user's context. Because no SID is available in a Remote Desktop session, the script does not work in a Remote Desktop session. Likewise, it does not work in a Hyper-V enhanced session. If you're testing a Remote Access Always On VPN in virtual machines, disable enhanced session on your client VMs before running this script.
@@ -687,11 +687,11 @@ The ProfileXML configuration must be correct in structure, spelling, configurati
 
 If you need to troubleshoot the markup, it is easier to put it in an XML editor than to troubleshoot it in the Windows PowerShell ISE. In either case, start with the simplest version of the profile, and add components back one at a time until the issue occurs again.
 
-## Configure the VPN client by using System Center Configuration Manager
+## Configure the VPN client by using Configuration Manager
 
-In System Center Configuration Manager, you can deploy VPN profiles by using the ProfileXML CSP node, just like you did in Windows PowerShell. Here, you use the VPN_Profile.ps1 Windows PowerShell script that you created in the section [Create the ProfileXML configuration files](#create-the-profilexml-configuration-files).
+In Configuration Manager, you can deploy VPN profiles by using the ProfileXML CSP node, just like you did in Windows PowerShell. Here, you use the VPN_Profile.ps1 Windows PowerShell script that you created in the section [Create the ProfileXML configuration files](#create-the-profilexml-configuration-files).
 
-To use System Center Configuration Manager to deploy a Remote Access Always On VPN profile to Windows 10 client computers, you must start by creating a group of machines or users to whom you deploy the profile. In this scenario, create a user group to deploy the configuration script.
+To use Configuration Manager to deploy a Remote Access Always On VPN profile to Windows 10 client computers, you must start by creating a group of machines or users to whom you deploy the profile. In this scenario, create a user group to deploy the configuration script.
 
 ### Create a user group
 
