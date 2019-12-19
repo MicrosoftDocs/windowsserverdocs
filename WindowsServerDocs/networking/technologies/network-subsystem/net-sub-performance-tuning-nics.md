@@ -19,16 +19,16 @@ ms.date: 12/10/2019
 
 >Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
 
-You can use this topic to performance tune network adapters that are installed in computers that are running Windows Server 2016.
+You can use this topic to performance tune network adapters that are installed in computers that are running Windows Server 2016 and later versions.
 
 Determining the correct tuning settings for your network adapter depend on the following variables:
 
 - The network adapter and its feature set  
-- The type of workload performed by the server  
+- The type of workload that the server performs  
 - The server hardware and software resources  
 - Your performance goals for the server  
 
-If your network adapter provides tuning options, you can optimize network throughput and resource usage to achieve optimum throughput based on the parameters described above.  
+If your network adapter provides tuning options, you can use these parameters to optimize network throughput and resource usage.
 
 The following sections describe some of your performance tuning options.  
 
@@ -42,7 +42,7 @@ Turning on network adapter offload features is usually beneficial. Sometimes, ho
 For example, enabling segmentation offload can reduce the maximum sustainable throughput on some network adapters because of limited hardware resources. However, if the reduced throughput is not expected to be a limitation, you should enable offload capabilities, even for this type of network adapter.
 
 > [!NOTE]  
-> Some network adapters require offload features to be independently enabled for send and receive paths.
+> Some network adapters require you to enable offload features independently for the send and receive paths.
 
 ##  <a name="bkmk_rss_web"></a> Enabling receive-side scaling (RSS) for web servers
 
