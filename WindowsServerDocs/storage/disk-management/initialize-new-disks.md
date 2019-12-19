@@ -1,7 +1,7 @@
 ---
 title: Initialize new disks
 description: How to initialize new disks with Disk Management, getting them ready to use. Also includes links to troubleshooting issues.
-ms.date: 06/07/2019
+ms.date: 12/19/2019
 ms.prod: windows-server 
 ms.technology: storage 
 ms.topic: article 
@@ -35,6 +35,11 @@ Here's how to initialize a new disk using Disk Management. If you prefer using P
      The disk status briefly changes to **Initializing** and then to the **Online** status. If initializing fails for some reason, see [A disk's status is Not Initialized or the disk is missing entirely](troubleshooting-disk-management.md#a-disks-status-is-not-initialized-or-the-disk-is-missing).
 
     ![The Initialize Disk dialog box with the GPT partition style selected](media/initialize-disk.PNG)
+
+3. Select and hold (or right-click) the unallocated space on the drive and then select **New Simple Volume**.
+4. Select **Next**, specify the size of the volume (you'll likely want to stick with the default, which uses the whole drive), and then select **Next**.
+5. Specify the drive letter you want to assign to the volume and then select **Next**.
+6. Specify the file system you want to use (usually NTFS), select **Next**, and then **Finish**.
 
 ## About partition styles - GPT and MBR
 
