@@ -98,6 +98,7 @@ echo The Product.dat file is missing.
 > goto answer%errorlevel%
 > :answer1
 > echo Program had return code 1
+> goto end
 > :answer0
 > echo Program had return code 0
 > goto end
