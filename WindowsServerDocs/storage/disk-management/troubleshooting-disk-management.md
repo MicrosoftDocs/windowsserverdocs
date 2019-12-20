@@ -13,14 +13,14 @@ ms.author: jgerend
 
 > **Applies To:** Windows 10, Windows 8.1, Windows 7, Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-This topic lists a few common issues you may encounter when using Disk Management and troubleshooting steps that work at least a good percentage of the time.
+This topic lists a few common issues you may encounter when using Disk Management and troubleshooting steps to try.
 
 > [!TIP]
 > If you get an error or something doesn't work when following these procedures - don't panic! This topic is just the first thing to try; there's also a ton of info on the [Microsoft community](https://answers.microsoft.com/en-us/windows) site in the [Files, folders, and storage](https://answers.microsoft.com/en-us/windows/forum/windows_10-files?sort=lastreplydate&dir=desc&tab=All&status=all&mod=&modAge=&advFil=&postedAfter=&postedBefore=&threadType=all&isFilterExpanded=true&tm=1514405359639) section about the wide variety of hardware and software configurations you might be dealing with. If you still need help, post a question there, or [Contact Microsoft Support](https://support.microsoft.com/contactus/) or the manufacturer of your hardware.
 
 ## How to open Disk Management
 
-Before we launch into the tricky stuff, here's an easy way to get to Disk Management in the first place:
+Before we launch into the tricky stuff, here's an easy way to get to Disk Management in case you're not there already:
 
 1. Type **Computer Management** in the search box on the taskbar, select and hold (or right-click) **Computer Management**, and then select **Run as administrator** > **Yes**.
 2. After Computer Management opens, go to **Storage** > **Disk Management**.
