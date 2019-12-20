@@ -81,7 +81,7 @@ There are a bunch of reasons a disk or memory card might be missing or fail to i
 
 Disks might also display the **Unreadable** status while they are spinning up or when Disk Management is rescanning all of the disks on the system. In some cases, an unreadable disk has failed and is not recoverable. For dynamic disks, the **Unreadable** status usually results from corruption or I/O errors on part of the disk, rather than failure of the entire disk.
 
-**Solution:** Rescan the disks or restart the computer to see if the disk status changes. Also try the troubleshooting steps described in [A disk's status is Not Initialized or the disk is missing entirely](#a-disks-status-is-not-initialized-or-the-disk-is-missing).
+**Solution:** Rescan the disks or restart the computer to see if the disk status changes. Also try the troubleshooting steps described in [A disk's status is Not Initialized or the disk is missing entirely](#disks-that-are-missing-or-not-initialized-plus-general-troubleshooting-steps).
 
 ## A dynamic disk's status is Foreign
 
@@ -109,7 +109,7 @@ To bring a disk that is Offline and Missing back online:
 1. Repair any disk, controller, or cable problems. 
 2. Make sure that the physical disk is turned on, plugged in, and attached to the computer. 
 3. Next, use the **Reactivate Disk** command to bring the disk back online.
-4. Try the troubleshooting steps described in [A disk's status is Not Initialized or the disk is missing entirely](#a-disks-status-is-not-initialized-or-the-disk-is-missing).
+4. Try the troubleshooting steps described in [A disk's status is Not Initialized or the disk is missing entirely](#disks-that-are-missing-or-not-initialized-plus-general-troubleshooting-steps).
 5. If the disk status remains **Offline** and the disk name remains **Missing**, and you determine that the disk has a problem that cannot be repaired, you can remove the disk from the system by selecting and holding (or right-clicking) the disk and then clicking **Remove Disk**). However, before you can remove the disk, you must delete all volumes (or mirrors) on the disk. You can save any mirrored volumes on the disk by removing the mirror instead of the entire volume. Deleting a volume destroys the data in the volume, so you should remove a disk only if you are absolutely certain that the disk is permanently damaged and unusable.
 
 **To bring a disk that is Offline and is still named Disk \# (not Missing) back online, try one or more of the following procedures:**
@@ -130,13 +130,13 @@ To bring a disk that is Offline and Missing back online:
 If the volume is a basic volume with **Failed** status:
 
 - Make sure that the underlying physical disk is turned on, plugged in, and attached to the computer.
-- Try the troubleshooting steps described in [A disk's status is Not Initialized or the disk is missing entirely](#a-disks-status-is-not-initialized-or-the-disk-is-missing).
+- Try the troubleshooting steps described in [A disk's status is Not Initialized or the disk is missing entirely](#disks-that-are-missing-or-not-initialized-plus-general-troubleshooting-steps).
 
 If the volume is a dynamic volume with **Failed** status:
 
 -   Make sure the underlying disks are online. If not, return the disks to the **Online** status. If this succeeds, the volume automatically restarts and returns to the **Healthy** status. If the dynamic disk returns to the **Online** status, but the dynamic volume does not return to the **Healthy** status, you can reactivate the volume manually.
 -   If the dynamic volume is a mirrored or RAID-5 volume with old data, bringing the underlying disk online will not automatically restart the volume. If the disks that contain current data are disconnected,  bring those disks online first (to allow the data to become synchronized). Otherwise, restart the mirrored or RAID-5 volume manually, and then run the Error-checking tool or Chkdsk.exe.
-- Try the troubleshooting steps described in [A disk's status is Not Initialized or the disk is missing entirely](#a-disks-status-is-not-initialized-or-the-disk-is-missing).
+- Try the troubleshooting steps described in [A disk's status is Not Initialized or the disk is missing entirely](#disks-that-are-missing-or-not-initialized-plus-general-troubleshooting-steps).
 
 ## A basic or dynamic volume's status is Unknown
 
