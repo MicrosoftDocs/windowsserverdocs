@@ -12,7 +12,7 @@ ms.product: w10
 
 Most authentication in Windows environments is done with a username-password pair.
 This works well for systems that share a common domain. 
-When working across domains, such as between on-premise and cloud-hosted systems, it becomes more difficult.
+When working across domains, such as between on-premises and cloud-hosted systems, it becomes more difficult.
 
 By comparison, Linux environments commonly use public-key/private-key pairs to drive authentication.
 OpenSSH includes tools to help support this, specifically:
@@ -28,7 +28,7 @@ If you are unfamiliar with SSH key management, we strongly recommend you review 
 
 Key pairs refer to the public and private key files that are used by certain authentication protocols. 
 
-SSH public-key authentication uses asymmetric cryptographic algorithms to generate two key files – one "private" and the other "public". The private key files are the equivalent of a password, and should protected under all circumstances. If someone acquires your private key, they can log in as you to any SSH server you have access to. The public key is what is placed on the SSH server, and may be shared without compromising the private key.
+SSH public-key authentication uses asymmetric cryptographic algorithms to generate two key files – one "private" and the other "public". The private key files are the equivalent of a password, and should be protected under all circumstances. If someone acquires your private key, they can log in as you to any SSH server you have access to. The public key is what is placed on the SSH server, and may be shared without compromising the private key.
 
 When using key authentication with an SSH server, the SSH server and client compare the public key for username  provided against the private key. If the public key cannot be validated against the client-side private key, authentication fails. 
 
@@ -57,7 +57,7 @@ Start-Service ssh-agent
 Start-Service sshd
 ```
 
-Since there is no user associated with the sshd service, the host keys are stored under \ProgramData\ssh.
+Since there is no user associated with the sshd service, the host keys are stored under %ProgramData%\ssh.
 
 
 ## User key generation
@@ -73,8 +73,8 @@ ssh-keygen
 This should display something like the following (where "username" is replaced by your user name)
 
 ```
-Generating public/private ed25519 key pair.
-Enter file in which to save the key (C:\Users\username\.ssh\id_ed25519):
+Generating public/private rsa key pair.
+Enter file in which to save the key (C:\Users\username\.ssh\id_rsa):
 ```
 
 You can hit Enter to accept the default, or specify a path where you'd like your keys to be generated. 
@@ -85,13 +85,13 @@ For this example, we are leaving the passphrase empty.
 ```
 Enter passphrase (empty for no passphrase): 
 Enter same passphrase again: 
-Your identification has been saved in C:\Users\username\.ssh\id_ed25519.
-Your public key has been saved in C:\Users\username\.ssh\id_ed25519.pub.
+Your identification has been saved in C:\Users\username\.ssh\id_rsa.
+Your public key has been saved in C:\Users\username\.ssh\id_rsa.pub.
 The key fingerprint is: 
 SHA256:OIzc1yE7joL2Bzy8!gS0j8eGK7bYaH1FmF3sDuMeSj8 username@server@LOCAL-HOSTNAME
 
 The key's randomart image is:
-+--[ED25519 256]--+
++---[RSA 2048]----+
 |        .        |
 |         o       |
 |    . + + .      |
@@ -104,14 +104,14 @@ The key's randomart image is:
 +----[SHA256]-----+
 ```
 
-Now you have a public/private ED25519 key pair
+Now you have a public/private rsa key pair
 (the .pub files are public keys and the rest are private keys):
 
 ```
 Mode                LastWriteTime         Length Name
 ----                -------------         ------ ----
--a----        9/28/2018  11:09 AM           1679 id_ed25519
--a----        9/28/2018  11:09 AM            414 id_ed25519.pub
+-a----        9/28/2018  11:09 AM           1679 id_rsa
+-a----        9/28/2018  11:09 AM            414 id_rsa.pub
 ```
 
 Remember that private key files are the equivalent of a password should be protected the same way you protect your password.
@@ -126,7 +126,7 @@ Start-Service ssh-agent
 Get-Service ssh-agent
 
 # Now load your key files into ssh-agent
-ssh-add ~\.ssh\id_ed25519
+ssh-add ~\.ssh\id_rsa
 
 ```
 
@@ -141,22 +141,22 @@ After completing these steps, whenever a private key is needed for authenticatio
 
 ## Deploying the public key
 
-To use the user key that was created above, the public key needs to be placed on the server into a text file called *authorized_keys* under users\username\.ssh\. 
+To use the user key that was created above, the public key needs to be placed on the server into a text file called *authorized_keys* under `C:\Users\username\.ssh\`. 
 The OpenSSH tools include scp, which is a secure file-transfer utility, to help with this.
 
-To move the contents of your public key (~\.ssh\id_ed25519.pub) into a text file called authorized_keys in ~\.ssh\ on your server/host.
+To move the contents of your public key (`~\.ssh\id_rsa.pub`) into a text file called authorized_keys in `~\.ssh\` on your server/host.
 
 This example uses the Repair-AuthorizedKeyPermissions function in the OpenSSHUtils module which was previously installed on the host in the instructions above.
 
 ```powershell
 # Make sure that the .ssh directory exists in your server's home folder
-ssh user1@domain1@contoso.com mkdir C:\users\user1\.ssh\
+ssh user1@domain1@contoso.com mkdir C:\users\user1\.ssh
 
-# Use scp to opy the public key file generated previously to authorized_keys on your server
-scp C:\Users\user1\.ssh\id_ed25519.pub user1@domain1@contoso.com:C:\Users\user1\.ssh\authorized_keys
+# Use scp to copy the public key file generated previously to authorized_keys on your server
+scp C:\Users\user1\.ssh\id_rsa.pub user1@domain1@contoso.com:C:\Users\user1\.ssh\authorized_keys
 
 # Appropriately ACL the authorized_keys file on your server  
-ssh --% user1@domain1@contoso.com powershell -c $ConfirmPreference = 'None'; Repair-AuthorizedKeyPermission C:\Users\user1\.ssh\authorized_keys
+ssh --% user1@domain1@contoso.com powershell -c Repair-AuthorizedKeyPermission C:\Users\user1\.ssh\authorized_keys -Confirm:`$false
 ```
 
 These steps complete the configuration required to use key-based authentication with SSH on Windows.
