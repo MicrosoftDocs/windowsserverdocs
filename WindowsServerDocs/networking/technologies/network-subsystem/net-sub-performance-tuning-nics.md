@@ -34,25 +34,29 @@ The following sections describe some of your performance tuning options.
 
 ##  <a name="bkmk_offload"></a> Enabling offload features
 
-Turning on network adapter offload features is usually beneficial. Sometimes, however, the network adapter is not powerful enough to handle the offload capabilities with high throughput.
+Turning on network adapter offload features is usually beneficial. However, the network adapter might not be powerful enough to handle the offload capabilities with high throughput.
 
 > [!IMPORTANT]
 > Do not use the offload features **IPsec Task Offload** or **TCP Chimney Offload**. These technologies are deprecated in Windows Server 2016, and might adversely affect server and networking performance. In addition, these technologies might not be supported by Microsoft in the future.
 
-For example, enabling segmentation offload can reduce the maximum sustainable throughput on some network adapters because of limited hardware resources. However, if the reduced throughput is not expected to be a limitation, you should enable offload capabilities, even for this type of network adapter.
+For example, consider a network adapter that has limited hardware resources.
+In that case, enabling segmentation offload features might reduce the maximum sustainable throughput of the adapter. However, if the reduced throughput is acceptable, you should go ahead an enable the segmentation offload features.
 
 > [!NOTE]  
 > Some network adapters require you to enable offload features independently for the send and receive paths.
 
 ##  <a name="bkmk_rss_web"></a> Enabling receive-side scaling (RSS) for web servers
 
-RSS can improve web scalability and performance when there are fewer network adapters than logical processors on the server. When all the web traffic is going through the RSS-capable network adapters, incoming web requests from different connections can be simultaneously processed across different CPUs.
+RSS can improve web scalability and performance when there are fewer network adapters than logical processors on the server. When all the web traffic is going through the RSS-capable network adapters, the server can process incoming web requests from different connections simultaneously across different CPUs.
 
-It is important to note that due to the logic in RSS and Hypertext Transfer Protocol (HTTP) for load distribution, performance might be severely degraded if a non-RSS-capable network adapter accepts web traffic on a server that has one or more RSS-capable network adapters. In this circumstance, you should use RSS-capable network adapters or disable RSS on the network adapter properties **Advanced Properties** tab. To determine whether a network adapter is RSS-capable, you can view the RSS information on the network adapter properties **Advanced Properties** tab.
+> [!IMPORTANT]  
+> Avoid using both non-RSS network adapters and RSS-capable network adapters on the same server. Because of the load distribution logic in RSS and Hypertext Transfer Protocol (HTTP), performance might be severely degraded if a non-RSS-capable network adapter accepts web traffic on a server that has one or more RSS-capable network adapters. In this circumstance, you should use RSS-capable network adapters or disable RSS on the network adapter properties **Advanced Properties** tab.
+>  
+> To determine whether a network adapter is RSS-capable, you can view the RSS information on the network adapter properties **Advanced Properties** tab.
 
 ### RSS Profiles and RSS Queues
 
-The default RSS predefined profile is Non-Uniform Memory Access (NUMA)-Static, which changes the default behavior from previous versions of the operating system. To get started with RSS Profiles, you can review the available profiles to understand when they are beneficial and how they apply to your network environment and hardware.
+The default RSS predefined profile is Non-Uniform Memory Access (NUMA)-Static, which changes the default behavior from previous versions of Windows. Before you start using RSS profiles, review the available profiles to understand when they are beneficial and how they apply to your network environment and hardware.
 
 For example, if you open Task Manager and review the logical processors on your server, and they seem to be underutilized for receive traffic, you can try increasing the number of RSS queues from the default of two to the maximum that your network adapter supports. Your network adapter might have options to change the number of RSS queues as part of the driver.
 
@@ -67,9 +71,9 @@ Some network adapters set their receive buffers low to conserve allocated memory
 
 ### Enabling interrupt moderation
 
-To control interrupt moderation, some network adapters expose different interrupt moderation levels, buffer coalescing parameters (sometimes separately for send and receive buffers), or both.
+To control interrupt moderation, some network adapters expose different interrupt moderation levels, different buffer coalescing parameters (sometimes separately for send and receive buffers), or both.
 
-You should consider interrupt moderation for CPU-bound workloads, and consider the trade-off between the host CPU savings and latency versus the increased host CPU savings because of more interrupts and less latency. If the network adapter does not perform interrupt moderation, but it does expose buffer coalescing, increasing the number of coalesced buffers allows more buffers per send or receive, which improves performance.
+You should consider interrupt moderation for CPU-bound workloads. When using interrupt moderation, consider the trade-off between the host CPU savings and latency versus the increased host CPU savings because of more interrupts and less latency. If the network adapter does not perform interrupt moderation, but it does expose buffer coalescing, you can improve performance by increasing the number of coalesced buffers to allow more buffers per send or receive.
 
 ##  <a name="bkmk_low"></a> Performance tuning for low-latency packet processing
 
@@ -136,7 +140,7 @@ This feature also makes full use of other features to improve network performanc
 
 #### Review and configure TCP receive window autotuning level
 
-You can use either netsh commands or Windows Powershell cmdlets to review or modify the TCP receive window autotuning level.
+You can use either netsh commands or Windows PowerShell cmdlets to review or modify the TCP receive window autotuning level.
 
 > [!NOTE]  
 > Unlike in versions of Windows that pre-date Windows 10 or Windows Server 2019, you can no longer use the registry to configure the TCP receive window size. For more information about the deprecated settings, see [Deprecated TCP parameters](#deprecated-tcp-parameters).
