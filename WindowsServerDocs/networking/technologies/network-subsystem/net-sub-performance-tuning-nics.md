@@ -103,7 +103,7 @@ The SMI is the highest-priority interrupt on the system, and places the CPU in a
 
 Unfortunately, this behavior can result in latency spikes of 100 microseconds or more.
 
-If you need to achieve the lowest latency, you should request a BIOS version from your hardware provider that reduces SMIs to the lowest degree possible. These are frequently referred to as “low latency BIOS” or “SMI free BIOS.” In some cases, it is not possible for a hardware platform to eliminate SMI activity altogether because it is used to control essential functions (for example, cooling fans).
+If you need to achieve the lowest latency, you should request a BIOS version from your hardware provider that reduces SMIs to the lowest degree possible. These BIOS versions are frequently referred to as “low latency BIOS” or “SMI free BIOS.” In some cases, it is not possible for a hardware platform to eliminate SMI activity altogether because it is used to control essential functions (for example, cooling fans).
 
 > [!NOTE]  
 > The operating system cannot control SMIs because the logical processor is running in a special maintenance mode, which prevents operating system intervention.
@@ -122,7 +122,7 @@ For a TCP receive window that has a particular size, you can use the following e
 
 > *Total achievable throughput in bytes* = *TCP receive window size in bytes* \* (1 / *connection latency in seconds*)
 
-For example, on a connection that has a latency of 10 ms, the total achievable throughput is only 51 Mbps. This value is reasonable for a large corporate network infrastructure. However, by using autotuning to adjust the receive window, the connection can achieve the full line rate of a one-Gbps connection.  
+For example, on a connection that has a latency of 10 ms, the total achievable throughput is only 51 Mbps. This value is reasonable for a large corporate network infrastructure. However, by using autotuning to adjust the receive window, the connection can achieve the full line rate of a 1-Gbps connection.  
 
 Some applications define the size of the TCP receive window. If the application does not define the receive window size, the link speed determines the size as follows:
 
@@ -131,7 +131,7 @@ Some applications define the size of the TCP receive window. If the application 
 - 100 Mbps to 10 gigabits per second (Gbps): 64 KB
 - 10 Gbps or faster: 128 KB
 
-For example, on a computer that has a 1 Gbps network adapter installed, the window size should be 64 KB.
+For example, on a computer that has a 1-Gbps network adapter installed, the window size should be 64 KB.
 
 This feature also makes full use of other features to improve network performance. These features include the rest of the TCP options that are defined in [RFC 1323](https://tools.ietf.org/html/rfc1323). By using these features, Windows-based computers can negotiate TCP receive window sizes that are smaller but are scaled at a defined value, depending on the configuration. This behavior the sizes easier to handle for networking devices.
 
