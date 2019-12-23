@@ -12,12 +12,12 @@ ms.assetid: 0b9b0f80-415c-4f5e-8377-c09b51d9c5dd
 manager: dcscontentpm
 ms.author: pashort
 author: Teresa-Motiv
-ms.date: 12/10/2019
+ms.date: 12/23/2019
 ---
 
 # Performance Tuning Network Adapters
 
->Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
+> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 You can use this topic to performance tune network adapters that are installed in computers that are running Windows Server 2016 and later versions.
 
@@ -97,16 +97,16 @@ Following are some performance tuning suggestions for microsecond-sensitive netw
 
 ##  <a name="bkmk_smi"></a> System management interrupts
 
-Many hardware systems use System Management Interrupts (SMI) for a variety of maintenance functions, including reporting of error correction code (ECC) memory errors, legacy USB compatibility, fan control, and BIOS-controlled power management.
+Many hardware systems use System Management Interrupts (SMI) for a variety of maintenance functions, such as reporting error correction code (ECC) memory errors, maintaining legacy USB compatibility, controlling the fan, and managing BIOS-controlled power settings.
 
-The SMI is the highest-priority interrupt on the system and places the CPU in a management mode, which preempts all other activity while it runs an interrupt service routine, typically contained in BIOS.
+The SMI is the highest-priority interrupt on the system, and places the CPU in a management mode. This mode preempts all other activity while SMI runs an interrupt service routine, typically contained in BIOS.
 
-Unfortunately, this can result in latency spikes of 100 microseconds or more.
+Unfortunately, this behavior can result in latency spikes of 100 microseconds or more.
 
 If you need to achieve the lowest latency, you should request a BIOS version from your hardware provider that reduces SMIs to the lowest degree possible. These are frequently referred to as “low latency BIOS” or “SMI free BIOS.” In some cases, it is not possible for a hardware platform to eliminate SMI activity altogether because it is used to control essential functions (for example, cooling fans).
 
 > [!NOTE]  
-> The operating system can exert no control over SMIs because the logical processor is running in a special maintenance mode, which prevents operating system intervention.
+> The operating system cannot control SMIs because the logical processor is running in a special maintenance mode, which prevents operating system intervention.
 
 ##  <a name="bkmk_tcp"></a> Performance tuning TCP
 
@@ -375,7 +375,7 @@ All of these settings had the following registry location:
 
 ###  <a name="bkmk_wfp"></a> Windows Filtering Platform
 
-The Windows Filtering Platform (WFP) that was introduced in Windows Vista and Windows Server 2008 provides APIs to non-Microsoft independent software vendors (ISVs) to create packet processing filters. Examples include firewall and antivirus software.
+Windows Vista and Windows Server 2008 introduced the Windows Filtering Platform (WFP). WFP provides APIs to non-Microsoft independent software vendors (ISVs) to create packet processing filters. Examples include firewall and antivirus software.
 
 > [!NOTE]  
 > A poorly-written WFP filter can significantly decrease a server's networking performance. For more information, see [Porting Packet-Processing Drivers and Apps to WFP](https://docs.microsoft.com/windows-hardware/drivers/network/porting-packet-processing-drivers-and-apps-to-wfp) in the Windows Dev Center.
