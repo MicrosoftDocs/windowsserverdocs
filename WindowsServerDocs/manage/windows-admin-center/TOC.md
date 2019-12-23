@@ -23,6 +23,7 @@
 ### [User access control and permissions](configure/user-access-control.md)
 ### [Using extensions](configure/using-extensions.md)
 ### [Shared connections](configure/shared-connections.md)
+### [Automate with PowerShell](configure/use-powershell.md)
 
 ## Use
 ### [Get started](use/get-started.md)

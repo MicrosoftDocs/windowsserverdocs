@@ -11,7 +11,7 @@ ms.topic: article
 author: heidilohr
 manager: daveba
 ms.author: helohr
-ms.date: 11/12/2019
+ms.date: 12/04/2019
 ms.localizationpriority: medium
 ---
 # What's new in the Windows Desktop client
@@ -24,12 +24,27 @@ The client can be configured for different [user groups](windowsdesktop-admin.md
 
 |User group |Version  |
 |-----------|---------|
-|Public     |1.2.431  |
-|Insider    |1.2.431  |
+|Public     |1.2.535  |
+|Insider    |1.2.535  |
+
+## Updates for version 1.2.535
+
+*Date published: 12/04/2019*
+
+Download: [Windows 64-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4k7jH), [Windows 32-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4k7jL), [Windows ARM64](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4k27O)
+
+- You can now access information about updates directly from the more options button on the command bar at the top of the client.
+- You can now report feedback from the command bar of the client.
+- The Feedback option is now only shown if the Feedback Hub is available.
+- Ensured the update notification is not shown when notifications are disabled through policy.
+- Fixed an issue that prevented some RDP files from launching.
+- Fixed a crash on startup of the client caused by corruption of some persistent settings.
 
 ## Updates for version 1.2.431
 
 *Date published: 11/12/2019*
+
+Download: [Windows 64-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE48kow), [Windows 32-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE48koA), [Windows ARM64](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE48zYj)
 
 - The 32-bit and ARM64 versions of the client are now available!
 - The client now saves any changes you make to the connection bar (such as its position, size, and pinned state) and applies those changes across sessions.
@@ -49,15 +64,12 @@ The client can be configured for different [user groups](windowsdesktop-admin.md
 
 *Date published: 09/17/2019*
 
-- Fixed a crash that happened when authenticating during a connection.
-- Fixed a crash that happened when closing the client.
-
-## Updates for version 1.2.246
-
-*Date published: 08/28/2019*
+Download: [Windows 64-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE3LkSa)
 
 - Improved the fallback languages for localized version. (For example, FR-CA will properly display in French instead of English.)
 - When removing a subscription, the client now properly removes the saved credentials from Credential Manager.
 - The client update process is now unattended once started and the client will relaunch once completed.
 - The client can now be used on Windows 10 in S mode.
 - Fixed an issue that caused the update process to fail for users with a space in their username.
+- Fixed a crash that happened when authenticating during a connection.
+- Fixed a crash that happened when closing the client.

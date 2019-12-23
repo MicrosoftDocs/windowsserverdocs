@@ -36,7 +36,7 @@ If specifying your own certificate:
 
 * **Credential** - [PSCredential] Specifies the credentials for the VM.
 
-* **MsiPath** - [String] Specifies the local path of the Windows Admin Center MSI when deploying Windows Admin Center on an existing VM. Defaults to the version from http://aka.ms/WACDownload if omitted.
+* **MsiPath** - [String] Specifies the local path of the Windows Admin Center MSI when deploying Windows Admin Center on an existing VM. Defaults to the version from https://aka.ms/WACDownload if omitted.
 
 * **VaultName** - [String] Specifies the name of the key vault that contains the certificate.
 

@@ -20,7 +20,12 @@
       "redirect_url": "/windows-server/networking/technologies/nic-teaming/Create-a-New-NIC-Team-on-a-Host-Computer-or-VM",
       "redirect_document_id": false
     },
-	
+  
+    {
+      "source_path": "WindowsServerDocs/administration/hybrid-cloud-print/hybrid-cloud-print-deploy-passthrough.md",
+      "redirect_url": "/windows-server/administration/hybrid-cloud-print/hybrid-cloud-print-deploy",
+      "redirect_document_id": false
+    },
 	
 	
     {
@@ -217,7 +222,7 @@
       "redirect_document_id": false
     },
     {
-      "source_path": "WindowsServerDocssecurity/tls/tls-schannel-ssp-changes-in-windows-10-and-windows-server-2016.md",
+      "source_path": "WindowsServerDocs/security/tls/tls-schannel-ssp-changes-in-windows-10-and-windows-server-2016.md",
       "redirect_url": "/windows-server/tls/tls-schannel-ssp-changes-in-windows-10-and-windows-server",
       "redirect_document_id": false
     },	
@@ -8629,6 +8634,11 @@
  {
   "source_path": "WindowsServerDocs/azure-stack-hci/index.md",
   "redirect_url": "https://docs.microsoft.com/azure-stack/operator/azure-stack-hci-overview",
+  "redirect_document_id": true
+ },
+ {
+  "source_path": "WindowsServerDocs/security/set-up-hgs-for-always-encrypted-in-sql-server.md",
+  "redirect_url": "https://docs.microsoft.com/sql/relational-databases/security/encryption/always-encrypted-enclaves-host-guardian-service-plan?view=sql-server-ver15",
   "redirect_document_id": true
  }
   ]

@@ -38,21 +38,11 @@ The Windows Admin Center Storage Migration Service extension is version-bound to
 
 To resolve, use or upgrade to Windows Server 2019 build 1809 or later.
 
-## Storage Migration Service doesn't let you choose static IP on cutover
-
-When using the 0.57 version of the Storage Migration Service extension in Windows Admin Center and you reach the Cutover phase, you cannot select a static IP for an address. You are forced to use DHCP.
-
-To resolve this issue, in Windows Admin Center, look under **Settings** > **Extensions** for an alert stating that updated version Storage Migration Service 0.57.2 is available to install. You may need to restart your browser tab for Windows Admin center.
-
 ## Storage Migration Service cutover validation fails with error "Access is denied for the token filter policy on destination computer"
 
 When running cutover validation, you receive error "Fail: Access is denied for the token filter policy on destination computer." This occurs even if you provided correct local administrator credentials for both the source and destination computers.
 
-This issue is caused by a code defect in Windows Server 2019. The issue will occur when you are using the destination computer as a Storage Migration Service Orchestrator.
-
-To work around this issue, install the Storage Migration Service on a Windows Server 2019 computer that is not the intended migration destination, then connect to that server with Windows Admin Center and perform the migration.
-
-We have fixed this in a later release of Windows Server. Please open a support case via [Microsoft Support](https://support.microsoft.com) to request a backport of this fix be created.
+This issue was fixed in the [KB4512534](https://support.microsoft.com/help/4512534/windows-10-update-kb4512534) update. 
 
 ## Storage Migration Service isn't included in Windows Server 2019 Evaluation or Windows Server 2019 Essentials edition
 
@@ -98,16 +88,6 @@ To work around this issue:
 11. Attempt to download the errors-only CSV file again. 
 
 We intend to change this behavior in a later release of Windows Server 2019.  
-
-## Cutover fails when migrating between networks
-
-When migrating to a destination computer running in a different network than the source, such as an Azure IaaS instance, cutover fails to complete when the source was using a static IP address. 
-
-This behavior is by design, to prevent connectivity issues after migration from users, applications, and scripts connecting via IP address. When the IP address is moved from the old source computer to the new destination target, it won't match the new network subnet information and perhaps DNS and WINS.
-
-To workaround this issue, perform a migration to a computer on the same network. Then move that computer to a new network and reassign its IP information. For instance, if migrating to Azure IaaS, first migrate to a local VM, then use Azure Migrate to shift the VM to Azure.  
-
-We have fixed this issue in a later release of Windows Admin Center. We now allow you to specify migrations that don't alter the destination server's network settings. The updated extension will be listed here when released. 
 
 ## Validation warnings for destination proxy and credential administrative privileges
 
@@ -183,17 +163,7 @@ DFSR Debug Log:
   FileSizeHigh:0 
   Attributes:32 
 
-This issue is caused by a code defect in a library used by the Storage Migration Service to set security audit ACLs (SACL). A non-null SACL is unintentionally set when the SACL was empty, leading DFSR to correctly identify a hash mismatch. 
-
-To workaround this issue, continue using Robocopy for [DFSR pre-seeding and DFSR Database cloning operations](../dfs-replication/preseed-dfsr-with-robocopy.md) instead of the Storage Migration Service. We are investigating this issue and intend to resolve this in a later version of Windows Server and possibly a backported Windows Update. 
-
-## Error 404 when downloading CSV logs
-
-When attempting to download the transfer or error logs at the end of a transfer operation, you receive error:
-
-  $jobname : Transfer log : ajax error 404
-
-This error is expected if you have not enabled the "File and Printer Sharing (SMB-In)" firewall rule on the orchestrator server. Windows Admin Center file downloads require port TCP/445 (SMB) on connected computers.  
+This issue is fixed by the [KB4512534](https://support.microsoft.com/help/4512534/windows-10-update-kb4512534) update
 
 ## Error "Couldn't transfer storage on any of the endpoints" when transferring from Windows Server 2008 R2
 
@@ -233,11 +203,11 @@ Examining the StorageMigrationService-Proxy/Debug log shows:
    at Microsoft.StorageMigration.Proxy.Service.Transfer.TransferOperation.Validate()
    at Microsoft.StorageMigration.Proxy.Service.Transfer.TransferRequestHandler.ProcessRequest(FileTransferRequest fileTransferRequest, Guid operationId)    [d:\os\src\base\dms\proxy\transfer\transferproxy\TransferRequestHandler.cs::
 
-This error is expected if your migration account does not have at least Read access permissions to the SMB shares. To workaround this error, add a security group containing the source migration account to the SMB shares on the source computer and grant it Read, Change, or Full Control. After the migration completes, you can remove this group.
+This was a code defect that would manifest if your migration account does not have at least Read permissions to the SMB shares. This issue was first fixed in cumulative update [4520062](https://support.microsoft.com/help/4520062/windows-10-update-kb4520062). 
 
 ## Error 0x80005000 when running inventory
 
-After installing [KB4512534](https://support.microsoft.com/en-us/help/4512534/windows-10-update-kb4512534) and attempting to run inventory, inventory fails with errors:
+After installing [KB4512534](https://support.microsoft.com/help/4512534/windows-10-update-kb4512534) and attempting to run inventory, inventory fails with errors:
 
   EXCEPTION FROM HRESULT: 0x80005000
   
@@ -359,6 +329,50 @@ When attempting to run cut over of a Windows Server 2008 R2 cluster source, the 
        at Microsoft.StorageMigration.Proxy.Cutover.CutoverUtils.RenameFSNetName(NetworkCredential networkCredential, Boolean isLocal, String clusterName, String fsResourceId, String nnResourceId, String newDnsName, CancellationToken ct)    [d:\os\src\base\dms\proxy\cutover\cutoverproxy\CutoverUtils.cs::RenameFSNetName::1510]
 
 This issue is caused by a missing API in older versions of Windows Server. Currently there is no way to migrate Windows Server 2008 and Windows Server 2003 clusters. You can perform inventory and transfer without issue on Windows Server 2008 R2 clusters, then manually perform cutover by manually changing the cluster's source file server resource netname and IP address, then changing the the destination cluster netname and IP address to match the original source. 
+
+## Cutover hangs on "38% Mapping network interfaces on the source computer..." 
+
+When attempting to run cut over of a source computer, having set the source computer to use a new static (not DHCP) IP address on one or more network interfaces, the cut over gets stuck at phase "38% Mapping network interfaces on the source comnputer..." and you receive the following error in the SMS event log:
+
+    Log Name:      Microsoft-Windows-StorageMigrationService-Proxy/Admin
+    Source:        Microsoft-Windows-StorageMigrationService-Proxy
+    Date:          11/13/2019 3:47:06 PM
+    Event ID:      20494
+    Task Category: None
+    Level:         Error
+    Keywords:      
+    User:          NETWORK SERVICE
+    Computer:      orc2019-rtm.corp.contoso.com
+    Description:
+    Couldn't set the IP address on the network adapter.
+
+    Computer: fs12.corp.contoso.com
+    Adapter: microsoft hyper-v network adapter
+    IP address: 10.0.0.99
+    Network mask: 16
+    Error: 40970
+    Error Message: Unknown error (0xa00a)
+
+    Guidance: Confirm that the Netlogon service on the computer is reachable through RPC and that the credentials provided are correct.
+
+Examining the source computer shows that the original IP address fails to change. 
+
+This issue does not happen if you selected "Use DHCP" on the Windows Admin Center "configure cutover" screen, only if you specify a new static IP address, subnet, and gateway. 
+
+This issue is caused by a regression in the [KB4512534](https://support.microsoft.com/help/4512534/windows-10-update-kb4512534) update. There are currently two workarounds for this issue:
+
+  - Prior to cut over: instead of setting a new static IP address on cutover, select "Use DHCP" and ensure that a DHCP scope covers that subnet. SMS will configure the source computer to use DHCP on source computer interfaces and cut over will proceed normally. 
+  
+  - If cut over is already stuck: logon to the source computer and enable DHCP on its network interfaces, after ensuring that a DHCP scope covers that subnet. When the source computer acquires a DHCP-provided IP address, SMS will proceed with the cut over normally.
+  
+In both workarounds, after cut over completes, you can then set a static IP address on the old source computer as you see fit and stop using DHCP.   
+
+## Slower than expected re-transfer performance
+
+After completing a transfer, then running a subsequent re-transfer of the same data, you may not see much improvement in transfer time even when little data has changed in the meantime on the source server.
+
+This is expected behavior when transferring a very large number of files and nested folders. The size of the data isn't relevant. We first made improvements to this behavior in [KB4512534](https://support.microsoft.com/help/4512534/windows-10-update-kb4512534) and are continuing to optimize transfer performance. To tune performance further, review [Optimizing Inventory and Transfer Performance](https://docs.microsoft.com/windows-server/storage/storage-migration-service/faq#optimizing-inventory-and-transfer-performance).
+
 
 ## See also
 
