@@ -24,9 +24,11 @@ On basic GUID partition table (gpt) disks, assigns the gpt attribute(s) to the p
 > Changing the gpt attributes might cause your basic data volumes to fail to be assigned drive letters, or to prevent the file system from mounting. You should not change the gpt attributes unless you are an original equipment manufacturer (OEM) or an IT professional who is experienced with gpt disks.
 
 ## Syntax
+
 ```
 gpt attributes=<n>
 ```
+
 ## Parameters
 
 |   Parameter    |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
