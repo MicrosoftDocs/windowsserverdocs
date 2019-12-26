@@ -19,16 +19,14 @@ ms.date: 12/23/2019
 
 > Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
 
-You can use this topic to performance tune network adapters that are installed in computers that are running Windows Server 2016 and later versions.
+Use the information in this topic to tune the performance network adapters for computers that are running Windows Server 2016 and later versions. If your network adapters provide tuning options, you can use these options to optimize network throughput and resource usage.
 
-Determining the correct tuning settings for your network adapter depend on the following variables:
+The correct tuning settings for your network adapters depend on the following variables:
 
 - The network adapter and its feature set  
 - The type of workload that the server performs  
 - The server hardware and software resources  
 - Your performance goals for the server  
-
-If your network adapter provides tuning options, you can use these parameters to optimize network throughput and resource usage.
 
 The following sections describe some of your performance tuning options.  
 
@@ -56,18 +54,18 @@ RSS can improve web scalability and performance when there are fewer network ada
 
 ### RSS Profiles and RSS Queues
 
-The default RSS predefined profile is Non-Uniform Memory Access (NUMA)-Static, which changes the default behavior from previous versions of Windows. Before you start using RSS profiles, review the available profiles to understand when they are beneficial and how they apply to your network environment and hardware.
+The default RSS predefined profile is **NUMAStatic**, which differs from the default that the previous versions of Windows used. Before you start using RSS profiles, review the available profiles to understand when they are beneficial and how they apply to your network environment and hardware.
 
 For example, if you open Task Manager and review the logical processors on your server, and they seem to be underutilized for receive traffic, you can try increasing the number of RSS queues from the default of two to the maximum that your network adapter supports. Your network adapter might have options to change the number of RSS queues as part of the driver.
 
 ##  <a name="bkmk_resources"></a> Increasing network adapter resources
 
-For network adapters that allow manual configuration of resources, such as receive and send buffers, you should increase the allocated resources.  
+For network adapters that allow you to manually configure resources such as receive and send buffers, you should increase the allocated resources.  
 
 Some network adapters set their receive buffers low to conserve allocated memory from the host. The low value results in dropped packets and decreased performance. Therefore, for receive-intensive scenarios, we recommend that you increase the receive buffer value to the maximum.
 
 > [!NOTE]  
-> If a network adapter does not expose manual resource configuration, it either dynamically configures the resources, or the resources are set to a fixed value that cannot be changed.
+> If a network adapter does not expose manual resource configuration, either it dynamically configures the resources, or the resources are set to a fixed value that cannot be changed.
 
 ### Enabling interrupt moderation
 
@@ -112,7 +110,7 @@ If you need to achieve the lowest latency, you should request a BIOS version fro
 
  You can use the following items to tune TCP performance.
 
-###  <a name="bkmk_tcp_params"></a>  ### TCP receive window autotuning
+###  <a name="bkmk_tcp_params"></a> TCP receive window autotuning
 
 In Windows Vista, Windows Server 2008, and later versions of Windows, the Windows network stack uses a feature that is named *TCP receive window autotuning level* to negotiate the TCP receive window size. This feature can negotiate a defined receive window size for every TCP communication during the TCP Handshake.
 
@@ -122,7 +120,7 @@ For a TCP receive window that has a particular size, you can use the following e
 
 > *Total achievable throughput in bytes* = *TCP receive window size in bytes* \* (1 / *connection latency in seconds*)
 
-For example, on a connection that has a latency of 10 ms, the total achievable throughput is only 51 Mbps. This value is reasonable for a large corporate network infrastructure. However, by using autotuning to adjust the receive window, the connection can achieve the full line rate of a 1-Gbps connection.  
+For example, for a connection that has a latency of 10 ms, the total achievable throughput is only 51 Mbps. This value is reasonable for a large corporate network infrastructure. However, by using autotuning to adjust the receive window, the connection can achieve the full line rate of a 1-Gbps connection.  
 
 Some applications define the size of the TCP receive window. If the application does not define the receive window size, the link speed determines the size as follows:
 
@@ -150,7 +148,7 @@ You can use either netsh commands or Windows PowerShell cmdlets to review or mod
 
 **To use netsh to review or modify the autotuning level**
 
-To review the current settings, open a Command Prompt window and run the following command.
+To review the current settings, open a Command Prompt window and run the following command:
 
 ```cmd
 netsh interface tcp show global
@@ -365,13 +363,13 @@ If you use an application to capture network packets, the application should rep
 
 The following registry settings from Windows Server 2003 are no longer supported, and are ignored in later versions.
 
-All of these settings had the following registry location:
-
-> **HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\Tcpip\Parameters**  
-
 - **TcpWindowSize**
 - **NumTcbTablePartitions**  
 - **MaxHashTableSize**  
+
+All of these settings were located in the following registry subkey:
+
+> **HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\Tcpip\Parameters**  
 
 ###  <a name="bkmk_wfp"></a> Windows Filtering Platform
 
