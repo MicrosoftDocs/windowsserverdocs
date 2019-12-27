@@ -42,8 +42,7 @@ gpt attributes=<n>
 
 ## <a name="BKMK_examples"></a>Examples
 
-  if you are moving a gpt disk to a new computer and would like to prevent that computer from automatically assigning a drive letter to the partition with focus, type:
+  If you are moving a gpt disk to a new computer and would like to prevent that computer from automatically assigning a drive letter to the partition with focus, type:
   ```
   gpt attributes=0x8000000000000000
   ```
-
