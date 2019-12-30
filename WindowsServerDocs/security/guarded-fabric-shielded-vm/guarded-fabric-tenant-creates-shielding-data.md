@@ -87,13 +87,13 @@ When creating an unattend.xml file for shielded VMs, keep in mind the following 
 
     | Substitution String | Example substitution |
     |---------------------|----------------------|
-    | @IP4Addr-1@         | 192.168.1.10         |
+    | @IP4Addr-1@         | 192.168.1.10/24      |
     | @MACAddr-1@         | Ethernet             |
-    | @Prefix-1-1@        | 192.168.1.0/24       |
+    | @Prefix-1-1@        | 24                   |
     | @NextHop-1-1@       | 192.168.1.254        |
-    | @IP4Addr-2@         | 10.0.20.30           |
+    | @IP4Addr-2@         | 10.0.20.30/24        |
     | @MACAddr-2@         | Ethernet 2           |
-    | @Prefix-2-1@        | 10.0.20.0/24         |
+    | @Prefix-2-1@        | 24                   |
     | @NextHop-2-1@       | 10.0.20.1            |
 
 When using substitution strings, it is important to ensure that the strings will be populated during the VM provisioning process. If a string such as @ProductKey@ is not supplied at deployment time, leaving the &lt;ProductKey&gt; node in the unattend file blank, the specialization process will fail and you will be unable to connect to your VM.
