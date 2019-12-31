@@ -20,7 +20,7 @@ ms.reviewer: deverette
 
 In this step, you'll learn about the ProfileXML options and schema, and configure the Windows 10 client computers to communicate with that infrastructure with a VPN connection.
 
-You can configure the Always On VPN client through PowerShell, Configuration Manager, or Intune. All three require an XML VPN profile to configure the appropriate VPN settings. Automating PowerShell enrollment for organizations without Configuration Manager or Intune is possible.
+You can configure the Always On VPN client through PowerShell, Microsoft Endpoint Configuration Manager, or Intune. All three require an XML VPN profile to configure the appropriate VPN settings. Automating PowerShell enrollment for organizations without Configuration Manager or Intune is possible.
 
 >[!NOTE]
 >Group Policy does not include administrative templates to configure the Windows 10 Remote Access Always On VPN client.  However, you can use logon scripts.
