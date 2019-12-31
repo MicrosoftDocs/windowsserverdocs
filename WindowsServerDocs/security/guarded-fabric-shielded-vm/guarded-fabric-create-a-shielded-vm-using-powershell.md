@@ -92,9 +92,9 @@ If your shielding data answer file includes specialization values, you can provi
 
 ```powershell
 $specializationValues = @{
-    "@IP4Addr-1@" = "192.168.1.10"
+    "@IP4Addr-1@" = "192.168.1.10/24"
     "@MacAddr-1@" = "Ethernet"
-    "@Prefix-1-1@" = "192.168.1.0/24"
+    "@Prefix-1-1@" = "24"
     "@NextHop-1-1@" = "192.168.1.254"
 }
 New-ShieldedVM -Name 'MyStaticIPVM' -TemplateDiskPath 'C:\temp\MyTemplateDisk.vhdx' -ShieldingDataFilePath 'C:\temp\Contoso.pdk' -SpecializationValues $specializationValues -Wait
