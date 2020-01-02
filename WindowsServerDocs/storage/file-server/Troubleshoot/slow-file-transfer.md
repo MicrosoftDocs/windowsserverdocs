@@ -18,7 +18,7 @@ This article provides suggested troubleshooting procedures for slow file transfe
 If you observe slow transfers of large files, consider the following
 steps:
 
-- Try the file copy command for unbuffered IO (**xcopy /J** or     **robocopy /J**).
+- Try the file copy command for unbuffered IO (**xcopy /J** or  **robocopy /J**).
 
 - Test the storage speed. This is because file copy speeds are limited by storage speed.
 

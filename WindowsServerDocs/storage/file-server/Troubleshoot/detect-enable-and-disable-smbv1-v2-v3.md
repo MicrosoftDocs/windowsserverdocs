@@ -389,7 +389,7 @@ This will update and replace the default values in the following 2 items in the 
 
 **HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\services\mrxsmb10** 
 
-Registry entry: **Start** REG_DWORD: **4 **= Disabled
+Registry entry: **Start** REG_DWORD: **4**= Disabled
 
 **HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\LanmanWorkstation** 
 
