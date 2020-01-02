@@ -94,7 +94,8 @@ To troubleshoot this issue, disable the Access Based Enumeration (ABE) feature.
 
 To determine which SMB shares have ABE enabled, run the following PowerShell command,
 
-**get-smbshare |select Name, FolderEnumerationMode**
+```PowerShell
+Get-SmbShare | Select Name, FolderEnumerationMode
 
 Unrestricted = No ABE
 
