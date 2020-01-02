@@ -406,44 +406,42 @@ To configure this by using Group Policy, follow these steps:
 
 3. Right-click the **Registry** node, point to **New**, and select **Registry Item**.    
 
-4. In the **New Registry Properties ** dialog box, select the following: 
+4. In the **New Registry Properties** dialog box, select the following: 
  
-- **Action**: Update
-- **Hive**: HKEY_LOCAL_MACHINE
-- **Key Path**: SYSTEM\CurrentControlSet\services\mrxsmb10
-- **Value name**: Start
-- **Value type**: REG_DWORD
-- **Value data**: 4
+   - **Action**: Update
+   - **Hive**: HKEY_LOCAL_MACHINE
+   - **Key Path**: SYSTEM\CurrentControlSet\services\mrxsmb10
+   - **Value name**: Start
+   - **Value type**: REG_DWORD
+   - **Value data**: 4
  
-![Start Properties - General](media/detect-enable-and-disable-smbv1-v2-v3-5.png)
+   ![Start Properties - General](media/detect-enable-and-disable-smbv1-v2-v3-5.png)
 
-Then remove the dependency on the **MRxSMB10** that was just disabled.
+5. Then remove the dependency on the **MRxSMB10** that was just disabled.
 
-In the **New Registry Properties** dialog box, select the following: 
+   In the **New Registry Properties** dialog box, select the following: 
  
-- **Action**: Replace
-- **Hive**: HKEY_LOCAL_MACHINE
-- **Key Path**: SYSTEM\CurrentControlSet\Services\LanmanWorkstation
-- **Value name**: DependOnService
-- **Value type**: REG_MULTI_SZ 
-- **Value data**:
-  - Bowser
-  - MRxSmb20
-  - NSI
+   - **Action**: Replace
+   - **Hive**: HKEY_LOCAL_MACHINE
+   - **Key Path**: SYSTEM\CurrentControlSet\Services\LanmanWorkstation
+   - **Value name**: DependOnService
+   - **Value type**: REG_MULTI_SZ 
+   - **Value data**:
+      - Bowser
+      - MRxSmb20
+      - NSI
  
-> [!NOTE]
-> These three strings will not have bullets (see the following screen shot).
+   > [!NOTE]
+   > These three strings will not have bullets (see the following screen shot).
 
-![DependOnService Properties](media/detect-enable-and-disable-smbv1-v2-v3-6.png) 
+   ![DependOnService Properties](media/detect-enable-and-disable-smbv1-v2-v3-6.png) 
 
-The default value includes **MRxSMB10** in many versions of Windows, so by replacing them with this multi-value string, it is in effect removing **MRxSMB10** as a dependency for **LanmanServer** and going from four default values down to just these three values above.
+   The default value includes **MRxSMB10** in many versions of Windows, so by replacing them with this multi-value string, it is in effect removing **MRxSMB10** as a dependency for **LanmanServer** and going from four default values down to just these three values above.
 
-> [!NOTE]
-> When you use Group Policy Management Console, you don't have to use quotation marks or commas. Just type the each entry on individual lines.
+   > [!NOTE]
+   > When you use Group Policy Management Console, you don't have to use quotation marks or commas. Just type the each entry on individual lines.
 
-### Restart required
-
-After the policy has applied and the registry settings are in place, the targeted systems must be restarted before SMB v1 is disabled.
+6. Restart the targeted systems to finish disabling SMB v1.
 
 ### Summary
 

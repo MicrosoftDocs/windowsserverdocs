@@ -100,7 +100,7 @@ Unrestricted = No ABE
 
 AccessBase = ABE
 
-You can also do this from the UI: 
+You can also do this from within Server Manager by navigating to **File and Storage Services** > **Shares**, right-clicking the share, selecting **Properties**, going to **Settings** and then selecting **Enable access-based enumeration**.
 
 ![UI options](media/high-cpu-usage-issue-on-smb-server-2.png)
 
