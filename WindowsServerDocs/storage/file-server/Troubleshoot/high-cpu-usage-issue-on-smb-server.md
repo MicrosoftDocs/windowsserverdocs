@@ -96,12 +96,13 @@ To determine which SMB shares have ABE enabled, run the following PowerShell com
 
 ```PowerShell
 Get-SmbShare | Select Name, FolderEnumerationMode
+```
 
-Unrestricted = No ABE
+Unrestricted = ABE disabled. <br />
+AccessBase = ABE enabled.
 
-AccessBase = ABE
 
-You can also do this from within Server Manager by navigating to **File and Storage Services** > **Shares**, right-clicking the share, selecting **Properties**, going to **Settings** and then selecting **Enable access-based enumeration**.
+You can enable ABE in **Server Manager**. Navigatie to **File and Storage Services** > **Shares**, right-click the share, select **Properties**, go to **Settings** and then select **Enable access-based enumeration**.
 
 ![UI options](media/high-cpu-usage-issue-on-smb-server-2.png)
 
