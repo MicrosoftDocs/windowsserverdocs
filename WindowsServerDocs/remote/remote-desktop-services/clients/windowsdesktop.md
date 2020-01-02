@@ -117,24 +117,20 @@ The client will use the settings configured by your admin unless you turn off th
 Have a feature suggestion or want to report a problem? Tell us using the [Feedback Hub](feedback-hub://?tabid=2&contextid=883). You can also access the Feedback Hub through the client:
 
 1. From the Connection Center, tap the **Send feedback** option on the command bar at the top of the client to open the Feedback Hub app.
-2. Provide a **Summary** and **Details**. Tap **Next**.
+2. Enter the required information in the **Summary** and **Details** fields. When you're done, tap **Next**.
 3. Select whether it's a **Problem** or **Suggestion**.
-4. The category should already be Apps / Remote Desktop. Tap **Next**.
-5. Review existing feedback and select one if it matches your problem. Otherwise, select **Make new bug**. Tap **Next**.
+4. Check to see if the category is in **Apps > Remote Desktop**. If it is, tap **Next**.
+5. Review the existing feedback topics to see if someone else has reported the same problem. If not, select **Make a new bug**, then tap **Next**.
 6. Provide additional data as appropriate.
-7. If the problem is reproducible:
-   1. Tap **Start recording**.
-   2. Reproduce the problem.
-   3. Come back to Feedback Hub and tap **Stop recording**.
-8. Tap **Submit**.
-9. On the "Thank you for your feedback!" page, tap **Share my feedback** to generate a link to the feedback.
-10. This URL can be provided to others for easy access to the feedback item.
+7. You can create a recording of the problem to show us what happened. To do this, select **Start recording**, then do what you did up to the point where the problem happened. When you're done, return to the Feedback Hub and select **Stop recording**.
+8. If you're satisfied with the information, tap **Submit**.
+9. On the "Thank you for your feedback!" page, tap **Share my feedback** to generate a link to your feedback that you can share with others as needed.
 
 ### Access client logs
 
-If you need to retrieve the client logs for investigation:
+You might need the client logs when investigating a problem.
+
+To retrieve the client logs:
 
 1. Open **File Explorer**.
-2. Navigate to **%temp%\DiagOutputDir**.
-3. The logs can be found in the **RdClientAutoTrace** folder.
-4. The folder can be zipped for easy transfer.
+2. The logs can be found in the **%temp%\DiagOutputDir\RdClientAutoTrace** folder.
