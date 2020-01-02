@@ -417,7 +417,7 @@ To configure this by using Group Policy, follow these steps:
  
 ![Start Properties - General](media/detect-enable-and-disable-smbv1-v2-v3-5.png)
 
-Then remove the dependency on the **MRxSMB10 **that was just disabled.
+Then remove the dependency on the **MRxSMB10** that was just disabled.
 
 In the **New Registry Properties** dialog box, select the following: 
  
