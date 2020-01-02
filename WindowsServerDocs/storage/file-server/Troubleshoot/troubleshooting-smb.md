@@ -120,7 +120,7 @@ Look at the actual SMB protocol details in the network trace to understand the e
 > [!NOTE]
 > Only Message Analyzer can parse SMBv3 and later version commands.
 
-- Remember that SMB is an extension of the file system. Therefore, it does only what it is told to do.
+- Remember that SMB does only what it is told to do.
 
 - You can learn a lot about what the application is trying to do by examining the SMB commands.
 
@@ -194,3 +194,7 @@ We recommend that you update the following components before you troubleshoot SM
 - Update the network components.
 
 - For better performance and stability, update Windows Core.
+
+## Reference
+
+[Microsoft SMB Protocol Packet Exchange Scenario](https://docs.microsoft.com/windows/win32/fileio/microsoft-smb-protocol-packet-exchange-scenario)
