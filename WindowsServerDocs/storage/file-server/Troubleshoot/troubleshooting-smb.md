@@ -118,7 +118,7 @@ If there is no noticeable TCP/IP issue, look for SMB errors. To do this, follow 
 Look at the actual SMB protocol details in the network trace to understand the exact commands and options that are used.
 
 > [!NOTE]
-> Only MA can parse SMBv3 and later version commands.
+> Only Message Analyzer can parse SMBv3 and later version commands.
 
 - Remember that SMB is an extension of the file system. Therefore, it does only what it is told to do.
 
