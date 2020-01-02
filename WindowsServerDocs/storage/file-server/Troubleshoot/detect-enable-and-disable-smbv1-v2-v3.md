@@ -406,7 +406,7 @@ To configure this by using Group Policy, follow these steps:
 
 3. Right-click the **Registry** node, point to **New**, and select **Registry Item**.    
 
-In the **New Registry Properties **dialog box, select the following: 
+4. In the **New Registry Properties ** dialog box, select the following: 
  
 - **Action**: Update
 - **Hive**: HKEY_LOCAL_MACHINE
