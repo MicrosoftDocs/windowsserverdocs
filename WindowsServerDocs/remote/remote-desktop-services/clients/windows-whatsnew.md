@@ -22,10 +22,10 @@ We regularly update the [Windows Store client](windows.md), adding new features 
 
 *Date published: 09/04/2019*
 
-- You can now copy files between the local and remote PCs.
-- Your email address can now be used to access remote resources, if enabled by your admin.
-- The user account assigned to a remote resource feed can now be changed.
-- When assigning .rdp files to this app, a proper icon will be shown in File Explorer instead of a blank one.
+- You can now copy files between local and remote PCs.
+- You can now use your email address to access remote resources (if enabled by your admin).
+- You can now change user account assignments for remote resource feeds.
+- The app now shows the proper icon for .rdp files assigned to this app in File Explorer instead of a blank default icon.
 
 ## Updates for version 10.1.1098
 
