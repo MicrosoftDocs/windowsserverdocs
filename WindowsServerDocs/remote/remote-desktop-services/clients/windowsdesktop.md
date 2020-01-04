@@ -11,7 +11,7 @@ ms.topic: article
 author: heidilohr
 manager: daveba
 ms.author: helohr
-ms.date: 12/20/2019
+ms.date: 01/04/2019
 ms.localizationpriority: medium
 ---
 # Get started with the Windows Desktop client
@@ -119,12 +119,11 @@ Have a feature suggestion or want to report a problem? Tell us using the [Feedba
 1. From the Connection Center, tap the **Send feedback** option on the command bar at the top of the client to open the Feedback Hub app.
 2. Enter the required information in the **Summary** and **Details** fields. When you're done, tap **Next**.
 3. Select whether it's a **Problem** or **Suggestion**.
-4. Check to see if the category is in **Apps > Remote Desktop**. If it is, tap **Next**.
+4. Check to see if the category is in **Apps** > **Remote Desktop**. If it is, tap **Next**.
 5. Review the existing feedback topics to see if someone else has reported the same problem. If not, select **Make a new bug**, then tap **Next**.
-6. Provide additional data as appropriate.
-7. You can create a recording of the problem to show us what happened. To do this, select **Start recording**, then do what you did up to the point where the problem happened. When you're done, return to the Feedback Hub and select **Stop recording**.
-8. If you're satisfied with the information, tap **Submit**.
-9. On the "Thank you for your feedback!" page, tap **Share my feedback** to generate a link to your feedback that you can share with others as needed.
+6. On the next page, you can give us more information so we can help you solve the problem. You can write more detailed information, submit screenshots, and even create a recording of the problem to show us what happened. To make a recording, select **Start recording**, then do what you did up to the point where the problem happened. When you're done, return to the Feedback Hub and select **Stop recording**.
+7. When you're satisfied with the information, tap **Submit**.
+8. On the "Thank you for your feedback!" page, tap **Share my feedback** to generate a link to your feedback that you can share with others as needed.
 
 ### Access client logs
 
