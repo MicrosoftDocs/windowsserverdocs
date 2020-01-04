@@ -132,4 +132,4 @@ You might need the client logs when investigating a problem.
 To retrieve the client logs:
 
 1. Open **File Explorer**.
-2. The logs can be found in the **%temp%\DiagOutputDir\RdClientAutoTrace** folder.
+2. Navigate to the **%temp%\DiagOutputDir\RdClientAutoTrace** folder.
