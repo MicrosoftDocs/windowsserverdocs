@@ -24,7 +24,7 @@ If you encounter any issues, you can always contact us by navigating to **Help**
 
 *Date published: 1/6/20*
 
-In our final update of the year, we finetuned some code and fixed the following bugs:
+In our final update of the year, we finetuned some code and fixed the following behaviors:
 
 - Copying things from the remote session to a network share or USB drive no longer creates empty files.
 - Specifying an empty password in a user account no longer causes a double certificate prompt.
@@ -33,13 +33,13 @@ In our final update of the year, we finetuned some code and fixed the following 
 
 *Date published: 1/6/20*
 
-In this release, we fixed a bug that created zero-length files whenever you copied a folder from the remote session to the local machine using file copy and paste.
+In this release, we addressed an issue that created zero-length files whenever you copied a folder from the remote session to the local machine using file copy and paste.
 
 ## Updates for version 10.3.5
 
 *Date published: 1/6/20*
 
-We made this update with the help of everyone who reported bugs and worked with us to diagnose issues. In this version, we've made the following changes:
+We made this update with the help of everyone who reported issues. In this version, we've made the following changes:
 
 - Redirected folders can now be marked as read-only to prevent their contents from being changed in the remote session.
 - We addressed a 0x607 error that appeared when connecting using RPC over HTTPS RD Gateway scenarios.
@@ -51,7 +51,7 @@ We made this update with the help of everyone who reported bugs and worked with 
 - Fixes to address crashes sent to us via application telemetry.
 
 > [!NOTE]
-> In this release, we now only accept feedback for the Mac client through [UserVoice](https://remotedesktop.uservoice.com/forums/287834-remote-desktop-for-mac). 
+> In this release, we now accept feedback for the Mac client only through [UserVoice](https://remotedesktop.uservoice.com/forums/287834-remote-desktop-for-mac).
 
 ## Updates for version 10.3.4
 
