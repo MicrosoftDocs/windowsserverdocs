@@ -210,7 +210,7 @@ Internet             Normal
 
 To modify the setting, run the following cmdlet at the PowerShell command prompt.
 
-```ps
+```PowerShell
 Set-NetTCPSetting -AutoTuningLevelLocal <Value>
 ```
 
