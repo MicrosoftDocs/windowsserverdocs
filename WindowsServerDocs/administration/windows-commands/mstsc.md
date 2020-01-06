@@ -35,7 +35,7 @@ mstsc.exe /migrate
 |        Parameter        |                                                         Description                                                         |
 |-------------------------|-----------------------------------------------------------------------------------------------------------------------------|
 |    <Connection File>    |                                   Specifies the name of an .rdp file for the connection.                                    |
-|   /v:<Server[:<Port>]   |                Specifies the remote computer and, optionally, the port number to which you want to connect.                 |
+|   /v:<Server>[:<Port>]   |                Specifies the remote computer and, optionally, the port number to which you want to connect.                 |
 |         /admin          |                                   Connects you to a session for administering the server.                                   |
 |           /f            |                                    starts Remote Desktop Connection in full-screen mode.                                    |
 |       /w:<Width>        |                                      Specifies the width of the Remote Desktop window.                                      |
