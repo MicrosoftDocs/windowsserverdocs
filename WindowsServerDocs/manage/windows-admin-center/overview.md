@@ -15,7 +15,7 @@ ms.prod: windows-server
 
 Windows Admin Center is a locally deployed, browser-based app for managing Windows servers, clusters, hyper-converged infrastructure, as well as Windows 10 PCs. It comes at no additional cost beyond Windows and is ready to use in production.
 
-To find out what's new, see [Release history](../support/release-history.md).
+To find out what's new, see [Release history](support/release-history.md).
 
 ## Download now
 
@@ -23,7 +23,7 @@ To find out what's new, see [Release history](../support/release-history.md).
 
 For help installing, see [Install](deploy/install.md). For tips on getting started with Windows Admin Center, see [Get started](use/get-started.md).
 
-You can update non-preview versions of Windows Admin Center by using Microsoft Update or by manually downloading and installing Windows Admin Center. Each non-preview version of Windows Admin Center is supported until 30 days after the next non-preview version is released. See our [support policy](../support/index.md) for more info.
+You can update non-preview versions of Windows Admin Center by using Microsoft Update or by manually downloading and installing Windows Admin Center. Each non-preview version of Windows Admin Center is supported until 30 days after the next non-preview version is released. See our [support policy](support/index.md) for more info.
 
 ## What is Windows Admin Center?
 
@@ -170,13 +170,13 @@ And here are a few additional resources:
 | “We have been able to deploy [Server Core] SKUs in a more effective way, improving resource efficiency, security and automation while still achieving a good degree of productivity and reducing errors that can happen when relying on scripting only.” <br/> *- Guglielmo Mengora, Founder and CEO, VaiSulWeb* |
 | “With [Windows Admin Center] customers especially in the SMB market now have an easy to use tool to manage their internal infrastructure. This minimizes administrative efforts and saves a lot of time. And the best of it: there are no additional license fees for [Windows Admin Center]!” <br/> *- Helmut Otto, Managing Director, SecureGUARD* |
 
-[Read more about companies using Windows Admin Center in their production environments.](case-studies.md)
+[Read more about companies using Windows Admin Center in their production environments.](understand/case-studies.md)
 
 ## Related products
 
 Windows Admin Center is designed for managing a single server or cluster. It complements but does not replace existing Microsoft monitoring and management solutions, such as Remote Server Administration Tools (RSAT), System Center, Intune, or Azure Stack.
 
-[Learn how Windows Admin Center complements other Microsoft management solutions.](related-management.md)
+[Learn how Windows Admin Center complements other Microsoft management solutions.](understand/related-management.md)
 
 ## Stay updated
 
