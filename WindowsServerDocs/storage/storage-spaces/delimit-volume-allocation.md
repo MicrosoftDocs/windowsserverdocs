@@ -116,7 +116,7 @@ Use the new `Add-StorageFaultDomain` and `Remove-StorageFaultDomain` cmdlets to 
 
 For example, to move *MyVolume* over by one server:
 
-1. Specify that the Fifth server **can** store slabs of *MyVolume*:
+1. Specify that the fifth server **can** store slabs of *MyVolume*:
 
     ```PowerShell
     Get-VirtualDisk MyVolume | Add-StorageFaultDomain -StorageFaultDomains $Servers[4]
