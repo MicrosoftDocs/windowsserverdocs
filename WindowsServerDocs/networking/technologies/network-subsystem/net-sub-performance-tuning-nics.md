@@ -191,7 +191,7 @@ For more information about this command, see [Netsh commands for Interface Trans
 
 To review the current settings, open a PowerShell window and run the following cmdlet.
 
-```ps
+```PowerShell
 Get-NetTCPSetting | Select SettingName,AutoTuningLevelLocal
 ```
 
