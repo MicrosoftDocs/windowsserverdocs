@@ -187,7 +187,7 @@ Conversely, in the extreme case that more than half of servers or drives in the 
 
 ### What about in between?
 
-If three or more failures occur at once but at least half of servers and drives are still up, volumes with delimited allocation may stay online and accessible, depending on which servers have failures. 
+If three or more failures occur at once, but at least half of the servers and the drives are still up, volumes with delimited allocation may stay online and accessible, depending on which servers have failures.
 
 ## Frequently asked questions
 
