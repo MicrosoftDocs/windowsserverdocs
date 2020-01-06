@@ -15,15 +15,13 @@ ms.prod: windows-server
 
 Windows Admin Center is a locally deployed, browser-based app for managing Windows servers, clusters, hyper-converged infrastructure, as well as Windows 10 PCs. It comes at no additional cost beyond Windows and is ready to use in production.
 
-To find out what's new, see [What's new?](../support/release-history.md).
+To find out what's new, see [Release history](../support/release-history.md).
 
 ## Download now
 
-You can get Windows Admin Center up and running in your environment in minutes:
+**Download [Windows Admin Center](https://www.microsoft.com/evalcenter/evaluate-windows-admin-center)** from the Microsoft Evaluation Center. Even though it says “Start your evaluation”, this is the generally available version for production use, included as part of your Windows or Windows Server license.
 
-1. Visit the Microsoft Eval Center to download [Windows Admin Center](https://www.microsoft.com/evalcenter/evaluate-windows-admin-center). Even though it says “Eval Center”, this is where you can get the generally available version for production use.
-2. For help installing, see [Install](deploy/install.md).
-3. For tips on getting started with Windows Admin Center, see [Get started](use/get-started.md).
+For help installing, see [Install](deploy/install.md). For tips on getting started with Windows Admin Center, see [Get started](use/get-started.md).
 
 You can update non-preview versions of Windows Admin Center by using Microsoft Update or by manually downloading and installing Windows Admin Center. Each non-preview version of Windows Admin Center is supported until 30 days after the next non-preview version is released. See our [support policy](../support/index.md) for more info.
 
@@ -44,7 +42,7 @@ Here's a video to give you an overview, following by a poster giving more detail
 
 [Download the PDF](https://github.com/MicrosoftDocs/windowsserverdocs/raw/master/WindowsServerDocs/manage/windows-admin-center/media/WindowsAdminCenter1910Poster.pdf)
 
-And you can learn more in [What is Windows Admin Center?](understand/what-is.md).
+You can learn more in [What is Windows Admin Center?](understand/what-is.md).
 
 ## Contents at a glance
 
@@ -58,7 +56,6 @@ And you can learn more in [What is Windows Admin Center?](understand/what-is.md)
             <li><a href="understand/faq.md">FAQ</a>
             <li><a href="understand/case-studies.md">Case studies</a>
             <li><a href="understand/related-management.md">Related management products</a>
-            <li><a href="understand/videos.md">Videos</a>
             </ul>
         </td>
         <td style="vertical-align: top;">
@@ -140,7 +137,7 @@ Admin Center to Azure</a></li>
 
 ## Video-based learning
 
-Here are videos from Microsoft Ignite 2019 sessions:
+Here are some videos from Microsoft Ignite 2019 sessions:
 
 - [Windows Admin Center: Unlock Azure Hybrid value](https://aka.ms/WAC-BRK3165)
 - [Windows Admin Center: What’s new and what’s next](https://aka.ms/WAC-BRK2048)
@@ -153,7 +150,7 @@ Here are videos from Microsoft Ignite 2019 sessions:
 - [Learning Path: Hybrid management technologies](https://aka.ms/WAC-HybridMgmtTech)
 - [Hands on Lab: Windows Admin Center and Hybrid](https://aka.ms/WAC-HOL2019)
 
-Here are videos from Windows Server Summit 2019 sessions:
+Here are some videos from Windows Server Summit 2019 sessions:
 
 - [Go hybrid with Windows Admin Center](https://aka.ms/WAC-WSS2019-GoHybridWAC)
 - [What's new with Windows Admin Center v1904](https://aka.ms/WAC-WSS2019-WhatsNewv1904)
@@ -164,8 +161,25 @@ And here are a few additional resources:
 - [Manage Servers and Virtual Machines Anywhere with Windows Admin Center](https://aka.ms/WAC-Webinar2019)
 - [How to get started with Windows Admin Center](https://www.youtube.com/embed/PcQj6ZklmK0)
 
+## See how customers are benefitting from Windows Admin Center
+
+|     |
+| --- |
+| "[Windows Admin Center] has decreased our time/effort in managing the management system by over 75%."<br> *- Rand Morimoto, President, Convergent Computing* |
+| "Thanks to [Windows Admin Center], we can manage our customers remotely from HTML5 portal without problem and with the full integration with Azure Active Directory, we are able to increase the security thanks to the Multi-Factor Authentication."<br/> *- Silvio Di Benedetto, Founder and Senior Consultant, Inside Technologies* |
+| “We have been able to deploy [Server Core] SKUs in a more effective way, improving resource efficiency, security and automation while still achieving a good degree of productivity and reducing errors that can happen when relying on scripting only.” <br/> *- Guglielmo Mengora, Founder and CEO, VaiSulWeb* |
+| “With [Windows Admin Center] customers especially in the SMB market now have an easy to use tool to manage their internal infrastructure. This minimizes administrative efforts and saves a lot of time. And the best of it: there are no additional license fees for [Windows Admin Center]!” <br/> *- Helmut Otto, Managing Director, SecureGUARD* |
+
+[Read more about companies using Windows Admin Center in their production environments.](case-studies.md)
+
+## Related products
+
+Windows Admin Center is designed for managing a single server or cluster. It complements but does not replace existing Microsoft monitoring and management solutions, such as Remote Server Administration Tools (RSAT), System Center, Intune, or Azure Stack.
+
+[Learn how Windows Admin Center complements other Microsoft management solutions.](related-management.md)
+
 ## Stay updated
 
-![ ](//img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/REOolR)[Follow us on Twitter](https://twitter.com/servermgmt)
+![](//img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/REOolR)[Follow us on Twitter](https://twitter.com/servermgmt)
 
-![ ](//img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/REOtyw)[Read our Blogs](https://blogs.technet.microsoft.com/servermanagement/)
+![](//img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/REOtyw)[Read our Blogs](https://blogs.technet.microsoft.com/servermanagement/)
