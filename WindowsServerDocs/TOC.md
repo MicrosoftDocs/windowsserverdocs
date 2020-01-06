@@ -1,5 +1,6 @@
 # [Windows Server](windows-server.md)
 ## [Windows Server Software-Defined Datacenter (SDDC)](sddc.md)
+## [Upgrade Windows Server](upgrade/upgrade-overview.md)
 ## [Get Started](get-started/Server-Basics.md)
 ## [Manage Windows Server](administration/manage-windows-server.md)
 ## [Connect to Azure](azure-hybrid-services/index.md)
@@ -10,5 +11,5 @@
 ## [Security and Assurance](security/security-and-assurance.md)
 ## [Storage](storage/storage.md)
 ## [Virtualization](virtualization/virtualization.md)
-## [Troubleshooting](troubleshoot/windows-server-support-solutions.md)
+## [Troubleshooting](troubleshoot/windows-server-troubleshooting.md)
 ## [Other Windows Server versions](windows-server-versions.md)

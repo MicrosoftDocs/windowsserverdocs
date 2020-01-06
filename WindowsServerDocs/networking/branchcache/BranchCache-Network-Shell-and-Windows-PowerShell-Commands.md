@@ -3,11 +3,10 @@ title: BranchCache Network Shell and Windows PowerShell Commands
 description: This topic provides links to Network Shell and Windows PowerShell command reference resources for BranchCache in Windows Server 2016
 manager: brianlic
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
-ms.technology: 
-  - networking-bc
+ms.technology: networking-bc
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: a0726752-0a78-472b-9667-2f91636c1b3b
@@ -26,7 +25,7 @@ Windows PowerShell and netsh command references are at the following locations. 
   
 -   [Netsh Commands for BranchCache in Windows Server 2008 R2](https://technet.microsoft.com/library/dd979561(v=ws.10))  
   
--   [BranchCache Cmdlets in Windows PowerShell](https://technet.microsoft.com/library/hh848392.aspx) for  Windows Server 2012 .  
+-   [BranchCache Cmdlets in Windows PowerShell](https://docs.microsoft.com/powershell/module/branchcache/?view=win10-ps)
   
 > [!TIP]  
 > To view a list of Windows PowerShell commands for BranchCache at the Windows PowerShell prompt, type `Get-Command -Module BranchCache` at the Windows PowerShell prompt, and then press ENTER.  

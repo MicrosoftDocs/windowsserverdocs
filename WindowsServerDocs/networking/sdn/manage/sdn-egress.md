@@ -2,7 +2,7 @@
 title: Egress metering in virtual network
 description: A fundamental aspect of cloud networking monetization is network bandwidth egress. For example - outbound Data transfers In Microsoft Azure business model. Outbound data is charged based on the total amount of data moving out of the Azure datacenters via the Internet in a given billing cycle.
 manager: dougkim
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: networking-hv-switch
 ms.topic: get-started-article
 ms.assetid: 
@@ -67,24 +67,22 @@ You can manage the set of IP subnet prefixes to exclude from billed egress meter
     ```
 
     Your output will look similar to this:
-    ```
-    Confirm
-    Performing the operation 'New-NetworkControllerVirtualNetwork' on entities of type
-    'Microsoft.Windows.NetworkController.VirtualNetwork' via
-    'https://sdn.contoso.com/networking/v3/virtualNetworks/VNet1'. Are you sure you want to continue?
-    [Y] Yes  [N] No  [S] Suspend  [?] Help (default is "Y"): y
+      ```
+         Confirm
+         Performing the operation 'New-NetworkControllerVirtualNetwork' on entities of type
+         'Microsoft.Windows.NetworkController.VirtualNetwork' via
+         'https://sdn.contoso.com/networking/v3/virtualNetworks/VNet1'. Are you sure you want to continue?
+         [Y] Yes  [N] No  [S] Suspend  [?] Help (default is "Y"): y
 
 
-~~~
-Tags             :
-ResourceRef      : /virtualNetworks/VNet1
-InstanceId       : 29654b0b-9091-4bed-ab01-e172225dc02d
-Etag             : W/"6970d0a3-3444-41d7-bbe4-36327968d853"
-ResourceMetadata :
-ResourceId       : VNet1
-Properties       : Microsoft.Windows.NetworkController.VirtualNetworkProperties
-```
-~~~
+         Tags             :
+         ResourceRef      : /virtualNetworks/VNet1
+         InstanceId       : 29654b0b-9091-4bed-ab01-e172225dc02d
+         Etag             : W/"6970d0a3-3444-41d7-bbe4-36327968d853"
+         ResourceMetadata :
+         ResourceId       : VNet1
+         Properties       : Microsoft.Windows.NetworkController.VirtualNetworkProperties
+      ```
 
 
 3. Check the Virtual Network to see the configured **UnbilledAddressRanges**.

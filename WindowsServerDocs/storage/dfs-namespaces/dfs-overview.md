@@ -1,6 +1,6 @@
 ---
 title: DFS Namespaces overview
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.author: jgerend
 ms.manager: daveba
 ms.technology: storage
@@ -24,7 +24,7 @@ Here's a description of the elements that make up a DFS namespace:
 - **Folder** - Folders without folder targets add structure and hierarchy to the namespace, and folders with folder targets provide users with actual content. When users browse a folder that has folder targets in the namespace, the client computer receives a referral that transparently redirects the client computer to one of the folder targets.
 - **Folder targets** - A folder target is the UNC path of a shared folder or another namespace that is associated with a folder in a namespace. The folder target is where data and content is stored. In the previous figure, the folder named Tools has two folder targets, one in London and one in New York, and the folder named Training Guides has a single folder target in New York. A user who browses to \\\\Contoso\\Public\\Software\\Tools is transparently redirected to the shared folder \\\\LDN-SVR-01\\Tools or \\\\NYC-SVR-01\\Tools, depending on which site the user is currently located in.
 
-This topic discusses how to install DFS, what’s new, and where to find evaluation and deployment information.
+This topic discusses how to install DFS, what's new, and where to find evaluation and deployment information.
 
 You can administer namespaces by using DFS Management, the [DFS Namespace (DFSN) Cmdlets in Windows PowerShell](https://docs.microsoft.com/powershell/module/dfsn/?view=win10-ps), the **DfsUtil** command, or scripts that call WMI.
 
@@ -104,7 +104,7 @@ Install-WindowsFeature "FS-DFS-Namespace", "RSAT-DFS-Mgmt-Con"
 
 Using DFS Namespaces on a virtual machine in Microsoft Azure has been tested; however, there are some limitations and requirements that you must follow.
 
-- You can’t cluster stand-alone namespaces in Azure virtual machines.
+- You can't cluster stand-alone namespaces in Azure virtual machines.
 
 - You can host domain-based namespaces in Azure virtual machines, including environments with Azure Active Directory.
 
@@ -120,6 +120,6 @@ For additional related information, see the following resources.
 | **Deployment**    | [DFS Namespace Scalability Considerations](http://blogs.technet.com/b/filecab/archive/2012/08/26/dfs-namespace-scalability-considerations.aspx) |
 | **Operations**    | [DFS Namespaces: Frequently Asked Questions](https://technet.microsoft.com/library/ee404780.aspx) |
 | **Community resources** | [The File Services and Storage TechNet Forum](https://social.technet.microsoft.com/forums/winserverfiles/threads/) |
-| **Protocols**        | [File Services Protocols in Windows Server](https://msdn.microsoft.com/en-us/library/cc239318.aspx) (Deprecated) |
+| **Protocols**        | [File Services Protocols in Windows Server](https://msdn.microsoft.com/library/cc239318.aspx) (Deprecated) |
 | **Related technologies** | [Failover Clustering](../../failover-clustering/failover-clustering-overview.md)|
 | **Support** | [Windows IT Pro Support](https://www.microsoft.com/itpro/windows/support)|

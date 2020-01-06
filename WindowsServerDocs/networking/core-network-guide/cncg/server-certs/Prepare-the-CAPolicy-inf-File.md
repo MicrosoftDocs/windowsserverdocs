@@ -4,7 +4,7 @@ description:  The CAPolicy.inf contains various settings that are used when inst
 manager: alanth
 ms.topic: article
 ms.assetid: 65b36794-bb09-4c1b-a2e7-8fc780893d97
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: networking
 ms.author: pashort
 author: shortpatti
@@ -112,7 +112,7 @@ Some additional information about this section:
 
 -   Quotes must surround URLs with spaces.
 
--   If no URLs are specified – that is, if the **[CRLDistributionPoint]** section exists in the file but is empty – the Authority Information Access extension is omitted from the root CA certificate. This is usually preferable when setting up a root CA. Windows does not perform revocation checking on a root CA certificate, so the CDP extension is superfluous in a root CA certificate.
+-   If no URLs are specified – that is, if the **[CRLDistributionPoint]** section exists in the file but is empty – the CRL Distribution Point extension is omitted from the root CA certificate. This is usually preferable when setting up a root CA. Windows does not perform revocation checking on a root CA certificate, so the CDP extension is superfluous in a root CA certificate.
 
 -    CA can publish to FILE UNC, for example, to a share that represents the folder of a website where a client retrieves via HTTP.
 
@@ -134,11 +134,11 @@ Some additional notes on the authority information access section:
 
 -   HTTP, FTP, LDAP and FILE URLs are supported. HTTPS URLs are not supported.
 
--   This section is only used if you are setting up a root CA, or renewing the root CA certificate. Subordinate CA AIA extensions are determined by the CA which issued the subordinate CA’s certificate.
+-   This section is only used if you are setting up a root CA, or renewing the root CA certificate. Subordinate CA AIA extensions are determined by the CA which issued the subordinate CA's certificate.
 
 -   URLs with spaces must be surrounded by quotes.
 
--   If no URLs are specified – that is, if the **[AuthorityInformationAccess]** section exists in the file but is empty – the CRL Distribution Point extension is omitted from the root CA certificate. Again, this would be the preferred setting in the case of a root CA certificate as there is no authority higher than a root CA that would need to be referenced by a link to its certificate.
+-   If no URLs are specified – that is, if the **[AuthorityInformationAccess]** section exists in the file but is empty – the Authority Information Access extension is omitted from the root CA certificate. Again, this would be the preferred setting in the case of a root CA certificate as there is no authority higher than a root CA that would need to be referenced by a link to its certificate.
 
 ### certsrv_Server
 
@@ -194,8 +194,7 @@ You may not want to issue any certificates immediately after a CA has been insta
 
 **ForceUTF8** changes the default encoding of relative distinguished names (RDNs) in Subject and Issuer distinguished names to UTF-8. Only those RDNs that support UTF-8, such as those that are defined as Directory String types by an RFC, are affected. For example, the RDN for Domain Component (DC) supports encoding as either IA5 or UTF-8, while the Country RDN (C) only supports encoding as a Printable String. The ForceUTF8 directive will therefore affect a DC RDN but will not affect a C RDN.
 
-**EnableKeyCounting** configures the CA to increment a counter every time the CA’s signing key is used. Do not enable this setting unless you have a Hardware Security Module (HSM) and associated cryptographic service provider (CSP) that supports key counting. Neither the Microsoft Strong CSP nor the Microsoft Software Key Storage Provider (KSP) support key counting.
-
+**EnableKeyCounting** configures the CA to increment a counter every time the CA's signing key is used. Do not enable this setting unless you have a Hardware Security Module (HSM) and associated cryptographic service provider (CSP) that supports key counting. Neither the Microsoft Strong CSP nor the Microsoft Software Key Storage Provider (KSP) support key counting.
 
 ## Create the CAPolicy.inf file
 

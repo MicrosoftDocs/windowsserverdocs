@@ -2,7 +2,7 @@
 title: Remote Desktop clients FAQ
 description: Frequently asked questions about the Remote Desktop clients
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: remote-desktop-services
@@ -53,7 +53,7 @@ For Windows 10, do the following:
 3. Use the slider to enable Remote Desktop.
 4. In general, it's best to keep the PC awake and discoverable to facilitate connections. Click **Show settings** to go to the power settings for your PC, where you can change this setting.
    > [!NOTE]
-   > You can’t connect to a PC that's asleep or hibernating, so make sure the settings for sleep and hibernation on the remote PC are set to **Never**. (Hibernation isn't available on all PCs.)
+   > You can't connect to a PC that's asleep or hibernating, so make sure the settings for sleep and hibernation on the remote PC are set to **Never**. (Hibernation isn't available on all PCs.)
 
 
 Make note of the name of this PC under **How to connect to this PC**. You'll need this to configure the clients.
@@ -67,12 +67,12 @@ For Windows 8.1, follow the instructions to allow remote connections in [Connect
 
 ## Connection, gateway, and networks
 
-### Why can’t I connect using Remote Desktop?
+### Why can't I connect using Remote Desktop?
 
-Here are some possible solutions to common problems you might encounter when trying to connect to a remote PC. If these solutions don’t work, you can find more help on the [Microsoft Community website](https://go.microsoft.com/fwlink/p/?LinkId=242079).
+Here are some possible solutions to common problems you might encounter when trying to connect to a remote PC. If these solutions don't work, you can find more help on the [Microsoft Community website](https://go.microsoft.com/fwlink/p/?LinkId=242079).
 
-- **The remote PC can’t be found.** Make sure you have the right PC name, and then check to see if you entered that name correctly. If you still can't connect, try using the IP address of the remote PC instead of the PC name.
-- **There’s a problem with the network.** Make sure you have internet connection. 
+- **The remote PC can't be found.** Make sure you have the right PC name, and then check to see if you entered that name correctly. If you still can't connect, try using the IP address of the remote PC instead of the PC name.
+- **There's a problem with the network.** Make sure you have internet connection. 
 - **The Remote Desktop port might be blocked by a firewall.** If you're using Windows Firewall, follow these steps:
 
   1. Open Windows Firewall. 
@@ -83,7 +83,7 @@ Here are some possible solutions to common problems you might encounter when try
      If you're using a different firewall, make sure the port for Remote Desktop (usually 3389) is open.
 - **Remote connections might not be set up on the remote PC.** To fix this, scroll back up to [How do I set up a PC for Remote Desktop?](#how-do-i-set-up-a-pc-for-remote-desktop) question in this topic.
 - **The remote PC might only allow PCs to connect that have Network Level Authentication set up.** 
-- **The remote PC might be turned off.** You can’t connect to a PC that's turned off, asleep, or hibernating, so make sure the settings for sleep and hibernation on the remote PC are set to **Never** (hibernation isn't available on all PCs.).
+- **The remote PC might be turned off.** You can't connect to a PC that's turned off, asleep, or hibernating, so make sure the settings for sleep and hibernation on the remote PC are set to **Never** (hibernation isn't available on all PCs.).
 
 ### Why can't I find or connect to my PC?
 
@@ -160,7 +160,7 @@ To use two or more screens, do the following:
 2. Enable **Use all monitors** and **Full screen**.
 
 ### Is bi-directional sound supported?
-Sound upstream (from client to server, for microphones) is not supported by the Remote Desktop Client.
+Bi-directional sound can be configured in the Windows client on a per-connection basis. The relevant settings can be accessed in the **Remote audio** section of the **Local Resources** options tab.
 
 ### What can I do if the sound won't play?
 Sign out of the session (don't just disconnect, sign all the way out), and then sign in again.

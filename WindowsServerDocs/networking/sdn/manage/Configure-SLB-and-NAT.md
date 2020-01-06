@@ -3,7 +3,7 @@ title: Configure the Software Load Balancer for Load Balancing and Network Addre
 description: This topic is part of the Software Defined Networking guide on how to Manage Tenant Workloads and Virtual Networks in Windows Server 2016.
 manager: dougkim
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: networking-sdn
@@ -132,7 +132,7 @@ In this example, you create a load balancer object with a public VIP and two VMs
 
 ## Example: Use SLB for outbound NAT
 
-In this example, you configure SLB with a back-end pool for providing outbound NAT capability for a VM on a virtual network’s private address space to reach outbound to the internet. 
+In this example, you configure SLB with a back-end pool for providing outbound NAT capability for a VM on a virtual network's private address space to reach outbound to the internet. 
 
 1. Create the load balancer properties, front-end IP, and back-end pool.
 

@@ -1,7 +1,7 @@
 ---
 title: Virtual Private Networking (VPN)
 description: This topic provides links to VPN documentation for Windows Server 2016.
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: networking
 ms.topic: article
 ms.assetid: 4d8454c9-701b-471e-9c34-caf1b90bfeba

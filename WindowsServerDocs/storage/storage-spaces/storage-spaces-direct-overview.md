@@ -1,6 +1,6 @@
 ---
 title: Storage Spaces Direct overview
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.author: cosdar
 ms.manager: dongill
 ms.technology: storage-spaces

@@ -2,7 +2,7 @@
 title: Security and Assurance
 description: "An overview of Security in Windows Server 2016"
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: techgroup-security
 ms.tgt_pltfrm: na
 ms.topic: article

@@ -1,7 +1,7 @@
 ---
 title: Supported SUSE virtual machines on Hyper-V
 description: "Lists the Linux integration services and features included in each version"
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.service: na
 manager: dongill
 ms.technology: compute-hyper-v

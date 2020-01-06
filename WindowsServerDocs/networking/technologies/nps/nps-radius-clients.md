@@ -2,7 +2,7 @@
 title: RADIUS Clients
 description: This topic provides an overview of RADIUS Clients for Network Policy Server in Windows Server 2016.
 manager: brianlic
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: networking
 ms.topic: article
 ms.assetid: d3a09ac9-75f8-4f57-aab4-b0fdfe110118

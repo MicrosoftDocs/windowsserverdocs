@@ -1,6 +1,6 @@
 ---
 title: Deploy Storage Spaces Direct
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 manager: eldenc
 ms.author: stevenek
 ms.technology: storage-spaces
@@ -142,6 +142,10 @@ Storage Spaces Direct requires high-bandwidth, low-latency networking between se
 > Depending on your networking equipment, and especially with RoCE v2, some configuration of the top-of-rack switch may be required. Correct switch configuration is important to ensure reliability and performance of Storage Spaces Direct.
 
 Windows Server 2016 introduces switch-embedded teaming (SET) within the Hyper-V virtual switch. This allows the same physical NIC ports to be used for all network traffic while using RDMA, reducing the number of physical NIC ports required. Switch-embedded teaming is recommended for Storage Spaces Direct.
+
+Switched or switchless node interconnects
+- Switched: Network switches must be properly configured to handle the bandwidth and networking type. If using RDMA that implements the RoCE protocol, network device and switch configuration is even more important.
+- Switchless: Nodes can be interconnected using direct connections, avoiding using a switch. It is required that every node have a direct connection with every other node of the cluster.
 
 For instructions to set up networking for Storage Spaces Direct, see [Windows Server 2016 Converged NIC and Guest RDMA Deployment Guide](https://github.com/Microsoft/SDN/blob/master/Diagnostics/S2D%20WS2016_ConvergedNIC_Configuration.docx).
 

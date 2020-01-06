@@ -7,7 +7,7 @@ ms.author: billmath
 manager: mtillman
 ms.date: 03/06/2018
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: identity-adfs
 ---
 
@@ -109,7 +109,7 @@ If you are using SQL Server for your AD FS configuration database, size the SQL 
   
 -   For extranet access, you must deploy the Web Application Proxy role service \- part of the Remote Access server role. 
 
--   Third party proxies must support the [MS-ADFSPIP protocol](https://msdn.microsoft.com/en-us/library/dn392811.aspx) to be supported as an AD FS proxy.  For a list of 3rd party vendors see the [FAQ](AD-FS-FAQ.md#what-third-party-proxies-are-available-for-ad-fs-that-support-ms-adfspip).
+-   Third party proxies must support the [MS-ADFSPIP protocol](https://msdn.microsoft.com/library/dn392811.aspx) to be supported as an AD FS proxy.  For a list of 3rd party vendors see the [FAQ](AD-FS-FAQ.md).
 
 -   AD FS 2016 requires Web Application Proxy servers on Windows Server 2016.  A downlevel proxy cannot be configured for an AD FS 2016 farm running at the 2016 farm behavior level.
   
@@ -148,7 +148,7 @@ If you are using SQL Server for your AD FS configuration database, size the SQL 
 
 -   Group Managed service accounts require at least one domain controller running Windows Server 2012 or higher.  The GMSA must live under the default 'CN=Managed Service Accounts' container.  
 
--   For Kerberos authentication, the service principal name ‘`HOST/<adfs\_service\_name>`’ must be registered on the AD FS service account. By default, AD FS will configure this when creating a new AD FS farm.  If this fails, such as in the case of a collision or insufficient permissions, you'll see a warning and you should add it manually.  
+-   For Kerberos authentication, the service principal name ‘`HOST/<adfs\_service\_name>`' must be registered on the AD FS service account. By default, AD FS will configure this when creating a new AD FS farm.  If this fails, such as in the case of a collision or insufficient permissions, you'll see a warning and you should add it manually.  
    
 **Domain Requirements**  
   
@@ -228,7 +228,7 @@ For additional information see [Best practices for securing Active Directory Fed
 **Load Balancer requirements**
 - The load balancer MUST NOT terminate SSL. AD FS supports multiple use cases with certificate authentication which will break when terminating SSL. Terminating SSL at the load balancer is not supported for any use case. 
 - It is recommended to use a load balancer that supports SNI. In the event it does not, using the 0.0.0.0 fallback binding on your AD FS / Web Application Proxy server should provide a workaround.
-- It is recommended to use the HTTP (not HTTPS) health probe endpoints to perform load balancer health checks for routing traffic. This avoids any issues relating to SNI. The response to these probe endpoints is an HTTP 200 OK and is served locally with no dependence on back-end services. The HTTP probe can be accessed over HTTP using the path ‘/adfs/probe’
+- It is recommended to use the HTTP (not HTTPS) health probe endpoints to perform load balancer health checks for routing traffic. This avoids any issues relating to SNI. The response to these probe endpoints is an HTTP 200 OK and is served locally with no dependence on back-end services. The HTTP probe can be accessed over HTTP using the path ‘/adfs/probe'
     - http://&lt;Web Application Proxy name&gt;/adfs/probe
     - http://&lt;ADFS server name&gt;/adfs/probe
     - http://&lt;Web Application Proxy IP address&gt;/adfs/probe

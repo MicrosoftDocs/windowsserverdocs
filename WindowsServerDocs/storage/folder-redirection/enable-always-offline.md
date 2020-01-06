@@ -1,7 +1,7 @@
 ---
 title: Enable Always Offline mode for faster access to files
 description: How to use the Always Offline mode of Offline Files to provide faster access to cached files and redirected folders.
-ms.prod: windows-server-threshold 
+ms.prod: windows-server 
 ms.topic: article 
 author: JasonGerend 
 ms.author: jgerend 
@@ -38,7 +38,7 @@ To enable Always Offline mode, use Group Policy to enable the **Configure slow-l
 6. Select **Enabled**.
 7. In the **Options** box, select **Show**. The **Show Contents window** will appear.
 8. In the **Value name** box, specify the file share for which you want to enable Always Offline mode.
-9. To enable Always Offline mode on all file shares, enter **\\***.
+9. To enable Always Offline mode on all file shares, enter **\***.
 10. In the **Value** box, enter **Latency=1** to set the latency threshold to one millisecond, and then select **OK**.
 
 >[!NOTE]

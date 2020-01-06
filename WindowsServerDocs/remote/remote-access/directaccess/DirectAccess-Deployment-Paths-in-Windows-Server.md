@@ -3,7 +3,7 @@ title: DirectAccess Deployment Paths in Windows Server
 description: This topic provides a listing of the documentation for the two main DirectAccess deployment paths in Windows Server 2016 asic and Advanced.
 manager: brianlic
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: networking-da

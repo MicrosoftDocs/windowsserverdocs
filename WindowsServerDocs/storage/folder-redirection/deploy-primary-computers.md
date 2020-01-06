@@ -1,7 +1,7 @@
 ---
 title: Deploy primary computers for Folder Redirection and Roaming User Profiles
 description: How to enable primary computer support and designate primary computers for users with Folder Redirection and Roaming User Profiles.
-ms.prod: windows-server-threshold 
+ms.prod: windows-server 
 ms.topic: article 
 author: JasonGerend 
 ms.author: jgerend 
@@ -101,7 +101,7 @@ Here's how to test primary computer functionality:
 3. Open File Explorer.
 1. Right-click a redirected folder (for example, the My Documents folder in the Documents library), and then select **Properties**.
 1. Select the **Location** tab, and confirm that the path displays the file share you specified instead of a local path. To confirm that the user profile is roaming, open **Control Panel**, select **System and Security**, select **System**, select **Advanced System Settings**, select **Settings** in the User Profiles section and then look for **Roaming** in the **Type** column.
-1. Sign in with the same user account to a computer that is not designated as the user’s primary computer.
+1. Sign in with the same user account to a computer that is not designated as the user's primary computer.
 1. Repeat steps 2–5, instead looking for local paths and a **Local** profile type.
 
 > [!NOTE]

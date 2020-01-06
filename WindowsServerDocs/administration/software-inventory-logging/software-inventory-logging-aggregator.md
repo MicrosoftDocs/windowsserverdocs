@@ -2,7 +2,7 @@
 title: Software Inventory Logging Aggregator
 description: Describes how to install and manage Software Inventory Logging Aggregator
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: manage-software-inventory-logging
 ms.reviewer: na
 ms.suite: na
@@ -61,7 +61,7 @@ Once deployed correctly, the following data can be viewed at the SIL Aggregator:
 
 -   **IT Pros, or data center administrators**, looking for a low cost method of collecting valuable software inventory data, automatically, over time.
 
--   **CIOs and Finance Controllers**, who need to report usage of Microsoft enterprise software in their organizations’ IT deployments.
+-   **CIOs and Finance Controllers**, who need to report usage of Microsoft enterprise software in their organizations' IT deployments.
 
 ## Getting Started
 **Prerequisites**
@@ -94,10 +94,10 @@ Software Inventory Logging (SIL) exists in Windows Server versions with the foll
 ### Security and Account Types
 **Certificate requirement**
 
-SIL and the SIL Aggregator rely on SSL certificates for authenticated communication. The common implementation of this will be to install SIL Aggregator with one certificate (server name and certificate name match) for hosting the web service that receives inventory data. Then, Windows Servers to be inventoried using the SIL feature will use a different client certificate, to push data to the SIL Aggregator. A PowerShell cmdlet (Set-SilAggregator, more details below) needs to be used to add certificate thumbprints to the SIL Aggregator’s list of approved certificates from which the Aggregator will accept associated data. The SIL Aggregator proceeds with processing and insertion into its database after authentication of each payload of data with a certificate. See the **SIL Aggregator Cmdlets Detail** section for more specific details on how this works.
+SIL and the SIL Aggregator rely on SSL certificates for authenticated communication. The common implementation of this will be to install SIL Aggregator with one certificate (server name and certificate name match) for hosting the web service that receives inventory data. Then, Windows Servers to be inventoried using the SIL feature will use a different client certificate, to push data to the SIL Aggregator. A PowerShell cmdlet (Set-SilAggregator, more details below) needs to be used to add certificate thumbprints to the SIL Aggregator's list of approved certificates from which the Aggregator will accept associated data. The SIL Aggregator proceeds with processing and insertion into its database after authentication of each payload of data with a certificate. See the **SIL Aggregator Cmdlets Detail** section for more specific details on how this works.
 
 ### Polling Account Setup
-When adding credentials to the SIL Aggregator to enable polling operations, you should use a least privileged account approach. Also, as a security best practice, you shouldn’t use the same credentials for all, or many, hosts in a data center or other IT deployment.
+When adding credentials to the SIL Aggregator to enable polling operations, you should use a least privileged account approach. Also, as a security best practice, you shouldn't use the same credentials for all, or many, hosts in a data center or other IT deployment.
 
 On a Windows Server host that you want to set up for polling by the SIL Aggregator, and to avoid using a user in the administrators group, follow these steps to give just enough access to a user account:
 
@@ -134,7 +134,7 @@ On a Windows Server host that you want to set up for polling by the SIL Aggregat
 ### Installing SIL Aggregator
 There are some things you need to make sure of before installing SIL Aggregator on a Windows Server:
 
--   **You have a valid SSL certificate** that you want to use to host this software’s web service.
+-   **You have a valid SSL certificate** that you want to use to host this software's web service.
 
     -   Certificate should be in **.pfx** format
 
@@ -180,7 +180,7 @@ There are some things you need to make sure of before installing SIL Aggregator 
 
     -   The gMSA account option must be used if you plan to run the SQL Server database on a separate server from the SIL Aggregator.
 
-    -   Don’t forget to reboot the server after adding the computer account to the gMSA enabled security group in Active Directory.
+    -   Don't forget to reboot the server after adding the computer account to the gMSA enabled security group in Active Directory.
 
 7.  In **Choose a SQL Server**, enter the SQL Server where your SQL instance is installed, or **localhost**, if it is installed on the local server.
 
@@ -245,18 +245,18 @@ Once you have Software Inventory Logging Aggregator installed on your server, op
 
         -   This cmdlet will auto detect from a preset list of options (see **SIL Aggregator Cmdlets Detail** section), which HostType and HyperVisorType is correct for the host you are adding. If it is unable to recognize these or the credentials provided are incorrect, a prompt will be displayed. If you accept with a **Y** entry, the host will be added, listed as **Unknown**, but it will not be polled.
 
-    -   Run `Set-SilAggregator –AddCertificateThumbprint` "your client certificate’s thumbprint"
+    -   Run `Set-SilAggregator –AddCertificateThumbprint` "your client certificate's thumbprint"
 
         This is required to receive data over HTTPS from Windows Servers with SIL Logging enabled. The thumbprint will be added to the list of thumbprints that the SIL Aggregator will accept data from. The SIL Aggregator is designed to accept valid enterprise client authentication certificates. The certificate used will need to be installed in the **\\localmachine\MY (Local Computer -> Personal**) store on the server forwarding the data.
 
 -   On your Windows Servers to be inventoried, open PowerShell as an administrator and run these commands:
 
-    -   Run `Set-SilLogging –TargetUri "https://contososilaggregator" –CertificateThumbprint "your client certificate’s thumbprint"`
+    -   Run `Set-SilLogging –TargetUri "https://contososilaggregator" –CertificateThumbprint "your client certificate's thumbprint"`
 
         -   This will tell SIL in Windows Server where to send inventory data and which certificate to use for authentication.
 
             > [!IMPORTANT]
-            > Make sure "https://’ is in the TargetUri value.
+            > Make sure "https://' is in the TargetUri value.
 
         -   The enterprise client certificate with this thumbprint needs to be installed in **\localmachine\MY** or use **certmgr.msc** to install the certificate in **Local Computer -> Personal** store.
 
@@ -399,7 +399,7 @@ Following are details of the SIL Aggregator cmdlets. For the full cmdlet documen
 
 ### Publish-SilReport
 
--   This cmdlet, used as is, will create a Software Inventory Logging Report and place it in the logged in user’s Documents directory (Excel 2013 is required on the machine where the cmdlet is run).
+-   This cmdlet, used as is, will create a Software Inventory Logging Report and place it in the logged in user's Documents directory (Excel 2013 is required on the machine where the cmdlet is run).
 
 -   Used with the `–OpenReport` parameter, it will create the report and open it in Excel for viewing.
 
@@ -526,9 +526,9 @@ With the `Set-SilAggregator` cmdlet you can:
 
 -   When using gMSA option:
 
-    -   Don’t forget to reboot the server after joining it to the gMSA enabled machine group in Active Directory.
+    -   Don't forget to reboot the server after joining it to the gMSA enabled machine group in Active Directory.
 
-    -   In the installation process, don’t use fully qualified domain when entering domain\user. For example, use **mydomain\gmsaaccount**. Don’t enter **mydomain.<i></i>com\gmsaaccount**.
+    -   In the installation process, don't use fully qualified domain when entering domain\user. For example, use **mydomain\gmsaaccount**. Don't enter **mydomain.<i></i>com\gmsaaccount**.
 
 -   When using the Windows Management Framework in your environment:
 
@@ -559,7 +559,7 @@ When you want to start inventorying servers in your environment with a different
 
 -   On ALL servers forwarding data, use the `Set-SilLogging –CertificateThumbprint` cmdlet to update to the thumbprint of the new certificate.
 
--   **CRITICAL: Only after all servers forwarding data have been updated, remove the old thumbprint** from the SIL Aggregator using `Set-SilAggregator –RemoveCertificateThumbprint` cmdlet. If a server forwarding data continues to forward using an old certificate that has been removed from the SIL Aggregator **data will be lost** and not inserted in the database on the Aggregator. This only impacts scenarios where a server has previously successfully forwarded data to a SIL Aggregator and the certificate is then removed from the SIL Aggregator’s list of thumbprints to accept data from.
+-   **CRITICAL: Only after all servers forwarding data have been updated, remove the old thumbprint** from the SIL Aggregator using `Set-SilAggregator –RemoveCertificateThumbprint` cmdlet. If a server forwarding data continues to forward using an old certificate that has been removed from the SIL Aggregator **data will be lost** and not inserted in the database on the Aggregator. This only impacts scenarios where a server has previously successfully forwarded data to a SIL Aggregator and the certificate is then removed from the SIL Aggregator's list of thumbprints to accept data from.
 
 ## Release Notes
 
@@ -571,7 +571,7 @@ When you want to start inventorying servers in your environment with a different
 
     3.  Expand the SoftwareInventoryLogging database, and then Tables, in the selection tree.
 
-    4.  Right click **dbo.SqlServerEdition**, and then select ‘**Edit Top 200 Rows**’.
+    4.  Right click **dbo.SqlServerEdition**, and then select ‘**Edit Top 200 Rows**'.
 
     5.  Change the PropertyNumValue next to "Standard Edition" to **2760240536** (from -1534726760).
 
@@ -581,7 +581,7 @@ When you want to start inventorying servers in your environment with a different
 
 -   In SIL generated reports, all processor core counts include the count of threads if hyper-threading is enabled on the physical server.  To get actual physical core counts on servers with hyperthreading enabled, it is necessary to reduce these counts by half.
 
--   Totals in the rows (on **Dashboard** tab) and columns (on **Summary and Detail** tabs) labeled "**Simultaneously Running**…", for both Windows Server and System Center don’t exactly match between the two locations. On the **Dashboard** tab, it is necessary to add "**Windows Server Devices (with no known VMs**)" value to the "**Simultaneously Running**…" value to equal this number on the **Summary and Detail** tabs.
+-   Totals in the rows (on **Dashboard** tab) and columns (on **Summary and Detail** tabs) labeled "**Simultaneously Running**…", for both Windows Server and System Center don't exactly match between the two locations. On the **Dashboard** tab, it is necessary to add "**Windows Server Devices (with no known VMs**)" value to the "**Simultaneously Running**…" value to equal this number on the **Summary and Detail** tabs.
 
 -   See **IMPORTANT STEPS TO AVOID DATA LOSS** when changing or updating certificates under the **Managing SIL Over Time** section of this documentation.
 

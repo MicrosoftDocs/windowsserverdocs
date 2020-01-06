@@ -1,7 +1,7 @@
 ---
 ms.assetid: 77545920-2d13-4f35-a4d1-14dbec8340dc
 title: Fsutil sparse
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 manager: dmoss
 ms.author: toklima
 author: toklima

@@ -1,8 +1,8 @@
 ---
-title: Get started with Remote Desktop on Windows
-description: Basic set up steps for the Remote Desktop client for Windows.
+title: Get started with the Windows Store client
+description: Basic set up steps for the Remote Desktop client for Windows Store.
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: remote-desktop-services
@@ -12,20 +12,20 @@ ms.assetid: 64f038e1-40ec-4c67-938b-72edea49e5d8
 author: lizap
 manager: dongill
 ms.author: elizapo
-ms.date: 05/07/2018
+ms.date: 08/27/2019
 ms.localizationpriority: medium
 ---
-# Get started with Remote Desktop on Windows
+# Get started with the Windows Store client
 
->Applies to: Windows 10, Windows 8.1, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2
+>Applies to: Windows 10
 
 You can use the Remote Desktop client for Windows to work with Windows apps and desktops remotely from a different Windows device.
 
 Use the following information to get started. Be sure to check out the [FAQ](remote-desktop-client-faq.md) if you have any questions.
 
 > [!NOTE]
-> - Curious about the new releases for the Windows client? Check out [What's new for Remote Desktop on Windows?](windows-whatsnew.md)
-> - You can run the client on any version of Windows 10.
+> - Curious about the new releases for the Windows Store client? Check out [What's new in the Windows Store client](windows-whatsnew.md)
+> - You can run the client on any supported version of Windows 10.
 
 ## Get the RD client and start using it
 
@@ -63,16 +63,16 @@ Need to edit these settings? Tap the overflow menu (**...**) next to the name of
 Want to delete the connection? Again, tap the overflow menu (**...**), and then tap **Remove**.
 
 ### Add a remote resource
+
 Remote resources are RemoteApp programs, session-based desktops, and virtual desktops published by your admin using Remote Desktop Services.
 
 To add a remote resource:
 
-1. On the Connection Center screen, tap **+ Add**, and then tap **Remote resources**. 
+1. On the Connection Center screen, tap **+ Add**, and then tap **Remote resources**.
 2. Enter the **Feed URL** provided by your admin and tap **Find feeds**.
 3. When prompted, provide the credentials to use to subscribe to the feed.
 
 The remote resources will be displayed in the Connection Center.
-
 
 To delete remote resources:
 
@@ -103,18 +103,21 @@ To set up a new gateway:
 You can set the following global settings in your client by tapping **Settings**:
 
 MANAGED ITEMS
+
 - **User account** - Allows you to Add, edit and delete user accounts saved in the client. This is a good way to update the password for an account after it has changed.
 - **Gateway** - Allows you to Add, edit and delete gateway servers saved in the client.
 - **Group** - Allows you to Add, edit and delete groups saved in the client. These allow you to easily group connections.
 
 SESSION SETTINGS
+
 - **Start connections in full screen** - When enabled, anytime a connection is launched, the client will use the entire screen of the current monitor.
 - **Start each connection in a new window** - When enabled, each connection is launched in a separate window, allowing you to place them on different monitors and switch between them using the taskbar.
 - **When resizing the app:** - Allows you control over what happens when the client window is resized. Defaults to **Stretch the content, preserving aspect ratio**.
-- **Use keyboard commands with:** - Let's you specify where keyboard commands like *WIN* or *ALT+TAB* are used. The default is to only send them to the session when the connection is in full scren.
+- **Use keyboard commands with:** - Let's you specify where keyboard commands like *WIN* or *ALT+TAB* are used. The default is to only send them to the session when the connection is in full screen.
 - **Prevent the screen from timing out** - Allows you to keep the screen from timing out when a session is active. This is helpful when the connection does not require any interaction for long periods of time.
 
 APP SETTINGS
+
 - **Show Desktop Previews** - Lets you see a preview of a desktop in the Connection Center before you connect to it. By default, this is set to **on**.
 - **Help improve Remote Desktop** - Sends anonymous data to Microsoft. We use this data to improve the client. To learn more about how we treat this anonymous, private data, see the [Microsoft Privacy Statement](https://privacy.microsoft.com/en-us/privacystatement). By default, this setting is **on**.
 
@@ -146,7 +149,7 @@ When you start a remote desktop connection, there are tools available that you c
 
 1. Tap the Remote Desktop connection to start the session.
 2. If you haven't saved credentials for the connection, you will be prompted to provide a **Username** and **Password**.
-3. If you are asked to verify the certificate for the remote desktop, review the information and ensure this is a PC you trust before tapping **Connect**. You can also select **Don’t ask about this certificate again** to always accept this certificate.
+3. If you are asked to verify the certificate for the remote desktop, review the information and ensure this is a PC you trust before tapping **Connect**. You can also select **Don't ask about this certificate again** to always accept this certificate.
 
 ### Connection Bar
 
@@ -175,13 +178,14 @@ Tap the **...** on the connection bar to display the command bar on the right-ha
 ### Use direct touch gestures and mouse modes in a remote session
 
 Two mouse modes are available to interact with the session.
+
 - **Direct touch**: Passes all of the touch contacts to the session to be interpreted remotely.
   - Used in the same way you would use Windows with a touch screen.
 - **Mouse pointer**: Transforms your local touch screen into a large touchpad allowing to move a mouse pointer in the session.
-  - Used in the same way you would use Winodws with a touchpad.
+  - Used in the same way you would use Windows with a touchpad.
 
 > [!NOTE]
-> Interacting with Windows 8 or newer the native touch gestures are supported in Direct Touch mode. 
+> Interacting with Windows 8 or newer the native touch gestures are supported in Direct Touch mode.
 
 | Mouse mode    | Mouse operation      | Gesture                                                               |
 |---------------|----------------------|-----------------------------------------------------------------------|

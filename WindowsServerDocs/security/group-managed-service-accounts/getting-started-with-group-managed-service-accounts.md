@@ -2,7 +2,7 @@
 title: Getting Started with Group Managed Service Accounts
 description: "Windows Server Security"
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: security-gmsa
@@ -166,9 +166,8 @@ Membership in **Domain Admins**, **Account Operators** or ability to create msDS
 
     Enter the command on a single line, even though they might appear word-wrapped across several lines here because of formatting constraints.
 
-    ```
-    New-ADServiceAccount ITFarm1 -DNSHostName ITFarm1.contoso.com -PrincipalsAllowedToRetrieveManagedPassword ITFarmHosts -KerberosEncryptionType RC4, AES128, AES256 -ServicePrincipalNames http/ITFarm1.contoso.com/contoso.com, http/ITFarm1.contoso.com/contoso, http/ITFarm1/contoso.com, http/ITFarm1/contoso
-
+    ```Powershell
+    New-ADServiceAccount ITFarm1 -DNSHostName ITFarm1.contoso.com -PrincipalsAllowedToRetrieveManagedPassword ITFarmHosts$ -KerberosEncryptionType RC4, AES128, AES256 -ServicePrincipalNames http/ITFarm1.contoso.com/contoso.com, http/ITFarm1.contoso.com/contoso, http/ITFarm1/contoso.com, http/ITFarm1/contoso
     ```
 
 Membership in **Domain Admins**, **Account Operators**, or ability to create msDS-GroupManagedServiceAccount objects, is the minimum required to complete this procedure. For detailed information about using the appropriate accounts and group memberships, see [Local and Domain Default Groups](https://technet.microsoft.com/library/dd728026(WS.10).aspx).
@@ -192,9 +191,8 @@ Membership in **Domain Admins**, **Account Operators**, or ability to create msD
 
 **Example**
 
-```
-New-ADServiceAccount ITFarm1 -RestrictToOutboundAuthenticationOnly - PrincipalsAllowedToRetrieveManagedPassword ITFarmHosts
-
+```PowerShell
+New-ADServiceAccount ITFarm1 -RestrictToOutboundAuthenticationOnly - PrincipalsAllowedToRetrieveManagedPassword ITFarmHosts$
 ```
 
 ### <a name="BKMK_ConfigureServiceIdentity"></a>Step 2: Configuring service identity application service
@@ -256,14 +254,12 @@ Membership in **Domain Admins**, **Account Operators**, or ability to manage msD
 
 For example, to add member hosts type the following commands, and then press ENTER.
 
-```
+```PowerShell
 Get-ADServiceAccount [-Name] ITFarm1 -PrincipalsAllowedToRetrieveManagedPassword
-
 ```
 
-```
-Set-ADServiceAccount [-Name] ITFarm1-PrincipalsAllowedToRetrieveManagedPassword Host1,Host2,Host3
-
+```PowerShell
+Set-ADServiceAccount [-Name] ITFarm1 -PrincipalsAllowedToRetrieveManagedPassword Host1$,Host2$,Host3$
 ```
 
 ## <a name="BKMK_Update_gMSA"></a>Updating the group Managed Service Account properties
@@ -316,14 +312,12 @@ Membership in **Domain Admins**, **Account Operators**, or ability to manage msD
 
 For example, to remove member hosts type the following commands, and then press ENTER.
 
-```
+```PowerShell
 Get-ADServiceAccount [-Name] ITFarm1 -PrincipalsAllowedToRetrieveManagedPassword
-
 ```
 
-```
-Set-ADServiceAccount [-Name] ITFarm1 -PrincipalsAllowedToRetrieveManagedPassword Host1,Host3
-
+```PowerShell
+Set-ADServiceAccount [-Name] ITFarm1 -PrincipalsAllowedToRetrieveManagedPassword Host1$,Host3$
 ```
 
 ### <a name="BKMK_RemoveGMSA"></a>Step 2: Removing a group Managed Service Account from the system
@@ -343,7 +337,7 @@ Membership in **Administrators**, or equivalent, is the minimum required to comp
 
     For example, to remove the cached credentials for a gMSA named ITFarm1 type the following command, and then press ENTER:
 
-    ```
+    ```PowerShell
     Uninstall-ADServiceAccount ITFarm1
     ```
 
@@ -354,6 +348,3 @@ For more information about the Uninstall-ADServiceAccount cmdlet, at the Active 
 ## <a name="BKMK_Links"></a>See also
 
 -   [Group Managed Service Accounts Overview](group-managed-service-accounts-overview.md)
-
-
-

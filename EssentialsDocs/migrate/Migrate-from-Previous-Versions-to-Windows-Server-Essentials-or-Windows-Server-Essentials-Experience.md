@@ -1,19 +1,14 @@
 ---
 title: "Migrate from Previous Versions to Windows Server Essentials or Windows Server Essentials Experience"
 description: "Describes how to use Windows Server Essentials"
-ms.custom: na
-ms.date: 10/03/20116
+ms.date: 10/03/2016
 ms.prod: windows-server-2016-essentials
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 2974fb3a-5150-43fd-a73f-3e5074eb5d03
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
 ---
-
 # Migrate from Previous Versions to Windows Server Essentials or Windows Server Essentials Experience
 
 >Applies To: Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, Windows Server 2012 Essentials

@@ -20,8 +20,7 @@ Persistent Memory (or PMem) is a new type of memory technology that delivers a u
 
 ## Background
 
-PMem is a type of non-volatile DRAM (NVDIMM) that has the speed of DRAM, but retains its memory content through power cycles (the memory contents remain even when system power goes down in the event of an unexpected power loss, user initiated shutdown, system crash, etc.). Because of this, resuming from where you left off is significantly faster, since the content of your RAM doesn't need to be reloaded. Another unique characteristic is that PMem is byte addressable, which means you can also use it as storage (which is why you may hear PMem being referred to as storage-class memory).
-
+PMem is a type of non-volatile RAM (NVDIMM) that retains its content through power cycles. Memory contents remain even when system power goes down in the event of an unexpected power loss, user initiated shutdown, system crash, etc. This unique characteristic means you can also use PMem as storage - which is why you may hear PMem being referred to as "storage-class memory".
 
 To see some of these benefits, let's look at the this demo from Microsoft Ignite 2018:
 
@@ -33,9 +32,9 @@ Any storage system that provides fault tolerance necessarily makes distributed c
 
 ![13.7m IOPS record screenshot](media/deploy-pmem/iops-record.png)
 
-If you watch the video closely, you'll notice thatwhat’s even more jaw-dropping is the latency: even at over 13.7 M IOPS, the filesystem in Windows is reporting latency that’s consistently less than 40 µs! (That’s the symbol for microseconds, one-millionth of a second.) This is an order of magnitude faster than what typical all-flash vendors proudly advertise today.
+If you watch the video closely, you'll notice thatwhat's even more jaw-dropping is the latency: even at over 13.7 M IOPS, the filesystem in Windows is reporting latency that's consistently less than 40 µs! (That's the symbol for microseconds, one-millionth of a second.) This is an order of magnitude faster than what typical all-flash vendors proudly advertise today.
 
-Together, Storage Spaces Direct in Windows Server 2019 and Intel® Optane™ DC persistent memory deliver breakthrough performance. This industry-leading HCI benchmark of over 13.7M IOPS, with predictable and extremely low latency, is more than double our previous industry-leading benchmark of 6.7M IOPS. What’s more, this time we needed just 12 server nodes, 25% fewer than two years ago.
+Together, Storage Spaces Direct in Windows Server 2019 and Intel® Optane™ DC persistent memory deliver breakthrough performance. This industry-leading HCI benchmark of over 13.7M IOPS, with predictable and extremely low latency, is more than double our previous industry-leading benchmark of 6.7M IOPS. What's more, this time we needed just 12 server nodes, 25% fewer than two years ago.
 
 ![IOPS gains](media/deploy-pmem/iops-gains.png)
 
@@ -51,13 +50,13 @@ The table below has the full performance numbers:
 
 ### Supported Hardware
 
-The table below shows supported persistent memory hardware for Windows Server 2019 and Windows Server 2016. Note that Intel Optane specifically supports both memory mode and app-direct mode. Windows Server 2019 supports mixed-mode operations.
+The table below shows supported persistent memory hardware for Windows Server 2019 and Windows Server 2016. Note that Intel Optane supports both Memory (i.e. volatile) and App Direct (i.e persistent) modes.
 
 | Persistent Memory Technology                                      | Windows Server 2016 | Windows Server 2019 |
 |-------------------------------------------------------------------|--------------------------|--------------------------|
-| **NVDIMM-N** in App-Direct Mode                                       | Supported                | Supported                |
-| **Intel Optane™ DC Persistent Memory** in App-Direct Mode             | Not Supported            | Supported                |
-| **Intel Optane™ DC Persistent Memory** in Two-Level-Memory Mode (2LM) | Not Supported            | Supported                |
+| **NVDIMM-N** in persistent mode                                  | Supported                | Supported                |
+| **Intel Optane™ DC Persistent Memory** in App Direct Mode             | Not Supported            | Supported                |
+| **Intel Optane™ DC Persistent Memory** in Memory Mode | Supported            | Supported                |
 
 Now, let's dive into how you configure persistent memory.
 
@@ -65,7 +64,7 @@ Now, let's dive into how you configure persistent memory.
 
 ### Understanding interleave sets
 
-Recall that the NVDIMM-N resides in a standard DIMM (memory) slot, placing data closer to the processor (thus, reducing the latency and fetching better performance). To build on this, an interleave set is when two or more NVDIMMs create an N-Way interleave set to provide stripes read/write operations for increased throughput. The most common setups are 2-Way or 4-Way interleaving.
+Recall that a NVDIMM resides in a standard DIMM (memory) slot, placing data closer to the processor (thus, reducing the latency and fetching better performance). To build on this, an interleave set is when two or more NVDIMMs create an N-Way interleave set to provide stripes read/write operations for increased throughput. The most common setups are 2-Way or 4-Way interleaving.
 
 Interleaved sets can often be created in a platform's BIOS to make multiple persistent memory devices appear as a single logical disk to Windows Server. Each persistent memory logical disk contains an interleaved set of physical devices by running:
 
@@ -113,7 +112,7 @@ RegionId TotalSizeInBytes DeviceId
 
 This shows all the persistent memory region(s) not assigned to a logical persistent memory disk on the system.
 
-To see all of the persistent memory devices information in the system, including device device type, location, health and operational status, etc. you can run the following cmdlet on the local server:
+To see all of the persistent memory devices information in the system, including device type, location, health and operational status, etc. you can run the following cmdlet on the local server:
 
 ```PowerShell
 Get-PmemPhysicalDevice
@@ -127,7 +126,7 @@ DeviceId DeviceType           HealthStatus OperationalStatus PhysicalLocation Fi
 20       Intel INVDIMM device Healthy      {Ok}              CPU1_DIMM_C1     102005310        126 GB                 0 GB
 ```
 
-Since we we have available unused pmem region, we can create new persistent memory disks. We can create multiple persistent memory disks using the unused regions by:
+Since we have available unused pmem region, we can create new persistent memory disks. We can create multiple persistent memory disks using the unused regions by:
 
 ```PowerShell
 Get-PmemUnusedRegion | New-PmemDisk

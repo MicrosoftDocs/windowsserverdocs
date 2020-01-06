@@ -7,7 +7,7 @@ author: daniellee-msft
 ms.author: jol
 ms.date: 03/01/2019
 ms.localizationpriority: medium
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ---
 # Manage Hyper-Converged Infrastructure with Windows Admin Center
 
@@ -15,7 +15,7 @@ ms.prod: windows-server-threshold
 
 ## What is Hyper-Converged Infrastructure
 
-Hyper-Converged Infrastructure consolidates software-defined compute, storage, and networking into one cluster to provide high-performance, cost-effective, and easily scalable virtualization. This capability was introduced in Windows Server 2016 with [Storage Spaces Direct](https://docs.microsoft.com/windows-server/storage/storage-spaces/storage-spaces-direct-overview), [Software Defined Networking](https://docs.microsoft.com/en-us/windows-server/networking/sdn/software-defined-networking) and [Hyper-V](https://docs.microsoft.com/windows-server/virtualization/hyper-v/hyper-v-on-windows-server).
+Hyper-Converged Infrastructure consolidates software-defined compute, storage, and networking into one cluster to provide high-performance, cost-effective, and easily scalable virtualization. This capability was introduced in Windows Server 2016 with [Storage Spaces Direct](https://docs.microsoft.com/windows-server/storage/storage-spaces/storage-spaces-direct-overview), [Software Defined Networking](https://docs.microsoft.com/windows-server/networking/sdn/software-defined-networking) and [Hyper-V](https://docs.microsoft.com/windows-server/virtualization/hyper-v/hyper-v-on-windows-server).
 
 > [!Tip]
 > Looking to acquire Hyper-Converged Infrastructure? Microsoft recommends these [Windows Server Software-Defined](https://microsoft.com/wssd) solutions from our partners. They are designed, assembled, and validated against our reference architecture to ensure compatibility and reliability, so you get up and running quickly.
@@ -49,7 +49,7 @@ To manage your cluster as Hyper-Converged Infrastructure in Windows Admin Center
 
 ### Prepare your Windows Server 2016 cluster for Windows Admin Center
 
-Windows Admin Center for Hyper-Converged Infrastructure depends on management APIs added after Windows Server 2016 was released. Before you can manage your Windows Server 2016 cluster with Windows Admin Center, you’ll need to perform these two steps:
+Windows Admin Center for Hyper-Converged Infrastructure depends on management APIs added after Windows Server 2016 was released. Before you can manage your Windows Server 2016 cluster with Windows Admin Center, you'll need to perform these two steps:
 
 1. Verify that every server in the cluster has installed the [2018-05 Cumulative Update for Windows Server 2016 (KB4103723)](https://support.microsoft.com/help/4103723/windows-10-update-kb4103723) or later. To download and install this update, go to **Settings** > **Update & Security** > **Windows Update** and select **Check online for updates from Microsoft Update**.
 2. Run the following PowerShell cmdlet as Administrator on the cluster:
@@ -92,7 +92,7 @@ Once your Hyper-Converged Infrastructure is deployed, you can manage it using Wi
 
 ### Install Windows Admin Center
 
-If you haven’t already, download and install Windows Admin Center. The fastest way to get up and running is to install it on your Windows 10 computer and manage your servers remotely. This takes less than five minutes. [Download now](https://aka.ms/windowsadmincenter) or [learn more about other installation options](../deploy/install.md).
+If you haven't already, download and install Windows Admin Center. The fastest way to get up and running is to install it on your Windows 10 computer and manage your servers remotely. This takes less than five minutes. [Download now](https://aka.ms/windowsadmincenter) or [learn more about other installation options](../deploy/install.md).
 
 ### Add Hyper-Converged Cluster
 
@@ -133,7 +133,7 @@ Yes. Windows Admin Center for Hyper-Converged Infrastructure receives frequent u
 
 ### Can I use Windows Admin Center to manage Storage Spaces Direct for other use cases (not hyper-converged), such as converged Scale-Out File Server (SoFS) or Microsoft SQL Server?
 
-Windows Admin Center for Hyper-Converged Infrastructure does not provide management or monitoring options specifically for other use cases of Storage Spaces Direct – for example, it can’t create file shares. However, the Dashboard and core features, such as creating volumes or replacing drives, work for any Storage Spaces Direct cluster.
+Windows Admin Center for Hyper-Converged Infrastructure does not provide management or monitoring options specifically for other use cases of Storage Spaces Direct – for example, it can't create file shares. However, the Dashboard and core features, such as creating volumes or replacing drives, work for any Storage Spaces Direct cluster.
 
 ### What's the difference between a Failover Cluster and a Hyper-Converged Cluster?
 
@@ -165,7 +165,7 @@ Although Windows Admin Center offers powerful and convenient integration with th
 
 ## Things to try
 
-If you’re just getting started, here are some quick tutorials to help you learn how Windows Admin Center for Hyper-Converged Infrastructure is organized and works. Please exercise good judgement and be careful with production environments. These videos were recorded with Windows Admin Center version 1804 and an Insider Preview build of Windows Server 2019.
+If you're just getting started, here are some quick tutorials to help you learn how Windows Admin Center for Hyper-Converged Infrastructure is organized and works. Please exercise good judgement and be careful with production environments. These videos were recorded with Windows Admin Center version 1804 and an Insider Preview build of Windows Server 2019.
 
 ### Manage Storage Spaces Direct volumes
 
@@ -230,19 +230,19 @@ If you’re just getting started, here are some quick tutorials to help you lear
 1. From the **Dashboard**, select **Servers** from the navigation on the left side or by clicking the **VIEW SERVERS >**  link on the tile in the lower right corner of the Dashboard.
 2. At the top, switch from **Summary** to the **Inventory** tab.
 3. Select a server by clicking its name to open the **Server** detail page.
-4. Click **Pause server for maintenance**. If it’s safe to proceed, this will move virtual machines to other servers in the cluster. The server will have status Draining while this happens. If you want, you can watch the virtual machines move on the **Virtual machines > Inventory** page, where their host server is shown clearly in the grid. When all virtual machines have moved, the server status will be **Paused**.
+4. Click **Pause server for maintenance**. If it's safe to proceed, this will move virtual machines to other servers in the cluster. The server will have status Draining while this happens. If you want, you can watch the virtual machines move on the **Virtual machines > Inventory** page, where their host server is shown clearly in the grid. When all virtual machines have moved, the server status will be **Paused**.
 5. Click **Manage server** to access all the per-server management tools in Windows Admin Center.
-6. Click **Restart**, then **Yes**. You’ll be kicked back to the connections list.
-7. Back on the **Dashboard**, the server is colored red while it’s down.
-8. Once it’s back up, navigate again the **Server** page and click **Resume server from maintenance** to set the server status back to simply Up. In time, virtual machines will move back – no user action is required.
+6. Click **Restart**, then **Yes**. You'll be kicked back to the connections list.
+7. Back on the **Dashboard**, the server is colored red while it's down.
+8. Once it's back up, navigate again the **Server** page and click **Resume server from maintenance** to set the server status back to simply Up. In time, virtual machines will move back – no user action is required.
 
 ### Replace a failed drive
 
 1. When a drive fails, an alert appears in the upper left **Alerts** area of the **Dashboard**.
 2. You can also select **Drives** from the navigation on the left side or click the **VIEW DRIVES >** link on the tile in the lower right corner to browse drives and see their status for yourself. In the **Inventory** tab, the grid supports sorting, grouping, and keyword search.
-3. From the **Dashboard**, click the alert to see details, like the drive’s physical location.
+3. From the **Dashboard**, click the alert to see details, like the drive's physical location.
 4. To learn more, click the **Go to drive** shortcut to the **Drive** detail page.
-5. If your hardware supports it, you can click **Turn light on/off** to control the drive’s indicator light.
+5. If your hardware supports it, you can click **Turn light on/off** to control the drive's indicator light.
 6. Storage Spaces Direct automatically retires and evacuates failed drives. When this has happened, the drive status is Retired, and its storage capacity bar is empty.
 7. Remove the failed drive and insert its replacement.
 8. In **Drives > Inventory**, the new drive will appear. In time, the alert will clear, volumes will repair back to OK status, and storage will rebalance onto the new drive – no user action is required.
@@ -274,7 +274,7 @@ You can also configure the virtual network when creating a virtual machine.
 
 ## Feedback
 
-It’s all about your feedback! The most important benefit of frequent updates is to hear what’s working and what needs to be improved. Here are some ways to let us know what you’re thinking:
+It's all about your feedback! The most important benefit of frequent updates is to hear what's working and what needs to be improved. Here are some ways to let us know what you're thinking:
 
 - [Submit and vote for feature requests on UserVoice](https://windowsserver.uservoice.com/forums/295071/category/319162?query=%5Bhci%5D)
 - [Join the Windows Admin Center forum on Microsoft Tech Community](https://techcommunity.microsoft.com/t5/Windows-Server-Management/bd-p/WindowsServerManagement)

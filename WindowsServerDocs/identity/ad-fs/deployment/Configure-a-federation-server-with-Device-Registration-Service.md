@@ -7,7 +7,7 @@ ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 
 ms.technology: identity-adfs
 ---
@@ -49,7 +49,7 @@ You can enable Device Registration Service \(DRS\) on your federation server aft
 2.  Repeat this step on each federation farm node in your AD FS farm..  
   
 ## Enable seamless second factor authentication  
-Seamless second factor authentication is an enhancement in AD FS that provides an added level of access protection to corporate resources and applications from external devices that are trying to access them. When a personal device is Workplace Joined, it becomes a ‘known’ device and administrators can use this information to drive conditional access and gate access to resources.  
+Seamless second factor authentication is an enhancement in AD FS that provides an added level of access protection to corporate resources and applications from external devices that are trying to access them. When a personal device is Workplace Joined, it becomes a ‘known' device and administrators can use this information to drive conditional access and gate access to resources.  
   
 #### To enable seamless second factor authentication, persistent single sign\-on \(SSO\) and conditional access for Workplace Joined devices  
   

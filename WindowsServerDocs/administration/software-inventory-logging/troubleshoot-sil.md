@@ -2,7 +2,7 @@
 title: Troubleshoot Software Inventory Logging
 description: Describes how to resolve common Software Inventory Logging deployment issues.
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: manage-software-inventory-logging
 ms.reviewer: na
 ms.suite: na
@@ -78,7 +78,7 @@ There are two ways to check for data: **Powershell** or **SSMS**.
 1. Open PowerShell as an administrator and run the **get-silvmhost** cmdlet, and then run **get-silaggregator**.
 
     >[!NOTE]
-    >The output of **get-silaggregator** will always mimic the **Windows Server Details Tab** of the Excel report. Don’t expect a different result.
+    >The output of **get-silaggregator** will always mimic the **Windows Server Details Tab** of the Excel report. Don't expect a different result.
 
 2. Run **get-silvmhost**
    - If there are no hosts listed, then add hosts using the **add-silvmhost** cmdlet.
@@ -87,7 +87,7 @@ There are two ways to check for data: **Powershell** or **SSMS**.
 
 **Other related commands**
 
-**Get-SilAggregator -Computername &lt;fqdn of a known server pushing data&gt;**: This will produce information from the database about a computer (VM) even before the cube has processed. Thus this cmdlet can be used to check on data in the database for a Windows Server pushing SIL data over HTTPS, before, or without, the cube process at 3AM (or if you haven’t refreshed the cube in real time as described at the beginning of this section).
+**Get-SilAggregator -Computername &lt;fqdn of a known server pushing data&gt;**: This will produce information from the database about a computer (VM) even before the cube has processed. Thus this cmdlet can be used to check on data in the database for a Windows Server pushing SIL data over HTTPS, before, or without, the cube process at 3AM (or if you haven't refreshed the cube in real time as described at the beginning of this section).
 
 **Get-SilAggregator -VmHostName &lt;fqdn of a polled physical host where there is a value under the Recent Poll column when using the Get-SilVmHost cmdlet&gt;**: This will produce information from the database about a physical host even before the cube has processed.
 

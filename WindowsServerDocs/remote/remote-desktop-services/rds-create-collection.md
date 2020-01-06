@@ -2,12 +2,12 @@
 title: Create a Remote Desktop Services collection
 description: Learn how to add and RDSH and RemoteApp programs to your RDS deployment.
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: remote-desktop-services
 ms.author: elizapo
-ms.date: 11/08/2016
+ms.date: 10/22/2019
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: ae9767e3-864a-4eb2-96c0-626759ce6d60
@@ -22,12 +22,12 @@ Use the following steps to create a Remote Desktop Services session collection. 
 
 Before you create a collection, you need to decide what kind of collection you need: pooled desktop sessions or personal desktop sessions. 
 
-- **Use pooled desktop sessions for session-based virtualization**: Leverage the compute power of Windows Server to provide a cost-effective multi-session environment to drive your users’ everyday workloads
+- **Use pooled desktop sessions for session-based virtualization**: Leverage the compute power of Windows Server to provide a cost-effective multi-session environment to drive your users' everyday workloads
 - **Use personal desktop sessions for to create a virtual desktop infrastructure (VDI)**: Leverage Windows client to provide the high performance, app compatibility, and familiarity that your users have come to expect of their Windows desktop experience.
  
 With a pooled session, multiple users access a shared pool of resources, while with a personal desktop session, users are assigned their own desktop from within the pool. The pooled session provides lower overall cost, while personal sessions enable users to customize their desktop experience.
 
-If you need to share hosted applications that are graphics-intensive, you can combine personal session desktops with RemoteFX vGPU configured for graphics accelerations. Alternatively, you can combine personal session desktops with the new Discrete Device Assignment (DDA) capability to also provide support for hosted applications that require accelerated graphics. Check out [Which graphics virtualization technology is right for you](rds-graphics-virtualization.md) for more information.
+If you need to share graphics-intensive hosted applications, you can combine personal session desktops with the new Discrete Device Assignment (DDA) capability to also provide support for hosted applications that require accelerated graphics. Check out [Which graphics virtualization technology is right for you](rds-graphics-virtualization.md) for more information.
 
 
 Regardless of the type of collection you choose, you'll populate those collections with RemoteApps - programs and resources that users can access from any supported device and work with as though the program was running locally.

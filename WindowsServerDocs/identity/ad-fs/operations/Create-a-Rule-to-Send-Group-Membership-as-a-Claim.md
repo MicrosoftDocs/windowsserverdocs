@@ -7,7 +7,7 @@ ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 
 ms.technology: identity-adfs
 ---
@@ -35,7 +35,7 @@ Membership in **Administrators**, or equivalent, on the local computer is the mi
 5.  On the **Select Rule Template** page, under **Claim rule template**, select **Send Group Membership as Claim** from the list, and then click **Next**.  
 ![create rule](media/Create-a-Rule-to-Send-Group-Membership-as-a-Claim/group3.PNG)      
 
-6.   On the **Configure Rule** page under **Claim rule name** type the display name for this rule, in **User’s group** click **Browse** and select a group, under **Outgoing claim type** select the desired claim type, and then under **Outgoing Claim Type** type a value.
+6.   On the **Configure Rule** page under **Claim rule name** type the display name for this rule, in **User's group** click **Browse** and select a group, under **Outgoing claim type** select the desired claim type, and then under **Outgoing Claim Type** type a value.
 ![create rule](media/Create-a-Rule-to-Send-Group-Membership-as-a-Claim/group4.PNG)   
 
 7.  Click the **Finish** button.  
@@ -58,7 +58,7 @@ Membership in **Administrators**, or equivalent, on the local computer is the mi
 5.  On the **Select Rule Template** page, under **Claim rule template**, select **Send Group Membership as Claim** from the list, and then click **Next**.  
 ![create rule](media/Create-a-Rule-to-Send-Group-Membership-as-a-Claim/group3.PNG)     
 
-6.   On the **Configure Rule** page under **Claim rule name** type the display name for this rule, in **User’s group** click **Browse** and select a group, under **Outgoing claim type** select the desired claim type, and then under **Outgoing Claim Type** type a value. 
+6.   On the **Configure Rule** page under **Claim rule name** type the display name for this rule, in **User's group** click **Browse** and select a group, under **Outgoing claim type** select the desired claim type, and then under **Outgoing Claim Type** type a value. 
 ![create rule](media/Create-a-Rule-to-Send-Group-Membership-as-a-Claim/group4.PNG)      
 
 7.  Click the **Finish** button.  
@@ -92,7 +92,7 @@ Membership in **Administrators**, or equivalent, on the local computer is the mi
 5.  On the **Select Rule Template** page, under **Claim rule template**, select **Send Group Membership as a Claim** from the list, and then click **Next**.  
 ![create rule](media/Create-a-Rule-to-Send-Group-Membership-as-a-Claim/group1.PNG)
 
-6.  On the **Configure Rule** page under **Claim rule name** type the display name for this rule, in **User’s group** click **Browse** and select a group, under **Outgoing claim type** select the desired claim type, and then under **Outgoing Claim Type** type a value.  
+6.  On the **Configure Rule** page under **Claim rule name** type the display name for this rule, in **User's group** click **Browse** and select a group, under **Outgoing claim type** select the desired claim type, and then under **Outgoing Claim Type** type a value.  
 ![create rule](media/Create-a-Rule-to-Send-Group-Membership-as-a-Claim/group2.PNG)  
 
 7.  Click **Finish**.  

@@ -3,11 +3,10 @@ title: Step 4 Plan for OTP on the Remote Access Server
 description: This topic is part of the guide Deploy Remote Access with OTP Authentication in Windows Server 2016.
 manager: brianlic
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
-ms.technology: 
-  - networking-ras
+ms.technology: networking-ras
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 4b97b2fd-767a-45c1-a64e-5b3edd0c8a47

@@ -1,7 +1,7 @@
 ---
 title: Get Started
 description: "Basics for Server: system requirements, release notes, upgrade options"
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.service: na
 manager: dongill
 ms.technology: get-started
@@ -40,7 +40,7 @@ Features that have already been removed from Windows Server 2016 or designated f
 Description of all the ways to move to Windows Server 2016 from whatever you're running today.
 
 ## [Server Role Upgrade and Migration Matrix](Server-Role-Upgradeability-Table.md)
-Information about additional steps needed to bring particular server roles to Windows Server 2016
+Information about additional steps needed to bring particular server roles to Windows Server 2016.
 
 ## [Server Application Compatibility Table](Server-Application-Compatibility.md)
 Does SQL work on Windows Server 2016? What steps are needed to get Exchange running? This topic explains what you'll need to do.

@@ -1,7 +1,7 @@
 ---
 title: Updates Operations
 description: "Windows Server Update Service (WSUS) topic - How to manage updates, including the approval process"
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-wsus
@@ -81,7 +81,7 @@ if you select this option, the update is removed from the default list of availa
 
 3.  select **Decline**, and then click **Yes** on the confirmation message.
 
-## cleaning up declined updates
+## Cleaning up declined updates
 Declined updates continue to consume some WSUS server resources. You should run The Server cleanup Wizard to remove declined updates from the WSUS database. See: [The Server cleanup Wizard](the-server-cleanup-wizard.md), for additional details.
 
 ## Reinstating declined updates
@@ -99,7 +99,7 @@ After an update has been declined, you can still reinstate it.
 
 After a declined update has been cleaned up by using the WSUS Server cleanup Wizard, it will be deleted from the WSUS server and will no longer appear in the All Updates view. You can re-import Declined, cleaned-up updates from the Microsoft Update Catalog. For additional information, see [WSUS and the Catalog Site](wsus-and-the-catalog-site.md).
 
-## change an Approved Update to Not Approved
+## Change an Approved Update to Not Approved
 If an update has been approved and you decide not to install it at this time, and instead want to save it for a future time, you can change the update to a status of Not Approved. This means that the update will remain in the default list of available updates and will report client compliance, but will not be installed on clients.
 
 #### To change an update from approved to not approved

@@ -1,7 +1,7 @@
 ---
 title: Configure the Remote Access Server for Always On VPN
 description: RRAS is designed to perform well as both a router and a remote access server; therefore, it supports a wide array of features. 
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: networking-ras
 ms.topic: article
 ms.assetid: 
@@ -23,7 +23,7 @@ RRAS is designed to perform well as both a router and a remote access server bec
 
 IKEv2 is a VPN tunneling protocol described in Internet Engineering Task Force Request for Comments 7296. The primary advantage of IKEv2 is that it tolerates interruptions in the underlying network connection. For example, if the connection is temporarily lost or if a user moves a client computer from one network to another, IKEv2 automatically restores the VPN connection when the network connection is reestablished—all without user intervention.
 
-Configure the RRAS server to support IKEv2 connections while disabling unused protocols, which reduces the server’s security footprint. Additionally, configure the server to assign addresses to VPN clients from a static address pool. You can feasibly assign addresses from either a pool or a DHCP server; however, using a DHCP server adds complexity to the design and delivers minimal benefits.
+Configure the RRAS server to support IKEv2 connections while disabling unused protocols, which reduces the server's security footprint. Additionally, configure the server to assign addresses to VPN clients from a static address pool. You can feasibly assign addresses from either a pool or a DHCP server; however, using a DHCP server adds complexity to the design and delivers minimal benefits.
 
 >[!IMPORTANT]
 >It is important to:
@@ -183,7 +183,7 @@ In this section, you can configure Remote Access VPN to allow IKEv2 VPN connecti
 
     c. In **Start IP address**, enter the starting IP address in the range you want to assign to VPN clients.
 
-    d. In **End IP address**, enter the ending IP address in the range you want to assign to VPN clients, or in **Number of addresses**, enter the number of the address you want to make available. If you’re using DHCP for this subnet, ensure that you configure a corresponding address exclusion on your DHCP servers.
+    d. In **End IP address**, enter the ending IP address in the range you want to assign to VPN clients, or in **Number of addresses**, enter the number of the address you want to make available. If you're using DHCP for this subnet, ensure that you configure a corresponding address exclusion on your DHCP servers.
 
     e. (Optional) If you are using DHCP, select **Adapter**, and in the list of results, select the Ethernet adapter connected to your internal perimeter network.
 

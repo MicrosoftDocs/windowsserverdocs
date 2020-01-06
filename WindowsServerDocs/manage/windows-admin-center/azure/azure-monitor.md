@@ -6,7 +6,7 @@ ms.topic: article
 author: haley-rowland
 ms.author: harowl
 ms.localizationpriority: medium
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.date: 03/24/2019
 ---
 
@@ -20,7 +20,7 @@ ms.date: 03/24/2019
 ![img](../media/azure-monitor-diagram.png) 
 Data generated from on-premises Windows Servers is collected in a Log Analytics workspace in Azure Monitor. Within a workspace, you can enable various monitoring solutions—sets of logic that provide insights for a particular scenario. For example, Azure Update Management, Azure Security Center, and Azure Monitor for VMs are all monitoring solutions that can be enabled within a workspace. 
 
-When you enable a monitoring solution in a Log Analytics workspace, all the servers reporting to that workspace will start collecting data relevant to that that solution, so that the solution can generate insights for all the servers in the workspace. 
+When you enable a monitoring solution in a Log Analytics workspace, all the servers reporting to that workspace will start collecting data relevant to that solution, so that the solution can generate insights for all the servers in the workspace. 
 
 To collect telemetry data on an on-premises server and push it to the Log Analytics workspace, Azure Monitor requires the installation of the Microsoft Monitoring Agent, or the MMA. Certain monitoring solutions also require a secondary agent. For example, Azure Monitor for VMs also depends on a ServiceMap agent for additional functionality that this solution provides. 
 

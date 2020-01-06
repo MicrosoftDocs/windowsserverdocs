@@ -1,13 +1,13 @@
 ---
 title: Obtain certificates for HGS
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.topic: article
 ms.assetid: f4b4d1a8-bf6d-4881-9150-ddeca8b48038
 manager: dongill
 author: rpsqrd
 ms.technology: security-guarded-fabric
-ms.date: 08/29/2018
+ms.date: 09/25/2019
 ---
 
 # Obtain certificates for HGS
@@ -76,7 +76,7 @@ Both the Hyper-V hosts and HGS nodes will need to trust the SSL certificate you 
 
 SSL Certificate Property | Required value
 -------------------------|---------------
-Subject name             | Name of your HGS cluster (distributed network name). This will be the concatenation of your HGS service name provided to `Initialize-HgsServer` and your HGS domain name.
+Subject name             | Name of your HGS cluster (known as the distributed network name or virtual computer object FQDN). This will be the concatenation of your HGS service name provided to `Initialize-HgsServer` and your HGS domain name.
 Subject alternative name | If you will be using a different DNS name to reach your HGS cluster (e.g. if it is behind a load balancer), be sure to include those DNS names in the SAN field of your certificate request.
 
 The options for specifying this certificate when initializing the HGS server are covered in [Configure the first HGS node](guarded-fabric-initialize-hgs.md).

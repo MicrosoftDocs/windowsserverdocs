@@ -2,7 +2,7 @@
 title: bitsadmin setnotifycmdline
 description: "Windows Commands topic for **** - bitsadmin setnotifycmdlineSets the command-line command that will run when the job finishes transferring data or when a job enters a state."
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands

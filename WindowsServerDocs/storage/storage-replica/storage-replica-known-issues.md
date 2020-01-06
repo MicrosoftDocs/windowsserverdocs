@@ -1,6 +1,6 @@
 ---
 title: Known issues with Storage Replica
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 manager: siroy
 ms.author: nedpyle
 ms.technology: storage-replica
@@ -149,14 +149,14 @@ If you attempt to resize a replicated volume on the source server without settin
     PS C:\> Resize-Partition -DriveLetter I -Size 8GB
     Resize-Partition : Failed
 
-Activity ID: {87aebbd6-4f47-4621-8aa4-5328dfa6c3be}
+    Activity ID: {87aebbd6-4f47-4621-8aa4-5328dfa6c3be}
     At line:1 char:1
     + Resize-Partition -DriveLetter I -Size 8GB
     + ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
         + CategoryInfo          : NotSpecified: (StorageWMI:ROOT/Microsoft/.../MSFT_Partition) [Resize-Partition], CimException
         + FullyQualifiedErrorId : StorageWMI 4,Resize-Partition
 
-Storage Replica Event log error 10307:
+    Storage Replica Event log error 10307:
 
     Attempted to resize a partition that is protected by Storage Replica .
 
@@ -430,9 +430,9 @@ This is an expected behavior. To recover the data or access the drive, you need 
 
 ## Issue unlocking the Data drive on secondary server after breaking the Storage Replica partnership
 
-After Disabling the SR Partnership and removing the Storage Replica, it is expected if you are unable to unlock the Secondary Server’s Data drive with its respective password or key. 
+After Disabling the SR Partnership and removing the Storage Replica, it is expected if you are unable to unlock the Secondary Server's Data drive with its respective password or key. 
 
-You need to use Key or Password of Primary Server’s Data drive to unlock the Secondary Server’s data drive.
+You need to use Key or Password of Primary Server's Data drive to unlock the Secondary Server's data drive.
 
 ## Test Failover doesn't mount when using asynchronous replication
 

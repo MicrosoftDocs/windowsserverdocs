@@ -1,7 +1,7 @@
 ---
 title: Upload a Windows Server 2008/2008 R2 specialized image to Azure
 description: Windows Server 2008 and 2008 R2 are approaching end of service. Learn how to lift and shift to Azure by hosting Windows Server in the cloud.
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.mktglfcycl: manage
 ms.sitesec: library
 author: mikeblodge
@@ -21,7 +21,7 @@ You can now run a Windows Server 2008/2008 R2 VM in the cloud with Azure.
 ## Prep the Windows Server 2008/2008 R2 specialized image
 Before you can upload an image, make the following changes:
 
-- Download and install Windows Server 2008 Service Pack 2 (SP2) if you don’t already have it installed on your image.
+- Download and install Windows Server 2008 Service Pack 2 (SP2) if you don't already have it installed on your image.
 
 - Configure Remote Desktop (RDP) settings.
   1. Go to **Control Panel** > **System settings**.   
@@ -54,7 +54,7 @@ A current known bug causes the administrator password on the uploaded image to e
 ![Screenshot of administrator properties.](media/6_adminprops.png)
 
 ## Uploading the image VHD
-You can use the script below to upload the VHD. Before you do this, you’ll need the publish settings file for your Azure account. Get your [Azure file settings](https://azure.microsoft.com/downloads/).
+You can use the script below to upload the VHD. Before you do this, you'll need the publish settings file for your Azure account. Get your [Azure file settings](https://azure.microsoft.com/downloads/).
 
 Here is the script:
 
@@ -99,7 +99,7 @@ In this section, you will be deploying the image VHD in Azure.
      c.	Pick a size and SKU plan for your VM.   
      d.	Select a network interface on the settings page. Make sure the network interface has the following rule specified:
  
-        PORT:3389 Protocol: TCP Action: Allow Priority: 1000 Name: ‘RDP-Rule’.   
+        PORT:3389 Protocol: TCP Action: Allow Priority: 1000 Name: ‘RDP-Rule'.   
      e.	Click **Create**.
 
 

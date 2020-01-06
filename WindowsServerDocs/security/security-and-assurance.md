@@ -3,7 +3,7 @@ title: Security | Assurance
 description: "An overview of Security in Windows Server"
 ms.custom: na
 layout: LandingPage
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: techgroup-security
 ms.tgt_pltfrm: na
 ms.topic: landing-page
@@ -245,7 +245,7 @@ Windows Server security provides layers of protection built into the operating s
 <HR />
                         <p><h3><a href="https://www.youtube.com/watch?v=_SaDw1dRy2k">Microsoft Operations Management Suite (OMS)</a></h3>The Microsoft Operations Management Suite (OMS) Security and Audit solution processes security logs and firewall events from on-premises and cloud environments to analyze and detect malicious behavior.</p>
 <HR />
-                        <p><h3><a href="https://www.youtube.com/watch?v=_SaDw1dRy2k">OMS and Windows Server</a></h3>This 3-minute video shows how OMS can help detect potential malicious behavior that is blocked by Windows Server. Suppo</p>
+                        <p><h3><a href="https://www.youtube.com/watch?v=_SaDw1dRy2k">OMS and Windows Server</a></h3>This 3-minute video shows how OMS can help detect potential malicious behavior that is blocked by Windows Server.</p>
 <HR />
                         <p><h3><a href="http://blogs.technet.com/b/ad/archive/2015/07/22/microsoft-advanced-threat-analytics-coming-next-month.aspx">Microsoft Advanced Threat Analytics</a></h3>This blog post discusses Microsoft Advanced Threat Analytics, an on-premises product that uses Active Directory network traffic and SIEM data to discover and alert on potential threats.</p>
                     </div>

@@ -2,7 +2,7 @@
 title: DirectAccess
 description: This topic provides a link to DirectAccess documentation for Windows Server 2016.
 manager: brianlic
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: networking-da
 ms.tgt_pltfrm: na
 ms.topic: article

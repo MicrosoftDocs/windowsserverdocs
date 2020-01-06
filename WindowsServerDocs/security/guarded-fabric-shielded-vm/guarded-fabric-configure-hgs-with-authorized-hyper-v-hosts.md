@@ -1,7 +1,7 @@
 ---
 title: Deploy guarded hosts
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.topic: article
 ms.assetid: 2379ca26-b32d-4055-8b4b-99d1f2df37e1
 manager: dongill

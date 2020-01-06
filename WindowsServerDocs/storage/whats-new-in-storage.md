@@ -1,7 +1,7 @@
 ---
 ms.assetid: 0f2a7f7b-aca8-4e5d-ad67-4258e88bc52f
 title: What's new in storage in Windows Server
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.author: jgerend
 ms.manager: dongill
 ms.technology: storage
@@ -65,7 +65,7 @@ There are a number of improvements to Storage Spaces Direct in Windows Server 20
 
 - **Deduplication and compression for ReFS volumes**
 
-    Store up to ten times more data on the same volume with deduplication and compression for the ReFS filesystem. (It’s [just one click](https://www.youtube.com/watch?v=PRibTacyKko&feature=youtu.be) to turn on with Windows Admin Center.) The variable-size chunk store with optional compression maximizes savings rates, while the multi-threaded post-processing architecture keeps performance impact minimal. Supports volumes up to 64 TB and will deduplicate the first 4 TB of each file.
+    Store up to ten times more data on the same volume with deduplication and compression for the ReFS filesystem. (It's [just one click](https://www.youtube.com/watch?v=PRibTacyKko&feature=youtu.be) to turn on with Windows Admin Center.) The variable-size chunk store with optional compression maximizes savings rates, while the multi-threaded post-processing architecture keeps performance impact minimal. Supports volumes up to 64 TB and will deduplicate the first 4 TB of each file.
 
 - **Native support for persistent memory**
 
@@ -85,7 +85,7 @@ There are a number of improvements to Storage Spaces Direct in Windows Server 20
 
 - **Performance history**
 
-    Get effortless visibility into resource utilization and performance with [built-in history](storage-spaces/performance-history.md). Over 50 essential counters spanning compute, memory, network, and storage are automatically collected and stored on the cluster for up to one year. Best of all, there’s nothing to install, configure, or start – it just works. Visualize in Windows Admin Center or query and process in PowerShell.
+    Get effortless visibility into resource utilization and performance with [built-in history](storage-spaces/performance-history.md). Over 50 essential counters spanning compute, memory, network, and storage are automatically collected and stored on the cluster for up to one year. Best of all, there's nothing to install, configure, or start – it just works. Visualize in Windows Admin Center or query and process in PowerShell.
 
 - **Scale up to 4 PB per cluster**
 
@@ -93,11 +93,11 @@ There are a number of improvements to Storage Spaces Direct in Windows Server 20
 
 - **Mirror-accelerated parity is 2X faster**
 
-    With mirror-accelerated parity you can create Storage Spaces Direct volumes that are part mirror and part parity, like mixing RAID-1 and RAID-5/6 to get the best of both. (It’s [easier than you think](https://www.youtube.com/watch?v=R72QHudqWpE) in Windows Admin Center.) In Windows Server 2019, the performance of mirror-accelerated parity is more than doubled relative to Windows Server 2016 thanks to optimizations.
+    With mirror-accelerated parity you can create Storage Spaces Direct volumes that are part mirror and part parity, like mixing RAID-1 and RAID-5/6 to get the best of both. (It's [easier than you think](https://www.youtube.com/watch?v=R72QHudqWpE) in Windows Admin Center.) In Windows Server 2019, the performance of mirror-accelerated parity is more than doubled relative to Windows Server 2016 thanks to optimizations.
 
 - **Drive latency outlier detection**
 
-    Easily identify drives with abnormal latency with proactive monitoring and built-in outlier detection, inspired by Microsoft Azure’s long-standing and successful approach. Whether it’s average latency or something more subtle like 99th percentile latency that stands out, slow drives are automatically labeled in PowerShell and Windows Admin Center with ‘Abnormal Latency’ status.
+    Easily identify drives with abnormal latency with proactive monitoring and built-in outlier detection, inspired by Microsoft Azure's long-standing and successful approach. Whether it's average latency or something more subtle like 99th percentile latency that stands out, slow drives are automatically labeled in PowerShell and Windows Admin Center with ‘Abnormal Latency' status.
 
 - **Manually delimit the allocation of volumes to increase fault tolerance**
 

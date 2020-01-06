@@ -1,7 +1,7 @@
 ---
-Title: Volume Shadow Copy Service
+title: Volume Shadow Copy Service
 ms.date: 01/30/2019
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: storage
 author: JasonGerend
 manager: elizapo
@@ -144,12 +144,12 @@ In the copy-on-write method, when a change to the original volume occurs (but be
 </tr>
 <tr class="even">
 <td><p>T1</p></td>
-<td><p>Data changed in cache: 3 to 3’</p></td>
+<td><p>Data changed in cache: 3 to 3'</p></td>
 <td><p>Shadow copy created (differences only): 3</p></td>
 </tr>
 <tr class="odd">
 <td><p>T2</p></td>
-<td><p>Original data overwritten: 1 2 3’ 4 5</p></td>
+<td><p>Original data overwritten: 1 2 3' 4 5</p></td>
 <td><p>Differences and index stored on shadow copy: 3</p></td>
 </tr>
 </tbody>
@@ -185,13 +185,13 @@ In the redirect-on-write method, whenever the original volume receives a change 
 </tr>
 <tr class="even">
 <td><p>T1</p></td>
-<td><p>Data changed in cache: 3 to 3’</p></td>
-<td><p>Shadow copy created (differences only): 3’</p></td>
+<td><p>Data changed in cache: 3 to 3'</p></td>
+<td><p>Shadow copy created (differences only): 3'</p></td>
 </tr>
 <tr class="odd">
 <td><p>T2</p></td>
 <td><p>Original data unchanged: 1 2 3 4 5</p></td>
-<td><p>Differences and index stored on shadow copy: 3’</p></td>
+<td><p>Differences and index stored on shadow copy: 3'</p></td>
 </tr>
 </tbody>
 </table>
@@ -375,7 +375,7 @@ To exclude specific files from shadow copies, use the following registry key: **
 > <UL>
 > <LI>It cannot delete files from a shadow copy that was created on a Windows Server by using the Previous Versions feature.<BR><BR>
 > <LI>It cannot delete files from shadow copies for shared folders.<BR><BR>
-> <LI>It can delete files from a shadow copy that was created by using the <a href="https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/diskshadow" data-raw-source="[Diskshadow](https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/diskshadow)">Diskshadow</a> utility, but it cannot delete files from a shadow copy that was created by using the <a href="https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/vssadmin" data-raw-source="[Vssadmin](https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/vssadmin)">Vssadmin</a> utility.<BR><BR>
+> <LI>It can delete files from a shadow copy that was created by using the <a href="https://docs.microsoft.com/windows-server/administration/windows-commands/diskshadow" data-raw-source="[Diskshadow](https://docs.microsoft.com/windows-server/administration/windows-commands/diskshadow)">Diskshadow</a> utility, but it cannot delete files from a shadow copy that was created by using the <a href="https://docs.microsoft.com/windows-server/administration/windows-commands/vssadmin" data-raw-source="[Vssadmin](https://docs.microsoft.com/windows-server/administration/windows-commands/vssadmin)">Vssadmin</a> utility.<BR><BR>
 > <LI>Files are deleted from a shadow copy on a best-effort basis. This means that they are not guaranteed to be deleted.<BR><BR></LI></UL>
 
 

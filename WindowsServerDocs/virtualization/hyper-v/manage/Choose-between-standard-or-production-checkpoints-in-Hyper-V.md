@@ -1,7 +1,7 @@
 ---
 title: Choose between standard or production checkpoints in Hyper-V
 description: "Gives instructions for configuring a virtual machine to use standard or production checkpoints"
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.service: na
 manager: dongill
 ms.technology: compute-hyper-v

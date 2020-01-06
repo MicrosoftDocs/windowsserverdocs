@@ -1,12 +1,12 @@
 ---
 title: Create a shielded VM using PowerShell
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.topic: article
 manager: dongill
 author: rpsqrd
 ms.technology: security-guarded-fabric
-ms.date: 08/29/2018
+ms.date: 09/25/2019
 ---
 
 # Create a shielded VM using PowerShell
@@ -86,6 +86,19 @@ Once the module is installed, you're ready to provision your shielded VM.
 
 ```powershell
 New-ShieldedVM -Name 'MyShieldedVM' -TemplateDiskPath 'C:\temp\MyTemplateDisk.vhdx' -ShieldingDataFilePath 'C:\temp\Contoso.pdk' -Wait
+```
+
+If your shielding data answer file includes specialization values, you can provide the replacement values to New-ShieldedVM. In this example, the answer file is configured with placeholder values for a static IPv4 address.
+
+```powershell
+$specializationValues = @{
+    "@IP4Addr-1@" = "192.168.1.10/24"
+    "@MacAddr-1@" = "Ethernet"
+    "@Prefix-1-1@" = "24"
+    "@NextHop-1-1@" = "192.168.1.254"
+}
+New-ShieldedVM -Name 'MyStaticIPVM' -TemplateDiskPath 'C:\temp\MyTemplateDisk.vhdx' -ShieldingDataFilePath 'C:\temp\Contoso.pdk' -SpecializationValues $specializationValues -Wait
+
 ```
 
 If your template disk contains a Linux-based OS, include the `-Linux` flag when running the command:

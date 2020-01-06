@@ -7,7 +7,7 @@ author: MicrosoftGuyJFlo
 manager: mtillman
 ms.date: 08/09/2018
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 
 ms.technology: identity-adds
 ---
@@ -32,7 +32,7 @@ The principles described in the preceding excerpts have not changed, but in asse
 
 Unfortunately, the path of least resistance in many environments has proven to be the overuse of accounts with broad and deep privilege. Broad privileges are rights and permissions that allow an account to perform specific activities across a large cross-section of the environment- for example, Help Desk staff may be granted permissions that allow them to reset the passwords on many user accounts.  
 
-Deep privileges are powerful privileges that are applied to a narrow segment of the population, such giving an engineer Administrator rights on a server so that they can perform repairs. Neither broad privilege nor deep privilege is necessarily dangerous, but when many accounts in the domain are permanently granted broad and deep privilege, if only one of the accounts is compromised, it can quickly be used to reconfigure the environment to the attacker's purposes or even to destroy large segments of the infrastructure.  
+Deep privileges are powerful privileges that are applied to a narrow segment of the population, such as giving an engineer Administrator rights on a server so that they can perform repairs. Neither broad privilege nor deep privilege is necessarily dangerous, but when many accounts in the domain are permanently granted broad and deep privilege, if only one of the accounts is compromised, it can quickly be used to reconfigure the environment to the attacker's purposes or even to destroy large segments of the infrastructure.  
 
 Pass-the-hash attacks, which are a type of credential theft attack, are ubiquitous because the tooling to perform them is freely available and easy-to-use, and because many environments are vulnerable to the attacks. Pass-the-hash attacks, however, are not the real problem. The crux of the problem is twofold:  
 

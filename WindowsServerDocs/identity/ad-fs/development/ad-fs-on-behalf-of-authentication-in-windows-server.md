@@ -7,7 +7,7 @@ ms.author: billmath
 manager: mtillman
 ms.date: 02/22/2018
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 
 ms.technology: identity-adfs
 ---
@@ -15,7 +15,7 @@ ms.technology: identity-adfs
 # Build a multi-tiered application using On-Behalf-Of (OBO) using OAuth with AD FS 2016 or later
 
 
-This walkthrough provides instruction for implementing an on-behalf-of (OBO) authentication using AD FS in Windows Server 2016 TP5 or later. To learn more about OBO authentication please read [AD FS Scenarios for Developers](../../ad-fs/overview/AD-FS-Scenarios-for-Developers.md)
+This walkthrough provides instruction for implementing an on-behalf-of (OBO) authentication using AD FS in Windows Server 2016 TP5 or later. To learn more about OBO authentication please read [AD FS OpenID Connect/OAuth flows and Application Scenarios](../../ad-fs/overview/ad-fs-openid-connect-oauth-flows-scenarios.md)
 
 >WARNING: The example that you can build here is for educational purposes only. These instructions are for the simplest, most minimal implementation possible to expose the required elements of the model. The example may not include all aspects of error handling and other relate functionality and focuses ONLY on getting a successful OBO authentication.
 

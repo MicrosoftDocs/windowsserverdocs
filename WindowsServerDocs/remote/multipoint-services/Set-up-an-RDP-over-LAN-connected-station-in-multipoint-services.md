@@ -3,7 +3,7 @@ title: Set up an RDP-over-LAN connected station in MultiPoint Services
 description: Learn how to set up an RDP-over-LAN system in MultiPoint Services
 ms.custom: na
 ms.date: 07/22/2016
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: multipoint-services
 ms.reviewer: na
 ms.suite: na
@@ -21,7 +21,7 @@ An RDP-over-LAN connected station is a thin client, traditional desktop, or lapt
   
 1.  Turn on the computer that is running MultiPoint Services.  
   
-2.  Ensure that the MultiPoint Server computer is connected to the LAN by a switch, router, or other networking device and has a proper IP address. (An IP address that starts with 169.254 (an APIPA address) might indicate there is an issue with the LAN connection or that the DHCP server can’t be reached or is not functioning correctly.)  
+2.  Ensure that the MultiPoint Server computer is connected to the LAN by a switch, router, or other networking device and has a proper IP address. (An IP address that starts with 169.254 (an APIPA address) might indicate there is an issue with the LAN connection or that the DHCP server can't be reached or is not functioning correctly.)  
   
 3.  Connect the client computer or thin client to the LAN.  
   

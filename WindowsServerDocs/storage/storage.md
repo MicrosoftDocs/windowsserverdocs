@@ -4,7 +4,7 @@ description:
 author: JasonGerend
 manager: elizapo
 layout: LandingPage
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: storage
 ms.assetid: 6b74bc7c-a58d-4915-af8e-2cc27f2c4726
 ms.topic: landing-page

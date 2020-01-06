@@ -3,11 +3,10 @@ title: Step 1 Plan the Advanced DirectAccess Infrastructure
 description: This topic is part of the guide Deploy a Single DirectAccess Server with Advanced Settings for Windows Server 2016
 manager: brianlic
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
-ms.technology: 
-  - networking-da
+ms.technology: networking-da
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: aa3174f3-42af-4511-ac2d-d8968b66da87

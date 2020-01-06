@@ -1,6 +1,6 @@
 ---
 title: Fault tolerance and storage efficiency in Storage Spaces Direct
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.author: cosmosdarwin
 ms.manager: eldenc
 ms.technology: storage-spaces

@@ -1,7 +1,7 @@
 ---
 title: Install and Configure the NPS Server
 description: NPS server processing of connection requests that are sent by the VPN server verifies that the user has permission to connect, the user's identity, and logs the aspects of the connection request that you chose when you configured RADIUS accounting in NPS. 
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: networking-ras
 ms.topic: article
 ms.assetid: 
@@ -200,7 +200,7 @@ In this procedure, you configure NPS as a RADIUS server on your organization net
 
 10. In Specify Encryption Settings, select **Next**. Do not make any changes.
 
-    These settings apply only to Microsoft Point-to-Point Encryption (MPPE) connections, which this scenario doesn’t support.
+    These settings apply only to Microsoft Point-to-Point Encryption (MPPE) connections, which this scenario doesn't support.
 
 11. In Specify a Realm Name, select **Next**.
 

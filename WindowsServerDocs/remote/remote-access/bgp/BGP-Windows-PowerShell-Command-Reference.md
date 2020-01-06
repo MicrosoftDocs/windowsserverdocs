@@ -3,11 +3,10 @@ title: BGP Windows PowerShell Command Reference
 description: You can use this topic as a reference, when writing Windows PowerShell scripts in Windows Server 2016, to add, configure, and remove BGP capabilities from RAS Gateway and Remote Access Local Area Network (LAN) routers.
 manager: brianlic
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
-ms.technology: 
-  - networking-ras
+ms.technology: networking-ras
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 4b0240a3-b927-4a1e-b241-5f8f29a9552f

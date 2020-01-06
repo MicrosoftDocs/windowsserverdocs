@@ -7,7 +7,7 @@ author: haley-rowland
 ms.author: harowl
 ms.date: 09/07/2018
 ms.localizationpriority: medium
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ---
 
 # Manage Azure IaaS virtual machines with Windows Admin Center

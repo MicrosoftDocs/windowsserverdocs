@@ -2,7 +2,7 @@
 title: klist
 description: "Windows Commands topic for **** - "
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -31,8 +31,8 @@ klist [-lh <LogonId.HighPart>] [-li <LogonId.LowPart>] tickets | tgt | purge | s
 
 |Parameter|Description|
 |---------|-----------|
-|-lh|Denotes the high part of the user’s locally unique identifier (LUID), expressed in hexadecimal. If neither –lh or –li are present, the command defaults to the LUID of the user who is currently signed in.|
-|-li|Denotes the low part of the user’s locally unique identifier (LUID), expressed in hexadecimal. If neither –lh or –li are present, the command defaults to the LUID of the user who is currently signed in.|
+|-lh|Denotes the high part of the user's locally unique identifier (LUID), expressed in hexadecimal. If neither –lh or –li are present, the command defaults to the LUID of the user who is currently signed in.|
+|-li|Denotes the low part of the user's locally unique identifier (LUID), expressed in hexadecimal. If neither –lh or –li are present, the command defaults to the LUID of the user who is currently signed in.|
 |tickets|Lists the currently cached ticket-granting-tickets (TGTs), and service tickets of the specified logon session. This is the default option.|
 |tgt|Displays the initial Kerberos TGT.|
 |purge|Allows you to delete all the tickets of the specified logon session.|
@@ -91,11 +91,11 @@ The parameters display the following information:
 -   **kcd_cache**
 
     Allows you to display the Kerberos constrained delegation cache information.  
-    -   LogonID: If specified, displays the cache information for the logon session by the given value. If not specified, displays the cache information for the current user’s logon session.
+    -   LogonID: If specified, displays the cache information for the logon session by the given value. If not specified, displays the cache information for the current user's logon session.
 -   **get**
 
     Allows you to request a ticket to the target that is specified by the SPN.  
-    -   LogonID: If specified, requests a ticket by using the logon session by the given value. If not specified, requests a ticket by using the current user’s logon session.
+    -   LogonID: If specified, requests a ticket by using the logon session by the given value. If not specified, requests a ticket by using the current user's logon session.
     -   kdcoptions: Requests a ticket with the given KDC options
 -   **add_bind**
 

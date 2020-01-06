@@ -2,7 +2,7 @@
 title: certutil
 description: "Windows Commands topic for **** - "
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -245,7 +245,7 @@ Return to [Menu](#menu)
 
 ## -setextension
 
-CertUtil [Options] -setextension RequestId ExtensionName Flags {Long | Date | String | @InFile}
+CertUtil [Options] -setextension RequestId ExtensionName Flags {Long | Date | String | \@InFile}
 
 Set extension for pending request
 
@@ -259,7 +259,7 @@ If the last parameter is numeric, it is taken as a Long.
 
 If it can be parsed as a date, it is taken as a Date.
 
-If it starts with '@', the rest of the token is the filename containing binary data or an ascii-text hex dump.
+If it starts with '\@', the rest of the token is the filename containing binary data or an ascii-text hex dump.
 
 Anything else is taken as a String.
 
@@ -1203,7 +1203,7 @@ Return to [Menu](#menu)
 
 CertUtil [Options] -SCRoots update [+][InputRootFile] [ReaderName]
 
-CertUtil [Options] -SCRoots save @OutputRootFile [ReaderName]
+CertUtil [Options] -SCRoots save \@OutputRootFile [ReaderName]
 
 CertUtil [Options] -SCRoots view [InputRootFile | ReaderName]
 
@@ -1303,7 +1303,7 @@ Return to [Menu](#menu)
 
 ## -sign
 
-CertUtil [Options] -sign InFileList|SerialNumber|CRL OutFileList [StartDate+dd:hh] [+SerialNumberList | -SerialNumberList | -ObjectIdList | @ExtensionFile]
+CertUtil [Options] -sign InFileList|SerialNumber|CRL OutFileList [StartDate+dd:hh] [+SerialNumberList | -SerialNumberList | -ObjectIdList | \@ExtensionFile]
 
 CertUtil [Options] -sign InFileList|SerialNumber|CRL OutFileList [#HashAlgorithm] [+AlternateSignatureAlgorithm | -AlternateSignatureAlgorithm]
 
@@ -1323,7 +1323,7 @@ SerialNumberList: comma separated serial number list to add or remove
 
 ObjectIdList: comma separated extension ObjectId list to remove
 
-@ExtensionFile: INF file containing extensions to update or remove:
+\@ExtensionFile: INF file containing extensions to update or remove:
 
 ```
 [Extensions]
@@ -1484,9 +1484,9 @@ Value: new numeric, string or date registry value or filename. If a numeric valu
 
 If a string value starts with "+" or "-", and the existing value is a REG_MULTI_SZ value, the string is added to or removed from the existing registry value. To force creation of a REG_MULTI_SZ value, add a "\n" to the end of the string value.
 
-If the value starts with "@", the rest of the value is the name of the file containing the hexadecimal text representation of a binary value. If it does not refer to a valid file, it is instead parsed as [Date][+|-][dd:hh] -- an optional date plus or minus optional days and hours. If both are specified, use a plus sign (+) or minus sign (-) separator. Use "now+dd:hh" for a date relative to the current time.
+If the value starts with "\@", the rest of the value is the name of the file containing the hexadecimal text representation of a binary value. If it does not refer to a valid file, it is instead parsed as [Date][+|-][dd:hh] -- an optional date plus or minus optional days and hours. If both are specified, use a plus sign (+) or minus sign (-) separator. Use "now+dd:hh" for a date relative to the current time.
 
-Use "chain\ChainCacheResyncFiletime @now" to effectively flush cached CRLs.
+Use "chain\ChainCacheResyncFiletime \@now" to effectively flush cached CRLs.
 
 [-f] [-user] [-GroupPolicy] [-config Machine\CAName]
 
@@ -1522,9 +1522,9 @@ Value: new numeric, string or date registry value or filename. If a numeric valu
 
 If a string value starts with "+" or "-", and the existing value is a REG_MULTI_SZ value, the string is added to or removed from the existing registry value. To force creation of a REG_MULTI_SZ value, add a "\n" to the end of the string value.
 
-If the value starts with "@", the rest of the value is the name of the file containing the hexadecimal text representation of a binary value. If it does not refer to a valid file, it is instead parsed as [Date][+|-][dd:hh] -- an optional date plus or minus optional days and hours. If both are specified, use a plus sign (+) or minus sign (-) separator. Use "now+dd:hh" for a date relative to the current time.
+If the value starts with "\@", the rest of the value is the name of the file containing the hexadecimal text representation of a binary value. If it does not refer to a valid file, it is instead parsed as [Date][+|-][dd:hh] -- an optional date plus or minus optional days and hours. If both are specified, use a plus sign (+) or minus sign (-) separator. Use "now+dd:hh" for a date relative to the current time.
 
-Use "chain\ChainCacheResyncFiletime @now" to effectively flush cached CRLs.
+Use "chain\ChainCacheResyncFiletime \@now" to effectively flush cached CRLs.
 
 [-f] [-user] [-GroupPolicy] [-config Machine\CAName]
 
@@ -1560,9 +1560,9 @@ Value: new numeric, string or date registry value or filename. If a numeric valu
 
 If a string value starts with "+" or "-", and the existing value is a REG_MULTI_SZ value, the string is added to or removed from the existing registry value. To force creation of a REG_MULTI_SZ value, add a "\n" to the end of the string value.
 
-If the value starts with "@", the rest of the value is the name of the file containing the hexadecimal text representation of a binary value. If it does not refer to a valid file, it is instead parsed as [Date][+|-][dd:hh] -- an optional date plus or minus optional days and hours. If both are specified, use a plus sign (+) or minus sign (-) separator. Use "now+dd:hh" for a date relative to the current time.
+If the value starts with "\@", the rest of the value is the name of the file containing the hexadecimal text representation of a binary value. If it does not refer to a valid file, it is instead parsed as [Date][+|-][dd:hh] -- an optional date plus or minus optional days and hours. If both are specified, use a plus sign (+) or minus sign (-) separator. Use "now+dd:hh" for a date relative to the current time.
 
-Use "chain\ChainCacheResyncFiletime @now" to effectively flush cached CRLs.
+Use "chain\ChainCacheResyncFiletime \@now" to effectively flush cached CRLs.
 
 [-f] [-user] [-GroupPolicy] [-config Machine\CAName]
 
@@ -1628,7 +1628,7 @@ Can be any of the following:
 3. Certificate SHA-1 hash (thumbprint)
 4. Certificate KeyId SHA-1 hash (Subject Key Identifier)
 5. Requester Name (domain\user)
-6. UPN (user@domain)
+6. UPN (user\@domain)
 
 RecoveryBlobOutFile: output file containing a certificate chain and an associated private key, still encrypted to one or more Key Recovery Agent certificates.
 

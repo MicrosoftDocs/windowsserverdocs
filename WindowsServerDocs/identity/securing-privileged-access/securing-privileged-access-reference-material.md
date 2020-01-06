@@ -2,7 +2,7 @@
 title: Securing Privileged Access Reference Material
 description: Operational security controls for Windows Server Active Directory Domains 
 
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.topic: article
 ms.assetid: 22ee9a77-4872-4c54-82d9-98fc73a378c0
 ms.date: 02/14/2019

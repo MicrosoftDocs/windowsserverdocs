@@ -2,7 +2,7 @@
 title: taskkill
 description: "Windows Commands topic for **** - "
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -19,7 +19,7 @@ ms.date: 10/16/2017
 >Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Ends one or more tasks or processes. Processes can be ended by process ID or image name. **taskkill** replaces the **kill** tool.
-for examples of how to use this command, see [Examples](#examples).
+For examples of how to use this command, see [Examples](#examples).
 
 ## Syntax
 
@@ -44,7 +44,7 @@ taskkill [/s <computer> [/u [<Domain>\]<UserName> [/p [<Password>]]]] {[/fi <Fil
 
 | Filter Name |    Valid Operators     |                                                                Valid Value(s)                                                                |
 |-------------|------------------------|----------------------------------------------------------------------------------------------------------------------------------------------|
-|   STatUS    |         eq, ne         |                                                 RUNNING &#124; NOT RESPONDING &#124; UNKNOWN                                                 |
+|   STATUS    |         eq, ne         |                                                 RUNNING &#124; NOT RESPONDING &#124; UNKNOWN                                                 |
 |  IMAGENAME  |         eq, ne         |                                                                  Image name                                                                  |
 |     PID     | eq, ne, gt, lt, ge, le |                                                                  PID value                                                                   |
 |   SESSION   | eq, ne, gt, lt, ge, le |                                                                Session number                                                                |
@@ -56,7 +56,7 @@ taskkill [/s <computer> [/u [<Domain>\]<UserName> [/p [<Password>]]]] {[/fi <Fil
 |   MODULES   |         eq, ne         |                                                                   DLL name                                                                   |
 
 ## Remarks
-* The WINDOWTITLE and STatUS filters are not supported when a remote system is specified.
+* The WINDOWTITLE and STATUS filters are not supported when a remote system is specified.
 * The wildcard character (**\\**<em>) is accepted for the **/im</em>* option only when a filter is applied.
 * Termination of remote processes is always carried out forcefully, regardless of whether the **/f** option is specified.
 * Supplying a computer name to the hostname filter causes a shutdown and all processes are stopped.

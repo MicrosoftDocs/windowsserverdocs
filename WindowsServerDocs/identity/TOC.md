@@ -20,7 +20,7 @@
 ##### [Claims Transformation Rules Language](solution-guides/Claims-Transformation-Rules-Language.md)
 #### [Appendix A: Dynamic Access Control Glossary](solution-guides/appendix-A--Dynamic-Access-Control-Glossary.md)
 #### [Appendix B: Setting Up the Test Environment](solution-guides/appendix-B--Setting-Up-the-Test-Environment.md)
-
+### [Configuring Certificate Enrollment Web Service for certificate key-based renewal on a custom port](solution-guides/certificate-enrollment-certificate-key-based-renewal.md)
 
 ## [Active Directory Domain Services](ad-ds/active-directory-Domain-Services.md)
 
@@ -197,6 +197,7 @@
 
 ### [AD DS Troubleshooting](ad-ds/manage/AD-DS-Troubleshooting.md)
 #### [Configuring a computer for Troubleshooting](ad-ds/manage/troubleshoot/Configuring-a-computer-for-Troubleshooting.md)
+#### [Using ETW to troubleshoot LDAP connections](ad-ds/manage/troubleshoot/troubleshoot-ldap-using-etw.md)
 #### [Troubleshooting Active Directory Replication Problems](ad-ds/manage/troubleshoot/Troubleshooting-active-directory-Replication-Problems.md)
 ##### [Additional Resources](additional-Resources_12.md)
 
@@ -204,7 +205,7 @@
 
 ### [AD FS Overview](ad-fs/AD-FS-Overview.md)
 #### [What's new in Active Directory Federation Services](ad-fs/overview/whats-new-active-directory-federation-services-windows-server.md)
-#### [AD FS Scenarios for Developers](ad-fs/overview/AD-FS-Scenarios-for-Developers.md)
+
 #### [AD FS 2016 Requirements](ad-fs/overview/AD-FS-Requirements.md)
 
 ### [AD FS Design](ad-fs/AD-FS-Design.md)
@@ -365,18 +366,25 @@
 
 
 
-### [AD FS Development](ad-fs/AD-FS-Development.md)
+### AD FS Development
+#### [AD FS OpenID Connect/OAuth Concepts](ad-fs/development/ad-fs-openid-connect-oauth-concepts.md)
+#### [AD FS OpenID Connect/OAuth flows and Application Scenarios](ad-fs/overview/ad-fs-openid-connect-oauth-flows-scenarios.md)
 
 #### [Build a Custom Authentication Method for AD FS](ad-fs/development/ad-fs-build-custom-auth-method.md)
 #### [Build Plug-ins with AD FS 2019 Risk Assessment Model](ad-fs/development/ad-fs-risk-assessment-model.md)
-#### [Custom Id Tokens in AD FS](ad-fs/development/Custom-Id-Tokens-in-AD-FS.md)
-#### [AD FS On-behalf-of Authentication in Windows Server 2016](ad-fs/development/AD-FS-On-behalf-of-Authentication-in-Windows-Server.md)
-#### [Enabling OpenId Connect with AD FS 2016](ad-fs/development/Enabling-OpenId-Connect-with-AD-FS.md)
-#### [Enabling Oauth Confidential Clients with AD FS 2016](ad-fs/development/Enabling-Oauth-Confidential-Clients-with-AD-FS.md)
 #### [Single log-out for OpenID Connect with AD FS](ad-fs/development/ad-fs-logout-openid-connect.md)
-#### [Single Page Application with AD FS](ad-fs/development/Single-Page-Application-with-AD-FS.md)
-#### [Build a native client application using OAuth public clients with AD FS](ad-fs/development/native-client-with-ad-fs.md)
+#### ADAL
 
+##### [Custom Id Tokens in AD FS](ad-fs/development/Custom-Id-Tokens-in-AD-FS.md)
+##### [AD FS On-behalf-of Authentication in Windows Server 2016](ad-fs/development/AD-FS-On-behalf-of-Authentication-in-Windows-Server.md)
+##### [Enabling OpenId Connect with AD FS 2016](ad-fs/development/Enabling-OpenId-Connect-with-AD-FS.md)
+##### [Enabling Oauth Confidential Clients with AD FS 2016](ad-fs/development/Enabling-Oauth-Confidential-Clients-with-AD-FS.md)
+##### [Single Page Application with AD FS](ad-fs/development/Single-Page-Application-with-AD-FS.md)
+##### [Build a native client application using OAuth public clients with AD FS](ad-fs/development/native-client-with-ad-fs.md)
+#### MSAL
+##### [Native app calling Web API](ad-fs/development/msal/adfs-msal-native-app-web-api.md) 
+##### [Web API calling Web API (On Behalf of Scenario)](ad-fs/development/msal/adfs-msal-web-api-web-api.md) 
+##### [Web app (server app) calling web APIs](ad-fs/development/msal/adfs-msal-web-app-web-api.md) 
 
 ### [AD FS Operations](ad-fs/AD-FS-Operations.md)
 #### [AD FS Access Control Policies](ad-fs/operations/AD-FS-Client-Access-Policies.md)

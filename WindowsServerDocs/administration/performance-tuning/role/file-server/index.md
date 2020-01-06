@@ -1,12 +1,17 @@
 ---
 title: Performance tuning for file servers
 description: Performance tuning for file servers running Windows Server
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: performance-tuning-guide
 ms.topic: article
 author: phstee
-ms.author: NedPyle; Danlo; DKruse
-ms.date: 4/14/2017
+ms.author: NedPyle; Danlo; DKruse; v-tea
+ms.date: 12/12/2019
+ms.custom:
+  - CI ID 111495
+  - CSSTroubleshoot
+manager: dcscontentpm
+audience: Admin
 ---
 # Performance tuning for file servers
 
@@ -87,10 +92,24 @@ The following REG\_DWORD registry settings can affect the performance of client 
 
     The default is 10 seconds. This is the directory cache timeout.
 
-    > [!NOTE]
+    > [!NOTE]  
     > This parameter controls caching of directory metadata in the absence of directory leases.
      
-
+     > [!NOTE]  
+     > A known issue in Windows 10, version 1803, affects the ability of Windows 10 to cache large directories. After you upgrade a computer to Windows 10, version 1803, you access a network share that contains thousands of files and folders, and you open a document that is located on that share. During both of these operations, you experience significant delays.
+     >  
+     > To resolve this issue, install Windows 10, version 1809 or a later version.
+     >  
+     > To work around this issue, set **DirectoryCacheLifetime** to **0**.
+     >  
+     > This issue affects the following editions of Windows 10:  
+     > - Windows 10 Enterprise, version 1803
+     > - Windows 10 Pro for Workstations, version 1803
+     > - Windows 10 Pro Education, version 1803
+     > - Windows 10 Professional, version 1803
+     > - Windows 10 Education, version 1803
+     > - Windows 10 Home, version 1803
+   
 -   **DirectoryCacheEntrySizeMax**
 
     ```

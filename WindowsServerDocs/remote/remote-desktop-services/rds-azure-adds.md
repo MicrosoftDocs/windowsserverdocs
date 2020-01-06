@@ -2,7 +2,7 @@
 title: Azure AD Domain Services and Remote Desktop Services
 description: Learn how to integrate Azure AD Domain Services into your RDS deployment.
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: remote-desktop-services
@@ -33,7 +33,7 @@ Use the following information to deploy Azure AD DS with RDS.
 
 ## Prerequisites
 
-Before you can bring your identities from Azure AD to use in an RDS deployment, [configure Azure AD to save the hashed passwords for your users’ identities](/azure/active-directory-domain-services/active-directory-ds-getting-started-password-sync). Born-in-the-cloud organizations don’t need to make any additional changes in their directory; however, on-premises organizations need to allow password hashes to be synchronized and stored in Azure AD, which may not be permissible to some organizations. Users will have to reset their passwords after making this configuration change.
+Before you can bring your identities from Azure AD to use in an RDS deployment, [configure Azure AD to save the hashed passwords for your users' identities](/azure/active-directory-domain-services/active-directory-ds-getting-started-password-sync). Born-in-the-cloud organizations don't need to make any additional changes in their directory; however, on-premises organizations need to allow password hashes to be synchronized and stored in Azure AD, which may not be permissible to some organizations. Users will have to reset their passwords after making this configuration change.
 
 ## Deploy Azure AD DS and RDS 
 Use the following steps to deploy Azure AD DS and RDS.

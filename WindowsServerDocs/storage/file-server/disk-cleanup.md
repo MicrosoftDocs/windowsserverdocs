@@ -1,7 +1,7 @@
 ---
 title: Using Disk Cleanup on Windows Server
 description: Learn how to use command-line options to configure the Disk Cleanup tool (Cleanmgr.exe) to automatically clean up certain files.
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: cosmosdarwin
 author: iangpgh
 ms.author: jgerend
@@ -67,7 +67,7 @@ Locate cleanmgr.exe.mui and move the files to **%systemroot%\System32\en-US**.
 
 You can now launch the Disk cleanup tool by running Cleanmgr.exe from Command Prompt, or by clicking **Start** and typing **Cleanmgr** into the search bar.
 
-To have Disk Cleanup button appear on a disk’s Properties dialog, you will also need to install the Desktop Experience feature.
+To have Disk Cleanup button appear on a disk's Properties dialog, you will also need to install the Desktop Experience feature.
 
 ## Additional references
 

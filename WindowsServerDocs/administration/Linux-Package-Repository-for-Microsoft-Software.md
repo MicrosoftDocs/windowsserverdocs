@@ -2,7 +2,7 @@
 title: Linux Software Repository for Microsoft Products
 description: This document describes how to use and install Linux software packages for Microsoft products.
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.service: na
 manager: szark
 ms.technology: compute
@@ -17,7 +17,7 @@ ms.date: 10/16/2017
 ## Overview
 Microsoft builds and supports a variety of software products for Linux systems and makes them available via standard APT and YUM package repositories. This document describes how to configure the repository on your Linux system, so that you can then install/upgrade Microsoft's Linux software using your distribution's standard package management tools.
 
-Microsoft’s Linux Software Repository is comprised of multiple sub-repositories:
+Microsoft's Linux Software Repository is comprised of multiple sub-repositories:
 
  - prod – The Production sub-repository is designated for packages intended for use in production. These packages are commercially supported by Microsoft under the terms of the applicable support agreement or program that you have with Microsoft.
 

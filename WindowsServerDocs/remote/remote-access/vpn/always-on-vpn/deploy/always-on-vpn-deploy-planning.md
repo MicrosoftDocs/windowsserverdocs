@@ -1,7 +1,7 @@
 ---
 title: Plan the Always On VPN Deployment
 description: This topic provides planning instructions for deploying Always On VPN in Windows Server 2016.
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: networking-ras
 ms.topic: article
 ms.assetid: 3c9de3ec-4bbd-4db0-b47a-03507a315383
@@ -39,7 +39,7 @@ You must do the following on the computer used as a VPN server:
 IKEv2 is a VPN tunneling protocol described in [Internet Engineering Task Force Request for Comments 7296](https://datatracker.ietf.org/doc/rfc7296/). The primary advantage of IKEv2 is that it tolerates interruptions in the underlying network connection. For example, if a temporary loss in connection or if a user moves a client computer from one network to another, when reestablishing the network connection IKEv2 restores the VPN connection automatically — without user intervention.
 
 >[!TIP]
->You can configure the Remote Access VPN server to support IKEv2 connections while also disabling unused protocols, which reduces the server’s security footprint. 
+>You can configure the Remote Access VPN server to support IKEv2 connections while also disabling unused protocols, which reduces the server's security footprint. 
 
 ## Plan IP Addresses for Remote Clients
 

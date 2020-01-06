@@ -2,7 +2,7 @@
 title: wbadmin enable backup
 description: "Windows Commands topic for **** - "
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -111,7 +111,7 @@ Scenario #1
   ```
   Scenario #2
 - Schedule backups of the folder d:\documents to the network location \\\\backupshare\backup1
-- Use the network credentials for the backup administrator Aaren Ekelund (aekel), who is a member of the domain CONTOSOEAST to authenticate access to the network share. Aaren’s password is *$3hM9^5lp*.
+- Use the network credentials for the backup administrator Aaren Ekelund (aekel), who is a member of the domain CONTOSOEAST to authenticate access to the network share. Aaren's password is *$3hM9^5lp*.
 - Run backups daily at 12:00 A.M. and 7:00 P.M.
   ```
   wbadmin enable backup –addtarget:\\backupshare\backup1 –include: d:\documents –user:CONTOSOEAST\aekel –password:$3hM9^5lp –schedule:00:00,19:00

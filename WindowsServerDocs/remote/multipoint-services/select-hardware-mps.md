@@ -3,7 +3,7 @@ title: Selecting Hardware for Your MultiPoint Services System
 description: Hardware considerations for MultiPoint Services
 ms.custom: na
 ms.date: 07/22/2016
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: multipoint-services
 ms.reviewer: na
 ms.suite: na
@@ -163,7 +163,7 @@ There should be one monitor provided for each MultiPoint Services station, unles
 Some special monitors include an internal LAN\-based client or USB zero client. Such monitors will typically include audio input\/output jacks and internal USB hubs for connecting keyboards and mice. They connect to the server through a USB or a LAN connection.  
   
 #### Display resolution  
-The minimum supported resolution for a station’s display area is 512 x 768 pixels. If the MultiPoint Services system starts and finds that a station’s display area is less than the minimum resolution, a blank screen will be displayed on that station and the station will not be usable.  
+The minimum supported resolution for a station's display area is 512 x 768 pixels. If the MultiPoint Services system starts and finds that a station's display area is less than the minimum resolution, a blank screen will be displayed on that station and the station will not be usable.  
   
 If a display monitor is going to be shared by two stations as split\-screen stations, the minimum requirement for the display is 1024 x 768, so that the resulting individual station screen areas are at least 512 x 768. For the best split\-screen user experience, a wide screen with a minimum of resolution of 1600 x 900 is recommended.  
   
@@ -195,6 +195,6 @@ If you want the LAN client to only be used as a MultiPoint station, you may want
 ## Selecting audio devices  
 It is important to make sure that when you select audio devices, they can be plugged into the station hub, USB zero client or LAN client. Some USB hubs, USB zero clients, and LAN clients have an analog audio jack that can be used with traditional analog audio devices \(such as headphones or earbuds\). Station hubs that do not have analog jacks can use USB audio devices.  
   
-If you have configured a PS\/2 direct\-video\-connected station by using PS\/2 ports on the computer’s motherboard for the keyboard and mouse, you must use the analog audio on the computer’s motherboard in order for the audio device to be available to this station when the MultiPoint Services system is running in station mode.  
+If you have configured a PS\/2 direct\-video\-connected station by using PS\/2 ports on the computer's motherboard for the keyboard and mouse, you must use the analog audio on the computer's motherboard in order for the audio device to be available to this station when the MultiPoint Services system is running in station mode.  
   
-If you do not have a PS\/2 direct\-video\-connected station, the host audio device on the system’s motherboard will be available only when the MultiPoint Services system is running in console mode.  
+If you do not have a PS\/2 direct\-video\-connected station, the host audio device on the system's motherboard will be available only when the MultiPoint Services system is running in console mode.  

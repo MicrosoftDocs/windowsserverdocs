@@ -2,7 +2,7 @@
 title: bitsadmin cache and getexpirationtime
 description: "Windows Commands topic for **bitsadmin cache and getexpirationtime** - Retrieves the cache expiration time."
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands

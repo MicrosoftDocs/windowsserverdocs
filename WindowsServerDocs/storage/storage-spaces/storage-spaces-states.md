@@ -1,16 +1,16 @@
 ---
-title: Storage Spaces Direct health and operational states
+title: Storage Spaces and Storage Spaces Direct health and operational states
 description: How to find and understand the different health and operational states of Storage Spaces Direct and Storage Spaces (including physical disks, pools, and virtual disks), and what to do about them.
 keywords: Storage Spaces,detached,virtual disk,physical disk,degraded
 author: jasongerend
 ms.author: jgerend
-ms.date: 10/17/2018
+ms.date: 12/06/2019
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: storage-spaces
 manager: brianlic
 ---
-# Troubleshoot Storage Spaces Direct health and operational states
+# Troubleshoot Storage Spaces and Storage Spaces Direct health and operational states
 
 > Applies to: Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server (Semi-Annual Channel), Windows 10, Windows 8.1
 
@@ -46,9 +46,9 @@ The following sections list the health and operational states.
 
 ### Pool health state: Healthy
 
-|Operational state    |Description|
-|---------            |---------  |
-|OK|The storage pool is healthy.|
+| Operational state    | Description |
+| ---------            | ---------  |
+| OK | The storage pool is healthy. |
 
 ### Pool health state: Warning
 

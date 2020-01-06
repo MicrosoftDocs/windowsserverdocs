@@ -2,7 +2,7 @@
 title: Upgrading your Remote Desktop Virtualization Host to Windows Server 2016 
 description: This article describes how to upgrade your existing Remote Desktop Services deployments to Windows Server 2016.
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: remote-desktop-services
@@ -32,7 +32,7 @@ These servers should be upgraded all at once. Follow the following steps to upgr
 ## RD Virtualization Host servers in the deployment where VMs are stored in Cluster Shared Volumes (CSV) 
 
 1. Determine an upgrade strategy where some of the RDVH servers will be upgraded and some will continue to host VMs on Windows Server 2012 R2.  
-2. Isolate one or more of the RDVH servers, targeted for the initial round of upgrading, by migrating all VMs to other ‘not to be upgraded yet’ RDVH servers that will remain part of the original 2012 R2 cluster.
+2. Isolate one or more of the RDVH servers, targeted for the initial round of upgrading, by migrating all VMs to other ‘not to be upgraded yet' RDVH servers that will remain part of the original 2012 R2 cluster.
     1. Open Failover Cluster Manager. 
     1. Click **Roles**. 
     1. Select one or more VMs. Right-click to open the context menu. 
@@ -41,9 +41,9 @@ These servers should be upgraded all at once. Follow the following steps to upgr
 4. Upgrade the isolated RDVH servers. 
 5. After the targeted RDVH servers have been successfully upgraded, create a new cluster and CSV, which needs to be on an entirely different SAN volume.
 6. Join all upgraded RDVH servers to the new cluster. 
-7. Create a folder structure in the new CSV that mimics the existing folder structure in the existing CSV. This will include the collection folders and each VM’s top level sub-folders. 
+7. Create a folder structure in the new CSV that mimics the existing folder structure in the existing CSV. This will include the collection folders and each VM's top level sub-folders. 
 8. From the various VM Collection folders on the original CSV, copy over the /IMGS folder and contents to the new collection folders in the same locations on the new CSV. 
-9. On the source RDVH machine, use Cluster Manager to remove the VM’s configuration for high availability:
+9. On the source RDVH machine, use Cluster Manager to remove the VM's configuration for high availability:
     1. Launch Cluster Manager. 
     1. Click **Roles**. 
     1. Right-click the VM objects, and then click **Remove**. 
@@ -52,8 +52,8 @@ These servers should be upgraded all at once. Follow the following steps to upgr
     2. Select one of the non-upgraded RDVH servers. 
     3. Right-click one of the VMs to be moved, and then click **Move**. 
     4. Choose **Move the virtual machine**, and then click **Next**. 
-    5. Provide the targeted upgraded RDVH server’s name on the **Specify Destination Computer** page, and then click **Next**. 
-    6. Choose **Move the virtual machine’s data to a single location**, and then click **Next**. 
+    5. Provide the targeted upgraded RDVH server's name on the **Specify Destination Computer** page, and then click **Next**. 
+    6. Choose **Move the virtual machine's data to a single location**, and then click **Next**. 
     7. Browse to the destination location. 
        > [!IMPORTANT]
        > Ensure this path is to an empty folder for the specific VM. 

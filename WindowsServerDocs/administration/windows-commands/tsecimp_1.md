@@ -2,7 +2,7 @@
 title: tsecimp
 description: "Windows Commands topic for **** - "
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -133,11 +133,8 @@ tsecimp /d
         </LineList>
       </User>
     </UserList>
+    ```
 
-
-~~~
-    ```  
-~~~
 -   The following sample output appears after the **/d** command-line option is specified to display the current TAPI configuration. For each telephony provider, the associated line devices are listed, as well as the addresses and users associated with each line device.  
     ```
     NDIS Proxy TAPI Service Provider

@@ -2,7 +2,7 @@
 title: Change the Amount of Time that Clients Cache Referrals
 description: This article describes how to change the amount of time that clients cache referrals 
 ms.date: 6/5/2017
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: storage
 ms.topic: article
 author: JasonGerend

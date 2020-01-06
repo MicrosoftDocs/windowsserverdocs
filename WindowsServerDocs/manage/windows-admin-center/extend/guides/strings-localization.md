@@ -7,14 +7,14 @@ author: nwashburn-ms
 ms.author: niwashbu
 ms.date: 06/18/2018
 ms.localizationpriority: medium
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ---
 
 # Strings and localization in Windows Admin Center #
 
 >Applies To: Windows Admin Center, Windows Admin Center Preview
 
-Let’s go more in-depth into the Windows Admin Center Extensions SDK and talk about strings and localization.
+Let's go more in-depth into the Windows Admin Center Extensions SDK and talk about strings and localization.
 
 To enable localization of all strings that are rendered on the presentation layer, take advantage of the strings.resjson file under /src/resources/strings - it's already set up. When you need to add a new string to your extension, add it to this resjson file as a new entry. The existing structure follows this format:
 
@@ -58,7 +58,7 @@ For localization to other languages, a strings.resjson file needs to be created 
 | 中文(简体) | zh-CN |
 | 中文(繁體) | zh-TW |
 > [!NOTE]
-> If your file structure needs are different inside of loc/output, you will need to adjust the localeOffset for the gulp task ‘generate-resjson-json-localized’ that is in the gulpfile.js. This offset is how deep into the loc folder it should start searching for strings.resjson files.
+> If your file structure needs are different inside of loc/output, you will need to adjust the localeOffset for the gulp task ‘generate-resjson-json-localized' that is in the gulpfile.js. This offset is how deep into the loc folder it should start searching for strings.resjson files.
 
 Each strings.resjson file will be formatted in the same way as previously mentioned at the top of this guide. 
 

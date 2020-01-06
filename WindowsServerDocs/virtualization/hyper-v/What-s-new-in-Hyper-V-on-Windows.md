@@ -1,7 +1,7 @@
 ---
 title: What's new in Hyper-V on Windows Server 2016
 description: "Gives a summary of the new features in Hyper-V"
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.service: na
 manager: dongill
 ms.technology: compute-hyper-v
@@ -62,7 +62,7 @@ This feature lets you give a virtual machine direct and exclusive access to some
 
 ### Encryption support for the operating system disk in generation 1 virtual machines \(new)
 
-You can now protect the operating system disk using BitLocker drive encryption in generation 1 virtual machines. A new feature, key storage, creates a small, dedicated drive to store the system drive’s BitLocker key. This is done instead of using a virtual Trusted Platform Module (TPM), which is available only in generation 2 virtual machines. To decrypt the disk and start the virtual machine, the Hyper-V host must either be part of an authorized guarded fabric or have the private key from one of the virtual machine's guardians. Key storage requires a version 8 virtual machine. For information on virtual machine version, see [Upgrade virtual machine version in Hyper-V on Windows 10 or Windows Server 2016](./deploy/upgrade-virtual-machine-version-in-hyper-v-on-windows-or-windows-server.md).  
+You can now protect the operating system disk using BitLocker drive encryption in generation 1 virtual machines. A new feature, key storage, creates a small, dedicated drive to store the system drive's BitLocker key. This is done instead of using a virtual Trusted Platform Module (TPM), which is available only in generation 2 virtual machines. To decrypt the disk and start the virtual machine, the Hyper-V host must either be part of an authorized guarded fabric or have the private key from one of the virtual machine's guardians. Key storage requires a version 8 virtual machine. For information on virtual machine version, see [Upgrade virtual machine version in Hyper-V on Windows 10 or Windows Server 2016](./deploy/upgrade-virtual-machine-version-in-hyper-v-on-windows-or-windows-server.md).  
   
 ### Host resource protection \(new\)
 
@@ -206,7 +206,7 @@ Virtual machine configuration files use a new format that makes reading and writ
   
 ### Virtual machine configuration version \(updated\)
 
-The version represents the compatibility of the virtual machine's configuration, saved state, and snapshot files with the version of Hyper-V. Virtual machines with version 5 are compatible with Windows Server 2012 R2 and can run on both Windows Server 2012 R2 and Windows Server 2016. Virtual machines with versions introduced in Windows Server 2016 and and Windows Server 2019 won't run in Hyper-V on Windows Server 2012 R2.   
+The version represents the compatibility of the virtual machine's configuration, saved state, and snapshot files with the version of Hyper-V. Virtual machines with version 5 are compatible with Windows Server 2012 R2 and can run on both Windows Server 2012 R2 and Windows Server 2016. Virtual machines with versions introduced in Windows Server 2016 and Windows Server 2019 won't run in Hyper-V on Windows Server 2012 R2.   
   
 If you move or import a virtual machine to a server that runs Hyper-V on Windows Server 2016 or Windows Server 2019 from Windows Server 2012 R2, the virtual machine's configuration isn't automatically updated. This means you can move the virtual machine back to a server that runs Windows Server 2012 R2. But, this also means you can't use the new virtual machine features until you manually update the version of the virtual machine configuration.  
   

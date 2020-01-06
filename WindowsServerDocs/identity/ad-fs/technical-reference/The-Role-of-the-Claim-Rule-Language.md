@@ -6,7 +6,7 @@ ms.author: billmath
 manager: femila
 ms.date: 07/07/2017
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.assetid: dda9d148-d72f-4bff-aa2a-f2249fa47e4c
 ms.technology: identity-adfs
 ---
@@ -35,7 +35,7 @@ The claim rule language consists of the following components, separated by the �
 -   An issuance statement  
 
 ### Conditions  
-You can use conditions in a rule to check input claims and determine whether the issuance statement of the rule should be executed. A condition represents a logical expression that must be evaluated to true to execute the rule body part. If this part is missing, a logical true is assumed; that is, the rule’s body is always executed. The conditions part contains a list of conditions that are combined together with the conjunction logical operator  (“&&” ). All conditions in the list must be evaluated to true for the whole conditional part to be evaluated to true. The condition can be either a claims selection operator or an aggregate function call. These two are mutually exclusive, which means that claim selectors and aggregate functions cannot be combined in a single rule conditions part.  
+You can use conditions in a rule to check input claims and determine whether the issuance statement of the rule should be executed. A condition represents a logical expression that must be evaluated to true to execute the rule body part. If this part is missing, a logical true is assumed; that is, the rule's body is always executed. The conditions part contains a list of conditions that are combined together with the conjunction logical operator  (“&&” ). All conditions in the list must be evaluated to true for the whole conditional part to be evaluated to true. The condition can be either a claims selection operator or an aggregate function call. These two are mutually exclusive, which means that claim selectors and aggregate functions cannot be combined in a single rule conditions part.  
 
 Conditions are optional in rules. For example, the following rule does not have a condition:  
 
@@ -126,7 +126,7 @@ Expressions are used on the right side for both claims selector constraints and 
 
 -   Function call: The function is identified by an identifier, and the parameters are passed as a comma -delimited list of expressions enclosed in brackets  (“ ( )” ).  
 
--   Claim’s property access in the form of a variable name DOT property name: The result of the value of the identified claim’s property for a given variable valuation. The variable must first be bound to a claims selector before it can be used in this way. It is illegal to use the variable that is bound to a claims selector inside the constraints for that same claims selector.  
+-   Claim's property access in the form of a variable name DOT property name: The result of the value of the identified claim's property for a given variable valuation. The variable must first be bound to a claims selector before it can be used in this way. It is illegal to use the variable that is bound to a claims selector inside the constraints for that same claims selector.  
 
 The following claim properties are available for access:  
 
@@ -140,7 +140,7 @@ The following claim properties are available for access:
 
 -   Claim.ValueType  
 
--   Claim.Properties\[property\_name\]  (This property returns an empty string if the property _name cannot be found in the claim’s properties collection. )  
+-   Claim.Properties\[property\_name\]  (This property returns an empty string if the property _name cannot be found in the claim's properties collection. )  
 
 You can use the RegexReplace function to call inside an expression. This function takes an input expression and matches it with the given pattern. If the pattern matches, the output of the match is replaced with the replacement value.  
 

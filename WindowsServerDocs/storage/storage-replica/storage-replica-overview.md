@@ -1,6 +1,6 @@
 ---
 title: Storage Replica Overview
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 manager: siroy
 ms.author: nedpyle
 ms.technology: storage-replica

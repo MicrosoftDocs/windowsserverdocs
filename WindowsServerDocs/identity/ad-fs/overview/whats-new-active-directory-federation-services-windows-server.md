@@ -7,7 +7,7 @@ ms.author: billmath
 manager: daveba
 ms.date: 04/23/2019
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 
 ms.technology: identity-adfs
 ---
@@ -169,7 +169,7 @@ For more information about using Microsoft Windows Hello for Business in your or
 ### Modern Authentication
 AD FS 2016 supports the latest modern protocols that provide a better user experience for Windows 10 as well as the latest iOS and Android devices and apps.  
 
-For more information see [AD FS Scenarios for Developers](../../ad-fs/overview/AD-FS-Scenarios-for-Developers.md)  
+For more information see [AD FS Scenarios for Developers](../../ad-fs/overview/ad-fs-openid-connect-oauth-flows-scenarios.md)  
 
 
 ### Configure access control policies without having to know claim rules language  

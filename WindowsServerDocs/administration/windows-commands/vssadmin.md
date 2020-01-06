@@ -1,7 +1,7 @@
 ﻿---
 title: Vssadmin
 description: An overview of the vssadmin commands.
-ms.prod: windows-server-threshold 
+ms.prod: windows-server 
 ms.topic: article 
 author: JasonGerend 
 ms.author: jgerend 

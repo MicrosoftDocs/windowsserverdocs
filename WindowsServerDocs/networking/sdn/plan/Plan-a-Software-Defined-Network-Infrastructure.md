@@ -3,7 +3,7 @@ title: Plan a Software Defined Network Infrastructure
 description: This topic provides information on how to plan your Software Defined Network (SDN) infrastructure deployment.
 manager: dougkim
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.service: virtual-network
 ms.suite: na
@@ -56,7 +56,7 @@ A DHCP server can automatically assign IP addresses for the Management network, 
 
 |                                                               If...                                                               |                                                                                                                                                                          Then...                                                                                                                                                                           |
 |-----------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|                                                  The logical networks use VLANs,                                                  |                                                                 the physical compute host must connect to a trunked switch port that has access to these VLANs. It’s important to note that the physical network adapters on the computer host must not have any VLAN filtering activated.                                                                 |
+|                                                  The logical networks use VLANs,                                                  |                                                                 the physical compute host must connect to a trunked switch port that has access to these VLANs. It's important to note that the physical network adapters on the computer host must not have any VLAN filtering activated.                                                                 |
 |                Using Switched-Embedded Teaming (SET) and have multiple NIC team members, such as network adapters,                |                                                                                                                        you must connect all of the NIC team members for that particular host to the same Layer-2 broadcast domain.                                                                                                                         |
 | The physical compute host is running additional infrastructure virtual machines, such as Network Controller, SLB/MUX, or Gateway, | that host must have an additional IP address assigned from the Management logical network for each of the virtual machines hosted.<p>Also, each SLB/MUX infrastructure virtual machine must have an IP address reserved for the HNV Provider logical network. Failure to have an IP address reserved may result in duplicate IP addresses on your network. |
 

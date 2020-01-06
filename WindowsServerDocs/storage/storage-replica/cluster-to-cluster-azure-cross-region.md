@@ -6,7 +6,7 @@ author: arduppal
 ms.author: arduppal
 ms.date: 12/19/2018
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: storage-replica
 manager: mchad
 ---
@@ -14,7 +14,7 @@ manager: mchad
 
 > Applies to: Windows Server 2019, Windows Server 2016, Windows Server (Semi-Annual Channel)
 
-You can configure Cluster to Cluster Storage Replicas for cross-region applications in Azure. In the examples below, we use a two-node cluster, but Cluster to Cluster storage replica isn’t restricted to a two-node cluster. The illustration below is a two-node Storage Space Direct cluster that can communicate with each other, are in the same domain, and are cross-region.
+You can configure Cluster to Cluster Storage Replicas for cross-region applications in Azure. In the examples below, we use a two-node cluster, but Cluster to Cluster storage replica isn't restricted to a two-node cluster. The illustration below is a two-node Storage Space Direct cluster that can communicate with each other, are in the same domain, and are cross-region.
 
 Watch the video below for a complete walk-through of the process.
 > [!video https://www.microsoft.com/en-us/videoplayer/embed/RE26xeW]

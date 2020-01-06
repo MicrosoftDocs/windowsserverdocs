@@ -3,7 +3,7 @@ title: Configure group policies for a domain deployment
 description: Learn how to set up group policies in MultiPoint Services
 ms.custom: na
 ms.date: 07/22/2016
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: multipoint-services
 ms.reviewer: na
 ms.suite: na
@@ -21,7 +21,7 @@ To ensure that your domain deployment of MultiPoint Services works properly, app
 > Some group policy settings can prevent required configuration settings from being applied to MultiPoint Services. Be sure that you understand and define your group policy settings so that they work correctly on MultiPoint Services. For example, a Group Policy setting that prevents Autologon could present problems with MultiPoint Services logon behavior.  
   
 ## Update group policies for the WMSshell user account 
-The WMSshell user account is a system account which MultiPoint services uses to sign-in into the console where the actuall stations are created. This account is not ment be managed by MultiPoint Manager.
+The WMSshell user account is a system account which MultiPoint services uses to sign-in into the console, where the actual stations are created. This account is not meant to be managed by MultiPoint Manager.
   
 > [!NOTE]  
 > To find out how to update group policies, see [Local Group Policy Editor](https://technet.microsoft.com/library/dn265982.aspx).  

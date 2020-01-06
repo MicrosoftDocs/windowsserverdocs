@@ -2,7 +2,7 @@
 title: Create a Classification Property
 description: This article describes classification properties, used to assign values to files within a specified folder or volume.
 ms.date: 7/7/2017
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: storage
 ms.topic: article
 author: JasonGerend

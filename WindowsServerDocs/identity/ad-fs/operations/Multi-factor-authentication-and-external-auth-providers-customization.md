@@ -6,7 +6,7 @@ ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.assetid: 08724d45-9be4-4c56-a5f1-2cf40864e136
 ms.technology: identity-adfs
 ---
@@ -29,7 +29,7 @@ The following is an example of the sign\-in user interface, which is highlighted
   
 Before you write a new custom authentication method, we recommend that you study the AD FS theme and style definitions to understand the content authoring requirements.  
   
--   A custom authentication method only authors an HTML segment on the AD FS sign\-in page and not the full page. You should use AD FS’s style definition to get the consistent appearance and behavior.  
+-   A custom authentication method only authors an HTML segment on the AD FS sign\-in page and not the full page. You should use AD FS's style definition to get the consistent appearance and behavior.  
   
 ![AD FS and MFA](media/AD-FS-user-sign-in-customization/ADFS_Blue_Custom9.png)  
   

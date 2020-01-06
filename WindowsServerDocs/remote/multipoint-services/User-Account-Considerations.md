@@ -2,7 +2,7 @@
 title: User Account Considerations
 description: PRovides user account, user name, and password considerations for MultiPoint Services
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: multipoint-services
 ms.reviewer: na
 ms.suite: na
@@ -18,7 +18,7 @@ ms.date: 08/04/2016
 This topic describes issues that you, as an administrative user, should consider as you create and manage user accounts. You manage user accounts in the Users tab in MultiPoint Manager. For more information, see the [Manage User Accounts](Manage-User-Accounts.md) topic.  
   
 ## User account types  
-A user account is a collection of information that tells MultiPoint Services which files and folders a user can access, what changes they can make to the MultiPoint Services system, and each user’s preferences, such as desktop background. Each person accesses their own user account by using a unique user name and password. MultiPoint Services supports three types of user accounts:  
+A user account is a collection of information that tells MultiPoint Services which files and folders a user can access, what changes they can make to the MultiPoint Services system, and each user's preferences, such as desktop background. Each person accesses their own user account by using a unique user name and password. MultiPoint Services supports three types of user accounts:  
   
 -   **Administrative user accounts** are for individuals who will use MultiPoint Manager to use and manage the MultiPoint Services system. For more information, see [Create an Administrative User Account](Create-an-Administrative-User-Account.md).  
   
@@ -32,7 +32,7 @@ Administrative users can perform tasks that affect all other users of the MultiP
 One important consideration of user accounts is that each user account is allocated a unique **Documents** library in Windows Explorer that includes the **My Documents** folder. If the standard users on your MultiPoint Services system will store private documents in their **Documents** library in Windows Explorer, they too should log on to the MultiPoint Services system using a unique user name and password known only to them. For more information about storing documents in Windows Explorer, see the [Manage User Files](Manage-User-Files.md) topic.  
   
 > [!TIP]  
-> For stronger system security, all users’ passwords should be strong passwords. A strong password is one that cannot be easily guessed or cracked, is at least eight characters long, does not contain all or part of the user’s account name, and contains at least three of the four following categories of characters: uppercase characters, lowercase characters, numbers, and symbols found on a keyboard (such as !, @, #).  
+> For stronger system security, all users' passwords should be strong passwords. A strong password is one that cannot be easily guessed or cracked, is at least eight characters long, does not contain all or part of the user's account name, and contains at least three of the four following categories of characters: uppercase characters, lowercase characters, numbers, and symbols found on a keyboard (such as !, @, #).  
   
 ## See Also  
 [Create an Administrative User Account](Create-an-Administrative-User-Account.md)  
