@@ -108,7 +108,7 @@ VirtualDiskFriendlyName TotalFootprint Server1 Server2 Server3 Server4 Server5 S
 MyVolume                300 GB         100 GB  100 GB  100 GB  100 GB  0       0      
 ```
 
-Note that only Server1, Server2, Server 3, and Server4 contains slabs of *MyVolume*.
+Note that only Server1, Server2, Server3, and Server4 contain slabs of *MyVolume*.
 
 ### Change a delimited allocation
 
