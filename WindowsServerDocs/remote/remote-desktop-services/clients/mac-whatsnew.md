@@ -47,7 +47,7 @@ We made this update with the help of everyone who reported bugs and worked with 
 - Fixed cases where users received the certificate warning prompt twice.
 - Added heuristics to improve trackpad-based scrolling.
 - The client no longer shows the "Saved Desktops" group if there are no user-created groups.
-- Updated UI for the titles in PC view.
+- Updated UI for the tiles in PC view.
 - Fixes to address crashes sent to us via application telemetry.
 
 > [!NOTE]
