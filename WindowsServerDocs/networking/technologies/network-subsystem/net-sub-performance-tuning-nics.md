@@ -79,7 +79,7 @@ Many network adapters provide options to optimize operating system-induced laten
 
 Following are some performance tuning suggestions for microsecond-sensitive networks.
 
-- Set the computer BIOS to **High Performance**, with C-states disabled. However, note that this is system and BIOS dependent, and some systems will provide higher performance if the operating system controls power management. You can check and adjust your power management settings from **Settings** or by using the **powercfg** command. For more information, see [Powercfg Command-Line Options](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-vista/cc748940(v=ws.10)).
+- Set the computer BIOS to **High Performance**, with C-states disabled. However, note that this is system and BIOS dependent, and some systems will provide higher performance if the operating system controls power management. You can check and adjust your power management settings from **Settings** or by using the **powercfg** command. For more information, see [Powercfg Command-Line Options](https://docs.microsoft.com/windows-hardware/design/device-experiences/powercfg-command-line-options).
 
 - Set the operating system power management profile to **High Performance System**.  
    > [!NOTE]  
