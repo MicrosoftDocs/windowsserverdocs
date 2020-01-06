@@ -146,7 +146,7 @@ VirtualDiskFriendlyName TotalFootprint Server1 Server2 Server3 Server4 Server5 S
 MyVolume                300 GB         0       100 GB  100 GB  100 GB  100 GB  0      
 ```
 
-Note that Server1 does not contain slabs of *MyVolume* anymore – instead, Server05 does.
+Note that Server1 does not contain slabs of *MyVolume* anymore – instead, Server5 does.
 
 ## Best practices
 
