@@ -154,7 +154,7 @@ Here are the best practices to follow when using delimited volume allocation:
 
 ### Choose four servers
 
-Delimit each three-way mirror volume to foure servers, not more.
+Delimit each three-way mirror volume to four servers, not more.
 
 ### Balance storage
 
