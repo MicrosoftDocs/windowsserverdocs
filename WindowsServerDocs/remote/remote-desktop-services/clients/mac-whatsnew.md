@@ -11,14 +11,47 @@ ms.topic: article
 author: heidilohr
 manager: daveba
 ms.author: helohr
-ms.date: 11/18/2019
+ms.date: 01/06/2020
 ms.localizationpriority: medium
 ---
 # What's new in the macOS client
 
 We regularly update the [Remote Desktop client for macOS](remote-desktop-mac.md), adding new features and fixing issues. Here's where you'll find the latest updates.
 
-If you encounter any issues, you can always contact us via **Help** > **Report an Issue**.
+If you encounter any issues, you can always contact us by navigating to **Help** > **Report an Issue**.
+
+## Updates for version 10.3.7
+
+*Date published: 1/6/20*
+
+In our final update of the year, we finetuned some code and fixed the following behaviors:
+
+- Copying things from the remote session to a network share or USB drive no longer creates empty files.
+- Specifying an empty password in a user account no longer causes a double certificate prompt.
+
+## Updates for version 10.3.6
+
+*Date published: 1/6/20*
+
+In this release, we addressed an issue that created zero-length files whenever you copied a folder from the remote session to the local machine using file copy and paste.
+
+## Updates for version 10.3.5
+
+*Date published: 1/6/20*
+
+We made this update with the help of everyone who reported issues. In this version, we've made the following changes:
+
+- Redirected folders can now be marked as read-only to prevent their contents from being changed in the remote session.
+- We addressed a 0x607 error that appeared when connecting using RPC over HTTPS RD Gateway scenarios.
+- Fixed cases where users were double-prompted for credentials.
+- Fixed cases where users received the certificate warning prompt twice.
+- Added heuristics to improve trackpad-based scrolling.
+- The client no longer shows the "Saved Desktops" group if there are no user-created groups.
+- Updated UI for the tiles in PC view.
+- Fixes to address crashes sent to us via application telemetry.
+
+> [!NOTE]
+> In this release, we now accept feedback for the Mac client only through [UserVoice](https://remotedesktop.uservoice.com/forums/287834-remote-desktop-for-mac).
 
 ## Updates for version 10.3.4
 
