@@ -24,7 +24,7 @@ Allows you to generate a rollback template for a specified configuration templat
 ## Syntax
 
 ```
-Secedit /generaterollback /db <database file name> /cfg <configuration file name> /rbk <rollback template file name> [log <log file name>] [/quiet]
+Secedit /generaterollback /db <database file name> /cfg <configuration file name> /rbk <rollback template file name> [/log <log file name>] [/quiet]
 ```
 
 ### Parameters
