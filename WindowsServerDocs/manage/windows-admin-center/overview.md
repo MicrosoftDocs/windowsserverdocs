@@ -5,7 +5,7 @@ ms.technology: manage
 ms.topic: article
 author: nwashburn-ms
 ms.author: niwashbu
-ms.date: 01/06/2020
+ms.date: 01/07/2020
 ms.localizationpriority: high
 ms.prod: windows-server
 ---
@@ -38,7 +38,7 @@ Windows Admin Center is:
 Here's a video to give you an overview, following by a poster giving more details:
 >[!VIDEO https://www.youtube.com/embed/WCWxAp27ERk]
 
-![Windows Admin Center Infographic](media/WAC1910Poster_thumb.PNG)
+[![Windows Admin Center Infographic](media/WAC1910Poster_thumb.PNG)](https://github.com/MicrosoftDocs/windowsserverdocs/raw/master/WindowsServerDocs/manage/windows-admin-center/media/WindowsAdminCenter1910Poster.pdf#lightbox)
 
 [Download the PDF](https://github.com/MicrosoftDocs/windowsserverdocs/raw/master/WindowsServerDocs/manage/windows-admin-center/media/WindowsAdminCenter1910Poster.pdf)
 
