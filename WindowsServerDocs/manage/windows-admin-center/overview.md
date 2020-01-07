@@ -27,18 +27,18 @@ You can update non-preview versions of Windows Admin Center by using Microsoft U
 
 ## What is Windows Admin Center?
 
-Windows Admin Center is:
+Here are a few things you can use Windows Admin Center for:
 
 |     |     |
 | --- | --- |
-| ![](media/simple-icon.png)| **Simple & lightweight** <br/> Familiar tools are streamlined to make management tasks a breeze. Install in under five minutes and manage servers in your environment immediately, no target configuration required. |
-| ![](media/future-icon.png)| **Built for the future** <br/> Integration with Azure services helps you leverage the power of the hybrid world. Manage hyperconverged clusters with powerful yet simple tools. |
-| ![](media/secure-icon.png)| **Secure management** <br/> Control who can manage servers and get insight into the actions administrators perform in your environment. |
+| ![](media/simple-icon.png)| **Simplify server management** <br/> Manage your servers and clusters with modernized versions of familiar tools such as Server Manager. Install in under five minutes and manage servers in your environment immediately, no target configuration required. |
+| ![](media/future-icon.png)| **Work with hybrid solutions** <br/> Integration with Azure services helps you leverage the power of the hybrid world.  |
+| ![](media/secure-icon.png)| **Streamline hyperconverged management** <br/> Streamline management of Azure Stack HCI or Windows Server hyperconverged clusters. Use simplified workloads to create and manage VMs, Storage Spaces Direct volumes, Software-Defined Networking and more. For details, see [Manage Hyper-Converged Infrastructure with Windows Admin Center](use/manage-hyper-converged.md)|
 
 Here's a video to give you an overview, following by a poster giving more details:
 >[!VIDEO https://www.youtube.com/embed/WCWxAp27ERk]
 
-[![Windows Admin Center Infographic](media/WAC1910Poster_thumb.PNG)](https://github.com/MicrosoftDocs/windowsserverdocs/raw/master/WindowsServerDocs/manage/windows-admin-center/media/WindowsAdminCenter1910Poster.pdf#lightbox)
+[![Windows Admin Center Infographic](media/WAC1910Poster_thumb.PNG)](https://github.com/MicrosoftDocs/windowsserverdocs/raw/master/WindowsServerDocs/manage/windows-admin-center/media/WindowsAdminCenter1910Poster.pdf)
 
 [Download the PDF](https://github.com/MicrosoftDocs/windowsserverdocs/raw/master/WindowsServerDocs/manage/windows-admin-center/media/WindowsAdminCenter1910Poster.pdf)
 
