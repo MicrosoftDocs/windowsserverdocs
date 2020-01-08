@@ -29,9 +29,7 @@ This section discusses some new practical ways to use the new SMB 3.0 protocol.
 
 ## New and changed functionality
 
-The following sections describe what's new in SMB 3. 
-
-SMB in Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, and Windows Server 2012 includes the SMB 3 protocol and many improvements that are described in the following table. SMB 3 gives you the most scalability, the best performance, the highest availability and the most secure SMB implementation.
+The following sections describe what's new in SMB 3.
 
 ## Features added in SMB 3.11 with Windows Server 2016 and Windows 10, version 1607
 
