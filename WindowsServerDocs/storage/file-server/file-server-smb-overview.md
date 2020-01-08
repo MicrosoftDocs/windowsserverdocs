@@ -42,6 +42,7 @@ SMB in Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, and Win
 | Pre-Authentication Integrity | New |  In SMB 3.1.1, pre-authentication integrity provides improved protection from a man-in-the-middle attacker tampering with SMB’s connection establishment and authentication messages. |
 | SMB Encryption Improvements | New | SMB 3.1.1 offers a mechanism to negotiate the crypto algorithm per connection, with options for AES-128-CCM and AES-128-GCM. AES-128-GCM is the default for new Windows versions, while older versions will continue to use AES-128-CCM. |
 | Rolling cluster upgrade support | New | Enables [rolling cluster upgrades](../../failover-clustering/cluster-operating-system-rolling-upgrade.md) by letting SMB appear to support different max versions of SMB for clusters in the process of being upgraded. |
+| Native support for FileNormalizedNameInformation API calls | New | Adds native support for querying the normalized name of a file. For details, see [FileNormalizedNameInformation](https://docs.microsoft.com/openspecs/windows_protocols/ms-fscc/20bcadba-808c-4880-b757-4af93e41edf6). |
 
 For additional details, see the blog post [What’s new in SMB 3.1.1 in the Windows Server 2016 Technical Preview 2](https://docs.microsoft.com/archive/blogs/josebda/whats-new-in-smb-3-1-1-in-the-windows-server-2016-technical-preview-2).
 
