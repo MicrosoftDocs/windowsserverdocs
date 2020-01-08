@@ -51,7 +51,7 @@ To enable Remote Desktop using the legacy system properties, follow the instruct
 
 ## Should I enable Remote Desktop?
 
-If you only want to access your PC when you are physically sitting in front of it, you don't need to enable Remote Desktop. Enabling Remote Desktop opens a port on your PC that is visible to your local network. You should only enable Remote Desktop in trusted networks, such as your home. You also don't want to enable Remote Desktop on any PC where access is tightly controlled.
+If you only want to access your PC when you are physically using it, you don't need to enable Remote Desktop. Enabling Remote Desktop opens a port on your PC that is visible to your local network. You should only enable Remote Desktop in trusted networks, such as your home. You also don't want to enable Remote Desktop on any PC where access is tightly controlled.
 
 Be aware that when you enable access to Remote Desktop, you are granting anyone in the Administrators group, as well as any additional users you select, the ability to remotely access their accounts on the computer.
 
