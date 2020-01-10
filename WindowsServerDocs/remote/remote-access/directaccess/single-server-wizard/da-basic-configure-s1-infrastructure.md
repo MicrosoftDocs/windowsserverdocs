@@ -202,7 +202,10 @@ To create a Group policy object, see [Create and Edit a Group Policy Object](htt
 > 4.  If the linking to OU has not been done before running the DirectAccess wizard, after the configuration is complete, the administrator can link the DirectAccess Group Policy Objects to the required Organizational Units. The link to the domain can be removed. Steps for linking a Group policy object to an Organization Unit can be found [here](https://technet.microsoft.com/library/cc732979.aspx)  
   
 > [!NOTE]  
-> If a Group policy object was created manually, it is possible during the DirectAccess configuration that the Group policy object will not be available. The Group policy object may not have been replicated to the closest Domain Controller to the management computer. In this event, the administrator can wait for replication to complete, or force the replication.  
+> If a Group policy object was created manually, it is possible during the DirectAccess configuration that the Group policy object will not be available. The Group policy object may not have been replicated to the closest Domain Controller to the management computer. In this event, the administrator can wait for replication to complete, or force the replication.
+
+> [!Warning]
+> Using any means other than the DirectAccess Setup Wizard to configure DirectAccess, such as modifying DirectAccess Group Policy Objects directly or manually modifying the default policy settings on the server or client, is not supported.
   
 ## <a name="ConfigSGs"></a>Configure security groups  
 The DirectAccess settings contained in the client computer Group policy objects are applied only to computers that are members of the security groups that you specify when configuring Remote Access.  
