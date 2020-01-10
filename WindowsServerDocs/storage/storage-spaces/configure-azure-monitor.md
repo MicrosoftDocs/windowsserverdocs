@@ -20,7 +20,7 @@ Azure Monitor maximizes the availability and performance of your applications by
 
 This is particularly helpful for your on-premises hyper-converged cluster. With Azure Monitor integrated, you will be able to configure email, text (SMS), and other alerts to ping you when something is wrong with your cluster (or when you want to flag some other activity based on the data collected). Below, we will briefly explain how Azure Monitor works, how to install Azure Monitor, and how to configure it to send you notifications.
 
-If you are using System Center, we have recently released a [Storage Spaces Direct management pack](https://www.microsoft.com/en-us/download/details.aspx?id=100782) which will monitor both Windows Server 2016 and Windows Server 2019 Storage Spaces Direct clusters.
+If you are using System Center, check out the [Storage Spaces Direct management pack](https://www.microsoft.com/download/details.aspx?id=100782) that monitors both Windows Server 2019 and Windows Server 2016 Storage Spaces Direct clusters.
 
 This management pack includes:
 
