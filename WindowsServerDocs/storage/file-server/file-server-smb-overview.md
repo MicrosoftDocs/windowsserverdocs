@@ -6,7 +6,7 @@ ms.topic: article
 author: JasonGerend 
 ms.author: jgerend 
 ms.technology: storage 
-ms.date: 01/08/2020
+ms.date: 01/10/2020
 ms.localizationpriority: medium
 ---
 # Overview of file sharing using the SMB 3 protocol in Windows Server
@@ -29,7 +29,7 @@ This section discusses some new practical ways to use the new SMB 3.0 protocol.
 
 ## New and changed functionality
 
-The following sections describe what's new in SMB 3.
+The following sections describe functionality that was added in SMB 3 and subsequent updates.
 
 ## Features added in SMB 3.11 with Windows Server 2016 and Windows 10, version 1607
 
@@ -40,6 +40,7 @@ The following sections describe what's new in SMB 3.
 | Pre-Authentication Integrity | New |  In SMB 3.1.1, pre-authentication integrity provides improved protection from a man-in-the-middle attacker tampering with SMB’s connection establishment and authentication messages. |
 | SMB Encryption Improvements | New | SMB 3.1.1 offers a mechanism to negotiate the crypto algorithm per connection, with options for AES-128-CCM and AES-128-GCM. AES-128-GCM is the default for new Windows versions, while older versions will continue to use AES-128-CCM. |
 | Rolling cluster upgrade support | New | Enables [rolling cluster upgrades](../../failover-clustering/cluster-operating-system-rolling-upgrade.md) by letting SMB appear to support different max versions of SMB for clusters in the process of being upgraded. |
+| SMB Direct client support in Windows 10 | New | Windows 10 Enterprise, Education, and Workstation editions now include SMB Direct client support. |
 | Native support for FileNormalizedNameInformation API calls | New | Adds native support for querying the normalized name of a file. For details, see [FileNormalizedNameInformation](https://docs.microsoft.com/openspecs/windows_protocols/ms-fscc/20bcadba-808c-4880-b757-4af93e41edf6). |
 
 For additional details, see the blog post [What’s new in SMB 3.1.1 in the Windows Server 2016 Technical Preview 2](https://docs.microsoft.com/archive/blogs/josebda/whats-new-in-smb-3-1-1-in-the-windows-server-2016-technical-preview-2).
@@ -51,6 +52,7 @@ For additional details, see the blog post [What’s new in SMB 3.1.1 in the Wind
 | Automatic rebalancing of Scale-Out File Server clients     |   New      | Improves scalability and manageability for Scale-Out File Servers. SMB client connections are tracked per file share (instead of per server), and clients are then redirected to the cluster node with the best access to the volume used by the file share. This improves efficiency by reducing redirection traffic between file server nodes. Clients are redirected following an initial connection and when cluster storage is reconfigured.    |
 | Performance over WAN   | Updated  | Windows 8.1 and Windows 10 provide improved CopyFile SRV_COPYCHUNK over SMB support when you use File Explorer for remote copies from one location on a remote machine to another copy on the same server. You will copy only a small amount of metadata over the network (1/2KiB per 16MiB of file data is transmitted). This results in a significant performance improvement. This is an OS-level and File Explorer-level distinction for SMB. |
 | SMB Direct     |   Updated      | Improves performance for small I/O workloads by increasing efficiency when hosting workloads with small I/Os (such as an online transaction processing (OLTP) database in a virtual machine). These improvements are evident when using higher speed network interfaces, such as 40 Gbps Ethernet and 56 Gbps InfiniBand.  |
+| SMB bandwidth limits | New | You can now use [Set-SmbBandwidthLimit](https://docs.microsoft.com/powershell/module/smbshare/set-smbbandwidthlimit) to set bandwidth limits in three categories: VirtualMachine (Hyper-V over SMB traffic), LiveMigration (Hyper-V Live Migration traffic over SMB), or Default (all other types of SMB traffic).
 
 For more information on new and changed SMB functionality in Windows Server 2012 R2, see [What's New in SMB in Windows Server](<https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831474(v%3dws.11)>).
 
