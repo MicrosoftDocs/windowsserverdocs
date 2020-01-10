@@ -11,7 +11,7 @@ ms.date: 12/02/2019
 ms.tgt_pltfrm: na
 ms.topic: article
 author: Heidilohr
-manager: daveba
+manager: lizross
 ---
 # Virtual machine sizing guidance
 
