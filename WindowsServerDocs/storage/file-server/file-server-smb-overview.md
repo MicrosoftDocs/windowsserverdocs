@@ -31,15 +31,28 @@ This section discusses some new practical ways to use the new SMB 3.0 protocol.
 
 The following sections describe functionality that was added in SMB 3 and subsequent updates.
 
+## Features added in Windows Server 2019 and Windows 10, version 1809
+
+| Feature/functionality  | New or updated  | Summary  |
+| --------- | --------- | --------- |
+| Ability to require write-through to disk on file shares that aren't continuously available | New | To provide some added assurance that writes to a file share make it all the way through the software and hardware stack to the physical disk prior to the write operation returning as completed, you can enable write-through on the file share using either the `NET USE /WRITETHROUGH` command ore the `New-SMBMapping -UseWriteThrough` PowerShell cmdlet. There's some amount of performance hit to using write-through; see the blog post [Controlling write-through behaviors in SMB](https://techcommunity.microsoft.com/t5/storage-at-microsoft/controlling-write-through-behaviors-in-smb/bc-p/1083417#M677) for further discussion. |
+
+## Features added in Windows Server, version 1709, and Windows 10, version 1709
+
+| Feature/functionality  | New or updated  | Summary  |
+| --------- | --------- | --------- |
+| SMB global mapping | New | Maps a remote SMB share to a drive letter that is accessible to all users on the local host, including containers. This is required to enable container I/O on the data volume to traverse the remote mount point. Be aware that when using SMB global mapping for containers, all users on the container host can access the remote share. Any application running on the container host also have access to the mapped remote share. For details, see [Container Storage Support with Cluster Shared Volumes (CSV), Storage Spaces Direct, SMB Global Mapping](https://techcommunity.microsoft.com/t5/failover-clustering/container-storage-support-with-cluster-shared-volumes-csv/ba-p/372140). |
+| SMB dialect control | Updated | |
+
 ## Features added in SMB 3.11 with Windows Server 2016 and Windows 10, version 1607
 
 | Feature/functionality  | New or updated  | Summary  |
 | --------- | --------- | --------- |
 | SMB Encryption     |   Updated      | SMB 3.1.1 encryption with Advanced Encryption Standard-Galois/Counter Mode (AES-GCM) is faster than SMB Signing or previous SMB encryption using AES-CCM.   |
 | Directory Caching | New | SMB 3.1.1 includes enhancements to directory caching. Windows clients can now cache much larger directories, approximately 500K entries. Windows clients will attempt directory queries with 1 MB buffers to reduce round trips and improve performance. |
-| Pre-Authentication Integrity | New |  In SMB 3.1.1, pre-authentication integrity provides improved protection from a man-in-the-middle attacker tampering with SMB’s connection establishment and authentication messages. |
+| Pre-Authentication Integrity | New |  In SMB 3.1.1, pre-authentication integrity provides improved protection from a man-in-the-middle attacker tampering with SMB’s connection establishment and authentication messages. For details, see [SMB 3.1.1 Pre-authentication integrity in Windows 10](https://docs.microsoft.com/archive/blogs/openspecification/smb-3-1-1-pre-authentication-integrity-in-windows-10). |
 | SMB Encryption Improvements | New | SMB 3.1.1 offers a mechanism to negotiate the crypto algorithm per connection, with options for AES-128-CCM and AES-128-GCM. AES-128-GCM is the default for new Windows versions, while older versions will continue to use AES-128-CCM. |
-| Rolling cluster upgrade support | New | Enables [rolling cluster upgrades](../../failover-clustering/cluster-operating-system-rolling-upgrade.md) by letting SMB appear to support different max versions of SMB for clusters in the process of being upgraded. |
+| Rolling cluster upgrade support | New | Enables [rolling cluster upgrades](../../failover-clustering/cluster-operating-system-rolling-upgrade.md) by letting SMB appear to support different max versions of SMB for clusters in the process of being upgraded. For more details on letting SMB communicate using different versions (dialects) of the protocol, see the blog post [Controlling SMB Dialects](https://techcommunity.microsoft.com/t5/storage-at-microsoft/controlling-smb-dialects/ba-p/860024). |
 | SMB Direct client support in Windows 10 | New | Windows 10 Enterprise, Windows 10 Education, and Windows 10 Pro for Workstations now include SMB Direct client support. |
 | Native support for FileNormalizedNameInformation API calls | New | Adds native support for querying the normalized name of a file. For details, see [FileNormalizedNameInformation](https://docs.microsoft.com/openspecs/windows_protocols/ms-fscc/20bcadba-808c-4880-b757-4af93e41edf6). |
 
@@ -70,6 +83,7 @@ For more information on new and changed SMB functionality in Windows Server 2012
 | SMB Encryption     |   New      | Provides end-to-end encryption of SMB data and protects data from eavesdropping occurrences on untrusted networks. Requires no new deployment costs, and no need for Internet Protocol security (IPsec), specialized hardware, or WAN accelerators. It may be configured on a per share basis, or for the entire file server, and may be enabled for a variety of scenarios where data traverses untrusted networks. |
 | SMB Directory Leasing     |  New | Improves application response times in branch offices. With the use of directory leases, roundtrips from client to server are reduced since metadata is retrieved from a longer living directory cache. Cache coherency is maintained because clients are notified when directory information on the server changes. Directory leases work with scenarios for HomeFolder (read/write with no sharing) and Publication (read-only with sharing).    |
 | Performance over WAN   | New   | Directory opportunistic locks (oplocks) and oplock leases were introduced in SMB 3.0. For typical office/client workloads, oplocks/leases are shown to reduce network round trips by approximately 15%.<br><br>In SMB 3, the Windows implementation of SMB has been refined to improve the caching behavior on the client as well as the ability to push higher throughputs.<br><br>SMB 3 features improvements to the CopyFile() API, as well as to associated tools such as Robocopy, to push significantly more data over the network. |
+| Secure dialect negotiation | New | Helps protect against man-in-the-middle attempt to downgrade dialect negotiation. The idea is to prevent an eavesdropper from downgrading the initially negotiated dialect and capabilities between the client and the server. For details, see [SMB3 Secure Dialect Negotiation](https://docs.microsoft.com/archive/blogs/openspecification/smb3-secure-dialect-negotiation). Note that this has been superceded by the [SMB 3.1.1 Pre-authentication integrity in Windows 10](https://docs.microsoft.com/archive/blogs/openspecification/smb-3-1-1-pre-authentication-integrity-in-windows-10) feature in SMB 3.1.1. |
 
 
 ## Hardware requirements
