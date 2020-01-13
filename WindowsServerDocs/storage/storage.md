@@ -140,4 +140,4 @@ Storage in Windows Server provides new and improved features for software-define
 ## In Azure
 
 * [Azure Storage](https://azure.microsoft.com/documentation/services/storage/)
-* [Azure StorSimple](https://www.microsoft.com/en-us/cloud-platform/azure-storsimple)
+* [Azure StorSimple](https://www.microsoft.com/cloud-platform/azure-storsimple)

@@ -60,7 +60,7 @@ TCP|49443 (TCP)|Used for certificate authentication.
 
 For additional information on required ports and protocols required for hybrid deployments see the document [here](https://azure.microsoft.com/documentation/articles/active-directory-aadconnect-ports/).
 
-For detailed information about ports and protocols required for an Azure AD and Office 365 deployment, see the document [here](https://support.office.com/en-us/article/Office-365-URLs-and-IP-address-ranges-8548a211-3fe7-47cb-abb1-355ea5aa88a2?ui=en-US&rs=en-US&ad=US).
+For detailed information about ports and protocols required for an Azure AD and Office 365 deployment, see the document [here](https://support.office.com/article/Office-365-URLs-and-IP-address-ranges-8548a211-3fe7-47cb-abb1-355ea5aa88a2?ui=en-US&rs=en-US&ad=US).
 
 ### Endpoints enabled
 

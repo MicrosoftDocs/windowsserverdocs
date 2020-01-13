@@ -363,7 +363,7 @@ Help Desk and user support organizations perform support for end users (which do
    - **Primary** - "Over the shoulder" support can be provided with no tools.
    - **Forbidden** - Logging on with domain account administrative credentials is not allowed in this scenario. Switch to desk-side workstation support if administrative privileges are required.
 - **Remote user support** - The Tier 2 support personnel is physically remote to the user.
-   - **Primary** - Remote Assistance, Skype for Business, or similar user-screen sharing may be used. For more information, see [What is Windows Remote Assistance?](https://windows.microsoft.com/en-us/windows/what-is-windows-remote-assistance)
+   - **Primary** - Remote Assistance, Skype for Business, or similar user-screen sharing may be used. For more information, see [What is Windows Remote Assistance?](https://windows.microsoft.com/windows/what-is-windows-remote-assistance)
    - **Forbidden** - Logging on with domain account administrative credentials is not allowed in this scenario. Switch to workstation support if administrative privileges are required.
 - **Workstation support** - Tasks include performing workstation maintenance or troubleshooting that requires access to a system for viewing logs, installing software, updating drivers, and so on.
    - **Desk-side workstation support** - The Tier 2 support personnel is physically at the user's workstation.
@@ -520,7 +520,7 @@ An administrative forest design should include the following considerations:
    - Attack surface analysis to prevent introduction of new attack vectors to Windows during installation of new software.
 
       > [!NOTE]
-      > Use of tools such as the [Attack Surface Analyzer (ASA)](https://www.microsoft.com/en-us/download/details.aspx?id=24487) will help assess configuration settings on a host and identify attack vectors introduced by software or configuration changes.
+      > Use of tools such as the [Attack Surface Analyzer (ASA)](https://www.microsoft.com/download/details.aspx?id=24487) will help assess configuration settings on a host and identify attack vectors introduced by software or configuration changes.
 
 - Account hardening
    - Multi-factor authentication should be configured for all accounts in the admin forest, except one account. At least one administrative account should be password based to ensure access will work in case the multi-factor authentication process breaks. This account should be protected by a stringent physical control process.

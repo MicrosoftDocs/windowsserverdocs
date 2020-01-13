@@ -40,7 +40,7 @@ If the device is not registered but a user selects the “keep me signed in” o
   
  As mentioned above, users on registered devices will always get a persistent SSO unless the persistent SSO is disabled. For un-registered devices, persistent SSO can be achieved by enabling the “keep me signed in” (KMSI) feature. 
  
- For Windows Server 2012 R2, to enable PSSO for the “Keep me signed in” scenario, you need to install this [hotfix](https://support.microsoft.com/en-us/kb/2958298/) which is also part of the of [August 2014 update rollup for Windows RT 8.1, Windows 8.1, and Windows Server 2012 R2](https://support.microsoft.com/en-us/kb/2975719).   
+ For Windows Server 2012 R2, to enable PSSO for the “Keep me signed in” scenario, you need to install this [hotfix](https://support.microsoft.com/kb/2958298/) which is also part of the of [August 2014 update rollup for Windows RT 8.1, Windows 8.1, and Windows Server 2012 R2](https://support.microsoft.com/kb/2975719).   
 
 Task | PowerShell | Description
 ------------ | ------------- | -------------
@@ -121,7 +121,7 @@ Set-AdfsProperties -PersistentSsoCutoffTime <DateTime>
 ```
   
 ## Enable PSSO for Office 365 users to access SharePoint Online  
- Once PSSO is enabled and configured in AD FS, AD FS will write a persistent cookie after a user has authenticated. The next time the user comes in, if a persistent cookie is still valid, a user does not need to provide credentials to authenticate again. You can also avoid the additional authentication prompt for Office 365 and SharePoint Online users by configuring the following two claims rules in AD FS to trigger persistence at Microsoft Azure AD and SharePoint Online.  To enable PSSO for Office 365 users to access SharePoint online, you need to install this [hotfix](https://support.microsoft.com/en-us/kb/2958298/) which is also part of the of [August 2014 update rollup for Windows RT 8.1, Windows 8.1, and Windows Server 2012 R2](https://support.microsoft.com/en-us/kb/2975719).  
+ Once PSSO is enabled and configured in AD FS, AD FS will write a persistent cookie after a user has authenticated. The next time the user comes in, if a persistent cookie is still valid, a user does not need to provide credentials to authenticate again. You can also avoid the additional authentication prompt for Office 365 and SharePoint Online users by configuring the following two claims rules in AD FS to trigger persistence at Microsoft Azure AD and SharePoint Online.  To enable PSSO for Office 365 users to access SharePoint online, you need to install this [hotfix](https://support.microsoft.com/kb/2958298/) which is also part of the of [August 2014 update rollup for Windows RT 8.1, Windows 8.1, and Windows Server 2012 R2](https://support.microsoft.com/kb/2975719).  
   
  An Issuance Transform rule to pass through the InsideCorporateNetwork claim  
   

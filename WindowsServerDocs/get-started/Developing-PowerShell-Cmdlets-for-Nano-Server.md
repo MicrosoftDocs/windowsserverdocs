@@ -145,7 +145,7 @@ The module "Microsoft.PowerShell.NanoServer.SDK" is available in the [PowerShell
   
 The PowerShell Core SDK module exposes cmdlets to set up the correct CoreCLR and PowerShell Core reference assemblies, create a C# project in Visual Studio 2015 targeting those reference assemblies, and set up the remote debugger on a Nano Server machine so that developers can debug their .NET cmdlets running on Nano Server remotely in Visual Studio 2015.  
   
-The PowerShell Core SDK module requires Visual Studio 2015 Update 2. If you do not have Visual Studio 2015 installed, you can install [Visual Studio Community 2015](https://www.visualstudio.com/en-us/products/visual-studio-community-vs.aspx).  
+The PowerShell Core SDK module requires Visual Studio 2015 Update 2. If you do not have Visual Studio 2015 installed, you can install [Visual Studio Community 2015](https://www.visualstudio.com/products/visual-studio-community-vs.aspx).  
   
 The SDK module also depends on the following feature to be installed in Visual Studio 2015:  
   

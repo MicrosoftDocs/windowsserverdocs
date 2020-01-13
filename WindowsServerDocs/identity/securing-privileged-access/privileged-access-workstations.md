@@ -30,7 +30,7 @@ In order to provide the greatest security, PAWs should always run the most up-to
 > [!NOTE]
 > Organizations without access to Windows 10 Enterprise can use Windows 10 Pro, which includes many of the critical foundational technologies for PAWs, including Trusted Boot, BitLocker, and Remote Desktop.  Education customers can use Windows 10 Education.  Windows 10 Home should not be used for a PAW.
 >
-> For a comparison matrix of the different editions of Windows 10, read [this article](https://www.microsoft.com/en-us/WindowsForBusiness/Compare).
+> For a comparison matrix of the different editions of Windows 10, read [this article](https://www.microsoft.com/WindowsForBusiness/Compare).
 
 The PAW security controls are focused on mitigating high impact and high probability risks of compromise. These include mitigating attacks on the environment and risks that can decrease the effectiveness of PAW controls over time:
 
@@ -46,7 +46,7 @@ The PAW security controls are focused on mitigating high impact and high probabi
 >
 > For more information on response and recovery guidance, see the "Respond to suspicious activity" and "Recover from a breach" sections of [Mitigating Pass-the-Hash and Other Credential Theft](https://aka.ms/pth), version 2.
 >
-> Visit [Microsoft's Incident Response and Recovery services](https://www.microsoft.com/en-us/microsoftservices/campaigns/cybersecurity-protection.aspx) page for more information.
+> Visit [Microsoft's Incident Response and Recovery services](https://www.microsoft.com/microsoftservices/campaigns/cybersecurity-protection.aspx) page for more information.
 
 ### PAW hardware profiles
 
@@ -92,7 +92,7 @@ In this configuration, daily work that does not require administrative privilege
 
 To configure this, follow the instructions in this guidance for the PAW host, add Client Hyper-V features, create a User VM, and then install a Windows 10 corporate image on the User VM.
 
-Read [Client Hyper-V](https://docs.microsoft.com/virtualization/hyper-v-on-windows/index) article for more information about this capability. Please note that the operating system in guest virtual machines will need to be licensed per [Microsoft product licensing](https://www.microsoft.com/en-us/Licensing/product-licensing/products.aspx), also described [here](https://download.microsoft.com/download/9/8/D/98D6A56C-4D79-40F4-8462-DA3ECBA2DC2C/Licensing_Windows_Desktop_OS_for_Virtual_Machines.pdf).
+Read [Client Hyper-V](https://docs.microsoft.com/virtualization/hyper-v-on-windows/index) article for more information about this capability. Please note that the operating system in guest virtual machines will need to be licensed per [Microsoft product licensing](https://www.microsoft.com/Licensing/product-licensing/products.aspx), also described [here](https://download.microsoft.com/download/9/8/D/98D6A56C-4D79-40F4-8462-DA3ECBA2DC2C/Licensing_Windows_Desktop_OS_for_Virtual_Machines.pdf).
 
 #### Simultaneous use - Adding RemoteApp, RDP, or a VDI
 
@@ -286,7 +286,7 @@ See the [Tier model page](https://aka.ms/tiermodel) for more information on the 
 
 This guidance contains the detailed instructions for the PAW configuration for the scenarios as noted above. If you have requirements for the other scenarios, you can adapt the instructions based on this guidance yourself or hire a professional services organization like Microsoft to assist with it.
 
-For more information on engaging Microsoft services to design a PAW tailored for your environment, contact your Microsoft representative or visit [this page](https://www.microsoft.com/en-us/microsoftservices/campaigns/cybersecurity-protection.aspx).
+For more information on engaging Microsoft services to design a PAW tailored for your environment, contact your Microsoft representative or visit [this page](https://www.microsoft.com/microsoftservices/campaigns/cybersecurity-protection.aspx).
 
 ## PAW Phased implementation
 
@@ -341,7 +341,7 @@ Phase 1 includes the following steps:
 4. **Acquire and validate the required Windows 10 Enterprise Edition and application software**. Obtain the software required for PAW and validate it using the guidance in [Clean Source for installation media](https://aka.ms/cleansource).
 
    * Windows 10 Enterprise Edition
-   * [Remote Server Administration Tools](https://www.microsoft.com/en-us/download/details.aspx?id=45520) for Windows 10
+   * [Remote Server Administration Tools](https://www.microsoft.com/download/details.aspx?id=45520) for Windows 10
    * [Windows 10 Security Baselines](https://aka.ms/win10baselines)
 
       > [!NOTE]
@@ -656,7 +656,7 @@ In this section, we will configure group policies to prevent privileged administ
 2. Set a unique complex password for the local Administrator account.  Do not use a password that has been used for any other account in the environment.
 
    > [!NOTE]
-   > Microsoft recommends using [Local Administrator Password Solution (LAPS)](https://www.microsoft.com/en-us/download/details.aspx?id=46899) to manage the local Administrator password for all workstations, including PAWs.  If you use LAPS, ensure that you only grant the PAW Maintenance group the right to read LAPS-managed passwords for the PAWs.
+   > Microsoft recommends using [Local Administrator Password Solution (LAPS)](https://www.microsoft.com/download/details.aspx?id=46899) to manage the local Administrator password for all workstations, including PAWs.  If you use LAPS, ensure that you only grant the PAW Maintenance group the right to read LAPS-managed passwords for the PAWs.
 
 3. Install Remote Server Administration Tools for Windows 10 using the clean source installation media.
 4. Configure Windows Defender Exploit Guard
@@ -781,7 +781,7 @@ Enable this feature on your existing servers and workstations, then enforce the 
 
          > [!NOTE]
          > You will need to update the *proxy.pac* file after downloading to ensure that it is up-to-date and complete.  
-         > Microsoft publishes all current Office 365 and Azure URLs in the Office [Support Center](https://support.office.com/en-us/article/Office-365-URLs-and-IP-address-ranges-8548a211-3fe7-47cb-abb1-355ea5aa88a2?ui=en-US&rs=en-US&ad=US). These instructions assume that you will be using Internet Explorer (or Microsoft Edge) for administration of Office 365, Azure, and other cloud services. Microsoft recommends configuring similar restrictions for any 3rd party browsers that you require for administration. Web browsers on PAWs should only be used for administration of cloud services, and never for general web browsing.
+         > Microsoft publishes all current Office 365 and Azure URLs in the Office [Support Center](https://support.office.com/article/Office-365-URLs-and-IP-address-ranges-8548a211-3fe7-47cb-abb1-355ea5aa88a2?ui=en-US&rs=en-US&ad=US). These instructions assume that you will be using Internet Explorer (or Microsoft Edge) for administration of Office 365, Azure, and other cloud services. Microsoft recommends configuring similar restrictions for any 3rd party browsers that you require for administration. Web browsers on PAWs should only be used for administration of cloud services, and never for general web browsing.
          >
          > You may need to add other valid Internet destinations to add to this list for other IaaS provider, but do not add productivity, entertainment, news, or search sites to this list.
          >
@@ -1073,7 +1073,7 @@ Once the template disk and shielding data file are ready, you can deploy an admi
 
 ## Related topics
 
-[Engaging Microsoft Cybersecurity Services](https://www.microsoft.com/en-us/microsoftservices/campaigns/cybersecurity-protection.aspx)
+[Engaging Microsoft Cybersecurity Services](https://www.microsoft.com/microsoftservices/campaigns/cybersecurity-protection.aspx)
 
 [Taste of Premier: How to Mitigate Pass-the-Hash and Other Forms of Credential Theft](https://channel9.msdn.com/Blogs/Taste-of-Premier/Taste-of-Premier-How-to-Mitigate-Pass-the-Hash-and-Other-Forms-of-Credential-Theft)
 
@@ -1093,7 +1093,7 @@ Once the template disk and shielding data file are ready, you can deploy an admi
 
 [Mitigating Credential Theft using the Windows 10 Isolated User Mode (Channel 9)](https://channel9.msdn.com/Blogs/Seth-Juarez/Mitigating-Credential-Theft-using-the-Windows-10-Isolated-User-Mode)
 
-[Enabling Strict KDC Validation in Windows Kerberos](https://www.microsoft.com/en-us/download/details.aspx?id=6382)
+[Enabling Strict KDC Validation in Windows Kerberos](https://www.microsoft.com/download/details.aspx?id=6382)
 
 [What's New in Kerberos Authentication for Windows Server 2012](https://technet.microsoft.com/library/hh831747.aspx)
 

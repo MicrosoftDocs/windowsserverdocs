@@ -20,7 +20,7 @@ ms.technology: identity-adfs
 To protect against common security vulnerabilities and provide administrators the ability to take advantage of the latest advancements in browser-based protection mechanisms, AD FS 2019 added the functionality to customize the HTTP security response headers sent by AD FS. This is accomplished through the introduction of two new cmdlets: `Get-AdfsResponseHeaders` and `Set-AdfsResponseHeaders`.  
 
 >[!NOTE]
->The functionality to customize the HTTP security response headers (except CORS Headers) using cmdlets: `Get-AdfsResponseHeaders` and `Set-AdfsResponseHeaders` was backported to AD FS 2016. You can add the functionality to your AD FS 2016 by installing [KB4493473](https://support.microsoft.com/en-us/help/4493473/windows-10-update-kb4493473) and [KB4507459](https://support.microsoft.com/en-us/help/4507459/windows-10-update-kb4507459). 
+>The functionality to customize the HTTP security response headers (except CORS Headers) using cmdlets: `Get-AdfsResponseHeaders` and `Set-AdfsResponseHeaders` was backported to AD FS 2016. You can add the functionality to your AD FS 2016 by installing [KB4493473](https://support.microsoft.com/help/4493473/windows-10-update-kb4493473) and [KB4507459](https://support.microsoft.com/help/4507459/windows-10-update-kb4507459). 
 
 In this document we will discuss commonly used security response headers to demonstrate how to customize headers sent by AD FS 2019.   
  
@@ -229,7 +229,7 @@ Use the following table and links to determine which web browsers are compatible
 |-----|-----|
 |HTTP Strict-Transport-Security (HSTS)|[HSTS browser compatibility](https://developer.mozilla.org/docs/Web/HTTP/Headers/Strict-Transport-Security#Browser_compatibility)|
 |X-Frame-Options|[X-Frame-Options browser compatibility](https://developer.mozilla.org/docs/Web/HTTP/Headers/X-Frame-Options#Browser_compatibility)| 
-|X-XSS-Protection|[X-XSS-Protection browser compatibility](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-XSS-Protection#Browser_compatibility)| 
+|X-XSS-Protection|[X-XSS-Protection browser compatibility](https://developer.mozilla.org/docs/Web/HTTP/Headers/X-XSS-Protection#Browser_compatibility)| 
 |Cross Origin Resource Sharing (CORS)|[CORS browser compatibility](https://developer.mozilla.org/docs/Web/HTTP/CORS#Browser_compatibility) 
 |Content Security Policy (CSP)|[CSP browser compatibility](https://developer.mozilla.org/docs/Web/HTTP/CSP#Browser_compatibility) 
 

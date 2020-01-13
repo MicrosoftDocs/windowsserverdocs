@@ -20,7 +20,7 @@ Use the links in this topic to learn more about the concepts that were discussed
 
 -   [Transaction Processing Performance Council](http://www.tpc.org/)
 
--   [Windows Assessment and Deployment Kit](https://developer.microsoft.com/en-us/windows/hardware/windows-assessment-deployment-kit)
+-   [Windows Assessment and Deployment Kit](https://developer.microsoft.com/windows/hardware/windows-assessment-deployment-kit)
 
 ## Power Management Tuning Resources
 
@@ -28,7 +28,7 @@ Use the links in this topic to learn more about the concepts that were discussed
 
 -   [Using PowerCfg to Evaluate System Energy Efficiency](https://technet.microsoft.com/library/cc748940.aspx)
 
--   [Interrupt-Affinity Policy Tool](https://support.microsoft.com/en-us/kb/252867)
+-   [Interrupt-Affinity Policy Tool](https://support.microsoft.com/kb/252867)
 
 ## Networking Subsystem Tuning Resources
 

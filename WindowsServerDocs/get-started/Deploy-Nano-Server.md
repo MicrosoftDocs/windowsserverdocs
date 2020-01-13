@@ -26,9 +26,9 @@ This topic covers information you need to deploy Nano Server images that are mor
 
 The Nano Server Image Builder is a tool that helps you create a custom Nano Server image and bootable USB media with the aid of a graphical interface. Based on the inputs you provide, it generates reusable PowerShell scripts that allow you easily automate consistent installations of Nano Server running either Windows Server 2016 Datacenter or Standard editions.
 
-Obtain the tool from the [Download Center](https://www.microsoft.com/en-us/download/details.aspx?id=54065). 
+Obtain the tool from the [Download Center](https://www.microsoft.com/download/details.aspx?id=54065). 
 
-The tool also requires [Windows Assessment and Deployment Kit (ADK)](https://developer.microsoft.com/en-us/windows/hardware/windows-assessment-deployment-kit).
+The tool also requires [Windows Assessment and Deployment Kit (ADK)](https://developer.microsoft.comwindows/hardware/windows-assessment-deployment-kit).
 
 
 Nano Server Image Builder creates customized Nano Server images in VHD, VHDX or ISO formats and can create bootable USB media to deploy Nano server or detect the hardware configuration of a server. It also can do the following:
@@ -603,7 +603,7 @@ Put this Unattend.xml file into the C:\NanoServer folder, and then use the follo
 
 **dism\dismmedia:.\mountdir /Apply-Unattend:.\unattend.xml**  
 
-Create a "Panther" folder (used by Windows systems for storing files during setup; see [Windows 7, Windows Server 2008 R2, and Windows Vista setup log file locations](https://support.microsoft.com/en-us/kb/927521) if you're curious), copy the Unattend.xml file to it, and then unmount the VHD with these commands:  
+Create a "Panther" folder (used by Windows systems for storing files during setup; see [Windows 7, Windows Server 2008 R2, and Windows Vista setup log file locations](https://support.microsoft.com/kb/927521) if you're curious), copy the Unattend.xml file to it, and then unmount the VHD with these commands:  
 
 **md .\mountdir\windows\panther**  
 

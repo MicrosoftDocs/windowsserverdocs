@@ -23,7 +23,7 @@ Microsoft and our customers are now on a journey to achieve the privacy goals of
 
 We have outlined our commitment to the GDPR and how we are supporting our customers within the [Get GDPR compliant with the Microsoft Cloud](https://blogs.microsoft.com/on-the-issues/2017/02/15/get-gdpr-compliant-with-the-microsoft-cloud/#hv52B68OZTwhUj2c.99) blog post by our Chief Privacy Officer [Brendon Lynch](https://blogs.microsoft.com/on-the-issues/author/brendonlynch/) and the [Earning your trust with contractual commitments to the General Data Protection Regulation](https://blogs.microsoft.com/on-the-issues/2017/04/17/earning-trust-contractual-commitments-general-data-protection-regulation/#6QbqoGWXCLavGM63.99)” blog post by [Rich Sauer](https://blogs.microsoft.com/on-the-issues/author/rsauer/) - Microsoft Corporate Vice President & Deputy General Counsel.
 
-Although your journey to GDPR-compliance may seem challenging, we're here to help you. For specific information about the GDPR, our commitments and how to begin your journey, please visit the [GDPR section of the Microsoft Trust Center](https://www.microsoft.com/en-us/trustcenter/privacy/gdpr).
+Although your journey to GDPR-compliance may seem challenging, we're here to help you. For specific information about the GDPR, our commitments and how to begin your journey, please visit the [GDPR section of the Microsoft Trust Center](https://www.microsoft.com/trustcenter/privacy/gdpr).
 
 ## GDPR and its implications
 The GDPR is a complex regulation that may require significant changes in how you gather, use and manage personal data. Microsoft has a long history of helping our customers comply with complex regulations, and when it comes to preparing for the GDPR, we are your partner on this journey.
@@ -75,7 +75,7 @@ Given how much is involved to become GDPR-compliant, we strongly recommend that 
 
     ![Diagram about how the 4 key GDPR steps work together](../media/GDPR-Windows-Server-Overview/gdpr-steps-diagram.png)
 
-For each of the steps, we've outlined example tools, resources, and features in various Microsoft solutions, which can be used to help you address the requirements of that step. While this article isn't a comprehensive “how-to” guide, we've included links for you to find out more details, and more info is available in the [GDPR section of the Microsoft Trust Center](https://www.microsoft.com/en-us/trustcenter/privacy/gdpr).
+For each of the steps, we've outlined example tools, resources, and features in various Microsoft solutions, which can be used to help you address the requirements of that step. While this article isn't a comprehensive “how-to” guide, we've included links for you to find out more details, and more info is available in the [GDPR section of the Microsoft Trust Center](https://www.microsoft.com/trustcenter/privacy/gdpr).
 
 ## Windows Server security and privacy
 The GDPR requires you to implement appropriate technical and organizational security measures to protect personal data and processing systems. In the context of the GDPR, your physical and virtual server environments are potentially processing personal and sensitive data. Processing can mean any operation or set of operations, such as data collection, storage, and retrieval.
@@ -182,7 +182,7 @@ Imagine this scenario if the DNS admin's credentials were stolen. First, since t
 
 In addition, many organizations use the free [Local Administrator Password Solution (LAPS)](http://aka.ms/laps) as a simple yet powerful JIT administration mechanism for their server and client systems. The LAPS capability provides management of local account passwords of domain joined computers. Passwords are stored in Active Directory (AD) and protected by and Access Control List (ACL) so only eligible users can read it or request its reset.
 
-As noted in the [Windows Credential Theft Mitigation Guide](https://www.microsoft.com/en-us/download/confirmation.aspx?id=54095), 
+As noted in the [Windows Credential Theft Mitigation Guide](https://www.microsoft.com/download/confirmation.aspx?id=54095), 
 
 > “_the tools and techniques criminals use to carry out credential theft and reuse attacks improve, malicious attackers are finding it easier to achieve their goals. Credential theft often relies on operational practices or user credential exposure, so effective mitigations require a holistic approach that addresses people, processes, and technology. In addition, these attacks rely on the attacker stealing credentials after compromising a system to expand or persist access, so organizations must contain breaches rapidly by implementing strategies that prevent attackers from moving freely and undetected in a compromised network._”
 

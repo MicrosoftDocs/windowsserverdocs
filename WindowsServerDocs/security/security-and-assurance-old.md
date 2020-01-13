@@ -109,7 +109,7 @@ Windows Defender provides active detection capabilities to block known malware. 
 ### [Security Threat Analysis Using Microsoft Operations Management Suite](https://channel9.msdn.com/events/ignite/2015/brk3464)
 This Ignite presentation discusses how you can use Operational Insights to perform security threat analysis.
 
-### [Microsoft Operations Management Suite (OMS)](https://www.microsoft.com/en-us/server-cloud/operations-management-suite/overview.aspx)
+### [Microsoft Operations Management Suite (OMS)](https://www.microsoft.com/server-cloud/operations-management-suite/overview.aspx)
 The Microsoft Operations Management Suite (OMS) Security and Audit solution processes security logs and firewall events from on-premises and cloud environments to analyze and detect malicious behavior.
 
 ### [OMS and Windows Server](https://www.youtube.com/watch?v=_SaDw1dRy2k)
