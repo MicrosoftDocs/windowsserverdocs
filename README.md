@@ -25,6 +25,10 @@ These repos are actively managed and includes the source for Windows Server cont
 - [Windows Server 2016](https://docs.microsoft.com/windows-server/get-started/server-basics)
 - [Essentials Server 2016 and Essentials Server 2019](https://docs.microsoft.com/windows-server-essentials/get-started/get-started)
 
+## Markdown info
+
+For info on how to use Markdown on Docs.microsoft.com topics, see [Docs markdown reference](https://review.docs.microsoft.com/help/contribute/markdown-reference?branch=master). The publicly accessible version of this content is here: [Public Docs markdown reference](https://docs.microsoft.com/contribute/how-to-write-use-markdown).
+
 ## License
 
 Please refer to [LICENSE](https://github.com/MicrosoftDocs/windowsserverdocs-pr/blob/master/LICENSE), [LICENSE-CODE](https://github.com/MicrosoftDocs/windowsserverdocs-pr/blob/master/LICENSE-CODE) and [ThirdPartyNotices](https://github.com/MicrosoftDocs/windowsserverdocs-pr/blob/master/ThirdPartyNotices) for all Licensing information.
