@@ -368,7 +368,7 @@ The following articles contain examples of certreq usage:
 -   [How to Request a Certificate With a Custom Subject Alternative Name](https://technet.microsoft.com/library/ff625722.aspx)
 -   [Test Lab Guide: Deploying an AD CS Two-Tier PKI Hierarchy](https://technet.microsoft.com/library/hh831348.aspx)
 -   [Appendix 3: Certreq.exe Syntax](https://technet.microsoft.com/library/cc736326.aspx)
--   [How to create a web server SSL certificate manually](http://blogs.technet.com/b/pki/archive/2009/08/05/how-to-create-a-web-server-ssl-certificate-manually.aspx)
+-   [How to create a web server SSL certificate manually](https://blogs.technet.com/b/pki/archive/2009/08/05/how-to-create-a-web-server-ssl-certificate-manually.aspx)
 -   [Request an AMT Provisioning Certificate Using a Windows Server 2008 CA](https://social.technet.microsoft.com/wiki/contents/articles/request-an-amt-provisioning-certificate-using-a-windows-server-2008-ca.aspx)
 -   [Certificate Enrollment for System Center Operations Manager Agent](https://social.technet.microsoft.com/wiki/contents/articles/certificate-enrollment-for-system-center-operations-manager-agent.aspx)
 -   [AD CS Step by Step Guide: Two Tier PKI Hierarchy Deployment](https://social.technet.microsoft.com/wiki/contents/articles/15037.ad-cs-step-by-step-guide-two-tier-pki-hierarchy-deployment.aspx)

@@ -164,7 +164,7 @@ Windows Server 2012 R2 introduced support for a new authentication method, Remot
 > [!IMPORTANT]
 > Custom authentication and authorization models before Windows 8.1 are not supported, although the article above discusses them.
 
-To learn more about this feature, check out [http://aka.ms/paa-sample](http://aka.ms/paa-sample).
+To learn more about this feature, check out [https://aka.ms/paa-sample](https://aka.ms/paa-sample).
 
 
 > [!TIP]

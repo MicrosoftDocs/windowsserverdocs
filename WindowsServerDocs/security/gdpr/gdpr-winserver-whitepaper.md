@@ -180,7 +180,7 @@ If the DNS administrator needs to make an update to one of her servers, she woul
 
 Imagine this scenario if the DNS admin's credentials were stolen. First, since the credentials have no admin privileges attached to them, the attacker wouldn't be able to gain access to the DNS server – or any other systems – to make any changes. If the attacker tried to request privileges for the DNS server, second-factor authentication would ask them to confirm their identity. Since it isn't likely that the attacker has the DNS admin's mobile phone, authentication would fail. This would lock the attacker out of the system, and alert the IT organization that the credentials might be compromised.
 
-In addition, many organizations use the free [Local Administrator Password Solution (LAPS)](http://aka.ms/laps) as a simple yet powerful JIT administration mechanism for their server and client systems. The LAPS capability provides management of local account passwords of domain joined computers. Passwords are stored in Active Directory (AD) and protected by and Access Control List (ACL) so only eligible users can read it or request its reset.
+In addition, many organizations use the free [Local Administrator Password Solution (LAPS)](https://aka.ms/laps) as a simple yet powerful JIT administration mechanism for their server and client systems. The LAPS capability provides management of local account passwords of domain joined computers. Passwords are stored in Active Directory (AD) and protected by and Access Control List (ACL) so only eligible users can read it or request its reset.
 
 As noted in the [Windows Credential Theft Mitigation Guide](https://www.microsoft.com/download/confirmation.aspx?id=54095), 
 

@@ -60,7 +60,7 @@ Use the links in this topic to learn more about the concepts that were discussed
 
 -   [Hyper-V Dynamic Memory Configuration Guide](https://technet.microsoft.com/library/ff817651.aspx)
 
--   [NUMA Node Balancing](http://blogs.technet.com/b/winserverperformance/archive/2009/12/10/numa-node-balancing.aspx)
+-   [NUMA Node Balancing](https://blogs.technet.com/b/winserverperformance/archive/2009/12/10/numa-node-balancing.aspx)
 
 -   [Hyper-V WMI Provider](https://msdn2.microsoft.com/library/cc136992(VS.85).aspx)
 
@@ -68,9 +68,9 @@ Use the links in this topic to learn more about the concepts that were discussed
 
 -   [About Virtual Machines and Guest Operating Systems](https://technet.microsoft.com/library/cc794868(v=ws.10))
 
--   [Optimizing and Troubleshooting Hyper-V Storage](http://blogs.msdn.com/b/microsoft_press/archive/2013/07/24/new-book-optimizing-and-troubleshooting-hyper-v-storage.aspx)
+-   [Optimizing and Troubleshooting Hyper-V Storage](https://blogs.msdn.com/b/microsoft_press/archive/2013/07/24/new-book-optimizing-and-troubleshooting-hyper-v-storage.aspx)
 
--   [Optimizing and Troubleshooting Hyper-V Networking](http://blogs.msdn.com/b/microsoft_press/archive/2013/07/12/rtm-d-today-optimizing-and-troubleshooting-hyper-v-networking.aspx)
+-   [Optimizing and Troubleshooting Hyper-V Networking](https://blogs.msdn.com/b/microsoft_press/archive/2013/07/12/rtm-d-today-optimizing-and-troubleshooting-hyper-v-networking.aspx)
 
 ## Print Server Tuning Resources
 

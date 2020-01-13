@@ -571,6 +571,6 @@ To accept the reboot prompt automatically, use the **-force** or **-confirm:$fal
 [Windows Server Technical Reference (Windows Server 2003)](https://technet.microsoft.com/library/cc739127(WS.10).aspx)  
 [Active Directory Administrative Center: Getting Started (Windows Server 2008 R2)](https://technet.microsoft.com/library/dd560651(WS.10).aspx)  
 [Active Directory Administration with Windows PowerShell (Windows Server 2008 R2)](https://technet.microsoft.com/library/dd378937(WS.10).aspx)  
-[Ask the Directory Services Team (Official Microsoft Commercial Technical Support Blog)](http://blogs.technet.com/b/askds)  
+[Ask the Directory Services Team (Official Microsoft Commercial Technical Support Blog)](https://blogs.technet.com/b/askds)  
   
 

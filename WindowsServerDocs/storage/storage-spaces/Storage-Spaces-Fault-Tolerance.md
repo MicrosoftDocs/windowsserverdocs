@@ -213,4 +213,4 @@ Every link below is inline somewhere in the body of this topic.
 - [Local Reconstruction Codes and Accelerating Parity Volumes](https://blogs.technet.microsoft.com/filecab/2016/09/06/volume-resiliency-and-efficiency-in-storage-spaces-direct/)
 - [Volumes in the Storage Management API](https://blogs.technet.microsoft.com/filecab/2016/08/29/deep-dive-volumes-in-spaces-direct/)
 - [Storage Efficiency Demo at Microsoft Ignite 2016](https://www.youtube.com/watch?v=-LK2ViRGbWs&t=36m55s)
-- [Capacity Calculator PREVIEW for Storage Spaces Direct](http://aka.ms/s2dcalc)
+- [Capacity Calculator PREVIEW for Storage Spaces Direct](https://aka.ms/s2dcalc)

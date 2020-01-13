@@ -31,7 +31,7 @@ This is the central blog site for technical content from the Microsoft Datacente
 ### [Addressing emerging threats and landscape shifts](https://www.youtube.com/watch?v=B5JMYxYWx1k&feature=youtu.be)
 In this 6-minute video, Anders Vinberg provides an overview of Microsoft's security and assurance strategy, and discusses industry trends and landscape shifts as they relate to security. He then focuses on Microsoft's key initiatives to protect workloads from the underlying fabric, and protect against direct attacks from privileged accounts. Finally, in case of breach, he explains how new detection and forensic capabilities can help better identify the threat.
 
-### [Protecting Your Datacenter and Cloud from Emerging Threats blog post](http://blogs.technet.com/b/windowsserver/archive/2015/11/18/protecting-your-datacenter-and-cloud-november-update.aspx)
+### [Protecting Your Datacenter and Cloud from Emerging Threats blog post](https://blogs.technet.com/b/windowsserver/archive/2015/11/18/protecting-your-datacenter-and-cloud-november-update.aspx)
 This blog post discusses how you can use Microsoft technologies to protect your datacenter and cloud investments from emerging threats.                   
 
 ### [Security and Assurance Overview session at Ignite](http://channel9.msdn.com/events/ignite/2015/brk2482)
@@ -74,7 +74,7 @@ This article discusses features and capabilities included in Microsoft Identity 
 ### [Protecting Windows and Microsoft Azure Active Directory with Privileged Access Management](http://channel9.msdn.com/events/ignite/2015/brk3873)
 This Ignite presentation covers Microsoft's strategy and investments in Windows Server, PowerShell, Active Directory, Identity Manager, and Azure Active Directory for addressing the risks of administrator access through stronger authentication, and managing access using Just in Time and Just Enough Administration (JEA).
 
-### [Just Enough Administration Article](http://aka.ms/JEA)
+### [Just Enough Administration Article](https://aka.ms/JEA)
 This document shares the vision and technical details of Just Enough Administration, a PowerShell toolkit designed to help organizations reduce risk by restricting operators to the only access required to perform specific tasks.
 
 ### [Just Enough Administration demo video](https://www.youtube.com/watch?v=xnBrbkY9P20)
@@ -115,7 +115,7 @@ The Microsoft Operations Management Suite (OMS) Security and Audit solution proc
 ### [OMS and Windows Server](https://www.youtube.com/watch?v=_SaDw1dRy2k)
 This 3-minute video shows how OMS can help detect potential malicious behavior that is blocked by Windows Server.  
 
-### [Microsoft Advanced Threat Analytics](http://blogs.technet.com/b/ad/archive/2015/07/22/microsoft-advanced-threat-analytics-coming-next-month.aspx)
+### [Microsoft Advanced Threat Analytics](https://blogs.technet.com/b/ad/archive/2015/07/22/microsoft-advanced-threat-analytics-coming-next-month.aspx)
 This blog post discusses Microsoft Advanced Threat Analytics, an on-premises product that uses Active Directory network traffic and SIEM data to discover and alert on potential threats.
 
 ### [Microsoft Advanced Threat Analytics](https://www.youtube.com/watch?v=0nA9FeTRZFw&list=PL8nfc9haGeb5IZGM8HvmRozetHRpBDKSw)

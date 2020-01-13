@@ -132,7 +132,7 @@ Generally, these cmdlets should work in Nano Server without any conversion neces
 ### Building C++ for Nano Server  
 To get C++ DLLs working on Nano Server, compile them for Nano Server rather than for a specific edition.  
   
-For prerequisites and a walkthrough of developing C++ on Nano Server, see [Developing Native Apps on Nano Server](http://blogs.technet.com/b/nanoserver/archive/2016/04/27/developing-native-apps-on-nano-server.aspx).  
+For prerequisites and a walkthrough of developing C++ on Nano Server, see [Developing Native Apps on Nano Server](https://blogs.technet.com/b/nanoserver/archive/2016/04/27/developing-native-apps-on-nano-server.aspx).  
   
   
 ## Porting .NET cmdlets  

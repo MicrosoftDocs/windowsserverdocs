@@ -22,7 +22,7 @@ On the computer, open the **System** control panel and look for **Windows is act
 
 ## The computer does not activate over the internet
 
-Make sure that the required ports are open in the firewall. For a list of ports, see the [Volume Activation Deployment Guide](http://go.microsoft.com/fwlink/?linkid=150083).
+Make sure that the required ports are open in the firewall. For a list of ports, see the [Volume Activation Deployment Guide](https://go.microsoft.com/fwlink/?linkid=150083).
 
 ## Internet and telephone activation fail
 

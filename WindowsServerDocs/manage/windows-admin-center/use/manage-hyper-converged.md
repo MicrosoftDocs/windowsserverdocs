@@ -21,7 +21,7 @@ Hyper-Converged Infrastructure consolidates software-defined compute, storage, a
 > Looking to acquire Hyper-Converged Infrastructure? Microsoft recommends these [Windows Server Software-Defined](https://microsoft.com/wssd) solutions from our partners. They are designed, assembled, and validated against our reference architecture to ensure compatibility and reliability, so you get up and running quickly.
 
 > [!IMPORTANT]
-> Some of the features described in this article are only available in Windows Admin Center Preview. [How do I get this version?](http://aka.ms/windowsadmincenter)
+> Some of the features described in this article are only available in Windows Admin Center Preview. [How do I get this version?](https://aka.ms/windowsadmincenter)
 
 ## What is Windows Admin Center
 
