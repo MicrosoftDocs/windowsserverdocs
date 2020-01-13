@@ -34,12 +34,12 @@ In this 6-minute video, Anders Vinberg provides an overview of Microsoft's secur
 ### [Protecting Your Datacenter and Cloud from Emerging Threats blog post](https://blogs.technet.com/b/windowsserver/archive/2015/11/18/protecting-your-datacenter-and-cloud-november-update.aspx)
 This blog post discusses how you can use Microsoft technologies to protect your datacenter and cloud investments from emerging threats.                   
 
-### [Security and Assurance Overview session at Ignite](http://channel9.msdn.com/events/ignite/2015/brk2482)
+### [Security and Assurance Overview session at Ignite](https://channel9.msdn.com/events/ignite/2015/brk2482)
 This Ignite session addresses persistent threats, insider breaches, organized cybercrime, and securing the Microsoft Cloud Platform (on-premises and connected services with Azure). It includes scenarios for securing workloads, large enterprise tenants, and service providers.                                                                   
 
 ## Secure virtualization with Shielded VMs
 
-### [Shielded VM in Channel 9](http://channel9.msdn.com/Shows/Mechanics/Introduction-to-Shielded-Virtual-Machines-in-Windows-Server-2016)
+### [Shielded VM in Channel 9](https://channel9.msdn.com/Shows/Mechanics/Introduction-to-Shielded-Virtual-Machines-in-Windows-Server-2016)
 A walkthrough of Shielded VM technology and benefits.                           
 
 ### [Shielded VM Demo](https://www.youtube.com/watch?v=xip5Qtk-7d8)
@@ -48,7 +48,7 @@ This 4-minute video describes the value of shielded VMs and the differences betw
 ### [Shielded Virtual Machines in Windows Server video walkthrough](http://microsoft-cloud.cloudguides.com/Guides/Shielded Virtual Machines in Windows Server.htm)
 This video walkthrough shows how the Host Guardian Service enables shielded virtual machines so that sensitive data is protected from unauthorized access by Hyper-V host administrators.
 
-### [Harden the Fabric: Protecting Tenant Secrets in Hyper-V (Ignite Video)](http://channel9.msdn.com/events/ignite/2015/brk3457)
+### [Harden the Fabric: Protecting Tenant Secrets in Hyper-V (Ignite Video)](https://channel9.msdn.com/events/ignite/2015/brk3457)
 
 This Ignite presentation discusses enhancements in Hyper-V, Virtual Machine Manager, and a new Host Guardian Server role to enable shielded VMs.                
 
@@ -71,7 +71,7 @@ A road-map for how you can secure your privileged access. This road-map is built
 ### [Just in Time Administration with Microsoft Identity Manager](https://technet.microsoft.com/library/mt150258.aspx)
 This article discusses features and capabilities included in Microsoft Identity Manager, including support for Just In Time (JIT) Privileged Access Management.                                                                    
 
-### [Protecting Windows and Microsoft Azure Active Directory with Privileged Access Management](http://channel9.msdn.com/events/ignite/2015/brk3873)
+### [Protecting Windows and Microsoft Azure Active Directory with Privileged Access Management](https://channel9.msdn.com/events/ignite/2015/brk3873)
 This Ignite presentation covers Microsoft's strategy and investments in Windows Server, PowerShell, Active Directory, Identity Manager, and Azure Active Directory for addressing the risks of administrator access through stronger authentication, and managing access using Just in Time and Just Enough Administration (JEA).
 
 ### [Just Enough Administration Article](https://aka.ms/JEA)
