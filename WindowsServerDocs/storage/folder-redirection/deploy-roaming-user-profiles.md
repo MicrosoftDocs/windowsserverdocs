@@ -329,7 +329,7 @@ Here are some ways to work around Start menu layouts getting reset after an in-p
 
 - Let the Start layout reset occur and allow end users to reconfigure Start. A notification email or other notification can be sent to end users to expect their Start layouts to be reset after the OS upgrade to minimized impact. 
 
-# Change history
+## Change history
 
 The following table summarizes some of the most important changes to this topic.
 
