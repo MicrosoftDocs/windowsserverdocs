@@ -289,7 +289,7 @@ No. DFS Replication has its own set of monitoring and diagnostics tools. Ultraso
 
 ### How can files be recovered from the ConflictAndDeleted or PreExisting folders?
 
-To recover lost files, restore the files from the file system folder or shared folder using File History, the **Restore previous versions** command in File Explorer, or by restoring the files from backup. To recover files directly from the ConflictAndDeleted or PreExisting folder, use the `Get-DfsrPreservedFiles` and `Restore-DfsrPreservedFiles` Windows PowerShell cmdlets (included with the DFSR module in Windows Server 2012 R2), or the [RestoreDFSR](http://code.msdn.microsoft.com/restoredfsr) sample script from the MSDN Code Gallery. This script is intended only for disaster recovery and is provided AS-IS, without warranty.
+To recover lost files, restore the files from the file system folder or shared folder using File History, the **Restore previous versions** command in File Explorer, or by restoring the files from backup. To recover files directly from the ConflictAndDeleted or PreExisting folder, use the `Get-DfsrPreservedFiles` and `Restore-DfsrPreservedFiles` Windows PowerShell cmdlets (included with the DFSR module in Windows Server 2012 R2), or the [RestoreDFSR](https://code.msdn.microsoft.com/restoredfsr) sample script from the MSDN Code Gallery. This script is intended only for disaster recovery and is provided AS-IS, without warranty.
 
 ### Is there a way to know the state of replication?
 
