@@ -27,7 +27,7 @@ We've removed the following features and functionalities from the installed prod
 
 | Feature	 | Instead you can use... |
 | ----------- | -------------------- |
-| [File Replication Service](https://support.microsoft.com/en-us/help/4025991/windows-server-version-1709-no-longer-supports-frs)|File Replication Services, introduced in Windows Server 2003 R2, has been replaced by DFS Replication. You need to [migrate any domain controllers that user FRS to DFS Replication with SYSVOL](https://blogs.technet.microsoft.com/filecab/2014/06/25/streamlined-migration-of-frs-to-dfsr-sysvol/). |
+| [File Replication Service](https://support.microsoft.com/help/4025991/windows-server-version-1709-no-longer-supports-frs)|File Replication Services, introduced in Windows Server 2003 R2, has been replaced by DFS Replication. You need to [migrate any domain controllers that user FRS to DFS Replication with SYSVOL](https://blogs.technet.microsoft.com/filecab/2014/06/25/streamlined-migration-of-frs-to-dfsr-sysvol/). |
 | Hyper-V Network Virtualization (HNV)|[Network Virtualization](../networking/sdn/technologies/hyper-v-network-virtualization/whats-new-hyperv-network-virtualization-windows-server.md) is now included in Windows Server as part of the [Software Defined Networking](../networking/sdn/software-defined-networking.md) (SDN) solution, which also includes the Network Controller, Software Load Balancing, User-Defined Routing, and Access Control Lists. |
 
 ## Features we're no longer developing

@@ -25,7 +25,7 @@ If you are using station virtual desktops instead of physical stations, you must
   
 3.  Click the **Home** tab, and then click **Add client access licenses**.  This will open the management tool for CAL licensing.
 
-# Set the licensing mode manually
+## Set the licensing mode manually
 If not properly configured the MultiPoint Services set-up will prompt with a notification about the grace
 period being expired. Follow these steps to set the licensing mode:
 

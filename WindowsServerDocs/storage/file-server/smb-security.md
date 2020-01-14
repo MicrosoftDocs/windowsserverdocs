@@ -80,7 +80,7 @@ The secure dialect negotiation capability described in the next section prevents
 
 SMB 3.0 is capable of detecting man-in-the-middle attacks that attempt to downgrade the SMB 2.0 or SMB 3.0 protocol or the capabilities that the client and server negotiate. When such an attack is detected by the client or the server, the connection is disconnected and event ID 1005 is logged in the Microsoft-Windows-SmbServer/Operational event log. Secure dialect negotiation cannot detect or prevent downgrades from SMB 2.0 or 3.0 to SMB 1.0. Because of this, and to take advantage of the full capabilities of SMB Encryption, we strongly recommend that you disable the SMB 1.0 server. For more information, see [Disabling SMB 1.0](#disabling-smb-10).
 
-The secure dialect negotiation capability that is described in the next section prevents a man-in-the-middle attack from downgrading a connection from SMB 3 to SMB 2 (which would use unencrypted access); however, it does not prevent downgrades to SMB 1, which would also result in unencrypted access. For more information on potential issues with earlier non-Windows implementations of SMB, see the [Microsoft Knowledge Base](http://support.microsoft.com/kb/2686098).
+The secure dialect negotiation capability that is described in the next section prevents a man-in-the-middle attack from downgrading a connection from SMB 3 to SMB 2 (which would use unencrypted access); however, it does not prevent downgrades to SMB 1, which would also result in unencrypted access. For more information on potential issues with earlier non-Windows implementations of SMB, see the [Microsoft Knowledge Base](https://support.microsoft.com/kb/2686098).
 
 ## New signing algorithm
 

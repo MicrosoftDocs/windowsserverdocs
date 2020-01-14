@@ -95,4 +95,4 @@ For more information, see the following articles:
 * [License your RDS deployment with client access licenses (CALs)](rds-client-access-license.md)
 * [Activate the Remote Desktop Services license server](rds-activate-license-server.md)
 * [Track your Remote Desktop Services client access licenses (RDS CALs)](rds-track-cals.md)
-* [Microsoft Volume Licensing: licensing options for service providers](https://www.microsoft.com/en-us/Licensing/licensing-programs/spla-program.aspx)
+* [Microsoft Volume Licensing: licensing options for service providers](https://www.microsoft.com/Licensing/licensing-programs/spla-program.aspx)

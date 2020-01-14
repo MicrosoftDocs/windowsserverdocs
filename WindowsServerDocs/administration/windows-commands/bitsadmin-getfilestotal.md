@@ -41,7 +41,6 @@ The following example retrieves the number of files included in the job named *m
 C:\>bitsadmin /GetFilesTotal myDownloadJob
 ```
 
-# #
+## See Also
 
 [Command-Line Syntax Key](command-line-syntax-key.md)
-See Also
