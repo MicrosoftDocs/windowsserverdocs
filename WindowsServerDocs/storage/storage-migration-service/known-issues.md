@@ -412,7 +412,7 @@ If you have already run transfer one ore more times:
 
  2. For any users returned with their original name, edit their "User Logon Name (pre-Windows 2000)" to remove the random character suffix added by Storage Migration Service, so that this loser can logon.
  3. For any groups returned with their original name, edit their "Group Name (pre-Windows 2000)" to remove the random character suffix added by Storage Migration Service.
- 4. For any disabled users or groups with names that now contain a suffix added by SMS, you can delete these accounts. You can confirm that user accounts were added later because they will only contain the Domain Users group and will have a created date/time matching the SMS transfer start time.
+ 4. For any disabled users or groups with names that now contain a suffix added by Storage Migration Service, you can delete these accounts. You can confirm that user accounts were added later because they will only contain the Domain Users group and will have a created date/time matching the Storage Migration Service transfer start time.
  
  If you wish to use SMS with domain controllers for transfer pruposes, ensure you always select "Don't transfer users and groups" on teh transfer settings page in WAC.
 
