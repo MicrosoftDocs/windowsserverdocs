@@ -37,11 +37,11 @@ NTP Client Source Count|	Active number of NTP Time sources being used by the NTP
 NTP Server Incoming Requests|	Number of requests received by the NTP Server (Requests/Sec).|
 NTP Server Outgoing Responses|	Number of requests answered by NTP Server (Responses/Sec).|
 
-The first 3 counters target scenarios for troubleshooting accuracy issues.  The Troubleshooting Time Accuracy and NTP section below, under [Best Practices](#BestPractices), has more detail.
+The first 3 counters target scenarios for troubleshooting accuracy issues.  The Troubleshooting Time Accuracy and NTP section below, under Best Practices, has more detail.
 The last 3 counters cover NTP server scenarios and are helpful when determine the load and baselining your current performance.
 
 ## Configuration Updates per Environment
-The following describes the changes in default configuration between Windows 2016 and previous versions for each Role.  The settings for Windows Server 2016 and Windows 10 Anniversary Update (build 14393), are now unique which is why there are shown as separate columns. 
+The following describes the changes in default configuration between Windows 2016 and previous versions for each Role.  The settings for Windows Server 2016 and Windows 10 Anniversary Update (build 14393), are now unique which is why there are shown as separate columns.
 
 |Role|Setting|Windows Server 2016|Windows 10|Windows Server 2012 R2</br>Windows Server 2008 R2</br>Windows 10|
 |---|---|---|---|---|
@@ -71,7 +71,7 @@ The following describes the changes in default configuration between Windows 201
 | |*Clock Update Frequency*|Based on Role above|Based on Role above|Based on Role above|
 
 >[!NOTE]
->For Linux in Hyper-V, see the [Allowing Linux to use Hyper-V Host Time](#AllowingLinux) section below.
+>For Linux in Hyper-V, see the Allowing Linux to use Hyper-V Host Time section below.
 
 ## Impact of increased polling and clock update frequency
 In order to provide more accurate time, the defaults for polling frequencies and clock updates are increased which allow us to make small adjustments more frequently.  This will cause more UDP/NTP traffic, however, these packets are small so there should be very little or no impact over broadband links. The benefit, however, is that time should be better on a wider variety of hardware and environments.
@@ -143,14 +143,14 @@ There are various hardware solutions that can offer accurate time.  In general, 
 Domain members use the domain hierarchy to determine which machine they use as a source to synchronize time.  Each domain member will find another machine to sync with and save it as it's clock source.  Each type of domain member follows a different set of rules in order to find a clock source for time synchronization.  The PDC in the Forest Root is the default clock source for all Domains.  Listed below are different roles and high level description for how they find a source:
 
 
-- **Domain Controller with PDC role** – This machine is the authoritative time source for a domain. It will have the most accurate time available in the domain, and must sync with a DC in the parent domain, except in cases where [GTIMESERV](#GTIMESERV) role is enabled. 
+- **Domain Controller with PDC role** – This machine is the authoritative time source for a domain. It will have the most accurate time available in the domain, and must sync with a DC in the parent domain, except in cases where GTIMESERV role is enabled.
 - **Any other Domain Controller** – This machine will act as a time source for clients and member servers in the domain. A DC can sync with the PDC of its own domain, or any DC in its parent domain.
 - **Clients/Member Servers** – This machine can sync with any DC or PDC of its own domain, or a DC or PDC in the parent domain.
 
-Based on the available candidates, a scoring system is used to find the best time source.  This system takes into account the reliability of the time source and its relative location.  This happens once when the time is service started.  If you need to have finer control of how time synchronizes, you can add good time servers in specific locations or add redundancy.  See the [Specify a Local Reliable Time Service Using GTIMESERV](#GTIMESERV) section for more information.
+Based on the available candidates, a scoring system is used to find the best time source.  This system takes into account the reliability of the time source and its relative location.  This happens once when the time is service started.  If you need to have finer control of how time synchronizes, you can add good time servers in specific locations or add redundancy.  See the [Specify a Local Reliable Time Service Using GTIMESERV section for more information.
 
 #### Mixed OS Environments (Win2012R2 and Win2008R2)
-While a pure Windows Server 2016 Domain environment is required for the best accuracy, there are still benefits in a mixed environment.  Deploying Windows Server 2016 Hyper-V in a Windows 2012 domain will benefit the guests because of the improvements we mentioned above, but only if the guests are also Windows Server 2016.  A Windows Server 2016 PDC, will be able to deliver more accurate time because of the improved algorithms it will be a more stable source.  As replacing your PDC might not be an option, you can instead add a Windows Server 2016 DC with the [GTIMESERV](#GTIMESERV) roll set which would be an upgrade in accuracy for your domain.  A Windows Server 2016 DC can deliver better time to downstream time clients, however, it's only as good as its source NTP time.
+While a pure Windows Server 2016 Domain environment is required for the best accuracy, there are still benefits in a mixed environment.  Deploying Windows Server 2016 Hyper-V in a Windows 2012 domain will benefit the guests because of the improvements we mentioned above, but only if the guests are also Windows Server 2016.  A Windows Server 2016 PDC, will be able to deliver more accurate time because of the improved algorithms it will be a more stable source.  As replacing your PDC might not be an option, you can instead add a Windows Server 2016 DC with the GTIMESERV roll set which would be an upgrade in accuracy for your domain.  A Windows Server 2016 DC can deliver better time to downstream time clients, however, it's only as good as its source NTP time.
 
 Also as stated above, the clock polling and refresh frequencies have been modified with Windows Server 2016.  These can be changed manually to your down-level DCs or applied via group policy.  While we haven't tested these configurations, they should behave well in Win2008R2 and Win2012R2 and deliver some benefits.
 
@@ -250,7 +250,7 @@ Also useful, the following command lists each domain controller it can find in t
 	
 	w32tm /monitor /domain:my_domain
 
-Using the list, you can trace the results through the domain and understand the hierarchy as well as the time offset at each step.  By locating the point where the time offset gets significantly worse, you can pinpoint the root of the incorrect time.  From there you can try to understand why that time is incorrect by turning on [w32tm logging](#W32Logging). 
+Using the list, you can trace the results through the domain and understand the hierarchy as well as the time offset at each step.  By locating the point where the time offset gets significantly worse, you can pinpoint the root of the incorrect time.  From there you can try to understand why that time is incorrect by turning on w32tm logging.
 
 #### Using Group Policy
 You can use Group Policy to accomplish stricter accuracy by, for instance, assigning clients to use specific NTP servers or to control how down-level OS's are configured when virtualized.  
