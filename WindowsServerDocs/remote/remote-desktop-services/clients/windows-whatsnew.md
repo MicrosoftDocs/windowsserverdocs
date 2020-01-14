@@ -9,7 +9,7 @@ ms.technology: remote-desktop-services
 ms.tgt_pltfrm: na
 ms.topic: article
 author: heidilohr
-manager: daveba
+manager: lizross
 ms.author: helohr
 ms.date: 01/02/2020
 ms.localizationpriority: medium

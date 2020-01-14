@@ -134,7 +134,7 @@ Monitoring tools can consume this counter by using the [Perfmon API](https://msd
 
 ## Download Windows Server Insider software
 
-Registered Insiders can navigate directly to the [Windows Server Insider Preview download page](https://www.microsoft.com/en-us/software-download/windowsinsiderpreviewserver) to get the latest Insider software downloads.  To learn how to register as an Insider, see [Getting started with Server](https://insider.windows.com/en-us/for-business-getting-started-server/).
+Registered Insiders can navigate directly to the [Windows Server Insider Preview download page](https://www.microsoft.com/software-download/windowsinsiderpreviewserver) to get the latest Insider software downloads.  To learn how to register as an Insider, see [Getting started with Server](https://insider.windows.com/en-us/for-business-getting-started-server/).
 
 ## Share your feedback
 

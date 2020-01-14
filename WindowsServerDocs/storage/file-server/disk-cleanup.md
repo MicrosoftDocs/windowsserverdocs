@@ -71,6 +71,6 @@ To have Disk Cleanup button appear on a disk's Properties dialog, you will also 
 
 ## Additional references
 
-[Free up drive space in Windows 10](https://support.microsoft.com/en-us/help/12425/windows-10-free-up-drive-space)
+[Free up drive space in Windows 10](https://support.microsoft.com/help/12425/windows-10-free-up-drive-space)
 
 [cleanmgr](../../administration/windows-commands/cleanmgr.md)

@@ -27,7 +27,7 @@ Microsoft's implementation of the SDDC consists of the Windows Server technologi
 
 The technologies built into Windows Server and System Center are the main building blocks of the Windows Server SDDC experience. But even though it's a virtualized platform, it still requires the right hardware underneath. Microsoft partners participating in the **Windows Server Software-Defined (WSSD) Solutions** and the **Azure Stack HCI Solutions** programs can help your enterprise acquire the right hardware and get it up and running on day zero.
 
-![](media/sddc/video.png)**[Watch a video to learn more about Microsoft's SDDC](https://mva.microsoft.com/en-US/training-courses/whats-new-in-windows-server-2016-16457?l=YcsJR6sXC_1006218965)**
+![](media/sddc/video.png)**[Watch a video to learn more about Microsoft's SDDC](https://mva.microsoft.com/training-courses/whats-new-in-windows-server-2016-16457?l=YcsJR6sXC_1006218965)**
 
 ![](media/sddc/poster-ico.png)**[Download a poster size .pdf file of this page](https://github.com/MicrosoftDocs/windowsserverdocs/blob/master/WindowsServerDocs/media/sddc/sddc_poster_0801417_ANSI-E.pdf)**
 
@@ -41,7 +41,7 @@ Microsoft partners offer an array of solutions that work with Window Server 2019
 
 ![](media/sddc/learn.png)**[Learn more about Azure Stack HCI Solutions](https://azure.microsoft.com/overview/azure-stack/hci)**
 
-![](media/sddc/learn.png)**[Learn more about WSSD Solutions](https://www.microsoft.com/en-us/cloud-platform/software-defined-datacenter)**
+![](media/sddc/learn.png)**[Learn more about WSSD Solutions](https://www.microsoft.com/cloud-platform/software-defined-datacenter)**
 
 ## Windows Server virtualized technologies ##
 
@@ -65,7 +65,7 @@ Hyper-V is a hypervisor-based virtualization technology for Windows. The hypervi
 
 ![](media/sddc/spacer1.png)![](media/sddc/hypervisor.png)
 
-![](media/sddc/learn.png)**[Learn more about Hyper-V Hypervisor](https://www.microsoft.com/en-us/cloud-platform/server-virtualization)**
+![](media/sddc/learn.png)**[Learn more about Hyper-V Hypervisor](https://www.microsoft.com/cloud-platform/server-virtualization)**
 
 ### Guest clustering with shared VHDX
 

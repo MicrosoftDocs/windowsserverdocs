@@ -25,20 +25,20 @@ The Software Inventory Logging feature can also be added to two versions of Wind
 - **Windows Server 2012 (Standard or Datacenter Edition)** 
 
 > [!NOTE] 
-> Make sure you have [WMF 4.0](https://www.microsoft.com/en-us/download/details.aspx?id=40855) installed before applying the update package below.
+> Make sure you have [WMF 4.0](https://www.microsoft.com/download/details.aspx?id=40855) installed before applying the update package below.
 
--  WMF 4.0 Update package for Windows Server 2012: [KB 3119938](https://support.microsoft.com/en-us/kb/3119938)
+-  WMF 4.0 Update package for Windows Server 2012: [KB 3119938](https://support.microsoft.com/kb/3119938)
 
 - **Windows Server 2008 R2 SP1**
 
 > [!NOTE] 
-> Make sure you have [WMF 4.0](https://www.microsoft.com/en-us/download/details.aspx?id=40855) installed before applying the update package below.
+> Make sure you have [WMF 4.0](https://www.microsoft.com/download/details.aspx?id=40855) installed before applying the update package below.
 
 
-- Requires [.NET Framework 4.5](https://www.microsoft.com/en-us/download/details.aspx?id=30653)
+- Requires [.NET Framework 4.5](https://www.microsoft.com/download/details.aspx?id=30653)
 
 
-- WMF 4.0 Update package for Windows Server 2008 R2: [KB 3109118](https://support.microsoft.com/en-us/kb/3109118)
+- WMF 4.0 Update package for Windows Server 2008 R2: [KB 3109118](https://support.microsoft.com/kb/3109118)
 
 
 There are two primary methods for inventorying using this feature:  
