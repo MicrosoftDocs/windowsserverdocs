@@ -10,7 +10,7 @@ ms.prod: windows-server
 ms.technology: networking
 ---
 
-# Windows Server 2016 Improvements
+# Windows Server 2016 improvements
 This article includes information about improvements made in Windows Server 2016.
 
 ## Windows Time Service and NTP
