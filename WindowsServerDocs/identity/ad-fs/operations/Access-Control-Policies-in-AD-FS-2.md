@@ -19,7 +19,7 @@ To enable client access policy, follow the steps below.
 
 ### Step 1: Install the Update Rollup 2 for AD FS 2.0 package on your AD FS servers
 
-Download the [Update Rollup 2 for Active Directory Federation Services (AD FS) 2.0](https://support.microsoft.com/en-us/help/2681584/description-of-update-rollup-2-for-active-directory-federation-services-ad-fs-2.0) package and install it on all federation server and federation server proxies.
+Download the [Update Rollup 2 for Active Directory Federation Services (AD FS) 2.0](https://support.microsoft.com/help/2681584/description-of-update-rollup-2-for-active-directory-federation-services-ad-fs-2.0) package and install it on all federation server and federation server proxies.
 
 ### Step 2: Add five claim rules to the Active Directory Claims Provider trust
 

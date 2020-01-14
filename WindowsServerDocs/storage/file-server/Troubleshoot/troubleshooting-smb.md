@@ -153,7 +153,7 @@ Both SMB Client and SMB Server have a detailed event log structure, as shown in 
 
 ## SMB-related system files
 
-This section lists the SMB-related system files. To keep the system files updated, make sure that the latest [update rollup](https://support.microsoft.com/en-us/help/4498140/windows-10-update-history) is installed.
+This section lists the SMB-related system files. To keep the system files updated, make sure that the latest [update rollup](https://support.microsoft.com/help/4498140/windows-10-update-history) is installed.
 
 SMB Client binaries that are listed under **%windir%\\system32\\Drivers**:
 

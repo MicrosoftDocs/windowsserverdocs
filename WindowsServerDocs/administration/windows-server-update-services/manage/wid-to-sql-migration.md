@@ -156,7 +156,7 @@ The **NT AUTHORITY\NETWORK SERVICE** account should be listed.
 ### Edit the registry to point WSUS to the SQL Server Instance
 
 > [!IMPORTANT]
-> Follow the steps in this section carefully. Serious problems might occur if you modify the registry incorrectly. Before you modify it, [back up the registry for restoration](https://support.microsoft.com/en-us/help/322756) in case problems occur.
+> Follow the steps in this section carefully. Serious problems might occur if you modify the registry incorrectly. Before you modify it, [back up the registry for restoration](https://support.microsoft.com/help/322756) in case problems occur.
 
 1. Click **Start**, click **Run**, type **regedit**, and then click **OK**.
 2. Locate the following key: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\UpdateServices\Server\Setup\SqlServerName**
