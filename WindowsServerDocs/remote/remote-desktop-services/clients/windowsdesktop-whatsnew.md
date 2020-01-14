@@ -25,13 +25,13 @@ The client can be configured for different [user groups](windowsdesktop-admin.md
 |User group |Version  |
 |-----------|---------|
 |Public     |1.2.535  |
-|Insider    |1.2.589  |
+|Insider    |1.2.594  |
 
-## Updates for version 1.2.589
+## Updates for version 1.2.594
 
 *Date published: 01/14/2020*
 
-Download: [Windows 64-bit](), [Windows 32-bit](), [Windows ARM64]()
+Download: [Windows 64-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4o4cC), [Windows 32-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4o4cI), [Windows ARM64](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4oh9C)
 
 - You can now select which displays to use for desktop connections. To change this setting, right-click the icon of the desktop connection and select Settings.
 - Fixed an issue where the connection settings didn’t display the correct available scale factors.
