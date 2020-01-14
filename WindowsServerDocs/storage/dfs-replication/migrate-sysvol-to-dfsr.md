@@ -19,11 +19,11 @@ Domain controllers use a special shared folder named SYSVOL to replicate logon s
 
 To use DFS Replication to replicate the SYSVOL folder, you can either create a new domain that uses the Windows Server 2008 domain functional level, or you can use the procedure that is discussed in this document to upgrade an existing domain and migrate replication to DFS Replication.
 
-This document assumes that you have a basic knowledge of Active Directory Domain Services (AD DS), FRS, and Distributed File System Replication (DFS Replication). For more information, see [Active Directory Domain Services Overview](http://go.microsoft.com/fwlink/?linkid=147787), [FRS Overview](http://go.microsoft.com/fwlink/?linkid=121763), or [Overview of DFS Replication](http://go.microsoft.com/fwlink/?linkid=121762)
+This document assumes that you have a basic knowledge of Active Directory Domain Services (AD DS), FRS, and Distributed File System Replication (DFS Replication). For more information, see [Active Directory Domain Services Overview](https://go.microsoft.com/fwlink/?linkid=147787), [FRS Overview](https://go.microsoft.com/fwlink/?linkid=121763), or [Overview of DFS Replication](https://go.microsoft.com/fwlink/?linkid=121762)
 
 
 > [!NOTE]
-> To download a printable version of this guide, go to <a href="http://go.microsoft.com/fwlink/?linkid=150375">SYSVOL Replication Migration Guide: FRS to DFS Replication</a> (http://go.microsoft.com/fwlink/?LinkId=150375) 
+> To download a printable version of this guide, go to <a href="https://go.microsoft.com/fwlink/?linkid=150375">SYSVOL Replication Migration Guide: FRS to DFS Replication</a> (https://go.microsoft.com/fwlink/?LinkId=150375) 
 <br>
 
 
@@ -65,17 +65,17 @@ This document assumes that you have a basic knowledge of Active Directory Domain
 
 ## Additional references
 
-[SYSVOL Migration Series: Part 1—Introduction to the SYSVOL migration process](http://go.microsoft.com/fwlink/?linkid=121756)
+[SYSVOL Migration Series: Part 1—Introduction to the SYSVOL migration process](https://go.microsoft.com/fwlink/?linkid=121756)
 
-[SYSVOL Migration Series: Part 2—Dfsrmig.exe: The SYSVOL migration tool](http://go.microsoft.com/fwlink/?linkid=121757)
+[SYSVOL Migration Series: Part 2—Dfsrmig.exe: The SYSVOL migration tool](https://go.microsoft.com/fwlink/?linkid=121757)
 
-[SYSVOL Migration Series: Part 3—Migrating to the 'PREPARED' state](http://go.microsoft.com/fwlink/?linkid=121758)
+[SYSVOL Migration Series: Part 3—Migrating to the 'PREPARED' state](https://go.microsoft.com/fwlink/?linkid=121758)
 
-[SYSVOL Migration Series: Part 4—Migrating to the ‘REDIRECTED' state](http://go.microsoft.com/fwlink/?linkid=121759)
+[SYSVOL Migration Series: Part 4—Migrating to the ‘REDIRECTED' state](https://go.microsoft.com/fwlink/?linkid=121759)
 
-[SYSVOL Migration Series: Part 5—Migrating to the ‘ELIMINATED' state](http://go.microsoft.com/fwlink/?linkid=121760)
+[SYSVOL Migration Series: Part 5—Migrating to the ‘ELIMINATED' state](https://go.microsoft.com/fwlink/?linkid=121760)
 
-[Step-by-Step Guide for Distributed File Systems in Windows Server 2008](http://go.microsoft.com/fwlink/?linkid=85231)
+[Step-by-Step Guide for Distributed File Systems in Windows Server 2008](https://go.microsoft.com/fwlink/?linkid=85231)
 
-[FRS Technical Reference](http://go.microsoft.com/fwlink/?linkid=121764)
+[FRS Technical Reference](https://go.microsoft.com/fwlink/?linkid=121764)
 

@@ -14,7 +14,7 @@ ms.date: 08/29/2018
 
 [!INCLUDE [Configure fabric DNS](../../../includes/guarded-fabric-configure-fabric-dns.md)] 
 
-## Next step
+# Next step
 
 > [!div class="nextstepaction"]
 > [Configure HTTPS](guarded-fabric-configure-hgs-https.md)
