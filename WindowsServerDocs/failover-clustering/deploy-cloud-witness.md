@@ -69,7 +69,7 @@ When you use the same Azure Storage Account for configuring Cloud Witness for mu
 
 ### To create an Azure storage account
 
-1. Sign in to the [Azure Portal](http://portal.azure.com).
+1. Sign in to the [Azure Portal](https://portal.azure.com).
 2. On the Hub menu, select New -> Data + Storage -> Storage account.
 3. In the Create a storage account page, do the following:
     1. Enter a name for your storage account.

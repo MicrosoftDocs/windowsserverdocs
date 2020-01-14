@@ -150,13 +150,13 @@ The following illustration depicts this scenario.
 
 ### <a name="bkmk_recursionhow"></a>How DNS Selective Recursion Control Works
 
-If a query for which the Contoso DNS server is non-authoritative is received, such as for www.microsoft.com, then the name resolution request is evaluated against the policies on the DNS server. 
+If a query for which the Contoso DNS server is non-authoritative is received, such as for https://www.microsoft.com, then the name resolution request is evaluated against the policies on the DNS server. 
 
 Because these queries do not fall under any zone, the zone level policies \(as defined in the split-brain example\) are not evaluated. 
 
 The DNS server evaluates the recursion policies, and the queries that are received on the private interface match the **SplitBrainRecursionPolicy**. This policy points to a recursion scope where recursion is enabled.
 
-The DNS server then performs recursion to get the answer for www.microsoft.com from the Internet, and caches the response locally. 
+The DNS server then performs recursion to get the answer for https://www.microsoft.com from the Internet, and caches the response locally. 
 
 If the query is received on the external interface, no DNS policies match, and the default recursion setting - which in this case is **Disabled** - is applied.
 

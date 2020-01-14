@@ -106,7 +106,7 @@ For more information see [this link](ad-fs-prompt-login.md).
 
 ### Additional Troubleshooting
 These are rare occurrences
-1)	If your CRL lists are very long, it may hit a time out when attempting to download. In that case you need to update the ‘MaxFieldLength' and ‘MaxRequestByte' as per https://support.microsoft.com/en-us/help/820129/http-sys-registry-settings-for-windows
+1)	If your CRL lists are very long, it may hit a time out when attempting to download. In that case you need to update the ‘MaxFieldLength' and ‘MaxRequestByte' as per https://support.microsoft.com/help/820129/http-sys-registry-settings-for-windows
 
 
 

@@ -16,7 +16,7 @@ ms.author: kaushika
 >- [!TIP]
 > Looking for information about older versions of Windows Server? Check out our other - [Windows Server libraries](/previous-versions/windows/) on docs.microsoft.com. You can also - [search this site](https://docs.microsoft.com/search/index?search=Windows+Server&dataSource=previousVersions) for specific information.
 
-Microsoft regularly releases both updates for Windows Server. To ensure your servers can receive future updates, including security updates, it's important to keep your servers updated. Check out - [Windows 10 and Windows Server 2016 update history](https://support.microsoft.com/en-us/help/4000825/windows-10-windows-server-2016-update-history) for a complete list of released updates.
+Microsoft regularly releases both updates for Windows Server. To ensure your servers can receive future updates, including security updates, it's important to keep your servers updated. Check out - [Windows 10 and Windows Server 2016 update history](https://support.microsoft.com/help/4000825/windows-10-windows-server-2016-update-history) for a complete list of released updates.
 
 This section contains advanced troubleshooting topics and links to help you resolve issues with Windows Server. Additional topics will be added as they become available.
 

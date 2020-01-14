@@ -66,7 +66,7 @@ You can **manage** the following Windows operating systems using Windows Admin C
 > Type `$PSVersiontable` in PowerShell to verify that WMF is installed,
 > and that the version is 5.1 or higher. 
 > 
-> If WMF is not installed, you can [download WMF 5.1](https://www.microsoft.com/en-us/download/details.aspx?id=54616).
+> If WMF is not installed, you can [download WMF 5.1](https://www.microsoft.com/download/details.aspx?id=54616).
 
 ## High availability
 
