@@ -373,6 +373,50 @@ After completing a transfer, then running a subsequent re-transfer of the same d
 
 This is expected behavior when transferring a very large number of files and nested folders. The size of the data isn't relevant. We first made improvements to this behavior in [KB4512534](https://support.microsoft.com/help/4512534/windows-10-update-kb4512534) and are continuing to optimize transfer performance. To tune performance further, review [Optimizing Inventory and Transfer Performance](https://docs.microsoft.com/windows-server/storage/storage-migration-service/faq#optimizing-inventory-and-transfer-performance).
 
+## Data does not transfer, user renamed when migrating to or from a domain controller
+
+After starting the transfer from or to a domain controller:
+
+ 1. No data is migrated and no shares are created on the destination.
+ 2. There is a red error symbol shown in Windows Admin Center with no error message
+ 3. One or more AD users and Domain Local groups have their name and/or pre-Windows 2000 logon attribute changed
+ 4. You see event 3509 on the SMS orchestrator:
+ 
+ Log Name:      Microsoft-Windows-StorageMigrationService/Admin
+ Source:        Microsoft-Windows-StorageMigrationService
+ Date:          1/10/2020 2:53:48 PM
+ Event ID:      3509
+ Task Category: None
+ Level:         Error
+ Keywords:      
+ User:          NETWORK SERVICE
+ Computer:      orc2019-rtm.corp.contoso.com
+ Description:
+ Couldn't transfer storage for a computer.
+
+ Job: dctest3
+ Computer: dc02-2019.corp.contoso.com
+ Destination Computer: dc03-2019.corp.contoso.com
+ State: Failed
+ Error: 53251
+ Error Message: Local accounts migration failed with error System.Exception: -2147467259
+    at Microsoft.StorageMigration.Service.DeviceHelper.MigrateSecurity(IDeviceRecord sourceDeviceRecord, IDeviceRecord destinationDeviceRecord, TransferConfiguration config, Guid proxyId, CancellationToken cancelToken)
+
+This is expected behavior if you attempted to migrate from or to a domain controller with Storage Migration Service and used the "migrate users and groups" option to rename or reuse accounts. instead of selecting "Don't transfer users and groups". DC migration is [not supported with Storage Migration Service](faq.md). Because a DC doesn't have true local users and groups, Storage Migration Service treats these security principals as it would when migrating between two member servers and attempts to adjust ACLs as instructed, leading to the errors and mangled or copied accounts. 
+
+If you have already run transfer one ore more times:
+
+ 1. Use the following AD PowerShell command against a DC to locate any modified users or groups (changing SearchBase to match your domain dinstringuished name): 
+
+    ```PowerShell
+    Get-ADObject -Filter 'Description -like "*storage migration service renamed*"' -SearchBase 'DC=<domain>,DC=<TLD>' | ft name,distinguishedname
+    ```
+   
+ 2. For any users returned with their original name, edit their "User Logon Name (pre-Windows 2000)" to remove the random character suffix added by Storage Migration Service, so that this loser can logon.
+ 3. For any groups returned with their original name, edit their "Group Name (pre-Windows 2000)" to remove the random character suffix added by Storage Migration Service.
+ 4. For any disabled users or groups with names that now contain a suffix added by Storage Migration Service, you can delete these accounts. You can confirm that user accounts were added later because they will only contain the Domain Users group and will have a created date/time matching the Storage Migration Service transfer start time.
+ 
+ If you wish to use Storage Migration Service with domain controllers for transfer purposes, ensure you always select "Don't transfer users and groups" on the transfer settings page in Windows Admin Center.
 
 ## See also
 
