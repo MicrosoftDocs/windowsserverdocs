@@ -6,8 +6,7 @@ ms.topic: article
 author: JasonGerend 
 ms.author: jgerend 
 ms.technology: storage-failover-clustering 
-ms.date: 01/07/2020
-ms.localizationpriority: medium
+ms.date: 01/14/2020
 ---
 # Failover Clustering system log events
 
@@ -534,11 +533,14 @@ domain.
 
 Cluster network name resource '%1' failed to create its associated computer
 object in domain '%2' for the following reason: %3.<br><br>The associated error code
-is: %5<br><br>Please work with your domain administrator to ensure that:<br>- The
-cluster identity '%4' can create computer objects. By default all computer
+is: %5<br><br>
+Please work with your domain administrator to ensure that:
+
+- The cluster identity '%4' can create computer objects. By default all computer
 objects are created in the 'Computers' container; consult the domain
-administrator if this location has been changed.<br>- The quota for computer
-objects has not been reached.<br>- If there is an existing computer object, verify
+administrator if this location has been changed.
+- The quota for computer objects has not been reached.
+- If there is an existing computer object, verify
 the Cluster Identity '%4' has 'Full Control' permission to that computer object
 using the Active Directory Users and Computers tool.
 
@@ -546,11 +548,14 @@ using the Active Directory Users and Computers tool.
 
 Cluster network name resource '%1' failed to create its associated computer
 object in domain '%2' during: %3.<br><br>The text for the associated error code is:
-%4<br><br>Please work with your domain administrator to ensure that:<br>- The cluster
-identity '%5' has Create Computer Objects permissions. By default all computer
-objects are created in the same container as the cluster identity '%5'.<br>- The
-quota for computer objects has not been reached.<br>- If there is an existing
-computer object, verify the Cluster Identity '%5' has 'Full Control' permission
+%4
+
+Please work with your domain administrator to ensure that:
+
+- The cluster identity '%5' has Create Computer Objects permissions. By default all computer
+objects are created in the same container as the cluster identity '%5'.
+- The quota for computer objects has not been reached.
+- If there is an existing computer object, verify the Cluster Identity '%5' has 'Full Control' permission
 to that computer object using the Active Directory Users and Computers tool.
 
 ### Event 1195: RES_NETNAME_DNS_REGISTRATION_FAILED_STATUS
