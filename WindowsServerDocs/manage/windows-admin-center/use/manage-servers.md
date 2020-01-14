@@ -15,7 +15,7 @@ ms.prod: windows-server
 
 > [!Tip]
 > New to Windows Admin Center?
-> [Learn more about Windows Admin Center](../understand/windows-admin-center.md) or [Download now](https://aka.ms/windowsadmincenter).
+> [Download or learn more about Windows Admin Center](../overview.md).
 
 ## Managing Windows Server machines
 

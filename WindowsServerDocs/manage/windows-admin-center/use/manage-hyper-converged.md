@@ -21,11 +21,11 @@ Hyper-Converged Infrastructure consolidates software-defined compute, storage, a
 > Looking to acquire Hyper-Converged Infrastructure? Microsoft recommends these [Windows Server Software-Defined](https://microsoft.com/wssd) solutions from our partners. They are designed, assembled, and validated against our reference architecture to ensure compatibility and reliability, so you get up and running quickly.
 
 > [!IMPORTANT]
-> Some of the features described in this article are only available in Windows Admin Center Preview. [How do I get this version?](http://aka.ms/windowsadmincenter)
+> Some of the features described in this article are only available in Windows Admin Center Preview. [How do I get this version?](https://aka.ms/windowsadmincenter)
 
 ## What is Windows Admin Center
 
-[Windows Admin Center](../understand/windows-admin-center.md) is the next-generation management tool for Windows Server, the successor to traditional "in-box" tools like Server Manager. It's free and can be installed and used without an Internet connection. You can use Windows Admin Center to manage and monitor Hyper-Converged Infrastructure running Windows Server 2016 or Windows Server 2019.
+[Windows Admin Center](../overview.md) is the next-generation management tool for Windows Server, the successor to traditional "in-box" tools like Server Manager. It's free and can be installed and used without an Internet connection. You can use Windows Admin Center to manage and monitor Hyper-Converged Infrastructure running Windows Server 2016 or Windows Server 2019.
 
 ![Hyper-converged cluster dashboard](../media/manage-hyper-converged/hci-dashboard-v1809.png)
 
@@ -282,7 +282,7 @@ It's all about your feedback! The most important benefit of frequent updates is 
 
 ### See also
 
-- [Windows Admin Center](../understand/windows-admin-center.md)
+- [Windows Admin Center](../overview.md)
 - [Storage Spaces Direct](https://docs.microsoft.com/windows-server/storage/storage-spaces/storage-spaces-direct-overview)
 - [Hyper-V](https://docs.microsoft.com/windows-server/virtualization/hyper-v/hyper-v-on-windows-server)
 - [Software Defined Networking](https://docs.microsoft.com/windows-server/networking/sdn/software-defined-networking)
