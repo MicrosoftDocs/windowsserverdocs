@@ -40,15 +40,15 @@ Persistent VDI is, at the basic level, a VM that saves operating system state in
 
 There are several different implementations of persistent VDI:
 
--   Traditional virtual machine, where the VM has its own virtual disk file, starts up normally, saves changes from one session to the next, and is essentially just a normal VM. The difference is how the user accesses this VM. There might be a web portal the user logs into that automatically directs the user to their one or more assigned VDI VMs.
+- Traditional virtual machine, where the VM has its own virtual disk file, starts up normally, saves changes from one session to the next, and is essentially just a normal VM. The difference is how the user accesses this VM. There might be a web portal the user logs into that automatically directs the user to their one or more assigned VDI VMs.
 
--   Image-based persistent virtual machine, with personal virtual disks. In this type of implementation there is a base/gold image on one or more host servers. A VM is created, and one or more virtual disks are created and assigned to this disk for persistent storage.
+- Image-based persistent virtual machine, with personal virtual disks. In this type of implementation there is a base/gold image on one or more host servers. A VM is created, and one or more virtual disks are created and assigned to this disk for persistent storage.
 
-    -   When the VM is started, a copy of the base image is read into the memory of the VM. At the same time, a persistent virtual disk assigned to that VM, with any previous operating system changes merged through a complex process.
+  - When the VM is started, a copy of the base image is read into the memory of the VM. At the same time, a persistent virtual disk assigned to that VM, with any previous operating system changes merged through a complex process.
 
-    -   Changes such as event log writes, log writes, etc. are redirected to the read/write virtual disk assigned to that VM.
+  - Changes such as event log writes, log writes, etc. are redirected to the read/write virtual disk assigned to that VM.
 
-    -   In this circumstance, operating system and app servicing might operate normally, using traditional servicing software such as Windows Server Update Services or other management technologies.
+  - In this circumstance, operating system and app servicing might operate normally, using traditional servicing software such as Windows Server Update Services or other management technologies.
 
 ### Non-Persistent VDI
 
@@ -56,22 +56,22 @@ When a non-persistent VDI implementation is based on a base or “gold” image,
 
 With image-based non-persistent VDI, the base image is read-only. When a non-persistent VDI VM is started, a copy of the base image is streamed to the VM. Activity that occurs during startup and thereafter until the next reboot is redirected to a temporary location. Usually the users are provided network locations to store their data. In some cases, the user's profile is merged with the standard VM to provide the user their settings.
 
-One important aspect of non-persitent VDI that is based on a single image is servicing. Updates to the operating system are delivered usually once per month.
+One important aspect of non-persistent VDI that is based on a single image is servicing. Updates to the operating system are delivered usually once per month.
 With image-based VDI, there is a set of processes to perform in order to get updates to the image:
 
--   On a given host, all the VMs on that host that are derived from the base image must be shut down or turned off. This means the users are redirected to other VMs.
+- On a given host, all the VMs on that host that are derived from the base image must be shut down or turned off. This means the users are redirected to other VMs.
 
--   The base image is then opened and started up. All maintenance activities are then performed, such as operating system updates, .NET updates, app updates, etc.
+- The base image is then opened and started up. All maintenance activities are then performed, such as operating system updates, .NET updates, app updates, etc.
 
--   Any new settings that need to be applied are applied at this time.
+- Any new settings that need to be applied are applied at this time.
 
--   Any other maintenance is performed at this time.
+- Any other maintenance is performed at this time.
 
--   The base image is then shut down.
+- The base image is then shut down.
 
--   The base image is sealed and set to go back into production.
+- The base image is sealed and set to go back into production.
 
--   Users are allowed to log back on.
+- Users are allowed to log back on.
 
 > [!NOTE]  
 > Windows 10 performs a set of maintenance tasks automatically, on a periodic basis. There is a scheduled task that is set to run at 3:00 AM local time every day by default. This scheduled task performs a list of tasks, including Windows Update cleanup. You can view all the categories of maintenance that take place automatically with this PowerShell command:
@@ -89,7 +89,7 @@ Depending on the architecture of VDI VM, things like PreFetch and SuperFetch are
 ### To Sysprep or not Sysprep
 
 Windows 10 has a built-in capability called the [System Preparation Tool](https://docs.microsoft.com/windows-hardware/manufacture/desktop/sysprep--system-preparation--overview),
-(often abbreviiated to "Sysprep"). The Sysprep tool is used to prepare a customized Windows 10 image for duplication. The Sysprep process assures the resulting operating system is properly unique to run in production.
+(often abbreviated to "Sysprep"). The Sysprep tool is used to prepare a customized Windows 10 image for duplication. The Sysprep process assures the resulting operating system is properly unique to run in production.
 
 There are reasons for and against running Sysprep. In the case of VDI, you might want the ability to customize the default user profile which would be used as the profile template for subsequent users that log on using this image. You might have apps that you want installed, but also able to control per-app settings.
 
@@ -98,55 +98,54 @@ tool.
 
 #### VDI Optimization Categories
 
+- Global operating system settings
 
--   Global operating system settings
+  - UWP app cleanup
 
-    -   UWP app cleanup
+  - Optional Features cleanup
 
-    -   Optional Features cleanup
+  - Local policy settings
 
-    -   Local policy settings
+  - System services
 
-    -   System services
+  - Scheduled tasks
 
-    -   Scheduled tasks
+  - Apply Windows updates
 
-    -   Apply Windows updates
+  - Automatic Windows traces
 
-    -   Automatic Windows traces
+  - Disk cleanup prior to finalizing (sealing) image
 
-    -   Disk cleanup prior to finalizing (sealing) image
+- User settings
 
--   User settings
-
--   Hypervisor/Host settings
+- Hypervisor/Host settings
 
 ##### Global VDI operating system optimization
 
 Global VDI settings include the following:
 
--   [Universal Windows Platform (UWP) app cleanup](#universal-windows-platform-app-cleanup)
+- [Universal Windows Platform (UWP) app cleanup](#universal-windows-platform-app-cleanup)
 
--   [Clean up optional features](#clean-up-optional-features)
+- [Clean up optional features](#clean-up-optional-features)
 
--   [Local policy settings](#local-policy-settings)
+- [Local policy settings](#local-policy-settings)
 
--   [System services](#system-services)
+- [System services](#system-services)
 
--   [Scheduled tasks](#scheduled-tasks)
+- [Scheduled tasks](#scheduled-tasks)
 
--   [Apply Windows and other updates](#apply-windows-and-other-updates)
+- [Apply Windows and other updates](#apply-windows-and-other-updates)
 
--   [Automatic Windows traces](#automatic-windows-traces)
+- [Automatic Windows traces](#automatic-windows-traces)
 
--   [Windows Defender optimization with VDI](#windows-defender-optimization-with-vdi)
+- [Windows Defender optimization with VDI](#windows-defender-optimization-with-vdi)
 
--   [Tuning Windows 10 network performance by using registry settings](#tuning-windows-10-network-performance-by-using-registry-settings)
+- [Tuning Windows 10 network performance by using registry settings](#tuning-windows-10-network-performance-by-using-registry-settings)
 
--   Additional settings from the [Windows Restricted Traffic Limited Functionality Baseline](https://go.microsoft.com/fwlink/?linkid=828887)
+- Additional settings from the [Windows Restricted Traffic Limited Functionality Baseline](https://go.microsoft.com/fwlink/?linkid=828887)
     guidance.
 
--   [Disk cleanup](#disk-cleanup-including-using-the-disk-cleanup-wizard)
+- [Disk cleanup](#disk-cleanup-including-using-the-disk-cleanup-wizard)
 
 ### Universal Windows Platform app cleanup
 
@@ -156,7 +155,7 @@ Connectivity and timing are everything when it comes to UWP app cleanup. If you 
 
 If you modify your base .WIM that you use to install Windows 10 and remove unneeded UWP apps from the .WIM before you install, the apps will not be installed to begin with and your profile creation times should be shorter. Later in this section, you'll find information on how to remove UWP apps from your installation .WIM file.
 
-A good strategy for VDI is to provision the apps you want in the base image, then limit or block access to the Microsoft Store afterward. Store apps are updated periodically in the background on normal computers. The UWP apps can be updated during the maintenance window when other updates are applied. 
+A good strategy for VDI is to provision the apps you want in the base image, then limit or block access to the Microsoft Store afterward. Store apps are updated periodically in the background on normal computers. The UWP apps can be updated during the maintenance window when other updates are applied.
 
 #### Delete the payload of UWP apps
 
@@ -168,17 +167,16 @@ Run the following command to enumerate provisioned UWP apps from a running Windo
 
 ```powershell
 
-    Get-AppxProvisionedPackage -Online 
+    Get-AppxProvisionedPackage -Online
 
     DisplayName  : Microsoft.3DBuilder
     Version      : 13.0.10349.0  
     Architecture : neutral
-    ResourceId   : \~ 
-    PackageName  : Microsoft.3DBuilder_13.0.10349.0_neutral_\~_8wekyb3d8bbwe 
-    Regions      : 
+    ResourceId   : \~
+    PackageName  : Microsoft.3DBuilder_13.0.10349.0_neutral_\~_8wekyb3d8bbwe
+    Regions      :
     ...
 ```
-
 
 UWP apps that are provisioned to a system can be removed during operating system installation as part of a task sequence, or later after the operating system is installed. This might be the
 preferred method because it makes the overall process of creating or maintaining an image modular. Once you develop the scripts, if something changes in a subsequent build you edit an existing script rather than repeat the process from scratch. Here are some links to information on this topic:
@@ -192,7 +190,7 @@ preferred method because it makes the overall process of creating or maintaining
 Then run the [Remove-AppxProvisionedPackage](https://docs.microsoft.com/powershell/module/dism/remove-appxprovisionedpackage?view=win10-ps) PowerShell command to remove UWP app payloads:
 
 ```powershell
-Remove-AppxProvisionedPackage -Online -PackageName 
+Remove-AppxProvisionedPackage -Online -PackageName
 ```
 
 Each UWP app should be evaluated for applicability in each unique environment. You will want to install a default installation of Windows 10, version 1803, then note which apps are running and consuming memory. For example, you might want to consider removing apps that start automatically, or apps that automatically display information on the Start menu, such as Weather and News, and that might not be of use in your environment.
@@ -227,9 +225,9 @@ Many optimizations for Windows 10 in a VDI environment can be made using Windows
 
 Some decisions might be based on the specifics of the environment, for example:
 
--   Is the VDI environment allowed to access the Internet?
+- Is the VDI environment allowed to access the Internet?
 
--   Is the VDI solution persistent or non-persistent?
+- Is the VDI solution persistent or non-persistent?
 
 The following settings specifically do not counter or conflict with any setting that has anything to do with security. These settings were chosen to remove settings that might not be applicable to VDI environments.
 
@@ -270,7 +268,7 @@ Baseline](https://go.microsoft.com/fwlink/?linkid=828887).
 |                                                         **Filesystem**\\NTFS                                                         |                                                        Short name creation options                                                        |                                                    Disabled on all volumes                                                    |                                                                                                                                                                                                                                                                                                                                                                     Enabled                                                                                                                                                                                                                                                                                                                                                                     |
 |                                                          \***Group Policy**                                                          |                                            Configure web-to-app linking with app URL handlers                                             |                                                                                                                               |                                                                                                                                                                                                                                                                                                      Disabled (Disables web-to-app linking and http(s) URIs will be opened in the default browser instead of starting the associated app.)                                                                                                                                                                                                                                                                                                      |
 |                                                          \***Group Policy**                                                          |                                                    Continue experiences on this device                                                    |                                                                                                                               |                                                                                                                                                                                                                                                                                                             Disabled (The Windows device is not discoverable by other devices, and cannot participate in cross-device experiences.)                                                                                                                                                                                                                                                                                                             |
-|                               **Internet Communication Management**\\ Internet Communication settings                                |                                              Turn off access to all Windows Update features                                               |                                                                                                                               |                                                                                    Enabled (If you enable this policy setting, all Windows Update features are removed. This includes blocking access to the Windows Update website at https://windowsupdate.microsoft.com, from the Windows Update hyperlink on the Start menu, and also on the Tools menu in Internet Explorer. Windows automatic updating is also disabled; you will neither be notified about nor will you receive critical updates from Windows Update. This policy setting also prevents Device Manager from automatically installing driver updates from the Windows Update website.)                                                                                     |
+|                               **Internet Communication Management**\\ Internet Communication settings                                |                                              Turn off access to all Windows Update features                                               |                                                                                                                               |                                                                                    Enabled (If you enable this policy setting, all Windows Update features are removed. This includes blocking access to the Windows Update website at <https://windowsupdate.microsoft.com>, from the Windows Update hyperlink on the Start menu, and also on the Tools menu in Internet Explorer. Windows automatic updating is also disabled; you will neither be notified about nor will you receive critical updates from Windows Update. This policy setting also prevents Device Manager from automatically installing driver updates from the Windows Update website.)                                                                                     |
 |                               **Internet Communication Management**\\ Internet Communication settings                                |                                                Turn off Automatic Root Certificates Update                                                |                                                                                                                               |                                                                                                                                                                                  Enabled (If you enable this policy setting, when you are presented with a certificate issued by an untrusted root authority, your computer will not contact the Windows Update website to see if Microsoft has added the CA to its list of trusted authorities.)    **NOTE:** Only use this policy if you have an alternate means to the latest certificate revocation list.                                                                                                                                                                                   |
 |                               **Internet Communication Management**\\ Internet Communication settings                                |                                                 Turn off Event Viewer "Events.asp" links                                                  |                                                                                                                               |                                                                                                                                                                                                                                                                                                                                                                     Enabled                                                                                                                                                                                                                                                                                                                                                                     |
 |                               **Internet Communication Management**\\ Internet Communication settings                                |                                             Turn off handwriting personalization data sharing                                             |                                                                                                                               |                                                                                                                                                                                                                                                                                                                                                                     Enabled                                                                                                                                                                                                                                                                                                                                                                     |
@@ -493,7 +491,7 @@ Note that a lot of services that might seem to be good candidates to disable are
 
 #### Per-user services in Windows
 
-[Per-user services](https://docs.microsoft.com/windows/application-management/per-user-services-in-windows) are services that are created when a user signs into Windows or Windows Server and are stopped and deleted when that user signs out. These services run in the security context of the user account - this provides better resource management than the previous approach of running these kinds of services in Explorer, associated with a preconfigured account, or as tasks. 
+[Per-user services](https://docs.microsoft.com/windows/application-management/per-user-services-in-windows) are services that are created when a user signs into Windows or Windows Server and are stopped and deleted when that user signs out. These services run in the security context of the user account - this provides better resource management than the previous approach of running these kinds of services in Explorer, associated with a preconfigured account, or as tasks.
 
 ### Scheduled tasks
 
@@ -571,18 +569,17 @@ Whether from Microsoft Update, or from your internal resources, apply available 
 
 Windows is configured, by default, to collect and save limited diagnostic data. The purpose is to enable diagnostics, or to record data in the event that further troubleshooting is necessary. You can find automatic system traces by starting the Computer Management app, and then expanding **System Tools**, **Performance**, **Data Collector Sets**, and then selecting **Event Trace Sessions**.
 
-
 Some of the traces displayed under **Event Trace Sessions** and **Startup Event Trace Sessions** cannot and should not be stopped. Others, such as the **WiFiSession** trace can be stopped. To stop a running trace under **Event Trace Sessions** right-click the trace and then select **Stop**. To prevent the traces from starting automatically on startup, follow these steps:
 
-1.  Select the **Startup Event Trace Sessions** folder
+1. Select the **Startup Event Trace Sessions** folder
 
-2.  Locate the trace of interest, and then double-click that trace.
+2. Locate the trace of interest, and then double-click that trace.
 
-3.  Select the **Trace Session** tab.
+3. Select the **Trace Session** tab.
 
-4.  Clear the box labeled **Enabled**. 
+4. Clear the box labeled **Enabled**.
 
-5.  Select **OK**.
+5. Select **OK**.
 
 Here are some system traces to consider disabling for VDI use:
 
@@ -678,17 +675,15 @@ Disk cleanup can be especially helpful with master image VDI implementations. Af
 > [!NOTE]  
 > The Disk Cleanup wizard is no longer being developed. Windows will use other methods to provide disk cleanup functions.
 
-
-
 Here are suggestions for various disk cleanup tasks. You should test these before implementing any of them:
 
 1. Run the Disk Cleanup wizard (elevated) after applying all updates. Include the categories **Delivery Optimization** and **Windows Update Cleanup**. You can automate this process with **Cleanmgr.exe** with the **/SAGESET:11** option. This option sets registry values that can be used later to automate disk cleanup, using every available option in the Disk Cleanup wizard.
 
-   1.  On a test VM, from a clean installation, running **Cleanmgr.exe /SAGESET:11** reveals that there are only two automatic disk cleanup options enabled by default:
+   1. On a test VM, from a clean installation, running **Cleanmgr.exe /SAGESET:11** reveals that there are only two automatic disk cleanup options enabled by default:
 
-   - Downloaded Program Files
+      - Downloaded Program Files
 
-   - Temporary Internet Files
+      - Temporary Internet Files
 
    2. If you set more options, or all options, those options are recorded in the registry, according to the index value provided in the previous command (**Cleanmgr.exe /SAGESET:11**). In this example, we use the value *11* as our index, for a subsequent automated disk cleanup procedure.
 
@@ -721,7 +716,7 @@ Removing OneDrive involves removing the package, uninstalling, and removing \*.l
 ```azurecli
 
 Taskkill.exe /F /IM "OneDrive.exe"
-Taskkill.exe /F /IM "Explorer.exe"` 
+Taskkill.exe /F /IM "Explorer.exe"`
     if (Test-Path "C:\\Windows\\System32\\OneDriveSetup.exe")`
      { Start-Process "C:\\Windows\\System32\\OneDriveSetup.exe"`
          -ArgumentList "/uninstall"`
@@ -737,6 +732,5 @@ Start-Process C:\\Windows\\System32\\Reg.exe -ArgumentList "Load HKLM\\Temp C:\\
 Start-Process C:\\Windows\\System32\\Reg.exe -ArgumentList "Delete HKLM\\Temp\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run /v OneDriveSetup /f" -Wait
 Start-Process C:\\Windows\\System32\\Reg.exe -ArgumentList "Unload HKLM\\Temp" -Wait Start-Process -FilePath C:\\Windows\\Explorer.exe -Wait
 ```
-
 
 For any questions or concerns about the information in this paper, contact your Microsoft account team, research the Microsoft VDI blog, post a message to Microsoft forums, or contact Microsoft for questions or concerns.
