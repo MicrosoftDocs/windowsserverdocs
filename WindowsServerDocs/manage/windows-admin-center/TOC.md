@@ -1,12 +1,10 @@
 # [Windows Admin Center](overview.md)
 
 ## Understand
-### [Hello, Windows Admin Center!](understand/windows-admin-center.md)
 ### [What is Windows Admin Center?](understand/what-is.md)
 ### [FAQ](understand/faq.md)
 ### [Case studies](understand/case-studies.md)
 ### [Related management products](understand/related-management.md)
-### [Videos](understand/videos.md)
 
 ## Plan
 ### [What type of installation is right for you?](plan/installation-options.md)
@@ -34,7 +32,6 @@
 ### [Manage Hyper-V virtual machines](use/manage-virtual-machines.md)
 ### [Logging](use/logging.md)
 
-
 ## Connect to Azure
 ### [Azure hybrid services](azure/index.md)
 #### [Azure Backup](azure/azure-backup.md)
@@ -47,6 +44,7 @@
 ### [Manage Azure VMs with Windows Admin Center](azure/manage-azure-vms.md)
 
 ## Support
+### [Release history](support/release-history.md)
 ### [Support policy](support/index.md)
 ### [Common troubleshooting steps](support/troubleshooting.md)
 ### [Known issues](support/known-issues.md)

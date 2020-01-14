@@ -26,7 +26,7 @@ To prepare your development environment, perform the following steps:
 To begin developing with the SDK, download and install the following prerequisites:
 
 * [Windows Admin Center](https://aka.ms/WACDownloadPage) (GA or preview version)
-* Visual Studio or [Visual Studio Code](http://code.visualstudio.com)
+* Visual Studio or [Visual Studio Code](https://code.visualstudio.com)
 * [Node Package Manager](https://npmjs.com/get-npm) (8.12.0 or later)
 * [Nuget](https://www.nuget.org/downloads) (for publishing extensions)
 

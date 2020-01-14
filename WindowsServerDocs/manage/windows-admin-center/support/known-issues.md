@@ -75,7 +75,7 @@ Remote Desktop, PowerShell, and Events modules in Windows Admin Center utilize t
 Type `$PSVersiontable` in PowerShell to verify that WMF is installed,
 and that the version is 5.1 or higher.
 
-If it is not installed, you can [download and install WMF 5.1](https://www.microsoft.com/en-us/download/details.aspx?id=54616).
+If it is not installed, you can [download and install WMF 5.1](https://www.microsoft.com/download/details.aspx?id=54616).
 
 ## Role Based Access Control (RBAC)
 

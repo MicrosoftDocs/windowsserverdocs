@@ -170,7 +170,7 @@ When you monitor performance of virtual machines with Reliability and Performanc
 
 For more information about performance tuning of both AD DS and Hyper-V, see [Performance Tuning Guidelines for Windows Server 2016](../../../../administration/performance-tuning/index.md).
 
-Also, do not plan to use a differencing disk VHD on a virtual machine that is configured as a domain controller because the differencing disk VHD can reduce performance. To learn more about Hyper-V disk types, including differencing disks, see [New Virtual Hard Disk Wizard](http://go.microsoft.com/fwlink/?linkid=137279).
+Also, do not plan to use a differencing disk VHD on a virtual machine that is configured as a domain controller because the differencing disk VHD can reduce performance. To learn more about Hyper-V disk types, including differencing disks, see [New Virtual Hard Disk Wizard](https://go.microsoft.com/fwlink/?linkid=137279).
 
 For additional information regarding AD DS in virtual hosting environments, see [Things to consider when you host Active Directory domain controllers in virtual hosting environments](https://go.microsoft.com/fwlink/?linkid=141292) in the Microsoft Knowledge Base.
 

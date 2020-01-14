@@ -83,7 +83,7 @@ When the signed in user is a member of the Protected Users group the following p
 - Beginning with Windows 8.1 and Windows Server 2012 R2, Windows Digest will not cache the user's plain text credentials even when Windows Digest is enabled.
 
 > [!Note]
-> After installing [Microsoft Security Advisory 2871997](https://technet.microsoft.com/library/security/2871997) Windows Digest will continue to cache credentials until the registry key is configured. See [Microsoft Security Advisory: Update to improve credentials protection and management: May 13, 2014](https://support.microsoft.com/en-us/help/2871997/microsoft-security-advisory-update-to-improve-credentials-protection-a) for instructions.
+> After installing [Microsoft Security Advisory 2871997](https://technet.microsoft.com/library/security/2871997) Windows Digest will continue to cache credentials until the registry key is configured. See [Microsoft Security Advisory: Update to improve credentials protection and management: May 13, 2014](https://support.microsoft.com/help/2871997/microsoft-security-advisory-update-to-improve-credentials-protection-a) for instructions.
 
 - NTLM will not cache the user's plain text credentials or NT one-way function (NTOWF).
 
