@@ -402,7 +402,7 @@ After starting the transfer from or to a domain controller:
  Error Message: Local accounts migration failed with error System.Exception: -2147467259
     at Microsoft.StorageMigration.Service.DeviceHelper.MigrateSecurity(IDeviceRecord sourceDeviceRecord, IDeviceRecord destinationDeviceRecord, TransferConfiguration config, Guid proxyId, CancellationToken cancelToken)
 
-This is expected behavior if you attempted to migrate from or to a domain controller with SMS and used the "migrate users and groups" option to rename or reuse accounts. instead of selecting "Don't transfer users and groups". DC migration is [not supported with SMS](https://docs.microsoft.com/windows-server/storage/storage-migration-service/faq). Because a DC doesn't have true local users and groups, SMS treats these security principals as it would when migrating between two member servers and attempts to adjust ACLs as instructed, leading to the errors and mangled or copied accounts. 
+This is expected behavior if you attempted to migrate from or to a domain controller with Storage Migration Service and used the "migrate users and groups" option to rename or reuse accounts. instead of selecting "Don't transfer users and groups". DC migration is [not supported with Storage Migration Service](faq.md). Because a DC doesn't have true local users and groups, Storage Migration Service treats these security principals as it would when migrating between two member servers and attempts to adjust ACLs as instructed, leading to the errors and mangled or copied accounts. 
 
 If you have already run transfer one ore more times:
 
