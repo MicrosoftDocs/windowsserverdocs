@@ -408,9 +408,9 @@ If you have already run transfer one ore more times:
 
  1. Use the following AD PowerShell command against a DC to locate any modified users or groups (changing SearchBase to match your domain dinstringuished name): 
 
-   ```PowerShell
-   Get-ADObject -Filter 'Description -like "*storage migration service renamed*"' -SearchBase 'DC=<domain>,DC=<TLD>' | ft name,distinguishedname
-   ```
+    ```PowerShell
+    Get-ADObject -Filter 'Description -like "*storage migration service renamed*"' -SearchBase 'DC=<domain>,DC=<TLD>' | ft name,distinguishedname
+    ```
    
  2. For any users returned with their original name, edit their "User Logon Name (pre-Windows 2000)" to remove the random character suffix added by Storage Migration Service, so that this loser can logon.
  3. For any groups returned with their original name, edit their "Group Name (pre-Windows 2000)" to remove the random character suffix added by Storage Migration Service.
