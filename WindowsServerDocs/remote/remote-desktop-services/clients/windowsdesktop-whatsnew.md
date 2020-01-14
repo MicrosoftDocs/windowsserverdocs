@@ -33,7 +33,7 @@ The client can be configured for different [user groups](windowsdesktop-admin.md
 
 Download: [Windows 64-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4o4cC), [Windows 32-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4o4cI), [Windows ARM64](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4oh9C)
 
-- You can now select which displays to use for desktop connections. To change this setting, right-click the icon of the desktop connection and select Settings.
+- You can now select which displays to use for desktop connections. To change this setting, right-click the icon of the desktop connection and select **Settings**.
 - Fixed an issue where the connection settings didn’t display the correct available scale factors.
 - Fixed an issue where Narrator couldn’t read the dialogue shown while the connection initiated.
 - Fixed an issue where the wrong user name displayed when the Azure Active Directory and Active Directory names didn’t match.
