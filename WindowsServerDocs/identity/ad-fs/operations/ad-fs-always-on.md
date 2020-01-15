@@ -33,7 +33,7 @@ An availability group listener on the primary replica's node responds to inc
 In the event of a failover, instead of transferring ownership of shared physical resources to another node, WSFC is leveraged to reconfigure a secondary replica on another SQL Server instance to become the availability group's primary replica. The availability group's virtual network name resource is then transferred to that instance.
 At any given moment, only a single SQL Server instance may host the primary replica of an availability group's databases, all associated secondary replicas must each reside on a separate instance, and each instance must reside on separate physical nodes.
 
-> ![NOTE] 
+> [!NOTE] 
 > If machines are running on Azure, set up the Azure virtual machines to enable the listener configuration to communicate with AlwaysOn Availability groups. For more information, [Virtual Machines: SQL Always On Listener](https://docs.microsoft.com/azure/virtual-machines/windows/sql/virtual-machines-windows-portal-sql-alwayson-int-listener).
 
 For additional overview of AlwaysOn Availability Groups, see [Overview of Always On Availability Groups (SQL Server)](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server?view=sql-server-ver15).
@@ -166,7 +166,7 @@ The Create Cluster Wizard opens.
 
 ![create cluster and select servers](media/ad-fs-always-on/createClusterServers.jpg)
 
->![NOTE]
+> [!NOTE]
 > If you chose to create the cluster immediately after running validation in the [configuration validating procedure](https://docs.microsoft.com/windows-server/failover-clustering/create-failover-cluster#validate-the-configuration), you will not see the Select Servers page. The nodes that were validated are automatically added to the Create Cluster Wizard so that you do not have to enter them again.
 
 6.	If you skipped validation earlier, the Validation Warning page appears. We strongly recommend that you run cluster validation. Only clusters that pass all validation tests are supported by Microsoft. To run the validation tests, select Yes, and then select Next. Complete the Validate a Configuration Wizard as described in [Validate the configuration](https://docs.microsoft.com/windows-server/failover-clustering/create-failover-cluster#validate-the-configuration).
