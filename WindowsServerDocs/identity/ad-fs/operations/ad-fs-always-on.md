@@ -25,7 +25,7 @@ For more information on AlwaysOn Availability groups, see [Overview of AlwaysOn 
 From the perspective of the nodes of an AD FS SQL Server farm, the AlwaysOn Availability group replaces the single SQL Server instance as the policy / artifact database.  The availability group listener is what the client (the AD FS security token service) uses to connect to SQL.
 The following diagram shows an AD FS SQL Server Farm with AlwaysOn Availability group.
 
-![server farm using SQL](media/ad-fs-always-on/SQLoverview.jpg)
+![server farm using SQL](media/ad-fs-always-on/SQLoverview.png)
 
 An Always On Availability Group (AG) is a one or more user databases that fail over together. An availability group consists of a primary availability replica and one to four secondary replicas that are maintained through SQL Server log-based data movement for data protection without the need for shared storage. Each replica is hosted by an instance of SQL Server on a different node of the WSFC. The availability group and a corresponding virtual network name are registered as resources in the WSFC cluster.
 
@@ -96,16 +96,16 @@ Configuring an AD FS farm with AlwaysOn Availability groups requires a slight mo
 
 1.	The databases you wish to back up must be created before the AlwaysOn Availability groups can be configured.  AD FS creates its databases as part of the setup and initial configuration of the first federation service node of a new AD FS SQL Server farm.  Specify the database host name for the existing farm using SQL server. As part of the AD FS configuration, you must specify a SQL connection string, so you will have to configure the first AD FS farm to connect to a SQL instance directly (this is only temporary). For specific guidance on configuring an AD FS farm, including configuring an AD FS farm node with a SQL server connection string, see [Configure a Federation Server](https://docs.microsoft.com/windows-server/identity/ad-fs/deployment/configure-a-federation-server).
 
-![specify farm](media/ad-fs-always-on/deploymentSpecifyFarm.jpg)
+![specify farm](media/ad-fs-always-on/deploymentSpecifyFarm.png)
 
 2.	Verify connectivity to the database using SSMS and then connect to the targeted database host name. If adding another node to the federation farm, connect to the targeted database.
 3.	Specify the SSL certificate for the AD FS farm.
 
-![specify ssl cert](media/ad-fs-always-on/deploymentSpecifySSL.jpg)
+![specify ssl cert](media/ad-fs-always-on/deploymentSpecifySSL.png)
 
 4.	Connect the farm to a service account or gMSA.
 
-![specify Service account](media/ad-fs-always-on/deploymentSpecifyServiceAccount.jpg)
+![specify Service account](media/ad-fs-always-on/deploymentSpecifyServiceAccount.png)
 
 5.	Complete the AD FS farm configuration and installation.
 
@@ -120,12 +120,12 @@ The Windows Server Failover Cluster role provides the For more information on Wi
 4.	On the Select installation type page, select Role-based or feature-based installation, and then select Next.
 5.	On the Select destination server page, select the SQL server where you want to install the feature, and then select Next.
 
-![destination servers](media/ad-fs-always-on/clusteringDestinationServer.jpg)
+![destination servers](media/ad-fs-always-on/clusteringDestinationServer.png)
 
 6.	On the Select server roles page, select Next.
 7.	On the Select features page, select the Failover Clustering check box.
 
-![select clustering feature](media/ad-fs-always-on/clusteringFeature.jpg)
+![select clustering feature](media/ad-fs-always-on/clusteringFeature.png)
 
 8.	On the Confirm installation selections page, select Install.
 A server restart is not required for the Failover Clustering feature.
@@ -138,7 +138,7 @@ A server restart is not required for the Failover Clustering feature.
 3.	On the Before You Begin page, select Next.
 4.	On the Select Servers or a Cluster page, in the Enter name box, enter the NetBIOS name or the fully qualified domain name of a server that you plan to add as a failover cluster node, and then select Add. Repeat this step for each server that you want to add. To add multiple servers at the same time, separate the names by a comma or by a semicolon. For example, enter the names in the format server1.contoso.com, server2.contoso.com. When you are finished, select Next.
 
-![select servers picture](media/ad-fs-always-on/clusterValidationServers.jpg)
+![select servers picture](media/ad-fs-always-on/clusterValidationServers.png)
 
 5. On the Testing Options page, select Run all tests (recommended), and then select Next.
 6. On the Confirmation page, select Next.
@@ -146,7 +146,7 @@ The Validating page displays the status of the running tests.
 7. On the Summary page, do either of the following:
 - If the results indicate that the tests completed successfully and the configuration is suited for clustering, and you want to create the cluster immediately, make sure that the Create the cluster now using the validated nodes check box is selected, and then select Finish. Then, continue to step 4 of the [Create the failover cluster procedure](https://docs.microsoft.com/windows-server/failover-clustering/create-failover-cluster#create-the-failover-cluster).
 
-![validate configuration picture](media/ad-fs-always-on/clusterValidationResults.jpg)
+![validate configuration picture](media/ad-fs-always-on/clusterValidationResults.png)
 
 -	If the results indicate that there were warnings or failures, select View Report to view the details and determine which issues must be corrected. Realize that a warning for a particular validation test indicates that this aspect of the failover cluster can be supported, but might not meet the recommended best practices.
 
@@ -164,7 +164,7 @@ The Create Cluster Wizard opens.
 4.	On the Before You Begin page, select Next.
 5.	If the Select Servers page appears, in the Enter name box, enter the NetBIOS name or the fully qualified domain name of a server that you plan to add as a failover cluster node, and then select Add. Repeat this step for each server that you want to add. To add multiple servers at the same time, separate the names by a comma or a semicolon. For example, enter the names in the format server1.contoso.com; server2.contoso.com. When you are finished, select Next.
 
-![create cluster and select servers](media/ad-fs-always-on/createClusterServers.jpg)
+![create cluster and select servers](media/ad-fs-always-on/createClusterServers.png)
 
 > [!NOTE]
 > If you chose to create the cluster immediately after running validation in the [configuration validating procedure](https://docs.microsoft.com/windows-server/failover-clustering/create-failover-cluster#validate-the-configuration), you will not see the Select Servers page. The nodes that were validated are automatically added to the Create Cluster Wizard so that you do not have to enter them again.
@@ -186,7 +186,7 @@ The Create Cluster Wizard opens.
 11.	To confirm that the cluster was created, verify that the cluster name is listed under Failover Cluster Manager in the navigation tree. You can expand the cluster name, and then select items under Nodes, Storage or Networks to view the associated resources.
 Realize that it may take some time for the cluster name to successfully replicate in DNS. After successful DNS registration and replication, if you select All Servers in Server Manager, the cluster name should be listed as a server with a Manageability status of Online.
 
-![create cluster complete](media/ad-fs-always-on/createClusterComplete.jpg)
+![create cluster complete](media/ad-fs-always-on/createClusterComplete.png)
 
 ## Enable Always on Availability Groups with SQL Server Configuration Manager
 
@@ -198,14 +198,14 @@ Realize that it may take some time for the cluster name to successfully replicat
 6.	Select the Enable Always On Availability Groups check box, and click OK.
 SQL Server Configuration Manager saves your change. Then, you must manually restart the SQL Server service. This enables you to choose a restart time that is best for your business requirements. When the SQL Server service restarts, Always On will be enabled, and the IsHadrEnabled server property will be set to 1.
 
-![enable AoA](media/ad-fs-always-on/enableAoAGroup.jpg)
+![enable AoA](media/ad-fs-always-on/enableAoAGroup.png)
 
 ## Back up AD FS Databases
 Back up the AD FS configuration and artifact databases with the full transaction logs. Place the back up in the chosen destination.
 Back up the ADFS Artifact and Configuration databases.
 - Tasks > Backup > Full > Add to a backup file > ok to create
 
-![back up server](media/ad-fs-always-on/backUpADFS.jpg)
+![back up server](media/ad-fs-always-on/backUpADFS.png)
 
 ## Create New Availability Group
 
@@ -216,14 +216,14 @@ Back up the ADFS Artifact and Configuration databases.
 5.	On the Specify Availability Group Options page, enter the name of the new availability group in the Availability group name field. This name must be a valid SQL Server identifier that is unique on the cluster and in your domain as a whole. The maximum length for an availability group name is 128 characters. e
 6.	Next, specify the cluster type. The possible cluster types depend on the SQL Server version and operating system. Choose either WSFC, EXTERNAL, or NONE. For details see [Specify Availability Group Name](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/specify-availability-group-name-page?view=sql-server-ver15) Page
 
-![name AoA Group and cluster](media/ad-fs-always-on/createAoAName.jpg)
+![name AoA Group and cluster](media/ad-fs-always-on/createAoAName.png)
 
 7.	On the Select Databases page, the grid lists user databases on the connected server instance that are eligible to become the availability databases. Select one or more of the listed databases to participate in the new availability group. These databases will initially be the initial primary databases.
 For each listed database, the Size column displays the database size, if known. The Status column indicates whether a given database meets the [prerequisites](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability?view=sql-server-ver15) for availability databases. It the prerequisites are not met, a brief status description indicates the reason that the database is ineligible; for example, if it does not use the full recovery model. For more information, click the status description.
 If you change a database to make it eligible, click Refresh to update the databases grid.
 If the database contains a database master key, enter the password for the database master key in the Password column.
 
-![select databases for AoA](media/ad-fs-always-on/createAoASelectDb.jpg)
+![select databases for AoA](media/ad-fs-always-on/createAoASelectDb.png)
 
 8.On the Specify Replicas page, specify and configure one or more replicas for the new availability group. This page contains four tabs. The following table introduces these tabs. For more information, see the [Specify Replicas Page (New Availability Group Wizard: Add Replica Wizard)](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/specify-replicas-page-new-availability-group-wizard-add-replica-wizard?view=sql-server-ver15) topic.
 
@@ -234,7 +234,7 @@ If the database contains a database master key, enter the password for the datab
 | Backup Preferences | Use this tab to specify your backup preference for the availability group as a whole and your backup priorities for the individual availability replicas.      |
 | Listener     | Use this tab to create an availability group listener. By default, the wizard does not create a listener.      |
 
-![specify Replica details](media/ad-fs-always-on/createAoAchooseReplica.jpg)
+![specify Replica details](media/ad-fs-always-on/createAoAchooseReplica.png)
 
 9. On the Select Initial Data Synchronization page, choose how you want your new secondary databases to be created and joined to the availability group. Choose one of the following options:
 - 	Automatic seeding
@@ -248,7 +248,7 @@ In the Specify a shared network location accessible by all replicas: field, spec
 - Skip initial data synchronization
  - Select this option if you want to use your own database and log backups of your primary databases. For more information, see [Start Data Movement on an Always On Secondary Database (SQL Server)](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/start-data-movement-on-an-always-on-secondary-database-sql-server?view=sql-server-ver15).
 
-![choose data sync option](media/ad-fs-always-on/createAoADataSync.jpg)
+![choose data sync option](media/ad-fs-always-on/createAoADataSync.png)
 
 9.	The Validation page verifies whether the values you specified in this Wizard meet the requirements of the New Availability Group Wizard. To make a change, click Previous to return to an earlier wizard page to change one or more values. The click Next to return to the Validation page, and click Re-run Validation.
 
@@ -262,7 +262,7 @@ In the Specify a shared network location accessible by all replicas: field, spec
 12.	When these steps complete, the Results page displays the result of each step. If all these steps succeed, the new availability group is completely configured. If any of the steps result in an error, you might need to manually complete the configuration or use a wizard for the failed step. For information about the cause of a given error, click the associated "Error" link in the Result column.
 When the wizard completes, click Close to exit.
 
-![validation complete](media/ad-fs-always-on/createAoAValidation.jpg)
+![validation complete](media/ad-fs-always-on/createAoAValidation.png)
 
 ## Add Databases on Secondary Node
 
