@@ -34,12 +34,12 @@ In the event of a failover, instead of transferring ownership of shared physical
 At any given moment, only a single SQL Server instance may host the primary replica of an availability group's databases, all associated secondary replicas must each reside on a separate instance, and each instance must reside on separate physical nodes.
 
 >![NOTE] 
->If machines are running on Azure, set up the Azure virtual machines to enable the listener configuration to communicate with AlwaysOn Availability groups. For more information, [Virtual Machines: SQL Always On Listener](https://docs.microsoft.com/azure/virtual-machines/windows/sql/virtual-machines-windows-portal-sql-alwayson-int-listener).
+> If machines are running on Azure, set up the Azure virtual machines to enable the listener configuration to communicate with AlwaysOn Availability groups. For more information, [Virtual Machines: SQL Always On Listener](https://docs.microsoft.com/azure/virtual-machines/windows/sql/virtual-machines-windows-portal-sql-alwayson-int-listener).
 
 For additional overview of AlwaysOn Availability Groups, see [Overview of Always On Availability Groups (SQL Server)](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server?view=sql-server-ver15).
 
->[!NOTE] 
->If the organization requires failover across multiple datacenters, it is recommended to create an artifact database in each datacenter as well as enabling a background cache which reduces latency during request processing. Follow the instructions to do so in [Fine Tuning SQL and Reducing Latency](https://docs.microsoft.com/windows-server/identity/ad-fs/operations/adfs-sql-latency).
+> [!NOTE] 
+> If the organization requires failover across multiple datacenters, it is recommended to create an artifact database in each datacenter as well as enabling a background cache which reduces latency during request processing. Follow the instructions to do so in [Fine Tuning SQL and Reducing Latency](https://docs.microsoft.com/windows-server/identity/ad-fs/operations/adfs-sql-latency).
 
 ## Deployment Guidance
 
@@ -109,8 +109,8 @@ Configuring an AD FS farm with AlwaysOn Availability groups requires a slight mo
 
 5.	Complete the AD FS farm configuration and installation.
 
->[!NOTE] 
->SQL Server must be run under a domain account for installation of Always On Availability groups. By default, it is run as a local system.
+> [!NOTE] 
+> SQL Server must be run under a domain account for installation of Always On Availability groups. By default, it is run as a local system.
 
 ## Install the Failover Clustering Role
 The Windows Server Failover Cluster role provides the For more information on Windows Server Failover Clusters,
@@ -254,7 +254,7 @@ In the Specify a shared network location accessible by all replicas: field, spec
 
 10.	On the Summary page, review your choices for the new availability group. To make a change, click Previous to return to the relevant page. After making the change, click Next to return to the Summary page.
 
->[!NOTE] 
+> [!NOTE] 
 > When the SQL Server service account of a server instance that will host a new availability replica does not already exist as a login, the New Availability Group Wizard needs to create the login. On the Summary page, the wizard displays the information for the login that is to be created. If you click Finish, the wizard creates this login for the SQL Server service account and grants the login CONNECT permission.
 > If you are satisfied with your selections, optionally click Script to create a script of the steps the wizard will execute. Then, to create and configure the new availability group, click Finish.
 
