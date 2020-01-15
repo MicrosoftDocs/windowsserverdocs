@@ -160,8 +160,10 @@ When installing Windows Admin Center, you are given the option to let Windows Ad
 
    > [!TIP]
    > For an easy way to set all TrustedHosts at once, you can use a wildcard.
-   > 
-   >     Set-Item WSMan:\localhost\Client\TrustedHosts -Value '*'
+   >
+   > ```powershell
+   > Set-Item WSMan:\localhost\Client\TrustedHosts -Value '*'
+   > ```
 
 4. When you are done testing, you can issue the following command from an elevated PowerShell session to clear your TrustedHosts setting:
 
