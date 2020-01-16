@@ -2,15 +2,13 @@
 title: Understand and Deploy Persistent Memory
 description: Detailed info on what persistent memory is and how to set it up with storage spaces direct in Windows Server 2019.
 keywords: Storage Spaces Direct,persistent memory,pmem, storage, S2D
-ms.assetid: 
-ms.prod: 
+ms.prod: windows-server
 ms.author: adagashe
 ms.technology: storage-spaces
 ms.topic: article
 author: adagashe
-ms.date: 3/26/2019 
-ms.localizationpriority: 
----
+ms.date: 1/16/2020 
+ms.localizationpriority: medium
 ---
 # Understand and deploy persistent memory
 
@@ -48,7 +46,7 @@ The table below has the full performance numbers:
 | 4K 90/10% Random Read/Write | 9.45 million IOPS   |
 | 2MB Sequential Read         | 549 GB/s Throughput |
 
-### Supported Hardware
+### Supported hardware
 
 The table below shows supported persistent memory hardware for Windows Server 2019 and Windows Server 2016. Note that Intel Optane supports both Memory (i.e. volatile) and App Direct (i.e persistent) modes.
 
@@ -82,7 +80,6 @@ DiskNumber Size   HealthStatus AtomicityType CanBeRemoved PhysicalDeviceIds Unsa
 ```
 
 We can see that the logical pmem disk #2 has physical devices of Id20 and Id120 and logical pmem disk #3 has physical devices of Id1020 and Id1120. We can also feed a specific pmem disk to Get-PmemPhysicalDevice to get all its physical NVDIMMs in the interleave set as below.
-
 
 ```PowerShell
 (Get-PmemDisk)[0] | Get-PmemPhysicalDevice
@@ -133,7 +130,7 @@ Get-PmemUnusedRegion | New-PmemDisk
 Creating new persistent memory disk. This may take a few moments.
 ```
 
-Ater this is done, we can see the results by running:
+After this is done, we can see the results by running:
 
 ```PowerShell
 Get-PmemDisk
@@ -150,14 +147,14 @@ It is worth noting that we could have run **Get-PhysicalDisk | Where MediaType -
 
 Storage Spaces Direct on Windows Server 2019 supports using persistent memory as either a cache or capacity drive. See this [documentation](understand-the-cache.md) for more details on setting up cache and capacity drives.
 
-## Creating a DAX Volume
+## Creating a DAX volume
 
 ### Understanding DAX
 
 There are two methods for accessing persistent memory. They are:
 
 1. **Direct access (DAX)**, which operates like memory to get the lowest latency. The app directly modifies the persistent memory, bypassing the stack. Note that this can only be used with NTFS.
-2. **Block access**, which operates like storage for app compatibility. The data flows through the stack in this setup, and this can be used with NTFS and ReFS.
+1. **Block access**, which operates like storage for app compatibility. The data flows through the stack in this setup, and this can be used with NTFS and ReFS.
 
 An example of this can be seen below:
 
@@ -224,12 +221,12 @@ Size                 : 251.98 GB
 Type                 : Basic
 ```
 
-## Monitoring Health
+## Monitoring health
 
 When you use persistent memory, there are a few differences in the monitoring experience:
 
 1. Persistent memory doesn't create Physical Disk performance counters, so you won't see if appear on charts in Windows Admin Center.
-2. Persistent memory doesn't create Storport 505 data, so you won't get proactive outlier detection.
+1. Persistent memory doesn't create Storport 505 data, so you won't get proactive outlier detection.
 
 Apart from that, the monitoring experience is the same as any other physical disk. You can query for the health of a persistent memory disk by running:
 
