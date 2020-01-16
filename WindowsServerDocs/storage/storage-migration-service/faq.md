@@ -137,7 +137,7 @@ The Storage Migration Service uses an extensible storage engine (ESE) database t
 
 ## Does the Storage Migration Service migrate locally installed applications from the source computer?
 
-The Storage Migration Service does not migrate locally-installed applications. After you complete migration, re-install any applications onto the destination computer that were running on the source computer. There's no need to reconfigure any users or their applications, the Storage Migration Service is designed to make the server change invisible to clients. 
+No, the Storage Migration Service doesn't migrate locally installed applications. After you complete migration, re-install any applications onto the destination computer that were running on the source computer. There's no need to reconfigure any users or their applications; the Storage Migration Service is designed to make the server change invisible to clients. 
 
 ## <a name="give-feedback"></a> What are my options to give feedback, file bugs, or get support?
 
