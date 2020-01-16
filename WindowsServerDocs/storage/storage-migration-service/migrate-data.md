@@ -58,7 +58,7 @@ In this step you transfer data after specifying where to put it on the destinati
  > [!NOTE]
    > Using "Create a new Azure VM" requires that you have:
    > - A valid Azure subscription.
-   > - An existing Azure Compute resource group where you have create rights.
+   > - An existing Azure Compute resource group where you have Create rights.
    > - An existing Azure Virtual Network and subnet. 
    > - An Azure Express Route or VPN solution tied to the Virtual Network and subnet that allows connectivity from this Azure IaaS VM to your on-premises clients, domain controllers, the Storage Migration Service orchestrator computer, the Windows Admin Center computer, and the source computer to be migrated.
 
