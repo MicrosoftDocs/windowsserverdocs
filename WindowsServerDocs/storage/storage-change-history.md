@@ -21,6 +21,7 @@ This topic lists new and updated topics in the [Storage](storage.md) documentati
 ## January 2020
 
 | New or changed topic | Description |
+| --- | --- |
 |[Understand and deploy persistent memory](storage-spaces/deploy-pmem.md) | Added known hardware issue. |
 
 ## December 2019
