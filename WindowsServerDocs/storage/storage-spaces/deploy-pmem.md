@@ -61,9 +61,9 @@ The following table shows supported persistent memory hardware for Windows Serve
 
 Now, let's dive into how you configure persistent memory.
 
-## Interleave sets
+## Interleaved sets
 
-### Understanding interleave sets
+### Understanding interleaved sets
 
 Recall that an NVDIMM resides in a standard DIMM (memory) slot, placing data closer to the processor. This configuration reduces latency and improves fetch performance. To further increase throughput, two or more NVDIMMs create an n-way interleaved set to stripe read/write operations. The most common configurations are two-way or four-way interleaving. An interleaved set also makes multiple persistent memory devices appear as a single logical disk to Windows Server. You can use the Windows PowerShell **get-PmemDisk** cmdlet to review the configuration of such logical disks as follows:
 
