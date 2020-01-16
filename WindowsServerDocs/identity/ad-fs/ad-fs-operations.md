@@ -24,7 +24,8 @@ This document contains a list of all of the documentation operations for AD FS.
 - [Add an Attribute Store](../ad-fs/operations/Add-an-Attribute-Store.md)
 - [Customize HTTP security response headers with AD FS 2019](../ad-fs/operations/customize-http-security-headers-ad-fs.md)
 - [Delegate AD FS Powershell Commandlet Access to Non-Admin Users](../ad-fs/operations/delegate-ad-fs-pshell-access.md)
-- [Fine tune SQL and address latency](../ad-fs/operations/adfs-sql-latency.md) 
+- [Fine tune SQL and address latency](../ad-fs/operations/adfs-sql-latency.md)
+- [AlwaysOn Availability Groups](../ad-fs/operations/ad-fs-always-on.md) 
 
 
 ## Authentication Configuration
