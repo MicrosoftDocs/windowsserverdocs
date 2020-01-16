@@ -48,7 +48,7 @@ The following table shows the full performance numbers:
 
 ### Supported hardware
 
-The following table shows supported persistent memory hardware for Windows Server 2019 and Windows Server 2016. 
+The following table shows supported persistent memory hardware for Windows Server 2019 and Windows Server 2016.  
 
 | Persistent Memory Technology                                      | Windows Server 2016 | Windows Server 2019 |
 |-------------------------------------------------------------------|--------------------------|--------------------------|
