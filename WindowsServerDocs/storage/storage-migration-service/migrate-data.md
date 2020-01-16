@@ -59,7 +59,7 @@ In this step you transfer data after specifying where to put it on the destinati
    > Using "Create a new Azure VM" requires that you have:
    > - A valid Azure subscription.
    > - An existing Azure Compute resource group where you have create rights.
-   > - An existing Azure Virtual Network and Subnet. 
+   > - An existing Azure Virtual Network and subnet. 
    > - An Azure Express Route or VPN solution tied to that Virtual Network and Subnet that allows connectivity from this Azure IaaS VM to your on-premises clients, domain controllers, the Storage Migration Service orchestrator computer, the WAC computer, and the source computer to be migrated.
 
 3. Map the source volumes to destination volumes, clear the **Include** checkbox for any shares you don't want to transfer (including any administrative shares located in the Windows system folder), and then select **Next**.
