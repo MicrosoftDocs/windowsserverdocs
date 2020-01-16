@@ -53,11 +53,20 @@ The following table shows supported persistent memory hardware for Windows Serve
 | Persistent Memory Technology                                      | Windows Server 2016 | Windows Server 2019 |
 |-------------------------------------------------------------------|--------------------------|--------------------------|
 | **NVDIMM-N** in persistent mode                                  | Supported                | Supported                |
-| **Intel Optane™ DC Persistent Memory** in App Direct Mode             | Not Supported            | Supported                |
+| **Intel Optane™ DC Persistent Memory (DCPM)** in App Direct Mode             | Not Supported            | Supported                |
 | **Intel Optane™ DC Persistent Memory** in Memory Mode | Supported            | Supported                |
 
 > [!NOTE]  
 > Intel Optane supports both Memory (volatile) and App Direct (persistent) modes.
+   
+> [!NOTE]  
+> When you restart a system that has multiple Intel® OptaneTM DCPM modules in App Direct mode that are divided into multiple namespaces, you might lose access to some or all of the related logical storage disks. This issue occurs on Windows Server 2019 versions that are older than version 1903.
+>   
+> This loss of access occurs because a DCPM module is untrained or otherwise fails when the system starts. In such a case, all of the storage namespaces on any PMem module on the system fail, including namespaces that do not physically map to the failed DCPM module.
+>   
+> To restore access to all of the namespaces, replace the failed DCPM module.
+>   
+> If a DCPM module fails on Windows Server 2019 version 1903 and newer versions, you only lose access to namespaces that physically map to the affected module. Other namespaces are not affected.
 
 Now, let's dive into how you configure persistent memory.
 
@@ -273,7 +282,7 @@ Remove the persistent memory disk(s)?
 Removing the persistent memory disk. This may take a few moments.
 ```
 
-> [!IMPORTANT]
+> [!IMPORTANT]  
 > Removing a persistent memory disk results in data loss on that disk.
 
 Another cmdlet you might need is **Initialize-PmemPhysicalDevice**. This cmdlet initializes the label storage areas on the physical persistent memory devices, and can clear corrupted label storage information on the PMem devices.
@@ -290,7 +299,7 @@ Initializing the physical persistent memory device. This may take a few moments.
 Initializing the physical persistent memory device. This may take a few moments.
 ```
 
-> [!IMPORTANT]
+> [!IMPORTANT]  
 > **Initialize-PmemPhysicalDevice** causes data loss in persistent memory. Use it as a last resort to fix persistent memory-related issues.
 
 ## See also
