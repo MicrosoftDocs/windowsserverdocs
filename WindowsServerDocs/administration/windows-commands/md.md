@@ -58,10 +58,8 @@ md \Taxes\Property\Current
 To create the directory tree Taxes\Property\Current within the root directory as in the previous example, but with command extensions disabled, type the following sequence of commands:
 ```
 md \Taxes
-cd \Taxes 
-md Property
-cd Property
-md Current
+md \Taxes\Property
+md \Taxes\Property\Current
 ```
 
 #### Additional references
