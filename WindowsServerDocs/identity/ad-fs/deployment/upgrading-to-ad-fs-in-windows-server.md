@@ -97,6 +97,7 @@ Once that completes run `adprep/domainprep`
 
 8. Now on the Windows Server 2016 Server open PowerShell and run the following cmdlet:
 
+
 > [!NOTE]
 > All 2012 R2 servers must be removed from the farm before running the next step.
 
