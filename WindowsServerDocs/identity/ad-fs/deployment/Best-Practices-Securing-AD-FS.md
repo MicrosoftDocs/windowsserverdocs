@@ -23,6 +23,9 @@ For deployment in on-premises environments, we recommend a standard deployment t
 
 ![AD FS Standard topology](media/Best-Practices-Securing-AD-FS/adfssec1.png)
 
+>[!NOTE]
+> AD FS requires a full writable Domain Controller to function as opposed to a Read-Only Domain Controller. If a planned topology includes a Read-Only Domain controller, the Read-Only domain controller can be used for authentication but LDAP claims processing will require a connection to the writable domain controller.
+
 ## Ports required
 The below diagram depicts the firewall ports that must be enabled between and amongst the components of the AD FS and WAP deployment.  If the deployment does not include Azure AD / Office 365, the sync requirements can be disregarded.
 
