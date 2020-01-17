@@ -9,7 +9,7 @@ ms.tgt_pltfrm: na
 ms.topic: troubleshooting
 ms.assetid: 
 author: kaushika-msft
-manager: 
+manager: dcscontentpm
 ms.author: delhan
 ms.date: 07/24/2019
 ms.localizationpriority: medium
