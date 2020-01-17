@@ -30,10 +30,6 @@ Use Storage Migration Service because you've got a server (or a lot of servers) 
 
 **Figure 1: Storage Migration Service sources and destinations**
 
-Here's a video showing how to use Storage Migration Service to take a server, such as a Windows Server 2008 R2 server that's now out of support, and move the storage to a newer server.
-
-> [!VIDEO https://www.youtube.com/embed/h-Xc9j1w144]
-
 ## How the migration process works
 
 Migration is a three-step process:
@@ -44,6 +40,10 @@ Migration is a three-step process:
 
 ![Screenshot showing a server ready to be scanned](media/migrate/inventory.png)
 **Figure 2: Storage Migration Service inventorying servers**
+
+Here's a video showing how to use Storage Migration Service to take a server, such as a Windows Server 2008 R2 server that's now out of support, and move the storage to a newer server.
+
+> [!VIDEO https://www.youtube.com/embed/h-Xc9j1w144]
 
 ## Requirements
 
