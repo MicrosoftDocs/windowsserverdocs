@@ -64,7 +64,7 @@ When there are changes to Storage QoS policies or to the performance demands by 
 
 |Term|Description|  
 |--------|---------------|  
-|Normalized IOPs|All of the storage usage is measured in "Normalized IOPs."  This is a count of the storage input/output operations per second.  Any IO that is 8KB or smaller is considered as one normalized IO.  Any IO that is larger than 8KB is treated as multiple normalized IOs. For example, a 256KB request is treated as 32 normalized IOPs.<br /><br />Windows Server 2016 includes the ability to specify the size used to normalize IOs.  On the storage cluster, the normalized size can be specified and take effect on the normalization calculations cluster wide.  The default remains 8KB.|  
+|Normalized IOPs|All of the storage usage is measured in "Normalized IOPs."  This is a count of the storage input/output operations per second.  Any IO that is 8KB or smaller is considered as one normalized IO.  Any IO that is larger than 8KB is treated as multiple normalized IOs. For example, a 256KB request is treated as 32 normalized IOPs.<br /><br />Windows Server 2016 includes the ability to specify the size used to normalize IOs.  On the storage cluster, the normalized size can be specified and take effect on the normalization calculations cluster wide.  The default remains 8KB. This setting affects all virtual machines. (The virtual machines created on local volumes are also affected.)|  
 |Flow|Each file handle opened by a Hyper-V server to a VHD or VHDX file is considered a "flow". If a virtual machine has two virtual hard disks attached, it will have 1 flow to the file server cluster per file. If a VHDX is shared with multiple virtual machines, it will have 1 flow per virtual machine.|  
 |InitiatorName|Name of the virtual machine that is reported to the Scale-Out File Server for each flow.|  
 |InitiatorID|An identifier matching the virtual machine ID.  This can always be used to uniquely identify individual flows virtual machines even if the virtual machines have the same InitiatorName.|  
@@ -862,7 +862,8 @@ InitiatorBandwidth : 37888
 
 #### Example 2: Get IOPS normalization settings and specify  a new value  
 
-The following example demonstrates how to get the storage clusters IOPS normalization settings (default of 8KB), then set it to 32KB, and then show it again.  Note, in this example, specify "32KB", since PowerShell allows specifying the unit instead of requiring the conversion to bytes.   The output does show the value in bytes per second.  
+The following example demonstrates how to get the storage clusters IOPS normalization settings (default of 8KB), then set it to 32KB, and then show it again.  Note, in this example, specify "32KB", since PowerShell allows specifying the unit instead of requiring the conversion to bytes.   The output does show the value in bytes per second. This setting affects all virtual machines. (The virtual machines created on local volumes are also affected.)
+ 
 
 ```PowerShell
 PS C:\Windows\system32> Get-StorageQosPolicyStore  
