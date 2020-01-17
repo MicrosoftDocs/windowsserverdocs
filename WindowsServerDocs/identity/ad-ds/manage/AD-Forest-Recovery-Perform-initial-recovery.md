@@ -6,7 +6,7 @@ author: MicrosoftGuyJFlo
 manager: mtillman
 ms.date: 08/09/2018
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.assetid: 5a291f65-794e-4fc3-996e-094c5845a383
 ms.technology: identity-adds
 ---
@@ -22,7 +22,7 @@ This section includes the following steps:
 
 ## Restore the first writeable domain controller in each domain  
 
-Beginning with a writeable DC in the forest root domain, complete the steps in this section in order to restore the first DC. The forest root domain is important because it stores the Schema Admins and Enterprise Admins groups. It also helps maintain the trust hierarchy in the forest. In addition, the forest root domain usually holds the DNS root server for the forest’s DNS namespace. Consequently, the Active Directory–integrated DNS zone for that domain contains the alias (CNAME) resource records for all other DCs in the forest (which are required for replication) and the global catalog DNS resource records. 
+Beginning with a writeable DC in the forest root domain, complete the steps in this section in order to restore the first DC. The forest root domain is important because it stores the Schema Admins and Enterprise Admins groups. It also helps maintain the trust hierarchy in the forest. In addition, the forest root domain usually holds the DNS root server for the forest's DNS namespace. Consequently, the Active Directory–integrated DNS zone for that domain contains the alias (CNAME) resource records for all other DCs in the forest (which are required for replication) and the global catalog DNS resource records. 
   
 After you recover the forest root domain, repeat the same steps to recover the remaining domains in the forest. You can recover more than one domain simultaneously; however, always recover a parent domain before recovering a child to prevent any break in the trust hierarchy or DNS name resolution. 
   
@@ -119,7 +119,7 @@ At this stage you should have one DC restored (and recovery steps performed) in 
 After validation, Join the DCs to the production network and complete the steps to verify forest replication health.
 
 - To fix name resolution, create DNS delegation records and configure DNS forwarding and root hints as needed. Run **repadmin /replsum** to check replication between DCs. 
-- If the restored DC’s are not direct replication partners, replication recovery will be much faster by creating temporary connection objects between them. 
+- If the restored DC's are not direct replication partners, replication recovery will be much faster by creating temporary connection objects between them. 
 - To validate metadata cleanup, run **Repadmin /viewlist \\*** for a list of all DCs in the forest. Run **Nltest /DCList:** *<domain\>* for a list of all DCs in the domain. 
 - To check DC and DNS health, run DCDiag /v to report errors on all DCs in the forest. 
 

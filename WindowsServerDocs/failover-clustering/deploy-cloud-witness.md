@@ -1,7 +1,7 @@
 ---
 ms.assetid: 0cd1ac70-532c-416d-9de6-6f920a300a45
 title: Deploy a cloud witness for a Failover Cluster
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 manager: eldenc
 ms.author: jgerend
 ms.technology: storage-failover-clustering
@@ -69,7 +69,7 @@ When you use the same Azure Storage Account for configuring Cloud Witness for mu
 
 ### To create an Azure storage account
 
-1. Sign in to the [Azure Portal](http://portal.azure.com).
+1. Sign in to the [Azure Portal](https://portal.azure.com).
 2. On the Hub menu, select New -> Data + Storage -> Storage account.
 3. In the Create a storage account page, do the following:
     1. Enter a name for your storage account.

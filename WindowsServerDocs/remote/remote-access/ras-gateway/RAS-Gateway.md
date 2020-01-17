@@ -2,7 +2,7 @@
 title: RAS Gateway
 description: This topic, which is intended for Information Technology (IT) professionals, provides overview information about RAS Gateway, including RAS Gateway deployment modes and features in Windows Server 2016.
 manager: dougkim
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: networking-ras
 ms.topic: article
 ms.assetid: acaa46b7-09b1-4707-9562-116df8db17eb
@@ -118,7 +118,7 @@ Following are the recommended deployment scenarios for RAS Gateway.
 ## <a name="bkmk_manage"></a>RAS Gateway Management Tools  
 Following are the management tools for RAS Gateway.  
   
--   In  Windows Server 2016, to deploy an RAS Gateway router, you must use Windows PowerShell commands. For more information, see  [Remote Access Cmdlets](https://docs.microsoft.com/en-us/powershell/module/remoteaccess) for  Windows Server 2016 and Windows 10.  
+-   In  Windows Server 2016, to deploy an RAS Gateway router, you must use Windows PowerShell commands. For more information, see  [Remote Access Cmdlets](https://docs.microsoft.com/powershell/module/remoteaccess) for  Windows Server 2016 and Windows 10.  
   
 -   In System Center 2012 R2 Virtual Machine Manager (VMM), the RAS Gateway is named Windows Server Gateway. A limited set of Border Gateway Protocol (BGP) configuration options are available in the VMM software interface, including **Local BGP IP Address** and **Autonomous System Numbers (ASN)**, **List of BGP Peer IP Addresses**, and **ASN values**. You can, however, use Remote Access Windows PowerShell BGP commands to configure all other features of Windows Server Gateway. For more information, see  [Virtual Machine Manager (VMM)](https://technet.microsoft.com/system-center-docs/vmm/vmm) and [Remote Access Cmdlets](https://technet.microsoft.com/library/hh918399.aspx) for  Windows Server 2016 and Windows 10.  
   

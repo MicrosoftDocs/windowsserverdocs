@@ -1,7 +1,7 @@
 ---
 title: Server Core App Compatibility Feature on Demand (FOD)
 description: "How to install Windows Server Features on Demand"
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: server-general
 ms.topic: article
 ms.assetid: 99f7daa4-30ce-4d13-be65-0a4d55cca754
@@ -9,7 +9,7 @@ author: jasongerend
 ms.author: jgerend
 manager: jasgroce
 ms.localizationpriority: medium
-ms.date: 05/29/2019
+ms.date: 06/07/2019
 ---
 # Server Core App Compatibility Feature on Demand (FOD)
 
@@ -59,7 +59,7 @@ Operating system components that are available as part of the Server Core App Co
 
         -   To run Failover Cluster Manager, enter **cluadmin** at the command prompt.
 
-Servers running Windows Server, version 1903 and later also support the following components:
+Servers running Windows Server, version 1903 and later also support the following components (when using the same version of the App Compatibility FOD):
 
 - Hyper-V Manager (virtmgmt.msc)
 - Task Scheduler (taskschd.msc)
@@ -160,7 +160,7 @@ The App Compatibility FOD can only be installed on Server Core. Don't attempt to
    Mount-DiskImage -ImagePath Path_To_Windows_Server_ISO
    ```
 
-3. Copy the the contents of the Windows Server ISO file to a local folder (for example, *C:\SetupFiles\WindowsServer*).
+3. Copy the contents of the Windows Server ISO file to a local folder (for example, *C:\SetupFiles\WindowsServer*).
 
 4. Get the image name you want to modify within the Install.wim file by using the following command.<br>
 Use the `$install_wim_path` variable to enter the path to the Install.wim file, located inside the \Sources folder of the ISO file.

@@ -7,14 +7,14 @@ author: nwashburn-ms
 ms.author: niwashbu
 ms.localizationpriority: medium
 ms.date: 09/18/2018
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ---
 
 # Prepare your development environment
 
 >Applies To: Windows Admin Center, Windows Admin Center Preview
 
-Let’s get started developing extensions with the Windows Admin Center SDK!  In this document, we’ll cover the process to get your environment up and running to build and test an extension for Windows Admin Center.
+Let's get started developing extensions with the Windows Admin Center SDK!  In this document, we'll cover the process to get your environment up and running to build and test an extension for Windows Admin Center.
 
 > [!NOTE]
 > New to the Windows Admin Center SDK?  Learn more about [Extensions for Windows Admin Center](extensibility-overview.md)
@@ -26,7 +26,7 @@ To prepare your development environment, perform the following steps:
 To begin developing with the SDK, download and install the following prerequisites:
 
 * [Windows Admin Center](https://aka.ms/WACDownloadPage) (GA or preview version)
-* Visual Studio or [Visual Studio Code](http://code.visualstudio.com)
+* Visual Studio or [Visual Studio Code](https://code.visualstudio.com)
 * [Node Package Manager](https://npmjs.com/get-npm) (8.12.0 or later)
 * [Nuget](https://www.nuget.org/downloads) (for publishing extensions)
 

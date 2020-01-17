@@ -1,7 +1,7 @@
 ---
 title: Hyper-V Processor Performance
 description: Processor performance considerations in Hyper-V performance tuning
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: performance-tuning-guide
 ms.topic: article
 ms.author: Asmahi; SandySp; JoPoulso
@@ -42,7 +42,7 @@ Minimizing the background activity in idle virtual machines releases CPU cycles 
 
 -   Close Server Manager on both the host and guest operating systems.
 
--   Don’t leave Hyper-V Manager running since it constantly refreshes the virtual machine’s thumbnail.
+-   Don't leave Hyper-V Manager running since it constantly refreshes the virtual machine's thumbnail.
 
 The following are additional best practices for configuring a *client version* of Windows in a virtual machine to reduce the overall CPU usage:
 
@@ -56,7 +56,7 @@ To enable virtualizing large scale-up workloads, Hyper-V in Windows Server 2016
 
 In Windows Server 2016, Hyper-V presents a virtual NUMA topology to virtual machines. By default, this virtual NUMA topology is optimized to match the NUMA topology of the underlying host computer. Exposing a virtual NUMA topology into a virtual machine allows the guest operating system and any NUMA-aware applications running within it to take advantage of the NUMA performance optimizations, just as they would when running on a physical computer.
 
-There is no distinction between a virtual and a physical NUMA from the workload’s perspective. Inside a virtual machine, when a workload allocates local memory for data, and accesses that data in the same NUMA node, fast local memory access results on the underlying physical system. Performance penalties due to remote memory access are successfully avoided. Only NUMA-aware applications can benefit of vNUMA.
+There is no distinction between a virtual and a physical NUMA from the workload's perspective. Inside a virtual machine, when a workload allocates local memory for data, and accesses that data in the same NUMA node, fast local memory access results on the underlying physical system. Performance penalties due to remote memory access are successfully avoided. Only NUMA-aware applications can benefit of vNUMA.
 
 Microsoft SQL Server is an example of NUMA aware application. For more info, see [Understanding Non-uniform Memory Access](https://technet.microsoft.com/library/ms178144.aspx).
 

@@ -4,7 +4,7 @@ description:
 author: JasonGerend
 manager: elizapo
 layout: LandingPage
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: storage
 ms.assetid: 6b74bc7c-a58d-4915-af8e-2cc27f2c4726
 ms.topic: landing-page
@@ -140,4 +140,4 @@ Storage in Windows Server provides new and improved features for software-define
 ## In Azure
 
 * [Azure Storage](https://azure.microsoft.com/documentation/services/storage/)
-* [Azure StorSimple](https://www.microsoft.com/en-us/cloud-platform/azure-storsimple)
+* [Azure StorSimple](https://www.microsoft.com/cloud-platform/azure-storsimple)

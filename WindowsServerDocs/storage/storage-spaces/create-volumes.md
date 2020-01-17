@@ -1,23 +1,22 @@
 ---
 title: Creating volumes in Storage Spaces Direct
 description: How to create volumes in Storage Spaces Direct using Windows Admin Center and PowerShell.
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: cosmosdarwin
 author: cosmosdarwin
 ms.author: cosdar
 manager: eldenc
 ms.technology: storage-spaces
-ms.date: 05/09/2019
+ms.date: 06/06/2019
 ---
-
 # Creating volumes in Storage Spaces Direct
 
->Applies to: Windows Server 2019, Windows Server 2016
+> Applies to: Windows Server 2019, Windows Server 2016
 
 This topic describes how to create volumes on a Storage Spaces Direct cluster by using Windows Admin Center, PowerShell, or Failover Cluster Manager.
 
-   >[!TIP]
-   >  If you haven't already, check out [Planning volumes in Storage Spaces Direct](plan-volumes.md) first.
+> [!TIP]
+> If you haven't already, check out [Planning volumes in Storage Spaces Direct](plan-volumes.md) first.
 
 ## Create a three-way mirror volume
 
@@ -100,14 +99,14 @@ The **New-Volume** cmdlet has four parameters you'll always need to provide:
 - **StoragePoolFriendlyName:** The name of your storage pool, for example *"S2D on ClusterName"*
 - **Size:** The size of the volume, for example *"10TB"*
 
-   >[!NOTE]
-   >  Windows, including PowerShell, counts using binary (base-2) numbers, whereas drives are often labeled using decimal (base-10) numbers. This explains why a "one terabyte" drive, defined as 1,000,000,000,000 bytes, appears in Windows as about "909 GB". This is expected. When creating volumes using **New-Volume**, you should specify the **Size** parameter in binary (base-2) numbers. For example, specifying "909GB" or "0.909495TB" will create a volume of approximately 1,000,000,000,000 bytes.
+   > [!NOTE]
+   > Windows, including PowerShell, counts using binary (base-2) numbers, whereas drives are often labeled using decimal (base-10) numbers. This explains why a "one terabyte" drive, defined as 1,000,000,000,000 bytes, appears in Windows as about "909 GB". This is expected. When creating volumes using **New-Volume**, you should specify the **Size** parameter in binary (base-2) numbers. For example, specifying "909GB" or "0.909495TB" will create a volume of approximately 1,000,000,000,000 bytes.
 
 ### Example: With 2 or 3 servers
 
 To make things easier, if your deployment has only two servers, Storage Spaces Direct will automatically use two-way mirroring for resiliency. If your deployment has only three servers, it will automatically use three-way mirroring.
 
-```
+```PowerShell
 New-Volume -FriendlyName "Volume1" -FileSystem CSVFS_ReFS -StoragePoolFriendlyName S2D* -Size 1TB
 ```
 
@@ -119,7 +118,7 @@ If you have four or more servers, you can use the optional **ResiliencySettingNa
 
 In the following example, *"Volume2"* uses three-way mirroring and *"Volume3"* uses dual parity (often called "erasure coding").
 
-```
+```PowerShell
 New-Volume -FriendlyName "Volume2" -FileSystem CSVFS_ReFS -StoragePoolFriendlyName S2D* -Size 1TB -ResiliencySettingName Mirror
 New-Volume -FriendlyName "Volume3" -FileSystem CSVFS_ReFS -StoragePoolFriendlyName S2D* -Size 1TB -ResiliencySettingName Parity
 ```
@@ -132,7 +131,7 @@ To help you create such volumes, Storage Spaces Direct provides default tier tem
 
 You can see them by running the **Get-StorageTier** cmdlet.
 
-```
+```PowerShell
 Get-StorageTier | Select FriendlyName, ResiliencySettingName, PhysicalDiskRedundancy
 ```
 
@@ -140,7 +139,7 @@ Get-StorageTier | Select FriendlyName, ResiliencySettingName, PhysicalDiskRedund
 
 To create tiered volumes, reference these tier templates using the **StorageTierFriendlyNames** and **StorageTierSizes** parameters of the **New-Volume** cmdlet. For example, the following cmdlet creates one volume which mixes three-way mirroring and dual parity in 30:70 proportions.
 
-```
+```PowerShell
 New-Volume -FriendlyName "Volume4" -FileSystem CSVFS_ReFS -StoragePoolFriendlyName S2D* -StorageTierFriendlyNames Performance, Capacity -StorageTierSizes 300GB, 700GB
 ```
 

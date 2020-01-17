@@ -7,7 +7,7 @@ ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 
 ms.technology: identity-adfs
 ---
@@ -66,7 +66,7 @@ For more information about how to use the claim rule language, see [The Role of 
   
 ## Using the claim rule language  
   
-### Example: How to combine first and last names based on a user’s name attribute values  
+### Example: How to combine first and last names based on a user's name attribute values  
 The following rule syntax combines first and last names from attribute values in a given attribute store. The policy engine forms a cartesian product of the matches for each condition. For example, the output for first name {“Frank”, “Alan”} and last names {“Miller”, “Shen”} is {“Frank Miller”, “Frank Shen”, “Alan Miller”, “Alan Shen”}:  
   
 ```  
@@ -87,7 +87,7 @@ count([type == “http://schemas.xmlsoap.org/claims/Reports“] ) > 0 => issue(=
 The following rule issues a Private Personal Identifier \(PPID\) claim based on the **windowsaccountname** and **originalissuer** attributes of users in an LDAP attribute store:  
   
 ```  
-c:[Type == "http://schemas.microsoft.com/ws/2008/06/identity/claims/windowsaccountname"]  
+c:[Type == "https://schemas.microsoft.com/ws/2008/06/identity/claims/windowsaccountname"]  
  => issue(store = "_OpaqueIdStore", types = ("http://schemas.xmlsoap.org/ws/2005/05/identity/claims/privatepersonalidentifier"), query = "{0};{1};{2}", param = "ppid", param = c.Value, param = c.OriginalIssuer);  
 ```  
   

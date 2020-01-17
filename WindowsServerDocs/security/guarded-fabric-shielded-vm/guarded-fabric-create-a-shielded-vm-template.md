@@ -1,7 +1,7 @@
 ---
 title: Create a Windows shielded VM template disk
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.topic: article
 ms.assetid: 9c8b84e8-1f5a-47a1-83ca-b1dbd801cb0b
 manager: dongill
@@ -12,7 +12,8 @@ ms.date: 01/29/2019
 
 # Create a Windows shielded VM template disk
 
->Applies to: Windows Server 2019, Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2019
+
 
 As with regular VMs, you can create a VM template (for example, a [VM template in Virtual Machine Manager (VMM)](https://technet.microsoft.com/system-center-docs/vmm/manage/manage-library-add-vm-templates)) to make it easy for tenants and administrators to deploy new VMs on the fabric using a template disk. Because shielded VMs are security-sensitive assets, there are additional steps to create a VM template that supports shielding. This topic covers the steps to create a shielded template disk and a VM template in VMM.
 
@@ -28,7 +29,7 @@ First prepare an OS disk that you will then run through the Shielded Template Di
 |Disk type must be **Basic** as opposed to **Dynamic**. <br>Note: This refers to the logical disk type, not the "dynamically expanding" VHDX feature supported by Hyper-V. | BitLocker does NOT support dynamic disks.|
 |The disk has at least two partitions. One partition must include the drive on which Windows is installed. This is the drive that BitLocker will encrypt. The other partition is the active partition, which contains the bootloader and remains unencrypted so that the computer can be started.|Needed for BitLocker|
 |File system is NTFS | Needed for BitLocker|
-|The operating system installed on the VHDX is one of the following:<br>- Windows Server 2016, Windows Server 2012 R2, or Windows Server 2012 <br>- Windows 10, Windows 8.1, Windows 8| Needed to support generation 2 virtual machines and the Microsoft Secure Boot template|
+|The operating system installed on the VHDX is one of the following:<br>- Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, or Windows Server 2012 <br>- Windows 10, Windows 8.1, Windows 8| Needed to support generation 2 virtual machines and the Microsoft Secure Boot template|
 |Operating system must be generalized (run sysprep.exe) | Template provisioning involves specializing VMs for a specific tenant's workload| 
 
 > [!NOTE]
@@ -45,7 +46,7 @@ To use a template disk with shielded VMs, the disk must be prepared and encrypte
 > [!NOTE]
 > The template disk wizard will modify the template disk you specify in-place. You may want to make a copy of the unprotected VHDX before running the wizard to make updates to the disk at a later time. You will not be able to modify a disk that has been protected with the template disk wizard.
 
-Perform the following steps on a computer running Windows Server 2016 (does not need to be a guarded host or a VMM server):
+Perform the following steps on a computer running Windows Server 2016, Windows 10 (with Remote Server Management Tools, RSAT installed) or later (does not need to be a guarded host or a VMM server):
 
 1. Copy the generalized VHDX created in [Prepare an operating system VHDX](#prepare-an-operating-system-vhdx) to the server, if it is not already there.
 
@@ -53,7 +54,7 @@ Perform the following steps on a computer running Windows Server 2016 (does not 
 
         Install-WindowsFeature RSAT-Shielded-VM-Tools -Restart
         
-    You can also administer the server from a client computer on which you have installed the [Windows 10 Remote Server Administration Tools](https://www.microsoft.com/en-us/download/details.aspx?id=45520).
+    You can also administer the server from a client computer on which you have installed the [Windows 10 Remote Server Administration Tools](https://www.microsoft.com/download/details.aspx?id=45520).
 
 3. Obtain or create a certificate to sign the VSC for the VHDX that will become the template disk for new shielded VMs. Details about this certificate will be shown to tenants when they create their shielding data files and are authorizing disks they trust. Therefore, it is important to obtain this certificate from a certificate authority mutually trusted by you and your tenants. In enterprise scenarios where you are both the hoster and tenant, you might consider issuing this certificate from your PKI.
 

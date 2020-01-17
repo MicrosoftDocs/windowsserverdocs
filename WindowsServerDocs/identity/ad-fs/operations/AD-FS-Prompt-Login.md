@@ -7,7 +7,7 @@ manager: femila
 ms.date: 06/27/2017
 ms.topic: article
 ms.custom: it-pro
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: identity-adfs
 ---
 
@@ -21,12 +21,12 @@ When applications need to request fresh authentication from Azure AD, meaning th
 
 When this request is for a federated user, Azure AD needs to inform the IdP, like AD FS, that the request is for fresh authentication.
 
-By default, Azure AD translates `prompt=login` to `wfresh=0` and `wauth=urn:oasis:names:tc:SAML:1.0:am:password` when sending this type of authentication requests to the federated IdP.
+By default, Azure AD translates `prompt=login` to `wfresh=0` and `wauth=https://schemas.microsoft.com/ws/2008/06/identity/authenticationmethod/password` when sending this type of authentication requests to the federated IdP.
 
 These parameters mean:
 
 - `wfresh=0`: do fresh authentication
-- `wauth=urn:oasis:names:tc:SAML:1.0:am:password`: use username/password for the fresh authentication request
+- `wauth=https://schemas.microsoft.com/ws/2008/06/identity/authenticationmethod/password`: use username/password for the fresh authentication request
 
 This can cause problems with corporate intranet and multi-factor authentication scenarios in which an authentication type other than username and password, as  requested by the `wauth` parameter, is desired.  
 
@@ -44,7 +44,7 @@ The following is a list of AD FS versions that support the `prompt=login` parame
 Use the Azure AD PowerShell module to configure the setting.
 
 > [!NOTE]
-> The `prompt=login` capability (enabled by the `PromptLoginBehavior` property) is currently available only in the [version 1.0 of the Azure AD Powershell module](https://connect.microsoft.com/site1164/Downloads/DownloadDetails.aspx?DownloadID=59185), in which the cmdlets have names that include “Msol”, such as Set-MsolDomainFederationSettings.  It is not currently available via ‘version 2.0’ of the Azure AD PowerShell module, whose cmdlets have names like “Set-AzureAD\*”.
+> The `prompt=login` capability (enabled by the `PromptLoginBehavior` property) is currently available only in the [version 1.0 of the Azure AD Powershell module](https://connect.microsoft.com/site1164/Downloads/DownloadDetails.aspx?DownloadID=59185), in which the cmdlets have names that include “Msol”, such as Set-MsolDomainFederationSettings.  It is not currently available via ‘version 2.0' of the Azure AD PowerShell module, whose cmdlets have names like “Set-AzureAD\*”.
 
 1. First obtain the current values of `PreferredAuthenticationProtocol`, `SupportsMfa`, and `PromptLoginBehavior` for the federated domain by running the following PowerShell command:
 
@@ -68,6 +68,6 @@ Use the Azure AD PowerShell module to configure the setting.
 
 Following are the possible values of `PromptLoginBehavior` parameter and their meaning:
 
-- **TranslateToFreshPasswordAuth**: means the default Azure AD behavior of translating `prompt=login` to `wauth=urn:oasis:names:tc:SAML:1.0:am:password` and `wfresh=0`.
+- **TranslateToFreshPasswordAuth**: means the default Azure AD behavior of translating `prompt=login` to `wauth=https://schemas.microsoft.com/ws/2008/06/identity/authenticationmethod/password` and `wfresh=0`.
 - **NativeSupport**: means that the `prompt=login` parameter will be sent as is to AD FS. This is the recommended value if AD FS is in Windows Server 2012 R2 with the July 2016 update rollup or higher.
 - **Disabled**: means that only `wfresh=0` is sent to AD FS.

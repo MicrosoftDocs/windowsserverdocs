@@ -2,7 +2,7 @@
 title: Group Managed Service Accounts Overview
 description: "Windows Server Security"
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: security-gmsa
@@ -61,7 +61,7 @@ The following table provides links to additional resources related to Managed Se
 |**Troubleshooting**|Not yet available|
 |**Evaluation**|[Getting Started with Group Managed Service Accounts](getting-started-with-group-managed-service-accounts.md)|
 |**Tools and settings**|[Managed Service Accounts in Active Directory Domain Services](https://technet.microsoft.com/library/dd378925(v=WS.10).aspx)|
-|**Community resources**|[Managed Service Accounts: Understanding, Implementing, Best Practices, and Troubleshooting](http://blogs.technet.com/b/askds/archive/2009/09/10/managed-service-accounts-understanding-implementing-best-practices-and-troubleshooting.aspx)|
+|**Community resources**|[Managed Service Accounts: Understanding, Implementing, Best Practices, and Troubleshooting](https://blogs.technet.com/b/askds/archive/2009/09/10/managed-service-accounts-understanding-implementing-best-practices-and-troubleshooting.aspx)|
 |**Related technologies**|[Active Directory Domain Services Overview](active-directory-domain-services-overview.md)|
 
 

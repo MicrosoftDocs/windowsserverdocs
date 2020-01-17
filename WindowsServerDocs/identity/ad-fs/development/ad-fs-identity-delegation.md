@@ -6,7 +6,7 @@ ms.author: billmath
 manager: mtillman
 ms.date: 02/22/2018
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 
 ms.technology: identity-adfs
 ---
@@ -38,12 +38,12 @@ The components involved in this scenario are:
 - sts2: An STS that is in the role of identity provider for Fabrikam.com and provides an end point that the Fabrikam employee uses to authenticate. It has established trust with Contoso.com so that Fabrikam employees are allowed to access resources on Contoso.com.
 
 >[!NOTE] 
->The term “ActAs token”, which is used often in this scenario, refers to a token that is issued by an STS and contains the user’s identity. The Actor property contains the STS’s identity.
+>The term “ActAs token”, which is used often in this scenario, refers to a token that is issued by an STS and contains the user's identity. The Actor property contains the STS's identity.
 
 As shown in the previous diagram, the flow in this scenario is:
 
 
-1. The Contoso application is configured to obtain an ActAs token that contains both the Fabrikam employee’s identity and the immediate caller’s identity in the Actor property. Daniel has implemented these changes to the application.
+1. The Contoso application is configured to obtain an ActAs token that contains both the Fabrikam employee's identity and the immediate caller's identity in the Actor property. Daniel has implemented these changes to the application.
 2. The Contoso application is configured to pass the ActAs token to the back-end service. Daniel has implemented these changes to the application.
 3. The Contoso Web service is configured to validate the ActAs token by calling sts1. Adam has enabled sts1 to process delegation requests.
 4. Fabrikam user Frank accesses the Contoso application and is given access to the back-end resources.
@@ -78,7 +78,7 @@ The following changes must be made to add support for identity delegation to an 
 
 - Cache the bootstrap token that web1 received from sts1.
 - Use CreateChannelActingAs with the issued token to create a channel to the back-end Web service.
-- Call the back-end service’s method.
+- Call the back-end service's method.
 
 ## Cache the Bootstrap Token
 
@@ -95,9 +95,9 @@ if ( claimsPrincipal != null )
     bootstrapToken = claimsIdentity.BootstrapToken;
 }
 ```
-WIF provides a method, [CreateChannelActingAs](https://msdn.microsoft.com/library/ee733863.aspx), that creates a channel of the specified type that augments token issuance requests with the specified security token as an ActAs element. You can pass the bootstrap token to this method and then call the necessary service method on the returned channel. In this sample scenario, Frank’s identity has the [Actor](https://msdn.microsoft.com/library/microsoft.identitymodel.claims.iclaimsidentity.actor.aspx) property set to web1’s identity.
+WIF provides a method, [CreateChannelActingAs](https://msdn.microsoft.com/library/ee733863.aspx), that creates a channel of the specified type that augments token issuance requests with the specified security token as an ActAs element. You can pass the bootstrap token to this method and then call the necessary service method on the returned channel. In this sample scenario, Frank's identity has the [Actor](https://msdn.microsoft.com/library/microsoft.identitymodel.claims.iclaimsidentity.actor.aspx) property set to web1's identity.
 
-The following code snippet shows how to call to the Web service with [CreateChannelActingAs](https://msdn.microsoft.com/library/ee733863.aspx) and then call one of the service’s methods, ComputeResponse, on the returned channel:
+The following code snippet shows how to call to the Web service with [CreateChannelActingAs](https://msdn.microsoft.com/library/ee733863.aspx) and then call one of the service's methods, ComputeResponse, on the returned channel:
 
 ```
 // Get the channel factory to the backend service from the application state

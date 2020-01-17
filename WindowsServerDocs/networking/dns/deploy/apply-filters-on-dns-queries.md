@@ -2,7 +2,7 @@
 title: Use DNS Policy for Applying Filters on DNS Queries
 description: This topic is part of the DNS Policy Scenario Guide for Windows Server 2016
 manager: brianlic
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: networking-dns
 ms.topic: article
 ms.assetid: b86beeac-b0bb-4373-b462-ad6fa6cbedfa
@@ -70,7 +70,7 @@ Add-DnsServerQueryResolutionPolicy -Name "BlockListPolicyMalicious06" -Action IG
 `
 
 ## <a name="bkmk_block3"></a>Block a type of query
-You might need to block name resolution for certain types of queries on your servers. For example, you can block the ‘ANY’ query, which can be used maliciously to create amplification attacks.
+You might need to block name resolution for certain types of queries on your servers. For example, you can block the 'ANY' query, which can be used maliciously to create amplification attacks.
 
 `
 Add-DnsServerQueryResolutionPolicy -Name "BlockListPolicyQType" -Action IGNORE -QType "EQ,ANY" -PassThru

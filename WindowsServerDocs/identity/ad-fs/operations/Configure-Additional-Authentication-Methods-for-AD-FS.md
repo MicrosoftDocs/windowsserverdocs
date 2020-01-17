@@ -5,9 +5,9 @@ description:
 author: billmath
 ms.author: billmath
 manager: femila
-ms.date: 10/04/2018
+ms.date: 07/26/2019
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 
 ms.technology: identity-adfs
 ---
@@ -19,7 +19,7 @@ In order to enable multi-factor authentication (MFA), you must select at least o
 > [!NOTE]
 > If you select Certificate Authentication, ensure that the smart card certificates have been provisioned securely and have pin requirements.
 
-Did you know that Microsoft Azure provides similar functionality in the cloud? Learn more about [Microsoft Azure identity solutions](http://aka.ms/m2w274).<br /><br />Create a hybrid identity solution in Microsoft Azure:<br /> - [Learn about Azure Multi-Factor Authentication.](http://aka.ms/ey6o9r)<br /> - [Manage identities for single-forest hybrid environments using cloud authentication.](http://aka.ms/g1jat8)<br /> - [Manage Risk with Additional Multi-Factor Authentication for Sensitive Applications.](http://aka.ms/kt1bbm)
+Did you know that Microsoft Azure provides similar functionality in the cloud? Learn more about [Microsoft Azure identity solutions](https://aka.ms/m2w274).<br /><br />Create a hybrid identity solution in Microsoft Azure:<br /> - [Learn about Azure Multi-Factor Authentication.](https://aka.ms/ey6o9r)<br /> - [Manage identities for single-forest hybrid environments using cloud authentication.](https://aka.ms/g1jat8)<br /> - [Manage Risk with Additional Multi-Factor Authentication for Sensitive Applications.](https://aka.ms/kt1bbm)
 
 ## Microsoft and third-party additional authentication methods
 You can also configure and enable Microsoft and third-party authentication methods in AD FS in Windows Server 2012 R2. Once installed and registered with AD FS, you can enforce MFA as part of the global or per-relying-party authentication policy.
@@ -30,6 +30,7 @@ Below is an alphabetical list of Microsoft and third-party providers with MFA of
 |-|-|-| 
 |aPersona|aPersona Adaptive Multi-Factor Authentication for Microsoft ADFS SSO|[aPersona ASM ADFS Adapter](https://www.apersona.com/adfs)|
 |Duo Security|Duo MFA Adapter for AD FS|[Duo Authentication for AD FS](https://duo.com/docs/adfs)|
+|Futurae|Futurae Authentication Suite for AD FS|[Futurae Strong Authentication](https://futurae.com)|
 |Gemalto|Gemalto Identity & Security Services|[http://www.gemalto.com/identity](http://www.gemalto.com/identity)|
 |inWebo Technologies|inWebo Enterprise Authentication service|[inWebo Enterprise Authentication](http://www.inwebo.com)|
 |Login People|Login People MFA API connector for AD FS 2012 R2 (public beta)|[https://www.loginpeople.com](https://www.loginpeople.com)|

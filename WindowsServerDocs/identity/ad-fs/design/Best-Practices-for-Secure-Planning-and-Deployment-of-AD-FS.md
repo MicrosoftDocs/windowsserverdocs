@@ -7,7 +7,7 @@ ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 
 ms.technology: identity-adfs
 ---
@@ -19,7 +19,12 @@ This topic provides best-practice information to help you plan and evaluate secu
   
 ## Core security best practices for AD FS  
 The following core best practices are common to all AD FS installations where you want to improve or extend the security of your design or deployment:  
-  
+
+-   **Secure AD FS as a "Tier 0" system** 
+
+    AD FS is, fundamentally, an authentication system.  Thus, it should be treated as a "Tier 0" system like other identity system on your network.  [Microsoft Docs](https://docs.microsoft.com/windows-server/identity/securing-privileged-access/securing-privileged-access-reference-material) has more information on the Active Directory administrative tier model. 
+
+
 -   **Use the Security Configuration Wizard to apply AD FS-specific security best practices to federation servers and federation server proxy computers**  
   
     The Security Configuration Wizard (SCW) is a tool that comes preinstalled on all Windows Server 2008, Windows Server 2008 R2 and  Windows Server 2012  computers. You can use it to apply security best practices that can help reduce the attack surface for a server, based on the server roles that you are installing.  

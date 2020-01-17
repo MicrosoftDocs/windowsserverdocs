@@ -1,7 +1,7 @@
 ---
 title: PowerShell module authoring considerations
 description: PowerShell module authoring considerations
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: performance-tuning-guide
 ms.topic: article
 ms.author: JasonSh

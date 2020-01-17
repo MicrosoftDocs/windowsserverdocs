@@ -7,7 +7,7 @@ ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 
 ms.technology: identity-adfs
 ---
@@ -17,7 +17,7 @@ ms.technology: identity-adfs
 ## What is identity delegation?  
 Identity delegation is a feature of Active Directory Federation Services \(AD FS\) that allows administrator\-specified accounts to impersonate users. The account that impersonates the user is called the *delegate*. This delegation capability is critical for many distributed applications for which there is a series of access control checks that must be made sequentially for each application, database, or service that is in the authorization chain for the originating request. Many real\-world scenarios exist in which a Web application “front end” must retrieve data from a more secure “back end”, such as a Web service that is connected to a Microsoft SQL Server database.  
   
-For example, an existing parts\-ordering Web site can be enhanced programmatically so that it allows partner organizations to view their own purchase history and account status. For security reasons, all partner financial data is stored in a secure database on a dedicated Structured Query Language \(SQL\) server. In this situation, the code in the front\-end application knows nothing about the partner organization’s financial data. Therefore, it must retrieve that data from another computer elsewhere on the network that hosts \(in this case\) the Web service for the parts database \(the back end\).  
+For example, an existing parts\-ordering Web site can be enhanced programmatically so that it allows partner organizations to view their own purchase history and account status. For security reasons, all partner financial data is stored in a secure database on a dedicated Structured Query Language \(SQL\) server. In this situation, the code in the front\-end application knows nothing about the partner organization's financial data. Therefore, it must retrieve that data from another computer elsewhere on the network that hosts \(in this case\) the Web service for the parts database \(the back end\).  
   
 For this data\-retrieval process to succeed, some succession of authorization “hand\-shaking” must take place between the Web application and the Web service for the parts database, as shown in the following illustration.  
   
@@ -32,7 +32,7 @@ Web applications in multitier application architectures often call Web services 
   
 1.  Frank attempts to access part\-ordering history from a Web application in another organization. His client computer requests and receives a token from AD FS for the front\-end part\-ordering Web application.  
   
-2.  The client computer sends a request to the Web application, including the token obtained in step 1, to prove the client’s identity.  
+2.  The client computer sends a request to the Web application, including the token obtained in step 1, to prove the client's identity.  
   
 3.  The Web application needs to communicate with the Web service to complete its transaction for the client. The Web application contacts AD FS to obtain a delegation token to interact with the Web service. Delegation tokens are security tokens that are issued to a delegate to act as a user. AD FS returns a delegation token with claims about the client, targeted for the Web service.  
   

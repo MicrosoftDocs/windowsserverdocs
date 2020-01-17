@@ -6,7 +6,7 @@ ms.author: billmath
 manager: samueld
 ms.date: 10/23/2017
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: identity-adfs
 ---
 
@@ -33,7 +33,7 @@ If AD FS is not configured to renew token signing and token decrypting certifica
     
 If AD FS is configured to renew token signing and token decrypting certificates automatically (AutoCertificateRollover is set to TRUE), you can determine when they will be renewed:
 
-CertificateGenerationThreshold describes how many days in advance of the certificate’s Not After date a new certificate will be generated.
+CertificateGenerationThreshold describes how many days in advance of the certificate's Not After date a new certificate will be generated.
 
 CertificatePromotionThreshold determines how many days after the new certificate is generated that it will be promoted to be the primary certificate (in other words, AD FS will start using it to sign tokens it issues and decrypt tokens from identity providers).
 
@@ -41,7 +41,7 @@ CertificatePromotionThreshold determines how many days after the new certificate
   
 If AD FS is configured to renew token signing and token decrypting certificates automatically (AutoCertificateRollover is set to TRUE), you can determine when they will be renewed:
 
- - **CertificateGenerationThreshold** describes how many days in advance of the certificate’s Not After date a new certificate will be generated.
+ - **CertificateGenerationThreshold** describes how many days in advance of the certificate's Not After date a new certificate will be generated.
  - **CertificatePromotionThreshold** determines how many days after the new certificate is generated that it will be promoted to be the primary certificate (in other words, AD FS will start using it to sign tokens it issues and decrypt tokens from identity providers).
 
 ## Determine when the current certificates expire
@@ -70,7 +70,7 @@ You can use the following steps to generate a new self-signed certificate manual
 >[!IMPORTANT]
 >To avoid a service outage, update the certificate information on Azure AD by running the steps in the How to update Azure AD with a valid token-signing certificate.
 
-## If you’re not using self-signed certificates…
+## If you're not using self-signed certificates…
 If you are not using the default automatically generated, self-signed token signing and token decryption certificates, you must renew and configure these certificates manually.
 
 First, you must obtain a new certificate from your certificate authority and import it into the local machine personal certificate store on each federation server. For instructions, see the [Import a Certificate](https://technet.microsoft.com/library/cc754489.aspx) article.
@@ -89,7 +89,7 @@ Then you must configure this certificate as the secondary AD FS token signing or
 >[!WARNING]
 >Ensure the new certificate has a private key associated with it and that the AD FS service account is granted Read permissions to the private key. Verify this on each federation server. To do so, in the Certificates snap-in, right-click the new certificate, click All Tasks, and then click Manage Private Keys.
 
-Once you’ve allowed enough time for your federation partners to consume your new certificate (either they pull your federation metadata or you send them the public key of your new certificate), you must promote the secondary certificate to primary certificate.
+Once you've allowed enough time for your federation partners to consume your new certificate (either they pull your federation metadata or you send them the public key of your new certificate), you must promote the secondary certificate to primary certificate.
 
 ### To promote the new certificate from secondary to primary
 

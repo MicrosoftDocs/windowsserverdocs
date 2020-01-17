@@ -26,8 +26,8 @@ You must always use master as your base for any new branch.
 | `git branch` | See your existing branches |
 | `git checkout -B <name-of-branch>` | Create a new branch |
 | `git checkout <name-of-branch>` | Change to another branch |
-| `git status` | Check what’s going on in your branch |
-| `git branch -D <name-of-branch>` | Delete an existing branch (making sure you’re not in it) |
+| `git status` | Check what's going on in your branch |
+| `git branch -D <name-of-branch>` | Delete an existing branch (making sure you're not in it) |
 
 ## Check-in-related (done as a group, in order)
 

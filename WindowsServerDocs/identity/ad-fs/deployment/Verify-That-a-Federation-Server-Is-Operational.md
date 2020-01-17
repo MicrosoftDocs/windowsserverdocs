@@ -6,7 +6,7 @@ author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: identity-adfs
 ms.author: billmath
 ---
@@ -22,11 +22,11 @@ Membership in **Users**, **Backup Operators**, **Power Users**, **Administrators
   
 1.  To verify that Internet Information Services \(IIS\) is configured correctly on the federation server, log on to a client computer that is located in the same forest as the federation server.  
   
-2.  Open a browser window, in the address bar type the federation server’s DNS host name, and then append /adfs/fs/federationserverservice.asmx to it for the new federation server, for example:  
+2.  Open a browser window, in the address bar type the federation server's DNS host name, and then append /adfs/fs/federationserverservice.asmx to it for the new federation server, for example:  
   
     **https://fs1.fabrikam.com/adfs/fs/federationserverservice.asmx**  
   
-3.  Press ENTER, and then complete the next procedure on the federation server computer. If you see the message **There is a problem with this website’s security certificate**, click **Continue to this website**.  
+3.  Press ENTER, and then complete the next procedure on the federation server computer. If you see the message **There is a problem with this website's security certificate**, click **Continue to this website**.  
   
     The expected output is a display of XML with the service description document. If this page appears, IIS on the federation server is operational and serving pages successfully.  
   

@@ -1,7 +1,7 @@
 ---
 title: Best Practices for running Linux on Hyper-V
 description: "Provides recommendations for running Linux on a virtual machine"
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.service: na
 manager: dongill
 ms.technology: compute-hyper-v
@@ -96,6 +96,6 @@ After resizing a VHD or VHDX, administrators should use a utility like fdisk or 
 
 * [Deploy a Hyper-V Cluster](https://technet.microsoft.com/library/jj863389.aspx)
 
-* [Create Linux Images for Azure](https://docs.microsoft.com/en-us/azure/virtual-machines/linux/create-upload-generic)
+* [Create Linux Images for Azure](https://docs.microsoft.com/azure/virtual-machines/linux/create-upload-generic)
 
-* [Optimize your Linux VM on Azure](https://docs.microsoft.com/en-us/azure/virtual-machines/linux/optimization)
+* [Optimize your Linux VM on Azure](https://docs.microsoft.com/azure/virtual-machines/linux/optimization)

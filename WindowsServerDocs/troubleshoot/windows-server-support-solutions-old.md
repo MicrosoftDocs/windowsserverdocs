@@ -1,7 +1,7 @@
 ---
 title: Top support solutions for Windows Server
 description: Get links to solutions for Windows Server issues
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.service: na
 manager: alant
 ms.technology: server-general
@@ -13,7 +13,7 @@ ms.author: elizapo
 
 # Top support solutions for Windows Server 2016
 
-Microsoft regularly releases both updates and solutions for Windows Server. To ensure your servers can receive future updates, including security updates, it's important to keep your servers updated. Check out [Windows 10 and Windows Server 2016 update history](https://support.microsoft.com/en-us/help/4000825/windows-10-windows-server-2016-update-history) for a complete list of released updates.
+Microsoft regularly releases both updates and solutions for Windows Server. To ensure your servers can receive future updates, including security updates, it's important to keep your servers updated. Check out [Windows 10 and Windows Server 2016 update history](https://support.microsoft.com/help/4000825/windows-10-windows-server-2016-update-history) for a complete list of released updates.
 
 These are the top Microsoft Support solutions for the most common issues experienced when using Windows Server 2016. The links below include links to KB articles, updates, and library articles.
 
@@ -22,15 +22,15 @@ These are the top Microsoft Support solutions for the most common issues experie
 
 ## Solutions for installing or upgrading Windows Server
 
-- [Resolve Windows 10 upgrade errors : Technical information for IT Pros](\windows\deployment\upgrade\resolve-windows-10-upgrade-errors)
-- [Servicing stack update for Windows 10 Version 1607 and Windows Server 2016: August 8, 2017](https://support.microsoft.com/en-US/help/4035631)
-- [Compatibility update for upgrading to Windows 10 Version 1607 and Windows Server 2016: August 3, 2017](https://support.microsoft.com/en-US/help/4033524)
-- [An in-place system upgrade is not supported on Windows-based Azure VMs](https://support.microsoft.com/en-US/help/4014997)
-- [Upgrade and conversion options for Windows Server 2016](..\get-started\supported-upgrade-paths.md)
-- [Server role upgrade and migration matrix for Windows Server 2016](..\get-started\server-role-upgradeability-table.md)
-- [Windows Server Installation and Upgrade](..\get-started\installation-and-upgrade.md)
-- [Release Notes: Important Issues in Windows Server 2016](..\get-started\windows-server-2016-ga-release-notes.md)
-- [Recommendations for moving to Windows Server 2016](..\get-started\recommendations-moving-to-server2016.md)
+- [Resolve Windows 10 upgrade errors : Technical information for IT Pros](https://docs.microsoft.com/windows/deployment/upgrade/resolve-windows-10-upgrade-errors)
+- [Servicing stack update for Windows 10 Version 1607 and Windows Server 2016: August 8, 2017](https://support.microsoft.com/help/4035631)
+- [Compatibility update for upgrading to Windows 10 Version 1607 and Windows Server 2016: August 3, 2017](https://support.microsoft.com/help/4033524)
+- [An in-place system upgrade is not supported on Windows-based Azure VMs](https://support.microsoft.com/help/4014997)
+- [Upgrade and conversion options for Windows Server 2016](../get-started/supported-upgrade-paths.md)
+- [Server role upgrade and migration matrix for Windows Server 2016](../get-started/server-role-upgradeability-table.md)
+- [Windows Server Installation and Upgrade](../get-started/installation-and-upgrade.md)
+- [Release Notes: Important Issues in Windows Server 2016](../get-started/windows-server-2016-ga-release-notes.md)
+- [Recommendations for moving to Windows Server 2016](../get-started/recommendations-moving-to-server2016.md)
 
 ## Solutions for Volume Activation
 - [Windows Server 2016 Activation](../get-started/server-2016-activation.md)
@@ -43,7 +43,7 @@ These are the top Microsoft Support solutions for the most common issues experie
 
 ## Solutions related to DCPromo and installing domain controllers
 - [Active Directory and Active Directory Domain Services Port Requirements](https://technet.microsoft.com/library/dd772723(v=ws.10).aspx)
-- [Active Directory Firewall Ports – Let’s Try To Make This Simple](http://blogs.msmvps.com/acefekay/2011/11/01/active-directory-firewall-ports-let-s-try-to-make-this-simple/)
+- [Active Directory Firewall Ports – Let's Try To Make This Simple](http://blogs.msmvps.com/acefekay/2011/11/01/active-directory-firewall-ports-let-s-try-to-make-this-simple/)
 - [Exchange Server support for Windows Server 2016](https://technet.microsoft.com/library/ff728623(v=exchg.150).aspx)
 - [Using Ntdsutil.exe to transfer or seize FSMO roles to a domain controller](https://support.microsoft.com/kb/255504)
 - [Troubleshooting Domain Controller Deployment](../identity/ad-ds/deploy/troubleshooting-domain-controller-deployment.md)

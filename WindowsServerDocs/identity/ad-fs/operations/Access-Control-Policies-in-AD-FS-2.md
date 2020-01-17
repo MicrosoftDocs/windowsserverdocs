@@ -7,7 +7,7 @@ ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: identity-adfs
 ---
 # Client Access Control policies in AD FS 2.0
@@ -19,7 +19,7 @@ To enable client access policy, follow the steps below.
 
 ### Step 1: Install the Update Rollup 2 for AD FS 2.0 package on your AD FS servers
 
-Download the [Update Rollup 2 for Active Directory Federation Services (AD FS) 2.0](https://support.microsoft.com/en-us/help/2681584/description-of-update-rollup-2-for-active-directory-federation-services-ad-fs-2.0) package and install it on all federation server and federation server proxies.
+Download the [Update Rollup 2 for Active Directory Federation Services (AD FS) 2.0](https://support.microsoft.com/help/2681584/description-of-update-rollup-2-for-active-directory-federation-services-ad-fs-2.0) package and install it on all federation server and federation server proxies.
 
 ### Step 2: Add five claim rules to the Active Directory Claims Provider trust
 
@@ -182,7 +182,7 @@ The x-ms-forwarded-client-ip claim is populated from an HTTP header that is curr
 A single IP address: The IP address of the client that is directly connected to Exchange Online
 
 >[!Note] 
->The IP address of a client on the corporate network will appear as the external interface IP address of the organization’s outbound proxy or gateway.
+>The IP address of a client on the corporate network will appear as the external interface IP address of the organization's outbound proxy or gateway.
 
 Clients that are connected to the corporate network by a VPN or by Microsoft DirectAccess (DA) may appear as internal corporate clients or as external clients depending upon the configuration of VPN or DA.
 
@@ -226,7 +226,7 @@ The following matches the ranges required for the portion of the address after t
 - |2[0-5]) Matches addresses ending in 20-25
 
 >[!Note]
->The parentheses must be correctly positioned, so that you don’t start matching other portions of IP addresses.
+>The parentheses must be correctly positioned, so that you don't start matching other portions of IP addresses.
 
 With the 192 block matched, we can write a similar expression for the 10 block: \b10\.0\.0\.([1-9]|1[0-4])\b
 
@@ -236,7 +236,7 @@ And putting them together, the following expression should match all the address
 
 Regex expressions can become quite tricky, so we highly recommend using a regex verification tool. If you do an internet search for “online regex expression builder”, you will find several good online utilities that will allow you to try out your expressions against sample data.
 
-When testing the expression, it’s important that you understand what to expect to have to match. The Exchange online system may send many IP addresses, separated by commas. The expressions provided above will work for this. However, it’s important to think about this when testing your regex expressions. For example, one might use the following sample input to verify the examples above: 
+When testing the expression, it's important that you understand what to expect to have to match. The Exchange online system may send many IP addresses, separated by commas. The expressions provided above will work for this. However, it's important to think about this when testing your regex expressions. For example, one might use the following sample input to verify the examples above: 
 
 192.168.1.1, 192.168.1.2, 192.169.1.1. 192.168.12.1, 192.168.1.10, 192.168.1.25, 192.168.1.26, 192.168.1.30, 1192.168.1.20 
 

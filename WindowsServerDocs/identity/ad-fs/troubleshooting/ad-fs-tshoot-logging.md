@@ -6,7 +6,7 @@ ms.author: billmath
 manager: mtillman
 ms.date: 02/21/2018
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: identity-adfs
 ---
 
@@ -52,9 +52,9 @@ The table below explains the available auditing levels.
 
 |Audit Level|PowerShell syntax|Description|  
 |----- | ----- | ----- |
-|None|Set-AdfsProperties - AuditLevel None|Auditing is disabled and no events will be logged.|  
-|Basic (Default)|Set-AdfsProperties - AuditLevel Basic|No more than 5 events will be logged for a single request|  
-|Verbose|Set-AdfsProperties - AuditLevel Verbose|All events will be logged.  This will log a significant amount of information per request.|  
+|None|Set-AdfsProperties -AuditLevel None|Auditing is disabled and no events will be logged.|  
+|Basic (Default)|Set-AdfsProperties -AuditLevel Basic|No more than 5 events will be logged for a single request|  
+|Verbose|Set-AdfsProperties -AuditLevel Verbose|All events will be logged.  This will log a significant amount of information per request.|  
   
 To view the current auditing level, you can use the PowerShell cmdlt:  Get-AdfsProperties.  
   
@@ -130,21 +130,21 @@ To help with this, AD FS correlates all events that are recorded to the Event Vi
 This activity ID remains the same for the entire duration of the request, and is logged as part of every event recorded in the Event Viewer for that request. This means:
  - that filtering or searching the Event Viewer using this activity ID can help keep track of all related events that correspond to the token request
  - the same activity ID is logged across different machines which allows you to troubleshooting a user request across multiple machines such as the Federation Server proxy (FSP)
- - the activity ID will also appear in the user’s browser if the AD FS request fails in any way, thus allowing the user to communicate this ID to help desk or IT Support.
+ - the activity ID will also appear in the user's browser if the AD FS request fails in any way, thus allowing the user to communicate this ID to help desk or IT Support.
 
 ![activityid](media/ad-fs-tshoot-logging/activityid2.png)
 
 To aid in the troubleshooting process, AD FS also logs the caller ID event whenever the token-issuance process fails on an AD FS server. This event contains the claim type and value of one of the following claim types, assuming that this information was passed to the Federation Service as part of a token request:
-- http://schemas.microsoft.com/ws/2008/06/identity/claims/windowsaccountnameh
+- https://schemas.microsoft.com/ws/2008/06/identity/claims/windowsaccountnameh
 - http://schemas.xmlsoap.org/ws/2005/05/identity/claims/nameidentifier
 - http://schemas.xmlsoap.org/ws/2005/05/identity/claims/upnh
-- http://schemas.microsoft.com/ws/2008/06/identity/claims/upn
+- https://schemas.microsoft.com/ws/2008/06/identity/claims/upn
 - http://schemas.xmlsoap.org/claims/UPN
 - http://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddressh
-- http://schemas.microsoft.com/ws/2008/06/identity/claims/emailaddress 
+- https://schemas.microsoft.com/ws/2008/06/identity/claims/emailaddress 
 - http://schemas.xmlsoap.org/claims/EmailAddress
 - http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name
-- http://schemas.microsoft.com/ws/2008/06/identity/claims/name
+- https://schemas.microsoft.com/ws/2008/06/identity/claims/name
 - http://schemas.xmlsoap.org/ws/2005/05/identity/claims/privatepersonalidentifier 
 
 The caller ID event also logs the activity ID to allow you to use that activity ID to filter or search the event logs for a particular request.

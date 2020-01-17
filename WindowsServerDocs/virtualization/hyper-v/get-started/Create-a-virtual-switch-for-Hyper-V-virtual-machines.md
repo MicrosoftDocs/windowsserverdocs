@@ -1,7 +1,7 @@
 ---
 title: Create a virtual switch for Hyper-V virtual machines
 description: "Gives instructions on creating a virtual switch using Hyper-V Manager or Windows PowerShell"
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.service: na
 manager: dongill
 ms.technology: compute-hyper-v
@@ -49,7 +49,7 @@ Virtual machine networking can be a complex subject. And there are several new v
     |Allow management operating system to share this network adapter|Select this option if you want to allow the Hyper-V host to share the use of the virtual switch and NIC or NIC team with the virtual machine. With this enabled, the host can use any of the settings that you configure for the virtual switch like Quality of Service (QoS) settings, security settings, or other features of the Hyper-V virtual switch.|  
     |Enable single-root I/O virtualization (SR-IOV)|Select this option only if  you want to allow virtual machine traffic to bypass the virtual machine switch and go directly to the physical NIC. For more information, see [Single-Root I/O Virtualization](https://technet.microsoft.com/library/dn641211.aspx#Sec4) in the Poster Companion Reference: Hyper-V Networking.|  
   
-7.  If you want to isolates network traffic from the management Hyper-V host operating system or other virtual machines that share the same virtual switch, select **Enable virtual LAN identification for management operating system**. You can change the VLAN ID to any number or leave the default. This is the virtual LAN identification number that the management operating system will use for all network communication through this virtual switch.  
+7.  If you want to isolate network traffic from the management Hyper-V host operating system or other virtual machines that share the same virtual switch, select **Enable virtual LAN identification for management operating system**. You can change the VLAN ID to any number or leave the default. This is the virtual LAN identification number that the management operating system will use for all network communication through this virtual switch.  
   
     ![Screenshot that shows the VLAN ID options](../media/Hyper-V-NewSwitch-VLAN.png)  
   

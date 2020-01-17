@@ -1,13 +1,13 @@
 ---
 title: Troubleshooting the Host Guardian Service
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.topic: article
 ms.assetid: 80ea38f4-4de6-4f85-8188-33a63bb1cf81
 manager: dongill
 author: rpsqrd
 ms.technology: security-guarded-fabric
-ms.date: 08/29/2018
+ms.date: 09/25/2019
 ---
 
 # Troubleshooting Guarded Hosts
@@ -52,7 +52,6 @@ TpmError                  | The host could not complete its last attestation att
 UnauthorizedHost          | The host did not pass attestation becuase it was not authorized to run shielded VMs. Ensure the host belongs to a security group trusted by HGS to run shielded VMs.
 Unknown                   | The host has not attempted to attest with HGS yet.
 
-
 When **AttestationStatus** is reported as **InsecureHostConfiguration**, one or more reasons will be populated in the **AttestationSubStatus** field.
 The table below explains the possible values for AttestationSubStatus and tips on how to resolve the problem.
 
@@ -72,3 +71,20 @@ SecureBoot                 | Secure Boot is either not enabled on this host or n
 SecureBootSettings         | The TPM baseline on this host does not match any of those trusted by HGS. This can occur when your UEFI launch authorities, DBX variable, debug flag, or custom Secure Boot policies are changed by installing new hardware or software. If you trust the current hardware, firmware, and software configuration of this machine, you can [capture a new TPM baseline](guarded-fabric-tpm-trusted-attestation-capturing-hardware.md#capture-the-tpm-baseline-for-each-unique-class-of-hardware) and [register it with HGS](guarded-fabric-manage-hgs.md#authorizing-new-guarded-hosts).
 TcgLogVerification         | The TCG log (TPM baseline) cannot be obtained or verified. This can indicate a problem with the host's firmware, the TPM, or other hardware components. If your host is configured to attempt PXE boot before booting Windows, an outdated Net Boot Program (NBP) can also cause this error. Ensure all NBPs are up to date when PXE boot is enabled.
 VirtualSecureMode          | Virtualization Based Security features are not running on the host. Ensure VBS is enabled and that your system meets the configured [platform security features](https://technet.microsoft.com/itpro/windows/keep-secure/deploy-device-guard-enable-virtualization-based-security#validate-enabled-device-guard-hardware-based-security-features). Consult the [Device Guard documentation](https://technet.microsoft.com/itpro/windows/keep-secure/device-guard-deployment-guide) for more information about VBS requirements.
+
+## Modern TLS
+
+If you've deployed a group policy or otherwise configured your Hyper-V host to prevent the use of TLS 1.0, you may encounter "the Host Guardian Service Client failed to unwrap a Key Protector on behalf of a calling process" errors when trying to start up a shielded VM.
+This is due to a default behavior in .NET 4.6 where the system default TLS version is not considered when negotiating supported TLS versions with the HGS server.
+
+To work around this behavior, run the following two commands to configure .NET to use the system default TLS versions for all .NET apps.
+
+```cmd
+reg add HKLM\SOFTWARE\Microsoft\.NETFramework\v4.0.30319 /v SystemDefaultTlsVersions /t REG_DWORD /d 1 /f /reg:64
+reg add HKLM\SOFTWARE\Microsoft\.NETFramework\v4.0.30319 /v SystemDefaultTlsVersions /t REG_DWORD /d 1 /f /reg:32
+```
+
+> [!WARNING]
+> The system default TLS versions setting will affect all .NET apps on your machine. Be sure to test the registry keys in an isolated environment before deploying them to your production machines.
+
+For more information about .NET 4.6 and TLS 1.0, see [Solving the TLS 1.0 Problem, 2nd Edition](https://docs.microsoft.com/security/solving-tls1-problem).

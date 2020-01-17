@@ -1,7 +1,7 @@
 ---
 title: Performance Tuning for SMB File Servers
 description: Performance Tuning for SMB File Servers
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: performance-tuning-guide
 ms.topic: article
 author: phstee
@@ -48,7 +48,7 @@ For more info about SMB Multichannel, see [Deploy SMB Multichannel](https://aka.
 
 SMB Scale-out allows SMB 3.0 in a cluster configuration to show a share in all nodes of a cluster. This active/active configuration makes it possible to scale file server clusters further, without a complex configuration with multiple volumes, shares and cluster resources. The maximum share bandwidth is the total bandwidth of all file server cluster nodes. The total bandwidth is no longer limited by the bandwidth of a single cluster node, but rather depends on the capability of the backing storage system. You can increase the total bandwidth by adding nodes.
 
-For more info about SMB Scale-Out, see [Scale-Out File Server for Application Data Overview](https://technet.microsoft.com/library/hh831349.aspx) and the blog post [To scale out or not to scale out, that is the question](http://blogs.technet.com/b/filecab/archive/2013/12/05/to-scale-out-or-not-to-scale-out-that-is-the-question.aspx).
+For more info about SMB Scale-Out, see [Scale-Out File Server for Application Data Overview](https://technet.microsoft.com/library/hh831349.aspx) and the blog post [To scale out or not to scale out, that is the question](https://blogs.technet.com/b/filecab/archive/2013/12/05/to-scale-out-or-not-to-scale-out-that-is-the-question.aspx).
 
 ### Performance counters for SMB 3.0
 
@@ -58,7 +58,7 @@ The following SMB performance counters were introduced in Windows Server 2012, 
 
     These counters display information about file shares on the server that are being accessed by a client that is using SMB 2.0 or higher versions.
 
-    If you' re familiar with the regular disk counters in Windows, you might notice a certain resemblance. That' s not by accident. The SMB client shares performance counters were designed to exactly match the disk counters. This way you can easily reuse any guidance on application disk performance tuning you currently have. For more info about counter mapping, see [Per share client performance counters blog](http://blogs.technet.com/b/josebda/archive/2012/11/19/windows-server-2012-file-server-tip-new-per-share-smb-client-performance-counters-provide-great-insight.aspx).
+    If you' re familiar with the regular disk counters in Windows, you might notice a certain resemblance. That' s not by accident. The SMB client shares performance counters were designed to exactly match the disk counters. This way you can easily reuse any guidance on application disk performance tuning you currently have. For more info about counter mapping, see [Per share client performance counters blog](https://blogs.technet.com/b/josebda/archive/2012/11/19/windows-server-2012-file-server-tip-new-per-share-smb-client-performance-counters-provide-great-insight.aspx).
 
 -   **SMB Server Shares**
 
@@ -80,7 +80,7 @@ The following SMB performance counters were introduced in Windows Server 2012, 
 
 -   **Physical Disk, SMB, CSV FS performance counters relationships**
 
-    For more info on how Physical Disk, SMB, and CSV FS (file system) counters are related, see the following blog post: [Cluster Shared Volume Performance Counters](http://blogs.msdn.com/b/clustering/archive/2014/06/05/10531462.aspx).
+    For more info on how Physical Disk, SMB, and CSV FS (file system) counters are related, see the following blog post: [Cluster Shared Volume Performance Counters](https://blogs.msdn.com/b/clustering/archive/2014/06/05/10531462.aspx).
 
 ## Tuning parameters for SMB file servers
 
@@ -150,4 +150,4 @@ The following settings can optimize a computer for file server performance in ma
 
 ### SMB client performance monitor counters
 
-For more info about SMB client counters, see [Windows Server 2012 File Server Tip: New per-share SMB client performance counters provide great insight](http://blogs.technet.com/b/josebda/archive/2012/11/19/windows-server-2012-file-server-tip-new-per-share-smb-client-performance-counters-provide-great-insight.aspx).
+For more info about SMB client counters, see [Windows Server 2012 File Server Tip: New per-share SMB client performance counters provide great insight](https://blogs.technet.com/b/josebda/archive/2012/11/19/windows-server-2012-file-server-tip-new-per-share-smb-client-performance-counters-provide-great-insight.aspx).

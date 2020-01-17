@@ -2,7 +2,7 @@
 title: Define File Groups for Screening
 description: This article describes how to define file groups to create a namespace for file screen, file screen exception, or files by file group storage reports
 ms.date: 7/7/2017
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: storage
 ms.topic: article
 author: JasonGerend

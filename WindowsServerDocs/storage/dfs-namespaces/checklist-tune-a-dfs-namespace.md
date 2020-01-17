@@ -2,7 +2,7 @@
 title: Checklist Tune a DFS Namespace
 description: This article describes how to optimize how the DFS Namespace handles referrals and polls AD DS for updated namespace data
 ms.date: 6/5/2017
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: storage
 ms.topic: article
 author: JasonGerend

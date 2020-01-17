@@ -2,7 +2,7 @@
 title: more
 description: "Windows Commands topic for **** - "
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,7 +13,7 @@ ms.assetid: ded14f6a-d82f-4aeb-a2d8-7ec1c94dfb8f
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
-ms.date: 10/16/2017
+ms.date: 07/26/2019
 ---
 
 # more
@@ -42,24 +42,26 @@ more [/c] [/p] [/s] [/t<N>] [+<N>] [<Files>]
 |               /s               |          Displays multiple blank lines as a single blank line.          |
 |             /t\<N>             |         Displays tabs as the number of spaces specified by *N*.         |
 |             +\<N>              |     Displays the first file beginning at the line specified by *N*.     |
-| [\<Drive>:] [<Path>]<FileName> |          Specifies the location and name of a file to display.          |
+| [\<Drive>:] [\<Path>]\<FileName> |          Specifies the location and name of a file to display.          |
 |            \<Files>            | Specifies a list of files to display. Separate file names with a space. |
 |               /?               |                  Displays help at the command prompt.                   |
 
 ## Remarks
 
--   The following subcommands are accepted at the **more** prompt (`-- More --`).  
-    |Key|Action|
-    |---|------|
-    |SPACEBAR|Displays the next page.|
-    |ENTER|Displays the next line.|
-    |f|Displays the next file.|
-    |q|Quits the **more** command.|
-    |=|Shows the line number.|
-    |p \<N>|Displays the next *N* lines.|
-    |s \<N>|Skips the next *N* lines.|
-    |?|Shows the commands that are available at the **more** prompt.|
--   When using the redirection character (**<**), you must specify a file name as the source. When using the pipe (**|**), you can use such commands as **dir**, **sort**, and **type**.
+-   The following subcommands are accepted at the **more** prompt (`-- More --`). 
+
+    | Key | Action |
+    | --- | ------ |
+    | SPACEBAR | Displays the next page. |
+    | ENTER | Displays the next line. |
+    | f | Displays the next file. |
+    | q | Quits the **more** command. |
+    | = | Shows the line number. |
+    | p \<N> | Displays the next *N* lines. |
+    | s \<N> |S kips the next *N* lines. |
+    | ? | Shows the commands that are available at the **more** prompt.| 
+    
+-   When using the redirection character (**<**), you must specify a file name as the source. When using the pipe (**\|**), you can use such commands as **dir**, **sort**, and **type**.
 -   The **more** command, with different parameters, is available from the Recovery Console.
 
 ## <a name="BKMK_examples"></a>Examples

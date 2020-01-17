@@ -2,7 +2,7 @@
 title: certreq
 description: "Windows Commands topic for **** - "
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -97,7 +97,7 @@ Return to [Contents](#BKMK_Contents)
 ```
 certreq -retrieve [Options] RequestId [CertFileOut [CertChainFileOut [FullResponseFileOut]]]
 ```
--   If you don’t specify the CAComputerName or CAName in -config CAComputerName\CANamea dialog box appears and displays a list of all CAs that are available.
+-   If you don't specify the CAComputerName or CAName in -config CAComputerName\CANamea dialog box appears and displays a list of all CAs that are available.
 -   If you use -config - instead of -config CAComputerName\CAName, the operation is processed using the default CA.
 -   You can use certreq -retrieve *RequestID* to retrieve the certificate after the CA has actually issued it. The *RequestID*PKC can be a decimal or hex with 0x prefix and it can be a certificate serial number with no 0x prefix. You can also use it to retrieve any certificate that has ever been issued by the CA, including revoked or expired certificates, without regard to whether the certificate's request was ever in the pending state.
 -   If you submit a request to the CA, the policy module of the CA might leave the request in a pending state and return the *RequestID* to the Certreq caller for display. Eventually, the CA's administrator will issue the certificate or deny the request.
@@ -137,15 +137,15 @@ This section is mandatory for an INF file that acts as a template for a new cert
 |ExportableEncrypted|Specifies whether the private key should be set to be exportable.|true, false|ExportableEncrypted = true</br>Tip: Not all public key sizes and algorithms will work with all hash algorithms. Tamehe specified CSP must also support the specified hash algorithm. To see the list of supported hash algorithms, you can run the command <code>certutil -oid 1 &#124; findstr pwszCNGAlgid &#124; findstr /v CryptOIDInfo</code>|
 |HashAlgorithm|Hash Algorithm to be used for this request.|Sha256, sha384, sha512, sha1, md5, md4, md2|HashAlgorithm = sha1. To see the list of supported hash algorithms use: certutil -oid 1 &#124; findstr pwszCNGAlgid &#124; findstr /v CryptOIDInfo|
 |KeyAlgorithm|The algorithm that will be used by the service provider to generate a public and private key pair.|RSA, DH, DSA, ECDH_P256, ECDH_P521, ECDSA_P256, ECDSA_P384, ECDSA_P521|KeyAlgorithm = RSA|
-|KeyContainer|It is not recommended to set this parameter for new requests where new key material is generated. The key container is automatically generated and maintained by the system. For requests where the existing key material should be used, this value can be set to the key-container name of the existing key. Use the certutil –key command to display the list of available key containers for the machine context. Use the certutil –key –user command for the current user’s context.|Random string value</br>Tip: You should use double quotes around any INF key value that has blanks or special characters to avoid potential INF parsing issues.|KeyContainer = {C347BD28-7F69-4090-AA16-BC58CF4D749C}|
+|KeyContainer|It is not recommended to set this parameter for new requests where new key material is generated. The key container is automatically generated and maintained by the system. For requests where the existing key material should be used, this value can be set to the key-container name of the existing key. Use the certutil –key command to display the list of available key containers for the machine context. Use the certutil –key –user command for the current user's context.|Random string value</br>Tip: You should use double quotes around any INF key value that has blanks or special characters to avoid potential INF parsing issues.|KeyContainer = {C347BD28-7F69-4090-AA16-BC58CF4D749C}|
 |KeyLength|Defines the length of the public and private key. The key length has an impact on the security level of the certificate. Greater key length usually provides a higher security level; however, some applications may have limitations regarding the key length.|Any valid key length that is supported by the cryptographic service provider.|KeyLength = 2048|
 |KeySpec|Determines if the key can be used for signatures, for Exchange (encryption), or for both.|AT_NONE, AT_SIGNATURE, AT_KEYEXCHANGE|KeySpec = AT_KEYEXCHANGE|
 |KeyUsage|Defines what the certificate key should be used for.|CERT_DIGITAL_SIGNATURE_KEY_USAGE -- 80 (128)</br>Tip: The values shown are hexadecimal (decimal) values for each bit definition. Older syntax can also be used: a single hexadecimal value with multiple bits set, instead of the symbolic representation. For example, KeyUsage = 0xa0.</br>CERT_NON_REPUDIATION_KEY_USAGE -- 40 (64)</br>CERT_KEY_ENCIPHERMENT_KEY_USAGE -- 20 (32)</br>CERT_DATA_ENCIPHERMENT_KEY_USAGE -- 10 (16)</br>CERT_KEY_AGREEMENT_KEY_USAGE -- 8</br>CERT_KEY_CERT_SIGN_KEY_USAGE -- 4</br>CERT_OFFLINE_CRL_SIGN_KEY_USAGE -- 2</br>CERT_CRL_SIGN_KEY_USAGE -- 2</br>CERT_ENCIPHER_ONLY_KEY_USAGE -- 1</br>CERT_DECIPHER_ONLY_KEY_USAGE -- 8000 (32768)|KeyUsage = "CERT_DIGITAL_SIGNATURE_KEY_USAGE &#124; CERT_KEY_ENCIPHERMENT_KEY_USAGE"</br>Tip: Multiple values use a pipe (&#124;) symbol separator. Ensure that you use double-quotes when using multiple values to avoid INF parsing issues.|
 |KeyUsageProperty|Retrieves a value that identifies the specific purpose for which a private key can be used.|NCRYPT_ALLOW_DECRYPT_FLAG -- 1</br>NCRYPT_ALLOW_SIGNING_FLAG -- 2</br>NCRYPT_ALLOW_KEY_AGREEMENT_FLAG -- 4</br>NCRYPT_ALLOW_ALL_USAGES -- ffffff (16777215)|KeyUsageProperty = "NCRYPT_ALLOW_DECRYPT_FLAG &#124; NCRYPT_ALLOW_SIGNING_FLAG"|
-|MachineKeySet|This key is important when you need to create certificates that are owned by the machine and not a user. The key material that is generated is maintained in the security context of the security principal (user or computer account) that has created the request. When an administrator creates a certificate request on behalf of a computer, the key material must be created in the machine’s security context and not the administrator’s security context. Otherwise, the machine could not access its private key since it would be in the administrator’s security context.|true, false|MachineKeySet = true</br>Tip: The default is false.|
+|MachineKeySet|This key is important when you need to create certificates that are owned by the machine and not a user. The key material that is generated is maintained in the security context of the security principal (user or computer account) that has created the request. When an administrator creates a certificate request on behalf of a computer, the key material must be created in the machine's security context and not the administrator's security context. Otherwise, the machine could not access its private key since it would be in the administrator's security context.|true, false|MachineKeySet = true</br>Tip: The default is false.|
 |NotBefore|Specifies a date or date and time before which the request cannot be issued. NotBefore can be used with ValidityPeriod and ValidityPeriodUnits.|date or date and time|NotBefore = "7/24/2012 10:31 AM"</br>Tip: NotBefore and NotAfter are for RequestType=cert only.Date parsing attempts to be locale-sensitive.Using month names will disambiguate and should work in every locale.|
 |NotAfter|Specifies a date or date and time after which the request cannot be issued. NotAfter cannot be used with ValidityPeriod or ValidityPeriodUnits.|date or date and time|NotAfter = "9/23/2014 10:31 AM"</br>Tip: NotBefore and NotAfter are for RequestType=cert only.Date parsing attempts to be locale-sensitive.Using month names will disambiguate and should work in every locale.|
-|PrivateKeyArchive|The PrivateKeyArchive setting works only if the corresponding RequestType is set to "CMC" because only the Certificate Management Messages over CMS (CMC) request format allows for securely transferring the requester’s private key to the CA for key archival.|true, false|PrivateKeyArchive = True|
+|PrivateKeyArchive|The PrivateKeyArchive setting works only if the corresponding RequestType is set to "CMC" because only the Certificate Management Messages over CMS (CMC) request format allows for securely transferring the requester's private key to the CA for key archival.|true, false|PrivateKeyArchive = True|
 |EncryptionAlgorithm|The encryption algorithm to use.|Possible options vary, depending on the operating system version and the set of installed cryptographic providers. To see the list of available algorithms, run the command <code>certutil -oid 2 &#124; findstr pwszCNGAlgid</code> The specified CSP used must also support the specified symmetric encryption algorithm and length.|EncryptionAlgorithm = 3des|
 |EncryptionLength|Length of encryption algorithm to use.|Any length allowed by the specified EncryptionAlgorithm.|EncryptionLength = 128|
 |ProviderName|The provider name is the display name of the CSP..|If you do not know the provider name of the CSP you are using, run certutil –csplist from a command line. The command will display the names of all CSPs that are available on the local system|ProviderName = "Microsoft RSA SChannel Cryptographic Provider"|
@@ -209,7 +209,7 @@ Return to [Contents](#BKMK_Contents)
 To request a certificate based using certreq -new use the steps from the example below:
 
 > [!WARNING]
-> The content for this topic is based on the default settings for Windows Server 2008 AD CS; for example, setting the key length to 2048, selecting Microsoft Software Key Storage Provider as the CSP, and using Secure Hash Algorithm 1 (SHA1). Evaluate these selections against the requirements of your company’s security policy.
+> The content for this topic is based on the default settings for Windows Server 2008 AD CS; for example, setting the key length to 2048, selecting Microsoft Software Key Storage Provider as the CSP, and using Secure Hash Algorithm 1 (SHA1). Evaluate these selections against the requirements of your company's security policy.
 
 To create a Policy File (.inf) copy and save the example below in Notepad and save as RequestConfig.inf:
 ```
@@ -263,7 +263,7 @@ certreq -accept certnew.cer
 ```
 
 > [!WARNING]
-> The -accept verb, the -user and –machine options indicate whether the cert being installed should be installed in user or machine context. If there’s an outstanding request in either context that matches the public key being installed, then these options are not needed. If there is no outstanding request, then one of these must be specified.
+> The -accept verb, the -user and –machine options indicate whether the cert being installed should be installed in user or machine context. If there's an outstanding request in either context that matches the public key being installed, then these options are not needed. If there is no outstanding request, then one of these must be specified.
 
 Return to [Contents](#BKMK_Contents)
 
@@ -368,7 +368,7 @@ The following articles contain examples of certreq usage:
 -   [How to Request a Certificate With a Custom Subject Alternative Name](https://technet.microsoft.com/library/ff625722.aspx)
 -   [Test Lab Guide: Deploying an AD CS Two-Tier PKI Hierarchy](https://technet.microsoft.com/library/hh831348.aspx)
 -   [Appendix 3: Certreq.exe Syntax](https://technet.microsoft.com/library/cc736326.aspx)
--   [How to create a web server SSL certificate manually](http://blogs.technet.com/b/pki/archive/2009/08/05/how-to-create-a-web-server-ssl-certificate-manually.aspx)
+-   [How to create a web server SSL certificate manually](https://blogs.technet.com/b/pki/archive/2009/08/05/how-to-create-a-web-server-ssl-certificate-manually.aspx)
 -   [Request an AMT Provisioning Certificate Using a Windows Server 2008 CA](https://social.technet.microsoft.com/wiki/contents/articles/request-an-amt-provisioning-certificate-using-a-windows-server-2008-ca.aspx)
 -   [Certificate Enrollment for System Center Operations Manager Agent](https://social.technet.microsoft.com/wiki/contents/articles/certificate-enrollment-for-system-center-operations-manager-agent.aspx)
 -   [AD CS Step by Step Guide: Two Tier PKI Hierarchy Deployment](https://social.technet.microsoft.com/wiki/contents/articles/15037.ad-cs-step-by-step-guide-two-tier-pki-hierarchy-deployment.aspx)

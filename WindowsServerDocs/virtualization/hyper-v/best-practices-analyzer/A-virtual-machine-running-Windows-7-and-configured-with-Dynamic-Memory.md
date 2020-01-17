@@ -1,7 +1,7 @@
 ---
 title: A virtual machine running Windows 7 and configured with Dynamic Memory should use recommended values for memory settings
 description: "Gives instructions to resolve the issue reported by this Best Practices Analyzer rule."
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.service: na
 manager: dongill
 ms.technology: compute-hyper-v

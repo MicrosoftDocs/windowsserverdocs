@@ -1,7 +1,7 @@
 ---
 title: Upgrade virtual machine version in Hyper-V on Windows 10 or Windows Server
 description: "Gives instructions and considerations for upgrading the version of a virtual machine"
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.service: na
 manager: dongill
 ms.technology: compute-hyper-v
@@ -47,7 +47,7 @@ To upgrade the virtual machine configuration version by using Windows PowerShell
 Update-VMVersion <vmname>
 ```
 
-## <a name="BKMK_SupportedConfigVersions"></a>Supported virtual machine configuration versions
+## Supported virtual machine configuration versions
 
 Run the PowerShell cmdlet [Get-VMHostSupportedVersion](https://docs.microsoft.com/powershell/module/hyper-v/get-vmhostsupportedversion) to see what virtual machine configuration versions your Hyper-V Host supports. When you create a virtual machine, it's created with the default configuration version. To see what the default is, run the following command.
 

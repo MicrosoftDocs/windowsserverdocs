@@ -1,7 +1,7 @@
 ---
 title: Should I create a generation 1 or 2 virtual machine in Hyper-V?
 description: "Gives considerations such as supported boot methods and other feature differences to help you choose which generation meets your needs."
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.service: na
 manager: dongill
 ms.technology: compute-hyper-v
@@ -29,25 +29,25 @@ For more information about what features are available with generation 2 virtual
 
 You can't change a virtual machine's generation after you've created it. So, we recommend that you review the considerations here, as well as choose the operating system, boot method, and features you want to use before you choose a generation.  
 
-## <a name="BKMK_OS"></a>Which guest operating systems are supported?
+## Which guest operating systems are supported?
 
 Generation 1 virtual machines support most guest operating systems. Generation 2 virtual machines support most 64-bit versions of Windows and more current versions of Linux and FreeBSD operating systems. Use the following sections to see which generation of virtual machine supports the guest operating system you want to install.  
 
-- [Windows guest operating system support](Should-I-create-a-generation-1-or-2-virtual-machine-in-Hyper-V.md#BKMK_Windows)  
+- [Windows guest operating system support](#windows-guest-operating-system-support)  
 
-- [CentOS and Red Hat Enterprise Linux guest operating system support](Should-I-create-a-generation-1-or-2-virtual-machine-in-Hyper-V.md#BKMK_CentOS)  
+- [CentOS and Red Hat Enterprise Linux guest operating system support](#centos-and-red-hat-enterprise-linux-guest-operating-system-support)  
 
-- [Debian guest operating system support](Should-I-create-a-generation-1-or-2-virtual-machine-in-Hyper-V.md#BKMK_Debian)  
+- [Debian guest operating system support](#debian-guest-operating-system-support)  
 
-- [FreeBSD guest operating system support](Should-I-create-a-generation-1-or-2-virtual-machine-in-Hyper-V.md#BKMK_FreeBSD)  
+- [FreeBSD guest operating system support](#freebsd-guest-operating-system-support)  
 
-- [Oracle Linux guest operating system support](Should-I-create-a-generation-1-or-2-virtual-machine-in-Hyper-V.md#BKMK_Oracle)  
+- [Oracle Linux guest operating system support](#oracle-linux-guest-operating-system-support)  
 
-- [SUSE guest operating system support](Should-I-create-a-generation-1-or-2-virtual-machine-in-Hyper-V.md#BKMK_SUSE)  
+- [SUSE guest operating system support](#suse-guest-operating-system-support)  
 
-- [Ubuntu guest operating system support](Should-I-create-a-generation-1-or-2-virtual-machine-in-Hyper-V.md#BKMK_Ubuntu)  
+- [Ubuntu guest operating system support](#ubuntu-guest-operating-system-support)  
 
-### <a name="BKMK_Windows"></a>Windows guest operating system support
+### Windows guest operating system support
 
 The following table shows which 64-bit versions of Windows you can use as a guest operating system for generation 1 and generation 2 virtual machines.  
 
@@ -73,7 +73,7 @@ The following table shows which 32-bit versions of Windows you can use as a gues
 |Windows 8|&#10004;| &#10006;|  
 |Windows 7|&#10004;| &#10006;|  
 
-### <a name="BKMK_CentOS"></a>CentOS and Red Hat Enterprise Linux guest operating system support
+### CentOS and Red Hat Enterprise Linux guest operating system support
 
 The following table shows which versions of Red Hat Enterprise Linux \(RHEL\) and CentOS you can use as a guest operating system for generation 1 and generation 2 virtual machines.
 
@@ -85,7 +85,7 @@ The following table shows which versions of Red Hat Enterprise Linux \(RHEL\) an
 
 For more information, see [CentOS and Red Hat Enterprise Linux virtual machines on Hyper-V](../Supported-CentOS-and-Red-Hat-Enterprise-Linux-virtual-machines-on-Hyper-V.md).  
 
-### <a name="BKMK_Debian"></a>Debian guest operating system support  
+### Debian guest operating system support  
 
 The following table shows which versions of Debian you can use as a guest operating system for generation 1 and generation 2 virtual machines.
 
@@ -96,7 +96,7 @@ The following table shows which versions of Debian you can use as a guest operat
 
 For more information, see [Debian virtual machines on Hyper-V](../Supported-Debian-virtual-machines-on-Hyper-V.md).  
 
-### <a name="BKMK_FreeBSD"></a>FreeBSD guest operating system support
+### FreeBSD guest operating system support
 
 The following table shows which versions of FreeBSD you can use as a guest operating system for generation 1 and generation 2 virtual machines.  
 
@@ -108,7 +108,7 @@ The following table shows which versions of FreeBSD you can use as a guest opera
 
 For more information, see [FreeBSD virtual machines on Hyper-V](../Supported-FreeBSD-virtual-machines-on-Hyper-V.md).  
 
-### <a name="BKMK_Oracle"></a>Oracle Linux guest operating system support  
+### Oracle Linux guest operating system support  
 
 The following table shows which versions of Red Hat Compatible Kernel Series you can use as a guest operating system for generation 1 and generation 2 virtual machines.  
 
@@ -127,7 +127,7 @@ The following table shows which versions of Unbreakable Enterprise Kernel you ca
 
 For more information, see [Oracle Linux virtual machines on Hyper-V](../Supported-Oracle-Linux-virtual-machines-on-Hyper-V.md).  
 
-### <a name="BKMK_SUSE"></a>SUSE guest operating system support
+### SUSE guest operating system support
 
 The following table shows which versions of SUSE you can use as a guest operating system for generation 1 and generation 2 virtual machines.
 
@@ -139,7 +139,7 @@ The following table shows which versions of SUSE you can use as a guest operatin
 
 For more information, see [SUSE virtual machines on Hyper-V](../Supported-SUSE-virtual-machines-on-Hyper-V.md).  
 
-### <a name="BKMK_Ubuntu"></a>Ubuntu guest operating system support
+### Ubuntu guest operating system support
 
 The following table shows which versions of Ubuntu you can use as a guest operating system for generation 1 and generation 2 virtual machines.
 
@@ -150,7 +150,7 @@ The following table shows which versions of Ubuntu you can use as a guest operat
 
 For more information, see [Ubuntu virtual machines on Hyper-V](../Supported-Ubuntu-virtual-machines-on-Hyper-V.md).  
 
-## <a name="BKMK_Boot"></a>How can I boot the virtual machine?
+## How can I boot the virtual machine?
 
 The following table shows which boot methods are supported by generation 1 and generation 2 virtual machines.  
 
@@ -162,7 +162,7 @@ The following table shows which boot methods are supported by generation 1 and g
 |Boot from IDE Controller virtual hard disk (.VHD) or virtual DVD (.ISO)|&#10004;| &#10006;|  
 |Boot from floppy (.VFD)|&#10004;| &#10006;|  
 
-## <a name="BKMK_Advantages"></a>What are the advantages of using generation 2 virtual machines?
+## What are the advantages of using generation 2 virtual machines?
 
 Here are some of the advantages you get when you use a generation 2 virtual machine:  
 - **Secure Boot**
@@ -175,7 +175,7 @@ Here are some of the advantages you get when you use a generation 2 virtual mach
 
   You may also see a slight improvement in virtual machine boot and installation times with generation 2 virtual machines.
 
-## <a name="BKMK_DeviceCompare"></a> What's the difference in device support?
+## What's the difference in device support?
 
 The following table compares the devices available between generation 1 and generation 2 virtual machines.  
 
@@ -196,7 +196,7 @@ The following table compares the devices available between generation 1 and gene
 |Programmable interval timer (PIT)|No longer required|N/A|  
 |Super I/O device|No longer required|N/A|  
 
-## <a name="BKMK_More"></a> More about generation 2 virtual machines
+## More about generation 2 virtual machines
 
 Here are some additional tips about using generation 2 virtual machines.
 
@@ -226,7 +226,7 @@ By default, generation 2 virtual machines use IPv4. To use IPv6 instead, run the
 Set-VMFirmware -VMName TestVM -IPProtocolPreference IPv6  
 ```  
 
-## <a name="BKMK_Debug"></a>Add a COM port for kernel debugging
+## Add a COM port for kernel debugging
 
 COM ports aren't available in generation 2 virtual machines until you add them. You can do this with Windows PowerShell or Windows Management Instrumentation (WMI). These steps show you how to do it with Windows PowerShell.
 

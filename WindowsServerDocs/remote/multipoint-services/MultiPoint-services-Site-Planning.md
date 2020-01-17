@@ -3,7 +3,7 @@ title: MultiPoint Services Site Planning
 description: Planning information for MultiPoint Services deployments in Windows Server 2016
 ms.custom: na
 ms.date: 07/22/2016
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: multipoint-services
 ms.reviewer: na
 ms.suite: na
@@ -26,7 +26,7 @@ Additional factors to consider include the following:
     > [!NOTE]  
     > If you plan to use a mobile setup, you can *associate* the stations with MultiPoint Services every time you reconnect them to make sure that each keyboard and mouse is associated with the appropriate monitor.  
   
--   Will the primary station be located next to the other stations, or will it be separate? For example, if the MultiPoint Services system is set up in a classroom, will the primary station be on the teacher’s desk and the standard stations positioned elsewhere in the room? When the computer running MultiPoint Services is restarted, the primary station will have access to the startup screens. If you are concerned about this level of access in a classroom setting, you may prefer to put the primary station at the teacher’s desk.  
+-   Will the primary station be located next to the other stations, or will it be separate? For example, if the MultiPoint Services system is set up in a classroom, will the primary station be on the teacher's desk and the standard stations positioned elsewhere in the room? When the computer running MultiPoint Services is restarted, the primary station will have access to the startup screens. If you are concerned about this level of access in a classroom setting, you may prefer to put the primary station at the teacher's desk.  
   
 -   How many stations will fit in the room?  
   
@@ -89,10 +89,10 @@ Additional hubs can be used to make installation easier. There are three types o
 ### Station hubs  
 A station hub is an external hub that has been associated with a MultiPoint Services station. As a minimum, the station hub will have a keyboard plugged-in to it. It may also have additional peripherals attached. A station hub can be a generic USB hub that conforms to the USB 2.0 or later specification. Station hubs should be externally powered if high-powered devices will plugin to them.  
   
-**Root hub** A USB hub that is built-in to the host controller on a computer’s motherboard is known as a *root hub*. Station hubs are generally plugged-in to the root hub on the computer running MultiPoint Services.  
+**Root hub** A USB hub that is built-in to the host controller on a computer's motherboard is known as a *root hub*. Station hubs are generally plugged-in to the root hub on the computer running MultiPoint Services.  
   
 > [!NOTE]  
-> Root hubs should not be used as station hubs. When USB ports are built-in to a computer, often it is not possible to determine which USB root hub they are internally connected to. As such, if you plugged-in a station keyboard and mouse directly to the USB ports of the computer, you may actually be plugging-in the keyboard and mouse to different USB root hubs. To guarantee that the keyboard and mouse are on the same hub, plug-in a station hub to the computer’s USB port, and then plug-in the keyboard and mouse to that station hub.  
+> Root hubs should not be used as station hubs. When USB ports are built-in to a computer, often it is not possible to determine which USB root hub they are internally connected to. As such, if you plugged-in a station keyboard and mouse directly to the USB ports of the computer, you may actually be plugging-in the keyboard and mouse to different USB root hubs. To guarantee that the keyboard and mouse are on the same hub, plug-in a station hub to the computer's USB port, and then plug-in the keyboard and mouse to that station hub.  
   
 **Daisy chaining stations** It may be easier to connect station hubs to another station hub rather than directly to the computer. This allows you to connect a USB hub to a station hub that is already plugged-in to the computer, so that you have a station hub attached to another station hub.  
   

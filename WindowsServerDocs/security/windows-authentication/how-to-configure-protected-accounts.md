@@ -1,7 +1,7 @@
 ---
 title: How to Configure Protected Accounts
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.service: na
 ms.suite: na
@@ -27,7 +27,7 @@ Through Pass-the-hash (PtH) attacks, an attacker can authenticate to a remote se
   
 There are additional mitigations built in to Windows 8.1 and Windows Server 2012 R2 to help protect against credential theft, which are covered in the following topics:  
   
--   [Restricted Admin mode for Remote Desktop](http://blogs.technet.com/b/kfalde/archive/20../restricted-admin-mode-for-rdp-in-windows-8-1-2012-r2.aspx)  
+-   [Restricted Admin mode for Remote Desktop](https://blogs.technet.com/b/kfalde/archive/20../restricted-admin-mode-for-rdp-in-windows-8-1-2012-r2.aspx)  
   
 -   [LSA Protection](https://technet.microsoft.com/library/dn408187)  
   
@@ -113,7 +113,7 @@ Accounts for services and computers cannot be members of **Protected Users**. Th
 -   Reject RC4 in Kerberos pre-authentication: not configurable.  
   
     > [!NOTE]  
-    > Although it is possible to [change the configuration of supported encryption types](http://blogs.msdn.com/b/openspecification/archive/20../windows-configurations-for-kerberos-supported-encryption-type.aspx), it is not recommended to change those settings for computer accounts without testing in the target environment.  
+    > Although it is possible to [change the configuration of supported encryption types](https://blogs.msdn.com/b/openspecification/archive/20../windows-configurations-for-kerberos-supported-encryption-type.aspx), it is not recommended to change those settings for computer accounts without testing in the target environment.  
   
 -   Restrict user tickets (TGTs) to an initial 4-hour lifetime: Use Authentication Policies.  
   

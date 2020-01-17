@@ -2,7 +2,7 @@
 title: Manage a personal desktop session collection in RDS
 description: Learn how to add and RDSH and RemoteApp programs to your RDS deployment.
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: remote-desktop-services
@@ -14,11 +14,11 @@ author: lizap
 manager: dongill
 ---
 
-## Manage your personal desktop session collections
+# Manage your personal desktop session collections
 
 Use the following information to manage a personal desktop session collection in Remote Desktop Services.
 
-### Manually assign a user to a personal session host
+## Manually assign a user to a personal session host
 Use the **Set-RDPersonalSessionDesktopAssignment** cmdlet to manually assign a user to a personal session host server in the collection. The cmdlet supports the following parameters:
 
 -CollectionName \<string\>
@@ -44,7 +44,7 @@ The **Import-RDPersonalSessionDesktopAssignment** cmdlet imports associations be
 
 **–Path** specifies the path and file name of a file to import.
  
-### Removing a User Assignment from a Personal Session Host
+## Removing a User Assignment from a Personal Session Host
 Use the **Remove-RDPersonalSessionDesktopAssignment** cmdlet to remove the association between a personal session desktop and a user. The cmdlet supports the following parameters:
 
 -CollectionName \<string\>
@@ -59,7 +59,7 @@ Use the **Remove-RDPersonalSessionDesktopAssignment** cmdlet to remove the assoc
 
 **–Force** forces the command to run without asking for user confirmation.
 
-### Query user assignments
+## Query user assignments
 Use the **Get-RDPersonalSessionDesktopAssignment** cmdlet to get a list of personal session desktops and associated user accounts. The cmdlet supports the following parameters:
 
 -CollectionName \<string\>

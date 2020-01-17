@@ -2,7 +2,7 @@
 title: bitsadmin cache and help
 description: "Windows Commands topic for **bitsadmin cache and help** - Displays the command-line usage for the **Cache** switches."
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands

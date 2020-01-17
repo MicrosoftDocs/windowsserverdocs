@@ -7,7 +7,7 @@ ms.author: joflore
 manager: mtillman
 ms.date: 05/31/2017
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 
 ms.technology: identity-adds
 ---
@@ -29,7 +29,7 @@ ms.technology: identity-adds
   
 -   [Hyper-V in Windows Server 2012](https://technet.microsoft.com/library/hh831531.aspx)  
   
--   [Ask the Directory Services Team (Official Microsoft Commercial Technical Support Blog)](http://blogs.technet.com/b/askds)  
+-   [Ask the Directory Services Team (Official Microsoft Commercial Technical Support Blog)](https://blogs.technet.com/b/askds)  
   
 
 

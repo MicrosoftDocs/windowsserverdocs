@@ -31,7 +31,6 @@
     "overwrite": [],
     "externalReference": [],
     "globalMetadata": {
-      "uhfHeaderId": "MSDocsHeader-WindowsIT",
       "breadcrumb_path": "/windows-server/breadcrumbs/toc.json",
       "extendBreadcrumb": true,
       "feedback_system": "GitHub",
@@ -45,14 +44,13 @@
     },
     "fileMetadata": {
       "feedback_product_url": {
-        "manage/windows-admin-center/*.md": "http://aka.ms/wacfeedback",
-        "manage/windows-admin-center/**/*.md": "http://aka.ms/wacfeedback"
+        "manage/windows-admin-center/*.md": "https://aka.ms/wacfeedback",
+        "manage/windows-admin-center/**/*.md": "https://aka.ms/wacfeedback"
       }
     },
     "template": [
       null
     ],
-    "dest": "windows-server",
-    "markdownEngineName": "markdig"
+    "dest": "windows-server"
   }
 }

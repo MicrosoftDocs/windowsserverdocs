@@ -2,7 +2,7 @@
 title: Remote Desktop clients FAQ
 description: Frequently asked questions about the Remote Desktop clients
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: remote-desktop-services
@@ -53,7 +53,7 @@ For Windows 10, do the following:
 3. Use the slider to enable Remote Desktop.
 4. In general, it's best to keep the PC awake and discoverable to facilitate connections. Click **Show settings** to go to the power settings for your PC, where you can change this setting.
    > [!NOTE]
-   > You can’t connect to a PC that's asleep or hibernating, so make sure the settings for sleep and hibernation on the remote PC are set to **Never**. (Hibernation isn't available on all PCs.)
+   > You can't connect to a PC that's asleep or hibernating, so make sure the settings for sleep and hibernation on the remote PC are set to **Never**. (Hibernation isn't available on all PCs.)
 
 
 Make note of the name of this PC under **How to connect to this PC**. You'll need this to configure the clients.
@@ -61,18 +61,18 @@ Make note of the name of this PC under **How to connect to this PC**. You'll nee
 You can grant permission for specific users to access this PC - to do that, click **Select users that can remotely access this PC**.
 Members of the Administrators group automatically have access.
 
-For Windows 8.1, follow the instructions to allow remote connections in [Connect to another desktop using Remote Desktop Connections](https://support.microsoft.com/en-us/help/17463/windows-7-connect-to-another-computer-remote-desktop-connection#1TC=windows-8).
+For Windows 8.1, follow the instructions to allow remote connections in [Connect to another desktop using Remote Desktop Connections](https://support.microsoft.com/help/17463/windows-7-connect-to-another-computer-remote-desktop-connection#1TC=windows-8).
 
 
 
 ## Connection, gateway, and networks
 
-### Why can’t I connect using Remote Desktop?
+### Why can't I connect using Remote Desktop?
 
-Here are some possible solutions to common problems you might encounter when trying to connect to a remote PC. If these solutions don’t work, you can find more help on the [Microsoft Community website](https://go.microsoft.com/fwlink/p/?LinkId=242079).
+Here are some possible solutions to common problems you might encounter when trying to connect to a remote PC. If these solutions don't work, you can find more help on the [Microsoft Community website](https://go.microsoft.com/fwlink/p/?LinkId=242079).
 
-- **The remote PC can’t be found.** Make sure you have the right PC name, and then check to see if you entered that name correctly. If you still can't connect, try using the IP address of the remote PC instead of the PC name.
-- **There’s a problem with the network.** Make sure you have internet connection. 
+- **The remote PC can't be found.** Make sure you have the right PC name, and then check to see if you entered that name correctly. If you still can't connect, try using the IP address of the remote PC instead of the PC name.
+- **There's a problem with the network.** Make sure you have internet connection. 
 - **The Remote Desktop port might be blocked by a firewall.** If you're using Windows Firewall, follow these steps:
 
   1. Open Windows Firewall. 
@@ -83,10 +83,12 @@ Here are some possible solutions to common problems you might encounter when try
      If you're using a different firewall, make sure the port for Remote Desktop (usually 3389) is open.
 - **Remote connections might not be set up on the remote PC.** To fix this, scroll back up to [How do I set up a PC for Remote Desktop?](#how-do-i-set-up-a-pc-for-remote-desktop) question in this topic.
 - **The remote PC might only allow PCs to connect that have Network Level Authentication set up.** 
-- **The remote PC might be turned off.** You can’t connect to a PC that's turned off, asleep, or hibernating, so make sure the settings for sleep and hibernation on the remote PC are set to **Never** (hibernation isn't available on all PCs.).
+- **The remote PC might be turned off.** You can't connect to a PC that's turned off, asleep, or hibernating, so make sure the settings for sleep and hibernation on the remote PC are set to **Never** (hibernation isn't available on all PCs.).
 
 ### Why can't I find or connect to my PC?
+
 Check the following:
+
 - Is the PC on and awake?
 - Did you enter the right name or IP address?
 
@@ -99,9 +101,11 @@ Check the following:
    > Windows XP Home, Windows Media Center Edition, Windows Vista Home and Windows 7 Home or Starter are not supported without 3rd party software.
 
 ### Why can't I sign in to a remote PC?
+
 If you can see the sign-in screen of the remote PC but you can't sign in, you might not have been added to the Remote Desktop Users Group or to any group with administrator rights on the remote PC. Ask your system admin to do this for you.
 
 ### Which connection methods are supported for company networks?
+
 If you want to access your office desktop from outside your company network, your company must provide you with a means of remote access. The RD Client currently supports the following:
 
 - Terminal Server Gateway or Remote Desktop Gateway
@@ -118,9 +122,11 @@ Other things to check:
 - **VPN is misconfigured.** A misconfigured VPN server can be the reason why the VPN connections never worked or stopped working after some time. Ensure testing with the iOS device's web browser or a PC or Mac on the same network if this happens.
 
 ### How can I test if VPN is working properly?
+
 Verify that VPN is enabled on your device. You can test your VPN connection by going to a webpage on your internal network or using a web service which is only available via the VPN.
 
 ### How do I configure L2TP or PPTP VPN connections?
+
 If you are using L2TP or PPTP in your VPN, make sure to set **Send all traffic** to **ON** in the VPN configuration.
 
 ## Web client
@@ -154,7 +160,7 @@ To use two or more screens, do the following:
 2. Enable **Use all monitors** and **Full screen**.
 
 ### Is bi-directional sound supported?
-Sound upstream (from client to server, for microphones) is not supported by the Remote Desktop Client.
+Bi-directional sound can be configured in the Windows client on a per-connection basis. The relevant settings can be accessed in the **Remote audio** section of the **Local Resources** options tab.
 
 ### What can I do if the sound won't play?
 Sign out of the session (don't just disconnect, sign all the way out), and then sign in again.

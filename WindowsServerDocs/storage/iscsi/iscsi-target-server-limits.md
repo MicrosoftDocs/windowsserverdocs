@@ -1,7 +1,7 @@
 ---
 title: iSCSI Target Server Scalability Limits
 TOCTitle: iSCSI Target Server Scalability Limits
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: storage-iscsi
 ms.topic: article
 author: JasonGerend
@@ -427,7 +427,7 @@ This topic provides the supported and tested Microsoft iSCSI Target Server limit
 
 If you want to create volume shadow copies (VSS open-file snapshots) of data on iSCSI virtual disks from an application server, or you want to manage iSCSI virtual disks with an older app (such as the Diskraid command) that requires a Virtual Disk Service (VDS) hardware provider, install the iSCSI Target Storage Provider on the server from which you want to take a snapshot or use a VDS management app.
 
-The iSCSI Target Storage Provider is a role service in Windows Server 2016, Windows Server 2012 R2, and Windows Server 2012; you can also download and install [iSCSI Target Storage Providers (VDS/VSS) for down-level application servers](http://www.microsoft.com/download/details.aspx?id=34759) on the following operating systems as long as the iSCSI Target Server is running on Windows Server 2012:
+The iSCSI Target Storage Provider is a role service in Windows Server 2016, Windows Server 2012 R2, and Windows Server 2012; you can also download and install [iSCSI Target Storage Providers (VDS/VSS) for down-level application servers](https://www.microsoft.com/download/details.aspx?id=34759) on the following operating systems as long as the iSCSI Target Server is running on Windows Server 2012:
 
   - Windows Storage Server 2008 R2
 
@@ -439,7 +439,7 @@ The iSCSI Target Storage Provider is a role service in Windows Server 2016, Wind
 
 Note that if the iSCSI Target Server is hosted by a server running Windows Server 2012 R2 or newer and you want to use VSS or VDS from a remote server, the remote server has to also run the same version of Windows Server and have the iSCSI Target Storage Provider role service installed. Also note that on all versions of Windows you should install only one version of the iSCSI Target Storage Provider role service.
 
-For more info about the iSCSI Target Storage Provider, see [iSCSI Target Storage (VDS/VSS) Provider](http://blogs.technet.com/b/filecab/archive/2012/10/08/iscsi-target-storage-vds-vss-provider.aspx).
+For more info about the iSCSI Target Storage Provider, see [iSCSI Target Storage (VDS/VSS) Provider](https://blogs.technet.com/b/filecab/archive/2012/10/08/iscsi-target-storage-vds-vss-provider.aspx).
 
 ## Tested compatibility with iSCSI initiators
 

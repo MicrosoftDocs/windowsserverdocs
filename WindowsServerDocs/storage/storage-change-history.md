@@ -1,13 +1,13 @@
 ---
 ms.assetid: 87174225-a60f-4718-b4cc-9b172f205b72
 title: Change history for storage topics
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: storage
 ms.topic: article
 author: JasonGerend
 manager: brianlic
 ms.author: jgerend
-ms.date: 03/25/2019
+ms.date: 12/20/2019
 description: New and updated topics in the on-premises storage documentation for Windows Server for IT Pros.
 ---
 # Change history for storage topics in Windows Server
@@ -16,7 +16,29 @@ description: New and updated topics in the on-premises storage documentation for
 
 This topic lists new and updated topics in the [Storage](storage.md) documentation for Windows Server.
 
-> If you're looking for update history for Windows Server, see [Windows 10 and Windows Server 2016 update history](https://support.microsoft.com/help/4000825/windows-10-and-windows-server-2016-update-history).
+> If you're looking for update history for Windows Server, see [Windows 10 and Windows Server 2019 update history](https://support.microsoft.com/help/4464619) or [Windows Server 2016 update history](https://support.microsoft.com/help/4000825/windows-10-and-windows-server-2016-update-history).
+
+## December 2019
+
+| New or changed topic                                        | Description |
+| ---                                                         | ---           |
+| [Troubleshooting Disk Management](disk-management/troubleshooting-disk-management.md)| Edited to further refine the guidance, based on customer requests.|
+| [Extend a volume in Disk Management](disk-management/extend-a-basic-volume.md) | Added guidance in response to customer feedback. |
+| [Change a dynamic disk back to a basic disk](disk-management/change-a-dynamic-disk-back-to-a-basic-disk.md) | Fixed an error in the command line and added some info based on customer feedback. |
+
+
+## August 2019
+
+| New or changed topic                                        | Description |
+| ---                                                         | ---           |
+| [Storage Migration Service FAQ](storage-migration-service/faq.md) | Updated to reflect new support for Linux sources. |
+
+## June 2019
+
+| New or changed topic                                        | Description |
+| ---                                                         | ---           |
+| [Disk cleanup](file-server/disk-cleanup.md)                                              | New (Migrated from the [Previous Versions](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc770278(v%3dws.11)))
+| [Storage Migration Service FAQ](storage-migration-service/faq.md#can-i-consolidate-multiple-servers-into-one-server) | Added performance optimization info. |
 
 ## May 2019
 
@@ -30,9 +52,10 @@ This topic lists new and updated topics in the [Storage](storage.md) documentati
 
 |New or changed topic                                        |Description|
 |---                                                         |---           |
-|[Monitor with Azure Monitor](storage-spaces/configure-azure-monitor.md)| New|
-|[Upgrade a Storage Spaces Direct cluster to Windows Server 2019](storage-spaces/upgrade-storage-spaces-direct-to-windows-server-2019.md)| New        |
-|[DFS Replication](dfs-replication/dfsr-overview.md)        | Migrated from the [Previous Versions](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc770278(v%3dws.11)) library|
+| [Monitor with Azure Monitor](storage-spaces/configure-azure-monitor.md) | New |
+| [Understand and deploy persistent memory](storage-spaces/deploy-pmem.md) | New |
+| [Upgrade a Storage Spaces Direct cluster to Windows Server 2019](storage-spaces/upgrade-storage-spaces-direct-to-windows-server-2019.md)| New        |
+| [DFS Replication](dfs-replication/dfsr-overview.md)        | Migrated from the [Previous Versions](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc770278(v%3dws.11)) library|
 
 ## February 2019
 
@@ -61,10 +84,10 @@ This topic lists new and updated topics in the [Storage](storage.md) documentati
 |---                                                         |---           |
 |[Nested resiliency](storage-spaces/nested-resiliency.md)    | New topic    |
 |[Storage Migration Service known issues](storage-migration-service/known-issues.md)   | New topic    |
-|[DFS Replication: Frequently Asked Questions (FAQ)](dfs-replication/dfsr-faq.md)|Migrated from the [Previous Versions](https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2003/) library|
-|[Migrate SYSVOL replication to DFS Replication](dfs-replication/migrate-sysvol-to-dfsr.md)|Migrated from the [Previous Versions](https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/) library|
-|[SMB: File and printer sharing ports should be open](file-server/best-practices-analyzer/smb-open-file-sharing-ports.md)|Migrated from the [Previous Versions](https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/) library|
-|[Volume Shadow Copy Service](file-server/volume-shadow-copy-service.md)|Migrated from the [Previous Versions](https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/) library|
+|[DFS Replication: Frequently Asked Questions (FAQ)](dfs-replication/dfsr-faq.md)|Migrated from the [Previous Versions](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/) library|
+|[Migrate SYSVOL replication to DFS Replication](dfs-replication/migrate-sysvol-to-dfsr.md)|Migrated from the [Previous Versions](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/) library|
+|[SMB: File and printer sharing ports should be open](file-server/best-practices-analyzer/smb-open-file-sharing-ports.md)|Migrated from the [Previous Versions](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/) library|
+|[Volume Shadow Copy Service](file-server/volume-shadow-copy-service.md)|Migrated from the [Previous Versions](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/) library|
 
 ## October 2018
 
@@ -99,7 +122,7 @@ This topic lists new and updated topics in the [Storage](storage.md) documentati
 |[Deploy Storage Spaces on a stand-alone server](storage-spaces/deploy-standalone-storage-spaces.md)|Migrated from the [Previous Versions](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012) library.|
 |[NTFS Overview](file-server/ntfs-overview.md)|Migrated from the [Previous Versions](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012) library.|
 |[Use Robocopy to Preseed Files for DFS Replication](dfs-replication/preseed-dfsr-with-robocopy.md)|Migrated from the [Previous Versions](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012) library.|
-|[Vssadmin - Previous Versions command line tool](..\administration\windows-commands\vssadmin.md)|Migrated from the [Previous Versions](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012) library.|
+|[Vssadmin - Previous Versions command line tool](../administration/windows-commands/vssadmin.md)|Migrated from the [Previous Versions](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012) library.|
 |[File Server Resource Manager overview](fsrm/fsrm-overview.md)| Added info about a new registry setting in Windows Server 2016, version 1803.|
 |[Server-to-server storage replication](storage-replica/server-to-server-storage-replication.md)|Added info on using Windows Admin Center.|
 |[Storage Replica known issues](storage-replica/storage-replica-known-issues.md)|Added new information.|
@@ -144,7 +167,7 @@ This topic lists new and updated topics in the [Storage](storage.md) documentati
 |New or changed topic|Description|
 |---|---|
 |[Change a drive letter](disk-management/change-a-drive-letter.md)|New topic.|
-|[Troubleshooting Disk Management](disk-management/troubleshooting-disk-management.md)|Rewrote the [A disk's status is Not Initialized or the disk is missing entirely](disk-management/troubleshooting-disk-management.md#a-disks-status-is-not-initialized-or-the-disk-is-missing) section to add extensive troubleshooting steps, based on customer requests.|
+|[Troubleshooting Disk Management](disk-management/troubleshooting-disk-management.md)|Rewrote the [A disk's status is Not Initialized or the disk is missing entirely](disk-management/troubleshooting-disk-management.md#disks-that-are-missing-or-not-initialized-plus-general-troubleshooting-steps) section to add extensive troubleshooting steps, based on customer requests.|
 |[Initialize new disks](disk-management/initialize-new-disks.md)|Rewrote to attempt to make it easier to understand and address customer questions.|
 |[Planning volumes in Storage Spaces Direct](storage-spaces/plan-volumes.md)|Added a table summarizing the resiliency types available on four-node and larger clusters.|
 |[ReFS overview](refs/refs-overview.md)|Clarified recommended workloads for mirror-accelerated parity and corrected the supported file and volume sizes for ReFS and NTFS.|

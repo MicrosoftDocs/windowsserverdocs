@@ -7,7 +7,7 @@ ms.author: billmath
 manager: samueld
 ms.date: 10/02/2017
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 
 ms.technology: identity-adfs
 ---
@@ -105,7 +105,7 @@ For configuring both the default certificate authentication binding or alternate
 To replace the Web Application Proxy SSL certificate, on **each** Web Application Proxy server use the following cmdlet to install the new SSL certificate:
 
 ```powershell
-Set-WebApplicationProxySslCertificate '<thumbprint of new cert>'
+Set-WebApplicationProxySslCertificate -Thumbprint '<thumbprint of new cert>'
 ```
 
 If the above cmdlet fails because the old certificate has already expired, reconfigure the proxy using the following cmdlets:

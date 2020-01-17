@@ -1,7 +1,7 @@
 ---
-Title: Volume Shadow Copy Service
+title: Volume Shadow Copy Service
 ms.date: 01/30/2019
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: storage
 author: JasonGerend
 manager: elizapo
@@ -34,13 +34,13 @@ VSS coordinates the actions that are required to create a consistent shadow copy
 
 Windows features and applications that use VSS include the following:
 
-  - [Windows Server Backup](http://go.microsoft.com/fwlink/?linkid=180891) (http://go.microsoft.com/fwlink/?LinkId=180891)  
+  - [Windows Server Backup](https://go.microsoft.com/fwlink/?linkid=180891) (https://go.microsoft.com/fwlink/?LinkId=180891)  
       
-  - [Shadow Copies of Shared Folders](http://go.microsoft.com/fwlink/?linkid=142874) (http://go.microsoft.com/fwlink/?LinkId=142874)  
+  - [Shadow Copies of Shared Folders](https://go.microsoft.com/fwlink/?linkid=142874) (https://go.microsoft.com/fwlink/?LinkId=142874)  
       
-  - [System Center Data Protection Manager](http://go.microsoft.com/fwlink/?linkid=180892) (http://go.microsoft.com/fwlink/?LinkId=180892)  
+  - [System Center Data Protection Manager](https://go.microsoft.com/fwlink/?linkid=180892) (https://go.microsoft.com/fwlink/?LinkId=180892)  
       
-  - [System Restore](http://go.microsoft.com/fwlink/?linkid=180893) (http://go.microsoft.com/fwlink/?LinkId=180893)  
+  - [System Restore](https://go.microsoft.com/fwlink/?linkid=180893) (https://go.microsoft.com/fwlink/?LinkId=180893)  
       
 
 ## How Volume Shadow Copy Service Works
@@ -144,12 +144,12 @@ In the copy-on-write method, when a change to the original volume occurs (but be
 </tr>
 <tr class="even">
 <td><p>T1</p></td>
-<td><p>Data changed in cache: 3 to 3’</p></td>
+<td><p>Data changed in cache: 3 to 3'</p></td>
 <td><p>Shadow copy created (differences only): 3</p></td>
 </tr>
 <tr class="odd">
 <td><p>T2</p></td>
-<td><p>Original data overwritten: 1 2 3’ 4 5</p></td>
+<td><p>Original data overwritten: 1 2 3' 4 5</p></td>
 <td><p>Differences and index stored on shadow copy: 3</p></td>
 </tr>
 </tbody>
@@ -185,13 +185,13 @@ In the redirect-on-write method, whenever the original volume receives a change 
 </tr>
 <tr class="even">
 <td><p>T1</p></td>
-<td><p>Data changed in cache: 3 to 3’</p></td>
-<td><p>Shadow copy created (differences only): 3’</p></td>
+<td><p>Data changed in cache: 3 to 3'</p></td>
+<td><p>Shadow copy created (differences only): 3'</p></td>
 </tr>
 <tr class="odd">
 <td><p>T2</p></td>
 <td><p>Original data unchanged: 1 2 3 4 5</p></td>
-<td><p>Differences and index stored on shadow copy: 3’</p></td>
+<td><p>Differences and index stored on shadow copy: 3'</p></td>
 </tr>
 </tbody>
 </table>
@@ -222,7 +222,7 @@ A software-based shadow copy provider must maintain a "point-in-time" view of a 
 
 A software provider is applicable to a wider range of storage platforms than a hardware-based provider, and it should work with basic disks or logical volumes equally well. (A logical volume is a volume that is created by combining free space from two or more disks.) In contrast to hardware shadow copies, software providers consume operating system resources to maintain the shadow copy.
 
-For more information about basic disks, see [What Are Basic Disks and Volumes?](http://go.microsoft.com/fwlink/?linkid=180894) (http://go.microsoft.com/fwlink/?LinkId=180894) on TechNet.
+For more information about basic disks, see [What Are Basic Disks and Volumes?](https://go.microsoft.com/fwlink/?linkid=180894) (https://go.microsoft.com/fwlink/?LinkId=180894) on TechNet.
 
 ### System provider
 
@@ -242,11 +242,11 @@ The Windows operating system includes a set of VSS writers that are responsible 
 
 For more information about these writers, see the following Microsoft Web sites:
 
-  - [In-Box VSS Writers](http://go.microsoft.com/fwlink/?linkid=180895) (http://go.microsoft.com/fwlink/?LinkId=180895)  
+  - [In-Box VSS Writers](https://go.microsoft.com/fwlink/?linkid=180895) (https://go.microsoft.com/fwlink/?LinkId=180895)  
       
-  - [New In-Box VSS Writers for Windows Server 2008 and Windows Vista SP1](http://go.microsoft.com/fwlink/?linkid=180896) (http://go.microsoft.com/fwlink/?LinkId=180896)  
+  - [New In-Box VSS Writers for Windows Server 2008 and Windows Vista SP1](https://go.microsoft.com/fwlink/?linkid=180896) (https://go.microsoft.com/fwlink/?LinkId=180896)  
       
-  - [New In-Box VSS Writers for Windows Server 2008 R2 and Windows 7](http://go.microsoft.com/fwlink/?linkid=180897) (http://go.microsoft.com/fwlink/?LinkId=180897)  
+  - [New In-Box VSS Writers for Windows Server 2008 R2 and Windows 7](https://go.microsoft.com/fwlink/?linkid=180897) (https://go.microsoft.com/fwlink/?LinkId=180897)  
       
 
 ## How Shadow Copies Are Used
@@ -293,7 +293,7 @@ LUN resynchronization is different from LUN swapping. A LUN swap is a fast recov
 
 Shadow Copies for Shared Folders uses the Volume Shadow Copy Service to provide point-in-time copies of files that are located on a shared network resource, such as a file server. With Shadow Copies for Shared Folders, users can quickly recover deleted or changed files that are stored on the network. Because they can do so without administrator assistance, Shadow Copies for Shared Folders can increase productivity and reduce administrative costs.
 
-For more information about Shadow Copies for Shared Folders, see [Shadow Copies for Shared Folders](http://go.microsoft.com/fwlink/?linkid=180898) (http://go.microsoft.com/fwlink/?LinkId=180898) on TechNet.
+For more information about Shadow Copies for Shared Folders, see [Shadow Copies for Shared Folders](https://go.microsoft.com/fwlink/?linkid=180898) (https://go.microsoft.com/fwlink/?LinkId=180898) on TechNet.
 
 ### Data mining by using transportable shadow copies
 
@@ -325,7 +325,7 @@ Volume Shadow Copy Service transport is an advanced solution on computers runnin
 
 ## Frequently Asked Questions
 
-This FAQ answers questions about Volume Shadow Copy Service (VSS) for system administrators. For information about VSS application programming interfaces, see [Volume Shadow Copy Service](http://go.microsoft.com/fwlink/?linkid=180899) (http://go.microsoft.com/fwlink/?LinkId=180899) in the Windows Developer Center Library.
+This FAQ answers questions about Volume Shadow Copy Service (VSS) for system administrators. For information about VSS application programming interfaces, see [Volume Shadow Copy Service](https://go.microsoft.com/fwlink/?linkid=180899) (https://go.microsoft.com/fwlink/?LinkId=180899) in the Windows Developer Center Library.
 
 ### When was Volume Shadow Copy Service introduced? On which Windows operating system versions is it available?
 
@@ -357,9 +357,9 @@ It is possible to disable the Volume Shadow Copy Service by using the Microsoft 
 
 For more information, see the following Microsoft TechNet Web sites:
 
-  - [System Restore](http://go.microsoft.com/fwlink/?linkid=157113) (http://go.microsoft.com/fwlink/?LinkID=157113)  
+  - [System Restore](https://go.microsoft.com/fwlink/?linkid=157113) (https://go.microsoft.com/fwlink/?LinkID=157113)  
       
-  - [Windows Server Backup](http://go.microsoft.com/fwlink/?linkid=180891) (http://go.microsoft.com/fwlink/?LinkID=180891)  
+  - [Windows Server Backup](https://go.microsoft.com/fwlink/?linkid=180891) (https://go.microsoft.com/fwlink/?LinkID=180891)  
       
 
 ### Can I exclude files from a shadow copy to save space?
@@ -375,11 +375,11 @@ To exclude specific files from shadow copies, use the following registry key: **
 > <UL>
 > <LI>It cannot delete files from a shadow copy that was created on a Windows Server by using the Previous Versions feature.<BR><BR>
 > <LI>It cannot delete files from shadow copies for shared folders.<BR><BR>
-> <LI>It can delete files from a shadow copy that was created by using the <a href="https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/diskshadow" data-raw-source="[Diskshadow](https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/diskshadow)">Diskshadow</a> utility, but it cannot delete files from a shadow copy that was created by using the <a href="https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/vssadmin" data-raw-source="[Vssadmin](https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/vssadmin)">Vssadmin</a> utility.<BR><BR>
+> <LI>It can delete files from a shadow copy that was created by using the <a href="https://docs.microsoft.com/windows-server/administration/windows-commands/diskshadow" data-raw-source="[Diskshadow](https://docs.microsoft.com/windows-server/administration/windows-commands/diskshadow)">Diskshadow</a> utility, but it cannot delete files from a shadow copy that was created by using the <a href="https://docs.microsoft.com/windows-server/administration/windows-commands/vssadmin" data-raw-source="[Vssadmin](https://docs.microsoft.com/windows-server/administration/windows-commands/vssadmin)">Vssadmin</a> utility.<BR><BR>
 > <LI>Files are deleted from a shadow copy on a best-effort basis. This means that they are not guaranteed to be deleted.<BR><BR></LI></UL>
 
 
-For more information, see [Excluding Files from Shadow Copies](http://go.microsoft.com/fwlink/?linkid=180904) (http://go.microsoft.com/fwlink/?LinkId=180904) on MSDN.
+For more information, see [Excluding Files from Shadow Copies](https://go.microsoft.com/fwlink/?linkid=180904) (https://go.microsoft.com/fwlink/?LinkId=180904) on MSDN.
 
 ### My non-Microsoft backup program failed with a VSS error. What can I do?
 
@@ -387,7 +387,7 @@ Check the product support section of the Web site of the company that created th
 
 System administrators can use the VSS troubleshooting information on the following Microsoft TechNet Library Web site to gather diagnostic information about VSS-related issues.
 
-For more information, see [Volume Shadow Copy Service](http://go.microsoft.com/fwlink/?linkid=180905) (http://go.microsoft.com/fwlink/?LinkId=180905) on TechNet.
+For more information, see [Volume Shadow Copy Service](https://go.microsoft.com/fwlink/?linkid=180905) (https://go.microsoft.com/fwlink/?LinkId=180905) on TechNet.
 
 ### What is the "diff area"?
 
@@ -426,7 +426,7 @@ The max number is of software shadow copies for each volume is 512. However, by 
 
 Type the **vssadmin resize shadowstorage** command.
 
-For more information, see [Vssadmin resize shadowstorage](http://go.microsoft.com/fwlink/?linkid=180906) (http://go.microsoft.com/fwlink/?LinkId=180906) on TechNet.
+For more information, see [Vssadmin resize shadowstorage](https://go.microsoft.com/fwlink/?linkid=180906) (https://go.microsoft.com/fwlink/?LinkId=180906) on TechNet.
 
 ### What happens when I run out of space?
 
@@ -436,9 +436,9 @@ Shadow copies for the volume are deleted, beginning with the oldest shadow copy.
 
 The Windows operating system provides the following tools for working with VSS:
 
-  - [DiskShadow](http://go.microsoft.com/fwlink/?linkid=180907) (http://go.microsoft.com/fwlink/?LinkId=180907)  
+  - [DiskShadow](https://go.microsoft.com/fwlink/?linkid=180907) (https://go.microsoft.com/fwlink/?LinkId=180907)  
       
-  - [VssAdmin](http://go.microsoft.com/fwlink/?linkid=84008) (http://go.microsoft.com/fwlink/?LinkId=84008)  
+  - [VssAdmin](https://go.microsoft.com/fwlink/?linkid=84008) (https://go.microsoft.com/fwlink/?LinkId=84008)  
       
 
 ### DiskShadow
@@ -498,9 +498,9 @@ This key is used to specify which users have access to shadow copies.
 
 For more information, see the following entries on the MSDN Web site:
 
-  - [Security Considerations for Writers](http://go.microsoft.com/fwlink/?linkid=157739) (http://go.microsoft.com/fwlink/?LinkId=157739)  
+  - [Security Considerations for Writers](https://go.microsoft.com/fwlink/?linkid=157739) (https://go.microsoft.com/fwlink/?LinkId=157739)  
       
-  - [Security Considerations for Requesters](http://go.microsoft.com/fwlink/?linkid=180908) (http://go.microsoft.com/fwlink/?LinkId=180908)  
+  - [Security Considerations for Requesters](https://go.microsoft.com/fwlink/?linkid=180908) (https://go.microsoft.com/fwlink/?LinkId=180908)  
       
 
 ### MaxShadowCopies
@@ -509,7 +509,7 @@ This key specifies the maximum number of client-accessible shadow copies that ca
 
 For more information, see the following entry on the MSDN Web site:
 
-**MaxShadowCopies** under [Registry Keys for Backup and Restore](http://go.microsoft.com/fwlink/?linkid=180909) (http://go.microsoft.com/fwlink/?LinkId=180909)
+**MaxShadowCopies** under [Registry Keys for Backup and Restore](https://go.microsoft.com/fwlink/?linkid=180909) (https://go.microsoft.com/fwlink/?LinkId=180909)
 
 ### MinDiffAreaFileSize
 
@@ -517,7 +517,7 @@ This key specifies the minimum initial size, in MB, of the shadow copy storage a
 
 For more information, see the following entry on the MSDN Web site:
 
-**MinDiffAreaFileSize** under [Registry Keys for Backup and Restore](http://go.microsoft.com/fwlink/?linkid=180910) (http://go.microsoft.com/fwlink/?LinkId=180910)
+**MinDiffAreaFileSize** under [Registry Keys for Backup and Restore](https://go.microsoft.com/fwlink/?linkid=180910) (https://go.microsoft.com/fwlink/?LinkId=180910)
 
 `##`#` Supported Operating System Versions
 

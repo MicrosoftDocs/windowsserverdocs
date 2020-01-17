@@ -1,13 +1,13 @@
 ---
 title: Deploy the Host Guardian Service
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.topic: article
 ms.assetid: 0bd96e2a-1612-4bbf-8c23-7602020f4eec
 manager: dongill
 author: rpsqrd
 ms.technology: security-guarded-fabric
-ms.date: 08/29/2018
+ms.date: 01/14/2020
 ---
 
 # Deploy the Host Guardian Service (HGS)
@@ -22,7 +22,6 @@ To deploy the HGS, complete the following tasks:
 - [Initialize HGS](guarded-fabric-initialize-hgs.md)
 - [Configure Https (optional)](guarded-fabric-configure-hgs-https.md)
 - [Add nodes](guarded-fabric-configure-additional-hgs-nodes.md)
-- [Verify the HGS configuration](guarded-fabric-verify-hgs-configuration.md)
 
 ## See also
 

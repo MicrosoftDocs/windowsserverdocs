@@ -1,33 +1,148 @@
 ---
-title: What's new for Remote Desktop on Mac?
+title: What's new in the macOS client
 description: Learn about recent changes to the Remote Desktop client for Mac
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: remote-desktop-services
 ms.tgt_pltfrm: na
 ms.topic: article
-author: lizap
-manager: dongill
-ms.author: elizapo
-ms.date: 04/29/2019
+author: heidilohr
+manager: lizross
+ms.author: helohr
+ms.date: 01/06/2020
 ms.localizationpriority: medium
 ---
-# What's new for the Remote Desktop client on macOS?
+# What's new in the macOS client
 
-We regularly update the [Remote Desktop client for macOS](remote-desktop-mac.md), adding new features and fixing issues. Check out the latest updates below.
+We regularly update the [Remote Desktop client for macOS](remote-desktop-mac.md), adding new features and fixing issues. Here's where you'll find the latest updates.
 
-If you encounter any issues, you can always contact us via **Help > Report an Issue**.
+If you encounter any issues, you can always contact us by navigating to **Help** > **Report an Issue**.
+
+## Updates for version 10.3.7
+
+*Date published: 1/6/20*
+
+In our final update of the year, we finetuned some code and fixed the following behaviors:
+
+- Copying things from the remote session to a network share or USB drive no longer creates empty files.
+- Specifying an empty password in a user account no longer causes a double certificate prompt.
+
+## Updates for version 10.3.6
+
+*Date published: 1/6/20*
+
+In this release, we addressed an issue that created zero-length files whenever you copied a folder from the remote session to the local machine using file copy and paste.
+
+## Updates for version 10.3.5
+
+*Date published: 1/6/20*
+
+We made this update with the help of everyone who reported issues. In this version, we've made the following changes:
+
+- Redirected folders can now be marked as read-only to prevent their contents from being changed in the remote session.
+- We addressed a 0x607 error that appeared when connecting using RPC over HTTPS RD Gateway scenarios.
+- Fixed cases where users were double-prompted for credentials.
+- Fixed cases where users received the certificate warning prompt twice.
+- Added heuristics to improve trackpad-based scrolling.
+- The client no longer shows the "Saved Desktops" group if there are no user-created groups.
+- Updated UI for the tiles in PC view.
+- Fixes to address crashes sent to us via application telemetry.
+
+> [!NOTE]
+> In this release, we now accept feedback for the Mac client only through [UserVoice](https://remotedesktop.uservoice.com/forums/287834-remote-desktop-for-mac).
+
+## Updates for version 10.3.4
+
+*Date published: 11/18/19*
+
+We've been hard at work listening to your feedback and have put together a collection of bug fixes and feature updates.
+
+- When connecting via an RD Gateway with multifactor authentication, the gateway connection will be held open to avoid multiple MFA prompts.
+- All the client UI is now fully keyboard-accessible with Voiceover support.
+- Files copied to the clipboard in the remote session are now only transferred when pasting to the local computer.
+- URLs copied to the clipboard in the remote session now paste correctly to the local computer.
+- Scale factor remoting to support Retina displays is now available for multimonitor scenarios.
+- Addressed a compatibility issue with FreeRDP-based RD servers that was causing connectivity issues in redirection scenarios.
+- Addressed smart card redirection compatibility with future releases of Windows 10.
+- Addressed an issue specific to macOS 10.15 where the incorrect available space was reported for redirected folders.
+- Published PC connections are represented with a new icon in the Workspaces tab.
+- "Feeds" are now called "Workspaces," and "Desktops" are now called "PCs."
+- Fixed inconsistencies and bugs in user account handling in the preferences UI.
+- Lots of bug fixes to make things run smoother and more reliably.
+
+## Updates for version 10.3.3
+
+*Date published: 11/18/19*
+
+We've put together a feature update and fixed bugs for the 10.3.3 release.
+
+First, we've added user defaults to disable smart card, clipboard, microphone, camera, and folder redirection:
+
+- ClientSettings.DisableSmartcardRedirection
+- ClientSettings.DisableClipboardRedirection
+- ClientSettings.DisableMicrophoneRedirection
+- ClientSettings.DisableCameraRedirection
+- ClientSettings.DisableFolderRedirection
+
+Next, the bug fixes:
+
+- Resolved an issue that was causing programmatic session window resizes to not be detected.
+- Fixed an issue where the session window contents appeared small when connecting in windowed mode (with dynamic display enabled).
+- Addressed initial flicker that occurred when connecting to a session in windowed mode with dynamic display enabled.
+- Fixed graphics mispaints that occurred when connected to Windows 7 after toggling fit-to-window with dynamic display enabled.
+- Fixed a bug that caused an incorrect device name to be sent to the remote session (breaking licensing in some third-party apps).
+- Resolved an issue where remote app windows would occupy an entire monitor when maximized.
+- Addressed an issue where the access permissions UI appeared underneath local windows.
+- Cleaned up some shutdown code to ensure the client closes more reliably.
+
+## Updates for version 10.3.2
+
+*Date published: 11/18/19*
+
+In this release, we fixed a bug that made the display low resolution while connecting to a session
+
+## Updates for version 10.3.1
+
+*Date published: 11/18/19*
+
+We've put together some fixes to address regressions that managed to sneak into the 10.3.0 release.
+
+- Addressed connectivity issues with RD Gateway servers that were using 4096-bit asymmetric keys.
+- Fixed a bug that caused the client to randomly stop responding when downloading feed resources.
+- Fixed a bug that caused the client to crash while opening.
+- Fixed a bug that caused the client to crash while importing connections from Remote Desktop, version 8.
+
+## Updates for version 10.3.0
+
+*Date published: 8/27/19*
+
+It's been a few weeks since we last updated, but we've been hard at work during that time. Version 10.3.0 brings some new features and lots of under-the-hood fixes.
+
+- Camera redirection is now possible when connecting to Windows 10 1809, Windows Server 2019 and later.
+- On Mojave and Catalina we've added a new dialog that requests your permission to use the microphone and camera for device redirection.
+- The feed subscription flow has been rewritten to be simpler and faster.
+- Clipboard redirection now includes the Rich Text Format (RTF).
+- When entering your password you have the option to reveal it with a "Show password" checkbox.
+- Addressed scenarios where the session window was jumping between monitors.
+- The Connection Center displays high resolution remote app icons (when available).
+- Cmd+A maps to Ctrl+A when Mac clipboard shortcuts are being used.
+- Cmd+R now refreshes all of your subscribed feeds.
+- Added new secondary click options to expand or collapse all groups or feeds in the Connection Center.
+- Added a new secondary click option to change the icon size in the Feeds tab of the Connection Center.
+- A new, simplified, and clean app icon.
 
 ## Updates for version 10.2.13
-*Published date: 5/8/2019*
+
+*Date published: 5/8/2019*
 
 - Fixed a hang that occurred when connecting via an RD Gateway.
 - Added a privacy notice to the "Add Feed" dialog.
 
 ## Updates for version 10.2.12
-*Published date: 4/16/2019* 
+
+*Date published: 4/16/2019*
 
 - Resolved random disconnects (with error code 0x904) that took place when connecting via an RD Gateway.
 - Fixed a bug that caused the resolutions list in application preferences to be empty after installation.
@@ -35,18 +150,21 @@ If you encounter any issues, you can always contact us via **Help > Report an Is
 - Addressed an ADAL authentication prompt loop when connecting to Windows Virtual Desktop deployments.
 
 ## Updates for version 10.2.10
-*Published date: 3/30/2019*
+
+*Date published: 3/30/2019*
 
 - In this release we addressed instability caused by the recent macOS 10.14.4 update. We also fixed mispaints that appeared when decoding AVC codec data encoded by a server using NVIDIA hardware.
 
 ## Updates for version 10.2.9
-*Published date: 3/6/2019*
+
+*Date published: 3/6/2019*
 
 - In this release we fixed an RD gateway connectivity issue that can occur when server redirection takes place.
 - We also addressed an RD gateway regression caused by the 10.2.8 update.
 
 ## Updates for version 10.2.8
-*Published date: 3/1/2019*
+
+*Date published: 3/1/2019*
 
 - Resolved connectivity issues that surfaced when using an RD Gateway.
 - Fixed incorrect certificate warnings that were displayed when connecting.
@@ -55,12 +173,14 @@ If you encounter any issues, you can always contact us via **Help > Report an Is
 - Fixed a bug that caused the Connection Center to needlessly scroll when launching a connection.
 
 ## Updates for version 10.2.7
-*Published date: 2/6/2019*
+
+*Date published: 2/6/2019*
 
 - In this release we addressed graphics mispaints (caused by a server encoding bug) that appeared when using AVC444 mode.
 
 ## Updates for version 10.2.6
-*Published date: 1/28/2019*
+
+*Date published: 1/28/2019*
 
 - Added support for the AVC (420 and 444) codec, available when connecting to current versions of Windows 10.
 - In Fit to Window mode, a window refresh now occurs immediately after a resize to ensure that content is rendered at the correct interpolation level.
@@ -73,7 +193,8 @@ If you encounter any issues, you can always contact us via **Help > Report an Is
 >There is a bug in macOS 10.14.0 and 10.14.1 that can cause the ".com.microsoft.rdc.application-data_SUPPORT/_EXTERNAL_DATA" folder (nested deep inside the ~/Library folder) to consume a large amount of disk space. To resolve this issue, delete the folder content and upgrade to macOS 10.14.2. Note that a side-effect of deleting the folder contents is that snapshot images assigned to bookmarks will be deleted. These images will be regenerated when reconnecting to the remote PC.
 
 ## Updates for version 10.2.4
-*Published date: 12/18/2018*
+
+*Date published: 12/18/2018*
 
 - Added dark mode support for macOS Mojave 10.14.
 - An option to import from Microsoft Remote Desktop 8 now appears in the Connection Center if it is empty.
@@ -84,7 +205,8 @@ If you encounter any issues, you can always contact us via **Help > Report an Is
 - Improved mouse-based scrolling for small scroll deltas.
 
 ## Updates for version 10.2.3
-*Published date: 11/06/2018*
+
+*Date published: 11/06/2018*
 
 - Added support for the "remoteapplicationcmdline" RDP file setting for remote app scenarios.
 - The title of the session window now includes the name of the RDP file (and server name) when launched from an RDP file.
@@ -94,12 +216,13 @@ If you encounter any issues, you can always contact us via **Help > Report an Is
 - Better handling of full-screen remote apps by intelligently hiding the menu bar and dock.
 - Fixed scenarios where remote apps remained hidden after being launched.
 - Addressed slow rendering updates when using "Fit to Window" with hardware acceleration disabled.
-- Handled database creation errors caused by incorrect permissions when the client starts up. 
+- Handled database creation errors caused by incorrect permissions when the client starts up.
 - Fixed an issue where the client was consistently crashing at launch and not starting for some users.
 - Fixed a scenario where connections were incorrectly imported as full-screen from Remote Desktop 8.
 
 ## Updates for version 10.2.2
-*Published date: 10/09/2018*
+
+*Date published: 10/09/2018*
 
 - A brand new Connection Center that supports drag and drop, manual arrangement of desktops, resizable columns in list view mode, column-based sorting, and simpler group management.
 - The Connection Center now remembers the last active pivot (Desktops or Feeds) when closing the app.
@@ -127,18 +250,20 @@ If you encounter any issues, you can always contact us via **Help > Report an Is
 - Fixed an issue that prevented downloading feed resources that have spaces in the URL.
 
 ## Updates for version 10.2.1
-*Published date: 08/06/2018*
+
+*Date published: 08/06/2018*
 
 - Enabled connectivity to Azure Active Directory (AAD) joined PCs. To connect to an AAD joined PC, your username must be in one of the following formats: “AzureAD\user” or “AzureAD\user@domain”.
 - Addressed some bugs affecting the usage of smart cards in a remote session.
 
 ## Updates for version 10.2.0
-*Published date: 07/24/2018*
+
+*Date published: 07/24/2018*
 
 - Incorporated updates for GDPR compliance.
 - MicrosoftAccount\username@domain is now accepted as a valid username.
 - Clipboard sharing has been rewritten to be faster and support more formats.
-- Copy and pasting text, images or files between sessions now bypasses the local machine’s clipboard.
+- Copy and pasting text, images or files between sessions now bypasses the local machine's clipboard.
 - You can now connect via an RD Gateway server with an untrusted certificate (if you accept the warning prompts).
 - Metal hardware acceleration is now used (where supported) to speed up rendering and optimize battery usage.
 - When using Metal hardware acceleration we try to work some magic to make the session graphics appear sharper.
@@ -153,7 +278,7 @@ If you encounter any issues, you can always contact us via **Help > Report an Is
 - Added support for RD endpoint certificates that contain elliptic-curve asymmetric keys.
 - Fixed a bug that was preventing the download of managed resources in some scenarios.
 - Addressed a clipping issue with the pinned connection center.
-- Fixed the checkboxes in the Display property sheet to work better together.
+- Fixed the checkboxes in the Display tab of the Add a Desktop window to work better together.
 - Aspect ratio locking is now disabled when dynamic display change is in effect.
 - Addressed compatibility issues with F5 infrastructure.
 - Updated handling of blank passwords to ensure the correct messages are shown at connect-time.
@@ -161,14 +286,16 @@ If you encounter any issues, you can always contact us via **Help > Report an Is
 - Fixed some alignment issues in the Connection Center when running on Mojave.
 
 ## Updates for version 10.1.8
-*Published date: 05/04/2018*
+
+*Date published: 05/04/2018*
 
 - Added support for changing the remote resolution by resizing the session window!
 - Fixed scenarios where remote resource feed download would take an excessively long time.
 - Resolved the 0x207 error that could occur when connecting to servers not patched with the CredSSP encryption oracle remediation update (CVE-2018-0886).
 
 ## Updates for version 10.1.7
-*Published date: 04/05/2018*
+
+*Date published: 04/05/2018*
 
 - Made security fixes to incorporate CredSSP encryption oracle remediation updates as described in CVE-2018-0886.
 - Improved RemoteApp icon and mouse cursor rendering to address reported mispaints.
@@ -179,9 +306,10 @@ If you encounter any issues, you can always contact us via **Help > Report an Is
 - The Connection Center, Preferences, and About windows now respond to CMD+M.
 - You can now start discovering feeds by pressing ENTER on the **Adding Remote Resources** page.
 - Fixed an issue where a new remote resources feed showed up empty in the Connection Center until after you refreshed.
- 
+
 ## Updates for version 10.1.6
-*Published date: 03/26/2018*
+
+*Date published: 03/26/2018*
 
 - Fixed an issue where RemoteApp windows would reorder themselves.
 - Resolved a bug that caused some RemoteApp windows to get stuck behind their parent window.

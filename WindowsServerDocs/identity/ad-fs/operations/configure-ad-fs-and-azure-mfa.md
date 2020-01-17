@@ -7,7 +7,7 @@ author: billmath
 manager: mtillman
 ms.date: 01/28/2019
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: identity-adfs
 ---
 # Configure Azure MFA as authentication provider with AD FS
@@ -61,23 +61,20 @@ As described above, any AD FS user who has not yet registered (configured MFA ve
 The following pre-requisites are required when using Azure MFA for authentication with AD FS:  
   
 - An [Azure subscription with Azure Active Directory](https://azure.microsoft.com/pricing/free-trial/).  
-- [Azure Multi-Factor Authentication](https://azure.microsoft.com/documentation/articles/multi-factor-authentication/)  
-- Web app proxy is able to communicate with the following over ports 80 and 443:
-
-	- https://adnotifications.windowsazure.com
-	- https://login.microsoftonline.com
+- [Azure Multi-Factor Authentication](https://azure.microsoft.com/documentation/articles/multi-factor-authentication/) 
 
 
 > [!NOTE]
 > Azure AD and Azure MFA are included in Azure AD Premium and the Enterprise Mobility Suite (EMS).  If you have either of these you do not need individual subscriptions.
-> - A Windows Server 2016 AD FS on-premises environment.  
->    - The server needs to be able to communicate with the following URLs over ports 80 and 443.
->       - https://adnotifications.windowsazure.com
->       - https://login.microsoftonline.com
-> - Your on-premises environment is [federated with Azure AD.](https://azure.microsoft.com/documentation/articles/active-directory-aadconnect-get-started-custom/#configuring-federation-with-ad-fs)  
-> - [Windows Azure Active Directory Module for Windows PowerShell](https://docs.microsoft.com/powershell/module/Azuread/?view=azureadps-2.0).  
-> - Global administrator permissions on your instance of Azure AD to configure it using Azure AD PowerShell.  
-> - Enterprise administrator credentials to configure the AD FS farm for Azure MFA.  
+
+- A Windows Server 2016 AD FS on-premises environment.  
+   - The server needs to be able to communicate with the following URLs over port 443.
+      - https://adnotifications.windowsazure.com
+      - https://login.microsoftonline.com
+- Your on-premises environment is [federated with Azure AD.](https://azure.microsoft.com/documentation/articles/active-directory-aadconnect-get-started-custom/#configuring-federation-with-ad-fs)  
+- [Windows Azure Active Directory Module for Windows PowerShell](https://docs.microsoft.com/powershell/module/Azuread/?view=azureadps-2.0).  
+- Global administrator permissions on your instance of Azure AD to configure it using Azure AD PowerShell.  
+- Enterprise administrator credentials to configure the AD FS farm for Azure MFA.  
   
 ## Configure the AD FS Servers
 
@@ -280,7 +277,7 @@ Here is a simple example, you may want to extend:
 6. Import the onload.js file into your custom theme by typing the following Windows PowerShell command:
     
     ``` PowerShell
-    Set-AdfsWebTheme -TargetName ProofUp -AdditionalFileResource @{Uri=’/adfs/portal/script/onload.js’;path="c:\theme\script\onload.js"}
+    Set-AdfsWebTheme -TargetName ProofUp -AdditionalFileResource @{Uri='/adfs/portal/script/onload.js';path="c:\theme\script\onload.js"}
     ```
 7. Finally, apply the custom AD FS Web Theme by typing the following Windows PowerShell command:
     

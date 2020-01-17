@@ -2,7 +2,7 @@
 title: Remote Desktop - compare the client apps
 description: Learn how the different RD apps compare when it comes to supported features and functions.
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: remote-desktop-services

@@ -3,11 +3,10 @@ title: Step 2 Plan the Remote Access Deployment
 description: This topic is part of the guide Manage DirectAccess Clients Remotely in Windows Server 2016.
 manager: brianlic
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
-ms.technology: 
-  - networking-ras
+ms.technology: networking-ras
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: cc9f02b9-8ddd-4cae-b397-a832996144dd
@@ -50,7 +49,7 @@ There are three decisions to make when you are planning your client deployment:
   
     -   **Connectivity verifiers**  
   
-        A default web probe is created that clients use to validate connectivity to the internal network. The default name is https://directaccess-WebProbeHost.<domain_name>. The name should be registered manually in DNS. You can create other connectivity verifiers that use other web addresses over HTTP or PING. For each connectivity verifier, a DNS entry must exist.  
+        A default web probe is created that clients use to validate connectivity to the internal network. The default name is `https://directaccess-WebProbeHost.<domain_name>`. The name should be registered manually in DNS. You can create other connectivity verifiers that use other web addresses over HTTP or PING. For each connectivity verifier, a DNS entry must exist.  
   
     -   **Help Desk email address**  
   

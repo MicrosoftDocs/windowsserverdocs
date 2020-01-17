@@ -1,6 +1,6 @@
 ---
 title: Disaster Recovery Scenarios for Hyper-Converged Infrastructure
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.manager: eldenc
 ms.technology: storage-spaces
 ms.topic: article
@@ -35,7 +35,7 @@ One important capability of Storage Replica is that it can be run in Azure as we
 
 In this scenario, there are two separate independent clusters. For configuring Storage Replica between HCI, you can follow the steps in [Cluster-to-cluster storage replication](../storage-replica/cluster-to-cluster-storage-replication.md).
 
-![Storage Replication diagram](media\storage-spaces-direct-disaster-recovery\Disaster-Recovery-Figure1.png)
+![Storage Replication diagram](media/storage-spaces-direct-disaster-recovery/Disaster-Recovery-Figure1.png)
 
 The following considerations apply when deploying Storage Replica. 
 
@@ -50,7 +50,7 @@ Storage Replica can be used if you have virtual machines or an SOFS running on y
 
 [Hyper-V Replica](https://docs.microsoft.com/windows-server/virtualization/hyper-v/manage/set-up-hyper-v-replica) provides virtual machine level replication for disaster recovery on hyper-converged infrastructures. What Hyper-V Replica can do is to take a virtual machine and replicate it to a secondary site or Azure (replica). Then from the secondary site, Hyper-V Replica can replicate the virtual machine to a third (extended replica).
 
-![Hyper-V Replication diagram](media\storage-spaces-direct-disaster-recovery\Disaster-Recovery-Figure2.png)
+![Hyper-V Replication diagram](media/storage-spaces-direct-disaster-recovery/Disaster-Recovery-Figure2.png)
 
 With Hyper-V Replica, the replication is taken care of by Hyper-V. When you first enable a virtual machine for replication, there are three choices for how you wish the initial copy to be sent to the corresponding replica cluster(s).
 

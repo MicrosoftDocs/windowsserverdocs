@@ -1,12 +1,12 @@
 ---
 title: Resilient File System (ReFS) overview
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.author: gawatu
 ms.manager: mchad
 ms.technology: storage-file-systems
 ms.topic: article
 author: gawatu
-ms.date: 10/17/2018
+ms.date: 06/17/2019
 ---
 # Resilient File System (ReFS) overview
 
@@ -34,34 +34,33 @@ In addition to providing resiliency improvements, ReFS introduces new features f
     - To deliver both high performance and capacity efficient storage, ReFS divides a volume into two logical storage groups, known as tiers. These tiers can have their own drive and resiliency types, allowing each tier to optimize for either performance or capacity. Some example configurations include: 
     
       | Performance tier | Capacity tier |
-      |----------------|-----------------|
-      |Mirrored SSD | Mirrored HDD |
-      |Mirrored SSD | Parity SSD |
-      |Mirrored SSD | Parity HDD |
+      | ---------------- | ----------------- |
+      | Mirrored SSD | Mirrored HDD |
+      | Mirrored SSD | Parity SSD |
+      | Mirrored SSD | Parity HDD |
             
     - Once these tiers are configured, ReFS use them to deliver fast storage for hot data and capacity-efficient storage for cold data:
         - All writes will occur in the performance tier, and large chunks of data that remain in the performance tier will be efficiently moved to the capacity tier in real-time.
         - If using a hybrid deployment (mixing flash and HDD drives), [the cache in Storage Spaces Direct](../storage-spaces/understand-the-cache.md) helps accelerate reads, reducing the effect of data fragmentation characteristic of virtualized workloads. Otherwise, if using an all-flash deployment, reads also occur in the performance tier.
 
->[!NOTE]
->For Server deployments, mirror-accelerated parity is only supported on [Storage Spaces Direct](../storage-spaces/storage-spaces-direct-overview.md). We recommend using mirror-accelerated parity with archival and backup workloads only. For virtualized and other high performance random workloads, we recommend using three-way mirrors for better performance.
+> [!NOTE]
+> For Server deployments, mirror-accelerated parity is only supported on [Storage Spaces Direct](../storage-spaces/storage-spaces-direct-overview.md). We recommend using mirror-accelerated parity with archival and backup workloads only. For virtualized and other high performance random workloads, we recommend using three-way mirrors for better performance.
 
 - **Accelerated VM operations** - ReFS introduces new functionality specifically targeted to improve the performance of virtualized workloads:
     - [Block cloning](./block-cloning.md) - Block cloning accelerates copy operations, enabling quick, low-impact VM checkpoint merge operations.
     - Sparse VDL - Sparse VDL allows ReFS to zero files rapidly, reducing the time needed to create fixed VHDs from 10s of minutes to mere seconds.
 
-
 - **Variable cluster sizes** - ReFS supports both 4K and 64K cluster sizes. 4K is the recommended cluster size for most deployments, but 64K clusters are appropriate for large, sequential IO workloads.
-    
-    
+
 ### Scalability
-ReFS is designed to support extremely large data sets--millions of terabytes--without negatively impacting performance, achieving greater scale than prior file systems. 
+
+ReFS is designed to support extremely large data sets--millions of terabytes--without negatively impacting performance, achieving greater scale than prior file systems.
 
 ## Supported deployments
 
 Microsoft has developed NTFS specifically for general-purpose use with a wide range of configurations and workloads, however for customers specially requiring the availability, resiliency, and/or scale that ReFS provides, Microsoft supports ReFS for use under the following configurations and scenarios. 
 
->[!NOTE]
+> [!NOTE]
 > All ReFS supported configurations must use [Windows Server Catalog](https://www.WindowsServerCatalog.com) certified hardware and meet application requirements.
 
 ### Storage Spaces Direct
@@ -78,7 +77,7 @@ Deploying ReFS on Storage Spaces Direct is recommended for virtualized workloads
 - Storage Spaces deployments can also utilize block-cloning and the scalability offered in ReFS.
 - Deploying ReFS on Storage Spaces with shared SAS enclosures is suitable for hosting archival data and storing user documents.
 
->[!NOTE]
+> [!NOTE]
 > Storage Spaces supports local non-removable direct-attached via BusTypes SATA, SAS, NVME, or attached via HBA (aka RAID controller in pass-through mode).
 
 ### Basic disks
@@ -86,16 +85,15 @@ Deploying ReFS on Storage Spaces Direct is recommended for virtualized workloads
 Deploying ReFS on basic disks is best suited for applications that implement their own software resiliency and availability solutions. 
 - Applications that introduce their own resiliency and availability software solutions can leverage integrity-streams, block-cloning, and the ability to scale and support large data sets. 
 
-
->[!NOTE]
+> [!NOTE]
 > Basic disks include local non-removable direct-attached via BusTypes SATA, SAS, NVME, or RAID. 
 
-### Backup Target
+### Backup target
 
 Deploying ReFS as a backup target is best suited for applications and hardware that implement their own resiliency and availability solutions.
 - Applications that introduce their own resiliency and availability software solutions can leverage integrity-streams, block-cloning, and the ability to scale and support large data sets.
 
->[!NOTE]
+> [!NOTE]
 > Backup targets include the above supported configurations. Please contact application and storage array vendors for support details on Fiber Channel and iSCSI SANs. For SANs, if features such as thin provisioning, TRIM/UNMAP, or Offloaded Data Transfer (ODX) are required, NTFS must be used.   
 
 ## Feature comparison
@@ -132,7 +130,6 @@ Deploying ReFS as a backup target is best suited for applications and hardware t
 | Sparse files | Yes | Yes |
 | Named streams | Yes | Yes |
 | Thin Provisioning | Yes<sup>3</sup> | Yes |
-| Offloaded Data Transfer (ODX) | No | Yes |
 | Trim/Unmap | Yes<sup>3</sup> | Yes |
 1. Available on Windows Server, version 1709 and later.
 2. Available on Windows Server 2012 R2 and later.
@@ -155,6 +152,7 @@ Deploying ReFS as a backup target is best suited for applications and hardware t
 | Transactions | No | Yes |
 | Hard links | No | Yes |
 | Object IDs | No | Yes |
+| Offloaded Data Transfer (ODX) | No | Yes |
 | Short names | No | Yes |
 | Extended attributes | No | Yes |
 | Disk quotas | No | Yes |
@@ -162,10 +160,9 @@ Deploying ReFS as a backup target is best suited for applications and hardware t
 | Page file support | No | Yes |
 | Supported on removable media | No | Yes |
 
-
 ## See also
 
--   [Storage Spaces Direct overview](../storage-spaces/storage-spaces-direct-overview.md)
--   [ReFS block cloning](block-cloning.md)
--   [ReFS integrity streams](integrity-streams.md)
-
+- [Cluster size recommendations for ReFS and NTFS](https://techcommunity.microsoft.com/t5/Storage-at-Microsoft/Cluster-size-recommendations-for-ReFS-and-NTFS/ba-p/425960)
+- [Storage Spaces Direct overview](../storage-spaces/storage-spaces-direct-overview.md)
+- [ReFS block cloning](block-cloning.md)
+- [ReFS integrity streams](integrity-streams.md)

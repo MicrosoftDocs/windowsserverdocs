@@ -2,7 +2,7 @@
 title: tpmvscmgr
 description: "Windows Commands topic for **** - "
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -32,7 +32,7 @@ Tpmvscmgr destroy [/instance <instance ID>] [/?]
 
 ### Parameters for Create command
 
-The Create command sets up new virtual smart cards on the user’s system. It returns the instance ID of the newly created card for later reference if deletion is required. The instance ID is in the format **ROOT\SMARTCARDREADER\000n** where **n** starts from 0 and is increased by 1 each time you create a new virtual smart card.
+The Create command sets up new virtual smart cards on the user's system. It returns the instance ID of the newly created card for later reference if deletion is required. The instance ID is in the format **ROOT\SMARTCARDREADER\000n** where **n** starts from 0 and is increased by 1 each time you create a new virtual smart card.
 
 |Parameter|Description|
 |---------|-----------|
@@ -46,7 +46,7 @@ The Create command sets up new virtual smart cards on the user’s system. It re
 
 ### Parameters for Destroy command
 
-The Destroy command securely deletes a virtual smart card from the user’s computer.
+The Destroy command securely deletes a virtual smart card from the user's computer.
 
 > [!WARNING]
 > When a virtual smart card is deleted, it cannot be recovered.

@@ -7,7 +7,7 @@ ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 
 ms.technology: identity-adfs
 ---
@@ -15,7 +15,7 @@ ms.technology: identity-adfs
 # Create a Rule to Permit or Deny Users Based on an Incoming Claim 
 
 
-In Windows Server 2016, you can use an **Access Control Policy** to create a rule that will permit or deny users based on an incoming claim.  In Windows Server 2012 R2, using the **Permit or Deny Users Based on an Incoming Claim** rule template in Active Directory Federation Services \(AD FS\), you can create an authorization rule that will grant or deny user’s access to the relying party based on the type and value of an incoming claim. 
+In Windows Server 2016, you can use an **Access Control Policy** to create a rule that will permit or deny users based on an incoming claim.  In Windows Server 2012 R2, using the **Permit or Deny Users Based on an Incoming Claim** rule template in Active Directory Federation Services \(AD FS\), you can create an authorization rule that will grant or deny user's access to the relying party based on the type and value of an incoming claim. 
 
 For example, you can use this to create a rule that will permit only users that have a group claim with a value of Domain Admins to access the relying party. If you want to permit all users to access the relying party, use the **Permit Everyone** Access Control Policy or the **Permit All Users** rule template depending on your version of Windows Server. Users who are permitted to access the relying party from the Federation Service may still be denied service by the relying party.  
   

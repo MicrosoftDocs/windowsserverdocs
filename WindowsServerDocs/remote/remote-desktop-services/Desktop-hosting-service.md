@@ -2,7 +2,7 @@
 title: Desktop hosting service
 description: Describes the components of a desktop hosting service.
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: remote-desktop-services
@@ -11,7 +11,7 @@ ms.date: 07/06/2018
 ms.tgt_pltfrm: na
 ms.topic: article
 author: heidilohr
-manager: dougkim
+manager: lizross
 ---
 # Desktop hosting service
 
@@ -27,15 +27,15 @@ The provider's desktop hosting service is implemented as a set of isolated tenan
 
 ## Active Directory Domain Services
 
-Active Directory Domain Services (AD DS) provides the domain and forest information, such that the tenant’s users can sign in to the desktops and applications to carry out their workloads. This also enables you to set up or connect to required file shares and databases that may be required for Windows applications.
+Active Directory Domain Services (AD DS) provides the domain and forest information, such that the tenant's users can sign in to the desktops and applications to carry out their workloads. This also enables you to set up or connect to required file shares and databases that may be required for Windows applications.
 
 The tenant's forest does not require any trust relationship with the provider's management forest. A domain administrator account may be set up in the tenant's domain to allow the provider's technical personnel to perform administrative tasks in the tenant's environment (such as monitoring system status and applying software updates) and to assist with troubleshooting and configuration.
 
 There are multiple ways to deploy AD DS:
 
-1. Enable Azure Active Directory Domain Services in the tenant’s virtual networking environment. This will create a managed AD DS instance for the tenant based on the users and groups that exist in Azure AD.
-2. Set up a stand-alone AD DS server in the tenant’s virtual networking environment. This gives you all of the full control of the AD DS instance running on virtual machines.
-3. Create a site-to-site VPN connection to an AD DS server located on the tenant’s premises. This allows the tenant to connect to their existing AD DS instance and reduce duplication of users, groups, organizational units, and so on.
+1. Enable Azure Active Directory Domain Services in the tenant's virtual networking environment. This will create a managed AD DS instance for the tenant based on the users and groups that exist in Azure AD.
+2. Set up a stand-alone AD DS server in the tenant's virtual networking environment. This gives you all of the full control of the AD DS instance running on virtual machines.
+3. Create a site-to-site VPN connection to an AD DS server located on the tenant's premises. This allows the tenant to connect to their existing AD DS instance and reduce duplication of users, groups, organizational units, and so on.
 
 For more information, see the following articles:
 
@@ -45,7 +45,7 @@ For more information, see the following articles:
 
 ## SQL database
 
-A highly-available SQL database is used by the Remote Desktop Connection Broker to store deployment information, such as the mapping of current users’ connections to the host servers.
+A highly-available SQL database is used by the Remote Desktop Connection Broker to store deployment information, such as the mapping of current users' connections to the host servers.
 
 There are multiple ways to deploy an SQL database:
 

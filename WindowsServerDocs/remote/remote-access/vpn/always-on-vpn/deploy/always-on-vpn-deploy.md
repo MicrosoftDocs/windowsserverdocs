@@ -1,7 +1,7 @@
 ---
 title: Always On VPN Deployment for Windows Server and Windows 10
 description: You can use this deployment to deploy Always On Virtual Private Network (VPN) connections for remote employees by using Remote Access in Windows Server 2016 or later and Always On VPN profiles for Windows 10 client computers.
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: networking-ras
 ms.topic: article
 ms.assetid: 5ae1a40b-4f10-4ace-8aaf-13f7ab581f4f
@@ -13,15 +13,12 @@ author: shortpatti
 
 # Always On VPN deployment for Windows Server and Windows 10
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows 10
+>Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows 10
 
-&#171;  [**Previous:** Remote Access](../../../Remote-Access.md)<br>
-&#187; [**Next:** Learn about the Always On VPN features and functionality](../../vpn-map-da.md)
+- [**Previous:** Remote Access](../../../Remote-Access.md)<br>
+- [**Next:** Learn about the Always On VPN features and functionality](../../vpn-map-da.md)
 
-
-Always On VPN provides a single, cohesive solution for remote access and supports domain-joined, nondomain-joined (workgroup), or Azure AD–joined devices, even personally owned devices.  With Always On VPN, the connection type does not have to be exclusively user or device but can be a combination of both. For example, you could enable device authentication for remote device management, and then enable user authentication for connectivity to internal company sites and services.
-
-
+Always On VPN provides a single, cohesive solution for remote access and supports domain-joined, nondomain-joined (workgroup), or Azure AD–joined devices, even personally owned devices. With Always On VPN, the connection type does not have to be exclusively user or device but can be a combination of both. For example, you could enable device authentication for remote device management, and then enable user authentication for connectivity to internal company sites and services.
 
 ## Prerequisites
 
@@ -38,39 +35,32 @@ You most likely have the technologies deployed that you can use to deploy Always
 - Review the design and deployment guides for each of the technologies used. These guides can help you determine whether the deployment scenarios provide the services and configuration that you need for your organization's network. For more information, see [Always On VPN Technology Overview](../always-on-vpn-technology-overview.md).
 - Management platform of your choice for deploying the Always On VPN configuration because the CSP is not vendor-specific.
 
-
 >[!IMPORTANT]
 >For this deployment, it is not a requirement that your infrastructure servers, such as computers running Active Directory Domain Services, Active Directory Certificate Services, and Network Policy Server, are running Windows Server 2016. You can use earlier versions of Windows Server, such as Windows Server 2012 R2, for the infrastructure servers and for the server that is running Remote Access.
 >
->Do not attempt to deploy Remote Access on a virtual machine \(VM\) in Microsoft Azure. Using Remote Access in Microsoft Azure is not supported, including both Remote Access VPN and DirectAccess. For more information, see [Microsoft server software support for Microsoft Azure virtual machines](https://support.microsoft.com/help/2721672/microsoft-server-software-support-for-microsoft-azure-virtual-machines).
+>Do not attempt to deploy Remote Access on a virtual machine (VM) in Microsoft Azure. Using Remote Access in Microsoft Azure is not supported, including both Remote Access VPN and DirectAccess. For more information, see [Microsoft server software support for Microsoft Azure virtual machines](https://support.microsoft.com/help/2721672/microsoft-server-software-support-for-microsoft-azure-virtual-machines).
 
+## About this deployment
 
-## <a name="bkmk_about"></a>About this deployment
-
-The instructions provided walk you through deploying Remote Access as a single tenant VPN RAS Gateway for point\-to\-site VPN connections, using any of the scenarios mentioned below, for remote client computers that are running Windows 10. You also find instructions for modifying some of your existing infrastructure for the deployment. Also throughout this deployment, you find links to help you learn more about the VPN connection process, servers to configure, ProfileXML VPNv2 CSP node, and other technologies to deploy Always On VPN.
+The instructions provided walk you through deploying Remote Access as a single tenant VPN RAS Gateway for point-to-site VPN connections, using any of the scenarios mentioned below, for remote client computers that are running Windows 10. You also find instructions for modifying some of your existing infrastructure for the deployment. Also throughout this deployment, you find links to help you learn more about the VPN connection process, servers to configure, ProfileXML VPNv2 CSP node, and other technologies to deploy Always On VPN.
 
 **Always On VPN deployment scenarios:**
 
 1. Deploy Always On VPN only.
 2. Deploy Always On VPN with conditional access for VPN connectivity using Azure AD.
 
-
 For more information and workflow of the scenarios presented, see [Deploy Always On VPN](always-on-vpn-deploy-deployment.md).
 
-
-## <a name="bkmk_not"></a>What is not provided in this deployment
+## What isn't provided in this deployment
 
 This deployment does not provide instructions for:
 
-- Active Directory Domain Services \(AD DS\).
-- Active Directory Certificate Services \(AD CS\) and a Public Key Infrastructure \(PKI\).
-- Dynamic Host Configuration Protocol \(DHCP\). 
+- Active Directory Domain Services (AD DS).
+- Active Directory Certificate Services (AD CS) and a Public Key Infrastructure (PKI).
+- Dynamic Host Configuration Protocol (DHCP).
 - Network hardware, such as Ethernet cabling, firewalls, switches, and hubs.
 - Additional network resources, such as application and file servers, that remote users can access over an Always On VPN connection.
 - Internet connectivity or Conditional Access for Internet connectivity using Azure AD. For details, see [Conditional access in Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-azure-portal).
-
-
-
 
 ## Next steps
 
@@ -83,6 +73,3 @@ This deployment does not provide instructions for:
 - [Learn more about the Always On VPN technology](../always-on-vpn-technology-overview.md)
 
 - [Start planning your Always On VPN deployment](always-on-vpn-deploy-deployment.md)
-
-
----

@@ -6,7 +6,7 @@ author: shortpatti
 ms.author: pashort
 ms.date: 09/05/2018
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: networking
 ---
 
@@ -18,7 +18,7 @@ ms.technology: networking
 
 >Applies to: Windows Server 2019 and Windows 10, version 1809
 
-A leap second is an occasional 1-second adjustment to UTC. As the earth’s rotation slows, [UTC](https://en.wikipedia.org/wiki/Coordinated_Universal_Time) (an atomic timescale) diverges from [mean solar time](https://en.wikipedia.org/wiki/Solar_time#Mean_solar_time) or astronomical time.  Once UTC has diverged by at most .9 seconds, a [leap second](https://en.wikipedia.org/wiki/Leap_second) is inserted to keep UTC in-sync with mean solar time.
+A leap second is an occasional 1-second adjustment to UTC. As the earth's rotation slows, [UTC](https://en.wikipedia.org/wiki/Coordinated_Universal_Time) (an atomic timescale) diverges from [mean solar time](https://en.wikipedia.org/wiki/Solar_time#Mean_solar_time) or astronomical time.  Once UTC has diverged by at most .9 seconds, a [leap second](https://en.wikipedia.org/wiki/Leap_second) is inserted to keep UTC in-sync with mean solar time.
 
 Leap seconds have become important to meet the accuracy and traceability regulatory requirements both in the United States and the European Union.
 
@@ -48,7 +48,7 @@ For more information, see:
 
 >Applies to: Windows Server 2019 and Windows 10, version 1809
 
-When receiving a timing packet over the network from a time server, it must be processed by the operating system’s networking stack before being consumed in the time service. Each component in the networking stack introduces a variable amount of latency that affects the accuracy of the timing measurement.
+When receiving a timing packet over the network from a time server, it must be processed by the operating system's networking stack before being consumed in the time service. Each component in the networking stack introduces a variable amount of latency that affects the accuracy of the timing measurement.
 
 ![software timestamping](../media/Windows-Time-Service/software-timestamping.png)
 

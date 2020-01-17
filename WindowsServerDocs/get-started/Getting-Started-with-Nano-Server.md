@@ -1,7 +1,7 @@
 ---
 title: Install Nano Server
 description: "Clean installation, upgrade, migration, and evaluation of Nano Server"
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.service: na
 manager: dougkim
 ms.technology: server-nano
@@ -52,7 +52,7 @@ Because Nano Server is optimized as a lightweight operating system for running �
 - Nano Server is supported only on the Current Branch for Business (CBB) model--there is no Long-Term Servicing Branch (LTSB) release for Nano Server at this time. See the following subsection for more information.
 
 ### Current Branch for Business
-Nano Server is serviced with a more active model, called Current Branch for Business (CBB), in order to support customers who are moving at a “cloud cadence," using rapid development cycles. In this model, feature update releases of Nano Server are expected two to three times per year. This model requires [Software Assurance](https://www.microsoft.com/en-us/licensing/licensing-programs/software-assurance-default.aspx) for Nano Servers deployed and operated in production. To maintain support, administrators must stay no more than two CBB releases behind. However, these releases do not auto-update existing deployments; administrators perform manual installation of a new CBB release at their convenience. For some additional information, see [Windows Server 2016 new Current Branch for Business servicing option](https://blogs.technet.microsoft.com/windowsserver/2016/07/12/windows-server-2016-new-current-branch-for-business-servicing-option/).
+Nano Server is serviced with a more active model, called Current Branch for Business (CBB), in order to support customers who are moving at a “cloud cadence," using rapid development cycles. In this model, feature update releases of Nano Server are expected two to three times per year. This model requires [Software Assurance](https://www.microsoft.com/licensing/licensing-programs/software-assurance-default.aspx) for Nano Servers deployed and operated in production. To maintain support, administrators must stay no more than two CBB releases behind. However, these releases do not auto-update existing deployments; administrators perform manual installation of a new CBB release at their convenience. For some additional information, see [Windows Server 2016 new Current Branch for Business servicing option](https://blogs.technet.microsoft.com/windowsserver/2016/07/12/windows-server-2016-new-current-branch-for-business-servicing-option/).
 
 The Server Core and Server with Desktop Experience installation options are still serviced on the [Long-Term Servicing Branch (LTSB) model](https://support.microsoft.com/lifecycle#gp%2Fgp_msl_policy), comprising 5 years of mainstream support and 5 years of extended support.
 

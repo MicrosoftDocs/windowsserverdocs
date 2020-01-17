@@ -2,7 +2,7 @@
 title: Manage Software Inventory Logging
 description: Describes how to manage Software Inventory Logging
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: manage-software-inventory-logging
 ms.reviewer: na
 ms.suite: na
@@ -25,20 +25,20 @@ The Software Inventory Logging feature can also be added to two versions of Wind
 - **Windows Server 2012 (Standard or Datacenter Edition)** 
 
 > [!NOTE] 
-> Make sure you have [WMF 4.0](https://www.microsoft.com/en-us/download/details.aspx?id=40855) installed before applying the update package below.
+> Make sure you have [WMF 4.0](https://www.microsoft.com/download/details.aspx?id=40855) installed before applying the update package below.
 
--  WMF 4.0 Update package for Windows Server 2012: [KB 3119938](https://support.microsoft.com/en-us/kb/3119938)
+-  WMF 4.0 Update package for Windows Server 2012: [KB 3119938](https://support.microsoft.com/kb/3119938)
 
 - **Windows Server 2008 R2 SP1**
 
 > [!NOTE] 
-> Make sure you have [WMF 4.0](https://www.microsoft.com/en-us/download/details.aspx?id=40855) installed before applying the update package below.
+> Make sure you have [WMF 4.0](https://www.microsoft.com/download/details.aspx?id=40855) installed before applying the update package below.
 
 
-- Requires [.NET Framework 4.5](https://www.microsoft.com/en-us/download/details.aspx?id=30653)
+- Requires [.NET Framework 4.5](https://www.microsoft.com/download/details.aspx?id=30653)
 
 
-- WMF 4.0 Update package for Windows Server 2008 R2: [KB 3109118](https://support.microsoft.com/en-us/kb/3109118)
+- WMF 4.0 Update package for Windows Server 2008 R2: [KB 3109118](https://support.microsoft.com/kb/3109118)
 
 
 There are two primary methods for inventorying using this feature:  
@@ -215,10 +215,10 @@ Software Inventory Logging will temporarily store hourly collections of data if 
 > If for any reason a repair installation or upgrade of the operating system is necessary, any log files stored locally will be lost.  If this data is critical for operations, it is recommended to be backed up prior to new operating system installation. After repair or upgrade, simply restore to the same location.  
   
 > [!NOTE]  
-> If for any reason managing the retention duration of data logged locally by SIL becomes important, this can be configured by changing the registry value here: \HKEY_LOCAL_MACHINE\\SOFTWARE\Microsoft\Windows\SoftwareInventoryLogging. The default is ‘30’ for 30 days.  
+> If for any reason managing the retention duration of data logged locally by SIL becomes important, this can be configured by changing the registry value here: \HKEY_LOCAL_MACHINE\\SOFTWARE\Microsoft\Windows\SoftwareInventoryLogging. The default is ‘30' for 30 days.  
   
 ## <a name="BKMK_Step6"></a>Reading data logged and published by Software Inventory Logging  
-Data logged by SIL, but stored locally (if the forward to the target URI fails), or data that is successfully forwarded to the target aggregation server, is stored in a binary file (for each day’s data). To display this data in PowerShell, use the [Import-BinaryMiLog](https://technet.microsoft.com/library/dn262592.aspx) cmdlet.  
+Data logged by SIL, but stored locally (if the forward to the target URI fails), or data that is successfully forwarded to the target aggregation server, is stored in a binary file (for each day's data). To display this data in PowerShell, use the [Import-BinaryMiLog](https://technet.microsoft.com/library/dn262592.aspx) cmdlet.  
   
 ## <a name="BKMK_Step7"></a>Software Inventory Logging Security  
 Administrative privileges on the local server are required to successfully retrieve data from Software Inventory Logging WMI and PowerShell APIs.  
@@ -236,7 +236,7 @@ Any data stored locally on a Windows Server (only occurs if the feature is start
 -   When using [Get-SilUalAccess](https://technet.microsoft.com/library/dn283389.aspx), "SampleDate" will always show 11:59:00PM, a meaningless value.  Date is the pertinent data for these cmdlet queries.  
   
 ## <a name="BKMK_Step10"></a>Enabling and Configuring Software Inventory Logging in a Mounted Virtual Hard Disk  
-Software Inventory Logging also supports configuration and enablement on offline virtual machines. The practical uses for this are intended to cover both ‘gold image’ setup for wide deployment across data centers, as well as configuring end user images going from a premises to a cloud deployment.  
+Software Inventory Logging also supports configuration and enablement on offline virtual machines. The practical uses for this are intended to cover both ‘gold image' setup for wide deployment across data centers, as well as configuring end user images going from a premises to a cloud deployment.  
   
 To support these uses, Software Inventory Logging has registry entries associated with each configurable option.  These registry values can be found under \HKEY_LOCAL_MACHINE\\SOFTWARE\Microsoft\Windows\SoftwareInventoryLogging.  
   

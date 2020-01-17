@@ -2,7 +2,7 @@
 title: attributes volume
 description: "Windows Commands topic for **attributes volume** - Displays, sets, or clears the attributes of a volume."
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands

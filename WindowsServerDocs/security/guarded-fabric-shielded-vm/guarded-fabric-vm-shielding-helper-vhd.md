@@ -1,7 +1,7 @@
 ---
 title: Shielded VMs - Preparing a VM Shielding Helper VHD
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.topic: article
 ms.assetid: 0e3414cf-98ca-4e91-9e8d-0d7bce56033b
 manager: dongill
@@ -14,10 +14,8 @@ ms.date: 08/29/2018
 
 >Applies to: Windows Server 2019, Windows Server (Semi-Annual Channel), Windows Server 2016
 
-<!-- This comment creates a break between the Applies To above and the Important note below. -->
-
 > [!IMPORTANT]
-> Before beginning these procedures, ensure that you have installed the latest cumulative update for Windows Server 2016 or are using the latest Windows 10 [Remote Server Administration Tools](https://www.microsoft.com/en-us/download/details.aspx?id=45520). Otherwise, the procedures will not work. 
+> Before beginning these procedures, ensure that you have installed the latest cumulative update for Windows Server 2016 or are using the latest Windows 10 [Remote Server Administration Tools](https://www.microsoft.com/download/details.aspx?id=45520). Otherwise, the procedures will not work. 
 
 This section outlines steps performed by a hosting service provider to enable support for converting existing VMs to shielded VMs.
 

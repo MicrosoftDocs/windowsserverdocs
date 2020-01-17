@@ -2,7 +2,7 @@
 title: assign
 description: "Windows Commands topic for **assign** - assigns a drive letter or mount point to the volume with focus."
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands

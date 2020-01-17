@@ -3,7 +3,7 @@ title: Limit user access to the server
 description: Learn how to grant or deny access to MultiPoint Services for users and groups
 ms.custom: na
 ms.date: 07/22/2016
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: multipoint-services
 ms.reviewer: na
 ms.suite: na

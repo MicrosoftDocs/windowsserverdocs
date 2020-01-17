@@ -2,7 +2,7 @@
 title: bitsadmin addfilewithranges
 description: "Windows Commands topic for **bitsadmin addfilewithranges** - adds a file to the specified job. BITS downloads the specified ranges from the remote file."
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -46,6 +46,7 @@ bitsadmin /AddFileWithRanges <Job> <RemoteURL> <LocalName> <RangeList>
 ## Examples
 
 The following example tells BITS to transfer 100 bytes from offset 0, 100 bytes from offset 2000, and the remaining bytes from offset 5000 to the end of the file.
+
 ```
 C:\>bitsadmin /addfilewithranges http://downloadsrv/10mb.zip c:\10mb.zip "0:100,2000:100,5000:eof"
 ```

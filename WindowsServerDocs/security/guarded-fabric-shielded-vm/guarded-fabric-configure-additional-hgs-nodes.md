@@ -1,13 +1,13 @@
 ---
 title: Configure additional HGS nodes
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.topic: article
 ms.assetid: 227f723b-acb2-42a7-bbe3-44e82f930e35
 manager: dongill
 author: rpsqrd
 ms.technology: security-guarded-fabric
-ms.date: 10/22/2018
+ms.date: 01/14/2020
 ---
 
 # Configure additional HGS nodes
@@ -135,17 +135,9 @@ To decommission an HGS node:
 1. [Clear the HGS configuration](guarded-fabric-manage-hgs.md#clearing-the-hgs-configuration).
 
    This removes the node from the cluster and uninstalls the attestation and key protection services. 
-   If it’s the last node in the cluster, -Force is needed to signify you do want to remove the last node and destroy the cluster in Active Directory. 
-   
-   If HGS is deployed in a bastion forest (default), that’s the only step. 
+   If it's the last node in the cluster, -Force is needed to signify you do want to remove the last node and destroy the cluster in Active Directory. 
+
+   If HGS is deployed in a bastion forest (default), that's the only step. 
    You can optionally unjoin the machine from the domain and remove the gMSA account from Active Directory.
 
-1. If HGS created its own domain, you should also [uninstall HGS](guarded-fabric-manage-hgs.md#clearing-the-hgs-configuration) to unjoin the domain and demote the domain controller.
-
-
-
-## Next step
-
-> [!div class="nextstepaction"]
-> [Validate the HGS configuration](guarded-fabric-verify-hgs-configuration.md)
-
+2. If HGS created its own domain, you should also [uninstall HGS](guarded-fabric-manage-hgs.md#clearing-the-hgs-configuration) to unjoin the domain and demote the domain controller.

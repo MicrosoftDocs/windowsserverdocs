@@ -1,7 +1,7 @@
 ---
 title: Guarded Fabric and Shielded VM Planning Guide for Hosters
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.topic: article
 ms.assetid: 392af37f-a02d-4d40-a25d-384211cbbfdd
 manager: dongill
@@ -13,7 +13,7 @@ ms.technology: security-guarded-fabric
 
 >Applies to: Windows Server 2019, Windows Server (Semi-Annual Channel), Windows Server 2016
 
-This topic focuses on VM owners who would like to protect their virtual machines (VMs) for compliance and security purposes. Regardless of whether the VMs run on a hosting provider’s guarded fabric or a private guarded fabric, VM owners need to control the security level of their shielded VMs, which includes maintaining the ability to decrypt them if needed.
+This topic focuses on VM owners who would like to protect their virtual machines (VMs) for compliance and security purposes. Regardless of whether the VMs run on a hosting provider's guarded fabric or a private guarded fabric, VM owners need to control the security level of their shielded VMs, which includes maintaining the ability to decrypt them if needed.
 
 There are three areas to consider when using shielded VMs:
 
@@ -58,7 +58,7 @@ Shielding data contains the secrets necessary to deploy shielded or encryption-s
 
 Shielding data is created using the Shielding Data File Wizard and is stored in PDK files which VM owners upload to the guarded fabric.
 
-Shielded VMs help protect against attacks from a compromised virtualization fabric, so we need a safe mechanism to pass sensitive initialization data, such as the administrator’s password, domain join credentials, or RDP certificates, without revealing these to the virtualization fabric itself or to its administrators. In addition, shielding data contains the following:
+Shielded VMs help protect against attacks from a compromised virtualization fabric, so we need a safe mechanism to pass sensitive initialization data, such as the administrator's password, domain join credentials, or RDP certificates, without revealing these to the virtualization fabric itself or to its administrators. In addition, shielding data contains the following:
 
 1. Security level – Shielded or encryption-supported
 2. Owner and list of trusted Host Guardians where the VM can run
@@ -69,7 +69,7 @@ When creating a shielded or encryption-supported VM or converting an existing VM
 
 **How many shielding data files do I need?** A single shielding data file can be used to create every shielded VM. If, however, a given shielded VM requires that any of the four items be different, then an additional shielding data file is necessary. For example, you might have one shielding data file for your IT department and a different shielding data file for the HR department because their initial administrator password and RDP certificates differed.
 
-While using separate shielding data files for each shielded VM is possible, it is not necessarily the optimal choice and should be done for the right reasons. For example, if every shielded VM needs to have a different administrator password, consider instead using a password management service or tool such as [Microsoft’s Local Administrator Password Solution (LAPS)](https://www.microsoft.com/en-us/download/details.aspx?id=46899).
+While using separate shielding data files for each shielded VM is possible, it is not necessarily the optimal choice and should be done for the right reasons. For example, if every shielded VM needs to have a different administrator password, consider instead using a password management service or tool such as [Microsoft's Local Administrator Password Solution (LAPS)](https://www.microsoft.com/download/details.aspx?id=46899).
 
 ## Creating a shielded VM on a virtualization fabric
 
@@ -79,7 +79,7 @@ There are several options for creating a shielded VM on a virtualization fabric 
 2. Create a new shielded VM from a signed template on the virtualization fabric
 3. Shield an existing VM (the existing VM must be generation 2 and must be running Windows Server 2012 or later)
 
-Creating new VMs from a template is normal practice. However, since the template disk that is used to create new Shielded VM resides on the virtualization fabric, additional measures are necessary to ensure that it has not been tampered with by a malicious fabric administrator or by malware running on the fabric. This problem is solved using signed template disks—signed template disks and their disk signatures are created by trusted administrators or the VM owner. When a shielded VM is created, the template disk’s signature is compared with the signatures contained within the specified shielding data file. If any of the shielding data file’s signatures match the template disk’s signature, the deployment process continues. If no match can be found, the deployment process is aborted, ensuring that VM secrets will not be compromised because of an untrustworthy template disk.
+Creating new VMs from a template is normal practice. However, since the template disk that is used to create new Shielded VM resides on the virtualization fabric, additional measures are necessary to ensure that it has not been tampered with by a malicious fabric administrator or by malware running on the fabric. This problem is solved using signed template disks—signed template disks and their disk signatures are created by trusted administrators or the VM owner. When a shielded VM is created, the template disk's signature is compared with the signatures contained within the specified shielding data file. If any of the shielding data file's signatures match the template disk's signature, the deployment process continues. If no match can be found, the deployment process is aborted, ensuring that VM secrets will not be compromised because of an untrustworthy template disk.
 
 When using signed template disks to create shielded VMs, two options are available:
 

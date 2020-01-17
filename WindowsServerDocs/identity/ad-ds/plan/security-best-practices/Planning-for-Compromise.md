@@ -7,7 +7,7 @@ ms.author: joflore
 manager: mtillman
 ms.date: 05/31/2017
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 
 ms.technology: identity-adds
 ---
@@ -104,7 +104,7 @@ In a traditional Active Directory migration from one forest to another, the SIDH
   
 Maintaining SID history, however, has proven problematic in some environments because populating users' access tokens with current and historical SIDs can result in token bloat. Token bloat is an issue in which the number of SIDs that must be stored in a user's access token uses or exceeds the amount of space available in the token.  
   
-Although token sizes can be increased to a limited extent, the ultimate solution to token bloat is to reduce the number of SIDs associated with user accounts, whether by rationalizing group memberships, eliminating SID history, or a combination of both. For more information about token bloat, see [MaxTokenSize and Kerberos Token Bloat](http://blogs.technet.com/b/shanecothran/archive/2010/07/16/maxtokensize-and-kerberos-token-bloat.aspx).  
+Although token sizes can be increased to a limited extent, the ultimate solution to token bloat is to reduce the number of SIDs associated with user accounts, whether by rationalizing group memberships, eliminating SID history, or a combination of both. For more information about token bloat, see [MaxTokenSize and Kerberos Token Bloat](https://blogs.technet.com/b/shanecothran/archive/2010/07/16/maxtokensize-and-kerberos-token-bloat.aspx).  
   
 Rather than migrating users from a legacy environment (particularly one in which group memberships and SID histories may be compromised) by using SID history, consider leveraging metadirectory applications to "migrate" users, without carrying SID histories into the new forest. When user accounts are created in the new forest, you can use a metadirectory application to map the accounts to their corresponding accounts in the legacy forest.  
   
@@ -140,7 +140,7 @@ In most organizations, users who have access to the most sensitive information d
   
 For example, you may define a policy in which executives and other VIPs are required to use secure workstations to access sensitive data and systems, allowing them to use their other devices to access less sensitive data. This is a simple principle for users to remember, but you can implement a number of backend controls to help to enforce the approach.  
 
-You can use [Authentication Mechanism Assurance](https://technet.microsoft.com/library/dd391847(v=WS.10).aspx) to permit the users to access sensitive data only if they've logged on to their secure systems using their smart cards, and can use IPsec and user rights restrictions to control the systems from which they can connect to sensitive data repositories. You can use the [Microsoft Data Classification Toolkit](https://www.microsoft.com/download/details.aspx?id=27123) to build a robust file classification infrastructure, and you can implement [Dynamic Access Control](http://blogs.technet.com/b/windowsserver/archive/2012/05/22/introduction-to-windows-server-2012-dynamic-access-control.aspx) to restrict access to data based on characteristics of an access attempt, translating business rules into technical controls.  
+You can use [Authentication Mechanism Assurance](https://technet.microsoft.com/library/dd391847(v=WS.10).aspx) to permit the users to access sensitive data only if they've logged on to their secure systems using their smart cards, and can use IPsec and user rights restrictions to control the systems from which they can connect to sensitive data repositories. You can use the [Microsoft Data Classification Toolkit](https://www.microsoft.com/download/details.aspx?id=27123) to build a robust file classification infrastructure, and you can implement [Dynamic Access Control](https://blogs.technet.com/b/windowsserver/archive/2012/05/22/introduction-to-windows-server-2012-dynamic-access-control.aspx) to restrict access to data based on characteristics of an access attempt, translating business rules into technical controls.  
   
 From the perspective of the user, accessing sensitive data from a secured system "just works," and attempting to do so from an unsecured system "just doesn't." However, from the perspective of monitoring and managing your environment, you're helping to create identifiable patterns in how users access sensitive data and systems, making it easier for you to detect anomalous access attempts.  
   

@@ -2,7 +2,7 @@
 title: gpresult
 description: "Windows Commands topic for **** - "
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -20,11 +20,15 @@ ms.date: 10/16/2017
 
 Displays the Resultant Set of Policy (RSoP) information for a remote user and computer.
 To use RSoP reporting for remotely targeted computers through the firewall, you must have firewall rules that enable inbound network traffic on the ports.
+
 ## Syntax
+
 ```
 gpresult [/s <system> [/u <USERNAME> [/p [<PASSWOrd>]]]] [/user [<TARGETDOMAIN>\]<TARGETUSER>] [/scope {user | computer}] {/r | /v | /z | [/x | /h] <FILENAME> [/f] | /?}
 ```
+
 ## Parameters
+
 > [!NOTE]
 > Except when you use **/?**, you must include an output option, either **/r**, **/v**, **/z**, **/x**, or **/h**.
 
@@ -47,20 +51,26 @@ gpresult [/s <system> [/u <USERNAME> [/p [<PASSWOrd>]]]] [/user [<TARGETDOMAIN>\
 - Because you can apply overlapping policy settings to any computer or user, the Group Policy feature generates a resulting set of policy settings when the user logs on. **gpresult** displays the resulting set of policy settings that were enforced on the computer for the specified user when the user logged on.
 - Because **/v** and **/z** produce lots of information, it is useful to redirect output to a text file (for example, **gpresult/z >policy.txt**).
 - The **gpresult** command is available in  Windows Server 2012 , Windows Server 2008 R2, Windows Server2008, Windows 8, Windows 7, and Windows Vista.
-  ## <a name="BKMK_Examples"></a>Examples
+  ## Examples
   The following example retrieves RSoP data for the remote user **targetusername** of the computer **srvmain**, and displays RSoP data about the user only. The command is run with the credentials of the user **maindom\hiropln**, and <strong>p@ssW23</strong> is entered as the password for that user.
+
   ```
   gpresult /s srvmain /u maindom\hiropln /p p@ssW23 /user targetusername /scope user /r
   ```
-  The following example saves all available information about Group Policy for the remote user **targetusername** of the computer **srvmain** to a file that is named **policy.txt**. No data is included about the computer. The command is run with the credentials of the user **maindom\hiropln**, and <strong>p@ssW23</strong> is entered as the password for that user.
+  
+The following example saves all available information about Group Policy for the remote user **targetusername** of the computer **srvmain** to a file that is named **policy.txt**. No data is included about the computer. The command is run with the credentials of the user **maindom\hiropln**, and <strong>p@ssW23</strong> is entered as the password for that user.
+
   ```
   gpresult /s srvmain /u maindom\hiropln /p p@ssW23 /user targetusername /z > policy.txt
   ```
-  The following example displays RSoP data for the computer **srvmain** and the logged-on user. Data is included about both the user and the computer. The command is run with the credentials of the user **maindom\hiropln**, and <strong>p@ssW23</strong> is entered as the password for that user.
+  
+The following example displays RSoP data for the computer **srvmain** and the logged-on user. Data is included about both the user and the computer. The command is run with the credentials of the user **maindom\hiropln**, and <strong>p@ssW23</strong> is entered as the password for that user.
+
   ```
   gpresult /s srvmain /u maindom\hiropln /p p@ssW23 /r
   ```
-  ## additional references
+  
+## additional references
 - [Group Policy TechCenter](https://go.microsoft.com/fwlink/?LinkID=145531)
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)

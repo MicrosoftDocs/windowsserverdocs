@@ -2,7 +2,7 @@
 title: break
 description: "Windows Commands topic for **break_1** - Sets or clears extended CTRL+C checking on MS-DOS systems. If used without parameters, **break** displays the current setting. "
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands

@@ -1,7 +1,7 @@
 ---
 title: WSUS Messages and Troubleshooting Tips
 description: "Windows Server Update Service (WSUS) topic - Troubleshoot using WSUS messages"
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-wsus
@@ -59,7 +59,7 @@ In this situation, the most likely cause is that the WsusPool Application Pool i
 
 Also, the Private Memory Limit (KB) for the Application Pool is probably set to the default value of 1843200 KB. If you encounter this problem, increase the Private Memory Limit to 4GB (4000000 KB) and restart the Application Pool. To increase the Private Memory Limit, select the WsusPool Application Pool and click Advanced Settings under edit Application Pool. Then set the Private Memory Limit to 4GB (4000000 KB). After the Application Pool has been restarted, monitor the SMS_WSUS_SYNC_MANAGER component status, wcm.log and wsyncmgr.log for failures. Please note that it may be necessary to increase the Private Memory Limit to 8GB (8000000 KB) or higher depending on the environment.
 
-For additional details, see: [WSUS sync in ConfigMgr 2012 fails with HTTP 503 errors](http://blogs.technet.com/b/sus/archive/2015/03/23/configmgr-2012-support-tip-wsus-sync-fails-with-http-503-errors.aspx)
+For additional details, see: [WSUS sync in ConfigMgr 2012 fails with HTTP 503 errors](https://blogs.technet.com/b/sus/archive/2015/03/23/configmgr-2012-support-tip-wsus-sync-fails-with-http-503-errors.aspx)
 
 ## Error 0x80070643: Fatal error during installation
 WSUS Setup uses Microsoft SQL Server to perform the installation. This problem occurs because the user who is running WSUS Setup does not have System Administrator permissions in SQL Server.

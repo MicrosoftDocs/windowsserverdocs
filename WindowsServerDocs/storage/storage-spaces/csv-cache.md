@@ -1,6 +1,6 @@
 ---
 title: Storage Spaces Direct in-memory read cache
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.author: eldenc
 ms.manager: siroy
 ms.technology: storage-spaces

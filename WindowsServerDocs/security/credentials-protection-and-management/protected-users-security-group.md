@@ -2,7 +2,7 @@
 title: Protected Users Security Group
 description: "Windows Server Security"
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: security-credential-protection
@@ -16,7 +16,7 @@ ms.date: 10/12/2016
 ---
 # Protected Users Security Group
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
+> Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 This topic for the IT professional describes the Active Directory security group Protected Users, and explains how it works. This group was introduced in  Windows Server 2012 R2 domain controllers.
 
@@ -25,12 +25,11 @@ This topic for the IT professional describes the Active Directory security group
 This security group is designed as part of a strategy to manage credential exposure within the enterprise. Members of this group automatically have non-configurable protections applied to their accounts. Membership in the Protected Users group is meant to be restrictive and proactively secure by default. The only method to modify these protections for an account is to remove the account from the security group.
 
 > [!WARNING]
-> Accounts for services and computers should never be members of the Protected Users group. This group would provides incomplete protection anyway because the password or certificate is always available on the host. Authentication will fail with the error \"the user name or password is incorrect\" for any service or computer that is added to the Protected Users group.
+> Accounts for services and computers should never be members of the Protected Users group. This group provides incomplete protection anyway, because the password or certificate is always available on the host. Authentication will fail with the error \"the user name or password is incorrect\" for any service or computer that is added to the Protected Users group.
 
 This domain-related, global group triggers non-configurable protection on devices and host computers running  Windows Server 2012 R2  and Windows 8.1 or later for users in domains with a primary domain controller running  Windows Server 2012 R2 . This greatly reduces the default memory footprint of credentials when users sign-in to computers with these protections.
 
 For more information, see [How the Protected Users group works](#BKMK_HowItWorks) in this topic.
-
 
 
 ## <a name="BKMK_Requirements"></a>Protected Users group requirements
@@ -72,38 +71,38 @@ The following table specifies the properties of the Protected Users group.
 ## <a name="BKMK_HowItWorks"></a>How Protected Users group works
 This section explains how the Protected Users group works when:
 
--   Signed in a Windows device
+- Signed in a Windows device
 
--   User account domain is in a Windows Server 2012 R2 or higher domain functional level
+- User account domain is in a Windows Server 2012 R2 or higher domain functional level
 
 ### Device protections for signed in Protected Users
 When the signed in user is a member of the Protected Users group the following protections are applied:
 
--   Credential delegation (CredSSP) will not cache the user's plain text credentials even when the **Allow delegating default credentials** Group Policy setting is enabled.
+- Credential delegation (CredSSP) will not cache the user's plain text credentials even when the **Allow delegating default credentials** Group Policy setting is enabled.
 
--   Beginning with Windows 8.1 and Windows Server 2012 R2, Windows Digest will not cache the user's plain text credentials even when Windows Digest is enabled.
+- Beginning with Windows 8.1 and Windows Server 2012 R2, Windows Digest will not cache the user's plain text credentials even when Windows Digest is enabled.
 
 > [!Note]
-> After installing [Microsoft Security Advisory 2871997](https://technet.microsoft.com/library/security/2871997) Windows Digest will continue to cache credentials until the registry key is configured. See [Microsoft Security Advisory: Update to improve credentials protection and management: May 13, 2014](https://support.microsoft.com/en-us/help/2871997/microsoft-security-advisory-update-to-improve-credentials-protection-a) for instructions.
+> After installing [Microsoft Security Advisory 2871997](https://technet.microsoft.com/library/security/2871997) Windows Digest will continue to cache credentials until the registry key is configured. See [Microsoft Security Advisory: Update to improve credentials protection and management: May 13, 2014](https://support.microsoft.com/help/2871997/microsoft-security-advisory-update-to-improve-credentials-protection-a) for instructions.
 
--   NTLM will not cache the user's plain text credentials or NT one-way function (NTOWF).
+- NTLM will not cache the user's plain text credentials or NT one-way function (NTOWF).
 
--   Kerberos will no longer create DES or RC4 keys. Also it will not cache the user's plain text credentials or long-term keys after the initial TGT is acquired.
+- Kerberos will no longer create DES or RC4 keys. Also it will not cache the user's plain text credentials or long-term keys after the initial TGT is acquired.
 
--   A cached verifier is not created at sign-in or unlock, so offline sign-in is no longer supported.
+- A cached verifier is not created at sign-in or unlock, so offline sign-in is no longer supported.
 
 After the user account is added to the Protected Users group, protection will begin when the user signs in to the device.
 
 ### Domain controller protections for Protected Users
 Accounts that are members of the Protected Users group that authenticate to a  Windows Server 2012 R2  domain are unable to:
 
--   Authenticate with NTLM authentication.
+- Authenticate with NTLM authentication.
 
--   Use DES or RC4 encryption types in Kerberos pre-authentication.
+- Use DES or RC4 encryption types in Kerberos pre-authentication.
 
--   Be delegated with unconstrained or constrained delegation.
+- Be delegated with unconstrained or constrained delegation.
 
--   Renew the Kerberos TGTs beyond the initial four-hour lifetime.
+- Renew the Kerberos TGTs beyond the initial four-hour lifetime.
 
 Non-configurable settings to the TGTs expiration are established for every account in the Protected Users group. Normally, the domain controller sets the TGTs lifetime and renewal, based on the domain policies, **Maximum lifetime for user ticket** and **Maximum lifetime for user ticket renewal**. For the Protected Users group, 600 minutes is set for these domain policies.
 
@@ -121,13 +120,10 @@ Two operational administrative logs are available to help troubleshoot events th
 |303<br /><br />**ProtectedUserSuccesses-DomainController**|Reason: A Kerberos ticket-granting-ticket (TGT) was successfully issued for a member of the Protected User group.|
 
 
-
 ## Additional resources
 
--   [Credentials Protection and Management](credentials-protection-and-management.md)
+- [Credentials Protection and Management](credentials-protection-and-management.md)
 
--   [Authentication Policies and Authentication Policy Silos](authentication-policies-and-authentication-policy-silos.md)
+- [Authentication Policies and Authentication Policy Silos](authentication-policies-and-authentication-policy-silos.md)
 
--   [How to Configure Protected Accounts](how-to-configure-protected-accounts.md)
-
-
+- [How to Configure Protected Accounts](how-to-configure-protected-accounts.md)

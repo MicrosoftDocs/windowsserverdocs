@@ -1,7 +1,7 @@
 ---
 title: Monthly Delta update ISV support without WSUS
 description: "Windows Server Update Service (WSUS) topic - How Independent Software Vendors (ISV) can temporarily use Monthly Delta update instead of WSUS Express update delivery to reduce package size"
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-wsus
@@ -33,12 +33,12 @@ Monthly Delta update is new, and an interim solution for ISVs who do not have WS
 >[!IMPORTANT]
 >**Delta update is available for servicing of Windows 10, version 1607 (Anniversary Update), version 1703 (Creators Update), and version 1709 (Fall Creators Update).** For releases after version 1709, you will need to implement a deployment infrastructure that supports [Express update delivery](express-update-delivery-ISV-support.md) to continue taking advantage of incremental updates.
 
-By using Monthly Delta update, packages will only contain one month’s updates. Monthly Cumulative contains all the updates up to that update release, resulting in a large file that grows each month. Both Delta and Monthly updates are released on the second Tuesday of each month, also known as "Update Tuesday." The following table compares Delta and Cumulative updates:
+By using Monthly Delta update, packages will only contain one month's updates. Monthly Cumulative contains all the updates up to that update release, resulting in a large file that grows each month. Both Delta and Monthly updates are released on the second Tuesday of each month, also known as "Update Tuesday." The following table compares Delta and Cumulative updates:
 
 |                    | Monthly **Delta** update                                                                                                                                                                                                       | Monthly **Cumulative** update                                                                                                                                                                                             |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **Scope**          | Single update with **only new fixes for that month**                                                                                                                                                                           | Single update with all new fixes for that month and all previous months                                                                                                                                                   |
-| **Application**    | Can only be applied if the previous month’s update was applied (Cumulative or Delta)                                                                                                                                           | Can be applied at any time                                                                                                                                                                                                |
+| **Application**    | Can only be applied if the previous month's update was applied (Cumulative or Delta)                                                                                                                                           | Can be applied at any time                                                                                                                                                                                                |
 | **Delivery**       | **Published only to Windows Update Catalog** where it can be downloaded for use with other tools or processes. Not offered to PCs that are connected to Windows Update                                                         | Published to Windows Update (where all consumer PCs will install it), WSUS, and the Windows Update Catalog                                                                                                                |
 
 Delta and Cumulative have the same KB number, with the same classification, and release at the same time. Updates can be distinguished by either the update title in the catalog, or by the name of the msu:
@@ -48,13 +48,13 @@ Delta and Cumulative have the same KB number, with the same classification, and 
 
 ### When to use Monthly Delta Update
 
-If size of the update to the client device is a concern, we recommend using Delta update on the devices that have the previous month’s update, and Cumulative update on the devices that are falling behind. This way, all devices only require a single update to bring them up to date. This requires a small adjustment in the overall update management process, as you will have to deploy different updates based on how up-to-date the devices are in the organization:
+If size of the update to the client device is a concern, we recommend using Delta update on the devices that have the previous month's update, and Cumulative update on the devices that are falling behind. This way, all devices only require a single update to bring them up to date. This requires a small adjustment in the overall update management process, as you will have to deploy different updates based on how up-to-date the devices are in the organization:
 
 ![Download size comparison](../../media/express-update-delivery-isv-support/delta-2.png)
 
 ### Prevent deployment of Delta and Cumulative updates in the same month
 
-Since Delta update and Cumulative update are available at the same time, it’s important to understand what happens if you deploy both updates in the same month.
+Since Delta update and Cumulative update are available at the same time, it's important to understand what happens if you deploy both updates in the same month.
 
 If you approve and deploy the same version of the Delta and Cumulative update, you will not only generate additional network traffic since both will be downloaded to the PC, but you may not be able to reboot your computer to Windows after restart.
 

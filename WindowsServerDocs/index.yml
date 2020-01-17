@@ -1,0 +1,209 @@
+### YamlMime:Hub
+
+title: Windows Server documentation 
+summary: Windows Server is the platform for building an infrastructure of connected applications, networks, and web services, from the workgroup to the data center.
+
+metadata: 
+  title: Windows Server Documentation - Microsoft Docs 
+  description: Windows Server is the platform for building an infrastructure of connected applications, networks, and web services, from the workgroup to the data center.
+  author: eross-msft
+  manager: daveba
+  ms.service: windows-server-threshold
+  ms.topic: hub-page
+  ms.date: 06/06/2019
+  ms.author: lizross
+
+highlightedContent: 
+  items:
+    - title: What's new in Windows Server 2019?
+      itemType: whats-new # controls the icon image and super-title text
+      url: /windows-server/get-started-19/whats-new-19
+    - title: Get started with Windows Server 2019
+      itemType: overview
+      url: /windows-server/get-started-19/get-started-19
+    - title: Windows Admin Center
+      itemType: how-to-guide
+      url: /windows-server/manage/windows-admin-center/overview
+    - title: Hyper-converged infrastructure 
+      itemType: overview
+      url: /windows-server/hyperconverged/index
+    - title: Connect to Azure hybrid services
+      itemType: how-to-guide 
+      url: /windows-server/azure-hybrid-services/index
+    - title: Get started with Windows Server 2016 
+      itemType: how-to-guide
+      url: /windows-server/get-started/server-basics
+    - title: Use Windows Server 2008 and 2008 R2 Extended Security Updates
+      itemType: how-to-guide
+      url: /windows-server/get-started/extended-security-updates
+    - title: Windows Insider Program for Server
+      itemType: overview 
+      url: /windows-insider/at-work/
+
+conceptualContent: 
+  items: 
+    - title: Upgrade Windows Server 
+      links:
+        - url: /windows-server/upgrade/upgrade-2016-to-2019
+          itemType: how-to-guide
+          text: Upgrade Windows Server 2016
+        - url: /windows-server/upgrade/upgrade-2012r2-to-2019
+          itemType: how-to-guide
+          text: Upgrade Windows Server 2012 R2
+        - url: /windows-server/upgrade/upgrade-2012-to-2016
+          itemType: how-to-guide
+          text: Upgrade Windows Server 2012
+        - url: /windows-server/upgrade/upgrade-2008r2-to-2012r2
+          itemType: how-to-guide
+          text: Upgrade Windows Server 2008 R2
+      footerLink: 
+        url: /windows-server/upgrade/upgrade-overview
+        text: See more
+
+    - title: Identity and access 
+      links: 
+        - url: /windows-server/identity/ad-ds/ad-ds-getting-started
+          itemType: overview
+          text: Getting started with Active Directory Domain Services (AD DS)
+        - url: /windows-server/identity/active-directory-federation-services
+          itemType: overview
+          text: Active Directory Federation Services (AD FS)
+        - url: /windows-server/identity/securing-privileged-access/securing-privileged-access
+          itemType: concept
+          text: Securing privileged access
+      footerLink: 
+        url: /windows-server/identity/identity-and-access
+        text: See more
+
+    - title: Failover Clustering 
+      links: 
+        - url: /windows-server/failover-clustering/whats-new-in-failover-clustering
+          itemType: whats-new
+          text: What's new in Failover Clustering
+        - url: /windows-server/failover-clustering/create-failover-cluster
+          itemType: how-to-guide
+          text: Create a failover cluster    
+        - url: /windows-server/failover-clustering/cluster-aware-updating
+          itemType: overview
+          text: Cluster-Aware Updating overview
+      footerLink: 
+        url: /windows-server/failover-clustering/failover-clustering-overview
+        text: See more
+
+    - title: Management 
+      links: 
+        - url: /windows-server/manage/windows-admin-center/overview
+          itemType: overview
+          text: Use Windows Admin Center to manage your environment
+        - url: /windows-server/manage/system-insights/overview
+          itemType: overview
+          text: System Insights overview    
+        - url: /windows-server/administration/performance-tuning/
+          itemType: overview
+          text: Performance tuning guidelines for Windows Server 2016
+      footerLink: 
+        url: /windows-server/administration/manage-windows-server
+        text: See more
+
+    - title: Networking 
+      links: 
+        - url: /windows-server/networking/what-s-new-in-networking
+          itemType: whats-new
+          text: What's new in networking
+        - url: /windows-server/networking/sdn/
+          itemType: overview
+          text: Software-defined Networking (SDN) overview 
+        - url: /windows-server/networking/sdn/technologies/network-controller/network-controller
+          itemType: overview
+          text: Network controller
+      footerLink: 
+        url: /windows-server/networking/networking
+        text: See more
+
+    - title: Remote 
+      links: 
+        - url: /windows-server/remote/remote-desktop-services/welcome-to-rds
+          itemType: overview
+          text: Remote Desktop Services overview
+        - url: /windows-server/remote/remote-desktop-services/clients/remote-desktop-clients
+          itemType: overview
+          text: Remote Desktop clients
+        - url: /windows-server/remote/remote-desktop-services/clients/remote-desktop-allow-access
+          itemType: how-to-guide
+          text: Remote Desktop - Allow access to your PC
+      footerLink: 
+        url: /windows-server/remote/index
+        text: See more
+
+    - title: Security and assurance 
+      links: 
+        - url: /windows-server/security/windows-authentication/windows-authentication-overview
+          itemType: overview
+          text: Windows Authentication overview
+        - url: /windows-server/security/group-managed-service-accounts/getting-started-with-group-managed-service-accounts
+          itemType: how-to-guide
+          text: Getting started with group-managed service accounts
+        - url: /windows-server/security/windows-authentication/credentials-processes-in-windows-authentication
+          itemType: overview
+          text: Credentials processes in Windows Authentication
+      footerLink: 
+        url: /windows-server/security/security-and-assurance
+        text: See more
+
+    - title: Storage 
+      links: 
+        - url: /windows-server/storage/whats-new-in-storage
+          itemType: whats-new
+          text: What's new in storage
+        - url: /windows-server/storage/disk-management/overview-of-disk-management
+          itemType: overview
+          text: Disk management overview
+        - url: /windows-server/storage/storage-spaces/understand-quorum
+          itemType: overview
+          text: Understanding cluster and pool quorum
+      footerLink: 
+        url: /windows-server/storage/storage
+        text: See more
+
+    - title: Troubleshoot 
+      links: 
+        - url: /windows-server/manage/windows-admin-center/support/troubleshooting
+          itemType: how-to-guide
+          text: Troubleshoot Windows Admin Center
+        - url: /windows-server/failover-clustering/troubleshooting-using-wer-reports
+          itemType: how-to-guide
+          text: Troubleshoot failover clustering using Windows Error Reporting
+        - url: /windows-server/storage/disk-management/troubleshooting-disk-management
+          itemType: how-to-guide
+          text: Troubleshoot disk management
+      footerLink: 
+        url: /windows-server/troubleshoot/windows-server-troubleshooting
+        text: See more
+
+    - title: Virtualization 
+      links: 
+        - url: /virtualization/windowscontainers/
+          itemType: overview
+          text: Containers on Windows overview
+        - url: /windows-server/virtualization/hyper-v/hyper-v-on-windows-server
+          itemType: overview
+          text: Hyper-V on Windows Server
+        - url: /windows-server/virtualization/hyper-v-virtual-switch/hyper-v-virtual-switch
+          itemType: overview
+          text: Hyper-V Virtual Switch overview
+      footerLink: 
+        url: /windows-server/virtualization/virtualization
+        text: See more  
+
+additionalContent:
+  sections:
+    - items:
+      - title: Windows Server 2012 R2 and Windows Server 2012
+        summary: Technical content for IT professionals administering Windows Server 2012 R2 and Windows Server 2012.
+        url: https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh801901(v=ws.11)
+      - title: Windows Server 2008 R2 and Windows Server 2008
+        summary: Technical content for IT professionals administering Windows Server 2008 R2 and Windows Server 2008.
+        url: https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd349801(v=ws.10)
+      - title: Windows Server 2008 Developer Story
+        summary: Content for developers and other technology experts and managers interested in exploring some of the new and extended features in Windows Server 2008.
+        url: https://docs.microsoft.com/previous-versions/windows/server-2008/bb852234(v=msdn.10)

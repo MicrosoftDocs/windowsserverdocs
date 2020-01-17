@@ -2,7 +2,7 @@
 title: echo
 description: "Windows Commands topic for **** - "
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -49,10 +49,13 @@ echo [on | off]
 ## Examples
 
 To display the current **echo** setting, type:
+
 ```
 echo
 ```
+
 To echo a blank line on the screen, type:
+
 ```
 echo.
 ```
@@ -61,6 +64,7 @@ echo.
 > Do not include a space before the period. Otherwise, the period will be displayed instead of a blank line.
 
 To prevent echoing commands at the command prompt, type:
+
 ```
 echo off 
 ```
@@ -69,14 +73,19 @@ echo off
 > When **echo** is turned off, the command prompt does not appear in the Command Prompt window. To display the command prompt again, type **echo on**.
 
 To prevent all commands in a batch file (including the **echo off** command) from displaying on the screen, on the first line of the batch file type:
+
 ```
 @echo off
 ```
+
 You can use the **echo** command as part of an **if** statement. For example, to search the current directory for any file with the .rpt file name extension, and to echo a message if such a file is found, type:
+
 ```
 if exist *.rpt echo The report has arrived.
 ```
+
 The following batch file searches the current directory for files with the .txt file name extension, and displays a message indicating the results of the search:
+
 ```
 @echo off
 if not exist *.txt (
@@ -87,11 +96,15 @@ echo This directory contains no text files.
    dir /b *.txt
    )
 ```
+
 If no .txt files are found when the batch file is run, the following message displays:
+
 ```
 This directory contains no text files.
 ```
+
 If .txt files are found when the batch file is run the following output displays (for this example, assume the files File1.txt, File2.txt, and File3.txt exist):
+
 ```
 This directory contains the following text files:
 File1.txt

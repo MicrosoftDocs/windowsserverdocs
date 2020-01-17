@@ -2,7 +2,7 @@
 title: Network Policy Server (NPS)
 description: This topic provides an overview of Network Policy Server in Windows Server 2016 and Windows Server 2019, and includes links to additional guidance about NPS.
 manager: dougkim
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: networking
 ms.topic: article
 ms.assetid: 9c7a67e0-0953-479c-8736-ccb356230bde
@@ -17,8 +17,8 @@ ms.date: 06/20/2018
 
 You can use this topic for an overview of Network Policy Server in Windows Server 2016 and Windows Server 2019. NPS is installed when you install the Network Policy and Access Services (NPAS) feature in Windows Server 2016 and Server 2019.
 
->[!NOTE]
->In addition to this topic, the following NPS documentation is available.
+> [!NOTE]
+> In addition to this topic, the following NPS documentation is available.
 > - [Network Policy Server Best Practices](nps-best-practices.md)
 > - [Getting Started with Network Policy Server](nps-getstart-top.md)
 > - [Plan Network Policy Server](nps-plan-top.md)
@@ -39,8 +39,8 @@ NPS allows you to centrally configure and manage network access authentication, 
 	- [Configure Connection Request Policies](nps-crp-configure.md)
 - **RADIUS accounting**. You can configure NPS to log events to a local log file or to a local or remote instance of Microsoft SQL Server. For more information, see [NPS logging](#nps-logging).
 
->[!IMPORTANT]
->Network Access Protection \(NAP\), Health Registration Authority \(HRA\), and Host Credential Authorization Protocol \(HCAP\) were deprecated in Windows Server 2012 R2, and are not available in Windows Server 2016. If you have a NAP deployment using operating systems earlier than Windows Server 2016, you cannot migrate your NAP deployment to Windows Server 2016.
+> [!IMPORTANT]
+> Network Access Protection \(NAP\), Health Registration Authority \(HRA\), and Host Credential Authorization Protocol \(HCAP\) were deprecated in Windows Server 2012 R2, and are not available in Windows Server 2016. If you have a NAP deployment using operating systems earlier than Windows Server 2016, you cannot migrate your NAP deployment to Windows Server 2016.
 
 You can configure NPS with any combination of these features. For example, you can configure one NPS as a RADIUS server for VPN connections and also as a RADIUS proxy to forward some connection requests to members of a remote RADIUS server group for authentication and authorization in another domain.
 
@@ -52,8 +52,8 @@ NPS provides different functionality depending on the edition of Windows Server 
 
 With NPS in Windows Server 2016 Standard or Datacenter, you can configure an unlimited number of RADIUS clients and remote RADIUS server groups. In addition, you can configure RADIUS clients by specifying an IP address range.
 
->[!NOTE]
->The WIndows Network Policy and Access Services feature is not available on systems installed with a Server Core installation option.
+> [!NOTE]
+> The WIndows Network Policy and Access Services feature is not available on systems installed with a Server Core installation option.
 
 The following sections provide more detailed information about NPS as a RADIUS server and proxy.
 
@@ -65,15 +65,15 @@ You can use NPS as a RADIUS server, a RADIUS proxy, or both.
 
 NPS is the Microsoft implementation of the RADIUS standard specified by the Internet Engineering Task Force \(IETF\) in RFCs 2865 and 2866. As a RADIUS server, NPS performs centralized connection authentication, authorization, and accounting for many types of network access, including wireless, authenticating switch, dial-up and virtual private network \(VPN\) remote access, and router-to-router connections.
 
->[!NOTE]
->For information on deploying NPS as a RADIUS server, see [Deploy Network Policy Server](nps-deploy.md).
+> [!NOTE]
+> For information on deploying NPS as a RADIUS server, see [Deploy Network Policy Server](nps-deploy.md).
 
 NPS enables the use of a heterogeneous set of wireless, switch, remote access, or VPN equipment. You can use NPS with the Remote Access service, which is available in Windows Server 2016.
 
 NPS uses an Active Directory Domain Services \(AD DS\) domain or the local Security Accounts Manager (SAM) user accounts database to authenticate user credentials for connection attempts. When a server running NPS is a member of an AD DS domain, NPS uses the directory service as its user account database and is part of a single sign-on solution. The same set of credentials is used for network access control \(authenticating and authorizing access to a network\) and to log on to an AD DS domain.
 
->[!NOTE]
->NPS uses the dial-in properties of the user account and network policies to authorize a connection.
+> [!NOTE]
+> NPS uses the dial-in properties of the user account and network policies to authorize a connection.
 
 Internet service providers \(ISPs\) and organizations that maintain network access have the increased challenge of managing all types of network access from a single point of administration, regardless of the type of network access equipment used. The RADIUS standard supports this functionality in both homogeneous and heterogeneous environments. RADIUS is a client-server protocol that enables network access equipment (used as RADIUS clients) to submit authentication and accounting requests to a RADIUS server.
 
@@ -111,7 +111,6 @@ You can use NPS as a RADIUS proxy when:
 The following illustration shows NPS as a RADIUS proxy between RADIUS clients and RADIUS servers.
 
 ![NPS as a RADIUS Proxy](../../media/Nps-Proxy/Nps-Proxy.jpg)
-
 
 With NPS, organizations can also outsource remote access infrastructure to a service provider while retaining control over user authentication, authorization, and accounting.
 

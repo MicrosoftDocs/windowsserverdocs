@@ -1,17 +1,12 @@
 ---
-title: "Manage Office 365 in Windows Server Essentials"
-description: "Describes how to use Windows Server Essentials"
-ms.custom: na
+title: Manage Office 365 in Windows Server Essentials
+description: Describes how to use Windows Server Essentials
 ms.date: 10/03/2016
 ms.prod: windows-server-2016-essentials
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 3f8485e4-e10f-4f38-8a5e-d5227abd0d84
-0author: nnamuhcs
-ms.author: coreyp
-manager: dongill
+author: nnamuhcs
+ms.author: daveba
 ---
 
 # Manage Office 365 in Windows Server Essentials
@@ -285,9 +280,9 @@ When you integrate your  Windows Server Essentials server with Microsoft  Office
   
 ## See also  
   
--   [Services Integration Overview for Windows Server Essentials - Part 1](http://blogs.technet.com/b/sbs/archive/2013/11/04/services-integration-overview-for-windows-server-2012-r2-essentials-part-1.aspx)  
+-   [Services Integration Overview for Windows Server Essentials - Part 1](https://blogs.technet.com/b/sbs/archive/2013/11/04/services-integration-overview-for-windows-server-2012-r2-essentials-part-1.aspx)  
   
--   [Services Integration Overview for Windows Server Essentials - Part 2](http://blogs.technet.com/b/sbs/archive/2013/11/06/services-integration-overview-for-windows-server-2012-r2-essentials-part-2.aspx)  
+-   [Services Integration Overview for Windows Server Essentials - Part 2](https://blogs.technet.com/b/sbs/archive/2013/11/06/services-integration-overview-for-windows-server-2012-r2-essentials-part-2.aspx)  
   
 -   [Quick Start Guide to Using Microsoft Office 365](../use/Quick-Start-Guide-to-Using-Microsoft-Office-365-with-Windows-Server-Essentials.md)  
   

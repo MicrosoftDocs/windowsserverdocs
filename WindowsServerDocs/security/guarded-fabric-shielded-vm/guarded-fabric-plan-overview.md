@@ -1,7 +1,7 @@
 ---
 title: Planning a guarded fabric and shielded VMs
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.topic: article
 ms.assetid: a754b78c-048d-4be9-a846-cf41ff0bcbc4
 manager: dongill

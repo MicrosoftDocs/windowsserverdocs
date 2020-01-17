@@ -7,7 +7,7 @@ ms.author: joflore
 manager: mtillman
 ms.date: 05/31/2017
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 
 ms.technology: identity-adds
 ---
@@ -139,7 +139,7 @@ To create the management accounts, perform the following steps:
    >
    > Although implementing more secure encryption types for the hosts does not mitigate credential theft attacks, the appropriate use and configuration of the secure hosts does. Setting stronger encryption types for hosts that are only used by privileged accounts simply reduces the overall attack surface of the computers.  
    >
-   > For more information about configuring encryption types on systems and accounts, see [Windows Configurations for Kerberos Supported Encryption Type](http://blogs.msdn.com/b/openspecification/archive/2011/05/31/windows-configurations-for-kerberos-supported-encryption-type.aspx).  
+   > For more information about configuring encryption types on systems and accounts, see [Windows Configurations for Kerberos Supported Encryption Type](https://blogs.msdn.com/b/openspecification/archive/2011/05/31/windows-configurations-for-kerberos-supported-encryption-type.aspx).  
    >
    > These settings are supported only on computers running Windows Server 2012, Windows Server 2008 R2, Windows 8, or Windows 7.  
   

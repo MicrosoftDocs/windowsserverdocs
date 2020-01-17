@@ -2,7 +2,7 @@
 title: Upgrade and Conversion Options for Windows Server 2016
 description: "Explains all supported upgrade paths to Windows Server 2016."
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.date: 01/18/2017
@@ -104,8 +104,8 @@ If the server is running an evaluation version of Windows Server 2016 Standard o
 
 For the evaluation version of Windows Server 2016 Standard, you can also convert to the retail version of Windows Server 2016 Datacenter in one step using this same command and the appropriate product key.
 
-> Tip 
->For more information about Dism.exe, see [DISM Command-line options](https://go.microsoft.com/fwlink/?LinkId=192466).
+> [!TIP] 
+> For more information about Dism.exe, see [DISM Command-line options](https://go.microsoft.com/fwlink/?LinkId=192466).
 
 ## Converting a current retail edition to a different current retail edition
 
@@ -122,7 +122,3 @@ To do this, from an elevated command prompt, run:
 **slmgr /ipk \<key\>**
 
 Where \<key\> is the appropriate volume-license, retail, or OEM product key.
-
-
- 
-

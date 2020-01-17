@@ -7,7 +7,7 @@ author: nwashburn-ms
 ms.author: niwashbu
 ms.date: 09/18/2018
 ms.localizationpriority: medium
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ---
 
 # Use a custom gateway plugin in your tool extension
@@ -18,7 +18,7 @@ In this article, we will use a custom gateway plugin in a new, empty tool extens
 
 ## Prepare your environment ##
 
-If you haven't already, follow the directions in [develop a tool extension](..\develop-tool.md) to prepare your environment and create a new, empty tool extension.
+If you haven't already, follow the directions in [develop a tool extension](../develop-tool.md) to prepare your environment and create a new, empty tool extension.
 
 ## Add a module to your project ##
 
@@ -140,4 +140,4 @@ Add the following content to the html file:
 
 ## Build and side load your extension
 
-Now you are ready to [build and side load](..\develop-tool.md#build-and-side-load-your-extension) your extension in Windows Admin Center.
+Now you are ready to [build and side load](../develop-tool.md#build-and-side-load-your-extension) your extension in Windows Admin Center.

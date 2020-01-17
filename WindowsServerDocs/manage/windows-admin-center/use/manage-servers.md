@@ -5,9 +5,9 @@ ms.technology: manage
 ms.topic: article
 author: nwashburn-ms
 ms.author: niwashbu
-ms.date: 03/07/2019
+ms.date: 11/21/2019
 ms.localizationpriority: medium
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ---
 # Manage Servers with Windows Admin Center
 
@@ -15,7 +15,7 @@ ms.prod: windows-server-threshold
 
 > [!Tip]
 > New to Windows Admin Center?
-> [Learn more about Windows Admin Center](../understand/windows-admin-center.md) or [Download now](https://aka.ms/windowsadmincenter).
+> [Download or learn more about Windows Admin Center](../overview.md).
 
 ## Managing Windows Server machines
 
@@ -57,6 +57,8 @@ The following tools are available for server connections:
 | [Installed Apps](#installed-apps) | View and remove installed apps |
 | [Local Users and Groups](#local-users-and-groups) | View and modify local users and groups |
 | [Network](#network) | View and modify network devices |
+| [Packet monitoring](https://aka.ms/wac1908) | Monitor network packets |
+| [Performance monitor](https://aka.ms/perfmon-blog) | View performance counters and reports |
 | [PowerShell](#powershell) | Interact with server via PowerShell |
 | [Processes](#processes) | View and modify running processes |
 | [Registry](#registry) | View and modify registry entries |
@@ -228,7 +230,6 @@ The following features are supported in Files:
 - Rename a file or folder
 - Extract a zip file
 - View file or folder properties
-- Manage File Server Resource Manager [quotas](https://docs.microsoft.com/windows-server/storage/fsrm/quota-management)
 - Add, edit, or remove file shares
 - Modify user and group permissions on file shares
 
@@ -429,6 +430,7 @@ The following features are supported in Storage:
 - Edit volume properties
 - Delete a volume
 - Install Quota Management
+- Manage File Server Resource Manager Quotas [Storage->Create/Update Quota](https://docs.microsoft.com/windows-server/storage/fsrm/quota-management)
 
 [**View feedback and proposed features for Storage**](https://windowsserver.uservoice.com/forums/295071/filters/top?category_id=319162&query=%5BStorage%5D)
 
@@ -448,7 +450,7 @@ Use **Storage Replica** to manage server-to-server storage replication.
 ## System Insights
 
 **System Insights** introduces predictive analytics natively in Windows Server to help give you increased insight into the functioning of your server.
-[Get an overview of System Insights](http://aka.ms/systeminsights)
+[Get an overview of System Insights](https://aka.ms/systeminsights)
 
 >[!NOTE]
 >System Insights requires Windows Server 2019.

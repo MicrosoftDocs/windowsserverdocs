@@ -2,7 +2,7 @@
 title: nslookup set root
 description: "Windows Commands topic for **** - "
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -18,7 +18,7 @@ ms.date: 10/16/2017
 
 >Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-changes the name of the root server used for queries.
+Changes the name of the root server used for queries.
 ## Syntax
 ```
 set root=<RootServer>

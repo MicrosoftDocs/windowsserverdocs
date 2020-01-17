@@ -2,7 +2,7 @@
 title: Remote Server Administration Tools
 description: "Top level topic for Remote Server Administration Tools"
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-rsat
@@ -16,7 +16,7 @@ manager: dansimp
 ---
 # Remote Server Administration Tools
 
->Applies To: Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies to: Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 This topic supports Remote Server Administration Tools for Windows 10.
 

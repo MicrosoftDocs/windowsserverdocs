@@ -2,7 +2,7 @@
 title: Use DNS Policy for Split-Brain DNS in Active Directory
 description: You can use this topic to leverage traffic management capabilities of DNS policies for split-brain deployments with Active Directory integrated DNS zones in Windows Server 2016.
 manager: brianlic
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: networking-dns
 ms.topic: article
 ms.assetid: f9533204-ad7e-4e49-81c1-559324a16aeb
@@ -20,7 +20,7 @@ In Windows Server 2016, DNS policies support is extended to Active Directory int
 
 Previously, this scenario required that DNS administrators maintain two different DNS servers, each providing services to each set of users, internal and external. If only a few records inside the zone were split\-brained or both instances of the zone (internal and external) were delegated to the same parent domain, this became a management conundrum.
 
->[!NOTE]
+> [!NOTE]
 > - DNS deployments are split\-brain when there are two versions of a single zone, one version for internal users on the organization intranet, and one version for external users – who are, typically, users on the Internet.
 > - The topic [Use DNS Policy for Split-Brain DNS Deployment](split-brain-DNS-deployment.md) explains how you can use DNS policies and zone scopes to deploy a split\-brain DNS system on a single Windows Server 2016 DNS server.
 
@@ -119,8 +119,8 @@ You can use the following example command to add records to the zone scopes on t
     
     Add-DnsServerResourceRecord -ZoneName "contoso.com" -A -Name "www.career" -IPv4Address "10.0.0.39”
 
->[!NOTE]
->The **–ZoneScope** parameter is not included when the record is added to the default zone scope. This action is same as adding records to a normal zone.
+> [!NOTE]
+> The **–ZoneScope** parameter is not included when the record is added to the default zone scope. This action is same as adding records to a normal zone.
 
 For more information, see [Add-DnsServerResourceRecord](https://docs.microsoft.com/powershell/module/dnsserver/add-dnsserverresourcerecord?view=win10-ps).
 
@@ -128,18 +128,18 @@ For more information, see [Add-DnsServerResourceRecord](https://docs.microsoft.c
 
 After you have identified the server interfaces for the external network and internal network and you have created the zone scopes, you must create DNS policies that connect the internal and external zone scopes.
 
->[!NOTE]
->This example uses the server interface \(the -ServerInterface parameter in the example command below\) as the criteria to differentiate between the internal and external clients. Another method to differentiate between external and internal clients is by using client subnets as a criteria. If you can identify the subnets to which the internal clients belong, you can configure DNS policy to differentiate based on client subnet. For information on how to configure traffic management using client subnet criteria, see [Use DNS Policy for Geo-Location Based Traffic Management with Primary Servers](primary-geo-location.md).
+> [!NOTE]
+> This example uses the server interface \(the -ServerInterface parameter in the example command below\) as the criteria to differentiate between the internal and external clients. Another method to differentiate between external and internal clients is by using client subnets as a criteria. If you can identify the subnets to which the internal clients belong, you can configure DNS policy to differentiate based on client subnet. For information on how to configure traffic management using client subnet criteria, see [Use DNS Policy for Geo-Location Based Traffic Management with Primary Servers](primary-geo-location.md).
 
 After you configure policies, when a DNS query is received on the public interface, the answer is returned from the external scope of the zone. 
 
->[!NOTE]
->No policies are required for mapping the default internal zone scope. 
+> [!NOTE]
+> No policies are required for mapping the default internal zone scope. 
 
     Add-DnsServerQueryResolutionPolicy -Name "SplitBrainZonePolicy" -Action ALLOW -ServerInterface "eq,208.84.0.53" -ZoneScope "external,1" -ZoneName contoso.com
 
->[!NOTE]
->208.84.0.53 is the IP address on the public network interface.
+> [!NOTE]
+> 208.84.0.53 is the IP address on the public network interface.
 
 For more information, see [Add-DnsServerQueryResolutionPolicy](https://docs.microsoft.com/powershell/module/dnsserver/add-dnsserverqueryresolutionpolicy?view=win10-ps).
 

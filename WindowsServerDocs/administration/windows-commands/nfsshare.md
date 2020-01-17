@@ -2,7 +2,7 @@
 title: nfsshare
 description: "Windows Commands topic for **** - "
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -51,7 +51,6 @@ The **nfsshare** command accepts the following options and arguments:
 > [!NOTE]
 > To view the complete syntax for this command, at a command prompt, type:</br>> **nfsshare /?**
 
-# #
+## See also
 
 [Services for Network File System Command Reference](services-for-network-file-system-command-reference.md)
-See Also

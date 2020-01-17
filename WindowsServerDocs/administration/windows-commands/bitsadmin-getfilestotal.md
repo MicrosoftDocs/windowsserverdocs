@@ -3,7 +3,7 @@ title: bitsadmin getfilestotal
 description: "Windows Commands topic for **bitsadmin getfilestotal** - 
 Retrieves the number of files in the specified job."
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -41,7 +41,6 @@ The following example retrieves the number of files included in the job named *m
 C:\>bitsadmin /GetFilesTotal myDownloadJob
 ```
 
-# #
+## See Also
 
 [Command-Line Syntax Key](command-line-syntax-key.md)
-See Also

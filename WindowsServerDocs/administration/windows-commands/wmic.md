@@ -2,7 +2,7 @@
 title: wmic
 description: "Windows Commands topic for **** - "
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -26,7 +26,7 @@ For examples of how to use this command, see [Examples](#BKMK_examples).
 ## Syntax
 
 ```
-command </parameter>
+wmic </parameter>
 ```
 
 ## Sub-commands
@@ -39,14 +39,6 @@ The following sub-commands are available at all times:
 |path|Escapes from the default alias mode of WMIC to access instances in the WMI schema directly.|
 |context|Displays the current values of all global switches.|
 |[quit \| exit]|Exits the WMIC command shell.|
-
-## Parameters
-
-|Parameter|Description|
-|---------|-----------|
-|</parameter>|\<Concise description, starts with a verb.>|
-|</param2>|\<Another concise description, starts with a verb.>|
-
 
 ## <a name="BKMK_examples"></a>Examples
 

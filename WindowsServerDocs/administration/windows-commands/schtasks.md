@@ -2,7 +2,7 @@
 title: schtasks
 description: "Windows Commands topic for **** - "
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -446,7 +446,7 @@ schtasks /create /tn <TaskName> /tr <TaskRun> /sc weekly [/d {<MON - SUN>[,MON -
 
 #### Remarks
 
-The "day of the week" schedule is a variation of the weekly schedule. In a weekly schedule, the **/sc weekly** parameter is required. The **/mo** (modifier) parameter is optional and specifies the number of weeks between each run of the task. The default value for **/mo** is 1 (every week). The **/d** parameter, which is optional, schedules the task to run on specified days of the week, or on all days (<em>). The default is MON (Monday). The every day option (</em>*/d \***) is equivalent to scheduling a daily task.
+The "day of the week" schedule is a variation of the weekly schedule. In a weekly schedule, the **/sc weekly** parameter is required. The **/mo** (modifier) parameter is optional and specifies the number of weeks between each run of the task. The default value for **/mo** is 1 (every week). The **/d** parameter, which is optional, schedules the task to run on specified days of the week, or on all days (\*). The default is MON (Monday). The every day option (**/d \***) is equivalent to scheduling a daily task.
 
 #### Examples
 
@@ -474,7 +474,7 @@ schtasks /create /tn <TaskName> /tr <TaskRun> /sc monthly /mo {FIRST | SECOND | 
 
 #### Remarks
 
-In this schedule type, the **/sc monthly** parameter, the **/mo** (modifier) parameter, and the **/d** (day) parameter are required. The **/mo** (modifier) parameter specifies the week on which the task runs. The **/d** parameter specifies the day of the week. (You can specify only one day of the week for this schedule type.) This schedule also has an optional **/m** (month) parameter that lets you schedule the task for particular months or every month (<em>). The default for the **/m</em>* parameter is every month (*).
+In this schedule type, the **/sc monthly** parameter, the **/mo** (modifier) parameter, and the **/d** (day) parameter are required. The **/mo** (modifier) parameter specifies the week on which the task runs. The **/d** parameter specifies the day of the week. (You can specify only one day of the week for this schedule type.) This schedule also has an optional **/m** (month) parameter that lets you schedule the task for particular months or every month (\*). The default for the **/m** parameter is every month (\*).
 
 #### Examples
 

@@ -1,29 +1,29 @@
 ---
 title: Use Regular Expressions in NPS
-description: This topic explains the use of regular expressions for pattern matching in NPS in Windows Server 2016. You can use this syntax to specify the conditions of network policy attributes and RADIUS realms.
+description: This topic explains the use of regular expressions for pattern matching in NPS in Windows Server. You can use this syntax to specify the conditions of network policy attributes and RADIUS realms.
 manager: brianlic
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: networking
 ms.topic: article
 ms.assetid: bc22d29c-678c-462d-88b3-1c737dceca75
-ms.author: pashort 
-author: shortpatti
+ms.author: jgerend
+author: jasongerend
+msdate: 08/16/2019
 ---
 
 # Use Regular Expressions in NPS
 
->Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
+> Applies to:  Windows Server 2019, Windows Server 2016, Windows Server (Semi-Annual Channel)
 
-This topic explains the use of regular expressions for pattern matching in NPS in Windows Server 2016. You can use this syntax to specify the conditions of network policy attributes and RADIUS realms.
+This topic explains the use of regular expressions for pattern matching in NPS in Windows Server. You can use this syntax to specify the conditions of network policy attributes and RADIUS realms.
 
 ## Pattern-matching reference
 
-You can use the following table as a reference source when creating regular expressions with pattern-matching syntax.
+You can use the following table as a reference source when creating regular expressions with pattern-matching syntax. Note that regular expression patterns are often surrounded by forward slashes (/).
 
-
-|  Character  |                                                                                 Description                                                                                  |                                                                 Example                                                                 |
-|-------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------|
-|     `\`     |                                                              Marks the next character as a character to match.                                                               |                      `/n/ matches the character "n". The sequence /\n/ matches a line feed or newline character.`                       |
+|  Character  |  Description  |   Example                                                                 |
+| ----------- | ------------- | ------------------------------------------------------------------------  |
+|     `\ `     | Indicates that the character that follows is a special character, or should be interpreted literally.  | `/n/ matches the character "n" while the sequence /\n/ matches a line feed or newline character.`  |
 |     `^`     |                                                                 Matches the beginning of the input or line.                                                                  |                                                                 &nbsp;                                                                  |
 |     `$`     |                                                                    Matches the end of the input or line.                                                                     |                                                                 &nbsp;                                                                  |
 |     `*`     |                                                             Matches the preceding character zero or more times.                                                              |                                                  `/zo*/ matches either "z" or "zoo."`                                                   |
@@ -31,7 +31,7 @@ You can use the following table as a reference source when creating regular expr
 |     `?`     |                                                              Matches the preceding character zero or one times.                                                              |                                                 `/a?ve?/ matches the "ve" in "never."`                                                  |
 |     `.`     |                                                           Matches any single character except a newline character.                                                           |                                                                 &nbsp;                                                                  |
 | `(pattern)` |                         Matches "pattern" and remembers the match.<br />To match the literal characters `(` and `)` (parentheses), use `\(` or `\)`.                         |                                                                 &nbsp;                                                                  |
-|     \`x     |                                                                                     y \`                                                                                     |                                                         Matches either x or y.                                                          |
+|   `x | y `  |                                                                               Matches either x or y.                                                          |
 |   `{n} `    |                                                          Matches exactly n times \(n is a non\-negative integer\).                                                           |               `/o{2}/ does not match the "o" in "Bob," but matches the first two instances of the letter o in "foooood."`               |
 |   `{n,}`    |                                                          Matches at least n times \(n is a non\-negative integer\).                                                          | `/o{2,}/ does not match the "o" in "Bob" but matches all of the instances of the letter o in "foooood." /o{1,}/ is equivalent to /o+/.` |
 |   `{n,m}`   |                                                Matches at least n and at most m times \(m and n are non\-negative integers\).                                                |                               `/o{1,3}/ matches the first three instances of the letter o in "fooooood."`                               |
@@ -77,7 +77,7 @@ In an outsourced dial-up scenario in which an Internet service provider \(ISP\) 
 
 - Replace:
 
-**To replace <em>user@example.microsoft.com</em> with *example.microsoft.com\user***
+**To replace <em>user@example.microsoft.com</em> with _example.microsoft.com\user_**
 
 - Find:`(.*)@(.*)`
 
@@ -85,7 +85,7 @@ In an outsourced dial-up scenario in which an Internet service provider \(ISP\) 
 
 
 
-**To replace *domain\user* with *specific_domain\user***
+**To replace _domain\user_ with _specific_domain\user_**
 
 - Find:`(.*)\\(.*)`
 

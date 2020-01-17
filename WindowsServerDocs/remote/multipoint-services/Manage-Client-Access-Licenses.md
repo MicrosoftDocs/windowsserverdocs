@@ -2,7 +2,7 @@
 title: Manage Client Access Licenses
 description: Learn how to work with CALs in MultiPoint Services
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: multipoint-services
 ms.reviewer: na
 ms.suite: na
@@ -19,13 +19,13 @@ Every station that connects to a MultiPoint Services system, including the compu
 
 If you are using station virtual desktops instead of physical stations, you must install a CAL for each station virtual desktop.  
   
-1.  Purchase a client license for each station that is connected to your MultiPoint Services computer or server. For more information about purchasing CALs, visit the documentation for Remote Desktop licensing. <!--@Liza: add link to RDS licensing here-->
+1.  Purchase a client license for each station that is connected to your MultiPoint Services computer or server. For more information about purchasing CALs, visit the documentation for Remote Desktop licensing. 
 
 2.  From the **Start** screen, open **MultiPoint Manager**.  
   
 3.  Click the **Home** tab, and then click **Add client access licenses**.  This will open the management tool for CAL licensing.
 
-# Set the licensing mode manually
+## Set the licensing mode manually
 If not properly configured the MultiPoint Services set-up will prompt with a notification about the grace
 period being expired. Follow these steps to set the licensing mode:
 

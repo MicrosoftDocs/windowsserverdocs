@@ -2,7 +2,7 @@
 title: gpupdate
 description: "Windows Commands topic for **** - "
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -17,8 +17,6 @@ ms.date: 10/16/2017
 ---
 
 # gpupdate
-
-
 
 Updates Group Policy settings. For examples of how this command can be used, see [Examples](#examples).
 
@@ -47,6 +45,7 @@ gpupdate [/target:{Computer | User}] [/force] [/wait:<VALUE>] [/logoff] [/boot] 
 ## Examples
 
 Force a background update of all Group Policy settings, regardless of whether they have changed.
+
 ```
 gpupdate /force
 ```

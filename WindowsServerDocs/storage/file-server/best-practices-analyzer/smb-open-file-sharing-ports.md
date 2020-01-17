@@ -1,8 +1,8 @@
 ﻿---
-Title: 'SMB: File and printer sharing ports should be open'
+title: 'SMB: File and printer sharing ports should be open'
 TOCTitle: 'SMB: File and printer sharing ports should be open'
 ms.date: 07/02/2012
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: storage
 author: JasonGerend
 manager: elizapo
@@ -16,7 +16,7 @@ Updated: February 2, 2011
 
 Applies To: Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, and Windows Server 2012, Windows Server 2008 R2
 
-*This topic is intended to address a specific issue identified by a Best Practices Analyzer scan. You should apply the information in this topic only to computers that have had the File Services Best Practices Analyzer run against them and are experiencing the issue addressed by this topic. For more information about best practices and scans, see* [Best Practices Analyzer](http://go.microsoft.com/fwlink/?linkid=122786%0d%0a).
+*This topic is intended to address a specific issue identified by a Best Practices Analyzer scan. You should apply the information in this topic only to computers that have had the File Services Best Practices Analyzer run against them and are experiencing the issue addressed by this topic. For more information about best practices and scans, see* [Best Practices Analyzer](https://go.microsoft.com/fwlink/?linkid=122786%0d%0a).
 
 
 <table>
@@ -70,5 +70,5 @@ Membership in the **Administrators** group, or equivalent, is the minimum requir
 
 ## Additional references
 
-[Understanding Shared Folders and the Windows Firewall](http://technet.microsoft.com/en-us/library/cc731402.aspx)(http://technet.microsoft.com/en-us/library/cc731402.aspx)
+[Understanding Shared Folders and the Windows Firewall](https://technet.microsoft.com/library/cc731402.aspx)(https://technet.microsoft.com/library/cc731402.aspx)
 

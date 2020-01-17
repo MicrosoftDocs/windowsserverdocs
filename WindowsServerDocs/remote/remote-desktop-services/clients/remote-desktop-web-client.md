@@ -1,15 +1,15 @@
 ---
-title: Access the Remote Desktop web client
+title: Get started with the web client
 description: Describes how to sign in to the Remote Desktop web client.
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: remote-desktop-services
 ms.author: helohr
-ms.date: 07/20/2018
+ms.date: 08/27/2019
 ms.topic: article
 author: Heidilohr
 ms.localizationpriority: medium
 ---
-# Access the Remote Desktop web client
+# Get started with the web client
 
 The Remote Desktop web client lets you use a compatible web browser to access your organization's remote resources (apps and desktops) published to you by your admin. You'll be able to interact with the remote apps and desktops like you would with a local PC no matter where you are, without having to switch to a different desktop PC. Once your admin sets up your remote resources, all you need are your domain, user name, password, the URL your admin sent you, and a supported web browser, and you're good to go.
 
@@ -53,6 +53,10 @@ Follow these steps to print from the web client:
 
 The web client currently supports copying and pasting text only. Files can't be copied or pasted to and from the web client. Additionally, you can only use **Ctrl+C** and **Ctrl+V** to copy and paste text.
 
+## Use an Input Method Editor (IME) in the remote session
+
+To use an Input Method Editor to enter complex characters in the remote session, select the gear icon in the navigation bar to open the **Settings** side panel and set the **Enable Input Method Editor** switch to **On**. You must have an Input Method Editor installed and enabled in the remote session. 
+
 ## Get help with the web client
 
-If you've encountered an issue that can’t be solved by the information in this article, you can get help with the web client by emailing the address on the web client's About page.
+If you've encountered an issue that can't be solved by the information in this article, you can get help with the web client by emailing the address on the web client's About page.

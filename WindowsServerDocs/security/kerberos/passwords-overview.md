@@ -2,7 +2,7 @@
 title: Passwords Overview
 description: "Windows Server Security"
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: security-kerberos
@@ -44,11 +44,11 @@ This table lists additional resources for password features, technology and cred
 
 |Content type|References|
 |--------|-------|
-|**Scenario documentation**|[Protecting your digital identity](http://blogs.msdn.com/b/b8/archive/2011/12/14/protecting-your-digital-identity.aspx)|
+|**Scenario documentation**|[Protecting your digital identity](https://blogs.msdn.com/b/b8/archive/2011/12/14/protecting-your-digital-identity.aspx)|
 |**Operations**|[Active Directory Users and Computers](https://technet.microsoft.com/library/cc754217.aspx)|
-|**Troubleshooting**|[Find out when your Password Expires \- Active Directory PowerShell Blog](http://blogs.msdn.com/b/adpowershell/archive/2010/08/09/9970198.aspx)|
+|**Troubleshooting**|[Find out when your Password Expires \- Active Directory PowerShell Blog](https://blogs.msdn.com/b/adpowershell/archive/2010/08/09/9970198.aspx)|
 |**Security**| Windows Server 2008 R2  and  Windows 7 [Threats and Countermeasures Guide: Account Policies](https://technet.microsoft.com/library/hh125920(v=ws.10).aspx)<br /><br />Guidance to [change and create strong passwords](https://www.microsoft.com/security/online-privacy/passwords-create.aspx)|
 |**Tools and settings**|[Group Policy Settings Reference for Windows and Windows Server on the Microsoft Download Center](https://www.microsoft.com/download/en/details.aspx?amp;displaylang=en&displaylang=en&id=25250)|
-|**Community resources**|[Protecting your digital identity](http://blogs.msdn.com/b/b8/archive/2011/12/14/protecting-your-digital-identity.aspx)<br /><br />[Signing in to Windows 8 with a Windows Live ID](http://blogs.msdn.com/b/b8/archive/2011/09/26/signing-in-to-windows-8-with-a-windows-live-id.aspx)<br /><br />[Signing in with a picture password](http://blogs.msdn.com/b/b8/archive/2011/12/16/signing-in-with-a-picture-password.aspx)<br /><br />[Optimizing picture password security](http://blogs.msdn.com/b/b8/archive/2011/12/19/optimizing-picture-password-security.aspx)|
+|**Community resources**|[Protecting your digital identity](https://blogs.msdn.com/b/b8/archive/2011/12/14/protecting-your-digital-identity.aspx)<br /><br />[Signing in to Windows 8 with a Windows Live ID](https://blogs.msdn.com/b/b8/archive/2011/09/26/signing-in-to-windows-8-with-a-windows-live-id.aspx)<br /><br />[Signing in with a picture password](https://blogs.msdn.com/b/b8/archive/2011/12/16/signing-in-with-a-picture-password.aspx)<br /><br />[Optimizing picture password security](https://blogs.msdn.com/b/b8/archive/2011/12/19/optimizing-picture-password-security.aspx)|
 
 

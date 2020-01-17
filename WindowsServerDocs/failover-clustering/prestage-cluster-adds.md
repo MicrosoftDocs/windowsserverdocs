@@ -1,7 +1,7 @@
 ---
 title: Prestage cluster computer objects in Active Directory Domain Services
 description: How to prestage cluster computer objects in Active Directory Domain Services.
-ms.prod: windows-server-threshold 
+ms.prod: windows-server 
 ms.topic: article 
 author: JasonGerend 
 ms.author: jgerend

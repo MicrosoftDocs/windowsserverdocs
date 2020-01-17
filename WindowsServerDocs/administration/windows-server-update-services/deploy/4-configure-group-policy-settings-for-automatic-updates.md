@@ -1,7 +1,7 @@
 ---
 title: Step 4 - Configure Group Policy Settings for Automatic Updates
 description: "Windows Server Update Service (WSUS) topic - Configure Group Policy Settings for Automatic Updates is step four in a four step process for deploying WSUS"
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-wsus

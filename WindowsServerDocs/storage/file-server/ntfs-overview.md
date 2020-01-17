@@ -1,17 +1,17 @@
 ﻿---
 title: NTFS overview
 description: An explanation of what NTFS is.
-ms.prod: windows-server-threshold 
+ms.prod: windows-server 
 ms.topic: article 
 author: JasonGerend 
 ms.author: jgerend 
 ms.technology: storage 
-ms.date: 09/06/2018
+ms.date: 06/17/2019
 ms.localizationpriority: medium
 ---
 # NTFS overview
 
->Applies to: Windows 10, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2, Windows Server 2008
+>Applies to: Windows 10, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2, Windows Server 2008
 
 NTFS—the primary file system for recent versions of Windows and Windows Server—provides a full set of features including security descriptors, encryption, disk quotas, and rich metadata, and can be used with Cluster Shared Volumes (CSV) to provide continuously available volumes that can be accessed simultaneously from multiple nodes of a failover cluster.
 
@@ -42,7 +42,7 @@ NTFS continuously monitors and corrects transient corruption issues in the backg
   |64 KB (maximum size)|256 TB|256 TB|
 
 >[!IMPORTANT]
->Services and apps might impose additional limits on file and volume sizes. For example, the volume size limit is 64 TB if you’re using the Previous Versions feature or a backup app that makes use of Volume Shadow Copy Service (VSS) snapshots (and you’re not using a SAN or RAID enclosure). However, you might need to use smaller volume sizes depending on your workload and the performance of your storage.
+>Services and apps might impose additional limits on file and volume sizes. For example, the volume size limit is 64 TB if you're using the Previous Versions feature or a backup app that makes use of Volume Shadow Copy Service (VSS) snapshots (and you're not using a SAN or RAID enclosure). However, you might need to use smaller volume sizes depending on your workload and the performance of your storage.
 
 ### Formatting requirements for large files
 
@@ -87,8 +87,11 @@ If the space on a volume is limited, NTFS provides the following ways to work wi
 
 ## Additional information
 
-|Content type|References|
-|---|---|
-|Evaluation|- [What's New in NTFS](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn466520(v%3dws.11)) (Windows Server 2012 R2)<br>- [What's New in NTFS](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ff383236(v=ws.10)) (Windows Server 2008 R2, Windows 7)<br>- [NTFS Health and Chkdsk](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831536(v%3dws.11))<br>- [Self-Healing NTFS](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc771388(v=ws.10)) (introduced in Windows Server 2008)<br>- [Transactional NTFS](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/cc730726(v%3dws.10)) (introduced in Windows Server 2008)|
-|Community resources|- [Windows Storage Team Blog](https://blogs.msdn.microsoft.com/san/)|
-|Related technologies|- [Storage in Windows Server](../storage.md)<br>- [Use Cluster Shared Volumes in a Failover Cluster](../../failover-clustering/failover-cluster-csvs.md)<br>- The [Cluster Shared Volumes](<https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831630(v%3dws.11)#cluster-shared-volumes>) and [Storage Design](<https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831630(v%3dws.11)#storage-design>) sections of [Designing Your Cloud Infrastructure](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831630(v%3dws.11)) <br>- [Storage Spaces](../storage-spaces/overview.md)<br>- [Resilient File System (ReFS) overview](../refs/refs-overview.md)
+- [Cluster size recommendations for ReFS and NTFS](https://techcommunity.microsoft.com/t5/Storage-at-Microsoft/Cluster-size-recommendations-for-ReFS-and-NTFS/ba-p/425960)
+- [Resilient File System (ReFS) overview](../refs/refs-overview.md)
+- [What's New in NTFS](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn466520(v%3dws.11)) (Windows Server 2012 R2)
+- [What's New in NTFS](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ff383236(v=ws.10)) (Windows Server 2008 R2, Windows 7)
+- [NTFS Health and Chkdsk](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831536(v%3dws.11))
+- [Self-Healing NTFS](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc771388(v=ws.10)) (introduced in Windows Server 2008)
+- [Transactional NTFS](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/cc730726(v%3dws.10)) (introduced in Windows Server 2008)
+- [Storage in Windows Server](../storage.md)

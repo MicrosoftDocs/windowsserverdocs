@@ -2,7 +2,7 @@
 title: taskkill
 description: "Windows Commands topic for **** - "
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -19,12 +19,14 @@ ms.date: 10/16/2017
 >Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Ends one or more tasks or processes. Processes can be ended by process ID or image name. **taskkill** replaces the **kill** tool.
-for examples of how to use this command, see [Examples](#examples).
+For examples of how to use this command, see [Examples](#examples).
 
 ## Syntax
+
 ```
 taskkill [/s <computer> [/u [<Domain>\]<UserName> [/p [<Password>]]]] {[/fi <Filter>] [...] [/pid <ProcessID> | /im <ImageName>]} [/f] [/t]
 ```
+
 ## Parameters
 
 |         Parameter         |                                                                                                                                        Description                                                                                                                                        |
@@ -42,7 +44,7 @@ taskkill [/s <computer> [/u [<Domain>\]<UserName> [/p [<Password>]]]] {[/fi <Fil
 
 | Filter Name |    Valid Operators     |                                                                Valid Value(s)                                                                |
 |-------------|------------------------|----------------------------------------------------------------------------------------------------------------------------------------------|
-|   STatUS    |         eq, ne         |                                                 RUNNING &#124; NOT RESPONDING &#124; UNKNOWN                                                 |
+|   STATUS    |         eq, ne         |                                                 RUNNING &#124; NOT RESPONDING &#124; UNKNOWN                                                 |
 |  IMAGENAME  |         eq, ne         |                                                                  Image name                                                                  |
 |     PID     | eq, ne, gt, lt, ge, le |                                                                  PID value                                                                   |
 |   SESSION   | eq, ne, gt, lt, ge, le |                                                                Session number                                                                |
@@ -54,30 +56,40 @@ taskkill [/s <computer> [/u [<Domain>\]<UserName> [/p [<Password>]]]] {[/fi <Fil
 |   MODULES   |         eq, ne         |                                                                   DLL name                                                                   |
 
 ## Remarks
-* The WINDOWTITLE and STatUS filters are not supported when a remote system is specified.
+* The WINDOWTITLE and STATUS filters are not supported when a remote system is specified.
 * The wildcard character (**\\**<em>) is accepted for the **/im</em>* option only when a filter is applied.
 * Termination of remote processes is always carried out forcefully, regardless of whether the **/f** option is specified.
 * Supplying a computer name to the hostname filter causes a shutdown and all processes are stopped.
 * You can use **tasklist** to determine the process ID (PID) for the process to be terminated.
 
 ## Examples
+
 To end the processes with process IDs 1230, 1241, and 1253, type:
+
 ```
 taskkill /pid 1230 /pid 1241 /pid 1253
 ```
+
 To forcefully end the process "Notepad.exe" if it was started by the system, type:
+
 ```
 taskkill /f /fi "USERNAME eq NT AUTHORITY\SYSTEM" /im notepad.exe
 ```
+
 To end all processes on the remote computer "Srvmain" with an image name beginning with "note," while using the credentials for the user account Hiropln, type:
+
 ```
 taskkill /s srvmain /u maindom\hiropln /p p@ssW23 /fi "IMAGENAME eq note*" /im *
 ```
+
 To end the process with the process ID 2134 and any child processes that it started, but only if those processes were started by the Administrator account, type:
+
 ```
 taskkill /pid 2134 /t /fi "username eq administrator"
 ```
+
 To end all processes that have a process ID greater than or equal to 1000, regardless of their image names, type:
+
 ```
 taskkill /f /fi "PID ge 1000" /im *
 ```

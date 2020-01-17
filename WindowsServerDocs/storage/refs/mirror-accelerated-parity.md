@@ -1,6 +1,6 @@
 ---
 title: Mirror-accelerated parity
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.author: gawatu
 ms.manager: masriniv
 ms.technology: storage-file-systems
@@ -20,7 +20,7 @@ Storage Spaces can provide fault tolerance for data using two fundamental techni
 ## Background
 
 Mirror and parity resiliency schemes have fundamentally different storage and performance characteristics:
-- Mirror resiliency allows users to attain fast write performance, but replicating the data for each copy isn’t space efficient. 
+- Mirror resiliency allows users to attain fast write performance, but replicating the data for each copy isn't space efficient. 
 - Parity, on the other hand, must re-compute parity for every write, causing random write performance to suffer. Parity does, however, allow users to store their data with greater space efficiency. For more info, see [Storage Spaces fault tolerance](../storage-spaces/Storage-Spaces-Fault-Tolerance.md).
 
 Thus, mirror is predisposed to deliver performance-sensitive storage while parity offers improved storage capacity utilization. In mirror-accelerated parity, ReFS leverages the benefits of each resiliency type to deliver both capacity-efficient and performance-sensitive storage by combining both resiliency schemes within a single volume.
@@ -51,7 +51,7 @@ When data is moved from mirror to parity, the data is read, parity encodings are
 
 2. **Writes to Mirror, Reallocated from Parity:**
 
-    If the incoming write modifies data that’s in parity, and ReFS can successfully find enough free space in mirror to service the incoming write, ReFS will first invalidate the previous data in parity and then write to mirror. This invalidation is a quick and inexpensive metadata operation that helps meaningfully improve write performance made to parity.
+    If the incoming write modifies data that's in parity, and ReFS can successfully find enough free space in mirror to service the incoming write, ReFS will first invalidate the previous data in parity and then write to mirror. This invalidation is a quick and inexpensive metadata operation that helps meaningfully improve write performance made to parity.
     ![Reallocated-Write](media/mirror-accelerated-parity/Reallocated-Write.png)
 
 3. **Writes to Parity:**
@@ -78,7 +78,7 @@ When data is moved from mirror to parity, the data is read, parity encodings are
 
 ## ReFS compaction
 
-In this Fall’s semi-annual release, ReFS introduces compaction, which substantially improves performance for mirror-accelerated parity volumes that are 90+% full. 
+In this Fall's semi-annual release, ReFS introduces compaction, which substantially improves performance for mirror-accelerated parity volumes that are 90+% full. 
 
 **Background:** Previously, as mirror-accelerated parity volumes became full, the performance of these volumes could degrade. The performance degrades because hot and cold data become mixed throughout the volume overtime. This means less hot data can be stored in mirror since cold data occupies space in mirror that could otherwise be used by hot data. Storing hot data in mirror is critical to maintaining high performance because writes directly to mirror are much faster than reallocated writes and orders of magnitude faster than writes directly to parity. Thus, having cold data in mirror is bad for performance, as it reduces the likelihood that ReFS can make writes directly to mirror. 
 
@@ -94,11 +94,18 @@ ReFS compaction addresses these performance issues by freeing up space in mirror
 ### Performance counters
 
 ReFS maintains performance counters to help evaluate the performance of mirror-accelerated parity. 
-- As described above in the Write to Parity section, ReFS will write directly to parity when it can’t find free space in mirror. Generally, this occurs when the mirrored tier fills up faster than ReFS can rotate data to parity. In other words, ReFS rotation is not able to keep up with the ingestion rate. The performance counters below identify when ReFS writes directly to parity:
+- As described above in the Write to Parity section, ReFS will write directly to parity when it can't find free space in mirror. Generally, this occurs when the mirrored tier fills up faster than ReFS can rotate data to parity. In other words, ReFS rotation is not able to keep up with the ingestion rate. The performance counters below identify when ReFS writes directly to parity:
+
   ```
+  # Windows Server 2016
   ReFS\Data allocations slow tier/sec
   ReFS\Metadata allocations slow tier/sec
+
+  # Windows Server 2019
+  ReFS\Allocation of Data Clusters on Slow Tier/sec
+  ReFS\Allocation of Metadata Clusters on Slow Tier/sec
   ```
+
 - If these counters are non-zero, this indicates ReFS is not rotating data fast enough out of mirror. To help alleviate this, one can either change the rotation aggressiveness or increase the size of the mirrored tier.
 
 ### Rotation aggressiveness

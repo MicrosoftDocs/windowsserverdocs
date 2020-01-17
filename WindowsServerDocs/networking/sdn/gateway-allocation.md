@@ -2,7 +2,7 @@
 title: Gateway bandwidth allocation
 description: 
 manager: dougkim
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: networking-hv-switch
 ms.topic: get-started-article
 ms.assetid: 

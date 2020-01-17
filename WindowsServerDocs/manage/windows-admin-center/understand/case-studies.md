@@ -7,7 +7,7 @@ author: nwashburn-ms
 ms.author: niwashbu
 ms.date: 06/18/2018
 ms.localizationpriority: medium
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ---
 
 # Windows Admin Center Case Studies
@@ -33,7 +33,7 @@ Ava6 uses Windows Server 2016 Core, Hyper-V, Failover Clustering, and S2D.
 
 ### **The Challenge**
 
-Ava6’s first use case for Windows Admin Center is Hyper-V and Failover Clustering, and is evaluating hyper-converged cluster.
+Ava6's first use case for Windows Admin Center is Hyper-V and Failover Clustering, and is evaluating hyper-converged cluster.
 
 Windows Admin Center helps Ava6 manage Windows Server deployed in Core Edition, especially for driver management.  Windows Admin Center gives a better experience for Hyper-V and Failover Cluster to customers, especially to manage VMs, and shows customers that a GUI is coming for the hyper-converged solution.
 
@@ -41,7 +41,7 @@ Windows Admin Center helps Ava6 manage Windows Server deployed in Core Edition, 
 
 Ava6 has Windows Admin Center deployed as a single instance for VM management.
 
-Ava6’s customers have been impressed with Windows Admin Center, and prefer its management capabilities for Hyper-V and Failover Clustering over other options.  Before Windows Admin Center, driver management was overly complicated on a Core server.  Windows Admin Center has also helped introduce S2D Ava6’s customers, with a similar offering to competitors like Nutanix and VMWare.
+Ava6's customers have been impressed with Windows Admin Center, and prefer its management capabilities for Hyper-V and Failover Clustering over other options.  Before Windows Admin Center, driver management was overly complicated on a Core server.  Windows Admin Center has also helped introduce S2D Ava6's customers, with a similar offering to competitors like Nutanix and VMWare.
 
 ## Comparex
 
@@ -57,7 +57,7 @@ Comparex was looking for an easy-to-use and remote-accessible server management 
 
 ### **The Solution**
 
-Comparex is running a server-based Windows Admin Center installation for access to, and management of, their demo lab, which has helped alleviate extra VPN and RDP steps.  Comparex’s consultants also run Windows Admin Center on their notebooks to help customers in their environment, without the need for explicit RDP access.
+Comparex is running a server-based Windows Admin Center installation for access to, and management of, their demo lab, which has helped alleviate extra VPN and RDP steps.  Comparex's consultants also run Windows Admin Center on their notebooks to help customers in their environment, without the need for explicit RDP access.
 
 Windows Admin Center has saved Comparex time in their daily business, to do more and achieve more.  Windows Admin Center has also solved common management challenges with their customers, such as with Hyper-V and Storage Spaces Direct.
 
@@ -117,7 +117,7 @@ GVC Group has seen increased productivity due to less management hops for admini
 
 ## Inside Technologies
 
-[Inside Technologies](http://www.insidetechnologies.eu) is a globally-focused IT consulting firm that provides application development, enterprise solutions, and infrastructure services.  They specialize in applying new and unique approaches with Microsoft solutions to meet customer’s needs.
+[Inside Technologies](http://www.insidetechnologies.eu) is a globally-focused IT consulting firm that provides application development, enterprise solutions, and infrastructure services.  They specialize in applying new and unique approaches with Microsoft solutions to meet customer's needs.
 
 Inside Technologies uses a wide variety of Windows Server technologies, including Hyper-V and Storage.
 

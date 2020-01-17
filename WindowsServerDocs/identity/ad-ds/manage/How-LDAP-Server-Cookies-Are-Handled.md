@@ -7,7 +7,7 @@ ms.author: joflore
 manager: mtillman
 ms.date: 05/31/2017
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 
 ms.technology: identity-adds
 ---
@@ -122,9 +122,9 @@ Events 2898 and 2899 are the only ways to know that the LDAP server has reached 
   
 If you are seeing event 2898 on your DC/LDAP Server, we recommend you set MaxResultSetsPerConn to 25. More than 25 parallel paged searches on a single LDAP connection is not usual. If you continue to see event 2898, consider investigating your LDAP client application which encounters the error. The suspicion would be that it somehow gets stuck retrieving additional paged results, leaves the cookie pending and restarts a new query. So see whether the application would at some point have sufficient cookies for its purposes, you can also increase the value of MaxResultSetsPerConn beyond 25.When you see events 2899 logged on your domain controllers, the plan would be different. If your DC/LDAP server runs on a machine with sufficient memory (several GBs of free memory), we recommend you set the MaxResultsetSize on the LDAP server to >=250MB. This limit is large enough to accommodate large volumes of LDAP page searches even on very large directories.  
   
-If you are still seeing events 2899 with a pool of 250MB or more, you are likely having many clients with very high number of objects returned, queried in a very frequent manner. The data you can gather with the [Active Directory Data Collector Set](http://blogs.technet.com/b/askds/archive/2010/06/08/son-of-spa-ad-data-collector-sets-in-win2008-and-beyond.aspx) can help you find repetitive paged queries that keep your LDAP Servers busy. These queries will all show with a number of "Entries returned" that matches the size of the page used.  
+If you are still seeing events 2899 with a pool of 250MB or more, you are likely having many clients with very high number of objects returned, queried in a very frequent manner. The data you can gather with the [Active Directory Data Collector Set](https://blogs.technet.com/b/askds/archive/2010/06/08/son-of-spa-ad-data-collector-sets-in-win2008-and-beyond.aspx) can help you find repetitive paged queries that keep your LDAP Servers busy. These queries will all show with a number of "Entries returned" that matches the size of the page used.  
   
-If possible, you should review the application design, and implement a different approach with a lower frequency, data volume and/or fewer client instances querying this data.In case of the applications for which you have source code access, this guide to  [creating efficient AD-Enabled Applications](https://msdn.microsoft.com/en-us/library/ms808539.aspx) can help you understand the optimal way for applications to access AD.  
+If possible, you should review the application design, and implement a different approach with a lower frequency, data volume and/or fewer client instances querying this data.In case of the applications for which you have source code access, this guide to  [creating efficient AD-Enabled Applications](https://msdn.microsoft.com/library/ms808539.aspx) can help you understand the optimal way for applications to access AD.  
   
 If the query behavior can't be changed, one approach is also adding more replicated instances of the naming contexts needed and to redistribute the clients and eventually reduce the load on the individual LDAP Servers.  
   

@@ -1,7 +1,7 @@
 ---
 title: Resolve vRSS issues
 description: Resolve vRSS issues if you do not see vRSS load balancing traffic to the VM LPs.
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: networking
 ms.topic: article
 ms.assetid: 
@@ -12,7 +12,7 @@ author: shortpatti
 ms.date: 09/04/2018
 ---
 
-## Resolve vRSS issues
+# Resolve vRSS issues
 
 If you have completed all of the preparation steps and you still do not see vRSS load balancing traffic to the VM LPs, there are different possible issues.
 
@@ -70,7 +70,7 @@ If you have completed all of the preparation steps and you still do not see vRSS
    Set-NetAdapterAdvancedProperty -Name NICName -DisplayName 'Virtual Switch RSS' -DisplayValue Enabled”
    ```
  
-4. _(Windows Server 2019)_ You cannot enable VMMQ (VmmqEnabled = False) while setting **VrssQueueSchedulingMode** to **Dynamic**. The VrssQueueSchedulingMode does not change to Dynamic once VMMQ is enabled.<p>The **VrssQueueSchedulingMode** of **Dynamic** requires driver support when VMMQ is enabled.  VMMQ is an offload of the packet placement on logical processors and as such, requires driver support to leverage the dynamic algorithm.  Please install the NIC vendor’s driver and firmware that supports Dynamic VMMQ.
+4. _(Windows Server 2019)_ You cannot enable VMMQ (VmmqEnabled = False) while setting **VrssQueueSchedulingMode** to **Dynamic**. The VrssQueueSchedulingMode does not change to Dynamic once VMMQ is enabled.<p>The **VrssQueueSchedulingMode** of **Dynamic** requires driver support when VMMQ is enabled.  VMMQ is an offload of the packet placement on logical processors and as such, requires driver support to leverage the dynamic algorithm.  Please install the NIC vendor's driver and firmware that supports Dynamic VMMQ.
 
 
 
