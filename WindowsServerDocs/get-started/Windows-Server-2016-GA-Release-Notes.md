@@ -36,7 +36,7 @@ To avoid this, after the first boot, set the print spooler to disabled.
 ## Containers
 
 [comment]: # (ID: 371; Submitter: taylorb; state: signed off)
-- Before you use containers, install [Servicing stack update for Windows 10 Version 1607: August 23, 2016](https://support.microsoft.com/en-us/kb/3176936) or any later updates that are available. Otherwise, a number of problems can occur, including failures in building, starting, or running containers, and errors similar to "CreateProcess failed in Win32: The RPC server is unavailable."
+- Before you use containers, install [Servicing stack update for Windows 10 Version 1607: August 23, 2016](https://support.microsoft.com/kb/3176936) or any later updates that are available. Otherwise, a number of problems can occur, including failures in building, starting, or running containers, and errors similar to "CreateProcess failed in Win32: The RPC server is unavailable."
 
 [comment]: # (ID: 373; Submitter: plang; state: signed off)
 - The NanoServerPackage OneGet provider does not work in Windows Containers. To work around this, use Find-NanoServerPackage and Save-NanoServerPackage on a different computer (not a container) to download the needed package. Then copy the packages into the container and install them.

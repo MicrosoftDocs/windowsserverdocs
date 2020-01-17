@@ -21,7 +21,7 @@ ms.date: 10/16/2017
 ## What is Software Inventory Logging Aggregator?
 Software Inventory Logging Aggregator (SILA) receives, aggregates, and produces basic reports of the number and types of Microsoft enterprise software installed on Windows Servers in a data center.
 
-SILA is software that you install on Windows Server, but is not included in the Windows Server installation. To install the software, first download it for free from the Windows Download Center: [Software Inventory Logging Aggregator 1.0 for Windows Server](https://www.microsoft.com/en-us/download/details.aspx?id=49046)
+SILA is software that you install on Windows Server, but is not included in the Windows Server installation. To install the software, first download it for free from the Windows Download Center: [Software Inventory Logging Aggregator 1.0 for Windows Server](https://www.microsoft.com/download/details.aspx?id=49046)
 
 The Software Inventory Logging framework is intended to reduce the operational costs of inventorying Microsoft software deployed across many servers in an IT environment. This framework consists of two components, this SIL Aggregator, and the Windows Server feature, introduced in Windows Server 2012 R2, Software Inventory Logging (SIL). This Software Inventory Logging Aggregator 1.0 will install on one server and receive inventory data from any Windows Server configured to forward data to it via SIL. The design allows data center administrators to enable SIL in master Windows Server images intended for wide distribution across their environment.  This software package is the target point and intended for customers to install on their premises for easy logging of inventory data over time. This software also allows for periodic creation of basic inventory reports in Microsoft Excel. Software Inventory Logging Aggregator 1.0 reports include counts of installations of Windows Server, System Center, and SQL Server.
 
@@ -588,7 +588,7 @@ When you want to start inventorying servers in your environment with a different
 -   While it is possible to add Windows Server 2008 R2 and Windows Server 2012 hosts to the polling host list, this version (1.0) of SIL Aggregator only supports polling Windows Server 2012 R2, for Windows/Hyper-V based hosts, to have success with all features and functionality.  In particular, it is known that when polling Windows Server 2008 R2 hosts, virtual machines and hosts may not match up in the SIL Aggregator reports.
 
 ## See Also
-[Software Inventory Logging Aggregator 1.0 for Windows Server](https://www.microsoft.com/en-us/download/details.aspx?id=49046)<br>
+[Software Inventory Logging Aggregator 1.0 for Windows Server](https://www.microsoft.com/download/details.aspx?id=49046)<br>
 [SIL Aggregator PowerShell cmdlets](https://technet.microsoft.com/library/mt548455.aspx)<br>
 [SIL PowerShell cmdlets](https://technet.microsoft.com/library/dn283390.aspx)<br>
 [An Overview of SIL](https://technet.microsoft.com/library/dn268301.aspx)<br>

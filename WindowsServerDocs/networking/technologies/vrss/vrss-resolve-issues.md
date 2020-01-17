@@ -12,7 +12,7 @@ author: shortpatti
 ms.date: 09/04/2018
 ---
 
-## Resolve vRSS issues
+# Resolve vRSS issues
 
 If you have completed all of the preparation steps and you still do not see vRSS load balancing traffic to the VM LPs, there are different possible issues.
 

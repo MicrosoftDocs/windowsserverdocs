@@ -9,9 +9,9 @@ ms.technology: remote-desktop-services
 ms.tgt_pltfrm: na
 ms.topic: article
 author: heidilohr
-manager: daveba
+manager: lizross
 ms.author: helohr
-ms.date: 01/06/2020
+ms.date: 01/28/2020
 ms.localizationpriority: medium
 ---
 # Get started with the Windows Desktop client
@@ -27,7 +27,7 @@ You can use the Remote Desktop client for Windows Desktop to access Windows apps
 
 ## Install the client
 
-Choose the client that matches the version of Windows. The new Remote Desktop client (MSRDC) supports Windows 10, Windows 10 IoT Enterprise, and Windows 7 client devices. 
+Choose the client that matches the version of Windows. The new Remote Desktop client (MSRDC) supports Windows 10, Windows 10 IoT Enterprise, and Windows 7 client devices.
 
 - [Windows 64-bit](https://go.microsoft.com/fwlink/?linkid=2068602)
 - [Windows 32-bit](https://go.microsoft.com/fwlink/?linkid=2098960)
@@ -114,7 +114,22 @@ The client will use the settings configured by your admin unless you turn off th
 
 ## Provide feedback
 
-Have a feature suggestion or want to report an issue? Tell us using the [Feedback Hub](feedback-hub://?tabid=2&contextid=883). You can also access the Feedback Hub through your client:
+Have a feature suggestion or want to report a problem? Tell us using the [Feedback Hub](feedback-hub://?tabid=2&contextid=883). You can also access the Feedback Hub through the client:
 
-1. From the Connection Center, tap the overflow menu (**...**) on the command bar at the top of the client.
-2. Select **Feedback** from the drop-down menu to open the Feedback Hub.
+1. From the Connection Center, tap the **Send feedback** option on the command bar at the top of the client to open the Feedback Hub app.
+2. Enter the required information in the **Summary** and **Details** fields. When you're done, tap **Next**.
+3. Select whether it's a **Problem** or **Suggestion**.
+4. Check to see if the category is in **Apps** > **Remote Desktop**. If it is, tap **Next**.
+5. Review the existing feedback topics to see if someone else has reported the same problem. If not, select **Make a new bug**, then tap **Next**.
+6. On the next page, you can give us more information so we can help you solve the problem. You can write more detailed information, submit screenshots, and even create a recording of the problem to show us what happened. To make a recording, select **Start recording**, then do what you did up to the point where the problem happened. When you're done, return to the Feedback Hub and select **Stop recording**.
+7. When you're satisfied with the information, tap **Submit**.
+8. On the "Thank you for your feedback!" page, tap **Share my feedback** to generate a link to your feedback that you can share with others as needed.
+
+### Access client logs
+
+You might need the client logs when investigating a problem.
+
+To retrieve the client logs:
+
+1. Open **File Explorer**.
+2. Navigate to the **%temp%\DiagOutputDir\RdClientAutoTrace** folder.
