@@ -4,7 +4,7 @@ description: Storage Migration Service makes it easier to migrate storage to Win
 author: jasongerend
 ms.author: jgerend
 manager: elizapo
-ms.date: 10/25/2019
+ms.date: 01/17/2020
 ms.topic: article
 ms.prod: windows-server
 ms.technology: storage
@@ -29,6 +29,10 @@ Use Storage Migration Service because you've got a server (or a lot of servers) 
 ![Diagram showing Storage Migration Service migrating files & configuration from source servers to destination servers, Azure VMs, or Azure File Sync.](media/overview/storage-migration-service-diagram.png)
 
 **Figure 1: Storage Migration Service sources and destinations**
+
+Here's a video showing how to use Storage Migration Service to take a server, such as a Windows Server 2008 R2 server that's now out of support, and move the storage to a newer server.
+
+> [!VIDEO https://www.youtube.com/embed/h-Xc9j1w144]
 
 ## How the migration process works
 
