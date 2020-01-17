@@ -109,7 +109,7 @@ Non-configurable settings to the TGTs expiration are established for every accou
 For more information, see [How to Configure Protected Accounts](how-to-configure-protected-accounts.md).
 
 ## Troubleshooting
-Two operational administrative logs are available to help troubleshoot events that are related to Protected Users. These new logs are located in Event Viewer and are disabled by default, and are located under **Applications and Services Logs\Microsoft\Windows\Microsoft\Authentication**.
+Two operational administrative logs are available to help troubleshoot events that are related to Protected Users. These new logs are located in Event Viewer and are disabled by default, and are located under **Applications and Services Logs\Microsoft\Windows\Authentication**.
 
 |Event ID and Log|Description|
 |----------|--------|
