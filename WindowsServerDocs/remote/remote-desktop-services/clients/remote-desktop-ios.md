@@ -194,7 +194,7 @@ The command bar replaced the Utility bar starting in version 8.0.1. You can swit
 The client uses standard touch gestures. You can also use touch gestures to replicate mouse actions on the remote desktop. The mouse modes available are defined in the table below.
 
 > [!NOTE]
-> Interacting with Windows 8 or newer the native touch gestures are supported in Direct Touch mode. For more information on Windows 8 gestures see [Touch: Swipe, tap, and beyond](https://windows.microsoft.com/en-US/windows-8/touch-swipe-tap-beyond).
+> Interacting with Windows 8 or newer the native touch gestures are supported in Direct Touch mode. For more information on Windows 8 gestures see [Touch: Swipe, tap, and beyond](https://windows.microsoft.com/windows-8/touch-swipe-tap-beyond).
 
 | Mouse mode    | Mouse operation      | Gesture                                                    |
 |---------------|----------------------|------------------------------------------------------------|

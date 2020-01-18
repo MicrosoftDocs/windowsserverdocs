@@ -19,10 +19,10 @@ You can configure cluster to cluster storage replication within the same region 
 Watch the videos below for a complete walk-through of the process.
 
 Part one
-> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE26f2Y]
+> [!VIDEO https://www.microsoft.com/videoplayer/embed/RE26f2Y]
 
 Part two
-> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE269Pq]
+> [!VIDEO https://www.microsoft.com/videoplayer/embed/RE269Pq]
 
 ![The architecture diagram showcasing Cluster-to-cluster Storage Replica in Azure within same region.](media/Cluster-to-cluster-azure-one-region/architecture.png)
 > [!IMPORTANT]

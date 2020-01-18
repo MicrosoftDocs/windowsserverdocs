@@ -141,27 +141,31 @@ You can create a gMSA only if the forest schema has been updated to  Windows Ser
 
 Membership in **Domain Admins**, **Account Operators** or ability to create msDS-GroupManagedServiceAccount objects, is the minimum required to complete the following procedures.
 
+> [!NOTE]
+> A value for the -Name parameter is always required (whether you specify -Name or not), with -DNSHostName, -RestrictToSingleComputer, and -RestrictToOutboundAuthentication being secondary requirements for the three deployment scenarios.    
+
+
 #### <a name="BKMK_CreateGMSA"></a>To create a gMSA using the New-ADServiceAccount cmdlet
 
 1.  On the Windows Server 2012 domain controller, run Windows PowerShell from the Taskbar.
 
 2.  At the command prompt for the Windows PowerShell, type the following commands, and then press ENTER. (The Active Directory module will load automatically.)
 
-    **New-ADServiceAccount [-Name] <string> -DNSHostName <string> [-KerberosEncryptionType <ADKerberosEncryptionType>] [-ManagedPasswordIntervalInDays <Nullable[Int32]>] [-PrincipalsAllowedToRetrieveManagedPassword <ADPrincipal[]>] -SamAccountName <string> -ServicePrincipalNames <string[]>**
+    **New-ADServiceAccount [-Name] &lt;string&gt; -DNSHostName &lt;string&gt; [-KerberosEncryptionType &lt;ADKerberosEncryptionType&gt;] [-ManagedPasswordIntervalInDays <Nullable[Int32]>] [-PrincipalsAllowedToRetrieveManagedPassword <ADPrincipal[]>] [-SamAccountName &lt;string&gt;] [-ServicePrincipalNames <string[]>]**
 
     |Parameter|String|Example|
     |-------|-----|------|
     |Name|Name of the account|ITFarm1|
     |DNSHostName|DNS host name of service|ITFarm1.contoso.com|
-    |KerberosEncryptionType|Any encryption types supported by the host servers|RC4, AES128, AES256|
+    |KerberosEncryptionType|Any encryption types supported by the host servers|None, RC4, AES128, AES256|
     |ManagedPasswordIntervalInDays|Password change interval in days (default is 30 days if not provided)|90|
     |PrincipalsAllowedToRetrieveManagedPassword|The computer accounts of the member hosts or the security group that the member hosts are a member of|ITFarmHosts|
     |SamAccountName|NetBIOS name for the service if not same as Name|ITFarm1|
-    |ServicePrincipalNames|Service Principal Names (SPNs) for the service|http/ITFarm1.contoso.com/contoso.com, http/ITFarm1.contoso.com/contoso, http/ITFarm1/contoso.com, http/ITFarm1/contoso|
+    |ServicePrincipalNames|Service Principal Names (SPNs) for the service|http/ITFarm1.contoso.com/contoso.com, http/ITFarm1.contoso.com/contoso, http/ITFarm1/contoso.com, http/ITFarm1/contoso, MSSQLSvc/ITFarm1.contoso.com:1433, MSSQLSvc/ITFarm1.contoso.com:INST01|
 
     > [!IMPORTANT]
     > The password change interval can only be set during creation. If you need to change the interval, you must create a new gMSA and set it at creation time.
-
+   
     **Example**
 
     Enter the command on a single line, even though they might appear word-wrapped across several lines here because of formatting constraints.
@@ -178,7 +182,7 @@ Membership in **Domain Admins**, **Account Operators**, or ability to create msD
 
 2.  At the command prompt for the Windows PowerShell Active Directory module, type the following commands, and then press ENTER:
 
-    **New-ADServiceAccount [-Name] <string> -RestrictToOutboundAuthenticationOnly [-ManagedPasswordIntervalInDays <Nullable[Int32]>] [-PrincipalsAllowedToRetrieveManagedPassword <ADPrincipal[]>]**
+    **New-ADServiceAccount [-Name] &lt;string&gt; -RestrictToOutboundAuthenticationOnly [-ManagedPasswordIntervalInDays <Nullable[Int32]>] [-PrincipalsAllowedToRetrieveManagedPassword <ADPrincipal[]>]**
 
     |Parameter|String|Example|
     |-------|-----|------|
@@ -188,8 +192,8 @@ Membership in **Domain Admins**, **Account Operators**, or ability to create msD
 
     > [!IMPORTANT]
     > The password change interval can only be set during creation. If you need to change the interval, you must create a new gMSA and set it at creation time.
-
-**Example**
+    
+  **Example**
 
 ```PowerShell
 New-ADServiceAccount ITFarm1 -RestrictToOutboundAuthenticationOnly - PrincipalsAllowedToRetrieveManagedPassword ITFarmHosts$
@@ -239,11 +243,11 @@ Membership in **Domain Admins**, **Account Operators**, or ability to manage msD
 
 2.  At the command prompt for the Windows PowerShell Active Directory module, type the following commands, and then press ENTER:
 
-    **Get-ADServiceAccount [-Name] <string> -PrincipalsAllowedToRetrieveManagedPassword**
+    **Get-ADServiceAccount [-Name] &lt;string&gt; -PrincipalsAllowedToRetrieveManagedPassword**
 
 3.  At the command prompt for the Windows PowerShell Active Directory module, type the following commands, and then press ENTER:
 
-    **Set-ADServiceAccount [-Name] <string> -PrincipalsAllowedToRetrieveManagedPassword <ADPrincipal[]>**
+    **Set-ADServiceAccount [-Name] &lt;string&gt; -PrincipalsAllowedToRetrieveManagedPassword <ADPrincipal[]>**
 
 |Parameter|String|Example|
 |-------|-----|------|
@@ -297,11 +301,11 @@ Membership in **Domain Admins**, **Account Operators**, or ability to manage msD
 
 2.  At the command prompt for the Windows PowerShell Active Directory module, type the following commands, and then press ENTER:
 
-    **Get-ADServiceAccount [-Name] <string> -PrincipalsAllowedToRetrieveManagedPassword**
+    **Get-ADServiceAccount [-Name] &lt;string&gt; -PrincipalsAllowedToRetrieveManagedPassword**
 
 3.  At the command prompt for the Windows PowerShell Active Directory module, type the following commands, and then press ENTER:
 
-    **Set-ADServiceAccount [-Name] <string> -PrincipalsAllowedToRetrieveManagedPassword <ADPrincipal[]>**
+    **Set-ADServiceAccount [-Name] &lt;string&gt; -PrincipalsAllowedToRetrieveManagedPassword <ADPrincipal[]>**
 
 |Parameter|String|Example|
 |-------|-----|------|
@@ -331,7 +335,7 @@ Membership in **Administrators**, or equivalent, is the minimum required to comp
 
 2.  At the command prompt for the Windows PowerShell Active Directory module, type the following commands, and then press ENTER:
 
-    **Uninstall-ADServiceAccount < ADServiceAccount>**
+    **Uninstall-ADServiceAccount &lt;ADServiceAccount&gt;**
 
     **Example**
 

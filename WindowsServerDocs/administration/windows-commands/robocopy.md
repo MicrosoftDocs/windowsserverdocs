@@ -27,12 +27,12 @@ robocopy <Source> <Destination> [<File>[ ...]] [<Options>]
 
 ## Parameters
 
-|   Parameter    |                                                                                            Description                                                                                             |
-|----------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|   \<Source>    |                                                                            Specifies the path to the source directory.                                                                             |
-| \<Destination> |                                                                          Specifies the path to the destination directory.                                                                          |
-|    \<File>     | Specifies the file or files to be copied. You can use wildcard characters (**&#42;** or **?**), if you want. If the **File** parameter is not specified, **\*.\\**\* is used as the default value. |
-|   \<Options>   |                                                                    Specifies options to be used with the **robocopy** command.                                                                     |
+|   Parameter    |                                                                                            Description                                                                                           |
+|----------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|   \<Source>    |                                                                            Specifies the path to the source directory.                                                                           |
+| \<Destination> |                                                                          Specifies the path to the destination directory.                                                                        |
+|    \<File>     | Specifies the file or files to be copied. You can use wildcard characters (**&#42;** or **?**), if you want. If the **File** parameter is not specified, **\*.\*** is used as the default value. |
+|   \<Options>   |                                                                    Specifies options to be used with the **robocopy** command.                                                                   |
 
 ### Copy options
 

@@ -69,8 +69,8 @@ To make these changes, use the following procedure.
 
 1. Download and install the appropriate software update on all computers on which you're going to use roaming, mandatory, super-mandatory, or domain default profiles:
 
-    - Windows 8.1, or Windows Server 2012 R2: install the software update described in article [2887595](http://support.microsoft.com/kb/2887595) in the Microsoft Knowledge Base (when released).
-    - Windows 8 or Windows Server 2012: install the software update described in article [2887239](http://support.microsoft.com/kb/2887239) in the Microsoft Knowledge Base.
+    - Windows 8.1, or Windows Server 2012 R2: install the software update described in article [2887595](https://support.microsoft.com/kb/2887595) in the Microsoft Knowledge Base (when released).
+    - Windows 8 or Windows Server 2012: install the software update described in article [2887239](https://support.microsoft.com/kb/2887239) in the Microsoft Knowledge Base.
 
 2. On all computers running Windows 8.1, Windows 8, Windows Server 2012 R2, or Windows Server 2012 on which you will use Roaming User Profiles, use Registry Editor or Group Policy to create the following registry key DWORD Value and set it to `1`. For information about creating registry keys by using Group Policy, see [Configure a Registry Item](<https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc753092(v=ws.11)>).
 
@@ -329,7 +329,7 @@ Here are some ways to work around Start menu layouts getting reset after an in-p
 
 - Let the Start layout reset occur and allow end users to reconfigure Start. A notification email or other notification can be sent to end users to expect their Start layouts to be reset after the OS upgrade to minimized impact. 
 
-# Change history
+## Change history
 
 The following table summarizes some of the most important changes to this topic.
 

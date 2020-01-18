@@ -48,7 +48,7 @@ For more information on configuring this for Chrome, please refer to this [link]
 This document focuses on trouble shooting common issues when AD FS is configured for certificate authentication for users. 
 
 ### Check if Certificate Trusted issuers is configured properly in all the AD FS/WAP servers
-*Common Symptom: HTTP 204 “No content from https\://certuath.adfs.contoso.com”*
+*Common Symptom: HTTP 204 “No content from https\://certauth.adfs.contoso.com”*
 
 AD FS uses the underlying windows operation system to prove possession of the user certificate and ensure that it matches a trusted issuer by doing certificate trust chain validation. To match the trusted issuer, you will need to ensure that all root and intermediate authorities are configured as trusted issuers in the local computer certification authorities store. 
 To validate this automatically, please use the [AD FS Diagnostic Analyzer tool](https://adfshelp.microsoft.com/DiagnosticsAnalyzer/Analyze). The tool queries all the servers and ensures that the right certificates are provisioned correctly. 
@@ -106,7 +106,7 @@ For more information see [this link](ad-fs-prompt-login.md).
 
 ### Additional Troubleshooting
 These are rare occurrences
-1)	If your CRL lists are very long, it may hit a time out when attempting to download. In that case you need to update the ‘MaxFieldLength' and ‘MaxRequestByte' as per https://support.microsoft.com/en-us/help/820129/http-sys-registry-settings-for-windows
+1)	If your CRL lists are very long, it may hit a time out when attempting to download. In that case you need to update the ‘MaxFieldLength' and ‘MaxRequestByte' as per https://support.microsoft.com/help/820129/http-sys-registry-settings-for-windows
 
 
 

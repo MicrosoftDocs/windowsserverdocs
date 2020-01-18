@@ -53,7 +53,7 @@ Use the built-in utility PerfMon to inspect the cache misses. Review the cache m
  
 ## Is there a calculator that shows the exact size of the disks that are being set aside for cache, capacity, and resiliency that would enable me to plan better?
 
-You can use the Storage Spaces Calculator to help with your planning. It is available at http://aka.ms/s2dcalc.
+You can use the Storage Spaces Calculator to help with your planning. It is available at https://aka.ms/s2dcalc.
  
 ## What is the best configuration that you would recommend when configuring 6 servers and 3 racks?
 

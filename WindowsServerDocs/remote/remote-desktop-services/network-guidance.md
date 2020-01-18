@@ -11,7 +11,7 @@ ms.date: 12/12/2019
 ms.tgt_pltfrm: na
 ms.topic: article
 author: Heidilohr
-manager: daveba
+manager: lizross
 ---
 # Network guidance
 
