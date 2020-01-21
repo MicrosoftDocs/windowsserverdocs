@@ -25,7 +25,7 @@ While you can set up most Azure hybrid services by downloading an app and doing 
 
 ## Discover integrated services in the Azure hybrid services tool
 
-The Azure hybrid services tool in [Windows Admin Center](../understand/windows-admin-center.md) consolidates all the integrated Azure services into a centralized hub where you can easily discover all the available Azure services that bring value to your on-premises or hybrid environment.  
+The Azure hybrid services tool in [Windows Admin Center](../overview.md) consolidates all the integrated Azure services into a centralized hub where you can easily discover all the available Azure services that bring value to your on-premises or hybrid environment.  
 
 ![Screenshot of Windows Admin Center showing the Azure Hybrid Services tool](../media/azure-services/ahs-discover.png)
 

@@ -392,6 +392,7 @@
 ##### [Access Control Policies in AD FS for Windows Server 2012 R2](ad-fs/operations/Access-Control-Policies-W2K12.md)
 ##### [Access Control Policies in AD FS 2.0](ad-fs/operations/Access-Control-Policies-in-AD-FS-2.md)
 #### [Additional Authentication methods in AD FS 2019](ad-fs/operations/Additional-Authentication-Methods-AD-FS.md)
+#### [AlwaysOn Availability Groups](ad-fs/operations/ad-fs-always-on.md)
 #### [AD FS Prompt login parameter support](ad-fs/operations/AD-FS-Prompt-Login.md)
 #### [AD FS Paginated sign-in](ad-fs/operations/AD-FS-paginated-sign-in.md)
 #### [AD FS 2016 Single Sign On Settings](ad-fs/operations/AD-FS-Single-Sign-On-Settings.md)

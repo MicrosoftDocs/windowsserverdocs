@@ -1,7 +1,7 @@
 ---
 title: Troubleshooting Domain Name System (DNS) issues
 description: This article introduces how to collect data when DNS issues occur.
-manager: willchen
+manager: dcscontentpm
 ms.prod: 
 ms.technology: networking-dns
 ms.topic: article

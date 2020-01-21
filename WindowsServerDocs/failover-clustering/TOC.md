@@ -36,4 +36,5 @@
 #### [Settings](health-service-settings.md)
 ### [Cluster-domain migration](cluster-domain-migration.md)
 ### [Troubleshooting using Windows Error Reporting](troubleshooting-using-WER-reports.md)
+### [Cluster system log events](system-events.md)
 ## [Change history for Failover Clustering topics](clustering-change-history.md)
