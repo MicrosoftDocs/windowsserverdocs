@@ -29,6 +29,7 @@ Below is an alphabetical list of Microsoft and third-party providers with MFA of
 |Provider|Offering|Link to learn more|
 |-|-|-| 
 |aPersona|aPersona Adaptive Multi-Factor Authentication for Microsoft ADFS SSO|[aPersona ASM ADFS Adapter](https://www.apersona.com/adfs)|
+|Cyphercor Inc.|LoginTC Multi-Factor Authentication for AD FS|[LoginTC AD FS Connector](https://www.logintc.com/docs/connectors/adfs.html)|
 |Duo Security|Duo MFA Adapter for AD FS|[Duo Authentication for AD FS](https://duo.com/docs/adfs)|
 |Futurae|Futurae Authentication Suite for AD FS|[Futurae Strong Authentication](https://futurae.com)|
 |Gemalto|Gemalto Identity & Security Services|[http://www.gemalto.com/identity](http://www.gemalto.com/identity)|
