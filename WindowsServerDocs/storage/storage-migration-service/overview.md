@@ -4,7 +4,7 @@ description: Storage Migration Service makes it easier to migrate storage to Win
 author: jasongerend
 ms.author: jgerend
 manager: elizapo
-ms.date: 10/25/2019
+ms.date: 01/17/2020
 ms.topic: article
 ms.prod: windows-server
 ms.technology: storage
@@ -40,6 +40,10 @@ Migration is a three-step process:
 
 ![Screenshot showing a server ready to be scanned](media/migrate/inventory.png)
 **Figure 2: Storage Migration Service inventorying servers**
+
+Here's a video showing how to use Storage Migration Service to take a server, such as a Windows Server 2008 R2 server that's now out of support, and move the storage to a newer server.
+
+> [!VIDEO https://www.youtube.com/embed/h-Xc9j1w144]
 
 ## Requirements
 
