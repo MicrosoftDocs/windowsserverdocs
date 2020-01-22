@@ -85,9 +85,8 @@ ClaimsXray/TokenResponse&prompt=login**
  
 With AD FS on Server 2019, you can now pass the resource value embedded in the scope parameter. This is consistent with how one can do authentication against Azure AD also. 
 
-The scope parameter can now be organized as a space separated list where each entry is structure as resource/scope. For example  
+The scope parameter can now be organized as a space separated list where each entry is structure as resource/scope. 
 
-**< create a valid sample request>**
 > [!NOTE]
 > Only one resource can be specified in the authentication request. If more than one resource is included in the request, AD FS will return an error and authentication will not succeed. 
 
