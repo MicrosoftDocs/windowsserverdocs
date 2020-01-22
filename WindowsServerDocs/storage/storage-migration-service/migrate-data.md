@@ -53,16 +53,24 @@ In this step, you specify what servers to migrate and then scan them to collect 
 In this step you transfer data after specifying where to put it on the destination servers.
 
 1. On the **Transfer data** > **Enter credentials** page, type admin credentials that work on the destination servers you want to migrate to, and then select **Next**.
-2. On the **Add a destination device and mappings** page, the first source server is listed. Type the name of the server or clustered file server to which you want to migrate and then select **Scan device**. If migrating from a domain-joined source computer, the destination server must be joined to the same domain.
+2. On the **Add a destination device and mappings** page, the first source server is listed. Type the name of the server or clustered file server to which you want to migrate and then select **Scan device**. If migrating from a domain-joined source computer, the destination server must be joined to the same domain. You can also click "Create a new Azure VM" then use the wizard to deploy a new destination server in Azure. This will automatically size your VM, provision storage, format disks, join the domain, and add the Storage Migration Service proxy to a Windows Server 2019 destination. You can choose from Windows Server 2019 (recommended), Windows Server 2016, and Windows Server 2012 R2 VMs of any size and use managed disks.   
+
+ > [!NOTE]
+   > Using "Create a new Azure VM" requires that you have:
+   > - A valid Azure subscription.
+   > - An existing Azure Compute resource group where you have Create rights.
+   > - An existing Azure Virtual Network and subnet. 
+   > - An Azure Express Route or VPN solution tied to the Virtual Network and subnet that allows connectivity from this Azure IaaS VM to your on-premises clients, domain controllers, the Storage Migration Service orchestrator computer, the Windows Admin Center computer, and the source computer to be migrated.
+
 3. Map the source volumes to destination volumes, clear the **Include** checkbox for any shares you don't want to transfer (including any administrative shares located in the Windows system folder), and then select **Next**.
    ![Screenshot showing a source server and its volumes and shares and where they'll be transferred to on the destination](media/migrate/transfer.png)
     **Figure 3: A source server and where its storage will be transferred to**
 4. Add a destination server and mappings for any more source servers, and then select **Next**.
 5. On the **Adjust transfer settings** page, specify whether to migrate local users and groups on the source servers and then select **Next**. This lets you recreate any local users and groups on the destination servers so that file or share permissions set to local users and groups aren't lost. Here are the options when migrating local users and groups:
 
-    - **Rename accounts with the same name** is selected by default and migrates all local users and groups on the source server. If it finds local users or groups with the same name on the source and destination, it renames them on the destination unless they're built-in (for example, the Administrator user and the Administrators group).
-    - **Reuse accounts with the same name** maps identically named users and groups on the source and destination.
-    - **Don't transfer users and groups** skips migrating local users and groups, which is required when seeding data for DFS Replication (DFS Replication doesn't support local groups and users).
+    - **Rename accounts with the same name** is selected by default and migrates all local users and groups on the source server. If it finds local users or groups with the same name on the source and destination, it renames them on the destination unless they're built-in (for example, the Administrator user and the Administrators group). Do not use this setting if your source or destination server is a domain controller.
+    - **Reuse accounts with the same name** maps identically named users and groups on the source and destination. Do not use this setting if your source or destination server is a domain controller.
+    - **Don't transfer users and groups** skips migrating local users and groups, which is required when your source or destination is a domain controller, or when seeding data for DFS Replication (DFS Replication doesn't support local groups and users).
 
    > [!NOTE]
    > Migrated user accounts are disabled on the destination and assigned a 127-character password that's both complex and random, so you'll have to enable them and assign a new password when you're finished to keep using them. This helps ensure any old accounts with forgotten and weak passwords on the source don't continue to be a security problem on the destination. You might also want to check out [Local Administrator Password Solution (LAPS)](https://www.microsoft.com/download/details.aspx?id=46899) as a way to manage local Administrator passwords.

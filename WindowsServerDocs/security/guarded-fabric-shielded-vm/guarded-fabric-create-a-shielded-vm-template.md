@@ -54,7 +54,7 @@ Perform the following steps on a computer running Windows Server 2016, Windows 1
 
         Install-WindowsFeature RSAT-Shielded-VM-Tools -Restart
         
-    You can also administer the server from a client computer on which you have installed the [Windows 10 Remote Server Administration Tools](https://www.microsoft.com/en-us/download/details.aspx?id=45520).
+    You can also administer the server from a client computer on which you have installed the [Windows 10 Remote Server Administration Tools](https://www.microsoft.com/download/details.aspx?id=45520).
 
 3. Obtain or create a certificate to sign the VSC for the VHDX that will become the template disk for new shielded VMs. Details about this certificate will be shown to tenants when they create their shielding data files and are authorizing disks they trust. Therefore, it is important to obtain this certificate from a certificate authority mutually trusted by you and your tenants. In enterprise scenarios where you are both the hoster and tenant, you might consider issuing this certificate from your PKI.
 

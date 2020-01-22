@@ -76,7 +76,7 @@ This deployment configuration assures cost effective performance where performan
 
 ### CSV cache
 
-Failover Clustering in Windows Server 2012 and above provides caching on Cluster Shared Volumes (CSV). This is extremely beneficial for pooled virtual desktop collections where the majority of the read I/Os come from the management operating system. The CSV cache provides higher performance by several orders of magnitude because it caches blocks that are read more than once and delivers them from system memory, which reduces the I/O. For more info on CSV cache, see [How to Enable CSV Cache](http://blogs.msdn.com/b/clustering/archive/2012/03/22/10286676.aspx).
+Failover Clustering in Windows Server 2012 and above provides caching on Cluster Shared Volumes (CSV). This is extremely beneficial for pooled virtual desktop collections where the majority of the read I/Os come from the management operating system. The CSV cache provides higher performance by several orders of magnitude because it caches blocks that are read more than once and delivers them from system memory, which reduces the I/O. For more info on CSV cache, see [How to Enable CSV Cache](https://blogs.msdn.com/b/clustering/archive/2012/03/22/10286676.aspx).
 
 ### Pooled virtual desktops
 
@@ -101,7 +101,7 @@ Each specific service should be evaluated appropriately prior to any broad deplo
 | Internet connection sharing                  | Consumer centric service                                                                                                                                                                                  |
 | Media Center extended services               | Consumer centric service                                                                                                                                                                                  |
 > [!NOTE]
-> This list is not meant to be a complete list, because any changes will affect the intended goals and scenarios. For more info, see [Hot off the presses, get it now, the Windows 8 VDI optimization script, courtesy of PFE!](http://blogs.technet.com/b/jeff_stokes/archive/2013/04/09/hot-off-the-presses-get-it-now-the-windows-8-vdi-optimization-script-courtesy-of-pfe.aspx).
+> This list is not meant to be a complete list, because any changes will affect the intended goals and scenarios. For more info, see [Hot off the presses, get it now, the Windows 8 VDI optimization script, courtesy of PFE!](https://blogs.technet.com/b/jeff_stokes/archive/2013/04/09/hot-off-the-presses-get-it-now-the-windows-8-vdi-optimization-script-courtesy-of-pfe.aspx).
 
 
 > [!NOTE]

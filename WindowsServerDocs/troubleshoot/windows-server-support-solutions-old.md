@@ -13,7 +13,7 @@ ms.author: elizapo
 
 # Top support solutions for Windows Server 2016
 
-Microsoft regularly releases both updates and solutions for Windows Server. To ensure your servers can receive future updates, including security updates, it's important to keep your servers updated. Check out [Windows 10 and Windows Server 2016 update history](https://support.microsoft.com/en-us/help/4000825/windows-10-windows-server-2016-update-history) for a complete list of released updates.
+Microsoft regularly releases both updates and solutions for Windows Server. To ensure your servers can receive future updates, including security updates, it's important to keep your servers updated. Check out [Windows 10 and Windows Server 2016 update history](https://support.microsoft.com/help/4000825/windows-10-windows-server-2016-update-history) for a complete list of released updates.
 
 These are the top Microsoft Support solutions for the most common issues experienced when using Windows Server 2016. The links below include links to KB articles, updates, and library articles.
 
@@ -23,9 +23,9 @@ These are the top Microsoft Support solutions for the most common issues experie
 ## Solutions for installing or upgrading Windows Server
 
 - [Resolve Windows 10 upgrade errors : Technical information for IT Pros](https://docs.microsoft.com/windows/deployment/upgrade/resolve-windows-10-upgrade-errors)
-- [Servicing stack update for Windows 10 Version 1607 and Windows Server 2016: August 8, 2017](https://support.microsoft.com/en-US/help/4035631)
-- [Compatibility update for upgrading to Windows 10 Version 1607 and Windows Server 2016: August 3, 2017](https://support.microsoft.com/en-US/help/4033524)
-- [An in-place system upgrade is not supported on Windows-based Azure VMs](https://support.microsoft.com/en-US/help/4014997)
+- [Servicing stack update for Windows 10 Version 1607 and Windows Server 2016: August 8, 2017](https://support.microsoft.com/help/4035631)
+- [Compatibility update for upgrading to Windows 10 Version 1607 and Windows Server 2016: August 3, 2017](https://support.microsoft.com/help/4033524)
+- [An in-place system upgrade is not supported on Windows-based Azure VMs](https://support.microsoft.com/help/4014997)
 - [Upgrade and conversion options for Windows Server 2016](../get-started/supported-upgrade-paths.md)
 - [Server role upgrade and migration matrix for Windows Server 2016](../get-started/server-role-upgradeability-table.md)
 - [Windows Server Installation and Upgrade](../get-started/installation-and-upgrade.md)

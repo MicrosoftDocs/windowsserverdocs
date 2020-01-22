@@ -30,12 +30,12 @@ Remote Server Administration Tools includes Server Manager, Microsoft Management
 Remote Server Administration Tools includes Windows PowerShell cmdlet modules that can be used to manage roles and features that are running on Remote servers. Although Windows PowerShell remote management is enabled by default on Windows Server 2016, it is not enabled by default on Windows 10. To run cmdlets that are part of Remote Server Administration Tools against a Remote server, run `Enable-PSremoting` in a Windows PowerShell session that has been opened with elevated user rights (that is, Run as Administrator) on your Windows client computer after installing Remote Server Administration Tools.
 
 ## <a name="BKMK_Thresh"></a>Remote Server Administration Tools for Windows 10
-Use Remote Server Administration Tools for Windows 10 to manage specific technologies on computers that are running Windows Server 2016, Windows Server 2012 R2, and in limited cases,  Windows Server 2012 , or  Windows Server 2008 R2 .
+Use Remote Server Administration Tools for Windows 10 to manage specific technologies on computers that are running Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, and in limited cases,  Windows Server 2012 , or  Windows Server 2008 R2 .
 
 Remote Server Administration Tools for Windows 10 includes support for remote management of computers that are running the Server Core installation option or the Minimal Server Interface configuration of Windows Server 2016,  Windows Server 2012 R2 , and in limited cases, the Server Core installation options of Windows Server 2012. However, Remote Server Administration Tools for Windows 10 cannot be installed on any versions of the Windows Server operating system.
 
 ### Tools available in this release
-for a list of the tools available in Remote Server Administration Tools for Windows 10, see the table in [Remote Server Administration Tools (RSAT) for Windows operating systems](https://support.microsoft.com/help/2693643/remote-server-administration-tools-rsat-for-windows-operating-systems).
+For a list of the tools available in Remote Server Administration Tools for Windows 10, see the table in [Remote Server Administration Tools (RSAT) for Windows operating systems](https://support.microsoft.com/help/2693643/remote-server-administration-tools-rsat-for-windows-operating-systems).
 
 ### System requirements
 Remote Server Administration Tools for Windows 10 can be installed only on computers that are running Windows 10. Remote Server Administration Tools cannot be installed on computers that are running Windows RT 8.1, or other system-on-chip devices.
@@ -57,7 +57,7 @@ Starting with Windows 10 October 2018 Update, RSAT is included as a set of **Fea
 
 See the [list of RSAT tools available via **Features on Demand**](https://docs.microsoft.com/windows-hardware/manufacture/desktop/features-on-demand-non-language-fod#remote-server-administration-tools-rsat). In addition to installing via the graphical **Settings** app, you can also install specific RSAT tools via command line or automation using [**DISM /Add-Capability**](https://docs.microsoft.com/windows-hardware/manufacture/desktop/features-on-demand-v2--capabilities#using-dism-add-capability-to-add-or-remove-fods).
 
-One benefit of Features on Demand is that installed features persist across Windows 10 version upgrades!
+One benefit of Features on Demand is that installed features persist across Windows 10 version upgrades.
 
 #### To uninstall specific RSAT tools on Windows 10 October 2018 Update or later (after installing with FoD)
 
