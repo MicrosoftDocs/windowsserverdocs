@@ -8,7 +8,6 @@ manager: femila
 ms.date: 07/26/2019
 ms.topic: article
 ms.prod: windows-server
-
 ms.technology: identity-adfs
 ---
 
