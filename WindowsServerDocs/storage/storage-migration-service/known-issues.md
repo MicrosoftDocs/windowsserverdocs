@@ -19,7 +19,7 @@ For example, Windows Server, version 1903 includes new features and fixes for St
 
 ## <a name="collecting-logs"></a> How to collect log files when working with Microsoft Support
 
-The Storage Migration Service contains event logs for the Orchestrator service and the Proxy Service. The urchestrator server always contains both event logs, and destination servers with the proxy service installed contain the proxy logs. These logs are located under:
+The Storage Migration Service contains event logs for the Orchestrator service and the Proxy Service. The orchestrator server always contains both event logs, and destination servers with the proxy service installed contain the proxy logs. These logs are located under:
 
 - Application and Services Logs \ Microsoft \ Windows \ StorageMigrationService
 - Application and Services Logs \ Microsoft \ Windows \ StorageMigrationService-Proxy
