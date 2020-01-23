@@ -71,18 +71,6 @@ To use extended security updates, you create a multiple activation key (MAK) and
 >
 > [The resource type could not be found in the namespace 'Microsoft.WindowsESU'](https://social.msdn.microsoft.com/Forums/office/94b16a89-3149-43da-865d-abf7dba7b977/the-resource-type-could-not-be-found-in-the-namespace-microsoftwindowsesu-for-api-version)
 
-> [!NOTE]
-> Before following the steps below, please send an e-mail to [winsvresuchamps@microsoft.com](mailto:winsvresuchamps@microsoft.com) with this information for approval to white list:
-> * Customer Name:
-> * Azure Subscription:
-> * EA Agreement Number (for ESU):
-> * Number of ESU servers:
-> 
-> The team will review provided information and add user/subscription to the white list.
-> 
-> If the requestor is not white-listed, the following error can occur:
-> [The resource type could not be found in the namespace 'Microsoft.WindowsESU'](https://social.msdn.microsoft.com/Forums/office/94b16a89-3149-43da-865d-abf7dba7b977/the-resource-type-could-not-be-found-in-the-namespace-microsoftwindowsesu-for-api-version)
-
 To register non-Azure VMs for extended security updates and create a key, complete the following steps in the Azure Portal:
 
 1. Sign in to the [Azure portal](https://portal.azure.com/).
