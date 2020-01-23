@@ -91,7 +91,7 @@ This directive is only supported with sftp sessions. A remote session into cmd.e
 
 ### HostKey
 
-The defaults are %programdata%/ssh/ssh_host_ecdsa_key, %programdata%/ssh/ssh_host_ed25519_key and %programdata%/ssh/ssh_host_rsa_key. If the defaults are not present, sshd automatically generates these on a service start.
+The defaults are %programdata%/ssh/ssh_host_ecdsa_key, %programdata%/ssh/ssh_host_ed25519_key, %programdata%/ssh/ssh_host_dsa_key, and %programdata%/ssh/ssh_host_rsa_key. If the defaults are not present, sshd automatically generates these on a service start.
 
 ### Match
 

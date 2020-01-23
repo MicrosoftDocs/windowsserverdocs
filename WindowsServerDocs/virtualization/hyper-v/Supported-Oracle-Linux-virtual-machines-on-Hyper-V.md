@@ -20,9 +20,9 @@ The following feature distribution map indicates the features that are present i
 
 In this section:
 
-* [Red Hat Compatible Kernel Series](Supported-Oracle-Linux-virtual-machines-on-Hyper-V.md#BKMK_rhc)
+* [Features of Oracle Linux Releases with the Red Hat compatible Kernel](Supported-Oracle-Linux-virtual-machines-on-Hyper-V.md#BKMK_rhc)
 
-* [Unbreakable Enterprise Kernel Series](Supported-Oracle-Linux-virtual-machines-on-Hyper-V.md#BKMK_uek)
+* [Oracle Linux Releases with the Unbreakable Enterprise Kernel (UEK)](Supported-Oracle-Linux-virtual-machines-on-Hyper-V.md#BKMK_uek)
 
 * [Notes](Supported-Oracle-Linux-virtual-machines-on-Hyper-V.md#BKMK_notes)
 
@@ -34,9 +34,9 @@ In this section:
 
 * (*blank*) - Feature not available
 
-* **UEK R\*x QU\*y** - Unbreakable Enterprise Kernel (UEK) where *x* is the release number and *y* is the quarterly update.
+* **UEK RxUy** - Unbreakable Enterprise Kernel (UEK) where x is the release number and y is the quarterly update.
 
-## <a name="BKMK_rhc"></a>Red Hat Compatible Kernel Series
+## <a name="BKMK_rhc"></a>Features of Oracle Linux Releases with the Red Hat compatible Kernel
 
 The 32-bit kernel for the 6.x series is PAE enabled. There is no built-in LIS support for Oracle Linux RHCK 6.0-6.3. Oracle Linux 7.x kernels are 64-bit only.
 
@@ -79,11 +79,11 @@ The 32-bit kernel for the 6.x series is PAE enabled. There is no built-in LIS su
 | Secure boot                                                                                                                                  | 2019, 2016                         | &#10004;           | &#10004;            |                                                                     |                                                                     |                          |                          |                          |                           |                           |
 
 
-## <a name="BKMK_uek"></a>Unbreakable Enterprise Kernel Series
+## <a name="BKMK_uek"></a>Oracle Linux Releases with the Unbreakable Enterprise Kernel (UEK)
 
-The Oracle Linux Unbreakable Enterprise Kernel (UEK) is 64-bit only and has LIS support built-in.
+Oracle Linux with the Unbreakable Enterprise Kernel (UEK) is 64-bit only and has LIS support built-in. 
 
-| **Feature**                                                                                                                                  | **Windows server version**         | **UEK R5**                | **UEK R4**                | **UEK R3 QU3**            | **UEK R3 QU2**            | **UEK R3 QU1**       |
+| **Feature**                                                                                                                                  | **Windows server version**         | **R5**                | **R4**                | **R3 QU3**            | **R3 QU2**            | **R3 QU1**       |
 |----------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------|---------------------------|---------------------------|---------------------------|---------------------------|----------------------|
 | **Availability**                                                                                                                             |                                    | Built in                  | Built in                  | Built in                  | Built in                  | Built in             |
 | **[Core](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#core)**                                                   | 2019, 2016, 2012 R2, 2012, 2008 R2 | &#10004;                  | &#10004;                  | &#10004;                  | &#10004;                  | &#10004;             |
@@ -131,7 +131,7 @@ The Oracle Linux Unbreakable Enterprise Kernel (UEK) is 64-bit only and has LIS 
 
 4. Live backup operations can fail silently if the virtual machine has an attached iSCSI device or direct-attached storage (also known as a pass-through disk).
 
-5. Live backup support for Oracle Linux 6.4/6.5/UEKR3 QU2 and QU3 is available through [Hyper-V Backup Essentials for Linux](https://github.com/LIS/backupessentials/tree/1.0).
+5. Live backup support for Oracle Linux 6 Update 4 and Oracle Linux 6 Update 5 with UEK R3Q2 and UEK R3Q3 is available through [Hyper-V Backup Essentials for Linux](https://github.com/LIS/backupessentials/tree/1.0).
 
 6. Dynamic memory support is only available on 64-bit virtual machines.
 
