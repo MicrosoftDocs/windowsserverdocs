@@ -38,12 +38,37 @@ Extended security updates (ESUs) for Windows Server include security updates and
 
 For more information, see the [Extended Security Updates frequently asked questions](https://www.microsoft.com/cloud-platform/extended-security-updates).
 
+## How to use extended security updates
+
+If you run Windows Server 2008 / 2008 R2 VMs in Azure, they're automatically enabled for extended security updates. You don't need to configure anything, and there's no additional charge for using extended security updates with Azure VMs. Extended security updates are automatically delivered to Azure VMs if they're configured to receive updates.
+
+For other environments, such as on-premises VMs or physical servers, you need to manually request and configure extended security updates. If you've already purchased extended security updates, which are available through Volume Licensing Programs such as Enterprise Agreement (EA), Enterprise Agreement Subscription (EAS), Enrollment for Education Solutions (EES), or Server and Cloud Enrollment (SCE), you can use one of the following steps to get an activation key:
+
+* Sign in to the [Microsoft Volume Licensing Service Center](https://www.microsoft.com/Licensing/servicecenter/default.aspx) to get activation keys.
+* Register for Extended Security Updates through Azure service to get the Windows Server 2008/R2 activation keys. See the following steps in this article for steps on how to complete this process.
+
 ## Register for extended security updates
 
 To use extended security updates, you create a multiple activation key (MAK) and apply it to Windows Server 2008 and 2008 R2 computers. This key lets the Windows Update servers know that you can continue to receive security updates. You register for extended security updates and manage these keys using the Azure portal, even if you only use on-premises computers.
 
 > [!NOTE]
-> If you run Windows Server 2008 / 2008 R2 VMs in Azure, you don't need to perform the following steps. Azure VMs are automatically enabled for extended security updates. You don't need to create an extended security update resource and key, and there's no additional charge for using extended security updates with Azure VMs.
+>
+> You don't need to register for extended security updates if you're running Windows Server 2008 and 2008 R2 on Azure VMs. For other environments, such as on-premises VMs or physical servers, [purchase extended security updates](https://www.microsoft.com/licensing/how-to-buy/how-to-buy) before you try to register and use them.
+
+> [!IMPORTANT]
+>
+> Make sure that you've followed the previous steps to purchase extended security updates through your Volume Licensing Program. Before following the steps below, send an e-mail to [winsvresuchamps@microsoft.com](mailto:winsvresuchamps@microsoft.com) with the following information for approval to use the feature:
+>
+> * Customer Name:
+> * Azure Subscription:
+> * EA Agreement Number (for ESU):
+> * Number of ESU servers:
+>
+> The team will review provided information and add the user / subscription to the approved list.
+>
+> If the requestor is not approved, the following error can occur:
+>
+> [The resource type could not be found in the namespace 'Microsoft.WindowsESU'](https://social.msdn.microsoft.com/Forums/office/94b16a89-3149-43da-865d-abf7dba7b977/the-resource-type-could-not-be-found-in-the-namespace-microsoftwindowsesu-for-api-version)
 
 To register non-Azure VMs for extended security updates and create a key, complete the following steps in the Azure Portal:
 
