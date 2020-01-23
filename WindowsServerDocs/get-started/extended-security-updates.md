@@ -8,7 +8,7 @@ author: iainfoulds
 ms.author: iainfou
 ms.topic: get-started-article
 ms.localizationpriority: high
-ms.date: 12/16/2019
+ms.date: 01/23/2020
 ---
 
 # How to use Windows Server 2008 and 2008 R2 extended security updates (ESU)
@@ -44,8 +44,9 @@ If you run Windows Server 2008 / 2008 R2 VMs in Azure, they're automatically ena
 
 For other environments, such as on-premises VMs or physical servers, you need to manually request and configure extended security updates. If you've already purchased extended security updates, which are available through Volume Licensing Programs such as Enterprise Agreement (EA), Enterprise Agreement Subscription (EAS), Enrollment for Education Solutions (EES), or Server and Cloud Enrollment (SCE), you can use one of the following steps to get an activation key:
 
-* Sign in to the [Microsoft Volume Licensing Service Center](https://www.microsoft.com/Licensing/servicecenter/default.aspx) to get activation keys.
-* Register for Extended Security Updates through Azure service to get the Windows Server 2008/R2 activation keys. See the following steps in this article for steps on how to complete this process.
+* Sign in to the [Microsoft Volume Licensing Service Center](https://www.microsoft.com/Licensing/servicecenter/default.aspx) to view and get activation keys.
+* Register for extended security updates in the Azure portal to get the Windows Server 2008/R2 activation keys.
+    * See the following steps in this article for steps on how to complete this process.
 
 ## Register for extended security updates
 
