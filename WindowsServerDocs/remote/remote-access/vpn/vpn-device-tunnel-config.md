@@ -40,9 +40,9 @@ Set-VpnAuthProtocol -UserAuthProtocolAccepted Certificate, EAP -RootCertificateN
 
 ## VPN Device Tunnel Configuration
 
-The sample profile XML below provides good guidance for scenarios where only client initiated pulls are required over the device tunnel.  Traffic filters are leveraged to restrict the device tunnel to management traffic only.  This configuration works well for Windows Update, typical Group Policy (GP) and System Center Configuration Manager (SCCM) update scenarios, as well as VPN connectivity for first logon without cached credentials, or password reset scenarios. 
+The sample profile XML below provides good guidance for scenarios where only client initiated pulls are required over the device tunnel.  Traffic filters are leveraged to restrict the device tunnel to management traffic only.  This configuration works well for Windows Update, typical Group Policy (GP) and Microsoft Endpoint Configuration Manager update scenarios, as well as VPN connectivity for first logon without cached credentials, or password reset scenarios. 
 
-For server-initiated push cases, like Windows Remote Management (WinRM), Remote GPUpdate, and remote SCCM update scenarios – you must allow inbound traffic on the device tunnel, so traffic filters cannot be used.  If in the device tunnel profile you turn on traffic filters, then the Device Tunnel denies inbound traffic.  This limitation is going to be removed in future releases.
+For server-initiated push cases, like Windows Remote Management (WinRM), Remote GPUpdate, and remote Configuration Manager update scenarios – you must allow inbound traffic on the device tunnel, so traffic filters cannot be used.  If in the device tunnel profile you turn on traffic filters, then the Device Tunnel denies inbound traffic.  This limitation is going to be removed in future releases.
 
 
 ### Sample VPN profileXML
@@ -167,7 +167,7 @@ The following are additional resources to assist with your VPN deployment.
 
 The following are VPN client configuration resources.
 
-- [How to Create VPN profiles in System Center Configuration Manager](https://docs.microsoft.com/sccm/protect/deploy-use/create-vpn-profiles)
+- [How to Create VPN profiles in Configuration Manager](https://docs.microsoft.com/configmgr/protect/deploy-use/create-vpn-profiles)
 - [Configure Windows 10 Client Always On VPN Connections](always-on-vpn/deploy/vpn-deploy-client-vpn-connections.md)
 - [VPN profile options](https://docs.microsoft.com/windows/access-protection/vpn/vpn-profile-options)
 
